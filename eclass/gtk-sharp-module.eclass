@@ -145,7 +145,7 @@ esac
 case ${PF} in
 	#gtk-sharp tarball
 	gtk-sharp-docs*)
-		add_depend ">=virtual/monodoc-2.0"
+		add_depend ">=dev-lang/mono-2.0"
 		;;
 	gtk-sharp-gapi*)
 		add_rdepend "!<=dev-dotnet/gtk-sharp-2.12.7:2"
@@ -283,7 +283,7 @@ S="${WORKDIR}/${TARBALL}-${PV}"
 # @ECLASS-VARIABLE: SRC_URI
 # @DESCRIPTION:
 # Default value: mirror://gnome/sources/${TARBALL}/${PV_MAJOR}/${TARBALL}-${PV}.tar.bz2
-if TARBALL="gtk-sharp"; then
+if [[ ${TARBALL} == "gtk-sharp" ]]; then
 	SRC_URI="${SRC_URI}
 		http://download.mono-project.com/sources/gtk-sharp212/${TARBALL}-${PV}.tar.bz2"
 else
