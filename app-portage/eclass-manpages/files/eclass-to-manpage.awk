@@ -18,7 +18,7 @@
 # @BUGREPORTS:
 # <optional; description of how to report bugs;
 #  default: tell people to use bugs.gentoo.org>
-# @VCSURL: <optional; url to vcs for this eclass; default: http://sources.gentoo.org/eclass/@ECLASS@?view=log>
+# @VCSURL: <optional; url to vcs for this eclass; default: https://gitweb.gentoo.org/repo/gentoo.git/log/eclass/@ECLASS@>
 # @BLURB: <required; short description>
 # @DESCRIPTION:
 # <optional; long description>
@@ -78,6 +78,10 @@ function warn(text) {
 function fail(text) {
 	_stderr_msg(text, "error")
 	exit(1)
+}
+function xfail(text) {
+	_stderr_msg(text, "error (ignoring)")
+	exit(77)
 }
 
 function eat_line() {
@@ -144,6 +148,10 @@ function handle_eclass() {
 	blurb = ""
 	desc = ""
 	example = ""
+
+	# Sanity check the eclass name. #537392
+	if (eclass !~ /[.]eclass$/)
+		fail(eclass ": @ECLASS name is missing a '.eclass' suffix")
 
 	# first the man page header
 	print ".\\\" -*- coding: utf-8 -*-"
@@ -290,12 +298,12 @@ function _handle_variable() {
 	# first try var="val"
 	op = "="
 	regex = "^.*" var_name "=(.*)$"
-	val = gensub(regex, "\\1", "", $0)
+	val = gensub(regex, "\\1", 1, $0)
 	if (val == $0) {
 		# next try : ${var:=val}
 		op = "?="
 		regex = "^[[:space:]]*:[[:space:]]*[$]{" var_name ":?=(.*)}"
-		val = gensub(regex, "\\1", "", $0)
+		val = gensub(regex, "\\1", 1, $0)
 		if (val == $0) {
 			if (default_unset + required + internal == 0)
 				warn(var_name ": unable to extract default variable content: " $0)
@@ -363,7 +371,7 @@ function handle_footer() {
 	print ".BR " eclassdir "/" eclass
 	print ".SH \"SEE ALSO\""
 	print ".BR ebuild (5)"
-	print pre_text(gensub("@ECLASS@", eclass, "", vcs_url))
+	print pre_text(gensub("@ECLASS@", eclass, 1, vcs_url))
 }
 
 #
@@ -375,7 +383,7 @@ BEGIN {
 		PORTDIR = "/usr/portage"
 	eclassdir = PORTDIR "/eclass"
 	reporting_bugs = "Please report bugs via http://bugs.gentoo.org/"
-	vcs_url = "http://sources.gentoo.org/eclass/@ECLASS@?view=log"
+	vcs_url = "https://gitweb.gentoo.org/repo/gentoo.git/log/eclass/@ECLASS@"
 }
 
 #
@@ -388,8 +396,12 @@ BEGIN {
 			state = "funcvar"
 		} else if ($0 == "# @DEAD") {
 			eclass = "dead"
-			exit(10)
+			exit(77)
 		} else if ($0 == "# @eclass-begin") {
+			# White list old eclasses that haven't been updated so we can block
+			# new ones from being added to the tree.
+			if (eclass == "")
+				xfail("java documentation not supported")
 			fail("java documentation not supported")
 		} else if ($0 ~ /^# @/)
 			warn("Unexpected tag in \"" state "\" state: " $0)
@@ -410,7 +422,7 @@ BEGIN {
 #
 END {
 	if (eclass == "")
-		fail("eclass not documented yet (no @ECLASS found)")
+		xfail("eclass not documented yet (no @ECLASS found)")
 	else if (eclass != "dead")
 		handle_footer()
 }
