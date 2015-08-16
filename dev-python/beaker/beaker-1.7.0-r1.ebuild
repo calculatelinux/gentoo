@@ -27,7 +27,12 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	)"
 RDEPEND=""
 
+# Py2.7 fais some tests without this
+DISTUTILS_IN_SOURCE_BUILD=1
+
 S="${WORKDIR}/${P}dev"
+
+PATCHES=( "${FILESDIR}"/${P}-cookie-testfix.patch )
 
 python_prepare_all() {
 	# Workaround for http://bugs.python.org/issue11276.
@@ -38,10 +43,9 @@ python_prepare_all() {
 }
 
 python_test() {
+	# https://github.com/bbangert/beaker/issues/86; bug #557026
 	cp -r -l tests "${BUILD_DIR}"/ || die
-	pushd  "${BUILD_DIR}"/tests > /dev/null
-	nosetests || die "Tests fail with ${EPYTHON}"
-	popd > /dev/null
+	nosetests -w "${BUILD_DIR}"/tests || die "Tests fail with ${EPYTHON}"
 }
 
 pkg_postinst() {
