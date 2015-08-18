@@ -108,6 +108,8 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 
 	gnome-base/gnome-common
+
+	<sys-libs/timezone-data-2015f
 "
 # Needed for autoreconf
 #	gnome-base/gnome-common
