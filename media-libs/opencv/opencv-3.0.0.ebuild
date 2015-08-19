@@ -13,7 +13,7 @@ HOMEPAGE="http://opencv.org"
 SRC_URI="
 	mirror://sourceforge/opencvlibrary/opencv-unix/${PV}/${P}.zip
 	https://github.com/Itseez/${PN}/archive/${PV}.zip -> ${P}.zip
-	contrib? ( https://github.com/Itseez/${PN}_contrib/archive/master.zip -> ${PN}_contrib.zip )"
+	contrib? ( https://github.com/Itseez/opencv_contrib/archive/172fdb315280325a617fbb9db5ec5631acd8180e.zip -> ${PN}_contrib.zip )" # commit from 6.8.2015
 
 LICENSE="BSD"
 SLOT="0/3.0"
@@ -41,8 +41,8 @@ RDEPEND="
 		!libav? ( media-video/ffmpeg:0= )
 	)
 	gstreamer? (
-		media-libs/gstreamer:0.10
-		media-libs/gst-plugins-base:0.10
+		media-libs/gstreamer:1.0
+		media-libs/gst-plugins-base:1.0
 	)
 	gtk? (
 		dev-libs/glib:2
