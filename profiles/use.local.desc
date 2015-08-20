@@ -1000,6 +1000,7 @@ app-office/abiword:redland - Enables support redland and raptor libs.
 app-office/abiword:thesaurus - Enable thesaurus support
 app-office/abiword:wordperfect - Enable wordperfect file support via app-text/libwpd
 app-office/calligra:attica - Get hot stuff with dev-libs/libattica
+app-office/calligra:color-management - Enable color management via media-libs/opencolorio
 app-office/calligra:eigen - Enable dev-cpp/eigen mathematical templates support
 app-office/calligra:glew - Enable media-libs/glew opengl extension library support
 app-office/calligra:glib - Enable support for C library routines from dev-libs/glib
@@ -1288,7 +1289,6 @@ dev-db/mariadb-galera:embedded - Build embedded server (libmysqld)
 dev-db/mariadb-galera:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
 dev-db/mariadb-galera:jemalloc - Use dev-libs/jemalloc for allocations.
 dev-db/mariadb-galera:latin1 - Use LATIN1 encoding instead of UTF8
-dev-db/mariadb-galera:minimal - Install client programs only, no server
 dev-db/mariadb-galera:oqgraph - Add support for the Open Query GRAPH engine
 dev-db/mariadb-galera:profiling - Add support for statement profiling (requires USE=community).
 dev-db/mariadb-galera:server - Build the server program
@@ -1667,6 +1667,7 @@ dev-java/commons-modeler:commons-digester - Add support for the commons-digester
 dev-java/ecj-gcj:native - Build a native binary along with the jar. Provides faster execution time, but needs about 1G memory and some patience to compile.
 dev-java/eclipse-ecj:ant - Support using ecj in Ant builds via dev-java/ant-eclipse-ecj
 dev-java/emma:launcher - Install /usr/bin/emma. Collides with sci-biology/emboss.
+dev-java/gcj-jdk:awt - Install AWT libraries, needed by some GUIs (not needed to build icedtea)
 dev-java/gjdoc:xmldoclet - Also build support for the xml doclet that generates output in xml instead of the traditional html javadoc.
 dev-java/gnu-classpath:alsa - Build with ALSA javax.sound.midi provider
 dev-java/gnu-classpath:dssi - Build with DSSI javax.sound.midi provider
@@ -6817,6 +6818,8 @@ sci-physics/root:reflex - Build the reflection database for the C++ interpreter
 sci-physics/root:shadow - Enable shadow authentication in rootd and proofd
 sci-physics/root:table - Build libTable contrib library
 sci-physics/root:xrootd - Build the interface for net-libs/xrootd
+sci-physics/yoda:c++11 - Build using the C++11 standard
+sci-physics/yoda:root - Adds support for sci-physics/root
 sci-visualization/fityk:nlopt - Enable optimization with sci-libs/nlopt
 sci-visualization/gnuplot:bitmap - Enable dot-matrix printers and pbm terminal
 sci-visualization/gnuplot:compat - Enable backwards compatibility with version 4 syntax

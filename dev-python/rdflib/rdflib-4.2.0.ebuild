@@ -6,7 +6,7 @@ EAPI=5
 
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 PYTHON_REQ_USE="sqlite?"
-DISTUTILS_NO_PARALLEL_BUILD=true
+
 # The usual required for tests
 DISTUTILS_IN_SOURCE_BUILD=1
 
@@ -26,8 +26,8 @@ RDEPEND="
 	dev-python/html5lib[${PYTHON_USEDEP}]
 	dev-python/pyparsing[${PYTHON_USEDEP}]
 	berkdb? ( dev-python/bsddb3[${PYTHON_USEDEP}] )
-	mysql? ( dev-python/mysql-python[$(python_gen_usedep 'python2*')] )
-	redland? ( dev-libs/redland-bindings[python,$(python_gen_usedep 'python2*')] )"
+	mysql? ( dev-python/mysql-python[$(python_gen_usedep python2_7)] )
+	redland? ( dev-libs/redland-bindings[python,$(python_gen_usedep python2_7)] )"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/sparql-wrapper[${PYTHON_USEDEP}]

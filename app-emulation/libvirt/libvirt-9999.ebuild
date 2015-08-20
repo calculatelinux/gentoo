@@ -122,7 +122,14 @@ DEPEND="${RDEPEND}
 
 # gentoo.readme stuff:
 DISABLE_AUTOFORMATTING=true
-DOC_CONTENTS="For the basic networking support (bridged and routed networks) you don't
+DOC_CONTENTS="Important: The openrc libvirtd init script is now broken up into two
+separate services: libvirtd, that solely handles the daemon, and
+libvirt-guests, that takes care of clients during shutdown/restart of the
+host. In order to reenable client handling, edit /etc/conf.d/libvirt-guests
+and enable the service:
+	$ rc-update add libvirt-guests
+
+For the basic networking support (bridged and routed networks) you don't
 need any extra software. For more complex network modes including but not
 limited to NATed network, you can enable the 'virt-network' USE flag.
 
@@ -137,9 +144,10 @@ For openrc users:
 	Please use /etc/conf.d/libvirtd to control the '--listen' parameter for
 	libvirtd.
 
-	The default configuration will suspend and resume running kvm guests
-	with 'managedsave'. This behavior can be changed under
-	/etc/conf.d/libvirtd
+	Use /etc/init.d/libvirt-guests to manage clients on restart/shutdown of
+	the host. The default configuration will suspend and resume running kvm
+	guests with 'managedsave'. This behavior can be changed under
+	/etc/conf.d/libvirt-guests
 
 For systemd users:
 
@@ -259,7 +267,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.2.9-do_not_use_sysconf.patch \
 		"${FILESDIR}"/${PN}-1.2.16-fix_paths_in_libvirt-guests_sh.patch \
-		"${FILESDIR}"/${P}-fix_paths_for_apparmor.patch
+		"${FILESDIR}"/${PN}-1.2.17-fix_paths_for_apparmor.patch
 
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" \
@@ -274,7 +282,7 @@ src_prepare() {
 	local iscsi_init=
 	local rbd_init=
 	local firewalld_init=
-	cp "${FILESDIR}/libvirtd.init-r14" "${S}/libvirtd.init"
+	cp "${FILESDIR}/libvirtd.init-r15" "${S}/libvirtd.init"
 	use avahi && avahi_init='avahi-daemon'
 	use iscsi && iscsi_init='iscsid'
 	use rbd && rbd_init='ceph'
@@ -441,8 +449,11 @@ src_install() {
 	systemd_newtmpfilesd "${FILESDIR}"/libvirtd.tmpfiles.conf libvirtd.conf
 
 	newinitd "${S}/libvirtd.init" libvirtd || die
-	newconfd "${FILESDIR}/libvirtd.confd-r4" libvirtd || die
+	newinitd "${FILESDIR}/libvirt-guests.init" libvirt-guests || die
 	newinitd "${FILESDIR}/virtlockd.init-r1" virtlockd || die
+
+	newconfd "${FILESDIR}/libvirtd.confd-r5" libvirtd || die
+	newconfd "${FILESDIR}/libvirt-guests.confd" libvirt-guests || die
 
 	readme.gentoo_create_doc
 }
@@ -472,7 +483,7 @@ pkg_postinst() {
 	use libvirtd || return 0
 	# From here, only libvirtd-related instructions, be warned!
 
-	if [[ -n ${REPLACING_VERSIONS} ]] && ! version_is_at_least 1.2.17-r2 ${REPLACING_VERSIONS} ]]; then
+	if [[ -n ${REPLACING_VERSIONS} ]] && ! version_is_at_least 1.2.18-r2 ${REPLACING_VERSIONS} ]]; then
 		FORCE_PRINT_ELOG=true
 	fi
 

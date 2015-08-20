@@ -36,7 +36,7 @@ S="${WORKDIR}/${MY_P}"
 # Comment out patch for tests for now
 #PATCHES=( "${FILESDIR}"/${PN}-2.0-tests-py3.patch )
 
-# https://github.com/bbangert/routes/issues/42 presents a patch 
+# https://github.com/bbangert/routes/issues/42 presents a patch
 # for the faulty docbuild converted to sed stmnts
 python_prepare_all() {
 	use test && DISTUTILS_IN_SOURCE_BUILD=1
