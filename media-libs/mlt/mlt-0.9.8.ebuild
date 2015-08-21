@@ -3,8 +3,9 @@
 # $Id$
 
 EAPI=5
-PYTHON_DEPEND="python? 2:2.6"
-inherit eutils toolchain-funcs multilib python
+PYTHON_COMPAT=( python2_7 )
+USE_RUBY="ruby19"
+inherit eutils toolchain-funcs multilib python-single-r1 ruby-single
 
 DESCRIPTION="An open source multimedia framework, designed and developed for television broadcasting"
 HOMEPAGE="http://www.mltframework.org/"
@@ -46,8 +47,8 @@ RDEPEND="
 	kde? ( kde-base/kdelibs:4
 		media-libs/libexif )
 	!media-libs/mlt++
-	lua? ( >=dev-lang/lua-5.1.4-r4 )
-	ruby? ( dev-lang/ruby )"
+	lua? ( >=dev-lang/lua-5.1.4-r4:= )
+	ruby? ( ${RUBY_DEPS} )"
 #	sox? ( media-sound/sox )
 #	java? ( >=virtual/jre-1.5 )
 #	perl? ( dev-lang/perl )
@@ -60,7 +61,7 @@ DEPEND="${RDEPEND}
 	compressed-lumas? ( || ( media-gfx/imagemagick[png]
 			media-gfx/graphicsmagick[imagemagick,png] ) )
 	lua? ( ${SWIG_DEPEND} virtual/pkgconfig )
-	python? ( ${SWIG_DEPEND} )
+	python? ( ${SWIG_DEPEND} ${PYTHON_DEPS} )
 	ruby? ( ${SWIG_DEPEND} )"
 #	java? ( ${SWIG_DEPEND} >=virtual/jdk-1.5 )
 #	perl? ( ${SWIG_DEPEND} )
@@ -68,8 +69,7 @@ DEPEND="${RDEPEND}
 #	tcl? ( ${SWIG_DEPEND} )
 
 pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
+	python-single-r1_pkg_setup
 }
 
 src_prepare() {
@@ -164,6 +164,7 @@ src_install() {
 		exeinto $(python_get_sitedir)
 		doexe _mlt.so
 		dodoc play.py
+		python_optimize
 	fi
 
 	if use ruby; then
@@ -173,16 +174,4 @@ src_install() {
 		dodoc play.rb thumbs.rb
 	fi
 	# TODO: java perl php tcl
-}
-
-pkg_postinst() {
-	if use python; then
-		python_mod_optimize mlt.py
-	fi
-}
-
-pkg_postrm() {
-	if use python; then
-		python_mod_cleanup mlt.py
-	fi
 }

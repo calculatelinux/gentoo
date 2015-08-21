@@ -30,9 +30,14 @@
 
 #--- END OF EXAMPLES ---
 
-# Michael Palimaka <kensington@gentoo.org> (20 Aug 2015)
-# Causes build failure in many revdeps
-=kde-base/kdelibs-4.14.11
+# Lars Wendler <polynomial-c@gentoo.org> (21 Aug 2015)
+# This version breaks tests in app-admin/rsyslog and 
+# also breaks rule settings.
+# See
+# http://lists.adiscon.net/pipermail/rsyslog/2015-August/041013.html
+# and
+# https://github.com/rsyslog/rsyslog/issues/489
+=dev-libs/liblognorm-1.1.2
 
 # Lars Wendler <polynomial-c@gentoo.org> (20 Aug 2015)
 # Masked for testing
@@ -115,12 +120,6 @@ kde-misc/ksoprano
 kde-misc/nepomukshell
 kde-misc/pgame
 media-video/bangarang
-
-# Michał Górny <mgorny@gentoo.org> (12 Aug 2015)
-# (on behalf of QA team)
-# Disables RSA & DSA keys without warning, effectively blocking incoming
-# SSH connections.
->=net-misc/openssh-7.0
 
 # Patrice Clement <monsieurp@gentoo.org> (11 Aug 2015)
 # Old and doesn't compile with recent JDKs (>= 1.8).
