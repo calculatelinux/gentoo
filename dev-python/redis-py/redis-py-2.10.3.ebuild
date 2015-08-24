@@ -3,7 +3,8 @@
 # $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
+
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy pypy3 )
 
 inherit distutils-r1
 
@@ -11,7 +12,7 @@ MY_PN="redis"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Python client for Redis key-value store"
-HOMEPAGE="http://github.com/andymccurdy/redis-py"
+HOMEPAGE="https://github.com/andymccurdy/redis-py"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"

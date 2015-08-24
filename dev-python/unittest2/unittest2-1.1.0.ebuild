@@ -3,12 +3,13 @@
 # $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 python3_3 python3_4 pypy )
+
+PYTHON_COMPAT=( python2_7 python3_{3,4} pypy pypy3 )
 
 inherit distutils-r1
 
 DESCRIPTION="The new features in unittest backported to Python 2.4+"
-HOMEPAGE="http://pypi.python.org/pypi/unittest2"
+HOMEPAGE="https://pypi.python.org/pypi/unittest2"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
@@ -25,13 +26,7 @@ CDEPEND="
 DEPEND="${CDEPEND}"
 RDEPEND="${CDEPEND}"
 
-python_prepare_all() {
-	local PATCHES=(
-		"${FILESDIR}"/remove-argparse-dependence.patch
-	)
-
-	distutils-r1_python_prepare_all
-}
+PATCHES=( "${FILESDIR}"/remove-argparse-dependence.patch )
 
 python_test() {
 	"${PYTHON}" -m unittest2 discover || die "tests failed under ${EPYTHON}"
