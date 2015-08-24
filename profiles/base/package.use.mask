@@ -630,8 +630,9 @@ sys-devel/gcc libssp
 media-video/transcode nuv pic
 
 # Davide Pesavento <pesa@gentoo.org> (30 Nov 2011)
-# JavaScriptCore JIT is supported only on amd64/arm/x86, so
-# mask USE="jit" here and unmask it in the relevant arch profiles.
+# The QML (V4) and JSC JITs are supported only on amd64/arm/x86, so
+# mask the flag here and unmask it in the appropriate arch profiles.
+dev-qt/qtdeclarative jit
 dev-qt/qtscript jit
 dev-qt/qtwebkit jit
 
@@ -684,10 +685,6 @@ net-dns/pdnsd isdn urandom
 # Justin Lecher <jlec@gentoo.org> (17 Nov 2010)
 # Upstream didn't release patches for aria yet
 >=sci-chemistry/cns-1.3 aria
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (8 Sep 2010)
-# drm don't even build here so mask everywhere expect live.
-<x11-libs/cairo-9999 drm
 
 # Alex Legler <a3li@gentoo.org> (1 Sep 2010)
 # This feature is marked as experimental by upstream.

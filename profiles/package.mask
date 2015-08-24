@@ -30,6 +30,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Matt Turner <mattst88@gentoo.org> (22 Aug 2015)
+# nouveau has been in the kernel since 2.6.33
+# Masked for removal in 30 days.
+x11-base/nouveau-drm
+
 # Lars Wendler <polynomial-c@gentoo.org> (21 Aug 2015)
 # This version breaks tests in app-admin/rsyslog and 
 # also breaks rule settings.
@@ -288,11 +293,6 @@ app-backup/cyphertite
 # Masking PHP 7 pre-release versions
 dev-lang/php:7.0
 =virtual/httpd-php-7.0
-
-# Mike Gilbert <floppym@gentoo.org> (06 May 2015)
-# Obsolete development snapshots.
->=app-emulation/open-vm-tools-2013
->=app-emulation/open-vm-tools-kmod-2013
 
 # Brian Evans <grknight@gentoo.org> (30 Apr 2015)
 # It is unclear if dev-php/smarty-2* is affected by

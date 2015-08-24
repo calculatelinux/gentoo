@@ -43,5 +43,9 @@ python_test() {
 
 python_install_all() {
 	distutils-r1_python_install_all
-	emake -C doc PREFIX=/usr DESTDIR="${D}" install_man
+	if [[ ${PV} == *9999 ]]; then
+		emake -C doc PREFIX=/usr DESTDIR="${D}" install_man
+	else
+		doman man/*
+	fi
 }
