@@ -6,8 +6,8 @@ EAPI=5
 inherit eutils
 
 DESCRIPTION="A command line CD encoder"
-HOMEPAGE="http://code.google.com/p/abcde/"
-SRC_URI="http://abcde.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/abcde/"
+SRC_URI="https://abcde.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

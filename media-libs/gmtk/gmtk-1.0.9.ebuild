@@ -6,8 +6,8 @@ EAPI=5
 inherit eutils
 
 DESCRIPTION="GTK+ widget and function libraries for gnome-mplayer"
-HOMEPAGE="http://code.google.com/p/gmtk/"
-SRC_URI="http://${PN}.googlecode.com/svn/packages/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/gmtk/"
+SRC_URI="https://${PN}.googlecode.com/svn/packages/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

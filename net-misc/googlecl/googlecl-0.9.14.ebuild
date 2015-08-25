@@ -8,8 +8,8 @@ PYTHON_DEPEND="2:2.5:2.7"
 inherit distutils
 
 DESCRIPTION="Command line tools for the Google Data APIs"
-HOMEPAGE="http://code.google.com/p/googlecl/"
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/googlecl/"
+SRC_URI="https://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"

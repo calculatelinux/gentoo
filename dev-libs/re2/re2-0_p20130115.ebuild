@@ -7,8 +7,8 @@ EAPI=4
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="An efficent, principled regular expression library"
-HOMEPAGE="http://code.google.com/p/re2/"
-SRC_URI="http://re2.googlecode.com/files/${PN}-${PV##*_p}.tgz"
+HOMEPAGE="https://code.google.com/p/re2/"
+SRC_URI="https://re2.googlecode.com/files/${PN}-${PV##*_p}.tgz"
 
 LICENSE="BSD"
 SLOT="0"

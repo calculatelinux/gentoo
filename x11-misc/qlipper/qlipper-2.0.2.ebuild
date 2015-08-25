@@ -9,8 +9,8 @@ PLOCALES="cs sr"
 inherit cmake-utils l10n
 
 DESCRIPTION="Lightweight and cross-platform clipboard history applet"
-HOMEPAGE="http://code.google.com/p/qlipper/"
-SRC_URI="http://qlipper.googlecode.com/files/${P}.tar.bz2"
+HOMEPAGE="https://code.google.com/p/qlipper/"
+SRC_URI="https://qlipper.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

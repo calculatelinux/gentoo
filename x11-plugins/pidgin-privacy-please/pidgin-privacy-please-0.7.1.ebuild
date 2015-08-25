@@ -7,8 +7,8 @@ EAPI=2
 inherit autotools
 
 DESCRIPTION="pidgin plugin to stop spammers from annoying you"
-HOMEPAGE="http://code.google.com/p/pidgin-privacy-please/"
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/pidgin-privacy-please/"
+SRC_URI="https://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

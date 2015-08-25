@@ -9,11 +9,11 @@ inherit distutils-r1 linux-info user
 
 DESCRIPTION="A virtual network service for Openstack"
 HOMEPAGE="https://launchpad.net/neutron"
-SRC_URI="http://launchpad.net/${PN}/kilo/${PV}/+download/${P}.tar.gz"
+SRC_URI="https://launchpad.net/${PN}/kilo/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="compute-only dhcp doc l3 metadata openvswitch linuxbridge server test sqlite mysql postgres"
 REQUIRED_USE="!compute-only? ( || ( mysql postgres sqlite ) )
 						compute-only? ( !mysql !postgres !sqlite !dhcp !l3 !metadata !server

@@ -6,8 +6,8 @@ EAPI=5
 inherit eutils
 
 DESCRIPTION="gRun is a GTK based Run dialog that closely resembles the Windows Run dialog, just like xexec"
-HOMEPAGE="http://code.google.com/p/grun/"
-SRC_URI="http://grun.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/grun/"
+SRC_URI="https://grun.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

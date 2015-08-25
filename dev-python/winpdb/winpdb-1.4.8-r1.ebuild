@@ -9,8 +9,8 @@ PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 inherit distutils-r1
 
 DESCRIPTION="Graphical Python debugger"
-HOMEPAGE="http://winpdb.org/ http://code.google.com/p/winpdb/ https://pypi.python.org/pypi/winpdb"
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="http://winpdb.org/ https://code.google.com/p/winpdb/ https://pypi.python.org/pypi/winpdb"
+SRC_URI="https://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

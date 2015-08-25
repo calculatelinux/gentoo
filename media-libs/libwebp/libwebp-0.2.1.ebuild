@@ -6,8 +6,8 @@ EAPI=4
 inherit eutils
 
 DESCRIPTION="A lossy image compression format"
-HOMEPAGE="http://code.google.com/p/webp/"
-SRC_URI="http://webp.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/webp/"
+SRC_URI="https://webp.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

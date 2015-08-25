@@ -5,8 +5,8 @@
 EAPI=5
 
 DESCRIPTION="RPC/PDU control and monitoring service for data center or compute cluster power management"
-HOMEPAGE="http://code.google.com/p/powerman/"
-SRC_URI="http://powerman.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/powerman/"
+SRC_URI="https://powerman.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

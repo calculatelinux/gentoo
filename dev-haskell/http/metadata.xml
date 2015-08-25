@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>haskell</herd>
 	<longdescription>
@@ -29,7 +29,7 @@
 		&gt;    do
 		&gt;      rsp &lt;- Network.Browser.browse $ do
 		&gt;               setAllowRedirects True -- handle HTTP redirects
-		&gt;               request $ getRequest "http://google.com/"
+		&gt;               request $ getRequest "https://google.com/"
 		&gt;      fmap (take 100) (getResponseBody rsp)
 		&gt;
 		

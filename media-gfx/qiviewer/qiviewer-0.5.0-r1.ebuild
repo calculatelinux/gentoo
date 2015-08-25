@@ -9,8 +9,8 @@ PLOCALES="el es_AR es_ES"
 inherit l10n qt4-r2 readme.gentoo
 
 DESCRIPTION="Lightweight image viewer, similar to eog or viewnior for Gnome"
-HOMEPAGE="http://code.google.com/p/qiviewer"
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
+HOMEPAGE="https://code.google.com/p/qiviewer"
+SRC_URI="https://${PN}.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

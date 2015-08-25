@@ -4,9 +4,9 @@
 
 EAPI=3
 
-SRC_URI="http://ardesia.googlecode.com/files/${P}.tar.gz"
+SRC_URI="https://ardesia.googlecode.com/files/${P}.tar.gz"
 DESCRIPTION="Shows a movable and resizable spotlight on the screen"
-HOMEPAGE="http://code.google.com/p/ardesia/"
+HOMEPAGE="https://code.google.com/p/ardesia/"
 
 LICENSE="GPL-3"
 SLOT="0"

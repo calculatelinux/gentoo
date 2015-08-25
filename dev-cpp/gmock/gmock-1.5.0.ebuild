@@ -7,8 +7,8 @@ EAPI="4"
 inherit libtool
 
 DESCRIPTION="Google's C++ mocking framework"
-HOMEPAGE="http://code.google.com/p/googlemock/"
-SRC_URI="http://googlemock.googlecode.com/files/${P}.tar.bz2"
+HOMEPAGE="https://code.google.com/p/googlemock/"
+SRC_URI="https://googlemock.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"

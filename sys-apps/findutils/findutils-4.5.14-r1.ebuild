@@ -7,7 +7,7 @@ EAPI="4"
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="GNU utilities for finding files"
-HOMEPAGE="http://www.gnu.org/software/findutils/"
+HOMEPAGE="https://www.gnu.org/software/findutils/"
 SRC_URI="mirror://gnu-alpha/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3+"
@@ -39,7 +39,7 @@ src_configure() {
 	econf \
 		--with-packager="Gentoo" \
 		--with-packager-version="${PVR}" \
-		--with-packager-bug-reports="http://bugs.gentoo.org/" \
+		--with-packager-bug-reports="https://bugs.gentoo.org/" \
 		--program-prefix=${program_prefix} \
 		$(use_enable debug) \
 		$(use_enable nls) \

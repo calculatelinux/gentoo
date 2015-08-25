@@ -8,9 +8,9 @@ PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1
 
 DESCRIPTION="Python Bindings for the Google Voice API"
-HOMEPAGE="http://code.google.com/p/pygooglevoice/"
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz
-	http://${PN}.googlecode.com/files/${P}-extras.zip"
+HOMEPAGE="https://code.google.com/p/pygooglevoice/"
+SRC_URI="https://${PN}.googlecode.com/files/${P}.tar.gz
+	https://${PN}.googlecode.com/files/${P}-extras.zip"
 
 LICENSE="BSD"
 SLOT="0"

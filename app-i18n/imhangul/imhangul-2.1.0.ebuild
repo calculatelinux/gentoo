@@ -6,8 +6,8 @@ EAPI="3"
 inherit gnome2-utils multilib
 
 DESCRIPTION="Gtk+-2.0 Hangul Input Modules"
-HOMEPAGE="http://code.google.com/p/imhangul/"
-SRC_URI="http://imhangul.googlecode.com/files/${P}.tar.bz2"
+HOMEPAGE="https://code.google.com/p/imhangul/"
+SRC_URI="https://imhangul.googlecode.com/files/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="LGPL-2.1"

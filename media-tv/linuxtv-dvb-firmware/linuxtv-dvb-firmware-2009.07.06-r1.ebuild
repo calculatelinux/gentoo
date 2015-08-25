@@ -20,7 +20,7 @@ S="${WORKDIR}"
 PACKET_NAME=dvb-firmwares-1.tar.bz2
 PACKET_SRC_URI="http://www.linuxtv.org/downloads/firmware/${PACKET_NAME}"
 get_dvb_firmware="${FILESDIR}/get_dvb_firmware-${PV}"
-# from http://git.kernel.org/?p=linux/kernel/git/stable/linux-2.6-stable.git;a=history;f=Documentation/dvb/get_dvb_firmware
+# from https://git.kernel.org/?p=linux/kernel/git/stable/linux-2.6-stable.git;a=history;f=Documentation/dvb/get_dvb_firmware
 
 FW_USE_FLAGS=(
 # packet
@@ -265,7 +265,7 @@ pkg_setup() {
 		elog "in ${ROOT%/}/etc/make.conf. This way only the firmwares you own"
 		elog "the hardware will be installed."
 	fi
-	# according to http://devmanual.gentoo.org/general-concepts/use-flags/index.html
+	# according to https://devmanual.gentoo.org/general-concepts/use-flags/index.html
 	# we should not die here. However, there is no sensible fallback choice to make
 	# because the user may have either the one or the other. WYGIWYG
 	if use dvb_cards_tda10046 && use dvb_cards_tda10046lifeview; then

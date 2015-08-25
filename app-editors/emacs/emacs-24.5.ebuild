@@ -7,7 +7,7 @@ EAPI=5
 inherit autotools elisp-common eutils flag-o-matic multilib readme.gentoo
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
-HOMEPAGE="http://www.gnu.org/software/emacs/"
+HOMEPAGE="https://www.gnu.org/software/emacs/"
 SRC_URI="mirror://gnu/emacs/${P}.tar.xz
 	https://dev.gentoo.org/~ulm/emacs/${P}-patches-1.tar.xz"
 
@@ -150,7 +150,7 @@ src_configure() {
 				Your version of GTK+ will have problems with closing open
 				displays. This is no problem if you just use one display, but
 				if you use more than one and close one of them Emacs may crash.
-				See <http://bugzilla.gnome.org/show_bug.cgi?id=85715>.
+				See <https://bugzilla.gnome.org/show_bug.cgi?id=85715>.
 				If you intend to use more than one display, then it is strongly
 				recommended that you compile Emacs with the Athena/Lucid or the
 				Motif toolkit instead.

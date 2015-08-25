@@ -7,8 +7,8 @@ EAPI=4
 inherit toolchain-funcs eutils flag-o-matic
 
 DESCRIPTION="Fast, multi-threaded malloc() and nifty performance analysis tools"
-HOMEPAGE="http://code.google.com/p/google-perftools/"
-SRC_URI="http://google-perftools.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/google-perftools/"
+SRC_URI="https://google-perftools.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -64,7 +64,7 @@ src_test() {
 	case "${LD_PRELOAD}" in
 		*libsandbox*)
 			ewarn "Unable to run tests when sanbox is enabled."
-			ewarn "See http://bugs.gentoo.org/290249"
+			ewarn "See https://bugs.gentoo.org/290249"
 			return 0
 			;;
 	esac

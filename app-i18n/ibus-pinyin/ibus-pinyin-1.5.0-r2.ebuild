@@ -10,8 +10,8 @@ PYTHON_REQ_USE="sqlite"
 inherit python-single-r1 eutils
 
 DESCRIPTION="Chinese PinYin IMEngine for IBus Framework"
-HOMEPAGE="http://code.google.com/p/ibus/"
-SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/ibus/"
+SRC_URI="https://ibus.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

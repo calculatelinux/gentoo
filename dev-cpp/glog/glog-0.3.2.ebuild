@@ -6,8 +6,8 @@ EAPI="4"
 inherit eutils
 
 DESCRIPTION="Google's C++ logging library"
-HOMEPAGE="http://code.google.com/p/google-glog/"
-SRC_URI="http://google-glog.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/google-glog/"
+SRC_URI="https://google-glog.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

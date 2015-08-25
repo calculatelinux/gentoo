@@ -10,7 +10,7 @@ VALA_USE_DEPEND="vapigen"
 inherit bash-completion-r1 gnome.org linux-info systemd user readme.gentoo toolchain-funcs vala virtualx udev eutils
 
 DESCRIPTION="Universal network configuration daemon for laptops, desktops, servers and virtualization hosts"
-HOMEPAGE="http://projects.gnome.org/NetworkManager/"
+HOMEPAGE="https://projects.gnome.org/NetworkManager/"
 
 LICENSE="GPL-2+"
 SLOT="0" # add subslot if libnm-util.so.2 or libnm-glib.so.4 bumps soname version
@@ -77,7 +77,7 @@ sysfs_deprecated_check() {
 	if { linux_chkconfig_present SYSFS_DEPRECATED_V2; }; then
 		eerror "Please disable SYSFS_DEPRECATED_V2 support in your kernel config and recompile your kernel"
 		eerror "or NetworkManager will not work correctly."
-		eerror "See http://bugs.gentoo.org/333639 for more info."
+		eerror "See https://bugs.gentoo.org/333639 for more info."
 		die "CONFIG_SYSFS_DEPRECATED_V2 support detected!"
 	fi
 	eend $?
@@ -91,7 +91,7 @@ pkg_pretend() {
 		else
 			ewarn "Was unable to determine your kernel .config"
 			ewarn "Please note that if CONFIG_SYSFS_DEPRECATED_V2 is set in your kernel .config, NetworkManager will not work correctly."
-			ewarn "See http://bugs.gentoo.org/333639 for more info."
+			ewarn "See https://bugs.gentoo.org/333639 for more info."
 		fi
 
 	fi

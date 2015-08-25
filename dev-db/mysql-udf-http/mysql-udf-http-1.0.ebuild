@@ -7,8 +7,8 @@ EAPI=4
 inherit eutils toolchain-funcs autotools
 
 DESCRIPTION="MySQL User-defined function (UDF) for HTTP REST"
-HOMEPAGE="http://code.google.com/p/mysql-udf-http/"
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/mysql-udf-http/"
+SRC_URI="https://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"

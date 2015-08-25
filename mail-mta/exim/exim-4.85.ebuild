@@ -19,7 +19,7 @@ HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd ~x86-solaris"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-solaris"
 
 COMMON_DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-libs/db-3.2
@@ -499,7 +499,7 @@ pkg_postinst() {
 		einfo "Starting from Exim 4.83, DSN support comes from upstream."
 		einfo "DSN support is an experimental feature.  If you used DSN"
 		einfo "support prior to 4.83, make sure to remove all dsn_process"
-		einfo "switches from your routers, see http://bugs.gentoo.org/511818"
+		einfo "switches from your routers, see https://bugs.gentoo.org/511818"
 	fi
 	einfo "Exim maintains some db files under its spool directory that need"
 	einfo "cleaning from time to time.  (${EROOT}var/spool/exim/db)"

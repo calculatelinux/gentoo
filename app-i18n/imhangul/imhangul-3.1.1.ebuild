@@ -6,8 +6,8 @@ EAPI="3"
 inherit multilib
 
 DESCRIPTION="Gtk+-3.0 Hangul Input Modules"
-HOMEPAGE="http://code.google.com/p/imhangul/"
-SRC_URI="http://imhangul.googlecode.com/files/${P}.tar.bz2"
+HOMEPAGE="https://code.google.com/p/imhangul/"
+SRC_URI="https://imhangul.googlecode.com/files/${P}.tar.bz2"
 
 SLOT="3"
 LICENSE="LGPL-2.1"

@@ -40,7 +40,7 @@ SRC_URI+=" fonts? ( mirror://gnu/unifont/${UNIFONT}/${UNIFONT}.pcf.gz )
 	themes? ( mirror://sourceforge/dejavu/${DEJAVU}.zip )"
 
 DESCRIPTION="GNU GRUB boot loader"
-HOMEPAGE="http://www.gnu.org/software/grub/"
+HOMEPAGE="https://www.gnu.org/software/grub/"
 
 # Includes licenses for dejavu and unifont
 LICENSE="GPL-3 fonts? ( GPL-2-with-font-exception ) themes? ( BitstreamVera )"
@@ -297,7 +297,7 @@ pkg_postinst() {
 	mount-boot_pkg_postinst
 
 	elog "For information on how to configure GRUB2 please refer to the guide:"
-	elog "    http://wiki.gentoo.org/wiki/GRUB2_Quick_Start"
+	elog "    https://wiki.gentoo.org/wiki/GRUB2_Quick_Start"
 
 	if has_version 'sys-boot/grub:0'; then
 		elog "A migration guide for GRUB Legacy users is available:"

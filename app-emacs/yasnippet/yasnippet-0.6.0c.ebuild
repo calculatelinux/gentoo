@@ -5,9 +5,9 @@
 inherit elisp
 
 DESCRIPTION="Yet another snippet extension for Emacs"
-HOMEPAGE="http://code.google.com/p/yasnippet/"
-SRC_URI="http://yasnippet.googlecode.com/files/${P}.tar.bz2
-	doc? ( http://yasnippet.googlecode.com/files/${PN}-doc-${PV}.tar.bz2 )"
+HOMEPAGE="https://code.google.com/p/yasnippet/"
+SRC_URI="https://yasnippet.googlecode.com/files/${P}.tar.bz2
+	doc? ( https://yasnippet.googlecode.com/files/${PN}-doc-${PV}.tar.bz2 )"
 
 # Homepage says MIT licence, source contains GPL-2 copyright notice
 LICENSE="MIT GPL-2"

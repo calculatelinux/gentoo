@@ -7,8 +7,8 @@ EAPI=5
 inherit kde4-base
 
 DESCRIPTION="CalDAV support plugin for KDE Kontact"
-HOMEPAGE="http://code.google.com/p/kcaldav/"
-SRC_URI="http://kcaldav.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/kcaldav/"
+SRC_URI="https://kcaldav.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="4"

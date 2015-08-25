@@ -9,8 +9,8 @@ PYTHON_COMPAT=( python2_7 )
 inherit fdo-mime python-single-r1
 
 DESCRIPTION="A simple GTK+ disc burner"
-HOMEPAGE="http://code.google.com/p/recorder/"
-SRC_URI="http://recorder.googlecode.com/files/${P}.tar.bz2"
+HOMEPAGE="https://code.google.com/p/recorder/"
+SRC_URI="https://recorder.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"

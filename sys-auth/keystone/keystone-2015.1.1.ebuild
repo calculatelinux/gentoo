@@ -10,11 +10,11 @@ inherit distutils-r1 user
 
 DESCRIPTION="The Openstack authentication, authorization, and service catalog"
 HOMEPAGE="https://launchpad.net/keystone"
-SRC_URI="http://launchpad.net/${PN}/kilo/${PV}/+download/${P}.tar.gz"
+SRC_URI="https://launchpad.net/${PN}/kilo/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+sqlite memcached mongo mysql postgres ldap test"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 

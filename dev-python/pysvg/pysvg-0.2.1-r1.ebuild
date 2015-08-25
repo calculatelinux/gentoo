@@ -9,8 +9,8 @@ inherit distutils-r1
 
 DESCRIPTION="Python SVG document creation library"
 HOMEPAGE="http://codeboje.de/pysvg/
-	http://code.google.com/p/pysvg/"
-SRC_URI="http://pysvg.googlecode.com/files/${P}.zip"
+	https://code.google.com/p/pysvg/"
+SRC_URI="https://pysvg.googlecode.com/files/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"

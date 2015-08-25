@@ -7,8 +7,8 @@ EAPI=5
 inherit toolchain-funcs flag-o-matic eutils
 
 DESCRIPTION="DBI module for Lua"
-HOMEPAGE="http://code.google.com/p/luadbi/"
-SRC_URI="http://luadbi.googlecode.com/files/${PN}.${PV}.tar.gz"
+HOMEPAGE="https://code.google.com/p/luadbi/"
+SRC_URI="https://luadbi.googlecode.com/files/${PN}.${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

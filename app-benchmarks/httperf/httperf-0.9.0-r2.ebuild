@@ -10,8 +10,8 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 inherit autotools-utils toolchain-funcs
 
 DESCRIPTION="A tool from HP for measuring web server performance"
-HOMEPAGE="http://code.google.com/p/httperf/"
-SRC_URI="http://httperf.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/httperf/"
+SRC_URI="https://httperf.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

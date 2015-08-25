@@ -7,8 +7,8 @@ EAPI=5
 inherit eutils flag-o-matic multilib-minimal
 
 DESCRIPTION="Open Fingerprint Architecture"
-HOMEPAGE="http://code.google.com/p/musicip-libofa/"
-SRC_URI="http://musicip-libofa.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/musicip-libofa/"
+SRC_URI="https://musicip-libofa.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="|| ( APL-1.0 GPL-2 )"
 SLOT="0"

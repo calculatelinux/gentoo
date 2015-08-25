@@ -7,8 +7,8 @@ EAPI=5
 inherit flag-o-matic eutils multilib multilib-minimal toolchain-funcs
 
 DESCRIPTION="An efficent, principled regular expression library"
-HOMEPAGE="http://code.google.com/p/re2/"
-SRC_URI="http://re2.googlecode.com/files/${PN}-${PV##*_p}.tgz"
+HOMEPAGE="https://code.google.com/p/re2/"
+SRC_URI="https://re2.googlecode.com/files/${PN}-${PV##*_p}.tgz"
 
 LICENSE="BSD"
 # Symbols removed in version 20140110

@@ -6,8 +6,8 @@ EAPI="4"
 inherit eutils
 
 DESCRIPTION="Vietnamese Input Method Engine for IBUS using Unikey IME"
-HOMEPAGE="http://code.google.com/p/ibus-unikey/"
-SRC_URI="http://ibus-unikey.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/ibus-unikey/"
+SRC_URI="https://ibus-unikey.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

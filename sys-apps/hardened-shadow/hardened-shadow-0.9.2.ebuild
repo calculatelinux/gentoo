@@ -7,8 +7,8 @@ EAPI=4
 inherit autotools-utils eutils multilib user
 
 DESCRIPTION="Hardened implementation of user account utilities"
-HOMEPAGE="http://code.google.com/p/hardened-shadow/"
-SRC_URI="http://hardened-shadow.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/hardened-shadow/"
+SRC_URI="https://hardened-shadow.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

@@ -6,8 +6,8 @@ EAPI=5
 inherit eutils games
 
 DESCRIPTION="A tetris clone with multiplayer support"
-HOMEPAGE="http://code.google.com/p/quadra/"
-SRC_URI="http://quadra.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/quadra/"
+SRC_URI="https://quadra.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

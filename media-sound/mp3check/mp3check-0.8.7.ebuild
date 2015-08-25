@@ -6,8 +6,8 @@ EAPI=5
 inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="Checks mp3 files for consistency and prints several errors and warnings"
-HOMEPAGE="http://code.google.com/p/mp3check/"
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tgz"
+HOMEPAGE="https://code.google.com/p/mp3check/"
+SRC_URI="https://${PN}.googlecode.com/files/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"

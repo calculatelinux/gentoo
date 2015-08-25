@@ -7,8 +7,8 @@ EAPI=4
 inherit autotools base eutils
 
 DESCRIPTION="An easily extensible archive format"
-HOMEPAGE="http://code.google.com/p/xar"
-SRC_URI="http://xar.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/xar"
+SRC_URI="https://xar.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"

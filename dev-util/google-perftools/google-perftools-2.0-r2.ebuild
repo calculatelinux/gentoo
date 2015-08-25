@@ -9,8 +9,8 @@ MY_P="gperftools-${PV}"
 inherit toolchain-funcs eutils flag-o-matic autotools-utils
 
 DESCRIPTION="Fast, multi-threaded malloc() and nifty performance analysis tools"
-HOMEPAGE="http://code.google.com/p/gperftools/"
-SRC_URI="http://gperftools.googlecode.com/files/${MY_P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/gperftools/"
+SRC_URI="https://gperftools.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0/4"
@@ -63,7 +63,7 @@ src_test() {
 	case "${LD_PRELOAD}" in
 		*libsandbox*)
 			ewarn "Unable to run tests when sanbox is enabled."
-			ewarn "See http://bugs.gentoo.org/290249"
+			ewarn "See https://bugs.gentoo.org/290249"
 			return 0
 			;;
 	esac

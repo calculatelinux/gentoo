@@ -7,8 +7,8 @@ inherit eutils cmake-utils user toolchain-funcs
 
 MY_P=${PN}-${PV/_rc/rc}
 DESCRIPTION="Peer-to-peer VPN, NCD scripting language, tun2socks proxifier"
-HOMEPAGE="http://code.google.com/p/badvpn/"
-SRC_URI="http://badvpn.googlecode.com/files/${MY_P}.tar.bz2"
+HOMEPAGE="https://code.google.com/p/badvpn/"
+SRC_URI="https://badvpn.googlecode.com/files/${MY_P}.tar.bz2"
 
 LICENSE="BSD"
 KEYWORDS="~amd64 ~arm ~x86"

@@ -8,7 +8,7 @@ GNOME_ORG_MODULE="gobject-introspection"
 inherit gnome.org
 
 DESCRIPTION="Build infrastructure for GObject Introspection"
-HOMEPAGE="http://live.gnome.org/GObjectIntrospection/"
+HOMEPAGE="https://live.gnome.org/GObjectIntrospection/"
 
 LICENSE="HPND"
 SLOT="0"
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND="!<${CATEGORY}/${PN/-common}-${PV}"
 # Use !<${PV} because mixing gobject-introspection with different version of -common can cause issues like:
-# http://forums.gentoo.org/viewtopic-p-7421930.html
+# https://forums.gentoo.org/viewtopic-p-7421930.html
 
 src_configure() { :; }
 

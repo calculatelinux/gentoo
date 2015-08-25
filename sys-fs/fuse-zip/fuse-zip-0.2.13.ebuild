@@ -7,8 +7,8 @@ EAPI=2
 inherit toolchain-funcs eutils
 
 DESCRIPTION="FUSE file system to navigate, extract, create and modify ZIP archives"
-HOMEPAGE="http://code.google.com/p/fuse-zip/"
-SRC_URI="http://fuse-zip.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/fuse-zip/"
+SRC_URI="https://fuse-zip.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"

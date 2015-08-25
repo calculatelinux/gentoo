@@ -13,8 +13,8 @@ PYTHON_USE_WITH_OPT="nssdb"
 inherit eutils python distutils
 
 DESCRIPTION="commandline tool to sync directory services to local cache"
-HOMEPAGE="http://code.google.com/p/nsscache/"
-SRC_URI="http://nsscache.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/nsscache/"
+SRC_URI="https://nsscache.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

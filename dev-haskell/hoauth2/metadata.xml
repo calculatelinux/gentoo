@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>haskell</herd>
 	<longdescription>
@@ -11,7 +11,7 @@
 		
 		* weibo oauth2: &lt;http://open.weibo.com/wiki/Oauth2&gt;
 		
-		* github oauth: &lt;http://developer.github.com/v3/oauth/&gt;
+		* github oauth: &lt;https://developer.github.com/v3/oauth/&gt;
 	</longdescription>
 	<upstream>
 		<remote-id type="github">freizl/hoauth2</remote-id>

@@ -7,7 +7,7 @@ EAPI=4
 inherit flag-o-matic
 
 DESCRIPTION="Tools to make diffs and compare files"
-HOMEPAGE="http://www.gnu.org/software/diffutils/"
+HOMEPAGE="https://www.gnu.org/software/diffutils/"
 SRC_URI="mirror://gnu-alpha/diffutils/${P}.tar.xz
 	mirror://gnu/diffutils/${P}.tar.xz"
 
@@ -39,7 +39,7 @@ src_configure() {
 	econf \
 		--with-packager="Gentoo" \
 		--with-packager-version="${PVR}" \
-		--with-packager-bug-reports="http://bugs.gentoo.org/" \
+		--with-packager-bug-reports="https://bugs.gentoo.org/" \
 		$(use_enable nls)
 }
 

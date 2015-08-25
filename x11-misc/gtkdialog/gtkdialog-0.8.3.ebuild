@@ -5,8 +5,8 @@
 EAPI=4
 
 DESCRIPTION="A small utility for fast and easy GUI building"
-HOMEPAGE="http://code.google.com/p/gtkdialog/"
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/gtkdialog/"
+SRC_URI="https://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

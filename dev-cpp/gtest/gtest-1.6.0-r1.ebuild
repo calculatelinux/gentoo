@@ -8,8 +8,8 @@ PYTHON_DEPEND="2"
 inherit eutils python autotools
 
 DESCRIPTION="Google C++ Testing Framework"
-HOMEPAGE="http://code.google.com/p/googletest/"
-SRC_URI="http://googletest.googlecode.com/files/${P}.zip"
+HOMEPAGE="https://code.google.com/p/googletest/"
+SRC_URI="https://googletest.googlecode.com/files/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"

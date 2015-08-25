@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
 <email>aballier@gentoo.org</email>
 <name>Alexis Ballier</name>
 </maintainer>
 <use>
+  <flag name="coin">Enables Coin3D support.</flag>
   <flag name="dmtx">Enables barcode data matrix support.</flag>
   <flag name="demos">Installs demo programs.</flag>
   <flag name="ogre">Enables <pkg>dev-games/ogre</pkg> support.</flag>

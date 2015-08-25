@@ -6,8 +6,8 @@ EAPI=5
 inherit fdo-mime gnome2-utils
 
 DESCRIPTION="A GTK+ interface to MPlayer"
-HOMEPAGE="http://code.google.com/p/gnome-mplayer/"
-SRC_URI="http://${PN}.googlecode.com/svn/packages/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/gnome-mplayer/"
+SRC_URI="https://${PN}.googlecode.com/svn/packages/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

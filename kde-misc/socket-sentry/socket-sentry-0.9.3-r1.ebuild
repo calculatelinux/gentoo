@@ -10,8 +10,8 @@ MY_PN="socketsentry"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="A KDE plasmoid that displays real-time network traffic on your Linux computer"
-HOMEPAGE="http://code.google.com/p/socket-sentry"
-SRC_URI="http://socket-sentry.googlecode.com/files/${MY_P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/socket-sentry"
+SRC_URI="https://socket-sentry.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-3+"
 KEYWORDS="~amd64 ~x86"

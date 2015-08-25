@@ -4,7 +4,7 @@
 
 EAPI="2"
 
-ESVN_REPO_URI="http://beast-mcmc.googlecode.com/svn/trunk/"
+ESVN_REPO_URI="https://beast-mcmc.googlecode.com/svn/trunk/"
 
 WANT_ANT_TASKS="ant-junit4"
 EANT_GENTOO_CLASSPATH="colt,jdom-1.0,itext,junit-4,jebl,matrix-toolkits-java,commons-math-2,jdom-jaxen-1.0"
@@ -16,7 +16,7 @@ JAVA_PKG_BSFIX_NAME="build.xml build_BEAST_MCMC.xml build_coalsim.xml build_deve
 inherit java-pkg-2 java-ant-2 eutils
 
 DESCRIPTION="Bayesian MCMC of Evolution & Phylogenetics using Molecular Sequences"
-HOMEPAGE="http://code.google.com/p/beast-mcmc/"
+HOMEPAGE="https://code.google.com/p/beast-mcmc/"
 #SRC_URI=""
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 

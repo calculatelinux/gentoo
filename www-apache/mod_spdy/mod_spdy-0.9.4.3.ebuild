@@ -8,7 +8,7 @@ PYTHON_COMPAT=(  python2_7 )
 inherit apache-module eutils python-any-r1
 
 if [[ ${PV} == 9999 ]] ; then
-	ESVN_REPO_URI="http://mod-spdy.googlecode.com/svn/trunk/src"
+	ESVN_REPO_URI="https://mod-spdy.googlecode.com/svn/trunk/src"
 	ESVN_RESTRICT="export"
 	EGIT_REPO_URI="https://chromium.googlesource.com/chromium/tools/depot_tools.git"
 	EGIT_SOURCEDIR="${WORKDIR}/depot_tools"
@@ -19,7 +19,7 @@ else
 fi
 
 DESCRIPTION="Apache module for rewriting web pages to reduce latency and bandwidth"
-HOMEPAGE="http://code.google.com/p/mod-spdy"
+HOMEPAGE="https://code.google.com/p/mod-spdy"
 
 LICENSE="Apache-2.0"
 SLOT="0"

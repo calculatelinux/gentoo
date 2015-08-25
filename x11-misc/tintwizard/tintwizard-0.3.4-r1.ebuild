@@ -9,8 +9,8 @@ PYTHON_DEPEND="2"
 inherit python
 
 DESCRIPTION="GUI wizard which generates config files for tint2 panels"
-HOMEPAGE="http://code.google.com/p/tintwizard/"
-SRC_URI="http://tintwizard.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/tintwizard/"
+SRC_URI="https://tintwizard.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

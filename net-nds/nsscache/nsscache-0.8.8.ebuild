@@ -11,8 +11,8 @@ RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
 inherit eutils python distutils
 
 DESCRIPTION="commandline tool to sync directory services to local cache"
-HOMEPAGE="http://code.google.com/p/nsscache/"
-SRC_URI="http://nsscache.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="https://code.google.com/p/nsscache/"
+SRC_URI="https://nsscache.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

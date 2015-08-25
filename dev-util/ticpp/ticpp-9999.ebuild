@@ -6,11 +6,11 @@ EAPI=5
 
 inherit subversion
 
-ESVN_REPO_URI="http://${PN}.googlecode.com/svn/trunk/"
+ESVN_REPO_URI="https://${PN}.googlecode.com/svn/trunk/"
 MY_PV=cvs
 
 DESCRIPTION="A completely new interface to TinyXML that uses MANY of the C++ strengths"
-HOMEPAGE="http://code.google.com/p/ticpp/"
+HOMEPAGE="https://code.google.com/p/ticpp/"
 SRC_URI=""
 
 LICENSE="MIT"
