@@ -1999,12 +1999,12 @@ dev-libs/libnl:python - Install experimental dev-lang/python bindings
 dev-libs/libnl:utils - Install command line interface utils
 dev-libs/libowfat:diet - Compile against dev-libs/dietlibc
 dev-libs/libp11:doc - Generate and install API documentation for the package.
-dev-libs/libpcre:bzip2 - Add support for pcregrep command to search within bzip2-compressed files, through sys-libs/zlib.
-dev-libs/libpcre:pcre16 - Build 16 bit PCRE library.
-dev-libs/libpcre:pcre32 - Build 32 bit PCRE library.
+dev-libs/libpcre:bzip2 - Add support for pcregrep command to search within bzip2-compressed files (via app-arch/bzip2).
+dev-libs/libpcre:pcre16 - Build PCRE library for 16 bit characters (e.g. UTF-16).
+dev-libs/libpcre:pcre32 - Build PCRE library for 32 bit characters (e.g. UTF-32).
 dev-libs/libpcre:readline - Add support for command line editing to pcretest, through sys-libs/readline.
 dev-libs/libpcre:recursion-limit - Limit match recursion to 8192; if disabled, the default limit is used, which is the same as the match limit.
-dev-libs/libpcre:zlib - Add support for pcregrep command to search within gzip-compressed files, through app-arch/gzip.
+dev-libs/libpcre:zlib - Add support for pcregrep command to search within gzip-compressed files (via sys-libs/zlib).
 dev-libs/libpeas:glade - Install the glade catalog
 dev-libs/libpeas:python - Build support for loading dev-lang/python plugins
 dev-libs/librra:recurrence - Enable recurrence support (EXPERIMENTAL)
@@ -3178,6 +3178,8 @@ kde-apps/kget:gpg - Enable signature verification by QGpgME via kde-base/kdepiml
 kde-apps/kget:mms - Enable MMS (Microsoft Media Server) plugin through media-libs/libmms
 kde-apps/kget:webkit - Enable KdeWebkit browser plugin using kde-misc/kwebkitpart
 kde-apps/kig:scripting - Support Python scripting
+kde-apps/kio-extras:phonon - Enable file audio preview plugin using media-libs/phonon
+kde-apps/kio-extras:sftp - Enable SFTP protocol support using net-libs/libssh
 kde-apps/kmix:canberra - Enable sound event support using media-libs/libcanberra
 kde-apps/konqueror:bookmarks - Add dependency on bookmark package.
 kde-apps/kopete:addbookmarks - Automatically add incoming urls to bookmarks.
@@ -3316,17 +3318,15 @@ kde-misc/plasma-nm:openconnect - Build support for the OpenConnect VPN client
 kde-misc/tellico:addressbook - Add support for kdepim addressbook (kabc)
 kde-plasma/kdeplasma-addons:ibus - Use ibus input method via app-i18n/ibus
 kde-plasma/kdeplasma-addons:scim - Enable applets that use app-i18n/scim
-kde-plasma/kfilemetadata:epub - Adds support for reading EPUB ebook metadata
 kde-plasma/kinfocenter:egl - Retrieve information about OpenGL via EGL
 kde-plasma/kinfocenter:gles - Show OpenGL ES information in kinfocenter
 kde-plasma/kinfocenter:nfs - Show information about NFS mounts, shares and log entries
 kde-plasma/kinfocenter:pci - Show advanced PCI information
 kde-plasma/kinfocenter:samba - Show information about Samba mounts, shares and log entries
-kde-plasma/kio-extras:phonon - Enable file audio preview plugin using media-libs/phonon
-kde-plasma/kio-extras:sftp - Enable SFTP protocol support using net-libs/libssh
 kde-plasma/kmenuedit:hotkeys - Enable support for hotkey editing
 kde-plasma/kwin:gles2 - Use OpenGL ES 2 instead of full GL
 kde-plasma/libksysguard:processui - Enables the Interface to view process libs.
+kde-plasma/plasma-desktop:evdev - Enable configuration module for desktop input devices.
 kde-plasma/plasma-desktop:gtk2 - Add support for gtk+2-based applications using legacy xembed systray icons via libappindicator.
 kde-plasma/plasma-desktop:gtk3 - Add support for gtk+3-based applications using legacy xembed systray icons via libappindicator.
 kde-plasma/plasma-desktop:legacy-systray - Add support for applications using legacy xembed systray icons.
