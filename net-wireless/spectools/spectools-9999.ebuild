@@ -1,9 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI=5
-inherit udev toolchain-funcs
+
+inherit autotools eutils toolchain-funcs udev
 
 MY_PN=${PN}
 MY_PV=${PV/\./-}
@@ -27,13 +28,20 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug +ncurses +gtk"
 
-RDEPEND="virtual/libusb:0
-	ncurses? ( sys-libs/ncurses )
+RDEPEND="
+	virtual/libusb:0
+	ncurses? ( sys-libs/ncurses:0= )
 	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 # Upstream has still not migrated to the libusb-1 line.
 # Maemo: Add hildon and bbus
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2011.08.1_p20150618-tinfo.patch
+	mv configure.{in,ac} || die
+	eautoreconf
+}
 
 # Please note that upstream removed the --with-gtk-version option
 # and GTK is now automagical. GTK1 support was also removed.
