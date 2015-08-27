@@ -19,4 +19,12 @@ IUSE="test"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="dev-libs/liberasurecode"
 
-PATCHES=( "${FILESDIR}/1.0.7-erasurecode_locations.patch" )
+PATCHES=(
+	"${FILESDIR}/1.0.7-erasurecode_locations.patch"
+	"${FILESDIR}/PyECLib-usr-local.patch"
+)
+
+python_install() {
+	distutils-r1_python_install
+	rm "${D}"/usr/lib/*.la || die
+}

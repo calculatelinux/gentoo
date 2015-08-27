@@ -20,7 +20,7 @@ RDEPEND="
 	gpg? ( $(add_kdebase_dep kdepimlibs) )
 	mms? ( media-libs/libmms )
 	sqlite? ( dev-db/sqlite:3 )
-	webkit? ( >=kde-misc/kwebkitpart-0.9.6 )
+	webkit? ( >=kde-misc/kwebkitpart-0.9.6:4 )
 "
 DEPEND="${RDEPEND}
 	dev-libs/boost

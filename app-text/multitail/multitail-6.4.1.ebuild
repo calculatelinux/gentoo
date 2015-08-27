@@ -11,11 +11,11 @@ SRC_URI="http://www.vanheusden.com/multitail/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ia64 ~ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 hppa ~ia64 ~ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="debug examples unicode"
 
 RDEPEND="
-	sys-libs/ncurses:5=[unicode?]
+	sys-libs/ncurses:0=[unicode?]
 "
 DEPEND="
 	${RDEPEND}
