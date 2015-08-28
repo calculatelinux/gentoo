@@ -64,8 +64,8 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.8.10.2-FindPythonLibs.patch
 	"${FILESDIR}"/${PN}-3.1.0-FindPythonInterp.patch
 
-	#upstream fixes (can usually be removed with a version bump)
-	"${DISTDIR}/${PN}-3.3.1-FindPkgConfig_remove_variable_dereference.patch"
+	# upstream fixes (can usually be removed with a version bump)
+	"${DISTDIR}"/${PN}-3.3.1-FindPkgConfig_remove_variable_dereference.patch
 )
 
 cmake_src_bootstrap() {

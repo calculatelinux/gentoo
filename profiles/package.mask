@@ -30,6 +30,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (28 Aug 2015)
+# Masked for removal in 30 days.
+# Only needed for ruby18 which has been removed a long time
+# ago. This gem is a no-op for newer ruby implementations
+# and nothing in the tree depends on it.
+dev-ruby/require_relative
+
 # Manuel Rüger <mrueg@gentoo.org> (26 Aug 2015)
 # Masked for removal in 30 days.
 # Superseded by app-i18n/atokx3.
@@ -250,11 +257,6 @@ dev-java/exolabtools
 # Removal in 30 days. See bug #554962.
 dev-java/burlap
 dev-java/caucho-services
-
-# Michael Sterrett <mr_bones_@gentoo.org> (13 Jul 2015)
-# No commit since 2007 and no further linux support besides
-# Masked for removal on 20150812
-games-emulation/handy
 
 # Sergey Popov <pinkbyte@gentoo.org> (13 Jul 2015)
 # Mask new version of Boost - it's known to cause breakages
@@ -509,7 +511,6 @@ sys-libs/lib-compat
 sys-libs/lib-compat-loki
 games-action/mutantstorm-demo
 games-action/phobiaii
-games-emulation/handy
 games-fps/rtcw
 games-fps/unreal
 games-strategy/heroes3
