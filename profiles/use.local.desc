@@ -4287,6 +4287,7 @@ media-sound/pithos:appindicator - Enable usage of appindicator to export menu op
 media-sound/pithos:keybinder - Use keybinder to enable global key bindings
 media-sound/pms:regex - Enable regular expression searches using dev-libs/boost
 media-sound/podcatcher:bittorrent - Enable support for bittorrent downloads
+media-sound/potamus:opus - Adds support for the Opus codec.
 media-sound/pragha:glyr - Enable music metadata searchengine support using media-libs/glyr
 media-sound/pragha:grilo - Play songs on DLNA servers using media-libs/grilo
 media-sound/pragha:keybinder - Enable shortcut support using dev-libs/keybinder
@@ -7805,7 +7806,6 @@ x11-apps/intel-gpu-tools:python - Install python based register dumper utilities
 x11-apps/intel-gpu-tools:test-programs - Install test programs for DRM driver development
 x11-apps/intel-gpu-tools:unwind - Provide automatic stack traces on test failures
 x11-apps/mesa-progs:egl - Build EGL utilities
-x11-apps/mesa-progs:gles1 - Build OpenGL ES 1 utilities
 x11-apps/mesa-progs:gles2 - Build OpenGL ES 2 utilities
 x11-apps/xdm:consolekit - Enable native sys-auth/consolekit support
 x11-apps/xdm:xdm-auth - Enable XDM-AUTHENTICATION-1 support
