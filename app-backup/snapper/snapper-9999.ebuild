@@ -45,6 +45,7 @@ src_configure() {
 		--with-conf="/etc/conf.d"
 		--docdir="/usr/share/doc/${PF}"
 		--disable-zypp
+		--enable-rollback
 		$(use_enable btrfs)
 		$(use_enable ext4)
 		$(use_enable lvm)

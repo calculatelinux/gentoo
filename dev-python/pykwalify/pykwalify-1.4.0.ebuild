@@ -17,6 +17,8 @@ LICENSE="MIT"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
+RESTRICT="test"
+
 RDEPEND="
 	>=dev-python/docopt-0.6.2
 	>=dev-python/pyyaml-3.11
