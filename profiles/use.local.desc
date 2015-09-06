@@ -584,7 +584,10 @@ app-emulation/libvirt:virtualbox - Support management of VirtualBox virtualisati
 app-emulation/libvirt:wireshark-plugins - Build the net-analyzer/wireshark plugin for the Libvirt RPC protocol
 app-emulation/libvirt:xen - Support management of Xen virtualisation (app-emulation/xen)
 app-emulation/lxc:cgmanager - Enable support for cgroup management using app-admin/cgmanager
+app-emulation/lxd:criu - Add support for live-migrateable containers
+app-emulation/lxd:daemon - Build the system daemon, not just the client tool
 app-emulation/lxd:image - Installs the lxd-images image-fetching script
+app-emulation/lxd:lvm - Allow using the Logical Volume Manager as pool for disk image storage
 app-emulation/open-vm-tools:doc - Generate API documentation
 app-emulation/open-vm-tools:fuse - Build vmblock-fuse in favor of FUSE based blocking mechanism for DnD
 app-emulation/open-vm-tools:grabbitmqproxy - Enable grabbitmqproxy
@@ -4020,6 +4023,7 @@ media-plugins/gst-plugins-meta:http - Enable http streaming via net-libs/libsoup
 media-plugins/gst-plugins-meta:libvisual - Enable visualization effects via media-libs/libvisual
 media-plugins/gst-plugins-meta:opus - Enable Opus audio codec support
 media-plugins/gst-plugins-meta:vpx - Enables vp8 codec support using libvpx, required to play some HTML5 videos
+media-plugins/gst-plugins-vaapi:drm - Enable DRM renderer
 media-plugins/hexter:gtk2 - Enable x11-libs/gtk+:2 based GUI
 media-plugins/imlib2_loaders:eet - Enable Eet image loader
 media-plugins/imlib2_loaders:xcf - Enable XCF image loader
@@ -5058,11 +5062,13 @@ net-dns/unbound:gost - Enable GOST support
 net-firewall/arno-iptables-firewall:plugins - Install optional plugins
 net-firewall/firewalld:gui - Builds and installs GUI configurator and GTK+ applet
 net-firewall/fwknop:client - Build fwknop client
-net-firewall/fwknop:extras - Install example apparmor policy
-net-firewall/fwknop:gdbm - Replace file digest-cache with gdbm
+net-firewall/fwknop:extras - Install example AppArmor policy for fwknopd server
+net-firewall/fwknop:firewalld - Use net-firewall/firewalld as the default server backend
+net-firewall/fwknop:gdbm - Replace file-based digest-cache with gdbm one
 net-firewall/fwknop:gpg - Enable GPG support via app-crypt/gpgme
+net-firewall/fwknop:iptables - Use net-firewall/iptables as the default server backend
 net-firewall/fwknop:server - Build fwknopd server
-net-firewall/fwknop:udp-server - Build fwknopd with UDP server mode only
+net-firewall/fwknop:udp-server - Enable UDP server mode only (no net-libs/libpcap dependency)
 net-firewall/ipsec-tools:hybrid - Makes available both mode-cfg and xauth support
 net-firewall/ipsec-tools:idea - Enable support for the IDEA algorithm
 net-firewall/ipsec-tools:nat - Enable NAT-Traversal

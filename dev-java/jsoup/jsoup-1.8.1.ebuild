@@ -6,7 +6,7 @@ EAPI="5"
 
 JAVA_PKG_IUSE="doc source test"
 
-inherit java-pkg-2 java-pkg-simple vcs-snapshot
+inherit java-pkg-2 java-pkg-simple 
 
 MY_PV="${PV}.a"
 
