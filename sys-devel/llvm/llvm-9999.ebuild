@@ -30,7 +30,7 @@ COMMON_DEPEND="
 			dev-lang/perl:*
 			${PYTHON_DEPS}
 		)
-		xml? ( dev-libs/libxml2:2= )
+		xml? ( dev-libs/libxml2:2=[${MULTILIB_USEDEP}] )
 	)
 	gold? ( >=sys-devel/binutils-2.22:*[cxx] )
 	libedit? ( dev-libs/libedit:0=[${MULTILIB_USEDEP}] )
@@ -285,6 +285,7 @@ multilib_src_configure() {
 			-DLLVM_ENABLE_SPHINX=$(usex doc)
 			-DLLVM_ENABLE_DOXYGEN=OFF
 			-DLLVM_INSTALL_HTML="${EPREFIX}/usr/share/doc/${PF}/html"
+			-DLLVM_INSTALL_UTILS=ON
 		)
 
 		if use clang; then
@@ -498,5 +499,12 @@ multilib_src_install_all() {
 		}
 		python_foreach_impl python_inst
 		popd >/dev/null || die
+	fi
+}
+
+pkg_postinst() {
+	if use clang; then
+		elog "To enable OpenMP support in clang, install sys-libs/libomp"
+		elog "and use the '-fopenmp=libomp' command line option"
 	fi
 }
