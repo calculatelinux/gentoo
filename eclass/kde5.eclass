@@ -107,9 +107,9 @@ fi
 : ${KDE_SELINUX_MODULE:=none}
 
 if [[ ${KDEBASE} = kdevelop ]]; then
-	HOMEPAGE="http://www.kdevelop.org/"
+	HOMEPAGE="https://www.kdevelop.org/"
 else
-	HOMEPAGE="http://www.kde.org/"
+	HOMEPAGE="https://www.kde.org/"
 fi
 
 LICENSE="GPL-2"
@@ -139,9 +139,10 @@ case ${KDE_AUTODEPS} in
 		RDEPEND+=" >=kde-frameworks/kf-env-3"
 		COMMONDEPEND+="	>=dev-qt/qtcore-${QT_MINIMAL}:5"
 
-		if [[ ${CATEGORY} = kde-plasma && ${PN} != polkit-kde-agent ]]; then
+		if [[ ${CATEGORY} = kde-frameworks || ${CATEGORY} = kde-plasma && ${PN} != polkit-kde-agent ]]; then
 			RDEPEND+="
 				!kde-apps/kde4-l10n[-minimal(-)]
+				!<kde-apps/kde4-l10n-15.08.0-r1
 			"
 		fi
 
