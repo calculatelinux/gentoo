@@ -3231,7 +3231,6 @@ kde-apps/okular:dpi - DPI detection support for PDF rendering via x11-libs/libks
 kde-apps/okular:ebook - Add E-Book support
 kde-apps/okular:mobi - Add mobipocket support
 kde-apps/oxygen-icons:sources - Additionally install the svg sources of the bitmap icons (needed for redistribution)
-kde-apps/poxml:extras - Build po2xml and swappo tools
 kde-apps/step:qalculate - Enable the libqalculate library for unit conversion
 kde-base/kde-meta:kdepim - Pull in KDE PIM
 kde-base/kde-meta:sdk - Pull in developer-specific meta-packages
@@ -3340,7 +3339,9 @@ kde-plasma/plasma-desktop:gtk3 - Add support for gtk+3-based applications using 
 kde-plasma/plasma-desktop:legacy-systray - Add support for applications using legacy xembed systray icons.
 kde-plasma/plasma-desktop:touchpad - Enable configuration module for synaptics-based touchpads.
 kde-plasma/plasma-meta:display-manager - Pull in a graphical display manager
+kde-plasma/plasma-meta:mediacenter - Pull in kde-plasma/plasma-mediacenter
 kde-plasma/plasma-meta:sddm - Pull in the x11-misc/sddm display manager and KCM
+kde-plasma/plasma-meta:sdk - Pull in kde-plasma/plasma-sdk
 kde-plasma/plasma-meta:wallpapers - Install the KDE wallpapers
 kde-plasma/plasma-nm:modemmanager - Enable support for mobile broadband devices
 kde-plasma/plasma-nm:openconnect - Build support for the OpenConnect VPN client
@@ -4327,9 +4328,11 @@ media-sound/pulseaudio:systemd - Build with sys-apps/systemd support to replace 
 media-sound/pulseaudio:webrtc-aec - Uses the webrtc.org AudioProcessing library for enhancing VoIP calls greatly in applications that support it by performing acoustic echo cancellation, analog gain control, noise suppression and other processing.
 media-sound/pulseaudio:xen - Builds a special paravirtualized module for running in a Xen guest.
 media-sound/qmidiarp:lv2 - Enables Ladspa V2 plugins.
+media-sound/qmmp:analyzer - Enable visual analyzer
 media-sound/qmmp:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
 media-sound/qmmp:cover - Enable album cover support
 media-sound/qmmp:crossfade - Enable crossfade effect when switching tracks
+media-sound/qmmp:cue - enable CUE sheet parsing
 media-sound/qmmp:enca - Detects the character encoding automatically
 media-sound/qmmp:game - Enable Game music support
 media-sound/qmmp:kde - Use kde4 notifier system
@@ -4339,6 +4342,7 @@ media-sound/qmmp:mpris - Enable MPRIS support
 media-sound/qmmp:notifier - Enable qmmps' notifier system
 media-sound/qmmp:opus - Enable the opus plugin
 media-sound/qmmp:projectm - Enable projectm music visualization plugin
+media-sound/qmmp:qsui - Enable QMMP simple UI
 media-sound/qmmp:scrobbler - Enable audioscrobbler/last.fm support
 media-sound/qmmp:stereo - Enable stereo effect
 media-sound/qmmp:tray - Build tray icon
@@ -4655,7 +4659,6 @@ media-video/mpv:cdio - Enable CDDA support via dev-libs/libcdio-paranoia
 media-video/mpv:cli - Build mpv CLI player
 media-video/mpv:doc-pdf - Build documentation in pdf format
 media-video/mpv:drm - Enable Kernel Mode Setting / Direct Rendering Manager based video output
-media-video/mpv:dvdnav - Enable support for DVD navigation using media-libs/libdvdnav
 media-video/mpv:egl - Enable EGL backend for X11 OpenGL video output (experimental)
 media-video/mpv:enca - Enable support for charset discovery and conversion using app-i18n/enca
 media-video/mpv:jpeg - Enable support for saving screenshots to JPEG format
@@ -4663,15 +4666,10 @@ media-video/mpv:libguess - Enable support for charset discovery and conversion u
 media-video/mpv:libmpv - Build mpv shared library
 media-video/mpv:lua - Enable Lua scripting, OSC (On Screen Controller) GUI and net-misc/youtube-dl hook-script
 media-video/mpv:luajit - Use dev-lang/luajit instead of dev-lang/lua
-media-video/mpv:mpg123 - Enable support for mp3 decoding via media-sound/mpg123 instead of relying on ffmpeg support
-media-video/mpv:postproc - Enable image post-processing via libpostproc
 media-video/mpv:pvr - Enable Video4Linux2 MPEG PVR
-media-video/mpv:quvi - Enable support for streaming sites using media-libs/libquvi
-media-video/mpv:radio - Enable V4L2 radio interface and support
 media-video/mpv:raspberry-pi - Enable support for the Raspberry Pi
 media-video/mpv:rubberband - Enable high quality pitch correction via media-libs/rubberband
 media-video/mpv:sdl - Enable media-libs/libsdl2 based video and audio outputs
-media-video/mpv:shm - Enable support for shm
 media-video/mpv:vf-dlopen - Install additional video filters for using with -vf dlopen
 media-video/noad:libmpeg2 - Support for libmpeg2 library
 media-video/ogmrip:ogm - Support for OGM container format
@@ -6342,7 +6340,6 @@ net-wireless/bladerf-fpga:x115 - bitstream for the x115KLE Cyclone IV FPGA blade
 net-wireless/bladerf-fpga:x40 - bitstream for the x40KLE Cyclone IV FPGA bladerf model"
 net-wireless/blueman:appindicator - Enable usage of dev-libs/libappindicator to export menu options
 net-wireless/blueman:gconf - Enable the GConf configuration backend
-net-wireless/blueman:gnome - Install the sendto-plugin for gnome-base/nautilus
 net-wireless/blueman:network - Add functionality to setup (host) PAN connections using either net-dns/dnsmasq or net-misc/dhcp
 net-wireless/blueman:sendto - Install the sendto-plugin for gnome-base/nautilus
 net-wireless/blueman:thunar - Install the sendto-plugin for xfce-base/thunar

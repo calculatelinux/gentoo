@@ -16,7 +16,7 @@ SRC_URI="http://www.webkitgtk.org/releases/${MY_P}.tar.xz"
 
 LICENSE="LGPL-2+ BSD"
 SLOT="4/37" # soname version of libwebkit2gtk-4.0
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
 
 IUSE="coverage doc +egl +geoloc gles2 +gstreamer +introspection +jit libsecret +opengl spell wayland +webgl X"
 REQUIRED_USE="
@@ -184,13 +184,13 @@ src_configure() {
 	local ruby_interpreter=""
 
 	if has_version "virtual/rubygems[ruby_targets_ruby22]"; then
-		ruby_interpreter="RUBY=$(type -P ruby22)"
+		ruby_interpreter="-DRUBY_EXECUTABLE=$(type -P ruby22)"
 	elif has_version "virtual/rubygems[ruby_targets_ruby21]"; then
-		ruby_interpreter="RUBY=$(type -P ruby21)"
+		ruby_interpreter="-DRUBY_EXECUTABLE=$(type -P ruby21)"
 	elif has_version "virtual/rubygems[ruby_targets_ruby20]"; then
-		ruby_interpreter="RUBY=$(type -P ruby20)"
+		ruby_interpreter="-DRUBY_EXECUTABLE=$(type -P ruby20)"
 	else
-		ruby_interpreter="RUBY=$(type -P ruby19)"
+		ruby_interpreter="-DRUBY_EXECUTABLE=$(type -P ruby19)"
 	fi
 
 	# TODO: Check Web Audio support

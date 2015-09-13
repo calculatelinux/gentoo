@@ -50,8 +50,9 @@ src_configure() {
 
 	# Better put it into /opt/${PN} as everything needs to
 	# be under the same directory..
-
-	econf --prefix=/opt/${PN} ${myconf}
+	# Avoid depending on external libtirpc (#552386)
+	ac_cv_lib_tirpc_rpcb_set=no \
+		econf --prefix=/opt/${PN} ${myconf}
 }
 
 src_compile() {

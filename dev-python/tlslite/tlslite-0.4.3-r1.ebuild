@@ -4,13 +4,13 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 pypy )
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1
+inherit distutils-r1 eutils
 
 DESCRIPTION="TLS Lite is a free python library that implements SSL 3.0 and TLS 1.0/1.1"
-HOMEPAGE="http://trevp.net/tlslite/ https://pypi.python.org/pypi/tlslite"
-SRC_URI="https://github.com/trevp/tlslite/downloads/${P}.tar.gz"
+HOMEPAGE="http://trevp.net/tlslite/ https://pypi.python.org/pypi/tlslite https://github.com/trevp/tlslite"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD public-domain"
 SLOT="0"
@@ -19,12 +19,12 @@ KEYWORDS="amd64 x86"
 IUSE="doc gmp"
 RESTRICT="test"
 
-DEPEND=">=dev-libs/cryptlib-3.3.3[python,${PYTHON_USEDEP}]
+DEPEND="
+	>=dev-libs/cryptlib-3.3.3[python,${PYTHON_USEDEP}]
 	|| (
 		dev-python/m2crypto[${PYTHON_USEDEP}]
 		dev-python/pycrypto[${PYTHON_USEDEP}]
-	)
-	gmp? ( dev-python/gmpy[${PYTHON_USEDEP}] )"
+	)"
 RDEPEND="${DEPEND}"
 
 # Tests still hang
