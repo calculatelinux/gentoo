@@ -6,7 +6,7 @@ EAPI=5
 inherit toolchain-funcs
 
 DESCRIPTION="A desktop sticky note program for the unix geek"
-HOMEPAGE="http://xnots.sourceforge.net"
+HOMEPAGE="http://xnots.sourceforge.net https://github.com/thePalindrome/xnots"
 SRC_URI="mirror://sourceforge/xnots/${P}.tar.gz"
 
 LICENSE="GPL-2"
