@@ -575,7 +575,9 @@ mysql-multilib_src_configure() {
 		CXXFLAGS="${CXXFLAGS} -fno-implicit-templates"
 	fi
 	# As of 5.7, exceptions are used!
-	if ! mysql_version_is_at_least "5.7" ; then
+	if [[ ${PN} == "percona-server" ]] && mysql_version_is_at_least "5.6.26" ; then
+                CXXFLAGS="${CXXFLAGS} -fno-rtti"
+        elif ! mysql_version_is_at_least "5.7" ; then
 		CXXFLAGS="${CXXFLAGS} -fno-exceptions -fno-rtti"
 	fi
 	export CXXFLAGS
@@ -793,7 +795,7 @@ mysql-multilib_pkg_preinst() {
 	        if [[ -z ${REPLACING_VERSIONS} && -e "${EROOT}usr/$(get_libdir)/libmysqlclient.so" ]] ; then
 			SHOW_ABI_MESSAGE=1
 		elif [[ ${REPLACING_VERSIONS} && -e "${EROOT}usr/$(get_libdir)/libmysqlclient.so" ]] && \
-			in_iuse client-libs && ! built_with_use ${CATEGORY}/${PN} client-libs ; then
+			in_iuse client-libs && ! built_with_use --missing true ${CATEGORY}/${PN} client-libs ; then
 			SHOW_ABI_MESSAGE=1
 		fi
 
