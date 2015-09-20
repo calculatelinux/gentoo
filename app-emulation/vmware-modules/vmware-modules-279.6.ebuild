@@ -58,7 +58,7 @@ pkg_setup() {
 	BUILD_TARGETS="auto-build KERNEL_DIR=${KERNEL_DIR} KBUILD_OUTPUT=${KV_OUT_DIR}"
 
 	enewgroup "${VMWARE_GROUP}"
-	filter-flags -mfpmath=sse
+	filter-flags -mfpmath=sse -mavx -mpclmul -maes
 
 	for mod in ${VMWARE_MODULE_LIST}; do
 		MODULE_NAMES="${MODULE_NAMES} ${mod}(misc:${S}/${mod}-only)"
@@ -98,6 +98,7 @@ src_prepare() {
 	kernel_is ge 3 19 0 && epatch "${FILESDIR}/${PV_MAJOR}-3.19-05-vmci_qpair.patch"
 	kernel_is ge 3 19 0 && epatch "${FILESDIR}/${PV_MAJOR}-3.19-06-vsock.patch"
 	kernel_is ge 3 19 0 && epatch "${FILESDIR}/${PV_MAJOR}-3.19-07-vsock.patch"
+	kernel_is ge 4 2 0  && epatch "${FILESDIR}/${PV_MAJOR}-4.2-00-cookie.patch"
 
 	# Allow user patches so they can support RC kernels and whatever else
 	epatch_user
