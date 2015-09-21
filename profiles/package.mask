@@ -30,6 +30,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Ian Delaney <idella4@gentoo.org> (21 Jul 2015)
+# Packages deprecated in favour of new form of
+# net-firewall/shorewall
+# Bug #560392
+net-firewall/shorewall-core
+net-firewall/shorewall-init
+net-firewall/shorewall-lite
+net-firewall/shorewall6
+net-firewall/shorewall6-lite
+<net-firewall/shorewall-4.6.10.1
+
 # Andreas K. Huettel <dilfridge@gentoo.org> (19 Sep 2015)
 # Masked for security reasons, bugs 516044, 552644
 # Keeping it in the tree for now for users who cannot upgrade
@@ -47,7 +58,7 @@ sci-chemistry/balbes
 sci-chemistry/ccp4
 sci-chemistry/ccp4-apps
 sci-chemistry/ccp4i
-<sci-chemistry/coot-8
+<sci-chemistry/coot-0.8
 sci-chemistry/imosflm
 sci-chemistry/makecif
 sci-chemistry/molrep
@@ -203,10 +214,6 @@ dev-haskell/deepseq
 # Mask new version of Boost - it's known to cause breakages
 ~dev-util/boost-build-1.58.0
 ~dev-libs/boost-1.58.0
-
-# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (10 Jul 2015)
-# Unused and broken. Removal in 30 days, bug #543576 .
-dev-lang/nacl-toolchain-newlib
 
 # Michael Orlitzky <mjo@gentoo.org> (3 Jul 2015)
 # Mask for removal in 30 days. Superseded by dev-haskell/biosff;

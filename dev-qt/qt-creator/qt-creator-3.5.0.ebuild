@@ -35,7 +35,7 @@ IUSE="doc systemd test webkit ${QTC_PLUGINS[@]%:*}"
 QT_PV="5.4.0:5"
 
 RDEPEND="
-	=dev-libs/botan-1.10*[threads]
+	=dev-libs/botan-1.10*[-bindist,threads]
 	>=dev-qt/designer-${QT_PV}
 	>=dev-qt/qtconcurrent-${QT_PV}
 	>=dev-qt/qtcore-${QT_PV}
@@ -52,7 +52,7 @@ RDEPEND="
 	>=dev-qt/qtx11extras-${QT_PV}
 	>=dev-qt/qtxml-${QT_PV}
 	>=sys-devel/gdb-7.5[client,python]
-	clang? ( >=sys-devel/clang-3.2:= )
+	clang? ( >=sys-devel/clang-3.6:= )
 	qbs? ( >=dev-util/qbs-1.4.2 )
 	systemd? ( sys-apps/systemd:= )
 	webkit? ( >=dev-qt/qtwebkit-${QT_PV} )

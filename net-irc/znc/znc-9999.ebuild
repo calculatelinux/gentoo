@@ -18,7 +18,7 @@ KEYWORDS=""
 HOMEPAGE="http://znc.in"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="daemon debug ipv6 perl python ssl sasl tcl"
+IUSE="daemon debug ipv6 libressl perl python ssl sasl tcl"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
@@ -28,7 +28,10 @@ RDEPEND="
 	perl? ( >=dev-lang/perl-5.10 )
 	python? ( ${PYTHON_DEPS} )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
-	ssl? ( >=dev-libs/openssl-0.9.7d:0 )
+	ssl? (
+		!libressl? ( dev-libs/openssl:0 )
+		libressl? ( dev-libs/libressl )
+	)
 	tcl? ( dev-lang/tcl:0= )
 "
 DEPEND="${RDEPEND}
