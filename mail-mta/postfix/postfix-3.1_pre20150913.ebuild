@@ -267,7 +267,6 @@ src_install () {
 	use postgres || sed -i -e "s/postgresql //" "${D}/etc/init.d/postfix"
 
 	dodoc *README COMPATIBILITY HISTORY PORTING RELEASE_NOTES*
-	mv "${D}"/etc/postfix/{*.default,*.proto} "${D}"/usr/share/doc/${PF}/
 	use doc && mv "${S}"/examples "${D}"/usr/share/doc/${PF}/
 
 	pamd_mimic_system smtp auth account
