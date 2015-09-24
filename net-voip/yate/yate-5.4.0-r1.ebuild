@@ -41,7 +41,7 @@ DEPEND="doc? ( || ( app-doc/doxygen dev-util/kdoc ) )
 	${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/dont-mess-with-cflags.patch
+	epatch "${FILESDIR}"/${P}-dont-mess-with-cflags.patch
 	eautoreconf
 	./yate-config.sh || die
 }
@@ -88,4 +88,6 @@ src_install() {
 	else
 		emake DESTDIR="${ED}" install-noapi
 	fi
+	newinitd "${FILESDIR}"/yate.initd yate
+	newconfd "${FILESDIR}"/yate.confd yate
 }
