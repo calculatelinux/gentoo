@@ -30,6 +30,27 @@
 
 #--- END OF EXAMPLES ---
 
+# James Le Cuirot <chewi@gentoo.org> (27 Sep 2015)
+# A string of interdependent obsolete Java packages. hibernate and
+# axis are alive upstream but we have no immediate plans to bump
+# them. hibernate has also been modularized so would now be called
+# hibernate-core anyway. Removal in 30 days.
+dev-java/commons-modeler
+dev-java/hibernate
+dev-java/hibernate-annotations
+dev-java/jax-rpc
+dev-java/mx4j
+dev-java/mx4j-core
+dev-java/mx4j-tools
+dev-java/proxool
+www-servers/axis:1
+
+# Dion Moult <moult@gentoo.org> (27 Sep 2015)
+# Masked for removal in 30 days. Bug #514514
+# Fails to build for ages.
+sci-geosciences/grass
+sci-geosciences/gdal-grass
+
 # Patrice Clement <monsieurp@gentoo.org> (24 Sep 2015)
 # This package was never marked stable 
 # and is relying on an old version of JavaCC.
@@ -73,11 +94,6 @@ net-wireless/rtl8180
 # Masked for removal in 30 days. Bug #552284
 # Upstream disappeared. Use sci-chemistry/openbabel instead.
 sci-chemistry/babel
-
-# Dion Moult <moult@gentoo.org> (24 Sep 2015)
-# Masked for removal in 30 days.
-# Upstream disappeared. Bug #510594
-app-cdr/nero
 
 # Dion Moult <moult@gentoo.org> (24 Sep 2015)
 # Masked for removal in 30 days.
@@ -215,12 +231,6 @@ x11-libs/libXevie
 # and nothing in the tree depends on it.
 dev-ruby/require_relative
 
-# Manuel Rüger <mrueg@gentoo.org> (26 Aug 2015)
-# Masked for removal in 30 days.
-# Superseded by app-i18n/atokx3.
-# See bug #553208
-app-i18n/atokx2
-
 # Doug Goldstein <cardoe@gentoo.org> (25 Aug 2015)
 # Masked for removal in 30 days. Users should use the modules available
 # via the kernel as upstream has deprecated these packages.
@@ -238,11 +248,6 @@ app-emulation/kvm-kmod
 # Lars Wendler <polynomial-c@gentoo.org> (20 Aug 2015)
 # Masked for testing
 =net-misc/iputils-20150815
-
-# Hans de Graaff <graaff@gentoo.org> (20 Aug 2015)
-# No longer part of ruby-gnome2. Nothing depends on it.
-# Masked for removal in 30 days.
-dev-ruby/ruby-goocanvas
 
 # Johannes Huber <johu@gentoo.org> (18 Aug 2015)
 # Masked for removal in 30 days. Does not compile with

@@ -1777,12 +1777,9 @@
   </maintainer>
 </herd>
 <herd>
-  <name>openoffice</name>
-  <email>openoffice@gentoo.org</email>
-  <description>Openoffice related packages</description>
-  <maintainer>
-    <email>suka@gentoo.org</email>
-  </maintainer>
+  <name>office</name>
+  <email>office@gentoo.org</email>
+  <description>Office related packages</description>
   <maintainer>
     <email>dilfridge@gentoo.org</email>
   </maintainer>
