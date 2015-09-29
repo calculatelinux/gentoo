@@ -3,21 +3,22 @@
 # $Id$
 
 EAPI=5
+
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 virtualx flag-o-matic
 
 DESCRIPTION="Enthought Tool Suite: Drawing and interaction packages"
-HOMEPAGE="http://code.enthought.com/projects/enable/ https://pypi.python.org/pypi/enable"
-SRC_URI="https://github.com/enthought/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="http://code.enthought.com/projects/enable/ https://pypi.python.org/pypi/enable https://github.com/enthought/enable"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples test"
-DISTUTILS_IN_SOURCE_BUILD=1
 
-RDEPEND="dev-python/numpy[${PYTHON_USEDEP}]
+RDEPEND="
+	dev-python/numpy[${PYTHON_USEDEP}]
 	dev-python/reportlab[${PYTHON_USEDEP}]
 	>=dev-python/traitsui-4[${PYTHON_USEDEP}]
 	>=media-libs/freetype-2
@@ -34,6 +35,10 @@ DEPEND="${RDEPEND}
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
 	)"
+
+DISTUTILS_IN_SOURCE_BUILD=1
+
+PATCHES=( "${FILESDIR}"/${P}-swig.patch )
 
 python_prepare_all() {
 	append-cflags -fno-strict-aliasing
