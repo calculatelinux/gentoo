@@ -292,6 +292,8 @@ app-arch/file-roller:nautilus - Enable file-roller to integrate with gnome-base/
 app-arch/file-roller:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
 app-arch/gzip:pic - disable optimized assembly code that is not PIC friendly
 app-arch/innoextract:c++0x - Compile innoextract using the C++11 standard.
+app-arch/innoextract:debug - Enable debug logging and the --debug command-line option.
+app-arch/innoextract:lzma - Enable support for extracting lzma-compressed installers using app-arch/xz-utils.
 app-arch/libarchive:bzip2 - Allow accessing bzip2-compressed archives through libbz2 (which comes with app-arch/bzip2). This only affects libarchive's native support: bsdtar will keep using bunzip2 as a filter if that's not built-in.
 app-arch/libarchive:e2fsprogs - Use file flags from sys-fs/e2fsprogs headers instead of virtual/os-headers headers
 app-arch/libarchive:nettle - Use dev-libs/nettle as crypto backend
@@ -2712,6 +2714,7 @@ dev-util/schroot:lvm - Enable support for chroots using LVM snapshots.
 dev-util/squashdelta:lz4 - Enable support for LZ4 compression using app-arch/lz4
 dev-util/squashmerge:lz4 - Enable support for LZ4 compression using app-arch/lz4
 dev-util/strace:aio - Enable dev-libs/libaio support for tracing Asynchronous I/O operations
+dev-util/strace:unwind - Enable stack backtraces (-k flag) via sys-libs/libunwind
 dev-util/suse-build:symlink - Provide compatibility symlinks with original openSUSE package (might clash with other packages)
 dev-util/sysdig:modules - Build kernel modules needed for tracing local events. Disable this only if you intend to use sysdig purely to work with dumpfiles.
 dev-util/trace-cmd:udis86 - Enable support for dev-libs/udis86 disassembler library
@@ -5084,6 +5087,7 @@ net-dns/unbound:dnstap - Enable dnstap support
 net-dns/unbound:ecdsa - Enable ECDSA support
 net-dns/unbound:gost - Enable GOST support
 net-firewall/arno-iptables-firewall:plugins - Install optional plugins
+net-firewall/ebtables:perl - Install the ebtables-save script which uses perl
 net-firewall/firewalld:gui - Builds and installs GUI configurator and GTK+ applet
 net-firewall/fwknop:client - Build fwknop client
 net-firewall/fwknop:extras - Install example AppArmor policy for fwknopd server
@@ -5823,6 +5827,7 @@ net-misc/connman:pptp - Use net-dialup/pptpclient for PPTP VPN support.
 net-misc/connman:tools - Enable testing tools.
 net-misc/connman:vpnc - Use net-misc/vpnc for cisco VPN support.
 net-misc/connman:wispr - Enable support for WISPr hotspot logins.
+net-misc/connman-gtk:openconnect - Support easier authentication to AnyConnect VPNs
 net-misc/csync:sftp - Enable sftp transfer support via net-libs/libssh
 net-misc/curl:http2 - Enabled HTTP/2.0 support
 net-misc/curl:metalink - Enable metalink support
