@@ -15,7 +15,7 @@ EGIT_REPO_URI="git://github.com/hexchat/hexchat.git"
 LICENSE="GPL-2 plugin-fishlim? ( MIT )"
 SLOT="0"
 KEYWORDS=""
-IUSE="dbus +gtk ipv6 libcanberra libnotify libproxy nls ntlm perl +plugins plugin-checksum plugin-doat plugin-fishlim plugin-sysinfo python spell ssl theme-manager"
+IUSE="dbus +gtk ipv6 libcanberra libnotify libproxy libressl nls ntlm perl +plugins plugin-checksum plugin-doat plugin-fishlim plugin-sysinfo python spell ssl theme-manager"
 REQUIRED_USE="plugins? ( python? ( ${PYTHON_REQUIRED_USE} ) )"
 
 DEPEND="dev-libs/glib:2
@@ -32,7 +32,10 @@ DEPEND="dev-libs/glib:2
 		python? ( ${PYTHON_DEPS} )
 	)
 	spell? ( app-text/iso-codes )
-	ssl? ( dev-libs/openssl:0 )
+	ssl? (
+		!libressl? ( dev-libs/openssl:0 )
+		libressl? ( dev-libs/libressl )
+	)
 	theme-manager? ( dev-lang/mono )"
 RDEPEND="${DEPEND}
 	spell? ( app-text/enchant )"
