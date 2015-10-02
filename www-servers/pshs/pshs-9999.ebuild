@@ -5,15 +5,12 @@
 EAPI=5
 
 #if LIVE
-AUTOTOOLS_AUTORECONF=yes
 EGIT_REPO_URI="https://bitbucket.org/mgorny/${PN}.git"
 
-inherit git-r3
+inherit autotools git-r3
 #endif
 
-inherit autotools-utils
-
-DESCRIPTION="Pretty small HTTP server - a command-line tool to share files"
+DESCRIPTION="Pretty small HTTP server -- a command-line tool to share files"
 HOMEPAGE="https://bitbucket.org/mgorny/pshs/"
 SRC_URI="https://www.bitbucket.org/mgorny/${PN}/downloads/${P}.tar.bz2"
 
@@ -36,10 +33,12 @@ DEPEND="${RDEPEND}
 #if LIVE
 KEYWORDS=
 SRC_URI=
+
+src_prepare() { eautoreconf; }
 #endif
 
 src_configure() {
-	myeconfargs=(
+	local myconf=(
 		$(use_enable magic libmagic)
 		$(use_enable netlink)
 		$(use_enable qrcode qrencode)
@@ -47,5 +46,5 @@ src_configure() {
 		$(use_enable upnp)
 	)
 
-	autotools-utils_src_configure
+	econf "${myconf[@]}"
 }
