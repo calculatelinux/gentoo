@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -12,9 +12,13 @@ EGIT_REPO_URI="https://github.com/libevent/libevent"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""
-IUSE="debug +ssl static-libs test +threads"
+IUSE="debug libressl +ssl static-libs test +threads"
 
-DEPEND="ssl? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )"
+DEPEND="
+	ssl? (
+		!libressl? ( >=dev-libs/openssl-1.0.1h-r2:0[${MULTILIB_USEDEP}] )
+		libressl? ( dev-libs/libressl[${MULTILIB_USEDEP}] )
+	)"
 RDEPEND="
 	${DEPEND}
 	!<=dev-libs/9libs-1.0
