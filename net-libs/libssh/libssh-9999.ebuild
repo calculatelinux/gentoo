@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -13,12 +13,15 @@ EGIT_REPO_URI="git://git.libssh.org/projects/libssh.git"
 LICENSE="LGPL-2.1"
 KEYWORDS=""
 SLOT="0"
-IUSE="debug doc examples gcrypt gssapi pcap +sftp ssh1 server static-libs test zlib"
+IUSE="debug doc examples gcrypt gssapi libressl pcap +sftp ssh1 server static-libs test zlib"
 # Maintainer: check IUSE-defaults at DefineOptions.cmake
 
 RDEPEND="
 	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
-	!gcrypt? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )
+	!gcrypt? (
+		!libressl? ( >=dev-libs/openssl-1.0.1h-r2:0[${MULTILIB_USEDEP}] )
+		libressl? ( dev-libs/libressl[${MULTILIB_USEDEP}] )
+	)
 	gcrypt? ( >=dev-libs/libgcrypt-1.5.3:0[${MULTILIB_USEDEP}] )
 	gssapi? ( >=virtual/krb5-0-r1[${MULTILIB_USEDEP}] )
 "

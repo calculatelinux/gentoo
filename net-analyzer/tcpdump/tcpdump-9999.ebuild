@@ -12,13 +12,16 @@ EGIT_REPO_URI="https://github.com/the-tcpdump-group/tcpdump"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""
-IUSE="+drop-root smi ssl ipv6 samba suid test"
+IUSE="+drop-root libressl smi ssl ipv6 samba suid test"
 
 RDEPEND="
 	drop-root? ( sys-libs/libcap-ng )
 	net-libs/libpcap
 	smi? ( net-libs/libsmi )
-	ssl? ( >=dev-libs/openssl-0.9.6m )
+	ssl? (
+		!libressl? ( >=dev-libs/openssl-0.9.6m:0 )
+		libressl? ( dev-libs/libressl )
+	)
 "
 DEPEND="
 	${RDEPEND}

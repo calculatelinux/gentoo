@@ -47,6 +47,7 @@ RDEPEND="
 	>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
 	>=dev-python/cliff-1.14.0[${PYTHON_USEDEP}]
 	>=dev-python/cliff-tablib-1.0[${PYTHON_USEDEP}]
+	>=dev-python/os-client-config-1.4.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-config-1.11.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-i18n-1.5.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-utils-1.9.0[${PYTHON_USEDEP}]

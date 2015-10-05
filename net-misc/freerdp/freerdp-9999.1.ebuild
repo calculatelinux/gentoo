@@ -23,10 +23,11 @@ HOMEPAGE="http://www.freerdp.com/"
 LICENSE="Apache-2.0"
 SLOT="0/1.2"
 IUSE="alsa +client cpu_flags_x86_sse2 cups debug doc ffmpeg gstreamer jpeg
-	neon pulseaudio server smartcard test usb wayland X xinerama xv"
+	libressl neon pulseaudio server smartcard test usb wayland X xinerama xv"
 
 RDEPEND="
-	dev-libs/openssl:0
+	!libressl? ( dev-libs/openssl:0 )
+	libressl? ( dev-libs/libressl )
 	sys-libs/zlib:0
 	alsa? ( media-libs/alsa-lib )
 	cups? ( net-print/cups )

@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_{6,7},3_{2,3,4}} )
+PYTHON_COMPAT=( python{2_7,3_4} )
 
 inherit base eutils flag-o-matic git-2 linux-info multilib pam prefix \
 		python-single-r1 systemd user versionator
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.postgresql.org/"
 
 LINGUAS="af cs de en es fa fr hr hu it ko nb pl pt_BR ro ru sk sl sv tr
 		 zh_CN zh_TW"
-IUSE="kerberos kernel_linux ldap nls pam perl -pg_legacytimestamp python
+IUSE="kerberos kernel_linux ldap libressl nls pam perl -pg_legacytimestamp python
 	  +readline selinux +server ssl static-libs tcl threads uuid xml zlib"
 
 for lingua in ${LINGUAS}; do
@@ -49,7 +49,10 @@ pam? ( virtual/pam )
 perl? ( >=dev-lang/perl-5.8 )
 python? ( ${PYTHON_DEPS} )
 readline? ( sys-libs/readline:0= )
-ssl? ( >=dev-libs/openssl-0.9.6-r1:0= )
+ssl? (
+	!libressl? ( >=dev-libs/openssl-0.9.6-r1:0= )
+	libressl? ( dev-libs/libressl:= )
+)
 tcl? ( >=dev-lang/tcl-8:0= )
 uuid? ( dev-libs/ossp-uuid )
 xml? ( dev-libs/libxml2 dev-libs/libxslt )

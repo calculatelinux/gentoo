@@ -19,7 +19,7 @@ SRC_URI="https://dev.gentoo.org/~jer/nmap-logo-64.png"
 LICENSE="GPL-2"
 SLOT="0"
 
-IUSE="ipv6 +nse system-lua ncat ndiff nls nmap-update nping ssl zenmap"
+IUSE="ipv6 libressl +nse system-lua ncat ndiff nls nmap-update nping ssl zenmap"
 NMAP_LINGUAS=( de fr hr it ja pl pt_BR ru zh )
 IUSE+=" ${NMAP_LINGUAS[@]/#/linguas_}"
 
@@ -41,7 +41,10 @@ RDEPEND="
 	ndiff? ( ${PYTHON_DEPS} )
 	nls? ( virtual/libintl )
 	nmap-update? ( dev-libs/apr dev-vcs/subversion )
-	ssl? ( dev-libs/openssl:0= )
+	ssl? (
+		!libressl? ( dev-libs/openssl:0= )
+		libressl? ( dev-libs/libressl:= )
+	)
 "
 DEPEND="
 	${RDEPEND}
