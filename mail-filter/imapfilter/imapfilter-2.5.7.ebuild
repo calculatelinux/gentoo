@@ -14,9 +14,9 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-RDEPEND="dev-libs/openssl
+RDEPEND="dev-libs/openssl:0
 	dev-libs/libpcre
-	>=dev-lang/lua-5.1"
+	dev-lang/lua:*"
 DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS NEWS README samples/*"

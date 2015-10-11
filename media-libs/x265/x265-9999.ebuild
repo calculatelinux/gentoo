@@ -21,7 +21,7 @@ HOMEPAGE="http://x265.org/"
 
 LICENSE="GPL-2"
 # subslot = libx265 soname
-SLOT="0/59"
+SLOT="0/75"
 IUSE="+10bit test"
 
 ASM_DEPEND=">=dev-lang/yasm-1.2.0"
@@ -37,7 +37,7 @@ src_unpack() {
 		export S=${WORKDIR}/${P}/source
 	else
 		unpack ${A}
-		export S="${WORKDIR}/${PN}_${PV}/source"
+		export S="$(echo "${WORKDIR}/${PN}_"*"/source")"
 	fi
 }
 
