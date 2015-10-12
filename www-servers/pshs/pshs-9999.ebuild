@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -17,13 +17,15 @@ SRC_URI="https://www.bitbucket.org/mgorny/${PN}/downloads/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+magic +netlink qrcode ssl upnp"
+IUSE="libressl +magic +netlink qrcode ssl upnp"
 
 RDEPEND=">=dev-libs/libevent-2:0=
 	magic? ( sys-apps/file:0= )
 	qrcode? ( media-gfx/qrencode:0= )
 	ssl? ( >=dev-libs/libevent-2.1:0=[ssl]
-		dev-libs/openssl:0= )
+		!libressl? ( dev-libs/openssl:0= )
+		libressl? ( dev-libs/libressl:= )
+	)
 	upnp? ( net-libs/miniupnpc:0= )"
 DEPEND="${RDEPEND}
 	netlink? ( sys-apps/iproute2
