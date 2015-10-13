@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gtk.org/"
 
 LICENSE="LGPL-2+"
 SLOT="2"
-KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="+X debug +introspection jpeg jpeg2k tiff test"
 
 COMMON_DEPEND="
@@ -27,7 +27,7 @@ COMMON_DEPEND="
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/gtk-doc-am-1.20
-	>=sys-devel/gettext-0.17
+	>=sys-devel/gettext-0.19
 	virtual/pkgconfig
 "
 # librsvg blocker is for the new pixbuf loader API, you lose icons otherwise
@@ -47,6 +47,9 @@ MULTILIB_CHOST_TOOLS=(
 )
 
 src_prepare() {
+	# Upstream patches from 2.32.x
+	epatch "${FILESDIR}"/${P}-gint64-shift-overflow.patch
+
 	# This will avoid polluting the pkg-config file with versioned libpng,
 	# which is causing problems with libpng14 -> libpng15 upgrade
 	# See upstream bug #667068
@@ -70,6 +73,11 @@ multilib_src_configure() {
 		$(multilib_native_use_enable introspection) \
 		$(use_with X x11) \
 		--with-libpng
+
+	# work-around gtk-doc out-of-source brokedness
+	if multilib_is_native_abi; then
+		ln -s "${S}"/docs/reference/${PN}/html docs/reference/${PN}/html || die
+	fi
 }
 
 multilib_src_install() {
