@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -20,7 +20,7 @@ IUSE="avahi +dvb +dvbscan ffmpeg imagecache inotify xmltv zlib"
 
 REQUIRED_USE="dvbscan? ( dvb )"
 
-DEPEND="dev-libs/openssl
+DEPEND="dev-libs/openssl:0=
 	avahi? ( net-dns/avahi )
 	dvb? ( virtual/linuxtv-dvb-headers )
 	ffmpeg? ( virtual/ffmpeg )

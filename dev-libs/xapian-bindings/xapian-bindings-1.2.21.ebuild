@@ -15,7 +15,7 @@ PHP_EXT_OPTIONAL_USE="php"
 
 #mono violates sandbox, we disable it until we figure this out
 #inherit java-pkg-opt-2 mono-env php-ext-source-r2 python
-inherit java-pkg-opt-2 php-ext-source-r2 python-r1
+inherit java-pkg-opt-2 php-ext-source-r2 python-r1 toolchain-funcs
 
 DESCRIPTION="SWIG and JNI bindings for Xapian"
 HOMEPAGE="http://www.xapian.org/"
@@ -30,12 +30,13 @@ IUSE="java lua perl php python ruby tcl"
 REQUIRED_USE="|| ( java lua perl php python ruby tcl )"
 
 COMMONDEPEND="=dev-libs/xapian-${PV}*
-	lua? ( dev-lang/lua:= )
+	lua? ( dev-lang/lua:0 )
 	perl? ( dev-lang/perl:= )
 	ruby? ( dev-lang/ruby:= )
 	tcl? ( >=dev-lang/tcl-8.1:0= )"
 #	mono? ( >=dev-lang/mono-1.0.8 )
 DEPEND="${COMMONDEPEND}
+	virtual/pkgconfig
 	java? ( >=virtual/jdk-1.3 )"
 RDEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jre-1.3 )"
@@ -75,7 +76,7 @@ src_configure() {
 	fi
 
 	if use lua; then
-		export LUA_LIB="$(pkg-config --variable=INSTALL_CMOD lua)"
+		export LUA_LIB="$($(tc-getPKG_CONFIG) --variable=INSTALL_CMOD lua)"
 	fi
 
 	econf \
