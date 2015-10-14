@@ -1,5 +1,5 @@
---- src/Makefile.in.old	2011-06-14 21:32:28.929746563 +0200
-+++ src/Makefile.in	2011-06-14 21:32:46.567818865 +0200
+--- src/Makefile.in.old
++++ src/Makefile.in
 @@ -311,6 +311,7 @@
  	    $(GEOIP_LIB) \
  	    $(PACKAGE_LIBS) \
