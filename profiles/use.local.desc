@@ -4019,7 +4019,10 @@ media-libs/x264:10bit - Set output bit depth to 10, this may not be compatible w
 media-libs/x264:interlaced - enable interlaced encoding support, this can decrease encoding speed by up to 2%
 media-libs/x264:opencl - Add support for OpenCL.
 media-libs/x264:pic - disable optimized assembly code that is not PIC friendly
-media-libs/x265:10bit - Set output bit depth to 10
+media-libs/x265:10bit - Add support for producing 10bits HEVC.
+media-libs/x265:12bit - Add support for producing 12bits HEVC.
+media-libs/x265:numa - Build with support for NUMA nodes.
+media-libs/x265:pic - Disable optimized assembly code that is not PIC friendly
 media-libs/xine-lib:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
 media-libs/xine-lib:dxr3 - Enable support for DXR3 mpeg acceleration cards.
 media-libs/xine-lib:flac - Build the media-libs/flac based FLAC demuxer and decoder. This flag is not needed for playing FLAC content, neither standalone nor in Ogg container (OggFLAC), but might have better support for exotic features like 24-bit samples or 96kHz sample rates.
@@ -7857,6 +7860,7 @@ www-servers/monkeyd:static-plugins - Build statically linked plugins
 www-servers/nginx:aio - Enables file AIO support
 www-servers/nginx:http - Enable HTTP core support
 www-servers/nginx:http-cache - Enable HTTP cache support
+www-servers/nginx:http2 - Enable HTTP2 module support
 www-servers/nginx:libatomic - Use libatomic instead of builtin atomic operations
 www-servers/nginx:luajit - Use dev-lang/luajit instead of dev-lang/lua for lua support when building the lua http module.
 www-servers/nginx:pcre-jit - Enable JIT for pcre
