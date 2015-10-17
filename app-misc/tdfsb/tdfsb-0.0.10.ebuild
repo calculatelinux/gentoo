@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -17,7 +17,12 @@ IUSE=""
 
 DEPEND="media-libs/smpeg
 	media-libs/sdl-image
-	media-libs/freeglut"
+	media-libs/freeglut
+	virtual/glu
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXi
+	x11-libs/libXmu"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
