@@ -42,6 +42,11 @@ RDEPEND="
 
 # This time half the doc files are missing; Do you want them?
 
+python_prepare_all() {
+	sed -i '/^hacking/d' test-requirements.txt || die
+	distutils-r1_python_prepare_all
+}
+
 python_test() {
 	nosetests tests/ || die "test failed under ${EPYTHON}"
 }
