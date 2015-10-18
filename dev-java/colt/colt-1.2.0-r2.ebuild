@@ -18,9 +18,9 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 
 DEPEND=">=virtual/jdk-1.4
-		>=dev-java/concurrent-util-1.3.4:0"
+	>=dev-java/concurrent-util-1.3.4:0"
 RDEPEND=">=virtual/jre-1.4
-		 >=dev-java/concurrent-util-1.3.4:0"
+	>=dev-java/concurrent-util-1.3.4:0"
 
 S="${WORKDIR}/${PN}"
 
@@ -29,15 +29,15 @@ JAVA_ANT_REWRITE_CLASSPATH="true"
 EANT_GENTOO_CLASSPATH="concurrent-util"
 
 java_prepare() {
-	find "${S}" -iname '*.jar' -delete || die
+        find "${S}" -iname '*.jar' -delete || die
 
-	epatch "${FILESDIR}/${P}-benchmark-no-deprecation.patch"
+        epatch "${FILESDIR}/${P}-benchmark-no-deprecation.patch"
 }
 
 src_install() {
-	java-pkg_dojar lib/${PN}.jar
+        java-pkg_dojar lib/${PN}.jar
 
-	dohtml README.html || die
-	use doc && java-pkg_dojavadoc doc/api
-	use source && java-pkg_dosrc src/*
+        dohtml README.html || die
+        use doc && java-pkg_dojavadoc doc/api
+        use source && java-pkg_dosrc src/*
 }

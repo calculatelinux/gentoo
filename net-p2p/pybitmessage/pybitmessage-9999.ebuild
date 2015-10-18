@@ -7,7 +7,7 @@ EAPI=5
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite"
 
-inherit eutils python-r1 gnome2-utils git-2
+inherit eutils python-r1 gnome2-utils git-r3
 
 DESCRIPTION="P2P communications protocol"
 HOMEPAGE="https://bitmessage.org"
@@ -28,7 +28,7 @@ RDEPEND="${DEPEND}
 src_compile() { :; }
 
 src_install () {
-	cat >> "${T}"/${PN}-wrapper <<-EOF
+	cat >> "${T}"/${PN}-wrapper <<-EOF || die
 	#!/usr/bin/env python
 	import os
 	import sys
@@ -52,12 +52,12 @@ src_install () {
 
 	python_foreach_impl install_python
 
-	nonfatal dodoc README.md debian/changelog
-	nonfatal doman man/*
+	dodoc README.md debian/changelog
+	doman man/*
 
-	nonfatal newicon -s 24 desktop/icon24.png ${PN}.png
-	nonfatal newicon -s scalable desktop/can-icon.svg ${PN}.svg
-	nonfatal domenu desktop/${PN}.desktop
+	newicon -s 24 desktop/icon24.png ${PN}.png
+	newicon -s scalable desktop/can-icon.svg ${PN}.svg
+	domenu desktop/${PN}.desktop
 }
 
 pkg_preinst() {
