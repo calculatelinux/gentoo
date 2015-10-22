@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/kbuild-0.1.9998_pre20131130
 	${PYTHON_DEPS}
 	>=dev-lang/yasm-0.6.2
+	>=sys-devel/gcc-4.9.0
 	sys-power/iasl
 	x11-proto/fontsproto
 	x11-proto/randrproto
@@ -53,6 +54,10 @@ S="${WORKDIR}/${MY_P}"
 QA_TEXTRELS_x86="usr/lib/VBoxOGL.so"
 
 pkg_setup() {
+	if [ "${MERGE_TYPE}" != "binary" ]; then
+		version_is_at_least 4.9 $(gcc-version) || die "Please set gcc 4.9 or higher as active in gcc-config to build ${PN}"
+	fi
+
 	linux-mod_pkg_setup
 	BUILD_PARAMS="KERN_DIR=${KV_OUT_DIR} KERNOUT=${KV_OUT_DIR}"
 
