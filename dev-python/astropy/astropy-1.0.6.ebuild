@@ -18,7 +18,6 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
 RDEPEND="
-	!dev-python/pyfits
 	>=dev-libs/expat-2.1.0:0=
 	dev-python/configobj[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
@@ -81,7 +80,7 @@ python_compile_all() {
 }
 
 python_test() {
-	py.test -vv -k "not test_web_profile" astropy || die
+	esetup.py test
 }
 
 python_install_all() {

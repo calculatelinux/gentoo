@@ -30,6 +30,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Justin Lecher <jlec@gentoo.org> (23 Oct 2015)
+# Breaking changes #563540
+=app-text/ghostscript-gpl-9.18
+
 # James Le Cuirot <chewi@gentoo.org> (19 Oct 2015)
 # Dead projects with no revdeps. Removal in 30 days.
 dev-java/commons-attributes
@@ -292,13 +296,6 @@ app-portage/lightweight-cvs-toolkit
 # Fails to build (bug #559330). Dead upstream.
 # Masked for removal in 30 days.
 kde-misc/socket-sentry
-
-# Hans de Graaff <graaff@gentoo.org> (28 Aug 2015)
-# Masked for removal in 30 days.
-# Only needed for ruby18 which has been removed a long time
-# ago. This gem is a no-op for newer ruby implementations
-# and nothing in the tree depends on it.
-dev-ruby/require_relative
 
 # Doug Goldstein <cardoe@gentoo.org> (25 Aug 2015)
 # Masked for removal in 30 days. Users should use the modules available
