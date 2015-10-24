@@ -959,6 +959,7 @@ app-misc/screen:multiuser - Enable multiuser support (by setting correct permiss
 app-misc/screen:nethack - Express error messages in nethack style
 app-misc/screenfetch:X - Use the media-gfx/scrot package to take screenshots
 app-misc/sphinx:id64 - use 64-bit document and word IDs
+app-misc/sphinx:re2 - use the dev-libs/re2 regular expression library
 app-misc/sphinx:stemmer - Enable language stemming support
 app-misc/strigi:clucene - Enable dev-cpp/clucene backend support.
 app-misc/strigi:inotify - Enable support for inotify.
@@ -3191,7 +3192,6 @@ gnome-extra/synapse:plugins - Build support for plugins using librest
 gnome-extra/synapse:zeitgeist - Add support for Zeitgeist event tracking system
 gnome-extra/zeitgeist:datahub - Use build datahub for passive event injection
 gnome-extra/zeitgeist:downloads-monitor - Monitor the XDG_DOWNLOAD_DIRECTORY
-gnome-extra/zeitgeist:extensions - Use gnome-extra/zeitgeist-extentions to enhance the internal routines
 gnome-extra/zeitgeist:fts - Enable the full text search extension
 gnome-extra/zeitgeist:plugins - Use gnome-extra/zeitgeist-datasources to enable numerous packages to inject events
 gnome-extra/zeitgeist:sql-debug - Enable SQL debugging
@@ -3375,6 +3375,7 @@ kde-frameworks/kwallet:gpg - Support wallets with GnuPG encryption in addition t
 kde-frameworks/kxmlgui:attica - Enable support for kde-frameworks/attica
 kde-frameworks/networkmanager-qt:teamd - Enable Teamd control support
 kde-frameworks/plasma:egl - Enable EGL support
+kde-frameworks/plasma:gles2 - Use GLES 2.0 or later instead of full OpenGL
 kde-frameworks/sonnet:aspell - Enable the app-text/aspell spell-checking backend
 kde-frameworks/sonnet:hunspell - Enable the app-text/hunspell spell-checking backend
 kde-misc/kcm-grub2:hwinfo - Used to work out supported framebuffer resolutions
@@ -4641,6 +4642,7 @@ media-video/ffmpeg:mipsdspr1 - Enables MIPS DSP ASE R1 optimizations.
 media-video/ffmpeg:mipsdspr2 - Enables MIPS DSP ASE R2 optimizations.
 media-video/ffmpeg:mipsfpu - Enables floating point MIPS optimizations.
 media-video/ffmpeg:network - Enables network streaming support
+media-video/ffmpeg:nvenc - Adds support for NVIDIA Encoder (NVENC) API for hardware accelerated encoding on NVIDIA cards.
 media-video/ffmpeg:openh264 - Enables H.264 encoding suppoprt via media-libs/openh264.
 media-video/ffmpeg:openssl - Enables dev-libs/openssl support. Adds support for encrypted network protocols (TLS/HTTPS).
 media-video/ffmpeg:opus - Adds (decoding) support for the Opus codec via media-libs/opus.
@@ -4761,6 +4763,8 @@ media-video/mpv:rubberband - Enable high quality pitch correction via media-libs
 media-video/mpv:sdl - Enable media-libs/libsdl2 based video and audio outputs
 media-video/mpv:vf-dlopen - Install additional video filters for using with -vf dlopen
 media-video/noad:libmpeg2 - Support for libmpeg2 library
+media-video/nvenc:samples - Install video samples to use with the tools.
+media-video/nvenc:tools - Build and install example tools.
 media-video/nvidia-settings:gtk3 - Additionally build the GTK 3 library
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
@@ -5923,6 +5927,7 @@ net-misc/dropbear:shadow - Enable shadow password support
 net-misc/dropbox:librsync-bundled - Use bundled librsync library
 net-misc/electrum:cli - Enables the CLI interface
 net-misc/electrum:cosign - Enable plugin to support multisig wallets between multiple Electrum clients
+net-misc/electrum:email - Enable plugin to support emailing invoices
 net-misc/electrum:fiat - Enable plugin for looking up fiat values of bitcoin
 net-misc/electrum:greenaddress_it - Enable plugin to verify GreenAddress.it instant transactions
 net-misc/electrum:gtk3 - Enable support for gtk+3
@@ -6650,6 +6655,7 @@ sci-geosciences/gpsd:sockets - export gpsd over unix sockets
 sci-geosciences/grass:gdal - Use sci-libs/gdal for import and export of most external raster and vector map formats
 sci-geosciences/grass:geos - Use sci-libs/geos for v.buffer and adds extended options to the v.select module
 sci-geosciences/grass:gmath - Enable gmath wrapper for BLAS/Lapack (virtual/blas, virtual/lapack)
+sci-geosciences/grass:liblas - Include support for LAS and LAZ encoded LiDAR files through sci-geosciences/liblas
 sci-geosciences/grass:opencl - Enable OpenCL support
 sci-geosciences/gshhs:data - Add earth data with sci-geosciences/gshhs-data
 sci-geosciences/liblas:gdal - Add support for the sci-libs/gdal geospatial raster library
