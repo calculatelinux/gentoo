@@ -30,6 +30,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Ian Delaney <idella4@gentoo.org> (27 Oct 2015)
+# fails to build dev-lisp/sbcl-1.2.16 #563812
+# mgorny: dev-lisp/uiop as version-bound revdep
+=dev-lisp/asdf-3.1.6
+=dev-lisp/uiop-3.1.6
+
 # Justin Lecher <jlec@gentoo.org> (23 Oct 2015)
 # Breaking changes #563540
 =app-text/ghostscript-gpl-9.18
@@ -117,25 +123,6 @@ dev-java/xmlc
 # in 30 days.
 app-emulation/vmware-view-open-client
 
-# James Le Cuirot <chewi@gentoo.org> (27 Sep 2015)
-# No release since 2007 and no revdeps. Removal in 30 days.
-dev-java/commons-transaction
-
-# James Le Cuirot <chewi@gentoo.org> (27 Sep 2015)
-# A string of interdependent obsolete Java packages. hibernate and
-# axis are alive upstream but we have no immediate plans to bump
-# them. hibernate has also been modularized so would now be called
-# hibernate-core anyway. Removal in 30 days.
-dev-java/commons-modeler
-dev-java/hibernate
-dev-java/hibernate-annotations
-dev-java/jax-rpc
-dev-java/mx4j
-dev-java/mx4j-core
-dev-java/mx4j-tools
-dev-java/proxool
-www-servers/axis:1
-
 # Dion Moult <moult@gentoo.org> (24 Sep 2015)
 # Masked for removal in 30 days. Bug #466724
 # Heavily out of date. Use sci-chemistry/icm
@@ -222,17 +209,6 @@ dev-util/bunny
 # Michael Orlitzky <mjo@gentoo.org> (21 Sep 2015)
 # Mask for removal in 30 days. Obsolete. Bug #561040.
 dev-php/smarty-docs
-
-# Ian Delaney <idella4@gentoo.org> (21 Jul 2015)
-# Packages deprecated in favour of new form of
-# net-firewall/shorewall
-# Bug #560392
-net-firewall/shorewall-core
-net-firewall/shorewall-init
-net-firewall/shorewall-lite
-net-firewall/shorewall6
-net-firewall/shorewall6-lite
-<net-firewall/shorewall-4.6.10.1
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (19 Sep 2015)
 # Masked for security reasons, bugs 516044, 552644
