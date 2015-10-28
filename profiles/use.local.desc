@@ -1833,6 +1833,7 @@ dev-lang/mono:pax_kernel - Enable if the user plans to run the package under a p
 dev-lang/mono:xen - Make mono generate code that is considerably faster on xen VMs but slightly slower on for normal systems.
 dev-lang/nqp:moar - Build the MoarVM backend (experimental/broken)
 dev-lang/nqp:parrot - Build the parrot backend (default)
+dev-lang/orc:pax_kernel - Apply patch needed for pax enabled kernels.
 dev-lang/path64:assembler - Build PathAS
 dev-lang/path64:debugger - Build PathDB
 dev-lang/path64:native - Use EKOPath/Path64 for bootstraping
@@ -2294,6 +2295,9 @@ dev-python/PyQtMobility:versit - Build bindings for the QtVersit module
 dev-python/amqplib:extras - Install extra tools to generate initial Python mod from an AMQP XML file
 dev-python/anyvc:bazaar - Add support for Bazaar
 dev-python/anyvc:mercurial - Add support for Mercurial
+dev-python/cassandra-driver:cython - Optimize core modules and build custom extensions
+dev-python/cassandra-driver:libev - libev event loop integration
+dev-python/cassandra-driver:murmur - Faster hashing for token-aware routing
 dev-python/celery:redis - Enables redis support
 dev-python/celery:sqs - Enables Amazon SQS transport module for celery
 dev-python/celery:yaml - Enable support of yaml as a configuration file format
@@ -4879,10 +4883,7 @@ media-video/x264-encoder:avs - enable AvxSynth support in the AviSynth input mod
 media-video/x264-encoder:ffmpegsource - Enable ffmpegsource aka ffms support, disables lavf
 media-video/x264-encoder:interlaced - Enable interlaced encoding support, this can decrease encoding speed by up to 2%
 media-video/xine-ui:vdr - Enables Video Disk Recorder support
-net-analyzer/2ping:crc - Enable crc check.
-net-analyzer/2ping:md5 - Enable md5 hash check.
 net-analyzer/2ping:server - Install the server init scripts.
-net-analyzer/2ping:sha - Enable sha1 or sha256 check.
 net-analyzer/aimsniff:http - Install the WAS (Web AIM Sniff) frontend
 net-analyzer/argus-clients:ft - Enable support for flow packets through net-analyzer/flow-tools
 net-analyzer/barnyard:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
@@ -6456,9 +6457,7 @@ net-wireless/bladerf:tecla - use libtecla for command line editing, tab completi
 net-wireless/bladerf-fpga:x115 - bitstream for the x115KLE Cyclone IV FPGA bladerf model"
 net-wireless/bladerf-fpga:x40 - bitstream for the x40KLE Cyclone IV FPGA bladerf model"
 net-wireless/blueman:appindicator - Enable usage of dev-libs/libappindicator to export menu options
-net-wireless/blueman:gconf - Enable the GConf configuration backend
 net-wireless/blueman:network - Add functionality to setup (host) PAN connections using either net-dns/dnsmasq or net-misc/dhcp
-net-wireless/blueman:sendto - Install the sendto-plugin for gnome-base/nautilus
 net-wireless/blueman:thunar - Install the sendto-plugin for xfce-base/thunar
 net-wireless/bluez:hid2hci - The HID proxying makes the keyboard / mouse show up as regular USB HID devices, but needs them to be paired before enabling this, otherwise they won't be detected
 net-wireless/bluez:obex - Enable OBEX transfer support.
@@ -8077,6 +8076,7 @@ x11-misc/redshift:appindicator - Enable usage of dev-libs/libappindicator to exp
 x11-misc/redshift:geoclue - Control dependency on app-misc/geoclue
 x11-misc/rodent:experimental - Build experimental plugins (obexfs, curlftpfs, ecryptfs, cifs and samba)
 x11-misc/rofi:i3 - Compile in support for the x11-wm/i3 window manager
+x11-misc/rofi:windowmode - Enable normal window mode
 x11-misc/rss-glx:quesoglc - Enable support for OpenGL Character Renderer
 x11-misc/sddm:consolekit - Use ck-launch-session from sys-auth/consolekit by default in Xsession (no native support)
 x11-misc/shutter:drawing - Enables drawing tool
