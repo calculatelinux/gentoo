@@ -30,9 +30,19 @@
 
 #--- END OF EXAMPLES ---
 
-# Matt Turner <mattst88@gentoo.org> (Oct 27 2015)
-# xproto-7.0.28 breaks xorg-server
->=x11-proto/xproto-7.0.28
+# Patrice Clement <monsieurp@gentoo.org> (29 Oct 2015)
+# Upstream is somewhat alive but there are better XML parsers out there.
+# Removal in 30 days. See #268619.
+dev-java/castor
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (29 Oct 2015)
+# Mask until it is decided how to address xorg-server file collisions #564358
+=x11-drivers/xf86-input-evdev-2.10.0
+
+# Patrice Clement <monsieurp@gentoo.org> (29 Oct 2015)
+# No release since 2007. Has dependencies on old ebuilds.
+# Removal in 30 days. See #564370
+dev-db/octopus
 
 # Ian Delaney <idella4@gentoo.org> (27 Oct 2015)
 # fails to build dev-lisp/sbcl-1.2.16 #563812

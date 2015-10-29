@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python2_7 python3_{3,4,5} pypy pypy3 )
 
 inherit distutils-r1
 
-DESCRIPTION="pyparsing is an easy-to-use Python module for text parsing"
+DESCRIPTION="Easy-to-use Python module for text parsing"
 HOMEPAGE="http://pyparsing.wikispaces.com/ https://pypi.python.org/pypi/pyparsing"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
