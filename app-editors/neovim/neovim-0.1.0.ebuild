@@ -5,34 +5,38 @@
 EAPI=5
 inherit cmake-utils flag-o-matic
 
-DESCRIPTION="Ambitious vim fork focused on extensibility and agility"
-HOMEPAGE="https://github.com/neovim/neovim"
+DESCRIPTION="Vim-fork focused on extensibility and agility."
+HOMEPAGE="https://neovim.io"
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="git://github.com/neovim/neovim.git"
 else
-	SRC_URI="https://dev.gentoo.org/~tranquility/distfiles/${P}.tar.xz"
+	SRC_URI="https://github.com/neovim/neovim/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 
 LICENSE="Apache-2.0 vim"
 SLOT="0"
-IUSE="+nvimpager perl python"
+IUSE="+nvimpager perl python +jemalloc"
 
 CDEPEND="dev-lang/luajit:2
 	>=dev-libs/libtermkey-0.17
-	dev-libs/libvterm
-	>=dev-libs/unibilium-1.1.1
 	>=dev-libs/libuv-1.2.0
 	>=dev-libs/msgpack-0.6.0_pre20150220
+	>=dev-libs/unibilium-1.1.1
+	dev-libs/libvterm
 	dev-lua/lpeg
-	dev-lua/messagepack"
+	dev-lua/messagepack
+	jemalloc? ( dev-libs/jemalloc )
+"
 DEPEND="${CDEPEND}
 	virtual/libiconv
 	virtual/libintl"
 RDEPEND="${CDEPEND}
 	perl? ( dev-lang/perl )
 	python? ( dev-python/neovim-python-client )"
+
+CMAKE_BUILD_TYPE=RelWithDebInfo
 
 src_prepare() {
 	# use our system vim dir
@@ -51,9 +55,8 @@ src_prepare() {
 src_configure() {
 	export USE_BUNDLED_DEPS=OFF
 	append-cflags "-Wno-error"
-	append-cppflags "-DNDEBUG -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1"
 	local mycmakeargs=(
-		-DCMAKE_BUILD_TYPE=RelWithDebInfo
+		$(cmake-utils_use_enable jemalloc JEMALLOC)
 		-DLIBUNIBILIUM_USE_STATIC=OFF
 		-DLIBTERMKEY_USE_STATIC=OFF
 		-DLIBVTERM_USE_STATIC=OFF
@@ -66,7 +69,7 @@ src_install() {
 
 	# install a default configuration file
 	insinto /etc/vim
-	doins "${FILESDIR}"/nvimrc
+	doins "${FILESDIR}"/sysinit.vim
 
 	# conditionally install a symlink for nvimpager
 	if use nvimpager; then
