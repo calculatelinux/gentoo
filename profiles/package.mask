@@ -138,11 +138,6 @@ dev-java/commons-grant
 =sys-kernel/vanilla-sources-4.1.9
 =sys-kernel/gentoo-sources-4.1.9
 
-# Patrice Clement <monsieurp@gentoo.org> (1 Oct 2015)
-# Project is over 10 years old and seems to have stalled.
-# Masked for removal in 30 days. See bug 561954.
-dev-java/xmlc
-
 # Andreas K. Huettel <dilfridge@gentoo.org> (27 Sep 2015)
 # Dead upstream, buggy, effectively unmaintained. Removal
 # in 30 days.
@@ -230,10 +225,6 @@ dev-lang/gpc
 # Masked for removal in 30 days. Deprecated upstream. Please use
 # app-forensics/afl instead. Bug #544794
 dev-util/bunny
-
-# Michael Orlitzky <mjo@gentoo.org> (21 Sep 2015)
-# Mask for removal in 30 days. Obsolete. Bug #561040.
-dev-php/smarty-docs
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (19 Sep 2015)
 # Masked for security reasons, bugs 516044, 552644
@@ -355,11 +346,17 @@ app-emulation/emul-linux-x86-jna
 
 # Justin Lecher <jlec@gentoo.org> (28 Feb 2015)
 # Unfixed security problems
+# No upstream support anymore
 # CVE-2015-{0219,0220,0221,0222,5145}
 # #536586
 # #554864
+=dev-python/django-1.4*
 =dev-python/django-1.5*
 =dev-python/django-1.6*
+# Not supported by any django version upstream supports
+dev-python/south
+dev-python/Djblets
+dev-util/reviewboard
 
 # Michał Górny <mgorny@gentoo.org> (11 Feb 2015)
 # Potentially destructive to @world, bug #539746.
