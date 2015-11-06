@@ -80,7 +80,6 @@ REQUIRED_USE="|| ( raet zeromq )"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-2014.7.1-remove-pydsl-includes-test.patch"
-	"${FILESDIR}/${PN}-2015.5.0-archive-test.patch"
 	"${FILESDIR}/${PN}-2015.5.5-auth-tests.patch"
 	"${FILESDIR}/${PN}-2015.5.5-cron-tests.patch"
 	"${FILESDIR}/${PN}-2015.5.5-remove-buggy-tests.patch"
@@ -88,7 +87,8 @@ PATCHES=(
 
 python_prepare() {
 	# this test fails because it trys to "pip install distribute"
-	rm tests/unit/{modules,states}/zcbuildout_test.py tests/unit/modules/{rh_ip,win_network}_test.py
+	rm tests/unit/{modules,states}/zcbuildout_test.py tests/unit/modules/{rh_ip,win_network}_test.py \
+		|| die "Failed to remove broken tests"
 }
 
 python_install_all() {
