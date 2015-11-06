@@ -11,11 +11,11 @@ inherit perl-module
 DESCRIPTION="Validate your CPAN META.yml file"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="test"
 
 RDEPEND=""
-DEPEND="${REPEND}
+DEPEND="${RDEPEND}
 	test? (
 		dev-perl/Parse-CPAN-Meta
 	)"

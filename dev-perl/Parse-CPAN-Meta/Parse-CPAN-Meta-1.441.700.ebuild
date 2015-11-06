@@ -11,11 +11,11 @@ inherit perl-module
 DESCRIPTION="Parse META.yml and META.json CPAN metadata files"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="test"
 
 RDEPEND=""
-DEPEND="${REPEND}
+DEPEND="${RDEPEND}
 	test? (
 		virtual/perl-File-Spec
 	)
