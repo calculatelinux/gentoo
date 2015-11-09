@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm unpack
 DEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 DESCRIPTION=vim plugin: automatically align bib, c, c++, tex and vim code
+EAPI=0
 HOMEPAGE=http://www.vim.org/scripts/script.php?script_id=884
 KEYWORDS=alpha amd64 ia64 ~mips ppc sparc x86
 LICENSE=vim

@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=howto write linux device drivers (updated for Linux 2.6)
+EAPI=0
 HOMEPAGE=http://www.oreilly.com/catalog/linuxdrive3/ http://lwn.net/Kernel/LDD3/
 KEYWORDS=amd64 arm hppa ia64 ppc s390 sh x86
 LICENSE=CC-BY-SA-2.0

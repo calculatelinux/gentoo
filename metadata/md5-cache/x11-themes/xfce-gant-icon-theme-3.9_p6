@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm preinst
 DEPEND=x11-themes/hicolor-icon-theme >=sys-apps/sed-4
 DESCRIPTION=Xfce Gant Icon Theme
+EAPI=0
 HOMEPAGE=http://www.xfce-look.org/content/show.php/GANT?content=23297
 KEYWORDS=amd64 x86
 LICENSE=public-domain

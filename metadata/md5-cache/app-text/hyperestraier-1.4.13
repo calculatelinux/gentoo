@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup test unpack
 DEPEND=>=dev-db/qdbm-1.8.75 sys-libs/zlib java? ( >=virtual/jre-1.4 ) mecab? ( app-text/mecab ) ruby? ( dev-lang/ruby ) java? ( >=virtual/jdk-1.4 ) java? ( >=dev-java/java-config-2.2.0 )
 DESCRIPTION=a full-text search system for communities
+EAPI=0
 HOMEPAGE=http://fallabs.com/hyperestraier/
 IUSE=debug java mecab ruby elibc_FreeBSD java
 KEYWORDS=alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd

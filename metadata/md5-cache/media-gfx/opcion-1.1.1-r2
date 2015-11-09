@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup unpack
 DEPEND=>=virtual/jdk-1.4 =dev-java/jgoodies-looks-1.2* app-arch/unzip >=dev-java/java-config-2.2.0
 DESCRIPTION=Free font viewer written in Java
+EAPI=0
 HOMEPAGE=http://opcion.sourceforge.net/
 IUSE=elibc_FreeBSD
 KEYWORDS=amd64 ppc x86

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=>=sys-libs/ncurses-5.0 !dev-java/nailgun canna? ( app-i18n/canna ) >=sys-apps/sed-4.0
 DESCRIPTION=Emacs like micro editor Ng -- based on mg2a
+EAPI=0
 HOMEPAGE=http://tt.sakura.ne.jp/~amura/ng/
 IUSE=canna
 KEYWORDS=~amd64 ~ppc x86

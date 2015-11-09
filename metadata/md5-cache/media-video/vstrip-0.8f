@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=app-arch/unzip
 DESCRIPTION=A program to split non-css dvd vobs into individual chapters
+EAPI=0
 HOMEPAGE=http://www.maven.de/code
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2

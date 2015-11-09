@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install nofetch preinst setup
 DEPEND=>=virtual/jdk-1.4 app-arch/unzip >=dev-java/java-config-2.2.0
 DESCRIPTION=J2EE Application Deployment Specification
+EAPI=0
 HOMEPAGE=http://java.sun.com/j2ee/tools/deployment/
 IUSE=doc elibc_FreeBSD
 KEYWORDS=amd64 ~ppc x86 ~x86-fbsd

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-libs/libX11 x11-proto/xproto
 DESCRIPTION=determine the color string in hex (or RGB components) by clicking on a pixel on the screen
+EAPI=0
 HOMEPAGE=http://www.muquit.com/muquit/software/grabc/grabc.html
 KEYWORDS=amd64 ppc ppc64 x86
 LICENSE=GPL-2

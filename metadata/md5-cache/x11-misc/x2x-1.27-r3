@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-libs/libX11 x11-libs/libXtst x11-libs/libXext x11-proto/inputproto app-text/rman x11-misc/imake x11-proto/xproto
 DESCRIPTION=A utility to connect the Mouse and KeyBoard to another X
+EAPI=0
 HOMEPAGE=http://www.the-labs.com/X11/#x2x
 KEYWORDS=amd64 ~arm ~mips ppc x86
 LICENSE=x2x

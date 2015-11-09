@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup unpack
 DEPEND=>=virtual/jdk-1.4 source? ( app-arch/zip ) >=dev-java/java-config-2.2.0
 DESCRIPTION=GNU regular expression package for Java
+EAPI=0
 HOMEPAGE=http://www.cacas.org/java/gnu/regexp/
 IUSE=doc source elibc_FreeBSD
 KEYWORDS=amd64 ~arm ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris

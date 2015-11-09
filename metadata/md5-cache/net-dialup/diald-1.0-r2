@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=pam? ( virtual/pam ) sys-apps/tcp-wrappers !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Daemon that provides on demand IP links via SLIP or PPP
+EAPI=0
 HOMEPAGE=http://diald.sourceforge.net
 IUSE=pam
 KEYWORDS=~amd64 x86

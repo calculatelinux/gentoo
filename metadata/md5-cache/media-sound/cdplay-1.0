@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=!media-sound/cdtool
 DESCRIPTION=a commandline CD Player
+EAPI=0
 HOMEPAGE=http://www.ta-sa.org/?entry=cdplay
 KEYWORDS=alpha amd64 ppc ppc64 sparc x86
 LICENSE=GPL-2

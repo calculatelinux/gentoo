@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=ssl? ( dev-libs/openssl )
 DESCRIPTION=Reverse Remote Shell
+EAPI=0
 HOMEPAGE=http://freecode.com/projects/rrs
 IUSE=ssl
 KEYWORDS=amd64 ppc x86

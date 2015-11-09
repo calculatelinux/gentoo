@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=>=media-libs/libsdl-1.2.4
 DESCRIPTION=A C++ Wrapper for the Simple DirectMedia Layer
+EAPI=0
 HOMEPAGE=http://sdlmm.sourceforge.net/
 KEYWORDS=~alpha ~amd64 ppc ~sparc x86
 LICENSE=LGPL-2

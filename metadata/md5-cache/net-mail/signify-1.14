@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=dev-lang/perl >=sys-apps/sed-4
 DESCRIPTION=A (semi-)random e-mail signature rotator
+EAPI=0
 HOMEPAGE=http://signify.sf.net/
 KEYWORDS=ppc sparc x86 ~amd64
 LICENSE=public-domain

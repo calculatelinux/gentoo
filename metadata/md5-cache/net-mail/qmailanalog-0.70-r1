@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install test unpack
 DEPEND=sys-apps/groff >=sys-apps/sed-4
 DESCRIPTION=collection of tools to help you analyze qmail's activity record
+EAPI=0
 HOMEPAGE=http://cr.yp.to/qmailanalog.html
 KEYWORDS=x86 sparc ~amd64
 LICENSE=freedist public-domain

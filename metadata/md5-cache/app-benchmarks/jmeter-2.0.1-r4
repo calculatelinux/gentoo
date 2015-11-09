@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup unpack
 DEPEND=>=virtual/jdk-1.4 doc? ( >=dev-java/velocity-1.4 ) dev-java/ant-nodeps sys-apps/sed beanshell? ( dev-java/bsh ) >=dev-java/bsf-2.3 =dev-java/junit-3.8* java-virtuals/javamail >=dev-java/java-config-2.2.0 >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2
 DESCRIPTION=Load test and measure performance on HTTP/FTP services and databases
+EAPI=0
 HOMEPAGE=http://jmeter.apache.org/
 IUSE=beanshell doc elibc_FreeBSD elibc_FreeBSD
 KEYWORDS=amd64 x86

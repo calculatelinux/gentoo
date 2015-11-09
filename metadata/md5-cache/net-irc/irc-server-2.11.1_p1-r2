@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install setup unpack
 DEPEND=sys-libs/ncurses zlib? ( sys-libs/zlib ) sys-apps/sed sys-apps/grep
 DESCRIPTION=RFC compliant IRC server
+EAPI=0
 HOMEPAGE=http://www.irc.org/
 IUSE=zlib ipv6
 KEYWORDS=~x86 ~ppc

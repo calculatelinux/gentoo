@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=music and sound effects library, and a sound processing system
+EAPI=0
 HOMEPAGE=http://www.fmod.org
 IUSE=examples
 KEYWORDS=~amd64 ~x86

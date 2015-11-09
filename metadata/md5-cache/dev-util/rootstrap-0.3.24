@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=dev-util/debootstrap dev-lang/python app-arch/dpkg app-text/docbook-sgml-utils
 DESCRIPTION=A tool for building complete Linux filesystem images
+EAPI=0
 HOMEPAGE=http://packages.qa.debian.org/rootstrap
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2

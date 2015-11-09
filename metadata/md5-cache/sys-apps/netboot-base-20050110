@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst preinst setup
 DESCRIPTION=Baselayout for netboot systems
+EAPI=0
 HOMEPAGE=https://www.gentoo.org/
 KEYWORDS=alpha arm hppa ~mips ppc sh sparc x86
 LICENSE=GPL-2

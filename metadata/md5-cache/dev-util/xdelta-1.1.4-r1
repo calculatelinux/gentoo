@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=dev-libs/glib-2 >=sys-libs/zlib-1.1.4 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Computes changes between binary or text files and creates deltas
+EAPI=0
 HOMEPAGE=https://xdelta.googlecode.com/
 KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 sparc x86
 LICENSE=GPL-2

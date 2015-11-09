@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=dev-libs/openssl openipmi? ( sys-libs/openipmi ) virtual/os-headers
 DESCRIPTION=Utility for controlling IPMI enabled devices
+EAPI=0
 HOMEPAGE=http://ipmitool.sf.net/
 IUSE=openipmi
 KEYWORDS=amd64 ~ia64 ppc x86

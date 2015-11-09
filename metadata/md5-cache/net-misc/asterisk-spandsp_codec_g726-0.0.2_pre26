@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=>=media-libs/spandsp-0.0.2_pre26 >=net-misc/asterisk-1.2.0
 DESCRIPTION=SpanDSP ITU G.726-32kbps codec for Asterisk
+EAPI=0
 HOMEPAGE=http://soft-switch.org/downloads/spandsp/spandsp-0.0.2pre26/
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2

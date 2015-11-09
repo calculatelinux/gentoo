@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=>=media-gfx/splashutils-0.9.1
 DESCRIPTION=Gentoo theme for gensplash consoles
+EAPI=0
 HOMEPAGE=https://www.gentoo.org/
 KEYWORDS=amd64 ~ppc x86
 LICENSE=Artistic GPL-2 BitstreamVera

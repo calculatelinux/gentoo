@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst prerm setup
 DEPEND=|| ( virtual/httpd-cgi virtual/httpd-fastcgi ) virtual/httpd-php >=app-admin/webapp-config-1.50.15
 DESCRIPTION=phpMp is a client program for Music Player Daemon (mpd)
+EAPI=0
 HOMEPAGE=http://www.musicpd.org/
 IUSE=vhosts
 KEYWORDS=alpha amd64 ~ppc sparc x86 ~x86-fbsd

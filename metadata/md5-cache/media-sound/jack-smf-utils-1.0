@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=readline? ( sys-libs/readline ) >=dev-libs/glib-2.2 >=media-sound/jack-audio-connection-kit-0.102 lash? ( media-sound/lash ) virtual/pkgconfig
 DESCRIPTION=Utilities for MIDI streams and files using Jack MIDI
+EAPI=0
 HOMEPAGE=http://pin.if.uz.zgora.pl/~trasz/jack-smf-utils/
 IUSE=lash readline
 KEYWORDS=~amd64 ~x86

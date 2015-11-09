@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=begemot utility function library
+EAPI=0
 HOMEPAGE=http://people.freebsd.org/~harti/
 KEYWORDS=~amd64 ~amd64-fbsd ~x86-fbsd
 LICENSE=BSD

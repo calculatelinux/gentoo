@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=media-libs/taglib sys-libs/zlib app-arch/unzip
 DESCRIPTION=iRipDB allows generating the DB files necessary for the iRiver iHP-1xx series of MP3/Ogg HD Players
+EAPI=0
 HOMEPAGE=http://www.fataltourist.com/iripdb/
 KEYWORDS=~x86 ~ppc ~amd64
 LICENSE=GPL-2

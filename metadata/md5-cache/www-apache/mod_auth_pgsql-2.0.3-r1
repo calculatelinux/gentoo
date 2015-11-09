@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup
 DEPEND=dev-db/postgresql =www-servers/apache-2.2*
 DESCRIPTION=This module allows user authentication against information stored in a PostgreSQL database
+EAPI=0
 HOMEPAGE=http://www.giuseppetanzilli.it/mod_auth_pgsql2/
 KEYWORDS=amd64 ppc ~sparc x86
 LICENSE=freedist

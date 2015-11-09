@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=A command-line tool for mass tagging/renaming of audio files
+EAPI=0
 HOMEPAGE=https://github.com/Daenyth/audiotag
 IUSE=aac flac mp3 vorbis
 KEYWORDS=amd64 ~ppc ppc64 sparc x86

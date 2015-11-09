@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=A program to convert C++ code to LaTeX source
+EAPI=0
 HOMEPAGE=http://www.arnoldarts.de/drupal/?q=Cpp2LaTeX
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=GPL-2

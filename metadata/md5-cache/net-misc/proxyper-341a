@@ -1,5 +1,6 @@
 DEFINED_PHASES=install postinst postrm
 DESCRIPTION=distributed.net personal proxy
+EAPI=0
 HOMEPAGE=http://www.distributed.net
 KEYWORDS=-alpha -ppc -sparc x86
 LICENSE=distributed.net GPL-2

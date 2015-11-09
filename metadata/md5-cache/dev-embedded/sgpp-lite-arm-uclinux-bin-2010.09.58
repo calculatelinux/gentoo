@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=regular, validated releases of the GNU Toolchain for arm processors by CodeSourcery
+EAPI=0
 HOMEPAGE=http://www.codesourcery.com/sgpp/lite/arm
 IUSE=doc
 KEYWORDS=~amd64 ~x86

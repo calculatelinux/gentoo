@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=sys-libs/zlib !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Archiver that creates standard zips to create identical files over multiple systems
+EAPI=0
 HOMEPAGE=https://sourceforge.net/projects/trrntzip
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2

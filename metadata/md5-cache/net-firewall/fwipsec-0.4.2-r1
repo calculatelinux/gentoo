@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst
 DEPEND=>=net-firewall/iptables-1.2.7 sys-apps/iproute2
 DESCRIPTION=Firewall scripts that control iptables, FreeS/WAN, and squid
+EAPI=0
 HOMEPAGE=http://fwipsec.sourceforge.net/
 KEYWORDS=alpha amd64 ~hppa ia64 ~mips ~ppc ~sparc x86
 LICENSE=GPL-2

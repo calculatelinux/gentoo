@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=sys-apps/sed
 DESCRIPTION=An encoder for packet radio
+EAPI=0
 HOMEPAGE=http://home.t-online.de/home/dg1bbq/7plus.htm
 KEYWORDS=~x86
 LICENSE=7plus

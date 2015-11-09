@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Utility to generate hashcash tokens
+EAPI=0
 HOMEPAGE=http://www.hashcash.org
 KEYWORDS=~amd64 ~ppc x86
 LICENSE=CPL-1.0

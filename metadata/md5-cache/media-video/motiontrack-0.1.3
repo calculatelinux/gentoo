@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=debug? ( gd? ( imagemagick? ( >=media-gfx/imagemagick-5.5.7 ) !imagemagick? ( media-libs/gd ) ) !gd? ( >=media-gfx/imagemagick-5.5.7 ) ) !debug? ( imagemagick? ( gd? ( media-libs/gd ) !gd? ( >=media-gfx/imagemagick-5.5.7 ) ) !imagemagick? ( media-libs/gd ) )
 DESCRIPTION=A set of tools that detect motion between two images
+EAPI=0
 HOMEPAGE=http://motiontrack.sourceforge.net
 IUSE=gd imagemagick debug multiprocess
 KEYWORDS=~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha ~hppa ~amd64

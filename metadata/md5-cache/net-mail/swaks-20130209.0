@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=>=dev-lang/perl-5.8.8
 DESCRIPTION=Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH
+EAPI=0
 HOMEPAGE=http://www.jetmore.org/john/code/swaks
 IUSE=ssl
 KEYWORDS=amd64 ~ppc x86

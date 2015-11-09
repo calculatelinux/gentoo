@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst unpack
 DEPEND=X? ( x11-apps/mkfontdir ) sys-libs/ncurses !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=An ncurses based app to show a scrolling screen from the Matrix
+EAPI=0
 HOMEPAGE=http://www.asty.org/cmatrix
 IUSE=X
 KEYWORDS=alpha amd64 hppa ppc ~ppc64 sparc x86

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=sys-libs/glibc games-util/loki_patch
 DESCRIPTION=Tribes 2 - Team Combat on an Epic Scale
+EAPI=0
 HOMEPAGE=http://www.lokigames.com/products/tribes2/
 KEYWORDS=-amd64 x86
 LICENSE=LOKI-EULA

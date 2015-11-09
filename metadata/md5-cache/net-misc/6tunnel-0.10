@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=TCP proxy for applications that don't speak IPv6
+EAPI=0
 HOMEPAGE=http://toxygen.net/6tunnel
 KEYWORDS=s390 x86
 LICENSE=GPL-2

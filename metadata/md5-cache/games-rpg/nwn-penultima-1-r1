@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=app-arch/unzip
 DESCRIPTION=A parodic fantasy module for Neverwinter Nights
+EAPI=0
 HOMEPAGE=http://pixelscapes.com/penultima
 KEYWORDS=-* ~amd64 x86
 LICENSE=freedist

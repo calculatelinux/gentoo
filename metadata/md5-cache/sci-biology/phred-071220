@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install nofetch
 DESCRIPTION=A base caller for Sanger DNA sequencing
+EAPI=0
 HOMEPAGE=http://phrap.org/phredphrapconsed.html
 KEYWORDS=~amd64 ~x86
 LICENSE=phrap

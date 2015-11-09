@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install test unpack
 DEPEND=dev-libs/expat virtual/latex-base dev-texlive/texlive-latexextra app-text/ghostscript-gpl www-client/lynx dev-lang/perl
 DESCRIPTION=NuSMV: new symbolic model checker
+EAPI=0
 HOMEPAGE=http://nusmv.irst.itc.it/
 IUSE=minisat examples
 KEYWORDS=~x86 ~amd64

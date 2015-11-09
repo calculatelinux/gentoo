@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm preinst setup unpack
 DEPEND=kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources ) dev-vcs/subversion net-misc/rsync
 DESCRIPTION=ORiNOCO IEEE 802.11 wireless LAN driver
+EAPI=0
 HOMEPAGE=http://www.nongnu.org/orinoco/
 IUSE=kernel_linux
 LICENSE=GPL-2 MPL-1.1

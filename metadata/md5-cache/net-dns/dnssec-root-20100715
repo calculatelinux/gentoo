@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install test unpack
 DEPEND=dev-libs/libxslt test? ( app-crypt/gnupg )
 DESCRIPTION=The DNSSEC root key(s)
+EAPI=0
 HOMEPAGE=https://www.iana.org/dnssec/
 IUSE=test
 KEYWORDS=amd64 x86

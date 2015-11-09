@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=virtual/linuxtv-dvb-headers !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=libdvb package with added CAM library and libdvbmpegtools as well as dvb-mpegtools
+EAPI=0
 HOMEPAGE=http://www.metzlerbros.org/dvb/
 IUSE=doc
 KEYWORDS=amd64 ppc x86

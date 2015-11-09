@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=a smaller, cheaper, faster SED implementation
+EAPI=0
 HOMEPAGE=http://www.exactcode.de/oss/minised/
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2

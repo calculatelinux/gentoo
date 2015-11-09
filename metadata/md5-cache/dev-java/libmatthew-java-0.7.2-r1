@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup unpack
 DEPEND=>=virtual/jdk-1.5 >=dev-java/java-config-2.2.0 source? ( app-arch/zip )
 DESCRIPTION=A selection of libraries for Java
+EAPI=0
 HOMEPAGE=http://www.matthew.ath.cx/projects/java/
 IUSE=elibc_FreeBSD doc source
 KEYWORDS=amd64 ppc ppc64 x86 ~x86-fbsd

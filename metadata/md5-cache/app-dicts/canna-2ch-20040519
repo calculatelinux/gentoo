@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm setup
 DEPEND=canna? ( app-i18n/canna )
 DESCRIPTION=Japanese Canna dictionary for 2channelers
+EAPI=0
 HOMEPAGE=http://omaemona.sourceforge.net/packages/Canna/
 IUSE=canna
 KEYWORDS=~alpha amd64 hppa ia64 ~ppc ~ppc64 ~sparc x86

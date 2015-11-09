@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup
 DEPEND=>=virtual/jdk-1.4 >=dev-java/ant-core-1.4 source? ( app-arch/zip ) >=dev-java/java-config-2.2.0 >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2
 DESCRIPTION=Servlet API 2.3 from jakarta.apache.org
+EAPI=0
 HOMEPAGE=http://jakarta.apache.org/
 IUSE=doc source elibc_FreeBSD elibc_FreeBSD
 KEYWORDS=amd64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos ~x64-solaris

@@ -1,5 +1,6 @@
 DEFINED_PHASES=install setup unpack
 DESCRIPTION=Httpush is an intercepting proxy, allowing user to modify HTTP requests on-the-fly
+EAPI=0
 HOMEPAGE=http://httpush.sourceforge.net/
 IUSE=xml
 KEYWORDS=~x86

@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=Checks MP3s for errors
+EAPI=0
 HOMEPAGE=http://mpck.linuxonly.nl/
 KEYWORDS=~amd64 ~ppc x86
 LICENSE=GPL-2

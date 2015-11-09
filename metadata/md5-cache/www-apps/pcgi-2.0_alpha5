@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=Jeff Bauer's Persistent CGI
+EAPI=0
 HOMEPAGE=http://starship.python.net/crew/jbauer/persistcgi/
 KEYWORDS=~x86 ~ppc
 LICENSE=ZPL

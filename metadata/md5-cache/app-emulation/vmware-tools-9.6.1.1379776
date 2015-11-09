@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=dev-libs/libxslt
 DESCRIPTION=VMware Tools for guest operating systems
+EAPI=0
 HOMEPAGE=http://www.vmware.com/products/player/
 IUSE=vmware_guest_freebsd vmware_guest_linux vmware_guest_netware vmware_guest_solaris vmware_guest_windows vmware_guest_winPre2k
 KEYWORDS=-* ~amd64 ~x86

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=app-arch/unzip games-util/uz2unpack
 DESCRIPTION=Unreal Tournament 2003 - Sequel to the 1999 Game of the Year multi-player first-person shooter
+EAPI=0
 HOMEPAGE=http://www.unrealtournament2003.com/
 KEYWORDS=amd64 x86
 LICENSE=ut2003

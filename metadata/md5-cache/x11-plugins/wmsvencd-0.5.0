@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-wm/windowmaker x11-libs/libXpm
 DESCRIPTION=Window Maker Dockable CD-Player with CDDB
+EAPI=0
 HOMEPAGE=https://wiki.gentoo.org/wiki/No_homepage
 KEYWORDS=x86 ~ppc
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=x11-libs/libX11 xft? ( x11-libs/libXft ) x11-proto/xproto
 DESCRIPTION=Vietnamese input keyboard for X
+EAPI=0
 HOMEPAGE=http://xvnkb.sourceforge.net/
 IUSE=spell xft
 KEYWORDS=amd64 ~ppc x86

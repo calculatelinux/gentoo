@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=>=x11-wm/windowmaker-0.80.2-r2
 DESCRIPTION=A bunch of sounds for WindowMaker Sound Server
+EAPI=0
 HOMEPAGE=http://largo.windowmaker.org/
 KEYWORDS=x86 ~ppc amd64 sparc
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst
 DEPEND=>=sys-apps/sed-4
 DESCRIPTION=ClamSMTP is an SMTP filter that allows you to check for viruses using the ClamAV anti-virus software
+EAPI=0
 HOMEPAGE=http://memberwebs.com/nielsen/software/clamsmtp/
 KEYWORDS=amd64 hppa ~sparc x86
 LICENSE=BSD

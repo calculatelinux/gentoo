@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=configuration tool for setting traffic bandwidth parameters
+EAPI=0
 HOMEPAGE=ftp://archive.download.redhat.com/pub/redhat/linux/9/en/os/i386/SRPMS http://sourceforge.net/projects/cbqinit
 KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-2

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst preinst unpack
 DESCRIPTION=System & Network Integrated Polling Software
+EAPI=0
 HOMEPAGE=http://www.netplex-tech.com/snips/
 KEYWORDS=~amd64
 LICENSE=SNIPS BSD HPND GPL-1+ RSA free-noncomm

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Inputlirc daemon to utilize /dev/input/event*
+EAPI=0
 HOMEPAGE=http://svn.sliepen.eu.org/inputlirc/trunk
 KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86
 LICENSE=GPL-2

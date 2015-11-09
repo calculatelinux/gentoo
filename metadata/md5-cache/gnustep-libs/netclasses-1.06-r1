@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DEPEND=>=gnustep-base/gnustep-make-2.0 virtual/gnustep-back
 DESCRIPTION=An asynchronous networking library for GNUstep
+EAPI=0
 HOMEPAGE=http://netclasses.aeruder.net/
 IUSE=debug doc
 KEYWORDS=amd64 ppc x86

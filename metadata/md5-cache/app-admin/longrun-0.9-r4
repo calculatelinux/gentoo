@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DESCRIPTION=A utility to control Transmeta's Crusoe and Efficeon processors
+EAPI=0
 HOMEPAGE=http://freshmeat.net/projects/longrun/
 KEYWORDS=-ppc x86
 LICENSE=GPL-2

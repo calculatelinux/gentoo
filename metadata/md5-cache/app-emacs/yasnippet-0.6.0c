@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm setup unpack
 DEPEND=>=app-emacs/dropdown-list-20080316 >=virtual/emacs-23
 DESCRIPTION=Yet another snippet extension for Emacs
+EAPI=0
 HOMEPAGE=https://github.com/capitaomorte/yasnippet
 IUSE=doc
 KEYWORDS=~amd64 ~x86

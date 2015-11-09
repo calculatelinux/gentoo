@@ -1,5 +1,6 @@
 DEFINED_PHASES=install postinst
 DESCRIPTION=A weekly calendar with task management capability
+EAPI=0
 HOMEPAGE=http://gdesklets.de/?q=desklet/view/111
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3

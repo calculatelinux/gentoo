@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=unicode? ( virtual/libiconv ) >=app-arch/rpm2targz-9.0.0.3g
 DESCRIPTION=AVM DSL Assistant for autodetecting DSL values (VPI, VCI, VPP) for 'fcdsl' based cards
+EAPI=0
 HOMEPAGE=http://opensuse.foehr-it.de/
 IUSE=unicode
 KEYWORDS=~amd64 x86

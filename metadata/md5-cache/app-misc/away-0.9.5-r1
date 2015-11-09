@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=sys-libs/pam-0.75
 DESCRIPTION=Terminal locking program with few additional features
+EAPI=0
 HOMEPAGE=http://unbeatenpath.net/software/away/
 KEYWORDS=amd64 ppc ppc64 sparc x86
 LICENSE=GPL-2

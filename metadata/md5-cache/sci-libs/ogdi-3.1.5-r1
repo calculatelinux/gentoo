@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=<sci-libs/proj-4.8.0 sys-libs/zlib dev-libs/expat
 DESCRIPTION=Open Geographical Datastore Interface, a GIS support library
+EAPI=0
 HOMEPAGE=http://ogdi.sourceforge.net/
 LICENSE=GPL-2
 RDEPEND=<sci-libs/proj-4.8.0 sys-libs/zlib dev-libs/expat

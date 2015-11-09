@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst unpack
 DESCRIPTION=Emulates scrollwheel, right- & left-click for one-button mice/touchpads
+EAPI=0
 HOMEPAGE=http://geekounet.org/powerbook/
 KEYWORDS=-* ppc
 LICENSE=GPL-2

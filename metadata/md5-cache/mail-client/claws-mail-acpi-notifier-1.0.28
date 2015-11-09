@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst
 DEPEND=~mail-client/claws-mail-3.9.0 virtual/pkgconfig
 DESCRIPTION=This plugin enables mail notification via LEDs on some laptops
+EAPI=0
 HOMEPAGE=http://www.claws-mail.org/
 KEYWORDS=amd64 x86
 LICENSE=GPL-3

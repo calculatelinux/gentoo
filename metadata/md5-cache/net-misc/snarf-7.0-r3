@@ -1,5 +1,6 @@
 DEFINED_PHASES=install postinst unpack
 DESCRIPTION=Small and fast CLI resource grabber with support for http, gopher, finger, and ftp protocols
+EAPI=0
 HOMEPAGE=http://www.xach.com/snarf/
 KEYWORDS=alpha amd64 ppc sparc x86
 LICENSE=GPL-2

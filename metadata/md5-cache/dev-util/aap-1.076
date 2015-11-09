@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=app-arch/unzip
 DESCRIPTION=Bram Moolenaar's super-make program
+EAPI=0
 HOMEPAGE=http://www.a-a-p.org/
 IUSE=doc
 KEYWORDS=alpha ~amd64 ia64 ~mips ~ppc sparc x86

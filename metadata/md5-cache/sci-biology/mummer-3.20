@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=A rapid whole genome aligner
+EAPI=0
 HOMEPAGE=http://mummer.sourceforge.net/
 IUSE=doc
 KEYWORDS=amd64 x86

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=The Dylan Programming Language Compiler
+EAPI=0
 HOMEPAGE=http://www.gwydiondylan.org/
 KEYWORDS=~x86
 LICENSE=MIT

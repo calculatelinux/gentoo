@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=FTP mirror utility
+EAPI=0
 HOMEPAGE=http://linux.maruhn.com/sec/fmirror.html
 KEYWORDS=~amd64 ~ppc ~sparc x86
 LICENSE=GPL-2

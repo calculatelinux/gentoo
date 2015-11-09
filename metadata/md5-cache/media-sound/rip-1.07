@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=A command-line based audio CD ripper and mp3 encoder
+EAPI=0
 HOMEPAGE=http://rip.sourceforge.net
 KEYWORDS=amd64 ppc ppc64 sparc x86
 LICENSE=GPL-2

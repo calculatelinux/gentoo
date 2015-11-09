@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm
 DEPEND=sys-auth/bioapi app-arch/unzip
 DESCRIPTION=TouchChip TFM/ESS FingerPrint BSP
+EAPI=0
 HOMEPAGE=http://www.upek.com/support/dl_linux_bsp.asp
 KEYWORDS=-* x86
 LICENSE=UPEK-SDK-EULA

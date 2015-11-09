@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Test system responsiveness to compare different kernels
+EAPI=0
 HOMEPAGE=http://members.optusnet.com.au/ckolivas/contest/
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2

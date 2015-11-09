@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DEPEND=net-fs/samba >=gnustep-base/gnustep-make-2.0 virtual/gnustep-back
 DESCRIPTION=SMBKit offers a samba library and headers for GNUstep
+EAPI=0
 HOMEPAGE=http://www.gnustep.org
 IUSE=debug doc
 KEYWORDS=amd64 ppc x86

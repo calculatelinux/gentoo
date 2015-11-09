@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile config install nofetch postinst preinst setup unpack
 DEPEND=app-arch/unzip
 DESCRIPTION=Epic Bonus Pack for UT2003
+EAPI=0
 HOMEPAGE=http://www.unrealtournament2003.com/
 KEYWORDS=x86
 LICENSE=ut2003

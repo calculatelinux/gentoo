@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install setup unpack
 DEPEND=>=app-i18n/scim-1.4.7-r2 nls? ( virtual/libintl ) virtual/pkgconfig nls? ( sys-devel/gettext ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Smart Common Input Method (SCIM) Generic Table Input Method Server
+EAPI=0
 HOMEPAGE=http://www.scim-im.org/
 IUSE=nls linguas_am linguas_ar linguas_bn linguas_gu linguas_hi linguas_ja linguas_kn linguas_ko linguas_ml linguas_ne linguas_pa linguas_ru linguas_ta linguas_te linguas_th linguas_uk linguas_vi linguas_zh
 KEYWORDS=amd64 ~arm ppc x86

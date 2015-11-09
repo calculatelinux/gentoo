@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DEPEND=gnustep-libs/camerakit >=gnustep-base/gnustep-make-2.0 virtual/gnustep-back
 DESCRIPTION=A simple tool to download photos from a digital camera
+EAPI=0
 HOMEPAGE=http://home.gna.org/gsimageapps/
 IUSE=debug doc
 KEYWORDS=amd64 ppc x86

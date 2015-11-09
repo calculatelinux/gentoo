@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=virtual/opengl media-libs/freeglut virtual/pkgconfig
 DESCRIPTION=A library for creating portable OpenGL applications with easy-to-code scene setup and selection
+EAPI=0
 HOMEPAGE=http://www.bioinformatics.org/ghemical/
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2

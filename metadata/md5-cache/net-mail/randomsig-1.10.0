@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=dev-lang/perl
 DESCRIPTION=randomsig - perl script for generating random .signature files
+EAPI=0
 HOMEPAGE=http://suso.suso.org/programs/randomsig/
 KEYWORDS=~amd64 s390 sparc x86
 LICENSE=GPL-2

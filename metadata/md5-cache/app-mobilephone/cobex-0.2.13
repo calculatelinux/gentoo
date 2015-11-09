@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=dev-libs/libezV24 dev-libs/expat
 DESCRIPTION=small implementation of Obex for phones using the DCU-11 USB-to-serial adapter
+EAPI=0
 HOMEPAGE=http://cobex.sourceforge.net/
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2

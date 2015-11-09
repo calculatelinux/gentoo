@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=Perl script to recursively adds directories/images to Gallery
+EAPI=0
 HOMEPAGE=http://iainlea.dyndns.org/software/galleryadd/
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

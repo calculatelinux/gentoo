@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=Library for parsing dsh.style configuration files
+EAPI=0
 HOMEPAGE=http://www.netfort.gr.jp/~dancer/software/downloads/
 KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux ~m68k-mint
 LICENSE=GPL-2

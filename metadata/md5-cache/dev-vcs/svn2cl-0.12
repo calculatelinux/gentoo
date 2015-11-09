@@ -1,5 +1,6 @@
 DEFINED_PHASES=install postinst unpack
 DESCRIPTION=Create a GNU-style ChangeLog from subversion's svn log --xml output
+EAPI=0
 HOMEPAGE=http://ch.tudelft.nl/~arthur/svn2cl/
 KEYWORDS=amd64 ~mips ~ppc x86
 LICENSE=BSD

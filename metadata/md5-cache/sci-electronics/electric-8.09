@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup
 DEPEND=app-arch/unzip >=dev-java/java-config-2.2.0
 DESCRIPTION=Complete Electronic Design Automation (EDA) system that can handle many forms of circuit design
+EAPI=0
 HOMEPAGE=https://www.gnu.org/software/electric/electric.html
 IUSE=elibc_FreeBSD
 KEYWORDS=amd64 ppc x86

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm preinst setup unpack
 DEPEND=virtual/linux-sources kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
 DESCRIPTION=GFS kernel module
+EAPI=0
 HOMEPAGE=https://sources.redhat.com/cluster/wiki/
 IUSE=kernel_linux
 KEYWORDS=amd64 x86

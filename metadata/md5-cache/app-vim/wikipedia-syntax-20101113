@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm
 DEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 DESCRIPTION=vim plugin: Wikipedia syntax highlighting
+EAPI=0
 HOMEPAGE=http://en.wikipedia.org/wiki/Wikipedia:Text_editor_support#Vim
 KEYWORDS=amd64 ~hppa ~mips ppc ppc64 x86
 LICENSE=CC-BY-SA-3.0

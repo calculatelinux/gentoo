@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=list available userspace I/O (UIO) devices
+EAPI=0
 HOMEPAGE=http://www.osadl.org/UIO.uio.0.html
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2

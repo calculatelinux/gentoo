@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=Recycle Bin Analyzer
+EAPI=0
 HOMEPAGE=http://sourceforge.net/projects/odessa/
 KEYWORDS=~amd64 ~ppc x86
 LICENSE=BSD

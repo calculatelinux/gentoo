@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=Gentoo-based Network Appliance building system development tools
+EAPI=0
 HOMEPAGE=https://embedded.gentoo.org/gnap.xml
 IUSE=minimal
 KEYWORDS=~x86

@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm preinst prerm setup
 DEPEND=>=dev-java/java-config-2.2.0 app-eselect/eselect-java
 DESCRIPTION=Links to Apple's version of Sun's J2SE Development Kit
+EAPI=0
 HOMEPAGE=http://java.sun.com/j2se/1.6.0/
 KEYWORDS=-* ~x64-macos ~x86-macos
 LICENSE=public-domain

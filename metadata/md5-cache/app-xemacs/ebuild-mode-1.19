@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=app-editors/xemacs-21.4.20-r5 app-xemacs/sh-script app-editors/xemacs
 DESCRIPTION=An Emacs mode for editing ebuilds and other Gentoo specific files
+EAPI=0
 HOMEPAGE=https://www.gentoo.org/proj/en/lisp/emacs/index.xml
 KEYWORDS=amd64 x86
 LICENSE=GPL-2+

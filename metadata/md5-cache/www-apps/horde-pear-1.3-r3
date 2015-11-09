@@ -1,5 +1,6 @@
 DEFINED_PHASES=-
 DESCRIPTION=Meta package for the PEAR packages required by Horde
+EAPI=0
 HOMEPAGE=http://pear.php.net/
 KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 s390 sparc x86
 LICENSE=metapackage

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DESCRIPTION=Doom 3 - data portion
+EAPI=0
 HOMEPAGE=http://www.doom3.com/
 KEYWORDS=-* amd64 x86
 LICENSE=DOOM3

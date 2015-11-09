@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst unpack
 DESCRIPTION=Spindown is a daemon that can spin down idle disks
+EAPI=0
 HOMEPAGE=https://code.google.com/p/spindown
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3

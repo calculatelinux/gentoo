@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Console Napster/OpenNap client
+EAPI=0
 HOMEPAGE=http://www.mathstat.dal.ca/~selinger/nap/
 KEYWORDS=ppc x86
 LICENSE=nap GPL-2+ LGPL-2+

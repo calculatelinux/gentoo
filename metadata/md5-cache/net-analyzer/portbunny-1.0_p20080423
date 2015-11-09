@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm preinst setup
 DEPEND=dev-lang/python kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
 DESCRIPTION=A kernel based highspeed TCP SYN port scanner
+EAPI=0
 HOMEPAGE=http://recurity-labs.com/portbunny/
 IUSE=kernel_linux
 KEYWORDS=~x86

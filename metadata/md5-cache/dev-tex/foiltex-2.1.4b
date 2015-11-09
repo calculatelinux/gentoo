@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm unpack
 DEPEND=app-arch/unzip virtual/latex-base >=sys-apps/texinfo-4.2-r5
 DESCRIPTION=LaTeX package used to create foils and slides
+EAPI=0
 HOMEPAGE=ftp://ftp.dante.de/tex-archive/help/Catalogue/entries/foiltex.html
 KEYWORDS=amd64 ppc x86
 LICENSE=FoilTeX

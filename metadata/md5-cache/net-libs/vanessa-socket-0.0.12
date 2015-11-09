@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=>=dev-libs/vanessa-logger-0.0.6
 DESCRIPTION=Simplifies TCP/IP socket operations
+EAPI=0
 HOMEPAGE=http://www.vergenet.net/linux/vanessa/
 KEYWORDS=~amd64 ~ppc x86
 LICENSE=GPL-2

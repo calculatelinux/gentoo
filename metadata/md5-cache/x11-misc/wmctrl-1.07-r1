@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=>=dev-libs/glib-2 x11-libs/libX11 x11-libs/libXt x11-libs/libXmu virtual/pkgconfig x11-proto/xproto
 DESCRIPTION=command line tool to interact with an EWMH/NetWM compatible X Window Manager
+EAPI=0
 HOMEPAGE=http://tomas.styblo.name/wmctrl/
 KEYWORDS=amd64 ppc ~sparc x86 ~x86-linux
 LICENSE=GPL-2

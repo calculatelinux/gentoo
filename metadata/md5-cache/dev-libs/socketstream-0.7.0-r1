@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=doc? ( app-doc/doxygen )
 DESCRIPTION=C++ Streaming sockets library
+EAPI=0
 HOMEPAGE=http://socketstream.sourceforge.net/
 IUSE=doc
 KEYWORDS=alpha amd64 ~hppa ~ppc ~sparc x86

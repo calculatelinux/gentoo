@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=>=net-nds/openldap-2.1.30-r5 sasl? ( dev-libs/cyrus-sasl ) kerberos? ( virtual/krb5 ) >=sys-apps/sed-4 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=NSS LDAP Module
+EAPI=0
 HOMEPAGE=http://www.padl.com/OSS/nss_ldap.html
 IUSE=debug sasl kerberos
 KEYWORDS=alpha amd64 hppa ~ia64 ~mips ppc ppc64 sparc x86

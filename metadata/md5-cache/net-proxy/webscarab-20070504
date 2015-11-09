@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=A framework for analysing applications that communicate using the HTTP and HTTPS protocols
+EAPI=0
 HOMEPAGE=https://www.owasp.org/index.php/Webscarab
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=A beautiful sans-serif monotype font designed for code listings
+EAPI=0
 HOMEPAGE=http://www.levien.com/type/myfonts/inconsolata.html
 IUSE=X
 KEYWORDS=amd64 x86 ~x86-fbsd ~ppc-macos ~x64-macos ~x86-macos

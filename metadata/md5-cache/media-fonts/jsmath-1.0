@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=Raster fonts for jsmath
+EAPI=0
 HOMEPAGE=http://www.math.union.edu/~dpvc/jsMath/
 IUSE=X
 KEYWORDS=amd64 ppc x86

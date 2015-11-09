@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXpm x11-proto/xextproto
 DESCRIPTION=Network monitoring dock.app
+EAPI=0
 HOMEPAGE=http://www.linux.tucows.com
 KEYWORDS=x86 ppc sparc alpha hppa ~mips ia64 amd64
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst
 DEPEND=dev-lang/perl >=sys-apps/sed-4
 DESCRIPTION=Scripts to treate diagrams of IRC networks using the LINKS command
+EAPI=0
 HOMEPAGE=http://pasky.or.cz/~pasky/irc/
 KEYWORDS=x86
 LICENSE=GPL-2

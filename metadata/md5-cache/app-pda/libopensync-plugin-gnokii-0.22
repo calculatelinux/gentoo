@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND==app-pda/libopensync-0.22* >=app-mobilephone/gnokii-0.6.14
 DESCRIPTION=OpenSync Gnokii Plugin
+EAPI=0
 HOMEPAGE=http://www.opensync.org/
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2

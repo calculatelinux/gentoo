@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst unpack
 DEPEND=sys-devel/bin86 test? ( dev-vcs/rcs )
 DESCRIPTION=A replacement master boot record for IBM-PC compatible computers
+EAPI=0
 HOMEPAGE=http://www.chiark.greenend.org.uk/~neilt/mbr/
 IUSE=test
 KEYWORDS=-alpha amd64 -ppc -sparc x86

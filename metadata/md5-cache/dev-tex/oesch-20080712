@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm unpack
 DEPEND=!<dev-texlive/texlive-fontsextra-2007-r1 app-arch/unzip virtual/latex-base >=sys-apps/texinfo-4.2-r5
 DESCRIPTION=Metafont font used in Austrian schools for hand writing
+EAPI=0
 HOMEPAGE=http://www.ctan.org/tex-archive/fonts/oesch/
 IUSE=examples
 KEYWORDS=~amd64 ~x86-fbsd

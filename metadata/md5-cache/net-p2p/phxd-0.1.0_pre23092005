@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst
 DEPEND=dev-python/twisted-core dev-python/twisted-web
 DESCRIPTION=Next generation Hotline server in python. kang's branch
+EAPI=0
 HOMEPAGE=http://www.avaraline.net
 KEYWORDS=~ppc ~x86
 LICENSE=GPL-2

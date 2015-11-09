@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm setup unpack
 DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings ) X? ( media-gfx/ebdftopcf )
 DESCRIPTION=Korean Baekmuk Font
+EAPI=0
 HOMEPAGE=http://kldp.net/projects/baekmuk/
 IUSE=unicode X X
 KEYWORDS=alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos

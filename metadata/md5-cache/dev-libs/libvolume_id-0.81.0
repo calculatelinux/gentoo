@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=Library to provide file system information
+EAPI=0
 HOMEPAGE=http://www.marcuscom.com
 IUSE=static
 KEYWORDS=~x86-fbsd

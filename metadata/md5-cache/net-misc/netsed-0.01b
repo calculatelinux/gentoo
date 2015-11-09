@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Small tool for altering forwarded network data in real time
+EAPI=0
 HOMEPAGE=http://freshmeat.net/projects/netsed
 KEYWORDS=amd64 ~x86
 LICENSE=LGPL-2

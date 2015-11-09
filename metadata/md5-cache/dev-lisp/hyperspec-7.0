@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=Common Lisp ANSI-standard Hyperspec
+EAPI=0
 HOMEPAGE=http://www.lispworks.com/reference/HyperSpec/
 KEYWORDS=x86 amd64 sparc ppc
 LICENSE=HyperSpec

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=>=sys-devel/bin86-0.15.5
 DESCRIPTION=Standard Linux boot loader
+EAPI=0
 HOMEPAGE=http://lilo.go.dyndns.org/pub/linux/lilo/
 IUSE=static minimal pxeserial device-mapper
 KEYWORDS=-* amd64 x86

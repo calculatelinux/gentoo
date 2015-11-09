@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup test unpack
 DEPEND=>=virtual/jdk-1.4 app-arch/unzip test? ( dev-java/ant-junit ) >=dev-java/java-config-2.2.0 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2
 DESCRIPTION=An implementation of XMLPULL V1 API
+EAPI=0
 HOMEPAGE=http://www.extreme.indiana.edu/xgws/xsoap/xpp/mxp1/index.html
 IUSE=test elibc_FreeBSD doc source elibc_FreeBSD
 KEYWORDS=amd64 ~arm ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris

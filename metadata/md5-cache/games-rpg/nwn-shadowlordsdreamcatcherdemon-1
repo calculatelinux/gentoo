@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=app-arch/p7zip
 DESCRIPTION=The bundled Shadowlords, Dreamcatcher, and Demon campaigns by Hall-of-Famer Adam Miller
+EAPI=0
 HOMEPAGE=http://www.adamandjamie.com/mod/nwn_campaign.aspx
 KEYWORDS=-* ~amd64 ~x86
 LICENSE=all-rights-reserved

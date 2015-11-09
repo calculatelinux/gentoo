@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=<x11-libs/libdockapp-0.7
 DESCRIPTION=WMaker DockApp: ACPI status monitor for laptops
+EAPI=0
 HOMEPAGE=http://www.ne.jp/asahi/linux/timecop/
 IUSE=acpi apm
 KEYWORDS=amd64 ppc -sparc x86

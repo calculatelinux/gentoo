@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install setup unpack
 DESCRIPTION=Linux-like environment for Windows
+EAPI=0
 HOMEPAGE=http://cygwin.com/
 IUSE=crosscompile_opts_headers-only
 KEYWORDS=~amd64 ~x86

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm preinst setup unpack
 DEPEND=kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
 DESCRIPTION=Use home made infrared receiver connected via USB
+EAPI=0
 HOMEPAGE=http://usbirboy.sourceforge.net/
 IUSE=kernel_linux
 KEYWORDS=~alpha amd64 ia64 ppc ppc64 x86

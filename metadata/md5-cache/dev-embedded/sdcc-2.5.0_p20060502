@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=dev-embedded/gputils-0.13.2 dev-libs/boehm-gc
 DESCRIPTION=Small device C compiler (for various microprocessors)
+EAPI=0
 HOMEPAGE=http://sdcc.sourceforge.net/
 IUSE=doc
 KEYWORDS=amd64 ppc x86

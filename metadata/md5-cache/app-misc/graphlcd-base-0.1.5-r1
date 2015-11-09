@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=Graphical LCD Driver
+EAPI=0
 HOMEPAGE=http://projects.vdr-developer.org/projects/graphlcd
 IUSE=truetype unicode g15
 KEYWORDS=amd64 x86 ~ppc

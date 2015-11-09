@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=sys-libs/ncurses-5.0
 DESCRIPTION=IRC client intended to be displayed on a text console
+EAPI=0
 HOMEPAGE=http://rhapsody.sourceforge.net/
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

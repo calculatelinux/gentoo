@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Generates 2D displays of RNA/DNA secondary structures with tertiary interactions
+EAPI=0
 HOMEPAGE=http://ndbserver.rutgers.edu/services/download/index.html
 KEYWORDS=~amd64 x86
 LICENSE=public-domain

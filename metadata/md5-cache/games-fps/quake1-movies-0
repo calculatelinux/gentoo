@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=app-arch/unzip
 DESCRIPTION=a collection of all the greatest Quake movies
+EAPI=0
 HOMEPAGE=http://www.planetquake.com/cineplex/history.html
 KEYWORDS=amd64 x86
 LICENSE=all-rights-reserved

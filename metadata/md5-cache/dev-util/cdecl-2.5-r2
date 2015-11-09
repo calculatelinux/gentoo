@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=readline? ( sys-libs/ncurses sys-libs/readline ) || ( dev-util/yacc sys-devel/bison ) !<dev-util/cutils-1.6-r2
 DESCRIPTION=Turn English phrases to C or C++ declarations
+EAPI=0
 HOMEPAGE=http://www.boutell.com/lsm/lsmbyid.cgi/002103
 IUSE=readline
 KEYWORDS=amd64 ~mips ppc x86

@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst prerm setup unpack
 DEPEND=>=app-admin/webapp-config-1.50.15
 DESCRIPTION=Converts GNU .info files to HTML
+EAPI=0
 HOMEPAGE=http://info2html.sourceforge.net/
 IUSE=vhosts
 KEYWORDS=alpha amd64 hppa sparc x86

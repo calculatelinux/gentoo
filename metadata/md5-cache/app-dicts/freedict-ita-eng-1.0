@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=app-text/dictd
 DESCRIPTION=Freedict for language translation from Italian to English
+EAPI=0
 HOMEPAGE=http://www.freedict.de
 KEYWORDS=alpha ~amd64 ~hppa ~mips ppc sparc x86
 LICENSE=GPL-2

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst preinst
 DESCRIPTION=Advanced CLI tool for sending email
+EAPI=0
 HOMEPAGE=http://email.cleancode.org
 KEYWORDS=alpha amd64 x86
 LICENSE=GPL-2

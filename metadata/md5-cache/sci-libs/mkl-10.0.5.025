@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup test unpack
 DEPEND=app-eselect/eselect-blas app-eselect/eselect-cblas app-eselect/eselect-lapack virtual/fortran
 DESCRIPTION=Intel(R) Math Kernel Library: linear algebra, fft, math functions
+EAPI=0
 HOMEPAGE=http://developer.intel.com/software/products/mkl/
 IUSE=doc fftw fortran95 int64 mpi
 KEYWORDS=-* amd64 ~ia64 x86

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Self-employed-mode software for 3COM/USR message modems
+EAPI=0
 HOMEPAGE=http://www.hof-berlin.de/mepl/
 KEYWORDS=~amd64 ~ppc x86
 LICENSE=GPL-2

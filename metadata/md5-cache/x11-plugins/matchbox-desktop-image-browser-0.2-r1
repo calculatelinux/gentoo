@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=>=x11-libs/libmatchbox-1.1 x11-wm/matchbox-desktop !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=An alpha-ish image browser plug in for matchbox-desktop
+EAPI=0
 HOMEPAGE=http://matchbox-project.org/
 IUSE=debug
 KEYWORDS=amd64 ~arm x86

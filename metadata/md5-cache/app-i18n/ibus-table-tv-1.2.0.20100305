@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=>=app-i18n/ibus-table-1.2 virtual/pkgconfig
 DESCRIPTION=The Thai and Viqr (Vietnamese) tables for IBus-Table
+EAPI=0
 HOMEPAGE=https://github.com/ibus/ibus/wiki
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2

@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=Library and applications to access GSM mobile phones
+EAPI=0
 HOMEPAGE=http://www.pxh.de/fs/gsmlib/
 KEYWORDS=amd64 ~ia64 ppc ppc64 sparc x86
 LICENSE=LGPL-2

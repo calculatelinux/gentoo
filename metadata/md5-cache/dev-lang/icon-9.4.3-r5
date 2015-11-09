@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install test unpack
 DEPEND=X? ( x11-proto/xextproto x11-proto/xproto x11-libs/libX11 x11-libs/libXpm x11-libs/libXt ) sys-devel/gcc
 DESCRIPTION=very high level language
+EAPI=0
 HOMEPAGE=http://www.cs.arizona.edu/icon/
 IUSE=X iplsrc
 KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 sparc x86

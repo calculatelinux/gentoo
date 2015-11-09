@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=kerberos? ( net-libs/libgssglue )
 DESCRIPTION=Transport Independent RPC library (SunRPC replacement)
+EAPI=0
 HOMEPAGE=http://libtirpc.sourceforge.net/
 IUSE=kerberos
 KEYWORDS=amd64 x86

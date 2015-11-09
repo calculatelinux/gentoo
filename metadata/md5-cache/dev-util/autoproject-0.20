@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=sys-devel/automake sys-devel/autoconf test? ( sys-apps/texinfo )
 DESCRIPTION=Used to start a programming project using autotools and a command line parser generator
+EAPI=0
 HOMEPAGE=http://packages.debian.org/unstable/devel/autoproject
 IUSE=test
 KEYWORDS=~amd64 ~ppc x86

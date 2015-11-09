@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=java? ( || ( >=virtual/jdk-1.2 >=virtual/jre-1.2 ) ) net-libs/libpcap
 DESCRIPTION=NETI@Home research project from GATech
+EAPI=0
 HOMEPAGE=http://www.neti.gatech.edu
 IUSE=zlib java
 KEYWORDS=~ppc x86

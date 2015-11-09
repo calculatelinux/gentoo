@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup
 DEPEND=virtual/mysql >=sys-libs/zlib-1.1.4 =www-servers/apache-2*
 DESCRIPTION=An Apache2 module for mass virtual hosting using a MySQL database
+EAPI=0
 HOMEPAGE=http://www.synthemesc.com/mod_vdbh/
 KEYWORDS=ppc x86
 LICENSE=Apache-1.1

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=bind a local port and connect it to a remote socket
+EAPI=0
 HOMEPAGE=http://http.distributed.net/pub/dcti/unsupported/
 KEYWORDS=~x86 ~ppc ~arm ~amd64
 LICENSE=public-domain

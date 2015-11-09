@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=library for a virtual ring buffer
+EAPI=0
 HOMEPAGE=http://phil.ipal.org/freeware/vrb/
 KEYWORDS=x86 sparc
 LICENSE=LGPL-2.1

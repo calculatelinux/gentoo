@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=sys-freebsd/freebsd-sources-6.2 virtual/pmake
 DESCRIPTION=Fuse for FreeBSD
+EAPI=0
 HOMEPAGE=http://fuse4bsd.creo.hu/
 KEYWORDS=~x86-fbsd
 LICENSE=BSD

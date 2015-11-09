@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=x11-libs/libmatchbox-1.1
 DESCRIPTION=Common files used by matchbox-panel and matchbox-desktop packages
+EAPI=0
 HOMEPAGE=http://matchbox-project.org/
 IUSE=pda
 KEYWORDS=amd64 ~arm ~hppa ppc x86

@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=The Pulse Glass x11 mouse cursor theme
+EAPI=0
 HOMEPAGE=http://kde-look.org/content/show.php/Pulse+Glass?content=124442
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3

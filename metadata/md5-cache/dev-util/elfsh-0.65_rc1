@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=dev-libs/expat-1.95 readline? ( sys-libs/readline ) app-arch/unzip dev-libs/libhash
 DESCRIPTION=scripting language to modify ELF binaries
+EAPI=0
 HOMEPAGE=http://www.eresi-project.org/
 IUSE=readline
 LICENSE=GPL-2

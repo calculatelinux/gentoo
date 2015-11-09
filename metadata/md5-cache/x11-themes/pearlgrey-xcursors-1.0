@@ -1,5 +1,6 @@
 DEFINED_PHASES=install postinst
 DESCRIPTION=A simple crispy white-grey xcursor theme
+EAPI=0
 HOMEPAGE=http://www.kde-look.org/content/show.php/PearlGrey?content=11313
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

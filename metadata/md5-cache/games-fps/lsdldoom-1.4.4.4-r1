@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=media-libs/libsdl media-libs/sdl-net !games-fps/prboom games-fps/doom-data
 DESCRIPTION=Port of ID's doom to SDL
+EAPI=0
 HOMEPAGE=http://firehead.org/~jessh/lsdldoom/
 KEYWORDS=sparc x86
 LICENSE=GPL-2

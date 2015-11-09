@@ -1,5 +1,6 @@
 DEFINED_PHASES=install nofetch unpack
 DESCRIPTION=Acrobat FDF Toolkit
+EAPI=0
 HOMEPAGE=http://www.adobe.com/devnet/acrobat/fdftoolkit.html
 KEYWORDS=-* x86
 LICENSE=Adobe

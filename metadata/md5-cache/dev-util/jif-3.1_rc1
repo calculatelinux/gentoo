@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup
 DEPEND=>=virtual/jdk-1.4 >=sys-apps/sed-4.1.4 app-arch/unzip >=dev-java/java-config-2.2.0
 DESCRIPTION=JIF is an IDE for the creation of text adventures based on Graham Nelson's Inform standard
+EAPI=0
 HOMEPAGE=http://www.slade.altervista.org/JIF/
 IUSE=elibc_FreeBSD
 KEYWORDS=~amd64 x86

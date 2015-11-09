@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DESCRIPTION=Duke Nukem 3D data files
+EAPI=0
 HOMEPAGE=http://www.3drealms.com/
 KEYWORDS=amd64 hppa ppc x86
 LICENSE=DUKE3D

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install test
 DEPEND=sys-devel/gettext sys-apps/groff test? ( app-arch/sharutils ) sys-devel/bison
 DESCRIPTION=File history and comparison tools
+EAPI=0
 HOMEPAGE=http://fhist.sourceforge.net/fhist.html
 IUSE=test
 KEYWORDS=~ppc x86

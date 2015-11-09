@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=sys-libs/libraw1394
 DESCRIPTION=FireWire CSR Config ROM Viewer
+EAPI=0
 HOMEPAGE=http://www.hugovil.com/en/fwcrv/
 KEYWORDS=x86 ~ppc
 LICENSE=GPL-2

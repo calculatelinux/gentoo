@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=>=sys-libs/ncurses-5.2-r5 X? ( x11-libs/libXaw x11-libs/libXmu x11-libs/libXext x11-libs/libXt x11-libs/libXpm x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXau x11-libs/libXdmcp ) opengl? ( virtual/opengl media-libs/libsdl ) sdl? ( media-libs/libsdl ) dev-util/yacc
 DESCRIPTION=Super Lotsa Added Stuff Hack - Extended Magic. A Nethack Variant
+EAPI=0
 HOMEPAGE=http://www.slashem.org/
 IUSE=X sdl opengl
 KEYWORDS=amd64 ppc x86

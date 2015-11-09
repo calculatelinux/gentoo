@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=~mail-client/claws-mail-3.9.0 nls? ( >=sys-devel/gettext-0.12.1 ) virtual/pkgconfig
 DESCRIPTION=Warn about missing attachment, if it's mentioned in message body
+EAPI=0
 HOMEPAGE=http://www.claws-mail.org/
 IUSE=nls
 KEYWORDS=amd64 ~ppc x86

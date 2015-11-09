@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=ssl? ( dev-libs/openssl )
 DESCRIPTION=M(easuring)buffer is a replacement for buffer with additional functionality
+EAPI=0
 HOMEPAGE=http://www.maier-komor.de/mbuffer.html
 IUSE=debug ssl
 KEYWORDS=amd64 ppc x86

@@ -1,5 +1,6 @@
 DEFINED_PHASES=install postinst unpack
 DESCRIPTION=Indents C/C++ source code
+EAPI=0
 HOMEPAGE=http://invisible-island.net/bcpp/
 KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 LICENSE=GPL-2

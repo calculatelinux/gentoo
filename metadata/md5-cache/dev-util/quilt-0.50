@@ -1,5 +1,6 @@
 DEFINED_PHASES=install setup unpack
 DESCRIPTION=quilt patch manager
+EAPI=0
 HOMEPAGE=http://savannah.nongnu.org/projects/quilt
 IUSE=emacs graphviz
 KEYWORDS=amd64 arm ppc ppc64 sparc x86

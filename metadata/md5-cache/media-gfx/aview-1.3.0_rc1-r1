@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=media-libs/aalib-1.4_rc4
 DESCRIPTION=An ASCII Image Viewer
+EAPI=0
 HOMEPAGE=http://aa-project.sourceforge.net/aview/
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2

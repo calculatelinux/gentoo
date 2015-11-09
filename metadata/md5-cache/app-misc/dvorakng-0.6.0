@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=sys-libs/ncurses
 DESCRIPTION=Dvorak typing tutor
+EAPI=0
 HOMEPAGE=http://freshmeat.net/projects/dvorakng/?topic_id=71%2C861
 KEYWORDS=amd64 ppc ppc64 x86
 LICENSE=GPL-2

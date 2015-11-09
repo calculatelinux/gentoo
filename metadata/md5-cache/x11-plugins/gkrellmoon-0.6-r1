@@ -1,6 +1,7 @@
 DEFINED_PHASES=install setup unpack
 DEPEND=media-libs/imlib2 =app-admin/gkrellm-2* virtual/pkgconfig
 DESCRIPTION=A GKrellM2 plugin of the famous wmMoonClock dockapp
+EAPI=0
 HOMEPAGE=http://gkrellmoon.sourceforge.net/
 KEYWORDS=alpha amd64 ppc sparc x86
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup
 DEPEND=>=sys-libs/ncurses-5.2
 DESCRIPTION=utility to administer the IP virtual server services offered by the Linux kernel
+EAPI=0
 HOMEPAGE=http://linuxvirtualserver.org/
 KEYWORDS=amd64 ia64 ~ppc64 s390 sparc x86
 LICENSE=GPL-2

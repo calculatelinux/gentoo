@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=dev-libs/openssl net-misc/curl >=sys-apps/util-linux-2.16.2 !x11-wm/blackbox !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=implementation of the BitTorrent core protocols in C
+EAPI=0
 HOMEPAGE=http://libbt.sourceforge.net/
 KEYWORDS=~amd64 ~ppc x86
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=media-libs/libvorbis-1 media-libs/libogg
 DESCRIPTION=Calculator of perceived sound level for Ogg Vorbis files
+EAPI=0
 HOMEPAGE=http://sjeng.org/vorbisgain.html
 KEYWORDS=amd64 ppc ppc64 sparc x86
 LICENSE=LGPL-2.1

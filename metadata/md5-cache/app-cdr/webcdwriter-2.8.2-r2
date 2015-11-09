@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=>=virtual/jdk-1.4 dev-java/jnlp-api >=dev-java/java-config-2.2.0
 DESCRIPTION=Make CD-writer(s) available to all users in your network
+EAPI=0
 HOMEPAGE=http://joerghaeger.de/webCDwriter/index.html
 IUSE=pam mp3 sox vorbis elibc_FreeBSD
 KEYWORDS=~amd64 ~x86

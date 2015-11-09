@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install setup test unpack
 DESCRIPTION=DUMA (Detect Unintended Memory Access) is a memory debugging library
+EAPI=0
 HOMEPAGE=http://duma.sourceforge.net/
 IUSE=examples
 KEYWORDS=amd64 ppc x86

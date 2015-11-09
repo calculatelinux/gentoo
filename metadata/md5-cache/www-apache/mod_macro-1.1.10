@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup
 DEPEND==www-servers/apache-2.2*
 DESCRIPTION=An Apache2 module providing macros for the Apache config file
+EAPI=0
 HOMEPAGE=http://www.coelho.net/mod_macro/
 KEYWORDS=amd64 x86
 LICENSE=BSD

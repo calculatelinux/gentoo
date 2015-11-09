@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=games-misc/fortune-mod x11-libs/libX11 x11-libs/libXext x11-libs/libXpm x11-proto/xproto x11-proto/xextproto
 DESCRIPTION=a dockapp showing fortune-mod messages
+EAPI=0
 HOMEPAGE=http://dockapps.windowmaker.org/file.php/id/90
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=GPL-1

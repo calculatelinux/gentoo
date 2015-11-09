@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-apps/sed-4
 DESCRIPTION=Utility to wrap icon resources into C++ code, from the FOX Toolkit
+EAPI=0
 HOMEPAGE=http://www.fox-toolkit.org/
 IUSE=debug doc profile
 KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 sparc x86

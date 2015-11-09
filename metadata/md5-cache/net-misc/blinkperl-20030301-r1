@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=blinkperl is a telnet server, which plays BlinkenLight movies
+EAPI=0
 HOMEPAGE=http://blinkserv.sourceforge.net/
 KEYWORDS=~hppa x86
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=virtual/pam net-wireless/bluez !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Linux PAM module providing ability to authenticate via a bluetooth compatible device
+EAPI=0
 HOMEPAGE=http://pam.0xdef.net/
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2

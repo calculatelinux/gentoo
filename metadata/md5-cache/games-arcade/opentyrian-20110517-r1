@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=media-libs/libsdl media-libs/sdl-net app-arch/unzip dev-vcs/mercurial
 DESCRIPTION=Open-source port of the DOS game Tyrian, vertical scrolling shooter
+EAPI=0
 HOMEPAGE=https://bitbucket.org/opentyrian/opentyrian/wiki/Home
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2

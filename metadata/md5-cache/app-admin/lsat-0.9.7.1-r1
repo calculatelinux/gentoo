@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=dev-lang/perl
 DESCRIPTION=The Linux Security Auditing Tool
+EAPI=0
 HOMEPAGE=http://usat.sourceforge.net/
 IUSE=minimal
 KEYWORDS=amd64 ppc x86

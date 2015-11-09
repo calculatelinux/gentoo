@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND==dev-libs/glib-2* >=sys-apps/pciutils-2.2.7-r1 sys-process/procps sys-apps/setserial sys-apps/grep virtual/udev virtual/pkgconfig !app-laptop/smcinit virtual/pkgconfig
 DESCRIPTION=IrDA management and handling utilities
+EAPI=0
 HOMEPAGE=http://irda.sourceforge.net
 KEYWORDS=amd64 ~arm ppc ~sh x86
 LICENSE=GPL-2

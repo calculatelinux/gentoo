@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DEPEND=>=gnustep-base/gnustep-make-2.0 virtual/gnustep-back
 DESCRIPTION=Simple image viewer
+EAPI=0
 HOMEPAGE=http://home.gna.org/gsimageapps/
 IUSE=debug doc
 KEYWORDS=amd64 ppc x86

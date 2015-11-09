@@ -1,5 +1,6 @@
 DEFINED_PHASES=-
 DESCRIPTION=emerge this package to install all of the gkrellm plugins
+EAPI=0
 HOMEPAGE=http://www.gkrellm.net/
 IUSE=wifi
 KEYWORDS=~ppc ~x86

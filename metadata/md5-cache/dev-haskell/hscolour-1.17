@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm setup test unpack
 DEPEND=>=dev-lang/ghc-6.6.1 >=dev-haskell/cabal-1.6 doc? ( || ( dev-haskell/haddock >=dev-lang/ghc-7.10.2 ) ) >=dev-haskell/cabal-1.1.4
 DESCRIPTION=Colourise Haskell code
+EAPI=0
 HOMEPAGE=http://www.cs.york.ac.uk/fp/darcs/hscolour/
 IUSE=doc profile
 KEYWORDS=alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd

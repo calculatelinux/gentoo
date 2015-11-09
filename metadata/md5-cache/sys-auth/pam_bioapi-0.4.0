@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=sys-auth/bioapi sys-libs/pam dev-db/sqlite
 DESCRIPTION=PAM interface to bioapi package
+EAPI=0
 HOMEPAGE=https://code.google.com/p/pam-bioapi/
 KEYWORDS=x86
 LICENSE=GPL-2

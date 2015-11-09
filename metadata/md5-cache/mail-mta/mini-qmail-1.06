@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install test unpack
 DEPEND=>=sys-apps/sed-4
 DESCRIPTION=a small null client that forwards mail via QMQP to a full qmail server
+EAPI=0
 HOMEPAGE=http://netqmail.org/ http://cr.yp.to/qmail/mini.html http://qmail.org/
 KEYWORDS=~amd64 arm hppa ~mips ~ppc ~x86
 LICENSE=public-domain

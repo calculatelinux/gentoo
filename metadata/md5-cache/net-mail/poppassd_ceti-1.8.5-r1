@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=virtual/pam
 DESCRIPTION=Password change daemon with PAM support
+EAPI=0
 HOMEPAGE=http://echelon.pl/pubs/poppassd.html
 IUSE=cracklib
 KEYWORDS=amd64 x86

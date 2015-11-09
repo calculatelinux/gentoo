@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm preinst setup unpack
 DEPEND=virtual/commonlisp dev-lisp/asdf doc? ( virtual/texi2dvi ) dev-lisp/common-lisp-controller >=virtual/emacs-23
 DESCRIPTION=SLIME, the Superior Lisp Interaction Mode (Extended)
+EAPI=0
 HOMEPAGE=http://common-lisp.net/project/slime/
 IUSE=doc
 KEYWORDS=amd64 ppc ~sparc x86

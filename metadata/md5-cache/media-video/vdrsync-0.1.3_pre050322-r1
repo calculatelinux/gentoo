@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=converting vdr-recordings to mpeg2, dvd or other similar formats
+EAPI=0
 HOMEPAGE=http://vdrsync.vdr-portal.de/
 IUSE=dvdr
 KEYWORDS=x86 ~amd64

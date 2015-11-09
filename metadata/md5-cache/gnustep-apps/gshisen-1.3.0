@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DEPEND=>=gnustep-base/gnustep-make-2.0 virtual/gnustep-back
 DESCRIPTION=The first GNUstep game, similar to Mahjongg
+EAPI=0
 HOMEPAGE=http://gap.nongnu.org/gshisen/index.html
 IUSE=debug doc
 KEYWORDS=amd64 x86

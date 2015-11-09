@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst test unpack
 DEPEND=virtual/blas virtual/lapack tk? ( dev-lang/tk ) dev-lang/perl sys-devel/flex sys-apps/sed virtual/pkgconfig doc? ( app-doc/doxygen media-gfx/graphviz )
 DESCRIPTION=The Massively Parallel Quantum Chemistry Program
+EAPI=0
 HOMEPAGE=http://www.mpqc.org/
 IUSE=doc threads tk
 KEYWORDS=amd64 ppc ppc64 x86

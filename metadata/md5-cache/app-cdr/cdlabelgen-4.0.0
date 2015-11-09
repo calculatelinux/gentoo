@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=CD cover, tray card and envelope generator
+EAPI=0
 HOMEPAGE=http://www.aczoom.com/tools/cdinsert
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=aczoom

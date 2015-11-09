@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=app-arch/unzip
 DESCRIPTION=Speech synthesizer based on the concatenation of diphones. Includes sample voices
+EAPI=0
 HOMEPAGE=http://tcts.fpms.ac.be/synthesis/mbrola.html
 IUSE=linguas_de linguas_es linguas_fr linguas_it linguas_la linguas_pl linguas_ro linguas_sv
 KEYWORDS=alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd

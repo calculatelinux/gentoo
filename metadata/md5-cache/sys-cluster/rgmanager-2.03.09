@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND==sys-cluster/ccs-2.03.09* =sys-cluster/dlm-lib-2.03.09* =sys-cluster/cman-lib-2.03.09* dev-libs/libxml2 =sys-libs/slang-2*
 DESCRIPTION=Clustered resource group manager
+EAPI=0
 HOMEPAGE=https://sources.redhat.com/cluster/wiki/
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

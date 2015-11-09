@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=app-arch/unzip X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=Pothana 2000 and Vemana fonts for the Telugu script
+EAPI=0
 HOMEPAGE=http://www.kavya-nandanam.com/
 IUSE=doc X
 KEYWORDS=amd64 ppc ppc64 x86

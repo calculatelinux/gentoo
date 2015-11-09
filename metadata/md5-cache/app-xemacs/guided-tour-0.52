@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Phil Sung's Guided Tour of Emacs
+EAPI=0
 HOMEPAGE=http://xemacs.org/
 KEYWORDS=~amd64
 LICENSE=GPL-2

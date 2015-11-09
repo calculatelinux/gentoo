@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=sys-libs/db-4.5 >=app-i18n/libtabe-0.2.6 unicode? ( media-fonts/hkscs-ming media-fonts/arphicfonts ) dev-libs/libchewing x11-libs/libX11 nls? ( sys-devel/gettext ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Chinese X Input Method
+EAPI=0
 HOMEPAGE=http://cle.linux.org.tw/xcin/
 IUSE=debug nls unicode
 KEYWORDS=~amd64 ppc x86

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup
 DEPEND=app-arch/unzip >=dev-java/java-config-2.2.0
 DESCRIPTION=Myster is a decentralized file sharing network
+EAPI=0
 HOMEPAGE=http://www.mysternetworks.com/
 IUSE=elibc_FreeBSD
 KEYWORDS=~ppc x86

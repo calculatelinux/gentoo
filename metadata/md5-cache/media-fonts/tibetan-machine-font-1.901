@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=app-arch/unzip X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=Fonts for the Tibetan and Himalayan languages
+EAPI=0
 HOMEPAGE=http://www.thdl.org/
 IUSE=X
 KEYWORDS=amd64 x86

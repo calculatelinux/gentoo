@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst prerm setup unpack
 DEPEND=>=app-admin/webapp-config-1.50.15
 DESCRIPTION=Simple photo-gallery for websites
+EAPI=0
 HOMEPAGE=http://www.splitbrain.org/Programming/PHP/mypictures/index.php
 IUSE=vhosts
 KEYWORDS=~x86 ~ppc

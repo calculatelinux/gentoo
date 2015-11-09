@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=MULE: find single ISO 8859 character set to encode a buffer
+EAPI=0
 HOMEPAGE=http://xemacs.org/
 KEYWORDS=alpha amd64 ppc ppc64 sparc x86
 LICENSE=GPL-2

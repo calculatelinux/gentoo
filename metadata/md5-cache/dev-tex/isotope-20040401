@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm unpack
 DEPEND=app-arch/unzip virtual/latex-base >=sys-apps/texinfo-4.2-r5
 DESCRIPTION=Typeset isotopes correctly in LaTeX documents
+EAPI=0
 HOMEPAGE=http://www.ctan.org/tex-archive/help/Catalogue/entries/isotope.html
 KEYWORDS=amd64 x86
 LICENSE=LPPL-1.2

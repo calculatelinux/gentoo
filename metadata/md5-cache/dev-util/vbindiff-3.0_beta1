@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=sys-libs/ncurses
 DESCRIPTION=Visual binary diff utility
+EAPI=0
 HOMEPAGE=http://www.cjmweb.net/vbindiff/
 KEYWORDS=amd64 x86 ~x86-fbsd
 LICENSE=GPL-2

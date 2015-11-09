@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=app-shells/scsh-0.6.6
 DESCRIPTION=Installation tool for the Scheme Untergrund Library
+EAPI=0
 HOMEPAGE=http://lamp.epfl.ch/~schinz/scsh_packages/
 IUSE=scsh
 KEYWORDS=~x86

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install setup unpack
 DEPEND=sys-kernel/linux-headers doc? ( virtual/latex-base app-text/dvipdfm ) dev-libs/libaio
 DESCRIPTION=btrace can show detailed info about what is happening on a block device io queue
+EAPI=0
 HOMEPAGE=https://www.kernel.org/pub/linux/kernel/people/axboe/blktrace/
 IUSE=doc
 KEYWORDS=~amd64 ~ppc ~x86

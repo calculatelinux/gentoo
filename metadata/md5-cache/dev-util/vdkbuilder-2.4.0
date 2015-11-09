@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=dev-libs/vdk-2.4.0
 DESCRIPTION=The Visual Development Kit used for VDK Builder
+EAPI=0
 HOMEPAGE=http://vdkbuilder.sf.net
 IUSE=nls debug
 KEYWORDS=ppc x86

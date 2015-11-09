@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=dev-libs/bglibs-1.019-r1
 DESCRIPTION=A ucspi implementation for unix sockets
+EAPI=0
 HOMEPAGE=http://untroubled.org/ucspi-unix/
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=GPL-2

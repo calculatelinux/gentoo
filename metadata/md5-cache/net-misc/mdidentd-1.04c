@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install setup unpack
 DEPEND=ssl? ( dev-libs/openssl )
 DESCRIPTION=This is an identd with provides registering of idents
+EAPI=0
 HOMEPAGE=http://druglord.freelsd.org/ezbounce/
 IUSE=ssl
 KEYWORDS=~amd64 ~ppc ~x86

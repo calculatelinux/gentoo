@@ -1,5 +1,6 @@
 DEFINED_PHASES=install nofetch postinst
 DESCRIPTION=Aladdin Software's StuffIt and StuffIt Expander
+EAPI=0
 HOMEPAGE=http://www.stuffit.com/
 KEYWORDS=-* x86 amd64
 LICENSE=Stuffit

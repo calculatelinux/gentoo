@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=WWW interface to a CVS tree
+EAPI=0
 HOMEPAGE=http://www.freebsd.org/projects/cvsweb.html
 KEYWORDS=x86 sparc ~ppc
 LICENSE=BSD

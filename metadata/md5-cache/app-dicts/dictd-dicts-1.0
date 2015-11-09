@@ -1,5 +1,6 @@
 DEFINED_PHASES=-
 DESCRIPTION=A package to simplify installation of all dictd dictionaries
+EAPI=0
 HOMEPAGE=http://www.dict.org/
 KEYWORDS=x86 ppc sparc amd64 ppc64
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup
 DEPEND=virtual/mysql =www-servers/apache-2.2*
 DESCRIPTION=An Apache2 backend authentication module that uses cookies and MySQL
+EAPI=0
 HOMEPAGE=http://home.digithi.de/digithi/dev/mod_auth_cookie_mysql/
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2

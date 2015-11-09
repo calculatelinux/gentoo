@@ -1,6 +1,7 @@
 DEFINED_PHASES=install setup
 DEPEND==app-admin/gkrellm-2* virtual/pkgconfig
 DESCRIPTION=Configurable Tray Icons for GKrellM
+EAPI=0
 HOMEPAGE=http://tripie.sweb.cz/gkrellm/trayicons/
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=GPL-2

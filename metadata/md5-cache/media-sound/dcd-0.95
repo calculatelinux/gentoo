@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=A simple command-line based CD Player
+EAPI=0
 HOMEPAGE=http://www.technopagan.org/dcd
 KEYWORDS=alpha amd64 ~ppc ppc64 sparc x86
 LICENSE=GPL-2 LGPL-2

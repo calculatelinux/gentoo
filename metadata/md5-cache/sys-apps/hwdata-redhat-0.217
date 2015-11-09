@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=virtual/modutils !sys-apps/hwdata-gentoo test? ( sys-apps/pciutils ) >=app-arch/rpm2targz-9.0.0.3g
 DESCRIPTION=Hardware identification and configuration data
+EAPI=0
 HOMEPAGE=https://fedora.redhat.com/projects/config-tools/
 IUSE=test
 KEYWORDS=~ppc ~ppc64 ~x86 ~amd64

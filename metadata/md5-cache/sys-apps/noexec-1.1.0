@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=>=sys-libs/glibc-2.3.2-r9
 DESCRIPTION=a package for preventing processes from using exec system calls
+EAPI=0
 HOMEPAGE=http://noexec.sourceforge.net/
 KEYWORDS=~amd64 ppc x86
 LICENSE=GPL-2

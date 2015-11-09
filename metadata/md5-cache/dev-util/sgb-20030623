@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install test unpack
 DEPEND=|| ( >=dev-util/cweb-3.00 virtual/tex-base )
 DESCRIPTION=Stanford GraphBase
+EAPI=0
 HOMEPAGE=ftp://labrea.stanford.edu/pub/sgb/
 KEYWORDS=~amd64 ~ppc x86
 LICENSE=BSD

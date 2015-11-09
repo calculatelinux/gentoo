@@ -1,5 +1,6 @@
 DEFINED_PHASES=install nofetch postinst
 DESCRIPTION=A transcoder that provides a source for shoutcast-server-bin to stream from
+EAPI=0
 HOMEPAGE=http://www.shoutcast.com/
 KEYWORDS=-* amd64 x86
 LICENSE=shoutcast

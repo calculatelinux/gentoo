@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=An ANSI C implementation of dynamic arrays to provide a crude approximation to the C++ vector class
+EAPI=0
 HOMEPAGE=http://cvector.sourceforge.net/
 KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux
 LICENSE=LGPL-2.1

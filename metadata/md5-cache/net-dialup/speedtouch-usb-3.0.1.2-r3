@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst setup
 DEPEND=app-arch/unzip
 DESCRIPTION=Firmware, kernel driver and configuration instructions for Alcatel SpeedTouch USB modems
+EAPI=0
 HOMEPAGE=http://www.speedtouch.com/
 KEYWORDS=~amd64 x86
 LICENSE=SpeedTouch-USB-Firmware

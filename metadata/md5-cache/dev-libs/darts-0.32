@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=zlib? ( sys-libs/zlib )
 DESCRIPTION=A C++ template library that implements Double-Array
+EAPI=0
 HOMEPAGE=http://chasen.org/~taku/software/darts/
 IUSE=zlib
 KEYWORDS=amd64 ~ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris

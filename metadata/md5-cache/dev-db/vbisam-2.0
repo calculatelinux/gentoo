@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=replacement for IBM's C-ISAM
+EAPI=0
 HOMEPAGE=http://sourceforge.net/projects/vbisam
 KEYWORDS=ppc x86
 LICENSE=GPL-2 LGPL-2

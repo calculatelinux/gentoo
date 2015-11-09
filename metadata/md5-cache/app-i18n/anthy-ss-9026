@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm unpack
 DEPEND=!app-i18n/anthy emacs? ( virtual/emacs )
 DESCRIPTION=Anthy -- free and secure Japanese input system
+EAPI=0
 HOMEPAGE=http://anthy.sourceforge.jp/
 IUSE=emacs
 KEYWORDS=~amd64 ~ia64 ~ppc ~x86

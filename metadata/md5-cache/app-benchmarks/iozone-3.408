@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install test
 DESCRIPTION=Filesystem benchmarking program
+EAPI=0
 HOMEPAGE=http://www.iozone.org/
 KEYWORDS=~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=freedist

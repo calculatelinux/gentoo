@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup
 DEPEND=>=virtual/jdk-1.4 >=virtual/jre-1.4 =dev-java/gnu-jaf-1* =dev-java/gnu-classpath-inetlib-1.0* !<=dev-java/mx4j-3.0.1 !<=dev-java/mx4j-3.0.1-r2 >=dev-java/java-config-2.2.0
 DESCRIPTION=GNU implementation of the Javamail API
+EAPI=0
 HOMEPAGE=https://www.gnu.org/software/classpathx/javamail/
 IUSE=doc elibc_FreeBSD
 KEYWORDS=amd64 x86

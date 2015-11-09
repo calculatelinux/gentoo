@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst unpack
 DEPEND=app-eselect/eselect-timidity
 DESCRIPTION=Eric Welsh's GUS patches for TiMidity
+EAPI=0
 HOMEPAGE=http://www.stardate.bc.ca/eawpatches/html/default.htm
 KEYWORDS=amd64 arm hppa ppc ppc64 sparc x86 ~x86-fbsd
 LICENSE=free-noncomm

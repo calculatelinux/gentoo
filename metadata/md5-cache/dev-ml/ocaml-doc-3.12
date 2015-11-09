@@ -1,5 +1,6 @@
 DEFINED_PHASES=install postinst
 DESCRIPTION=Ocaml reference manual (html)
+EAPI=0
 HOMEPAGE=http://caml.inria.fr/pub/docs/manual-ocaml/
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2

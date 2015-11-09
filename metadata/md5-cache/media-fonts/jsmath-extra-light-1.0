@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=Extra raster fonts for jsmath, light version
+EAPI=0
 HOMEPAGE=http://www.math.union.edu/~dpvc/jsMath/download/extra-fonts/
 IUSE=X
 KEYWORDS=~amd64 ~ppc ~x86

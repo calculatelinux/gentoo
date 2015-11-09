@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=>=dev-lang/mono-1.2.4 >=sys-apps/dbus-1 virtual/pkgconfig
 DESCRIPTION=Managed D-Bus Implementation for .NET
+EAPI=0
 HOMEPAGE=http://www.ndesk.org/DBusSharp
 KEYWORDS=amd64 ppc x86
 LICENSE=MIT

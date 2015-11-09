@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=virtual/perl-Time-HiRes
 DESCRIPTION=X10 MouseRemote
+EAPI=0
 HOMEPAGE=http://www4.pair.com/gribnif/ha/
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2

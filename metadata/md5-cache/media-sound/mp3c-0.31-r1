@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=console based mp3 ripper, with cddb support
+EAPI=0
 HOMEPAGE=http://wspse.de/WSPse/Linux-MP3c.php3
 IUSE=mp3 vorbis linguas_de linguas_es linguas_it linguas_pl linguas_pt
 KEYWORDS=amd64 ppc sparc x86

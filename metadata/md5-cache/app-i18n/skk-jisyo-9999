@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=cdb? ( dev-db/cdb ) sys-apps/gawk dev-vcs/cvs
 DESCRIPTION=Jisyo (dictionary) files for the SKK Japanese-input software
+EAPI=0
 HOMEPAGE=http://openlab.ring.gr.jp/skk/dic.html
 IUSE=cdb
 KEYWORDS=~amd64 ~ppc ~x86

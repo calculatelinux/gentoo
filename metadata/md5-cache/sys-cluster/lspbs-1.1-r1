@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=sys-cluster/torque
 DESCRIPTION=Displays clear, concise and up-to-date PBS node and CPU usage information
+EAPI=0
 HOMEPAGE=http://homepages.inf.ed.ac.uk/s0239160/misc/lspbs/lspbs.html
 KEYWORDS=~x86 ~amd64 ~ppc
 LICENSE=GPL-2

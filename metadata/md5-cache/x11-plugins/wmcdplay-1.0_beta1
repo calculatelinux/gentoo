@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXpm x11-proto/xproto x11-proto/xextproto x11-misc/imake
 DESCRIPTION=CD player applet for WindowMaker
+EAPI=0
 HOMEPAGE=https://www.gentoo.org/
 KEYWORDS=x86 ~ppc
 LICENSE=GPL-2

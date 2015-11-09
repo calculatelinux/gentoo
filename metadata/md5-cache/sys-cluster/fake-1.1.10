@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Fake has been designed to switch in backup servers on a LAN
+EAPI=0
 HOMEPAGE=http://www.vergenet.net/linux/fake/
 KEYWORDS=~amd64 x86
 LICENSE=GPL-2

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Watches a multilog file for irregularities
+EAPI=0
 HOMEPAGE=http://www.eyrie.org/~eagle/software/multilog-watch/
 KEYWORDS=~amd64 ~x86
 LICENSE=Artistic GPL-2

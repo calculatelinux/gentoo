@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=>=sys-libs/ncurses-5.2
 DESCRIPTION=Console Mixer Program for OSS
+EAPI=0
 HOMEPAGE=http://www.fh-worms.de/~inf222
 IUSE=examples
 KEYWORDS=amd64 ~ppc sparc x86

@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=VOIP softphone supports both SIP and H.323 standards
+EAPI=0
 HOMEPAGE=http://www.sjlabs.com/sjp.html
 KEYWORDS=~x86
 LICENSE=SJ-Labs IJG libpng ZLIB RSA W3C BSD

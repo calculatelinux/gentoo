@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=A small proportional bitmap font for use in webpages
+EAPI=0
 HOMEPAGE=http://www.proggyfonts.com/
 IUSE=X
 KEYWORDS=alpha amd64 ia64 sparc x86

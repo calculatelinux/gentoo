@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm unpack
 DEPEND=dev-texlive/texlive-latexextra virtual/latex-base >=sys-apps/texinfo-4.2-r5
 DESCRIPTION=Extensive LaTeX class for writing letters
+EAPI=0
 HOMEPAGE=http://www.ctan.org/tex-archive/help/Catalogue/entries/newlfm.html
 KEYWORDS=~amd64 ~x86
 LICENSE=LPPL-1.2

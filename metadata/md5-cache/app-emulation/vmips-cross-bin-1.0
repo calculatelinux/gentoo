@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=vmips cross-development tools
+EAPI=0
 HOMEPAGE=http://vmips.sourceforge.net/
 KEYWORDS=-* ppc
 LICENSE=GPL-2

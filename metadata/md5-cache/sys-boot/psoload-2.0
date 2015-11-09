@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=app-arch/unzip
 DESCRIPTION=Load home brewed code onto the GameCube with Phantasy Star Online
+EAPI=0
 HOMEPAGE=http://www.gc-linux.org/
 KEYWORDS=-* x86
 LICENSE=freedist

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=MIME quoted-printable data encoding and decoding utility
+EAPI=0
 HOMEPAGE=http://www.fourmilab.ch/webtools/qprint/
 KEYWORDS=amd64 ppc x86 ~ppc-macos
 LICENSE=public-domain

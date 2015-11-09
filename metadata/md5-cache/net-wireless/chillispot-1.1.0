@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=>=sys-apps/sed-4
 DESCRIPTION=open source captive portal or wireless LAN access point controller
+EAPI=0
 HOMEPAGE=http://www.chillispot.info/
 KEYWORDS=~alpha amd64 arm ~hppa ~ia64 ~mips ~ppc s390 sh ~sparc x86
 LICENSE=GPL-2

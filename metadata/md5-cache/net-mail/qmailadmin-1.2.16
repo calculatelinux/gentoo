@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst prerm setup unpack
 DEPEND=virtual/qmail >=net-mail/vpopmail-5.4.33 net-mail/autorespond maildrop? ( >=mail-filter/maildrop-2.0.1 ) >=sys-apps/sed-4 >=app-admin/webapp-config-1.50.15 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=A web interface for managing a qmail system with virtual domains
+EAPI=0
 HOMEPAGE=http://www.inter7.com/qmailadmin.html
 IUSE=maildrop vhosts
 KEYWORDS=~amd64 ~arm ~hppa ~ppc ~s390 ~sh ~sparc ~x86

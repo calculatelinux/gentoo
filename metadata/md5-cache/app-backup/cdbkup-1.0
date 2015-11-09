@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=virtual/cdrtools virtual/eject !app-misc/cdcat >=sys-apps/sed-4
 DESCRIPTION=performs full/incremental backups of local/remote filesystems onto CD-R(W)s
+EAPI=0
 HOMEPAGE=http://cdbkup.sourceforge.net/
 KEYWORDS=x86 ppc
 LICENSE=GPL-2

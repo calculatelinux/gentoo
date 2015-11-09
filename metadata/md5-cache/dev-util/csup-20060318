@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=dev-libs/openssl sys-libs/zlib >=sys-devel/bison-2.1
 DESCRIPTION=A rewrite of CVSup
+EAPI=0
 HOMEPAGE=http://www.mu.org/~mux/csup.html
 KEYWORDS=~amd64 ~ppc ~x86 ~x86-fbsd
 LICENSE=BSD

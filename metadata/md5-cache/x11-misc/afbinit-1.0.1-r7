@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst unpack
 DESCRIPTION=loads the microcode for Elite3D framebuffers to use X
+EAPI=0
 HOMEPAGE=https://wiki.gentoo.org/wiki/No_homepage
 KEYWORDS=-* sparc
 LICENSE=GPL-1

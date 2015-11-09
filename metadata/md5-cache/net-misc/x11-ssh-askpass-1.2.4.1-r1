@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=virtual/ssh x11-libs/libXt x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-misc/imake app-text/rman
 DESCRIPTION=X11-based passphrase dialog for use with OpenSSH
+EAPI=0
 HOMEPAGE=http://www.liquidmeme.net/software/x11-ssh-askpass/
 KEYWORDS=alpha amd64 ia64 ppc sparc x86
 LICENSE=HPND

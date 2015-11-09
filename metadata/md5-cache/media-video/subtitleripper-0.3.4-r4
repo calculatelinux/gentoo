@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=>=media-libs/netpbm-10.41.0 media-libs/libpng sys-libs/zlib >=app-text/gocr-0.39
 DESCRIPTION=DVD Subtitle Ripper for Linux
+EAPI=0
 HOMEPAGE=http://subtitleripper.sourceforge.net/
 KEYWORDS=amd64 ppc ppc64 x86
 LICENSE=GPL-2

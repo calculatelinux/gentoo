@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=app-arch/unzip
 DESCRIPTION=compressor/uncompressor for demo recordings from id's Quake
+EAPI=0
 HOMEPAGE=http://speeddemosarchive.com/dzip/
 KEYWORDS=~ppc x86
 LICENSE=ZLIB

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=A command line tool to clean and edit mp3 files
+EAPI=0
 HOMEPAGE=http://sourceforge.net/projects/mp3asm/
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=GPL-2

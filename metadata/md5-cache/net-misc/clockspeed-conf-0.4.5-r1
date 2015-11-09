@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=net-misc/clockspeed virtual/daemontools
 DESCRIPTION=scripts to setup a clockspeed client and/or a taiclockd server
+EAPI=0
 HOMEPAGE=http://foo42.de/devel/sysutils/clockspeed-conf/
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD

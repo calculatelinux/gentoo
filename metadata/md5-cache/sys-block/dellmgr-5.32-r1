@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install setup unpack
 DEPEND=>=app-arch/rpm2targz-9.0.0.3g
 DESCRIPTION=Dell PERC 2/3/4 RAID controller management tool
+EAPI=0
 HOMEPAGE=http://linux.dell.com/
 KEYWORDS=~amd64 ~x86
 LICENSE=Dell

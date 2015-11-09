@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-libs/libX11 x11-libs/libXext x11-proto/xproto x11-proto/xextproto x11-misc/imake app-text/rman
 DESCRIPTION=WMnet is a dock.app network monitor
+EAPI=0
 HOMEPAGE=http://www.digitalkaos.net/linux/wmnet/
 KEYWORDS=x86 sparc alpha amd64 ppc
 LICENSE=GPL-2

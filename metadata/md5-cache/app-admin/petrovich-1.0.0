@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=virtual/perl-Digest-MD5
 DESCRIPTION=Filesystem Integrity Checker
+EAPI=0
 HOMEPAGE=http://sourceforge.net/projects/petrovich
 KEYWORDS=x86 ppc sparc
 LICENSE=GPL-2

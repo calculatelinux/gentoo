@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm setup
 DEPEND=x11-apps/bdftopcf X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=Japanese bitmap fonts for X
+EAPI=0
 HOMEPAGE=http://openlab.jp/efont/shinonome/
 IUSE=X
 KEYWORDS=alpha amd64 arm ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd

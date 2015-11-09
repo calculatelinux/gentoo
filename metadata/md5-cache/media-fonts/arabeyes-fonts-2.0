@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=Arabeyes Arabic TrueType fonts
+EAPI=0
 HOMEPAGE=http://www.arabeyes.org/project.php?proj=Khotot
 IUSE=X
 KEYWORDS=amd64 arm ia64 ppc s390 sh sparc x86 ~x86-fbsd

@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst unpack
 DEPEND=net-dialup/ppp
 DESCRIPTION=Driver for various ADSL modems. Also known as EciAdsl
+EAPI=0
 HOMEPAGE=http://eciadsl.flashtux.org
 IUSE=tk
 KEYWORDS=-amd64 x86

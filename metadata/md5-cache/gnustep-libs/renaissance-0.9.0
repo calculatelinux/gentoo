@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DEPEND=>=gnustep-base/gnustep-make-2.0 virtual/gnustep-back
 DESCRIPTION=GNUstep Renaissance allows to describe user interfaces XML files
+EAPI=0
 HOMEPAGE=http://www.gnustep.it/Renaissance/index.html
 IUSE=debug doc
 KEYWORDS=amd64 ppc x86

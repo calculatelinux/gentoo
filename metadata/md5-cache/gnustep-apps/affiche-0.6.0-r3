@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DEPEND=>=gnustep-base/gnustep-make-2.0 virtual/gnustep-back
 DESCRIPTION=Affiche allows people to 'stick' notes
+EAPI=0
 HOMEPAGE=http://www.collaboration-world.com/affiche
 IUSE=debug doc
 KEYWORDS=amd64 ppc x86

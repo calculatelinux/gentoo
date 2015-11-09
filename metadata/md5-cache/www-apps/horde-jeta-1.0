@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst prerm setup unpack
 DEPEND=>=app-admin/webapp-config-1.50.15
 DESCRIPTION=Java SSH interface for Horde
+EAPI=0
 HOMEPAGE=http://www.horde.org/jeta
 IUSE=vhosts vhosts
 KEYWORDS=~alpha ~amd64 ~hppa ~ppc ~sparc ~x86

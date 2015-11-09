@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm unpack
 DEPEND=!dev-texlive/texlive-latexrecommended cjk? ( dev-tex/cjk-latex ) virtual/latex-base >=sys-apps/texinfo-4.2-r5
 DESCRIPTION=Unicode support for LaTeX
+EAPI=0
 HOMEPAGE=http://www.unruh.de/DniQ/latex/unicode/
 IUSE=cjk
 KEYWORDS=amd64 ppc ppc64 sparc x86

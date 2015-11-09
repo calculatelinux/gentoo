@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=A easy-to-use memory debugging library
+EAPI=0
 HOMEPAGE=http://www.inf.ethz.ch/personal/biere/projects/ccmalloc/
 IUSE=debug
 KEYWORDS=~amd64 ~ppc ~x86

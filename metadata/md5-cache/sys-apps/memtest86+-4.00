@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm preinst prerm unpack
 DEPEND=floppy? ( >=sys-boot/grub-0.95 sys-fs/mtools )
 DESCRIPTION=Memory tester based on memtest86
+EAPI=0
 HOMEPAGE=http://www.memtest.org/
 IUSE=floppy serial
 KEYWORDS=-* amd64 x86

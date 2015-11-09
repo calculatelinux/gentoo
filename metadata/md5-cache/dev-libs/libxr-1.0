@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=>=dev-libs/glib-2.12 >=dev-libs/libxml2-2.6.20 dev-libs/openssl virtual/pkgconfig dev-util/re2c
 DESCRIPTION=Cross-platform XML-RPC client/server library written in C
+EAPI=0
 HOMEPAGE=http://oss.zonio.net/libxr.htm
 KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
 LICENSE=LGPL-2

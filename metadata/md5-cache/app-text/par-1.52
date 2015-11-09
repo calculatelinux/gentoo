@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=!dev-util/par !app-arch/par
 DESCRIPTION=a paragraph reformatter, vaguely similar to fmt, but better
+EAPI=0
 HOMEPAGE=http://www.nicemice.net/par/
 KEYWORDS=~amd64 ~mips ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=freedist

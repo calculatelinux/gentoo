@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=app-arch/bzip2 app-arch/tar
 DESCRIPTION=sequel to Quake 2, an id 3D first-person shooter
+EAPI=0
 HOMEPAGE=http://www.quake4game.com/
 KEYWORDS=-* amd64 x86
 LICENSE=QUAKE4

@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst unpack
 DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1
 DESCRIPTION=Eselect module for management of multiple Python versions
+EAPI=0
 HOMEPAGE=https://www.gentoo.org/proj/en/Python/
 LICENSE=GPL-2
 RDEPEND=>=app-admin/eselect-1.2.3

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup unpack
 DEPEND=>=net-p2p/freenet-0.7 >=virtual/jdk-1.4 >=dev-java/java-config-2.2.0
 DESCRIPTION=NativeThread for priorities on linux for freenet
+EAPI=0
 HOMEPAGE=http://www.freenetproject.org/
 IUSE=elibc_FreeBSD
 KEYWORDS=~amd64 ~x86

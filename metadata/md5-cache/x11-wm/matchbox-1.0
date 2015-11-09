@@ -1,5 +1,6 @@
 DEFINED_PHASES=-
 DESCRIPTION=Light weight WM designed for use on PDA computers
+EAPI=0
 HOMEPAGE=http://matchbox-project.org/
 IUSE=minimal
 KEYWORDS=amd64 ~arm ~hppa ppc x86

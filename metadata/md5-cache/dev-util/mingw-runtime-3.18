@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install setup unpack
 DESCRIPTION=Free Win32 runtime and import library definitions
+EAPI=0
 HOMEPAGE=http://www.mingw.org/
 IUSE=crosscompile_opts_headers-only
 KEYWORDS=amd64 ~ppc ~sparc x86

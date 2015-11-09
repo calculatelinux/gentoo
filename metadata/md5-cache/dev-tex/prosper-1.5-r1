@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm unpack
 DEPEND=virtual/latex-base >=sys-apps/texinfo-4.2-r5
 DESCRIPTION=Prosper is a LaTeX class for writing transparencies
+EAPI=0
 HOMEPAGE=http://prosper.sf.net/
 KEYWORDS=amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=LPPL-1.2

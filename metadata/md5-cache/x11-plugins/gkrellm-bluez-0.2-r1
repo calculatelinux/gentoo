@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install setup unpack
 DEPEND==app-admin/gkrellm-2* virtual/pkgconfig
 DESCRIPTION=GKrellm plugin for monitoring bluetooth (Linux BlueZ) adapters
+EAPI=0
 HOMEPAGE=http://gkrellm-bluez.sourceforge.net
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

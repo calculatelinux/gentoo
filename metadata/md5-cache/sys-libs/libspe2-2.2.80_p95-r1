@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst unpack
 DESCRIPTION=A wrapper library to adapt the JSRE SPU usage model to SPUFS
+EAPI=0
 HOMEPAGE=http://sourceforge.net/projects/libspe
 IUSE=debug
 KEYWORDS=ppc ppc64

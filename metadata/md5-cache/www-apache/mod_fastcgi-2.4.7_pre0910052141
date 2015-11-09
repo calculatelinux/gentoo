@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup
 DEPEND==www-servers/apache-2.2*
 DESCRIPTION=FastCGI is a open extension to CGI without the limitations of server specific APIs
+EAPI=0
 HOMEPAGE=http://fastcgi.com/
 KEYWORDS=amd64 x86
 LICENSE=mod_fastcgi

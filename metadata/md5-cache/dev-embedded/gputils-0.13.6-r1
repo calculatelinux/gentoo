@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=Collection of tools including assembler, linker and librarian for PIC microcontrollers
+EAPI=0
 HOMEPAGE=http://gputils.sourceforge.net/
 KEYWORDS=amd64 ppc ppc64 x86
 LICENSE=GPL-2

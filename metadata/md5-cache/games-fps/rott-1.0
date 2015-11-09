@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=media-libs/libsdl media-libs/sdl-mixer app-arch/unzip
 DESCRIPTION=Rise of the Triad for Linux!
+EAPI=0
 HOMEPAGE=http://www.icculus.org/rott/
 IUSE=demo
 KEYWORDS=~ppc x86

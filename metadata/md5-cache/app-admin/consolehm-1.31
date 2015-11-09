@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Console based hardware monitor for FreeBSD
+EAPI=0
 HOMEPAGE=ftp://ftp.freebsd.org/pub/FreeBSD/ports/local-distfiles/fenner/
 KEYWORDS=~x86-fbsd
 LICENSE=BSD-2

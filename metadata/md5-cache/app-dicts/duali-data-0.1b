@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=app-text/duali
 DESCRIPTION=Dictionary data for the Arab dictionary project duali
+EAPI=0
 HOMEPAGE=http://www.arabeyes.org/project.php?proj=Duali
 KEYWORDS=x86 amd64 ia64 ppc ~sparc alpha ~hppa ~mips
 LICENSE=GPL-2

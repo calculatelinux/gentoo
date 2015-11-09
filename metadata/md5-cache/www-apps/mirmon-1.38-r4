@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst prerm setup unpack
 DEPEND=>=dev-lang/perl-5.8.5-r2 >=app-admin/webapp-config-1.50.15
 DESCRIPTION=Simple webapp to monitor the status of mirrors
+EAPI=0
 HOMEPAGE=http://people.cs.uu.nl/henkp/mirmon/
 IUSE=vhosts
 KEYWORDS=~amd64 ~ppc ~x86

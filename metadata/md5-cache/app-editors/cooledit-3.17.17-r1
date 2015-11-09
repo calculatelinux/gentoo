@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-libs/libX11 x11-libs/libXdmcp x11-libs/libXau x11-libs/libXpm !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Cooledit is a full featured multiple window text editor
+EAPI=0
 HOMEPAGE=http://freshmeat.net/projects/cooledit/
 IUSE=nls
 KEYWORDS=~amd64 ppc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos

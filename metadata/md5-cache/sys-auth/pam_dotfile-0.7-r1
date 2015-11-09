@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=virtual/pam doc? ( www-client/lynx ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=pam module to allow password-storing in $HOME/dotfiles
+EAPI=0
 HOMEPAGE=http://0pointer.de/lennart/projects/pam_dotfile/
 IUSE=doc
 KEYWORDS=amd64 ppc x86

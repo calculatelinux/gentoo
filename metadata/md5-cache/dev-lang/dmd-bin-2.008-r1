@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=sys-apps/findutils app-arch/unzip
 DESCRIPTION=Digital Mars D Compiler
+EAPI=0
 HOMEPAGE=http://www.digitalmars.com/d/
 KEYWORDS=~amd64 ~x86
 LICENSE=DMD

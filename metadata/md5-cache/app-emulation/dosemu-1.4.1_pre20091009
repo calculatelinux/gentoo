@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=X? ( x11-libs/libXxf86vm x11-libs/libXau x11-libs/libXdmcp x11-apps/xset x11-apps/xlsfonts x11-apps/bdftopcf x11-apps/mkfontdir ) svga? ( media-libs/svgalib ) gpm? ( sys-libs/gpm ) alsa? ( media-libs/alsa-lib ) sndfile? ( media-libs/libsndfile ) >=sys-libs/slang-1.4 X? ( x11-proto/xf86dgaproto ) >=sys-devel/autoconf-2.57
 DESCRIPTION=DOS Emulator
+EAPI=0
 HOMEPAGE=http://www.dosemu.org/
 IUSE=X svga gpm debug alsa sndfile
 KEYWORDS=-* amd64 x86

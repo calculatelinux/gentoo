@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Xorgautconfig generates xorg.conf files for PPC based computers
+EAPI=0
 HOMEPAGE=https://dev.gentoo.org/~josejx/Xorgautoconfig.html
 KEYWORDS=ppc ppc64
 LICENSE=GPL-2

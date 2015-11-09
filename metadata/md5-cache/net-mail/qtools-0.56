@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Several utilities for use with qmail, typically as part of .qmail command processing
+EAPI=0
 HOMEPAGE=http://www.superscript.com/qtools/intro.html
 IUSE=static
 KEYWORDS=alpha ~amd64 ~hppa ~mips ppc ~sparc x86

@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=Library for creating diff files
+EAPI=0
 HOMEPAGE=http://www.xmailserver.org/xdiff-lib.html
 KEYWORDS=amd64 x86
 LICENSE=LGPL-2.1

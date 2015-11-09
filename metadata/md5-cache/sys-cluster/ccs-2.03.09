@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND==sys-cluster/cman-lib-2.03.09* dev-libs/libxml2 sys-libs/zlib
 DESCRIPTION=cluster configuration system to manage the cluster config file
+EAPI=0
 HOMEPAGE=https://sources.redhat.com/cluster/wiki/
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

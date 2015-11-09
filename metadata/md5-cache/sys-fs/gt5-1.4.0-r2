@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=a diff-capable 'du-browser'
+EAPI=0
 HOMEPAGE=http://gt5.sourceforge.net/
 KEYWORDS=amd64 ~sparc x86
 LICENSE=GPL-2

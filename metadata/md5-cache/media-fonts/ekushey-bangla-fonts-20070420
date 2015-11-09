@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup unpack
 DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=A collection of Free fonts for the Bangla (Bengali) script
+EAPI=0
 HOMEPAGE=http://ekushey.org/index.php/page/otf_bangla_fonts
 IUSE=X
 KEYWORDS=amd64 x86

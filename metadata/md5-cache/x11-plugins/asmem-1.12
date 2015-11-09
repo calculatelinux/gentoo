@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=x11-libs/libX11 x11-libs/libICE x11-libs/libSM x11-libs/libXpm x11-libs/libXext jpeg? ( virtual/jpeg ) x11-proto/xproto
 DESCRIPTION=a swallowable applet monitors the utilization level of memory, cache and swap space
+EAPI=0
 HOMEPAGE=http://www.tigr.net
 IUSE=jpeg
 KEYWORDS=amd64 ppc ppc64 sparc x86

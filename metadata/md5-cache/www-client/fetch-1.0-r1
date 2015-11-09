@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=>=dev-libs/http-fetcher-1.0.1
 DESCRIPTION=Fetch is a simple, fast, and flexible HTTP download tool built on the HTTP Fetcher library
+EAPI=0
 HOMEPAGE=http://sourceforge.net/projects/fetch/
 KEYWORDS=amd64 x86
 LICENSE=LGPL-2.1

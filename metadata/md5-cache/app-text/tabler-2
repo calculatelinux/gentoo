@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=A utility to create text art tables from delimited input
+EAPI=0
 HOMEPAGE=http://sourceforge.net/projects/tabler/
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2

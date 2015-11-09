@@ -1,5 +1,6 @@
 DEFINED_PHASES=install postinst unpack
 DESCRIPTION=Check the status of services running on local/remote machines
+EAPI=0
 HOMEPAGE=http://www.linvision.com/checkservice/
 KEYWORDS=~x86
 LICENSE=GPL-2

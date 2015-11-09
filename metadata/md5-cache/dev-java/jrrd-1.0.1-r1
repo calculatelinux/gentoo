@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup unpack
 DEPEND=>=virtual/jdk-1.4 net-analyzer/rrdtool !<sys-devel/gettext-0.18.1.1-r3 =sys-devel/automake-1.9* >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-java/java-config-2.2.0 source? ( app-arch/zip )
 DESCRIPTION=Java Interface to Tobias Oetiker's RRDtool
+EAPI=0
 HOMEPAGE=http://www.opennms.org/
 IUSE=elibc_FreeBSD doc source
 KEYWORDS=~amd64 ~x86

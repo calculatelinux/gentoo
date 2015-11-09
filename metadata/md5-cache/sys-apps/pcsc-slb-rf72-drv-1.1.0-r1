@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postrm unpack
 DEPEND=sys-apps/pcsc-lite dev-libs/openct virtual/pkgconfig
 DESCRIPTION=Schlumberger Reflex 72 Serial Smartcard Reader
+EAPI=0
 HOMEPAGE=http://www.linuxnet.com/sourcedrivers.html
 KEYWORDS=~amd64 ~x86
 LICENSE=all-rights-reserved BSD LGPL-2.1+

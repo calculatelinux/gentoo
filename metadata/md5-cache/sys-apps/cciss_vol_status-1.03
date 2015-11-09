@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=Shows status of logical drives attached to HP SmartArray controllers
+EAPI=0
 HOMEPAGE=http://cciss.sourceforge.net/#cciss_utils
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

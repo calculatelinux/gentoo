@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm preinst setup unpack
 DEPEND=sys-apps/sed sys-apps/ucspi-tcp virtual/qmail mysql? ( virtual/mysql ) >=sys-apps/sed-4 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=A collection of programs to manage virtual email domains and accounts on your Qmail mail servers
+EAPI=0
 HOMEPAGE=http://www.inter7.com/index.php?page=vpopmail
 IUSE=mysql ipalias clearpasswd
 KEYWORDS=amd64 arm hppa ~ia64 ppc s390 sh sparc x86

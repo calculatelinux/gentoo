@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=changes the id3 tag in an mp3 file
+EAPI=0
 HOMEPAGE=http://lly.org/~rcw/abcde/page
 KEYWORDS=amd64 ppc ppc64 sparc x86
 LICENSE=GPL-2

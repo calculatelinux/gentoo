@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup unpack
 DEPEND=>=virtual/jdk-1.4 >=virtual/jre-1.4 =dev-java/jaxen-1.1* >=dev-java/ant-core-1.6.2 >=dev-java/java-config-2.2.0 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2
 DESCRIPTION=An XML-Java binding tool
+EAPI=0
 HOMEPAGE=http://xmlbeans.apache.org/
 IUSE=elibc_FreeBSD doc source elibc_FreeBSD
 KEYWORDS=amd64 ~arm ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x86-solaris

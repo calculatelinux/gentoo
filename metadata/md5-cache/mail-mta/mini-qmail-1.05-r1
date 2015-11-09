@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=sys-apps/groff >=sys-apps/sed-4
 DESCRIPTION=a small null client that forwards mail via QMQP to a full qmail server
+EAPI=0
 HOMEPAGE=http://www.qmail.org/ http://cr.yp.to/qmail/mini.html
 KEYWORDS=amd64 arm hppa ~mips ppc x86
 LICENSE=public-domain

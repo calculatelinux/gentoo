@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=dev-perl/gtk2-perl dev-perl/File-Slurp dev-perl/Template-Toolkit media-gfx/imagemagick virtual/latex-base
 DESCRIPTION=A small LaTeX editor that produces images, with drag and drop support
+EAPI=0
 HOMEPAGE=http://rlehy.free.fr/
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2

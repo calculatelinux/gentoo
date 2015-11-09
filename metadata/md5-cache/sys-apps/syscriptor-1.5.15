@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=display misc information about your hardware
+EAPI=0
 HOMEPAGE=http://syscriptor.sourceforge.net/
 KEYWORDS=~alpha amd64 ppc x86
 LICENSE=GPL-2

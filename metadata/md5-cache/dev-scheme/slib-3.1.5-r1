@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile config install postinst test unpack
 DEPEND=app-arch/unzip
 DESCRIPTION=library providing functions for Scheme implementations
+EAPI=0
 HOMEPAGE=http://swiss.csail.mit.edu/~jaffer/SLIB
 KEYWORDS=alpha amd64 ia64 ppc sparc x86
 LICENSE=public-domain BSD

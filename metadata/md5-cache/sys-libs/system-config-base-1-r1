@@ -1,5 +1,6 @@
 DEFINED_PHASES=install postinst unpack
 DESCRIPTION=system-config-* layout package
+EAPI=0
 HOMEPAGE=https://www.gentoo.org/
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2

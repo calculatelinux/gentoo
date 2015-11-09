@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=Japanese TrueType fonts designed for screen and print
+EAPI=0
 HOMEPAGE=http://x-tt.sourceforge.jp/fs_fonts/
 IUSE=X
 KEYWORDS=alpha amd64 arm hppa ia64 ~ppc s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos

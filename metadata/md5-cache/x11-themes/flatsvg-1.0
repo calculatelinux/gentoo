@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=Flat SVG icon set
+EAPI=0
 HOMEPAGE=http://www.kde-look.org/content/show.php?content=17158
 KEYWORDS=amd64 sparc x86 ~x86-fbsd
 LICENSE=LGPL-2

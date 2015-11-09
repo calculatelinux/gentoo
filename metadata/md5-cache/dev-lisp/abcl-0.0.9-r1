@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup unpack
 DEPEND=>=virtual/jdk-1.4 dev-lang/python !cmucl? ( !clisp? ( dev-lisp/sbcl ) ) cmucl? ( dev-lisp/cmucl ) clisp? ( dev-lisp/clisp ) >=dev-java/java-config-2.2.0
 DESCRIPTION=ABCL is an implementation of ANSI Common Lisp that runs in a Java VM
+EAPI=0
 HOMEPAGE=http://armedbear.org/abcl.html
 IUSE=jad clisp cmucl elibc_FreeBSD
 KEYWORDS=~x86

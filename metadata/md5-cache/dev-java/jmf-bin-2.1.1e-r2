@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install nofetch preinst setup unpack
 DEPEND=>=app-arch/unzip-5.50-r1 >=dev-java/java-config-2.2.0
 DESCRIPTION=The Java Media Framework API (JMF)
+EAPI=0
 HOMEPAGE=http://www.oracle.com/technetwork/java/javase/tech/index-jsp-140239.html
 IUSE=elibc_FreeBSD
 KEYWORDS=amd64 ~ppc x86

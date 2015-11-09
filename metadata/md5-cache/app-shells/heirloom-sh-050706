@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=Heirloom Bourne Shell, derived from OpenSolaris code SVR4/SVID3
+EAPI=0
 HOMEPAGE=http://heirloom.sourceforge.net/sh.html
 KEYWORDS=~amd64 ~x86
 LICENSE=CDDL

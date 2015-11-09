@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=net-dialup/capi4k-utils !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=A daemon forwarding CAPI messages to capi20proxy clients
+EAPI=0
 HOMEPAGE=http://capi20proxy.sourceforge.net/
 KEYWORDS=~amd64 x86
 LICENSE=GPL-2

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Linux Kernel Crash Dumps (LKCD) Utilities
+EAPI=0
 HOMEPAGE=http://lkcd.sourceforge.net/
 KEYWORDS=~s390
 LICENSE=GPL-2

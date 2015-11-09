@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXpm x11-proto/xproto x11-proto/xextproto
 DESCRIPTION=dockapp showing weather at geosynchronous orbit
+EAPI=0
 HOMEPAGE=http://packages.debian.org/sid/wmspaceweather
 KEYWORDS=amd64 hppa ~mips ppc sparc x86
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=sys-libs/zlib app-crypt/mhash dev-libs/libmcrypt
 DESCRIPTION=Plausible deniable file cryptography
+EAPI=0
 HOMEPAGE=http://www.winstonsmith.info/julia/elettra/
 KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
 LICENSE=WTFPL-2

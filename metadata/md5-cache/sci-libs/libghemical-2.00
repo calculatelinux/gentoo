@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=mopac7? ( sci-chemistry/mopac7 ) mpqc? ( >=sci-chemistry/mpqc-2.3.1-r1 virtual/blas virtual/lapack ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Chemical quantum mechanics and molecular mechanics
+EAPI=0
 HOMEPAGE=http://bioinformatics.org/ghemical/
 IUSE=mopac7 mpqc
 KEYWORDS=~amd64 ppc x86

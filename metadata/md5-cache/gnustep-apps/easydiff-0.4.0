@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DEPEND=>=gnustep-base/gnustep-make-2.0 virtual/gnustep-back
 DESCRIPTION=GNUstep app that lets you easily see the differences between two text files
+EAPI=0
 HOMEPAGE=http://wiki.gnustep.org/index.php/EasyDiff.app
 IUSE=cvs debug doc
 KEYWORDS=amd64 ppc x86

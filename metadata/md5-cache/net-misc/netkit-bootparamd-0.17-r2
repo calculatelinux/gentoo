@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=!<=net-misc/netkit-bootpd-0.17-r2
 DESCRIPTION=Netkit - bootparamd
+EAPI=0
 HOMEPAGE=ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/
 KEYWORDS=~hppa ~mips ppc sparc x86
 LICENSE=BSD

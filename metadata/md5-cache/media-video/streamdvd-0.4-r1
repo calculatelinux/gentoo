@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=media-libs/libdvdread media-video/lsdvd X? ( dev-perl/perl-tk dev-perl/Tk-JPEG-Lite virtual/cdrtools >=media-video/dvdauthor-0.6.5 >=app-cdr/dvd+rw-tools-5.13.4.7.4 )
 DESCRIPTION=fast tool to backup Video DVDs 'on the fly'
+EAPI=0
 HOMEPAGE=http://www.badabum.de/streamdvd.html
 IUSE=X
 KEYWORDS=~x86 ~ppc ~amd64

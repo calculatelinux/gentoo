@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=A C library to parse Bibtex files
+EAPI=0
 HOMEPAGE=http://www.gerg.ca/software/btOOL/
 KEYWORDS=~amd64 ~sparc ~x86
 LICENSE=GPL-2

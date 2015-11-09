@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=ssl? ( dev-libs/openssl ) ssl? ( dev-libs/openssl )
 DESCRIPTION=The netkit FTP server with optional SSL support
+EAPI=0
 HOMEPAGE=http://www.hcs.harvard.edu/~dholland/computers/netkit.html
 IUSE=ssl ssl
 KEYWORDS=alpha amd64 arm ia64 ppc ~ppc64 s390 sh sparc x86

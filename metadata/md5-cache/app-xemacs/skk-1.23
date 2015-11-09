@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=app-xemacs/viper app-xemacs/mule-base app-xemacs/elib app-xemacs/xemacs-base app-xemacs/apel
 DESCRIPTION=MULE: Japanese Language Input Method
+EAPI=0
 HOMEPAGE=http://xemacs.org/
 KEYWORDS=alpha amd64 ppc ppc64 sparc x86
 LICENSE=GPL-2

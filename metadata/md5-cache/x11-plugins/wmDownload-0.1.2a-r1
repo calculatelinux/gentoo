@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=<x11-libs/libdockapp-0.7 x11-libs/libX11 x11-libs/libXext x11-libs/libXpm
 DESCRIPTION=dockapp that displays how much data you've received on each eth and ppp device
+EAPI=0
 HOMEPAGE=http://wmdownload.sourceforge.net/
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=GPL-2

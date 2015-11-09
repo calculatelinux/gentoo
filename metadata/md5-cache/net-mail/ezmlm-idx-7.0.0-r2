@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install setup unpack
 DEPEND=mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql ) >=sys-apps/sed-4
 DESCRIPTION=Simple yet powerful mailing list manager for qmail
+EAPI=0
 HOMEPAGE=http://www.ezmlm.org
 IUSE=mysql postgres
 KEYWORDS=~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86

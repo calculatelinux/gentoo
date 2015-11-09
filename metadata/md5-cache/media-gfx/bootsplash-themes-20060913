@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst unpack
 DEPEND=net-misc/wget >=media-gfx/splashutils-1.1.9.6
 DESCRIPTION=A collection of Bootsplash themes
+EAPI=0
 HOMEPAGE=https://dev.gentoo.org/~spock/repos/bootsplash/
 KEYWORDS=amd64 ~ppc x86
 LICENSE=freedist

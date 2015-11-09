@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=xspf? ( >=dev-libs/uriparser-0.6.3 )
 DESCRIPTION=Fast Audio Playlist Generator
+EAPI=0
 HOMEPAGE=http://royale.zerezo.com/fapg/
 IUSE=xspf
 KEYWORDS=amd64 ppc ~ppc64 x86

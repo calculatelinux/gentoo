@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=dev-libs/popt dev-libs/elfutils
 DESCRIPTION=Standalone debugedit taken from rpm
+EAPI=0
 HOMEPAGE=http://www.rpm.org/
 KEYWORDS=amd64 hppa ppc ppc64 x86
 LICENSE=GPL-2

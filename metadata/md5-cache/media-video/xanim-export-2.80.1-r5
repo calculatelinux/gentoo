@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=virtual/jpeg media-libs/libpng x11-libs/libXext x11-libs/libXt media-libs/libquicktime app-arch/ncompress x11-proto/xextproto x11-proto/xproto virtual/pkgconfig
 DESCRIPTION=XAnim with Quicktime and RAW Audio export functions
+EAPI=0
 HOMEPAGE=http://heroin.linuxave.net/toys.html
 KEYWORDS=ppc sparc x86
 LICENSE=XAnim

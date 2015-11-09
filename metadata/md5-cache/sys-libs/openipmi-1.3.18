@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=sys-libs/gdbm crypt? ( dev-libs/openssl ) snmp? ( net-analyzer/net-snmp ) virtual/pkgconfig
 DESCRIPTION=Library interface to IPMI
+EAPI=0
 HOMEPAGE=http://sourceforge.net/projects/openipmi/
 IUSE=crypt snmp
 KEYWORDS=~amd64 ~x86

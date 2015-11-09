@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=sys-cluster/torque !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Maui Cluster Scheduler
+EAPI=0
 HOMEPAGE=http://www.adaptivecomputing.com/products/open-source/maui/
 KEYWORDS=~x86 ~amd64
 LICENSE=maui

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm unpack
 DEPEND=virtual/latex-base >=sys-apps/texinfo-4.2-r5
 DESCRIPTION=Lists in TeX's mouth - lambda-calculus and list-handling macros
+EAPI=0
 HOMEPAGE=http://www.ctan.org/tex-archive/macros/latex/contrib/lazylist/
 KEYWORDS=amd64 ~ppc ppc64 sparc x86
 LICENSE=LPPL-1.2

@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=A library which enables applications to discover and connect to iTunes(R) music shares
+EAPI=0
 HOMEPAGE=http://crazney.net/programs/itunes/libopendaap.html
 KEYWORDS=alpha amd64 ppc ppc64 sparc x86
 LICENSE=MIT

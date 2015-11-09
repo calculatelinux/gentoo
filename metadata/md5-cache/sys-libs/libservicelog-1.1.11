@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=dev-db/sqlite !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Provides a library for logging service-related events
+EAPI=0
 HOMEPAGE=http://linux-diag.sourceforge.net/servicelog/
 KEYWORDS=~ppc ~ppc64
 LICENSE=IBM

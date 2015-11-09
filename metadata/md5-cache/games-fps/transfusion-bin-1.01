@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=sys-libs/glibc app-arch/unzip
 DESCRIPTION=Blood remake
+EAPI=0
 HOMEPAGE=http://www.transfusion-game.com/
 KEYWORDS=-* x86
 LICENSE=GPL-2

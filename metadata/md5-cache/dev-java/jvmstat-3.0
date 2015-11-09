@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install nofetch preinst setup
 DEPEND=app-arch/unzip >=dev-java/java-config-2.2.0
 DESCRIPTION=Monitoring APIs and tools for monitoring the performance of the JVM in production environments
+EAPI=0
 HOMEPAGE=http://java.sun.com/performance/jvmstat/
 IUSE=doc elibc_FreeBSD
 KEYWORDS=~amd64 ~x86

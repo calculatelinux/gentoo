@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DEPEND=gnustep-base/gnustep-gui >=media-libs/freetype-2.1
 DESCRIPTION=A tool to create .nfont packages for use with gnustep-back-art
+EAPI=0
 HOMEPAGE=http://packages.debian.org/mknfonts.tool
 IUSE=debug doc
 KEYWORDS=~alpha amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~x86-solaris

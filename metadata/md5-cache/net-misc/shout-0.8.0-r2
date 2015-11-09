@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Shout is a program for creating mp3 stream for use with icecast or shoutcast
+EAPI=0
 HOMEPAGE=http://www.icecast.org
 KEYWORDS=alpha ~ppc sparc x86
 LICENSE=GPL-2

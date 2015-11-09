@@ -1,6 +1,7 @@
 DEFINED_PHASES=install test unpack
 DEPEND=virtual/pkgconfig
 DESCRIPTION=cross platform lightweight components library for C++
+EAPI=0
 HOMEPAGE=http://xplc.sourceforge.net
 KEYWORDS=alpha amd64 hppa ppc sparc x86
 LICENSE=LGPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=app-arch/unzip || ( games-fps/unreal-tournament games-fps/unreal-tournament-goty ) games-util/umodpack
 DESCRIPTION=Futuristic FPS (bonus packs)
+EAPI=0
 HOMEPAGE=http://www.unrealtournament.com/
 KEYWORDS=-* amd64 x86
 LICENSE=all-rights-reserved

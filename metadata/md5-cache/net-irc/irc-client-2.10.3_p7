@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=sys-libs/ncurses sys-libs/zlib
 DESCRIPTION=A simplistic RFC compliant IRC client
+EAPI=0
 HOMEPAGE=http://www.irc.org
 IUSE=ipv6
 KEYWORDS=~amd64 ppc x86

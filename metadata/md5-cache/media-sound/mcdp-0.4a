@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=A very small console cd player
+EAPI=0
 HOMEPAGE=http://www.mcmilk.de/projects/mcdp/
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2

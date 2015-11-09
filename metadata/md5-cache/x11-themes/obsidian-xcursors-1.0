@@ -1,5 +1,6 @@
 DEFINED_PHASES=install postinst
 DESCRIPTION=A shiny and clean xcursor theme
+EAPI=0
 HOMEPAGE=http://www.kde-look.org/content/show.php/Obsidian+Cursors?content=73135
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=x11-libs/libX11 x11-libs/libXaw x11-libs/libXt
 DESCRIPTION=An Automated Deduction System
+EAPI=0
 HOMEPAGE=http://www.cs.unm.edu/~mccune/otter/
 KEYWORDS=~amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=otter

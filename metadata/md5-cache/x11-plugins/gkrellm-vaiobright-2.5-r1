@@ -1,6 +1,7 @@
 DEFINED_PHASES=install setup unpack
 DEPEND==app-admin/gkrellm-2* virtual/pkgconfig
 DESCRIPTION=Superslim VAIO LCD Brightness Control Plugin for Gkrellm
+EAPI=0
 HOMEPAGE=http://nerv-un.net/~dragorn/
 KEYWORDS=-* x86
 LICENSE=GPL-2

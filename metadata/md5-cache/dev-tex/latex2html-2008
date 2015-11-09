@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm unpack
 DEPEND=app-text/ghostscript-gpl virtual/latex-base media-libs/netpbm dev-lang/perl gif? ( media-libs/giflib ) png? ( media-libs/libpng )
 DESCRIPTION=convertor written in Perl that converts LATEX documents to HTML
+EAPI=0
 HOMEPAGE=http://www.latex2html.org/
 IUSE=gif png
 KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd

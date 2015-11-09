@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=>=dev-libs/DirectFB-1.2.0 virtual/pkgconfig
 DESCRIPTION=C++ bindings for DirectFB
+EAPI=0
 HOMEPAGE=http://www.directfb.org/dfb++.xml
 KEYWORDS=amd64 ~ppc ~ppc64 x86
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=dev-lang/perl virtual/perl-Term-ANSIColor >=dev-perl/PortageXS-0.02.04
 DESCRIPTION=Tool to gather relevant perl data useful for bugreports; 'emerge --info' for perl
+EAPI=0
 HOMEPAGE=https://www.gentoo.org/proj/en/perl/
 KEYWORDS=alpha amd64 hppa ~ia64 ppc sparc x86
 LICENSE=GPL-2

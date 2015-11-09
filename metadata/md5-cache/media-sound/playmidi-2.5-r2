@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=sys-libs/ncurses svga? ( media-libs/svgalib ) X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libXaw ) X? ( x11-proto/xextproto )
 DESCRIPTION=Command Line and GUI based MIDI Player
+EAPI=0
 HOMEPAGE=http://sourceforge.net/projects/playmidi/
 IUSE=svga X
 KEYWORDS=amd64 ~ppc sparc x86

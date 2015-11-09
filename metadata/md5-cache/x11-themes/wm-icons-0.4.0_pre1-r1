@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=A Large Assortment of Beutiful Themed Icons, Created with FVWM in mind
+EAPI=0
 HOMEPAGE=http://wm-icons.sourceforge.net/
 KEYWORDS=alpha amd64 ia64 ppc ppc64 x86
 LICENSE=GPL-2

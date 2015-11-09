@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup unpack
 DEPEND=>=virtual/jdk-1.4 source? ( app-arch/zip ) >=dev-java/java-config-2.2.0
 DESCRIPTION=jUSB provides a Free Software Java API for USB
+EAPI=0
 HOMEPAGE=http://jusb.sourceforge.net/
 IUSE=doc source elibc_FreeBSD
 KEYWORDS=~amd64 ~x86

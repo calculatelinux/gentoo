@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=virtual/mysql dev-libs/openssl
 DESCRIPTION=Policy daemon for postfix and other MTAs
+EAPI=0
 HOMEPAGE=http://policyd.sf.net/
 KEYWORDS=amd64 ~hppa x86
 LICENSE=GPL-2

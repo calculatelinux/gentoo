@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=<x11-libs/libdockapp-0.7
 DESCRIPTION=WindowMaker CPU and Memory Usage Monitor Dock App
+EAPI=0
 HOMEPAGE=http://orbita.starmedia.com/~neofpo/wmcms.html
 KEYWORDS=amd64 ppc ppc64 sparc x86
 LICENSE=GPL-2

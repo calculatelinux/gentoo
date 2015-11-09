@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=app-arch/unzip
 DESCRIPTION=A UT addon where you fight terrorists as part of an elite strikeforce
+EAPI=0
 HOMEPAGE=http://www.strike-force.com/
 KEYWORDS=x86
 LICENSE=unreal-tournament-strikeforce

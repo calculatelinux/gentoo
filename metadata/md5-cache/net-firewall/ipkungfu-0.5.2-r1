@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst unpack
 DEPEND=net-firewall/iptables
 DESCRIPTION=A nice iptables firewall script
+EAPI=0
 HOMEPAGE=http://www.linuxkungfu.org/
 KEYWORDS=~amd64 ~ppc ~sparc x86
 LICENSE=GPL-2

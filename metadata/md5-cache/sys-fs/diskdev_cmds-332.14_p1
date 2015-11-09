@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=dev-libs/openssl
 DESCRIPTION=HFS and HFS+ utils ported from OSX, supplies mkfs and fsck
+EAPI=0
 HOMEPAGE=http://opendarwin.org
 KEYWORDS=amd64 ~arm ppc x86
 LICENSE=APSL-2

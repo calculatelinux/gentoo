@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=Font that contains symbols needed for VDR
+EAPI=0
 HOMEPAGE=http://andreas.vdr-developer.org/fonts/
 IUSE=X
 KEYWORDS=~arm amd64 x86

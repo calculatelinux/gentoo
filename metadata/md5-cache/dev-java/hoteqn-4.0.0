@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=>=virtual/jdk-1.4 >=dev-java/java-config-2.2.0
 DESCRIPTION=Java applet to view and display LaTeX mathematical equations
+EAPI=0
 HOMEPAGE=http://www.atp.ruhr-uni-bochum.de/VCLab/software/HotEqn/HotEqn.html
 IUSE=elibc_FreeBSD
 KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos

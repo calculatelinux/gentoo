@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=really tiny cross-platform proxy servers set
+EAPI=0
 HOMEPAGE=http://www.security.nnov.ru/soft/3proxy/
 KEYWORDS=amd64 ppc x86
 LICENSE=3proxy

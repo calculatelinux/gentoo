@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile config install postinst unpack
 DEPEND=ssl? ( dev-libs/openssl )
 DESCRIPTION=IMAP server for Maildir
+EAPI=0
 HOMEPAGE=http://freshmeat.net/projects/bincimap/
 IUSE=ssl
 KEYWORDS=amd64 ~hppa ~ppc x86

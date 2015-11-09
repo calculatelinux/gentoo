@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst
 DESCRIPTION=Firmware Tool for Broadcom 43xx based wireless network devices using the mac80211 wireless stack
+EAPI=0
 HOMEPAGE=http://bues.ch/b43/fwcutter
 KEYWORDS=amd64 ppc ppc64 x86
 LICENSE=GPL-2

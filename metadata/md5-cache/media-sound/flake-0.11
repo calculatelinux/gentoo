@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=An alternative to the FLAC reference encoder
+EAPI=0
 HOMEPAGE=http://flake-enc.sourceforge.net
 IUSE=debug
 KEYWORDS=amd64 x86

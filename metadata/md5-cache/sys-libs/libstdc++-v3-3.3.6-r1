@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=sys-devel/bison
 DESCRIPTION=Compatibility package for running binaries linked against a pre gcc 3.4 libstdc++
+EAPI=0
 HOMEPAGE=https://gcc.gnu.org/libstdc++/
 IUSE=multilib nls
 KEYWORDS=amd64 ~mips ppc -ppc64 sparc x86 ~x86-fbsd

@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst unpack
 DEPEND=nls? ( sys-devel/gettext )
 DESCRIPTION=read and write the WakeUp time in the BIOS
+EAPI=0
 HOMEPAGE=http://sourceforge.net/projects/nvram-wakeup
 IUSE=nls
 KEYWORDS=amd64 x86

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=>=sys-apps/sed-4
 DESCRIPTION=SMTP Relaying Control designed for qmail & tcpserver
+EAPI=0
 HOMEPAGE=http://untroubled.org/relay-ctrl/
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=GPL-2

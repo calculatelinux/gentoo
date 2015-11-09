@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=sys-libs/gdbm dev-libs/libpcre dev-libs/pcre++ net-misc/curl
 DESCRIPTION=Command line program for sending SMS to Polish GSM mobile phone users
+EAPI=0
 HOMEPAGE=http://ceti.pl/~miki/komputery/sms.html
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2

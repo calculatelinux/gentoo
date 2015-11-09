@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=sys-devel/flex
 DESCRIPTION=A limited problem scanner for C source files
+EAPI=0
 HOMEPAGE=http://www.striker.ottawa.on.ca/~aland/pscan/
 KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 LICENSE=GPL-2

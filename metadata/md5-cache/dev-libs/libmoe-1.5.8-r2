@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=dev-lang/perl
 DESCRIPTION=multi octet character encoding handling library
+EAPI=0
 HOMEPAGE=http://pub.ks-and-ks.ne.jp/prog/libmoe/
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=public-domain

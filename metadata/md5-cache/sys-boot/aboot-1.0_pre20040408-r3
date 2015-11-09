@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst unpack
 DESCRIPTION=Alpha Linux boot loader for SRM
+EAPI=0
 HOMEPAGE=http://aboot.sourceforge.net/
 KEYWORDS=-* alpha
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm setup unpack
 DEPEND=>=virtual/emacs-23
 DESCRIPTION=Procmail reader for Wanderlust
+EAPI=0
 HOMEPAGE=http://www.h6.dion.ne.jp/~nytheta/software/prom-wl.html
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2

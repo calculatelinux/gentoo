@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Support for messaging encryption with PGP
+EAPI=0
 HOMEPAGE=http://xemacs.org/
 KEYWORDS=alpha amd64 ppc ppc64 sparc x86
 LICENSE=GPL-2

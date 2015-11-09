@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=>=dev-util/dialog-0.7
 DESCRIPTION=Simple Tool to configure Grub-Bootloader
+EAPI=0
 HOMEPAGE=http://www.tux.org/pub/people/kent-robotti/looplinux/
 KEYWORDS=-* amd64 x86
 LICENSE=GPL-2

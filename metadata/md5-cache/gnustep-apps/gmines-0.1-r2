@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DEPEND=>=gnustep-base/gnustep-make-2.0 virtual/gnustep-back
 DESCRIPTION=The well-known minesweeper game
+EAPI=0
 HOMEPAGE=http://www.gnustep.it/marko/GMines/index.html
 IUSE=debug doc
 KEYWORDS=amd64 ppc x86 ~x86-fbsd

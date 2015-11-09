@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=TiVo File Decoder
+EAPI=0
 HOMEPAGE=http://tivodecode.sourceforge.net/
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD

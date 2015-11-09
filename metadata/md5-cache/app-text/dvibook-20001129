@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-misc/imake x11-misc/gccmakedep app-text/rman
 DESCRIPTION=DVI file utilities: dvibook, dviconcat, dvitodvi, and dviselect
+EAPI=0
 HOMEPAGE=http://www.ctan.org/tex-archive/dviware/dvibook/
 KEYWORDS=~amd64 ~ppc x86
 LICENSE=dvibook

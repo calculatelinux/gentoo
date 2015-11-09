@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup unpack
 DEPEND=app-arch/unzip X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=Beautiful free fonts from exljbris Font Foundry
+EAPI=0
 HOMEPAGE=http://www.josbuivenga.demon.nl/
 IUSE=X
 KEYWORDS=~amd64 ~x86

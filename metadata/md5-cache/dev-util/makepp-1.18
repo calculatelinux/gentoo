@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=dev-lang/perl-5.6.0
 DESCRIPTION=GNU make replacement
+EAPI=0
 HOMEPAGE=http://makepp.sourceforge.net/
 KEYWORDS=~x86 ~ppc ~sparc alpha
 LICENSE=GPL-2

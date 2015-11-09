@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst
 DEPEND=>=sys-libs/zlib-1.1.4 sys-apps/file imagemagick? ( >=media-gfx/imagemagick-5.5.7.15 ) vorbis? ( >=media-libs/libvorbis-1 )
 DESCRIPTION=A OpenFT, Gnutella and FastTrack p2p network daemon
+EAPI=0
 HOMEPAGE=http://gift.sourceforge.net
 IUSE=ares fasttrack gnutella imagemagick openft vorbis
 KEYWORDS=alpha amd64 ia64 ~ppc sparc x86 ~x86-fbsd

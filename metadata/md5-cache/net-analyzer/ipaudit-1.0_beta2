@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=net-libs/libpcap mysql? ( virtual/mysql )
 DESCRIPTION=IPAudit monitors network activity on a network by host, protocol and port
+EAPI=0
 HOMEPAGE=http://ipaudit.sourceforge.net/
 IUSE=mysql
 KEYWORDS=~amd64 ppc x86

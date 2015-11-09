@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=app-arch/unzip
 DESCRIPTION=The BLAST-Like Alignment Tool, a fast genomic sequence aligner
+EAPI=0
 HOMEPAGE=http://www.cse.ucsc.edu/~kent/
 KEYWORDS=amd64 x86
 LICENSE=blat

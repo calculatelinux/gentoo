@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install nofetch postinst postrm prerm setup unpack
 DEPEND=selinux? ( sec-policy/selinux-java ) >=dev-java/java-config-2.2.0 app-eselect/eselect-java
 DESCRIPTION=IBM Java SE Development Kit
+EAPI=0
 HOMEPAGE=http://www.ibm.com/developerworks/java/jdk/
 IUSE=X alsa doc examples javacomm nsplugin odbc selinux
 KEYWORDS=-* amd64 ppc ppc64 x86

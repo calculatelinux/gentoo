@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup
 DEPEND=>=dev-java/java-config-2.2.0
 DESCRIPTION=jIRCii - IRC client written in Java
+EAPI=0
 HOMEPAGE=http://jirc.hick.org/
 IUSE=elibc_FreeBSD
 KEYWORDS=~amd64 ~ppc x86

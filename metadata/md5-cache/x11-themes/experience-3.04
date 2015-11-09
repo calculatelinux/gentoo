@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-themes/gtk-engines-experience sys-apps/findutils
 DESCRIPTION=GTK+2 themes which copy and improve the look of XP Luna
+EAPI=0
 HOMEPAGE=https://art.gnome.org/themes/gtk2/1058
 KEYWORDS=amd64 ~ppc sparc x86
 LICENSE=GPL-2

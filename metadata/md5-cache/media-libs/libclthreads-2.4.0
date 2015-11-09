@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=An audio library by Fons Adriaensen <fons.adriaensen@skynet.be>
+EAPI=0
 HOMEPAGE=http://kokkinizita.linuxaudio.org/linuxaudio/index.html
 KEYWORDS=~amd64 ~ppc ~sparc ~x86
 LICENSE=LGPL-2.1

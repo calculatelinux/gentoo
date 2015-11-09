@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Generate spring graphs from graphviz input files
+EAPI=0
 HOMEPAGE=http://www.chaosreigns.com/code/springgraph
 KEYWORDS=alpha amd64 hppa ia64 ~mips ppc ~ppc64 sparc x86
 LICENSE=GPL-2

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=IBM's open source, high performance Java compiler
+EAPI=0
 HOMEPAGE=http://jikes.sourceforge.net/
 KEYWORDS=amd64 ~arm ppc ppc64 x86 ~x86-fbsd
 LICENSE=IBM

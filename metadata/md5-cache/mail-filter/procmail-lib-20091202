@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=Procmail Module Library is a collection of modules for Procmail
+EAPI=0
 HOMEPAGE=http://freshmeat.net/projects/procmail-lib
 KEYWORDS=~amd64 ~ppc ~sparc ~x86
 LICENSE=GPL-2

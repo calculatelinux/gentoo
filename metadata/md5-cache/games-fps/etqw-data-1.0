@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DESCRIPTION=Enemy Territory: Quake Wars data files
+EAPI=0
 HOMEPAGE=http://zerowing.idsoftware.com/linux/etqw/
 IUSE=videos
 KEYWORDS=-* amd64 x86

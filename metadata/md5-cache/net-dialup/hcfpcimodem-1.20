@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst prerm setup unpack
 DEPEND=dev-lang/perl app-arch/cpio
 DESCRIPTION=Linuxant's modem driver for Connexant HCF chipset
+EAPI=0
 HOMEPAGE=http://www.linuxant.com/drivers/hcf/index.php
 IUSE=doc
 KEYWORDS=-* x86

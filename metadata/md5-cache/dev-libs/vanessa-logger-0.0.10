@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=Generic logging layer that to log to syslog, an open file handle or a file name
+EAPI=0
 HOMEPAGE=http://www.vergenet.net/linux/vanessa/
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2

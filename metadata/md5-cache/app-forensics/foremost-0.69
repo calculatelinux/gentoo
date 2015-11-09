@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=A console program to recover files based on their headers and footers
+EAPI=0
 HOMEPAGE=http://foremost.sourceforge.net/
 KEYWORDS=~amd64 ppc x86
 LICENSE=public-domain

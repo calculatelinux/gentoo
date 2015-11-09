@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Tool to compare a burned DVD with an image to check for errors
+EAPI=0
 HOMEPAGE=http://panteltje.com/panteltje/dvd/
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=app-arch/unzip
 DESCRIPTION=Utility for displaying AVI information
+EAPI=0
 HOMEPAGE=http://shounen.ru/soft/avinfo/english.shtml
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2

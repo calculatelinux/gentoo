@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=X? ( x11-libs/libX11 x11-libs/libXmu x11-libs/libXt )
 DESCRIPTION=Network-Extensible Kana-to-Kanji Conversion System
+EAPI=0
 HOMEPAGE=http://freewnn.sourceforge.jp/ http://www.freewnn.org/
 IUSE=X ipv6
 KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 sparc x86

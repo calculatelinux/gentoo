@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=Some nice themes for Sawfish
+EAPI=0
 HOMEPAGE=http://themes.freshmeat.net/
 KEYWORDS=alpha ~amd64 ia64 ppc ~ppc64 sparc x86
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=A monospace bitmap font, primarily aimed at programmers
+EAPI=0
 HOMEPAGE=http://www.donationcoder.com/Software/Jibz/Dina/index.html
 IUSE=X
 KEYWORDS=amd64 x86

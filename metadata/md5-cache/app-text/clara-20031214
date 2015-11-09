@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=x11-libs/libX11
 DESCRIPTION=An OCR (Optical Character Recognition) program
+EAPI=0
 HOMEPAGE=http://www.claraocr.org/
 KEYWORDS=amd64 ppc x86 ~ppc-macos ~sparc-solaris
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup
 DEPEND=>=virtual/jdk-1.4 >=dev-java/java-config-2.2.0 source? ( app-arch/zip )
 DESCRIPTION=JLex: a lexical analyzer generator for Java
+EAPI=0
 HOMEPAGE=http://www.cs.princeton.edu/~appel/modern/java/JLex/
 IUSE=elibc_FreeBSD doc source
 KEYWORDS=amd64 ppc x86

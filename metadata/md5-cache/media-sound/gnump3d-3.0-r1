@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup
 DEPEND=dev-lang/perl sys-apps/sed
 DESCRIPTION=A streaming server for MP3, OGG vorbis and other streamable files
+EAPI=0
 HOMEPAGE=https://www.gnu.org/software/gnump3d/
 IUSE=sox
 KEYWORDS=alpha amd64 ~ppc ppc64 sparc x86

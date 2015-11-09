@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=>=dev-lang/ghc-6
 DESCRIPTION=Preprocessor for automatic derivation of Haskell class instances
+EAPI=0
 HOMEPAGE=http://repetae.net/john/computer/haskell/DrIFT/
 KEYWORDS=amd64 ppc ppc64 sparc x86
 LICENSE=MIT

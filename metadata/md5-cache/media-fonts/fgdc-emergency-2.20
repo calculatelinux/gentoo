@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=app-arch/unzip X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=FGDC Emergency Response Symbology Prototype
+EAPI=0
 HOMEPAGE=http://www.fgdc.gov/HSWG/
 IUSE=X
 KEYWORDS=amd64 x86

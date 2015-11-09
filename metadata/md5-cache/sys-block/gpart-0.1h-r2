@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=Partition table rescue/guessing tool
+EAPI=0
 HOMEPAGE=http://www.stud.uni-hannover.de/user/76201/gpart/
 KEYWORDS=amd64 hppa x86
 LICENSE=GPL-2

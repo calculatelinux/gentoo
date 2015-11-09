@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Library to read and write vcard files
+EAPI=0
 HOMEPAGE=http://sourceforge.net/projects/vformat/
 KEYWORDS=alpha amd64 ppc sparc x86
 LICENSE=LGPL-2.1

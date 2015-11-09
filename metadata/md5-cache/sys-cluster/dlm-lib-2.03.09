@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm preinst setup
 DEPEND=>=sys-kernel/linux-headers-2.6.24 !sys-cluster/dlm-headers !sys-cluster/dlm-kernel kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
 DESCRIPTION=General-purpose Distributed Lock Manager
+EAPI=0
 HOMEPAGE=https://sources.redhat.com/cluster/wiki/
 IUSE=kernel_linux
 KEYWORDS=amd64 x86

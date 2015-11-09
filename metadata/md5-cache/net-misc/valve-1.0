@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install test
 DESCRIPTION=Copies data while enforcing a specified maximum transfer rate
+EAPI=0
 HOMEPAGE=http://www.fourmilab.ch/webtools/valve/
 IUSE=doc
 KEYWORDS=~x86 ~ppc ~amd64

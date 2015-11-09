@@ -1,5 +1,6 @@
 DEFINED_PHASES=install postinst
 DESCRIPTION=generic whois
+EAPI=0
 HOMEPAGE=http://gwhois.de/
 KEYWORDS=alpha amd64 hppa ppc ppc64 sparc x86
 LICENSE=GPL-2

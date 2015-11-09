@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=Perl script for renaming and tagging mp3s
+EAPI=0
 HOMEPAGE=http://freshmeat.net/projects/smartagger/
 KEYWORDS=amd64 ~ppc sparc x86
 LICENSE=GPL-2

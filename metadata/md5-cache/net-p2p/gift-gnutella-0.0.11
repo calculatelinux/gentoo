@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst
 DEPEND=>=net-p2p/gift-0.11.6 virtual/pkgconfig app-arch/bzip2 dev-libs/libxml2
 DESCRIPTION=The giFT Gnutella plugin
+EAPI=0
 HOMEPAGE=http://gift.sf.net/
 IUSE=xml
 KEYWORDS=alpha amd64 ia64 ~ppc sparc x86 ~x86-fbsd

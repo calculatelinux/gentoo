@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=virtual/linuxtv-dvb-headers
 DESCRIPTION=simple command line tools for DVB cards. Includes a RTP multicast stream server
+EAPI=0
 HOMEPAGE=http://sourceforge.net/projects/dvbtools
 KEYWORDS=x86
 LICENSE=GPL-2

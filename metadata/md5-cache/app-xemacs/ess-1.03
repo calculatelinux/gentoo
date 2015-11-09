@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=app-xemacs/xemacs-base app-xemacs/mail-lib app-xemacs/fsf-compat app-xemacs/edit-utils app-xemacs/speedbar app-xemacs/sh-script app-xemacs/xemacs-eterm
 DESCRIPTION=ESS: Emacs Speaks Statistics
+EAPI=0
 HOMEPAGE=http://xemacs.org/
 KEYWORDS=alpha amd64 ppc ppc64 sparc x86
 LICENSE=GPL-2

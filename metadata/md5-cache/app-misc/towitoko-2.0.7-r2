@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst
 DESCRIPTION=This library provides a driver for using Towitoko smartcard readers under UNIX environment
+EAPI=0
 HOMEPAGE=https://www.gentoo.org/
 IUSE=moneyplex
 KEYWORDS=~amd64 ppc x86

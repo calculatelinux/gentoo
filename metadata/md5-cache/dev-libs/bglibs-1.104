@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install test unpack
 DESCRIPTION=Bruce Guenters Libraries Collection
+EAPI=0
 HOMEPAGE=http://untroubled.org/bglibs/
 KEYWORDS=~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86
 LICENSE=LGPL-2.1

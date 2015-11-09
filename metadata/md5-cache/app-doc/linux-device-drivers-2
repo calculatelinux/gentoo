@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=app-arch/unzip
 DESCRIPTION=howto write linux device drivers (updated for Linux 2.4)
+EAPI=0
 HOMEPAGE=http://www.oreilly.com/catalog/linuxdrive2/
 KEYWORDS=amd64 arm hppa ia64 ppc s390 x86
 LICENSE=FDL-1.1

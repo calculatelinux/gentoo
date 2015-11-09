@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=>=dev-lang/perl-5 sys-devel/gdb
 DESCRIPTION=trace and analyze memory leaks in C++ programs
+EAPI=0
 HOMEPAGE=http://www.andreasen.org/LeakTracer/
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=public-domain

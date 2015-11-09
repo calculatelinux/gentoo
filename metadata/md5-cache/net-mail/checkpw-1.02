@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst unpack
 DESCRIPTION=an implementation of the checkpassword interface that checks a password
+EAPI=0
 HOMEPAGE=http://checkpw.sourceforge.net/checkpw/
 IUSE=static
 KEYWORDS=~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ia64

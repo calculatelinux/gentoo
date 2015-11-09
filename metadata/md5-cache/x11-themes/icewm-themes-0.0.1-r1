@@ -1,5 +1,6 @@
 DEFINED_PHASES=install postinst unpack
 DESCRIPTION=Collection of IceWM themes
+EAPI=0
 HOMEPAGE=http://www.icewm.org/ http://themes.freshmeat.net/projects/icecrack/ http://themes.freshmeat.net/projects/icebox/ http://themes.freshmeat.net/projects/cyrusicewm/ http://themes.freshmeat.net/projects/greyscaled/ http://themes.freshmeat.net/projects/ufosightings/ http://themes.freshmeat.net/projects/1in1-xp/
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=GPL-2 public-domain freedist

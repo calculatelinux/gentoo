@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst unpack
 DESCRIPTION=CObalt LOader - Modern bootloader for Cobalt MIPS machines
+EAPI=0
 HOMEPAGE=http://www.colonel-panic.org/cobalt-mips/
 KEYWORDS=-* ~mips
 LICENSE=GPL-2

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Utilities for controlling SCSI media changers and tape drives
+EAPI=0
 HOMEPAGE=http://mtx.sourceforge.net
 KEYWORDS=x86 amd64 sparc alpha ppc hppa ppc64
 LICENSE=GPL-2

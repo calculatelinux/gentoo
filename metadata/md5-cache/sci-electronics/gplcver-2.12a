@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install test unpack
 DESCRIPTION=Verilog simulator
+EAPI=0
 HOMEPAGE=http://sourceforge.net/projects/gplcver
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2

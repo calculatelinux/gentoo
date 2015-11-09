@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=PTypes (C++ Portable Types Library), alternative to the STL including multithreading and networking
+EAPI=0
 HOMEPAGE=http://www.melikyan.com/ptypes/
 IUSE=debug
 KEYWORDS=amd64 x86

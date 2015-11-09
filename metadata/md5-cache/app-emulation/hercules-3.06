@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Hercules System/370, ESA/390 and zArchitecture Mainframe Emulator
+EAPI=0
 HOMEPAGE=http://www.hercules-390.org/
 IUSE=custom-cflags
 KEYWORDS=alpha amd64 ppc sparc x86

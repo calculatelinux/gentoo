@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=dev-libs/libbegemot tcpd? ( sys-apps/tcp-wrappers )
 DESCRIPTION=Mini-SNMP Daemon and Library
+EAPI=0
 HOMEPAGE=http://people.freebsd.org/~harti/
 IUSE=tcpd
 KEYWORDS=~amd64-fbsd ~x86-fbsd

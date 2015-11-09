@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=<x11-libs/libdockapp-0.7
 DESCRIPTION=Windowmaker dockapp which monitors up to 5 printqueues
+EAPI=0
 HOMEPAGE=http://www.ur.uklinux.net/wmlpq/
 KEYWORDS=x86 ppc
 LICENSE=GPL-2

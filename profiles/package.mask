@@ -30,6 +30,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (08 Nov 2015)
+# Masked for testing.
+=dev-python/pypy-4.0.0
+=dev-python/pypy-bin-4.0.0
+=virtual/pypy-4.0.0
+
+# Patrice Clement <monsieurp@gentoo.org> (07 Nov 2015)
+# Duplicate package since it already exists as virtual/perl-Parse-CPAN-meta.
+# Masked for removal in 30 days.
+dev-perl/Parse-CPAN-Meta
+
 # Brian Evans <grknight@gentoo.org> (06 Nov 2015)
 # Mask new versions of dev-php/pecl-yaml that only work with PHP-7+
 >=dev-php/pecl-yaml-2.0

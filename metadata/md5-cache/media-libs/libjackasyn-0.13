@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=media-sound/jack-audio-connection-kit media-libs/libsamplerate
 DESCRIPTION=An application/library for connecting OSS apps to Jackit
+EAPI=0
 HOMEPAGE=http://gige.xdv.org/soft/libjackasyn
 IUSE=debug
 KEYWORDS=amd64 sparc x86

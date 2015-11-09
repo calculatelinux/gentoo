@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=x11-libs/libX11-1.0.0 >=x11-libs/libXmu-1.0.0 >=x11-libs/libXt-1.0.0 >=x11-libs/libICE-1.0.0 >=x11-libs/libSM-1.0.0 >=x11-libs/libXaw-1.0.1 >=x11-proto/xproto-7.0.4
 DESCRIPTION=OffiX' Drag'n'drop library
+EAPI=0
 HOMEPAGE=http://leb.net/offix
 KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 sparc x86
 LICENSE=GPL-2 LGPL-2

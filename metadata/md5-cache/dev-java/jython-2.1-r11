@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=>=virtual/jdk-1.4 source? ( app-arch/zip ) =dev-java/jakarta-oro-2.0* readline? ( >=dev-java/libreadline-java-0.8.0 ) >=dev-java/java-config-2.2.0
 DESCRIPTION=An implementation of Python written in Java
+EAPI=0
 HOMEPAGE=http://www.jython.org
 IUSE=readline source doc elibc_FreeBSD
 KEYWORDS=amd64 ppc ppc64 x86 ~x86-fbsd

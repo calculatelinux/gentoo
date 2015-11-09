@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=tool to reliably distribute binary data using UDP broadcasting techniques
+EAPI=0
 HOMEPAGE=http://www.wudika.de/~jan/netpipe/
 KEYWORDS=ppc x86
 LICENSE=GPL-2

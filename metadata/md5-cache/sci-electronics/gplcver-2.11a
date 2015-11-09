@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install test unpack
 DESCRIPTION=Verilog simulator
+EAPI=0
 HOMEPAGE=http://www.pragmatic-c.com/gpl-cver
 KEYWORDS=x86 ~ppc
 LICENSE=GPL-2

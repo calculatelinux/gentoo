@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=media-libs/libpng app-arch/unzip
 DESCRIPTION=A utility which reduces large palettes in PNG images
+EAPI=0
 HOMEPAGE=http://entropymine.com/jason/pngrewrite/
 KEYWORDS=alpha amd64 ppc sparc x86 ~x86-linux ~ppc-macos
 LICENSE=public-domain

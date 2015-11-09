@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DEPEND=virtual/os-headers
 DESCRIPTION=IP over DNS tunnel
+EAPI=0
 HOMEPAGE=http://dereference.de/nstx/
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

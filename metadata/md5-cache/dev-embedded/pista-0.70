@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=Commandline-driven interface to PICSTART+ PIC programmer
+EAPI=0
 HOMEPAGE=http://gatling.ikk.sztaki.hu/~kissg/pd/pista/pista.html
 KEYWORDS=~amd64 ~ppc x86
 LICENSE=GPL-2

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Script to rescan the SCSI bus without rebooting
+EAPI=0
 HOMEPAGE=http://www.garloff.de/kurt/linux/
 KEYWORDS=alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86
 LICENSE=GPL-2

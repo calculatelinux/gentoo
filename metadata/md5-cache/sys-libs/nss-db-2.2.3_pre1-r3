@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=sys-libs/db-4 sys-devel/make >=sys-libs/glibc-2.3 !>=sys-libs/glibc-2.15 sys-devel/gettext !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Allows important system files to be stored in a fast database file rather than plain text
+EAPI=0
 HOMEPAGE=https://sources.redhat.com/glibc/
 IUSE=nls
 KEYWORDS=~amd64 ~ppc ~x86

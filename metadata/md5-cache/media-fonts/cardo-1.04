@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=app-arch/unzip X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=Unicode font for classicists, medievalists and linguists
+EAPI=0
 HOMEPAGE=http://scholarsfonts.net/cardofnt.html
 IUSE=X
 KEYWORDS=amd64 x86

@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=Collection of qingy themes
+EAPI=0
 HOMEPAGE=http://themes.freshmeat.net/projects/qingy-lila/ http://themes.freshmeat.net/projects/kitten/ http://themes.freshmeat.net/projects/blnkftre/ http://themes.freshmeat.net/projects/fireplace/ http://themes.freshmeat.net/projects/_dragonfly_/ http://themes.freshmeat.net/projects/computerroom/ http://themes.freshmeat.net/projects/_biohazard_/ http://themes.freshmeat.net/projects/_casablanca_/ http://themes.freshmeat.net/projects/_matrix_/ http://themes.freshmeat.net/projects/adc/ http://themes.freshmeat.net/projects/rouge/ http://themes.freshmeat.net/projects/_aquaish_/ http://themes.freshmeat.net/projects/macmen/ http://themes.freshmeat.net/projects/lambretta/ http://themes.freshmeat.net/projects/_vendetta_/ http://themes.freshmeat.net/projects/chaosr/ http://themes.freshmeat.net/projects/fgdm/ http://themes.freshmeat.net/projects/fkdm/
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2 freedist

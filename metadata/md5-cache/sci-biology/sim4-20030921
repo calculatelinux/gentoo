@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=A program to align cDNA and genomic DNA
+EAPI=0
 HOMEPAGE=http://globin.cse.psu.edu/html/docs/sim4.html
 KEYWORDS=x86 ~ppc
 LICENSE=GPL-2

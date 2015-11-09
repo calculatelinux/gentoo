@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=>=media-libs/aubio-0.3.2 media-libs/vamp-plugin-sdk =sci-libs/fftw-3*
 DESCRIPTION=Onset detection, pitch tracking, note tracking and tempo tracking plugins
+EAPI=0
 HOMEPAGE=http://www.vamp-plugins.org/
 KEYWORDS=amd64 ~ppc ppc64 x86
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=dev-lang/perl
 DESCRIPTION=Portable, robust, fully-threaded I/O benchmark program
+EAPI=0
 HOMEPAGE=http://tiobench.sourceforge.net/
 KEYWORDS=x86 amd64 ppc ppc64
 LICENSE=GPL-2

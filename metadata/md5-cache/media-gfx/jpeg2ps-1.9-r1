@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=sys-apps/sed
 DESCRIPTION=Converts JPEG images to Postscript using a wrapper
+EAPI=0
 HOMEPAGE=http://www.pdflib.com/download/free-software/jpeg2ps/
 IUSE=metric
 KEYWORDS=amd64 ppc ~ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos

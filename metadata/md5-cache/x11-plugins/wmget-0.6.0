@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXpm >=net-misc/curl-7.9.7 x11-proto/xproto x11-proto/xextproto
 DESCRIPTION=a libcurl based dockapp for automated downloads
+EAPI=0
 HOMEPAGE=http://amtrickey.net/wmget/
 KEYWORDS=amd64 ppc ~sparc x86
 LICENSE=MIT

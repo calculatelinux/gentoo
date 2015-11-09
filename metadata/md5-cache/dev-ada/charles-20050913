@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup
 DEPEND=virtual/ada >=app-eselect/eselect-gnat-1.3
 DESCRIPTION=Posix bindings for Ada
+EAPI=0
 HOMEPAGE=http://libre2.adacore.com/
 KEYWORDS=~x86 ~amd64
 LICENSE=GPL-2

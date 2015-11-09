@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=dev-lang/perl virtual/perl-Time-HiRes net-mail/tnef virtual/perl-DB_File mail-filter/maildrop virtual/qmail app-arch/unzip virtual/daemontools clamav? ( app-antivirus/clamav ) spamassassin? ( mail-filter/spamassassin ) >=sys-apps/sed-4
 DESCRIPTION=E-Mail virus scanner for qmail
+EAPI=0
 HOMEPAGE=http://qmail-scanner.sourceforge.net/
 IUSE=clamav spamassassin
 KEYWORDS=amd64 ppc x86

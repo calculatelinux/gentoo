@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=media-gfx/sane-backends gimp? ( media-gfx/gimp )
 DESCRIPTION=Scanner Access Now Easy
+EAPI=0
 HOMEPAGE=http://www.sane-project.org
 IUSE=gimp
 KEYWORDS=alpha amd64 ppc ppc64 sparc x86

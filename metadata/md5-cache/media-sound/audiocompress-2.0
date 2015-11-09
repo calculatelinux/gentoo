@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=Very gentle 1-band dynamic range compressor
+EAPI=0
 HOMEPAGE=http://beesbuzz.biz/code/
 KEYWORDS=~amd64 ~ppc x86
 LICENSE=LGPL-2.1

@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=SaraB is a powerful and automated backup scheduling system based on DAR
+EAPI=0
 HOMEPAGE=http://sarab.sourceforge.net/
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=sys-apps/kbd >=sys-apps/sed-4
 DESCRIPTION=The Alpha MIniLOader, for Alpha Machines without SRM
+EAPI=0
 HOMEPAGE=http://milo.core-systems.de/
 KEYWORDS=-* ~alpha
 LICENSE=MILO

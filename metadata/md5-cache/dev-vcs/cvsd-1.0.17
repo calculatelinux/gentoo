@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup
 DEPEND=>=dev-vcs/cvs-1.11.6 tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 DESCRIPTION=CVS pserver daemon
+EAPI=0
 HOMEPAGE=http://ch.tudelft.nl/~arthur/cvsd/
 IUSE=tcpd
 KEYWORDS=~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos

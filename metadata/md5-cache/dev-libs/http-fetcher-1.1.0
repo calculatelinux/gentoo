@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=small, robust, flexible library for downloading files via HTTP using the GET method
+EAPI=0
 HOMEPAGE=http://http-fetcher.sourceforge.net/
 IUSE=debug
 KEYWORDS=alpha amd64 ppc x86

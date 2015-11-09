@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst unpack
 DESCRIPTION=Snort plugin that allows automated blocking of IP addresses on several firewalls
+EAPI=0
 HOMEPAGE=http://www.snortsam.net/
 KEYWORDS=~alpha amd64 ppc ppc64 sparc x86
 LICENSE=BSD-2

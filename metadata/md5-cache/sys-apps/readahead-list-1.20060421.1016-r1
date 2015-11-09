@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=virtual/os-headers
 DESCRIPTION=Preloads files into the page cache to accelerate program loading
+EAPI=0
 HOMEPAGE=http://www.orbis-terrarum.net
 IUSE=doc
 KEYWORDS=~amd64 ~ppc ~x86

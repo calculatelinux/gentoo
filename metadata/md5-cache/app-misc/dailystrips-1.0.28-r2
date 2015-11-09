@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=dailystrips automatically downloads your favorite online comics from the web
+EAPI=0
 HOMEPAGE=http://dailystrips.sourceforge.net/
 KEYWORDS=alpha amd64 ppc x86
 LICENSE=GPL-2

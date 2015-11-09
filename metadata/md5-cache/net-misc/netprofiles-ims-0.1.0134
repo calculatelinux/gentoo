@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=The Netprofiles Interface Management System (IMS) is an easy way to manage multiple network configurations for your wired or wireless network cards
+EAPI=0
 HOMEPAGE=http://www.furuba.net/~buckminst/gentoo/
 KEYWORDS=x86
 LICENSE=GPL-2

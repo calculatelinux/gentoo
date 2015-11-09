@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=an IRC proxy server
+EAPI=0
 HOMEPAGE=https://code.google.com/p/dircproxy
 KEYWORDS=alpha amd64 ppc sparc x86
 LICENSE=GPL-2

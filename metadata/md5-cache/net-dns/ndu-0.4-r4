@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=sys-apps/sed
 DESCRIPTION=DNS serial number incrementer and reverse zone builder
+EAPI=0
 HOMEPAGE=http://uranus.it.swin.edu.au/~jn/linux/dns.htm
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2

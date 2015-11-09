@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=generate ext2 file systems
+EAPI=0
 HOMEPAGE=http://sourceforge.net/projects/genext2fs
 KEYWORDS=alpha arm hppa ~mips ppc sparc x86
 LICENSE=GPL-2

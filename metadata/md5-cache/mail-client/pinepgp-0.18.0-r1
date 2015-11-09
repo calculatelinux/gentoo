@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=|| ( mail-client/alpine mail-client/pine ) app-crypt/gnupg
 DESCRIPTION=Use GPG/PGP with Pine
+EAPI=0
 HOMEPAGE=http://www.megaloman.com/~hany/software/pinepgp/
 KEYWORDS=amd64 ppc ~sparc x86
 LICENSE=GPL-2

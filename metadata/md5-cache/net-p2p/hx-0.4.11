@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=ssl? ( >=dev-libs/openssl-0.9.6d ) >=sys-libs/zlib-1.1.4 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=This is a Hotline 1.5+ compatible *nix Hotline Client in CLI. It supports IRC compatibility
+EAPI=0
 HOMEPAGE=http://hotlinex.sf.net/
 IUSE=ssl
 KEYWORDS=ppc ~sparc x86

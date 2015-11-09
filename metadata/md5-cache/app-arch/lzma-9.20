@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst
 DESCRIPTION=LZMA Stream Compressor from the SDK
+EAPI=0
 HOMEPAGE=http://www.7-zip.org/sdk.html
 IUSE=doc
 KEYWORDS=~amd64 ~arm ~ia64 ~mips ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos

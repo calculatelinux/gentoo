@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=sys-fs/fuse
 DESCRIPTION=Siemens FS
+EAPI=0
 HOMEPAGE=http://chaos.allsiemens.com/siefs
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2

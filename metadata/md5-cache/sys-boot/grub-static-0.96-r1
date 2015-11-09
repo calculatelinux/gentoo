@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=!<sys-boot/grub-2
 DESCRIPTION=Static GNU GRUB boot loader
+EAPI=0
 HOMEPAGE=https://www.gnu.org/software/grub/
 KEYWORDS=-* amd64 ~x86
 LICENSE=GPL-2

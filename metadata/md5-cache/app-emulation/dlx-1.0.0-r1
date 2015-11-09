@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=DLX Simulator
+EAPI=0
 HOMEPAGE=http://www.davidviner.com/dlx.php
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2

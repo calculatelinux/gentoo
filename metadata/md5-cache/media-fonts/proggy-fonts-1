@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=A set of monospaced bitmap programming fonts
+EAPI=0
 HOMEPAGE=https://wiki.gentoo.org/wiki/No_homepage
 IUSE=X
 KEYWORDS=alpha amd64 ia64 ppc ppc64 sparc x86

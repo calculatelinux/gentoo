@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-libs/libXmu x11-libs/libICE x11-libs/libXaw >=x11-libs/libXaw3d-1.5
 DESCRIPTION=Hanterm -- Korean terminal
+EAPI=0
 HOMEPAGE=http://www.hanterm.org/
 KEYWORDS=x86 ppc
 LICENSE=MIT HPND

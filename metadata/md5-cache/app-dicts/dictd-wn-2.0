@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=>=app-text/dictd-1.5.5
 DESCRIPTION=WordNet for dict
+EAPI=0
 HOMEPAGE=http://www.dict.org/
 KEYWORDS=~amd64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2

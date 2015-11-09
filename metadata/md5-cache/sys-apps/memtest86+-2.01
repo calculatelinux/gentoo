@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm preinst prerm unpack
 DESCRIPTION=Memory tester based on memtest86
+EAPI=0
 HOMEPAGE=http://www.memtest.org/
 IUSE=serial
 KEYWORDS=-* amd64 x86

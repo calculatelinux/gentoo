@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Set up mode-specific icons for each frame under XEmacs
+EAPI=0
 HOMEPAGE=http://xemacs.org/
 KEYWORDS=alpha amd64 ppc ppc64 sparc x86
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup test unpack
 DEPEND=>=virtual/jdk-1.5 dev-java/relaxng-datatype dev-java/relaxngcc >=dev-java/java-config-2.2.0 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2
 DESCRIPTION=XML Schema Object Model (XSOM) allows Java apps to easy parse and inspect XML Schema docs
+EAPI=0
 HOMEPAGE=https://xsom.dev.java.net/
 IUSE=elibc_FreeBSD doc source elibc_FreeBSD
 KEYWORDS=amd64 ppc x86 ~x86-fbsd

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=dev-util/sgb
 DESCRIPTION=Routines to generate and analyze graphs using different models for internetwork topology
+EAPI=0
 HOMEPAGE=http://www.cc.gatech.edu/fac/Ellen.Zegura/graphs.html http://www.isi.edu/nsnam/ns/ns-topogen.html#gt-itm
 KEYWORDS=~x86 ~amd64
 LICENSE=all-rights-reserved sgb2ns

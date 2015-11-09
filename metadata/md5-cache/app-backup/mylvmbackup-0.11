@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=>=app-text/asciidoc-8.1.0
 DESCRIPTION=mylvmbackup is a tool for quickly creating backups of MySQL server's data files using LVM snapshots
+EAPI=0
 HOMEPAGE=http://lenzg.net/mylvmbackup/
 KEYWORDS=~x86 ~ppc ~amd64
 LICENSE=GPL-2

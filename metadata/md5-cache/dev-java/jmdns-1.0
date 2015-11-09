@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup unpack
 DEPEND=>=virtual/jdk-1.3.1 >=dev-java/java-config-2.2.0 source? ( app-arch/zip )
 DESCRIPTION=JmDNS is an implementation of multi-cast DNS in Java
+EAPI=0
 HOMEPAGE=http://jmdns.sourceforge.net
 IUSE=elibc_FreeBSD doc examples source
 KEYWORDS=amd64 x86

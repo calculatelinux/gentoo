@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND==x11-misc/lineakd-0.9.0* x11-libs/xosd
 DESCRIPTION=Xosd plugin for LINEAK
+EAPI=0
 HOMEPAGE=http://lineak.sourceforge.net/
 IUSE=debug
 KEYWORDS=amd64 ppc x86

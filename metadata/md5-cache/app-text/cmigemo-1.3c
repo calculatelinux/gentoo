@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=app-i18n/qkc app-dicts/migemo-dict
 DESCRIPTION=C/Migemo -- Migemo library implementation in C
+EAPI=0
 HOMEPAGE=http://www.kaoriya.net/#CMIGEMO
 IUSE=emacs
 KEYWORDS=x86 alpha ppc

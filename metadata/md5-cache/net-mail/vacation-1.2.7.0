@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=virtual/mta sys-libs/gdbm !mail-mta/sendmail
 DESCRIPTION=automatic mail answering program
+EAPI=0
 HOMEPAGE=http://vacation.sourceforge.net/
 KEYWORDS=alpha amd64 x86
 LICENSE=GPL-2

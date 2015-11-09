@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=app-arch/bzip2 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=HFS+ Filesystem Access Utilities (a PPC filesystem)
+EAPI=0
 HOMEPAGE=http://penguinppc.org/historical/hfsplus/
 KEYWORDS=ppc ppc64 x86
 LICENSE=GPL-2

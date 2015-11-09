@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Utility to control your cd/dvd drive
+EAPI=0
 HOMEPAGE=http://cdctl.sourceforge.net/
 KEYWORDS=x86 ppc amd64 ppc64
 LICENSE=free-noncomm

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DEPEND==virtual/ada-1995* >=app-eselect/eselect-gnat-1.3
 DESCRIPTION=An implementation of the Distributed Systems Annex for the GNAT compiler
+EAPI=0
 HOMEPAGE=http://libre2.adacore.com/
 KEYWORDS=~x86 ~amd64
 LICENSE=GPL-2

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=library for calling real mode BIOS routines under Linux
+EAPI=0
 HOMEPAGE=http://www.sourceforge.net/projects/lrmi/
 KEYWORDS=x86
 LICENSE=MIT

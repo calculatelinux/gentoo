@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm setup test unpack
 DEPEND=>=dev-haskell/cabal-1.2 >=dev-lang/ghc-6.10 dev-haskell/cabal >=dev-haskell/uulib-0.9.12 doc? ( || ( dev-haskell/haddock >=dev-lang/ghc-7.10.2 ) ) >=dev-haskell/cabal-1.1.4
 DESCRIPTION=Attribute Grammar System of Universiteit Utrecht
+EAPI=0
 HOMEPAGE=http://www.cs.uu.nl/wiki/HUT/WebHome
 IUSE=doc profile
 KEYWORDS=amd64 ppc ppc64 sparc x86

@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=music and sound effects library, and a sound processing system
+EAPI=0
 HOMEPAGE=http://www.fmod.org/
 KEYWORDS=-* x86
 LICENSE=BSD fmod-3.75

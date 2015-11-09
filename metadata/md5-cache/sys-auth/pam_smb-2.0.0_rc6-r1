@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=>=sys-libs/pam-0.75
 DESCRIPTION=The PAM SMB module, allows authentication against a SMB (such as the Win_x families) server
+EAPI=0
 HOMEPAGE=http://www.csn.ul.ie/~airlied/pam_smb/
 KEYWORDS=~ppc x86
 LICENSE=GPL-2

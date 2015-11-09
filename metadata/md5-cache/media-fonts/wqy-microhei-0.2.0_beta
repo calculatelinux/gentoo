@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=A droid derived Sans-Serif style CJK font
+EAPI=0
 HOMEPAGE=http://wqy.sourceforge.net/en/
 IUSE=X
 KEYWORDS=amd64 ~arm x86

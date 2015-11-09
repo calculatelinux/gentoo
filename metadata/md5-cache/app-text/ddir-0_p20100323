@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=A perl implementation of the tree(1) program
+EAPI=0
 HOMEPAGE=http://freshmeat.net/projects/ddir
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2

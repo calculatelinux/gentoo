@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Compatibility package for old termcap-based programs
+EAPI=0
 HOMEPAGE=http://www.catb.org/~esr/terminfo/
 KEYWORDS=alpha amd64 hppa ppc sparc x86
 LICENSE=GPL-2 LGPL-2 BSD

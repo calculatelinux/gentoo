@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm preinst setup unpack
 DEPEND=virtual/udev sys-apps/fxload kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources ) virtual/pkgconfig
 DESCRIPTION=Linux drivers for go7007 chipsets (Plextor ConvertX PVR)
+EAPI=0
 HOMEPAGE=http://oss.wischip.com/ http://home.comcast.net/~bender647/go7007/
 IUSE=alsa kernel_linux
 KEYWORDS=~amd64 ~x86

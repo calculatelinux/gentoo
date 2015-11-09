@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install preinst setup
 DEPEND=>=virtual/jdk-1.4 app-arch/unzip source? ( app-arch/zip ) >=dev-java/java-config-2.2.0
 DESCRIPTION=Regular expression API for textual pattern matching based on the finite state automaton theory
+EAPI=0
 HOMEPAGE=http://www.karneim.com/jrexx/
 IUSE=doc source elibc_FreeBSD
 KEYWORDS=amd64 ppc ppc64 x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos

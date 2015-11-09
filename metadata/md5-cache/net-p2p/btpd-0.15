@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=net-misc/curl dev-libs/openssl
 DESCRIPTION=BitTorrent client consisting of a daemon and client
+EAPI=0
 HOMEPAGE=http://www.murmeldjur.se/btpd/
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD

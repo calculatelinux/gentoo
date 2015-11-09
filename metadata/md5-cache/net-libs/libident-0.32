@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=A small library to interface to the Ident protocol server
+EAPI=0
 HOMEPAGE=http://www.simphalempin.com/dev/libident/
 KEYWORDS=alpha amd64 ~hppa ia64 ~mips ppc ppc64 s390 ~sparc x86
 LICENSE=public-domain

@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=x11-libs/libX11 x11-libs/libXScrnSaver x11-libs/libXext x11-libs/libXinerama x11-proto/scrnsaverproto x11-proto/xproto x11-proto/xineramaproto tk? ( dev-tcltk/expect )
 DESCRIPTION=Control a remote computer running VNC from X
+EAPI=0
 HOMEPAGE=http://fredrik.hubbe.net/x2vnc.html
 IUSE=tk
 KEYWORDS=alpha amd64 ppc sparc x86

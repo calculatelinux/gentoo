@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=CLI program to play and record audiofiles
+EAPI=0
 HOMEPAGE=http://rawrec.sourceforge.net
 KEYWORDS=alpha amd64 ppc ppc64 sparc x86
 LICENSE=GPL-2

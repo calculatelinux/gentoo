@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=app-text/dictd
 DESCRIPTION=Freedict for language translation from German to English
+EAPI=0
 HOMEPAGE=http://www.freedict.de
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2

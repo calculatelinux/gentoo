@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup test unpack
 DEPEND=dev-vcs/git
 DESCRIPTION=C library for developing embedded Linux systems
+EAPI=0
 HOMEPAGE=http://www.uclibc.org/
 IUSE=debug hardened iconv ipv6 nptl rpc ssp uclibc-compat wordexp crosscompile_opts_headers-only savedconfig
 LICENSE=LGPL-2

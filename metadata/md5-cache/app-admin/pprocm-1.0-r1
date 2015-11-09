@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=dev-perl/POE dev-perl/Sys-Statistics-Linux dev-lang/perl
 DESCRIPTION=a ncurses which monitors the CPU, disk, network and memory usage
+EAPI=0
 HOMEPAGE=http://www.fusedcreations.com/PProcM/
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

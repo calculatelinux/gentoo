@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=dev-lang/python-2.3 sys-apps/pciutils
 DESCRIPTION=Xorgautoconfig (xac) generates configuration files for X.org
+EAPI=0
 HOMEPAGE=https://dev.gentoo.org/~josejx/xac.html
 IUSE=livecd
 KEYWORDS=~amd64 ppc ppc64 ~x86

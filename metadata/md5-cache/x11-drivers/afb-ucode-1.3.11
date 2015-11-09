@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=Binary blob microcode for Elite3D framebuffers to use X, required by xf86-video-sunffb
+EAPI=0
 HOMEPAGE=https://wiki.gentoo.org/wiki/No_homepage
 KEYWORDS=-* sparc
 LICENSE=MIT

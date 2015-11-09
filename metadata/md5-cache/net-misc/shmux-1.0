@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=pcre? ( dev-libs/libpcre ) sys-libs/ncurses virtual/awk
 DESCRIPTION=Program for executing the same command on many hosts in parallel
+EAPI=0
 HOMEPAGE=http://web.taranis.org/shmux/
 IUSE=pcre
 KEYWORDS=amd64 ppc x86

@@ -1,6 +1,7 @@
 DEFINED_PHASES=install unpack
 DEPEND=>=sci-biology/ncbi-tools-0.20041020-r1
 DESCRIPTION=Protein sequences and profiles comparison
+EAPI=0
 HOMEPAGE=http://www.well.ox.ac.uk/ariadne/
 KEYWORDS=~amd64 x86
 LICENSE=ARIADNE

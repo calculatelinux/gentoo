@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=Text to Morse Code converter
+EAPI=0
 HOMEPAGE=http://cwtext.sourceforge.net
 KEYWORDS=amd64 ~mips ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=GPL-2

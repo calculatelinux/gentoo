@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=sys-libs/zlib app-arch/unzip
 DESCRIPTION=Converts MagicISO CD-images to iso
+EAPI=0
 HOMEPAGE=http://aluigi.org/mytoolz.htm#uif2iso
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=>=virtual/jdk-1.4 dev-java/saxpath >=dev-java/xerces-2.7 >=dev-java/java-config-2.2.0 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2
 DESCRIPTION=Java API to manipulate XML data
+EAPI=0
 HOMEPAGE=http://www.jdom.org
 IUSE=elibc_FreeBSD doc examples source elibc_FreeBSD
 KEYWORDS=amd64 ppc ppc64 x86 ~x86-fbsd

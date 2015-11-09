@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=>=sys-devel/binutils-2.14.90.0.6-r1 app-arch/unzip >=sys-devel/bison-1.875
 DESCRIPTION=Cross compiler for Texas Instruments TI-89, TI-92(+) and V200 calculators
+EAPI=0
 HOMEPAGE=http://tigcc.ticalc.org/
 IUSE=doc
 KEYWORDS=~amd64 ~ppc ~sparc ~x86

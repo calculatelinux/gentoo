@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=!app-text/par !app-arch/par
 DESCRIPTION=par manipulates PalmOS database files
+EAPI=0
 HOMEPAGE=http://www.djw.org/product/palm/par/
 KEYWORDS=~ppc ~x86
 LICENSE=MPL-1.1

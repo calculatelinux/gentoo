@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=app-arch/unzip !bloodsuckermaps? ( !games-rpg/eternal-lands-bloodsucker )
 DESCRIPTION=An online MMORPG written in C and SDL
+EAPI=0
 HOMEPAGE=http://www.eternal-lands.com
 IUSE=music sound bloodsuckermaps
 KEYWORDS=~amd64 ~x86 ~x86-fbsd

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install setup unpack
 DEPEND=tcpd? ( >=sys-apps/tcp-wrappers-7.6-r7 )
 DESCRIPTION=daemon for implementing remote procedure calls between computer programs
+EAPI=0
 HOMEPAGE=http://neil.brown.name/portmap/
 IUSE=selinux tcpd
 KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86

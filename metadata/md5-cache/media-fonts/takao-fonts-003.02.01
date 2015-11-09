@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=A community developed derivatives of IPA Fonts
+EAPI=0
 HOMEPAGE=https://launchpad.net/takao-fonts
 IUSE=X
 KEYWORDS=~amd64 ~x86

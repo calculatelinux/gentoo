@@ -1,6 +1,7 @@
 DEFINED_PHASES=install setup
 DEPEND==app-admin/gkrellm-2* virtual/pkgconfig
 DESCRIPTION=XKB keyboard switcher for gkrellm2
+EAPI=0
 HOMEPAGE=http://tripie.sweb.cz/gkrellm/xkb/
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm preinst setup unpack
 DEPEND=virtual/linux-sources kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
 DESCRIPTION=mirror/replicate block-devices across a network-connection
+EAPI=0
 HOMEPAGE=http://www.drbd.org
 IUSE=kernel_linux
 KEYWORDS=amd64 x86

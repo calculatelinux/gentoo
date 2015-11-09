@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst unpack
 DEPEND=>=sys-apps/sed-4 sys-process/cronbase
 DESCRIPTION=a periodic command scheduler
+EAPI=0
 HOMEPAGE=http://anacron.sourceforge.net/
 KEYWORDS=amd64 ~arm ppc x86
 LICENSE=GPL-2+

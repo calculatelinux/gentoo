@@ -1,5 +1,6 @@
 DEFINED_PHASES=-
 DESCRIPTION=Meta package for XEmacs elisp packages, similar to the sumo archives
+EAPI=0
 HOMEPAGE=http://www.xemacs.org/
 IUSE=mule
 KEYWORDS=alpha amd64 ppc sparc x86

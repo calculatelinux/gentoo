@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=x11-libs/libX11 x11-libs/libXcursor >=media-libs/libpng-1.2 x11-apps/xcursorgen
 DESCRIPTION="Neutral_Plus", the standard X.Org mouse cursor with shadows and animations
+EAPI=0
 HOMEPAGE=http://kde-look.org/content/show.php/show.php?content=48837
 IUSE=examples
 KEYWORDS=amd64 ~arm sparc x86 ~x86-fbsd

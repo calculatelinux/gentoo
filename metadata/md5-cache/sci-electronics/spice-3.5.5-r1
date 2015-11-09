@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=sys-libs/ncurses x11-libs/libXaw >=app-misc/editor-wrapper-3 x11-proto/xproto
 DESCRIPTION=general-purpose circuit simulation program
+EAPI=0
 HOMEPAGE=http://bwrc.eecs.berkeley.edu/Classes/IcBook/SPICE/
 KEYWORDS=amd64 ~ppc x86
 LICENSE=BSD

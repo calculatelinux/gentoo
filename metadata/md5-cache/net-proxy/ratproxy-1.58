@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=dev-libs/openssl
 DESCRIPTION=A semi-automated, largely passive web application security audit tool
+EAPI=0
 HOMEPAGE=https://code.google.com/p/ratproxy/
 KEYWORDS=~amd64 ~x86
 LICENSE=Apache-2.0

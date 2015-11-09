@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=app-xemacs/xemacs-base
 DESCRIPTION=ERC - The Emacs IRC Client
+EAPI=0
 HOMEPAGE=http://xemacs.org/
 KEYWORDS=alpha amd64 ppc ppc64 sparc x86
 LICENSE=GPL-2

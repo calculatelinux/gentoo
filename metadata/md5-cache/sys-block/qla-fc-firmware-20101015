@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=QLogic Linux Fibre Channel HBA Firmware for ql2xxx cards
+EAPI=0
 HOMEPAGE=ftp://ftp.qlogic.com/outgoing/linux/firmware/
 KEYWORDS=amd64 ppc ppc64 sparc x86
 LICENSE=qlogic-fibre-channel-firmware

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND==sys-freebsd/freebsd-lib-8.2* =sys-freebsd/freebsd-libexec-8.2* build? ( sys-apps/baselayout ) dev-libs/libedit dev-libs/libelf =sys-freebsd/freebsd-mk-defs-8.2* !build? ( =sys-freebsd/freebsd-sources-8.2* ) virtual/pmake virtual/pmake
 DESCRIPTION=FreeBSD CDDL (opensolaris/zfs) extra software
+EAPI=0
 HOMEPAGE=http://www.freebsd.org/
 IUSE=build profile
 KEYWORDS=~x86-fbsd

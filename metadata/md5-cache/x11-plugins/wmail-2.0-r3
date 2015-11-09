@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=<x11-libs/libdockapp-0.7 >=sys-apps/sed-4.1.4-r1
 DESCRIPTION=Window Maker dock application showing incoming mail
+EAPI=0
 HOMEPAGE=http://dockapps.windowmaker.org/file.php/id/70
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=GPL-2

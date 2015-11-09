@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=A tool to read SMART information from harddiscs
+EAPI=0
 HOMEPAGE=http://www.linalco.com/comunidad.html http://www.linux-ide.org/smart.html
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=GPL-2

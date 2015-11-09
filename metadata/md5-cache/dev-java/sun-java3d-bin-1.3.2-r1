@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install nofetch postinst preinst setup unpack
 DEPEND=app-arch/unzip >=dev-java/java-config-2.2.0
 DESCRIPTION=Sun Java3D API Core
+EAPI=0
 HOMEPAGE=https://j3d-core.dev.java.net/
 IUSE=elibc_FreeBSD
 KEYWORDS=-* amd64 x86

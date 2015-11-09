@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DESCRIPTION=ascii mode unreal tournament
+EAPI=0
 HOMEPAGE=http://icculus.org/~chunky/ut/aaut/
 KEYWORDS=x86
 LICENSE=GPL-2

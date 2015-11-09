@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm prerm setup unpack
 DEPEND=>=sys-apps/sed-4 x11-misc/gccmakedep x11-misc/imake
 DESCRIPTION=A client-server based Kana-Kanji conversion system
+EAPI=0
 HOMEPAGE=http://canna.sourceforge.jp/
 KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 sparc x86
 LICENSE=MIT GPL-2

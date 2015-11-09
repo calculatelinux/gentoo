@@ -1,5 +1,6 @@
 DEFINED_PHASES=install unpack
 DESCRIPTION=An alternative to sysvinit which supports the need(8) concept
+EAPI=0
 HOMEPAGE=http://john.fremlin.de/programs/linux/jinit/
 KEYWORDS=-amd64 ~ppc ~sparc ~x86
 LICENSE=GPL-2

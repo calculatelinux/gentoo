@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=Organ stops for aeolus by Fons Adriaensen <fons.adriaensen@skynet.be>
+EAPI=0
 HOMEPAGE=http://www.kokkinizita.net/linuxaudio/aeolus/index.html
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

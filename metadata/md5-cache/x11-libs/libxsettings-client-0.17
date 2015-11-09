@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-proto/xproto x11-libs/libX11 >=dev-util/intltool-0.29 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=XSETTINGS client code
+EAPI=0
 HOMEPAGE=http://gpe.linuxtogo.org
 IUSE=nls
 KEYWORDS=amd64 arm ~hppa ppc sh x86

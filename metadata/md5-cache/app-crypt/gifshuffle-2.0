@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=GIF colourmap steganography
+EAPI=0
 HOMEPAGE=http://www.darkside.com.au/gifshuffle/
 KEYWORDS=~amd64 ~x86
 LICENSE=public-domain

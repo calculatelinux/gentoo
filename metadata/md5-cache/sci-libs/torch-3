@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=machine-learning library, written in simple C++
+EAPI=0
 HOMEPAGE=http://www.torch.ch/
 IUSE=doc debug
 KEYWORDS=x86 ~amd64

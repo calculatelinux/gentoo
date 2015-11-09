@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm setup unpack
 DEPEND=>=virtual/emacs-23
 DESCRIPTION=An Emacs mode for editing Relax NG compact schema files
+EAPI=0
 HOMEPAGE=http://www.pantor.com/
 KEYWORDS=~amd64 ~ppc ~sparc ~x86
 LICENSE=BSD

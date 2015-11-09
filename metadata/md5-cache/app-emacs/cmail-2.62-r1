@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm setup unpack
 DEPEND=>=virtual/emacs-23
 DESCRIPTION=A simple mail management system for Emacs
+EAPI=0
 HOMEPAGE=http://cmail.sourceforge.jp/
 IUSE=linguas_ja
 KEYWORDS=amd64 ppc x86

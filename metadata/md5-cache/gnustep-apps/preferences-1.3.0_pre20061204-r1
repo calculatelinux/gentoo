@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DEPEND=~gnustep-libs/prefsmodule-1.1.1_pre20061204 >=gnustep-base/gnustep-make-2.0 virtual/gnustep-back
 DESCRIPTION=Preferences is the GNUstep program with which you define your own personal user experience
+EAPI=0
 HOMEPAGE=http://www.nongnu.org/backbone/apps.html
 IUSE=debug doc
 KEYWORDS=amd64 x86

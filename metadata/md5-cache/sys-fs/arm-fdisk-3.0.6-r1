@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=edit disk partitions on Acorn machines
+EAPI=0
 HOMEPAGE=http://www.arm.linux.org.uk/
 KEYWORDS=alpha amd64 arm hppa ia64 m68k ~mips ppc s390 sh sparc x86
 LICENSE=GPL-2

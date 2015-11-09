@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-libs/xforms
 DESCRIPTION=periodic table of the elements
+EAPI=0
 HOMEPAGE=http://elem.sourceforge.net/
 KEYWORDS=~amd64 ~sparc ~x86
 LICENSE=GPL-2

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst
 DESCRIPTION=mirror/replicate block-devices across a network-connection
+EAPI=0
 HOMEPAGE=http://www.drbd.org
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

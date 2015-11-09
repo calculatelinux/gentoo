@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=<x11-libs/libdockapp-0.7
 DESCRIPTION=WindowMaker DockApp: Provides a popup menu of icons like in AfterStep, as a dockable application
+EAPI=0
 HOMEPAGE=http://www.fcoutant.freesurf.fr/wmmenu.html
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst preinst setup unpack
 DEPEND=>=virtual/jdk-1.4 app-arch/unzip dev-java/ant-core lfd? ( sys-apps/xinetd ) source? ( app-arch/zip ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-java/java-config-2.2.0
 DESCRIPTION=Native lib providing serial and parallel communication for Java
+EAPI=0
 HOMEPAGE=http://rxtx.qbang.org/
 IUSE=doc source lfd elibc_FreeBSD
 KEYWORDS=amd64 x86

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm setup
 DEPEND=media-gfx/ebdftopcf X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=WenQuanYi Unibit CJK font
+EAPI=0
 HOMEPAGE=http://wenq.org/enindex.cgi
 IUSE=X
 KEYWORDS=amd64 ~arm x86

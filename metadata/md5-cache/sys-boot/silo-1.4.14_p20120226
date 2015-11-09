@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm preinst prerm unpack
 DEPEND=sys-fs/e2fsprogs sys-apps/sparc-utils
 DESCRIPTION=SPARC/UltraSPARC Improved Loader, a boot loader for sparc
+EAPI=0
 HOMEPAGE=https://git.kernel.org/?p=linux/kernel/git/davem/silo.git;a=summary
 IUSE=hardened
 KEYWORDS=-* sparc

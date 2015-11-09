@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-libs/libXpm x11-libs/libSM jpeg? ( virtual/jpeg ) x11-proto/xproto
 DESCRIPTION=CPU statistics monitor utility for X Windows
+EAPI=0
 HOMEPAGE=http://www.tigr.net
 IUSE=jpeg
 KEYWORDS=amd64 ~mips ppc ppc64 sparc x86

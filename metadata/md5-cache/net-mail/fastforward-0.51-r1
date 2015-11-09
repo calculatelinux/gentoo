@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install test unpack
 DEPEND=sys-apps/groff >=sys-apps/sed-4
 DESCRIPTION=handle qmail forwarding according to a cdb database
+EAPI=0
 HOMEPAGE=http://cr.yp.to/fastforward.html
 KEYWORDS=x86 sparc ~ppc
 LICENSE=public-domain

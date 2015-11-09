@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=flash the firmware on a Webpal
+EAPI=0
 HOMEPAGE=http://webpal.bigbrd.com/
 KEYWORDS=~amd64 ~arm ~x86
 LICENSE=public-domain

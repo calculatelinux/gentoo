@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst postrm preinst setup
 DEPEND=virtual/linux-sources kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
 DESCRIPTION=The Oracle Cluster Filesystem
+EAPI=0
 HOMEPAGE=http://oss.oracle.com/projects/ocfs
 IUSE=aio kernel_linux
 KEYWORDS=~x86

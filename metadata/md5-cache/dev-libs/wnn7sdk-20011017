@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install unpack
 DEPEND=x11-misc/imake
 DESCRIPTION=Library and headers for Wnn7 client
+EAPI=0
 HOMEPAGE=http://www.omronsoft.co.jp/SP/download/pcunix/sdk.html
 KEYWORDS=~amd64 x86
 LICENSE=freedist

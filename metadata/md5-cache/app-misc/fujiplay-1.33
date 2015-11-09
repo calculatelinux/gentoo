@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm unpack
 DESCRIPTION=Utility for Fujifilm/Leica digital cameras (via serial port)
+EAPI=0
 HOMEPAGE=http://topo.math.u-psud.fr/~bousch/fujiplay.html
 KEYWORDS=~amd64 x86
 LICENSE=public-domain

@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=TCP/IP-based ping implementation
+EAPI=0
 HOMEPAGE=http://directory.fsf.org/security/system/poink.html
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2

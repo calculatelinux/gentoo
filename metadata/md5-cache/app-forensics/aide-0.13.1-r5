@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DEPEND=acl? ( sys-apps/acl ) curl? ( net-misc/curl ) mhash? ( >=app-crypt/mhash-0.9.2 ) !mhash? ( dev-libs/libgcrypt ) nls? ( virtual/libintl ) postgres? ( dev-db/postgresql ) selinux? ( sys-libs/libselinux sec-policy/selinux-aide ) xattr? ( sys-apps/attr ) zlib? ( sys-libs/zlib ) nls? ( sys-devel/gettext ) sys-devel/bison sys-devel/flex !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=AIDE (Advanced Intrusion Detection Environment) is a replacement for Tripwire
+EAPI=0
 HOMEPAGE=http://aide.sourceforge.net/
 IUSE=acl curl mhash nls postgres selinux static xattr zlib
 KEYWORDS=~amd64 ~x86

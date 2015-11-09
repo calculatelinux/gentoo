@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=Propaganda Volume 1-14 + E. Tiling images for your desktop
+EAPI=0
 HOMEPAGE=http://www.resexcellence.com/propaganda/index.shtml
 KEYWORDS=amd64 ppc ppc64 x86
 LICENSE=GPL-2

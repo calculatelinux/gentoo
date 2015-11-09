@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=sys-libs/ncurses
 DESCRIPTION=Visual binary diff utility
+EAPI=0
 HOMEPAGE=http://www.cjmweb.net/vbindiff/
 IUSE=debug
 KEYWORDS=~amd64 ~arm ~x86 ~x86-fbsd

@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=app-misc/astrolog app-arch/unzip
 DESCRIPTION=ephemeris files for optional extended accuracy of astrolog's calculations
+EAPI=0
 HOMEPAGE=http://www.astrolog.org/astrolog.htm
 KEYWORDS=amd64 ppc ppc64 x86
 LICENSE=astrolog

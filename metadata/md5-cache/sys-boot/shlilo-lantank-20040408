@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install postinst postrm preinst prerm
 DESCRIPTION=bootloader for the SuperH Lantank
+EAPI=0
 HOMEPAGE=http://www.linux-sh.org/
 KEYWORDS=-* sh
 LICENSE=GPL-2+ BSD

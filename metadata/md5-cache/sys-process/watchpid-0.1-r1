@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=Watches a process for termination
+EAPI=0
 HOMEPAGE=http://www.codepark.org/
 KEYWORDS=x86 amd64 -ppc
 LICENSE=GPL-2

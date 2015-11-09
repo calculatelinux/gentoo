@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install postinst setup unpack
 DEPEND=virtual/gnat >=sys-apps/sed-4 >=app-eselect/eselect-gnat-1.3
 DESCRIPTION=XML library for Ada
+EAPI=0
 HOMEPAGE=http://libre2.adacore.com/xmlada/
 KEYWORDS=~x86 ~amd64
 LICENSE=GPL-2

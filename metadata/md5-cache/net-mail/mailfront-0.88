@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile config install postinst unpack
 DEPEND=>=dev-libs/bglibs-1.006 >=sys-apps/sed-4
 DESCRIPTION=Mail server network protocol front-ends
+EAPI=0
 HOMEPAGE=http://untroubled.org/mailfront/
 KEYWORDS=x86 ~sparc ~ppc
 LICENSE=GPL-2

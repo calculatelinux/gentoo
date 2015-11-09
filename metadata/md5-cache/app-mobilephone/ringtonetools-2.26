@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=program for creating ringtones and logos for mobile phones
+EAPI=0
 HOMEPAGE=http://ringtonetools.mikekohn.net/
 KEYWORDS=~amd64 ppc x86
 LICENSE=ringtonetools

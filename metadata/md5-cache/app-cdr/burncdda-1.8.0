@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=dev-util/dialog app-cdr/cdrdao virtual/cdrtools mp3? ( media-sound/mpg123 media-sound/mp3_check ) vorbis? ( media-sound/vorbis-tools ) flac? ( media-libs/flac ) media-sound/normalize media-sound/sox
 DESCRIPTION=Console app for copying burning audio cds
+EAPI=0
 HOMEPAGE=http://www.thenktor.homepage.t-online.de/burncdda
 IUSE=flac mp3 vorbis
 KEYWORDS=~amd64 ppc ~sparc x86

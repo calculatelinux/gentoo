@@ -1,5 +1,6 @@
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=MP3 consistency checker
+EAPI=0
 HOMEPAGE=http://sourceforge.net/projects/mp3check/
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=GPL-2

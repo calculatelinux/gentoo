@@ -1,5 +1,6 @@
 DEFINED_PHASES=install
 DESCRIPTION=GTK+1 and GTK+2 Geramik Themes
+EAPI=0
 HOMEPAGE=http://www.kde-look.org/content/show.php?content=3952
 KEYWORDS=alpha amd64 ~mips ~ppc sparc x86
 LICENSE=GPL-2

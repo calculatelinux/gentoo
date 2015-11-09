@@ -1,5 +1,6 @@
 DEFINED_PHASES=install postinst test unpack
 DESCRIPTION=A flexible logging framework for shell scripts
+EAPI=0
 HOMEPAGE=http://forestent.com/products/log4sh/
 KEYWORDS=~ppc x86
 LICENSE=LGPL-2.1

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=doc? ( app-text/texi2html )
 DESCRIPTION=compiler-compiler tool for aspect-oriented programming
+EAPI=0
 HOMEPAGE=https://www.gnu.org/software/dotgnu
 IUSE=doc examples
 KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris

@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=~mail-client/claws-mail-3.9.0 net-misc/curl virtual/pkgconfig
 DESCRIPTION=Renders HTML mail using the gtkhtml2 rendering widget
+EAPI=0
 HOMEPAGE=http://www.claws-mail.org/
 KEYWORDS=~alpha ~amd64 ~ppc ~ppc64 ~x86
 LICENSE=GPL-3

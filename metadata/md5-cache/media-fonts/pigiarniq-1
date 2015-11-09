@@ -1,6 +1,7 @@
 DEFINED_PHASES=install postinst postrm setup
 DEPEND=app-arch/unzip X? ( x11-apps/mkfontdir media-fonts/encodings )
 DESCRIPTION=Nunavut's official Inuktitut font
+EAPI=0
 HOMEPAGE=http://www.gov.nu.ca/english/font/
 IUSE=X
 KEYWORDS=amd64 x86

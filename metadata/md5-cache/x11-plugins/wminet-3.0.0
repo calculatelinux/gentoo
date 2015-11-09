@@ -1,6 +1,7 @@
 DEFINED_PHASES=compile install
 DEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXpm x11-proto/xextproto
 DESCRIPTION=dockapp for monitoring internet connections to and from your computer
+EAPI=0
 HOMEPAGE=http://www.swanson.ukfsn.org/#wminet
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=GPL-2
