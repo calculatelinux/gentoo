@@ -507,6 +507,7 @@ app-editors/vim:X - Link console vim against X11 libraries to enable title and c
 app-editors/vim:luajit - Use dev-lang/luajit instead of dev-lang/lua
 app-editors/vim:racket - Enable support for Scheme using dev-lang/racket
 app-editors/vim:vim-pager - Install vimpager and vimmanpager links
+app-editors/vim-qt:lto - Enable configure workaround for -flto
 app-editors/vim-qt:luajit - Use dev-lang/luajit instead of dev-lang/lua
 app-editors/vim-qt:racket - Enable support for Scheme using dev-lang/racket
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
@@ -658,7 +659,6 @@ app-emulation/spice-vdagent:consolekit - Use sys-auth/consolekit to determine th
 app-emulation/uae:scsi - Enable the uaescsi.device
 app-emulation/vice:ethernet - Enable ethernet emulation
 app-emulation/vice:fullscreen - Enable the ability to run fullscreen
-app-emulation/vice:gtk2 - Use GTK+2 for GUI instead of GTK+3
 app-emulation/vice:memmap - Enable extra monitor features
 app-emulation/vice:sdlsound - Use media-libs/libsdl for sound support
 app-emulation/vice:vte - Enable support for x11-libs/vte in the GTK+ interface
@@ -876,6 +876,7 @@ app-leechcraft/lc-poshuku:wyfv - Build WYFV for replacing Flash-based video play
 app-leechcraft/leechcraft-meta:de - Install components, that allow using Leechcraft as Desktop Environment
 app-misc/anki:recording - Enable support for audio recording
 app-misc/anki:sound - Enable support for adding sound to cards
+app-misc/bijiben:zeitgeist - Build the plugin to inject events to gnome-extra/zeitgeist
 app-misc/binwalk:graph - Enable support for generating entropy graphs
 app-misc/brewtarget:phonon - Enable sound support via media-libs/phonon or dev-qt/qtphonon
 app-misc/byobu:screen - Use app-misc/screen as the default backend
