@@ -199,6 +199,21 @@ virtual/python-imaging
 >=gnome-extra/yelp-3.18.1
 >=gnome-extra/zenity-3.18.1.1
 >=media-gfx/gnome-screenshot-3.18.0
+>=media-libs/cogl-1.22.0
+>=media-libs/clutter-1.24.2
+>=media-libs/clutter-gtk-1.6.6
+>=media-libs/grilo-0.2.14
+>=media-plugins/grilo-plugins-0.2.16
+>=media-sound/gnome-music-3.18.0
+>=media-sound/sound-juicer-3.18.0
+>=net-irc/polari-3.18.1
+>=net-libs/glib-networking-2.46.1
+>=net-misc/rygel-0.28.1
+>=sci-geosciences/geocode-glib-3.18.0
+>=sys-apps/baobab-3.18.1
+>=x11-themes/adwaita-icon-theme-3.18.0
+>=x11-themes/gnome-backgrounds-3.18.0
+>=x11-themes/gnome-themes-standard-3.18.0
 
 # Pacho Ramos <pacho@gentoo.org> (09 Nov 2015)
 # Not properly installed, dead for ages, upstream
@@ -313,16 +328,6 @@ dev-java/jakarta-jstl
 # 2015, bug 536852.
 # Masked for removal in 30 days.
 =dev-lang/ruby-1.9*
-
-# Patrice Clement <monsieurp@gentoo.org> (6 Oct 2015)
-# No update since 2008. Masked for removal in 30 days.
-# See bug #562370.
-dev-java/cos
-
-# Patrice Clement <monsieurp@gentoo.org> (6 Oct 2015)
-# Dead upstream. Masked for removal in 30 days.
-# See bug #562370.
-dev-java/commons-grant
 
 # Mike Pagano <mpagano@gentoo.org> (2 Oct 2015)
 # A regression in kernel 4.1.9 could lead to a system
