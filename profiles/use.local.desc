@@ -1717,6 +1717,7 @@ dev-java/gnu-classpath:xml - Build with native XML backend
 dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
 dev-java/icedtea:awt - Install non-headless AWT libraries, needed by some GUIs (used to be X flag)
 dev-java/icedtea:cacao - Use the CACAO virtual machine rather than HotSpot.
+dev-java/icedtea:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
 dev-java/icedtea:infinality - Enable better font rendering using fontconfig.
 dev-java/icedtea:jamvm - Use the JamVM virtual machine rather than HotSpot.
 dev-java/icedtea:jbootstrap - If possible, recompile the final IcedTea executables with itself.
@@ -1730,6 +1731,8 @@ dev-java/icedtea:systemtap - Enable SystemTap probes in HotSpot.
 dev-java/icedtea:webstart - Enable Web Start support (via NetX).
 dev-java/icedtea:zero - Enable Zero assembler port (usually for non-HotSpot architectures)
 dev-java/icedtea-bin:awt - Install non-headless AWT libraries, needed by some GUIs (used to be X flag)
+dev-java/icedtea-bin:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
+dev-java/icedtea-bin:nss - Enable NSS security provider support
 dev-java/icedtea-bin:webstart - Provide javaws command through symlink to icedtea-web
 dev-java/icedtea-web:icedtea7 - Build icedtea-7 support in addition to icedtea-6 support. Requires icedtea{-bin}-7
 dev-java/icedtea-web:javascript - Enable support for using proxy auto config (PAC) files.
@@ -3149,7 +3152,6 @@ gnome-base/gvfs:udev - Enable udev base replacement code for cdda feature
 gnome-base/libglade:tools - Install libglade-convert Python script.
 gnome-base/libgnome-keyring:vala - Enable bindings for dev-lang/vala
 gnome-base/libgnomecanvas:glade - Enable glade support
-gnome-base/libgtop:introspection - Use dev-libs/gobject-introspection for introspection
 gnome-base/librsvg:tools - Build svg viewer tool
 gnome-base/nautilus:packagekit - Use packagekit to search for programs to open unknown file types
 gnome-base/nautilus:previewer - Use gnome-extra/sushi to preview files from the file mananger
@@ -4651,6 +4653,7 @@ media-video/ffmpeg:libv4l - Uses media-libs/libv4l for video4linux instead of di
 media-video/ffmpeg:mipsdspr1 - Enables MIPS DSP ASE R1 optimizations.
 media-video/ffmpeg:mipsdspr2 - Enables MIPS DSP ASE R2 optimizations.
 media-video/ffmpeg:mipsfpu - Enables floating point MIPS optimizations.
+media-video/ffmpeg:mmal - Enables Multi-Media Abstraction Layer (MMAL) decoding support: Available e.g. on the Raspberry Pi.
 media-video/ffmpeg:network - Enables network streaming support
 media-video/ffmpeg:nvenc - Adds support for NVIDIA Encoder (NVENC) API for hardware accelerated encoding on NVIDIA cards.
 media-video/ffmpeg:openh264 - Enables H.264 encoding suppoprt via media-libs/openh264.
@@ -6210,7 +6213,6 @@ net-misc/vinagre:rdp - Enable access to Windows RDP protocol using net-misc/rdes
 net-misc/vinagre:spice - Enable access to SPICE-enabled virtual machines
 net-misc/vinagre:ssh - Enable ssh plugin using x11-libs/vte
 net-misc/vinagre:telepathy - Enable access to remote desktop via a net-libs/telepathy-glib client
-net-misc/vino:libsecret - Enable app-crypt/libsecret support to store login credentials.
 net-misc/vino:telepathy - Enable desktop sharing through a telepathy client
 net-misc/vpnc:resolvconf - Enable support for DNS managing framework net-dns/openresolv
 net-misc/wget:ntlm - Enable support for NTLM (Windows-based) authorization
