@@ -5,6 +5,10 @@
 # This file requires >=portage-2.1.1
 # New entries go on top.
 
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (19 Nov 2015)
+# GN build for Chromium is still experimental.
+www-client/chromium gn
+
 # Alexis Ballier <aballier@gentoo.org> (14 Nov 2015)
 # MMAL is only available on the Raspberry Pi:
 # Mask it globally, unmask it on arm.
@@ -102,10 +106,6 @@ app-office/akonadi-server qt5
 # mono currently fails with doc most likely because of xattr
 # Gentoo bug: 554484
 >=dev-lang/mono-3.12.1 doc
-
-# Michael Palimaka <kensington@gentoo.org> (12 Aug 2015)
-# Requires unreleased dependency
-kde-frameworks/kwallet gpg
 
 # Ben de Groot <yngwin@gentoo.org> (12 Aug 2015)
 # Seems to link correctly, but fails to run. Bug #557354.

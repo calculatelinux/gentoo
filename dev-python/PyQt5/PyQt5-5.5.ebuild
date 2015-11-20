@@ -9,8 +9,7 @@ PYTHON_COMPAT=( python2_7 python3_{3,4,5} )
 inherit eutils multibuild multilib python-r1 qmake-utils
 
 DESCRIPTION="Python bindings for the Qt framework"
-HOMEPAGE="
-	http://www.riverbankcomputing.com/software/pyqt/intro
+HOMEPAGE="http://www.riverbankcomputing.com/software/pyqt/intro
 	https://pypi.python.org/pypi/PyQt5"
 
 MY_PN="PyQt-gpl"

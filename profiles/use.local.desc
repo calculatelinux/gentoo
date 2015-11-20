@@ -235,7 +235,6 @@ app-admin/sagan:pcap - Add support for network packet capture via net-libs/libpc
 app-admin/sagan:smtp - Build witch SMTP (E-Mail) support
 app-admin/sagan:snort - Add support to interact with Snort IDE using net-analyzer/snortsam'
 app-admin/sagan-rules:lognorm - Install normalize rules support with dev-libs/liblognorm
-app-admin/salt:api - Enable support for salt-api.
 app-admin/salt:cherrypy - Enable support for using cherrypy.
 app-admin/salt:gnupg - Enable support for gnupg via python-gnupg.
 app-admin/salt:keyring - Enable support for keyrings via python-keyring.
@@ -4931,8 +4930,10 @@ net-analyzer/icinga:plugins - Adds support for nagios plugins
 net-analyzer/icinga:web - Adds generic web interface support
 net-analyzer/icinga-web:pnp - Enables pnp4nagios integration
 net-analyzer/icinga2:classicui - Adds support for the old interface
+net-analyzer/icinga2:lto - Adds support for link time optimization
 net-analyzer/icinga2:nano-syntax - Adds support for syntax used in the nano editor
 net-analyzer/icinga2:plugins - Adds support for nagios plugins
+net-analyzer/icinga2:studio - Adds support for Icinga-studio
 net-analyzer/linkchecker:sqlite - Mozilla Bookmark parsing
 net-analyzer/metasploit:development - Install dependencies needed for metasploit and exploit development
 net-analyzer/metasploit:oracle - Enable restricted oracle modules which have additional deps
@@ -7767,6 +7768,7 @@ www-apps/viewvc:pygments - Add dev-python/pygments support for syntax highlighti
 www-apps/webdavcgi:rcs - Adds support for a revision controlled backend with RCS (dev-vcs/rcs)
 www-apps/wordpress:akismet - Installs Akismet comment spam plug-in
 www-apps/wordpress:themes - Installs themes (including default theme)
+www-client/chromium:gn - Use GN (generate ninja) instead of GYP for building
 www-client/chromium:gtk3 - Use gtk3 instead of gtk2
 www-client/chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/chromium:hidpi - Enable support for high-resolution screens (high dots per inch)
