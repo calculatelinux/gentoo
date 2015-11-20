@@ -36,6 +36,8 @@ DEPEND="${RDEPEND}
 		dev-python/regendoc[${PYTHON_USEDEP}]
 	)"
 
+PATCHES=( "${FILESDIR}"/${PN}-2.8.3-skip-test-on-pypy.patch )
+
 python_prepare_all() {
 	chmod o-w *egg*/* || die
 	# Disable versioning of py.test script to avoid collision with
