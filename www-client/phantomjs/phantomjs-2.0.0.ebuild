@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
 RDEPEND="dev-libs/icu:=
-	dev-libs/openssl
+	dev-libs/openssl:0
 	media-libs/fontconfig
 	media-libs/freetype
 	media-libs/gstreamer:1.0

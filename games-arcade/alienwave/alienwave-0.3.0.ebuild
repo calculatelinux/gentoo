@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=4
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="An ncurses-based Xenon clone"
@@ -14,12 +14,14 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="sys-libs/ncurses"
-RDEPEND="${DEPEND}"
+DEPEND="sys-libs/ncurses:0"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${PN}
 
-PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+}
 
 src_install() {
 	dogamesbin alienwave

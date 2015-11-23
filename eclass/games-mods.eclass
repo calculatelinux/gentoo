@@ -111,7 +111,7 @@ games-mods_get_rdepend() {
 
 	case ${EAPI:-0} in
 		0|1) echo -n "${pkgs[@]}" ;;
-		2)
+		[23456])
 			local p
 			if [[ ${1} == "--ded" ]] ; then
 				echo -n "${DED_PKGS}"
@@ -124,6 +124,7 @@ games-mods_get_rdepend() {
 				done
 			fi
 			;;
+		*) die "EAPI ${EAPI} not supported"
 	esac
 
 	[[ ${#pkgs[@]} -gt 1 ]] && echo -n " )"

@@ -2,6 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
+# Markus Meier <maekke@gentoo.org> (22 Nov 2015)
+# unmask scanner for net-print/hplip, bug #518456
+net-print/hplip -scanner kde
+media-gfx/xsane ocr
+
 # Pacho Ramos <pacho@gentoo.org> (15 Nov 2015)
 # Missing keywords
 >=media-plugins/grilo-plugins-0.2.16 upnp-av
@@ -13,11 +18,6 @@ media-video/ffmpeg -mmal
 # Markus Meier <maekke@gentoo.org> (10 Nov 2015)
 # unkeyworded deps, bug #555896
 sci-libs/armadillo mkl
-
-# James Le Cuirot <chewi@gentoo.org> (19 Oct 2015)
-# Issue with keywording sub-dependency jflex but this should be
-# resolved very shortly. Masking this now to unbreak the tree.
-dev-java/rhino test
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (15 Oct 2015)
 # Repoman reports dependency issues on arm.
