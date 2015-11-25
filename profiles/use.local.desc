@@ -2340,6 +2340,7 @@ dev-python/nltk:numpy - Use numpy for the saved word tokenizer
 dev-python/numexpr:mkl - Enable support for Intel Vector Math Library, part of sci-libs/mkl.
 dev-python/pandas:R - Enable support for R via dev-python/rpy
 dev-python/pandas:excel - Pull a few Python packages for Microsoft Excel i/o
+dev-python/pandas:full-support - Pull all packages to give pandas full support
 dev-python/pandas:html - Enable HTML i/o via dev-python/beautifulsoup
 dev-python/paste:flup - enable support for flup (and therefore for various wgsi servers and middleware)
 dev-python/paste:openid - enable OpenID support
@@ -4979,6 +4980,7 @@ net-analyzer/net-snmp:mfd-rewrites - Use MFD rewrites of mib modules where avail
 net-analyzer/net-snmp:netlink - Use dev-libs/libnl to fetch TCP statistics instead of using /proc/net/tcp (Linux only).
 net-analyzer/net-snmp:pci - Use libpci (from sys-apps/pciutils) to look up network interface description. This feature is only available on Linux.
 net-analyzer/net-snmp:rpm - Enable monitoring of app-arch/rpm. This flag requires the bzip2 and zlib flags to be enabled as well.
+net-analyzer/net-snmp:smux - Enable support for the legacy smux protocol (superseded by agentx)
 net-analyzer/net-snmp:ucd-compat - Build UCD compatibility library. Increases significantly the install size.
 net-analyzer/netperf:demo - Emit interim results during the run. May affect results
 net-analyzer/netperf:sctp - Include tests to measure SCTP performance
@@ -7014,6 +7016,8 @@ sys-apps/busybox:mdev - Create the appropriate symlink in /sbin and install mdev
 sys-apps/busybox:sep-usr - Support a separate /usr without needing an initramfs by booting with init=/ginit
 sys-apps/busybox:static - Make the system rescue shell (/bin/bb) static so you can recover even when glibc is broken
 sys-apps/busybox:systemd - Support systemd
+sys-apps/coreutils:hostname - Build the hostname program
+sys-apps/coreutils:kill - Build the kill program
 sys-apps/coreutils:multicall - Build all tools into a single `coreutils` program akin to busybox to save space
 sys-apps/dbus:systemd - Build with sys-apps/systemd at_console support
 sys-apps/dmtcp:fast - Enable experimental performance options such as mmap allocator.
@@ -7090,7 +7094,11 @@ sys-apps/microcode-data:initramfs - install a small initramfs for use with CONFI
 sys-apps/microcode-data:monolithic - install the large text microcode.dat (used by older kernels via microcode_ctl)
 sys-apps/microcode-data:split-ucode - install the split binary ucode files (used by the kernel directly)
 sys-apps/moreutils:perl - Install scripts written in Perl
+sys-apps/net-tools:arp - build the arp and rarp tools (for manipulating the ARP cache)
+sys-apps/net-tools:hostname - build the hostname and dnsdomainname tools
 sys-apps/net-tools:old-output - use old ifconfig output style (useful for when new output breaks scripts)
+sys-apps/net-tools:plipconfig - build the plipconfig tool (for working with old PLIP hardware)
+sys-apps/net-tools:slattach - build the slattach tool (for working with old serial ports)
 sys-apps/openrc:netifrc - enable Gentoo's network stack (net.* scripts)
 sys-apps/openrc:newnet - enable the new network stack (experimental)
 sys-apps/openrc:tools - build optional tools
@@ -7157,6 +7165,7 @@ sys-apps/util-linux:caps - build setpriv helper (run programs with diff capabili
 sys-apps/util-linux:cramfs - build mkfs/fsck helpers for cramfs filesystems
 sys-apps/util-linux:cytune - build cytune for Cyclades-Z multiport serial cards
 sys-apps/util-linux:fdformat - build fdformat (floppy disk format)
+sys-apps/util-linux:kill - build the kill program
 sys-apps/util-linux:pam - build runuser helper
 sys-apps/util-linux:suid - install mount/umount as setuid so non-root users may mount/umount devices, and wall/write as setgid so non-root users can notify other users
 sys-apps/util-linux:tty-helpers - install the mesg/wall/write tools for talking to local users
@@ -7699,6 +7708,7 @@ sys-process/htop:oom - Add column to track the OOM-killer score of processes
 sys-process/htop:openvz - Enable openvz support
 sys-process/htop:vserver - Enable vserver support
 sys-process/lsof:rpc - support looking up RPC service info
+sys-process/procps:kill - Build the kill program
 sys-process/procps:modern-top - Enables new startup defaults of top. Keeps old defaults if disabled
 sys-process/procps:ncurses - Build programs that use ncurses: top, slabtop, watch
 sys-process/systemd-cron:cron-boot - Include support for the boot timer.
