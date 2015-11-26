@@ -30,6 +30,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Sergey Popov <pinkbyte@gentoo.org> (25 Nov 2015)
+# Dead upstream, security issues, see bug #557856
+# Removal in a month
+net-p2p/bittorrent
+
 # Andreas K. Huettel <dilfridge@gentoo.org> (22 Nov 2015)
 # txt2html got accidentally packaged twice, as TextToHTML
 # and as txt2html. Masking the version with nonstandard PN
@@ -101,12 +106,12 @@ sci-chemistry/pymol-apbs-plugin
 # - ABIFLAGS reintroduced for 3.3+.
 # Resulting API/ABI change can break reverse dependencies, especially
 # if upstream hardcodes paths or library names.
-=app-eselect/eselect-python-20151117
+>=app-eselect/eselect-python-20151117
 =dev-lang/python-2.7.10-r4
 =dev-lang/python-3.3.5-r4
 =dev-lang/python-3.4.3-r4
 =dev-lang/python-3.5.0-r3
-=dev-lang/python-exec-2.1
+>=dev-lang/python-exec-2.1
 
 # Justin Lecher <jlec@gentoo.org> (10 Nov 2015)
 # Vulnerable package CVE-2014-{1932,1933}
@@ -652,8 +657,8 @@ dev-java/sun-jce-bin
 
 # Julian Ospald <hasufell@gentoo.org> (26 Jun 2013)
 # Depends on masked dev-lang/lua-5.2
->=games-emulation/sdlmame-0.149
->=games-emulation/sdlmess-0.149
+=games-emulation/sdlmame-0.149
+=games-emulation/sdlmess-0.149
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (25 Jun 2013)
 # Mask new ptlib/opal for breakage, tracked in bug #474742
