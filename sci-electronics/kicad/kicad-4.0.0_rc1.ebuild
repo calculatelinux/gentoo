@@ -16,7 +16,6 @@ SERIES=$(get_version_component_range 1-2)
 MY_PV=$(replace_version_separator 3 '-')
 
 LIB_REVISION="bd0ec6a20c7cc0556093f60eac723e4505947784"
-DOC_REVISION="0d0ed7b9de3afbba5d51fb6d7a25834000ed1099"
 I18N_REVISION="bf793d30d64f4e75ea7a109ea434c1a27926b158"
 
 SRC_URI="https://launchpad.net/${PN}/${SERIES}/${MY_PV}/+download/${PN}-${MY_PV}.tar.xz
