@@ -9,7 +9,7 @@ if [[ ${PV} = *9999* ]]; then
 	inherit golang-vcs
 else
 	KEYWORDS="~amd64"
-	EGIT_COMMIT=9805c4da6f
+	EGIT_COMMIT=v${PV}
 	SRC_URI="https://${EGO_PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 	inherit golang-vcs-snapshot
 fi
@@ -23,14 +23,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-src_prepare() {
-	# disable broken tests
-	sed -e 's:TestSave(:_\0:' \
-		-i src/${EGO_PN}/save_test.go || die
-	sed -e 's:TestUpdate(:_\0:' \
-		-i src/${EGO_PN}/update_test.go || die
-}
-
 src_install() {
 	dobin godep
+dodoc src/${EGO_PN}/*.md
 }
