@@ -1,53 +1,72 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="5"
+EAPI=5
 
-PLOCALES="cs_CZ cs de es_MX es fr gl hu it pl_PL pl pt_BR pt_PT ro_RO ru si_LK uk zh_CN zh_TW"
+# Ignore rudimentary et, uz@Latn, zh_TW translation(s)
+PLOCALES="cs_CZ cs de es_MX es fr gl hu it ja_JP lt nb pl_PL pl pt_BR pt_PT ro_RO ru sr tr uk zh_CN"
 
-EGIT_REPO_URI="https://github.com/flacon/flacon.git"
+inherit cmake-utils fdo-mime gnome2-utils l10n git-r3
 
-inherit cmake-utils l10n fdo-mime gnome2-utils
-[[ ${PV} == *9999* ]] && inherit git-r3
-
-DESCRIPTION="Extracts audio tracks from audio CD image to separate tracks"
+DESCRIPTION="Extracts audio tracks from an audio CD image to separate tracks"
 HOMEPAGE="https://flacon.github.io/"
-[[ ${PV} == *9999* ]] || \
-SRC_URI="https://github.com/flacon/flacon/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+EGIT_REPO_URI="git://github.com/${PN}/${PN}.git"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-[[ ${PV} == *9999* ]] || \
-KEYWORDS="~amd64 ~x86"
-IUSE="flac mac mp3 mp4 ogg replaygain tta wavpack"
+KEYWORDS=""
+IUSE="aac flac mac mp3 opus qt4 qt5 replaygain tta vorbis wavpack"
 
-RDEPEND="
-	dev-qt/qtcore:4
-	dev-qt/qtgui:4
+DEPEND="
 	dev-libs/uchardet
+	qt4? (
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4
+	)
+	qt5? (
+		dev-qt/linguist-tools:5
+		dev-qt/qtnetwork:5
+		dev-qt/qtwidgets:5
+	)
+"
+RDEPEND="${DEPEND}
 	media-sound/shntool[mac?]
+	aac? ( media-libs/faac )
 	flac? ( media-libs/flac )
 	mac? ( media-sound/mac )
 	mp3? ( media-sound/lame )
-	mp4? ( media-libs/faac )
-	ogg? ( media-sound/vorbis-tools )
-	tta? ( media-sound/ttaenc )
-	wavpack? ( media-sound/wavpack )
+	opus? ( media-sound/opus-tools )
 	replaygain? (
 		mp3? ( media-sound/mp3gain )
-		ogg? ( media-sound/vorbisgain )
+		vorbis? ( media-sound/vorbisgain )
 	)
+	tta? ( media-sound/ttaenc )
+	vorbis? ( media-sound/vorbis-tools )
+	wavpack? ( media-sound/wavpack )
 "
-DEPEND="${RDEPEND}"
+
+REQUIRED_USE="^^ ( qt4 qt5 )"
 
 src_prepare() {
-	my_rm_loc() {
+	# Ignore rudimentary et, uz@Latn, zh_TW translation(s)
+	rm "translations/${PN}_uz@Latn.desktop" || die
+	rm "translations/${PN}"_{et,zh_TW}.ts || die
+
+	remove_locale() {
 		rm "translations/${PN}_${1}."{ts,desktop} || die
 	}
 
-	l10n_find_plocales_changes "translations" "${PN}_" '.ts'
-	l10n_for_each_disabled_locale_do my_rm_loc
+	l10n_find_plocales_changes 'translations' "${PN}_" '.ts'
+	l10n_for_each_disabled_locale_do remove_locale
+}
+
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_use qt4 QT4)
+		$(cmake-utils_use_use qt5 QT5)
+	)
+	cmake-utils_src_configure
 }
 
 pkg_preinst() {
