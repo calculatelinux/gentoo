@@ -30,6 +30,22 @@
 
 #--- END OF EXAMPLES ---
 
+# Brian Evans <grknight@gentoo.org> (02 Dec 2015)
+# All current targets are masked.
+# New version only works on PHP7.
+dev-php/pecl-taint
+
+# Brian Evans <grknight@gentoo.org> (02 Dec 2015)
+# Zend Opcache was integrated into PHP versions 5.5 and later
+# Masked for removal in 30 days
+dev-php/pecl-zendopcache
+
+# Brian Evans <grknight@gentoo.org> (02 Dec 2015)
+# PHP 5.4 is End Of Life and will not receive any further updates
+# Please migrate to 5.5 or, preferably 5.6.
+dev-lang/php:5.4
+~virtual/httpd-php-5.4
+
 # Michael Sterrett <mr_bones_@gentoo.org> (01 Dec 2015)
 # No release since 2005; upstream is gone; doesn't build
 # on modern systems.
@@ -181,15 +197,6 @@ dev-perl/Parse-CPAN-Meta
 # Keep it masked until they are done. sys-fs/duperemove is
 # the suggested replacement for the meantime.
 sys-fs/bedup
-
-# James Le Cuirot <chewi@gentoo.org> (29 Oct 2015)
-# Dead project with no revdeps. Removal in 30 days.
-dev-java/flute
-
-# Patrice Clement <monsieurp@gentoo.org> (29 Oct 2015)
-# Upstream is somewhat alive but there are better XML parsers out there.
-# Removal in 30 days. See #268619.
-dev-java/castor
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (29 Oct 2015)
 # Mask until it is decided how to address xorg-server file collisions #564358
