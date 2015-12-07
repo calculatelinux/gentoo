@@ -1197,6 +1197,7 @@ app-text/stardict:qqwry - Enable QQWry plugin, which provides information (in Ch
 app-text/stardict:tools - Build and install the extra stardict tools
 app-text/tesseract:linguas_chr - Enable support for the Cherokee language.
 app-text/tesseract:linguas_jp - Enable support for Japanese.
+app-text/tesseract:math - Enable support for recognition of equations.
 app-text/tesseract:opencl - Enable opencl support for speedup using GPU computation.
 app-text/tesseract:osd - Enable support orientation and script detection.
 app-text/tesseract:scrollview - Enable graphics support (ScrollView).
@@ -3234,8 +3235,10 @@ kde-apps/cantor:analitza - Enable kde-base/analitza backend support
 kde-apps/cantor:qalculate - Enable sci-libs/libqalculate backend support
 kde-apps/dolphin:thumbnail - Enables video thumbnail generation
 kde-apps/dolphin-plugins:bazaar - Enable support for the bazaar VCS
+kde-apps/dolphin-plugins:dropbox - Enable support for the dropbox fileviewer plugin
+kde-apps/dolphin-plugins:git - Enable support for the git VCS
 kde-apps/dolphin-plugins:mercurial - Enable support for the mercurial VCS
-kde-apps/gwenview:kipi - Support for the KDE Image Plugin Interface.
+kde-apps/gwenview:kipi - Support for the KDE Image Plugin Interface
 kde-apps/kaccessible:speechd - Enable support for the speech-dispatcher speech synthesizer
 kde-apps/kalzium:editor - Enable the embedded molecule editor/viewer
 kde-apps/kalzium:solver - Enable the equation solver
@@ -3259,6 +3262,7 @@ kde-apps/kget:webkit - Enable KdeWebkit browser plugin using kde-misc/kwebkitpar
 kde-apps/kig:scripting - Support Python scripting
 kde-apps/kio-extras:phonon - Enable file audio preview plugin using media-libs/phonon
 kde-apps/kio-extras:sftp - Enable SFTP protocol support using net-libs/libssh
+kde-apps/kmines:phonon - Add sound support via media-libs/phonon
 kde-apps/kmix:canberra - Enable sound event support using media-libs/libcanberra
 kde-apps/konqueror:bookmarks - Add dependency on bookmark package.
 kde-apps/kopete:addbookmarks - Automatically add incoming urls to bookmarks.
@@ -6684,9 +6688,7 @@ sci-geosciences/gpsd:latency_timing - support latency timing information
 sci-geosciences/gpsd:ntp - Enable net-misc/ntp shared memory interface and PPS kernel support for GPS time
 sci-geosciences/gpsd:shm - export gpsd over shared memory
 sci-geosciences/gpsd:sockets - export gpsd over unix sockets
-sci-geosciences/grass:gdal - Use sci-libs/gdal for import and export of most external raster and vector map formats
 sci-geosciences/grass:geos - Use sci-libs/geos for v.buffer and adds extended options to the v.select module
-sci-geosciences/grass:gmath - Enable gmath wrapper for BLAS/Lapack (virtual/blas, virtual/lapack)
 sci-geosciences/grass:liblas - Include support for LAS and LAZ encoded LiDAR files through sci-geosciences/liblas
 sci-geosciences/grass:opencl - Enable OpenCL support
 sci-geosciences/gshhs:data - Add earth data with sci-geosciences/gshhs-data
