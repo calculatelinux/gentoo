@@ -30,13 +30,14 @@
 
 #--- END OF EXAMPLES ---
 
-# Ian Delaney <idella4@gentoo.org> (07 Dec 2015)
-# "The drizzle project is long dead, it should be removed,
-# along with dev-php/pecl-drizzle", note by grknight
-# in Bug #501060
-# Masked for removal in 30 days.
-dev-db/drizzle
-dev-php/pecl-drizzle
+# James Le Cuirot <chewi@gentoo.org> (07 Dec 2015)
+# Dead project with no revdeps. Removal in 30 days.
+dev-java/jscience
+
+# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (07 Dec 2015)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-49
 
 # Michael Orlitzky <mjo@gentoo.org> (06 Dec 2015)
 # Masked for testing of the new apache2/php7 support.
@@ -258,11 +259,6 @@ sys-fs/bedup
 # Mike Frysinger <vapier@gentoo.org> (18 Oct 2015)
 # apache-2.4.17 includes support for http2 now.
 www-apache/mod_h2
-
-# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (16 Oct 2015)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-48
 
 # Hans de Graaff <graaff@gentoo.org> (11 Oct 2015)
 # Ruby 1.9 is no longer maintained upstream since January
