@@ -19,7 +19,8 @@ if [[ $PV == *9999 ]]; then
 else
 	KEYWORDS="~amd64 ~arm ~arm64 -x86"
 	UPSTREAM_VER=0
-	SECURITY_VER=
+	SECURITY_VER=0
+	SEC_VER=1
 	GENTOO_VER=
 
 	[[ -n ${UPSTREAM_VER} ]] && \
@@ -32,7 +33,7 @@ else
 		${UPSTREAM_PATCHSET_URI}
 		${SECURITY_PATCHSET_URI}
 		${GENTOO_PATCHSET_URI}
-		https://dev.gentoo.org/~idella4/distfiles/${PN}-security-patches.tar.gz"
+		https://dev.gentoo.org/~idella4/distfiles/xen-security-patches-${SEC_VER}.tar.gz"
 fi
 
 DESCRIPTION="The Xen virtual machine monitor"
@@ -87,15 +88,19 @@ src_prepare() {
 
 	if [[ -n ${SECURITY_VER} ]]; then
 		einfo "Try to apply Xen Security patcheset"
-		source "${WORKDIR}"/patches-security/${PV}.conf
 		# apply main xen patches
+		# Add patches from tarball in devspace ~idella4 to those from ~dlan
+		# Leave this commented for now as a record of an approach; wip
+		#mkdir "${WORKDIR}"/patches-security/xen || die
+		#mv "${WORKDIR}"/{xsa15[6-9].patch,xsa160-4.6.patch} \
+		#	"${WORKDIR}"/patches-security/xen || die
+		XEN_SECURITY_MAIN="xsa156.patch xsa15[8-9].patch xsa160-4.6.patch"
 		for i in ${XEN_SECURITY_MAIN}; do
 			EPATCH_SUFFIX="patch" \
 			EPATCH_FORCE="yes" \
-				epatch "${WORKDIR}"/patches-security/xen/$i
+				epatch "${WORKDIR}"/$i
 		done
 	fi
-	epatch "${WORKDIR}"/xsa156.patch
 
 	# Gentoo's patchset
 	if [[ -n ${GENTOO_VER} ]]; then
