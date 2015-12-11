@@ -5,6 +5,7 @@
 EAPI=5
 
 KDE_TEST="forceoptional"
+QT_MINIMAL="5.5.0"
 VIRTUALX_REQUIRED="test"
 inherit kde5 pam
 
@@ -59,6 +60,14 @@ src_prepare() {
 
 	use test || sed -i \
 		-e "/add_subdirectory(autotests)/ s/^/#/" greeter/CMakeLists.txt || die
+}
+
+src_test() {
+	# requires running environment
+	local myctestargs=(
+		-E x11LockerTest
+	)
+	kde5_src_test
 }
 
 src_configure() {
