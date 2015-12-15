@@ -2,9 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI="5"
 
-inherit eutils multilib toolchain-funcs perl-functions
+PYTHON_COMPAT=( python2_7 )
+
+inherit eutils multilib toolchain-funcs perl-functions python-any-r1
 
 DESCRIPTION="easy hugepage access"
 HOMEPAGE="https://github.com/libhugetlbfs/libhugetlbfs"
@@ -15,8 +17,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
-IUSE="static-libs"
-RDEPEND="dev-lang/perl:="
+IUSE="perl static-libs test"
+
+DEPEND="test? ( ${PYTHON_DEPS} )"
+RDEPEND="perl? ( dev-lang/perl:= )"
 
 src_prepare() {
 	perl_set_version
@@ -28,6 +32,7 @@ src_prepare() {
 		-e '/^PREFIX/s:/local::' \
 		-e '1iBUILDTYPE = NATIVEONLY' \
 		-e '1iV = 1' \
+		-e '/gzip.*MANDIR/d' \
 		-e "/^LIB\(32\)/s:=.*:= $(get_libdir):" \
 		-e '/^CC\(32\|64\)/s:=.*:= $(CC):' \
 		-e "/^PMDIR = .*\/perl5\/TLBC/s::PMDIR = ${VENDOR_LIB}\/TLBC:" \
@@ -46,8 +51,15 @@ src_compile() {
 
 src_install() {
 	default
-	use static-libs || rm -f "${D}"/usr/$(get_libdir)/*.a
-	rm "${D}"/usr/bin/oprofile* || die
+	use static-libs || rm -f "${ED}"/usr/$(get_libdir)/*.a
+	rm "${ED}"/usr/bin/oprofile* || die
+	if ! use perl ; then
+		rm -r \
+			"${ED}"/usr/bin/cpupcstat \
+			"${ED}"/usr/share/man/man8/cpupcstat.8 \
+			"${ED}/${VENDOR_LIB}" \
+			|| die
+	fi
 }
 
 src_test_alloc_one() {
