@@ -30,6 +30,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Brian Evans <grknight@gentoo.org> (17 Dec 2015)
+# "The drizzle project is long dead, it should be removed,
+# along with dev-php/pecl-drizzle", by grknight
+# in Bug #501060
+# Try 2 acked by idella4
+# Masked for removal in 30 days.
+dev-db/drizzle
+dev-php/pecl-drizzle
+
 # José María Alonso Josa <nimiux@gentoo.org> (15 Dec 2015)
 # Refers to same package as dev-lisp/clx
 # Masked for removal in 30 days, bug 568188
@@ -67,10 +76,6 @@ dev-java/jscience
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
 >=www-client/chromium-49
-
-# Michael Orlitzky <mjo@gentoo.org> (06 Dec 2015)
-# Masked for testing of the new apache2/php7 support.
->=app-eselect/eselect-php-0.8.0
 
 # Mike Gilbert <floppym@gentoo.org> (06 Dec 2015)
 # Masked for testing.
@@ -111,8 +116,7 @@ dev-java/jigsaw
 
 # Brian Evans <grknight@gentoo.org> (02 Dec 2015)
 # All current targets are masked.
-# New version only works on PHP7.
-dev-php/pecl-taint
+<dev-php/pecl-taint-1.99.99
 
 # Brian Evans <grknight@gentoo.org> (02 Dec 2015)
 # Zend Opcache was integrated into PHP versions 5.5 and later
@@ -220,10 +224,6 @@ dev-tex/latex-unicode
 # Masked for removal in 30 days.
 dev-perl/Parse-CPAN-Meta
 
-# Brian Evans <grknight@gentoo.org> (06 Nov 2015)
-# Mask new versions of dev-php/pecl-yaml that only work with PHP-7+
->=dev-php/pecl-yaml-2.0
-
 # Michał Górny <mgorny@gentoo.org> (30 Oct 2015)
 # Uses unsafe ioctls that could result in data corruption. Upstream
 # is working on replacing them in the wip/dedup-syscall branch.
@@ -317,11 +317,6 @@ dev-libs/iniparser:4
 # Has race condition / failure modes that make systems unusable
 # See #551724 and duplicates
 =sys-fs/udev-init-scripts-29
-
-# Ole Markus With <olemarkus@gentoo.org> (12 Jun 2015)
-# Masking PHP 7 pre-release versions
-dev-lang/php:7.0
-=virtual/httpd-php-7.0
 
 # Ryan Hill <rhill@gentoo.org> (28 Apr 2015)
 # Moving to /lib/gentoo/functions.sh broke the eclass
