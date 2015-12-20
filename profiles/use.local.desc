@@ -1086,11 +1086,6 @@ app-pda/barry:desktop - Install the GUI desktop control panel
 app-pda/barry:gui - Install the GUI backup tool
 app-pda/gtkpod:clutter - Enable clutter support for displaying coverart
 app-pda/gtkpod:webkit - Enable webkit support for finding coverart
-app-pda/libopensync-plugin-irmc:irda - Enable infrared support
-app-pda/libopensync-plugin-syncml:http - Enable http transports
-app-pda/libopensync-plugin-syncml:obex - Enable obex transports
-app-pda/libsyncml:http - Enable http transports
-app-pda/libsyncml:obex - Enable obex transports
 app-portage/conf-update:colordiff - Use colors when displaying diffs (app-misc/colordiff)
 app-portage/eix:debug - Build with upstream's CXXFLAGS/LDFLAGS for debugging support; not recommended for normal use.
 app-portage/eix:dep - Make DEP=true the default which enables support for {,R,P}DEPEND but requires roughly double disk and memory.
@@ -5550,7 +5545,6 @@ net-irc/kvirc:dcc_video - Support video connections over DCC protocol
 net-irc/kvirc:dcc_voice - Support voice connections over DCC protocol
 net-irc/kvirc:ipc - Support inter-process communication between KVIrc processes
 net-irc/kvirc:phonon - Support Phonon for audio output
-net-irc/kvirc:qt-dbus - Support Qt-DBus
 net-irc/kvirc:transparency - Support pseudo-transparency
 net-irc/limnoria:crypt - Enables user authentication with GPG
 net-irc/ngircd:ident - Enables support for net-libs/libident
@@ -6803,6 +6797,7 @@ sci-libs/libccd:double - Use double precision floats.
 sci-libs/libghemical:mopac7 - Use sci-chemistry/mopac7 for semi-empirical calculations
 sci-libs/libghemical:mpqc - Use sci-chemistry/mpqc for quantum-mechanical calculations
 sci-libs/libsigrok:ftdi - Enable drivers that need libftdi
+sci-libs/libsigrok:parport - Enable drivers that are parallel (IEEE1284) based
 sci-libs/libsigrok:serial - Enable drivers that are serial (RS232) based
 sci-libs/libsvm:tools - Install python based tool scripts
 sci-libs/linux-gpib:firmware - Install firmware
@@ -7442,6 +7437,7 @@ sys-devel/gcc:d - Enable support for the D programming language
 sys-devel/gcc:fixed-point - Enable fixed-point arithmetic support for MIPS targets in gcc (Warning: significantly increases compile time!)
 sys-devel/gcc:go - Build the GCC Go language frontend.
 sys-devel/gcc:graphite - Add support for the framework for loop optimizations based on a polyhedral intermediate representation
+sys-devel/gcc:jit - Enable libgccjit so other applications can embed gcc for Just-In-Time compilation. This will slow down the compiler a bit as it forces all of the toolchain to be shared libs.
 sys-devel/gcc:libssp - Build SSP support into a dedicated library rather than use the code in the C library (DO NOT ENABLE THIS IF YOU DON'T KNOW WHAT IT DOES)
 sys-devel/gcc:mudflap - Add support for mudflap, a pointer use checking library
 sys-devel/gcc:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
