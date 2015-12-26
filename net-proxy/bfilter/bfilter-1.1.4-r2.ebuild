@@ -6,13 +6,13 @@ EAPI=5
 
 inherit autotools eutils flag-o-matic user
 
-DESCRIPTION="An ad-filtering web proxy featuring an effective heuristic ad-detection algorithm"
+DESCRIPTION="Ad-filtering web proxy featuring an effective heuristic ad-detection algorithm"
 HOMEPAGE="http://bfilter.sourceforge.net/"
 SRC_URI="mirror://sourceforge/bfilter/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="X debug"
 
 RDEPEND="sys-libs/zlib

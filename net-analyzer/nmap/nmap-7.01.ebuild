@@ -19,7 +19,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 
 IUSE="ipv6 libressl +nse system-lua ncat ndiff nls nmap-update nping ssl zenmap"
 NMAP_LINGUAS=( de fr hi hr it ja pl pt_BR ru zh )
@@ -132,7 +132,11 @@ src_configure() {
 
 src_compile() {
 	local directory
-	for directory in . libnetutil ncat nmap-update nping nsock/src; do
+	for directory in . libnetutil nsock/src \
+		$(usex ncat ncat '') \
+		$(usex nmap-update nmap-update '') \
+		$(usex nping nping '')
+	do
 		emake -C "${directory}" makefile.dep
 	done
 
