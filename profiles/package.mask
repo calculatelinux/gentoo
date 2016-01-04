@@ -30,6 +30,40 @@
 
 #--- END OF EXAMPLES ---
 
+# Andrey Grozin <grozin@gentoo.org> (04 Jan 2016)
+# Needs a bump and substantial ebuild rewrite
+=sci-mathematics/reduce-20110414-r1
+
+# Michael Sterrett <mr_bones_@gentoo.org> (04 Jan 2016)
+# Upstream stopped development in 2004 and doesn't work on modern systems.
+# Masked for removal on 20160203
+games-puzzle/krystaldrop
+
+# Pacho Ramos <pacho@gentoo.org> (03 Jan 2016)
+# Fails to build, bug #368873. Removal in a month
+x11-misc/xoo
+
+# Pacho Ramos <pacho@gentoo.org> (03 Jan 2016)
+# Fails to build, bug #368913. Removal in a month
+media-video/cxfe
+
+# Pacho Ramos <pacho@gentoo.org> (03 Jan 2016)
+# Fails to build, bug #369053. Removal in a month
+media-sound/freewheeling
+
+# Pacho Ramos <pacho@gentoo.org> (03 Jan 2016)
+# Fails to build, bug #369769. Removal in a month
+media-sound/gqmpeg
+
+# Pacho Ramos <pacho@gentoo.org> (03 Jan 2016)
+# Fails to build, bug #370581. Removal in a month
+media-sound/freebirth
+
+# Pacho Ramos <pacho@gentoo.org> (03 Jan 2016)
+# Obsolete lib, nothing needs it, bug #380193
+# Removal in a month
+x11-libs/libsexy
+
 # Pacho Ramos <pacho@gentoo.org> (01 Jan 2016)
 # Nothing requires this obsolete versions, bug #249418
 # Removal in a month.
