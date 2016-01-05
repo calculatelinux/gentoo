@@ -15,7 +15,7 @@ SRC_URI="
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="puppetdb selinux"
 RESTRICT="strip"
 
@@ -49,8 +49,10 @@ QA_PREBUILT="
 	/opt/puppetlabs/puppet/lib/ruby/2.1.0/x86_64-linux/json/ext/*
 	/opt/puppetlabs/puppet/lib/ruby/2.1.0/x86_64-linux/rbconfig/*
 	/opt/puppetlabs/puppet/lib/ruby/2.1.0/x86_64-linux/digest/*
+	/opt/puppetlabs/puppet/lib/ruby/2.1.0/x86_64-linux/*
 	/opt/puppetlabs/puppet/lib/engines/*
 	/opt/puppetlabs/puppet/lib/virt-what/*
+	/opt/puppetlabs/puppet/lib/*
 	/opt/puppetlabs/puppet/bin/*"
 
 pkg_setup() {
