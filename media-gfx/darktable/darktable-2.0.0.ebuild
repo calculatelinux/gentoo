@@ -41,7 +41,7 @@ CDEPEND="
 	x11-libs/cairo
 	x11-libs/gtk+:3
 	x11-libs/pango
-	colord? ( x11-misc/colord:0= )
+	colord? ( x11-libs/colord-gtk:0= )
 	cups? ( net-print/cups )
 	flickr? ( media-libs/flickcurl )
 	gphoto2? ( media-libs/libgphoto2:= )
@@ -133,6 +133,12 @@ pkg_preinst() {
 pkg_postinst() {
 	gnome2_icon_cache_update
 	fdo-mime_desktop_database_update
+
+	elog "when updating from the currently stable 1.6 series,"
+	elog "please bear in mind that your edits will be preserved during this process,"
+	elog "but it will not be possible to downgrade from 2.0 to 1.6 any more."
+	echo
+	ewarn "There will not be possible to downgrade!"
 }
 
 pkg_postrm() {
