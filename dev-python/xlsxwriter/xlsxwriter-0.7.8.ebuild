@@ -28,6 +28,10 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}"/${MY_P}
 
+# Missing from tarball
+# https://github.com/jmcnamara/XlsxWriter/issues/327
+RESTRICT=test
+
 python_test() {
 	nosetests --verbosity=3 || die
 }

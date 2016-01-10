@@ -2,12 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>dev-zero@gentoo.org</email>
-    <name>Tiziano Müller</name>
+    <email>mrueg@gentoo.org</email>
+    <name>Manuel Rüger</name>
   </maintainer>
   <maintainer>
-    <email>jlec@gentoo.org</email>
-    <name>Justin Lecher</name>
+    <email>dev-zero@gentoo.org</email>
+    <name>Tiziano Müller</name>
   </maintainer>
   <upstream>
     <remote-id type="github">git-cola/git-cola</remote-id>

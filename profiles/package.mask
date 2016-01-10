@@ -30,6 +30,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (9 Jan 2016)
+# Errorneously added. Is already in perl-core. Please uninstall.
+dev-perl/ExtUtils-Constant
+
+# Michael Palimaka <kensington@gentoo.org)> (09 Jan 2016)
+# Fails to build with newer versions of llvm. Dead upstream. No revdeps.
+# Masked for removal in 30 days. Bug #571212.
+media-libs/opengtl
+
 # Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
 # Cannot be downloaded either mirrored, bug #561114. Removal in a month
 games-fps/doom3-mitm
@@ -37,10 +46,6 @@ games-fps/doom3-mitm
 # Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
 # Cannot be downloaded either mirrored, bug #561120. Removal in a month
 games-fps/ut2003-bonuspack-cm
-
-# Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
-# Cannot be downloaded either mirrored, bug #561140. Removal in a month
-games-fps/ut2004-airbuccaneers
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
 # Cannot be downloaded either mirrored, bug #561142. Removal in a month
@@ -822,11 +827,6 @@ dev-perl/YAML-Parser-Syck
 # Bug 567532
 x11-plugins/wmium
 
-# Michael Palimaka <kensington@gentoo.org (08 Dec 2015)
-# Dead upstream. Vulnerable. Masked for removal in 30 days.
-# Bug 537524
-app-arch/ppmd
-
 # Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (07 Dec 2015)
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
@@ -1504,10 +1504,6 @@ games-fps/quake4-demo
 # Tavis Ormandy <taviso@gentoo.org> (21 Mar 2006)
 # masked pending unresolved security issues #127167
 games-roguelike/slashem
-
-# Tavis Ormandy <taviso@gentoo.org> (21 Mar 2006)
-# masked pending unresolved security issues #125902
-games-util/hearse
 
 # Robin H. Johnson <robbat2@gentoo.org> (11 Feb 2006)
 # zlib interaction is badly broken. See bug #124733.
