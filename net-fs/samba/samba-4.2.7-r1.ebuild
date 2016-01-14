@@ -14,7 +14,8 @@ MY_P="${PN}-${MY_PV}"
 SRC_PATH="stable"
 [[ ${PV} = *_rc* ]] && SRC_PATH="rc"
 
-SRC_URI="mirror://samba/${SRC_PATH}/${MY_P}.tar.gz"
+SRC_URI="mirror://samba/${SRC_PATH}/${MY_P}.tar.gz
+	https://dev.gentoo.org/~axs/distfiles/samba-disable-python-patches-${PV}.tar.xz"
 KEYWORDS="~amd64 ~hppa ~x86"
 [[ ${PV} = *_rc* ]] && KEYWORDS="~hppa"
 
@@ -44,7 +45,7 @@ CDEPEND="${PYTHON_DEPS}
 	sys-apps/attr[${MULTILIB_USEDEP}]
 	sys-libs/libcap
 	>=sys-libs/ldb-1.1.24[${MULTILIB_USEDEP}]
-	sys-libs/ncurses:0=
+	sys-libs/ncurses:0=[${MULTILIB_USEDEP}]
 	>=sys-libs/nss_wrapper-1.0.2[${MULTILIB_USEDEP}]
 	>=sys-libs/ntdb-1.0[python,${PYTHON_USEDEP},${MULTILIB_USEDEP}]
 	>=sys-libs/talloc-2.1.2[python,${PYTHON_USEDEP},${MULTILIB_USEDEP}]
@@ -62,7 +63,7 @@ CDEPEND="${PYTHON_DEPS}
 	fam? ( virtual/fam )
 	gnutls? ( dev-libs/libgcrypt:0
 		>=net-libs/gnutls-1.4.0 )
-	ldap? ( net-nds/openldap )
+	ldap? ( net-nds/openldap[${MULTILIB_USEDEP}] )
 	system-mitkrb5? ( app-crypt/mit-krb5[${MULTILIB_USEDEP}] )
 	!system-mitkrb5? ( >=app-crypt/heimdal-1.5[-ssl,${MULTILIB_USEDEP}] )
 	systemd? ( sys-apps/systemd:0= )"
@@ -82,7 +83,6 @@ S="${WORKDIR}/${MY_P}"
 PATCHES=(
 	"${FILESDIR}/${PN}-4.2.3-heimdal_compilefix.patch"
 	"${FILESDIR}/${PN}-4.2.7-pam.patch"
-	"${FILESDIR}/${PN}-4.2.7-disable-python-for-altabi.patch"
 )
 
 CONFDIR="${FILESDIR}/$(get_version_component_range 1-2)"
@@ -107,6 +107,12 @@ pkg_setup() {
 
 src_prepare() {
 	epatch ${PATCHES[@]}
+
+	# install the patches from tarball(s)
+	EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" \
+	epatch "${WORKDIR}/patches"
+
 	# Allow user patches
 	epatch_user
 	multilib_copy_sources
@@ -168,7 +174,7 @@ multilib_src_configure() {
 			--without-fam
 			--disable-gnutls
 			--disable-iprint
-			--without-ldap
+			$(use_with ldap)
 			--without-pam
 			--without-pam_smbpass
 			--without-quotas
