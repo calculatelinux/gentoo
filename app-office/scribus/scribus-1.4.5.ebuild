@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -120,12 +120,13 @@ src_install() {
 
 	if ! use scripts; then
 		rm "${ED}"/usr/share/scribus/scripts/*.py || die
-	elif ! use tk; then
-		rm "${ED}"/usr/share/scribus/scripts/{FontSample,CalendarWizard}.py || die
+	else
+		if ! use tk; then
+			rm "${ED}"/usr/share/scribus/scripts/{FontSample,CalendarWizard}.py || die
+		fi
+		python_fix_shebang "${ED}"/usr/share/scribus/scripts
+		python_optimize "${ED}"/usr/share/scribus/scripts
 	fi
-
-	python_fix_shebang "${ED}"/usr/share/scribus/scripts
-	python_optimize "${ED}"/usr/share/scribus/scripts
 
 	mv "${ED}"/usr/share/doc/${PF}/{en,html} || die
 	ln -sf html "${ED}"/usr/share/doc/${PF}/en || die
