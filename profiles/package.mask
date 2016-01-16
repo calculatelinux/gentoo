@@ -30,13 +30,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Pacho Ramos <pacho@gentoo.org> (16 Jan 2016)
+# Dead for years, not compatible with latest libsigc++ (#569514), it
+# requires either a lot of patching or move to a forked project that tries
+# to continue it. Removal in a month.
+media-sound/seq24
+
 # James Le Cuirot <chewi@gentoo.org> (14 Jan 2016)
 # Superseded by gnu-classpath. Removal in 30 days.
 dev-java/gjdoc
-
-# Sergei Trofimovich <slyfox@gentoo.org> (14 Jan 2016)
-# Masked for testing.
->=net-im/openfire-4.0.0
 
 # Michał Górny <mgorny@gentoo.org> (11 Jan 2016)
 # (on behalf of Python team)
@@ -61,10 +63,6 @@ dev-perl/ExtUtils-Constant
 # Fails to build with newer versions of llvm. Dead upstream. No revdeps.
 # Masked for removal in 30 days. Bug #571212.
 media-libs/opengtl
-
-# Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
-# Cannot be downloaded either mirrored, bug #561114. Removal in a month
-games-fps/doom3-mitm
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
 # Cannot be downloaded either mirrored, bug #561120. Removal in a month
@@ -379,12 +377,6 @@ app-i18n/scim-canna
 app-misc/lcd-stuff
 
 # Pacho Ramos <pacho@gentoo.org> (06 Jan 2016)
-# Doesn't build with current kernels, lacks a maintainer to keep it patched
-# for compat with upcoming kernel versions too, bug #557422. Removal in a
-# month.
-app-laptop/nvidiabl
-
-# Pacho Ramos <pacho@gentoo.org> (06 Jan 2016)
 # Upstream dead for ages, doesn't build, bug #558274. Removal in a month.
 net-wireless/ap-utils
 
@@ -490,11 +482,6 @@ net-misc/yaydl
 # care of its security issues long time ago. bug #474388. Removal in a
 # month.
 www-apps/gallery
-
-# Pacho Ramos <pacho@gentoo.org> (05 Jan 2016)
-# Not compatible with latest gif, one of the last consumer of old imlib, bug
-# #486248. Removal in a month.
-app-office/magicpoint
 
 # Pacho Ramos <pacho@gentoo.org> (05 Jan 2016)
 # Doesn't work with current twisted, bug #486810. Removal in a month.
@@ -817,11 +804,6 @@ games-misc/bsd-games-non-free
 # Masked for removal in 30 days.
 dev-db/drizzle
 dev-php/pecl-drizzle
-
-# José María Alonso Josa <nimiux@gentoo.org> (15 Dec 2015)
-# Refers to same package as dev-lisp/clx
-# Masked for removal in 30 days, bug 568188
-dev-lisp/cl-clx
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (11 Dec 2015)
 # Ancient, smells funny, disowned by upstream, needs syck

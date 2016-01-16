@@ -110,6 +110,11 @@ RDEPEND="${COMMON_DEPEND}
 # Other than that, the ebuild shall be fit for out-of-source build.
 DISTUTILS_IN_SOURCE_BUILD=1
 
+PATCHES=(
+	"${FILESDIR}"/${P}-test-fix-backport.patch
+	"${FILESDIR}"/${P}-test-fix-backport-2.patch
+	)
+
 pkg_setup() {
 	unset DISPLAY # bug #278524
 	use doc && DISTUTILS_ALL_SUBPHASE_IMPLS=( python2.7 )
@@ -153,11 +158,6 @@ python_prepare_all() {
 	sed \
 		-e "s:/usr/:${EPREFIX}/usr/:g" \
 		-i setupext.py || die
-
-	# https://github.com/matplotlib/matplotlib/issues/5829
-	sed \
-		-e '/rasterize_10dpi/s:5e-2:10:g' \
-		-i lib/matplotlib/tests/test_image.py || die
 
 	export XDG_RUNTIME_DIR="${T}/runtime-dir"
 	mkdir "${XDG_RUNTIME_DIR}" || die
