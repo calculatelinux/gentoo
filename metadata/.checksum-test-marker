@@ -1,0 +1,5 @@
+1453034739 Sun Jan 17 12:45:39 UTC 2016
+# Testcase for mirror network:
+# Watch the value over a day, if unchanging then
+# one or more mirrors is missing --checksum
+# Please check bug #572168 for status (review for duplicates).
