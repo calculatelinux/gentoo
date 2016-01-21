@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -149,6 +149,7 @@ RDEPEND="
 	<=dev-python/python-barbicanclient-3.3.0[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.5.2[${PYTHON_USEDEP}]
 	!~dev-python/requests-2.8.0[${PYTHON_USEDEP}]
+	!~dev-python/requests-2.9.0[${PYTHON_USEDEP}]
 	<=dev-python/requests-2.8.1[${PYTHON_USEDEP}]
 	>=dev-python/six-1.9.0[${PYTHON_USEDEP}]
 	<=dev-python/six-1.10.0[${PYTHON_USEDEP}]
@@ -195,6 +196,9 @@ RDEPEND="
 	>=dev-python/rfc3986-0.2.0[${PYTHON_USEDEP}]
 	<=dev-python/rfc3986-0.3.1[${PYTHON_USEDEP}]
 	>=dev-python/oslo-middleware-2.8.0[${PYTHON_USEDEP}]
+	!~dev-python/oslo-middleware-3.0.0[${PYTHON_USEDEP}]
+	!~dev-python/oslo-middleware-3.1.0[${PYTHON_USEDEP}]
+	!~dev-python/oslo-middleware-3.2.0[${PYTHON_USEDEP}]
 	<=dev-python/oslo-middleware-3.3.0[${PYTHON_USEDEP}]
 	>=dev-python/psutil-1.1.1[${PYTHON_USEDEP}]
 	<dev-python/psutil-2.0.0[${PYTHON_USEDEP}]

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="1"
+EAPI="5"
 JAVA_PKG_IUSE="doc examples source"
 inherit java-pkg-2 eutils java-ant-2
 
@@ -17,7 +17,7 @@ IUSE="javascript python tcl"
 
 COMMON_DEP="dev-java/commons-logging:0
 	dev-java/xalan:0
-	python? ( >=dev-java/jython-2.1-r5:0 )
+	python? ( dev-java/jython:0 )
 	javascript? ( dev-java/rhino:1.6 )
 	tcl? ( dev-java/jacl:0 )"
 RDEPEND=">=virtual/jre-1.4

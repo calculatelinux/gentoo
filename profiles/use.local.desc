@@ -673,6 +673,7 @@ app-emulation/rkt:rkt_stage1_src - Build the stage1.aci from source
 app-emulation/spice:smartcard - Enable smartcard remoting using app-emulation/libcacard
 app-emulation/spice-vdagent:consolekit - Use sys-auth/consolekit to determine the master vdagentd in case of multiple running vdagentds (highly recommended)
 app-emulation/uae:scsi - Enable the uaescsi.device
+app-emulation/vagrant:virtualbox - Use VirtualBox provider.
 app-emulation/vice:ethernet - Enable ethernet emulation
 app-emulation/vice:fullscreen - Enable the ability to run fullscreen
 app-emulation/vice:sdlsound - Use media-libs/libsdl for sound support
@@ -1549,6 +1550,11 @@ dev-haskell/crypto-api:all_cpolys - Build all the CMAC polynomes up to 10000 bit
 dev-haskell/crypto-conduit:conduit11 - Use conduit >= 1.1.
 dev-haskell/crypto-pubkey:benchmark - Build benchmarks.
 dev-haskell/cryptohash:cryptoapi - Defines crypto-api instances
+dev-haskell/cryptonite:integer-gmp - Whether or not to use GMP for some functions
+dev-haskell/cryptonite:support_aesni - allow compilation with AESNI on system and architecture that supports it
+dev-haskell/cryptonite:support_deepseq - add deepseq instances for cryptographic types
+dev-haskell/cryptonite:support_pclmuldq - Allow compilation with pclmuldq on architecture that supports it
+dev-haskell/cryptonite:support_rdrand - allow compilation with AESNI on system and architecture that supports it
 dev-haskell/dav:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/distributive:lib-werror - Compile with the ghc -Werror option
 dev-haskell/encoding:systemencoding - Provide the getSystemEncoding action to query the locale.
@@ -1556,7 +1562,8 @@ dev-haskell/entropy:halvm - Build for the HaLVM.
 dev-haskell/extra:network-uri - use network-uri package
 dev-haskell/filestore:maxcount - Make use of a recent (>= 2.3.0) Darcs feature which vastly improves the performance of 'latest'. You should disable this flag if you plan to use gitit with an older version of Darcs, or 'latest' will raise an error.
 dev-haskell/glib:closure_signals - Use the the GClosure-based signals implementation.
-dev-haskell/gtk:fmode-binary - Set the default file translation mode for file I/O operations to _O_BINARY. Some GTK libraries open image files without specifing binary mode. If you have trouble loading gtk in ghci, then it may help to turn this option off.
+dev-haskell/gtk:deprecated - Include definitions in this library that are considered obsolete.
+dev-haskell/gtk:fmode-binary - Set the default file translation mode for file I/O operations to _O_BINARY.
 dev-haskell/gtk:gio - Depend on GIO package, thereby enabling certain features.
 dev-haskell/gtk2hs-buildtools:closuresignals - Use the the GClosure-based signals implementation.
 dev-haskell/gtk3:fmode-binary - Set the default file translation mode for file I/O operations to _O_BINARY.
@@ -1665,7 +1672,8 @@ dev-haskell/tasty-quickcheck:old-quickcheck - Use Quick-Check < 2.7.
 dev-haskell/texmath:executable - Compile test executable.
 dev-haskell/texmath:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/text:developer - operate in developer mode
-dev-haskell/tls:compat - Accept SSLv2 compatible handshake
+dev-haskell/tls:compat - Accept SSLv2 compatible handshake.
+dev-haskell/tls:network - Use the base network library.
 dev-haskell/transformers-base:orphaninstances - Build instances for orphan datatypes.
 dev-haskell/transformers-compat:three - Use transformers-0.3
 dev-haskell/unix-compat:old-time - build against old-time package
@@ -2179,7 +2187,6 @@ dev-ml/dose3:parmap - Adds multi-core CPU support via dev-ml/parmap.
 dev-ml/dose3:rpm4 - Adds support for handling rpm4 files.
 dev-ml/dose3:zip - Adds support for handling zip files.
 dev-ml/js_of_ocaml:deriving - Enable dev-ml/deriving support for improving the type safety.
-dev-ml/js_of_ocaml:deriving-ocsigen - Enable deriving-ocsigen for improving the type safety.
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/lablgtk:gnomecanvas - Enable libgnomecanvas bindings compilation.
 dev-ml/lablgtk:sourceview - Enable GtkSourceView support
@@ -2946,6 +2953,9 @@ games-emulation/mupen64plus-video-glide64mk2:hires - Support hi-resolution textu
 games-emulation/mupen64plus-video-rice:gles2 - Use GLES2 instead of OpenGL
 games-emulation/pcsxr:cdio - Use libcdio for CD support
 games-emulation/pcsxr:sdl - Use SDL sound backend (other parts of SDL are used unconditionally)
+games-emulation/ppsspp:qt4 - Adds support for the Qt GUI/Application Toolkit version 4.x
+games-emulation/ppsspp:qt5 - Adds support for the Qt GUI/Application Toolkit version 5.x
+games-emulation/ppsspp:sdl - Adds support for Simple Direct Layer (media library)
 games-emulation/sdlmame:arcade - Enable the Multiple Arcade Machine Emulator for arcade games support
 games-emulation/sdlmame:mess - Enable the Multi Emulator Super System for game system support
 games-emulation/sdlmame:tools - Build development tools shared between sdlmame and sdlmess
@@ -3277,7 +3287,10 @@ kde-apps/kdebase-meta:wallpapers - Install the KDE wallpapers
 kde-apps/kdebase-runtime-meta:crash-reporter - Builds a gui tool to submit crash information to the upstream backtracker
 kde-apps/kdebase-runtime-meta:minimal - Install a Plasma 5 compatible subset of the package
 kde-apps/kdebase-runtime-meta:oldwallet - Install kde-apps/kwalletd on a minimal setup for migration purposes
+kde-apps/kdecore-meta:minimal - Disable install of various KDE SC 4 based packages
+kde-apps/kdecore-meta:wallpapers - Install the KDE wallpapers
 kde-apps/kdenetwork-meta:ppp - Enable support for net-dialup/ppp.
+kde-apps/kdenlive:gles2 - Use GLES 2.0 or later instead of full OpenGL
 kde-apps/kdepim-common-libs:google - Google service integration via net-libs/libkgapi
 kde-apps/kdepim-runtime:facebook - Facebook service integration via net-libs/libkfbapi
 kde-apps/kdepim-runtime:google - Google service integration via net-libs/libkgapi
@@ -3334,6 +3347,7 @@ kde-apps/okular:dpi - DPI detection support for PDF rendering via x11-libs/libks
 kde-apps/okular:ebook - Add E-Book support
 kde-apps/okular:kde - Enable kactivities support
 kde-apps/okular:mobi - Add mobipocket support
+kde-apps/spectacle:kipi - Enable support for the KDE Image Plugin Interface
 kde-apps/step:qalculate - Enable the libqalculate library for unit conversion
 kde-base/kdebase-startkde:wallpapers - Install the KDE wallpapers
 kde-base/kdelibs:opengl - Enable OpenGL support for Plasma (GLApplet)
@@ -3637,6 +3651,7 @@ mail-mta/courier:fax - Enables fax support in the courier mail server
 mail-mta/courier:norewrite - Prevents courier mail server from mangling virtual user addresses when sending
 mail-mta/courier:web - Enable the web interface
 mail-mta/courier:webmail - Enable the webmail interface
+mail-mta/exim:dane - Adds support for DNS-based Authentication of Named Entities
 mail-mta/exim:dcc - Adds support for Distributed Checksum Clearinghouse (DCC)
 mail-mta/exim:dkim - Adds support for DomainKeys Identified Mail (DKIM)
 mail-mta/exim:dlfunc - Install local_scan.h header to compile separate dlfunc libraries
@@ -4988,6 +5003,7 @@ net-analyzer/icinga-web:pnp - Enables pnp4nagios integration
 net-analyzer/icinga2:classicui - Adds support for the old interface
 net-analyzer/icinga2:console - Adds support for line-editing in the console
 net-analyzer/icinga2:lto - Adds support for link time optimization
+net-analyzer/icinga2:mail - Allows for mailing of alerts
 net-analyzer/icinga2:nano-syntax - Adds support for syntax used in the nano editor
 net-analyzer/icinga2:plugins - Adds support for nagios plugins
 net-analyzer/icinga2:studio - Adds support for Icinga-studio

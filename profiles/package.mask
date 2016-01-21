@@ -30,6 +30,23 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Sterrett <mr_bones_@gentoo.org> (20 Jan 2016)
+# Buggy and no updates in 9 years.
+# Masked for removal on 20160219
+games-roguelike/slashem
+
+# Michael Sterrett <mr_bones_@gentoo.org> (20 Jan 2016)
+# Upstream went away.  No updates in 8 years.
+# Masked for removal on 20160219
+games-strategy/attal
+
+# Sergey Popov <pinkbyte@gentoo.org> (20 Jan 2016)
+# Mask new versions of Boost - they are known to cause breakages
+~dev-util/boost-build-1.60.0
+~dev-libs/boost-1.60.0
+~dev-util/boost-build-1.59.0
+~dev-libs/boost-1.59.0
+
 # Michael Orlitzky <mjo@gentoo.org> (18 Jan 2016)
 # Depends on a masked version of mod_perl. Feel free
 # to unmask as soon as mod_perl supports apache-2.4.
@@ -96,24 +113,8 @@ dev-perl/ExtUtils-Constant
 media-libs/opengtl
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
-# Cannot be downloaded either mirrored, bug #561120. Removal in a month
-games-fps/ut2003-bonuspack-cm
-
-# Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
 # Cannot be downloaded either mirrored, bug #561142. Removal in a month
 games-fps/ut2004-alienswarm
-
-# Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
-# Cannot be downloaded either mirrored, bug #561144. Removal in a month
-games-fps/ut2004-fragops
-
-# Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
-# Cannot be downloaded either mirrored, bug #561146. Removal in a month
-games-fps/ut2004-hamsterbash
-
-# Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
-# Cannot be downloaded either mirrored, bug #561148. Removal in a month
-games-fps/ut2004-ultraduel
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
 # Cannot be downloaded either mirrored, bug #561150. Removal in a month
@@ -122,24 +123,6 @@ games-rpg/sacred-gold
 # Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
 # Cannot be downloaded either mirrored, bug #561154. Removal in a month
 games-strategy/coldwar
-
-# Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
-# Cannot be downloaded either mirrored, bug #561162. Removal in a month
-games-fps/ut2003-bonuspack-de
-
-# Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
-# Cannot be downloaded either mirrored, bug #561166
-# The ebuild needs to be either adapted to the new file or rely and trust
-# the file from a new SRC_URI. Removal in a month.
-games-fps/ut2004-bonuspack-cbp2
-
-# Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
-# Cannot be downloaded either mirrored, bug #561168. Removal in a month
-games-fps/ut2004-cor
-
-# Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
-# Cannot be downloaded either mirrored, bug #561172. Removal in a month
-games-fps/ut2004-crossfire
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
 # Cannot be downloaded either mirrored, bug #561176. Removal in a month
@@ -535,11 +518,6 @@ app-mobilephone/kannel-sqlbox
 net-proxy/dansguardian
 
 # Pacho Ramos <pacho@gentoo.org> (05 Jan 2016)
-# Needs to be bumped but it lacks maintainer, bug #505124. Removal in a
-# month.
-app-emulation/vagrant
-
-# Pacho Ramos <pacho@gentoo.org> (05 Jan 2016)
 # Cannot be download, license is incorrect, bug #505752. Removal in a month.
 games-strategy/coldwar-demo
 
@@ -804,11 +782,6 @@ media-video/vmaid
 # Bug 507914
 app-doc/ebookmerge
 
-# Michael Sterrett <mr_bones_@gentoo.org> (21 Dec 2015)
-# Vanished from the internet. (bug #561148)
-# Masked for removal on 20160120
-games-fps/ut2004-ultraduel
-
 # Patrick Lauer <patrick@gentoo.org> (20 Dec 2015)
 # Mask TOFU release that doesn't work #567768 and friends
 =app-crypt/gkeys-gen-0.1-r1
@@ -816,12 +789,6 @@ games-fps/ut2004-ultraduel
 # Patrick Lauer <patrick@gentoo.org> (20 Dec 2015)
 # Ebuild uninstallable #557090
 =app-crypt/gkeys-0.1-r1
-
-# Michael Sterrett <mr_bones_@gentoo.org> (18 Dec 2015)
-# Unmaintained and no reason to use it or keep it around
-# when games-roguelike/rogue is a better choice.
-# Masked for removal on 20160117
-games-misc/bsd-games-non-free
 
 # Brian Evans <grknight@gentoo.org> (17 Dec 2015)
 # "The drizzle project is long dead, it should be removed,
@@ -967,11 +934,6 @@ dev-libs/iniparser:4
 # it remains in the tree for now in case there is a need
 # for it for upgrading old user profiles, etc.
 ~mail-client/thunderbird-24.8.0
-
-# Sergey Popov <pinkbyte@gentoo.org> (13 Jul 2015)
-# Mask new version of Boost - it's known to cause breakages
-~dev-util/boost-build-1.58.0
-~dev-libs/boost-1.58.0
 
 # Patrick Lauer <patrick@gentoo.org> (1 Jul 2015)
 # Wrong version #553670
