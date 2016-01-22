@@ -1778,14 +1778,12 @@ dev-java/logback:tomcat - Builds Apache Tomcat support
 dev-java/lucene:contrib - Include extra functionality from contrib/
 dev-java/miglayout:swt - Add support for the SWT toolkit.
 dev-java/netbeans-nb:keychain - Automatically starts keychain on netbeans start and loads specified keys so Netbeans can use them.
-dev-java/oracle-jdk-bin:awt - Install non-headless AWT libraries, needed by some GUIs (used to be X flag)
 dev-java/oracle-jdk-bin:derby - Install bundled Derby (Java database)
 dev-java/oracle-jdk-bin:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
 dev-java/oracle-jdk-bin:javafx - Install JavaFX libraries
 dev-java/oracle-jdk-bin:jce - Install Java Cryptographic Extension Unlimited Strength Jurisdiction Policy Files
 dev-java/oracle-jdk-bin:pax_kernel - Use paxctl to mark the JVM binaries
 dev-java/oracle-jdk-bin:source - Install JVM (and optionally JavaFX) sources
-dev-java/oracle-jre-bin:awt - Install non-headless AWT libraries, needed by some GUIs (used to be X flag)
 dev-java/oracle-jre-bin:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
 dev-java/oracle-jre-bin:javafx - Install JavaFX libraries
 dev-java/oracle-jre-bin:jce - Install Java Cryptographic Extension Unlimited Strength Jurisdiction Policy Files
@@ -2535,7 +2533,6 @@ dev-qt/qtgui:tuio - Build plugin to receive touch events over the TUIO protocol
 dev-qt/qtgui:xcb - Build the XCB platform plugin and enable X11 integration
 dev-qt/qthelp:compat - Build the extra compatibility layer required by a few packages, see http://blog.qt.digia.com/blog/2010/06/22/qt-assistant-compat-version-available-as-extra-source-package/
 dev-qt/qthelp:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtmultimedia:egl - Enable EGL integration
 dev-qt/qtmultimedia:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtmultimedia:gles2 - Enable EGL/GLES2 integration
 dev-qt/qtmultimedia:gstreamer - Enable audio support via media-libs/gstreamer:1.0
@@ -7909,6 +7906,7 @@ www-client/firefox:system-icu - Use the system-wide dev-libs/icu instead of bund
 www-client/firefox:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled.
 www-client/firefox:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
 www-client/firefox:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
+www-client/google-chrome:linguas_fake_bidi - Install fake-bidi translation
 www-client/google-chrome:plugins - Add system plugins path to launcher
 www-client/google-chrome-beta:linguas_fake_bidi - Install fake-bidi translation
 www-client/google-chrome-beta:plugins - Add system plugins path to launcher
