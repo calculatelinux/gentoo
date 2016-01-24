@@ -30,6 +30,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Orlitzky <mjo@gentoo.org> (22 Jan 2016)
+# Masked for testing of new build system.
+>=app-eselect/eselect-php-0.9.0
+
 # Alexis Ballier <aballier@gentoo.org> (22 Jan 2016)
 # Breaks some of its revdeps
 # https://bugs.gentoo.org/show_bug.cgi?id=572552
@@ -772,16 +776,6 @@ dev-perl/SpeedyCGI
 # Masked for removal in 30 days.
 media-tv/xawtv
 
-# Michael Palimaka <kensington@gentoo.org> (22 Dec 2015)
-# Fails to build. Dead upstream. Masked for removal in 30 days.
-# Bug 566446
-media-video/vmaid
-
-# Michael Palimaka <kensington@gentoo.org> (22 Dec 2015)
-# No longer works. Dead upstream. Masked for removal in 30 days.
-# Bug 507914
-app-doc/ebookmerge
-
 # Patrick Lauer <patrick@gentoo.org> (20 Dec 2015)
 # Mask TOFU release that doesn't work #567768 and friends
 =app-crypt/gkeys-gen-0.1-r1
@@ -866,11 +860,6 @@ virtual/python-imaging
 # Keep it masked until they are done. sys-fs/duperemove is
 # the suggested replacement for the meantime.
 sys-fs/bedup
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (29 Oct 2015)
-# Mask until it is decided how to address xorg-server file collisions #564358
-=x11-drivers/xf86-input-evdev-2.10.0
-=x11-drivers/xf86-input-evdev-2.10.1
 
 # Ian Delaney <idella4@gentoo.org> (27 Oct 2015)
 # fails to build dev-lisp/sbcl-1.2.16 #563812

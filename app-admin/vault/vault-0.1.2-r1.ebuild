@@ -1,27 +1,32 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI=5
 
-inherit fcaps golang-build systemd user
+inherit eutils fcaps golang-build systemd user
 
-KEYWORDS="~amd64"
+GO_PN="github.com/hashicorp/${PN}"
+
 DESCRIPTION="A tool for managing secrets"
 HOMEPAGE="https://vaultproject.io/"
-GO_PN="github.com/hashicorp/${PN}"
-LICENSE="MPL-2.0"
+SRC_URI="
+	https://${GO_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/mitchellh/gox/archive/v0.3.0.tar.gz -> gox-0.3.0.tar.gz
+	https://github.com/mitchellh/iochan/archive/b584a329b193e206025682ae6c10cdbe03b0cd77.tar.gz -> iochan-b584a329b193e206025682ae6c10cdbe03b0cd77.tar.gz"
+
 SLOT="0"
+LICENSE="MPL-2.0"
+KEYWORDS="~amd64"
 IUSE=""
+
 RESTRICT="test"
 
 DEPEND="dev-go/go-oauth2:="
 RDEPEND=""
 
-SRC_URI="https://${GO_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-https://github.com/mitchellh/gox/archive/v0.3.0.tar.gz -> gox-0.3.0.tar.gz
-https://github.com/mitchellh/iochan/archive/b584a329b193e206025682ae6c10cdbe03b0cd77.tar.gz -> iochan-b584a329b193e206025682ae6c10cdbe03b0cd77.tar.gz"
 STRIP_MASK="*.a"
+
 S="${WORKDIR}/src/${GO_PN}"
 
 FILECAPS=(
@@ -48,7 +53,7 @@ src_unpack() {
 	export GOPATH=${WORKDIR}:${WORKDIR}/src/github.com/hashicorp/vault/Godeps/_workspace:$(get_golibdir_gopath)
 
 	while read -r -d '' x; do
-		rm -rf "${GOROOT}/src/${x}" "${GOROOT}/pkg/${KERNEL}_${ARCH}/${x}"{,.a} || die
+		rm -rf "${GOROOT}/src/${x}" "${GOROOT}/pkg/$(go env GOOS)_$(go env GOARCH)/${x}"{,.a} || die
 	done < <(find "${WORKDIR}/src/github.com/hashicorp/vault/Godeps/_workspace/src" -maxdepth 3 -mindepth 3 -type d -print0)
 
 	mkdir -p "${GOROOT}/src/github.com/mitchellh" || die
@@ -85,17 +90,20 @@ src_install() {
 	fowners ${PN}:${PN} /var/log/${PN}
 
 	dobin bin/${PN}
-	find "${WORKDIR}"/{pkg,src} -name '.git*' -exec rm -rf {} \; 2>/dev/null
-	find "${WORKDIR}"/src/${GO_PN} -mindepth 1 -maxdepth 1 -type f -delete
+
+	egit_clean "${WORKDIR}"/{pkg,src}
+
+	find "${WORKDIR}"/src/${GO_PN} -mindepth 1 -maxdepth 1 -type f -delete || die
+
 	while read -r -d '' x; do
 		x=${x#${WORKDIR}/src}
-		[[ -d ${WORKDIR}/pkg/${KERNEL}_${ARCH}/${x} ||
-			-f ${WORKDIR}/pkg/${KERNEL}_${ARCH}/${x}.a ]] && continue
+		[[ -d ${WORKDIR}/pkg/$(go env GOOS)_$(go env GOARCH)/${x} ||
+			-f ${WORKDIR}/pkg/$(go env GOOS)_$(go env GOARCH)/${x}.a ]] && continue
 		rm -rf "${WORKDIR}"/src/${x}
 	done < <(find "${WORKDIR}"/src/${GO_PN} -mindepth 1 -maxdepth 1 -type d -print0)
 	insopts -m0644 -p # preserve timestamps for bug 551486
-	insinto /usr/lib/go/pkg/${KERNEL}_${ARCH}/${GO_PN%/*}
-	doins -r "${WORKDIR}"/pkg/${KERNEL}_${ARCH}/${GO_PN}
+	insinto /usr/lib/go/pkg/$(go env GOOS)_$(go env GOARCH)/${GO_PN%/*}
+	doins -r "${WORKDIR}"/pkg/$(go env GOOS)_$(go env GOARCH)/${GO_PN}
 	insinto /usr/lib/go/src/${GO_PN%/*}
 	doins -r "${WORKDIR}"/src/${GO_PN}
 }
