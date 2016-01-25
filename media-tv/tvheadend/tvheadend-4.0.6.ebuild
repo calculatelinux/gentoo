@@ -6,36 +6,38 @@ EAPI=5
 
 inherit eutils linux-info systemd toolchain-funcs user
 
+DTV_SCAN_TABLES_VERSION="2015-02-08-f2053b3"
+
 DESCRIPTION="Tvheadend is a TV streaming server and digital video recorder"
 HOMEPAGE="https://tvheadend.org/"
 SRC_URI="https://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-		dvbscan? ( http://linuxtv.org/downloads/dtv-scan-tables/dtv-scan-tables-2015-02-08-f2053b3.tar.bz2 )"
+		dvbscan? ( http://linuxtv.org/downloads/dtv-scan-tables/dtv-scan-tables-${DTV_SCAN_TABLES_VERSION}.tar.bz2 )"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="avahi ccache capmt constcw +cwc dbus +dvb +dvbscan epoll ffmpeg hdhomerun libav iconv imagecache inotify iptv satip +timeshift uriparser xmltv zlib"
+IUSE="avahi capmt constcw +cwc dbus +dvb +dvbscan ffmpeg hdhomerun libav imagecache inotify iptv satip +timeshift uriparser xmltv zlib"
 
 RDEPEND="dev-libs/openssl:=
+	virtual/libiconv
 	avahi? ( net-dns/avahi )
-	capmt? ( virtual/linuxtv-dvb-headers )
-	ccache? ( dev-util/ccache sys-libs/zlib )
 	dbus? ( sys-apps/dbus )
-	dvb? ( virtual/linuxtv-dvb-headers )
 	ffmpeg? (
 		!libav? ( media-video/ffmpeg:0= )
 		libav? ( media-video/libav:= )
 	)
 	hdhomerun? ( media-libs/libhdhomerun )
-	iconv? ( virtual/libiconv )
-	imagecache? ( net-misc/curl )
 	uriparser? ( dev-libs/uriparser )
-	zlib? ( sys-libs/zlib )
-	xmltv? ( media-tv/xmltv )"
+	zlib? ( sys-libs/zlib )"
 
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
+	dvb? ( virtual/linuxtv-dvb-headers )
+	capmt? ( virtual/linuxtv-dvb-headers )
 	virtual/pkgconfig"
+
+RDEPEND+="
+	xmltv? ( media-tv/xmltv )"
 
 CONFIG_CHECK="~INOTIFY_USER"
 
@@ -47,7 +49,7 @@ src_unpack() {
 	if use dvbscan; then
 		mkdir "${S}/data/dvb-scan" || die
 		cd "${T}" || die
-		unpack dtv-scan-tables-2015-02-08-f2053b3.tar.bz2
+		unpack dtv-scan-tables-${DTV_SCAN_TABLES_VERSION}.tar.bz2
 		rmdir "${S}/data/dvb-scan" || die
 		mv "${T}/usr/share/dvb" "${S}/data/dvb-scan" || die
 
@@ -63,23 +65,19 @@ pkg_setup() {
 src_prepare() {
 	# remove '-Werror' wrt bug #438424
 	sed -e 's:-Werror::' -i Makefile || die 'sed failed!'
-	epatch "${FILESDIR}/${PV}-use-glibc-version-iconv.patch"
 }
 
 src_configure() {
 	econf --prefix="${EPREFIX}"/usr \
 		--datadir="${EPREFIX}"/usr/share \
-		--mandir="${EPREFIX}"/usr/share/man/man1 \
+		--disable-ccache \
 		$(use_enable avahi) \
-		$(use_enable ccache) \
 		$(use_enable capmt) \
 		$(use_enable constcw) \
 		$(use_enable cwc) \
 		$(use_enable dbus) \
 		$(use_enable dvb linuxdvb) \
 		$(use_enable dvbscan) \
-		$(use_enable epoll) \
-		--disable-kqueue \
 		$(use_enable ffmpeg libav) \
 		$(use_enable hdhomerun hdhomerun_client) \
 		$(use_enable imagecache) \
