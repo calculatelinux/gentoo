@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=dev-perl/Module-Pluggable-3.1 >=dev-perl/Config-Tiny-2 >=dev-perl/Email-Address-1.88.9 dev-perl/List-MoreUtils dev-perl/IO-String dev-perl/perltidy >=dev-perl/PPI-1.220 dev-perl/PPIx-Utilities >=dev-perl/PPIx-Regexp-0.27.0 dev-perl/Pod-Spell >=dev-perl/set-scalar-1.20 dev-perl/File-HomeDir dev-perl/File-Which dev-perl/B-Keywords >=dev-perl/Readonly-2 dev-perl/Exception-Class dev-perl/String-Format >=virtual/perl-version-0.77 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/T/TH/THALJEF/Perl-Critic-1.123.tar.gz
-_eclasses_=eutils	8982475656ba7ade9b3201397efbd612	multilib	3972ca401cf7dbb430df9995f5d8d580	multiprocessing	e32940a7b2a9992ad217eccddb84d548	perl-functions	15aff0b9cba2282790142295ceb6be0c	perl-module	b2108b3c85ac7a6a6a9b035b54f6813c	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85	unpacker	1d149d9bda7723e740cfd28118f27813
+_eclasses_=eutils	28fb3e5852485af1c348d446b0b98389	multilib	3972ca401cf7dbb430df9995f5d8d580	multiprocessing	e32940a7b2a9992ad217eccddb84d548	perl-functions	15aff0b9cba2282790142295ceb6be0c	perl-module	b2108b3c85ac7a6a6a9b035b54f6813c	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85	unpacker	1d149d9bda7723e740cfd28118f27813
 _md5_=383494debf303bf5569bf409b759d285

@@ -43,12 +43,6 @@ app-cdr/webcdwriter
 # Now part of eselect-java. Removal in 30 days.
 app-eselect/eselect-maven
 
-# Alexis Ballier <aballier@gentoo.org> (22 Jan 2016)
-# Breaks some of its revdeps
-# https://bugs.gentoo.org/show_bug.cgi?id=572552
-# https://github.com/ros/console_bridge/pull/31
-=dev-libs/console_bridge-0.3.0
-
 # Michael Sterrett <mr_bones_@gentoo.org> (20 Jan 2016)
 # Buggy and no updates in 9 years.
 # Masked for removal on 20160219
@@ -725,31 +719,15 @@ media-video/bombono-dvd
 # Removal in a month.
 sci-electronics/gspeakers
 
-# Michael Sterrett <mr_bones_@gentoo.org> (30 Dec 2015)
-# Upstream has gone away and games-strategy/xbattleai is
-# basically a superset anyhow.
-# Masked for removal on 20160129
-games-strategy/xbattle
-
 # Victor Ostorga <vostorga@gentoo.org> (30 Dec 2015)
 # Mask this liferea version because upstream released it broken
 =net-news/liferea-1.10.17
-
-# Michael Sterrett <mr_bones_@gentoo.org> (30 Dec 2015)
-# Unnecessary with newer version of games-simulation/flightgear
-# Masked for removal on 20160129
-games-simulation/fgrun
 
 # Justin Lecher <jlec@gentoo.org> (29 Dec 2015)
 # Fails to build and test runs
 # No reverse deps
 # #370021, #478614, #513964
 sci-libs/libbufr
-
-# Michael Palimaka <kensington@gentoo.org> (27 Dec 2015)
-# Fails to build. Dead upstream. Masked for removal in 30 days.
-# Bug 541522
-dev-util/pmk
 
 # Mikle Kolyada <zlogene@gentoo.org> (26 Dec 2015)
 # Dead upstream (last activity in 2003)
@@ -919,12 +897,6 @@ dev-libs/iniparser:4
 # Has race condition / failure modes that make systems unusable
 # See #551724 and duplicates
 =sys-fs/udev-init-scripts-29
-
-# Ryan Hill <rhill@gentoo.org> (28 Apr 2015)
-# Moving to /lib/gentoo/functions.sh broke the eclass
-# by changing output it relies on. See bug #504118,
-# 547586, and 547962.
->=sys-devel/gcc-config-1.8-r1
 
 # Patrick Lauer <patrick@gentoo.org> (10 Apr 2015)
 # Breaks pretty much all consumers, like samba
