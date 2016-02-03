@@ -24,10 +24,9 @@ DEPEND="${RDEPEND}
 
 DOCS=( README.rst )
 
-python_test() {
-	py.test colorlog || die
-}
+# https://github.com/borntyping/python-colorlog/issues/28
+RESTRICT=test
 
-python_install_all() {
-	distutils-r1_python_install_all
+python_test() {
+	py.test -v -v || die
 }
