@@ -13,11 +13,13 @@ HOMEPAGE="https://github.com/mirage/ocaml-ipaddr"
 SRC_URI="https://github.com/mirage/ocaml-ipaddr/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="ISC"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-ml/sexplib:="
+DEPEND="dev-ml/sexplib:=
+	<dev-ml/sexplib-113.01.00
+"
 RDEPEND="${DEPEND}"
 
 DOCS=( CHANGES README.md )

@@ -30,6 +30,32 @@
 
 #--- END OF EXAMPLES ---
 
+# James Le Cuirot <chewi@gentoo.org> (07 Feb 2016)
+# BioJava depends on commons-dbcp:0, which requires Java 6. Even the
+# latest "legacy" version 1.9.1 does so and no one wants to do the
+# difficult bump to 4.1.0. Mauve depends on BioJava but being a very
+# outdated live SVN ebuild, it probably doesn't work anyway. This goes
+# for Mauve Aligner too. Removal in 30 days. See bug #556470.
+sci-biology/biojava
+sci-biology/mauve
+sci-biology/mauvealigner
+
+# James Le Cuirot <chewi@gentoo.org> (07 Feb 2016)
+# Masked until 2.0 final arrives, which hopefully won't depend on
+# commons-dbcp:0 as that requires Java 6. Note that the 2.0 in the
+# tree should have actually been 2.0_beta1. There are no revdeps.
+dev-java/jcs
+
+# Wolfram Schlich <wschlich@gentoo.org> (06 Feb 2016)
+# Mask live ebuild
+=net-im/mcabber-9999
+
+# Davide Pesavento <pesa@gentoo.org> (06 Feb 2016)
+# Masked for removal in 30 days. Doesn't build against recent PyQt4
+# versions, bug 527572, not trivial to fix. Upstream doesn't seem to
+# care anymore, last release was in 2012. Zero reverse deps.
+dev-python/PyQtMobility
+
 # James Le Cuirot <chewi@gentoo.org> (03 Feb 2016)
 # Built into Java since 1.5. Ancient and doesn't build with
 # Java 8. Removal in 30 days. See bug #544038.
@@ -106,8 +132,12 @@ dev-java/gjdoc
 # whether it's called via the Python wrapper shebang, or symlinked
 # directly. eselect-python uses the C wrapper rather than Python wrapper
 # to fix Prefix support, #568974.
+# The 2.3 version uses completely new configuration format which
+# requires much more testing.
 >=app-eselect/eselect-python-20151117-r3
 >=dev-lang/python-exec-2.2
+>=app-eselect/eselect-python-20160207
+>=dev-lang/python-exec-2.3
 
 # Aaron W. Swenson <titanofold@gentoo.org> (11 Jan 2016)
 # Masked for removal after 2016-03-11. Package hasn't been updated in
@@ -252,10 +282,6 @@ media-sound/mimd
 # Pacho Ramos <pacho@gentoo.org> (06 Jan 2016)
 # Fails to build, bug #514826. Removal in a month.
 sys-cluster/gfs-kernel
-
-# Pacho Ramos <pacho@gentoo.org> (06 Jan 2016)
-# Fails to build, bug #514832. Removal in a month.
-x11-misc/matchbox-panel-manager
 
 # Pacho Ramos <pacho@gentoo.org> (06 Jan 2016)
 # Unmaintained, security issues, bug #515272. Removal in a month.
@@ -523,11 +549,6 @@ media-plugins/gst-plugins-mimic
 media-sound/giada
 
 # Pacho Ramos <pacho@gentoo.org> (05 Jan 2016)
-# Old version, upstream moved to kannel long time ago, bug #493712
-# Removal in a month.
-app-mobilephone/kannel-sqlbox
-
-# Pacho Ramos <pacho@gentoo.org> (05 Jan 2016)
 # Doesn't work properly (#519732), doesn't build (#503246). Removal in a
 # month.
 net-proxy/dansguardian
@@ -651,13 +672,6 @@ dev-util/cocom
 dev-ada/booch_components
 
 # Pacho Ramos <pacho@gentoo.org> (01 Jan 2016)
-# Fails to build, bug #298700
-# Removal in a month.
-dev-java/istack-commons-tools
-dev-java/jax-ws-tools
-dev-java/jaxb-tools
-
-# Pacho Ramos <pacho@gentoo.org> (01 Jan 2016)
 # Unresolved security issues, bug #324017
 # Removal in a month.
 sys-libs/nss-db
@@ -723,11 +737,6 @@ app-office/passepartout
 # Removal in a month.
 media-video/bombono-dvd
 
-# Pacho Ramos <pacho@gentoo.org> (31 Dec 2015)
-# Upstream dead, doesn't compile with libsigc++-2.6, bug #569540
-# Removal in a month.
-sci-electronics/gspeakers
-
 # Victor Ostorga <vostorga@gentoo.org> (30 Dec 2015)
 # Mask this liferea version because upstream released it broken
 =net-news/liferea-1.10.17
@@ -767,11 +776,6 @@ media-tv/xawtv
 dev-db/drizzle
 dev-php/pecl-drizzle
 
-# Andreas K. Huettel <dilfridge@gentoo.org> (11 Dec 2015)
-# Ancient, smells funny, disowned by upstream, needs syck
-# Masked for removal in 30 days, bug 565012
-dev-perl/YAML-Parser-Syck
-
 # Fabian Groffen <grobian@gentoo.org> (11 Dec 2015)
 # Release candidates for Exim 4.87
 =mail-mta/exim-4.87_rc2
@@ -793,11 +797,6 @@ dev-perl/YAML-Parser-Syck
 # Brian Evans <grknight@gentoo.org> (02 Dec 2015)
 # All current targets are masked.
 <dev-php/pecl-taint-1.99.99
-
-# Brian Evans <grknight@gentoo.org> (02 Dec 2015)
-# Zend Opcache was integrated into PHP versions 5.5 and later
-# Masked for removal in 30 days
-dev-php/pecl-zendopcache
 
 # Brian Evans <grknight@gentoo.org> (02 Dec 2015)
 # PHP 5.4 is End Of Life and will not receive any further updates

@@ -406,6 +406,15 @@
     <name>Bug cleaners</name>
     <url>https://wiki.gentoo.org/wiki/Project:Bug-cleaners</url>
     <description>The Gentoo Bug Cleaners project aims to clean up the oldest bugs in Bugzilla.</description>
+    <member>
+      <email>amynka@gentoo.org</email>
+      <name>Amy Winston</name>
+      <role>Member</role>
+    </member>
+    <member>
+      <email>NP-Hardass@gentoo.org</email>
+      <name>NP-Hardass</name>
+    </member>
   </project>
   <project>
     <email>bug-wranglers@gentoo.org</email>
@@ -911,6 +920,11 @@
     <member>
       <email>maffblaster@gentoo.org</email>
       <name>Matthew Marchese</name>
+      <role>Author, Editor</role>
+    </member>
+    <member>
+      <email>nightmorph@gentoo.org</email>
+      <name>Joshua Saddler</name>
       <role>Author, Editor</role>
     </member>
     <member>
@@ -2897,6 +2911,11 @@
       <role>Member</role>
     </member>
     <member>
+      <email>bman@gentoo.org</email>
+      <name>Aaron Bauman</name>
+      <role>Member</role>
+    </member>
+    <member>
       <email>dlan@gentoo.org</email>
       <name>Yixun Lan</name>
       <role>Member</role>
@@ -3015,6 +3034,10 @@
       <email>maffblaster@gentoo.org</email>
       <name>Matthew Marchese</name>
       <role>GMN, Facebook</role>
+    </member>
+    <member>
+      <email>nightmorph@gentoo.org</email>
+      <name>Joshua Saddler</name>
     </member>
     <member>
       <email>sping@gentoo.org</email>
@@ -3386,6 +3409,11 @@
       <role>Documentation Helper</role>
     </member>
     <member>
+      <email>nightmorph@gentoo.org</email>
+      <name>Joshua Saddler</name>
+      <role>Documentation Liaison</role>
+    </member>
+    <member>
       <email>robbat2@gentoo.org</email>
       <name>Robin Johnson</name>
       <role>Infrastructure Liaison</role>
@@ -3453,11 +3481,6 @@
     <name>Reviewers</name>
     <url>https://wiki.gentoo.org/wiki/Project:Reviewers</url>
     <description>Team dedicated to reviewing pull requests and commits</description>
-    <member>
-      <email>hasufell@posteo.de</email>
-      <name>Julian Ospald</name>
-      <role>Member</role>
-    </member>
     <member>
       <email>jlec@gentoo.org</email>
       <name>Justin Lecher</name>
@@ -4335,6 +4358,10 @@
     <member>
       <email>jdhore@gentoo.org</email>
       <name>Jeff Horelick</name>
+    </member>
+    <member>
+      <email>nightmorph@gentoo.org</email>
+      <name>Joshua Saddler</name>
     </member>
     <member>
       <email>yngwin@gentoo.org</email>
