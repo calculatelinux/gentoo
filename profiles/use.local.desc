@@ -303,6 +303,7 @@ app-arch/cfv:bittorrent - Enable support for checking .torrent files
 app-arch/dpkg:update-alternatives - Install update-alternatives
 app-arch/dump:ermt - encrypted rmt support
 app-arch/engrampa:caja - Enable engrampa to integrate with mate-base/caja by providing entries in its context menu
+app-arch/engrampa:magic - Enable filetype auto-detection via sys-apps/file
 app-arch/file-roller:nautilus - Enable file-roller to integrate with gnome-base/nautilus by providing entries in its context menu
 app-arch/file-roller:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
 app-arch/gzip:pic - disable optimized assembly code that is not PIC friendly
@@ -1142,8 +1143,9 @@ app-shells/tcsh:catalogs - Add support for NLS catalogs
 app-text/acroread:html - HTML support and help reading capability (only for x86).
 app-text/apvlv:html - Build binary with html format support
 app-text/asciidoc:highlight - Enable source code highlighting
-app-text/atril:caja - Enable property page extension in mate-base/mate-file-manager
+app-text/atril:caja - Enable property page extension in mate-base/caja
 app-text/atril:dvi - Enable build-in DVI viewer
+app-text/atril:epub - Enable build-in DVI viewer using net-libs/webkit-gtk
 app-text/atril:t1lib - Enable the Type-1 fonts for the build-in DVI viewer (media-libs/t1lib)
 app-text/atril:xps - Enable XPS viewer using app-text/libxps
 app-text/crm114:mew - Add support for using the mewdecode mime decoder (app-emacs/mew)
@@ -2181,6 +2183,7 @@ dev-lisp/gcl:ansi - Build a GCL with ANSI support (else build a traditional CLtL
 dev-lisp/gcl:athena - Build xgcl - an interface to x11-libs/libXaw
 dev-lisp/sbcl:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
 dev-lua/lua-openssl:luajit - Use dev-lang/luajit instead of dev-lang/lua
+dev-lua/luaossl:luajit - Use dev-lang/luajit instead of dev-lang/lua
 dev-lua/luarocks:curl - Uses net-misc/curl for fetching lua packages instead of net-misc/wget.
 dev-lua/luarocks:openssl - Uses dev-libs/openssl for verifying lua packages instead of md5sum.
 dev-lua/luvit:bundled-libs - Use bundled versions of some libraries.
@@ -3218,7 +3221,6 @@ gnome-extra/gucharmap:vala - Enable bindings for dev-lang/vala
 gnome-extra/libgda:canvas - Enable support for x11-libs/goocanvas
 gnome-extra/libgda:http - Enable embedded net-libs/libsoup based server
 gnome-extra/libgda:json - Enable support for JSON format
-gnome-extra/libgda:libsecret - Enable app-crypt/libsecret support to store login credentials
 gnome-extra/libgda:mdb - Enable support for Microsoft Access database using app-office/mdbtools
 gnome-extra/libgda:reports - Install tools for generating graphical reports
 gnome-extra/libgda:sourceview - Enable support for x11-libs/gtksourceview
@@ -3694,13 +3696,19 @@ mate-base/caja:unique - Enable single instance support using dev-libs/libunique.
 mate-base/mate:base - Install base MATE Desktop applications that are recommended for the most common usage; for example, this installs the file manager. Disable this and other USE flags if you want a more minimal MATE Desktop.
 mate-base/mate:extras - Install additional MATE Desktop applications that are recommended for extended usage of the MATE Desktop as upstream sees it; for example, this installs MATE Desktop's office related applications. Disable this if you plan to use your own non-MATE Desktop alternatives or a custom mixture of MATE and non-MATE packages.
 mate-base/mate:themes - Install MATE Desktop's themes; if you use other themes, you can disable this to spare some space and time.
+mate-base/mate-applets-meta:appindicator - Pull in mate-extra/mate-indicator-applet for AppIndicator applet
+mate-base/mate-applets-meta:sensors - Pull in mate-extra/mate-sensors-applet for hw sensors applet
+mate-base/mate-desktop:user-guide - Install MATE user guide
 mate-extra/caja-extensions:gajim - Add an extension to support net-im/gajim.
 mate-extra/caja-extensions:image-converter - Add image conversion support.
 mate-extra/caja-extensions:mail - Add an extension to support e-mail functionality.
 mate-extra/caja-extensions:open-terminal - Add an extension to support an open terminal.
 mate-extra/caja-extensions:pidgin - Add an extension to support net-im/pidgin
 mate-extra/caja-extensions:share - Add an extension to support sharing files.
+mate-extra/caja-extensions:wallpaper - Add an extension to support setting an image as the current wallpaper
 mate-extra/mate-media:twolame - Bring in twolame gstreamer support
+mate-extra/mate-polkit:accountsservice - Support extraction of data from AccountsService
+mate-extra/mate-polkit:appindicator - Add support for AppIndicator
 mate-extra/mate-power-manager:applet - Enable building of the MATE applet.
 mate-extra/mate-power-manager:man - Build power manager's man page.
 mate-extra/mate-power-manager:unique - Enable single instance support using dev-libs/libunique.
@@ -6667,6 +6675,7 @@ sci-astronomy/stellarium:sound - Enable sound support
 sci-astronomy/stellarium:stars - Install extra star catalogs
 sci-astronomy/wcslib:fits - Enable support for the FITS format through sci-libs/cfitsio
 sci-astronomy/wcslib:pgplot - Builds PGBSOX routines, needs sci-libs/pgplot library
+sci-biology/abyss:misc-haskell - build abyss-samtobreak tool, pull in haskell toolchain
 sci-biology/bioperl:db - Install sci-biology/bioperl-run
 sci-biology/bioperl:network - Install sci-biology/bioperl-run
 sci-biology/bioperl:run - Install sci-biology/bioperl-run
@@ -8030,6 +8039,7 @@ www-servers/apache:apache2_modules_lbmethod_bytraffic - Weighted traffic countin
 www-servers/apache:apache2_modules_lbmethod_heartbeat - Heartbeat traffic counting load balancer scheduler algorithm for proxy_balancer.
 www-servers/apache:apache2_modules_macro - Macros for the Apache config file.
 www-servers/apache:apache2_modules_proxy_fcgi - FCGI support module for mod_proxy.
+www-servers/apache:apache2_modules_proxy_html - Module to rewrite links in html pages behind a reverse proxy
 www-servers/apache:apache2_modules_proxy_wstunnel - Provides support for the tunnelling of web socket connections to a backend websockets server.
 www-servers/apache:apache2_modules_ratelimit - Ratelimit module for transfer rate management
 www-servers/apache:apache2_modules_remoteip - Remotip module for logging
