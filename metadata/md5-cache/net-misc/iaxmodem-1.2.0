@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare
-DEPEND=media-libs/tiff sys-process/procps sys-apps/sed
+DEPEND=media-libs/tiff:= sys-process/procps
 DESCRIPTION=Software modem that uses an IAX channel instead of a traditional phone line
-EAPI=2
+EAPI=5
 HOMEPAGE=http://sourceforge.net/projects/iaxmodem/
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=media-libs/tiff sys-process/procps
+RDEPEND=media-libs/tiff:= sys-process/procps
 SLOT=0
 SRC_URI=mirror://sourceforge/iaxmodem/iaxmodem-1.2.0.tar.gz
 _eclasses_=eutils	28fb3e5852485af1c348d446b0b98389	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85
-_md5_=8104dee6857f800100d7a9418854904d
+_md5_=5438ccb653769f4cab1f5a16df0df371

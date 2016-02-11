@@ -3,6 +3,8 @@
 <pkgmetadata>
     <maintainer type="person">
         <email>tomboy64@sina.cn</email>
+        <name>M.B.</name>
+        <description>Maintainer, assign bugs to him</description>
     </maintainer>
     <maintainer type="project">
         <email>ml@gentoo.org</email>
@@ -16,6 +18,7 @@
         <flag name="async">Support for asynchronous execution</flag>
         <flag name="camlp4">Enable support for camlp4</flag>
         <flag name="lwt">Enable threads via lwt</flag>
+		<flag name="ppx">Enable the ppx syntax extension</flag>
     </use>
     <upstream>
         <remote-id type="github">mirage/ocaml-cstruct</remote-id>
