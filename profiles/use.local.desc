@@ -1289,13 +1289,6 @@ dev-db/cppdb:mysql_internal - Don't build a separate mysql loadable module but r
 dev-db/cppdb:odbc_internal - Don't build a separate postgresql loadable module but rather build it into the cppdb library itself
 dev-db/cppdb:postgres_internal - Don't build a separate odbc loadable module but rather build it into the cppdb library itself
 dev-db/cppdb:sqlite_internal - Don't build a separate sqlite3 loadable module but rather build it into the cppdb library itself
-dev-db/drizzle:curl - Enable the HTTP authentication plugin (using net-misc/curl). This is needed for the tests to apply properly.
-dev-db/drizzle:doc - Build the API documentation for the package, using app-doc/doxygen. Warning, this might take over an hour on slower machines.
-dev-db/drizzle:gearman - Enable the gearman plugins for user-defined functions and logging (using sys-cluster/gearman).
-dev-db/drizzle:md5 - Enable the MD5 plugin, using dev-libs/libgcrypt; this replaces the older openssl and gnutls USE flags.
-dev-db/drizzle:memcache - Enable the memcache plugin for user-defined functions and statistics in I_S tables (using dev-libs/libmemcached). Currently restricts tests because of an upstream testsuite bug.
-dev-db/drizzle:pam - Enable the PAM authentication plugin (using sys-libs/pam). The configuration file created will be /etc/pam.d/drizzle.
-dev-db/drizzle:v8 - Use dev-lang/v8.
 dev-db/firebird:client - Install client library and header files only
 dev-db/firebird:superserver - Install SuperServer
 dev-db/firebird:xinetd - Install ClassicServer
@@ -1728,7 +1721,6 @@ dev-java/ecj-gcj:native - Build a native binary along with the jar. Provides fas
 dev-java/eclipse-ecj:ant - Support using ecj in Ant builds via dev-java/ant-eclipse-ecj
 dev-java/emma:launcher - Install /usr/bin/emma. Collides with sci-biology/emboss.
 dev-java/gcj-jdk:awt - Install AWT libraries, needed by some GUIs (not needed to build icedtea)
-dev-java/gjdoc:xmldoclet - Also build support for the xml doclet that generates output in xml instead of the traditional html javadoc.
 dev-java/gnu-classpath:alsa - Build with ALSA javax.sound.midi provider
 dev-java/gnu-classpath:dssi - Build with DSSI javax.sound.midi provider
 dev-java/gnu-classpath:gconf - Build with GConf preferences backend
@@ -1773,7 +1765,6 @@ dev-java/jfreesvg:debug - Enable debugging during compilation.
 dev-java/jna:awt - Enables support for Java AWT
 dev-java/jna:nio-buffers - Enables support for NIO buffers
 dev-java/jython:readline - Use GNU readline instead of jline
-dev-java/jython:servletapi - Add optional support for servlet-api
 dev-java/log4j:javamail - Build the SMTPAppender
 dev-java/log4j:jms - Build the JMSAppender
 dev-java/logback:tomcat - Builds Apache Tomcat support
@@ -2695,6 +2686,8 @@ dev-util/buildbot:manhole - Add support for manhole (debug over ssh)
 dev-util/bustle:interactivetests - Build interactive test programs
 dev-util/bustle:threaded - Build with support for multithreaded execution.
 dev-util/catalyst:ccache - Enables ccache support
+dev-util/cccc:apidoc - Build software docs with doxygen/graphviz and metrics with cccc
+dev-util/cccc:mfc - Add patch for MFC dialect options
 dev-util/cmake:system-jsoncpp - Use system copy of dev-libs/jsoncpp instead of bundled one.
 dev-util/coccigrep:vim - Install the coccigrep vim plugin
 dev-util/codeblocks:contrib - Build additional contrib components
@@ -3920,6 +3913,11 @@ media-libs/devil:allegro - Add support for Allegro
 media-libs/devil:nvtt - Add support for dev-util/nvidia-texture-tools
 media-libs/edje:cache - Enable caching
 media-libs/elementary:quicklaunch - Enable quick-launch support
+media-libs/embree:imagemagick - Enables BMP, GIF, PNG, TGA, TIFF image codecs.
+media-libs/embree:ispc - Enables support for the Intel SPMD Program Compiler.
+media-libs/embree:jpeg - Enables JPEG image codecs.
+media-libs/embree:openexr - Enables OpenEXR image codecs.
+media-libs/embree:png - Enables PNG image codecs.
 media-libs/emotion:vlc - Enable support for the media-video/vlc player backend
 media-libs/esdl:image - Enable image support
 media-libs/ethumb:emotion - Add support for media-libs/emotion
@@ -4384,6 +4382,7 @@ media-sound/kid3:phonon - Enable sound support via media-libs/phonon or dev-qt/q
 media-sound/kwave:opus - Enable Opus audio codec support
 media-sound/kwave:phonon - Enable playback via Phonon
 media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED**
+media-sound/linuxsampler:lv2 - Add support for Ladspa V2
 media-sound/lmms:fluidsynth - Enables Fluidsynth MIDI software synthesis plugin.
 media-sound/lmms:stk - Enables STK Mallet plugin.
 media-sound/lmms:vst - Enables the VeSTige plugin to run VST plugins through Wine.
@@ -4687,7 +4686,6 @@ media-video/arista:nautilus - Add an entry in the Nautilus context menu to trans
 media-video/avidemux:aften - Enable A/52 (AC-3) audio encoder support.
 media-video/avidemux:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr.
 media-video/avidemux:vpx - Enable VP8 codec support via media-libs/libvpx.
-media-video/bombono-dvd:gnome - Use GVFS for desktop integration
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
 media-video/clive:clipboard - Support reading from X clipboard
 media-video/clive:pager - Support pager!?

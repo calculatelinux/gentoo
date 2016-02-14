@@ -30,6 +30,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Mike Gilbert <floppym@gentoo.org> (02 Feb 2016)
+# Fails to build, will fix it later.
+=sys-libs/efivar-0.22
+
 # Michael Palimaka <kensington@gentoo.org> (12 Feb 2016)
 # Fails to build. No revdeps. Masked for removal in 30 days.
 # Bug 574432
@@ -163,10 +167,6 @@ media-libs/evas
 # ghc-7.10, bug #561122
 dev-haskell/extra:0
 
-# James Le Cuirot <chewi@gentoo.org> (14 Jan 2016)
-# Superseded by gnu-classpath. Removal in 30 days.
-dev-java/gjdoc
-
 # Michał Górny <mgorny@gentoo.org> (11 Jan 2016)
 # (on behalf of Python team)
 # Masked for testing. python-exec now checks argv[0] to determine
@@ -189,11 +189,6 @@ www-apache/mod_auth_pgsql
 # Andreas K. Hüttel <dilfridge@gentoo.org> (9 Jan 2016)
 # Errorneously added. Is already in perl-core. Please uninstall.
 dev-perl/ExtUtils-Constant
-
-# Michael Palimaka <kensington@gentoo.org)> (09 Jan 2016)
-# Fails to build with newer versions of llvm. Dead upstream. No revdeps.
-# Masked for removal in 30 days. Bug #571212.
-media-libs/opengtl
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
 # Cannot be downloaded either mirrored, bug #561142. Removal in a month
@@ -722,42 +717,6 @@ net-dialup/capisuite
 # Removal in a month.
 app-admin/showconsole
 
-# Pacho Ramos <pacho@gentoo.org> (01 Jan 2016)
-# Fails to build, bug #348418
-# Removal in a month.
-dev-ada/gtkada
-
-# Pacho Ramos <pacho@gentoo.org> (01 Jan 2016)
-# Upstream died long time ago, replaced by eiskaltdcpp
-# bug #364057 . Removal in a month.
-net-p2p/linuxdcpp
-
-# Patrice Clement <monsieurp@gentoo.org> (01 Jan 2016)
-# Project dead: upstream deprecated it a while ago.
-# Masked for removal in 30 days. See bug #429444.
-dev-python/pyltxml
-
-# Pacho Ramos <pacho@gentoo.org> (31 Dec 2015)
-# Upstream dead, doesn't compile with libsigc++-2.6, bug #567092
-# Removal in a month.
-net-misc/gip
-
-# Pacho Ramos <pacho@gentoo.org> (31 Dec 2015)
-# Upstream dead, doesn't compile with libsigc++-2.6, bug #568796
-# Removal in a month.
-media-sound/gnomoradio
-
-# Pacho Ramos <pacho@gentoo.org> (31 Dec 2015)
-# Upstream dead, doesn't compile with libsigc++-2.6, bug #568796
-# Removal in a month.
-app-office/passepartout
-
-# Pacho Ramos <pacho@gentoo.org> (31 Dec 2015)
-# Upstream dead, doesn't compile with libsigc++-2.6, multiple bugs
-# with current ffmpeg versions, bug #568796
-# Removal in a month.
-media-video/bombono-dvd
-
 # Victor Ostorga <vostorga@gentoo.org> (30 Dec 2015)
 # Mask this liferea version because upstream released it broken
 =net-news/liferea-1.10.17
@@ -767,12 +726,6 @@ media-video/bombono-dvd
 # No reverse deps
 # #370021, #478614, #513964
 sci-libs/libbufr
-
-# Mikle Kolyada <zlogene@gentoo.org> (26 Dec 2015)
-# Dead upstream (last activity in 2003)
-# Nothing in the tree depends on it
-# Masked for removal
-dev-perl/SpeedyCGI
 
 # Manuel Rüger <mrueg@rueg.eu> (24 Dec 2015)
 # Effectively unmaintained, multiple bugs
@@ -787,15 +740,6 @@ media-tv/xawtv
 # Patrick Lauer <patrick@gentoo.org> (20 Dec 2015)
 # Ebuild uninstallable #557090
 =app-crypt/gkeys-0.1-r1
-
-# Brian Evans <grknight@gentoo.org> (17 Dec 2015)
-# "The drizzle project is long dead, it should be removed,
-# along with dev-php/pecl-drizzle", by grknight
-# in Bug #501060
-# Try 2 acked by idella4
-# Masked for removal in 30 days.
-dev-db/drizzle
-dev-php/pecl-drizzle
 
 # Fabian Groffen <grobian@gentoo.org> (11 Dec 2015)
 # Release candidates for Exim 4.87

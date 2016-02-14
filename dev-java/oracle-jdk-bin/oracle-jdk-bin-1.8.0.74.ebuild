@@ -60,7 +60,7 @@ SRC_URI+=" jce? ( ${JCE_FILE} )"
 
 LICENSE="Oracle-BCLA-JavaSE examples? ( BSD )"
 SLOT="1.8"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~sparc64-solaris ~x64-solaris"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~x64-macos ~sparc64-solaris ~x64-solaris"
 IUSE="alsa cups derby doc examples +fontconfig headless-awt javafx jce nsplugin pax_kernel selinux source"
 REQUIRED_USE="javafx? ( alsa fontconfig )"
 
@@ -169,6 +169,7 @@ src_unpack() {
 		zcat jdk1${MY_PV%u*}0${update}.pkg/Payload | cpio -idv
 		mv Contents/Home "${WORKDIR}"/jdk${MY_PV}
 		popd > /dev/null
+		use jce && unpack "${JCE_FILE}"
 	else
 		default
 	fi
