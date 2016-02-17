@@ -49,7 +49,7 @@ DEPEND="
 		dev-python/nose[${PYTHON_USEDEP}]
 	)"
 
-PYTHON_COMPAT=( python{2_7,3_{3,4,5}} )
+S="${WORKDIR}/oslo.log-${PV}"
 
 python_prepare_all() {
 	sed -i '/^hacking/d' test-requirements.txt || die
