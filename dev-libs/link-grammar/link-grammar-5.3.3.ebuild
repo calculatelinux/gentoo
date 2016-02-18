@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_4,3_5} )
 
 inherit eutils gnome2 java-pkg-opt-2 python-any-r1
 
@@ -15,18 +15,21 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="aspell +hunspell java python static-libs threads"
+IUSE="aspell +hunspell +java python static-libs threads"
 
 DEPEND="
 	aspell? ( app-text/aspell )
 	hunspell? ( app-text/hunspell )
-	java? ( virtual/jdk:= dev-java/ant-core )
+	java? ( >=virtual/jdk-1.6:=
+			dev-java/ant-core )
 	${PYTHON_DEPS}"
 
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	java-pkg-opt-2_pkg_setup
+	if use java; then
+		java-pkg-opt-2_pkg_setup
+	fi
 	if use aspell && use hunspell; then
 		ewarn "You have enabled 'aspell' and 'hunspell' support, but both cannot coexist,"
 		ewarn "only aspell will be build. Press Ctrl+C and set only 'hunspell' USE flag if"
@@ -40,7 +43,9 @@ src_unpack() {
 }
 
 src_prepare() {
-	java-pkg-opt-2_src_prepare
+	if use java; then
+		java-pkg-opt-2_src_prepare
+	fi
 	./autogen.sh || die
 }
 
