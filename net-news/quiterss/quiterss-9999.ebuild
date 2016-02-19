@@ -1,9 +1,9 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
-PLOCALES="ar bg cs de el_GR es fa fi fr gl hi hu it ja ko lt nl pl pt_BR pt_PT ro_RO ru sk sr sv tg_TJ tr uk vi zh_CN zh_TW"
+EAPI=6
+PLOCALES="ar bg cs de el_GR es fa fi fr gl he hi hu it ja ko lt nl pl pt_BR pt_PT ro_RO ru sk sr sv tg_TJ th_TH tr uk vi zh_CN zh_TW"
 inherit eutils l10n fdo-mime gnome2-utils qmake-utils
 
 DESCRIPTION="A Qt-based RSS/Atom feed reader"
@@ -22,7 +22,7 @@ SLOT="0"
 IUSE="debug phonon +qt4 qt5"
 REQUIRED_USE="^^ ( qt4 qt5 )"
 
-RDEPEND="dev-db/sqlite:3
+RDEPEND=">=dev-db/sqlite-3.10.0:3
 	dev-qt/qtsingleapplication[X,qt4(+)?,qt5(-)?]
 	qt4? ( dev-qt/qtcore:4
 		dev-qt/qtgui:4
@@ -48,7 +48,7 @@ src_prepare() {
 		sed -i -e "s:lang/${PN}_${1}.ts::" lang/lang.pri || die
 	}
 
-	epatch_user
+	default
 
 	# dedicated english locale file is not installed at all
 	rm "lang/${PN}_en.ts" || die
