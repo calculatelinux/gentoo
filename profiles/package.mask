@@ -30,6 +30,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Sterrett <mr_bones_@gentoo.org> (18 Feb 2016)
+# Now part of games-emulation/sdlmame
+# Masked for removal on 20160319
+games-emulation/sdlmess
+games-emulation/sdlmametools
+
 # Michael Palimaka <kensington@gentoo.org> (18 Feb 2016)
 # Fails to build. Dead upstream.
 # Masked for removal in 30 days. Bug 574248.
@@ -763,14 +769,6 @@ sci-libs/libbufr
 # Bug 288611,358013,413987,468186,480854,528750,548480,566226
 # Masked for removal in 30 days.
 media-tv/xawtv
-
-# Patrick Lauer <patrick@gentoo.org> (20 Dec 2015)
-# Mask TOFU release that doesn't work #567768 and friends
-=app-crypt/gkeys-gen-0.1-r1
-
-# Patrick Lauer <patrick@gentoo.org> (20 Dec 2015)
-# Ebuild uninstallable #557090
-=app-crypt/gkeys-0.1-r1
 
 # Fabian Groffen <grobian@gentoo.org> (11 Dec 2015)
 # Release candidates for Exim 4.87

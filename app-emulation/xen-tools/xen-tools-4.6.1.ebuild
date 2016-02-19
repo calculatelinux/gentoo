@@ -28,7 +28,7 @@ else
 	SEC_VER=
 	QEMU_VER=
 	# xen-tools's gentoo patches tarball
-	GENTOO_VER=4
+	GENTOO_VER=6
 	# xen-tools's gentoo patches version which apply to this specific ebuild
 	GENTOO_GPV=0
 	# xen-tools ovmf's patches
@@ -240,16 +240,18 @@ src_prepare() {
 	fi
 
 	# Ovmf's patchset
-	if [[ -n ${OVMF_VER} ]] && use ovmf; then
-		einfo "Try to apply Ovmf patch set"
-		pushd "${WORKDIR}"/ovmf-*/ > /dev/null
-		EPATCH_SUFFIX="patch" \
-		EPATCH_FORCE="yes" \
-		EPATCH_OPTS="-p1" \
-			epatch "${WORKDIR}"/patches-ovmf
-		popd > /dev/null
+	if use ovmf; then
+		if [[ -n ${OVMF_VER} ]];then
+			einfo "Try to apply Ovmf patch set"
+			pushd "${WORKDIR}"/ovmf-*/ > /dev/null
+			EPATCH_SUFFIX="patch" \
+			EPATCH_FORCE="yes" \
+			EPATCH_OPTS="-p1" \
+				epatch "${WORKDIR}"/patches-ovmf
+			popd > /dev/null
+		fi
+		mv ../ovmf-${OVMF_PV} tools/firmware/ovmf-dir-remote || die
 	fi
-	mv ../ovmf-${OVMF_PV} tools/firmware/ovmf-dir-remote || die
 
 	mv tools/qemu-xen/qemu-bridge-helper.c tools/qemu-xen/xen-bridge-helper.c || die
 
