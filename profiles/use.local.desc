@@ -636,6 +636,7 @@ app-emulation/qemu:alsa - Enable alsa output for sound emulation
 app-emulation/qemu:curl - Support ISOs / -cdrom directives vis HTTP or HTTPS.
 app-emulation/qemu:fdt - Enables firmware device tree support
 app-emulation/qemu:glusterfs - Enables GlusterFS cluster fileystem via sys-cluster/glusterfs
+app-emulation/qemu:gnutls - Enable TLS support for the VNC console server. For 1.4 and newer this also enables WebSocket support. For 2.0 through 2.3 also enables disk quorum support.
 app-emulation/qemu:gtk2 - Use gtk-2 instead of gtk-3
 app-emulation/qemu:iscsi - Enable direct iSCSI support via net-libs/libiscsi instead of indirectly via the Linux block layer that sys-block/open-iscsi does.
 app-emulation/qemu:jpeg - Enable jpeg image support for the VNC console server
@@ -4104,6 +4105,7 @@ media-libs/phonon-gstreamer:network - Enable network streaming support via libso
 media-libs/portmidi:test-programs - Install various example programs
 media-libs/quvi:json - Enable support for JSON output
 media-libs/raptor:json - Enable support for JSON parsing
+media-libs/raspberrypi-userland-bin:hardfp - Use armv6 hardfp ABI
 media-libs/sdif:ftruncate - Enables usage of ftruncate v. truncate
 media-libs/sdl-image:webp - support loading WEBP images
 media-libs/sdl-mixer:fluidsynth - Use media-sound/fluidsynth for MIDI support
@@ -5147,6 +5149,7 @@ net-analyzer/suricata:luajit - Enable Luajit support
 net-analyzer/suricata:nflog - Enable libnetfilter_log support
 net-analyzer/suricata:nfqueue - Enable AF_PACKET support
 net-analyzer/suricata:rules - Enable AF_PACKET support
+net-analyzer/suricata:system-htp - Use net-libs/libhtp instead of bundled one
 net-analyzer/symon:perl - Enables a generic perl symux client
 net-analyzer/symon:symon - Enables the system monitor. Offers no functionality but monitoring and forwarding of measured data
 net-analyzer/symon:symux - Enables the multiplexer which stores incoming symon streams on disk in RRD (net-analyzer/rrdtool) files
@@ -8459,7 +8462,6 @@ x11-wm/xpra:webp - Enable webp image format support
 x11-wm/xpra:x265 - Enable x265 support
 xfce-base/libxfce4ui:glade - Build support for Glade 3's GtkBuilder implementation
 xfce-base/libxfce4ui:gtk3 - Enable gtk3 support
-xfce-base/libxfcegui4:glade - Build glade bindings
 xfce-base/xfce4-settings:libcanberra - Enable sound event support using media-libs/libcanberra
 xfce-base/xfce4-settings:libinput - Enable libinput Xorg driver (x11-drivers/xf86-input-libinput) support
 xfce-base/xfce4-settings:xklavier - Enable keyboard layout selection support using x11-libs/libxklavier

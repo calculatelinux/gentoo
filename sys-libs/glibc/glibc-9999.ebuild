@@ -76,13 +76,13 @@ RDEPEND="!sys-kernel/ps3-sources
 if [[ ${CATEGORY} == cross-* ]] ; then
 	DEPEND+=" !crosscompile_opts_headers-only? (
 		>=${CATEGORY}/binutils-2.24
-		>=${CATEGORY}/gcc-4.6
+		>=${CATEGORY}/gcc-4.7
 	)"
 	[[ ${CATEGORY} == *-linux* ]] && DEPEND+=" ${CATEGORY}/linux-headers"
 else
 	DEPEND+="
 		>=sys-devel/binutils-2.24
-		>=sys-devel/gcc-4.6
+		>=sys-devel/gcc-4.7
 		virtual/os-headers"
 	RDEPEND+=" vanilla? ( !sys-libs/timezone-data )"
 	PDEPEND+=" !vanilla? ( sys-libs/timezone-data )"
