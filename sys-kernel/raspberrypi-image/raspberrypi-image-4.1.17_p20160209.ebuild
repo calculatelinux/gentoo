@@ -1,6 +1,6 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/raspberrypi-firmware/raspberrypi-firmware-1_pre20130807.ebuild,v 1.1 2013/08/15 18:21:47 xmw Exp $
+# $Id$
 
 EAPI=5
 
@@ -12,7 +12,7 @@ MY_PV="1.20160209"
 SRC_URI="https://github.com/raspberrypi/firmware/archive/${MY_PV} -> raspberrypi-firmware-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2 raspberrypi-videocore-bin"
-SLOT="0"
+SLOT="${PVR}"
 KEYWORDS="~arm -*"
 IUSE=""
 
@@ -40,7 +40,7 @@ pkg_preinst() {
 			die "${msg}"
 		fi
 	fi
-	
+
 	if ! grep "${ROOT}boot" /proc/mounts >/dev/null 2>&1; then
 		ewarn "${ROOT}boot is not mounted, the files might not be installed at the right place"
 	fi
