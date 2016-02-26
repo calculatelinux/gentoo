@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -27,6 +27,10 @@ DEPEND="${RDEPEND}
 
 # Required for testsuite
 DISTUTILS_IN_SOURCE_BUILD=1
+
+PATCHES=(
+	"${FILESDIR}"/${P}-install_requires.patch
+)
 
 python_test() {
 	"${PYTHON}" test.py --verbose || die "Tests fail with ${EPYTHON}"

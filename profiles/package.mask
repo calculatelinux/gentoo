@@ -185,14 +185,6 @@ dev-java/sux4j
 =sys-devel/llvm-3.8.0*
 =sys-devel/clang-3.8.0*
 
-# James Le Cuirot <chewi@gentoo.org> (26 Jan 2016)
-# No new release since 2008. Removal in 30 days.
-app-cdr/webcdwriter
-
-# James Le Cuirot <chewi@gentoo.org> (26 Jan 2016)
-# Now part of eselect-java. Removal in 30 days.
-app-eselect/eselect-maven
-
 # Sergey Popov <pinkbyte@gentoo.org> (20 Jan 2016)
 # Mask new versions of Boost - they are known to cause breakages
 ~dev-util/boost-build-1.60.0
@@ -224,19 +216,6 @@ media-libs/evas
 # that can't be transparently used in ghc-7.8 and
 # ghc-7.10, bug #561122
 dev-haskell/extra:0
-
-# Michał Górny <mgorny@gentoo.org> (11 Jan 2016)
-# (on behalf of Python team)
-# Masked for testing. python-exec now checks argv[0] to determine
-# whether it's called via the Python wrapper shebang, or symlinked
-# directly. eselect-python uses the C wrapper rather than Python wrapper
-# to fix Prefix support, #568974.
-# The 2.3 version uses completely new configuration format which
-# requires much more testing.
->=app-eselect/eselect-python-20151117-r3
->=dev-lang/python-exec-2.2
->=app-eselect/eselect-python-20160207
->=dev-lang/python-exec-2.3
 
 # Aaron W. Swenson <titanofold@gentoo.org> (11 Jan 2016)
 # Masked for removal after 2016-03-11. Package hasn't been updated in
@@ -429,10 +408,6 @@ dev-python/south
 # Michał Górny <mgorny@gentoo.org> (11 Feb 2015)
 # Potentially destructive to @world, bug #539746.
 =sys-apps/portage-2.2.16
-
-# Eray Aslan <eras@gentoo.org> (03 Feb 2015)
-# Mask experimental software
-=mail-mta/postfix-3.1*
 
 # Sergei Trofimovich <slyfox@gentoo.org> (29 Jan 2015)
 # Mask live ebuild
