@@ -30,6 +30,15 @@
 
 #--- END OF EXAMPLES ---
 
+# James Le Cuirot <chewi@gentoo.org> (29 Feb 2016)
+# Dead upstream and doesn't build with Java 8. Removal in 30 days.
+sci-biology/readseq
+
+# Patrice Clement <monsieurp@gentoo.org> (29 Feb 2016)
+# Duplicate of dev-libs/libedit.
+# Masked for removal in 30 days.
+sys-libs/libedit
+
 # Patrick Lauer <patrick@gentoo.org> (22 Feb 2016)
 # Inactive upstream, build failures, obsoleted by rakudo/perl6
 dev-lang/niecza
@@ -226,10 +235,6 @@ www-apache/mod_auth_pgsql
 # Andreas K. Hüttel <dilfridge@gentoo.org> (9 Jan 2016)
 # Errorneously added. Is already in perl-core. Please uninstall.
 dev-perl/ExtUtils-Constant
-
-# Pacho Ramos <pacho@gentoo.org> (08 Jan 2016)
-# Doesn't work at all, bug #564106. Removal in a month.
-media-gfx/fr0st
 
 # Pacho Ramos <pacho@gentoo.org> (06 Jan 2016)
 # Unbuildable for a long time, bug #522916. Removal in a month.
