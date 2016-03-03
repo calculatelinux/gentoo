@@ -692,7 +692,7 @@
     </member>
   </project>
   <project>
-    <email>comrel@gentoo.org</email>
+    <email>comres@gentoo.org</email>
     <name>Gentoo Community Resources</name>
     <url>https://wiki.gentoo.org/wiki/Project:ComRes</url>
     <description>Gentoo Community Resources is an umbrella project comprising the Recruiters, Retirement and Comminity Relations subprojects. It acts as a central place for all the human-resources related projects.</description>
@@ -908,10 +908,9 @@
   </project>
   <project>
     <email>gentoo-doc@gentoo.org</email>
-    <name>Gentoo Documentation Project</name>
+    <name>Documentation Project</name>
     <url>https://wiki.gentoo.org/wiki/Project:Documentation</url>
     <description>The Gentoo Documentation Project (GDP) is responsible for the creation and maintenance of all general Gentoo documentation.</description>
-    <subproject ref="gentoo-doc@gentoo.org"/>
     <member>
       <email>jkt@gentoo.org</email>
       <name>Jan Kundrát</name>
@@ -1849,10 +1848,10 @@
       <name>Jack Morgan</name>
       <role>Developer</role>
     </member>
-    <member is-lead="1">
+    <member>
       <email>johu@gentoo.org</email>
       <name>Johannes Huber</name>
-      <role>Lead</role>
+      <role>Developer</role>
     </member>
     <member>
       <email>kensington@gentoo.org</email>
@@ -3480,7 +3479,7 @@
     <url>https://wiki.gentoo.org/wiki/Project:RelEng</url>
     <description>Release Engineering ("RelEng") is the official Gentoo project focused on coordinating and improving the creation of official media releases of Gentoo Linux and the associated tools used by the installation process.</description>
     <subproject ref="catalyst@gentoo.org"/>
-    <subproject ref="releng@gentoo.org"/>
+    <subproject ref="grs@gentoo.org"/>
     <member>
       <email>armin76@gentoo.org</email>
       <name>Raúl Porcel</name>
@@ -3553,7 +3552,7 @@
     </member>
   </project>
   <project>
-    <email>releng@gentoo.org</email>
+    <email>grs@gentoo.org</email>
     <name>RelEng GRS</name>
     <url>https://wiki.gentoo.org/wiki/Project:RelEng_GRS</url>
     <description>The Gentoo Reference System (GRS) Suite is a set of tools for building and maintaining a well defined Gentoo system in which all choices in building the system are predefined in configuration files housed on a central git repository.</description>
@@ -4169,42 +4168,6 @@
     <member is-lead="1">
       <email>vapier@gentoo.org</email>
       <name>Mike Frysinger</name>
-    </member>
-  </project>
-  <project>
-    <email>gentoo-doc@gentoo.org</email>
-    <name>Documentation Translation Project</name>
-    <url>https://wiki.gentoo.org/wiki/Project:Translation</url>
-    <description>As Gentoo continues to grow, international documentation will be key to communicating with our diverse user base. The translators will make sure that all Gentoo documentation is translated in a timely fashion.</description>
-    <member>
-      <email>ago@gentoo.org</email>
-      <name>Agostino Sarubbo</name>
-      <role>Italian translations</role>
-    </member>
-    <member>
-      <email>blueboar2@gmail.com</email>
-      <name>Vladimir Romanov</name>
-      <role>Russian translations</role>
-    </member>
-    <member>
-      <email>jaaf@gentoo.org</email>
-      <name>José Fournier</name>
-      <role>French translations</role>
-    </member>
-    <member>
-      <email>jkt@gentoo.org</email>
-      <name>Jan Kundrát</name>
-      <role>Czech translations</role>
-    </member>
-    <member>
-      <email>keytoaster@gentoo.org</email>
-      <name>Tobias Heinlein</name>
-      <role>German translations</role>
-    </member>
-    <member>
-      <email>nimiux@gentoo.org</email>
-      <name>Chema Alonso</name>
-      <role>Spanish translations</role>
     </member>
   </project>
   <project>
