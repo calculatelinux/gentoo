@@ -30,6 +30,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Mike Gilbert <floppym@gentoo.org> (03 Mar 2016)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-50
+
 # Alexis Ballier <aballier@gentoo.org> (01 Mar 2016)
 # Breaks some of its rev deps, still in beta stage
 >=dev-lang/ocaml-4.03_beta
@@ -188,17 +193,6 @@ dev-java/jcs
 # care anymore, last release was in 2012. Zero reverse deps.
 dev-python/PyQtMobility
 
-# James Le Cuirot <chewi@gentoo.org> (03 Feb 2016)
-# Built into Java since 1.5. Ancient and doesn't build with
-# Java 8. Removal in 30 days. See bug #544038.
-dev-java/concurrent-util
-
-# James Le Cuirot <chewi@gentoo.org> (03 Feb 2016)
-# Old, unused, broken on Java 7 and up. These are still alive upstream
-# but bumping is likely non-trivial. Removal in 30 days.
-dev-java/dsiutils
-dev-java/sux4j
-
 # Bernard Cafarelli <voyageur@gentoo.org> (27 Jan 2016)
 # New llvm version, masked for testing
 =sys-devel/llvm-3.8.0*
@@ -271,13 +265,7 @@ www-apps/389-dsgw
 
 # Fabian Groffen <grobian@gentoo.org> (11 Dec 2015)
 # Release candidates for Exim 4.87
-=mail-mta/exim-4.87_rc2
-=mail-mta/exim-4.87_rc3
-
-# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (07 Dec 2015)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-49
+=mail-mta/exim-4.87_rc5
 
 # Anthony G. Basile <blueness@gentoo.org> (06 Dec 2015)
 # Masked until we deal with SSLv3, bug #567554
