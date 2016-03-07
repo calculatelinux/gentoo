@@ -226,6 +226,9 @@ app-admin/pass:dmenu - Add support for x11-misc/dmenu with the 'passmenu' progra
 app-admin/pass:fish-completion - Enable fish completion support.
 app-admin/pass:git - Use dev-vcs/git for password revisions.
 app-admin/pass:importers - Allow importing passwords from other password managers using various contributed scripts.
+app-admin/passwordsafe:minimal - Avoid collision with app-misc/pwsafe
+app-admin/passwordsafe:xml - Enable XML import support
+app-admin/passwordsafe:yubikey - Enable support for Yubikey
 app-admin/puppet:augeas - Enable augeas support
 app-admin/puppet:diff - Enable diff support
 app-admin/puppet:rrdtool - Enable rrdtool support
@@ -715,7 +718,7 @@ app-emulation/wine:capi - Enable ISDN support via CAPI
 app-emulation/wine:custom-cflags - Bypass strip-flags; use at your own peril
 app-emulation/wine:dos - Pull in games-emulation/dosbox to run DOS applications
 app-emulation/wine:gecko - Add support for the Gecko engine when using iexplore
-app-emulation/wine:gstreamer - Use media-libs/gstreamer to provide DirectShow functionality; For versions less than wine-1.9.2, uses experimental patch which may break some apps
+app-emulation/wine:gstreamer - Use media-libs/gstreamer to provide DirectShow functionality; For versions before wine-1.9.2, uses experimental patch which may break some apps
 app-emulation/wine:mono - Add support for .NET using Wine's Mono add-on
 app-emulation/wine:netapi - Use libnetapi from net-fs/samba to support Windows networks in netapi32.dll
 app-emulation/wine:opencl - Enable OpenCL support
@@ -723,12 +726,12 @@ app-emulation/wine:osmesa - Add support for OpenGL in bitmaps using libOSMesa
 app-emulation/wine:pcap - Support packet capture software (e.g. wireshark)
 app-emulation/wine:perl - Install helpers written in perl (winedump/winemaker)
 app-emulation/wine:pipelight - Apply Wine-Staging patches for Pipelight/Silverlight support
-app-emulation/wine:prelink - Run prelink on DLLs during build; For versions less than wine-1.7.55 or hardened, do not disable if you do not know what this means as it can break things at runtime
+app-emulation/wine:prelink - Run prelink on DLLs during build; For versions before wine-1.7.55 or hardened, do not disable if you do not know what this means as it can break things at runtime
 app-emulation/wine:realtime - Pull in sys-auth/rtkit for low-latency pulseaudio support
 app-emulation/wine:run-exes - Use Wine to open and run .EXE and .MSI files
 app-emulation/wine:s3tc - Pull in media-libs/libtxc_dxtn for DXTn texture compression, needed for many games
 app-emulation/wine:samba - Add support for NTLM auth. see http://wiki.winehq.org/NtlmAuthSetupGuide and http://wiki.winehq.org/NtlmSigningAndSealing
-app-emulation/wine:staging - Apply Wine-Staging patches for advanced feature support that haven't made it into upstream Wine yet For versions less than wine-1.8, this patchset is unofficial.
+app-emulation/wine:staging - Apply Wine-Staging patches for advanced feature support that haven't made it into upstream Wine yet For versions before wine-1.8, this patchset is unofficial.
 app-emulation/winetricks:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
 app-emulation/x48:readline - Enables support for libreadline
 app-emulation/xe-guest-utilities:xenstore - Use xenstore binaries bundled by Citrix instead of building app-emulation/xen-tools
@@ -3885,6 +3888,7 @@ media-libs/avidemux-plugins:faad - Enable AAC audio decoding library support via
 media-libs/avidemux-plugins:fribidi - Enable unicode bidirectional algorithm support via dev-libs/fribidi.
 media-libs/avidemux-plugins:twolame - Enable TwoLAME support via media-sound/twolame, an optimised MPEG Audio Layer 2 (MP2) encoder.
 media-libs/avidemux-plugins:vpx - Enable WebM VP8 Codec SDK support via media-libs/libvpx.
+media-libs/babl:cpu_flags_x86_f16c - Take advantage of CPU feature f16c
 media-libs/cal3d:16bit-indices - Enables use of 16bit indices
 media-libs/chromaprint:tools - Build and install fpcalc and fpcollect tools
 media-libs/clutter:egl - Enable EGL backend.
@@ -6837,9 +6841,10 @@ sci-libs/gsl:cblas-external - Link gsl with external cblas provided by (virtual/
 sci-libs/hdf5:fortran2003 - Enable new features that require Fortran 2003 (http://www.hdfgroup.org/HDF5/doc/fortran/NewFeatures_F2003.pdf)
 sci-libs/ipopt:hsl - hsl
 sci-libs/ipopt:mumps - Enable sci-libs/mumps support
-sci-libs/lemon:coin - Enable the coinor-clp and coinor-cbc graph algorithms
+sci-libs/lemon:coin - Enable the sci-libs/coinor-clp and sci-libs/coinor-cbc graph algorithms
 sci-libs/lemon:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
 sci-libs/lemon:tools - Build additional tools
+sci-libs/libbufr:lto - Use gold linker and -flto (requires existing env setup)
 sci-libs/libccd:double - Use double precision floats.
 sci-libs/libghemical:mopac7 - Use sci-chemistry/mopac7 for semi-empirical calculations
 sci-libs/libghemical:mpqc - Use sci-chemistry/mpqc for quantum-mechanical calculations
@@ -6938,6 +6943,7 @@ sci-mathematics/agda:stdlib - Install the standard library.
 sci-mathematics/agda-stdlib:ffi - Install agda-lib-ffi for compilation using the MAlonzo backend
 sci-mathematics/bertini:optimization - Accept upstream's choices for -O option.
 sci-mathematics/cgal:mpfi - Enable support for multiple recision interval arithmetic via sci-mathematics/mpfi
+sci-mathematics/cgal:ntl - Enable support for dev-libs/ntl
 sci-mathematics/coq:camlp5 - Build using camlp5. This is required for some plugins like Ssreflect.
 sci-mathematics/cvc3:isabelle - Add integration support for the Isabelle/HOL theorem prover.
 sci-mathematics/cvc3:zchaff - Use the SAT solver zchaff whose copyright is owned by Princeton University and is more restrictive (see zchaff license).
@@ -6959,19 +6965,8 @@ sci-mathematics/gmp-ecm:custom-tune - Improve performance of some operations by 
 sci-mathematics/gmp-ecm:gwnum - Use GWNum lib where possible
 sci-mathematics/gretl:R - Enable support for dev-lang/R
 sci-mathematics/gsl-shell:fox - Build a x11-libs/fox GUI
-sci-mathematics/isabelle:CCL - CCL (Classical Computational Logic)
-sci-mathematics/isabelle:CTT - CTT (Constructive Type Theory) is an extensional version of Martin-Löf's Type Theory.
-sci-mathematics/isabelle:Cube - Cube (The Lambda Cube)
-sci-mathematics/isabelle:FOL - FOL (Many-sorted First-Order Logic) provides basic classical and intuitionistic first-order logic. It is polymorphic.
-sci-mathematics/isabelle:FOLP - FOLP (FOL with Proof Terms)
-sci-mathematics/isabelle:HOL - (Higher-Order Logic) is a version of classical higher-order logic resembling that of the HOL System.
-sci-mathematics/isabelle:LCF - LCF (Logic of Computable Functions)
-sci-mathematics/isabelle:Pure - Pure is the basis for all object-logics.
-sci-mathematics/isabelle:Sequents - Sequents (first-order, modal and linear logics)
-sci-mathematics/isabelle:ZF - ZF (Set Theory) offers a formulation of Zermelo-Fraenkel set theory on top of FOL.
 sci-mathematics/isabelle:graphbrowsing - Generate theory browsing information, including HTML documents that show a theory's definition, the theorems proved in its ML file and the relationship with its ancestors and descendants.
 sci-mathematics/isabelle:ledit - Use ledit for the isabelle tty line editor
-sci-mathematics/isabelle:pide - Build Isabelle/jEdit Prover IDE (PIDE).
 sci-mathematics/isabelle:proofgeneral - Add support for the app-emacs/proofgeneral proof assistant front end.
 sci-mathematics/isabelle:readline - Use readline (rlwrap) for the isabelle tty line editor
 sci-mathematics/kodkodi:isabelle - Add integration support for the Isabelle/HOL theorem prover.
