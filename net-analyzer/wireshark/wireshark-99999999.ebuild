@@ -243,19 +243,6 @@ src_install() {
 		done
 	fi
 
-	if use gtk3; then
-		domenu wireshark.desktop
-	fi
-
-	if use qt4 || use qt5; then
-		sed \
-			-e '/Exec=/s|wireshark|&-qt|g' \
-			-e 's|^Name.*=Wireshark|& (Qt)|g' \
-			wireshark.desktop > wireshark-qt.desktop \
-			|| die
-		domenu wireshark-qt.desktop
-	fi
-
 	prune_libtool_files
 }
 
