@@ -1,12 +1,12 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="ssl"
 
-inherit python-single-r1 eutils
+inherit python-single-r1 systemd eutils
 
 DESCRIPTION="Submission tools for IRC notifications"
 HOMEPAGE="http://www.catb.org/esr/irker/"
@@ -26,8 +26,13 @@ src_prepare() {
 
 	epatch "${FILESDIR}/2.7-irkerhook-Remove-file-listing.patch"
 
+	# Rely on systemd eclass for systemd service install
+	sed -i -e "/^SYSTEMDSYSTEMUNITDIR/d" Makefile \
+		|| die "sed failed"
+
 	# Prefix support
-	sed -i -e "/^ExecStart=/ s:=/:=${EROOT}:" irkerd.service
+	sed -i -e "/^ExecStart=/ s:=/:=${EROOT}:" irkerd.service \
+		|| die "sed failed"
 }
 
 src_install() {
@@ -39,6 +44,8 @@ src_install() {
 
 	newinitd "${FILESDIR}/irkerd.initd" irkerd
 	newconfd "${FILESDIR}/irkerd.confd" irkerd
+
+	systemd_dounit irkerd.service
 
 	dodoc NEWS README hacking.txt security.txt
 	dohtml irkerd.html irkerhook.html

@@ -30,6 +30,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Alexandre Rostovtsev <tetromino@gentoo.org> (10 Mar 2016)
+# Masking until we figure out what to do about bug #576930
+=gnome-base/gnome-extra-apps-3.18.0-r2
+
+# Michael Palimaka <kensington@gentoo.org> (09 Mar 2016)
+# Deprecated by upstream. No further releases. Unused.
+lxqt-base/liblxqt-mount
+lxqt-base/lxqt-config-randr
+
 # Michael Palimaka <kensington@gentoo.org> (09 Mar 2016)
 # Dead upstream. Doesn't work with new Twitter API.
 # Masked for removal in 30 days. Bug 575156
@@ -328,9 +337,10 @@ www-apache/mod_h2
 >=net-fs/samba-4.3.0
 
 # Lars Wendler <polynomial-c@gentoo.org> (20 Aug 2015)
-# Release is not from original upstream but from a fork. Masked as requested by
-# vapier
+# Releases are not from original upstream but from a fork.
+# Masked as requested by vapier.
 ~net-misc/iputils-20150815
+~net-misc/iputils-20160308
 
 # Sebastian Pipping <sping@gentoo.org> (8 Aug 2015)
 # Upcoming, too young to go into testing unmasked

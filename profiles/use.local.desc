@@ -1371,7 +1371,11 @@ dev-db/mysql-cluster:systemtap - Build support for profiling and tracing using d
 dev-db/mysql-cluster:test - Install upstream testsuites for end use.
 dev-db/mysql-cluster:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
 dev-db/mysql-connector-c++:gcov - Build coverage support
-dev-db/percona-server:client-libs - Build the libmysqlclient libraries
+dev-db/oracle-instantclient:jdbc - Support for XA, Internationalization, and RowSet operations under JDBC.
+dev-db/oracle-instantclient:odbc - Libraries for enabling ODBC applications.
+dev-db/oracle-instantclient:sdk - Header files and an example makefile for developing Oracle applications.
+dev-db/oracle-instantclient:sqlplus - Libraries and executable for running SQL*Plus.
+dev-db/oracle-instantclient:tools - Workload Replay Client.
 dev-db/percona-server:embedded - Build embedded server (libmysqld)
 dev-db/percona-server:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
 dev-db/percona-server:jemalloc - Use dev-libs/jemalloc for allocations.
@@ -1384,7 +1388,6 @@ dev-db/percona-server:systemtap - Build support for profiling and tracing using 
 dev-db/percona-server:test - Install upstream testsuites for end use.
 dev-db/percona-server:tokudb - Add support for TokuDB storage engine
 dev-db/percona-server:tokudb-backup-plugin - Builds the TokuDB backup plugin
-dev-db/percona-server:tools - Build the command line tools (mysql, mysqldump, mysqladmin, etc)
 dev-db/percona-server:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
 dev-db/pgadmin3:databasedesigner - Enable the Database Designer component
 dev-db/pgbouncer:libevent - Use libevent 2.0+ and evdns as the DNS backend
@@ -3471,7 +3474,6 @@ lxqt-base/lxqt-panel:showdesktop - Build showdesktop plugin
 lxqt-base/lxqt-panel:statusnotifier - Build statusnotifier plugin
 lxqt-base/lxqt-panel:sysstat - Build sysstat plugin
 lxqt-base/lxqt-panel:taskbar - Build taskbar plugin
-lxqt-base/lxqt-panel:teatime - Build teatime plugin
 lxqt-base/lxqt-panel:tray - Build tray plugin
 lxqt-base/lxqt-panel:volume - Build volume plugin
 lxqt-base/lxqt-panel:worldclock - Build worldclock plugin
@@ -3666,6 +3668,7 @@ mate-base/mate-applets-meta:sensors - Pull in mate-extra/mate-sensors-applet for
 mate-base/mate-desktop:user-guide - Install MATE user guide
 mate-extra/caja-extensions:cdr - Add an extension to burn files to cds using app-cdr/brasero.
 mate-extra/caja-extensions:gajim - Add an extension to support net-im/gajim.
+mate-extra/caja-extensions:gksu - Add an extension to support opening files as root with x11-libs/gksu.
 mate-extra/caja-extensions:image-converter - Add image conversion support.
 mate-extra/caja-extensions:mail - Add an extension to support e-mail functionality.
 mate-extra/caja-extensions:open-terminal - Add an extension to support an open terminal.
@@ -5000,7 +5003,7 @@ net-analyzer/munin:dhcpd - Install dev-perl/Net-IP, dev-perl/HTTP-Date and net-m
 net-analyzer/munin:doc - Build and install a local copy of the HTML documentation for the whole software. This requires dev-python/sphinx to process the documentation sources.
 net-analyzer/munin:http - Install dev-perl/libwww-perl required for monitoring HTTP-based services such as Apache and nginx. Disabling the flag does not remove any plugin file.
 net-analyzer/munin:ipmi - Install sys-apps/ipmitool required for monitoring IPMI sensors. Disabling the flag does not remove any plugin file.
-net-analyzer/munin:ipv6 - Add support for IPv6 in munin-node. IPv6 support for the master is always enabled, but the node requires a newer version of dev-perl/net-server, capable of listening to IPv6 sockets.
+net-analyzer/munin:ipv6 - Add support for IPv6 in munin-node. IPv6 support for the master is always enabled, but the node requires a newer version of dev-perl/Net-Server, capable of listening to IPv6 sockets.
 net-analyzer/munin:irc - Install the packages required for monitoring IRC. Disabling the flag does not remove any plugin files.
 net-analyzer/munin:java - Build the Java-based plugins to monitor JMX-compatible applications. Disabling the flag removes the jmx monitoring plugins.
 net-analyzer/munin:memcached - Install the packages required for memcached monitoring. Disabling the flag does not remove any plugin files.
