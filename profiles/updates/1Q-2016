@@ -27,3 +27,7 @@ move dev-perl/crypt-rsa dev-perl/Crypt-RSA
 move dev-perl/net-server dev-perl/Net-Server
 move dev-perl/net-sftp dev-perl/Net-SFTP
 move dev-perl/net-ssh-perl dev-perl/Net-SSH-Perl
+move dev-perl/DateManip dev-perl/Date-Manip
+move dev-perl/wxperl dev-perl/Wx
+slotmove sys-devel/binutils 0 2.25.1
+move sys-fs/sshfs-fuse sys-fs/sshfs

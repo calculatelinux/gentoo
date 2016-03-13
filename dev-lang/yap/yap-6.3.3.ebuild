@@ -6,7 +6,7 @@ EAPI=5
 
 inherit eutils flag-o-matic java-pkg-opt-2 multilib
 
-PATCHSET_VER="6"
+PATCHSET_VER="7"
 
 DESCRIPTION="YAP is a high-performance Prolog compiler"
 HOMEPAGE="http://www.dcc.fc.up.pt/~vsc/Yap/"
@@ -15,7 +15,7 @@ SRC_URI="http://www.dcc.fc.up.pt/~vsc/Yap/${P}.tar.gz
 
 LICENSE="Artistic LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="R debug doc examples gmp java mpi mysql odbc readline static threads"
 
 RDEPEND="sys-libs/zlib
@@ -46,6 +46,12 @@ src_configure() {
 		myddas_conf="--enable-myddas"
 	else
 		myddas_conf="--disable-myddas"
+	fi
+	if use mysql; then
+		myddas_conf="$myddas_conf yap_with_mysql=yes"
+	fi
+	if use odbc; then
+		myddas_conf="$myddas_conf yap_with_odbc=yes"
 	fi
 
 	econf \

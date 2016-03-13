@@ -693,6 +693,7 @@ app-emulation/virt-what:dmi - Use sys-apps/dmidecode to read firmware data
 app-emulation/virtualbox:additions - Install Guest System Tools ISO
 app-emulation/virtualbox:extensions - Install extension module packages
 app-emulation/virtualbox:headless - Build without any graphic frontend
+app-emulation/virtualbox:lvm - Build VBoxVolInfo that needs devicemapper from sys-fs/lvm2.
 app-emulation/virtualbox:sdk - Enable building of SDK
 app-emulation/virtualbox:udev - Controls installation of special USB udev rules.
 app-emulation/virtualbox:vboxwebsrv - Build and install the VirtualBox webservice
@@ -3424,7 +3425,6 @@ kde-plasma/kmenuedit:hotkeys - Enable support for hotkey editing
 kde-plasma/kwin:gles2 - Use OpenGL ES 2 instead of full GL
 kde-plasma/kwin:multimedia - Enable effect video button in desktop effects KCM
 kde-plasma/libksysguard:detailedmemory - Enable display of detailed memory information using dev-qt/qtwebkit.
-kde-plasma/libksysguard:processui - Enables the Interface to view process libs.
 kde-plasma/plasma-desktop:evdev - Enable configuration module for desktop input devices.
 kde-plasma/plasma-desktop:gtk2 - Add support for gtk+2-based applications using legacy xembed systray icons via libappindicator.
 kde-plasma/plasma-desktop:gtk3 - Add support for gtk+3-based applications using legacy xembed systray icons via libappindicator.
@@ -3438,11 +3438,10 @@ kde-plasma/plasma-meta:wallpapers - Install the KDE wallpapers
 kde-plasma/plasma-nm:modemmanager - Enable support for mobile broadband devices
 kde-plasma/plasma-nm:openconnect - Build support for the OpenConnect VPN client
 kde-plasma/plasma-nm:teamd - Enable Teamd control support
-kde-plasma/plasma-workspace:drkonqi - Enables DrKonqi, the KDE crash handler
+kde-plasma/plasma-sdk:plasmate - IDE for writing Plasma/KWin components (themes, plasmoids, runners, data engines)
 kde-plasma/plasma-workspace:geolocation - Enables dataengine providing location information
 kde-plasma/plasma-workspace:prison - Enable support for barcodes/QRcodes
 kde-plasma/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/libqalculate
-kde-plasma/plasma-workspace:systemmonitor - Enables the system monitor dialog for the Plasma workspace
 kde-plasma/systemsettings:classic - Enable classic mode plugin, requires kde-frameworks/khtml
 lxde-base/lxdm:consolekit - Enables support for authorization using consolekit
 lxde-base/lxdm:gtk3 - Use GTK+3 instead of 2
@@ -4814,6 +4813,7 @@ media-video/mpv:egl - Enable support for various EGL-based video outputs
 media-video/mpv:enca - Enable subtitles charset discovery via app-i18n/enca
 media-video/mpv:gbm - Enable Graphics Buffer Manager based EGL video output
 media-video/mpv:jpeg - Enable support for saving screenshots in JPEG format
+media-video/mpv:libass - Enable OSD (On Screen Display) and subtitles support via media-libs/libass
 media-video/mpv:libguess - Enable subtitles charset discovery via app-i18n/libguess
 media-video/mpv:libmpv - Build mpv shared library
 media-video/mpv:lua - Enable Lua scripting, OSC (On Screen Controller) GUI and net-misc/youtube-dl hook-script
@@ -4821,7 +4821,7 @@ media-video/mpv:luajit - Use dev-lang/luajit instead of dev-lang/lua
 media-video/mpv:pvr - Enable Video4Linux2 MPEG PVR
 media-video/mpv:raspberry-pi - Enable support for the Raspberry Pi
 media-video/mpv:rubberband - Enable high quality pitch correction via media-libs/rubberband
-media-video/mpv:sdl - Enable media-libs/libsdl2 based video and audio outputs
+media-video/mpv:sdl - Enable media-libs/libsdl2 based video and audio outputs (Note: these outputs exist for compatibility reasons only, avoid if possible)
 media-video/mpv:uchardet - Enable subtitles charset discovery via dev-libs/uchardet
 media-video/mpv:vf-dlopen - Install additional video filters to be used with -vf dlopen
 media-video/noad:libmpeg2 - Support for libmpeg2 library
@@ -4890,6 +4890,7 @@ media-video/vlc:gcrypt - Enables cryptography support via libgcrypt.
 media-video/vlc:gme - Enables support for media-libs/game-music-emu for playing various video game music formats.
 media-video/vlc:gnome - Adds support for GNOME's filesystem abstraction layer, gnome-base/gnome-vfs. This flag is not GUI-related.
 media-video/vlc:growl - Enables growl notification support (over UDP for remote access and native on OSX)
+media-video/vlc:gstreamer - Enables GStreamer based decoding support (currently supports only video decoding)
 media-video/vlc:httpd - Enables a web based interface for vlc.
 media-video/vlc:kate - Adds support for Ogg Kate subtitles via libkate.
 media-video/vlc:libtar - Uses libtar instead of the built-in tar reader for reading custom skins.
@@ -4932,6 +4933,7 @@ media-video/vlc:vpx - Enables the decoder(s) from the WebM VP8 / VP9 Codec SDK.
 media-video/vlc:wma-fixed - Enables fixed point WMA decoder.
 media-video/vlc:x265 - Support X265 Encoder.
 media-video/vlc:xcb - Support the X C-language Binding, a replacement for Xlib; !!! you will need this option to be able to integrate video in the Qt interface, see bug #500678.
+media-video/vlc:zeroconf - Enables support for zero-configuration networking via avahi.
 media-video/vlc:zvbi - Enables support for teletext subtitles via the zvbi library.
 media-video/x264-encoder:10bit - Set output bit depth to 10
 media-video/x264-encoder:avs - enable AvxSynth support in the AviSynth input module
@@ -5595,6 +5597,7 @@ net-irc/quassel:crypt - Support core->network per-channel and per-query blowfish
 net-irc/quassel:monolithic - Build Standalone client with integrated core, no external quasselcore needed. Only useful if you don't want to use quassels client/server model. The server and X flags are not needed in this case but it is possible to enable them too.
 net-irc/quassel:phonon - Build client with phonon backend support. This enables sound playback in client.
 net-irc/quassel:server - Build the server binary. If this USE flag is disabled, the 'core' server binary for quassel is not built, and cannot be used. You need this enabled on the server, but you might want to disable it on the client.
+net-irc/quassel:snorenotify - Support for snore notification framework.
 net-irc/quassel:webkit - Use qt-webkit rendering engine for showing URL thumbnails and for other things that need web browser integration.
 net-irc/rbot:aspell - Use aspell instead of ispell in the "spell" plugin for rbot. The vanilla plugin uses ispell, but enabling this flag makes it use the ispell interface from aspell instead.
 net-irc/rbot:cal - Add dependency over a package providing the /usr/bin/cal command, which is needed to enable the "cal" plugin for rbot. If the USE flag is disabled the plugin is also disabled by default.
@@ -6307,7 +6310,7 @@ net-misc/wicd:ioctl - Installs additional python libraries to use as a backend. 
 net-misc/wicd:mac4lin - Change default icons to mac4lin icon set
 net-misc/wicd:ncurses - Installs a ncurses UI
 net-misc/wicd:pm-utils - Installs the pm-utils hooks for suspend/resume and requires sys-power/pm-utils
-net-misc/x2goserver:fuse - Use sys-fs/sshfs-fuse to allow shared folders
+net-misc/x2goserver:fuse - Use sys-fs/sshfs to allow shared folders
 net-misc/xrdp:fuse - Enable clipboard file / device redirection via sys-fs/fuse
 net-misc/youtube-viewer:gtk - Install the gtk GUI, called gtk-youtube-viewer
 net-nds/389-ds-base:auto-dn-suffix - Enable auto bind with auto dn suffix over unix domain socket (LDAPI) support
@@ -7159,6 +7162,7 @@ sys-apps/kexec-tools:xen - Enable extended xen support
 sys-apps/kmod:lzma - Enable support for XZ compressed modules
 sys-apps/kmod:tools - Install module loading/unloading tools.
 sys-apps/kmod:zlib - Enable support for gzipped modules
+sys-apps/linux-misc-apps:usbip - Include USB/IP binaries to replace net-misc/usbip
 sys-apps/lm_sensors:sensord - Enable sensord - a daemon that can be used to periodically log sensor readings from hardware health-monitoring chips
 sys-apps/man-db:manpager - Enable manpager wrapper for colorizing output
 sys-apps/memtest86:serial - Compile with serial console support
