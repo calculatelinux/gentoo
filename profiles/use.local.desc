@@ -372,7 +372,6 @@ app-backup/snapper:btrfs - Include Btrfs support sys-fs/btrfs-progs
 app-backup/snapper:ext4 - Include Ext4 support sys-fs/e2fsprogs
 app-backup/snapper:lvm - Enable LVM thinprovisioned snapshots support sys-fs/lvm2
 app-backup/snapper:xattr - Add support for getting and setting POSIX extended attributes, through sys-apps/attr.
-app-backup/tsm:hsm - Installs Tivoli Storage Manager for Space Management
 app-backup/tsm:tsm_cit - IBM Tivoli Common Inventory Technology
 app-backup/tsm:tsm_hw - Difference snapshot support for NetApp and N-Series file servers
 app-benchmarks/jmeter:beanshell - Enable BeanShell scripting support
@@ -4364,6 +4363,7 @@ media-sound/kid3:acoustid - Enable support for acoustic fingerprinting plugin us
 media-sound/kid3:phonon - Enable sound support via media-libs/phonon or dev-qt/qtphonon
 media-sound/kwave:opus - Enable Opus audio codec support
 media-sound/kwave:phonon - Enable playback via Phonon
+media-sound/kwave:qtmedia - Enable playback via Qt5Multimedia
 media-sound/lame:frontend - Build and install the 'lame' executable frontend to lame libraries.
 media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED**
 media-sound/linuxsampler:lv2 - Add support for Ladspa V2
@@ -5466,6 +5466,8 @@ net-im/psi:xscreensaver - Use X screensaver protocol extension to monitor idle/a
 net-im/psimedia:demo - build simple test application for the PsiMedia system
 net-im/pyaim-t:webinterface - Install dependencies needed for the web interface
 net-im/pyicq-t:webinterface - Install dependencies needed for the web interface
+net-im/qtox:X - Adds support for X11
+net-im/qtox:gtk - Adds support for GTK and Status Notifier tray backends
 net-im/qutim:antiboss - Enable support for the antiboss plugin
 net-im/qutim:aspell - Enable spellchecking using app-text/aspell
 net-im/qutim:awn - Enable integration with gnome-extra/avant-window-navigator
