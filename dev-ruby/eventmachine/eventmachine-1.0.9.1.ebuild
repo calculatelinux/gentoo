@@ -6,8 +6,7 @@ EAPI=5
 
 USE_RUBY="ruby20 ruby21 ruby22"
 
-RUBY_FAKEGEM_TASK_DOC="yard"
-RUBY_FAKEGEM_DOCDIR="rdoc"
+RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_EXTRADOC="docs/*.md README.md"
 
 inherit ruby-fakegem
@@ -17,7 +16,7 @@ HOMEPAGE="http://rubyeventmachine.com"
 
 LICENSE="|| ( GPL-2 Ruby )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
 DEPEND="${DEPEND}
@@ -25,8 +24,7 @@ DEPEND="${DEPEND}
 RDEPEND="${RDEPEND}
 	dev-libs/openssl:0"
 
-ruby_add_bdepend "doc? ( dev-ruby/yard )
-	test? ( dev-ruby/test-unit:2 )"
+ruby_add_bdepend "test? ( dev-ruby/test-unit:2 )"
 
 all_ruby_prepare() {
 	# Remove package tasks to avoid dependency on rake-compiler.
