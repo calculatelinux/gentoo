@@ -136,7 +136,7 @@ src_install() {
 	fowners icinga:icinga /etc/icinga2
 	fowners icinga:icinga /var/lib/icinga2
 	fowners icinga:icinga /var/spool/icinga2
-	fowners icinga:icingacmd /var/lib/icinga2/api
+	fowners -R icinga:icingacmd /var/lib/icinga2/api
 	fowners icinga:icinga /var/spool/icinga2/perfdata
 	fowners icinga:icingacmd /var/log/icinga2
 
