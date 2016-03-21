@@ -17,7 +17,7 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="http://www.kismetwireless.net/code/${MY_P}.tar.xz"
-	KEYWORDS="~amd64 ~arm ~ppc ~x86"
+	KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~x86"
 fi
 
 DESCRIPTION="IEEE 802.11 wireless LAN sniffer"
@@ -34,7 +34,7 @@ CDEPEND="net-wireless/wireless-tools
 			)
 	pcre? ( dev-libs/libpcre )
 	suid? ( sys-libs/libcap )
-	client? ( sys-libs/ncurses:= )
+	client? ( sys-libs/ncurses:0= )
 	!arm? ( speech? ( app-accessibility/flite ) )
 	ruby? ( dev-lang/ruby:* )
 	plugin-btscan? ( net-wireless/bluez )
@@ -51,9 +51,8 @@ RDEPEND="${CDEPEND}
 "
 
 src_prepare() {
-	#aclocal-1.15: error: configure.ac:4: file 'm4/ax_pthread.m4' does not exist
-	#epatch "${FILESDIR}"/${P}-tinfo.patch
-	#eautoreconf
+	epatch -p1 "${FILESDIR}"/${P}-tinfo.patch
+	eautoreconf
 
 	sed -i -e "s:^\(logtemplate\)=\(.*\):\1=/tmp/\2:" \
 		conf/kismet.conf.in

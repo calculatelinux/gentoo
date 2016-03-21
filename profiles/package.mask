@@ -30,6 +30,37 @@
 
 #--- END OF EXAMPLES ---
 
+# Lars Wendler <polynomial-c@gentoo.org> (20 Mar 2016)
+# Don't work with latest claws-mail package. Most plugins are now part of
+# claws-mail sources and can be en-/disabled via USE flags.
+# Masked for removal in 30 days.
+mail-client/claws-mail-acpi-notifier
+mail-client/claws-mail-address_keeper
+mail-client/claws-mail-archive
+mail-client/claws-mail-att-remover
+mail-client/claws-mail-attachwarner
+mail-client/claws-mail-clamd
+mail-client/claws-mail-fancy
+mail-client/claws-mail-fetchinfo
+mail-client/claws-mail-gdata
+mail-client/claws-mail-gtkhtml
+mail-client/claws-mail-mailmbox
+mail-client/claws-mail-newmail
+mail-client/claws-mail-notification
+mail-client/claws-mail-pdf-viewer
+mail-client/claws-mail-perl
+mail-client/claws-mail-python
+mail-client/claws-mail-rssyl
+mail-client/claws-mail-spam-report
+mail-client/claws-mail-tnef-parse
+mail-client/claws-mail-vcalendar
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (19 Mar 2016)
+# Dead upstream since 2010, new VMware uses new incompatible
+# proprietary libview. No other consumers. Removal in 30 days.
+# Bug 569930
+x11-libs/libview
+
 # Aaron Bauman <bman@gentoo.org> (19 Mar 2016)
 # Unpatched security vulnerability per bug #512356.
 # Masked for removal in 30 days.
@@ -42,7 +73,7 @@ www-apps/coppermine
 
 # Aaron Bauman <bman@gentoo.org> (19 Mar 2016)
 # Multiple unpatched security vulnerabilities
-# per bug #523040. Masked for removal in 30 days.
+# per bug #532040. Masked for removal in 30 days.
 dev-libs/matrixssl
 
 # Michael Palimaka <kensington@gentoo.org> (17 Mar 2016)
@@ -215,44 +246,6 @@ dev-java/xsd2jibx
 # Upstream EOL is December 2016. We would rather focus on other things
 # than support it until then. Removal in 30 days.
 www-servers/tomcat:6
-
-# Michael Palimaka <kensington@gentoo.org> (19 Feb 2016)
-# Superceded by other filesharing systems. Dead upstream. Unmaintained.
-# Masked for removal in 30 days. Bug 314359.
-net-p2p/gift
-net-p2p/gift-ares
-net-p2p/gift-fasttrack
-net-p2p/gift-gnutella
-net-p2p/gift-openft
-net-p2p/giftcurs
-sec-policy/selinux-gift
-
-# Michael Sterrett <mr_bones_@gentoo.org> (18 Feb 2016)
-# Now part of games-emulation/sdlmame
-# Masked for removal on 20160319
-games-emulation/sdlmess
-games-emulation/sdlmametools
-
-# Michael Palimaka <kensington@gentoo.org> (18 Feb 2016)
-# Fails to build. Dead upstream.
-# Masked for removal in 30 days. Bug 574248.
-dev-util/vdkbuilder
-
-# Michael Palimaka <kensington@gentoo.org> (18 Feb 2016)
-# Fails to build. Dead upstream. Use net-misc/connman-gtk instead.
-# Masked for removal in 30 days. Bug 502552.
-gnome-extra/connman-gnome
-
-# Michael Palimaka <kensington@gentoo.org> (18 Feb 2016)
-# Fails to build with recent kernels. Dead upstream.
-# Use kernel driver VIDEO_GO7007 instead.
-# Masked for removal in 30 days. Bug 482120.
-media-tv/wis-go7007
-
-# Michael Palimaka <kensington@gentoo.org> (18 Feb 2016)
-# Fails to build with recent kernels. Dead upstream.
-# Masked for removal in 30 days. Bug 488128.
-media-video/stk11xx
 
 # Yixun Lan <dlan@gentoo.org> (16 Feb 2016)
 # Mask early development version, leave only upstream stable version
