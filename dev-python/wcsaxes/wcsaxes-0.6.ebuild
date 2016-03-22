@@ -16,12 +16,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
-RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+RDEPEND="
 	dev-python/astropy[${PYTHON_USEDEP}]
 	dev-python/matplotlib[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}]
-		dev-python/sphinx_rtd_theme[${PYTHON_USEDEP}] )
+	dev-python/astropy-helpers[${PYTHON_USEDEP}]
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	doc? (
+	  dev-python/sphinx[${PYTHON_USEDEP}]
+	  dev-python/sphinx_rtd_theme[${PYTHON_USEDEP}] )
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 
 PATCHES=(
@@ -35,7 +38,13 @@ python_prepare_all() {
 }
 
 python_compile_all() {
-	use doc && esetup.py build_sphinx -w
+	if use doc; then
+		python_setup
+		VARTEXFONTS="${T}"/fonts \
+			MPLCONFIGDIR="${BUILD_DIR}" \
+			PYTHONPATH="${BUILD_DIR}"/lib \
+			esetup.py build_sphinx --no-intersphinx
+	fi
 }
 
 python_test() {
@@ -43,6 +52,6 @@ python_test() {
 }
 
 python_install_all() {
-	use doc && local HTML_DOCS=( docs/_build/html/ )
+	use doc && local HTML_DOCS=( docs/_build/html/. )
 	distutils-r1_python_install_all
 }

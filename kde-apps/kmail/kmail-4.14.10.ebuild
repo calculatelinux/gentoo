@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -10,7 +10,7 @@ EGIT_BRANCH="KDE/4.14"
 VIRTUALX_REQUIRED=test
 inherit flag-o-matic kde4-meta
 
-DESCRIPTION="KMail is the email component of Kontact, the integrated personal information manager of KDE"
+DESCRIPTION="Email component of Kontact, the integrated personal information manager of KDE"
 HOMEPAGE="https://www.kde.org/applications/internet/kmail/"
 KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
@@ -96,9 +96,9 @@ pkg_postinst() {
 		elog "For groupware functionality, please install kde-apps/kdepim-kresources:${SLOT}"
 		echo
 	fi
-	if ! has_version kde-base/kleopatra:${SLOT}; then
+	if ! has_version kde-apps/kleopatra:${SLOT}; then
 		echo
-		elog "For certificate management and the gnupg log viewer, please install kde-base/kleopatra:${SLOT}"
+		elog "For certificate management and the gnupg log viewer, please install kde-apps/kleopatra:${SLOT}"
 		echo
 	fi
 
@@ -106,7 +106,7 @@ pkg_postinst() {
 		ewarn
 		ewarn "We strongly recommend you set your Akonadi database backend to QMYSQL in your"
 		ewarn "user configuration. This is the backend recommended by KDE upstream."
-		ewarn "Reports indicate that kde-base/kmail-4.10 does not work properly with the sqlite"
+		ewarn "Reports indicate that kde-apps/kmail-4.10 does not work properly with the sqlite"
 		ewarn "backend anymore."
 		if has_version "app-office/akonadi-server[-mysql]"; then
 			ewarn "FOR THAT, YOU WILL HAVE TO RE-BUILD app-office/akonadi-server WITH mysql USEFLAG ENABLED."
