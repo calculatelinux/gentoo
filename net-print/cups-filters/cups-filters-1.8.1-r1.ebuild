@@ -6,12 +6,11 @@ EAPI=5
 
 GENTOO_DEPEND_ON_PERL=no
 
-inherit base eutils perl-module autotools systemd
+inherit eutils perl-module autotools systemd
 
 if [[ "${PV}" == "9999" ]] ; then
 	inherit bzr
 	EBZR_REPO_URI="http://bzr.linuxfoundation.org/openprinting/cups-filters"
-	KEYWORDS=""
 else
 	SRC_URI="http://www.openprinting.org/download/${PN}/${P}.tar.xz"
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-fbsd ~m68k-mint"
@@ -21,12 +20,13 @@ HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdf
 
 LICENSE="MIT GPL-2"
 SLOT="0"
-IUSE="dbus +foomatic jpeg perl png +postscript static-libs tiff zeroconf"
+IUSE="dbus +foomatic jpeg ldap perl png +postscript static-libs tiff zeroconf"
 
 RDEPEND="
 	postscript? ( >=app-text/ghostscript-gpl-9.09[cups] )
-	app-text/poppler:=[cxx,jpeg?,lcms,tiff?,utils,xpdf-headers(+)]
+	>=app-text/poppler-0.32:=[cxx,jpeg?,lcms,tiff?,utils,xpdf-headers(+)]
 	>=app-text/qpdf-3.0.2:=
+	dev-libs/glib:2
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/lcms:2
@@ -37,6 +37,7 @@ RDEPEND="
 	dbus? ( sys-apps/dbus )
 	foomatic? ( !net-print/foomatic-filters )
 	jpeg? ( virtual/jpeg:0 )
+	ldap? ( net-nds/openldap )
 	perl? ( dev-lang/perl:= )
 	png? ( media-libs/libpng:0= )
 	tiff? ( media-libs/tiff:0 )
@@ -47,9 +48,7 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	base_src_prepare
 	epatch "${FILESDIR}/${P}-allow-disable-ghostscript.patch"
-	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
 	eautoreconf
 }
 
@@ -60,6 +59,7 @@ src_configure() {
 		$(use_enable zeroconf avahi) \
 		$(use_enable static-libs static) \
 		$(use_enable foomatic) \
+		$(use_enable ldap) \
 		$(use_enable postscript ghostscript) \
 		--with-fontdir="fonts/conf.avail" \
 		--with-pdftops=pdftops \
