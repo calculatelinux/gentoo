@@ -4,7 +4,7 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python2_7 python3_4 python3_5 )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 git-r3 user
 
@@ -16,7 +16,7 @@ EGIT_BRANCH="stable/mitaka"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE="+sqlite memcached mongo mysql postgres ldap test"
+IUSE="+sqlite ldap memcached mongo mysql postgres test"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 CDEPEND=">=dev-python/pbr-1.6[${PYTHON_USEDEP}]"
@@ -79,7 +79,21 @@ RDEPEND="
 	<dev-python/jsonschema-3.0.0[${PYTHON_USEDEP}]
 	~dev-python/pycadf-1.1.0[${PYTHON_USEDEP}]
 	!~dev-python/pycadf-2.0.0[${PYTHON_USEDEP}]
-	>=dev-python/msgpack-0.4.0[${PYTHON_USEDEP}]"
+	>=dev-python/msgpack-0.4.0[${PYTHON_USEDEP}]
+	memcached? (
+		>=dev-python/python-memcached-1.48[${PYTHON_USEDEP}]
+		<=dev-python/python-memcached-1.57[${PYTHON_USEDEP}]
+	)
+	mongo? (
+		>=dev-python/pymongo-2.6.3[${PYTHON_USEDEP}]
+		<dev-python/pymongo-3.2[${PYTHON_USEDEP}]
+	)
+	ldap? (
+		>=dev-python/python-ldap-2.4[$(python_gen_usedep 'python2_7')]
+		<=dev-python/python-ldap-2.4.20[$(python_gen_usedep 'python2_7')]
+		~dev-python/ldappool-1.0[$(python_gen_usedep 'python2_7')]
+	)
+	www-servers/uwsgi[python,${PYTHON_USEDEP}]"
 
 #PATCHES=(
 #)
@@ -94,6 +108,8 @@ python_prepare_all() {
 	sed -i '/^hacking/d' test-requirements.txt || die
 	mkdir -p ${PN}/tests/tmp/ || die
 	cp etc/keystone-paste.ini ${PN}/tests/tmp/ || die
+	sed -i 's|/usr/local|/usr|g' httpd/keystone-uwsgi-* || die
+	sed -i 's|python|python27|g' httpd/keystone-uwsgi-* || die
 	distutils-r1_python_prepare_all
 }
 
@@ -109,8 +125,6 @@ python_test() {
 
 python_install() {
 	distutils-r1_python_install
-	newconfd "${FILESDIR}/keystone.confd" keystone
-	newinitd "${FILESDIR}/keystone.initd" keystone
 
 	diropts -m 0750
 	keepdir /etc/keystone /var/log/keystone
@@ -120,7 +134,7 @@ python_install() {
 	doins etc/default_catalog.templates etc/policy.json
 	doins etc/policy.v3cloudsample.json etc/keystone-paste.ini
 	insinto /etc/keystone/httpd
-	doins httpd/keystone.py httpd/wsgi-keystone.conf
+	doins httpd/*
 
 	fowners keystone:keystone /etc/keystone /etc/keystone/httpd /var/log/keystone
 }

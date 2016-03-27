@@ -67,6 +67,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.27.1:0=[${MULTILIB_USEDEP}]
 # laptop-mode-tools: https://github.com/systemd/systemd/issues/2684
 RDEPEND="${COMMON_DEPEND}
 	>=sys-apps/baselayout-2.2
+	selinux? ( sec-policy/selinux-systemd )
 	!sys-auth/nss-myhostname
 	!sys-fs/eudev
 	!sys-fs/udev
@@ -322,9 +323,6 @@ multilib_src_install_all() {
 			|| die
 		rm "${D}"/usr/share/man/man1/init.1 || die
 	fi
-
-	# Disable storing coredumps in journald, bug #433457
-	mv "${D}"/usr/lib/sysctl.d/50-coredump.conf{,.disabled} || die
 
 	# Preserve empty dirs in /etc & /var, bug #437008
 	keepdir /etc/binfmt.d /etc/modules-load.d /etc/tmpfiles.d \

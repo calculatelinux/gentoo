@@ -3248,6 +3248,7 @@ gnustep-base/gnustep-gui:speech - Audio support using app-accessibility/flite
 gnustep-base/gnustep-make:libobjc2 - Enables use of the GNUstep Objective-C runtime (gnustep-base/libobjc2) with non-fragile ABI and sys-devel/clang compiler
 gnustep-base/gnustep-make:native-exceptions - Enables use of the native Objective-C exception support (@try/@catch/@finally) built-in objective-c exceptions with compilers that support it
 gnustep-base/libobjc2:boehm-gc - Enable Hans Boehm's garbage collector (dev-libs/boehm-gc). Not recommended by upstream
+kde-apps/analitza:eigen - Enable dev-cpp/eigen mathematical templates support
 kde-apps/ark:archive - Enable support for a variety of archive formats through libarchive
 kde-apps/cantor:R - Enable dev-lang/R backend support
 kde-apps/cantor:analitza - Enable kde-base/analitza backend support
@@ -3290,10 +3291,10 @@ kde-apps/kget:bittorrent - Enable bittorrent transfer plugin through net-libs/li
 kde-apps/kget:gpg - Enable signature verification by QGpgME via kde-apps/kdepimlibs
 kde-apps/kget:mms - Enable MMS (Microsoft Media Server) plugin through media-libs/libmms
 kde-apps/kget:webkit - Enable KdeWebkit browser plugin using kde-misc/kwebkitpart
+kde-apps/kig:geogebra - Support files created by sci-mathematics/geogebra
 kde-apps/kig:scripting - Support Python scripting
 kde-apps/kio-extras:phonon - Enable file audio preview plugin using media-libs/phonon
 kde-apps/kio-extras:sftp - Enable SFTP protocol support using net-libs/libssh
-kde-apps/kmines:phonon - Add sound support via media-libs/phonon
 kde-apps/kmix:canberra - Enable sound event support using media-libs/libcanberra
 kde-apps/konqueror:bookmarks - Add dependency on bookmark package.
 kde-apps/kopete:addbookmarks - Automatically add incoming urls to bookmarks.
@@ -3327,7 +3328,10 @@ kde-apps/krfb:telepathy - Enable desktop sharing through a telepathy client
 kde-apps/ksnapshot:kipi - Support for the KDE Image Plugin Interface.
 kde-apps/kstars:fits - Enable support for the FITS image format through cfitsio
 kde-apps/kstars:indi - Enable support for Astronomical control library using libindi
+kde-apps/kstars:wcs - Enable support for World Coordinate System library using wcslib
+kde-apps/kstars:xplanet - Enable support for Xplanet
 kde-apps/kwalletd:gpg - Support wallets with GnuPG encryption additionally to default blowfish-encrypted file
+kde-apps/marble:aprs - Enable support for APRS data sources
 kde-apps/marble:designer-plugin - Enable designer plugin
 kde-apps/marble:phonon - Enable sound support via media-libs/phonon
 kde-apps/marble:shapefile - Enable support for ESRI shapefiles
@@ -3343,6 +3347,7 @@ kde-base/kdebase-startkde:wallpapers - Install the KDE wallpapers
 kde-base/kdelibs:opengl - Enable OpenGL support for Plasma (GLApplet)
 kde-base/kdeplasma-addons:attica - Enable support for dev-libs/libattica
 kde-base/kdeplasma-addons:desktopglobe - Enable Desktop Globe wallpaper using kde-base/marble
+kde-base/kdeplasma-addons:eigen - Build Mandelbrot wallpaper plugin using dev-cpp/eigen:2
 kde-base/kdeplasma-addons:fcitx - Use fcitx input method via app-i18n/fcitx
 kde-base/kdeplasma-addons:ibus - Use ibus input method via app-i18n/ibus
 kde-base/kdeplasma-addons:json - Enable JSON support via dev-libs/qjson
@@ -6441,6 +6446,7 @@ net-p2p/eiskaltdcpp:json - Enable JSON for cli and daemon
 net-p2p/eiskaltdcpp:libcanberra - Enable sound notifications support over libcanberra in EiskaltDC++ Gtk
 net-p2p/eiskaltdcpp:minimal - Don't install headers
 net-p2p/fms:frost - Add support for frost boards
+net-p2p/i2p:ecdsa - Enables additional checks to make sure a setup is available that is capable of using I2Ps ECDSA provisions. I2P will work without it, but you will likely see warnings.
 net-p2p/i2p:nls - Adds Native Language Support using GNU gettext.
 net-p2p/ktorrent:bwscheduler - Schedule upload and download limits over a period of a week
 net-p2p/ktorrent:downloadorder - Specify the download order of a multi-file torrent
