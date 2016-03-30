@@ -38,7 +38,6 @@ app-admin/collectd:collectd_plugins_amqp - Build the AMQP output plugin (transmi
 app-admin/collectd:collectd_plugins_apache - Build the apache input plugin (collects statistics from Apache's mod_status module)
 app-admin/collectd:collectd_plugins_apcups - Build the apcups input plugin (reads various statistics about a connected uninterruptible power supply (UPS))
 app-admin/collectd:collectd_plugins_ascent - Build the ascent input plugin (reads and parses the statistics page of Ascent)
-app-admin/collectd:collectd_plugins_barometer - Build the barometer input plugin (reads sensor data from various Freescale and Bosch digital barometers)
 app-admin/collectd:collectd_plugins_battery - Build the battery input plugin (collects the battery's charge, the drawn current and the battery's voltage)
 app-admin/collectd:collectd_plugins_bind - Build the bind input plugin (collects statistics from bind instances)
 app-admin/collectd:collectd_plugins_ceph - Build the Ceph input plugin (collects statistics from the Ceph distributed storage system)
@@ -151,7 +150,6 @@ app-admin/collectd:collectd_plugins_write_graphite - Build the write_graphite ou
 app-admin/collectd:collectd_plugins_write_http - Build the write_http output plugin (sends metrics to a web-server using HTTP POST requests)
 app-admin/collectd:collectd_plugins_write_kafka - Build the Kafka output plugin (sends metrics to Apache Kafka)
 app-admin/collectd:collectd_plugins_write_log - Build the write_log output plugin (writes metrics to a file)
-app-admin/collectd:collectd_plugins_write_mongodb - Build the MongoDB output plugin (writes metrics to a MongoDB)
 app-admin/collectd:collectd_plugins_write_redis - Build the Redis output plugin (stores values in Redis)
 app-admin/collectd:collectd_plugins_write_riemann - Build the Riemann output plugin (stores values in Riemann, a stream processing and monitoring system)
 app-admin/collectd:collectd_plugins_write_sensu - Build the Sensu output plugin (sends metrics to Sensu Core, an open-source monitoring project)
@@ -3450,6 +3448,7 @@ kde-plasma/kde-cli-tools:kdesu - Build graphical frontend for kde-frameworks/kde
 kde-plasma/kde-gtk-config:gtk3 - Add support for gtk+3-based applications.
 kde-plasma/kdeplasma-addons:ibus - Use ibus input method via app-i18n/ibus
 kde-plasma/kdeplasma-addons:scim - Enable applets that use app-i18n/scim
+kde-plasma/kdeplasma-addons:share - Enable applet for quickly sharing data to a variety of sources
 kde-plasma/kinfocenter:egl - Retrieve information about OpenGL via EGL
 kde-plasma/kinfocenter:gles - Show OpenGL ES information in kinfocenter
 kde-plasma/kinfocenter:nfs - Show information about NFS mounts, shares and log entries
@@ -3462,10 +3461,14 @@ kde-plasma/libksysguard:detailedmemory - Enable display of detailed memory infor
 kde-plasma/plasma-desktop:evdev - Enable configuration module for desktop input devices.
 kde-plasma/plasma-desktop:gtk2 - Add support for gtk+2-based applications using legacy xembed systray icons via libappindicator.
 kde-plasma/plasma-desktop:gtk3 - Add support for gtk+3-based applications using legacy xembed systray icons via libappindicator.
+kde-plasma/plasma-desktop:ibus - Use ibus input method via app-i18n/ibus
 kde-plasma/plasma-desktop:legacy-systray - Add support for applications using legacy xembed systray icons.
+kde-plasma/plasma-desktop:scim - Enable applets that use app-i18n/scim
 kde-plasma/plasma-desktop:touchpad - Enable configuration module for synaptics-based touchpads.
 kde-plasma/plasma-meta:display-manager - Pull in a graphical display manager
+kde-plasma/plasma-meta:grub - Pull in Breeze theme for sys-boot/grub
 kde-plasma/plasma-meta:mediacenter - Pull in kde-plasma/plasma-mediacenter
+kde-plasma/plasma-meta:plymouth - Pull in Breeze theme for sys-boot/plymouth
 kde-plasma/plasma-meta:sddm - Pull in the x11-misc/sddm display manager and KCM
 kde-plasma/plasma-meta:sdk - Pull in kde-plasma/plasma-sdk
 kde-plasma/plasma-meta:wallpapers - Install the KDE wallpapers
