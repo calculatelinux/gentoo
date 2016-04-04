@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=6
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python3_{4,5} )
 
 inherit autotools eutils multilib python-single-r1 readme.gentoo-r1 systemd udev user multilib-minimal
 

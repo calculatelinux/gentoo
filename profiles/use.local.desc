@@ -1554,7 +1554,6 @@ dev-haskell/contravariant:tagged - You can disable the use of the `tagged` packa
 dev-haskell/cpu:executable - build 'cpuid' tool
 dev-haskell/crypto-api:all_cpolys - Build all the CMAC polynomes up to 10000 bits instead of just the usual ones
 dev-haskell/crypto-conduit:conduit11 - Use conduit >= 1.1.
-dev-haskell/crypto-pubkey:benchmark - Build benchmarks.
 dev-haskell/cryptohash:cryptoapi - Defines crypto-api instances
 dev-haskell/cryptonite:integer-gmp - Whether or not to use GMP for some functions
 dev-haskell/cryptonite:support_aesni - allow compilation with AESNI on system and architecture that supports it
@@ -1636,7 +1635,6 @@ dev-haskell/publicsuffixlist:runtimelist - read suffix list from dist at startup
 dev-haskell/quickcheck:template_haskell - Enable additional test modules requiring Template Haskell support.
 dev-haskell/recaptcha:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/reflection:template-haskell - Enable template haskell.
-dev-haskell/reflection:th - Enable template haskell.
 dev-haskell/regex-compat-tdfa:newbase - Use base-4.0 or newer.
 dev-haskell/regex-compat-tdfa:splitbase - Use the new smaller, split-up base package.
 dev-haskell/rfc5051:mkunicodedata - build codes generator itself
@@ -1794,7 +1792,6 @@ dev-java/proguard:ant - Ant task for using ProGuard in build.xml scripts
 dev-java/proguard:j2me - Adds support for J2ME Wireless Toolkit
 dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
 dev-java/sbt:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
-dev-java/spymemcached:spring - Build support for the spring framework
 dev-java/sun-jdk:derby - Enable Installation of Bundled Derby (Java DB)
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
 dev-java/sun-jdk:pax_kernel - Use paxctl to mark the JVM binaries.
@@ -2773,11 +2770,9 @@ dev-vcs/cvs2svn:bazaar - Support for dev-vcs/bzr
 dev-vcs/cvsync:gcrypt - Use dev-libs/libgcrypt for hash functions.
 dev-vcs/cvsync:mhash - Use app-crypt/mhash for hash functions.
 dev-vcs/cvsync:openssl - Use dev-libs/openssl for hash functions.
-dev-vcs/darcs:color - Use ansi color escapes.
 dev-vcs/darcs:diff - Use 'lcs' for diff building.
 dev-vcs/darcs:http - Use the pure Haskell HTTP package for HTTP support.
 dev-vcs/darcs:network-uri - Get Network.URI from the network-uri package.
-dev-vcs/darcs:optimize - Build with optimizations (-O2).
 dev-vcs/darcs:terminfo - Use the terminfo package for enhanced console support.
 dev-vcs/darcs:threaded - Use threading and SMP support.
 dev-vcs/fossil:fusefs - Enable the Fuse Filesystem
@@ -2805,6 +2800,7 @@ dev-vcs/git-annex:benchmark - Enable benchmarking
 dev-vcs/git-annex:concurrentoutput - Use concurrent-output library (experimental)
 dev-vcs/git-annex:cryptonite - Use the cryptonite library, instead of the older cryptohash
 dev-vcs/git-annex:ekg - Enable use of EKG to monitor git-annex as it runs.
+dev-vcs/git-annex:magicmime - Use libmagic to determine file MIME types
 dev-vcs/git-annex:network-uri - Get Network.URI from the network-uri package.
 dev-vcs/git-annex:pairing - Enable pairing of git annex repositories
 dev-vcs/git-annex:s3 - Enable Amazon S3 remote
@@ -3861,6 +3857,7 @@ media-gfx/pstoedit:pptx - Enable support for generating PowerPoint pptx files
 media-gfx/qiv:magic - Use libmagic to determine mimetypes
 media-gfx/qiviewer:webp - Build support for WEBP image format
 media-gfx/simple-scan:colord - Support color management using x11-misc/colord
+media-gfx/slic3r:gui - Enable GUI
 media-gfx/splashutils:fbcondecor - Support for the fbcondecor kernel patch.
 media-gfx/ufraw:contrast - enable contrast setting option
 media-gfx/ufraw:fits - Enable support for the FITS image format through sci-libs/cfitsio
@@ -6951,7 +6948,6 @@ sci-libs/xkaapi:blas - Kaapi BLAS tasks for PLASMA
 sci-libs/xkaapi:gpu - Build library for gpu threading
 sci-mathematics/Macaulay2:optimization - Accept upstream's choices for -O option, i.e. -O3 almost everywhere.
 sci-mathematics/agda:cpphs - Use cpphs instead of cpp.
-sci-mathematics/agda:epic - Add support for the epic compiler.
 sci-mathematics/agda:stdlib - Install the standard library.
 sci-mathematics/agda-stdlib:ffi - Install agda-lib-ffi for compilation using the MAlonzo backend
 sci-mathematics/bertini:optimization - Accept upstream's choices for -O option.
