@@ -2521,7 +2521,6 @@ dev-qt/qtgui:exceptions - Add support for exceptions - like catching them inside
 dev-qt/qtgui:gles2 - Use GLES 2.0 or later instead of full OpenGL
 dev-qt/qtgui:glib - Enable integration with the dev-libs/glib event loop
 dev-qt/qtgui:gtkstyle - Build a widgets style that mimics the active GTK+ theme
-dev-qt/qtgui:harfbuzz - Use media-libs/harfbuzz for text shaping
 dev-qt/qtgui:ibus - Build the IBus input method plugin
 dev-qt/qtgui:libinput - Enable support for input devices via dev-libs/libinput
 dev-qt/qtgui:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
@@ -3425,6 +3424,7 @@ kde-plasma/kinfocenter:nfs - Show information about NFS mounts, shares and log e
 kde-plasma/kinfocenter:pci - Show advanced PCI information
 kde-plasma/kinfocenter:samba - Show information about Samba mounts, shares and log entries
 kde-plasma/kmenuedit:hotkeys - Enable support for hotkey editing
+kde-plasma/kwallet-pam:oldwallet - Enable legacy support for kde-apps/kwalletd
 kde-plasma/kwin:gles2 - Use OpenGL ES 2 instead of full GL
 kde-plasma/kwin:multimedia - Enable effect video button in desktop effects KCM
 kde-plasma/libksysguard:detailedmemory - Enable display of detailed memory information using dev-qt/qtwebkit.
@@ -6156,6 +6156,7 @@ net-misc/oidentd:masquerade - Enable support for masqueraded/NAT connections
 net-misc/openconnect:gssapi - Build GSSAPI support.
 net-misc/openconnect:java - Build JNI bindings using jni.h
 net-misc/openconnect:libproxy - Enable proxy support.
+net-misc/openconnect:stoken - Enable stoken support.
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:bindist - Disable EC/RC5 algorithms in OpenSSL for patent reasons.
 net-misc/openssh:hpn - Enable high performance ssh
