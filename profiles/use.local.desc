@@ -4962,6 +4962,7 @@ net-analyzer/goaccess:btree - Enable Tokyo Cabinet's on-disk B+ Tree database ba
 net-analyzer/goaccess:memhash - Enable Tokyo Cabinet's on-memory hash database backend
 net-analyzer/goaccess:tokyocabinet - Enable Tokyo Cabinet's on-memory hash database backend
 net-analyzer/gr-fosphor:glfw - enable GLFW based interface
+net-analyzer/graphite-web:carbon - Enable carbon support
 net-analyzer/graphite-web:memcached - Enable memcached support
 net-analyzer/httping:tfo - Enable support for TCP Fast Open
 net-analyzer/hydra:ncp - NCP protocol (NetWare) support through net-fs/ncpfs
@@ -5185,6 +5186,7 @@ net-dns/bind:urandom - Use /dev/urandom instead of /dev/random
 net-dns/bind-tools:gost - Enables gost OpenSSL engine support
 net-dns/bind-tools:gssapi - Enable gssapi support
 net-dns/bind-tools:urandom - Use /dev/urandom instead of /dev/random
+net-dns/ddclient:cloudflare - Enable support for updating IP address via CloudFlare
 net-dns/ddclient:hardened - Use iproute2 instead of ifconfig to grab an IP address
 net-dns/dnscrypt-proxy:ldns - Use net-libs/ldns for DNSSEC/SSHFP validation
 net-dns/dnscrypt-proxy:plugins - Enable plugin support to inspect and modify queries and responses
@@ -8373,7 +8375,6 @@ x11-wm/subtle:xrandr - Enable support for the X RandR extension
 x11-wm/subtle:xtest - Enable support for the XTest extension
 x11-wm/vtwm:rplay - Enable rplay support, needed for sound.
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
-x11-wm/windowmaker:vdesktop - Enable dynamic virtual desktop (conflicts with software that works on the edges of the screen)
 x11-wm/windowmaker:webp - Enables WebP image format support using media-libs/libwebp
 x11-wm/windowmaker:xrandr - Enable XRandR window extension support
 x11-wm/wmfs:imlib2 - Enable image support through media-libs/imlib2
