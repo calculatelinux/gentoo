@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=>=sys-libs/ncurses-5.2-r2:0= readline? ( >=sys-libs/readline-7.0_beta:0= ) nls? ( virtual/libintl ) !<sys-apps/portage-2.1.6.7_p1 !<sys-apps/paludis-0.26.0_alpha5
 SLOT=0
 SRC_URI=ftp://ftp.cwru.edu/pub/bash/bash-4.4-rc1.tar.gz
-_eclasses_=eutils	9d81603248f2ba3ec59124320d123e5e	flag-o-matic	d270fa247153df66074f795fa42dba3e	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_eclasses_=eutils	9d81603248f2ba3ec59124320d123e5e	flag-o-matic	d270fa247153df66074f795fa42dba3e	multilib	23ae8c186171e6476af098d2a50d0ee0	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=5bf023539e27dcc1fabc1d320ff4c667

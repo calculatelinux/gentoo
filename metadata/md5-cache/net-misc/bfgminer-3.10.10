@@ -10,5 +10,5 @@ RDEPEND=net-misc/curl ncurses? ( sys-libs/ncurses:=[unicode?] ) >=dev-libs/janss
 REQUIRED_USE=|| ( antminer avalon bfsb bifury bigpic bitforce bitfury cpumining drillbit hashbuster hashbuster2 hashfast icarus klondike littlefury metabank modminer nanofury opencl proxy twinfury x6500 ztex ) adl? ( opencl ) bfsb? ( bitfury ) bigpic? ( bitfury ) drillbit? ( bitfury ) hashbuster? ( bitfury ) hashbuster2? ( bitfury libusb ) klondike? ( libusb ) littlefury? ( bitfury ) lm_sensors? ( opencl ) metabank? ( bitfury ) nanofury? ( bitfury ) scrypt? ( || ( cpumining opencl proxy ) ) twinfury? ( bitfury ) unicode? ( ncurses ) proxy? ( || ( proxy_getwork proxy_stratum ) ) proxy_getwork? ( proxy ) proxy_stratum? ( proxy ) x6500? ( libusb ) ztex? ( libusb )
 SLOT=0
 SRC_URI=http://luke.dashjr.org/programs/bitcoin/files/bfgminer/3.10.10/bfgminer-3.10.10.tbz2
-_eclasses_=eutils	9d81603248f2ba3ec59124320d123e5e	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_eclasses_=eutils	9d81603248f2ba3ec59124320d123e5e	multilib	23ae8c186171e6476af098d2a50d0ee0	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=e51e0cd26398a0e041af63c4d1078e33

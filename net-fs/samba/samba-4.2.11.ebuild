@@ -16,7 +16,7 @@ SRC_PATH="stable"
 
 SRC_URI="mirror://samba/${SRC_PATH}/${MY_P}.tar.gz
 	https://dev.gentoo.org/~polynomial-c/samba-disable-python-patches-4.2.9.tar.xz"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 [[ ${PV} = *_rc* ]] && KEYWORDS="~hppa"
 
 DESCRIPTION="Samba Suite Version 4"
@@ -137,7 +137,7 @@ multilib_src_configure() {
 		--sysconfdir=/etc
 		--localstatedir=/var
 		--with-modulesdir=/usr/$(get_libdir)/samba
-		--with-piddir=/var/run/${PN}
+		--with-piddir=/run/${PN}
 		--bundled-libraries=NONE
 		--builtin-libraries=NONE
 		--disable-rpath
