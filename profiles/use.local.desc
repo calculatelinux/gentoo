@@ -6100,6 +6100,11 @@ net-misc/megatools:fuse - Enables support for the filesystem in userspace plugin
 net-misc/memcached:slabs-reassign - Allow manual reassignment of memory slabs at the cost of slab optimizations.
 net-misc/minidlna:netgear - Enable netgear branding
 net-misc/minidlna:readynas - Enable readynas branding
+net-misc/miniupnpd:igd2 - Build for IGDv2 instead of an IGDv1
+net-misc/miniupnpd:leasefile - Enable lease file.
+net-misc/miniupnpd:pcp-peer - Enable support for PCP-PEER to allow NAT-PMP clients to mangle their packets.
+net-misc/miniupnpd:portinuse - Check if a port is in use before allowing a NAT-PMP client to map it.
+net-misc/miniupnpd:strict - Be more strict regarding compliance with UPnP specifications.
 net-misc/modemmanager:mbim - Enable MBIM modem protocol
 net-misc/modemmanager:qmi - Enable support for the QMI modem protocol used by devices with Qualcomm chipsets
 net-misc/modemmanager:qmi-newest - Avoid deprecated QMI commands. Warning: may cause incompatibility with older devices.
@@ -7707,6 +7712,7 @@ sys-libs/uclibc:savedconfig - Adds support for user defined configs
 sys-libs/uclibc:ssp - Force the use of ssp to be built into a hardened uclibc setup
 sys-libs/uclibc:uclibc-compat - Build uclibc with backwards compatible options
 sys-libs/uclibc:wordexp - Add support for word expansion (wordexp.h)
+sys-libs/uclibc-ng:rpc - Enable sun nis/rpc support (you should use libtirpc though)
 sys-libs/zlib:minizip - include the minizip library for quick and dirty zip extraction
 sys-power/cpupower:cpufreq_bench - Build and install the cpufreq_bench binary
 sys-power/nut:ipmi - Support IPMI-based UPSes.
