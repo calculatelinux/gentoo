@@ -416,10 +416,10 @@
       <name>Amy Winston</name>
       <role>Member</role>
     </member>
-    <member>
+    <member is-lead="1">
       <email>wraeth@gentoo.org</email>
       <name>Sam Jorna</name>
-      <role>Member</role>
+      <role>Lead</role>
     </member>
   </project>
   <project>
@@ -1508,7 +1508,7 @@
     <name>Gentoo Geosciences Project</name>
     <url>https://wiki.gentoo.org/wiki/Project:Geosciences</url>
     <description>The Geosciences Project handles all geosciences activities in Gentoo.</description>
-    <member>
+    <member is-lead="1">
       <email>amynka@gentoo.org</email>
       <name>Amy Winston</name>
       <role>Member</role>
