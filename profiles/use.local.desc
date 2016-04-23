@@ -2490,6 +2490,7 @@ dev-qt/qtbluetooth:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtcore:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtcore:glib - Enable dev-libs/glib eventloop support
 dev-qt/qtcore:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
+dev-qt/qtcore:systemd - Enable native journald logging support
 dev-qt/qtdbus:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtdeclarative:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtdeclarative:gles2 - Use GLES 2.0 or later instead of full OpenGL
@@ -2524,7 +2525,7 @@ dev-qt/qtgui:xcb - Build the XCB platform plugin and enable X11 integration
 dev-qt/qthelp:compat - Build the extra compatibility layer required by a few packages, see http://blog.qt.digia.com/blog/2010/06/22/qt-assistant-compat-version-available-as-extra-source-package/
 dev-qt/qthelp:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtmultimedia:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtmultimedia:gles2 - Enable EGL/GLES2 integration
+dev-qt/qtmultimedia:gles2 - Use GLES 2.0 or later instead of full OpenGL
 dev-qt/qtmultimedia:gstreamer - Enable audio support via media-libs/gstreamer using SLOT 1.0
 dev-qt/qtmultimedia:gstreamer010 - Enable audio support via media-libs/gstreamer using SLOT 0.10
 dev-qt/qtmultimedia:qml - Build QML/QtQuick bindings and imports
@@ -2560,6 +2561,10 @@ dev-qt/qtwayland:egl - Use EGL instead of GLX to manage OpenGL contexts
 dev-qt/qtwayland:qml - Build QML/QtQuick bindings
 dev-qt/qtwayland:wayland-compositor - Build Qt compositor for wayland
 dev-qt/qtwebchannel:qml - Build QML/QtQuick bindings and imports
+dev-qt/qtwebengine:geolocation - Enable physical position determination via dev-qt/qtpositioning
+dev-qt/qtwebengine:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of bundled.
+dev-qt/qtwebengine:system-icu - Use the system-wide dev-libs/icu instead of bundled.
+dev-qt/qtwebengine:widgets - Enable QtWidgets support
 dev-qt/qtwebkit:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtwebkit:geolocation - Enable physical position determination via dev-qt/qtpositioning
 dev-qt/qtwebkit:gstreamer - Enable HTML5 audio/video support via media-libs/gstreamer using SLOT 1.0
@@ -3484,7 +3489,7 @@ lxqt-base/lxqt-panel:volume - Build volume plugin
 lxqt-base/lxqt-panel:worldclock - Build worldclock plugin
 mail-client/alot:doc - Install user manual and API documentation
 mail-client/alpine:chappa - enhance alpine by applying Eduardo Chappa's patches
-mail-client/alpine:onlyalpine - installs only the alpine binary, so it does not collied with app-editors/pico and/or mail-client/pine
+mail-client/alpine:onlyalpine - installs only the alpine binary, so it does not collied with pico and/or pine
 mail-client/alpine:passfile - Adds support for caching passwords into a file between sessions
 mail-client/alpine:smime - Enable support for S/MIME
 mail-client/alpine:topal - Enable support for net-mail/topal
@@ -4195,7 +4200,7 @@ media-plugins/vdr-graphtft:theme_deeppurple - graphTFT Deep Purple theme
 media-plugins/vdr-graphtft:theme_poetter - graphTFT Poetter theme
 media-plugins/vdr-graphtft:touchscreen - Enable Touchscreen support
 media-plugins/vdr-music:graphtft - Enable support for media-plugins/vdr-graphtft
-media-plugins/vdr-pvr350:yaepg - Enables full support for the output format of media-plugins/vdr-yaepg
+media-plugins/vdr-pvr350:yaepg - Enables full support for the output format of vdr-yaepg
 media-plugins/vdr-streamdev:client - Compile the VDR plugin vdr-streamdev-client that acts like a dvb-budget card
 media-plugins/vdr-streamdev:server - Compile the VDR plugin vdr-streamdev-server that allows remote systems to access the DVB cards used for the local VDR
 media-plugins/vdr-text2skin:contrib - Install user contributed scripts
@@ -4864,7 +4869,7 @@ media-video/vdr:rotor - Enable support for plugin media-plugins/vdr-rotor for di
 media-video/vdr:ttxtsubs - support for media-plugins/vdr-ttxtsubs
 media-video/vdr:vasarajanauloja - replacement for the liemikuutio patch, adds some nice must haves features
 media-video/vdr:wareagleicon - Replace original icon set in menu
-media-video/vdr:yaepg - Enables support for the media-plugins/vdr-yaepg
+media-video/vdr:yaepg - Enables support for the vdr-yaepg plugin
 media-video/vlc:X - Enables support for, e.g., fullscreen mode via the X Window System. By itself, this flag does not build a graphical interface.
 media-video/vlc:atmo - Enables support for AtmoLight (homebrew Ambient Lighting Technology)
 media-video/vlc:audioqueue - Enables AudioQueue audio module for Mac OS X.
@@ -5844,7 +5849,7 @@ net-mail/mailutils:clients - Build client programs - frm maidag mail sieve messa
 net-mail/mailutils:kyotocabinet - Enable Kyoto Cabinet database support
 net-mail/mailutils:servers - Build server programs - imap4d pop3d comsatd
 net-mail/mailutils:tokyocabinet - Enable Tokyo Cabinet database support
-net-mail/mairix:gnus - Add support for the marks propagation feature in app-emacs/gnus
+net-mail/mairix:gnus - Add support for the marks propagation feature in GNUS (provided by app-editors/emacs or app-xemacs/gnus for XEmacs users)
 net-mail/mpop:libsecret - Enable libsecret support to store login credentials
 net-mail/mu:emacs - Install the mu4e mail client.
 net-mail/mu:gui - Build and install the experimental gui 'mug'.

@@ -30,6 +30,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Alex Brandt <alunduil@gentoo.org> (23 Apr 2016)
+# Contains collisions with dev-python/ipaddress.  See #580388 for more details.
+# Masked for removal in 30 days.
+dev-python/py2-ipaddress
+
 # Michael Palimaka <kensington@gentoo.org> (21 Apr 2016)
 # Requires package no longer in the tree to be useful. Unmaintained.
 # Dead upstream. Masked for removal in 30 days.
@@ -77,10 +82,6 @@ dev-java/freehep-xml
 # Masked because of security bug 580210
 =www-misc/monitorix-3.6.0
 =www-misc/monitorix-3.8.1
-
-# Mike Gilbert <floppym@gentoo.org> (16 Apr 2016)
-# Causes numerous build failures. Bug 575232.
-=sys-libs/glibc-2.23-r1
 
 # Richard Freeman <rich0@gentoo.org> (16 Apr 2016)
 # Masked for extended testing, and porting of openrc scripts
