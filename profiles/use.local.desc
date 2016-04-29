@@ -787,7 +787,6 @@ app-i18n/fcitx:gtk3 - Install input method module for GTK+ 3
 app-i18n/fcitx:opencc - Enable OpenCC engine (using app-i18n/opencc) for converter between Simplified Chinese and Traditional Chinese
 app-i18n/fcitx:pango - Enable support for x11-libs/pango
 app-i18n/fcitx:qt4 - Install input method module for Qt 4
-app-i18n/fcitx:snooper - Enable key snooper for GTK+ applications
 app-i18n/fcitx:table - Install table input methods for Simplified Chinese
 app-i18n/fcitx-configtool:gtk3 - Use GTK+3 instead of 2
 app-i18n/fcitx-libpinyin:dictmanager - Enable dictionary manager. Requires dev-qt/qtwebkit.
@@ -3545,6 +3544,7 @@ mail-client/thunderbird:lightning - Enable app-global calendar support (note 38.
 mail-client/thunderbird:minimal - Remove the software development kit and headers
 mail-client/thunderbird:mozdom - Enable Mozilla's DOM inspector
 mail-client/thunderbird:system-cairo - Use the system-wide x11-libs/cairo instead of bundled.
+mail-client/thunderbird:system-harfbuzz - Use the system-wide media-libs/harfbuzz and media-gfx/graphite2 instead of bundled.
 mail-client/thunderbird:system-icu - Use the system-wide dev-libs/icu instead of bundled.
 mail-client/thunderbird:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled.
 mail-client/thunderbird:system-libevent - Use the system-wide dev-libs/libevent instead of bundled.
@@ -3747,6 +3747,7 @@ media-gfx/blender:player - Build the Blender Player. THis requires the Game engi
 media-gfx/blender:redcode - This flag add support for RED CODE camera digital format (5K HD images *.r3d) - EXPERIMENTAL.
 media-gfx/brlcad:benchmarks - Run benchmarks during test phase (need test option enabled)
 media-gfx/comix:rar - Pulls app-arch/unrar for rar file support
+media-gfx/cura:usb - Access 3D printers via USB
 media-gfx/darktable:colord - Support color management using x11-misc/colord
 media-gfx/darktable:flickr - Add support for uploading photos to flickr
 media-gfx/darktable:geo - Enable geotagging support
@@ -7913,6 +7914,7 @@ www-client/epiphany:nss - Import passwords from older gecko based www-client/epi
 www-client/firefox:bindist - Disable official Firefox branding (icons, name) which are not binary-redistributable according to upstream.
 www-client/firefox:custom-optimization - Fine-tune custom compiler optimizations (-Os, -O0, -O1, -O2, -O3)
 www-client/firefox:egl - Enable EGL provider
+www-client/firefox:force-gtk2 - Use the cairo-gtk2 rendering engine
 www-client/firefox:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
 www-client/firefox:gstreamer-0 - Use gstreamer:0.10 instead of gstreamer:1 for media support
 www-client/firefox:gtk3 - Use the cairo-gtk3 rendering engine
@@ -7921,6 +7923,7 @@ www-client/firefox:jemalloc3 - Enable or disable jemalloc3 (forced-on when suppo
 www-client/firefox:minimal - Prevent sdk and headers from being installed
 www-client/firefox:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
 www-client/firefox:system-cairo - Use the system-wide x11-libs/cairo instead of bundled.
+www-client/firefox:system-harfbuzz - Use the system-wide media-libs/harfbuzz and media-gfx/graphite2 instead of bundled.
 www-client/firefox:system-icu - Use the system-wide dev-libs/icu instead of bundled.
 www-client/firefox:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled.
 www-client/firefox:system-libevent - Use the system-wide dev-libs/libevent instead of bundled.

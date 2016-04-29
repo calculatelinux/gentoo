@@ -88,6 +88,8 @@ go_arch()
 	case "${portage_arch}" in
 		x86)	echo 386;;
 		x64-*)	echo amd64;;
+		ppc64)
+			[[ "$(tc-endian)" = big ]] && echo ppc64 || echo ppc64le ;;
 		*)		echo "${portage_arch}";;
 	esac
 }
@@ -153,7 +155,7 @@ src_compile()
 	export GOROOT_BOOTSTRAP="${WORKDIR}"/go-$(go_os)-$(go_arch)-bootstrap
 	if use gccgo; then
 		mkdir -p "${GOROOT_BOOTSTRAP}/bin" || die
-		local go_binary=$(type -P go-5 2>/dev/null)
+		local go_binary=$(gcc-config --get-bin-path)/go-5
 		[[ -x ${go_binary} ]] || go_binary=$(
 			find "${EPREFIX}"/usr/${CHOST}/gcc-bin/*/go-5 | sort -V | tail -n1)
 		[[ -x ${go_binary} ]] || die "go-5: command not found"
@@ -175,6 +177,7 @@ src_compile()
 	if [[ ${ARCH} == arm ]]; then
 		export GOARM=$(go_arm)
 	fi
+	elog "GOROOT_BOOTSTRAP is ${GOROOT_BOOTSTRAP}"
 
 	cd src
 	./make.bash || die "build failed"
