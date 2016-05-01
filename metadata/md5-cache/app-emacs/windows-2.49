@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DEPEND=app-emacs/revive >=virtual/emacs-23
+DESCRIPTION=Window manager for GNU Emacs
+EAPI=6
+HOMEPAGE=http://www.gentei.org/~yuuji/software/
+KEYWORDS=~amd64
+LICENSE=yuuji
+RDEPEND=app-emacs/revive >=virtual/emacs-23
+SLOT=0
+SRC_URI=https://enise.org/users/victor/share/distfiles/windows-2.49.el.xz
+_eclasses_=elisp	7e36316fe822639d5a29fa10d5529eb9	elisp-common	9f56c4e9bf1282dbfc2a5a09e1124e74
+_md5_=c0a03cce9f0f549b3bab83f1022391c3
