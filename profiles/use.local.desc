@@ -2672,6 +2672,13 @@ dev-util/cwdiff:a2ps - install app-text/a2ps for postscript output
 dev-util/cwdiff:mercurial - install hg wdiff alias for dev-vcs/mercurial
 dev-util/devhelp:gedit - Install plugin for app-editors/gedit
 dev-util/dialog:minimal - Disable library, install command-line program only
+dev-util/electron:gtk3 - Use gtk3 instead of gtk2
+dev-util/electron:hidpi - Enable support for high-resolution screens (high dots per inch)
+dev-util/electron:lto - Build with link time optimization enabled
+dev-util/electron:pic - Disable optimized assembly code that is not PIC friendly
+dev-util/electron:proprietary-codecs - Enable proprietary codecs like H.264, MP3
+dev-util/electron:system-ffmpeg - Use system ffmpeg instead of the bundled one
+dev-util/electron:tcmalloc - Use bundled tcmalloc instead of system malloc
 dev-util/emilpro:system-binutils - Use the gentoo binutils instead of building against an unpatched vanilla version
 dev-util/fatrace:powertop - Add powetop integration
 dev-util/geany:gtk3 - Use GTK+3 instead of GTK+2
@@ -2865,6 +2872,7 @@ games-arcade/performous:midi - Enable MIDI I/O support
 games-arcade/performous:songs - Install a few demo songs
 games-arcade/performous:tools - Install tools
 games-arcade/performous:webcam - Enable Webcam support
+games-arcade/savagewheels:fmod - Enable the fmod music and sound effects library
 games-arcade/slimevolley:net - Enable network support
 games-arcade/smc:music - Download and install the music files
 games-arcade/tuxanci:physfs - Use dev-games/physfs instead of dev-libs/libzip to load compressed data
@@ -4290,7 +4298,8 @@ media-sound/cantata:http-server - Enable internal HTTP server to play non-MPD fi
 media-sound/cantata:online-services - Enable support for online services (Jamendo, Magnatune, SoundCloud, and Podcasts)
 media-sound/cantata:replaygain - Enable ReplayGain support, for relative volume adjustments
 media-sound/cantata:streams - Enable support for streams tab (to save favourite streams, and search for others)
-media-sound/clementine:box - Enable Box support
+media-sound/clementine:amazoncloud - Enable Amazon cloud drive support
+media-sound/clementine:box - Enable filesharing via Box.com
 media-sound/clementine:dropbox - Enable Dropbox support
 media-sound/clementine:googledrive - Enable Google Drive support
 media-sound/clementine:lastfm - Use liblastfm for fetching song info, scrobbling and radio streams
@@ -4299,6 +4308,7 @@ media-sound/clementine:projectm - Build with ProjectM visualization
 media-sound/clementine:skydrive - Enable Skydrive support
 media-sound/clementine:system-sqlite - Use the system-wide dev-db/sqlite installation
 media-sound/clementine:ubuntu-one - Enable Ubuntu One support
+media-sound/clementine:vkontakte - Enable vk.com support
 media-sound/clementine:wiimote - Enable support for Wii remote
 media-sound/cmus:cdio - use libcdio for CD support
 media-sound/cmus:cue - enable CUE sheet parsing
@@ -5730,6 +5740,13 @@ net-libs/libssh:ssh1 - Build with SSH1 support
 net-libs/libssh2:gcrypt - Use dev-libs/libgcrypt instead of dev-libs/openssl
 net-libs/libvncserver:24bpp - enable 24bpp support
 net-libs/libvncserver:gcrypt - enable support for gcrypt
+net-libs/libwebsockets:client - The client part of the library
+net-libs/libwebsockets:http2 - Compile with support for http2
+net-libs/libwebsockets:ipv6 - Compile with support for ipv6
+net-libs/libwebsockets:server - The server part of the library
+net-libs/libwebsockets:ssl - Include SSL support (default dev-libs/openssl)
+net-libs/libwebsockets:static-libs - Build the static version of the library
+net-libs/libwebsockets:zlib - Include zlib support
 net-libs/loudmouth:asyncns - Use net-libs/libasyncns for asynchronous name resolution.
 net-libs/loudmouth:openssl - Enable dev-libs/openssl support instead of gnutls (which is the default).
 net-libs/mbedtls:havege - Enable the HAVEGE random generator. Warning: the HAVEGE random generator is not suitable for virtualized environments
