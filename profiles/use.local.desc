@@ -1460,6 +1460,7 @@ dev-embedded/sdcc:z180 - Add support for Zilog Z180
 dev-embedded/sdcc:z80 - Add support for Zilog Z80
 dev-embedded/urjtag:ftd2xx - Enable support for USB FTDI chips via dev-embedded/libftd2xx
 dev-embedded/urjtag:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
+dev-games/aseprite:gtk3 - Enable support for the experimental native GTK File Dialog
 dev-games/aseprite:memleak - Enable memory-leaks detector (only for developers)
 dev-games/aseprite:static - Link against static version of C and C++ runtimes
 dev-games/aseprite:webp - Enable webp image format support
@@ -1850,7 +1851,6 @@ dev-lang/php:intl - Enables the intl extension for extended internalization supp
 dev-lang/php:json - Enable JSON support
 dev-lang/php:ldap-sasl - Add SASL support for the PHP LDAP extension
 dev-lang/php:libmysqlclient - Use libmyslclient driver for mysql, mysqli, PDO_Mysql (not recommended)
-dev-lang/php:mysqlnd - Use native driver for mysql, mysqli, PDO_Mysql
 dev-lang/php:opcache - Enables built-in opcode cache, replacing pecl-apc et.al
 dev-lang/php:pdo - Enable the bundled PDO extensions
 dev-lang/php:phar - Enables the phar extension to provide phar archive support
