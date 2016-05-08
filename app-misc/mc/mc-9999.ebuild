@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://github.com/MidnightCommander/mc.git https://github.com/MidnightCommander/mc.git git://midnight-commander.org/git/mc.git"
-	LIVE_ECLASSES="git-2 autotools"
+	LIVE_ECLASSES="git-r3 autotools"
 	LIVE_EBUILD=yes
 fi
 
@@ -51,12 +51,10 @@ DEPEND="${RDEPEND}
 [[ -n ${LIVE_EBUILD} ]] && DEPEND="${DEPEND} dev-vcs/cvs" # needed only for SCM source tree (autopoint uses cvs)
 
 src_prepare() {
-	epatch_user
+	default
 
 	[[ -n ${LIVE_EBUILD} ]] && ./autogen.sh
 }
-
-S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	local myscreen=ncurses
