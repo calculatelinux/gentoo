@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=!app-pda/synce-connector >=dev-libs/dbus-glib-0.100 >=dev-libs/glib-2.28 !dev-libs/librapi2 !dev-libs/libsynce net-dialup/ppp sys-apps/net-tools virtual/libgudev virtual/udev python? ( >=dev-python/pyrex-0.9.6 dev-python/python-gudev ) python? ( =dev-lang/python-2.7* )
 SLOT=0
 SRC_URI=mirror://sourceforge/synce/synce-core-0.16.tar.gz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	d270fa247153df66074f795fa42dba3e	multilib	23ae8c186171e6476af098d2a50d0ee0	python	efc1c55fc44c5b7272fc2ffba73c3e6f	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	d270fa247153df66074f795fa42dba3e	multilib	d062ae4ba2fc40a19c11de2ad89b6616	python	efc1c55fc44c5b7272fc2ffba73c3e6f	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
 _md5_=dec60270292749b7a6b5750566430358
