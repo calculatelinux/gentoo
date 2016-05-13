@@ -2119,6 +2119,13 @@ dev-libs/protobuf:python - Builds the Python implementation. This is not needed 
 dev-libs/starpu:cuda - Enable NVIDIA CUDA toolkit support
 dev-libs/starpu:gcc-plugin - Enable GCC extension plugin (experimental)
 dev-libs/starpu:opencl - Enable OpenCL support
+dev-libs/sway:gdk-pixbuf - Enable additional image format support via the gdk-pixbuf library.
+dev-libs/sway:swaybar - Build 'swaybar': sway's status bar component.
+dev-libs/sway:swaybg - Build 'swaybg': allows to set a desktop background image.
+dev-libs/sway:swaygrab - Build 'swaygrab': allows taking screenshots or screencasts.
+dev-libs/sway:swaylock - Build 'swaylock': sway's screen locker.
+dev-libs/sway:swaymsg - Build 'swaymsg': tool for communicating with a running sway instance.
+dev-libs/sway:wallpapers - Install sway's default wallpaper image.
 dev-libs/tinyxml:stl - Compile with TIXML_USE_STL support
 dev-libs/tntnet:server - Enable tntnet server daemon
 dev-libs/totem-pl-parser:archive - Enables support for accessing media files in archives transparently via app-arch/libarchive
@@ -2481,6 +2488,8 @@ dev-qt/qt-creator:qbs - Enable QBS project manager plugin
 dev-qt/qt-creator:qnx - Build plugin for QNX devices
 dev-qt/qt-creator:systemd - Add support for retrieving application output from journald
 dev-qt/qt-creator:valgrind - Add support for memory debugging using dev-util/valgrind
+dev-qt/qt-creator:webengine - Use dev-qt/qtwebengine to view documentation
+dev-qt/qt-creator:webkit - Use dev-qt/qtwebkit to view documentation
 dev-qt/qt-creator:winrt - Build plugin for WinRT devices
 dev-qt/qt-meta:kde - Select media-libs/phonon as Phonon variant (needed for KDE)
 dev-qt/qt-meta:openvg - Enable the QtOpenVG module
@@ -7401,6 +7410,7 @@ sys-boot/refind:iso9660 - Construire le gestionnaire EFI pour le système de fic
 sys-boot/refind:ntfs - Construire le gestionnaire EFI pour le système de fichier ntfs
 sys-boot/refind:reiserfs - Construire le gestionnaire EFI pour le système de fichier reiserfs
 sys-cluster/ceph:babeltrace - Add support for LTTng babeltrace
+sys-cluster/ceph:cephfs - Build support for cephfs, a POSIX compatible filesystem built on top of ceph
 sys-cluster/ceph:cryptopp - Use dev-libs/crypto++ for cryptography
 sys-cluster/ceph:fuse - Build fuse client
 sys-cluster/ceph:jemalloc - Use dev-libs/jemalloc for allocations
