@@ -12,13 +12,10 @@ SRC_URI="https://dev.gentoo.org/~monsieurp/packages/${P}.zip"
 LICENSE="vim"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-DEPEND="
-	dev-lang/python:*
-	app-arch/unzip"
+DEPEND="app-arch/unzip"
+RDEPEND="dev-lang/python:*"
 
-RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${PN}-master"
 
 src_install() {
 	insinto "/usr/share/${PN}"
