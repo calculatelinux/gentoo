@@ -1213,6 +1213,7 @@ app-text/poppler:nss - Enable signatures handling with dev-libs/nss
 app-text/poppler:utils - Install command-line PDF converters and various utilities.
 app-text/qpdfview:fitz - Use experimental fitz rendering, provided by app-text/mupdf, instead of poppler
 app-text/qpdfview:synctex - Add support for searching TeX sources
+app-text/sdcv:darkterm - Improve readability of color output on terminals with dark background.
 app-text/sgmltools-lite:jadetex - Add support for app-text/jadetex (for processing tex files produced by the TeX backend of Jade)
 app-text/stardict:espeak - Enable text to speech synthesizer using espeak engine
 app-text/stardict:pronounce - Install WyabdcRealPeopleTTS package (it is just many .wav files) to make StarDict pronounce English words
@@ -1753,7 +1754,6 @@ dev-java/icedtea:zero - Enable Zero assembler port (usually for non-HotSpot arch
 dev-java/icedtea-bin:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
 dev-java/icedtea-bin:nss - Enable NSS security provider support
 dev-java/icedtea-bin:webstart - Provide javaws command through symlink to icedtea-web
-dev-java/icedtea-web:icedtea7 - Build icedtea-7 support in addition to icedtea-6 support. Requires icedtea{-bin}-7
 dev-java/icedtea-web:javascript - Enable support for using proxy auto config (PAC) files.
 dev-java/icedtea-web:nsplugin - Enable the browser plugin (NPPlugin).
 dev-java/icedtea-web:tagsoup - Depend on dev-java/tagsoup which allows parsing malformed .jnlp files
@@ -2358,6 +2358,7 @@ dev-python/ipython:nbconvert - Enable support for converting notebooks to variou
 dev-python/ipython:notebook - Install requirements for the web notebook based on www-servers/tornado
 dev-python/ipython:octave - Enable octave bridge via dev-python/oct2py
 dev-python/kaa-base:tls - SSL/TLS support via dev-python/tlslite
+dev-python/kafka-python:snappy - Install snappy compression/decompression support
 dev-python/kazoo:gevent - Enable support for the gevent based handler
 dev-python/kombu:amqplib - Enable amqplib support
 dev-python/kombu:msgpack - Enables MessagePack (de)serializer for Python
