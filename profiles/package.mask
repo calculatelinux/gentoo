@@ -30,6 +30,32 @@
 
 #--- END OF EXAMPLES ---
 
+# Luca Barbato <lu_zero@gentoo.org> (23 May 2016)
+# Masked for testing, vlc-2.2 configure rejects it.
+=media-video/libav-12*
+
+# Johannes Huber <johu@gentoo.org> (22 May 2016)
+# Masked for removal in 30 days. Declared as dead by
+# upstream in 2015. Last release with KDE Applications 15.08.3.
+# Exported to user maintained overlay kde-sunset.
+kde-apps/amor
+kde-apps/kdetoys-meta
+kde-apps/ktux
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (21 May 2016)
+# Unmaintained since 2011, needs old webkit-gtk:2 slot that has
+# security issues, no consumers in tree, bug 573092
+# Removal in 30 days
+dev-perl/Gtk2-WebKit
+
+# Kent Fredric <kentfredric@gmail.com> (15 May 2016)
+# Andreas K. Hüttel <dilfridge@gentoo.org> (21 May 2016)
+# Has been broken since app-arch/rar-5.0.0 due to List()
+# format changing. Will require upstream revision bump
+# or some helpful person to supply a parser patch.
+# Bug #483888
+<=dev-perl/Archive-Rar-2.20.0-r1
+
 # Lars Wendler <polynomial-c@gentoo.org> (19 May 2016)
 # Masked until all reverse dependencies have been fixed.
 # See tracker bug https://bugs.gentoo.org/583478
@@ -125,11 +151,6 @@ dev-java/xml-im-exporter
 # Contains collisions with dev-python/ipaddress.  See #580388 for more details.
 # Masked for removal in 30 days.
 dev-python/py2-ipaddress
-
-# Michael Palimaka <kensington@gentoo.org> (21 Apr 2016)
-# Requires package no longer in the tree to be useful. Unmaintained.
-# Dead upstream. Masked for removal in 30 days.
-app-misc/tablix
 
 # Michael Sterrett <mr_bones_@gentoo.org> (19 Apr 2016)
 # No release in 6 years and segfaults on modern systems. (bug #311809)
