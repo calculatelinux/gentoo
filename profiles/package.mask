@@ -30,6 +30,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Johannes Huber <johu@gentoo.org> (25 May 2016)
+# Masked for removal in 30 days. Declared as dead by
+# upstream in 2015. Last release with KDE Applications 15.04.3.
+# Exported to user maintained overlay kde-sunset.
+kde-apps/pairs
+
 # Alexis Ballier <aballier@gentoo.org> (24 May 2016)
 # API change, breaks e.g. js_of_ocaml
 >=dev-ml/tyxml-4
@@ -99,11 +105,6 @@ dev-haskell/tls-extra
 # Alon Bar-Lev <alonbl@gentoo.org) (13 May 2016)
 # Force gnutls-3.4 testing so we can stabilize it.
 >=net-libs/gnutls-3.5.0
-
-# Ian Delaney <idella4@gentoo.org> (12 May 2016)
-# on behalf of Ilya Tumaykin <itumaykin+gentoo@gmail.com>
-# Missing dev-python/rarfile-2.7 dependency. See bug #582500.
-~media-video/subliminal-2.0_rc1
 
 # Sergei Trofimovich <slyfox@gentoo.org> (11 May 2016)
 # Mask standalone hpc. dev-lang/ghc provides bundled hpc.
