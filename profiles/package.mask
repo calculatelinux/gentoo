@@ -30,6 +30,22 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Palimaka <kensington@gentoo.org> (26 May 2016)
+# Ancient. Unmaintained. Dead upstream. Masked for removal
+# in 30 days. Bug #583510.
+net-irc/iip
+
+# Michael Palimaka <kensington@gentoo.org> (26 May 2016)
+# No longer developed by upstream. No revdeps.
+# Masked for removal in 30 days. Bug 583776.
+dev-libs/hammer
+
+# Michael Palimaka <kensington@gentoo.org> (26 May 2016)
+# Depends on vulnerable slot of net-libs/webkit-gtk.
+# Dead upstream. Unmaintained. Masked for removal in 30 days.
+# Bug 584186.
+www-client/luakit
+
 # Chris Reffett <creffett@gentoo.org> (25 May 2016)
 # The webkit-gtk:4 backend for Xiphos has known text display issues.
 # Use at your own risk.
@@ -122,10 +138,6 @@ dev-haskell/tls-extra
 # Mask standalone hpc. dev-lang/ghc provides bundled hpc.
 dev-haskell/hpc
 
-# Michael Palimaka <kensington@gentoo.org> (11 May 2016)
-# Contents of tarball do not match package version.
-=kde-apps/khelpcenter-5.6.4
-
 # Michael Weber <xmw@gentoo.org> (08 May 2016)
 # Replaced by net-libs/libhubbub.
 # Masked for removal in 30 days. Bug #582382.
@@ -150,11 +162,6 @@ net-misc/asterisk-spandsp_codec_g726
 # app-text/blogc with USE=git and USE=httpd instead. Removal in 30 days.
 dev-vcs/blogc-git-receiver
 www-servers/blogc-runserver
-
-# James Le Cuirot <chewi@gentoo.org> (27 Apr 2016)
-# Very very dead upstream and probably doesn't work any more like
-# similar clients. Removal in 30 days.
-net-p2p/yaggui
 
 # Michael Palimaka <kensington@gentoo.org> (27 Apr 2016)
 # Ancient. Dead upstream. Unmaintained.
