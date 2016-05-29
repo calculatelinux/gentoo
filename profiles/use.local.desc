@@ -1514,6 +1514,7 @@ dev-games/physfs:mvl - Enable Descent I/II MVL archive support
 dev-games/physfs:qpak - Enable Quake I/II QPAK archive support
 dev-games/physfs:wad - Enable Doom WAD archive support
 dev-games/physfs:zip - Enable ZIP archive support
+dev-games/simgear:dns - Enables DNS resolver via net-libs/udns
 dev-games/simgear:subversion - Enables terrasync scenery downloader
 dev-haskell/abstract-deque:usecas - Enable the reference implementation to use hardware compare-and-swap.
 dev-haskell/aeson-pretty:lib-only - don't build 'aeson-pretty' executable.
@@ -3739,6 +3740,8 @@ media-fonts/culmus:fancy - Install fancy fonts
 media-fonts/culmus:fontforge - Use media-gfx/fontforge to build fonts from source
 media-fonts/culmus:taamey - Install taamey fonts
 media-fonts/dejavu:fontforge - Use media-gfx/fontforge to build fonts from source
+media-fonts/fontawesome:otf - Install the OpenType version of the font
+media-fonts/fontawesome:ttf - Install the TrueType version of the font
 media-fonts/infinality-ultimate-meta:free - Install fonts for the "free" preset
 media-fonts/infinality-ultimate-meta:latin - Install additional latin fonts
 media-fonts/infinality-ultimate-meta:minimal - Install a minimal set of fonts
@@ -4390,6 +4393,7 @@ media-sound/jalv:gtk2 - Adds support for GTK+2 in addition to GTK+3 controlled b
 media-sound/jalv:gtkmm - Adds support for dev-cpp/gtkmm: C++ interface for GTK+2
 media-sound/kid3:acoustid - Enable support for acoustic fingerprinting plugin using (media-libs/chromaprint)
 media-sound/kid3:phonon - Enable sound support via media-libs/phonon or dev-qt/qtphonon
+media-sound/klick:rubberband - Enable rubberband support
 media-sound/kwave:opus - Enable Opus audio codec support
 media-sound/kwave:phonon - Enable playback via Phonon
 media-sound/kwave:qtmedia - Enable playback via Qt5Multimedia

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-video/vdr-2.0.0 >=dev-libs/expat-1.95.8 >=net-misc/curl-7.15.1-r1 >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-eselect/eselect-vdr-0.0.2
 SLOT=0
 SRC_URI=http://www.saunalahti.fi/~rahrenbe/vdr/rssreader/files/vdr-rssreader-2.0.0.tgz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	d270fa247153df66074f795fa42dba3e	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	unpacker	45d07319df5f40ee6af58418b0f930be	vdr-plugin-2	d55078f427f9565a5c31e7b68f288b25
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	d270fa247153df66074f795fa42dba3e	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	unpacker	45d07319df5f40ee6af58418b0f930be	vdr-plugin-2	73ca90d08a3cba33aae1a344f38c72fe
 _md5_=6196579924c58bc1bb0bdb7de1126db8
