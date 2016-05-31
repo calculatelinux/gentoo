@@ -635,9 +635,11 @@ app-emulation/open-vm-tools-kmod:vmhgfs - Build the vmhgfs module for file shari
 app-emulation/open-vm-tools-kmod:vmxnet - Build the vmxnet module (older virtual NIC)
 app-emulation/playonlinux:winbind - Enables support for the winbind auth daemon
 app-emulation/q4wine:gnome - Use the gksu sudo GUI for managing the devices
-app-emulation/q4wine:icoutils - Enable icoutils support
+app-emulation/q4wine:ico - Enable ico support via media-gfx/icoutils
+app-emulation/q4wine:icoutils - Enable media-gfx/icoutils support
+app-emulation/q4wine:iso - Support unprivileged mounting of ISO9660 images via sys-fs/fuseiso
 app-emulation/q4wine:kde - Use the kdesu sudo GUI for managing the devices
-app-emulation/q4wine:wineappdb - Enable Win AppDB browser subsystem
+app-emulation/q4wine:wineappdb - Enable Wine AppDB browser support
 app-emulation/qemu:accessibility - Adds support for braille displays using brltty
 app-emulation/qemu:aio - Enables support for Linux's Async IO
 app-emulation/qemu:alsa - Enable alsa output for sound emulation
@@ -898,7 +900,6 @@ app-misc/anki:recording - Enable support for audio recording
 app-misc/anki:sound - Enable support for adding sound to cards
 app-misc/bijiben:zeitgeist - Build the plugin to inject events to gnome-extra/zeitgeist
 app-misc/binwalk:graph - Enable support for generating entropy graphs
-app-misc/brewtarget:phonon - Enable sound support via media-libs/phonon or dev-qt/qtphonon
 app-misc/byobu:screen - Use app-misc/screen as the default backend
 app-misc/ca-certificates:cacert - Include root certs from CAcert (http://www.cacert.org/) and Software in the Public Interest (http://www.spi-inc.org/)
 app-misc/ddccontrol:pci - enable direct PCI memory access (the setuid ddcpci util)

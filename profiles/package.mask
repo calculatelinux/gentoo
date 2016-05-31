@@ -30,6 +30,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Sergei Trofimovich <slyfox@gentoo.org> (30 May 2016)
+# Masked for removal. Fails to build with modern conduit,
+# bug #584586.
+dev-haskell/pool-conduit
+
 # Johannes Huber <johu@gentoo.org> (26 May 2016)
 # Masked for removal in 30 days. Blocks app-misc/strigi cleanup.
 # Last release in 2014 with KDE SC 4.14.3. No development since
@@ -266,11 +271,6 @@ dev-ruby/extlib
 # Masked for removal. See bug 577368.
 dev-vcs/statsvn
 dev-vcs/statcvs
-
-# Mike Gilbert <floppym@gentoo.org> (12 Mar 2016)
-# Drops libsystemd-{daemon,id128,journal,login}.pc.
-# Bug: https://bugs.gentoo.org/577158
-=sys-apps/systemd-229-r100
 
 # Ian Stakenvicius <axs@gentoo.org> (06 Mar 2016)
 # Mask old versions of thunderbird as they are no longer supported,
