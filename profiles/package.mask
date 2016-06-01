@@ -30,6 +30,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Palimaka <kensington@gentoo.org> (1 Jun 2016)
+# Ancient. Unused. Dead upstream. Masked for removal in 30 days.
+# Bug 584374.
+sys-libs/libfreevec
+
+# Michael Palimaka <kensington@gentoo.org> (1 Jun 2016)
+# Obsolete package. Masked for removal in 30 days. Bug 584454.
+app-admin/sulfur
+
+# Michael Palimaka <kensington@gentoo.org> (1 Jun 2016)
+# Depends on vulnerable slot of net-libs/webkit-gtk. Dead upstream.
+# Masked for removal in 30 days. Bug 584164.
+net-print/foomatic-gui
+
+# Aaron Bauman <bman@gentoo.org> (1 Jun 2016)
+# Masked for removal in 30 days.  Unpatched security
+# vulnerabilities per bug #453308.
+net-irc/atheme-services
+
 # Johannes Huber <johu@gentoo.org> (31 May 2016)
 # Masked for removal in 30 days. Declared as dead by
 # upstream in 2015. Last release with KDE Applications 15.08.3.
@@ -180,16 +199,6 @@ net-misc/asterisk-spandsp_codec_g726
 dev-vcs/blogc-git-receiver
 www-servers/blogc-runserver
 
-# Michael Palimaka <kensington@gentoo.org> (27 Apr 2016)
-# Ancient. Dead upstream. Unmaintained.
-# Masked for removal in 30 days.
-net-p2p/nap
-
-# Michael Palimaka <kensington@gentoo.org> (27 Apr 2016)
-# Not useful due to being so outdated. Unmaintained.
-# Masked for removal in 30 days. Bug #212793.
-dev-lang/dmd-bin
-
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (27 Apr 2016)
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
@@ -272,12 +281,6 @@ x11-libs/libview
 # Not compatible with ruby21+, no reverse dependencies.
 dev-ruby/extlib
 
-# Patrice Clement <monsieurp@gentoo.org> (14 Mar 2016)
-# No activity nor release since 2010. Does not compile with Java 8.
-# Masked for removal. See bug 577368.
-dev-vcs/statsvn
-dev-vcs/statcvs
-
 # Ian Stakenvicius <axs@gentoo.org> (06 Mar 2016)
 # Mask old versions of thunderbird as they are no longer supported,
 # but we keep them in the repo for now in case there is a need
@@ -292,11 +295,6 @@ dev-vcs/statcvs
 >=dev-ml/ppx_tools-5.0.4.03
 >=dev-ml/labltk-8.06.1
 >=dev-ml/parmap-1.0_rc7-r1
-
-# Patrice Clement <monsieurp@gentoo.org> (29 Feb 2016)
-# Duplicate of dev-libs/libedit.
-# Masked for removal in 30 days.
-sys-libs/libedit
 
 # Patrick Lauer <patrick@gentoo.org> (22 Feb 2016)
 # Inactive upstream, build failures, obsoleted by rakudo/perl6
@@ -386,10 +384,6 @@ www-apps/389-dsgw
 # Mask this liferea version because upstream released it broken
 =net-news/liferea-1.10.17
 
-# Anthony G. Basile <blueness@gentoo.org> (06 Dec 2015)
-# Masked until we deal with SSLv3, bug #567554
-=dev-libs/libressl-2.3*
-
 # Michał Górny <mgorny@gentoo.org> (30 Oct 2015)
 # Uses unsafe ioctls that could result in data corruption. Upstream
 # is working on replacing them in the wip/dedup-syscall branch.
@@ -406,10 +400,6 @@ sys-fs/bedup
 # Justin Lecher <jlec@gentoo.org> (23 Oct 2015)
 # Breaking changes #563540
 =app-text/ghostscript-gpl-9.18
-
-# Mike Frysinger <vapier@gentoo.org> (18 Oct 2015)
-# apache-2.4.17 includes support for http2 now.
-www-apache/mod_h2
 
 # Mike Pagano <mpagano@gentoo.org> (2 Oct 2015)
 # A regression in kernel 4.1.9 could lead to a system

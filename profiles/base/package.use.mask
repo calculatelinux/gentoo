@@ -5,10 +5,6 @@
 # This file requires >=portage-2.1.1
 # New entries go on top.
 
-# Christoph Junghans <ottxor@gentoo.org> (23 May 2016)
-# =dev-libs/libressl-2.3 is masked
-net-misc/openntpd libressl
-
 # Michał Górny <mgorny@gentoo.org> (14 May 2016)
 # (on behalf of QA team)
 # sys-devel/gcc[jit]:
@@ -89,11 +85,6 @@ kde-plasma/plasma-sdk plasmate
 # version anyway. Unfortunately this will also prevent the other HTML
 # docs from installing. Sorry about that.
 =net-dns/libidn-1.30 doc
-
-# NP-Hardass <NP-Hardass@gentoo.org> (1 Jan 2016)
-# USE flag is renamed to postscript, mask the old flag #564422
-# to notify users.  This entry may be removed after 30 days
-app-text/atril ps
 
 # Manuel Rüger <mrueg@gentoo.org> (24 Dec 2015)
 # media-tv/xawtv is masked for removal
