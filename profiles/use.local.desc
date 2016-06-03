@@ -996,6 +996,7 @@ app-misc/subsurface:linguas_gsw - Language support for gsw.
 app-misc/subsurface:linguas_hr_HR - Language support for hr_HR.
 app-misc/tasque:hiveminder - Allows you to use http://www.hiveminder.com/ as your storage backend.
 app-misc/tasque:rememberthemilk - Allows you to use http://www.rememberthemilk.com/ as your storage backend.
+app-misc/tmux:utempter - Include libutempter support
 app-misc/towitoko:moneyplex - Makes libtowitoko work for the moneyplex home banking software
 app-misc/tracker:cue - Enable cue sheet parsing
 app-misc/tracker:firefox-bookmarks - Install bookmark data miner plugin for www-client/firefox and www-client/firefox-bin
@@ -1839,13 +1840,11 @@ dev-lang/moarvm:asan - Enable clang's Address Sanitizer functionality. Expect lo
 dev-lang/moarvm:clang - Use clang compiler instead of GCC
 dev-lang/moarvm:jit - Enable Just-In-Time-Compiler. Has no effect except on AMD64 and Darwin.
 dev-lang/moarvm:optimize - Enable optimization via CFLAGS
-dev-lang/moarvm:system-libs - Link against the system's shared libraries
 dev-lang/moarvm:ubsan - Enable clang's Undefined Behavior Sanitizer functionality. Expect longer compile time.
 dev-lang/mono:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
 dev-lang/mono:xen - Make mono generate code that is considerably faster on xen VMs but slightly slower on for normal systems.
 dev-lang/nqp:clang - Toggle usage of the clang compiler in conjunction with MoarVM
 dev-lang/nqp:moar - Build the MoarVM backend (experimental/broken)
-dev-lang/nqp:system-libs - Use jars provided by the system instead of upstream
 dev-lang/ocaml:flambda - Enables the Flambda optimizer: A new intermediate representation (introduced in ocaml 4.03) in the depths of the compiler designed to allow for better inlining.
 dev-lang/orc:pax_kernel - Apply patch needed for pax enabled kernels.
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
@@ -5761,7 +5760,6 @@ net-libs/libwebsockets:client - The client part of the library and libwebsockets
 net-libs/libwebsockets:http2 - Support the HTTP/2 protocol
 net-libs/libwebsockets:libev - Support event loops via dev-libs/libev
 net-libs/libwebsockets:libuv - Support asynchronous I/O via dev-libs/libuv
-net-libs/libwebsockets:server - The server part of the library
 net-libs/loudmouth:asyncns - Use net-libs/libasyncns for asynchronous name resolution.
 net-libs/loudmouth:openssl - Enable dev-libs/openssl support instead of gnutls (which is the default).
 net-libs/mbedtls:havege - Enable the HAVEGE random generator. Warning: the HAVEGE random generator is not suitable for virtualized environments
@@ -6511,16 +6509,13 @@ net-print/fax4cups:efax - Install net-misc/efax backend
 net-print/fax4cups:hylafax - Install net-misc/hylafax backend
 net-print/fax4cups:mgetty-fax - Install net-dialup/mgetty backend
 net-print/hplip:X - Enables scanner GUI dependencies with USE="scanner" where media-gfx/xsane is preferred over media-gfx/sane-frontends
-net-print/hplip:doc - Build documentation
 net-print/hplip:fax - Enable fax on multifunction devices which support it
 net-print/hplip:hpcups - Build the hpcups driver for cups (by HP)
 net-print/hplip:hpijs - Build the IJS driver for cups (Foomatic)
 net-print/hplip:kde - Enables kde-misc/skanlite as scanner GUI with USE="scanner X"
-net-print/hplip:libnotify - Enables desktop notifications
 net-print/hplip:libusb0 - Depend on virtual/libusb SLOT 0. Some old printers do not work with virtual/libusb SLOT 1.
 net-print/hplip:minimal - Only build internal hpijs/hpcups driver (not recommended at all, make sure you know what you are doing)
 net-print/hplip:parport - Enable parallel port for devices which require it
-net-print/hplip:qt4 - Enable graphical interface using Qt 4
 net-print/hplip:scanner - Enable scanner on multifunction devices which support it
 net-print/hplip:snmp - Add support for net-analyzer/net-snmp which enables this driver to work over networks (both for server and client)
 net-print/hplip:static-ppds - Use statically-generated PPDs instead of Dynamic PPDs. Although this is deprecated some printers may still need it to work properly. Use this flag if hp-setup fails to find/create a valid PPD file
@@ -7285,6 +7280,7 @@ sys-apps/systemd:apparmor - Enable AppArmor support
 sys-apps/systemd:audit - Enable support for sys-process/audit
 sys-apps/systemd:cryptsetup - Enable cryptsetup tools (includes unit generator for crypttab)
 sys-apps/systemd:curl - Enable support for uploading journals; required to build systemd-import/systemd-pull
+sys-apps/systemd:doc - Generate systemd.index.7 and systemd.directives.7
 sys-apps/systemd:elfutils - Enable coredump stacktraces in the journal
 sys-apps/systemd:gcrypt - Enable sealing of journal files using gcrypt; required to build systemd-import/systemd-pull
 sys-apps/systemd:gnuefi - Enable EFI boot manager and stub loader (built using sys-boot/gnu-efi)
