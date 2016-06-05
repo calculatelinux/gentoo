@@ -2,12 +2,23 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.musl-libc.org/musl"
 	inherit git-r3
+	SRC_URI="
+	http://dev.gentoo.org/~blueness/musl-misc/getconf.c
+	http://dev.gentoo.org/~blueness/musl-misc/getent.c
+	http://dev.gentoo.org/~blueness/musl-misc/iconv.c"
+	KEYWORDS=""
+else
+	SRC_URI="http://www.musl-libc.org/releases/${P}.tar.gz
+	http://dev.gentoo.org/~blueness/musl-misc/getconf.c
+	http://dev.gentoo.org/~blueness/musl-misc/getent.c
+	http://dev.gentoo.org/~blueness/musl-misc/iconv.c"
+	KEYWORDS="-* ~amd64 ~arm ~mips ~ppc ~x86"
 fi
 
 export CBUILD=${CBUILD:-${CHOST}}
@@ -20,17 +31,9 @@ fi
 
 DESCRIPTION="Light, fast and simple C library focused on standards-conformance and safety"
 HOMEPAGE="http://www.musl-libc.org/"
-if [[ ${PV} != "9999" ]] ; then
-	PATCH_VER=""
-	SRC_URI="http://www.musl-libc.org/releases/${P}.tar.gz"
-	KEYWORDS="-* ~amd64 ~arm ~mips ~ppc ~x86"
-fi
-
 LICENSE="MIT LGPL-2 GPL-2"
 SLOT="0"
 IUSE="crosscompile_opts_headers-only"
-
-RDEPEND="!sys-apps/getent"
 
 QA_SONAME="/usr/lib/libc.so"
 QA_DT_NEEDED="/usr/lib/libc.so"
@@ -63,10 +66,6 @@ pkg_setup() {
 	fi
 }
 
-src_prepare() {
-	epatch_user
-}
-
 src_configure() {
 	tc-getCC ${CTARGET}
 	just_headers && export CC=true
@@ -85,6 +84,9 @@ src_compile() {
 	just_headers && return 0
 
 	emake
+	$(tc-getCC) ${CFLAGS} "${DISTDIR}"/getconf.c -o "${T}"/getconf
+	$(tc-getCC) ${CFLAGS} "${DISTDIR}"/getent.c -o "${T}"/getent
+	$(tc-getCC) ${CFLAGS} "${DISTDIR}"/iconv.c -o "${T}"/iconv
 }
 
 src_install() {
@@ -100,6 +102,8 @@ src_install() {
 	dosym ${sysroot}/lib/${ldso} ${sysroot}/usr/bin/ldd
 
 	if [[ ${CATEGORY} != cross-* ]] ; then
+		# TODO: We may be able to simplify this code by obtianing the arch name with
+		# /usr/lib/libc.so 2>&1 | sed -n 's/^.*(\(.*\))$/\1/;1p'
 		local target=$(tc-arch) arch
 		local endian=$(musl_endian)
 		case ${target} in
@@ -114,7 +118,9 @@ src_install() {
 		into /
 		dosbin "${T}"/ldconfig
 		into /usr
-		dobin "${FILESDIR}"/getent
+		dobin "${T}"/getconf
+		dobin "${T}"/getent
+		dobin "${T}"/iconv
 		echo 'LDPATH="include ld.so.conf.d/*.conf"' > "${T}"/00musl || die
 		doenvd "${T}"/00musl || die
 	fi

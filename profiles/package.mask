@@ -30,6 +30,51 @@
 
 #--- END OF EXAMPLES ---
 
+# Patrice Clement <monsieurp@gentoo.org> (5 Jun 2016)
+# Unmaintained ebuilds. Upstream is either dead or AWOL. Also, most of these
+# ebuilds are still sitting in ~arch after years in the tree.
+# Masked for removal in 30 days.
+dev-util/ccmalloc
+dev-util/dwarves
+dev-util/tinlink
+dev-util/cdecl
+dev-util/redet
+dev-util/eggy
+dev-util/mock
+dev-util/par
+dev-util/injectso
+dev-util/dissembler
+dev-util/ghh
+dev-util/lsuio
+dev-util/rec
+dev-util/usb-robot
+dev-util/jif
+dev-util/httpup
+dev-util/crow-designer
+dev-util/qdevelop
+dev-util/intel2gas
+dev-util/webcpp
+dev-util/as11
+dev-util/duma
+dev-util/filepp
+dev-util/pretrace
+dev-util/ald
+dev-util/kdoc
+dev-util/skelgen
+dev-util/ftncheck
+
+# Aaron Bauman <bman@gentoo.org> (5 Jun 2016)
+# Unpatched security vulnerability and dead upstream
+# per bug #500970.  Removal in 30 days
+sys-apps/9base
+
+# Hans de Graaff <graaff@gentoo.org> (4 Jun 2016)
+# Name-versioned dependency that was not used in any
+# version of cucumber we packaged and that is no longer
+# used upstream. Use dev-ruby/gherkin instead.
+# Masked for removal in 30 days.
+dev-ruby/gherkin3
+
 # Patrice Clement <monsieurp@gentoo.org> (2 Jun 2016)
 # Ancient software (1996!). Unmaintained.
 # Masked for removal in 30 days.
@@ -53,11 +98,6 @@ app-admin/sulfur
 # Depends on vulnerable slot of net-libs/webkit-gtk. Dead upstream.
 # Masked for removal in 30 days. Bug 584164.
 net-print/foomatic-gui
-
-# Aaron Bauman <bman@gentoo.org> (1 Jun 2016)
-# Masked for removal in 30 days.  Unpatched security
-# vulnerabilities per bug #453308.
-net-irc/atheme-services
 
 # Johannes Huber <johu@gentoo.org> (31 May 2016)
 # Masked for removal in 30 days. Declared as dead by
@@ -188,12 +228,6 @@ dev-haskell/hpc
 # Replaced by net-libs/libhubbub.
 # Masked for removal in 30 days. Bug #582382.
 net-libs/hubbub
-
-# Michael Palimaka <kensington@gentoo.org> (05 May 2016)
-# Doesn't compile against latest media-libs/spandsp.
-# Not needed anymore for Asterisk 1.6.
-# Masked for removal in 30 days. Bug #575778.
-net-misc/asterisk-spandsp_codec_g726
 
 # Maciej Mrozowski <reavertm@gentoo.org> (3 May 2016)
 # Mask until >=net-libs/qxmpp-0.8.3 is provided with qt5 support.

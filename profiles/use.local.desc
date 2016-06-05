@@ -1811,7 +1811,8 @@ dev-lang/ghc:binary - Install the binary version directly, rather than using it 
 dev-lang/ghc:ghcbootstrap - Bootstrap from an existing GHC installation.
 dev-lang/ghc:ghcmakebinary - Build with less runtime depends (bundle libffi for building bootstrap binaries).
 dev-lang/ghc:llvm - Enable llvm code generator for ghc (-fllvm).
-dev-lang/gnat-gcc:lto - Add support for link-time optimizations (unsupported, use at your own risk).
+dev-lang/gnat-gcc:acats - Installs ACATS source under LIBPATH.
+dev-lang/gnat-gcc:lto - Enable Link Time Optimization (somewhat unsafe).
 dev-lang/go:gccgo - Enable bootstrapping using gccgo
 dev-lang/icon:iplsrc - install the icon programming library source
 dev-lang/io:clutter - Build add-on for media-libs/clutter
@@ -1864,7 +1865,8 @@ dev-lang/php:opcache - Enables built-in opcode cache, replacing pecl-apc et.al
 dev-lang/php:pdo - Enable the bundled PDO extensions
 dev-lang/php:phar - Enables the phar extension to provide phar archive support
 dev-lang/php:phpdbg - Enable the PHP Debug Command Line SAPI (like gdb for php)
-dev-lang/php:vpx - Enable webp suppoprt for GD
+dev-lang/php:vpx - Enable webp support for GD in php-5.x
+dev-lang/php:webp - Enable webp support for GD in php-7.x
 dev-lang/php:xmlreader - Enable XMLReader support
 dev-lang/php:xmlwriter - Enable XMLWriter support
 dev-lang/php:xslt - Enable the XSL extension
@@ -2148,6 +2150,7 @@ dev-libs/weston:rpi - Raspberry Pi GPU support
 dev-libs/weston:screen-sharing - Enable screen-sharing through RDP
 dev-libs/weston:unwind - Enable libunwind usage for backtraces
 dev-libs/weston:wayland-compositor - Enable Wayland compositor support
+dev-libs/weston:webp - Add support for the WebP image format
 dev-libs/weston:xwayland - Enable ability support native X11 applications
 dev-libs/wlc:X - Enable X11 backend and XWayland support.
 dev-libs/wlc:systemd - Enable support for systemd-logind.
@@ -2362,6 +2365,9 @@ dev-python/ipython:mongodb - Enable support for MongoDB via dev-python/pymongo
 dev-python/ipython:nbconvert - Enable support for converting notebooks to various formats using app-text/pandoc
 dev-python/ipython:notebook - Install requirements for the web notebook based on www-servers/tornado
 dev-python/ipython:octave - Enable octave bridge via dev-python/oct2py
+dev-python/jira:filemagic - Include filemagic support (for identifying uploaded filetypes)
+dev-python/jira:ipython - Include Interactive Python (IPython)
+dev-python/jira:oauth - Support OAuth authentication
 dev-python/kaa-base:tls - SSL/TLS support via dev-python/tlslite
 dev-python/kafka-python:snappy - Install snappy compression/decompression support
 dev-python/kazoo:gevent - Enable support for the gevent based handler
@@ -2555,7 +2561,7 @@ dev-qt/qtgui:trace - Build the 'trace' graphicssystem engine which allows to rec
 dev-qt/qtgui:tslib - Enable support for touchscreen devices via x11-libs/tslib
 dev-qt/qtgui:tuio - Build plugin to receive touch events over the TUIO protocol
 dev-qt/qtgui:xcb - Build the XCB platform plugin and enable X11 integration
-dev-qt/qthelp:compat - Build the extra compatibility layer required by a few packages, see http://blog.qt.digia.com/blog/2010/06/22/qt-assistant-compat-version-available-as-extra-source-package/
+dev-qt/qthelp:compat - Build the extra compatibility layer required by a few packages, see http://blog.qt.io/blog/2010/06/22/qt-assistant-compat-version-available-as-extra-source-package/
 dev-qt/qthelp:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtmultimedia:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtmultimedia:gles2 - Use GLES 2.0 or later instead of full OpenGL
@@ -3495,6 +3501,7 @@ kde-plasma/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/l
 kde-plasma/systemsettings:classic - Enable classic mode plugin, requires kde-frameworks/khtml
 lxde-base/lxdm:consolekit - Enables support for authorization using consolekit
 lxde-base/lxdm:gtk3 - Use GTK+3 instead of 2
+lxde-base/lxterminal:gtk3 - Use GTK+3 instead of GTK+2
 lxqt-base/lxqt-meta:about - Install lxqt-base/lxqt-about
 lxqt-base/lxqt-meta:admin - Install lxqt-base/lxqt-admin
 lxqt-base/lxqt-meta:filemanager - Install x11-misc/pcmanfm-qt file manager
@@ -6728,7 +6735,6 @@ sci-chemistry/avogadro2:rpc - Enable RPC server
 sci-chemistry/avogadro2:vtk - include vtk support
 sci-chemistry/ball:cuda - Include cuda support
 sci-chemistry/ball:sql - Include SQL database support
-sci-chemistry/ball:webkit - Uses dev-qt/qtwebkit for drawing
 sci-chemistry/chemtool:emf - EMF export support
 sci-chemistry/cns:aria - Support patch for sci-chemistry/aria
 sci-chemistry/eden:double-precision - More precise calculations at the expense of speed
@@ -7166,6 +7172,14 @@ sys-apps/elfix:xtpax - Enable XATTR_PAX_FLAGS support.
 sys-apps/entropy-server:matter - Pull in app-admin/matter
 sys-apps/etckeeper:bazaar - Support dev-vcs/bzr based repository
 sys-apps/etckeeper:cron - Install cron script
+sys-apps/firejail:bind - Enable custom bind mounts
+sys-apps/firejail:chroot - Enable chrooting to custom directory
+sys-apps/firejail:file-transfer - Enable file transfers between sandboxes and the host system
+sys-apps/firejail:network - Enable networking features
+sys-apps/firejail:network-restricted - Grant access to --interface, --net=ethXXX and --netfilter only to root user; regular users are only allowed --net=none
+sys-apps/firejail:seccomp - Enable system call filtering
+sys-apps/firejail:userns - Enable attaching a new user namespace to a sandbox (--noroot option)
+sys-apps/firejail:x11 - Enable X11 sandboxing
 sys-apps/flashrom:atahpt - Highpoint (HPT) ATA/RAID controller support
 sys-apps/flashrom:atapromise - Support for Promise PDC2026x (FastTrak/Ultra)
 sys-apps/flashrom:atavia - Support for VIA VT6421A SATA controllers
