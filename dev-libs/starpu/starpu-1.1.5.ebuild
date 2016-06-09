@@ -5,7 +5,9 @@
 EAPI=5
 
 AUTOTOOLS_AUTORECONF=1
-inherit autotools-utils toolchain-funcs cuda
+FORTRAN_STANDARD=90
+
+inherit autotools-utils toolchain-funcs cuda fortran-2
 
 DESCRIPTION="Unified runtime system for heterogeneous multicore architectures"
 HOMEPAGE="http://runtime.bordeaux.inria.fr/StarPU/"
