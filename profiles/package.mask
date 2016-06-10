@@ -31,6 +31,11 @@
 #--- END OF EXAMPLES ---
 
 # Michael Palimaka <kensington@gentoo.org> (9 Jun 2016)
+# Fails to build. Unmaintained. Masked for removal in 30 days.
+# Bug 574174.
+sys-apps/dmtcp
+
+# Michael Palimaka <kensington@gentoo.org> (9 Jun 2016)
 # Fails to build with newer giflib. Unmaintained. Dead upstream.
 # Use media-gfx/fbida instead.
 # Masked for removal in 30 days. Bug 571686.
@@ -55,10 +60,13 @@ sys-fs/redirfs
 # New PyPy versions, masked for testing.
 ~dev-python/pypy-5.1.1
 ~dev-python/pypy-5.3.0
+~dev-python/pypy3-5.2.0_alpha1
 ~dev-python/pypy-bin-5.1.1
 ~dev-python/pypy-bin-5.3.0
+~dev-python/pypy3-bin-5.2.0_alpha1
 ~virtual/pypy-5.1.1
 ~virtual/pypy-5.3.0
+~virtual/pypy3-5.2.0_alpha1
 
 # Patrice Clement <monsieurp@gentoo.org> (5 Jun 2016)
 # Unmaintained ebuilds. Upstream is either dead or AWOL. Also, most of these
@@ -393,12 +401,6 @@ dev-lang/niecza-bin
 # Susceptible to security issues and other bugs. Removal pending
 # stabilization of 9.5.1, 9.4.6, 9.3.11, 9.2.15, and 9.1.20.
 =dev-db/postgresql-9.0.23-r1
-
-# Aaron Bauman <bman@gentoo.org> (10 Feb 2016)
-# Old, no active or proxy maintainer, dead upstream
-# and nothing depends on it.
-# Masked for removal in 30 days.  See bug 573326
-dev-python/simplegui
 
 # James Le Cuirot <chewi@gentoo.org> (07 Feb 2016)
 # Masked until 2.0 final arrives, which hopefully won't depend on
