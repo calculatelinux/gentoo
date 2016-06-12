@@ -28,9 +28,9 @@ COMMON_DEPEND="
 	hpijs? (
 		|| ( >=net-print/cups-filters-1.0.43-r1[foomatic] >=net-print/foomatic-filters-3.0.20080507[cups] )
 	)
+	>=net-print/cups-1.4.0
 	!minimal? (
 		${PYTHON_DEPS}
-		>=net-print/cups-1.4.0
 		!libusb0? ( virtual/libusb:1 )
 		libusb0? ( virtual/libusb:0 )
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
@@ -67,7 +67,7 @@ RDEPEND="${COMMON_DEPEND}
 
 REQUIRED_USE="
 	!minimal? ( ${PYTHON_REQUIRED_USE} )
-	!minimal? ( ^^ ( qt4 qt5 ) )
+	!minimal? ( qt4? ( !qt5 ) )
 "
 
 CONFIG_CHECK="~PARPORT ~PPDEV"
