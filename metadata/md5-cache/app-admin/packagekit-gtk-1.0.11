@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.32:2 media-libs/fontconfig >=x11-libs/gtk+-2:2 >=x11-libs/gtk+-3:3 x11-libs/pango ~app-admin/packagekit-base-1.0.11[introspection]
 SLOT=0
 SRC_URI=http://www.packagekit.org/releases/PackageKit-1.0.11.tar.xz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	c9d9187f4caa4026a0ceddd8dfceb3c1
 _md5_=64af4ca4552ff35c5f45dc1558969416

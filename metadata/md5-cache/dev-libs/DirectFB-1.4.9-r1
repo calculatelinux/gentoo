@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=sdl? ( media-libs/libsdl ) gif? ( media-libs/giflib ) png? ( media-libs/libpng ) jpeg? ( virtual/jpeg ) zlib? ( sys-libs/zlib ) truetype? ( >=media-libs/freetype-2.0.1 ) X? ( x11-libs/libXext x11-libs/libX11 )
 SLOT=0
 SRC_URI=http://directfb.org/downloads/Core/DirectFB-1.4/DirectFB-1.4.9.tar.gz http://directfb.org/downloads/Old/DirectFB-1.4.9.tar.gz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	c9d9187f4caa4026a0ceddd8dfceb3c1
 _md5_=4eb369576bd1e4b4d1799e851683d8de

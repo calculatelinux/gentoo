@@ -317,6 +317,7 @@ app-antivirus/clamav:clamdtop - A Top like tool which shows what clamd is curren
 app-antivirus/clamav:metadata-analysis-api - Enables collection of file property metadata using ClamAV API for analysis by ClamAV bytecode programs.
 app-arch/cabextract:extras - Install experimental extra tools: wince_info and wince_rename for examining and processing Windows CE installation cabinet header files; cabinfo for examining the structure of a cab file.
 app-arch/cfv:bittorrent - Enable support for checking .torrent files
+app-arch/deltarpm:system-zlib - Use system sys-libs/zlib. Do not enable features of rsync friendly.
 app-arch/dpkg:update-alternatives - Install update-alternatives
 app-arch/dump:ermt - encrypted rmt support
 app-arch/engrampa:caja - Enable engrampa to integrate with mate-base/caja by providing entries in its context menu
@@ -5306,13 +5307,14 @@ net-firewall/arno-iptables-firewall:plugins - Install optional plugins
 net-firewall/ebtables:perl - Install the ebtables-save script which uses perl
 net-firewall/firewalld:gui - Builds and installs GUI configurator and GTK+ applet
 net-firewall/fwknop:client - Build fwknop client
-net-firewall/fwknop:extras - Install example AppArmor policy for fwknopd server
+net-firewall/fwknop:extras - Install utility scripts and AppArmor policy for fwknopd
 net-firewall/fwknop:firewalld - Use net-firewall/firewalld as the default server backend
-net-firewall/fwknop:gdbm - Replace file-based digest-cache with gdbm one
+net-firewall/fwknop:gdbm - Use sys-libs/gdbm to store fwknopd digest cache
 net-firewall/fwknop:gpg - Enable GPG support via app-crypt/gpgme
 net-firewall/fwknop:iptables - Use net-firewall/iptables as the default server backend
+net-firewall/fwknop:nfqueue - Enable UDP-only NFQUEUE server mode (no net-libs/libpcap dependency)
 net-firewall/fwknop:server - Build fwknopd server
-net-firewall/fwknop:udp-server - Enable UDP server mode only (no net-libs/libpcap dependency)
+net-firewall/fwknop:udp-server - Enable UDP-only server mode (no net-libs/libpcap dependency)
 net-firewall/ipsec-tools:hybrid - Makes available both mode-cfg and xauth support
 net-firewall/ipsec-tools:idea - Enable support for the IDEA algorithm
 net-firewall/ipsec-tools:nat - Enable NAT-Traversal
@@ -7283,7 +7285,6 @@ sys-apps/pkgcore:doc - Build and install API docs.
 sys-apps/policycoreutils:audit - Enable support for sys-process/audit and use the audit_* functions (like audit_getuid instead of getuid())
 sys-apps/portage:epydoc - Build html API documentation with epydoc.
 sys-apps/portage:ipc - Use inter-process communication between portage and running ebuilds.
-sys-apps/portage:pypy2_0 - Use pypy-c2.0 as Python interpreter.
 sys-apps/portage:python2 - Use python2 as Python interpreter.
 sys-apps/portage:python3 - Use python3 as Python interpreter.
 sys-apps/portage:xattr - Preserve extended attributes (filesystem-stored metadata) when installing files. Usually only required for hardened systems.

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/agg[truetype] sys-libs/zlib expat? ( dev-libs/expat ) jpeg2k? ( media-libs/jasper ) jpeg? ( virtual/jpeg ) lua? ( dev-lang/lua ) openexr? ( media-libs/openexr ) php? ( dev-lang/php ) perl? ( dev-lang/perl ) png? ( >=media-libs/libpng-1.2.43 ) ruby? ( dev-lang/ruby ) tiff? ( media-libs/tiff ) truetype? ( >=media-libs/freetype-2 ) X? ( x11-libs/libXext x11-libs/libXt x11-libs/libICE x11-libs/libSM ) python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) )
 SLOT=0
 SRC_URI=http://dl.exactcode.de/oss/exact-image/exact-image-0.8.1.tar.bz2
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	python	efc1c55fc44c5b7272fc2ffba73c3e6f	toolchain-funcs	d513d423d449877e49d99af3f7af7acb
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	python	efc1c55fc44c5b7272fc2ffba73c3e6f	toolchain-funcs	c9d9187f4caa4026a0ceddd8dfceb3c1
 _md5_=483dc237ac0767d1d17ed6f42e9c79c6
