@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_4} )
+PYTHON_COMPAT=( python2_7 python3_4 )
 
 inherit eutils python-any-r1
 
@@ -27,7 +27,6 @@ RDEPEND="
 	>=x11-libs/pixman-0.17.7[static-libs(+)?]
 	!libressl? ( dev-libs/openssl:0[static-libs(+)?] )
 	libressl? ( dev-libs/libressl[static-libs(+)?] )
-	smartcard? ( >=app-emulation/libcacard-0.1.2 )
 	sasl? ( dev-libs/cyrus-sasl[static-libs(+)?] )"
 
 DEPEND="
@@ -53,6 +52,13 @@ pkg_setup() {
 # * opengl support is currently broken
 
 src_prepare() {
+	epatch \
+		"${FILESDIR}"/0.11.0-gold.patch \
+		"${FILESDIR}"/0.12.6-CVE-2016-0749-p1.patch \
+		"${FILESDIR}"/0.12.6-CVE-2016-0749-p2.patch \
+		"${FILESDIR}"/0.12.6-CVE-2016-2150-p1.patch \
+		"${FILESDIR}"/0.12.6-CVE-2016-2150-p2.patch
+
 	epatch_user
 }
 
