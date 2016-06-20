@@ -30,6 +30,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Palimaka <kensington@gentoo.org> (19 Jun 2016)
+# Ancient, untested, never unmasked. Removal in 30 days. Bug 586172.
+sys-auth/pam_keystore
+
+# Michael Palimaka <kensington@gentoo.org> (19 Jun 2016)
+# Fails to build. Unmaintained. Dead upstream.
+# Masked for removal in 30 days. Bug 586348.
+net-misc/mdidentd
+
 # Michael Palimaka <kensington@gentoo.org> (16 Jun 2016)
 # No longer does anything. Masked for removal in 30 days.
 # Bug 585786.
@@ -322,12 +331,6 @@ net-libs/hubbub
 # Lars Wendler <polynomial-c@gentoo.org> (2 May 2016)
 # Broken reverse deps. At least one header file has been moved around.
 >=media-gfx/imagemagick-7.0.1.0
-
-# Rafael G. Martins <rafaelmartins@gentoo.org> (30 Apr 2016)
-# Packages merged upstream with app-text/blogc. Please install
-# app-text/blogc with USE=git and USE=httpd instead. Removal in 30 days.
-dev-vcs/blogc-git-receiver
-www-servers/blogc-runserver
 
 # Sergey Popov <pinkbyte@gentoo.org> (26 Apr 2016)
 # Security mask of older branches, wrt bug #5567810
@@ -887,10 +890,6 @@ media-libs/shivavg
 # Added <sys-fs/e2fsprogs as well (halcy0n)
 <sys-libs/e2fsprogs-libs-1.41.8
 <sys-fs/e2fsprogs-1.41.9
-
-# Diego E. Pettenò <flameeyes@gmail.com> (09 Oct 2009)
-# Untested yet; documented only in Russian, help is appreciated.
-sys-auth/pam_keystore
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (08 Aug 2009)
 #  on behalf of QA Team
