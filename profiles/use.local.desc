@@ -685,6 +685,7 @@ app-emulation/rkt:rkt_stage1_fly - Build stage1-fly.aci
 app-emulation/rkt:rkt_stage1_host - Assemble stage1.aci from host binaries
 app-emulation/rkt:rkt_stage1_kvm - Build stage1-kvm.aci
 app-emulation/rkt:rkt_stage1_src - Build the stage1.aci from source
+app-emulation/runc:apparmor - Enable AppArmor support.
 app-emulation/spice:lz4 - Enable support for LZ4 compression using app-arch/lz4
 app-emulation/spice:smartcard - Enable smartcard remoting using app-emulation/libcacard
 app-emulation/spice-vdagent:consolekit - Use sys-auth/consolekit to determine the master vdagentd in case of multiple running vdagentds (highly recommended)
@@ -2202,6 +2203,7 @@ dev-ml/dose3:parmap - Adds multi-core CPU support via dev-ml/parmap.
 dev-ml/dose3:rpm4 - Adds support for handling rpm4 files.
 dev-ml/dose3:zip - Adds support for handling zip files.
 dev-ml/eliom:ppx - Enable PPX syntax extension support.
+dev-ml/js_of_ocaml:async - Enable support of dev-ml/async_kernel.
 dev-ml/js_of_ocaml:deriving - Enable dev-ml/deriving support for improving the type safety.
 dev-ml/js_of_ocaml:ppx - Enables the ppx syntax extension
 dev-ml/js_of_ocaml:ppx-deriving - Enables deriving support through ppx syntax extensions.
