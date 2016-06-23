@@ -7,5 +7,5 @@ KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x8
 LICENSE=LGPL-3
 SLOT=0
 SRC_URI=http://www.meso.ee/~jjpp/speller/ispell-et_20030606.tar.gz
-_eclasses_=myspell-r2	3f98144882500b2caaa0ab2bf3202ada
+_eclasses_=myspell-r2	d7e8733370dd6a9a1a3b64fdda0146d2
 _md5_=0e325bedca3d88f24428de397391a748

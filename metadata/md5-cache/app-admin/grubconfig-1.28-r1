@@ -2,11 +2,11 @@ DEFINED_PHASES=install unpack
 DEPEND=>=dev-util/dialog-0.7
 DESCRIPTION=Simple Tool to configure Grub-Bootloader
 EAPI=0
-HOMEPAGE=http://www.tux.org/pub/people/kent-robotti/looplinux/
+HOMEPAGE=https://web.archive.org/web/20100410042718/http://www.tux.org/pub/people/kent-robotti/looplinux
 KEYWORDS=-* amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=dev-util/dialog-0.7
 SLOT=0
-SRC_URI=http://www.tux.org/pub/people/kent-robotti/looplinux/grubconfig-1.28.tar.gz
+SRC_URI=http://gentoo/grubconfig-1.28.tar.gz
 _eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	c9d9187f4caa4026a0ceddd8dfceb3c1
-_md5_=648f18334e40cc3939656df9d75ae5be
+_md5_=a301e00b37dd75b6abf96eb7235e3875

@@ -7,5 +7,5 @@ KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64
 LICENSE=|| ( GPL-2 GPL-3 )
 SLOT=0
 SRC_URI=mirror://sourceforge/project/aoo-extensions/1057/8/dict-de_de-1901_oldspell_2016-04-03.oxt
-_eclasses_=myspell-r2	3f98144882500b2caaa0ab2bf3202ada
+_eclasses_=myspell-r2	d7e8733370dd6a9a1a3b64fdda0146d2
 _md5_=5161fd040f6d5460e86c8c23d586162d
