@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=media-fonts/terminus-font aalib? ( media-libs/aalib[slang] ) dia? ( app-office/dia ) djvu? ( app-text/djvu ) exif? ( media-libs/libexif ) gif? ( media-libs/giflib ) graphicsmagick? ( media-gfx/graphicsmagick ) imagemagick? ( || ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick ) ) jpeg? ( virtual/jpeg:0 ) pdf? ( >=app-text/poppler-0.31 ) png? ( media-libs/libpng:0 ) postscript? ( app-text/libspectre ) readline? ( sys-libs/readline:0 ) sdl? ( media-libs/libsdl ) svg? ( media-gfx/inkscape ) tiff? ( media-libs/tiff:0 ) xfig? ( media-gfx/xfig )
 SLOT=0
 SRC_URI=http://download.savannah.gnu.org/releases/fbi-improved/fim-0.4-rc3.tar.bz2
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	c9d9187f4caa4026a0ceddd8dfceb3c1
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
 _md5_=0feb699b5c3ef47c58786f8319bbf7c0

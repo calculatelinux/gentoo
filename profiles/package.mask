@@ -31,6 +31,12 @@
 #--- END OF EXAMPLES ---
 
 # Michał Górny <mgorny@gentoo.org> (26 Jun 2016)
+# Used to convert ancient layman files, has some ancient hardcoded data.
+# Not really useful anymore, masked for being live since 2009.
+# Removal in 14 days, #587156.
+app-portage/layman-dbtools
+
+# Michał Górny <mgorny@gentoo.org> (26 Jun 2016)
 # Unmaintained, unused, upstream gone. The only revdep (crow-designer)
 # is already last rited for removal, #587142.
 dev-libs/guiloader
@@ -165,18 +171,6 @@ app-i18n/xsim
 # Removal in 30 days
 sys-fs/redirfs
 
-# Michał Górny <mgorny@gentoo.org> (6 Jun 2016)
-# New PyPy versions, masked for testing.
-~dev-python/pypy-5.1.1
-~dev-python/pypy-5.3.0
-~dev-python/pypy3-5.2.0_alpha1
-~dev-python/pypy-bin-5.1.1
-~dev-python/pypy-bin-5.3.0
-~dev-python/pypy3-bin-5.2.0_alpha1
-~virtual/pypy-5.1.1
-~virtual/pypy-5.3.0
-~virtual/pypy3-5.2.0_alpha1
-
 # Patrice Clement <monsieurp@gentoo.org> (5 Jun 2016)
 # Unmaintained ebuilds. Upstream is either dead or AWOL. Also, most of these
 # ebuilds are still sitting in ~arch after years in the tree.
@@ -251,22 +245,6 @@ net-print/foomatic-gui
 # Exported to user maintained overlay kde-sunset.
 kde-apps/superkaramba
 
-# Johannes Huber <johu@gentoo.org> (26 May 2016)
-# Masked for removal in 30 days. Blocks app-misc/strigi cleanup.
-# Last release in 2014 with KDE SC 4.14.3. No development since
-# several years. Bug #583716
-kde-apps/kdesdk-strigi-analyzer
-
-# Michael Palimaka <kensington@gentoo.org> (26 May 2016)
-# Ancient. Unmaintained. Dead upstream. Masked for removal
-# in 30 days. Bug #583510.
-net-irc/iip
-
-# Michael Palimaka <kensington@gentoo.org> (26 May 2016)
-# No longer developed by upstream. No revdeps.
-# Masked for removal in 30 days. Bug 583776.
-dev-libs/hammer
-
 # Michael Palimaka <kensington@gentoo.org> (26 May 2016)
 # Depends on vulnerable slot of net-libs/webkit-gtk.
 # Dead upstream. Unmaintained. Masked for removal in 30 days.
@@ -278,45 +256,14 @@ www-client/luakit
 # Use at your own risk.
 =app-text/xiphos-4.0.4-r1
 
-# Mike Gilbert <floppym@gentoo.org> (25 May 2016)
-# Causes build failures in unrelated packages due to invasive
-# monkey-patching of easy_install (dev-python/setuptools).
-# Remove this package in 30 days.
-# Bug: https://bugs.gentoo.org/575844
-dev-python/buildutils
-
-# Johannes Huber <johu@gentoo.org> (25 May 2016)
-# Masked for removal in 30 days. Declared as dead by
-# upstream in 2015. Last release with KDE Applications 15.04.3.
-# Exported to user maintained overlay kde-sunset.
-kde-apps/pairs
-
 # Alexis Ballier <aballier@gentoo.org> (24 May 2016)
 # API change, breaks e.g. eliom
 >=dev-ml/tyxml-4
 >=dev-ml/js_of_ocaml-2.8
 
-# Michał Górny <mgorny@gentoo.org> (24 May 2016)
-# No longer maintained upstream, no longer works with libzpaq-7*.
-# Masked for removal in 30 days.
-app-arch/zpipe
-
-# Sam Jorna <wraeth@gentoo.org> (24 May 2016)
-# Deprecated in favour of sci-geosciences/qmapshack.
-# See bugs 561788 and 582262
-# Masked for removal in 30 days.
-sci-geosciences/qlandkartegt
-sci-geosciences/qlandkartegt-garmindev
-
 # Luca Barbato <lu_zero@gentoo.org> (23 May 2016)
 # Masked for testing, vlc-2.2 configure rejects it.
 =media-video/libav-12*
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (21 May 2016)
-# Unmaintained since 2011, needs old webkit-gtk:2 slot that has
-# security issues, no consumers in tree, bug 573092
-# Removal in 30 days
-dev-perl/Gtk2-WebKit
 
 # Kent Fredric <kentfredric@gmail.com> (15 May 2016)
 # Andreas K. Hüttel <dilfridge@gentoo.org> (21 May 2016)
@@ -331,24 +278,9 @@ dev-perl/Gtk2-WebKit
 # See tracker bug https://bugs.gentoo.org/583478
 >=app-text/hunspell-1.4.0
 
-# Joerg Bornkessel <hd_brummy@gentoo.org> (16 May 2016)
-# Masked for removal. Dead on upstream
-# wrt bug 185947
-=media-tv/tvmovie2vdr-0.5.13
-
-# David Seifert <soap@gentoo.org> (15 May 2016)
-# Masked for removal. Deprecated, relies on ancient CUDA APIs,
-# does not build with current CUDA releases. See bug #583068.
-sci-libs/torch
-
 # Alon Bar-Lev <alonbl@gentoo.org) (13 May 2016)
 # Force gnutls-3.4 testing so we can stabilize it.
 >=net-libs/gnutls-3.5.0
-
-# Michael Weber <xmw@gentoo.org> (08 May 2016)
-# Replaced by net-libs/libhubbub.
-# Masked for removal in 30 days. Bug #582382.
-net-libs/hubbub
 
 # Maciej Mrozowski <reavertm@gentoo.org> (3 May 2016)
 # Mask until >=net-libs/qxmpp-0.8.3 is provided with qt5 support.
@@ -361,11 +293,6 @@ net-libs/hubbub
 # Sergey Popov <pinkbyte@gentoo.org> (26 Apr 2016)
 # Security mask of older branches, wrt bug #5567810
 <dev-vcs/subversion-1.8
-
-# Michael Sterrett <mr_bones_@gentoo.org> (19 Apr 2016)
-# No release in 6 years and segfaults on modern systems. (bug #311809)
-# Masked for removal on 20160519
-games-sports/toycars
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (16 Apr 2016)
 # Masked because of security bug 580210
@@ -413,12 +340,6 @@ dev-libs/libtomcrypt
 # Fails to build dev-lisp/sbcl-1.3.3 #563812
 =dev-lisp/asdf-3.1.7
 =dev-lisp/uiop-3.1.7
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (19 Mar 2016)
-# Dead upstream since 2010, new VMware uses new incompatible
-# proprietary libview. No other consumers. Removal in 30 days.
-# Bug 569930
-x11-libs/libview
 
 # Aaron Bauman <bman@gentoo.org> (19 Mar 2016)
 # Unpatched security vulnerability per bug #512356.
@@ -595,26 +516,6 @@ dev-libs/iniparser:4
 # See #551724 and duplicates
 =sys-fs/udev-init-scripts-29
 
-# Michał Górny <mgorny@gentoo.org> (28 Mar 2015)
-# on behalf of gx86-multilib project <multilib@gentoo.org>
-# Removed lastrited emul-linux-x86. The mask is kept post-removal
-# per Arfrever's request so that the PM warns about masked packages
-# being installed.
-app-emulation/emul-linux-x86-baselibs
-app-emulation/emul-linux-x86-cpplibs
-app-emulation/emul-linux-x86-db
-app-emulation/emul-linux-x86-gstplugins
-app-emulation/emul-linux-x86-gtklibs
-app-emulation/emul-linux-x86-gtkmmlibs
-app-emulation/emul-linux-x86-medialibs
-app-emulation/emul-linux-x86-motif
-app-emulation/emul-linux-x86-opengl
-app-emulation/emul-linux-x86-qtlibs
-app-emulation/emul-linux-x86-sdl
-app-emulation/emul-linux-x86-soundlibs
-app-emulation/emul-linux-x86-xlibs
-app-emulation/emul-linux-x86-jna
-
 # Justin Lecher <jlec@gentoo.org> (28 Feb 2015)
 # Unfixed security problems
 # No upstream support anymore
@@ -631,26 +532,12 @@ dev-python/south
 # Mask live ebuild
 =dev-util/radare2-9999
 
-# Anthony G. Basile <blueness@gentoo.org> (9 Jan 2015)
-# p.mask the -9999 version
-=dev-misc/i2pd-9999
-
 # Tony Vroon <chainsaw@gentoo.org> (5 Jan 2015)
 # Asterisk 13 is an LTS release but has not seen
 # sufficient releases to be considered ready for
 # production usage. You are welcome to have a go
 # but please be careful.
 =net-misc/asterisk-13*
-
-# Aaron W. Swenson <titanofold@gentoo.org> (28 Dec 2014)
-# Split ebuilds are no longer maintained. Migrate to the unified
-# ebuilds invoking the following, substituting SLOT for the desired
-# slot and optionally enabling the server and/or docs USE flags:
-#   emerge dev-db/postgresql:SLOT
-# No further action is required.
-dev-db/postgresql-docs
-dev-db/postgresql-base
-dev-db/postgresql-server
 
 # Jeroen Roovers <jer@gentoo.org> (12 Dec 2014)
 # The 96 and 173 branches are no longer supported and remain vulnerable to
@@ -660,6 +547,8 @@ dev-db/postgresql-server
 
 # Patrick Lauer <patrick@gentoo.org> (24 Nov 2014)
 # Missing deps, uninstallable
+# Michał Górny <mgorny@gentoo.org> (26 Jun 2016)
+# Removal in 14 days, #528198.
 www-apps/trac-downloads
 
 # Michał Górny <mgorny@gentoo.org> (15 Sep 2014)
@@ -747,31 +636,10 @@ app-eselect/eselect-lua
 # Security mask of vulnerable versions, wrt bug #424167
 <net-nds/openldap-2.4.35
 
-# Lars Wendler <polynomial-c@gentoo.org> (14 Mar 2014)
-# Masked for security reasons.
-# Do NOT remove this mask or the affected packages without speaking to
-# bonsaikitten first! You have been warned!
-<net-fs/samba-3.6
-
 # Mike Gilbert <floppym@gentoo.org> (04 Mar 2014)
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
 www-plugins/chrome-binary-plugins:unstable
-
-# Samuli Suominen <ssuominen@gentoo.org> (03 Mar 2014)
-# gnome-extra/polkit-gnome is the "GTK+ polkit agent" and has no extra
-# dependencies that installing lxde-base/lxpolkit would solve, thus
-# the only motivation for creation of lxpolkit was to drop the word
-# 'gnome' from the package's name. The packages are near identical
-# by the outlook, determined by the used GTK+ theme.
-#
-# Raise yourself above the word 'gnome' and install the de facto GTK+ agent:
-# emerge -C lxpolkit
-# emerge -1 polkit-gnome
-#
-# Removal will happen at later date, but since there is no hurry, give it
-# until rest of the year.
-lxde-base/lxpolkit
 
 # Tim Harder <radhermit@gentoo.org> (04 Feb 2014)
 # Mask development releases
@@ -899,7 +767,6 @@ kde-misc/kgtk
 # per QA team policy, all these need to be kept masked by default, if
 # available in the tree.
 =app-misc/sleepyhead-9999
-app-portage/layman-dbtools
 =www-plugins/google-talkplugin-9999
 
 # Tiziano Müller <dev-zero@gentoo.org> (08 Apr 2009)

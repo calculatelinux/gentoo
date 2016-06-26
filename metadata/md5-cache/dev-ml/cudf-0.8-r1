@@ -9,5 +9,5 @@ LICENSE=LGPL-3
 RDEPEND=>=dev-lang/ocaml-3.12:=[ocamlopt?] dev-ml/extlib:= dev-libs/glib:2 dev-ml/camlp4:= dev-ml/cppo:=
 SLOT=0/0.8
 SRC_URI=https://gforge.inria.fr/frs/download.php/file/34659/cudf-0.8.tar.gz
-_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	c9d9187f4caa4026a0ceddd8dfceb3c1
+_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
 _md5_=3efd9c3bb11b21621afe97b94cb89d66
