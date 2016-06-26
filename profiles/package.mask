@@ -30,6 +30,33 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (26 Jun 2016)
+# Unmaintained, unused, upstream gone. The only revdep (crow-designer)
+# is already last rited for removal, #587142.
+dev-libs/guiloader
+dev-libs/guiloader-c++
+
+# Michał Górny <mgorny@gentoo.org> (26 Jun 2016)
+# Unmaintained, not updated since 2012. Not really useful for anything.
+# Removal in 30 days, #587138.
+app-portage/pms-test-suite
+
+# Aaron Bauman <bman@gentoo.org> (26 Jun 2016)
+# Unpatched security vulnerability and dead upstream
+# per bug #475120.  Removal in 30 days
+media-video/motion
+
+# Michał Górny <mgorny@gentoo.org> (25 Jun 2016)
+# Obsolete packages for removal in 30 days. Replacements and bugs:
+# dev-ml/comparelib -> dev-ml/ppx_compare, #586904
+# dev-ml/deriving-ocsigen -> dev-ml/deriving, #586906
+# dev-ml/faillib -> dev-ml/ppx_fail, #586912
+# dev-ml/typehashlib -- not used anymore, #586928
+dev-ml/comparelib
+dev-ml/deriving-ocsigen
+dev-ml/faillib
+dev-ml/typehashlib
+
 # Michał Górny <mgorny@gentoo.org> (23 Jun 2016)
 # Integrated in media-video/bashnapi. Removal in 30 days.
 media-video/subotage
@@ -776,12 +803,6 @@ www-client/google-chrome:unstable
 # See #471512 for more details.
 www-apache/mod_spdy
 
-# Agostino Sarubbo <ago@gentoo.org> (23 Sep 2013)
-# Masked because of vulnerable versions
-# DO NOT REMOVE OLDER VERSIONS
-# temporarily disabled as it also breaks s390 keywording
-#<net-nds/openldap-2.4.35
-
 # Sergey Popov <pinkbyte@gentoo.org> (18 Sep 2013)
 # Mask development releases of botan:
 # - causes many API breakages
@@ -854,12 +875,6 @@ kde-misc/kgtk
 # Masked for security bug #294253, use only at your own risk!
 =media-libs/fmod-3*
 
-# Peter Volkov <pva@gentoo.org> (23 Jul 2011)
-# Mask release candidates
-=dev-libs/guiloader-2.99.0
-=dev-libs/guiloader-c++-2.99.0
-=dev-util/crow-designer-2.99.0
-
 # Marijn Schouten <hkBst@gentoo.org> (07 April 2011)
 # Masked for number of issues, but can be used to
 # test against if people are impatient ;P
@@ -868,14 +883,6 @@ kde-misc/kgtk
 # - doesn't build when boehm-gc is built without threads
 # - no SLOTting yet!
 =dev-scheme/guile-2.0.0
-
-# Markos Chandras <hwoarang@gentoo.org> (01 Nov 2010)
-# Masking alpha releases
-net-analyzer/ncrack
-
-# Luca Barbato <lu_zero@gentoo.org> (21 Jul 2010)
-# Not ready for public consumption, clashes with current mesa-git
-media-libs/shivavg
 
 # Mike Frysinger <vapier@gentoo.org> (07 Mar 2010)
 # Very old packages that people should have upgraded away from
