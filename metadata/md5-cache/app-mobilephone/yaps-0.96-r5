@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=capi? ( net-dialup/capi4k-utils ) slang? ( >=sys-libs/slang-1.4 ) lua? ( dev-lang/lua ) !media-sound/abcmidi
 SLOT=0
 SRC_URI=capi? ( ftp://ftp.melware.net/capi4yaps/yaps-0.96.c4.tgz ) !capi? ( ftp://sunsite.unc.edu/pub/Linux/apps/serialcomm/machines/yaps-0.96.tar.gz )
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=f83684a1849a7e25aedc8293318d7f10

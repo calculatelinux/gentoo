@@ -10,5 +10,5 @@ RDEPEND=virtual/qmail >=net-mail/vpopmail-5.3 net-mail/autorespond maildrop? ( >
 RESTRICT=userpriv
 SLOT=0
 SRC_URI=mirror://sourceforge/qmailadmin/qmailadmin-1.2.10.tar.gz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=2e91c7914855b61ce9c24e1e44fe1ef4

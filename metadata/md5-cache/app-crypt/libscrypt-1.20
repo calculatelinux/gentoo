@@ -6,5 +6,5 @@ KEYWORDS=amd64 arm ~mips ppc ppc64 sparc x86
 LICENSE=BSD-2
 SLOT=0
 SRC_URI=https://github.com/technion/libscrypt/archive/v1.20.tar.gz -> libscrypt-1.20.tar.gz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	d270fa247153df66074f795fa42dba3e	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	d270fa247153df66074f795fa42dba3e	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=a1907258d9134971f4dd3a95c98d3425

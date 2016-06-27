@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=net-misc/curl dev-util/gperf dev-vcs/cvs dev-vcs/subversion
 SLOT=0
 SRC_URI=http://ymorin.is-a-geek.org/download/crosstool-ng/crosstool-ng-1.22.0.tar.bz2
-_eclasses_=bash-completion-r1	acf715fa09463f043fbfdc1640f3fb85	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=bash-completion-r1	acf715fa09463f043fbfdc1640f3fb85	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=fddedf09dea8e261653e2a77e3bbc6b0

@@ -8,5 +8,5 @@ KEYWORDS=amd64 ppc ~ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=free-noncomm
 SLOT=0
 SRC_URI=http://www.pdflib.com/products/more/jpeg2ps/jpeg2ps-1.9.tar.gz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=da3edd23b960c8bc28f57d92a05face6

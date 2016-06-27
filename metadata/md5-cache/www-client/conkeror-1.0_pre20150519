@@ -7,5 +7,5 @@ LICENSE=|| ( MPL-1.1 GPL-2 LGPL-2.1 ) CC-BY-SA-3.0
 RDEPEND=|| ( >=www-client/firefox-5.0 >=www-client/firefox-bin-23.0 )
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~ulm/distfiles/conkeror-1.0_pre20150519.tar.xz https://dev.gentoo.org/~ulm/distfiles/conkeror.png
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=5f98cc112f9684c641243c2789080669

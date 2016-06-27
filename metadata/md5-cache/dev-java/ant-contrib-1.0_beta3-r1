@@ -10,5 +10,5 @@ RDEPEND=>=virtual/jre-1.4 >=dev-java/bcel-5.1:0 dev-java/commons-httpclient:3 de
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/ant-contrib/ant-contrib-1.0b3-src.tar.bz2
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	java-ant-2	7c5d0c274d390745f5033754a319f515	java-pkg-2	b02dc1e46b3648e467b5fbdf7857cf28	java-utils-2	9a25f292ff66f8c2c00100ac0b15c54f	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	java-ant-2	7c5d0c274d390745f5033754a319f515	java-pkg-2	b02dc1e46b3648e467b5fbdf7857cf28	java-utils-2	9a25f292ff66f8c2c00100ac0b15c54f	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
 _md5_=c50557314f60f4d23092678ae6b03d69

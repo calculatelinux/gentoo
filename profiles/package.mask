@@ -30,6 +30,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Alexis Ballier <aballier@gentoo.org> (27 Jun 2016)
+# Breaks dev-ml/ppx_type_conv
+>=dev-ml/ppx_deriving-4
+
 # Sergei Trofimovich <slyfox@gentoo.org> (26 Jun 2016)
 # Deprecated by upstream in favour of dev-haskell/conduit-extra.
 # Masked for removal.
@@ -400,10 +404,6 @@ dev-lang/niecza-bin
 # tree should have actually been 2.0_beta1. There are no revdeps.
 dev-java/jcs
 
-# Wolfram Schlich <wschlich@gentoo.org> (06 Feb 2016)
-# Mask live ebuild
-=net-im/mcabber-9999
-
 # Mike Frysinger <vapier@gentoo.org> (18 Jan 2016)
 # Force people to migrate to the new combined libraries:
 # media-libs/elementary & dev-libs/efl. #571796
@@ -653,6 +653,8 @@ www-plugins/chrome-binary-plugins:unstable
 # Diego Elio Pettenò <flameeyes@gentoo.org> (13 Oct 2013)
 # Requires a NPN support in mod_ssl (www-server/apache) to work.
 # See #471512 for more details.
+# Michał Górny <mgorny@gentoo.org> (27 Jun 2016)
+# Replaced by mod_h2 (in Apache). Removal in 14 days, #587146.
 www-apache/mod_spdy
 
 # Sergey Popov <pinkbyte@gentoo.org> (18 Sep 2013)
@@ -735,16 +737,6 @@ kde-misc/kgtk
 # Added <sys-fs/e2fsprogs as well (halcy0n)
 <sys-libs/e2fsprogs-libs-1.41.8
 <sys-fs/e2fsprogs-1.41.9
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (08 Aug 2009)
-#  on behalf of QA Team
-#
-# Mass-masking of live ebuilds; we cannot guarantee working state of
-# live ebuilds, nor the availability of the server hosting them. As
-# per QA team policy, all these need to be kept masked by default, if
-# available in the tree.
-=app-misc/sleepyhead-9999
-=www-plugins/google-talkplugin-9999
 
 # Tiziano Müller <dev-zero@gentoo.org> (08 Apr 2009)
 # pre-releases

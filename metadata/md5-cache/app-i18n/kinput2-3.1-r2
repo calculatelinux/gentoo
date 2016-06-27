@@ -9,5 +9,5 @@ LICENSE=HPND
 RDEPEND=freewnn? ( >=app-i18n/freewnn-1.1.1_alpha19 ) !freewnn? ( >=app-i18n/canna-3.5_beta2-r1 ) x11-libs/libX11 x11-libs/libXaw x11-libs/libXmu x11-libs/libXp x11-libs/libXt
 SLOT=0
 SRC_URI=ftp://ftp.sra.co.jp/pub/x11/kinput2/kinput2-v3.1.tar.gz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=29c10b422d8ba883b894353aed3890fd

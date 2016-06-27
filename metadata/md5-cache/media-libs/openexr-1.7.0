@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=sys-libs/zlib >=media-libs/ilmbase-1.0.2
 SLOT=0
 SRC_URI=http://download.savannah.gnu.org/releases/openexr/openexr-1.7.0.tar.gz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	libtool	4890219c51da247200223277f993e054	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	libtool	4890219c51da247200223277f993e054	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=73444ae830176aec157c01ec460881af

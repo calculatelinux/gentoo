@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=sys-power/acpi_call dev-lang/perl
 SLOT=0
 SRC_URI=https://github.com/teleshoes/tpacpi-bat/archive/v3.0.tar.gz -> tpacpi-bat-3.0.tar.gz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	systemd	3165c885f3c71ffae7a867d931fb0e07	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	systemd	3165c885f3c71ffae7a867d931fb0e07	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=3590ca973ad1b6a76d6fd38ba7cdc240

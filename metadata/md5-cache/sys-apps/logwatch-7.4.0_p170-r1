@@ -7,5 +7,5 @@ LICENSE=MIT
 RDEPEND=virtual/cron virtual/mta virtual/mailx dev-lang/perl dev-perl/Date-Calc dev-perl/Date-Manip dev-perl/Tie-IxHash dev-perl/Sys-CPU dev-perl/Sys-MemInfo
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~polynomial-c/logwatch-7.4.0_p170.tar.gz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=146c69f745842d16196669bd0c41c312

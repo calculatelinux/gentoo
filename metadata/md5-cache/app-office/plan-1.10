@@ -8,5 +8,5 @@ LICENSE=GPL-2+
 RDEPEND=x11-libs/libXpm >=x11-libs/motif-2.3:0
 SLOT=0
 SRC_URI=ftp://ftp.fu-berlin.de/unix/X11/apps/plan/plan-1.10.tar.gz mirror://gentoo/plan-1.10-gentoo.tar.xz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=6250b92cef67c9c91ae6ca17962931da

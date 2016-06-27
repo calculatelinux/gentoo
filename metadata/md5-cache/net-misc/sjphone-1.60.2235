@@ -8,5 +8,5 @@ RDEPEND=x11-libs/libSM x11-libs/libICE x11-libs/libXext x11-libs/libX11 x11-libs
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://www.sjlabs.com/preview/linux/SJphoneLnx-1.60.2235.tar.gz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=2e34b0ce36761eeb519f338cb26bea4d

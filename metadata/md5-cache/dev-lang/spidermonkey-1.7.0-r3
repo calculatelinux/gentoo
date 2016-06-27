@@ -9,5 +9,5 @@ LICENSE=NPL-1.1
 RDEPEND=threadsafe? ( dev-libs/nspr )
 SLOT=0/js
 SRC_URI=ftp://ftp.mozilla.org/pub/mozilla.org/js/js-1.7.0.tar.gz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	d270fa247153df66074f795fa42dba3e	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	d270fa247153df66074f795fa42dba3e	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=2f70858e2320881597ef85a722df2200

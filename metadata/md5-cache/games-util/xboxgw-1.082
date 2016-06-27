@@ -6,5 +6,5 @@ KEYWORDS=~amd64 x86
 LICENSE=freedist
 SLOT=0
 SRC_URI=http://www.xboxgw.com/rel/dist2.1/tarballs/i386/xboxgw-1.08-2.tgz http://www.xboxgw.com/rel/dist2.1/tarballs/i386/hmlibs-1.07-2.i386.tgz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=370e6c01170228ac6f23c2ddc5b0ada6

@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-lang/php-5.2.10[ssl,soap,unicode,xml,session,tokenizer,zip,ldap?,mssql?,mysql?,mysqli?,zlib?,curl?,imap?,json?] dev-php/PEAR-DB dev-php/PEAR-Cache_Lite dev-php/PEAR-Mail_Mime virtual/httpd-cgi freetds? ( >=dev-db/freetds-0.64 mssql? ( >=dev-db/freetds-0.64[mssql] ) ) app-arch/unzip >=app-admin/webapp-config-1.50.15
 SLOT=6.5.10
 SRC_URI=mirror://sourceforge/project/sugarcrm/1%20-%20SugarCRM%206.5.X/SugarCommunityEdition-6.5.X/SugarCE-6.5.10.zip
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c	webapp	42c6ef7af496b228f9854b3c81e4b226
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf	webapp	42c6ef7af496b228f9854b3c81e4b226
 _md5_=02ec9892e19806b119a0c25f1ec9e22a

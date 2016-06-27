@@ -7,5 +7,5 @@ KEYWORDS=amd64 ppc s390 sparc x86
 LICENSE=GPL-2
 RDEPEND=>=app-text/sgml-common-0.6.1
 SLOT=0
-_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	sgml-catalog	b6e9d36507f43d79b6df9cb78d6eb4dd	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	sgml-catalog	b6e9d36507f43d79b6df9cb78d6eb4dd	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=37bcd449eb0fda5ab83d2279982c3fa3

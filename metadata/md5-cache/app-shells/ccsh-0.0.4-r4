@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~ppc ~sparc ~x86 ~ppc64
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge/ccsh/ccsh-0.0.4.tar.gz
-_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=e17cdd735016ad802c07936e5a19aeb0

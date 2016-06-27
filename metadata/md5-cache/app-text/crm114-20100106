@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=static? ( dev-libs/tre[static-libs] ) !static? ( dev-libs/tre ) mew? ( app-emacs/mew ) mimencode? ( net-mail/metamail ) normalizemime? ( mail-filter/normalizemime )
 SLOT=0
 SRC_URI=http://crm114.sourceforge.net/tarballs/crm114-20100106-BlameMichelson.src.tar.gz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=a94ba3f500856037b0d11039f204f634

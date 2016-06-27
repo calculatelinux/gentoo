@@ -8,5 +8,5 @@ LICENSE=Artistic
 RDEPEND=dev-libs/9libs >=x11-libs/libX11-1.0.0 >=x11-libs/libXt-1.0.0 >=x11-libs/libICE-1.0.0 >=x11-libs/libSM-1.0.0
 SLOT=0
 SRC_URI=ftp://www.netlib.org/research/9libs/wily-9libs.tar.gz
-_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=5386ab5ef3b6dc6ca1976165478b82b3

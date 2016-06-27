@@ -9,5 +9,5 @@ RDEPEND=media-libs/freeglut media-libs/gd:2= media-libs/libpng:0= virtual/jpeg:0
 RESTRICT=fetch
 SLOT=0
 SRC_URI=molscript-2.1.2.tar.gz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=88c602b3d7557caf6c15c963794ca192

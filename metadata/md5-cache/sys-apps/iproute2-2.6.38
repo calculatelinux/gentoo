@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=!net-misc/arpd !minimal? ( berkdb? ( sys-libs/db ) ) atm? ( net-dialup/linux-atm )
 SLOT=0
 SRC_URI=mirror://kernel/linux/utils/net/iproute2/iproute2-2.6.38.tar.bz2
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	d270fa247153df66074f795fa42dba3e	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	d270fa247153df66074f795fa42dba3e	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=2155620a256834e8ef9ac0a5ed5c822d

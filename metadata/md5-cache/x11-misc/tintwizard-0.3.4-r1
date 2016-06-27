@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=x11-misc/tint2 dev-python/pygtk:2 =dev-lang/python-2*
 SLOT=0
 SRC_URI=https://tintwizard.googlecode.com/files/tintwizard-0.3.4.tar.gz
-_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	python	efc1c55fc44c5b7272fc2ffba73c3e6f	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	python	efc1c55fc44c5b7272fc2ffba73c3e6f	toolchain-funcs	e886935aae2b45a545665444ab0667cf
 _md5_=644d60467c4d9ee68fe46b41476652f5

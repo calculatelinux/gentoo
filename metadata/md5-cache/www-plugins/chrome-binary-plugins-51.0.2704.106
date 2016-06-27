@@ -9,5 +9,5 @@ RDEPEND=!www-plugins/chrome-binary-plugins:0 !www-plugins/chrome-binary-plugins:
 RESTRICT=bindist mirror strip
 SLOT=stable
 SRC_URI=https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_51.0.2704.106-1_amd64.deb
-_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c	unpacker	45d07319df5f40ee6af58418b0f930be
+_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf	unpacker	45d07319df5f40ee6af58418b0f930be
 _md5_=0a0ab8f32b3a257895eb04b6be673f4f
