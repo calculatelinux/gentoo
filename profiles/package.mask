@@ -30,6 +30,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Sergei Trofimovich <slyfox@gentoo.org> (26 Jun 2016)
+# Deprecated by upstream in favour of dev-haskell/conduit-extra.
+# Masked for removal.
+dev-haskell/filesystem-conduit
+
 # Michał Górny <mgorny@gentoo.org> (26 Jun 2016)
 # Used to convert ancient layman files, has some ancient hardcoded data.
 # Not really useful anymore, masked for being live since 2009.
@@ -528,10 +533,6 @@ dev-libs/iniparser:4
 # Not supported by any django version upstream supports
 dev-python/south
 
-# Sergei Trofimovich <slyfox@gentoo.org> (29 Jan 2015)
-# Mask live ebuild
-=dev-util/radare2-9999
-
 # Tony Vroon <chainsaw@gentoo.org> (5 Jan 2015)
 # Asterisk 13 is an LTS release but has not seen
 # sufficient releases to be considered ready for
@@ -645,23 +646,6 @@ www-plugins/chrome-binary-plugins:unstable
 # Mask development releases
 =media-sound/lilypond-2.19*
 
-# Mike Gilbert <floppym@gentoo.org> (19 Jan 2014)
-# To prevent accidental switching of release channels (bug 498306),
-# google-chrome has been split into 3 packages:
-#
-# www-client/google-chrome
-# www-client/google-chrome-beta
-# www-client/google-chrome-unstable
-#
-# The stable channel remains as www-client/google-chrome, but has been
-# switched to SLOT="0".
-#
-# Please unmerge your currently installed version and remerge one of the new
-# packages.
-www-client/google-chrome:beta
-www-client/google-chrome:stable
-www-client/google-chrome:unstable
-
 # Justin Lecher <jlec@gentoo.org> (14 Oct 2013)
 # Seems to break all deps - API change?
 >=sci-libs/metis-5
@@ -714,13 +698,6 @@ sci-geosciences/googleearth
 # but should not be fed untrusted input (eg from strangers).
 # Masked to ensure users are aware before they install.
 app-text/cuneiform
-
-# Rick Farina <zerochaos@gentoo.org> (21 Dec 2012)
-# madwifi has been replaced by ath5k and ath9k in kernel
-# drivers and is subject to numerous long standing bugs
-# stable wpa_supplicant sometimes wants madwifi-ng-tools
-#net-wireless/madwifi-ng-tools
-net-wireless/madwifi-ng
 
 # Robin H. Johnson <robbat2@gentoo.org> (09 Feb 2012)
 # Needs to be slotted better
