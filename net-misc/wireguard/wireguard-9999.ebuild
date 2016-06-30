@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit linux-mod linux-info
+inherit linux-mod
 
 DESCRIPTION="Simple yet fast and modern VPN that utilizes state-of-the-art cryptography."
 HOMEPAGE="https://www.wireguard.io/"
@@ -38,9 +38,14 @@ pkg_setup() {
 	kernel_is -lt 4 1 0 && die "This version of ${PN} requires Linux >= 4.1"
 }
 
+src_prepare() {
+	default
+	sed -i 's/install -s/install/' src/tools/Makefile
+}
+
 src_compile() {
-	 linux-mod_src_compile
-	 emake -C src/tools
+	linux-mod_src_compile
+	emake -C src/tools
 }
 
 src_install() {

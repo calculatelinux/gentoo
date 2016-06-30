@@ -22,7 +22,7 @@ IUSE="cups gn gnome gnome-keyring gtk3 +hangouts kerberos neon pic +proprietary-
 RESTRICT="!system-ffmpeg? ( proprietary-codecs? ( bindist ) )"
 
 # TODO: bootstrapped gn binary hangs when using tcmalloc with portage's sandbox.
-REQUIRED_USE="gn? ( gnome-keyring !tcmalloc )"
+REQUIRED_USE="gn? ( gnome gnome-keyring !tcmalloc )"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -192,6 +192,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-last-commit-position-r0.patch"
 	epatch "${FILESDIR}/${PN}-system-zlib-r0.patch"
 	epatch "${FILESDIR}/${PN}-linker-warnings-r0.patch"
+	epatch "${FILESDIR}/${PN}-ffmpeg-license-r0.patch"
 
 	epatch_user
 
