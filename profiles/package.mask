@@ -30,6 +30,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (3 Jul 2016)
+# One of the last reverse dependencies of the deprecated libgnomeprint*
+# libs and some others; unmaintained; obsolete version.
+# Masked for removal in 30 days.
+app-office/lotus-notes
+
+# Hans de Graaff <graaff@gentoo.org> (2 Jul 2016)
+# This slot has unfixed security issues. With dev-ruby/rails:3.2
+# masked there are no reverse dependencies anymore.
+# Removal in 30 days, #568978
+dev-ruby/mail:2.5
+
 # Michał Górny <mgorny@gentoo.org> (1 Jul 2016)
 # Unmaintained upstream, superseded by gnome-base/gnome-shell built-in
 # recording capabilities. Removal in 30 days, #587494.
@@ -279,20 +291,6 @@ dev-util/weblint
 # Dead upstream. No release since 2009.
 # Masked for removal in 30 days.
 dev-util/osdt
-
-# Michael Palimaka <kensington@gentoo.org> (1 Jun 2016)
-# Ancient. Unused. Dead upstream. Masked for removal in 30 days.
-# Bug 584374.
-sys-libs/libfreevec
-
-# Michael Palimaka <kensington@gentoo.org> (1 Jun 2016)
-# Obsolete package. Masked for removal in 30 days. Bug 584454.
-app-admin/sulfur
-
-# Michael Palimaka <kensington@gentoo.org> (1 Jun 2016)
-# Depends on vulnerable slot of net-libs/webkit-gtk. Dead upstream.
-# Masked for removal in 30 days. Bug 584164.
-net-print/foomatic-gui
 
 # Michael Palimaka <kensington@gentoo.org> (26 May 2016)
 # Depends on vulnerable slot of net-libs/webkit-gtk.

@@ -8,5 +8,5 @@ KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 LICENSE=vlgothic mplus-fonts BSD-2
 SLOT=0
 SRC_URI=mirror://sourceforge.jp/vlgothic/62375/VLGothic-20141206.tar.bz2
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	font	cd7790315ca5b8c505e1e0513df6acce	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	font	cd7790315ca5b8c505e1e0513df6acce	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
 _md5_=7bcb6008f823a927a545eb1224f52dd0

@@ -8,5 +8,5 @@ KEYWORDS=alpha amd64 arm hppa ia64 ppc s390 sh sparc x86 ~x86-fbsd
 LICENSE=|| ( LGPL-2.1 OFL-1.1 )
 SLOT=0
 SRC_URI=http://www.thibault.org/fonts/essays/essays1743-2.000-1-ttf.tar.gz
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	font	cd7790315ca5b8c505e1e0513df6acce	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	font	cd7790315ca5b8c505e1e0513df6acce	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
 _md5_=86ec6b4f2e72e8d71c4892ccf7c7e75e

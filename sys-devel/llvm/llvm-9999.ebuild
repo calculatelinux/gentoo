@@ -107,6 +107,8 @@ pkg_pretend() {
 
 pkg_setup() {
 	pkg_pretend
+
+	python-single-r1_pkg_setup
 }
 
 src_unpack() {
@@ -140,6 +142,8 @@ src_unpack() {
 }
 
 src_prepare() {
+	python_setup
+
 	# Make ocaml warnings non-fatal, bug #537308
 	sed -e "/RUN/s/-warn-error A//" -i test/Bindings/OCaml/*ml  || die
 	# Fix libdir for ocaml bindings install, bug #559134
@@ -188,9 +192,9 @@ src_prepare() {
 		eapply "${FILESDIR}"/cmake/clang-0002-cmake-Make-CLANG_LIBDIR_SUFFIX-overridable.patch
 
 		# Fix WX sections, bug #421527
-		find "${S}"/projects/compiler-rt/lib/builtins -type f -name \*.S -exec sed \
-			 -e '$a\\n#if defined(__linux__) && defined(__ELF__)\n.section .note.GNU-stack,"",%progbits\n#endif' \
-			 -i {} \; || die
+		find projects/compiler-rt/lib/builtins -type f -name '*.S' -exec sed \
+			-e '$a\\n#if defined(__linux__) && defined(__ELF__)\n.section .note.GNU-stack,"",%progbits\n#endif' \
+			-i {} + || die
 	fi
 
 	if use lldb; then
@@ -202,8 +206,6 @@ src_prepare() {
 
 	# User patches
 	eapply_user
-
-	python_setup
 
 	# Native libdir is used to hold LLVMgold.so
 	NATIVE_LIBDIR=$(get_libdir)
@@ -339,6 +341,23 @@ multilib_src_configure() {
 		# some flags clang does not support
 		# (if you know some more flags that don't work, let us know)
 		#filter-flags -msahf -frecord-gcc-switches
+	fi
+
+	if tc-is-cross-compiler; then
+		[[ -x "/usr/bin/llvm-tblgen" ]] \
+			|| die "/usr/bin/llvm-tblgen not found or usable"
+		mycmakeargs+=(
+			-DCMAKE_CROSSCOMPILING=ON
+			-DLLVM_TABLEGEN=/usr/bin/llvm-tblgen
+		)
+
+		if use clang; then
+			[[ -x "/usr/bin/clang-tblgen" ]] \
+				|| die "/usr/bin/clang-tblgen not found or usable"
+			mycmakeargs+=(
+				-DCLANG_TABLEGEN=/usr/bin/clang-tblgen
+			)
+		fi
 	fi
 
 	cmake-utils_src_configure

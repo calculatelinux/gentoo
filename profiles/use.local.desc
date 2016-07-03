@@ -325,6 +325,7 @@ app-arch/innoextract:debug - Enable debug logging and the --debug command-line o
 app-arch/innoextract:lzma - Enable support for extracting lzma-compressed installers using app-arch/xz-utils.
 app-arch/libarchive:bzip2 - Allow accessing bzip2-compressed archives through libbz2 (which comes with app-arch/bzip2). This only affects libarchive's native support: bsdtar will keep using bunzip2 as a filter if that's not built-in.
 app-arch/libarchive:e2fsprogs - Use file flags from sys-fs/e2fsprogs headers instead of virtual/os-headers headers
+app-arch/libarchive:lz4 - Enable support for LZ4 compression using app-arch/lz4
 app-arch/libarchive:nettle - Use dev-libs/nettle as crypto backend
 app-arch/libarchive:zlib - Allow accessing gzip-compressed archives through sys-libs/zlib. This only affects libarchive's native support: bsdtar will keep using gunzip as a filter if that's not built-in. It's also needed for supporting extraction of ZIP files.
 app-arch/libzpaq:jit - Enable just-in-time compilation for faster compression (requires SSE2)
@@ -943,7 +944,12 @@ app-misc/lcdproc:lcd_devices_vlsys_m428 - Enable support for VLSYS M428 display
 app-misc/lcdproc:nfs - Adds support for NFS file system
 app-misc/lcdproc:seamless-hbars - Try to avoid gaps in horizontal bars
 app-misc/linux-logo:nls - Add Native Language Support (using gettext - GNU locale utilities)
+app-misc/lirc:audio - Support using an audio device connected to an IR receiver
+app-misc/lirc:ftdi - Support FTDI devices
 app-misc/lirc:hardware-carrier - The transmitter device generates its clock signal in hardware
+app-misc/lirc:iguanair - Support iguanaIR devices
+app-misc/lirc:inputlirc - Add a dependency on app-misc/inputlircd
+app-misc/lirc:irman - Add a dependency on media-libs/libirman
 app-misc/lirc:transmitter - Add transmitter support to some lirc-drivers (e.g. serial)
 app-misc/mc:edit - Compile and install the mcedit application
 app-misc/mc:mclib - Compile and install the libmc.so shared library
@@ -1065,9 +1071,11 @@ app-office/kmymoney:quotes - Enable Online Stock Quote retrieval
 app-office/libreoffice:coinmp - Use sci-libs/coinor-mp as alternative solver
 app-office/libreoffice:collada - Enable Collada for rendering 3D models stored in *.dae and *.kmz format
 app-office/libreoffice:gltf - Use media-libs/libgltf for inserting 3D models in the glTF format into presentations
+app-office/libreoffice:google - Enable support for remote files on Google Drive
 app-office/libreoffice:gtk3 - Enable highly experimental gtk3 frontend
 app-office/libreoffice:jemalloc - Use dev-libs/jemalloc for allocations
 app-office/libreoffice:odk - Build the Office Development Kit
+app-office/libreoffice:quickstarter - Build the system tray quickstarter
 app-office/libreoffice:telepathy - Enable document colaboration features using telepathy communication framework.
 app-office/libreoffice:vlc - Use media-video/vlc for video embedding
 app-office/libreoffice-l10n:offlinehelp - Install help files locally instead of using the LibreOffice Wiki
@@ -2198,7 +2206,6 @@ dev-ml/lablgtk:sourceview - Enable GtkSourceView support
 dev-ml/lwt:ppx - Enables the ppx syntax extension
 dev-ml/lwt:react - Enables support for dev-ml/react: Functional reactive programming (signals, events, etc.).
 dev-ml/ocaml-cstruct:async - Support for asynchronous execution
-dev-ml/ocaml-cstruct:camlp4 - Enable support for camlp4
 dev-ml/ocaml-cstruct:lwt - Enable threads via lwt
 dev-ml/ocaml-cstruct:ppx - Enable the ppx syntax extension
 dev-ml/ocaml-dns:async - support for asynchronous execution
@@ -3192,7 +3199,9 @@ gnome-extra/avant-window-navigator-extras:gconf - Enable GConf as configuration 
 gnome-extra/cinnamon-control-center:colord - Support color management using x11-misc/colord
 gnome-extra/cinnamon-settings-daemon:colord - Support color management using x11-misc/colord
 gnome-extra/evolution-data-server:api-doc-extras - Build documentation for private APIs
+gnome-extra/evolution-data-server:berkdb - sys-libs/db support needed to migrate old (pre-3.12 evolution versions) addressbook data
 gnome-extra/evolution-data-server:gnome-online-accounts - Enable using net-libs/gnome-online-accounts for authorization
+gnome-extra/evolution-data-server:google - Enable Google Contacts support. This will also enable the internal Google authentication support. Please note this last one relies on a deprecated (and vulnerable) net-libs/webkit-gtk slot. If you want to avoid this dependency, you can disable this support and rely on gnome-online-accounts instead
 gnome-extra/evolution-data-server:weather - Enable optional weather calendar support
 gnome-extra/gnome-boxes:usbredir - Use sys-apps/usbredir to redirect USB devices to another machine over TCP
 gnome-extra/gnome-color-manager:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
@@ -4855,6 +4864,8 @@ media-video/mpv:vf-dlopen - Install additional video filters to be used with -vf
 media-video/noad:libmpeg2 - Support for libmpeg2 library
 media-video/nvidia-settings:gtk3 - Additionally build the GTK 3 library
 media-video/nvidia_video_sdk:tools - Build and install example tools.
+media-video/obs-studio:fdk - Enable libfdk support for AAC encoding.
+media-video/obs-studio:imagemagick - Use ImageMagick for image loading instead of FFmpeg.
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/parole:clutter - Compile in Clutter GTK+ support
@@ -5080,6 +5091,9 @@ net-analyzer/net-snmp:pci - Use libpci (from sys-apps/pciutils) to look up netwo
 net-analyzer/net-snmp:rpm - Enable monitoring of app-arch/rpm. This flag requires the bzip2 and zlib flags to be enabled as well.
 net-analyzer/net-snmp:smux - Enable support for the legacy smux protocol (superseded by agentx)
 net-analyzer/net-snmp:ucd-compat - Build UCD compatibility library. Increases significantly the install size.
+net-analyzer/netdata:compression - Enable compression via zlib
+net-analyzer/netdata:nfacct - Enable the nfacct plugin
+net-analyzer/netdata:nodejs - Enable use of nodejs (which some plugins use)
 net-analyzer/netperf:demo - Emit interim results during the run. May affect results
 net-analyzer/netperf:sctp - Include tests to measure SCTP performance
 net-analyzer/nfdump:compat15 - Enable read support for nfdump data files created with nfdump 1.5.x
@@ -5745,6 +5759,7 @@ net-libs/libproxy:gnome - Enable support for reading proxy settings from GNOME
 net-libs/libproxy:kde - Enable support for reading proxy settings from KDE
 net-libs/libproxy:spidermonkey - Use libmozjs from dev-lang/spidermonkey for PAC parsing
 net-libs/libproxy:webkit - Use libjavascriptcoregtk from net-libs/webkit-gtk for PAC parsing
+net-libs/libsoup:gssapi - Enable GSSAPI support
 net-libs/libsoup:samba - Use net-fs/samba for NTLM Single Sign-On
 net-libs/libsrtp:aesicm - Use AES ICM cryptographic algorithm
 net-libs/libsrtp:console - Use /dev/console instead of stdout for error messages
@@ -5858,7 +5873,6 @@ net-libs/webkit-gtk:coverage - Enable code coverage support
 net-libs/webkit-gtk:egl - Enable EGL support.
 net-libs/webkit-gtk:geoloc - Enable geolocation support through app-misc/geoclue
 net-libs/webkit-gtk:gles2 - Enable GLESv2 support.
-net-libs/webkit-gtk:libsecret - Enable libsecret support to store login credentials
 net-libs/webkit-gtk:webgl - Build support for the WebGL HTML API using virtual/opengl
 net-libs/wt:extjs - Build Wt Ext library with JavaScript-only widgets (http://extjs.com/)
 net-libs/wt:fcgi - Compile in FCGI connector
@@ -5915,6 +5929,7 @@ net-mail/notmuch:doc - Install API documentation for enabled bindings
 net-mail/notmuch:emacs - Install Emacs UI (the main one)
 net-mail/notmuch:mutt - Install helper script for Mutt
 net-mail/notmuch:nmbug - Install experimental tag sharing / pseudo-bug-tracking script for Notmuch (see http://notmuchmail.org/nmbug/)
+net-mail/notmuch:valgrind - Depend on dev-util/vagrind for test suite
 net-mail/offlineimap:sqlite - Enable runtime support for sqlite mail status backend.
 net-mail/postfix-logwatch:logwatch - Install filters for use with sys-apps/logwatch.
 net-mail/qmailadmin:maildrop - Filter spam using maildrop

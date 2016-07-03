@@ -8,5 +8,5 @@ LICENSE=GPL-2 LGPL-2 public-domain
 RDEPEND=media-libs/alsa-lib >=media-libs/libsdl-1.2[X] x11-libs/libX11 x11-libs/libXext x11-libs/libXv x11-libs/libXxf86misc
 SLOT=0
 SRC_URI=http://schismtracker.org/dl/schismtracker-20120105.tar.bz2
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
 _md5_=5802707b734e9027bdab78039926cb02

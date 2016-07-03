@@ -13,15 +13,13 @@ SRC_URI="https://github.com/processone/${PN}/archive/${PV}.tar.gz
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sparc ~x86"
 IUSE="test"
 
 RDEPEND=">=dev-erlang/p1_utils-1.0.0
 	>=dev-lang/erlang-17.1
 	dev-libs/expat"
-DEPEND="${RDEPEND}"
-	# FIXME: test? ( >=dev-lang/elixir-1.1 ) needs ~arm and ~ppc keywords
-
-RESTRICT="test"  # FIXME: Restore test when elixir gets ~arm and ~ppc keywords.
+DEPEND="${RDEPEND}
+	test? ( >=dev-lang/elixir-1.1 )"
 
 DOCS=( CHANGELOG.md  README.md )

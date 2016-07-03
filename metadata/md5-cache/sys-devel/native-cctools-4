@@ -7,5 +7,5 @@ KEYWORDS=~ppc-aix ~x86-interix ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x8
 LICENSE=GPL-2
 RDEPEND=sys-devel/binutils-config
 SLOT=0
-_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	e886935aae2b45a545665444ab0667cf
+_eclasses_=eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
 _md5_=77f6e9407138b45bdfe384474f529017
