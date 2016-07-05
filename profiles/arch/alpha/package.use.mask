@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-# Alexandre Rostovtsev <tetromino@gentoo.org> (28 Jun 2016)
-# Missing keywords on app-text/gspell - bug #587368
->=app-editors/gedit-3.20 spell
+# Tobias Klausmann <klausman@gentoo.org> (04 Jul 2016)
+# Mask USE=test since it implies USE=valgrind
+net-mail/notmuch test
 
 # Tobias Klausmann <klausman@gentoo.org> (14 Jun 2016)
 # asciidoctor pulls in a lot of Ruby deps

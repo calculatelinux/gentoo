@@ -41,6 +41,7 @@ PATCHES=(
 	"${FILESDIR}"/${PV}/${P}-no-git.patch
 	"${FILESDIR}"/2.0/${PN}-2.0-automagic-libbsd.patch
 	"${FILESDIR}"/2.0/${PN}-2.0-sysroot.patch
+	"${FILESDIR}"/${PV}/${P}-aarch64.patch
 )
 
 criu_arch() {
