@@ -30,6 +30,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (8 Jul 2016)
+# No development since 2012, upstream repository removed in Jan 2016.
+# No longer builds. Removal in 30 days, #582448.
+dev-util/rootstrap
+
+# Michał Górny <mgorny@gentoo.org> (8 Jul 2016)
+# Deprecated upstream. Replaced by dev-python/chardet.
+# Removal in 30 days, #548866.
+dev-python/charade
+
 # Alexey Korepanov <kaikaikai@yandex.ru> (5 Jul 2016)
 # net-p2p/syncthing-relaysrv has been merged into net-p2p/syncthing
 # both upstream and in Gentoo.
@@ -273,11 +283,6 @@ dev-util/filepp
 dev-util/kdoc
 dev-util/skelgen
 dev-util/ftncheck
-
-# Aaron Bauman <bman@gentoo.org> (5 Jun 2016)
-# Unpatched security vulnerability and dead upstream
-# per bug #500970.  Removal in 30 days
-sys-apps/9base
 
 # Hans de Graaff <graaff@gentoo.org> (4 Jun 2016)
 # Name-versioned dependency that was not used in any
