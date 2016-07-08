@@ -15,7 +15,7 @@ HOMEPAGE="https://www.kde.org/applications/internet/kmail/"
 COMMIT_ID="2aec255c6465676404e4694405c153e485e477d9"
 SRC_URI="https://quickgit.kde.org/?p=kdepim.git&a=snapshot&h=${COMMIT_ID}&fmt=tgz -> ${KMNAME}-${PV}.tar.gz"
 
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
@@ -76,13 +76,6 @@ KMEXTRA="
 "
 
 KMLOADLIBS="kdepim-common-libs"
-
-src_configure() {
-	# Bug 308903
-	use ppc64 && append-flags -mminimal-toc
-
-	kde4-meta_src_configure
-}
 
 src_compile() {
 	kde4-meta_src_compile kmail_xml

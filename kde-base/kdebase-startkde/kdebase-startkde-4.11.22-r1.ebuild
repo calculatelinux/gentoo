@@ -9,14 +9,13 @@ KMNOMODULE="true"
 inherit kde4-meta prefix
 
 DESCRIPTION="Startkde script, which starts a complete KDE session, and associated scripts"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="+wallpapers"
 
 # The KDE apps called from the startkde script.
 # These provide the most minimal KDE desktop.
 RDEPEND="
 	$(add_kdebase_dep kcminit)
-	$(add_kdeapps_dep kdebase-runtime-meta)
 	$(add_kdeapps_dep kfmclient)
 	$(add_kdeapps_dep knotify)
 	$(add_kdeapps_dep kreadconfig)
@@ -29,6 +28,7 @@ RDEPEND="
 	$(add_kdeapps_dep plasma-apps)
 	$(add_kdebase_dep plasma-workspace)
 	$(add_kdebase_dep systemsettings)
+	kde-apps/kdebase-runtime-meta:5
 	x11-apps/mkfontdir
 	x11-apps/xmessage
 	x11-apps/xprop

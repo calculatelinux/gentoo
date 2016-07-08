@@ -11,7 +11,7 @@ inherit flag-o-matic kde4-meta
 
 DESCRIPTION="Email component of Kontact (noakonadi branch)"
 HOMEPAGE="https://launchpad.net/~pali/+archive/ubuntu/kdepim-noakonadi"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
@@ -47,9 +47,6 @@ PATCHES=(
 )
 
 src_configure() {
-	# Bug 308903
-	use ppc64 && append-flags -mminimal-toc
-
 	mycmakeargs=(
 		-DWITH_IndicateQt=OFF
 	)
