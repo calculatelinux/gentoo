@@ -15,16 +15,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sparc ~x86"
 IUSE="test"
 
-CDEPEND=">=dev-lang/erlang-17.1"
+CDEPEND=">=dev-lang/erlang-17.1
+	<dev-lang/erlang-19"
 DEPEND="${CDEPEND}
 	test? ( >=dev-erlang/proper-1.1 )"
 RDEPEND="${CDEPEND}"
 
 DOCS=( NOTES  README.markdown TODO.md )
-
-# FIXME: Fails, reported upstream:
-# FIXME: https://github.com/hyperthunk/hamcrest-erlang/issues/21
-RESTRICT="test"
+PATCHES=( "${FILESDIR}"/${PV}-0001-Fix-unittests.patch )
 
 # Override with EAPI default because it's missing hamcrest.app.src and doesn't
 # have any deps.
