@@ -43,6 +43,11 @@ src_prepare() {
 		configure || die
 }
 
+src_configure() {
+	# econf (sometimes) fails, see https://bugs.gentoo.org/588544
+	bash ./configure || die
+}
+
 src_install() {
 	dobin ${PN}
 	insinto /usr/share/${PN}

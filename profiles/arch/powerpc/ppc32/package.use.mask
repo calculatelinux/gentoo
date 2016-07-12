@@ -9,11 +9,6 @@
 >=app-editors/gedit-3.20 spell
 
 # Davide Pesavento <pesa@gentoo.org> (06 Jun 2016)
-# Requires media-libs/phonon[qt5], masked below
-app-office/texstudio qt5
-media-libs/phonon-vlc qt5
-
-# Davide Pesavento <pesa@gentoo.org> (06 Jun 2016)
 # Requires unkeyworded dev-qt/qtmultimedia:5
 media-plugins/audacious-plugins qt5
 net-analyzer/wireshark qt5
@@ -27,19 +22,7 @@ app-office/texmaker qt5
 app-text/kchmviewer qt5
 dev-qt/designer webkit
 net-irc/quassel webkit
-
-# Davide Pesavento <pesa@gentoo.org> (06 Jun 2016)
-# Requires unkeyworded dev-qt/qtx11extras:5 (bug 584860)
-app-office/lyx qt5
-media-libs/phonon-gstreamer qt5
-media-sound/qsynth qt5
-media-video/vlc qt5
-x11-themes/qtcurve qt5
-
-# Davide Pesavento <pesa@gentoo.org> (06 Jun 2016)
-# Requires unkeyworded kde-frameworks/extra-cmake-modules (bug 584874)
-media-libs/phonon qt5
-net-irc/quassel qt5
+kde-plasma/libksysguard detailedmemory
 
 # Ian Delaney <idella4@gentoo.org> (06 Apr 2016)
 # on behalf of Ilya Tumaykin <itumaykin+gentoo@gmail.com>
@@ -114,10 +97,6 @@ gnome-extra/zeitgeist-datasources -tomboy
 # masking libvirt for cfengine (bug #412253)
 net-misc/cfengine libvirt
 
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 Nov 2010)
-# sys-devel/llvm is keyworded on ppc
-#media-libs/mesa -llvm
-
 # Maciej Mrozowski <reavertm@gentoo.org> (26 Jun 2010)
 # Needs media-libs/simage keyworded, bug 325623
 media-libs/coin simage
@@ -125,3 +104,8 @@ media-libs/coin simage
 #nixnut <nixnut@gentoo.org> (24 jan 2009)
 #don't want zemberek for enchant for ppc32
 app-text/enchant zemberek
+
+# Chí-Thanh Christopher Nguyễn (11 Jul 2016)
+# Requires unkeyworded kde-frameworks packages
+net-irc/quassel qt5
+

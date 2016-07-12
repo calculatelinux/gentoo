@@ -589,6 +589,7 @@ app-emulation/ganeti:lxc - Enable Linux Countainers support
 app-emulation/ganeti:monitoring - Enable the ganeti monitoring daemon
 app-emulation/ganeti:multiple-users - Enable support for running VMs as different users
 app-emulation/ganeti:rbd - Enable rados block device support via sys-cluster/ceph
+app-emulation/ganeti:restricted-commands - Enable restricted commands in the node daemon
 app-emulation/ganeti:xen - Enable Xen support
 app-emulation/libguestfs:erlang - Build Erlang bindings
 app-emulation/libguestfs:fuse - Enable image mount support via fuse
@@ -2272,6 +2273,7 @@ dev-php/pecl-memcached:json - Enable support for json serialization
 dev-php/pecl-mysqlnd_qc:memcached - Use dev-libs/libmemcached as a storage handler
 dev-php/pecl-mysqlnd_qc:sqlite - Use dev-db/sqlite as a storage handler
 dev-php/pecl-redis:igbinary - Enables igbinary serialisation support
+dev-php/xcache:coverage - Enable the coverager module (not recommended for production servers).
 dev-python/Kivy:camera - Install libraries needed to support camera
 dev-python/Kivy:garden - Install garden tool to manage user maintained widgets
 dev-python/PyFoam:extras - Enable optional dependencies
@@ -4875,6 +4877,7 @@ media-video/smplayer:autoshutdown - Enable the option to shutdown your computer 
 media-video/smplayer:mpris - Enable support for MPRIS2 (Media Player Remote Interfacing Specification, version 2), a DBus interface for remote control, which requires dev-qt/qtdbus as dependency.
 media-video/smplayer:streaming - Support for streaming video sites through net-misc/youtube-dl (MPV only).
 media-video/smtube:qt5 - Build using Qt 5 instead of Qt 4
+media-video/subtitlecomposer:mpv - Build mpv backend support
 media-video/totem:lirc - Enable support for controlling Totem with a remote control using app-misc/lirc
 media-video/totem:nautilus - Enable the nautilus extension
 media-video/totem:python - Build support for dev-lang/python plugins
@@ -8157,7 +8160,6 @@ www-servers/uwsgi:yajl - Use dev-libs/yajl instead of dev-libs/jansson for parsi
 www-servers/uwsgi:yaml - Support yaml as a configuration file format.
 www-servers/uwsgi:zeromq - Enable logging and deployment via ZeroMQ.
 www-servers/varnish:jemalloc - Use dev-libs/jemalloc for allocations
-www-servers/varnish:tools - Build additional tools: varnishhist, varnishstat, varnishtop, varnishsizes
 www-servers/xsp:developer - creates .mdb files for either Release and Debug
 www-servers/xsp:net35 - use .NET 3.5 Framework
 www-servers/xsp:net40 - use .NET 4.0 Framework
