@@ -359,6 +359,7 @@ app-backup/bareos:sql-pooling - Enable SQL pooling support
 app-backup/bareos:storage-daemon - Install storage daemon (bareos-sd)
 app-backup/borgbackup:fuse - Mount archive as a FUSE filesystem.
 app-backup/boxbackup:client-only - Disable server support, and just build a client
+app-backup/btrbk:pv - Use sys-apps/pv to enable progress bar functionality
 app-backup/dar:dar32 - Enables --enable-mode=32 option, which replace infinite by 32 bit integers
 app-backup/dar:dar64 - Enables --enable-mode=64 option, which replace infinite by 64 bit integers
 app-backup/dar:gcrypt - Enables strong encryption support
@@ -3293,6 +3294,7 @@ kde-apps/kig:scripting - Support Python scripting
 kde-apps/kio-extras:phonon - Enable file audio preview plugin using media-libs/phonon
 kde-apps/kio-extras:sftp - Enable SFTP protocol support using net-libs/libssh
 kde-apps/konqueror:bookmarks - Add dependency on bookmark package.
+kde-apps/konqueror:filemanager - Install the dolphin kpart for use as a file manager.
 kde-apps/kopete:addbookmarks - Automatically add incoming urls to bookmarks.
 kde-apps/kopete:autoreplace - Automatically replace selected text
 kde-apps/kopete:contactnotes - Enables writing personal notes for contacts.
