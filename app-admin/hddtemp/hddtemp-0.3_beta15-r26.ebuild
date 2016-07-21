@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=4
+EAPI=5
 
-inherit eutils autotools systemd
+inherit eutils autotools readme.gentoo-r1 systemd
 
 MY_P=${P/_beta/-beta}
 DBV=20080531
@@ -25,13 +25,31 @@ S="${WORKDIR}/${MY_P}"
 
 DOCS=(README TODO ChangeLog)
 
+DISABLE_AUTOFORMATTING="yes"
+DOC_CONTENTS="In order to update your hddtemp database, run:
+emerge --config =${CATEGORY}/${PF} or update-hddtemp.db (if USE
+network-cron is enabled)
+
+If your hard drive is not recognized by hddtemp, please consider
+submitting your HDD info for inclusion into the Gentoo hddtemp
+database by filing a bug at https://bugs.gentoo.org/
+
+If hddtemp complains but finds your HDD temperature sensor, use the
+--quiet option to suppress the warning.
+"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-satacmds.patch
+	"${FILESDIR}"/${P}-byteswap.patch
+	"${FILESDIR}"/${P}-execinfo.patch
+	"${FILESDIR}"/${P}-nls.patch
+	"${FILESDIR}"/${P}-iconv.patch
+	"${FILESDIR}"/${P}-dontwake.patch
+)
+
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-satacmds.patch
-	epatch "${FILESDIR}"/${P}-byteswap.patch
-	epatch "${FILESDIR}"/${P}-execinfo.patch
-	epatch "${FILESDIR}"/${P}-nls.patch
-	epatch "${FILESDIR}"/${P}-iconv.patch
-	epatch "${FILESDIR}"/${P}-dontwake.patch
+	epatch "${PATCHES[@]}"
+	mv "${S}"/configure.{in,ac} || die
 	AT_M4DIR="m4" eautoreconf
 }
 
@@ -57,9 +75,10 @@ src_install() {
 	systemd_newunit "${FILESDIR}"/hddtemp.service-r1 "${PN}.service"
 	systemd_install_serviced "${FILESDIR}"/hddtemp.service.conf
 
-	dosbin "${FILESDIR}"/update-hddtemp.db
+	readme.gentoo_create_doc
 
-	if use network-cron ; then
+	if use network-cron; then
+		dosbin "${FILESDIR}"/update-hddtemp.db
 		exeinto /etc/cron.monthly
 		echo -e "#!/bin/sh\n/usr/sbin/update-hddtemp.db" > "${T}"/hddtemp.cron
 		newexe "${T}"/hddtemp.cron update-hddtemp.db
@@ -67,15 +86,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "In order to update your hddtemp database, run:"
-	elog "  update-hddtemp.db"
-	elog ""
-	elog "If your hard drive is not recognized by hddtemp, please consider"
-	elog "submitting your HDD info for inclusion into the Gentoo hddtemp"
-	elog "database by filing a bug at https://bugs.gentoo.org/"
-	echo
-	ewarn "If hddtemp complains but finds your HDD temperature sensor, use the"
-	ewarn "--quiet option to suppress the warning."
+	readme.gentoo_print_elog
 }
 
 update_db() {
@@ -91,4 +102,14 @@ update_db() {
 
 		grep "${id}" "${dst}" 2>&1 >/dev/null || echo "${line}" >> "${dst}"
 	done < "${src}"
+}
+
+pkg_config() {
+	cd "${ROOT}"/usr/share/hddtemp || die
+
+	einfo "Trying to download the latest hddtemp.db file"
+	wget http://www.guzu.net/linux/hddtemp.db -O hddtemp.db \
+		|| die "failed to download hddtemp.db"
+
+	update_db "hddgentoo.db" "hddtemp.db"
 }
