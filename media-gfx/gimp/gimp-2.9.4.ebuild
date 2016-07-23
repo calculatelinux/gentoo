@@ -39,7 +39,7 @@ RDEPEND=">=dev-libs/glib-2.30.2:2
 	dev-libs/libxslt
 	x11-themes/hicolor-icon-theme
 	>=media-libs/babl-0.1.18
-	>=media-libs/gegl-0.3.8:0.3[cairo]
+	>=media-libs/gegl-0.3.8:0.3[cairo,png]
 	>=dev-libs/glib-2.43
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
@@ -117,6 +117,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.9.2-no-deprecation.patch  # bug 395695, comment 9 and 16
 	epatch "${FILESDIR}"/${PN}-2.9.4-gegl-bin.patch
 
+	# Bug 589394
+	rm icons/Symbolic-Inverted/Makefile.in || die
+	epatch "${FILESDIR}"/${PN}-2.9.4-mkdir-makefile.patch
+
 	sed -i -e 's/== "xquartz"/= "xquartz"/' configure.ac || die #494864
 	eautoreconf  # If you remove this: remove dev-util/gtk-doc-am from DEPEND, too
 
@@ -129,6 +133,7 @@ src_compile() {
 	addwrite /dev/dri/  # bug #574038
 	addwrite /proc/mtrr  # bug 589198
 
+	export XDG_DATA_DIRS=/usr/share  # bug 587004
 	gnome2_src_compile
 }
 
