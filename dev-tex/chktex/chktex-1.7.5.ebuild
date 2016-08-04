@@ -23,10 +23,12 @@ RDEPEND="virtual/latex-base
 	pcre? ( dev-libs/libpcre )"
 DEPEND="${RDEPEND}
 	sys-apps/groff
+	dev-texlive/texlive-fontsrecommended
 	doc? ( dev-tex/latex2html )"
 
 PATCHES=( "${FILESDIR}/${PN}-1.7.1-asneeded.patch" )
 DOCS=( NEWS )
+AT_M4DIR="${S}/m4"
 
 src_configure() {
 	export VARTEXFONTS="${T}/fonts" #538672

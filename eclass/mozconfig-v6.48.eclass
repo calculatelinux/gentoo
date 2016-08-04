@@ -15,7 +15,7 @@
 # Some use flags which may be optional in particular mozilla packages can be
 # supported through setting eclass variables.
 #
-# This eclass inherits mozconfig helper functions as defined in mozcoreconf-v4,
+# This eclass inherits mozconfig helper functions as defined in mozcoreconf-v3,
 # and so ebuilds inheriting this eclass do not need to inherit that.
 
 case ${EAPI} in
@@ -83,7 +83,7 @@ inherit flag-o-matic toolchain-funcs mozcoreconf-v4
 # Set the variable to any value if the use flag should exist but not be default-enabled.
 
 # use-flags common among all mozilla ebuilds
-IUSE="${IUSE} dbus debug +jemalloc3 neon pulseaudio selinux startup-notification system-cairo
+IUSE="${IUSE} dbus debug +jemalloc3 neon pulseaudio selinux +skia startup-notification system-cairo
 	system-harfbuzz system-icu system-jpeg system-libevent system-sqlite system-libvpx"
 
 # some notes on deps:
@@ -124,7 +124,7 @@ RDEPEND=">=app-text/hunspell-1.2
 	system-libevent? ( =dev-libs/libevent-2.0*:0= )
 	system-sqlite? ( >=dev-db/sqlite-3.11.0:3[secure-delete,debug=] )
 	system-libvpx? ( >=media-libs/libvpx-1.5.0:0=[postproc] )
-	system-harfbuzz? ( >=media-libs/harfbuzz-1.2.2:0=[graphite,icu] >=media-gfx/graphite2-1.3.8 )
+	system-harfbuzz? ( >=media-libs/harfbuzz-1.2.6:0=[graphite,icu] >=media-gfx/graphite2-1.3.8 )
 "
 
 if [[ -n ${MOZCONFIG_OPTIONAL_GTK3} ]]; then
@@ -187,6 +187,7 @@ fi
 DEPEND="app-arch/zip
 	app-arch/unzip
 	>=sys-devel/binutils-2.16.1
+	sys-apps/findutils
 	${RDEPEND}"
 
 RDEPEND+="
@@ -222,24 +223,9 @@ REQUIRED_USE="
 # }
 
 mozconfig_config() {
-	# Migrated from mozcoreconf-v3
-	mozconfig_annotate 'more disable_update_strip' \
-		--disable-pedantic \
-		--disable-installer \
-		--disable-strip-libs
-
-	if [[ ${PN} != seamonkey ]]; then
-		mozconfig_annotate 'basic_profile' \
-			--disable-profilelocking \
-			--enable-single-profile \
-			--disable-profilesharing
-	fi
-
 	# Migrated from mozcoreconf-2
 	mozconfig_annotate 'system_libs' \
 		--with-system-zlib \
-		--enable-pango \
-		--enable-svg \
 		--with-system-bz2
 
 	if has bindist ${IUSE}; then
@@ -274,10 +260,6 @@ mozconfig_config() {
 		mozconfig_annotate 'disabled' --disable-necko-wifi
 	fi
 
-	# These are forced-on for webm support
-	mozconfig_annotate 'required' --enable-ogg
-	mozconfig_annotate 'required' --enable-wave
-
 	if [[ -n ${MOZCONFIG_OPTIONAL_JIT} ]]; then
 		mozconfig_use_enable jit ion
 	fi
@@ -298,7 +280,7 @@ mozconfig_config() {
 	mozconfig_annotate 'Gentoo default' --with-system-png
 	mozconfig_annotate '' --enable-system-ffi
 	mozconfig_annotate 'Gentoo default to honor system linker' --disable-gold
-	mozconfig_annotate 'Gentoo default' --disable-skia
+	mozconfig_use_enable skia
 	mozconfig_annotate '' --disable-gconf
 	mozconfig_annotate '' --with-intl-api
 
@@ -417,6 +399,14 @@ mozconfig_install_prefs() {
 	# force the graphite pref if system-harfbuzz is enabled, since the pref cant disable it
 	if use system-harfbuzz ; then
 		echo "sticky_pref(\"gfx.font_rendering.graphite.enabled\",true);" \
+			>>"${prefs_file}" || die
+	fi
+
+	# force cairo as the canvas renderer if USE=skia is disabled
+	if ! use skia ; then
+		echo "lockPref(\"gfx.canvas.azure.backends\",\"cairo\");" \
+			>>"${prefs_file}" || die
+		echo "lockPref(\"gfx.content.azure.backends\",\"cairo\");" \
 			>>"${prefs_file}" || die
 	fi
 }
