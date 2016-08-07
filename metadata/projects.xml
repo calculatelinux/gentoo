@@ -37,19 +37,9 @@
       <name>Agostino Sarubbo</name>
       <role>Developer</role>
     </member>
-    <member is-lead="1">
-      <email>angelos@gentoo.org</email>
-      <name>Christoph Mende</name>
-      <role>Strategic Lead</role>
-    </member>
     <member>
       <email>chainsaw@gentoo.org</email>
       <name>Tony Vroon</name>
-      <role>Developer</role>
-    </member>
-    <member>
-      <email>hparker@gentoo.org</email>
-      <name>Homer Parker</name>
       <role>Developer</role>
     </member>
     <member>
@@ -148,11 +138,6 @@
       <email>leio@gentoo.org</email>
       <name>Mart Raudsepp</name>
       <role>Member ( GNOME Team Lead )</role>
-    </member>
-    <member>
-      <email>neurogeek@gentoo.org</email>
-      <name>Jesus Rivero</name>
-      <role>Member ( ebuild maintainer )</role>
     </member>
     <member>
       <email>teiresias@gentoo.org</email>
@@ -343,11 +328,6 @@
       <name>Robin Johnson</name>
       <role>Specialized block devices and lots of other miscellaneous stuff</role>
     </member>
-    <member>
-      <email>ssuominen@gentoo.org</email>
-      <name>Samuli Suominen</name>
-      <role>Misc stuff that needs to get done</role>
-    </member>
     <member is-lead="1">
       <email>vapier@gentoo.org</email>
       <name>Mike Frysinger</name>
@@ -420,11 +400,6 @@
     <member>
       <email>polynomial-c@gentoo.org</email>
       <name>Lars Wendler</name>
-      <role>Developer</role>
-    </member>
-    <member>
-      <email>ssuominen@gentoo.org</email>
-      <name>Samuli Suominen</name>
       <role>Developer</role>
     </member>
   </project>
@@ -828,10 +803,6 @@
       <name>Jeroen Roovers</name>
     </member>
     <member>
-      <email>ssuominen@gentoo.org</email>
-      <name>Samuli Suominen</name>
-    </member>
-    <member>
       <email>xarthisius@gentoo.org</email>
       <name>Kacper Kowalik</name>
     </member>
@@ -888,11 +859,6 @@
       <role>Editor</role>
     </member>
     <member>
-      <email>josejx@gentoo.org</email>
-      <name>Joseph Jezak</name>
-      <role>PPC Editor</role>
-    </member>
-    <member>
       <email>maffblaster@gentoo.org</email>
       <name>Matthew Marchese</name>
       <role>Author, Editor</role>
@@ -913,11 +879,6 @@
     <name>Gentoo Dotnet Project</name>
     <url>https://wiki.gentoo.org/wiki/Project:Dotnet</url>
     <description>The Dotnet Project handles the development using the C# language. More specifically, it is often oriented with the mono development environment.</description>
-    <member>
-      <email>angelos@gentoo.org</email>
-      <name>Christoph Mende</name>
-      <role>Member</role>
-    </member>
     <member>
       <email>cynede@gentoo.org</email>
       <name>Mikhail Pukhlikov</name>
@@ -1074,11 +1035,6 @@
     <name>Project Enlightenment</name>
     <url>https://wiki.gentoo.org/wiki/Project:Enlightenment</url>
     <description>Project Enlightenment maintains efl packages including e17</description>
-    <member>
-      <email>pva@gentoo.org</email>
-      <name>Peter</name>
-      <role>Member</role>
-    </member>
     <member is-lead="1">
       <email>tommy@gentoo.org</email>
       <name>Thomas Sachau</name>
@@ -1095,11 +1051,6 @@
     <name>eselect configuration and management tool</name>
     <url>https://wiki.gentoo.org/wiki/Project:Eselect</url>
     <description>eselect is Gentoo's modular framework for configuration and administration utilities.</description>
-    <member>
-      <email>dberkholz@gentoo.org</email>
-      <name>Donnie Berkholz</name>
-      <role>Member (skel library)</role>
-    </member>
     <member is-lead="1">
       <email>ulm@gentoo.org</email>
       <name>Ulrich Müller</name>
@@ -1502,10 +1453,6 @@
       <name>Tim Harder</name>
     </member>
     <member>
-      <email>ssuominen@gentoo.org</email>
-      <name>Samuli Suominen</name>
-    </member>
-    <member>
       <email>vapier@gentoo.org</email>
       <name>Mike Frysinger</name>
     </member>
@@ -1679,11 +1626,6 @@
       <email>a3li@gentoo.org</email>
       <name>Alex Legler</name>
       <role>General System Administration, Wiki, Security</role>
-    </member>
-    <member>
-      <email>darkside@gentoo.org</email>
-      <name>Jeremy Olexa</name>
-      <role>Mirrors, Web applications</role>
     </member>
     <member>
       <email>dastergon@gentoo.org</email>
@@ -1860,11 +1802,6 @@
       <email>blueness@gentoo.org</email>
       <name>Anthony G. Basile</name>
       <role>Member (Kernel, gentoo-sources, hardened-sources, genpatches)</role>
-    </member>
-    <member>
-      <email>caster@gentoo.org</email>
-      <name>Vlastimil Babka</name>
-      <role>Member (Kernel)</role>
     </member>
     <member>
       <email>chainsaw@gentoo.org</email>
@@ -2552,10 +2489,6 @@
       <name>Brian Evans</name>
     </member>
     <member>
-      <email>mabi@gentoo.org</email>
-      <name>Matti</name>
-    </member>
-    <member>
       <email>mjo@gentoo.org</email>
       <name>Michael Orlitzky</name>
     </member>
@@ -2825,10 +2758,6 @@
       <name>Jack Morgan</name>
     </member>
     <member>
-      <email>josejx@gentoo.org</email>
-      <name>Joseph Jezak</name>
-    </member>
-    <member>
       <email>pacho@gentoo.org</email>
       <name>Pacho Ramos</name>
       <role>ppc/ppc64 keywording/stabilization</role>
@@ -2847,11 +2776,6 @@
     <member>
       <email>amadio@gentoo.org</email>
       <name>Guilherme Amadio</name>
-      <role>Developer</role>
-    </member>
-    <member>
-      <email>darkside@gentoo.org</email>
-      <name>Jeremy Olexa</name>
       <role>Developer</role>
     </member>
     <member is-lead="1">
@@ -3048,10 +2972,6 @@
       <email>dastergon@gentoo.org</email>
       <name>Pavlos Ratis</name>
       <role>GMN, Facebook</role>
-    </member>
-    <member is-lead="1">
-      <email>dberkholz@gentoo.org</email>
-      <name>Donnie Berkholz</name>
     </member>
     <member>
       <email>dilfridge@gentoo.org</email>
@@ -3845,10 +3765,6 @@
     <url>https://wiki.gentoo.org/wiki/Project:Shell_Tools</url>
     <description>Maintains miscellaneous tools used from within a shell environment.</description>
     <member>
-      <email>darkside@gentoo.org</email>
-      <name>Jeremy Olexa</name>
-    </member>
-    <member>
       <email>heroxbd@gentoo.org</email>
       <name>Benda Xu</name>
     </member>
@@ -3875,11 +3791,6 @@
       <name>Alexis Ballier</name>
       <role>Member ( misc )</role>
     </member>
-    <member>
-      <email>angelos@gentoo.org</email>
-      <name>Christoph Mende</name>
-      <role>Member ( misc )</role>
-    </member>
     <member is-lead="1">
       <email>chainsaw@gentoo.org</email>
       <name>Tony Vroon</name>
@@ -3898,11 +3809,6 @@
     <member>
       <email>soap@gentoo.org</email>
       <name>David Seifert</name>
-      <role>Member ( misc )</role>
-    </member>
-    <member>
-      <email>ssuominen@gentoo.org</email>
-      <name>Samuli Suominen</name>
       <role>Member ( misc )</role>
     </member>
     <member>
@@ -4117,11 +4023,6 @@
       <name>Pacho Ramos</name>
       <role>Member</role>
     </member>
-    <member>
-      <email>ssuominen@gentoo.org</email>
-      <name>Samuli Suominen</name>
-      <role>Member</role>
-    </member>
   </project>
   <project>
     <email>udev-bugs@gentoo.org</email>
@@ -4143,10 +4044,6 @@
     <member>
       <email>robbat2@gentoo.org</email>
       <name>Robin Johnson</name>
-    </member>
-    <member>
-      <email>ssuominen@gentoo.org</email>
-      <name>Samuli Suominen</name>
     </member>
     <member>
       <email>williamh@gentoo.org</email>
@@ -4226,11 +4123,6 @@
       <email>lu_zero@gentoo.org</email>
       <name>Luca Barbato</name>
       <role>Lead ( Gentoo/PPC work, mplayer, ffmpeg )</role>
-    </member>
-    <member>
-      <email>ssuominen@gentoo.org</email>
-      <name>Samuli Suominen</name>
-      <role>Member ( misc )</role>
     </member>
   </project>
   <project>
@@ -4426,10 +4318,6 @@
       <name>Chí-Thanh Christopher Nguyễn</name>
     </member>
     <member>
-      <email>dberkholz@gentoo.org</email>
-      <name>Donnie Berkholz</name>
-    </member>
-    <member>
       <email>leio@gentoo.org</email>
       <name>Mart Raudsepp</name>
     </member>
@@ -4520,11 +4408,6 @@
     <name>Gentoo Xfce Project</name>
     <url>https://wiki.gentoo.org/wiki/Project:Xfce</url>
     <description>The Gentoo Xfce Project aims to bring the current and complete Xfce desktop environment to Gentoo.</description>
-    <member is-lead="1">
-      <email>angelos@gentoo.org</email>
-      <name>Christoph Mende</name>
-      <role>Lead</role>
-    </member>
     <member>
       <email>chutzpah@gentoo.org</email>
       <name>Patrick McLean</name>

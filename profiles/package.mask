@@ -30,6 +30,24 @@
 
 #--- END OF EXAMPLES ---
 
+# NP-Hardass <NP-Hardass@gentoo.org> (6 Aug 2016)
+# Masked for removal in 14 days.
+# Upstream migrated from mate-calc to gnome's 
+# calculator (gnome-extra/gnome-calculator)
+mate-extra/mate-calc
+
+# NP-Hardass <NP-Hardass@gentoo.org> (6 Aug 2016)
+# Masked for removal in 14 days.
+# Upstream migrated from mate-dialogs to gnome's 
+# zenity (gnome-extra/zenity)
+mate-extra/mate-dialogs
+
+# NP-Hardass <NP-Hardass@gentoo.org> (6 Aug 2016)
+# Masked for removal in 14 days.
+# Upstream dropped support for this package, in part due
+# to gnome dropping support for gnome-system-tools.
+app-admin/mate-system-tools
+
 # Johannes Huber <johu@gentoo.org> (4 Aug 2016)
 # Masked for removal in 30 days. Dead upstream. Last release
 # 7 years ago. No reverse dependencies. Use kde-apps/ffmpegthumbs
@@ -103,10 +121,6 @@ dev-java/oscache
 # other bugs are being accumulated without any fix/attention. Removal in a
 # month if nobody comes with the fixes.
 www-client/midori
-
-# Pacho Ramos <pacho@gentoo.org> (31 Jul 2016)
-# Non working ebuild, bug #588394
-=media-video/pitivi-0.96
 
 # Johannes Huber <johu@gentoo.org> (29 Jul 2016)
 # Masked for removal in 30 days. Dead by upstream, superseded by
@@ -188,32 +202,6 @@ dev-perl/cache-mmap
 # Andrew Savchenko <bircoph@gentoo.org> (09 Jul 2016)
 # Vulnerable due to wrong suid binary permissions (#345337)
 <app-cdr/xcdroast-0.98_alpha16-r2
-
-# Michael Palimaka <kensington@gentoo.org> (7 Jul 2016)
-# Requires obsolete kde-apps/kate:4. No further upstream development.
-# Masked for removal in 30 days.
-kde-misc/katelatexplugin
-
-# Michael Palimaka <kensington@gentoo.org> (7 Jul 2016)
-# Requires obsolete kde-apps/kmix:4. No further upstream development.
-# Masked for removal in 30 days.
-kde-misc/kosd
-
-# Michael Palimaka <kensington@gentoo.org> (7 Jul 2016)
-# Dead upstream and unsupported. Bug 586276.
-# Masked for removal in 30 days.
-kde-apps/kdebindings-meta
-kde-base/kimono
-kde-base/korundum
-kde-base/krossjava
-kde-base/krossruby
-kde-base/perlkde
-kde-base/perlqt
-kde-base/qtruby
-kde-base/qyoto
-kde-base/smokegen
-kde-base/smokekde
-kde-base/smokeqt
 
 # Michał Górny <mgorny@gentoo.org> (6 Jul 2016)
 # No development since 2012, upstream repository removed in Jan 2016.
@@ -317,10 +305,6 @@ www-client/luakit
 # Alon Bar-Lev <alonbl@gentoo.org> (13 May 2016)
 # Force gnutls-3.4 testing so we can stabilize it.
 >=net-libs/gnutls-3.5.0
-
-# Maciej Mrozowski <reavertm@gentoo.org> (3 May 2016)
-# Mask until >=net-libs/qxmpp-0.8.3 is provided with qt5 support.
-=net-im/kadu-3.0
 
 # Lars Wendler <polynomial-c@gentoo.org> (2 May 2016)
 # Broken reverse deps. At least one header file has been moved around.

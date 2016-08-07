@@ -2110,6 +2110,7 @@ dev-libs/pkcs11-helper:nss - Enable NSS crypto engine
 dev-libs/ppl:lpsol - Build the ppl_lpsol linear programming problem solver
 dev-libs/protobuf:java - Builds the Java implementation. This is not needed for Java support in protoc.
 dev-libs/protobuf:python - Builds the Python implementation. This is not needed for Python support in protoc.
+dev-libs/skyutils:sslv3 - Require OpenSSL to be built with the old SSLv3 protocol enabled.
 dev-libs/starpu:cuda - Enable NVIDIA CUDA toolkit support
 dev-libs/starpu:gcc-plugin - Enable GCC extension plugin (experimental)
 dev-libs/starpu:opencl - Enable OpenCL support
@@ -2862,8 +2863,6 @@ dev-vcs/subversion:ctypes-python - Build and install Ctypes Python bindings
 dev-vcs/subversion:dso - Enable runtime module search
 dev-vcs/subversion:extras - Install extra scripts (examples, tools, hooks)
 dev-vcs/subversion:http - Enable http support using net-libs/serf
-dev-vcs/subversion:webdav-neon - Enable WebDAV support using net-libs/neon
-dev-vcs/subversion:webdav-serf - Enable WebDAV support using net-libs/serf
 games-action/awesomenauts:bundled-libs - Use the upstream provided bundled libraries.
 games-action/beathazardultra:bundled-libs - Use the upstream provided bundled libraries.
 games-action/chromium-bsu:mixer - Enables media-libs/sdl-mixer sound backend instead of media-libs/openal one.
@@ -3361,52 +3360,14 @@ kde-base/kdeplasma-addons:scim - Enable applets that use app-i18n/scim
 kde-base/kdm:consolekit - Enables support for authorization using consolekit
 kde-base/kfilemetadata:epub - Adds support for reading EPUB ebook metadata
 kde-base/kfilemetadata:mobi - Adds support for reading MOBI ebook metadata
-kde-base/kimono:akonadi - Compile bindings for Akonadi
-kde-base/kimono:plasma - Compile bindings for KDE's Plasma
 kde-base/klipper:prison - Enable support for barcodes/QRcodes
-kde-base/korundum:akonadi - Compile bindings for Akonadi
-kde-base/korundum:kate - Compile bindings for KDE Advanced Text Editor
-kde-base/korundum:okular - Compile bindings for kde-apps/okular
 kde-base/kwin:gles - Enable support for GLES.
 kde-base/libplasmaclock:kdepim - KDE PIM integration via kde-apps/kdepimlibs
-kde-base/perlkde:akonadi - Compile bindings for Akonadi
-kde-base/perlkde:attica - Compile bindings for dev-libs/libattica
-kde-base/perlkde:kate - Compile bindings for KDE Advanced Text Editor
-kde-base/perlkde:okular - Compile bindings for kde-apps/okular
-kde-base/perlqt:declarative - Compile bindings for dev-qt/qtdeclarative.
-kde-base/perlqt:multimedia - Compile bindings for dev-qt/qtmultimedia.
-kde-base/perlqt:phonon - Compile bindings for Phonon.
-kde-base/perlqt:qimageblitz - Compile bindings for media-libs/qimageblitz.
-kde-base/perlqt:qscintilla - Compile bindings for x11-libs/qscintilla.
-kde-base/perlqt:qthelp - Compile bindings for QtHelp from dev-qt/qthelp.
-kde-base/perlqt:qwt - Compile bindings for x11-libs/qwt.
-kde-base/perlqt:webkit - Compile bindings for dev-qt/qtwebkit.
 kde-base/plasma-workspace:json - Enable JSON support via dev-libs/qjson
 kde-base/plasma-workspace:kdepim - KDE PIM integration via kde-apps/kdepimlibs
 kde-base/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/libqalculate
 kde-base/powerdevil:pm-utils - Adds support for suspend/resume the system through sys-power/pm-utils
 kde-base/pykde4:akonadi - Compile bindings for Akonadi
-kde-base/qtruby:declarative - Compile bindings for dev-qt/qtdeclarative.
-kde-base/qtruby:phonon - Compile bindings for Phonon.
-kde-base/qtruby:qscintilla - Compile bindings for x11-libs/qscintilla.
-kde-base/qtruby:qwt - Compile bindings for x11-libs/qwt.
-kde-base/qtruby:webkit - Compile bindings for dev-qt/qtwebkit.
-kde-base/qyoto:phonon - Compile bindings for Phonon.
-kde-base/qyoto:qscintilla - Compile bindings for x11-libs/qscintilla.
-kde-base/qyoto:webkit - Compile bindings for dev-qt/qtwebkit.
-kde-base/smokekde:akonadi - Compile bindings for Akonadi
-kde-base/smokekde:attica - Compile bindings for dev-libs/libattica
-kde-base/smokekde:kate - Compile bindings for KDE Advanced Text Editor
-kde-base/smokekde:okular - Compile bindings for kde-apps/okular
-kde-base/smokeqt:declarative - Compile bindings for dev-qt/qtdeclarative.
-kde-base/smokeqt:multimedia - Compile bindings for dev-qt/qtmultimedia.
-kde-base/smokeqt:phonon - Compile bindings for Phonon.
-kde-base/smokeqt:qimageblitz - Compile bindings for media-libs/qimageblitz.
-kde-base/smokeqt:qscintilla - Compile bindings for x11-libs/qscintilla.
-kde-base/smokeqt:qthelp - Compile bindings for QtHelp from dev-qt/qthelp.
-kde-base/smokeqt:qwt - Compile bindings for x11-libs/qwt.
-kde-base/smokeqt:webkit - Compile bindings for dev-qt/qtwebkit.
-kde-base/smokeqt:xmlpatterns - Compile bindings for dev-qt/qtxmlpatterns.
 kde-base/systemsettings:kscreen - Use kde-misc/kscreen for screen management
 kde-frameworks/kconfigwidgets:man - Build and install man pages
 kde-frameworks/kded:man - Build and install man pages
@@ -3700,7 +3661,6 @@ mail-mta/qmail-ldap:rfc822 - Add support for RFC822 compliant mail attributes
 mail-mta/qpsmtpd:postfix - create user with permissions for proper postfix interaction
 mail-mta/ssmtp:mta - Install symlinks for sendmail-compatible MTA.
 mate-base/caja:mate - Install x11-themes/mate-icon-theme which is needed when this package is used in the MATE desktop environment.
-mate-base/caja:unique - Enable single instance support using dev-libs/libunique.
 mate-base/mate:base - Install base MATE Desktop applications that are recommended for the most common usage; for example, this installs the file manager. Disable this and other USE flags if you want a more minimal MATE Desktop.
 mate-base/mate:extras - Install additional MATE Desktop applications that are recommended for extended usage of the MATE Desktop as upstream sees it; for example, this installs MATE Desktop's office related applications. Disable this if you plan to use your own non-MATE Desktop alternatives or a custom mixture of MATE and non-MATE packages.
 mate-base/mate:notification - Force notification daemon to default to MATE's notification daemon. Enabled by default. Disable if it causes conflicts with other installed desktop environments.
@@ -3717,7 +3677,6 @@ mate-extra/caja-extensions:open-terminal - Add an extension to support an open t
 mate-extra/caja-extensions:pidgin - Add an extension to support net-im/pidgin
 mate-extra/caja-extensions:share - Add an extension to support sharing files.
 mate-extra/caja-extensions:wallpaper - Add an extension to support setting an image as the current wallpaper
-mate-extra/mate-media:twolame - Bring in twolame gstreamer support
 mate-extra/mate-polkit:accountsservice - Support extraction of data from AccountsService
 mate-extra/mate-polkit:appindicator - Add support for AppIndicator
 mate-extra/mate-power-manager:applet - Enable building of the MATE applet.

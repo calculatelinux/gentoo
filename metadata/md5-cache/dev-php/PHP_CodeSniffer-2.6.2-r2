@@ -1,0 +1,12 @@
+DEFINED_PHASES=install test
+DEPEND=test? ( >=dev-php/phpunit-4 )
+DESCRIPTION=Detect violations of PHP code standards
+EAPI=6
+HOMEPAGE=https://github.com/squizlabs/PHP_CodeSniffer
+IUSE=test
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=dev-lang/php:*[cli,tokenizer,xmlwriter]
+SLOT=0
+SRC_URI=http://download.pear.php.net/package/PHP_CodeSniffer-2.6.2.tgz
+_md5_=10df0f21574f888555a3a75ba06762b0
