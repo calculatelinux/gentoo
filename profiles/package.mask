@@ -30,6 +30,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Pacho Ramos <pacho@gentoo.org> (7 Aug 2016)
+# Upstream dead, depends on old gstreamer, old webkit, many unresolved bug
+# reports... Removal in a month (#581052)
+media-video/miro
+
+# Michał Górny <mgorny@gentoo.org> (7 Aug 2016)
+# Seems to cause major issues wrt Xfce4 session handling.
+# Masked for more restrictive testing.
+=xfce-base/exo-0.11.0
+
 # NP-Hardass <NP-Hardass@gentoo.org> (6 Aug 2016)
 # Masked for removal in 14 days.
 # Upstream migrated from mate-calc to gnome's 
@@ -202,50 +212,6 @@ dev-perl/cache-mmap
 # Andrew Savchenko <bircoph@gentoo.org> (09 Jul 2016)
 # Vulnerable due to wrong suid binary permissions (#345337)
 <app-cdr/xcdroast-0.98_alpha16-r2
-
-# Michał Górny <mgorny@gentoo.org> (6 Jul 2016)
-# No development since 2012, upstream repository removed in Jan 2016.
-# No longer builds. Removal in 30 days, #582448.
-dev-util/rootstrap
-
-# Michał Górny <mgorny@gentoo.org> (6 Jul 2016)
-# Deprecated upstream. Replaced by dev-python/chardet.
-# Removal in 30 days, #548866.
-dev-python/charade
-
-# Alexey Korepanov <kaikaikai@yandex.ru> (5 Jul 2016)
-# net-p2p/syncthing-relaysrv has been merged into net-p2p/syncthing
-# both upstream and in Gentoo.
-# Removal in 30 days.
-net-p2p/syncthing-relaysrv
-
-# Agostino Sarubbo <ago@gentoo.org> (5 Jul 2016)
-# Dead upstream and fails to compile, wrt bug #587766
-# Masked for removal in 30 days.
-app-mobilephone/freesmee
-
-# Hans de Graaff <graaff@gentoo.org> (2 Jul 2016)
-# This slot has unfixed security issues. With dev-ruby/rails:3.2
-# masked there are no reverse dependencies anymore.
-# Removal in 30 days, #568978
-dev-ruby/mail:2.5
-
-# Hans de Graaff <graaff@gentoo.org> (1 Jul 2016)
-# With the release of Rails 5.0 versions older than 4.2 are no longer
-# supported. Mask Rails 3.2 and related packages for removal in 30 days.
-dev-ruby/rails:3.2
-dev-ruby/railties:3.2
-dev-ruby/activerecord:3.2
-dev-ruby/actionmailer:3.2
-dev-ruby/actionpack:3.2
-dev-ruby/activeresource:3.2
-dev-ruby/activemodel:3.2
-dev-ruby/activesupport:3.2
-dev-ruby/coffee-rails:3.2
-dev-ruby/mongoid
-dev-ruby/sass-rails:3.2
-dev-ruby/activeldap:3
-=www-apps/redmine-2.6.10
 
 # Aaron Bauman <bman@gentoo.org> (30 Jun 2016)
 # Unpatched security vulnerability per bug #509920
@@ -614,6 +580,8 @@ dev-ruby/weakling
 
 # Matti Bickel <mabi@gentoo.org> (22 Apr 2014)
 # Masked slotted lua for testing
+# William Hubbs <williamh@gentoo.org> (07 Aug 2016)
+# Taking this mask since Mabi is retired
 app-eselect/eselect-lua
 =dev-lang/lua-5.1.5-r2
 =dev-lang/lua-5.1.5-r100
