@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ppc64 ~x86
 LICENSE=GPL-2 MIT
 SLOT=0/4
 SRC_URI=mirror://sourceforge/perfmon2/libpfm4/libpfm-4.6.0.tar.gz
-_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441
+_eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	6198c04daba0e1307bd844df7d37f423
 _md5_=df93a818415b019826caead33f319f2e
