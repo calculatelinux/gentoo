@@ -31,6 +31,26 @@
 #--- END OF EXAMPLES ---
 
 # Michael Palimaka <kensington@gentoo.org> (10 Aug 2016)
+# Fails to build. Dead upstream.
+# Masked for removal in 30 days. Bug 443812.
+net-misc/quickshare
+
+# Michael Palimaka <kensington@gentoo.org> (10 Aug 2016)
+# Fails to build. Dead upstream.
+# Masked for removal in 30 days. Bug 543154.
+net-im/indicator-messages
+
+# Michael Palimaka <kensington@gentoo.org> (10 Aug 2016)
+# Requires vulnerable version of webkit-gtk. Dead upstream.
+# Masked for removal in 30 days. Bug 584176.
+media-plugins/gmpc-wikipedia
+
+# Michael Palimaka <kensington@gentoo.org> (10 Aug 2016)
+# Interface to an API that has been shut down.
+# Masked for removal in 30 days. Bug 587976.
+dev-python/pyechonest
+
+# Michael Palimaka <kensington@gentoo.org> (10 Aug 2016)
 # Requires insecure SSLv3. Unmaintained. Upstream disappeared.
 # Masked for removal in 30 days. Bug 590732.
 app-mobilephone/smssend
