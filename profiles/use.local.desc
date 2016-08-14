@@ -1156,7 +1156,7 @@ app-text/atril:dvi - Enable build-in DVI viewer
 app-text/atril:epub - Enable build-in DVI viewer using net-libs/webkit-gtk
 app-text/atril:gtk3 - Build with GTK+3 instead of GTK+2
 app-text/atril:t1lib - Enable the Type-1 fonts for the build-in DVI viewer (media-libs/t1lib)
-app-text/atril:xps - Enable XPS viewer using app-text/libxps
+app-text/atril:xps - Enable XPS viewer using app-text/libgxps
 app-text/blogc:git - Build blogc-git-receiver tool
 app-text/blogc:httpd - Build blogc-runserver tool
 app-text/crm114:mew - Add support for using the mewdecode mime decoder (app-emacs/mew)
@@ -2527,10 +2527,13 @@ dev-qt/qt-mobility:versit - Build the QtVersit module
 dev-qt/qt3support:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtbearer:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtbluetooth:qml - Build QML/QtQuick bindings and imports
+dev-qt/qtcharts:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtcore:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtcore:glib - Enable dev-libs/glib eventloop support
 dev-qt/qtcore:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
 dev-qt/qtcore:systemd - Enable native journald logging support
+dev-qt/qtdatavis3d:gles2 - Use GLES 2.0 or later instead of full OpenGL
+dev-qt/qtdatavis3d:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtdbus:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtdeclarative:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtdeclarative:gles2 - Use GLES 2.0 or later instead of full OpenGL
@@ -2585,10 +2588,6 @@ dev-qt/qtphonon:qt3support - Enable the Qt3Support libraries for Qt4. Note that 
 dev-qt/qtpositioning:geoclue - Use enhanced location information from app-misc/geoclue
 dev-qt/qtpositioning:qml - Build QML bindings
 dev-qt/qtprintsupport:gles2 - Use GLES 2.0 or later instead of full OpenGL
-dev-qt/qtquick1:designer - Build plugin for dev-qt/designer
-dev-qt/qtquick1:gles2 - Use GLES 2.0 or later instead of full OpenGL
-dev-qt/qtquick1:webkit - Build the WebView import for QtQuick1 (requires QtWebKit)
-dev-qt/qtquick1:xml - Build the XmlListModel import for QtQuick1 (requires QtXmlPatterns)
 dev-qt/qtquickcontrols:widgets - Enable QtWidgets support
 dev-qt/qtscript:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtscript:scripttools - Build the QtScriptTools module (requires QtWidgets)
@@ -3324,7 +3323,6 @@ kde-apps/krdc:rdesktop - Enable runtime dependency for net-misc/rdesktop
 kde-apps/krdc:telepathy - Enable desktop sharing through a telepathy client
 kde-apps/krfb:ktp - Enable displaying of KDE Telepathy contacts
 kde-apps/krfb:telepathy - Enable desktop sharing through a telepathy client
-kde-apps/ksnapshot:kipi - Support for the KDE Image Plugin Interface.
 kde-apps/kstars:indi - Enable support for Astronomical control library using libindi
 kde-apps/kstars:wcs - Enable support for World Coordinate System library using wcslib
 kde-apps/kstars:xplanet - Enable support for Xplanet
@@ -3707,7 +3705,7 @@ mate-extra/mate-power-manager:gtk3 - Build with GTK+3 instead of GTK+2
 mate-extra/mate-power-manager:man - Build power manager's man page.
 mate-extra/mate-power-manager:pm-utils - Adds support for suspend/resume using sys-power/upower-pm-utils instead of sys-power/upower
 mate-extra/mate-power-manager:unique - Enable single instance support using dev-libs/libunique.
-mate-extra/mate-screensaver:consolekit - Enable support for sys-auth/consolkekit
+mate-extra/mate-screensaver:consolekit - Enable support for sys-auth/consolekit
 mate-extra/mate-screensaver:gtk3 - Build with GTK+3 instead of GTK+2
 mate-extra/mate-sensors-applet:gtk3 - Build with GTK+3 instead of GTK+2
 mate-extra/mate-system-monitor:gtk3 - Build with GTK+3 instead of GTK+2
@@ -7374,6 +7372,7 @@ sys-auth/sssd:nfsv4 - Add support for the nfsv4 idmapd plugin provided by net-li
 sys-auth/sssd:ssh - Build helper to let net-misc/openssh use sssd provided information
 sys-auth/sssd:sudo - Build helper to let app-admin/sudo use sssd provided information
 sys-auth/ykpers:consolekit - Use sys-auth/consolekit and virtual/udev to allow access to the YubiKey HID device to the console user.
+sys-block/f3:extra - Build the additional f3probe, f3brew and f3fix utility (requires sys-block/parted and virtual/udev)
 sys-block/fio:aio - Enable AIO ioengine
 sys-block/fio:glusterfs - Enable GlusterFS gfapi support via sys-cluster/glusterfs
 sys-block/fio:gnuplot - Install tools for generating gnuplots
