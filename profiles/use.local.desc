@@ -6297,6 +6297,8 @@ net-misc/sitecopy:webdav - Enable WebDav (Web-based Distributed Authoring and Ve
 net-misc/sks:optimize - Enables bytecode optimization
 net-misc/slimrat:X - Install also GUI client
 net-misc/spice-gtk:dbus - Support for desktop integration such as automounting and other APIs exposed by your DE via D-Bus
+net-misc/spice-gtk:gstaudio - Using gstreamer backend as audio decodec support
+net-misc/spice-gtk:gstvideo - Using gstreamer backend as video decodec support
 net-misc/spice-gtk:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 net-misc/spice-gtk:lz4 - Enable support for LZ4 compression using app-arch/lz4
 net-misc/spice-gtk:mjpeg - Enable builtin mjpeg video decoder
