@@ -52,7 +52,7 @@ DEPEND="${RDEPEND}
 # Correct output data for tests isn't bundled with releases
 RESTRICT="test"
 
-DOCS=( README.txt )
+DOCS=( DEDICATION HACKING README.txt ROADMAP )
 
 pkg_setup() {
 	# make sure >=metapost-1.803 is selected if it's installed, bug 498704
@@ -67,6 +67,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	default
+
 	if ! use vim-syntax ; then
 		sed -i 's/vim//' GNUmakefile.in || die
 	fi
@@ -84,8 +86,6 @@ src_prepare() {
 	# remove bundled texinfo file (fixes bug #448560)
 	rm tex/texinfo.tex || die
 
-	eapply_user
-
 	eautoreconf
 }
 
@@ -93,13 +93,18 @@ src_configure() {
 	# documentation generation currently not supported since it requires a newer
 	# version of texi2html than is currently in the tree
 
-	econf \
-		--with-texgyre-dir=/usr/share/fonts/tex-gyre \
-		--disable-documentation \
-		--disable-optimising \
-		--disable-pipe \
-		$(use_enable debug debugging) \
+	local myeconfargs+=(
+		--with-texgyre-dir=/usr/share/fonts/tex-gyre
+		--disable-documentation
+		--disable-optimising
+		--disable-pipe
+		$(use_enable debug debugging)
 		$(use_enable profile profiling)
+	)
+
+	has_version ">=dev-scheme/guile-2" && myeconfargs+=( --enable-guile2 )
+
+	econf "${myeconfargs[@]}"
 }
 
 src_compile() {
