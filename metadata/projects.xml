@@ -1017,7 +1017,7 @@
     <member is-lead="1">
       <email>ulm@gentoo.org</email>
       <name>Ulrich Müller</name>
-      <role>Member (*)</role>
+      <role>Lead</role>
     </member>
   </project>
   <project>
@@ -3013,6 +3013,11 @@
       <role>Member</role>
     </member>
     <member>
+      <email>soap@gentoo.org</email>
+      <name>David Seifert</name>
+      <role>Member</role>
+    </member>
+    <member>
       <email>sping@gentoo.org</email>
       <name>Sebastian Pipping</name>
       <role>Member</role>
@@ -3199,6 +3204,11 @@
     <name>Gentoo Developer Recruiters</name>
     <url>https://wiki.gentoo.org/wiki/Project:Recruiters</url>
     <description>The Recruiters subproject provides a central location for information about developer recruitment and recruiter policy.</description>
+    <member>
+      <email>amynka@gentoo.org</email>
+      <name>Amy Winston</name>
+      <role>Recruiter</role>
+    </member>
     <member>
       <email>hwoarang@gentoo.org</email>
       <name>Markos Chandras</name>
@@ -3789,6 +3799,11 @@
     <member>
       <email>rich0@gentoo.org</email>
       <name>Richard Freeman</name>
+      <role>Member</role>
+    </member>
+    <member>
+      <email>tamiko@gentoo.org</email>
+      <name>Matthias Maier</name>
       <role>Member</role>
     </member>
     <member>
