@@ -8,5 +8,5 @@ LICENSE=GPL-2+
 RDEPEND=app-arch/bzip2 media-libs/libsdl[video] media-libs/libpng:0 media-libs/sdl-image[gif,jpeg,png] media-libs/sdl-mixer[vorbis] media-libs/sdl-sound dev-libs/boost dev-games/physfs media-libs/xvid dev-libs/expat media-libs/freetype dev-lang/lua:0 x11-libs/wxGTK:3.0[X] dev-libs/libsigc++:1.2 games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/asc-hq/asc-2.6.0.0.tar.bz2 http://www.asc-hq.org/music/frontiers.ogg http://www.asc-hq.org/music/time_to_strike.ogg http://www.asc-hq.org/music/machine_wars.ogg
-_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	8632fcd33a047954f007dee9a137bdcc	games	2cf0d67d765e6358b435ccda30c13ad8	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	6198c04daba0e1307bd844df7d37f423	user	c66cbe7502fe1161066eb947d15b79f6	wxwidgets	9b34ce3ca77f4e418e8fd9951c4c1cb1
+_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	8632fcd33a047954f007dee9a137bdcc	games	2cf0d67d765e6358b435ccda30c13ad8	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	6198c04daba0e1307bd844df7d37f423	user	80aaa71614ced86f02ee1a513821dc87	wxwidgets	9b34ce3ca77f4e418e8fd9951c4c1cb1
 _md5_=3a99b280f7ce383833929ab7565aefb4
