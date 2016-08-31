@@ -973,6 +973,8 @@ app-misc/mosquitto:srv - Include SRV lookup support.
 app-misc/muttprint:doc - Builds documentation
 app-misc/note:general - Add support for ascii flatfile backend
 app-misc/note:text - Add support for text backend
+app-misc/openastro:jpeg - Enable exporting Astrological Charts to jpeg
+app-misc/openastro:png - Enable exporting Astrological Charts to png
 app-misc/pax-utils:python - Install a more powerful/faster version of lddtree
 app-misc/recoll:camelcase - Enable indexing for camelCase sentences and words
 app-misc/recoll:chm - Index chm files
@@ -5269,7 +5271,6 @@ net-dns/hash-slinger:openpgp - Enable support for OPENPGPKEY records (openpgpkey
 net-dns/hash-slinger:ssh - Enable support for SSHFP records (sshfp)
 net-dns/knot:dnstap - Include support for the dnstap binary log format (http://dnstap.info/).
 net-dns/knot:fastparser - Use a zone file parser that is faster, but requires more memory and CPU time to compile.
-net-dns/knot:lmdb - Use the LMDB database to store timers for slave zones on disk, making the timers persist across server restarts.
 net-dns/ldns-utils:dane - Enable DNS-based Authentication of Named Entities (DANE) support
 net-dns/ldns-utils:ecdsa - Enable ECDSA support
 net-dns/ldns-utils:gost - Enable GOST support
@@ -5777,6 +5778,7 @@ net-libs/libssh:server - Build with SSH server support
 net-libs/libssh:sftp - Build with SFTP support
 net-libs/libssh:ssh1 - Build with SSH1 support
 net-libs/libssh2:gcrypt - Use dev-libs/libgcrypt instead of dev-libs/openssl
+net-libs/libtrace:numa - Use sys-process/numactl
 net-libs/libvncserver:24bpp - enable 24bpp support
 net-libs/libvncserver:gcrypt - enable support for gcrypt
 net-libs/libwebsockets:client - The client part of the library and libwebsockets-test-client
