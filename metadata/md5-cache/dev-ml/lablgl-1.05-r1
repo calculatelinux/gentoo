@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=dev-lang/ocaml-3.10.2:=[ocamlopt?] x11-libs/libXext x11-libs/libXmu x11-libs/libX11 virtual/opengl virtual/glu dev-ml/camlp4:= glut? ( media-libs/freeglut ) tk? ( >=dev-lang/tcl-8.3:0= >=dev-lang/tk-8.3:0= dev-ml/labltk:= )
 SLOT=0/1.05
 SRC_URI=http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/lablgl-1.05.tar.gz
-_eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	6198c04daba0e1307bd844df7d37f423
+_eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	6198c04daba0e1307bd844df7d37f423
 _md5_=06887bb138c879722be7da8336bb1a61
