@@ -907,6 +907,9 @@ app-misc/anki:recording - Enable support for audio recording
 app-misc/anki:sound - Enable support for adding sound to cards
 app-misc/bijiben:zeitgeist - Build the plugin to inject events to gnome-extra/zeitgeist
 app-misc/binwalk:graph - Enable support for generating entropy graphs
+app-misc/blink1:mini-tool - Build and install command-line mini-tool blink1-mini-tool (normally used for embedded devices)
+app-misc/blink1:server - Build and install REST API server (currently hard-coded to TCP port 8080)
+app-misc/blink1:tool - Build and install command-line tool blink1-tool
 app-misc/byobu:screen - Use app-misc/screen as the default backend
 app-misc/ca-certificates:cacert - Include root certs from CAcert (http://www.cacert.org/) and Software in the Public Interest (http://www.spi-inc.org/)
 app-misc/ddccontrol:pci - enable direct PCI memory access (the setuid ddcpci util)
@@ -4715,7 +4718,6 @@ media-video/ffmpeg:cdio - Enables audio CD grabbing with dev-libs/libcdio.
 media-video/ffmpeg:celt - Adds Xiph CELT audio decoding support via media-libs/celt
 media-video/ffmpeg:chromaprint - Enables audio fingerprinting support with media-libs/chromaprint.
 media-video/ffmpeg:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
-media-video/ffmpeg:dcadec - Enables DCA decoding with media-sound/dcadec.
 media-video/ffmpeg:ebur128 - Enables EBU R128 loudness normalization filter via media-libs/libebur128
 media-video/ffmpeg:faac - Use external faac library for AAC encoding
 media-video/ffmpeg:fdk - Use external fdk-aac library for AAC encoding
@@ -6586,6 +6588,7 @@ net-proxy/privoxy:stats - Keep statistics
 net-proxy/privoxy:toggle - Support temporary disable toggle via web interface
 net-proxy/privoxy:whitelists - Support trust files (white lists)
 net-proxy/rejik:banlists - Install upstream provided simple banlists
+net-proxy/shadowsocks-libev:mbedtls - Use net-libs/mbedtls as crypto backend
 net-proxy/shadowsocks-libev:openssl - Use dev-libs/openssl as crypto backend
 net-proxy/shadowsocks-libev:polarssl - Use net-libs/polarssl as crypto backend
 net-proxy/shadowsocks-libev:system-libs - Use system libraries instead of the ones included in the upstream distribution
