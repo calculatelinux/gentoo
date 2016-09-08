@@ -4145,6 +4145,7 @@ media-libs/svgalib:kernel-helper - Build the helper kernel module
 media-libs/taglib:asf - Provide support for Microsoft's 'advanced systems format' media container.
 media-libs/taglib:boost - Use dev-libs/boost instead of GCC built-ins
 media-libs/tremor:low-accuracy - enable 32bit only multiply operations
+media-libs/vigra:valgrind - Enable valgrind in make check
 media-libs/vips:fits - Enable support for the FITS image format through sci-libs/cfitsio
 media-libs/waffle:egl - Enable EGL support
 media-libs/waffle:gbm - Enable support for the Generic Buffer Manager (gbm)
@@ -5471,6 +5472,8 @@ net-im/centerim:otr - Enable encrypted conversations
 net-im/choqok:telepathy - Enable support for the real-time communication framework telepathy
 net-im/climm:otr - Enable encrypted conversations
 net-im/corebird:glade - Install glade catalogs for corebird
+net-im/coturn:mongodb - Enable support for the mongodb database
+net-im/coturn:redis - Enable support for the redis database
 net-im/ejabberd:captcha - Support for CAPTCHA Forms (XEP-158) on registration
 net-im/ejabberd:full-xml - Use XML features in XMPP stream (ex: CDATA), requires XML compliant clients
 net-im/ejabberd:hipe - Compile natively with HiPE, not recommended
