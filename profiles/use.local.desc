@@ -2293,6 +2293,8 @@ dev-perl/Panotools-Script:gui - Installs GUIs for some tools
 dev-perl/Sub-Name:suggested - Install extra dependencies needed for extended regression tests
 dev-perl/Sysadm-Install:hammer - Enable hammer() funtion to run a command in the shell and simulate a user hammering the ENTER key to accept defaults on prompts
 dev-perl/Test-Warnings:suggested - Install optional dependencies for extra tests
+dev-perl/perl-headers:debug - Add source locations in generated .ph files to assist with debugging when errors occur
+dev-perl/perl-headers:sizeof-warning - Include logic to warn when a .ph file tries to use a sizeof() that is unknown
 dev-php/PEAR-HTTP_Download:minimal - Do not include support for PEAR-MIME_Type
 dev-php/PEAR-HTTP_Download:postgres - Send postgres LOBs without buffering
 dev-php/PEAR-HTTP_Request2:curl - Force dev-lang/php to be compiled with curl extension
@@ -2395,7 +2397,6 @@ dev-python/flask-restful:paging - Enable resource paging support
 dev-python/geopy:timezone - Enables localized date support
 dev-python/geopy:yahoo - Enables use of YahooPlaceFinder
 dev-python/glance_store:cinder - adds cinder backend support
-dev-python/glance_store:swift - adds swift backend support
 dev-python/gmpy:mpir - Use sci-libs/mpir as gmp implementation
 dev-python/icalendar:doc - Generate examples and other extra documentation
 dev-python/ipython:matplotlib - Add support for dev-python/matplotlib
@@ -8003,7 +8004,6 @@ www-apps/nikola:markdown - Add support for Markdown as alternative markup langua
 www-apps/nikola:watchdog - Use dev-python/watchdog to monitor file system events
 www-apps/nikola:webmedia - Use dev-python/micawber to extract metadata from web media links
 www-apps/nikola:websocket - Add websocket support thru dev-python/ws4py
-www-apps/novnc:nova - Installs Openstack Nova for it's libraries
 www-apps/otrs:mod_perl - Provide all dependencies for use of mod_perl instead of cgi
 www-apps/postfixadmin:vacation - Install vacation.pl script and dependencies
 www-apps/redmine:passenger - Enable support for www-apache/passenger
@@ -8028,6 +8028,7 @@ www-client/chromium:gtk3 - Use gtk3 instead of gtk2
 www-client/chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/chromium:pic - Disable optimized assembly code that is not PIC friendly
 www-client/chromium:proprietary-codecs - Enable proprietary codecs like H.264, MP3
+www-client/chromium:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels
 www-client/chromium:system-ffmpeg - Use system ffmpeg instead of the bundled one
 www-client/chromium:tcmalloc - Use bundled tcmalloc instead of system malloc
 www-client/chromium:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
