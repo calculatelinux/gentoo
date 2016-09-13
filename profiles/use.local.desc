@@ -6708,6 +6708,10 @@ net-wireless/gnuradio:utils - install scripts to enable viewing and analysis of 
 net-wireless/gnuradio:vocoder - enable blocks for audio voice encoders
 net-wireless/gnuradio:wavelet - enable wavelet signal processing blocks
 net-wireless/gnuradio:zeromq - enable zeromq message passing blocks
+net-wireless/gr-air-modes:fgfs - Support FlightGear
+net-wireless/gr-air-modes:gui - Build the GUI
+net-wireless/gr-air-modes:rtlsdr - Build with Realtek RTL2832U (rtlsdr) support
+net-wireless/gr-air-modes:uhd - Build with Ettus Research USRP Hardware Driver support
 net-wireless/gr-baz:armadillo - install MUSIC DOA estimator block
 net-wireless/gr-baz:rtlsdr - install rtlsdr source block
 net-wireless/gr-baz:uhd - install UHD aware blocks
@@ -7635,6 +7639,7 @@ sys-devel/gcc:objc++ - Build support for the Objective C++ language
 sys-devel/gcc:objc-gc - Build support for the Objective C code language Garbage Collector
 sys-devel/gcc:regression-test - Run the testsuite and install the results (requires FEATURES=test)
 sys-devel/gcc:sanitize - Build support for various sanitizer functions (ASAN/TSAN/etc...)
+sys-devel/gcc:ssp - Build packages with stack smashing protector on by default
 sys-devel/gcc:vtv - Build support for virtual table verification (a C++ hardening feature)
 sys-devel/gcc-apple:objc - Build support for the Objective C code language
 sys-devel/gcc-apple:objc++ - Build support for the Objective C++ language
