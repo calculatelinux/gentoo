@@ -296,6 +296,11 @@
       <role>LILO</role>
     </member>
     <member>
+      <email>chutzpah@gentoo.org</email>
+      <name>Patrick McLean</name>
+      <role>Misc stuff that needs to get done</role>
+    </member>
+    <member>
       <email>hwoarang@gentoo.org</email>
       <name>Markos Chandras</name>
     </member>
@@ -402,7 +407,7 @@
     <member is-lead="1">
       <email>soap@gentoo.org</email>
       <name>David Seifert</name>
-      <role>Developer</role>
+      <role>Lead</role>
     </member>
   </project>
   <project>
