@@ -30,6 +30,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Lars Wendler <polynomial-c@gentoo.org> (15 Sep 2016)
+# Masked for testing
+=app-shells/bash-4.4*
+=sys-libs/readline-7.0*
+
 # Michael Palimaka <kensington@gentoo.org> (15 Sep 2016)
 # KDE PIM 5 masked for wider testing.
 ~kde-apps/akonadi-16.08.1
@@ -594,11 +599,6 @@ sci-physics/mpb
 # Brian Evans <grknight@gentoo.org> (18 Aug 2016)
 # Mask new MariaDB alphas for testing
 >=dev-db/mariadb-10.2.0
-
-# Michael Palimaka <kensington@gentoo.org> (14 Aug 2016)
-# Requires API that is no longer functional.
-# Masked for removal in 30 days.
-net-libs/libkfbapi
 
 # Hans de Graaff <graaff@gentoo.org> (13 Aug 2016)
 
