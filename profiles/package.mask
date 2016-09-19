@@ -30,6 +30,14 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (18 Sep 2016)
+# Masked for failing to build with GCC 6, still using ancient
+# distutils.eclass, tightly coupled to dev-libs/xqilla-2.2*.
+# Purged by Debian and Fedora more than 5 years ago.
+# Mask for removal in 30 days.
+# Bug #594236
+dev-libs/dbxml
+
 # Lars Wendler <polynomial-c@gentoo.org> (15 Sep 2016)
 # Masked for testing
 =app-shells/bash-4.4*
@@ -88,12 +96,6 @@
 ~kde-apps/pim-storage-service-manager-16.08.1
 ~kde-apps/pimcommon-16.08.1
 ~kde-apps/syndication-16.08.1
-
-# Mike Gilbert <floppym@gentoo.org> (13 Sep 2016)
-# Known to be unusable.
-# https://bugs.gentoo.org/591938
-~www-client/chromium-54.0.2840.14
-~www-client/chromium-54.0.2840.16
 
 # Denis Dupeyron <calchan@gentoo.org> (12 Sep 2016)
 # Masked for testing, see bug #588894.
@@ -672,11 +674,6 @@ dev-ruby/metasploit-model:1.0
 # Fails to switch cpufreq governor.
 # https://bugs.gentoo.org/590780
 ~sys-power/cpupower-4.7.0
-
-# Pacho Ramos <pacho@gentoo.org> (7 Aug 2016)
-# Upstream dead, depends on old gstreamer, old webkit, many unresolved bug
-# reports... Removal in a month (#581052)
-media-video/miro
 
 # Michał Górny <mgorny@gentoo.org> (7 Aug 2016)
 # Issue with thunar detailed view
