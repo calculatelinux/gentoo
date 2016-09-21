@@ -750,6 +750,7 @@ app-emulation/wine:s3tc - Pull in media-libs/libtxc_dxtn for DXTn texture compre
 app-emulation/wine:samba - Add support for NTLM auth. see http://wiki.winehq.org/NtlmAuthSetupGuide and http://wiki.winehq.org/NtlmSigningAndSealing
 app-emulation/wine:staging - Apply Wine-Staging patches for advanced feature support that haven't made it into upstream Wine yet
 app-emulation/wine:themes - Support GTK+:3 window theming through Wine-Staging
+app-emulation/wine:udev - Use virtual/libudev to provide plug and play support
 app-emulation/winetricks:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
 app-emulation/x48:readline - Enables support for libreadline
 app-emulation/xe-guest-utilities:xenstore - Use xenstore binaries bundled by Citrix instead of building app-emulation/xen-tools
@@ -8443,6 +8444,12 @@ x11-terms/rxvt-unicode:wcwidth - Enable wide char width support
 x11-terms/terminator:libnotify - Enables desktop notifications viadev-python/notify-python
 x11-terms/xterm:openpty - Use openpty() in preference to posix_openpt()
 x11-terms/xterm:toolbar - Enable the xterm toolbar to be built
+x11-themes/arc-theme:cinnamon - Install theme for gnome-extra/cinnamon
+x11-themes/arc-theme:gnome-shell - Install theme for gnome-base/gnome-shell
+x11-themes/arc-theme:gtk2 - Install GTK+2 theme
+x11-themes/arc-theme:gtk3 - Install GTK+3 theme
+x11-themes/arc-theme:mate - Install Metacity theme for mate-base/mate
+x11-themes/arc-theme:xfce - Install theme for xfce-base/xfwm4
 x11-themes/bespin:windeco - Enable window decoration for KWin.
 x11-themes/comix-xcursors:lefthanded - Install lefthanded version of theme in addition to default one
 x11-themes/comix-xcursors:opaque - Install non-transparent version of theme in addition to default one
