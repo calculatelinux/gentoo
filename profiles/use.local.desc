@@ -564,7 +564,9 @@ app-emulation/rkt:actool - Install the actool for ACI manipulation
 app-emulation/rkt:rkt_stage1_coreos - Download and use a prebuilt stage1.aci from CoreOS
 app-emulation/rkt:rkt_stage1_fly - Build stage1-fly.aci
 app-emulation/rkt:rkt_stage1_host - Assemble stage1.aci from host binaries
-app-emulation/rkt:rkt_stage1_kvm - Build stage1-kvm.aci
+app-emulation/rkt:rkt_stage1_kvm - This flag has been replaced by the rkt_stage1_kvm_* flags
+app-emulation/rkt:rkt_stage1_kvm_lkvm - Build stage1-kvm-lkvm.aci
+app-emulation/rkt:rkt_stage1_kvm_qemu - Build stage1-kvm-qemu.aci
 app-emulation/rkt:rkt_stage1_src - Build the stage1.aci from source
 app-emulation/runc:apparmor - Enable AppArmor support.
 app-emulation/spice:lz4 - Enable support for LZ4 compression using app-arch/lz4
@@ -1980,6 +1982,7 @@ dev-libs/libsecp256k1:endomorphism - Enable endomorphism
 dev-libs/libsecp256k1:experimental - Allow experimental USE flags
 dev-libs/libsecp256k1:recovery - Enable ECDSA pubkey recovery module
 dev-libs/libsecp256k1:schnorr - Enable Schnorr signature module
+dev-libs/libslz:tools - Install additional tools (zenc, zdec)
 dev-libs/libsodium:asm - Enables assembly implementations
 dev-libs/libsodium:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/libsolv:rpm - Enable support for RPM files
@@ -4287,6 +4290,7 @@ media-sound/denemo:fluidsynth - Enable Fluidsynth MIDI software synthesis
 media-sound/denemo:portmidi - Enable support for the portmidi backend
 media-sound/dir2ogg:mac - Add support for decoding Monkey's Audio files
 media-sound/dir2ogg:wma - Add support for wma files through mplayer
+media-sound/drumstick:fluidsynth - Enable support for media-sound/fluidsynth
 media-sound/easytag:gtk2 - Enable GTK+:2 support and disable default GTK+:3 support
 media-sound/easytag:gtk3 - Enable GTK+:3 support (default) and disable GTK+:2 support
 media-sound/easytag:opus - Enable support for media-libs/opus and media-libs/opusfile (opus audio codec)
@@ -6507,6 +6511,7 @@ net-print/hplip:static-ppds - Use statically-generated PPDs instead of Dynamic P
 net-print/magicfilter:lprng-failsafe - Refuse options for compability with certain LPRng versions.
 net-proxy/haproxy:net_ns - Enable network namespace support (CONFIG_NET_NS)
 net-proxy/haproxy:pcre-jit - Use JIT support for PCRE
+net-proxy/haproxy:slz - Use dev-libs/libslz compression library
 net-proxy/haproxy:tools - Install additional tools (halog, iprange)
 net-proxy/privoxy:editor - Enable the web-based actions file editor
 net-proxy/privoxy:external-filters - Allow to filter content with scripts and programs. Experimental
