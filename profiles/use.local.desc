@@ -6882,6 +6882,7 @@ sci-libs/hdf5:fortran2003 - Enable new features that require Fortran 2003 (http:
 sci-libs/hdf5:hl - Enable high level API (https://support.hdfgroup.org/HDF5/doc/HL/index.html)
 sci-libs/ipopt:hsl - hsl
 sci-libs/ipopt:mumps - Enable sci-libs/mumps support
+sci-libs/lapack-reference:deprecated - Build deprecated routines
 sci-libs/lemon:coin - Enable the sci-libs/coinor-clp and sci-libs/coinor-cbc graph algorithms
 sci-libs/lemon:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
 sci-libs/lemon:tools - Build additional tools
@@ -7770,6 +7771,8 @@ sys-libs/libcxx:libcxxrt - Build on top of sys-libs/libcxxrt instead of gcc's li
 sys-libs/libcxx:libunwind - Use libunwind instead of libgcc_s for stack unwinding, thus avoiding dependence on gcc.
 sys-libs/libcxxrt:libunwind - Use libunwind instead of libgcc_s for unwinding. This should allow avoiding relying on sys-devel/gcc but for now clang is setup to use libgcc_s.
 sys-libs/libhugetlbfs:perl - Install the cpupcstat tool and some perl modules
+sys-libs/libomp:hwloc - Enable CPU affinity support via hwloc
+sys-libs/libomp:ompt - Enable OpenMP Tools Interface support
 sys-libs/libunwind:debug-frame - Adds support for DWARF .debug_frame section: Use the information from this section if available
 sys-libs/libunwind:libatomic - Use libatomic instead of builtin atomic operations
 sys-libs/musl-nscd:minimal - Only installs the header files
