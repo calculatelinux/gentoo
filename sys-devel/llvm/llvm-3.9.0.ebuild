@@ -76,7 +76,11 @@ RDEPEND="${COMMON_DEPEND}
 	clang? ( !<=sys-devel/clang-${PV}-r99 )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r2
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
-PDEPEND="clang? ( =sys-devel/clang-${PV}-r100 )
+PDEPEND="
+	clang? (
+		=sys-devel/clang-${PV}-r100
+		~sys-devel/clang-runtime-${PV}
+	)
 	default-libcxx? ( sys-libs/libcxx )
 	kernel_Darwin? ( =sys-libs/libcxx-${PV%.*}* )"
 
@@ -521,11 +525,5 @@ multilib_src_install_all() {
 		if use static-analyzer; then
 			python_optimize "${ED}"usr/share/scan-view
 		fi
-	fi
-}
-
-pkg_postinst() {
-	if use clang && ! has_version 'sys-libs/libomp'; then
-		elog "To enable OpenMP support in clang, install sys-libs/libomp."
 	fi
 }
