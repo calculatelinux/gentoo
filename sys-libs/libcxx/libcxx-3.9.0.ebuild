@@ -42,11 +42,13 @@ RDEPEND="libcxxrt? ( sys-libs/libcxxrt[libunwind=,static-libs?,${MULTILIB_USEDEP
 	!libcxxrt? ( >=sys-devel/gcc-4.7:=[cxx] )"
 # llvm-3.9.0 needed because its cmake files installation path changed, which is
 # needed by libcxx
+# clang-3.9.0 installs necessary target symlinks unconditionally
+# which removes the need for MULTILIB_USEDEP
 DEPEND="${RDEPEND}
-	test? ( sys-devel/clang[${MULTILIB_USEDEP}]
+	test? ( >=sys-devel/clang-3.9.0
 		${PYTHON_DEPS} )
 	app-arch/xz-utils
-	>=sys-devel/llvm-3.9.0[${MULTILIB_USEDEP}]"
+	>=sys-devel/llvm-3.9.0"
 
 DOCS=( CREDITS.TXT )
 
@@ -94,6 +96,11 @@ src_unpack() {
 	git-r3_checkout
 }
 
+src_configure() {
+	NATIVE_LIBDIR=$(get_libdir)
+	cmake-multilib_src_configure
+}
+
 multilib_src_configure() {
 	local cxxabi cxxabi_incs
 	if use libcxxrt; then
@@ -107,7 +114,10 @@ multilib_src_configure() {
 
 	local libdir=$(get_libdir)
 	local mycmakeargs=(
-		-DLLVM_LIBDIR_SUFFIX=${libdir#lib}
+		# LLVM_LIBDIR_SUFFIX is used to find CMake files
+		# and we are happy to use the native set
+		-DLLVM_LIBDIR_SUFFIX=${NATIVE_LIBDIR#lib}
+		-DLIBCXX_LIBDIR_SUFFIX=${libdir#lib}
 		-DLIBCXX_ENABLE_SHARED=ON
 		-DLIBCXX_ENABLE_STATIC=$(usex static-libs)
 		-DLIBCXX_CXX_ABI=${cxxabi}
