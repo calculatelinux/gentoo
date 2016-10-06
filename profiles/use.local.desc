@@ -3993,7 +3993,7 @@ media-libs/mlt:rtaudio - Builds rtaudio consumer for native audio support on mul
 media-libs/mlt:ruby - Build SWIG bindings for Ruby
 media-libs/netpbm:rle - Build converters for the RLE format (utah raster toolkit)
 media-libs/opencolorio:pdf - Install extra documentation in PDF format
-media-libs/opencv:contrib - Install user contributed scripts from opencv_contrib
+media-libs/opencv:contrib - Install user contributed scripts from opencv_contrib (Experimental!)
 media-libs/opencv:cuda - Enable NVIDIA Cuda computations support
 media-libs/opencv:eigen - Enable usage of dev-cpp/eigen for computations
 media-libs/opencv:gdal - Enable support for sci-libs/gdal library
@@ -6148,10 +6148,11 @@ net-misc/ofono:provision - Enable GPRS provisioning support
 net-misc/ofono:qmimodem - Enable Qualcomm QMI modem support
 net-misc/ofono:tools - Enable testing tools
 net-misc/oidentd:masquerade - Enable support for masqueraded/NAT connections
-net-misc/openconnect:gssapi - Build GSSAPI support.
+net-misc/openconnect:gssapi - Build GSSAPI support
 net-misc/openconnect:java - Build JNI bindings using jni.h
-net-misc/openconnect:libproxy - Enable proxy support.
-net-misc/openconnect:stoken - Enable stoken support.
+net-misc/openconnect:libproxy - Enable proxy support
+net-misc/openconnect:lz4 - Enable support for lz4 compression
+net-misc/openconnect:stoken - Enable stoken support
 net-misc/openntpd:libressl - Enable HTTPS TLS time constraint support using dev-libs/libressl
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:bindist - Disable EC/RC5 algorithms in OpenSSL for patent reasons.
