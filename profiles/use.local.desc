@@ -2119,7 +2119,6 @@ dev-ml/ocamlnet:httpd - Enables net-httpd web server component
 dev-ml/ocamlnet:zip - Enables netzip support to read/write gzip data using object channels
 dev-ml/onanomsg:lwt - Enables lwt support.
 dev-ml/pgocaml:camlp4 - Enable PG'Ocaml syntax extension.
-dev-ml/qcheck:ounit - Enable integration with ounit
 dev-ml/tyxml:camlp4 - Enables the camlp4 syntax extension (deprecated)
 dev-ml/tyxml:ppx - Enables the ppx syntax extension (preferred)
 dev-ml/utop:camlp4 - Enables camlp4 support.
@@ -2368,6 +2367,9 @@ dev-python/translate-toolkit:html - Support conversion between po and html files
 dev-python/translate-toolkit:ical - Support conversion between po and ical files
 dev-python/translate-toolkit:ini - Support conversion between po and ini files
 dev-python/translate-toolkit:subtitles - Support conversion between po and sub files
+dev-python/twisted:conch - include Twisted SSHv2 implementation
+dev-python/twisted:http2 - include http2 support
+dev-python/twisted:serial - include serial port support
 dev-python/twisted-core:serial - include serial port support
 dev-python/vatnumber:vies - Enable VIES
 dev-python/ws4py:client - Install client modules
@@ -6231,6 +6233,7 @@ net-misc/spice-gtk:mjpeg - Enable builtin mjpeg video decoder
 net-misc/spice-gtk:policykit - Enable sys-auth/polkit support for the usbredir acl helper
 net-misc/spice-gtk:usbredir - Use sys-apps/usbredir to redirect USB devices to another machine over TCP
 net-misc/spice-gtk:webdav - Support for folder-sharing between guest and client using net-libs/phodav
+net-misc/sshrc:mosh - Install Support for mosh
 net-misc/stargazer:debug - Enable extra debug codepaths, like asserts and extra output.
 net-misc/stargazer:doc - Adds extra documentation (API, doc, etc).
 net-misc/stargazer:examples - Install examples, usually source code.
