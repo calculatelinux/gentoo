@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=6
-inherit cmake-utils git-r3
+inherit cmake-utils git-r3 gnome2-utils
 
 DESCRIPTION="Qt-based multitab terminal emulator"
 HOMEPAGE="https://github.com/lxde/qterminal"
@@ -12,30 +12,28 @@ EGIT_REPO_URI="https://github.com/lxde/qterminal.git"
 LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS=""
-IUSE="qt5"
+IUSE=""
 
 RDEPEND="
-	!qt5? (
-		dev-qt/qtcore:4
-		dev-qt/qtgui:4
-		x11-libs/libqxt
-		~x11-libs/qtermwidget-${PV}[qt4]
-	)
-	qt5? (
-		dev-qt/qtcore:5
-		dev-qt/qtgui:5
-		dev-qt/qtwidgets:5
-		~x11-libs/qtermwidget-${PV}[qt5]
-	)
+	dev-qt/qtcore:5
+	dev-qt/qtgui:5
+	dev-qt/qtwidgets:5
+	dev-qt/qtx11extras:5
+	x11-libs/libX11
+	~x11-libs/qtermwidget-${PV}
 "
-DEPEND="${RDEPEND}
-	qt5? ( dev-qt/linguist-tools:5 )
-"
+DEPEND="${RDEPEND}"
 
-src_configure() {
-	local mycmakeargs=(
-		-DUSE_QT5=$(usex qt5)
-		-DUSE_SYSTEM_QXT=$(usex !qt5)
-	)
-	cmake-utils_src_configure
+PATCHES=( "${FILESDIR}/${PN}-no-liblxqt.patch" )
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }

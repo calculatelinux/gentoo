@@ -18,8 +18,8 @@ EGIT_BRANCH="stable/newton"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE="+api +scheduler +volume infiniband iscsi lio lvm mysql +memcached postgres rdma sqlite +tcp test +tgt"
-REQUIRED_USE="|| ( mysql postgres sqlite ) iscsi? ( || ( tgt lio ) ) infiniband? ( rdma )"
+IUSE="+api +scheduler +volume infiniband iscsi lvm mysql +memcached postgres rdma sqlite +tcp test +tgt"
+REQUIRED_USE="|| ( mysql postgres sqlite ) iscsi? ( tgt ) infiniband? ( rdma )"
 
 CDEPEND=">=dev-python/pbr-1.6[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
@@ -113,10 +113,6 @@ RDEPEND="
 	>=dev-python/castellan-0.4.0[${PYTHON_USEDEP}]
 	iscsi? (
 		tgt? ( sys-block/tgt )
-		lio? (
-			sys-block/targetcli
-			sys-block/lio-utils
-		)
 		sys-block/open-iscsi
 	)
 	lvm? ( sys-fs/lvm2 )
