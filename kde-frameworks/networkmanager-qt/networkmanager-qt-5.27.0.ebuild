@@ -25,3 +25,5 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	!net-libs/libnm-qt:5
 "
+
+PATCHES=( "${FILESDIR}/${PN}-5.27.0-tests.patch" )

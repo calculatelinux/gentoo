@@ -30,6 +30,22 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Palimaka <kensington@gentoo.org> (09 Oct 2016)
+# Abandoned and declared dead by upstream. Not recommended for use with recent
+# versions of kaffeine. Masked for removal in 30 days.
+www-plugins/kaffeine-mozilla-plugin
+
+# Patrice Clement <monsieurp@gentoo.org> (09 Oct 2016)
+# Although still available for download, the JMF API is a dead project which
+# hasn't been updated in years and hence very old.
+# Masked for removal in 30 days.
+dev-java/jmf-bin
+
+# Sebastian Pipping <sping@gentoo.org> (08 Oct 2016)
+# Dead upstream for years, ebuild needs work, 5 open bugs
+# Masked for removal in 30 days.
+media-gfx/drqueue
+
 # Pacho Ramos <pacho@gentoo.org> (08 Oct 2016)
 # Multiple QA problems for a long time, all ADA stuff is heavily broken.
 # (#251873). Removal in a month.
@@ -302,7 +318,7 @@ kde-apps/kdeartwork-emoticons
 
 # Fabian Groffen <grobian@gentoo.org> (25 Sep 2016)
 # Mask Exim RCs
-=mail-mta/exim-4.88_rc1
+=mail-mta/exim-4.88_rc2
 
 # Christoph Junghans <ottxor@gentoo.org> (20 Sep 2016)
 # Switch to a non-stable scheme  following google-chrome
@@ -407,15 +423,6 @@ dev-libs/vrb
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
 >=www-client/chromium-55
-
-# Martin Gysel <me@bearsh.org> via g-p-m (09 Sep 2016)
-# Versions currently in Portage are old and block removal of other
-# packages. Current versions require building against modified versions
-# of dev-libs/libdivecomputer and kde-apps/marble which must be fetched
-# from Git, and which are not versioned (upstream uses branch tags).
-# Finally, upstream considers distribution-maintained packages deprecated.
-# Removal in 30 days.
-app-misc/subsurface
 
 # Lars Wendler <polynomial-c@gentoo.org> (06 Sep 2016)
 # Breaks samba's nmbd process (bug #592502)
