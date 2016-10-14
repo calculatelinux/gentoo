@@ -58,6 +58,7 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 
 BIN_COMMON_DEPEND="
+	app-text/hunspell:0/0
 	=app-text/libexttextcat-3.4*
 	=app-text/libmwaw-0.3*
 	app-text/poppler:0/62
