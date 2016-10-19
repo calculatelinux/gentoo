@@ -1999,6 +1999,10 @@
     <name>Gentoo MATE Desktop</name>
     <url>https://wiki.gentoo.org/wiki/Project:MATE</url>
     <description>The Gentoo MATE Project aims to bring the current and complete MATE Desktop Environment to Gentoo.</description>
+    <member>
+      <email>mudler@gentoo.org</email>
+      <name>Ettore Di Giacinto</name>
+    </member>
     <member is-lead="1">
       <email>NP-Hardass@gentoo.org</email>
       <name>NP-Hardass</name>
@@ -3867,6 +3871,11 @@
     <name>Theology</name>
     <url>https://wiki.gentoo.org/wiki/Project:Theology</url>
     <description>The theology project maintains religious, genealogy, and humanities-related packages</description>
+    <member>
+      <email>bman@gentoo.org</email>
+      <name>Aaron Bauman</name>
+      <role>Member</role>
+    </member>
     <member is-lead="1">
       <email>creffett@gentoo.org</email>
       <name>Chris Reffett</name>
