@@ -2251,7 +2251,6 @@ dev-python/django-tastypie:digest - Library to aid in implementing HTTP Digest A
 dev-python/django-tastypie:lxml - An optional serialiser dev-python/lxml
 dev-python/django-tastypie:yaml - An optional serialiser dev-python/yaml
 dev-python/django-two-factor-auth:yubikey - Adds support for Yubikeys via django-otp-yubikey
-dev-python/docutils:glep - Install support for GLEPs
 dev-python/falcon:cython - Build cython-based python modules
 dev-python/flask-restful:paging - Enable resource paging support
 dev-python/geopy:timezone - Enables localized date support
@@ -4222,6 +4221,7 @@ media-sound/beets:mpdstats - Enable support for collecting statistic about liste
 media-sound/beets:opus - Enable opus support in gstreamer-based replaygain
 media-sound/beets:replaygain - Enable support for Replay Gain metadata calculation during import
 media-sound/beets:web - Enable embedded webserver support through dev-python/flask
+media-sound/bluez-alsa:hcitop - Enable top-like monitoring tool for HCI
 media-sound/cantata:http-server - Enable internal HTTP server to play non-MPD files
 media-sound/cantata:replaygain - Enable ReplayGain support, for relative volume adjustments
 media-sound/clementine:amazoncloud - Enable Amazon cloud drive support
