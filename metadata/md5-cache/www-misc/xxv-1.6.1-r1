@@ -9,5 +9,5 @@ PDEPEND=mplayer? ( media-video/mplayer )
 RDEPEND=>=media-video/vdr-1.2.6 media-video/vdr2jpeg media-fonts/corefonts virtual/mysql dev-perl/CGI virtual/perl-Digest-MD5 virtual/perl-Getopt-Long virtual/perl-MIME-Base64 virtual/perl-Time-HiRes virtual/perl-IO-Compress dev-perl/Config-Tiny dev-perl/Date-Manip dev-perl/DBD-mysql dev-perl/DBI dev-perl/Digest-HMAC dev-perl/Encode-Detect dev-perl/Event dev-perl/Font-TTF dev-perl/GD[png,gif] dev-perl/IO-Socket-INET6 dev-perl/JSON dev-perl/JSON-XS dev-perl/Linux-Inotify2 dev-perl/Locale-gettext dev-perl/MP3-Info dev-perl/Net-Amazon dev-perl/Net-Telnet dev-perl/Net-XMPP dev-perl/Proc-ProcessTable dev-perl/SOAP-Lite dev-perl/txt2html dev-perl/Template-GD dev-perl/Template-Toolkit dev-perl/XML-RSS themes? ( >=x11-themes/xxv-skins-1.6 )
 SLOT=0
 SRC_URI=mirror://vdr-developerorg/718/xxv-1.6.1.tgz mirror://gentoo/xxv-1.6.1.tgz
-_eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	6198c04daba0e1307bd844df7d37f423	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
 _md5_=a9270d7681e624ec6ed15c96167fab8e
