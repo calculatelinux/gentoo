@@ -2576,6 +2576,8 @@ dev-scheme/scm:libscm - Build and install libscm.a and related headers
 dev-scheme/scm:macro - C level support for hygienic and referentially transparent macros (syntax-rules macros).
 dev-scheme/scm:regex - String regular expression matching.
 dev-scheme/scm:unix - Support for: nice, acct, lstat, readlink, symlink, mknod and sync.
+dev-scheme/slib:gambit - Support for gambit scheme implementation
+dev-scheme/slib:scm - Support for scm scheme implementation
 dev-tcltk/expect-lite:debug - pull in packages needed for runtime interactive debugger
 dev-tcltk/tktreectrl:shellicon - shellicon extension
 dev-tex/abntex:lyx - Install with app-office/lyx layout
@@ -6364,6 +6366,7 @@ net-nds/tac_plus:finger - Adds support for checking user counts via fingering th
 net-nds/tac_plus:maxsess - Enforce a limit on maximum sessions per user
 net-news/liferea:libnotify - Enable popup notifications
 net-news/quiterss:phonon - Enable sound support via media-libs/phonon or dev-qt/qtphonon
+net-news/rssguard:webengine - Use dev-qt/qtwebengine for embedded web browser
 net-nntp/inn:innkeywords - Enable automatic keyword generation support
 net-nntp/inn:inntaggedhash - Use tagged hash table for history (disables large file support)
 net-nntp/nzbget:parcheck - Enable support for checking PAR archives
