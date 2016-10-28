@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit cmake-utils
+inherit cmake-utils fdo-mime gnome2-utils
 
 # Upstream names the package PV-rX. We change that to
 # PV_pX so we can use portage revisions.
@@ -17,29 +17,20 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+dbus debug +ico +iso qt5 +wineappdb"
+IUSE="+dbus debug +ico +iso +wineappdb"
 
 CDEPEND="
-	qt5? (
-		dev-qt/qtcore:5
-		dev-qt/qtgui:5
-		dev-qt/qtnetwork:5
-		dev-qt/qtsingleapplication[qt5,X]
-		dev-qt/qtsql:5[sqlite]
-		dev-qt/qtwidgets:5
-		dev-qt/qtxml:5
-		dbus? ( dev-qt/qtdbus:5 )
-	)
-	!qt5? (
-		dev-qt/qtcore:4
-		dev-qt/qtgui:4
-		dev-qt/qtsingleapplication[qt4,X]
-		dev-qt/qtsql:4[sqlite]
-		dbus? ( dev-qt/qtdbus:4 )
-	)
+	dev-qt/qtcore:5
+	dev-qt/qtgui:5
+	dev-qt/qtnetwork:5
+	dev-qt/qtsingleapplication[qt5,X]
+	dev-qt/qtsql:5[sqlite]
+	dev-qt/qtwidgets:5
+	dev-qt/qtxml:5
+	dbus? ( dev-qt/qtdbus:5 )
 "
 DEPEND="${CDEPEND}
-	qt5? ( dev-qt/linguist-tools:5 )
+	dev-qt/linguist-tools:5
 "
 RDEPEND="${CDEPEND}
 	app-admin/sudo
@@ -54,7 +45,7 @@ DOCS=( AUTHORS ChangeLog README )
 
 src_configure() {
 	local mycmakeargs=(
-		-DQT5=$(usex qt5 ON OFF)
+		-DQT5=ON
 		-DDEBUG=$(usex debug ON OFF)
 		-DWITH_ICOUTILS=$(usex ico ON OFF)
 		-DWITH_SYSTEM_SINGLEAPP=ON
@@ -64,4 +55,18 @@ src_configure() {
 		-DWITH_DBUS=$(usex dbus ON OFF)
 	)
 	cmake-utils_src_configure
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	gnome2_icon_cache_update
 }
