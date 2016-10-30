@@ -1,4 +1,4 @@
-DEFINED_PHASES=unpack
+DEFINED_PHASES=install unpack
 DESCRIPTION=Quote arguments or standard input for usage in POSIX shell by eval
 EAPI=6
 HOMEPAGE=https://github.com/vaeth/quoter/
@@ -7,4 +7,4 @@ LICENSE=MIT
 SLOT=0
 SRC_URI=https://github.com/vaeth/quoter/archive/v2.0_p2.tar.gz -> quoter-2.0_p2.tar.gz
 _eclasses_=vcs-snapshot	2b65ecb2d0f91e4322c2ac8d673993bd
-_md5_=e388b547e9f654525566f87a53f8ea0b
+_md5_=7d57ed07085d389191378c31bd3c6a20
