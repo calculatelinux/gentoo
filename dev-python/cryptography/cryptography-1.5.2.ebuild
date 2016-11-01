@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-PYTHON_COMPAT=( python2_7 python3_{3,4,5} pypy )
+PYTHON_COMPAT=( python2_7 python3_{4,5} pypy )
 PYTHON_REQ_USE="threads(+)"
 
 inherit distutils-r1
@@ -39,6 +39,7 @@ DEPEND="${RDEPEND}
 		dev-python/pretend[${PYTHON_USEDEP}]
 		dev-python/pyasn1-modules[${PYTHON_USEDEP}]
 		>=dev-python/pytest-2.9.0[${PYTHON_USEDEP}]
+		dev-python/pytz[${PYTHON_USEDEP}]
 	)"
 
 DOCS=( AUTHORS.rst CONTRIBUTING.rst README.rst )
