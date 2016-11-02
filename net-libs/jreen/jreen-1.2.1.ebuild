@@ -10,7 +10,6 @@ if [[ ${PV} != *9999* ]]; then
 else
 	GIT_ECLASS="git-r3"
 	EGIT_REPO_URI=( "git://github.com/euroelessar/${PN}" )
-	KEYWORDS="amd64 x86"
 fi
 
 inherit cmake-utils multibuild ${GIT_ECLASS}
