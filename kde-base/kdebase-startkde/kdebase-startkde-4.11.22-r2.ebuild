@@ -83,15 +83,15 @@ RDEPEND="
 		$(add_kdebase_dep kstyles)
 		$(add_kdebase_dep ksysguard)
 		$(add_kdebase_dep ksystraycmd)
-		$(add_kdebase_dep kwrited)
 		$(add_kdebase_dep libkworkspace)
 		$(add_kdebase_dep liboxygenstyle)
 		$(add_kdebase_dep libplasmaclock)
 		$(add_kdebase_dep libplasmagenericshell)
 		$(add_kdebase_dep libtaskmanager)
-		$(add_kdebase_dep powerdevil)
 		$(add_kdebase_dep qguiplatformplugin_kde)
 		$(add_kdebase_dep solid-actions-kcm)
+		kde-plasma/kwrited:4
+		kde-plasma/powerdevil:4
 	)
 	wallpapers? ( kde-plasma/plasma-workspace-wallpapers:5 )
 "
