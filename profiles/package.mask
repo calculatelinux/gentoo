@@ -30,6 +30,31 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (05 Nov 2016)
+# Masked for initial testing
+=dev-libs/icu-58.1
+
+# Manuel Rüger <mrueg@gentoo.org> (05 Nov 2016)
+# Masked for removal in 30 days, bug #568980
+# Unmaintained and deprecated.
+# Use net-print/cups-filters as a replacement
+net-print/foomatic-filters
+
+# Alon Bar-Lev <alonbl@gentoo.org> (05 Nov 2016)
+# Masked for removal in 30 days, bug#598982.
+# Upstream does not publish releases, no tags, last publish is on
+# google code, no dependencies.
+dev-python/pssi
+
+# Johannes Huber <johu@gentoo.org> (04 Nov 2016)
+# Masked for reomval in 30 days. Superseded by kde-plasma/plasma-nm.
+# Only support for deprecated Plasma 4. Exported to kde-sunset overlay.
+kde-misc/networkmanagement
+
+# Tim Harder <radhermit@gentoo.org> (03 Nov 2016)
+# Masked for testing
+=sys-fs/fuse-3.0.0*
+
 # Pacho Ramos <pacho@gentoo.org> (03 Nov 2016)
 # Dead for ages and broken with giflib-5.1, bug #574218. Removal in a month.
 mail-filter/spamprobe
@@ -607,10 +632,6 @@ games-action/awesomenauts
 # Lars Wendler <polynomial-c@gentoo.org> (26 Aug 2016)
 # Masked while being tested and reverse deps aren't fully compatible
 =dev-libs/openssl-1.1*
-
-# Christian Tietz <christian.tietz@mailbox.org> (23 Aug 2016)
-# Depends on masked xfce-base/exo-0.11.1
->=xfce-extra/xfce4-whiskermenu-plugin-2.0.1
 
 # Brian Evans <grknight@gentoo.org> (22 Aug 2016)
 # PHP 5.5 has reached end of life and will no longer receive security updates.

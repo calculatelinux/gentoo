@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=>=dev-perl/B-Hooks-Parser-0.80.0 >=dev-perl/B-OPCheck-0.270.0 >=dev-perl/Devel-Declare-0.3.4 >=dev-perl/PadWalker-1.930.0 dev-perl/Sub-Exporter dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/G/GU/GUGOD/self-0.35.tar.gz
-_eclasses_=multiprocessing	e32940a7b2a9992ad217eccddb84d548	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	c584f9e0fe426f3dcc2c46c6f7cb95ce
+_eclasses_=multiprocessing	e32940a7b2a9992ad217eccddb84d548	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
 _md5_=8fe1d743722d520ae3770f51876423c1

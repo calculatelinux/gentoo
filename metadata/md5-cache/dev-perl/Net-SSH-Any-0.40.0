@@ -9,5 +9,5 @@ RDEPEND=dev-lang/perl:=
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/S/SA/SALVA/Net-SSH-Any-0.04.tar.gz
-_eclasses_=multiprocessing	e32940a7b2a9992ad217eccddb84d548	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	c584f9e0fe426f3dcc2c46c6f7cb95ce
+_eclasses_=multiprocessing	e32940a7b2a9992ad217eccddb84d548	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
 _md5_=79a93ff86281e80cd3a3997c753674d3

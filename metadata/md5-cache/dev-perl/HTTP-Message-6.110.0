@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=!<dev-perl/libwww-perl-6 virtual/perl-Compress-Raw-Zlib >=dev-perl/URI-1.100.0 >=virtual/perl-Encode-2.210.0 >=dev-perl/HTTP-Date-6.0.0 dev-perl/IO-HTML >=dev-perl/Encode-Locale-1.0.0 >=dev-perl/LWP-MediaTypes-6.0.0 >=virtual/perl-IO-Compress-2.021 >=virtual/perl-MIME-Base64-2.100.0 >=virtual/perl-Exporter-5.570.0 dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/E/ET/ETHER/HTTP-Message-6.11.tar.gz
-_eclasses_=multiprocessing	e32940a7b2a9992ad217eccddb84d548	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	c584f9e0fe426f3dcc2c46c6f7cb95ce
+_eclasses_=multiprocessing	e32940a7b2a9992ad217eccddb84d548	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
 _md5_=89df182452576e80520566ac89955340

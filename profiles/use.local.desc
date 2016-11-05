@@ -239,6 +239,7 @@ app-backup/bareos:storage-daemon - Install storage daemon (bareos-sd)
 app-backup/borgbackup:fuse - Mount archive as a FUSE filesystem.
 app-backup/boxbackup:client-only - Disable server support, and just build a client
 app-backup/btrbk:pv - Use sys-apps/pv to enable progress bar functionality
+app-backup/bup:web - Support browsing backups via a web interface
 app-backup/dar:dar32 - Enables --enable-mode=32 option, which replace infinite by 32 bit integers
 app-backup/dar:dar64 - Enables --enable-mode=64 option, which replace infinite by 64 bit integers
 app-backup/dar:gcrypt - Enables strong encryption support
@@ -847,6 +848,7 @@ app-misc/mosquitto:bridge - Enable bridge support in the MQTT broker.
 app-misc/mosquitto:persistence - Store messages and subscriptions to a file.
 app-misc/mosquitto:srv - Include SRV lookup support.
 app-misc/muttprint:doc - Builds documentation
+app-misc/neofetch:X - Enable support for detecting DEs, WMs, screen resolutions, and showing images from an X terminal
 app-misc/note:general - Add support for ascii flatfile backend
 app-misc/note:text - Add support for text backend
 app-misc/openastro:jpeg - Enable exporting Astrological Charts to jpeg
@@ -2047,6 +2049,7 @@ dev-libs/weston:webp - Add support for the WebP image format
 dev-libs/weston:xwayland - Enable ability support native X11 applications
 dev-libs/wlc:X - Enable X11 backend and XWayland support.
 dev-libs/wlc:systemd - Enable support for systemd-logind.
+dev-libs/wlc:xwayland - Enable XWayland support.
 dev-libs/xapian:brass - Enabled brass backend db support
 dev-libs/xapian:chert - Enabled chert backend db support
 dev-libs/xapian:glass - Enabled glass backend db support
@@ -3120,7 +3123,8 @@ gnome-extra/gnome-color-manager:packagekit - Enable support for the distro-neutr
 gnome-extra/gnome-commander:chm - Enable metadata support for Microsoft Compiled HTML Help files
 gnome-extra/gnome-commander:gsf - Add metadata support for OLE, OLE2 and ODF
 gnome-extra/gnome-commander:pdf - Add metadata support for PDF
-gnome-extra/gnome-commander:python - Add support for python plugins"
+gnome-extra/gnome-commander:python - Add support for python plugins
+gnome-extra/gnome-commander:samba - Add support for SAMBA (Windows File and Printer sharing)
 gnome-extra/gnome-commander:taglib - Add metadata support for ID3, Vorbis, FLAC and APE
 gnome-extra/gnome-do-plugins:banshee - Enables the Banshee (media-sound/banshee) plugin
 gnome-extra/gnome-dvb-daemon:totem - Build a plugin for media-video/totem
@@ -3255,7 +3259,7 @@ kde-apps/marble:positioning - Enable position information via dev-qt/qtpositioni
 kde-apps/marble:shapefile - Enable support for ESRI shapefiles
 kde-apps/marble:zip - Enable support for reading and displaying .kmz files
 kde-apps/okular:chm - Enable support for Microsoft Compiled HTML Help files
-kde-apps/okular:dpi - DPI detection support for PDF rendering via x11-libs/libkscreen
+kde-apps/okular:dpi - DPI detection support for PDF rendering via kde-plasma/libkscreen
 kde-apps/okular:ebook - Add E-Book support
 kde-apps/okular:mobi - Add mobipocket support
 kde-apps/pimcommon:designer - Build plugins for dev-qt/designer
@@ -3275,7 +3279,7 @@ kde-base/plasma-workspace:json - Enable JSON support via dev-libs/qjson
 kde-base/plasma-workspace:kdepim - KDE PIM integration via kde-apps/kdepimlibs
 kde-base/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/libqalculate
 kde-base/pykde4:akonadi - Compile bindings for Akonadi
-kde-base/systemsettings:kscreen - Use kde-misc/kscreen for screen management
+kde-base/systemsettings:kscreen - Use kde-plasma/kscreen for screen management
 kde-frameworks/kconfigwidgets:man - Build and install man pages
 kde-frameworks/kded:man - Build and install man pages
 kde-frameworks/kdesignerplugin:designer - Build KF5 widgets plugin for QtDesigner
@@ -7731,6 +7735,10 @@ sys-kernel/aufs-sources:experimental - Apply experimental patches; for more info
 sys-kernel/aufs-sources:kdbus - Apply the kdbus patch. This also requires the "experimental" use flag.
 sys-kernel/aufs-sources:module - Patch kernel to allow aufs being build as a module.
 sys-kernel/aufs-sources:vanilla - Use vanilla kernel sources without applying genpatches. WARNING: This flag will drop all support from the Gentoo Kernel Security team
+sys-kernel/bliss-initramfs:luks - Encryption support
+sys-kernel/bliss-initramfs:lvm - Logical Volume support
+sys-kernel/bliss-initramfs:raid - RAID support
+sys-kernel/bliss-initramfs:zfs - ZFS support
 sys-kernel/ck-sources:bfsonly - BFS by itself vs the full ck patchset
 sys-kernel/ck-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/ck-sources:experimental - Allow experimental code. Can break or degrade performance. (UNSUPPORTED)
@@ -7891,6 +7899,7 @@ sys-process/systemd-cron:etc-crontab-systemd - Use dedicated /etc/crontab-system
 sys-process/systemd-cron:minutely - Support /etc/cron.minutely
 sys-process/systemd-cron:setgid - Compile setgid C helper for crontab. Needs GCC or Clang.
 sys-process/systemd-cron:yearly - Support /etc/cron.yearly
+sys-process/tini:args - Enable argument parsing.
 virtual/ffmpeg:opus - Use the external opus library for encoding and decoding.
 virtual/linux-sources:firmware - Install linux kernel firmware
 virtual/mpi:romio - Enable romio, a high-performance portable MPI-IO

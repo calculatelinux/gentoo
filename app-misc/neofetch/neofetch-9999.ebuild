@@ -15,10 +15,9 @@ DEPEND="app-shells/bash:*
 
 RDEPEND="${DEPEND}
 	X? ( x11-apps/xprop
+	x11-apps/xwininfo
 	x11-apps/xrandr
-	media-gfx/scrot
 	www-client/w3m[imlib]
 	media-libs/imlib2
 	media-gfx/imagemagick
-	)
-"
+)"

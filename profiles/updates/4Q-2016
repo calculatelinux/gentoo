@@ -14,3 +14,8 @@ move kde-base/kwrited kde-plasma/kwrited
 move kde-base/kmenuedit kde-plasma/kmenuedit
 move kde-base/khotkeys kde-plasma/khotkeys
 move kde-base/kinfocenter kde-plasma/kinfocenter
+move kde-base/ksysguard kde-plasma/ksysguard
+move dev-perl/google-api-adwords-perl dev-perl/Google-Ads-AdWords-Client
+move kde-misc/kscreen kde-plasma/kscreen
+move x11-libs/libkscreen kde-plasma/libkscreen
+slotmove media-sound/cantata 4 0
