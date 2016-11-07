@@ -8,7 +8,7 @@ inherit autotools toolchain-funcs
 
 DESCRIPTION="Assembly By Short Sequences - a de novo, parallel, paired-end sequence assembler"
 HOMEPAGE="http://www.bcgsc.ca/platform/bioinfo/software/abyss/"
-SRC_URI="https://github.com/bcgsc/abyss/archive/1.9.0.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/bcgsc/abyss/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="abyss"
 SLOT="0"

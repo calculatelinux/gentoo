@@ -469,6 +469,8 @@ app-emulation/ganeti:multiple-users - Enable support for running VMs as differen
 app-emulation/ganeti:rbd - Enable rados block device support via sys-cluster/ceph
 app-emulation/ganeti:restricted-commands - Enable restricted commands in the node daemon
 app-emulation/ganeti:xen - Enable Xen support
+app-emulation/hyperd:libvirt - Enable support for KVM via libvirt
+app-emulation/hyperd:xen - Enable support for the Xen Hypervisor
 app-emulation/libguestfs:erlang - Build Erlang bindings
 app-emulation/libguestfs:fuse - Enable image mount support via fuse
 app-emulation/libguestfs:inspect-icons - Use media-gfx/icoutilsfor acces icon file in image and inspect it
@@ -557,6 +559,8 @@ app-emulation/rkt:rkt_stage1_kvm_lkvm - Build stage1-kvm-lkvm.aci
 app-emulation/rkt:rkt_stage1_kvm_qemu - Build stage1-kvm-qemu.aci
 app-emulation/rkt:rkt_stage1_src - Build the stage1.aci from source
 app-emulation/runc:apparmor - Enable AppArmor support.
+app-emulation/runv:libvirt - Enable support for KVM via libvirt
+app-emulation/runv:xen - Enable support for the Xen Hypervisor
 app-emulation/spice:lz4 - Enable support for LZ4 compression using app-arch/lz4
 app-emulation/spice:smartcard - Enable smartcard remoting using app-emulation/libcacard
 app-emulation/spice-vdagent:consolekit - Use sys-auth/consolekit to determine the master vdagentd in case of multiple running vdagentds (highly recommended)
@@ -1600,6 +1604,7 @@ dev-haskell/yaml:system-libyaml - Use system libyaml instead on generic one
 dev-haskell/yesod-auth:network-uri - Get Network.URI from the network-uri package
 dev-haskell/yesod-form:network-uri - Get Network.URI from the network-uri package
 dev-haskell/zip-archive:executable - Build the Zip executable.
+dev-haskell/zlib:non-blocking-ffi - Execute FFI calls in the context of haskell thread.
 dev-java/ant:antlr - Enable ANTLR Ant tasks
 dev-java/ant:bcel - Enable bcel (bytecode manipulation) Ant tasks
 dev-java/ant:commonslogging - Enable commons-logging Ant tasks
@@ -2366,6 +2371,7 @@ dev-python/translate-toolkit:html - Support conversion between po and html files
 dev-python/translate-toolkit:ical - Support conversion between po and ical files
 dev-python/translate-toolkit:ini - Support conversion between po and ini files
 dev-python/translate-toolkit:subtitles - Support conversion between po and sub files
+dev-python/translate-toolkit:yaml - Support YAML format
 dev-python/twisted:conch - include Twisted SSHv2 implementation
 dev-python/twisted:http2 - include http2 support
 dev-python/twisted:serial - include serial port support
@@ -3270,21 +3276,18 @@ kde-base/kdebase-startkde:crash-reporter - Builds a gui tool to submit crash inf
 kde-base/kdebase-startkde:wallpapers - Install the KDE Plasma wallpapers
 kde-base/kdelibs:opengl - Enable OpenGL support for Plasma (GLApplet)
 kde-base/kdm:consolekit - Enables support for authorization using consolekit
-kde-base/kfilemetadata:epub - Adds support for reading EPUB ebook metadata
-kde-base/kfilemetadata:mobi - Adds support for reading MOBI ebook metadata
 kde-base/klipper:prison - Enable support for barcodes/QRcodes
-kde-base/kwin:gles - Enable support for GLES.
 kde-base/libplasmaclock:kdepim - KDE PIM integration via kde-apps/kdepimlibs
 kde-base/plasma-workspace:json - Enable JSON support via dev-libs/qjson
 kde-base/plasma-workspace:kdepim - KDE PIM integration via kde-apps/kdepimlibs
 kde-base/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/libqalculate
 kde-base/pykde4:akonadi - Compile bindings for Akonadi
-kde-base/systemsettings:kscreen - Use kde-plasma/kscreen for screen management
 kde-frameworks/kconfigwidgets:man - Build and install man pages
 kde-frameworks/kded:man - Build and install man pages
 kde-frameworks/kdesignerplugin:designer - Build KF5 widgets plugin for QtDesigner
 kde-frameworks/kdesignerplugin:webkit - Build kdewebkit plugin for QtDesigner
 kde-frameworks/kfilemetadata:epub - Adds support for reading EPUB ebook metadata
+kde-frameworks/kfilemetadata:mobi - Adds support for reading MOBI ebook metadata
 kde-frameworks/kimageformats:eps - Support the EPS graphics file format
 kde-frameworks/kinit:caps - Capabilities support for improved security and better OOM handling
 kde-frameworks/kinit:man - Build and install man pages
@@ -3333,6 +3336,7 @@ kde-plasma/kinfocenter:gles2 - Show OpenGL ES information in kinfocenter
 kde-plasma/kinfocenter:pci - Show advanced PCI information
 kde-plasma/kmenuedit:hotkeys - Enable support for hotkey editing
 kde-plasma/kwallet-pam:oldwallet - Enable legacy support for kde-apps/kwalletd
+kde-plasma/kwin:gles - Enable support for GLES
 kde-plasma/kwin:gles2 - Use OpenGL ES 2 instead of full GL
 kde-plasma/kwin:multimedia - Enable effect video button in desktop effects KCM
 kde-plasma/libksysguard:detailedmemory - Enable display of detailed memory information using dev-qt/qtwebkit.
@@ -3362,6 +3366,7 @@ kde-plasma/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/l
 kde-plasma/powerdevil:pm-utils - Adds support for suspend/resume the system through sys-power/pm-utils
 kde-plasma/powerdevil:wireless - Enable wireless energy saving actions via kde-frameworks/bluez-qt and kde-frameworks/networkmanager-qt
 kde-plasma/systemsettings:classic - Enable classic mode plugin, requires kde-frameworks/khtml
+kde-plasma/systemsettings:kscreen - Use kde-plasma/kscreen for screen management
 lxde-base/lxdm:consolekit - Enables support for authorization using consolekit
 lxde-base/lxdm:gtk3 - Use GTK+3 instead of 2
 lxde-base/lxterminal:gtk3 - Use GTK+3 instead of GTK+2
@@ -4313,6 +4318,8 @@ media-sound/gimmix:cover - Enable cover art fetching
 media-sound/gimmix:lyrics - Enable lyric fetching
 media-sound/gmpc:unique - Enable single instance support using dev-libs/libunique
 media-sound/gmpc:xspf - Enable support for reading and saving XSPF playlists
+media-sound/gmusicbrowser:extras - Install some extra deps for plugins (ex. Titlebar)
+media-sound/gmusicbrowser:gstreamer-0 - Enable audio support via legacy gstreamer:0.10
 media-sound/gogglesmm:opus - Enable support for opus codec
 media-sound/google-musicmanager:log - Enables advanced logging through dev-libs/log4cxx
 media-sound/herrie:http - Enable http streaming
@@ -6231,7 +6238,6 @@ net-misc/rdesktop:kerberos - Enable CredSPP support + Kerberos authentication wi
 net-misc/rdesktop:pcsc-lite - Enable smartcard support with sys-apps/pcsc-lite driver
 net-misc/rdesktop:xrandr - Enable XRandR window extension support
 net-misc/remmina:freerdp - Add support for the net-misc/freerdp application
-net-misc/remmina:libsecret - Enable libsecret support to store login credentials
 net-misc/remmina:spice - Support connecting to SPICE-enabled virtual machines
 net-misc/remmina:ssh - Enable support for SSH/SFTP protocol; see also 'vte'
 net-misc/remmina:telepathy - Enable telepathy support
@@ -7116,6 +7122,8 @@ sci-visualization/gnuplot:libcerf - Enable special functions from sci-libs/libce
 sci-visualization/gnuplot:thin-splines - Enable thin plate splines
 sci-visualization/gwyddion:fits - Enable FITS image import via sci-libs/cfitsio
 sci-visualization/gwyddion:sourceview - Enable support for x11-libs/gtksourceview
+sci-visualization/labplot:cantor - Enable support for different open-source computer algebra systems via kde-apps/cantor
+sci-visualization/labplot:fits - Enable support for NASA's sci-libs/cfitsio library
 sci-visualization/opendx:cdf - Add support for sci-libs/cdf data exchange format
 sci-visualization/opendx:hdf - Add support for the Hierarchical Data Format (sci-libs/hdf)
 sci-visualization/paraview:boost - Enable the usage of dev-libs/boost
@@ -7394,17 +7402,14 @@ sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
 sys-boot/plymouth:gdm - Enables smooth transition to GDM
 sys-boot/plymouth:libkms - Provides abstraction to the DRM drivers (intel, nouveau and vmwgfx at this moment)
 sys-boot/plymouth:pango - Adds support for printing text on splash screen and text prompts, e.g. for password
-sys-boot/refind:btrfs - Construire le gestionnaire EFI pour le système de fichier btrfs
-sys-boot/refind:doc - Installer les fichiers de documentation
-sys-boot/refind:ext2 - Construire le gestionnaire EFI pour le système de fichier ext2
-sys-boot/refind:ext4 - Construire le gestionnaire EFI pour le système de fichier ext4
-sys-boot/refind:gnuefi - Compiler en utilisant GNU-EFI au lieu de Tianocore
-sys-boot/refind:hfs - Construire le gestionnaire EFI pour le système de fichier hfs
-sys-boot/refind:iso9660 - Construire le gestionnaire EFI pour le système de fichier iso9660
-sys-boot/refind:ntfs - Construire le gestionnaire EFI pour le système de fichier ntfs
-sys-boot/refind:reiserfs - Construire le gestionnaire EFI pour le système de fichier reiserfs
-sys-boot/udk:doc - Installer la documentation EDK II.
-sys-boot/udk:examples - Installer les exemples d'utilisation.
+sys-boot/refind:btrfs - Builds the EFI binary btrfs filesystem driver
+sys-boot/refind:ext2 - Builds the EFI binary ext2 filesystem driver
+sys-boot/refind:ext4 - Builds the EFI binary ext4 filesystem driver
+sys-boot/refind:gnuefi - Compile using GNU-EFI instead of Tianocore
+sys-boot/refind:hfs - Builds the EFI binary hfs filesystem driver
+sys-boot/refind:iso9660 - Builds the EFI binary iso9660 filesystem driver
+sys-boot/refind:ntfs - Builds the EFI binary ntfs filesystem driver
+sys-boot/refind:reiserfs - Builds the EFI binary reiserfs filesystem driver
 sys-cluster/ceph:babeltrace - Add support for LTTng babeltrace
 sys-cluster/ceph:cephfs - Build support for cephfs, a POSIX compatible filesystem built on top of ceph
 sys-cluster/ceph:cryptopp - Use dev-libs/crypto++ for cryptography

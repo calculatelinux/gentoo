@@ -19,3 +19,7 @@ move dev-perl/google-api-adwords-perl dev-perl/Google-Ads-AdWords-Client
 move kde-misc/kscreen kde-plasma/kscreen
 move x11-libs/libkscreen kde-plasma/libkscreen
 slotmove media-sound/cantata 4 0
+move kde-base/systemsettings kde-plasma/systemsettings
+move kde-base/kfilemetadata kde-frameworks/kfilemetadata
+move kde-base/baloo kde-frameworks/baloo
+move kde-base/kwin kde-plasma/kwin

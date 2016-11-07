@@ -10,4 +10,4 @@ RDEPEND=dev-cpp/sparsehash dev-libs/boost:= misc-haskell? ( dev-libs/gmp:0= virt
 SLOT=0
 SRC_URI=https://github.com/bcgsc/abyss/archive/1.9.0.tar.gz -> abyss-1.9.0.tar.gz
 _eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	libtool	4890219c51da247200223277f993e054	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=7c301b474921cb47df2fdbb12ccd1417
+_md5_=63d81ef3a35940ab5e21edac3c372894

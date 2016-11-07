@@ -30,10 +30,6 @@
 
 #--- END OF EXAMPLES ---
 
-# Andreas K. Hüttel <dilfridge@gentoo.org> (05 Nov 2016)
-# Masked for initial testing
-=dev-libs/icu-58.1
-
 # Manuel Rüger <mrueg@gentoo.org> (05 Nov 2016)
 # Masked for removal in 30 days, bug #568980
 # Unmaintained and deprecated.
@@ -138,12 +134,6 @@ dev-python/pylons
 # Abandoned and declared dead by upstream. Not recommended for use with recent
 # versions of kaffeine. Masked for removal in 30 days.
 www-plugins/kaffeine-mozilla-plugin
-
-# Patrice Clement <monsieurp@gentoo.org> (09 Oct 2016)
-# Although still available for download, the JMF API is a dead project which
-# hasn't been updated in years and hence very old.
-# Masked for removal in 30 days.
-dev-java/jmf-bin
 
 # Sebastian Pipping <sping@gentoo.org> (08 Oct 2016)
 # Dead upstream for years, ebuild needs work, 5 open bugs

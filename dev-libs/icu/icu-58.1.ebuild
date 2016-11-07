@@ -81,8 +81,10 @@ src_configure() {
 
 multilib_src_configure() {
 	local myeconfargs=(
+		--disable-layoutex
 		--disable-renaming
 		--disable-samples
+		--disable-layoutex
 		$(use_enable debug)
 		$(use_enable static-libs static)
 	)

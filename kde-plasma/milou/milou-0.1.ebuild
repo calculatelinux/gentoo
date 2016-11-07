@@ -19,9 +19,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 RDEPEND="
-	$(add_kdebase_dep baloo)
 	$(add_kdeapps_dep kdepimlibs)
+	kde-frameworks/baloo:4
 "
 DEPEND="${RDEPEND}
-	$(add_kdebase_dep kfilemetadata)
+	kde-frameworks/kfilemetadata:4
 "
