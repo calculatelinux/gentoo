@@ -3990,11 +3990,14 @@ media-libs/mesa:dri3 - Enable DRI3 support.
 media-libs/mesa:egl - Enable EGL support.
 media-libs/mesa:gallium - Build drivers based on Gallium3D, the new architecture for 3D graphics drivers.
 media-libs/mesa:gbm - Enable the Graphics Buffer Manager for EGL on KMS.
+media-libs/mesa:gcrypt - Use dev-libs/libgcrypt for low level sha1 utility functions.
 media-libs/mesa:gles1 - Enable GLESv1 support.
 media-libs/mesa:gles2 - Enable GLESv2 support.
 media-libs/mesa:llvm - Enable LLVM backend for Gallium3D.
+media-libs/mesa:nettle - Use dev-libs/nettle for low level sha1 utility functions.
 media-libs/mesa:opencl - Enable the Clover Gallium OpenCL state tracker.
 media-libs/mesa:openmax - Enable OpenMAX video decode/encode acceleration for Gallium3D.
+media-libs/mesa:openssl - Use dev-libs/openssl for low level sha1 utility functions.
 media-libs/mesa:openvg - Enable the OpenVG 2D acceleration API for Gallium3D.
 media-libs/mesa:osmesa - Build the Mesa library for off-screen rendering.
 media-libs/mesa:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
@@ -8280,7 +8283,6 @@ x11-misc/rednotebook:spell - enable gtk-spell support
 x11-misc/redshift:appindicator - Enable usage of dev-libs/libappindicator to export menu options in to unity and KDE 5
 x11-misc/redshift:geoclue - Control dependency on app-misc/geoclue
 x11-misc/rodent:experimental - Build experimental plugins (obexfs, curlftpfs, ecryptfs, cifs and samba)
-x11-misc/rofi:i3 - Compile in support for the x11-wm/i3 window manager
 x11-misc/rofi:windowmode - Enable normal window mode
 x11-misc/rss-glx:quesoglc - Enable support for OpenGL Character Renderer
 x11-misc/sddm:consolekit - Use ck-launch-session from sys-auth/consolekit by default in Xsession (no native support)
@@ -8452,7 +8454,6 @@ x11-wm/enlightenment:enlightenment_modules_wl-x11 - Wayland-in-X11 module
 x11-wm/enlightenment:enlightenment_modules_xkbswitch - Keyboard layout configuration and switcher
 x11-wm/enlightenment:enlightenment_modules_xwayland - X/Wayland integration
 x11-wm/enlightenment:pango - Enable pango font rendering
-x11-wm/enlightenment:udev - Use sys-fs/udev to determine available devices
 x11-wm/enlightenment:ukit - Use upower/udisks to automount devices
 x11-wm/enlightenment:xrandr - Enable support for the X xrandr extension
 x11-wm/fluxbox:bidi - Enable bidirectional language support with dev-libs/fribidi

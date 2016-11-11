@@ -10,4 +10,4 @@ RDEPEND=>=dev-perl/Data-Page-2.0.0 dev-perl/Class-Accessor dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/C/CH/CHUNZI/Data-Page-Pageset-1.02.tar.gz
 _eclasses_=multiprocessing	e32940a7b2a9992ad217eccddb84d548	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
-_md5_=546f55bdea70bdb622c5637d0487970b
+_md5_=a06fe49e2edb99f76d33489d1c725226

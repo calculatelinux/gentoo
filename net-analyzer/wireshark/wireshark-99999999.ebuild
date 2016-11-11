@@ -231,6 +231,7 @@ src_install() {
 		epan/wmem/*.h \
 		register.h \
 		wiretap/*.h \
+		ws_diag_control.h \
 		ws_symbol_export.h \
 		wsutil/*.h
 	do
