@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.40:2=[dbus] >=sys-devel/gettext-0.19 sys-apps/dbus sys-libs/zlib:= x11-libs/libX11:= acl? ( sys-apps/acl:= >=virtual/udev-200 ) cgroups? ( app-admin/cgmanager >=sys-libs/libnih-1.0.2[dbus] ) pam? ( virtual/pam ) policykit? ( >=sys-auth/polkit-0.110 ) kernel_linux? ( sys-apps/coreutils[acl?] ) pm-utils? ( sys-power/pm-utils ) selinux? ( sec-policy/selinux-consolekit )
 SLOT=0
 SRC_URI=https://github.com/ConsoleKit2/ConsoleKit2/releases/download/1.1.0/ConsoleKit2-1.1.0.tar.bz2
-_eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	flag-o-matic	8632fcd33a047954f007dee9a137bdcc	linux-info	fd1e29abbb02cbc49f1a14299846e9c4	multilib	165fc17c38d1b11dac2008280dab6e80	pam	3ecd5b75e39b0bb05a3183c08fcdfdb4	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	flag-o-matic	7366202dd55cb8f018f5d450d54e7749	linux-info	fd1e29abbb02cbc49f1a14299846e9c4	multilib	165fc17c38d1b11dac2008280dab6e80	pam	3ecd5b75e39b0bb05a3183c08fcdfdb4	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
 _md5_=c1086ddb98e8c77433a5a6ae2550d680

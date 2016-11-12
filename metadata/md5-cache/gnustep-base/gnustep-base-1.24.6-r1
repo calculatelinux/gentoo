@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=doc? ( virtual/texi2dvi dev-tex/latex2html app-text/texi2html ) >=gnustep-base/gnustep-make-2.6.0 icu? ( >=dev-libs/icu-4.0:= ) !libffi? ( dev-libs/ffcall gnustep-base/gnustep-make[-native-exceptions] ) libffi? ( virtual/libffi ) ssl? ( net-libs/gnutls ) >=dev-libs/libxml2-2.6 >=dev-libs/libxslt-1.1 >=dev-libs/gmp-4.1 >=dev-libs/openssl-0.9.7 >=sys-libs/zlib-1.2 zeroconf? ( net-dns/avahi )
 SLOT=0
 SRC_URI=ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-base-1.24.6.tar.gz
-_eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	flag-o-matic	8632fcd33a047954f007dee9a137bdcc	gnustep-base	63e3d261394d84127e82e8de711e85a8	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	flag-o-matic	7366202dd55cb8f018f5d450d54e7749	gnustep-base	63e3d261394d84127e82e8de711e85a8	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
 _md5_=aff9c6b0b003be8844be92d475a30b92
