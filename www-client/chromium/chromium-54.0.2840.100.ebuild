@@ -17,7 +17,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="amd64 ~arm ~arm64 x86"
 IUSE="cups +gn gnome gnome-keyring gtk3 +hangouts kerberos neon pic +proprietary-codecs pulseaudio selinux +suid +system-ffmpeg +tcmalloc widevine"
 RESTRICT="!system-ffmpeg? ( proprietary-codecs? ( bindist ) )"
 
@@ -76,7 +76,7 @@ COMMON_DEPEND="
 	dev-libs/libxml2:=[icu]
 	dev-libs/libxslt:=
 	media-libs/flac:=
-	>=media-libs/harfbuzz-0.9.41:=[icu(+)]
+	>=media-libs/harfbuzz-1.3.1:=[icu(+)]
 	>=media-libs/libwebp-0.4.0:=
 	sys-libs/zlib:=[minizip]
 	kerberos? ( virtual/krb5 )
@@ -537,6 +537,9 @@ src_configure() {
 
 	# Make sure the build system will use the right tools, bug #340795.
 	tc-export AR CC CXX NM
+
+	# https://bugs.gentoo.org/588596
+	append-cxxflags $(test-flags-CXX -fno-delete-null-pointer-checks)
 
 	# Define a custom toolchain for GN
 	myconf_gn+=" custom_toolchain=\"${FILESDIR}/toolchain:default\""

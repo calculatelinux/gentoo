@@ -5394,7 +5394,6 @@ net-ftp/yafc:ssh - Build with SFTP support
 net-im/ayttm:irc - Enable Internet Relay Chat support
 net-im/ayttm:lj - Enable livejournal.com support
 net-im/ayttm:smtp - Adds support for sending messages via RFC2821 SMTP
-net-im/ayttm:webcam - Adds webcam support for Yahoo Messenger
 net-im/bitlbee:libevent - Use libevent for event handling
 net-im/bitlbee:nss - Use NSS for SSL support in MSN and Jabber
 net-im/bitlbee:otr - Enable support for encrypted conversations
@@ -7071,7 +7070,6 @@ sci-physics/bullet:bullet3 - Build Bullet 3
 sci-physics/bullet:double-precision - Build libraries in double precision
 sci-physics/bullet:extras - Build additional libraries
 sci-physics/cernlib-montecarlo:herwig - Build Herwig internal event generator, newer version available in sci-physics/herwig
-sci-physics/clhep:exceptions - Enable zoom exceptions for user intervention
 sci-physics/espresso:cuda - Enable cuda support
 sci-physics/espresso:examples - Installs the examples
 sci-physics/espresso:packages - Installs extra TCL subpackages
