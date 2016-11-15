@@ -152,7 +152,7 @@ sci-geosciences/googleearth
 # Mask Exim RCs
 =mail-mta/exim-4.88_rc2
 
-# Christoph Junghans <ottxor@gentoo.org> (20 Sep 2016)
+# Christoph Junghans <junghans@gentoo.org> (20 Sep 2016)
 # Switch to a non-stable scheme  following google-chrome
 # please unmask latest version yourself
 =www-plugins/google-talkplugin-5.4.2.0
@@ -433,10 +433,6 @@ dev-java/spring-instrument
 # the proxied maintainer Matthew Brewer <tomboy64@sina.cn>
 # for questions.
 <=media-gfx/slic3r-1.1.9999
-
-# Patrick Lauer (30 Mar 2015)
-# Segfaults when creating directories #578582
-=sys-apps/sandbox-2.11*
 
 # José María Alonso <nimiux@gentoo.org> (24 Mar 2016)
 # Fails to build dev-lisp/sbcl-1.3.3 #563812
