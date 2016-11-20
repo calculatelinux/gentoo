@@ -72,10 +72,8 @@ RDEPEND="
 	handbook? ( kde-apps/khelpcenter:* )
 	!minimal? (
 		$(add_kdeapps_dep kdepasswd)
-		$(add_kdebase_dep freespacenotifier)
 		$(add_kdebase_dep kcheckpass)
 		$(add_kdebase_dep kdebase-cursors)
-		$(add_kdebase_dep kephal)
 		$(add_kdebase_dep klipper)
 		$(add_kdebase_dep kstyles)
 		$(add_kdebase_dep ksystraycmd)
@@ -85,13 +83,15 @@ RDEPEND="
 		$(add_kdebase_dep libplasmagenericshell)
 		$(add_kdebase_dep libtaskmanager)
 		$(add_kdebase_dep qguiplatformplugin_kde)
-		$(add_kdebase_dep solid-actions-kcm)
+		kde-plasma/freespacenotifier:4
+		kde-plasma/kephal:4
 		kde-plasma/khotkeys:4
 		kde-plasma/kinfocenter:4
 		kde-plasma/kmenuedit:4
 		kde-plasma/ksysguard:4
 		kde-plasma/kwrited:4
 		kde-plasma/powerdevil:4
+		kde-plasma/solid-actions-kcm:4
 	)
 	wallpapers? ( kde-plasma/plasma-workspace-wallpapers:5 )
 "
