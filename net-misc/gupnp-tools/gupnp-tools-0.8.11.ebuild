@@ -1,11 +1,11 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Free replacements of Intel UPnP tools that use GUPnP"
 HOMEPAGE="https://wiki.gnome.org/Projects/GUPnP"
@@ -30,3 +30,10 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig
 "
+
+src_prepare() {
+	# Fixes 598284 with upstream patch
+	# https://git.gnome.org/browse/gupnp-tools/commit/?id=e9ec9634207e4c2eea6d268ee29b57e687c1f178
+	epatch "${FILESDIR}"/${PN}-fix-compiling-when-using-recent-gupnp-av.patch
+	gnome2_src_prepare
+}
