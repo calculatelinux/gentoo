@@ -467,11 +467,6 @@
       <role>Chemistry</role>
     </member>
     <member>
-      <email>junghans@gentoo.org</email>
-      <name>Christoph Junghans</name>
-      <role>Chemistry</role>
-    </member>
-    <member>
       <email>nicolasbock@gentoo.org</email>
       <name>Nicolas Bock</name>
       <role>Chemistry</role>
@@ -1807,6 +1802,10 @@
     <name>Gentoo Linux Kernel Security Project</name>
     <url>https://wiki.gentoo.org/wiki/Project:Kernel_Security</url>
     <description>Gentoo Linux Kernel Security Project handles patching our many kernel sources and informing our users about global kernel security status.</description>
+    <member>
+      <email>bman@gentoo.org</email>
+      <name>Aaron Bauman</name>
+    </member>
   </project>
   <project>
     <email>ldap-bugs@gentoo.org</email>
