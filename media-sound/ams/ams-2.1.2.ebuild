@@ -40,5 +40,10 @@ src_configure() {
 	# C++11/14 fails:
 	# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=811645
 	append-cxxflags -std=gnu++98
-	econf --enable-qt5 MOC="$(qt5_get_bindir)/moc"
+	econf \
+		--disable-nsm \
+		--enable-qt5 \
+		MOC="$(qt5_get_bindir)/moc" \
+		LUPDATE="$(qt5_get_bindir)/lupdate" \
+		LRELEASE="$(qt5_get_bindir)/lrelease"
 }

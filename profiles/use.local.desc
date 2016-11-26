@@ -504,7 +504,6 @@ app-emulation/libvirt:xen - Support management of Xen virtualisation (app-emulat
 app-emulation/lxc:cgmanager - Enable support for cgroup management using app-admin/cgmanager
 app-emulation/lxd:daemon - Build the system daemon, not just the client tool
 app-emulation/open-vm-tools:doc - Generate API documentation
-app-emulation/open-vm-tools:fuse - Build vmblock-fuse in favor of FUSE based blocking mechanism for DnD
 app-emulation/open-vm-tools:grabbitmqproxy - Enable grabbitmqproxy
 app-emulation/open-vm-tools:pic - Force shared libraries to be built as PIC
 app-emulation/open-vm-tools:vgauth - Enable vgauth
@@ -959,7 +958,9 @@ app-office/kexi:marble - Enable displaying of maps using kde-apps/marble
 app-office/kexi:mdb - Enable support for Microsoft Access database
 app-office/kexi:webkit - Enable web form designer widget using dev-qt/qtwebkit
 app-office/kmymoney:hbci - Enable HBCI support using net-libs/aqbanking
+app-office/kmymoney:pim - Enable KDE PIM integration via kde-apps/kdepimlibs
 app-office/kmymoney:quotes - Enable Online Stock Quote retrieval
+app-office/kmymoney:weboob - Enable import of online banking transactions extracted by www-client/weboob
 app-office/libreoffice:coinmp - Use sci-libs/coinor-mp as alternative solver
 app-office/libreoffice:collada - Enable Collada for rendering 3D models stored in *.dae and *.kmz format
 app-office/libreoffice:gltf - Use media-libs/libgltf for inserting 3D models in the glTF format into presentations
@@ -4907,7 +4908,6 @@ media-video/vlc:macosx-notifications - Enables Mac OS X notifications module (fo
 media-video/vlc:macosx-qtkit - Enables Mac OS X qtkit module: qtcapture (video) and qtsound (audio) module.
 media-video/vlc:macosx-quartztext - Enables Mac OS X quartz text module.
 media-video/vlc:matroska - Enables matroska support using reference libraries (fallback on other existing matroska support if disabled, i.e., matroska enabled FFmpeg)
-media-video/vlc:media-library - Build the (sqlite based) media library.
 media-video/vlc:mpeg - Add libmpeg2 support for mpeg-1 and mpeg-2 video streams
 media-video/vlc:omxil - Enables OpenMAX Integration Layer codec module.
 media-video/vlc:opencv - Enabled OpenCV (computer vision) filter module.
@@ -4916,7 +4916,7 @@ media-video/vlc:opus - Support opus decoding via libopus.
 media-video/vlc:postproc - Enables image post-processing via libpostproc (part of FFmpeg).
 media-video/vlc:projectm - Enables the projectM visualization plugin.
 media-video/vlc:qt4 - Builds a Qt4 based frontend, a graphical interface.
-media-video/vlc:qt5 - Builds a Qt5 based frontend, a graphical interface.
+media-video/vlc:qt5 - Builds a Qt5 based frontend, a graphical interface (overrides qt4).
 media-video/vlc:rdp - Enables freerdp for RDP/Remote Desktop client support
 media-video/vlc:rtsp - Enables real audio and RTSP modules.
 media-video/vlc:run-as-root - Allows vlc to start for root. Don't enable this unless you have a very specific (e.g. embedded) need for it!
