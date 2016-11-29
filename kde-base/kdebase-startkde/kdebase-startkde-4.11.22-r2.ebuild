@@ -55,10 +55,10 @@ RDEPEND="
 	$(add_kdeapps_dep solid-runtime)
 	$(add_kdebase_dep krunner)
 	$(add_kdebase_dep ksmserver)
-	$(add_kdebase_dep ksplash)
-	$(add_kdebase_dep kstartupconfig)
 	$(add_kdebase_dep plasma-workspace)
 	kde-plasma/kcminit:4
+	kde-plasma/ksplash:4
+	kde-plasma/kstartupconfig:4
 	kde-plasma/kwin:4
 	kde-plasma/systemsettings:4
 	x11-apps/mkfontdir
@@ -73,11 +73,6 @@ RDEPEND="
 	!minimal? (
 		$(add_kdeapps_dep kdepasswd)
 		$(add_kdebase_dep klipper)
-		$(add_kdebase_dep libkworkspace)
-		$(add_kdebase_dep libplasmaclock)
-		$(add_kdebase_dep libplasmagenericshell)
-		$(add_kdebase_dep libtaskmanager)
-		$(add_kdebase_dep qguiplatformplugin_kde)
 		kde-plasma/freespacenotifier:4
 		kde-plasma/kcheckpass:4
 		kde-plasma/kdebase-cursors:4
@@ -89,8 +84,13 @@ RDEPEND="
 		kde-plasma/ksysguard:4
 		kde-plasma/ksystraycmd:4
 		kde-plasma/kwrited:4
+		kde-plasma/libkworkspace:4
 		kde-plasma/liboxygenstyle:4
+		kde-plasma/libplasmaclock:4
+		kde-plasma/libplasmagenericshell:4
+		kde-plasma/libtaskmanager:4
 		kde-plasma/powerdevil:4
+		kde-plasma/qguiplatformplugin_kde:4
 		kde-plasma/solid-actions-kcm:4
 	)
 	wallpapers? ( kde-plasma/plasma-workspace-wallpapers:5 )

@@ -107,13 +107,13 @@ RDEPEND="${COMMON_DEPEND}
 	x11-apps/xsetroot
 	!dev-libs/xembed-sni-proxy
 	!kde-plasma/freespacenotifier:4
-	!kde-base/libtaskmanager:4
+	!kde-plasma/libtaskmanager:4
 	!kde-plasma/kcminit:4
 	!kde-base/kdebase-startkde:4
 	!kde-base/klipper:4
 	!kde-base/krunner:4
 	!kde-base/ksmserver:4
-	!kde-base/ksplash:4
+	!kde-plasma/ksplash:4
 	!kde-base/plasma-workspace:4
 "
 DEPEND="${COMMON_DEPEND}

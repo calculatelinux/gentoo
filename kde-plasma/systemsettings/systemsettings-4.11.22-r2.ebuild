@@ -19,7 +19,7 @@ KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux"
 COMMONDEPEND="
 	dev-libs/glib:2
 	kde-plasma/kwin:4
-	$(add_kdebase_dep libkworkspace)
+	kde-plasma/libkworkspace:4
 	media-libs/fontconfig
 	>=media-libs/freetype-2
 	>=x11-libs/libxklavier-3.2
@@ -40,12 +40,12 @@ DEPEND="${COMMONDEPEND}
 	x11-proto/xextproto
 "
 RDEPEND="${COMMONDEPEND}
+	>=kde-frameworks/oxygen-icons-5.19.0:5
 	sys-libs/timezone-data
 	x11-apps/setxkbmap
 	x11-misc/xkeyboard-config
 	gtk? ( kde-plasma/kde-gtk-config:4 )
 	kscreen? ( kde-plasma/kscreen:4 )
-	|| ( $(add_kdebase_dep legacy-icons) >=kde-frameworks/oxygen-icons-5.19.0:5 )
 "
 
 KMEXTRA="

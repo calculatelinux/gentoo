@@ -31,6 +31,53 @@
 #--- END OF EXAMPLES ---
 
 # Pacho Ramos <pacho@gentoo.org> (27 Nov 2016)
+# All stardict stuff and dicts are completely unmaintained and orphan for
+# years (#471350, #533632, #568472, #600718). Removal in a month.
+app-dicts/stardict-cdict-en-zh-big5
+app-dicts/stardict-cdict-en-zh-gb
+app-dicts/stardict-cedict-zh-en-big5
+app-dicts/stardict-cedict-zh-en-gb
+app-dicts/stardict-dictd-devils
+app-dicts/stardict-freedict-eng-deu
+app-dicts/stardict-freedict-eng-fra
+app-dicts/stardict-freedict-eng-ita
+app-dicts/stardict-freedict-eng-lat
+app-dicts/stardict-freedict-eng-rus
+app-dicts/stardict-freedict-eng-spa
+app-dicts/stardict-freedict-eng-swe
+app-dicts/stardict-freedict-eng-tur
+app-dicts/stardict-freedict-tur-deu
+app-dicts/stardict-freedict-tur-eng
+app-dicts/stardict-hnd-de-vi
+app-dicts/stardict-hnd-en-vi
+app-dicts/stardict-hnd-fr-vi
+app-dicts/stardict-hnd-ru-vi
+app-dicts/stardict-hnd-vi-de
+app-dicts/stardict-hnd-vi-en
+app-dicts/stardict-hnd-vi-fr
+app-dicts/stardict-hnd-vi-vi
+app-dicts/stardict-jmdict-en-ja
+app-dicts/stardict-jmdict-ja-en
+app-dicts/stardict-langdao-en-zh-gb
+app-dicts/stardict-langdao-zh-en-gb
+app-dicts/stardict-mova-smiley
+app-dicts/stardict-oxford-en-zh-gb
+app-dicts/stardict-quick-eng-fra
+app-dicts/stardict-quick-eng-jpn
+app-dicts/stardict-quick-jpn-eng
+app-dicts/stardict-quick-ru-en
+app-dicts/stardict-xdict-en-zh-big5
+app-dicts/stardict-xdict-en-zh-gb
+app-dicts/stardict-xdict-zh-en-big5
+app-dicts/stardict-xdict-zh-en-gb
+app-text/stardict
+
+# Johannes Huber <johu@gentoo.org> (28 Nov 2016)
+# Masked for removal in 14 days. Gentoo temp workaround package.
+# Superseded by kde-frameworks/oxygen-icons:5.
+kde-base/legacy-icons
+
+# Pacho Ramos <pacho@gentoo.org> (27 Nov 2016)
 # Dead for years, replaced by media-video/devedeng, bug #430564, removal in
 # a month.
 media-video/devede
@@ -61,10 +108,6 @@ net-misc/sparkleshare
 # Vulnerable to CVE-2015-1431 and nobody taking care of it, bug #538360.
 # Removal in a month.
 www-apps/phpBB
-
-# Pacho Ramos <pacho@gentoo.org> (27 Nov 2016)
-# Obsolete and not needed anymore, bug #545704, removal in a month.
-dev-dotnet/pango-sharp
 
 # Pacho Ramos <pacho@gentoo.org> (27 Nov 2016)
 # Vulnerable to CVE-2015-3248 (#552534), and nobody willing to take care of
@@ -175,15 +218,10 @@ dev-libs/libroadnav
 # Removal in a month.
 app-mobilephone/gsmlib
 
-
 # Pacho Ramos <pacho@gentoo.org> (27 Nov 2016)
 # Not compatible with tcl/tk 8.6, obsolete version, bug #547322.
 # Try to use versions from sci overlay. Removal in a month.
 media-gfx/brlcad
-
-# Lars Wendler <polynomial-c@gentoo.org> (26 Nov 2016)
-# Masked until all reverse dependencies no longer break.
->=app-text/hunspell-1.5.0
 
 # Mike Gilbert <floppym@gentoo.org> (25 Nov 2016)
 # Modules are now part of app-emulation/open-vm-tools.
@@ -335,7 +373,7 @@ net-libs/libkolabxml
 
 # Lars Wendler <polynomial-c@gentoo.org> (27 Oct 2016)
 # Breaks build of some packages. See tracker bug #598186
-=sys-devel/flex-2.6.2
+>=sys-devel/flex-2.6.2
 
 # Craig Andrews <candrews@integralblue.com> (25 Oct 2016)
 # >=media-tv/kodi-17.0_alpha requires >=media-video/ffmpeg-3.0

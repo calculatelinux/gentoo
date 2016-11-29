@@ -7,12 +7,9 @@
 
 # Pacho Ramos <pacho@gentoo.org> (27 Nov 2016)
 # Not rely on monodevelop, bug #596656
-net-irc/hexchat theme-manager
-gnome-extra/zeitgeist-datasources mono
-
-# Pacho Ramos <pacho@gentoo.org> (27 Nov 2016)
 # dev-dotnet/zeitgeist-sharp is going to be removed, bug #582894
-gnome-extra/zeitgeist-datasources tomboy
+net-irc/hexchat theme-manager
+gnome-extra/zeitgeist-datasources mono tomboy
 
 # Pacho Ramos <pacho@gentoo.org> (27 Nov 2016)
 # Avoid the usage of dead net-dialup/capi4k-utils
@@ -137,10 +134,6 @@ dev-util/intel-ocl-sdk system-clang
 # Mike Gilbert <floppym@gentoo.org> (23 Jun 2016)
 # This flag only has meaning on amd64
 sys-boot/grub:2 grub_platforms_xen-32
-
-# Brian Evans <grknight@gentoo.org> (14 Jun 2016)
-# Igbinary is not ready for php 7
->=dev-php/pecl-redis-3.0 igbinary
 
 # Matthew Brewer <tomboy64@sina.cn> (02 June 2016)
 # Acked-by: Amy Winston <amynka@gentoo.org>
