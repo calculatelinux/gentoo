@@ -30,6 +30,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Mike Pagano <mpagano@gentoo.org> (04 Nov 2016)
+# Masked for testing
+=app-portage/portpeek-2.1.21*
+
 # Mike Gilbert <floppym@gentoo.org> (03 Dec 2016)
 # Sandbox failure on install. No maintainer.
 # https://bugs.gentoo.org/597146
@@ -467,11 +471,6 @@ sci-geosciences/googleearth
 # Masked for testing, see bug #588894.
 =x11-misc/light-locker-1.7.0-r1
 
-# James Le Cuirot <chewi@gentoo.org> (12 Sep 2016)
-# Now only available on Steam. Binaries were removed by the publisher
-# and Humble Bundle over 2 years ago. Removal in 60 days. Bug #588110.
-games-action/awesomenauts
-
 # Lars Wendler <polynomial-c@gentoo.org> (06 Sep 2016)
 # Breaks samba's nmbd process (bug #592502)
 # Masked the possible fixed samba version until more testing has been performed.
@@ -903,11 +902,14 @@ dev-ruby/weakling
 # Masked slotted lua for testing
 # William Hubbs <williamh@gentoo.org> (07 Aug 2016)
 # Taking this mask since Mabi is retired
+# Rafael Martins <rafaelmartins@gentoo.org> (04 Dec 2016)
+# Adding Lua 5.3 to mask
 app-eselect/eselect-lua
 =dev-lang/lua-5.1.5-r2
 =dev-lang/lua-5.1.5-r100
 =dev-lang/lua-5.2.3
 =dev-lang/lua-5.2.3-r1
+=dev-lang/lua-5.3.3
 
 # Sergey Popov <pinkbyte@gentoo.org> (20 Mar 2014)
 # Security mask of vulnerable versions, wrt bug #424167
