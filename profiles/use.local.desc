@@ -133,6 +133,7 @@ app-admin/rsyslog:snmp - Build the snmp modify and output module (requires net-a
 app-admin/rsyslog:ssl - Add support for encrypted client/server communication (requires net-libs/gnutls)
 app-admin/rsyslog:systemd - Build the journal input and output module (requires sys-apps/systemd)
 app-admin/rsyslog:usertools - Installs the user tools (rsgtutil, rscryutil...) corresponding to the set USE flags
+app-admin/rsyslog:uuid - Include UUIDs in messages (requires sys-apps/util-linux)
 app-admin/rsyslog:zeromq - Build the ZeroMQ input and output modules (requires net-libs/czmq)
 app-admin/sagan:libdnet - Add support for dev-libs/libdnet
 app-admin/sagan:lognorm - Add support for log/rules normalizations via dev-libs/liblognorm
@@ -1115,10 +1116,14 @@ app-text/qpdfview:synctex - Add support for searching TeX sources
 app-text/sdcv:darkterm - Improve readability of color output on terminals with dark background.
 app-text/sgmltools-lite:jadetex - Add support for app-text/jadetex (for processing tex files produced by the TeX backend of Jade)
 app-text/stardict:advertisement - Enable stardict advertisements plugin
+app-text/stardict:cal - Enable calendar support using cal program
 app-text/stardict:dictdotcn - Enable dict.cn network plugin (for Chinese language)
 app-text/stardict:espeak - Enable text to speech synthesizer plugin using app-accessibility/espeak engine
+app-text/stardict:flite - Enable text to speech synthesizer plugin using app-accessibility/flite engine
+app-text/stardict:fortune - Enable plugin to read fortune messages using games-misc/fortune-mod. You may consider installing games-misc/fortune-mod-all to get all fortune messages.
 app-text/stardict:gucharmap - Enable plugin for unicode symbols description using gnome-extra/gucharmap
 app-text/stardict:htmlparse - Enable plugin to parse dictionaries with html content
+app-text/stardict:info - Enable plugin to read info pages
 app-text/stardict:man - Enable plugin to read manual pages
 app-text/stardict:powerwordparse - Enable plugin to parse powerword dictionaries
 app-text/stardict:pronounce - Install WyabdcRealPeopleTTS package (it is just many .wav files) to make StarDict pronounce English words
@@ -1128,6 +1133,7 @@ app-text/stardict:updateinfo - Enable plugin to check for stardict updates
 app-text/stardict:wikiparse - Enable plugin to parse dictionaries in wikimedia format
 app-text/stardict:wordnet - Enable wordnet plugin to find similar English words using lexical database
 app-text/stardict:xdxfparse - Enable plugin to parse dictionaries in xdxf (XML Dictionary eXchange Format)
+app-text/stardict:youdaodict - Enable youdao.com network plugin (for Chinese language)
 app-text/tesseract:math - Enable support for recognition of equations.
 app-text/tesseract:opencl - Enable opencl support for speedup using GPU computation.
 app-text/tesseract:osd - Enable support orientation and script detection.
@@ -3345,7 +3351,6 @@ kde-misc/kepas:oscar - Enables ICQ (AIM) support.
 kde-misc/kimtoy:scim - Enable Smart Common Input Method support
 kde-misc/kio-gdrive:dolphin - Enable integration with kde-apps/dolphin
 kde-misc/krusader:bookmarks - Add dependency on bookmark package.
-kde-misc/networkmanagement:openconnect - Build support for the OpenConnect VPN client
 kde-misc/tellico:addressbook - Add support for kdepim addressbook (kabc)
 kde-misc/tellico:discid - Add support for reading disc IDs from audio CDs
 kde-plasma/kde-cli-tools:kdesu - Build graphical frontend for kde-frameworks/kdesu
@@ -4340,8 +4345,6 @@ media-sound/denemo:portmidi - Enable support for the portmidi backend
 media-sound/dir2ogg:mac - Add support for decoding Monkey's Audio files
 media-sound/dir2ogg:wma - Add support for wma files through mplayer
 media-sound/drumstick:fluidsynth - Enable support for media-sound/fluidsynth
-media-sound/easytag:gtk2 - Enable GTK+:2 support and disable default GTK+:3 support
-media-sound/easytag:gtk3 - Enable GTK+:3 support (default) and disable GTK+:2 support
 media-sound/easytag:opus - Enable support for media-libs/opus and media-libs/opusfile (opus audio codec)
 media-sound/ecasound:lv2 - Add support for Ladspa V2
 media-sound/ecasound:oil - Use dev-libs/liboil for inner loop optimizations
@@ -4805,7 +4808,6 @@ media-video/mplayer:tremor - Enable internal support for Vorbis
 media-video/mplayer:twolame - Enable twolame MPEG-2 encoding
 media-video/mplayer:vcd - Enables VCD support
 media-video/mplayer:vidix - Support for vidix video output
-media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/mplayer:yuv4mpeg - Enables yuv4mpeg video output
 media-video/mplayer:zoran - Enables ZR360[56]7/ZR36060 video output
@@ -4829,6 +4831,7 @@ media-video/mpv:pvr - Enable Video4Linux2 MPEG PVR
 media-video/mpv:raspberry-pi - Enable support for the Raspberry Pi
 media-video/mpv:rubberband - Enable high quality pitch correction via media-libs/rubberband
 media-video/mpv:sdl - Enable media-libs/libsdl2 based video and audio outputs (Note: these outputs exist for compatibility reasons only, avoid if possible)
+media-video/mpv:tools - Install extra tools: mpv_identify.sh, mpv_idet.sh, and umpv
 media-video/mpv:uchardet - Enable subtitles charset discovery via dev-libs/uchardet
 media-video/mpv:vf-dlopen - Install additional video filters to be used with -vf dlopen
 media-video/noad:libmpeg2 - Support for libmpeg2 library
@@ -5728,7 +5731,6 @@ net-libs/libgsasl:gcrypt - Use dev-libs/libgcrypt for low-level crypto
 net-libs/libgsasl:ntlm - Add support for Microsoft's NTLM mechanism using net-libs/libntlm
 net-libs/libinfinity:server - Build and install the server binary including init.d/conf.d-scripts. Needed if you want to host an infinote server for gobby.
 net-libs/libisds:openssl - Use dev-libs/openssl as crypto backend instead of app-crypt/gpgme and dev-libs/libgcrypt
-net-libs/libkolabxml:csharp - Enable C# language bindings
 net-libs/libmicrohttpd:epoll - use epoll() system call
 net-libs/libmicrohttpd:messages - enable error messages
 net-libs/libnftnl:json - Supports parsing of JSON
@@ -6555,10 +6557,13 @@ net-print/hplip:scanner - Enable scanner on multifunction devices which support 
 net-print/hplip:snmp - Add support for net-analyzer/net-snmp which enables this driver to work over networks (both for server and client)
 net-print/hplip:static-ppds - Use statically-generated PPDs instead of Dynamic PPDs. Although this is deprecated some printers may still need it to work properly. Use this flag if hp-setup fails to find/create a valid PPD file
 net-print/magicfilter:lprng-failsafe - Refuse options for compability with certain LPRng versions.
+net-proxy/haproxy:51degrees - Device Detection using 51 Degrees
+net-proxy/haproxy:device-atlas - Device Detection using Device Atlas
 net-proxy/haproxy:net_ns - Enable network namespace support (CONFIG_NET_NS)
 net-proxy/haproxy:pcre-jit - Use JIT support for PCRE
 net-proxy/haproxy:slz - Use dev-libs/libslz compression library
 net-proxy/haproxy:tools - Install additional tools (halog, iprange)
+net-proxy/haproxy:wurfl - Device Detection using WURFL
 net-proxy/privoxy:editor - Enable the web-based actions file editor
 net-proxy/privoxy:external-filters - Allow to filter content with scripts and programs. Experimental
 net-proxy/privoxy:fast-redirects - Support fast redirects

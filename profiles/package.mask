@@ -30,9 +30,11 @@
 
 #--- END OF EXAMPLES ---
 
-# Mike Pagano <mpagano@gentoo.org> (04 Nov 2016)
-# Masked for testing
-=app-portage/portpeek-2.1.21*
+# Johannes Huber <johu@gentoo.org> (05 Dec 2016)
+# Masked for removal in 30 days. Dead upstream.
+# Relies on deprecated dev-qt/qt3support.
+# Superseded by kde-apps/kolourpaint.
+media-gfx/kiconedit
 
 # Mike Gilbert <floppym@gentoo.org> (03 Dec 2016)
 # Sandbox failure on install. No maintainer.
@@ -119,11 +121,6 @@ www-apps/phpBB
 # Vulnerable to CVE-2015-3248 (#552534), and nobody willing to take care of
 # the package. Removal in a month.
 sys-libs/openhpi
-
-# Pacho Ramos <pacho@gentoo.org> (27 Nov 2016)
-# Obsolete, orphan, needs porting to new python eclasses, bug #554458.
-# Removal in a month.
-x11-misc/menumaker
 
 # Pacho Ramos <pacho@gentoo.org> (27 Nov 2016)
 # Not compatible with mono-4 (#558934, #545964), removal in a month.
@@ -338,11 +335,6 @@ net-print/foomatic-filters
 # google code, no dependencies.
 dev-python/pssi
 
-# Johannes Huber <johu@gentoo.org> (04 Nov 2016)
-# Masked for reomval in 30 days. Superseded by kde-plasma/plasma-nm.
-# Only support for deprecated Plasma 4. Exported to kde-sunset overlay.
-kde-misc/networkmanagement
-
 # Tim Harder <radhermit@gentoo.org> (03 Nov 2016)
 # Masked for testing
 =sys-fs/fuse-3.0.0*
@@ -356,22 +348,6 @@ net-misc/bgpq
 # This was renamed by upstream years ago to jnr-ffi, which we have
 # long had a package for. Removal in 30 days.
 dev-java/jaffl
-
-# David Seifert <soap@gentoo.org> (29 Oct 2016)
-# Unmaintained, broken, do not work with GCC 6
-# Bugs #594506, #597780, removal in 30 days.
-<dev-cpp/xsd-4.0.0
-<dev-cpp/libxsd-frontend-2.0.0
-dev-cpp/libfrontend-elements
-dev-cpp/libbackend-elements
-dev-cpp/libcult
-<dev-util/build-0.3.10
-
-# David Seifert <soap@gentoo.org> (29 Oct 2016)
-# Unmaintained, depends on ancient and broken C++ libraries
-# Removal in 30 days.
-net-libs/libkolab
-net-libs/libkolabxml
 
 # Lars Wendler <polynomial-c@gentoo.org> (27 Oct 2016)
 # Breaks build of some packages. See tracker bug #598186
@@ -706,12 +682,6 @@ dev-lang/niecza-bin
 # Sergey Popov <pinkbyte@gentoo.org> (15 Feb 2016)
 # Security mask, wrt bug #519730
 <app-emulation/ganeti-2.11.6-r2
-
-# Alexis Ballier <aballier@gentoo.org> (15 Feb 2016)
-# Breaks some of its reverse dependencies.
-# Bug 574788
->=media-video/ffmpeg-3.0
->=media-video/mplayer-1.3.0
 
 # James Le Cuirot <chewi@gentoo.org> (07 Feb 2016)
 # Masked until 2.0 final arrives, which hopefully won't depend on
