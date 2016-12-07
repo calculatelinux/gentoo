@@ -1,4 +1,4 @@
-DEFINED_PHASES=prepare
+DEFINED_PHASES=configure prepare
 DEPEND=!>=app-shells/bash-4.4
 DESCRIPTION=bash source code debugging
 EAPI=6
@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/bashdb/bashdb-4.3-0.91.tar.bz2
-_md5_=6a732fcefcd9bd50a3af30acd5b28fbd
+_md5_=c308524b387aa36e36993053bd985564

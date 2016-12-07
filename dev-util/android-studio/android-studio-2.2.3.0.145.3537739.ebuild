@@ -6,7 +6,11 @@ EAPI=6
 inherit eutils java-pkg-2 versionator
 
 RESTRICT="strip"
-QA_PREBUILT="opt/${PN}/bin/libbreakgen*.so opt/${PN}/bin/fsnotifier*"
+QA_PREBUILT="opt/${PN}/bin/libbreakgen*.so
+	opt/${PN}/bin/fsnotifier*
+	opt/${PN}/lib/libpty/linux/x86*/libpty.so
+	opt/${PN}/plugins/android/lib/libwebp_jni*.so"
+
 if [[ $(get_version_component_count) -eq 6 ]]; then
 	STUDIO_V=$(get_version_component_range 1-4)
 	BUILD_V=$(get_version_component_range 5-6)
@@ -22,7 +26,7 @@ SRC_URI="https://dl.google.com/dl/android/studio/ide-zips/${STUDIO_V}/${PN}-ide-
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="selinux"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="app-arch/zip
 	dev-java/commons-logging:0
@@ -40,7 +44,8 @@ RDEPEND=">=virtual/jdk-1.7
 	>=media-libs/freetype-2.5.5
 	>=media-libs/libpng-1.2.51
 	>=media-libs/mesa-10.2.8
-	|| ( >=sys-libs/ncurses-5.9-r3:5/5 >=sys-libs/ncurses-5.9-r3:0/5 )
+	|| ( gnome-extra/zenity kde-apps/kdialog x11-apps/xmessage x11-libs/libnotify )
+	|| ( >=sys-libs/ncurses-5.9-r3:5/5[tinfo] >=sys-libs/ncurses-5.9-r3:0/5[tinfo] )
 	>=sys-libs/zlib-1.2.8-r1
 	>=x11-libs/libX11-1.6.2
 	>=x11-libs/libXau-1.0.7-r1
@@ -55,7 +60,7 @@ RDEPEND=">=virtual/jdk-1.7
 	>=x11-libs/libxshmfence-1.1"
 S=${WORKDIR}/${PN}
 
-java_prepare() {
+src_prepare() {
 	eapply_user
 	# This is really a bundled jdk not a jre
 	rm -R "${S}/jre" || die "Could not remove bundled jdk"
