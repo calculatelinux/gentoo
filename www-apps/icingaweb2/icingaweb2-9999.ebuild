@@ -24,6 +24,7 @@ DEPEND=">=net-analyzer/icinga2-2.1.1
 			|| (
 				dev-lang/php:5.6[apache2?,cli,gd,json,intl,ldap?,mysql?,pdo,postgres?,sockets,ssl,xslt,xml]
 				dev-lang/php:7.0[apache2?,cli,gd,json,intl,ldap?,mysql?,pdo,postgres?,sockets,ssl,xslt,xml]
+				dev-lang/php:7.1[apache2?,cli,gd,json,intl,ldap?,mysql?,pdo,postgres?,sockets,ssl,xslt,xml]
 			)
 		)
 		nginx? (
@@ -31,6 +32,7 @@ DEPEND=">=net-analyzer/icinga2-2.1.1
 			|| (
 				dev-lang/php:5.6[apache2?,cli,fpm,gd,json,intl,ldap?,mysql?,pdo,postgres?,sockets,ssl,xslt,xml]
 				dev-lang/php:7.0[apache2?,cli,fpm,gd,json,intl,ldap?,mysql?,pdo,postgres?,sockets,ssl,xslt,xml]
+				dev-lang/php:7.1[apache2?,cli,fpm,gd,json,intl,ldap?,mysql?,pdo,postgres?,sockets,ssl,xslt,xml]
 			)
 		)"
 RDEPEND="${DEPEND}"
