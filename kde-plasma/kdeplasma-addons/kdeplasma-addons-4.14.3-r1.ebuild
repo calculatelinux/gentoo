@@ -10,7 +10,7 @@ inherit flag-o-matic kde4-base
 DESCRIPTION="Extra Plasma applets and engines"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux"
-IUSE="attica debug desktopglobe eigen exif fcitx ibus json +kdepim oauth
+IUSE="attica debug desktopglobe eigen exif fcitx ibus json oauth +pim
 qalculate qwt scim"
 
 RESTRICT=test
@@ -19,7 +19,7 @@ RESTRICT=test
 # krunner is only needed to generate dbus interface for lancelot
 COMMON_DEPEND="
 	app-crypt/qca:2[qt4(+)]
-	$(add_kdebase_dep krunner '' 4.11)
+	kde-plasma/krunner:4
 	$(add_kdebase_dep plasma-workspace '' 4.11)
 	x11-misc/shared-mime-info
 	attica? ( dev-libs/libattica )
@@ -28,8 +28,8 @@ COMMON_DEPEND="
 	fcitx? ( app-i18n/fcitx[dbus(+)] )
 	ibus? ( app-i18n/ibus )
 	json? ( dev-libs/qjson )
-	kdepim? ( $(add_kdeapps_dep kdepimlibs) )
 	oauth? ( dev-libs/qoauth:0 )
+	pim? ( $(add_kdeapps_dep kdepimlibs) )
 	qalculate? ( sci-libs/libqalculate )
 	qwt? ( x11-libs/qwt:5 )
 	scim? ( app-i18n/scim )
@@ -51,8 +51,8 @@ src_configure() {
 		$(cmake-utils_use_with exif Kexiv2)
 		$(cmake-utils_use_build ibus)
 		$(cmake-utils_use_with json QJSON)
-		$(cmake-utils_use_with kdepim KdepimLibs)
 		$(cmake-utils_use_with oauth QtOAuth)
+		$(cmake-utils_use_with pim KdepimLibs)
 		$(cmake-utils_use_with qalculate)
 		$(cmake-utils_use_with qwt)
 		$(cmake-utils_use_build scim)
