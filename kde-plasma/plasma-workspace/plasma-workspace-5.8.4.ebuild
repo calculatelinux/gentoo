@@ -108,12 +108,12 @@ RDEPEND="${COMMON_DEPEND}
 	!kde-plasma/freespacenotifier:4
 	!kde-plasma/libtaskmanager:4
 	!kde-plasma/kcminit:4
-	!kde-base/kdebase-startkde:4
+	!kde-plasma/kdebase-startkde:4
 	!kde-plasma/klipper:4
 	!kde-plasma/krunner:4
 	!kde-plasma/ksmserver:4
 	!kde-plasma/ksplash:4
-	!kde-base/plasma-workspace:4
+	!kde-plasma/plasma-workspace:4
 "
 DEPEND="${COMMON_DEPEND}
 	x11-proto/xproto

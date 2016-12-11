@@ -3319,13 +3319,7 @@ kde-apps/pimcommon:designer - Build plugins for dev-qt/designer
 kde-apps/spectacle:kipi - Enable support for the KDE Image Plugin Interface
 kde-apps/spectacle:share - Enable support for a share menu using dev-libs/purpose
 kde-apps/step:qalculate - Enable the libqalculate library for unit conversion
-kde-base/kdebase-startkde:crash-reporter - Builds a gui tool to submit crash information to the upstream backtracker
-kde-base/kdebase-startkde:wallpapers - Install the KDE Plasma wallpapers
 kde-base/kdelibs:opengl - Enable OpenGL support for Plasma (GLApplet)
-kde-base/kdm:consolekit - Enables support for authorization using consolekit
-kde-base/plasma-workspace:json - Enable JSON support via dev-libs/qjson
-kde-base/plasma-workspace:pim - KDE PIM integration via kde-apps/kdepimlibs
-kde-base/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/libqalculate
 kde-base/pykde4:akonadi - Compile bindings for Akonadi
 kde-frameworks/kconfigwidgets:man - Build and install man pages
 kde-frameworks/kded:man - Build and install man pages
@@ -3364,6 +3358,8 @@ kde-misc/tellico:addressbook - Add support for kdepim addressbook (kabc)
 kde-misc/tellico:discid - Add support for reading disc IDs from audio CDs
 kde-plasma/kde-cli-tools:kdesu - Build graphical frontend for kde-frameworks/kdesu
 kde-plasma/kde-gtk-config:gtk3 - Add support for gtk+3-based applications.
+kde-plasma/kdebase-startkde:crash-reporter - Builds a gui tool to submit crash information to the upstream backtracker
+kde-plasma/kdebase-startkde:wallpapers - Install the KDE Plasma wallpapers
 kde-plasma/kdeplasma-addons:attica - Enable support for dev-libs/libattica
 kde-plasma/kdeplasma-addons:desktopglobe - Enable Desktop Globe wallpaper using kde-apps/marble
 kde-plasma/kdeplasma-addons:eigen - Build Mandelbrot wallpaper plugin using dev-cpp/eigen using SLOT 2
@@ -3376,6 +3372,7 @@ kde-plasma/kdeplasma-addons:qalculate - Enable Qalculate runner using sci-libs/l
 kde-plasma/kdeplasma-addons:qwt - Enable applets that use x11-libs/qwt SLOT 5
 kde-plasma/kdeplasma-addons:scim - Enable applets that use app-i18n/scim
 kde-plasma/kdeplasma-addons:share - Enable applet for quickly sharing data to a variety of sources
+kde-plasma/kdm:consolekit - Enables support for authorization using consolekit
 kde-plasma/kinfocenter:egl - Retrieve information about OpenGL via EGL
 kde-plasma/kinfocenter:gles2 - Show OpenGL ES information in kinfocenter
 kde-plasma/kinfocenter:pci - Show advanced PCI information
@@ -3407,6 +3404,8 @@ kde-plasma/plasma-nm:openconnect - Build support for the OpenConnect VPN client
 kde-plasma/plasma-nm:teamd - Enable Teamd control support
 kde-plasma/plasma-sdk:plasmate - IDE for writing Plasma/KWin components (themes, plasmoids, runners, data engines)
 kde-plasma/plasma-workspace:geolocation - Enables dataengine providing location information
+kde-plasma/plasma-workspace:json - Enable JSON support via dev-libs/qjson
+kde-plasma/plasma-workspace:pim - KDE PIM integration via kde-apps/kdepimlibs
 kde-plasma/plasma-workspace:prison - Enable support for barcodes/QRcodes
 kde-plasma/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/libqalculate
 kde-plasma/powerdevil:pm-utils - Adds support for suspend/resume the system through sys-power/pm-utils
@@ -8353,7 +8352,7 @@ x11-misc/xmobar:timezone - Enables localized date support
 x11-misc/xmobar:with_conduit - Use conduit to fetch weather data.
 x11-misc/xmobar:with_uvmeter - Plugin to show UV data for Australia.
 x11-misc/xscreensaver:gdm - Use gdmflexiserver from gnome-base/gdm instead of x11-misc/lightdm
-x11-misc/xscreensaver:new-login - Enable user switching support using gdmflexiserver (x11-misc/lightdm) or kdmctl (kde-base/kdm)
+x11-misc/xscreensaver:new-login - Enable user switching support using gdmflexiserver (x11-misc/lightdm)
 x11-misc/xss-lock:man - Build and install man pages
 x11-plugins/bfm:gkrellm - Enable building of app-admin/gkrellm module
 x11-plugins/compiz-plugins-extra:gconf - Install GConf schemas for the plugins, needed when using the GConf-based configuration backend in x11-wm/compiz.
@@ -8426,7 +8425,7 @@ x11-themes/redhat-artwork:audacious - Install media-sound/audacious theme
 x11-themes/redhat-artwork:cursors - Install Bluecurve cursors
 x11-themes/redhat-artwork:gdm - Install Bluecurve gnome-base/gdm theme
 x11-themes/redhat-artwork:icons - Install Bluecurve icons
-x11-themes/redhat-artwork:kdm - Install Bluecurve kde-base/kdm theme
+x11-themes/redhat-artwork:kdm - Install Bluecurve kde-plasma/kdm theme
 x11-themes/redhat-artwork:nautilus - Install Bluecurve gnome-base/nautilus icons
 x11-themes/skinenigmang-logos:dxr3 - Install logos for lower osd color depth on dxr3 cards
 x11-themes/vertex-theme:cinnamon - Install theme for gnome-extra/cinnamon
