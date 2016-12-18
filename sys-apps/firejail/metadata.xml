@@ -12,6 +12,9 @@
 		descendants to have their own private view of the globally shared
 		kernel resources, such as the network stack, process table, mount
 		table.
+
+		This is bleeding edge branch. For long term support version see
+		sys-apps/firejail-lts.
 	</longdescription>
 	<upstream>
 		<remote-id type="sourceforge">firejail</remote-id>

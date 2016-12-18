@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-perl/File-Slurp-Tiny >=dev-perl/libwww-perl-6.80.0 >=dev-perl/Log-Report-1.50.0 virtual/perl-Time-HiRes >=dev-perl/XML-Compile-1.510.0 >=dev-perl/XML-Compile-Cache-1.30.0 dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MA/MARKOV/XML-Compile-SOAP-3.20.tar.gz
-_eclasses_=multiprocessing	e32940a7b2a9992ad217eccddb84d548	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
+_eclasses_=multiprocessing	66b3bf714f8cfc1b6494db5269b4666e	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
 _md5_=b4402120f69b20ebbfcdffb4cd638e81
