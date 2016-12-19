@@ -61,7 +61,7 @@ RDEPEND="
 	clangcodemodel? ( >=sys-devel/clang-3.8.0:= )
 	qbs? ( ~dev-util/qbs-1.6.1 )
 	systemd? ( sys-apps/systemd:= )
-	webengine? ( >=dev-qt/qtwebengine-${QT_PV} )
+	webengine? ( >=dev-qt/qtwebengine-${QT_PV}[widgets] )
 	webkit? ( >=dev-qt/qtwebkit-${QT_PV} )
 "
 DEPEND="${RDEPEND}
@@ -70,7 +70,7 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-qt/qdoc-${QT_PV} )
 	test? ( >=dev-qt/qttest-${QT_PV} )
 "
-# qt translations must be installed for qt-creator translations to work
+# qt translations must also be installed or qt-creator translations won't be loaded
 for x in ${PLOCALES}; do
 	RDEPEND+=" linguas_${x}? ( >=dev-qt/qttranslations-${QT_PV} )"
 done

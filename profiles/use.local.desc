@@ -2455,12 +2455,13 @@ dev-qt/qt-creator:cmake - Enable cmake project manager plugin
 dev-qt/qt-creator:glsl - Enable GLSL source code editor
 dev-qt/qt-creator:ios - Build plugin for Apple iOS devices
 dev-qt/qt-creator:mercurial - Add support for dev-vcs/mercurial version control system
-dev-qt/qt-creator:modeling - Enable graphical model editor plugin
+dev-qt/qt-creator:modeling - Enable graphical model editor
 dev-qt/qt-creator:nim - Enable Nim source code editor
 dev-qt/qt-creator:perforce - Add support for Perforce version control system (requires manual installation of Perforce client)
 dev-qt/qt-creator:python - Enable Python source code editor
 dev-qt/qt-creator:qbs - Enable QBS project manager plugin
 dev-qt/qt-creator:qnx - Build plugin for QNX devices
+dev-qt/qt-creator:scxml - Enable graphical SCXML editor
 dev-qt/qt-creator:systemd - Add support for retrieving application output from journald
 dev-qt/qt-creator:valgrind - Add support for memory debugging using dev-util/valgrind
 dev-qt/qt-creator:webengine - Use dev-qt/qtwebengine to view documentation
@@ -3253,7 +3254,6 @@ kde-apps/kdebase-runtime-meta:oldwallet - Install kde-apps/kwalletd on a minimal
 kde-apps/kdecore-meta:minimal - Disable install of various KDE SC 4 based packages
 kde-apps/kdegraphics-mobipocket:thumbnail - Enables thumbnail generation
 kde-apps/kdenetwork-meta:ppp - Enable support for net-dialup/ppp.
-kde-apps/kdenetwork-meta:telepathy - Enable build of kde-apps/plasma-telepathy-meta, otherwise kde-apps/kopete.
 kde-apps/kdenlive:freesound - Enable freesound.org credentials support via dev-qt/qtwebkit to download files
 kde-apps/kdenlive:gles2 - Use GLES 2.0 or later instead of full OpenGL
 kde-apps/kdenlive:jogshuttle - Enable support for Jog-Shuttle devices
@@ -3266,7 +3266,6 @@ kde-apps/kdeutils-meta:floppy - Install kde-apps/kfloppy to format and create DO
 kde-apps/kget:bittorrent - Enable bittorrent transfer plugin through net-libs/libktorrent
 kde-apps/kget:gpg - Enable signature verification by QGpgME via kde-apps/kdepimlibs
 kde-apps/kget:mms - Enable MMS (Microsoft Media Server) plugin through media-libs/libmms
-kde-apps/kget:webkit - Enable KdeWebkit browser plugin using kde-misc/kwebkitpart
 kde-apps/kig:geogebra - Support files created by sci-mathematics/geogebra
 kde-apps/kig:scripting - Support Python scripting
 kde-apps/kio-extras:htmlthumbs - Enable HTML thumbnail previews via dev-qt/qtwebengine
