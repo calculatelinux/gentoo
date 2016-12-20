@@ -2545,8 +2545,6 @@ dev-qt/qtopengl:egl - Use EGL instead of GLX to manage OpenGL contexts
 dev-qt/qtopengl:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtopengl:gles2 - Use GLES 2.0 or later instead of full OpenGL
 dev-qt/qtopengl:qt3support - Enable the Qt3Support libraries for Qt4
-dev-qt/qtopenvg:exceptions - Build with support for exceptions
-dev-qt/qtopenvg:qt3support - Enable the Qt3Support libraries for Qt4
 dev-qt/qtphonon:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtphonon:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
 dev-qt/qtpositioning:geoclue - Use enhanced location information from app-misc/geoclue
@@ -5377,13 +5375,7 @@ net-fs/samba:client - Enables the client part
 net-fs/samba:cluster - Enable support for clustering
 net-fs/samba:dmapi - Enable support for DMAPI. This currently works only in combination with XFS.
 net-fs/samba:iprint - Enabling iPrint technology by Novell
-net-fs/samba:ldb - Enable the ldb tools
-net-fs/samba:netapi - Enable building of netapi bits
 net-fs/samba:quota - Enables support for user quotas
-net-fs/samba:server - Enables the server part
-net-fs/samba:smbclient - Enable smbclient tool
-net-fs/samba:smbsharemodes - Enable special smb share modes (?)
-net-fs/samba:swat - Enables support for swat configuration gui
 net-fs/samba:system-mitkrb5 - Use app-crypt/mit-krb5 instead of app-crypt/heimdal.
 net-fs/samba:winbind - Enables support for the winbind auth daemon
 net-fs/smbnetfs:gnome - Use the gnome-base/gnome-keyring for password management.
@@ -6945,6 +6937,8 @@ sci-libs/grib_api:jasper - Use media-libs/jasper instead of media-libs/openjpeg 
 sci-libs/gsl:cblas-external - Link gsl with external cblas provided by (virtual/cblas) instead of shipped internal version
 sci-libs/hdf5:fortran2003 - Enable new features that require Fortran 2003 (http://www.hdfgroup.org/HDF5/doc/fortran/NewFeatures_F2003.pdf)
 sci-libs/hdf5:hl - Enable high level API (https://support.hdfgroup.org/HDF5/doc/HL/index.html)
+sci-libs/hypre:fei - Build the internal Finite Element Interface routines
+sci-libs/hypre:int64 - Build the 64 bits integer library
 sci-libs/ipopt:hsl - hsl
 sci-libs/ipopt:mumps - Enable sci-libs/mumps support
 sci-libs/lapack-reference:deprecated - Build deprecated routines
@@ -8145,6 +8139,7 @@ www-servers/apache:apache2_modules_authn_core - Provides core authentication cap
 www-servers/apache:apache2_modules_authz_core - Provides core authorization capabilities to various authorization/authorization modules, such as authn_file and authz_user.
 www-servers/apache:apache2_modules_authz_dbd - Provides authorization capabilities via SQL database so that authenticated users can be allowed or denied access to portions of the web site by group membership.
 www-servers/apache:apache2_modules_cache_disk - Disk based storage module for the HTTP caching filter (similar to mem_cache in previous versions).
+www-servers/apache:apache2_modules_cache_socache - Shared object cache (socache) based storage module for the HTTP caching filter.
 www-servers/apache:apache2_modules_http2 - Enable http2/alpn module
 www-servers/apache:apache2_modules_lbmethod_bybusyness - Pending request counting load balancer scheduler algorithm for proxy_balancer.
 www-servers/apache:apache2_modules_lbmethod_byrequests - Request counting load balancer scheduler algorithm for proxy_balancer.

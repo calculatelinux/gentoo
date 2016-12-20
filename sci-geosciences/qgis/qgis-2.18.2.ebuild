@@ -64,7 +64,7 @@ RDEPEND="
 		${PYTHON_DEPS}
 	)
 	dev-db/sqlite:3
-	dev-db/spatialite
+	>=dev-db/spatialite-4.1.0
 	app-crypt/qca:2[qt4,ssl]
 "
 
