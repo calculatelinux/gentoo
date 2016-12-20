@@ -4,14 +4,15 @@
 
 EAPI=6
 
-DESCRIPTION="Astronomical user routines for IDL"
-HOMEPAGE="http://idlastro.gsfc.nasa.gov/"
-SRC_URI="${HOMEPAGE}/ftp/astron.tar.gz -> ${P}.tar.gz"
+DESCRIPTION="Craig Markwardt IDL procedures (MPFIT, CMSVLIB, etc)"
+HOMEPAGE="http://cow.physics.wisc.edu/~craigm/idl/idl.html"
+SRC_URI="http://www.physics.wisc.edu/~craigm/idl/down/cmtotal.tar.gz -> ${P}.tar.gz"
 
-LICENSE="public-domain"
+LICENSE="Markwardt"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
+
 DEPEND=""
 RDEPEND="dev-lang/gdl"
 
@@ -19,6 +20,6 @@ S="${WORKDIR}"
 
 src_install() {
 	insinto /usr/share/gnudatalanguage/${PN}
-	doins -r pro/*
-	dodoc *txt text/*
+	doins *.pro
+	dodoc *README
 }
