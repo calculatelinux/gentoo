@@ -2190,6 +2190,7 @@ dev-perl/DBIx-Class:admin_script - Modules required for the CLI DBIx::Class inte
 dev-perl/DBIx-Class:deploy - Modules required for "deploy" in DBIx::Class::Storage::DBI and "deploymen_statements" in DBIx::Class::Storage::DBI
 dev-perl/DBIx-Class:replicated - Modules required for DBIx::Class::Storage::DBI::Replicated
 dev-perl/File-HomeDir:xdg - Ensure XDG Semantics for returned paths via x11-misc/xdg-user-dirs
+dev-perl/File-Which:pwhich - Install dev-perl/App-pwhich which used to be a part of this package
 dev-perl/GD:animgif - Enable animated gif support
 dev-perl/Graphics-ColorNames:recommended - Install recommended support modules
 dev-perl/HTML-Mason:modperl - Enable www-apache/mod_perl support
@@ -5174,7 +5175,6 @@ net-analyzer/wireshark:androiddump - Install androiddump, an extcap interface to
 net-analyzer/wireshark:ciscodump - Install ciscodump, extcap interface to capture from a remote Cisco router
 net-analyzer/wireshark:crypt - Use dev-libs/libgcrypt to decrypt traffic
 net-analyzer/wireshark:doc-pdf - Build documentation in pdf format (US and a4 paper sizes)
-net-analyzer/wireshark:gtk3 - Build the wireshark executable with a GTK+ UI version 3.
 net-analyzer/wireshark:libssh - Use net-libs/libssh (for sshdump)
 net-analyzer/wireshark:netlink - Use dev-libs/libnl
 net-analyzer/wireshark:pcap - Use net-libs/libpcap for network packet capturing (build dumpcap, rawshark)
