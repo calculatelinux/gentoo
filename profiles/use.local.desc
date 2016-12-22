@@ -324,6 +324,7 @@ app-crypt/qca:softstore - Enable softstore plugin
 app-crypt/rhash:openssl - Add support for hashes from dev-libs/openssl
 app-crypt/seahorse:ldap - Enable seahorse to manipulate GPG keys on a LDAP server.
 app-crypt/tpm-tools:pkcs11 - Build Token data management utilities based on OpenCryptoki's (dev-libs/opencryptoki) PKCS#11 implementation.
+app-crypt/veracrypt:asm - Enable assembly for optimization
 app-crypt/zuluCrypt:gnome - Enable support for the freedesktop.org Secret Service API via app-crypt/libsecret. This does not control the gui!
 app-crypt/zuluCrypt:gui - Whether to build the QT gui. Highly recommended.
 app-crypt/zuluCrypt:kde - Enable support for KDE, e.g. via kde-apps/kwalletd. This does not control the gui, but NEEDS GUI ENABLED!
@@ -8317,6 +8318,7 @@ x11-misc/gpaste:gnome - Enable proper gnome support and enable gnome shell exten
 x11-misc/gtkdialog:glade - Enable support for gnome-base/libglade
 x11-misc/gtkdialog:vte - Enable support for x11-libs/vte
 x11-misc/i3status:filecaps - Linux capabilities library is required for i3status to be able to read net bandwith
+x11-misc/ktsuss:sudo - Use the sudo backend instead the su one
 x11-misc/light-locker:consolekit - Keep track of the various users, sessions, and seats present on the system.
 x11-misc/light-locker:dpms - Turn on the display on screensaver deactivation.
 x11-misc/light-locker:gtk3 - Build with GTK+ 3 instead of GTK+ 2.
