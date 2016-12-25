@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=6
-inherit eutils multilib-minimal toolchain-funcs
+inherit eutils multilib-minimal toolchain-funcs autotools flag-o-matic
 
 DESCRIPTION="BSD tar command"
 HOMEPAGE="http://www.libarchive.org/"
@@ -39,6 +39,11 @@ DEPEND="${RDEPEND}
 #PATCHES=(
 #)
 
+src_prepare() {
+	default
+	eautoreconf # elibtoolize is required for Solaris sol2_ld linker fix
+}
+
 multilib_src_configure() {
 	export ac_cv_header_ext2fs_ext2_fs_h=$(usex e2fsprogs) #354923
 
@@ -72,6 +77,9 @@ multilib_src_configure() {
 	myconf+=(
 		--without-lzmadec
 	)
+
+	# Fix linking on Solaris
+	[[ ${CHOST} == *-solaris* ]] && append-ldflags -lsocket  -lnsl
 
 	ECONF_SOURCE="${S}" econf "${myconf[@]}"
 }
