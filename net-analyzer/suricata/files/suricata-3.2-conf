@@ -29,7 +29,7 @@
 # SURICATA_CONF="suricata.yaml"
 
 # You can define the options here:
-# NB: avoid using -l, -c and setting logging.outputs.1.file.filename as the init script will try to set them for you.
+# NB: avoid using -l, -c, --user, --group and setting logging.outputs.1.file.filename as the init script will try to set them for you.
 
 # SURICATA_OPTS_q0="-q 0"
 # SURICATA_OPTS_q1="-q 1"
@@ -41,11 +41,16 @@ SURICATA_OPTS="-i eth0"
 
 # Log paths listed here will be created by the init script and will override the log path
 # set in the yaml file, if present.
-# SURICATA_LOG_PATH_q0="/var/log/suricata/q0"
-# SURICATA_LOG_PATH_q1="/var/log/suricata/q1"
-# SURICATA_LOG_PATH="/var/log/suricata"
-# SURICATA_LOG_FILE="suricata.log"
+# SURICATA_LOG_FILE_q0="/var/log/suricata/q0/suricata.log"
+# SURICATA_LOG_FILE_q1="/var/log/suricata/q1/suricata.log"
+# SURICATA_LOG_FILE="/var/log/suricata/suricata.log"
 
-# You can view all the available options you can set with --set
-# and check the full config settings in an easily parsable format.
-# SURICATA_DUMP=1
+# Run as user/group.
+# Do not define if you want to run as root or as the user defined in the yaml config file (run-as).
+# The ebuild should have created the dedicated user/group suricata:suricata for you to specify here below.
+# SURICATA_USER_q0="suricata"
+# SURICATA_GROUP_q0="suricata"
+# SURICATA_USER_q1="suricata"
+# SURICATA_GROUP_q1="suricata"
+# SURICATA_USER="suricata"
+# SURICATA_GROUP="suricata"
