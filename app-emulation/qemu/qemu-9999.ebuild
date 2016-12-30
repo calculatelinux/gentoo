@@ -142,7 +142,7 @@ USER_LIB_DEPEND="${COMMON_LIB_DEPEND}"
 X86_FIRMWARE_DEPEND="
 	>=sys-firmware/ipxe-1.0.0_p20130624
 	pin-upstream-blobs? (
-		~sys-firmware/seabios-1.8.2
+		~sys-firmware/seabios-1.10.1
 		~sys-firmware/sgabios-0.1_pre8
 		~sys-firmware/vgabios-0.7a
 	)
