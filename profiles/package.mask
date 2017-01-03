@@ -30,6 +30,20 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Orlitzky <mjo@gentoo.org> (02 Jan 2017)
+# Ancient version, dead upstream, no homepage, experiencing
+# build failures, no reverse dependencies -- we've hit all
+# the checkboxes. Masked for removal in 30 days. Bug 604464.
+dev-php/PHPonTrax
+
+# Michael Orlitzky <mjo@gentoo.org> (02 Jan 2017)
+# Ancient versions long forgotten by upstream, and
+# now experiencing build problems. Masked for removal
+# in 30 days. Bug 604462.
+dev-php/propel
+dev-php/propel-generator
+dev-php/propel-runtime
+
 # Daniel Campbell <zlg@gentoo.org> (02 Jan 2016)
 # Google Code shutdown and change of versioning scheme
 # needs 'old' versions masked (v94 -> v1.0.0)
@@ -98,16 +112,6 @@ dev-util/eric:5
 # Masked for being completely broken and unusable (bug 586356).
 # No reverse dependencies. Masked for removal in 30 days.
 net-analyzer/snips
-
-# Johannes Huber <johu@gentoo.org> (19 Dec 2016)
-# Masked for removal in 14 days. Superseded by kde-apps/kde-l10n.
-# No reverse dependencies.
-kde-apps/ktp-l10n
-
-# Johannes Huber <johu@gentoo.org> (19 Dec 2016)
-# Masked for removal in 14 days. Superseded by dev-libs/kdiagram.
-# No reverse dependencies. Never consumed by unmasked packages.
-kde-apps/kdgantt2
 
 # Tim Harder <radhermit@gentoo.org> (12 Dec 2016)
 # Outdated and broken in the tree.
@@ -225,10 +229,6 @@ app-mobilephone/gsmlib
 # Project is dead.
 # Please migrate to it's successor - net-misc/bgpq3
 net-misc/bgpq
-
-# Lars Wendler <polynomial-c@gentoo.org> (27 Oct 2016)
-# Breaks build of some packages. See tracker bug #598186
->=sys-devel/flex-2.6.2
 
 # Craig Andrews <candrews@integralblue.com> (25 Oct 2016)
 # >=media-tv/kodi-17.0_alpha requires >=media-video/ffmpeg-3.0
