@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit versionator linux-info eutils flag-o-matic toolchain-funcs udev
+inherit versionator linux-info flag-o-matic toolchain-funcs udev
 
 DESCRIPTION="A performant, transport independent, multi-platform implementation of RFC3720"
 HOMEPAGE="http://www.open-iscsi.org/"
@@ -22,6 +22,12 @@ RDEPEND="${DEPEND}
 	sys-fs/lsscsi
 	sys-apps/util-linux"
 REQUIRED_USE="infiniband? ( rdma ) || ( rdma tcp )"
+
+PATCHES=(
+	"${FILESDIR}/${P}-Makefiles.patch"
+	"${FILESDIR}/${P}-musl-fixes.patch"
+	"${FILESDIR}/${P}-musl-ethtool-compat.patch"
+)
 
 pkg_setup() {
 	linux-info_pkg_setup
@@ -59,11 +65,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-Makefiles.patch
-	epatch "${FILESDIR}"/${P}-musl-fixes.patch
-	eapply_user
-
 	sed -i -e 's:^\(iscsid.startup\)\s*=.*:\1 = /usr/sbin/iscsid:' etc/iscsid.conf || die
+	default
 }
 
 src_configure() {
