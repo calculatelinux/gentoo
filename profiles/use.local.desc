@@ -4309,8 +4309,6 @@ media-sound/clementine:moodbar - Enable moodbar support
 media-sound/clementine:projectm - Build with ProjectM visualization
 media-sound/clementine:seafile - Enable support for seafile: a file sync service
 media-sound/clementine:skydrive - Enable Skydrive support
-media-sound/clementine:system-sqlite - Use the system-wide dev-db/sqlite installation
-media-sound/clementine:ubuntu-one - Enable Ubuntu One support
 media-sound/clementine:udisks_legacy - Enable storage management support via legacy sys-fs/udisks:0
 media-sound/clementine:vkontakte - Enable vk.com support
 media-sound/clementine:wiimote - Enable support for Wii remote
@@ -5706,6 +5704,7 @@ net-libs/gnutls:openssl - Build openssl compatibility libraries
 net-libs/gnutls:pkcs11 - Add support for PKCS#11 through app-crypt/p11-kit
 net-libs/gnutls:sslv2 - Support for the old/insecure SSLv2 protocol
 net-libs/gnutls:sslv3 - Support for the old/insecure SSLv3 protocol
+net-libs/gnutls:test-full - Enable full test mode
 net-libs/gnutls:tls-heartbeat - Enable the Heartbeat Extension in TLS and DTLS
 net-libs/gnutls:tools - Build extra tools
 net-libs/gtk-vnc:gtk3 - Build the gtk3 gtk-vnc library and other gtk3 assets
