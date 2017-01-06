@@ -14,7 +14,7 @@ LICENSE="GPL-3 LGPL-2.1"
 SLOT="0/30" # libgnutls.so number
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE_LINGUAS=" en cs de fi fr it ms nl pl sv uk vi zh_CN"
-IUSE="+cxx dane doc examples guile +idn nls +openssl pkcs11 sslv2 +sslv3 static-libs test test-full +tls-heartbeat tools zlib ${IUSE_LINGUAS// / linguas_}"
+IUSE="+cxx dane doc examples guile +idn nls +openssl pkcs11 sslv2 +sslv3 static-libs test test-full +tls-heartbeat tools valgrind zlib ${IUSE_LINGUAS// / linguas_}"
 
 REQUIRED_USE="
 	test? ( tools )
@@ -33,6 +33,7 @@ RDEPEND=">=dev-libs/libtasn1-4.9:=[${MULTILIB_USEDEP}]
 	pkcs11? ( >=app-crypt/p11-kit-0.23.1[${MULTILIB_USEDEP}] )
 	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )
 	idn? ( net-dns/libidn[${MULTILIB_USEDEP}] )
+	valgrind? ( dev-util/valgrind )
 	test-full? (
 		app-crypt/dieharder
 		app-misc/datefudge
@@ -105,7 +106,6 @@ multilib_src_configure() {
 	#   complains about duplicate symbols
 	ECONF_SOURCE=${S} \
 	econf \
-		--disable-valgrind-tests \
 		--without-included-libtasn1 \
 		$(use_enable cxx) \
 		$(use_enable dane libdane) \
@@ -115,6 +115,7 @@ multilib_src_configure() {
 		$(multilib_native_use_enable doc gtk-doc) \
 		$(multilib_native_use_enable guile) \
 		$(multilib_native_use_enable test tests) \
+		$(multilib_native_use_enable valgrind valgrind-tests) \
 		$(use_enable nls) \
 		$(use_enable openssl openssl-compatibility) \
 		$(use_enable tls-heartbeat heartbeat-support) \
