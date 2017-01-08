@@ -30,6 +30,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Orlitzky <mjo@gentoo.org> (07 Jan 2017)
+# Places unauthenticated HTTP data into root's SSH authorized_keys
+# file. Nope. Masked for removal in 30 days. Bug 603346.
+app-admin/amazon-ec2-init
+
+# Mart Raudsepp <leio@gentoo.org> (07 Jan 2017)
+# No releases of this API version since March 2001, abandoned
+# in favour of glib:2 for 14 years.
+# Marked for removal in 30 days. Bug 604966.
+dev-libs/glib:1
+
 # Michael Orlitzky <mjo@gentoo.org> (06 Jan 2017)
 # Dead templating projects, you should move to something
 # like dev-php/smarty or dev-php/twig instead.
@@ -63,7 +74,7 @@ dev-php/propel
 dev-php/propel-generator
 dev-php/propel-runtime
 
-# Daniel Campbell <zlg@gentoo.org> (02 Jan 2016)
+# Daniel Campbell <zlg@gentoo.org> (02 Jan 2017)
 # Google Code shutdown and change of versioning scheme
 # needs 'old' versions masked (v94 -> v1.0.0)
 # Masked for removal in 30 days.
@@ -161,11 +172,6 @@ media-plugins/gimp-gmic
 # Hans de Graaff <graaff@gentoo.org> (07 Dec 2016)
 # Mask ruby 2.0 for removal, bug 576034
 dev-lang/ruby:2.0
-
-# Pacho Ramos <pacho@gentoo.org> (27 Nov 2016)
-# Vulnerable to CVE-2015-1431 and nobody taking care of it, bug #538360.
-# Removal in a month.
-www-apps/phpBB
 
 # Kent Fredric (19 Nov 2016)
 # virtual/perl-MathBigInt-1.999.726+ Mask Block
