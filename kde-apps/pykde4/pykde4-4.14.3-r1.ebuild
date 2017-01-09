@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -20,8 +20,8 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
 	${PYTHON_DEPS}
-	>=dev-python/PyQt4-4.11.1[${PYTHON_USEDEP},dbus,declarative,script,sql,svg,webkit,X]
-	>=dev-python/sip-4.16.2:=[${PYTHON_USEDEP}]
+	<dev-python/PyQt4-4.12[${PYTHON_USEDEP},dbus,declarative,script,sql,svg,webkit,X]
+	<dev-python/sip-4.19:=[${PYTHON_USEDEP}]
 	kde-frameworks/kdelibs:4[opengl]
 	akonadi? ( $(add_kdeapps_dep kdepimlibs) )
 "
