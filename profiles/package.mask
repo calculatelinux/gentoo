@@ -30,6 +30,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Mike Gilbert <floppym@gentoo.org> (08 Jan 2017)
+# Masked pending testing and eclass/profile support.
+dev-lang/python:3.6
+
+# Chris Reffett <creffett@gentoo.org> (08 Jan 2017)
+# Superseded by projectlibre-bin, please migrate to that.
+# Masked for removal in 30 days.
+app-office/openproj-bin
+
 # Michael Orlitzky <mjo@gentoo.org> (07 Jan 2017)
 # Places unauthenticated HTTP data into root's SSH authorized_keys
 # file. Nope. Masked for removal in 30 days. Bug 603346.
@@ -122,10 +131,6 @@ games-rpg/valyriatear
 # No maintainer. Was introduced for media-sound/tomahwak. Uses deprecated
 # EAPI.
 net-libs/qtweetlib
-
-# Lars Wendler <polynomial-c@gentoo.org> (24 Dec 2016)
-# Fails with Google TLS certificates and possibly others (bug #603622).
-=dev-libs/nss-3.28
 
 # Göktürk Yüksek <gokturk@gentoo.org> (22 Dec 2016)
 # Dead upstream, no more hosted on googlecode
