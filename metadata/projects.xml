@@ -1373,7 +1373,7 @@
     </member>
   </project>
   <project>
-    <email>gokturk@gentoo.org</email>
+    <email>gentoostats@gentoo.org</email>
     <name>Gentoostats</name>
     <url>https://wiki.gentoo.org/wiki/Project:Gentoostats</url>
     <description>Gentoostats project maintains and develops the "gentoostats" statistics collection software for Gentoo machines</description>
