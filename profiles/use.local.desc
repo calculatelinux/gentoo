@@ -796,6 +796,7 @@ app-misc/byobu:screen - Use app-misc/screen as the default backend
 app-misc/ca-certificates:cacert - Include root certs from CAcert (http://www.cacert.org/) and Software in the Public Interest (http://www.spi-inc.org/)
 app-misc/ca-certificates:insecure_certs - Install certs which are known to *not* being trustworthy.
 app-misc/ddccontrol:pci - enable direct PCI memory access (the setuid ddcpci util)
+app-misc/ddcutil:enable-api-libs - Enables the C/C++ API.
 app-misc/ddcutil:usb-monitor - Adds support for monitors attached via USB.
 app-misc/ddcutil:user-permissions - Adds a udev rules to allow non-root users in the i2c group to access the /dev/i2c-* devices. If usb-monitor is selected, users will need to be added to the video group to access the USB monitor. Otherwise, only root will be able to use ddcutil.
 app-misc/digitemp:ds2490 - Build support for the ds2490 sensor
@@ -3497,6 +3498,7 @@ mail-client/claws-mail:smime - Build plugin for S/MIME support
 mail-client/claws-mail:spam-report - Enable plugin for spam reporting to various services
 mail-client/claws-mail:spamassassin - Build mail-filter/spamassassin plugin
 mail-client/claws-mail:valgrind - Add support for memory debugging using valgrind
+mail-client/claws-mail:webkit - Enables HTML e-mail rendering by using the net-libs/webkit-gtk library.
 mail-client/evolution:bogofilter - Build mail-filter/bogofilter plugin
 mail-client/evolution:crypt - Enable GPG encryption support using app-crypt/gnupg and app-crypt/pinentry
 mail-client/evolution:geolocation - Enable support for displaying contacts on a map inside evolution using media-libs/libchamplain
@@ -3767,7 +3769,6 @@ media-gfx/blender:openimageio - Enable OpenImageIO Support
 media-gfx/blender:opennl - Enable use of Open Numerical Library
 media-gfx/blender:opensubdiv - Add rendering support form OpenSubdiv from Dreamworks Animation through media-libs/opensubdiv.
 media-gfx/blender:openvdb - Add GPU preview rendering. Only works with nVidia cards.
-media-gfx/blender:openvdb-compression - Support optional compression used by OpenVDB (requires media-gfx/openvdb).
 media-gfx/blender:player - Build the Blender Player. THis requires the Game engine.
 media-gfx/blender:redcode - This flag add support for RED CODE camera digital format (5K HD images *.r3d) - EXPERIMENTAL.
 media-gfx/blender:test - Build the provided unit tests.
@@ -3878,6 +3879,7 @@ media-gfx/nvidia-texture-tools:cuda - Enable NVIDIA CUDA toolkit support
 media-gfx/nvidia-texture-tools:glew - Enable support for The OpenGL Extension Wrangler Library (media-libs/glew)
 media-gfx/openclipart:gzip - Compresses clip art using gzip
 media-gfx/openexr_viewers:cg - Add support for nvidia's cg shaders
+media-gfx/openvdb:abi3-compat - Enables compatibility with the old 3.x ABI. enabled by dfault.
 media-gfx/openvdb:openvdb-compression - Adds enhanced compression to files through dev-libs/c-blosc. Very useful so enabled by dfault.
 media-gfx/photoqt:exiv2 - Use media-gfx/exiv2 as optional dependency
 media-gfx/photoqt:graphicsmagick - Use media-gfx/graphicsmagick as optional dependency
@@ -3963,7 +3965,6 @@ media-libs/gst-plugins-bad:bzip2 - Enable bzip2 encoder/decoder plugin
 media-libs/gst-plugins-bad:egl - Enable EGL support
 media-libs/gst-plugins-bad:gles2 - Enable GLES2 support
 media-libs/gst-plugins-base:ivorbis - Enable integer based vorbis decoder
-media-libs/gst-plugins-base:opus - Enable opus codec support
 media-libs/gst-plugins-base:pango - Enable pango GStreamer plugin
 media-libs/gstreamer:orc - Disable some PaX memory protections to allow plugins that use dev-lang/orc for runtime optimization to be used on hardened PaX systems
 media-libs/harfbuzz:glib - Compile with GLib Unicode support
@@ -4624,7 +4625,6 @@ media-tv/mythtv:lcd - Tells MythTV that you have an instance of app-misc/lcdproc
 media-tv/mythtv:lirc - Adds LIRC support directly to MythTV allowing for built in control via a LIRC device.
 media-tv/mythtv:mythlogserver - Enable support for syslog and file logging. Not used with systemd.
 media-tv/mythtv:perl - Builds the perl bindings for MythTV. Allows you to write scripts in Perl to control your MythTV setup or communicate with it.
-media-tv/mythtv:raop - Remote Audio Output Protocol (aka AirTunes/AirPlay)
 media-tv/mythtv:wrapper - Use Ubuntu mythtfrontend wrapper.
 media-tv/mythtv:xmltv - Pulls in the media-tv/xmltv TV listing grabbers for users not using Schedules Direct.
 media-tv/tvbrowser:themes - Install extra theme packs
@@ -5758,6 +5758,8 @@ net-libs/libnm-qt:modemmanager - Enable support for mobile broadband devices
 net-libs/liboauth:bindist - Alias for the nss USE flag, since there are license compliancy trouble when using OpenSSL.
 net-libs/liboauth:curl - If enabled, net-misc/curl is used thorugh the libcurl library; if it's not, the curl command is used instead. Some features are only available when using the library, but using it as library requires matching SSL implementations.
 net-libs/liboauth:nss - Use Mozilla NSS (dev-libs/nss) as hash library; if this is disabled, dev-libs/openssl is used instead.
+net-libs/liboping:filecaps - Allow non-root users to use [n]oping utility.
+net-libs/liboping:ncurses - Build ncurses-based version of oping utility (requires sys-libs/ncurses)
 net-libs/libosmocore:embedded - Build for embedded use and disable unsupported features
 net-libs/libosmocore:pcsc-lite - Enable smartcard support with sys-apps/pcsc-lite
 net-libs/libpcap:canusb - Use virtual/libusb to support Controller Area Network over USB (CAN USB)
@@ -6409,7 +6411,9 @@ net-misc/wicd:mac4lin - Change default icons to mac4lin icon set
 net-misc/wicd:ncurses - Installs a ncurses UI
 net-misc/wicd:pm-utils - Installs the pm-utils hooks for suspend/resume and requires sys-power/pm-utils
 net-misc/wireguard:debug - Enable verbose debug reporting in dmesg of various WireGuard peer and device information.
-net-misc/wireguard:kmod-src - Do not compile the kernel module. Instead install the kernel module source code to /usr/src/wireguard.
+net-misc/wireguard:module - Compile the actual WireGuard kernel module. Most certainly you want this enabled, unless you're doing something strange.
+net-misc/wireguard:module-src - Install the module source code to /usr/src, in case you like building kernel modules yourself.
+net-misc/wireguard:tools - Compile the wg(8) tool and related helpers. You probably want this enabled.
 net-misc/x2goserver:fuse - Use net-fs/sshfs to allow shared folders
 net-misc/xrdp:fuse - Enable clipboard file / device redirection via sys-fs/fuse
 net-misc/youtube-viewer:gtk - Install the gtk GUI, called gtk-youtube-viewer
@@ -7186,7 +7190,6 @@ sci-visualization/gnuplot:bitmap - Enable dot-matrix printers and pbm terminal
 sci-visualization/gnuplot:compat - Enable backwards compatibility with version 4 syntax
 sci-visualization/gnuplot:gd - Add support for media-libs/gd. Needed for GIF, JPEG, and PNG image output.
 sci-visualization/gnuplot:libcerf - Enable special functions from sci-libs/libcerf
-sci-visualization/gnuplot:thin-splines - Enable thin plate splines
 sci-visualization/gwyddion:fits - Enable FITS image import via sci-libs/cfitsio
 sci-visualization/gwyddion:sourceview - Enable support for x11-libs/gtksourceview
 sci-visualization/labplot:cantor - Enable support for different open-source computer algebra systems via kde-apps/cantor
@@ -8306,6 +8309,7 @@ x11-libs/libva-intel-driver:drm - Enables VA/DRM API support.
 x11-libs/libwnck:tools - Install wnckprop-3 and wnck-urgency-monitor-3 command-line tools
 x11-libs/libxcb:xkb - Enable the XCB keyboard extension
 x11-libs/motif:motif22-compatibility - Compatibility with Open Motif 2.2
+x11-libs/pango:X - Build and install the legacy pangoxft library
 x11-libs/pixman:loongson2f - Enable Loongson2f MMI optimizations.
 x11-libs/qscintilla:designer - Build plugin for Qt Designer
 x11-libs/qwt:designer - Installs dev-qt/designer plugin.
