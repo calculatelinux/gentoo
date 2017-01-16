@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=dev-perl/File-Which-1.90.0 virtual/perl-Getopt-Long dev-perl/JSON-MaybeXS virtual/perl-Scalar-List-Utils virtual/perl-XSLoader sys-libs/zlib dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/T/TI/TIMB/Devel-NYTProf-6.04.tar.gz
-_eclasses_=multiprocessing	66b3bf714f8cfc1b6494db5269b4666e	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
+_eclasses_=multiprocessing	7bb10a841be2368af0c00f27dd67560b	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
 _md5_=345f9f58bfc2c331924c8488417ecb26

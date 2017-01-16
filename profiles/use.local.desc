@@ -4800,6 +4800,7 @@ media-video/mjpg-streamer:output_rtsp - Plugin which provides a mechanism to tak
 media-video/mjpg-streamer:output_udp - Plugin receiving content over UDP and storing to a directory
 media-video/mjpg-streamer:v4l - Uses media-libs/libv4l function mapping for input_uvc plugin
 media-video/mjpg-streamer:www - Installs WWW content
+media-video/motion:mmal - Enables Multi-Media Abstraction Layer (MMAL) decoding support: Available e.g. on the Raspberry Pi.
 media-video/motiontrack:multiprocess - Enables multi-process support (SMP/cluster) for motiontrack programs
 media-video/mplayer:bl - Blinkenlights video output
 media-video/mplayer:bluray - Enable playback of Blu-ray filesystems
@@ -7021,15 +7022,7 @@ sci-libs/scipy:sparse - Adds support for sparse solving with sci-libs/umfpack
 sci-libs/scotch:int64 - Build the 64 bits integer library (needed for > 2^31 vertices)
 sci-libs/scotch:tools - Build and install extra exec tools
 sci-libs/shogun:R - Enable support for dev-lang/R
-sci-libs/shogun:arpack - Enable support for sci-libs/arpack
-sci-libs/shogun:eigen - Enable support for matrix package dev-cpp/eigen
-sci-libs/shogun:glpk - Enable support for sci-mathematics/glpk
-sci-libs/shogun:json - Enable support for parsing JSON format
-sci-libs/shogun:lpsolve - Enable support for Linear Programming Solver
-sci-libs/shogun:nlopt - Enable support non linear optimization from sci-libs/nlopt
 sci-libs/shogun:octave - Enable support for sci-mathematics/octave
-sci-libs/shogun:snappy - Enable support for snappy compression
-sci-libs/shogun:superlu - Enable support for sci-libs/superlu
 sci-libs/silo:silex - Build silex data browser
 sci-libs/spqr:metis - Use sci-libs/metis or sci-libs/parmetis for partitioning
 sci-libs/spqr:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb

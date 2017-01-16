@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=virtual/perl-CPAN-Meta virtual/perl-Exporter dev-perl/File-Find-Rule dev-perl/File-Find-Rule-Perl >=dev-perl/Perl-MinimumVersion-1.320.0 >=virtual/perl-Test-Simple-0.960.0 >=virtual/perl-version-0.700.0 dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/R/RJ/RJBS/Test-MinimumVersion-0.101082.tar.gz
-_eclasses_=multiprocessing	66b3bf714f8cfc1b6494db5269b4666e	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
+_eclasses_=multiprocessing	7bb10a841be2368af0c00f27dd67560b	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
 _md5_=2600251ea815ee636337a5cc559634a7

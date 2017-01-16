@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=!minimal? ( virtual/perl-IO-Socket-IP dev-perl/IO-Socket-INET6 >=dev-perl/IO-Socket-SSL-1.380.0 ) virtual/perl-Carp !<dev-perl/libwww-perl-6 virtual/perl-Compress-Raw-Zlib virtual/perl-IO virtual/perl-IO-Compress dev-perl/URI dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/O/OA/OALDERS/Net-HTTP-6.12.tar.gz
-_eclasses_=multiprocessing	66b3bf714f8cfc1b6494db5269b4666e	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
+_eclasses_=multiprocessing	7bb10a841be2368af0c00f27dd67560b	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
 _md5_=c4d59ce1c0a81a81e947bdcd8cae762d
