@@ -166,7 +166,6 @@ app-admin/syslog-ng:pacct - Enable support for reading Process Accounting files 
 app-admin/syslog-ng:redis - Enable support for Redis destinations
 app-admin/syslog-ng:smtp - Enable support for SMTP destinations
 app-admin/syslog-ng:spoof-source - Enable support for spoofed source addresses
-app-admin/sysstat:cron - Install /etc/cron.d script to periodically run sar
 app-admin/sysstat:isag - Install isag, the Interactive System Activity Graph tool
 app-admin/systemrescuecd-x86:isohybrid - Pass downloaded images through isohybrid in order to make it possible to copy them directly to USB media and boot (requires sys-boot/syslinux at build time).
 app-admin/testdisk:ewf - Include ewf library
@@ -2014,6 +2013,7 @@ dev-libs/libsodium:asm - Enables assembly implementations
 dev-libs/libsodium:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/libsolv:rpm - Enable support for RPM files
 dev-libs/libsqlora8:orathreads - Use Oracle threads
+dev-libs/libtasn1:valgrind - Enable usage of dev-util/valgrind in debug
 dev-libs/libtermkey:demos - Install demos, which pulls in dev-libs/glib
 dev-libs/libucl:regex - Enable regex checking for schema
 dev-libs/libucl:signatures - Enable signatures check
@@ -3814,6 +3814,7 @@ media-gfx/freewrl:java - Build and install java EAI/SAI support library
 media-gfx/freewrl:libeai - Build EAI C library
 media-gfx/freewrl:opencl - Enable OpenCL support
 media-gfx/freewrl:osc - Allows for OSC-based control and communication between multiple freewrl instances
+media-gfx/freewrl:rbp - Enable support for Rigid Body Physics
 media-gfx/geeqie:gpu-accel - Enable GPU acceleration support - experimental
 media-gfx/geeqie:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 media-gfx/geeqie:map - Enable items map display - experimental
@@ -5017,6 +5018,7 @@ net-analyzer/flent:plots - Enable drawing plots
 net-analyzer/flowgrind:pcap - Enable packet capturing support using net-libs/libpcap
 net-analyzer/fprobe:messages - enable console messages
 net-analyzer/goaccess:btree - Enable Tokyo Cabinet's on-disk B+ Tree database backend
+net-analyzer/goaccess:getline - Use GNU getline() to parse full line requests
 net-analyzer/goaccess:memhash - Enable Tokyo Cabinet's on-memory hash database backend
 net-analyzer/goaccess:tokyocabinet - Enable Tokyo Cabinet's on-memory hash database backend
 net-analyzer/gr-fosphor:glfw - enable GLFW based interface
@@ -8268,6 +8270,7 @@ x11-libs/cairo:opengl - Use Mesa backend for acceleration
 x11-libs/cairo:valgrind - Built-in support to mark memory regions
 x11-libs/cairo:xlib-xcb - Use XCB renderer backend for acceleration over xlib. Enabling this may solve or introduce display corruption problems.
 x11-libs/fltk:games - Builds and installs some extra games
+x11-libs/gdk-pixbuf:X - Build and install the legacy gdk_pixbuf_xlib-2.0 library
 x11-libs/glamor:gles - Build glamor based on gles2
 x11-libs/gtk+:broadway - Enable the GDK Broadway backend.
 x11-libs/gtk+:cloudprint - Enable printing via Google Cloud Print.

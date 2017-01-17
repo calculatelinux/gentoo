@@ -654,7 +654,7 @@
     <description>The Gentoo Common Lisp Project handles Common Lisp related packages in the Gentoo package tree.</description>
     <member>
       <email>nimiux@gentoo.org</email>
-      <name>Chema Alonso</name>
+      <name>Chema Alonso Josa</name>
       <role>Member</role>
     </member>
   </project>
@@ -3000,6 +3000,11 @@ developers and volunteer mentors.</description>
     <member>
       <email>mrueg@gentoo.org</email>
       <name>Manuel Rüger</name>
+      <role>Member</role>
+    </member>
+    <member>
+      <email>mudler@gentoo.org</email>
+      <name>Ettore Di Giacinto</name>
       <role>Member</role>
     </member>
     <member>
