@@ -30,6 +30,31 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (18 Jan 2017)
+# Dead upstream, spiritual successor is dev-ml/gsl-ocaml
+# Masked for removal in 30 days. Bug #574564, #593248, #601912.
+dev-ml/ocamlgsl
+
+# Michael Palimaka <kensington@gentoo.org> (18 Jan 2017)
+# Relies on dead gstreamer:0.10. Dead upstream.
+# Masked for removal in 30 days. Bug #603270.
+media-video/flumotion
+
+# Michael Palimaka <kensington@gentoo.org> (18 Jan 2017)
+# Obsolete. Use app-admin/filebeat instead.
+# Masked for removal in 30 days. Bug #603292.
+app-admin/filebeat-bin
+
+# Michael Palimaka <kensington@gentoo.org> (18 Jan 2017)
+# Fails to build with ffmpeg-3. Dead upstream.
+# Masked for removal in 30 days. Bug #602946.
+app-cdr/k9copy
+
+# Michael Palimaka <kensington@gentoo.org> (18 Jan 2017)
+# Obsolete - now a native feature in Plasma 5.8
+# Masked for removal in 30 days
+x11-misc/ksuperkey
+
 # Yixun Lan <dlan@gentoo.org> (16 Jan 2017)
 # Masked, Vulnerable due to RGW Denial of Service (bug #598206)
 # We mask it instead of removing them, due user may need them while
@@ -242,12 +267,6 @@ sci-geosciences/googleearth
 # Denis Dupeyron <calchan@gentoo.org> (12 Sep 2016)
 # Masked for testing, see bug #588894.
 =x11-misc/light-locker-1.7.0-r1
-
-# Lars Wendler <polynomial-c@gentoo.org> (06 Sep 2016)
-# Breaks samba's nmbd process (bug #592502)
-# Masked the possible fixed samba version until more testing has been performed.
->=sys-libs/tevent-0.9.30
->=sys-libs/ldb-1.1.29
 
 # Ian Stakenvicius <axs@gentoo.org> (31 Aug 2016)
 # Mask old versions of thunderbird as they are no longer supported,
@@ -475,8 +494,10 @@ sys-fs/bedup
 =app-emulation/vmware-modules-271*
 
 # Lars Wendler <polynomial-c@gentoo.org> (09 Sep 2015)
-# Masked for testing
->=net-fs/samba-4.3.0
+# Masked for testing and other various issues.
+=net-fs/samba-4.3*
+=net-fs/samba-4.4*
+>=net-fs/samba-4.6.0_rc1
 
 # Lars Wendler <polynomial-c@gentoo.org> (20 Aug 2015)
 # Releases are not from original upstream but from a fork.
@@ -535,12 +556,6 @@ dev-python/south
 # CVE-2014-8298 (bug #532342). You may be able to mitigate the vulnerability by
 # disabling GLX indirect rendering protocol support on the X server.
 <x11-drivers/nvidia-drivers-304
-
-# Sergey Popov <pinkbyte@gentoo.org> (28 Aug 2014)
-# Security mask, wrt bug #519650
-# If your application is broken due to this mask,
-# please file a separate bug report
-<net-dialup/ppp-2.4.7
 
 # Robin H. Johnson <robbat2@gentoo.org> (04 Aug 2014)
 # Masked for testing, presently fails upstream testsuite:

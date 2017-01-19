@@ -312,7 +312,6 @@ app-crypt/ophcrack-tables:xpfast - Installs the fast XP ophcrack tables
 app-crypt/ophcrack-tables:xpsmall - Installs the small free XP ophcrack tables
 app-crypt/p11-kit:asn1 - Enable ASN.1 certificate support
 app-crypt/p11-kit:trust - Build the trust policy module
-app-crypt/pinentry:clipboard - Enable clipboard integration
 app-crypt/qca:botan - Enable botan plugin
 app-crypt/qca:gcrypt - Enable gcrypt plugin
 app-crypt/qca:gpg - Enable GnuPG plugin
@@ -885,6 +884,7 @@ app-misc/recoll:xml - Index several XML-based formats (Abiword, FictionBook, Kwo
 app-misc/rlwrap:debug - Enable debug
 app-misc/screen:multiuser - Enable multiuser support (by setting correct permissions)
 app-misc/screen:nethack - Express error messages in nethack style
+app-misc/screen:utmp - Include utmp support
 app-misc/screenfetch:X - Use the media-gfx/scrot package to take screenshots
 app-misc/sphinx:id64 - use 64-bit document and word IDs
 app-misc/sphinx:re2 - use the dev-libs/re2 regular expression library
@@ -2418,6 +2418,7 @@ dev-python/restkit:cli - Install the restcli command line interface/tool, based 
 dev-python/scrapy:boto - Add support for Amazon S3 via dev-python/boto
 dev-python/scrapy:ibl - Use Instace Based Learning algorithm for automatic extraction
 dev-python/simplecv:shell - Enable the iPython SimpleCV shell
+dev-python/sphinx:net - enable internet capabilities
 dev-python/spyder:ipython - Add support for dev-python/ipython
 dev-python/spyder:matplotlib - Add support for dev-python/matplotlib
 dev-python/spyder:numpy - Add support for dev-python/numpy
@@ -5230,7 +5231,6 @@ net-dialup/ppp:dhcp - Installs PPP DHCP client plugin for IP address allocation 
 net-dialup/ppp:eap-tls - Enables support for Extensible Authentication Protocol and Transport Level Security (see http://www.nikhef.nl/~janjust/ppp/index.html)
 net-dialup/ppp:gtk - Installs GTK+ password prompting program that can be used by passprompt.so PPP plugin for reading the password from a X11 input terminal
 net-dialup/ppp:ipv6 - Enables support for IP version 6
-net-dialup/ppp:mppe-mppc - Enables support for MPPC (Microsoft Point-to-Point Compression) - NEEDS A PATCHED KERNEL <=2.6.14 (see http://mppe-mppc.alphacron.de)
 net-dialup/ppp:pam - Enables PAM (Pluggable Authentication Modules) support
 net-dialup/ppp:radius - Enables RADIUS support
 net-dialup/pptpd:gre-extreme-debug - Log all GRE accepted packages when in debug mode (required if you want upstream support)
@@ -5388,8 +5388,10 @@ net-fs/samba:aio - Enable asynchronous IO support
 net-fs/samba:client - Enables the client part
 net-fs/samba:cluster - Enable support for clustering
 net-fs/samba:dmapi - Enable support for DMAPI. This currently works only in combination with XFS.
+net-fs/samba:gpg - Use app-crypt/gpgme for AD DC
 net-fs/samba:iprint - Enabling iPrint technology by Novell
 net-fs/samba:quota - Enables support for user quotas
+net-fs/samba:system-heimdal - Use app-crypt/heimdal instead of bundled heimdal.
 net-fs/samba:system-mitkrb5 - Use app-crypt/mit-krb5 instead of app-crypt/heimdal.
 net-fs/samba:winbind - Enables support for the winbind auth daemon
 net-fs/smbnetfs:gnome - Use the gnome-base/gnome-keyring for password management.
@@ -8445,7 +8447,6 @@ x11-themes/redhat-artwork:audacious - Install media-sound/audacious theme
 x11-themes/redhat-artwork:cursors - Install Bluecurve cursors
 x11-themes/redhat-artwork:gdm - Install Bluecurve gnome-base/gdm theme
 x11-themes/redhat-artwork:icons - Install Bluecurve icons
-x11-themes/redhat-artwork:kdm - Install Bluecurve kde-plasma/kdm theme
 x11-themes/redhat-artwork:nautilus - Install Bluecurve gnome-base/nautilus icons
 x11-themes/skinenigmang-logos:dxr3 - Install logos for lower osd color depth on dxr3 cards
 x11-themes/vertex-theme:cinnamon - Install theme for gnome-extra/cinnamon
