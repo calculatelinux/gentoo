@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/boost:0= dev-qt/qtconcurrent:5 dev-qt/qtcore:5 dev-qt/qtdeclarative:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtprintsupport:5 dev-qt/qtsql:5 dev-qt/qtwebkit:5 >=media-gfx/exiv2-0.14:0= media-libs/lcms:2 media-libs/libpng:0= >=media-libs/libraw-0.13.4:= media-libs/ilmbase:= >=media-libs/openexr-1.2.2-r2:= >=media-libs/tiff-3.8.2-r2:0 sci-libs/fftw:3.0[threads] fits? ( sci-libs/ccfits ) sci-libs/gsl virtual/jpeg:0
 SLOT=0
 SRC_URI=mirror://sourceforge/qtpfsgui/luminance-hdr-2.4.0.tar.bz2
-_eclasses_=cmake-utils	fa4d8052a1ccf4fbbfa76361bffebe42	eutils	017377e73405d964cd0137088cddb9c3	flag-o-matic	7366202dd55cb8f018f5d450d54e7749	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	7bb10a841be2368af0c00f27dd67560b	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_eclasses_=cmake-utils	fa4d8052a1ccf4fbbfa76361bffebe42	eutils	ea170b525f6a38a006be05c9d9429f13	flag-o-matic	7366202dd55cb8f018f5d450d54e7749	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	7bb10a841be2368af0c00f27dd67560b	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
 _md5_=2e81ac6987cbf4ba618b1484246a4589
