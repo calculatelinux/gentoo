@@ -1863,7 +1863,7 @@ dev-libs/beignet:ocl-icd - Enable compatibility with the dev-libs/ocl-icd OpenCL
 dev-libs/bitset:jemalloc - Use dev-libs/jemalloc for allocations
 dev-libs/bitset:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations
 dev-libs/blitz:boost - Enable usage of boost::serialization
-dev-libs/boost:context - Build and install the Boost.Context library and all other Boost libraries that depend on it
+dev-libs/boost:context - Build and install the Boost.Context (and Boost.Fiber) library and all other Boost libraries that depend on it
 dev-libs/boost:debug - Build and install only the debug version of the Boost libraries. Only enable this flag if you're developing against boost.
 dev-libs/boost:doc - Install the full API documentation documentation. This takes over 200MB of extra disk space.
 dev-libs/boost:nls - Build libboost_locale. This library requires compatible C library interfaces, which might not be provided by uClibc or other embedded libraries.
@@ -2487,7 +2487,6 @@ dev-qt/qt-creator:webengine - Use dev-qt/qtwebengine to view documentation
 dev-qt/qt-creator:webkit - Use dev-qt/qtwebkit to view documentation
 dev-qt/qt-creator:winrt - Build plugin for WinRT devices
 dev-qt/qt-meta:kde - Select media-libs/phonon as Phonon variant (needed for KDE)
-dev-qt/qt-meta:openvg - Enable the QtOpenVG module
 dev-qt/qt-meta:qt3support - Enable the Qt3Support library for Qt4
 dev-qt/qt-mobility:bluetooth - Enable Bluetooth support in QtConnectivity and QtSystemInfo modules
 dev-qt/qt-mobility:connectivity - Build the QtConnectivity module
@@ -2530,7 +2529,6 @@ dev-qt/qtdemo:declarative - Build QtDeclarative examples and demos
 dev-qt/qtdemo:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtdemo:multimedia - Build QtMultimedia examples and demos
 dev-qt/qtdemo:opengl - Build QtOpenGL examples and demos
-dev-qt/qtdemo:openvg - Build QtOpenVG examples and demos
 dev-qt/qtdemo:phonon - Build Phonon examples and demos
 dev-qt/qtdemo:webkit - Build QtWebKit examples and demos
 dev-qt/qtdemo:xmlpatterns - Build QtXmlPatterns examples and demos
@@ -3871,7 +3869,6 @@ media-gfx/librecad:tools - Build additional tool programs: tff2lff
 media-gfx/luminance-hdr:fits - Enable support for the FITS format
 media-gfx/nip2:goffice - use x11-libs/goffice to show plots
 media-gfx/nomacs:opencv - Build support for media-libs/opencv
-media-gfx/nomacs:webp - Build support for WEBP image format
 media-gfx/nomacs:zip - Build support for zip archives
 media-gfx/nvidia-texture-tools:cg - Enable NVIDIA C graphics compiler toolkit plug-in
 media-gfx/nvidia-texture-tools:cuda - Enable NVIDIA CUDA toolkit support
@@ -4027,12 +4024,9 @@ media-libs/libvpx:postproc - Enable additional post processing filters
 media-libs/libvpx:svc - Enable spatial-svc support (experimental)
 media-libs/libwebp:experimental - Build with -DWEBP_EXPERIMENTAL_FEATURES
 media-libs/libwebp:swap-16bit-csp - Enable byte swapping for 16 bit colorspace
-media-libs/libyami:capi - Add a C API interface, in addition to the C++.
 media-libs/libyami:dmabuf - Enable dma_buf buffer sharing.
-media-libs/libyami:gles - Add suppport for GLES.
-media-libs/libyami:glx - Add support for OpenGL/GLX instead of EGL.
+media-libs/libyami:egl - Enable EGL support.
 media-libs/libyami:md5 - Add support for generating md5 sums for each frame.
-media-libs/libyami:tools - Build and install command line tools. Useful for testing.
 media-libs/libyami:v4l - Add support for V4L2 hardware codecs.
 media-libs/libzmf:tools - Build conversion tools
 media-libs/lilv:dyn-manifest - Add LV2 Dynamic Manifest support. See http://lv2plug.in/ns/ext/dynmanifest/
@@ -4763,6 +4757,7 @@ media-video/libav:frei0r - Enable frei0r wrapping in libavfilter
 media-video/libav:gpl - Build all GPL licensed code. Without this flag set the package is build under LGPL license.
 media-video/libav:hardcoded-tables - Use pre-calculated tables rather than calculating them on the fly.
 media-video/libav:network - Enable network streaming support.
+media-video/libav:nvidia - Enable nvidia video codec hardware acceleration support.
 media-video/libav:openssl - Prefer dev-libs/openssl over net-libs/gnutls to provide SSL/TLS support (notice: the resulting binaries are unredistributable).
 media-video/libav:opus - Use the external opus library for encoding and decoding.
 media-video/libav:pic - Force shared libraries to be built as PIC (this is slower).
@@ -5096,7 +5091,6 @@ net-analyzer/nfdump:nfprofile - Build nfprofile used by NfSen
 net-analyzer/nfdump:nftrack - Build nfprofile used by PortTracker
 net-analyzer/nfdump:readpcap - Build nfcapd collector to read from pcap file instead ofnetwork data
 net-analyzer/nfdump:sflow - Build sflow collector sfcpad
-net-analyzer/nmap:lua - Include support for the Nmap Scripting Engine (NSE)
 net-analyzer/nmap:ncat - Install the ncat utility
 net-analyzer/nmap:ndiff - Install the ndiff utility
 net-analyzer/nmap:nmap-update - Install nmap-update, which uses dev-vcs/subversion to update nmap scripts in your home directory

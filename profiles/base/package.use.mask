@@ -54,11 +54,6 @@ gnome-extra/zeitgeist-datasources mono tomboy
 app-emulation/crossover-bin capi
 net-libs/opal capi
 
-# Michał Górny <mgorny@gentoo.org> (15 Nov 2016)
-# OpenVG support in Mesa is long gone, and qtopenvg is going to p.mask.
-dev-qt/qt-meta openvg
-dev-qt/qtdemo openvg
-
 # Ettore Di Giacinto <mudler@gentoo.org> (10 Nov 2016)
 # Dependency has no stable keyword
 # and as for now we have only stable mate versions
@@ -313,10 +308,6 @@ www-apps/venus test
 # Jason Zaman <perfinion@gentoo.org> (08 May 2015)
 # java wrappers fail to build (bug #548858)
 =app-admin/setools-3.3.8-r7 java
-
-# Matthias Maier <tamiko@gentoo.org> (03 May 2015)
-# mask use flag until #546126 is resolved
->=app-emulation/libvirt-1.2.14 wireshark-plugins
 
 # James Le Cuirot <chewi@gentoo.org> (05 Apr 2015)
 # dev-java/sun-j2me-bin is going away.
