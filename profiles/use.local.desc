@@ -1146,7 +1146,7 @@ app-text/stardict:youdaodict - Enable youdao.com network plugin (for Chinese lan
 app-text/tesseract:math - Enable support for recognition of equations.
 app-text/tesseract:opencl - Enable opencl support for speedup using GPU computation.
 app-text/tesseract:osd - Enable support orientation and script detection.
-app-text/tesseract:scrollview - Enable graphics support (ScrollView).
+app-text/tesseract:scrollview - Install viewer to debug recognition (ScrollView).
 app-text/tesseract:training - Install training applications to add support for new languages.
 app-text/tesseract:webp - Enable support for webp image format.
 app-text/texlive:context - Add support for the ConTeXt format (dev-texlive/texlive-context)
@@ -1861,6 +1861,7 @@ dev-libs/apr-util:libressl - Use dev-libs/libressl instead of dev-libs/openssl f
 dev-libs/apr-util:nss - Install apr_crypto_nss module
 dev-libs/apr-util:openssl - Install apr_crypto_openssl module
 dev-libs/beignet:ocl-icd - Enable compatibility with the dev-libs/ocl-icd OpenCL ICD loader
+dev-libs/beignet:ocl20 - Enable experimental OpenCL 2.0 support on Skylake and newer architectures
 dev-libs/bitset:jemalloc - Use dev-libs/jemalloc for allocations
 dev-libs/bitset:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations
 dev-libs/blitz:boost - Enable usage of boost::serialization
@@ -3505,12 +3506,14 @@ mail-client/evolution:spamassassin - Build mail-filter/spamassassin plugin
 mail-client/evolution:weather - Enable optional weather calendar support
 mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by mail-client/sylpheed
 mail-client/mutt:gpg - Enable support for app-crypt/gpgme
+mail-client/mutt:hcache - Enable header cache
+mail-client/mutt:lmdb - Enable dev-db/lmdb database backend for header caching
 mail-client/mutt:notmuch - Enable support for net-mail/notmuch
 mail-client/mutt:pop - Enable support for POP3
 mail-client/mutt:sidebar - Enable the sidebar feature
 mail-client/mutt:smime - Enable support for S/MIME
 mail-client/mutt:smtp - Enable support for smtp
-mail-client/mutt:tokyocabinet - Enable tokyocabinet database backend for header caching
+mail-client/mutt:tokyocabinet - Enable dev-db/tokyocabinet database backend for header caching
 mail-client/nail:kerberos - If network is enabled, this adds support for GSSAPI login on IMAP through virtual/krb5.
 mail-client/nail:net - Enable support for network protocols (POP, IMAP and SMTP). If you only need to send mail with the local Transport Agent, disabling this will get you support for only /usr/sbin/sendmail call.
 mail-client/nail:ssl - If network is enabled, this adds support for S/MIME and SSL/TLS-powered protocols through dev-libs/openssl.
@@ -7095,6 +7098,10 @@ sci-mathematics/singular:boost - Compile against external boost headers (dev-lib
 sci-mathematics/spass:isabelle - Add integration support for the Isabelle/HOL theorem prover.
 sci-mathematics/unuran:prng - Use sci-mathematics/prng library
 sci-mathematics/unuran:rngstreams - Use sci-mathematics/rngstreams library
+sci-mathematics/yacas:doc - Generate HTML documentation
+sci-mathematics/yacas:gui - Build graphical interface for the native yacas engine. Requires Qt5
+sci-mathematics/yacas:java - Build the Java yacas engine and text console for it
+sci-mathematics/yacas:jupyter - Add support for jupyter notebook
 sci-mathematics/yacas:server - Build the network server version
 sci-mathematics/yafu:sieve - Use msieve for the sieving steps of NFS
 sci-mathematics/z3:isabelle - Add integration support for the Isabelle/HOL theorem prover.
@@ -7913,10 +7920,6 @@ sys-power/nvclock:gtk - Install the GTK+ based graphical interface
 sys-power/nvclock:nvcontrol - Add NVCONTROL support for OpenGL options
 sys-power/phctool:sudo - Enable support for sudo to run gui from non-root user
 sys-power/pm-utils:ntp - Install support for net-misc/ntp
-sys-power/powerman:genders - Add support for selecting power control targets using genders (-g option)
-sys-power/powerman:h8power - Add support for h8 based power controllers
-sys-power/powerman:httppower - Add support for HTTP based power controllers
-sys-power/powerman:snmppower - Add support for SNMP based power controllers
 sys-power/powermgmt-base:pm-utils - Adds support for on_ac_power through sys-power/pm-utils
 sys-power/sispmctl:gemplug - Install gemplug (management script)
 sys-power/suspend:crypt - Allows suspend and resume from encrypted disk
@@ -8544,6 +8547,7 @@ x11-wm/xpra:lz4 - Enable support for lz4 compression
 x11-wm/xpra:rencode - Enable rencode support
 x11-wm/xpra:server - Build server-side code
 x11-wm/xpra:vpx - Enable vpx image format support
+x11-wm/xpra:webcam - Enable webcam support via opencv
 x11-wm/xpra:webp - Enable webp image format support
 x11-wm/xpra:x265 - Enable x265 support
 xfce-base/libxfce4ui:glade - Build support for Glade 3's GtkBuilder implementation
