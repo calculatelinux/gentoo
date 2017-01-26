@@ -2729,6 +2729,7 @@ dev-util/google-perftools:minimal - Only build the tcmalloc_minimal library, ign
 dev-util/google-perftools:optimisememory - To build libtcmalloc with smaller internal caches.
 dev-util/gtk-doc:highlight - Enable source code highlighting
 dev-util/gtk-doc:vim - Enable source code highlighting through app-editors/vim
+dev-util/idea-community:custom-jdk - Install and use IntelliJ's custom JRE.
 dev-util/idea-ultimate:custom-jdk - Install and use IntelliJ's custom JRE.
 dev-util/intel-ocl-sdk:android - Install android related files
 dev-util/intel-ocl-sdk:system-boost - Use system boost (dev-libs/boost) instead of bundled one
@@ -5553,7 +5554,6 @@ net-im/telepathy-connection-managers:steam - Enable Steam Chat support.
 net-im/telepathy-connection-managers:xmpp - Enable XMPP protocol handler (this is also Google Talk).
 net-im/telepathy-connection-managers:yahoo - Enable Yahoo! messaging support.
 net-im/telepathy-connection-managers:zeroconf - Enable Link-Local Messaging via the zeroconf or Bonjour protocol.
-net-im/telepathy-mission-control:systemd - Rely on systemd's logind to detect suspend and resume
 net-im/tkabber:plugins - Enables installation the extra plugins
 net-im/toxic:av - Enables audio calling and/or audio notifications
 net-im/toxic:notifications - Enables desktop notifications with libnotify
@@ -6205,7 +6205,6 @@ net-misc/ncp:diet - Compile against dev-libs/dietlibc
 net-misc/networkmanager:connection-sharing - Use net-dns/dnsmasq and net-firewall/iptables for connection sharing
 net-misc/networkmanager:consolekit - Use sys-auth/consolekit for session tracking
 net-misc/networkmanager:dhclient - Use dhclient from net-misc/dhcp for getting ip
-net-misc/networkmanager:dhcpcd - Use net-misc/dhcpcd for getting ip
 net-misc/networkmanager:json - Enable JSON validation via dev-libs/jansson in libnm.
 net-misc/networkmanager:modemmanager - Enable support for mobile broadband devices using net-misc/modemmanager
 net-misc/networkmanager:nss - Use dev-libs/nss for cryptography
