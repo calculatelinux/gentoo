@@ -1726,6 +1726,7 @@ dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
 dev-java/sbt:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
 dev-java/swt:webkit - Embedded browser support via net-libs/webkit-gtk:2, replacing former xulrunner-based browser.
 dev-lang/bas:lr0 - Use the LR0 parser instead of the recursive descending parser
+dev-lang/crystal:debug - Build each module as a separate object file. Speeds build up.
 dev-lang/crystal:xml - Use the dev-libs/libxml2 library to enable Crystal xml module
 dev-lang/crystal:yaml - Use the dev-libs/libyaml library to enable Crystal yaml module
 dev-lang/ekopath:mpich - Include pre-built MPICH libraries
@@ -3765,7 +3766,6 @@ media-gfx/blender:jemalloc - Use dev-libs/jemalloc for memory allocation.
 media-gfx/blender:llvm - Enable features depending on llvm.
 media-gfx/blender:man - Build and install man pages.
 media-gfx/blender:ndof - Enable NDOF input devices (SpaceNavigator and friends).
-media-gfx/blender:opencl - Build cycles renderer with OpenCL GPU enhancements.
 media-gfx/blender:openimageio - Enable OpenImageIO Support
 media-gfx/blender:opennl - Enable use of Open Numerical Library
 media-gfx/blender:opensubdiv - Add rendering support form OpenSubdiv from Dreamworks Animation through media-libs/opensubdiv.
@@ -7063,7 +7063,6 @@ sci-mathematics/gretl:R - Enable support for dev-lang/R
 sci-mathematics/gsl-shell:fox - Build a x11-libs/fox GUI
 sci-mathematics/isabelle:graphbrowsing - Generate theory browsing information, including HTML documents that show a theory's definition, the theorems proved in its ML file and the relationship with its ancestors and descendants.
 sci-mathematics/isabelle:ledit - Use ledit for the isabelle tty line editor
-sci-mathematics/isabelle:proofgeneral - Add support for the app-emacs/proofgeneral proof assistant front end.
 sci-mathematics/isabelle:readline - Use readline (rlwrap) for the isabelle tty line editor
 sci-mathematics/kodkodi:isabelle - Add integration support for the Isabelle/HOL theorem prover.
 sci-mathematics/maxima:clisp - Compile maxima with GNU CLISP (dev-lisp/clisp)
@@ -8129,6 +8128,7 @@ www-plugins/gnash:sdl-sound - Enable SDL audio output for the standalone player
 www-plugins/gnash:ssh - Enable using SSH for network authentication in libnet
 www-plugins/gnash:ssl - Enable directly using OpenSSL in libnet (not needed for nsplugin ssl support)
 www-plugins/lightspark:gles - Replace default OpenGL renderer with GLESv2
+www-plugins/lightspark:ppapi - Install the PPAPI plugin (for Chromium)
 www-plugins/lightspark:rtmp - Enable Real Time Messaging Protocol using librtmp
 www-servers/apache:apache2_modules_access_compat - Group authorizations based on host (name or IP address). Available as a compatibility module with previous versions.
 www-servers/apache:apache2_modules_authn_core - Provides core authentication capabilities common to all authentication providers (functionality provided by authn_alias in previous versions).
