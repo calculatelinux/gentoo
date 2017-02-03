@@ -30,6 +30,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (03 Feb 2017)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-58
+
 # Michael Palimaka <kensington@gentoo.org> (02 Feb 2017)
 # Upstream missing. Ancient. Unmaintained. No revdeps.
 # Masked for removal in 30 days.
@@ -62,7 +67,7 @@ dev-python/mwlib-rl
 
 # Fabian Groffen <grobian@gentoo.org> (31 Jan 2017)
 # Mask upcoming Exim release candidates
-=mail-mta/exim-4.89_rc1
+=mail-mta/exim-4.89_rc2
 
 # David Seifert <soap@gentoo.org> (30 Jan 2017)
 # No maintainer activity since git migration, dated eclass
@@ -462,18 +467,9 @@ dev-ruby/activesupport:4.1
 # depends on a newer version.
 net-misc/termtter
 
-# Mike Gilbert <floppym@gentoo.org> (10 Dec 2016)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-57
-
 # Markos Chandras <hwoarang@gentoo.org> (10 Dec 2016)
 # Reverse dependencies need testing, wrt bug #580760
 >=net-libs/rb_libtorrent-1.1.1
-
-# Hans de Graaff <graaff@gentoo.org> (07 Dec 2016)
-# Mask ruby 2.0 for removal, bug 576034
-dev-lang/ruby:2.0
 
 # Kent Fredric (19 Nov 2016)
 # virtual/perl-MathBigInt-1.999.726+ Mask Block
