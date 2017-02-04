@@ -32,7 +32,7 @@ SLOT="26"
 IUSE="acl alsa aqua athena cairo dbus games gconf gfile gif gpm gsettings gtk +gtk3 gzip-el hesiod imagemagick +inotify jpeg kerberos libxml2 livecd m17n-lib motif pax_kernel png selinux sound source ssl svg tiff toolkit-scroll-bars wide-int X Xaw3d xft +xpm xwidgets zlib"
 REQUIRED_USE="?? ( aqua X )"
 
-RDEPEND="sys-libs/ncurses:0
+RDEPEND="sys-libs/ncurses:0=
 	>=app-eselect/eselect-emacs-1.16
 	>=app-emacs/emacs-common-gentoo-1.5[games?,X?]
 	net-libs/liblockfile
@@ -73,7 +73,7 @@ RDEPEND="sys-libs/ncurses:0
 		gtk? (
 			xwidgets? (
 				x11-libs/gtk+:3
-				net-libs/webkit-gtk:3=
+				net-libs/webkit-gtk:4=
 			)
 			!xwidgets? (
 				gtk3? ( x11-libs/gtk+:3 )
@@ -271,6 +271,7 @@ src_install () {
 	# avoid collision between slots, see bug #169033 e.g.
 	rm "${ED}"/usr/share/emacs/site-lisp/subdirs.el
 	rm -rf "${ED}"/usr/share/{appdata,applications,icons}
+	rm -rf "${ED}/usr/$(get_libdir)"
 	rm -rf "${ED}"/var
 
 	# remove unused <version>/site-lisp dir

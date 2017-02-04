@@ -10,4 +10,4 @@ RDEPEND=virtual/perl-Storable >=dev-perl/XML-NamespaceSupport-1.40.0 >=dev-perl/
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/G/GR/GRANTM/XML-Simple-2.22.tar.gz
 _eclasses_=multiprocessing	7bb10a841be2368af0c00f27dd67560b	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
-_md5_=4e82e2eb7a1ff8b8e4db8c1a949c60c0
+_md5_=b4f086ac771381ed15bf67102fa03537
