@@ -35,10 +35,6 @@ dev-lang/python-exec -python_targets_python3_6
 # xf86-video-??? masked for removal
 x11-base/xorg-drivers video_cards_v4l
 
-# Ilya Tumaykin <itumaykin+gentoo@gmail.com> (19 Jan 2017)
-# Requires x11-drivers/nvidia-drivers available on selected few arches.
-media-video/mpv cuda
-
 # Lars Wendler <polynomial-c@gentoo.org> (19 Jan 2017)
 # Masked until system heimdal can finally be used with AD DC
 net-fs/samba system-heimdal
@@ -577,8 +573,8 @@ sci-libs/flann cuda
 <media-sound/audacity-2.1.0 ffmpeg
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (30 Dec 2012)
-# chromium and mono are keyworded only on a few arches
-gnome-extra/zeitgeist-datasources chromium tomboy
+# chromium is keyworded only on a few arches
+gnome-extra/zeitgeist-datasources chromium
 
 # Christoph Junghans <junghans@gentoo.org> (26 Dec 2012)
 # cuda/mkl only works on x86/amd64

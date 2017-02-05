@@ -29,7 +29,7 @@ DEPEND="
 "
 
 DOCS=( AUTHORS FORMATS NEWS README SECURITY TODO )
-FILECAPS=( cap_net_raw /usr/sbin/mtr )
+FILECAPS=( cap_net_raw usr/sbin/mtr )
 PATCHES=(
 	"${FILESDIR}"/${PN}-9999-tinfo.patch
 )
@@ -57,4 +57,12 @@ src_configure() {
 		$(use_enable ipv6) \
 		$(use_with gtk) \
 		$(use_with ncurses)
+}
+
+pkg_postinst() {
+	if use prefix && [[ ${CHOST} == *-darwin* ]] ; then
+		ewarn "mtr needs root privileges to run.  To grant them:"
+		ewarn " % sudo chown root ${EPREFIX}/usr/sbin/mtr"
+		ewarn " % sudo chmod u+s ${EPREFIX}/usr/sbin/mtr"
+	fi
 }

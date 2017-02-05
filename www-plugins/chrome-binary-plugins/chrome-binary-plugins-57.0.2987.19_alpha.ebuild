@@ -51,10 +51,10 @@ pkg_nofetch() {
 }
 
 src_install() {
-	local version
-
+	insinto /usr/$(get_libdir)/chromium
 	if use widevine; then
-		insinto usr/$(get_libdir)/chromium-browser
-		doins libwidevinecdmadapter.so
+		doins libwidevinecdm.so libwidevinecdmadapter.so
+		dosym ../chromium/libwidevinecdm.so /usr/$(get_libdir)/chromium-browser/libwidevinecdm.so
+		dosym ../chromium/libwidevinecdmadapter.so /usr/$(get_libdir)/chromium-browser/libwidevinecdmadapter.so
 	fi
 }
