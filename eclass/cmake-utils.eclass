@@ -57,7 +57,7 @@ _CMAKE_UTILS_ECLASS=1
 # @ECLASS-VARIABLE: CMAKE_MIN_VERSION
 # @DESCRIPTION:
 # Specify the minimum required CMake version.
-: ${CMAKE_MIN_VERSION:=3.5.2}
+: ${CMAKE_MIN_VERSION:=3.6.3}
 
 # @ECLASS-VARIABLE: CMAKE_REMOVE_MODULES
 # @DESCRIPTION:
@@ -538,6 +538,7 @@ enable_cmake-utils_src_configure() {
 		SET (CMAKE_Fortran_COMPILER "${myFC/ /;}")
 		SET (CMAKE_AR $(type -P $(tc-getAR)) CACHE FILEPATH "Archive manager" FORCE)
 		SET (CMAKE_RANLIB $(type -P $(tc-getRANLIB)) CACHE FILEPATH "Archive index generator" FORCE)
+		SET (CMAKE_SYSTEM_PROCESSOR "${CHOST%%-*}")
 	_EOF_
 
 	# We are using the C compiler for assembly by default.

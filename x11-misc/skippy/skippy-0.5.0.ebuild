@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI=2
 inherit eutils toolchain-funcs
 
-DESCRIPTION="A full-screen task-switcher providing Apple Expose-like functionality with various WMs"
+DESCRIPTION="A full-screen task-switcher providing Apple Expose-like functionality"
 HOMEPAGE="http://thegraveyard.org/skippy.php"
 SRC_URI="http://thegraveyard.org/files/${P}.tar.bz2"
 
