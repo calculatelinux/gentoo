@@ -6429,6 +6429,7 @@ net-nds/openldap:kinit - Enable support for kerberos init
 net-nds/openldap:minimal - Build libraries & userspace tools only. Does not install any server code.
 net-nds/openldap:odbc - Enable ODBC and SQL backend options
 net-nds/openldap:overlays - Enable contributed OpenLDAP overlays
+net-nds/openldap:pbkdf2 - Enable support for pbkdf2 passwords
 net-nds/openldap:smbkrb5passwd - Enable overlay for syncing ldap, unix and lanman passwords
 net-nds/rpcbind:warmstarts - Enables rpcbind to cache configuration for warm restarts
 net-nds/tac_plus:finger - Adds support for checking user counts via fingering the NAS
@@ -8547,6 +8548,7 @@ x11-wm/xpra:clipboard - Enable clipboard support
 x11-wm/xpra:csc - Enable csc softscaler support
 x11-wm/xpra:dec_av - Enable dec_avcodec support
 x11-wm/xpra:dec_av2 - Enable dec_avcodec2 support
+x11-wm/xpra:enc_ffmpeg - Enable advanced ffmpeg/libav encoder support
 x11-wm/xpra:lz4 - Enable support for lz4 compression
 x11-wm/xpra:rencode - Enable rencode support
 x11-wm/xpra:server - Build server-side code

@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 inherit eutils toolchain-funcs
 
 S="${WORKDIR}/${PN}${PV}"
-DESCRIPTION="determine the color string in hex (or RGB components) by clicking on a pixel on the screen"
-HOMEPAGE="http://www.muquit.com/muquit/software/grabc/grabc.html"
-SRC_URI="http://www.muquit.com/muquit/software/${PN}/${PN}${PV}.tar.gz"
+DESCRIPTION="Identify color of a pixel on the screen by clicking on a pixel on the screen"
+HOMEPAGE="https://www.muquit.com/muquit/software/grabc/grabc.html"
+SRC_URI="https://www.muquit.com/muquit/software/${PN}/${PN}${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
