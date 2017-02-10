@@ -79,6 +79,8 @@ app-admin/glance:swift - Adds swift storage support
 app-admin/gtkdiskfree:gtk2 - Support GTK+ 2.x instead of GTK+ 3.x
 app-admin/hddtemp:network-cron - Monthly cronjob to update hddtemp.db.
 app-admin/keepass:aot - Generate native code at build time, rather than runtime.
+app-admin/keepassxc:autotype - Add support to autotype the passwords into other applications
+app-admin/keepassxc:http - Add http support
 app-admin/lastpass-cli:X - Use x11-misc/xclip or x11-misc/xsel to copy passwords to the clipboard.
 app-admin/lastpass-cli:pinentry - Use app-crypt/pinentry to prompt for passwords.
 app-admin/logrotate:acl - Installs acl support
@@ -7519,7 +7521,6 @@ sys-cluster/gearmand:memcache - Support memcache daemon (via dev-libs/libmemcach
 sys-cluster/gearmand:tokyocabinet - Support dev-db/tokyocabinet for the queue storage.
 sys-cluster/glusterfs:bd-xlator - Enable the blockdevice translator (requires sys-fs/lvm2)
 sys-cluster/glusterfs:crypt-xlator - Enable the encryption translator
-sys-cluster/glusterfs:extras - Install extra helper scripts
 sys-cluster/glusterfs:fuse - Add FUSE mount helper
 sys-cluster/glusterfs:georeplication - Enable support for georeplication (requires dev-lang/python)
 sys-cluster/glusterfs:glupy - Enable support for translators written in Python
