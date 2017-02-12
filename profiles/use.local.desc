@@ -996,7 +996,6 @@ app-office/lyx:rcs - Add support for revision control via dev-vcs/rcs
 app-office/lyx:rtf - Add support for RTF import/export packages
 app-office/magicpoint:contrib - Install additional contributed scripts
 app-office/scribus:boost - Enable support for Boost based enhancement
-app-office/scribus:graphicsmagick - Add support for media-gfx/graphicsmagick
 app-office/scribus:hunspell - Enable support for spell checking with app-text/hunspell
 app-office/scribus:minimal - Don't install headers (only required for e.g. plug-in developers)
 app-office/scribus:osg - 3D redering via dev-games/openscenegraph
@@ -1065,8 +1064,6 @@ app-text/blogc:make - Build blogc-make tool
 app-text/crm114:mew - Add support for using the mewdecode mime decoder (app-emacs/mew)
 app-text/crm114:mimencode - Add support for using the mimencode mime (net-mail/metamail)
 app-text/crm114:normalizemime - Add support for using the normalizemime (mail-filter/normalizemime)
-app-text/cuneiform:graphicsmagick - Enables support of various input formats using media-gfx/graphicsmagick. Otherwise only uncompressed BMP files are supported.
-app-text/cuneiform:imagemagick - Enables support of various input formats using media-gfx/imagemagick. Otherwise only uncompressed BMP files are supported.
 app-text/dbacl:interactive - Enable the interactive mailinspect ability
 app-text/dictd:judy - Build Judy-based (dev-libs/judy) plugin implementing fast "exact" and especially "lev" strategies
 app-text/dictd:minimal - Don't build server but dict client, dictzip and dictfmt only.
@@ -1115,7 +1112,6 @@ app-text/pandoc:make-pandoc-man-pages - Build program to regenerate pandoc man p
 app-text/pandoc:network-uri - Get Network.URI from the network-uri package.
 app-text/pandoc:trypandoc - Build trypandoc cgi executable.
 app-text/pastebinit:crypt - Install pbputs for gpg-encrypted pastes
-app-text/pdf2djvu:graphicsmagick - Enable media-gfx/graphicsmagick support
 app-text/pdfgrep:unac - Removing accents and ligatures before search
 app-text/pelican:markdown - Markdown support
 app-text/podofo:boost - Add support for boost
@@ -2373,6 +2369,9 @@ dev-python/pandas:R - Enable support for R via dev-python/rpy
 dev-python/pandas:excel - Pull a few Python packages for Microsoft Excel i/o
 dev-python/pandas:full-support - Pull all packages to give pandas full support
 dev-python/pandas:html - Enable HTML i/o via dev-python/beautifulsoup
+dev-python/passlib:bcrypt - bcrpyt hash algoryptm support
+dev-python/passlib:scrypt - accelerated scrypt algoythm support
+dev-python/passlib:totp - time based one time password support
 dev-python/paste:flup - enable support for flup (and therefore for various wgsi servers and middleware)
 dev-python/paste:openid - enable OpenID support
 dev-python/pillow:webp - Enable support for webp image format.
@@ -3784,7 +3783,6 @@ media-gfx/cura:usb - Access 3D printers via USB
 media-gfx/darktable:colord - Support color management using x11-misc/colord
 media-gfx/darktable:flickr - Add support for uploading photos to flickr
 media-gfx/darktable:geo - Enable geotagging support
-media-gfx/darktable:graphicsmagick - Use media-gfx/graphicsmagick for image importing
 media-gfx/darktable:libsecret - Enable libsecret support to store login credentials
 media-gfx/darktable:opencl - Enable opencl support
 media-gfx/darktable:pax_kernel - Triggers paxmarking of main darktable binary
@@ -3810,7 +3808,6 @@ media-gfx/fbida:fbcon - Install the framebuffer image viewer "fbi"
 media-gfx/fbida:ghostscript - Install the framebuffer ghostscript viewer "fbgs"
 media-gfx/fbida:webp - Enable support for the WebP image format
 media-gfx/fim:dia - Enable DIA file support via app-office/dia
-media-gfx/fim:graphicsmagick - Enable GraphicsMagick library support
 media-gfx/fim:imagemagick - Use convert from media-gfx/imagemagick as fallback file opener
 media-gfx/fim:xfig - Enable FIG file support via media-gfx/xfig
 media-gfx/fontforge:truetype-debugger - Enable truetype debugger in fontforge
@@ -3827,7 +3824,6 @@ media-gfx/geeqie:map - Enable items map display - experimental
 media-gfx/gimp:smp - Enable support for multiprocessors
 media-gfx/gimp:vector-icons - Enable support for vector icons (experimental)
 media-gfx/gmic:cli - Build CLI interface
-media-gfx/gmic:graphicsmagick - Enable support for many common image file formats using the GraphicsMagick++ library
 media-gfx/gmic:opencv - Enable support for webcams using the OpenCV library
 media-gfx/graphicsmagick:fpx - Enable FlashPix support with media-libs/libfpx
 media-gfx/graphicsmagick:modules - Compile graphicsmagick with dynamically loadable modules
@@ -3889,7 +3885,6 @@ media-gfx/openexr_viewers:cg - Add support for nvidia's cg shaders
 media-gfx/openvdb:abi3-compat - Enables compatibility with the old 3.x ABI. enabled by dfault.
 media-gfx/openvdb:openvdb-compression - Adds enhanced compression to files through dev-libs/c-blosc. Very useful so enabled by dfault.
 media-gfx/photoqt:exiv2 - Use media-gfx/exiv2 as optional dependency
-media-gfx/photoqt:graphicsmagick - Use media-gfx/graphicsmagick as optional dependency
 media-gfx/pngcrush:system-libs - Use libpng and libz provided by system
 media-gfx/potrace:metric - default to a4 paper size and metric measurement
 media-gfx/povray:io-restrictions - POV-Ray's mechanism for control of I/O operations
@@ -3973,6 +3968,7 @@ media-libs/gst-plugins-bad:gles2 - Enable GLES2 support
 media-libs/gst-plugins-base:ivorbis - Enable integer based vorbis decoder
 media-libs/gst-plugins-base:pango - Enable pango GStreamer plugin
 media-libs/gstreamer:orc - Disable some PaX memory protections to allow plugins that use dev-lang/orc for runtime optimization to be used on hardened PaX systems
+media-libs/gstreamer:unwind - Enable sys-libs/libunwind usage for better backtrace support in leaks tracer module
 media-libs/harfbuzz:glib - Compile with GLib Unicode support
 media-libs/harfbuzz:graphite - Use graphite to render complex non-Roman writing systems
 media-libs/jbig2enc:webp - Add support for WEBP image format
@@ -4267,7 +4263,6 @@ media-radio/unixcw:ncurses - Enables building the curses based morse code tutor 
 media-radio/xastir:festival - Enable text to speech synthesizer
 media-radio/xastir:gdal - Support for some further map formats
 media-radio/xastir:geotiff - Install geotiff support. Allows using USGS DRG topo maps or other types of geotiff mapes/images
-media-radio/xastir:graphicsmagick - Use graphicsmagick instead imagemagick for rendering
 media-sound/abcde:id3tag - Support ID3, ID3v2 tagging of audio files
 media-sound/abcde:mac - Enable support for Monkey's Audio files
 media-sound/abcde:normalize - Add support for normalizing audio file volume levels
@@ -4677,7 +4672,7 @@ media-tv/xmltv:uk_bleb - Britain tv listing grabber
 media-tv/xmltv:uk_rt - Britain alternative tv listing grabber
 media-tv/xmltv:uk_tvguide - UK and Ireland tv listing grabber using TV Guide website
 media-tv/xmltv:za - South Africa tv listing grabber
-media-video/aegisub:uchardet - Enable charset discovery via dev-libs/uchardet
+media-video/aegisub:uchardet - Enable charset discovery via app-i18n/uchardet
 media-video/aravis:X - Build the GTK+-based video viewer for aravis. This requires GStreamer and a few plugins but technically not the GST plugin for aravis.
 media-video/aravis:gstreamer - Build the GStreamer plugin for aravis, but not the video viewer.
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
@@ -4685,7 +4680,6 @@ media-video/clive:clipboard - Support reading from X clipboard
 media-video/clive:pager - Support pager!?
 media-video/clive:password - Support password controlled sites
 media-video/dv2sub:kino - install kino plugin
-media-video/dvdauthor:graphicsmagick - Use media-gfx/graphicsmagick instead of media-gfx/imagemagick
 media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/dvdrip:subtitles - Enables support for subtitle ripping
 media-video/ffdiaporama:openclipart - Support openslipart database
@@ -4850,7 +4844,7 @@ media-video/mpv:raspberry-pi - Enable support for the Raspberry Pi
 media-video/mpv:rubberband - Enable high quality pitch correction via media-libs/rubberband
 media-video/mpv:sdl - Enable media-libs/libsdl2 based video and audio outputs (Note: these outputs exist for compatibility reasons only, avoid if possible)
 media-video/mpv:tools - Install extra tools: mpv_identify.sh, mpv_idet.sh, and umpv
-media-video/mpv:uchardet - Enable subtitles charset discovery via dev-libs/uchardet
+media-video/mpv:uchardet - Enable subtitles charset discovery via app-i18n/uchardet
 media-video/mpv:vf-dlopen - Install additional video filters to be used with -vf dlopen
 media-video/noad:libmpeg2 - Support for libmpeg2 library
 media-video/nvidia-settings:gtk3 - Additionally build the GTK 3 library
@@ -7089,7 +7083,6 @@ sci-mathematics/normaliz:extras - Install sci-mathematics/Macaulay2 and sci-math
 sci-mathematics/nusmv:minisat - Enable support for MiniSat
 sci-mathematics/nusmv:zchaff - Enable support for zChaff
 sci-mathematics/octave:glpk - Add support for sci-mathematics/glpk for linear programming
-sci-mathematics/octave:graphicsmagick - Add support for media-gfx/graphicsmagick
 sci-mathematics/octave:gui - Enable the graphical user interface
 sci-mathematics/octave:openssl - Use dev-libs/openssl for low level hash functions
 sci-mathematics/octave:qhull - Add support for media-libs/qhull, to allow `delaunay', `convhull', and related functions
