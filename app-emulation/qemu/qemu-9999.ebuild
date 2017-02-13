@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="5"
@@ -34,10 +34,10 @@ static-user systemtap tci test +threads usb usbredir vde +vhost-net \
 virgl virtfs +vnc vte xattr xen xfs"
 
 COMMON_TARGETS="aarch64 alpha arm cris i386 m68k microblaze microblazeel mips
-mips64 mips64el mipsel or32 ppc ppc64 s390x sh4 sh4eb sparc sparc64
+mips64 mips64el mipsel nios2 or32 ppc ppc64 s390x sh4 sh4eb sparc sparc64
 x86_64"
 IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} lm32 moxie ppcemb tricore unicore32 xtensa xtensaeb"
-IUSE_USER_TARGETS="${COMMON_TARGETS} armeb mipsn32 mipsn32el ppc64abi32 ppc64le sparc32plus tilegx"
+IUSE_USER_TARGETS="${COMMON_TARGETS} armeb hppa mipsn32 mipsn32el ppc64abi32 ppc64le sparc32plus tilegx"
 
 use_softmmu_targets=$(printf ' qemu_softmmu_targets_%s' ${IUSE_SOFTMMU_TARGETS})
 use_user_targets=$(printf ' qemu_user_targets_%s' ${IUSE_USER_TARGETS})
@@ -100,7 +100,10 @@ SOFTMMU_LIB_DEPEND="${COMMON_LIB_DEPEND}
 	iscsi? ( net-libs/libiscsi )
 	jpeg? ( virtual/jpeg:0=[static-libs(+)] )
 	lzo? ( dev-libs/lzo:2[static-libs(+)] )
-	ncurses? ( sys-libs/ncurses:0=[static-libs(+)] )
+	ncurses? (
+		sys-libs/ncurses:0=[unicode]
+		sys-libs/ncurses:0=[static-libs(+)]
+	)
 	nfs? ( >=net-fs/libnfs-1.9.3[static-libs(+)] )
 	numa? ( sys-process/numactl[static-libs(+)] )
 	opengl? (
@@ -611,6 +614,7 @@ src_install() {
 		emake DESTDIR="${ED}" install
 
 		# Install binfmt handler init script for user targets.
+		generate_initd
 		doinitd "${T}/qemu-binfmt"
 	fi
 
@@ -622,7 +626,7 @@ src_install() {
 		[[ -e check-report.html ]] && dohtml check-report.html
 
 		if use kernel_linux; then
-			udev_dorules "${FILESDIR}"/65-kvm.rules
+			udev_newrules "${FILESDIR}"/65-kvm.rules-r1 65-kvm.rules
 		fi
 
 		if use python; then
@@ -643,9 +647,6 @@ src_install() {
 	# Install config file example for qemu-bridge-helper
 	insinto "/etc/qemu"
 	doins "${FILESDIR}/bridge.conf"
-
-	# Remove the docdir placed qmp-commands.txt
-	mv "${ED}/usr/share/doc/${PF}/html/qmp-commands.txt" "${S}/docs/" || die
 
 	cd "${S}"
 	dodoc Changelog MAINTAINERS docs/specs/pci-ids.txt
