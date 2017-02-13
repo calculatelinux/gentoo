@@ -6,7 +6,7 @@ EAPI=5
 
 PYTHON_COMPAT=(
 	pypy
-	python3_3 python3_4 python3_5
+	python3_3 python3_4 python3_5 python3_6
 	python2_7
 )
 PYTHON_REQ_USE='bzip2(+),threads(+)'
@@ -237,6 +237,12 @@ pkg_preinst() {
 		USERSYNC_UPGRADE=false
 		REPOS_CONF_UPGRADE=false
 	fi
+	if has_version ">=${CATEGORY}/${PN}-2.3.1" && \
+		has_version "<${CATEGORY}/${PN}-2.3.3"; then
+		SYNC_DEPTH_UPGRADE=true
+	else
+		SYNC_DEPTH_UPGRADE=false
+	fi
 }
 
 get_ownership() {
@@ -357,9 +363,11 @@ pkg_postinst() {
 		fi
 	fi
 
-	ewarn "Please note that this release no longer respects sync-depth for"
-	ewarn "git repositories.  There have been too many problems and"
-	ewarn "performance issues.  See bugs 552814, 559008"
+	if ${SYNC_DEPTH_UPGRADE}; then
+		ewarn "Please note that this release no longer respects sync-depth for"
+		ewarn "git repositories.  There have been too many problems and"
+		ewarn "performance issues.  See bugs 552814, 559008"
+	fi
 	einfo ""
 	einfo "This release of portage NO LONGER contains the repoman code base."
 	einfo "Repoman has its own ebuild and release package."

@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 python3_{4,5} pypy{,3} )
+PYTHON_COMPAT=( python2_7 python3_{4,5,6} pypy{,3} )
 
 inherit distutils-r1
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="amd64 hppa x86"
+KEYWORDS="amd64 hppa ppc x86"
 IUSE="test"
 
 RDEPEND="
