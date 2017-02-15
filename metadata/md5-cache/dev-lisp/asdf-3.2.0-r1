@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install
+DEPEND=!dev-lisp/cl-asdf !dev-lisp/asdf-binary-locations !dev-lisp/gentoo-init !<dev-lisp/asdf-2.33-r3 doc? ( virtual/texi2dvi )
+DESCRIPTION=ASDF is Another System Definition Facility for Common Lisp
+EAPI=6
+HOMEPAGE=http://common-lisp.net/project/asdf/
+IUSE=doc
+KEYWORDS=~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x86-solaris
+LICENSE=MIT
+PDEPEND=~dev-lisp/uiop-3.2.0
+SLOT=0/3.2.0-r1
+SRC_URI=http://common-lisp.net/project/asdf/archives/asdf-3.2.0.tar.gz
+_eclasses_=eutils	ea170b525f6a38a006be05c9d9429f13	multilib	165fc17c38d1b11dac2008280dab6e80	prefix	99dcca42e6528d8fe3c214bf5731aaf2	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_md5_=3ab2d1aa606457c5a240b18f01a0b81c
