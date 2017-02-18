@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -35,7 +35,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
 DEPEND="${COMMON_DEPEND}
-	dev-util/gperf
+	<dev-util/gperf-3.1
 	virtual/os-headers
 	virtual/pkgconfig
 	>=sys-devel/make-3.82-r4

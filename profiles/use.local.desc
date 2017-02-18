@@ -1109,6 +1109,7 @@ app-text/pandoc:https - Enable support for downloading of resources over https.
 app-text/pandoc:make-pandoc-man-pages - Build program to regenerate pandoc man pages from README.
 app-text/pandoc:network-uri - Get Network.URI from the network-uri package.
 app-text/pandoc:trypandoc - Build trypandoc cgi executable.
+app-text/pandoc:weigh-pandoc - Build weigh-pandoc to measure memory usage.
 app-text/pastebinit:crypt - Install pbputs for gpg-encrypted pastes
 app-text/pdfgrep:unac - Removing accents and ligatures before search
 app-text/pelican:markdown - Markdown support
@@ -1611,6 +1612,7 @@ dev-haskell/simple-sendfile:allow-bsd - Allow use of BSD sendfile (disable on GN
 dev-haskell/skein:big-endian - When manually selecting the endianness, use big-endian (default is little-endian).
 dev-haskell/skein:force-endianness - Use a manually selected endian when compiling (see flag 'big-endian').
 dev-haskell/skein:reference - Use the reference implementation instead of the optimized one.
+dev-haskell/skylighting:executable - Build the skylighting executable.
 dev-haskell/snap-core:portable - No non-haskell unportable code.
 dev-haskell/snap-server:build-pong - Build a server that just returns "PONG"
 dev-haskell/snap-server:openssl - enable https support using dev-haskell/hsopenssl
@@ -3264,7 +3266,7 @@ kde-apps/akonadi:tools - Install tools for developers and testing
 kde-apps/akonadi-contacts:prison - Enable support for QRcodes in contacts
 kde-apps/analitza:eigen - Enable dev-cpp/eigen mathematical templates support
 kde-apps/artikulate:qtmedia - Enable playback via Qt5Multimedia
-kde-apps/blogilo:google - Google service integration via net-libs/libkgapi
+kde-apps/blogilo:google - Google service integration via kde-apps/libkgapi
 kde-apps/cantor:R - Enable dev-lang/R backend support
 kde-apps/cantor:analitza - Enable kde-apps/analitza backend support
 kde-apps/cantor:julia - Enable dev-lang/julia backend support
@@ -3291,10 +3293,10 @@ kde-apps/kdenetwork-meta:ppp - Enable support for net-dialup/ppp.
 kde-apps/kdenlive:freesound - Enable freesound.org credentials support via dev-qt/qtwebkit to download files
 kde-apps/kdenlive:gles2 - Use GLES 2.0 or later instead of full OpenGL
 kde-apps/kdenlive:jogshuttle - Enable support for Jog-Shuttle devices
-kde-apps/kdepim-addons:google - Google service integration via net-libs/libkgapi
+kde-apps/kdepim-addons:google - Google service integration via kde-apps/libkgapi
 kde-apps/kdepim-apps-libs:prison - Enable support for QRcodes in contacts
-kde-apps/kdepim-common-libs:google - Google service integration via net-libs/libkgapi
-kde-apps/kdepim-runtime:google - Google service integration via net-libs/libkgapi
+kde-apps/kdepim-common-libs:google - Google service integration via kde-apps/libkgapi
+kde-apps/kdepim-runtime:google - Google service integration via kde-apps/libkgapi
 kde-apps/kdepimlibs:prison - Enable support for QRcodes in contacts
 kde-apps/kdeutils-meta:floppy - Install kde-apps/kfloppy to format and create DOS or ext2fs filesystems in a floppy.
 kde-apps/keditbookmarks:man - Build and install man pages
