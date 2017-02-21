@@ -273,10 +273,6 @@
     <name>BSD Project</name>
     <url>https://wiki.gentoo.org/wiki/Project:BSD</url>
     <description>Porting of Gentoo facilities on BSD systems.</description>
-    <member>
-      <email>NP-Hardass@gentoo.org</email>
-      <name>NP-Hardass</name>
-    </member>
   </project>
   <project>
     <email>base-system@gentoo.org</email>
@@ -518,6 +514,11 @@
     <name>Cjk</name>
     <url>https://wiki.gentoo.org/wiki/Project:Cjk</url>
     <description>Chinese/Japanese/Korean support packages.</description>
+    <member>
+      <email>alicef@gentoo.org</email>
+      <name>Alice Ferrazzi</name>
+      <role>Member (Japanese Support)</role>
+    </member>
     <member>
       <email>dlan@gentoo.org</email>
       <name>Yixun Lan</name>
@@ -1643,6 +1644,11 @@
       <role>General System Administration, Wiki, Security</role>
     </member>
     <member>
+      <email>alicef@gentoo.org</email>
+      <name>Alice Ferrazzi</name>
+      <role>General System Administration</role>
+    </member>
+    <member>
       <email>dastergon@gentoo.org</email>
       <name>Pavlos Ratis</name>
       <role>General System Administration</role>
@@ -1656,6 +1662,11 @@
       <email>jmbsvicetto@gentoo.org</email>
       <name>Jorge Manuel B. S. Vicetto</name>
       <role>General System Administration, Release Engineering liaison</role>
+    </member>
+    <member>
+      <email>maffblaster@gentoo.org</email>
+      <name>Matthew Marchese</name>
+      <role>General System Administration, Wiki</role>
     </member>
     <member>
       <email>mgorny@gentoo.org</email>
@@ -1818,6 +1829,11 @@
     <name>Gentoo Kernel Project</name>
     <url>https://wiki.gentoo.org/wiki/Project:Kernel</url>
     <description>The Gentoo Kernel Project aims to deliver the best possible experience from its sources across all supported architectures.</description>
+    <member is-lead="1">
+      <email>alicef@gentoo.org</email>
+      <name>Alice Ferrazzi</name>
+      <role>Leader (Kernel, gentoo-sources, genpatches)</role>
+    </member>
     <member>
       <email>blueness@gentoo.org</email>
       <name>Anthony G. Basile</name>
@@ -2821,11 +2837,6 @@ developers and volunteer mentors.</description>
       <name>Jack Morgan</name>
     </member>
     <member>
-      <email>pacho@gentoo.org</email>
-      <name>Pacho Ramos</name>
-      <role>ppc/ppc64 keywording/stabilization</role>
-    </member>
-    <member>
       <email>zlogene@gentoo.org</email>
       <name>Mikle Kolyada</name>
       <role>ppc/ppc64 keywording/stabilization</role>
@@ -2930,6 +2941,11 @@ developers and volunteer mentors.</description>
     <url>https://wiki.gentoo.org/wiki/Project:Proxy_Maintainers</url>
     <description>Proxy Maintainers facilitates high quality user contributions and works to enhance user-developer cooperation in maintaining packages.</description>
     <member>
+      <email>alicef@gentoo.org</email>
+      <name>Alice Ferrazzi</name>
+      <role>Member</role>
+    </member>
+    <member>
       <email>amynka@gentoo.org</email>
       <name>Amy Liffey</name>
       <role>Member</role>
@@ -3033,6 +3049,11 @@ developers and volunteer mentors.</description>
       <name>Alex Legler</name>
     </member>
     <member>
+      <email>alicef@gentoo.org</email>
+      <name>Alice Ferrazzi</name>
+      <role>Facebook, Events</role>
+    </member>
+    <member>
       <email>dabbott@gentoo.org</email>
       <name>David Abbott</name>
     </member>
@@ -3069,6 +3090,11 @@ developers and volunteer mentors.</description>
     <name>Python</name>
     <url>https://wiki.gentoo.org/wiki/Project:Python</url>
     <description>The Python project maintains dev-lang/python and most of dev-python/*.</description>
+    <member>
+      <email>alicef@gentoo.org</email>
+      <name>Alice Ferrazzi</name>
+      <role>Member</role>
+    </member>
     <member>
       <email>alunduil@gentoo.org</email>
       <name>Alex Brandt</name>
@@ -3564,11 +3590,6 @@ developers and volunteer mentors.</description>
     <member>
       <email>jmorgan@gentoo.org</email>
       <name>Jack Morgan</name>
-      <role>Member ( Gentoo/SPARC )</role>
-    </member>
-    <member>
-      <email>pacho@gentoo.org</email>
-      <name>Pacho Ramos</name>
       <role>Member ( Gentoo/SPARC )</role>
     </member>
     <member>
