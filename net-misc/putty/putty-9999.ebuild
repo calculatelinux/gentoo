@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 inherit autotools eutils gnome2-utils git-r3 toolchain-funcs
 
 DESCRIPTION="A Free Telnet/SSH Client"
@@ -20,7 +20,7 @@ RDEPEND="
 	gtk? (
 		dev-libs/glib:2
 		x11-libs/gdk-pixbuf
-		x11-libs/gtk+:2
+		x11-libs/gtk+:3
 		x11-libs/libX11
 		x11-libs/pango
 	)
@@ -39,6 +39,8 @@ src_unpack() {
 }
 
 src_prepare() {
+	default
+
 	sed -i \
 		-e '/AM_PATH_GTK(/d' \
 		-e 's|-Werror||g' \
@@ -65,7 +67,8 @@ src_install() {
 	dodoc doc/puttydoc.txt
 
 	if use doc; then
-		dohtml doc/*.html
+		docinto html
+		dodoc doc/*.html
 	fi
 
 	cd "${S}"/unix || die
