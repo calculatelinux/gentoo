@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/jpeg:0 net-misc/curl opengl? ( media-libs/libmodplug media-libs/libogg >=media-libs/libpng-1.4:0 media-libs/libtheora media-libs/libvorbis x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp x11-libs/libXext x11-libs/libXpm x11-libs/libXxf86dga x11-libs/libXxf86vm virtual/opengl alsa? ( media-libs/alsa-lib ) sdl? ( media-libs/libsdl[joystick,opengl,video] ) ) !dedicated? ( !opengl? ( media-libs/libmodplug media-libs/libogg >=media-libs/libpng-1.4:0 media-libs/libtheora media-libs/libvorbis x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp x11-libs/libXext x11-libs/libXpm x11-libs/libXxf86dga x11-libs/libXxf86vm virtual/opengl alsa? ( media-libs/alsa-lib ) sdl? ( media-libs/libsdl[joystick,opengl,video] ) ) )
 SLOT=0
 SRC_URI=mirror://sourceforge/nexuiz/nexuiz-252.zip maps? ( mirror://sourceforge/nexuiz/nexmappack_r2.zip )
-_eclasses_=eutils	ea170b525f6a38a006be05c9d9429f13	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
 _md5_=3c992374530838e1865f18b5167b45b5

@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=sys-libs/binutils-libs:= ncurses? ( sys-libs/ncurses:0= ) spacetime? ( sys-libs/libunwind:= ) X? ( x11-libs/libX11 x11-proto/xproto ) virtual/pkgconfig
+DESCRIPTION=Type-inferring functional programming language descended from the ML family
+EAPI=5
+HOMEPAGE=http://www.ocaml.org/
+IUSE=emacs +flambda latex ncurses +ocamlopt spacetime X xemacs
+LICENSE=QPL-1.0 LGPL-2
+PDEPEND=emacs? ( app-emacs/ocaml-mode ) xemacs? ( app-xemacs/ocaml )
+RDEPEND=sys-libs/binutils-libs:= ncurses? ( sys-libs/ncurses:0= ) spacetime? ( sys-libs/libunwind:= ) X? ( x11-libs/libX11 x11-proto/xproto )
+SLOT=0/4.05.0_beta2
+SRC_URI=https://github.com/ocaml/ocaml/archive/4.05.0+beta2.tar.gz -> ocaml-4.05.0-beta2.tar.gz mirror://gentoo/ocaml-patches-9.tar.bz2
+_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=0f69c0532297c32debd37c5d486a7921
