@@ -34,7 +34,7 @@ static-user systemtap tci test +threads usb usbredir vde +vhost-net \
 virgl virtfs +vnc vte xattr xen xfs"
 
 COMMON_TARGETS="aarch64 alpha arm cris i386 m68k microblaze microblazeel mips
-mips64 mips64el mipsel nios2 or32 ppc ppc64 s390x sh4 sh4eb sparc sparc64
+mips64 mips64el mipsel nios2 or1k ppc ppc64 s390x sh4 sh4eb sparc sparc64
 x86_64"
 IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} lm32 moxie ppcemb tricore unicore32 xtensa xtensaeb"
 IUSE_USER_TARGETS="${COMMON_TARGETS} armeb hppa mipsn32 mipsn32el ppc64abi32 ppc64le sparc32plus tilegx"
@@ -80,7 +80,7 @@ SOFTMMU_LIB_DEPEND="${COMMON_LIB_DEPEND}
 	bluetooth? ( net-wireless/bluez )
 	caps? ( sys-libs/libcap-ng[static-libs(+)] )
 	curl? ( >=net-misc/curl-7.15.4[static-libs(+)] )
-	fdt? ( >=sys-apps/dtc-1.4.0[static-libs(+)] )
+	fdt? ( >=sys-apps/dtc-1.4.2[static-libs(+)] )
 	glusterfs? ( >=sys-cluster/glusterfs-3.4.0[static-libs(+)] )
 	gnutls? (
 		dev-libs/nettle:=[static-libs(+)]
@@ -199,7 +199,7 @@ QA_WX_LOAD="usr/bin/qemu-i386
 	usr/bin/qemu-microblazeel
 	usr/bin/qemu-mips
 	usr/bin/qemu-mipsel
-	usr/bin/qemu-or32
+	usr/bin/qemu-or1k
 	usr/bin/qemu-ppc
 	usr/bin/qemu-ppc64
 	usr/bin/qemu-ppc64abi32
@@ -212,27 +212,26 @@ QA_WX_LOAD="usr/bin/qemu-i386
 	usr/bin/qemu-s390x
 	usr/bin/qemu-unicore32"
 
-DOC_CONTENTS="If you don't have kvm compiled into the kernel, make sure
-you have the kernel module loaded before running kvm. The easiest way to
-ensure that the kernel module is loaded is to load it on boot.\n
-For AMD CPUs the module is called 'kvm-amd'.\n
-For Intel CPUs the module is called 'kvm-intel'.\n
-Please review /etc/conf.d/modules for how to load these.\n\n
-Make sure your user is in the 'kvm' group\n
-Just run 'gpasswd -a <USER> kvm', then have <USER> re-login.\n\n
-For brand new installs, the default permissions on /dev/kvm might not let you
-access it.  You can tell udev to reset ownership/perms:\n
-udevadm trigger -c add /dev/kvm"
+DOC_CONTENTS="If you don't have kvm compiled into the kernel, make sure you have the
+kernel module loaded before running kvm. The easiest way to ensure that the
+kernel module is loaded is to load it on boot.
+	For AMD CPUs the module is called 'kvm-amd'.
+	For Intel CPUs the module is called 'kvm-intel'.
+Please review /etc/conf.d/modules for how to load these.
 
-qemu_support_kvm() {
-	if use qemu_softmmu_targets_x86_64 || use qemu_softmmu_targets_i386 \
-		use qemu_softmmu_targets_ppc || use qemu_softmmu_targets_ppc64 \
-		use qemu_softmmu_targets_s390x; then
-		return 0
-	fi
+Make sure your user is in the 'kvm' group. Just run
+	$ gpasswd -a <USER> kvm
+then have <USER> re-login.
 
-	return 1
-}
+For brand new installs, the default permissions on /dev/kvm might not let
+you access it.  You can tell udev to reset ownership/perms:
+	$ udevadm trigger -c add /dev/kvm
+
+If you want to register binfmt handlers for qemu user targets:
+For openrc:
+	# rc-update add qemu-binfmt
+For systemd:
+	# ln -s /usr/share/qemu/binfmt.d/qemu.conf /etc/binfmt.d/qemu.conf"
 
 pkg_pretend() {
 	if use kernel_linux && kernel_is lt 2 6 25; then
@@ -563,12 +562,15 @@ qemu_python_install() {
 	python_doscript "${S}/scripts/qmp/qemu-ga-client"
 }
 
-# Generate the /etc/init.d/qemu-binfmt script which registers the user handlers.
+# Generate binfmt support files.
+#   - /etc/init.d/qemu-binfmt script which registers the user handlers (openrc)
+#   - /usr/share/qemu/binfmt.d/qemu.conf (for use with systemd-binfmt)
 generate_initd() {
 	local out="${T}/qemu-binfmt"
+	local out_systemd="${T}/qemu.conf"
 	local d="${T}/binfmt.d"
 
-	einfo "Generating qemu init.d script"
+	einfo "Generating qemu binfmt scripts and configuration files"
 
 	# Generate the debian fragments first.
 	mkdir -p "${d}"
@@ -604,6 +606,9 @@ generate_initd() {
 		echo ':${package}:M::${magic}:${mask}:${interpreter}:'"\${QEMU_BINFMT_FLAGS}" >/proc/sys/fs/binfmt_misc/register
 	fi
 EOF
+
+		echo ":${package}:M::${magic}:${mask}:${interpreter}:OC" >>"${out_systemd}"
+
 	done
 	cat "${FILESDIR}"/qemu-binfmt.initd.tail >>"${out}" || die
 }
@@ -616,6 +621,10 @@ src_install() {
 		# Install binfmt handler init script for user targets.
 		generate_initd
 		doinitd "${T}/qemu-binfmt"
+
+		# Install binfmt/qemu.conf.
+		insinto "/usr/share/qemu/binfmt.d"
+		doins "${T}/qemu.conf"
 	fi
 
 	if [[ -n ${softmmu_targets} ]]; then
@@ -692,13 +701,14 @@ src_install() {
 		fi
 	fi
 
-	qemu_support_kvm && readme.gentoo_create_doc
+	DISABLE_AUTOFORMATTING=true
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
-	if qemu_support_kvm; then
-		readme.gentoo_print_elog
-	fi
+	DISABLE_AUTOFORMATTING=true
+	FORCE_PRINT_ELOG=1 # remove for next version bump
+	readme.gentoo_print_elog
 
 	if [[ -n ${softmmu_targets} ]] && use kernel_linux; then
 		udev_reload
