@@ -1,11 +1,12 @@
-DEFINED_PHASES=compile install prepare setup
+DEFINED_PHASES=compile install pretend setup
 DESCRIPTION=Clustering Database at High Identity with Tolerance
-EAPI=4
+EAPI=6
 HOMEPAGE=http://weizhong-lab.ucsd.edu/cd-hit/
 IUSE=openmp
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2
+RDEPEND=dev-lang/perl
 SLOT=0
-SRC_URI=https://cdhit.googlecode.com/files/cd-hit-v4.5.4-2011-03-07.tgz
+SRC_URI=https://github.com/weizhongli/cdhit/releases/download/V4.6.6/cd-hit-v4.6.6-2016-0711.tar.gz -> cd-hit-4.6.6.tar.gz
 _eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=2341c46a3e214cc187e24ee6e9619a28
+_md5_=6f2527a7e8185053ec2d19cad4038ed5
