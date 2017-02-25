@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~monsieurp/packages/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 arm ppc ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
+KEYWORDS="amd64 arm ppc ppc64 ~sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 IUSE="doc opengl static-libs"
 
 RDEPEND="
@@ -28,7 +28,7 @@ DEPEND="
 	${RDEPEND}
 	x11-proto/xproto"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 DOCS=( ChangeLog README )
 
