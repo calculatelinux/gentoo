@@ -724,7 +724,6 @@ app-laptop/pbbuttonsd:ibam - Enable support for Intelligent Battery Monitoring
 app-laptop/pbbuttonsd:macbook - Enable support for the Macbook and Macbook Pro
 app-laptop/thinkfan:atasmart - include libatasmart support to get disc temperature
 app-laptop/tp_smapi:hdaps - Install a compatible HDAPS module
-app-leechcraft/lc-aggregator:webaccess - Enables web interface submodule for Aggregator
 app-leechcraft/lc-azoth:acetamide - Build Acetamide, the IRC protocol support
 app-leechcraft/lc-azoth:adiumstyles - Build support for Adium styles
 app-leechcraft/lc-azoth:astrality - Build Astrality, support for protocols provided by Telepathy
@@ -761,7 +760,7 @@ app-leechcraft/lc-blogique:metida - Support for the LiveJournal blogging platfor
 app-leechcraft/lc-core:qwt - Support for QML plotting item through x11-libs/qwt
 app-leechcraft/lc-gmailnotifier:notify - Pull in a plugin to show notifications from GMail Notiifer
 app-leechcraft/lc-gmailnotifier:quark - Pull in a plugin to show GMail Notifier's quark
-app-leechcraft/lc-liznoo:systemd - Pull in correct UPower dependencies for systemd and non-systemd users.
+app-leechcraft/lc-kbswitch:quark - Provide sidebar quark
 app-leechcraft/lc-lmp:fradj - Build FrAdj, the equalizer effect module
 app-leechcraft/lc-lmp:graffiti - Build media tags editor plugin
 app-leechcraft/lc-lmp:guess - Enable tags encoding guessing via the libguess library
@@ -771,19 +770,20 @@ app-leechcraft/lc-lmp:potorchu - Enable the projectM-based visualization effects
 app-leechcraft/lc-monocle:fb2 - Enable support for FictionBook format
 app-leechcraft/lc-monocle:mobi - Enable support for MOBI format
 app-leechcraft/lc-musiczombie:acoustid - Use media-libs/chromaprint for acoustic fingerprinting
-app-leechcraft/lc-netstoremanager:googledrive - Support Google Drive storage backend
-app-leechcraft/lc-netstoremanager:yandexdisk - Support Yandex.Disk storage backend
+app-leechcraft/lc-netstoremanager:dropbox - Build Dropbox storage backend
+app-leechcraft/lc-netstoremanager:googledrive - Build Google Drive storage backend
 app-leechcraft/lc-poshuku:autosearch - Provide automatic search suggestions for Poshuku.
 app-leechcraft/lc-poshuku:cleanweb - Build CleanWeb for ad blocking compatible with Firefox's AdBlock+.
 app-leechcraft/lc-poshuku:dcac - Build color inverter module providing a night mode.
 app-leechcraft/lc-poshuku:fatape - Build FatApe, GreaseMonkey userscripts support layer.
 app-leechcraft/lc-poshuku:filescheme - Build FileScheme for accessing local URLs.
+app-leechcraft/lc-poshuku:foc - Build FOC for Flash-on-Click functionality.
 app-leechcraft/lc-poshuku:fua - Build FUA for faking user agents for different hosts.
 app-leechcraft/lc-poshuku:keywords - Build Keywords for adjusting search shortcuts.
 app-leechcraft/lc-poshuku:onlinebookmarks - Build OnlineBookmarks for syncing bookmarks with social bookmarking services like Read It Later.
-app-leechcraft/lc-poshuku:pcre - Use dev-libs/libpcre for rules matching in CleanWeb instead of slower QRegExp.
 app-leechcraft/lc-poshuku:qrd - Build module for displaying the QR code of a web page.
-app-leechcraft/lc-poshuku:wyfv - Build WYFV for replacing Flash-based video players on some sites.
+app-leechcraft/lc-poshuku:speeddial - Build SpeedDial module.
+app-leechcraft/lc-poshuku:webengine - Build WebEngine- (that is, Chromium-)based rendering backend.
 app-leechcraft/leechcraft-meta:de - Install components, that allow using Leechcraft as Desktop Environment
 app-misc/anki:recording - Enable support for audio recording
 app-misc/anki:sound - Enable support for adding sound to cards
@@ -948,7 +948,6 @@ app-office/calligra:gsf - Enable support for ODT structures extraction via gnome
 app-office/calligra:import-filter - Enable support for various import filter file formats like WordPerfect, Visio and Apple Keynote
 app-office/calligra:kdcraw - Enable support for KDE image manipulating interface via kde-apps/libkdcraw
 app-office/calligra:lcms - Build colorengine plugins using media-libs/lcms
-app-office/calligra:marble - Enable displaying of maps using Marble
 app-office/calligra:okular - Enable bindings for kde-apps/okular
 app-office/calligra:phonon - Build stage/eventplugins and videoshape plugin using media-libs/phonon
 app-office/calligra:pim - Enable support for KDE PIM resources integration
@@ -2838,6 +2837,7 @@ dev-vcs/git:curl - Support fetching and pushing (requires webdav too) over http:
 dev-vcs/git:gpg - Pull in gnupg for signing -- without gnupg, attempts at signing will fail at runtime!
 dev-vcs/git:gtk - Include the gitview contrib tool
 dev-vcs/git:highlight - GitWeb support for app-text/highlight
+dev-vcs/git:libsecret - Enable libsecret support to store login credentials
 dev-vcs/git:mediawiki - Support pulling and pushing from MediaWiki
 dev-vcs/git:mediawiki-experimental - Add experimental patches for improved MediaWiki support
 dev-vcs/git:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arch
@@ -3362,11 +3362,9 @@ kde-apps/libkdepim:designer - Build plugins for dev-qt/designer
 kde-apps/mailcommon:designer - Build plugins for dev-qt/designer
 kde-apps/marble:aprs - Enable support for APRS data sources
 kde-apps/marble:designer - Install plugin for dev-qt/designer
-kde-apps/marble:designer-plugin - Enable designer plugin
 kde-apps/marble:phonon - Enable sound support via media-libs/phonon
 kde-apps/marble:positioning - Enable position information via dev-qt/qtpositioning and dev-qt/qtlocation
 kde-apps/marble:shapefile - Enable support for ESRI shapefiles
-kde-apps/marble:zip - Enable support for reading and displaying .kmz files
 kde-apps/okular:chm - Enable support for Microsoft Compiled HTML Help files
 kde-apps/okular:ebook - Add E-Book support
 kde-apps/okular:mobi - Add mobipocket support
@@ -4504,8 +4502,10 @@ media-sound/qmmp:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
 media-sound/qmmp:cover - Enable album cover support
 media-sound/qmmp:crossfade - Enable crossfade effect when switching tracks
 media-sound/qmmp:cue - enable CUE sheet parsing
+media-sound/qmmp:dbus - Enable DBus notifiications and MPRIS support
 media-sound/qmmp:enca - Detects the character encoding automatically
 media-sound/qmmp:game - Enable Game music support
+media-sound/qmmp:gnome - Enable Gnome hotkey support (requires Qt5DBus)
 media-sound/qmmp:kde - Use kde4 notifier system
 media-sound/qmmp:lyrics - Fetch track lyrics from the web
 media-sound/qmmp:midi - Enable midi support using wildmidi library
@@ -4514,7 +4514,9 @@ media-sound/qmmp:notifier - Enable qmmps' notifier system
 media-sound/qmmp:opus - Enable the opus plugin
 media-sound/qmmp:projectm - Enable projectm music visualization plugin
 media-sound/qmmp:qsui - Enable QMMP simple UI
+media-sound/qmmp:qtmedia - Enable playback via dev-qt/qtmultimedia
 media-sound/qmmp:scrobbler - Enable audioscrobbler/last.fm support
+media-sound/qmmp:sid - Build with SID (Commodore 64 Audio) support
 media-sound/qmmp:soxr - Use the SoX resampling library
 media-sound/qmmp:stereo - Enable stereo effect
 media-sound/qmmp:tray - Build tray icon
@@ -6410,7 +6412,6 @@ net-misc/wireguard:module - Compile the actual WireGuard kernel module. Most cer
 net-misc/wireguard:module-src - Install the module source code to /usr/src, in case you like building kernel modules yourself.
 net-misc/wireguard:tools - Compile the wg(8) tool and related helpers. You probably want this enabled.
 net-misc/x2goserver:fuse - Use net-fs/sshfs to allow shared folders
-net-misc/xrdp:fuse - Enable clipboard file / device redirection via sys-fs/fuse
 net-misc/youtube-viewer:gtk - Install the gtk GUI, called gtk-youtube-viewer
 net-nds/389-ds-base:auto-dn-suffix - Enable auto bind with auto dn suffix over unix domain socket (LDAPI) support
 net-nds/389-ds-base:autobind - Enable auto bind over unix domain socket (LDAPI) support
@@ -8247,9 +8248,10 @@ x11-drivers/xf86-video-nouveau:glamor - Enable Glamor OpenGL 2D acceleration
 x11-drivers/xf86-video-openchrome:viaregtool - Install registers dumper tool
 x11-drivers/xf86-video-qxl:xspice - Build the xspice driver
 x11-libs/agg:gpc - Enable gpc polygon clipper library
-x11-libs/cairo:gles2 - Use OpenGL ES 2 backend for acceleration.
+x11-libs/cairo:gles2 - Build the OpenGL ES 2 backend
 x11-libs/cairo:glib - Compile with GLib Object System support
-x11-libs/cairo:opengl - Use Mesa backend for acceleration
+x11-libs/cairo:opengl - Build the OpenGL backend
+x11-libs/cairo:utils - Build support for Cairo script and trace utilities
 x11-libs/cairo:valgrind - Built-in support to mark memory regions
 x11-libs/cairo:xlib-xcb - Use XCB renderer backend for acceleration over xlib. Enabling this may solve or introduce display corruption problems.
 x11-libs/fltk:games - Builds and installs some extra games
