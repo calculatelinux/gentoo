@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c078083c18077b64b17e399f94969b5f16bc7f60 $
 
 EAPI=5
 SWORD_MODULE="YLT"

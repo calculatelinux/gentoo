@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=>=dev-perl/CPAN-Perl-Releases-2.600.0 >=dev-perl/Capture-Tiny-0.360.0 >=dev-perl/Devel-PatchPerl-1.400.0 >=virtual/perl-Pod-Parser-1.630.0 >=dev-perl/local-lib-2.0.14 dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/G/GU/GUGOD/App-perlbrew-0.78.tar.gz
-_eclasses_=multiprocessing	eb9be4b678c4e71f3f530a767df31912	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
-_md5_=8debf1e1cfe55cf2fa60403d540fb363
+_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
+_md5_=2091c435968b85fdd4a9d2656f890d47

@@ -6,5 +6,5 @@ HOMEPAGE=https://github.com/JulyIGHOR/QtBitcoinTrader
 LICENSE=GPL-3
 RDEPEND=dev-libs/openssl:0 sys-libs/zlib dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtscript:5 dev-qt/qtwidgets:5 dev-qt/qtmultimedia:5
 SLOT=0
-_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	708f85bc1bf00876604e223fb56e062a	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	git-r3	6efc2d7de07a77bf72c7207b48d0e123	multilib	165fc17c38d1b11dac2008280dab6e80	qmake-utils	0a242e7177789b0028b4045f336dd4db	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=647fa2ca0bfe82704611c63970ae17fc
+_eclasses_=base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	fdo-mime	f612973507f5479ae67cb635227b6218	git-r3	abc3caa050da0c4b8faec237bd358fcb	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	qmake-utils	461362a9981d9f069203d2436fea87ce	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=be5d43ebb69da4667085b607f493ab0b

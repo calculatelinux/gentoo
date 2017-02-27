@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8eaabe3a4e05839adcc8088d05d8f12c4e54d880 $
 
 DESCRIPTION="Library to provide file system information"
 HOMEPAGE="http://www.marcuscom.com"

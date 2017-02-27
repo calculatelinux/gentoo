@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=|| ( mail-filter/libmilter mail-mta/sendmail ) mail-filter/amavisd-new
 SLOT=0
 SRC_URI=mirror://sourceforge/amavisd-milter/amavisd-milter-1.6.0.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=1e3a7f501b5c560745062957b28e60e7
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=bff3a2a7f7d46ead741e391c9f1b6228

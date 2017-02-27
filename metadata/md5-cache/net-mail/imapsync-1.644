@@ -9,4 +9,4 @@ RDEPEND=dev-lang/perl dev-perl/Digest-HMAC dev-perl/File-Copy-Recursive dev-perl
 RESTRICT=test
 SLOT=0
 SRC_URI=https://fedorahosted.org/released/imapsync/imapsync-1.644.tgz
-_md5_=c8c94b4790cd01756b8e2ce26bc36d6d
+_md5_=d4d7e969745052e0eb7c9ca88c12ce48

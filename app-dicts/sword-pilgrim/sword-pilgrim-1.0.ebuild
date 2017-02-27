@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 309af6128e95b558d5934d89475a87a79296bcd3 $
 
 EAPI=5
 SWORD_MODULE="Pilgrim"

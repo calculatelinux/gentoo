@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4d488736b6c4e562d2568557dfa8b902255177d5 $
 
 EAPI=6
 DIST_AUTHOR=MONGODB

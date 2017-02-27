@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 91c16d69ae8d39dc95a4bfa201ebdd5ffbac4721 $
 
 EAPI=5
 SWORD_MODULE="TDavid"

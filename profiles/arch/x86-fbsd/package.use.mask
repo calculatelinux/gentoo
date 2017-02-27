@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6431765e68a1c71aa81cf2ac8ee0ec6cc24a981d $
 
 # Thomas Deutschmann <whissi@gentoo.org> (14 Feb 2017)
 # net-misc/curl dropped keywords in ffe8d873b8110d4434fc89423ea668450cab1d96

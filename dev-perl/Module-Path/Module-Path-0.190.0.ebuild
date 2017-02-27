@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c23fb75f880940b27b3c077d53781fc9cac56259 $
 EAPI=6
 DIST_AUTHOR=NEILB
 DIST_VERSION=0.19

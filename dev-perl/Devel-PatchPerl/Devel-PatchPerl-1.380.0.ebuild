@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6cf719fa41494682b1d1db4396faec0c8ea0d102 $
 
 EAPI=5
 MODULE_AUTHOR=BINGOS

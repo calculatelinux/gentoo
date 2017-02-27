@@ -7,5 +7,5 @@ KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 LICENSE=GPL-2
 SLOT=1
 SRC_URI=http://critical.ch/distfiles/libsidplay-1.36.59.tgz
-_eclasses_=libtool	84763589a795fb127b537cac01e5359f	multibuild	742139c87a9fa3766f0c2b155e5522bf	multilib	165fc17c38d1b11dac2008280dab6e80	multilib-build	8fe2e81aeb36cdf8a6cc5f50443879cc	multilib-minimal	e7442c2d848733064a6639b5d73d3b74	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=502f994bafefa7e2389fa218865332f3
+_eclasses_=libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multibuild	863e759ee14be1c222e6b67853e91c7d	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multilib-build	982f755104619efbd39dc7adf268729d	multilib-minimal	05f45bd8205b0060c1670be849fa06d1	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=4517e300a9f9486ed661fe90d287d219

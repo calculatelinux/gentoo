@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 81ac2cdb32c33438e43be1cbb4f12bea629ca052 $
 
 EAPI=5
 SWORD_MODULE="ItaRive"

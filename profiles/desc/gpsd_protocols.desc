@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9eeffb0c34f2778bbbd5f576851cd63e9527a25c $
 
 # This file contains descriptions of possible protocols for gpsd package.
 # Keep it sorted. :)

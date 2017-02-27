@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=net-misc/rsync
 SLOT=0
 SRC_URI=https://github.com/github/backup-utils/archive/v2.6.0.tar.gz -> github-backup-utils-2.6.0.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	python-any-r1	1c20f9b800324335a8e3b137363362e8	python-utils-r1	50dad5f912d4c16c130f5679777f25e8	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=e4fbe42cb7880d5a31ccfd5d927c0a94
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-any-r1	7daff3c0322873651801c85ef36109f5	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=a520ea69ada771f179ab34dc705f61c4

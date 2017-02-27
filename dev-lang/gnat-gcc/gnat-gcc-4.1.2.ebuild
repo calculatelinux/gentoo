@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 025d74ab6d7d81127628ae092c79bdecbe18cbf4 $
 
 EAPI=5
 inherit gnatbuild

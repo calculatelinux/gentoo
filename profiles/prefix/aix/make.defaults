@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 24e3c2806a54f76af13248a204fb42d29b31130d $
 
 # System-wide defaults for all AIX profiles
 # This file should rarely need to be changed

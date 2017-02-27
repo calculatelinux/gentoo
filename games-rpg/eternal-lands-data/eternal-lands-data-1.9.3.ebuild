@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: cf6d07080feb2e27a10c419f6d6eef8d2260fab9 $
 
 inherit games
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d810e2878998c5721f183002bb0c8fdb1671cb9d $
 
 # @ECLASS: latex-package.eclass
 # @MAINTAINER:

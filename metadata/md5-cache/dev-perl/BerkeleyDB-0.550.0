@@ -8,5 +8,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=sys-libs/db-2.0:* dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/P/PM/PMQS/BerkeleyDB-0.55.tar.gz
-_eclasses_=db-use	a4966c7f4f7df444ead1212848c13cc9	eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	unpacker	45d07319df5f40ee6af58418b0f930be	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=53d60a4148c25cafc583f8be9d06b9c1
+_eclasses_=db-use	a78d02394ad4dc53c35056e39505abfe	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	unpacker	2afe53b558f4ad6955316e702a4c9cfa	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=4011113299ddb038dfb68426c22aa03b

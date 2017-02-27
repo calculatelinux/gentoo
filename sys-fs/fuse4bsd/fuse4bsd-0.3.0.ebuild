@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: af1892de220c69aa2e96b665b6beef4bc9443ea4 $
 
 inherit portability toolchain-funcs eutils flag-o-matic
 

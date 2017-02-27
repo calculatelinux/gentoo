@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: bc053d8d96cae7f049e0b49e852faf583725feea $
 
 EAPI=5
 EGO_PN=github.com/cpuguy83/go-md2man

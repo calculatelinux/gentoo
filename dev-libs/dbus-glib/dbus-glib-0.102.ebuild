@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9ffc0c080ee9dbce8bc0f8b959bb1897984dcbba $
 
 EAPI=5
 inherit bash-completion-r1 eutils multilib-minimal

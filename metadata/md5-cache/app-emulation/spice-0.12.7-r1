@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/glib-2.22:2[static-libs(+)?] >=media-libs/celt-0.5.1.1:0.5.1[static-libs(+)?] media-libs/opus[static-libs(+)?] sys-libs/zlib[static-libs(+)?] virtual/jpeg:0=[static-libs(+)?] >=x11-libs/pixman-0.17.7[static-libs(+)?] !libressl? ( dev-libs/openssl:0[static-libs(+)?] ) libressl? ( dev-libs/libressl[static-libs(+)?] ) sasl? ( dev-libs/cyrus-sasl[static-libs(+)?] )
 SLOT=0
 SRC_URI=http://spice-space.org/download/releases/spice-0.12.7.tar.bz2
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	python-any-r1	1c20f9b800324335a8e3b137363362e8	python-utils-r1	50dad5f912d4c16c130f5679777f25e8	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=c76c385c42b85575c04ecdf22ac36e35
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-any-r1	7daff3c0322873651801c85ef36109f5	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=cb667375bc15e9a46112399b4383fbf4

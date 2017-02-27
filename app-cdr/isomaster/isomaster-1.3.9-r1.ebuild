@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c1bc3513227609efcb3244ae7572312565ab71df $
 
 EAPI=4
 inherit eutils fdo-mime toolchain-funcs

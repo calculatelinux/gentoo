@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c61369ef9afed7da43dd3a4a31c783e2290c8f92 $
 
 EAPI=6
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator

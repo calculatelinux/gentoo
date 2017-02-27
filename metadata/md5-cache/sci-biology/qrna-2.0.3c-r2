@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl sci-biology/hmmer
 SLOT=0
 SRC_URI=mirror://gentoo/qrna-2.0.3c.tar.bz2
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=2d6f354a4083037008b24f7323b920a6
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=ef5adada1616866ab0b37523757b4324

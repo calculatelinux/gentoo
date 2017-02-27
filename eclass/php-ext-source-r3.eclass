@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 54eda3123d221f8b37b0769b9447a516ca9f23c9 $
 
 # @ECLASS: php-ext-source-r3.eclass
 # @MAINTAINER:

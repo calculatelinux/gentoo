@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6a0b678b8cedb76fb6fe2b1d7ce215943a9e1f39 $
 
 EAPI=6
 inherit gnome2 vala

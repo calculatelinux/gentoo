@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 97dd75339fd9afad045783f44b3e51b008892313 $
 
 EAPI=6
 inherit autotools fcaps git-r3

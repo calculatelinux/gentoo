@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e412bd3e3d196cb75cdcd45cf34a0dad0d25ada7 $
 
 EAPI=5
 OASIS_BUILD_DOCS=1

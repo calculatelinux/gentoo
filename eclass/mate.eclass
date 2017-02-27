@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 39d9da1e4a76364353be693aa57909719014f5c4 $
 
 # @ECLASS: mate.eclass
 # @MAINTAINER:

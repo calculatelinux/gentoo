@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=net-firewall/iptables virtual/logger
 SLOT=0
 SRC_URI=http://www.linuxkungfu.org/ipkungfu/ipkungfu-0.6.1.tar.bz2
-_md5_=94fef91ef1b8415a314180e8395297c5
+_md5_=a31e5de9fccfe736f62bbcd679ddb71b

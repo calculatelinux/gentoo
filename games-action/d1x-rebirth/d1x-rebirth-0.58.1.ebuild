@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f93391f7d7463603a0a92b98e55c673e43a0fb46 $
 
 EAPI=5
 CDROM_OPTIONAL="yes"

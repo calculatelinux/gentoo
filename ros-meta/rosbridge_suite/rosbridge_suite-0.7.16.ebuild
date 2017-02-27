@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b0376ccdeee817eb7c067197bdf8c9970e58cf86 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/RobotWebTools/rosbridge_suite"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ffe6976ff89cb64badb94f4b8a59b89d84b5de9b $
 
 inherit php-pear-r1
 

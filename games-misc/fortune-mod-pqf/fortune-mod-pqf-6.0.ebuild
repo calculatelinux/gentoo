@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: bca4d5060122a82b994fa07020ec0a987fb8a157 $
 EAPI=5
 DESCRIPTION="Fortune database of Terry Pratchett's Discworld related quotes"
 HOMEPAGE="http://www.lspace.org/"

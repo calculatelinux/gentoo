@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 46d3dffd59bd0b5e7ea889e2ed70748c2c051a93 $
 
 # Sergey Popov <pinkbyte@gentoo.org> (24 Oct 2015)
 # Not tested

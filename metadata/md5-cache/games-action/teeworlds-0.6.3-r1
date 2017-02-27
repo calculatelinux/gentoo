@@ -9,5 +9,5 @@ LICENSE=ZLIB
 RDEPEND=!dedicated? ( app-arch/bzip2 media-libs/freetype media-libs/libsdl[X,sound,opengl,video] media-libs/pnglite media-sound/wavpack virtual/glu virtual/opengl x11-libs/libX11 ) sys-libs/zlib
 SLOT=0
 SRC_URI=https://downloads.teeworlds.com/teeworlds-0.6.3-src.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	python-any-r1	1c20f9b800324335a8e3b137363362e8	python-utils-r1	50dad5f912d4c16c130f5679777f25e8	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=465e9fd7ecc284ccc86335816e193521
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	python-any-r1	7daff3c0322873651801c85ef36109f5	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=7d68866ddd3e511af1f0118366b21a05

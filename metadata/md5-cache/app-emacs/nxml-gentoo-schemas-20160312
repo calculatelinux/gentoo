@@ -8,5 +8,5 @@ LICENSE=HPND
 RDEPEND=>=virtual/emacs-23
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~ulm/distfiles/nxml-gentoo-schemas-20160312.tar.xz
-_eclasses_=elisp	7e36316fe822639d5a29fa10d5529eb9	elisp-common	9f56c4e9bf1282dbfc2a5a09e1124e74
-_md5_=872a4e72e31e26ee3ae75c4c10fe64c7
+_eclasses_=elisp	62249f4b6196eec26a81f335fb4d1a33	elisp-common	4a8ce40989ad055139c36baa8c81ea0b
+_md5_=9eb4ff04e1e095272fb37996885c21dd

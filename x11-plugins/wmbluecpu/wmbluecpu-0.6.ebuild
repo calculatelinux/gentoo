@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 926ddd1ee0ca62be07f656a1e97eb86c461d6064 $
 
 inherit toolchain-funcs
 

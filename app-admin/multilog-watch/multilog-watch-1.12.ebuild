@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: bad3fb80fed8763dfa2882e9fdff6306f289ff2c $
 
 inherit eutils
 DESCRIPTION="Watches a multilog file for irregularities"

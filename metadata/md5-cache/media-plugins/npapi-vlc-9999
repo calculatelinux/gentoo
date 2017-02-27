@@ -7,5 +7,5 @@ IUSE=gtk
 LICENSE=LGPL-2.1
 RDEPEND=>=media-video/vlc-1.1 x11-libs/libX11 !gtk? ( x11-libs/libXpm x11-libs/libSM x11-libs/libICE ) gtk? ( x11-libs/gtk+:2 ) !<media-video/vlc-1.2[nsplugin]
 SLOT=0
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	git-2	7af5d170bfc02983b4bcd3167dc5edd4	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=db7c3d45ea33eb866935b24a4a94b30a
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	git-2	d77c6ee878e5582d755f883568217b9e	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=8e5f2bc4d6f991ff95fbc3363e7c221b

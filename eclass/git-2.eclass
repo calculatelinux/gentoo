@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 39cdf52cc826017842dc3e85d086baf80453c16a $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:

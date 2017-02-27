@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=apparmor? ( sys-libs/libapparmor ) seccomp? ( sys-libs/libseccomp ) !app-emulation/docker-runc
 SLOT=0
 SRC_URI=https://github.com/opencontainers/runc/archive/bd2f9c52cd3b766d993924ae6eba72b82998f3bd.tar.gz -> runc-1.0.0_rc2_p20170222.tar.gz
-_eclasses_=golang-base	a42b7e0ca33d7ab0c0fa52699435b816	golang-vcs-snapshot	1caa6d8238d2378ad688ae068ff22e5a
-_md5_=163764a2ec7ffd8499d9f67fac4347cf
+_eclasses_=golang-base	0f75d9692d09462687e69a4c6dda0d16	golang-vcs-snapshot	192c4e42089abf548c85be344086b1ff
+_md5_=58d57bddca0d4ce8e494e47993177a6f

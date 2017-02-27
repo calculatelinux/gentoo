@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 2fdbf6977707ca612d5a86a5c29197b5e16c0301 $
 
 # @ECLASS: ruby-fakegem.eclass
 # @MAINTAINER:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 41c13c81f8c2b019dd14711b536b7d9fab3f06d9 $
 
 EAPI=5
 MODULE_AUTHOR=SALVA

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 7acb59b1c57d982b4c0cca44e675e85c0400a602 $
 
 PORTAGE_LIBC="uClibc"
 ELIBC=uclibc

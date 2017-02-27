@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 2686d0c69df1bab5d2ac6c44bf4b4156d8478136 $
 
 EAPI=6
 

@@ -10,5 +10,5 @@ RDEPEND=mpi? ( virtual/mpi ) virtual/fortran
 REQUIRED_USE=cmkopt? ( !charmdebug !charmtracing ) charmproduction? ( !charmdebug !charmtracing )
 SLOT=0
 SRC_URI=http://charm.cs.uiuc.edu/distrib/charm-6.5.1.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	fortran-2	8200fc942c3b3c1fc75d4d5bfd0ba7a2	multilib	165fc17c38d1b11dac2008280dab6e80	python-any-r1	1c20f9b800324335a8e3b137363362e8	python-utils-r1	50dad5f912d4c16c130f5679777f25e8	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=96f13565bdc8fe331ff9710dfb98ece9
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	fortran-2	6e2f17677c59718c51012a2b534469e1	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-any-r1	7daff3c0322873651801c85ef36109f5	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=b547defd63f096bc5ebbf29bf8e9e173

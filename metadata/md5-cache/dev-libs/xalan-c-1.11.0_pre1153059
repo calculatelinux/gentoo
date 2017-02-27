@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=>=dev-libs/xerces-c-2.8.0
 SLOT=0
 SRC_URI=mirror://gentoo/Xalan-C_r1153059-src.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=c0ad6820f0c577378f520dfdbd7d6e39
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=0c5838489393327cab2c151c9f3697b8

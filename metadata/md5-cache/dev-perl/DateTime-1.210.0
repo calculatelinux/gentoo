@@ -9,5 +9,5 @@ LICENSE=Artistic-2
 RDEPEND=virtual/perl-Carp >=dev-perl/DateTime-Locale-0.410.0 >=dev-perl/DateTime-TimeZone-1.740.0 >=dev-perl/Params-Validate-1.30.0 virtual/perl-Scalar-List-Utils dev-perl/Try-Tiny virtual/perl-XSLoader dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DR/DROLSKY/DateTime-1.21.tar.gz
-_eclasses_=multiprocessing	eb9be4b678c4e71f3f530a767df31912	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
-_md5_=e30d7a2886d70644a7b8b013b88875be
+_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
+_md5_=c74d59b2e4bf08e6c484c5c58f528c3b

@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=virtual/cron app-shells/bash
 SLOT=0
 SRC_URI=https://github.com/lukas2511/dehydrated/archive/v0.4.0.tar.gz -> dehydrated-0.4.0.tar.gz
-_eclasses_=user	e10ccb95af96d45f86016fa982a949bb
-_md5_=ff1cc8635491866560853d89dbf89f01
+_eclasses_=user	e28cdd9fa5d8069e8e047c82db5d57bd
+_md5_=716fbd0883918aa4b04871183fff974e

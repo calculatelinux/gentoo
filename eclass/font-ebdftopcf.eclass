@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 334da01c70fa1e35a7d4c26f6ad21c2d28c43ffa $
 
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 

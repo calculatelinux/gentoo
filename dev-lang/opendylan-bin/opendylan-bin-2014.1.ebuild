@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0f10a0a28ce72bfcfbe4f63c9687117302580e27 $
 EAPI=5
 
 DESCRIPTION="OpenDylan language runtime environment (prebuilt)"

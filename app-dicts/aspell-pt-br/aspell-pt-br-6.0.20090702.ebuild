@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6a34077cea16055639902558933b49717e03087f $
 
 ASPELL_LANG="Brazilian Portuguese"
 ASPOSTFIX=6

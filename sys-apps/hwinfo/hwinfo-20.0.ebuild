@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b69431b2a6ffe9d3560d98b0297c84d70c295a98 $
 
 EAPI=4
 inherit multilib rpm toolchain-funcs

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 94c4a1394cabdc58486bf8127df0963f30074dcc $
 
 EAPI=5
 SWORD_MODULE="Torrey"

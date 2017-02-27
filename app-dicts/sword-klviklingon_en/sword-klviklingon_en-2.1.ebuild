@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 504191e9dec339ae4d8f3140a071992e949dae41 $
 
 EAPi=5
 SWORD_MODULE="KLViklingon_en"

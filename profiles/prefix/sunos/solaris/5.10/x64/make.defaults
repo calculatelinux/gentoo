@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8fd6dd3bf1cef8cdcad258115de4d283ffb315ba $
 
 ARCH="x64-solaris"
 CHOST="x86_64-pc-solaris2.10"

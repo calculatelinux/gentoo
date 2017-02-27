@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9b5215d6690b7b9848d7abba730e067d8df7125b $
 
 # @ECLASS: sgml-catalog.eclass
 # @MAINTAINER:

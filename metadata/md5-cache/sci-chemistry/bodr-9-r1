@@ -7,4 +7,4 @@ KEYWORDS=~amd64 ~x86 ~ppc-macos
 LICENSE=MIT
 SLOT=0
 SRC_URI=mirror://sourceforge/bodr/bodr-9.tar.bz2
-_md5_=0ecb8aa25ae504ee17182562bd936799
+_md5_=6a76b66819f5918afd51841c9aa920a9

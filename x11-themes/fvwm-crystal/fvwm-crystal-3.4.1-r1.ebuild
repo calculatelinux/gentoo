@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c3109cadb79ef15ed854cd146f111c8693968529 $
 
 EAPI=5
 RESTRICT=mirror

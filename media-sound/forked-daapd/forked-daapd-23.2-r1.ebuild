@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9342862d0681ca0e4ded476f57224ef788c64ceb $
 
 # TODO:
 # Add --enable-spotify when it works

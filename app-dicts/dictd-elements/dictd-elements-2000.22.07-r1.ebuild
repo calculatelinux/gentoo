@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 71944bb403d389753097578613b8dd23c559057f $
 
 MY_P=elements-20001107-pre
 DESCRIPTION="The elements database for dict"

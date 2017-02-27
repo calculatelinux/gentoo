@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/gnus app-xemacs/mh-e app-xemacs/rmail app-xemacs/vm app-xemacs/mailcrypt app-xemacs/mail-lib app-xemacs/apel app-xemacs/xemacs-base app-xemacs/fsf-compat app-xemacs/sh-script app-xemacs/net-utils app-xemacs/ecrypto app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/tm-1.39-pkg.tar.gz
-_eclasses_=xemacs-packages	3efe8d071b1fa620109b658175e85267
-_md5_=0931a60ff0cf021ffe239c9236acb4de
+_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
+_md5_=f8ec8d3ed1854206164a1c8ff56b72d6

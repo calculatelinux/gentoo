@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/alsa-lib x86? ( sys-apps/pciutils ) amd64? ( sys-apps/pciutils ) dev-libs/confuse >=sys-apps/dbus-1.1 dev-libs/dbus-glib sys-libs/zlib media-libs/audiofile gtk? ( x11-libs/gtk+:2 ) X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXpm ) media-sound/alsa-utils virtual/eject
 SLOT=0
 SRC_URI=http://alioth.debian.org/frs/download.php/3583/pommed-1.39.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	linux-info	af49d8ab3be91bb1d38b7201dc9e5123	multilib	165fc17c38d1b11dac2008280dab6e80	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=4d9b7883bd3a8eb3beb6300efeabe500
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	linux-info	28a4d19bc3bdeee9008ccce076260427	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=6a112cfbb8c40d8d189a0c4cbd874d52

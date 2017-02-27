@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1eb17ab0aacff48fb9ca54a8ae130cae15cc0c3c $
 
 # This file contains descriptions of MONKEYD_PLUGINS USE_EXPAND flags for www-servers/monkeyd.
 # All plugins are included here except cgi and fastcgi which are global use flags.

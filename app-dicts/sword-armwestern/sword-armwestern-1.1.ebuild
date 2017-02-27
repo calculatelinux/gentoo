@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1599db2d5a95ec49df322eb28890defd407b7ce3 $
 
 EAPI=5
 SWORD_MODULE="ArmWestern"

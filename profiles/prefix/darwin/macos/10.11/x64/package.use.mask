@@ -1,5 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4bccb5fc89dace98467a200ea16803def6c2a311 $
 
 

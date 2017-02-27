@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e0318852043fca147d1b49556c2fa5f0b15c256f $
 
 IUSE=""
 DESCRIPTION="The Ventrilo Voice Communication Server"

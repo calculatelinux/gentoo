@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=>=dev-libs/glib-2.32:2 >=media-libs/gstreamer-1.4.0:1.0 >=media-libs/gst-plugins-base-1.4.0:1.0
 SLOT=1.0
 SRC_URI=https://gstreamer.freedesktop.org/src/gnonlin/gnonlin-1.4.0.tar.xz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=1d3176975eea535a957bfedc8a77a38b
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=49d86662415c54df9e5eef032714a382

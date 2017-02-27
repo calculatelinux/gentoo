@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6448ddda6fa8786be309eaad78229d212f39d76c $
 
 # @ECLASS: golang-vcs.eclass
 # @MAINTAINER:

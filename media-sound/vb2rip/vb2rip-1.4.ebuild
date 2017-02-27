@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: cf4acebbff14738ece4239aede23525aa612b8b5 $
 
 inherit versionator toolchain-funcs
 

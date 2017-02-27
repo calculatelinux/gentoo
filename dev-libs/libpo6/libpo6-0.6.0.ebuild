@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 706cbd5affe8a395e8db944e74e57609093f3858 $
 EAPI=4
 
 DESCRIPTION="Hyperdex libpo6 support library"

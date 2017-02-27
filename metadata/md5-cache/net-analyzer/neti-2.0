@@ -10,4 +10,4 @@ RDEPEND=java? ( || ( >=virtual/jdk-1.2 >=virtual/jre-1.2 ) ) net-libs/libpcap
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/neti/neti-2.0.tar.gz
-_md5_=7886bed22d46316b3eba394e2367fd1b
+_md5_=5a34c97848d8bedb4efb9f8c48babba6

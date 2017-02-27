@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ddb28654b49806319d52dfb5c2c9965022578dce $
 
 # @ECLASS: mysql-v2.eclass
 # @MAINTAINER:

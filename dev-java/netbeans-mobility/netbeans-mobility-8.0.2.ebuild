@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4e40a7f0274dfea3f6c86f2aeebe9b0f30f5b587 $
 
 EAPI="4"
 inherit eutils java-pkg-2 java-ant-2

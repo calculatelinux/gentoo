@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 11ed50979dbe8b7695cdc7bd0c5f289fb466f341 $
 
 EAPI=4
 DESCRIPTION="Modern, high-level, general-purpose, high-performance programming language"

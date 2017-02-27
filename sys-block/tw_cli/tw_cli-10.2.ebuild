@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fe850379a8da70e34f534713b82fd3bfb7456b9f $
 
 EAPI="2"
 DESCRIPTION="3ware SATA+PATA RAID controller Command Line Interface tool"

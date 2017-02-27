@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 73a33405b7fa86d52452850c09db7bd6059ebefd $
 
 EAPI=5
 inherit linux-info versionator

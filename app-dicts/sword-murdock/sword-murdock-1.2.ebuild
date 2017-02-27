@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ff457b670cadb44e3d0f08e6412c8a758c3e7077 $
 
 EAPI=5
 SWORD_MODULE="Murdock"

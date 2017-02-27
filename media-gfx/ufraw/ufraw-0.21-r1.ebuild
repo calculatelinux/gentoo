@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a9b78a213e55f2b0a68e483c9e78d12d11ff4917 $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils toolchain-funcs

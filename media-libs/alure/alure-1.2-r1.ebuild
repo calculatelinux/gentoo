@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9c412fe6bbdd0e3d3154b55cc305b1430265179c $
 
 EAPI=6
 inherit cmake-utils eutils
@@ -11,7 +11,7 @@ SRC_URI="http://kcat.strangesoft.net/alure-releases/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="dumb examples flac fluidsynth mp3 sndfile static-libs vorbis"
 
 RDEPEND=">=media-libs/openal-1.1

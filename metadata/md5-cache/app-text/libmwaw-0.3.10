@@ -9,4 +9,4 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-libs/librevenge dev-libs/libxml2 sys-libs/zlib
 SLOT=0
 SRC_URI=mirror://sourceforge/libmwaw/libmwaw-0.3.10.tar.xz
-_md5_=1084ae3991507a084a78608db64be00a
+_md5_=cf60acef6fda48871f233fc9b3bbb126

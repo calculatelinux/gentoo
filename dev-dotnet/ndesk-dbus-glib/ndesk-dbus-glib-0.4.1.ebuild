@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 93a4d59e99b79a46a6fd12ae83977c562cc0bd41 $
 
 EAPI=6
 inherit mono-env

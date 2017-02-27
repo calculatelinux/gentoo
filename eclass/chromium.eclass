@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 55131158142d62941ff793241b100e82edd78a5e $
 
 # DEPRECATED
 # This eclass has been deprecated and should not be used by any new ebuilds.

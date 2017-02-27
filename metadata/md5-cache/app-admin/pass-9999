@@ -7,5 +7,5 @@ IUSE=+git X zsh-completion fish-completion emacs dmenu importers elibc_Darwin
 LICENSE=GPL-2
 RDEPEND=app-crypt/gnupg media-gfx/qrencode >=app-text/tree-1.7.0 git? ( dev-vcs/git ) X? ( x11-misc/xclip ) elibc_Darwin? ( app-misc/getopt ) zsh-completion? ( app-shells/gentoo-zsh-completions ) fish-completion? ( app-shells/fish ) dmenu? ( x11-misc/dmenu x11-misc/xdotool ) emacs? ( virtual/emacs )
 SLOT=0
-_eclasses_=bash-completion-r1	acf715fa09463f043fbfdc1640f3fb85	elisp-common	9f56c4e9bf1282dbfc2a5a09e1124e74	git-2	7af5d170bfc02983b4bcd3167dc5edd4	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=ecc693ceabf3cc2341203384ecdfd1e5
+_eclasses_=bash-completion-r1	2418d29a9d4e3e223bbc64e93cde118e	elisp-common	4a8ce40989ad055139c36baa8c81ea0b	git-2	d77c6ee878e5582d755f883568217b9e	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=6e67666c6bfcd58ad129cf6208855b9a

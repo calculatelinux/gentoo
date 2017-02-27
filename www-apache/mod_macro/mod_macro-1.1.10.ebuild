@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 2af2351c0e13e788c0bb696d5a270c4b465bf0dd $
 
 inherit apache-module
 

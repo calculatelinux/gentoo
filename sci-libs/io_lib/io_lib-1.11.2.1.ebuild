@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0a2908ea3423f9491d6a6262e92d572c195bd7b7 $
 
 DESCRIPTION="A general purpose trace and experiment file reading/writing interface"
 HOMEPAGE="http://staden.sourceforge.net/"

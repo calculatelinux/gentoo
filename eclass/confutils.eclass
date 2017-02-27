@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4d724750af97ded1b0ddcde7b353e61b24ebff3b $
 
 # @ECLASS: confutils.eclass
 # @MAINTAINER:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5e1962ba26f076b59435303c78add36e0b9c8709 $
 
 EAPI=5
 DESCRIPTION="A collection of modules for the SWORD project"

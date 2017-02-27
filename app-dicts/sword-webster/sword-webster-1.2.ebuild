@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b3dfdbe01fe776e7ec0c2100e665fde0e0ff12b2 $
 
 EAPI=5
 SWORD_MODULE="Webster"

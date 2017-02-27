@@ -8,4 +8,4 @@ LICENSE=Broadcom
 RESTRICT=mirror binchecks strip
 SLOT=b43
 SRC_URI=http://www.lwfinger.com/b43-firmware/broadcom-wl-5.100.138.tar.bz2
-_md5_=7abad9af79770228400a76a41769774f
+_md5_=8c74069afbc114bfeca66cecc1b3e91a

@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f2a1a18048fc21a36f15216f6a0ea5b4e1766dca $
 
 EAPI=6
 inherit linux-info flag-o-matic toolchain-funcs fdo-mime

@@ -7,5 +7,5 @@ KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2 FDL-1.2
 SLOT=0
 SRC_URI=http://achurch.org/services/tarballs/ircservices-5.1.24.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	fixheadtails	2f44773656577fe2653bacc8bdcb2174	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	prefix	99dcca42e6528d8fe3c214bf5731aaf2	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb
-_md5_=840e3dfbc29f47d16d2f47f10a4f08f5
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	fixheadtails	30fe8c600e656af8acdd2e407dca4ddf	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	prefix	38ff416d58fcaea18d47c00728c70298	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd
+_md5_=88c17b266ebca5edbc08e3f7086effcd

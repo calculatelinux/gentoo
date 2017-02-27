@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a76f8c643919277c3e0cd2f48abdcc45200df3e6 $
 
 ARCH="ia64"
 ACCEPT_KEYWORDS="ia64"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 03ba1c7f570ab74621e1f83a923f41867572c3a7 $
 
 EAPI=5
 inherit readme.gentoo scons-utils toolchain-funcs

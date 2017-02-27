@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: aa391d1c5c16452a11d18bd46e824043e838fa9d $
 
 DESCRIPTION="Open Type Organizer"
 HOMEPAGE="https://sourceforge.net/projects/oto/"

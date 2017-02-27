@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 7d092211e629d0beee628b891be9c9d3aa43af59 $
 
 EAPI=5
 inherit eutils udev

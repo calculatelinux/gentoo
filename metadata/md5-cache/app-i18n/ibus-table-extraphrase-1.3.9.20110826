@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=>=app-i18n/ibus-table-1.1
 SLOT=0
 SRC_URI=https://ibus.googlecode.com/files/ibus-table-extraphrase-1.3.9.20110826.tar.gz
-_md5_=53172d69225e1938f1504e0b569160ef
+_md5_=db7e8d6d6b988eb1b0cd25cb7ed9b096

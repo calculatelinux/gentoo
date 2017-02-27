@@ -10,5 +10,5 @@ RDEPEND=office_implementation_libreoffice? ( || ( app-office/libreoffice[java] a
 REQUIRED_USE=|| ( office_implementation_libreoffice office_implementation_openoffice )
 SLOT=0
 SRC_URI=https://ooo2gd.googlecode.com/files/ooo2gd_3.0.0.oxt
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	office-ext-r1	342fc56feaa095aba175303656869008	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=8eb0b64d54bbe5f2f76f6cd01e71d336
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	office-ext-r1	5523a6c9515dc0de63e763aa30394589	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=aabb4a2c76e63f3ad06ec7d537dbad64

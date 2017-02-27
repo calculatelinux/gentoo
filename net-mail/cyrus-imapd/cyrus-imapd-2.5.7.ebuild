@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: dbdc249a66b35aa98a0b26d0b1024c99983515f5 $
 
 EAPI=5
 inherit autotools eutils multilib pam ssl-cert user toolchain-funcs

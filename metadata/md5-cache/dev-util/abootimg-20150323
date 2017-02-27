@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/util-linux
 SLOT=0
 SRC_URI=https://gitlab.com/ajs124/abootimg/repository/archive.tar.gz?ref=1ebeb393252ab5aeed62e34bc439b6728444f06e -> abootimg-20150323.tar.gz
-_md5_=5cc2d82559ca46c4d10aafeb5bb57686
+_md5_=74444d59f1d60b0c595a1544105bce22

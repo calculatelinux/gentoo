@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 78d55164bb8142629f90f4e50dc8dc002573f47a $
 
 PROFILE_ARCH="xbox"
 CPU_FLAGS_X86="mmx sse"

@@ -10,5 +10,5 @@ RDEPEND=>=sys-libs/ncurses-5.7-r7 lirc? ( app-misc/lirc ) sdl? ( media-libs/libs
 REQUIRED_USE=|| ( oss sdl )
 SLOT=0
 SRC_URI=mirror://sourceforge/mp3blaster/mp3blaster-3.2.5.tar.gz mirror://debian/pool/main/m/mp3blaster/mp3blaster_3.2.5-3.debian.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=34d041fa907d047fcb5aa6a0692ecc06
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=cb619bbf2b904bdaba66d67c9ae36b73

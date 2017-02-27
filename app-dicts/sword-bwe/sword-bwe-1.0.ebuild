@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 96c46d46517af92879e5f3ed7b6387d74b5f3533 $
 
 EAPI=5
 SWORD_MODULE="BWE"

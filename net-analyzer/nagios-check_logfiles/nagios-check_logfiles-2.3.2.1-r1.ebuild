@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: afc46f07d16745f52d4b06d23a0feb26f7d4d723 $
 
 inherit eutils multilib
 DESCRIPTION="A nagios plugin for checking logfiles"

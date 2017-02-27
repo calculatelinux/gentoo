@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id$
+# $Id: a12f97358bc953b84ca2e1c63f5af002df9cbf72 $
 
 # Unmask the flag which corresponds to ARCH.
 -ppc

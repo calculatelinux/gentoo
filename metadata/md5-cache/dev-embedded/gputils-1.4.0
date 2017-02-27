@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge/gputils/gputils-1.4.0.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=efa0f08eb753402041c200bb194fbb68
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=4afa8828f5d5ab44b5f2dabd5d7c772b

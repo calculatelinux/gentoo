@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 14b7f98ade51cd13358212859f6ecf09517dda80 $
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2 flag-o-matic toolchain-funcs

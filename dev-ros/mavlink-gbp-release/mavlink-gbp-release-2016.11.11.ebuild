@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e37119a10baf7d3b33cd10b9d8d22ec317830d60 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/mavlink/mavlink-gbp-release"

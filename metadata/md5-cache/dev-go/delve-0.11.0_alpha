@@ -7,5 +7,5 @@ KEYWORDS=~amd64
 LICENSE=MIT
 SLOT=0
 SRC_URI=https://github.com/derekparker/delve/archive/v0.11.0-alpha.tar.gz -> delve-0.11.0_alpha.tar.gz
-_eclasses_=golang-base	a42b7e0ca33d7ab0c0fa52699435b816	golang-vcs-snapshot	1caa6d8238d2378ad688ae068ff22e5a
-_md5_=d29998c7bba092dc5fecc10fe64e72c1
+_eclasses_=golang-base	0f75d9692d09462687e69a4c6dda0d16	golang-vcs-snapshot	192c4e42089abf548c85be344086b1ff
+_md5_=2331f39e857fc4de5257cc3578cfbdeb

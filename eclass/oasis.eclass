@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9bf5ce084900c50af0852cda8afbd49ed78bd184 $
 
 # @ECLASS: oasis.eclass
 # @MAINTAINER: 

@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6aaec3544b63a315d6c7335304ece26c3721515d $
 
 EAPI=6
 QT5_MODULE="qtlocation"

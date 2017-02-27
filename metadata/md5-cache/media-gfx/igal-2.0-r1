@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl virtual/imagemagick-tools virtual/jpeg
 SLOT=0
 SRC_URI=http://igal.trexler.at/igal2-2.0.tar.gz
-_md5_=5d1c9a88428b73f2921925fed8bc17c1
+_md5_=e35e70fb78329e88f840c52c423a10f7

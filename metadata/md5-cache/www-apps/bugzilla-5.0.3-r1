@@ -10,5 +10,5 @@ RDEPEND=virtual/httpd-cgi dev-lang/perl >=dev-perl/CGI-3.510.0 >=dev-perl/DBI-1.
 REQUIRED_USE=|| ( mysql postgres sqlite )
 SLOT=5.0.3-r1
 SRC_URI=https://ftp.mozilla.org/pub/mozilla.org/webtools/bugzilla-5.0.3.tar.gz
-_eclasses_=depend.apache	7aeacf4ba074b9aa0047e2ba05c1010f	eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	webapp	42c6ef7af496b228f9854b3c81e4b226
-_md5_=676286270091d7dba5b92d21a555aaca
+_eclasses_=depend.apache	709c14156cf40f0e14521b003014fba6	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	webapp	8e0ef22ac030da2d8de98c90883ca147
+_md5_=a23dc57371960a8f3f9fae8e012595ad

@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=|| ( dev-lang/vala:0.30[vapigen(+)] ) >=xfce-base/exo-0.10 >=xfce-base/garcon-0.2 >=xfce-base/libxfce4ui-4.10 >=xfce-base/libxfce4util-4.10 >=xfce-base/xfce4-panel-4.10 >=xfce-base/xfconf-4.10
 SLOT=0
 SRC_URI=mirror://xfce/src/bindings/xfce4-vala/4.10/xfce4-vala-4.10.3.tar.bz2
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	708f85bc1bf00876604e223fb56e062a	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	gnome2-utils	c6dcdf3a2c22b578b16adb945dc85c35	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	vala	ca3f1c504058f5de407febddfae73167	xdg-utils	e2b2bd56125ce8cf59ce30c642b59d48	xfconf	d842ab8b2140980394561496bf157447
-_md5_=96d9d70794f88c1254050c3c5ce2f2d6
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	fdo-mime	f612973507f5479ae67cb635227b6218	gnome2-utils	6ac81c289e6fd66edb59051e57d895e3	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	vala	0188bc6aa00caa542d0c760355424856	xdg-utils	169c13f9ec65368f6f6b2961e68dc152	xfconf	179ac6efb15a01b9106aac668de8ecd6
+_md5_=aad9f7a97305eca33b7a4ce51b09b656

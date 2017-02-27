@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 39d11336d8c1c5ed380c28fcc7c4d0ff40af7c93 $
 
 DESCRIPTION="library for the 1394 Trade Association AV/C (Audio/Video Control) Digital Interface Command Set"
 HOMEPAGE="https://sourceforge.net/projects/libavc1394/"

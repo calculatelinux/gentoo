@@ -7,4 +7,4 @@ KEYWORDS=alpha amd64 arm ia64 ppc s390 sh sparc x86 ~x86-fbsd
 LICENSE=freedist
 SLOT=0
 SRC_URI=http://koi8.pp.ru/dist/x6rus-2.3.1-bin.tgz
-_md5_=6626c94928aa057956364af978da860d
+_md5_=8fac4c4a495a3ce1c51043ad2fd67de4

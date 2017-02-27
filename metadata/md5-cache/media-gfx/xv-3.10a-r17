@@ -9,5 +9,5 @@ LICENSE=xv
 RDEPEND=x11-libs/libXt jpeg? ( virtual/jpeg:0 ) tiff? ( media-libs/tiff:0 ) png? ( >=media-libs/libpng-1.2:0= sys-libs/zlib )
 SLOT=0
 SRC_URI=mirror://sourceforge/png-mng/xv-3.10a-jumbo-patches-20070520.tar.gz ftp://ftp.cis.upenn.edu/pub/xv/xv-3.10a.tar.gz mirror://gentoo/xv-3.10a.png.bz2
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=c3e5ce91e0696776a2938aace913e4bd
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=70d195ed709a13217edc1ba17ed15108

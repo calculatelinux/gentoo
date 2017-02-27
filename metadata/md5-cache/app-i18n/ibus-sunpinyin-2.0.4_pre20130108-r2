@@ -10,5 +10,5 @@ RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~yngwin/distfiles/sunpinyin-2.0.4_pre20130108.tar.xz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	python-single-r1	6793fc854691a2320226801400573568	python-utils-r1	50dad5f912d4c16c130f5679777f25e8	scons-utils	d42c1726f481bb5812cc2ce1f236db1d	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=ae69b9628d34a1bf37e0b504b178e379
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	python-single-r1	b85fdbcb7d5ea8aff392df97c9cb9385	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	scons-utils	b6c192239ce862682fb55f05f6ff82ff	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=a18e3366c448378198f9111596b155a1

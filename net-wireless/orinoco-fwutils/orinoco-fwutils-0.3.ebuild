@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4fb2d4717ea803a38bd8f5d5e8b56bbc05ea957d $
 
 DESCRIPTION="ORiNOCO IEEE 802.11 wireless LAN firmware utilities"
 HOMEPAGE="http://www.nongnu.org/orinoco/"

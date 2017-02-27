@@ -7,5 +7,5 @@ IUSE=graphviz elibc_Darwin elibc_SunOS
 LICENSE=GPL-2
 RDEPEND=dev-util/diffstat mail-mta/sendmail sys-apps/ed elibc_Darwin? ( app-misc/getopt ) elibc_SunOS? ( app-misc/getopt ) >=sys-apps/coreutils-8.5 graphviz? ( media-gfx/graphviz )
 SLOT=0
-_eclasses_=bash-completion-r1	acf715fa09463f043fbfdc1640f3fb85	eutils	708f85bc1bf00876604e223fb56e062a	git-2	7af5d170bfc02983b4bcd3167dc5edd4	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=b865f571ff60664aca8111a40e72dd26
+_eclasses_=bash-completion-r1	2418d29a9d4e3e223bbc64e93cde118e	eutils	c8729578e47597ee48d77eda210e2b56	git-2	d77c6ee878e5582d755f883568217b9e	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=cdaca2c09d6b9cdd69d73b479e43d0f0

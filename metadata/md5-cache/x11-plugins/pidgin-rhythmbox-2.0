@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=net-im/pidgin media-sound/rhythmbox >=x11-libs/gtk+-2.4:2 dev-libs/dbus-glib
 SLOT=0
 SRC_URI=http://jon.oberheide.org/pidgin-rhythmbox/downloads/pidgin-rhythmbox-2.0.tar.gz
-_md5_=1977bfd09243c122544ae7388d7234a0
+_md5_=8033e058d36495a9cb11d3c89a462bb1

@@ -8,5 +8,5 @@ PDEPEND=virtual/commonlisp
 RDEPEND=>=x11-wm/stumpwm-0.9.9
 RESTRICT=mirror
 SLOT=0
-_eclasses_=common-lisp-3	732b3b6e2021a252e13158c86e4ea4d0	eutils	708f85bc1bf00876604e223fb56e062a	git-r3	6efc2d7de07a77bf72c7207b48d0e123	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=9dd5fd18c2a7d0d73c0ef7a21c1de69a
+_eclasses_=common-lisp-3	cf691d9ca120ddb2649ba5b7c884140c	eutils	c8729578e47597ee48d77eda210e2b56	git-r3	abc3caa050da0c4b8faec237bd358fcb	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=85487fa41118d05247904dfd4a0d1a27

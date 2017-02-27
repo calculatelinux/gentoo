@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=games-misc/fortune-mod
 SLOT=0
 SRC_URI=http://www.ie.lspace.org/ftp-lspace/words/pqf/pqf-6.0
-_md5_=6894d9a69cb5532503a775255f414d0c
+_md5_=9f442926c8ef83fa630d7d4073e69fec

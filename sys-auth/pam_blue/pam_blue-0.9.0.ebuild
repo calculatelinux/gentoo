@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c9a78ed118506fad1092bb17f72631b375a75472 $
 
 inherit pam autotools multilib
 

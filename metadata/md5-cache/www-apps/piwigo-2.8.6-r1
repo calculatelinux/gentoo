@@ -10,5 +10,5 @@ RDEPEND=imagemagick? ( virtual/imagemagick-tools ) dev-lang/php[ctype,exif?,gd?,
 REQUIRED_USE=|| ( gd imagemagick )
 SLOT=2.8.6-r1
 SRC_URI=http://piwigo.org/download/dlcounter.php?code=2.8.6 -> piwigo-2.8.6.zip
-_eclasses_=webapp	42c6ef7af496b228f9854b3c81e4b226
-_md5_=57b1a3015eb25ab39a464ddc47bc38f2
+_eclasses_=webapp	8e0ef22ac030da2d8de98c90883ca147
+_md5_=f0498911a04a71224d12206ff8e54ab2

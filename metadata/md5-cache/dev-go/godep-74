@@ -7,5 +7,5 @@ KEYWORDS=~amd64
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/tools/godep/archive/v74.tar.gz -> godep-74.tar.gz
-_eclasses_=golang-base	a42b7e0ca33d7ab0c0fa52699435b816	golang-build	a44f10e6bd86ecccf2a07cc0d4cf6bec	golang-vcs-snapshot	1caa6d8238d2378ad688ae068ff22e5a
-_md5_=9b2f0544c52d4c885a34fe3c51663dce
+_eclasses_=golang-base	0f75d9692d09462687e69a4c6dda0d16	golang-build	6105adc054fab1d12e49129dbb97ebe6	golang-vcs-snapshot	192c4e42089abf548c85be344086b1ff
+_md5_=60c241b6d3cdfe2050c23e4462018387

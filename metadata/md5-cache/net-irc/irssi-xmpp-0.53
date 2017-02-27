@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=net-irc/irssi-0.8.13 >=net-libs/loudmouth-1.4.0
 SLOT=0
 SRC_URI=https://github.com/cdidier/irssi-xmpp/archive/v0.53.tar.gz -> irssi-xmpp-0.53.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=37a0d3eeace0b884b1c86ee61f5ce82a
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=431ab75bd4ca524516f223ee070f88fc

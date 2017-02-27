@@ -9,5 +9,5 @@ LICENSE=JDOM
 RDEPEND=>=virtual/jre-1.4 ~dev-java/jdom-1.0 =dev-java/jaxen-1.1* dev-java/saxpath >=dev-java/java-config-2.2.0-r3
 SLOT=1.0
 SRC_URI=http://www.jdom.org/dist/source/jdom-1.0.tar.gz
-_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	708f85bc1bf00876604e223fb56e062a	java-pkg-2	eb1f0d7d874162c70088f5ae32c31ee7	java-utils-2	b31a7fe19a47c6a2d901f6de949e5209	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=a08fc4de9f15c9aad091b4d870ccb4dd
+_eclasses_=base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	java-pkg-2	9aa2f2c12a6a7cdafd9494d17762d4a9	java-utils-2	ebeaf17afbac1fe2f3549ea6afa504e3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=560451ed6554a997f8e787d97910ff52

@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=!minimal? ( >=dev-perl/EV-4.0.0 ) >=virtual/perl-IO-Socket-IP-0.370.0 >=virtual/perl-JSON-PP-2.271.30 >=virtual/perl-Pod-Simple-3.90.0 >=virtual/perl-Time-Local-1.200.0 dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/S/SR/SRI/Mojolicious-7.21.tar.gz
-_eclasses_=multiprocessing	eb9be4b678c4e71f3f530a767df31912	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
-_md5_=1811196d63be42d52721143fed985f9d
+_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
+_md5_=b2bab5c3c49e54c23ea47632c660a7f8

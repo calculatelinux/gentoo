@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a7bcb6006b95e491401842bb06c6ef78818561b5 $
 
 EAPI=6
 inherit gnome2-utils multilib readme.gentoo-r1

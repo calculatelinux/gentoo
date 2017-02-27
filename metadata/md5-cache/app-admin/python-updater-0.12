@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/gentoo-functions || ( >=sys-apps/portage-2.1.6 >=sys-apps/paludis-0.56.0 sys-apps/pkgcore )
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~floppym/dist/python-updater-0.12.tar.bz2
-_md5_=a6a205591068dc77d35fa78ff5536806
+_md5_=e8e47c80a234243d193705a8c03d7b39

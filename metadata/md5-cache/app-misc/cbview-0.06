@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=dev-perl/gtk2-perl dev-perl/String-ShellQuote app-arch/unrar app-arch/unzip
 SLOT=0
 SRC_URI=http://elvine.org/code/cbview/cbview-0.06.tar.gz
-_md5_=85a1e15b5898b6f690deeb8ab8ab1892
+_md5_=07b4de6df006eb63f8ea6c225fa0cfa1

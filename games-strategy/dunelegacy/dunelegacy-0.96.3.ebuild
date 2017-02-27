@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9b7582c49c0054f4408bfd0e6a669351b3cc3933 $
 
 # do not use autotools related stuff in stable ebuilds
 # unless you like random breakage: 469796, 469798, 424041

@@ -10,4 +10,4 @@ RDEPEND=media-libs/libogg media-libs/opus http? ( !libressl? ( dev-libs/openssl:
 REQUIRED_USE=^^ ( fixed-point float )
 SLOT=0
 SRC_URI=http://downloads.xiph.org/releases/opus/opusfile-0.6.tar.gz
-_md5_=0d9b339f077b27415792a7ac9b444251
+_md5_=2c03a1f1d4c7c998a94d6241070e3f8f

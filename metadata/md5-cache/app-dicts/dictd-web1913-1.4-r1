@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=>=app-text/dictd-1.5.5
 SLOT=0
 SRC_URI=ftp://ftp.dict.org/pub/dict/pre/dict-web1913-1.4-pre.tar.gz
-_md5_=d718969d1d658ad6969eb0fc61ea2f68
+_md5_=06d13d1324162f0128385bbf01baa4f4

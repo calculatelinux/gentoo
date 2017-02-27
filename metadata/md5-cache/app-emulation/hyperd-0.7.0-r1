@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=libvirt? ( >=app-emulation/libvirt-1.2.2 ) xen? ( app-emulation/xen )
 SLOT=0
 SRC_URI=https://github.com/hyperhq/hyperd/archive/v0.7.0.tar.gz -> hyperd-0.7.0.tar.gz
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	golang-base	a42b7e0ca33d7ab0c0fa52699435b816	golang-vcs-snapshot	1caa6d8238d2378ad688ae068ff22e5a	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=df84685058d0e5451a6f3483269f79a5
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	golang-base	0f75d9692d09462687e69a4c6dda0d16	golang-vcs-snapshot	192c4e42089abf548c85be344086b1ff	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=aec1397eb729dc4f71da8a90b1147146

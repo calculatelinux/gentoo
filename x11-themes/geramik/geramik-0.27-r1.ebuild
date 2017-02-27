@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 120aa172e6fbb912b9d2c42a4068e982c4ed5fcb $
 
 MY_P="Geramik-${PV}"
 DESCRIPTION="GTK+1 and GTK+2 Geramik Themes"

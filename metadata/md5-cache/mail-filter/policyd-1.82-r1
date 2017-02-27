@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/mysql dev-libs/openssl
 SLOT=0
 SRC_URI=http://policyd.sourceforge.net/policyd-1.82.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=6c0d7a01e23286072111fa5d95d04d52
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=6c93281fbc5cbbb0165eb4ad3f67f0af

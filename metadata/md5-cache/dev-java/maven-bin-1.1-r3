@@ -8,4 +8,4 @@ LICENSE=Apache-2.0
 RDEPEND=>=virtual/jdk-1.5 app-eselect/eselect-java
 SLOT=1.1
 SRC_URI=mirror://apache/maven/maven-1/1.1/binaries/maven-1.1.tar.gz
-_md5_=016e4e7b1251434b69e0662ec6a7219f
+_md5_=a892554b2b02ca89f0fd654d938bc18f

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a4db5317b7d64ac0310f5c01b5ea885da3141f32 $
 
 EAPI=5
 inherit perl-app

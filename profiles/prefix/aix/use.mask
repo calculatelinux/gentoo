@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1aaf9f8ec2f2322099444038b029fb1116e544fb $
 
 # Re-add AIX libc
 -elibc_AIX

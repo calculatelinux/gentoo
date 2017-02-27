@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9a7489ffddcb3bda5a06a9e2049e803402e9b8e2 $
 
 EAPI=5
 SWORD_MODULE="Vulgate_HebPs"

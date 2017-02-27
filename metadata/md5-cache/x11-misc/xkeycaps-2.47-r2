@@ -8,5 +8,5 @@ LICENSE=HPND
 RDEPEND=x11-misc/xbitmaps x11-libs/libX11 x11-libs/libXmu x11-libs/libXt x11-libs/libXaw x11-libs/libXext
 SLOT=0
 SRC_URI=mirror://debian/pool/main/x/xkeycaps/xkeycaps_2.47.orig.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=62f379b99d5e354538f5ebfae620befd
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=584eff4064d5ee74a55c251b690d64ae

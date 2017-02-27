@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-perl/Monitoring-Plugin dev-perl/Module-Pluggable sys-apps/smartmontools sys-fs/lsscsi 3ware? ( sys-block/tw_cli ) aacraid? ( sys-block/arcconf ) dmraid? ( sys-fs/dmraid ) hpa? ( sys-block/hpacucli ) hpsa? ( sys-apps/cciss_vol_status ) i2o? ( sys-apps/raidutils ) megaraid-sas? ( sys-block/megacli ) megaraid-scsi? ( sys-block/megarc ) mpt-sas2? ( sys-block/sas2ircu ) mpt? ( sys-block/mpt-status ) dev-lang/perl:=
 SLOT=0
 SRC_URI=https://github.com/glensc/nagios-plugin-check_raid/archive/02b6425dac3db7e98d4c36bf0836357c6b36196c.tar.gz -> nagios-plugin-check_raid-02b6425dac3db7e98d4c36bf0836357c6b36196c.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=96fcb8a8475ebc2faf4785ecc1fc3c4f
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=44c82e274b706ff0b8f1613e39da9e16

@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ec13dedcfa8efe3769207669447f368a480ac0ea $
 
 EAPI=6
 RESTRICT="test"

@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/xemacs-base app-xemacs/xemacs-devel app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/edebug-1.22-pkg.tar.gz
-_eclasses_=xemacs-packages	3efe8d071b1fa620109b658175e85267
-_md5_=a82909b8da03f31cbe12da92f8c02524
+_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
+_md5_=bfc22a509d515a8a556136203a840806

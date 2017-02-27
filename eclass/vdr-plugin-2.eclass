@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f5824bd3a1d834dc860fada7f4cbfc71124215dc $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:

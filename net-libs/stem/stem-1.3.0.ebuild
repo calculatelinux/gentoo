@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 659782bc791f20a020e7ff39919346332bb56d35 $
 
 EAPI=5
 # Python3.3 fails to execute the test script

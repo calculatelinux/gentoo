@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-2.20161023-r3
 SLOT=0
 SRC_URI=https://raw.githubusercontent.com/wiki/TresysTechnology/refpolicy/files/refpolicy-2.20161023.tar.bz2 https://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-2.20161023-r3.tar.bz2
-_eclasses_=selinux-policy-2	fdb802daf258a647a1117a1f2c043168
-_md5_=44d5b3cebe73226b812ac587c99e0ab8
+_eclasses_=selinux-policy-2	c69da139ce0e2297fedaacf4167c6da0
+_md5_=b0580e25d08127dcfae53d3e99fef0fa

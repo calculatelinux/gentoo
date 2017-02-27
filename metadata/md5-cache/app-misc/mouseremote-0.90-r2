@@ -7,5 +7,5 @@ KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www4.pair.com/gribnif/ha/MouseRemote.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=b74aa3594466535ab7e0d4ecc725ce7d
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=f18be3da117693cc564fa4cca591da05

@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/glib:2 !gtk3? ( x11-libs/gtk+:2 x11-libs/vte:0 ) gtk3? ( x11-libs/gtk+:3 x11-libs/vte:2.90 )
 SLOT=0
 SRC_URI=mirror://sourceforge/lxde/lxterminal-0.2.0.tar.gz
-_md5_=ba5418f03650ef5ffd5f868902affb7b
+_md5_=6bc2001086b6ae502fd061c57449e6ec

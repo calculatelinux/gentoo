@@ -8,4 +8,4 @@ LICENSE=MIT
 RDEPEND=sys-libs/ncurses:0=[unicode]
 SLOT=0
 SRC_URI=http://dev.yorhel.nl/download/ncdu-1.12.tar.gz
-_md5_=3b38d4a67fa594eb34fde22759fc6f24
+_md5_=aeffeb328b3f36b43d3367201d649ef3

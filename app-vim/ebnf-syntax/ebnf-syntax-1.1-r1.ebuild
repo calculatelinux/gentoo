@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 94591d1e07e872a6a094e071baaa50d0a7b743c1 $
 
 inherit vim-plugin
 

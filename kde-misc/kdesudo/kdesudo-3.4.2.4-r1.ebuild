@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b243dde48fc3f4c15a192d3bd9950352ba700c3c $
 
 EAPI=5
 # FIXME. What is linguas_jv, different Japanese translation?

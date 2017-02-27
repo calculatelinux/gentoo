@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=virtual/perl-IO dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MS/MSCHILLI/Proc-Simple-1.32.tar.gz
-_eclasses_=multiprocessing	eb9be4b678c4e71f3f530a767df31912	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
-_md5_=e1dc6e2b8c7a26087aeefa609cab1e47
+_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
+_md5_=12194b5913a600b98877deedb2e8d232

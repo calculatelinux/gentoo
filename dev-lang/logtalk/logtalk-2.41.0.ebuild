@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d60b0831d130030f8519e4634c048da893c0bee9 $
 
 inherit eutils versionator fdo-mime
 

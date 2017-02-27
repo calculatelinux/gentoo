@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c513c69296d4d3302b4587b29c4819a70c0e73d7 $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:

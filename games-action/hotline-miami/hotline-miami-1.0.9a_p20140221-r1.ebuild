@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a2b0c945570b020a09d25a3460aafd90cf8ee2cb $
 
 # TODO: unbundle Qt5
 #		remove emul-linux-x86* deps (bug 484060)

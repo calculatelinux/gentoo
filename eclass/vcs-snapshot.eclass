@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 05c2d586cb6fa50d7e8ffc6a9e3ad8ed25d5ea37 $
 
 # @ECLASS: vcs-snapshot.eclass
 # @MAINTAINER:

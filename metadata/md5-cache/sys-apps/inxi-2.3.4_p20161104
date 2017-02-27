@@ -7,4 +7,4 @@ LICENSE=GPL-3
 RDEPEND=>=app-shells/bash-3.0 sys-apps/pciutils
 SLOT=0
 SRC_URI=https://github.com/smxi/inxi/tarball/89e18d245bc34fc5be5f5baddac2ccd8106be050 -> inxi-2.3.4_p20161104.tar.gz
-_md5_=0de2d61104416e6fee68aa28d638cae2
+_md5_=7a3e0a74dfeb236e1f60813282cf0b6d

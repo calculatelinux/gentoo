@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f30dd548128625c709a6e0b084d856882ad5dcd6 $
 
 DESCRIPTION="A C++ template library that implements Double-Array"
 HOMEPAGE="http://chasen.org/~taku/software/darts/"

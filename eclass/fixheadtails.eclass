@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 2bac496375b5d6ee2bd5dd799fb5b0e5f35cda2e $
 
 # @ECLASS: fixheadtails.eclass
 # @MAINTAINER:

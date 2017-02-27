@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f485cff05524b2eb44ae7595de9333d8249cbf8a $
 
 IUSE=""
 

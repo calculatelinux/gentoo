@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9d3807fcecf692f892418513151224ad07cb8ed9 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-planning/navigation"

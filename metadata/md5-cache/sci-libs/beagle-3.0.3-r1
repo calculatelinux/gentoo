@@ -9,4 +9,4 @@ LICENSE=LGPL-2.1
 RDEPEND=sys-libs/zlib !app-misc/beagle !dev-libs/libbeagle
 SLOT=0
 SRC_URI=mirror://sourceforge/beagle/beagle-3.0.3.tar.gz
-_md5_=b860d74e26f16e199dbd714ff5b01c21
+_md5_=b214c9c0b4d5a80eef94591f98ec88cb

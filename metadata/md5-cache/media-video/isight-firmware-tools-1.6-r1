@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.14:2 dev-libs/libgcrypt:0 virtual/libusb:0 virtual/udev
 SLOT=0
 SRC_URI=https://launchpad.net/isight-firmware-tools/main/1.6/+download/isight-firmware-tools-1.6.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	udev	0498b698e76cdc94930b59a00c73dd9c	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=d2ef3b26bb67a41eb6a59b3da905d3d6
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	udev	9b8a82f709a883f0840736c9b9375698	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=7ba023abb608c9fe55b2176ac67b0edc

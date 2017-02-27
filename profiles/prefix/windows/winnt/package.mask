@@ -1,8 +1,8 @@
 
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 85faba2830c97d49040b90d88d8fa128fc3cc0a3 $
 
-# $Id$
+# $Id: 85faba2830c97d49040b90d88d8fa128fc3cc0a3 $
 
 # Markus Duft <mduft@gentoo.org> (30 Sep 2009)
 # the patch does not currently apply, and needs some work.

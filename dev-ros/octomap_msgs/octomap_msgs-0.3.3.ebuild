@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e7314261cb2ea08573b27526d565abeff0539407 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/OctoMap/octomap_msgs"

@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 04554213bc5f82f6d3b0a8814aeb7294e0e41d92 $
 
 # This file contains descriptions of VOICEMAIL_STORAGE USE_EXPAND flags.
 # This is primarily used by net-misc/asterisk.

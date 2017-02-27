@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 94fa421f3e75b4bfe79a70738d68a4c94ac0ef49 $
 
 EAPI=6
 EGIT_REPO_URI="https://github.com/y-256/${PN}"

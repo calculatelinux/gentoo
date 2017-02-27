@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fa965433bf079620391119841f3443f7aa4a6728 $
 
 EAPI=6
 DIST_AUTHOR=JRM

@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 051c1d7ba2d7c86d187771a0acb2f61ed3bb5b70 $
 
 EAPI=6
 PLOCALES="ca cs da de el en es et eu fr gl hu it lv nb nl pl pt ru sr sv tr zh"

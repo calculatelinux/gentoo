@@ -9,5 +9,5 @@ LICENSE=GPL-3+ MIT BSD
 RDEPEND=>=app-shells/bash-4:0 net-misc/curl net-misc/wget virtual/awk compression? ( sys-libs/zlib ) nfacct? ( net-firewall/nfacct net-libs/libmnl ) nodejs? ( net-libs/nodejs )
 SLOT=0
 SRC_URI=https://firehol.org/download/netdata/releases/v1.2.0/netdata-1.2.0.tar.xz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	fcaps	660bea720798c7f21931349757636576	linux-info	af49d8ab3be91bb1d38b7201dc9e5123	multilib	165fc17c38d1b11dac2008280dab6e80	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=30dc5fa818fd3aa1a2280e166905a0b1
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	fcaps	b322db55b38b828606f332783d386104	linux-info	28a4d19bc3bdeee9008ccce076260427	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=751db197992385ade7daf10afb042d30

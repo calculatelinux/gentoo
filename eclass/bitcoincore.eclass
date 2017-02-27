@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d656c14b1ba3c6b2485930c85bb17983b234d436 $
 #
 # @ECLASS: bitcoincore.eclass
 # @MAINTAINER:

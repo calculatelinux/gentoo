@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fd3ed4d6b1e28a9a1bce0cc3a3671a5b65ab7083 $
 
 ASPELL_LANG="Belarusian"
 

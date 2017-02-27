@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f3ab965c756439355f78845e229b7511cd4fa263 $
 
 EAPI=6
 inherit autotools eutils git-r3 libtool

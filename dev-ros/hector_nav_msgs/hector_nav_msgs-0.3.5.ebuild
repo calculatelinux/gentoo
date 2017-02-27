@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a80338130aa5922c46ca82ab4e6c1de00a86ecc0 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/tu-darmstadt-ros-pkg/hector_slam"

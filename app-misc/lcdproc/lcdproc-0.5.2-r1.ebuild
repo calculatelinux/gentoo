@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 25a3faadaba3048dc29ff2281520f908b7af03ae $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils autotools multilib

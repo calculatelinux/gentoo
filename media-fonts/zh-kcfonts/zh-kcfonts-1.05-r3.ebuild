@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ecbe65795e114f6304b7fb9930eb834d81a05a26 $
 
 S="${WORKDIR}"
 inherit eutils font toolchain-funcs

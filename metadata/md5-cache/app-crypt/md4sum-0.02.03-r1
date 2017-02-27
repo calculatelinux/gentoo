@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~x86 ~ppc
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://linux.xulin.de/c/md4sum-0.02.03.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=b51ec4493dfc8e89fc4f7ff27de0327a
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=cf7f6a9b58f87e4d7d32f7b410a9459d

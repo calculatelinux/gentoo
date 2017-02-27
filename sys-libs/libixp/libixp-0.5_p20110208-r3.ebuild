@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d59009fb8619aa9a0a5c1d778236925ff9c25c62 $
 
 # hg clone http://hg.suckless.org/libixp
 

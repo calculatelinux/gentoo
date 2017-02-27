@@ -6,4 +6,4 @@ HOMEPAGE=http://wiki.ros.org/mavros
 LICENSE=metapackage
 RDEPEND=dev-ros/libmavconn dev-ros/mavros dev-ros/mavros_extras dev-ros/mavros_msgs
 SLOT=0
-_md5_=44d23b157b834e0682da8b7a7c29df05
+_md5_=6ad3b567e0af5167e41ffdc6d5711d20

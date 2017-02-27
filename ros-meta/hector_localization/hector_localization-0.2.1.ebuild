@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ea1562779e08128420f8509a31bcce10d0eceec9 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/tu-darmstadt-ros-pkg/hector_localization"

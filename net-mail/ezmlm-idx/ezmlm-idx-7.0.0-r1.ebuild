@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8302bb95acdab0219d815a50e2d87d1292cb874f $
 
 inherit qmail multilib
 

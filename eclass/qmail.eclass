@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e6694b08fa884f197ecfb9e37206dff7f97fe11a $
 
 # @ECLASS: qmail.eclass
 # @MAINTAINER:

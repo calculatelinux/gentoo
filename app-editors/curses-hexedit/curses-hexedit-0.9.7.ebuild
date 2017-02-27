@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5627f0a24f5cc6adf5c9fb32f1dadcabf5db568a $
 
 # There's already a "hexedit" package in the tree, so name this one differently
 

@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=net-irc/irssi
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~wraeth/distfiles/quassel-irssi-0_p20160412.tar.gz https://dev.gentoo.org/~wraeth/distfiles/quasselc-0_p20150406.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=76fbada270de7421e6bdfa09b7f02789
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=b67cb6f8da6c5b99e4c5175bed7624e3

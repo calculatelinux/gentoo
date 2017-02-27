@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0141bc6a86bd84f4a6ba1d164cb78514701a3d73 $
 
 # @ECLASS: autotools-multilib.eclass
 # @MAINTAINER:

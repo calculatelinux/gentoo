@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/glib:2 dev-libs/libxml2 dev-games/libmaitretarot dev-games/libmt_client
 SLOT=0
 SRC_URI=https://savannah.nongnu.org/download/maitretarot/mt_dolphin_ia.pkg/0.1.98/mt_dolphin_ia-0.1.98.tar.bz2
-_md5_=c68b380e749dd0ee43dd833576b42e83
+_md5_=4421031d4cd3f63a0e27d2f653e43def

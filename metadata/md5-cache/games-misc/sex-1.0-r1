@@ -6,4 +6,4 @@ KEYWORDS=~alpha ~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-m
 LICENSE=BSD
 SLOT=0
 SRC_URI=http://spatula.net/software/sex/sex-1.0.tar.gz
-_md5_=49a93d06b46f5aa3cfee25e596d78acd
+_md5_=a78989cf2b97c7ba1c78f15d29fedee9

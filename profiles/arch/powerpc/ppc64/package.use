@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1c520e929294895b6f8ed21ca6cc809ba591f53f $
 
 # Doug Goldstein <cardoe@gentoo.org> (29 Oct 2012)
 # Enable the native arch as the default qemu target

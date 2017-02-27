@@ -7,4 +7,4 @@ KEYWORDS=~amd64 ppc x86
 LICENSE=Artistic
 SLOT=0
 SRC_URI=mirror://sourceforge/sourceforge/amphetadesk/amphetadesk-src-v0.93.1.tar.gz
-_md5_=59ce847ec5dde21e317617181a7b9816
+_md5_=1ced34a7bd77e19aff6cd12b7eaed919

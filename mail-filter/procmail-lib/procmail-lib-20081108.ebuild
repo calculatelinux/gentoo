@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5c8016e5a81d22c8f8d4157f1a9de24b79cd3968 $
 
 MY_PV="${PV:0:4}.${PV:4}"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e82dd5ca4a6cf670f6d4866bdb53d264fc0c7863 $
 
 EAPI=5
 inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user versionator systemd

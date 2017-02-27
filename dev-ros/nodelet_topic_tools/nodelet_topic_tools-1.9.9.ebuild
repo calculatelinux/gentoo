@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 288b6c455deded988aa9ce8a4f06fa082f0c475b $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/nodelet_core"

@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e24cb0b43a8dfba85743d791fd8ffd0f4f5514c8 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-drivers/openni2_camera"

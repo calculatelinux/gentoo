@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9fd405de4b9cbaf7d30c2db33bb6a348bb7c9dcc $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/ivcon"

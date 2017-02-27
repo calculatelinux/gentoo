@@ -8,5 +8,5 @@ LICENSE=GPL-2+
 RDEPEND=>=dev-embedded/sdcc-2.5[mcs51] >=app-doc/doxygen-1.7 >=dev-util/indent-2.2 >=app-text/hunspell-1.3 >=dev-tcltk/bwidget-1.8 >dev-tcltk/itcl-3.3 >=dev-lang/tcl-8.5.9:* >=dev-tcltk/tdom-0.8 >=dev-tcltk/tcllib-1.11 >=dev-lang/tk-8.5.9:* >=dev-tcltk/tkimg-1.4 >=dev-tcltk/tclx-8.4
 SLOT=0
 SRC_URI=http://www.moravia-microsystems.com/download/mcu8051ide/mcu8051ide/1.4.10/mcu8051ide-1.4.10.tar.gz
-_eclasses_=cmake-utils	014267c4475c1a625ecec5b16e0db1e6	eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=e40184297fde4a47cd64dc35e2e7fd7e
+_eclasses_=cmake-utils	2458cfb36e2d6d3e1ae94a1f17cbd8cb	eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=bedfb61d33cc71218b11e3b54c7cd92d

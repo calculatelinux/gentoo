@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=!<sys-boot/grub-2
 SLOT=0
 SRC_URI=mirror://gentoo/grub-static-0.97.tar.bz2
-_eclasses_=mount-boot	41ed556fa5641393d5323e421c8e5bcf
-_md5_=c84abd65444009e919ac6c15d1eb7bf5
+_eclasses_=mount-boot	f879abcb933626870a8dc13e780d1369
+_md5_=5411e9052c5786cd0ee853a39bc82ce9

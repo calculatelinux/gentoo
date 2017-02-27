@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8bd6c9997db29385db08e7188fa2cebb59ba2f0a $
 
 EAPI=6
 inherit libtool linux-info pam

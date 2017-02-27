@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl
 SLOT=0
 SRC_URI=http://j3e.de/linux/convmv/convmv-2.0.tar.gz
-_md5_=92f1433296a53b98723f334ffd27d8d4
+_md5_=3d76547eff4385fbcb3603ddcdddc974

@@ -8,5 +8,5 @@ LICENSE=ISC
 RDEPEND=dev-ml/result:=[ocamlopt] dev-lang/ocaml:=[ocamlopt] dev-ml/cmdliner:=[ocamlopt]
 SLOT=0/0.8.0
 SRC_URI=http://erratique.ch/software/fmt/releases/fmt-0.8.0.tbz
-_eclasses_=findlib	9909e5ca0f77ff5b693885a3d7aeadb7
-_md5_=9e563eca87dd038ef2e4786f4a6f36cd
+_eclasses_=findlib	3a364957a70a5953531fad3d1bc112ec
+_md5_=d5c5b0425ce7de6206e31d575dc495e6

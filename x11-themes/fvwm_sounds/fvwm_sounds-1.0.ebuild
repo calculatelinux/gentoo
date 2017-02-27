@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5f2a7de4124ab10f69f2a252795e76fd719fcb9a $
 
 DESCRIPTION="Sounds for use with FVWM"
 HOMEPAGE="http://www.fvwm.org/"

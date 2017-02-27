@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 81bf8b2bf85229642c9c821f900b4330b202e340 $
 
 DESCRIPTION="Asynchronous DNS query library written in C++"
 HOMEPAGE="http://asyncresolv.sourceforge.net/"

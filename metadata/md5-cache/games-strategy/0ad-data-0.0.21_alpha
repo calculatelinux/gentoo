@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2 CC-BY-SA-3.0 LPPL-1.3c BitstreamVera
 SLOT=0
 SRC_URI=mirror://sourceforge/zero-ad/0ad-0.0.21-alpha-unix-data.tar.xz
-_md5_=3c44c4e06c6aa951871aa6e0ef4910fc
+_md5_=ee8b26c2ce844a44ef4b28e0c5bf5eef

@@ -1,5 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id$
+# $Id: ea1cb6bb4f672aec32179cbc49ba0a3a60282f6b $
 
 CHOST="i686-gentoo-freebsd9.1"

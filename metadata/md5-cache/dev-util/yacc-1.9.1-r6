@@ -6,5 +6,5 @@ KEYWORDS=alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 s390 sh sparc x86
 LICENSE=public-domain
 SLOT=0
 SRC_URI=ftp://metalab.unc.edu/pub/Linux/devel/compiler-tools/yacc-1.9.1.tar.Z
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=90e36c3e3dab7191905ca05a22dbc8c2
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=577efd17db01f55564f42e4633fbd401

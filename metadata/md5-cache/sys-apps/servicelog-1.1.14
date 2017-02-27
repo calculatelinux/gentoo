@@ -8,4 +8,4 @@ LICENSE=IBM
 RDEPEND=sys-libs/libservicelog virtual/logger
 SLOT=0
 SRC_URI=mirror://sourceforge/linux-diag/servicelog-1.1.14.tar.gz
-_md5_=56f5b3b6fcce22fd9fa35446ba2c7572
+_md5_=cc04ba94d380435b7fce4413c5b6fb8e

@@ -10,4 +10,4 @@ RDEPEND=>=dev-db/sqlite-3.7.5:3[extensions(+)] sys-libs/zlib geos? ( >=sci-libs/
 REQUIRED_USE=test? ( iconv )
 SLOT=0
 SRC_URI=https://www.gaia-gis.it/gaia-sins/libspatialite-sources/libspatialite-4.3.0.tar.gz
-_md5_=9f852f2d30c9b575f8e926d154b5c63b
+_md5_=196da86ca0a17b5ebb91640edf967b08

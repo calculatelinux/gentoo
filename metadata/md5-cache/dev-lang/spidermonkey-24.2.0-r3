@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/nspr-4.9.4 virtual/libffi sys-libs/readline:0= >=sys-libs/zli
 RESTRICT=ia64? ( test )
 SLOT=24
 SRC_URI=https://ftp.mozilla.org/pub/mozilla.org/js/mozjs-24.2.0.tar.bz2
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	708f85bc1bf00876604e223fb56e062a	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	pax-utils	4c2654a34ebe732e85fda354f6ee642f	python-any-r1	1c20f9b800324335a8e3b137363362e8	python-utils-r1	50dad5f912d4c16c130f5679777f25e8	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=4e7e4923c84a4e3a385bf3318096e9b0
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	pax-utils	fba36330a0e96da6ac8ea47dd495cc62	python-any-r1	7daff3c0322873651801c85ef36109f5	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=97d59d4b3f42eb18ef91c89c6901201c

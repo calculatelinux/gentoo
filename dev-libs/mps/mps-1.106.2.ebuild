@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6e6473f84519168298854cbad2c494dd938a45f9 $
 EAPI=4
 
 DESCRIPTION="Ravenbrook Memory Pool System"

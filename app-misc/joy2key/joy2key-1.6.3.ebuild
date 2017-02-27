@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1ea4cdae0541d1fc6745545893a274c7cf717a9c $
 
 DESCRIPTION="An application that translates joystick events to keyboard events"
 HOMEPAGE="https://sourceforge.net/projects/joy2key"

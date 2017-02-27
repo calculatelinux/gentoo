@@ -1,6 +1,6 @@
 # Copyright 2011-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d9c0ef9a94b430799afdddf32da60a81083e05f5 $
 
 MULTILIB_ABIS="n64 n32 o32"
 DEFAULT_ABI="o32"

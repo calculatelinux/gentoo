@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f04e2ddeaee0c0ce3f40e1530838b9536bdd3e87 $
 
 inherit eutils
 IUSE=""

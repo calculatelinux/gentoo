@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=!<sci-biology/GBrowse-2.44-r1 >=sci-biology/bioperl-1.6.9 >=dev-perl/Bio-Graphics-2.09 >=dev-perl/GD-2.07 >=dev-perl/CGI-Session-4.02 dev-perl/IO-String dev-perl/JSON dev-perl/libwww-perl dev-perl/Statistics-Descriptive !minimal? ( dev-perl/Bio-Das >=dev-perl/Bio-SamTools-1.20 dev-perl/Crypt-SSLeay dev-perl/DB_File-Lock dev-perl/DBI mysql? ( dev-perl/DBD-mysql ) postgres? ( dev-perl/DBD-Pg ) sqlite? ( dev-perl/DBD-SQLite ) dev-perl/FCGI dev-perl/File-NFSLock dev-perl/GD-SVG dev-perl/Net-OpenID-Consumer dev-perl/Net-SMTP-SSL ) dev-lang/perl:=[-build(-)] >=app-admin/webapp-config-1.50.15
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/L/LD/LDS/GBrowse-2.48.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	unpacker	45d07319df5f40ee6af58418b0f930be	webapp	42c6ef7af496b228f9854b3c81e4b226
-_md5_=caf58a720664c095c77fe9b64b311dbe
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	unpacker	2afe53b558f4ad6955316e702a4c9cfa	webapp	8e0ef22ac030da2d8de98c90883ca147
+_md5_=9c0455d7e3cac1947a56fe37cf42adce

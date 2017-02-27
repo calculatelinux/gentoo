@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 7cc6c70860d708ba964946432e6fd232d79ead25 $
 
 inherit multilib
 DESCRIPTION="LuaDoc is a documentation tool for Lua source code"

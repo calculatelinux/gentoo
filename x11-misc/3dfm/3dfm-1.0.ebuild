@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 75bb7cb4f7a924c8ae42d5a51982323eecaecb6a $
 
 DESCRIPTION="OpenGL-based 3D File Manager"
 HOMEPAGE="https://sourceforge.net/projects/innolab/"

@@ -10,5 +10,5 @@ RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[sqlite] ) >=d
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=https://ibus.googlecode.com/files/ibus-table-1.5.0.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	python-single-r1	6793fc854691a2320226801400573568	python-utils-r1	50dad5f912d4c16c130f5679777f25e8	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=592424737686515395310cc341b5b163
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-single-r1	b85fdbcb7d5ea8aff392df97c9cb9385	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=69d48ea0ee1a90054e398ded9b8f6dcb

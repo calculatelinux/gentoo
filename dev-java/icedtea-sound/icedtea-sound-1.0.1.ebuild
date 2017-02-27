@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e533bfca4506c35c7740e3b227ae3fa905a0b418 $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 EAPI="5"

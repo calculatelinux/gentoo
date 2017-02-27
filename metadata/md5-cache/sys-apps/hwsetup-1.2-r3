@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/pciutils[zlib?] zlib? ( sys-libs/zlib ) sys-apps/hwdata-gentoo
 SLOT=0
 SRC_URI=http://debian-knoppix.alioth.debian.org/sources/hwsetup_1.2-7.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=612e2b4b7d5e85af62e2d087efd21eeb
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=0860e80459a3a88db81e5fa2d2849847

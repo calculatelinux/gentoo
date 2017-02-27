@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: cf42caca04d8fed79d6fcfdd0e0aa3ff151953cb $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Firewall scripts that control iptables, FreeS/WAN, and squid"

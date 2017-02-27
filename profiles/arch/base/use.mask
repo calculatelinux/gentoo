@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 96eb933cd24f63fceb1a4f89032ab81180d143bd $
 
 # Michael Orlitzky <mjo@gentoo.org> (7 Jan 2017)
 # The dev-db/firebird and dev-db/oracle-instantclient* packages

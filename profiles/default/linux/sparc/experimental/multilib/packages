@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: cbf9a90d01c5ea08ee4e2bbea35733e5dba60bbe $
 
 # older versions of gcc don't support biarch
 *>=sys-devel/gcc-4.3.2-r1

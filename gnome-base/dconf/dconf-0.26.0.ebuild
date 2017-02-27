@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 983297c548bb0fd233b5c28f1f5f2922e22db748 $
 
 EAPI=6
 inherit gnome2 bash-completion-r1 virtualx

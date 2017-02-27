@@ -9,5 +9,5 @@ RDEPEND=>=dev-libs/libxml2-2.6:2 dev-libs/openssl >=net-misc/curl-7.0 >=sys-fs/f
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/s3fs-fuse/s3fs-fuse/archive/v1.74.tar.gz -> s3fs-1.74.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=4be51add0f6f2d0d7f3a4174415c6501
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=739398af39d1b528fbbb2fe82e7885e5

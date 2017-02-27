@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8f784933d3ffb62f9c32c0721eb915f7d8a7c006 $
 
 # @ECLASS: php-ext-pecl-r3.eclass
 # @MAINTAINER:

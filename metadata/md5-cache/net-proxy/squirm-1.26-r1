@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=net-proxy/squid
 SLOT=0
 SRC_URI=http://squirm.foote.com.au/squirm-1.26.tgz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=7cd7bc18bf8aad5525c054914645fad8
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=f65dd4401810560fa0c6e436f2b2e3f3

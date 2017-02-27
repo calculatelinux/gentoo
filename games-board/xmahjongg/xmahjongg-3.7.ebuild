@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0fe007fcebd9f97cc000f3791147ac47df97d62a $
 
 EAPI=5
 inherit eutils games

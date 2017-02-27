@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: aaa2d5ef3d5c7f59c32ad8bd35859e06a0830ad7 $
 
 # Adding this one, since it makes sense.
 USE="bzip2"

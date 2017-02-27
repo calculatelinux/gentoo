@@ -7,5 +7,5 @@ IUSE=aqua bitmap cairo compat doc examples +gd ggi latex libcaca libcerf lua qt4
 LICENSE=gnuplot bitmap? ( free-noncomm )
 RDEPEND=cairo? ( x11-libs/cairo x11-libs/pango ) gd? ( >=media-libs/gd-2.0.35-r3:2=[png] ) ggi? ( media-libs/libggi ) latex? ( virtual/latex-base lua? ( dev-tex/pgf >=dev-texlive/texlive-latexrecommended-2008-r2 ) ) libcaca? ( media-libs/libcaca ) lua? ( dev-lang/lua:0 ) qt4? ( >=dev-qt/qtcore-4.5:4 >=dev-qt/qtgui-4.5:4 >=dev-qt/qtsvg-4.5:4 ) readline? ( sys-libs/readline:0= ) libcerf? ( sci-libs/libcerf ) svga? ( media-libs/svgalib ) wxwidgets? ( x11-libs/wxGTK:3.0[X] x11-libs/cairo x11-libs/pango x11-libs/gtk+:2 ) X? ( x11-libs/libXaw )
 SLOT=0
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	cvs	e94c89c58918dff87fa3db1e817c25be	eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	readme.gentoo-r1	03878c06495db70bc36bd717383c09f7	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	wxwidgets	9b34ce3ca77f4e418e8fd9951c4c1cb1
-_md5_=e1f8d4afd922752f1cf5d676fd8ad85a
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	cvs	f95d1c8d525d9be99175ebbc6618ea1e	eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	readme.gentoo-r1	9265450c3045cbc82060da9b35f46c67	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	wxwidgets	9ff07a933cb39f9586154ebac62ef0fa
+_md5_=3d447081aaaae66c5c9808f4e0479d65

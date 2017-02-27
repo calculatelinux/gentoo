@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=snmp? ( >=dev-perl/Net-SNMP-4.0.1-r2 >=net-analyzer/net-snmp-5.0.6 )
 SLOT=0
 SRC_URI=mirror://sourceforge/fetchlog/fetchlog-1.0.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=cc1cddf5f242ee303a9bbf887db365a8
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=2a590f9bbfaaabc41d39a039762b933d

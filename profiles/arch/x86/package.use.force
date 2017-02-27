@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fe80bf65ce074bd4579788afd5b16d6dff885fa8 $
 
 # Michał Górny <mgorny@gentoo.org> (24 Sep 2016)
 # Force the host target to avoid dependency hell

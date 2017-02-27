@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c1b1a164f1f720cce3de4bd3531901453f53e906 $
 
 EAPI=6
 inherit multilib eutils flag-o-matic pax-utils

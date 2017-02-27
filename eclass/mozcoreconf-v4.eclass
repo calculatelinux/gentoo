@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 342b4b9eeca7cbbf67e62604a53ec55419fc4efe $
 #
 # @ECLASS: mozcoreconf-v4.eclass
 # @MAINTAINER:

@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=!sys-apps/sysvinit >=sys-apps/systemd-201 >=sys-apps/util-linux-2.24.1-r2
 SLOT=0
 SRC_URI=https://www.freedesktop.org/software/systemd/systemd-208.tar.xz
-_md5_=0afa83daf6a6bd6b0b46c06d6f846600
+_md5_=c9b9b75c9ea29b9c12065841c78ef6e3

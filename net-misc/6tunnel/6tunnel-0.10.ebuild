@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 759a4e407011300c0f0b4dca53cc35aaeec76169 $
 
 DESCRIPTION="TCP proxy for applications that don't speak IPv6"
 HOMEPAGE="http://toxygen.net/6tunnel"

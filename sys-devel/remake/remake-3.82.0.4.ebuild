@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4c2b68a27e84f716afba3496ba2428c0491d6251 $
 
 MY_P="${PN}-${PV:0:4}+dbg-${PV:5}"
 

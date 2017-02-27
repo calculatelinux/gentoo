@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ppc x86 ~x86-linux ~ppc-macos ~sparc-solaris
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge/cook/cook-1.0.2.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=85d9f7785c4a03f281a46f7e0873c98b
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=5643133392ab45dbe1d8ba636e05b2db

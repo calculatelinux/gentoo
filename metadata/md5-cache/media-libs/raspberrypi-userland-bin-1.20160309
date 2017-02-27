@@ -9,5 +9,5 @@ RDEPEND=!media-libs/raspberrypi-userland
 RESTRICT=binchecks
 SLOT=0
 SRC_URI=https://github.com/raspberrypi/firmware/archive/1.20160309.tar.gz -> raspberrypi-firmware-1.20160309.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	vcs-snapshot	2b65ecb2d0f91e4322c2ac8d673993bd
-_md5_=f79341013dbc02b3ced7f525f7532fd2
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	vcs-snapshot	10b045661d7c5178ffdf37fbf47278d6
+_md5_=54cd19a1cf9b7c23c2a073d1c177224a

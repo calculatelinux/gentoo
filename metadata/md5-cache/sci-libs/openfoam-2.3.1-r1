@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=!=sci-libs/openfoam-bin-2.3* !=sci-libs/openfoam-kernel-2.3* !=sci-libs/openfoam-meta-2.3* !=sci-libs/openfoam-solvers-2.3* !=sci-libs/openfoam-utilities-2.3* !=sci-libs/openfoam-wmake-2.3* sci-libs/parmetis sci-libs/parmgridgen sci-libs/scotch virtual/mpi opendx? ( sci-visualization/opendx ) paraview? ( ~sci-visualization/paraview-4.1.0[development] )
 SLOT=2.3
 SRC_URI=http://downloads.sourceforge.net/foam/OpenFOAM-2.3.1.tgz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=4055424eadd64dbcd43505ae1d5ddd63
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=d106f03aa79781f213bdd6cc52956788

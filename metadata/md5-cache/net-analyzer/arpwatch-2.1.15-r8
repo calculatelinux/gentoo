@@ -9,5 +9,5 @@ LICENSE=BSD GPL-2
 RDEPEND=net-libs/libpcap sys-libs/ncurses:* selinux? ( sec-policy/selinux-arpwatch )
 SLOT=0
 SRC_URI=ftp://ftp.ee.lbl.gov/arpwatch-2.1a15.tar.gz https://dev.gentoo.org/~jer/arpwatch-patchset-0.7.tar.xz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=58cfed80d88d67acc85f0dded033ac64
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=46627efa2ab70fef2333a979baf65192

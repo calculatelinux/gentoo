@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~s390 ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://toxygen.net/6tunnel/6tunnel-0.12.tar.gz
-_md5_=b3a5597eaa33edeb0efa88ae36c85411
+_md5_=e755b96cd75b90e0977014371b84c93c

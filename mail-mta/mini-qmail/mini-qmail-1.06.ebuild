@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 69a84b18ce170f9d0ca78eab4e39c1bdec4874c4 $
 
 GENQMAIL_PV=20080406
 

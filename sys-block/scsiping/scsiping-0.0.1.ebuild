@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6a4868976bf4ed810c13010338d5025ba8a6ac91 $
 
 DESCRIPTION="SCSIPing pings a host on the SCSI-chain"
 HOMEPAGE="http://www.vanheusden.com/Linux/"

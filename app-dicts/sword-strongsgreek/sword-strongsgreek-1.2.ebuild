@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f3133439ad0d30c5eace8df1ed57fa0312379199 $
 
 EAPI=5
 SWORD_MODULE="StrongsGreek"

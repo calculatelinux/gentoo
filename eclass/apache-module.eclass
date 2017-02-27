@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 16fbddd79237ea07396f38decc12d2d9e047efd2 $
 
 # @ECLASS: apache-module.eclass
 # @MAINTAINER:

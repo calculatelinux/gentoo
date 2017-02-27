@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0779e2675c0ae80003b3303a50b430dfaf78ae62 $
 
 EAPI=6
 CMAKE_MAKEFILE_GENERATOR=emake

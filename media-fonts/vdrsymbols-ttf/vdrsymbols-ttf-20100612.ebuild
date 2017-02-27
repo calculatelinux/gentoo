@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: cf84403021b9d8c41260ddbe6f962a42d9a79b87 $
 
 S=${WORKDIR}/vdrsymbols
 

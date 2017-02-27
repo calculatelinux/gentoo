@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=>=dev-util/dialog-0.7
 SLOT=0
 SRC_URI=http://gentoo/grubconfig-1.28.tar.gz
-_md5_=08c3e8da9bbc47f43ab9b37a3638e1fd
+_md5_=8605ddb7d912f40855ac7af0035988ce

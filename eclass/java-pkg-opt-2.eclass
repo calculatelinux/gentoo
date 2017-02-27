@@ -1,6 +1,6 @@
 # Copyright 2004-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 20c4cbc471e858d71015ca9f7395351ffdf6bda7 $
 
 # @ECLASS: java-pkg-opt-2.eclass
 # @MAINTAINER:

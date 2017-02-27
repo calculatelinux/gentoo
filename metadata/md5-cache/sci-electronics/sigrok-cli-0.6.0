@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/glib-2.28.0 >=sci-libs/libsigrok-0.4.0 decode? ( >=sci-libs/l
 REQUIRED_USE=decode? ( python_targets_python3_4 )
 SLOT=0
 SRC_URI=http://sigrok.org/download/source/sigrok-cli/sigrok-cli-0.6.0.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	python-single-r1	6793fc854691a2320226801400573568	python-utils-r1	50dad5f912d4c16c130f5679777f25e8	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=0b3151f7bb54250dcb8d175c559c836b
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-single-r1	b85fdbcb7d5ea8aff392df97c9cb9385	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=a7ca609539d7612744a46eac245be41b

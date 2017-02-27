@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://sourceforge/xbox-linux/cromwell-2.31.tar.gz
-_eclasses_=mount-boot	41ed556fa5641393d5323e421c8e5bcf
-_md5_=d4ba9840af90fb2d38c97fb4d130eaf1
+_eclasses_=mount-boot	f879abcb933626870a8dc13e780d1369
+_md5_=6fe708a486542480d27ac09f8484ed49

@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=net-misc/openssh
 SLOT=0
 SRC_URI=mirror://sourceforge/sshpass/1.06/sshpass-1.06.tar.gz
-_md5_=6831f6a917dfdfcf9ae106924bf582a4
+_md5_=695b9ace1a12998615237d8dd2e427c3

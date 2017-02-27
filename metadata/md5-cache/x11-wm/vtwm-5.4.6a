@@ -8,4 +8,4 @@ LICENSE=MIT
 RDEPEND=x11-libs/libX11 x11-libs/libXmu x11-libs/libXt x11-libs/libXext x11-libs/libXpm
 SLOT=0
 SRC_URI=ftp://ftp.visi.com/users/hawkeyd/X/vtwm-5.4.6a.tar.gz
-_md5_=d43cca2879320f9eefb0c776b389d474
+_md5_=e29ff744f598dab5e5590d4d5a848b18

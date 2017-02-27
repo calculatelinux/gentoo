@@ -7,4 +7,4 @@ LICENSE=trf
 RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=http://tandem.bu.edu/trf/downloads/trf404.linux
-_md5_=a4bdadc1abe6a3101b66f7bb5c713494
+_md5_=555389f9fb6b2838994d9f65ee1e4dfb

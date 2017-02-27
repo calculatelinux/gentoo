@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: de5ac9be6a34e81d3e492cb6771c2481155a4390 $
 
 CHOST="powerpc-apple-darwin8"
 CHOST_ppc="${CHOST}"

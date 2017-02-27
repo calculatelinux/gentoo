@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 64246b73140745b552a9d801e30ea6eb99859016 $
 
 DESCRIPTION="Differential X Protocol Compressor"
 HOMEPAGE="http://www.vigor.nu/dxpc/"

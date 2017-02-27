@@ -7,4 +7,4 @@ KEYWORDS=~amd64 ~arm ~x86
 LICENSE=MIT
 SLOT=0
 SRC_URI=x40? ( http://nuand.com/fpga/v0.6.0/hostedx40.rbf -> hostedx40-0.6.0.rbf ) x115? ( http://nuand.com/fpga/v0.6.0/hostedx115.rbf -> hostedx115-0.6.0.rbf )
-_md5_=0e8f0fd989114ee9a1da690bef695f7b
+_md5_=762e87364aa02698f6d88cb502347fcd

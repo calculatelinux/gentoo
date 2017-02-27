@@ -10,5 +10,5 @@ RDEPEND=x11-libs/gtk+:2 x11-libs/cairo
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/gerbv/gerbv-2.6.0.tar.gz
-_eclasses_=fdo-mime	92d07846ea8ea54172f8c0112a47ae3d
-_md5_=7990c30a552a4e1b88204a3e33d07689
+_eclasses_=fdo-mime	f612973507f5479ae67cb635227b6218
+_md5_=b03d8f42fc5f08ecd89a29c61bf90a6d

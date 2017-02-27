@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 74c7a805327b8411f651aa878142937c2c295398 $
 
 # @ECLASS: l10n.eclass
 # @MAINTAINER:

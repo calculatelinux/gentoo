@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0cf67fb3ee589e94bd5ca762169524de69c5bc1a $
 
 EAPI=6
 inherit flag-o-matic pam systemd toolchain-funcs user

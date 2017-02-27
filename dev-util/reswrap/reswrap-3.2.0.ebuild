@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a87c8b2bf984043363feea47b316479d087a0615 $
 
 FOX_COMPONENT="utils"
 FOX_PV="1.4.12"

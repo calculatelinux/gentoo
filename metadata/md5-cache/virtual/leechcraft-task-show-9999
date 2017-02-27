@@ -3,4 +3,4 @@ DESCRIPTION=Virtual for plugins that can show IDownloads and IJobHolders
 EAPI=6
 RDEPEND=~app-leechcraft/lc-summary-9999
 SLOT=0
-_md5_=c05bc2c05ad6b10002dfdea8e754b1c6
+_md5_=c67d205ac4ebddd1bee16dec28d38df3

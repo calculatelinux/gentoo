@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 266edd9aed1ab60a1a4e65a8c7df0fc0cded6950 $
 
 DESCRIPTION="Collection of qingy themes"
 

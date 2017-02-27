@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 41dba2c31ad23dddcdc97d0d7f9ec5af85e2c0af $
 
 DESCRIPTION="Applet to edit Claws Mail's hidden preferences"
 HOMEPAGE="http://www.claws-mail.org/clawsker.php"

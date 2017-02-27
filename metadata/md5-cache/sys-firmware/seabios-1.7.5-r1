@@ -9,5 +9,5 @@ LICENSE=LGPL-3 GPL-3
 REQUIRED_USE=ppc? ( binary ) ppc64? ( binary )
 SLOT=0
 SRC_URI=!binary? ( https://code.coreboot.org/p/seabios/downloads/get/seabios-1.7.5.tar.gz ) binary? ( https://code.coreboot.org/p/seabios/downloads/get/bios.bin-1.7.5.gz seavgabios? ( mirror://debian/pool/main/s/seabios/seabios_1.7.5-1_all.deb ) )
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	python-any-r1	1c20f9b800324335a8e3b137363362e8	python-utils-r1	50dad5f912d4c16c130f5679777f25e8	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=44dee1f82fe72d83db093a11847ad949
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-any-r1	7daff3c0322873651801c85ef36109f5	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=5a6b7516dc394e0d5fc24648598a7a03

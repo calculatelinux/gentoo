@@ -9,5 +9,5 @@ LICENSE=BSD GPL-2
 RDEPEND=espeak? ( app-accessibility/espeak ) >=dev-tcltk/tclx-8.4 >=virtual/emacs-24
 SLOT=0
 SRC_URI=https://emacspeak.googlecode.com/files/emacspeak-39.0.tar.bz2
-_eclasses_=elisp	7e36316fe822639d5a29fa10d5529eb9	elisp-common	9f56c4e9bf1282dbfc2a5a09e1124e74	eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	readme.gentoo	df3fc8fdaf5a519e7d48c83e7592c95f	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=37b4a3fa72bc3925e83efc82b2f06a9d
+_eclasses_=elisp	62249f4b6196eec26a81f335fb4d1a33	elisp-common	4a8ce40989ad055139c36baa8c81ea0b	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	readme.gentoo	ce7880f12566fe1fc5522fed26507687	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=4c33a14cac0034b8e8c7c8980d297ec8

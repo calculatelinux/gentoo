@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: be3c47039c60e1dbdd5733424556ced6541c426d $
 
 DESCRIPTION="A replacement for libcrypt with DES, MD5 and blowfish support"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"

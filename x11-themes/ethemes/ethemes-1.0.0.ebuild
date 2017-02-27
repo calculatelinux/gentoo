@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: bbfe5c1220604778d7e8f142a2f4fe021981b40a $
 
 MY_P="e16-themes-${PV}"
 DESCRIPTION="all the official Enlightenment themes"

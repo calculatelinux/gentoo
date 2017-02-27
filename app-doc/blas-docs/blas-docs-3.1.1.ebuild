@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0c045fd84afbbf140d8bcd2d33801019b98467b5 $
 
 DESCRIPTION="Documentation reference and man pages for blas implementations"
 HOMEPAGE="http://www.netlib.org/blas"

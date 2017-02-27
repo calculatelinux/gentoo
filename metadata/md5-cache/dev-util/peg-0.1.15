@@ -8,4 +8,4 @@ LICENSE=MIT
 RESTRICT=test
 SLOT=0
 SRC_URI=http://piumarta.com/software/peg/peg-0.1.15.tar.gz
-_md5_=6c0254de814582cd98b5b99ab3387652
+_md5_=0b72d205fdae41c75304a1ba7811ee49

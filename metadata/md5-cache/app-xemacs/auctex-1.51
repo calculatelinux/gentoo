@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/xemacs-base app-xemacs/texinfo app-xemacs/fsf-compat app-xemacs/mail-lib app-xemacs/edit-utils app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/auctex-1.51-pkg.tar.gz
-_eclasses_=xemacs-packages	3efe8d071b1fa620109b658175e85267
-_md5_=cdffdd29219b65ae24902addcb4b4f98
+_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
+_md5_=9622d0a5f2421623221225513414ee21

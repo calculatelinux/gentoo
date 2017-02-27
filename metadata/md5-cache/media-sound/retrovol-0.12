@@ -9,5 +9,5 @@ LICENSE=GPL-3 LGPL-3 public-domain
 RDEPEND=x11-libs/gtk+:2
 SLOT=0
 SRC_URI=http://www.browserloadofcoolness.com/software/puppy/PETget/retrovol-0.12.tar.gz
-_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	708f85bc1bf00876604e223fb56e062a	l10n	e26ea0642846685782f1813642e7ff0f	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=1f7a1254103c3ad3bd1ce20440a8cbe5
+_eclasses_=base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	l10n	7e1d75925970de7cabf73398fce703f6	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=88e3778213babb1e5eec864c6ffadb36

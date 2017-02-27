@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 253cac722458133aae16cf9adf11de96bb41eb46 $
 EAPI=5
 
 # PyCObject_Check and PyCObject_AsVoidPtr vanished with python 3.3, and setup.py not python3.2 copmat

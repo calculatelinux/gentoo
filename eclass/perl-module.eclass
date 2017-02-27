@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 558a41d9f0e146db1dfc829b5a37d3f09f68f25c $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:

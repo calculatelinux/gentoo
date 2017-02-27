@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=sys-devel/clang-3.7.0 >=sys-devel/llvm-3.7.0 <sys-devel/llvm-3.8 sys-devel/binutils:* dev-lang/perl:= dev-perl/Switch hdf5? ( sci-libs/hdf5[cxx] ) sqlite? ( dev-db/sqlite:3 )
 SLOT=0
 SRC_URI=https://github.com/lanl/Byfl/releases/download/v1.4-llvm-3.7.0/byfl-1.4-llvm-3.7.0.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=09d7cb27184e5ac453384426b19cb3c9
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=4ddfe764049058bb802cc43b39ed92fe

@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1 GPL-2
 RDEPEND=dev-libs/libxml2 sys-libs/zlib !gnutls? ( >=dev-libs/openssl-1.0.1h:0[static-libs?] ) gnutls? ( >=net-libs/gnutls-3[static-libs?] dev-libs/nettle app-misc/ca-certificates ) gssapi? ( virtual/krb5 ) libproxy? ( net-libs/libproxy ) nls? ( virtual/libintl ) smartcard? ( sys-apps/pcsc-lite:0= ) sys-apps/iproute2 !<sys-apps/openrc-0.13 java? ( >=dev-java/java-config-2.2.0-r3 )
 SLOT=0/5
 SRC_URI=ftp://ftp.infradead.org/pub/openconnect/openconnect-7.06.tar.gz ftp://ftp.infradead.org/pub/vpnc-scripts/vpnc-scripts-20140806.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	java-pkg-opt-2	40db73f27fc6458ec2105812a4f261c7	java-utils-2	b31a7fe19a47c6a2d901f6de949e5209	linux-info	af49d8ab3be91bb1d38b7201dc9e5123	multilib	165fc17c38d1b11dac2008280dab6e80	python-any-r1	1c20f9b800324335a8e3b137363362e8	python-utils-r1	50dad5f912d4c16c130f5679777f25e8	readme.gentoo	df3fc8fdaf5a519e7d48c83e7592c95f	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=e69c0e1ea9e3b8034ced182eed07b7f6
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	java-pkg-opt-2	1afce2ff60e2ffc6843ef03c111e841a	java-utils-2	ebeaf17afbac1fe2f3549ea6afa504e3	linux-info	28a4d19bc3bdeee9008ccce076260427	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-any-r1	7daff3c0322873651801c85ef36109f5	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	readme.gentoo	ce7880f12566fe1fc5522fed26507687	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=d8f61fc607b8d1caea60e1398e539a05

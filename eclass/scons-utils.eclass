@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d504b659df2a16088ddf259175fc2087478930ef $
 
 # @ECLASS: scons-utils.eclass
 # @MAINTAINER:

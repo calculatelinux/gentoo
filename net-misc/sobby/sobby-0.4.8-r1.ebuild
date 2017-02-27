@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b4e2f1d8c7de62dd56f25cc55901587fe24f35bc $
 
 EAPI=5
 inherit eutils flag-o-matic user

@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 597dd1b5275775720c2af9a15be70bf05fc65a80 $
 
 EAPI=6
 inherit linux-info systemd

@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a8f04a11eb5e666a5e4fe2f13b3581ad20ac2053 $
 
 EAPI=6
 GNOME_ORG_MODULE="gtk-doc"

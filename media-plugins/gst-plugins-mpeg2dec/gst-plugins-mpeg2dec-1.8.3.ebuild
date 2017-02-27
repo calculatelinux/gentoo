@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0755a1d16b0519ac64a9a513cb5eb09e5b544999 $
 
 EAPI=6
 GST_ORG_MODULE=gst-plugins-ugly

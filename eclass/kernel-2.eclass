@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0c9ce0437873ce3580b53f4542fed94c7437078e $
 
 # @ECLASS: kernel-2.eclass
 # @MAINTAINER: 

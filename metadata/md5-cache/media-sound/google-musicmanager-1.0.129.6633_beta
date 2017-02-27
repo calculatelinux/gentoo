@@ -10,5 +10,5 @@ RDEPEND=dev-libs/expat dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtwebkit:4 media-li
 RESTRICT=fetch strip
 SLOT=0
 SRC_URI=x86? ( https://dl.google.com/linux/musicmanager/deb/pool/main/g/google-musicmanager-beta/google-musicmanager-beta_1.0.129.6633-r0_i386.deb ) amd64? ( https://dl.google.com/linux/musicmanager/deb/pool/main/g/google-musicmanager-beta/google-musicmanager-beta_1.0.129.6633-r0_amd64.deb )
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	unpacker	45d07319df5f40ee6af58418b0f930be
-_md5_=6fe8569767ef62067b603b482851a779
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	unpacker	2afe53b558f4ad6955316e702a4c9cfa
+_md5_=9598e6a1e2c4305bf72a6731181f35b9

@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: dec207ac7ee5b74cae03e2dad21dbc32b29c5f3b $
 
 ARCH="ppc-macos"
 ACCEPT_KEYWORDS="~ppc-macos"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 91b176e402bf7730da379737af17946267c30026 $
 
 MY_PN=gpl-cver
 

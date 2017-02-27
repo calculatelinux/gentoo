@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b07a911374b7eeb9dfcbbf06cfa358c5035a8894 $
 
 DESCRIPTION="ephemeris files for optional extended accuracy of astrolog's calculations"
 HOMEPAGE="http://www.astrolog.org/astrolog.htm"

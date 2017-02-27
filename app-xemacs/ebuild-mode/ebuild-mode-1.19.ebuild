@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d3577c1eaae600162ffbdc675ad11acf6a789d3c $
 
 inherit xemacs-elisp eutils
 

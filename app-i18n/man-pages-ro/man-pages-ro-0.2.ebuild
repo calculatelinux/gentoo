@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 2a8f32cf3539cd212e82864fb4a13cdd8b1e5cdc $
 
 DESCRIPTION="A somewhat comprehensive collection of Romanian Linux man pages"
 HOMEPAGE="http://www.rolix.org/man/arhiva/"

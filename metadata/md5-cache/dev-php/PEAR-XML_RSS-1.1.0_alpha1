@@ -7,4 +7,4 @@ LICENSE=PHP-3.01
 RDEPEND=dev-lang/php:* dev-php/PEAR-PEAR dev-php/PEAR-XML_Parser
 SLOT=0
 SRC_URI=http://download.pear.php.net/package/XML_RSS-1.1.0a1.tgz
-_md5_=fd2bf762f4a99738ea7b8e4273affa97
+_md5_=b776f9d2ac1da6c4d6df698f55e35094

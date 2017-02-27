@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6e5f7d8c2addf1bfcad71f1ed3b34d954a40fe04 $
 
 EAPI=4
 inherit cmake-utils eutils virtualx toolchain-funcs

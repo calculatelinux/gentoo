@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6e58f35e6a7491678769737c42e1d88cf6df770d $
 
 IUSE=""
 DESCRIPTION="Common styles for fluxbox, blackbox, and openbox"

@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ed22e3e5333fbf11aa8180ab8fac66788d3beb48 $
 
 EAPI=5
 inherit apache-module eutils systemd

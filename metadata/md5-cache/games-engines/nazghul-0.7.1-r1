@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/libpng:0 >=media-libs/libsdl-1.2.3[X,sound,video] media-libs/sdl-image[png] media-libs/sdl-mixer[midi,vorbis,wav]
 SLOT=0
 SRC_URI=mirror://sourceforge/nazghul/nazghul-0.7.1.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=7065232053effa7ce904eca8016e0e6b
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=e168837b9155f3fb4f670ac5b7506892

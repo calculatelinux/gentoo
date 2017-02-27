@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9d90b251d406b29da7b3b22ea3765f75100ce56a $
 
 # Using a binary ebuild until a source ebuild is doable.
 # This was previously blocked by two major bugs upstream:

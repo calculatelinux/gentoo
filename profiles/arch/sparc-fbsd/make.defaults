@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id$
+# $Id: f20d2e374bec6385ec407932672ea1a260bdcd20 $
 # System-wide defaults for the G/FBSD Portage system
 
 ARCH="sparc-fbsd"

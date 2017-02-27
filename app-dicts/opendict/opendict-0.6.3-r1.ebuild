@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fab01ea13927f19c65663f47f1df2c7ee8411ade $
 
 EAPI=5
 GCONF_DEBUG="no" # We skip gnome2_src_configure entirely

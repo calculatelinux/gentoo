@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 67438ab76dfcc903fc5df39f2161edaaa5d6d9b0 $
 
 EAPI="6"
 inherit user

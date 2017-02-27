@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: aa7c63d71b431f41bce642e551544ed3d96fbefe $
 
 MY_P="gentoo-livecd-${PV}"
 MY_REV="0.9.4"

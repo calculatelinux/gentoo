@@ -9,5 +9,5 @@ LICENSE=BSD GPL-2+
 RDEPEND=>=sys-libs/ncurses-5.2:0= emacs? ( virtual/emacs )
 SLOT=0
 SRC_URI=mirror://sourceforge/cscope/cscope-15.8a.tar.gz
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	elisp-common	9f56c4e9bf1282dbfc2a5a09e1124e74	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=98c50d44296bf7601dfbdf7e240f445a
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	elisp-common	4a8ce40989ad055139c36baa8c81ea0b	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=13907cdf5d7a6cda64027c3d4cdc208d

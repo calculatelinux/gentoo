@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/pciutils >=sys-libs/efivar-0.19
 SLOT=0
 SRC_URI=https://github.com/rhinstaller/efibootmgr/releases/download/efibootmgr-0.12/efibootmgr-0.12.tar.bz2
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=a9468d552189615d4a5e609d882eacbe
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=7847951dcd0e56aedbe311ce529d9fdd

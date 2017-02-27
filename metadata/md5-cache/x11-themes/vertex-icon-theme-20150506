@@ -9,5 +9,5 @@ RDEPEND=>=x11-themes/hicolor-icon-theme-0.10
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=https://github.com/horst3180/vertex-icons/archive/f27e47edf392596b7967b7d134d3c62ac3fda0c9.tar.gz -> vertex-icon-theme-20150506.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	gnome2-utils	c6dcdf3a2c22b578b16adb945dc85c35	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	xdg-utils	e2b2bd56125ce8cf59ce30c642b59d48
-_md5_=16722e2bb411d2b1e700ae948993318f
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	gnome2-utils	6ac81c289e6fd66edb59051e57d895e3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	xdg-utils	169c13f9ec65368f6f6b2961e68dc152
+_md5_=f84f85b627cb4ad844011b92b73809f9

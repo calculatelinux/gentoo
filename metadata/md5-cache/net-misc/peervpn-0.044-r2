@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/openssl:0=
 SLOT=0
 SRC_URI=https://github.com/peervpn/peervpn/archive/eb35174277fbf745c5ee0d5875d659dad819adfc.tar.gz -> peervpn-0.044.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb
-_md5_=6c6e98bc1786363d8e926daaf737ad19
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd
+_md5_=06c8ec56fddcdfafd0394c7b21d4e8b6

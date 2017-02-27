@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-libs/libdaemon selinux? ( sec-policy/selinux-radvd ) kernel_linux? ( virtual/tmpfiles )
 SLOT=0
 SRC_URI=http://v6web.litech.org/radvd/dist/radvd-2.16.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	readme.gentoo-r1	03878c06495db70bc36bd717383c09f7	systemd	5b6ca8b2fc1307ca593223f327342c96	tmpfiles	9d24e7afce9e3c183c97103bb8502330	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb
-_md5_=484de489a95d2be8f1b42e285bce8cf4
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	readme.gentoo-r1	9265450c3045cbc82060da9b35f46c67	systemd	bf99baf3c67d20dbb407ad68d10e61e0	tmpfiles	a82bca206d9941ba75f4775f987f6019	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd
+_md5_=9dce9c1e9b8cdf8bc5dfe9a2cd9a26fe

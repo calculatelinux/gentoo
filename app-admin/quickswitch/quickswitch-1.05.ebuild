@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 7dd0c7a22821d3a9931fdc25d325283054f32893 $
 
 IUSE="ncurses"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3d05f46d2a03021eb2650d312791604009116e1a $
 
 # @ECLASS: multibuild.eclass
 # @MAINTAINER:

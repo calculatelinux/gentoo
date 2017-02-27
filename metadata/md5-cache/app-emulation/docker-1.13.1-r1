@@ -10,5 +10,5 @@ RDEPEND=>=dev-db/sqlite-3.7.9:3 device-mapper? ( >=sys-fs/lvm2-2.02.89[thin] ) s
 RESTRICT=installsources strip
 SLOT=0
 SRC_URI=https://github.com/docker/docker/archive/v1.13.1.tar.gz -> docker-1.13.1.tar.gz
-_eclasses_=bash-completion-r1	acf715fa09463f043fbfdc1640f3fb85	eutils	708f85bc1bf00876604e223fb56e062a	golang-base	a42b7e0ca33d7ab0c0fa52699435b816	golang-vcs-snapshot	1caa6d8238d2378ad688ae068ff22e5a	linux-info	af49d8ab3be91bb1d38b7201dc9e5123	multilib	165fc17c38d1b11dac2008280dab6e80	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	udev	0498b698e76cdc94930b59a00c73dd9c	user	e10ccb95af96d45f86016fa982a949bb	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=ef9f9c321bbf137d00a1734248d1bc18
+_eclasses_=bash-completion-r1	2418d29a9d4e3e223bbc64e93cde118e	eutils	c8729578e47597ee48d77eda210e2b56	golang-base	0f75d9692d09462687e69a4c6dda0d16	golang-vcs-snapshot	192c4e42089abf548c85be344086b1ff	linux-info	28a4d19bc3bdeee9008ccce076260427	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	udev	9b8a82f709a883f0840736c9b9375698	user	e28cdd9fa5d8069e8e047c82db5d57bd	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=dd4492efb5062bf37c61f630e665147e

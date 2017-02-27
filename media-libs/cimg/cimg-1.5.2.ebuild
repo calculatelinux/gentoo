@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ded123250df93145b548abbb41c4283667e40d7a $
 
 EAPI=5
 MY_P="CImg-${PV}"

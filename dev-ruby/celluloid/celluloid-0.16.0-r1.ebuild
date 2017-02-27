@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 2367dcb187052c04c43b1fa22ad362f4f1294c7f $
 
 EAPI=5
 # rbx or jruby recommended, but only in 1.9 mode.

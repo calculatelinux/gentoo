@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=app-i18n/librime
 SLOT=0
 SRC_URI=http://dl.bintray.com/lotem/rime/brise-0.35.tar.gz
-_eclasses_=vcs-snapshot	2b65ecb2d0f91e4322c2ac8d673993bd
-_md5_=c79ecba58799a397e743071426e9e7a6
+_eclasses_=vcs-snapshot	10b045661d7c5178ffdf37fbf47278d6
+_md5_=3e504e7168f08d689be1fc7fe546e04b

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f4e945c7d32a2ec39339941636a0c7d729275236 $
 
 # Remove "multilib-strict" for now wrt #424423
 FEATURES="collision-protect sign splitdebug test test-fail-continue userpriv usersandbox"

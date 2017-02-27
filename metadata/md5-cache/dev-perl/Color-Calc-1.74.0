@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=dev-perl/Graphics-ColorNames-2.100.0 >=dev-perl/Graphics-ColorNames-WWW-0.10.0 !minimal? ( >=dev-perl/Graphics-ColorObject-0.5.0 ) >=dev-perl/Params-Validate-0.750.0 dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/C/CF/CFAERBER/Color-Calc-1.074.tar.gz
-_eclasses_=multiprocessing	eb9be4b678c4e71f3f530a767df31912	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
-_md5_=fa82d2f17b58456d52e82544d3de78c7
+_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
+_md5_=84ad7fc6aaf75bed861e0e1c4ecd0f06

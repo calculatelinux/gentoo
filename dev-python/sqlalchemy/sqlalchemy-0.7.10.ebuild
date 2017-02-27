@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: db80b195714a453c095ded3d317ffa48e1f175b6 $
 
 EAPI=5
 # py3 appears underdone,

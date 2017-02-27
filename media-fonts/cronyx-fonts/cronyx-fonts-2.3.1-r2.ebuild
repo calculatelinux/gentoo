@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: be9a4ae3e5266cc74e1f667a01bea3823e746bb2 $
 
 DESCRIPTION="Cronyx Cyrillic bitmap fonts for X"
 HOMEPAGE="http://koi8.pp.ru/frame.html?xwin.html#xwin_fonts"

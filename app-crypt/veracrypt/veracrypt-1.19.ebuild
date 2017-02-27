@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 74fd7dad596650b1886b86ec275850d758c2136d $
 
 EAPI=6
 inherit eutils linux-info pax-utils toolchain-funcs wxwidgets

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8128510d62541ad4fe0dab11abf37dc423964dd7 $
 
 DESCRIPTION="A utility to create text art tables from delimited input"
 HOMEPAGE="https://sourceforge.net/projects/tabler/"

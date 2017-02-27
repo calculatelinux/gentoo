@@ -8,5 +8,5 @@ LICENSE=public-domain
 RDEPEND=>=sys-libs/libhx-3.4
 SLOT=0
 SRC_URI=http://jftp.medozas.de/hxtools/hxtools-20110721.tar.xz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=0eb3b294cfdfdd9209aa9a2f6a55e51e
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=70b60c3bda0e9a6d2fb605182afba69e

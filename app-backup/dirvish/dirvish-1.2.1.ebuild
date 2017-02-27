@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d9139f4133e228bb24aebf675d9ae76f92731b80 $
 
 DESCRIPTION="Dirvish is a fast, disk based, rotating network backup system"
 HOMEPAGE="http://www.dirvish.org/"

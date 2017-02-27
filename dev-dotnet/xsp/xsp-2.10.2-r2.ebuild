@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: dcf35279a6728ab405fffe8e2fe1f96a2527c581 $
 
 EAPI="4"
 inherit eutils go-mono mono user

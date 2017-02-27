@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f4ddee6390bda0e73803b0ddc7e50d2fbdce5c9d $
 EAPI=5
 MY_P=fortune-mod-thomas.ogrisegg-${PV}
 DESCRIPTION="Quotes from Thomas Ogrisegg"

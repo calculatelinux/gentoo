@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 02a43d1abe2fd234d924ae446fb74836303f1416 $
 
 EAPI=5
 FONT_PN="cronyx"

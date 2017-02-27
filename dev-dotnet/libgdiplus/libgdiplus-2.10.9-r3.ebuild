@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e6319b808350ea8d1a25e5a253252b9c0d5d0a46 $
 
 EAPI=6
 inherit eutils dotnet flag-o-matic

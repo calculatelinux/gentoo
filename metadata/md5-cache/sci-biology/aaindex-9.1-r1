@@ -9,4 +9,4 @@ LICENSE=public-domain
 RDEPEND=emboss? ( sci-biology/emboss )
 SLOT=0
 SRC_URI=mirror://gentoo/aaindex-9.1.tar.bz2
-_md5_=4d6b4148026d75cbe012cfa4d4375818
+_md5_=1bb993166ec5b2547ffcdcac6a078b0b

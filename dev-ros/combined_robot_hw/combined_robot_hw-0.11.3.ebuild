@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 16b864938ed289c3008cac7a9f95a526f6ea6a5e $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-controls/ros_control"

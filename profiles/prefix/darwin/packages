@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e8faa818f9a472848fc0f45702e721c559a4c73f $
 
 *sys-apps/darwin-miscutils
 *sys-devel/binutils-apple

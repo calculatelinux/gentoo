@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8a21100cceb2fed175a2a702e227d722d1ba8f9e $
 
 inherit eutils fixheadtails flag-o-matic qmail
 

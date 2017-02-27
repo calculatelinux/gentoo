@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0b49944c5199baae69617beb38675d08cf64b910 $
 
 # @ECLASS: python-any-r1.eclass
 # @MAINTAINER:

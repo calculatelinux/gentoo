@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: edcc22aac76bba09f138d79c9dbc6ed8b709efff $
 EAPI=5
 DESCRIPTION="Quotes from Homer Simpson"
 HOMEPAGE="http://www.cs.indiana.edu/~crcarter/homer/homer.html"

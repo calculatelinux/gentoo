@@ -10,5 +10,5 @@ RDEPEND=qt4? ( dev-qt/qtcore:4 ) qt5? ( dev-qt/qtcore:5 )
 REQUIRED_USE=|| ( qt4 qt5 )
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~pesa/distfiles/qt-solutions-20150629.tar.xz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multibuild	742139c87a9fa3766f0c2b155e5522bf	multilib	165fc17c38d1b11dac2008280dab6e80	qmake-utils	0a242e7177789b0028b4045f336dd4db	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=aa442be71efd892dbf214b6e87bda34b
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multibuild	863e759ee14be1c222e6b67853e91c7d	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	qmake-utils	461362a9981d9f069203d2436fea87ce	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=a7797e0a67af1d00251a6d35525c3c6d

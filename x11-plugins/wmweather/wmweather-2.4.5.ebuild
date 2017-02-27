@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 2ffc5618c835db85bbdcb5f88aa3a944d633fe2f $
 
 EAPI=4
 DESCRIPTION="a dockable weather monitor for standard METAR stations using ICAO location"

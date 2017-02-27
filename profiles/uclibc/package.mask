@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8c5bd73e37a09c2ec3a90dd9309fc0fccee3a269 $
 
 # glib-2.x requires working locale/iconv which
 # isn't available atm in uclibc

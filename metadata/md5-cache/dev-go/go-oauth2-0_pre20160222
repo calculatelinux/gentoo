@@ -7,5 +7,5 @@ KEYWORDS=~amd64
 LICENSE=BSD
 SLOT=0/0_pre20160222
 SRC_URI=https://github.com/golang/oauth2/archive/2cd4472c321b6cba78e029d99f0e7fe51032fd21.tar.gz -> go-oauth2-0_pre20160222.tar.gz https://github.com/golang/net/archive/b6d7b1396ec874c3b00f6c84cd4301a17c56c8ed.tar.gz -> go-net-0_pre20160216.tar.gz https://github.com/GoogleCloudPlatform/gcloud-golang/archive/872c736f496c2ba12786bedbb8325576bbdb33cf.tar.gz -> gcloud-golang-872c736f496c2ba12786bedbb8325576bbdb33cf.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	golang-base	a42b7e0ca33d7ab0c0fa52699435b816	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=0c8aec8fd9a5768dcb3872cc80de04b2
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	golang-base	0f75d9692d09462687e69a4c6dda0d16	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=b17a4fbdb6af80db695f562608a47ece

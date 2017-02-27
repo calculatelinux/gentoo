@@ -9,5 +9,5 @@ LICENSE=qpopper ISOC-rfc
 RDEPEND=virtual/mta >=net-mail/mailbase-0.00-r8 xinetd? ( virtual/inetd ) gdbm? ( sys-libs/gdbm ) drac? ( mail-client/drac ) pam? ( >=sys-libs/pam-0.72 ) ssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=ftp://ftp.qualcomm.com/eudora/servers/unix/popper/qpopper4.1.0.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	ssl-cert	b031e94f4c7c34e1d677376b8929821a	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb
-_md5_=e44ab74dc0287b6a9ba4435ead1aa55e
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	ssl-cert	daaa9d833de9c2cf7d06eb031c4ce49f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd
+_md5_=42dabc9c6ed6a1f051e2fb9f13b11ca4

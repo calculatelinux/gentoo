@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e78486b0d5d6a02a49ad3e71545b08c727fe1909 $
 
 EAPI=5
 inherit autotools bash-completion-r1 eutils fixheadtails multilib user systemd

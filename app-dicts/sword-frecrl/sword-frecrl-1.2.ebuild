@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3b49ed053932e224c34130eecf0d48f5a7532732 $
 
 EAPI=5
 SWORD_MODULE="FreCrl"

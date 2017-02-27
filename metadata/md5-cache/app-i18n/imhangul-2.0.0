@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-i18n/libhangul-0.0.12 >=x11-libs/gtk+-2.2:2 virtual/libintl
 SLOT=0
 SRC_URI=http://kldp.net/frs/download.php/5924/imhangul-2.0.0.tar.bz2
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=c818f79c238e7d43204f3d41deedec02
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=3d8406af178a075ab4ed9b79269db467

@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=net-dialup/pptpclient-1.7.0 >=net-dialup/ppp-2.4.2
 SLOT=0
 SRC_URI=http://home.planet.nl/~mcdon001/kpnadsl4linux-1.11.tar.gz http://www.adsl4linux.nl/download/kpnadsl4linux-1.11.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=0f48a1fa9706e5fce74a28df92578dcd
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=e1e3f81fef2de1499ceb1143bb579cf7

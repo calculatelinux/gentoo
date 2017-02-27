@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 94b8c3da25947bfc269f799e40d73d55cf841d82 $
 
 EAPI=6
 inherit pam systemd

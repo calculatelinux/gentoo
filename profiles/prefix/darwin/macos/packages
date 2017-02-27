@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3b7d6312095f72c6007782cbf8f4b5a049d871bb $
 
 # Mac OS X is built with LLVM/Clang
 -*sys-devel/gcc

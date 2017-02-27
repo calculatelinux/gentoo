@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/dired app-xemacs/xemacs-base app-xemacs/efs app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/igrep-1.16-pkg.tar.gz
-_eclasses_=xemacs-packages	3efe8d071b1fa620109b658175e85267
-_md5_=9970b548f267ed85fa1b832e073c057c
+_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
+_md5_=d774cd499db658425083414e8e123fd0

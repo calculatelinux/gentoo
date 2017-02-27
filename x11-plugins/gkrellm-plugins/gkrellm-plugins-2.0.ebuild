@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0386930fcb5343362655b99bb51122efc0a78091 $
 
 DESCRIPTION="emerge this package to install all of the gkrellm plugins"
 HOMEPAGE="http://www.gkrellm.net/"

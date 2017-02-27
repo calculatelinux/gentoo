@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 323ad2dc375522df24c72c2d43910e9e72ea998d $
 
 # @ECLASS: vala.eclass
 # @MAINTAINER:

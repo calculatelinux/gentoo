@@ -8,4 +8,4 @@ KEYWORDS=alpha amd64 ~arm hppa ~mips ppc ppc64 sparc x86 ~x86-fbsd
 LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=mirror://sourceforge/libbinio/libbinio-1.4.tar.bz2
-_md5_=43a87cf8b155719c6c08c3386b5d59ce
+_md5_=bb4b92e22c47754aeee2b63b09a169d1

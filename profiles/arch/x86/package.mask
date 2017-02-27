@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fd6adc9b446e03562af98b367793d3da69ec81dc $
 
 # Mike Gilbert <floppym@gentoo.org> (05 Nov 2016)
 # seccomp-related regression on x86.

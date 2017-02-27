@@ -10,5 +10,5 @@ RDEPEND=dev-lang/php[curl?,filter,gd,hash,json,mysql?,pdo,posix,postgres?,sessio
 REQUIRED_USE=|| ( mysql postgres sqlite )
 SLOT=11.0.0
 SRC_URI=http://download.nextcloud.com/server/releases/nextcloud-11.0.0.tar.bz2
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	webapp	42c6ef7af496b228f9854b3c81e4b226
-_md5_=a5b8029236bf56deca805925a22a2091
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	webapp	8e0ef22ac030da2d8de98c90883ca147
+_md5_=de80bbc1c47b703372f99472ce4e94a7

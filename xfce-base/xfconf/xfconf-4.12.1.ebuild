@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c73b02554ce6e34f5a7e3aae132124047aca1f79 $
 
 EAPI=5
 inherit xfconf

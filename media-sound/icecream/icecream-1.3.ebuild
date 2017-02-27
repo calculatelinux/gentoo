@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: dfe1a76575f421e6f073f1f4de2b3abf348a0448 $
 
 DESCRIPTION="Extracts and records individual MP3 tracks from shoutcast streams"
 HOMEPAGE="http://icecream.sourceforge.net"

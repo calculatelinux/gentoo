@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4753a621c276e2639bb9ee5bea61b160271339eb $
 
 EAPI=6
 DIST_AUTHOR=PEVANS

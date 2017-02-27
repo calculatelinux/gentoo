@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 13a085a3258573e2b7fb32e7ba22a60d21398cf2 $
 
 ## BUNDLED-DEPS:
 # extern/cuew

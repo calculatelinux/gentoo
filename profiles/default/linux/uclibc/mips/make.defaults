@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1a0e9303fde1a3aa12d7faf9bd1bf4d4c5881fd8 $
 
 ARCH="mips"
 ACCEPT_KEYWORDS="${ARCH} ~${ARCH}"

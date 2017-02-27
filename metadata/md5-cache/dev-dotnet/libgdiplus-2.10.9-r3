@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/glib-2.16:2 >=media-libs/freetype-2.3.7 >=media-libs/fontconf
 RESTRICT=test
 SLOT=0
 SRC_URI=http://download.mono-project.com/sources/libgdiplus/libgdiplus-2.10.9.tar.bz2
-_eclasses_=dotnet	b8788d81fe4ec93fda9fc56fed2981d0	eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	mono-env	10809200679bcceefebac9e72bebb6e6	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=e1213e8c104e7b8a832bcc70d8845ace
+_eclasses_=dotnet	8e24bc8c64c56d7a3e77626475cfcb7c	eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	mono-env	18c1874969d976b4aa573c2752859502	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=52c083f19811f228feb591da0046c1b2

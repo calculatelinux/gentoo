@@ -7,4 +7,4 @@ LICENSE=GPL-2+
 RDEPEND=app-portage/portage-utils sys-apps/portage
 SLOT=0
 SRC_URI=https://github.com/gentoo-perl/gentoo-perl-helpers/releases/download/0.1.0/gentoo-perl-helpers-0.1.0.tar.xz
-_md5_=3b30bf226a075c9b588eda1705f11fd5
+_md5_=5bb843a0a76393a73d6b1039094b061f

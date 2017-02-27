@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 428a22f66928fcc249a1a736948f072770072fd4 $
 
 MY_P=${PN}${PV}
 ITCL_MY_PN="itcl"

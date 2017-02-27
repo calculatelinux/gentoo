@@ -6,5 +6,5 @@ KEYWORDS=amd64 arm ppc sh sparc x86
 LICENSE=BSD
 SLOT=0
 SRC_URI=mirror://sourceforge/disktype/disktype-9.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=d1b88a5f356ac2532750e3b3279c28c9
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=fc0562b0fec98799f74fc28375bf02b8

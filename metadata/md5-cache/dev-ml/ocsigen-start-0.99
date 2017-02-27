@@ -8,5 +8,5 @@ LICENSE=LGPL-3
 RDEPEND=dev-lang/ocaml:= dev-ml/pgocaml:= dev-ml/macaque:= dev-ml/ocaml-safepass:= dev-ml/eliom:= dev-ml/ocsigen-toolkit:= dev-ml/ppx_deriving:= dev-ml/yojson:= dev-ml/OCaml-ImageMagick:=
 SLOT=0/0.99
 SRC_URI=https://github.com/ocsigen/ocsigen-start/archive/v0.99.tar.gz -> ocsigen-start-0.99.tar.gz
-_eclasses_=findlib	9909e5ca0f77ff5b693885a3d7aeadb7
-_md5_=ab9c43cffbb4c04742ad8299f9cb36ec
+_eclasses_=findlib	3a364957a70a5953531fad3d1bc112ec
+_md5_=923f51d7b9c19f4b9e9d45084057e717

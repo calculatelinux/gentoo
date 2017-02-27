@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 36220a894cc6380abb1976508d21e21d5759dffc $
 
 EAPI=6
 VALA_USE_DEPEND="vapigen"

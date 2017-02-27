@@ -9,5 +9,5 @@ LICENSE=ARIADNE
 RDEPEND=>=sci-biology/ncbi-tools-0.20041020-r1
 SLOT=0
 SRC_URI=http://www.well.ox.ac.uk/ariadne/ariadne-1.3.tar.Z
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=6d76b3ca143c655e1eb54fe6daf3cca6
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=1aeedeba41aa18191580667c307d29b6

@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-perl/Class-Load dev-perl/Email-Address dev-perl/Email-Date-Format >=dev-perl/Email-MessageID-1.400.0 dev-perl/Email-Valid virtual/perl-Encode >=dev-perl/MIME-tools-5.400.0 >=dev-perl/HTML-Tree-3.0.0 dev-perl/MIME-Types >=dev-perl/Moose-0.940.0 dev-perl/Path-Class dev-perl/Text-Table dev-perl/namespace-autoclean dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MA/MAROS/Mail-Builder-2.09.tar.gz
-_eclasses_=multiprocessing	eb9be4b678c4e71f3f530a767df31912	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
-_md5_=3e72413ddb0920dc84bab4147f12390c
+_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
+_md5_=1a27639c76d3f7f0e9b4e2d577abd8f7

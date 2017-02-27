@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: dabe4302482aa703f64cadddf69848738bc4774d $
 
 EAPI=5
 SWORD_MODULE="Clarke"

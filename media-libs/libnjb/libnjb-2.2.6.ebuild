@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 47d76b9949f92adbaeaf5a1986e0d43fb1b01ff5 $
 
 EAPI=2
 inherit libtool multilib udev

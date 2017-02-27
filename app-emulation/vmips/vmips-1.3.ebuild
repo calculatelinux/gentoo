@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 14174e0321d513bb7025cc233b70e8657b720686 $
 
 DESCRIPTION="A virtual machine simulator based on a MIPS R3000 processor"
 HOMEPAGE="http://vmips.sourceforge.net/"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 2e6eb7b5b97abaf3e1d7d8320f96215a3bf535bc $
 
 # Tom Wijsman <TomWij@gentoo.org> (06 Feb 2014)
 # [QA] Masked jit USE flag on www-apps/cgit as dev-lang/luajit is not stable.

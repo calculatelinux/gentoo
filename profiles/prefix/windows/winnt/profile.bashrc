@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5b818e40290a5cfb177eea3fe599cb84e9091ffb $
 
 # On windows, binary files (executables, shared libraries) in use
 # cannot be replaced during merge.

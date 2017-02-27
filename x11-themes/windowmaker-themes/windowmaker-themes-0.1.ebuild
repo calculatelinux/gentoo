@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ba77d0c770ffb08495ec6fdb8ceeafab2a694bb9 $
 
 # TODO: Break themes up by author and into sub-dirs named after
 # the author

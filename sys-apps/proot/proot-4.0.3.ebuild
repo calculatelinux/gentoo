@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e1458b058d381aee94230235781e6fd85ed89ebd $
 
 EAPI=5
 MY_PN="PRoot"

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 599a7fd3a440519012a26ff2e56391a9ec0b83b0 $
 
 # dlopen() doesn't work in MiNT
 dso

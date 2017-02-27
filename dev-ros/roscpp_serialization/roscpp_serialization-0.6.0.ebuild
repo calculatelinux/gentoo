@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5ce015d150f2b101e605e17f61fb3a121ecad81b $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/roscpp_core"

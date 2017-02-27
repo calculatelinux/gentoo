@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ba8ba98a7fa25d51412d860567801d61cfbdc6da $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/GT-RAIL/robot_pose_publisher"

@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/xemacs-base app-xemacs/xemacs-ispell app-xemacs/mail-lib app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/docbookide-0.08-pkg.tar.gz
-_eclasses_=xemacs-packages	3efe8d071b1fa620109b658175e85267
-_md5_=05cd7cbcd49e2e9c29203b949add767d
+_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
+_md5_=96d991759c650d99d70d0a8575ca3f7b

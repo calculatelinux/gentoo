@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 975884e7ce4eca85fb292a910621ff04d303ba07 $
 
 EAPI=5
 MODULE_AUTHOR=GBROWN

@@ -10,5 +10,5 @@ RDEPEND=dev-util/sgb
 RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=http://www.cc.gatech.edu/fac/Ellen.Zegura/gt-itm/gt-itm.tar.gz http://www.isi.edu/nsnam/dist/sgb2ns.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=9151f3e1d6688dbae7faa92ad64bad70
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=96a316985288efe89145efef5a54f4b4

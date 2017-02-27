@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=virtual/blas virtual/lapack tk? ( dev-lang/tk )
 SLOT=0
 SRC_URI=mirror://sourceforge/mpqc/mpqc-2.3.1.tar.bz2
-_md5_=ef915759d3dc10019fd96530f59bb42e
+_md5_=6e3291e82e7570207039a5d3f7e133a6

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 950d2753331a321005b26b10c39773c7d26c18e3 $
 
 inherit rpm
 

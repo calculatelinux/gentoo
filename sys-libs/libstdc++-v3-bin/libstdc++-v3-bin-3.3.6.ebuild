@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 83604c482c367ecb1e0165aee7abbe71c50bd266 $
 
 DESCRIPTION="Compatibility package for running binaries linked against a pre gcc 3.4 libstdc++"
 HOMEPAGE="https://gcc.gnu.org/libstdc++/"

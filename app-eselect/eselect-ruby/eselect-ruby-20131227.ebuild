@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a21da8151469f17e9a29a47fc83fa2ce6e571d21 $
 
 DESCRIPTION="Manages multiple Ruby versions"
 HOMEPAGE="https://www.gentoo.org"

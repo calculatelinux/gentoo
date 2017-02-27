@@ -9,5 +9,5 @@ LICENSE=ZLIB
 RDEPEND=X? ( >=x11-libs/libXt-1.1.4[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?,abi_s390_32(-)?,abi_s390_64(-)?] ) >=media-libs/libsdl2-2.0.1-r1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?,abi_s390_32(-)?,abi_s390_64(-)?] >=media-libs/freetype-2.5.0.1[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?,abi_s390_32(-)?,abi_s390_64(-)?] virtual/opengl[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?,abi_s390_32(-)?,abi_s390_64(-)?]
 SLOT=0
 SRC_URI=http://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-2.0.13.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multibuild	742139c87a9fa3766f0c2b155e5522bf	multilib	165fc17c38d1b11dac2008280dab6e80	multilib-build	8fe2e81aeb36cdf8a6cc5f50443879cc	multilib-minimal	e7442c2d848733064a6639b5d73d3b74	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=e5fd90c366b8f1c40196434846fd82b6
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multibuild	863e759ee14be1c222e6b67853e91c7d	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multilib-build	982f755104619efbd39dc7adf268729d	multilib-minimal	05f45bd8205b0060c1670be849fa06d1	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=10900e5ae85292cf5b4153b1eec8016d

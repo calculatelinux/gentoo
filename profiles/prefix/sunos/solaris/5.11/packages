@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f83f5d36431a452648c78cb458379c092d7cc4cc $
 
 # Host provided libuuid.so links against libpool.so, which in turn links
 # against libxml2.so.  In the latter it looks for SUNW@ symbols which

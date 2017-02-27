@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-text/aspell-0.50
 SLOT=0
 SRC_URI=mirror://gnu/aspell/dict/sv/aspell-sv-0.51-0.tar.bz2
-_eclasses_=aspell-dict	5e1fcef2869735a5ddd48c0d8fb4f48a
-_md5_=bf2f00ae456daffd7fbef0e063f3ff67
+_eclasses_=aspell-dict	1163c6fbf66376d194d71dc90488cc78
+_md5_=e6c6d21e842398f8460f1e197fd5c448

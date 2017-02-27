@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=sys-fs/e2fsprogs sys-libs/e2fsprogs-libs
 SLOT=0
 SRC_URI=http://home.earthlink.net/~k_sheff/sw/e2tools/e2tools-0.0.16.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=1ade980955002902a4016082a2ed3109
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=8b8df4021fb1cb84eccbd8c9bb6ae044

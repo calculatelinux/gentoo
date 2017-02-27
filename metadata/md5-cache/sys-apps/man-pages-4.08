@@ -10,4 +10,4 @@ RDEPEND=virtual/man !<sys-apps/attr-2.4.47-r2 !<dev-libs/libaio-0.3.109-r2
 RESTRICT=binchecks
 SLOT=0
 SRC_URI=mirror://kernel/linux/docs/man-pages/Archive/man-pages-4.08.tar.xz mirror://kernel/linux/docs/man-pages/man-pages-4.08.tar.xz mirror://gentoo/man-pages-gentoo-2.tar.bz2 https://dev.gentoo.org/~cardoe/files/man-pages-gentoo-2.tar.bz2
-_md5_=0463f175d51339d1cdd064972c3f911f
+_md5_=9cdb1313c1387a17ee3e024030159386

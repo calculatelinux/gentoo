@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/xemacs-base app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/pc-1.28-pkg.tar.gz
-_eclasses_=xemacs-packages	3efe8d071b1fa620109b658175e85267
-_md5_=ded18b8b6692d4e140cacab95886273e
+_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
+_md5_=742c5d9fb9f1aa7c98a3f512ffdb0982

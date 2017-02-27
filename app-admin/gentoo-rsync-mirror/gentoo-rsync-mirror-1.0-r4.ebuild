@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d98bf1c2d799c16e80b01a9ec9b67ace96485df2 $
 
 DESCRIPTION="Ebuild for setting up a Gentoo rsync mirror"
 HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Infrastructure/Rsync"

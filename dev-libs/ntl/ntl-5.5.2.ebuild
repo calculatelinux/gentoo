@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a25ddcf5969c7d12cf4a797f8417ef9aaf3a26c3 $
 
 EAPI=3
 inherit toolchain-funcs eutils multilib flag-o-matic

@@ -10,5 +10,5 @@ PDEPEND=vim-syntax? ( app-vim/cfengine-syntax )
 RDEPEND=>=sys-libs/db-4 >=dev-libs/openssl-0.9.7 app-portage/portage-utils
 SLOT=0
 SRC_URI=http://cfengine.com/source_code/download?file=cfengine-2.2.10.tar.gz -> cfengine-2.2.10.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=c26d81fec48fac583829edcad4ce46a6
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=e6de902bbfe1daebc36030bc6c3be7d9

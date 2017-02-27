@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~x86 ~arm
 LICENSE=MPL-2.0
 SLOT=0
 SRC_URI=https://github.com/syncthing/syncthing/archive/v0.14.21.tar.gz -> syncthing-0.14.21.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	golang-base	a42b7e0ca33d7ab0c0fa52699435b816	golang-vcs-snapshot	1caa6d8238d2378ad688ae068ff22e5a	multilib	165fc17c38d1b11dac2008280dab6e80	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=6a25ce531d78a422d9c9d3d4f1bff556
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	golang-base	0f75d9692d09462687e69a4c6dda0d16	golang-vcs-snapshot	192c4e42089abf548c85be344086b1ff	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=4cc98c49585dbfe9a046c60877fc5ed0

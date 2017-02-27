@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fc710a801241561653f2ee3dd50b1adcdc6f25bf $
 
 DESCRIPTION="framework for testing other programs"
 HOMEPAGE="https://www.gnu.org/software/dejagnu/"

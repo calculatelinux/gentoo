@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9ed6de81fa4f942c6419d879e505324d781c0a82 $
 
 EAPI=5
 DESCRIPTION="backend library for the maitretarot games"

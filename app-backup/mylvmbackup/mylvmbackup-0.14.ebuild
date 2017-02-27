@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9731227d6c9d8d5bff06d582b15aa8630b7875c4 $
 
 DESCRIPTION="Tool for creating backups of MySQL server's data files using LVM snapshots"
 HOMEPAGE="http://lenzg.net/mylvmbackup/"

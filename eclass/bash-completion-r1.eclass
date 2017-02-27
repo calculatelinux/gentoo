@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e5809f8882c5214942758bc1322174ac0bba6372 $
 
 # @ECLASS: bash-completion-r1.eclass
 # @MAINTAINER:

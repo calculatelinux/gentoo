@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e2cc44ec546a1e82876a2f4a9c7c3384e6f44779 $
 
 DESCRIPTION="Smart console frontend for virtual/cdrtools and dvd+rw-tools"
 HOMEPAGE="http://burn-cd.sourceforge.net"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1fbd04da407f75a6f37e73526c4bc76edd079d48 $
 
 EAPI=5
 SWORD_MODULE="Practice"

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 249477f19349f01302ee9fe81c6ab894544e0c12 $
 
 EAPI=5
 # Not py3 capable due to oauth2 supports py2 pypy only

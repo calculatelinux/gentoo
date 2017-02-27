@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0a82583f29a79881421c71697f1bf4d2e1b5c66d $
 
 EAPI=5
 inherit multilib toolchain-funcs

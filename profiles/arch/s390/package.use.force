@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 46dcb50682158c5a4943d83d39161afbcf859603 $
 
 # Mike Frysinger <vapier@gentoo.org> (16 Mar 2015)
 # Needs dev-lang/luajit tested #499974

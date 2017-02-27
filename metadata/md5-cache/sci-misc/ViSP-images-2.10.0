@@ -7,4 +7,4 @@ KEYWORDS=~amd64 ~arm
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www.irisa.fr/lagadic/visp/download/sequence/ViSP-images-2.10.0.zip
-_md5_=55df4cfd53c3c66f1f6f909961b38762
+_md5_=455c420cb3032b7d624ff25f1dc01986

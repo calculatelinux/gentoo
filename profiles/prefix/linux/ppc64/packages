@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 947902a7d720fbc47a82a6062c471d4887c694e2 $
 
 # Those are part of the base powerpc profile's @system set, but having them as
 # part of @system makes no sense for Gentoo Prefix.

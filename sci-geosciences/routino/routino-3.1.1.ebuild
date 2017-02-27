@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5ccf30321cb0f4ed119b5779b5f2a5ec8bbbc73c $
 EAPI=6
 
 DESCRIPTION="Routing application based on openstreetmap data"

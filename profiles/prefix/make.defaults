@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 32d8a4c305473229d62b2cc015bc19386fba9121 $
 
 # Some USE-flags that only die-hards don't want:
 # readline:  to have some sane command line editing, e.g. in python

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: db80ac2e08134fbf26a123916728dcd57c7105eb $
 #
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in use.mask

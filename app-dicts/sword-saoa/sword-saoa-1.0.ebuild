@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3078a4632233628a0c22dfc01126cc31123db36f $
 
 EAPI=5
 SWORD_MODULE="SAOA"

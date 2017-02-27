@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e5988ff5b8cb2a01c8d535065c8d884275cda82f $
 
 # Needed by mutter defaults, bug #547300
 >=media-libs/clutter-1.20 egl

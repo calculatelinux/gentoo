@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 714a1892d3f29d5eab5df9a2793a8316133b64f3 $
 
 USE="justify -pic"
 

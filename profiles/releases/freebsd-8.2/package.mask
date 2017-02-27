@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id$
+# $Id: 8f9d9c7575abdec39e0d3263c8f56b5d5e04eb44 $
 
 # Make sure we don't get wrong versions
 <sys-freebsd/freebsd-pam-modules-8.2_alpha

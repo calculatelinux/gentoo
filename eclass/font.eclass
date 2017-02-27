@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 94a18c056097a8fdb46f7dcfb8a172a1e6d6e8d2 $
 
 # @ECLASS: font.eclass
 # @MAINTAINER:

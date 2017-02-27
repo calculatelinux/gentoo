@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 2aa8bca4ae67913b7b8803c476b76413c350a4eb $
 
 # James Le Cuirot <chewi@gentoo.org> (13 Aug 2016)
 # Steam requires amd64 multilib. These are steam-overlay packages.

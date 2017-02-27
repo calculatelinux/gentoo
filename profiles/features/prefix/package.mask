@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ad2be8b4a2655f7389accf712c510b3be1ef77fa $
 
 # Jeremy Olexa <darkside@gentoo.org> (30 Jun 2009)
 # The PAM auth system just will not work in Gentoo Prefix, instead the host auth

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4932d7fdfb16506160252337ae8238ea5c01b4f5 $
 
 DESCRIPTION="An eselect module to manage /etc/fonts/conf.d symlinks"
 HOMEPAGE="https://www.gentoo.org"

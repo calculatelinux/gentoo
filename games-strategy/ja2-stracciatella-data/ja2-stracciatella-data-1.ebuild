@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a7d563f6ce3354c75819d258a2603379c3d90c7a $
 
 EAPI=5
 inherit cdrom check-reqs games

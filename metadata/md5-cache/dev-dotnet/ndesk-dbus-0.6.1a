@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=>=dev-lang/mono-1.2.4 >=sys-apps/dbus-1
 SLOT=0
 SRC_URI=http://www.ndesk.org/archive/ndesk-dbus/ndesk-dbus-0.6.1a.tar.gz
-_eclasses_=mono-env	10809200679bcceefebac9e72bebb6e6
-_md5_=c920f6c52ed7494e3206facbf7cd83aa
+_eclasses_=mono-env	18c1874969d976b4aa573c2752859502
+_md5_=e1cd435bfeb922c7f0ba8d6dce348973

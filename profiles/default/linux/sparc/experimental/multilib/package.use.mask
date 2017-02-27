@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c126437c41636f550aef839165b7328164302e13 $
 
 # Needs all X libraries in both 32 and 64 bit..
 sys-devel/gcc awt

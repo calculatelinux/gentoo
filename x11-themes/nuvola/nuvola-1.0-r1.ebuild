@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: afa8db9345461065054d628f2842210613bcd70c $
 
 DESCRIPTION="Nuvola SVG icon theme"
 HOMEPAGE="http://www.kde-look.org/content/show.php?content=5358"

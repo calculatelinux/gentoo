@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 2803207c9c1444e0bb4f2ab99a11354f8c419bc2 $
 
 EAPI="3"
 GENTOO_MAN_P="portage-${PN}-20060415"

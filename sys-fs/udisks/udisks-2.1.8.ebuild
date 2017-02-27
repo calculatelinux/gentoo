@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 10f7876f9a229f8bf197a02a5447ecf6f3a8d687 $
 
 EAPI=6
 inherit bash-completion-r1 eutils linux-info systemd udev xdg-utils

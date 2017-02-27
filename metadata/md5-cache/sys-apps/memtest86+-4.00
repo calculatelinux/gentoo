@@ -10,5 +10,5 @@ RDEPEND=floppy? ( >=sys-boot/grub-0.95 sys-fs/mtools )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.memtest.org/download/4.00/memtest86+-4.00.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	mount-boot	41ed556fa5641393d5323e421c8e5bcf	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=ffcac5b4c26baed7857fdedf2881bbcb
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	mount-boot	f879abcb933626870a8dc13e780d1369	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=bb0f65c96be2b27ddc5e44b8c88ffd3c

@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=!dev-db/etcdctl
 SLOT=0
 SRC_URI=https://github.com/coreos/etcd/archive/v3.0.17.tar.gz -> etcd-3.0.17.tar.gz
-_eclasses_=golang-base	a42b7e0ca33d7ab0c0fa52699435b816	golang-vcs-snapshot	1caa6d8238d2378ad688ae068ff22e5a	multilib	165fc17c38d1b11dac2008280dab6e80	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb
-_md5_=acabc1a58012b472b664fd5dc6c59c6b
+_eclasses_=golang-base	0f75d9692d09462687e69a4c6dda0d16	golang-vcs-snapshot	192c4e42089abf548c85be344086b1ff	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd
+_md5_=9b915b7b46d2ac971cc554fa855f9258

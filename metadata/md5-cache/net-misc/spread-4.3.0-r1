@@ -6,5 +6,5 @@ KEYWORDS=~x86 ~amd64
 LICENSE=Spread-1.0 GPL-2
 SLOT=0
 SRC_URI=mirror://gentoo/spread-src-4.3.0.tar.gz
-_eclasses_=user	e10ccb95af96d45f86016fa982a949bb
-_md5_=3de83f9500240fbfebffd003bc2ed02a
+_eclasses_=user	e28cdd9fa5d8069e8e047c82db5d57bd
+_md5_=914cd7dbb7a3d9a30ee3085f10c83c02

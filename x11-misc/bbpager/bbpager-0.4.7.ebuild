@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9dcdbd02e6089dc732ef8d50fcadd93ff6cd25c8 $
 
 inherit base autotools
 

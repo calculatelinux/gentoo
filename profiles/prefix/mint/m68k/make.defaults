@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fa793b05378c7ed03db96387c69a70ad1ac6c835 $
 
 ARCH="m68k-mint"
 CHOST="m68k-atari-mint"

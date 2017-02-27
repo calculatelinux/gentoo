@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3e4e7890724045fac7d6aa9e1d7d8fc07533254c $
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 python3_{4,5,6} pypy pypy3 )

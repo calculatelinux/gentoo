@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=dev-lang/erlang-17.1 dev-lang/erlang
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~aidecoe/distfiles/dev-erlang/hamcrest/hamcrest-0.1.0_p20160709.tar.gz
-_eclasses_=rebar	98c3519ff55e51c3d222cde7f9f5d2e9
-_md5_=ce4b97f124d3fc6e14996b2396bc77b1
+_eclasses_=rebar	ae77ce8c7945eca98b46cf5942426ad7
+_md5_=156da0d15443cbf268802f1d15f9ef98

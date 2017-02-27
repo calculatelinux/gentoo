@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6883264735d211251c3985845d0594b34d92549c $
 
 EAPI=6
 inherit multilib systemd toolchain-funcs user

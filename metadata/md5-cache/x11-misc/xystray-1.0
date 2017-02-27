@@ -8,4 +8,4 @@ LICENSE=GPL-2+
 RDEPEND=x11-libs/libX11 x11-libs/libXt
 SLOT=0
 SRC_URI=https://github.com/steelman/xystray/archive/v1.0.tar.gz -> xystray-1.0.tar.gz
-_md5_=5fad201dbec9980ccc14d675fcc00d22
+_md5_=3ea42e7a63e41ca1813d89618b584365

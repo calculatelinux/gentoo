@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ae07f3aea1ddfe593b326ab49247371aa89b7fbb $
 
 DESCRIPTION="Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH"
 HOMEPAGE="http://www.jetmore.org/john/code/swaks"

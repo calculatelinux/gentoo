@@ -7,5 +7,5 @@ LICENSE=AGREP
 RDEPEND=!dev-libs/tre !app-misc/glimpse
 SLOT=0
 SRC_URI=ftp://ftp.cs.arizona.edu/agrep/agrep-2.04.tar.Z
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=d433424875c9a6ebc7fb325293646b35
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=3f980fec78142ac800bf0a926d30df24

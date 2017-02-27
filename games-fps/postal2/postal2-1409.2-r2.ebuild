@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9d7af064f77a1146a2d5becb1a6d3d3f87f155b9 $
 
 EAPI=5
 inherit eutils unpacker cdrom multilib games

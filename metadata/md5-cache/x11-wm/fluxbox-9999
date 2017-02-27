@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=!!<=x11-misc/fbdesk-1.2.1 !!<=x11-misc/fluxconf-0.9.9 !!<x11-themes/fluxbox-styles-fluxmod-20040809-r1 bidi? ( >=dev-libs/fribidi-0.19.2 ) imlib? ( >=media-libs/imlib2-1.2.0[X] ) truetype? ( media-libs/freetype ) vim-syntax? ( app-vim/fluxbox-syntax ) x11-libs/libXext x11-libs/libXft x11-libs/libXpm x11-libs/libXrandr x11-libs/libXrender xinerama? ( x11-libs/libXinerama ) || ( x11-misc/gxmessage x11-apps/xmessage )
 REQUIRED_USE=systray? ( toolbar )
 SLOT=0
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	git-2	7af5d170bfc02983b4bcd3167dc5edd4	multilib	165fc17c38d1b11dac2008280dab6e80	prefix	99dcca42e6528d8fe3c214bf5731aaf2	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=a2ba828a5a3233688261f1a4b08ec46e
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	git-2	d77c6ee878e5582d755f883568217b9e	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	prefix	38ff416d58fcaea18d47c00728c70298	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=fb1fe4551f09720ba63aa52523f31fc3

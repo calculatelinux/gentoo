@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 70cda643afd252c901dd1f62cb83ae0e5f0094b1 $
 
 DESCRIPTION="CryptoAPI utils"
 HOMEPAGE="http://www.kerneli.org/"

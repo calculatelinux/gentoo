@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 96fba2614c0d383b076efacc6d724bd8afcec89f $
 
 EAPI=6
 inherit autotools gnome2 virtualx

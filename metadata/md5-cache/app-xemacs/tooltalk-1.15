@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/tooltalk-1.15-pkg.tar.gz
-_eclasses_=xemacs-packages	3efe8d071b1fa620109b658175e85267
-_md5_=4a8aea0668343258e28df732f74fd2bf
+_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
+_md5_=6834be9ce2f932cf035fa96caa893ed3

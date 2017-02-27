@@ -8,5 +8,5 @@ RDEPEND=>=media-libs/freetype-2.5.0.1[abi_x86_32(-)] x11-libs/libX11[abi_x86_32(
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~calchan/distfiles/eschalon-book-1-demo-106.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=3716c53ab5da4d52f47d19d4f39117b6
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=4093cd672e180086938ab421da1966a1

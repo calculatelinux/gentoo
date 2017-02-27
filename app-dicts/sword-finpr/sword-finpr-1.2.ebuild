@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3241023d375fb589ef95be8e19fa3b99c5945255 $
 
 EAPI=5
 SWORD_MODULE="FinPR"

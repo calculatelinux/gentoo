@@ -1,6 +1,6 @@
 # Copyright 2004-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 503aae35cab8ef74f2f95281eb7f0d0688d5fb6c $
 
 # @ECLASS: java-utils-2.eclass
 # @MAINTAINER:

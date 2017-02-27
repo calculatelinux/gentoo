@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=!app-i18n/anthy-ss canna-2ch? ( app-dicts/canna-2ch ) emacs? ( virtual/emacs )
 SLOT=0
 SRC_URI=mirror://sourceforge.jp/anthy/37536/anthy-9100h.tar.gz
-_eclasses_=elisp-common	9f56c4e9bf1282dbfc2a5a09e1124e74	eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=5f56ab67dd7fd594382130a43b378274
+_eclasses_=elisp-common	4a8ce40989ad055139c36baa8c81ea0b	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=3e0fae177a0d619aaa43a606d728190c

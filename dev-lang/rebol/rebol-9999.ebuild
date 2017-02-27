@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ce10fb53ba839fbb0b760403764debadc9412faa $
 
 EAPI=4
 DESCRIPTION="Relative Expression-Based Object Language"

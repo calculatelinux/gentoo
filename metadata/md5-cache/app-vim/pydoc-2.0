@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/python:* || ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 SLOT=0
 SRC_URI=https://github.com/fs111/pydoc.vim/tarball/2.0 -> pydoc-2.0.tar.gz
-_eclasses_=vim-doc	1b0813c9dadf2431c96854a8d46f5eaf	vim-plugin	cba1cae8a355e4e89cbd2615aed3b1d5
-_md5_=8705804cd6328eee7dadbffc0faee76c
+_eclasses_=vim-doc	1ce90e9633364799d58ead2bc968d52a	vim-plugin	aa8a6d795a5f0bc0917b1b24d2d0409b
+_md5_=537c10e1d868e11824b6711899b7d3f4

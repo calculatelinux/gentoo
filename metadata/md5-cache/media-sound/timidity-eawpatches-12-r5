@@ -8,4 +8,4 @@ LICENSE=free-noncomm
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=http://5hdumat.samizdat.net/music/eawpats12_full.tar.gz
-_md5_=37a6b26c8ae6def82497757bd2e076c3
+_md5_=9212dc4237fe7b26c874020e6d978fe1

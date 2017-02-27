@@ -10,5 +10,5 @@ RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) >=dev-
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=mirror://gnome/sources/gtk+/2.24/gtk+-2.24.31.tar.xz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	gnome.org	ad34f378a3d57a6f2f2b8b4aaca4543e	multilib	165fc17c38d1b11dac2008280dab6e80	python-single-r1	6793fc854691a2320226801400573568	python-utils-r1	50dad5f912d4c16c130f5679777f25e8	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=db822a7155a57370c31879d5ca5c1dc1
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	gnome.org	80dc816cab8022132d0d716d179415be	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-single-r1	b85fdbcb7d5ea8aff392df97c9cb9385	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=a7ea06e56dca26f8473928c7ffc7c81b

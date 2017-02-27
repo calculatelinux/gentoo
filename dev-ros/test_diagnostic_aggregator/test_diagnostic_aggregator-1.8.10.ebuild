@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a8d941f87b4ceab2407620438127298057952aca $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/diagnostics"

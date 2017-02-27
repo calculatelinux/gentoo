@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=|| ( net-analyzer/nagios-plugins net-analyzer/monitoring-plugins ) net-libs/ldns
 SLOT=0
 SRC_URI=mirror://gentoo/check_dnssec-0.1_p28.tar.bz2
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	708f85bc1bf00876604e223fb56e062a	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=2225f8d7ab3da21ae95e87b34fd75997
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=4c49366cd000e0356f6bfc46995fe582

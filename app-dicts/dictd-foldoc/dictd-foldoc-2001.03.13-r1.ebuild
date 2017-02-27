@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c528338dc258e54c88d686c8027f9d0536e073c9 $
 
 MY_P=foldoc-20010313
 DESCRIPTION="The Free On-line Dictionary of Computing for dict"

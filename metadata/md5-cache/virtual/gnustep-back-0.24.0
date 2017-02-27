@@ -4,4 +4,4 @@ EAPI=5
 KEYWORDS=~alpha amd64 ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-solaris
 RDEPEND=|| ( ~gnustep-base/gnustep-back-cairo-0.24.0 ~gnustep-base/gnustep-back-art-0.24.0 ~gnustep-base/gnustep-back-xlib-0.24.0 )
 SLOT=0
-_md5_=f718457c7ad32112f28a289825a941a1
+_md5_=2d1ac551209bd9d7699fa06643b21ba7

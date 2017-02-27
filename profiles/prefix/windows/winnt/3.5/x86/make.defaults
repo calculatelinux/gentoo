@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fa0e46ca55df1707ed53a0436879189d95b7d04f $
 
 ARCH="x86-winnt"
 CHOST="i586-pc-winnt3.5"

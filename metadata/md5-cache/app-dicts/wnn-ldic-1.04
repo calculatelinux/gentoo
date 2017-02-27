@@ -8,4 +8,4 @@ LICENSE=HPND
 RDEPEND=app-i18n/freewnn
 SLOT=0
 SRC_URI=http://www.tulips.tsukuba.ac.jp/misc/export/cat/ldic/ldic-1.04-wnn.txt
-_md5_=f5ca809025451d8f02147b40ece8ee3e
+_md5_=a01b2a9fb507346c63495c5417212396

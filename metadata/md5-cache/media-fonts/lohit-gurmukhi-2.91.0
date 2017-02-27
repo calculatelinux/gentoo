@@ -10,5 +10,5 @@ RDEPEND=!<media-fonts/lohit-fonts-2.20150220
 RESTRICT=test binchecks
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/l/o/lohit/lohit-gurmukhi-ttf-2.91.0.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	font	cd7790315ca5b8c505e1e0513df6acce	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=4da9d8dd7772eeef4cd1e79d6c7087bb
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	font	a18368b5586e76d96bda71f19569cec5	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=d8b14454ce40ba44a086e91e26c2c551

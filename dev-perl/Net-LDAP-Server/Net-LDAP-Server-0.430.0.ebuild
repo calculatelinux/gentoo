@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 30e1cbe2bdfed5cb289894f0f7d5611c5b975f0d $
 EAPI=5
 MODULE_AUTHOR=AAR
 MODULE_VERSION=0.43

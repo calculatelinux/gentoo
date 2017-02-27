@@ -8,5 +8,5 @@ KEYWORDS=~amd64
 LICENSE=Apache-2.0
 SLOT=0
 SRC_URI=https://github.com/coreos/fleet/archive/v1.0.0.tar.gz -> fleet-1.0.0.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	vcs-snapshot	2b65ecb2d0f91e4322c2ac8d673993bd
-_md5_=108172be9cab223ba3371fc7a25b75fb
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	vcs-snapshot	10b045661d7c5178ffdf37fbf47278d6
+_md5_=0b323a5433c8f1fa9fba99164a5fa43e

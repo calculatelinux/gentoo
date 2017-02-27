@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 951a65741d9c4a199d6e4871546bcaf8e74ec4c5 $
 
 DESCRIPTION="Flat SVG icon set"
 SRC_URI="http://www.atqu23.dsl.pipex.com/danny/flatSVG${PV}.tar.gz"

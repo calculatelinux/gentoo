@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 361119e7e397efa99b72da25074757ee073f68aa $
 
 EAPI=6
 # gedit-3.8 is python3 only, this also per:

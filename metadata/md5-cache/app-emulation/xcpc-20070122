@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=app-emulation/libdsk
 SLOT=0
 SRC_URI=http://sourceforge.net/projects/xcpc/files/xcpc/xcpc-20070122/xcpc-20070122.tar.gz
-_md5_=402cf65f8e6dcdf74832da68d5d62b3f
+_md5_=72a6dc9e4092e74b6432f8198c0bfd54

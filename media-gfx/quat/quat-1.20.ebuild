@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e609260fddafe55bee58fb9101a52040769463a0 $
 
 DESCRIPTION="A 3D quaternionic fractal generator"
 HOMEPAGE="http://www.physcip.uni-stuttgart.de/phy11733/quat_e.html"

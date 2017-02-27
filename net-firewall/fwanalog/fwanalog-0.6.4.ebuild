@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8434ec8babe47f74ad9e9e01881490938ec63f90 $
 
 DESCRIPTION="Script to parse firewall logs and analyze them with Analog"
 HOMEPAGE="http://tud.at/programm/fwanalog/"

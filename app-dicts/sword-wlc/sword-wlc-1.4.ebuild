@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: cad175d76afde0f9c27eb42acf19aea621336184 $
 
 EAPI=5
 SWORD_MODULE="WLC"

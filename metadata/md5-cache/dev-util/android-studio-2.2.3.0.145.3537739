@@ -10,5 +10,5 @@ RDEPEND=>=virtual/jdk-1.7 selinux? ( sec-policy/selinux-android ) >=app-arch/bzi
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://dl.google.com/dl/android/studio/ide-zips/2.2.3.0/android-studio-ide-145.3537739-linux.zip
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	java-pkg-2	eb1f0d7d874162c70088f5ae32c31ee7	java-utils-2	b31a7fe19a47c6a2d901f6de949e5209	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=d979cb193d074c2310a06c9b324e7a93
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	java-pkg-2	9aa2f2c12a6a7cdafd9494d17762d4a9	java-utils-2	ebeaf17afbac1fe2f3549ea6afa504e3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=a6fc91625902f63cf74a63686211da94

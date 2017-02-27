@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=doc? ( app-text/texi2html )
 SLOT=0
 SRC_URI=http://download.savannah.gnu.org/releases/dotgnu-pnet/treecc-0.3.10.tar.gz
-_md5_=16a5afab8431a691a8f93be8a1231c0b
+_md5_=8241b8480e5600eb6a028e2735f99f9c

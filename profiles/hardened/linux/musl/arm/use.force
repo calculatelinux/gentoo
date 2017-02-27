@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fe0460b9e5cff5e4f5f555546b0f0d9aefea2b4d $
 
 # Force the flag which corresponds to ARCH.
 arm

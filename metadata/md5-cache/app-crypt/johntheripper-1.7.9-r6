@@ -10,5 +10,5 @@ RDEPEND=sys-libs/zlib !minimal? ( >=dev-libs/openssl-0.9.7:0 ) mpi? ( virtual/mp
 REQUIRED_USE=openmp? ( !minimal ) mpi? ( !minimal ) cuda? ( !minimal ) opencl? ( !minimal )
 SLOT=0
 SRC_URI=http://www.openwall.com/john/g/john-1.7.9.tar.bz2 !minimal? ( http://www.openwall.com/john/g/john-1.7.9-jumbo-7.diff.gz )
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	pax-utils	4c2654a34ebe732e85fda354f6ee642f	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=ff07dfefa4471c30556af7e9820345ac
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	pax-utils	fba36330a0e96da6ac8ea47dd495cc62	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=e4111dcf8d89a532b319f24aff83fdc2

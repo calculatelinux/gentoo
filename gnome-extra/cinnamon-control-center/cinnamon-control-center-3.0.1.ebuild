@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 34f76548fe5d6f35a7870556eb2cc5d901da57ea $
 
 EAPI=6
 GNOME2_LA_PUNT="yes" # gmodule is used, which uses dlopen

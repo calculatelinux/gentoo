@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/libmikmod media-libs/libpng:0 media-libs/libsdl[sound,video] media-libs/sdl-mixer[vorbis] media-libs/sdl-sound[vorbis,mikmod] media-libs/smpeg virtual/opengl
 SLOT=0
 SRC_URI=mirror://sourceforge/gltron/gltron-0.70-source.tar.gz mirror://gentoo/gltron.png
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=d0354828a0f805ce38bab5cd28541460
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=b24c0d4c660f34603dbc0aad41b87332

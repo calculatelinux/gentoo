@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=gmp? ( dev-libs/gmp:0 )
 SLOT=0
 SRC_URI=mirror://sourceforge/esco/esco-src-0.512.tar.gz
-_md5_=24c07693963f650e9478bc977c888248
+_md5_=f7296cb8180c2e8de9d9b25c428c655e

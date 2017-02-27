@@ -8,5 +8,5 @@ LICENSE=GPL-2+
 RDEPEND=>=app-editors/xemacs-21.4.20-r5 app-xemacs/sh-script
 SLOT=0
 SRC_URI=mirror://gentoo/ebuild-mode-1.24.tar.xz
-_eclasses_=xemacs-elisp	1a77d556938e284b87fa2fbd3113ce68	xemacs-elisp-common	7f4f0cd4db5971a415fe6d9208c64116
-_md5_=5d62e2b447f1e5089443abf43b347a63
+_eclasses_=xemacs-elisp	158faeba32fc4e3a4bcd75b5d51fd74f	xemacs-elisp-common	d1f8b4931ccc5cbaba2e4d3dcd9c9c91
+_md5_=d80036510d853967bfe08afc92c0ff7c

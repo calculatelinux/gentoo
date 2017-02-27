@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a0d9d10f6b94e20d286ba018100159571c09ebb4 $
 
 DESCRIPTION="Displays clear, concise and up-to-date PBS node and CPU usage information"
 SRC_URI="http://homepages.inf.ed.ac.uk/s0239160/misc/lspbs/${P}.tar.gz"

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-java/jsr101:0 dev-java/mojarra:2.2 dev-java/oracle-javamail:0 dev-java/validation-api:1.0 dev-java/resin-servlet-api:3.1 dev-java/glassfish-xmlrpc-api:0 dev-java/glassfish-deployment-api:1.2 >=virtual/jre-1.6 >=dev-java/java-config-2.2.0-r3 source? ( app-arch/zip )
 SLOT=0
 SRC_URI=http://www.caucho.com/download/resin-4.0.48-src.zip
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	java-ant-2	d1abcccd8e9c606be17deacfe5c7368a	java-pkg-2	eb1f0d7d874162c70088f5ae32c31ee7	java-utils-2	b31a7fe19a47c6a2d901f6de949e5209	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=2ed25fb3468e5adb11901335f8928454
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	java-ant-2	92c3d76268eb0e8d1494c22eb298b8af	java-pkg-2	9aa2f2c12a6a7cdafd9494d17762d4a9	java-utils-2	ebeaf17afbac1fe2f3549ea6afa504e3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=6727a8216615765d3c5bf1affdd5cc10

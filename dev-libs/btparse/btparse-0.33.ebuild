@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 21e8a29d68ec5b7642fa6f94c3cedda29ea8dba1 $
 
 DESCRIPTION="A C library to parse Bibtex files"
 HOMEPAGE="http://starship.python.net/~gward/btOOL/"

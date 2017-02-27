@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/glib:2 dev-scheme/guile-lib dev-scheme/guile[deprecated] virtual/libffi
 SLOT=0
 SRC_URI=http://download.savannah.gnu.org/releases/g-wrap/g-wrap-1.9.11.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=754e9318bc845004cceb4f9606af78de
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=0a05b965327465e0de8a4d64ad8be899

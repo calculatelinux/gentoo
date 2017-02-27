@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ffee6b9e5d52afd2e4ec928be9e2153bbeb838db $
 
 EAPI=6
 inherit autotools gnome2

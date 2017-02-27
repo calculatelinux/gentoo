@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fba121fa8f9e6a4f5c6a535f867f8dddcfdede41 $
 
 EAPI=5
 inherit eutils perl-module git-2

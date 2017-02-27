@@ -6,4 +6,4 @@ KEYWORDS=amd64 ~arm ~arm64 x86
 LICENSE=GPL-2
 RDEPEND=>=x11-misc/xdg-utils-1.1.1-r1
 SLOT=5
-_md5_=df61e627c3615c5f5583d590f712471f
+_md5_=9d999153d511efa2d984b222a9b4d028

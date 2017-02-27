@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5acd215680749c71ec22dcbc49cbbde86264a327 $
 
 EAPI=5
 EGO_PN="golang.org/x/tools/..."

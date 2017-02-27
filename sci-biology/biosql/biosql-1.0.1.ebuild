@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ed77d3770701a0ae2672797e33ecc02f9c7355e7 $
 
 DESCRIPTION="A generic bioinformatics relational database model"
 HOMEPAGE="http://www.biosql.org/"

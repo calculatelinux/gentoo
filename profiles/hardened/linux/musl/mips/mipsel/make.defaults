@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 42455023951cf65b9a0e6d634940939bf16ed065 $
 
 CHOST="mipsel-gentoo-linux-musl"
 CHOST_o32="${CHOST}"

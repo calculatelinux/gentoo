@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=dev-perl/PerlIO-via-Timeout-0.320.0 dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DA/DAMS/IO-Socket-Timeout-0.32.tar.gz
-_eclasses_=multiprocessing	eb9be4b678c4e71f3f530a767df31912	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
-_md5_=0f15dae2de831e49347849be71857d39
+_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
+_md5_=c08d96d1d083b67b517582a10ecec19a

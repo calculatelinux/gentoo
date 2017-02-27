@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f00ecb814b9c7d2af47e0d89937e4ef662097a4a $
 
 DESCRIPTION="yEnc encoder/decoder package"
 HOMEPAGE="http://www.yencode.org"

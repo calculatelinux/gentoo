@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6532a42580f76ea119af67a0b9ce43752374001f $
 
 DESCRIPTION="Perl script to create an HTML report of MP3 files in a directory"
 HOMEPAGE="http://mp3report.sourceforge.net/"

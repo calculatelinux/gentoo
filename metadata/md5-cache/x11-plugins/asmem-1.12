@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/libX11 x11-libs/libICE x11-libs/libSM x11-libs/libXpm x11-libs/libXext jpeg? ( virtual/jpeg )
 SLOT=0
 SRC_URI=http://www.tigr.net/afterstep/download/asmem/asmem-1.12.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=bd1d40725e36f9f1afcc9048a24a4f43
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=56394aaca83f741451ff9d9c349785bb

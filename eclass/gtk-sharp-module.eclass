@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 772cbe57343c5cbc458f31d2c3193638c6e55d8f $
 
 # @ECLASS: gtk-sharp-module.eclass
 # @MAINTAINER:

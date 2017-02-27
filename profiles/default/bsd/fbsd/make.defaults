@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id$
+# $Id: 935820ed959a5d33e7fb8805ed5fdb96a9e6d681 $
 
 # Last building sandbox breaks gfind, bug #374425
 FEATURES="-sandbox -usersandbox"

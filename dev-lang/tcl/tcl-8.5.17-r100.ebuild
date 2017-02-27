@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e2ea625ed519fb0d1b1714c191c571c08768613c $
 
 # this ebuild is only for the libtcl8.5.so SONAME for ABI compat
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8ac1ba25b43e8aab559022200a3eaff70bcb3872 $
 
 inherit latex-package eutils
 

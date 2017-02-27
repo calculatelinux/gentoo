@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 954a4b5f05998b406d84aab4552f6606cef3c86c $
 
 # @ECLASS: aspell-dict.eclass
 # @MAINTAINER:

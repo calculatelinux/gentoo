@@ -7,4 +7,4 @@ LICENSE=MIT
 RDEPEND=net-dialup/dwun
 SLOT=0
 SRC_URI=mirror://sourceforge/dwun/dial-1.2.tar.gz
-_md5_=c4fd684254b9b57f8fec3bfb8ef3a5a3
+_md5_=556f8f2c91b88c8073a64cdf4794265e

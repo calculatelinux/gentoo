@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6732edf5136a90d854d549d1737cb1a580c038b1 $
 
 EAPI=4
 inherit vala

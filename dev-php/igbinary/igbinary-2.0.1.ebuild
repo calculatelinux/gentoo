@@ -1,6 +1,6 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0b50b0378e5f0d1f5e0d1054ee73e8fdfe38c128 $
 
 EAPI=6
 PHP_EXT_NAME="${PN}"
@@ -13,7 +13,7 @@ USE_PHP="php5-6 php7-0 php7-1"
 
 inherit php-ext-source-r3
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 DESCRIPTION="A fast drop-in replacement for the standard PHP serialize"
 HOMEPAGE="https://github.com/${PN}/${PN}"

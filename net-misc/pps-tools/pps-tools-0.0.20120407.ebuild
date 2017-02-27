@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 867a449cc15746fa89be136c82e86abe9c1042f7 $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/${GITHUB_USER}/${PN}/tarball/${PV_COMMIT} -> ${PN}-g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc ppc64 x86"
+KEYWORDS="alpha amd64 ~arm hppa ppc ppc64 x86"
 IUSE=""
 
 S="${WORKDIR}/${GITHUB_USER}-${PN}-${PV_COMMIT:0:7}"

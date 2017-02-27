@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: bfb09b7fac11194c43c6998f7d031af664a50fad $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/imu_pipeline"

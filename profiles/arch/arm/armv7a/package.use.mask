@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4004fd4e490b7cfaf9cd878f2e255c3dae0a67bd $
 
 # Pacho Ramos <pacho@gentoo.org> (25 Jan 2015)
 # jsc JIT compilation is supported only on amd64/arm/x86 and their prefixes, so

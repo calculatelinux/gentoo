@@ -9,4 +9,4 @@ LICENSE=GPL-3
 RDEPEND=dev-vcs/git app-crypt/gnupg
 SLOT=0
 SRC_URI=https://github.com/TheLocehiliosan/yadm/archive/1.06.tar.gz -> yadm-1.06.tar.gz
-_md5_=8a3a9a45dff49b4501199873dbc292a8
+_md5_=cfd5d9aa90b55fb8b96bdbabaf99076c

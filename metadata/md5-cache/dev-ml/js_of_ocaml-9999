@@ -7,5 +7,5 @@ IUSE=+async +ocamlopt doc +deriving +ppx +ppx-deriving +react +xml X
 LICENSE=LGPL-2.1-with-linking-exception
 RDEPEND=>=dev-lang/ocaml-3.12:=[ocamlopt?,X?] >=dev-ml/lwt-2.4.4:=[camlp4(+)] async? ( dev-ml/async_kernel:= ) react? ( dev-ml/react:= dev-ml/reactiveData:= ) xml? ( >=dev-ml/tyxml-4:= ) ppx? ( dev-ml/ppx_tools:= ) ppx-deriving? ( dev-ml/ppx_deriving:= ) dev-ml/cmdliner:= dev-ml/menhir:= dev-ml/ocaml-base64:= dev-ml/camlp4:= dev-ml/cppo:= dev-ml/uchar:= dev-ml/ocamlbuild:= dev-ml/yojson:= deriving? ( >=dev-ml/deriving-0.6:= )
 SLOT=0/9999
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	findlib	9909e5ca0f77ff5b693885a3d7aeadb7	git-r3	6efc2d7de07a77bf72c7207b48d0e123	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=fad144c34659199a8046cc0bdd957ece
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	findlib	3a364957a70a5953531fad3d1bc112ec	git-r3	abc3caa050da0c4b8faec237bd358fcb	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=e5e7a27884443c7e311c620e8a4e88d7

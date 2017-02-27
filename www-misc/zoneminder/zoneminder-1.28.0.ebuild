@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0a23bf3170452d2f39642ffe55c45fe70f12c729 $
 
 # TO DO:
 # * ffmpeg support can be disabled in CMakeLists.txt but it does not build then

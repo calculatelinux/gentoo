@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8df9f2c2e9f7a850f28faf990b6492bdba8672f0 $
 
 EAPI=5
 SWORD_MODULE="RusMakarij"

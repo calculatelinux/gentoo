@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 67ffb37497186957bd78811efcb473377783e4bb $
 
 # Mike Gilbert <floppym@gentoo.org> (22 Apr 2015)
 # Force systemd to avoid depgraph breakage, bug 547360.

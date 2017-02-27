@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c1972e931c00101d4e49e409b4f4075e0f8700b1 $
 
 # Re-add Solaris OS
 kernel_SunOS

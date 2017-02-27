@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e7f0d8de77120aa4bf5a23e7964bc3094735d939 $
 
 ARCH="x86"
 CHOST="i686-pc-linux-gnu"

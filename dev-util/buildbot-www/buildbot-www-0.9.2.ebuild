@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 212311e7c45e5fd0674899cc9ee600a3055f50b4 $
 
 EAPI="5"
 PYTHON_REQ_USE="sqlite"

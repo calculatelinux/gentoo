@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 74dcf2fb4739190b4b46bec73c9b8fdc66e1b51d $
 
 EAPI=5
 SWORD_MODULE="Heretics"

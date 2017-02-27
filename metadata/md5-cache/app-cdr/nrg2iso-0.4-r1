@@ -6,5 +6,5 @@ KEYWORDS=amd64 ppc ~ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://gregory.kokanosky.free.fr/v4/linux/nrg2iso-0.4.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=c787b6a7852454cf5aacb6fdf9dad9f5
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=7380408a9f8b8f7a740b3bfd1f8d0acd

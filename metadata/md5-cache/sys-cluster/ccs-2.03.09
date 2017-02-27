@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND==sys-cluster/cman-lib-2.03.09*
 SLOT=0
 SRC_URI=ftp://sourceware.org/pub/cluster/releases/cluster-2.03.09.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=6641766472093e0c2ae0e2cb452d7044
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=024d4b4d1858f26aa49a81f28e3ba572

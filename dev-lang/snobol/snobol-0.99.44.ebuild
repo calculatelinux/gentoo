@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4e28249804b0b26894ccc33f29e13041f2cdc6b7 $
 
 DESCRIPTION="Phil Budne's port of Macro SNOBOL4 in C, for modern machines"
 HOMEPAGE="http://www.snobol4.org/csnobol4/"

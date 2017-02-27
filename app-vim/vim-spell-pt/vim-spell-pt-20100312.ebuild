@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6fbac604c63cfac9e4aabb57cf23a310e19d3d43 $
 
 VIM_SPELL_LANGUAGE="Portuguese"
 

@@ -9,4 +9,4 @@ LICENSE=MIT
 RDEPEND=dev-lang/php:* dev-php/fedora-autoloader >=dev-php/symfony-dependency-injection-2.1.0
 SLOT=0
 SRC_URI=https://github.com/symfony/event-dispatcher/archive/v2.1.0.tar.gz -> symfony-event-dispatcher-2.1.0.tar.gz
-_md5_=34bcd1d0163c84a5eb80335b6b68fb19
+_md5_=129f8b5d31ff003f21fd035161426548

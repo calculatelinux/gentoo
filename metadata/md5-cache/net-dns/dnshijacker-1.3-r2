@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=net-libs/libpcap >=net-libs/libnet-1.0.2a-r3:1.0
 SLOT=0
 SRC_URI=http://pedram.redhive.com/downloads/dnshijacker-1.3.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=5ddfe335a6a44fe913095e5d5f0f5e11
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=15c8026eebab717a1e5f7fefeb09066a

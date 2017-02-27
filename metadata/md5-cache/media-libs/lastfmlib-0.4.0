@@ -9,4 +9,4 @@ LICENSE=GPL-2+
 RDEPEND=net-misc/curl
 SLOT=0
 SRC_URI=https://github.com/dirkvdb/lastfmlib/archive/lastfmlib-0.4.0.tar.gz
-_md5_=d3beb65deec1fec3c3fdd2a0be8344d4
+_md5_=95bd2d96724cf3fc2803ca924bd33b06

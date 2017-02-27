@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1cd7fd6a8b34ca4726b02cc3ebe9a78e875ead97 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/bond_core"

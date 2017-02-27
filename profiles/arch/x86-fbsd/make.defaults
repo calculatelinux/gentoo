@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id$
+# $Id: aac2f6b703df2b4577089dda6d2db1dc03927564 $
 # System-wide defaults for the G/FBSD Portage system
 
 ARCH="x86-fbsd"

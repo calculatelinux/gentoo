@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e4b81ff562ac761e7e0d1ae6646ddc0b9e54c2fa $
 
 # Kacper Kowalik <xarthisius@gentoo.org> (25 Apr 2012)
 # Masking wrt bug 274847 and other unsolved 

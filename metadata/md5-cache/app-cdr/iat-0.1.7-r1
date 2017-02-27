@@ -6,4 +6,4 @@ KEYWORDS=amd64 arm x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://gentoo/iat-0.1.7.tar.bz2
-_md5_=b5dc70893c1a0e828179af7294e064a7
+_md5_=f49b6e12e17893b1d38864f2f0a805a6

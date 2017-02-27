@@ -6,4 +6,4 @@ KEYWORDS=alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-f
 LICENSE=public-domain
 SLOT=0
 SRC_URI=mirror://sourceforge/cracklib/cracklib-words-20080507.gz
-_md5_=74e19619152137e93f987d6fff6401cd
+_md5_=fc43eadf15323c298a7878e3ecd6e90c

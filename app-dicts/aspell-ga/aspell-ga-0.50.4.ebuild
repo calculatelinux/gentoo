@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 537b4c3c2ec0c6e6274322da59583aca7b4c4bb5 $
 
 ASPELL_LANG="Irish"
 

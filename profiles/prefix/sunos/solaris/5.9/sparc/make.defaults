@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 45a62771ecb578d9dca6b6d303086a39690e8b0f $
 
 ARCH="sparc-solaris"
 CHOST="sparc-sun-solaris2.9"

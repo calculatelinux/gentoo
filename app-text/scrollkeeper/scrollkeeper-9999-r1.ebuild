@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a376c55bf9bb2e8620e7e838f4cd91e28a54ab55 $
 
 DESCRIPTION="Dummy scrollkeeper for testing rarian"
 HOMEPAGE="https://gnome.gentoo.org"

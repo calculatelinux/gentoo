@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: bc6396c9132dfa68c84859c5c006f132c05ab5d0 $
 
 inherit eutils fixheadtails
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 64cad24bb3661f0ba4b0cd195eb713f646cb8ab4 $
 
 CHOST="powerpc64le-unknown-linux-gnu"
 CFLAGS="-O2 -pipe"

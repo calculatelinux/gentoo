@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c7646e5e32514f67a26b46dc22545b0d2fd01635 $
 
 EAPI=5
 CMAKE_REMOVE_MODULES="yes"

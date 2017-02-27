@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 62633dc63e2269d384d599e75036b7e3a3ee05d7 $
 
 # @ECLASS: alternatives.eclass
 # @AUTHOR:

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5972119514213a1f0b80f4fda9fdf4a219c290b5 $
 
 EAPI=5
 inherit autotools elisp-common eutils pam systemd

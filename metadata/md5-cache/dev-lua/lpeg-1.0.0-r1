@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=!luajit? ( >=dev-lang/lua-5.1:= ) luajit? ( dev-lang/luajit:2= )
 SLOT=0
 SRC_URI=http://www.inf.puc-rio.br/~roberto/lpeg/lpeg-1.0.0.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=1481a12d87a8c8adbaabeac94f5a7107
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=be7e6b763ac185bab494dfcce267b181

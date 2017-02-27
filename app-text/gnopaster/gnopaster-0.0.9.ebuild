@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3c3c84516388b4c3c47d2541b4c21965df0dab4f $
 
 DESCRIPTION="A submitter for gnopaste, a nopaste service like http://nopaste.info"
 HOMEPAGE="http://gnopaste.sf.net"

@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 198aaa5dcd3b13dd96a3956ec23188bc1284a825 $
 EAPI=5
 MY_P="fortunes-zx-error-${PV}"
 DESCRIPTION="Sinclair ZX Spectrum BASIC error Fortunes"

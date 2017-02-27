@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 05bc3b7690c8759977664d98b2cd1a7bad213579 $
 
 # Elias Pipping <pipping@gentoo.org> (30 Sep 2007)
 # compiles with -aqua, doesn't work, though

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6ba97edecd2e484e8636d5d6cfc12aed3061ee77 $
 
 DESCRIPTION="Library for doing HTTP client-side programming in Guile"
 HOMEPAGE="http://evan.prodromou.name/software/net-http/"

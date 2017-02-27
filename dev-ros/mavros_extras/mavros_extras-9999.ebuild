@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: af9e276b62c61d72cd3dc8431685eb16834c09c6 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/mavlink/mavros"

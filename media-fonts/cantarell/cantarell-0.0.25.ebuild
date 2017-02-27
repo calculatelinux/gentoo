@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ab8de57b33cecc6c87a29a1d04c3d838fce01e40 $
 
 EAPI="5"
 GNOME_ORG_MODULE="${PN}-fonts"

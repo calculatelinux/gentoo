@@ -10,5 +10,5 @@ RDEPEND=media-libs/libsdl[X,sound,video] zlib? ( sys-libs/zlib ) cdinstall? ( ga
 REQUIRED_USE=^^ ( linguas_de linguas_en linguas_fr linguas_it linguas_nl linguas_pl linguas_ru linguas_ru_gold )
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~hasufell/distfiles/ja2-stracciatella-0.12.1_p7072.tar.xz http://tron.homeunix.org/ja2/editor.slf.gz
-_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	708f85bc1bf00876604e223fb56e062a	games	2cf0d67d765e6358b435ccda30c13ad8	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb
-_md5_=1dc566c387947c2d190873d8b29acb2d
+_eclasses_=base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	games	7d9d6853e639bbb857a211ed996360a3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd
+_md5_=2ab30f9ee802b621b60b958a616064b0

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4a0b0ad21ace58c7ad8344c5decb29d28ffa4f21 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/image_transport_plugins"

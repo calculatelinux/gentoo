@@ -7,4 +7,4 @@ KEYWORDS=amd64 ~sparc x86 ~x86-fbsd
 LICENSE=BSD
 SLOT=0
 SRC_URI=mirror://sourceforge/bwping/1.7/bwping-1.7.tar.gz
-_md5_=60813630b03d24ba22f048905d0c5bbe
+_md5_=6cef02c1064fe718c8bc7d08dea7df8e

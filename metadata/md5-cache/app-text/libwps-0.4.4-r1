@@ -9,4 +9,4 @@ LICENSE=|| ( LGPL-2.1 MPL-2.0 )
 RDEPEND=app-text/libwpd:0.10 dev-libs/librevenge
 SLOT=0
 SRC_URI=mirror://sourceforge/libwps/libwps-0.4.4.tar.xz
-_md5_=122942c9925a16c8fc60742675bccd7c
+_md5_=1c51dca6e054dc05a204516ecd0f19d4

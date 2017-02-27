@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f8bd39d4cfd694f7b687dc3729c893aff9b4b097 $
 
 EAPI=5
 inherit virtualx xfconf

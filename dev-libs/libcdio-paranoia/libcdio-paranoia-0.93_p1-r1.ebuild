@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 279e8fa6d9005bab1a355f389045208f34ca01f7 $
 
 EAPI=6
 MY_P=${PN}-10.2+${PV/_p/+}

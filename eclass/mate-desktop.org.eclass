@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6587957a1ccd7c1919a6d7f098f181a71060ba7e $
 
 # @ECLASS: mate-desktop.org.eclass
 # @MAINTAINER:

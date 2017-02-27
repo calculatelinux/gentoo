@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 015e13451a6a32428000b2780f3d0113a4c82d4e $
 
 # @ECLASS: cannadic.eclass
 # @AUTHOR:

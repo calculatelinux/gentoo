@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9b23e74526a37f0f797d930891bdd13807612be0 $
 
 EAPI=5
 SWORD_MODULE="Orthodoxy"

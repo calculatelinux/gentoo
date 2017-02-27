@@ -6,4 +6,4 @@ KEYWORDS=amd64 ppc x86
 LICENSE=|| ( BSD BSD-2 ISC BEER-WARE public-domain )
 SLOT=0
 SRC_URI=https://archive.hadrons.org/software/libmd/libmd-0.0.0.tar.xz
-_md5_=727d81f387a0ce6eac36eaf5447e6ea9
+_md5_=44c18a8922bfea6dc3bef36e40dbffbe

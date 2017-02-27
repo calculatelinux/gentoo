@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id$
+# $Id: 99e2f8b66cdcee17ff97a40f9bf6f42e27650444 $
 
 # Force the flag corresponding to the only ABI.
 -abi_s390_32

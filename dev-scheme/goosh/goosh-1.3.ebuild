@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 65095b17e21b2c07d215fcf2dba3050b428b7bcd $
 
 DESCRIPTION="Small process-control library for Guile"
 HOMEPAGE="http://arglist.com/guile/"

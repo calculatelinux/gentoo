@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/geoip
 SLOT=0
 SRC_URI=mirror://gentoo/gslist-0.8.11a.zip
-_md5_=eff867b2484ce920384b9ed0deeeeae3
+_md5_=7191d2362f6868a2f0634d854db39e23

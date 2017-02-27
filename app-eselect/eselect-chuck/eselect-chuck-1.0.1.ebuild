@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 858464ec25ce801fae31db73f892c8989cdc16ce $
 
 DESCRIPTION="Manages the /usr/bin/chuck symlink"
 HOMEPAGE="https://www.gentoo.org/"

@@ -10,4 +10,4 @@ RDEPEND=x11-libs/cairo:= x11-libs/libX11:= x11-libs/libXmu:= gtk3? ( x11-libs/gt
 REQUIRED_USE=gksu? ( !gtk3 )
 SLOT=0
 SRC_URI=mirror://xfce/src/apps/xfce4-taskmanager/1.2/xfce4-taskmanager-1.2.0.tar.bz2
-_md5_=9da8aad22ff65a986b2ca04644b9a27f
+_md5_=773c0dcabf675dd272b5eff85d994bbb

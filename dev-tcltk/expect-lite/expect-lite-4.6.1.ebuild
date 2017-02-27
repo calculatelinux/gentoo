@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 70631c099baab4533ea483a6d2344a5d5a18648f $
 
 DESCRIPTION="quick and easy command line automation tool built on top of expect"
 HOMEPAGE="http://expect-lite.sourceforge.net/"

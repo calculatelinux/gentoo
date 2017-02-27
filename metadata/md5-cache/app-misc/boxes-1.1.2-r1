@@ -7,5 +7,5 @@ KEYWORDS=alpha amd64 ia64 ~mips ppc ppc64 sparc x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://github.com/ascii-boxes/boxes/archive/v1.1.2.tar.gz -> boxes-1.1.2.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=60dc501082cfe0592473c9f3cd848d96
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=e2ce6b66da16004221d2b4a81ae52cbe

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 207f3ca05271b9b495fd0317a508a995ea4a6e02 $
 
 #
 # Original Author: Jim Ramsay <lack@gentoo.org>

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1077676e6fc2d8ad38041f237e9d875cb2a0c9ab $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/laser_geometry"

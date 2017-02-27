@@ -7,4 +7,4 @@ LICENSE=MIT
 RDEPEND=dev-lang/php:*[phar] dev-php/fedora-autoloader
 SLOT=0
 SRC_URI=https://github.com/Seldaek/phar-utils/archive/1.0.0.tar.gz -> phar-utils-1.0.0.tar.gz
-_md5_=cdc9e299e4ac49890aa1366d7e656314
+_md5_=43360f93f7c9c0590b7cafa6da117918

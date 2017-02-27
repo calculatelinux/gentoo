@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a98a931de1552c6993bc5d19de8ab69aac5a4909 $
 
 EAPI=6
 EGO_PN="github.com/docker/libnetwork"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6f5151fb68efbda23dd99a5fca861d88c24a383a $
 
 EAPI=5
 MODULE_AUTHOR=TMHARISH

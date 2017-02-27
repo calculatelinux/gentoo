@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 051c17ca72d583e5404919d1a458dc2b8985a9d6 $
 
 KEYWORDS="ppc x86"
 

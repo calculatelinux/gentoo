@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ad3c8b266e0f5c703bd3fcde72de6fe5f7582b20 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/laser_filters"

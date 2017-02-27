@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d6a31ab857d5d0dbbb176aa274aea7cb5e144f34 $
 
 EAPI="6"
 VALA_MIN_API_VERSION="0.24"

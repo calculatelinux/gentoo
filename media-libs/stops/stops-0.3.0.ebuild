@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b958535502375c0fd5a7fa2648b2da2377e0b26f $
 
 DESCRIPTION="Organ stops for aeolus by Fons Adriaensen <fons.adriaensen@skynet.be>"
 HOMEPAGE="http://www.kokkinizita.net/linuxaudio/aeolus/index.html"

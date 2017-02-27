@@ -10,5 +10,5 @@ PDEPEND=net-libs/NativeThread:0
 RDEPEND=>=virtual/jre-1.7 net-libs/nativebiginteger:0 dev-java/bcprov:1.54 dev-java/commons-compress:0 dev-java/fec:0 dev-java/java-service-wrapper:0 dev-java/jbitcollider-core:0 dev-java/lzma:0 dev-java/lzmajio:0 dev-java/mersennetwister:0 >=dev-java/java-config-2.2.0-r3 source? ( app-arch/zip )
 SLOT=0
 SRC_URI=https://github.com/freenet/fred/archive/build01475.zip -> freenet-0.7.5_p1475.zip mirror://gentoo/seednodes-20150812.fref.bz2 mirror://gentoo/freenet-ant-1.7.1.jar
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	java-ant-2	d1abcccd8e9c606be17deacfe5c7368a	java-pkg-2	eb1f0d7d874162c70088f5ae32c31ee7	java-utils-2	b31a7fe19a47c6a2d901f6de949e5209	multilib	165fc17c38d1b11dac2008280dab6e80	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=d913772909d5394d8632144ae5c6517a
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	java-ant-2	92c3d76268eb0e8d1494c22eb298b8af	java-pkg-2	9aa2f2c12a6a7cdafd9494d17762d4a9	java-utils-2	ebeaf17afbac1fe2f3549ea6afa504e3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=179847acee4ec033947ea6abd1b7129a

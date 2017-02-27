@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0a83d54e705c51d19cf1638157f92f7e9d1c1df8 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/image_pipeline"

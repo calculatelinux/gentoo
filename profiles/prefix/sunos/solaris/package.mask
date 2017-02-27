@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 75ce08de3d929f0cec415575940b204a1a0485bf $
 
 
 # Fabian Groffen <grobian@gentoo.org> (22 Feb 2017)

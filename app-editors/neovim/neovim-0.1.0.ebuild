@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3c041c40b273507c1873fe1a89ad8ae88170ef97 $
 
 EAPI=5
 inherit cmake-utils flag-o-matic

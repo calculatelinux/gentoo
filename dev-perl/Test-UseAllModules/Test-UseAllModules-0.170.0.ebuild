@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d7cbe840a37be0f75222ab6b1efaa54cf63672a4 $
 
 EAPI=5
 MODULE_AUTHOR=ISHIGAKI

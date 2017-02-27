@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=>=sys-block/parted-2.3 >=sys-libs/ncurses-5.7-r7:=
 SLOT=0
 SRC_URI=mirror://sourceforge/nwipe/nwipe-0.14.tar.gz
-_md5_=99f71399fa16136917c6bfdf082d533d
+_md5_=d85b0047631c0f087701464c462b3a96

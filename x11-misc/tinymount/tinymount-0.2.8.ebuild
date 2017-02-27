@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0bad1c60fcdeaca39c7392b8f0022f3c60eace8b $
 
 EAPI=5
 PLOCALES="ru uk"

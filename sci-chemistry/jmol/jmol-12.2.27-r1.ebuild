@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: dd6d8f3c53e32ebc00e070033f9561431385b65e $
 
 EAPI=5
 WEBAPP_OPTIONAL="yes"

@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 92b96bccd948b4cf32b16702e0eef46f0e28e0e2 $
 
 # eventually this should be built from source...
 

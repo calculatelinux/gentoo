@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9bab3ea52d82b5895dac2103e611249d67d5e0ca $
 EAPI=5
 inherit multilib elisp-common
 

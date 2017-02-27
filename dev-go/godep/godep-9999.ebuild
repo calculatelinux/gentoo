@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 38416baad9b0259409b87300652e70b33886b46e $
 
 EAPI=6
 EGO_PN=github.com/tools/godep

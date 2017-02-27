@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fdae9f5cba704687e8c88b2e05ec2cb5bd647a36 $
 
 EAPI=6
 VIM_VERSION="8.0"

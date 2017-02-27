@@ -7,4 +7,4 @@ KEYWORDS=amd64 x86
 LICENSE=metapackage
 RDEPEND=x11-themes/zuki-themes[gnome-shell?]
 SLOT=0
-_md5_=cf90973dc0c3dba89244d1e45d0450d7
+_md5_=27af89c1384179b4b447955648f10715

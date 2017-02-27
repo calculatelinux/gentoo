@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3d0464c2c4fc7a5872c03589f329ce3119a3440c $
 
 MULTILIB_ABIS="amd64"
 

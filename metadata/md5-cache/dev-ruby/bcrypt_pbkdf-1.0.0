@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=ruby_targets_ruby22? ( test? ( dev-ruby/rbnacl[ruby_targets_ruby22] ) ) ruby_targets_ruby23? ( test? ( dev-ruby/rbnacl[ruby_targets_ruby23] ) ) ruby_targets_ruby22? ( dev-lang/ruby:2.2 ) ruby_targets_ruby23? ( dev-lang/ruby:2.3 ) ruby_targets_ruby22? ( doc? ( dev-ruby/rdoc[ruby_targets_ruby22] ) ) ruby_targets_ruby23? ( doc? ( dev-ruby/rdoc[ruby_targets_ruby23] ) ) ruby_targets_ruby22? ( test? ( dev-ruby/rake[ruby_targets_ruby22] ) ) ruby_targets_ruby23? ( test? ( dev-ruby/rake[ruby_targets_ruby23] ) ) ruby_targets_ruby22? ( virtual/rubygems[ruby_targets_ruby22] ) ruby_targets_ruby23? ( virtual/rubygems[ruby_targets_ruby23] ) test? ( ruby_targets_ruby22? ( virtual/rubygems[ruby_targets_ruby22] ) ruby_targets_ruby23? ( virtual/rubygems[ruby_targets_ruby23] ) )
+DESCRIPTION=Implements bcrypt_pdkfd (a variant of PBKDF2 with bcrypt-based PRF)
+EAPI=5
+HOMEPAGE=https://github.com/net-ssh/bcrypt_pbkdf-ruby
+IUSE=elibc_FreeBSD ruby_targets_ruby22 ruby_targets_ruby23 doc test test
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=ruby_targets_ruby22? ( dev-lang/ruby:2.2 ) ruby_targets_ruby23? ( dev-lang/ruby:2.3 ) ruby_targets_ruby22? ( virtual/rubygems[ruby_targets_ruby22] ) ruby_targets_ruby23? ( virtual/rubygems[ruby_targets_ruby23] )
+REQUIRED_USE=|| ( ruby_targets_ruby22 ruby_targets_ruby23 )
+SLOT=1
+SRC_URI=mirror://rubygems/bcrypt_pbkdf-1.0.0.gem
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	java-utils-2	ebeaf17afbac1fe2f3549ea6afa504e3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	ruby-fakegem	a145852a8a0b3b5574a3c20efb80a291	ruby-ng	24d3dedc45a61c38629b685b9f0f19fa	ruby-utils	68337f99ff1d7cee213f5c5da7c76213	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=7882425f44a1b28c8ecfc55cb9938b68

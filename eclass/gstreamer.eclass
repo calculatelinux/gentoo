@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: dd5bf2c89fa5dcaedee9602f87ba5228bc04d736 $
 
 # @ECLASS: gstreamer.eclass
 # @MAINTAINER:

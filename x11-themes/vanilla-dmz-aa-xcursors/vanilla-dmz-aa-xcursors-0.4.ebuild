@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5c33f5765d56e52167167399e6c65b913b5953fd $
 
 MY_PN="Vanilla-DMZ-AA"
 DESCRIPTION="Style neutral scalable cursor theme"

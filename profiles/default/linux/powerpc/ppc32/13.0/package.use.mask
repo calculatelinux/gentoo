@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4a24c0aa6c21a6c1e25a14e5b5d6cf51044f7341 $
 
 # Fabian Groffen <grobian@gentoo.org> (Jul 24, 2014)
 # dmarc needs mail-filter/opendmarc, bug #489676

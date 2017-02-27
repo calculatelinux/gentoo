@@ -11,5 +11,5 @@ RDEPEND=app-arch/bzip2 dev-libs/dbus-glib dev-libs/expat dev-libs/gmp:0 dev-libs
 RESTRICT=mirror strip preserve-libs
 SLOT=0
 SRC_URI=https://softwareupdate.vmware.com/cds/vmw-desktop/player/12.1.0/3272444/linux/core/VMware-Player-12.1.0-3272444.x86_64.bundle.tar https://github.com/akhuettel/systemd-vmware/archive/gentoo-02.tar.gz -> vmware-systemd-gentoo-02.tgz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	gnome2-utils	c6dcdf3a2c22b578b16adb945dc85c35	multilib	165fc17c38d1b11dac2008280dab6e80	pax-utils	4c2654a34ebe732e85fda354f6ee642f	readme.gentoo-r1	03878c06495db70bc36bd717383c09f7	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c	vmware-bundle	f245ac89f87fef7e44e843fdd45f7f2a	xdg-utils	e2b2bd56125ce8cf59ce30c642b59d48
-_md5_=061f08c379423108b4ffc62efe6dee47
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	fdo-mime	f612973507f5479ae67cb635227b6218	gnome2-utils	6ac81c289e6fd66edb59051e57d895e3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	pax-utils	fba36330a0e96da6ac8ea47dd495cc62	readme.gentoo-r1	9265450c3045cbc82060da9b35f46c67	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5	vmware-bundle	8a3ea50418d5543c8400583356375f1d	xdg-utils	169c13f9ec65368f6f6b2961e68dc152
+_md5_=3350f5020b777c0ef31ea2c5e662f5f4

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 81ec7a0cc4b46248ea98dcb74f23bdd49fe737cf $
 
 EAPI=5
 SWORD_MODULE="BurJudson"

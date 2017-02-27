@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c1d2ada8bf2cfa0fc2e22ae406902889988ab43b $
 
 inherit eutils elisp-common
 

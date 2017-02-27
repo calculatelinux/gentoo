@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/libsdl[joystick,opengl,video] virtual/opengl media-libs/sdl-image
 SLOT=0
 SRC_URI=mirror://sourceforge/sdljoytest/SDLJoytest-GL-11102003.tar.bz2
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=8d86e1c042b1c4ce3b882a5f9a74804b
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=7381c787968b48052b62f1a9d48a02de

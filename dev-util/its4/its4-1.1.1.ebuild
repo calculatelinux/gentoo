@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6a988f3f49d023dadd608a6023be4b94fd662c72 $
 
 DESCRIPTION="ITS4: Software Security Tool"
 HOMEPAGE="http://www.cigital.com/its4/"

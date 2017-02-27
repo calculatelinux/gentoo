@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1d401e2ecc9560c19b1d15c4e63ddde2dab93b46 $
 
 EAPI=5
 WX_GTK_VER="3.0"

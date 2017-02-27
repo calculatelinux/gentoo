@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=dev-lang/ocaml-3.10:=[ocamlopt?]
 SLOT=0/6.17
 SRC_URI=https://github.com/camlp5/camlp5/archive/rel617.tar.gz -> camlp5-6.17.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	findlib	9909e5ca0f77ff5b693885a3d7aeadb7	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=9438df6183768aa2c5ce462a649e73d7
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	findlib	3a364957a70a5953531fad3d1bc112ec	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=012d5c9f9bb53bc8163439cdcd33380e

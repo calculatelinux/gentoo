@@ -10,5 +10,5 @@ RDEPEND=!<dev-db/mongodb-3.0.0[mms-agent]
 REQUIRED_USE=|| ( monitoring )
 SLOT=0
 SRC_URI=monitoring? ( amd64? ( https://mms.mongodb.com/download/agent/monitoring/mongodb-mms-monitoring-agent-3.7.0.212-1.linux_x86_64.tar.gz ) x86? ( https://mms.mongodb.com/download/agent/monitoring/mongodb-mms-monitoring-agent-3.7.0.212-1.linux_i386.tar.gz ) )
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb
-_md5_=39793c64b192bd23c2bdd255c7082577
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd
+_md5_=1648e61b86af4cdb8105811390d7fc4d

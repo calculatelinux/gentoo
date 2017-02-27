@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/giflib:0= media-libs/libpng:0= virtual/jpeg:0 sys-libs/zlib jpeg2k? ( media-libs/jasper:= ) sasl? ( dev-libs/cyrus-sasl ) xinetd? ( virtual/inetd )
 SLOT=0
 SRC_URI=mirror://sourceforge/ziproxy/ziproxy-3.3.1.tar.xz
-_eclasses_=user	e10ccb95af96d45f86016fa982a949bb
-_md5_=14b466cd21f95df22ad58097e78ca009
+_eclasses_=user	e28cdd9fa5d8069e8e047c82db5d57bd
+_md5_=8a34c79d2641691091609c8c78a32373

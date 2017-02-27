@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 7474427ab0c39afdf3e3f3eb1a944aa12c5ee612 $
 
 # we don't ever will install these, so no need to depend on them
 -*virtual/libc

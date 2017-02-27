@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0461550eacb8297d0d8f31ce5c4481fa7e94dd19 $
 
 EAPI=5
 SWORD_MODULE="RKJNT"

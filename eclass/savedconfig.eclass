@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b8f9415eefa92267ec3bf35f44ea35b418e289ff $
 
 # @ECLASS: savedconfig.eclass
 # @MAINTAINER:

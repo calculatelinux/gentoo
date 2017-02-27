@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/glib-2.22.5:2 >=dev-libs/libdbh-5.0.13 >=dev-libs/libtubo-5.0.13 >=dev-libs/libxml2-2.4.0:2 >=dev-libs/libzip-0.9:0= >=gnome-base/librsvg-2.26:2 >=x11-libs/cairo-1.12.6[X] >=x11-libs/gtk+-3.12:3[X] >=x11-libs/pango-1.28.0[X] !<x11-misc/rodent-5
 SLOT=0
 SRC_URI=mirror://sourceforge/xffm/librfm/librfm5-5.3.16.3.tar.bz2
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	708f85bc1bf00876604e223fb56e062a	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=b3f52785f115f9f462d00acf90493a2a
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=c99f1fdced9b880c307bb7dbc9d35004

@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 93f21c2859d1488538d345f828e9969d1ee2a159 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-drivers/audio_common"

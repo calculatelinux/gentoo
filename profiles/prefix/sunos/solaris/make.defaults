@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 01db3b4e40a272bc6bd6790c0181288cab16d555 $
 
 # Solaris comes with ipv6 support since Solaris 7, full ipv6 integration
 # since Solaris 8.  Let's enjoy that we have it.

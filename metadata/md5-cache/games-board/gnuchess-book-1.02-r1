@@ -9,4 +9,4 @@ RDEPEND=>=games-board/gnuchess-6.2.3
 RESTRICT=userpriv
 SLOT=0
 SRC_URI=mirror://gnu/chess/book_1.02.pgn.gz
-_md5_=f9a6006cb44ad566455db2d364e50fba
+_md5_=4ad44221a7af62ea256f731357d60432

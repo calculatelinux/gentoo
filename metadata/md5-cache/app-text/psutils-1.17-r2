@@ -7,5 +7,5 @@ KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd
 LICENSE=psutils
 SLOT=0
 SRC_URI=mirror://debian/pool/main/p/psutils/psutils_1.17.dfsg.orig.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=5dbdf6e03844d0677fb8a8cac76c34ea
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=8b86ea363d12861cf2cb3c9dc70b788e

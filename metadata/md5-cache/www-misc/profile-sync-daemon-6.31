@@ -7,5 +7,5 @@ LICENSE=MIT
 RDEPEND=app-shells/bash net-misc/rsync[xattr] sys-apps/systemd
 SLOT=0
 SRC_URI=https://github.com/graysky2/profile-sync-daemon/archive/v6.31.tar.gz -> profile-sync-daemon-6.31.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=4cb6f3dd8ac9058e5b450b5b624b48b3
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=46ad667e828b4ed9fa4d4ff05aefedd6

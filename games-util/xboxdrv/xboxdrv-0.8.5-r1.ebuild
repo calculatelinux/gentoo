@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1257e8bea9a372dd013184695274e7be45c47c39 $
 
 EAPI=5
 inherit base linux-info scons-utils toolchain-funcs

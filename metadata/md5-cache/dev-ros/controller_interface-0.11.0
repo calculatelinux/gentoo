@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-ros/roscpp dev-ros/hardware_interface dev-ros/pluginlib dev-util/catkin dev-python/empy
 SLOT=0
 SRC_URI=https://github.com/ros-controls/ros_control/archive/0.11.0.tar.gz -> ros_control-0.11.0.tar.gz
-_eclasses_=cmake-utils	014267c4475c1a625ecec5b16e0db1e6	eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	ros-catkin	eeeb3fcf54161794ff029da2f7b381f5	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=1c7a1892a2ff8e3c6f39edd2c08d6034
+_eclasses_=cmake-utils	2458cfb36e2d6d3e1ae94a1f17cbd8cb	eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	ros-catkin	5f841bd87f5678777e8632c486c73ed0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=533439fd50789a3c864c0b64c9cb9f10

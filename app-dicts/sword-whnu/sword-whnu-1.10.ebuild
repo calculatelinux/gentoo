@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 67698b34ad6c9ae0ad5667a15a9a7067d6ae18d8 $
 
 EAPI=5
 SWORD_MODULE="WHNU"

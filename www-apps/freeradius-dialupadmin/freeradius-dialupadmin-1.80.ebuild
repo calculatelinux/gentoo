@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1f451d511fd9f034268d4258461f8ac830836bcb $
 
 inherit eutils webapp
 MY_FREERADIUS_PV="2.1.1"

@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 900c6d1975c56d9f9f5f8ce1807fce77fa6b66d1 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-simulation/gazebo_ros_pkgs"

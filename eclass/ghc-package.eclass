@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 7efa2c8384496435c6165835c2da8461871da76f $
 
 # @ECLASS: ghc-package.eclass
 # @MAINTAINER:

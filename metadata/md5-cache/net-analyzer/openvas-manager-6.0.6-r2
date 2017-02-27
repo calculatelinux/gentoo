@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=net-analyzer/openvas-libraries-8.0.5 >=dev-db/sqlite-3 dev-db/redis !net-analyzer/openvas-administrator
 SLOT=0
 SRC_URI=http://wald.intevation.org/frs/download.php/2195/openvas-manager-6.0.6.tar.gz
-_eclasses_=cmake-utils	014267c4475c1a625ecec5b16e0db1e6	eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=c527f37e871bedac73209c9ed105b441
+_eclasses_=cmake-utils	2458cfb36e2d6d3e1ae94a1f17cbd8cb	eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=8885aba61532ecdb8270e59a6c375055

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b396460856b4f9c5d352c1ce804c4e0102b3f515 $
 
 inherit bsdmk freebsd multilib pam
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 61929072e0fa9e3a34a18c56086e447d93037114 $
 
 IUSE=""
 DESCRIPTION="Shows status of logical drives attached to HP SmartArray controllers"

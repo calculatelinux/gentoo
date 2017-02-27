@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6c40517742a747c61f54477243345cd3ef9b1093 $
 
 S="${WORKDIR}/livecd-${PV}"
 DESCRIPTION="Gentoo theme for gensplash consoles"

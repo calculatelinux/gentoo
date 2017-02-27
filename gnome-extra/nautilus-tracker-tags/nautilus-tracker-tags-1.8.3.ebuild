@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3ec889e7da3ee84b5fe127042665571536420c86 $
 
 EAPI=6
 GNOME_ORG_MODULE="tracker"

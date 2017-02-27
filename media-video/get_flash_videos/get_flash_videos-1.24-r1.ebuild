@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 52c4ea6ab6a296757d7f472d9a59dd18d80a855a $
 
 EAPI=5
 inherit eutils perl-module readme.gentoo

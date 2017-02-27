@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ee0b54644d35980f84d004c03af7e14365978fb3 $
 EAPI=5
 DESCRIPTION="Quotes from FireFly"
 HOMEPAGE="http://www.daughtersoftiresias.org/progs/firefly/"

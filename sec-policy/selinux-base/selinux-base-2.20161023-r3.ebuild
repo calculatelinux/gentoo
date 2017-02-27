@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 22985de8fbd428138671b70f6c8f6162846deb51 $
 EAPI="6"
 
 if [[ ${PV} == 9999* ]]; then

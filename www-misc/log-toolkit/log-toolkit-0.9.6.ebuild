@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 19d4c7a88b1cb1e99ff01b69183299aa9676dc7c $
 
 inherit depend.apache
 

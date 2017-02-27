@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id$
+# $Id: ed7a0b413811cfbc9c36e2af429fad0f4134c691 $
 
 # Force the flag which corresponds to ARCH.
 s390

@@ -9,5 +9,5 @@ LICENSE=BSD-2
 RDEPEND=sys-libs/zlib || ( sys-libs/readline:0 dev-libs/libedit ) sqlite? ( dev-db/sqlite:3 ) ssl? ( dev-libs/openssl:0 ) tcl? ( dev-lang/tcl:0= )
 SLOT=0
 SRC_URI=http://www.fossil-scm.org/download/fossil-src-1.35.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=469713408f66c57225f20e01ab9b20c7
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=5c7f6f7d6d5f5bfe94271c03a167996e

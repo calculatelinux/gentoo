@@ -8,4 +8,4 @@ LICENSE=GPL-2+
 RDEPEND=|| ( sys-apps/util-linux app-misc/getopt ) >=app-portage/portage-utils-0.3 virtual/emacs
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~ulm/emacs/emacs-updater-1.15.tar.xz
-_md5_=fd5a7695cd6bc1800e6c5a169818ed19
+_md5_=1ab412311fc0d98b272fed8988e3e779

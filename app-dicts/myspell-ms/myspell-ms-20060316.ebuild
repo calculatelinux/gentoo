@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6f2c6b2091d706e8b5a0b12b156d53e3324a8d2b $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "ms,MY,ms_MY,Malay (Malaysia),ms_MY.zip"

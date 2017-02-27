@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3bd22262031d4b1bb1abd43e4538d4ffe1fa5437 $
 
 ASPELL_LANG="Afrikaans"
 

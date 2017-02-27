@@ -10,5 +10,5 @@ RDEPEND=sys-libs/zlib openssl? ( dev-libs/openssl:0= ) !openssl? ( gcrypt? ( dev
 REQUIRED_USE=!openssl? ( ^^ ( gcrypt mhash ) )
 SLOT=0
 SRC_URI=mirror://gentoo/cvsync-2014.08.24.014706.tar.xz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=9cf49fc3decf0bae5aee46b1cf8b7d6e
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=6a076be37a71b19b515be352739ea8fd

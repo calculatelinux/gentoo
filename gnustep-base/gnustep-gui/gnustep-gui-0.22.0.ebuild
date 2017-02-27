@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c215df1c82a20a0747cb586f061a3a6605c05e08 $
 
 EAPI=4
 inherit gnustep-base multilib

@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d7dd438c4720b4a1b55e54bd692a6e7380ad428a $
 
 EAPI=6
 QT5_MODULE="qtconnectivity"

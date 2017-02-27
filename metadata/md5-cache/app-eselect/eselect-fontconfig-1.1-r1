@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=>=app-admin/eselect-1.2.3 >=media-libs/fontconfig-2.4
 SLOT=0
 SRC_URI=mirror://gentoo/fontconfig.eselect-1.1.bz2
-_md5_=233e639c43e1268f0dfaaa3495057759
+_md5_=ecbd5955ab20db5cce00d8022403b910

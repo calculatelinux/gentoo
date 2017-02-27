@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5b35622f432f43eb737c04438563d4c14e68b62b $
 
 EAPI=5
 inherit multilib-minimal

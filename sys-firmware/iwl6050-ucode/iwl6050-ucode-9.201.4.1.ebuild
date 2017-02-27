@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: de3a5576bfd6547750ea0193b1c90fd4acbf8c41 $
 
 MY_PN="iwlwifi-6050-ucode"
 

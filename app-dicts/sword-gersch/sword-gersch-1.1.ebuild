@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 400a9a4e042f2b7c2564a1abc02c92aa789791ea $
 
 EAPI=5
 SWORD_MODULE="GerSch"

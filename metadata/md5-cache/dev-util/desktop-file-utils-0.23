@@ -9,5 +9,5 @@ LICENSE=GPL-2+
 RDEPEND=>=dev-libs/glib-2.12:2 emacs? ( virtual/emacs )
 SLOT=0
 SRC_URI=https://www.freedesktop.org/software/desktop-file-utils/releases/desktop-file-utils-0.23.tar.xz
-_eclasses_=elisp-common	9f56c4e9bf1282dbfc2a5a09e1124e74	eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=d013fb215282aaa79228368805f9b877
+_eclasses_=elisp-common	4a8ce40989ad055139c36baa8c81ea0b	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=6e7f664b6505e93e4608c175aa7f8613

@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/icu-4.3.1:= <dev-lang/erlang-19.0[ssl] !libressl? ( >=dev-lib
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://apache/couchdb/source/1.6.1/apache-couchdb-1.6.1.tar.gz
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	708f85bc1bf00876604e223fb56e062a	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	pax-utils	4c2654a34ebe732e85fda354f6ee642f	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb
-_md5_=8a71096e8c4461ea38faaaf4fc351cbe
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	pax-utils	fba36330a0e96da6ac8ea47dd495cc62	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd
+_md5_=577c1389f9feb768139764ca4441ffa6

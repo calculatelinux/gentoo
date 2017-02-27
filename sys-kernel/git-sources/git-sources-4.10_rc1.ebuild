@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 829410b7a73ab384cb319ade6387fc47cf0bc926 $
 
 EAPI="5"
 UNIPATCH_STRICTORDER="yes"

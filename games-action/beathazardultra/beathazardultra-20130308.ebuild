@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c3fd135932911a1462a1776cf395f7d1f9e597d2 $
 
 # TODO: unbundle allegro[gtk...] (no multilib on amd64 and 5.0.9 soname)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a557c26cf808d32bf296a3116f521f5357e310df $
 
 EAPI=6
 inherit gnome2-utils multilib toolchain-funcs

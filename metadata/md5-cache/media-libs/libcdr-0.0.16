@@ -9,5 +9,5 @@ LICENSE=MPL-2.0
 RDEPEND=app-text/libwpd:0.9 app-text/libwpg:0.2 dev-libs/icu:= media-libs/lcms:2 sys-libs/zlib
 SLOT=0
 SRC_URI=http://dev-www.libreoffice.org/src/libcdr-0.0.16.tar.xz
-_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=2df66074b63f30ee9e13440db70a1f2d
+_eclasses_=base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=e7a07d1b77c55bb7392fd06a92c7b37f

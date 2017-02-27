@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: cab878ce469552977caf58a8eab836e502dde134 $
 
 SBOX_GROUP="sbox"
 

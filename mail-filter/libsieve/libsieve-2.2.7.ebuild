@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 09b98a3e3c4de3db9ad0dfe827db69f760bbf795 $
 
 DESCRIPTION="A library for parsing, sorting and filtering your mail"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"

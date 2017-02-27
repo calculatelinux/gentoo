@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b0dbf829a09e6bf622c09196aca015c2c0ead95f $
 
 EAPI=5
 inherit gnome-games

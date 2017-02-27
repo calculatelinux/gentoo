@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses:0
 SLOT=0
 SRC_URI=http://dw.nl.eu.org/mudix/mudix-4.3.tar.gz
-_md5_=fe5d7a1f91463713653da4a64930e643
+_md5_=ab2b5d36e12cbcb84eeb110cfc447c20

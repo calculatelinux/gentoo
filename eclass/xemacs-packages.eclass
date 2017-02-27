@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 2d453fc624c42a307e776b3e28c25d3bca40bd3f $
 
 # @ECLASS: xemacs-packages.eclass
 # @MAINTAINER:

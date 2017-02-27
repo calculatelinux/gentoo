@@ -7,5 +7,5 @@ KEYWORDS=amd64 x86
 LICENSE=BSD-2 CC-BY-3.0 GPL-2+
 SLOT=0
 SRC_URI=https://ece.uwaterloo.ca/~aplevich/dpic/dpic-2013.03.10.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=3ab0977eb9424d7e8ecf76c540afe307
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=a46d403e7418af5c5aa4aead4eae3743

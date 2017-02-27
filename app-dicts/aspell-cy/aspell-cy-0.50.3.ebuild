@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5b57f147bf01bcd3e5f18fadbfa883a0744859ed $
 
 ASPELL_LANG="Welsh"
 

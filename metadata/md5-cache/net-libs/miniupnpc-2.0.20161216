@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 LICENSE=BSD
 SLOT=0/16
 SRC_URI=http://miniupnp.free.fr/files/miniupnpc-2.0.20161216.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=61f42b2184090b2b068a91fe86953353
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=fb32fb979089ba239a12591b9a22e676

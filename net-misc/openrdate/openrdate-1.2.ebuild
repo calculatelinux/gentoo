@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e657610c42f81ac3ff6d91abccaa022e5d23b846 $
 
 WANT_AUTOMAKE=1.9
 

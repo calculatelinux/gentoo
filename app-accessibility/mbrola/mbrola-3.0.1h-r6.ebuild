@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 970b1da3850a779a31d8c0650b68c543613a2618 $
 
 IUSE="l10n_de l10n_es l10n_fr l10n_it l10n_la l10n_pl l10n_ro l10n_sv"
 

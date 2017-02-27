@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=ZLIB
 SLOT=0
 SRC_URI=mirror://sourceforge/openicc/basICColor-Profiles/icc-profiles-basiccolor-printing2009-1.2.0.tar.bz2
-_md5_=f1835b8129037457cec9121be02c2fcd
+_md5_=6471cdbd3d50d9c62f58d7ad4b1718d2

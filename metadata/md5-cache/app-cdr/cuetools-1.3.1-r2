@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=extras? ( media-sound/vorbis-tools media-libs/flac media-sound/mp3info )
 SLOT=0
 SRC_URI=https://github.com/svend/cuetools/archive/1.3.1.tar.gz -> cuetools-1.3.1.tar.gz mirror://gentoo/cuetools-1.3.1-debian.patch.bz2
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=626bbb2ce77fb9a28da82c6c7a91b5c6
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=b08a82ff59e95b6d89d6616f38dec2a8

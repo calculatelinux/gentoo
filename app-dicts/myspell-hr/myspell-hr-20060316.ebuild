@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 37b56b6f3f81a9ace4fe2001b5c13bda6053aa64 $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "hr,HR,hr_HR,Croatian (Croatia),hr_HR.zip"

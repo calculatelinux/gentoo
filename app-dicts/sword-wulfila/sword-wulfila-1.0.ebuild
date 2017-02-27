@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6d3449a78b180391fbcb25a0dbacb9534b7e0512 $
 
 EAPI=5
 SWORD_MODULE="Wulfila"

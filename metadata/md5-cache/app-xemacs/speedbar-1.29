@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/xemacs-base app-xemacs/edebug app-xemacs/cedet-common app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/speedbar-1.29-pkg.tar.gz
-_eclasses_=xemacs-packages	3efe8d071b1fa620109b658175e85267
-_md5_=dc7472b0209cbb74b57d023363b6cc2f
+_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
+_md5_=6a768d889c6225bf3fa44444f76dc4f4

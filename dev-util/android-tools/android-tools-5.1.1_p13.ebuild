@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: bfb94858bf00f5a5470a9e9f94429f6d6d2aa056 $
 
 EAPI=5
 inherit bash-completion-r1 eutils toolchain-funcs

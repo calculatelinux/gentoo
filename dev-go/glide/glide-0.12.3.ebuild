@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3e1d8b09ae238e0239bff8d084ce5167fb61607e $
 
 EAPI=6
 EGO_PN="github.com/Masterminds/glide"

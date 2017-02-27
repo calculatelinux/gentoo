@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c38e0d654ca0ff2cfb7d86756a0cea78b804a2c1 $
 
 # Fabian Groffen <grobian@gentoo.org> (31 May 2015)
 # for clang ebuild to work, llvm must build the clang frontend

@@ -9,5 +9,5 @@ RDEPEND=>=dev-lang/lua-5.1:0= x11-libs/libSM x11-libs/libX11 x11-libs/libXext nl
 REQUIRED_USE=xrandr? ( xinerama )
 RESTRICT=test
 SLOT=0
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	git-r3	6efc2d7de07a77bf72c7207b48d0e123	multilib	165fc17c38d1b11dac2008280dab6e80	readme.gentoo	df3fc8fdaf5a519e7d48c83e7592c95f	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=e1eab3bca311934402e1a4305c8a0d39
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	git-r3	abc3caa050da0c4b8faec237bd358fcb	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	readme.gentoo	ce7880f12566fe1fc5522fed26507687	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=7c1fcc04a8c5d2ca8a365a54db1558c1

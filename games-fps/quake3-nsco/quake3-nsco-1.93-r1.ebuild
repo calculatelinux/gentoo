@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1761aac281728c339fb0ef5850d1289e7227b076 $
 
 EAPI=5
 MOD_DESC="a US Navy Seals conversion mod"

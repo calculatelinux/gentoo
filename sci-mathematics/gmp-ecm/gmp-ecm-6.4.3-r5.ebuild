@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 7185d6085d8698fb1606e59a18b68b06e98024ad $
 
 EAPI=4
 DESCRIPTION="Elliptic Curve Method for Integer Factorization"

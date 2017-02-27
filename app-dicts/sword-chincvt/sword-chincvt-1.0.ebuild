@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: df5caf96379a4963796c9a3f6f362c9faf90fa6d $
 
 EAPI=5
 SWORD_MODULE="ChiNCVt"

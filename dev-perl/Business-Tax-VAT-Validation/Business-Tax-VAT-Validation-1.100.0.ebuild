@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 66af08c4f2a9100c80aeb5e665ecc84e474c4ae9 $
 
 EAPI=6
 DIST_AUTHOR=BIGPRESH

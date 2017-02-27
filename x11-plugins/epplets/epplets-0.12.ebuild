@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8eacbaf51260823d98025e722e9cf8a2413e026a $
 
 DESCRIPTION="Base files for Enlightenment epplets and some epplets"
 HOMEPAGE="https://www.enlightenment.org/"

@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 72017e5f31e3af405503e8ca0dfbb7b9ce302391 $
 
 EAPI=5
 MODULE_AUTHOR=GUGOD

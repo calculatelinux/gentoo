@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/cdrtools
 SLOT=0
 SRC_URI=http://fy.chalmers.se/~appro/linux/DVD+RW/tools/dvd+rw-tools-7.1.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=ee54c44b433cf899273d1069e5f7f699
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=590144a0e9a3ca99546f7ed40826d6f4

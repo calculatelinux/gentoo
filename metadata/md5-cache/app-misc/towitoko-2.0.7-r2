@@ -7,4 +7,4 @@ KEYWORDS=~amd64 ppc x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://gentoo/towitoko-2.0.7.tar.gz
-_md5_=d660ae5f417a5b7484191c95c3b36525
+_md5_=a5b629c08bb9d170f4dd54ffe1e02d24

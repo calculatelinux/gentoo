@@ -6,4 +6,4 @@ IUSE=firmware
 KEYWORDS=alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86
 RDEPEND=|| ( sys-kernel/gentoo-sources sys-kernel/vanilla-sources sys-kernel/ck-sources sys-kernel/git-sources sys-kernel/hardened-sources sys-kernel/mips-sources sys-kernel/openvz-sources sys-kernel/pf-sources sys-kernel/rt-sources sys-kernel/tuxonice-sources sys-kernel/xbox-sources sys-kernel/zen-sources sys-kernel/aufs-sources sys-kernel/raspberrypi-sources )
 SLOT=0
-_md5_=4d2fdc3fe2aef9dbb37bd9b73bc49f42
+_md5_=da305f70efcb4e2de230028ddd8b6361

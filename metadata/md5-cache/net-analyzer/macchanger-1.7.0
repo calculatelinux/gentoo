@@ -6,4 +6,4 @@ KEYWORDS=amd64 arm ppc sparc x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://github.com/alobbs/macchanger/releases/download/1.7.0/macchanger-1.7.0.tar.gz
-_md5_=066fe936ceee9cd88c68675160e837ec
+_md5_=87c54ad2f046195d9e67de9195edeb00

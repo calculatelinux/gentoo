@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4d92ac823a78fbf05879f7ce57ae3b00c8d248ee $
 
 EAPI=5
 SWORD_MODULE="AraSVD"

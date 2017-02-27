@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 053c6618bec48e987419134a715fa834039f2682 $
 EAPI=4
 
 DESCRIPTION="Google's CityHash family of hash functions"

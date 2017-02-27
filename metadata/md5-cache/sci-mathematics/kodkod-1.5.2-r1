@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=>=virtual/jre-1.6 >=dev-java/java-config-2.2.0-r3 source? ( app-arch/zip )
 SLOT=0/1.5.2
 SRC_URI=http://alloy.mit.edu/kodkod/1.5.2/kodkod-1.5.2.zip https://waf.googlecode.com/files/waf-1.7.16
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	java-pkg-2	eb1f0d7d874162c70088f5ae32c31ee7	java-utils-2	b31a7fe19a47c6a2d901f6de949e5209	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	python-any-r1	1c20f9b800324335a8e3b137363362e8	python-utils-r1	50dad5f912d4c16c130f5679777f25e8	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c	waf-utils	c21174962af5ca8091b66f58612797ce
-_md5_=a947ee9b7a07d963237bc7b70dc445ca
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	java-pkg-2	9aa2f2c12a6a7cdafd9494d17762d4a9	java-utils-2	ebeaf17afbac1fe2f3549ea6afa504e3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	python-any-r1	7daff3c0322873651801c85ef36109f5	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5	waf-utils	adf3124c7e0b513f0066403fcccccbb1
+_md5_=9d19d003b4c66212e191debfe878fbf8

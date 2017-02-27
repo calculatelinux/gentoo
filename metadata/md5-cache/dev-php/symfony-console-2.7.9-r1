@@ -7,4 +7,4 @@ LICENSE=MIT
 RDEPEND=dev-lang/php:* dev-php/fedora-autoloader >=dev-php/psr-log-1.0.2 >=dev-php/symfony-event-dispatcher-2.1.0 >=dev-php/symfony-process-2.8.12
 SLOT=0
 SRC_URI=https://github.com/symfony/console/archive/v2.7.9.tar.gz -> symfony-console-2.7.9.tar.gz
-_md5_=b7099f5c220099a2ce08b887e3925bde
+_md5_=b5e7320bf79ef53d17b7832b02534206

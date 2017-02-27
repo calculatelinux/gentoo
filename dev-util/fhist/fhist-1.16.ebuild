@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 7a565ba2c3f0bde11281c0398fa1af68e93dacdf $
 
 DESCRIPTION="File history and comparison tools"
 HOMEPAGE="http://fhist.sourceforge.net/fhist.html"

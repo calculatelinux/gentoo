@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d175aa7e0fdaaa4edc7a5d1a71ce70ab609121a8 $
 
 # Michael Haubenwallner <haubi@gentoo.org> (18 Apr 2016)
 # adjust MiNT specifics via USE flags

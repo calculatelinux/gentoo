@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 42af8915c84da672c25a5a0f87b9ac6adbb5221f $
 
 EAPI=6
 inherit autotools eutils flag-o-matic pam qmake-utils readme.gentoo-r1 systemd versionator xdg-utils

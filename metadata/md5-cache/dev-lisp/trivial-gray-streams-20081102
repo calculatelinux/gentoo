@@ -9,5 +9,5 @@ RDEPEND=!dev-lisp/cl-trivial-gray-streams
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://common-lisp.net/project/cl-plus-ssl/download/trivial-gray-streams-2008-11-02.tar.gz
-_eclasses_=common-lisp-3	732b3b6e2021a252e13158c86e4ea4d0	eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=a55388fd793fbe4fb7d17b2c067efa8b
+_eclasses_=common-lisp-3	cf691d9ca120ddb2649ba5b7c884140c	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=c77f0f91b38b924f673cd5c01ac6ee87

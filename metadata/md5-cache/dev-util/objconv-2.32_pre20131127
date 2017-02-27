@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~slyfox/distfiles/objconv-2.32_pre20131127.zip
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	unpacker	45d07319df5f40ee6af58418b0f930be
-_md5_=484339a3ecc1a4471b86e0e4a9874498
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	unpacker	2afe53b558f4ad6955316e702a4c9cfa
+_md5_=883005f2731626811c7d62fcb78d6708

@@ -4,4 +4,4 @@ EAPI=5
 KEYWORDS=~amd64 ~arm ~x86
 RDEPEND=|| ( >=virtual/gnat-4.9 )
 SLOT=2012
-_md5_=e700a3325e29614b2f99a5d4c5a2b57e
+_md5_=f31f934fe2121bd9eb77a35044a52c5c

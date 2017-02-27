@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3b506846a608fb091bfe2b74a1534acc9eda756f $
 
 DESCRIPTION="a collection of Festival functions for speech-dispatcher"
 HOMEPAGE="http://www.freebsoft.org/festival-freebsoft-utils"

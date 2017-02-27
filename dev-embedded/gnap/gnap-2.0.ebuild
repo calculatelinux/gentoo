@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 37e708afc7f27e0c5bcbedcaac571f2eed6d07e5 $
 
 MY_P="${P/gnap/gnap-tools}"
 S="${WORKDIR}/${MY_P}"

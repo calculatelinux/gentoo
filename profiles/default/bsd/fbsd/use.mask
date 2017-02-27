@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id$
+# $Id: dced2021f0a348347cc108275ce23009f470a76a $
 
 # Espeak does not run on bsd
 espeak

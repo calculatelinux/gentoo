@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id$
+# $Id: da9311154349aefb4423eaa961290df962134575 $
 
 # Enable all ABIs by default so we can protect any non-native binaries that
 # might be executed.

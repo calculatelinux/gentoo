@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 17a05d08f18b1c521252e33b1338ac1546147b4c $
 
 DESCRIPTION="Wnn dictionary for librarian"
 

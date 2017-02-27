@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f4ec94fbc8b1ab7a4b935cf397409d7f3a0c10f0 $
 
 DESCRIPTION="A helper package for sgml docbook"
 

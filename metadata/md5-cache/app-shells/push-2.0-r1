@@ -6,5 +6,5 @@ KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/vaeth/push/archive/v2.0.tar.gz -> push-2.0.tar.gz
-_eclasses_=vcs-snapshot	2b65ecb2d0f91e4322c2ac8d673993bd
-_md5_=6a26622e6207078921882ec387c820db
+_eclasses_=vcs-snapshot	10b045661d7c5178ffdf37fbf47278d6
+_md5_=39912d10423eb1315da73b00ee2bd209

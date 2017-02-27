@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 629b5c83ddee22a61752b576ced37735f8f9e039 $
 
 DESCRIPTION="Manages configuration of dictionaries for OpenOffice.Org"
 HOMEPAGE="https://www.gentoo.org/"

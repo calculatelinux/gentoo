@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5c642e610fed56d49cecb68da9a6f120a562d437 $
 
 GENQMAIL_PV=20080406
 QMAIL_SPP_PV=0.42

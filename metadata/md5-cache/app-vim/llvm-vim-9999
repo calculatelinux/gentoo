@@ -6,5 +6,5 @@ HOMEPAGE=http://llvm.org/
 LICENSE=UoI-NCSA
 RDEPEND=!sys-devel/llvm:0
 SLOT=0
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	git-r3	6efc2d7de07a77bf72c7207b48d0e123	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=23a5483496a6be6ff0be1028cb3292d2
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	git-r3	abc3caa050da0c4b8faec237bd358fcb	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=863dc99fac941b20e5a56a634843d39f

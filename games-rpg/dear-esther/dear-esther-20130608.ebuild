@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 2443f5a1454ca4696fbf4dbaa7db78109b409af8 $
 
 # TODO: unbundle libSDL2
 

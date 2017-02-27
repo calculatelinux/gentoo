@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 827178e471c7dbc5ab3347aa3397662e1fe32ba6 $
 
 EAPI=5
 inherit eutils versionator qt4-r2 gnome2-utils toolchain-funcs games

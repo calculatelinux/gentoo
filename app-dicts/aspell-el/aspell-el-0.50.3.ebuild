@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4fdbc90c7b904895e22eb518c3923b5160d8f3e5 $
 
 ASPELL_LANG="Greek"
 

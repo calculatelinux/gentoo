@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-misc/screen
 SLOT=0
 SRC_URI=http://pubwww.hsz-t.ch/~mgloor/data/screenie-1.30.0.tar.bz2
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=61822602a4ad73887b9d955739c969ba
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=dc133816921fa5231be8d483f0a777c0

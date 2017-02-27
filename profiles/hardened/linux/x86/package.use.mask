@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8e20d779f8f0c7431cb75e36560058129ff174e6 $
 
 # Magnus Granberg <zorry@gentoo.org> (30 sep 2016)
 # This target supports VTV #547040.

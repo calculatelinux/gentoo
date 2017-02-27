@@ -10,5 +10,5 @@ RDEPEND=lzma? ( app-arch/xz-utils )
 RESTRICT=test
 SLOT=7
 SRC_URI=http://download.savannah.nongnu.org/releases/libunwind/libunwind-1.1.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=a30813a78de91fa236eeca2cf903d992
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=cb99b5e6048eb729231af17a8e65912b

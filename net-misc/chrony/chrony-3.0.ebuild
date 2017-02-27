@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d34419a76f72abf61297cbbd0e391b6fca20da81 $
 
 EAPI=6
 inherit eutils systemd toolchain-funcs

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=emacs? ( virtual/emacs ) history? ( sys-libs/readline:= ) xft? ( x11-libs/libXft ) virtual/perl-Pod-Parser x11-libs/libXinerama x11-libs/libXtst
 SLOT=0
 SRC_URI=http://download.savannah.gnu.org/releases/ratpoison/ratpoison-1.4.8.tar.xz
-_eclasses_=elisp-common	9f56c4e9bf1282dbfc2a5a09e1124e74	eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=d5a20577f0bde535d0aca1f8a657942c
+_eclasses_=elisp-common	4a8ce40989ad055139c36baa8c81ea0b	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=54122acaf6e46b5957eb988fbabace1f

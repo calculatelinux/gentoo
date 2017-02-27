@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1ed6eb12a79138127ecf16dbaa3d397f8f9be17d $
 
 EAPI=5
 MODULE_AUTHOR=CJM

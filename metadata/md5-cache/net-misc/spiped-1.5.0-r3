@@ -9,4 +9,4 @@ LICENSE=BSD
 RDEPEND=!libressl? ( dev-libs/openssl:0= ) libressl? ( dev-libs/libressl:0= ) !net-mail/qlogtools
 SLOT=0
 SRC_URI=http://www.tarsnap.com/spiped/spiped-1.5.0.tgz
-_md5_=e6efea45ba113a1839a921ef5a6c1015
+_md5_=cb6dc455acc83bf2239660edeade99d9

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e90a9e8d3d9c122e959a3c18aa04160085dcedb2 $
 
 EAPI=5
 GENTOO_VDR_CONDITIONAL=yes

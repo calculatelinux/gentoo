@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8b5661f699d13bc79f96a501da41bad784d039eb $
 
 # Mart Raudsepp <leio@gentoo.org> (16 Feb 2017)
 # Not yet tested features/dependencies

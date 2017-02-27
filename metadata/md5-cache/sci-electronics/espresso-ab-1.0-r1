@@ -6,4 +6,4 @@ KEYWORDS=amd64 ~ppc ~sparc x86
 LICENSE=BSD
 SLOT=0
 SRC_URI=ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/other-software/espresso-ab-1.0.tar.gz
-_md5_=a3584844109fd873fa66af3cfb586fe3
+_md5_=dae713500bd447185fcb2ecfd2c83940

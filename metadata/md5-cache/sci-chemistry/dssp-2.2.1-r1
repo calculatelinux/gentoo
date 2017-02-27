@@ -8,5 +8,5 @@ LICENSE=Boost-1.0
 RDEPEND=dev-libs/boost:=[threads]
 SLOT=0
 SRC_URI=ftp://ftp.cmbi.ru.nl/pub/molbio/software/dssp-2/dssp-2.2.1.tgz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=70ec65a4f60509d04be702dea767289c
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=5b525cf087e7bc61a56a1dab2a344890

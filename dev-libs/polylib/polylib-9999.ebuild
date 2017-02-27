@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d1bbe469569627b05990523fc13ad368899ab6e7 $
 
 EGIT_REPO_URI="git://repo.or.cz/${PN}.git
 	http://repo.or.cz/r/${PN}.git"

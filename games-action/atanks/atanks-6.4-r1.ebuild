@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a9bad0dad69f19b5817b5991c5de90992c04b613 $
 
 EAPI=6
 inherit eutils gnome2-utils

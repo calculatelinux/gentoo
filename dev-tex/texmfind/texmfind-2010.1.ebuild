@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c6c05f0c67bcada2f02c8cdbcfe3c703dd031dad $
 
 DESCRIPTION="Locate the ebuild providing a certain texmf file through regexp"
 HOMEPAGE="https://launchpad.net/texmfind/

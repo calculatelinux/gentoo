@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c9e69f93a6f6b3652f38fad9efd9667278157d1d $
 
 EAPI=6
 inherit user golang-build golang-vcs-snapshot

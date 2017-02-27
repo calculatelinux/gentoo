@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-perl/DateTime-Format-ISO8601 dev-perl/DateTime-Format-Strptime dev-perl/DateTime-TimeZone virtual/perl-Encode virtual/perl-File-Spec dev-perl/HTTP-CookieJar virtual/perl-HTTP-Tiny dev-perl/URI dev-perl/XML-Parser dev-perl/XML-Writer virtual/perl-parent dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DJ/DJZORT/BZ-Client-4.4.tar.gz
-_eclasses_=multiprocessing	eb9be4b678c4e71f3f530a767df31912	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358
-_md5_=215f1e6d1ff4413752b8c17ea3e8c5b6
+_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
+_md5_=80c57e17c7e8aace20e6364fa34d57ea

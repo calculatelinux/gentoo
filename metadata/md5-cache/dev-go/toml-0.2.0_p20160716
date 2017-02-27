@@ -8,5 +8,5 @@ LICENSE=WTFPL-2
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/BurntSushi/toml/archive/99064174e013895bbd9b025c31100bd1d9b590ca.tar.gz -> toml-0.2.0_p20160716.tar.gz
-_eclasses_=golang-base	a42b7e0ca33d7ab0c0fa52699435b816	golang-vcs-snapshot	1caa6d8238d2378ad688ae068ff22e5a
-_md5_=94c18c18be7b438a195073d67e8b07ea
+_eclasses_=golang-base	0f75d9692d09462687e69a4c6dda0d16	golang-vcs-snapshot	192c4e42089abf548c85be344086b1ff
+_md5_=f1806be1426af9e61d867d8905d14fab

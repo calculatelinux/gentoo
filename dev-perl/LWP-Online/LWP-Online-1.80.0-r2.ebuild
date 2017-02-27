@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ab7cbc4b454ea5de1671245c5d429104066f6f77 $
 
 EAPI=6
 DIST_AUTHOR=ADAMK

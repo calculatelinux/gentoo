@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: bf1776e869fbc9e21aa06d3b264ad6a467e412ee $
 
 EAPI=5
 SWORD_MODULE="EMTV"

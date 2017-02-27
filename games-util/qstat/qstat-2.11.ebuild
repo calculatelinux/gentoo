@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 63874652727e54e56726d29feab7fa8d6183e05e $
 
 EAPI=5
 DESCRIPTION="Server statics collector supporting many FPS games"

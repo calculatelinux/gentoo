@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0e7c57b0fa9b5f437cf22084f878418dc6560e2e $
 
 EAPI=5
 inherit font eutils

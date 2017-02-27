@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: bd152c94b842dea42d939f9f8197c4ede33a8f04 $
 
 # Build libcxxrt over libgcc_s since that is what clang defaults to.
 sys-libs/libcxxrt libunwind

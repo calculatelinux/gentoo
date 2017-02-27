@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1d8edf821a782abd3270a36e370e62dd2e3592b6 $
 
 # Unmask the flag which corresponds to arch/abi, bug #515130
 -ppc

@@ -1,5 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fda0023e97ddbb4a919e75cb7e33b731a3d6ef2f $
 
 ACCEPT_KEYWORDS="~${ARCH} ~${ARCH}-linux"

@@ -8,5 +8,5 @@ LICENSE=LGPL-3
 RDEPEND=gtk? ( x11-libs/gdk-pixbuf[jpeg] x11-libs/gtk+:* dev-libs/libxml2 net-misc/curl[ssl] net-libs/libproxy !app-misc/eid-viewer-bin ) >=sys-apps/pcsc-lite-1.2.9 p11-kit? ( app-crypt/p11-kit ) xpi? ( || ( >=www-client/firefox-bin-3.6.24 >=www-client/firefox-3.6.20 ) )
 REQUIRED_USE=dialogs? ( gtk )
 SLOT=0
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	708f85bc1bf00876604e223fb56e062a	git-r3	6efc2d7de07a77bf72c7207b48d0e123	libtool	84763589a795fb127b537cac01e5359f	mozextension	3d8ee4835f89ff39d4666656aa603433	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=5abf2089b75a2bee3fb895a69f565504
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	git-r3	abc3caa050da0c4b8faec237bd358fcb	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	mozextension	4a3a7cde5116139794748422b3b57218	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=447de7d2dbe20b31e1af066263f986d5

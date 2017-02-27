@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 18325b46052bb064ba5341cf11579a9c4397f987 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/depthimage_to_laserscan"

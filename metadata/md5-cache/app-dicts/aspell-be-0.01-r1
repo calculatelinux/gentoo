@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-text/aspell-0.50
 SLOT=0
 SRC_URI=mirror://gnu/aspell/dict/be/aspell5-be-0.01.tar.bz2
-_eclasses_=aspell-dict	5e1fcef2869735a5ddd48c0d8fb4f48a	eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=f79ac25384d7a37ee0078302e19ca3cb
+_eclasses_=aspell-dict	1163c6fbf66376d194d71dc90488cc78	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=ec792a8a51a844cc7554c3c7b2bd910d

@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a82e75bd9fae31323cefafc06ac8e8ec34ae96a8 $
 
 EAPI=6
 inherit fcaps

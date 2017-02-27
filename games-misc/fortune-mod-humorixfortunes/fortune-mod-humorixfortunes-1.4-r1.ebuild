@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f4949fff9c782c3f6f3cd0b7b63b626d4885ad6f $
 EAPI=5
 MY_P=${P/fortune-mod-/}
 DESCRIPTION="Extra fortune cookies for fortune"

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-2.20151208-r4
 SLOT=0
 SRC_URI=https://raw.githubusercontent.com/wiki/TresysTechnology/refpolicy/files/refpolicy-2.20151208.tar.bz2 https://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-2.20151208-r4.tar.bz2
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	selinux-policy-2	fdb802daf258a647a1117a1f2c043168	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=e8c6ac7d568a69df74279fea6e8d2960
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	selinux-policy-2	c69da139ce0e2297fedaacf4167c6da0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=620b51eb7da4887484f474cef5af50e8

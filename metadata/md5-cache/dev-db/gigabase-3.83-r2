@@ -8,4 +8,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=MIT
 SLOT=0
 SRC_URI=mirror://sourceforge/gigabase/gigabase-3.83.tar.gz
-_md5_=aac3c3c45dfbf77d37012ffca8d90679
+_md5_=2a0c9de8280cd4466fd5b555a2e92d66

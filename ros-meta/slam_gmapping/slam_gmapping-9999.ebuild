@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 299e326f28931c54dbf3bd29864ac18f7615b2e5 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/slam_gmapping"

@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=!sci-astronomy/ast x11-libs/libXt x11-proto/xproto x11-libs/libICE x11-libs/libSM x11-libs/libX11 media-libs/freetype imlib? ( media-libs/imlib2 ) pcre? ( dev-libs/libpcre )
 SLOT=0
 SRC_URI=http://www.eterm.org/download/libast-0.7.tar.gz
-_md5_=a4771b6bb48f75714ae57f4b1eaa44a0
+_md5_=a4c10622af52d5c2780a78e7e7f18c8a

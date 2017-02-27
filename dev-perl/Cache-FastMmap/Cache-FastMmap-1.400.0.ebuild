@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0089aa177d2a7bdd97f28a84d28a2af78967dd00 $
 
 EAPI=5
 MODULE_AUTHOR=ROBM

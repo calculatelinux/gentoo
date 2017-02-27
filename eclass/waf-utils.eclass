@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: df5de245e85aaca7f41ca1f7b9c32c2bf382da17 $
 
 # @ECLASS: waf-utils.eclass
 # @MAINTAINER:

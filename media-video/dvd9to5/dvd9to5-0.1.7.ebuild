@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f18f26f83763de1ff23994c005e40382882dd4bc $
 
 DESCRIPTION="Perl script to backup the main feature of a DVD-9 on DVD-5"
 HOMEPAGE="http://lakedaemon.netmindz.net/dvd9to5/"

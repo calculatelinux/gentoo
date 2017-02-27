@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ce036ba27231cf238b2de9fb8445eb7a21bd75bf $
 
 SLOT="0"
 IUSE=""

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 996690f99b8d3f8f411f263718d447ccaa815ab7 $
 
 inherit fixheadtails toolchain-funcs multilib
 

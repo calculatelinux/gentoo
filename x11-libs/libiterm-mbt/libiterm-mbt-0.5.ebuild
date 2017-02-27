@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0a47f6823579b4ee2d36a894ca5b52d7c7171f59 $
 
 DESCRIPTION="Hacked version of libiterm -- Internationalized Terminal Emulator Library"
 HOMEPAGE="http://www.doc.ic.ac.uk/~mbt99/Y/

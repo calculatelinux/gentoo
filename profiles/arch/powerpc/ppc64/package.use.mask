@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a33a9f78f5a7249e8404e7fc665100a1fb3f9ef7 $
 
 # Jeroen Roovers <jer@gentoo.org> <16 Jan 2017>
 # Incomplete support, bug #605878.

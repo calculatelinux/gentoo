@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e3dae450bd2f8fedf93c376da987f6138529359c $
 
 EAPI=5
 SWORD_MODULE="Lightfoot"

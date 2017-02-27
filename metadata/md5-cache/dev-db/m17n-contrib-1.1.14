@@ -7,4 +7,4 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-db/m17n-db-1.6.4
 SLOT=0
 SRC_URI=http://download.savannah.gnu.org/releases/m17n/m17n-contrib-1.1.14.tar.gz
-_md5_=f3f6eda9096d1a839cbb47acbbcb1286
+_md5_=6adde9f399db6dae877f2f661cfceb45

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 80eb63085c51215cd0104884ad1ed157d293853a $
 
 DESCRIPTION="Manages configuration of TiMidity++ patchsets"
 HOMEPAGE="https://www.gentoo.org/"

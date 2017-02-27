@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1cc829268295ccdc609b697b5765800fb3fc6323 $
 
 DESCRIPTION="dailystrips automatically downloads your favorite online comics from the web"
 HOMEPAGE="http://dailystrips.sourceforge.net/"

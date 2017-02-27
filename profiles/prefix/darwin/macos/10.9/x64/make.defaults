@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ad96e6c95501c1df464806281e1ac4fa96d651aa $
 
 CHOST="x86_64-apple-darwin13"
 CHOST_amd64="${CHOST}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 716e055289ac0dc06f03ac719a339f9422263b01 $
 
 EAPI=6
 inherit flag-o-matic multilib systemd toolchain-funcs

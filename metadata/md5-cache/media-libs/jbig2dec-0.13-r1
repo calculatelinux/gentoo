@@ -10,4 +10,4 @@ RDEPEND=png? ( media-libs/libpng:0= )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://downloads.ghostscript.com/public/jbig2dec/jbig2dec-0.13.tar.gz test? ( http://jbig2dec.sourceforge.net/ubc/jb2streams.zip )
-_md5_=ca655d461943e5f21a7882287845d261
+_md5_=c93d0f74f5bc0259c8b91ce9abf8d920

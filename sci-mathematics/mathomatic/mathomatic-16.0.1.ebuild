@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: bf517163d0809c55eee7b223b4f318ac49c3b8a1 $
 
 EAPI=4
 inherit toolchain-funcs flag-o-matic

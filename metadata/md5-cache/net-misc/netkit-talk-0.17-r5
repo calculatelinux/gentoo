@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=sys-libs/ncurses-5.2 virtual/inetd
 SLOT=0
 SRC_URI=ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-ntalk-0.17.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=7ef81d99ed3a7a6172d9aee74294fd86
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=22f2a6a3165af39d8fc3cb37d9570e80

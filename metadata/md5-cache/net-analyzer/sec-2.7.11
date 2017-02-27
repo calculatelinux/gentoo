@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5.8.0
 SLOT=0
 SRC_URI=https://github.com/simple-evcorr/sec/releases/download/2.7.11/sec-2.7.11.tar.gz
-_md5_=cc403d30fbd72dabc73143a668833fce
+_md5_=1b21da9e939945025b613d496fadcb40

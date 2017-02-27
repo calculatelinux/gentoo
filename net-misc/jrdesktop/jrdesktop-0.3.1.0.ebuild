@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6b39ed997ab3276c5edb8ce3b73689ad96f13441 $
 
 JAVA_PKG_IUSE="source doc"
 WANT_ANT_TASKS="ant-nodeps"

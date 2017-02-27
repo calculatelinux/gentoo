@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 29d709fd2208ce98eaa0aecffd40b0ac2d35cb36 $
 
 # The 32-bits profile is inherited by the 64-bits one!
 # All the Mac OS X profiles inherit from their matching arch profile here.

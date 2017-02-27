@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 572f68fc98280c8b637590abb994163b7d7a982f $
 
 # @ECLASS: python-utils-r1.eclass
 # @MAINTAINER:

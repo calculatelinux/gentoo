@@ -9,4 +9,4 @@ RDEPEND=media-libs/mesa >=dev-cpp/eigen-3.2.0:3 media-libs/libepoxy sci-libs/fft
 RESTRICT=test
 SLOT=0
 SRC_URI=http://movit.sesse.net/movit-1.2.0.tar.gz https://googletest.googlecode.com/files/gtest-1.7.0.zip
-_md5_=9e92861b3e90dd60f1c2e9a673a72f0a
+_md5_=ff13be8f14daabf41119c51cb90b182e

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6cb62d29c324822b56912908c51e709f4195fd2c $
 
 inherit depend.apache webapp eutils toolchain-funcs user
 

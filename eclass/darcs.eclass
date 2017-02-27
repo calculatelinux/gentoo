@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: abb9ccc9b092c9756b49f20bd12d6f72cde8eedf $
 
 # @ECLASS: darcs.eclass
 # @MAINTAINER:

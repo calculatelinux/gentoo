@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=dev-perl/Device-SerialPort dev-perl/TimeDate
 SLOT=0
 SRC_URI=mirror://sourceforge/mtkbabel/mtkbabel-0.8.2.tar.gz
-_md5_=fac505718351dfb3858d68649d27df88
+_md5_=1fd2e073adafa19be5db20e92e5ceff2

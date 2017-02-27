@@ -9,5 +9,5 @@ LICENSE=GPL-2+
 RDEPEND=virtual/w3m >=virtual/emacs-23
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~ulm/distfiles/emacs-w3m-1.4.570_pre20170203.tar.xz
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	elisp	7e36316fe822639d5a29fa10d5529eb9	elisp-common	9f56c4e9bf1282dbfc2a5a09e1124e74	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	readme.gentoo-r1	03878c06495db70bc36bd717383c09f7	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=b23283f0e7dba620726a9833edb723cb
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	elisp	62249f4b6196eec26a81f335fb4d1a33	elisp-common	4a8ce40989ad055139c36baa8c81ea0b	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	readme.gentoo-r1	9265450c3045cbc82060da9b35f46c67	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=639db1eba1742ae185050f6915291a38

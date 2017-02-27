@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0329272d933718c3bc535b608abdfc4169be2bd2 $
 
 EAPI=5
 inherit eutils libtool multilib pam pax-utils systemd user xdg-utils

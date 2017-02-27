@@ -9,5 +9,5 @@ LICENSE=GPL-3+ MIT SGMLUG
 RDEPEND=|| ( app-text/openjade app-text/opensp ) app-text/sgml-common dev-lang/perl:= || ( sys-apps/gawk sys-apps/mawk ) sys-apps/groff virtual/latex-base
 SLOT=0
 SRC_URI=https://gitlab.com/agmartin/linuxdoc-tools/repository/archive.tar.gz?ref=v0.9.72 -> linuxdoc-tools-0.9.72.tar.gz
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	autotools-utils	419811142edf3516b0d0cf1a254d93cb	base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	708f85bc1bf00876604e223fb56e062a	latex-package	58e25573cc86e53dddea91261009b301	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	perl-functions	aac50de73be0a80ebe780e0b20850130	sgml-catalog	b6e9d36507f43d79b6df9cb78d6eb4dd	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	vcs-snapshot	2b65ecb2d0f91e4322c2ac8d673993bd
-_md5_=14c6d2a3e90bd9328ba096655f8ccd3f
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	autotools-utils	31b108cd8696d6b9faa0466a4c38b789	base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	latex-package	baf2aa8f88b3b23787eaf2dc76c9b827	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	sgml-catalog	53d2ac40958135cc4da6f8162d56b280	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	vcs-snapshot	10b045661d7c5178ffdf37fbf47278d6
+_md5_=4fc4e33363da9574316e96ca72c1f489

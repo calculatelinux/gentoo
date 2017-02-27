@@ -4,4 +4,4 @@ EAPI=5
 KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd
 RDEPEND=|| ( sci-libs/lapack-reference >=sci-libs/mkl-9.1.023 >=sci-libs/acml-3.6 )
 SLOT=0
-_md5_=bbce238a8355e376ec65efad57d73937
+_md5_=9cff39e8b68a0482e3dda434f56f9c7b

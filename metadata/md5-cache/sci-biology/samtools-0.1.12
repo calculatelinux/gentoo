@@ -6,4 +6,4 @@ KEYWORDS=amd64 x86 ~amd64-linux ~x86-linux
 LICENSE=MIT
 SLOT=0
 SRC_URI=mirror://sourceforge/samtools/samtools-0.1.12a.tar.bz2
-_md5_=dbd13692bde5f1bc8aca3971e257d35e
+_md5_=02cedad2756b60db33a63da0d44b1520

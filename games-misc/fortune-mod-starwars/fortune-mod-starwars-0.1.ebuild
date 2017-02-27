@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 00e707868ed8f51f42949d196a6325ca99e7c4e9 $
 EAPI=5
 MY_P=${PN/-mod/}
 DESCRIPTION="Quotes from StarWars, The Empire Strikes Back, and Return of the Jedi"

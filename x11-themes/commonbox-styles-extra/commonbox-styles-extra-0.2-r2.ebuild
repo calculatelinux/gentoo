@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 7409fb89d4e813d8a445e23a66b3a7b7096eeed5 $
 
 IUSE=""
 DESCRIPTION="Extra styles pack for flux|black|open(box)"

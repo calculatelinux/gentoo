@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a75122705083887ba374cdc81d6f22a4b8ec5219 $
 
 EAPI=6
 GNOME_TARBALL_SUFFIX="bz2"

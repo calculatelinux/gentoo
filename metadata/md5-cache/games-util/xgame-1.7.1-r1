@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl
 SLOT=0
 SRC_URI=http://downloads.tlhiv.com/xgame/xgame-1.7.1.tar.gz
-_md5_=a25648011ff4d6cb1b99df176f565a38
+_md5_=563070a5c9054b4f0a1324837440995a

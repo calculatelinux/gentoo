@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 154bdf8613a3b7cfcf670c98b30d0752a0ec06db $
 
 # EAPI=4 is not allowed unless somone re-works the sample.subscriptions logic
 # (because it gets compressed with EAPI=4). To test this, start podracer without

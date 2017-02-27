@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 2315487d191bbe7ad2abf8bf7907c8e893f43267 $
 
 # @ECLASS: multilib-minimal.eclass
 # @MAINTAINER:

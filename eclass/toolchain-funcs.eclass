@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 63f0d6b20912d63657ab05c3f175bb683e384312 $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:

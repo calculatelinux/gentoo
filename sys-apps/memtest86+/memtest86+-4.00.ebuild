@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 17412a02cbab85c06bfeedf044437c677e96ae18 $
 
 QA_PRESTRIPPED=/boot/memtest86plus/memtest
 

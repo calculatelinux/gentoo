@@ -1,5 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id$
+# $Id: 154020e8a780835e109be15b862dc9b1b49c6ade $
 
 CHOST="sparc64-gentoo-freebsd8.2"

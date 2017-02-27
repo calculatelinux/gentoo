@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 340a05a4808e458e201c18653aa4c1c4d8ae9a03 $
 
 EAPI=6
 inherit unpacker

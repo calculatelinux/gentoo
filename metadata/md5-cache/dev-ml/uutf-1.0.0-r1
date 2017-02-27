@@ -9,5 +9,5 @@ LICENSE=ISC
 RDEPEND=>=dev-lang/ocaml-3.12:=[ocamlopt?] dev-ml/uchar:= utftrip? ( dev-ml/cmdliner:= )
 SLOT=0/1.0.0
 SRC_URI=http://erratique.ch/software/uutf/releases/uutf-1.0.0.tbz
-_eclasses_=findlib	9909e5ca0f77ff5b693885a3d7aeadb7
-_md5_=907f8af9322ac537a588dfb4570e3bc6
+_eclasses_=findlib	3a364957a70a5953531fad3d1bc112ec
+_md5_=aac27964662e9199067d83db7a46f7cb

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f177f8c4b6c95c0d339478bf8893293bcaa64187 $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "mk,MK,mk_MK,Macedonian (Macedonia),mk_MK.zip"

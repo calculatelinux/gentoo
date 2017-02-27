@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 236ca1bf0798491e1c2a7c8da1aa67c4945665e0 $
 
 DESCRIPTION="Advanced CLI tool for sending email"
 HOMEPAGE="http://www.cleancode.org/projects/email"

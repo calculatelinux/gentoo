@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ac4946fde775472e8ca7cf314f5c2186e565ae90 $
 
 EAPI=5
 SWORD_MODULE="CzeNKB"

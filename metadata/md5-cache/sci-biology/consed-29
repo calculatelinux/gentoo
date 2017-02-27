@@ -10,5 +10,5 @@ RDEPEND=x11-libs/libX11 x11-libs/motif:0 sci-biology/samtools:0.1-legacy dev-lan
 RESTRICT=fetch
 SLOT=0
 SRC_URI=consed-29-sources.tar.gz consed-29-linux.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=60e6b248f16b3a00f6592dfb59b125b4
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=a133781f9c9024d050e64b4601e6c7d6

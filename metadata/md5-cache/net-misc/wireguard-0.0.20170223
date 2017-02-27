@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=tools? ( net-libs/libmnl ) kernel_linux? ( virtual/modutils )
 SLOT=0
 SRC_URI=https://git.zx2c4.com/WireGuard/snapshot/WireGuard-0.0.20170223.tar.xz
-_eclasses_=bash-completion-r1	acf715fa09463f043fbfdc1640f3fb85	eutils	708f85bc1bf00876604e223fb56e062a	linux-info	af49d8ab3be91bb1d38b7201dc9e5123	linux-mod	0ccff2c1a7d70cf1678059b64bcf9183	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=3d27c688f2a5d2153881471fe82af622
+_eclasses_=bash-completion-r1	2418d29a9d4e3e223bbc64e93cde118e	eutils	c8729578e47597ee48d77eda210e2b56	linux-info	28a4d19bc3bdeee9008ccce076260427	linux-mod	b5b314165abc756a7a53bc6a6c58bbc6	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=f145229b4f03c5b35cc279c42222f230

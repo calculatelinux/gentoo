@@ -7,4 +7,4 @@ LICENSE=GPL-2
 PDEPEND=>=net-wireless/hackrf-tools-2015.07.2-r1 >=app-mobilephone/dfu-util-0.7
 SLOT=0
 SRC_URI=https://github.com/sharebrained/portapack-hackrf/releases/download/20160728/portapack-h1-firmware-20160728.tar.bz2
-_md5_=6b4e979d16c6d60cce15d28da80a0f01
+_md5_=60dcdfa901a337ed449d9c2b4b24ec6d

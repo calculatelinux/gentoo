@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=virtual/opencl
 SLOT=0
 SRC_URI=https://github.com/hashcat/hashcat/archive/v3.30.tar.gz -> hashcat-3.30.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	pax-utils	4c2654a34ebe732e85fda354f6ee642f	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=6c65f8e5184604ffa5f12f6731edaa2e
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	pax-utils	fba36330a0e96da6ac8ea47dd495cc62	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=ac11edfa6bdcc9610cb91fcd2114fcc7

@@ -3,4 +3,4 @@ DESCRIPTION=Virtual for LeechCraft plugins providing a web browser
 EAPI=6
 RDEPEND=app-leechcraft/lc-poshuku
 SLOT=0
-_md5_=e90bfd8840dd7c1afda7eeb060e0459f
+_md5_=cf766325678dac0e52e0fba30127dfc0

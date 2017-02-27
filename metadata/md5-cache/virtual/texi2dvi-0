@@ -4,4 +4,4 @@ EAPI=5
 KEYWORDS=alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris
 RDEPEND=sys-apps/texinfo virtual/latex-base || ( >=dev-texlive/texlive-plainextra-2013 dev-texlive/texlive-texinfo )
 SLOT=0
-_md5_=ddb46b3e36ea96db39bba722a8d4a032
+_md5_=36bfd6f04fd30e1cf2771f5e0787ef85

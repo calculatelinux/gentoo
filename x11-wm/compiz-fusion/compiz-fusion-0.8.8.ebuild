@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a572c86ef2c3a9382481fd6da6f8b2d331fa6118 $
 
 DESCRIPTION="Compiz Fusion (meta)"
 HOMEPAGE="http://www.compiz.org/"

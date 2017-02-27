@@ -10,5 +10,5 @@ RDEPEND=sys-libs/ncurses sys-libs/readline curl? ( net-misc/curl ) libxml2? ( de
 REQUIRED_USE=test? ( static-libs abyss curl cxx ) tools? ( curl )
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~maksbotan/xmlrpc-c-1.32.05.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=08a8701be8a2b7050e01d33e7c1aaa76
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=fb5975f6474edb0b18c254fe961b4c46

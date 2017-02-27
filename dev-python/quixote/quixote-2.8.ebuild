@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a347806bfcbab315bd9967c4874c94e6b3ae0c78 $
 
 EAPI=5
 # Appears to be written only for py2

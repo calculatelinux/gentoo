@@ -8,4 +8,4 @@ LICENSE=LGPL-3+
 RDEPEND=>=dev-scheme/guile-2.0.0
 SLOT=0
 SRC_URI=http://download.savannah.gnu.org/releases/guile-json/guile-json-0.6.0.tar.gz
-_md5_=bff8ff49cf468d90385a1a7ea1884acf
+_md5_=39223eefb85667818baea990b7993fc6

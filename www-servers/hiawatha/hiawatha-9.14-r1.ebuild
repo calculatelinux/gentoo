@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8b33427b198b46d04d227ac4407028d11e43b984 $
 
 # ssl USE flag currently broken, unconditionally enabled
 # rproxy USE flag broken too, unconditionally enabled

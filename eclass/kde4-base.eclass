@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 35909a0eb015de582cf3240011f1b02d30cad135 $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:

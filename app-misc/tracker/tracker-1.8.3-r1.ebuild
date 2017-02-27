@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 90b27a3f8fff2f62b0d7c7d2a924df23a2b53e5b $
 
 EAPI=6
 GNOME2_EAUTORECONF="yes" # See bug #367975

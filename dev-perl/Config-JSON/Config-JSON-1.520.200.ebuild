@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4d7972149d7b7d16cd58801a9de2bbff48d67efe $
 
 EAPI=5
 MODULE_AUTHOR=RIZEN

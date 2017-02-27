@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c4a6d73234deb4701930d5edd9fd1f07482a2336 $
 
 inherit webapp
 MY_P="Metadot${PV}"

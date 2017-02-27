@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.16 purple? ( net-im/pidgin ) libevent? ( dev-libs/libevent:= ) otr? ( >=net-libs/libotr-4 ) gnutls? ( net-libs/gnutls:= ) !gnutls? ( nss? ( dev-libs/nss ) !nss? ( libressl? ( dev-libs/libressl:= ) !libressl? ( dev-libs/openssl:0= ) ) ) virtual/logger xinetd? ( sys-apps/xinetd )
 REQUIRED_USE=|| ( purple xmpp msn oscar ) xmpp? ( !nss )
 SLOT=0
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	git-r3	6efc2d7de07a77bf72c7207b48d0e123	multilib	165fc17c38d1b11dac2008280dab6e80	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb
-_md5_=46e9e01791c4feeb7188d816e03b5dbf
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	git-r3	abc3caa050da0c4b8faec237bd358fcb	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd
+_md5_=0e1b7022bca959ed1fe5484e510eb575

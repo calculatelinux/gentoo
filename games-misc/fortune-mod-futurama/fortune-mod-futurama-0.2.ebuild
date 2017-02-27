@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c544af360e1a34a8210a346269d6e4754ca25fa6 $
 EAPI=5
 DESCRIPTION="Quotes from the TV-Series -Futurama-"
 HOMEPAGE="http://www.netmeister.org/misc.html"

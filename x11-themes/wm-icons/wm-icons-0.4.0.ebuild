@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fa0887da2d3195a9cc17c482fc78d85d16791a50 $
 
 DESCRIPTION="A Large Assortment of Beutiful Themed Icons, Created with FVWM in mind"
 

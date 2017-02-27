@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f2eef989a0b89618bf39379ad5426a4a3d790d70 $
 
 DESCRIPTION="generate ext2 file systems"
 HOMEPAGE="https://sourceforge.net/projects/genext2fs"

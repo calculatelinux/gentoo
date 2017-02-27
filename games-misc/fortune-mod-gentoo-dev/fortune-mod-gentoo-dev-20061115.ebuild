@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5e41cc5b4b4aa2d4d5c4ed9f78445c97d0927295 $
 
 DESCRIPTION="Fortune database of #gentoo-dev quotes"
 HOMEPAGE="https://dev.gentoo.org/~avenj"

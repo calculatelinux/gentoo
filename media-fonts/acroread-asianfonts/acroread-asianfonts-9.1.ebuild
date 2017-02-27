@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 17915b2382e19e2f904c5cb7cbf837edcf107ac1 $
 
 EAPI=4
 inherit confutils

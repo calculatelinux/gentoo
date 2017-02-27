@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6ace98d7356aa0f8bbed853b54ff1790a43f14ed $
 
 EAPI=6
 DESCRIPTION="demerge - revert to previous installation states"

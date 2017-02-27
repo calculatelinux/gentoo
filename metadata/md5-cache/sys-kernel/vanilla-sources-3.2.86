@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 )
+DESCRIPTION=Full sources for the Linux kernel
+EAPI=5
+HOMEPAGE=https://www.kernel.org
+IUSE=symlink build
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
+LICENSE=GPL-2 freedist
+RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
+RESTRICT=binchecks strip
+SLOT=3.2.86
+SRC_URI=mirror://kernel/linux/kernel/v3.x/patch-3.2.86.xz mirror://kernel/linux/kernel/v3.x/linux-3.2.tar.xz
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	kernel-2	438a590d5fc1d8ac64aefca3c0244842	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-any-r1	7daff3c0322873651801c85ef36109f5	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=925911c9e7379cf16384a6cc36f8a2d0

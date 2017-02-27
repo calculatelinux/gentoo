@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d155c045e47e1f2670e3202937eacae4cb835df0 $
 
 # snapshot extracted from git://git.savannah.gnu.org/gnulib.git using
 # ./gnulib-tool --create-testdir --without-tests --dir=${PN} ${PN};

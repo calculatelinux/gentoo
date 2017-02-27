@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=>=app-shells/bash-4.0 >=net-dns/openresolv-3.5.4-r1 sys-apps/iproute2 sys-apps/systemd !<net-misc/dhcpcd-6.4.0
 SLOT=0
 SRC_URI=https://sources.archlinux.org/other/packages/netctl/netctl-1.10.tar.xz
-_eclasses_=bash-completion-r1	acf715fa09463f043fbfdc1640f3fb85	eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=39c2bfafbd5d2a8d4d42df28c0d26ef9
+_eclasses_=bash-completion-r1	2418d29a9d4e3e223bbc64e93cde118e	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=72c7b830e63240ae8e0374ddab9331de

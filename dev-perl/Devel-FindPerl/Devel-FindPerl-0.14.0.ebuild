@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e83f1e263cc9f89860c1b72a573f480d97af065d $
 EAPI=6
 DIST_AUTHOR=LEONT
 DIST_VERSION=0.014

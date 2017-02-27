@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ff8e74e0183e74822cbd31992e4c10785e81e479 $
 
 EAPI=6
 WANT_AUTOCONF="2.5"

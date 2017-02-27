@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=!pm-utils? ( virtual/awk ) sys-apps/grep virtual/modutils pm-utils? ( >=sys-power/pm-utils-1.4.1 )
 SLOT=0
 SRC_URI=mirror://debian/pool/main/p/powermgmt-base/powermgmt-base_1.31.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=ce43ce27891f91cfd8d925cdec767806
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=b7b7114483851028d2f86b3f01a2a03c

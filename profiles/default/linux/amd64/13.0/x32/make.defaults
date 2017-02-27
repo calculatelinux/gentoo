@@ -1,5 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9cefe8079fb50bbb34dae92e354f0d7ce2d0005a $
 
 CHOST="x86_64-pc-linux-gnux32"

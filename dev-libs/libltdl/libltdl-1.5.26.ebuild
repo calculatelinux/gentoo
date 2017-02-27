@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: daa4f3ebabcd76b84d78ec9229b26767035f279d $
 
 # This ebuild provides libltdl.so.3.
 

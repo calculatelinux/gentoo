@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl
 SLOT=0
 SRC_URI=mirror://gentoo/rfksay.tar.gz
-_md5_=3b38415d62f312ee32b7a091bd54e31b
+_md5_=b4ed04696e6321c22b485b21f429e362

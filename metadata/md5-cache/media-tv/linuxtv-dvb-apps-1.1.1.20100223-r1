@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=alevt? ( !media-video/alevt media-libs/libpng media-libs/zvbi[v4l] sys-libs/zlib x11-libs/libX11 ) usb? ( virtual/libusb:0 ) !dev-db/xbase
 SLOT=0
 SRC_URI=mirror://gentoo/linuxtv-dvb-apps-1.1.1.20100223.tar.bz2
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	vcs-snapshot	2b65ecb2d0f91e4322c2ac8d673993bd
-_md5_=ed4807fcf219779e2f5a4a38c527bffb
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	vcs-snapshot	10b045661d7c5178ffdf37fbf47278d6
+_md5_=c73f36a36043fda93e80ac0f96a56651

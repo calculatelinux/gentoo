@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ac39dff624c0f731a0cff2cb45135498fc870838 $
 
 DESCRIPTION="Reminds you to take wrist breaks to help you prevent repetitive stress injury"
 HOMEPAGE="http://www.lcdf.org/xwrits/"

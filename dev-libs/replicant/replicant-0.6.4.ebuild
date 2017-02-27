@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3ea178251fc965ef7188635c2e46d3884ecbe037 $
 EAPI=4
 
 DESCRIPTION="Hyperdex replicant support library"

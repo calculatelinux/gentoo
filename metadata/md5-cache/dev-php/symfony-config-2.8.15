@@ -9,4 +9,4 @@ LICENSE=MIT
 RDEPEND=dev-lang/php:* dev-php/fedora-autoloader
 SLOT=0
 SRC_URI=https://github.com/symfony/config/archive/v2.8.15.tar.gz -> symfony-config-2.8.15.tar.gz
-_md5_=df27ee74abca578bca9b5dd0e0033012
+_md5_=8aa6a14cececcfcff578599e97889fc2

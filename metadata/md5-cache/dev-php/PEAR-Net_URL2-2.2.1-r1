@@ -7,4 +7,4 @@ LICENSE=BSD
 RDEPEND=dev-lang/php:* dev-php/pear
 SLOT=0
 SRC_URI=http://pear.php.net/get/Net_URL2-2.2.1.tgz
-_md5_=0cc8e9ddb52a3cea997ddd1d5dd49a78
+_md5_=48a1d439122fbd4cc7abb27c4bab2aad

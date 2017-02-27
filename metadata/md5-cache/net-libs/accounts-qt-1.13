@@ -10,5 +10,5 @@ RDEPEND=net-libs/libaccounts-glib dev-libs/glib:2 dev-qt/qtcore:5 dev-qt/qtxml:5
 RESTRICT=test
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~kensington/distfiles/accounts-qt-1.13.tar.bz2
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	qmake-utils	0a242e7177789b0028b4045f336dd4db	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=1a87b2705373749fcdb96f1e5a78bfdf
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	qmake-utils	461362a9981d9f069203d2436fea87ce	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=f9d6b6c0f4e9683a3b1040c870f1e646

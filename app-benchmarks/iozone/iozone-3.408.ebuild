@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 08d91fd927f9dd399b2bee9b18b8c36c956de38d $
 
 # TODO
 #        ->   linux-arm            (32bit)   <-

@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id$
+# $Id: 68b6a578c16489724030edc0635f21c58d41da55 $
 
 # Andreas Sturmlechner <asturm@gentoo.org> (25 Feb 2017)
 # kwallet integration split from kde to distinct flag

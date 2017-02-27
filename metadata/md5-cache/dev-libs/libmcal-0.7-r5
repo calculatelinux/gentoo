@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=pam? ( virtual/pam )
 SLOT=0
 SRC_URI=mirror://sourceforge/libmcal/libmcal-0.7.tar.gz mirror://sourceforge/libmcal/mcaldrivers-0.9.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=f51782bf917e6ef5b77c05f1d1cfde45
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=0c407a9135ac4ae35eef5e5663c1c578

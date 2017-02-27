@@ -4,4 +4,4 @@ EAPI=5
 KEYWORDS=alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x86-macos
 RDEPEND=|| ( sys-apps/gawk sys-apps/mawk sys-apps/nawk sys-apps/busybox )
 SLOT=0
-_md5_=ab1ad4f0584c6c9f89dfcc21d42e5fc4
+_md5_=a44a01aeec01c1e2d9c9225feb1267fe

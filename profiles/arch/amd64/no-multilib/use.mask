@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c32c1ba43a85fbda13b4f1c6987afbf3403b7c83 $
 
 # USE flags masked because providing packages have ABI=x86
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d5941cb8a15cddc1895807e9e4e68aaea37eb307 $
 
 EAPI=5
 inherit gnome2-utils xfconf

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 55b7fe28217b3f4c4ae1e8c1835e0d1deb0e45d7 $
 EAPI=2
 
 DESCRIPTION="Mapnik World Boundaries"

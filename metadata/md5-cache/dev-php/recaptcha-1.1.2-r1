@@ -9,4 +9,4 @@ LICENSE=BSD
 RDEPEND=dev-lang/php
 SLOT=0
 SRC_URI=https://github.com/google/recaptcha/archive/1.1.2.tar.gz -> recaptcha-1.1.2.tar.gz
-_md5_=937229ac57ac2a71207c17d72d684a2d
+_md5_=576b52e8f1819e203ab0ed27c8b377be

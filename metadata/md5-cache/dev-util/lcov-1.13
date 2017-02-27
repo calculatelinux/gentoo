@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5 dev-perl/GD[png]
 SLOT=0
 SRC_URI=mirror://sourceforge/ltp/lcov-1.13.tar.gz
-_md5_=3e1f58e787995c3ea08a49914ad606c5
+_md5_=c23d2f1a9701b155a85ba90607ab2517

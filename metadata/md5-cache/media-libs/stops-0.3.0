@@ -6,4 +6,4 @@ KEYWORDS=amd64 x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://users.skynet.be/solaris/linuxaudio/downloads/stops-0.3.0.tar.bz2
-_md5_=cd1771029a27649e43d3b73f4e7ef035
+_md5_=3c0fe8a2f6c8112655fcd75cc62281fb

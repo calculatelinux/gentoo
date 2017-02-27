@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/evert/SabreAMF/archive/e5521c27e9309404d7505e1e16db843fcb2202ec.tar.gz -> SabreAMF-1.3.234_p0.tar.gz
-_eclasses_=vcs-snapshot	2b65ecb2d0f91e4322c2ac8d673993bd
-_md5_=46f499b7fe591a0662a881b9125518bb
+_eclasses_=vcs-snapshot	10b045661d7c5178ffdf37fbf47278d6
+_md5_=36bd307ff35adcbfa4e705b411261b37

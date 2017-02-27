@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ab69334803bf7152206c23b5b0b7534b378e5650 $
 
 ASPELL_LANG="Hungarian"
 ASPOSTFIX="6"

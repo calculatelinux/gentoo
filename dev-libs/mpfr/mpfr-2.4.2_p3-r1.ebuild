@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0446dc4c4136a3b6ebdb3f8119251a7c0ab7ff50 $
 
 # this ebuild is only for the libmpfr.so.1 ABI SONAME
 

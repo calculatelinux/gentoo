@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b944b154f400f87de0021b2fc6cf11fc047f9e7a $
 
 # Matt Turner <mattst88@gentoo.org> (29 Jul 2013)
 # Unmask the multilib flags for this arch.

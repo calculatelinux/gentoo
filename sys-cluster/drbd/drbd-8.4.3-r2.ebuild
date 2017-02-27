@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 32578deb9328a4feb9c8c7f2a79726b032ddd1f1 $
 
 EAPI=6
 inherit bash-completion-r1 versionator udev

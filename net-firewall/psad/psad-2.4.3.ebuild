@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: dcf0bcd10907fbf8c06bacb8190d7c2806f4ae56 $
 
 EAPI=5
 #PERL_EXPORT_PHASE_FUNCTIONS=no

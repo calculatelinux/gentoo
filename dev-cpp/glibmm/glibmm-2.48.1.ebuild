@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9df5771fce6ec8d1eb90dea8158d28f41f37644e $
 
 EAPI=6
 inherit eutils gnome2 multilib-minimal

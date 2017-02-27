@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 51c47f09efb05c2304ecebfbc8509754a8cff5ef $
 
 EAPI=4
 inherit base linux-mod toolchain-funcs

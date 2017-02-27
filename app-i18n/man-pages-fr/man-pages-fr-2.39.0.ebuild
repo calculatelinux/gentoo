@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8afd13cc9e23e8154db7ec351df7b972ed8211c3 $
 
 DESCRIPTION="A somewhat comprehensive collection of french Linux man pages"
 HOMEPAGE="http://fr.tldp.org/manfr.php"

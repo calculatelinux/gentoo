@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: abae064e843ba09c38eefb9ef505d0cb39424eea $
 
 EAPI=5
 inherit flag-o-matic multilib xfconf

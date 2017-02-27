@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 89fbbd63bb0b4ae6b5111c7623a5e65d5e669f69 $
 
 EAPI=6
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev flag-o-matic

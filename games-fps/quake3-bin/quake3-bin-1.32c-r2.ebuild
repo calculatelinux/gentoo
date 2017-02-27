@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d33629e56651c41978b656e3961ff77def535db7 $
 
 EAPI=5
 inherit eutils unpacker games

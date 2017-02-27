@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/mule-base app-xemacs/fsf-compat app-xemacs/xemacs-base app-xemacs/latin-euro-standards app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/leim-1.31-pkg.tar.gz
-_eclasses_=xemacs-packages	3efe8d071b1fa620109b658175e85267
-_md5_=152c93388fa701ab596824fed5931d4f
+_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
+_md5_=529541c5d654ac15a1f6616bf9ab8147

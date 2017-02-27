@@ -7,5 +7,5 @@ KEYWORDS=~amd64
 LICENSE=WTFPL-2
 SLOT=0
 SRC_URI=https://github.com/chouquette/coveraggregator/archive/af12d4d73479a1b49a16bbed8e5c182999dd62be.tar.gz -> coveraggregator-0_pre20170216.tar.gz
-_eclasses_=golang-base	a42b7e0ca33d7ab0c0fa52699435b816	golang-build	a44f10e6bd86ecccf2a07cc0d4cf6bec	golang-vcs-snapshot	1caa6d8238d2378ad688ae068ff22e5a
-_md5_=dd60c054185bd7f91656ce2b15e37044
+_eclasses_=golang-base	0f75d9692d09462687e69a4c6dda0d16	golang-build	6105adc054fab1d12e49129dbb97ebe6	golang-vcs-snapshot	192c4e42089abf548c85be344086b1ff
+_md5_=e045cba826a912a1fa3caffce4b97e23

@@ -7,4 +7,4 @@ KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 
 LICENSE=GPL-2
 RDEPEND=>=app-admin/eselect-1.2.4
 SLOT=0
-_md5_=059a857cb6aa8c5475ecba8047209280
+_md5_=f7ef7ff040b91b6f04fadd37b2c287ac

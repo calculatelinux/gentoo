@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fdb8156d78f6a2e0fb7765ea26a9b218f12a1a4c $
 
 EAPI=6
 inherit user linux-mod cmake-utils udev

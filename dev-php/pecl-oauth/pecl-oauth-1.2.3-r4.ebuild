@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 7d9bd3cfe5027a2c5a74e3c199228f46d26087d5 $
 
 EAPI="6"
 PHP_EXT_NAME="oauth"

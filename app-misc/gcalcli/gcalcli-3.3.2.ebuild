@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c74dec1796ea036297b2655b32bcaa5af630980d $
 
 EAPI=5
 # google-api-python-client only supports these

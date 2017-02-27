@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5c084ae2f5a4878f5eb425edfe08f7499f5b6c1a $
 
 EAPI=5
 inherit cmake-utils qt4-r2 user

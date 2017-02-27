@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl sys-devel/gettext s3? ( dev-perl/Net-Amazon-S3 dev-perl/File-Slurp )
 SLOT=0
 SRC_URI=http://github.com/sukria/Backup-Manager/archive/0.7.12.tar.gz -> backup-manager-0.7.12.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=36526f27074bbf3c231a04e020f596a6
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=78dd72b7bb4bdc7bbf6303703a910ab2

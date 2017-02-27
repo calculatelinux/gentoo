@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 95ae3e71a2c5dc149eb4c5b46c796c68d7cb23d8 $
 
 EAPI=5
 DESCRIPTION="An application that translates joystick events to mouse events"

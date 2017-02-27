@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6f2a61d25c7150406abc4a6e0a0409d74cea16ef $
 
 inherit eutils webapp
 

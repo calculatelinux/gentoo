@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: dd8c1427b809597c30074bd2548329a12aca532b $
 
 EAPI=5
 # ruby19 test fail

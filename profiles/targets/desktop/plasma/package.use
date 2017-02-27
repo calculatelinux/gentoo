@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fe09c2eba4e800a33b35f9512599f28b112a56c8 $
 
 # Required by kde-plasma/plasma-pa
 media-sound/pulseaudio gnome

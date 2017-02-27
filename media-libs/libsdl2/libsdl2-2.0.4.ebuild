@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1b0e5c8391996719fae59c1c8f5450ec8210ed39 $
 
 # TODO: convert FusionSound #484250
 

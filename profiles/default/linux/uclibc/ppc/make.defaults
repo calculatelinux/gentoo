@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1ffb33c58008d0f910756304393472d5be271470 $
 
 ARCH="ppc"
 ACCEPT_KEYWORDS="${ARCH}"

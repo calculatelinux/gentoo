@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a92b4c03ec76dad47017b286b7cb3d0f6e2b702c $
 
 # @ECLASS: bsdmk.eclass
 # @MAINTAINER:

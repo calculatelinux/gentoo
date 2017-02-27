@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e70e01112a0d00d26515cb67b4fa3a185714010e $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-drivers/urg_node"

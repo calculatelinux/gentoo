@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 88c591a6733d748687ccb6da995f9f22fe050f42 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-controls/realtime_tools"

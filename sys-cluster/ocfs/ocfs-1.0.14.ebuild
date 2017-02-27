@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8c433b545bca9f68582ae0b4fd07b4b6648ce9d2 $
 
 inherit linux-mod
 

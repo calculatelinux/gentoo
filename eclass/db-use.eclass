@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5a19b05998486b2a9b71ad70b1d58f43443bc5b0 $
 # This is a common location for functions that aid the use of sys-libs/db
 #
 # Bugs: maintainer-needed@gentoo.org

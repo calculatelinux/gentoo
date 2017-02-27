@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=virtual/jre-1.6 dev-java/antlr:3 dev-java/fontbox:1.7 dev-java/jempbox:1.7 dev-java/log4j:0 dev-java/spin:0 dev-java/microba:0 >=dev-java/glazedlists-1.8.0:0 >=dev-java/java-config-2.2.0-r3
 SLOT=0
 SRC_URI=mirror://sourceforge/jabref/JabRef-2.10-src.tar.bz2
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	java-ant-2	d1abcccd8e9c606be17deacfe5c7368a	java-pkg-2	eb1f0d7d874162c70088f5ae32c31ee7	java-utils-2	b31a7fe19a47c6a2d901f6de949e5209	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=cce371e20b120f1c76e58419134fa059
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	java-ant-2	92c3d76268eb0e8d1494c22eb298b8af	java-pkg-2	9aa2f2c12a6a7cdafd9494d17762d4a9	java-utils-2	ebeaf17afbac1fe2f3549ea6afa504e3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=eb41a0c2c6d14cf74a1d74c159bfcfc7

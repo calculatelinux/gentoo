@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f5af859157c1cd44b72bd5025736cd5a6233a88c $
 
 EAPI=5
 inherit xfconf # autotools

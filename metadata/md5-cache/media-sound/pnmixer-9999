@@ -7,5 +7,5 @@ IUSE=debug libnotify
 LICENSE=GPL-3
 RDEPEND=dev-libs/glib:2 media-libs/alsa-lib >=x11-libs/gtk+-3.6:3 x11-libs/libX11 libnotify? ( x11-libs/libnotify )
 SLOT=0
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	708f85bc1bf00876604e223fb56e062a	git-r3	6efc2d7de07a77bf72c7207b48d0e123	gnome2-utils	c6dcdf3a2c22b578b16adb945dc85c35	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	xdg-utils	e2b2bd56125ce8cf59ce30c642b59d48
-_md5_=f8fd2b54230731ac004d3a26a05d6a02
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	git-r3	abc3caa050da0c4b8faec237bd358fcb	gnome2-utils	6ac81c289e6fd66edb59051e57d895e3	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	xdg-utils	169c13f9ec65368f6f6b2961e68dc152
+_md5_=e9e8e79f7ca41670a9d36a38e1bda60e

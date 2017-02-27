@@ -10,5 +10,5 @@ RDEPEND=tcl? ( dev-lang/tcl:0= ) tk? ( dev-lang/tk:0= )
 REQUIRED_USE=tk? ( tcl )
 SLOT=0
 SRC_URI=ftp://ftp.mars.org/pub/hfs/hfsutils-3.2.6.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=d00cad68a7ab5159294ffa481545ac39
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=3337ee75016e91393e9a76b0e5e05357

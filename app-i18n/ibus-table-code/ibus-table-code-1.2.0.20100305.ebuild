@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c0cf7ed545a418b551abe5a8b97490792eaf93ca $
 
 DESCRIPTION="The code tables for IBus-Table"
 HOMEPAGE="https://github.com/ibus/ibus/wiki"

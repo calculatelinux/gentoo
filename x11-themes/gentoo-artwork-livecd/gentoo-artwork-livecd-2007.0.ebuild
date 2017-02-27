@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 57fb3f0da3d2c73d1c96bf62b2f4d5dd87be9665 $
 
 DESCRIPTION="A collection of Gentoo Linux wallpapers for the LiveCD"
 SRC_URI="https://dev.gentoo.org/~wolf31o2/sources/${PN}/${P}.tar.bz2"

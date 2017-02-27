@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b6d39471032a1e6f6f57d070dbed9a2248904d0f $
 
 # Force the flag corresponding to the default ABI
 x64-macos

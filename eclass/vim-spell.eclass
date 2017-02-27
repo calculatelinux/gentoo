@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 804f17fdba84e7ea2513b28e0cfecd95a29e0d55 $
 
 #
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>

@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 05615488b44d47dc5e8d8bb69fdf41a570bb9810 $
 
 DESCRIPTION="A high quality set of animated mouse cursors"
 HOMEPAGE="https://www.gentoo.org/"

@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~arm ~arm64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-solaris
 LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=!fontforge? ( https://fedorahosted.org/releases/l/i/liberation-fonts/liberation-fonts-ttf-2.00.1.tar.gz ) fontforge? ( https://fedorahosted.org/releases/l/i/liberation-fonts/liberation-fonts-2.00.1.tar.gz )
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	font	cd7790315ca5b8c505e1e0513df6acce	multilib	165fc17c38d1b11dac2008280dab6e80	python-any-r1	1c20f9b800324335a8e3b137363362e8	python-utils-r1	50dad5f912d4c16c130f5679777f25e8	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=50f2386813da82c97374e655494460ed
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	font	a18368b5586e76d96bda71f19569cec5	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-any-r1	7daff3c0322873651801c85ef36109f5	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=01f51e9800c52c0d45ed995cad3dab5c

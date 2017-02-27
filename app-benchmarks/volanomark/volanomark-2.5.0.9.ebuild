@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 59aab313cd09c59c5b23eb8fdb9c4e097a748d41 $
 
 DESCRIPTION="Java server benchmark utility"
 HOMEPAGE="http://www.volano.com/benchmarks.html"

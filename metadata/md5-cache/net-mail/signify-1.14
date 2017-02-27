@@ -8,4 +8,4 @@ LICENSE=public-domain
 RDEPEND=dev-lang/perl
 SLOT=0
 SRC_URI=mirror://debian/pool/main/s/signify/signify_1.14-1.tar.gz
-_md5_=f30b8bf75b237455b6ff78e0bf03a24c
+_md5_=470a7ebc365e93e1494d0d7ecc5e3722

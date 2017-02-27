@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/libpng:0= sci-libs/gsl:=
 SLOT=0
 SRC_URI=http://ieee.uow.edu.au/~daniel/software/spectromatic/dist/spectromatic_1.0-1.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=30f5df87147562d38501f7610875e14e
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=cea3d141cd233f3a98341c5b0cf94066

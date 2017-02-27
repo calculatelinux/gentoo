@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5bed96a6d99ab97baccf6d9ec564252d61e4ec69 $
 
 inherit bsdmk freebsd
 

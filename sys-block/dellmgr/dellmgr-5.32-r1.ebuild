@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4e0378b3ff2670379f0201f1ec3f6ce23c974e88 $
 
 inherit multilib rpm
 

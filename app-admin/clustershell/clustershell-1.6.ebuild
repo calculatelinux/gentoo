@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b655d509e0848e28558de6c973d47b7b0d07b97c $
 
 # TODO: test phase
 

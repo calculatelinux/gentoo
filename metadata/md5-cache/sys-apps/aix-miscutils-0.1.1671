@@ -6,4 +6,4 @@ KEYWORDS=~ppc-aix
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~haubi/distfiles/aix-miscutils-0.1.1671.tar.bz2
-_md5_=70cbe0a89236bd9bce0c4c30e4b5652c
+_md5_=ed4e77b90679e892725c085ee1728653

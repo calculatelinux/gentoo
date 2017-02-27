@@ -8,5 +8,5 @@ RDEPEND=dev-libs/atk dev-libs/expat dev-libs/glib:2 dev-libs/libgcrypt:11 dev-li
 RESTRICT=splitdebug
 SLOT=0
 SRC_URI=amd64? ( http://staruml.io/download/release/v2.8.0/StarUML-v2.8.0-64-bit.deb ) x86? ( http://staruml.io/download/release/v2.8.0/StarUML-v2.8.0-32-bit.deb )
-_eclasses_=unpacker	45d07319df5f40ee6af58418b0f930be
-_md5_=2d3429ce23321cfa6f7f16b673afec78
+_eclasses_=unpacker	2afe53b558f4ad6955316e702a4c9cfa
+_md5_=5a731ee456c73e716118e36d3131cc2d

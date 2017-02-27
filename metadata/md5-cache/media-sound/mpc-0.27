@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/libmpdclient-2.2 iconv? ( virtual/libiconv )
 SLOT=0
 SRC_URI=https://www.musicpd.org/download/mpc/0/mpc-0.27.tar.xz
-_eclasses_=bash-completion-r1	acf715fa09463f043fbfdc1640f3fb85	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=32eedc1a0bc14a62ea6f17cfb733350f
+_eclasses_=bash-completion-r1	2418d29a9d4e3e223bbc64e93cde118e	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=e63e0c91f99532bac6d02d095c599d91

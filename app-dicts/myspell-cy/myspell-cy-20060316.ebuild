@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 53a5d7bf09af464969b5f49488d9fa8d3887bd49 $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "cy,GB,cy_GB,Welsh (Wales),cy_GB.zip"

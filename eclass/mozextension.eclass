@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 40a8ac00c5889f0a55bd11fb986691ac6cb7fcfe $
 #
 # @ECLASS: mozextension.eclass
 # @MAINTAINER:

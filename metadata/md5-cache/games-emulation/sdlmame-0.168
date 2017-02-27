@@ -10,5 +10,5 @@ RDEPEND=!games-emulation/sdlmametools !games-emulation/sdlmess dev-db/sqlite:3 d
 REQUIRED_USE=|| ( arcade mess ) debug? ( X )
 SLOT=0
 SRC_URI=https://github.com/mamedev/mame/releases/download/mame0168/mame0168s.zip -> mame-0.168.zip
-_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	708f85bc1bf00876604e223fb56e062a	games	2cf0d67d765e6358b435ccda30c13ad8	multilib	165fc17c38d1b11dac2008280dab6e80	python-any-r1	1c20f9b800324335a8e3b137363362e8	python-utils-r1	50dad5f912d4c16c130f5679777f25e8	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb
-_md5_=5899c1454309727cfa22b3882ede52e4
+_eclasses_=base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	games	7d9d6853e639bbb857a211ed996360a3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-any-r1	7daff3c0322873651801c85ef36109f5	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd
+_md5_=7fc28b64571ff393c3eeba86cc59bfed

@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 001822fa17ef4a64c69e25c1615dcd2066539008 $
 
 EAPI=5
 MY_PN=gtk-xfce-engine

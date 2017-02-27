@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 965e417768b25bef7605faa60b6d3f590653647a $
 
 DESCRIPTION="BLAS module for eselect"
 HOMEPAGE="https://www.gentoo.org/proj/en/eselect/"

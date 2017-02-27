@@ -8,5 +8,5 @@ KEYWORDS=amd64 x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://gentoo/TibetanMachineUnicodeFont-1.901.zip
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	font	cd7790315ca5b8c505e1e0513df6acce	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=6e45a593b39718fb71b5300fd94dc1fd
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	font	a18368b5586e76d96bda71f19569cec5	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=042f8d5ff07aadd1dbdc2ed13d905e9b

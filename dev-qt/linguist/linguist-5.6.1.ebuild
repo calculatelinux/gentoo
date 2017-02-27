@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5580466cfd15a377cec6083a4dee258b8cff44a5 $
 
 EAPI=6
 QT5_MODULE="qttools"

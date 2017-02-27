@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d40cbd6c95662af7f70173c8ed5224169e6cb6bb $
 
 EAPI=5
 #EAUTORECONF=yes (Why was this in 0.4.1 w/o any calls to autotools.eclass again?

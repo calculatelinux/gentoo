@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4dd68e2039482397e2ed750a142ce92997f57a82 $
 
 DESCRIPTION="A small and fast news reader for X"
 HOMEPAGE="http://www.mit.edu/people/jik/software/xrn.html"

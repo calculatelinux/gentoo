@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 277468a8b8fa2811ca54c0fc88e90aa665701730 $
 
 EAPI=6
 inherit gnome2 systemd

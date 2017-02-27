@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 47f286255d16b395fc334d4b1e0a2330f90b7e51 $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "ru,RU,ru_RU,Russian (Russia),ru_RU.zip"

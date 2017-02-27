@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/libpcre dev-libs/openssl
 SLOT=0
 SRC_URI=http://www.apsis.ch/pound/Pound-2.7d.tgz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=d30b342e931eabfa59bd10137c8395b4
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=0f87e921172e4ded2ab396a03d95e4f0

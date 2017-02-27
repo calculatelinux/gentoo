@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 89e8e797f19f48072ba92a72acaa2e5d7974cfdb $
 
 EAPI="6"
 PHP_EXT_NAME="xdebug"

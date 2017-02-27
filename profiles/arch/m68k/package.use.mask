@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 451dd6d4903327163694abf60923cb85d74ff4aa $
 
 # Matt Turner <mattst88@gentoo.org> (25 Feb 2017)
 # Needs libepoxy keywording, bug #510940

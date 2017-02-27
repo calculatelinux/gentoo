@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=|| ( app-arch/unrar app-arch/rar ) >=gnome-base/libgnomeui-2
 SLOT=0
 SRC_URI=mirror://sourceforge/cbrpager/cbrpager-0.9.22.tar.gz
-_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=f6c64fadc20b364c20fde7c0c54a7981
+_eclasses_=base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=73c50b57d5bcc0a889606627eca477c7

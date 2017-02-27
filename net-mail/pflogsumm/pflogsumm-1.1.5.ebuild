@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 96138e9c17e716dc396d44d0f02f33144bddc5b4 $
 
 DESCRIPTION="Pflogsumm is a log analyzer for Postfix logs"
 HOMEPAGE="http://jimsun.linxnet.com/postfix_contrib.html"

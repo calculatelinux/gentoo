@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b9f6251c358d1a2a4464794f9770ca6202ad814f $
 
 DESCRIPTION="Static GNU GRUB boot loader"
 

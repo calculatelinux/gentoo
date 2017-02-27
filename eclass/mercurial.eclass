@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 7372c4d07745c2a1b46e985245294908fc4caa97 $
 
 # @ECLASS: mercurial.eclass
 # @MAINTAINER:

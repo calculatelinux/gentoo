@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 056c74e40102602e5ca4302b8a483a9b334e90c7 $
 
 EAPI="6"
 inherit autotools eutils fdo-mime

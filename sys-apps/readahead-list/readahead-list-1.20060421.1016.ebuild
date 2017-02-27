@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8b39923d5ca9450bcbcac1b7ca8d7c43d5c74c34 $
 
 inherit base
 

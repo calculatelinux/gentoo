@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3344ed6aee55a50b91e0633e24988cfe4da70f20 $
 
 #	[x] Base Install Required (+4 MB)
 #	[x] Scenarios (+7 MB)

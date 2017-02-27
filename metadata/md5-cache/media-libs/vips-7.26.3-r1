@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/glib-2.6:2 >=dev-libs/liboil-0.3 dev-libs/libxml2 sys-libs/zlib >=x11-libs/pango-1.8 fftw? ( sci-libs/fftw:3.0 ) imagemagick? ( virtual/imagemagick-tools ) lcms? ( media-libs/lcms ) openexr? ( >=media-libs/openexr-1.2.2 ) exif? ( >=media-libs/libexif-0.6 ) tiff? ( media-libs/tiff ) jpeg? ( virtual/jpeg ) fits? ( sci-libs/cfitsio ) png? ( >=media-libs/libpng-1.2.9 ) orc? ( >=dev-lang/orc-0.4.11 ) python? ( =dev-lang/python-2* )
 SLOT=1
 SRC_URI=http://www.vips.ecs.soton.ac.uk/supported/7.26/vips-7.26.3.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	python	8b7143ec94293338ed5da8a7ef97cfdb	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=c3b674d6d53055a6c04847a2c36b3cbd
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python	5d5de4f6044d29f62c6084083a6d113b	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=3e61495ed3c64d40d4a20739e16e7b4a

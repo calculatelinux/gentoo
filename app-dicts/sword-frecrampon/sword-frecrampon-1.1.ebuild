@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 47de9e83d1857da3c14bf690ae413b6d095dbbb9 $
 
 EAPI=5
 SWORD_MODULE="FreCrampon"

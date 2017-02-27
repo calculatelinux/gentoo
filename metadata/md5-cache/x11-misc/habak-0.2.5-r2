@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/imlib2[X] x11-libs/libX11
 SLOT=0
 SRC_URI=http://download.gna.org/fvwm-crystal/habak/0.2.5/habak-0.2.5.tar.bz2
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=438c44f20b5faf324add08cdf61e6c31
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=cd09dbb1c96f0fc52d0db9589bf61dc9

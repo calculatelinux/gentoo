@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 74ad780f4934fa1b9e36a3aa307d674ac118a2d0 $
 
 MY_PV="${PV/./_}"
 

@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=>=dev-libs/glib-2.32 virtual/libgudev:=
 SLOT=0
 SRC_URI=https://www.freedesktop.org/software/libmbim/libmbim-1.6.0.tar.xz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=52ed0e3171086cf9c57681f4058b3ef4
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=e6e5e872050437f2ba1650f83f542964

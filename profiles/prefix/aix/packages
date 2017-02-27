@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1a7bec4d4e2e2053eb0e1a493810af1231a6721b $
 
 # AIX uses the native (non-source available) linker
 *sys-devel/native-cctools

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f05fbc40450393f7a9cb1e1b15d4293ff5d3dd33 $
 
 # these are ELFs that include a ZIP (504b0304) appended to it
 #   dd if=Trine.64.run of=Trine.64.zip ibs=$((0x342a8)) skip=1

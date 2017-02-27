@@ -7,4 +7,4 @@ LICENSE=sus4-copyright
 RESTRICT=mirror
 SLOT=4
 SRC_URI=http://pubs.opengroup.org/onlinepubs/9699919799/download/susv4tc2.tar.bz2
-_md5_=15bbe3d8577dddcd526bfee9c74e0988
+_md5_=8398fefc90ea188ce0c823657605db55

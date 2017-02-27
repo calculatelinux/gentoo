@@ -8,5 +8,5 @@ LICENSE=jfontain
 RDEPEND=>=dev-lang/tk-8.3 dev-tcltk/tcllib
 SLOT=0
 SRC_URI=http://jfontain.free.fr/tkpiechart-6.5.tar.bz2
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=03d7ba8b4e9fca16e56ce7db4c25d262
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=25ff27c198615e9c549afd4165fa55e4

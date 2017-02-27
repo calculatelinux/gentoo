@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 76f5fed5272d71918d08bf7fa58e009868d153e4 $
 EAPI=5
 DESCRIPTION="Fortune database of Robin S. Socha quotes"
 HOMEPAGE="http://fortune-mod-fvl.sourceforge.net/"

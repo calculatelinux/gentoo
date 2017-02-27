@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=jack? ( media-sound/jack-audio-connection-kit:0 ) alsa? ( >=media-libs/alsa-lib-0.9:0 ) media-libs/libsndfile:0 media-libs/freeglut:0 virtual/opengl:0 virtual/glu:0 x11-libs/gtk+:2
 SLOT=0
 SRC_URI=http://taps.cs.princeton.edu/release/files/tapestrea-0.1.0.5.tgz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=be9fdef68cc43f8e569d1505a8a3ed50
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=07b64fba3ca298c051528130a3793755

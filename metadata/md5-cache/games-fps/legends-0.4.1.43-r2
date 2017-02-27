@@ -9,5 +9,5 @@ RDEPEND=sys-libs/glibc amd64? ( sys-libs/glibc[multilib] ) media-fonts/font-adob
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://legendsthegame.net/files/legends_linux-0.4.1.43.run mirror://gentoo/legends.png
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	unpacker	45d07319df5f40ee6af58418b0f930be
-_md5_=b2530cdb80d03a81aa5bc794dfd77fa3
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	unpacker	2afe53b558f4ad6955316e702a4c9cfa
+_md5_=e773cc5100aaac7c2c50936a5e6d601a

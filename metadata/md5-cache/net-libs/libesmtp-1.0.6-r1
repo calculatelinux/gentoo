@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1 GPL-2
 RDEPEND=ssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=http://www.stafford.uklinux.net/libesmtp/libesmtp-1.0.6.tar.bz2
-_eclasses_=libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=6334f0727fafda9be0412b03d7d8210e
+_eclasses_=libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=b9d11936332fcaf26801d0dd6476007d

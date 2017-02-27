@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-arch/bzip2 fuse? ( sys-fs/fuse ) zlib? ( sys-libs/zlib )
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~radhermit/distfiles/wit-2.30a.tar.xz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=b40e667392febf1307400dc036c372d9
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=00bbc81974ba9428579bc1aaa8d10b31

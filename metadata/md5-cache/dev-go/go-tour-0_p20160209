@@ -7,5 +7,5 @@ KEYWORDS=~amd64
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/golang/tour/archive/6b2e5b35ce8ed092eaedc3d2a2294373a639f122.tar.gz -> go-tour-0_p20160209.tar.gz
-_eclasses_=golang-base	a42b7e0ca33d7ab0c0fa52699435b816	golang-build	a44f10e6bd86ecccf2a07cc0d4cf6bec	golang-vcs-snapshot	1caa6d8238d2378ad688ae068ff22e5a
-_md5_=1dccba359980958e81fb03e646253df0
+_eclasses_=golang-base	0f75d9692d09462687e69a4c6dda0d16	golang-build	6105adc054fab1d12e49129dbb97ebe6	golang-vcs-snapshot	192c4e42089abf548c85be344086b1ff
+_md5_=1b2cb378f620436f5f0af22008d16895

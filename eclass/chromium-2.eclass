@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e4170df81c0cb042196fd49dc3d98929f7a8ddea $
 
 # @ECLASS: chromium-2.eclass
 # @MAINTAINER:

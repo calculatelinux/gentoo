@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 33d10d6f4f9f5d7c4ce1afdae8d3e60031dde54f $
 
 inherit pam
 

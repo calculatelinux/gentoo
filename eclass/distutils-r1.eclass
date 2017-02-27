@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 202b47757a6475bb2489e6b1f59ea9c571d07128 $
 
 # @ECLASS: distutils-r1.eclass
 # @MAINTAINER:

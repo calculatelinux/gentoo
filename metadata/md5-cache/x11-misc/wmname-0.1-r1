@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=x11-libs/libX11
 SLOT=0
 SRC_URI=http://dl.suckless.org/tools/wmname-0.1.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=0360230b72ce636de7497ccd200bf699
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=13ea9204f728635a17ab89a8ceccc55d

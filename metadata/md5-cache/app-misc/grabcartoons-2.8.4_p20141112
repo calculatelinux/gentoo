@@ -8,4 +8,4 @@ RDEPEND=dev-lang/perl virtual/perl-Getopt-Long
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/zzamboni/grabcartoons/archive/cb230f01fb288a0b9f0fc437545b97d06c846bd3.tar.gz
-_md5_=6986a351bf801e7b7238434761b98f1c
+_md5_=e35dcb7d8ef4ba81174ee123c94d23b0

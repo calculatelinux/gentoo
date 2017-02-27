@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d03b1b2101ec2e63d982826e44b90c6068dabcf7 $
 
 DESCRIPTION="Jason's Image Gallery"
 HOMEPAGE="http://xome.net/projects/jigl/"

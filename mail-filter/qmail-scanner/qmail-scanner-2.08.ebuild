@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 05bf4588ac442562e50834cb015a7e8554444917 $
 EAPI=2
 
 inherit fixheadtails toolchain-funcs eutils user

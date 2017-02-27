@@ -10,5 +10,5 @@ RDEPEND=>=dev-lang/tcl-8.2:0 >=dev-libs/libxml2-2.6.9 dev-libs/libxslt >=dev-tcl
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/tclxml/tclxml-3.2.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=dc6c224ef4989f6f0b3be23a799e19c8
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=d507600a6c563662395c228d2b9992a9

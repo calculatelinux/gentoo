@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c554dde3a83357461a879146026331dca7a0a59a $
 
 EAPI=6
 inherit gnome2 udev user

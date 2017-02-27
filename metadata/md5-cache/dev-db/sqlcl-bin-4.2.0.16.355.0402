@@ -8,4 +8,4 @@ RDEPEND=virtual/jre:1.8 dev-java/java-config:2 dev-db/oracle-instantclient
 RESTRICT=bindist fetch mirror
 SLOT=0
 SRC_URI=sqlcl-4.2.0.16.355.0402-no-jre.zip
-_md5_=efa40aa48437c50d0b9c349b2ab2543e
+_md5_=47cae50845316acbf7cf69b32ce115db

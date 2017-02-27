@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f784d180f5ac53664d1ac308a6ab683c8aa748ad $
 EAPI=5
 DESCRIPTION="Database of the Italian cookies for the fortune program"
 HOMEPAGE="http://www.fortune-it.net/"

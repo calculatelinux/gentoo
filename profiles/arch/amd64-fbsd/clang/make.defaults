@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id$
+# $Id: fa38e0d7a286faf3e1be15f6014b06d7fc5c6c07 $
 
 CFLAGS="-O2 -pipe"
 CXXFLAGS="${CFLAGS}"

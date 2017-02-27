@@ -6,4 +6,4 @@ KEYWORDS=alpha amd64 x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://email.cleancode.org/download/email-2.5.0.tar.bz2
-_md5_=619769e8d5fe8f7623fb9eb823180ca7
+_md5_=b44361d1b569bf76b3e48cb18a1a200f

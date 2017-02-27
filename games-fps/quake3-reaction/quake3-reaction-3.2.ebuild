@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 259fedd18e3925ca591259767e26a1da1d1720d9 $
 
 EAPI=5
 MOD_DESC="port of Action Quake 2 to Quake 3: Arena"

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=~sys-cluster/libccs-3.1.5
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/f/e/fence-agents/fence-agents-3.1.5.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=8f1743be34c0251728cfcf30e0ff548c
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=526169236f46ab56493796c185a30361

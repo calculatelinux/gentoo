@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: bca37c0e9cce42b7bb59cdb75d4c3b65ab00e606 $
 
 # @ECLASS: gnustep-base.eclass
 # @MAINTAINER:

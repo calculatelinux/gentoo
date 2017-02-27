@@ -7,5 +7,5 @@ IUSE=doc +highlight +lua +jit vhosts
 LICENSE=GPL-2
 RDEPEND=dev-vcs/git sys-libs/zlib dev-libs/openssl:0 virtual/httpd-cgi highlight? ( || ( dev-python/pygments app-text/highlight ) ) lua? ( jit? ( dev-lang/luajit ) !jit? ( dev-lang/lua ) ) >=app-admin/webapp-config-1.50.15
 SLOT=0
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	git-2	7af5d170bfc02983b4bcd3167dc5edd4	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb	webapp	42c6ef7af496b228f9854b3c81e4b226
-_md5_=7b48b44904821c6ae7e407da6bb083cd
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	git-2	d77c6ee878e5582d755f883568217b9e	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd	webapp	8e0ef22ac030da2d8de98c90883ca147
+_md5_=5c76f3bd6144fddc58becadb7e6e0bd4

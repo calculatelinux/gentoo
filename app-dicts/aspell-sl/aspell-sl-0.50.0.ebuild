@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ada3082c6c791005b1615628b18148c0af58eb1e $
 
 ASPELL_LANG="Slovenian"
 

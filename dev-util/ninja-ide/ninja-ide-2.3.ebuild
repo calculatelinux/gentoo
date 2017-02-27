@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 32468e2e1beb3c5ee80a80828b5b5c5e271633c2 $
 
 # XXX: tests
 

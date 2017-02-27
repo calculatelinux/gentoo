@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id$
+# $Id: 056ff2edbf438814b96f10a6dac1d8e6520388f0 $
 
 # Force the flag which corresponds to arch/abi, bug #515130
 -x86

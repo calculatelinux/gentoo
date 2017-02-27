@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=net-im/pidgin[gtk]
 SLOT=0
 SRC_URI=mirror://sourceforge/gaim-extprefs/pidgin-extprefs-0.7.tar.gz
-_md5_=dc859a2e0f8ea3880c2b3bfaee912ab7
+_md5_=2b04080b07424e87b2302ae4af5a3480

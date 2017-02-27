@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f9ff6770102b11b72e049001dfce43ac8cfb0f2a $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/common_tutorials"

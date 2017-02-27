@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fb6d5027ed07450aa98184801b6e24efb98c7415 $
 
 IUSE=""
 HOMEPAGE="http://wmwifi.digitalssg.net"

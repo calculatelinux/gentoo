@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a819851a09894463b9e9868d157b69c8d643b1ac $
 
 MY_P="${P/-/_}.orig"
 

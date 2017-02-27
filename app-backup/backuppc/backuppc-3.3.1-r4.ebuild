@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d0c712b255ed13cf2a71625b7a4679c0cb4ce365 $
 
 EAPI=5
 inherit depend.apache eutils user systemd

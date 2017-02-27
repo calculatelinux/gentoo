@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 660865c95cc0b2730bbc0d22c1acd45c5ebe4091 $
 #
 # @ECLASS: elisp.eclass
 # @MAINTAINER:

@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b91df29761a2b39ee878da3ecd1e3cb790407c3e $
 
 # See `man savedconfig.eclass` for info on how to use USE=savedconfig.
 

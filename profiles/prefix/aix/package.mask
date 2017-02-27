@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: cea5e1e074fc60e8b619dd8d46946198a0440222 $
 
 # Michael Haubenwallner <haubi@gentoo.org> (17 Feb 2015)
 # Breaks (openssh, ...) because of PR target/65058

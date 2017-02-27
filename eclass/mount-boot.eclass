@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e8bd9f63bef6b23403aabcf8153c504520ea7a5a $
 
 # @ECLASS: mount-boot.eclass
 # @MAINTAINER:

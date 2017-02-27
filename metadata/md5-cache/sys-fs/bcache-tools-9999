@@ -6,5 +6,5 @@ HOMEPAGE=http://bcache.evilpiepirate.org/
 LICENSE=GPL-2
 RDEPEND=>=sys-apps/util-linux-2.24
 SLOT=0
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	git-r3	6efc2d7de07a77bf72c7207b48d0e123	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	udev	0498b698e76cdc94930b59a00c73dd9c
-_md5_=19fa16f73936c1d107c3c0ed4c05c993
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	git-r3	abc3caa050da0c4b8faec237bd358fcb	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	udev	9b8a82f709a883f0840736c9b9375698
+_md5_=46a7ab35719f39e0cc78c6f162611c94

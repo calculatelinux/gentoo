@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e560861345f2bee27a9aee13df0d89fc20c77372 $
 
 DESCRIPTION="a C++ library for the Linux Sampler control protocol"
 HOMEPAGE="http://www.linuxsampler.org"

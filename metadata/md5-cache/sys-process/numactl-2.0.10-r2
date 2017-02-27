@@ -8,5 +8,5 @@ KEYWORDS=~amd64 -arm ~ia64 ~mips ~ppc ~ppc64 ~x86 ~amd64-linux
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=ftp://oss.sgi.com/www/projects/libnuma/download/numactl-2.0.10.tar.gz
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	708f85bc1bf00876604e223fb56e062a	libtool	84763589a795fb127b537cac01e5359f	multibuild	742139c87a9fa3766f0c2b155e5522bf	multilib	165fc17c38d1b11dac2008280dab6e80	multilib-build	8fe2e81aeb36cdf8a6cc5f50443879cc	multilib-minimal	e7442c2d848733064a6639b5d73d3b74	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=8ec5389b506ba3cfa532578cacd96516
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multibuild	863e759ee14be1c222e6b67853e91c7d	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multilib-build	982f755104619efbd39dc7adf268729d	multilib-minimal	05f45bd8205b0060c1670be849fa06d1	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=ad1056528b49d5587fe864335f94c30a

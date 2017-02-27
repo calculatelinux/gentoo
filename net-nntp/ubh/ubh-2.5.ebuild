@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: ad357639df98cd63153aeee8e21d35a00cc9b3bc $
 
 DESCRIPTION="The Usenet Binary Harvester"
 HOMEPAGE="http://ubh.sourceforge.net/"

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/libxml2 >=media-libs/libshout-2 >=media-libs/libvorbis-1
 SLOT=0
 SRC_URI=http://downloads.xiph.org/releases/ices/ices-2.0.1.tar.bz2
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	user	e10ccb95af96d45f86016fa982a949bb
-_md5_=65467c447fc3b226c7f88df785b98c91
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd
+_md5_=6bde673ccf5f42e286e4b54931461788

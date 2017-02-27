@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/cdrtools encode? ( >=media-sound/lame-3.99 ) gcdmaster? ( dev-libs/libsigc++:2 >=dev-cpp/gtkmm-2.4:2.4 >=dev-cpp/libgnomeuimm-2.6:2.6 media-libs/libao ) mad? ( media-libs/libmad media-libs/libao ) vorbis? ( media-libs/libvorbis media-libs/libao ) !app-cdr/cue2toc !dev-util/pccts
 SLOT=0
 SRC_URI=mirror://sourceforge/cdrdao/cdrdao-1.2.3.tar.bz2
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=f4ea4abd6f631a0ab5e288772031655a
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=fe837574e0d9609a20ea39f0b50a79cd

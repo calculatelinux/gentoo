@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c3ad1edacec151bfce394a50488f843ddb8f7124 $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${MY_P}

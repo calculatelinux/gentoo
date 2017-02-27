@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/glib-2.26 gtk? ( x11-libs/gtk+:3 )
 SLOT=3
 SRC_URI=mirror://sourceforge/cxx-gtk-utils/c++-gtk-utils-2.0.30.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=b71f8738bc8e2821a70940d7d76d7c6c
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=1c5ff59a990599730a8605a9d848942d

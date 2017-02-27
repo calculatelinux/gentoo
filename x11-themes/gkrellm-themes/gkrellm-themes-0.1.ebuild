@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0fcecbab5136d50c8631a8be65f78010f81fddf6 $
 
 EAPI=5
 DESCRIPTION="A pack of ~200 themes for GKrellM"

@@ -8,5 +8,5 @@ LICENSE=GPL-2+
 RDEPEND=app-crypt/gnupg dev-lang/perl
 SLOT=0
 SRC_URI=mirror://debian/pool/main/j/jetring/jetring_0.21.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=14740258833ba44ecf34363a9ae25837
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=d3423e70850bdd3c9d0d7dbfd2ebf1d4

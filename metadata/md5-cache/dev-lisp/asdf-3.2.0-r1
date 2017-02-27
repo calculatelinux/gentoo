@@ -9,5 +9,5 @@ LICENSE=MIT
 PDEPEND=~dev-lisp/uiop-3.2.0
 SLOT=0/3.2.0-r1
 SRC_URI=http://common-lisp.net/project/asdf/archives/asdf-3.2.0.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	prefix	99dcca42e6528d8fe3c214bf5731aaf2	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=3ab2d1aa606457c5a240b18f01a0b81c
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	prefix	38ff416d58fcaea18d47c00728c70298	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=d1e64e922615905801774503a6191491

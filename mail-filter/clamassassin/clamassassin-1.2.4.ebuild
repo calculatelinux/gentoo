@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: f9968aef65cc2432f07ac65fa9181103437521fd $
 
 DESCRIPTION="A simple spamassassin-like script for virus scanning (through clamav) and filtering e-mail messages"
 HOMEPAGE="http://jameslick.com/clamassassin/"

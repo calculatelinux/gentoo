@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: dc29a60f77dfa09242c3a0232305d58939833593 $
 
 EAPI=6
 MY_P=${P}-src

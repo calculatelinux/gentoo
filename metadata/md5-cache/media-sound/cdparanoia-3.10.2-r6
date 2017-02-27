@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=app-eselect/eselect-cdparanoia abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r4 !app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )
 SLOT=0
 SRC_URI=http://downloads.xiph.org/releases/cdparanoia/cdparanoia-III-10.2.src.tgz https://dev.gentoo.org/~ssuominen/cdparanoia-III-10.2-patches-2.tbz2
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	708f85bc1bf00876604e223fb56e062a	libtool	84763589a795fb127b537cac01e5359f	multibuild	742139c87a9fa3766f0c2b155e5522bf	multilib	165fc17c38d1b11dac2008280dab6e80	multilib-build	8fe2e81aeb36cdf8a6cc5f50443879cc	multilib-minimal	e7442c2d848733064a6639b5d73d3b74	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=e6e67716c755e23be613fcfba81260d2
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multibuild	863e759ee14be1c222e6b67853e91c7d	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multilib-build	982f755104619efbd39dc7adf268729d	multilib-minimal	05f45bd8205b0060c1670be849fa06d1	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=1d0892b126c260341e254a79ca6491cc

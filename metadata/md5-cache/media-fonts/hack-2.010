@@ -9,5 +9,5 @@ LICENSE=OFL-1.1
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=https://github.com/chrissimpkins/Hack/releases/download/v2.010/Hack-v2_010-otf.zip
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	font	cd7790315ca5b8c505e1e0513df6acce	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=991d7645fa7947a9ba935282d8a3967e
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	font	a18368b5586e76d96bda71f19569cec5	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=49124e74ff1f82aa85838253f94f2ad7

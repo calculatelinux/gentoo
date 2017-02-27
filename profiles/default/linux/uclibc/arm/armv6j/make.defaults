@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1b7f3d3d9b3eae2efe5b2c7ed0fcbf105918e5c5 $
 
 CHOST="armv6j-hardfloat-linux-uclibceabi"
 CFLAGS="-O2 -pipe -march=armv6j -mfpu=vfp -mfloat-abi=hard"

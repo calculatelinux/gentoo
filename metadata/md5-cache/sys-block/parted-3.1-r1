@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=sys-fs/e2fsprogs-1.27 >=sys-libs/ncurses-5.7-r7 device-mapper? ( >=sys-fs/lvm2-2.02.45 ) readline? ( >=sys-libs/readline-5.2 ) selinux? ( sys-libs/libselinux )
 SLOT=0
 SRC_URI=mirror://gnu/parted/parted-3.1.tar.xz
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	708f85bc1bf00876604e223fb56e062a	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=47a4665ce81231600dea4fa190e23a3e
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=c294b7463de0e17d68a415a33a7806b6

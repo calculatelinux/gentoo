@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 8395d41d82d01cb77b2093c5b6bd801857342f7c $
 
 # @ECLASS: cron.eclass
 # @MAINTAINER:

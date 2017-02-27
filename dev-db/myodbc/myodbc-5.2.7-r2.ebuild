@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 65b99da610dd5c737b79d2a60d7e786c7cf0a398 $
 
 EAPI=5
 inherit cmake-multilib eutils flag-o-matic versionator

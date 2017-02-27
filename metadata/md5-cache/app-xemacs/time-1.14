@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/xemacs-base app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/time-1.14-pkg.tar.gz
-_eclasses_=xemacs-packages	3efe8d071b1fa620109b658175e85267
-_md5_=617c9c6514839c16af06465ed0996e90
+_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
+_md5_=70c66d7d74141f87165dd8a2c36244af

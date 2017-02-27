@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 23254af4c4d5117fa8a98c072c254671bd4e6131 $
 
 IUSE="doc threads ftruncate debug"
 

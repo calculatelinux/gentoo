@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/kpathsea-6.2.0 >=dev-libs/icu-4.4:= !<app-text/texlive-core-2013
 SLOT=0
 SRC_URI=mirror://gentoo/texlive-20140525-source.tar.xz mirror://gentoo/texlive-module-bibtex8-2014.tar.xz mirror://gentoo/texlive-module-bibtexu-2014.tar.xz doc? ( mirror://gentoo/texlive-module-bibtex8.doc-2014.tar.xz mirror://gentoo/texlive-module-bibtexu.doc-2014.tar.xz )
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=939d4b6e41bc48dcc16f033b27111a13
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=5579b9aa68013c4cdb3bc3453992c830

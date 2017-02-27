@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 02ac8dae1bb1f0d07b4957b3bb2f4557fa11540d $
 
 DESCRIPTION="wordwise diff"
 HOMEPAGE="http://agriffis.n01se.net/adiff/"

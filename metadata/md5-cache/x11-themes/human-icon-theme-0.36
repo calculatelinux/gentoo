@@ -9,5 +9,5 @@ RDEPEND=|| ( x11-themes/tangerine-icon-theme x11-themes/adwaita-icon-theme )
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=mirror://ubuntu/pool/universe/h/human-icon-theme/human-icon-theme_0.36.tar.gz https://www.gentoo.org/images/gentoo-logo.svg
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	gnome2-utils	c6dcdf3a2c22b578b16adb945dc85c35	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	xdg-utils	e2b2bd56125ce8cf59ce30c642b59d48
-_md5_=b8a49916bbb7498c3423d973ea90777c
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	gnome2-utils	6ac81c289e6fd66edb59051e57d895e3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	xdg-utils	169c13f9ec65368f6f6b2961e68dc152
+_md5_=dae5e2afe5f45e6dbf61d0ae204c1419

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e3c60b4ea9414c01ac15bdfbdd1930c0c7a0eb39 $
 
 # @ECLASS: ruby-utils.eclass
 # @MAINTAINER:

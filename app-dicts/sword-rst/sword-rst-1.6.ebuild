@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 2c025e04124538153445e6abb10268d84406becf $
 
 EAPI=5
 SWORD_MODULE="RST"

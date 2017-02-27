@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~arm64 ~x86
 LICENSE=public-domain
 RDEPEND=sys-devel/llvm:4[gold] !sys-devel/llvm:0
 SLOT=0
-_md5_=6e7251e9d00d44aa734fcad70ae14041
+_md5_=e48fa3948e763741db31dff21d5bba26

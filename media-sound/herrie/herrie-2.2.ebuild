@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e258c54365f00c18580a764c548404cde4e4c014 $
 
 EAPI=2
 inherit eutils toolchain-funcs

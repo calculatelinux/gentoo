@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4bba0dcaf7e58497481a48c7cafb61e65945333c $
 
 DESCRIPTION="An Automated Deduction System"
 HOMEPAGE="http://www.cs.unm.edu/~mccune/otter/"

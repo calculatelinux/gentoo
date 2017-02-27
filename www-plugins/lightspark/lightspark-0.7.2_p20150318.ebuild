@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b0130b9241f56d10d638b0608b4c1dd91bc85987 $
 
 EAPI=5
 inherit cmake-utils nsplugins multilib toolchain-funcs

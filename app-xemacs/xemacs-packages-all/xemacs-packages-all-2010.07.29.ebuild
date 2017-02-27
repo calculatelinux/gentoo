@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: e6b8400d5414fda9efa10ede5663a9212e465c20 $
 
 DESCRIPTION="Meta package for XEmacs elisp packages, similar to the sumo archives"
 HOMEPAGE="http://www.xemacs.org/"

@@ -8,4 +8,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=FDL-1.2+
 SLOT=0
 SRC_URI=mirror://sourceforge/csound/Csound6.06_manual_pdf.zip l10n_fr? ( mirror://sourceforge/csound/Csound6.06_manual-fr_pdf.zip ) html? ( mirror://sourceforge/csound/Csound6.06_manual_html.zip l10n_fr? ( mirror://sourceforge/csound/Csound6.06_manual-fr_html.zip ) )
-_md5_=63920a8ece46bac5e2b96dbbd90a0a03
+_md5_=e273a0c50dd101e33361a0e4f041d40d

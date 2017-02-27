@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: afbcda6c2af9ac8505b7b9d8895cb8139b9264dd $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/common_msgs"

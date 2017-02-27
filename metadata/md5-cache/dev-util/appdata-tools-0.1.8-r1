@@ -6,4 +6,4 @@ KEYWORDS=~alpha amd64 arm hppa ~ia64 ppc ppc64 sparc x86
 LICENSE=metapackage
 RDEPEND=>=dev-libs/appstream-glib-0.3.2
 SLOT=0
-_md5_=de441aa039be2a98bfc1839decbdc2a4
+_md5_=2d6979bd3a6bf92caf14e786429688e0

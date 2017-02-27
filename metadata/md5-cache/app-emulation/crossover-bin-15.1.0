@@ -10,5 +10,5 @@ RDEPEND=dev-lang/perl app-arch/unzip python_targets_python2_7? ( >=dev-lang/pyth
 RESTRICT=bindist test
 SLOT=0
 SRC_URI=https://media.codeweavers.com/pub/crossover/cxlinux/demo/install-crossover-15.1.0.bin
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	python-single-r1	6793fc854691a2320226801400573568	python-utils-r1	50dad5f912d4c16c130f5679777f25e8	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	unpacker	45d07319df5f40ee6af58418b0f930be
-_md5_=7ba7b1ea91ca089e0e0dd03aa977a3ea
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-single-r1	b85fdbcb7d5ea8aff392df97c9cb9385	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	unpacker	2afe53b558f4ad6955316e702a4c9cfa
+_md5_=af2be1f0e8145c518b188f815c506b98

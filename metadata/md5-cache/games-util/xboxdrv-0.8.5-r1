@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/boost virtual/udev sys-apps/dbus dev-libs/glib:2 virtual/libusb:1 x11-libs/libX11
 SLOT=0
 SRC_URI=http://pingus.seul.org/~grumbel/xboxdrv/xboxdrv-linux-0.8.5.tar.bz2
-_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	708f85bc1bf00876604e223fb56e062a	linux-info	af49d8ab3be91bb1d38b7201dc9e5123	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	scons-utils	d42c1726f481bb5812cc2ce1f236db1d	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=74607c25548576345a54f0b17d5e053a
+_eclasses_=base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	linux-info	28a4d19bc3bdeee9008ccce076260427	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	scons-utils	b6c192239ce862682fb55f05f6ff82ff	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=f1ef3984ff8d2437527ac65de2510d84

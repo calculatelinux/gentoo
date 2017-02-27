@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4ee917f745b1638b453208f85941ccfcf8df2449 $
 
 # Patrice Clement <monsieurp@gentoo.org> (30 Oct 2015)
 # Requires dependencies that are not stable on sparc yet.

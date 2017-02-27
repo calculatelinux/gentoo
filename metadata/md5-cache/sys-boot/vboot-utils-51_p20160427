@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=!static? ( !libressl? ( dev-libs/openssl:0= ) libressl? ( dev-libs/libressl:0= ) sys-apps/util-linux:= ) !minimal? ( app-arch/xz-utils:= dev-libs/libyaml:= )
 SLOT=0
 SRC_URI=mirror://gentoo/vboot-utils-51_p20160427.tar.xz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=09b1863ab6b7ad863355ac927c7c6bf2
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=8372be9d6aa8776d3274bbd33a076e79

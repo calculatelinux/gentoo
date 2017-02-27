@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3b1dc6ed4a6d0b263ec8858f53f4f6d6050a2265 $
 
 if [[ "${EBUILD_PHASE}" == "setup" ]]
 then

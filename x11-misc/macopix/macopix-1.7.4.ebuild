@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0fc051a1850a1b4c387c5cb3ea8cc68d18311a4e $
 
 EAPI=2
 DESCRIPTION="MaCoPiX (Mascot Constructive Pilot for X) is a desktop mascot application"

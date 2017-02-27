@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 1f8e1d92391f2cd63679ca42e643d9cb32fa832e $
 
 EAPI=4
 inherit eutils gnome.org libtool

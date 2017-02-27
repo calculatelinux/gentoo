@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4facf835a5b5be9d2eb01e3abbd8315ba074a584 $
 
 DESCRIPTION="Check the status of services running on local/remote machines"
 HOMEPAGE="http://www.linvision.com/checkservice/"

@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c0da76d646a939de8bbfdd2612503df00c861f2d $
 
 # this ebuild is only for the libmp4v2.so.1 SONAME for ABI compat
 

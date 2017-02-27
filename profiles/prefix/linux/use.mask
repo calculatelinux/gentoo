@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 669adbe5a33890f518dc3bc06bdd781a6c3c8058 $
 
 # Michael Haubenwallner <haubi@gentoo.org> (19 Apr 2016)
 # Unmask the linux-glibc combo, or we get bug#574822.

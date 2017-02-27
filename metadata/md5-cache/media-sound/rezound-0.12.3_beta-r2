@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND==sci-libs/fftw-2* >=x11-libs/fox-1.6.19:1.6 >=media-libs/audiofile-0.2.3 >=media-libs/ladspa-sdk-1.12 >=media-libs/ladspa-cmt-1.15 alsa? ( >=media-libs/alsa-lib-1.0 ) flac? ( >=media-libs/flac-1.1.2[cxx] ) jack? ( media-sound/jack-audio-connection-kit ) portaudio? ( >=media-libs/portaudio-18 ) soundtouch? ( >=media-libs/libsoundtouch-1.2.1 ) vorbis? ( media-libs/libvorbis media-libs/libogg )
 SLOT=0
 SRC_URI=mirror://sourceforge/rezound/rezound-0.12.3beta.tar.gz mirror://gentoo/rezound-0.12.3_beta-patches-6.tar.bz2
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=09ef094f90af2171aaa049d6694c3330
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=f261787640dd32017a6b54ce75387e81

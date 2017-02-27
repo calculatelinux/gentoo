@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 965e6b9e23a6c34027c75bb4f1940b49c7ed2f84 $
 
 MY_PN="${PN/-/_}"
 MY_P="${MY_PN}-${PV}"

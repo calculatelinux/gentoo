@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 74e676ee4e80c4d0710e6c4cc701992705caa40c $
 
 # @ECLASS: versionator.eclass
 # @MAINTAINER:

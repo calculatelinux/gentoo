@@ -8,4 +8,4 @@ LICENSE=MIT
 RDEPEND=>=dev-libs/libvterm-0.0_pre20151022 dev-libs/glib:2 x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/gtk+:2 x11-libs/pango
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~tranquility/distfiles/pangoterm-0.0_pre20160305.tar.gz
-_md5_=efd7d174844a31f841e0f897229112dd
+_md5_=92d2d330164961c71ef4193691c200f2

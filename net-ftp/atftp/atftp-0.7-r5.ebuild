@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 66f7cbee1db0d0e779b6cd734d0795eddcfe2e34 $
 
 EAPI=6
 inherit autotools flag-o-matic systemd

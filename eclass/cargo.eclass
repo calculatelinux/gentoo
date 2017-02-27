@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d2140dc99bc04584c0d9f4d219004f07a705616a $
 
 # @ECLASS: cargo.eclass
 # @MAINTAINER:

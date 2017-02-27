@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 432b47323793e376d7bbf617589f1b8fdccebe46 $
 
 DESCRIPTION="Linux Gazette - all issues"
 HOMEPAGE="http://linuxgazette.net/"

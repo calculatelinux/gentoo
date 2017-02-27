@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b5ee23b0c991aa0a2b3fd4f3128ccfa25617fb82 $
 
 EAPI=5
 SWORD_MODULE="TSK"

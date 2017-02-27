@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~ppc ~sparc ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://github.com/rofl0r/proxychains-ng/releases/download/v4.12/proxychains-ng-4.12.tar.xz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=1c5700577aee82f177a77c9294f2e3a7
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=88b53912690ffc9789867ac309fd22c1

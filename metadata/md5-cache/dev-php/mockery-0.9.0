@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=dev-lang/php:* >=dev-php/pear-1.9.0
 SLOT=0
 SRC_URI=http://pear.survivethedeepend.com/get/Mockery-0.9.0.tgz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	php-pear-lib-r1	ddea8bba98cb56b7acc5a966ea40cb2c	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=73382b13fbb90a43b61c6d106a1a3de0
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	php-pear-lib-r1	045013d30202ee23f15d45f60ec37602	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=d7af750760b585097ec27b03ea8372a7

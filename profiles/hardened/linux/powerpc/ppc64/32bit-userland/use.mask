@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 40f9f05ad9909fb61ffbe6384dbe2d4f190220a7 $
 
 # Thomas Deutschmann <whissi@gentoo.org> (28 Jan 2017)
 # No JAVA in 32-bit userland

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: bd6f0f67ff8cd8647236cd7c0859175ff0b3da97 $
 
 # Pacho Ramos <pacho@gentoo.org> (15 Feb 2014)    
 # libev isn't supported on this arch, use another default (#499498)

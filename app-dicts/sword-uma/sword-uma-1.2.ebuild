@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 5a63d30ee6bbe6c370c4fd3cd0a9c53d4608a245 $
 
 EAPI=5
 SWORD_MODULE="Uma"

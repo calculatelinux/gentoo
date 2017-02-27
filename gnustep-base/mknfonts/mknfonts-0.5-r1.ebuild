@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d7d3dc482c62a35c9bc88f69c5c302148b6bdc81 $
 
 inherit eutils gnustep-base
 

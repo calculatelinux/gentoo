@@ -9,5 +9,5 @@ LICENSE=GPL-3+ public-domain
 RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 >=dev-db/sqlite-3.11:3
 SLOT=0
 SRC_URI=https://github.com/Gnurou/tagainijisho/releases/download/1.0.3/tagainijisho-1.0.3.tar.gz
-_eclasses_=cmake-utils	014267c4475c1a625ecec5b16e0db1e6	eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	gnome2-utils	c6dcdf3a2c22b578b16adb945dc85c35	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c	xdg-utils	e2b2bd56125ce8cf59ce30c642b59d48
-_md5_=986ae4f202b8d41b4955c2bf2ea153ae
+_eclasses_=cmake-utils	2458cfb36e2d6d3e1ae94a1f17cbd8cb	eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	gnome2-utils	6ac81c289e6fd66edb59051e57d895e3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5	xdg-utils	169c13f9ec65368f6f6b2961e68dc152
+_md5_=48c1fe9088ba1cba4495212f2bee3cf5

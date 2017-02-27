@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0b2b4254027c1a98eddacd8fb4cf5b12ed296f93 $
 
 EAPI="3"
 DESCRIPTION="Simplified Wrapper and Interface Generator"

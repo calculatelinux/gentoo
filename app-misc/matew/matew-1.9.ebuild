@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 326b2179771b88e6bfb8183e2980d7bcf500c5c9 $
 
 DESCRIPTION="Make Album The Easy Way (Matew) is an HTML/CSS generator for static image albums"
 HOMEPAGE="http://inquisb.github.io/matew/"

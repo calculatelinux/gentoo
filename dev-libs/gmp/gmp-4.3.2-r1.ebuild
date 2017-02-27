@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 49e2f0c1534eb1c581ff42581c5747de5457fe86 $
 
 # this ebuild is only for the libgmp.so.3 ABI SONAME
 

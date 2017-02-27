@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: eb14f71a80b504ccbfd9c97663d5337ca02a66d4 $
 
 # Thomas Deutschmann <whissi@gentoo.org> (2016-12-04)
 # sci-libs/gdal[mdb] requires dev-java/jackcess which is not keyworded

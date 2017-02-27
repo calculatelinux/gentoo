@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b4056376378c6d081f2212e1f632a5b7b793f02a $
 
 DESCRIPTION="Collection of XMMS themes for Audacious"
 HOMEPAGE="http://www.xmms.org"

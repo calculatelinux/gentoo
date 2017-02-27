@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9c8daca9f5aa4163e4ad9714af62ce2b04cd3b1d $
 
 inherit linux-mod subversion
 

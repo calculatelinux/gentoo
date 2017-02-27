@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: eba4913a7d646a02cd405887e560e48742c5b217 $
 
 EAPI=5
 SWORD_MODULE="Easton"

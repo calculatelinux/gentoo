@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=json? ( dev-libs/jansson ) xml? ( dev-libs/libxml2:2 ) yaml? ( dev-libs/libyaml ) app-eselect/eselect-ctags
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~radhermit/vim/ctags-20161028.tar.xz
-_md5_=aa6e90dd7cfa60d45974e8c0f7dec9de
+_md5_=b081f23b48afec97abee98c08b543a8d

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=games-engines/scummvm-1.1 games-misc/games-envd
 SLOT=0
 SRC_URI=l10n_cs? ( http://www.ucw.cz/draci-historie/binary/dh-cz-2012.zip ) l10n_de? ( http://www.ucw.cz/draci-historie/binary/dh-de-2012.zip ) l10n_en? ( http://www.ucw.cz/draci-historie/binary/dh-en-2012.zip ) l10n_pl? ( http://www.ucw.cz/draci-historie/binary/dh-pl-2012.zip ) !l10n_cs? ( !l10n_de? ( !l10n_en? ( !l10n_pl? ( http://www.ucw.cz/draci-historie/binary/dh-en-2012.zip ) ) ) )
-_eclasses_=base	3fe4f8980633fd7bc69e9887209ba2fe	eutils	708f85bc1bf00876604e223fb56e062a	games	2cf0d67d765e6358b435ccda30c13ad8	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	unpacker	45d07319df5f40ee6af58418b0f930be	user	e10ccb95af96d45f86016fa982a949bb
-_md5_=77094bef34f27240804d8768cf3ffc25
+_eclasses_=base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	games	7d9d6853e639bbb857a211ed996360a3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	unpacker	2afe53b558f4ad6955316e702a4c9cfa	user	e28cdd9fa5d8069e8e047c82db5d57bd
+_md5_=3f186ecdd701e40ff90e6461cdc59624

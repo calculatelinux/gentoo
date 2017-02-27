@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 414051578f78c7d60fb2722b4e4fb1e2faa76854 $
 
 EAPI=5
 inherit cdrom games

@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 54a4e1b7a432b16efa79034413c1d06fe620578a $
 
 EAPI=6
 AUTOTOOLS_PRUNE_LIBTOOL_FILES="modules"

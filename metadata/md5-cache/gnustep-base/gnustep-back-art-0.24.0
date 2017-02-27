@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=doc? ( virtual/texi2dvi dev-tex/latex2html app-text/texi2html ) =gnustep-base/gnustep-gui-0.24* opengl? ( virtual/opengl virtual/glu ) x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXext x11-libs/libXi x11-libs/libXmu x11-libs/libXt x11-libs/libXft x11-libs/libXrender >=media-libs/freetype-2.1.9 >=media-libs/libart_lgpl-2.3 >=gnustep-base/mknfonts-0.5-r1 media-fonts/dejavu !gnustep-base/gnustep-back-cairo !gnustep-base/gnustep-back-xlib
 SLOT=0
 SRC_URI=ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-back-0.24.0.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	gnustep-base	63e3d261394d84127e82e8de711e85a8	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=ab616674ed5812229c0976a2f0c906a2
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	gnustep-base	3c307c09e94841a16931a67449f23975	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=a19474b8eb8265daaea7a8d6ef50e81d

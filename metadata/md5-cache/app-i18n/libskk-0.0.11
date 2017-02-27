@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/glib-2.16 dev-libs/libgee:0 dev-libs/json-glib introspection? ( >=dev-libs/gobject-introspection-0.10.8 ) nls? ( virtual/libintl )
 SLOT=0
 SRC_URI=mirror://github/ueno/libskk/libskk-0.0.11.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	vala	ca3f1c504058f5de407febddfae73167	virtualx	86c9305a59b3e0459e7fbef3a5f30b96
-_md5_=f9c301f4952f45400c881b1156dd9b8d
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	vala	0188bc6aa00caa542d0c760355424856	virtualx	56466ac07ba26f9975b9607fa497be2c
+_md5_=e5dd51c0edbd1c3fe766ecdc65a82ec8

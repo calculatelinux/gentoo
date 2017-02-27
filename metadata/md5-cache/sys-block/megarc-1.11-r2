@@ -9,5 +9,5 @@ LICENSE=LSI
 RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=http://www.avagotech.com/docs-and-downloads/legacy-raid-controllers/legacy-raid-controllers-common-files/ut_linux_megarc_1-11.zip http://www.avagotech.com/docs-and-downloads/raid-controllers/raid-controllers-common-files/README_FOR_ut_linux_megarc_1-11-zip.txt
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=3403b194fa6d3743da9877e407e6032d
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=db8b8b6adc0e7aba5a15c9408de1698b

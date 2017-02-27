@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 439960379bf975952e8ddf77a59d85b2d4d91ed2 $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:

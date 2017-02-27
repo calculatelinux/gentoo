@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/glibc[nscd(+)]
 SLOT=0
 SRC_URI=https://busybox.net/~vda/unscd/nscd-0.52.c
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=b16e4e31b44d0f0e5d897626c0ab3100
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=07a73195d029ee6b38257c89d2f21c56

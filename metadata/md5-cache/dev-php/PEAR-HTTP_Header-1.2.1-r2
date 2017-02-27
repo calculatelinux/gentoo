@@ -7,4 +7,4 @@ LICENSE=BSD-2
 RDEPEND=dev-lang/php:* dev-php/PEAR-HTTP
 SLOT=0
 SRC_URI=http://download.pear.php.net/package/HTTP_Header-1.2.1.tgz
-_md5_=f8e6fe424fe93f4898f10ecbba82872a
+_md5_=2bf337a4eabbfe9803a564e82fe31090

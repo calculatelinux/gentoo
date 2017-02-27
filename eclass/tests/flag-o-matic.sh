@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 762a5f74d94d1ebcacfa4128cfbb24c508d854d5 $
 
 source tests-common.sh
 

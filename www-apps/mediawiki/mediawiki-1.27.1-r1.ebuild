@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: adcafa361e890787acd8bc3e9199e7b7cb1f0746 $
 
 EAPI=5
 inherit webapp versionator

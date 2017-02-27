@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/e/n/enum/enum-1.1.tar.bz2
-_md5_=1c8d7722c7622a0a21b5aa6534f7aefa
+_md5_=51e7d6d41b138bdd720d79b9e903076c

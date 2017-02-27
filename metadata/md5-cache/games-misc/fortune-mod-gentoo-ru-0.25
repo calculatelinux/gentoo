@@ -8,4 +8,4 @@ LICENSE=fairuse
 RDEPEND=games-misc/fortune-mod
 SLOT=0
 SRC_URI=https://slepnoga.googlecode.com/files/gentoo-ru-0.25.gz http://marsoft.dyndns.info/fortunes-gentoo-ru/gentoo-ru-0.25.gz
-_md5_=c06cf01ce1bda26db7a8345b744ed357
+_md5_=40a78f801aeaadc61a0d5a8efc6106e4

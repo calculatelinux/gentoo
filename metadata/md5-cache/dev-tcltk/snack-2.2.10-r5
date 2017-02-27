@@ -10,5 +10,5 @@ RDEPEND=>dev-lang/tcl-8.4.3:0 >dev-lang/tk-8.4.3:0 alsa? ( media-libs/alsa-lib )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.speech.kth.se/snack/dist/snack2.2.10.tar.gz
-_eclasses_=distutils	4854d07a21a43c0d63fce28fff665e0b	eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	python	8b7143ec94293338ed5da8a7ef97cfdb	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=04dd6bea75b9bc4abd15bd476b2c3284
+_eclasses_=distutils	2308db8f173ae587333b62c44bdab684	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python	5d5de4f6044d29f62c6084083a6d113b	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=085fa0d232178b2bd0eb902d3cb47c84

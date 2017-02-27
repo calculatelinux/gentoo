@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=media-sound/jack-audio-connection-kit >=media-libs/liblo-0.10 >=dev-libs/libsigc++-2.2.10:2 >=media-libs/libsndfile-1.0.2 >=media-libs/libsamplerate-0.0.13 dev-libs/libxml2 >=media-libs/rubberband-0.0.13 sci-libs/fftw:3.0 wxwidgets? ( x11-libs/wxGTK:3.0 )
 SLOT=0
 SRC_URI=http://essej.net/sooperlooper/sooperlooper-1.7.3.tar.gz mirror://gentoo/sooperlooper-1.6.5-m4.tar.bz2
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	wxwidgets	9b34ce3ca77f4e418e8fd9951c4c1cb1
-_md5_=3cbb818346a1fc346d3e182092789fb6
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	wxwidgets	9ff07a933cb39f9586154ebac62ef0fa
+_md5_=99865ae4e530904256d6c144d1d126e6

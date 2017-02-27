@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: aaa13254f6912248b1f6089a3c91e46893052266 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/geometry_experimental"

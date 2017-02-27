@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://debian/pool/main/p/pdmenu/pdmenu_1.3.4.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=f321cc005f213ee78415adfb47e87f95
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=b9a6ef36da491315ab232c9fb31bf8c6

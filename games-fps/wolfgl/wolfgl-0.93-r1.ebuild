@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: d3b3a7c754350a177cda3d073683df71487f361b $
 
 EAPI=2
 #ECVS_SERVER="wolfgl.cvs.sourceforge.net:/cvsroot/wolfgl"

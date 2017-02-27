@@ -7,5 +7,5 @@ KEYWORDS=~amd64
 LICENSE=MIT
 SLOT=0
 SRC_URI=https://github.com/mattn/gom/archive/c522e7d.tar.gz -> gom-0_pre20151110.tar.gz
-_eclasses_=golang-base	a42b7e0ca33d7ab0c0fa52699435b816	golang-build	a44f10e6bd86ecccf2a07cc0d4cf6bec	golang-vcs-snapshot	1caa6d8238d2378ad688ae068ff22e5a
-_md5_=a9083b745813c6a31bef856c02edbb31
+_eclasses_=golang-base	0f75d9692d09462687e69a4c6dda0d16	golang-build	6105adc054fab1d12e49129dbb97ebe6	golang-vcs-snapshot	192c4e42089abf548c85be344086b1ff
+_md5_=591377a486a3b90941cdc1930288cc77

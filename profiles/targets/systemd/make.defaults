@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 0956dfe340b1d3dff27487a02ef57d7c3097232d $
 
 USE="systemd udev"
 

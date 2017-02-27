@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2
 RDEPEND=dev-libs/libgcrypt:0=
 SLOT=0
 SRC_URI=https://github.com/sahlberg/libiscsi/archive/1.18.0.tar.gz -> libiscsi-1.18.0.tar.gz
-_eclasses_=autotools	07e71b3b5690738ef7e8bc097077e00c	libtool	84763589a795fb127b537cac01e5359f	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=5a49dde00cc19612b6dc9d44bb520404
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=9f5bb432e9225ea297008d480a361807

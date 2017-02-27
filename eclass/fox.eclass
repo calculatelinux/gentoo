@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b1f55994291b3ce57b50d8a92e531698e33d23c5 $
 
 # @ECLASS: fox.eclass
 # @MAINTAINER:

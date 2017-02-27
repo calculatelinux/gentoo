@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 33595b80a0d4d8d9f20d04907260299eb5c3ebc9 $
 
 EAPI=5
 MY_P=${P/_/-}

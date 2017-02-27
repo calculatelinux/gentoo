@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/libX11 x11-libs/libXrender x11-libs/libXft x11-libs/libXdmcp x11-libs/libXau
 SLOT=0
 SRC_URI=mirror://sourceforge/sf-xpaint/netwmpager-2.05.tar.bz2
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=c5acde36c252ed89cbb887e17261f443
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=45bcb568611201fd8abe71a19c195ae7

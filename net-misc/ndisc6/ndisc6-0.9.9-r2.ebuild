@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 75a195475bef094000b2cfd13657dd05f21d4ee7 $
 
 DESCRIPTION="Recursive DNS Servers discovery Daemon (rdnssd) for IPv6"
 HOMEPAGE="http://www.remlab.net/ndisc6/"

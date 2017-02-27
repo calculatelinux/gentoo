@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fe69b1d6a41572d94563f7fffc44be5d1a70285f $
 
 EAPI=6
 GNOME2_LA_PUNT="yes" # plugins are dlopened

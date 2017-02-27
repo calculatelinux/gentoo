@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b673476acf382afc713856dee2c5cf91ec6bc9b6 $
 
 EAPI=5
 SWORD_MODULE="HebrewGreek"

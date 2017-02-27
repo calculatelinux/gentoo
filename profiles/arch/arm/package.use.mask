@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 9d6105cced410b4a1a6e93d60b244085ba62c523 $
 
 # Christoph Junghans <junghans@gentoo.org> (05 Feb 2017)
 # Mask some fabrics

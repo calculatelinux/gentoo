@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 3e247566dfa012a6a7a4a94652431ff3340786fc $
 
 EAPI=5
 EGO_PN=github.com/shurcooL/sanitized_anchor_name

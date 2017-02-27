@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 07c22f732d087a5ea50548d900a1445c1f76749d $
 
 EAPI=6
 KDE_HANDBOOK="optional"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 942a885d3b026afed1e6888d5646082068523406 $
 
 EAPI=5
 SWORD_MODULE="DRC"

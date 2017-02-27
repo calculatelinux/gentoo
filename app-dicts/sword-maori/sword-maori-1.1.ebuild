@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 12336a928396382a41f996704328bb56875b90ed $
 
 EAPI=5
 SWORD_MODULE="Maori"

@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 6c12fd061b84ea17b9f2e570187dbed80fc0478e $
 
 EAPI=6
 VIRTUALX_REQUIRED="test"

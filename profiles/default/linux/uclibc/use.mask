@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4317e3438c54f2933de37cdc53fdb8c2be7706e1 $
 
 # Thomas Deutschmann <whissi@gentoo.org> (28 Jan 2017)
 # No JAVA in uclibc

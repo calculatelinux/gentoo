@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a5e0051d9345e548985276b27d952ff6c399b8ef $
 
 inherit rpm toolchain-funcs
 

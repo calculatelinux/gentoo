@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=>=dev-lang/lua-5.1[deprecated] dev-libs/expat
 SLOT=0
 SRC_URI=http://matthewwild.co.uk/projects/luaexpat/luaexpat-1.2.0.tar.gz
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	flag-o-matic	35067884fbff37bc0c8e7421c5315558	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=060118e4b4c1ee1d677e052cf500e6d1
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=46892dc3cf2592531b31fd55c884def6

@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: fabdc2015c7ce46b25b2dd6f612404034b0d89a0 $
 
 EAPI=5
 # ruby22 -> fails specs

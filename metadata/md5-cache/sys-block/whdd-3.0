@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-util/dialog sys-libs/ncurses:0=[unicode] sys-apps/smartmontools
 SLOT=0
 SRC_URI=https://github.com/whdd/whdd/tarball/3.0 -> whdd-3.0.tar.gz
-_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	vcs-snapshot	2b65ecb2d0f91e4322c2ac8d673993bd
-_md5_=4185d6f8ef0833c1c54b912fbaddd655
+_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	vcs-snapshot	10b045661d7c5178ffdf37fbf47278d6
+_md5_=d2758fd40b1cf82b5c37fe52907dc714

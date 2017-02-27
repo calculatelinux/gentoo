@@ -6,4 +6,4 @@ KEYWORDS=ppc x86
 LICENSE=GPL-2 LGPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge/tiny-cobol/isam/vbisam-2.0.tar.bz2
-_md5_=4a67c868587257c12a4aa0e4f9868aee
+_md5_=b0cc8d55428cf1dd29befc40444bb01f

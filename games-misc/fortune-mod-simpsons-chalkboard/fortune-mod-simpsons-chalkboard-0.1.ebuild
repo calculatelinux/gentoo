@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: a58360734fe9b14275b32a2c9eb35849bf51e4dc $
 EAPI=5
 MY_P=${PN/-mod/}
 DESCRIPTION="Quotes from Bart Simpson's Chalkboard, shown at the opening of each Simpsons episode"

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: b19b0fa522e3ba733e678f0377f6e6e52e9d29cd $
 
 # @ECLASS: mysql-multilib.eclass
 # @MAINTAINER:

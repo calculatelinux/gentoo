@@ -8,4 +8,4 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/http-fetcher-1.0.1
 SLOT=0
 SRC_URI=mirror://sourceforge/fetch/fetch-1.0.tar.gz
-_md5_=6d91246c0530ecbda04c33ef5b3b916c
+_md5_=5311ee9748bc2247a1bced6e73a51d57

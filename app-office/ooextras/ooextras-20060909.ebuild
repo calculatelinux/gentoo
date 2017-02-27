@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: c7a2294e4078c60763818d3df81f09aeaf6cfe8e $
 
 DESCRIPTION="OOExtras: Extra Templates for OpenOffice.org!"
 HOMEPAGE="http://ooextras.sourceforge.net/"

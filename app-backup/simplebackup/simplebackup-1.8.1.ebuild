@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4458b2a14d39768349760626ce42a46e495ec63f $
 
 DESCRIPTION="Cross-platform backup program"
 HOMEPAGE="http://migas-sbackup.sourceforge.net/"

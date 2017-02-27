@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: df92348824205aa046f731812e002ae5669bcc5d $
 
 DESCRIPTION="a dockable weather monitor for standard METAR stations using ICAO location"
 HOMEPAGE="http://www.godisch.de/debian/wmweather"

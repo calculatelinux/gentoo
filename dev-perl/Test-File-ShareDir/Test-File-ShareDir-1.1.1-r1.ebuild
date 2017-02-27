@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 4c79ba7f4488cde420522c7c087e312a2001783f $
 
 EAPI=5
 MODULE_AUTHOR=KENTNL

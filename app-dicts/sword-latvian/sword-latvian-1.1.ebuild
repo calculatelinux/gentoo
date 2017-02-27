@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
+# $Id: 516d39b81e0e434f9955192532a7e9b806c2c95e $
 
 EAPI=5
 SWORD_MODULE="Latvian"
