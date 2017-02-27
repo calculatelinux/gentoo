@@ -1,6 +1,6 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 992bab77440f0ec9831d4f7257afd37528d018ba $
+# $Id: 63907753b35d37fdc64fa20ea7443c7e99667c01 $
 
 EAPI=5
 
@@ -48,6 +48,7 @@ RDEPEND="
 
 python_prepare_all() {
 	sed -i '/^hacking/d' test-requirements.txt || di
+	distutils-r1_python_prepare_all
 }
 
 python_compile_all() {

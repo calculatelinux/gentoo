@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 949d1e979847b25576dd177b154eef25309e3d2f $
+# $Id: 5c354d6c19209e60e40e2b0327aa169950463b08 $
 
 EAPI=5
 USE_RUBY="ruby21 ruby22 ruby23"
@@ -17,7 +17,7 @@ HOMEPAGE="http://kramdown.gettalong.org/"
 LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64"
 IUSE="latex"
 
 LATEX_DEPS="latex? ( dev-texlive/texlive-latex dev-texlive/texlive-latexextra )"

@@ -1,12 +1,12 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e771ee519dce7d36e0d45d52c682df676c97e7cc $
+# $Id: fc40f0f15b2b46804689a52a096b777dd7062dbe $
 
 EAPI=5
 
 ROS_REPO_URI="https://github.com/ros/genlisp"
 KEYWORDS="~amd64 ~arm"
-PYTHON_COMPAT=( python{2_7,3_4,3_5} pypy{,3} )
+PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} pypy{,3} )
 
 inherit ros-catkin
 

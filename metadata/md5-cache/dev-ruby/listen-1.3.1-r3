@@ -4,11 +4,11 @@ DESCRIPTION=Listens to file modifications and notifies you about the changes
 EAPI=5
 HOMEPAGE=https://github.com/guard/listen
 IUSE=test elibc_FreeBSD ruby_targets_ruby20 ruby_targets_ruby21 ruby_targets_ruby22 test test
-KEYWORDS=amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x64-macos
+KEYWORDS=amd64 arm ppc ppc64 x86 ~amd64-linux ~x64-macos
 LICENSE=MIT
 RDEPEND=ruby_targets_ruby20? ( >=dev-ruby/rb-inotify-0.9.0[ruby_targets_ruby20] ) ruby_targets_ruby21? ( >=dev-ruby/rb-inotify-0.9.0[ruby_targets_ruby21] ) ruby_targets_ruby22? ( >=dev-ruby/rb-inotify-0.9.0[ruby_targets_ruby22] ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby21? ( dev-lang/ruby:2.1 ) ruby_targets_ruby22? ( dev-lang/ruby:2.2 ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ruby_targets_ruby21? ( virtual/rubygems[ruby_targets_ruby21] ) ruby_targets_ruby22? ( virtual/rubygems[ruby_targets_ruby22] )
 REQUIRED_USE=|| ( ruby_targets_ruby20 ruby_targets_ruby21 ruby_targets_ruby22 )
 SLOT=1
 SRC_URI=https://github.com/guard/listen/archive/v1.3.1.tar.gz -> listen-1.3.1-git.tgz
 _eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	java-utils-2	ebeaf17afbac1fe2f3549ea6afa504e3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	ruby-fakegem	a145852a8a0b3b5574a3c20efb80a291	ruby-ng	24d3dedc45a61c38629b685b9f0f19fa	ruby-utils	68337f99ff1d7cee213f5c5da7c76213	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
-_md5_=8adec6be38ef9cba79edf0a4fb701b0d
+_md5_=393b2fe0b976d3b9a37c9b364e09abe2

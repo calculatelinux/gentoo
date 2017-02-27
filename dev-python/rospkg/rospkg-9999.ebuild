@@ -1,9 +1,9 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: cd2e7b33c72044e2022d1f9c7404ecb265a41eb1 $
+# $Id: 56908705af3d64e5d8ef11a46a901ce62672bbef $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_4,3_5} pypy{,3} )
+PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} pypy{,3} )
 
 SCM=""
 if [ "${PV#9999}" != "${PV}" ] ; then

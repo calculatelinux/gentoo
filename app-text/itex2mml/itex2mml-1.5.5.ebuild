@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0bdc5559566aca33c4c6fedbd9da9b3dec360e49 $
+# $Id: d54a9a5a63b3b8ec622e80e00ebdfbcf7299953a $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://golem.ph.utexas.edu/~distler/blog/files/itexToMML-${PV}.tar.gz"
 LICENSE="|| ( GPL-2+ MPL-1.1 LGPL-2+ )"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE=""
 
 S="${WORKDIR}/itexToMML/itex-src"

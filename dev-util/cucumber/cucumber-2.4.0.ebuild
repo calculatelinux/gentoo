@@ -1,6 +1,6 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b1cce4d8263d088c75917e4ef8337b9bccb32926 $
+# $Id: c594dfd784cb0209bbd1f5e6c55df36b49568d01 $
 
 EAPI=5
 USE_RUBY="ruby20 ruby21 ruby22"
@@ -18,7 +18,7 @@ DESCRIPTION="Executable feature scenarios"
 HOMEPAGE="https://github.com/aslakhellesoy/cucumber/wikis"
 LICENSE="Ruby"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64"
 SLOT="0"
 IUSE="examples test"
 

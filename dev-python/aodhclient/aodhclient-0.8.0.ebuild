@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ebd7ac8f8cd21c00eaf2b87367eee35e83b049cc $
+# $Id: d262657f4fdc3b62c324a178d167f0037a4cd9df $
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 python3_4 python3_5 )
@@ -31,9 +31,3 @@ RDEPEND="
 	>=dev-python/debtcollector-1.3.0[${PYTHON_USEDEP}]
 	dev-python/pyparsing[${PYTHON_USEDEP}]
 "
-
-python_prepare_all() {
-	# built in...
-	sed -i '/^hacking/d' test-requirements.txt || die
-	distutils-r1_python_prepare_all
-}

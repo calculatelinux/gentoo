@@ -1,13 +1,13 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 930367d85d9ba1c490685b383682ca00d80da34e $
+# $Id: e07ec03855509ef45ff8de08d39680ab5a740d86 $
 
 EAPI=5
 
 CATKIN_HAS_MESSAGES=yes
 ROS_REPO_URI="https://github.com/ros/ros_comm_msgs"
 KEYWORDS="~amd64 ~arm"
-PYTHON_COMPAT=( python{2_7,3_4,3_5} )
+PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} pypy{,3} )
 ROS_SUBDIR=${PN}
 CATKIN_MESSAGES_TRANSITIVE_DEPS="dev-ros/std_msgs"
 

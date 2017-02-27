@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: aadbcdddb1b925bd54dec75a77af6aee2d8d9906 $
+# $Id: 09ebc18a1ef4255c5a36352ba26136d6546fd9f6 $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://golem.ph.utexas.edu/~distler/blog/itex2MML.html"
 
 LICENSE="|| ( GPL-2+ MPL-1.1 LGPL-2+ )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE=""
 
 #Tests don't fail here

@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 883e9a8828a209ef8f3064c0b0833cbd4e4cf015 $
+# $Id: 6af6a63b9649a49e5292318797925da704800699 $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ if [ "${PV#9999}" != "${PV}" ] ; then
 	EGIT_REPO_URI="https://github.com/ros/catkin"
 fi
 
-PYTHON_COMPAT=( python{2_7,3_4,3_5} pypy{,3} )
+PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} pypy{,3} )
 
 inherit ${SCM} cmake-utils python-r1 python-utils-r1
 

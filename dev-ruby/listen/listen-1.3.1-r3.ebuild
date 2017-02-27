@@ -1,6 +1,6 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 441e2e65b4f9dcf26b0d4fec27f1efbed6c9a438 $
+# $Id: c5f70794c71aeb0bd9cf28693e0dd0b5c5b2b31d $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ SRC_URI="https://github.com/guard/listen/archive/v${PV}.tar.gz -> ${P}-git.tgz"
 
 LICENSE="MIT"
 SLOT="1"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x64-macos"
+KEYWORDS="amd64 arm ppc ppc64 x86 ~amd64-linux ~x64-macos"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/rb-inotify-0.9.0"

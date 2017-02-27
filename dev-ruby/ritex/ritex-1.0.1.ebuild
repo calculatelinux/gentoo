@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c545d81ca2d3041e6875caa5bdc03da90f2fea46 $
+# $Id: b4dbcc0f2f7115663d05afb26d14b3e32e9ea521 $
 
 EAPI=5
 USE_RUBY="ruby21 ruby22 ruby23"
@@ -15,7 +15,7 @@ HOMEPAGE="http://masanjin.net/ritex/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE=""
 
 ruby_add_rdepend "dev-ruby/racc"

@@ -4,11 +4,11 @@ DESCRIPTION=Yet-another-markdown-parser but fast, pure Ruby, using strict syntax
 EAPI=5
 HOMEPAGE=http://kramdown.gettalong.org/
 IUSE=latex test elibc_FreeBSD ruby_targets_ruby21 ruby_targets_ruby22 ruby_targets_ruby23 doc test test
-KEYWORDS=~amd64 ~ppc ~ppc64
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64
 LICENSE=MIT
 RDEPEND=latex? ( dev-texlive/texlive-latex dev-texlive/texlive-latexextra ) ruby_targets_ruby21? ( dev-ruby/prawn:2[ruby_targets_ruby21] >=dev-ruby/prawn-table-0.2.2[ruby_targets_ruby21] =dev-ruby/prawn-table-0.2*[ruby_targets_ruby21] >=dev-ruby/rouge-1.8:0[ruby_targets_ruby21] >=dev-ruby/itextomml-1.5[ruby_targets_ruby21] >=dev-ruby/coderay-1.0.0[ruby_targets_ruby21] >=dev-ruby/ritex-1.0[ruby_targets_ruby21] >=dev-ruby/stringex-1.5.1[ruby_targets_ruby21] ) ruby_targets_ruby22? ( dev-ruby/prawn:2[ruby_targets_ruby22] >=dev-ruby/prawn-table-0.2.2[ruby_targets_ruby22] =dev-ruby/prawn-table-0.2*[ruby_targets_ruby22] >=dev-ruby/rouge-1.8:0[ruby_targets_ruby22] >=dev-ruby/itextomml-1.5[ruby_targets_ruby22] >=dev-ruby/coderay-1.0.0[ruby_targets_ruby22] >=dev-ruby/ritex-1.0[ruby_targets_ruby22] >=dev-ruby/stringex-1.5.1[ruby_targets_ruby22] ) ruby_targets_ruby23? ( dev-ruby/prawn:2[ruby_targets_ruby23] >=dev-ruby/prawn-table-0.2.2[ruby_targets_ruby23] =dev-ruby/prawn-table-0.2*[ruby_targets_ruby23] >=dev-ruby/rouge-1.8:0[ruby_targets_ruby23] >=dev-ruby/itextomml-1.5[ruby_targets_ruby23] >=dev-ruby/coderay-1.0.0[ruby_targets_ruby23] >=dev-ruby/ritex-1.0[ruby_targets_ruby23] >=dev-ruby/stringex-1.5.1[ruby_targets_ruby23] ) ruby_targets_ruby21? ( dev-lang/ruby:2.1 ) ruby_targets_ruby22? ( dev-lang/ruby:2.2 ) ruby_targets_ruby23? ( dev-lang/ruby:2.3 ) ruby_targets_ruby21? ( virtual/rubygems[ruby_targets_ruby21] ) ruby_targets_ruby22? ( virtual/rubygems[ruby_targets_ruby22] ) ruby_targets_ruby23? ( virtual/rubygems[ruby_targets_ruby23] )
 REQUIRED_USE=|| ( ruby_targets_ruby21 ruby_targets_ruby22 ruby_targets_ruby23 )
 SLOT=0
 SRC_URI=mirror://rubygems/kramdown-1.13.2.gem
 _eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	java-utils-2	ebeaf17afbac1fe2f3549ea6afa504e3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	ruby-fakegem	a145852a8a0b3b5574a3c20efb80a291	ruby-ng	24d3dedc45a61c38629b685b9f0f19fa	ruby-utils	68337f99ff1d7cee213f5c5da7c76213	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
-_md5_=371443d3ca77ed40f28797ba7be2406d
+_md5_=b989a7f528b18f9cd8ab1ed07b27ea7a

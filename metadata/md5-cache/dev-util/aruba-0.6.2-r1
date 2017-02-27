@@ -4,11 +4,11 @@ DESCRIPTION=Cucumber steps for driving out command line applications
 EAPI=5
 HOMEPAGE=https://github.com/cucumber/aruba
 IUSE=test elibc_FreeBSD ruby_targets_ruby20 ruby_targets_ruby21 ruby_targets_ruby22 ruby_targets_ruby23 test test
-KEYWORDS=~amd64 ~ppc
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64
 LICENSE=MIT
 RDEPEND=ruby_targets_ruby20? ( >=dev-ruby/childprocess-0.3.6[ruby_targets_ruby20] >=dev-ruby/rspec-expectations-2.7:2[ruby_targets_ruby20] >=dev-util/cucumber-1.1.1[ruby_targets_ruby20] ) ruby_targets_ruby21? ( >=dev-ruby/childprocess-0.3.6[ruby_targets_ruby21] >=dev-ruby/rspec-expectations-2.7:2[ruby_targets_ruby21] >=dev-util/cucumber-1.1.1[ruby_targets_ruby21] ) ruby_targets_ruby22? ( >=dev-ruby/childprocess-0.3.6[ruby_targets_ruby22] >=dev-ruby/rspec-expectations-2.7:2[ruby_targets_ruby22] >=dev-util/cucumber-1.1.1[ruby_targets_ruby22] ) ruby_targets_ruby23? ( >=dev-ruby/childprocess-0.3.6[ruby_targets_ruby23] >=dev-ruby/rspec-expectations-2.7:2[ruby_targets_ruby23] >=dev-util/cucumber-1.1.1[ruby_targets_ruby23] ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby21? ( dev-lang/ruby:2.1 ) ruby_targets_ruby22? ( dev-lang/ruby:2.2 ) ruby_targets_ruby23? ( dev-lang/ruby:2.3 ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ruby_targets_ruby21? ( virtual/rubygems[ruby_targets_ruby21] ) ruby_targets_ruby22? ( virtual/rubygems[ruby_targets_ruby22] ) ruby_targets_ruby23? ( virtual/rubygems[ruby_targets_ruby23] )
 REQUIRED_USE=|| ( ruby_targets_ruby20 ruby_targets_ruby21 ruby_targets_ruby22 ruby_targets_ruby23 )
 SLOT=0
 SRC_URI=mirror://rubygems/aruba-0.6.2.gem
 _eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	java-utils-2	ebeaf17afbac1fe2f3549ea6afa504e3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	ruby-fakegem	a145852a8a0b3b5574a3c20efb80a291	ruby-ng	24d3dedc45a61c38629b685b9f0f19fa	ruby-utils	68337f99ff1d7cee213f5c5da7c76213	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
-_md5_=ed8bd7c29d4b6181e58dc3dc4071dc37
+_md5_=1e5278052bc344abf467d63a1130857b

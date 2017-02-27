@@ -1,8 +1,8 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4a176b15c9b258c5e733d08966b6e32941432787 $
+# $Id: 18cc90376c6bfac793c1798fc2a8e4537ba73a12 $
 
-EAPI=5
+EAPI=6
 
 inherit kde4-base
 

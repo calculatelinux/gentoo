@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0e879f6b3d39aeca1604404c23699598937bcea1 $
+# $Id: a2ea763bf63303492edbbf70c934e1fe0a3c394f $
 
 EAPI=6
 
@@ -18,9 +18,10 @@ HOMEPAGE="https://github.com/openrc/opentmpfiles"
 
 LICENSE="BSD-2"
 SLOT="0"
-IUSE=""
+IUSE="selinux"
 
-RDEPEND="!<sys-apps/openrc-0.23"
+RDEPEND="!<sys-apps/openrc-0.23
+	selinux? ( sec-policy/selinux-base-policy )"
 
 src_install() {
 	default

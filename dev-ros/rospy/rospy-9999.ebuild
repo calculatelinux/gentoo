@@ -1,13 +1,13 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 6f80d45726ac70ad13c8211d445b9847b9ed487f $
+# $Id: 49b26ac67e72ebb07b05d1aed84a4938e5f352f1 $
 
 EAPI=5
 
 ROS_REPO_URI="https://github.com/ros/ros_comm"
 KEYWORDS="~amd64 ~arm"
 CATKIN_HAS_MESSAGES=yes
-PYTHON_COMPAT=( python{2_7,3_4,3_5} pypy{,3} )
+PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} pypy{,3} )
 ROS_SUBDIR=clients/${PN}
 
 inherit ros-catkin

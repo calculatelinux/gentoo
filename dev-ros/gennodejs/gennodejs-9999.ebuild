@@ -1,12 +1,12 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: da4a2af315fbfef47ff4987e6d72f910122d5ac5 $
+# $Id: cf79208096fcff619a4b066c1fbf960361bf0f30 $
 
 EAPI=5
 
 ROS_REPO_URI="https://github.com/RethinkRobotics-opensource/gennodejs"
 KEYWORDS="~amd64 ~arm"
-PYTHON_COMPAT=( python{2_7,3_4,3_5} pypy{,3} )
+PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} pypy{,3} )
 
 inherit ros-catkin
 

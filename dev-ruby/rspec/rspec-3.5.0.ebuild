@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7cdebf1fe8e2eb11c48d6a2d1ac2de53fb27bf3c $
+# $Id: 69d8f3695406225df7a7738c667e716130eca4f6 $
 
 EAPI=5
 USE_RUBY="ruby20 ruby21 ruby22 ruby23"
@@ -17,7 +17,7 @@ HOMEPAGE="https://github.com/rspec/rspec"
 
 LICENSE="MIT"
 SLOT="3"
-KEYWORDS="alpha amd64 arm ~hppa ~ppc ppc64 x86"
+KEYWORDS="alpha amd64 arm ~hppa ppc ppc64 x86"
 IUSE=""
 
 SUBVERSION="$(get_version_component_range 1-2)"
