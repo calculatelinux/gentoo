@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0b8023db44d526c7b8655fcd10fc533649053aba $
+# $Id: ea24fed2df9823697be28073bcff67fa5f2ef04e $
 
 EAPI=5
 USE_RUBY="ruby21 ruby22 ruby23"
@@ -18,7 +18,7 @@ DESCRIPTION="A template language aiming to reduce the syntax to the essential pa
 HOMEPAGE="http://slim-lang.com/"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~arm ~ppc"
+KEYWORDS="~amd64 arm ppc ppc64"
 SLOT="0"
 IUSE="doc"
 

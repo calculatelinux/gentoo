@@ -1,6 +1,6 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 06e77c1d3cb3ca7b9b81bb9da4a1e405ce85e457 $
+# $Id: f77bd476990780b41b493aab9f2e48d7e35df094 $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ HOMEPAGE="https://github.com/bhollis/maruku"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 arm ppc ppc64 x86 ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="highlight test"
 
 ruby_add_bdepend "test? ( dev-ruby/nokogiri-diff )"

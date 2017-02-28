@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 78ddd6279743d1b14633c23e2116bb457c84618a $
+# $Id: f7dbd8a35119ca6ede03d6c8dce9d925236ff610 $
 
 EAPI=6
 inherit autotools eutils flag-o-matic multilib multilib-minimal
@@ -11,7 +11,7 @@ SRC_URI="mirror://alsaproject/plugins/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~sh sparc x86 ~amd64-linux"
+KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~sh sparc x86 ~amd64-linux"
 IUSE="debug ffmpeg jack libav libsamplerate pulseaudio speex"
 
 RDEPEND="

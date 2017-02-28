@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: df76f2ccab92e33ce148efe9e1c6f71e82e67eed $
+# $Id: 70ab4d84fe3cbf0018d366ddee797470d10b6480 $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/texlive-${PV#*_p}-source.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~ppc-macos ~x86-macos"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~ppc-macos ~x86-macos"
 IUSE="iconv static-libs"
 
 DEPEND="iconv? ( virtual/libiconv )

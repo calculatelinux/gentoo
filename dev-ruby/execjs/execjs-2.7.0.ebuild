@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9f559cf0ba6481e90a3d35d395054c166d43395a $
+# $Id: b3edcc5ae0ab1f81eef0d6a30452bb5d52946c4f $
 
 EAPI=5
 USE_RUBY="ruby21 ruby22 ruby23 ruby24"
@@ -18,7 +18,7 @@ SRC_URI="https://github.com/rails/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x64-macos"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x64-macos"
 
 IUSE="test"
 

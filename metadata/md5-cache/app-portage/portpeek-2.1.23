@@ -1,0 +1,14 @@
+DEFINED_PHASES=install
+DEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_python3_5? ( dev-lang/python:3.5 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,python_targets_python3_4(-)?,python_targets_python3_5(-)?,-python_single_target_python2_7(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-)]
+DESCRIPTION=A helper program for maintaining the package.keyword and package.unmask files
+EAPI=5
+HOMEPAGE=http://www.mpagano.com/blog/?page_id=3
+IUSE=python_targets_python2_7 python_targets_python3_4 python_targets_python3_5
+KEYWORDS=~amd64 ~arm ~ppc ~sparc ~x86 ~x86-fbsd
+LICENSE=GPL-2
+RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_python3_5? ( dev-lang/python:3.5 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,python_targets_python3_4(-)?,python_targets_python3_5(-)?,-python_single_target_python2_7(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-)] >=app-portage/gentoolkit-0.3.2-r1 >=sys-apps/portage-2.3.3[python_targets_python2_7(-)?,python_targets_python3_4(-)?,python_targets_python3_5(-)?,-python_single_target_python2_7(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_4 python_targets_python3_5 )
+SLOT=0
+SRC_URI=http://www.mpagano.com/downloads/portpeek-2.1.23.tar.gz
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multibuild	863e759ee14be1c222e6b67853e91c7d	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-r1	34891ed5e2e95ae50a5b75edb0b88769	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=4d748386bfe90fe12e12aab549fde474

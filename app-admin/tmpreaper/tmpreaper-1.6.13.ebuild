@@ -1,6 +1,6 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 17cb55bf0440e92128a0edb69be75deaa99e5b68 $
+# $Id: 4bb7d483054d25bb565756f6450f37bded2474ad $
 
 EAPI="3"
 inherit eutils
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/t/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc x86"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND="sys-fs/e2fsprogs"

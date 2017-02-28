@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5514f1350cbd43074816f6a71376ddbb027349e1 $
+# $Id: 407b1d5a220cd7234c4aa5f2a4a52a0cee9240b8 $
 
 EAPI=6
 
@@ -9,7 +9,7 @@ if [ "${PV}" = "9999" ]; then
 	inherit git-r3
 else
 	SRC_URI="https://dev.gentoo.org/~williamh/dist/${P}.tar.gz"
-	KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
+	KEYWORDS="alpha amd64 arm ~arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
 fi
 
 DESCRIPTION="udev startup scripts for openrc"

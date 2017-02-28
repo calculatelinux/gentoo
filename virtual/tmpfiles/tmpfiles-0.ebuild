@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: bb193ff7afd55cb0cccdaab40aa43a286b5ad6cd $
+# $Id: 37a2731c4f008d40063be1664eca86977f9f7128 $
 
 EAPI=6
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm arm64 ~hppa ~ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 RDEPEND="

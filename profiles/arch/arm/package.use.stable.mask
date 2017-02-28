@@ -1,6 +1,10 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9eee12d255e7541dd0bbf4c7d2309d485df20fcf $
+# $Id: 94ecaadd4b7e304bb8bac7bd606365f76fcebf0c $
+
+# Michael Weber <xmw@gentoo.org> (27 Feb 2017)
+# Stable mask dev-ruby/haml test till rails is stabilized.
+dev-ruby/haml test
 
 # Brian Evans <grknight@gentoo.org> (17 Jan 2017)
 # Stable mask galera since dev-libs/asio is not stable on arm

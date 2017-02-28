@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 223edc716c2d0381b368b8b7dd7f49fd2db8327a $
+# $Id: 9f49f8c9e70576eb1a85648dec35b285db8ba1ec $
 
 EAPI=6
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="An API for simple XML files"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm64 ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="test"
 
 RDEPEND="

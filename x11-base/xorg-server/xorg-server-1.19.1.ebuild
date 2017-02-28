@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f209cb7ff79aaee94781dc570fcc13872c590319 $
+# $Id: 873f2f6b3ff3cf3650c3a2a0b73c6e5d5511d870 $
 
 EAPI=5
 
@@ -18,7 +18,6 @@ IUSE="${IUSE_SERVERS} debug glamor ipv6 libressl minimal selinux +suid systemd t
 CDEPEND=">=app-eselect/eselect-opengl-1.3.0
 	!libressl? ( dev-libs/openssl:0= )
 	libressl? ( dev-libs/libressl )
-	media-libs/freetype
 	>=x11-apps/iceauth-1.0.2
 	>=x11-apps/rgb-1.0.3
 	>=x11-apps/xauth-1.0.3

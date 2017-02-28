@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a5fb0f9667bf4c182a54f9cc11497c8da48536d2 $
+# $Id: baa7a2d1dd2d2e6d930654be4e060968665a21ac $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ HOMEPAGE="https://github.com/rtomayko/tilt"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="amd64 ~arm ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 arm ppc ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 # Block on some of the potential test dependencies. These dependencies

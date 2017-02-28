@@ -1,6 +1,6 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 77dbef4100d161ca86cf926e0860b5fea3f9529d $
+# $Id: 86e272c9a9276900918df18fd892cd473293dcee $
 
 EAPI=6
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://alsaproject/lib/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-linux ~x86-linux"
 IUSE="alisp debug doc elibc_uclibc python"
 
 RDEPEND="python? ( ${PYTHON_DEPS} )

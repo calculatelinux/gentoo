@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ad7dd2ad82fe3506d57a6c87a7de1aa526ecdb2f $
+# $Id: d5b4b787686f9e438e6cac79fc9cf71f9c01a500 $
 
 EAPI=6
 PYTHON_COMPAT=( python{2_7,3_4,3_5} pypy )
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="alpha amd64 arm ~arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris"
 IUSE="examples ssl test"
 
 RDEPEND="ssl? ( dev-python/pyopenssl[${PYTHON_USEDEP}]

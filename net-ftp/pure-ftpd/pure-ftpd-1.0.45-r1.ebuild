@@ -1,11 +1,11 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e18ce2c82eaee092d9e46d6f80c1d3a523ec07d4 $
+# $Id: 840657f1da36ce20cb14c7045f0fd7426d6b36e9 $
 
 EAPI=6
 inherit eutils flag-o-matic
 
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 sparc x86"
 
 DESCRIPTION="Fast, production-quality, standard-conformant FTP server"
 HOMEPAGE="http://www.pureftpd.org/"

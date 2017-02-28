@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 6efa9c1b5c5fe423c850f2d840f246fe8d09854b $
+# $Id: 0fdbbc744ebcd951652f8aba0a9ed05d33f94b48 $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~alpha ~ppc ~sparc ~x86 ~hppa ~ppc64"
+KEYWORDS="alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 S="${WORKDIR}"

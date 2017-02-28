@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fd5281eda79e6a40c9c7809198b34d2b8ccbcb14 $
+# $Id: 3f2ee88073fd829285c6a31c5de6c38db99517b8 $
 
 EAPI=5
 
@@ -28,7 +28,8 @@ RDEPEND="!libressl? ( dev-libs/openssl:0=[-bindist] )
 	dev-util/ragel
 	sys-apps/file
 	virtual/libiconv
-	gd? ( media-libs/gd[jpeg] )"
+	gd? ( media-libs/gd[jpeg] )
+	dev-libs/icu"
 DEPEND="dev-util/ragel
 	${RDEPEND}"
 

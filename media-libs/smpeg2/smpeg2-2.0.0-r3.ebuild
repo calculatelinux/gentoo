@@ -1,6 +1,6 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f8f32657ea15908f987bd0ab72696c3abb52e2c5 $
+# $Id: 5e39a34756f7cc81b1ece23a1e7ee381238f035e $
 
 EAPI=5
 inherit eutils toolchain-funcs autotools multilib-minimal
@@ -24,6 +24,8 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-smpeg2-config.patch
+	epatch "${FILESDIR}"/${P}-gcc6.patch
+	epatch_user
 
 	# avoid file collision with media-libs/smpeg
 	sed -i \

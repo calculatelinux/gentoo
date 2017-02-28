@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: db80ac2e08134fbf26a123916728dcd57c7105eb $
+# $Id: b1970869198e7f6d44820ffade880545b674c3fa $
 #
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in use.mask
@@ -8,10 +8,6 @@
 # Mart Raudsepp <leio@gentoo.org> (04 Feb 2017)
 # dev-vcs/subversion not marked stable yet
 subversion
-
-# Mart Raudsepp <leio@gentoo.org> (28 Jan 2017)
-# dev-db/sqlite not marked stable yet
-sqlite
 
 # Mart Raudsepp <leio@gentoo.org> (28 Jan 2017)
 # sys-apps/dbus not marked stable yet

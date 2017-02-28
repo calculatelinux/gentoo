@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: dfed54f4d5eca78910e5a978743bbb69b3022a4a $
+# $Id: f191708c1cb9f5ed8e8d2316648712d7e401b623 $
 
 EAPI=5
 USE_RUBY="ruby20 ruby21 ruby22 ruby23"
@@ -16,7 +16,7 @@ HOMEPAGE="https://github.com/vmg/redcarpet"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 arm ppc ppc64 ~x86"
 IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/nokogiri )"

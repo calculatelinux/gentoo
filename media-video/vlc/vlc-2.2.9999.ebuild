@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 719a2d3d53d4963af999cc0ebac09df709849320 $
+# $Id: 1d283eeadee8be382552120c77aeb92dde6197fe $
 
 EAPI=6
 
@@ -203,7 +203,7 @@ REQUIRED_USE="
 	sdl? ( X )
 	skins? ( truetype X xml || ( qt4 qt5 ) )
 	vaapi? ( avcodec X )
-	vdpau? ( xcb )
+	vdpau? ( X )
 	vlm? ( encode )
 	xv? ( xcb )
 "

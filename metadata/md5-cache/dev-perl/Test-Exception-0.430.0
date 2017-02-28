@@ -3,10 +3,10 @@ DEPEND=virtual/perl-Carp virtual/perl-Exporter >=dev-perl/Sub-Uplevel-0.180.0 vi
 DESCRIPTION=Test functions for exception based code
 EAPI=6
 HOMEPAGE=http://search.cpan.org/dist/Test-Exception/
-KEYWORDS=alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=virtual/perl-Carp virtual/perl-Exporter >=dev-perl/Sub-Uplevel-0.180.0 virtual/perl-Test-Simple >=virtual/perl-Test-Harness-2.30.0 dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/E/EX/EXODIST/Test-Exception-0.43.tar.gz
 _eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=2c0849767ecafa0e7b43ee32e25591d4
+_md5_=a81b42db0ea9d12acc0d1fd313e4bb91

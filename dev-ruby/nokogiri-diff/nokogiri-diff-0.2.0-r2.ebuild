@@ -1,6 +1,6 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 6442afb68d37e688b7a4dc32696cc87ea77fefcd $
+# $Id: 61dd5685a71599f0e13b114fc15c48710f1534e8 $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ DESCRIPTION="Calculate the differences between two XML/HTML documents"
 HOMEPAGE="https://github.com/postmodern/nokogiri-diff"
 LICENSE="MIT"
 
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 arm ppc ppc64 x86 ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
 IUSE=""
 

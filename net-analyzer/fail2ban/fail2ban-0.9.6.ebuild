@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b48a8dc2fb0ed1fc985bd66b38af023f64bd217b $
+# $Id: 017ce52f6ed2157ecd6b9692d81a345ee9bea167 $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_4,3_5} pypy )
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/${PN}/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="selinux systemd"
 
 # TODO support ipfw and ipfilter

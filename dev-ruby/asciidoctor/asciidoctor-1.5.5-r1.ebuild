@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 97c657746ccee864c6c4ab5c37ef1ff438e5739c $
+# $Id: cec3317e392a96569f8e96dbb5989db7193a9ddc $
 
 EAPI=5
 USE_RUBY="ruby21 ruby22 ruby23"
@@ -19,7 +19,7 @@ SRC_URI="https://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc"
+KEYWORDS="~amd64 arm ppc ppc64"
 IUSE=""
 
 ruby_add_bdepend "test? (

@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9390f7279ec5ec53d4a97342a4c6a8d5c5d299cf $
+# $Id: 4fef39ae12878cc7b9f9eb4add56dd4841e552c8 $
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 python3_4 )
@@ -71,7 +71,7 @@ RDEPEND="
 	>=dev-python/python-monascaclient-1.1.0[${PYTHON_USEDEP}]
 	>=dev-python/python-neutronclient-5.1.0[${PYTHON_USEDEP}]
 	>=dev-python/python-novaclient-6.0.0[${PYTHON_USEDEP}]
-	!~dev-python/python-novaclient-7.1.0[${PYTHON_USEDEP}]
+	!~dev-python/python-novaclient-7.0.0[${PYTHON_USEDEP}]
 	>=dev-python/python-openstackclient-3.3.0[${PYTHON_USEDEP}]
 	>=dev-python/python-saharaclient-1.1.0[${PYTHON_USEDEP}]
 	>=dev-python/python-senlinclient-1.1.0[${PYTHON_USEDEP}]

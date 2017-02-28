@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 752d19d2094c3f860901feb997fce2d8018674dc $
+# $Id: 643809c4be27dd1e4cb7d79fa66ea6095813343d $
 
 EAPI=6
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~hppa ~ppc64"
+KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc64"
 IUSE="libressl"
 
 RDEPEND="

@@ -1,9 +1,9 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 97a193df278eba1be636a3241ec5c366e7146807 $
+# $Id: 201788a908285e74b006c77d0a11195b72f1a8cc $
 
 EAPI=5
-USE_RUBY="ruby20 ruby21 ruby22 ruby23"
+USE_RUBY="ruby21 ruby22 ruby23 ruby24"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README"

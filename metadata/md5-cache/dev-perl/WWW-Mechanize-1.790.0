@@ -4,10 +4,10 @@ DESCRIPTION=Handy web browsing in a Perl object
 EAPI=6
 HOMEPAGE=http://search.cpan.org/dist/WWW-Mechanize/
 IUSE=test
-KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=~amd64 ~arm ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=virtual/perl-Carp virtual/perl-Getopt-Long dev-perl/HTML-Form >=dev-perl/HTML-Parser-3.340.0 dev-perl/HTML-Tree dev-perl/HTTP-Cookies dev-perl/HTTP-Message dev-perl/libwww-perl >=dev-perl/URI-1.360.0 dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/O/OA/OALDERS/WWW-Mechanize-1.79.tar.gz
 _eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=e8cd0f1435592d2a700a987029a25def
+_md5_=8181bfaa539163869e135f9b5e0b224e

@@ -1,12 +1,12 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 453288d17366e6814a4f1c6ef326370aadc550da $
+# $Id: b1d48bf1707299aba48f58e68ec12b037f50916a $
 
 EAPI=5
 
 ROS_REPO_URI="https://github.com/ros-visualization/python_qt_binding"
 KEYWORDS="~amd64"
-PYTHON_COMPAT=( python{2_7,3_4} )
+PYTHON_COMPAT=( python{2_7,3_4,3_5} )
 
 inherit ros-catkin
 

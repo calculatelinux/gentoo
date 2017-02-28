@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: eb8408c842e8b7d09566515d64916058e21283ce $
+# $Id: e98ee92e1fdb7a66c383267ef506cec9c9920001 $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit autotools git-r3
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-	KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
+	KEYWORDS="alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
 fi
 
 DESCRIPTION="portmap replacement which supports RPC over various protocols"

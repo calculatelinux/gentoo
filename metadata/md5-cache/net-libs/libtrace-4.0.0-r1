@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=>=net-libs/libpcap-0.8 dev-libs/openssl:0= ncurses? ( sys-libs/ncurses:0= ) net-libs/wandio numa? ( sys-process/numactl ) app-doc/doxygen sys-devel/flex virtual/pkgconfig virtual/yacc !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=A library and tools for trace processing
+EAPI=6
+HOMEPAGE=http://research.wand.net.nz/software/libtrace.php
+IUSE=doc ncurses numa static-libs
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=net-libs/libpcap-0.8 dev-libs/openssl:0= ncurses? ( sys-libs/ncurses:0= ) net-libs/wandio numa? ( sys-process/numactl )
+SLOT=0
+SRC_URI=http://research.wand.net.nz/software/libtrace/libtrace-4.0.0.tar.gz
+_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
+_md5_=ca8b659eef3f69e1d0c859a4e7e7d1b6

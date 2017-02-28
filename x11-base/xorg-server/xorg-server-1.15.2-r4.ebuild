@@ -1,6 +1,6 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 58313897db2df7489a62080d20c5f0003d61db12 $
+# $Id: a1aff9df062dd102f2c0109ffa3306e2b6df837f $
 
 EAPI=5
 
@@ -20,7 +20,6 @@ IUSE="${IUSE_SERVERS} ipv6 minimal nptl selinux +suid tslib +udev unwind"
 
 CDEPEND=">=app-eselect/eselect-opengl-1.3.0
 	dev-libs/openssl:0=
-	media-libs/freetype
 	>=x11-apps/iceauth-1.0.2
 	>=x11-apps/rgb-1.0.3
 	>=x11-apps/xauth-1.0.3

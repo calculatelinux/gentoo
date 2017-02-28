@@ -1,6 +1,6 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c05a82e9d47195296a294b52077ebc6705cbfc2d $
+# $Id: de76909d3743b8c8bf6614a89c5b575158ad4a40 $
 
 EAPI=6
 
@@ -15,7 +15,7 @@ SRC_URI="https://nodejs.org/dist/v${PV}/node-v${PV}.tar.xz"
 
 LICENSE="Apache-1.1 Apache-2.0 BSD BSD-2 MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~arm64 ~ppc64 x86 ~amd64-linux ~x64-macos"
+KEYWORDS="amd64 arm ~arm64 ppc ppc64 x86 ~amd64-linux ~x64-macos"
 IUSE="cpu_flags_x86_sse2 debug doc icu +npm +snapshot +ssl test"
 
 RDEPEND="icu? ( >=dev-libs/icu-56:= )

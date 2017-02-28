@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DEPEND=deblob? ( || ( >=dev-lang/python-2.7.5-r2:2.7 ) ) !build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 ) deblob? ( || ( >=dev-lang/python-2.7.5-r2:2.7 ) )
+DESCRIPTION=Con Kolivas' high performance patchset and Gentoo's genpatches for Linux 4.10
+EAPI=5
+HOMEPAGE=https://www.kernel.org/ https://www.gentoo.org/ https://dev.gentoo.org/~mpagano/genpatches/ http://users.tpg.com.au/ckolivas/kernel/ http://www.fsfla.org/svn/fsfla/software/linux-libre/releases/tags
+IUSE=symlink build deblob
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 !deblob? ( freedist )
+RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
+RESTRICT=binchecks strip
+SLOT=4.10.1
+SRC_URI=mirror://kernel/linux/kernel/v4.x/linux-4.10.tar.xz deblob? ( http://www.fsfla.org/svn/fsfla/software/linux-libre/releases/tags/4.10-gnu/deblob-4.10 http://www.fsfla.org/svn/fsfla/software/linux-libre/releases/tags/4.10-gnu/deblob-check -> deblob-check-4.10 ) mirror://gentoo/genpatches-4.10-2.base.tar.xz mirror://gentoo/genpatches-4.10-2.extras.tar.xz mirror://gentoo/genpatches-4.10-2.experimental.tar.xz http://ck.kolivas.org/patches/4.0/4.10/4.10-ck1/patch-4.10-ck1.xz
+_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	kernel-2	438a590d5fc1d8ac64aefca3c0244842	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-any-r1	7daff3c0322873651801c85ef36109f5	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
+_md5_=6a0d3bd53c160c1027f8f89dfb98faa9
