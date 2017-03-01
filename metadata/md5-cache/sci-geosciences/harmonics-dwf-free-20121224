@@ -6,4 +6,4 @@ KEYWORDS=amd64 x86
 LICENSE=public-domain
 SLOT=0
 SRC_URI=ftp://ftp.flaterco.com/xtide/harmonics-dwf-20121224-free.tar.bz2
-_md5_=88979c3614ce80a8523d7440bf768798
+_md5_=b6ab17628bf6028267edaf869d076a56

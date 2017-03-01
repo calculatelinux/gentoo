@@ -10,5 +10,5 @@ RDEPEND=>=sys-devel/gcc-4.5 !build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-
 RESTRICT=binchecks strip
 SLOT=4.4.8-r1
 SRC_URI=mirror://kernel/linux/kernel/v4.x/linux-4.4.tar.xz deblob? ( http://www.fsfla.org/svn/fsfla/software/linux-libre/releases/tags/4.4-gnu/deblob-4.4 http://www.fsfla.org/svn/fsfla/software/linux-libre/releases/tags/4.4-gnu/deblob-check -> deblob-check-4.4 ) http://dev.gentoo.org/~blueness/hardened-sources/hardened-patches/hardened-patches-4.4.8-2.extras.tar.bz2 mirror://gentoo/genpatches-4.4-9.base.tar.xz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	kernel-2	438a590d5fc1d8ac64aefca3c0244842	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-any-r1	7daff3c0322873651801c85ef36109f5	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
-_md5_=67c0ca7aaa208c17644f170a9adca4d8
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	kernel-2	abc330f11d050042bbf6d28df4a1d86d	multilib	0236be304ee52e7f179ed2f337075515	python-any-r1	74bf184baf9facd72c7baa58cab21385	python-utils-r1	316c531873247e48befb99900e5aa2ed	toolchain-funcs	53b75b4a49cf3e61530a523804045432	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=ea79a177b2f482133675325ca11b9e93

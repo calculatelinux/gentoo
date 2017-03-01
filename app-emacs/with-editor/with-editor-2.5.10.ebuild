@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: deb073303e5ef30d9d1c6d40d0a0e08726b5743d $
 
 EAPI=5
 NEED_EMACS=24

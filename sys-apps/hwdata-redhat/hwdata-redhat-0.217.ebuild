@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4b9408f4386761d18e7a381b7c1e15ec43db10b6 $
 
 inherit eutils flag-o-matic rpm
 

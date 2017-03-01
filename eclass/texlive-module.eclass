@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3bd1324f939afeda6732cab98d1df069218e970d $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:

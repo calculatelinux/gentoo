@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/libmcrypt-2.5.8 >=app-crypt/mhash-0.9.9 sys-libs/zlib
 SLOT=0
 SRC_URI=mirror://sourceforge/mcrypt/mcrypt-2.6.8.tar.gz
-_md5_=99c1493208cfd4e8d3b99cc8a932c4ea
+_md5_=25d717a3eb02ffabcd6318519271aa83

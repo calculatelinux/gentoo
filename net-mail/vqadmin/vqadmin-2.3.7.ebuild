@@ -1,6 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 227287639b964a88bacb901f46c5dbc4de0fd5de $
 
 inherit webapp eutils autotools qmail
 

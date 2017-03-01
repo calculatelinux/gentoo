@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c0bd9e22bcf0d93217dbeefc39d7427db42ce5c8 $
 
 EAPI=5
 SWORD_MODULE="Afr1953"

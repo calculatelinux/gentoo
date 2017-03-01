@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d8c9b308943546bd974c6756eecd8d0aae87dc48 $
 
 # @ECLASS: twisted-r1.eclass
 # @MAINTAINER:

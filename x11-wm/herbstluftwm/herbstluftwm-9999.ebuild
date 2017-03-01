@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fd8890581a3f5f3025d8306d9ead11e659d9bb6a $
 
 EAPI=5
 inherit toolchain-funcs bash-completion-r1

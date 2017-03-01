@@ -1,6 +1,5 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b0398c5beeabf67aecd58b78d69cd86c6288e015 $
 
 DESCRIPTION="a quick iptables script generator"
 HOMEPAGE="http://qtables.radom.org/"

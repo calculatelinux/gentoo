@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d3f698f43825c7e1bb5a1615cd4ba86c24441912 $
 
 DESCRIPTION="blinkentools is a set of commandline utilities related to Blinkenlights"
 HOMEPAGE="http://www.blinkenlights.net/project/developer-tools"

@@ -7,4 +7,4 @@ KEYWORDS=amd64 ~arm x86
 LICENSE=metapackage
 RDEPEND=app-text/zathura cb? ( app-text/zathura-cb ) djvu? ( app-text/zathura-djvu ) pdf? ( || ( app-text/zathura-pdf-poppler app-text/zathura-pdf-mupdf ) ) postscript? ( app-text/zathura-ps )
 SLOT=0
-_md5_=381743294dd2591f82add985b299ac94
+_md5_=fa0eae8da2a9b0f6d97bfcea763cad83

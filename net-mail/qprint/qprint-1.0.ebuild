@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1f7f365f75ca0703b8f6729234b833977d431ec6 $
 
 DESCRIPTION="MIME quoted-printable data encoding and decoding utility"
 HOMEPAGE="http://www.fourmilab.ch/webtools/qprint/"

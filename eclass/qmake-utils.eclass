@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 37c0f81c0f4feb34e73d0abf696eac260d0b6021 $
 
 # @ECLASS: qmake-utils.eclass
 # @MAINTAINER:

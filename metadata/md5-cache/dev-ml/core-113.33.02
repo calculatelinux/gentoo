@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1-with-linking-exception
 RDEPEND=>=dev-ml/bin-prot-113.24.00:= >=dev-ml/core_kernel-113.24.00:= >=dev-ml/fieldslib-113.24.00:= dev-ml/ppx_assert:= dev-ml/ppx_bench:= dev-ml/ppx_driver:= dev-ml/ppx_expect:= dev-ml/ppx_inline_test:= dev-ml/ppx_jane:= >=dev-ml/sexplib-113.24.00:= dev-ml/typerep:= dev-ml/variantslib:= >=dev-lang/ocaml-3.12:=[ocamlopt?]
 SLOT=0/113.33.02
 SRC_URI=http://ocaml.janestreet.com/ocaml-core/113.33/files/core-113.33.02.tar.gz
-_eclasses_=base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	findlib	3a364957a70a5953531fad3d1bc112ec	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	oasis	1a12cf9066674741302bfa91b5f8fa2e	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=7a24a9ee4da5e136d9763ce111f76d34
+_eclasses_=base	df2aa567b3f0595aae0d0923889f7631	eutils	3c847a0129fed780bd709b98e426f89c	findlib	45d6030075064a68da8d7143726a1150	multilib	0236be304ee52e7f179ed2f337075515	oasis	66245953a092e9be817112a37f1c1301	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=ef65af73508c6c07c7eb33f96690a5ef

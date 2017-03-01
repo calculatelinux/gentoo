@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f40f1aa3315fd5663535cc08d429098f739fb031 $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:

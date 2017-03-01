@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c68b5659e4b0dfaf2ef82c5f1b1bbb7cc5d4febc $
 
 EAPI=6
 inherit autotools libtool git-r3 linux-info pam

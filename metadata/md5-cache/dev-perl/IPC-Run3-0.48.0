@@ -9,5 +9,5 @@ LICENSE=|| ( BSD-2 Artistic GPL-1+ )
 RDEPEND=virtual/perl-Time-HiRes dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/R/RJ/RJBS/IPC-Run3-0.048.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=8a49257f9db4981f14d9da4c75c20f17
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=e8adc54b308e535d9f932993944d3368

@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=virtual/awk dev-lang/perl
 SLOT=0
 SRC_URI=mirror://sourceforge/wm-icons/wm-icons-0.4.0.tar.bz2
-_md5_=c020c0ca40e58e1ec093f6c5fcf6c660
+_md5_=681862a20985b13111e925e873a24176

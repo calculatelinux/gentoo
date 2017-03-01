@@ -3,4 +3,4 @@ DESCRIPTION=Virtual for LeechCraft plugins capable of visually notifying the use
 EAPI=6
 RDEPEND=|| ( ~app-leechcraft/lc-kinotify-9999 ~app-leechcraft/lc-dbusmanager-9999 )
 SLOT=0
-_md5_=1979a1b73bb285a67a3eb42091b23d71
+_md5_=597fdba71d32d8a455852be2435dbe30

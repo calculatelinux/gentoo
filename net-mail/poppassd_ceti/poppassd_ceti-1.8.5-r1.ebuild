@@ -1,6 +1,5 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 108595331588b9e03d6abd62b74c234ccd6df322 $
 
 inherit eutils toolchain-funcs pam portability
 

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5471dbcdc71de4e43066362f9c8e35ac5b4d95db $
 
 EAPI=6
 inherit autotools eutils fcaps flag-o-matic git-r3 multilib qmake-utils user

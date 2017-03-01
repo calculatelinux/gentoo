@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-text/hunspell sys-libs/zlib x11-libs/libX11 x11-libs/libXext !qt5? ( app-text/poppler:=[qt4] dev-qt/qtgui:4 dev-qt/qtcore:4 dev-qt/qtscript:4 dev-qt/qtsingleapplication[X,qt4] dev-qt/qtwebkit:4 ) qt5? ( app-text/poppler:=[qt5] dev-qt/qtconcurrent:5 dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtscript:5 dev-qt/qtsingleapplication[X,qt5] dev-qt/qtwebkit:5[printsupport] dev-qt/qtwidgets:5 dev-qt/qtxml:5 ) app-text/ghostscript-gpl app-text/psutils media-libs/netpbm virtual/latex-base !qt5? ( app-i18n/ibus-qt )
 SLOT=0
 SRC_URI=http://www.xm1math.net/texmaker/texmaker-4.5.tar.bz2
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	qmake-utils	461362a9981d9f069203d2436fea87ce	readme.gentoo	ce7880f12566fe1fc5522fed26507687	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=0b4b99a1bf5a367eefc4557630960e68
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	qmake-utils	ea78a9056543346cdc8cbbd07f16c6fb	readme.gentoo	589f4c6d735919e293942dd66311dc40	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=b22942c467c56e485be11fa3ae30423a

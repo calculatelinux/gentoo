@@ -8,5 +8,5 @@ RDEPEND=net-dns/bind-tools
 RESTRICT=mirror
 SLOT=0
 SRC_URI=x86? ( http://http.distributed.net/pub/dcti/v2.9110/dnetc519-linux-x86-elf-uclibc.tar.gz )
-_eclasses_=user	e28cdd9fa5d8069e8e047c82db5d57bd
-_md5_=8b73b5ec28d958d24cac1ad02af34155
+_eclasses_=user	e4b567c44272a719fabf53f0f885d3f7
+_md5_=90ea5fa196358de5239b022c1c8a77df

@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2a85d48290c6c0ad648d679c04632bd76fcd7368 $
 
 # @ECLASS: apache-2.eclass
 # @MAINTAINER:

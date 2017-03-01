@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1273f1d8156b99aee5a4aa5eaeb9a880ea3ac2fa $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:

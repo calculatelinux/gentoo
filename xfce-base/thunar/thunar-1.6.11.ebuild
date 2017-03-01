@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a135b99723f0a241e5247ba67094fd038b2f9285 $
 
 EAPI=6
 inherit virtualx

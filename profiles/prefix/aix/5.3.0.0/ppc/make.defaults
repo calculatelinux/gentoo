@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 72e3270aec6501c8746367aca5fa081973fb14b8 $
 
 ARCH="ppc-aix"
 CHOST="powerpc-ibm-aix5.3.0.0"

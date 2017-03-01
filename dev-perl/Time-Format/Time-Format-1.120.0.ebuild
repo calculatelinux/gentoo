@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 81b53611f6cac8ec4915861de895419e60cc0e8f $
 
 EAPI=5
 MODULE_AUTHOR=ROODE

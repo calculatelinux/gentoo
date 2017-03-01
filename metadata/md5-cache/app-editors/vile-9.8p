@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=>=sys-libs/ncurses-5.2:0 perl? ( dev-lang/perl )
 SLOT=0
 SRC_URI=ftp://invisible-island.net/vile/current/vile-9.8p.tgz
-_md5_=e959ad59c81dfa0c2028d81aa8322066
+_md5_=efaa2257d97fd6e1ec30ca5bca3264f9

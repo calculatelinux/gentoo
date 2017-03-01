@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8b1f3a648f85968da393eb9b5c017fcae9200406 $
 
 EAPI=5
 WANT_AUTOMAKE="1.11"

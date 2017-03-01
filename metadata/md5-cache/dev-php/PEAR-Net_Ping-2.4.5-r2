@@ -8,4 +8,4 @@ LICENSE=PHP-3.01
 RDEPEND=dev-lang/php:* dev-php/PEAR-PEAR
 SLOT=0
 SRC_URI=http://download.pear.php.net/package/Net_Ping-2.4.5.tgz
-_md5_=374cfd3daf77c3e87b65240feb4105ab
+_md5_=8ce9be1d3eb54e8a50f876345061143e

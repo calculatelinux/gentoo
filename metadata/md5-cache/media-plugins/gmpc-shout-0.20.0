@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=>=media-sound/gmpc-0.20.0 media-sound/vorbis-tools[ogg123] dev-libs/libxml2 x11-libs/cairo
 SLOT=0
 SRC_URI=mirror://sourceforge/musicpd/gmpc-shout-0.20.0.tar.gz
-_md5_=ebecb6c69bfa484f1fcd7f0e9311a345
+_md5_=0fe6e4662227ac2d1fabc878a611f3f2

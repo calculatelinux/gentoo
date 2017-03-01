@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d6a3545c84adedaba266099bf7915ae6abdd763d $
 
 EAPI=6
 inherit autotools bash-completion-r1 eutils toolchain-funcs

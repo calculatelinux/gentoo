@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 729aa00b6fc35c6bdbbe6780fc3816a74113f415 $
 
 EAPI=5
 SWORD_MODULE="FarsiOPV"

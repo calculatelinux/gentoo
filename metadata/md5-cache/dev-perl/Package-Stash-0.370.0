@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=virtual/perl-Carp >=dev-perl/Dist-CheckConflicts-0.20.0 virtual/perl-Getopt-Long >=dev-perl/Module-Implementation-0.60.0 virtual/perl-Scalar-List-Utils !minimal? ( >=dev-perl/Package-Stash-XS-0.260.0 ) dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DO/DOY/Package-Stash-0.37.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=e0c180847debaf2e26093bb29b44e765
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=2a40d1e07a2f67be7f3368099e61b214

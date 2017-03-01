@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 155d4f924982197f35f61dd149c3b8e87f94dacc $
 
 # Force the flag corresponding to the default ABI
 x64-solaris

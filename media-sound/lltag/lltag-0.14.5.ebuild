@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b4c01a70bbaa62faa9da3544c9eefbb141e5f6be $
 
 EAPI=5
 inherit perl-module

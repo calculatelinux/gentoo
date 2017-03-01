@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 762b83bd7a30c16f1b8c7646b910b76f6296ef30 $
 
 ARCH="arm"
 ACCEPT_KEYWORDS="${ARCH}"

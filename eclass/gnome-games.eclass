@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2d10aafb8c040e3c7afd366414782c7726e592af $
 
 # @ECLASS: gnome-games.eclass
 # @MAINTAINER:

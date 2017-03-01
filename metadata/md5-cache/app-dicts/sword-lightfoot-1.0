@@ -8,5 +8,5 @@ LICENSE=public-domain
 RDEPEND=app-text/sword
 SLOT=0
 SRC_URI=mirror://gentoo/Lightfoot-1.0.zip
-_eclasses_=sword-module	53233e8ef06063ea675d07a2a4c9dba2
-_md5_=4ad0c7d4678f08cab4ad2b5551e11d99
+_eclasses_=sword-module	f93b38348e60d75f292f55df132bbac4
+_md5_=87e47528a016e068ecedaa156d49f5fc

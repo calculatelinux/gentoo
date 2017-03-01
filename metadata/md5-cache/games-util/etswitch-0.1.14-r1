@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/libX11 x11-libs/libXxf86vm x11-libs/libXmu x11-libs/libXpm
 SLOT=0
 SRC_URI=http://hem.bredband.net/b400150/etswitch/etswitch-0.1.14.tar.gz
-_md5_=c00d536139122e5458ff67d94e8f70b5
+_md5_=a7747e254031b1540772cbe3ed654b3f

@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 54b7c3dd62aca69f30f177f20a81e964a978b494 $
 
 EAPI=6
 inherit cmake-utils multibuild

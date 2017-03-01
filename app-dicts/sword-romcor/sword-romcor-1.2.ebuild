@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a581f27a608a789d3a80a57f64e636d1ff6a402f $
 
 EAPI=5
 SWORD_MODULE="RomCor"

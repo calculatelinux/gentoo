@@ -10,5 +10,5 @@ PDEPEND=ssl? ( >=dev-perl/LWP-Protocol-https-6.20.0 )
 RDEPEND=virtual/perl-Digest-MD5 >=virtual/perl-Encode-2.120.0 dev-perl/Encode-Locale >=dev-perl/File-Listing-6.0.0 >=dev-perl/HTML-Parser-3.340.0 >=dev-perl/HTTP-Cookies-6.0.0 >=dev-perl/HTTP-Daemon-6.0.0 >=dev-perl/HTTP-Date-6.0.0 >=dev-perl/HTTP-Negotiate-6.0.0 >=dev-perl/HTTP-Message-6.0.0 virtual/perl-IO >=dev-perl/LWP-MediaTypes-6.0.0 >=virtual/perl-MIME-Base64-2.120.0 >=dev-perl/Net-HTTP-6.70.0 >=dev-perl/URI-1.100.0 >=dev-perl/WWW-RobotRules-6.0.0 >=virtual/perl-libnet-1.220.0 dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/O/OA/OALDERS/libwww-perl-6.16.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=efd7f1bf1b5832c746e3256525eeeb3f
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=8cb7f87a659a027bda8dcbef069e97b0

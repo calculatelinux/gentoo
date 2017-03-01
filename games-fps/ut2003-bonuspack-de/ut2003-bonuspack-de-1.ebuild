@@ -1,6 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9fd04cafface2d6b99521a81148557162d68d7e8 $
 
 EAPI=5
 inherit games

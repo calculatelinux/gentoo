@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d2909187f9f678032bb1d618ff3b4ef62908047d $
 
 DESCRIPTION="Themes for blinkensim"
 HOMEPAGE="http://www.blinkenlights.net/project/developer-tools"

@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 81299129fa2fd97f51c36f1160594228281bf026 $
 
 DESCRIPTION="A Perl script that removes spam from POP3 mailboxes based on RBLs"
 HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage"

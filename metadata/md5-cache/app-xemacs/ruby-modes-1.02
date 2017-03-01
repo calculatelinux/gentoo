@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/xemacs-base app-xemacs/debug app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/ruby-modes-1.02-pkg.tar.gz
-_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
-_md5_=610477f6c8797b90adf222253d285677
+_eclasses_=xemacs-packages	6af894e52080fe5d8bd91371a8a6a735
+_md5_=af2c3e71a95b13aef3883beff62e522c

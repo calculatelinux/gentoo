@@ -3,4 +3,4 @@ DESCRIPTION=Virtual for LeechCraft plugins providing UI for search plugins
 EAPI=6
 RDEPEND=~app-leechcraft/lc-summary-9999
 SLOT=0
-_md5_=11ac86bb2e2ab9ee5ed3c03e0f72af4a
+_md5_=f97b1530b30b28dad077d703ebbd4650

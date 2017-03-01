@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e42823409612d520c56bbc20f01302f8db059646 $
 
 EAPI=6
 inherit eutils unpacker

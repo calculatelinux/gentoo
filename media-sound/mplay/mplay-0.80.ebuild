@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1dadf8644fc67a60bf3ef0d8197bfaef6673e2c5 $
 
 DESCRIPTION="A Curses front-end for mplayer"
 HOMEPAGE="http://mplay.sourceforge.net"

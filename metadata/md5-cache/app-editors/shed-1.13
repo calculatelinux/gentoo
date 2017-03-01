@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses
 SLOT=0
 SRC_URI=mirror://sourceforge/shed/shed-1.13.tar.gz
-_md5_=08f339b4d776eb7f883826c539da033e
+_md5_=d80f4e8856201e65f942895cba08b11a

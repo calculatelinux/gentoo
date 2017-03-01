@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c8d8711b553dd69a1e71dcac72540ab11283c383 $
 
 EAPI=5
 SWORD_MODULE="Esperanto"

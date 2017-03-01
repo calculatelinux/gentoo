@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 6c613a27c06b80d158d9f50f63cac2a7e9f02324 $
 
 # Force the flag which corresponds to arch/abi, bug #515130
 ppc

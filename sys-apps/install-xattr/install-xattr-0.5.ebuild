@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3cb70823f8eae26a4bd6b17a0d8dab9913b3dc81 $
 
 EAPI=5
 DESCRIPTION="Wrapper to coreutil's install to preserve Filesystem Extended Attributes"

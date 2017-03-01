@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 015451491917fab8cbc3246515f596ff837157c5 $
 
 EAPI=5
 EGO_PN="golang.org/x/tour/..."

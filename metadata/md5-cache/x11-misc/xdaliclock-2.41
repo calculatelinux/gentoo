@@ -8,4 +8,4 @@ LICENSE=BSD
 RDEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXt
 SLOT=0
 SRC_URI=http://www.jwz.org/xdaliclock/xdaliclock-2.41.tar.gz
-_md5_=5d63c8a04021eb5288b4baa3f3fcc45a
+_md5_=e79ac11e6a66d421e06f9d785ffa48c9

@@ -1,5 +1,4 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 865ae31eea410494b12656cc6764ba5a94bd1470 $
 
 -abi_mips_n32

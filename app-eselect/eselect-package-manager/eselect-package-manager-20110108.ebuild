@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b13e30cfd722d472c9bdc51ce236ffeb4855ebd6 $
 
 DESCRIPTION="Manages PACKAGE_MANAGER environment variable"
 HOMEPAGE="https://www.gentoo.org/proj/en/eselect/"

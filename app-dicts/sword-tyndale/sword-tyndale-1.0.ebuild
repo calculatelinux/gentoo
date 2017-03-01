@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c433d26ab3580cc938722d436a481c3235299b9d $
 
 EAPI=5
 SWORD_MODULE="Tyndale"

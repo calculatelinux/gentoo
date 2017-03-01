@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 129ff2bcbae20a42091c4e6e0ea85a8f8f55f1e1 $
 
 inherit eutils java-pkg-2 linux-info flag-o-matic multilib
 

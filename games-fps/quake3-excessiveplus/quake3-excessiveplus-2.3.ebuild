@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 01c665785c00d295b9b194cdd6db7b03ce4b86ff $
 
 EAPI=5
 MOD_DESC="Makes the weapons much faster and stronger"

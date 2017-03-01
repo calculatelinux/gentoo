@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f41dc3cc9cb44d1dfdbf6c3a965533925d4218c4 $
 
 # @ECLASS: ssl-cert.eclass
 # @MAINTAINER:

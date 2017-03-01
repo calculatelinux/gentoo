@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f8bf4693a10d99ec719210a03b99ebd441c84c68 $
 
 EAPI=6
 EGO_PN=github.com/russross/${PN}

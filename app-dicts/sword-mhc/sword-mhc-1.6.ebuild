@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ba0fc62ac23c0f344534b9e230d8aab4ced96b01 $
 
 EAPI=5
 SWORD_MODULE="MHC"

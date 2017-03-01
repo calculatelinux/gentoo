@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a6bf6cb55f0e4aef04a54d73d3a7df386dcaf43f $
 EAPI=5
 DESCRIPTION="Fortune database of quotes from forums.gentoo.org"
 HOMEPAGE="https://forums.gentoo.org/"

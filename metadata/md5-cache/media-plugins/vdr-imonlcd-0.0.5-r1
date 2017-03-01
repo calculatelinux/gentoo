@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=media-libs/freetype >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-eselect/eselect-vdr-0.0.2
 SLOT=0
 SRC_URI=mirror://vdr-developerorg/408/vdr-imonlcd-0.0.5.tgz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	linux-info	28a4d19bc3bdeee9008ccce076260427	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	udev	9b8a82f709a883f0840736c9b9375698	unpacker	2afe53b558f4ad6955316e702a4c9cfa	vdr-plugin-2	9896e1c48451455525ef3f0c42f9c487	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
-_md5_=344de3212735f0e89bd5d7b4297e8a2b
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	linux-info	ca370deef9d44125d829f2eb6ebc83e0	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	udev	d91cac2c73b94629cad2daea66e0d182	unpacker	76ddf385f3c212c12857bb8ec2a8bd35	vdr-plugin-2	786b4f5aa9f17e2d5cec5e628f462c01	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=6913c02b9072468a724ecc971d920c2c

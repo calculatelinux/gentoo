@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 71b1f499f3bdb6876cb207f92f2849bded499278 $
 
 DESCRIPTION="A remote security scanner"
 HOMEPAGE="http://www.nessus.org/"

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: edbb2ae370dce2350e12ed7a1b289ef9b6d97129 $
 
 # @DEAD
 # Removal on 2017-03-21.

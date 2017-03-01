@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://scratchbox.org/download/files/sbox-releases/hathor/tarball/scratchbox-core-1.0.20-i386.tar.gz http://scratchbox.org/download/files/sbox-releases/hathor/tarball/scratchbox-libs-1.0.20-i386.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd
-_md5_=656b67d6eb5c2d6066afdd17841d03bb
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	user	e4b567c44272a719fabf53f0f885d3f7
+_md5_=291ab22502e34d235e864b6b53b9a838

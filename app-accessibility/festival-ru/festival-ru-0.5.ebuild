@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 6efce72c4e6be30f958ff44c3e1573a5ffd538c4 $
 
 EAPI="2"
 MY_PN=msu_ru_nsh_clunits

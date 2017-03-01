@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2cf6591e315c02444ea8bdc6675d28a49cf444f7 $
 
 SWORD_MODULE="Abbott"
 

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<!--
-$Id: 2fe1abed28483a6cf167bb7e8f050b74780a4320 $
---><pkgmetadata>
+<pkgmetadata>
 <maintainer type="project">
 	<email>sysadmin@gentoo.org</email>
 	<name>Gentoo Sysadmin Project</name>

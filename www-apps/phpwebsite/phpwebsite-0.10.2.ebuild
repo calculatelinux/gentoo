@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a0110f1aec94368876d4a6bf3282d0714a42dbe3 $
 
 inherit webapp
 

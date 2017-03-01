@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5003fa6897032da98e38b10ae4c9557916774556 $
 
 
 # Elias Pipping <pipping@gentoo.org> (25 Nov 2007)

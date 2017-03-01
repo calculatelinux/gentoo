@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 423a33a362ca1f7ecbf75fea1ad77a02906af7ff $
 
 EAPI=6
 inherit systemd user

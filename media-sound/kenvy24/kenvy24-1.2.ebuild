@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2762bb10f0169ffedbf27c179828d22f323a0ffc $
 
 EAPI=5
 # po/ directory is disabled in CMakeLists.txt

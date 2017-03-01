@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ce9fa08fb49e0d2a49c9a617db0e603cd32e39cf $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-drivers/driver_common"

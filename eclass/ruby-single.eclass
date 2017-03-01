@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f8ef648a16f8902f33d6c72c587922e2e7cbafa6 $
 
 # @ECLASS: ruby-single.eclass
 # @MAINTAINER:

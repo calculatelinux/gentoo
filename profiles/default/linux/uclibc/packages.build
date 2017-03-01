@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 811963445d4c24023282e853928aa49a7e1c7407 $
 
 # This file lists extra packages needed to build for
 # a stage 1 based on this profile.

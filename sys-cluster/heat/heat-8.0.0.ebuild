@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4fef39ae12878cc7b9f9eb4add56dd4841e552c8 $
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 python3_4 )
@@ -9,7 +8,8 @@ inherit distutils-r1 eutils linux-info user
 
 DESCRIPTION="A CloudFormation-compatible openstack-native cloud orchistration engine."
 HOMEPAGE="https://launchpad.net/heat"
-SRC_URI="https://tarballs.openstack.org/${PN}/${P}.tar.gz"
+SRC_URI="https://tarballs.openstack.org/${PN}/${P}.tar.gz
+	https://dev.gentoo.org/~prometheanfire/dist/openstack/heat/heat.conf.sample.ocata -> heat.conf.sample-${PV}"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -135,7 +135,7 @@ python_install_all() {
 
 	insinto /etc/heat
 	insopts -m0640 -o heat -g heat
-	newins "${FILESDIR}/ocata-heat.conf.sample" "heat.conf.sample"
+	newins "${DISTDIR}/heat.conf.sample-${PV}" "heat.conf.sample"
 	doins "etc/heat/api-paste.ini"
 	doins "etc/heat/policy.json"
 	insinto /etc/heat/templates

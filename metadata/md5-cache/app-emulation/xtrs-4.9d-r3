@@ -10,5 +10,5 @@ RDEPEND=sys-libs/ncurses:0 sys-libs/readline:0 >=x11-libs/libX11-1.0.0
 RESTRICT=ls-dos? ( bindist )
 SLOT=0
 SRC_URI=http://www.tim-mann.org/trs80/xtrs-4.9d.tar.gz ls-dos? ( http://www.tim-mann.org/trs80/ld4-631.zip https://dev.gentoo.org/~ulm/distfiles/ld4-631l.xd3 )
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	readme.gentoo	ce7880f12566fe1fc5522fed26507687	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=632a34782043ca2c51d154f1e7a01cfe
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	multilib	0236be304ee52e7f179ed2f337075515	readme.gentoo	589f4c6d735919e293942dd66311dc40	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=e68779e8e63f6508ef3e4df7497ac3db

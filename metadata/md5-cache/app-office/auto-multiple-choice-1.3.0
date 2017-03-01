@@ -8,5 +8,5 @@ LICENSE=GPL-2+
 RDEPEND=app-text/texlive[doc,dvi2tty,dvipdfm,extra,graphics,png,pstricks,science,truetype,xml,X,luatex,xetex,humanities,omega,publishers,l10n_fr] app-text/poppler:= dev-perl/XML-LibXML media-libs/netpbm media-libs/opencv dev-lang/perl:= dev-perl/Glib-Object-Introspection dev-perl/gtk2-perl dev-perl/Gtk2-Notify media-gfx/imagemagick dev-perl/XML-Writer dev-perl/Archive-Zip dev-perl/DBI dev-perl/Text-CSV dev-perl/DBD-SQLite dev-perl/Net-CUPS dev-perl/Email-Address dev-perl/Email-MIME dev-perl/Email-Sender virtual/latex-base
 SLOT=0
 SRC_URI=http://download.gna.org/auto-qcm/auto-multiple-choice_1.3.0_sources.tar.gz
-_eclasses_=latex-package	baf2aa8f88b3b23787eaf2dc76c9b827	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=759d8663a7f7b1d5ffaca63d2691e1f3
+_eclasses_=latex-package	00777e2de6c20be92a1adce060eeafa4	multilib	0236be304ee52e7f179ed2f337075515	perl-functions	ca1237f4863eb3e83ab1462927f981c2	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=c24df283c0d1564bf1faf26564cfc527

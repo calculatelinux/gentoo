@@ -8,4 +8,4 @@ LICENSE=free-noncomm
 RDEPEND=X? ( sci-visualization/xds-viewer )
 SLOT=0
 SRC_URI=ftp://ftp.mpimf-heidelberg.mpg.de/pub/kabsch/XDS-INTEL64_Linux_x86_64.tar.gz -> XDS-INTEL64_Linux_x86_64-20170430.tar.gz ftp://ftp.mpimf-heidelberg.mpg.de/pub/kabsch/XDS_html_doc.tar.gz -> XDS_html_doc-20170430.tar.gz
-_md5_=19062ca03530743ece34faded10a01b9
+_md5_=37b0bff60614dfacf4b53e9cf82d5ab7

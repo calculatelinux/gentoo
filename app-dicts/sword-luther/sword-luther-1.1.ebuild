@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 6a2a5ce03fcfadb849ea030721d6fcc5ea34791e $
 
 EAPI=5
 SWORD_MODULE="Luther"

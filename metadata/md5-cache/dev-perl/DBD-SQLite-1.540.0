@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=system-sqlite? ( >=dev-db/sqlite-3.10.2[extensions(+)] ) >=dev-perl/DBI-1.570.0 !<dev-perl/DBD-SQLite-1 virtual/perl-Scalar-List-Utils dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/I/IS/ISHIGAKI/DBD-SQLite-1.54.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=1279c8f21322dce1551f87ef9d73e925
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=a63d42a877e48f4a8a3c958a32a402d5

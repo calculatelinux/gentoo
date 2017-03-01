@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3d88960accac8dccf768637eb0c13ca1a1fea004 $
 #
 # @ECLASS: bzr.eclass
 # @MAINTAINER:

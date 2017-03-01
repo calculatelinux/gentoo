@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3032d8e03ed01de8c220d4f7cf53079224e59aca $
 
 EAPI=5
 GAME="enemy-territory"

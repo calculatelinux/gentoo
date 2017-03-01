@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e4069491f544621b59125986a0bbdcb2d21c2205 $
 
 EAPI=5
 SWORD_MODULE="Wycliffe"

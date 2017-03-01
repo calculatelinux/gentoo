@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id: 35d3733fbc1367d7b9796df74c1f9e10e775a234 $
 
 -*virtual/dev-manager
 -*sys-fs/e2fsprogs

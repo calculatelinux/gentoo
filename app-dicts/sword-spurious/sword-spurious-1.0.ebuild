@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5fd493066c42e287aa0029b82aeb9c80a35412fe $
 
 EAPI=5
 SWORD_MODULE="Spurious"

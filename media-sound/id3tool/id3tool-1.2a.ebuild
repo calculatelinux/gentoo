@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ef601bbd26d7a2021f81e15664643fd065630048 $
 
 DESCRIPTION="A command line utility for easy manipulation of the ID3 tags present in MPEG Layer 3 audio files"
 HOMEPAGE="http://nekohako.xware.cx/id3tool"

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 6c0c9124f4b0cbcc2857ee6cd4d8a9167b3d4741 $
 
 # @ECLASS: gst-plugins10.eclass
 # @MAINTAINER:

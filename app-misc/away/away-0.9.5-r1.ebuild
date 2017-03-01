@@ -1,6 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 48c32d5dd319849a249f8aaa8c7cc190a024452b $
 
 inherit pam toolchain-funcs flag-o-matic
 

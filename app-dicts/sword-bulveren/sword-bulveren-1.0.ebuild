@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ae1f01f6429b0c33b9b4ea22c3989718dcc89c49 $
 
 EAPI=5
 SWORD_MODULE="BulVeren"

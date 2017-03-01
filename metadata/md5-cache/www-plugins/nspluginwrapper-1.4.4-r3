@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=x11-libs/gtk+-2:2 net-misc/curl >=sys-apps/util-linux-2.13 >=dev-libs/glib-2.34.3[abi_x86_32(-)] >=x11-libs/gtk+-2.24.23:2[abi_x86_32(-)] >=x11-libs/libX11-1.6.2[abi_x86_32(-)] >=x11-libs/libXt-1.1.4[abi_x86_32(-)]
 SLOT=0
 SRC_URI=http://web.mit.edu/davidben/Public/nspluginwrapper/nspluginwrapper-1.4.4.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	mozextension	4a3a7cde5116139794748422b3b57218	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	nsplugins	6596b8f6d213b20f66463989faae73cf	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
-_md5_=f8e613326f6c55a2bb4401d7e2919e4b
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	mozextension	e5d920147bfccf4930062e462e2a417d	multilib	0236be304ee52e7f179ed2f337075515	nsplugins	2049586e425364a1c5bdb004205d1758	toolchain-funcs	53b75b4a49cf3e61530a523804045432	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=06bdb014d558ac600db865159877da0e

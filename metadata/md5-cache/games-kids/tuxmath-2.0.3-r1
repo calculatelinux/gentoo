@@ -9,5 +9,5 @@ LICENSE=GPL-2 OFL-1.1
 RDEPEND=dev-games/t4k-common[svg?] dev-libs/libxml2:2 media-libs/libsdl:0[video] media-libs/sdl-image[jpeg,png] media-libs/sdl-mixer[mod] media-libs/sdl-net media-libs/sdl-pango nls? ( virtual/libintl ) svg? ( gnome-base/librsvg:2 x11-libs/cairo )
 SLOT=0
 SRC_URI=mirror://debian/pool/main/t/tuxmath/tuxmath_2.0.3.orig.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	gnome2-utils	6ac81c289e6fd66edb59051e57d895e3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	xdg-utils	169c13f9ec65368f6f6b2961e68dc152
-_md5_=21fecb616ed09e530458fd084ad519f8
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	gnome2-utils	fe8e9099c6fc74a40946623c593c7236	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	xdg-utils	178a84136f416b8ea1a857717eacd21c
+_md5_=13d7d159efd4e202f151cc3b1a27560c

@@ -9,5 +9,5 @@ LICENSE=LPPL-1.2
 RDEPEND=>=dev-texlive/texlive-latexextra-2010 virtual/latex-base
 SLOT=0
 SRC_URI=ftp://tug.ctan.org/pub/tex-archive/macros/latex/contrib/curve.zip -> curve-1.16.zip
-_eclasses_=base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	latex-package	baf2aa8f88b3b23787eaf2dc76c9b827	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=5e55be3dc9f3559bb0ec9d34f8761cc7
+_eclasses_=base	df2aa567b3f0595aae0d0923889f7631	eutils	3c847a0129fed780bd709b98e426f89c	latex-package	00777e2de6c20be92a1adce060eeafa4	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=bc00616ddd234ab5ad231b7885cd0013

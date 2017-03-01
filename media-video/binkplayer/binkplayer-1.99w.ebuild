@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7e0bbfe7d9b76f6fbe7131661d4ed8e2ff7d2f9b $
 
 EAPI=5
 DESCRIPTION="Bink Video! Player"

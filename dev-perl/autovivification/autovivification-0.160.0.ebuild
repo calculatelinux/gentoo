@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5c556e5460cad87a1a2375ff9e763c886090216b $
 EAPI=5
 MODULE_AUTHOR=VPIT
 MODULE_VERSION=0.16

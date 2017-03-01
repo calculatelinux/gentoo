@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 54f83512a6424e4d4f3c40eebcccc6629e3145fc $
 
 EAPI=6
 inherit flag-o-matic gnome2-utils

@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 079e4591f11a437959e0c09e2e90b2c2b629b8e9 $
 
 # @ECLASS: rpm.eclass
 # @MAINTAINER:

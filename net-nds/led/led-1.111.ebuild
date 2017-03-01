@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3d08a5774186fd7a1bb2d9d9201c1fbfe7b5ca12 $
 
 inherit eutils
 DESCRIPTION="led is a general purpose LDAP editor"

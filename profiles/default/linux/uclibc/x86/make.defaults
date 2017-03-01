@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 17f8085afcb74bfe99ff7fe0614a845471bd23c8 $
 
 ARCH="x86"
 ACCEPT_KEYWORDS="${ARCH}"

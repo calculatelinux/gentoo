@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d5066f5b9bb37220397ab7162230f2f27c9d9834 $
 
 DESCRIPTION="slrnconf is a graphical configuration utility for the newsreader slrn"
 HOMEPAGE="http://home.arcor.de/kaffeetisch/slrnconf.html"

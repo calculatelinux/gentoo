@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b180f981da12f572c3ce511003917b6d1b9770c5 $
 
 inherit autotools eutils fortran-2 toolchain-funcs
 

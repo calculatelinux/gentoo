@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXpm x11-libs/libXrender x11-libs/libXcursor imlib? ( media-libs/imlib2[X] ) pam? ( virtual/pam ) doc? ( app-text/asciidoc )
 SLOT=0
 SRC_URI=https://github.com/mgumz/alock/archive/v1.0.0.tar.gz -> alock-1.0.0.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=2c0b82856937719611f61fda87e0ead3
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=0792bac4ad7c5f130f564f9fce629446

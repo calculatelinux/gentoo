@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 965780695d144a95db1093dad4ac27519eed34a0 $
 
 inherit multilib toolchain-funcs
 

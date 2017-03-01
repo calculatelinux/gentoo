@@ -1,6 +1,5 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 17b4927aa1283ac0ebcacf7caf32c5c9f7917e80 $
 
 inherit font eutils font-ebdftopcf
 

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c2d60ac0a535a59c6699df1c7cd485d2c18c2942 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/roslint"

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 324947442aeb877cfbf40b753ee40e31767849f5 $
 
 DESCRIPTION="linux implementation of the mirc dccserver command"
 SRC_URI="http://www.nih.at/dccserver/${P}.tar.gz"

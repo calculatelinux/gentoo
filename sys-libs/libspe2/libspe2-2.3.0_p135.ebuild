@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: df57c5ff61d1cfa47b2e4eb81c51a07ce57c996b $
 inherit eutils
 
 MY_P=${P/_p/.}

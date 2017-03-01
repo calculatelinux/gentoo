@@ -8,4 +8,4 @@ RDEPEND==dev-embedded/scratchbox-1.0*
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://scratchbox.org/download/files/sbox-releases/stable/tarball/scratchbox-devkit-doctools-1.0.13-i386.tar.gz
-_md5_=f919dc603088bf6540c4e937a55d7616
+_md5_=85731479c24ed66cf3555047a5848d9b

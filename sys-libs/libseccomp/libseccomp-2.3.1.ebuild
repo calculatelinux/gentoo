@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ad6a115e0fe899752b325384a8dc959067fb4b36 $
 
 # TODO: Add python support.
 

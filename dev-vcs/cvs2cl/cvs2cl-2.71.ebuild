@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f58512d522b0a5e3672ab1742a0e0233342e20ea $
 
 DESCRIPTION="produces a GNU-style ChangeLog for CVS-controlled sources"
 HOMEPAGE="http://www.red-bean.com/cvs2cl/"

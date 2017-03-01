@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9e9e7eb6874e3b1fda74e9246f630fe002284353 $
 
 EAPI="5"
 # A few tests fail with python3.3/3.4 :(

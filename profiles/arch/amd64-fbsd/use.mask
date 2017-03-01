@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id: b1c986c4abb6841677316b4242af20640625318d $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64-fbsd

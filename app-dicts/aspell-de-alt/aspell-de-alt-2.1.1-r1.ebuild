@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f82b8c30ef8e1084548a7e5aa548a01573464f3c $
 
 ASPELL_LANG="German (traditional orthography)"
 ASPOSTFIX="6"

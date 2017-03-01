@@ -7,5 +7,5 @@ LICENSE=ZLIB
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.gentoo.com/di/di-4.35.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=6971f21ae533b3953a86c3160c124d74
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=d1755126d9715a1f25d2fe0c2a76820f

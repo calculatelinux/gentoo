@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/sounds-au-1.12-pkg.tar.gz
-_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
-_md5_=0aaef9a78b8c9d8d3ec56ca0e2d194e9
+_eclasses_=xemacs-packages	6af894e52080fe5d8bd91371a8a6a735
+_md5_=39750003f5c75ad608e64f0149a8377f

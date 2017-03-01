@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=net-dns/bind-tools net-firewall/iptables virtual/logger
 SLOT=0
 SRC_URI=ftp://muse.linuxmafia.org/pub/gShield/v2/gShield-2.8.tgz
-_md5_=5de8266fc4d916c74cd85556baa04029
+_md5_=5f10bb60e942f1d225b9fa3229debb24

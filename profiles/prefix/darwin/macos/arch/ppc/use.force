@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 63e95a321613ae3c3b9d8ab431700724af3efe80 $
 
 # Force the flag corresponding to the default ABI
 ppc-macos

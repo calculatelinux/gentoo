@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b62dbc74c9ba5e3d17e33d9bbe6fc30c67b680cd $
 
 DESCRIPTION="Library for General Graphics Interface"
 HOMEPAGE="http://www.ggi-project.org"

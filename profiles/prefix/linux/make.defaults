@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 973e6f0c075789a4f55fb38ead51f89e706d6263 $
 
 # 'Sane' defaults
 ELIBC="glibc"

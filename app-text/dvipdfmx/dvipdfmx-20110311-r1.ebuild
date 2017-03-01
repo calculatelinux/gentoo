@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 15f315737ed65f8b07755f92b7104dac636b6e86 $
 
 EAPI=3
 inherit autotools eutils texlive-common flag-o-matic toolchain-funcs

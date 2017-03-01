@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 54d3278ae96dce3006add39bee65f78bac46fe85 $
 
 
 # flag returns compile errors

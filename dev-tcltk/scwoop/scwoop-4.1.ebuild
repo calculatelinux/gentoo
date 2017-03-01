@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 35bea31f0ec4628d27f44d3e031546e92f37d5b6 $
 
 DESCRIPTION="Simple Composite Widget Object Oriented Package"
 HOMEPAGE="http://jfontain.free.fr/scwoop41.htm"

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c2c8b264a3bf6daf63a9a16c3a503b33db73f844 $
 
 PKG_CAT="standard"
 

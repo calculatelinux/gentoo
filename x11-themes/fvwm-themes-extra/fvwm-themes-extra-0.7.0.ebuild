@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d0bca8090b57fda87d6821cf8ce62fcc426b5f7c $
 
 DESCRIPTION="Extra themes for fvwm-themes"
 HOMEPAGE="http://fvwm-themes.sourceforge.net/"

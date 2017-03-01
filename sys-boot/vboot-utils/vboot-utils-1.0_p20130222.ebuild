@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1b05595346e92878c9cc7781f2252fbaca1c8d8d $
 
 EAPI=5
 inherit eutils rpm toolchain-funcs

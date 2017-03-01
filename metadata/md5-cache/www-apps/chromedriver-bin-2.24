@@ -7,4 +7,4 @@ LICENSE=google-chrome
 RDEPEND=|| ( www-client/google-chrome www-client/chromium )
 SLOT=0
 SRC_URI=amd64? ( https://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip ) x86? ( https://chromedriver.storage.googleapis.com/2.24/chromedriver_linux32.zip )
-_md5_=76e70172e397a7c1879efa0d42b95c86
+_md5_=947813e85a7c9894051f24bcfa1f40d9

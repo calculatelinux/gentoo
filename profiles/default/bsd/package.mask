@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 37aaa3c8657543ae742b781d8e016ca51ea6b3d6 $
 
 # Mask out the GNU versions of various packages.
 # We want BSD versions wherever possible

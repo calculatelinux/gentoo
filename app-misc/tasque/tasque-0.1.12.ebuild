@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 63362a38c0cd5725cf5b528b4c0e382c6ed64c1b $
 
 EAPI=5
 inherit eutils gnome.org mono

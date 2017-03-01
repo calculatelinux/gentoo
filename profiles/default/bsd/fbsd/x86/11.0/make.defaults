@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id: 5a1bf103f266d10e183a733eae058cd471695a40 $
 
 CHOST="i686-gentoo-freebsd11.0"
 CHOST_x86_fbsd="${CHOST}"

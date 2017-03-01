@@ -1,6 +1,5 @@
 # Copyright 2010-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: de520d982789d87ea58e9d4261c737509d8e2ed2 $
 
 PROFILE_ARCH="mipsel"
 

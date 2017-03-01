@@ -9,5 +9,5 @@ RDEPEND=dev-util/desktop-file-utils sys-libs/glibc x11-libs/libXrandr[abi_x86_32
 RESTRICT=bindist fetch strip
 SLOT=0
 SRC_URI=install-crossover-pro-6.2.0.sh
-_eclasses_=unpacker	2afe53b558f4ad6955316e702a4c9cfa
-_md5_=4e467a9b6f623b5ba4a494b4b86fb4cb
+_eclasses_=unpacker	76ddf385f3c212c12857bb8ec2a8bd35
+_md5_=9c2955447560671177902c4d16de0936

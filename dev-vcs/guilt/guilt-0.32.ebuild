@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c949a366479ae3076630bd60772c8874426423a2 $
 
 DESCRIPTION="A series of bash scripts which add a quilt-like interface to git"
 HOMEPAGE="https://www.kernel.org/pub/linux/kernel/people/jsipek/guilt/"

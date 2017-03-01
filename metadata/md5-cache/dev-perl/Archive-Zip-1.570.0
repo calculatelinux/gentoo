@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=virtual/perl-Compress-Raw-Zlib-2.17.0 virtual/perl-File-Path >=virtual/perl-File-Spec-0.800.0 virtual/perl-File-Temp virtual/perl-IO virtual/perl-Time-Local dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/P/PH/PHRED/Archive-Zip-1.57.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=946d89afd5d5b901a104d3169ac2b9af
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=e1bb7f2c2d0d1e5687ab0062b5f11bc3

@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e9a5fd0570ef29d439d6f2d80256dcb1e9f130fc $
 
 # we use bundled glew, cause slotting 1.6 does not give us
 # much benefit for one consumer

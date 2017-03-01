@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/xemacs-base app-xemacs/fsf-compat app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/mmm-mode-1.02-pkg.tar.gz
-_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
-_md5_=11f93c2682d2591bc35d4aadd2393850
+_eclasses_=xemacs-packages	6af894e52080fe5d8bd91371a8a6a735
+_md5_=f918fb24314eabd02116dfe013a4aa52

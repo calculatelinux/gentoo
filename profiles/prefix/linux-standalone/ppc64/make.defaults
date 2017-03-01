@@ -1,5 +1,4 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 04e73caaa1d7f65c464cee6d99eb7b364c2cd275 $
 
 ACCEPT_KEYWORDS="~${ARCH}"

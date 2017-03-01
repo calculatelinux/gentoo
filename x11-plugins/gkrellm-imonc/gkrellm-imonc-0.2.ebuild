@@ -1,6 +1,5 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4b13123b3213f24bbed84753f4fb0a99a9105001 $
 
 inherit gkrellm-plugin
 

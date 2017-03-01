@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: aa0d4a45da1e54a20b9484a316c27fe959f82ac2 $
 
 EAPI="6"
 inherit flag-o-matic toolchain-funcs versionator eutils udev

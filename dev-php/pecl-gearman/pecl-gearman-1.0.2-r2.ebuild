@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5c2d93ce43913ebd2609711e28f9b04e768a4920 $
 
 EAPI=6
 PHP_EXT_NAME="gearman"

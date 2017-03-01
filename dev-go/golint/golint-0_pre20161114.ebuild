@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 23c9d3dee16ace596b73a661e33425602f32ca42 $
 
 EAPI=6
 EGO_PN="github.com/golang/lint/..."

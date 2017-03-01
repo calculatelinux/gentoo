@@ -6,5 +6,5 @@ KEYWORDS=alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~a
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~mgorny/dist/gentoo-bashcomp-20140911.tar.bz2
-_eclasses_=bash-completion-r1	2418d29a9d4e3e223bbc64e93cde118e	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=5bc48aff0a8117e9b9dab19bd8e3e898
+_eclasses_=bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=16e5445814c2aac4b4087ed7fbcff228

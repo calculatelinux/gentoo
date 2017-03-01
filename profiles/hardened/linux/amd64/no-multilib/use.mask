@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2e9b62f8070896733c90a6a4934d42821509a701 $
 
 # Mask the multilib flags back for non-multilib profile.
 abi_x86_32

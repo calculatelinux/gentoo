@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 772a2426a21e8b9b3927eaaaf685e040e2cccae4 $
 
 EAPI=6
 inherit qt5-build

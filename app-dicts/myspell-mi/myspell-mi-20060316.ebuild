@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 77c27adc443b92e41d4d48d42f60f29d4962bbdd $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "mi,NZ,mi_NZ,Maori (New Zealand),mi_NZ.zip"

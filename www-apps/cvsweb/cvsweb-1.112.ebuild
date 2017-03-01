@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: bbe5cb1d285e67e71a4cdf22cafa2ba30c5bdaf9 $
 
 DESCRIPTION="WWW interface to a CVS tree"
 HOMEPAGE="http://www.freebsd.org/projects/cvsweb.html"

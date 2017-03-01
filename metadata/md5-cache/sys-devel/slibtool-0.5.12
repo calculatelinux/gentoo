@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~arm
 LICENSE=MIT
 SLOT=0
 SRC_URI=http://git.midipix.org/cgit.cgi/slibtool/snapshot/slibtool-0.5.12.tar.xz
-_md5_=e2eb30b3ef6f0e52d2de341b324ec24b
+_md5_=bc6ea1e135c494813945a09cd5c5bac7

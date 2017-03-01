@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e2d9b8fb7a1cbd9dcafacc10b783ffb2d3eb532b $
 
 # @ECLASS: findlib.eclass
 # @MAINTAINER:

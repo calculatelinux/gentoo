@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 6911d827f62a762a618977aca6c60e7eabc88923 $
 
 EAPI="5"
 LANGSLONG="cs_CZ de_DE fr_FR hu_HU it_IT pl_PL pt_BR ru_RU tr_TR"

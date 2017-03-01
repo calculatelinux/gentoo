@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~arm ~arm64 ~x86
 LICENSE=freedist
 SLOT=0
 SRC_URI=http://www.yalasoo.com/files/CTRCfonts.rar -> qomolangma-2012.05.rar
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	font	a18368b5586e76d96bda71f19569cec5	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=6139df18ec2419ee4af306b29b6d78ab
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	font	82836641e7d4639329d8c195234ad0e3	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=46233f05cb86e74086f5ad54c2603619

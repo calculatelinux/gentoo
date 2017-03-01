@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=sys-fs/fuse-2.8.0 >=net-misc/curl-7.22.0 dev-libs/boost:= >=net-libs/rb_libtorrent-0.16.0:= python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_python3_5? ( dev-lang/python:3.5 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,python_targets_python3_4(-)?,python_targets_python3_5(-)?,-python_single_target_python2_7(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-)]
 SLOT=0
 SRC_URI=https://github.com/johang/btfs/archive/v2.11.tar.gz -> btfs-2.11.tar.gz
-_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multibuild	863e759ee14be1c222e6b67853e91c7d	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-r1	34891ed5e2e95ae50a5b75edb0b88769	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=f83236e01e94c120ea9ac5009bbd775b
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	libtool	48b1b9f6194d2842456514d1184ca72e	multibuild	72647e255187a1fadc81097b3657e5c3	multilib	0236be304ee52e7f179ed2f337075515	python-r1	e0edbf5130eaefe107b8c8872bd818bc	python-utils-r1	316c531873247e48befb99900e5aa2ed	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=5cda129db230177d6ec007ea0f03af8d

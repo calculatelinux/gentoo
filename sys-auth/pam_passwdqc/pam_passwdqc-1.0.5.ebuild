@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 869b8b242f04c015a27ae23ab298067b6d5a5dc4 $
 
 inherit pam eutils toolchain-funcs
 

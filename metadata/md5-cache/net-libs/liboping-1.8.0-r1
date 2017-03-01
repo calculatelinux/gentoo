@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1 GPL-2
 RDEPEND=ncurses? ( sys-libs/ncurses:0= ) dev-lang/perl:=
 SLOT=0/0.2
 SRC_URI=https://noping.cc/files/liboping-1.8.0.tar.bz2
-_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	fcaps	b322db55b38b828606f332783d386104	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=f8dc792f9536e5bad08691915ab4dc70
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	fcaps	e80204189039ecc03f24151c518375f0	libtool	48b1b9f6194d2842456514d1184ca72e	multilib	0236be304ee52e7f179ed2f337075515	multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=1e0628ca82f66b9e2e63e891ce11483f

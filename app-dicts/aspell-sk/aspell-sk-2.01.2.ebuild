@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0b6783b320da9aa1769ae6e277ef6912151e0338 $
 
 ASPELL_LANG="Slovak"
 ASPOSTFIX="6"

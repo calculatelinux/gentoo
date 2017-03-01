@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 736072efeebb0aa00d8ad0d72a7fb578b9d95be4 $
 EAPI=6
 DIST_AUTHOR=BINGOS
 DIST_VERSION=0.46

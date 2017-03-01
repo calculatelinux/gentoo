@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3eeb4efc4657be512dd46b9e8baf3248eab77290 $
 
 # @ECLASS: gnome.org.eclass
 # @MAINTAINER:

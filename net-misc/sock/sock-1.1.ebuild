@@ -1,6 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fddc382dbecad204688f4b83ba817be9c786bff7 $
 
 DESCRIPTION="A shell interface to network sockets"
 SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/local/mj/net/${P}.tar.gz"

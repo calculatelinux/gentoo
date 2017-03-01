@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1850488c365bff17861b58294d31f0b2af5c07ce $
 
 EAPI=5
 SWORD_MODULE="Twenty"

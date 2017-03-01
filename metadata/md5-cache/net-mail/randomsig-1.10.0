@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl
 SLOT=0
 SRC_URI=http://suso.suso.org/programs/randomsig/downloads/randomsig-v1.10.0.tar.gz
-_md5_=b92993b272197d51b4449c1b1fb45a26
+_md5_=e94e73d669157041efd82d7e7e8836b2

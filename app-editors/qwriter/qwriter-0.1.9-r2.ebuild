@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: eb5bf7976808a691fe501445b7d925971119361c $
 
 EAPI=5
 LANGS="ru"

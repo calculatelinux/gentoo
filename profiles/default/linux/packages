@@ -1,6 +1,5 @@
 # Copyright 2004-2015 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e20645ce773e1f441438bd8ac83539fe19b2bcf7 $
 
 # This file extends the base packages file for the default profile that all
 # architectures will enjoy.  Please note that default is what most architectures

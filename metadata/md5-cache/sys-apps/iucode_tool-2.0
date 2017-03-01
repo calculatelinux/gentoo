@@ -6,4 +6,4 @@ KEYWORDS=-* amd64 x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://gitlab.com/iucode-tool/releases/raw/master/iucode-tool_2.0.tar.xz
-_md5_=beba3fc68c74e7bdcb21d306d7cd9639
+_md5_=36a015af914946e9b7403f3ba37c44a2

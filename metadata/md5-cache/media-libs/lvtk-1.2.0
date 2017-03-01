@@ -9,5 +9,5 @@ LICENSE=GPL-3+
 RDEPEND=media-libs/lv2 >=dev-libs/boost-1.40.0 gtk2? ( dev-cpp/gtkmm:2.4 )
 SLOT=0
 SRC_URI=https://github.com/lvtk/lvtk/archive/1.2.0.tar.gz -> lvtk-1.2.0.tar.gz
-_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	python-single-r1	b85fdbcb7d5ea8aff392df97c9cb9385	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	waf-utils	adf3124c7e0b513f0066403fcccccbb1
-_md5_=dbd8c42bb01aa547810e39d4f839d8b4
+_eclasses_=multilib	0236be304ee52e7f179ed2f337075515	multiprocessing	284a473719153462f3e974d86c8cb81c	python-single-r1	4346485bdd137b2d301e993dad734668	python-utils-r1	316c531873247e48befb99900e5aa2ed	toolchain-funcs	53b75b4a49cf3e61530a523804045432	waf-utils	d1ea2758053cbb7c5b38b8f88654468d
+_md5_=90edf17b9ae58b25c63c7d92853f06f5

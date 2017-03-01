@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 35cfbf640ba732a99c9a409bc01b8fd666fd57c6 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-visualization/visualization_tutorials"

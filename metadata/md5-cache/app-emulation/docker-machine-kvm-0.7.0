@@ -8,5 +8,5 @@ LICENSE=Apache-2.0
 RDEPEND=app-emulation/libvirt:=[qemu,virt-network]
 SLOT=0
 SRC_URI=https://github.com/dhiltgen/docker-machine-kvm/archive/v0.7.0.tar.gz -> docker-machine-kvm-0.7.0.tar.gz https://github.com/rgbkrk/libvirt-go/archive/v2.13.0.tar.gz -> libvirt-go-2.13.0.tar.gz https://github.com/docker/machine/archive/v0.8.2.tar.gz -> docker-machine-0.8.2.tar.gz
-_eclasses_=golang-base	0f75d9692d09462687e69a4c6dda0d16
-_md5_=76ec8482639bf7133bf18914d95ac8e3
+_eclasses_=golang-base	2983c8674b8e3b3a99ec61986356c76a
+_md5_=a076ce24e2f3a1146b162aa2145c11a5

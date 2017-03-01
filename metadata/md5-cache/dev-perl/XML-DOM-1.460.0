@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-perl/libwww-perl >=dev-perl/XML-Parser-2.300.0 dev-perl/XML-RegExp dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/T/TJ/TJMATHER/XML-DOM-1.46.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=a49ab9e3e0ed1bf68c4eee35cac964a3
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=0ec666ecb69aba4296f5c8f3c3224075

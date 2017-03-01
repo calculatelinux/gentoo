@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5b88fbc7162c125c5fd4c8c6694364e3c3e34615 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/lagadic/vision_visp"

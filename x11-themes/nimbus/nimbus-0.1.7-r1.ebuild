@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4a9c328984f93836db25c3e17f90bdc4ec1b5fc0 $
 
 EAPI=4
 AUTOTOOLS_AUTO_DEPEND=no

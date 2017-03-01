@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 50c309f4c7ec5333f948dc75ce0749d20499135d $
 
 # James Le Cuirot <chewi@gentoo.org> (05 Aug 2016)
 # The ARM32 JIT code is broken as of 7.2.6.6. Without this, Java 7 is

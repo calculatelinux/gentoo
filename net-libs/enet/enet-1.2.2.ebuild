@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: be0618bb7245b5661e7e8ad2cca382ff6befc5fd $
 
 EAPI=3
 inherit base

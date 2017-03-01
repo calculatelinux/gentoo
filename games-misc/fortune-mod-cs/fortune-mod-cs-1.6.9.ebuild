@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a4c90bcc6dd88a0f2e227bf635842ed20e1ce3f3 $
 EAPI=5
 DESCRIPTION="Database of the Czech and Slovak cookies for the fortune(6) program"
 HOMEPAGE="http://ftp.fi.muni.cz/pub/linux/people/zdenek_pytela/"

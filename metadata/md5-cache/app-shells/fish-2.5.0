@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/libpcre2-10.21[pcre32] sys-libs/ncurses:0=
 SLOT=0
 SRC_URI=http://fishshell.com/files/2.5.0/fish-2.5.0.tar.gz
-_md5_=8267d5ab28a0f38917421fb04c063621
+_md5_=f181d0db2d46988963e579ae61ebe9a5

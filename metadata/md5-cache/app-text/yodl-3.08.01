@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=https://github.com/fbb-git/yodl/archive/3.08.01.tar.gz -> yodl-3.08.01.tar.gz
-_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=8fe9dcb02bd16be68af6c7fd12fd9a3e
+_eclasses_=multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=a7c4ed585d724e704a935f196df4bf01

@@ -7,4 +7,4 @@ KEYWORDS=amd64 ~arm ~mips ~ppc x86
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~blueness/fts-standalone/fts-0.2.tar.gz
-_md5_=279f8ad953bfa3588b2c2336213d1e5d
+_md5_=b5917b6c9b5a97f04c2d8412c788a3af

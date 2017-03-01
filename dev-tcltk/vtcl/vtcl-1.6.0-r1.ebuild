@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 95db8edfa78e2e2e2cef5d73e4b3caf27c063f4d $
 
 DESCRIPTION="Visual Tcl is a high-quality application development environment"
 HOMEPAGE="http://vtcl.sf.net"

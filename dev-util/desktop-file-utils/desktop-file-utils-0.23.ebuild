@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ebf6e59964199302bbbd9334b993068928f55163 $
 
 EAPI=6
 inherit elisp-common eutils

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c924b83493ba1c08405c7d7f50e341b5fc64024d $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-planning/navigation_msgs"

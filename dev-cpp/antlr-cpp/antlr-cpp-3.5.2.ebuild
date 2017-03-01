@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 24195f44eb2b2453cd4d691e49d004f83610af2c $
 EAPI=6
 
 MY_PN="${PN%-cpp}"

@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8bb9e1c3c9ff2899dce4528e173445a33e305304 $
 
 inherit eutils flag-o-matic java-pkg-2 toolchain-funcs
 

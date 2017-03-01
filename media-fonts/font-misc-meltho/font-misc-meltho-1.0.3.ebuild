@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f5f224df86d07ca488633a0ca69924fccaf04ee4 $
 
 EAPI=3
 FONT_DIR="OTF"

@@ -10,5 +10,5 @@ RDEPEND=!app-admin/augeas !app-admin/mcollective !app-admin/puppet !dev-ruby/hie
 RESTRICT=strip
 SLOT=0
 SRC_URI=amd64? ( http://apt.puppetlabs.com/pool/xenial/PC1/p/puppet-agent/puppet-agent_1.8.3-1xenial_amd64.deb ) x86? ( http://apt.puppetlabs.com/pool/xenial/PC1/p/puppet-agent/puppet-agent_1.8.3-1xenial_i386.deb )
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	unpacker	2afe53b558f4ad6955316e702a4c9cfa	user	e28cdd9fa5d8069e8e047c82db5d57bd
-_md5_=287a1e7036bd6876c8a09a1fda4e39a6
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	systemd	ec2e9154031d942186c75c0aabb41900	toolchain-funcs	53b75b4a49cf3e61530a523804045432	unpacker	76ddf385f3c212c12857bb8ec2a8bd35	user	e4b567c44272a719fabf53f0f885d3f7
+_md5_=cd89fca03e53499d72060d70a199af13

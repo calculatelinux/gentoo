@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/gobject-introspection:= dev-libs/glib:2 >=media-libs/gstreamer-1.8.2:1.0[introspection] >=media-libs/gst-plugins-base-1.8.2:1.0[introspection]
 SLOT=0
 SRC_URI=https://github.com/pitivi/gst-transcoder/archive/1.8.2.tar.gz -> gst-transcoder-1.8.2.tar.gz
-_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-any-r1	7daff3c0322873651801c85ef36109f5	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	xdg	8ac551374fbd42bb75c1786c43698de0	xdg-utils	169c13f9ec65368f6f6b2961e68dc152
-_md5_=a18911274841233e3b542a7096f0c49c
+_eclasses_=multilib	0236be304ee52e7f179ed2f337075515	python-any-r1	74bf184baf9facd72c7baa58cab21385	python-utils-r1	316c531873247e48befb99900e5aa2ed	toolchain-funcs	53b75b4a49cf3e61530a523804045432	xdg	6cd76cc914c1a759dee032778487b57f	xdg-utils	178a84136f416b8ea1a857717eacd21c
+_md5_=45474e908777fa3695fd8bc066cf0d58

@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=http://kde-look.org/CONTENT/content-files/124442-Pulse-Glass.tar.gz
-_md5_=738892a18bb014dcf2f167d0c313be73
+_md5_=e78ab74ee374027abde696f880ab005a

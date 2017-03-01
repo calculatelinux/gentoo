@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2fedad2c07123ece29fa1d787d94972cc1b133bb $
 
 # TODO/FIXME:
 # lunatic broken

@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3855a8522d7f6c0596a0a03039541309280ec9f5 $
 
 inherit cannadic eutils multilib
 

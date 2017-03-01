@@ -1,6 +1,5 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 42faa34c86b2bc762f332b37b2e97de225de129f $
 
 S="${WORKDIR}"
 DESCRIPTION="Lush KDE icon theme"

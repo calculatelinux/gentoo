@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 817febce4a130a187e0c92b52bcf5de7fd572a20 $
 
 DESCRIPTION="A P2P framework and client"
 HOMEPAGE="http://xnap.sf.net"

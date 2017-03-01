@@ -8,5 +8,5 @@ LICENSE=ISC
 RDEPEND=>=dev-ml/uutf-1.0.0:= dev-lang/ocaml:= dev-ml/uchar:=
 SLOT=0/1.0.0
 SRC_URI=http://erratique.ch/software/jsonm/releases/jsonm-1.0.0.tbz
-_eclasses_=findlib	3a364957a70a5953531fad3d1bc112ec
-_md5_=b32970be69cf6adc33570d8a084194bb
+_eclasses_=findlib	45d6030075064a68da8d7143726a1150
+_md5_=a0db91ecaaaefd6da98db46fa836faf9

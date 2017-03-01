@@ -8,4 +8,4 @@ LICENSE=GPL-3
 RDEPEND=net-nds/openldap sys-fs/fuse >=sys-libs/libhx-3.12
 SLOT=0
 SRC_URI=mirror://sourceforge/ldapfuse/ldapfuse-1.0.tar.xz
-_md5_=4603401ac31e6c3448cd788c736ad528
+_md5_=89954667099cbdb853447ecd5b9af68a

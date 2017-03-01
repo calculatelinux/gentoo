@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 943c4889788de27e6a80dcb73e89928b4b63e859 $
 
 EAPI=5
 MY_P=${P/fortune-mod-sp-fortunes/SP}

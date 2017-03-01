@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 52aaa075f8f318a2d6c96a0422f8d0a38c25a6dd $
 
 # Fabian Groffen <grobian@gentoo.org> (30 Sep 2012)
 # Requires XQuartz, since Apple dropped much of X-support in 10.8

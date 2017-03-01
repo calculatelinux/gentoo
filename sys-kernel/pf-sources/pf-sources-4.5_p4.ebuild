@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a2f516675b2ffeebe8d09c078309cbd0ffde8a96 $
 
 EAPI="5"
 inherit readme.gentoo-r1 toolchain-funcs versionator

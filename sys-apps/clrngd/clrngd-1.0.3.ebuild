@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7f44166db975d9b39d4dbec48fc1918881ee91dd $
 
 DESCRIPTION="Clock randomness gathering daemon"
 HOMEPAGE="http://echelon.pl/pubs/"

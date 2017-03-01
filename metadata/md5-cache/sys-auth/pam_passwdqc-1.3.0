@@ -7,4 +7,4 @@ KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc
 LICENSE=Openwall BSD public-domain
 RDEPEND=sys-auth/passwdqc[pam]
 SLOT=0
-_md5_=e039fb3598360c8652acbca255d42096
+_md5_=f5394b01b3e6d93693af2fe315c8f8b0

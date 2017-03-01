@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 71b62cd6c33ccf52a607324fae3595fb26564bbd $
 
 inherit prefix
 

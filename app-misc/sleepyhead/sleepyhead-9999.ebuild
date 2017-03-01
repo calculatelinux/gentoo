@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4d6d0f5bd7e8e3220294f83c2be4ab8d38b02b8b $
 
 EAPI=5
 inherit eutils git-2 qt4-r2

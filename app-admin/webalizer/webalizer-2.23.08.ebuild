@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a5037981bc3075d5fa96668b74105b5ddfef2fd9 $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well

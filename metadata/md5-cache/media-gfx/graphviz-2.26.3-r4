@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/expat-2.0.0 >=dev-libs/glib-2.11.1 >=media-libs/fontconfig-2.
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.graphviz.org/pub/graphviz/ARCHIVE/graphviz-2.26.3.tar.gz
-_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python	5d5de4f6044d29f62c6084083a6d113b	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=bd44cbbfac5502c151c7ed47a0e29f9e
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	libtool	48b1b9f6194d2842456514d1184ca72e	multilib	0236be304ee52e7f179ed2f337075515	python	bc5dc5d43bf20a6e1f59f99b5f49df4f	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=8ccaae85686280b7b655633b3d5721ae

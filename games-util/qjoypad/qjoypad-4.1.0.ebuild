@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ef1551520cb2d3c7ad50f0c9b9bbb33255353ebf $
 
 EAPI=5
 inherit eutils qt4-r2

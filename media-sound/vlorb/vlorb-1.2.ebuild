@@ -1,6 +1,5 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a879375234469f340b0ce7220fd07117b37a1b8b $
 
 DESCRIPTION="a high quality Audio CD to audio file encoder"
 HOMEPAGE="http://jk.yazzy.org/projects/vlorb/"

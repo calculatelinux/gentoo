@@ -1,6 +1,5 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f6d7034e99a54e203a77b50bb4e58325909438fd $
 
 DESCRIPTION="A package to simplify installation of all dictd dictionaries"
 

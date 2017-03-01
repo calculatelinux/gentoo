@@ -9,4 +9,4 @@ LICENSE=the-Click-license
 RDEPEND=net-libs/libpcap
 SLOT=0
 SRC_URI=http://read.seas.harvard.edu/~kohler/ipsumdump/ipsumdump-1.85.tar.gz
-_md5_=0e0c430b0778544c65ce92c5b3c865a8
+_md5_=b7bae135feec2f319c094efa5b3920fc

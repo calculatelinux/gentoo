@@ -8,5 +8,5 @@ RDEPEND=media-libs/libsdl[abi_x86_32(-)] sys-libs/lib-compat x11-libs/libX11[abi
 RESTRICT=strip
 SLOT=0
 SRC_URI=ftp://ggdev-1.homelan.com/mutantstorm/MutantStormDemo_1_33.sh.bin
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	unpacker	2afe53b558f4ad6955316e702a4c9cfa
-_md5_=847e394cb6911501dca2015077e374eb
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	unpacker	76ddf385f3c212c12857bb8ec2a8bd35
+_md5_=268ab149ced8cc0ea43d4e99cb83ad59

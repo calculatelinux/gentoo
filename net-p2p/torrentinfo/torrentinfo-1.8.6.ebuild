@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 223d8929977a9b75fb6b990e04e23be06b7eac5d $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_4,3_5} )

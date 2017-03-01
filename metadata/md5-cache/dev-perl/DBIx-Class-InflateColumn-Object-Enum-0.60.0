@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-perl/DBIx-Class dev-perl/Object-Enum dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/J/JM/JMMILLS/DBIx-Class-InflateColumn-Object-Enum-0.06.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=293e80b5f63e3daf69052ea45f5eb06d
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=dcd9f892db62ba5e278b58ac5ae26ab1

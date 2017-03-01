@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8e9d1530839e68bbedf28f941dcba4c05c5923e7 $
 
 DESCRIPTION="A vector based graphics editor similar to xfig, but simpler"
 HOMEPAGE="http://figurine.sourceforge.net/"

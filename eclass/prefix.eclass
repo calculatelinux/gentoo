@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 224cb09d2e3a1e1ec78c42d532f9a6bae0e1ee8c $
 
 # @ECLASS: prefix.eclass
 # @MAINTAINER:

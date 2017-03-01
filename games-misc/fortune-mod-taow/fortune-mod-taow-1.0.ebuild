@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5f8b25dd4133bc71f3da8e8e1ef99f15e784a221 $
 EAPI=5
 MY_P=fortunes-taow-${PV}
 DESCRIPTION="The Art of War Fortune Mod"

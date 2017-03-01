@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f64f618759a6eea0dd3d1c8676993a07b1dfb47f $
 
 EAPI=6
 inherit autotools eutils prefix vcs-snapshot

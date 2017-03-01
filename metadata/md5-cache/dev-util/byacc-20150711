@@ -6,4 +6,4 @@ KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~ppc-aix 
 LICENSE=public-domain
 SLOT=0
 SRC_URI=ftp://invisible-island.net/byacc/byacc-20150711.tgz
-_md5_=153865340ebfbefa7c886665e9f7c2dd
+_md5_=61826b6ba7941d02e6a45c1e9f616be1

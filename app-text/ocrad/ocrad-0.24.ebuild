@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4022d33a683bececade9814210286a99deb371a7 $
 
 EAPI=5
 inherit unpacker toolchain-funcs

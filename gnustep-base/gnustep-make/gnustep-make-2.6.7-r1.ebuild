@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3e6ea24fd5229937c23b92e40b0e5a986a9898ca $
 
 EAPI=6
 inherit gnustep-base eutils prefix toolchain-funcs

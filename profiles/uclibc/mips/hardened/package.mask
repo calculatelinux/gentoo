@@ -1,5 +1,4 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8bd37b0e39f48420ed433541101b5fb6a1a31e40 $
 
 >=sys-devel/gcc-4.4

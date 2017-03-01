@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 204cc8fe5a814fb6d558baeef9d30f2c0b557817 $
 
 EAPI=6
 inherit gnome2 virtualx

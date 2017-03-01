@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2ccc1bc1f841c6a08408cb8ae8867d6326599723 $
 
 EAPI=5
 inherit mono multilib versionator

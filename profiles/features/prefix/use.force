@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 118d77ca1ffdfe9d6b13317f38a1564c82d4ea93 $
 
 # force prefix flag to be set
 prefix

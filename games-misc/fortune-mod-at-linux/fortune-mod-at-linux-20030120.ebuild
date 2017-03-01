@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c0995dd06a94ea63747baa5a53c4b04f8689eb5b $
 EAPI=5
 MY_P="fortune-mod-at.linux-${PV}"
 DESCRIPTION="Quotes from at.linux"

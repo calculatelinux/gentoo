@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3b671adef3aa14e80a5dcea49f509180995a26d9 $
 
 EAPI=5
 MODULE_AUTHOR=VIY

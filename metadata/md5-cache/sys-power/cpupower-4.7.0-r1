@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/pciutils !<sys-apps/linux-misc-apps-3.6-r2 !sys-power/cpufrequtils
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~floppym/dist/cpupower-4.7.0.tar.xz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=3054a16cf01a91a7cd430a75f39ce004
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	systemd	ec2e9154031d942186c75c0aabb41900	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=71b06b78df0d108ad2cf5d1ba882e1fe

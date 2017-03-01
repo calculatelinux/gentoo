@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 17f06591750a6fa99ba641348148bf6592e2a8b5 $
 EAPI=5
 
 inherit vdr-plugin-2

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b1355b18dde8710bc3623c3f24342535a99de4ae $
 
 # Pacho Ramos <pacho@gentoo.org> (04 Feb 2017)
 # Missing keywords, bug #599572

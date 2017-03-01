@@ -1,6 +1,5 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3a5cea4ede517ab0a7a62419abd39557a16dd104 $
 
 S=${WORKDIR}/dlx
 DESCRIPTION="DLX Simulator"

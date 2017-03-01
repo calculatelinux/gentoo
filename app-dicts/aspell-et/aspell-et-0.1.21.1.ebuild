@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3e41a7233c3af438d8c995286231a00a7fe0432c $
 
 ASPELL_LANG="Estonian"
 ASPOSTFIX="6"

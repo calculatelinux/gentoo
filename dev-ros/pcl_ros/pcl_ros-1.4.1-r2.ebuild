@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c3bb11b08d0e43c9fc85c07b6ceaeaf625389a17 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/perception_pcl"

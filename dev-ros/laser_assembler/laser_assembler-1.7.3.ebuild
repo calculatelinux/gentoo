@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d1109b787ede536a18743606749a3aaffe727b1b $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/laser_assembler"

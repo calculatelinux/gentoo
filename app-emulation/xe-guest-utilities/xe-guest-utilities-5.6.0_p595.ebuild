@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: cf272c4da64fcf645d70635c497a479505f428f2 $
 
 EAPI=5
 inherit eutils rpm linux-info

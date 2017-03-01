@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 84ba2e02faa2f9424b3a4aeb8ae0b08817d9658c $
 
 EAPI=5
 MODULE_AUTHOR=MIK

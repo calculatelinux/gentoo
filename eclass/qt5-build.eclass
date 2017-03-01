@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f22934418b8639c2144013dfc9fc5726a483bfba $
 
 # @ECLASS: qt5-build.eclass
 # @MAINTAINER:

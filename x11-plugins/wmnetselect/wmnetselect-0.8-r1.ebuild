@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1cec61e0d4bc9c4502a0a39fc8e7cb0f7e57d102 $
 
 IUSE=""
 DESCRIPTION="WindowMaker browser launcher docklet"

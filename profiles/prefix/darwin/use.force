@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b0f488eb923e1727cac74604f8c0e98207d8c613 $
 
 # Re-add Darwin OS
 kernel_Darwin

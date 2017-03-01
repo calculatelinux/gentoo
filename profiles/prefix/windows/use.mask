@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 78e4807fe677dc4182d479cf3d199a403070fd20 $
 
 # Re-add Windows kernel
 -kernel_Winnt

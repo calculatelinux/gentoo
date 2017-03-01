@@ -1,6 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ba8a2c221a5278e6912cb411672bb8828d9f0192 $
 
 DESCRIPTION="Convert eDonkey2000 server.met to html"
 HOMEPAGE="http://ed2k-tools.sourceforge.net/${PN}.shtml"

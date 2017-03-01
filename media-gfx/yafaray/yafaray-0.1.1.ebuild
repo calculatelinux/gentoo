@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 40f9829feb6c355cc66399a8164f3459ee586138 $
 
 EAPI=2
 MY_PN="YafaRay"

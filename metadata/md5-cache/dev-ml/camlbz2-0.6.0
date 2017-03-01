@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=app-arch/bzip2 >=dev-lang/ocaml-3.12:=[ocamlopt]
 SLOT=0/0.6.0
 SRC_URI=http://forge.ocamlcore.org/frs/download.php/72/camlbz2-0.6.0.tar.gz
-_eclasses_=findlib	3a364957a70a5953531fad3d1bc112ec
-_md5_=01e567ea6e5f5740d8af0d9dc79bd647
+_eclasses_=findlib	45d6030075064a68da8d7143726a1150
+_md5_=3633f7926cb8ceba9b8ef36594fa2d7a

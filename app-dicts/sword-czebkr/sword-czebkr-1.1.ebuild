@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 12cac7f50cbb05d026e9447d69b03b516edc9c29 $
 
 EAPI=5
 SWORD_MODULE="CzeBKR"

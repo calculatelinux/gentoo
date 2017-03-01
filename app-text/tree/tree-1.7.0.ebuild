@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 29c53797590df7e29dbd61b40a4bd0b1041e0c1f $
 
 EAPI=5
 inherit toolchain-funcs flag-o-matic bash-completion-r1

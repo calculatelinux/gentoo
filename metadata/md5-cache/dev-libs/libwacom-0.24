@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=dev-libs/glib:2 virtual/libgudev:=
 SLOT=0
 SRC_URI=mirror://sourceforge/linuxwacom/libwacom/libwacom-0.24.tar.bz2
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	udev	9b8a82f709a883f0840736c9b9375698
-_md5_=4c91e632ecd7867fcafc0cafe8f880ab
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	udev	d91cac2c73b94629cad2daea66e0d182
+_md5_=34984c74fb6b73a0a80aaa70f2a781a0

@@ -8,5 +8,5 @@ LICENSE=Google-TOS openssl BSD
 RDEPEND=|| ( media-sound/pulseaudio media-libs/alsa-lib ) dev-libs/expat dev-libs/glib:2 sys-libs/glibc x11-libs/cairo x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXext x11-libs/libXfixes x11-libs/libXrandr x11-libs/libXrender x11-libs/pango sys-apps/lsb-release selinux? ( sec-policy/selinux-googletalk ) libnotify? ( x11-libs/libnotify )
 RESTRICT=strip mirror
 SLOT=0
-_eclasses_=cvs	f95d1c8d525d9be99175ebbc6618ea1e	eutils	c8729578e47597ee48d77eda210e2b56	mozextension	4a3a7cde5116139794748422b3b57218	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	nsplugins	6596b8f6d213b20f66463989faae73cf	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	unpacker	2afe53b558f4ad6955316e702a4c9cfa	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
-_md5_=23c6adf4856b7bfd0a145ad80c0ab607
+_eclasses_=cvs	4814eddfdfb9010cb9cf4b46e9ddff6b	eutils	3c847a0129fed780bd709b98e426f89c	mozextension	e5d920147bfccf4930062e462e2a417d	multilib	0236be304ee52e7f179ed2f337075515	nsplugins	2049586e425364a1c5bdb004205d1758	toolchain-funcs	53b75b4a49cf3e61530a523804045432	unpacker	76ddf385f3c212c12857bb8ec2a8bd35	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=622b25cdac6648e1c6db3e4174a9c582

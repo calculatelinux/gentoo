@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: df84f1490ccc272fce471a261d81721b58584f96 $
 
 inherit mount-boot flag-o-matic toolchain-funcs eutils
 

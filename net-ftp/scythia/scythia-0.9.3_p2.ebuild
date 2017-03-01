@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b39486b211f310c1c5c045d3eaf0be617b4e06c5 $
 
 EAPI=5
 inherit gnome2-utils qt4-r2

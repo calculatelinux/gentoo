@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: cdb5063e1fdd3f771ba937787919b84dd3b2701e $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "ga,IE,ga_IE,Irish (Ireland),ga_IE.zip"

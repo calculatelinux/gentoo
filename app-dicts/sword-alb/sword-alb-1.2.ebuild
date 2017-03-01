@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7d5a93371de195626e1e6c2fc843166ecd117078 $
 
 EAPI=5
 SWORD_MODULE="Alb"

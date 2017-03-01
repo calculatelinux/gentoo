@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 831feff8c3afc753fa7ef3361686094bfa86d8b6 $
 
 EAPI=5
 # ruby22 -> does not compile

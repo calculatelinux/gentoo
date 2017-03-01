@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 642afac317ea6e6368aaf038767447fc68869cad $
 
 EAPI=5
 SWORD_MODULE="JPS"

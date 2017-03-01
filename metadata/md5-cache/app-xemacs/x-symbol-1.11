@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/xemacs-base app-xemacs/auctex app-xemacs/mail-lib app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/x-symbol-1.11-pkg.tar.gz
-_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
-_md5_=b1d57969181c053ceb611fb016016d57
+_eclasses_=xemacs-packages	6af894e52080fe5d8bd91371a8a6a735
+_md5_=ea68c4878d952b6e93f92a90696350f2

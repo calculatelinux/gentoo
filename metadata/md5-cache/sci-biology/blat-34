@@ -7,5 +7,5 @@ KEYWORDS=amd64 x86
 LICENSE=blat
 SLOT=0
 SRC_URI=http://www.soe.ucsc.edu/~kent/src/blatSrc34.zip
-_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=b5ebe5431bfe43190488b6e71e983935
+_eclasses_=multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=646fc86fc1554d8096b18be577b79d63

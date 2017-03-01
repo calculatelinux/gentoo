@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id: 96236f301f89e308e9500406ca49947b00108f13 $
 
 # Michael Palimaka <kensington@gentoo.org> (21 Jun 2016)
 # Unkeyworded

@@ -1,6 +1,5 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 35230d11a3f2ec9d7adaf6da8e9e1cbb5018c649 $
 
 EAPI=5
 
@@ -30,7 +29,7 @@ S=${WORKDIR}/${MY_P}
 
 python_compile_all() {
 	if use doc; then
-		"${PYTHON}" setup.py build_sphinx || die
+		esetup.py build_sphinx
 	fi
 }
 

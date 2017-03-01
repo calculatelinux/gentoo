@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3e40e33890372d13a09483e59c16c7d1cd7c5ec6 $
 
 # @ECLASS: cmake-multilib.eclass
 # @MAINTAINER:

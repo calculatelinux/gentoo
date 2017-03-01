@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 88c5391ed3bdb17df643ddb3bd74b31ae6b4cd09 $
 
 # This file contains descriptions of OPENMPI_FABRICS USE_EXPAND flags.
 

@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 940ac7b30fe9421dacb113935f5019bfa2236c7b $
 
 ASPELL_LANG="Vietnamese"
 ASPOSTFIX="6"

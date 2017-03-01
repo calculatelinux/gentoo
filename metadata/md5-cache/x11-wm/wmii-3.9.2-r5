@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=>=sys-libs/libixp-0.5_p20110208-r3 x11-libs/libXft x11-libs/libXext x11-libs/libXrandr x11-libs/libXrender x11-libs/libX11 x11-libs/libXinerama >=media-libs/freetype-2 x11-apps/xmessage x11-apps/xsetroot media-fonts/font-misc-misc
 SLOT=0
 SRC_URI=http://dl.suckless.org/wmii/wmii+ixp-3.9.2.tbz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=3d419847d48afdb4b239891756aed161
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=c03322d9ce1aaad5d36fd6dc268fc37d

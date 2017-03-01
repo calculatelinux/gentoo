@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 13bbc85692ed34fa4703d917964af74579513c56 $
 
 IUSE=""
 DESCRIPTION="High Level Firewall Language"

@@ -10,5 +10,5 @@ RDEPEND==dev-dotnet/gtk-sharp-2.12* =dev-dotnet/gnome-sharp-2.24* gnome-base/gno
 RESTRICT=test
 SLOT=2
 SRC_URI=mirror://gnome/sources/gnome-desktop-sharp/2.24/gnome-desktop-sharp-2.24.0.tar.bz2
-_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	gtk-sharp-module	1b645b1d0870fdd3b72fdbf1e6a49b20	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	mono	ad4827ccdf05c537ad7a57123054a9e8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
-_md5_=274ecd1c0fa7ab78b4cccef3773b437d
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	base	df2aa567b3f0595aae0d0923889f7631	eutils	3c847a0129fed780bd709b98e426f89c	gtk-sharp-module	d1d23a14e4ab2b37f78f94fb7cd60e85	libtool	48b1b9f6194d2842456514d1184ca72e	mono	a59df07822fcb0dec319e09526d84c1f	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=f7f82592c11ac03faa8da73f43b8da81

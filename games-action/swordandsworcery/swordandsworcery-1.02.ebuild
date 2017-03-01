@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: aae567bb308da98195ed3fccb43a3d0f3f440c16 $
 
 # TODO: unbundle liblua-5.1 when available for multilib
 

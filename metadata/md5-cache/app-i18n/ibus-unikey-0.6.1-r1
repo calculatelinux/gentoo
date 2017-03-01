@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=gtk3? ( >app-i18n/ibus-1.4.0[gtk3] x11-libs/gtk+:3 ) !gtk3? ( >=app-i18n/ibus-1.4.0 >=x11-libs/gtk+-2.12:2 ) x11-libs/libX11
 SLOT=0
 SRC_URI=https://ibus-unikey.googlecode.com/files/ibus-unikey-0.6.1.tar.gz https://dev.gentoo.org/~dlan/distfiles/ibus-unikey-0.6.1-gcc6.patch
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=48d0d623ca39e584e1fd11e2719ab742
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=84af8fc5e1fff3be6ec9119a8684d881

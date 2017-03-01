@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 732e3df9d9191ddce865dc5cd5c0492682a27c3b $
 
 EAPI="6"
 GNOME_ORG_MODULE="gnome-themes-standard"

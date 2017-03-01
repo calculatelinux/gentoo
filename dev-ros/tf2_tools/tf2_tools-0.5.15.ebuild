@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e46adeb2f68db67744d5620fd0420ffae7b0d5ae $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/geometry2"

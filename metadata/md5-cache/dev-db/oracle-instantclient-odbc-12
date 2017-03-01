@@ -6,4 +6,4 @@ KEYWORDS=~x86 ~amd64
 LICENSE=metapackage
 RDEPEND=>=dev-db/oracle-instantclient-basic-12 >=dev-db/oracle-instantclient-12[odbc]
 SLOT=0
-_md5_=2b2419b5eb69f3b8ec89fa9b6f5fbd45
+_md5_=8a541d1fa03a4a2593557e84981992b5

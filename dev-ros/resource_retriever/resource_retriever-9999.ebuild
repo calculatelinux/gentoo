@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ef50344f6c6a5f651d040e5d8d6bcde26c7e7354 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/resource_retriever"

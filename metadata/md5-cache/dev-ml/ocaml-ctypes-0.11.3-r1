@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=>=dev-lang/ocaml-4.02:=[ocamlopt] virtual/libffi
 SLOT=0/0.11.3
 SRC_URI=https://github.com/ocamllabs/ocaml-ctypes/archive/0.11.3.tar.gz -> ocaml-ctypes-0.11.3.tar.gz
-_eclasses_=findlib	3a364957a70a5953531fad3d1bc112ec
-_md5_=cc61125aef2ea87ebc3429cda85b2e13
+_eclasses_=findlib	45d6030075064a68da8d7143726a1150
+_md5_=0bed25a956801df8aaa968467582189b

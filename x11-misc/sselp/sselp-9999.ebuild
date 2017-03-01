@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 65a33750b80dec3a0fd28a44eb2be616478d374c $
 
 EAPI=6
 inherit git-r3 toolchain-funcs

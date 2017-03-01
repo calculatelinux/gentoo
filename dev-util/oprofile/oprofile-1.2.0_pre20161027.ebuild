@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7ddfcc03950ef87c8de6c230aa241633c0cc38dd $
 
 EAPI="6"
 inherit autotools java-pkg-opt-2 linux-info user

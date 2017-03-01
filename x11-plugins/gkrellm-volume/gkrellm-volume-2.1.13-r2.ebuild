@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e9b82fd19019cfc66a39bb9267251100a40ad79e $
 
 EAPI=6
 inherit gkrellm-plugin toolchain-funcs

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/linuxmint/cinnamon-translations/archive/3.2.0.tar.gz -> cinnamon-translations-3.2.0.tar.gz
-_eclasses_=l10n	7e1d75925970de7cabf73398fce703f6
-_md5_=b181e526ca867aa86c0ea01fad8ed172
+_eclasses_=l10n	8f52d9ce1814aca2ed1a46920084ea66
+_md5_=63ef326439346911226cf28e7e9e604b

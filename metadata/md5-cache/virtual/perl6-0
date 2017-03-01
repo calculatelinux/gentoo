@@ -4,4 +4,4 @@ EAPI=5
 KEYWORDS=~amd64 ~x86
 RDEPEND=dev-lang/rakudo
 SLOT=0
-_md5_=7829b6ff86f989ae45102f92dc800532
+_md5_=0d759cfc89a72bd6167e6e04086d7cc8

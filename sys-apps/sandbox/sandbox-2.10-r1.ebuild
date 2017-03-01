@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 97870f646de1576821a04793b9d78512390129e1 $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.

@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4e98fe06f8df8ea54724106f2d0ddfa9f3e49077 $
 
 CPU="arm"
 TARGET="arm-none-linux-gnueabi"

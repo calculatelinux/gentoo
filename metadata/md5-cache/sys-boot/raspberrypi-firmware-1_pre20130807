@@ -8,5 +8,5 @@ RDEPEND=!sys-boot/raspberrypi-loader
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=https://github.com/raspberrypi/firmware/raw/b2dbc04508/boot/bootcode.bin -> raspberrypi-firmware-b2dbc04508-bootcode.bin https://github.com/raspberrypi/firmware/raw/b2dbc04508/boot/fixup.dat -> raspberrypi-firmware-b2dbc04508-fixup.dat https://github.com/raspberrypi/firmware/raw/b2dbc04508/boot/fixup_cd.dat -> raspberrypi-firmware-b2dbc04508-fixup_cd.dat https://github.com/raspberrypi/firmware/raw/b2dbc04508/boot/fixup_x.dat -> raspberrypi-firmware-b2dbc04508-fixup_x.dat https://github.com/raspberrypi/firmware/raw/b2dbc04508/boot/start.elf -> raspberrypi-firmware-b2dbc04508-start.elf https://github.com/raspberrypi/firmware/raw/b2dbc04508/boot/start_cd.elf -> raspberrypi-firmware-b2dbc04508-start_cd.elf https://github.com/raspberrypi/firmware/raw/b2dbc04508/boot/start_x.elf -> raspberrypi-firmware-b2dbc04508-start_x.elf
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	readme.gentoo	ce7880f12566fe1fc5522fed26507687	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=650e2cbf596a2c8f918b1623c754c388
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	readme.gentoo	589f4c6d735919e293942dd66311dc40	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=6b359a7df87e68b5d8596bc992550685

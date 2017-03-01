@@ -6,4 +6,4 @@ KEYWORDS=alpha amd64 arm ~arm64 ia64 ~mips ppc ppc64 sparc x86
 LICENSE=ISC
 SLOT=0
 SRC_URI=https://www.kernel.org/pub/software/network/wireless-regdb/wireless-regdb-2016.05.02.tar.xz
-_md5_=4fd770babcfa2c5c6050e59a4915a9de
+_md5_=99945b10048b53e26849eac8f81c8bb2

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9dbbe70708c03632f50215b8bc379cc6b84d0a61 $
 
 # The purpose of this ebuild is to provide quick fallback if and when we need to
 # switch back to internal copy of libffi from sys-devel/gcc.

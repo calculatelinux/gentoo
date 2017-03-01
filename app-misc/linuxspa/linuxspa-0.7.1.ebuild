@@ -1,6 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 74a32dcc20066ebac068929927d3e219f4caa095 $
 
 inherit eutils toolchain-funcs
 

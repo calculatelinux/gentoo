@@ -8,4 +8,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=BSD
 SLOT=0
 SRC_URI=mirror://sourceforge.jp/naist-jdic/53500/mecab-naist-jdic-0.6.3b-20111013.tar.gz
-_md5_=0c838f5c6e7d5451d50a9ca3d6bba7e7
+_md5_=979635e5600153f048fd056edfc42a89

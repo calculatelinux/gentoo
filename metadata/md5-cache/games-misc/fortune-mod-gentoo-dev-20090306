@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=games-misc/fortune-mod
 SLOT=0
 SRC_URI=mirror://gentoo/fortune-gentoo-dev-20090306.tar.bz2 https://dev.gentoo.org/~robbat2/distfiles/fortune-gentoo-dev-20090306.tar.bz2
-_md5_=9122f249afb7deb402019e60e898610f
+_md5_=60edfa4b586ffc5ecebbf224667b183b

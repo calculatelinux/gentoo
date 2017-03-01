@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b3a0d6d39856fb0c24876bf643e6853270b0277c $
 
 MY_P=${P/sdl/SDL}
 

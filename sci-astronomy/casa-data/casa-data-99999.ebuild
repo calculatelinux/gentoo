@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 33c413f09604f13f83bf79c3c28c5473c5ac37d8 $
 
 EAPI=5
 inherit subversion

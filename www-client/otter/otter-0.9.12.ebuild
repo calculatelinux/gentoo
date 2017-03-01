@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: acb6f015a06d97b9a0cc31e5ad13fe268244fef7 $
 
 EAPI=6
 WANT_CMAKE="always"

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: afb51f08b4c884690e7ad74e50ee5cfb8456139a $
 
 EAPI=6
 inherit eutils cmake-utils mercurial

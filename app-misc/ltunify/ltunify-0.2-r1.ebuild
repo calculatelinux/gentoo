@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8026f2df13ff6689b5fe35d42e1b1674843864a2 $
 
 EAPI=5
 inherit toolchain-funcs udev

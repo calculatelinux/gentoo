@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5cd6ec1fcf6c692286d5f7525d75838b6bcc6658 $
 
 EAPI=6
 inherit autotools gnome2 linux-info vala

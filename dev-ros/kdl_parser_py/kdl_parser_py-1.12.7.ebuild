@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: be5df5342186049b0960fa3990ec519a5cd8f89d $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/robot_model"

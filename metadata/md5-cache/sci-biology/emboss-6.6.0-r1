@@ -10,5 +10,5 @@ PDEPEND=!minimal? ( sci-biology/aaindex sci-biology/cutg sci-biology/primer3 sci
 RDEPEND=!games-action/xbomber !sys-devel/cons dev-libs/expat dev-libs/libpcre:3 sci-libs/plplot:= sys-libs/zlib mysql? ( virtual/mysql ) pdf? ( media-libs/libharu:= ) png? ( media-libs/gd:2=[png] ) postgres? ( dev-db/postgresql:= ) X? ( x11-libs/libXt )
 SLOT=0
 SRC_URI=ftp://emboss.open-bio.org/pub/EMBOSS/EMBOSS-6.6.0.tar.gz
-_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	emboss-r2	45d56ceac84e0d77090478c651f8384e	eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	readme.gentoo-r1	9265450c3045cbc82060da9b35f46c67	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=6c6785c1d2fe1fb49fa1c5c493b25b64
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	emboss-r2	e6c8236c06e1e543b4feef45c31dd618	eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	libtool	48b1b9f6194d2842456514d1184ca72e	multilib	0236be304ee52e7f179ed2f337075515	readme.gentoo-r1	6f03e110529650f57fc7d1fb908b8986	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=99a47266a2a8f2fd0a874111491146e2

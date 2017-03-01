@@ -7,4 +7,4 @@ KEYWORDS=~x86
 LICENSE=BSD-2
 SLOT=0
 SRC_URI=ftp://ftp.snobol4.org/snobol4/beta/snobol4-0.99.44.tar.gz
-_md5_=94dc904a9a8fda768cd4168c913658d7
+_md5_=7a254d8af88bf57b2b3e6e92ca3b50dd

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 213cd7a4067a1f0c8e556aa148b689f320c7feb2 $
 
 EAPI=5
 NETSURF_COMPONENT_TYPE=binary

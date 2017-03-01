@@ -7,4 +7,4 @@ LICENSE=MIT
 RDEPEND=dev-lang/php:* dev-php/fedora-autoloader
 SLOT=0
 SRC_URI=https://github.com/composer/spdx-licenses/archive/1.0.0.tar.gz -> spdx-licenses-1.0.0.tar.gz
-_md5_=9cf7cc784aa41b2bebbf4836f185b77c
+_md5_=968e1ca2d9ccc88344c039ace5802330

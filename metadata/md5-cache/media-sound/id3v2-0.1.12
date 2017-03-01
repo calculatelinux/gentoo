@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=media-libs/id3lib
 SLOT=0
 SRC_URI=mirror://sourceforge/id3v2/id3v2-0.1.12.tar.gz
-_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=ed73b0e79a005c439461ee0c7aea4600
+_eclasses_=multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=cc6fba38db0bb1b51c41362618a258a6

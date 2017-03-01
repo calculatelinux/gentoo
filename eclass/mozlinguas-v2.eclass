@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 89b9b3d995e37ddca3f09d7bc0698d493ec6d044 $
 
 # @ECLASS: mozlinguas-v2.eclass
 # @MAINTAINER:

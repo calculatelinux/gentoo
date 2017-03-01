@@ -3,4 +3,4 @@ DESCRIPTION=Virtual for LeechCraft plugins providing HTTP downloading
 EAPI=6
 RDEPEND=~app-leechcraft/lc-cstp-9999
 SLOT=0
-_md5_=742e762dc811f002418ff0fd874dd54b
+_md5_=235e525147d7d3e154f71bdfe9c8838a

@@ -9,4 +9,4 @@ LICENSE=BSD
 RDEPEND=dev-lang/php:*[cli,tokenizer,xmlwriter]
 SLOT=0
 SRC_URI=http://download.pear.php.net/package/PHP_CodeSniffer-2.6.2.tgz
-_md5_=16a1ff51078e8677d6750a33ede39261
+_md5_=6908250270d7bab823cb24d95df64c6b

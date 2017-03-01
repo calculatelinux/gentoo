@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: bd9b3fb05985a5b041568bb37d6bd3395a83348c $
 #
 # @ECLASS: nsplugins.eclass
 # @MAINTAINER:

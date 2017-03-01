@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f9f9d95b3524d65c4ff2368dc23c7f5af1a05247 $
 
 EAPI=6
 inherit eutils fdo-mime gnome2-utils pax-utils unpacker

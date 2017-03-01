@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 790d56d18d64a421631994147be3cdadc0d1630b $
 
 EAPI="5"
 POSTGRES_COMPAT=( 9.{0,1,2,3,4} )

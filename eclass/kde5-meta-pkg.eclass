@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a156d8b6b5ba0b2f729fb11aab773286bee71135 $
 
 # @ECLASS: kde5-meta-pkg.eclass
 # @MAINTAINER:

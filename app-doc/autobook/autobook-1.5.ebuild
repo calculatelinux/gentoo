@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1b8e20ea08f2e88dd09c420330d231fd4e215010 $
 
 DESCRIPTION="GNU Autoconf, Automake and Libtool"
 HOMEPAGE="https://sourceware.org/autobook/"

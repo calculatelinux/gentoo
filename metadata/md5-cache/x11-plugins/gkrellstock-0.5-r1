@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/glib:2 x11-libs/gtk+:2 dev-perl/libwww-perl dev-perl/Finance-Quote =app-admin/gkrellm-2*
 SLOT=2
 SRC_URI=mirror://sourceforge/project/gkrellstock/GkrellM2.0%20Port/0.5/gkrellstock-0.5.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	gkrellm-plugin	9d427987fc0ba95bc49126c33f2c3dab	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=15112d025717419100916dae1cc6621a
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	gkrellm-plugin	0c6887ede1f3cc3067a1d1acb8aff2e9	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=a9fdab84b46362a57abf272e6883bca4

@@ -9,4 +9,4 @@ LICENSE=swiss-prot
 RDEPEND=emboss? ( sci-biology/emboss )
 SLOT=0
 SRC_URI=ftp://ftp.expasy.org/databases/prosite/old_releases/prosite2017_02.tar.bz2
-_md5_=2a62b44904424e872a1b45983fe14a16
+_md5_=390ff0ea61f44c9ea889684cad12b2b2

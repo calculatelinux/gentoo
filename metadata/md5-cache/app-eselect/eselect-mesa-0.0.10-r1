@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=>=app-admin/eselect-1.2.4 >=app-shells/bash-4
 SLOT=0
 SRC_URI=mirror://gentoo/eselect-mesa-0.0.10.tar.gz
-_md5_=3d0aeb1f41f006a1f1ae03d628a7f59f
+_md5_=cb2d76170f96304229d526d2f4818cdb

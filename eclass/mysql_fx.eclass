@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1c501cbeb9e5a531d3cab38728f4b5f6c2e2c255 $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer:

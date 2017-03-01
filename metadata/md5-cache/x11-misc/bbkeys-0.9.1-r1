@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=>=x11-wm/blackbox-0.70.0
 SLOT=0
 SRC_URI=mirror://sourceforge/bbkeys/bbkeys-0.9.1.tar.gz
-_md5_=259a6adf8b714430e3f3da92377d53f2
+_md5_=5fe1a7022911673cd4c8ae53533c3e14

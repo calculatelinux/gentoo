@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1ee49c59158e2d53ef9eb22ba043f76490bbf392 $
 
 DESCRIPTION="Graphical Blinkenlights simulator with networking support"
 

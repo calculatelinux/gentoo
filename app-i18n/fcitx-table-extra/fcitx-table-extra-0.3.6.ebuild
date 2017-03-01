@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: dca95d4bf52f2dff839ac14cbe93e5075d729549 $
 
 EAPI=5
 inherit cmake-utils gnome2-utils

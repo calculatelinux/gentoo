@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2ad9bdca468925a344df9ec142459c556b138351 $
 
 # Author: Michael Cummings <mcummings@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c0a52798fe3d8fdf65f0600b2a28fe5562f5d8da $
 
 # Fabian Groffen <grobian@gentoo.org> (27 Jun 2016)
 # sys-libs/libseccomp is a linux interface, not sure if it will work

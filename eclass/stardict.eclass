@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 255a87f957eeb0c3f85eccba611baba054184360 $
 
 # Author : Alastair Tse <liquidx@gentoo.org>
 #

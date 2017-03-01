@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/mule-base app-xemacs/fsf-compat app-xemacs/xemacs-base app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/leim-1.24-pkg.tar.gz
-_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
-_md5_=bc1bf0e9fa251ffa70129d2d37751d2d
+_eclasses_=xemacs-packages	6af894e52080fe5d8bd91371a8a6a735
+_md5_=eadb5f5f2aabde2d4b7bac34c60773e1

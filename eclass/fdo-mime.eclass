@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8e0b56c792cb4ed05646af5436f80d0703e0354b $
 
 # @ECLASS: fdo-mime.eclass
 # @MAINTAINER:

@@ -1,6 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3048ca9989036ca2933e8b5cd78bce5c4f98b699 $
 
 DESCRIPTION="The Dylan Programming Language Compiler"
 HOMEPAGE="http://www.gwydiondylan.org/"

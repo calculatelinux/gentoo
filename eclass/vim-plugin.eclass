@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d684c4e6352983a7f274fd25ea8e874fc291564c $
 
 # @ECLASS: vim-plugin.eclass
 # @MAINTAINER:

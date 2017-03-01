@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fdbb47a32295a90c60901dd387a71da5ca31e414 $
 
 # @ECLASS: php-lib-r1.eclass
 # @MAINTAINER:

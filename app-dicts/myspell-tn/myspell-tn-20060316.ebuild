@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 29e95a33b8f3a77b9365373a7be23a80a0c7c9a5 $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "tn,ZA,tn_ZA,Setswana (Africa),tn_ZA.zip"

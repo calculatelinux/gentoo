@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b00668e023a72b514629c1671c6ac1443d376c8b $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:

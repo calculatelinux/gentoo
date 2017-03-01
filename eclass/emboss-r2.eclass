@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 54dcb7546a5df0f22e27f93cf14c6879920ad2d4 $
 
 # @ECLASS: emboss-r2.eclass
 # @MAINTAINER:

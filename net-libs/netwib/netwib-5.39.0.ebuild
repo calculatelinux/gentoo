@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3750c3ee4fe894a3da96b35fa95a38f2801c115e $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 

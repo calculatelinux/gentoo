@@ -7,5 +7,5 @@ KEYWORDS=-* ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=public-domain
 RDEPEND=>=app-eselect/eselect-opengl-1.0.8-r1 x11-proto/glproto
 SLOT=0
-_eclasses_=prefix	38ff416d58fcaea18d47c00728c70298
-_md5_=0893db7bc6a6ed2cef40137be5a87c35
+_eclasses_=prefix	df8265631f8bf5f5df387e9b987121f9
+_md5_=f05962a3edbf55a04a502ef646e1fa3f

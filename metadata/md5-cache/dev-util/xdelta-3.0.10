@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=lzma? ( app-arch/xz-utils:= )
 SLOT=3
 SRC_URI=https://github.com/jmacd/xdelta-devel/releases/download/v3.0.10/xdelta3-3.0.10.tar.gz
-_md5_=e344e2b8faf0fd7c615c2a0ab8c87a87
+_md5_=083a20a1aa2c8fbef18693eaa7798ddd

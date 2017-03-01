@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7ab52e655672b438105798074b7275f4cdc1162f $
 
 MY_PN="${PN/-flim}"
 MY_P="${MY_PN}-${PV}"

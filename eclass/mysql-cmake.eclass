@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f14c9a7cf67b76a4208384d60b11433e958b7878 $
 
 # @ECLASS: mysql-cmake.eclass
 # @MAINTAINER:

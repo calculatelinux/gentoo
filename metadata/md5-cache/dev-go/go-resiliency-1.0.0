@@ -7,5 +7,5 @@ KEYWORDS=~amd64
 LICENSE=MIT
 SLOT=0/1.0.0
 SRC_URI=https://github.com/eapache/go-resiliency/archive/v1.0.0.tar.gz -> go-resiliency-1.0.0.tar.gz
-_eclasses_=golang-base	0f75d9692d09462687e69a4c6dda0d16	golang-build	6105adc054fab1d12e49129dbb97ebe6	golang-vcs-snapshot	192c4e42089abf548c85be344086b1ff
-_md5_=c6912a5740fb42213f863f5af059e2f4
+_eclasses_=golang-base	2983c8674b8e3b3a99ec61986356c76a	golang-build	b66349c110e4ddd6203bbe8bf4ae05c1	golang-vcs-snapshot	f834ea1d0152290fd9b1b79950f615c2
+_md5_=8d6d52e9bd2ccefa6b36e37e0727b8fb

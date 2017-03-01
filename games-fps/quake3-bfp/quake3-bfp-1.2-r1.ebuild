@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fb1820da3b808ff56f5e814f06b199fe76a85e38 $
 
 EAPI=5
 MOD_DESC="Control Ki-powered superheros and battle in the air"

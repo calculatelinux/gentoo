@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fea8c87920e2ba0daf18c95cc8cc037d9d18915b $
 
 EAPI=5
 inherit eutils libtool linux-info udev toolchain-funcs

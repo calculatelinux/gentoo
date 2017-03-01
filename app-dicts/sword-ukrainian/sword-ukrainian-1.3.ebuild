@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2b4b291de5435fa6d91fae34f638de63c17f6555 $
 
 EAPI=5
 SWORD_MODULE="Ukrainian"

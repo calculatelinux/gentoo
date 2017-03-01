@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b251dec133ad09fd6f20cb66cf7820f6d2f57cc1 $
 
 EAPI=6
 inherit eutils gnome2-utils linux-info systemd

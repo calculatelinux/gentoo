@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9c2fcdd4a6330fb48f4fd9a18f3db54bd6fce53f $
 
 DESCRIPTION="Create a statical HTML Image gallery with captions for each image"
 

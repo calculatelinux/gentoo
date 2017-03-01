@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=net-print/cups
 SLOT=0
 SRC_URI=mirror://sourceforge/cups-bjnp/2.0/cups-bjnp-2.0.tar.gz
-_md5_=30a37a717e821e3e9322ff63ae604cce
+_md5_=d02096afb71420717be8499106e2539f

@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f278190a77f893ebdd5604a105323f6ada43d56a $
 
 # TODO: unbundling sdl-sound breaks the game
 

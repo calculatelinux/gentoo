@@ -9,4 +9,4 @@ LICENSE=LGPL-2
 RDEPEND=>=media-sound/gmpc-11.8.16
 SLOT=0
 SRC_URI=http://download.sarine.nl/Programs/gmpc/11.8/gmpc-albumview-11.8.16.tar.gz
-_md5_=9ed0dc76453c6e8f52b799fe074b1271
+_md5_=662710afe281a3dd496d680c9bdd75e4

@@ -9,4 +9,4 @@ LICENSE=BSD-2
 RDEPEND=sys-fs/fuse
 SLOT=0
 SRC_URI=https://github.com/restic/restic/archive/v0.4.0.tar.gz -> restic-0.4.0.tar.gz
-_md5_=d9774b400f2235b825e64cafa6bd64a6
+_md5_=bbf66bcb457810848d9f9b0d9a73adce

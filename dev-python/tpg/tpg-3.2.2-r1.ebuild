@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: df9c4cc634ed4040a20fe9c102860b8b208e5678 $
 
 EAPI=5
 # py2.6 doesn't pass tests

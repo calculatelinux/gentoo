@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: bb0dd380349a7349071e003df95da924afca0b0e $
 
 DESCRIPTION="Moaning Goat Meter: load and status meter written in Perl"
 HOMEPAGE="http://www.linuxmafia.com/mgm"

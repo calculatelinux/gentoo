@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b151d44e60cd2d9487504b0cee1abc15584738f2 $
 #
 # @ECLASS: mozconfig-v6.46.eclass
 # @MAINTAINER:

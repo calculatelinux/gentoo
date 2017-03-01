@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4646fddbfc3072ddec2712a12a623abbafdaa412 $
 
 EAPI=6
 inherit autotools fdo-mime flag-o-matic multilib-minimal subversion

@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 00dc8ea01a28b53be6c2c9924fd3752517abebfe $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/vision_opencv"

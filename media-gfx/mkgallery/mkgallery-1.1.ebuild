@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8436aa36db1c172a498c0d85eca3f7dab220c59a $
 
 DESCRIPTION="Creates thumbnails and a HTML index file for a directory of jpg files"
 HOMEPAGE="http://mkgallery.sourceforge.net/"

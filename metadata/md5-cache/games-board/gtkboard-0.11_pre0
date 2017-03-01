@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:2 media-libs/libsdl:0[sound] media-libs/sdl-mixer[vorbis] gnome? ( gnome-base/libgnomeui ) games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/gtkboard/gtkboard-0.11pre0.tar.gz
-_eclasses_=base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	games	7d9d6853e639bbb857a211ed996360a3	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd
-_md5_=70b13e33784bfda91c19e8bee4c66b15
+_eclasses_=base	df2aa567b3f0595aae0d0923889f7631	eutils	3c847a0129fed780bd709b98e426f89c	games	2bb3ede665927a68ffdb7c41eec7efde	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	user	e4b567c44272a719fabf53f0f885d3f7
+_md5_=abf86e5eb9e7fc8e1afb63c35c41dbe5

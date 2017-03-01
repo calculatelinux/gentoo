@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 33c9867daf18151893f1691052430868418d36d3 $
 
 DESCRIPTION="PPD description files for (some) Kyocera Mita Printers"
 HOMEPAGE="http://www.kyoceramita.it/"

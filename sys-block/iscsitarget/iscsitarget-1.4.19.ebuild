@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fb1b1a6b2a73368f2ebc1e2d901e6bd48938c44a $
 
 inherit linux-mod eutils flag-o-matic
 

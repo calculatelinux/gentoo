@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 011aea8a041d8521a9a49258f52e72d3343b2c0a $
 
 EAPI=6
 inherit autotools eutils flag-o-matic pam

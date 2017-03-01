@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7f5d755c3900d3895d2b9a29fb11d2c88fa1bb31 $
 
 EAPI=6
 EGO_PN="github.com/derekparker/delve"

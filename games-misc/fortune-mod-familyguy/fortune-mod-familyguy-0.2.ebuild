@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3af8796b6c6ba51be411e83b64205713681a5542 $
 EAPI=5
 DESCRIPTION="Quotes from the TV-Series -Family Guy-"
 HOMEPAGE="http://jon.oberheide.org/familyguy/"

@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8722483811f3b04d075bc275bf326f14b16bad8a $
 
 # on OSX one should have objc available
 USE="objc objc++"

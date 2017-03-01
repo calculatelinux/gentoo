@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7ff35f86b47f6c6499f0c3d4bc8c3d9235623a3a $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs

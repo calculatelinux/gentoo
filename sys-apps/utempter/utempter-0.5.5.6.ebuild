@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3b0277235533fccbafacb810b0d065ef425d20cc $
 
 inherit rpm eutils user
 

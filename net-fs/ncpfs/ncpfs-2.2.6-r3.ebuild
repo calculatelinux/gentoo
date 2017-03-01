@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 19a835a15fa49cc899a313ed2329c156211cc2a6 $
 
 EAPI=5
 inherit eutils pam

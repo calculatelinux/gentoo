@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 74851398641be63fd1e0dbc59593dfa392c74bbc $
 
 EAPI=6
 EGO_PN="github.com/BurntSushi/toml"

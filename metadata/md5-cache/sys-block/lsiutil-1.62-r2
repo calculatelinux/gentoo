@@ -8,4 +8,4 @@ LICENSE=LSI
 RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=http://docs.avagotech.com/docs-and-downloads/legacy-host-bus-adapters/legacy-host-bus-adapters-common-files/LSIUtil_1-62.zip
-_md5_=4bb4a4f22a6825bfb2eadbce48d2924f
+_md5_=f9bf784ea84550fa8bde8b1a686c3b4c

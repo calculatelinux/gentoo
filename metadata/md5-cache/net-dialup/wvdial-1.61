@@ -8,5 +8,5 @@ LICENSE=LGPL-2
 RDEPEND=>=net-libs/wvstreams-4.4 net-dialup/ppp:=
 SLOT=0
 SRC_URI=https://wvstreams.googlecode.com/files/wvdial-1.61.tar.gz
-_eclasses_=readme.gentoo-r1	9265450c3045cbc82060da9b35f46c67
-_md5_=c2f664a665032d23c85d20cc0e37c1e0
+_eclasses_=readme.gentoo-r1	6f03e110529650f57fc7d1fb908b8986
+_md5_=c1ca1fa0d6bcbd4b25321e884cddf18f

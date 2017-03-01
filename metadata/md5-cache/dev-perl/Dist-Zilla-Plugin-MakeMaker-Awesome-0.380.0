@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=!<=dev-perl/Dist-Zilla-Plugin-MakeMaker-Fallback-0.11.0 >=virtual/perl-CPAN-Meta-Requirements-2.121.0 >=dev-perl/Dist-Zilla-5.1.0 dev-perl/Moose dev-perl/MooseX-Types-Stringlike dev-perl/Path-Tiny >=virtual/perl-Scalar-List-Utils-1.290.0 dev-perl/namespace-autoclean virtual/perl-version dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-MakeMaker-Awesome-0.38.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=398120d3bbfe4d779df5e3f734e260b3
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=fdf574dd56de7066a35113726bc5122a

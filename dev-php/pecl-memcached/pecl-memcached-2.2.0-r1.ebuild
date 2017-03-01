@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b4982d7a8fc2cfa6da82684abcd45be499b8b162 $
 
 EAPI=5
 PHP_EXT_NAME="memcached"

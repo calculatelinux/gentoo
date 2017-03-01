@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=dev-perl/GD-1.180.0 >=dev-perl/GDTextUtil-0.800.0 media-libs/gd dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/R/RU/RUZ/GDGraph-1.54.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=881f8f604e21ab0ae94e22f574b53949
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=ecc2eee827a40f101ffb1e7528d03f7a

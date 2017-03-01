@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fedfd81359d7b9f323a699628b37ce9836403ba5 $
 
 EAPI=5
 inherit eutils gnome2-utils games

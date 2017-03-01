@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f2af001c0f862a3fd3ad0d7b27f7a0d82c929e66 $
 
 EAPI=5
 MY_P="${PN}-v${PV}"

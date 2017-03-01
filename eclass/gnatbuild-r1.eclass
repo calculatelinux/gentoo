@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ac4f9a418c2f2aacf29b4195a1d8a5d14067afae $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Author: Steve Arnold <nerdboy@gentoo.org>

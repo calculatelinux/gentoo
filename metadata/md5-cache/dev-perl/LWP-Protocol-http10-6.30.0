@@ -8,5 +8,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=dev-perl/HTTP-Message-6.0.0 virtual/perl-IO >=dev-perl/libwww-perl-6.0.0 dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/G/GA/GAAS/LWP-Protocol-http10-6.03.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=13b26726fefb4e97655c75a4c4c1a0d5
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=cf80d069aa9ea51ac1cbf6181a4473f6

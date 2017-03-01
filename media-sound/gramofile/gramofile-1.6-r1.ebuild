@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 96caada64d42d1b4fc3b2361a0ad1b1f7a531c85 $
 
 EAPI=2
 PATCH_LEVEL=8

@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 47478bbc3339b4e2ea622b84f99fbb2057144c58 $
 
 JAVA_PKG_IUSE="source"
 inherit java-pkg-2 java-ant-2 java-osgi

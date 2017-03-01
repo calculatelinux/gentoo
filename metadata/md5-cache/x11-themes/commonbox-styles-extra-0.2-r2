@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=media-gfx/xv || ( x11-wm/fluxbox x11-wm/blackbox x11-wm/openbox )
 SLOT=0
 SRC_URI=mirror://gentoo/commonbox-styles-extra-0.2.tar.bz2 http://mkeadle.org/distfiles/commonbox-styles-extra-0.2.tar.bz2
-_md5_=7aa49c79950e8459fc49184c66269a38
+_md5_=ccfdc7a034210c28cec2825c8c4ded0c

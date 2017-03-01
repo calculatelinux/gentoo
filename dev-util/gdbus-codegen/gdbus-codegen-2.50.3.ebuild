@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1679e7194c942569e9c0d962369ac2ebf33ea013 $
 
 EAPI="5"
 GNOME_ORG_MODULE="glib"

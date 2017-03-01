@@ -7,4 +7,4 @@ LICENSE=GPL-3
 RDEPEND=sys-apps/sg3_utils
 SLOT=0
 SRC_URI=https://spindown.googlecode.com/files/spindown-0.4.0.tar.gz
-_md5_=f33994507c0696c66fb5e9ae415ed278
+_md5_=4ad6e4473dc0f061dfdae69c45515962

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: aa736c620be77defe6ef47041a0cd7db77a8de20 $
 
 EAPI=6
 inherit eutils cdrom

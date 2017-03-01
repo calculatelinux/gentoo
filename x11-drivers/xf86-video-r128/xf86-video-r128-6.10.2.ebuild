@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5fbfbb2aeb5beb8708b3d5ff6874ed6ff4b9ad1b $
 
 EAPI=5
 XORG_DRI=dri

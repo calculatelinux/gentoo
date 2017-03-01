@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1d4c2ef78407efb0be94af415f2748732f60a93a $
 
 EAPI="6"
 MY_EXTRAS_VER="20160818-1822Z"

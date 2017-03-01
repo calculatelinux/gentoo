@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8613eaa10f492303fb591b6fd621a70a2155135f $
 
 EAPI=5
 inherit multilib xfconf

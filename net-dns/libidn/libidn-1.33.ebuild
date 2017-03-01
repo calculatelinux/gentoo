@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3a8149bdfe53cb45baecd6dc41ac6b7c0af7067f $
 
 EAPI=6
 inherit elisp-common java-pkg-opt-2 mono-env multilib-minimal libtool

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 347b5fb47e7974e3e026cc49a511696a0c6889e0 $
 
 EAPI=5  # sgml-catalog inherits base, banned in 6
 

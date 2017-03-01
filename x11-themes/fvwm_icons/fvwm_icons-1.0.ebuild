@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 92dd721919591a066cd38780dc36f9c3777f9803 $
 
 DESCRIPTION="Icons for use with FVWM"
 HOMEPAGE="http://www.fvwm.org/"

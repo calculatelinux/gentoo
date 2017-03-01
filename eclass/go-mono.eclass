@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3ff2ad4001e03eb1b7edfdfc695283e1e9e8a94b $
 
 # @ECLASS: go-mono.eclass
 # @MAINTAINER:

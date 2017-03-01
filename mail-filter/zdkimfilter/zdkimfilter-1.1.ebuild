@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 76dffac0eb6f9ebc602bcba3efc8cb1c2efc064b $
 
 EAPI=5
 DESCRIPTION="DKIM filter for Courier-MTA"

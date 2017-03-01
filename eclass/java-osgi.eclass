@@ -1,6 +1,5 @@
 # Copyright 2007-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 62f3046445a841799c08ac8edcaa0fcde2d46486 $
 
 # @ECLASS: java-osgi.eclass
 # @MAINTAINER:

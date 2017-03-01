@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8c8879d380e0a4de58bf4b017ac48ad663abb744 $
 
 inherit cannadic
 

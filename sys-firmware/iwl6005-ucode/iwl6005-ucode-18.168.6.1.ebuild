@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b28a8f57e614702d540e3be188dc5023a7f1caef $
 
 MY_PN="iwlwifi-6000g2a-ucode"
 

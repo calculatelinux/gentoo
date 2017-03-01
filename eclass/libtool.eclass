@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9f56c202ffc219d094955907a59302416753885e $
 
 # @ECLASS: libtool.eclass
 # @MAINTAINER:

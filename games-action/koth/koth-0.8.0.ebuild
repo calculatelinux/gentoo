@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0141c792a58384bf84d2c38c17475e39728e19dd $
 
 EAPI=5
 inherit eutils flag-o-matic games

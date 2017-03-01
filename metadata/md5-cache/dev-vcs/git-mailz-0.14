@@ -7,5 +7,5 @@ LICENSE=MIT
 RDEPEND=virtual/mta dev-vcs/git app-shells/zsh
 SLOT=0
 SRC_URI=http://codex.sigpipe.cz/git-mailz/git-mailz-0.14.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=a662e4bbad144a12737e662891b1834e
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=50df76590216ef0e633e871b1c011c7c

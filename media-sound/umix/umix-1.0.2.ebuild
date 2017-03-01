@@ -1,6 +1,5 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1beb48fc018fc445d1a9cf1885c1ecf8c46c5327 $
 
 IUSE="ncurses oss"
 

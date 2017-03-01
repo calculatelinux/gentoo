@@ -10,5 +10,5 @@ RDEPEND=perl? ( dev-lang/perl ) php? ( php_targets_php5-4? ( dev-lang/php:5.4 ) 
 REQUIRED_USE=php? ( || ( php_targets_php5-4 ) )
 SLOT=0
 SRC_URI=ftp://ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz
-_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	php-ext-source-r2	0cd3a0462a5480dc9ac1868f34f8c234	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=322a2eb87874e2186b816627f52647a1
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	libtool	48b1b9f6194d2842456514d1184ca72e	multilib	0236be304ee52e7f179ed2f337075515	php-ext-source-r2	6b0fe3f9cc5ad2f4e3ffcea3e9112c4c	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=46445a04d9c2bb5a0afc3b0520e8b000

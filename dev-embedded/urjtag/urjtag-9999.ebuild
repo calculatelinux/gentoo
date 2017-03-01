@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b64895f22d6cb1027001aef5cb10fee78f7e4bea $
 
 # TODO: figure out htf to make python.eclass work
 

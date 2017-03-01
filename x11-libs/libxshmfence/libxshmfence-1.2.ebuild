@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 50450f39abcd844e01fa46067d003706f2705a0d $
 
 EAPI=5
 XORG_MULTILIB=yes

@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 201223bae49841c0ef90147e11dc06624d6c9c8e $
 
 DESCRIPTION="Implementation for atomic memory update operations"
 HOMEPAGE="http://www.hpl.hp.com/research/linux/atomic_ops/"

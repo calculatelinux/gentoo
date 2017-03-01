@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 22494ec0a364b829ab302182538e11aedb2b3725 $
 
 EAPI=6
 GNOME_ORG_MODULE="gobject-introspection"

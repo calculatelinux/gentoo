@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 78166f6247d85eaa6752857cd62632bca6588eb2 $
 
 EAPI=5
 inherit autotools eutils mono-env

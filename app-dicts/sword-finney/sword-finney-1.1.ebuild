@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f24f697ecdcb6578fb0edfa44dfa7be0268c1918 $
 
 EAPI=5
 SWORD_MODULE="Finney"

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3a59d91cb70bc9a8acd875eeda0f935df9f60327 $
 
 EAPI=6
 GNOME_ORG_MODULE="gtk+"

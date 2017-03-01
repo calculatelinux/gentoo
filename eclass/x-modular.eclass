@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2b68d9490d0383144af98488ed151f2b9202b308 $
 #
 # DEPRECATED
 # This eclass has been superseded by xorg-2

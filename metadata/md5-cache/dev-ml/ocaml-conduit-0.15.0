@@ -8,5 +8,5 @@ LICENSE=ISC
 RDEPEND=dev-lang/ocaml:= dev-ml/sexplib:= dev-ml/stringext:= dev-ml/ocaml-uri:= dev-ml/logs:= dev-ml/ocaml-cstruct:= dev-ml/ocaml-ipaddr:= dev-ml/lwt:= dev-ml/async:= dev-ml/ocaml-dns:= dev-ml/ocaml-ssl:=
 SLOT=0/0.15.0
 SRC_URI=https://github.com/mirage/ocaml-conduit/archive/v0.15.0.tar.gz -> ocaml-conduit-0.15.0.tar.gz
-_eclasses_=findlib	3a364957a70a5953531fad3d1bc112ec
-_md5_=ab71c38566970942657f81320cf3f8f3
+_eclasses_=findlib	45d6030075064a68da8d7143726a1150
+_md5_=5b9be47c4c7f02893be1523496dec724

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c5127436b26bdd7e4372f058f3432693332337a3 $
 
 DESCRIPTION="Command-line utility that wraps quickly two or more mp3 files in one single large playable mp3"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"

@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 31a937f74a6ba21b74a822fd751e1ad90214fd08 $
 
 EAPI=5
 PLOCALES="en fi sv"

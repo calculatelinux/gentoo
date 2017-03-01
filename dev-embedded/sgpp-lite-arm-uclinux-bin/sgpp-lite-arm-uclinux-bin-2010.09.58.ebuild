@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 41da6ccc70852103d83e3310f682569decfc6edd $
 
 CPU="arm"
 TARGET="arm-uclinuxeabi"

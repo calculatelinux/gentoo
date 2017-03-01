@@ -10,5 +10,5 @@ RDEPEND=>=app-admin/gkrellm-2[X] net-misc/curl =app-admin/gkrellm-2*
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.topfx.com/dist/gkrellmpc-0.1_beta9.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	gkrellm-plugin	9d427987fc0ba95bc49126c33f2c3dab	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=0aa2df5ff4da363f952de8022e72084f
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	gkrellm-plugin	0c6887ede1f3cc3067a1d1acb8aff2e9	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=2f1a682f2ffa0590b4ec8a61ed2dc768

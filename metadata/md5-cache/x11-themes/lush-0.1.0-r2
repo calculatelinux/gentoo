@@ -7,4 +7,4 @@ LICENSE=GPL-1
 RESTRICT=strip binchecks
 SLOT=0
 SRC_URI=mirror://gentoo/lush-0.1.0dave.tar.gz
-_md5_=1b4b5e182c09493cb8cd2b8959d53686
+_md5_=3b9eaf00856cd853f59d6ee90e1325ed

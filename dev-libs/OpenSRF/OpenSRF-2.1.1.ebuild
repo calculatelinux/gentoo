@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 632b1ea2bc3b8cbc4b49647620a0750c5839cf61 $
 
 EAPI=5
 inherit eutils multilib flag-o-matic apache-module autotools perl-module

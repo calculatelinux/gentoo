@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b7d3c2ded731bbea1c9fe7101dfdde4cad04d772 $
 
 EAPI=5
 USE_RUBY="ruby20 ruby21"

@@ -10,5 +10,5 @@ RDEPEND=!sci-physics/cernlib-montecarlo[herwig] virtual/fortran
 RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=http://www.hep.phy.cam.ac.uk/theory/webber/Herwig//herwig6521.f http://www.hep.phy.cam.ac.uk/theory/webber/Herwig//herwig6521.inc http://www.hep.phy.cam.ac.uk/theory/webber/Herwig//HERWIG65.INC doc? ( http://www.hep.phy.cam.ac.uk/theory/webber/Herwig//hw65_manual.pdf )
-_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	autotools-utils	31b108cd8696d6b9faa0466a4c38b789	eutils	c8729578e47597ee48d77eda210e2b56	fortran-2	6e2f17677c59718c51012a2b534469e1	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
-_md5_=ba7d4ee830004bccab3bfa8377518c05
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	autotools-utils	042d779bc872564b26c4e5cf018db8ed	eutils	3c847a0129fed780bd709b98e426f89c	fortran-2	9773a6296d565bc8cf241891112a9705	libtool	48b1b9f6194d2842456514d1184ca72e	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=79cc8d6b8b8e21553b2a922ee7bf6ada

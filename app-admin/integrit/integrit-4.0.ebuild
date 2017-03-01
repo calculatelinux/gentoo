@@ -1,6 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a30152eec418ad0fa57c7380ea9511421740c7d4 $
 
 inherit autotools toolchain-funcs
 

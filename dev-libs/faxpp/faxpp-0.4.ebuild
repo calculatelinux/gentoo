@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 654d92636024a0480e15d27665fde08f8339e3df $
 
 DESCRIPTION="Small, fast and conformant XML pull parser written in C with an API that can return UTF-8 or UTF-16 strings"
 HOMEPAGE="http://faxpp.sourceforge.net/"

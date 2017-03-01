@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 52761727688a0cd39ce9a132a08c21b7183320bc $
 
 DESCRIPTION="Fast Audio Playlist Generator"
 HOMEPAGE="http://royale.zerezo.com/fapg/"

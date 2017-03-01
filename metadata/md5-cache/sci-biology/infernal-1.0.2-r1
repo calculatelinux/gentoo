@@ -9,4 +9,4 @@ LICENSE=GPL-3
 RDEPEND=mpi? ( virtual/mpi )
 SLOT=0
 SRC_URI=ftp://selab.janelia.org/pub/software/infernal/infernal-1.0.2.tar.gz
-_md5_=ee6adfe555f5fc959ebd420184a06a17
+_md5_=a3cee86cfd4ecbef4e39563bc652a64b

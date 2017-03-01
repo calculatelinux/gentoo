@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: cd03963ead59a1acf540550b91e7cad0de83491e $
 
 MACOSX_DEPLOYMENT_TARGET="10.5"
 

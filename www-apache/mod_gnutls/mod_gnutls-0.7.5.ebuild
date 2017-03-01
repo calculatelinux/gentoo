@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f59b632c75b8e424e92ee8ebaeaadde5e6ab9c60 $
 
 EAPI=5
 inherit apache-module autotools eutils

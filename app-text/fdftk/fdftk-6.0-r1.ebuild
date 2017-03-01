@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ef39bae10a48d3739d604fba9aac67c40537832d $
 
 MY_P="FDFToolkitForUnix"
 At="${MY_P}.tar.gz"

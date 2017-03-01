@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8b161b69b3391b09d6da2cc9dd6038061f7c82ab $
 
 EAPI=5
 SWORD_MODULE="ItaDio"

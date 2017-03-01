@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 19d2f67483c1523602847904b3d645704a836c55 $
 
 # Note: Keep version bumps in sync with sys-devel/gettext.
 

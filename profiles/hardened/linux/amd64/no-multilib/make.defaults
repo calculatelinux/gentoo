@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7eee20a40b2e9b8c4adddbfccc1df29845469f17 $
 
 # We don't need to have pic on
 USE="-pic"

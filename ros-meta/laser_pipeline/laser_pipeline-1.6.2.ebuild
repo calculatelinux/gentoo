@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: acb6e3eab7533cc6253fd81341ac68ae5fd6e2a1 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/laser_pipeline"

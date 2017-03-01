@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=ssl? ( dev-libs/openssl:0 )
 SLOT=0
 SRC_URI=http://gotbnc.com/files/bnc2.9.4.tar.gz
-_md5_=4fe5edc57376098dab70ad4d05433f2d
+_md5_=e93e2591536a9bc85150ad9c0a98f6f7

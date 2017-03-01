@@ -9,4 +9,4 @@ LICENSE=|| ( GPL-3 BSD-2 )
 RDEPEND=>=app-misc/editor-wrapper-3 >=sys-libs/ncurses-5.2:0= pcre? ( dev-libs/libpcre )
 SLOT=0
 SRC_URI=http://www.greenwoodsoftware.com/less/less-488.tar.gz
-_md5_=dc8ac5ea66a8b2b8baf8691ba509eca2
+_md5_=e9db4513de1d1e344ed16693f509e050

@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 039e0421449e787e1e788195e95c1073be999f51 $
 
 inherit unpacker toolchain-funcs multilib
 

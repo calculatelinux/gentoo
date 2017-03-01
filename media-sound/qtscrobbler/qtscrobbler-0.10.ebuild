@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1ce682cae3fcd27e5c975d4cea3ff0d0ca529f14 $
 
 EAPI=4
 inherit eutils gnome2-utils qt4-r2 toolchain-funcs

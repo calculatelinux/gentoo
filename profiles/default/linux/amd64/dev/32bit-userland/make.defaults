@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 398a3d8ae07fd78ceb4df1c10b36eb62f6f2c514 $
 
 DEFAULT_ABI="x86"
 ABI="x86"

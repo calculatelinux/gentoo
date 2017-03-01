@@ -8,5 +8,5 @@ LICENSE=GPL-3+
 RDEPEND=media-libs/alsa-lib media-libs/lv2 media-sound/jack-audio-connection-kit virtual/opengl x11-libs/libX11 x11-libs/libXext
 SLOT=0
 SRC_URI=https://github.com/mtytel/helm/archive/v0.4.1.tar.gz -> helm-0.4.1.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=7cfdf5dfb70b6941576c2cd23f2415c5
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=0172566a3f4663ad3b2025b3fa4490f5

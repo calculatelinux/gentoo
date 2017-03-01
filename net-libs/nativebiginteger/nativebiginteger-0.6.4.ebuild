@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 72316feb8bdb2f68cf02cba9cbbc17f3cddf53db $
 
 inherit flag-o-matic multilib toolchain-funcs java-pkg-2
 

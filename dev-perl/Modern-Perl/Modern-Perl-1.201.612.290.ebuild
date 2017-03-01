@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5901f5af547f36ac8aaf6831a9daee18126cb9ce $
 
 EAPI=6
 DIST_AUTHOR=CHROMATIC

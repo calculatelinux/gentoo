@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e3e03709f4c4131c02d7302c4f2ac39f5c8e7b0c $
 
 inherit sgml-catalog eutils
 

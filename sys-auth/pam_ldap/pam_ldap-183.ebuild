@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: abd77007d430b94a4e4e66f1e399d98b01f7bda0 $
 
 inherit eutils pam autotools
 

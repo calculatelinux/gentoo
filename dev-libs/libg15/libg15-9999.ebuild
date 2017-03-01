@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: bd113783f1ee066b6b1c8c7b73ab30cd4fe97afe $
 
 EAPI=4
 ESVN_PROJECT=g15tools/trunk

@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3839a4c9f074ad9d07275b95b00232232a744c8e $
 
 MY_P=checkmate-${PV}
 

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 37454c018949de918b56571166db2d2dcd5ff880 $
 
 inherit java-pkg-2 java-ant-2
 

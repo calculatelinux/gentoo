@@ -1,6 +1,5 @@
 # Copyright 2004-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4cbce40b1aac4b62bee2fb4b41179614add7a5ac $
 
 # @ECLASS: java-ant-2.eclass
 # @MAINTAINER:

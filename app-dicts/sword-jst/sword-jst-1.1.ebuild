@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 87819687e4017b70d62b9bcd33d440de3262cf9c $
 
 EAPI=5
 SWORD_MODULE="JST"

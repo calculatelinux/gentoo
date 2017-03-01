@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3b82e6937fc05563577969aa828e772969d0be69 $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF="1"

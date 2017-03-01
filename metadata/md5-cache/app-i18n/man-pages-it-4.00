@@ -7,4 +7,4 @@ LICENSE=man-pages GPL-2+ BSD MIT FDL-1.1+ public-domain man-pages-posix
 RDEPEND=virtual/man
 SLOT=0
 SRC_URI=ftp://ftp.pluto.it/pub/pluto/ildp/man/man-pages-it-4.00.tar.xz
-_md5_=963f962127b199150e0b4d2dd5faf5c2
+_md5_=4feea08f9ad69ea3e3064849b2be7ce5

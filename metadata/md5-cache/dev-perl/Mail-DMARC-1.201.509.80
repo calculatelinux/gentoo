@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=!minimal? ( dev-perl/Net-IMAP-Simple ) dev-perl/CGI virtual/perl-CPAN virtual/perl-Carp dev-perl/Config-Tiny >=dev-perl/DBD-SQLite-1.310.0 >=dev-perl/DBIx-Simple-1.350.0 virtual/perl-Data-Dumper dev-perl/Email-MIME dev-perl/Email-Simple virtual/perl-Encode dev-perl/File-ShareDir virtual/perl-Getopt-Long dev-perl/HTTP-Message virtual/perl-HTTP-Tiny virtual/perl-IO virtual/perl-IO-Compress dev-perl/IO-Socket-SSL dev-perl/JSON dev-perl/libwww-perl dev-perl/Mail-DKIM dev-perl/Net-DNS dev-perl/Net-HTTP dev-perl/Net-IDN-Encode dev-perl/Net-IP dev-perl/Net-SMTPS dev-perl/Net-SSLeay >=dev-perl/Net-Server-2 virtual/perl-Socket >=dev-perl/Socket6-0.230.0 virtual/perl-Sys-Syslog dev-perl/Test-File-ShareDir dev-perl/URI dev-perl/XML-LibXML virtual/perl-parent >=dev-perl/Regexp-Common-2013031301 dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MS/MSIMERSON/Mail-DMARC-1.20150908.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=1a2fb82f562fc2578e4543ab8b09156f
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=ff1b7259e9d0765127a9e208a73bd0bb

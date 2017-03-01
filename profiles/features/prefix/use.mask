@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 13d86e059d926de779c9cf82c8e5486570b304e5 $
 
 # prefix USE flag should always be unmasked in prefix profiles
 -prefix

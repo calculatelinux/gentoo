@@ -10,4 +10,4 @@ RDEPEND=aio? ( dev-libs/libaio ) lua? ( dev-lang/lua:= ) mysql? ( virtual/libmys
 REQUIRED_USE=mysql? ( lua ) postgres? ( lua )
 SLOT=0
 SRC_URI=https://github.com/akopytov/sysbench/archive/48124f838b00ff83a044fbf046a9d8d0b1602d90.tar.gz -> sysbench-48124f838b00ff83a044fbf046a9d8d0b1602d90.tar.gz
-_md5_=3f40111e8b095068eff392ca73c05620
+_md5_=e65d837f830f9555b3253d12b50bca31

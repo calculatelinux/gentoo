@@ -5,5 +5,5 @@ IUSE=udev abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o
 KEYWORDS=alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 RDEPEND=|| ( >=dev-libs/libusb-1.0.9-r2:1[udev(+)?,abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?,abi_s390_32(-)?,abi_s390_64(-)?] >=sys-freebsd/freebsd-lib-9.1-r10[usb,abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?,abi_s390_32(-)?,abi_s390_64(-)?] )
 SLOT=1
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multibuild	863e759ee14be1c222e6b67853e91c7d	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multilib-build	982f755104619efbd39dc7adf268729d	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=19a12f5b691c2a24fa32e22e2cf8c8bd
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multibuild	72647e255187a1fadc81097b3657e5c3	multilib	0236be304ee52e7f179ed2f337075515	multilib-build	eed53a6313267c9fbcd35fc384bd0087	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=8c47cfc7ce3b6aa5f7cfcbb217be4843

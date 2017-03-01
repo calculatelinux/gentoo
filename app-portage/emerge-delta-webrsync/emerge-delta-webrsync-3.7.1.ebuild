@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9b6885652881d77ad75abc97dca302853e3f3a74 $
 
 EAPI=4
 DESCRIPTION="emerge-webrsync using patches to minimize bandwidth"

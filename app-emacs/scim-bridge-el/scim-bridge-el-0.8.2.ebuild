@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a72433e903fbb0b8b8289917b90eb05173a9e48c $
 
 EAPI=5
 inherit elisp versionator

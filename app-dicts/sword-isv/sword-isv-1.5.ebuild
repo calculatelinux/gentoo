@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 483c69a7e61d526a20942de461afac4ede1bcf40 $
 
 EAPI=5
 SWORD_MODULE="ISV"

@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 09c011796b92059afa6dd4f1254a58d4136f19e1 $
 
 EAPI="2"
 inherit base toolchain-funcs

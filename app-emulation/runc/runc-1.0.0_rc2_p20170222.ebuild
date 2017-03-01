@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1baca3eeee64958a7169f8530087ad77a349c861 $
 
 EAPI=6
 EGO_PN="github.com/opencontainers/${PN}"

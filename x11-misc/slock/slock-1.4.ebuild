@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f445eefd6ea924156ea132d3b77c5c390689359d $
 
 EAPI=6
 inherit fcaps savedconfig toolchain-funcs

@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 18404c2501739b995e5c27d8fa3ca494c0d86304 $
 
 EAPI=5
 inherit git-r3

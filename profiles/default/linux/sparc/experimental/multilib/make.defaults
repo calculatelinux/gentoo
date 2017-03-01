@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 85bff4ebd4372219e8a900a55df5dfeb735cb197 $
 
 # Multilib stuff
 MULTILIB_ABIS="sparc32 sparc64"

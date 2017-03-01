@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8448a4920dfc7e43d07686326f78950bc602f24b $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-drivers/openni2_launch"

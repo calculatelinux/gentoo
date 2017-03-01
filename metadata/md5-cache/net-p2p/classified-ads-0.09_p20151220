@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-libs/openssl:0 dev-libs/qjson >=net-libs/libnatpmp-20130911 <=net-libs/libnatpmp-20140401-r1 >=net-libs/miniupnpc-1.8 sys-apps/file sys-devel/gettext dev-qt/qtcore:4[ssl] dev-qt/qtsql:4[sqlite] dev-qt/qtgui:4[debug?]
 SLOT=0
 SRC_URI=https://github.com/operatornormal/classified-ads/archive/c761d4e7124ebe9c76bc1529b27fe9c0aa1c2078.tar.gz -> classified-ads-0.09_p20151220.tar.gz https://github.com/operatornormal/classified-ads/blob/graphics/preprocessed.tar.gz?raw=true -> classified-ads-graphics-0.09_p20151220.tar.gz
-_eclasses_=base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	qmake-utils	461362a9981d9f069203d2436fea87ce	qt4-r2	e7b1595f7935d9c04878e0d4540d195d	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	vcs-snapshot	10b045661d7c5178ffdf37fbf47278d6
-_md5_=8fa0f24a13965b8c304c59a0dcd07545
+_eclasses_=base	df2aa567b3f0595aae0d0923889f7631	eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	qmake-utils	ea78a9056543346cdc8cbbd07f16c6fb	qt4-r2	b7985a3197fbc3a22d059f19904e735b	toolchain-funcs	53b75b4a49cf3e61530a523804045432	vcs-snapshot	03289f51c769cf409d200d2d628cdd6e
+_md5_=c6916414e01b4cbe212b94416112e095

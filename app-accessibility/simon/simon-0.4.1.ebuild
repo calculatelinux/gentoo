@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9ab5dc3985edafef09814749978089634f2ebc77 $
 
 # KEEP KDE ECLASSES OUT OF HERE
 

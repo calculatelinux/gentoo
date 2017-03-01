@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: de00e0c72e83185ec4d701dbe326effa6c019118 $
 
 EAPI=5
 SWORD_MODULE="Wesley"

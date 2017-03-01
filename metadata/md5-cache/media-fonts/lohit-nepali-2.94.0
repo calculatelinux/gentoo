@@ -10,5 +10,5 @@ RDEPEND=!<media-fonts/lohit-fonts-2.20150220
 RESTRICT=test binchecks
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/l/o/lohit/lohit-nepali-ttf-2.94.0.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	font	a18368b5586e76d96bda71f19569cec5	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=bb8577a92cbee40106810f1d7e69fb34
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	font	82836641e7d4639329d8c195234ad0e3	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=f6404178c3ec78bdb128d61f43082daf

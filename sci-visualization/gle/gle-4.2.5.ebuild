@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ad896d8746285817e98596b02a0387943f5b1a41 $
 
 EAPI=5
 inherit eutils elisp-common qt4-r2 flag-o-matic autotools

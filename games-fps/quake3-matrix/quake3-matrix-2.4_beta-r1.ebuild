@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 860fee27ceb8179623120c67a5fbe1d3381fd665 $
 
 EAPI=5
 MOD_DESC="Matrix conversion mod"

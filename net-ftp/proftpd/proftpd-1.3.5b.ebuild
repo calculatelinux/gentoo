@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f0f94c13274c3540aac108f7cbeea4ae47ac4748 $
 
 EAPI=5
 inherit eutils multilib systemd

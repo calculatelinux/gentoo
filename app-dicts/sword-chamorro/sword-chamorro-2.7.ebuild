@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 12e510c5ec6dc9c750880b513164b81bffb41e9c $
 
 EAPI=5
 SWORD_MODULE="Chamorro"

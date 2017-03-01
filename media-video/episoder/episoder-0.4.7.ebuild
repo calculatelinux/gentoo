@@ -1,6 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 6f97d7da3db9de691c4c659c2d217377c4021c41 $
 
 DESCRIPTION="episoder is a tool to tell you when new episodes of your favourite
 TV shows are airing"

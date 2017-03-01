@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e4304d2f54b7c7887221c268f67dbe0ebf426882 $
 
 # This version is just for the ABI .5 library
 

@@ -5,4 +5,4 @@ HOMEPAGE=http://llvm.org/
 LICENSE=public-domain
 RDEPEND=sys-devel/llvm:5[gold] !sys-devel/llvm:0
 SLOT=0
-_md5_=f1ad785802fe40bd8313132fbd269ad4
+_md5_=fb2a05532106ad9dfb38904fa9bd9cee

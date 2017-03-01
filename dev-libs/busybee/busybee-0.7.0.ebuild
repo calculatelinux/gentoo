@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 74c2dd5c0eca070a881b5cfcfb410d3c0c336ef4 $
 EAPI=4
 
 DESCRIPTION="A messaging abstraction on top of TCP sockets used in HyperDex"

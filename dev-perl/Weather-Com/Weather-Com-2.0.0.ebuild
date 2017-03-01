@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8e52f97c50ec1852dfc4cf0a2c65a0bdb3a3dc32 $
 
 EAPI=5
 MODULE_AUTHOR=BOBERNST

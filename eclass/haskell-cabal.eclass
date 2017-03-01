@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0f434645822cd5c87edecfb83e8284b1587dab63 $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:

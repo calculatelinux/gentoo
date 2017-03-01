@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ea1c036bbc647c593ae77d5da10680eb4e27c651 $
 
 # Base URL: https://dl.google.com/linux/chrome-remote-desktop/deb/
 # Fetch the Release file:

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2132de8d3542841bb73e77956aea7d9f718420e4 $
 
 ARCH="x86-macos"
 ACCEPT_KEYWORDS="~x86-macos"

@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 59a035b7402abd56764b7795c8557cd751b415ec $
 
 ARCH="x86-cygwin"
 CHOST="i686-pc-cygwin"

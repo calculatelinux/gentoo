@@ -10,4 +10,4 @@ RDEPEND=dev-libs/libxml2:2 net-misc/curl sys-libs/zlib
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.opendap.org/pub/source/libdap-3.17.0.tar.gz
-_md5_=3c6aac8f39058fdc03c70e0a01e96923
+_md5_=d3e63dd50cba6e289c76a166aab3f497

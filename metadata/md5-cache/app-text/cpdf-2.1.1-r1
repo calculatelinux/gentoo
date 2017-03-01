@@ -10,5 +10,5 @@ RDEPEND=>=dev-lang/ocaml-4:= dev-ml/camlpdf:=
 RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=https://github.com/johnwhitington/cpdf-source/archive/v2.1.1.tar.gz -> cpdf-2.1.1.tar.gz
-_eclasses_=findlib	3a364957a70a5953531fad3d1bc112ec
-_md5_=7d7a6675e4f13652b88de8d190ae6d7b
+_eclasses_=findlib	45d6030075064a68da8d7143726a1150
+_md5_=4d09e662c83b6084931297bc51948119

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a10281ddd4265e2a6d314ef52cc7c602f1b81c02 $
 
 # unforce the GNU/Linux ELIBC, KERNEL, and USERLAND
 # flags that come from the base profile

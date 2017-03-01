@@ -8,5 +8,5 @@ KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86
 LICENSE=MIT GPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge.jp/canna/9565/Canna37p3.tar.bz2
-_eclasses_=cannadic	3e180885eefd7a81f45fae9048b40269	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=c66b6d1a6fbcc18c5857f7af4d828fe2
+_eclasses_=cannadic	a60869e5823b1040630e89ede36797bf	eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=7e49126ea2607f30fa5a010b5a551698

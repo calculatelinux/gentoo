@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b480dc20504760626c21954408bb976d8d945319 $
 EAPI=6
 
 DESCRIPTION="Simple information system script"

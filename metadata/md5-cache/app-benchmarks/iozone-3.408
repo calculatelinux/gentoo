@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=freedist
 SLOT=0
 SRC_URI=http://www.iozone.org/src/current/iozone3_408.tar
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=b7e56132148fafa04b9ba9b8c3439f43
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=5dd84088f508a0fd01eb9ae49927dda5

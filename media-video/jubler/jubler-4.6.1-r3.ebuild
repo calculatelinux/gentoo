@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 65955dbb07bf208e03294e06a98dfdb419cf59ce $
 
 EAPI="2"
 WANT_ANT_TASKS="ant-nodeps ant-contrib"

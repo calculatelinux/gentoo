@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b2f3fbe084c4d53611a58ba1782a9448e76f02dd $
 
 EAPI=5
 inherit eutils gnome2-utils flag-o-matic git-r3 games

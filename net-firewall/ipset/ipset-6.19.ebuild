@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 334752d8055d00eb4f439f9a68288ada0096686f $
 
 EAPI="5"
 inherit autotools linux-info linux-mod

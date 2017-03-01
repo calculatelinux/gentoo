@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e74a9ca58a0c07d0b6d3fb2b4de8f97318b327c4 $
 
 inherit libtool
 

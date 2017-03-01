@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3fb9caa134bd05a2ac4c0e3bfe2a4dfb77daee75 $
 
 # @ECLASS: php-pear-lib-r1.eclass
 # @MAINTAINER:

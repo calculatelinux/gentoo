@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c09b7f6640d71e5e7f26b1f12bee84938717511d $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/pr2/pr2_common"

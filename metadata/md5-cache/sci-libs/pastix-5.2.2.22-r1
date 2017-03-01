@@ -9,5 +9,5 @@ LICENSE=CeCILL-C
 RDEPEND=sci-libs/scotch:0=[int64?,mpi?] sys-apps/hwloc:0= virtual/blas mpi? ( virtual/mpi ) starpu? ( dev-libs/starpu:0= ) virtual/fortran
 SLOT=0
 SRC_URI=https://gforge.inria.fr/frs/download.php/35070/pastix_5.2.2.22.tar.bz2
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	fortran-2	6e2f17677c59718c51012a2b534469e1	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=744dfecc8ad67966642c793e345ea60a
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	fortran-2	9773a6296d565bc8cf241891112a9705	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=928a49bdc7361d334005e1b8f053a30c

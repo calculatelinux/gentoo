@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7df0ef5f6f3b3b4067c8c72efcdbe767779fc501 $
 
 EAPI=5
 SWORD_MODULE="Diaglott"

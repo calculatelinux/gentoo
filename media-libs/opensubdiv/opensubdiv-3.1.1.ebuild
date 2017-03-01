@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4f305e5986011c056d384a44adfeef8e9984e419 $
 
 EAPI=6
 inherit cmake-utils toolchain-funcs versionator

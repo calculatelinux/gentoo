@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b5bbc5ce33dc84f332b14543d50a44d71b6b7c4e $
 
 ASPELL_LANG="Icelandic"
 

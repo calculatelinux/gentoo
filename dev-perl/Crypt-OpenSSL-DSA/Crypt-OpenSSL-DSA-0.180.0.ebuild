@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 49d0bd97f5ae73ba8a12e5b405b9cc7b8f1efebd $
 
 EAPI=6
 DIST_AUTHOR=KMX

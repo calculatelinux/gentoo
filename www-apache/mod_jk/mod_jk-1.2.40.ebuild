@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 16f4624818fc420e6de6351df5f636c378016f2d $
 
 EAPI="5"
 inherit apache-module java-pkg-opt-2 readme.gentoo

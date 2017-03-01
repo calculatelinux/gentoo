@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: cfd5fea2c3de535a939facacef7cfb49fd4c0b61 $
 
 EAPI=5
 DISABLE_AUTOFORMATTING=true

@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4bc38782e83de8281a581abba67115788261f561 $
 
 DESCRIPTION="The Latin tables for IBus-Table"
 HOMEPAGE="https://github.com/ibus/ibus/wiki"

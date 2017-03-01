@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2158b6f0297382f46b95eb1246a0d60916bfc33b $
 
 # Note: Keep version bumps in sync with dev-libs/libintl.
 

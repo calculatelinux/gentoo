@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ca6e7edbab2fda13c9e4ddecce3c8a69c4af625c $
 
 ## TODO
 # add sound support (no sound files)

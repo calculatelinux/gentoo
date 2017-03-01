@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-perl/glib-perl-1.320.0 >=dev-libs/gobject-introspection-1.0 >=dev-libs/libffi-3.0.0 >=dev-libs/glib-2.0.0 dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/X/XA/XAOC/Glib-Object-Introspection-0.042.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9	xdg-utils	169c13f9ec65368f6f6b2961e68dc152
-_md5_=0ce082091c3baa36bf78ef2a071edc28
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb	xdg-utils	178a84136f416b8ea1a857717eacd21c
+_md5_=61f87644967dac5eecffaf9546d9982e

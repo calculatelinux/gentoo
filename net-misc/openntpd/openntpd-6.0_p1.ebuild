@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2fc02643d3cbc1d666fcf4f254aad6a67a5c551a $
 
 EAPI=5
 inherit eutils systemd user

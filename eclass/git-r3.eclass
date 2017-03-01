@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d105e50ed144a6c686319ed3fde6d68bc54b5944 $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:

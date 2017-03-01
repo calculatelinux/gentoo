@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a253f9c7b259a6f878d512943e410bee4ac95150 $
 
 # This is the 1.0.7 release:
 #  https://code.google.com/p/stressapptest/source/detail?r=44

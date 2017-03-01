@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 70af6385260f03c465c15dec5cbcfd41b1fae942 $
 
 EAPI=5
 inherit elisp-common eutils flag-o-matic

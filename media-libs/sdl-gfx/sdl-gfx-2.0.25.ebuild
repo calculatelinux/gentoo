@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c6d535214b9c79d624225ffcd4ff83986bf6ea03 $
 
 EAPI=5
 inherit autotools eutils multilib-minimal

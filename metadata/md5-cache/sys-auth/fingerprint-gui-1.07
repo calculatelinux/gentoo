@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=app-crypt/qca:2[qt4(+),ssl] sys-auth/libfprint sys-auth/polkit-qt[qt4(+)] sys-libs/pam x11-libs/libfakekey dev-qt/qtcore:4 !sys-auth/thinkfinger
 SLOT=0
 SRC_URI=http://www.ullrich-online.cc/fingerprint/download/fingerprint-gui-1.07.tar.gz
-_eclasses_=base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	qmake-utils	461362a9981d9f069203d2436fea87ce	qt4-r2	e7b1595f7935d9c04878e0d4540d195d	readme.gentoo	ce7880f12566fe1fc5522fed26507687	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	udev	9b8a82f709a883f0840736c9b9375698	user	e28cdd9fa5d8069e8e047c82db5d57bd
-_md5_=56babc5abdadf24e48b0c77f5f92869f
+_eclasses_=base	df2aa567b3f0595aae0d0923889f7631	eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	qmake-utils	ea78a9056543346cdc8cbbd07f16c6fb	qt4-r2	b7985a3197fbc3a22d059f19904e735b	readme.gentoo	589f4c6d735919e293942dd66311dc40	toolchain-funcs	53b75b4a49cf3e61530a523804045432	udev	d91cac2c73b94629cad2daea66e0d182	user	e4b567c44272a719fabf53f0f885d3f7
+_md5_=289fe90fe7a6e09bfcb44a1df3d6d794

@@ -7,5 +7,5 @@ KEYWORDS=-* sparc
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://debian/pool/main/s/silo/silo_1.4.14+git20120819.orig.tar.gz mirror://debian/pool/main/s/silo/silo_1.4.14+git20120819-1.diff.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	mount-boot	f879abcb933626870a8dc13e780d1369	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=15f9623298dbfc9dbc3d273050d573ab
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	mount-boot	1e82d96b7a7dcb483b412497a90bb646	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=f3cbd837fd052dd67486a4fe62c218ad

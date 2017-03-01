@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/xemacs-base app-xemacs/edit-utils app-xemacs/edebug app-xemacs/xemacs-devel app-xemacs/mail-lib app-xemacs/fsf-compat app-xemacs/xemacs-eterm app-xemacs/sh-script app-xemacs/ps-print app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/psgml-1.44-pkg.tar.gz
-_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
-_md5_=7064cf2de331a3aa703b9fb4ca6ff30e
+_eclasses_=xemacs-packages	6af894e52080fe5d8bd91371a8a6a735
+_md5_=b8b18515a5e9ac1404d4bf1b49c12747

@@ -8,5 +8,5 @@ LICENSE=vim
 RDEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 SLOT=0
 SRC_URI=mirror://gentoo/recover-0.18.tar.bz2 https://dev.gentoo.org/~radhermit/vim/recover-0.18.tar.bz2
-_eclasses_=vim-doc	1ce90e9633364799d58ead2bc968d52a	vim-plugin	aa8a6d795a5f0bc0917b1b24d2d0409b
-_md5_=3d898a068d974871a2558e56dc507d03
+_eclasses_=vim-doc	af2c81a1feeb0a99e91bee3e20769edb	vim-plugin	6f0171b0a2f2fce005c13b4c0685a0d8
+_md5_=5a4b25f3cfff747a836659e9cd36803d

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 61c73ea9fb0a3450b7a46f95f2118a8eeb55d177 $
 
 EAPI=5
 inherit java-pkg-opt-2 gnustep-2

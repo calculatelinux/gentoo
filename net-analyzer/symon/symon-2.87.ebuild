@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3ac8f5483f5d7009554318f74a2e2f337916ef4f $
 
 EAPI=5
 inherit eutils perl-module toolchain-funcs

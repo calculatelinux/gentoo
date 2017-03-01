@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-games/ode dev-lang/tk:0= dev-lang/tcl:0= media-libs/libsdl media-libs/ftgl virtual/opengl x11-libs/libXmu
 SLOT=0
 SRC_URI=http://www.tcl3d.org/download/tcl3d-0.4.0.distrib/tcl3d-src-0.4.0.zip
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=25399d6aa6c7d53a8547328d971a5567
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=9407932200ea3b975fa6fafb8cbd001b

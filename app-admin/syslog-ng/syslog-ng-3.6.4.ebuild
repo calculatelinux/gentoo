@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2f33e6031be86bc6935e342334ac1ddf48801b53 $
 
 EAPI=5
 inherit eutils multilib systemd versionator

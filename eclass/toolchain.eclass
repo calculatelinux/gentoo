@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0203a220f86f5124a5a3eef9c7f976c373887547 $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 

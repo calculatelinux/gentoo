@@ -7,4 +7,4 @@ LICENSE=HPND
 RDEPEND=>=dev-lang/perl-5
 SLOT=0
 SRC_URI=mirror://sourceforge/tmake/tmake-2.12.tar.bz2
-_md5_=e925084d544e7a70882d85ddfe313f5a
+_md5_=86991d7afe845f44fab22b33a8bc3e0c

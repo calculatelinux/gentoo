@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ade24ff1612733f3a35f57866714127f493e171b $
 
 EAPI=5
 SWORD_MODULE="KLV"

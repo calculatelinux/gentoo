@@ -7,5 +7,5 @@ IUSE=bash-completion +javascript view-captcha
 LICENSE=GPL-3
 RDEPEND=>=app-shells/bash-4 || ( app-text/recode ( dev-lang/perl dev-perl/HTML-Parser ) ) dev-vcs/git net-misc/curl sys-apps/util-linux virtual/imagemagick-tools[tiff] javascript? ( || ( dev-lang/spidermonkey:0 dev-java/rhino ) ) view-captcha? ( || ( media-gfx/aview media-libs/libcaca ) )
 SLOT=0
-_eclasses_=bash-completion-r1	2418d29a9d4e3e223bbc64e93cde118e	eutils	c8729578e47597ee48d77eda210e2b56	git-r3	abc3caa050da0c4b8faec237bd358fcb	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=f04784d5ed45599815b0fcc0415e4b1d
+_eclasses_=bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	eutils	3c847a0129fed780bd709b98e426f89c	git-r3	08c5be5f8bdc203ed54d5ff5fef3c34d	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=97da2cdac07789df3d93ee5855978237

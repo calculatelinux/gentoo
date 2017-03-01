@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1542b98cd45f03e83c6fde505f0b5b81d2d49ba3 $
 
 # @ECLASS: perl-functions.eclass
 # @MAINTAINER:

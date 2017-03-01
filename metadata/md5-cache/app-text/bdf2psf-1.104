@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl
 SLOT=0
 SRC_URI=mirror://debian/pool/main/c/console-setup/console-setup_1.104.tar.gz
-_md5_=acd9104bc5b8ca534d0c9c55977283c9
+_md5_=9ef14f0b6f69427a5c4d25304c7aba42

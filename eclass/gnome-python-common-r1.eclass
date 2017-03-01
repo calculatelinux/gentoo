@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: db583ae166e26fdbf03da2f37d5917d2b817270d $
 
 # @ECLASS: gnome-python-common-r1.eclass
 # @MAINTAINER:

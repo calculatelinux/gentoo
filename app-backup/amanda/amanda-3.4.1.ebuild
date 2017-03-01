@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 824612f66ed19b2f507dd720867451113ddf1f86 $
 
 EAPI=6
 inherit autotools perl-module user systemd

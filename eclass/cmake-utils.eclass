@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b1d499c5832a922b616b96499c6c7eeed1406c6e $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:

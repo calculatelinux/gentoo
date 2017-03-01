@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 853e984527b0b8eeab783dcec8307e7f25791da0 $
 
 DESCRIPTION="Key binding editor for enlightenment 16"
 HOMEPAGE="https://www.enlightenment.org/"

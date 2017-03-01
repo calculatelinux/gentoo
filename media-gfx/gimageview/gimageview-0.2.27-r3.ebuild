@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 81442969d3063b9adce8a97c482019b8f9bd6f77 $
 
 # TODO: USE xine could be restored if support for xine-lib-1.2.x
 # is patched in wrt #397639

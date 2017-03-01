@@ -8,4 +8,4 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-php/PEAR-DB-1.7.6-r1
 SLOT=0
 SRC_URI=mirror://sourceforge/cphplib/cphplib-0.51.tar.bz2
-_md5_=677b53ef944b5c03c539205b60825b10
+_md5_=bace0a188d4ab3230db7d71531367440

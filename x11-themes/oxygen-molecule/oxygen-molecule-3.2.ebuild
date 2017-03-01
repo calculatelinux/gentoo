@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c444db336a7ecd176c9b33ebb770ad7126b08d2d $
 
 MY_PN=Oxygen-Molecule
 

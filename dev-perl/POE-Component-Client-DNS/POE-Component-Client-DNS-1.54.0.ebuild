@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 06218922d6cfbd7e50ce07a083095e78e1c37987 $
 
 EAPI=6
 DIST_AUTHOR=RCAPUTO

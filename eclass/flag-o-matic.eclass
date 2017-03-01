@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5b8a054079d26edd2590140640607e3a7d5eb6f7 $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:

@@ -9,4 +9,4 @@ RDEPEND=x11-libs/libX11
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.eblong.com/zarf/ftp/xzip182.tar.Z
-_md5_=5773d0e1a3be61fc6e77376c873f29e8
+_md5_=e50b9baca7a5c86fa13ef2a5ca1b7e87

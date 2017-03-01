@@ -8,5 +8,5 @@ LICENSE=GPL-3+
 RDEPEND=>=virtual/emacs-23
 SLOT=0
 SRC_URI=https://github.com/magnars/s.el/archive/1.11.0.tar.gz -> s-1.11.0.tar.gz
-_eclasses_=elisp	62249f4b6196eec26a81f335fb4d1a33	elisp-common	4a8ce40989ad055139c36baa8c81ea0b
-_md5_=c5fe1a41e3acf80ea622a8411928bd4d
+_eclasses_=elisp	0f9fb41c5a844d876880e414faee1340	elisp-common	f49d14e575e158ccab82cf05b315a180
+_md5_=5973a823a15ca80de223c9ee8e21bf09

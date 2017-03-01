@@ -9,5 +9,5 @@ LICENSE=Artistic-2
 RDEPEND=virtual/perl-Carp >=dev-perl/DateTime-1 >=dev-perl/DateTime-Locale-0.450.0 >=dev-perl/DateTime-TimeZone-0.790.0 virtual/perl-Exporter >=dev-perl/Package-DeprecationManager-0.150.0 >=dev-perl/Params-Validate-1.200.0 dev-perl/Try-Tiny dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DR/DROLSKY/DateTime-Format-Strptime-1.70.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=e94ce62666a28f0ed53c99168d2b7cfc
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=290f26d240c915476e116723cfb5419b

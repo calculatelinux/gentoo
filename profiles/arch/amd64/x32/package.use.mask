@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 25de40c6f4bcaef8931e5dea03c5d96eaa646ade $
 
 # This file requires >=portage-2.1.1
 

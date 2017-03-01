@@ -6,5 +6,5 @@ KEYWORDS=amd64 arm ~mips ppc ppc64 x86
 LICENSE=GPL-2
 SLOT=0/0
 SRC_URI=https://dev.gentoo.org/~blueness/f2fs-tools/f2fs-tools-1.6.0.tar.xz
-_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=2357f7af2c306bd3e15b537fd35ed212
+_eclasses_=multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=4c9c77900be3eda227cb0684cc99b5b8

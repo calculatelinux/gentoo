@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2f960a53e0b0aebcb51a1583f231b9e14befae61 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/pointcloud_to_laserscan"

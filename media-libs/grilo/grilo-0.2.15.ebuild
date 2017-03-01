@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2959ac8350f4f25461db601bb35bae6bdc873817 $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS

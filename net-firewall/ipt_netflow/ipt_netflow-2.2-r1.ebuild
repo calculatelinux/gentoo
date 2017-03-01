@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5602e8e5ac22fa7ec08b6f6cac72c48538df4550 $
 
 EAPI=6
 MY_PN="${PN/_/-}"

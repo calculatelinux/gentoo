@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 082de8196746777e15441485324db7c400e42c9d $
 
 EAPI=5
 inherit xorg-2

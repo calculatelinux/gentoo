@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 94190bb78098601e84a97e97974ae0b79dbeb85d $
 
 # Mirror profile/amd64/no-multilib/package.use.mask
 

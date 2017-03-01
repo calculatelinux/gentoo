@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c91450cfd0a444919a0c819c2bf3a541c57c9e69 $
 
 # Fabian Groffen <grobian@gentoo.org> (10 Apr 2011)
 # as long as util-linux installs uuid.h which breaks the system headers

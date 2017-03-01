@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0968559100bffc2780e3019f4888accf3afe3b51 $
 
 # @ECLASS: udev.eclass
 # @MAINTAINER:

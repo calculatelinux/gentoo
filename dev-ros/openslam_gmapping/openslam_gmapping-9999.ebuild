@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ebc75ebf7f3cf4013b64e3f223e65d14156e72b8 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/openslam_gmapping"

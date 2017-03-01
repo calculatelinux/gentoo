@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8f95b0bfbcdcf6f6feaa5cc81692b24f3eb0ba97 $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"

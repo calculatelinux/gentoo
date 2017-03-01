@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 61cc55abb58a759727b9306478d5ce7d1135f1d0 $
 
 EAPI=5
 SWORD_MODULE="ManxGaelic"

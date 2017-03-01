@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/mail-lib app-xemacs/xemacs-devel app-xemacs/xemacs-base app-xemacs/cc-mode app-xemacs/fsf-compat app-xemacs/edit-utils app-xemacs/ediff app-xemacs/emerge app-xemacs/efs app-xemacs/vc app-xemacs/speedbar app-xemacs/dired app-xemacs/ilisp app-xemacs/sh-script app-xemacs/cedet-common app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/prog-modes-2.20-pkg.tar.gz
-_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
-_md5_=99748ac0613a335f394613688f85ca79
+_eclasses_=xemacs-packages	6af894e52080fe5d8bd91371a8a6a735
+_md5_=5aa36463fde454fa81a40ddfc7802101

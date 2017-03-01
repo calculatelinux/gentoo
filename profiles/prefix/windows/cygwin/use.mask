@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0fcf5e644a71f2019b13e1ce507b4aeb0eaf3108 $
 
 # Re-add Cygwin's libc
 -elibc_Cygwin

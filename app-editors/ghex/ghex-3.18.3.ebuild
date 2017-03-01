@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d6585a9fb112ac4a4453eafb13a2bd99f181b362 $
 
 EAPI=6
 inherit gnome2

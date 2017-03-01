@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e2146138532deb0cf81fd812f85962f92f358c3e $
 
 # @ECLASS: gpe.eclass
 # @MAINTAINER:

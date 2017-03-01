@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2ce9be5dcdeca540d13290eff7b7fede31d58aa4 $
 #
 # @ECLASS: leechcraft.eclass
 # @MAINTAINER:

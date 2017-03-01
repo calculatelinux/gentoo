@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 15f9dcb5f5956d965712e25eaeede1b21f68b1b3 $
 
 EAPI=6
 inherit gnome2 readme.gentoo-r1

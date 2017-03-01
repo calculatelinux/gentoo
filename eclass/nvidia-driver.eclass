@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1c6225c26bfeff7823a6950c96b7a171c8a864a7 $
 
 # @ECLASS: nvidia-driver.eclass
 # @MAINTAINER:

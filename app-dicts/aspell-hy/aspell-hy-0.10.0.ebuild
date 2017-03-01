@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3be9b732e2463bb60c05ef9a983dc4ced5029edf $
 
 ASPELL_LANG="Armenian"
 ASPOSTFIX="6"

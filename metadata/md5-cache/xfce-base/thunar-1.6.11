@@ -10,5 +10,5 @@ RDEPEND=>=dev-lang/perl-5.6 >=dev-libs/glib-2.30:= >=x11-libs/gdk-pixbuf-2.14:= 
 REQUIRED_USE=xfce_plugins_trash? ( dbus )
 SLOT=0
 SRC_URI=mirror://xfce/src/xfce/thunar/1.6/Thunar-1.6.11.tar.bz2
-_eclasses_=virtualx	56466ac07ba26f9975b9607fa497be2c
-_md5_=cbfe858d815576b5d17f5ff6140e4ce1
+_eclasses_=virtualx	171580f737f5aaf18fcb456548588066
+_md5_=161e8bc9206c1ee5ae1e7c94584f5332

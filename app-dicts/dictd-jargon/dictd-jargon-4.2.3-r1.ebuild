@@ -1,6 +1,5 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0033850cb2485bf34d96e9be8976cacf53837c84 $
 
 MY_P=${PN/dictd-/}_${PV}
 DESCRIPTION="Jargon lexicon"

@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9b9daa2f86af959852abab6f16cb58f2c20c1f61 $
 
 inherit eutils
 DESCRIPTION="Network printer command-line adminstration tool"

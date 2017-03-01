@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 60aafd75bb38345805ba3aa984313ecca26d9352 $
 
 # EAPI=6 is blocked by Gentoo bugs 497038, 497052.
 EAPI=5

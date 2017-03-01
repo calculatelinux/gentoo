@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7b08e3e51eb8b59ec79bf3a87a676e1dc58d22b2 $
 
 # Force the flag which corresponds to ARCH.
 arm64

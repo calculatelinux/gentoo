@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ff1a3221f9cc9f290a3775bd2cc11a918fa4bf6a $
 EAPI=5
 MY_PN=${PN/mod-/}
 DESCRIPTION="Quotation's by several people (mostly from Slovakia)"

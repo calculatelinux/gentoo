@@ -10,5 +10,5 @@ RDEPEND=!x64-macos? ( !headless-awt? ( x11-libs/libX11 x11-libs/libXext x11-libs
 RESTRICT=fetch preserve-libs strip
 SLOT=1.8
 SRC_URI=amd64? ( jre-8u121-linux-x64.tar.gz ) x86? ( jre-8u121-linux-i586.tar.gz ) jce? ( jce_policy-8.zip )
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	fdo-mime	f612973507f5479ae67cb635227b6218	java-vm-2	6ed6242e9f34e71ec93b997ab5a87cf0	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	pax-utils	fba36330a0e96da6ac8ea47dd495cc62	prefix	38ff416d58fcaea18d47c00728c70298	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
-_md5_=6c877227cdbc6f74046c833da9aeafb5
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	fdo-mime	21ef5adf81836863efa968f2a25cff64	java-vm-2	477ca23a49dfcd57017ee7f3bed47564	multilib	0236be304ee52e7f179ed2f337075515	pax-utils	4f95120230a315c8caaabeb2307b7eee	prefix	df8265631f8bf5f5df387e9b987121f9	toolchain-funcs	53b75b4a49cf3e61530a523804045432	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=026269d9667a5abe9c5e6c0822800afc

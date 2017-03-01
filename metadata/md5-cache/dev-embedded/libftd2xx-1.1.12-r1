@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~arm ~x86
 LICENSE=FTDI LGPL-2.1+
 SLOT=0
 SRC_URI=http://www.ftdichip.com/Drivers/D2XX/Linux/libftd2xx1.1.12.tar.gz
-_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=c809b64458593f3745669d3d3735c662
+_eclasses_=multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=296c7b1f2df982598b578fe67687c24b

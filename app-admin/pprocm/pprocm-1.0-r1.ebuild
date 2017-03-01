@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4b416880e1468cc245e648ed0aeba3ef99c018a3 $
 
 MY_P="PProcM-"${PV}
 S=${WORKDIR}/${MY_P}

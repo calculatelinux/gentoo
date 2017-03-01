@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8c79ba3b495abcbcd16d9d3a53aed79386cda98f $
 
 EAPI=5
 SWORD_MODULE="Darby"

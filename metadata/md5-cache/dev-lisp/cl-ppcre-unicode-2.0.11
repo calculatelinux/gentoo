@@ -9,5 +9,5 @@ RDEPEND==dev-lisp/cl-ppcre-2.0.11* dev-lisp/cl-unicode
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/edicl/cl-ppcre/archive/v2.0.11.tar.gz -> cl-ppcre-2.0.11.tar.gz
-_eclasses_=common-lisp-3	cf691d9ca120ddb2649ba5b7c884140c	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=03396551b6b568837dc778e5291ce1f4
+_eclasses_=common-lisp-3	bd9283c567014f1b21a44c91a53f44ca	eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=9f98db9d56cd973451c6fd7173c50493

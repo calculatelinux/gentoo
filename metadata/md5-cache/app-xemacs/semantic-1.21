@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/ede app-xemacs/cedet-common app-xemacs/eieio app-xemacs/xemacs-base app-xemacs/xemacs-devel app-xemacs/edit-utils app-xemacs/speedbar app-xemacs/texinfo app-xemacs/fsf-compat app-xemacs/cc-mode app-xemacs/edebug app-xemacs/sgml app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/semantic-1.21-pkg.tar.gz
-_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
-_md5_=a0750437e5f77a36087f67ba84983d25
+_eclasses_=xemacs-packages	6af894e52080fe5d8bd91371a8a6a735
+_md5_=5be16cc440b2a767434a3c5862905590

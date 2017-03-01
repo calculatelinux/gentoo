@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8bf95f441bc6f411e130c983652810c98eb772f2 $
 
 DESCRIPTION="Simple libfame-based video encoder which compresses raw video sequences to MPEG video"
 HOMEPAGE="http://fame.sourceforge.net/"

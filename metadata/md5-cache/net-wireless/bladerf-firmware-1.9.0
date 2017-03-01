@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~arm ~x86
 LICENSE=MIT
 SLOT=0
 SRC_URI=http://nuand.com/fx3/bladeRF_fw_v1.9.0.img
-_md5_=0084ad176d5754185f3419b61a3ddb54
+_md5_=7c1560327938cf1ab947e49acc711fc6

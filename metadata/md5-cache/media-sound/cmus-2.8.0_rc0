@@ -10,5 +10,5 @@ RDEPEND=sys-libs/ncurses:0=[unicode?] aac? ( media-libs/faad2 ) alsa? ( >=media-
 REQUIRED_USE=tremor? ( vorbis ) mp4? ( aac )
 SLOT=0
 SRC_URI=https://github.com/cmus/cmus/archive/v2.8.0-rc0.tar.gz -> cmus-2.8.0_rc0.tar.gz
-_eclasses_=bash-completion-r1	2418d29a9d4e3e223bbc64e93cde118e	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=0cf63577433cb9b2c9f962f0821821b2
+_eclasses_=bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=82a8ec81987c0962711e70c3f9b6ea72

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id: 36e84de2c64b55af2b815bd148af8d6552352d90 $
 # System-wide defaults for the G/FBSD Portage system
 
 ARCH="amd64-fbsd"

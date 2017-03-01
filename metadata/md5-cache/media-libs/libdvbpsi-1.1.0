@@ -8,4 +8,4 @@ KEYWORDS=~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd
 LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=http://download.videolan.org/pub/libdvbpsi/1.1.0/libdvbpsi-1.1.0.tar.bz2
-_md5_=e9885707dc9b887f00e9188ac3df3e14
+_md5_=2d91b8633579c83b556126c1e2052752

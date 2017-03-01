@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9cf2ca4b75c93188357ef63a4dcd32ae011e6d17 $
 
 EAPI=5
 MODULE_AUTHOR=LEONT

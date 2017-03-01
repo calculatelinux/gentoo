@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 02cb18281be852c027642c261e66eb893f198ecd $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.

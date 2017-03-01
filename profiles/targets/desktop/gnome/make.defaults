@@ -1,5 +1,4 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 47d0997e38d1e759fe57551272be23904e99c03b $
 
 USE="colord eds evo gnome gnome-keyring gnome-online-accounts gstreamer introspection libsecret nautilus pulseaudio tracker"

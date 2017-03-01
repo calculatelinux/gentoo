@@ -8,5 +8,5 @@ LICENSE=GPL-2+
 RDEPEND=>=virtual/emacs-23
 SLOT=0
 SRC_URI=https://github.com/josteink/csharp-mode/archive/v0.9.0.tar.gz -> csharp-mode-0.9.0.tar.gz
-_eclasses_=elisp	62249f4b6196eec26a81f335fb4d1a33	elisp-common	4a8ce40989ad055139c36baa8c81ea0b
-_md5_=9975d671ada5ceca2a9d4f77c554f870
+_eclasses_=elisp	0f9fb41c5a844d876880e414faee1340	elisp-common	f49d14e575e158ccab82cf05b315a180
+_md5_=26cd73f7b9090cea7816d5b36ff58ead

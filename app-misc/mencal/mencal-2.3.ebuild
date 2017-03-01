@@ -1,6 +1,5 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 818fbf7c223faae9db750e713359d9ac7680dad6 $
 
 DESCRIPTION="A calendar that can be used to track menstruation (or other) cycles conveniently"
 HOMEPAGE="http://www.kyberdigi.cz/projects/mencal/english.html"

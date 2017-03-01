@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ef6531ba3133cc67c6265ed511627bf54de2e31c $
 
 # @ECLASS: common-lisp-3.eclass
 # @MAINTAINER:

@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: aa88f0d4f7c79407b7319836536d6063a1c0032a $
 
 # We could depend on dev-python/cherrypy when USE=server, but
 # that is an optional component ...

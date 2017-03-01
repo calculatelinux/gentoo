@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1b08e5c48176948d638608490d14ce9b72cc0a1b $
 #
 # Copyright 2007-2011 Hans de Graaff <graaff@gentoo.org>
 #

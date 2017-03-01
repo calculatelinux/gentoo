@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a0d6e1743b56ffaf5cd2ac882d6e3f4fb7b7249e $
 #
 # THIS ECLASS IS DEAD: It has been integrated into portage
 #

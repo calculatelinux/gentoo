@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 162125f0ca9b320fdb4973d5df33ab6783216c36 $
 
 MY_P="${P/-/_}"
 S="${WORKDIR}/${MY_P}"

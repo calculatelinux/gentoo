@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=~app-emulation/libspectrum-1.0.0 gtk? ( x11-libs/gtk+:2 alsa? ( media-libs/alsa-lib ) !alsa? ( ao? ( media-libs/libao ) ) joystick? ( media-libs/libjsw ) ) !gtk? ( sdl? ( >=media-libs/libsdl-1.2.4 ) !sdl? ( X? ( x11-libs/libX11 x11-libs/libXext alsa? ( media-libs/alsa-lib ) !alsa? ( ao? ( media-libs/libao ) ) joystick? ( media-libs/libjsw ) ) !X? ( svga? ( media-libs/svgalib alsa? ( media-libs/alsa-lib ) !alsa? ( ao? ( media-libs/libao ) ) ) !svga? ( fbcon? ( virtual/linux-sources gpm? ( sys-libs/gpm ) alsa? ( media-libs/alsa-lib ) !alsa? ( ao? ( media-libs/libao ) ) joystick? ( media-libs/libjsw ) ) !fbcon? ( x11-libs/libX11 x11-libs/libXext alsa? ( media-libs/alsa-lib ) !alsa? ( ao? ( media-libs/libao ) ) joystick? ( media-libs/libjsw ) ) ) ) ) ) dev-libs/glib:2 png? ( media-libs/libpng sys-libs/zlib ) xml? ( dev-libs/libxml2 )
 SLOT=0
 SRC_URI=mirror://sourceforge/fuse-emulator/fuse-1.0.0.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=58529c6580dc231b6ad8607c4179e3c4
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=83635f98b020fd936601fd3d6cb3caf5

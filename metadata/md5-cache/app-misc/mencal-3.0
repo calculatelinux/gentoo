@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl
 SLOT=0
 SRC_URI=http://www.kyberdigi.cz/projects/mencal/files/mencal-3.0.tar.gz
-_md5_=fa2fafabac8e7af8ef062a07a4ebb765
+_md5_=5f028df249e47447fca46b3a58f8b342

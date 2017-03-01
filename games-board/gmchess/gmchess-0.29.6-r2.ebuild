@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f464f204c566868877d07c66880b0045fcc338e4 $
 
 EAPI=6
 inherit autotools flag-o-matic libtool gnome2-utils

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: dff50cb6bf2f01d7eaaea84875cb2d40fe73d46b $
 
 EAPI=5
 inherit eutils qmake-utils fdo-mime

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b66606792e5bf93a114dcd2f2e9f26a093ba6b4d $
 
 EAPI=6
 inherit golang-vcs-snapshot systemd user

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 59047ab98be643c1e84a8991d93176d0be601684 $
 
 inherit eutils
 DESCRIPTION="IPAudit monitors network activity on a network by host, protocol and port"

@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 050fed36650321d3d37a034a88a4e9407d967d85 $
 
 EAPI=6
 inherit bash-completion-r1

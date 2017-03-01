@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 211c36f2058a5b5cc1ddb6bccf874ce77675bb64 $
 
 EAPI=5
 MOD_DESC="a tournament mod"

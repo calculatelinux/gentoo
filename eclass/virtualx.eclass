@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9303fbb479c056c392817bc64b95b2c8b7d4978a $
 
 # @ECLASS: virtualx.eclass
 # @MAINTAINER:

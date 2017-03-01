@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: bb1d6228fbb96bd4fa6e76284f80bd0149432697 $
 
 EAPI=5
 SWORD_MODULE="Tisch"

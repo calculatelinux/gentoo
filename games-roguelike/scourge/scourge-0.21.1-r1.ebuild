@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 22ee6cf791ec88d3b445ca09d94cad80c5781c4f $
 
 EAPI=6
 inherit autotools eutils wxwidgets

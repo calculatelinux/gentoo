@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a737801b8848e075e4033e8c66a6c7e2d0702d3d $
 
 MY_PN=${PN/xemacs-/}
 PKG_CAT="standard"

@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5af3a0951154cb5c42e1be46a54efd7bca008891 $
 
 EAPI=5
 MOD_DESC="fast paced, off-handed grapple mod"

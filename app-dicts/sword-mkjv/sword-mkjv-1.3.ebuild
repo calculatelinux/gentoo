@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: cef5c260e0d39e6f53dc03ee72db3eb556751eac $
 
 EAPI=5
 SWORD_MODULE="MKJV"

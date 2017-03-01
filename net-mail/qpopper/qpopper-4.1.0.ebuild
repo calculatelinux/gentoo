@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3905e974e1c8d8c37df7d2369ccc8f8607849c76 $
 
 EAPI="4"
 #inherit eutils flag-o-matic ssl-cert

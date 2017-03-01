@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b289b7ea651c80faedb4845e7884968f41980500 $
 
 EAPI=5
 PHP_PEAR_CHANNEL="${FILESDIR}/channel.xml"

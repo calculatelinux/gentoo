@@ -7,4 +7,4 @@ LICENSE=Stuffit
 RESTRICT=fetch strip
 SLOT=0
 SRC_URI=http://my.smithmicro.com/downloads/files/stuffit520.611linux-i386.tar.gz
-_md5_=fc24ee31490aebb7cc8225f53256a311
+_md5_=c71294b020436a1efee3869b00fdbf7b

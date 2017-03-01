@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 010d2faacf45c1d30fbefcaa058b9e7b904a77c2 $
 
 EAPI=6
 inherit eutils git-r3 multilib savedconfig toolchain-funcs

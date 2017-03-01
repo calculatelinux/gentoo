@@ -8,4 +8,4 @@ LICENSE=GPL-2+
 RDEPEND=app-crypt/libsecret net-im/pidgin
 SLOT=0
 SRC_URI=https://github.com/aebrahim/pidgin-gnome-keyring/archive/2.0.tar.gz -> pidgin-gnome-keyring-2.0.tar.gz
-_md5_=992c7c1ec69307134e3c5129b232416e
+_md5_=5b2c1a06dbab476910a9951d3782887d

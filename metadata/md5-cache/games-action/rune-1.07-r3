@@ -9,5 +9,5 @@ RDEPEND=dev-util/xdelta:0 >=media-libs/libsdl-1.2.9-r1[abi_x86_32(-)] x11-libs/l
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://gentoo/rune-all-0.2.tar.bz2
-_eclasses_=cdrom	92a9c027a3a772adfe1fa67068bce7f4	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	portability	87ec4b5daf6ff0bb80c67096db306fcd	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=01fdb610f30441abbff1bb1a73273415
+_eclasses_=cdrom	0ab58b9ff75f89271f112d7c1e0e5bd0	eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	portability	2b88d3ecc35035a3b8ab628b49cafb0e	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=33dba71bfd8b48a00b92a1d8681d03bd

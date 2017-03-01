@@ -9,4 +9,4 @@ LICENSE=LGPL-2.1
 RDEPEND=nls? ( virtual/libintl )
 SLOT=0
 SRC_URI=http://kldp.net/frs/download.php/5855/libhangul-0.0.12.tar.gz
-_md5_=30b36de581ee3f45849f4d7720ab6384
+_md5_=ebb7aae308909acaded6dd9fabfd23cc

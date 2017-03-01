@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4d51129f49488d39c98ab779859aef7fd27985cf $
 
 DESCRIPTION="Convert CUE files to cdrdao's TOC format"
 HOMEPAGE="http://cue2toc.sourceforge.net/"

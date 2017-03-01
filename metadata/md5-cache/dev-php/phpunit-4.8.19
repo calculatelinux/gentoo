@@ -8,4 +8,4 @@ LICENSE=BSD
 RDEPEND=|| ( dev-lang/php:5.5[phar,xml] dev-lang/php:5.6[phar,xml] )
 SLOT=0
 SRC_URI=https://phar.phpunit.de/phpunit-4.8.19.phar
-_md5_=dca6500f4322fd8410eea5c260f8654e
+_md5_=6727e2d18f62896e934f5ff53fabf8f5

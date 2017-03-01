@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: adfcc9f5fba1939fc3d399103bf357ed3710ac80 $
 
 EAPI=6
 inherit qmake-utils

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/libsdl-1.2.7 >=media-libs/sdl-image-1.2.3 >=media-libs/sdl-ttf-2.0.6 >=media-libs/sdl-gfx-2.0.13 latex? ( virtual/imagemagick-tools virtual/latex-base )
 SLOT=0
 SRC_URI=http://www.srcf.ucam.org/~dmi1000/multitalk/multitalk-1.4.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	readme.gentoo	ce7880f12566fe1fc5522fed26507687	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=27e32fabcb6f599a4f87f67e7748ef3a
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	readme.gentoo	589f4c6d735919e293942dd66311dc40	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=f620185614a121945d98bd3e021609fc

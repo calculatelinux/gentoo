@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: abf8577bf5f221f11e68443f7acbab14d9f66257 $
 
 EAPI=5
 inherit eutils wxwidgets

@@ -7,4 +7,4 @@ LICENSE=PHP-3.01
 RDEPEND=dev-lang/php:* dev-php/PEAR-PEAR
 SLOT=0
 SRC_URI=http://download.pear.php.net/package/Net_Socket-1.0.14.tgz
-_md5_=4a1de531c58138b480882c06a8edae33
+_md5_=f5ba647611bd15951c017e9d7c49e42a

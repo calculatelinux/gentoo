@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 93a5590e96eff74d12a0b5e37d9f14b8249822ae $
 
 EAPI=6
 inherit cmake-utils eutils flag-o-matic gnome2-utils

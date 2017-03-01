@@ -8,5 +8,5 @@ LICENSE=Amazon || ( Ruby GPL-2 )
 RDEPEND=|| ( dev-lang/ruby:2.1 ) virtual/rubygems virtual/ruby-ssl net-misc/rsync net-misc/curl
 SLOT=0
 SRC_URI=http://s3.amazonaws.com/ec2-downloads/ec2-ami-tools-1.5.6.zip
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	ruby-single	32ee8b3dbe0d3037a736ac06aa4c3b9a	ruby-utils	68337f99ff1d7cee213f5c5da7c76213	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
-_md5_=91e2fac49b6116d170c384b032e5fe4a
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	ruby-single	af6ea0a8fe4c4faf733f4dbafae9e233	ruby-utils	e9d0baddf239294b286da449ae7ac6a3	toolchain-funcs	53b75b4a49cf3e61530a523804045432	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=064a646f17316d86c77aaea69adad903

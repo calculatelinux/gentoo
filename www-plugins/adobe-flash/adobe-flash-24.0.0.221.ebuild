@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 51cfe433c9fa2f958451aa3dcdbc5f0a3bea7b10 $
 
 EAPI=6
 inherit nsplugins multilib multilib-minimal

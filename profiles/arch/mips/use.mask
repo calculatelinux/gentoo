@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c6c31f5f4c11b8d960743e87479d86e71e77e0f5 $
 
 # Unmask the flag which corresponds to ARCH.
 -mips

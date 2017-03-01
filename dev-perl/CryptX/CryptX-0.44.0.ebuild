@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 76298eb3ed7b8b838c0130b8c202906f3d01d373 $
 
 EAPI=6
 DIST_AUTHOR=MIK

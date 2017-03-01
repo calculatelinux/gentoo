@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c5ad9a5fc43c6a5e6adeb4df9c70664b2a59aa5e $
 
 # Note: if your package uses the texi2dvi utility, it must depend on the
 # virtual/texi2dvi package to pull in all the right deps.  The tool is not

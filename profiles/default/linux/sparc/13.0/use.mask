@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 6ba96405556fcbe4683a06ef3622afd5c7185cc9 $
 
 # this is not a multilib profile
 multilib

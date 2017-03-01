@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a72752cf5cc9be7ba9bb507ac8de62ce10779093 $
 
 DESCRIPTION="Inputlirc daemon to utilize /dev/input/event*"
 HOMEPAGE="https://github.com/ferdinandhuebner/inputlirc"

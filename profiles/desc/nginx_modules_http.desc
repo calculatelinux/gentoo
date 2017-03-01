@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4cb5574c438faeb974fd0e9b90f1d0d03e31fac4 $
 
 # This file contains descriptions of NGINX_MODULES_HTTP USE_EXPAND flags.
 

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 38fd1aca830335106870c2f8fdacd6d740d4be34 $
 
 EAPI=5
 SWORD_MODULE="DTN"

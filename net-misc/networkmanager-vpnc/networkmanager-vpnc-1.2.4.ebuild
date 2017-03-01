@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 91529767e50816ce5fdff93459d964d9d76d5d19 $
 
 EAPI=6
 GNOME_ORG_MODULE="NetworkManager-${PN##*-}"

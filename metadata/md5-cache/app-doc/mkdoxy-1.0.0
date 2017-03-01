@@ -8,4 +8,4 @@ LICENSE=BSD
 RDEPEND=app-doc/doxygen >=dev-lang/perl-5
 SLOT=0
 SRC_URI=mirror://sourceforge/mkdoxy/mkdoxy-1.0.0.tar.gz
-_md5_=c9d8c2ce5343b00e89aeadaa1b5e1783
+_md5_=37af7af14b1f8b1c31faa51d33a088e9

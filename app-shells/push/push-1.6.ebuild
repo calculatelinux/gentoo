@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f2524bfd7fc7b05f6ea51bbcaad91207af9fe6d0 $
 
 EAPI="4"
 inherit vcs-snapshot

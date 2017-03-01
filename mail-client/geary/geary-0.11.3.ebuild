@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 019ae54d16f514de79b51746d5656b98fda49766 $
 
 EAPI=6
 # Keep cmake-utils at the end

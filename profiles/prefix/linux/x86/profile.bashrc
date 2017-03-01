@@ -1,5 +1,4 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Id: c8d0269c04094ee75051ab0fede5e70c02cc590a $
 
 # When x86-linux runs on an amd64 host having /lib32,
 # we need to have binutils to search there too (#360197).

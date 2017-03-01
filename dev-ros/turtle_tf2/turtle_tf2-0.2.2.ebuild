@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 64d8a70429e66d733098935a8a82fc9219ffa9e1 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/geometry_tutorials"

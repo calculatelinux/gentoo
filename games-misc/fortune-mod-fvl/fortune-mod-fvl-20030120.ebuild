@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 6a2dfe8ec0cebb517f90462e7be7028bf3f863cb $
 EAPI=5
 DESCRIPTION="Quotes from Felix von Leitner (fefe)"
 HOMEPAGE="http://fortune-mod-fvl.sourceforge.net/"

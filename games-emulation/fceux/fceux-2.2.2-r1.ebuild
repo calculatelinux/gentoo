@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 432e19d926b99a1b7c0054dd0220bb34e083cedb $
 
 EAPI=5
 inherit eutils scons-utils games

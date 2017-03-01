@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0c0b20dc263e71f98c573318ae158b9590e729a0 $
 
 EAPI=5
 MOD_DESC="advanced FPS competition mod"

@@ -1,6 +1,5 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fb3a360f3ab431feaff2516b0c62905afac63696 $
 
 inherit font font-ebdftopcf
 

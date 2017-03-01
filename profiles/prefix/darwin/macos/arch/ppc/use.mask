@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2c96250473af1b56b3ba656a5706ebe319ec6cef $
 
 # Unmask the flag corresponding to the default ABI
 -ppc-macos

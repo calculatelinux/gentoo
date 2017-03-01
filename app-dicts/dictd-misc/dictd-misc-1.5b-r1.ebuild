@@ -1,6 +1,5 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 019fab985e19d33a137f5c4cfbe96c5343de6054 $
 
 MY_P=${P/dictd/dict}-pre
 DESCRIPTION="Easton's 1897 Bible Dictionary for dict"

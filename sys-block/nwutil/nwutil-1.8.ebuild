@@ -1,6 +1,5 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2a38f8221d0d44ab8fba00e8ec2964ada102a283 $
 
 DESCRIPTION="Netwinder hardware utilities"
 HOMEPAGE="http://packages.debian.org/stable/base/nwutil"

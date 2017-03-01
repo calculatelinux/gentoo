@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/fsf-compat app-xemacs/xemacs-base app-xemacs/bbdb app-xemacs/mail-lib app-xemacs/gnus app-xemacs/rmail app-xemacs/tm app-xemacs/apel app-xemacs/xemacs-eterm app-xemacs/sh-script app-xemacs/net-utils app-xemacs/ecrypto app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/eudc-1.40-pkg.tar.gz
-_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
-_md5_=582b1a829224a01a685ab06d3b09b0c0
+_eclasses_=xemacs-packages	6af894e52080fe5d8bd91371a8a6a735
+_md5_=26c02f16fa2ac9e0520858f1f1783f7a

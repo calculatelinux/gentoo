@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 27d08a2cba30e38bd6f224a453ef1d6d2d97c21b $
 
 EAPI=6
 CMAKE_IN_SOURCE_BUILD="true"

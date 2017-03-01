@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 69a382719120d7b1a80d97782b1241cf238221aa $
 
 EAPI=5
 inherit eutils linux-mod

@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c963896e53d35affbcf883d05e45685b78f92b86 $
 
 EAPI=6
 inherit eutils flag-o-matic git-r3 toolchain-funcs user

@@ -8,5 +8,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=virtual/perl-File-Spec dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/C/CH/CHM/ExtUtils-F77-1.20.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=fd85e6e248e8abbc237dd30adb362913
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=242813cecd6b5bece8a7908b7487e123

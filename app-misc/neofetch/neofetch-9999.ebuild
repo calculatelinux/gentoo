@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 85203ceee7c7f5910775f00cedc18a74e838ab76 $
 EAPI=6
 inherit git-r3
 DESCRIPTION="Simple information system script"

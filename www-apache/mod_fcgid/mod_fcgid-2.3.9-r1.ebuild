@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3ddd2a26309b2ef8a2e394f6bdd9f4b311a10266 $
 
 EAPI=5
 inherit apache-module eutils multilib

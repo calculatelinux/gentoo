@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4fb9700b5a568ab76a5c1c20d2cb24dd6d6bd2a8 $
 
 CABAL_FEATURES="bin lib profile haddock"
 inherit base haskell-cabal

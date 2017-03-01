@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 15d8f8e2b77d96001cedf397e7cf338e439555a3 $
 
 EAPI=5
 inherit linux-mod

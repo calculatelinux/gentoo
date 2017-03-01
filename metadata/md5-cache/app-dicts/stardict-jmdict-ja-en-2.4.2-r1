@@ -9,5 +9,5 @@ LICENSE=GDLS
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://download.huzheng.org/ja/stardict-jmdict-ja-en-2.4.2.tar.bz2
-_eclasses_=stardict	5b58f53862636f51032323655f5e0064
-_md5_=f78d44eecef6bfb3a8f1956f814cd1cd
+_eclasses_=stardict	8d4771fbbd2a9aee09ef8040f10f28b3
+_md5_=ccfbbb2319155df05a1614fbba476927

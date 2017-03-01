@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 31b60f8abe137b0653d037cf49232cc224084be0 $
 
 EAPI=5
 inherit multilib rpm versionator

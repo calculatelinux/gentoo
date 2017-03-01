@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ea972ca9374edbedc44116a569a84d39a4269918 $
 
 # we don't want binutils everywhere, only in linux and solaris
 -*sys-devel/binutils

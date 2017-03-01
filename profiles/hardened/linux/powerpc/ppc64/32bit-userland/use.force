@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 142b1d66e51961065f3ec77a8780c8f6cc7cbeb2 $
 
 # Force the flag which corresponds to ARCH.
 ppc

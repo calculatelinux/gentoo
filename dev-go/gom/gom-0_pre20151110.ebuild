@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e40f9e30319df2f32db0cb0b38267a0603975f13 $
 
 EAPI=5
 EGO_PN=github.com/mattn/gom

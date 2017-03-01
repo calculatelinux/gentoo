@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4c0130dfae69ba48c9f6f65c70ad6fa93bd2e159 $
 
 EAPI="2"
 inherit depend.apache webapp

@@ -8,4 +8,4 @@ LICENSE=|| ( MIT Apache-2.0 )
 RDEPEND=app-shells/zsh
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~jauhien/distfiles/rust-zshcomp-1_beta20150411.tar.gz
-_md5_=614839dd801a9bc7c40c2c1a98c390b0
+_md5_=7aefcd347d96648d9ea61b537a86bb41

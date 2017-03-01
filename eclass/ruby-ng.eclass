@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 263bf89545b2cc4935383ee22cd423f78df2885c $
 
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:

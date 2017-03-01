@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5f8577c55097b80b68d21f1cebcae1ef5de5f151 $
 
 EAPI=5
 MODULE_AUTHOR=LEEJO

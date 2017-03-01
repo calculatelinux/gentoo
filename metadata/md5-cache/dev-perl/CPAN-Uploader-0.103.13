@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=virtual/perl-Carp virtual/perl-Data-Dumper virtual/perl-Digest-MD5 dev-perl/File-HomeDir virtual/perl-File-Spec >=dev-perl/Getopt-Long-Descriptive-0.84.0 dev-perl/HTTP-Message >=dev-perl/LWP-Protocol-https-1.0.0 dev-perl/libwww-perl dev-perl/TermReadKey dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/R/RJ/RJBS/CPAN-Uploader-0.103013.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=a9dd80017f3ca4875605f941ea649ede
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=03f3327b674382774c5a1d814ec0b0af

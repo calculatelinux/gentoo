@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5cd6b7bd3b8e52de826a26e21488f3ece3a2d9f9 $
 
 inherit eutils vim-plugin
 

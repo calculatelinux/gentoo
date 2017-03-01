@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e8fb80e0d6193420316eb470e2d734a1fc5ea4f5 $
 
 IUSE="unicode"
 

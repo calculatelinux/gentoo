@@ -8,4 +8,4 @@ LICENSE=BSD
 RDEPEND=>=dev-lang/tk-8.0
 SLOT=0
 SRC_URI=mirror://sourceforge/tktable/Tktable2.10.tar.gz
-_md5_=b15b12b28ebe5cb0eaefe15bb51c8118
+_md5_=3363f18712c2952012cbf403c90e5375

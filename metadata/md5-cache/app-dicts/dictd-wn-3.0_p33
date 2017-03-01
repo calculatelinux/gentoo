@@ -7,5 +7,5 @@ KEYWORDS=amd64 ppc ppc64 sparc x86
 LICENSE=Princeton
 SLOT=0
 SRC_URI=mirror://debian/pool/main/w/wordnet/dict-wn_3.0-33_all.deb
-_eclasses_=unpacker	2afe53b558f4ad6955316e702a4c9cfa
-_md5_=3fccb10c8164df4f6577818a28597f64
+_eclasses_=unpacker	76ddf385f3c212c12857bb8ec2a8bd35
+_md5_=458b83f869b03c645e11dca9e9ca6e4f

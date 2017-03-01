@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=net-libs/libpcap
 SLOT=0
 SRC_URI=mirror://sourceforge/fprobe/fprobe-1.1.tar.bz2
-_md5_=7daf13bc666cdf4b7b8b5940c5ab359f
+_md5_=5341390630915e76eacb51098a71cc34

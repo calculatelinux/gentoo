@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 233ef91e34b1d07db73b32a3d266377f7bbe62b7 $
 EAPI=5
 MY_P=${PN/-mod/}
 DESCRIPTION="Quotes from Discworld novels"

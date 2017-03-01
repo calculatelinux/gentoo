@@ -8,5 +8,5 @@ LICENSE=BSD-2
 RDEPEND=>=app-i18n/skk-jisyo-200705[cdb] sys-apps/xinetd
 SLOT=0
 SRC_URI=https://dbskkd-cdb.googlecode.com/files/dbskkd-cdb-2.00.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd
-_md5_=bc0677c71a5f74dd2a99f5b125898388
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	user	e4b567c44272a719fabf53f0f885d3f7
+_md5_=4f47e018b90f9e57fd79aeb8823c9780

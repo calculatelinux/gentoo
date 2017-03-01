@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4c5ddec4dda2330b371c7486c2cceac5bbd4c580 $
 
 ASPELL_LANG="Finnish"
 ASPOSTFIX="6"

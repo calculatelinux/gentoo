@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f47c3c63634cf308e0db454426b13c7c130de4d6 $
 
 EAPI=5
 inherit vim-plugin

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e551741be55368a553c65e4ab91e09efd4ddab26 $
 
 inherit cron toolchain-funcs pam eutils flag-o-matic user systemd
 

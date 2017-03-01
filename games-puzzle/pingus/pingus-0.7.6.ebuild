@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 49ddbd7f2b713e13a0bd95166a687ea30992bb12 $
 
 EAPI=5
 inherit eutils scons-utils toolchain-funcs flag-o-matic games

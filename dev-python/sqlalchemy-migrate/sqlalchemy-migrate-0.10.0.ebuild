@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ae344ae893fdada90993e437e92495644be32357 $
 
 EAPI=5
 # py3 has a syntax errors. On testing it is underdone

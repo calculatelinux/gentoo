@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=dev-perl/Log-Report-1.50.0 >=dev-perl/XML-Compile-1.480.0 >=dev-perl/XML-Compile-Cache-1.30.0 >=dev-perl/XML-Compile-SOAP-3.160.0 dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MA/MARKOV/XML-Compile-WSDL11-3.05.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=30872e105713f7a5964b4f645c8447af
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=9e8ad61333712324276bb6eac84dce5d

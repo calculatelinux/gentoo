@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4c9e36ad90c45aa0b0ea10411827cf347e6e4df6 $
 
 # Make sure people don't accidentally turn of ssp/pie in important packages.
 pie

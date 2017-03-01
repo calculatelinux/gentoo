@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1a681829dca81557dda8efb766e92981a6f0f3e6 $
 EAPI=6
 
 DESCRIPTION="A really tiny cross-platform proxy servers set"

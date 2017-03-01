@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3b019e9ecc50ca94d7849fbed0ad299a9ab9f66e $
 
 # @ECLASS: vmware-bundle.eclass
 # @MAINTAINER:

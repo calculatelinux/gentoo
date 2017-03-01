@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 40b6d91f9eb57de864bd5f296e2b8338010e81c2 $
 
 EAPI=5
 inherit toolchain-funcs games

@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 22265b4ddd0484af02cb80c8fa6ae0b9cd17099c $
 
 EAPI=6
 DIST_AUTHOR=HAARG

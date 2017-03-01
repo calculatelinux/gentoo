@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9eb28b662d38b9d3d830d36d64e61d8542ed6f68 $
 
 EAPI=5
 SWORD_MODULE="GerElb1905"

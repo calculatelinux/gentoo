@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id: 24394f91a35e36a5d1e2bf840b809fdcab56520e $
 
 bsd-fbsd10fix(){
 	# http://svnweb.freebsd.org/ports/head/Mk/bsd.port.mk

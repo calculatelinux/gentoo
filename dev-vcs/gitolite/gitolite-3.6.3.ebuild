@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0a4cde83af2b4741ece3f44e2cb087e9872ce2a7 $
 
 EAPI=5
 [[ ${PV} == *9999 ]] && SCM="git-2"

@@ -8,5 +8,5 @@ LICENSE=BSD-2
 RDEPEND=sys-apps/gentoo-functions >=sys-apps/openrc-0.12
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~robbat2/distfiles/netifrc-0.3.0.tar.bz2
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=2e0e64dba2a87ac1c203fd736a59ce4d
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	systemd	ec2e9154031d942186c75c0aabb41900	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=4dcd3b953887c61861d63b6032f6958c

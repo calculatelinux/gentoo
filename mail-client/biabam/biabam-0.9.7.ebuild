@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1a15d2fd6309f9a9cff97ba41bddf12b37d52e72 $
 
 DESCRIPTION="Biabam is a small commandline tool for sending mail attachments"
 HOMEPAGE="http://www.mmj.dk/biabam/"

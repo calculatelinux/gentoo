@@ -1,6 +1,5 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4f171d47b0795900deb3c92dbd1146333bcf20d2 $
 
 DESCRIPTION="All in one monitoring dockapp: RAM, CPU, Net, Power, df, seti"
 HOMEPAGE="http://ilpettegolo.altervista.org/linux_allin1.en.shtml"

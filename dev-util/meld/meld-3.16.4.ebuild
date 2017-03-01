@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 68d78323aaf77c2f68dc12aaa80802165801abd1 $
 
 EAPI="6"
 PYTHON_REQ_USE="xml"

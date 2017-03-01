@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ebe1caef4dd034ed7c42629f311f495a93e42790 $
 
 # Note; since the Galician dictionary uses the Spanish
 # hypenation file, it causes collision problems with

@@ -5,5 +5,5 @@ HOMEPAGE=https://dev.gentoo.org/~mduft
 KEYWORDS=~ppc-aix ~x86-linux ~sparc-solaris ~x86-solaris
 LICENSE=GPL-3
 SLOT=0
-_eclasses_=prefix	38ff416d58fcaea18d47c00728c70298
-_md5_=f33d7a01235ea472af3844a9c774320f
+_eclasses_=prefix	df8265631f8bf5f5df387e9b987121f9
+_md5_=e3ee92f913bd8402ad84b536e6769299

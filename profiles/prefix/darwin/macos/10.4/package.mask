@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2ac75a8f0914014666bb21ca05e3c4f19eff9e04 $
 
 # Fabian Groffen <grobian@gentoo.org> (03 May 2012)
 # Needs 10.6 or up

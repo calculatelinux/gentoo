@@ -8,4 +8,4 @@ KEYWORDS=amd64 arm arm64 m68k s390 sh x86
 LICENSE=LGPL-2
 SLOT=0
 SRC_URI=https://github.com/msteveb/jimtcl/zipball/0.73 -> jimtcl-0.73.zip
-_md5_=47a8a5f4d5f5982c63a485c035665530
+_md5_=0736d04c56f8da1c29a70bb843da7234

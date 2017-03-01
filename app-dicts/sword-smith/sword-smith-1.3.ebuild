@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e27e9140ffb50cde5bf659fe4b6d886ffbc6c766 $
 
 EAPI=5
 SWORD_MODULE="Smith"

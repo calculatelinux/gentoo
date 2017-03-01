@@ -7,4 +7,4 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-lang/php
 SLOT=0
 SRC_URI=mirror://sourceforge/simpletest/simpletest_1.1.0.tar.gz
-_md5_=ccb0a4fdd7531930612c26b6664ac776
+_md5_=671d8c24d904322b446513757a739484

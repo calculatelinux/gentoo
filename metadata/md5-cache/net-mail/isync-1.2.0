@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=>=sys-libs/db-4.2:* sys-libs/zlib sasl? ( dev-libs/cyrus-sasl ) ssl? ( >=dev-libs/openssl-0.9.6:* )
 SLOT=0
 SRC_URI=mirror://sourceforge/isync/isync/1.2.0/isync-1.2.0.tar.gz
-_md5_=baa257a992f922f3ad741e300144f67c
+_md5_=fcaa1b94b6fd5016a8b0b9b60494f6cb

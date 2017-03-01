@@ -8,5 +8,5 @@ KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86
 LICENSE=MPL-1.1
 SLOT=0
 SRC_URI=https://mp4v2.googlecode.com/files/mp4v2-2.0.0.tar.bz2
-_eclasses_=libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=e03443f192c4d8b51f5fd62e3aa43f5a
+_eclasses_=libtool	48b1b9f6194d2842456514d1184ca72e	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=bc6e504b6368837c3afa377a920a92e0

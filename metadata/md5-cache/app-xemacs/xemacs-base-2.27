@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/xemacs-base-2.27-pkg.tar.gz
-_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
-_md5_=a62c32faa0f1d4771a92edd434f90f0f
+_eclasses_=xemacs-packages	6af894e52080fe5d8bd91371a8a6a735
+_md5_=47b8a28d321c532554f1139b6d5a686d

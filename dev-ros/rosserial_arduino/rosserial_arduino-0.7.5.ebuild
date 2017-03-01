@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8e5e9ccf06dba7b7bf908133ec17248227e45896 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-drivers/rosserial"

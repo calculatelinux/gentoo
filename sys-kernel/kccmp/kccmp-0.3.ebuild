@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a256c1151f5bd35707a5a647bcaed01688a92965 $
 
 EAPI="4"
 inherit qt4-r2

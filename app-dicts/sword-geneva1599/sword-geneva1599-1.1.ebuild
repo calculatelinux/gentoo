@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 243f1e71dbf161db8aa4def4cdea6a745fa07e31 $
 
 EAPI=5
 SWORD_MODULE="Geneva1599"

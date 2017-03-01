@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a17faf837b273086cee6a65d5a7e6ba66996bd9d $
 
 EAPI=5
 inherit udev

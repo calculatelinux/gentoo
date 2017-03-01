@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7a1878d59469d8589304654260d963194b1daaca $
 
 EAPI=5
 SWORD_MODULE="Hitchcock"

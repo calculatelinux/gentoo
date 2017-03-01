@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d6ffc9f57581bc0cbcd810b140d98cc6664fd2e9 $
 
 EAPI=6
 EGO_PN="github.com/docker/${PN/docker-}"

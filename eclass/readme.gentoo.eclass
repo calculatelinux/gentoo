@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4c921fc6a3e8ac194676f1b4bf6e108058ff91d2 $
 
 # @ECLASS: readme.gentoo.eclass
 # @MAINTAINER:

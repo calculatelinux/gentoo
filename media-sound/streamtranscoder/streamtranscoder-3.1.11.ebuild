@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a15542f3d4e5969572ad8dee14324669587dd75a $
 
 MY_P=${PN}v3-${PV}
 

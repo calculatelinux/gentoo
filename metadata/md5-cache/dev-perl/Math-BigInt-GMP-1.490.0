@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=virtual/perl-Math-BigInt-1.999.714 >=virtual/perl-XSLoader-0.20.0 >=dev-libs/gmp-4.0.0:0 dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/P/PJ/PJACKLAM/Math-BigInt-GMP-1.49.tar.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=898d1338e1c1acda30cc7e026bb9d166
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=9e4a52069afc6bbe1a8c80f26abca5d5

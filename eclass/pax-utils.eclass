@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 137f3efe85277c22a4d743d5bb14b76b5d1b342d $
 
 # @ECLASS: pax-utils.eclass
 # @MAINTAINER:

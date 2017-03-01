@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4fc6761281d11650975be7a362bf1f0cb5254e10 $
 
 EAPI=5
 inherit versionator

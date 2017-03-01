@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3840a375e7c7072bef5192ed7b8e1f22bb09c0ee $
 
 # @ECLASS: depend.apache.eclass
 # @MAINTAINER:

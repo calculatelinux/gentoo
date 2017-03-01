@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~sparc ~x86
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=mirror://sourceforge/yasat/yasat-526.tar.gz
-_md5_=2983af21d994472613af24643c249980
+_md5_=a5aec0b05bcbfffd1710837cb24dfc65

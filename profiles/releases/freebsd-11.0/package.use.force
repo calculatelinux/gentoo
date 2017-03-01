@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Id: 88079d4a33d8788890dc2d3fb2e498eea5a0bebc $
 
 # freebsd-sources[build-generic] requires clang
 sys-devel/llvm clang

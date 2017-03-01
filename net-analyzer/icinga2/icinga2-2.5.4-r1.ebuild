@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 76f6f9a3c368ed000d3ca197004396efc5ad3534 $
 
 EAPI=5
 if [[ ${PV} != 9999 ]]; then

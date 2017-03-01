@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f013b1d0708742e5565183fd8737e7cf5cf9247d $
 
 DESCRIPTION="binfind searches files for a byte sequence specified on the command line"
 HOMEPAGE="http://www.lith.at/binfind"

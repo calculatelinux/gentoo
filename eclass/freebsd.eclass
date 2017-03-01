@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 774147007336a6c31f22dd1a4ab0b274b83f1e67 $
 #
 # @MAINTAINER:
 # maintainer-needed@gentoo.org

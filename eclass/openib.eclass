@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0001db89cb6fa0af09fa956b7be32f21f057fd4c $
 
 # @ECLASS: openib.eclass
 # @AUTHOR:
@@ -11,7 +10,7 @@ inherit eutils rpm versionator
 
 EXPORT_FUNCTIONS src_unpack
 
-HOMEPAGE="http://www.openfabrics.org/"
+HOMEPAGE="https://www.openfabrics.org/"
 LICENSE="|| ( GPL-2 BSD-2 )"
 
 # @ECLASS-VARIABLE: OFED_VER

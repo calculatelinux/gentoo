@@ -8,5 +8,5 @@ LICENSE=freedist
 RDEPEND=app-text/sword
 SLOT=0
 SRC_URI=mirror://gentoo/WHNU-1.10.zip
-_eclasses_=sword-module	53233e8ef06063ea675d07a2a4c9dba2
-_md5_=df8578df981f25fecfd079d1a72d7d00
+_eclasses_=sword-module	f93b38348e60d75f292f55df132bbac4
+_md5_=76f25c7868b4097aa1c374ffcd451671

@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: af42f04f78a6db0e6434076e54c0e6ecf9a9c58c $
 
 EAPI="5"
 GCONF_DEBUG="yes" # disable asserts

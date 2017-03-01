@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: cb264f92413349cf7b95d53e5372dfae95e32b3f $
 EAPI=5
 DESCRIPTION="Quotes from Calvin and Hobbes Comic Books"
 HOMEPAGE="http://www.netmeister.org/misc.html"

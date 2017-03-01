@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/crisp-1.15-pkg.tar.gz
-_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
-_md5_=5c230f9f058599f93e4a3e3c10da1139
+_eclasses_=xemacs-packages	6af894e52080fe5d8bd91371a8a6a735
+_md5_=50b2face41dbeb1cdc833760b4684899

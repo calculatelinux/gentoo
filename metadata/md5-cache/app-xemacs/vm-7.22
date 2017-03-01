@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/mail-lib app-xemacs/xemacs-base app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/vm-7.22-pkg.tar.gz
-_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
-_md5_=af329fe21eb18e0a9d1c8dc3c565503d
+_eclasses_=xemacs-packages	6af894e52080fe5d8bd91371a8a6a735
+_md5_=2afb3d26b4e6ff20e925cee1287b5a4c

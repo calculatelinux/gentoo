@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ce9351256d1c4ba3cecc7dc2eba039da5d5b8d9e $
 
 EAPI=5
 # py2.6 capable but unrequired

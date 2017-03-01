@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 20d11be390aabb1866adb0bf57c0135f8da3a150 $
 
 EAPI=6
 inherit autotools eutils

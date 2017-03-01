@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f77e454b8482cba74da615948151929d61659fdc $
 
 EAPI=5
 inherit multilib nsplugins

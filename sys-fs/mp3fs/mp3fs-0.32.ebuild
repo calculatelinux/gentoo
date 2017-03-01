@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 17e86c5a44c35701d3e4381fb88249ac451abe5e $
 
 DESCRIPTION="a read-only FUSE filesystem which transcodes FLAC audio files to MP3 when read"
 HOMEPAGE="https://khenriks.github.com/mp3fs/"

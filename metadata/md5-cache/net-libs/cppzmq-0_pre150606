@@ -7,5 +7,5 @@ LICENSE=MIT
 RDEPEND=>=net-libs/zeromq-3
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~jlec/distfiles/cppzmq-0_pre150606.tar.xz
-_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=0749d71c1c974225c81fb28da5ee7fc2
+_eclasses_=multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=7525a6ef711c1b4dded0af419d518e21

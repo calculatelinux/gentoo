@@ -10,5 +10,5 @@ PDEPEND=mssql? ( >=dev-php/PEAR-MDB2_Driver_mssql-1.3.0_beta4 ) mysql? ( >=dev-p
 RDEPEND=>=dev-php/pear-1.9.1 dev-lang/php:* >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/MDB2-2.5.0b5.tgz
-_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	php-pear-r1	78b1870df9c917d66a3bad7357cfe503	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=6b387bc028f2c6060edbd22392ac4519
+_eclasses_=multilib	0236be304ee52e7f179ed2f337075515	php-pear-r1	5ed7690006b53587145608c30ed10798	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=3673665ae1494041e3b8282e830e41fc

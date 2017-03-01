@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 16d45dd2c9c99a1681878b6f0344230fa739a6b3 $
 
 # @ECLASS: dotnet.eclass
 # @MAINTAINER: cynede@gentoo.org

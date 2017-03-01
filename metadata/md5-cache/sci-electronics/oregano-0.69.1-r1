@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/libxml2:2 x11-libs/gtk+:2 gnome-base/libglade:2.0 gnome-base/libgnome >=gnome-base/libgnomeui-2.12 >=gnome-base/libgnomecanvas-2.12 >=x11-libs/cairo-1.2 x11-libs/gtksourceview:2.0 sci-electronics/electronics-menu
 SLOT=0
 SRC_URI=mirror://debian/pool/main/o/oregano/oregano_0.69.1.orig.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	fdo-mime	f612973507f5479ae67cb635227b6218	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	scons-utils	b6c192239ce862682fb55f05f6ff82ff	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=0a7bfa0ccbe1194cb784d7c2720082f2
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	fdo-mime	21ef5adf81836863efa968f2a25cff64	flag-o-matic	979af9133d4de419fa98992355b07ca4	multilib	0236be304ee52e7f179ed2f337075515	multiprocessing	284a473719153462f3e974d86c8cb81c	scons-utils	fcace052aef60e6b0eb3023c26aa585a	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=ae9e785d7d62f2db4b3c09591d495b8d

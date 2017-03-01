@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3f8c0f99631ad6b6f4593404f975a37e314a74e1 $
 
 MY_P=${PN}${PV}
 DESCRIPTION="Hacker magazine by the community, for the community (all issues)"

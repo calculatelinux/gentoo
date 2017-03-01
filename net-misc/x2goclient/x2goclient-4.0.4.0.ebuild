@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b4505fc64020d470bed1d37837e75d08c550e9c4 $
 
 EAPI=5
 inherit eutils nsplugins qt4-r2

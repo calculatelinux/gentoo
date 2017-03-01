@@ -9,4 +9,4 @@ RDEPEND=dev-lang/perl >=net-misc/ntp-4.2
 RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=http://www.gentoogeek.org/files/adjtime.zip
-_md5_=0c246b2a0003a40ca76c743eefe054b8
+_md5_=975cb1eb15bb7a8cb54eb83e0f55e81b

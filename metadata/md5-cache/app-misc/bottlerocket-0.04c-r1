@@ -6,5 +6,5 @@ KEYWORDS=amd64 ~ppc ~sparc x86
 LICENSE=LGPL-2
 SLOT=0
 SRC_URI=http://www.linuxha.com/bottlerocket/bottlerocket-0.04c.tar.gz
-_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=0ab5e4a77c22a3f10bee673b010477bc
+_eclasses_=multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=76890f92436d02518e44bd1f6e11aebb

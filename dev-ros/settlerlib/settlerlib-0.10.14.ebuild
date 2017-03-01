@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: bb9f2466b99e42715c7d347cf676e7a5fb5f2ac3 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/calibration"

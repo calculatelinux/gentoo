@@ -9,5 +9,5 @@ RDEPEND=x11-themes/adwaita-icon-theme
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=https://github.com/horst3180/arc-icon-theme/archive/20160605.tar.gz -> arc-icon-theme-20160605.tar.gz
-_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	gnome2-utils	6ac81c289e6fd66edb59051e57d895e3	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	xdg-utils	169c13f9ec65368f6f6b2961e68dc152
-_md5_=84c55d1550c214497f8c27c55fc90b7e
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	eutils	3c847a0129fed780bd709b98e426f89c	gnome2-utils	fe8e9099c6fc74a40946623c593c7236	libtool	48b1b9f6194d2842456514d1184ca72e	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	xdg-utils	178a84136f416b8ea1a857717eacd21c
+_md5_=185e36c009aacabf628c5078b960869f

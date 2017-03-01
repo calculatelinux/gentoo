@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 33ab625eedb0d071171e77c4e075ea64bf8ec510 $
 
 # @ECLASS: intel-sdp.eclass
 # @MAINTAINER:

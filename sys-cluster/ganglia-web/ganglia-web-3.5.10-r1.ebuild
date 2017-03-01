@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: bba2fa8abee9b9c2e0b4ba7c3f48dba83214df5a $
 
 EAPI=4
 WEBAPP_MANUAL_SLOT="yes"

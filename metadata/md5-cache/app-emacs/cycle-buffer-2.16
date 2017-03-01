@@ -8,5 +8,5 @@ LICENSE=public-domain
 RDEPEND=>=virtual/emacs-23
 SLOT=0
 SRC_URI=https://enise.org/users/victor/share/distfiles/cycle-buffer-2.16.el.xz
-_eclasses_=elisp	62249f4b6196eec26a81f335fb4d1a33	elisp-common	4a8ce40989ad055139c36baa8c81ea0b
-_md5_=9fe43e4c510b4592587fa8a61d207abe
+_eclasses_=elisp	0f9fb41c5a844d876880e414faee1340	elisp-common	f49d14e575e158ccab82cf05b315a180
+_md5_=a068064bb54cd3e6689db18482be3419

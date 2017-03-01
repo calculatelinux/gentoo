@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/openssl:*
 SLOT=0
 SRC_URI=https://github.com/esphen/wsta/archive/0.5.0.tar.gz -> wsta-0.5.0.tar.gz
-_eclasses_=cargo	8cf9dd61ac8f97132b4e16b18be4bc6b
-_md5_=546fc2560185bc89ac5d2032ce3aacbb
+_eclasses_=cargo	c7671d298b40d58acb3136bbf5da61ad
+_md5_=7687af55eca89f95962387d22ce0108c

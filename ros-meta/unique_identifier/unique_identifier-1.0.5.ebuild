@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a3429144de2578c293c9e376dd0169716496148a $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-geographic-info/unique_identifier"

@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2a879285a76fb7454752b9f23a523d1a6619b5dc $
 
 EAPI=5
 inherit apache-module linux-info

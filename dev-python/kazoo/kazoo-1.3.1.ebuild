@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e3985167e8ed3ee3e18a372ec543f13746eb6caa $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )

@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/sh-script app-xemacs/xemacs-base app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/pcomplete-1.04-pkg.tar.gz
-_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
-_md5_=e271e62044b2ccbcbf1b3a34cd29b065
+_eclasses_=xemacs-packages	6af894e52080fe5d8bd91371a8a6a735
+_md5_=4f5673b96b781c4a9c1003298827d2ca

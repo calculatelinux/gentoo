@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 6a8a0a10249e6d4b3b499708117e4cd708d5b45b $
 
 EAPI=6
 inherit eutils systemd user cmake-utils

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 63b7693db95e6a389c6a8763f408e73160cde47d $
 
 EAPI=5
 SWORD_MODULE="FreMartin"

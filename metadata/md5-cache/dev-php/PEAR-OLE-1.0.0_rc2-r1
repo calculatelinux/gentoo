@@ -7,4 +7,4 @@ LICENSE=PHP-3.01
 RDEPEND=dev-lang/php:* dev-php/PEAR-PEAR
 SLOT=0
 SRC_URI=http://download.pear.php.net/package/OLE-1.0.0RC2.tgz
-_md5_=aedae317907a9e30b0fee29e4e085e83
+_md5_=874a472515bdffd099679af2fe267a4a

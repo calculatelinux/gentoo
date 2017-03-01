@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: aa2ef30f800cf2665f2ba6750ef467da3e048640 $
 
 DESCRIPTION="A small bundle of utilities to work with CVS repositories"
 HOMEPAGE="http://www.red-bean.com/cvsutils/"

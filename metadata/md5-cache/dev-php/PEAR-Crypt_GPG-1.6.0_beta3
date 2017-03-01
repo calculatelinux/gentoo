@@ -9,4 +9,4 @@ LICENSE=LGPL-2.1
 RDEPEND=app-crypt/gnupg dev-lang/php:*[posix,unicode] dev-php/PEAR-Console_CommandLine dev-php/PEAR-PEAR
 SLOT=0
 SRC_URI=http://download.pear.php.net/package/Crypt_GPG-1.6.0b3.tgz
-_md5_=1a9e0950f835bd1690ced8c438fc293c
+_md5_=ebb0d622969a6293229583d0af4ff421

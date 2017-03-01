@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=>=dev-libs/nspr-4.6.4 >=dev-libs/nss-3.11.4 net-dns/bind-tools =www-servers/apache-2*
 SLOT=0
 SRC_URI=https://fedorahosted.org/released/mod_nss/mod_nss-1.0.12.tar.gz
-_eclasses_=apache-module	5abb81b71acc66b8e858aff4e1d0dff2	autotools	556cbda319248ff8ca93ad3d3748fbc8	depend.apache	709c14156cf40f0e14521b003014fba6	eutils	c8729578e47597ee48d77eda210e2b56	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=424505c6810a2264c49781ab77338ebe
+_eclasses_=apache-module	bd30ba4d834196e81cf2b76c52d26b93	autotools	7027963e8e8cc12c91117bdb9225dc26	depend.apache	0917334d570e07f9743a04ff85b3bf1b	eutils	3c847a0129fed780bd709b98e426f89c	libtool	48b1b9f6194d2842456514d1184ca72e	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=50c0596855f51dbed508c6be5eb652ac

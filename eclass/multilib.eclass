@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a80511c2ee52d3b11fe7ef3b1c3b6d271d378188 $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:

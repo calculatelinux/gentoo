@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 106b0fe6e513c187395f3cff31182fc215ff242e $
 
 inherit eutils flag-o-matic gnatbuild
 

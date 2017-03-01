@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1d49a5439cb3a6ee15370aac67968eb56f03a5e5 $
 
 # quake3-9999          -> latest git
 # quake3-9999.REV      -> use git REV

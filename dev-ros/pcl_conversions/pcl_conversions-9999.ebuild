@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2d90c639b3050dddbef7244b7cd186286ac6aca4 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/pcl_conversions"

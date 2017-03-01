@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b3b8eff90777c6f9aaed418e1bfa5e909d37a2c2 $
 
 # All the Solaris profiles inherit from their matching arch profile here.
 

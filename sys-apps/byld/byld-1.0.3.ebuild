@@ -1,6 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4ad707e9fc2df761e129ca84b56432cec41ea2cf $
 
 DESCRIPTION="build a Linux distribution on a single floppy"
 HOMEPAGE="http://byld.sourceforge.net/"

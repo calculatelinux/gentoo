@@ -8,5 +8,5 @@ LICENSE=Artistic
 RDEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 SLOT=0
 SRC_URI=https://github.com/PAntoine/vimgitlog/archive/version_5.1.0.tar.gz -> gitlog-5.1.0.tar.gz
-_eclasses_=vim-doc	1ce90e9633364799d58ead2bc968d52a	vim-plugin	aa8a6d795a5f0bc0917b1b24d2d0409b
-_md5_=3e2db59662bbf51aad7847192ac0095f
+_eclasses_=vim-doc	af2c81a1feeb0a99e91bee3e20769edb	vim-plugin	6f0171b0a2f2fce005c13b4c0685a0d8
+_md5_=f4b9206dbb7e01b0b38251977b81ce72

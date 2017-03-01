@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 55351b0d08dcdaa031353b2d6415d23c90f43529 $
 
 EAPI=6
 EGO_PN="github.com/cesanta/docker_auth/..."

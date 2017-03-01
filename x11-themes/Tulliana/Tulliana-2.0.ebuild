@@ -1,6 +1,5 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 87fa73efdd5003c1deb0c2eb033cf1e8f98e02a4 $
 
 DESCRIPTION="Tulliana icon set for KDE"
 HOMEPAGE="http://www.kde-look.org/content/show.php?content=38757"

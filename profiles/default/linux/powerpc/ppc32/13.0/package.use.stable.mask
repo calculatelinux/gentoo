@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 22e98f4f24d4b436a31aeb672043223b8df53d15 $
 
 # Ben de Groot <yngwin@gentoo.org (19 Apr 2015)
 # chromaprint not stable on this arch

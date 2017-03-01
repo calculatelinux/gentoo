@@ -7,4 +7,4 @@ LICENSE=OPL
 RDEPEND=>=app-doc/linux-gazette-base-09
 SLOT=09
 SRC_URI=http://linuxgazette.net/ftpfiles/lg-issue09.tar.gz
-_md5_=f2abcab0c8228b694d6ec89bfd7d3e13
+_md5_=e2cbbd1a2e8a4880af6dd5768ade45bc

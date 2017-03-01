@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 172c26b78040fb68a37d75401be4f9eeea930b2b $
 
 EAPI=5
 SWORD_MODULE="SME"

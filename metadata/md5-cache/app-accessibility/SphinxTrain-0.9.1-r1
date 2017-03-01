@@ -8,5 +8,5 @@ LICENSE=BSD-with-attribution
 RDEPEND=app-accessibility/sphinx2 app-accessibility/festival
 SLOT=0
 SRC_URI=http://www.speech.cs.cmu.edu/SphinxTrain/SphinxTrain-0.9.1-beta.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=ac8b2802056051339a1375913d78a819
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=ad82811a191812e122feb7bac3e4187a

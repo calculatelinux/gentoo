@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=app-text/poppler:=[cxx] pcre? ( dev-libs/libpcre[cxx] ) unac? ( app-text/unac )
 SLOT=0
 SRC_URI=https://pdfgrep.org/download/pdfgrep-1.4.1.tar.gz
-_md5_=9e375f8b219a2892521f74b229d19be7
+_md5_=daa1f29455f9774e8d3d29fcd56de49e

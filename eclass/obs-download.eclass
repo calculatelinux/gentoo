@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 39aada35c6631b4ed685c80f77231c805ed115df $
 
 # @ECLASS: obs-download.eclass
 # @MAINTAINER:

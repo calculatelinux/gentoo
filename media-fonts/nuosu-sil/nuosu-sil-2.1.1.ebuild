@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5203393ce4112dfe043cf3bd4de2ab35adada56e $
 
 EAPI=5
 inherit font

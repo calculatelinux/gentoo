@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1605ce5ab1193adc7c7d34966e1da498bb6a8e74 $
 
 EAPI=5
 MY_PV="${PV/0_beta/b}"

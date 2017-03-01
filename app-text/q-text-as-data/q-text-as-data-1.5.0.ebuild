@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 05f1f7bf7086483a0a073bfb5707cc345f92646e $
 
 EAPI="5"
 # Does not yet support py3

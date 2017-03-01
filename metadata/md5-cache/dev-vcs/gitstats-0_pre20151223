@@ -9,5 +9,5 @@ LICENSE=|| ( GPL-2 GPL-3 ) MIT
 RDEPEND=sci-visualization/gnuplot[gd] dev-vcs/git
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~np-hardass/distfiles/gitstats/gitstats-0_pre20151223.tar.xz
-_eclasses_=multibuild	863e759ee14be1c222e6b67853e91c7d	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-r1	34891ed5e2e95ae50a5b75edb0b88769	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=e52756e0598184ad315499e6c144bef4
+_eclasses_=multibuild	72647e255187a1fadc81097b3657e5c3	multilib	0236be304ee52e7f179ed2f337075515	python-r1	e0edbf5130eaefe107b8c8872bd818bc	python-utils-r1	316c531873247e48befb99900e5aa2ed	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=911ce4444d2dc9ccc6f008ff346e1462

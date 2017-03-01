@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 991f1a13dcc93a0f45031403246311eee405b37a $
 
 DESCRIPTION="a dockapp to display disk space usage"
 HOMEPAGE="http://tnemeth.free.fr/projets/dockapps.html"

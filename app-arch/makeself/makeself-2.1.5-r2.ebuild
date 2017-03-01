@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d549794f45dc457c4281b0f8ca5300891edfe0f2 $
 
 inherit unpacker
 

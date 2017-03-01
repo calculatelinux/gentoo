@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c49a2f2c88a4e742c1fcf2d269bd4b62378ecefe $
 
 DESCRIPTION="a collection of Sound Icons for speech-dispatcher"
 HOMEPAGE="http://www.freebsoft.org"

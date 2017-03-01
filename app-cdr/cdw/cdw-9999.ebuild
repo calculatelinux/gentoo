@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c5ae9a33577b50efeb6c59f7135cf6e24dd17baa $
 
 EAPI=5
 ECVS_SERVER="cdw.cvs.sourceforge.net:/cvsroot/cdw"

@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-libs/libxml2 sys-libs/readline:=
 SLOT=0
 SRC_URI=http://download.augeas.net/augeas-1.5.0.tar.gz
-_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	autotools-utils	31b108cd8696d6b9faa0466a4c38b789	eutils	c8729578e47597ee48d77eda210e2b56	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=a89bffbd031ad0f7d40291f068a979a3
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	autotools-utils	042d779bc872564b26c4e5cf018db8ed	eutils	3c847a0129fed780bd709b98e426f89c	libtool	48b1b9f6194d2842456514d1184ca72e	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=61c91e78fa6aba6b7ad5315bfb24dd68

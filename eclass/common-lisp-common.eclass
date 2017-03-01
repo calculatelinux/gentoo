@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7350573238a74dc775e3dcbfb9c00832572066d0 $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #

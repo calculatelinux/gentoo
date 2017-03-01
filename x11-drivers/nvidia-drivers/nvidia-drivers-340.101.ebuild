@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8b8cfc36c4a06e516ff6bcf6fa388a35f0a3ecdd $
 
 EAPI=6
 inherit eutils flag-o-matic linux-info linux-mod multilib nvidia-driver \

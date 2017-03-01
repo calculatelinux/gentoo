@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ad3a4488d95db6000178d481d809ff4a33d084fa $
 
 # @ECLASS: kde5-functions.eclass
 # @MAINTAINER:

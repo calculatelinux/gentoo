@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 292dc6ef565b95f2d23854da08f12e46b6e9fdf9 $
 EAPI=4
 
 DESCRIPTION="Hyperdex libtreadstone support library"

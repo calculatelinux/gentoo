@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 99b8833cddb8a5a618c43684c1b3c407e9cb5af5 $
 
 ASPELL_LANG="Norwegian"
 

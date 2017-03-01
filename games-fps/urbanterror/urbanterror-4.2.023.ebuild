@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 606505305f07edd5671348582240c353ca452585 $
 
 EAPI=5
 inherit check-reqs eutils gnome2-utils pax-utils games

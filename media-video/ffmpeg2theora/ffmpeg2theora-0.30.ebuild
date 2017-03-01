@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 204235835e2806af9fcb67641e1924cdc90970e7 $
 
 EAPI=5
 inherit eutils toolchain-funcs scons-utils

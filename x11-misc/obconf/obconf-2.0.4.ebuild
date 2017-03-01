@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7ac4c103ac1d847b634eaacec9907ef788cf1829 $
 
 EAPI=5
 inherit fdo-mime

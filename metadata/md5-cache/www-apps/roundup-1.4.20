@@ -8,5 +8,5 @@ LICENSE=MIT ZPL
 RDEPEND=>=sys-libs/db-3.2.9 =dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://pypi/r/roundup/roundup-1.4.20.tar.gz
-_eclasses_=distutils	2308db8f173ae587333b62c44bdab684	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python	5d5de4f6044d29f62c6084083a6d113b	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=a7ace94dcb6458968d63aede2fd401ce
+_eclasses_=distutils	211b731505cd31ff9638734ae186b82d	multilib	0236be304ee52e7f179ed2f337075515	python	bc5dc5d43bf20a6e1f59f99b5f49df4f	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=4ec511fa53853940a68278a9f46aff11

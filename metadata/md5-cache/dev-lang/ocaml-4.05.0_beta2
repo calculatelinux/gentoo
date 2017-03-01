@@ -9,5 +9,5 @@ PDEPEND=emacs? ( app-emacs/ocaml-mode ) xemacs? ( app-xemacs/ocaml )
 RDEPEND=sys-libs/binutils-libs:= ncurses? ( sys-libs/ncurses:0= ) spacetime? ( sys-libs/libunwind:= ) X? ( x11-libs/libX11 x11-proto/xproto )
 SLOT=0/4.05.0_beta2
 SRC_URI=https://github.com/ocaml/ocaml/archive/4.05.0+beta2.tar.gz -> ocaml-4.05.0-beta2.tar.gz mirror://gentoo/ocaml-patches-9.tar.bz2
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	versionator	76b7ffa5325c4caf17a84dba87ffe0f5
-_md5_=276551f4ca6f889ef3e42f146a7b8365
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=2ed032864144d449409e2787ede4faaa

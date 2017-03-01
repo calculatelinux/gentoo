@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 65000b7fbfb8cb57fcd403002dfe2af7ae8fdb45 $
 
 # This file extends the base packages file for all hardened profiles
 

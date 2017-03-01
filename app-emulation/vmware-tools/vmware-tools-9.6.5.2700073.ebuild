@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 6a3c9feefb115d0a83d4836aa40dad1081e107bb $
 
 inherit versionator vmware-bundle
 

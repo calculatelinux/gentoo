@@ -8,4 +8,4 @@ LICENSE=LGPL-2.1
 RDEPEND=>=sys-libs/lwp-2.5
 SLOT=1
 SRC_URI=http://www.coda.cs.cmu.edu/pub/rvm/src/rvm-1.17.tar.gz
-_md5_=b9b3e06c0e5ffb3e72a7bcd6471b473e
+_md5_=959c2a24b0764c81905cb6f771008c65

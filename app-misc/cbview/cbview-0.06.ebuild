@@ -1,6 +1,5 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2bea803b5089b32cb21dcdfd9fd6da95cf941dd2 $
 
 DESCRIPTION="viewer/converter for CBR/CBZ comic book archives"
 HOMEPAGE="http://elvine.org/code/cbview/"

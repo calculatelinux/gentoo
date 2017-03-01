@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2046a6d17a2ec00b9c1918b17327aeb93681aad3 $
 
 elibc_uclibc
 uclibc

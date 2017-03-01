@@ -10,5 +10,5 @@ RDEPEND=x11-libs/libX11 dev-python/dbus-python[python_targets_python2_7(-)?,-pyt
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=https://github.com/giuspen/cherrytree/archive/0.37.0.tar.gz -> cherrytree-0.37.0.tar.gz
-_eclasses_=distutils-r1	33301ed2b64f8af6f775e0efe52e51fe	l10n	7e1d75925970de7cabf73398fce703f6	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	python-single-r1	b85fdbcb7d5ea8aff392df97c9cb9385	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	xdg	8ac551374fbd42bb75c1786c43698de0	xdg-utils	169c13f9ec65368f6f6b2961e68dc152
-_md5_=bd645e24ae7c8222992ce4d83ff14403
+_eclasses_=distutils-r1	039ba10839816478cfb070fdeb053906	l10n	8f52d9ce1814aca2ed1a46920084ea66	multilib	0236be304ee52e7f179ed2f337075515	python-single-r1	4346485bdd137b2d301e993dad734668	python-utils-r1	316c531873247e48befb99900e5aa2ed	toolchain-funcs	53b75b4a49cf3e61530a523804045432	xdg	6cd76cc914c1a759dee032778487b57f	xdg-utils	178a84136f416b8ea1a857717eacd21c
+_md5_=73ae3271edab9ac3bbd34ef1e101ae23

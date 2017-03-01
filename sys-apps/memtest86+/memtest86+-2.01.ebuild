@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 747415f504309165cd9c0a24422a5151c6910900 $
 
 inherit mount-boot eutils
 

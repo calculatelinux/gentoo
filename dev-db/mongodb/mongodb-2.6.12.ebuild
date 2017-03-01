@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0ef75204da4f36b88aa6ba0c5825f8d29d431f7a $
 
 EAPI=5
 SCONS_MIN_VERSION="1.2.0"

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d47c68ecba87d7c41fb3e8ebef46956d65ed381f $
 
 EAPI=6
 VIRTUALX_REQUIRED="pgo"

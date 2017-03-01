@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fd57cc193f9564c5caae73f2a5ff0b2d08901536 $
 
 # TODO: unbundle media-libs/cal3d, lib hacked or old version
 

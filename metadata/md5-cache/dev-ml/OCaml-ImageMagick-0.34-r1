@@ -9,5 +9,5 @@ RDEPEND=media-gfx/imagemagick:= dev-lang/ocaml:=[ocamlopt]
 RESTRICT=test
 SLOT=0/0.34
 SRC_URI=http://www.linux-nantes.org/~fmonnier/OCaml/ImageMagick/ImageMagick/OCaml-ImageMagick-0.34.tgz
-_eclasses_=findlib	3a364957a70a5953531fad3d1bc112ec
-_md5_=08a93b488acc11bd1bda8e56d85a5fb4
+_eclasses_=findlib	45d6030075064a68da8d7143726a1150
+_md5_=faa238477bda208e8bd6343912feda3d

@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f4cc8ccada2ceb1cae83a2a207943c52fd658640 $
 
 DESCRIPTION="Binary Decision Diagram Package"
 HOMEPAGE="http://www.itu.dk/research/buddy/"

@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d5130a88e0eed4c57cfd7f1ea68a8ebb93ffe311 $
 
 EAPI=5
 inherit eutils qt4-r2 games

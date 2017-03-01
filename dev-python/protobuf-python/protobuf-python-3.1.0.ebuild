@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f8314920176b8057a2b36f8f436e8371429081a4 $
 
 EAPI=6
 # pypy fails tests; pypy3 fails even running tests

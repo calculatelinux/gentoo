@@ -1,6 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5ebbc71525e389ac82e278846155d303b11dd718 $
 
 inherit gnat
 

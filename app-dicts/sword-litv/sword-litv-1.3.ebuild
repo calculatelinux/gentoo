@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 72cd436d7ecab3094ab816de2d21ff03a6cc3e12 $
 
 EAPI=5
 SWORD_MODULE="LITV"

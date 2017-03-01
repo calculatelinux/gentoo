@@ -8,5 +8,5 @@ LICENSE=vim.org
 RDEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 SLOT=0
 SRC_URI=mirror://gentoo/bnf-syntax-1.2.tar.bz2 https://dev.gentoo.org/~radhermit/vim/bnf-syntax-1.2.tar.bz2
-_eclasses_=vim-doc	1ce90e9633364799d58ead2bc968d52a	vim-plugin	aa8a6d795a5f0bc0917b1b24d2d0409b
-_md5_=c5e16908e1830a3c5efb3fd90a2a37a5
+_eclasses_=vim-doc	af2c81a1feeb0a99e91bee3e20769edb	vim-plugin	6f0171b0a2f2fce005c13b4c0685a0d8
+_md5_=354c4fa101c4fb844fa05b8571862cd8

@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=virtual/perl-Carp dev-perl/Class-Tiny >=dev-perl/File-ShareDir-ProjectDistDir-1.0.0 dev-perl/Lingua-EN-Inflect virtual/perl-Pod-Escapes virtual/perl-Pod-Parser virtual/perl-Text-Tabs+Wrap virtual/perl-parent dev-lang/perl:=
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DO/DOLMEN/Pod-Spell-1.19.tar.gz mirror://gentoo/podspell.1.gz https://dev.gentoo.org/~tove/files/podspell.1.gz
-_eclasses_=multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	perl-functions	a1cfb1de30f2e5f3175bd8f1c786421e	perl-module	3c63ad3dbb7b8bad627999a44ab279f9
-_md5_=254d700734b951c8ad9421d1c1d627ce
+_eclasses_=multiprocessing	284a473719153462f3e974d86c8cb81c	perl-functions	ca1237f4863eb3e83ab1462927f981c2	perl-module	e64d78a54693f92bbe90a62f2efeb6cb
+_md5_=ef4b1de713f8906152d301e1aa085034

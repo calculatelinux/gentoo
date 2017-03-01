@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fe804032c0f2bddfabf0f127d238dc461fa154e8 $
 
 # Unmask the flag corresponding to the default ABI
 -x64-solaris

@@ -8,5 +8,5 @@ LICENSE=GPL-2+
 RDEPEND=>=dev-lang/jimtcl-0.76 cmsis-dap? ( dev-libs/hidapi ) jlink? ( dev-embedded/libjaylink ) usb? ( virtual/libusb:0 virtual/libusb:1 ) ftdi? ( dev-embedded/libftdi:= )
 RESTRICT=strip
 SLOT=0
-_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	git-2	d77c6ee878e5582d755f883568217b9e	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	udev	9b8a82f709a883f0840736c9b9375698	user	e28cdd9fa5d8069e8e047c82db5d57bd
-_md5_=40bb7cad619aff7b4ab9289bd139591e
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	git-2	195a672bfaf52d868442171c9469bbb6	libtool	48b1b9f6194d2842456514d1184ca72e	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	udev	d91cac2c73b94629cad2daea66e0d182	user	e4b567c44272a719fabf53f0f885d3f7
+_md5_=9707ba59ed0b29d25c0506339f957c93

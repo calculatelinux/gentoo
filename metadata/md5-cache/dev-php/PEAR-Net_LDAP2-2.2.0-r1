@@ -9,4 +9,4 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-lang/php:*[ldap] dev-php/PEAR-PEAR
 SLOT=0
 SRC_URI=http://download.pear.php.net/package/Net_LDAP2-2.2.0.tgz
-_md5_=f12937f2ade038642981198f0cc19399
+_md5_=4775d3b84137802e73b213cdcd5169af

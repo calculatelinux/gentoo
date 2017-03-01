@@ -7,4 +7,4 @@ LICENSE=MIT
 RDEPEND=dev-lang/php:* dev-php/fedora-autoloader
 SLOT=0
 SRC_URI=https://github.com/composer/ca-bundle/archive/1.0.0.tar.gz -> ca-bundle-1.0.0.tar.gz
-_md5_=086afa3cef942bb4f90297598e499575
+_md5_=41409bd43d67e5df25cbf05e169a6474

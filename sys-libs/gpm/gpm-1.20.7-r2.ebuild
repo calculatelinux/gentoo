@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5fe58f872f0ffe1e0b8f322ea63e9fc6ed4c0255 $
 
 # emacs support disabled due to #99533 #335900
 

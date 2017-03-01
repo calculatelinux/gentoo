@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d8d0ee718270ec86d954e3baebf706174fb357ee $
 
 inherit bash-completion-r1 eutils
 

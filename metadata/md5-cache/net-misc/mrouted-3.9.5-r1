@@ -7,5 +7,5 @@ KEYWORDS=amd64 ppc x86
 LICENSE=Stanford GPL-2
 SLOT=0
 SRC_URI=ftp://ftp.vmlinux.org/pub/People/jocke/mrouted/mrouted-3.9.5.tar.bz2
-_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=fec5f93b6e320420ba84d6d258689843
+_eclasses_=multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=8bcc56b84edef2b81f236b4e0468468b

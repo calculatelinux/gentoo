@@ -6,4 +6,4 @@ KEYWORDS=-* ~amd64 ~x86
 LICENSE=Clarified-Artistic
 SLOT=0
 SRC_URI=mirror://sourceforge/project/bastard/libdisasm/0.23/libdisasm-0.23.tar.gz
-_md5_=aec4a0db0764fbd4ceb38b44b9f2d1f9
+_md5_=9531ff5fa7bc1132eb5d15d5c8ab0b6d

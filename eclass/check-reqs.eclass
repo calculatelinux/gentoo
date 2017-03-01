@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c004be77cde1cb4a3abc74454f9ea2cb13f51066 $
 
 # @ECLASS: check-reqs.eclass
 # @MAINTAINER:

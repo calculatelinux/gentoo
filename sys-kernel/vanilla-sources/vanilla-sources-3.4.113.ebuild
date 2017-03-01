@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 88af46c0981f0801416094316a6596ec463e15d5 $
 
 EAPI="5"
 K_NOUSENAME="yes"

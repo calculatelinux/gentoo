@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5abf30b58614695f304cab532a6c3586a8024c8f $
 
 EAPI=5
 SWORD_MODULE="SpaRVG2004"

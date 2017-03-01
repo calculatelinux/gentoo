@@ -8,4 +8,4 @@ LICENSE=BSD
 RDEPEND=!sys-apps/moreutils
 SLOT=0
 SRC_URI=http://math.smsu.edu/~erik/files/timestamp-1.1.tar.gz
-_md5_=4746494145732a488983a4b779b1803c
+_md5_=1b2c051ef2991d66685bf72e489012e5

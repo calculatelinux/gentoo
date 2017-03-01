@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1bfb54f70c602d8a19c3bad3f3d69d3e2f95af39 $
 EAPI=5
 # this ebuild now uses the offensive flag since AOLS
 # is not exactly 'G' rated :)

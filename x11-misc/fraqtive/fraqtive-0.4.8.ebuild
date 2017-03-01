@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0fa608e01b2a7345116d8d5f5fd3fea8bf7fca37 $
 
 EAPI=5
 inherit eutils gnome2-utils qmake-utils toolchain-funcs

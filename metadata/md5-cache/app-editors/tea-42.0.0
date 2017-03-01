@@ -9,5 +9,5 @@ LICENSE=GPL-3+
 RDEPEND=dev-qt/qtcore:5 dev-qt/qtdeclarative:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtprintsupport:5 dev-qt/qtwidgets:5 sys-libs/zlib aspell? ( app-text/aspell ) hunspell? ( app-text/hunspell:= )
 SLOT=0
 SRC_URI=http://tea.ourproject.org/dloads/tea-42.0.0.tar.bz2
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	qmake-utils	461362a9981d9f069203d2436fea87ce	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=30ff50a936114bb5b48d3e67589afde5
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	qmake-utils	ea78a9056543346cdc8cbbd07f16c6fb	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=06bbfa25b3242fbd24100571018d413f

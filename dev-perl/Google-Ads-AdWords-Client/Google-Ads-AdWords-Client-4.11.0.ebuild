@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 6dba24c90b1a6532daec4a17b442768612bb949b $
 
 EAPI=6
 DIST_AUTHOR=SUNDQUIST

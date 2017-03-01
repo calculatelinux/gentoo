@@ -1,5 +1,4 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a17916dbf71b69af6801e1e1685895482adaf87b $
 
 elibc_musl

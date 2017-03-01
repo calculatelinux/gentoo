@@ -8,5 +8,5 @@ KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www.divineinvasion.net/authforce/authforce-0.9.9.tar.gz
-_eclasses_=base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=b633a497af1003b381494a5286d51260
+_eclasses_=base	df2aa567b3f0595aae0d0923889f7631	eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=4747a31d31cf8c335411a6444724b630

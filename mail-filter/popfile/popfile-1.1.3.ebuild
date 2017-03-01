@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5bf549cfe051b4cae2c0a5c77d722c398f7e52ea $
 
 EAPI=5
 inherit eutils

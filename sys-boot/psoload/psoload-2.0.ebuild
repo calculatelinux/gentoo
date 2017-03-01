@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 6c294dd6eec990122eea691c043ade1c21037d06 $
 
 QA_PRESTRIPPED="/opt/bin/psoload2
 	/opt/bin/psoload2_static"

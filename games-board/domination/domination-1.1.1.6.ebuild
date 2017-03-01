@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 864824d75145223ef7177e8cfda8ea3fa293ee0c $
 
 EAPI=5
 inherit eutils java-pkg-2 java-ant-2 games

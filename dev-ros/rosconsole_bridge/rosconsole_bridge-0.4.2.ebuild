@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2dd99c1acc669cf6852eb7b0fd9492f7037e9f49 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/rosconsole_bridge"

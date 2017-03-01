@@ -9,5 +9,5 @@ RDEPEND=x11-libs/wxGTK:3.0=[X] virtual/udev
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/m-ou-se/tek/archive/v1.3.0.tar.gz -> tek-1.3.0.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	udev	9b8a82f709a883f0840736c9b9375698	wxwidgets	9ff07a933cb39f9586154ebac62ef0fa
-_md5_=368df17b73edc1e98d526a3356c49715
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	udev	d91cac2c73b94629cad2daea66e0d182	wxwidgets	04e063b0eff26daaea83d859dd9d6e05
+_md5_=42089dc03c2fc858df265fdd8a2b5a13

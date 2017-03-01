@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: da0a3ddaee793f07dcc187490607f8befcddbdeb $
 
 EAPI=5
 inherit eutils systemd unpacker user

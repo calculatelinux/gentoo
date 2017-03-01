@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c8a2cf47c29a11b6a814da43c0ce5aea369764c5 $
 
 # @ECLASS: rebar.eclass
 # @MAINTAINER:

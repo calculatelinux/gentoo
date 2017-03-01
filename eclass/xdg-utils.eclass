@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 61d5e9d8066dae60f804e40519238688a48732e3 $
 
 # @ECLASS: xdg-utils.eclass
 # @MAINTAINER:

@@ -10,5 +10,5 @@ RDEPEND=daemon? ( dev-lang/php:*[mysqli?,postgres?,pcntl,curl] ) !daemon? ( dev-
 REQUIRED_USE=|| ( mysqli postgres )
 SLOT=20160930
 SRC_URI=https://dev.gentoo.org/~tomka/files/tt-rss-20160930.tar.bz2
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd	vcs-snapshot	10b045661d7c5178ffdf37fbf47278d6	webapp	8e0ef22ac030da2d8de98c90883ca147
-_md5_=7c7be6808cb24091e3777de1b7420178
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	user	e4b567c44272a719fabf53f0f885d3f7	vcs-snapshot	03289f51c769cf409d200d2d628cdd6e	webapp	a76ebd3cb5649737496e8238992dd7ca
+_md5_=96d9ff0012971b1480bcc4d8d39bd006

@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d041e19e156ace15580d5097adf91b4e3e0637ca $
 
 # TO DO:
 # * dependencies of unknown status:

@@ -7,5 +7,5 @@ LICENSE=GPL-2+ BSD
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://gentoo/sh-lilo-sel-20040408.tar.gz
-_eclasses_=mount-boot	f879abcb933626870a8dc13e780d1369
-_md5_=314aa675b6e4b4962d74be75146b76ca
+_eclasses_=mount-boot	1e82d96b7a7dcb483b412497a90bb646
+_md5_=8a0fbd2acd60520dd68490d0acc9ab29

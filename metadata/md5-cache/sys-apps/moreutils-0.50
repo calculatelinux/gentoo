@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=perl? ( dev-lang/perl dev-perl/IPC-Run dev-perl/Time-Duration dev-perl/TimeDate )
 SLOT=0
 SRC_URI=mirror://debian/pool/main/m/moreutils/moreutils_0.50.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	prefix	38ff416d58fcaea18d47c00728c70298	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=c3e14ad8be5a99f5016f0ed560250a51
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	prefix	df8265631f8bf5f5df387e9b987121f9	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=b3daa15494fb66f95fb17eb220f951f7

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f05deaee1cccf806f767e86f38fe7eea1ca2c2ce $
 
 EAPI=5
 CHROMIUM_LANGS="

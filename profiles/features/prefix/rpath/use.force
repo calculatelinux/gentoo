@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 42f0cd5354800bbadc22136bfd92a97a5d9d962b $
 
 # prefix-guest USE flag should be set in prefix rpath profiles
 prefix-guest

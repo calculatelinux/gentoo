@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=x11-libs/libXft x11-libs/libX11 x11-libs/libXinerama
 SLOT=0
 SRC_URI=http://aerosuidae.net/goomwwm/goomwwm-1.0.0.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=7c22d333c4dbab02c1da2be020a22f19
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=b4dae70adf134e221bcfd1b08bd228f3

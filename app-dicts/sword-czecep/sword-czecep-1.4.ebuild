@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 34ea4b0439255b6b9ffbc2f6cd5d274dd20e42bd $
 
 EAPI=5
 SWORD_MODULE="CzeCEP"

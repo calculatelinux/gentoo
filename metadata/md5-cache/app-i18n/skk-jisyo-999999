@@ -6,5 +6,5 @@ HOMEPAGE=http://openlab.ring.gr.jp/skk/dic.html
 IUSE=cdb
 LICENSE=GPL-2 freedist public-domain
 SLOT=0
-_eclasses_=cvs	f95d1c8d525d9be99175ebbc6618ea1e	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	ruby-single	32ee8b3dbe0d3037a736ac06aa4c3b9a	ruby-utils	68337f99ff1d7cee213f5c5da7c76213	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=b947bb7164f40f5561790b95a35fbc7a
+_eclasses_=cvs	4814eddfdfb9010cb9cf4b46e9ddff6b	eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	ruby-single	af6ea0a8fe4c4faf733f4dbafae9e233	ruby-utils	e9d0baddf239294b286da449ae7ac6a3	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=0f61b87f429412424d990ff7dc145c66

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: dc67316b7e6c68eb391670245cbd668e0da0a2b9 $
 
 # @ECLASS: freedict.eclass
 # @MAINTAINER:

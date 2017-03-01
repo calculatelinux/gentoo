@@ -1,6 +1,5 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e9963e4db1233611d392ba48e4bd87c5376c31dc $
 
 inherit elisp
 

@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 45820434aaba9e9ae09bd632b7e7ef835fbda31b $
 
 inherit eutils
 

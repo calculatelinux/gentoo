@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7becb86e8a92f9317c6d18105058fc948ea1cad6 $
 
 ASPELL_LANG="Breton"
 

@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=ssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=http://www.nta-monitor.com/ike-scan/download/ike-scan-1.9.tar.gz
-_md5_=b42b2e7222a4e3345f8421c04f0dc1dc
+_md5_=b072944fbfbbed61138f641c4e2aa8f8

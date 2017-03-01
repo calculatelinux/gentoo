@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8d0f58c02614c2a546b455a8790223ecc0dd7d19 $
 
 EAPI=5
 inherit autotools-utils pam

@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux
 LICENSE=|| ( LGPL-3 LGPL-3-with-linking-exception )
 SLOT=0
 SRC_URI=http://download.gna.org/getfem/stable/gmm-5.0.tar.gz
-_md5_=b73fa325c41268e73a517629026675ec
+_md5_=ced3195520125d61b08ef60374fa99a1

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a1af92ec81b44c510f6c0d363304390185e19ac1 $
 
 -hardened
 

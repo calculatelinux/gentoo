@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a2cf69ad0afa3580b574fcfc571c96990e187ad2 $
 
 EAPI=5
 PHP_EXT_NAME="${PN}"

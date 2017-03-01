@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8382a6dcedfc6dde80c53d7c99c13ac916c8e6a6 $
 
 inherit mono multilib
 

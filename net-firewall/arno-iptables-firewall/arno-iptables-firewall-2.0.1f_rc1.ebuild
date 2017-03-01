@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f34f6c931ec9d963817404cb6135e4959065f171 $
 
 EAPI=5
 inherit readme.gentoo systemd versionator

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e1e098387e0e1792083245a19ff39f0693c7ad80 $
 
 EAPI=5
 inherit savedconfig

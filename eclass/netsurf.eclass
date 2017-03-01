@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2ad37169dec10f3544a56c0886f13b0c9e5e8d06 $
 
 # @ECLASS: netsurf.eclass
 # @MAINTAINER:

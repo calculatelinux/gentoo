@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c973cdd07a93004b4fbbfecdc35da8a67ffb981f $
 
 MY_PN="Pulse-Glass"
 

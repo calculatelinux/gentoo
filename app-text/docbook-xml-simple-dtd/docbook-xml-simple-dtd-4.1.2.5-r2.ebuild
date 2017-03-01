@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 16da1d27e48d476055621bc856a97a4867267ef6 $
 
 inherit sgml-catalog
 

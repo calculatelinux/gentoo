@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8640c5d585c6fb426759e69f5277190bbeb1888f $
 
 EAPI=5
 MOD_DESC="a rocket dueling mod"

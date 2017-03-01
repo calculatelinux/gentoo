@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 69e0d8344e8ae37b0e24a58cfe9f50c878ef0fb9 $
 
 EAPI=5
 EGO_PN="github.com/daviddengcn/go-colortext"

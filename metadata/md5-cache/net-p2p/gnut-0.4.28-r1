@@ -6,5 +6,5 @@ KEYWORDS=x86 ppc
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://alge.anart.no/ftp/pub/gnutella/gnut-0.4.28.tar.gz mirror://gentoo/gnut-0.4.28-patches.tar.bz2
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=c12e220957b60012f7bcd5cad094b3f7
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=5d43ec6d01b74731e97f745a5c45b764

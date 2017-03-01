@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 71fd3cea35f84033cca100025efe7078773b1b83 $
 
 EAPI=6
 DIST_EXAMPLES=( "examples/*" )

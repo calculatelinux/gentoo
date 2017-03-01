@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 837bd698726966b4ea6b8083cc7296a182242970 $
 
 EAPI=5
 KDE_REQUIRED="optional"

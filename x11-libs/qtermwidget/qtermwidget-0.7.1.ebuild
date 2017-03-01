@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a0f7af7087f0a59322eaf0367bdcc7a59a157405 $
 
 EAPI=6
 inherit cmake-utils

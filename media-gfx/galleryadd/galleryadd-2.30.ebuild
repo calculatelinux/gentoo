@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 215405477e2312a82b4a82ef0118f0197e91a206 $
 
 DESCRIPTION="Perl script to recursively adds directories/images to Gallery"
 HOMEPAGE="http://iainlea.dyndns.org/software/galleryadd/"

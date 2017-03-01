@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b4950fa04e31adef65ba9d1377963f471cce1743 $
 
 EAPI=5
 MY_P="pencil-${PV}"

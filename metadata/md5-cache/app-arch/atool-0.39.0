@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl !app-text/adiff
 SLOT=0
 SRC_URI=https://savannah.nongnu.org/download/atool/atool-0.39.0.tar.gz
-_md5_=8b07b127190ded17dc1327e5c90d4500
+_md5_=448cac8fa5386b65d6dff39b477c13a1

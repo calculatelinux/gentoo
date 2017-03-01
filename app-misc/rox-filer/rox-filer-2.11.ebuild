@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2d37d7517cc1708f1e6f9b3a0aff1b5b68734f2d $
 
 EAPI=5
 inherit eutils virtualx

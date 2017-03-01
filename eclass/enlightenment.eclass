@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 99c610159b3a2e1fcde16f7ef65fbc2fc460d389 $
 
 # @ECLASS: enlightenment.eclass
 # @MAINTAINER:

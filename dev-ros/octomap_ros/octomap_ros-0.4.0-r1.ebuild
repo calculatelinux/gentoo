@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7a84d61e839a404187517067fe7841c183a1722b $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/OctoMap/octomap_ros"

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 230a58b31ba67a36b46a0bd6958a09e11ed8555b $
 
 DESCRIPTION="a dockapp to get/set power management status for laptops (APM, ACPI
 and CPUfreq)"

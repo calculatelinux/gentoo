@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 20800e56cf2e8c582f46b2c458e78a68f3ab19f6 $
 
 DESCRIPTION="The Thai and Viqr (Vietnamese) tables for IBus-Table"
 HOMEPAGE="https://github.com/ibus/ibus/wiki"

@@ -7,4 +7,4 @@ LICENSE=MIT
 RDEPEND==net-p2p/airdcpp-webclient-1.4*
 SLOT=0
 SRC_URI=https://registry.npmjs.org/airdcpp-webui/-/airdcpp-webui-1.4.0.tgz
-_md5_=6d372dbae944780b0da344d9fc26ecd6
+_md5_=ff15b155824dc7151618e183ad095d3c

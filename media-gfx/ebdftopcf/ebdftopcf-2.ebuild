@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f261b56ebf67b27641e603de2a33a97d750cbb5d $
 
 DESCRIPTION="ebdftopcf optimially generators PCF files from BDF files"
 HOMEPAGE="https://www.gentoo.org/"

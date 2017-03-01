@@ -8,4 +8,4 @@ LICENSE=LGPL-2
 RDEPEND=dev-lang/php
 SLOT=0
 SRC_URI=http://onphp.org/download/onphp-1.0.10.tar.bz2 doc? ( http://onphp.org/download/onphp-api-1.0.10.tar.bz2 )
-_md5_=a616e8fff54802d10dae6ce4ef99f44c
+_md5_=0a32ff2f3d48424ec22306597bc324ca

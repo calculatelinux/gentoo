@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e888d55e64ead9928602073983a917a7c079cb5d $
 
 EZMLM_P=ezmlm-0.53
 

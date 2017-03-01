@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: 91d3193a2f2d3d4c95db336e3bb1d0bd46235ca8 $
 
 # @ECLASS: ant-tasks.eclass
 # @MAINTAINER:

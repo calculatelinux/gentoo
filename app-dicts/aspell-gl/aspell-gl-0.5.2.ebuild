@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8f9698e9a1f90effae28d442bc9542a0efb9e0d5 $
 
 ASPELL_LANG="Galician"
 ASPOSTFIX="6"

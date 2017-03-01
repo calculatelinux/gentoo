@@ -4,11 +4,11 @@ DESCRIPTION=GPS daemon and library for USB/serial GPS devices and GPS/mapping cl
 EAPI=5
 HOMEPAGE=http://catb.org/gpsd/
 IUSE=gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fury gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_geostar gpsd_protocols_gpsclock gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_nmea gpsd_protocols_nmea2000 gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_superstar2 gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ublox bluetooth cxx debug dbus ipv6 latency_timing ncurses ntp python qt4 +shm +sockets static test udev usb X python_targets_python2_7
-KEYWORDS=amd64 ~arm ppc ppc64 x86
+KEYWORDS=amd64 arm ppc ppc64 x86
 LICENSE=BSD
 RDEPEND=X? ( dev-python/pygtk:2[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) ncurses? ( sys-libs/ncurses:= ) bluetooth? ( net-wireless/bluez ) usb? ( virtual/libusb:1 ) dbus? ( sys-apps/dbus dev-libs/dbus-glib ) ntp? ( || ( net-misc/ntp net-misc/chrony ) ) qt4? ( dev-qt/qtgui:4 ) python? ( python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] )
 REQUIRED_USE=X? ( python ) gpsd_protocols_nmea2000? ( gpsd_protocols_aivdm ) python? ( || ( python_targets_python2_7 ) )
 SLOT=0
 SRC_URI=mirror://nongnu/gpsd/gpsd-3.10.tar.gz
-_eclasses_=distutils-r1	33301ed2b64f8af6f775e0efe52e51fe	eutils	c8729578e47597ee48d77eda210e2b56	multibuild	863e759ee14be1c222e6b67853e91c7d	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	multiprocessing	cff7d39d2849bcb4f9fc62c5bb39cac4	python-r1	34891ed5e2e95ae50a5b75edb0b88769	python-utils-r1	cc11ee8da99960e67e018b735aca9ac3	scons-utils	b6c192239ce862682fb55f05f6ff82ff	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	udev	9b8a82f709a883f0840736c9b9375698	user	e28cdd9fa5d8069e8e047c82db5d57bd	xdg-utils	169c13f9ec65368f6f6b2961e68dc152
-_md5_=9f2dc5330d667b5669786a6cfd1aef1d
+_eclasses_=distutils-r1	039ba10839816478cfb070fdeb053906	eutils	3c847a0129fed780bd709b98e426f89c	multibuild	72647e255187a1fadc81097b3657e5c3	multilib	0236be304ee52e7f179ed2f337075515	multiprocessing	284a473719153462f3e974d86c8cb81c	python-r1	e0edbf5130eaefe107b8c8872bd818bc	python-utils-r1	316c531873247e48befb99900e5aa2ed	scons-utils	fcace052aef60e6b0eb3023c26aa585a	toolchain-funcs	53b75b4a49cf3e61530a523804045432	udev	d91cac2c73b94629cad2daea66e0d182	user	e4b567c44272a719fabf53f0f885d3f7	xdg-utils	178a84136f416b8ea1a857717eacd21c
+_md5_=c38fe86d3461469289db1533530c162b

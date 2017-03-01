@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3f60c80d66703d32639e6f401c373b3f8cd1c38a $
 
 # Mike Frysinger <vapier@gentoo.org> (08 May 2016)
 # This target supports VTV #547040.

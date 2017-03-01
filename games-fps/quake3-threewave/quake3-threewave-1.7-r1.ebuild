@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8411240168157e997f669565afe23be5d1457e51 $
 
 EAPI=5
 MOD_DESC="Threewave CTF"

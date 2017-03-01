@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/wxGTK:3.0[X]
 SLOT=0
 SRC_URI=http://darwin.zoology.gla.ac.uk/~rpage/treeviewx/download/0.5/tv-0.5.1.tar.gz
-_eclasses_=autotools	556cbda319248ff8ca93ad3d3748fbc8	eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	libtool	54abc83bd0dbed5d55e6bfc116e3d7bf	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	wxwidgets	9ff07a933cb39f9586154ebac62ef0fa
-_md5_=a664516181fd454663438f9e8e872044
+_eclasses_=autotools	7027963e8e8cc12c91117bdb9225dc26	eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	libtool	48b1b9f6194d2842456514d1184ca72e	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	wxwidgets	04e063b0eff26daaea83d859dd9d6e05
+_md5_=ce129f3e61a849cfd3654e5a9fa4b17a

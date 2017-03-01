@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a2ef2c99e2e06460a38d80f425b5151da6ca0b84 $
 
 EAPI=5
 MOD_DESC="offhand grapple all-weapons capture the flag mod"

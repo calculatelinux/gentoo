@@ -9,4 +9,4 @@ LICENSE=MPL-2.0
 RDEPEND=dev-libs/librevenge
 SLOT=0
 SRC_URI=http://dev-www.libreoffice.org/src/libpagemaker/libpagemaker-0.0.3.tar.xz
-_md5_=9ca14bbbef5b9dd2016c8918e87bdd95
+_md5_=f1e702cb98eb879d7c79c4f35733bf57

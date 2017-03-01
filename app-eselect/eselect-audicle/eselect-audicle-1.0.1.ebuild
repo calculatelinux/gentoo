@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 10d11cee44a428f71e2685bee0ea89d967ca0f6d $
 
 DESCRIPTION="Manages the /usr/bin/audicle symlink"
 HOMEPAGE="https://www.gentoo.org/"

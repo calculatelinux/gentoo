@@ -7,4 +7,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=|| ( MIT Unlicense )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~radhermit/dist/ripgrep-0.4.0.tar.xz
-_md5_=efd847055f91d01ec528b13a04252c96
+_md5_=4d6b5838f7827db98547791a88078b4f

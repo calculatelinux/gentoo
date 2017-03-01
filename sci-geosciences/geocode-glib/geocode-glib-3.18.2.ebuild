@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ee51f2421fb87dcec1bc11b0eb76387f3e1a0f2d $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug does not do anything useful

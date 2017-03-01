@@ -7,4 +7,4 @@ LICENSE=qmail-nelson
 RDEPEND=virtual/qmail dev-lang/perl
 SLOT=0
 SRC_URI=mirror://qmail/qmail-lint-0.55
-_md5_=c883c99c3aa1671123217ad6d69b2ada
+_md5_=73d2be5f8c3385c206d08495da047679

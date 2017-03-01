@@ -6,4 +6,4 @@ KEYWORDS=~amd64
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.96/virtio-win-0.1.96.iso
-_md5_=27b65ebbad115007c855278e1324f403
+_md5_=9bd784e5ccddcf6709428cb169fb6cd5

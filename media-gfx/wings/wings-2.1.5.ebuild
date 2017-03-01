@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4cbdeb2ff0ecc84f31c443348694ae616ff30f82 $
 
 EAPI=6
 inherit multilib

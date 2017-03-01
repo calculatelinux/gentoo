@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0bf8b00205920298bad7ec7828d53b4863d8574c $
 
 # Alexis Ballier <27 Feb 2017>
 # arm64 always has neon and vfp:

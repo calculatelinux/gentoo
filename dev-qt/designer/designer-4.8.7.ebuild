@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 110f61af4ebd026ad5edc896febd4b636351aed9 $
 
 EAPI=5
 inherit eutils qt4-build-multilib

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 72872cd313af6a1a26e143dbd9cb151185907eb8 $
 
 MY_P="fmodapi${PV/.}linux"
 S=${WORKDIR}/${MY_P}

@@ -6,4 +6,4 @@ KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh
 LICENSE=PSF-2
 SLOT=2.7
 SRC_URI=https://www.python.org/ftp/python/doc/2.7.12/python-2.7.12-docs-html.tar.bz2
-_md5_=8bfa95796e5ebfdd3f660c616d4bb4c5
+_md5_=301c3acc216fc0390480db9f43609d79

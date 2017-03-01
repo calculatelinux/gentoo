@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9ce94cf7ded007ac0e97ad42d3de68a7d1769482 $
 EAPI=5
 
 # Tests fail, again

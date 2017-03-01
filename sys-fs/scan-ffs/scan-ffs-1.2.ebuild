@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b72b81109ce9da51b9c726deb5dd0802d65bb159 $
 
 inherit bsdmk
 

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ad038689f0a4edd0beaa19cfaebff236e618d9fd $
 
 DESCRIPTION="a dockapp for monitoring CPU usage with a LCD display"
 HOMEPAGE="http://dockapps.windowmaker.org/file.php/id/36"

@@ -1,6 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 36e481326688c620fa614e47377f50dec61a82eb $
 
 inherit apache-module eutils
 

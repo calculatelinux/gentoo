@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1b3e74b50f4e7b6a5c0a38f957fe7e8b3c6123c2 $
 
 EAPI=4
 inherit autotools base udev

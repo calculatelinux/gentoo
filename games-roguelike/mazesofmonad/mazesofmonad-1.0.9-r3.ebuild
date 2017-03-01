@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 164afb214a3818a57827f45e3c4fa11795d59f33 $
 
 EAPI=6
 CABAL_FEATURES="bin"

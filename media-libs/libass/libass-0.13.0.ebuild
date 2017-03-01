@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3646359d0d5ff2e2567def41b0b3e1db07f12667 $
 
 EAPI=5
 inherit eutils multilib-minimal

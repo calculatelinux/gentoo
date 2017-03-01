@@ -1,6 +1,5 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1b8602043f2e2638e08faec7f57ee077b2998219 $
 
 DESCRIPTION="A small library to interface to the Ident protocol server"
 HOMEPAGE="http://www.simphalempin.com/dev/libident/"

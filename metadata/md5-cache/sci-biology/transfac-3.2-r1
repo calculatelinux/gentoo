@@ -9,4 +9,4 @@ LICENSE=public-domain
 RDEPEND=emboss? ( sci-biology/emboss )
 SLOT=3
 SRC_URI=ftp://ftp.ebi.ac.uk/pub/databases/transfac/transfac32.tar.Z
-_md5_=d1308b5b5729d0153d213275bace4f3c
+_md5_=d8fcea543b5af9fc877c63800e1bd6d3

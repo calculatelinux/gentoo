@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e04bd597333c692fc5e49c689a3e93367b41d08a $
 
 EAPI=6
 GNOME_ORG_MODULE="vala"

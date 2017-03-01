@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0c130a1daf3d24249d8a32e4a319377a8740b5de $
 
 # @ECLASS: kde4-functions.eclass
 # @MAINTAINER:

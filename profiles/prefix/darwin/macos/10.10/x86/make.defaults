@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 99b9e28ea4977ea5a24e9594414fe05747661f94 $
 
 CHOST="i686-apple-darwin14"
 CHOST_x86="${CHOST}"

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: bde050b968514c0ab92d5a47e6b4d5421723a707 $
 
 # @ECLASS: llvm.eclass
 # @MAINTAINER:

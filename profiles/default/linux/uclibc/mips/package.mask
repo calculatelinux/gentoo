@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4a08c65578a4a4f311370f87e9ae95ae263571b6 $
 
 #
 # See bug #544756.

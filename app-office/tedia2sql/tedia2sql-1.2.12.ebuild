@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1ac3b957902e94d838a0266ff5c60cfbd71866af $
 
 DESCRIPTION="Convert database ERD designed in Dia into SQL DDL scripts"
 HOMEPAGE="http://tedia2sql.tigris.org"

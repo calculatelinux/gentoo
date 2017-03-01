@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1b39507806164f337a2a13b4e8b989d39382aad8 $
 
 EAPI=5
 inherit eutils flag-o-matic perl-module

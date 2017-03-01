@@ -9,4 +9,4 @@ LICENSE=BSD
 RDEPEND=dev-db/sqlite:3 dev-libs/botan[threads,-bindist]
 SLOT=2
 SRC_URI=http://www.opendnssec.org/files/source/softhsm-2.0.0.tar.gz
-_md5_=74f8534f0d6b65bde07afa8aa437dd7a
+_md5_=61da13f2a4e2eea434b21326509af419

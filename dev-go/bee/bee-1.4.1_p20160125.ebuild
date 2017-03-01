@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 51c2d13c9fb01e2e2d1a3069acb77aa20cde6dae $
 
 EAPI=5
 inherit golang-build

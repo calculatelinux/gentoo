@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c6c6c90d74ec9e23d89419a763724251292e3556 $
 
 DEFAULT_ABI="x32"
 ABI="x32"

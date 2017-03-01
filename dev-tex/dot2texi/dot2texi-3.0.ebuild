@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: ad0ab0729dff8624a1baeda005d851ef26e9e2cb $
 
 inherit latex-package
 

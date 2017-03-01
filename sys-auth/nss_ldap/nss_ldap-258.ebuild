@@ -1,6 +1,5 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b08662905dbf4450292e4668948c90e7a0efdb27 $
 
 inherit fixheadtails eutils multilib autotools
 

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c9473c2154836d9c32fa1fb2edbe72a445f91295 $
 
 EAPI=6
 
@@ -11,7 +10,7 @@ inherit perl-module
 DESCRIPTION="Use Moose or Mouse modules (DEPRECATED)"
 
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ppc ~x86"
+KEYWORDS="~amd64 hppa ppc ~x86"
 IUSE="test"
 PERL_RM_FILES=(
 	"t/001-basic-mouse.t"

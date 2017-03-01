@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: bb75309c7f91d02427feb9a528b0ae4be827d25a $
 
 EAPI=6
 inherit eutils git-r3 systemd toolchain-funcs

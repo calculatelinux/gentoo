@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e5746afd918f169bde0941c58e8d197ca16f3047 $
 
 MULTILIB_ABIS="s390x"
 DEFAULT_ABI="s390x"

@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 22a5a4d10dc268378ec59a151f526fc0febe8843 $
 
 DESCRIPTION="correctly read (or write) a region of a block device"
 HOMEPAGE="http://devio.sourceforge.net/"

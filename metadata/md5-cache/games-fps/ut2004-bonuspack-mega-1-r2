@@ -10,5 +10,5 @@ RDEPEND=games-misc/games-envd dedicated? ( || ( games-server/ut2004-ded games-fp
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=http://ut2004.ut-files.com/BonusPacks/ut2004megapack-linux.tar.bz2
-_eclasses_=base	3e4820a6a26464d2430a7c7902135187	eutils	c8729578e47597ee48d77eda210e2b56	games	7d9d6853e639bbb857a211ed996360a3	games-mods	5e6feff0b215abe419bc2d0b55b70157	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d	user	e28cdd9fa5d8069e8e047c82db5d57bd
-_md5_=040cf751c0876608ab9e9e3a2f83e70b
+_eclasses_=base	df2aa567b3f0595aae0d0923889f7631	eutils	3c847a0129fed780bd709b98e426f89c	games	2bb3ede665927a68ffdb7c41eec7efde	games-mods	03c98e6adf5bdc3f45c3e670930dca7b	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432	user	e4b567c44272a719fabf53f0f885d3f7
+_md5_=7852dcfe1e472806bc766046078836f3

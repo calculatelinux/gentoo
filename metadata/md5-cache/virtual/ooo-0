@@ -5,4 +5,4 @@ IUSE=java
 KEYWORDS=amd64 x86
 RDEPEND=|| ( app-office/libreoffice[java?] app-office/libreoffice-bin[java?] app-office/openoffice-bin[java?] )
 SLOT=0
-_md5_=74946128c6320e8d5be6a4efa6a51bf7
+_md5_=db0e4c629cc30396aefaa15e9e647c71

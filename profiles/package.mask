@@ -1,5 +1,4 @@
 ####################################################################
-# $Id: de5db9debb5a139b9b0175a7913773396427ce98 $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Eray Aslan <eras@gentoo.org> (01 Mar 2017)
+# Mask experimental software
+=mail-mta/postfix-3.3*
 
 # Matt Turner <mattst88@gentoo.org> (26 Feb 2017)
 # Integrated into xorg-server since 1.17. Removal in 30 days.
@@ -260,10 +263,6 @@ app-crypt/cryptkeeper
 # Removal in 30 days.
 dev-python/mwlib
 dev-python/mwlib-rl
-
-# Fabian Groffen <grobian@gentoo.org> (31 Jan 2017)
-# Mask upcoming Exim release candidates
-=mail-mta/exim-4.89_rc6
 
 # David Seifert <soap@gentoo.org> (30 Jan 2017)
 # No maintainer activity since git migration, dated eclass
@@ -585,10 +584,6 @@ dev-java/spring-instrument
 # Aaron Bauman <bman@gentoo.org> (19 Mar 2016)
 # Unpatched security vulnerability per bug #512356.
 =app-forensics/chkrootkit-0.49
-
-# Eray Aslan <eras@gentoo.org> (22 Feb 2016)
-# Mask experimental software
-=mail-mta/postfix-3.2*
 
 # James Le Cuirot <chewi@gentoo.org> (07 Feb 2016)
 # Masked until 2.0 final arrives, which hopefully won't depend on

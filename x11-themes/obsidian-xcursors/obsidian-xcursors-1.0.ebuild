@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 92a07ff919d931bdeee2870b006069aff4e5e864 $
 
 MY_PN="Obsidian"
 DESCRIPTION="A shiny and clean xcursor theme"

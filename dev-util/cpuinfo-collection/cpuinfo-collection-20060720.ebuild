@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: bd00c30608c6b68eae2dbd5b42b101df94f2c912 $
 
 MY_P=test_proc-20July2006
 DESCRIPTION="huge collection of /proc/cpuinfo files"

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e7892b64e5d381bcfea036c787401656c79c50a9 $
 
 EAPI=5
 MODULE_AUTHOR=DAGOLDEN

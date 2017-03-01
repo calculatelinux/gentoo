@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 13f125862b04fdd8e059aed9e77940b4ddfb3c49 $
 
 EAPI="3"
 inherit common-lisp

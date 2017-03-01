@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fbced904a692a1697bb32930e5cb2f37983acb9c $
 
 EAPI=6
 inherit autotools eutils gnome2-utils git-r3 toolchain-funcs
@@ -19,7 +18,7 @@ RDEPEND="
 	!net-misc/pssh
 	gtk? (
 		dev-libs/glib:2
-		x11-libs/gdk-pixbuf
+		x11-libs/gdk-pixbuf[X]
 		x11-libs/gtk+:3
 		x11-libs/libX11
 		x11-libs/pango

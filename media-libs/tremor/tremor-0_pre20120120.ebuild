@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b14da3934b3f16dce04e9e627256142c04e62ad4 $
 
 # svn export http://svn.xiph.org/trunk/Tremor tremor-${PV}
 

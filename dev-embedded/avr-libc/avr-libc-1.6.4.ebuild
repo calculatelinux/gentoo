@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3a416cecd8029581210beac4a39edd0756493a36 $
 
 CHOST="avr"
 CTARGET="avr"

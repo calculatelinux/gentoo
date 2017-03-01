@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b35964495714abfc901a91468d88383e68447f03 $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:

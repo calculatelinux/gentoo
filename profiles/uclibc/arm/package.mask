@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 408ba27009d01a4f9daf856f6f63687d0b533f0e $
 
 # Segfaults, bug #193597
 >=net-proxy/squid-3

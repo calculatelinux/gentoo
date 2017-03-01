@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1cf8c94eb09925906d079223d1f971b0c597dc37 $
 
 DESCRIPTION="Interactive adduser script from Slackware"
 HOMEPAGE="http://www.interlude.org.uk/unix/slackware/"

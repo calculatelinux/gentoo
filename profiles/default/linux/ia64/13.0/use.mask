@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d0974836a5ea8734c6fd34e0a78d84e4cfeeadc4 $
 
 # Anthony G. Basile <blueness@gentoo.org> (15 Apr 2012)
 # Pulls in net-libs/axtls or net-libs/polarssl which are

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f4be1244099c131f83017c82418b5bc2a4a93a65 $
 
 EAPI=5
 
@@ -14,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm ~arm64 hppa ppc ppc64 sparc x86"
 IUSE="doc test"
 
 # When bumping, please check setup.py for the proper py version

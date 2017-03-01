@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8e3a426b18adc416cf239321675e5dc8a4fa46d7 $
 
 DESCRIPTION="A command-line tool for mass tagging/renaming of audio files"
 HOMEPAGE="https://github.com/Daenyth/audiotag"

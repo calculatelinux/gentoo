@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1d36d3cc626f154e38ec2c44e2dd7e0b206c4329 $
 
 EAPI=6
 
@@ -46,7 +45,7 @@ else
 		unset _tmp_last_index
 		unset _tmp_suffix
 	else
-		KEYWORDS="amd64 ~arm ~arm64 hppa x86"
+		KEYWORDS="amd64 arm ~arm64 hppa x86"
 	fi
 
 	SRC_URI="

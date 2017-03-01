@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d38c4781571127c48d92aed1cf513da7b619941b $
 
 EAPI=6
 DIST_AUTHOR=NEZUMI

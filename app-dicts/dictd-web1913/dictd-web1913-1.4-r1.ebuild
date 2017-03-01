@@ -1,6 +1,5 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a30470af16676cc096c5227980d9ef46434ddb21 $
 
 MY_P=${P/td/t}-pre
 DESCRIPTION="Webster's Revised Unabridged Dictionary (1913) for dict"

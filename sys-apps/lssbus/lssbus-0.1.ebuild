@@ -1,6 +1,5 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 58021cd2507a2bc13f2f33dacaeef19d4a4ba885 $
 
 DESCRIPTION="Small utility for Linux/SPARC that list devices on SBUS"
 HOMEPAGE="https://people.redhat.com/tcallawa/lssbus/"

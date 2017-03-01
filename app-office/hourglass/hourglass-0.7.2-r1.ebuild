@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: eae8b3b97c4bd83910af8cf0c1a2c16dd90f7217 $
 
 EAPI=5
 JAVA_PKG_IUSE="doc source"

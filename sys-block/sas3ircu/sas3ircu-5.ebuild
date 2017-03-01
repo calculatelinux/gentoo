@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: cd810bc58d8cf93ff6b75122784929778be935a3 $
 
 EAPI=5
 inherit mount-boot

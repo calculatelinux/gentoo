@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3571d83d31762bc6dc7f7db2912275f871ad8d7e $
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools multilib
 

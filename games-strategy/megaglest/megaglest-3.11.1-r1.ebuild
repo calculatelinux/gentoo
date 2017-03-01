@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: d75e0174cfe0654ade72f39667b47fc8b128445e $
 
 # google-breakpad
 # TODO: fribidi, libvorbis static

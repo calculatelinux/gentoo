@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2c9cbb2e708564788d133303810966f0455dad1d $
 
 sys-libs/musl
 sys-libs/glibc

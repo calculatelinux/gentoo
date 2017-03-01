@@ -7,4 +7,4 @@ KEYWORDS=alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x8
 LICENSE=unicode
 SLOT=0
 SRC_URI=http://www.unicode.org/Public/zipped/9.0.0/UCD.zip -> unicode-data-9.0.0-UCD.zip http://www.unicode.org/Public/zipped/9.0.0/Unihan.zip -> unicode-data-9.0.0-Unihan.zip
-_md5_=b415806842a91a2e309427deb9c95fe8
+_md5_=ccbea5a1d7f3a53845427b6b7c564635

@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2af91a40d5468ec1ecc1f02d7ad95c906c3239e6 $
 
 #
 # eclass to simplify installation of Sword modules

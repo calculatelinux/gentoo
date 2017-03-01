@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e7ad13e52c09c28b2102dccfee988984461cad11 $
 
 EAPI="5"
 inherit eutils multilib pam toolchain-funcs

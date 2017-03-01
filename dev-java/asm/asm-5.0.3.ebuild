@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e9b62a8089567b5ec1728f8b91c2f80df2a96f0d $
 
 EAPI=5
 OLD_P="${PN}-4.0"

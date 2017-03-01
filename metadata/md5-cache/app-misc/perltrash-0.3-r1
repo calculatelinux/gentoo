@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl
 SLOT=0
 SRC_URI=ftp://www.iq-computing.de/perltrash/perltrash-0.3.tar.bz2
-_md5_=4f2a464511dcb3e7080c9209db4078e5
+_md5_=f662737efc237931402bca1da52d3f06

@@ -1,6 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0208be2f5c196ce908e80a00f477124c67952efa $
 
 DESCRIPTION="A lightweight modular configurable http url handler/browser launcher"
 HOMEPAGE="https://www.gentoo.org/"

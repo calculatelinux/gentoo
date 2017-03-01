@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 28841fb904eca4ae43f8f1da06a5a18a7297e3d0 $
 
 EAPI=5
 DESCRIPTION="Number Field Sieve (NFS) implementation for factoring integers"

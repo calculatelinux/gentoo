@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c2884127d99cb2d5161482fc5015861954b11dd2 $
 
 GPE_TARBALL_SUFFIX="bz2"
 

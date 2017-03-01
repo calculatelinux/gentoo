@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a6813aaa48a032177601cb78cb1ffcd9a6c811a9 $
 
 PROFILE_ARCH="mips64"
 

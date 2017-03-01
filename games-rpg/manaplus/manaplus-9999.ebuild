@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7440ab28bc4154c1b69b6619cfad4879c1dd5282 $
 
 EAPI=6
 [[ ${PV} == 9999 ]] && inherit autotools git-r3

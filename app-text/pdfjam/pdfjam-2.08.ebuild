@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fb888e75c3b220a0c0383a60031e475389ec3b91 $
 
 MY_PV=${PV/./}
 DESCRIPTION="pdfnup, pdfjoin and pdf90"

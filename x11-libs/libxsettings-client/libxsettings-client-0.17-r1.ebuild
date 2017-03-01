@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 80243f7682003738b8c5bd56d42809259ba70732 $
 
 EAPI=5
 GPE_TARBALL_SUFFIX="bz2"

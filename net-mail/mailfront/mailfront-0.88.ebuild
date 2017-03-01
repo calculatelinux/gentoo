@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2c8805fb87f6b7ada2cb82af42f68e8b32e82896 $
 
 inherit fixheadtails toolchain-funcs
 

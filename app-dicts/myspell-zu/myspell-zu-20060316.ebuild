@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 80f2a01f57fbcbd564e011270d7e9557a94602ef $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "zu,ZA,zu_ZA,Zulu (Africa),zu_ZA.zip"

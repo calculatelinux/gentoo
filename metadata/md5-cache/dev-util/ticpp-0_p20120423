@@ -8,4 +8,4 @@ KEYWORDS=amd64 ~ppc x86
 LICENSE=MIT
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~ago/distfiles/ticpp-0_p20120423.tar.bz2
-_md5_=e2854c4b496056dda2f2e2a5828f5d03
+_md5_=efbd1b9c2c5c016f3474acc3ea2d866d

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: add1edf68b50725a3472f60d760956803f9e0454 $
 
 ARCH="hppa"
 ACCEPT_KEYWORDS="hppa"

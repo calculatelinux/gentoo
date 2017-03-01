@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/xemacs-base app-xemacs/psgml app-xemacs/edit-utils app-xemacs/mail-lib app-xemacs/fsf-compat app-xemacs/xemacs-eterm app-xemacs/sh-script app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/psgml-dtds-1.03-pkg.tar.gz
-_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
-_md5_=80253c99a8f111d7db1cc8bb12d5bdfc
+_eclasses_=xemacs-packages	6af894e52080fe5d8bd91371a8a6a735
+_md5_=4143b83bf64c9ee7fad4a7dfa746db6c

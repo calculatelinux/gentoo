@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9fa095c89ab7d08e34532768635f7ae985192359 $
 
 # Force building libc++ over libcxxrt.
 sys-libs/libcxx libcxxrt

@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7d9afb28a58909cec3ab40d285038ae1216332b0 $
 
 EAPI=5
 # Although setup.py claims to support py3, python-ldap does not

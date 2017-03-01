@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 803eb95fdb8b25bdb3655108abb0086a4ace9dc7 $
 
 DESCRIPTION="wrapper for fox-config to manage multiple versions"
 HOMEPAGE="https://www.gentoo.org/"

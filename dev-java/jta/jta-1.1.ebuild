@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 55c30a538dd0af0cf525ee3d3a46b5f46c71f556 $
 EAPI=5
 
 inherit java-pkg-2

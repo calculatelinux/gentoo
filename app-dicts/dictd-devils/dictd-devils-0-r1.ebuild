@@ -1,6 +1,5 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e21faa7472651f2d17569f0f91ab80e1cdd99c8d $
 
 MY_P=devils-dict-pre
 S=${WORKDIR}

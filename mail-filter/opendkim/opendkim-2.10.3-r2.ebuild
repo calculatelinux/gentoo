@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 49a4f9a6bfc9cef78416fa22bd9c76a2c4e1d59c $
 
 EAPI=5
 inherit autotools db-use eutils systemd user

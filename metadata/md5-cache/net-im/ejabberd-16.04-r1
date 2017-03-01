@@ -11,5 +11,5 @@ REQUIRED_USE=mssql? ( odbc )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.process-one.net/downloads/ejabberd/16.04/ejabberd-16.04.tgz -> ejabberd-16.04.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	pam	ab769127a94496be05723519cc3770e7	rebar	ae77ce8c7945eca98b46cf5942426ad7	ssl-cert	daaa9d833de9c2cf7d06eb031c4ce49f	systemd	bf99baf3c67d20dbb407ad68d10e61e0	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=1b9713c1c85a0566c52758ff198ccf5a
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	multilib	0236be304ee52e7f179ed2f337075515	pam	3e788d86170dfcd5b06824d898315e18	rebar	10b899da50920d20ab79f1ab7b66ea93	ssl-cert	68c8dc51fe1bb63d933af89d431e9132	systemd	ec2e9154031d942186c75c0aabb41900	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=b6e1034e813460d343c62115b61ed743

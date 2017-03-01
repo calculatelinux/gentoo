@@ -8,5 +8,5 @@ LICENSE=szip
 RDEPEND=!sci-libs/libaec[szip]
 SLOT=0/2
 SRC_URI=ftp://ftp.hdfgroup.org/lib-external/szip/2.1/src/szip-2.1.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=4b257a3f66bb7aa699c4b6927fa2c779
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=855b2f7231d04543c8abaa717da31425

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3d826b6433ca81b8d24ca9a6038863828530e78e $
 
 EAPI=4
 inherit eutils autotools pam user

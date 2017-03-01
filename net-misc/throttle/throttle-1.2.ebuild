@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 70c1c050a1da397a4c1fd16a2c0b1b35a2d16c09 $
 
 DESCRIPTION="Bandwidth limiting pipe"
 HOMEPAGE="http://klicman.org/throttle/"

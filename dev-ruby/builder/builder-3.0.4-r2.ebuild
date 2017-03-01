@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: cccf30ec3abc20b7fd919a69416e0592a1ef9885 $
 
 EAPI=5
 # ruby22 - code incompatability

@@ -1,6 +1,5 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0d10685e2dc7fafba5275f368163a48da6a89a4e $
 
 VIM_SPELL_LANGUAGE="Dutch"
 

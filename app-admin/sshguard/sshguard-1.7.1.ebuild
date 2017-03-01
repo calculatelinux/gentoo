@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a0ab1f7e9af8a3aa6cd1a5110891f35659243214 $
 
 EAPI=6
 inherit flag-o-matic

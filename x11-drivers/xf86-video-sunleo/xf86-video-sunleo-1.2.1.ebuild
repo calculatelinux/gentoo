@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7f914704cf872c528f95a466dd34f718a794569f $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"

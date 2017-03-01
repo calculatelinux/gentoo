@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c8e3ab8eee73ce14e33c17ed35910134a3f73dca $
 EAPI=6
 DIST_AUTHOR=RJBS
 DIST_VERSION=2.015

@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 17a03f3f80dddf5e32ea6ba4fb77fc4aaa2478c6 $
 
 EAPI=5
 inherit autotools gnustep-2

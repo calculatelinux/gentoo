@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fad2993a8e7e69d4c6c17a4f5d08e5d8edf3bd10 $
 
 EAPI=6
 QT5_MODULE="qtbase"

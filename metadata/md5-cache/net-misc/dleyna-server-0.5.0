@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/glib-2.28:2 dev-libs/libxml2 >=media-libs/gupnp-dlna-0.9.4:2.0 >=net-libs/dleyna-core-0.5 >=net-libs/gssdp-0.13.2 >=net-libs/gupnp-0.20.3 >=net-libs/gupnp-av-0.11.5 >=net-libs/libsoup-2.28.2:2.4
 SLOT=0
 SRC_URI=https://01.org/sites/default/files/downloads/dleyna/dleyna-server-0.5.0.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=eda90121e7a5d43928ddab020cbd58fb
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=af7d19f4c9504621b5a97674282c122a

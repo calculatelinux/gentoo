@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 188d1217d436ffee0bfe53a6b0a2f70b93c37f85 $
 
 PATCHLEVEL=1
 

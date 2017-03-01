@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8d3ccb0e95f39856aa568d2fcc1a06dfaf5d6bfc $
 
 DESCRIPTION="A tool to fetch PGP keys from keyservers"
 HOMEPAGE="http://www.palfrader.org/keylookup/"

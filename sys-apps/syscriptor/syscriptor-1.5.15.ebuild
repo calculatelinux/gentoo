@@ -1,6 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a4b366d79ab2f7370ecca032dccd0c3aa298b60b $
 
 DESCRIPTION="display misc information about your hardware"
 HOMEPAGE="http://syscriptor.sourceforge.net/"

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0e4ae61b4b50f3e80692184b3f6793807dfd1f34 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros/message_runtime"

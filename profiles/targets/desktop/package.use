@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9d100848d40a4dfdad2f1595d2d00b56f486c9d7 $
 
 # Ilya Tumaykin <itumaykin+gentoo@gmail.com> (02 Feb 2017)
 # Enable luajit for OSC and youtube-dl support by default.

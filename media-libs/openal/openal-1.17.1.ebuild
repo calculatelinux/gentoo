@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f18dbed008a8f960b8f71d5610475820af69b463 $
 
 EAPI=5
 inherit cmake-multilib

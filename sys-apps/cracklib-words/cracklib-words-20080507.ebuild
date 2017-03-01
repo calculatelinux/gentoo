@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a5a0a33b3e784a429d33458df439ac4c56e4f3c9 $
 
 DESCRIPTION="large set of crack/cracklib dictionaries"
 HOMEPAGE="https://sourceforge.net/projects/cracklib"

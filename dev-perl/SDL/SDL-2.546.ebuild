@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 055a8cf882b717146786fe99270d068581d23c27 $
 
 EAPI=5
 MODULE_AUTHOR=FROGGS

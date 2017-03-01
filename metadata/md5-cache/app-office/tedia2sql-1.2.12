@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5.8 >=dev-perl/XML-DOM-1.43 >=virtual/perl-Digest-MD5-2.36
 SLOT=0
 SRC_URI=http://tedia2sql.tigris.org/files/documents/282/19423/tedia2sql-1.2.12.tar.gz
-_md5_=b82330b7828094b74258c6c565751760
+_md5_=bcb13cf149130621f4da9d974bc97a9a

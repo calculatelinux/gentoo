@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 2d18c4cfb544c7e5aa55b1d9ee9c87a52604ce8f $
 
 EAPI=4
 MY_P=${P/_/\~}

@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: dece79fdae1fc8dc7dd08e156f1f1f5748690f8e $
 
 # @ECLASS: gst-plugins-ugly.eclass
 # @MAINTAINER:

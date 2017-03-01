@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4db14fae92623ea6f6a44c31c2164542328db3b1 $
 
 # Benda Xu <heroxbd@gentoo.org> (28 Jul 2016)
 # Needs root privilege.

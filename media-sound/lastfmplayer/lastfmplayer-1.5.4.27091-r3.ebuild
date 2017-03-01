@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 090e8145b53025ce84ec471bb1cf3a7e9586757c $
 
 EAPI=5
 inherit eutils multilib readme.gentoo toolchain-funcs qmake-utils qt4-r2

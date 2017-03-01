@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4f4d1bd0692018cf85d16bbb493d6d8d5028f841 $
 
 S=${WORKDIR}/eawpats
 

@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fda336e6905017095e5d2084a1c96c8e51bbfa94 $
 
 IUSE="moneyplex"
 

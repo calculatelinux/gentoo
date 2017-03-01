@@ -8,4 +8,4 @@ LICENSE=public-domain
 RDEPEND=>=sci-geosciences/libtcd-2.2.4
 SLOT=0
 SRC_URI=ftp://ftp.flaterco.com/xtide/tcd-utils-20120115.tar.bz2
-_md5_=e9e6f01459b17ef66cb7c2dd7fc66ac1
+_md5_=85a72bc9a747406b83f41525af7bcc61

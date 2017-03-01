@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 6062429b70e0f657ccd24c5f42dac523d15a594b $
 
 DESCRIPTION="Utils to help with the transition to the new freedesktop.org naming scheme"
 HOMEPAGE="http://tango.freedesktop.org"

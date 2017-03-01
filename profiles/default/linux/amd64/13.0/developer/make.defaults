@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5a3cd942a4c04eeeb29396f39064fb72e4d12489 $
 
 # Adding -Wl,--hash-style=gnu to default LDFLAGS for linux/amd64 dev profile
 # This will help developers track packages, that don't respect LDFLAGS, down

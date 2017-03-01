@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8f16e072850270219e70752b4621b67cb227ee1e $
 
 ARCH="sparc"
 ACCEPT_KEYWORDS="${ARCH}"

@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=>=app-i18n/ibus-1.3 >=app-i18n/libskk-0.0.11 nls? ( virtual/libintl ) app-i18n/skk-jisyo
 SLOT=0
 SRC_URI=mirror://github/ueno/ibus-skk/ibus-skk-1.4.1.tar.gz
-_md5_=da0c5559ae8d88f42e614ae592a26a63
+_md5_=61134850b107c49a4b66f8e9b21c92e9

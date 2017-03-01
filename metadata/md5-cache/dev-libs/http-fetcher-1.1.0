@@ -7,4 +7,4 @@ KEYWORDS=alpha amd64 ppc x86
 LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=mirror://sourceforge/http-fetcher/http_fetcher-1.1.0.tar.gz
-_md5_=c89ff2dc4a14ad02506a2e23bb4d174f
+_md5_=dcc3a8d03bf6843c71c28c84eddb269e

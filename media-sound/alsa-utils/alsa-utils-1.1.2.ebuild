@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3f70034802151f2bebb3650fdb1c89aca57b62fc $
 
 EAPI=6
 inherit eutils systemd udev

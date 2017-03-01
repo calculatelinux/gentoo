@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 56ade040ea14a940c6d687d2898a3b264da53b96 $
 
 EAPI=5
 inherit eutils games rpm

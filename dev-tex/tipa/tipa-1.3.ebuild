@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3c64797900d1e465b43f061a20b8ef440f8bd90b $
 
 DESCRIPTION="International Phonetic Alphabet package for LaTeX"
 HOMEPAGE="http://www.l.u-tokyo.ac.jp/~fkr/"

@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 93f4cb7d2d88465275da19e4456a9a280b79797b $
 
 inherit cannadic eutils
 

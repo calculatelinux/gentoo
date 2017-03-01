@@ -5,4 +5,4 @@ HOMEPAGE=https://wiki.gentoo.org/wiki/Project:Infrastructure/Rsync
 KEYWORDS=alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2
 SLOT=0
-_md5_=27f9964404107875c949d1fbfad159f3
+_md5_=50e10fc695537fb5bd0fc95740dcfe57

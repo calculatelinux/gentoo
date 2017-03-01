@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8440263e45b7a7b2d02aef75c6967edd2d67c19d $
 
 EAPI=5
 inherit fdo-mime gnome2-utils

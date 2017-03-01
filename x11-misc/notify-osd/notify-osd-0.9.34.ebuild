@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8ba78d7b3c77e4d581c6ef702b08809f97a449e5 $
 
 EAPI=4
 inherit autotools gnome2-utils multilib savedconfig

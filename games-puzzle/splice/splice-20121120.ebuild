@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: acf8f3df79ada7e3992c61750cfebd5bbcb8cceb $
 
 # TODO: unbundle mono? (seems hardcoded)
 #       icon

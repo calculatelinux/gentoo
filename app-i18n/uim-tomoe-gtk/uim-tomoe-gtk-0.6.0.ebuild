@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: c3bc27ac6ba54fd52fb434fede0d75029e10864e $
 
 DESCRIPTION="Japanese input method Tomoe IMEngine for uim"
 HOMEPAGE="http://tomoe.sourceforge.net/"

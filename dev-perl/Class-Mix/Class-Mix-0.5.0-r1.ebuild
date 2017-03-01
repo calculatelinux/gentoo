@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 41c3f96f0dbe8b71373bee379d3aaaac6f3fe962 $
 
 EAPI=5
 MODULE_AUTHOR=ZEFRAM

@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fc2bf8b224cbb3a5754b4832f2f88872f93e6941 $
 
 DESCRIPTION="A collection of Bootsplash themes"
 HOMEPAGE="https://dev.gentoo.org/~spock/repos/bootsplash/"

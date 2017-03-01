@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f568d02aba700e1e087d44ca511a55da4cf90a02 $
 
 inherit common-lisp
 

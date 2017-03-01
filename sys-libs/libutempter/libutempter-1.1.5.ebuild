@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 585c9e6c2f266e12cb2d23b010d0f0dedc9fec98 $
 
 inherit user multilib flag-o-matic
 

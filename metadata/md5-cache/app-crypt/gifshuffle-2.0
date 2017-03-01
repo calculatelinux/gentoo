@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=public-domain
 SLOT=0
 SRC_URI=http://www.darkside.com.au/gifshuffle/gifshuffle.tar.gz
-_eclasses_=multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=fe3f3699136eaff1168a8eec5cb05a3d
+_eclasses_=multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=cd28cb277d72737bccff73f12b1a26c5

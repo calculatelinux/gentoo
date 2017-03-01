@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=app-cdr/cdrdao dev-util/dialog media-sound/normalize media-sound/sox virtual/cdrtools flac? ( media-libs/flac ) mp3? ( media-sound/mpg123 media-sound/mp3_check ) vorbis? ( media-sound/vorbis-tools )
 SLOT=0
 SRC_URI=http://www.thenktor.homepage.t-online.de/burncdda/download/burncdda-1.8.0.tar.gz
-_md5_=5d7b9801bd1c69635019843cee1944bd
+_md5_=97aa1555c957ae9e312b1fe25097a362

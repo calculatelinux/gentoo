@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: e96514df437ca3a8f554a0986eb0a2a6e86b2970 $
 
 EAPI=5
 inherit autotools eutils gnome.org multilib-minimal xdg-utils

@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 890a0ada2fdf77909e5e6792b9d9b0ee8e9ed779 $
 
 inherit eutils multilib toolchain-funcs
 

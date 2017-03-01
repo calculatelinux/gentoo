@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=sci-libs/libccp4 sci-libs/fftw:2.1 sci-libs/mmdb:2 fortran? ( virtual/fortran )
 SLOT=0
 SRC_URI=ftp://ftp.ccp4.ac.uk/opensource/clipper-2.1.20140911.tar.gz https://dev.gentoo.org/~soap/distfiles/clipper-2.1.20140911_p20160914-fix-c++14.patch.bz2
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	flag-o-matic	c804324951745d4fcf741b53ba7759f8	fortran-2	6e2f17677c59718c51012a2b534469e1	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=20ea2e27fa2f16edeb80c6690326086f
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	979af9133d4de419fa98992355b07ca4	fortran-2	9773a6296d565bc8cf241891112a9705	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=1190dd8e68087e4d64965a9d1b9903b1

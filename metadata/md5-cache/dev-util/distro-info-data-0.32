@@ -7,4 +7,4 @@ LICENSE=ISC
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://debian/pool/main/d/distro-info-data/distro-info-data_0.32.tar.xz
-_md5_=7978c131054aaa407f6ef8b9ac9e7792
+_md5_=99f2cc7c524f3b117d0645051f1f9c66

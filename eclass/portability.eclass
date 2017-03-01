@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 4f29725e2e32bff32f9e191a716f474182bb94b1 $
 
 # @ECLASS: portability.eclass
 # @MAINTAINER:

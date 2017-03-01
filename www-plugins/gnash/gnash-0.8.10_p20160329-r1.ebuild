@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5ea5e4544a70bcc0dbe47d7624c0ca2c3cef192d $
 
 EAPI=6
 AT_M4DIR="cygnal"

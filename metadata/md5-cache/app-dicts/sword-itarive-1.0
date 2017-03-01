@@ -8,5 +8,5 @@ LICENSE=freedist
 RDEPEND=app-text/sword
 SLOT=0
 SRC_URI=mirror://gentoo/ItaRive-1.0.zip
-_eclasses_=sword-module	53233e8ef06063ea675d07a2a4c9dba2
-_md5_=dbe3d21d11e7af2458010b4c39c8bd3f
+_eclasses_=sword-module	f93b38348e60d75f292f55df132bbac4
+_md5_=e001c21c59c77137dd1fe966f29112f6

@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 94cf5982fb8db138f8d8eab0e79d3f95620cf1f9 $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-planning/geometric_shapes"

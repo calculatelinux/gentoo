@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f0c256ecd3f90e0e3f8664e9b17152f6d032e392 $
 
 EAPI=6
 inherit multilib systemd

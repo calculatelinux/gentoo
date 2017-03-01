@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-libs/ncurses-5.7-r7 app-i18n/skk-jisyo
 SLOT=0
 SRC_URI=http://homepage2.nifty.com/aito/skkfep/skkfep-0.87.tar.gz
-_eclasses_=eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=b78c9d3acfee357c7a96047d95341fa2
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=d47f87dbb78f8f45afe114b7264a7e68

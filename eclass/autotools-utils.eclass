@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: b850cf7af1a610814ab5b23c6eec595b43c90215 $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:

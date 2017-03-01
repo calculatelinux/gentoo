@@ -9,5 +9,5 @@ LICENSE=Apache-2.0 BSD-2
 RDEPEND=sys-libs/zlib:= !libressl? ( dev-libs/openssl:0= ) libressl? ( dev-libs/libressl:0= ) dev-libs/libpcre
 SLOT=0
 SRC_URI=https://projects.archlinux.org/svntogit/community.git/snapshot/community-caa300cf262afcf5bdb4dcc923dee54e3715fd5c.tar.gz -> android-tools-5.1.1_r13-arch.tar.gz https://github.com/android/platform_system_core/archive/android-5.1.1_r13.tar.gz -> android-tools-5.1.1_r13-core.tar.gz mirror://gentoo/android-tools-5.1.1_r13-extras.tar.gz mirror://gentoo/android-tools-5.1.1_r13-libselinux.tar.gz mirror://gentoo/android-tools-5.1.1_r13-f2fs-tools.tar.gz
-_eclasses_=bash-completion-r1	2418d29a9d4e3e223bbc64e93cde118e	eutils	c8729578e47597ee48d77eda210e2b56	multilib	177a5a7d8d9cc0ec8bffd43ee456ba7f	toolchain-funcs	3115bbace907b4a0a213e883e7da535d
-_md5_=9e4c08cf4ce08a3942801b8e37d96179
+_eclasses_=bash-completion-r1	8e447753aaf658afa609fbf961d80ab7	eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	53b75b4a49cf3e61530a523804045432
+_md5_=21fae743da9a7c60d584909733e290bb

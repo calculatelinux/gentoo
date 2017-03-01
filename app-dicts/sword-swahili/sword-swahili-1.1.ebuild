@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0a5d92074dc4d50f78283d615079c85e65ffb415 $
 
 EAPI=5
 SWORD_MODULE="Swahili"

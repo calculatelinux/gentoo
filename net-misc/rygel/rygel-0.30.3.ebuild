@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9dbadbb1785436a42c5a4ca621351b11be13179a $
 
 EAPI=6
 GNOME2_LA_PUNT="yes"

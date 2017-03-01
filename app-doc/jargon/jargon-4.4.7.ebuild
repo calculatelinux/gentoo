@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 18aff69b04179b0dd4275840f6a7873c63cf6126 $
 
 DESCRIPTION="A compendium of hacker slang illuminating many aspects of hackish tradition"
 HOMEPAGE="http://www.catb.org/~esr/jargon"

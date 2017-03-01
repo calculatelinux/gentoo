@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 8f8b805a855277d58026f5bb29647a04fd99885a $
 
 EAPI=6
 GST_ORG_MODULE=gst-plugins-bad

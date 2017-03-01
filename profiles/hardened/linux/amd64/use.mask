@@ -1,6 +1,5 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1746d4f90aa4e1e52772e57242be7d091e774e7d $
 
 # Rick Farina <zerochaos@gentoo.org> 26 Nov 2012
 video_cards_nvidia

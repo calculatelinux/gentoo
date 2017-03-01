@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 023a3d573bda5bb32da346facc6e435e30c7c0cc $
 
 EAPI=5
 inherit db-use libtool

@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7b480e30d8be6abc672ed21ca4232ae41b5e4ccc $
 
 EAPI=5
 MOD_DESC="Trickjumping challenges for Quake III"

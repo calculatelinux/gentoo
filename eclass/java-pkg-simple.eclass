@@ -1,6 +1,5 @@
 # Copyright 2004-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fa6fc400e9dcb23048860b8c41fafc3b8c7674ff $
 
 # @ECLASS: java-pkg-simple.eclass
 # @MAINTAINER:

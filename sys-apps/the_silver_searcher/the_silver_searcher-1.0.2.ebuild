@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: cab52e1c3b2850120fbf67732a3429c51e82a027 $
 
 EAPI=6
 inherit autotools bash-completion-r1

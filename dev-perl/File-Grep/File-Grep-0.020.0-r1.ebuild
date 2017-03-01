@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 5443f4ea9e53805ec5820abfb59cff904f2627a5 $
 
 EAPI=5
 MODULE_AUTHOR="MNEYLON"

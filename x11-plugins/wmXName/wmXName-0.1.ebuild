@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7f5d30261756f31c80d567f907490514a2581106 $
 
 MY_PV="0.01"
 MY_P="${PN}-${MY_PV}"

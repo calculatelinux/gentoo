@@ -3,4 +3,4 @@ DESCRIPTION=Virtual for LeechCraft plugins for managing removable storage device
 EAPI=6
 RDEPEND=app-leechcraft/lc-vrooby
 SLOT=0
-_md5_=f382d4a4033f0b025c5b60d6a3c56098
+_md5_=b72e0cb6ca687da47ccb404ba2b7dffb

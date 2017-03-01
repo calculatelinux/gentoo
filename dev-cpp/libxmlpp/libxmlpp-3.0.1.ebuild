@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 551db6d29ac373e39afb0b2f8837e624c00aaada $
 
 EAPI=6
 GNOME_ORG_MODULE="${PN/pp/++}"

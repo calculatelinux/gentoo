@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 0e93e3bba6674cab56795228ab88dff369cf59ee $
 
 DESCRIPTION="NetWinder ARM bootloader and utilities"
 HOMEPAGE="http://www.netwinder.org/"

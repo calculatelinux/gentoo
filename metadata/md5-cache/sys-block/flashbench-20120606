@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~bircoph/distfiles/flashbench-20120606.tar.xz
-_md5_=2d394f416fa760299080890b47a6f6cc
+_md5_=010a8b9f640501c4cb84169bffe843cf

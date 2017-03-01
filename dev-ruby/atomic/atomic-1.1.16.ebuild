@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f1eaabbe961453b8341f3c379a864f4511a79397 $
 
 EAPI=5
 # jruby → there is code for this in ext but that requires compiling java.

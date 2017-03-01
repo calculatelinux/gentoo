@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 397f25e557c38c83903d76f758f2a687de5fdc8c $
 
 DESCRIPTION="qmail-lint checks your qmail configuration for common problems"
 HOMEPAGE="http://www.qmail.org/"

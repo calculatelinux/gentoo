@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/w3 app-xemacs/efs app-xemacs/mail-lib app-xemacs/xemacs-base app-xemacs/fsf-compat app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/mew-1.19-pkg.tar.gz
-_eclasses_=xemacs-packages	5862b4df143817bb184842a55f6d2045
-_md5_=f84a47362262ff81e529b9dd5666392c
+_eclasses_=xemacs-packages	6af894e52080fe5d8bd91371a8a6a735
+_md5_=b45e5bddb65c518169da6248743d884b

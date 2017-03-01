@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 07551f51316e0a8b9ca9a3fa75995bb0e54e8d40 $
 
 EAPI=6
 inherit gnustep-2

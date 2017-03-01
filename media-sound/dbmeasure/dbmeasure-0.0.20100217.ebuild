@@ -1,6 +1,5 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 06f53338956fd2b24683b3a4a4cfbfe2870140ac $
 
 EAPI=5
 GIT_COMMITID="ed8105083ab72f9afac9d18b7563fbc3d6c1c925"

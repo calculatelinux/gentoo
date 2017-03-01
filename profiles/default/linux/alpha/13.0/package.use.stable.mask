@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 3f29ccee36a450b693fd7b7f431cdd772c913e1d $
 
 # Pacho Ramos <pacho@gentoo.org> (27 Jan 2014)
 # Mask until we are able to stabilize thunderbird, bug #488766

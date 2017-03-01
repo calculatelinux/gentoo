@@ -10,4 +10,4 @@ RDEPEND=sys-libs/glibc
 RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=x86? ( http://www.rarsoft.com/rar/rarlinux-5.4.0.tar.gz ) amd64? ( http://www.rarsoft.com/rar/rarlinux-x64-5.4.0.tar.gz ) all_sfx? ( http://www.rarsoft.com/rar/rarlinux-5.4.0.tar.gz http://www.rarsoft.com/rar/rarlinux-x64-5.4.0.tar.gz http://www.rarsoft.com/rar/winrar-x64-540.exe )
-_md5_=234350b373bef4e9e7d326007239dd51
+_md5_=23df6cf5569b08aaad3dba6802ccb2f7

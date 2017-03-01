@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: db3d9535bcae1982790934dc4e708d06dea469c0 $
 
 EAPI=5
 CATKIN_HAS_MESSAGES=yes

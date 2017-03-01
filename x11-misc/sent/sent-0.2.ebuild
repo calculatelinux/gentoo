@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: aeb1433d5bf9b29dc9e591eb4a3c327641a5742b $
 
 EAPI=5
 inherit savedconfig toolchain-funcs

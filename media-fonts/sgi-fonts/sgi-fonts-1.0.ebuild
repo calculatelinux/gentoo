@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 17138bf43b76180188319d3129a4be232cf560b7 $
 
 inherit rpm font
 

@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 13c605d1a0d7f4fc1382ecee55ea92c9f88cdc53 $
 EAPI=5
 
 SWORD_MODULE="ABS_Essay_GoodSam_SWB"

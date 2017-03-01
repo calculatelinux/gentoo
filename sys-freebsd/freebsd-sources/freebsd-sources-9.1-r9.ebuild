@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: a66968ae74df3b46953480ac3673ce6ac3c3c65f $
 
 inherit bsdmk freebsd flag-o-matic
 

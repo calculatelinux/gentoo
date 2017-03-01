@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9f2b7946ca0df630dc4c7f51d8910bba4ce6cc8b $
 EAPI=5
 DESCRIPTION="Quotes from Dr. Strangelove"
 HOMEPAGE="http://seiler.us/wiki/index.php/Strangelove"

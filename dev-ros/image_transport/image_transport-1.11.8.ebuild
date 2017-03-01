@@ -1,6 +1,5 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 00b273ff44b7ad20def2481c47cf3a27dfdadebd $
 
 EAPI=5
 ROS_REPO_URI="https://github.com/ros-perception/image_common"

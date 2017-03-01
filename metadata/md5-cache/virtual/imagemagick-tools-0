@@ -5,4 +5,4 @@ IUSE=jpeg perl png svg tiff
 KEYWORDS=alpha amd64 arm hppa ia64 ppc ppc64 sparc x86
 RDEPEND=|| ( media-gfx/imagemagick[jpeg?,perl?,png?,svg?,tiff?] media-gfx/graphicsmagick[imagemagick,jpeg?,perl?,png?,svg?,tiff?] )
 SLOT=0
-_md5_=5f4e1838cf5ff7668b6a37809f1c86a0
+_md5_=801336903686886200068f3b48f52fb4

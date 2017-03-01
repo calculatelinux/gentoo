@@ -1,6 +1,5 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 7c05975183f3113aae8469380cb26fdc93213560 $
 
 MY_P="oneSIS-${PV/_}"
 

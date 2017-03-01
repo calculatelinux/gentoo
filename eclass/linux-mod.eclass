@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 270eff5090c10aba3f479ea31dd604763625d83e $
 
 # @ECLASS: linux-mod.eclass
 # @MAINTAINER:

@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: f232c8e29a4cbec75d5a91ee7569e723ec4ce900 $
 
 # @ECLASS: golang-build.eclass
 # @MAINTAINER:

@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 1ba7e5b94af7976df0411e12838cf3977a5ca5c1 $
 EAPI=5
 
 MODULE_AUTHOR=DAPATRICK

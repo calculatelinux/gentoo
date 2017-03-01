@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 18d58074319340c5d3316717ec3bcd0b2c25cbe3 $
 
 EAPI=6
 GNOME2_LA_PUNT="yes" # Needed with USE 'sendto'

@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2:2 x11-libs/libX11 x11-libs/libXt x11-libs/libXmu
 SLOT=0
 SRC_URI=http://tomas.styblo.name/wmctrl/dist/wmctrl-1.07.tar.gz
-_md5_=b21ca87bfea957f02748b45387592306
+_md5_=d40671b47ae470b9c95268d7c8cef465

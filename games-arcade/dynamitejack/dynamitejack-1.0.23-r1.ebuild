@@ -1,6 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: 9f2e49b3cc49a506e14a9907e57e0f9392989465 $
 
 # TODO: icon
 
