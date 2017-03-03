@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -54,7 +54,6 @@ IUSE_VIDEO_CARDS="
 	video_cards_nouveau
 	video_cards_nv
 	video_cards_omap
-	video_cards_omapfb
 	video_cards_qxl
 	video_cards_r128
 	video_cards_radeon
@@ -130,7 +129,6 @@ PDEPEND="
 	video_cards_nouveau?       ( x11-drivers/xf86-video-nouveau )
 	video_cards_nv?            ( x11-drivers/xf86-video-nv )
 	video_cards_omap?          ( x11-drivers/xf86-video-omap )
-	video_cards_omapfb?        ( x11-drivers/xf86-video-omapfb )
 	video_cards_qxl?           ( x11-drivers/xf86-video-qxl )
 	video_cards_nvidia?        ( x11-drivers/nvidia-drivers )
 	video_cards_fglrx?         ( x11-drivers/ati-drivers )
@@ -167,13 +165,13 @@ PDEPEND="
 	!x11-drivers/xf86-video-ivtv
 	!x11-drivers/xf86-video-nsc
 	!x11-drivers/xf86-video-sunbw2
-	!x11-drivers/xf86-video-v4l
 
 	!<=x11-drivers/xf86-video-ark-0.7.5
 	!<=x11-drivers/xf86-video-newport-0.2.4
 
 	!<x11-drivers/xf86-input-evdev-2.10.4
 	!<x11-drivers/xf86-input-joystick-1.6.3
+	!<x11-drivers/xf86-input-libinput-0.20.0
 	!<x11-drivers/xf86-video-amdgpu-1.2.0
 	!<x11-drivers/xf86-video-ati-7.8.0
 	!<x11-drivers/xf86-video-chips-1.2.7
