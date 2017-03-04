@@ -3,10 +3,10 @@ DEPEND=>=virtual/emacs-23
 DESCRIPTION=A derived Emacs mode implementing most of the C# rules
 EAPI=6
 HOMEPAGE=https://github.com/josteink/csharp-mode
-KEYWORDS=~amd64 ~ppc ~x86
+KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2+
 RDEPEND=>=virtual/emacs-23
 SLOT=0
 SRC_URI=https://github.com/josteink/csharp-mode/archive/v0.9.0.tar.gz -> csharp-mode-0.9.0.tar.gz
-_eclasses_=elisp	0f9fb41c5a844d876880e414faee1340	elisp-common	f49d14e575e158ccab82cf05b315a180
-_md5_=26cd73f7b9090cea7816d5b36ff58ead
+_eclasses_=elisp	571fd9c6c9d8b71c8461bb9f33e135ab	elisp-common	19ff54b35acd0bf2a14831a308a57753
+_md5_=6866f35edbe30391a54f6474bd9c79ed

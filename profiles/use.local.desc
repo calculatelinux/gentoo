@@ -46,7 +46,6 @@ app-admin/conky:eve - Enable support for the eve-online skill monitor
 app-admin/conky:ical - Enable support for events from iCalendar (RFC 5545) files using dev-libs/libical
 app-admin/conky:iostats - Enable support for per-task I/O statistics
 app-admin/conky:irc - Enable support for displaying everything from an irc channel using net-libs/libircclient
-app-admin/conky:lua - Enable if you want Lua scripting support
 app-admin/conky:lua-cairo - Enable if you want Lua Cairo bindings
 app-admin/conky:lua-imlib - Enable if you want Lua Imlib2 bindings
 app-admin/conky:lua-rsvg - Enable if you want Lua RSVG bindings
@@ -1059,6 +1058,7 @@ app-text/atril:xps - Enable XPS viewer using app-text/libgxps
 app-text/blogc:git - Build blogc-git-receiver tool
 app-text/blogc:httpd - Build blogc-runserver tool
 app-text/blogc:make - Build blogc-make tool
+app-text/cb2bib:webengine - Use dev-qt/qtwebengine instead of dev-qt/qtwebkit
 app-text/crm114:mew - Add support for using the mewdecode mime decoder (app-emacs/mew)
 app-text/crm114:mimencode - Add support for using the mimencode mime (net-mail/metamail)
 app-text/crm114:normalizemime - Add support for using the normalizemime (mail-filter/normalizemime)
@@ -4149,6 +4149,9 @@ media-libs/sdl2-mixer:wav - support WAVE files
 media-libs/sge:image - enable sdl-image support
 media-libs/silgraphite:pango - Enables the pango-graphite pango module.
 media-libs/spandsp:fixed-point - Enable fixed point support
+media-libs/speex:armv5te - Enables optimizations for armv5te processors.
+media-libs/speex:utils - Enables speex commandline utilities (speexenc, speexdec).
+media-libs/speex:vbr - Enable VBR support.
 media-libs/svgalib:kernel-helper - Build the helper kernel module
 media-libs/taglib:asf - Provide support for Microsoft's 'advanced systems format' media container.
 media-libs/taglib:boost - Use dev-libs/boost instead of GCC built-ins
@@ -4394,7 +4397,6 @@ media-sound/jack2:pam - Add basic realtime configuration via sys-auth/realtime-b
 media-sound/jalv:gtk2 - Adds support for GTK+2 in addition to GTK+3 controlled by the gtk useflag.
 media-sound/jalv:gtkmm - Adds support for dev-cpp/gtkmm: C++ interface for GTK+2
 media-sound/kid3:acoustid - Enable support for acoustic fingerprinting plugin using (media-libs/chromaprint)
-media-sound/kid3:phonon - Enable sound support via media-libs/phonon or dev-qt/qtphonon
 media-sound/klick:rubberband - Enable rubberband support
 media-sound/lame:frontend - Build and install the 'lame' executable frontend to lame libraries.
 media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED**
@@ -5736,6 +5738,7 @@ net-libs/iax:snomhack - Use slower memset for SNOM phoneem
 net-libs/ldns:dane - Enable DNS-based Authentication of Named Entities (DANE) support
 net-libs/ldns:ecdsa - Enable ECDSA support
 net-libs/ldns:gost - Enable GOST support
+net-libs/libbtbb:extras - Install pcapdump and btaptap tools
 net-libs/libbtbb:pcap - Add support for network packet capture via net-libs/libpcap
 net-libs/libbtbb:wireshark-plugins - Build the wireshark plugins for bluetooth baseband sniffing
 net-libs/libeXosip:srv - enable support for SRV records DNS queries
@@ -6659,6 +6662,7 @@ net-wireless/bluez:extra-tools - Install tools that upstream doesn't install on 
 net-wireless/bluez:obex - Enable OBEX transfer support.
 net-wireless/bluez:test-programs - Install tools for testing of various Bluetooth functions
 net-wireless/bluez:user-session - Allow compatibility with user-session semantics for session bus under systemd
+net-wireless/chirp:radioreference - support downloading data from radioreference.com (premium users only)
 net-wireless/crda:gcrypt - Use libgcrypt instead of openssl for key checking
 net-wireless/gnuradio:analog - enable analog signal processing blocks
 net-wireless/gnuradio:atsc - enable ATSC (HDTV) transmitter and receiver blocks
@@ -8251,6 +8255,7 @@ x11-drivers/xf86-video-ati:glamor - Enable Glamor OpenGL 2D acceleration
 x11-drivers/xf86-video-geode:ztv - Enable building the V4L2 ZTV driver
 x11-drivers/xf86-video-intel:dri3 - Use DRI3 by default
 x11-drivers/xf86-video-intel:sna - Enable SandyBridge's New Acceleration (useful on all chipsets, not just SandyBridge)
+x11-drivers/xf86-video-intel:tools - Build the intel-virtual-output tool
 x11-drivers/xf86-video-intel:uxa - Enable UMA Acceleration Architecture
 x11-drivers/xf86-video-intel:xvmc - Enables X-Video Motion Compensation support
 x11-drivers/xf86-video-nouveau:glamor - Enable Glamor OpenGL 2D acceleration
