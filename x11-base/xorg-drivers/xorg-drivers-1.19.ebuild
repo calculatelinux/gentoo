@@ -9,7 +9,7 @@ SRC_URI=""
 
 LICENSE="metapackage"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="alpha ~amd64 arm ~arm64 ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 
 IUSE_INPUT_DEVICES="
 	input_devices_acecad
@@ -174,6 +174,7 @@ PDEPEND="
 	!<x11-drivers/xf86-input-evdev-2.10.4
 	!<x11-drivers/xf86-input-joystick-1.6.3
 	!<x11-drivers/xf86-input-libinput-0.20.0
+	!<x11-drivers/xf86-input-wacom-0.34.0
 	!<x11-drivers/xf86-video-amdgpu-1.2.0
 	!<x11-drivers/xf86-video-ati-7.8.0
 	!<x11-drivers/xf86-video-chips-1.2.7
