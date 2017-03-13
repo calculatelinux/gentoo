@@ -1935,6 +1935,7 @@ dev-libs/efl:psd - Enable PSD image loader
 dev-libs/efl:scim - Enable Smart Common Input Method
 dev-libs/efl:tga - Enable Tga image loader
 dev-libs/efl:tslib - Enable x11-libs/tslib for touchscreen events
+dev-libs/efl:unwind - Enable debug support via sys-libs/libunwind
 dev-libs/efl:valgrind - Enable usage of dev-util/valgrind in debug
 dev-libs/efl:webp - Enable WebP image loader
 dev-libs/efl:xim - Enable X Input Method
@@ -2397,8 +2398,6 @@ dev-python/matplotlib:gtk2 - Enable x11-libs/gtk+:2 support
 dev-python/matplotlib:gtk3 - Enable x11-libs/gtk+:3 support
 dev-python/matplotlib:pyside - Qt support via dev-python/pyside
 dev-python/mpmath:matplotlib - Add support for dev-python/matplotlib
-dev-python/mwlib:server - Install the daemons required when using mwlib for generating PDFs on a MediaWiki instance.
-dev-python/mwlib-rl:pdftk - Enable support for app-text/pdftk, required to generate TOCs
 dev-python/nbdime:webtools - Install web-based diff and merge tools.
 dev-python/netaddr:cli - Enable netaddr shell with dev-python/ipython
 dev-python/nltk:numpy - Use numpy for the saved word tokenizer
@@ -2920,7 +2919,6 @@ games-action/minetest:luajit - Use dev-lang/luajit instead of dev-lang/lua
 games-action/minetest:redis - Enable redis backend via dev-libs/hiredis
 games-action/minetest:server - Build minetest server
 games-action/minetest:spatial - Enable SpatialIndex AreaStore backend
-games-action/openlierox:breakpad - Compile with support for breakpad crash reporting system
 games-action/solar2:bundled-libs - Use the upstream provided bundled libraries.
 games-action/super-hexagon:bundled-libs - Use the upstream provided bundled libraries.
 games-action/supertuxkart:fribidi - Support for right-to-left languages
@@ -4190,6 +4188,7 @@ media-libs/x265:10bit - Add support for producing 10bits HEVC.
 media-libs/x265:12bit - Add support for producing 12bits HEVC.
 media-libs/x265:numa - Build with support for NUMA nodes.
 media-libs/x265:pic - Disable optimized assembly code that is not PIC friendly
+media-libs/x265:power8 - Enable support for Power 8 assembly optimizations.
 media-libs/xine-lib:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
 media-libs/xine-lib:dxr3 - Enable support for DXR3 mpeg acceleration cards.
 media-libs/xine-lib:flac - Build the media-libs/flac based FLAC demuxer and decoder. This flag is not needed for playing FLAC content, neither standalone nor in Ogg container (OggFLAC), but might have better support for exotic features like 24-bit samples or 96kHz sample rates.
@@ -6147,9 +6146,7 @@ net-misc/electrum:cli - Enables the CLI interface
 net-misc/electrum:cosign - Enable plugin to support multisig wallets between multiple Electrum clients
 net-misc/electrum:digitalbitbox - Enable plugin to support Digital Bitbox hardware wallet
 net-misc/electrum:email - Enable plugin to support emailing invoices
-net-misc/electrum:fiat - Enable plugin for looking up fiat values of bitcoin
 net-misc/electrum:greenaddress_it - Enable plugin to verify GreenAddress.it instant transactions
-net-misc/electrum:gtk3 - Enable support for gtk+3
 net-misc/electrum:qrcode - Enable QR code scanning with media-gfx/zbar
 net-misc/electrum:sync - Enable plugin to sync wallet metadata across multiple Electrum clients
 net-misc/electrum:trustedcoin_com - Enable plugin to use two-factor service by TrustedCoin.com
@@ -8533,7 +8530,9 @@ x11-wm/enlightenment:enlightenment_modules_tasks - Gadget to allow you to switch
 x11-wm/enlightenment:enlightenment_modules_teamwork - Enable teamwork module
 x11-wm/enlightenment:enlightenment_modules_temperature - Temperature monitor
 x11-wm/enlightenment:enlightenment_modules_tiling - Positions/resizes your windows tilingly
+x11-wm/enlightenment:enlightenment_modules_time - Time related gadgets
 x11-wm/enlightenment:enlightenment_modules_winlist - A module to show the list of client applications presently running
+x11-wm/enlightenment:enlightenment_modules_wireless - WiFi monitoring
 x11-wm/enlightenment:enlightenment_modules_wizard - First Run Wizard
 x11-wm/enlightenment:enlightenment_modules_wl-desktop-shell - Enlightenment Wayland Desktop Shell
 x11-wm/enlightenment:enlightenment_modules_wl-drm - Wayland DRM (Direct Rendering Manager) compositing module

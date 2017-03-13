@@ -2,7 +2,7 @@ DEFINED_PHASES=compile install postinst setup unpack
 DEPEND=>=gnustep-base/gnustep-make-2.0 virtual/gnustep-back
 DESCRIPTION=An asynchronous networking library for GNUstep
 EAPI=0
-HOMEPAGE=http://netclasses.aeruder.net/
+HOMEPAGE=http://gap.nongnu.org/talksoup/
 IUSE=debug doc
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2 LGPL-2.1
@@ -10,4 +10,4 @@ RDEPEND=>=gnustep-base/gnustep-make-2.0 virtual/gnustep-back debug? ( !<sys-deve
 SLOT=0
 SRC_URI=mirror://sourceforge/netclasses/netclasses-1.06.tar.bz2
 _eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	61cad4fb5d800b29d484b27cb033f59b	gnustep-2	08755606aae625944316a7bd6d8228f5	gnustep-base	935cef28cb1dbb8c28e04710473453fb	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
-_md5_=1fa31fba02131b10e2111cc3c32e7b00
+_md5_=e520d5010af47a4b378f60aa4b2a7d8a
