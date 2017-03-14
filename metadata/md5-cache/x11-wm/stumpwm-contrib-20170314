@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=Extension Modules for StumpWM
+EAPI=6
+HOMEPAGE=https://github.com/stumpwm/stumpwm-contrib/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 GPL-3 BSD-2
+PDEPEND=virtual/commonlisp
+RDEPEND=>=x11-wm/stumpwm-0.9.9
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~nimiux/x11-wm/stumpwm-contrib/stumpwm-contrib-20170314.tar.bz2
+_eclasses_=common-lisp-3	bd9283c567014f1b21a44c91a53f44ca	eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_md5_=0bbb3a4aee384b615f2b1cffacc91f72
