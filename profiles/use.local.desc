@@ -557,6 +557,7 @@ app-emulation/qemu:vte - Enable terminal support (x11-libs/vte) in the GTK+ inte
 app-emulation/qemu:xattr - Add support for getting and setting POSIX extended attributes, through sys-apps/attr. Requisite for the virtfs backend.
 app-emulation/qemu:xen - Enables support for Xen backends
 app-emulation/qemu:xfs - Support xfsctl() notification and syncing for XFS backed virtual disks.
+app-emulation/qt-virt-manager:smartcard - Enable smartcard remoting using app-emulation/libcacard
 app-emulation/rkt:actool - Install the actool for ACI manipulation
 app-emulation/rkt:rkt_stage1_coreos - Download and use a prebuilt stage1.aci from CoreOS
 app-emulation/rkt:rkt_stage1_fly - Build stage1-fly.aci
@@ -2082,7 +2083,6 @@ dev-libs/openct:pcsc-lite - Build a driver library for sys-apps/pcsc-lite, provi
 dev-libs/openct:udev - Install rules for sys-fs/udev to auto-start openct.
 dev-libs/openobex:irda - Enable IrDA support
 dev-libs/opensc:ctapi - Use CT-API for accessing Smartcard hardware.
-dev-libs/opensc:libtool - Use sys-devel/libtool for dynamically loading libraries rather than the host libdl/dlopen helpers.
 dev-libs/opensc:openct - Use dev-libs/openct (and CT-API) for accessing Smartcard hardware.
 dev-libs/opensc:pcsc-lite - Use sys-apps/pcsc-lite (and PC/SC API) for accessing Smartcard hardware.
 dev-libs/opensc:secure-messaging - Enable secure messaging.
@@ -7330,6 +7330,7 @@ sys-apps/lm_sensors:sensord - Enable sensord - a daemon that can be used to peri
 sys-apps/man-db:manpager - Enable manpager wrapper for colorizing output
 sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/memtest86+:floppy - Install a script to create floppy disks containing memtest86+ binaries.
+sys-apps/memtest86+:iso - Compile an ISO image
 sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/moreutils:perl - Install scripts written in Perl
 sys-apps/net-tools:arp - build the arp and rarp tools (for manipulating the ARP cache)
@@ -8152,7 +8153,6 @@ www-misc/zoneminder:curl - Enable using net-misc/curl for streaming from cameras
 www-misc/zoneminder:gcrypt - ...
 www-misc/zoneminder:openssl - ...
 www-misc/zoneminder:vlc - Enable using media-libs/vlc for streaming from cameras
-www-plugins/adobe-flash:kde - Install a KCM plugin for configuring flash player preferences
 www-plugins/adobe-flash:nsplugin - Install the Netscape Flash API plugin (for Firefox and similar browsers)
 www-plugins/adobe-flash:ppapi - Install the Pepper Flash API plugin (for Chrome and similar browsers)
 www-plugins/chrome-binary-plugins:widevine - Install the Widevine DRM library
