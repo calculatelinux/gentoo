@@ -3158,7 +3158,6 @@ games-strategy/freeciv:modpack - Build the freeciv-modpack-program to download/i
 games-strategy/freeciv:server - Enable server support. Disabling this will also make it impossible to start local games.
 games-strategy/freeciv:sound - Add support for sound provided by media-libs/sdl-mixer
 games-strategy/freeciv:system-lua - Use dev-lang/lua instead of the bundled liblua
-games-strategy/freeorion:cg - Add support for NVIDIA toolkit plugin
 games-strategy/freesynd:devtools - Build development tools
 games-strategy/heroes3:maps - Installs optional map data
 games-strategy/heroes3:music - Installs optional music data
@@ -3231,8 +3230,8 @@ gnome-extra/cinnamon-control-center:colord - Support color management using x11-
 gnome-extra/cinnamon-settings-daemon:colord - Support color management using x11-misc/colord
 gnome-extra/evolution-data-server:api-doc-extras - Build documentation for private APIs
 gnome-extra/evolution-data-server:berkdb - sys-libs/db support needed to migrate old (pre-3.12 evolution versions) addressbook data
-gnome-extra/evolution-data-server:gnome-online-accounts - Enable using net-libs/gnome-online-accounts for authorization
-gnome-extra/evolution-data-server:google - Enable Google Contacts support. This will also enable the internal Google authentication support. Please note this last one relies on a deprecated (and vulnerable) net-libs/webkit-gtk slot. If you want to avoid this dependency, you can disable this support and rely on gnome-online-accounts instead
+gnome-extra/evolution-data-server:gnome-online-accounts - Enable net-libs/gnome-online-accounts based Google authentication support
+gnome-extra/evolution-data-server:google - Enable internal Google authentication support. If gnome-online-accounts is enabled and used, this is not necessary, but both can be supported at the same time with different setup at runtime
 gnome-extra/evolution-data-server:weather - Enable optional weather calendar support
 gnome-extra/gnome-boxes:usbredir - Use sys-apps/usbredir to redirect USB devices to another machine over TCP
 gnome-extra/gnome-builder:clang - Provide integration with sys-devel/clang for best possible C/C++ autocompletion, semantic highlighting, symbol resolving, and diagnostics support
@@ -4572,6 +4571,12 @@ media-sound/split2flac:flake - Add support for Flake, alternative FLAC encoder
 media-sound/split2flac:mac - Add support for Monkey's Audio files
 media-sound/split2flac:replaygain - Support for Replay Gain metadata, for relative volume adjustment
 media-sound/spotify:pax_kernel - Triggers a paxmarking of the main Spotify binary
+media-sound/supercollider:emacs - Enable the SCEL user interface
+media-sound/supercollider:gedit - Enable the SCED user interface
+media-sound/supercollider:gpl3 - Build GPL-3 licensed code (recommended)
+media-sound/supercollider:server - Build with internal server
+media-sound/supercollider:vim - Enable the SCVIM user interface
+media-sound/supercollider:wiimote - Build sclang with Wii Remote support
 media-sound/teamspeak-server-bin:tsdns - Make use of TeamSpeak DNS.
 media-sound/tomahawk:hatchet - Enable support for the synchronisation through Hatchet
 media-sound/tomahawk:telepathy - Enable support for the real-time communication framework telepathy
@@ -8245,7 +8250,6 @@ www-servers/xsp:net35 - use .NET 3.5 Framework
 www-servers/xsp:net40 - use .NET 4.0 Framework
 www-servers/xsp:net45 - use .NET 4.5 Framework
 x11-apps/copyq:webkit - enables the application to use advanced HTML rendering and fetching remote images and other data
-x11-apps/intel-gpu-tools:python - Install python based register dumper utilities
 x11-apps/intel-gpu-tools:test-programs - Install test programs for DRM driver development
 x11-apps/intel-gpu-tools:unwind - Provide automatic stack traces on test failures
 x11-apps/mesa-progs:egl - Build EGL utilities
@@ -8281,7 +8285,6 @@ x11-drivers/xf86-video-intel:sna - Enable SandyBridge's New Acceleration (useful
 x11-drivers/xf86-video-intel:tools - Build the intel-virtual-output tool
 x11-drivers/xf86-video-intel:uxa - Enable UMA Acceleration Architecture
 x11-drivers/xf86-video-intel:xvmc - Enables X-Video Motion Compensation support
-x11-drivers/xf86-video-nouveau:glamor - Enable Glamor OpenGL 2D acceleration
 x11-drivers/xf86-video-openchrome:viaregtool - Install registers dumper tool
 x11-drivers/xf86-video-qxl:xspice - Build the xspice driver
 x11-libs/agg:gpc - Enable gpc polygon clipper library
@@ -8290,7 +8293,6 @@ x11-libs/cairo:glib - Compile with GLib Object System support
 x11-libs/cairo:opengl - Build the OpenGL backend
 x11-libs/cairo:utils - Build support for Cairo script and trace utilities
 x11-libs/cairo:valgrind - Built-in support to mark memory regions
-x11-libs/cairo:xlib-xcb - Use XCB renderer backend for acceleration over xlib. Enabling this may solve or introduce display corruption problems.
 x11-libs/fltk:games - Builds and installs some extra games
 x11-libs/gdk-pixbuf:X - Build and install the legacy gdk_pixbuf_xlib-2.0 library
 x11-libs/glamor:gles - Build glamor based on gles2
