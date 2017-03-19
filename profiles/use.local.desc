@@ -3199,6 +3199,7 @@ gnome-base/gnome-common:autoconf-archive - Pull in sys-devel/autoconf-archive fo
 gnome-base/gnome-control-center:colord - Support color management using x11-misc/colord
 gnome-base/gnome-control-center:gnome-online-accounts - Enable configuration panel for net-libs/gnome-online-accounts accounts
 gnome-base/gnome-control-center:i18n - Enable support for enhanced input methods through app-i18n/ibus
+gnome-base/gnome-control-center:ibus - Enable support for enhanced input methods through app-i18n/ibus
 gnome-base/gnome-desktop:license-docs - Install help files documenting GNOME's licenses
 gnome-base/gnome-extra-apps:games - Install Gnome Games
 gnome-base/gnome-extra-apps:share - Install the gnome-extra/gnome-user-share personal file sharing tool
@@ -5801,6 +5802,7 @@ net-libs/libssh:server - Build with SSH server support
 net-libs/libssh:sftp - Build with SFTP support
 net-libs/libssh:ssh1 - Build with SSH1 support
 net-libs/libssh2:gcrypt - Use dev-libs/libgcrypt instead of dev-libs/openssl
+net-libs/libtorrent-rasterbar:dht - Enable DHT (distributed hash table) support
 net-libs/libtrace:numa - Use sys-process/numactl
 net-libs/libvncserver:24bpp - enable 24bpp support
 net-libs/libvncserver:gcrypt - enable support for gcrypt
@@ -5887,7 +5889,6 @@ net-libs/ptlib:wav - Enable WAVFILE support
 net-libs/qxmpp:opus - Enable Opus codec support via media-libs/opus
 net-libs/qxmpp:vpx - Enable VP8 codec support via media-libs/libvpx
 net-libs/rabbitmq-c:tools - Builds cli tools to interact with brokers
-net-libs/rb_libtorrent:dht - Enable DHT (distributed hash table) support
 net-libs/shairplay:alac - Add support for Apple Lossless Audio Codec files
 net-libs/shairplay:static-libs - Build static versions of dynamic libraries as well
 net-libs/shairplay:tools - Build and install a binary shairplay in /usr/bin
@@ -6145,7 +6146,7 @@ net-misc/electrum:qrcode - Enable QR code scanning with media-gfx/zbar
 net-misc/electrum:sync - Enable plugin to sync wallet metadata across multiple Electrum clients
 net-misc/electrum:trustedcoin_com - Enable plugin to use two-factor service by TrustedCoin.com
 net-misc/electrum:vkb - Enable plugin for virtual keyboard
-net-misc/fatrat:bittorrent - Use the bittorrent protocol via net-libs/rb_libtorrent.
+net-misc/fatrat:bittorrent - Use the bittorrent protocol via net-libs/libtorrent-rasterbar.
 net-misc/fatrat:webinterface - Enable builtin webinterface.
 net-misc/flexget:transmission - Support comminucation with net-p2p/transmission
 net-misc/freerdp:client - Build client binaries
@@ -8585,13 +8586,17 @@ x11-wm/xpra:client - Build client-side code
 x11-wm/xpra:clipboard - Enable clipboard support
 x11-wm/xpra:csc - Enable csc softscaler support
 x11-wm/xpra:dec_av2 - Enable dec_avcodec2 support
+x11-wm/xpra:dec_avcodec2 - Enable avcodec2 decoder support
 x11-wm/xpra:enc_ffmpeg - Enable advanced ffmpeg/libav encoder support
+x11-wm/xpra:enc_x264 - Enable x264 encoder support
+x11-wm/xpra:enc_x265 - Enable x265 encoder support
 x11-wm/xpra:lz4 - Enable support for lz4 compression
+x11-wm/xpra:pillow - Enable pillow support
 x11-wm/xpra:server - Build server-side code
 x11-wm/xpra:vpx - Enable vpx image format support
 x11-wm/xpra:webcam - Enable webcam support via opencv
 x11-wm/xpra:webp - Enable webp image format support
-x11-wm/xpra:x265 - Enable x265 support
+x11-wm/xpra:x265 - Enable x265 encoder support
 xfce-base/libxfce4ui:glade - Build support for Glade 3's GtkBuilder implementation
 xfce-base/libxfce4ui:gtk3 - Enable gtk3 support
 xfce-base/xfce4-settings:libcanberra - Enable sound event support using media-libs/libcanberra
