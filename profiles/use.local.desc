@@ -2228,12 +2228,15 @@ dev-ml/tyxml:ppx - Enables the ppx syntax extension (preferred)
 dev-ml/utop:camlp4 - Enables camlp4 support.
 dev-ml/uutf:utftrip - Builds and install the utftrip executable: Among other things, reads unicode on stdin and rewrites it on stdout.
 dev-ml/zarith:mpir - Use MPIR library instead of GMP.
+dev-perl/App-Nopaste:browser - Spawn browser with pasted page
 dev-perl/App-Nopaste:clipboard - copying of URLs with -x/--copy
 dev-perl/App-Nopaste:github - Github authentication
 dev-perl/App-Nopaste:pastebin - pastebin.com support
 dev-perl/Business-ISBN:barcode - Install dev-perl/GD-Barcode for rendering ISBN numbers as barcodes
 dev-perl/Business-ISBN:xisbn - Install dev-perl/Mojolicious for querying xisbn.worldcat.org
+dev-perl/Config-Any:json - Install support libraries to support decoding JSON config files
 dev-perl/Convert-UUlib:system-uulib - Use dev-libs/uulib instead of bundled version.
+dev-perl/Cookie-Baker:xs - Install dev-perl/Cookie-Baker-XS for accelerated performance
 dev-perl/DBD-SQLite:system-sqlite - Use the system-wide dev-db/sqlite installation
 dev-perl/DBD-mysql:embedded - Support embedded server (libmysqld)
 dev-perl/DBD-mysql:ssl - Compile in support for SSL connections via libmysqlclient
@@ -2246,7 +2249,10 @@ dev-perl/File-Which:pwhich - Install dev-perl/App-pwhich which used to be a part
 dev-perl/GD:animgif - Enable animated gif support
 dev-perl/Graphics-ColorNames:recommended - Install recommended support modules
 dev-perl/HTML-Mason:modperl - Enable www-apache/mod_perl support
+dev-perl/HTTP-Entity-Parser:xs - Install C-Based dependieces for faster performance
+dev-perl/JSON-MaybeXS:xs - Install a C-Based backend to make JSON encode/decode fast
 dev-perl/Lab-Measurement:xpression - Install the Xpression measurement framework
+dev-perl/MCE:sereal - Install dev-perl/Sereal-Encoder and decoder for faster worker IPC
 dev-perl/Mail-IMAPClient:md5 - Install support for DIGEST-MD5 and CRAM-MD5 Authentication
 dev-perl/Mail-IMAPClient:ntlm - Install support for NTLM Authentication
 dev-perl/Mail-IMAPClient:ssl - Install support for SSL Connections
@@ -2263,6 +2269,7 @@ dev-perl/Sub-Name:suggested - Install extra dependencies needed for extended reg
 dev-perl/Sysadm-Install:hammer - Enable hammer() funtion to run a command in the shell and simulate a user hammering the ENTER key to accept defaults on prompts
 dev-perl/Test-Warnings:suggested - Install optional dependencies for extra tests
 dev-perl/Text-CSV:xs - Install dev-perl/Text-CSV_XS for accelerated decoding
+dev-perl/WWW-Form-UrlEncoded:xs - Install C-Based dependieces for faster performance
 dev-perl/perl-headers:debug - Add source locations in generated .ph files to assist with debugging when errors occur
 dev-perl/perl-headers:sizeof-warning - Include logic to warn when a .ph file tries to use a sizeof() that is unknown
 dev-php/PEAR-HTTP_Download:minimal - Do not include support for PEAR-MIME_Type
@@ -8082,9 +8089,9 @@ www-client/firefox:gtk2 - Use the cairo-gtk2 rendering engine
 www-client/firefox:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
 www-client/firefox:jemalloc - Enable or disable jemalloc
 www-client/firefox:jemalloc3 - Enable or disable jemalloc3 (forced-on when supported prior to 38.0)
+www-client/firefox:nsplugin - Enable support for NPAPI plugins other than flash
 www-client/firefox:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
 www-client/firefox:rust - Enable support for using rust compiler (experimental)
-www-client/firefox:skia - Enable the SKIA engine for 2D rendering as an alternative to cairo
 www-client/firefox:system-cairo - Use the system-wide x11-libs/cairo instead of bundled.
 www-client/firefox:system-harfbuzz - Use the system-wide media-libs/harfbuzz and media-gfx/graphite2 instead of bundled.
 www-client/firefox:system-icu - Use the system-wide dev-libs/icu instead of bundled.
