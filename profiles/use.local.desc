@@ -3350,6 +3350,7 @@ kde-apps/konqueror:speech - Build text-to-speech plugin
 kde-apps/kopete:addbookmarks - Automatically add incoming urls to bookmarks.
 kde-apps/kopete:autoreplace - Automatically replace selected text
 kde-apps/kopete:contactnotes - Enables writing personal notes for contacts.
+kde-apps/kopete:cryptography - Enable cryptography plugin
 kde-apps/kopete:gadu - Enable the Gadu protocol handler.
 kde-apps/kopete:groupwise - Enable the Groupwise protocol handler.
 kde-apps/kopete:highlight - Allows you to specify highlights on specific events.
@@ -3398,7 +3399,6 @@ kde-apps/okular:mobi - Add mobipocket support
 kde-apps/okular:mobile - Enable Plasma mobile support
 kde-apps/okular:speech - Enable text-to-speech support
 kde-apps/pimcommon:designer - Build plugins for dev-qt/designer
-kde-apps/pykde4:akonadi - Compile bindings for Akonadi
 kde-apps/spectacle:kipi - Enable support for the KDE Image Plugin Interface
 kde-apps/spectacle:share - Enable support for a share menu using dev-libs/purpose
 kde-apps/step:qalculate - Enable the libqalculate library for unit conversion
@@ -3469,7 +3469,8 @@ kde-plasma/plasma-sdk:plasmate - IDE for writing Plasma/KWin components (themes,
 kde-plasma/plasma-workspace:geolocation - Enables dataengine providing location information
 kde-plasma/plasma-workspace:prison - Enable support for barcodes/QRcodes
 kde-plasma/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/libqalculate
-kde-plasma/powerdevil:elogind - Use sys-auth/elogind for session tracking.
+kde-plasma/powerdevil:consolekit - Enable sys-auth/consolekit support
+kde-plasma/powerdevil:elogind - Use sys-auth/elogind for session tracking
 kde-plasma/powerdevil:wireless - Enable wireless energy saving actions via kde-frameworks/bluez-qt and kde-frameworks/networkmanager-qt
 kde-plasma/systemsettings:classic - Enable classic mode plugin, requires kde-frameworks/khtml
 lxde-base/lxdm:consolekit - Enables support for authorization using consolekit
@@ -6472,7 +6473,6 @@ net-p2p/deluge:console - Enable default console UI
 net-p2p/deluge:linguas_iu - Inuktitut locale
 net-p2p/deluge:linguas_nap - Neapolitan locale
 net-p2p/deluge:linguas_pms - Piemontese locale
-net-p2p/deluge:setproctitle - Install dependencies needed for beautifying the process name
 net-p2p/deluge:webinterface - Install dependencies needed for the web interface
 net-p2p/dogecoin-qt:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/eiskaltdcpp:cli - Enable sample cli based on readline
@@ -7428,7 +7428,6 @@ sys-auth/consolekit:cgroups - Use the kernel to track processes instead of the s
 sys-auth/consolekit:pm-utils - Adds support for suspend/resume using sys-power/pm-utils
 sys-auth/consolekit:policykit - Use the PolicyKit framework (sys-auth/polkit) to get authorization for suspend/shutdown.
 sys-auth/consolekit:systemd-units - Install systemd unit files to replace the modern functionality of logind in sys-apps/systemd. Not recommended.
-sys-auth/elogind:apparmor - Enable AppArmor support
 sys-auth/fingerprint-gui:upekbsapi - Add UPEK BSAPI drivers for identify functions on some readers
 sys-auth/keystone:memcached - Installs dependencies needed for using memcached as a backend
 sys-auth/keystone:mongo - Installs dependencies needed for using mongo as a backend

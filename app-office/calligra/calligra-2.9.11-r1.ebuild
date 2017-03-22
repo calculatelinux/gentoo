@@ -51,6 +51,7 @@ done
 unset cal_ft
 
 REQUIRED_USE="
+	|| ( $(printf 'calligra_features_%s ' ${CAL_FTS[@]}) )
 	calligra_features_author? ( calligra_features_words )
 	calligra_features_gemini? ( opengl )
 	calligra_features_krita? ( eigen exif lcms opengl )
@@ -140,6 +141,7 @@ RESTRICT=test
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.9.1-no-arch-detection.patch
 	"${FILESDIR}"/${P}-postgresql-9.6.patch
+	"${FILESDIR}"/${P}-libwps-0.4.patch
 )
 
 pkg_pretend() {
