@@ -158,7 +158,9 @@ app-admin/salt:redis - Support returning data to a redis database.
 app-admin/salt:timelib - Use timelib to parse english textual date descriptions.
 app-admin/salt:zeromq - Add support for the zeromq transport.
 app-admin/sshguard:ipfilter - Enable ipfilter firewall support (only for *bsd)
+app-admin/sudo:gcrypt - Use SHA2 from dev-libs/libgcrypt instead of sudo's internal SHA2.
 app-admin/sudo:offensive - Let sudo print insults when the user types the wrong password.
+app-admin/sudo:openssl - Use SHA2 from dev-libs/openssl instead of sudo's internal SHA2.
 app-admin/sudo:sendmail - Allow sudo to send emails with sendmail.
 app-admin/sysklogd:logrotate - use app-admin/logrotate for rotating logs rather than custom cron scripts
 app-admin/syslog-ng:amqp - Enable support for AMQP destinations
@@ -567,6 +569,7 @@ app-emulation/rkt:rkt_stage1_kvm - This flag has been replaced by the rkt_stage1
 app-emulation/rkt:rkt_stage1_kvm_lkvm - Build stage1-kvm-lkvm.aci
 app-emulation/rkt:rkt_stage1_kvm_qemu - Build stage1-kvm-qemu.aci
 app-emulation/rkt:rkt_stage1_src - Build the stage1.aci from source
+app-emulation/runc:ambient - Enable support for ambient capabilities set (Requires Linux kernel 4.3 or later).
 app-emulation/runc:apparmor - Enable AppArmor support.
 app-emulation/runv:libvirt - Enable support for KVM via libvirt
 app-emulation/runv:xen - Enable support for the Xen Hypervisor
@@ -1200,6 +1203,9 @@ app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) sett
 app-vim/vim-latex:html - Install HTML documentation
 app-vim/vim-latex:python - Enable python support which can help speed up some functionality
 app-vim/youcompleteme:clang - Enable semantic support for C-family languages using sys-devel/clang
+dev-ada/xmlada:shared - Build shared library
+dev-ada/xmlada:static - Build static library
+dev-ada/xmlada:static-pic - Build static library with pic code
 dev-cpp/eigen:c++11 - Build using the C++11 standard
 dev-cpp/eigen:cpu_flags_x86_f16c - Take advantage of CPU feature f16c
 dev-cpp/eigen:cuda - Build with cuda support
@@ -5276,7 +5282,6 @@ net-dialup/ppp:gtk - Installs GTK+ password prompting program that can be used b
 net-dialup/ppp:ipv6 - Enables support for IP version 6
 net-dialup/ppp:pam - Enables PAM (Pluggable Authentication Modules) support
 net-dialup/ppp:radius - Enables RADIUS support
-net-dialup/pptpd:gre-extreme-debug - Log all GRE accepted packages when in debug mode (required if you want upstream support)
 net-dialup/xl2tpd:dnsretry - Patch for host lookup retries, activated by redial feature
 net-dialup/xl2tpd:kernel - Enable kernel interface for PPPoL2TP
 net-dns/avahi:autoipd - Build and install the IPv4LL (RFC3927) network address configuration daemon
@@ -5820,10 +5825,18 @@ net-libs/libtorrent-rasterbar:dht - Enable DHT (distributed hash table) support
 net-libs/libtrace:numa - Use sys-process/numactl
 net-libs/libvncserver:24bpp - enable 24bpp support
 net-libs/libvncserver:gcrypt - enable support for gcrypt
+net-libs/libwebsockets:access-log - Support generating Apache-compatible access logs
+net-libs/libwebsockets:cgi - Include CGI (spawn process with network-connected stdin/out/err) APIs
 net-libs/libwebsockets:client - The client part of the library and libwebsockets-test-client
+net-libs/libwebsockets:generic-sessions - With the Generic Sessions plugin
+net-libs/libwebsockets:http-proxy - Support for rewriting HTTP proxying
 net-libs/libwebsockets:http2 - Support the HTTP/2 protocol
+net-libs/libwebsockets:lejp - With the Lightweight JSON Parser
 net-libs/libwebsockets:libev - Support event loops via dev-libs/libev
 net-libs/libwebsockets:libuv - Support asynchronous I/O via dev-libs/libuv
+net-libs/libwebsockets:server-status - Support json + jscript server monitoring
+net-libs/libwebsockets:smtp - Provide SMTP support
+net-libs/libwebsockets:sqlite3 - Require SQLITE3 support
 net-libs/loudmouth:asyncns - Use net-libs/libasyncns for asynchronous name resolution.
 net-libs/loudmouth:openssl - Enable dev-libs/openssl support instead of gnutls (which is the default).
 net-libs/mbedtls:havege - Enable the HAVEGE random generator. Warning: the HAVEGE random generator is not suitable for virtualized environments
@@ -6652,6 +6665,7 @@ net-vpn/openvpn:pkcs11 - Enable PKCS#11 smartcard support
 net-vpn/openvpn:plugins - Enable the OpenVPN plugin system
 net-vpn/openvpn:polarssl - Use PolarSSL instead of OpenSSL
 net-vpn/openvpn:socks - Enable socks support
+net-vpn/pptpd:gre-extreme-debug - Log all GRE accepted packages when in debug mode (required if you want upstream support)
 net-vpn/strongswan:constraints - Enable advanced X.509 constraint checking plugin.
 net-vpn/strongswan:dhcp - Enable server support for querying virtual IP addresses for clients from a DHCP server. (IKEv2 only)
 net-vpn/strongswan:eap - Enable support for the different EAP modules that is supported.

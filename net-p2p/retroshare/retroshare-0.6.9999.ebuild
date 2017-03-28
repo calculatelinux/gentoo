@@ -47,17 +47,17 @@ RDEPEND="
 	qt5? (
 		gui? (
 			dev-qt/designer:5
+			dev-qt/qtgui:5
 			dev-qt/qtwidgets:5
+			dev-qt/qtx11extras:5
 			x11-libs/libX11
 			x11-libs/libXScrnSaver
 		)
 		dev-qt/qtcore:5
-		dev-qt/qtgui:5
 		dev-qt/qtmultimedia:5
 		dev-qt/qtnetwork:5
 		dev-qt/qtprintsupport:5
 		dev-qt/qtscript:5
-		dev-qt/qtx11extras:5
 		dev-qt/qtxml:5
 	)
 	voip? (

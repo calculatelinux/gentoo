@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit autotools multilib-minimal
+inherit autotools ltprune multilib-minimal
 
 DESCRIPTION="General purpose crypto library based on the code used in GnuPG"
 HOMEPAGE="http://www.gnupg.org/"
@@ -56,4 +56,9 @@ multilib_src_install() {
 	emake DESTDIR="${D}" install
 
 	rm -r "${ED%/}"/usr/{bin,include,lib*/*.so,share} || die
+}
+
+multilib_src_install_all() {
+	default
+	prune_libtool_files
 }
