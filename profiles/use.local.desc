@@ -6194,6 +6194,7 @@ net-misc/hylafaxplus:html - Convert faxes into html email
 net-misc/hylafaxplus:jbig - JBIG Fax Compression Support
 net-misc/hylafaxplus:mgetty - Receive faxes via serial port connections
 net-misc/hylafaxplus:pam - hfaxd authentication via PAM
+net-misc/icaclient:gstreamer010 - Enable audio support via media-libs/gstreamer using SLOT 0.10
 net-misc/icecast:kate - Add karaoke and text encapsulation support for Ogg files
 net-misc/icecast:logrotate - Install support files for app-admin/logrotate?
 net-misc/icecast:yp - Build support for yp public directory listings
@@ -7851,7 +7852,6 @@ sys-fs/owfs:ftpd - Enable building the OWFS FTP server (owftpd)
 sys-fs/owfs:fuse - Enable building the FUSE-based OWFS client (owfs)
 sys-fs/owfs:httpd - Enable building the OWFS web server (owhttpd)
 sys-fs/owfs:parport - Enable support for the DS1410E parallel port adapter
-sys-fs/owfs:server - Enable building the OWFS server (owserver)
 sys-fs/owfs:zeroconf - Enables support for zero-configuration networking via net-dns/avahi
 sys-fs/quota:netlink - Compile daemon receiving quota messages via netlink
 sys-fs/quota:rpc - Enable quota interaction via RPC
@@ -8299,7 +8299,6 @@ x11-base/xorg-server:xvfb - Build the Xvfb server
 x11-drivers/nvidia-drivers:X - Install the X.org driver, OpenGL libraries, XvMC libraries, and VDPAU libraries
 x11-drivers/nvidia-drivers:compat - Install non-GLVND libGL for backwards compatibility
 x11-drivers/nvidia-drivers:driver - Install the kernel driver module
-x11-drivers/nvidia-drivers:gtk2 - Install nvidia-settings with support for GTK+ 2
 x11-drivers/nvidia-drivers:gtk3 - Install nvidia-settings with support for GTK+ 3
 x11-drivers/nvidia-drivers:kms - Enable support for kernel mode setting (KMS)
 x11-drivers/nvidia-drivers:pax_kernel - PaX patches from the PaX project

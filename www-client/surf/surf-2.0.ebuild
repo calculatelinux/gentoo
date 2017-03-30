@@ -8,7 +8,6 @@ DESCRIPTION="a simple web browser based on WebKit/GTK+"
 HOMEPAGE="http://surf.suckless.org/"
 SRC_URI="
 	http://dl.suckless.org/${PN}/${P}.tar.gz
-	http://git.suckless.org/${PN}/snapshot/${P}.tar.gz
 "
 
 LICENSE="MIT"
@@ -18,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 COMMON_DEPEND="
 	dev-libs/glib:2
 	net-libs/libsoup
-	net-libs/webkit-gtk:3
+	net-libs/webkit-gtk:4
 	x11-libs/gtk+:3
 	x11-libs/libX11
 "
