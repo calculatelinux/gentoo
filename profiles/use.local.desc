@@ -2229,6 +2229,8 @@ dev-ml/ocaml-dns:async - support for asynchronous execution
 dev-ml/ocaml-dns:lwt - enable threads via lwt
 dev-ml/ocaml-redis:lwt - Enable lwt bindings for asynchronous processing.
 dev-ml/ocaml-uri:allservices - Compile support for all service types
+dev-ml/ocaml-websocket:async - Enables support for the dev-ml/async asynchronous execution library.
+dev-ml/ocaml-websocket:lwt - Enables support for the dev-ml/lwt cooperative light-weight thread library.
 dev-ml/ocamlnet:cryptokit - Enables encryption support via dev-ml/cryptokit
 dev-ml/ocamlnet:httpd - Enables net-httpd web server component
 dev-ml/ocamlnet:zip - Enables netzip support to read/write gzip data using object channels
@@ -4831,6 +4833,7 @@ media-video/libav:vis - Adds support for SIMD optimizations for UltraSPARC proce
 media-video/libav:vpx - Enable vp8 encoding support using media-libs/libvpx.
 media-video/libav:webp - Enable WebP encoding with media-libs/libwebp.
 media-video/libav:x265 - Enable HEVC encoding with media-libs/x265.
+media-video/libva-utils:drm - Enables VA/DRM API support.
 media-video/lives:libvisual - Enable libvisual support
 media-video/minitube:download - Enable support for downloading YouTube videos
 media-video/mjpegtools:sdlgfx - Enables y4mhist to display a graphical histogram
@@ -8349,6 +8352,7 @@ x11-libs/libqxt:web - Build the QxtWeb module
 x11-libs/libqxt:zeroconf - Build the QxtZeroconf module
 x11-libs/libva:drm - Enables VA/DRM API support.
 x11-libs/libva:egl - Enables EGL support.
+x11-libs/libva:utils - Install VA-API utility programs.
 x11-libs/libva-intel-driver:drm - Enables VA/DRM API support.
 x11-libs/libwnck:tools - Install wnckprop-3 and wnck-urgency-monitor-3 command-line tools
 x11-libs/libxcb:xkb - Enable the XCB keyboard extension
