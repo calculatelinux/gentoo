@@ -199,7 +199,6 @@ app-arch/engrampa:caja - Enable engrampa to integrate with mate-base/caja by pro
 app-arch/engrampa:gtk3 - Build with GTK+3 instead of GTK+2
 app-arch/engrampa:magic - Enable filetype auto-detection via sys-apps/file
 app-arch/engrampa:packagekit - Enable support for installing via app-admin/packagekit based on archive type
-app-arch/file-roller:nautilus - Enable file-roller to integrate with gnome-base/nautilus by providing entries in its context menu
 app-arch/file-roller:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
 app-arch/gzip:pic - disable optimized assembly code that is not PIC friendly
 app-arch/innoextract:c++0x - Compile innoextract using the C++11 standard.
@@ -260,6 +259,7 @@ app-backup/snapper:lvm - Enable LVM thinprovisioned snapshots support sys-fs/lvm
 app-backup/snapper:xattr - Add support for getting and setting POSIX extended attributes, through sys-apps/attr.
 app-backup/tsm:tsm_cit - IBM Tivoli Common Inventory Technology
 app-backup/tsm:tsm_hw - Difference snapshot support for NetApp and N-Series file servers
+app-backup/zbackup:tartool - Install tartool utility
 app-benchmarks/filebench:auto-completion - Enable command-line autocompletion using dev-libs/libtecla.
 app-benchmarks/httperf:idleconn - Build with the idleconn program
 app-benchmarks/jmeter:beanshell - Enable BeanShell scripting support
@@ -546,7 +546,6 @@ app-emulation/qemu:snappy - Enable support for snappy compression
 app-emulation/qemu:spice - Enable Spice protocol support via app-emulation/spice
 app-emulation/qemu:ssh - Enable SSH based block device support via net-libs/libssh2
 app-emulation/qemu:static - Build the User and Software MMU (system) targets as well as tools as static binaries
-app-emulation/qemu:static-softmmu - Build the Software MMU (system) targets as static binaries
 app-emulation/qemu:static-user - Build the User targets as static binaries
 app-emulation/qemu:systemtap - Enable SystemTAP/DTrace tracing
 app-emulation/qemu:tci - Enable the TCG Interpreter which can speed up or slowdown workloads depending on the host and guest CPUs being emulated. In the future it will be a runtime option but for now its compile time.
@@ -1202,6 +1201,9 @@ app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) sett
 app-vim/vim-latex:html - Install HTML documentation
 app-vim/vim-latex:python - Enable python support which can help speed up some functionality
 app-vim/youcompleteme:clang - Enable semantic support for C-family languages using sys-devel/clang
+dev-ada/gnat_util:shared - Build gnat_util shared library
+dev-ada/gnat_util:static - Build gnat_util static library
+dev-ada/gnat_util:static-pic - Build gnat_util static library with pic code
 dev-ada/gprbuild:shared - Build shared library
 dev-ada/gprbuild:static - Build static library
 dev-ada/gprbuild:static-pic - Build static library with pic code
@@ -2205,7 +2207,6 @@ dev-ml/dose3:parmap - Adds multi-core CPU support via dev-ml/parmap.
 dev-ml/dose3:rpm4 - Adds support for handling rpm4 files.
 dev-ml/dose3:zip - Adds support for handling zip files.
 dev-ml/eliom:ppx - Enable PPX syntax extension support.
-dev-ml/js_of_ocaml:async - Enable support of dev-ml/async_kernel.
 dev-ml/js_of_ocaml:deriving - Enable dev-ml/deriving support for improving the type safety.
 dev-ml/js_of_ocaml:ppx - Enables the ppx syntax extension
 dev-ml/js_of_ocaml:ppx-deriving - Enables deriving support through ppx syntax extensions.
@@ -3216,7 +3217,6 @@ gnome-base/gnome:extras - Install additional GNOME applications
 gnome-base/gnome-common:autoconf-archive - Pull in sys-devel/autoconf-archive for ax_*.m4 files instead of installing them from the gnome-common tarball
 gnome-base/gnome-control-center:colord - Support color management using x11-misc/colord
 gnome-base/gnome-control-center:gnome-online-accounts - Enable configuration panel for net-libs/gnome-online-accounts accounts
-gnome-base/gnome-control-center:i18n - Enable support for enhanced input methods through app-i18n/ibus
 gnome-base/gnome-control-center:ibus - Enable support for enhanced input methods through app-i18n/ibus
 gnome-base/gnome-desktop:license-docs - Install help files documenting GNOME's licenses
 gnome-base/gnome-extra-apps:games - Install Gnome Games
@@ -3254,7 +3254,6 @@ gnome-extra/evolution-data-server:berkdb - sys-libs/db support needed to migrate
 gnome-extra/evolution-data-server:gnome-online-accounts - Enable net-libs/gnome-online-accounts based Google authentication support
 gnome-extra/evolution-data-server:google - Enable internal Google authentication support. If gnome-online-accounts is enabled and used, this is not necessary, but both can be supported at the same time with different setup at runtime
 gnome-extra/evolution-data-server:weather - Enable optional weather calendar support
-gnome-extra/gnome-boxes:usbredir - Use sys-apps/usbredir to redirect USB devices to another machine over TCP
 gnome-extra/gnome-builder:clang - Provide integration with sys-devel/clang for best possible C/C++ autocompletion, semantic highlighting, symbol resolving, and diagnostics support
 gnome-extra/gnome-builder:git - Provide support for the Git version control system via dev-libs/libgit2-glib (such as setup of Git for New Project, direct cloning for Open Project and changed lines indicators in the editor gutter)
 gnome-extra/gnome-builder:sysprof - Provide an integrated profiler via dev-util/sysprof
@@ -3550,7 +3549,6 @@ mail-client/evolution:crypt - Enable GPG encryption support using app-crypt/gnup
 mail-client/evolution:geolocation - Enable support for displaying contacts on a map inside evolution using media-libs/libchamplain
 mail-client/evolution:highlight - Enable text highlighting plugin
 mail-client/evolution:ldap - Enable support for fetching contacts from an LDAP or Active Directory server using net-nds/openldap
-mail-client/evolution:map - Enable support for displaying contacts on a map inside evolution using media-libs/libchamplain
 mail-client/evolution:spamassassin - Build mail-filter/spamassassin plugin
 mail-client/evolution:weather - Enable optional weather calendar support
 mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by mail-client/sylpheed
@@ -8586,7 +8584,6 @@ x11-wm/marco:gtk3 - Build with GTK+3 instead of GTK+2
 x11-wm/musca:apis - Optionally install the experimental `apis' window manager
 x11-wm/musca:xlisten - Optionally install the xlisten utility
 x11-wm/mutter:gles2 - Enable OpenGL ES 2.0 support
-x11-wm/mutter:kms - Enable KMS support.
 x11-wm/notion:xrandr - Add support for xrandr
 x11-wm/openbox:session - Enables support for session managers
 x11-wm/openbox:xdg - Install the python xdg files for xdg autostart
