@@ -680,11 +680,6 @@
       <role>Member</role>
     </member>
     <member>
-      <email>dastergon@gentoo.org</email>
-      <name>Pavlos Ratis</name>
-      <role>Member</role>
-    </member>
-    <member>
       <email>mrueg@gentoo.org</email>
       <name>Manuel Rüger</name>
       <role>Member</role>
@@ -1372,11 +1367,6 @@
     <name>Gentoo Keys</name>
     <url>https://wiki.gentoo.org/wiki/Project:Gentoo-keys</url>
     <description>Gentoo Keys is a Python based project that aims to manage the OpenPGP keys used for validation on users and Gentoo's infrastructure servers.</description>
-    <member>
-      <email>dastergon@gentoo.org</email>
-      <name>Pavlos Ratis</name>
-      <role>Developer</role>
-    </member>
     <member is-lead="1">
       <email>dolsen@gentoo.org</email>
       <name>Brian Dolbec</name>
@@ -1682,11 +1672,6 @@
       <email>blueknight@gentoo.org</email>
       <name>Yury German</name>
       <role>General System Administration, Blogs, Planet</role>
-    </member>
-    <member>
-      <email>dastergon@gentoo.org</email>
-      <name>Pavlos Ratis</name>
-      <role>General System Administration</role>
     </member>
     <member>
       <email>idl0r@gentoo.org</email>
@@ -2218,11 +2203,6 @@
       <email>soap@gentoo.org</email>
       <name>David Seifert</name>
       <role>Mathematics, Numerics, Statistics</role>
-    </member>
-    <member>
-      <email>tomka@gentoo.org</email>
-      <name>Thomas Kahle</name>
-      <role>Symbolic computation</role>
     </member>
   </project>
   <project>
@@ -3090,11 +3070,6 @@ developers and volunteer mentors.</description>
       <name>David Abbott</name>
     </member>
     <member>
-      <email>dastergon@gentoo.org</email>
-      <name>Pavlos Ratis</name>
-      <role>Facebook</role>
-    </member>
-    <member>
       <email>dilfridge@gentoo.org</email>
       <name>Andreas K. Hüttel</name>
       <role>Facebook</role>
@@ -3747,11 +3722,6 @@ developers and volunteer mentors.</description>
       <role>Chemistry, Biology, *</role>
     </member>
     <member>
-      <email>junghans@gentoo.org</email>
-      <name>Christoph Junghans</name>
-      <role>Chemistry, Physics, *</role>
-    </member>
-    <member>
       <email>marecki@gentoo.org</email>
       <name>Marek Szuba</name>
       <role>Physics, Mathematics, Electronics, *</role>
@@ -3772,11 +3742,6 @@ developers and volunteer mentors.</description>
       <role>Mathematics, *, BLAS/LAPACK overlord</role>
     </member>
     <member>
-      <email>tomka@gentoo.org</email>
-      <name>Thomas Kahle</name>
-      <role>Mathematics, symbolic computation</role>
-    </member>
-    <member>
       <email>xarthisius@gentoo.org</email>
       <name>Kacper Kowalik</name>
       <role>Astronomy, *</role>
@@ -3789,30 +3754,30 @@ developers and volunteer mentors.</description>
     <description>The Gentoo Security Project's mission is to ensure that vulnerabilities in software accessible through the Portage tree are found and fixed in a timely manner, so that our users remain protected against known vulnerabilities.</description>
     <subproject ref="security-audit@gentoo.org"/>
     <subproject ref="security-kernel@gentoo.org"/>
-    <member is-lead="1">
+    <member>
       <email>a3li@gentoo.org</email>
       <name>Alex Legler</name>
-      <role>Operational Manager</role>
+      <role>GLSA Coordinator</role>
     </member>
     <member>
       <email>ackle@gentoo.org</email>
       <name>Sean Amoss</name>
       <role>GLSA Coordinator</role>
     </member>
-    <member>
+    <member is-lead="1">
       <email>blueknight@gentoo.org</email>
       <name>Yury German</name>
-      <role>GLSA Coordinator</role>
+      <role>Team lead</role>
     </member>
     <member>
       <email>creffett@gentoo.org</email>
       <name>Chris Reffett</name>
       <role>GLSA Coordinator</role>
     </member>
-    <member is-lead="1">
+    <member>
       <email>keytoaster@gentoo.org</email>
       <name>Tobias Heinlein</name>
-      <role>Operational Manager</role>
+      <role>GLSA Coordinator</role>
     </member>
     <member>
       <email>k_f@gentoo.org</email>

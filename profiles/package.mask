@@ -101,11 +101,6 @@ dev-perl/File-DirWalk
 # Symantec trust issues properly (bug #613714)
 =app-misc/ca-certificates-20161130.3.30-r1
 
-# Johannes Huber <johu@gentoo.org> (22 Mar 2017)
-# Masked for removal in 14 days. Echonest service is gone
-# since 2016/05/31. No reverse dependencies. Bug #587972.
-media-libs/libechonest
-
 # Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (20 Mar 2017)
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
@@ -452,11 +447,6 @@ dev-perl/Params-ValidationCompiler
 # Aaron Bauman <bman@gentoo.org> (30 Jun 2016)
 # Unpatched security vulnerability per bug #509920
 www-apps/egroupware
-
-# Michał Górny <mgorny@gentoo.org> (27 Jun 2016)
-# (on behalf of QA & proxy-maint)
-# Major QA violations, bug #587342 (#585722 in particular).
-games-emulation/ppsspp
 
 # Aaron Bauman <bman@gentoo.org> (26 Jun 2016)
 # Unpatched security vulnerability per bug #475120
