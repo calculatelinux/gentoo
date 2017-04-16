@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=media-gfx/opencsg sci-mathematics/cgal dev-qt/qtcore:4 dev-qt/qtgui:4[-egl] dev-qt/qtopengl:4[-egl] dev-cpp/eigen:3 dev-libs/glib:2 dev-libs/gmp:0= dev-libs/mpfr:0= dev-libs/boost:= media-libs/fontconfig:1.0 media-libs/freetype:2 media-libs/glew:* media-libs/harfbuzz x11-libs/qscintilla:=[qt4(-)]
 SLOT=0
 SRC_URI=http://files.openscad.org/openscad-2015.03-2.src.tar.gz
-_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	0236be304ee52e7f179ed2f337075515	qmake-utils	ea78a9056543346cdc8cbbd07f16c6fb	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	e7491451996e8b54c3caeb713285b0fb	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	0236be304ee52e7f179ed2f337075515	qmake-utils	ea78a9056543346cdc8cbbd07f16c6fb	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
 _md5_=1655a34f4f7651ea2fcdd99c7e5bb6d7

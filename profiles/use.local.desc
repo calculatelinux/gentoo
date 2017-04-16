@@ -2606,10 +2606,11 @@ dev-qt/qt-creator:autotools - Enable autotools project manager plugin
 dev-qt/qt-creator:baremetal - Build plugin for bare metal devices
 dev-qt/qt-creator:bazaar - Add support for dev-vcs/bzr version control system
 dev-qt/qt-creator:clang - Build clang-based code model plugin
-dev-qt/qt-creator:clangcodemodel - Build clang-based code model plugin
+dev-qt/qt-creator:clangcodemodel - Build clang-based code model and refactoring plugins
 dev-qt/qt-creator:clangstaticanalyzer - Build clang-based static analyzer plugin
 dev-qt/qt-creator:clearcase - Add support for IBM ClearCase version control system (requires manual installation of ClearCase client)
 dev-qt/qt-creator:cmake - Enable cmake project manager plugin
+dev-qt/qt-creator:designer - Build widget designer plugin
 dev-qt/qt-creator:glsl - Enable GLSL source code editor
 dev-qt/qt-creator:ios - Build plugin for Apple iOS devices
 dev-qt/qt-creator:mercurial - Add support for dev-vcs/mercurial version control system
@@ -6247,6 +6248,12 @@ net-misc/electrum:qrcode - Enable QR code scanning with media-gfx/zbar
 net-misc/electrum:sync - Enable plugin to sync wallet metadata across multiple Electrum clients
 net-misc/electrum:trustedcoin_com - Enable plugin to use two-factor service by TrustedCoin.com
 net-misc/electrum:vkb - Enable plugin for virtual keyboard
+net-misc/eventd:libcanberra - Enable plugin for sounds via media-libs/libcanberra
+net-misc/eventd:libnotify - Enable plugin to relay events to notification daemon (Note: not required for local notifications via net-misc/eventd)
+net-misc/eventd:notification - Enable plugin to display on-screen notifications
+net-misc/eventd:purple - Enable plugin for IM notifications via libpurple
+net-misc/eventd:speech - Enable plugin for Text-To-Speech support
+net-misc/eventd:websocket - Enable support for WebSocket protocol
 net-misc/fatrat:bittorrent - Use the bittorrent protocol via net-libs/libtorrent-rasterbar.
 net-misc/fatrat:webinterface - Enable builtin webinterface.
 net-misc/flexget:transmission - Support comminucation with net-p2p/transmission
