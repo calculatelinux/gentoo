@@ -2285,7 +2285,6 @@ dev-ml/dose3:zip - Adds support for handling zip files.
 dev-ml/eliom:ppx - Enable PPX syntax extension support.
 dev-ml/js_of_ocaml:deriving - Enable dev-ml/deriving support for improving the type safety.
 dev-ml/js_of_ocaml:ppx - Enables the ppx syntax extension
-dev-ml/js_of_ocaml:ppx-deriving - Enables deriving support through ppx syntax extensions.
 dev-ml/js_of_ocaml:react - Enable functionnal reactive programming support.
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/lablgtk:gnomecanvas - Enable libgnomecanvas bindings compilation.
@@ -3363,15 +3362,6 @@ gnome-extra/zeitgeist:downloads-monitor - Monitor the XDG_DOWNLOAD_DIRECTORY
 gnome-extra/zeitgeist:fts - Enable the full text search extension
 gnome-extra/zeitgeist:sql-debug - Enable SQL debugging
 gnome-extra/zeitgeist:telepathy - Enable telepathy framework as data source
-gnome-extra/zeitgeist-datasources:bzr - Zeitgeist plugin for dev-vcs/bzr as data source
-gnome-extra/zeitgeist-datasources:chromium - Zeitgeist plugin for www-client/chromium as data source
-gnome-extra/zeitgeist-datasources:emacs - Zeitgeist plugin for emacs as data source
-gnome-extra/zeitgeist-datasources:firefox - Zeitgeist plugin for www-client/firefox as data source
-gnome-extra/zeitgeist-datasources:geany - Zeitgeist plugin for dev-util/geany as data source
-gnome-extra/zeitgeist-datasources:telepathy - Zeitgeist plugin for telepathy framework as data source
-gnome-extra/zeitgeist-datasources:thunderbird - Zeitgeist plugin for mail-client/thunderbird as data source
-gnome-extra/zeitgeist-datasources:tomboy - Zeitgeist plugin for tomboy as data source
-gnome-extra/zeitgeist-datasources:vim - Zeitgeist plugin for vim as data source
 gnustep-apps/gemas:projectcenter - Build and install plugin for gnustep-apps/projectcenter
 gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in e-mail messages
 gnustep-apps/gworkspace:gwmetadata - Enable the metadata indexing and searching system
