@@ -201,7 +201,7 @@ mozconfig_config() {
 		fi
 	fi
 
-	# Enable position independent executables 
+	# Enable position independent executables
 	mozconfig_annotate 'enabled by Gentoo' --enable-pie
 	mozconfig_use_enable debug
 	mozconfig_use_enable debug tests
@@ -328,10 +328,6 @@ mozconfig_config() {
 	fi
 	if [[ ${CHOST} == armv* ]] ; then
 		mozconfig_annotate '' --with-float-abi=hard
-		if ! use skia ; then
-			mozconfig_annotate 'Gentoo forces skia for arm' --enable-skia
-		fi
-
 		if ! use system-libvpx ; then
 			sed -i -e "s|softfp|hard|" \
 				"${S}"/media/libvpx/moz.build
