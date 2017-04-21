@@ -2285,7 +2285,6 @@ dev-ml/logs:fmt - Enables the Logs_fmt reporter.
 dev-ml/logs:lwt - Enables the Logs_lwt library that provides Lwt logging functions.
 dev-ml/lwt:camlp4 - Enable camlp4 syntax extension
 dev-ml/lwt:ppx - Enables the ppx syntax extension
-dev-ml/lwt:react - Enables support for dev-ml/react: Functional reactive programming (signals, events, etc.).
 dev-ml/ocaml-cohttp:async - Enables support for the dev-ml/async asynchronous execution library.
 dev-ml/ocaml-cohttp:lwt - Enables support for the dev-ml/lwt cooperative light-weight thread library.
 dev-ml/ocaml-cstruct:async - Support for asynchronous execution
@@ -2297,7 +2296,6 @@ dev-ml/ocaml-redis:lwt - Enable lwt bindings for asynchronous processing.
 dev-ml/ocaml-uri:allservices - Compile support for all service types
 dev-ml/ocaml-websocket:async - Enables support for the dev-ml/async asynchronous execution library.
 dev-ml/ocaml-websocket:lwt - Enables support for the dev-ml/lwt cooperative light-weight thread library.
-dev-ml/ocamlnet:cryptokit - Enables encryption support via dev-ml/cryptokit
 dev-ml/ocamlnet:httpd - Enables net-httpd web server component
 dev-ml/ocamlnet:zip - Enables netzip support to read/write gzip data using object channels
 dev-ml/onanomsg:lwt - Enables lwt support.
@@ -3367,6 +3365,7 @@ kde-apps/akonadi:designer - Install plugin for dev-qt/designer
 kde-apps/akonadi:tools - Install tools for developers and testing
 kde-apps/akonadi-contacts:prison - Enable support for QRcodes in contacts
 kde-apps/analitza:eigen - Enable dev-cpp/eigen mathematical templates support
+kde-apps/ark:zip - Enable ZIP archive support via dev-libs/libzip
 kde-apps/artikulate:qtmedia - Enable playback via Qt5Multimedia
 kde-apps/blogilo:google - Google service integration via kde-apps/libkgapi
 kde-apps/cantor:R - Enable dev-lang/R backend support
@@ -3398,6 +3397,7 @@ kde-apps/kdenlive:jogshuttle - Enable support for Jog-Shuttle devices
 kde-apps/kdepim-addons:google - Google service integration via kde-apps/libkgapi
 kde-apps/kdepim-apps-libs:prison - Enable support for QRcodes in contacts
 kde-apps/kdepim-common-libs:google - Google service integration via kde-apps/libkgapi
+kde-apps/kdepim-meta:google - Google service integration via kde-apps/libkgapi
 kde-apps/kdepim-runtime:google - Google service integration via kde-apps/libkgapi
 kde-apps/kdepimlibs:prison - Enable support for QRcodes in contacts
 kde-apps/kdeutils-meta:floppy - Install kde-apps/kfloppy to format and create DOS or ext2fs filesystems in a floppy.
@@ -5231,7 +5231,10 @@ net-analyzer/pinger:gtk2 - Install the gtkpinger GUI utility based on x11-libs/g
 net-analyzer/pinger:gtk3 - Install the gtkpinger GUI utility based on x11-libs/gtk+:3
 net-analyzer/pmacct:64bit - Use 64bit counters instead of 32bit ones
 net-analyzer/pmacct:geoipv2 - Add support for GeoIP2 through dev-libs/libmaxminddb
+net-analyzer/pmacct:jansson - Add support for JSON through dev-libs/jansson
+net-analyzer/pmacct:kafka - Add support for Apache Kafka through dev-libs/librdkafka
 net-analyzer/pmacct:mongodb - Add support for mongodb backend
+net-analyzer/pmacct:rabbitmq - Add support for RabbitMQ through net-libs/rabbitmq-c
 net-analyzer/pmacct:ulog - Enable support for ULOG in older kernels (deprecated)
 net-analyzer/prelude-lml:tls - Enables Prelude LML support Syslog through TLS using net-libs/gnutls.
 net-analyzer/rrdcollect:exec - Enable exec:/// support
@@ -6675,11 +6678,8 @@ net-proxy/tsocks:server-lookups - Allow hostname resolution _for_ SOCKS servers
 net-proxy/tsocks:tordns - Apply tordns patch which allows transparent TORification of the DNS queries
 net-proxy/ufdbguard:doc - Download and install the ufdbguard reference manual in PDF.
 net-proxy/ufdbguard:httpd - Build, install and start the provided mini-http daemon with the redirect CGI integrated. Since there is no way to tell ufdbguard to not start it, this is a build-time option.
-net-voip/ekiga:gconf - Enable GConf support
 net-voip/ekiga:h323 - Enable H.323 protocol
 net-voip/ekiga:shm - Enable the Shared Memory Extension from libXext
-net-voip/ekiga:static - Statically link to opal and ptlib
-net-voip/ekiga:xcap - Enable XML Configuration Access Protocal
 net-voip/gnugk:ssh - Enable support for SSH port forwarding using net-libs/libssh
 net-voip/linphone:assistant - Turn on assistant compiling (needs gtk enabled)
 net-voip/linphone:gsm-nonstandard - Support non-standard GSM frequencies

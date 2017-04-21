@@ -174,16 +174,9 @@
   </project>
   <project>
     <email>alt@gentoo.org</email>
-    <name>Alt Project</name>
+    <name>Alt</name>
     <url>https://wiki.gentoo.org/wiki/Project:Alt</url>
-    <description>Provide Gentoo-way solutions for non-GNU/Linux platforms.</description>
-    <subproject ref="bsd@gentoo.org"/>
-    <subproject ref="prefix@gentoo.org"/>
-    <member>
-      <email>maffblaster@gentoo.org</email>
-      <name>Matthew Marchese</name>
-      <role>Life giver</role>
-    </member>
+    <description>Provide Gentoo solutions for non-GNU/Linux platforms.</description>
   </project>
   <project>
     <email>antivirus@gentoo.org</email>
@@ -651,12 +644,12 @@
   </project>
   <project>
     <email>comres@gentoo.org</email>
-    <name>Gentoo Community Resources</name>
+    <name>Community Resources</name>
     <url>https://wiki.gentoo.org/wiki/Project:ComRes</url>
-    <description>Gentoo Community Resources is an umbrella project comprising the Recruiters, Retirement and Comminity Relations subprojects. It acts as a central place for all the human-resources related projects.</description>
-    <subproject ref="comrel@gentoo.org"/>
-    <subproject ref="mentors@gentoo.org"/>
-    <subproject ref="recruiters@gentoo.org"/>
+    <description>Community Resources is an umbrella project comprising the Recruiters, Retirement and Comminity Relations subprojects. It acts as a central place for all the human-resources related projects.</description>
+    <subproject ref="comrel@gentoo.org" inherit-members="1"/>
+    <subproject ref="mentors@gentoo.org" inherit-members="1"/>
+    <subproject ref="recruiters@gentoo.org" inherit-members="1"/>
   </project>
   <project>
     <email>common-lisp@gentoo.org</email>
@@ -831,17 +824,6 @@
     <member>
       <email>ulm@gentoo.org</email>
       <name>Ulrich Müller</name>
-    </member>
-  </project>
-  <project>
-    <email>gentoo-doc@gentoo.org</email>
-    <name>Documentation Project</name>
-    <url>https://wiki.gentoo.org/wiki/Project:Documentation</url>
-    <description>The Gentoo Documentation Project (GDP) is responsible for the creation and maintenance of all general Gentoo documentation.</description>
-    <member is-lead="1">
-      <email>swift@gentoo.org</email>
-      <name>Sven Vermeulen</name>
-      <role>Author, Editor</role>
     </member>
   </project>
   <project>
@@ -1342,7 +1324,7 @@
   </project>
   <project>
     <email>genkernel@gentoo.org</email>
-    <name>Genkernel Project</name>
+    <name>Genkernel</name>
     <url>https://wiki.gentoo.org/wiki/Project:Genkernel</url>
     <description>The Genkernel project handles the maintenance and development of [https://packages.gentoo.org/packages/sys-kernel/genkernel sys-kernel/genkernel].</description>
     <member>
@@ -2393,9 +2375,9 @@ developers and volunteer mentors.</description>
   </project>
   <project>
     <email>news@gentoo.org</email>
-    <name>News Project</name>
+    <name>News</name>
     <url>https://wiki.gentoo.org/wiki/Project:News</url>
-    <description>Presenting news as it develops, this project is intended to provide the Gentoo community a stream of information regarding changes in the Gentoo universe.</description>
+    <description>Presenting news as it develops, the News project is intended to provide the Gentoo community a stream of information regarding changes in the Gentoo universe.</description>
     <member is-lead="1">
       <email>maffblaster@gentoo.org</email>
       <name>Matthew Marchese</name>
@@ -2873,6 +2855,7 @@ developers and volunteer mentors.</description>
     <name>Gentoo Prefix</name>
     <url>https://wiki.gentoo.org/wiki/Project:Prefix</url>
     <description>To bring out the virtues of Gentoo on different operating systems, the Gentoo Prefix project develops and maintains a way of installing Gentoo systems in a non-standard location, designated by a "prefix".</description>
+    <subproject ref="bsd@gentoo.org"/>
     <member>
       <email>amadio@gentoo.org</email>
       <name>Guilherme Amadio</name>
@@ -4257,12 +4240,17 @@ developers and volunteer mentors.</description>
   </project>
   <project>
     <email>www@gentoo.org</email>
-    <name>Gentoo Website Maintainers</name>
+    <name>Website Maintainers</name>
     <url>https://wiki.gentoo.org/wiki/Project:Website</url>
-    <description>The Website Team maintains the Gentoo website and develops new sites for the community.</description>
+    <description>The Website team maintains the Gentoo website and develops new sites for the community.</description>
     <member is-lead="1">
       <email>a3li@gentoo.org</email>
       <name>Alex Legler</name>
+    </member>
+    <member>
+      <email>maffblaster@gentoo.org</email>
+      <name>Matthew Marchese</name>
+      <role>Maintainer</role>
     </member>
     <member>
       <email>nightmorph@gentoo.org</email>
@@ -4271,9 +4259,9 @@ developers and volunteer mentors.</description>
   </project>
   <project>
     <email>wiki@gentoo.org</email>
-    <name>Wiki Project</name>
+    <name>Wiki</name>
     <url>https://wiki.gentoo.org/wiki/Project:Wiki</url>
-    <description>The Wiki Project oversees the community and the content surrounding https://wiki.gentoo.org</description>
+    <description>The Wiki project oversees the community and the content surrounding https://wiki.gentoo.org</description>
     <member is-lead="1">
       <email>a3li@gentoo.org</email>
       <name>Alex Legler</name>
