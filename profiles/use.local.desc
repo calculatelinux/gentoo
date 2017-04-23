@@ -3396,7 +3396,6 @@ kde-apps/kdenetwork-meta:ppp - Enable support for net-dialup/ppp.
 kde-apps/kdenlive:freesound - Enable freesound.org credentials support via dev-qt/qtwebkit to download files
 kde-apps/kdenlive:gles2 - Use GLES 2.0 or later instead of full OpenGL
 kde-apps/kdenlive:jogshuttle - Enable support for Jog-Shuttle devices
-kde-apps/kdepim-addons:google - Google service integration via kde-apps/libkgapi
 kde-apps/kdepim-apps-libs:prison - Enable support for QRcodes in contacts
 kde-apps/kdepim-common-libs:google - Google service integration via kde-apps/libkgapi
 kde-apps/kdepim-meta:google - Google service integration via kde-apps/libkgapi
@@ -3466,8 +3465,10 @@ kde-apps/marble:shapefile - Enable support for ESRI shapefiles
 kde-apps/okteta:designer - Build plugins for dev-qt/designer
 kde-apps/okular:chm - Enable support for Microsoft Compiled HTML Help files
 kde-apps/okular:ebook - Add E-Book support
+kde-apps/okular:image-backend - Enable image viewing support
 kde-apps/okular:mobi - Add mobipocket support
 kde-apps/okular:mobile - Enable Plasma mobile support
+kde-apps/okular:plucker - Enable Plucker E-Book for Palm OS devices support
 kde-apps/okular:speech - Enable text-to-speech support
 kde-apps/pimcommon:designer - Build plugins for dev-qt/designer
 kde-apps/spectacle:kipi - Enable support for the KDE Image Plugin Interface
@@ -4076,7 +4077,6 @@ media-libs/leptonica:utils - Install command-line utilities
 media-libs/leptonica:webp - Adds support for the WebP image format
 media-libs/libafterimage:shaping - Use MIT shaped X windows extention.
 media-libs/libafterimage:shm - Use MIT shared memory extention for X image transfer.
-media-libs/libaom:svc - Enable spatial-svc support (experimental)
 media-libs/libass:enca - Enables support for charset discovery and conversion.
 media-libs/libass:harfbuzz - Enables OpenType shaping via media-libs/harfbuzz.
 media-libs/libbdplus:aacs - Add support for decryption of AACS
@@ -7006,7 +7006,6 @@ sci-geosciences/mapserver:xslt - Enable xslt and exslt support xml-mapfile suppo
 sci-geosciences/merkaartor:libproxy - Use net-libs/libproxy for getting the HTTP/HTTPS/SOCKS proxy configuration
 sci-geosciences/merkaartor:qrcode - Enable QR code scanning with media-gfx/zbar
 sci-geosciences/merkaartor:webengine - Enable dev-qt/qtwebengine in some plugins
-sci-geosciences/osm2pgsql:pbf - Add support for importing the new "Protocolbuffer Binary Format"
 sci-geosciences/qgis:designer - Build custom widgets for dev-qt/designer
 sci-geosciences/qgis:georeferencer - Determines whether georeferencer plugin should be built
 sci-geosciences/qgis:grass - Add support for sci-geosciences/grass
