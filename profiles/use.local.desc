@@ -1272,6 +1272,7 @@ dev-ada/gnat_util:static - Build gnat_util static library
 dev-ada/gnat_util:static-pic - Build gnat_util static library with pic code
 dev-ada/gnatcoll:postgresql - Adds support for postgresql
 dev-ada/gnatcoll:projects - Adds support for projects
+dev-ada/gnatcoll:pygobject - Adds support for pygobject
 dev-ada/gnatcoll:shared - Build shared library
 dev-ada/gnatcoll:static - Build static library
 dev-ada/gprbuild:shared - Build shared library
@@ -1815,6 +1816,7 @@ dev-java/oracle-jdk-bin:headless-awt - Don't install the X backend for AWT, need
 dev-java/oracle-jdk-bin:javafx - Install JavaFX libraries
 dev-java/oracle-jdk-bin:jce - Install Java Cryptographic Extension Unlimited Strength Jurisdiction Policy Files
 dev-java/oracle-jdk-bin:source - Install JVM (and optionally JavaFX) sources
+dev-java/oracle-jdk-bin:visualvm - Install VisualVM debugging tool
 dev-java/oracle-jre-bin:commercial - Install features requiring a commercial license for production use
 dev-java/oracle-jre-bin:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
 dev-java/oracle-jre-bin:javafx - Install JavaFX libraries
@@ -6278,6 +6280,7 @@ net-misc/iputils:tftpd - Build and install tftpd -- server for the Trivial File 
 net-misc/iputils:tracepath - Build and install tracepath -- tool for tracing network paths for discovering MTU values
 net-misc/iputils:traceroute - Build and install traceroute -- tool for tracing network paths (see also net-analyzer/traceroute)
 net-misc/kafka-bin:internal-zookeeper - Use bundled local zookeeper instance
+net-misc/kafkacat:json - Enable json support
 net-misc/knock:server - Installs the knockd server daemon.
 net-misc/lcr:asterisk - net-misc/asterisk channel driver
 net-misc/lcr:gsm-bs - net-wireless/openbsc driver
@@ -7628,7 +7631,6 @@ sys-cluster/charm:syncft - Compile with Charm++ fault tolerance support
 sys-cluster/charm:tcp - Use TCP (instead of UPD) for socket communication
 sys-cluster/cinder:api - Installs the initscripts for the cinder api service
 sys-cluster/cinder:iscsi - Allow using an iSCSI remote storage server as pool for disk image storage
-sys-cluster/cinder:lio - Enable lio storage backend support
 sys-cluster/cinder:lvm - Allow using the Logical Volume Manager (sys-fs/lvm2) as pool for disk image storage
 sys-cluster/cinder:memcached - Installs the memcached server
 sys-cluster/cinder:rdma - Enable rdma storage backend support
@@ -7636,7 +7638,6 @@ sys-cluster/cinder:scheduler - Installs the initscripts for the cinder scheduler
 sys-cluster/cinder:tcp - Enables tcp support for the iscsi backend
 sys-cluster/cinder:tgt - Enable tgt storage backend support
 sys-cluster/cinder:volume - Installs the initscripts for the cinder volume service
-sys-cluster/cluster-glue:large-cluster - Extend messages length limits for resource heavy clusters
 sys-cluster/cluster-glue:libnet - Force use of net-libs/libnet
 sys-cluster/corosync:infiniband - Enable Infiniband RDMA transport support
 sys-cluster/drbd:heartbeat - Enable Heartbeat integration

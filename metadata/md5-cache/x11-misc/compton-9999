@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_python3_5? ( dev-lang/python:3.5 ) >=dev-lang/python-exec-2:=[python_targets_python3_4(-)?,python_targets_python3_5(-)?,-python_single_target_python3_4(-),-python_single_target_python3_5(-)] dev-libs/libconfig x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXrandr x11-libs/libXrender dbus? ( sys-apps/dbus ) opengl? ( virtual/opengl ) pcre? ( dev-libs/libpcre:3 ) xinerama? ( x11-libs/libXinerama ) x11-apps/xprop x11-apps/xwininfo
 REQUIRED_USE=|| ( python_targets_python3_4 python_targets_python3_5 )
 SLOT=0
-_eclasses_=git-r3	cbafa3261c37c7e3af44bb16a34ea390	multibuild	72647e255187a1fadc81097b3657e5c3	multilib	0236be304ee52e7f179ed2f337075515	python-r1	0c067f080a047742ffac024b16895b45	python-utils-r1	a166d0f5815d7f1e67bb60a196f1bf7e	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=git-r3	cbafa3261c37c7e3af44bb16a34ea390	multibuild	72647e255187a1fadc81097b3657e5c3	multilib	0236be304ee52e7f179ed2f337075515	python-r1	0c067f080a047742ffac024b16895b45	python-utils-r1	b4b2ab22637f2be1315af83f2d89cfc6	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
 _md5_=65b4ca4adf089e020611c3e8cab69454

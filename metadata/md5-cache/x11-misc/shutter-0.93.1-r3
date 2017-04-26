@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-lang/perl drawing? ( dev-perl/Goo-Canvas ) dev-perl/libxml-perl dev-perl/gnome2-canvas dev-perl/gnome2-perl dev-perl/gnome2-wnck dev-perl/Gtk2-Unique dev-perl/Gtk2-ImageView dev-perl/File-DesktopEntry dev-perl/File-HomeDir dev-perl/File-Which dev-perl/JSON dev-perl/File-Copy-Recursive dev-perl/File-MimeInfo dev-perl/Locale-gettext dev-perl/Net-DBus dev-perl/Proc-Simple dev-perl/Proc-ProcessTable dev-perl/Sort-Naturally dev-perl/WWW-Mechanize dev-perl/X11-Protocol dev-perl/XML-Simple dev-perl/libwww-perl virtual/imagemagick-tools[perl]
 SLOT=0
 SRC_URI=http://shutter-project.org/wp-content/uploads/releases/tars/shutter-0.93.1.tar.gz
-_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	e7491451996e8b54c3caeb713285b0fb	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	estack	43ddf5aaffa7a8d0482df54d25a66a1f	eutils	9c113d6a64826c40154cad7be15d95ea	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee
 _md5_=bc3294b417b0591fb9ab6d62629c1b6c
