@@ -942,22 +942,8 @@ app-misc/openastro:jpeg - Enable exporting Astrological Charts to jpeg
 app-misc/openastro:png - Enable exporting Astrological Charts to png
 app-misc/pax-utils:python - Install a more powerful/faster version of lddtree
 app-misc/recoll:camelcase - Enable indexing for camelCase sentences and words
-app-misc/recoll:chm - Index chm files
-app-misc/recoll:dvi - Index dvi files
-app-misc/recoll:ics - Index iCalendar files
-app-misc/recoll:info - Index GNU info files
 app-misc/recoll:inotify - Use the Linux Kernel notification subsystem for monitoring file alterations in realtime
-app-misc/recoll:lyx - Index Latex lyx files
-app-misc/recoll:msdoc - Index Microsoft Word documents
-app-misc/recoll:msppt - Index Microsoft PowerPoint documents
-app-misc/recoll:msxls - Index Microsoft Excel documents
-app-misc/recoll:pdf - Index PDF documents
-app-misc/recoll:rtf - Index Microsoft RTF documents
 app-misc/recoll:session - Stop monitoring file alterations when X11 session terminates
-app-misc/recoll:sound - Index audio files
-app-misc/recoll:tex - Index TeX files
-app-misc/recoll:wordperfect - Index WordPerfect documents
-app-misc/recoll:xml - Index several XML-based formats (Abiword, FictionBook, Kword, Office OpenXML, OpenDocument, SVG)
 app-misc/rlwrap:debug - Enable debug
 app-misc/screen:multiuser - Enable multiuser support (by setting correct permissions)
 app-misc/screen:nethack - Express error messages in nethack style
@@ -2537,9 +2523,10 @@ dev-python/pyside:webkit - Build QtWebKit module
 dev-python/pyside:xmlpatterns - Build QtXmlPatterns module
 dev-python/python-caja:gtk3 - Build with GTK+3 instead of GTK+2
 dev-python/python-stdnum:vies - Enable VIES
-dev-python/pyudev:pygobject - Install PyGobject binding
-dev-python/pyudev:pyqt4 - Install PyQt4 binding
-dev-python/pyudev:pyside - Install PySide binding
+dev-python/pyudev:pygobject - Install PyGobject bindings
+dev-python/pyudev:pyside - Install PySide bindings
+dev-python/pyudev:qt4 - Install PyQt4 bindings
+dev-python/pyudev:qt5 - Install PyQt5 bindings
 dev-python/pyyaml:libyaml - enable support for C implementation using libyaml
 dev-python/pyzmq:green - Enable gevent compatibility with zeromq
 dev-python/pyzor:gevent - Enable support for the gevent based handler
@@ -3004,6 +2991,14 @@ games-action/d2x-rebirth:l10n_de - Provides German translations for the game's b
 games-action/d2x-rebirth:music - Support for ingame music
 games-action/d2x-rebirth:opl3-musicpack - Include alternate version of the game's music, recorded with the Yamaha YMF262 OPL3 soundchip
 games-action/d2x-rebirth:sc55-musicpack - Include alternate version of the game's music, recorded with the Roland Sound Canvas SC-55 MIDI module
+games-action/dxx-rebirth:data - Install data files
+games-action/dxx-rebirth:descent1 - Install Descent 1 resources and executable
+games-action/dxx-rebirth:descent2 - Install Descent 2 resources and executable
+games-action/dxx-rebirth:l10n_de - Provides German translations for the game's briefings, robot descriptions, and outro of the original campaign
+games-action/dxx-rebirth:music - Enable music support
+games-action/dxx-rebirth:opl3-musicpack - Include alternate version of the game's music, recorded with the Yamaha YMF262 OPL3 soundchip
+games-action/dxx-rebirth:sc55-musicpack - Include alternate version of the game's music, recorded with the Roland Sound Canvas SC-55 MIDI module
+games-action/dxx-rebirth:textures - Include high resolution (640x480) backgrounds, briefing images and fonts (Descent 1)
 games-action/hotline-miami:bundled-libs - Use bundled libraries.
 games-action/hotline-miami:launcher - Install qt launcher
 games-action/minetest:leveldb - Enable LevelDB backend
@@ -3897,7 +3892,6 @@ media-gfx/digikam:lensfun - Enable support for media-libs/lensfun
 media-gfx/digikam:marble - Enable support for geolocation using kde-apps/marble
 media-gfx/digikam:panorama - Build the panorama plugin which requires media-gfx/hugin
 media-gfx/digikam:semantic-desktop - Enable kde-frameworks/kfilemetadata support
-media-gfx/digikam:video - Enable video player support
 media-gfx/enblend:gpu - GPU support for Enblend
 media-gfx/enblend:image-cache - allow for processing of large images
 media-gfx/eog-plugins:flickr - Enable uploading to Flickr
@@ -6603,6 +6597,7 @@ net-p2p/ppcoin-qt:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/ppcoind:logrotate - Use app-admin/logrotate for rotating logs
 net-p2p/primecoin-qt:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/primecoind:logrotate - Use app-admin/logrotate for rotating logs
+net-p2p/pybitmessage:opencl - Uses dev-python/pyopencl for GPU acceleration.
 net-p2p/qbittorrent:webui - Enable the Web UI
 net-p2p/retroshare:cli - Enables the CLI version of RetroShare
 net-p2p/retroshare:feedreader - Enables the Feedreader plugin
@@ -7602,14 +7597,14 @@ sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
 sys-boot/plymouth:gdm - Enables smooth transition to GDM
 sys-boot/plymouth:libkms - Provides abstraction to the DRM drivers (intel, nouveau and vmwgfx at this moment)
 sys-boot/plymouth:pango - Adds support for printing text on splash screen and text prompts, e.g. for password
-sys-boot/refind:btrfs - Builds the EFI binary btrfs filesystem driver
-sys-boot/refind:ext2 - Builds the EFI binary ext2 filesystem driver
-sys-boot/refind:ext4 - Builds the EFI binary ext4 filesystem driver
-sys-boot/refind:gnuefi - Compile using GNU-EFI instead of Tianocore
-sys-boot/refind:hfs - Builds the EFI binary hfs filesystem driver
-sys-boot/refind:iso9660 - Builds the EFI binary iso9660 filesystem driver
-sys-boot/refind:ntfs - Builds the EFI binary ntfs filesystem driver
-sys-boot/refind:reiserfs - Builds the EFI binary reiserfs filesystem driver
+sys-boot/refind:btrfs - Construire le gestionnaire EFI pour le système de fichier btrfs
+sys-boot/refind:ext2 - Construire le gestionnaire EFI pour le système de fichier ext2
+sys-boot/refind:ext4 - Construire le gestionnaire EFI pour le système de fichier ext4
+sys-boot/refind:gnuefi - Compiler en utilisant GNU-EFI au lieu de Tianocore
+sys-boot/refind:hfs - Construire le gestionnaire EFI pour le système de fichier hfs
+sys-boot/refind:iso9660 - Construire le gestionnaire EFI pour le système de fichier iso9660
+sys-boot/refind:ntfs - Construire le gestionnaire EFI pour le système de fichier ntfs
+sys-boot/refind:reiserfs - Construire le gestionnaire EFI pour le système de fichier reiserfs
 sys-cluster/ceph:babeltrace - Add support for LTTng babeltrace
 sys-cluster/ceph:cephfs - Build support for cephfs, a POSIX compatible filesystem built on top of ceph
 sys-cluster/ceph:cryptopp - Use dev-libs/crypto++ for cryptography
