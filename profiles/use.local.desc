@@ -1292,6 +1292,7 @@ dev-db/firebird:xinetd - Install ClassicServer
 dev-db/haildb:debug - Enable extra debug codepaths and assertions. If disabled, both the debug code and assertions are removed from the resulting binaries. Optimisations are untouched.
 dev-db/haildb:zlib - Add support for compressed tables through sys-libs/zlib.
 dev-db/maatkit:udf - Build the MySQL UDFs shipped with maatkit, requires non-minimal MySQL
+dev-db/mariadb:backup - Build mariadb-backup which supports SST and hot backup of InnoDB, Aria and MyISAM including compression and encryption
 dev-db/mariadb:cluster - Add support for NDB clustering (deprecated)
 dev-db/mariadb:community - Enables the community features from upstream.
 dev-db/mariadb:embedded - Build embedded server (libmysqld)
@@ -2494,7 +2495,6 @@ dev-python/pygame:midi - Enable midi support using media-libs/portmidi
 dev-python/pygpu:cuda - Enable NVIDIA CUDA toolkit support
 dev-python/pygpu:opencl - Enable OpenCL support
 dev-python/pyhamcrest:numpy - Enable optional dependence on dev-python/numpy
-dev-python/pymongo:mod_wsgi - Disable the C extension to work with mod_wsgi.
 dev-python/pyocr:cuneiform - Enable support for the app-text/cuneiform OCR engine
 dev-python/pyocr:tesseract - Enable support for the app-text/tesseract OCR engine
 dev-python/pypax:ptpax - Enable PT_PAX_FLAGS support.
@@ -3632,10 +3632,13 @@ mail-client/sylpheed:oniguruma - Use dev-libs/oniguruma for regular expression
 mail-client/thunderbird:bindist - Disable official Thunderbird branding (icons, name) which are not binary-redistributable according to upstream.
 mail-client/thunderbird:crypt - Enable encryption support with enigmail
 mail-client/thunderbird:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
+mail-client/thunderbird:gtk2 - Use the cairo-gtk2 rendering engine instead of the default cairo-gtk3
+mail-client/thunderbird:jemalloc - Enable or disable jemalloc
 mail-client/thunderbird:jemalloc3 - Enable or disable jemalloc3 (forced-on when supported prior to 38.0)
 mail-client/thunderbird:lightning - Enable app-global calendar support (note 38.0 and above bundles calendar support when this flag is off)
 mail-client/thunderbird:minimal - Remove the software development kit and headers
 mail-client/thunderbird:mozdom - Enable Mozilla's DOM inspector
+mail-client/thunderbird:rust - Enable support for using rust compiler (experimental)
 mail-client/thunderbird:system-cairo - Use the system-wide x11-libs/cairo instead of bundled.
 mail-client/thunderbird:system-harfbuzz - Use the system-wide media-libs/harfbuzz and media-gfx/graphite2 instead of bundled.
 mail-client/thunderbird:system-icu - Use the system-wide dev-libs/icu instead of bundled.
@@ -6199,7 +6202,9 @@ net-misc/chrony:pps - Support for the Linux Pulse Per Second (PPS) interface
 net-misc/chrony:refclock - Support for reference clocks
 net-misc/chrony:rtc - Support for the Linux Real Time Clock interface
 net-misc/connman:ethernet - Enable ethernet support.
+net-misc/connman:iptables - Use net-firewall/iptables as firewall.
 net-misc/connman:l2tp - Use net-dialup/xl2tpd for L2TP VPN support.
+net-misc/connman:nftables - Use net-firewall/nftables as firewall.
 net-misc/connman:ofono - Use net-misc/ofono for telephony support.
 net-misc/connman:openconnect - Use net-vpn/openconnect for VPN support.
 net-misc/connman:openvpn - Use net-vpn/openvpn for openvpn support.
@@ -7929,6 +7934,7 @@ sys-fs/udev:gudev - Build the gobject interface library
 sys-fs/udev:kmod - Enable kernel module loading/unloading support using sys-apps/kmod
 sys-fs/udisks:cryptsetup - Enable sys-fs/cryptsetup support
 sys-fs/udisks:gptfdisk - Pull in sys-apps/gptfdisk for sgdisk command as used by partitioning functionality
+sys-fs/udisks:lvm - Add support for Logical Volume Management via sys-fs/lvm2.
 sys-fs/udisks:remote-access - Control whether connections from other clients over LAN are allowed
 sys-fs/udisks:systemd - Support sys-apps/systemd's logind
 sys-fs/zfs:kernel-builtin - Disable dependency on sys-fs/zfs-kmod under the assumption that ZFS is part of the kernel source tree

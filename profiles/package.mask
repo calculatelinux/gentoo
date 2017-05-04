@@ -29,6 +29,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (03 May 2017)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-60
+
 # Michał Górny <mgorny@gentoo.org> (01 May 2017)
 # Used only by old (removed) versions of dev-python/google-apitools.
 # Last release in 2015. Removal in 30 days.
@@ -69,7 +74,6 @@ dev-ruby/coffee-rails:4.0
 dev-ruby/jquery-ui-rails:3
 dev-ruby/listen:2
 dev-ruby/prawn:0
-dev-ruby/sass-rails:4.0
 dev-ruby/sprockets:2.2
 dev-ruby/sprockets:2.11
 dev-ruby/sprockets-rails:2.0
@@ -200,11 +204,6 @@ app-emulation/crossover-office-pro-bin
 # Masked, committed accidentally. It's not tested yet, possibly broken.
 =net-im/ejabberd-17.01
 
-# Hans de Graaff <graaff@gentoo.org> (2 Apr 2017)
-# Mask vulnerable slot for security bug. Bug #611384.
-# Removal in 30 days.
-dev-ruby/rubyzip:0
-
 # Yixun Lan <dlan@gentoo.org> (30 Mar 2017)
 # Masked, broken due to emoji support which requre npm package installed (bug #612218)
 =app-i18n/ibus-1.5.15
@@ -225,11 +224,6 @@ dev-python/edpwd
 # Masked until Mozilla and Chrome agreed how to handle
 # Symantec trust issues properly (bug #613714)
 =app-misc/ca-certificates-20161130.3.30-r1
-
-# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (20 Mar 2017)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-59
 
 # Kent Fredric <kentnl@gentoo.org> (18 Mar 2017)
 # ExtUtils::MakeMaker 7.18+ Block
