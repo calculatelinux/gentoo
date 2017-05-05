@@ -3,7 +3,7 @@
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
-inherit eutils multiprocessing python-any-r1 toolchain-funcs games
+inherit eutils multiprocessing python-any-r1 toolchain-funcs games versionator
 
 REVISION="b177-r50edfd37"
 
@@ -31,6 +31,7 @@ DEPEND="${RDEPEND}
 	~dev-util/bam-0.4.0"
 
 S=${WORKDIR}/${P}-src
+MY_PV=$(get_version_component_range 1-2)
 
 pkg_setup() {
 	python-any-r1_pkg_setup
@@ -41,7 +42,7 @@ src_prepare() {
 	rm -r src/engine/external/* || die
 
 	# 01 & 02 from pull request: https://github.com/oy/teeworlds/pull/493
-	EPATCH_SOURCE="${FILESDIR}/${PV}" EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" \
+	EPATCH_SOURCE="${FILESDIR}/${MY_PV}" EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" \
 		epatch
 
 	cat <<- __EOF__ > "${S}/gentoo.lua"
