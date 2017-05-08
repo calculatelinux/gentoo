@@ -25,6 +25,10 @@ S="${WORKDIR}"/${MYP}-src
 
 PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
 
+src_configure () {
+	econf --prefix="${D}"/usr
+}
+
 src_compile () {
 	for kind in shared static static-pic; do
 		if use ${kind}; then

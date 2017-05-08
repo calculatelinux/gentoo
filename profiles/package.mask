@@ -29,6 +29,81 @@
 
 #--- END OF EXAMPLES ---
 
+# Bernard Cafarelli <voyageur@gentoo.org> (8 May 2017)
+# Coordinated conversion to wxGTK:3.0-gtk3
+# Drop mask after migration of existing wxGTK:3.0 users
+# and wxGTK-3.0.3 bump in tree
+>=net-ftp/filezilla-3.25.2-r1
+
+# Daniel Pielmeier <billie@gentoo.org> (7 May 2017)
+# Fails to build with ffmpeg-3. Dead upstream.
+# Masked for removal in 30 days. Bug #575824.
+app-cdr/backlite
+
+# Lars Wendler <polynomial-c@gentoo.org> (07 May 2017)
+# Dead upstream since 2014. Fails to build with gcc-6 (bug #594260).
+# Masked for removal in 30 days.
+net-im/licq
+
+# Andreas Sturmlechner <asturm@gentoo.org> (06 May 2017)
+# Obsolete parts of kdevelop:4 - upstream merged into kdevelop:5.
+# Masked for removal in 30 days.
+dev-util/kdevelop-php-docs
+dev-util/kdevelop-qmake
+dev-util/kdevelop-qmljs
+
+# Andreas Sturmlechner <asturm@gentoo.org> (06 May 2017)
+# Unused Plasma 4 runtime cleanup, masked for removal in 30 days.
+kde-apps/attica
+kde-apps/drkonqi
+kde-apps/kcontrol
+kde-apps/kdebase-desktoptheme
+kde-apps/kdebase-menu
+kde-apps/kdebase-menu-icons
+kde-apps/kdebugdialog
+kde-apps/kdesu
+kde-apps/kglobalaccel
+kde-apps/kiconfinder
+kde-apps/kimgio
+kde-apps/knetattach
+kde-apps/kpasswdserver
+kde-apps/kquitapp
+kde-apps/kstart
+kde-apps/kuiserver
+kde-apps/kurifilter-plugins
+kde-apps/plasma-apps
+kde-apps/renamedlg-plugins
+kde-apps/solid-runtime
+sys-auth/polkit-kde-agent
+
+# Andreas Sturmlechner <asturm@gentoo.org> (06 May 2017)
+# Follow-up to 16.12.3 stabilisation - the remaining split
+# kde-baseapps are now either part of konqueror:5 or obsolete.
+# Masked for removal in 30 days.
+kde-apps/kdepasswd
+kde-apps/kfmclient
+kde-apps/konq-plugins
+kde-apps/libkonq
+kde-apps/nsplugins
+kde-apps/plasma-apps
+
+# Andreas Sturmlechner <asturm@gentoo.org> (06 May 2017)
+# Depends on deprecated libs, no development in 8 years.
+# No consumer left after konqueror:4 removal.
+# Masked for removal in 30 days.
+kde-misc/kim4
+
+# Andreas Sturmlechner <asturm@gentoo.org> (06 May 2017)
+# Depends on deprecated libs, no development in 9 years.
+# No consumer left after konqueror:4 removal.
+# Masked for removal in 30 days.
+kde-misc/kio-ftps
+
+# Andreas Sturmlechner <asturm@gentoo.org> (06 May 2017)
+# Crash on start, hugely outdated, depends on deprecated libs.
+# Masked for removal in 30 days.
+kde-misc/quadkonsole
+
 # Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (03 May 2017)
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
@@ -166,21 +241,6 @@ app-emulation/wine-any
 # Patrice Clement <monsieurp@gentoo.org> (07 Apr 2017)
 # Part of the JDK since Java 6. Removal in 30 days.
 dev-java/jaxme
-
-# David Seifert <soap@gentoo.org> (05 Apr 2017)
-# Abandoned, no releases since 2008, only partially
-# compatible with C++11, multiple bugs, upstream dead
-# Masked for removal in 30 days.
-# Bugs #359247, #400547, #409119, #594144
-dev-libs/STLport
-
-# Mike Gilbert <floppym@gentoo> (05 Apr 2017)
-# Unmaintained.
-# Pinned dependencies cause conflicts with other packages.
-# Live ebuild is broken, and requires packaging several new deps.
-# Removal in 30 days.
-# Bug: https://bugs.gentoo.org/614758
-net-misc/flexget
 
 # Mart Raudsepp <leio@gentoo.org> (04 Apr 2017)
 # Masked for removal in 30 days. Does not work with new

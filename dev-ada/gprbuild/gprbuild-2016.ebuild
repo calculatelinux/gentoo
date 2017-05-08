@@ -32,12 +32,7 @@ PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
 
 pkg_setup() {
 	GCC=${ADA:-$(tc-getCC)}
-	local base=$(basename ${GCC})
-	GNATMAKE="${base/gcc/gnatmake}"
-	if [[ ${base} != ${GCC} ]] ; then
-		local path=$(dirname ${GCC})
-		GNATMAKE="${path}/${GNATMAKE}"
-	fi
+	GNATMAKE="${GCC/gcc/gnatmake}"
 	if [[ -z "$(type ${GNATMAKE} 2>/dev/null)" ]] ; then
 		eerror "You need a gcc compiler that provides the Ada Compiler:"
 		eerror "1) use gcc-config to select the right compiler or"

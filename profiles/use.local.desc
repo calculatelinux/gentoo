@@ -21,7 +21,6 @@ app-accessibility/simon:sphinx - Build sphinx backend (pulls app-accessibility/j
 app-accessibility/speech-dispatcher:espeak - Adds support for espeak speech engine
 app-accessibility/speech-dispatcher:flite - Adds support for flite speech engine
 app-accessibility/speechd-el:brltty - brltty support
-app-admin/ansible:keyczar - Enable accelerated mode for old ssh clients/servers
 app-admin/bcfg2:cheetah - Include dev-python/cheetah support
 app-admin/bcfg2:genshi - Include dev-python/genshi support
 app-admin/bcfg2:server - Installs scripts to be used on the server-side of this app
@@ -427,6 +426,7 @@ app-editors/vim:vim-pager - Install vimpager and vimmanpager links
 app-editors/vim-qt:lto - Enable configure workaround for -flto
 app-editors/vim-qt:luajit - Use dev-lang/luajit instead of dev-lang/lua
 app-editors/vim-qt:racket - Enable support for Scheme using dev-scheme/racket
+app-editors/vis:tre - more memory efficient regex search using dev-libs/tre
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop library
 app-editors/xemacs:eolconv - Support detection and translation of newline conventions
@@ -1944,7 +1944,6 @@ dev-libs/DirectFB:sawman - enable SaWMan (window manager and application manager
 dev-libs/DirectFB:swfdec - build Swfdec (Flash decoder) video provider
 dev-libs/DirectFB:tremor - build Ogg/Vorbis music provider using Tremor
 dev-libs/DirectFB:webp - build WebP image provider
-dev-libs/STLport:boost - Enable the usage of dev-libs/boost
 dev-libs/ace:ciao - Include Component Intergraced Ace ORB into the build of ace
 dev-libs/ace:tao - Include the ACE ORB (CORBA stuff) (called tao) into the build of ace
 dev-libs/actor-framework:benchmarks - Due to the number of out-of-tree deps, these only get installed as docs
@@ -2127,7 +2126,7 @@ dev-libs/libtermkey:demos - Install demos, which pulls in dev-libs/glib
 dev-libs/libucl:regex - Enable regex checking for schema
 dev-libs/libucl:signatures - Enable signatures check
 dev-libs/libucl:urlfetch - Enable URLs fetch
-dev-libs/libucl:utils - Builds and installs utils
+dev-libs/libucl:utils - Install the chargen and objdump utilities
 dev-libs/libverto:glib - Support event loops using dev-libs/glib
 dev-libs/libverto:libev - Support event loops using dev-libs/libev
 dev-libs/libverto:libevent - Support event loops using dev-libs/libevent
@@ -2865,15 +2864,12 @@ dev-util/intel-ocl-sdk:system-clang - Use system clang (sys-devel/clang) instead
 dev-util/intel-ocl-sdk:system-qt - Use system Qt (sys-devel-qtcore, sys-devel/qtgui) instead of bundled one
 dev-util/intel-ocl-sdk:system-tbb - Use sytem Thread Building Blocks (dev-cpp/tbb) instead of bundled one
 dev-util/intel-ocl-sdk:tools - Install Intel Offline Compiler
-dev-util/kdevelop:cmake - Enable support for CMake build system
 dev-util/kdevelop:gdbui - Enable GUI for attaching GDB to a running process
 dev-util/kdevelop:ninja - Enable support for Ninja build system
 dev-util/kdevelop:okteta - Enable hex editor plugin
 dev-util/kdevelop:qmake - Enable support for QMake build system
 dev-util/kdevelop:qthelp - Enable support for QtHelp documentation browsing
 dev-util/kdevelop-qmake:tools - Build and install the qmake-parser debugging tool
-dev-util/kdevplatform:classbrowser - Enable the class browser plugin
-dev-util/kdevplatform:konsole - Enable kde-apps/konsole integration
 dev-util/kdevplatform:reviewboard - Enable reviewboard support
 dev-util/kdevplatform:welcomepage - Enable welcome page, requires dev-qt/qtdeclarative
 dev-util/ltrace:unwind - Use sys-libs/libunwind for frame unwinding support
@@ -3333,6 +3329,7 @@ gnome-extra/gnome-commander:pdf - Add metadata support for PDF
 gnome-extra/gnome-commander:python - Add support for python plugins
 gnome-extra/gnome-commander:samba - Add support for SAMBA (Windows File and Printer sharing)
 gnome-extra/gnome-commander:taglib - Add metadata support for ID3, Vorbis, FLAC and APE
+gnome-extra/gnome-commander:unique - Enable single instance support using dev-libs/libunique
 gnome-extra/gnome-dvb-daemon:totem - Build a plugin for media-video/totem
 gnome-extra/gnome-system-monitor:systemd - Display sys-apps/systemd metadata, e.g. unit names, for running processes
 gnome-extra/libgda:canvas - Enable support for x11-libs/goocanvas
@@ -3391,7 +3388,7 @@ kde-apps/kde-apps-meta:pim - Pull in KDE PIM suite
 kde-apps/kde-apps-meta:sdk - Pull in developer-specific meta-packages
 kde-apps/kdeadmin-meta:cron - Installs KDE application for virtual/cron configuration
 kde-apps/kdebase-kioslaves:sftp - Enable SFTP protocol support using net-libs/libssh
-kde-apps/kdebase-runtime-meta:oldwallet - Install kde-apps/kwalletd on a minimal setup for migration purposes
+kde-apps/kdebase-runtime-meta:kwallet - Install kde-apps/kwalletd on a minimal setup for migration purposes
 kde-apps/kdegraphics-mobipocket:thumbnail - Enables thumbnail generation
 kde-apps/kdenetwork-meta:ppp - Enable support for net-dialup/ppp.
 kde-apps/kdenlive:freesound - Enable freesound.org credentials support via dev-qt/qtwebkit to download files
@@ -3414,8 +3411,6 @@ kde-apps/kio-extras:man - Enable manpages kioslave
 kde-apps/kio-extras:phonon - Enable file audio preview plugin using media-libs/phonon
 kde-apps/kio-extras:sftp - Enable SFTP protocol support using net-libs/libssh
 kde-apps/konqueror:activities - Enable kactivities support
-kde-apps/konqueror:bookmarks - Add dependency on bookmark package.
-kde-apps/konqueror:filemanager - Install the dolphin kpart for use as a file manager.
 kde-apps/konqueror:speech - Build text-to-speech plugin
 kde-apps/kopete:addbookmarks - Automatically add incoming urls to bookmarks.
 kde-apps/kopete:autoreplace - Automatically replace selected text
@@ -3888,7 +3883,6 @@ media-gfx/darktable:kwallet - Enable encrypted storage of passwords with kde-fra
 media-gfx/darktable:libsecret - Enable libsecret support to store login credentials
 media-gfx/darktable:opencl - Enable opencl support
 media-gfx/darktable:pax_kernel - Triggers paxmarking of main darktable binary
-media-gfx/darktable:slideshow - Build the opengl slideshow viewer
 media-gfx/darktable:webp - Enable WebP export support
 media-gfx/digikam:addressbook - Enable akonadi contact integration
 media-gfx/digikam:kipi - Enable support for media-plugins/kipi-plugins
@@ -5568,6 +5562,7 @@ net-im/choqok:konqueror - Build Konqueror Choqok plugin
 net-im/choqok:telepathy - Enable support for the real-time communication framework telepathy
 net-im/climm:otr - Enable encrypted conversations
 net-im/corebird:glade - Install glade catalogs for corebird
+net-im/corebird:spellcheck - Support spell checking
 net-im/coturn:mongodb - Enable support for the mongodb database
 net-im/coturn:redis - Enable support for the redis database
 net-im/ejabberd:captcha - Support for CAPTCHA Forms (XEP-158) on registration
@@ -6249,7 +6244,6 @@ net-misc/eventd:speech - Enable plugin for Text-To-Speech support
 net-misc/eventd:websocket - Enable support for WebSocket protocol
 net-misc/fatrat:bittorrent - Use the bittorrent protocol via net-libs/libtorrent-rasterbar.
 net-misc/fatrat:webinterface - Enable builtin webinterface.
-net-misc/flexget:transmission - Support comminucation with net-p2p/transmission
 net-misc/freerdp:client - Build client binaries
 net-misc/freerdp:server - Build server binaries
 net-misc/gnome-online-miners:flickr - Enable Flickr support
@@ -6283,6 +6277,8 @@ net-misc/iputils:tracepath - Build and install tracepath -- tool for tracing net
 net-misc/iputils:traceroute - Build and install traceroute -- tool for tracing network paths (see also net-analyzer/traceroute)
 net-misc/kafka-bin:internal-zookeeper - Use bundled local zookeeper instance
 net-misc/kafkacat:json - Enable json support
+net-misc/kea:openssl - Use dev-libs/openssl instead of Botan
+net-misc/kea:samples - Install sample configuration files
 net-misc/knock:server - Installs the knockd server daemon.
 net-misc/lcr:asterisk - net-misc/asterisk channel driver
 net-misc/lcr:gsm-bs - net-wireless/openbsc driver
@@ -8108,9 +8104,11 @@ www-apache/mod_musicindex:cache - Add File cache support
 www-apache/mod_musicindex:mysql - Add MySQL cache support
 www-apache/mod_nss:ecc - enable Elliptical Curve Cyptography
 www-apache/mod_perl:ithreads - Build for use with thread-capable perl, needs same setting as in dev-lang/perl
-www-apache/mod_security:curl - Build the ModSecurity Audit Log Collector (mlogc) that depends on net-misc/curl.
-www-apache/mod_security:geoip - Configure ModSecurity to query the GeoIP database from MaxMind, provided by dev-libs/geoip. This flag only controls the default configuration, as the GeoIP query code is part of ModSecurity's source code.
+www-apache/mod_security:fuzzyhash - Support fuzzy hash computations (to detect malware, for example) using the app-crypt/ssdeep package.
+www-apache/mod_security:geoip - Pull in dev-libs/geoip for use by the SecGeoLookupDb directive.
 www-apache/mod_security:jit - Add support for the PCRE Just-in-Time optimisation, as enabled by dev-libs/libpcre with jit USE flag enabled. Might not be available on hardened systems.
+www-apache/mod_security:json - Suppose JSON in the request body parser through dev-libs/yajl.
+www-apache/mod_security:mlogc - Build and install the ModSecurity Audit Log Collector (mlogc).
 www-apache/pwauth:domain-aware - Ignore leading domain names in username (Windows compat)
 www-apache/pwauth:faillog - Log failed login attempts
 www-apache/pwauth:ignore-case - Ignore string case in username (mostly Windows compat)
