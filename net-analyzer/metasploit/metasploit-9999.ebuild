@@ -1,10 +1,10 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI="6"
 
 #never ever ever have more than one ruby in here
-USE_RUBY="ruby21"
+USE_RUBY="ruby23"
 inherit eutils ruby-ng
 
 if [[ ${PV} == "9999" ]] ; then
@@ -41,17 +41,17 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	>=dev-ruby/activerecord-4.2.6:4.2
 	dev-ruby/bcrypt-ruby
 	dev-ruby/bit-struct
-	dev-ruby/builder:3
+	>=dev-ruby/builder-3.0
 	dev-ruby/bundler
 	dev-ruby/filesize
-	dev-ruby/jsobfu:0.3.0
+	>=dev-ruby/jsobfu-0.3.0
 	dev-ruby/json:*
 	dev-ruby/kissfft
 	dev-ruby/metasm:1.0.2
 	>=dev-ruby/metasploit_data_models-2.0.0
 	dev-ruby/meterpreter_bins:0.0.22
-	dev-ruby/metasploit-payloads:1.1.13
-	dev-ruby/metasploit_payloads-mettle:0.0.6
+	dev-ruby/metasploit-payloads:1.2.24
+	dev-ruby/metasploit_payloads-mettle:0.1.9
 	>=dev-ruby/metasploit-credential-2.0.0
 	>=dev-ruby/metasploit-concern-2.0.0
 	>=dev-ruby/metasploit-model-2.0.0
@@ -61,9 +61,9 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/octokit
 	dev-ruby/openssl-ccm:1.2.1
 	dev-ruby/patch_finder
-	dev-ruby/recog:2.0.14
+	>=dev-ruby/recog-2.0.14
 	dev-ruby/redcarpet
-	=dev-ruby/rkelly-remix-0.0.6
+	>=dev-ruby/rkelly-remix-0.0.6
 	dev-ruby/rex-arch
 	dev-ruby/rex-java
 	dev-ruby/rex-ole
@@ -73,14 +73,17 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/rex-struct2
 	dev-ruby/rex-text
 	dev-ruby/rex-zip
+	dev-ruby/ruby_smb
 	dev-ruby/sqlite3
 	>=dev-ruby/pg-0.11
-	dev-ruby/packetfu:1.1.11
+	dev-ruby/packetfu:1.1.13
 	>=dev-ruby/rubyzip-1.1
 	dev-ruby/rb-readline-r7
 	dev-ruby/robots
 	dev-ruby/sshkey
 	dev-ruby/tzinfo:*
+	dev-ruby/windows_error
+	dev-ruby/xmlrpc
 	java? ( dev-ruby/rjb )
 	oracle? ( dev-ruby/ruby-oci8 )
 	pcap? ( dev-ruby/pcaprub:*
@@ -160,28 +163,18 @@ all_ruby_unpack() {
 all_ruby_prepare() {
 	# add psexec patch from pull request 2657 to allow custom exe templates from any files, bypassing most AVs
 	#epatch "${FILESDIR}/agix_psexec_pull-2657.patch"
-	epatch_user
+	eapply_user
 
 	#remove random "cpuinfo" binaries which a only needed to detect which bundled john to run
 	rm -r data/cpuinfo
-
-	#remove random oudated collected garbage
-	rm -r external
 
 	#remove unneeded ruby bundler versioning files
 	#Gemfile.lock contains the versions tested by the msf team but not the hard requirements
 	#we regen this file in each_ruby_prepare
 	rm Gemfile.lock
 	#The Gemfile contains real known deps
-	#add our dep on upstream rb-readline instead of bundled one
-	#and then they broke it...
-	#sed -i "/gem 'packetfu'/a #use upstream readline instead of bundled\ngem 'rb-readline'" Gemfile || die
 	sed -i "/gem 'fivemat'/s/, '1.2.1'//" Gemfile || die
-	#remove the bundled readline
-	#https://github.com/rapid7/metasploit-framework/pull/3105
-	#this PR was closed due to numerous changes to their local fork, almost entirely for non-linux
-	#but now we have to go back to bundled readline because otherwise it's broken
-	#rm lib/rbreadline.rb
+	sed -i "s/1.1.13.pre/1.1.13/" metasploit-framework.gemspec || die
 	#now we edit the Gemfile based on use flags
 	#even if we pass --without=blah bundler still calculates the deps and messes us up
 	if ! use pcap; then
