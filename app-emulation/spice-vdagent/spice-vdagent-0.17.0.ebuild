@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -11,7 +11,7 @@ SRC_URI="http://spice-space.org/download/releases/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+consolekit selinux systemd"
 
 CDEPEND="
@@ -54,7 +54,7 @@ src_configure() {
 src_install() {
 	default
 
-	rm -rf "${ED%/}"/etc/{rc,tmpfiles}.d || die
+	cd "${ED}" && rmdir -p var/run/spice-vdagentd || die
 
 	keepdir /var/log/spice-vdagentd
 

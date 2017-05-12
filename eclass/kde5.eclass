@@ -294,6 +294,8 @@ _calculate_src_uri() {
 	case ${CATEGORY} in
 		kde-apps)
 			case ${PV} in
+				16.12.3)
+					SRC_URI="mirror://kde/Attic/applications/16.12.3/src/${_kmname}-${PV}.tar.xz" ;;
 				??.?.[6-9]? | ??.??.[6-9]? )
 					SRC_URI="mirror://kde/unstable/applications/${PV}/src/${_kmname}-${PV}.tar.xz"
 					RESTRICT+=" mirror"
@@ -303,7 +305,13 @@ _calculate_src_uri() {
 			esac
 			;;
 		kde-frameworks)
-			SRC_URI="mirror://kde/stable/frameworks/${PV%.*}/${_kmname}-${PV}.tar.xz" ;;
+			case ${PV} in
+				5.29.?)
+					SRC_URI="mirror://kde/Attic/frameworks/${PV%.*}/${_kmname}-${PV}.tar.xz" ;;
+				*)
+					SRC_URI="mirror://kde/stable/frameworks/${PV%.*}/${_kmname}-${PV}.tar.xz" ;;
+			esac
+			;;
 		kde-plasma)
 			local plasmapv=$(get_version_component_range 1-3)
 
@@ -536,6 +544,7 @@ kde5_src_prepare() {
 
 		if [[ ${KDE_HANDBOOK} = forceoptional ]] ; then
 			punt_bogus_dep KF5 DocTools
+			sed -i -e "/kdoctools_install/ s/^/#DONT/" CMakeLists.txt || die
 		fi
 	fi
 

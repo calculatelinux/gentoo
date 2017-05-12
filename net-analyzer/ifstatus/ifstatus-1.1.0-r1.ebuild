@@ -23,7 +23,6 @@ S="${WORKDIR}/${PN}"
 PATCHES=(
 	"${FILESDIR}/${P}-gcc43.patch"
 	"${FILESDIR}/${P}-tinfo.patch"
-	"${FILESDIR}/${P}-gcc6.patch"
 )
 
 src_prepare() {
