@@ -29,6 +29,30 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (15 May 2017)
+# These packages lack modern digests and are fetch-restricted, so we can
+# not update them. Some of them have additional issues.
+# Removal in 30 days.
+#
+# sci-biology/mammoth - #612738, not touched since 2015, added in 2007,
+# not bumped since; homepage gone
+#
+# sci-chemistry/ambertools - #612740, not touched since 2013, added
+# in 2011, not bumped since; includes sci-chemistry/acpype as a revdep
+#
+# sci-chemistry/gamess - #612742, not touched since 2013, last bump 2011,
+# seems to be maintained in ::science; includes sci-chemistry/gtk-gamess
+# as a revdep
+#
+# sci-chemistry/mead - #612744, not touched since 2010, last bump 2009,
+# homepage gone, 32-bit x86-only
+sci-biology/mammoth
+sci-chemistry/acpype
+sci-chemistry/ambertools
+sci-chemistry/gamess
+sci-chemistry/gtk-gamess
+sci-chemistry/mead
+
 # David Seifert <soap@gentoo.org> (14 May 2017)
 # Unmaintained upstream, awful codebase. No reverse
 # dependencies. See #594134. To be removed in 30 days.
@@ -50,12 +74,6 @@ sys-fabric/libibvpp
 # either. See bugs 618130 and 618140. To be removed in 30 days.
 app-arch/undms
 app-arch/unlzx
-
-# Michael Orlitzky <mjo@gentoo.org> (11 May 2017)
-# This is nice to have in the tree for testing, but there
-# are random build failures with USE=jit, so it's not ready
-# for mass consumption just yet.
-=dev-scheme/racket-6.9
 
 # Bernard Cafarelli <voyageur@gentoo.org> (8 May 2017)
 # Coordinated conversion to wxGTK:3.0-gtk3
@@ -233,23 +251,6 @@ net-misc/libres3
 # for a virtual
 dev-perl/encoding-warnings
 
-# James Le Cuirot <chewi@gentoo.org> (14 Apr 2017)
-# Outdated and stuck behind a temperamental registration wall that I
-# have lost my patience with. Removal in 30 days if no one cares
-# enough to pick it up.
-dev-java/jdbc-oracle-bin
-
-# James Le Cuirot <chewi@gentoo.org> (14 Apr 2017)
-# Ancient, unused by anything, fetch restricted. Removal in 30 days.
-dev-java/sun-j2ee-deployment-bin
-
-# Johannes Huber <johu@gentoo.org> (14 Apr 2017)
-# Masked for removal in 30 days. Dead upstream since
-# KDELibs 4 port several years ago. Repository gone.
-# Superseded by gwenview and okular. Fails to build
-# with gcc 6 (bug #614304).
-media-gfx/kuickshow
-
 # NP-Hardass <NP-Hardass@gentoo.org> (10 Apr 2017)
 # Masked for testing
 virtual/wine
@@ -270,24 +271,6 @@ app-emulation/wine-any
 # Part of the JDK since Java 6. Removal in 30 days.
 dev-java/jaxme
 
-# Mart Raudsepp <leio@gentoo.org> (04 Apr 2017)
-# Masked for removal in 30 days. Does not work with new
-# gnome-base/gnome-shell.
-# gnome-extra/gnome-shell-extensions-topicons-plus is a
-# fork that has added features and works with modern
-# gnome-shell that is suitable as a system-wide replacement
-# package. Alternatively it can be installed per-user from
-# https://extensions.gnome.org/extension/1031/topicons/
-gnome-extra/gnome-shell-extensions-topicons
-
-# NP-Hardassr <NP-Hardass@gentoo.org> (03 Apr 2017)
-# Masked for removal in 30 days. Unable to generate new
-# hashes for the manifest, per Bug #612720, Bug #612718
-# Upstream has also deprecated these in favor of
-# app-emulation/crossover-bin
-app-emulation/crossover-office-bin
-app-emulation/crossover-office-pro-bin
-
 # Amadeusz Zolnowski <aidecoe@gentoo.org> (2 Apr 2017)
 # Masked, committed accidentally. It's not tested yet, possibly broken.
 =net-im/ejabberd-17.01
@@ -301,12 +284,6 @@ app-emulation/crossover-office-pro-bin
 # Bug #614218
 sys-firmware/radeon-ucode
 sys-firmware/amdgpu-ucode
-
-# Michał Górny <mgorny@gentoo.org> (27 Mar 2017)
-# No revdeps or real use case. Uses ECB mode for encryption which is
-# a bad idea. Requires patching for dev-python/pycryptodome. Abandoned
-# upstream and downstream. Removal in 30 days. Bug #611592.
-dev-python/edpwd
 
 # Lars Wendler <polynomial-c@gentoo.org> (24 Mar 2017)
 # Masked until Mozilla and Chrome agreed how to handle
@@ -767,13 +744,6 @@ sys-block/afacli
 # to fully integrate it in our Gentoo ruby handling. Volunteers
 # welcome.
 =dev-lang/rubinius-3*
-
-# Tom Wijsman <TomWij@gentoo.org> (03 May 2014)
-# Needs to be further tested and revised by both Java and Ruby herds.
->=dev-java/jruby-1.7.12
-dev-ruby/bitescript
-dev-ruby/duby
-dev-ruby/weakling
 
 # Matti Bickel <mabi@gentoo.org> (22 Apr 2014)
 # Masked slotted lua for testing

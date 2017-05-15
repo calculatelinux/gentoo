@@ -23,6 +23,10 @@ DEPEND="${DEPEND}
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( >=dev-python/pytest-2.3.5[${PYTHON_USEDEP}] )"
 
+PATCHES=(
+	"${FILESDIR}"/2.3-Fix-the-way-local-time-is-constructed-in-tests.patch
+)
+
 python_prepare_all() {
 	# Make the tests use implementation-specific datadir,
 	# because they try to write in it.
@@ -35,7 +39,6 @@ python_prepare_all() {
 python_test() {
 	# Create implementation-specific datadir for tests.
 	cp -R -l tests/messages/data "${BUILD_DIR}"/ || die
-	export BUILD_DIR
 	py.test || die
 }
 
