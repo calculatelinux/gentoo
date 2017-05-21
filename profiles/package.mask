@@ -29,6 +29,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org>, Andreas K. Hüttel <dilfridge@gentoo.org>,
+# Matthias Maier <tamiko@gentoo.org> (21 May 2017)
+# Those old versions of GCC are no longer really supported and are not
+# suitable for use as a system-wide compiler. Using them can result
+# in build failures (and possible breakage) for many packages.
+#
+# If you still use one of these as your system compiler, please upgrade
+# and switch the compiler ASAP. If you need them for a specific (isolated)
+# use case, feel free to unmask them on your system.
+<sys-devel/gcc-4.9
+
+# Michał Górny <mgorny@gentoo.org> (20 May 2017)
+# Old versions of CUDA and their reverse dependencies. They do not
+# support GCC 4.9+, and are really old.
+<dev-python/pycuda-2016
+<dev-util/nvidia-cuda-sdk-7
+<dev-util/nvidia-cuda-toolkit-7
+net-wireless/cpyrit-cuda
+
 # Michał Górny <mgorny@gentoo.org> (18 May 2017)
 # Last release in 2007, upstream disappeared. Requires a lot
 # of patching. Unmaintained since 2012. Bad ebuild quality, #514850.
@@ -96,10 +115,6 @@ sci-chemistry/mead
 # Unmaintained upstream, awful codebase. No reverse
 # dependencies. See #594134. To be removed in 30 days.
 sys-fabric/libibvpp
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (13 May 2017)
-# Work in progress
-=dev-db/firebird-3*
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (13 May 2017)
 # This release breaks lots of reverse deps because of conflicting types.
