@@ -425,9 +425,6 @@ app-editors/vim:X - Link console vim against X11 libraries to enable title and c
 app-editors/vim:luajit - Use dev-lang/luajit instead of dev-lang/lua
 app-editors/vim:racket - Enable support for Scheme using dev-scheme/racket
 app-editors/vim:vim-pager - Install vimpager and vimmanpager links
-app-editors/vim-qt:lto - Enable configure workaround for -flto
-app-editors/vim-qt:luajit - Use dev-lang/luajit instead of dev-lang/lua
-app-editors/vim-qt:racket - Enable support for Scheme using dev-scheme/racket
 app-editors/vis:tre - more memory efficient regex search using dev-libs/tre
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop library
@@ -5882,7 +5879,6 @@ net-libs/liboping:filecaps - Allow non-root users to use [n]oping utility.
 net-libs/liboping:ncurses - Build ncurses-based version of oping utility (requires sys-libs/ncurses)
 net-libs/libosmocore:embedded - Build for embedded use and disable unsupported features
 net-libs/libosmocore:pcsc-lite - Enable smartcard support with sys-apps/pcsc-lite
-net-libs/libpcap:canusb - Use virtual/libusb to support Controller Area Network over USB (CAN USB)
 net-libs/libpcap:netlink - Use dev-libs/libnl to put wireless interfaces in monitor mode.
 net-libs/libprotoident:tools - Build and install command-line tools
 net-libs/libproxy:gnome - Enable support for reading proxy settings from GNOME
@@ -6496,7 +6492,6 @@ net-misc/stunnel:stunnel3 - Install the stunnel3 wrapper.
 net-misc/teamviewer:system-wine - Use app-emulation/wine instead of bundled wine.
 net-misc/termpkg:uucp - Adds support for uucp style device locking
 net-misc/tigervnc:drm - build with DRM support
-net-misc/tigervnc:nls - Add Native Language Support
 net-misc/tigervnc:server - Build TigerVNC server
 net-misc/tigervnc:xorgmodule - Build the Xorg module
 net-misc/uftp:server - Install uftp server daemon
@@ -7754,10 +7749,6 @@ sys-cluster/swift:container - adds swift container support
 sys-cluster/swift:memcached - adds memcached support
 sys-cluster/swift:object - adds swift object support
 sys-cluster/swift:proxy - adds swift proxy support
-sys-cluster/sx:client - Access the SX Cluster from this machine via its Nginx server. Also responsible for tools required to run the server.
-sys-cluster/sx:ipv6 - Enable support for communication via IPv6.
-sys-cluster/sx:server - Enable SX's server component.
-sys-cluster/sx:ssl - Enable communication security via OpenSSL.
 sys-cluster/torque:autorun - Enable the AUTORUN_JOBS codebase
 sys-cluster/torque:cgroups - Enable pbs_mom to use linux cgroups to isolate jobs
 sys-cluster/torque:cpusets - Enable pbs_mom to utilize linux cpusets if available
