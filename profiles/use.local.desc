@@ -2937,9 +2937,7 @@ dev-vcs/git:blksha1 - Use the new optimized SHA1 implementation
 dev-vcs/git:cgi - Install gitweb too
 dev-vcs/git:curl - Support fetching and pushing (requires webdav too) over http:// and https:// protocols
 dev-vcs/git:gpg - Pull in gnupg for signing -- without gnupg, attempts at signing will fail at runtime!
-dev-vcs/git:gtk - Include the gitview contrib tool
 dev-vcs/git:highlight - GitWeb support for app-text/highlight
-dev-vcs/git:libsecret - Enable libsecret support to store login credentials
 dev-vcs/git:mediawiki - Support pulling and pushing from MediaWiki
 dev-vcs/git:mediawiki-experimental - Add experimental patches for improved MediaWiki support
 dev-vcs/git:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arch
@@ -6800,6 +6798,7 @@ net-vpn/tinc:vde - Enable Virtual Distributed Ethernet (VDE) based networking
 net-vpn/tor:scrypt - Use app-crypt/libscrypt for the scrypt algorithm
 net-vpn/tor:tor-hardening - Compile tor with hardening on vanilla compilers/linkers
 net-vpn/tor:web - Build a tor2web service instead of a tor client
+net-vpn/tor:zstd - Use app-arch/zstd for compression
 net-vpn/vpnc:resolvconf - Enable support for DNS managing framework net-dns/openresolv
 net-vpn/wireguard:debug - Enable verbose debug reporting in dmesg of various WireGuard peer and device information.
 net-vpn/wireguard:module - Compile the actual WireGuard kernel module. Most certainly you want this enabled, unless you're doing something strange.
@@ -7431,6 +7430,10 @@ sys-apps/flashrom:tools - Install additional tools
 sys-apps/flashrom:usbblaster - Enable support for Altera USB-Blaster dongles
 sys-apps/flashrom:usbblaster_spi - Enable support for Altera USB-Blaster dongles
 sys-apps/flashrom:wiki - Enable wiki informations, like supported devices etc.
+sys-apps/fwupd:colorhug - Enable ColorHug support through x11-misc/colord package.
+sys-apps/fwupd:dell - Enable Dell-specific support.
+sys-apps/fwupd:elf - Enable libelf support through dev-libs/libelf package.
+sys-apps/fwupd:uefi - Enable UEFI support
 sys-apps/gawk:mpfr - use mpfr for high precision arithmetic (-M / --bignum)
 sys-apps/gnome-disk-utility:fat - Include FAT16/FAT32 support (sys-fs/dosfstools)
 sys-apps/hwdata-gentoo:binary-drivers - Adds support for ATI/NVIDIA binary drivers
@@ -7895,6 +7898,7 @@ sys-fs/aufs4:pax_kernel - Apply patch needed for pax enabled kernels
 sys-fs/aufs4:ramfs - Enable initramfs/rootfs support
 sys-fs/btrfs-progs:convert - Build ext2 conversion utility (btrfs-convert)
 sys-fs/btrfs-progs:static - Build static binaries in addition to the dynamic ones
+sys-fs/cryfs:update-check - Enable automatic checking for updates and security vulnerabilities
 sys-fs/cryptsetup:gcrypt - Use dev-libs/libgcrypt crypto backend
 sys-fs/cryptsetup:kernel - Use kernel crypto backend (mainly for embedded systems)
 sys-fs/cryptsetup:nettle - Use dev-libs/nettle crypto backend
