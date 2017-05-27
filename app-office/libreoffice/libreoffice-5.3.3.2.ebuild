@@ -83,8 +83,7 @@ $(printf 'libreoffice_extensions_%s ' ${LO_EXTS})"
 LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS=""
-#KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 
 COMMON_DEPEND="${PYTHON_DEPS}
 	app-arch/unzip
@@ -150,7 +149,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 		dev-libs/glib:2
 		gnome-extra/evolution-data-server
 	)
-	firebird? ( >=dev-db/firebird-2.5 )
+	firebird? ( >=dev-db/firebird-3.0.2.32703.0-r1 )
 	gltf? ( media-libs/libgltf )
 	gnome? ( gnome-base/dconf )
 	gstreamer? (

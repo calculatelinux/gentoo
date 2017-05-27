@@ -49,7 +49,7 @@ CDEPEND="
 	dev-python/subunit[${PYTHON_USEDEP},${MULTILIB_USEDEP}]
 	>=dev-util/cmocka-1.0.0[${MULTILIB_USEDEP}]
 	sys-apps/attr[${MULTILIB_USEDEP}]
-	>=sys-libs/ldb-1.1.29[ldap(+)?,python(+)?,${PYTHON_USEDEP},${MULTILIB_USEDEP}]
+	>=sys-libs/ldb-1.1.29[ldap(+)?,python(+),${PYTHON_USEDEP},${MULTILIB_USEDEP}]
 	sys-libs/libcap
 	sys-libs/ncurses:0=[${MULTILIB_USEDEP}]
 	sys-libs/readline:0=
@@ -76,7 +76,10 @@ CDEPEND="
 	ldap? ( net-nds/openldap[${MULTILIB_USEDEP}] )
 	system-heimdal? ( >=app-crypt/heimdal-1.5[-ssl,${MULTILIB_USEDEP}] )
 	system-mitkrb5? ( app-crypt/mit-krb5[${MULTILIB_USEDEP}] )
-	systemd? ( sys-apps/systemd:0= )
+	systemd? ( sys-apps/systemd:0= )"
+DEPEND="${CDEPEND}
+	${PYTHON_DEPS}
+	virtual/pkgconfig
 	test? (
 		!system-mitkrb5? (
 			>=sys-libs/nss_wrapper-1.1.3
@@ -85,9 +88,6 @@ CDEPEND="
 			>=sys-libs/uid_wrapper-1.2.1
 		)
 	)"
-DEPEND="${CDEPEND}
-	${PYTHON_DEPS}
-	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	python? ( ${PYTHON_DEPS} )
 	client? ( net-fs/cifs-utils[ads?] )
