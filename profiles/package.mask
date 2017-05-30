@@ -29,6 +29,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Amadeusz Żołnowski <aidecoe@gentoo.org> (29 May 2017)
+# Masked for removal. I have added it but I no longer use it.
+# If someone cares about z please take ownership. Othwerwise
+# I will remove it in 30 days.
+app-shells/z
+
 # Amadeusz Żołnowski <aidecoe@gentoo.org> (28 May 2017)
 # Masked for removal. Upstream has disappeared. Homepage is not
 # accessible anymore. There are open, long-standing bugs: #553888,
@@ -260,7 +266,6 @@ dev-python/protorpc
 # Ruby 2.1 will be removed soon, bug #615822.
 # These packages are all ruby21-only and most have not seen upstream
 # releases in a long time.
-dev-ruby/builder:3.1
 dev-ruby/configliere
 dev-ruby/map
 dev-ruby/memcache-client
@@ -275,16 +280,7 @@ dev-util/watchr
 # These slots are currently ruby21-only and have been obsoleted by
 # newer slots or are no longer compatible with current dev-ruby/rails
 # versions.
-dev-ruby/activeresource:4.0
-dev-ruby/coffee-rails:4.0
-dev-ruby/jquery-ui-rails:3
-dev-ruby/listen:2
 dev-ruby/prawn:0
-dev-ruby/sprockets:2.2
-dev-ruby/sprockets:2.11
-dev-ruby/sprockets-rails:2.0
-dev-ruby/sprockets-rails:2.1
-dev-ruby/sprockets-rails:2.2
 
 # Dirkjan Ochtman <djc@gentoo.org> (27 Apr 2017)
 # Persona service has been discontinued. Masked for removal in 30 days.
@@ -522,6 +518,7 @@ x11-libs/gtk+:1
 =dev-db/redis-3.2.6-r2 # except somebody bumped it out of pattern
 =dev-db/redis-3.2.6-r5
 =dev-db/redis-3.2.8-r1
+=dev-db/redis-3.2.8-r3
 
 
 # Ian Stakenvicius (17 Nov 2016)

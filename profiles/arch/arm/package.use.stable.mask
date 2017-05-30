@@ -1,6 +1,21 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
+# Alexis Ballier <aballier@gentoo.org> (30 May 2017)
+# No stable libtar yet
+<media-video/vlc-2.3 libtar
+
+# Alexis Ballier <aballier@gentoo.org> (30 May 2017)
+# No stable fluidsynth yet
+media-libs/sdl-mixer fluidsynth
+<media-sound/mpd-0.20 fluidsynth
+<media-video/vlc-2.3 fluidsynth
+
+# Alexis Ballier <aballier@gentoo.org> (29 May 2017)
+# frei0r-plugins is not stable yet, mask it on stable versions
+<media-video/libav-12 frei0r
+<media-video/ffmpeg-3.3 frei0r
+
 # Alexis Ballier <aballier@gentoo.org> (26 May 2017)
 # toolame not stable yet
 =media-video/mplayer-1.2.1 toolame

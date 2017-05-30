@@ -2326,6 +2326,7 @@ dev-perl/GD:fcgi - Build for FastCGI compatibility via dev-libs/fcgi instead of 
 dev-perl/Graphics-ColorNames:recommended - Install recommended support modules
 dev-perl/HTML-Mason:modperl - Enable www-apache/mod_perl support
 dev-perl/HTTP-Entity-Parser:xs - Install C-Based dependieces for faster performance
+dev-perl/JSON:xs - Install C-based dev-perl/JSON-XS for faster performance
 dev-perl/JSON-MaybeXS:xs - Install a C-Based backend to make JSON encode/decode fast
 dev-perl/Lab-Measurement:xpression - Install the Xpression measurement framework
 dev-perl/List-MoreUtils:xs - Install C-Based backend implementation for performance
@@ -2342,6 +2343,7 @@ dev-perl/PDL:netpbm - Enable NETPBM and MPEG support
 dev-perl/PDL:pdl2 - Build pdf2 shell (requires Devel-REPL)
 dev-perl/PDL:pgplot - Enable PGPLOT plotting capabilities
 dev-perl/Panotools-Script:gui - Installs GUIs for some tools
+dev-perl/Ref-Util:xs - Install C-Based dev-perl/Ref-Util-XS for accelerated performance
 dev-perl/Sub-Name:suggested - Install extra dependencies needed for extended regression tests
 dev-perl/Sysadm-Install:hammer - Enable hammer() funtion to run a command in the shell and simulate a user hammering the ENTER key to accept defaults on prompts
 dev-perl/Test-Warnings:suggested - Install optional dependencies for extra tests
@@ -2791,6 +2793,7 @@ dev-scheme/slib:scm - Support for scm scheme implementation
 dev-tcltk/expect-lite:debug - pull in packages needed for runtime interactive debugger
 dev-tcltk/tktreectrl:shellicon - shellicon extension
 dev-tex/abntex:lyx - Install with app-office/lyx layout
+dev-tex/biblatex:biber - Install the unicode compatible backend processor
 dev-tex/circuit_macros:script - Install cm2pdf to automatically create a correctly sized PDF from a circuit_macro m4 source
 dev-tex/dot2texi:pgf - Enable support for dev-tex/pgf (The TeX Portable Graphic Format)
 dev-tex/dot2texi:pstricks - Enable pstricks support
@@ -6279,6 +6282,11 @@ net-misc/fatrat:bittorrent - Use the bittorrent protocol via net-libs/libtorrent
 net-misc/fatrat:webinterface - Enable builtin webinterface.
 net-misc/freerdp:client - Build client binaries
 net-misc/freerdp:server - Build server binaries
+net-misc/gerbera:curl - Support YouTube and external media sources (e.g. internet radio)
+net-misc/gerbera:lastfm - Enable last.fm support
+net-misc/gerbera:magic - Use libmagic to determine file types
+net-misc/gerbera:mysql - Use dev-db/mysql as backend rather than SQLite3
+net-misc/gerbera:taglib - Use media-libs/taglib for reading files' metadata rather than id3lib
 net-misc/gnome-online-miners:flickr - Enable Flickr support
 net-misc/gsasl:gcrypt - Use dev-libs/libgcrypt for low-level crypto
 net-misc/gsasl:ntlm - Add support for Microsoft's NTLM mechanism using net-libs/libntlm
@@ -7400,6 +7408,7 @@ sys-apps/etckeeper:cron - Install cron script
 sys-apps/firejail:apparmor - Enable support for custom AppArmor profiles
 sys-apps/firejail:bind - Enable custom bind mounts
 sys-apps/firejail:chroot - Enable chrooting to custom directory
+sys-apps/firejail:contrib - Install contrib scripts
 sys-apps/firejail:file-transfer - Enable file transfers between sandboxes and the host system
 sys-apps/firejail:network - Enable networking features
 sys-apps/firejail:network-restricted - Grant access to --interface, --net=ethXXX and --netfilter only to root user; regular users are only allowed --net=none
@@ -8121,6 +8130,7 @@ sys-process/htop:oom - Add column to track the OOM-killer score of processes
 sys-process/htop:openvz - Enable openvz support
 sys-process/htop:vserver - Enable vserver support
 sys-process/lsof:rpc - support looking up RPC service info
+sys-process/procps:elogind - Use sys-auth/elogind for session tracking.
 sys-process/procps:kill - Build the kill program
 sys-process/procps:modern-top - Enables new startup defaults of top. Keeps old defaults if disabled
 sys-process/procps:ncurses - Build programs that use ncurses: top, slabtop, watch

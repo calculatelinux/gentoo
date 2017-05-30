@@ -62,7 +62,6 @@ xindy
 lyx
 lasi
 hardened
-frei0r
 libvirt
 pdfannotextractor
 prelude
@@ -76,7 +75,6 @@ lirc
 lm_sensors
 xemacs
 scanner
-fluidsynth
 sid
 mms
 mtp
@@ -90,7 +88,6 @@ tokyocabinet
 vaapi
 lpsol
 upnp
-libtar
 devil
 gts
 anthy
