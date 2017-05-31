@@ -7,7 +7,7 @@ EAPI=6
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite"
 
-inherit eutils linux-info python-single-r1 cmake-utils autotools
+inherit autotools cmake-utils eutils linux-info pax-utils python-single-r1
 
 LIBDVDCSS_COMMIT="2f12236bc1c92f73c21e973363f79eb300de603f"
 LIBDVDREAD_COMMIT="17d99db97e7b8f23077b342369d3c22a6250affd"
@@ -27,7 +27,7 @@ SLOT="0"
 # use flag is called libusb so that it doesn't fool people in thinking that
 # it is _required_ for USB support. Otherwise they'll disable udev and
 # that's going to be worse.
-IUSE="airplay alsa bluetooth bluray caps cec +css dbus debug dvd gles libressl libusb lirc mysql nfs nonfree +opengl pulseaudio samba sftp systemd +system-ffmpeg test +udev udisks upnp upower vaapi vdpau webserver +X +xslt zeroconf"
+IUSE="airplay alsa bluetooth bluray caps cec +css dbus debug dvd gles libressl libusb lirc mysql nfs +opengl pulseaudio samba sftp systemd +system-ffmpeg test +udev udisks upnp upower vaapi vdpau webserver +X +xslt zeroconf"
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
 	|| ( gles opengl )
@@ -195,12 +195,11 @@ src_prepare() {
 	sed -e 's/autoreconf -vif/echo "autoreconf already done in src_prepare()"/' -i \
 		"${S}"/cmake/modules/FindCpluff.cmake \
 		"${S}"/tools/depends/native/TexturePacker/src/autogen.sh \
-		"${S}"/tools/depends/native/JsonSchemaBuilder/src/autogen.sh
+		"${S}"/tools/depends/native/JsonSchemaBuilder/src/autogen.sh \
+		|| die
 }
 
 src_configure() {
-	local CMAKE_BUILD_TYPE=$(usex debug Debug RelWithDebInfo)
-
 	local mycmakeargs=(
 		-Ddocdir="${EPREFIX}/usr/share/doc/${PF}"
 		-DENABLE_LDGOLD=OFF # https://bugs.gentoo.org/show_bug.cgi?id=606124
@@ -220,7 +219,6 @@ src_configure() {
 		-DENABLE_MICROHTTPD=$(usex webserver)
 		-DENABLE_MYSQLCLIENT=$(usex mysql)
 		-DENABLE_NFS=$(usex nfs)
-		-DENABLE_NONFREE=$(usex nonfree)
 		-DENABLE_OPENGLES=$(usex gles)
 		-DENABLE_OPENGL=$(usex opengl)
 		-DENABLE_OPENSSL=ON
@@ -253,24 +251,27 @@ src_compile() {
 
 src_install() {
 	cmake-utils_src_install
+
+	pax-mark E "${ED%/}"/usr/$(get_libdir)/${PN}/${PN}.bin
+
 	rm "${ED%/}"/usr/share/doc/*/{LICENSE.GPL,copying.txt}* || die
 
 	newicon media/icon48x48.png kodi.png
 
 	# Replace bundled fonts with system ones.
 	rm "${ED%/}"/usr/share/kodi/addons/skin.estouchy/fonts/NotoSans-Regular.ttf || die
-	dosym /usr/share/fonts/noto/NotoSans-Regular.ttf \
+	dosym ../../../../fonts/noto/NotoSans-Regular.ttf \
 		usr/share/kodi/addons/skin.estouchy/fonts/NotoSans-Regular.ttf
 
 	local f
 	for f in NotoMono-Regular.ttf NotoSans-Bold.ttf NotoSans-Regular.ttf ; do
 		rm "${ED%/}"/usr/share/kodi/addons/skin.estuary/fonts/"${f}" || die
-		dosym /usr/share/fonts/noto/"${f}" \
+		dosym ../../../../fonts/noto/"${f}" \
 			usr/share/kodi/addons/skin.estuary/fonts/"${f}"
 	done
 
 	rm "${ED%/}"/usr/share/kodi/addons/skin.estuary/fonts/Roboto-Thin.ttf || die
-	dosym /usr/share/fonts/roboto/Roboto-Thin.ttf \
+	dosym ../../../../fonts/roboto/Roboto-Thin.ttf \
 		usr/share/kodi/addons/skin.estuary/fonts/Roboto-Thin.ttf
 
 	python_domodule tools/EventClients/lib/python/xbmcclient.py

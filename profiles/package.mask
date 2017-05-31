@@ -29,6 +29,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (30 May 2017)
+# Work in progress. DO NOT UNMASK. Otherwise bad things WILL happen.
+# Think of the kittens.
+=dev-lang/perl-5.26.0
+
 # Amadeusz Żołnowski <aidecoe@gentoo.org> (29 May 2017)
 # Masked for removal. I have added it but I no longer use it.
 # If someone cares about z please take ownership. Othwerwise
@@ -261,26 +266,6 @@ dev-python/protorpc
 # CVE-2016-10229 security issue. Masked until upstream add the patch.
 # Bug #615480
 =sys-kernel/vanilla-sources-4.1.39
-
-# Hans de Graaff <graaff@gentoo.org> (28 Apr 2017)
-# Ruby 2.1 will be removed soon, bug #615822.
-# These packages are all ruby21-only and most have not seen upstream
-# releases in a long time.
-dev-ruby/configliere
-dev-ruby/map
-dev-ruby/memcache-client
-dev-ruby/mini_shoulda
-dev-ruby/png
-dev-ruby/rails_autolink
-dev-ruby/rev
-dev-ruby/RubyInline
-dev-ruby/ruby-inifile
-dev-ruby/ruby-tcpwrap
-dev-util/watchr
-# These slots are currently ruby21-only and have been obsoleted by
-# newer slots or are no longer compatible with current dev-ruby/rails
-# versions.
-dev-ruby/prawn:0
 
 # Dirkjan Ochtman <djc@gentoo.org> (27 Apr 2017)
 # Persona service has been discontinued. Masked for removal in 30 days.
