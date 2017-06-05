@@ -13,21 +13,11 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 python_test() {
-	local testfile
-	pushd "${BUILD_DIR}"/lib/ || die
-	for test in ${PN}/tests/test_*.py; do
-		if ! "${PYTHON}" "${testfile}"; then
-			die "Test ${testfile} failed under ${EPYTHON}"
-		fi
-	done
-
-	# Give some order to the output salad.
-	einfo "Testsuite passed under ${EPYTHON}";
-	einfo ""
+	${EPYTHON} -m unittest discover -v -s "${BUILD_DIR}/lib" || die "Testing failed with ${EPYTHON}"
 }

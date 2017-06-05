@@ -29,6 +29,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Palimaka <kensington@gentoo.org> (04 Jun 2017)
+# Relies on obsolete and vulerable qtwebkit version. Dead upstream.
+# Masked for removal in 30 days. Bug #620758.
+www-client/qtweb
+
+# Michael Palimaka <kensington@gentoo.org> (04 Jun 2017)
+# Relies on obsolete and vulerable qtwebkit version. Dead upstream.
+# Masked for removal in 30 days. Bug #620752.
+sci-mathematics/freemat
+
 # Pacho Ramos <pacho@gentoo.org> (02 Jun 2017)
 # Relies on obsolete and vulnerable webkit-gtk version and bundles some libs
 # (#597532). Removal in a month.
@@ -267,11 +277,6 @@ kde-misc/quadkonsole
 # experimental features and accept a more unstable release.
 >=www-client/chromium-60
 
-# Michał Górny <mgorny@gentoo.org> (01 May 2017)
-# Used only by old (removed) versions of dev-python/google-apitools.
-# Last release in 2015. Removal in 30 days.
-dev-python/protorpc
-
 # Zac Medico <zmedico@gentoo.org> (01 May 2017)
 # Possible API incompatibilities, bug #617174.
 # http://aiohttp.readthedocs.io/en/latest/migration.html
@@ -282,10 +287,6 @@ dev-python/protorpc
 # CVE-2016-10229 security issue. Masked until upstream add the patch.
 # Bug #615480
 =sys-kernel/vanilla-sources-4.1.39
-
-# Dirkjan Ochtman <djc@gentoo.org> (27 Apr 2017)
-# Persona service has been discontinued. Masked for removal in 30 days.
-www-apache/mod_authnz_persona
 
 # Rick Farina <zerochaos@gentoo.org> (17 Apr 2017)
 # Masking old versions because upstream changed versioning
@@ -513,14 +514,11 @@ x11-libs/gtk+:1
 # odd revisions are slotted lua, 
 # even revisions are unslotted lua
 =dev-db/redis-3.2.5-r1
-=dev-db/redis-3.2.5-r2 # except somebody bumped it out of pattern
 =dev-db/redis-3.2.5-r5
 =dev-db/redis-3.2.6-r1
-=dev-db/redis-3.2.6-r2 # except somebody bumped it out of pattern
 =dev-db/redis-3.2.6-r5
 =dev-db/redis-3.2.8-r1
 =dev-db/redis-3.2.8-r3
-
 
 # Ian Stakenvicius (17 Nov 2016)
 # Does not honour LD_LIBRARY_PATH set in the environment, causing
@@ -707,11 +705,14 @@ dev-libs/iniparser:4
 # Unfixed security problems
 # No upstream support anymore
 # CVE-2015-{0219,0220,0221,0222,5145}
+# CVE-2016-{9013,9014},CVE-2017-{7233,7234}
 # #536586
 # #554864
 =dev-python/django-1.4*
 =dev-python/django-1.5*
 =dev-python/django-1.6*
+=dev-python/django-1.7*
+=dev-python/django-1.9*
 # Not supported by any django version upstream supports
 dev-python/south
 
