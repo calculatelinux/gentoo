@@ -266,7 +266,6 @@ app-benchmarks/httperf:idleconn - Build with the idleconn program
 app-benchmarks/jmeter:beanshell - Enable BeanShell scripting support
 app-benchmarks/ramspeed:pic - Force shared libraries to be built as PIC (this is slower)
 app-benchmarks/sysbench:aio - Enable libaio support
-app-cdr/backlite:mplayer - Add support for mplayer preview in addition to X11 and phonon
 app-cdr/brasero:libburn - Enable dev-libs/libburn backend
 app-cdr/brasero:nautilus - Build the gnome-base/nautilus extension
 app-cdr/brasero:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
@@ -6552,9 +6551,9 @@ net-news/rssguard:webengine - Use dev-qt/qtwebengine for embedded web browser
 net-nntp/inn:innkeywords - Enable automatic keyword generation support
 net-nntp/inn:inntaggedhash - Use tagged hash table for history (disables large file support)
 net-nntp/nzbget:parcheck - Enable support for checking PAR archives
+net-nntp/sabnzbd:7za - Add support for extracting 7za files
 net-nntp/sabnzbd:rar - Add support for extracting rar files
 net-nntp/sabnzbd:unzip - Add support for extracting zip files
-net-nntp/sabnzbd:yenc - Use yenc to speed up nntp encoding and decoding
 net-nntp/slrn:canlock - Add support for cancel locks via net-libs/canlock
 net-nntp/slrn:uudeview - Add support for yEnc coding and more using dev-libs/uulib
 net-nntp/tin:cancel-locks - Enable Cancel-Lock header functionality (also enables USE=evil)
@@ -8740,9 +8739,7 @@ x11-wm/xpra:vpx - Enable vpx image format support
 x11-wm/xpra:webcam - Enable webcam support via opencv
 x11-wm/xpra:webp - Enable webp image format support
 xfce-base/libxfce4ui:glade - Build support for Glade 3's GtkBuilder implementation
-xfce-base/libxfce4ui:gtk3 - Enable gtk3 support
 xfce-base/xfce4-settings:libcanberra - Enable sound event support using media-libs/libcanberra
-xfce-base/xfce4-settings:libinput - Enable libinput Xorg driver (x11-drivers/xf86-input-libinput) support
 xfce-base/xfce4-settings:xklavier - Enable keyboard layout selection support using x11-libs/libxklavier
 xfce-base/xfdesktop:thunar - Build support for desktop icons (for example, launchers and folders)
 xfce-base/xfwm4:xpresent - Enable the XPresent extension for sync to vblank

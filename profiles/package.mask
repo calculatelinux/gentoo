@@ -29,9 +29,19 @@
 
 #--- END OF EXAMPLES ---
 
-# Andreas Sturmlechner <asturm@gentoo.org> (07 Jun 2017)
-# Needs some testing.
-~media-gfx/exiv2-0.26
+# Sergey Popov <pinkbyte@gentoo.org> (08 Jun 2017)
+# Dead upstream, relies on ancient and vulnerable qtwebkit
+# See bug #620690
+# Removal in 30 days
+app-editors/fb2edit
+
+# Michał Górny <mgorny@gentoo.org> (07 Jun 2017)
+# The new release changes API and *breaks* core Xfce components.
+# Upstream lists xfce-base/xfce4-settings and xfce-base/xfce4-panel
+# as being incompatible. The breakage is not exhibited at build time
+# but results in broken executables. Masked until upstream releases
+# fixed versions and for further testing.
+>=xfce-base/xfconf-4.13
 
 # Matthias Maier <tamiko@gentoo.org> (06 Jun 2017)
 # Dead upstream, unmaintained, no homepage, no SRC_URI, x86-only, does not
@@ -296,12 +306,12 @@ www-client/phantomjs
 dev-ruby/poltergeist
 
 # Michael Palimaka <kensington@gentoo.org> (04 Jun 2017)
-# Relies on obsolete and vulerable qtwebkit version. Dead upstream.
+# Relies on obsolete and vulnerable qtwebkit version. Dead upstream.
 # Masked for removal in 30 days. Bug #620758.
 www-client/qtweb
 
 # Michael Palimaka <kensington@gentoo.org> (04 Jun 2017)
-# Relies on obsolete and vulerable qtwebkit version. Dead upstream.
+# Relies on obsolete and vulnerable qtwebkit version. Dead upstream.
 # Masked for removal in 30 days. Bug #620752.
 sci-mathematics/freemat
 
@@ -469,11 +479,6 @@ app-arch/unlzx
 # and wxGTK-3.0.3 bump in tree
 >=net-ftp/filezilla-3.25.2-r1
 
-# Daniel Pielmeier <billie@gentoo.org> (7 May 2017)
-# Fails to build with ffmpeg-3. Dead upstream.
-# Masked for removal in 30 days. Bug #575824.
-app-cdr/backlite
-
 # Lars Wendler <polynomial-c@gentoo.org> (07 May 2017)
 # Dead upstream since 2014. Fails to build with gcc-6 (bug #594260).
 # Masked for removal in 30 days.
@@ -506,13 +511,6 @@ net-im/licq
 # Masked for removal by 17 May 2017. Past end of life. Susceptible to security
 # bugs (603716 and 603720). Upgrade to latest version.
 =dev-db/postgresql-9.1.24
-
-# Kent Fredric <kentnl@gentoo.org> (17 Apr 2017)
-# Should be provided by dev-lang/perl or a virtual since perl 5.9,
-# But was added accidentally in 2012. Don't depend on this,
-# and if you need a version newer than 0.11, ask perl project
-# for a virtual
-dev-perl/encoding-warnings
 
 # NP-Hardass <NP-Hardass@gentoo.org> (10 Apr 2017)
 # Masked for testing
@@ -843,10 +841,6 @@ dev-java/spring-instrument
 # commons-dbcp:0 as that requires Java 6. Note that the 2.0 in the
 # tree should have actually been 2.0_beta1. There are no revdeps.
 dev-java/jcs
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (9 Jan 2016)
-# Errorneously added. Is already in perl-core. Please uninstall.
-dev-perl/ExtUtils-Constant
 
 # Andrey Grozin <grozin@gentoo.org> (04 Jan 2016)
 # Needs a bump and substantial ebuild rewrite
