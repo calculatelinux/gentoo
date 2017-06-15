@@ -29,6 +29,63 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (15 Jun 2017)
+# Last release 16.12.3, dropped upstream, never worked properly.
+# Masked for removal in 30 days.
+kde-apps/pim-storage-service-manager
+
+# Pacho Ramos <pacho@gentoo.org> (14 Jun 2017)
+# Fails to build, nothing needs it in the tree, bug #557450. Removal in a
+# month.
+dev-libs/radlib
+
+# Pacho Ramos <pacho@gentoo.org> (14 Jun 2017)
+# Relies on lots of dead old gnome libs, relies also on berlios.de and it is
+# dead for more than 8 years, bug #537708. Removal in a month.
+app-office/rubrica
+
+# Pacho Ramos <pacho@gentoo.org> (14 Jun 2017)
+# Deprecated in favor of media-fonts/dejavu since many years ago, see bug
+# #282754. Removal in a month.
+media-fonts/ttf-bitstream-vera
+
+# Pacho Ramos <pacho@gentoo.org> (14 Jun 2017)
+# Not needed by anything in the tree, requires an obsolete texinfo version
+# and is also the last consumer of gnat-gcc, bug #620982. Removal in a
+# month.
+sci-electronics/ghdl
+
+# Pacho Ramos <pacho@gentoo.org> (14 Jun 2017)
+# Not needed by anything in the tree, unmaintained and waiting for a major
+# version bump if someone wants to take care of it, bug #474738. Removal in
+# a month.
+net-voip/gnugk
+
+# Pacho Ramos <pacho@gentoo.org> (14 Jun 2017)
+# All consumers of this newer versions never got ported, if finally we need
+# to readd a even newer version of this packages with an hypothetical newer
+# Ekiga, we will need to work on new ebuilds anyway, bug #474740. Removal in
+# a month.
+#
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (25 Jun 2013)
+# Mask new ptlib/opal for breakage, tracked in bug #474742
+# Lars Wendler <polynomial-c@gentoo.org> (29 Apr 2014)
+# Adjusted mask so newer versions get covered as well.
+>=net-libs/ptlib-2.12.0
+>=net-libs/opal-3.12.0
+
+# Pacho Ramos <pacho@gentoo.org> (14 Jun 2017)
+# Not needed by anything in the tree, dead since 2006 and also needing our
+# rpm package that is buggy and unmaintained, bug # 620986. Removal in a
+# month.
+app-emulation/domi
+
+# Pacho Ramos <pacho@gentoo.org> (14 Jun 2017)
+# Needs someone with the hardware to test how to install it (and its
+# configuration files) properly. Dead since 2007, bug #493898. Removal in a
+# month.
+dev-lang/nqc
+
 # Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (11 Jun 2017)
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
@@ -39,6 +96,7 @@
 # Depends on qt4 which is being deprecated.
 # Possible alternative is skypeforlinux,
 # which uses the same account information but has different features.
+# See bug #620722 and bug #608174.
 dev-python/skype4py
 media-sound/skype-call-recorder
 net-im/skype
@@ -451,52 +509,11 @@ dev-libs/cyrus-imap-dev
 # dependencies. To be removed in 30 days.
 x11-terms/rxvt
 
-# Michał Górny <mgorny@gentoo.org> (15 May 2017)
-# These packages lack modern digests and are fetch-restricted, so we can
-# not update them. Some of them have additional issues.
-# Removal in 30 days.
-#
-# sci-biology/mammoth - #612738, not touched since 2015, added in 2007,
-# not bumped since; homepage gone
-#
-# sci-chemistry/ambertools - #612740, not touched since 2013, added
-# in 2011, not bumped since; includes sci-chemistry/acpype as a revdep
-#
-# sci-chemistry/gamess - #612742, not touched since 2013, last bump 2011,
-# seems to be maintained in ::science; includes sci-chemistry/gtk-gamess
-# as a revdep
-#
-# sci-chemistry/mead - #612744, not touched since 2010, last bump 2009,
-# homepage gone, 32-bit x86-only
-sci-biology/mammoth
-sci-chemistry/acpype
-sci-chemistry/ambertools
-sci-chemistry/gamess
-sci-chemistry/gtk-gamess
-sci-chemistry/mead
-
-# David Seifert <soap@gentoo.org> (14 May 2017)
-# Unmaintained upstream, awful codebase. No reverse
-# dependencies. See #594134. To be removed in 30 days.
-sys-fabric/libibvpp
-
-# Michael Orlitzky <mjo@gentoo.org> (11 May 2017)
-# Neither of these packages has a clear license, and both are
-# unmaintained (and probably unused). No reverse dependencies,
-# either. See bugs 618130 and 618140. To be removed in 30 days.
-app-arch/undms
-app-arch/unlzx
-
 # Bernard Cafarelli <voyageur@gentoo.org> (8 May 2017)
 # Coordinated conversion to wxGTK:3.0-gtk3
 # Drop mask after migration of existing wxGTK:3.0 users
 # and wxGTK-3.0.3 bump in tree
 >=net-ftp/filezilla-3.25.2-r1
-
-# Lars Wendler <polynomial-c@gentoo.org> (07 May 2017)
-# Dead upstream since 2014. Fails to build with gcc-6 (bug #594260).
-# Masked for removal in 30 days.
-net-im/licq
 
 # Zac Medico <zmedico@gentoo.org> (01 May 2017)
 # Possible API incompatibilities, bug #617174.
@@ -985,13 +1002,6 @@ www-plugins/chrome-binary-plugins:unstable
 # Michael Weber <xmw@gentoo.org> (17 Jul 2013)
 # Upstream next versions
 >=sys-boot/raspberrypi-firmware-1_pre
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (25 Jun 2013)
-# Mask new ptlib/opal for breakage, tracked in bug #474742
-# Lars Wendler <polynomial-c@gentoo.org> (29 Apr 2014)
-# Adjusted mask so newer versions get covered as well.
->=net-libs/ptlib-2.12.0
->=net-libs/opal-3.12.0
 
 # Richard Freeman <rich0@gentoo.org> (24 Mar 2013)
 # Contains known buffer overflows.  Package generally works

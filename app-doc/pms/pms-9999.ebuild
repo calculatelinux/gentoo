@@ -17,6 +17,7 @@ IUSE="html twoside"
 
 DEPEND="dev-tex/leaflet
 	dev-texlive/texlive-bibtexextra
+	dev-texlive/texlive-fontsrecommended
 	dev-texlive/texlive-latex
 	dev-texlive/texlive-latexextra
 	dev-texlive/texlive-latexrecommended
@@ -28,6 +29,8 @@ DEPEND="dev-tex/leaflet
 RDEPEND=""
 
 src_compile() {
+	# just in case; we shouldn't be generating any fonts
+	export VARTEXFONTS="${T}/fonts"
 	emake $(usex twoside TWOSIDE=yes "")
 	use html && emake html
 }
