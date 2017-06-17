@@ -29,6 +29,35 @@
 
 #--- END OF EXAMPLES ---
 
+# Thomas Deutschmann <whissi@gentoo.org> (17 Jun 2017)
+# Unmaintained in Gentoo repository; Multiple vulnerabilities
+# People using VMware in Gentoo should switch to Gentoo's VMware overlay
+# Bugs 619398, 621910, 616958, 536364, 614666, 612804 ...
+app-emulation/vmware-workstation
+app-emulation/vmware-player
+app-emulation/vmware-modules
+app-emulation/vmware-tools
+
+# Pacho Ramos <pacho@gentoo.org> (17 Jun 2017)
+# Not compatible with ffmpeg-3 (#602786), other bug reports and NPAPI
+# plugins support in main browsers is dying. Removal in a month.
+www-plugins/gnash
+
+# Pacho Ramos <pacho@gentoo.org> (17 Jun 2017)
+# Not compatible with ffmpeg-3 (#591946), neither builds without ffmpeg
+# support (#607492) and NPAPI plugins are dying. Removal in a month.
+www-plugins/lightspark
+
+# Pacho Ramos <pacho@gentoo.org> (17 Jun 2017)
+# Not compatible with ffmpeg-3 (#589806) and needs vulnerable qtwebkit:4
+# (#620740). Removal in a month.
+net-voip/homer
+
+# Pacho Ramos <pacho@gentoo.org> (17 Jun 2017)
+# Dead for ages, relies on google-code for fetching, not compatible with
+# ffmpeg-3 neither with latest imagemagick (#575988). Removal in a month.
+media-sound/gejengel
+
 # Andreas Sturmlechner <asturm@gentoo.org> (15 Jun 2017)
 # Last release 16.12.3, dropped upstream, never worked properly.
 # Masked for removal in 30 days.
@@ -555,12 +584,6 @@ media-libs/lv2-ui
 <dev-util/nvidia-cuda-toolkit-7
 net-wireless/cpyrit-cuda
 
-# Michał Górny <mgorny@gentoo.org> (18 May 2017)
-# Last release in 2007, upstream disappeared. Requires a lot
-# of patching. Unmaintained since 2012. Bad ebuild quality, #514850.
-# Does not build anymore, #612398. Removal in 30 days.
-app-admin/geolizer
-
 # Maciej Mrozowski <reavertm@gentoo.org> (18 May 2017)
 # Experimental, most consumers does not support it yet
 >=dev-games/openscenegraph-3.5.5
@@ -570,11 +593,6 @@ app-admin/geolizer
 # Unpatched security vulnerability per bug #616700
 # Removal in 30 days.
 mail-client/squirrelmail
-
-# Thomas Deutschmann <whissi@gentoo.org> (17 May 2017)
-# Multiple unpatched security vulnerabilitie (see bug #603756, #610696, #612650 ...)
-# Removal in 30 days.
-www-apps/joomla
 
 # Eray Aslan <eras@gentoo.org> (17 May 2017)
 # Functionality merged to cyrus-imapd-2.5.x series.
@@ -586,13 +604,6 @@ dev-libs/cyrus-imap-dev
 # net-mail/cyrus-imap-admin and dev-libs/cyrus-imap-dev
 # are tree cleaned.
 =net-mail/cyrus-imapd-2.4*
-
-# Jason A. Donenfeld <zx2c4@gentoo.org> (16 May 2017)
-# This package has no upstream and has likely security vulnerabilities.
-# Users can trivially upgrade to x11-terms/rxvt-unicode, which is its
-# modern day replacement, with no drawbacks. See bug 618250. No reverse
-# dependencies. To be removed in 30 days.
-x11-terms/rxvt
 
 # Bernard Cafarelli <voyageur@gentoo.org> (8 May 2017)
 # Coordinated conversion to wxGTK:3.0-gtk3
@@ -930,13 +941,6 @@ sys-fs/bedup
 # Expires (2 Oct 2017)
 =sys-kernel/vanilla-sources-4.1.9
 =sys-kernel/gentoo-sources-4.1.9
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (19 Sep 2015)
-# Masked for security reasons, bugs 516044, 552644
-# Keeping it in the tree for now for users who cannot upgrade
-# (commercial product, separate licenses for major versions)
-=app-emulation/vmware-workstation-9*
-=app-emulation/vmware-modules-271*
 
 # Lars Wendler <polynomial-c@gentoo.org> (09 Sep 2015)
 # Masked for testing.
