@@ -17,7 +17,7 @@ KEYWORDS="~amd64"
 IUSE="+shared static static-pic"
 REQUIRED_USE="|| ( shared static static-pic )"
 
-RDEPEND="dev-lang/gnat-gpl"
+RDEPEND="dev-lang/gnat-gpl:="
 DEPEND="${RDEPEND}
 	dev-ada/gprbuild"
 
