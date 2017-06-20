@@ -3,7 +3,7 @@
 
 EAPI="5"
 PYTHON_REQ_USE="sqlite"
-PYTHON_COMPAT=( python2_7 python3_{4,5} )
+PYTHON_COMPAT=( python2_7 python3_5 )
 
 EGIT_REPO_URI="https://github.com/buildbot/${PN}.git"
 
@@ -29,12 +29,12 @@ IUSE="crypt doc examples irc test"
 
 RDEPEND="
 	>=dev-python/jinja-2.1[${PYTHON_USEDEP}]
-	$(python_gen_cond_dep '>=dev-python/twisted-16.0.0[${PYTHON_USEDEP},crypt?]' python2_7 )
-	$(python_gen_cond_dep '>=dev-python/twisted-17.1.0[${PYTHON_USEDEP},crypt?]' python3_5 python3_6 )
+	>=dev-python/twisted-17.5.0[${PYTHON_USEDEP}]
 	>=dev-python/autobahn-0.16.0[${PYTHON_USEDEP}]
 	>=dev-python/sqlalchemy-0.8[${PYTHON_USEDEP}]
 	>=dev-python/sqlalchemy-migrate-0.9[${PYTHON_USEDEP}]
 	crypt? (
+		>=dev-python/twisted-17.5.0[${PYTHON_USEDEP},crypt]
 		>=dev-python/pyopenssl-16.0.0[${PYTHON_USEDEP}]
 		dev-python/idna[${PYTHON_USEDEP}]
 		dev-python/service_identity[${PYTHON_USEDEP}]
@@ -48,6 +48,7 @@ RDEPEND="
 	dev-python/pyjwt[${PYTHON_USEDEP}]
 	dev-python/distro[${PYTHON_USEDEP}]
 	>=dev-python/zope-interface-4.1.1[${PYTHON_USEDEP}]
+	~dev-util/buildbot-worker-${PV}[${PYTHON_USEDEP}]
 "
 DEPEND="${RDEPEND}
 	>=dev-python/setuptools-21.2.1[${PYTHON_USEDEP}]
@@ -70,6 +71,10 @@ DEPEND="${RDEPEND}
 		dev-python/pyjade[${PYTHON_USEDEP}]
 		dev-python/txgithub[${PYTHON_USEDEP}]
 		dev-python/txrequests[${PYTHON_USEDEP}]
+		dev-python/lz4[${PYTHON_USEDEP}]
+		dev-python/treq[${PYTHON_USEDEP}]
+		dev-python/setuptools_trial[${PYTHON_USEDEP}]
+		~dev-util/buildbot-worker-${PV}[${PYTHON_USEDEP}]
 	)"
 
 S=${WORKDIR}/${MY_P}

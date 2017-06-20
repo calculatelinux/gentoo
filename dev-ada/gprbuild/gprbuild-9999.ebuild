@@ -20,9 +20,9 @@ SLOT="0"
 KEYWORDS=""
 IUSE="bootstrap +shared static static-pic"
 
-DEPEND="dev-lang/gnat-gpl
+DEPEND="dev-lang/gnat-gpl:=
 	>=dev-python/sphinx-1.5.2
-	!bootstrap? ( dev-ada/xmlada )"
+	!bootstrap? ( dev-ada/xmlada[static] )"
 RDEPEND="${DEPEND}"
 
 REQUIRED_USE="bootstrap? ( !shared !static !static-pic )"
