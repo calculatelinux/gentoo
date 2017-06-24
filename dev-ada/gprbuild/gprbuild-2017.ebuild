@@ -30,9 +30,9 @@ REQUIRED_USE="bootstrap? ( !shared !static !static-pic )"
 PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
 
 pkg_setup() {
+	GCC=${ADA:-$(tc-getCC)}
+	gnatbase=$(basename ${GCC})
 	if use bootstrap; then
-		GCC=${ADA:-$(tc-getCC)}
-		gnatbase=$(basename ${GCC})
 		gnatpath=$(dirname ${GCC})
 
 		GNATMAKE="${gnatbase/gcc/gnatmake}"
@@ -47,6 +47,12 @@ pkg_setup() {
 			die "ada compiler not available"
 		fi
 	fi
+}
+
+src_prepare() {
+	GCC_PV=${gnatbase#*gcc-}
+	sed -e "s:@VER@:${GCC_PV}:g" "${FILESDIR}"/${P}.xml > gnat-${GCC_PV}.xml
+	default
 }
 
 src_configure() {
@@ -108,5 +114,7 @@ src_install() {
 		done
 		rm "${D}"usr/doinstall || die
 	fi
+	insinto /usr/share/gprconfig
+	doins gnat-${GCC_PV}.xml
 	einstalldocs
 }
