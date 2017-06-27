@@ -1265,11 +1265,15 @@ dev-ada/gnatcoll:projects - Adds support for projects
 dev-ada/gnatcoll:pygobject - Adds support for pygobject
 dev-ada/gnatcoll:shared - Build shared library
 dev-ada/gnatcoll:static - Build static library
+dev-ada/gprbuild:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
+dev-ada/gprbuild:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/gprbuild:shared - Build shared library
 dev-ada/gprbuild:static - Build static library
 dev-ada/gprbuild:static-pic - Build static library with pic code
 dev-ada/gtkada:shared - Build gtkada as shared library
 dev-ada/gtkada:static - Build gtkada as static library
+dev-ada/xmlada:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
+dev-ada/xmlada:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/xmlada:shared - Build shared library
 dev-ada/xmlada:static - Build static library
 dev-ada/xmlada:static-pic - Build static library with pic code
@@ -3702,6 +3706,7 @@ mail-filter/opendkim:opendbx - Use opendbx backend to facilitate dataset driven 
 mail-filter/opendkim:poll - Use poll() instead of select() for the provided asynchronous resolver library.
 mail-filter/opendkim:sasl - Used to authenticate to a LDAP server in various ways if required.
 mail-filter/opendkim:unbound - Use the unbound dnssec library to perform DKIM DNS queries.
+mail-filter/opendmarc:reports - Install the reports binaries: expire, import, reports, params
 mail-filter/opendmarc:spf - Use the mail-filter/libspf2 for Sender Policy Framework checking
 mail-filter/opensmtpd-extras:filter-clamav - filter for scanning with app-antivirus/clamav
 mail-filter/opensmtpd-extras:filter-dkim-signer - filter for adding DKIM signatures to outgoing messages
@@ -7081,7 +7086,6 @@ sci-libs/avogadrolibs:vtk - include vtk support
 sci-libs/ceres-solver:c++11 - Build ceres-solver using the C++11 standard
 sci-libs/ceres-solver:cxsparse - Enable simple support for sparse matrix algebra from sci-libs/cxsparse with no LAPACK dependencies
 sci-libs/ceres-solver:gflags - Use dev-cpp/gflags for flag parsing
-sci-libs/ceres-solver:protobuf - Use dev-libs/protobuf to encode structured data
 sci-libs/ceres-solver:schur - Enable fixed-size schur specializations (disable if binary size is an issue)
 sci-libs/ceres-solver:sparse - Enable support for sparse matrix algebra with various packages from SuiteSparse
 sci-libs/cfitsio:tools - Build execs fpack, funpack, imcopy, fitscopy, listhead
@@ -7488,7 +7492,6 @@ sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/moreutils:perl - Install scripts written in Perl
 sys-apps/net-tools:arp - build the arp and rarp tools (for manipulating the ARP cache)
 sys-apps/net-tools:hostname - build the hostname and dnsdomainname tools
-sys-apps/net-tools:old-output - use old ifconfig output style (useful for when new output breaks scripts)
 sys-apps/net-tools:plipconfig - build the plipconfig tool (for working with old PLIP hardware)
 sys-apps/net-tools:slattach - build the slattach tool (for working with old serial ports)
 sys-apps/nix:etc_profile - Install /etc/profile.d/ entry to inject nix support for all users.
