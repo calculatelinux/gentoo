@@ -1258,6 +1258,8 @@ app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) sett
 app-vim/vim-latex:html - Install HTML documentation
 app-vim/vim-latex:python - Enable python support which can help speed up some functionality
 app-vim/youcompleteme:clang - Enable semantic support for C-family languages using sys-devel/clang
+dev-ada/asis:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
+dev-ada/asis:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/gnat_util:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/gnat_util:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/gnat_util:shared - Build gnat_util shared library
@@ -3654,7 +3656,6 @@ mail-client/nail:ssl - If network is enabled, this adds support for S/MIME and S
 mail-client/roundcube:enigma - Add dependencies to support server-side GnuPG signing and/or encryption through the enigma plugin
 mail-client/roundcube:ldap - Add dependencies to support connecting to an LDAP address book server
 mail-client/roundcube:managesieve - Add dependencies to support the sieverules plugin
-mail-client/squirrelmail:filter - Enable mail-filter/amavisd-new filtering
 mail-client/sylpheed:oniguruma - Use dev-libs/oniguruma for regular expression
 mail-client/thunderbird:bindist - Disable official Thunderbird branding (icons, name) which are not binary-redistributable according to upstream.
 mail-client/thunderbird:crypt - Enable encryption support with enigmail
@@ -4549,7 +4550,6 @@ media-sound/mangler:g15 - Logitech g15 lcd support
 media-sound/mangler:opus - Codec specialized for speech over the internet
 media-sound/mixxx:hid - Enable HID controller support
 media-sound/mixxx:shout - Enable broadcasting support via media-libs/libshout
-media-sound/mixxx:vamp - Enable vamp analyzing plugins support
 media-sound/moc:cache - Enable tags caching support
 media-sound/moc:magic - Use libmagic to determine mimetypes
 media-sound/moc:sid - Build with SID (Commodore 64 Audio) support
@@ -6328,8 +6328,6 @@ net-misc/guacamole-server:ssh - enable support for ssh connections
 net-misc/guacamole-server:telnet - enable support for telnet connections
 net-misc/gwget:epiphany - Build epiphany extensions
 net-misc/hotot:chrome - Build chrome browser extension
-net-misc/hotot:gtk2 - Build gtk2 gui
-net-misc/hotot:gtk3 - Build gtk3 gui
 net-misc/htbinit:esfq - Add support for Enhanced Stochastic Fairness queueing discipline.
 net-misc/hylafaxplus:html - Convert faxes into html email
 net-misc/hylafaxplus:jbig - JBIG Fax Compression Support
@@ -8545,7 +8543,6 @@ x11-misc/openbox-menu:icons - Enable support for icons in menus
 x11-misc/openbox-menu:svg - Support SVG icons
 x11-misc/qt5ct:dbus - Enable system tray and global menu support
 x11-misc/qt5ct:systray - Enable system tray support
-x11-misc/rednotebook:libyaml - enable libyaml support
 x11-misc/redshift:appindicator - Enable usage of dev-libs/libappindicator to export menu options in to unity and KDE 5
 x11-misc/redshift:geoclue - Control dependency on app-misc/geoclue
 x11-misc/rofi:windowmode - Enable normal window mode
