@@ -699,18 +699,8 @@
     <url>https://wiki.gentoo.org/wiki/Project:Council</url>
     <description>The elected Gentoo Council decides on global issues and policies that affect multiple projects in Gentoo.</description>
     <member>
-      <email>blueness@gentoo.org</email>
-      <name>Anthony G. Basile</name>
-      <role>Council member</role>
-    </member>
-    <member>
       <email>dilfridge@gentoo.org</email>
       <name>Andreas K. Hüttel</name>
-      <role>Council member</role>
-    </member>
-    <member>
-      <email>jlec@gentoo.org</email>
-      <name>Justin Lecher</name>
       <role>Council member</role>
     </member>
     <member>
@@ -719,8 +709,18 @@
       <role>Council member</role>
     </member>
     <member>
-      <email>rich0@gentoo.org</email>
-      <name>Richard Freeman</name>
+      <email>mgorny@gentoo.org</email>
+      <name>Michał Górny</name>
+      <role>Council member</role>
+    </member>
+    <member>
+      <email>slyfox@gentoo.org</email>
+      <name>Sergei</name>
+      <role>Council member</role>
+    </member>
+    <member>
+      <email>tamiko@gentoo.org</email>
+      <name>Matthias Maier</name>
       <role>Council member</role>
     </member>
     <member>
@@ -2965,6 +2965,11 @@ developers and volunteer mentors.</description>
       <role>On sabbatical</role>
     </member>
     <member>
+      <email>jstein@gentoo.org</email>
+      <name>Jonas Stein</name>
+      <role>Member</role>
+    </member>
+    <member>
       <email>kensington@gentoo.org</email>
       <name>Michael Palimaka</name>
       <role>Member</role>
@@ -3056,7 +3061,7 @@ developers and volunteer mentors.</description>
     <member>
       <email>alicef@gentoo.org</email>
       <name>Alice Ferrazzi</name>
-      <role>Facebook (editor), Events, Telegram (admin)</role>
+      <role>Facebook (editor), Events, Telegram (admin), Slack (admin)</role>
     </member>
     <member>
       <email>dabbott@gentoo.org</email>
@@ -3074,7 +3079,7 @@ developers and volunteer mentors.</description>
     <member>
       <email>maffblaster@gentoo.org</email>
       <name>Matthew Marchese</name>
-      <role>Facebook (editor), G+, Twitter, Telegram (admin)</role>
+      <role>Facebook (editor), G+, Twitter, Telegram (admin), Slack (admin)</role>
     </member>
     <member>
       <email>nightmorph@gentoo.org</email>

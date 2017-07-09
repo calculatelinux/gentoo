@@ -41,18 +41,11 @@ pkg_setup() {
 
 src_configure() {
 	local mycmakeargs=(
+		-DCMAKE_DISABLE_FIND_PACKAGE_PythonModuleGeneration=ON
 		-DBUILD_HTML_DOCS="$(usex doc)"
 		-DBUILD_MAN_DOCS="$(usex doc)"
 		-DDOC_INSTALL_DIR="/usr/share/doc/${PF}"
 	)
 
 	cmake-utils_src_configure
-}
-
-src_test() {
-	local myctestargs=(
-		-E "(ECMToolchainAndroidTest|KDEInstallDirsTest.relative_or_absolute_usr)"
-	)
-
-	kde5_src_test
 }
