@@ -909,6 +909,7 @@ app-misc/gramps:reports - All external software that is needed for graphical rep
 app-misc/graphlcd-base:g15 - Add support for app-misc/g15daemon driver (e.g. Logitech G15 Keybord)
 app-misc/irtrans-irserver:mono - Enable mono support
 app-misc/jq:oniguruma - Use dev-libs/oniguruma for regular expression support
+app-misc/jq:valgrind - Depend on dev-util/vagrind for test suite
 app-misc/lcd4linux:mpd - Add support for display of mpd controlled music (media-libs/libmpd)
 app-misc/lcdproc:ftdi - Enable support for FTDI connections in some selected LCD_DEVICES (currently hd44780)
 app-misc/lcdproc:hid - Enable HID support using libhid
@@ -1047,6 +1048,7 @@ app-office/lyx:monolithic-build - This should speed up compilation significantly
 app-office/lyx:rcs - Add support for revision control via dev-vcs/rcs
 app-office/lyx:rtf - Add support for RTF import/export packages
 app-office/magicpoint:contrib - Install additional contributed scripts
+app-office/orage:clock-panel-plugin - Build the clock plugin for the XFCE panel
 app-office/scribus:boost - Enable support for Boost based enhancement
 app-office/scribus:hunspell - Enable support for spell checking with app-text/hunspell
 app-office/scribus:minimal - Don't install headers (only required for e.g. plug-in developers)
@@ -5832,6 +5834,7 @@ net-irc/unrealircd:shunnotices - Enable notifying a user when un-shunned
 net-irc/unrealircd:topicisnuhost - Enable displaying nick!user@host as topic setter
 net-irc/unrealircd:usermod - Enable /set* and /chg* commands
 net-irc/weechat:alias - Enable plugin for alias control.
+net-irc/weechat:buflist - Enable buflist plugin.
 net-irc/weechat:charset - Enable encoding conversions.
 net-irc/weechat:exec - Enable exec plugin.
 net-irc/weechat:fifo - Enable FIFO support (sh pipes).
@@ -7453,6 +7456,7 @@ sys-apps/fwupd:dell - Enable Dell-specific support.
 sys-apps/fwupd:elf - Enable libelf support through dev-libs/libelf package.
 sys-apps/fwupd:man - Build and install man pages
 sys-apps/fwupd:uefi - Enable UEFI support
+sys-apps/fwupd:uefi_labels - Enable UEFI labels support
 sys-apps/gawk:mpfr - use mpfr for high precision arithmetic (-M / --bignum)
 sys-apps/gnome-disk-utility:fat - Include FAT16/FAT32 support (sys-fs/dosfstools)
 sys-apps/hwdata-gentoo:binary-drivers - Adds support for ATI/NVIDIA binary drivers
@@ -7765,6 +7769,7 @@ sys-cluster/pacemaker:heartbeat - Enable sys-cluster/heartbeat support.
 sys-cluster/pacemaker:smtp - Enable SMTP support via net-libs/libesmtp
 sys-cluster/resource-agents:libnet - Force use of net-libs/libnet
 sys-cluster/resource-agents:rgmanager - Install resources for sys-cluster/rgmanager
+sys-cluster/singularity:slurm - Compile spank plugin for sys-cluster/slurm
 sys-cluster/slurm:multiple-slurmd - Allow multiple slurmd to run
 sys-cluster/slurm:munge - Enable authentication via munge
 sys-cluster/slurm:torque - Enable perl scripts that emulates pbs (qstat, qsub etc.)
@@ -8747,6 +8752,7 @@ x11-wm/xpra:webcam - Enable webcam support via opencv
 x11-wm/xpra:webp - Enable webp image format support
 xfce-base/garcon:gtk2 - Build the garcon-gtk2-1 library (required for xfce-base/xfce4-panel < 4.13 only).
 xfce-base/libxfce4ui:glade - Build support for Glade 3's GtkBuilder implementation
+xfce-base/thunar:trash-panel-plugin - Build the trash status indicator plugin for the XFCE panel
 xfce-base/xfce4-settings:libcanberra - Enable sound event support using media-libs/libcanberra
 xfce-base/xfce4-settings:xklavier - Enable keyboard layout selection support using x11-libs/libxklavier
 xfce-base/xfdesktop:thunar - Build support for desktop icons (for example, launchers and folders)
@@ -8757,6 +8763,7 @@ xfce-extra/xfce4-mixer:keybinder - Enable shortcut support using dev-libs/keybin
 xfce-extra/xfce4-mpc-plugin:libmpd - Build using media-libs/libmpd backend, instead of native fallback which is preferred
 xfce-extra/xfce4-playercontrol-plugin:audacious - Enable Audacious support
 xfce-extra/xfce4-playercontrol-plugin:mpd - Enable Music Player Daemon support
+xfce-extra/xfce4-power-manager:panel-plugin - Build the power management plugin for the XFCE panel
 xfce-extra/xfce4-pulseaudio-plugin:keybinder - Enable support for global hotkeys using dev-libs/keybinder.
 xfce-extra/xfce4-soundmenu-plugin:glyr - Enable music metadata searchengine support using media-libs/glyr
 xfce-extra/xfce4-soundmenu-plugin:keybinder - Enable shortcut support using dev-libs/keybinder
