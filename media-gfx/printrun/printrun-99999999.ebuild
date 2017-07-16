@@ -17,8 +17,16 @@ KEYWORDS=""
 IUSE=""
 
 DEPEND="dev-python/pyserial
-	dev-python/wxpython:2.8
+	dev-python/wxpython:*
 	dev-python/pyglet
 	dev-python/dbus-python
 	media-gfx/cairosvg"
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	# https://bugzilla.redhat.com/show_bug.cgi?id=1231518
+	"${FILESDIR}"/${PN}-gtk3.patch
+
+	# https://github.com/kliment/Printrun/pull/790
+	"${FILESDIR}"/${PN}-x11.patch
+)

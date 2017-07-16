@@ -18,7 +18,7 @@ SLOT="0"
 # matplotlib/backends/qt4_editor: MIT
 # Fonts: BitstreamVera, OFL-1.1
 LICENSE="BitstreamVera BSD matplotlib MIT OFL-1.1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~x86"
 IUSE="cairo doc excel examples gtk2 gtk3 latex pyside qt4 qt5 test tk wxwidgets"
 
 PY2_FLAGS="|| ( $(python_gen_useflags python2_7) )"
@@ -209,6 +209,7 @@ python_configure() {
 wrap_setup() {
 	local -x MPLSETUPCFG=${BUILD_DIR}/setup.cfg
 	unset DISPLAY
+	"$@"
 }
 
 python_compile() {
