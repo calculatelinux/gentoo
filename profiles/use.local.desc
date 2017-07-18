@@ -764,6 +764,7 @@ app-i18n/fcitx:table - Install table input methods for Simplified Chinese
 app-i18n/fcitx-configtool:gtk3 - Use GTK+3 instead of 2
 app-i18n/fcitx-libpinyin:dictmanager - Enable dictionary manager. Requires dev-qt/qtwebkit.
 app-i18n/fcitx-unikey:macro-editor - Install macro editor
+app-i18n/freewnn:uum - Build uum
 app-i18n/ibus:deprecated - install the deprecated ibus python library
 app-i18n/ibus:gconf - Enable support for gnome-base/gconf
 app-i18n/ibus:gtk3 - Enable support for gtk+3
@@ -777,7 +778,7 @@ app-i18n/ibus-unikey:gtk3 - Enable support for gtk+3
 app-i18n/imsettings:gconf - Enable GConf support
 app-i18n/imsettings:gtk3 - Enable support for x11-libs/gtk+:3
 app-i18n/imsettings:xfconf - Enable integration in the Xfce desktop environment with xfce-base/xfconf
-app-i18n/kimera:anthy - Support for Anthy input method
+app-i18n/kimera:anthy - Enable support for app-i18n/anthy
 app-i18n/mozc:fcitx - Enable support for app-i18n/fcitx
 app-i18n/mozc:ibus - Enable support for app-i18n/ibus
 app-i18n/mozc:renderer - Enable native candidate window.
@@ -3377,7 +3378,6 @@ gnome-extra/zeitgeist:fts - Enable the full text search extension
 gnome-extra/zeitgeist:sql-debug - Enable SQL debugging
 gnome-extra/zeitgeist:telepathy - Enable telepathy framework as data source
 gnustep-apps/gemas:projectcenter - Build and install plugin for gnustep-apps/projectcenter
-gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in e-mail messages
 gnustep-apps/gworkspace:gwmetadata - Enable the metadata indexing and searching system
 gnustep-base/gnustep-back-art:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-cairo:xim - Enable X11 XiM input method
@@ -5505,8 +5505,10 @@ net-fs/cifs-utils:ads - Enable Active Directory support and create cifs.idmap bi
 net-fs/cifs-utils:caps - libcap support
 net-fs/cifs-utils:caps-ng - libcap-ng support
 net-fs/cifs-utils:creds - cifs credentials support
+net-fs/cvmfs:aufs - Use AUFS instead of OverlayFS for the server
 net-fs/cvmfs:client - Install the cvmfs client programs and init script
 net-fs/cvmfs:server - Install the cvmfsd program and init script
+net-fs/cvmfs:test-programs - Install unit test programs
 net-fs/netatalk:pgp - Add support pgp authentication module
 net-fs/netatalk:quota - Add support for user quota on various filesystems.
 net-fs/netatalk:shadow - Add shadow support
@@ -7516,7 +7518,10 @@ sys-apps/qingy:consolekit - Enable native consolekit support
 sys-apps/qingy:opensslcrypt - Encrypt communications between qingy and its GUI using dev-libs/openssl
 sys-apps/razercfg:pm-utils - Installs the pm-utils hooks for suspend/resume and requires sys-power/pm-utils
 sys-apps/razercfg:qt4 - Installs a qt UI. Requires dev-python/pyside
-sys-apps/roccat-tools:lua - Build support for Lua scripting for RyosMKPro ripple effects
+sys-apps/roccat-tools:input_devices_roccat_ryosmkfx - Enable support for Ryos Mk FX keyboard.
+sys-apps/roccat-tools:input_devices_roccat_skeltr - Enable support for Skeltr keyboard.
+sys-apps/roccat-tools:input_devices_roccat_sova - Enable support for Sova keyboard.
+sys-apps/roccat-tools:input_devices_roccat_suora - Enable support for Suora keyboard.
 sys-apps/s390-tools:fuse - build cmsfs-fuse to read files stored on a z/VM CMS disk
 sys-apps/s390-tools:ncurses - build hyptop monitoring program
 sys-apps/s390-tools:pfm - build the cpacfstats tool
