@@ -1324,6 +1324,7 @@ dev-db/mariadb:openssl - Enable SSL connections and crypto functions using dev-l
 dev-db/mariadb:oqgraph - Add support for the Open Query GRAPH engine
 dev-db/mariadb:pam - Enable the optional PAM authentication plugin for the server
 dev-db/mariadb:profiling - Add support for statement profiling (requires USE=community).
+dev-db/mariadb:rocksdb - Add support for RocksDB; a key/value, LSM database optimized for flash storage
 dev-db/mariadb:server - Build the server program
 dev-db/mariadb:sphinx - Add suport for the sphinx full-text search engine
 dev-db/mariadb:sst-rsync - Add tools needed to support the rsync SST method
@@ -7099,6 +7100,7 @@ sci-libs/coinor-clp:sparse - Enable support for sparse matrix with sci-libs/chol
 sci-libs/coinor-osi:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
 sci-libs/coinor-symphony:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
 sci-libs/coinor-utils:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
+sci-libs/dmlc-core:s3 - Support for the Amazon Simple Storage Service
 sci-libs/fftw:float - Link default library to single precision instead of double (symlinks only and fftw-2.1)
 sci-libs/fftw:quad - Build quadruple precision lib
 sci-libs/fftw:zbus - Adds support for ZBus cycle-counter of mips
@@ -8222,6 +8224,7 @@ www-client/chromium:pic - Disable optimized assembly code that is not PIC friend
 www-client/chromium:proprietary-codecs - Enable proprietary codecs like H.264, MP3
 www-client/chromium:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels
 www-client/chromium:system-ffmpeg - Use system ffmpeg instead of the bundled one
+www-client/chromium:system-icu - Use system icu instead of the bundled one
 www-client/chromium:system-libvpx - Use system libvpx instead of the bundled one
 www-client/chromium:tcmalloc - Use bundled tcmalloc instead of system malloc
 www-client/chromium:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
