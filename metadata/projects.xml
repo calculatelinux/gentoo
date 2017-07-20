@@ -796,17 +796,6 @@
     </member>
   </project>
   <project>
-    <email>desktop-effects@gentoo.org</email>
-    <name>Desktop effects</name>
-    <url>https://wiki.gentoo.org/wiki/Project:Desktop-effects</url>
-    <description>Manage various windows managers, x11 miscellaneous applications which are commonly used for various effects on your desktop</description>
-    <member is-lead="1">
-      <email>pinkbyte@gentoo.org</email>
-      <name>Sergey Popov</name>
-      <role>Team lead</role>
-    </member>
-  </project>
-  <project>
     <email>devmanual@gentoo.org</email>
     <name>Devmanual</name>
     <url>https://wiki.gentoo.org/wiki/Project:Devmanual</url>
@@ -1997,17 +1986,6 @@
     <member is-lead="1">
       <email>blueness@gentoo.org</email>
       <name>Anthony G. Basile</name>
-    </member>
-  </project>
-  <project>
-    <email>gentoo-soc@list.gentoo.org</email>
-    <name>Gentoo Libbash Development</name>
-    <url>https://wiki.gentoo.org/wiki/Project:Libbash</url>
-    <description>libbash development is devoted to maintaining and updating libbash core functionality and utilities.</description>
-    <member is-lead="1">
-      <email>betelgeuse@gentoo.org</email>
-      <name>Petteri Räty</name>
-      <role>Lead</role>
     </member>
   </project>
   <project>
