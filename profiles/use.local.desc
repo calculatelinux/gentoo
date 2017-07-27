@@ -2586,6 +2586,7 @@ dev-python/sympy:imaging - Add support for dev-python/pillow
 dev-python/sympy:ipython - Add support for dev-python/ipython
 dev-python/sympy:mathml - Add support for mathml
 dev-python/sympy:pyglet - Use dev-python/pyglet for plots and print preview
+dev-python/sympy:symengine - Add support for a dev-python/symengine backend
 dev-python/sympy:texmacs - Add app-office/texmacs interface
 dev-python/sympy:theano - Add support for dev-python/theano
 dev-python/tdaemon:coverage - Enable code coverage support
@@ -3259,6 +3260,8 @@ games-simulation/flightgear:gdal - Enable alternative terrain engine based on pa
 games-simulation/flightgear:qt5 - Build Qt5 launcher application
 games-simulation/flightgear:udev - Enable event-based Input devices through virtual/udev
 games-simulation/flightgear:utils - Build various utilities (fgpanel, fgviewer among others)
+games-simulation/openrct2:multiplayer - Enable multiplayer functionality
+games-simulation/openrct2:twitch - Enable Twitch support
 games-simulation/openttd:aplaymidi - Enables midi music in game, using aplaymidi as an external player
 games-simulation/openttd:dedicated - Build only the openttd server, and not the client.
 games-simulation/openttd:lzo - Enables LZO compression for savegames. This is only needed to load extremely old savegames. (versions before 0.2)
@@ -7215,6 +7218,13 @@ sci-libs/sundials:hypre - Build with sci-libs/hypre conditioners
 sci-libs/sundials:sparse - Enable support for sci-libs/klu sparse solver
 sci-libs/sundials:superlumt - Build with sci-libs/superlu_mt
 sci-libs/superlu_mt:int64 - Build the 64 bits integer library
+sci-libs/symengine:arb - Add support for arb (sci-mathematics/arb)
+sci-libs/symengine:benchmarks - Build benchmarks
+sci-libs/symengine:boost - Add support for boost integers(dev-libs/boost)
+sci-libs/symengine:flint - Add support for (sci-mathematics/flint)
+sci-libs/symengine:llvm - Build with LLVM
+sci-libs/symengine:mpc - Add support for multiprecision complex arithmetic(dev-libs/mpc)
+sci-libs/symengine:mpfr - Add support for multiprecision floating point rouding(dev-libs/mpfr)
 sci-libs/taucs:cilk - Enable multithreading using dev-lang/cilk
 sci-libs/umfpack:cholmod - Use sci-libs/cholmod for matrix ordering
 sci-libs/vtk:R - Enable support for dev-lang/R
@@ -8296,6 +8306,7 @@ www-client/qutebrowser:webengine - Install packages required for experimental re
 www-client/seamonkey:calendar - Build Mozilla's calendar
 www-client/seamonkey:chatzilla - Build Mozilla's IRC client (default on)
 www-client/seamonkey:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
+www-client/seamonkey:force-gtk3 - Use the cairo-gtk3 rendering engine
 www-client/seamonkey:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
 www-client/seamonkey:gtk3 - Use the cairo-gtk3 rendering engine
 www-client/seamonkey:ipc - Use inter-process communication between tabs and plugins. Allows for greater stability in case of plugin crashes

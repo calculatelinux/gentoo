@@ -16,8 +16,8 @@ IUSE="fpm apache2"
 
 # The "DirectoryIndex" line in 70_mod_php.conf requires mod_dir.
 RDEPEND="app-admin/eselect
-	sys-apps/gentoo-functions
-	apache2? ( www-servers/apache[apache2_modules_dir] )"
+	apache2? ( www-servers/apache[apache2_modules_dir] )
+	fpm? ( sys-apps/gentoo-functions )"
 
 src_prepare() {
 	eapply_user
@@ -28,12 +28,19 @@ src_configure(){
 	# We expect localstatedir to be "var"ish, not "var/lib"ish, because
 	# that's what PHP upstream expects. See for example the FPM
 	# configuration where they put logs in @localstatedir@/log.
-	econf --localstatedir="${EPREFIX}"/var $(use_enable apache2)
+	#
+	# The libdir is passed explicitly in case the /usr/lib symlink
+	# is not present (bug 624528).
+	econf --libdir="${EPREFIX}/usr/$(get_libdir)" \
+		  --localstatedir="${EPREFIX}/var" \
+		  --with-piddir="${EPREFIX}/run" \
+		  $(use_enable apache2) \
+		  $(use_enable fpm)
 }
 
 src_install() {
 	default
-	[[ -f "${D}/etc/init.d/php-fpm.example.init" ]] && rm "${D}/etc/init.d/php-fpm.example.init" || die
+
 	# This can be removed after a while...
 	if use apache2 ; then
 		insinto /etc/apache2/modules.d
@@ -41,8 +48,6 @@ src_install() {
 	fi
 
 	if use fpm ; then
-		newinitd "doc/php-fpm.example.init" "php-fpm"
-		newconfd "doc/php-fpm.example.conf" "php-fpm"
 		systemd_dotmpfilesd "${FILESDIR}/php-fpm.conf"
 		exeinto /usr/libexec
 		newexe "${FILESDIR}/php-fpm-launcher-r1" php-fpm-launcher
