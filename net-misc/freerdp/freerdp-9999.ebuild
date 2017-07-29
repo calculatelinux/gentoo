@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
@@ -6,10 +6,11 @@ EAPI="6"
 inherit cmake-utils
 
 if [[ ${PV} != 9999 ]]; then
-	COMMIT=""
-	SRC_URI="https://github.com/FreeRDP/FreeRDP/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
+	MY_PV="${PV/_/-}"
+	MY_P="FreeRDP-${MY_PV}"
+	S="${WORKDIR}/${MY_P}"
+	SRC_URI="https://github.com/FreeRDP/FreeRDP/archive/${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
 	KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86"
-	S="${WORKDIR}/FreeRDP-${COMMIT}"
 else
 	inherit git-r3
 	SRC_URI=""

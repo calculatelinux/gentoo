@@ -2,31 +2,35 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-
 PYTHON_COMPAT=( python2_7 )
 
-inherit eutils java-pkg-opt-2 toolchain-funcs versionator python-single-r1 cmake-utils
+inherit java-pkg-opt-2 toolchain-funcs python-single-r1 cmake-utils
 
-if [[ ${PV} == *9999 ]]; then
+if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="https://github.com/csound/csound.git"
 	inherit git-r3
 else
-	SRC_URI="https://github.com/csound/csound/archive/${PV}.tar.gz -> ${P}.tar.gz"
+	DOC_P="Csound${PV}"
+	SRC_URI="https://github.com/csound/csound/archive/${PV}.tar.gz -> ${P}.tar.gz
+		doc? (
+			https://github.com/csound/csound/releases/download/${PV}/${DOC_P}_manual_pdf.zip
+			https://github.com/csound/csound/releases/download/${PV}/${DOC_P}_manual_html.zip
+		)"
 	KEYWORDS="~amd64 ~x86"
 fi
 
 DESCRIPTION="A sound design and signal processing system for composition and performance"
 HOMEPAGE="http://csound.github.io/"
 
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1 doc? ( FDL-1.2+ )"
 SLOT="0"
-IUSE="+alsa beats chua csoundac curl +cxx debug double-precision dssi examples
+IUSE="+alsa beats chua csoundac curl +cxx debug doc double-precision dssi examples
 fltk +fluidsynth +image jack java keyboard linear lua luajit nls osc openmp
 portaudio portmidi pulseaudio python samples score static-libs stk tcl test
 +threads +utils vim-syntax websocket"
 
-LANGS=" de en_US es_CO fr it ro ru"
-IUSE+="${LANGS// / linguas_}"
+IUSE_LANGS=" de en_US es es_CO fr it ro ru"
+IUSE+="${IUSE_LANGS// / linguas_}"
 
 REQUIRED_USE="
 	csoundac? ( || ( lua python ) )
@@ -86,6 +90,15 @@ DEPEND="${RDEPEND}
 	)
 "
 
+if [[ ${PV} != "9999" ]]; then
+	DEPEND+="
+		doc? (
+			app-arch/unzip
+			!app-doc/csound-manual
+		)
+	"
+fi
+
 # requires specific alsa settings
 RESTRICT="test"
 
@@ -109,7 +122,7 @@ src_prepare() {
 		-i CMakeLists.txt || die
 
 	local lang
-	for lang in ${LANGS} ; do
+	for lang in ${IUSE_LANGS} ; do
 		if ! use linguas_${lang} ; then
 			sed -i "/compile_po(${lang}/d" po/CMakeLists.txt || die
 		fi
@@ -175,7 +188,7 @@ src_install() {
 	cmake-utils_src_install
 	dodoc -r Release_Notes/.
 
-	# Generate env.d file
+	# generate env.d file
 	cat > "${T}"/62${PN} <<-_EOF_ || die
 		OPCODEDIR$(usex double-precision 64 '')="${EPREFIX}/usr/$(get_libdir)/${PN}/plugins$(usex double-precision 64 '')"
 		CSSTRNGS="${EPREFIX}/usr/share/locale"
@@ -203,6 +216,12 @@ src_install() {
 	mv "${ED%/}"/usr/bin/{,csound_}extract || die
 
 	use python && python_optimize
+
+	# install docs
+	if [[ ${PV} != "9999" ]] && use doc ; then
+		dodoc "${WORKDIR}"/*.pdf
+		dodoc -r "${WORKDIR}"/html
+	fi
 }
 
 pkg_postinst() {
