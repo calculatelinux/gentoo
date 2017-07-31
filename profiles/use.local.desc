@@ -293,7 +293,7 @@ app-crypt/ekeyd:munin - Install a plugin for net-analyzer/munin to graph statist
 app-crypt/ekeyd:usb - Build the libusb-based userland daemon for accessing the EntropyKey (alternative to the CDC USB driver). It is suggested to use this option by default, as the CDC driver in the kernel often seems to be fragile (or the gadget implementation on the EntropyKey is too buggy), and can cause various problems.
 app-crypt/gnupg:mta - Build mta support using virtual/mta.
 app-crypt/gnupg:smartcard - Build scdaemon software. Enables usage of OpenPGP cards. For other type of smartcards, try app-crypt/gnupg-pkcs11-scd. Bring in dev-libs/libusb as a dependency; enable scdaemon.
-app-crypt/gnupg:tofu - Enable support for Trust of First use trust model; requires dev-db/sqlite.
+app-crypt/gnupg:tofu - Enable support for Trust on First use trust model; requires dev-db/sqlite.
 app-crypt/gnupg:tools - Install extra tools (including gpgsplit and gpg-zip).
 app-crypt/gnupg:usb - Build direct CCID access for scdaemon; requires dev-libs/libusb.
 app-crypt/gnupg:wks-server - Install the wks-server
@@ -2059,7 +2059,10 @@ dev-libs/gmp:pgo - After building gmp, run some tests against to produce faster 
 dev-libs/gobject-introspection:doctool - Install g-ir-doc-tool for generating documentation from introspected data
 dev-libs/hidapi:fox - Build a x11-libs/fox GUI
 dev-libs/intel-common:compiler - Install the libraries needed for the icc and ifort compilers
+dev-libs/jemalloc:hugepages - Enable transparent huge page support
+dev-libs/jemalloc:lazy-lock - Enable lazy locking (only lock when multi-threaded)
 dev-libs/jemalloc:stats - Enable statistics calculation/reporting
+dev-libs/jemalloc:xmalloc - Add support for xmalloc (abort-on-out-of-memory)
 dev-libs/kreport:marble - Enable displaying of maps using kde-apps/marble
 dev-libs/kreport:scripting - Support Qml scripting using dev-qt/qtdeclarative
 dev-libs/leveldb:snappy - support the snappy compression library
@@ -2462,6 +2465,7 @@ dev-python/cgkit:3ds - Enable support for importing 3D Studio models
 dev-python/cvxopt:dsdp - Use interior point library sci-libs/dsdp
 dev-python/cvxopt:glpk - Use GNU Linear Programming Kit sci-mathematics/glpk
 dev-python/dap:server - Enable OpenDAP server support
+dev-python/dask:distributed - Add support for distributed computing with dev-python/distributed
 dev-python/django-cms:admin-style - Install plugin customizing admin panel styles
 dev-python/django-cms:ckeditor - Install text-ckeditor plugin for rich text editing
 dev-python/django-cms:file - Install djangocms file plugin
@@ -2479,6 +2483,8 @@ dev-python/django-tastypie:yaml - An optional serialiser dev-python/yaml
 dev-python/django-two-factor-auth:yubikey - Adds support for Yubikeys via django-otp-yubikey
 dev-python/editorconfig-core-py:cli - Install command line interface as well as python library
 dev-python/falcon:cython - Build cython-based python modules
+dev-python/fastparquet:brotli - Enable support for brotli compression
+dev-python/fastparquet:snappy - Enable support for snappy compression
 dev-python/flask-restful:paging - Enable resource paging support
 dev-python/geopy:timezone - Enables localized date support
 dev-python/geopy:yahoo - Enables use of YahooPlaceFinder
@@ -7092,6 +7098,7 @@ sci-libs/arprec:qd - Use sci-libs/qd for quad-double datatype
 sci-libs/atlas:generic - Build atlas assuming a fairly generic architecture (sse2 for x86, core2 for amd64)
 sci-libs/avogadrolibs:static-plugins - Build all plugins statically into main plugin modules
 sci-libs/avogadrolibs:vtk - include vtk support
+sci-libs/cddlib:tools - Add a few executables and tests for cddlib
 sci-libs/ceres-solver:c++11 - Build ceres-solver using the C++11 standard
 sci-libs/ceres-solver:cxsparse - Enable simple support for sparse matrix algebra from sci-libs/cxsparse with no LAPACK dependencies
 sci-libs/ceres-solver:gflags - Use dev-cpp/gflags for flag parsing
@@ -7287,7 +7294,7 @@ sci-mathematics/maxima:gcl - Compile maxima with GNU Common Lisp (dev-lisp/gcl)
 sci-mathematics/maxima:sbcl - Compile maxima with Steel Bank Common Lisp (dev-lisp/sbcl)
 sci-mathematics/minisat:extended-solver - Build extended version of SAT solver with additional features.
 sci-mathematics/msieve:ecm - Enable support for the GMP-ECM library
-sci-mathematics/normaliz:extras - Install sci-mathematics/Macaulay2 and sci-mathematics/singular packages as shipped by upstream
+sci-mathematics/normaliz:extras - Install sci-mathematics/Macaulay2 and sci-mathematics/singularpackages as shipped by upstream
 sci-mathematics/nusmv:minisat - Enable support for MiniSat
 sci-mathematics/nusmv:zchaff - Enable support for zChaff
 sci-mathematics/octave:glpk - Add support for sci-mathematics/glpk for linear programming
