@@ -21,6 +21,7 @@ COMMON_DEPEND="ayatana? ( dev-libs/libindicator:3 )
 	>=x11-misc/lightdm-1.2.2"
 
 DEPEND="${COMMON_DEPEND}
+	dev-util/intltool
 	sys-devel/gettext"
 
 RDEPEND="${COMMON_DEPEND}
@@ -30,6 +31,8 @@ RDEPEND="${COMMON_DEPEND}
 GENTOO_BG="gentoo-bg_65.jpg"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc6.patch
+
 	# Ok, this has to be fixed in the tarball but I am too lazy to do it.
 	# I will fix this once I decide to update the tarball with a new gentoo
 	# background

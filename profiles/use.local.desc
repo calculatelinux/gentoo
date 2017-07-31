@@ -1800,7 +1800,6 @@ dev-java/icedtea-web:tagsoup - Depend on dev-java/tagsoup which allows parsing m
 dev-java/itext:rtf - Build and provide libraries for rich text format
 dev-java/itext:rups - Build and provide GUI for Reading/Updating PDF Syntax
 dev-java/jcs:admin - Enable JCS Admin servlets
-dev-java/jdbc-jaybird:jni - Build/Install JDBC Type 2 native components
 dev-java/jdbc-mysql:c3p0 - Enable c3p0 support
 dev-java/jdbc-mysql:log4j - Enable log4 support
 dev-java/jfreesvg:debug - Enable debugging during compilation.
@@ -2213,6 +2212,7 @@ dev-libs/sway:swaybg - Build 'swaybg': allows to set a desktop background image.
 dev-libs/sway:swaygrab - Build 'swaygrab': allows taking screenshots or screencasts.
 dev-libs/sway:swaylock - Build 'swaylock': sway's screen locker.
 dev-libs/sway:swaymsg - Build 'swaymsg': tool for communicating with a running sway instance.
+dev-libs/sway:tray - Enable support for StatusNotifierItem tray specification.
 dev-libs/sway:wallpapers - Install sway's default wallpaper image.
 dev-libs/tinyxml:stl - Compile with TIXML_USE_STL support
 dev-libs/tntnet:server - Enable tntnet server daemon
@@ -2237,9 +2237,9 @@ dev-libs/weston:unwind - Enable libunwind usage for backtraces
 dev-libs/weston:wayland-compositor - Enable Wayland compositor support
 dev-libs/weston:webp - Add support for the WebP image format
 dev-libs/weston:xwayland - Enable ability support native X11 applications
-dev-libs/wlc:X - Enable X11 backend and XWayland support.
+dev-libs/wlc:X - Enable X11 backend.
 dev-libs/wlc:systemd - Enable support for systemd-logind.
-dev-libs/wlc:xwayland - Enable XWayland support.
+dev-libs/wlc:xwayland - Enable XWayland application support.
 dev-libs/xapian:brass - Enabled brass backend db support
 dev-libs/xapian:chert - Enabled chert backend db support
 dev-libs/xapian:glass - Enabled glass backend db support
@@ -4587,6 +4587,7 @@ media-sound/mpg123:int-quality - Use rounding instead of fast truncation for int
 media-sound/mumble:g15 - Enable support for the Logitech G15 LCD (and compatible devices).
 media-sound/mumble:speech - Enable text-to-speech support in Mumble.
 media-sound/murmur:ice - Use dev-libs/Ice to enable remote control capabilities.
+media-sound/musescore:portmidi - Enable support for building against media-libs/portmidi
 media-sound/ncmpc:artist-screen - Enable artist screen
 media-sound/ncmpc:chat-screen - Enable the chat screen
 media-sound/ncmpc:colors - Enable color support
