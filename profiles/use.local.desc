@@ -765,10 +765,9 @@ app-i18n/fcitx-configtool:gtk3 - Use GTK+3 instead of 2
 app-i18n/fcitx-libpinyin:dictmanager - Enable dictionary manager. Requires dev-qt/qtwebkit.
 app-i18n/fcitx-unikey:macro-editor - Install macro editor
 app-i18n/freewnn:uum - Build uum
-app-i18n/ibus:deprecated - install the deprecated ibus python library
+app-i18n/ibus:emoji - Enable support for Emoji
 app-i18n/ibus:gconf - Enable support for gnome-base/gconf
-app-i18n/ibus:gtk3 - Enable support for gtk+3
-app-i18n/ibus-anthy:deprecated - Install deprecated pygtk2 library
+app-i18n/ibus:gtk2 - Enable support for x11-libs/gtk+:2
 app-i18n/ibus-handwrite:zinnia - Build with app-i18n/zinnia engine.
 app-i18n/ibus-libpinyin:boost - Compile against dev-libs/boost libraries
 app-i18n/ibus-libpinyin:opencc - Enable support for app-i18n/opencc
@@ -4331,6 +4330,7 @@ media-libs/xine-lib:vpx - Enable VP8 codec support via media-libs/libvpx.
 media-libs/xine-lib:xvmc - Enable support for XVideo Motion Compensation (accelerated mpeg playback).
 media-libs/xvid:pic - disable optimized assembly code that is not PIC friendly
 media-plugins/audacious-plugins:adplug - Build with AdPlug (Adlib sound card emulation) support
+media-plugins/audacious-plugins:aosd - Enable support for Audacious OSD
 media-plugins/audacious-plugins:bs2b - Enable Bauer Bauer stereophonic-to-binaural headphone filter
 media-plugins/audacious-plugins:cue - Support CUE sheets using the libcue library
 media-plugins/audacious-plugins:fluidsynth - Support FluidSynth as MIDI synth backend
@@ -5690,13 +5690,15 @@ net-im/pidgin:zephyr - Enable Zephyr protocol support
 net-im/prosody:jit - Use LuaJIT instead of vanilla Lua
 net-im/prosody:libevent - Use libevent for event handling
 net-im/prosody:zlib - Support for compressing XMPP streams with mod_compression
-net-im/psi:enchant - Use enchant spell engine instead of aspell
-net-im/psi:extras - Enables extra non official patches
+net-im/psi:aspell - Enable spellchecking using app-text/aspell
+net-im/psi:enchant - Enable spellchecking using app-text/enchant
+net-im/psi:extras - Enable Psi+ patcheset
+net-im/psi:hunspell - Enable spellchecking using app-text/hunspell
 net-im/psi:iconsets - Install additional iconsets, some of them has not clear licensing
-net-im/psi:plugins - Enable plugins support
-net-im/psi:powersave - Disable some non critical timers for much less CPU usage
+net-im/psi:sql - Enable psi-new-history extras patch
+net-im/psi:webengine - Use dev-qt/qtwebengine instead of dev-qt/qtwebkit
+net-im/psi:webkit - Enable themed, html-based chatlogs
 net-im/psi:whiteboarding - Enable experimental interactive SVG drawing
-net-im/psi:xscreensaver - Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events
 net-im/psimedia:demo - build simple test application for the PsiMedia system
 net-im/pyaim-t:webinterface - Install dependencies needed for the web interface
 net-im/pyicq-t:webinterface - Install dependencies needed for the web interface
@@ -7610,6 +7612,7 @@ sys-auth/keystone:memcached - Installs dependencies needed for using memcached a
 sys-auth/keystone:mongo - Installs dependencies needed for using mongo as a backend
 sys-auth/munge:gcrypt - Use libgcrypt instead of openssl
 sys-auth/nss-mdns:search-domains - Honour search domains from /etc/resolv.conf (see bug #201948 for possible side effects)
+sys-auth/nss-pam-ldapd:pynslcd - Install the python implementation along with the standard implementation
 sys-auth/nss-pam-ldapd:utils - Install the command-line utilities
 sys-auth/oath-toolkit:pam - Build PAM module for pluggable login authentication for OATH
 sys-auth/oath-toolkit:pskc - Build tools & library for the Portable Symmetric Key Container (PSKC) format per RFC6030
@@ -8611,6 +8614,7 @@ x11-terms/hanterm:utempter - Records user logins. Useful on multi-user systems
 x11-terms/mate-terminal:gtk3 - Build with GTK+3 instead of GTK+2
 x11-terms/mlterm:fcitx - Enable support for app-i18n/fcitx
 x11-terms/mlterm:gtk2 - Build with x11-libs/gtk+:2 instead of x11-libs/gtk+:3
+x11-terms/mlterm:harfbuzz - Enable support for OpenType Layout (media-libs/harfbuzz)
 x11-terms/mlterm:ibus - Enable support for app-i18n/ibus
 x11-terms/mlterm:libssh2 - Enable support for net-libs/libssh2
 x11-terms/mlterm:regis - Enable support for ReGIS

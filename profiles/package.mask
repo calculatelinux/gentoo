@@ -372,7 +372,6 @@ dev-python/pywebkitgtk
 # Pacho Ramos <pacho@gentoo.org> (14 Jul 2017)
 # Dead for a long time and really buggy (#620772). Removal in a month.
 net-im/psimedia
-net-im/psi
 x11-themes/psi-themes
 
 # Pacho Ramos <pacho@gentoo.org> (14 Jul 2017)
@@ -399,10 +398,6 @@ app-misc/gnomecatalog
 # Pacho Ramos <pacho@gentoo.org> (14 Jul 2017)
 # No reverse deps, dead since 2000, bug #622154. Removal in a month.
 dev-libs/djb
-
-# Pacho Ramos <pacho@gentoo.org> (14 Jul 2017)
-# Doesn't build (#622842) and many other bugs, removal in a month.
-app-emulation/fuse
 
 # Pacho Ramos <pacho@gentoo.org> (14 Jul 2017)
 # Not compatible with new perl, not needed by anything in the tree (#623214,
@@ -676,10 +671,6 @@ app-emulation/wine-vanilla
 app-emulation/wine-staging
 app-emulation/wine-d3d9
 app-emulation/wine-any
-
-# Yixun Lan <dlan@gentoo.org> (30 Mar 2017)
-# Masked, broken due to emoji support which requre npm package installed (bug #612218)
-=app-i18n/ibus-1.5.15
 
 # Lars Wendler <polynomial-c@gentoo.org> (24 Mar 2017)
 # Masked until Mozilla and Chrome agreed how to handle
