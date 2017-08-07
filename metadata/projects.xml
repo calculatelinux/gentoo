@@ -620,7 +620,7 @@
     <url>https://wiki.gentoo.org/wiki/Project:ComRel</url>
     <description>Community Relations handles many personnel-related tasks, solving conflicts and also ensuring that the Gentoo Code of Conduct and proper and professional behavior is followed across Gentoo's borders.</description>
     <subproject ref="undertakers@gentoo.org"/>
-    <member>
+    <member is-lead="1">
       <email>dilfridge@gentoo.org</email>
       <name>Andreas K. Hüttel</name>
     </member>
@@ -636,7 +636,7 @@
       <email>keytoaster@gentoo.org</email>
       <name>Tobias Heinlein</name>
     </member>
-    <member is-lead="1">
+    <member>
       <email>k_f@gentoo.org</email>
       <name>Kristian Fiskerstrand</name>
     </member>
@@ -3020,11 +3020,12 @@ developers and volunteer mentors.</description>
     <member>
       <email>alicef@gentoo.org</email>
       <name>Alice Ferrazzi</name>
-      <role>Facebook (editor), Events, Telegram (admin), Slack (admin)</role>
+      <role>Facebook (admin), Twitter, Events, Telegram (admin), Slack (admin)</role>
     </member>
     <member>
       <email>dabbott@gentoo.org</email>
       <name>David Abbott</name>
+      <role>Cafepress store, Facebook (editor)</role>
     </member>
     <member>
       <email>dilfridge@gentoo.org</email>
@@ -3038,7 +3039,7 @@ developers and volunteer mentors.</description>
     <member is-lead="1">
       <email>maffblaster@gentoo.org</email>
       <name>Matthew Marchese</name>
-      <role>Facebook (admin), G+, Twitter, Telegram (admin), Slack (admin)</role>
+      <role>Cafepress store, Facebook (admin), G+, Twitter, Telegram (admin), Slack (admin)</role>
     </member>
     <member>
       <email>nightmorph@gentoo.org</email>

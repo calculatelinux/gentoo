@@ -29,6 +29,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Lars Wendler <polynomial-c@gentoo.org> (06 Aug 2017)
+# Masked for security reasons:
+# https://bugs.gentoo.org/600214
+<app-emulation/virtualbox-5.0.40
+<app-emulation/virtualbox-additions-5.0.40
+<app-emulation/virtualbox-bin-5.0.40
+<app-emulation/virtualbox-extpack-oracle-5.0.40
+<app-emulation/virtualbox-guest-additions-5.0.40
+<app-emulation/virtualbox-modules-5.0.40
+<x11-drivers/xf86-video-virtualbox-5.0.40
+
+
 # Bernard Cafarelli <voyageur@gentoo.org> (04 Aug 2017)
 # Temporary mask as current net-ftp/filezilla does not compile
 # with it, bug #626292
@@ -537,12 +549,6 @@ net-im/skypetab-ng
 # fixed versions and for further testing.
 >=xfce-base/xfconf-4.13
 >=xfce-base/xfce4-settings-4.13.1
-
-# Michał Górny <mgorny@gentoo.org> (05 Jun 2017)
-# (on behalf of Treecleaner project)
-# Unmaintained in Gentoo. The current Gentoo version no longer builds.
-# Removal in 30 days. Bug #602820.
-media-plugins/vdr-xineliboutput
 
 # Hans de Graaff <graaff@gentoo.org> (05 Jun 2017)
 # Bundles obsolete and vulnerable webkit version.
