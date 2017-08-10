@@ -29,6 +29,37 @@
 
 #--- END OF EXAMPLES ---
 
+# Denis Dupeyron <calchan@gentoo.org> (09 AUg 2017)
+# Masked for testing of fix for long standing incompatibility between recent versions of ansible and jinja
+# https://github.com/ansible/ansible/issues/20494
+=app-admin/ansible-2.3.2.0-r1
+
+# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (09 Aug 2017)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-62
+
+# Brian Evans <grknight@gentoo.org) (08 Aug 2017)
+# Old PEAR packages which are not maintained upstream or superseded
+# They contain errors which are not easy to maintain with no upstream
+# Many also do not have tests to easily find
+# incompatibilies with latest versions.
+# dev-php-Auth_HTTP has an upstream but relies on PEAR-Auth which does not
+# Masked for removal in 30 days
+dev-php/PEAR-Auth
+dev-php/PEAR-Auth_HTTP
+dev-php/PEAR-HTML_Template_IT
+dev-php/PEAR-HTML_TreeMenu
+dev-php/PEAR-HTTP_Client
+dev-php/PEAR-HTTP_Request
+dev-php/PEAR-Numbers_Roman
+dev-php/PEAR-PEAR_Info
+dev-php/PEAR-SOAP
+dev-php/PEAR-Services_Amazon
+dev-php/PEAR-Services_Weather
+dev-php/PEAR-Testing_Selenium
+dev-php/PEAR-Translation2
+
 # Lars Wendler <polynomial-c@gentoo.org> (06 Aug 2017)
 # Masked for security reasons:
 # https://bugs.gentoo.org/600214
@@ -57,27 +88,6 @@ media-libs/silgraphite
 dev-texlive/texlive-documentation
 
 # Michał Górny <mgorny@gentoo.org> (04 Aug 2017)
-# sys-boot/plymouth is unmaintained since Apr 2016. The current version
-# has multiple bugs, including not supporting OpenRC. It really needs
-# an active maintainer. Removal in 30 days. Bug #621470.
-#
-# The remaining packages are sys-boot/plymouth reverse dependencies.
-# They have no use without it, so they are being removed as well.
-kde-plasma/breeze-plymouth
-kde-plasma/plymouth-kcm
-sys-boot/plymouth
-sys-boot/plymouth-openrc-plugin
-
-# Michał Górny <mgorny@gentoo.org> (04 Aug 2017)
-# sys-apps/yum is severely outdated (last bump 2013), unmaintained
-# since 2010. It has vulnerabilities. Removal in 30 days. Bug #499328.
-#
-# app-arch/createrepo is the last unmasked dependency. Since it is not
-# useful at all without yum, it is being removed as well. Bug #620992.
-app-arch/createrepo
-sys-apps/yum
-
-# Michał Górny <mgorny@gentoo.org> (04 Aug 2017)
 # Unmaintained since mid-2016, requires an active maintainer. Has
 # multiple build failure bugs. Removal in 30 days. Bug #580516.
 sys-kernel/openvz-sources
@@ -103,11 +113,6 @@ dev-libs/DFB++
 # Pacho Ramos <pacho@gentoo.org> (26 Jul 2017)
 # Upstream dead, vulnerable (#569980), removal in a month.
 dev-scheme/stalin
-
-# Pacho Ramos <pacho@gentoo.org> (26 Jul 2017)
-# Orphan, severely outdated and vulnerable to security issues (#585940).
-# Removal in a month.
-sys-apps/pacman
 
 # Pacho Ramos <pacho@gentoo.org> (26 Jul 2017)
 # One of the last consumers of old udisks:0, upstream dead for ages
@@ -210,6 +215,10 @@ dev-dotnet/referenceassemblies-pcl
 # versions of gjs.  Will unmask when gnome-3.26 is ready for testing
 # or when upstream releases an official tarball.
 dev-lang/spidermonkey:52
+
+# Nicolas Bock <nicolasbock@gentoo.org> (17 Jul 2017)
+# Keep shotwell development series masked.
+>=media-gfx/shotwell-0.27
 
 # Matt Turner <mattst88@gentoo.org> (16 Jul 2017)
 # Header package for removed x11-libs/libXevie. No dependencies. Removal in a
@@ -524,11 +533,6 @@ app-emulation/vmware-workstation
 app-emulation/vmware-player
 app-emulation/vmware-modules
 app-emulation/vmware-tools
-
-# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (11 Jun 2017)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-61
 
 # Raymond Jennings <shentino@gmail.com> (11 Jun 2017)
 # Upstream announced EOL effective July 2017.
@@ -1145,7 +1149,3 @@ games-fps/unreal-tournament-goty
 games-fps/unreal-tournament-strikeforce
 games-fps/unreal-tournament-bonuspacks
 games-fps/aaut
-
-# Nicolas Bock <nicolasbock@gentoo.org> (17 Jul 2017)
-# Keep shotwell development series masked.
->=media-gfx/shotwell-0.27

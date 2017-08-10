@@ -8,4 +8,4 @@ RDEPEND=>=dev-php/PEAR-HTTP_Request-1.2 >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=https://pear.php.net/get/HTTP_Client-1.2.1.tgz
 _eclasses_=php-pear-r2	b2a1a4ee3c7dbd9ef3b77f199aa75f84
-_md5_=9534c6a87e83445339aadf7b5f0ce0e7
+_md5_=4cc733583e6470258ef7edda5bd16c3e
