@@ -439,16 +439,6 @@
     </member>
   </project>
   <project>
-    <email>cvs-utils@gentoo.org</email>
-    <name>Gentoo CVS Project</name>
-    <url>https://wiki.gentoo.org/wiki/Project:CVS</url>
-    <description>The Gentoo CVS Project maintains CVS (the version control system) and related tools.</description>
-    <member>
-      <email>robbat2@gentoo.org</email>
-      <name>Robin Johnson</name>
-    </member>
-  </project>
-  <project>
     <email>catalyst@gentoo.org</email>
     <name>Catalyst</name>
     <url>https://wiki.gentoo.org/wiki/Project:Catalyst</url>
@@ -2734,6 +2724,11 @@ developers and volunteer mentors.</description>
     <url>https://wiki.gentoo.org/wiki/Project:PostgreSQL</url>
     <description>This project is focused on maintaining ebuilds and utilities that are closely tied to PostgreSQL including PostgreSQL itself.</description>
     <member>
+      <email>mjo@gentoo.org</email>
+      <name>Michael Orlitzky</name>
+      <role>Member</role>
+    </member>
+    <member>
       <email>patrick@gentoo.org</email>
       <name>Patrick Lauer</name>
       <role>Member</role>
@@ -2924,10 +2919,10 @@ developers and volunteer mentors.</description>
       <name>Marek Szuba</name>
       <role>Member</role>
     </member>
-    <member>
+    <member is-lead="1">
       <email>mgorny@gentoo.org</email>
       <name>Michał Górny</name>
-      <role>Member</role>
+      <role>Lead</role>
     </member>
     <member>
       <email>monsieurp@gentoo.org</email>
@@ -2991,12 +2986,12 @@ developers and volunteer mentors.</description>
     <member>
       <email>a3li@gentoo.org</email>
       <name>Alex Legler</name>
-      <role>Twitter, G+</role>
+      <role>Twitter</role>
     </member>
     <member>
       <email>alicef@gentoo.org</email>
       <name>Alice Ferrazzi</name>
-      <role>Facebook (admin), Twitter, Events, Telegram (admin), Slack (admin)</role>
+      <role>Facebook (admin), G+ (owner), Twitter, Events, Telegram (admin), Slack (admin)</role>
     </member>
     <member>
       <email>dabbott@gentoo.org</email>
@@ -3015,7 +3010,7 @@ developers and volunteer mentors.</description>
     <member is-lead="1">
       <email>maffblaster@gentoo.org</email>
       <name>Matthew Marchese</name>
-      <role>Cafepress store, Facebook (admin), G+, Twitter, Telegram (admin), Slack (admin)</role>
+      <role>Cafepress store, Facebook (admin), G+ (primary owner), Twitter, Telegram (admin), Slack (admin)</role>
     </member>
     <member>
       <email>nightmorph@gentoo.org</email>
@@ -3772,27 +3767,6 @@ developers and volunteer mentors.</description>
       <email>soap@gentoo.org</email>
       <name>David Seifert</name>
       <role>Member ( misc )</role>
-    </member>
-  </project>
-  <project>
-    <email>sunrise@gentoo.org</email>
-    <name>Sunrise</name>
-    <url>https://wiki.gentoo.org/wiki/Project:Sunrise</url>
-    <description>Project Sunrise is a starting point for gentoo users to contribute. The team members encourage users to write ebuilds and make sure that they follow Gentoo QA standards.</description>
-    <member>
-      <email>chithanh@gentoo.org</email>
-      <name>Chí-Thanh Christopher Nguyễn</name>
-      <role>Ebuild review</role>
-    </member>
-    <member>
-      <email>mgorny@gentoo.org</email>
-      <name>Michał Górny</name>
-      <role>Project pre-removal cleanup</role>
-    </member>
-    <member is-lead="1">
-      <email>tommy@gentoo.org</email>
-      <name>Thomas Sachau</name>
-      <role>Administration and ebuild review</role>
     </member>
   </project>
   <project>

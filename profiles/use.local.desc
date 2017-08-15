@@ -426,6 +426,7 @@ app-editors/tea:hunspell - Enable spellchecking using app-text/hunspell
 app-editors/vim:X - Link console vim against X11 libraries to enable title and clipboard features in xterm
 app-editors/vim:luajit - Use dev-lang/luajit instead of dev-lang/lua
 app-editors/vim:racket - Enable support for Scheme using dev-scheme/racket
+app-editors/vim:terminal - Enable terminal emulation support
 app-editors/vim:vim-pager - Install vimpager and vimmanpager links
 app-editors/vis:tre - more memory efficient regex search using dev-libs/tre
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
@@ -1414,9 +1415,6 @@ dev-db/postgresql:pg_legacytimestamp - Use double precision floating-point numbe
 dev-db/postgresql:server - Disable to build and install the clients and libraries only.
 dev-db/postgresql:uuid - Enable server side UUID generation (via dev-libs/ossp-uuid).
 dev-db/psqlodbc:iodbc - Use dev-db/libiodbc. Disable to use dev-db/unixODBC.
-dev-db/recutils:curl - Enable support for remote descriptors using libcurl
-dev-db/recutils:mdb - Build the mdb2rec utility
-dev-db/recutils:uuid - Enable support for uuid types
 dev-db/redis:jemalloc - Use dev-libs/jemalloc for allocations.
 dev-db/redis:luajit - Use dev-lang/luajit instead of dev-lang/lua
 dev-db/redis:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
@@ -4077,11 +4075,6 @@ media-libs/coin:simage - Texture loading via media-libs/simage library
 media-libs/devil:allegro - Add support for Allegro
 media-libs/devil:nvtt - Add support for media-gfx/nvidia-texture-tools
 media-libs/elementary:quicklaunch - Enable quick-launch support
-media-libs/embree:imagemagick - Enables BMP, GIF, PNG, TGA, TIFF image codecs.
-media-libs/embree:ispc - Enables support for the Intel SPMD Program Compiler.
-media-libs/embree:jpeg - Enables JPEG image codecs.
-media-libs/embree:openexr - Enables OpenEXR image codecs.
-media-libs/embree:png - Enables PNG image codecs.
 media-libs/esdl:image - Enable image support
 media-libs/faad2:digitalradio - Digital Radio Mondiale (warning: disables other decoders)
 media-libs/flickcurl:raptor - Use media-libs/raptor for proper RDF serializing
@@ -5700,7 +5693,6 @@ net-im/psi:sql - Enable psi-new-history extras patch
 net-im/psi:webengine - Use dev-qt/qtwebengine instead of dev-qt/qtwebkit
 net-im/psi:webkit - Enable themed, html-based chatlogs
 net-im/psi:whiteboarding - Enable experimental interactive SVG drawing
-net-im/psimedia:demo - build simple test application for the PsiMedia system
 net-im/pyaim-t:webinterface - Install dependencies needed for the web interface
 net-im/pyicq-t:webinterface - Install dependencies needed for the web interface
 net-im/qtox:X - Adds support for X11
@@ -6545,6 +6537,8 @@ net-misc/termpkg:uucp - Adds support for uucp style device locking
 net-misc/tigervnc:drm - build with DRM support
 net-misc/tigervnc:server - Build TigerVNC server
 net-misc/tigervnc:xorgmodule - Build the Xorg module
+net-misc/trackma:cli - Enable cli version
+net-misc/trackma:ncurses - Enable curses version
 net-misc/uftp:server - Install uftp server daemon
 net-misc/vde:pcap - Enable the pcap-based plugin that allows creating a switch against a real interface.
 net-misc/vde:ssl - Enable the cryptcab plugin that allows creating an encrypted virtual cable.
@@ -6569,7 +6563,7 @@ net-nds/389-ds-base:bitwise - Enable bitwise plugin - supported data in raw/bitw
 net-nds/389-ds-base:dna - Enable dna (distributed numeric assignment ) plugin - to automatically assign unique uid numbers to new user entries as they are created.
 net-nds/389-ds-base:ldapi - Enable LDAP over unix domain socket (LDAPI) support
 net-nds/389-ds-base:pam-passthru - Enable pam-passthru plugin - for simple and fast system services used in ldap
-net-nds/389-ds-base:presence - Enable presence plugin - non-stabdart syntax validation
+net-nds/389-ds-base:presence - Enable presence plugin - non-standard syntax validation
 net-nds/gosa-core:mail - Manage mail accounts and servers with gosa.
 net-nds/gosa-core:samba - Manage samba accounts with gosa.
 net-nds/ldapvi:gnutls - Use net-libs/gnutls instead of dev-libs/openssl
@@ -6626,14 +6620,6 @@ net-p2p/bitcoind:ljr - Enable Luke Dashjr's patches
 net-p2p/bitcoind:upnp - Enable Universal Plug and Play
 net-p2p/bitcoind:wallet - Enable wallet support
 net-p2p/bitcoind:zeromq - Report blocks and transactions via zeromq
-net-p2p/bitcoinxt-qt:ljr - Enable Luke Dashjr's patches
-net-p2p/bitcoinxt-qt:logrotate - Use app-admin/logrotate for rotating logs
-net-p2p/bitcoinxt-qt:qrcode - Enable generation of QR Codes for receiving payments
-net-p2p/bitcoinxt-qt:wallet - Enable wallet support
-net-p2p/bitcoinxtd:doc - Include documentatio
-net-p2p/bitcoinxtd:logrotate - Use app-admin/logrotate for rotating logs
-net-p2p/bitcoinxtd:upnp - Enable Universal Plug and Play
-net-p2p/bitcoinxtd:wallet - Enable wallet support
 net-p2p/datacoin-hp:logrotate - Use app-admin/logrotate for rotating logs
 net-p2p/dbhub:switch_user - Enable support for switching user
 net-p2p/deluge:console - Enable default console UI
@@ -6662,7 +6648,6 @@ net-p2p/ktorrent:mediaplayer - Phonon-based media player
 net-p2p/ktorrent:shutdown - Shutdown when done
 net-p2p/ktorrent:stats - Shows statistics about torrents in several graphs
 net-p2p/ktorrent:zeroconf - Discover peers on the local network using the Zeroconf protocol
-net-p2p/litecoin-qt:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/litecoind:logrotate - Use app-admin/logrotate for rotating logs
 net-p2p/litecoind:wallet - Enable wallet support
 net-p2p/mldonkey:bittorrent - enable bittorrent support
@@ -7003,8 +6988,6 @@ sci-chemistry/gromacs:offensive - Enable gromacs partly offensive quotes
 sci-chemistry/gromacs:single-precision - Single precision version of gromacs (default)
 sci-chemistry/gromacs:tng - Enable new trajectory format - tng
 sci-chemistry/gsim:emf - Support for .emf export
-sci-chemistry/icm:32bit - Automatically generated description for 32bit
-sci-chemistry/icm:64bit - Automatically generated description for 64bit
 sci-chemistry/jmol:client-only - Install the viewer only, no applet files for httpd
 sci-chemistry/molequeue:client - Build the client application
 sci-chemistry/molequeue:server - Build the serve application
@@ -7407,6 +7390,7 @@ sci-visualization/veusz:vo - Add Virtual Observatory tools via dev-python/astrop
 sci-visualization/visit:cgns - Builds the reader for the CFD General Notation System file format.
 sci-visualization/visit:silo - Adds support for reading .silo files.
 sci-visualization/visit:xdmf2 - Support for xdmf2 formated data.
+sci-visualization/yt:hub - Connect to the yt hub with dev-python/girder-client
 sec-policy/selinux-base:open_perms - Enable the open permissions for file object classes (SELinux policy capability).
 sec-policy/selinux-base:peer_perms - Enable the labeled networking peer permissions (SELinux policy capability).
 sec-policy/selinux-base:ubac - Enable User Based Access Control (UBAC) in the SELinux policy
@@ -7602,7 +7586,6 @@ sys-apps/util-linux:kill - build the kill program
 sys-apps/util-linux:pam - build runuser helper
 sys-apps/util-linux:suid - install mount/umount as setuid so non-root users may mount/umount devices, and wall/write as setgid so non-root users can notify other users
 sys-apps/util-linux:tty-helpers - install the mesg/wall/write tools for talking to local users
-sys-apps/v86d:x86emu - Use x86emu for Video BIOS calls
 sys-apps/watchdog:nfs - enable support for checking nfs mounts
 sys-apps/xinetd:rpc - support RPC services
 sys-auth/consolekit:cgroups - Use the kernel to track processes instead of the session cookie.

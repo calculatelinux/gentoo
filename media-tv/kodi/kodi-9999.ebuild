@@ -12,12 +12,13 @@ inherit autotools cmake-utils eutils linux-info pax-utils python-single-r1
 LIBDVDCSS_COMMIT="2f12236bc1c92f73c21e973363f79eb300de603f"
 LIBDVDREAD_COMMIT="17d99db97e7b8f23077b342369d3c22a6250affd"
 LIBDVDNAV_COMMIT="43b5f81f5fe30bceae3b7cecf2b0ca57fc930dac"
-FFMPEG_VERSION="3.1.6"
-CODENAME="Krypton"
+FFMPEG_VERSION="3.3.2"
+CODENAME="Leia"
+FFMPEG_KODI_VERSION="Alpha-1"
 SRC_URI="https://github.com/xbmc/libdvdcss/archive/${LIBDVDCSS_COMMIT}.tar.gz -> libdvdcss-${LIBDVDCSS_COMMIT}.tar.gz
 	https://github.com/xbmc/libdvdread/archive/${LIBDVDREAD_COMMIT}.tar.gz -> libdvdread-${LIBDVDREAD_COMMIT}.tar.gz
 	https://github.com/xbmc/libdvdnav/archive/${LIBDVDNAV_COMMIT}.tar.gz -> libdvdnav-${LIBDVDNAV_COMMIT}.tar.gz
-	!system-ffmpeg? ( https://github.com/xbmc/FFmpeg/archive/${FFMPEG_VERSION}-${CODENAME}.tar.gz -> ffmpeg-${PN}-${FFMPEG_VERSION}-${CODENAME}.tar.gz )"
+	!system-ffmpeg? ( https://github.com/xbmc/FFmpeg/archive/${FFMPEG_VERSION}-${CODENAME}-${FFMPEG_KODI_VERSION}.tar.gz -> ffmpeg-${PN}-${FFMPEG_VERSION}-${CODENAME}-${FFMPEG_KODI_VERSION}.tar.gz )"
 
 DESCRIPTION="Kodi is a free and open source media-player and entertainment hub"
 HOMEPAGE="https://kodi.tv/ http://kodi.wiki/"
@@ -240,7 +241,11 @@ src_configure() {
 
 	use libusb && mycmakeargs+=( -DENABLE_LIBUSB=$(usex libusb) )
 
-	use !system-ffmpeg && mycmakeargs+=( -DFFMPEG_URL="${DISTDIR}/ffmpeg-${PN}-${FFMPEG_VERSION}-${CODENAME}.tar.gz" )
+	if use system-ffmpeg; then
+		mycmakeargs+=( -DWITH_FFMPEG="yes" )
+	else
+		mycmakeargs+=( -DFFMPEG_URL="${DISTDIR}/ffmpeg-${PN}-${FFMPEG_VERSION}-${CODENAME}-${FFMPEG_KODI_VERSION}.tar.gz" )
+	fi
 
 	cmake-utils_src_configure
 }
