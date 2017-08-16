@@ -2572,16 +2572,6 @@ dev-python/scrapy:boto - Add support for Amazon S3 via dev-python/boto
 dev-python/scrapy:ibl - Use Instace Based Learning algorithm for automatic extraction
 dev-python/simplecv:shell - Enable the iPython SimpleCV shell
 dev-python/sphinx:net - enable internet capabilities
-dev-python/spyder:ipython - Add support for dev-python/ipython
-dev-python/spyder:matplotlib - Add support for dev-python/matplotlib
-dev-python/spyder:numpy - Add support for dev-python/numpy
-dev-python/spyder:pep8 - Add support for dev-python/pep8
-dev-python/spyder:pyflakes - Add support for dev-python/pyflakes
-dev-python/spyder:pylint - Add support for dev-python/pylint
-dev-python/spyder:qtconsole - Add support for dev-python/qtconsole
-dev-python/spyder:rope - Add support for dev-python/rope
-dev-python/spyder:scipy - Add support for sci-libs/scipy
-dev-python/spyder:sphinx - Add support for dev-python/sphinx
 dev-python/starcluster:epydoc - Enable build of apidocs in html using epydoc
 dev-python/sympy:imaging - Add support for dev-python/pillow
 dev-python/sympy:ipython - Add support for dev-python/ipython
@@ -4076,6 +4066,7 @@ media-libs/devil:allegro - Add support for Allegro
 media-libs/devil:nvtt - Add support for media-gfx/nvidia-texture-tools
 media-libs/elementary:quicklaunch - Enable quick-launch support
 media-libs/esdl:image - Enable image support
+media-libs/faac:digitalradio - Digital Radio Mondiale (warning: disables other decoders)
 media-libs/faad2:digitalradio - Digital Radio Mondiale (warning: disables other decoders)
 media-libs/flickcurl:raptor - Use media-libs/raptor for proper RDF serializing
 media-libs/fontconfig-infinality:nyx - Additional style using croscorefonts
@@ -8028,7 +8019,6 @@ sys-kernel/genkernel-next:gpg - Enable support for GPG (include gnupg dependency
 sys-kernel/genkernel-next:iscsi - Enable support for open-iscsi (include open-iscsi dependency)
 sys-kernel/genkernel-next:mdadm - Enable support for mdadm (include mdadm dependency)
 sys-kernel/genkernel-next:plymouth - Enable support for Plymouth (include Plymouth dependency)
-sys-kernel/gentoo-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 sys-kernel/hardened-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/linux-docs:html - Install HTML documentation

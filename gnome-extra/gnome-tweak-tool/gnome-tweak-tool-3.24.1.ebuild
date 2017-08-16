@@ -16,7 +16,7 @@ SLOT="0"
 IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~x86"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
@@ -33,7 +33,7 @@ RDEPEND="${COMMON_DEPEND}
 	x11-libs/libnotify[introspection]
 
 	>=gnome-base/gnome-settings-daemon-3
-	gnome-base/gnome-shell
+	>=gnome-base/gnome-shell-3.24
 	>=gnome-base/nautilus-3
 "
 DEPEND="${COMMON_DEPEND}
