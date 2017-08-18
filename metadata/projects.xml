@@ -1383,19 +1383,14 @@
       <role>Member</role>
     </member>
     <member>
-      <email>gokturk@gentoo.org</email>
-      <name>Göktürk Yüksek</name>
-      <role>Member</role>
-    </member>
-    <member>
       <email>kensington@gentoo.org</email>
       <name>Michael Palimaka</name>
       <role>Member</role>
     </member>
-    <member>
+    <member is-lead="1">
       <email>mgorny@gentoo.org</email>
       <name>Michał Górny</name>
-      <role>Member</role>
+      <role>Lead</role>
     </member>
     <member>
       <email>monsieurp@gentoo.org</email>

@@ -876,7 +876,6 @@ app-misc/byobu:screen - Use app-misc/screen as the default backend
 app-misc/ca-certificates:cacert - Include root certs from CAcert (http://www.cacert.org/) and Software in the Public Interest (http://www.spi-inc.org/)
 app-misc/ca-certificates:insecure_certs - Install certs which are known to *not* being trustworthy.
 app-misc/ddccontrol:pci - enable direct PCI memory access (the setuid ddcpci util)
-app-misc/ddcutil:enable-api-libs - Enables the C/C++ API.
 app-misc/ddcutil:usb-monitor - Adds support for monitors attached via USB.
 app-misc/ddcutil:user-permissions - Adds a udev rules to allow non-root users in the i2c group to access the /dev/i2c-* devices. If usb-monitor is selected, users will need to be added to the video group to access the USB monitor. Otherwise, only root will be able to use ddcutil.
 app-misc/digitemp:ds2490 - Build support for the ds2490 sensor
@@ -3429,6 +3428,7 @@ kde-apps/kdenetwork-meta:ppp - Enable support for net-dialup/ppp.
 kde-apps/kdenlive:freesound - Enable freesound.org credentials support via dev-qt/qtwebkit to download files
 kde-apps/kdenlive:gles2 - Use GLES 2.0 or later instead of full OpenGL
 kde-apps/kdenlive:jogshuttle - Enable support for Jog-Shuttle devices
+kde-apps/kdepim-addons:importwizard - Enable additional import plugins for kde-apps/akonadi-import-wizard
 kde-apps/kdepim-apps-libs:prison - Enable support for QRcodes in contacts
 kde-apps/kdepim-common-libs:google - Google service integration via kde-apps/libkgapi
 kde-apps/kdepim-meta:google - Google service integration via kde-apps/libkgapi
@@ -3445,6 +3445,7 @@ kde-apps/kio-extras:htmlthumbs - Enable HTML thumbnail previews via dev-qt/qtweb
 kde-apps/kio-extras:man - Enable manpages kioslave
 kde-apps/kio-extras:phonon - Enable file audio preview plugin using media-libs/phonon
 kde-apps/kio-extras:sftp - Enable SFTP protocol support using net-libs/libssh
+kde-apps/kmag:keyboardfocus - Enable keyboard focus tracking
 kde-apps/konqueror:activities - Enable kactivities support
 kde-apps/konqueror:speech - Build text-to-speech plugin
 kde-apps/kopete:addbookmarks - Automatically add incoming urls to bookmarks.
@@ -3473,8 +3474,6 @@ kde-apps/kopete:yahoo - Enable yahoo protocol support.
 kde-apps/kopete:zeroconf - Enable Link-Local Messaging via the bonjour protocol.
 kde-apps/kpimtextedit:designer - Build plugins for dev-qt/designer
 kde-apps/kpimtextedit:speech - Enable text-to-speech support
-kde-apps/krfb:ktp - Enable displaying of KDE Telepathy contacts
-kde-apps/krfb:telepathy - Enable desktop sharing through a telepathy client
 kde-apps/kstars:fits - Enable support for NASA's sci-libs/cfitsio library
 kde-apps/kstars:indi - Enable support for Astronomical control library using libindi
 kde-apps/kstars:wcs - Enable support for World Coordinate System library using wcslib
@@ -3495,7 +3494,6 @@ kde-apps/marble:positioning - Enable position information via dev-qt/qtpositioni
 kde-apps/marble:shapefile - Enable support for ESRI shapefiles
 kde-apps/okteta:designer - Build plugins for dev-qt/designer
 kde-apps/okular:chm - Enable support for Microsoft Compiled HTML Help files
-kde-apps/okular:ebook - Add E-Book support
 kde-apps/okular:epub - Add E-Book support via app-text/ebook-tools
 kde-apps/okular:image-backend - Enable image viewing support
 kde-apps/okular:mobi - Add mobipocket support
@@ -3510,6 +3508,7 @@ kde-frameworks/frameworkintegration:appstream - Enable AppStream software metada
 kde-frameworks/kconfigwidgets:man - Build and install man pages
 kde-frameworks/kded:man - Build and install man pages
 kde-frameworks/kdelibs:opengl - Enable OpenGL support for Plasma (GLApplet)
+kde-frameworks/kdelibs:qt3support - Enable kde3support/qt3support for very old applications
 kde-frameworks/kdesignerplugin:designer - Build KF5 widgets plugin for QtDesigner
 kde-frameworks/kdesignerplugin:webkit - Build kdewebkit plugin for QtDesigner
 kde-frameworks/kfilemetadata:epub - Enable support for reading EPUB ebook metadata
@@ -3880,6 +3879,8 @@ media-fonts/unifont:fontforge - Use media-gfx/fontforge to build fonts from sour
 media-fonts/unifont:utils - Install unifont utilities
 media-gfx/album:plugins - Install optional plugins
 media-gfx/album:themes - Install optional themes
+media-gfx/apngasm:7z - Enable support for 7zip compression
+media-gfx/apngasm:zopfli - Enable support for Zopfli compression
 media-gfx/asymptote:boehm-gc - Enables using the Boehm-Demers-Weiser conservative garbage collector
 media-gfx/asymptote:offscreen - Enables off-screen rendering
 media-gfx/asymptote:sigsegv - Enables using dev-libs/libsigsegv
@@ -5515,6 +5516,7 @@ net-fs/cifs-utils:caps-ng - libcap-ng support
 net-fs/cifs-utils:creds - cifs credentials support
 net-fs/cvmfs:aufs - Use AUFS instead of OverlayFS for the server
 net-fs/cvmfs:client - Install the cvmfs client programs and init script
+net-fs/cvmfs:preload - Install the cvmfs cache preloader for distributed file systems
 net-fs/cvmfs:server - Install the cvmfsd program and init script
 net-fs/cvmfs:test-programs - Install unit test programs
 net-fs/netatalk:pgp - Add support pgp authentication module

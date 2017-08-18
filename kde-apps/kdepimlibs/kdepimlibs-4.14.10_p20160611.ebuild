@@ -5,12 +5,13 @@ EAPI=6
 
 KDE_HANDBOOK="optional"
 CPPUNIT_REQUIRED="optional"
+SQL_REQUIRED="always"
 inherit kde4-base
 
 DESCRIPTION="Common library for KDE PIM apps"
 SRC_URI="https://dev.gentoo.org/~asturm/distfiles/${P/10_p/11_pre}.tar.xz"
 
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 LICENSE="LGPL-2.1"
 IUSE="debug ldap prison"
 
