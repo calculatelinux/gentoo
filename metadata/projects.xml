@@ -3923,11 +3923,11 @@ developers and volunteer mentors.</description>
       <email>slyfox@gentoo.org</email>
       <name>Sergei Trofimovich</name>
     </member>
-    <member>
+    <member is-lead="1">
       <email>tamiko@gentoo.org</email>
       <name>Matthias Maier</name>
     </member>
-    <member is-lead="1">
+    <member>
       <email>vapier@gentoo.org</email>
       <name>Mike Frysinger</name>
     </member>
@@ -4152,6 +4152,10 @@ developers and volunteer mentors.</description>
     <member is-lead="1">
       <email>a3li@gentoo.org</email>
       <name>Alex Legler</name>
+    </member>
+    <member>
+      <email>dilfridge@gentoo.org</email>
+      <name>Andreas K. Hüttel</name>
     </member>
     <member>
       <email>maffblaster@gentoo.org</email>

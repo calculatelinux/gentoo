@@ -29,6 +29,54 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Orlitzky <mjo@gentoo.org> (20 Aug 2017)
+# Masked until somebody who uses systemd tells me
+# I didn't break the service file or configuration.
+=mail-filter/spamassassin-3.4.1-r14
+
+# Andreas Sturmlechner <asturm@gentoo.org> (20 Aug 2017)
+# Masked for removal in 30 days. Use kde-apps/kio-extras[mtp,slp] instead.
+kde-misc/kio-mtp
+kde-misc/kio-slp
+
+# Michał Górny <mgorny@gentoo.org> (20 Aug 2017)
+# Pre-release of a new incompatible version that breaks the only reverse
+# dependency in Gentoo. Masked until 2.0.0 proper is released, or
+# dev-cpp/libjson-rpc-cpp is fixed, whichever happens first.
+>=dev-cpp/catch-2
+
+# Hans de Graaff <graaff@gentoo.org> (20 Aug 2017)
+# Mask Ruby 2.1 for removal, bug 615822
+# This version is no longer supported by upstream
+# since March 2017.
+# This mask also includes all remaining ruby21-only packages.
+dev-lang/ruby:2.1
+dev-ruby/activeresource:4.1
+dev-ruby/builder:3
+dev-ruby/rails-observers
+dev-ruby/samuel
+games-rpg/a-bird-story
+
+# Sébastien Fabbro <bicatali@gentoo.org> (19 Aug 2017)
+# ipython-6 is python-3 only and causes circular dependencies
+# Unset python_targets_python2_7 for ipykernel and ipyparallel if needed.
+>=dev-python/ipython-6
+
+# Andreas Sturmlechner <asturm@gentoo.org> (19 Aug 2017)
+# Plasma-4 fragment, no more rdeps, masked for removal in 30 days.
+kde-plasma/libkworkspace
+
+# Andreas Sturmlechner <asturm@gentoo.org> (19 Aug 2017)
+# Constantly broken, dead upstream, no more rdeps.
+# Masked for removal in 30 days. (#485244, #577762)
+kde-apps/pykde4
+
+# Michael Orlitzky <mjo@gentoo.org> (18 Aug 2017)
+# Last version from 2011, and has a vulnerable init script
+# (bug 603382). The proxy-maintainer is unknown to bugzilla,
+# and the previous maintainer jmbsvicetto is OK with masking.
+net-misc/vde
+
 # Mats Lidell <matsl@gentoo.org> (17 Aug 2017)
 # Masked ede and all its dependencies due to security reasons. 
 # bug #398241
@@ -42,15 +90,16 @@ app-xemacs/ecb
 app-xemacs/xemacs-packages-all
 
 # Andreas Sturmlechner <asturm@gentoo.org> (17 Aug 2017)
-# Masked for removal. KDE Applications 17.04.3 was stabilised,
-# including KDE PIM based on KDE Frameworks.
-kde-apps/kde-l10n
+# KDE Applications 17.04.3 was stabilised, including KDE PIM
+# based on KDE Frameworks. kde-apps/ktnef merged into kmail.
+# Masked for removal in 30 days.
 kde-apps/kdepim-common-libs
-kde-apps/kommander
-kde-apps/ksaneplugin
 kde-apps/ktnef
-kde-apps/kwalletd
+
+# Andreas Sturmlechner <asturm@gentoo.org> (17 Aug 2017)
+# Masked for removal in 30 days. No reverse dependencies left.
 kde-apps/kcmshell
+kde-apps/kde-l10n
 kde-apps/kdebase-runtime-meta
 kde-apps/kdontchangethehostname
 kde-apps/keditfiletype
@@ -58,7 +107,16 @@ kde-apps/kfile
 kde-apps/kmimetypefinder
 kde-apps/knewstuff
 kde-apps/kreadconfig
+kde-apps/ksaneplugin
 kde-apps/ktraderclient
+
+# Andreas Sturmlechner <asturm@gentoo.org> (17 Aug 2017)
+# Masked for removal in 30 days. Replaced by kde-frameworks/kwallet.
+kde-apps/kwalletd
+
+# Andreas Sturmlechner <asturm@gentoo.org> (17 Aug 2017)
+# Masked for removal in 30 days. Dead upstream, no replacement.
+kde-apps/kommander
 
 # Patrice Clement <monsieurp@gentoo.org> (10 Aug 2017)
 # Not ready for production yet.
@@ -320,16 +378,6 @@ media-sound/skype-call-recorder
 net-im/skype
 net-im/skypetab-ng
 
-# Michał Górny <mgorny@gentoo.org> (07 Jun 2017)
-# The new release changes API and *breaks* core Xfce components.
-# Upstream lists xfce-base/xfce4-settings and xfce-base/xfce4-panel
-# as being incompatible. The breakage is not exhibited at build time
-# but results in broken executables. Masked until upstream releases
-# fixed versions and for further testing.
->=xfce-base/xfconf-4.13
->=xfce-base/xfce4-settings-4.13.1
->=xfce-base/xfce4-panel-4.13.1
-
 # Hans de Graaff <graaff@gentoo.org> (05 Jun 2017)
 # Bundles obsolete and vulnerable webkit version.
 # Upstream has stopped development and recommends using
@@ -418,12 +466,6 @@ dev-perl/Params-ValidationCompiler
 >=dev-perl/DateTime-1.370.0
 >=dev-perl/DateTime-Format-Strptime-1.710.0
 >=dev-perl/Log-Dispatch-2.590.0
-
-# Michał Górny <mgorny@gentoo.org> (25 May 2017)
-# First GTK+3 version with known regressions:
-# https://mail.xfce.org/pipermail/xfce-announce/2017-May/000517.html
-# Masked (+ reverse dependencies) for opt-in testing.
->=xfce-base/xfce4-panel-4.13
 
 # Thomas Deutschmann <whissi@gentoo.org> (24 May 2017)
 # Broken runscript/changed behavior causing lvm2 to fail

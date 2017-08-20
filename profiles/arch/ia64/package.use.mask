@@ -69,10 +69,6 @@ net-analyzer/rrdtool rados
 # x11-libs/libXpresent is not keyworded on ia64
 xfce-base/xfwm4 xpresent
 
-# Pacho Ramos <pacho@gentoo.org> (15 Jan 2017)
-# Missing keywords, bug #559770
->=net-misc/networkmanager-1.4.4 consolekit
-
 # Pacho Ramos <pacho@gentoo.org> (02 Jan 2017)
 # Don't keyword redis
 dev-libs/hiredis test
@@ -167,10 +163,6 @@ net-analyzer/wireshark doc-pdf
 net-misc/spice-gtk smartcard webdav
 
 # Gilles Dartiguelongue <eva@gentoo.org> (09 Jun 2015)
-# net-fs/libnfs lacks ia64 keyword, bug #551576
-gnome-base/gvfs nfs
-
-# Gilles Dartiguelongue <eva@gentoo.org> (09 Jun 2015)
 # dev-lang/luajit and dev-lua/lgi and lack ia64 keyword, bug #551540
 dev-libs/libpeas lua jit
 
@@ -257,10 +249,6 @@ media-libs/phonon zeitgeist
 # depends on net-libs/polarssl
 >=net-vpn/openvpn-2.3.1 polarssl
 
-# Gilles Dartiguelongue <eva@gentoo.org> (1 Apr 2013)
-# missing keyword on media-libs/tremor, bug #453200
-media-libs/gst-plugins-base ivorbis
-
 # Julian Ospald <hasufell@gentoo.org> (31 Mar 2013)
 # depends on mono/monodevelop
 >=net-irc/hexchat-2.9.4-r1 theme-manager
@@ -300,10 +288,6 @@ media-libs/phonon gstreamer vlc
 # Raúl Porcel <armin76@gentoo.org> (28 May 2012)
 # Needs x11-misc/lightdm(which also requires some other deps)
 x11-misc/xscreensaver new-login
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (12 Apr 2012)
-# Requires gnutls[pkcs11], which is use.masked on ia64
-net-libs/glib-networking smartcard
 
 # Alexey Shvetsov <alexxy@gentoo.org> (17 Dec 2011)
 # Mask use numa for openmpi

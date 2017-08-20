@@ -1598,6 +1598,7 @@ dev-haskell/haskeline:terminfo - Use the terminfo package for POSIX consoles.
 dev-haskell/hdbc-odbc:buildstresstest - Build stress test
 dev-haskell/hdbc-sqlite3:buildtests - Build the executable to run unit tests
 dev-haskell/hdbc-sqlite3:splitbase - Choose the new smaller, split-up package.
+dev-haskell/hexpat:bundled-expat - Use bundled expat instead of dev-libs/expat
 dev-haskell/highlighting-kate:executable - Build the Highlight executable.
 dev-haskell/highlighting-kate:pcre-light - Use the pcre-light library instead of regex-pcre-builtin.
 dev-haskell/hit:executable - Build the executable
@@ -2954,6 +2955,7 @@ dev-vcs/fossil:json - Enable the JSON API of Fossil's wiki
 dev-vcs/fossil:legacy-mv-rm - Enable legacy behavior for mv/rm (skip checkout files)
 dev-vcs/fossil:miniz - Use the bundled miniz for compression instead of zlib
 dev-vcs/fossil:sqlite - Use the system SQLite instead of the bundled one
+dev-vcs/fossil:system-sqlite - Use the system SQLite instead of the bundled one
 dev-vcs/fossil:th1-docs - Enable TH1 for embedded documentation pages
 dev-vcs/fossil:th1-hooks - Enable TH1 hooks for commands and web pages
 dev-vcs/git:blksha1 - Use the new optimized SHA1 implementation
@@ -3436,7 +3438,6 @@ kde-apps/kdepim-runtime:google - Google service integration via kde-apps/libkgap
 kde-apps/kdepimlibs:prison - Enable support for QRcodes in contacts
 kde-apps/kdeutils-meta:floppy - Install kde-apps/kfloppy to format and create DOS or ext2fs filesystems in a floppy.
 kde-apps/keditbookmarks:man - Build and install man pages
-kde-apps/kget:bittorrent - Enable bittorrent transfer plugin through net-libs/libktorrent
 kde-apps/kget:mms - Enable MMS (Microsoft Media Server) plugin through media-libs/libmms
 kde-apps/kig:geogebra - Support files created by sci-mathematics/geogebra
 kde-apps/kig:scripting - Support Python scripting
@@ -4333,7 +4334,6 @@ media-plugins/grilo-plugins:daap - Enable dmap support through net-libs/libdmaps
 media-plugins/grilo-plugins:flickr - Enable Flickr support
 media-plugins/grilo-plugins:freebox - Build support for viewing TV channels using Freebox
 media-plugins/grilo-plugins:gnome-online-accounts - Enable net-libs/gnome-online-accounts support
-media-plugins/grilo-plugins:pocket - Support for showing content from Pocket
 media-plugins/grilo-plugins:subtitles - Enables support for subtitle from OpenSubtitles
 media-plugins/grilo-plugins:thetvdb - Build support for thetvdb.com
 media-plugins/grilo-plugins:tracker - Build support for content discovery using the app-misc/tracker indexer
@@ -5934,7 +5934,9 @@ net-libs/libssh:ssh1 - Build with SSH1 support
 net-libs/libssh2:gcrypt - Use dev-libs/libgcrypt instead of dev-libs/openssl
 net-libs/libtorrent-rasterbar:dht - Enable DHT (distributed hash table) support
 net-libs/libtrace:numa - Use sys-process/numactl
+net-libs/libupnp:blocking-tcp - Do not use async socket calls.
 net-libs/libupnp:reuseaddr - Allow clean restarts by binding the socket with SO_REUSEADDR.
+net-libs/libupnp:samples - Install sample applications.
 net-libs/libvncserver:24bpp - enable 24bpp support
 net-libs/libvncserver:gcrypt - enable support for gcrypt
 net-libs/libwebsockets:access-log - Support generating Apache-compatible access logs
@@ -7646,6 +7648,7 @@ sys-block/gparted:mdadm - Support for Linux software RAID.
 sys-block/gparted:ntfs - Include NTFS support (sys-fs/ntfs3g)
 sys-block/gparted:reiser4 - Include ReiserFS4 support (sys-fs/reiser4progs)
 sys-block/gparted:reiserfs - Include ReiserFS support (sys-fs/reiserfsprogs)
+sys-block/gparted:udf - Include UDF support (sys-fs/udftools)
 sys-block/gparted:xfs - Include XFS support (sys-fs/xfsprogs, sys-fs/xfsdump)
 sys-block/open-iscsi:rdma - Support iSCSI over RDMA
 sys-block/open-iscsi:tcp - Support iSCSI over TCP
