@@ -10,4 +10,4 @@ RDEPEND=>=net-im/pidgin-2.7[dbus] >=net-libs/telepathy-glib-0.15.1 >=dev-libs/gl
 SLOT=0
 SRC_URI=https://telepathy.freedesktop.org/releases/telepathy-haze/telepathy-haze-0.8.0.tar.gz
 _eclasses_=multilib	97f470f374f2e94ccab04a2fb21d811e	python-any-r1	27d7f9da7187d283b7f3eae8390b7b09	python-utils-r1	c9de01becf9df3f8c10aeec3dc693f5d	toolchain-funcs	185a06792159ca143528e7010368e8af
-_md5_=d2ce2f22732e211495cafb453a52b943
+_md5_=746028406b03d15536966a32a2ae8448
