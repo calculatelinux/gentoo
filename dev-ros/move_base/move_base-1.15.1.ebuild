@@ -15,10 +15,11 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="
-	>=dev-ros/costmap_2d-1.13.1
+	>=dev-ros/costmap_2d-1.15.1
 	dev-ros/roscpp
 	dev-ros/pluginlib
 	dev-ros/actionlib
+	dev-ros/base_local_planner
 	dev-ros/dynamic_reconfigure[${PYTHON_USEDEP}]
 	dev-ros/nav_core
 	dev-ros/tf

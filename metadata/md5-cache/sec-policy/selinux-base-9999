@@ -7,5 +7,5 @@ IUSE=doc +open_perms +peer_perms systemd +ubac +unconfined
 LICENSE=GPL-2
 RDEPEND=>=sys-apps/policycoreutils-2.3 virtual/udev
 SLOT=0
-_eclasses_=git-r3	cbafa3261c37c7e3af44bb16a34ea390
-_md5_=4fc54b5c2d967abcbd184ccf610cb434
+_eclasses_=git-r3	78651c07ca1c1373bf81545d39eb9769
+_md5_=880649911f613502fb17234db42e9dad
