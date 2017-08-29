@@ -83,7 +83,6 @@ app-admin/keepassxc:yubikey - Enable database unlocking via YubiKey.
 app-admin/lastpass-cli:X - Use x11-misc/xclip or x11-misc/xsel to copy passwords to the clipboard.
 app-admin/lastpass-cli:pinentry - Use app-crypt/pinentry to prompt for passwords.
 app-admin/logrotate:acl - Installs acl support
-app-admin/logrotate:bzip2 - Compresses rotated log files with bzip2 instead of gzip
 app-admin/logrotate:cron - Installs cron file
 app-admin/logrotate:selinux - Installs Security Enhanced Linux support
 app-admin/matter:entropy - Add Entropy support
@@ -1289,6 +1288,8 @@ dev-cpp/glog:unwind - Use sys-libs/libunwind for stack unwinding instead of glib
 dev-cpp/libcmis:man - Build and install man pages.
 dev-cpp/libjson-rpc-cpp:http-client - Build support for HTTP client using net-misc/curl
 dev-cpp/libjson-rpc-cpp:http-server - Build support for HTTP server using net-libs/libmicrohttpd
+dev-cpp/libjson-rpc-cpp:redis-client - Build support for Redis client using dev-libs/hiredis
+dev-cpp/libjson-rpc-cpp:redis-server - Build support for Redis server using dev-libs/hiredis
 dev-cpp/libjson-rpc-cpp:stubgen - Build header stub code generator (needed for development and when pregenerated headers are not bundled)
 dev-cpp/pficommon:fcgi - Build FCGI feature
 dev-cpp/pficommon:mprpc - Build MessagePack RPC feature
@@ -7579,7 +7580,6 @@ sys-apps/systemd:gcrypt - Enable sealing of journal files using gcrypt; required
 sys-apps/systemd:gnuefi - Enable EFI boot manager and stub loader (built using sys-boot/gnu-efi)
 sys-apps/systemd:http - Enable embedded HTTP server in journald
 sys-apps/systemd:importd - Enable import daemon
-sys-apps/systemd:kdbus - Connect to kernel dbus (KDBUS) instead of userspace dbus if available
 sys-apps/systemd:kmod - Enable kernel module loading via sys-apps/kmod
 sys-apps/systemd:libidn2 - If IDN support is enabled, use net-dns/libidn2 instead of net-dns/libidn
 sys-apps/systemd:lz4 - Enable lz4 compression for the journal
