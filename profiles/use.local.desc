@@ -1106,6 +1106,7 @@ app-text/blogc:git - Build blogc-git-receiver tool
 app-text/blogc:httpd - Build blogc-runserver tool
 app-text/blogc:make - Build blogc-make tool
 app-text/cb2bib:webengine - Use dev-qt/qtwebengine instead of dev-qt/qtwebkit
+app-text/coolreader:corefonts - Use media-fonts/corefonts
 app-text/crm114:mew - Add support for using the mewdecode mime decoder (app-emacs/mew)
 app-text/crm114:mimencode - Add support for using the mimencode mime (net-mail/metamail)
 app-text/crm114:normalizemime - Add support for using the normalizemime (mail-filter/normalizemime)
@@ -1772,9 +1773,7 @@ dev-java/gnu-classpath:dssi - Build with DSSI javax.sound.midi provider
 dev-java/gnu-classpath:gconf - Build with GConf preferences backend
 dev-java/gnu-classpath:gjdoc - Build GJDoc, a documentation generator
 dev-java/gnu-classpath:gmp - Build with GMP backend for java.math.BigInteger
-dev-java/gnu-classpath:gstreamer - Build with GStreamer javax.sound.sampler provider
 dev-java/gnu-classpath:gtk - Build with Gtk+ AWT peers
-dev-java/gnu-classpath:qt4 - Build with Qt4 AWT peers
 dev-java/gnu-classpath:xml - Build with native XML backend
 dev-java/icedtea:cacao - Use the CACAO virtual machine rather than HotSpot.
 dev-java/icedtea:cups - Link against the CUPS library at compile time, rather than using it dynamically at runtime.
@@ -1850,7 +1849,6 @@ dev-lang/gdl:udunits - Add support for manipulating units of physical quantities
 dev-lang/ghc:binary - Install the binary version directly, rather than using it to build the source version.
 dev-lang/ghc:ghcbootstrap - Bootstrap from an existing GHC installation.
 dev-lang/ghc:ghcmakebinary - Build with less runtime depends (bundle libffi for building bootstrap binaries).
-dev-lang/gnat-gcc:acats - Installs ACATS source under LIBPATH.
 dev-lang/gnat-gpl:awt - Useful only when building GCJ, this enables Abstract Window Toolkit (AWT) peer support on top of GTK+
 dev-lang/gnat-gpl:cilk - Support the Cilk Plus language (C/C++ based languages for parallel programming)
 dev-lang/gnat-gpl:fixed-point - Enable fixed-point arithmetic support for MIPS targets in gcc (Warning: significantly increases compile time!)
@@ -2414,7 +2412,6 @@ dev-python/PyQt4:dbus - Build bindings for the QtDBus module
 dev-python/PyQt4:declarative - Build bindings for the QtDeclarative module
 dev-python/PyQt4:designer - Build bindings for the QtDesigner module and enable the designer plugin
 dev-python/PyQt4:help - Build bindings for the QtHelp module
-dev-python/PyQt4:kde - Select media-libs/phonon as Phonon variant (needed for KDE)
 dev-python/PyQt4:multimedia - Build bindings for the QtMultimedia module
 dev-python/PyQt4:opengl - Build bindings for the QtOpenGL module
 dev-python/PyQt4:phonon - Build bindings for the phonon module
@@ -2639,7 +2636,6 @@ dev-qt/qt-creator:valgrind - Add support for memory debugging using dev-util/val
 dev-qt/qt-creator:webengine - Use dev-qt/qtwebengine to view documentation
 dev-qt/qt-creator:webkit - Use dev-qt/qtwebkit to view documentation
 dev-qt/qt-creator:winrt - Build plugin for WinRT devices
-dev-qt/qt-meta:kde - Select media-libs/phonon as Phonon variant (needed for KDE)
 dev-qt/qt-meta:qt3support - Enable the Qt3Support library for Qt4
 dev-qt/qt-mobility:bluetooth - Enable Bluetooth support in QtConnectivity and QtSystemInfo modules
 dev-qt/qt-mobility:connectivity - Build the QtConnectivity module
@@ -4282,7 +4278,6 @@ media-libs/sdl2-mixer:wav - support WAVE files
 media-libs/sge:image - enable sdl-image support
 media-libs/silgraphite:pango - Enables the pango-graphite pango module.
 media-libs/spandsp:fixed-point - Enable fixed point support
-media-libs/speex:armv5te - Enables optimizations for armv5te processors.
 media-libs/speex:utils - Enables speex commandline utilities (speexenc, speexdec).
 media-libs/speex:vbr - Enable VBR support.
 media-libs/svgalib:kernel-helper - Build the helper kernel module
@@ -5743,6 +5738,7 @@ net-im/telepathy-connection-managers:zeroconf - Enable Link-Local Messaging via 
 net-im/tkabber:plugins - Enables installation the extra plugins
 net-im/toxic:av - Enables audio calling and/or audio notifications
 net-im/toxic:notifications - Enables desktop notifications with libnotify
+net-im/toxic:qrcode - Enables QR code support
 net-im/vacuum:adiummessagestyle - Use UI styles created for Adium
 net-im/vacuum:annotations - Enable adding comments to the contacts in the roster
 net-im/vacuum:aspell - Select app-text/aspell spell checker backend

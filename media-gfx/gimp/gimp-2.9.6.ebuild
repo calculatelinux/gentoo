@@ -89,6 +89,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	eapply "${FILESDIR}"/${P}-underlinking.patch  # from 629304
 	eapply_user
 
 	sed -i -e 's/== "xquartz"/= "xquartz"/' configure.ac || die #494864
@@ -103,8 +104,8 @@ src_prepare() {
 
 src_configure() {
 	local myconf=(
-		GEGL=/usr/bin/gegl-0.3
-		GDBUS_CODEGEN=/bin/false
+		GEGL=${EPREFIX}/usr/bin/gegl-0.3
+		GDBUS_CODEGEN=${EPREFIX}/bin/false
 
 		--enable-default-binary
 		--disable-silent-rules
@@ -148,7 +149,7 @@ src_compile() {
 	addwrite /dev/ati/  # bug 589198
 	addwrite /proc/mtrr  # bug 589198
 
-	export XDG_DATA_DIRS=/usr/share  # bug 587004
+	export XDG_DATA_DIRS=${EPREFIX}/usr/share  # bug 587004
 	gnome2_src_compile
 }
 
@@ -164,7 +165,7 @@ _clean_up_locales() {
 }
 
 src_test() {
-	Xemake check
+	virtx emake check
 }
 
 src_install() {

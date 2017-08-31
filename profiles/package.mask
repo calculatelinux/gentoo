@@ -29,6 +29,26 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Orlitzky <mjo@gentoo.org> (30 Aug 2017)
+# Ownership of most installed files has changed; needs testing.
+=net-analyzer/nagios-core-4.3.4
+=net-analyzer/nagios-4.3.4
+
+# James Le Cuirot <chewi@gentoo.org> (29 Aug 2017)
+# The FOSS-friendly oracle-javamail has rendered other implementations
+# and the virtual obsolete. Removal in 30 days. See bug #553186.
+dev-java/gnu-classpath-inetlib
+dev-java/gnu-javamail
+dev-java/javax-mail
+dev-java/sun-javamail
+java-virtuals/javamail
+
+# James Le Cuirot <chewi@gentoo.org> (29 Aug 2017)
+# Old and holding up the removal of Java 7. Still alive upstream but
+# new versions have proven too tricky to package under our current
+# infrastructure. It may return one day. Removal in 30 days.
+app-benchmarks/jmeter
+
 # Jonas Stein <jstein@gentoo.org> (29 Aug 2017)
 # SRC_URI and HOMEPAGE are dead and the ebuild is in a very bad 
 # state. 
@@ -261,12 +281,6 @@ sys-kernel/openvz-sources
 # Alexey Shvetsov <alexxy@gentoo.org> (26 Jul 2017)
 # Its pre release so better to mask it
 =media-gfx/freecad-0.17_pre*
-
-# Pacho Ramos <pacho@gentoo.org> (26 Jul 2017)
-# Severely broken with lots of unresolved bugs, outdated, needs a dedicated
-# maintainer (#402157). Removal in a month.
-dev-lang/gnat-gcc
-virtual/gnat
 
 # Pacho Ramos <pacho@gentoo.org> (26 Jul 2017)
 # Upstream dead, cannot be bumped, buggy (#468128). Removal in a month.
