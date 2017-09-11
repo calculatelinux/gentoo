@@ -3,7 +3,7 @@
 
 EAPI="6"
 
-inherit cmake-utils gnome2-utils multilib xdg
+inherit cmake-utils gnome2-utils xdg-utils
 
 if [[ "${PV}" == "9999" ]]; then
 	inherit git-r3
@@ -43,7 +43,7 @@ RDEPEND="dev-libs/glib:2
 		pango? ( x11-libs/pango )
 		!pango? ( media-libs/fontconfig )
 	)
-	enchant? ( app-text/enchant )
+	enchant? ( app-text/enchant:0= )
 	gtk2? ( x11-libs/gtk+:2 )
 	gtk3? ( x11-libs/gtk+:3 )
 	introspection? ( dev-libs/gobject-introspection )
@@ -72,11 +72,6 @@ src_prepare() {
 		-e "/find_package(XkbFile REQUIRED)/s/^/    /" \
 		-e "/find_package(XkbFile REQUIRED)/a\\    endif(ENABLE_X11)" \
 		-i CMakeLists.txt
-
-	# https://github.com/fcitx/fcitx/issues/342
-	while IFS='' read -d $'\0' -r f ; do
-		sed 's:^#!/bin/sh$:#!/usr/bin/env bash:' -i "${f}" || die
-	done < <(find "${S}" -name '*.sh' -type f -print0)
 
 	cmake-utils_src_prepare
 	xdg_environment_reset
@@ -116,21 +111,18 @@ src_install() {
 	rm -r "${ED}usr/share/doc/${PN}"
 }
 
-pkg_preinst() {
-	gnome2_icon_savelist
-	xdg_pkg_preinst
-}
-
 pkg_postinst() {
 	gnome2_icon_cache_update
-	xdg_pkg_postinst
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 	use gtk2 && gnome2_query_immodules_gtk2
 	use gtk3 && gnome2_query_immodules_gtk3
 }
 
 pkg_postrm() {
 	gnome2_icon_cache_update
-	xdg_pkg_postrm
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 	use gtk2 && gnome2_query_immodules_gtk2
 	use gtk3 && gnome2_query_immodules_gtk3
 }
