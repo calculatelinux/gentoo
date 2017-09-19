@@ -29,6 +29,22 @@
 
 #--- END OF EXAMPLES ---
 
+# Kent Fredric <kentnl@gentoo.org> (19 Sep 2017)
+# Dead upstream, broken on Perl 5.26. Bugs #631302, #623116
+# Masked for removal in 30 days.
+dev-perl/Syntax-Highlight-Engine-Simple-Perl
+
+# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (18 Sep 2017)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-63
+
+# Kent Fredric <kentnl@gentoo.org> (18 Sep 2017)
+# Dead upstream, requires Module::Install. May be kept
+# if somebody can make an argument for it. Bug #631334
+# Masked for removal in 30 days.
+dev-perl/PerlIO-via-symlink
+
 # Andreas Sturmlechner <asturm@gentoo.org> (16 Sep 2017)
 # Unfortunately broken esp. with USE=python. Bugs #623780, #631064
 =sci-geosciences/qgis-2.18.12-r100
@@ -278,15 +294,6 @@ games-rpg/a-bird-story
 # Unset python_targets_python2_7 for ipykernel and ipyparallel if needed.
 >=dev-python/ipython-6
 
-# Andreas Sturmlechner <asturm@gentoo.org> (19 Aug 2017)
-# Plasma-4 fragment, no more rdeps, masked for removal in 30 days.
-kde-plasma/libkworkspace
-
-# Andreas Sturmlechner <asturm@gentoo.org> (19 Aug 2017)
-# Constantly broken, dead upstream, no more rdeps.
-# Masked for removal in 30 days. (#485244, #577762)
-kde-apps/pykde4
-
 # Michael Orlitzky <mjo@gentoo.org> (18 Aug 2017)
 # Last version from 2011, and has a vulnerable init script
 # (bug 603382). The proxy-maintainer is unknown to bugzilla,
@@ -304,11 +311,6 @@ app-xemacs/xetla
 app-xemacs/cogre
 app-xemacs/ecb
 app-xemacs/xemacs-packages-all
-
-# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (09 Aug 2017)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-62
 
 # Lars Wendler <polynomial-c@gentoo.org> (06 Aug 2017)
 # Masked for security reasons:
@@ -509,17 +511,20 @@ dev-ruby/poltergeist
 >=dev-perl/Net-Twitter-4.10.420
 >=perl-core/Math-BigInt-1.999.726
 >=dev-perl/Math-BigInt-GMP-1.600.0
-=perl-core/Test-Simple-1.302.75
-=virtual/perl-Test-Simple-1.302.75
+=perl-core/Test-Simple-1.302.96
+=virtual/perl-Test-Simple-1.302.96
 dev-perl/Test2-Suite
 >=dev-perl/Data-Validate-Domain-0.120.0
 dev-perl/Test2-Plugin-NoWarnings
 dev-perl/Params-ValidationCompiler
+dev-perl/Sub-Info
+dev-perl/Term-Table
 >=dev-perl/DateTime-Locale-1.60.0
 >=dev-perl/DateTime-TimeZone-2.20.0
 >=dev-perl/DateTime-1.370.0
 >=dev-perl/DateTime-Format-Strptime-1.710.0
 >=dev-perl/Log-Dispatch-2.590.0
+>=dev-perl/App-pwhich-1.150.0
 
 # Thomas Deutschmann <whissi@gentoo.org> (24 May 2017)
 # Broken runscript/changed behavior causing lvm2 to fail
@@ -800,13 +805,6 @@ dev-libs/iniparser:4
 =dev-python/django-1.6*
 =dev-python/django-1.7*
 =dev-python/django-1.9*
-
-# Tony Vroon <chainsaw@gentoo.org> (5 Jan 2015)
-# Asterisk 13 is an LTS release but has not seen
-# sufficient releases to be considered ready for
-# production usage. You are welcome to have a go
-# but please be careful.
-=net-misc/asterisk-13*
 
 # Jeroen Roovers <jer@gentoo.org> (12 Dec 2014)
 # The 96 and 173 branches are no longer supported and remain vulnerable to
