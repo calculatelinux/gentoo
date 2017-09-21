@@ -29,10 +29,27 @@
 
 #--- END OF EXAMPLES ---
 
-# Kent Fredric <kentnl@gentoo.org> (19 Sep 2017)
-# Dead upstream, broken on Perl 5.26. Bugs #631302, #623116
+# Bernard Cafarelli <voyageur@gentoo.org> (20 Sep 2017)
+# Requires qt 5.8, not yet in tree. Bug #631570
+>=media-video/orion-1.6.0
+
+# Michael Palimaka <kensington@gentoo.org> (21 Sep 2017)
+# Requires dead Qt 4. Dead upstream.
 # Masked for removal in 30 days.
-dev-perl/Syntax-Highlight-Engine-Simple-Perl
+media-libs/herqq
+
+# Patrice Clement <monsieurp@gentoo.org> (20 Sep 2017)
+# Upstream has been dead for years.
+# Masked for removal in 30 days.
+dev-java/db4o-jdk5
+dev-java/db4o-jdk11
+dev-java/db4o-jdk12
+
+# Andrey Grozin <grozin@gentoo.org> (19 Sep 2017)
+# This package was a stopgap to bump dev-python/spyder to 3.*
+# Now >=dev-python/rope-0.10.7 supports python3, use it instead
+# Masked for removal in 30 days.
+dev-python/rope_py3k
 
 # Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (18 Sep 2017)
 # Dev channel releases are only for people who are developers or want more
@@ -266,11 +283,6 @@ xfce-extra/xfce4-mixer
 # Alternatives: app-arch/libarchive, app-arch/unar
 app-arch/unrar-gpl
 
-# Andreas Sturmlechner <asturm@gentoo.org> (20 Aug 2017)
-# Masked for removal in 30 days. Use kde-apps/kio-extras[mtp,slp] instead.
-kde-misc/kio-mtp
-kde-misc/kio-slp
-
 # Michał Górny <mgorny@gentoo.org> (20 Aug 2017)
 # Pre-release of a new incompatible version that breaks the only reverse
 # dependency in Gentoo. Masked until 2.0.0 proper is released, or
@@ -298,7 +310,7 @@ games-rpg/a-bird-story
 # Last version from 2011, and has a vulnerable init script
 # (bug 603382). The proxy-maintainer is unknown to bugzilla,
 # and the previous maintainer jmbsvicetto is OK with masking.
-net-misc/vde
+<net-misc/vde-2.3.2-r4
 
 # Mats Lidell <matsl@gentoo.org> (17 Aug 2017)
 # Masked ede and all its dependencies due to security reasons. 
