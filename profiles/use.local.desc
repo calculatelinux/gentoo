@@ -516,6 +516,7 @@ app-emulation/libvirt:xen - Support management of Xen virtualisation (app-emulat
 app-emulation/libvirt:zfs - Enable ZFS backend storage sys-fs/zfs
 app-emulation/lxc:cgmanager - Enable support for cgroup management using app-admin/cgmanager
 app-emulation/lxd:daemon - Build the system daemon, not just the client tool
+app-emulation/lxd:dnsmasq - Depend on dnsmasq to provide DHCP and DNS.
 app-emulation/open-vm-tools:doc - Generate API documentation
 app-emulation/open-vm-tools:grabbitmqproxy - Enable grabbitmqproxy
 app-emulation/open-vm-tools:pic - Force shared libraries to be built as PIC
@@ -1105,8 +1106,6 @@ app-text/blogc:git - Build blogc-git-receiver tool
 app-text/blogc:httpd - Build blogc-runserver tool
 app-text/blogc:make - Build blogc-make tool
 app-text/cb2bib:webengine - Use dev-qt/qtwebengine instead of dev-qt/qtwebkit
-app-text/coolreader:corefonts - Use media-fonts/corefonts
-app-text/coolreader:liberation-fonts - Use media-fonts/liberation-fonts
 app-text/crm114:mew - Add support for using the mewdecode mime decoder (app-emacs/mew)
 app-text/crm114:mimencode - Add support for using the mimencode mime (net-mail/metamail)
 app-text/crm114:normalizemime - Add support for using the normalizemime (mail-filter/normalizemime)
@@ -1869,12 +1868,7 @@ dev-lang/go:gccgo - Enable bootstrapping using gccgo
 dev-lang/icon:iplsrc - install the icon programming library source
 dev-lang/lazarus:minimal - Don't build extra packages from the bigide component
 dev-lang/logtalk:fop - Support for generating pdf documentation using fop
-dev-lang/logtalk:gnupl - Support GNU Prolog back-end compiler
-dev-lang/logtalk:qupl - Support Qu-Prolog back-end compiler
-dev-lang/logtalk:swipl - Support SWI-Prolog back-end compiler
-dev-lang/logtalk:xsbpl - Support XSB back-end compiler
 dev-lang/logtalk:xslt - Support for generating html documentation using xslt
-dev-lang/logtalk:yappl - Support YAP back-end compiler
 dev-lang/lua:deprecated - make deprecated data structures/routines available
 dev-lang/luajit:lua52compat - Enable some upwards-compatible features from Lua 5.2 that are unlikely to break existing code.
 dev-lang/mercury:erlang - Support Mercury Erlang grade
@@ -6638,7 +6632,6 @@ net-p2p/dogecoin-qt:qrcode - Enable generation of QR Codes for receiving payment
 net-p2p/eiskaltdcpp:cli - Enable sample cli based on readline
 net-p2p/eiskaltdcpp:daemon - Enable eiskaltdcpp-daemon
 net-p2p/eiskaltdcpp:dht - Enable DHT (distributed hash table) support for libeiskaltdcpp
-net-p2p/eiskaltdcpp:emoticons - Install emoticon packs
 net-p2p/eiskaltdcpp:json - Enable JSON for cli and daemon
 net-p2p/eiskaltdcpp:libcanberra - Enable sound notifications support over libcanberra in EiskaltDC++ Gtk
 net-p2p/eiskaltdcpp:minimal - Don't install headers
