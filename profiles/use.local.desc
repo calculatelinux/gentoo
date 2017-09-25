@@ -1860,6 +1860,7 @@ dev-lang/gnat-gpl:nossp - Disable SSP support (NOT FOR GENERAL USE)
 dev-lang/gnat-gpl:objc - Build support for the Objective C code language
 dev-lang/gnat-gpl:objc++ - Build support for the Objective C++ language
 dev-lang/gnat-gpl:objc-gc - Build support for the Objective C code language Garbage Collector
+dev-lang/gnat-gpl:pgo - Build GCC using Profile Guided Optimization (PGO)
 dev-lang/gnat-gpl:regression-test - Run the testsuite and install the results (requires FEATURES=test)
 dev-lang/gnat-gpl:sanitize - Build support for various sanitizer functions (ASAN/TSAN/etc...)
 dev-lang/gnat-gpl:ssp - Build packages with stack smashing protector on by default
@@ -7856,6 +7857,7 @@ sys-devel/gcc:nossp - Disable SSP support (NOT FOR GENERAL USE)
 sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gcc:objc++ - Build support for the Objective C++ language
 sys-devel/gcc:objc-gc - Build support for the Objective C code language Garbage Collector
+sys-devel/gcc:pgo - Build GCC using Profile Guided Optimization (PGO)
 sys-devel/gcc:regression-test - Run the testsuite and install the results (requires FEATURES=test)
 sys-devel/gcc:sanitize - Build support for various sanitizer functions (ASAN/TSAN/etc...)
 sys-devel/gcc:ssp - Build packages with stack smashing protector on by default
