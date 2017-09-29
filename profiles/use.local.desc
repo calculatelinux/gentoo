@@ -783,8 +783,12 @@ app-i18n/imsettings:gtk2 - Build with x11-libs/gtk+:2 instead of x11-libs/gtk+:3
 app-i18n/imsettings:xfconf - Enable support for xfce-base/xfconf
 app-i18n/kimera:anthy - Enable support for app-i18n/anthy
 app-i18n/mozc:fcitx - Enable support for app-i18n/fcitx
+app-i18n/mozc:fcitx4 - Enable support for app-i18n/fcitx 4
+app-i18n/mozc:gui - Install graphical user interface tool (mozc_tool)
+app-i18n/mozc:handwriting-tegaki - Use handwriting recognition model from app-i18n/tegaki-zinnia-japanese
+app-i18n/mozc:handwriting-tomoe - Use handwriting recognition model from app-i18n/zinnia-tomoe
 app-i18n/mozc:ibus - Enable support for app-i18n/ibus
-app-i18n/mozc:renderer - Enable native candidate window.
+app-i18n/mozc:renderer - Enable native candidate window
 app-i18n/pyzy:boost - Enable support for dev-libs/boost
 app-i18n/pyzy:doc - Generate API documentation
 app-i18n/pyzy:opencc - Enable support for app-i18n/opencc
@@ -1332,6 +1336,7 @@ dev-db/mariadb:profiling - Add support for statement profiling (requires USE=com
 dev-db/mariadb:rocksdb - Add support for RocksDB; a key/value, LSM database optimized for flash storage
 dev-db/mariadb:server - Build the server program
 dev-db/mariadb:sphinx - Add suport for the sphinx full-text search engine
+dev-db/mariadb:sst-mariabackup - Add tools needed to support the mariabackup SST method
 dev-db/mariadb:sst-rsync - Add tools needed to support the rsync SST method
 dev-db/mariadb:sst-xtrabackup - Add tools needed to support the xtrabackup and xtrabackup-v2 SST methods
 dev-db/mariadb:systemtap - Build support for profiling and tracing using dev-util/systemtap
@@ -2450,6 +2455,9 @@ dev-python/PyQt5:xmlpatterns - Build bindings for the QtXmlPatterns module
 dev-python/PythonQt:extensions - Install extensions
 dev-python/QtPy:designer - Build bindings for the QtDesigner module and enable the designer plugin
 dev-python/QtPy:gui - Build bindings for the QtGui module
+dev-python/QtPy:pyqt4 - Enable the dev-python/PyQt4 backend
+dev-python/QtPy:pyqt5 - Enable the dev-python/PyQt5 backend
+dev-python/QtPy:pyside - Enable the dev-python/pyside backend
 dev-python/QtPy:svg - Build bindings for the QtSvg module
 dev-python/QtPy:testlib - Build bindings for the QtTest module
 dev-python/QtPy:webkit - Build bindings for the QtWebKit module
@@ -2815,6 +2823,7 @@ dev-tex/biblatex:biber - Install the unicode compatible backend processor
 dev-tex/circuit_macros:script - Install cm2pdf to automatically create a correctly sized PDF from a circuit_macro m4 source
 dev-tex/dot2texi:pgf - Enable support for dev-tex/pgf (The TeX Portable Graphic Format)
 dev-tex/dot2texi:pstricks - Enable pstricks support
+dev-tex/pythontex:highlighting - Syntax highlighting using dev-python/pygments
 dev-texlive/texlive-basic:luajittex - Add support for LuaJitTeX: LuaTeX based on LuaJIT which is usually faster.
 dev-util/android-ndk:legacy-toolchains - Install legacy toolchains
 dev-util/android-ndk:target-32 - Support for 32-bit targets
@@ -5005,7 +5014,6 @@ media-video/simplescreenrecorder:vpx - Enable VP8 codec support via media-libs/l
 media-video/smplayer:autoshutdown - Enable the option to shutdown your computer after finishing the playlist. This requires dev-qt/qtdbus as dependency.
 media-video/smplayer:mpris - Enable support for MPRIS2 (Media Player Remote Interfacing Specification, version 2), a DBus interface for remote control, which requires dev-qt/qtdbus as dependency.
 media-video/smplayer:streaming - Support for streaming video sites through net-misc/youtube-dl (MPV only).
-media-video/smtube:qt5 - Build using Qt 5 instead of Qt 4
 media-video/subtitlecomposer:mpv - Build mpv backend support
 media-video/syncplay:client - Install Syncplay client
 media-video/syncplay:gui - Enable gui support
