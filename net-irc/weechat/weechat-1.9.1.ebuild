@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://github.com/weechat/weechat.git"
 else
 	SRC_URI="https://weechat.org/files/src/${P}.tar.xz"
-	KEYWORDS="amd64 x86"
+	KEYWORDS="amd64 x86 ~x64-macos"
 fi
 
 DESCRIPTION="Portable and multi-interface IRC client"
@@ -95,6 +95,15 @@ src_prepare() {
 
 	# install docs in correct directory
 	sed -i "s#\${SHAREDIR}/doc/\${PROJECT_NAME}#\0-${PV}/html#" doc/*/CMakeLists.txt || die
+
+	if [[ ${CHOST} == *-darwin* ]]; then
+		# fix linking error on Darwin
+		sed -i "s/+ get_config_var('LINKFORSHARED')//" \
+			cmake/FindPython.cmake || die
+		# allow to find the plugins by default
+		sed -i 's/".so,.dll"/".bundle,.so,.dll"/' \
+			src/core/wee-config.c || die
+	fi
 }
 
 src_configure() {

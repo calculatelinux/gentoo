@@ -264,7 +264,6 @@ app-backup/tsm:tsm_hw - Difference snapshot support for NetApp and N-Series file
 app-backup/zbackup:tartool - Install tartool utility
 app-benchmarks/filebench:auto-completion - Enable command-line autocompletion using dev-libs/libtecla.
 app-benchmarks/httperf:idleconn - Build with the idleconn program
-app-benchmarks/jmeter:beanshell - Enable BeanShell scripting support
 app-benchmarks/ramspeed:pic - Force shared libraries to be built as PIC (this is slower)
 app-benchmarks/sysbench:aio - Enable libaio support
 app-cdr/brasero:libburn - Enable dev-libs/libburn backend
@@ -2071,7 +2070,6 @@ dev-libs/jemalloc:xmalloc - Add support for xmalloc (abort-on-out-of-memory)
 dev-libs/kreport:marble - Enable displaying of maps using kde-apps/marble
 dev-libs/kreport:scripting - Support Qml scripting using dev-qt/qtdeclarative
 dev-libs/leveldb:snappy - support the snappy compression library
-dev-libs/libRocket:samples - Build samples
 dev-libs/libbase58:tools - Build command line base58 tool
 dev-libs/libburn:cdio - Enable EXPERIMENTAL use of libcdio as system adapter
 dev-libs/libburn:track-src-odirect - Read track input with O_DIRECT (see man 2 open), this may deliver a better write performance in some situations
@@ -2721,8 +2719,6 @@ dev-qt/qtopengl:egl - Use EGL instead of GLX to manage OpenGL contexts
 dev-qt/qtopengl:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtopengl:gles2 - Use GLES 2.0 or later instead of full OpenGL
 dev-qt/qtopengl:qt3support - Enable the Qt3Support libraries for Qt4
-dev-qt/qtphonon:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtphonon:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
 dev-qt/qtpositioning:geoclue - Use enhanced location information from app-misc/geoclue
 dev-qt/qtpositioning:qml - Build QML bindings
 dev-qt/qtprintsupport:gles2 - Use GLES 2.0 or later instead of full OpenGL
@@ -3206,8 +3202,6 @@ games-fps/urbanterror:mumble - Use Mumble for ingame VoIP (experimental)
 games-fps/urbanterror:opus - Use opus as sound codec
 games-fps/urbanterror:server - Build binary for dedicated server
 games-fps/urbanterror:voip - Use ioq3 ingame VoIP (experimental)
-games-fps/warsow:irc - Enable IRC support
-games-fps/warsow:server - Build server binaries additionally
 games-fps/worldofpadman:maps - Install extra maps (PadPack)
 games-fps/xonotic:ode - Enable support for physics engine from dev-games/ode
 games-kids/crayon-physics:bundled-libs - Use the upstream provided bundled libraries.
@@ -3656,6 +3650,12 @@ mail-client/mutt:tokyocabinet - Enable dev-db/tokyocabinet database backend for 
 mail-client/nail:kerberos - If network is enabled, this adds support for GSSAPI login on IMAP through virtual/krb5.
 mail-client/nail:net - Enable support for network protocols (POP, IMAP and SMTP). If you only need to send mail with the local Transport Agent, disabling this will get you support for only /usr/sbin/sendmail call.
 mail-client/nail:ssl - If network is enabled, this adds support for S/MIME and SSL/TLS-powered protocols through dev-libs/openssl.
+mail-client/neomutt:gpg - Enable support for app-crypt/gpgme
+mail-client/neomutt:kyotocabinet - Enable kyotocabinet database backend for header caching
+mail-client/neomutt:lmdb - Enable LMDB backend for header caching
+mail-client/neomutt:notmuch - Enable support for net-mail/notmuch
+mail-client/neomutt:smime - Enable support for smime
+mail-client/neomutt:tokyocabinet - Enable tokyocabinet database backend for header caching
 mail-client/roundcube:enigma - Add dependencies to support server-side GnuPG signing and/or encryption through the enigma plugin
 mail-client/roundcube:ldap - Add dependencies to support connecting to an LDAP address book server
 mail-client/roundcube:managesieve - Add dependencies to support the sieverules plugin
@@ -5720,7 +5720,7 @@ net-im/qutim:hunspell - Enable spellchecking using app-text/hunspell
 net-im/qutim:irc - Enable IRC protocol support
 net-im/qutim:mrim - Enable mail.ru protocol support
 net-im/qutim:otr - Enable plugin for encrypted conversations (Off-The-Record messaging)
-net-im/qutim:phonon - Add sound support via media-libs/phonon or dev-qt/qtphonon
+net-im/qutim:phonon - Add sound support via media-libs/phonon
 net-im/qutim:plugman - Enable downloadable content management with dev-libs/libattica
 net-im/qutim:purple - Enable libpurple-based protocol support
 net-im/qutim:qml - Enable QtQuick-based chat plugin
@@ -7529,6 +7529,7 @@ sys-apps/kmod:lzma - Enable support for XZ compressed modules
 sys-apps/kmod:tools - Install module loading/unloading tools.
 sys-apps/kmod:zlib - Enable support for gzipped modules
 sys-apps/linux-misc-apps:usbip - Include USB/IP binaries to replace net-misc/usbip
+sys-apps/lm_sensors:contrib - Installs user contributed configuration files so you don't need to find settings on your own for your system if somebody else has already created such a configuration for sensors/mainboards you are using.
 sys-apps/lm_sensors:sensord - Enable sensord - a daemon that can be used to periodically log sensor readings from hardware health-monitoring chips
 sys-apps/man-db:manpager - Enable manpager wrapper for colorizing output
 sys-apps/memtest86:serial - Compile with serial console support
@@ -8818,7 +8819,6 @@ xfce-base/xfdesktop:thunar - Build support for desktop icons (for example, launc
 xfce-base/xfwm4:xpresent - Enable the XPresent extension for sync to vblank
 xfce-extra/tumbler:odf - Enable support for .odf thumbnailers by using gnome-extra/libgsf
 xfce-extra/xfce4-clipman-plugin:qrcode - Enable support for media-gfx/qrencode
-xfce-extra/xfce4-mixer:keybinder - Enable shortcut support using dev-libs/keybinder
 xfce-extra/xfce4-mpc-plugin:libmpd - Build using media-libs/libmpd backend, instead of native fallback which is preferred
 xfce-extra/xfce4-playercontrol-plugin:audacious - Enable Audacious support
 xfce-extra/xfce4-playercontrol-plugin:mpd - Enable Music Player Daemon support
