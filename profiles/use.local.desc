@@ -3987,7 +3987,6 @@ media-gfx/imagemagick:lqr - Enable experimental liquid rescale support using med
 media-gfx/imagemagick:opencl - Enable OpenCL support
 media-gfx/imagemagick:pango - Enable Pango support using x11-libs/pango
 media-gfx/imagemagick:q32 - Set quantum depth value to 32
-media-gfx/imagemagick:q64 - Set quantum depth value to 64
 media-gfx/imagemagick:q8 - Set quantum depth value to 8
 media-gfx/imagemagick:webp - Enable webp image format support using media-libs/libwebp
 media-gfx/imageworsener:webp - enable webp image format support
@@ -5696,6 +5695,7 @@ net-im/pidgin:xscreensaver - Use X screensaver protocol extension to monitor idl
 net-im/pidgin:zephyr - Enable Zephyr protocol support
 net-im/prosody:jit - Use LuaJIT instead of vanilla Lua
 net-im/prosody:libevent - Use libevent for event handling
+net-im/prosody:websocket - Add websocket support
 net-im/prosody:zlib - Support for compressing XMPP streams with mod_compression
 net-im/psi:aspell - Enable spellchecking using app-text/aspell
 net-im/psi:enchant - Enable spellchecking using app-text/enchant
