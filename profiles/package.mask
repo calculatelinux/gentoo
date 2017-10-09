@@ -29,6 +29,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Aaron Bauman <bman@gentoo.org> (8 October 2017)
+# severely vulnerable and unmaintained sources.
+# Masked for removal in 30 days. Bug #627924
+sys-kernel/tuxonice-sources
+
 # Michał Górny <mgorny@gentoo.org> (05 Oct 2017)
 # (on behalf of QA)
 # Rogue version bumps that reintroduce QA violations that were fixed
@@ -542,6 +547,7 @@ net-wireless/cpyrit-cuda
 # Needs full revdep testing.
 >=dev-python/qscintilla-python-2.10
 >=x11-libs/qscintilla-2.10
+=app-editors/juffed-0.10_p20160323
 
 # Mart Raudsepp <leio@gentoo.org> (16 Feb 2017)
 # Old gstreamer 0.10 version, which is security vulnerable.
@@ -609,17 +615,6 @@ x11-libs/gtk+:1
 # Markos Chandras <hwoarang@gentoo.org> (10 Dec 2016)
 # Reverse dependencies need testing, wrt bug #580760
 >=net-libs/libtorrent-rasterbar-1.1.1
-
-# Robin H. Johnson <robbat2@gentoo.org> (18 Nov 2016)
-# Depends on slotted lua, 
-# odd revisions are slotted lua, 
-# even revisions are unslotted lua
-=dev-db/redis-3.2.5-r1
-=dev-db/redis-3.2.5-r5
-=dev-db/redis-3.2.6-r1
-=dev-db/redis-3.2.6-r5
-=dev-db/redis-3.2.8-r1
-=dev-db/redis-3.2.8-r3
 
 # Michał Górny <mgorny@gentoo.org> (17 Nov 2016)
 # New version masked for testing. It supports source-window buffer size

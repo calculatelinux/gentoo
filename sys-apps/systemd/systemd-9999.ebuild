@@ -156,6 +156,7 @@ src_prepare() {
 			"${FILESDIR}/228-noclean-tmp.patch"
 			"${FILESDIR}/233-systemd-user-pam.patch"
 			"${FILESDIR}/234-uucp-group.patch"
+			"${FILESDIR}/generator-path.patch"
 		)
 	fi
 
@@ -319,11 +320,13 @@ multilib_src_install_all() {
 
 	# If we install these symlinks, there is no way for the sysadmin to remove them
 	# permanently.
-	rm "${ED%/}"/etc/systemd/system/multi-user.target.wants/systemd-networkd.service || die
+	rm -f "${ED%/}"/etc/systemd/system/multi-user.target.wants/systemd-networkd.service || die
+	rm -f "${ED%/}"/etc/systemd/system/dbus-org.freedesktop.network1.service || die
 	rm -f "${ED%/}"/etc/systemd/system/multi-user.target.wants/systemd-resolved.service || die
-	rm -r "${ED%/}"/etc/systemd/system/network-online.target.wants || die
-	rm -r "${ED%/}"/etc/systemd/system/sockets.target.wants || die
-	rm -r "${ED%/}"/etc/systemd/system/sysinit.target.wants || die
+	rm -f "${ED%/}"/etc/systemd/system/dbus-org.freedesktop.resolve1.service || die
+	rm -fr "${ED%/}"/etc/systemd/system/network-online.target.wants || die
+	rm -fr "${ED%/}"/etc/systemd/system/sockets.target.wants || die
+	rm -fr "${ED%/}"/etc/systemd/system/sysinit.target.wants || die
 
 	rm -r "${ED%/}${ROOTPREFIX%/}/lib/udev/hwdb.d" || die
 
