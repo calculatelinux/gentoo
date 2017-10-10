@@ -8,7 +8,7 @@ EHG_REPO_URI="https://bitbucket.org/pypy/pypy"
 inherit check-reqs mercurial pax-utils python-any-r1 toolchain-funcs versionator
 
 # note: remember to update this to newest dev-lang/python:2.7 on bump
-CPY_PATCHSET_VERSION="2.7.13-0"
+CPY_PATCHSET_VERSION="2.7.14-0"
 MY_P=pypy2-v${PV}
 
 DESCRIPTION="A fast, compliant alternative implementation of the Python language"
@@ -95,7 +95,7 @@ src_unpack() {
 src_prepare() {
 	eapply "${FILESDIR}/4.0.0-gentoo-path.patch"
 	eapply "${FILESDIR}/1.9-distutils.unixccompiler.UnixCCompiler.runtime_library_dir_option.patch"
-	eapply "${FILESDIR}"/2.5.0-shared-lib.patch	# 517002
+	eapply "${FILESDIR}"/5.9.0-shared-lib.patch	# 517002
 
 	sed -e "s^@EPREFIX@^${EPREFIX}^" \
 		-e "s^@libdir@^$(get_libdir)^" \
