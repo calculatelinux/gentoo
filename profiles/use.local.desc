@@ -7573,6 +7573,7 @@ sys-apps/qingy:consolekit - Enable native consolekit support
 sys-apps/qingy:opensslcrypt - Encrypt communications between qingy and its GUI using dev-libs/openssl
 sys-apps/razercfg:pm-utils - Installs the pm-utils hooks for suspend/resume and requires sys-power/pm-utils
 sys-apps/razercfg:qt4 - Installs a qt UI. Requires dev-python/pyside
+sys-apps/rng-tools:nistbeacon - Enable NIST beacon entropy support
 sys-apps/roccat-tools:input_devices_roccat_ryosmkfx - Enable support for Ryos Mk FX keyboard.
 sys-apps/roccat-tools:input_devices_roccat_skeltr - Enable support for Skeltr keyboard.
 sys-apps/roccat-tools:input_devices_roccat_sova - Enable support for Sova keyboard.
@@ -7707,14 +7708,14 @@ sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
 sys-boot/plymouth:gdm - Enables smooth transition to GDM
 sys-boot/plymouth:libkms - Provides abstraction to the DRM drivers (intel, nouveau and vmwgfx at this moment)
 sys-boot/plymouth:pango - Adds support for printing text on splash screen and text prompts, e.g. for password
-sys-boot/refind:btrfs - Construire le gestionnaire EFI pour le système de fichier btrfs
-sys-boot/refind:ext2 - Construire le gestionnaire EFI pour le système de fichier ext2
-sys-boot/refind:ext4 - Construire le gestionnaire EFI pour le système de fichier ext4
-sys-boot/refind:gnuefi - Compiler en utilisant GNU-EFI au lieu de Tianocore
-sys-boot/refind:hfs - Construire le gestionnaire EFI pour le système de fichier hfs
-sys-boot/refind:iso9660 - Construire le gestionnaire EFI pour le système de fichier iso9660
-sys-boot/refind:ntfs - Construire le gestionnaire EFI pour le système de fichier ntfs
-sys-boot/refind:reiserfs - Construire le gestionnaire EFI pour le système de fichier reiserfs
+sys-boot/refind:btrfs - Builds the EFI binary btrfs filesystem driver
+sys-boot/refind:ext2 - Builds the EFI binary ext2 filesystem driver
+sys-boot/refind:ext4 - Builds the EFI binary ext4 filesystem driver
+sys-boot/refind:gnuefi - Compile using GNU-EFI instead of Tianocore
+sys-boot/refind:hfs - Builds the EFI binary hfs filesystem driver
+sys-boot/refind:iso9660 - Builds the EFI binary iso9660 filesystem driver
+sys-boot/refind:ntfs - Builds the EFI binary ntfs filesystem driver
+sys-boot/refind:reiserfs - Builds the EFI binary reiserfs filesystem driver
 sys-cluster/ceph:babeltrace - Add support for LTTng babeltrace
 sys-cluster/ceph:cephfs - Build support for cephfs, a POSIX compatible filesystem built on top of ceph
 sys-cluster/ceph:cryptopp - Use dev-libs/crypto++ for cryptography

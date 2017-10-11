@@ -12,7 +12,6 @@ MY_URI_PV="${MY_URI_PV_1//_/%20}"
 
 DESCRIPTION="Java GUI for managing BibTeX and other bibliographies"
 HOMEPAGE="http://www.jabref.org/"
-# SRC_URI="mirror://sourceforge/jabref/JabRef-${MY_PV}.jar"
 SRC_URI="https://github.com/JabRef/jabref/releases/download/v${PV}/JabRef-${MY_PV}.jar"
 
 LICENSE="MIT"
@@ -21,7 +20,12 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND="app-arch/unzip"
 
-RDEPEND=">=virtual/jre-1.8"
+RDEPEND="
+	|| (
+		dev-java/oracle-jre-bin:1.8[javafx]
+		dev-java/oracle-jdk-bin:1.8[javafx]
+	)
+"
 
 S="${WORKDIR}"
 
