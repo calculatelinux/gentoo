@@ -94,10 +94,6 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install
 
-	# A newer file is provided by app-misc/mime-types. So we link it.
-	#rm "${ED}"/etc/${PN}/mime.types || die
-	#dosym "${EPREFIX}/etc/mime.types" /etc/${PN}/mime.types
-
 	# A man-page is always handy, so fake one
 	if use !doc; then
 		emake -C doc neomuttrc.man
