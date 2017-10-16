@@ -48,6 +48,7 @@ kde-misc/kover
 
 # Andreas Sturmlechner <asturm@gentoo.org> (15 Oct 2017)
 # Dead upstream, depends on dead kdelibs4/Qt4/Qt3Support.
+# Use media-sound/fmit instead.
 # Masked for removal in 30 days. Bug #633498
 media-sound/k4guitune
 
@@ -553,10 +554,6 @@ x11-libs/gtk+:1
 # Masking for testing
 =app-emulation/ganeti-2.16*
 =app-emulation/ganeti-2.17*
-
-# Markos Chandras <hwoarang@gentoo.org> (10 Dec 2016)
-# Reverse dependencies need testing, wrt bug #580760
->=net-libs/libtorrent-rasterbar-1.1.1
 
 # Michał Górny <mgorny@gentoo.org> (17 Nov 2016)
 # New version masked for testing. It supports source-window buffer size
