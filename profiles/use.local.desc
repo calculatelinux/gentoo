@@ -3408,6 +3408,7 @@ kde-apps/kaccessible:speechd - Enable support for the speech-dispatcher speech s
 kde-apps/kaddressbook:prison - Enable support for QRcodes in contacts
 kde-apps/kalzium:editor - Enable the embedded molecule editor/viewer
 kde-apps/kalzium:solver - Enable the equation solver
+kde-apps/kanagram:speech - Enable text-to-speech support
 kde-apps/kate:addons - Build and install additional plugins
 kde-apps/kde-apps-meta:pim - Pull in KDE PIM suite
 kde-apps/kde-apps-meta:sdk - Pull in developer-specific meta-packages
@@ -3423,6 +3424,7 @@ kde-apps/kdepim-addons:importwizard - Enable additional import plugins for kde-a
 kde-apps/kdepim-apps-libs:prison - Enable support for QRcodes in contacts
 kde-apps/kdepim-meta:google - Google service integration via kde-apps/libkgapi
 kde-apps/kdepim-runtime:google - Google service integration via kde-apps/libkgapi
+kde-apps/kdepim-runtime:speech - Enable text-to-speech support
 kde-apps/kdeutils-meta:floppy - Install kde-apps/kfloppy to format and create DOS or ext2fs filesystems in a floppy.
 kde-apps/keditbookmarks:man - Build and install man pages
 kde-apps/kget:mms - Enable MMS (Microsoft Media Server) plugin through media-libs/libmms
@@ -7321,6 +7323,11 @@ sci-mathematics/singular:boost - Compile against external boost headers (dev-lib
 sci-mathematics/spass:isabelle - Add integration support for the Isabelle/HOL theorem prover.
 sci-mathematics/unuran:prng - Use sci-mathematics/prng library
 sci-mathematics/unuran:rngstreams - Use sci-mathematics/rngstreams library
+sci-mathematics/why3-for-spark:coq - Add sci-mathematics/coq support
+sci-mathematics/why3-for-spark:html - Build HTML documentation
+sci-mathematics/why3-for-spark:hypothesis-selection - Enable hypothesis selection
+sci-mathematics/why3-for-spark:profiling - Enable profiling
+sci-mathematics/why3-for-spark:zarith - Use dev-ml/zarith
 sci-mathematics/yacas:doc - Generate HTML documentation
 sci-mathematics/yacas:gui - Build graphical interface for the native yacas engine. Requires Qt5
 sci-mathematics/yacas:java - Build the Java yacas engine and text console for it
@@ -7980,12 +7987,8 @@ sys-fs/ecryptfs-utils:pkcs11 - Enable PKCS#11 (Smartcards) key module
 sys-fs/ecryptfs-utils:tpm - Enable support for Trusted Platform Module (TPM) using app-crypt/trousers
 sys-fs/eudev:blkid - enable blkid support
 sys-fs/eudev:efi - enable EFI support
-sys-fs/eudev:gudev - enable libudev gobject interface
 sys-fs/eudev:hwdb - read vendor/device string database and add it to udev database
-sys-fs/eudev:keymap - map custom hardware's multimedia keys
 sys-fs/eudev:kmod - enable module loading through libkmod
-sys-fs/eudev:modutils - enable module loading support - use modutils calls if kmod not enabled
-sys-fs/eudev:openrc - install the OpenRC init scripts
 sys-fs/eudev:rule-generator - install legacy rule generator rules and support scripts - note that the functionality within was dropped from sys-fs/udev as it is not stable in all cases; use at your own risk
 sys-fs/eudev:smack - enable SMACK security model
 sys-fs/ext4magic:expert-mode - Builds ext4magic with expert mode. Highly useful in recovering data from a corrupted filesystem
