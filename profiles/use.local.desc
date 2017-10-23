@@ -893,7 +893,6 @@ app-misc/freemind:pdf - Build plugin for exporting mindmaps to SVG and PDF
 app-misc/freemind:svg - Build plugin for exporting mindmaps to SVG and PDF
 app-misc/gcstar:stats - Enable statistics reporting
 app-misc/gcstar:tellico - Enable support for kde-misc/tellico files
-app-misc/geneweb:ocamlopt - Enable ocamlopt support (dev-lang/ocaml native code compiler)
 app-misc/geoclue:geonames - Install geonames.org provider
 app-misc/geoclue:gsmloc - Install GSM location provider
 app-misc/geoclue:gtk - Install gtk-based geoclue-test-gui
@@ -2195,7 +2194,7 @@ dev-libs/opensc:openct - Use dev-libs/openct (and CT-API) for accessing Smartcar
 dev-libs/opensc:pcsc-lite - Use sys-apps/pcsc-lite (and PC/SC API) for accessing Smartcard hardware.
 dev-libs/opensc:secure-messaging - Enable secure messaging.
 dev-libs/openssl:asm - Support assembly hand optimized crypto functions (i.e. faster run time)
-dev-libs/openssl:bindist - Disable EC algorithms (as they seem to be patented) -- note: changes the ABI
+dev-libs/openssl:bindist - Disable/Restrict EC algorithms (as they seem to be patented) -- note: changes the ABI
 dev-libs/openssl:rfc3779 - Enable support for RFC 3779 (X.509 Extensions for IP Addresses and AS Identifiers)
 dev-libs/openssl:sslv2 - Support for the old/insecure SSLv2 protocol -- note: not required for TLS/https
 dev-libs/openssl:sslv3 - Support for the old/insecure SSLv3 protocol -- note: not required for TLS/https
@@ -2539,7 +2538,6 @@ dev-python/passlib:totp - time based one time password support
 dev-python/paste:flup - enable support for flup (and therefore for various wgsi servers and middleware)
 dev-python/paste:openid - enable OpenID support
 dev-python/pillow:imagequant - Build with Image Quantization Library support
-dev-python/pillow:ole - Add support for OLE2 image format
 dev-python/py-amqp:extras - Install extra tools to generate initial Python mod from an AMQP XML file
 dev-python/pygame:midi - Enable midi support using media-libs/portmidi
 dev-python/pygpu:cuda - Enable NVIDIA CUDA toolkit support
@@ -4918,6 +4916,7 @@ media-video/libav:vpx - Enable vp8 encoding support using media-libs/libvpx.
 media-video/libav:webp - Enable WebP encoding with media-libs/libwebp.
 media-video/libav:x265 - Enable HEVC encoding with media-libs/x265.
 media-video/libva-utils:drm - Enables VA/DRM API support.
+media-video/makemkv:gui - Build the Qt5 GUI
 media-video/minitube:download - Enable support for downloading YouTube videos
 media-video/mjpegtools:sdlgfx - Enables y4mhist to display a graphical histogram
 media-video/mjpg-streamer:input_control - Plugin giving ability to control camera movement (only specific cameras)
@@ -5264,13 +5263,15 @@ net-analyzer/pchar:pcap - Use the net-libs/libpcap library
 net-analyzer/pinger:gtk2 - Install the gtkpinger GUI utility based on x11-libs/gtk+:2
 net-analyzer/pinger:gtk3 - Install the gtkpinger GUI utility based on x11-libs/gtk+:3
 net-analyzer/pmacct:64bit - Use 64bit counters instead of 32bit ones
-net-analyzer/pmacct:geoipv2 - Add support for GeoIP2 through dev-libs/libmaxminddb
-net-analyzer/pmacct:jansson - Add support for JSON through dev-libs/jansson
-net-analyzer/pmacct:kafka - Add support for Apache Kafka through dev-libs/librdkafka
-net-analyzer/pmacct:mongodb - Add support for mongodb backend
-net-analyzer/pmacct:nflog - Add support for NFLOG through uacctd
-net-analyzer/pmacct:rabbitmq - Add support for RabbitMQ through net-libs/rabbitmq-c
+net-analyzer/pmacct:geoipv2 - Enable support for GeoIP2 through dev-libs/libmaxminddb
+net-analyzer/pmacct:jansson - Enable support for JSON through dev-libs/jansson
+net-analyzer/pmacct:kafka - Enable support for Apache Kafka through dev-libs/librdkafka
+net-analyzer/pmacct:mongodb - Enable support for MongoDB through dev-libs/mongo-c-driver
+net-analyzer/pmacct:ndpi - Enable support for nDPI through net-libs/nDPI
+net-analyzer/pmacct:nflog - Enable support for NFLOG through uacctd
+net-analyzer/pmacct:rabbitmq - Enable support for RabbitMQ through net-libs/rabbitmq-c
 net-analyzer/pmacct:ulog - Enable support for ULOG in older kernels (deprecated)
+net-analyzer/pmacct:zmq - Enable support for ZeroMQ through net-libs/zeromq
 net-analyzer/prelude-lml:tls - Enables Prelude LML support Syslog through TLS using net-libs/gnutls.
 net-analyzer/rrdcollect:exec - Enable exec:/// support
 net-analyzer/rrdcollect:librrd - Use the librrd library from net-analyzer/rrdtool
@@ -5359,7 +5360,7 @@ net-analyzer/wireshark:sshdump - Install sshdump, an extcap interface to capture
 net-analyzer/wireshark:text2pcap - Install text2pcap, to generate a capture file from an ASCII hexdump of packets
 net-analyzer/wireshark:tfshark - Install tfshark, a terminal-based version of the FileShark capability
 net-analyzer/wireshark:tshark - Install tshark, to dump and analyzer network traffic from the command line
-net-analyzer/wireshark:udpdump - Install udpdumpi, to get packets exported from a source (like a network device or a GSMTAP producer) that are dumped to a pcap file
+net-analyzer/wireshark:udpdump - Install udpdump, to get packets exported from a source (like a network device or a GSMTAP producer) that are dumped to a pcap file
 net-analyzer/zabbix:agent - Enable zabbix agent (for to-be-monitored machines)
 net-analyzer/zabbix:frontend - Enable zabbix web frontend
 net-analyzer/zabbix:ipv6 - Turn on support of IPv6
@@ -6061,6 +6062,7 @@ net-libs/webkit-gtk:egl - Enable EGL support
 net-libs/webkit-gtk:geoloc - Enable geolocation support through app-misc/geoclue
 net-libs/webkit-gtk:geolocation - Enable geolocation support through app-misc/geoclue
 net-libs/webkit-gtk:gles2 - Enable GLESv2 support
+net-libs/webkit-gtk:nsplugin - Enable full nsplugin support (GTK2 plugins)
 net-libs/webkit-gtk:webgl - Build support for the WebGL HTML API using virtual/opengl
 net-libs/wvstreams:boost - Use dev-libs/boost to provide TR1-compatible functional interface. This USE flag is only needed with GCC earlier than version 4.1, or with other compilares not providing said interface.
 net-libs/xrootd:fuse - Enable the sys-fs/fuse filesystem driver
@@ -8276,10 +8278,12 @@ www-client/chromium:system-libvpx - Use system libvpx instead of the bundled one
 www-client/chromium:tcmalloc - Use bundled tcmalloc instead of system malloc
 www-client/chromium:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
 www-client/elinks:bittorrent - Enable support for the BitTorrent protocol
+www-client/elinks:brotli - Enable support for brotli compression
 www-client/elinks:finger - Enable support for the finger protocol
 www-client/elinks:gc - Enable garbage collection support via dev-libs/boehm-gc
 www-client/elinks:gopher - Enable support for the gopher protocol
 www-client/elinks:mouse - Make elinks to grab all mouse events
+www-client/elinks:tre - Enable support for regex searches via dev-libs/tre
 www-client/elinks:xml - Enable support for bookmarks via dev-libs/expat
 www-client/firefox:bindist - Disable official Firefox branding (icons, name) which are not binary-redistributable according to upstream.
 www-client/firefox:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
