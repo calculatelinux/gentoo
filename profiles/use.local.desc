@@ -304,6 +304,7 @@ app-crypt/hmaccalc:fips - Enable NSS FIPS mode and support only the FIPS-complia
 app-crypt/johntheripper:cuda - Use nvidia cuda toolkit for speeding up cracking on capable devices
 app-crypt/johntheripper:mozilla - Support mozilla password cracking
 app-crypt/johntheripper:opencl - Enable opencl support for speeding up cracking on capable devices
+app-crypt/kbfs:git - Build the Git remote helper for storing repositories in Keybase
 app-crypt/kstart:afs - Enables afs support which means you can acquire an afs token and set PAGs. It's recommended to set this USE if you need authenticated access to an AFS cell for your daemon/app.
 app-crypt/libu2f-host:systemd - Use user ACLs rather than plugdev group to give user access to the HIDRAW device.
 app-crypt/mit-krb5:doc - Creates and installs the API and implementation documentation. This is only useful if you want to develop software which depends on kerberos.
@@ -1295,7 +1296,6 @@ dev-ada/xmlada:shared - Build shared library
 dev-ada/xmlada:static - Build static library
 dev-ada/xmlada:static-pic - Build static library with pic code
 dev-cpp/eigen:c++11 - Build using the C++11 standard
-dev-cpp/eigen:cpu_flags_x86_f16c - Take advantage of CPU feature f16c
 dev-cpp/eigen:cuda - Build with cuda support
 dev-cpp/glog:gflags - Use dev-cpp/gflags for flag parsing
 dev-cpp/glog:unwind - Use sys-libs/libunwind for stack unwinding instead of glibc/gcc (may be more reliable on x86_64)
@@ -2843,6 +2843,31 @@ dev-util/cwdiff:a2ps - install app-text/a2ps for postscript output
 dev-util/cwdiff:mercurial - install hg wdiff alias for dev-vcs/mercurial
 dev-util/devhelp:gedit - Install plugin for app-editors/gedit
 dev-util/dialog:minimal - Disable library, install command-line program only
+dev-util/diffoscope:R - Use dev-lang/R
+dev-util/diffoscope:binutils - Use sys-devel/binutils
+dev-util/diffoscope:colord - Use x11-misc/colord
+dev-util/diffoscope:cpio - Use app-arch/cpio
+dev-util/diffoscope:diff - Use sys-apps/diffutils
+dev-util/diffoscope:docx - Use app-text/docx2txt
+dev-util/diffoscope:dtc - Use sys-apps/dtc
+dev-util/diffoscope:e2fsprogs - Use sys-fs/e2fsprogs
+dev-util/diffoscope:file - Use sys-apps/file
+dev-util/diffoscope:find - Use sys-apps/findutils
+dev-util/diffoscope:gettext - Use sys-devel/gettext
+dev-util/diffoscope:gpg - Use app-crypt/gnupg
+dev-util/diffoscope:haskell - Use dev-lang/ghc
+dev-util/diffoscope:hex - Use app-editors/vim-core
+dev-util/diffoscope:iso - Use virtual/cdrtools
+dev-util/diffoscope:llvm - Use sys-devel/llvm
+dev-util/diffoscope:opendocument - Use app-text/odt2txt
+dev-util/diffoscope:pascal - Use dev-lang/fpc
+dev-util/diffoscope:rpm - Use app-arch/rpm
+dev-util/diffoscope:squashfs - Use sys-fs/squashfs-tools
+dev-util/diffoscope:ssh - Use net-misc/openssh
+dev-util/diffoscope:tar - Use app-arch/tar
+dev-util/diffoscope:tcpdump - Use net-analyzer/tcpdump
+dev-util/diffoscope:xz - Use app-arch/xz-utils
+dev-util/diffoscope:zip - Use app-arch/unzip
 dev-util/edb-debugger:graphviz - Add support for the Graphviz library
 dev-util/edb-debugger:legacy-mem-write - Probe if writes to /proc/PID/mem are broken.
 dev-util/edb-debugger:pax_kernel - Enable building under a PaX enabled kernel
