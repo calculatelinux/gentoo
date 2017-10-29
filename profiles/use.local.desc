@@ -1155,6 +1155,9 @@ app-text/gtranslator:gnome-dictionary - Enable plugin for dictionary lookups usi
 app-text/gtranslator:gucharmap - Enable plugin for unicode symbols selection using gnome-extra/gucharmap.
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
 app-text/jmupdf:system-mupdf - Link against system version of app-text/mupdf
+app-text/kbibtex:webengine - Use dev-qt/qtwebengine for HTML previews
+app-text/kbibtex:webkit - Use dev-qt/qtwebkit for HTML previews
+app-text/kbibtex:zotero - Enable support for synchronisation with zotero.org web service
 app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search library (TeX related)
 app-text/libebook:tools - Build file conversion tools
 app-text/libmwaw:tools - Build file conversion tools
@@ -1816,7 +1819,6 @@ dev-java/jdbc-mysql:log4j - Enable log4 support
 dev-java/jfreesvg:debug - Enable debugging during compilation.
 dev-java/jna:awt - Enables support for Java AWT
 dev-java/jna:nio-buffers - Enables support for NIO buffers
-dev-java/jython:readline - Use GNU readline instead of jline
 dev-java/log4j:javamail - Build the SMTPAppender
 dev-java/log4j:jms - Build the JMSAppender
 dev-java/logback:tomcat - Builds Apache Tomcat support
@@ -2218,6 +2220,7 @@ dev-libs/poco:zip - Add support for the zip & gz archive formats
 dev-libs/ppl:lpsol - Build the ppl_lpsol linear programming problem solver
 dev-libs/protobuf:java - Builds the Java implementation. This is not needed for Java support in protoc.
 dev-libs/protobuf:python - Builds the Python implementation. This is not needed for Python support in protoc.
+dev-libs/purpose:kaccounts - Enable support for system-wide defined KAccounts
 dev-libs/softhsm:migration-tool - Build db migration tool
 dev-libs/starpu:cuda - Enable NVIDIA CUDA toolkit support
 dev-libs/starpu:gcc-plugin - Enable GCC extension plugin (experimental)
@@ -2611,6 +2614,7 @@ dev-python/ws4py:server - Install server modules
 dev-python/wxpython:doc - Install HTML wxWidgets docs and wxpython API reference.
 dev-python/wxpython:examples - Install interactive demo module browser and sample applets.
 dev-python/zeep:async - Add async support
+dev-python/zeep:tornado - Add tornado support
 dev-python/zsi:twisted - add support for python-twisted (needs dev-python/twisted-core and dev-python/twisted-web)
 dev-qt/assistant:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/designer:declarative - Build the qdeclarativeview plugin
@@ -3086,6 +3090,7 @@ games-board/freedoko:openclipartcards - Install the openclipartcards card set
 games-board/freedoko:pysolcards - Install the PySol card set
 games-board/freedoko:xskatcards - Install the XSkat card set
 games-board/grhino:gtp - Install the GTP (Go/Game Text Protocol) frontend
+games-board/knights:speech - Enable text-to-speech support
 games-board/pasang-emas:extras - Install some extra themes
 games-board/pioneers:help - Enable gnome ingame help via scrollkeeper
 games-board/pysolfc:extra-cardsets - Install extra cardsets
@@ -8103,6 +8108,7 @@ sys-libs/db:rpc - Enable rpc client/server
 sys-libs/freeipmi:nagios - Install a nagios plugin to check sensors' status.
 sys-libs/gdbm:berkdb - enable compatibility layer for UNIX-like dbm and ndbm interfaces
 sys-libs/gdbm:exporter - enable gdbmexport binary for exporting data from gdbm-1.8 databases into gdbm-1.9
+sys-libs/glibc:compile-locales - build *all* locales in src_install; this is generally meant for stage building only as it ignores /etc/locale.gen file and can be pretty slow
 sys-libs/glibc:debug - When USE=hardened, allow fortify/stack violations to dump core (SIGABRT) and not kill self (SIGKILL)
 sys-libs/glibc:gd - build memusage and memusagestat tools
 sys-libs/glibc:nscd - Build, and enable support for, the Name Service Cache Daemon
@@ -8634,6 +8640,7 @@ x11-misc/xmobar:with_conduit - Use conduit to fetch weather data.
 x11-misc/xmobar:with_uvmeter - Plugin to show UV data for Australia.
 x11-misc/xscreensaver:gdm - Use gdmflexiserver from gnome-base/gdm instead of x11-misc/lightdm
 x11-misc/xscreensaver:new-login - Enable user switching support using gdmflexiserver (x11-misc/lightdm)
+x11-misc/xsr:cursor - Capture mouse cursor using x11-misc/xdotool, and place them on the screenshots using media-gfx/imagemagick
 x11-misc/xss-lock:man - Build and install man pages
 x11-plugins/bfm:gkrellm - Enable building of app-admin/gkrellm module
 x11-plugins/compiz-plugins-extra:gconf - Install GConf schemas for the plugins, needed when using the GConf-based configuration backend in x11-wm/compiz.
