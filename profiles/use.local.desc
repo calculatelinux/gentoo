@@ -601,17 +601,6 @@ app-emulation/virtualbox-bin:rdesktop-vrdp - Install the rdesktop client integra
 app-emulation/virtualbox-bin:sdk - Enable building of SDK
 app-emulation/virtualbox-bin:vboxwebsrv - Install the VirtualBox webservice
 app-emulation/virtualbox-modules:pax_kernel - Apply patch needed for pax enabled kernels
-app-emulation/vmware-modules:pax_kernel - Apply patch needed for pax enabled kernels
-app-emulation/vmware-modules:vmci - Build the Virtual Machine Communication Interface module; disable this if you want to use the module from the mainline kernel
-app-emulation/vmware-modules:vsock - Build the VMware VMCI transport for Virtual Sockets; disable this if you want to use the module from the mainline kernel
-app-emulation/vmware-player:bundled-libs - Use precompiled bundled libraries instead of the system installation
-app-emulation/vmware-player:ovftool - Install OVF tool for importing and exporting appliance files
-app-emulation/vmware-player:vmware-tools - Install VMware Tools images
-app-emulation/vmware-workstation:bundled-libs - Use precompiled bundled libraries instead of the system installation
-app-emulation/vmware-workstation:ovftool - Install OVF tool.
-app-emulation/vmware-workstation:server - Install VMware Workstation Server component.
-app-emulation/vmware-workstation:vix - Install VIX. The VIX API allows you to write programs and scripts that automate virtual machine operations, and run programs or manipulate files within guest operating systems.
-app-emulation/vmware-workstation:vmware-tools - Install VMware Tools images
 app-emulation/vov:gprof - build with profiling support
 app-emulation/wine:capi - Enable ISDN support via CAPI
 app-emulation/wine:custom-cflags - Bypass strip-flags; use at your own peril
@@ -782,7 +771,6 @@ app-i18n/imsettings:gconf - Enable support for gnome-base/gconf
 app-i18n/imsettings:gtk2 - Build with x11-libs/gtk+:2 instead of x11-libs/gtk+:3
 app-i18n/imsettings:xfconf - Enable support for xfce-base/xfconf
 app-i18n/kimera:anthy - Enable support for app-i18n/anthy
-app-i18n/mozc:fcitx - Enable support for app-i18n/fcitx
 app-i18n/mozc:fcitx4 - Enable support for app-i18n/fcitx 4
 app-i18n/mozc:gui - Install graphical user interface tool (mozc_tool)
 app-i18n/mozc:handwriting-tegaki - Use handwriting recognition model from app-i18n/tegaki-zinnia-japanese
@@ -877,8 +865,8 @@ app-misc/blink1:mini-tool - Build and install command-line mini-tool blink1-mini
 app-misc/blink1:server - Build and install REST API server (currently hard-coded to TCP port 8080)
 app-misc/blink1:tool - Build and install command-line tool blink1-tool
 app-misc/byobu:screen - Use app-misc/screen as the default backend
-app-misc/ca-certificates:cacert - Include root certs from CAcert (http://www.cacert.org/) and Software in the Public Interest (http://www.spi-inc.org/)
-app-misc/ca-certificates:insecure_certs - Install certs which are known to *not* being trustworthy.
+app-misc/ca-certificates:cacert - Include root certificates from CAcert (http://www.cacert.org/) and Software in the Public Interest (http://www.spi-inc.org/)
+app-misc/ca-certificates:insecure_certs - Install certificates which are known to be untrustworthy.
 app-misc/carbon-c-relay:lz4 - add support for LZ4 compressed transport
 app-misc/ddccontrol:pci - enable direct PCI memory access (the setuid ddcpci util)
 app-misc/ddcutil:usb-monitor - Adds support for monitors attached via USB.
@@ -5138,6 +5126,7 @@ media-video/x264-encoder:interlaced - Enable interlaced encoding support, this c
 media-video/xine-ui:vdr - Enables Video Disk Recorder support
 net-analyzer/2ping:server - Install the server init scripts.
 net-analyzer/aimsniff:http - Install the WAS (Web AIM Sniff) frontend
+net-analyzer/argus:libtirpc - Build against net-libs/libtirpc for RPC support
 net-analyzer/argus-clients:ft - Enable support for flow packets through net-analyzer/flow-tools
 net-analyzer/barnyard:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/barnyard2:gre - Enable GRE support
@@ -5513,6 +5502,7 @@ net-dns/unbound:dnstap - Enable dnstap support
 net-dns/unbound:ecdsa - Enable ECDSA support
 net-dns/unbound:gost - Enable GOST support
 net-firewall/arno-iptables-firewall:plugins - Install optional plugins
+net-firewall/conntrack-tools:libtirpc - Build against net-libs/libtirpc for RPC support
 net-firewall/ebtables:perl - Install the ebtables-save script which uses perl
 net-firewall/firehol:ipset - Use net-firewall/ipset.
 net-firewall/firewalld:gui - Builds and installs GUI configurator and GTK+ applet
