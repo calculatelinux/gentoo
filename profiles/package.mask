@@ -29,15 +29,47 @@
 
 #--- END OF EXAMPLES ---
 
+# Brian Evans <grknight@gentoo.org> (07 Nov 2017)
+# Remote service removed this method, dead upstream
+# Masked for removal in 30 days.
+# Bug 636796
+dev-php/PEAR-Services_W3C_HTMLValidator
+
+# Brian Evans <grknight@gentoo.org> (06 Nov 2017)
+# Broken with new PHP, dead upstream, broken tests
+# Masked for removal in 30 days.
+# Bug 636742
+dev-php/PEAR-HTTP_Download
+
+# Mike Gilbert <floppym@gentoo.org> (05 Nov 2017)
+# Breaks several reverse dependencies.
+# https://bugs.gentoo.org/635934
+>=dev-util/scons-3.0.0
+
+# James Le Cuirot <chewi@gentoo.org> (05 Nov 2017)
+# Java 7 is old and we are no longer able to support it. The ability
+# to build against Java 7 may return when we update the eclasses for
+# Java 9 but the runtime will not return. If you need it then source
+# ebuilds will continue to be maintained by gnu_andrew in java-overlay
+# for a few years. Removal in 30 days.
+<=dev-java/icedtea-7.2.6.11:7
+dev-java/icedtea-bin:7
+virtual/jdk:1.7
+virtual/jre:1.7
+
+# James Le Cuirot <chewi@gentoo.org> (05 Nov 2017)
+# Upstream dead, bundles a vulnerable mupdf, nothing depends on it,
+# and blocks the removal of Java 7. Removal in 30 days. Bug #472832.
+app-text/jmupdf
+
 # Andreas K. Hüttel <dilfridge@gentoo.org> (04 Nov 2017)
-# Many, many, many open bugs, some of them quite ugly.
-# Blocks gcc-6 stabilization, and noone answers the phone.
-# Removal in 30 days, unless fixed by then. Bug 632513
-# https://bugs.gentoo.org/buglist.cgi?quicksearch=media-plugins%2Faudacious-plugins
-# https://bugs.gentoo.org/buglist.cgi?quicksearch=media-sound%2Faudacious
-media-sound/audacious
-media-plugins/audacious-plugins
-x11-themes/audacious-themes
+# Many, many, many open bugs. Blocks gcc-6 stabilization.
+# Removal of the old versions in 30 days; please upgrade to
+# Audacious 3.9 (may require manual keywording since not
+# marked stable anymore).
+<media-sound/audacious-3.9
+<media-plugins/audacious-plugins-3.9
+<x11-themes/audacious-themes-0.0.4-r1
 
 # Mike Gilbert <floppym@gentoo.org> (04 Nov 2017)
 # Dev channel releases are only for people who are developers or want more
@@ -185,11 +217,8 @@ dev-qt/qtwebkit:4
 # Andreas Sturmlechner <asturm@gentoo.org> (16 Oct 2017)
 # Reverse-deps on dead Qt4WebKit. Bug #620684
 <app-misc/anki-2.1
-<app-misc/sleepyhead-1.0.0_beta2
-<media-gfx/freecad-0.17_pre
+<media-gfx/freecad-0.17
 >=net-misc/teamviewer-10
-<sci-libs/opencascade-7.0
-<sci-libs/vtk-6.1.0-r4
 
 # Andreas Sturmlechner <asturm@gentoo.org> (15 Oct 2017)
 # Dead upstream, depends on dead kdelibs4/Qt4/Qt3Support.
@@ -315,11 +344,6 @@ sys-kernel/tuxonice-sources
 =app-shells/push-3.0
 =app-shells/quoter-4.0
 
-# Andreas Sturmlechner <asturm@gentoo.org> (04 Oct 2017)
-# Unmaintained KCM for a kcmshell that does not exist anymore.
-# Depends on dead Qt4. Masked for removal in 30 days. Bug #629236
-x11-libs/compizconfig-backend-kconfig4
-
 # Patrice Clement <monsieurp@gentoo.org> (01 Oct 2017)
 # Mask Atom betas for testing.
 app-editors/atom:beta
@@ -414,10 +438,6 @@ app-xemacs/xemacs-packages-all
 # Temporary mask as current net-ftp/filezilla does not compile
 # with it, bug #626292
 >=dev-libs/libfilezilla-0.10.0
-
-# Alexey Shvetsov <alexxy@gentoo.org> (26 Jul 2017)
-# Its pre release so better to mask it
-=media-gfx/freecad-0.17_pre*
 
 # Kent Fredric <kentnl@gentoo.org> (21 Jul 2017)
 # Masked due to serious regression that introduces widespread data
