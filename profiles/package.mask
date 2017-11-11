@@ -29,6 +29,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Jonas Stein <jstein@gentoo.org> (11 Nov 2017)
+# The upstream developer and former maintainer asked to treeclean these 
+# packages, because they can be used only with the Siemens Mediacenter 
+# Activy 3xx which was produced till 2005. He confirmed, that no user
+# is left who needs the package from our tree for this special hardware.
+# See also bug #633098. Masked for removal on 2018-01-31
+app-misc/activylircd
+media-plugins/vdr-alcd
+
+# Jonas Stein <jstein@gentoo.org> (10 Nov 2017)
+# sci-geosciences/gmapcatcher violates the license of several images.
+# The package is unmaintained. Upstream will not / can not fix this problem.
+# See also bug #624046. Masked for removal on 2017-12-12
+sci-geosciences/gmapcatcher
+
 # Matt Turner <mattst88@gentoo.org> (08 Nov 2017)
 # Vulnerable to CVE-2017-13720, CVE-2017-13722 (bug #634044). Only in tree for
 # masked xorg-server-1.12.
