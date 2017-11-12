@@ -4593,6 +4593,7 @@ media-sound/mpd:signalfd - Use the signalfd function in MPD's event loop
 media-sound/mpd:soundcloud - Build plugin to access soundcloud
 media-sound/mpd:systemd - Enable support for systemd socket activation
 media-sound/mpd:twolame - Support twolame MPEG-2 encoding
+media-sound/mpd:webdav - Enable using music from a WebDAV share
 media-sound/mpd:wildmidi - Enable MIDI support via wildmidi
 media-sound/mpd:zip - Support for ZIP files
 media-sound/mpfc:wav - Enable wav audio codec support
@@ -5763,9 +5764,11 @@ net-im/telepathy-connection-managers:xmpp - Enable XMPP protocol handler (this i
 net-im/telepathy-connection-managers:yahoo - Enable Yahoo! messaging support.
 net-im/telepathy-connection-managers:zeroconf - Enable Link-Local Messaging via the zeroconf or Bonjour protocol.
 net-im/tkabber:plugins - Enables installation the extra plugins
-net-im/toxic:av - Enables audio calling and/or audio notifications
-net-im/toxic:notifications - Enables desktop notifications with libnotify
+net-im/toxic:audio - Enables audio calling
+net-im/toxic:av - Enables audio/video functionality (deprecated)
+net-im/toxic:notifications - Enables desktop notifications with libnotify, with sound support.
 net-im/toxic:qrcode - Enables QR code support
+net-im/toxic:video - Enables video calling
 net-im/vacuum:adiummessagestyle - Use UI styles created for Adium
 net-im/vacuum:annotations - Enable adding comments to the contacts in the roster
 net-im/vacuum:aspell - Select app-text/aspell spell checker backend
