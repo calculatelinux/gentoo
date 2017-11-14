@@ -1195,6 +1195,7 @@ app-text/stardict:wikiparse - Enable plugin to parse dictionaries in wikimedia f
 app-text/stardict:wordnet - Enable wordnet plugin to find similar English words using lexical database
 app-text/stardict:xdxfparse - Enable plugin to parse dictionaries in xdxf (XML Dictionary eXchange Format)
 app-text/stardict:youdaodict - Enable youdao.com network plugin (for Chinese language)
+app-text/sword:clucene - Use dev-cpp/clucene for lucene search support
 app-text/tesseract:math - Enable support for recognition of equations.
 app-text/tesseract:opencl - Enable opencl support for speedup using GPU computation.
 app-text/tesseract:osd - Enable support orientation and script detection.
@@ -3533,7 +3534,6 @@ kde-frameworks/kwallet:gpg - Support wallets with GnuPG encryption in addition t
 kde-frameworks/kwallet:man - Build and install man pages
 kde-frameworks/kxmlgui:attica - Enable support for kde-frameworks/attica
 kde-frameworks/networkmanager-qt:teamd - Enable Teamd control support
-kde-frameworks/oxygen-icons:sources - Additionally install the svg sources of the bitmap icons (needed for redistribution)
 kde-frameworks/plasma:gles2 - Use GLES 2.0 or later instead of full OpenGL
 kde-frameworks/sonnet:aspell - Enable the app-text/aspell spell-checking backend
 kde-frameworks/sonnet:hunspell - Enable the app-text/hunspell spell-checking backend
@@ -4341,6 +4341,7 @@ media-plugins/audacious-plugins:http - Support HTTP streams through neon
 media-plugins/audacious-plugins:scrobbler - Build with scrobbler/LastFM submission support
 media-plugins/audacious-plugins:sid - Build with SID (Commodore 64 Audio) support
 media-plugins/audacious-plugins:soxr - Build with SoX Resampler support
+media-plugins/audacious-plugins:speedpitch - Enable speed/pitch effects
 media-plugins/calf:lv2 - Add support for Ladspa V2
 media-plugins/frei0r-plugins:facedetect - Enables building of facedetect plugin, which depends on media-libs/opencv
 media-plugins/frei0r-plugins:scale0tilt - Enables building of scale0tilt and vectorscope plugins, which depend on media-libs/gavl
@@ -8061,6 +8062,7 @@ sys-fs/quota:netlink - Compile daemon receiving quota messages via netlink
 sys-fs/quota:rpc - Enable quota interaction via RPC
 sys-fs/squashfs-tools:lz4 - Enable support for LZ4 compression using app-arch/lz4
 sys-fs/squashfs-tools:xz - Enable support for XZ ("LZMA2") compression using app-arch/xz-utils
+sys-fs/squashfs-tools:zstd - Enable support for ZSTD compression using app-arch/zstd
 sys-fs/squashfuse:lz4 - Enable support for lz4 compression
 sys-fs/udev:firmware-loader - Enable the userspace firmware loader (DEPRECATED, replaced by the in-kernel loader starting from 3.8)
 sys-fs/udev:gudev - Build the gobject interface library
