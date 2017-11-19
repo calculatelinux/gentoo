@@ -1023,6 +1023,7 @@ app-office/kexi:webkit - Enable web form designer widget using dev-qt/qtwebkit
 app-office/kmymoney:hbci - Enable HBCI support using net-libs/aqbanking
 app-office/kmymoney:quotes - Enable Online Stock Quote retrieval
 app-office/kmymoney:weboob - Enable import of online banking transactions extracted by www-client/weboob
+app-office/kraft:pim - Enable support for KDE PIM resources integration
 app-office/libreoffice:coinmp - Use sci-libs/coinor-mp as alternative solver
 app-office/libreoffice:collada - Enable Collada for rendering 3D models stored in *.dae and *.kmz format
 app-office/libreoffice:gltf - Use media-libs/libgltf for inserting 3D models in the glTF format into presentations
@@ -3214,6 +3215,7 @@ games-fps/urbanterror:client - Build binary for client (includes code for non-de
 games-fps/urbanterror:mumble - Use Mumble for ingame VoIP (experimental)
 games-fps/urbanterror:opus - Use opus as sound codec
 games-fps/urbanterror:server - Build binary for dedicated server
+games-fps/urbanterror:skeetshootmod - Build support for skeetshoot mod for specific maps
 games-fps/urbanterror:voip - Use ioq3 ingame VoIP (experimental)
 games-fps/worldofpadman:maps - Install extra maps (PadPack)
 games-fps/xonotic:ode - Enable support for physics engine from dev-games/ode
