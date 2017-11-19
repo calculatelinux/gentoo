@@ -2366,6 +2366,7 @@ dev-perl/HTTP-Entity-Parser:xs - Install C-Based dependieces for faster performa
 dev-perl/JSON:xs - Install C-based dev-perl/JSON-XS for faster performance
 dev-perl/JSON-MaybeXS:xs - Install a C-Based backend to make JSON encode/decode fast
 dev-perl/Lab-Measurement:xpression - Install the Xpression measurement framework
+dev-perl/Lab-VXI11:libtirpc - Build against net-libs/libtirpc for RPC support
 dev-perl/List-MoreUtils:xs - Install C-Based backend implementation for performance
 dev-perl/MCE:sereal - Install dev-perl/Sereal-Encoder and decoder for faster worker IPC
 dev-perl/Mail-IMAPClient:md5 - Install support for DIGEST-MD5 and CRAM-MD5 Authentication
@@ -3607,7 +3608,6 @@ lxqt-base/lxqt-panel:mainmenu - Build mainmenu plugin
 lxqt-base/lxqt-panel:mount - Build mount plugin
 lxqt-base/lxqt-panel:networkmonitor - Build networkmonitor plugin
 lxqt-base/lxqt-panel:quicklaunch - Build quicklaunch plugin
-lxqt-base/lxqt-panel:screensaver - Build screensaver plugin
 lxqt-base/lxqt-panel:sensors - Build sensors plugin
 lxqt-base/lxqt-panel:showdesktop - Build showdesktop plugin
 lxqt-base/lxqt-panel:statusnotifier - Build statusnotifier plugin
@@ -4484,7 +4484,6 @@ media-sound/clementine:moodbar - Enable moodbar support
 media-sound/clementine:projectm - Build with ProjectM visualization
 media-sound/clementine:seafile - Enable support for seafile: a file sync service
 media-sound/clementine:skydrive - Enable Skydrive support
-media-sound/clementine:udisks_legacy - Enable storage management support via legacy sys-fs/udisks:0
 media-sound/clementine:vkontakte - Enable vk.com support
 media-sound/clementine:wiimote - Enable support for Wii remote
 media-sound/cmus:cdio - use libcdio for CD support
@@ -6342,6 +6341,7 @@ net-misc/eventd:libnotify - Enable plugin to relay events to notification daemon
 net-misc/eventd:notification - Enable plugin to display on-screen notifications
 net-misc/eventd:purple - Enable plugin for IM notifications via libpurple
 net-misc/eventd:speech - Enable plugin for Text-To-Speech support
+net-misc/eventd:webhook - Enable plugin to send payloads to webhook handlers
 net-misc/eventd:websocket - Enable support for WebSocket protocol
 net-misc/fatrat:bittorrent - Use the bittorrent protocol via net-libs/libtorrent-rasterbar.
 net-misc/freerdp:client - Build client binaries
