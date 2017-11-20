@@ -2913,9 +2913,12 @@ dev-util/intel-ocl-sdk:system-tbb - Use sytem Thread Building Blocks (dev-cpp/tb
 dev-util/intel-ocl-sdk:tools - Install Intel Offline Compiler
 dev-util/kdevelop:gdbui - Enable GUI for attaching GDB to a running process
 dev-util/kdevelop:ninja - Enable support for Ninja build system
-dev-util/kdevelop:okteta - Enable hex editor plugin
+dev-util/kdevelop:okteta - Enable hex editor plugin via kde-apps/okteta
 dev-util/kdevelop:qmake - Enable support for QMake build system
 dev-util/kdevelop:qthelp - Enable support for QtHelp documentation browsing
+dev-util/kdevelop:reviewboard - Enable reviewboard support
+dev-util/kdevelop:webkit - Enable deprecated dev-qt/qtwebkit instead of dev-qt/qtwebengine for integrated documentation
+dev-util/kdevelop:welcomepage - Enable welcome page, requires dev-qt/qtdeclarative
 dev-util/kdevplatform:reviewboard - Enable reviewboard support
 dev-util/kdevplatform:welcomepage - Enable welcome page, requires dev-qt/qtdeclarative
 dev-util/ltrace:unwind - Use sys-libs/libunwind for frame unwinding support
@@ -4014,7 +4017,6 @@ media-gfx/jpeg2ps:metric - Default to A4 paper size
 media-gfx/k3d:3ds - Enable support for 3D Studio models
 media-gfx/k3d:cuda - Use nvidia cuda toolkit for speeding up computations
 media-gfx/k3d:gts - Add Support for the GNU Triangulated Surface Library sci-libs/gts
-media-gfx/kphotoalbum:face - Enable face detection and recognition using kde-apps/libkface
 media-gfx/kphotoalbum:kipi - Support for the KDE Image Plugin Interface
 media-gfx/kphotoalbum:map - Enable map display support using kde-apps/libkgeomap
 media-gfx/krita:color-management - Enable color management via media-libs/opencolorio
