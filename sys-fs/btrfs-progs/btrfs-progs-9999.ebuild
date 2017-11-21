@@ -24,7 +24,7 @@ HOMEPAGE="https://btrfs.wiki.kernel.org"
 
 LICENSE="GPL-2"
 SLOT="0/${libbtrfs_soname}"
-IUSE="+convert reiserfs static static-libs"
+IUSE="+convert reiserfs static static-libs +zstd"
 
 RESTRICT=test # tries to mount repared filesystems
 
@@ -39,6 +39,7 @@ RDEPEND="
 			>=sys-fs/reiserfsprogs-3.6.27
 		)
 	)
+	zstd? ( app-arch/zstd:0= )
 "
 DEPEND="${RDEPEND}
 	convert? ( sys-apps/acl )
@@ -56,6 +57,7 @@ DEPEND="${RDEPEND}
 				>=sys-fs/reiserfsprogs-3.6.27[static-libs(+)]
 			)
 		)
+		zstd? ( app-arch/zstd:0[static-libs(+)] )
 	)
 "
 
@@ -82,6 +84,7 @@ src_configure() {
 		$(use_enable convert)
 		$(use_enable elibc_glibc backtrace)
 		--with-convert=ext2$(usex reiserfs ',reiserfs' '')
+		$(use_enable zstd)
 	)
 	econf "${myeconfargs[@]}"
 }
