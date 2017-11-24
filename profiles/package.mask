@@ -29,11 +29,74 @@
 
 #--- END OF EXAMPLES ---
 
+# Bernard Cafarelli <voyageur@gentoo.org> (24 Nov 2017)
+# Upstream removed tarball, no separate release in 3 years
+# Merged in net-misc/owncloud-client since
+# Masked for removal in 30 days. Bug #501228
+net-misc/ocsync
+sys-auth/pam-csync
+
+# Bernard Cafarelli <voyageur@gentoo.org> (24 Nov 2017)
+# Dead upstream, source not available anymore
+# Last open-source update in 2011
+# Masked for removal in 30 days. Bug #638670
+www-apps/eyeos
+
+# Matt Turner <mattst88@gentoo.org> (23 Nov 2017)
+# For ancient hardware. Tired of maintaining. Masked for removal in 30 days.
+# Bug #606132.
+x11-misc/afbinit
+x11-drivers/afb-ucode
+x11-drivers/xf86-video-apm
+x11-drivers/xf86-video-ark
+x11-drivers/xf86-video-chips
+x11-drivers/xf86-video-cirrus
+x11-drivers/xf86-video-freedreno
+x11-drivers/xf86-video-i128
+x11-drivers/xf86-video-i740
+x11-drivers/xf86-video-mach64
+x11-drivers/xf86-video-modesetting
+x11-drivers/xf86-video-neomagic
+x11-drivers/xf86-video-opentegra
+x11-drivers/xf86-video-rendition
+x11-drivers/xf86-video-s3
+x11-drivers/xf86-video-s3virge
+x11-drivers/xf86-video-savage
+x11-drivers/xf86-video-sis
+x11-drivers/xf86-video-sisusb
+x11-drivers/xf86-video-suncg14
+x11-drivers/xf86-video-suncg3
+x11-drivers/xf86-video-suncg6
+x11-drivers/xf86-video-sunffb
+x11-drivers/xf86-video-sunleo
+x11-drivers/xf86-video-suntcx
+x11-drivers/xf86-video-tga
+x11-drivers/xf86-video-trident
+x11-drivers/xf86-video-tseng
+
+# Jonas Stein <jstein@gentoo.org> (23 Nov 2017)
+# Depends on the AIM service which will be discontinued on 2017-12-15.
+# See also bug #638564. Masked for removal on 2017-12-20
+net-analyzer/aimsniff
+
+# Kent Fredric <kentnl@gentoo.org> (22 Nov 2017)
+# Long deprecated upstream in favour of dev-perl/Mail-SPF
+# Masked for removal in 30 days. Bug #638432
+dev-perl/Mail-SPF-Query
+
+# Andreas Sturmlechner <asturm@gentoo.org> (21 Nov 2017)
+# Totally broken, depends on dead Qt4. Use sci-mathematics/octave[gui].
+# Masked for removal in 30 days. Bugs #598930, #615284, #614582, #631524
+sci-mathematics/qtoctave
+
 # Alice Ferrazzi <alicef@gentoo.org> (21 Nov 2017)
 # A regression in kernel 4.14.0
-# Using bcache can destroy the filesystem. 
+# Data corruption issue that affects at minimum bcache. 
 # The hope is that this patch will make it to 4.14.1 Bug #638206
+=sys-kernel/vanilla-sources-4.14.1
+=sys-kernel/vanilla-sources-4.14.0
 =sys-kernel/gentoo-sources-4.14.0
+=sys-kernel/ck-sources-4.14.0
 
 # Andreas Sturmlechner <asturm@gentoo.org> (16 Nov 2017)
 # Qt4WebKit is ancient and full of security holes.
@@ -47,6 +110,7 @@ dev-qt/qtwebkit:4
 # Andreas Sturmlechner <asturm@gentoo.org> (16 Nov 2017)
 # Depends on dead Qt4WebKit. Masked for removal in 30 days. Bug #620702
 <media-gfx/freecad-0.17
+=media-gfx/freecad-9999
 
 # Andreas Sturmlechner <asturm@gentoo.org> (16 Nov 2017)
 # Depends on dead Qt4WebKit. Masked for removal in 30 days. Bug #620736
@@ -84,11 +148,6 @@ media-plugins/vdr-alcd
 # The package is unmaintained. Upstream will not / can not fix this problem.
 # See also bug #624046. Masked for removal on 2017-12-12
 sci-geosciences/gmapcatcher
-
-# Matt Turner <mattst88@gentoo.org> (08 Nov 2017)
-# Vulnerable to CVE-2017-13720, CVE-2017-13722 (bug #634044). Only in tree for
-# masked xorg-server-1.12.
-<x11-libs/libXfont-1.5.0
 
 # Brian Evans <grknight@gentoo.org> (07 Nov 2017)
 # Remote service removed this method, dead upstream
@@ -194,60 +253,6 @@ sys-devel/autoconf:2.65
 sys-devel/autoconf:2.67
 sys-devel/autoconf:2.68
 
-# Andreas Sturmlechner <asturm@gentoo.org> (22 Oct 2017)
-# Dead upstream, depends on dead kdelibs4/Qt4.
-# Masked for removal in 30 days. Bug #634388
-media-sound/kstreamripper
-
-# Andreas Sturmlechner <asturm@gentoo.org> (22 Oct 2017)
-# Dead upstream, depends on dead kdelibs4/Qt4.
-# Masked for removal in 30 days. Bug #634384
-kde-misc/kcollectd
-
-# Andreas Sturmlechner <asturm@gentoo.org> (22 Oct 2017)
-# Dead upstream, depends on dead kdelibs4/Qt4.
-# Masked for removal in 30 days. Bug #579518
-media-sound/kmid
-
-# Andreas Sturmlechner <asturm@gentoo.org> (22 Oct 2017)
-# Reverse-deps on dead, masked Qt4WebKit.
-# Masked for removal in 30 days. Bug #623928
-net-im/qutim
-
-# Kent Fredric <kentnl@gentoo.org> (21 Oct 2017)
-# Has not been usable since we cleaned the last Moose it worked on back
-# in 2012. Removal in 30 days. Bug #634938
-dev-perl/File-Stat-Moose
-
-# Matt Turner <mattst88@gentoo.org> (21 Oct 2017)
-# The 1.12 and 1.15 branches are no longer supported and remain vulnerable to
-# various CVEs (CVE-2013-6424, bug #493294 and CVE-2017-2624 bug #611350 just
-# to name a few). They remain in tree only for old nvidia-drivers 96 and 173.
-<x11-base/xorg-server-1.19.2
-<x11-base/xorg-drivers-1.19
-
-# Andreas Sturmlechner <asturm@gentoo.org> (21 Oct 2017)
-# Dead upstream, depends on dead kdelibs4/Qt4.
-# Masked for removal in 30 days. Bug #629018
-sci-calculators/keurocalc
-
-# Andreas Sturmlechner <asturm@gentoo.org> (21 Oct 2017)
-# Dead upstream, depends on dead kdelibs4/Qt4.
-# Masked for removal in 30 days. Bug #629018
-net-misc/knutclient
-
-# Andreas Sturmlechner <asturm@gentoo.org> (21 Oct 2017)
-# Dead upstream, depends on dead kdelibs4/Qt4.
-# Possible KF5-based alternative is media-sound/soundkonverter.
-# Masked for removal in 30 days. Bug #634386
-media-sound/konvertible
-
-# Andreas Sturmlechner <asturm@gentoo.org> (21 Oct 2017)
-# Dead upstream, depends on dead kdelibs4/Qt4, security liability.
-# If at all necessary we use kde-plasma/kde-cli-tools[kdesu]
-# for that purpose. Masked for removal in 30 days. Bug #634382
-kde-misc/kdesudo
-
 # Andreas K. Hüttel <dilfridge@gentoo.org> (20 Oct 2017)
 # Doesn't build with glibc-2.25, doesn't build, needs a
 # version bump, needs a maintainer. Bugs 604364, 599004,
@@ -269,13 +274,6 @@ sys-devel/automake:1.8
 # dev-tex/texmfind was superseded by app-portage/pfl 
 # See also bug #634494. Masked for removal on 2017-11-30
 dev-tex/texmfind
-
-# Kent Fredric <kentnl@gentoo.org> (14 Oct 2017)
-# 12 years without upstream responding to bugs, code almost
-# irredeemably unmaintainable and with no way to demonstrate it
-# actually works. Bug #634244
-# Masked for removal in 30 days.
-dev-perl/Apache-SessionX
 
 # Lars Wendler <polynomial-c@gentoo.org> (12 Oct 2017)
 # Dead upstream. No qt5 release. Use app-admin/keepassxc as drop-in
@@ -711,12 +709,6 @@ dev-libs/iniparser:4
 =dev-python/django-1.6*
 =dev-python/django-1.7*
 =dev-python/django-1.9*
-
-# Jeroen Roovers <jer@gentoo.org> (12 Dec 2014)
-# The 96 and 173 branches are no longer supported and remain vulnerable to
-# CVE-2014-8298 (bug #532342). You may be able to mitigate the vulnerability by
-# disabling GLX indirect rendering protocol support on the X server.
-<x11-drivers/nvidia-drivers-304
 
 # Robin H. Johnson <robbat2@gentoo.org> (04 Aug 2014)
 # Masked for testing, presently fails upstream testsuite:

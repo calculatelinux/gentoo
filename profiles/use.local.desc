@@ -1071,6 +1071,9 @@ app-portage/eix:debug - Build with upstream's CXXFLAGS/LDFLAGS for debugging sup
 app-portage/eix:doc - Create description of the eix cache file additionally in html format
 app-portage/eix:sqlite - Compile in support for portage's sqlite backend; to actually use it you need additional configuration of portage and eix
 app-portage/g-sorcery:bson - Support BSON file format for package DB
+app-portage/gemato:blake2 - Install dependencies needed for BLAKE2 hash functions
+app-portage/gemato:gpg - Install dependencies needed for OpenPGP signature verification support
+app-portage/gemato:sha3 - Install dependencies needed for SHA3 hash functions
 app-portage/layman:bazaar - Support dev-vcs/bzr based overlays
 app-portage/layman:cvs - Support dev-vcs/cvs based overlays
 app-portage/layman:darcs - Support dev-vcs/darcs based overlays
@@ -1168,7 +1171,6 @@ app-text/pdfgrep:unac - Removing accents and ligatures before search
 app-text/pelican:markdown - Markdown support
 app-text/podofo:boost - Add support for boost
 app-text/podofo:tools - Build and install commandline tools.
-app-text/poppler:cairo-qt - Enable experimental Cairo font rasterizer for Qt4 backend.
 app-text/poppler:nss - Enable signatures handling with dev-libs/nss
 app-text/poppler:utils - Install command-line PDF converters and various utilities.
 app-text/qpdf:perl - Install fix-qdf tool (for reverting PDF edits) written in perl
@@ -1859,8 +1861,8 @@ dev-lang/gdl:hdf - Add support for the Hierarchical Data Format v.4
 dev-lang/gdl:proj - Add support for sci-libs/proj (geographic projections)
 dev-lang/gdl:udunits - Add support for manipulating units of physical quantities
 dev-lang/ghc:binary - Install the binary version directly, rather than using it to build the source version.
-dev-lang/ghc:ghcbootstrap - Bootstrap from an existing GHC installation.
-dev-lang/ghc:ghcmakebinary - Build with less runtime depends (bundle libffi for building bootstrap binaries).
+dev-lang/ghc:ghcbootstrap - Internal: Bootstrap GHC from an existing GHC installation.
+dev-lang/ghc:ghcmakebinary - Internal: Build binary friendly for redistribution.
 dev-lang/gnat-gpl:awt - Useful only when building GCJ, this enables Abstract Window Toolkit (AWT) peer support on top of GTK+
 dev-lang/gnat-gpl:cilk - Support the Cilk Plus language (C/C++ based languages for parallel programming)
 dev-lang/gnat-gpl:fixed-point - Enable fixed-point arithmetic support for MIPS targets in gcc (Warning: significantly increases compile time!)
@@ -2976,10 +2978,11 @@ dev-vcs/darcs:terminfo - Use the terminfo package for enhanced console support.
 dev-vcs/darcs:threaded - Use threading and SMP support.
 dev-vcs/fossil:fusefs - Enable the Fuse Filesystem
 dev-vcs/fossil:json - Enable the JSON API of Fossil's wiki
-dev-vcs/fossil:legacy-mv-rm - Enable legacy behavior for mv/rm (skip checkout files)
-dev-vcs/fossil:miniz - Use the bundled miniz for compression instead of zlib
-dev-vcs/fossil:sqlite - Use the system SQLite instead of the bundled one
+dev-vcs/fossil:legacy-mv-rm - Enable legacy behavior for mv/rm (skip checkout files).
+dev-vcs/fossil:miniz - Use the bundled miniz for compression instead of zlib. Incompatible with ssl.
 dev-vcs/fossil:system-sqlite - Use the system SQLite instead of the bundled one
+dev-vcs/fossil:tcl-private-stubs - Enable Tcl integration via private stubs mechanism
+dev-vcs/fossil:tcl-stubs - Enable Tcl integration via stubs library mechanism
 dev-vcs/fossil:th1-docs - Enable TH1 for embedded documentation pages
 dev-vcs/fossil:th1-hooks - Enable TH1 hooks for commands and web pages
 dev-vcs/git:blksha1 - Use the new optimized SHA1 implementation
@@ -4623,7 +4626,6 @@ media-sound/ncmpcpp:outputs - Enable outputs screen
 media-sound/ncmpcpp:visualizer - Enable visualizer screen with sound wave/frequency spectrum modes
 media-sound/patchage:jack-dbus - Use Jack via D-Bus instead of libjack
 media-sound/patchage:session - Include experimental Jack session management (save/restore) support
-media-sound/picard:acoustid - Use media-libs/chromaprint for acoustic fingerprinting
 media-sound/pithos:appindicator - Enable usage of appindicator to export menu options in to unity
 media-sound/pithos:keybinder - Use keybinder to enable global key bindings
 media-sound/pms:regex - Enable regular expression searches
@@ -5739,26 +5741,6 @@ net-im/pyaim-t:webinterface - Install dependencies needed for the web interface
 net-im/pyicq-t:webinterface - Install dependencies needed for the web interface
 net-im/qtox:X - Adds support for X11
 net-im/qtox:gtk - Adds support for GTK and Status Notifier tray backends
-net-im/qutim:antiboss - Enable support for the antiboss plugin
-net-im/qutim:aspell - Enable spellchecking using app-text/aspell
-net-im/qutim:awn - Enable integration with gnome-extra/avant-window-navigator
-net-im/qutim:crypt - Enable AES crypto plugin
-net-im/qutim:espionage - !!Not recomended, contains privacy risk!! Enable control plugin that controls user by sending messages and roster to remote server
-net-im/qutim:histman - Enable history importer plugin
-net-im/qutim:hunspell - Enable spellchecking using app-text/hunspell
-net-im/qutim:irc - Enable IRC protocol support
-net-im/qutim:mrim - Enable mail.ru protocol support
-net-im/qutim:otr - Enable plugin for encrypted conversations (Off-The-Record messaging)
-net-im/qutim:phonon - Add sound support via media-libs/phonon
-net-im/qutim:plugman - Enable downloadable content management with dev-libs/libattica
-net-im/qutim:purple - Enable libpurple-based protocol support
-net-im/qutim:qml - Enable QtQuick-based chat plugin
-net-im/qutim:sdl - Add sound support via media-libs/sdl-mixer
-net-im/qutim:telepathy - Enable to connect various IMs through net-libs/telepathy-qt
-net-im/qutim:tools - Enable some extra tools for qt developers
-net-im/qutim:vkontakte - Enable vkontakte protocol support
-net-im/qutim:webkit - Enable Adium-like WebView plugin
-net-im/qutim:xscreensaver - Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events
 net-im/skypeforlinux:pax_kernel - Triggers a paxmarking of the main skype binary
 net-im/telepathy-connection-managers:gadu - Enable Gadu Gadu protocol support.
 net-im/telepathy-connection-managers:irc - Enable Internet Relay Chat (IRC) support.
@@ -7559,7 +7541,7 @@ sys-apps/iotools:make-symlinks - Generate sub-command symlinks to iotools -- not
 sys-apps/ipmitool:openipmi - Use the system OpenIPMI implementation.
 sys-apps/iproute2:berkdb - build programs that use berkdb (just arpd)
 sys-apps/iproute2:iptables - include support for iptables filtering
-sys-apps/iproute2:minimal - only install ip and tc programs
+sys-apps/iproute2:minimal - only install ip and tc programs, without eBPF support
 sys-apps/irqbalance:numa - Support balancing IRQs across NUMA nodes
 sys-apps/kexec-tools:booke - Include support for Book-E memory management
 sys-apps/kexec-tools:lzma - Enables support for LZMA compressed kernel images
@@ -7806,6 +7788,7 @@ sys-cluster/glusterfs:fuse - Add FUSE mount helper
 sys-cluster/glusterfs:georeplication - Enable support for georeplication (requires dev-lang/python)
 sys-cluster/glusterfs:glupy - Enable support for translators written in Python
 sys-cluster/glusterfs:infiniband - Add support for Infiniband ibverbs transport. Libraries can be found in science overlay
+sys-cluster/glusterfs:libtirpc - Build against net-libs/libtirpc for RPC support
 sys-cluster/glusterfs:qemu-block - Transparently create files as QCow2/QED images in the backend, including the possibility to snapshot.
 sys-cluster/glusterfs:rsyslog - Install configuration snippet for app-admin/rsyslog
 sys-cluster/glusterfs:systemtap - Enable support for dev-util/systemtap
