@@ -1399,11 +1399,11 @@ dev-db/mysql-cluster:systemtap - Build support for profiling and tracing using d
 dev-db/mysql-cluster:test - Install upstream testsuites for end use.
 dev-db/mysql-cluster:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
 dev-db/mysql-connector-c++:gcov - Build coverage support
-dev-db/oracle-instantclient:jdbc - Support for XA, Internationalization, and RowSet operations under JDBC.
-dev-db/oracle-instantclient:odbc - Libraries for enabling ODBC applications.
-dev-db/oracle-instantclient:sdk - Header files and an example makefile for developing Oracle applications.
-dev-db/oracle-instantclient:sqlplus - Libraries and executable for running SQL*Plus.
-dev-db/oracle-instantclient:tools - Workload Replay Client.
+dev-db/oracle-instantclient:jdbc - Support for XA, Internationalization, and RowSet operations under JDBC
+dev-db/oracle-instantclient:odbc - Libraries for enabling ODBC applications
+dev-db/oracle-instantclient:sdk - Header files and an example makefile for developing Oracle applications
+dev-db/oracle-instantclient:sqlplus - Libraries and executable for running SQL*Plus
+dev-db/oracle-instantclient:tools - Workload Replay Client
 dev-db/percona-server:embedded - Build embedded server (libmysqld)
 dev-db/percona-server:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
 dev-db/percona-server:jemalloc - Use dev-libs/jemalloc for allocations.
@@ -1713,9 +1713,9 @@ dev-haskell/shakespeare-js:test_roy - Test roy.
 dev-haskell/shelly:lifted - run the tests against Shelly.Lifted
 dev-haskell/shuffle:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/simple-sendfile:allow-bsd - Allow use of BSD sendfile (disable on GNU/kFreeBSD)
-dev-haskell/skein:big-endian - When manually selecting the endianness, use big-endian (default is little-endian).
-dev-haskell/skein:force-endianness - Use a manually selected endian when compiling (see flag 'big-endian').
-dev-haskell/skein:reference - Use the reference implementation instead of the optimized one.
+dev-haskell/skein:big-endian - When manually selecting the endianness, use big-endian (default is little-endian)
+dev-haskell/skein:force-endianness - Use a manually selected endian when compiling (see flag 'big-endian')
+dev-haskell/skein:reference - Use the reference implementation instead of the optimized one
 dev-haskell/skylighting:executable - Build the skylighting executable.
 dev-haskell/snap-core:portable - No non-haskell unportable code.
 dev-haskell/snap-server:build-pong - Build a server that just returns "PONG"
@@ -1931,7 +1931,7 @@ dev-lang/php:xmlwriter - Enable XMLWriter support
 dev-lang/php:xslt - Enable the XSL extension
 dev-lang/php:zip - Enable ZIP file support
 dev-lang/php:zip-encryption - Enable ZIP file encryption from dev-libs/libzip
-dev-lang/polyml:portable - Build the portable interpreter version of Poly/ML instead of native.
+dev-lang/polyml:portable - Build the portable interpreter version of Poly/ML instead of native
 dev-lang/python:threads - Enable threading support. (DON'T DISABLE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
 dev-lang/python:wide-unicode - Enable wide Unicode implementation which uses 4-byte Unicode characters. Switching of this USE flag changes ABI of Python and requires reinstallation of many Python modules. (DON'T DISABLE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
 dev-lang/python:wininst - Install Windows executables required to create an executable installer for MS Windows.
@@ -2192,10 +2192,10 @@ dev-libs/openct:debug - Add debug output to the driver library for pcsc-lite.
 dev-libs/openct:pcsc-lite - Build a driver library for sys-apps/pcsc-lite, providing PC/SC API access to devices supported by OpenCT.
 dev-libs/openct:udev - Install rules for sys-fs/udev to auto-start openct.
 dev-libs/openobex:irda - Enable IrDA support
-dev-libs/opensc:ctapi - Use CT-API for accessing Smartcard hardware.
-dev-libs/opensc:openct - Use dev-libs/openct (and CT-API) for accessing Smartcard hardware.
-dev-libs/opensc:pcsc-lite - Use sys-apps/pcsc-lite (and PC/SC API) for accessing Smartcard hardware.
-dev-libs/opensc:secure-messaging - Enable secure messaging.
+dev-libs/opensc:ctapi - Use CT-API for accessing Smartcard hardware
+dev-libs/opensc:openct - Use dev-libs/openct (and CT-API) for accessing Smartcard hardware
+dev-libs/opensc:pcsc-lite - Use sys-apps/pcsc-lite (and PC/SC API) for accessing Smartcard hardware
+dev-libs/opensc:secure-messaging - Enable secure messaging
 dev-libs/openssl:asm - Support assembly hand optimized crypto functions (i.e. faster run time)
 dev-libs/openssl:bindist - Disable/Restrict EC algorithms (as they seem to be patented) -- note: changes the ABI
 dev-libs/openssl:rfc3779 - Enable support for RFC 3779 (X.509 Extensions for IP Addresses and AS Identifiers)
@@ -2760,7 +2760,7 @@ dev-ruby/faraday_middleware:oauth - Include FaradayMiddleware::OAuth
 dev-ruby/faraday_middleware:parsexml - Include FaradayMiddleware::ParseXml
 dev-ruby/faraday_middleware:rashify - Include FaradayMiddleware::Rashify
 dev-ruby/maruku:highlight - Enable source code highlighting via dev-ruby/syntax
-dev-ruby/net-ssh:sodium - Use dev-libs/libsodium via dev-ruby/rbnacl for Ed25519 support.
+dev-ruby/net-ssh:sodium - Use dev-libs/libsodium via dev-ruby/rbnacl for Ed25519 support
 dev-ruby/rails:asset-pipeline - Also install the default components for the asset pipeline. These are not required but they are activated automatically in new Rails projects by default.
 dev-ruby/rrdtool-bindings:graph - Enable support for graphing functions
 dev-ruby/rspec-core:highlight - Enable source code highlighting via dev-ruby/coderay
@@ -2933,12 +2933,12 @@ dev-util/mingw64-runtime:idl - Install idl files.
 dev-util/mingw64-runtime:libraries - Build extra libraries.
 dev-util/mingw64-runtime:tools - Build extra tools.
 dev-util/molecule:plugins - Add plugins provided by dev-util/molecule-plugins
-dev-util/nemiver:memoryview - Enable the optional hexadecimal memory inspection with app-editors/ghex.
-dev-util/nvidia-cuda-sdk:cuda - Build CUDA binaries.
-dev-util/nvidia-cuda-sdk:opencl - Build OpenCL binaries.
-dev-util/nvidia-cuda-toolkit:debugger - Installs the CUDA debugger.
+dev-util/nemiver:memoryview - Enable the optional hexadecimal memory inspection with app-editors/ghex
+dev-util/nvidia-cuda-sdk:cuda - Build CUDA binaries
+dev-util/nvidia-cuda-sdk:opencl - Build OpenCL binaries
+dev-util/nvidia-cuda-toolkit:debugger - Installs the CUDA debugger
 dev-util/nvidia-cuda-toolkit:eclipse - Install plugins for eclipse
-dev-util/nvidia-cuda-toolkit:profiler - Installs the NVIDIA CUDA visual profiler.
+dev-util/nvidia-cuda-toolkit:profiler - Installs the NVIDIA CUDA visual profiler
 dev-util/perf:demangle - Enable C++ symbol name demangling, using libbfd from sys-devel/binutils. When this flag is enabled, the package will have to be rebuilt after every version bump of binutils.
 dev-util/perf:doc - Build documentation and man pages. With this USE flag disabled, the --help parameter for perf and its sub-tools will not be available. This is optional because it depends on a few documentation handling tools that are not always welcome on user systems.
 dev-util/perf:numa - Enable NUMA support
@@ -3262,9 +3262,9 @@ games-rpg/daimonin-client:music - Install extra music
 games-rpg/drascula:sound - Install optional audio files
 games-rpg/dreamweb:doc - High-resolution scans of the written material in the original UK game box
 games-rpg/dungeon-defenders:bundled-libs - Use the upstream provided bundled libraries.
-games-rpg/eternal-lands-data:bloodsuckermaps - Will install Bloodsucker's Maps in place of the official map files.
-games-rpg/eternal-lands-data:music - Adds in-game music.
-games-rpg/eternal-lands-data:sound - Adds in-game sound effects.
+games-rpg/eternal-lands-data:bloodsuckermaps - Will install Bloodsucker's Maps in place of the official map files
+games-rpg/eternal-lands-data:music - Enables in-game music
+games-rpg/eternal-lands-data:sound - Enables in-game sound effects
 games-rpg/grimrock:bundled-libs - Use bundled libraries.
 games-rpg/kqlives:cheats - Enable cheating mode
 games-rpg/manaplus:mumble - Enable support for voice chat
@@ -4469,7 +4469,7 @@ media-sound/audacity:soundtouch - Enables soundtouch library support for pitch a
 media-sound/audacity:twolame - Enables twolame support (MPEG Audio Layer 2 encoder)
 media-sound/audacity:vamp - Enables vamp plugins support (Audio analysing plugins)
 media-sound/audacity:vst - Enable VST plugin support
-media-sound/beets:badfiles - Validate MP3 & FLAC files.
+media-sound/beets:badfiles - Validate MP3 & FLAC files
 media-sound/beets:bpd - Enable support for media-sound/mpd server emulation
 media-sound/beets:chroma - Enable support for acoustic fingerprinting plugin using media-libs/chromaprint
 media-sound/beets:convert - Enable support for the convert plugin which makes it possible to transcode files
@@ -5568,7 +5568,7 @@ net-fs/cvmfs:preload - Install the cvmfs cache preloader for distributed file sy
 net-fs/cvmfs:server - Install the cvmfsd program and init script
 net-fs/cvmfs:test-programs - Install unit test programs
 net-fs/netatalk:pgp - Add support pgp authentication module
-net-fs/netatalk:quota - Add support for user quota on various filesystems.
+net-fs/netatalk:quota - Add support for user quota on various filesystems
 net-fs/netatalk:shadow - Add shadow support
 net-fs/netatalk:ssl - Use dev-libs/openssl to provide DHX User Access Modules. These are not used with most recent versions of OS X and can be kept disabled without risks.
 net-fs/netatalk:tracker - Add support for spotlight like tracker
@@ -6437,6 +6437,7 @@ net-misc/networkmanager:json - Enable JSON validation via dev-libs/jansson in li
 net-misc/networkmanager:modemmanager - Enable support for mobile broadband devices using net-misc/modemmanager
 net-misc/networkmanager:nss - Use dev-libs/nss for cryptography
 net-misc/networkmanager:ofono - Use net-misc/ofono for telephony support.
+net-misc/networkmanager:ovs - Enable OpenVSwitch support
 net-misc/networkmanager:ppp - Enable support for mobile broadband and PPPoE connections using net-dialup/ppp
 net-misc/networkmanager:resolvconf - Use net-dns/openresolv for managing DNS information
 net-misc/networkmanager:teamd - Enable Teamd control support
@@ -6603,11 +6604,11 @@ net-nds/nsscache:nsscache - Depend on sys-auth/libnss-cache to handle flat files
 net-nds/nsscache:nssdb - Depend on sys-libs/libnss_db to handle dbm files.
 net-nds/openldap:experimental - Enable experimental backend options
 net-nds/openldap:kinit - Enable support for kerberos init
-net-nds/openldap:minimal - Build libraries & userspace tools only. Does not install any server code.
+net-nds/openldap:minimal - Build libraries & userspace tools only. Does not install any server code
 net-nds/openldap:odbc - Enable ODBC and SQL backend options
 net-nds/openldap:overlays - Enable contributed OpenLDAP overlays
 net-nds/openldap:pbkdf2 - Enable support for pbkdf2 passwords
-net-nds/openldap:sha2 - Enable support for pw-sha2 password hashes.
+net-nds/openldap:sha2 - Enable support for pw-sha2 password hashes
 net-nds/openldap:smbkrb5passwd - Enable overlay for syncing ldap, unix and lanman passwords
 net-nds/rpcbind:warmstarts - Enables rpcbind to cache configuration for warm restarts
 net-nds/tac_plus:finger - Adds support for checking user counts via fingering the NAS
@@ -6833,30 +6834,30 @@ net-vpn/openvpn:mbedtls - Use mbed TLS instead of OpenSSL
 net-vpn/openvpn:pkcs11 - Enable PKCS#11 smartcard support
 net-vpn/openvpn:plugins - Enable the OpenVPN plugin system
 net-vpn/pptpd:gre-extreme-debug - Log all GRE accepted packages when in debug mode (required if you want upstream support)
-net-vpn/strongswan:constraints - Enable advanced X.509 constraint checking plugin.
+net-vpn/strongswan:constraints - Enable advanced X.509 constraint checking plugin
 net-vpn/strongswan:dhcp - Enable server support for querying virtual IP addresses for clients from a DHCP server. (IKEv2 only)
-net-vpn/strongswan:eap - Enable support for the different EAP modules that is supported.
-net-vpn/strongswan:farp - Enable faking of ARP responses for virtual IP addresses assigned to clients. (IKEv2 only)
+net-vpn/strongswan:eap - Enable support for the different EAP modules that are supported
+net-vpn/strongswan:farp - Enable faking of ARP responses for virtual IP addresses assigned to clients (IKEv2 only)
 net-vpn/strongswan:gcrypt - Enable dev-libs/libgcrypt plugin which provides 3DES, AES, Blowfish, Camellia, CAST, DES, Serpent and Twofish ciphers along with MD4, MD5 and SHA1/2 hash algorithms, RSA and DH groups 1,2,5,14-18 and 22-24(4.4+). Also includes a software random number generator.
 net-vpn/strongswan:non-root - Force IKEv1/IKEv2 daemons to normal user privileges. This might impose some restrictions mainly to the IKEv1 daemon. Disable only if you really require superuser privileges.
 net-vpn/strongswan:openssl - Enable dev-libs/openssl plugin which is required for Elliptic Curve Cryptography (DH groups 19-21,25,26) and ECDSA. Also provides 3DES, AES, Blowfish, Camellia, CAST, DES, IDEA and RC5 ciphers along with MD2, MD4, MD5 and SHA1/2 hash algorithms, RSA and DH groups 1,2,5,14-18 and 22-24(4.4+) dev-libs/openssl has to be compiled with USE="-bindist".
-net-vpn/strongswan:pkcs11 - Enable pkcs11 support.
-net-vpn/strongswan:strongswan_plugins_blowfish - Enable support for the blowfish plugin.
-net-vpn/strongswan:strongswan_plugins_ccm - Enable support for the ccm plugin.
-net-vpn/strongswan:strongswan_plugins_ctr - Enable support for the ctr plugin.
-net-vpn/strongswan:strongswan_plugins_gcm - Enable support for the gcm plugin.
-net-vpn/strongswan:strongswan_plugins_ha - Enable support for the ha plugin.
-net-vpn/strongswan:strongswan_plugins_ipseckey - Enable support for the ipseckey plugin.
-net-vpn/strongswan:strongswan_plugins_led - Enable support for the led plugin.
-net-vpn/strongswan:strongswan_plugins_lookip - Enable support for the lookip plugin.
-net-vpn/strongswan:strongswan_plugins_ntru - Enable support for the ntru plugin.
-net-vpn/strongswan:strongswan_plugins_padlock - Enable support for the padlock plugin.
-net-vpn/strongswan:strongswan_plugins_rdrand - Enable support for the rdrand plugin.
-net-vpn/strongswan:strongswan_plugins_systime-fix - Enable support for the systime-fix plugin.
-net-vpn/strongswan:strongswan_plugins_unbound - Enable support for the unbound plugin.
-net-vpn/strongswan:strongswan_plugins_unity - Enable support for the unity plugin.
-net-vpn/strongswan:strongswan_plugins_vici - Enable support for the vici plugin.
-net-vpn/strongswan:strongswan_plugins_whitelist - Enable support for the whitelist plugin.
+net-vpn/strongswan:pkcs11 - Enable pkcs11 support
+net-vpn/strongswan:strongswan_plugins_blowfish - Enable support for the blowfish plugin
+net-vpn/strongswan:strongswan_plugins_ccm - Enable support for the ccm plugin
+net-vpn/strongswan:strongswan_plugins_ctr - Enable support for the ctr plugin
+net-vpn/strongswan:strongswan_plugins_gcm - Enable support for the gcm plugin
+net-vpn/strongswan:strongswan_plugins_ha - Enable support for the ha plugin
+net-vpn/strongswan:strongswan_plugins_ipseckey - Enable support for the ipseckey plugin
+net-vpn/strongswan:strongswan_plugins_led - Enable support for the led plugin
+net-vpn/strongswan:strongswan_plugins_lookip - Enable support for the lookip plugin
+net-vpn/strongswan:strongswan_plugins_ntru - Enable support for the ntru plugin
+net-vpn/strongswan:strongswan_plugins_padlock - Enable support for the padlock plugin
+net-vpn/strongswan:strongswan_plugins_rdrand - Enable support for the rdrand plugin
+net-vpn/strongswan:strongswan_plugins_systime-fix - Enable support for the systime-fix plugin
+net-vpn/strongswan:strongswan_plugins_unbound - Enable support for the unbound plugin
+net-vpn/strongswan:strongswan_plugins_unity - Enable support for the unity plugin
+net-vpn/strongswan:strongswan_plugins_vici - Enable support for the vici plugin
+net-vpn/strongswan:strongswan_plugins_whitelist - Enable support for the whitelist plugin
 net-vpn/tinc:gui - Add GUI support, using dev-python/wxpython
 net-vpn/tinc:uml - Enable support for User Mode Linux Sockets
 net-vpn/tinc:vde - Enable Virtual Distributed Ethernet (VDE) based networking
@@ -7929,7 +7930,7 @@ sys-devel/llvm:sanitize - Build compiler-rt's sanitizers
 sys-devel/llvm:static-analyzer - Install the Clang static analyzer (requires USE=clang)
 sys-devel/sparse:gtk - Build the test-inspect utility (requires x11-libs/gtk+ version 2)
 sys-devel/sparse:llvm - Build the sparse-llvm utility
-sys-devel/sparse:xml - Build the c2xml utility (requires dev-libs/libxml2).
+sys-devel/sparse:xml - Build the c2xml utility (requires dev-libs/libxml2)
 sys-fabric/ofed:dapl - Add support for DAPL abstraction layer
 sys-fabric/ofed:diags - Add dignostic tools for infiniband
 sys-fabric/ofed:ibacm - Add support for userspace pre-connection services
@@ -7972,8 +7973,8 @@ sys-freebsd/freebsd-sources:build-kernel - Build and install a kernel (recommend
 sys-freebsd/freebsd-sources:dtrace - Enable DTrace support.
 sys-freebsd/freebsd-sources:zfs - Enable ZFS support.
 sys-freebsd/freebsd-ubin:ar - Build FreeBSD's ar and ranlib replacements based on libarchive. The toolchain will still use binutils' version but you can play with it. They have been renamed to freebsd-ar and freebsd-ranlib not to collide with binutils.
-sys-freebsd/freebsd-ubin:audit - Build auditing tools.
-sys-freebsd/freebsd-ubin:netware - Build libraries and tools to work with NetWare protocols (IPX and NCP).
+sys-freebsd/freebsd-ubin:audit - Build auditing tools
+sys-freebsd/freebsd-ubin:netware - Build libraries and tools to work with NetWare protocols (IPX and NCP)
 sys-freebsd/freebsd-ubin:zfs - Enable ZFS support (for fstat actually).
 sys-freebsd/freebsd-usbin:audit - Build auditing tools.
 sys-freebsd/freebsd-usbin:floppy - Enable floppy disk utilities (fdcontrol, fdformat, fdread, fdwrite).
@@ -8144,7 +8145,7 @@ sys-libs/uclibc:wordexp - Add support for word expansion (wordexp.h)
 sys-libs/uclibc-ng:rpc - Enable sun nis/rpc support (you should use libtirpc though)
 sys-libs/uclibc-ng:symlink-compat - Explicitly add sym links for libdl.so.0, libm.so.0, and friends for backward compatibility with sys-libs/uclibc-ng-1.0.17 and earlier
 sys-libs/zlib:minizip - include the minizip library for quick and dirty zip extraction
-sys-power/apcupsd:modbus - enable MODBUS support over USB
+sys-power/apcupsd:modbus - Enable MODBUS support over USB
 sys-power/cpupower:cpufreq_bench - Build and install the cpufreq_bench binary
 sys-power/nut:ipmi - Support IPMI-based UPSes.
 sys-power/nut:ups_drivers_al175 - Driver for Eltek UPS models with AL175 alarm module
@@ -8370,12 +8371,12 @@ www-client/seamonkey:ipc - Use inter-process communication between tabs and plug
 www-client/seamonkey:jemalloc - Enable or disable jemalloc
 www-client/seamonkey:roaming - Build roaming extension support (default on)
 www-client/seamonkey:skia - Enable the SKIA engine for 2D rendering as an alternative to cairo
-www-client/seamonkey:system-cairo - Use the system-wide x11-libs/cairo instead of bundled.
-www-client/seamonkey:system-harfbuzz - Use the system-wide media-libs/harfbuzz instead of bundled.
-www-client/seamonkey:system-icu - Use the sytem-wide dev-libs/icu instead of bundled.
-www-client/seamonkey:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled.
-www-client/seamonkey:system-libevent - Use the system-wide dev-libs/libevent instead of bundled.
-www-client/seamonkey:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
+www-client/seamonkey:system-cairo - Use the system-wide x11-libs/cairo instead of bundled
+www-client/seamonkey:system-harfbuzz - Use the system-wide media-libs/harfbuzz instead of bundled
+www-client/seamonkey:system-icu - Use the sytem-wide dev-libs/icu instead of bundled
+www-client/seamonkey:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled
+www-client/seamonkey:system-libevent - Use the system-wide dev-libs/libevent instead of bundled
+www-client/seamonkey:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled
 www-client/seamonkey:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 www-client/surf:savedconfig - Without a saved config.h, this package depends on net-misc/curl and x11-terms/st for a default download mechanism
 www-client/uget:aria2 - Enable support for net-misc/aria2 through xmlrpc. You'll find the plugin in the app's settings.
