@@ -64,7 +64,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	gles? ( media-libs/mesa[gles2] )
 	lcms? ( media-libs/lcms:2 )
 	libusb? ( virtual/libusb:1 )
-	media-fonts/corefonts
+	virtual/ttf-fonts
 	>=media-fonts/noto-20160531
 	media-fonts/roboto
 	>=media-libs/fontconfig-2.12.4

@@ -29,6 +29,63 @@
 
 #--- END OF EXAMPLES ---
 
+# Sergey Popov <pinkbyte@gentoo.org> (30 Nov 2017)
+# Depends on dead Qt4, no release in two years
+# Masked for removal in 30 days, bug #625110
+dev-util/qfsm
+
+# Andreas Sturmlechner <asturm@gentoo.org> (30 Nov 2017)
+# Still depends on dead kdelibs4/Qt3Support/Qt4, no KF5-based release.
+# Masked for removal in 30 days. Bug #629018
+<=dev-util/kdbg-2.9.1
+
+# Andreas Sturmlechner <asturm@gentoo.org> (30 Nov 2017)
+# Dead upstream, depends on dead kdelibs4/Qt3Support/Qt4.
+# Masked for removal in 30 days. Bug #634324
+games-mud/kmuddy
+
+# Andreas Sturmlechner <asturm@gentoo.org> (30 Nov 2017)
+# Depends on dead kdelibs4/Qt4, no KF5-based release.
+# Masked for removal in 30 days. Bug #629018
+media-gfx/kcoloredit:4
+
+# Andreas Sturmlechner <asturm@gentoo.org> (30 Nov 2017)
+# Dead upstream, depends on dead kdelibs4/Qt3Support/Qt4.
+# Masked for removal in 30 days. Bug #629018
+kde-misc/krcstat
+
+# Andreas Sturmlechner <asturm@gentoo.org> (30 Nov 2017)
+# Dead upstream, depends on dead Qt3Support/Qt4.
+# Masked for removal in 30 days. Bug #639244
+net-dialup/qtwvdialer
+
+# Andreas Sturmlechner <asturm@gentoo.org> (30 Nov 2017)
+# Dead upstream, depends on dead kdelibs4/Qt3Support/Qt4.
+# Masked for removal in 30 days. Bug #629018
+x11-themes/bespin
+
+# Jonas Stein <jstein@gentoo.org> (29 Nov 2017)
+# The old yafaray-0.1.1 depends on qt4 and has bugs we can not fix. 
+# (bug #321169) and (bug #595684)
+# Users of yafaray may be interested in >=yafaray-3.3.0 (bug #639046)
+# and its fork TheBounty (#639158) which require completely new ebuilds.
+# 
+# The old and for now the last version in the tree is 
+# masked for removal on 2018-02-30
+=media-gfx/yafaray-0.1.1
+
+# Michał Górny <mgorny@gentoo.org> (28 Nov 2017)
+# Replaced by split packages. Please install one of:
+# - app-emulation/wine-vanilla (the only choice for stable)
+# - app-emulation/wine-staging
+# - app-emulation/wine-d3d9
+# - app-emulation/wine-any
+# For more information, please read the news item:
+# https://www.gentoo.org/support/news-items/2017-04-10-split-and-slotted-wine.html
+# If you really need the old ebuilds, you can use the 'wine' repository.
+# Removal in 30 days.
+app-emulation/wine
+
 # Jonas Stein <jstein@gentoo.org> (26 Nov 2017)
 # The latest version of this LaTeX package is part of 
 # dev-texlive/texlive-latexextra (bug #421881)
@@ -232,22 +289,6 @@ app-text/jmupdf
 # Upstream abandoned obnam as of the end of the year
 # Masked for removal in 30 days.
 app-backup/obnam
-
-# Andreas Sturmlechner <asturm@gentoo.org> (30 Oct 2017)
-# Requires dead and vulnerable qtwebkit4.
-# Masked for removal in 30 days. Bug #620708
-media-sound/google-musicmanager
-
-# Andreas Sturmlechner <asturm@gentoo.org> (30 Oct 2017)
-# Requires dead and vulnerable qtwebkit4.
-# Masked for removal in 30 days. Bug #620742
-net-voip/vidyodesktop
-
-# Andreas Sturmlechner <asturm@gentoo.org> (29 Oct 2017)
-# Dead upstream, depends on dead kdelibs4/Qt4.
-# Use kde-plasma/plasma-vault or app-crypt/kencfs-plasma instead.
-# Masked for removal in 30 days.
-app-crypt/kencfs
 
 # Mike Gilbert <floppym@gentoo.org> (28 Oct 2017)
 # Tests segfault, bug 635732.
@@ -529,7 +570,7 @@ dev-ruby/poltergeist
 # switch the compiler / the binutils) ASAP. If you need them for a specific
 # (isolated) use case, feel free to unmask them on your system.
 <sys-devel/gcc-4.9
-<sys-libs/glibc-2.23-r4
+<sys-libs/glibc-2.25-r9
 <sys-devel/binutils-2.28.1
 
 # Michał Górny <mgorny@gentoo.org> (20 May 2017)
