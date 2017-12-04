@@ -166,6 +166,7 @@ app-admin/sudo:openssl - Use SHA2 from dev-libs/openssl instead of sudo's intern
 app-admin/sudo:sendmail - Allow sudo to send emails with sendmail
 app-admin/sysklogd:logrotate - use app-admin/logrotate for rotating logs rather than custom cron scripts
 app-admin/syslog-ng:amqp - Enable support for AMQP destinations
+app-admin/syslog-ng:http - Enable support for HTTP destinations
 app-admin/syslog-ng:json - Enable support for JSON template formatting via dev-libs/json-c
 app-admin/syslog-ng:mongodb - Enable support for mongodb destinations
 app-admin/syslog-ng:pacct - Enable support for reading Process Accounting files (EXPERIMENTAL, Linux only)
@@ -3524,7 +3525,6 @@ kde-apps/step:qalculate - Enable the libqalculate library for unit conversion
 kde-frameworks/frameworkintegration:appstream - Enable AppStream software metadata support
 kde-frameworks/kconfigwidgets:man - Build and install man pages
 kde-frameworks/kded:man - Build and install man pages
-kde-frameworks/kdelibs:opengl - Enable OpenGL support for Plasma (GLApplet)
 kde-frameworks/kdelibs:qt3support - Enable kde3support/qt3support for very old applications
 kde-frameworks/kdesignerplugin:designer - Build KF5 widgets plugin for QtDesigner
 kde-frameworks/kdesignerplugin:webkit - Build kdewebkit plugin for QtDesigner
@@ -3671,6 +3671,7 @@ mail-client/nail:kerberos - If network is enabled, this adds support for GSSAPI 
 mail-client/nail:net - Enable support for network protocols (POP, IMAP and SMTP). If you only need to send mail with the local Transport Agent, disabling this will get you support for only /usr/sbin/sendmail call.
 mail-client/nail:ssl - If network is enabled, this adds support for S/MIME and SSL/TLS-powered protocols through dev-libs/openssl.
 mail-client/neomutt:berkdb - Enable BDB (Berkley DB) backend for header caching
+mail-client/neomutt:crypt - Add support for encryption -- using mcrypt or gpg where applicable
 mail-client/neomutt:gdbm - Enable GDBM (GNU dbm) backend for header caching
 mail-client/neomutt:gpg - Enable support for app-crypt/gpgme
 mail-client/neomutt:gpgme - Build gpgme backend to support S/MIME, PGP/MIME and traditional/inline PGP
@@ -4843,6 +4844,7 @@ media-tv/xmltv:uk_bleb - Britain tv listing grabber
 media-tv/xmltv:uk_rt - Britain alternative tv listing grabber
 media-tv/xmltv:uk_tvguide - UK and Ireland tv listing grabber using TV Guide website
 media-tv/xmltv:za - South Africa tv listing grabber
+media-tv/xmltv:zz_sdjson - Grabber for schedulesDirect.org SD-JSON service (many countries)
 media-video/aegisub:uchardet - Enable charset discovery via app-i18n/uchardet
 media-video/aravis:X - Build the GTK+-based video viewer for aravis. This requires GStreamer and a few plugins but technically not the GST plugin for aravis.
 media-video/aravis:gstreamer - Build the GStreamer plugin for aravis, but not the video viewer.
@@ -5878,17 +5880,18 @@ net-irc/unrealircd:showlistmodes - Display channel modes in /LIST (only configur
 net-irc/unrealircd:shunnotices - Enable notifying a user when un-shunned
 net-irc/unrealircd:topicisnuhost - Enable displaying nick!user@host as topic setter
 net-irc/unrealircd:usermod - Enable /set* and /chg* commands
-net-irc/weechat:alias - Enable plugin for alias control.
-net-irc/weechat:buflist - Enable buflist plugin.
-net-irc/weechat:charset - Enable encoding conversions.
-net-irc/weechat:exec - Enable exec plugin.
-net-irc/weechat:fifo - Enable FIFO support (sh pipes).
-net-irc/weechat:irc - Enable IRC protocol support.
-net-irc/weechat:logger - Enable support for logging.
+net-irc/weechat:alias - Enable plugin for alias control
+net-irc/weechat:buflist - Enable buflist plugin
+net-irc/weechat:charset - Enable encoding conversions
+net-irc/weechat:exec - Enable exec plugin
+net-irc/weechat:fifo - Enable FIFO support (sh pipes)
+net-irc/weechat:fset - Enable fast set plugin
+net-irc/weechat:irc - Enable IRC protocol support
+net-irc/weechat:logger - Enable support for logging
 net-irc/weechat:relay - Enable relay plugin (experimental)
-net-irc/weechat:scripts - Build infrastructure for scripting.
-net-irc/weechat:trigger - Enable trigger plugin.
-net-irc/weechat:xfer - Enable xfer plugin support.
+net-irc/weechat:scripts - Build infrastructure for scripting
+net-irc/weechat:trigger - Enable trigger plugin
+net-irc/weechat:xfer - Enable xfer plugin support
 net-irc/znc:daemon - Allow znc to run as a system-wide service. Installs an init script and creates a znc user:group.
 net-irc/znc:zlib - Enable mod_deflate-like gzip support for znc's web interface using sys-libs/zlib.
 net-libs/aqbanking:chipcard - Enable support for DDV/RSA-chipcards
@@ -7531,6 +7534,7 @@ sys-apps/flashrom:wiki - Enable wiki informations, like supported devices etc.
 sys-apps/fwupd:colorhug - Enable ColorHug support through x11-misc/colord package.
 sys-apps/fwupd:dell - Enable Dell-specific support.
 sys-apps/fwupd:elf - Enable libelf support through dev-libs/libelf package.
+sys-apps/fwupd:gpg - Enable GPG support.
 sys-apps/fwupd:man - Build and install man pages
 sys-apps/fwupd:uefi - Enable UEFI support
 sys-apps/fwupd:uefi_labels - Enable UEFI labels support
