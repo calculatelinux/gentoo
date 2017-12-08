@@ -1147,7 +1147,6 @@ app-text/groonga:zeromq - Enable net-libs/zeromq used for suggestion
 app-text/gtranslator:gnome-dictionary - Enable plugin for dictionary lookups using app-dicts/gnome-dictionary.
 app-text/gtranslator:gucharmap - Enable plugin for unicode symbols selection using gnome-extra/gucharmap.
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
-app-text/jmupdf:system-mupdf - Link against system version of app-text/mupdf
 app-text/kbibtex:webengine - Use dev-qt/qtwebengine for HTML previews
 app-text/kbibtex:webkit - Use dev-qt/qtwebkit for HTML previews
 app-text/kbibtex:zotero - Enable support for synchronisation with zotero.org web service
@@ -1800,7 +1799,6 @@ dev-java/icedtea:headless-awt - Don't install the X backend for AWT, needed by s
 dev-java/icedtea:jamvm - Use the JamVM virtual machine rather than HotSpot.
 dev-java/icedtea:jbootstrap - If possible, recompile the final IcedTea executables with itself.
 dev-java/icedtea:nsplugin - Enable browser plugin (NPPlugin), requires also the webstart flag to be enabled.
-dev-java/icedtea:nss - Enable NSS security provider support.
 dev-java/icedtea:pax_kernel - Apply patch needed for pax enabled kernels.
 dev-java/icedtea:shenandoah - Include the Shenandoah ultra-low pause time garbage collector (-XX:+UseShenandoahGC) (x86_64 only)
 dev-java/icedtea:smartcard - Build the PCSC driver against pcsc-lite
@@ -1808,7 +1806,6 @@ dev-java/icedtea:sunec - Build the SunEC provider against system NSS
 dev-java/icedtea:webstart - Enable Web Start support (via NetX).
 dev-java/icedtea:zero - Enable Zero assembler port (usually for non-HotSpot architectures)
 dev-java/icedtea-bin:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
-dev-java/icedtea-bin:nss - Enable NSS security provider support
 dev-java/icedtea-bin:webstart - Provide javaws command through symlink to icedtea-web
 dev-java/icedtea-web:javascript - Enable support for using proxy auto config (PAC) files.
 dev-java/icedtea-web:nsplugin - Enable the browser plugin (NPPlugin).
@@ -5078,6 +5075,8 @@ media-video/vdr:vasarajanauloja - replacement for the liemikuutio patch, adds so
 media-video/vdr:wareagleicon - Replace original icon set in menu
 media-video/vdr:yaepg - Enables support for the vdr-yaepg plugin
 media-video/vlc:X - Enables support for, e.g., fullscreen mode via the X Window System. By itself, this flag does not build a graphical interface.
+media-video/vlc:aom - Enables experimental support for AV1 codec
+media-video/vlc:archive - Enables support for libarchive stream extractor
 media-video/vlc:atmo - Enables support for AtmoLight (homebrew Ambient Lighting Technology)
 media-video/vlc:audioqueue - Enables AudioQueue audio module for Mac OS X.
 media-video/vlc:avcodec - Enables libavcodec support for video/audio encoding/decoding. libavcodec is part of FFmpeg.
@@ -5111,6 +5110,7 @@ media-video/vlc:macosx-qtkit - Enables Mac OS X qtkit module: qtcapture (video) 
 media-video/vlc:macosx-quartztext - Enables Mac OS X quartz text module.
 media-video/vlc:matroska - Enables matroska support using reference libraries (fallback on other existing matroska support if disabled, i.e., matroska enabled FFmpeg)
 media-video/vlc:mpeg - Add libmpeg2 support for mpeg-1 and mpeg-2 video streams
+media-video/vlc:nfs - Enables support for nfs protocol via net-fs/libnfs
 media-video/vlc:omxil - Enables OpenMAX Integration Layer codec module.
 media-video/vlc:opencv - Enabled OpenCV (computer vision) filter module.
 media-video/vlc:optimisememory - Enable optimisation for memory rather than performance.
@@ -7726,6 +7726,7 @@ sys-block/open-iscsi:tcp - Support iSCSI over TCP
 sys-block/parted:debug - Enable debugging as encouraged by upstream: [The default configuration] includes --enable-debug (by default), which contains many assertions. Obviously, these "waste" space, but in the past, they have caught potentially dangerous bugs before they would have done damage, so we think it's worth it. Also, it means we get more bug reports ;)
 sys-block/parted:device-mapper - Enable device-mapper support from sys-fs/lvm2 in parted
 sys-block/partimage:nologin - Do not include login support when connecting partimaged
+sys-block/perccli:efi - Install EFI variant as well
 sys-block/sas2ircu:efi - Install EFI variant as well
 sys-block/sas3flash:efi - Install EFI variant as well
 sys-block/sas3ircu:efi - Install EFI variant as well
@@ -8091,6 +8092,7 @@ sys-kernel/aufs-sources:experimental - Apply experimental patches; for more info
 sys-kernel/aufs-sources:module - Patch kernel to allow aufs being build as a module.
 sys-kernel/aufs-sources:vanilla - Use vanilla kernel sources without applying genpatches. WARNING: This flag will drop all support from the Gentoo Kernel Security team
 sys-kernel/ck-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
+sys-kernel/ck-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 sys-kernel/dracut:debug - Module installing additional tools like strace, file editor, ssh and more
 sys-kernel/genkernel:crypt - Obsolete USE flag. Use cryptsetup for LUKS support. (bug ##414523)
 sys-kernel/genkernel:cryptsetup - Enable support for Luks disk encryption using sys-fs/cryptsetup
@@ -8866,6 +8868,7 @@ xfce-extra/xfce4-playercontrol-plugin:audacious - Enable Audacious support
 xfce-extra/xfce4-playercontrol-plugin:mpd - Enable Music Player Daemon support
 xfce-extra/xfce4-power-manager:panel-plugin - Build the power management plugin for the XFCE panel
 xfce-extra/xfce4-pulseaudio-plugin:keybinder - Enable support for global hotkeys using dev-libs/keybinder.
+xfce-extra/xfce4-pulseaudio-plugin:wnck - Enable experimental support for raising media player windows using x11-libs/libwnck.
 xfce-extra/xfce4-soundmenu-plugin:glyr - Enable music metadata searchengine support using media-libs/glyr
 xfce-extra/xfce4-soundmenu-plugin:keybinder - Enable shortcut support using dev-libs/keybinder
 xfce-extra/xfce4-soundmenu-plugin:lastfm - Enable last.fm support using media-libs/libclastfm
