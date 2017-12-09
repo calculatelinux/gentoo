@@ -166,7 +166,7 @@ RDEPEND="
 		X? ( dev-qt/qtx11extras:5 )
 	)
 	rdp? ( =net-misc/freerdp-1*:0=[client] )
-	samba? ( >=net-fs/samba-4.0.0:0[client] )
+	samba? ( >=net-fs/samba-4.0.0:0[client,-debug(-)] )
 	schroedinger? ( >=media-libs/schroedinger-1.0.10:0 )
 	sdl-image? ( >=media-libs/sdl-image-1.2.10:0 )
 	sftp? ( net-libs/libssh2:0 )
@@ -199,7 +199,7 @@ RDEPEND="
 	)
 	twolame? ( media-sound/twolame:0 )
 	udev? ( virtual/udev:0 )
-	upnp? ( net-libs/libupnp:0 )
+	upnp? ( net-libs/libupnp:= )
 	v4l? ( media-libs/libv4l:0 )
 	vaapi? (
 		x11-libs/libva:0[X,drm]
@@ -250,6 +250,8 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	default
+
+	has_version '>=net-libs/libupnp-1.8.0' && eapply "${FILESDIR}"/${PN}-2.2.8-libupnp-slot-1.8.patch
 
 	# Bootstrap when we are on a git checkout.
 	if [[ ${PV} = *9999 ]] ; then
