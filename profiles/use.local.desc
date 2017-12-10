@@ -1074,6 +1074,7 @@ app-portage/eix:sqlite - Compile in support for portage's sqlite backend; to act
 app-portage/g-sorcery:bson - Support BSON file format for package DB
 app-portage/gemato:blake2 - Install dependencies needed for BLAKE2 hash functions
 app-portage/gemato:gpg - Install dependencies needed for OpenPGP signature verification support
+app-portage/gemato:portage-postsync - Install a Portage hook to verify the repository after fetching via rsync
 app-portage/gemato:sha3 - Install dependencies needed for SHA3 hash functions
 app-portage/layman:bazaar - Support dev-vcs/bzr based overlays
 app-portage/layman:cvs - Support dev-vcs/cvs based overlays
@@ -2651,6 +2652,13 @@ dev-qt/qt-creator:systemd - Add support for retrieving application output from j
 dev-qt/qt-creator:valgrind - Add support for memory debugging using dev-util/valgrind
 dev-qt/qt-creator:webengine - Use dev-qt/qtwebengine to view documentation
 dev-qt/qt-creator:winrt - Build plugin for WinRT devices
+dev-qt/qt-docs:charts - Install documentation for dev-qt/qtcharts
+dev-qt/qt-docs:datavis - Install documentation for dev-qt/qtdatavis3d
+dev-qt/qt-docs:networkauth - Install documentation for dev-qt/qtnetworkauth
+dev-qt/qt-docs:script - Install documentation for dev-qt/qtscript
+dev-qt/qt-docs:speech - Install documentation for dev-qt/qtspeech
+dev-qt/qt-docs:virtualkeyboard - Install documentation for dev-qt/qtvirtualkeyboard
+dev-qt/qt-docs:webengine - Install documentation for dev-qt/qtwebengine
 dev-qt/qt-meta:qt3support - Enable the Qt3Support library for Qt4
 dev-qt/qt3d:gles2 - Use GLES 2.0 or later instead of full OpenGL
 dev-qt/qt3d:qml - Build QML/QtQuick bindings
@@ -3653,14 +3661,18 @@ mail-client/evolution:spamassassin - Build mail-filter/spamassassin plugin
 mail-client/evolution:weather - Enable optional weather calendar support
 mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by mail-client/sylpheed
 mail-client/mutt:berkdb - Enable sys-libs/db database backend for header caching
+mail-client/mutt:crypt - Add support for encryption -- using mcrypt or gpg where applicable
 mail-client/mutt:gdbm - Enable sys-libs/gdbm database backend for header caching
-mail-client/mutt:gpg - Enable support for app-crypt/gpgme to sign/verify and encrypt/decrypt OpenPGP messages
+mail-client/mutt:gpg - Enable support for app-crypt/gpgme
+mail-client/mutt:gpgme - Build gpgme backend to support S/MIME, PGP/MIME and traditional/inline PGP
 mail-client/mutt:hcache - Enable header cache, one database backend needs to be enabled
 mail-client/mutt:lmdb - Enable dev-db/lmdb database backend for header caching
 mail-client/mutt:notmuch - Enable support for net-mail/notmuch
+mail-client/mutt:pgp_classic - Build classic_pgp backend to support PGP/MIME and traditional/inline PGP
 mail-client/mutt:pop - Enable support for POP3 mailboxes
 mail-client/mutt:sidebar - Enable the sidebar feature
-mail-client/mutt:smime - Enable support for S/MIME mailparts
+mail-client/mutt:smime - Enable support for smime
+mail-client/mutt:smime_classic - Build classic_smime backend to support S/MIME
 mail-client/mutt:smtp - Enable support for direct SMTP delivery
 mail-client/mutt:tokyocabinet - Enable dev-db/tokyocabinet database backend for header caching
 mail-client/nail:kerberos - If network is enabled, this adds support for GSSAPI login on IMAP through virtual/krb5.
@@ -4856,7 +4868,7 @@ media-video/dcpomatic:pulseaudio - Utilize pulseaudio output of media-libs/rtaud
 media-video/dv2sub:kino - install kino plugin
 media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/dvdrip:subtitles - Enables support for subtitle ripping
-media-video/ffdiaporama:openclipart - Support openslipart database
+media-video/ffdiaporama:openclipart - Support openclipart database
 media-video/ffdiaporama:texturemate - Install extra backgrounds
 media-video/ffmpeg:amr - Enables Adaptive Multi-Rate Audio support
 media-video/ffmpeg:amrenc - Enables Adaptive Multi-Rate Audio encoding support with media-libs/vo-amrwbenc.
