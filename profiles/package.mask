@@ -29,6 +29,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Patrick Lauer <patrick@gentoo.org> (12 Dec 2017)
+# Unfetchable / wrong checksum #640718
+=dev-libs/nettle-3.4
+
 # Patrice Clement <monsieurp@gentoo.org> (12 Dec 2017)
 # Masked due to a hard dependency on an ancient versions of dev-libs/msgpack
 # (<0.6) that have been punted from the tree.
@@ -381,12 +385,6 @@ media-plugins/vdr-alcd
 # The package is unmaintained. Upstream will not / can not fix this problem.
 # See also bug #624046. Masked for removal on 2017-12-12
 sci-geosciences/gmapcatcher
-
-# Brian Evans <grknight@gentoo.org> (07 Nov 2017)
-# Remote service removed this method, dead upstream
-# Masked for removal in 30 days.
-# Bug 636796
-dev-php/PEAR-Services_W3C_HTMLValidator
 
 # Mike Gilbert <floppym@gentoo.org> (05 Nov 2017)
 # Breaks several reverse dependencies.
