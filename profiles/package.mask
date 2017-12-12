@@ -29,6 +29,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Patrice Clement <monsieurp@gentoo.org> (12 Dec 2017)
+# Masked due to a hard dependency on an ancient versions of dev-libs/msgpack
+# (<0.6) that have been punted from the tree.
+net-misc/cocaine-core
+
 # Jonas Stein <jstein@gentoo.org> (10 Dec 2017)
 # Site blocks certain IP blocks from downloading files, while the package
 # may not be mirrored. (bug #640508)
@@ -382,12 +387,6 @@ sci-geosciences/gmapcatcher
 # Masked for removal in 30 days.
 # Bug 636796
 dev-php/PEAR-Services_W3C_HTMLValidator
-
-# Brian Evans <grknight@gentoo.org> (06 Nov 2017)
-# Broken with new PHP, dead upstream, broken tests
-# Masked for removal in 30 days.
-# Bug 636742
-dev-php/PEAR-HTTP_Download
 
 # Mike Gilbert <floppym@gentoo.org> (05 Nov 2017)
 # Breaks several reverse dependencies.
