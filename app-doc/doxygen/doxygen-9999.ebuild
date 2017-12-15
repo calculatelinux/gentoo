@@ -4,7 +4,7 @@
 EAPI=6
 PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} )
 
-inherit cmake-utils eutils fdo-mime flag-o-matic python-any-r1
+inherit cmake-utils eutils python-any-r1
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/doxygen/doxygen.git"
@@ -34,10 +34,17 @@ RDEPEND="app-text/ghostscript-gpl
 		media-libs/freetype
 	)
 	doxysearch? ( =dev-libs/xapian-1.2* )
-	latex? ( app-text/texlive[extra] )
+	latex? (
+		dev-texlive/texlive-bibtexextra
+		dev-texlive/texlive-fontsextra
+		dev-texlive/texlive-fontutils
+		dev-texlive/texlive-latex
+		dev-texlive/texlive-latexextra
+	)
 	qt5? (
 		dev-qt/qtgui:5
 		dev-qt/qtwidgets:5
+		dev-qt/qtxml:5
 	)
 	sqlite? ( dev-db/sqlite:3 )
 	"
@@ -118,30 +125,4 @@ src_compile() {
 
 src_install() {
 	cmake-utils_src_install
-
-	if use qt5; then
-		doicon "${DISTDIR}/doxywizard.png"
-		make_desktop_entry doxywizard "DoxyWizard ${PV}" \
-			"/usr/share/pixmaps/doxywizard.png" \
-			"Development"
-	fi
-}
-
-pkg_postinst() {
-	fdo-mime_desktop_database_update
-
-	elog
-	elog "For examples and other goodies, see the source tarball. For some"
-	elog "example output, run doxygen on the doxygen source using the"
-	elog "Doxyfile provided in the top-level source dir."
-	elog
-	elog "Disabling the dot USE flag will remove the GraphViz dependency,"
-	elog "along with Doxygen's ability to generate diagrams in the docs."
-	elog "See the Doxygen homepage for additional helper tools to parse"
-	elog "more languages."
-	elog
-}
-
-pkg_postrm() {
-	fdo-mime_desktop_database_update
 }
