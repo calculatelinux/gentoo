@@ -2551,6 +2551,7 @@ dev-python/pygame:midi - Enable midi support using media-libs/portmidi
 dev-python/pygpu:cuda - Enable NVIDIA CUDA toolkit support
 dev-python/pygpu:opencl - Enable OpenCL support
 dev-python/pyhamcrest:numpy - Enable optional dependence on dev-python/numpy
+dev-python/pyilmbase:numpy - Add bindings for dev-python/numpy use.
 dev-python/pyocr:cuneiform - Enable support for the app-text/cuneiform OCR engine
 dev-python/pyocr:tesseract - Enable support for the app-text/tesseract OCR engine
 dev-python/pypax:ptpax - Enable PT_PAX_FLAGS support.
@@ -2884,7 +2885,6 @@ dev-util/diffoscope:zip - Use app-arch/unzip
 dev-util/edb-debugger:graphviz - Add support for the Graphviz library
 dev-util/edb-debugger:legacy-mem-write - Probe if writes to /proc/PID/mem are broken.
 dev-util/edb-debugger:pax_kernel - Enable building under a PaX enabled kernel
-dev-util/electron:hidpi - Enable support for high-resolution screens (high dots per inch)
 dev-util/electron:lto - Build with link time optimization enabled
 dev-util/electron:pic - Disable optimized assembly code that is not PIC friendly
 dev-util/electron:proprietary-codecs - Enable proprietary codecs like H.264, MP3
@@ -2926,10 +2926,8 @@ dev-util/intel-ocl-sdk:system-qt - Use system Qt (sys-devel-qtcore, sys-devel/qt
 dev-util/intel-ocl-sdk:system-tbb - Use sytem Thread Building Blocks (dev-cpp/tbb) instead of bundled one
 dev-util/intel-ocl-sdk:tools - Install Intel Offline Compiler
 dev-util/kdevelop:gdbui - Enable GUI for attaching GDB to a running process
-dev-util/kdevelop:ninja - Enable support for Ninja build system
 dev-util/kdevelop:okteta - Enable hex editor plugin via kde-apps/okteta
 dev-util/kdevelop:qmake - Enable support for QMake build system
-dev-util/kdevelop:qthelp - Enable support for QtHelp documentation browsing
 dev-util/kdevelop:reviewboard - Enable reviewboard support
 dev-util/kdevelop:webkit - Enable deprecated dev-qt/qtwebkit instead of dev-qt/qtwebengine for integrated documentation
 dev-util/kdevelop:welcomepage - Enable welcome page, requires dev-qt/qtdeclarative
@@ -2955,7 +2953,6 @@ dev-util/perf:numa - Enable NUMA support
 dev-util/perf:perl - Add support for Perl as a scripting language for perf tools.
 dev-util/perf:unwind - Use sys-libs/libunwind for frame unwinding support.
 dev-util/pkgconf:pkg-config - Install as a replacement for dev-util/pkgconfig
-dev-util/pkgconf:strict - Adhere to POSIX pkg-config specification. Useful for finding uses of non-standard pkg-config invocations
 dev-util/pkgconfig:internal-glib - Use internal copy of dev-libs/glib
 dev-util/pkgconfig-openbsd:pkg-config - Install as a replacement for dev-util/pkgconfig
 dev-util/radare2:system-capstone - Use dev-libs/capstone instead of bundled copy.
@@ -3928,6 +3925,11 @@ media-fonts/unifont:fontforge - Use media-gfx/fontforge to build fonts from sour
 media-fonts/unifont:utils - Install unifont utilities
 media-gfx/album:plugins - Install optional plugins
 media-gfx/album:themes - Install optional themes
+media-gfx/alembic:boost - Use dev-libs/boost library
+media-gfx/alembic:hdf5 - Add support sci-libs/hdf5
+media-gfx/alembic:pyalembic - Build pyalembic python bindings (needs dev-python/pyilmbase)
+media-gfx/alembic:test - Build and run the test-suite
+media-gfx/alembic:zlib - Use sys-libs/zlib for compressions
 media-gfx/apngasm:7z - Enable support for 7zip compression
 media-gfx/apngasm:zopfli - Enable support for Zopfli compression
 media-gfx/asymptote:boehm-gc - Enables using the Boehm-Demers-Weiser conservative garbage collector
@@ -7658,10 +7660,10 @@ sys-apps/superiotool:pci - Support for PCI-attached "Super I/Os" (e.g. in VIA VT
 sys-apps/systemd:apparmor - Enable AppArmor support
 sys-apps/systemd:audit - Enable support for sys-process/audit
 sys-apps/systemd:cryptsetup - Enable cryptsetup tools (includes unit generator for crypttab)
-sys-apps/systemd:curl - Enable support for uploading journals; required to build systemd-import/systemd-pull
+sys-apps/systemd:curl - Enable support for uploading journals
 sys-apps/systemd:doc - Generate systemd.index.7 and systemd.directives.7
 sys-apps/systemd:elfutils - Enable coredump stacktraces in the journal
-sys-apps/systemd:gcrypt - Enable sealing of journal files using gcrypt; required to build systemd-import/systemd-pull
+sys-apps/systemd:gcrypt - Enable sealing of journal files using gcrypt
 sys-apps/systemd:gnuefi - Enable EFI boot manager and stub loader (built using sys-boot/gnu-efi)
 sys-apps/systemd:http - Enable embedded HTTP server in journald
 sys-apps/systemd:importd - Enable import daemon
@@ -8154,7 +8156,7 @@ sys-libs/glibc:compile-locales - build *all* locales in src_install; this is gen
 sys-libs/glibc:debug - When USE=hardened, allow fortify/stack violations to dump core (SIGABRT) and not kill self (SIGKILL)
 sys-libs/glibc:gd - build memusage and memusagestat tools
 sys-libs/glibc:nscd - Build, and enable support for, the Name Service Cache Daemon
-sys-libs/glibc:rpc - Enable obsolete RPC/NIS layers (disabling is experimental -- see bug 381391)
+sys-libs/glibc:rpc - Enable obsolete RPC/NIS layers
 sys-libs/glibc:suid - Make internal pt_chown helper setuid -- not needed if using Linux and have /dev/pts mounted with gid=5
 sys-libs/glibc:systemtap - enable systemtap static probe points
 sys-libs/gwenhywfar:fox - Use x11-libs/fox graphical toolkit

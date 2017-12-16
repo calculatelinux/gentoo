@@ -33,7 +33,9 @@ ERROR_DEBUG_FS="${PN} works best with support for Debug Filesystem (DEBUG_FS) - 
 
 DOCS="AUTHORS HACKING NEWS README"
 
-PATCHES=("${FILESDIR}"/${PN}-3.1-ia64.patch)
+PATCHES=(
+	"${FILESDIR}"/${PN}-3.1-ia64.patch
+)
 
 pkg_setup() {
 	linux-info_pkg_setup
@@ -49,7 +51,6 @@ src_prepare() {
 		Makefile.am \
 		staprun/Makefile.am \
 		stapdyn/Makefile.am \
-		buildrun.cxx \
 		testsuite/systemtap.unprivileged/unprivileged_probes.exp \
 		testsuite/systemtap.unprivileged/unprivileged_myproc.exp \
 		testsuite/systemtap.base/stmt_rel_user.exp \
