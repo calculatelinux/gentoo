@@ -221,6 +221,7 @@ app-arch/pigz:symlink - Install symlinks which override app-arch/gzip implementa
 app-arch/rar:all_sfx - Install all SFX (Self-Extracting) files rather than just the native format (allows creation of Windows EXEs on Linux ELF systems)
 app-arch/tar:minimal - just install `tar`
 app-arch/unzip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii file names archived in Windows.
+app-arch/xz-utils:extra-filters - Build additional filters that are not used in any of the default xz presets. This includes delta and BCJ coders, additional match finders and SHA256 checks.
 app-arch/zip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii file names archived in Windows.
 app-backup/amanda:ndmp - Support for the NDMP protocol
 app-backup/amanda:s3 - Support for backing up to the Amazon S3 system
@@ -1826,12 +1827,18 @@ dev-java/lucene:contrib - Include extra functionality from contrib/
 dev-java/miglayout:swt - Add support for the SWT toolkit.
 dev-java/oracle-jdk-bin:commercial - Install features requiring a commercial license for production use
 dev-java/oracle-jdk-bin:derby - Install bundled Derby (Java database)
+dev-java/oracle-jdk-bin:gentoo-vm - Allow this JDK to be recognised by Gentoo (package manager, eselect, java-config, EXPERIMENTAL!)
+dev-java/oracle-jdk-bin:gtk2 - Enable GTK+ 2 support in JavaFX
+dev-java/oracle-jdk-bin:gtk3 - Enable GTK+ 3 support in JavaFX
 dev-java/oracle-jdk-bin:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
 dev-java/oracle-jdk-bin:javafx - Install JavaFX libraries
 dev-java/oracle-jdk-bin:jce - Install Java Cryptographic Extension Unlimited Strength Jurisdiction Policy Files
 dev-java/oracle-jdk-bin:source - Install JVM (and optionally JavaFX) sources
 dev-java/oracle-jdk-bin:visualvm - Install VisualVM debugging tool
 dev-java/oracle-jre-bin:commercial - Install features requiring a commercial license for production use
+dev-java/oracle-jre-bin:gentoo-vm - Allow this JRE to be recognised by Gentoo (package manager, eselect, java-config, EXPERIMENTAL!)
+dev-java/oracle-jre-bin:gtk2 - Enable GTK+ 2 support in JavaFX
+dev-java/oracle-jre-bin:gtk3 - Enable GTK+ 3 support in JavaFX
 dev-java/oracle-jre-bin:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
 dev-java/oracle-jre-bin:javafx - Install JavaFX libraries
 dev-java/oracle-jre-bin:jce - Install Java Cryptographic Extension Unlimited Strength Jurisdiction Policy Files
@@ -3653,7 +3660,6 @@ mail-client/claws-mail:smime - Build plugin for S/MIME support
 mail-client/claws-mail:spam-report - Enable plugin for spam reporting to various services
 mail-client/claws-mail:spamassassin - Build mail-filter/spamassassin plugin
 mail-client/claws-mail:valgrind - Add support for memory debugging using valgrind
-mail-client/claws-mail:webkit - Enables HTML e-mail rendering by using the net-libs/webkit-gtk library.
 mail-client/evolution:archive - Enable archives support in attachments via app-arch/gnome-autoar
 mail-client/evolution:bogofilter - Build mail-filter/bogofilter plugin
 mail-client/evolution:crypt - Enable GPG encryption support using app-crypt/gnupg and app-crypt/pinentry
@@ -4805,6 +4811,7 @@ media-tv/tvbrowser:themes - Install extra theme packs
 media-tv/tvheadend:capmt - Enable support for capmt (dvbapi) protocol
 media-tv/tvheadend:constcw - Enable support for the constcw protocol
 media-tv/tvheadend:cwc - Enable support for the cwc (newcamd) protocol
+media-tv/tvheadend:ddci - Enable support for DDCI hardware
 media-tv/tvheadend:dvbcsa - Enable decryption of the DVB Common Scrambling Algorithm
 media-tv/tvheadend:dvben50221 - Enable support for hardware CAM
 media-tv/tvheadend:hdhomerun - Enable support for the HDHomeRun device
@@ -5493,6 +5500,7 @@ net-dns/dnsmasq:id - Whether report *.bind CHAOS info to clients, otherwise forw
 net-dns/dnsmasq:libidn2 - Enable support for Internationalized Domain Names, via net-dns/libidn2 rather than net-dns/libidn
 net-dns/dnsmasq:script - Enable support for calling scripts when leases change.
 net-dns/dnsmasq:tftp - Enables built in TFTP server for netbooting.
+net-dns/dnssec-validator:ecdsa-check - Requires openssl[-bindist]
 net-dns/hash-slinger:ipsec - Enable support for IPSECKEY records (ipseckey)
 net-dns/hash-slinger:openpgp - Enable support for OPENPGPKEY records (openpgpkey)
 net-dns/hash-slinger:ssh - Enable support for SSHFP records (sshfp)
@@ -7673,7 +7681,7 @@ sys-apps/systemd:lz4 - Enable lz4 compression for the journal
 sys-apps/systemd:nat - Enable support for network address translation in networkd
 sys-apps/systemd:qrcode - Enable qrcode output support in journal
 sys-apps/systemd:sysv-utils - Install sysvinit compatibility symlinks and manpages for init, telinit, halt, poweroff, reboot, runlevel, and shutdown
-sys-apps/systemd:usrmerge - Enable /usr merge
+sys-apps/systemd:usrmerge - Enable /usr merge (experimental)
 sys-apps/systemd:vanilla - Disable Gentoo-specific behavior and compatibility quirks
 sys-apps/systemd:xkb - Depend on x11-libs/libxkbcommon to allow logind to control the X11 keymap
 sys-apps/tcp-wrappers:netgroups - Support matching NIS (host) netgroup names via the @netgroup syntax (if you don't know what this means, you most likely do not need it)

@@ -202,6 +202,7 @@ multilib_src_configure() {
 		-Dbashcompletiondir="$(get_bashcompdir)"
 		# make sure we get /bin:/sbin in PATH
 		-Dsplit-usr=$(usex usrmerge false true)
+		-Drootprefix="$(usex usrmerge "${EPREFIX}/usr" "${EPREFIX:-/}")"
 		-Dsysvinit-path=
 		-Dsysvrcnd-path=
 		# no deps
@@ -216,7 +217,7 @@ multilib_src_configure() {
 		-Delfutils=$(meson_multilib_native_use elfutils)
 		-Dgcrypt=$(meson_use gcrypt)
 		-Dgnu-efi=$(meson_multilib_native_use gnuefi)
-		-Defi-libdir="/usr/$(get_libdir)"
+		-Defi-libdir="${EPREFIX}/usr/$(get_libdir)"
 		-Dmicrohttpd=$(meson_multilib_native_use http)
 		$(usex http -Dgnutls=$(meson_multilib_native_use ssl) -Dgnutls=false)
 		-Dimportd=$(meson_multilib_native_use importd)
@@ -328,7 +329,10 @@ multilib_src_install_all() {
 	rm -fr "${ED%/}"/etc/systemd/system/sockets.target.wants || die
 	rm -fr "${ED%/}"/etc/systemd/system/sysinit.target.wants || die
 
-	rm -r "${ED%/}"/lib/udev/hwdb.d || die
+	local udevdir=/lib/udev
+	use usrmerge && udevdir=/usr/lib/udev
+
+	rm -r "${ED%/}${udevdir}/hwdb.d" || die
 
 	if ! use usrmerge; then
 		# Avoid breaking boot/reboot
