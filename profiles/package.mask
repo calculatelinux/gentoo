@@ -29,9 +29,10 @@
 
 #--- END OF EXAMPLES ---
 
-# Andreas Sturmlechner <asturm@gentoo.org> (18 Dec 2017)
-# Masked for testing. Bug 621818
-=net-misc/teamviewer-13.0.5693
+# Andreas Sturmlechner <asturm@gentoo.org> (19 Dec 2017)
+# Dead upstream, depends on dead qt3support/qt4.
+# Bug #639246. Masked for removal in 30 days.
+app-i18n/kimera
 
 # James Le Cuirot <chewi@gentoo.org> (17 Dec 2017)
 # Java 9 is not yet fully supported on Gentoo. Packages cannot depend
@@ -400,19 +401,9 @@ sci-mathematics/qtoctave
 dev-qt/qtwebkit:4
 
 # Andreas Sturmlechner <asturm@gentoo.org> (16 Nov 2017)
-# Depends on dead Qt4WebKit. Masked for removal in 30 days. Bug #620826
-<app-misc/anki-2.1
-
-# Andreas Sturmlechner <asturm@gentoo.org> (16 Nov 2017)
 # Depends on dead Qt4WebKit. Masked for removal in 30 days. Bug #620702
 <media-gfx/freecad-0.17
 =media-gfx/freecad-9999
-
-# Andreas Sturmlechner <asturm@gentoo.org> (16 Nov 2017)
-# Depends on dead Qt4WebKit. Masked for removal in 30 days. Bug #620736
-=net-misc/teamviewer-10*
-=net-misc/teamviewer-11*
-=net-misc/teamviewer-12*
 
 # Anthony G. Basile <blueness@gentoo.org> (13 Nov 2017)
 # Masked for removal in 30 days. Deprecated in favor of net-misc/nyx.
@@ -757,12 +748,6 @@ net-wireless/cpyrit-cuda
 # Drop mask after migration of existing wxGTK:3.0 users
 # and wxGTK-3.0.3 bump in tree
 >=net-ftp/filezilla-3.25.2-r1
-
-# Zac Medico <zmedico@gentoo.org> (01 May 2017)
-# Possible API incompatibilities, bug #617174.
-# http://aiohttp.readthedocs.io/en/latest/migration.html
->=dev-python/aiohttp-2
->=dev-python/yarl-0.10
 
 # Rick Farina <zerochaos@gentoo.org> (17 Apr 2017)
 # Masking old versions because upstream changed versioning
