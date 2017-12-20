@@ -17,12 +17,12 @@ HOMEPAGE="http://postgis.net"
 SRC_URI="http://download.osgeo.org/postgis/source/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="address-standardizer doc gtk static-libs mapbox test topology"
 
 RDEPEND="
 	${POSTGRES_DEP}
-	dev-libs/json-c
+	dev-libs/json-c:=
 	dev-libs/libxml2:2
 	>=sci-libs/geos-3.5.0
 	>=sci-libs/proj-4.6.0
