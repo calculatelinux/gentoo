@@ -729,6 +729,18 @@
     <url>https://wiki.gentoo.org/wiki/Project:Cron</url>
     <description>The Gentoo Cron Project maintains cron-related packages.</description>
     <member>
+      <email>blueness@gentoo.org</email>
+      <name>Anthony G. Basile</name>
+    </member>
+    <member>
+      <email>monsieurp@gentoo.org</email>
+      <name>Patrice Clement</name>
+    </member>
+    <member>
+      <email>perfinion@gentoo.org</email>
+      <name>Jason Zaman</name>
+    </member>
+    <member>
       <email>vapier@gentoo.org</email>
       <name>Mike Frysinger</name>
     </member>
@@ -737,7 +749,11 @@
     <email>crossdev@gentoo.org</email>
     <name>Gentoo Crossdev maintainers</name>
     <url>https://wiki.gentoo.org/wiki/Project:Crossdev</url>
-    <description>Subproject of toolchain for advanced wizards</description>
+    <description>Crossdev is a small wrapper script around emerge to build cross-toolchains.</description>
+    <member>
+      <email>slyfox@gentoo.org</email>
+      <name>Sergei Trofimovich</name>
+    </member>
     <member>
       <email>vapier@gentoo.org</email>
       <name>Mike Frysinger</name>
@@ -1804,11 +1820,6 @@
       <name>Marc Schiffbauer</name>
       <role>Developer</role>
     </member>
-    <member>
-      <email>scarabeus@gentoo.org</email>
-      <name>Tomáš Chvátal</name>
-      <role>Developer</role>
-    </member>
   </project>
   <project>
     <email>kerberos@gentoo.org</email>
@@ -2373,11 +2384,6 @@ developers and volunteer mentors.</description>
       <name>Andreas K. Hüttel</name>
       <role>member</role>
     </member>
-    <member>
-      <email>scarabeus@gentoo.org</email>
-      <name>Tomáš Chvátal</name>
-      <role>member</role>
-    </member>
   </project>
   <project>
     <email>openrc@gentoo.org</email>
@@ -2906,6 +2912,11 @@ developers and volunteer mentors.</description>
     <member>
       <email>asturm@gentoo.org</email>
       <name>Andreas Sturmlechner</name>
+      <role>Member</role>
+    </member>
+    <member>
+      <email>candrews@gentoo.org</email>
+      <name>Craig Andrews</name>
       <role>Member</role>
     </member>
     <member>
@@ -3547,11 +3558,6 @@ developers and volunteer mentors.</description>
     <member>
       <email>miska@gentoo.org</email>
       <name>Michal Hrušecký</name>
-      <role>Updates, Documentation</role>
-    </member>
-    <member>
-      <email>scarabeus@gentoo.org</email>
-      <name>Tomáš Chvátal</name>
       <role>Updates, Documentation</role>
     </member>
   </project>
