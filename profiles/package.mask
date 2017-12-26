@@ -29,6 +29,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (25 Dec 2017)
+# Provided (and blocked) by app-text/texlive-core
+# Removal in 30 days; bug 628820
+app-text/dvibook
+app-text/dvipdfm
+app-text/dvipdfmx
+app-text/xdvipdfmx
+
+# Andreas Sturmlechner <asturm@gentoo.org> (25 Dec 2017)
+# Masked for testing
+=dev-db/tora-3.2
+
 # Thomas Beierlein <tomjbe@gentoo.org> (23 Dec 2017)
 # To adapt to changed version naming by upstream 
 # (pcb-yyyymmdd to pcb-x.y.z) we move the ebuild to

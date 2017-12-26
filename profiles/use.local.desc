@@ -3955,10 +3955,12 @@ media-gfx/blender:jemalloc - Use dev-libs/jemalloc for memory allocation.
 media-gfx/blender:llvm - Enable features depending on llvm.
 media-gfx/blender:man - Build and install man pages.
 media-gfx/blender:ndof - Enable NDOF input devices (SpaceNavigator and friends).
+media-gfx/blender:opencl - Allow OpenCL Graphics Acceleration. This may require extra graphics card drivers.
 media-gfx/blender:openimageio - Enable OpenImageIO Support
 media-gfx/blender:opennl - Enable use of Open Numerical Library
 media-gfx/blender:opensubdiv - Add rendering support form OpenSubdiv from Dreamworks Animation through media-libs/opensubdiv.
 media-gfx/blender:openvdb - Add GPU preview rendering. Only works with nVidia cards.
+media-gfx/blender:osl - Add support for OpenShadingLanguage scripting.
 media-gfx/blender:player - Build the Blender Player. THis requires the Game engine.
 media-gfx/blender:redcode - This flag add support for RED CODE camera digital format (5K HD images *.r3d) - EXPERIMENTAL.
 media-gfx/blender:test - Build the provided unit tests.
@@ -4175,6 +4177,7 @@ media-libs/libcanberra:gtk3 - Enables building of gtk+3 helper library, gtk+3 ru
 media-libs/libcanberra:pulseaudio - Enables PulseAudio sound driver that should be able to support positional event sounds. This is the preferred choice for best sound events experience and picked by default if compiled in and possible to use at runtime.
 media-libs/libcanberra:sound - Install x11-themes/sound-theme-freedesktop to get sounds on Gnome and Xfce.
 media-libs/libcanberra:tdb - Enables Trivial Database support for caching purposes.
+media-libs/libextractor:apparmor - Enable apparmor support using sys-libs/libapparmor
 media-libs/libextractor:archive - Enable archive support using app-arch/libarchive
 media-libs/libextractor:gsf - Enable OLE2 (MS Office) plug-in support using gnome-extra/libgsf
 media-libs/libextractor:magic - Enable magic support using sys-apps/file
@@ -6140,6 +6143,7 @@ net-mail/cyrus-imapd:sieve - Enable sieve support
 net-mail/cyrus-imapd:sphinx - Enable Sphinx search engine support
 net-mail/cyrus-imapd:xapian - Enable Xapian search engine support
 net-mail/dbmail:sieve - Enable sieve filter support
+net-mail/dovecot:argon2 - Add support for ARGON2 password schemes
 net-mail/dovecot:cydir - Add cydir storage support
 net-mail/dovecot:imapc - Add imap client storage support
 net-mail/dovecot:lucene - Add lucene full text search (FTS) support using dev-cpp/clucene
@@ -6556,7 +6560,6 @@ net-misc/rdesktop:xrandr - Enable XRandR window extension support
 net-misc/remmina:spice - Support connecting to SPICE-enabled virtual machines
 net-misc/remmina:ssh - Enable support for SSH/SFTP protocol; see also 'vte'
 net-misc/remmina:telepathy - Enable telepathy support
-net-misc/remmina:webkit - Enable a user survey using net-libs/webkit-gtk
 net-misc/rsync:stunnel - Provide helper scripts for using rsync via >=net-misc/stunnel-4
 net-misc/rygel:tracker - Install dependencies for the tracker plugin
 net-misc/rygel:transcode - Install dependencies for transcoding support
