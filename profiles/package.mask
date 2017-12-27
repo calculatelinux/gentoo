@@ -29,6 +29,27 @@
 
 #--- END OF EXAMPLES ---
 
+# Alice Ferrazzi <alicef@gentoo.org> (27 Dec 2017)
+# Masked for removal in 30 days.
+# There are issue on this kernel version due to a heavy changeset.
+# (bug #642268)
+=sys-kernel/gentoo-sources-4.14.9
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (27 Dec 2017)
+# Ancient. EAPI=3. (Nearly) no consumers. Needs to go.
+# Removal in 30 days.
+dev-lang/swig:1
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (27 Dec 2017)
+# Last remaining consumer of dev-lang/swig:1, which needs
+# to go the way of the dinosaur. Removal in 30 days.
+dev-python/apse
+
+# Matthias Maier <tamiko@gentoo.org> (26 Dec 2017)
+# gcc depends on mpfr and this version changes soname. Spare users with
+# FEATURES=-preserve-libs from completely frying their system.
+>=dev-libs/mpfr-4.0.0
+
 # Andreas K. Hüttel <dilfridge@gentoo.org> (25 Dec 2017)
 # Provided (and blocked) by app-text/texlive-core
 # Removal in 30 days; bug 628820
