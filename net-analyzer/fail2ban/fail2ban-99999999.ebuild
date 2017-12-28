@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-PYTHON_COMPAT=( python{2_7,3_4,3_5} pypy )
+PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} pypy )
 DISTUTILS_SINGLE_IMPL=1
 
 inherit distutils-r1 eutils systemd git-r3
@@ -59,6 +59,8 @@ python_install_all() {
 	newconfd files/gentoo-confd ${PN}
 	newinitd files/gentoo-initd ${PN}
 	systemd_dounit files/${PN}.service
+	sed -e "s:@BINDIR@:${EPREFIX}/usr/bin:g" files/${PN}.service.in > "${T}"/${PN}.service || die
+	systemd_dounit "${T}"/${PN}.service
 	systemd_dotmpfilesd files/${PN}-tmpfiles.conf
 	doman man/*.{1,5}
 
