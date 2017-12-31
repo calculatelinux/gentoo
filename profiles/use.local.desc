@@ -1113,6 +1113,7 @@ app-text/blogc:git - Build blogc-git-receiver tool
 app-text/blogc:httpd - Build blogc-runserver tool
 app-text/blogc:make - Build blogc-make tool
 app-text/cb2bib:webengine - Use dev-qt/qtwebengine instead of dev-qt/qtwebkit
+app-text/coolreader:wxwidgets - Use x11-libs/wxGTK instead of Qt5
 app-text/crm114:mew - Add support for using the mewdecode mime decoder (app-emacs/mew)
 app-text/crm114:mimencode - Add support for using the mimencode mime (net-mail/metamail)
 app-text/crm114:normalizemime - Add support for using the normalizemime (mail-filter/normalizemime)
@@ -3437,7 +3438,6 @@ kde-apps/akonadi:tools - Install tools for developers and testing
 kde-apps/analitza:eigen - Enable dev-cpp/eigen mathematical templates support
 kde-apps/ark:zip - Enable ZIP archive support via dev-libs/libzip
 kde-apps/artikulate:qtmedia - Enable playback via Qt5Multimedia
-kde-apps/blogilo:google - Google service integration via kde-apps/libkgapi
 kde-apps/cantor:R - Enable dev-lang/R backend support
 kde-apps/cantor:analitza - Enable kde-apps/analitza backend support
 kde-apps/cantor:julia - Enable dev-lang/julia backend support
@@ -3450,7 +3450,6 @@ kde-apps/dolphin-plugins:mercurial - Enable support for the mercurial VCS
 kde-apps/gwenview:fits - Enable support for NASA's sci-libs/cfitsio library
 kde-apps/gwenview:kipi - Support for the KDE Image Plugin Interface
 kde-apps/k3b:emovix - Enable burning support for eMoviX images
-kde-apps/kaccessible:speechd - Enable support for the speech-dispatcher speech synthesizer
 kde-apps/kalzium:editor - Enable the embedded molecule editor/viewer
 kde-apps/kalzium:solver - Enable the equation solver
 kde-apps/kanagram:speech - Enable text-to-speech support
@@ -4891,6 +4890,7 @@ media-video/ffdiaporama:openclipart - Support openclipart database
 media-video/ffdiaporama:texturemate - Install extra backgrounds
 media-video/ffmpeg:amr - Enables Adaptive Multi-Rate Audio support
 media-video/ffmpeg:amrenc - Enables Adaptive Multi-Rate Audio encoding support with media-libs/vo-amrwbenc.
+media-video/ffmpeg:appkit - Enables Apple AppKit framework
 media-video/ffmpeg:armv5te - Enables optimizations for armv5te processors.
 media-video/ffmpeg:armv6 - Enables optimizations for armv6 processors.
 media-video/ffmpeg:armv6t2 - Enables optimizations for armv6t2 processors.
@@ -5169,6 +5169,11 @@ media-video/vlc:x265 - Support X265 Encoder.
 media-video/vlc:xcb - Support the X C-language Binding, a replacement for Xlib; !!! you will need this option to be able to integrate video in the Qt interface, see bug #500678.
 media-video/vlc:zeroconf - Enables support for zero-configuration networking via avahi.
 media-video/vlc:zvbi - Enables support for teletext subtitles via the zvbi library.
+media-video/webcamoid:headers - Install development headers
+media-video/webcamoid:libuvc - Build with libuvc support
+media-video/webcamoid:qtaudio - Enable audio capture/play via dev-qt/qtmultimedia
+media-video/webcamoid:v4lutils - Build with V4L-utils support
+media-video/webcamoid:videoeffects - Build video effects
 media-video/x264-encoder:10bit - Set output bit depth to 10
 media-video/x264-encoder:avs - enable AvxSynth support in the AviSynth input module
 media-video/x264-encoder:ffmpegsource - Enable ffmpegsource aka ffms support, disables lavf
