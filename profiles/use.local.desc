@@ -3249,7 +3249,6 @@ games-mud/tf:atcp - enable ATCP support.
 games-mud/tf:gmcp - enable GMCP support.
 games-mud/tf:option102 - enable telnet option 102 support.
 games-puzzle/cuyo:music - Enable playing of background music
-games-puzzle/jag:editor - Install level editor
 games-puzzle/nightsky:bundled-libs - Use the upstream provided bundled libraries.
 games-puzzle/numptyphysics:user-levels - Install some fun user-created levels
 games-puzzle/pingus:music - Enable playing of background music
@@ -3999,6 +3998,7 @@ media-gfx/freewrl:libeai - Build EAI C library
 media-gfx/freewrl:opencl - Enable OpenCL support
 media-gfx/freewrl:osc - Allows for OSC-based control and communication between multiple freewrl instances
 media-gfx/freewrl:rbp - Enable support for Rigid Body Physics
+media-gfx/geeqie:ffmpegthumbnailer - Enable video thumbnail support with media-video/ffmpegthumbnailer
 media-gfx/geeqie:gpu-accel - Enable GPU acceleration support - experimental
 media-gfx/geeqie:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 media-gfx/geeqie:map - Enable items map display - experimental
@@ -7545,6 +7545,7 @@ sys-apps/dbus:elogind - Use sys-auth/elogind for session tracking.
 sys-apps/dbus:systemd - Build with sys-apps/systemd at_console support
 sys-apps/dbus:user-session - Enable user-session semantics for session bus under systemd
 sys-apps/dbus-broker:launcher - dbus-daemon compatibility launcher
+sys-apps/debianutils:installkernel - Install /sbin/installkernel script (for Linux)
 sys-apps/dstat:wifi - Enable wireless network functions
 sys-apps/duc:X - Use X11 for the GUI instead of OpenGL. This is the recommended option
 sys-apps/duc:cairo - Build support for exporting to PNG and PDF with x11-libs/cairo
@@ -7638,6 +7639,7 @@ sys-apps/linux-misc-apps:usbip - Include USB/IP binaries to replace net-misc/usb
 sys-apps/lm_sensors:contrib - Installs user contributed configuration files so you don't need to find settings on your own for your system if somebody else has already created such a configuration for sensors/mainboards you are using.
 sys-apps/lm_sensors:sensord - Enable sensord - a daemon that can be used to periodically log sensor readings from hardware health-monitoring chips
 sys-apps/man-db:manpager - Enable manpager wrapper for colorizing output
+sys-apps/mawk:forced-sandbox - Always enable -W sandbox mode for simpler/secure runtime
 sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/memtest86+:floppy - Install a script to create floppy disks containing memtest86+ binaries.
 sys-apps/memtest86+:iso - Compile an ISO image
@@ -8451,11 +8453,9 @@ www-client/seamonkey:chatzilla - Build Mozilla's IRC client (default on)
 www-client/seamonkey:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
 www-client/seamonkey:force-gtk3 - Use the cairo-gtk3 rendering engine
 www-client/seamonkey:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
-www-client/seamonkey:gtk3 - Use the cairo-gtk3 rendering engine
 www-client/seamonkey:ipc - Use inter-process communication between tabs and plugins. Allows for greater stability in case of plugin crashes
 www-client/seamonkey:jemalloc - Enable or disable jemalloc
 www-client/seamonkey:roaming - Build roaming extension support (default on)
-www-client/seamonkey:skia - Enable the SKIA engine for 2D rendering as an alternative to cairo
 www-client/seamonkey:system-cairo - Use the system-wide x11-libs/cairo instead of bundled
 www-client/seamonkey:system-harfbuzz - Use the system-wide media-libs/harfbuzz instead of bundled
 www-client/seamonkey:system-icu - Use the sytem-wide dev-libs/icu instead of bundled
