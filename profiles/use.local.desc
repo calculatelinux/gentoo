@@ -5176,7 +5176,6 @@ media-video/x264-encoder:ffmpegsource - Enable ffmpegsource aka ffms support, di
 media-video/x264-encoder:interlaced - Enable interlaced encoding support, this can decrease encoding speed by up to 2%
 media-video/xine-ui:vdr - Enables Video Disk Recorder support
 net-analyzer/2ping:server - Install the server init scripts.
-net-analyzer/aimsniff:http - Install the WAS (Web AIM Sniff) frontend
 net-analyzer/argus:libtirpc - Build against net-libs/libtirpc for RPC support
 net-analyzer/argus-clients:ft - Enable support for flow packets through net-analyzer/flow-tools
 net-analyzer/barnyard:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
@@ -5603,7 +5602,6 @@ net-fs/cifs-utils:caps - libcap support
 net-fs/cifs-utils:caps-ng - libcap-ng support
 net-fs/cifs-utils:creds - cifs credentials support
 net-fs/cvmfs:aufs - Use AUFS instead of OverlayFS for the server
-net-fs/cvmfs:client - Install the cvmfs client programs and init script
 net-fs/cvmfs:preload - Install the cvmfs cache preloader for distributed file systems
 net-fs/cvmfs:server - Install the cvmfsd program and init script
 net-fs/cvmfs:test-programs - Install unit test programs
