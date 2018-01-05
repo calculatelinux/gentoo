@@ -36,6 +36,7 @@ src_configure() {
 	STRIP=/bin/true \
 	econf \
 		--with-kernel-dir=/usr \
+		--enable-json \
 		--enable-sha1 \
 		--enable-vrrp \
 		$(use_enable dbus) \
