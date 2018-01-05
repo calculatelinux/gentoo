@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -10,7 +10,7 @@ PYTHON_COMPAT=(
 )
 PYTHON_REQ_USE='bzip2(+),threads(+)'
 
-inherit distutils-r1 git-r3 tmpfiles
+inherit distutils-r1 git-r3 systemd
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Portage"
@@ -202,7 +202,7 @@ python_install_all() {
 		esetup.py "${targets[@]}"
 	fi
 
-	dotmpfiles "${FILESDIR}"/portage-ccache.conf
+	systemd_dotmpfilesd "${FILESDIR}"/portage-ccache.conf
 
 	# Due to distutils/python-exec limitations
 	# they must be installed to /usr/bin.
