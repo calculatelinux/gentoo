@@ -14,7 +14,7 @@ SRC_URI="mirror://gnupg/gpgme/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="1/11" # subslot = soname major version
-KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="common-lisp static-libs cxx python qt5"
 
 COMMON_DEPEND=">=app-crypt/gnupg-2
@@ -46,15 +46,6 @@ do_python() {
 
 pkg_setup() {
 	addpredict /run/user/$(id -u)/gnupg
-}
-
-src_prepare() {
-	default
-
-	# Fix too long socket path for gpg-agent, this is mainly a problem
-	# for Prefix, where the builddir is deeper in the FS tree.
-	sed -i -e '/GNUPGHOME/s:$(abs_builddir):'"${T}"':' \
-		tests/gpg/Makefile.{am,in} || die
 }
 
 src_configure() {

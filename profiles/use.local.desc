@@ -422,6 +422,7 @@ app-editors/neovim:clipboard - Enable clipboard support through a provider
 app-editors/neovim:jemalloc - Use dev-libs/jemalloc for allocations
 app-editors/neovim:luajit - Use dev-lang/luajit instead of dev-lang/lua
 app-editors/neovim:nvimpager - Install nvimpager symlink to less.sh macro
+app-editors/neovim:remote - Enable support for remote options using nvr
 app-editors/neovim:tui - Build the neovim unix tui
 app-editors/pluma:gtk3 - Build with GTK+3 instead of GTK+2
 app-editors/qhexedit2:gui - Install Qt5 hex editor
@@ -5659,11 +5660,6 @@ net-ftp/proftpd:exec - Enable support for the mod_exec module. WARNING: this cou
 net-ftp/proftpd:ident - Enable support for the mod_ident module
 net-ftp/proftpd:ifsession - Enable support for the ifsession module
 net-ftp/proftpd:ifversion - Enable support for the mod_ifversion module
-net-ftp/proftpd:linguas_bg_BG - Language support for bg_BG
-net-ftp/proftpd:linguas_fr_FR - Language support for fr_FR
-net-ftp/proftpd:linguas_it_IT - Language support for it_IT
-net-ftp/proftpd:linguas_ja_JP - Language support for ja_JP
-net-ftp/proftpd:linguas_ru_RU - Language support for ru_RU
 net-ftp/proftpd:log_forensic - Enable support for the mod_log_forensic module, log only suspicious actions.
 net-ftp/proftpd:memcache - Enable support for the mod_memcache module, for using memcached servers
 net-ftp/proftpd:msg - Enable support for the mod_msg module, allows system users to send messages to connected clients via the ftpdctl program.
@@ -6704,9 +6700,6 @@ net-p2p/bitcoind:zeromq - Report blocks and transactions via zeromq
 net-p2p/datacoin-hp:logrotate - Use app-admin/logrotate for rotating logs
 net-p2p/dbhub:switch_user - Enable support for switching user
 net-p2p/deluge:console - Enable default console UI
-net-p2p/deluge:linguas_iu - Inuktitut locale
-net-p2p/deluge:linguas_nap - Neapolitan locale
-net-p2p/deluge:linguas_pms - Piemontese locale
 net-p2p/deluge:webinterface - Install dependencies needed for the web interface
 net-p2p/dogecoin-qt:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/eiskaltdcpp:cli - Enable sample cli based on readline
@@ -7874,6 +7867,7 @@ sys-cluster/hpx:jemalloc - Use dev-libs/jemalloc for memory allocation
 sys-cluster/hpx:papi - Use dev-libs/papi for NaCl
 sys-cluster/hpx:perftools - Use dev-util/google-perftools for memory allocation
 sys-cluster/hpx:tbb - Use dev-cpp/tbb for memory allocation
+sys-cluster/keepalived:json - compile with signal to dump configuration and stats as JSON.
 sys-cluster/legion:gasnet - Enable GASNet lib support
 sys-cluster/legion:hwloc - Enable HWLoc lib support
 sys-cluster/maui:pbs - Enable pbs integration
@@ -8726,7 +8720,6 @@ x11-plugins/pidgin-sipe:voice - Enable experimental voice/video support
 x11-plugins/purple-plugin_pack:talkfilters - Enable support for app-text/talkfilters
 x11-plugins/vicious:contrib - Install extra widgets, some for less common hardware, some contributed by Vicious users.
 x11-plugins/wmfire:session - Enable session management
-x11-plugins/wmsysmon:high-ints - Enable support for monitoring 24 interrupts. Useful on SMP machines
 x11-terms/aterm:background - Enable background image support via media-libs/libafterimage
 x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small version
 x11-terms/eterm:escreen - Enable built-in app-misc/screen support
