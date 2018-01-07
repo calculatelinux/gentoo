@@ -2091,7 +2091,6 @@ dev-libs/libgpg-error:common-lisp - Install common-lisp files
 dev-libs/libgpuarray:cuda - Enable NVIDIA CUDA toolkit support
 dev-libs/libgpuarray:opencl - Enable OpenCL support
 dev-libs/libgweather:glade - Installs catalog files for dev-util/glade
-dev-libs/libical:glib - Enable dev-libs/glib GObject interface support
 dev-libs/libisoburn:cdio - Enable EXPERIMENTAL use of libcdio as system adapter
 dev-libs/libisoburn:external-filters - Allow the use of external processes as file content filters (Note: this is a potential security risk)
 dev-libs/libisoburn:external-filters-setuid - Also allow the use of external setuid processes as file content filters (Note: this is a potential security risk)
@@ -3291,7 +3290,7 @@ games-strategy/heroes3:maps - Installs optional map data
 games-strategy/heroes3:music - Installs optional music data
 games-strategy/heroes3:sounds - Installs optional sound data
 games-strategy/ja2-stracciatella:editor - Adds necessary file to run the editor
-games-strategy/ja2-stracciatella:linguas_ru_gold - Support for russian gold ja2 version
+games-strategy/ja2-stracciatella:ru-gold - Support for russian gold ja2 version
 games-strategy/liquidwar6:doc - Convert the info pages to html
 games-strategy/liquidwar6:gles2 - Enable OpenGL ES 2.0 support
 games-strategy/liquidwar6:gtk - Used to display error/critical messages
@@ -6583,7 +6582,7 @@ net-misc/stargazer:static-libs - Install static libraries.
 net-misc/streamtuner:shout - Enable shoutcast plug-in.
 net-misc/streamtuner:xiph - Enable xiph.org plug-in.
 net-misc/stunnel:stunnel3 - Install the stunnel3 wrapper.
-net-misc/teamviewer:system-wine - Use app-emulation/wine instead of bundled wine.
+net-misc/teamviewer:system-wine - Use virtual/wine instead of bundled wine.
 net-misc/termpkg:uucp - Adds support for uucp style device locking
 net-misc/tigervnc:dri3 - Build with DRI3 support
 net-misc/tigervnc:drm - Build with DRM support
@@ -8347,6 +8346,7 @@ www-apps/wordpress:akismet - Installs Akismet comment spam plug-in
 www-apps/wordpress:themes - Installs themes (including default theme)
 www-client/chromium:component-build - Split build into more shared libraries to speed up linking. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
 www-client/chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
+www-client/chromium:jumbo-build - Combine source files to speed up build process.
 www-client/chromium:pic - Disable optimized assembly code that is not PIC friendly
 www-client/chromium:proprietary-codecs - Enable proprietary codecs like H.264, MP3
 www-client/chromium:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels
