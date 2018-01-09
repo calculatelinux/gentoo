@@ -22,13 +22,15 @@ HOMEPAGE="https://github.com/google/googletest"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="examples test"
+IUSE="doc examples test"
 
 DEPEND="test? ( ${PYTHON_DEPS} )"
 RDEPEND="!dev-cpp/gmock"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-9999-fix-gcc6-undefined-behavior.patch
+	"${FILESDIR}"/${PN}-1.8.0-increase-clone-stack-size.patch
+	"${FILESDIR}"/${PN}-1.8.0-fix-doublefree.patch
 )
 
 pkg_setup() {
@@ -59,6 +61,13 @@ multilib_src_configure() {
 
 multilib_src_install_all() {
 	einstalldocs
+
+	if use doc; then
+		docinto googletest
+		dodoc -r googletest/docs/*
+		docinto googlemock
+		dodoc -r googlemock/docs/*
+	fi
 
 	if use examples; then
 		docinto examples

@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 # @ECLASS: toolchain-glibc.eclass
@@ -398,7 +398,7 @@ foreach_abi() {
 }
 
 just_headers() {
-	is_crosscompile && use crosscompile_opts_headers-only
+	is_crosscompile && use headers-only
 }
 
 glibc_banner() {
@@ -592,7 +592,7 @@ eend_KV() {
 
 get_kheader_version() {
 	printf '#include <linux/version.h>\nLINUX_VERSION_CODE\n' | \
-	$(tc-getCPP ${CTARGET}) -I "${EPREFIX}/$(alt_build_headers)" - | \
+	$(tc-getCPP ${CTARGET}) -I "$(alt_build_headers)" - | \
 	tail -n 1
 }
 

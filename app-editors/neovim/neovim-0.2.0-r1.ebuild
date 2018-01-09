@@ -47,7 +47,7 @@ RDEPEND="
 	remote? ( dev-python/neovim-remote )
 	clipboard? ( || ( x11-misc/xsel x11-misc/xclip ) )"
 
-CMAKE_BUILD_TYPE=RelWithDebInfo
+CMAKE_BUILD_TYPE=Release
 
 src_prepare() {
 	# use our system vim dir
@@ -64,7 +64,8 @@ src_configure() {
 	local mycmakeargs=(
 		-DFEAT_TUI=$(usex tui)
 		-DENABLE_JEMALLOC=$(usex jemalloc)
-		)
+		-DPREFER_LUA=$(usex luajit no yes)
+	)
 	cmake-utils_src_configure
 }
 

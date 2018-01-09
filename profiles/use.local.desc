@@ -1298,7 +1298,6 @@ dev-db/cppdb:odbc_internal - Don't build a separate postgresql loadable module b
 dev-db/cppdb:postgres_internal - Don't build a separate odbc loadable module but rather build it into the cppdb library itself
 dev-db/cppdb:sqlite_internal - Don't build a separate sqlite3 loadable module but rather build it into the cppdb library itself
 dev-db/firebird:server - Install the server components of Firebird, not just the client
-dev-db/firebird:superserver - Install SuperServer
 dev-db/firebird:xinetd - Install ClassicServer
 dev-db/maatkit:udf - Build the MySQL UDFs shipped with maatkit, requires non-minimal MySQL
 dev-db/mariadb:backup - Build mariadb-backup which supports SST and hot backup of InnoDB, Aria and MyISAM including compression and encryption
@@ -3006,9 +3005,6 @@ dev-vcs/kdesvn:man - Build and install man pages
 dev-vcs/mercurial:bugzilla - Support bugzilla integration.
 dev-vcs/mercurial:gpg - Support signing with GnuPG.
 dev-vcs/mercurial:tk - Install dev-lang/tk for hgk script.
-dev-vcs/qct:bazaar - Support for dev-vcs/bzr
-dev-vcs/qct:mercurial - Support for dev-vcs/mercurial
-dev-vcs/qct:monotone - Support for dev-vcs/monotone
 dev-vcs/rabbitvcs:caja - Enable extension for mate-base/caja
 dev-vcs/rabbitvcs:cli - Eanble console based frontend
 dev-vcs/rabbitvcs:diff - Use for diff command dev-util/meld
@@ -3339,6 +3335,7 @@ gnome-base/gnome-shell:openrc-force - Skip systemd dependency (#480336), enablin
 gnome-base/gvfs:afp - Enables support for accessing AFP (Apple Filing Protocol) network shares
 gnome-base/gvfs:archive - Enables support for accessing files in archives transparently via app-arch/libarchive
 gnome-base/gvfs:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
+gnome-base/gvfs:elogind - Use sys-auth/elogind for session tracking.
 gnome-base/gvfs:fuse - Enables fuse mount points in $HOME/.gvfs for legacy application access
 gnome-base/gvfs:gnome-online-accounts - Enable configuration panel for net-libs/gnome-online-accounts accounts
 gnome-base/gvfs:google - Enables support for accessing Google accounts via dev-libs/libgdata
@@ -3637,6 +3634,7 @@ mail-client/evolution:highlight - Enable text highlighting plugin
 mail-client/evolution:ldap - Enable support for fetching contacts from an LDAP or Active Directory server using net-nds/openldap
 mail-client/evolution:spamassassin - Build mail-filter/spamassassin plugin
 mail-client/evolution:weather - Enable optional weather calendar support
+mail-client/evolution:ytnef - Enable optional TNEF attachments parser support using net-mail/ytnef
 mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by mail-client/sylpheed
 mail-client/mutt:berkdb - Enable sys-libs/db database backend for header caching
 mail-client/mutt:crypt - Add support for encryption -- using mcrypt or gpg where applicable
@@ -4845,6 +4843,11 @@ media-tv/xmltv:uk_rt - Britain alternative tv listing grabber
 media-tv/xmltv:uk_tvguide - UK and Ireland tv listing grabber using TV Guide website
 media-tv/xmltv:za - South Africa tv listing grabber
 media-tv/xmltv:zz_sdjson - Grabber for schedulesDirect.org SD-JSON service (many countries)
+media-video/2mandvd:linguas_cs - Czech locale
+media-video/2mandvd:linguas_de - German locale
+media-video/2mandvd:linguas_en - English locale
+media-video/2mandvd:linguas_it - Italian locale
+media-video/2mandvd:linguas_ru - Russian locale
 media-video/aegisub:uchardet - Enable charset discovery via app-i18n/uchardet
 media-video/aravis:X - Build the GTK+-based video viewer for aravis. This requires GStreamer and a few plugins but technically not the GST plugin for aravis.
 media-video/aravis:gstreamer - Build the GStreamer plugin for aravis, but not the video viewer.
@@ -5380,6 +5383,8 @@ net-analyzer/tcpdump:smi - Build with net-libs/libsmi to load MIBs on the fly to
 net-analyzer/tcpreplay:pcapnav - Enable if you want the jump to byte offset feature via net-libs/libpcapnav
 net-analyzer/tcpreplay:tcpdump - Use net-analyzer/tcpdump for packet decoding feature
 net-analyzer/testssl:bundled-openssl - Install precompiled versions of OpenSSL for greater testing coverage
+net-analyzer/wapiti:kerberos - Support Kerberos authentication
+net-analyzer/wapiti:ntlm - Support NTLM authentication
 net-analyzer/wireshark:adns - Use the GNU net-dns/c-ares library to resolve DNS names
 net-analyzer/wireshark:androiddump - Install androiddump, an extcap interface to capture from Android devices
 net-analyzer/wireshark:capinfos - Install capinfos, to print information about capture files
@@ -5747,7 +5752,6 @@ net-im/psi:sql - Enable psi-new-history extras patch
 net-im/psi:webengine - Use dev-qt/qtwebengine instead of dev-qt/qtwebkit
 net-im/psi:webkit - Enable themed, html-based chatlogs
 net-im/psi:whiteboarding - Enable experimental interactive SVG drawing
-net-im/pyaim-t:webinterface - Install dependencies needed for the web interface
 net-im/pyicq-t:webinterface - Install dependencies needed for the web interface
 net-im/qtox:X - Adds support for X11
 net-im/qtox:gtk - Adds support for GTK and Status Notifier tray backends
@@ -6660,6 +6664,95 @@ net-p2p/bitcoin-qt:bitcoin_policy_spamfilter - Enhanced spam filter policy: Noto
 net-p2p/bitcoin-qt:http - Enable support for the JSON-RPC and REST HTTP server (builtin net-p2p/bitcoind)
 net-p2p/bitcoin-qt:knots - Build enhanced Bitcoin Knots version, rather than Bitcoin Core
 net-p2p/bitcoin-qt:libevent - Use dev-libs/libevent
+net-p2p/bitcoin-qt:linguas_af - Afrikaans locale
+net-p2p/bitcoin-qt:linguas_af_ZA - Afrikaans locale for South Africa
+net-p2p/bitcoin-qt:linguas_ar - Arabic locale
+net-p2p/bitcoin-qt:linguas_be_BY - Belarusian locale for Belarus
+net-p2p/bitcoin-qt:linguas_bg - Bulgarian locale
+net-p2p/bitcoin-qt:linguas_bg_BG - Bulgarian locale for Bulgaria
+net-p2p/bitcoin-qt:linguas_bs - Bosnian locale
+net-p2p/bitcoin-qt:linguas_ca - Catalan locale
+net-p2p/bitcoin-qt:linguas_ca@valencia - Catalan (Valencian) locale
+net-p2p/bitcoin-qt:linguas_ca_ES - Catalan locale for Spain
+net-p2p/bitcoin-qt:linguas_cs - Czech locale
+net-p2p/bitcoin-qt:linguas_cs_CZ - Czech locale for Czech Republic
+net-p2p/bitcoin-qt:linguas_cy - Welsh locale
+net-p2p/bitcoin-qt:linguas_da - Danish locale
+net-p2p/bitcoin-qt:linguas_de - German locale
+net-p2p/bitcoin-qt:linguas_el - Modern Greek locale
+net-p2p/bitcoin-qt:linguas_el_GR - Modern Greek locale for Greece
+net-p2p/bitcoin-qt:linguas_en - English locale
+net-p2p/bitcoin-qt:linguas_en_GB - English locale for United Kingdom
+net-p2p/bitcoin-qt:linguas_eo - Esperanto locale
+net-p2p/bitcoin-qt:linguas_es - Spanish locale
+net-p2p/bitcoin-qt:linguas_es_AR - Spanish locale for Argentina
+net-p2p/bitcoin-qt:linguas_es_CL - Spanish locale for Chile
+net-p2p/bitcoin-qt:linguas_es_CO - Spanish locale for Colombia
+net-p2p/bitcoin-qt:linguas_es_DO - Spanish locale for Dominican Republic
+net-p2p/bitcoin-qt:linguas_es_ES - Spanish locale for Spain
+net-p2p/bitcoin-qt:linguas_es_MX - Spanish locale for Mexico
+net-p2p/bitcoin-qt:linguas_es_UY - Spanish locale for Uruguay
+net-p2p/bitcoin-qt:linguas_es_VE - Spanish locale for Venezuela
+net-p2p/bitcoin-qt:linguas_et - Estonian locale
+net-p2p/bitcoin-qt:linguas_et_EE - Estonian locale for Estonia
+net-p2p/bitcoin-qt:linguas_eu_ES - Basque locale for Spain
+net-p2p/bitcoin-qt:linguas_fa - Persian locale
+net-p2p/bitcoin-qt:linguas_fa_IR - Persian locale for Iran
+net-p2p/bitcoin-qt:linguas_fi - Finnish locale
+net-p2p/bitcoin-qt:linguas_fr - French locale
+net-p2p/bitcoin-qt:linguas_fr_CA - French locale for Canada
+net-p2p/bitcoin-qt:linguas_fr_FR - French locale for France
+net-p2p/bitcoin-qt:linguas_gl - Galician locale
+net-p2p/bitcoin-qt:linguas_he - Hebrew locale
+net-p2p/bitcoin-qt:linguas_hi_IN - Hindi locale for India
+net-p2p/bitcoin-qt:linguas_hr - Croatian locale
+net-p2p/bitcoin-qt:linguas_hu - Hungarian locale
+net-p2p/bitcoin-qt:linguas_id_ID - Indonesian locale for Indonesia
+net-p2p/bitcoin-qt:linguas_it - Italian locale
+net-p2p/bitcoin-qt:linguas_it_IT - Italian locale for Italy
+net-p2p/bitcoin-qt:linguas_ja - Japanese locale
+net-p2p/bitcoin-qt:linguas_ka - Georgian locale
+net-p2p/bitcoin-qt:linguas_kk_KZ - Kazakh locale for Kazakhstan
+net-p2p/bitcoin-qt:linguas_ko_KR - Korean locale for Republic of Korea
+net-p2p/bitcoin-qt:linguas_ku_IQ - Kurdish locale for Iraq
+net-p2p/bitcoin-qt:linguas_ky - Kirghiz locale
+net-p2p/bitcoin-qt:linguas_la - Latin locale
+net-p2p/bitcoin-qt:linguas_lt - Lithuanian locale
+net-p2p/bitcoin-qt:linguas_lv_LV - Latvian locale for Latvia
+net-p2p/bitcoin-qt:linguas_mk_MK - Macedonian locale for Macedonia
+net-p2p/bitcoin-qt:linguas_mn - Mongolian locale
+net-p2p/bitcoin-qt:linguas_ms_MY - Malay locale for Malaysia
+net-p2p/bitcoin-qt:linguas_nb - Norwegian Bokmål locale
+net-p2p/bitcoin-qt:linguas_ne - Nepali locale
+net-p2p/bitcoin-qt:linguas_nl - Dutch locale
+net-p2p/bitcoin-qt:linguas_nl_NL - Dutch locale for Netherlands
+net-p2p/bitcoin-qt:linguas_pam - Kapampangan locale
+net-p2p/bitcoin-qt:linguas_pl - Polish locale
+net-p2p/bitcoin-qt:linguas_pt_BR - Portuguese locale for Brazil
+net-p2p/bitcoin-qt:linguas_pt_PT - Portuguese locale for Portugal
+net-p2p/bitcoin-qt:linguas_ro - Romanian locale
+net-p2p/bitcoin-qt:linguas_ro_RO - Romanian locale for Romania
+net-p2p/bitcoin-qt:linguas_ru - Russian locale
+net-p2p/bitcoin-qt:linguas_ru_RU - Russian locale for Russia
+net-p2p/bitcoin-qt:linguas_sk - Slovak locale
+net-p2p/bitcoin-qt:linguas_sl_SI - Slovenian locale for Slovenia
+net-p2p/bitcoin-qt:linguas_sq - Albanian locale
+net-p2p/bitcoin-qt:linguas_sr - Serbian locale
+net-p2p/bitcoin-qt:linguas_sr@latin - Serbian (Latin) locale
+net-p2p/bitcoin-qt:linguas_sv - Swedish locale
+net-p2p/bitcoin-qt:linguas_ta - Tamil locale
+net-p2p/bitcoin-qt:linguas_th_TH - Thai locale for Thailand
+net-p2p/bitcoin-qt:linguas_tr - Turkish locale
+net-p2p/bitcoin-qt:linguas_tr_TR - Turkish locale for Turkey
+net-p2p/bitcoin-qt:linguas_uk - Ukrainian locale
+net-p2p/bitcoin-qt:linguas_ur_PK - Urdu locale for Pakistan
+net-p2p/bitcoin-qt:linguas_uz@Cyrl - Uzbek (Cyrillic) locale
+net-p2p/bitcoin-qt:linguas_vi - Vietnamese locale
+net-p2p/bitcoin-qt:linguas_vi_VN - Vietnamese locale for Vietnam
+net-p2p/bitcoin-qt:linguas_zh - Chinese locale
+net-p2p/bitcoin-qt:linguas_zh_CN - Chinese locale for China
+net-p2p/bitcoin-qt:linguas_zh_HK - Chinese locale for Hong Kong
+net-p2p/bitcoin-qt:linguas_zh_TW - Chinese locale for Taiwan
 net-p2p/bitcoin-qt:ljr - Enable Luke Dashjr's patches
 net-p2p/bitcoin-qt:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/bitcoin-qt:tor - Enable automatic configuration of a Tor hidden service
@@ -6678,6 +6771,53 @@ net-p2p/datacoin-hp:logrotate - Use app-admin/logrotate for rotating logs
 net-p2p/dbhub:switch_user - Enable support for switching user
 net-p2p/deluge:console - Enable default console UI
 net-p2p/deluge:webinterface - Install dependencies needed for the web interface
+net-p2p/dogecoin-qt:linguas_af_ZA - Afrikaans locale for South Africa
+net-p2p/dogecoin-qt:linguas_ar - Arabic locale
+net-p2p/dogecoin-qt:linguas_bg - Bulgarian locale
+net-p2p/dogecoin-qt:linguas_bs - Bosnian locale
+net-p2p/dogecoin-qt:linguas_ca - Catalan locale
+net-p2p/dogecoin-qt:linguas_ca_ES - Catalan locale for Spain
+net-p2p/dogecoin-qt:linguas_cs - Czech locale
+net-p2p/dogecoin-qt:linguas_cy - Welsh locale
+net-p2p/dogecoin-qt:linguas_da - Danish locale
+net-p2p/dogecoin-qt:linguas_de - German locale
+net-p2p/dogecoin-qt:linguas_el_GR - Modern Greek locale for Greece
+net-p2p/dogecoin-qt:linguas_en - English locale
+net-p2p/dogecoin-qt:linguas_eo - Esperanto locale
+net-p2p/dogecoin-qt:linguas_es - Spanish locale
+net-p2p/dogecoin-qt:linguas_es_CL - Spanish locale for Chile
+net-p2p/dogecoin-qt:linguas_et - Estonian locale
+net-p2p/dogecoin-qt:linguas_eu_ES - Basque locale for Spain
+net-p2p/dogecoin-qt:linguas_fa - Persian locale
+net-p2p/dogecoin-qt:linguas_fa_IR - Persian locale for Iran
+net-p2p/dogecoin-qt:linguas_fi - Finnish locale
+net-p2p/dogecoin-qt:linguas_fr - French locale
+net-p2p/dogecoin-qt:linguas_fr_CA - French locale for Canada
+net-p2p/dogecoin-qt:linguas_gu_IN - Gujarati locale for India
+net-p2p/dogecoin-qt:linguas_he - Hebrew locale
+net-p2p/dogecoin-qt:linguas_hi_IN - Hindi locale for India
+net-p2p/dogecoin-qt:linguas_hr - Croatian locale
+net-p2p/dogecoin-qt:linguas_hu - Hungarian locale
+net-p2p/dogecoin-qt:linguas_it - Italian locale
+net-p2p/dogecoin-qt:linguas_ja - Japanese locale
+net-p2p/dogecoin-qt:linguas_la - Latin locale
+net-p2p/dogecoin-qt:linguas_lt - Lithuanian locale
+net-p2p/dogecoin-qt:linguas_lv_LV - Latvian locale for Latvia
+net-p2p/dogecoin-qt:linguas_nb - Norwegian Bokmål locale
+net-p2p/dogecoin-qt:linguas_nl - Dutch locale
+net-p2p/dogecoin-qt:linguas_pl - Polish locale
+net-p2p/dogecoin-qt:linguas_pt_BR - Portuguese locale for Brazil
+net-p2p/dogecoin-qt:linguas_pt_PT - Portuguese locale for Portugal
+net-p2p/dogecoin-qt:linguas_ro_RO - Romanian locale for Romania
+net-p2p/dogecoin-qt:linguas_ru - Russian locale
+net-p2p/dogecoin-qt:linguas_sk - Slovak locale
+net-p2p/dogecoin-qt:linguas_sr - Serbian locale
+net-p2p/dogecoin-qt:linguas_sv - Swedish locale
+net-p2p/dogecoin-qt:linguas_th_TH - Thai locale for Thailand
+net-p2p/dogecoin-qt:linguas_tr - Turkish locale
+net-p2p/dogecoin-qt:linguas_uk - Ukrainian locale
+net-p2p/dogecoin-qt:linguas_zh_CN - Chinese locale for China
+net-p2p/dogecoin-qt:linguas_zh_TW - Chinese locale for Taiwan
 net-p2p/dogecoin-qt:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/eiskaltdcpp:cli - Enable sample cli based on readline
 net-p2p/eiskaltdcpp:daemon - Enable eiskaltdcpp-daemon
@@ -6712,6 +6852,53 @@ net-p2p/mldonkey:gnutella - enable gnutella and gnutella2 support
 net-p2p/mldonkey:guionly - enable client build only
 net-p2p/mldonkey:magic - enable use of libmagic
 net-p2p/ppcoind:logrotate - Use app-admin/logrotate for rotating logs
+net-p2p/primecoin-qt:linguas_af_ZA - Afrikaans locale for South Africa
+net-p2p/primecoin-qt:linguas_ar - Arabic locale
+net-p2p/primecoin-qt:linguas_bg - Bulgarian locale
+net-p2p/primecoin-qt:linguas_bs - Bosnian locale
+net-p2p/primecoin-qt:linguas_ca - Catalan locale
+net-p2p/primecoin-qt:linguas_ca_ES - Catalan locale for Spain
+net-p2p/primecoin-qt:linguas_cs - Czech locale
+net-p2p/primecoin-qt:linguas_cy - Welsh locale
+net-p2p/primecoin-qt:linguas_da - Danish locale
+net-p2p/primecoin-qt:linguas_de - German locale
+net-p2p/primecoin-qt:linguas_el_GR - Modern Greek locale for Greece
+net-p2p/primecoin-qt:linguas_en - English locale
+net-p2p/primecoin-qt:linguas_eo - Esperanto locale
+net-p2p/primecoin-qt:linguas_es - Spanish locale
+net-p2p/primecoin-qt:linguas_es_CL - Spanish locale for Chile
+net-p2p/primecoin-qt:linguas_et - Estonian locale
+net-p2p/primecoin-qt:linguas_eu_ES - Basque locale for Spain
+net-p2p/primecoin-qt:linguas_fa - Persian locale
+net-p2p/primecoin-qt:linguas_fa_IR - Persian locale for Iran
+net-p2p/primecoin-qt:linguas_fi - Finnish locale
+net-p2p/primecoin-qt:linguas_fr - French locale
+net-p2p/primecoin-qt:linguas_fr_CA - French locale for Canada
+net-p2p/primecoin-qt:linguas_gu_IN - Gujarati locale for India
+net-p2p/primecoin-qt:linguas_he - Hebrew locale
+net-p2p/primecoin-qt:linguas_hi_IN - Hindi locale for India
+net-p2p/primecoin-qt:linguas_hr - Croatian locale
+net-p2p/primecoin-qt:linguas_hu - Hungarian locale
+net-p2p/primecoin-qt:linguas_it - Italian locale
+net-p2p/primecoin-qt:linguas_ja - Japanese locale
+net-p2p/primecoin-qt:linguas_la - Latin locale
+net-p2p/primecoin-qt:linguas_lt - Lithuanian locale
+net-p2p/primecoin-qt:linguas_lv_LV - Latvian locale for Latvia
+net-p2p/primecoin-qt:linguas_nb - Norwegian Bokmål locale
+net-p2p/primecoin-qt:linguas_nl - Dutch locale
+net-p2p/primecoin-qt:linguas_pl - Polish locale
+net-p2p/primecoin-qt:linguas_pt_BR - Portuguese locale for Brazil
+net-p2p/primecoin-qt:linguas_pt_PT - Portuguese locale for Portugal
+net-p2p/primecoin-qt:linguas_ro_RO - Romanian locale for Romania
+net-p2p/primecoin-qt:linguas_ru - Russian locale
+net-p2p/primecoin-qt:linguas_sk - Slovak locale
+net-p2p/primecoin-qt:linguas_sr - Serbian locale
+net-p2p/primecoin-qt:linguas_sv - Swedish locale
+net-p2p/primecoin-qt:linguas_th_TH - Thai locale for Thailand
+net-p2p/primecoin-qt:linguas_tr - Turkish locale
+net-p2p/primecoin-qt:linguas_uk - Ukrainian locale
+net-p2p/primecoin-qt:linguas_zh_CN - Chinese locale for China
+net-p2p/primecoin-qt:linguas_zh_TW - Chinese locale for Taiwan
 net-p2p/primecoin-qt:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/primecoind:logrotate - Use app-admin/logrotate for rotating logs
 net-p2p/pybitmessage:opencl - Uses dev-python/pyopencl for GPU acceleration.
@@ -7086,7 +7273,7 @@ sci-electronics/gtkwave:fatlines - Renders lines as double width in gtkwave.
 sci-electronics/gtkwave:judy - Enables Judy array support.
 sci-electronics/gtkwave:packed - Enables '#pragma pack' for data arrays (saves memory, costs time).
 sci-electronics/kicad:github - Add github support into PCB editor
-sci-electronics/kicad:i18n - Allow GUI internationalization through linguas_* use flags
+sci-electronics/kicad:i18n - Allow GUI internationalization through l10n_* use flags
 sci-electronics/kicad:minimal - Build only binaries without parts library and examples
 sci-electronics/kicad:python - Enable python scripting support
 sci-electronics/ngspice:shared - Build ngspice as a shared library
@@ -7473,6 +7660,15 @@ sci-visualization/paraview:coprocessing - Enable the coprocessing infrastructure
 sci-visualization/paraview:development - Install development files including headers
 sci-visualization/paraview:nvcontrol - Add NVCONTROL support for OpenGL options
 sci-visualization/paraview:plugins - Build and install additional plugins
+sci-visualization/qtiplot:linguas_cs - Czech locale
+sci-visualization/qtiplot:linguas_de - German locale
+sci-visualization/qtiplot:linguas_es - Spanish locale
+sci-visualization/qtiplot:linguas_fr - French locale
+sci-visualization/qtiplot:linguas_ja - Japanese locale
+sci-visualization/qtiplot:linguas_ro - Romanian locale
+sci-visualization/qtiplot:linguas_ru - Russian locale
+sci-visualization/qtiplot:linguas_sv - Swedish locale
+sci-visualization/qtiplot:linguas_zh_CN - Chinese locale for China
 sci-visualization/veusz:emf - Add FITS format via dev-python/pyemf
 sci-visualization/veusz:fits - Add FITS format via dev-python/astropy
 sci-visualization/veusz:minuit - Use Minuit during fitting viadev-python/pyminuit
@@ -7481,6 +7677,11 @@ sci-visualization/visit:cgns - Builds the reader for the CFD General Notation Sy
 sci-visualization/visit:silo - Adds support for reading .silo files.
 sci-visualization/visit:xdmf2 - Support for xdmf2 formated data.
 sci-visualization/yt:hub - Connect to the yt hub with dev-python/girder-client
+sci-visualization/zhu3d:linguas_cs - Czech locale
+sci-visualization/zhu3d:linguas_de - German locale
+sci-visualization/zhu3d:linguas_es - Spanish locale
+sci-visualization/zhu3d:linguas_fr - French locale
+sci-visualization/zhu3d:linguas_zh - Chinese locale
 sec-policy/selinux-base:open_perms - Enable the open permissions for file object classes (SELinux policy capability).
 sec-policy/selinux-base:peer_perms - Enable the labeled networking peer permissions (SELinux policy capability).
 sec-policy/selinux-base:ubac - Enable User Based Access Control (UBAC) in the SELinux policy

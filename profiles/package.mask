@@ -29,6 +29,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (09 Jan 2018)
+# Dead upstream, depends on dead Qt4.
+# Bug #643976. Masked for removal in 30 days.
+media-video/2mandvd
+
+# Andreas Sturmlechner <asturm@gentoo.org> (07 Jan 2018)
+# Masked for removal in 30 days, no more rdeps, bug #602816
+dev-python/python-poppler-qt4
+
 # Mikle Kolyada <zlogene@gentoo.org> (07 Jan 2018)
 # The package was suddenly forgotten during tuxonice-sources masking.
 # Mask for removal in 14 days as the sources package has already been removed.
@@ -46,7 +55,8 @@ kde-apps/konsolepart
 
 # Alice Ferrazzi <alicef@gentoo.org> (05 Jan 2018)
 # kernel: Meltdown and Spectre - Processor flaw. (#643228)
-# Please upgrade for Intel processor flaw workaround, 
+# Please upgrade for Intel processor flaw workaround
+# (currently KPTI patch are 64bit only), 
 # also excluding AMD from the fix as not affected.
 # Please unmask your kernel version if you want to
 # continue to use your kernel with AMD.
@@ -315,10 +325,6 @@ app-crypt/nistp224
 app-doc/linux-gazette-base
 app-doc/linux-gazette-all
 app-doc/linux-gazette
-
-# Andreas Sturmlechner <asturm@gentoo.org> (27 Dec 2017)
-# Masked because no more USE=qt4 breaks rdeps, bug #642444
->=app-text/poppler-0.62.0
 
 # David Seifert <soap@gentoo.org> (27 Dec 2017)
 # Last release in 2005, crashes on use, EAPI 3 (#640262).
@@ -590,6 +596,13 @@ net-libs/polarssl
 
 # Andreas Sturmlechner <asturm@gentoo.org> (12 Dec 2017)
 # Depends on dead kdelibs4/qt4, unmaintained upstream. No port to
+# KF5 released. If you depend on this package, please help test the
+# KF5-based cirkuit-0.4.3_p201710115 snapshot.
+# Bug #640884. Masked for removal in 30 days.
+sci-electronics/cirkuit
+
+# Andreas Sturmlechner <asturm@gentoo.org> (12 Dec 2017)
+# Depends on dead kdelibs4/qt4, unmaintained upstream. No port to
 # KF5 released.
 # Possible alternatives are media-sound/cantata (an awesome mpd client),
 # media-sound/clementine and media-sound/tomahawk (the latter also declared
@@ -604,13 +617,6 @@ x11-libs/qtscriptgenerator
 # Depends on dead media-sound/amarok:4, dead upstream,
 # last release in 2006. Bug #635468. Masked for removal in 30 days.
 media-sound/vdramgw
-
-# Andreas Sturmlechner <asturm@gentoo.org> (12 Dec 2017)
-# Depends on dead kdelibs4/qt4, unmaintained upstream. No port to
-# KF5 released. If you depend on this package, please help test KF5-based
-# cirkuit-9999 in KDE ebuild repository to decide on a possible snapshot.
-# Bug #640884. Masked for removal in 30 days.
-sci-electronics/cirkuit
 
 # Andreas Sturmlechner <asturm@gentoo.org> (12 Dec 2017)
 # Depends on dead kdelibs4/qt4, no port to KF5 released yet.
@@ -636,18 +642,8 @@ app-arch/defluff
 # Masked for removal in 30 days.
 media-radio/wspr
 
-# Michael Palimaka <kensington@gentoo.org> (07 Dec 2017)
-# Dead upstream. Requires dead Qt4.
-# Masked for removal in 30 days. Bug #640138.
-net-ftp/oneclickftp
-
-# Michael Palimaka <kensington@gentoo.org> (07 Dec 2017)
-# Dead upstream. Requires dead Qt4.
-# Masked for removal in 30 days. Bug #640138.
-dev-vcs/qct
-
 # Andreas Sturmlechner <asturm@gentoo.org> (03 Dec 2017)
-# Dead upstream, depending on dead qt3support/qt4. Bug #631788
+# Depends on dead Qt4, upstream porting inquiry pending. Bug #631788
 games-kids/crayon-physics
 
 # Alexey Shvetsov <alexxy@gentoo.org> (01 Dec 2017)
@@ -746,13 +742,6 @@ sys-devel/automake:1.8
 #   emerge -C perl-core/Unicode-Collate
 # See bug #634040
 <perl-core/Unicode-Collate-1.190.0-r99
-
-# Jonas Stein <jstein@gentoo.org> (10 Oct 2017)
-# Depends on the AIM service which will be discontinued on 2017-12-15.
-# See also bug #633914. Masked for removal on 2017-12-20
-net-im/pyaim-t
-net-im/pork
-net-im/reaim
 
 # Michał Górny <mgorny@gentoo.org> (05 Oct 2017)
 # (on behalf of QA)
@@ -933,6 +922,7 @@ net-wireless/cpyrit-cuda
 # Coordinated conversion to wxGTK:3.0-gtk3
 # Drop mask after migration of existing wxGTK:3.0 users
 =net-ftp/filezilla-3.29.0-r300
+=net-ftp/filezilla-3.30.0-r300
 
 # Rick Farina <zerochaos@gentoo.org> (17 Apr 2017)
 # Masking old versions because upstream changed versioning
