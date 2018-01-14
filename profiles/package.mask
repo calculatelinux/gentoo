@@ -29,6 +29,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Aaron W. Swenson <titanofold@gentoo.org> (14 Jan 2018)
+# Upstream is now Upwork. Use app-office/upwork instead.
+# Masked for removal in 30 days.
+app-office/odeskteam
+
+# Andreas Sturmlechner <asturm@gentoo.org> (13 Jan 2018)
+# Dead upstream, depends on dead Qt4.
+# Masked for removal in 30 days.
+sys-kernel/kccmp
+
 # Andreas Sturmlechner <asturm@gentoo.org> (13 Jan 2018)
 # Dead upstream, depends on dead Qt4.
 # Masked for removal in 30 days.
@@ -703,13 +713,6 @@ virtual/jre:9
 # experimental features and accept a more unstable release.
 >=www-client/chromium-65
 
-# Aaron W. Swenson <titanofold.org> (15 Dec 2017)
-# Masked for removal in 30 days (2017-01-14). Upstream doesn't appear
-# to be active and is really far behind in supporting the latest
-# enhancements from PostgreSQL. Consider using dev-db/pgadmin4
-# instead. (Bug 641140)
-dev-db/phppgadmin
-
 # Andrey Grozin <grozin@gentoo.org> (15 Dec 2017)
 # Dead upstream. Removal in 30 days. Use bpython or ptpython instead.
 dev-python/dreampie
@@ -732,12 +735,6 @@ net-libs/polarssl
 # Masked due to a hard dependency on an ancient versions of dev-libs/msgpack
 # (<0.6) that have been punted from the tree.
 net-misc/cocaine-core
-
-# Jonas Stein <jstein@gentoo.org> (10 Dec 2017)
-# Site blocks certain IP blocks from downloading files, while the package
-# may not be mirrored. (bug #640508)
-# Masked for removal on 2018-01-12
-app-arch/defluff
 
 # Andreas Sturmlechner <asturm@gentoo.org> (03 Dec 2017)
 # Depends on dead Qt4, upstream porting inquiry pending. Bug #631788
