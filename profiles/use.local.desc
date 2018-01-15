@@ -6058,8 +6058,6 @@ net-libs/pjproject:resample - Include resampling implementations in the build
 net-libs/pjproject:silk - Include SILK support in the build
 net-libs/pjproject:v4l2 - Include Video4Linux v2 support in the build
 net-libs/pjproject:webrtc - Enable WebRTC support
-net-libs/polarssl:havege - Enable the HAVEGE random generator. Warning: the HAVEGE random generator is not suitable for virtualized environments
-net-libs/polarssl:programs - Build PolarSSL programs
 net-libs/ptlib:asn - Enable ASN decoding/encoding support
 net-libs/ptlib:dtmf - Enable DTMF encoding/decoding support
 net-libs/ptlib:http - Enable HTTP support
