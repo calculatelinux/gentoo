@@ -223,6 +223,7 @@ app-arch/rar:all_sfx - Install all SFX (Self-Extracting) files rather than just 
 app-arch/tar:minimal - just install `tar`
 app-arch/unzip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii file names archived in Windows.
 app-arch/wimlib:fuse - Use fuse libraries
+app-arch/wimlib:iso - Install app-cdr/cdrtools in order to prepare iso images
 app-arch/wimlib:ntfs - Use libntfs-3g library from sys-fs/ntfs3g
 app-arch/wimlib:openssl - Use the SHA-1 message digest from libcrypto instead of compilling another implementation
 app-arch/wimlib:yasm - Use yasm assembler instead of nasm
@@ -760,7 +761,6 @@ app-i18n/im-chooser:xfce - Enable support for XFCE panel
 app-i18n/imsettings:gconf - Enable support for gnome-base/gconf
 app-i18n/imsettings:gtk2 - Build with x11-libs/gtk+:2 instead of x11-libs/gtk+:3
 app-i18n/imsettings:xfconf - Enable support for xfce-base/xfconf
-app-i18n/kimera:anthy - Enable support for app-i18n/anthy
 app-i18n/mozc:fcitx4 - Enable support for app-i18n/fcitx 4
 app-i18n/mozc:gui - Install graphical user interface tool (mozc_tool)
 app-i18n/mozc:handwriting-tegaki - Use handwriting recognition model from app-i18n/tegaki-zinnia-japanese
@@ -7685,11 +7685,6 @@ sci-visualization/visit:cgns - Builds the reader for the CFD General Notation Sy
 sci-visualization/visit:silo - Adds support for reading .silo files.
 sci-visualization/visit:xdmf2 - Support for xdmf2 formated data.
 sci-visualization/yt:hub - Connect to the yt hub with dev-python/girder-client
-sci-visualization/zhu3d:linguas_cs - Czech locale
-sci-visualization/zhu3d:linguas_de - German locale
-sci-visualization/zhu3d:linguas_es - Spanish locale
-sci-visualization/zhu3d:linguas_fr - French locale
-sci-visualization/zhu3d:linguas_zh - Chinese locale
 sec-policy/selinux-base:open_perms - Enable the open permissions for file object classes (SELinux policy capability).
 sec-policy/selinux-base:peer_perms - Enable the labeled networking peer permissions (SELinux policy capability).
 sec-policy/selinux-base:ubac - Enable User Based Access Control (UBAC) in the SELinux policy
