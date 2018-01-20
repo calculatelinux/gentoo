@@ -15,7 +15,7 @@ SRC_URI="https://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="dri"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
@@ -58,9 +58,6 @@ PATCHES=(
 
 	# xorg-1.19 patch from opensuse (bug #602784)
 	"${FILESDIR}/${PN}-5.1.10-xorg119.patch"
-
-	# fix bug #579946
-	"${FILESDIR}/${PN}-5.1.30-sysmacros.patch"
 )
 
 QA_TEXTRELS_x86="usr/lib/VBoxOGL.so"

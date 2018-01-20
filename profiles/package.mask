@@ -29,6 +29,34 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (19 Jan 2018)
+# Outdated and broken for a long time, holding up several cleanups.
+# Masked for removal in 30 days. Bug #513564
+sci-physics/geant-python
+
+# Jeroen Roovers <jer@gentoo.org> (19 Jan 2018)
+# Breaks net-libs/nodejs (bug #645018)
+=dev-libs/libuv-1.19.0
+
+# Patrice Clement <monsieurp@gentoo.org> (18 Jan 2018)
+# mpv-0.28.0 requires changes currently only available in ffmpeg-9999.
+=media-video/mpv-0.28.0
+
+# Andreas Sturmlechner <asturm@gentoo.org> (18 Jan 2018)
+# Broken by >=kde-apps/kcalcore-17.12.0, but also merged into
+# kdepim-runtime 17.12 as an official feature. Bug #642926
+kde-misc/akonadi-ews
+
+# Andreas Sturmlechner <asturm@gentoo.org> (18 Jan 2018)
+# Dead upstream, depends on dead Qt4/poppler-qt4.
+# Masked for removal in 30 days. Bug #641852
+dev-tex/pstplus
+
+# Andreas Sturmlechner <asturm@gentoo.org> (18 Jan 2018)
+# Depends on dead PyQt4/Qt4, upstream needs help w/ PyQt5.
+# Masked for removal in 30 days. Bug #634986
+dev-tex/texamator
+
 # Aaron W. Swenson <titanofold@gentoo.org> (14 Jan 2018)
 # Upstream is now Upwork. Use app-office/upwork instead.
 # Masked for removal in 30 days.
@@ -676,16 +704,6 @@ x11-misc/qsynergy
 # Masked for removal in 30 days.
 app-editors/znotes
 
-# Andreas Sturmlechner <asturm@gentoo.org> (21 Dec 2017)
-# Dead upstream, depends on dead Qt4.
-# Bug #629032. Masked for removal in 30 days.
-media-gfx/wally
-
-# Andreas Sturmlechner <asturm@gentoo.org> (21 Dec 2017)
-# Dead upstream, depends on dead Qt4.
-# Bug #637108. Masked for removal in 30 days.
-app-cdr/qpxtool
-
 # Patrice Clement <monsieurp@gentoo.org> (19 Dec 2017)
 # A slightly better syntax file for PAM configuration files is shipped with Vim
 # since version 8.0. The one we package is old and out of date.
@@ -704,18 +722,6 @@ virtual/jre:9
 # experimental features and accept a more unstable release.
 >=www-client/chromium-65
 
-# Andrey Grozin <grozin@gentoo.org> (15 Dec 2017)
-# Dead upstream. Removal in 30 days. Use bpython or ptpython instead.
-dev-python/dreampie
-
-# Andrey Grozin <grozin@gentoo.org> (15 Dec 2017)
-# Dead upstream. Removal in 30 days.
-dev-python/pydb
-
-# Andrey Grozin <grozin@gentoo.org> (15 Dec 2017)
-# Dead upstream, unclear license. Removal in 30 days.
-dev-python/pygui
-
 # Patrice Clement <monsieurp@gentoo.org> (12 Dec 2017)
 # Masked due to a hard dependency on an ancient versions of dev-libs/msgpack
 # (<0.6) that have been punted from the tree.
@@ -724,10 +730,6 @@ net-misc/cocaine-core
 # Andreas Sturmlechner <asturm@gentoo.org> (03 Dec 2017)
 # Depends on dead Qt4, upstream porting inquiry pending. Bug #631788
 games-kids/crayon-physics
-
-# Alexey Shvetsov <alexxy@gentoo.org> (01 Dec 2017)
-# Mask beta gromacs version
-=sci-chemistry/gromacs-2018_beta*
 
 # Jonas Stein <jstein@gentoo.org> (29 Nov 2017)
 # The old yafaray-0.1.1 depends on qt4 and has bugs we can not fix.
