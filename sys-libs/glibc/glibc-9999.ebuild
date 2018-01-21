@@ -4,7 +4,7 @@
 EAPI=6
 
 inherit prefix eutils versionator toolchain-funcs flag-o-matic gnuconfig \
-	multilib systemd multiprocessing linux-info
+	multilib systemd multiprocessing
 
 DESCRIPTION="GNU libc C library"
 HOMEPAGE="https://www.gnu.org/software/libc/"
@@ -509,8 +509,15 @@ check_devpts() {
 	fi
 }
 
-# The following functions are copied from portage source and split a Kernel
-# version into its components.
+# The following Kernel version handling functions are mostly copied from portage
+# source. It's better not to use linux-info.eclass here since a) it adds too
+# much magic, see bug 326693 for some of the arguments, and b) some of the
+# functions are just not provided.
+
+g_get_running_KV() {
+        uname -r
+        return $?
+}
 
 g_KV_major() {
 	[[ -z $1 ]] && return 1
@@ -567,52 +574,10 @@ get_kheader_version() {
 	tail -n 1
 }
 
-check_nptl_support() {
-	# We don't care about the compiler here as we aren't using it
-	just_headers && return
-
-	local run_kv build_kv want_kv
-
-	# We get the running kernel version using linux-info.eclass
-	get_running_version
-	run_kv=${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}
-
-	build_kv=$(g_int_to_KV $(get_kheader_version))
-	want_kv=${MIN_KERN_VER}
-
-	ebegin "Checking gcc for __thread support"
-	if ! eend $(want__thread ; echo $?) ; then
-		echo
-		eerror "Could not find a gcc that supports the __thread directive!"
-		eerror "Please update your binutils/gcc and try again."
-		die "No __thread support in gcc!"
-	fi
-
-	if ! is_crosscompile && ! tc-is-cross-compiler ; then
-		# Building fails on an non-supporting kernel
-		ebegin "Checking running kernel version (${run_kv} >= ${want_kv})"
-		if ! eend_KV ${run_kv} ${want_kv} ; then
-			echo
-			eerror "You need a kernel of at least ${want_kv}!"
-			die "Kernel version too low!"
-		fi
-	fi
-
-	ebegin "Checking linux-headers version (${build_kv} >= ${want_kv})"
-	if ! eend_KV ${build_kv} ${want_kv} ; then
-		echo
-		eerror "You need linux-headers of at least ${want_kv}!"
-		die "linux-headers version too low!"
-	fi
-}
-
-#
-# the phases
-#
-
-# pkg_pretend
-
-pkg_pretend() {
+# We collect all sanity checks here. Consistency is not guranteed between
+# pkg_ and src_ phases, so we call this function both in pkg_pretend and in
+# src_unpack.
+sanity_prechecks() {
 	# Make sure devpts is mounted correctly for use w/out setuid pt_chown
 	check_devpts
 
@@ -631,9 +596,6 @@ pkg_pretend() {
 			eerror " Downgrading glibc is not supported and a sure way to destruction."
 			die "Aborting to save your system."
 		fi
-
-		# removed check for #262698 since it's about kernel 2.6.18 ...
-		# removed check for #279260 since it's about kernel <2.6.28 ...
 	fi
 
 	# Users have had a chance to phase themselves, time to give em the boot
@@ -650,6 +612,12 @@ pkg_pretend() {
 		die "Please fix your CHOST"
 	fi
 
+	if ! do_run_test '#include <unistd.h>\n#include <sys/syscall.h>\nint main(){return syscall(1000)!=-1;}\n' ; then
+		eerror "Your old kernel is broken. You need to update it to a newer"
+		eerror "version as syscall(<bignum>) will break. See bug 279260."
+		die "Old and broken kernel."
+	fi
+
 	if [[ -e /proc/xen ]] && [[ $(tc-arch) == "x86" ]] && ! is-flag -mno-tls-direct-seg-refs ; then
 		ewarn "You are using Xen but don't have -mno-tls-direct-seg-refs in your CFLAGS."
 		ewarn "This will result in a 50% performance penalty when running with a 32bit"
@@ -658,30 +626,6 @@ pkg_pretend() {
 
 	use hardened && ! tc-enables-pie && \
 		ewarn "PIE hardening not applied, as your compiler doesn't default to PIE"
-
-	# Make sure host system is up to date #394453
-	if has_version '<sys-libs/glibc-2.13' && \
-	   [[ -n $(scanelf -qys__guard -F'#s%F' "${EROOT}"/lib*/l*-*.so) ]]
-	then
-		ebegin "Scanning system for __guard to see if you need to rebuild first ..."
-		local files=$(
-			scanelf -qys__guard -F'#s%F' \
-				"${EROOT}"/*bin/ \
-				"${EROOT}"/lib* \
-				"${EROOT}"/usr/*bin/ \
-				"${EROOT}"/usr/lib* | \
-				egrep -v \
-					-e "^${EROOT}/lib.*/(libc|ld)-2.*.so$" \
-					-e "^${EROOT}/sbin/(ldconfig|sln)$"
-		)
-		[[ -z ${files} ]]
-		if ! eend $? ; then
-			eerror "Your system still has old SSP __guard symbols.  You need to"
-			eerror "rebuild all the packages that provide these files first:"
-			eerror "${files}"
-			die "old __guard detected"
-		fi
-	fi
 
 	# Check for sanity of /etc/nsswitch.conf
 	if [[ -e ${EROOT}/etc/nsswitch.conf ]] ; then
@@ -697,20 +641,81 @@ pkg_pretend() {
 			fi
 		done
 	fi
+
+	# ABI-specific checks follow here. Hey, we have a lot more specific conditions that
+	# we test for...
+	if ! is_crosscompile ; then
+
+		if use amd64 && use multilib && [[ ${MERGE_TYPE} != "binary" ]] ; then
+			ebegin "Checking that IA32 emulation is enabled in the running kernel"
+			echo 'int main(){return 0;}' > "${T}/check-ia32-emulation.c"
+			"${CC-${CHOST}-gcc}" ${CFLAGS_x86} "${T}/check-ia32-emulation.c" -o "${T}/check-ia32-emulation.elf32"
+			"${T}/check-ia32-emulation.elf32"
+			local STAT=$?
+			rm -f "${T}/check-ia32-emulation.elf32"
+			eend $STAT
+			[ $STAT -eq 0 ] || die "CONFIG_IA32_EMULATION must be enabled in the kernel to compile a multilib glibc."
+		fi
+
+	fi
+
+	# When we actually have to compile something...
+	if ! just_headers ; then
+		local run_kv build_kv want_kv
+
+		run_kv=$(g_get_running_KV)
+		build_kv=$(g_int_to_KV $(get_kheader_version))
+		want_kv=${MIN_KERN_VER}
+
+		ebegin "Checking gcc for __thread support"
+		if ! eend $(want__thread ; echo $?) ; then
+			echo
+			eerror "Could not find a gcc that supports the __thread directive!"
+			eerror "Please update your binutils/gcc and try again."
+			die "No __thread support in gcc!"
+		fi
+
+		if ! is_crosscompile && ! tc-is-cross-compiler ; then
+			# Building fails on an non-supporting kernel
+			ebegin "Checking running kernel version (${run_kv} >= ${want_kv})"
+			if ! eend_KV ${run_kv} ${want_kv} ; then
+				echo
+				eerror "You need a kernel of at least ${want_kv}!"
+				die "Kernel version too low!"
+			fi
+		fi
+
+		ebegin "Checking linux-headers version (${build_kv} >= ${want_kv})"
+		if ! eend_KV ${build_kv} ${want_kv} ; then
+			echo
+			eerror "You need linux-headers of at least ${want_kv}!"
+			die "linux-headers version too low!"
+		fi
+	fi
 }
-# todo: shouldn't most of these checks be called also in src_configure again?
-# (since consistency is not guaranteed between pkg_ and src_)
+
+
+#
+# the phases
+#
+
+# pkg_pretend
+
+pkg_pretend() {
+	# All the checks...
+	einfo "Checking general environment sanity."
+	sanity_prechecks
+}
 
 # src_unpack
 
 src_unpack() {
+	# Consistency is not guaranteed between pkg_ and src_ ...
+	sanity_prechecks
+
 	use multilib && unpack gcc-${GCC_BOOTSTRAP_VER}-multilib-bootstrap.tar.bz2
 
 	setup_env
-
-	# Check NPTL support _before_ we unpack things to save some time
-	check_nptl_support
-	# todo: 1) move this to pkg_pretend? 2) use proper functions for kv
 
 	if [[ -n ${EGIT_REPO_URI} ]] ; then
 		git-r3_src_unpack
@@ -718,10 +723,10 @@ src_unpack() {
 		unpack ${P}.tar.xz
 	fi
 
-	cd "${S}"
-	touch locale/C-translit.h #185476 #218003
+	cd "${S}" || die
+	touch locale/C-translit.h || die #185476 #218003
 
-	cd "${WORKDIR}"
+	cd "${WORKDIR}" || die
 	unpack glibc-${RELEASE_VER}-patches-${PATCH_VER}.tar.bz2
 }
 
@@ -808,11 +813,6 @@ glibc_do_configure() {
 	local myconf=()
 
 	case ${CTARGET} in
-		mips*)
-			# dlopen() detects stack smash on mips n32 ABI.
-			# Cause is unknown: https://bugs.gentoo.org/640130
-			myconf+=( --enable-stack-protector=no )
-			;;
 		powerpc-*)
 			# Currently gcc on powerpc32 generates invalid code for
 			# __builtin_return_address(0) calls. Normally programs
@@ -931,16 +931,10 @@ glibc_do_configure() {
 	# is built with MULTILIB_ABIS="amd64 x86" but we want to
 	# add x32 to it, gcc/glibc don't yet support x32.
 	#
-	# This reqires net-libs/rpcsvc-proto now (which provides
-	# rpcgen) !!! Needs analysis how to best add to deps.
-	#
 	if [[ -n ${GCC_BOOTSTRAP_VER} ]] && use multilib ; then
 		echo 'main(){}' > "${T}"/test.c
 		if ! $(tc-getCC ${CTARGET}) ${CFLAGS} ${LDFLAGS} "${T}"/test.c -Wl,-emain -lgcc 2>/dev/null ; then
 			sed -i -e '/^CC = /s:$: -B$(objdir)/../'"gcc-${GCC_BOOTSTRAP_VER}/${ABI}:" config.make || die
-			mkdir -p sunrpc
-			cp $(which rpcgen) sunrpc/cross-rpcgen || die
-			touch -t 202001010101 sunrpc/cross-rpcgen || die
 		fi
 	fi
 }

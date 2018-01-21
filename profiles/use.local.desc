@@ -4258,6 +4258,7 @@ media-libs/netpbm:rle - Build converters for the RLE format (utah raster toolkit
 media-libs/opencolorio:pdf - Install extra documentation in PDF format
 media-libs/opencv:contrib - Install user contributed scripts from opencv_contrib (Experimental!)
 media-libs/opencv:contrib_cvv - CVV module requires Qt5
+media-libs/opencv:contrib_dnn - DNN module contrib requires tiny dnn
 media-libs/opencv:contrib_hdf - HDF module requires sci-libs/hdf5
 media-libs/opencv:contrib_sfm - SFM module requires eigen, gflags, and glog
 media-libs/opencv:contrib_xfeatures2d - Enables xfeatures2d and autodownload of samples in contrib
