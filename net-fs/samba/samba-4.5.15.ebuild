@@ -16,7 +16,7 @@ SRC_PATH="stable"
 SRC_URI="mirror://samba/${SRC_PATH}/${MY_P}.tar.gz
 	https://dev.gentoo.org/~polynomial-c/samba-4.5.11-disable-python-patches.tar.xz"
 [[ ${PV} = *_rc* ]] || \
-KEYWORDS="~alpha amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 DESCRIPTION="Samba Suite Version 4"
 HOMEPAGE="http://www.samba.org/"
@@ -26,6 +26,12 @@ SLOT="0"
 
 IUSE="acl addc addns ads client cluster cups dmapi fam gnutls gpg iprint ldap pam
 quota selinux syslog system-heimdal +system-mitkrb5 systemd test winbind zeroconf"
+
+# the test suite is messed, it uses system-installed samba
+# bits instead of what was built, tests things disabled via use
+# flags, and generally just fails to work in a way ebuilds could
+# rely on in its current state
+RESTRICT="test"
 
 MULTILIB_WRAPPED_HEADERS=(
 	/usr/include/samba-4.0/policy.h
@@ -79,12 +85,10 @@ DEPEND="${CDEPEND}
 	dev-libs/libxslt
 	virtual/pkgconfig
 	test? (
-		!system-mitkrb5? (
-			>=sys-libs/nss_wrapper-1.1.3
-			>=net-dns/resolv_wrapper-1.1.4
-			>=net-libs/socket_wrapper-1.1.7
-			>=sys-libs/uid_wrapper-1.2.1
-		)
+		>=sys-libs/nss_wrapper-1.1.3
+		>=net-dns/resolv_wrapper-1.1.4
+		>=net-libs/socket_wrapper-1.1.7
+		>=sys-libs/uid_wrapper-1.2.1
 	)"
 RDEPEND="${CDEPEND}
 	client? ( net-fs/cifs-utils[ads?] )

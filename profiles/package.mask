@@ -29,6 +29,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (22 Jan 2018)
+# Depends on deprecated Qt4, dead project.
+# Masked for removal in 30 days.
+app-emulation/qtemu
+
+# Andreas Sturmlechner <asturm@gentoo.org> (22 Jan 2018)
+# Depends on deprecated Qt4, no sign of upstream doing a port.
+# Masked for removal in 30 days.
+games-strategy/hedgewars
+
+# Eray Aslan <eras@gentoo.org> (22 Jan 2018)
+# Vulnerable - see https://bugs.gentoo.org/630684
+# Please migrate to cyrus-imapd-3.0 releases
+=net-mail/cyrus-imapd-2.5*
+
 # Andreas Sturmlechner <asturm@gentoo.org> (20 Jan 2018)
 # Outdated and broken for a long time, blocking cleanups.
 # Depends on deprecated LINGUAS/Qt4/kde4-functions.eclass.
@@ -212,11 +227,6 @@ media-video/2mandvd
 # Andreas Sturmlechner <asturm@gentoo.org> (07 Jan 2018)
 # Masked for removal in 30 days, no more rdeps, bug #602816
 dev-python/python-poppler-qt4
-
-# Mikle Kolyada <zlogene@gentoo.org> (07 Jan 2018)
-# The package was suddenly forgotten during tuxonice-sources masking.
-# Mask for removal in 14 days as the sources package has already been removed.
-sys-apps/tuxonice-userui
 
 # Andreas Sturmlechner <asturm@gentoo.org> (05 Jan 2018)
 # Masked for removal in 30 days, merged into dev-util/kdevelop
@@ -624,28 +634,10 @@ net-voip/ekiga
 =sys-kernel/gentoo-sources-4.14.10
 =sys-kernel/vanilla-sources-4.14.10
 
-# Andreas K. Hüttel <dilfridge@gentoo.org> (27 Dec 2017)
-# Ancient. EAPI=3. (Nearly) no consumers. Needs to go.
-# Removal in 30 days.
-dev-lang/swig:1
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (27 Dec 2017)
-# Last remaining consumer of dev-lang/swig:1, which needs
-# to go the way of the dinosaur. Removal in 30 days.
-dev-python/apse
-
 # Matthias Maier <tamiko@gentoo.org> (26 Dec 2017)
 # gcc depends on mpfr and this version changes soname. Spare users with
 # FEATURES=-preserve-libs from completely frying their system.
 >=dev-libs/mpfr-4.0.0
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (25 Dec 2017)
-# Provided (and blocked) by app-text/texlive-core
-# Removal in 30 days; bug 628820
-app-text/dvibook
-app-text/dvipdfm
-app-text/dvipdfmx
-app-text/xdvipdfmx
 
 # Thomas Beierlein <tomjbe@gentoo.org> (23 Dec 2017)
 # To adapt to changed version naming by upstream 
@@ -653,24 +645,6 @@ app-text/xdvipdfmx
 # pcb-0_pyyyymmdd and mask >=pcb-20000000.
 # Do not remove the mask until newer version gets stable
 >=sci-electronics/pcb-20000000
-
-# Mike Gilbert <floppym@gentoo.org> (23 Dec 2017)
-# Fails to build without glibc rpc support, bug 630670.
-# Use net-nds/rpcbind instead.
-# Removal in 30 days.
-net-nds/portmap
-
-# Mike Gilbert <floppym@gentoo.org> (23 Dec 2017)
-# Fails to build without glibc rpc support, bug 641154.
-# Dead upstream.
-# Removal in 30 days.
-mail-client/drac
-
-# Thomas Beierlein <tomjbe@gentoo.org> (22 Dec 2017)
-# Development moved to another naming scheme.
-# Use media-radio/tucnak instead.
-# Masked for removal in 30 days.
-media-radio/tucnak2
 
 # Alice Ferrazzi <alicef@gentoo.org> (22 Dec 2017)
 # Masked for removal in 30 days.
