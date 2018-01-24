@@ -9,7 +9,7 @@ inherit user flag-o-matic multilib autotools pam systemd versionator
 # and _p? releases.
 PARCH=${P/_}
 
-HPN_PATCH="${PARCH}-hpnssh14v12.tar.xz"
+HPN_PATCH="${PARCH}-hpnssh14v12-r1.tar.xz"
 SCTP_PATCH="${PN}-7.6_p1-sctp.patch.xz"
 LDAP_PATCH="${PN}-lpk-7.6p1-0.3.14.patch.xz"
 X509_VER="11.1" X509_PATCH="${PN}-${PV/_}+x509-${X509_VER}.diff.gz"
@@ -18,14 +18,14 @@ DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.org/"
 SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 	${SCTP_PATCH:+https://dev.gentoo.org/~polynomial-c/${SCTP_PATCH}}
-	${HPN_PATCH:+hpn? ( mirror://gentoo/${HPN_PATCH} )}
+	${HPN_PATCH:+hpn? ( https://dev.gentoo.org/~chutzpah/${HPN_PATCH} )}
 	${LDAP_PATCH:+ldap? ( https://dev.gentoo.org/~polynomial-c/${LDAP_PATCH} )}
 	${X509_PATCH:+X509? ( https://dev.gentoo.org/~chutzpah/${X509_PATCH} )}
 	"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x64-cygwin ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x64-cygwin ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 # Probably want to drop ssl defaulting to on in a future version.
 IUSE="abi_mips_n32 audit bindist debug hpn kerberos kernel_linux ldap ldns libedit libressl livecd pam +pie sctp selinux skey +ssl static test X X509"
 REQUIRED_USE="ldns? ( ssl )
@@ -119,8 +119,8 @@ src_prepare() {
 			pushd "${WORKDIR}" >/dev/null
 			eapply "${FILESDIR}"/${P}-hpn-x509-${X509_VER}-glue.patch
 			popd >/dev/null
+			save_version X509
 		fi
-		save_version X509
 		eapply "${WORKDIR}"/${X509_PATCH%.*}
 	fi
 
