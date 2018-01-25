@@ -1019,7 +1019,8 @@ app-office/libreoffice:coinmp - Use sci-libs/coinor-mp as alternative solver
 app-office/libreoffice:collada - Enable Collada for rendering 3D models stored in *.dae and *.kmz format
 app-office/libreoffice:gltf - Use media-libs/libgltf for inserting 3D models in the glTF format into presentations
 app-office/libreoffice:googledrive - Enable support for remote files on Google Drive
-app-office/libreoffice:gtk3 - Enable highly experimental gtk3 frontend
+app-office/libreoffice:gtk2 - Enable legacy gtk2 frontend
+app-office/libreoffice:gtk3 - Enable experimental gtk3 frontend
 app-office/libreoffice:jemalloc - Use dev-libs/jemalloc for allocations
 app-office/libreoffice:odk - Build the Office Development Kit
 app-office/libreoffice:pdfimport - Enable PDF import via the Poppler library
@@ -2784,7 +2785,6 @@ dev-scheme/kawa:krl - Build BRL emulation and KRL
 dev-scheme/kawa:sax - Assume SAX2 is available with dev-java/sax
 dev-scheme/kawa:servlets - Build support for generating servlets with dev-java/servletapi
 dev-scheme/kawa:swing - Assume Swing is available
-dev-scheme/kawa:swt - Assume SWT is available with dev-java/swt
 dev-scheme/kawa:xqtests - Support XQuery Test Suite
 dev-scheme/racket:backtrace - Support GC backtrace dumps
 dev-scheme/racket:futures - Enable racket/future library for fine-grained hardware parallelism
