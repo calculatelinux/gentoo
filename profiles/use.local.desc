@@ -100,6 +100,7 @@ app-admin/pass:fish-completion - Enable fish completion support.
 app-admin/pass:git - Use dev-vcs/git for password revisions.
 app-admin/pass:importers - Allow importing passwords from other password managers using various contributed scripts.
 app-admin/passwordsafe:minimal - Avoid collision with app-misc/pwsafe
+app-admin/passwordsafe:qr - Enable QR code password display
 app-admin/passwordsafe:xml - Enable XML import support
 app-admin/passwordsafe:yubikey - Enable support for Yubikey
 app-admin/prelude-manager:dbx - Enables Prelude Manager storing Prelude alerts into database through dev-libs/libpreludedb .
@@ -858,6 +859,7 @@ app-misc/ca-certificates:cacert - Include root certificates from CAcert (http://
 app-misc/ca-certificates:insecure_certs - Install certificates which are known to be untrustworthy.
 app-misc/carbon-c-relay:lz4 - add support for LZ4 compressed transport
 app-misc/ddccontrol:pci - enable direct PCI memory access (the setuid ddcpci util)
+app-misc/ddcutil:drm - Use x11-libs/libdrm for more verbose diagnostics.
 app-misc/ddcutil:usb-monitor - Adds support for monitors attached via USB.
 app-misc/ddcutil:user-permissions - Adds a udev rules to allow non-root users in the i2c group to access the /dev/i2c-* devices. If usb-monitor is selected, users will need to be added to the video group to access the USB monitor. Otherwise, only root will be able to use ddcutil.
 app-misc/digitemp:ds2490 - Build support for the ds2490 sensor
@@ -1284,7 +1286,6 @@ dev-ada/libgpr:static-pic - Build static library with pic code
 dev-ada/xmlada:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/xmlada:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/xmlada:shared - Build shared library
-dev-ada/xmlada:static - Build static library
 dev-ada/xmlada:static-pic - Build static library with pic code
 dev-cpp/eigen:c++11 - Build using the C++11 standard
 dev-cpp/eigen:cuda - Build with cuda support
@@ -4708,6 +4709,7 @@ media-sound/split2flac:flake - Add support for Flake, alternative FLAC encoder
 media-sound/split2flac:mac - Add support for Monkey's Audio files
 media-sound/split2flac:replaygain - Support for Replay Gain metadata, for relative volume adjustment
 media-sound/spotify:pax_kernel - Triggers a paxmarking of the main Spotify binary
+media-sound/spotify:systray - Pulls in dependencies needed for systray support on some desktop environments
 media-sound/supercollider:emacs - Enable the SCEL user interface
 media-sound/supercollider:gedit - Enable the SCED user interface
 media-sound/supercollider:gpl3 - Build GPL-3 licensed code (recommended)
@@ -6911,6 +6913,7 @@ net-p2p/primecoin-qt:qrcode - Enable generation of QR Codes for receiving paymen
 net-p2p/primecoind:logrotate - Use app-admin/logrotate for rotating logs
 net-p2p/pybitmessage:opencl - Uses dev-python/pyopencl for GPU acceleration.
 net-p2p/qbittorrent:webui - Enable the Web UI
+net-p2p/resilio-sync:pax_kernel - Use paxctl to mark binaries
 net-p2p/retroshare:cli - Enables the CLI version of RetroShare
 net-p2p/retroshare:feedreader - Enables the Feedreader plugin
 net-p2p/retroshare:gnome-keyring - Enables potentially insecure autologin capability via Gnome Keyring
@@ -7833,6 +7836,7 @@ sys-apps/policycoreutils:audit - Enable support for sys-process/audit and use th
 sys-apps/portage:epydoc - Build html API documentation with epydoc.
 sys-apps/portage:ipc - Use inter-process communication between portage and running ebuilds.
 sys-apps/portage:native-extensions - Compiles native "C" extensions (speedups, instead of using python backup code). Currently includes libc-locales. This should only be temporarily disabled for some bootstrapping operations. Cross-compilation is not supported.
+sys-apps/portage:rsync-verify - Enable full-tree cryptographic verification of Gentoo repository rsync checkouts using app-portage/gemato.
 sys-apps/portage:xattr - Preserve extended attributes (filesystem-stored metadata) when installing files. Usually only required for hardened systems.
 sys-apps/proot:care - Build dynamic CARE binary (more info - http://reproducible.io/)
 sys-apps/pyrenamer:music - Enable support for renaming music
