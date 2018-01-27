@@ -386,7 +386,6 @@ app-editors/emacs:pax_kernel - Enable building under a PaX enabled kernel
 app-editors/emacs:source - Install C source files and make them available for find-function
 app-editors/emacs:toolkit-scroll-bars - Use the selected toolkit's scrollbars in preference to Emacs' own scrollbars
 app-editors/emacs:wide-int - Prefer wide Emacs integers (typically 62-bit). This option has an effect only on architectures where "long" and "long long" types have different size.
-app-editors/emacs:xwidgets - Enable use of GTK widgets in Emacs buffers (requires GTK3)
 app-editors/emacs-vcs:athena - Enable the MIT Athena widget set (x11-libs/libXaw)
 app-editors/emacs-vcs:dynamic-loading - Enable loading of dynamic libraries at runtime
 app-editors/emacs-vcs:games - Support shared score files for games
@@ -536,6 +535,7 @@ app-emulation/open-vm-tools:grabbitmqproxy - Enable grabbitmqproxy
 app-emulation/open-vm-tools:pic - Force shared libraries to be built as PIC
 app-emulation/open-vm-tools:vgauth - Enable vgauth
 app-emulation/playonlinux:winbind - Enables support for the winbind auth daemon
+app-emulation/punes:cg - Add support for Nvidia CG Toolkit
 app-emulation/q4wine:ico - Enable ico support via media-gfx/icoutils
 app-emulation/q4wine:iso - Support unprivileged mounting of ISO9660 images via sys-fs/fuseiso
 app-emulation/q4wine:wineappdb - Enable Wine AppDB browser support
@@ -1297,8 +1297,6 @@ dev-cpp/libjson-rpc-cpp:http-server - Build support for HTTP server using net-li
 dev-cpp/libjson-rpc-cpp:redis-client - Build support for Redis client using dev-libs/hiredis
 dev-cpp/libjson-rpc-cpp:redis-server - Build support for Redis server using dev-libs/hiredis
 dev-cpp/libjson-rpc-cpp:stubgen - Build header stub code generator (needed for development and when pregenerated headers are not bundled)
-dev-cpp/pficommon:fcgi - Build FCGI feature
-dev-cpp/pficommon:mprpc - Build MessagePack RPC feature
 dev-cpp/websocketpp:boost - Use dev-libs/boost instead of C++11
 dev-cpp/xsd:ace - Enable support for serializing to/from an ACE CDR stream
 dev-db/aerospike-server-community:tools - Install extra tools
@@ -2963,8 +2961,6 @@ dev-util/sysprof:systemd - Build the sysprofd daemon service, required to run th
 dev-util/systemtap:libvirt - Support probing of libvirt domains.
 dev-util/trace-cmd:udis86 - Enable support for dev-libs/udis86 disassembler library
 dev-vcs/bzr:sftp - Enable sftp support
-dev-vcs/bzr-gtk:gpg - Support signing with GnuPG.
-dev-vcs/bzr-gtk:nautilus - Integrate with Nautilus file manager
 dev-vcs/cssc:valgrind - Enable usage of dev-util/valgrind in tests
 dev-vcs/cvs:server - Enable server support
 dev-vcs/cvs2svn:bazaar - Support for dev-vcs/bzr
@@ -5940,9 +5936,6 @@ net-libs/gnutls:tls-heartbeat - Enable the Heartbeat Extension in TLS and DTLS
 net-libs/gnutls:tools - Build extra tools
 net-libs/gnutls:valgrind - Enable usage of dev-util/valgrind in debug
 net-libs/gtk-vnc:gtk3 - Build the gtk3 gtk-vnc library and other gtk3 assets
-net-libs/h323plus:aec - Enable acoustic echo cancellation
-net-libs/h323plus:sound - Enable audio codecs
-net-libs/h323plus:video - Enable video codecs
 net-libs/iax:snomhack - Use slower memset for SNOM phoneem
 net-libs/ldns:dane - Enable DNS-based Authentication of Named Entities (DANE) support
 net-libs/ldns:ecdsa - Enable ECDSA support
@@ -6028,28 +6021,6 @@ net-libs/onion:boehm-gc - Add dev-libs/boehm-gc support for memory allocations.
 net-libs/onion:libev - Use dev-libs/libev as thread poller instead of Linux's epoll.
 net-libs/onion:libevent - Use dev-libs/libevent as thread poller instead of libev or Linux's epoll.
 net-libs/onion:redis - Add support for redis sessions.
-net-libs/opal:celt - Enable CELT ultra-low delay audio codec
-net-libs/opal:dtmf - Enable DTMF encoding/decoding support
-net-libs/opal:fax - Enable T.38 FAX protocol
-net-libs/opal:h224 - Enable H.224 real time control protocol
-net-libs/opal:h281 - Enable H.281 Far-End Camera Control protocol
-net-libs/opal:h323 - Enable H.323 protocol
-net-libs/opal:iax - Enable Inter-Asterisk eXchange protocol
-net-libs/opal:ilbc - Enable iLBC (RFC 3951) speech codec
-net-libs/opal:ivr - Enable Interactive Voice Response
-net-libs/opal:lid - Enable Line Interface Device
-net-libs/opal:plugins - Enable plugins support
-net-libs/opal:sbc - Enable the Bluetooth low-complexity, SubBand Codec
-net-libs/opal:sip - Enable Session Initiation Protocol
-net-libs/opal:sipim - Enable SIP Instant Messages session
-net-libs/opal:srtp - Enable Secure Real-time Transport Protocol
-net-libs/opal:stats - Enable statistic reporting
-net-libs/opal:swig - Use swig to generate bindings
-net-libs/opal:video - Enable video support
-net-libs/opal:vpb - Enable Voicetronics VPB card support
-net-libs/opal:vxml - Enable VXML support
-net-libs/opal:wav - Enable WAVFILE support
-net-libs/opal:x264-static - Install x264 plugin statically linked with x264
 net-libs/ortp:ntp-timestamp - Turn on NTP timestamping on received packet
 net-libs/ortp:srtp - Add support for Secure RTP
 net-libs/phodav:spice - Install the spice-webdavd guest agent
@@ -6067,21 +6038,6 @@ net-libs/pjproject:resample - Include resampling implementations in the build
 net-libs/pjproject:silk - Include SILK support in the build
 net-libs/pjproject:v4l2 - Include Video4Linux v2 support in the build
 net-libs/pjproject:webrtc - Enable WebRTC support
-net-libs/ptlib:asn - Enable ASN decoding/encoding support
-net-libs/ptlib:dtmf - Enable DTMF encoding/decoding support
-net-libs/ptlib:http - Enable HTTP support
-net-libs/ptlib:mail - Enable mail protocols (POP3/SMTP)
-net-libs/ptlib:qos - Enable QOS support
-net-libs/ptlib:remote - Enable remote connection support
-net-libs/ptlib:serial - Enable serial port support
-net-libs/ptlib:shmvideo - Enable shared memory video devices
-net-libs/ptlib:socks - Enable SOCKS protocol support
-net-libs/ptlib:stun - Enable STUN support
-net-libs/ptlib:telnet - Enable telnet protocol support
-net-libs/ptlib:tts - Enable Text-To-Speech server support
-net-libs/ptlib:video - Enable video support
-net-libs/ptlib:vxml - Enable VoiceXML support
-net-libs/ptlib:wav - Enable WAVFILE support
 net-libs/qxmpp:opus - Enable Opus codec support via media-libs/opus
 net-libs/qxmpp:vpx - Enable VP8 codec support via media-libs/libvpx
 net-libs/rabbitmq-c:tools - Builds cli tools to interact with brokers
@@ -7006,8 +6962,6 @@ net-proxy/tsocks:server-lookups - Allow hostname resolution _for_ SOCKS servers
 net-proxy/tsocks:tordns - Apply tordns patch which allows transparent TORification of the DNS queries
 net-proxy/ufdbguard:doc - Download and install the ufdbguard reference manual in PDF.
 net-proxy/ufdbguard:httpd - Build, install and start the provided mini-http daemon with the redirect CGI integrated. Since there is no way to tell ufdbguard to not start it, this is a build-time option.
-net-voip/ekiga:h323 - Enable H.323 protocol
-net-voip/ekiga:shm - Enable the Shared Memory Extension from libXext
 net-voip/linphone:assistant - Turn on assistant compiling (needs gtk enabled)
 net-voip/linphone:gsm-nonstandard - Support non-standard GSM frequencies
 net-voip/linphone:sqlite - Turn on compilation of message storage
@@ -7671,15 +7625,6 @@ sci-visualization/paraview:coprocessing - Enable the coprocessing infrastructure
 sci-visualization/paraview:development - Install development files including headers
 sci-visualization/paraview:nvcontrol - Add NVCONTROL support for OpenGL options
 sci-visualization/paraview:plugins - Build and install additional plugins
-sci-visualization/qtiplot:linguas_cs - Czech locale
-sci-visualization/qtiplot:linguas_de - German locale
-sci-visualization/qtiplot:linguas_es - Spanish locale
-sci-visualization/qtiplot:linguas_fr - French locale
-sci-visualization/qtiplot:linguas_ja - Japanese locale
-sci-visualization/qtiplot:linguas_ro - Romanian locale
-sci-visualization/qtiplot:linguas_ru - Russian locale
-sci-visualization/qtiplot:linguas_sv - Swedish locale
-sci-visualization/qtiplot:linguas_zh_CN - Chinese locale for China
 sci-visualization/veusz:emf - Add FITS format via dev-python/pyemf
 sci-visualization/veusz:fits - Add FITS format via dev-python/astropy
 sci-visualization/veusz:minuit - Use Minuit during fitting viadev-python/pyminuit
@@ -8250,6 +8195,7 @@ sys-fs/btrfs-progs:convert - Build ext2 conversion utility (btrfs-convert)
 sys-fs/btrfs-progs:reiserfs - Enable reiserfs support in btrfs-convert tool.
 sys-fs/btrfs-progs:static - Build static binaries in addition to the dynamic ones
 sys-fs/btrfs-progs:zstd - Enable zstd compression support.
+sys-fs/btrfsmaintenance:systemd - Enable systemd services and timers instead of cron timers
 sys-fs/cryfs:update-check - Enable automatic checking for updates and security vulnerabilities
 sys-fs/cryptsetup:argon2 - Enable password hashing algorithm from app-crypt/argon2
 sys-fs/cryptsetup:gcrypt - Use dev-libs/libgcrypt crypto backend
@@ -8896,8 +8842,6 @@ x11-misc/xscreensaver:new-login - Enable user switching support using gdmflexise
 x11-misc/xsr:cursor - Capture mouse cursor using x11-misc/xdotool, and place them on the screenshots using media-gfx/imagemagick
 x11-misc/xss-lock:man - Build and install man pages
 x11-plugins/bfm:gkrellm - Enable building of app-admin/gkrellm module
-x11-plugins/compiz-plugins-extra:gconf - Install GConf schemas for the plugins, needed when using the GConf-based configuration backend in x11-wm/compiz.
-x11-plugins/compiz-plugins-main:gconf - Install GConf schemas for the plugins, needed when using the GConf-based configuration backend in x11-wm/compiz.
 x11-plugins/pidgin-mbpurple:twitgin - Enable graphical plugin for Gtk+ interface of Pidgin.
 x11-plugins/pidgin-sipe:ocs2005-message-hack - Disable message timeout for OCS2005 clients which causes "false" not delivered error messages
 x11-plugins/pidgin-sipe:openssl - Enable crypto support via dev-libs/openssl
@@ -8976,10 +8920,6 @@ x11-themes/zuki-themes:mate - Install Metacity theme for mate-base/mate
 x11-themes/zuki-themes:xfce - Install theme for xfce-base/xfwm4
 x11-themes/zukitwo:gnome-shell - Install theme for gnome-base/gnome-shell
 x11-wm/awesome:luajit - Use dev-lang/luajit instead of dev-lang/lua
-x11-wm/compiz:fuse - Enables support for the filesystem in userspace plugin through sys-fs/fuse.
-x11-wm/compiz:gconf - Enable the GConf-based configuration backend; it is not required to work with GNOME, and might actually be faster if it's not used.
-x11-wm/compiz-fusion:emerald - Install the x11-wm/emerald package.
-x11-wm/compiz-fusion:unsupported - Install the x11-plugins/compiz-plugins-unsupported package.
 x11-wm/echinus:xrandr - Enable support for multihead configuration
 x11-wm/enlightenment:enlightenment_modules_appmenu - Gadget that hold the toolbar of the foreground application
 x11-wm/enlightenment:enlightenment_modules_backlight - Backlight control slider gadget
