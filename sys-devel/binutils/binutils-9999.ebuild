@@ -7,8 +7,8 @@ inherit eutils libtool flag-o-matic gnuconfig multilib versionator
 
 DESCRIPTION="Tools necessary to build programs"
 HOMEPAGE="https://sourceware.org/binutils/"
-LICENSE="|| ( GPL-3 LGPL-3 )"
-IUSE="cxx multitarget nls static-libs test"
+LICENSE="GPL-3+"
+IUSE="+cxx doc multitarget +nls static-libs test"
 
 # Variables that can be set here:
 # PATCH_VER          - the patchset version
@@ -62,6 +62,7 @@ RDEPEND="
 	sys-libs/zlib
 "
 DEPEND="${RDEPEND}
+	doc? ( sys-apps/texinfo )
 	test? ( dev-util/dejagnu )
 	nls? ( sys-devel/gettext )
 	sys-devel/flex
@@ -86,12 +87,11 @@ src_unpack() {
 			;;
 	esac
 	mkdir -p "${MY_BUILDDIR}"
-	[[ -d ${WORKDIR}/patch ]] && mkdir "${WORKDIR}"/patch/skip
 }
 
 src_prepare() {
 	if [[ ! -z ${PATCH_VER} ]] ; then
-		elog "Applying binutils-${PATCH_BINUTILS_VER} patchset ${PATCH_VER}"
+		einfo "Applying binutils-${PATCH_BINUTILS_VER} patchset ${PATCH_VER}"
 		eapply "${WORKDIR}/patch"/*.patch
 	fi
 
@@ -132,7 +132,6 @@ src_prepare() {
 	elibtoolize --portage --no-uclibc
 }
 
-# Intended for ebuilds to override to set their own versioning information.
 toolchain-binutils_bugurl() {
 	printf "https://bugs.gentoo.org/"
 }
@@ -204,6 +203,11 @@ src_configure() {
 	has_version ">=${CATEGORY}/glibc-2.5" && myconf+=( --enable-secureplt )
 	has_version ">=sys-libs/glibc-2.5" && myconf+=( --enable-secureplt )
 
+	# mips can't do hash-style=gnu ...
+	if [[ $(tc-arch) != mips ]] ; then
+		myconf+=( --enable-default-hash-style=gnu )
+	fi
+
 	myconf+=(
 		--prefix="${EPREFIX}"/usr
 		--host=${CHOST}
@@ -237,13 +241,8 @@ src_configure() {
 	echo ./configure "${myconf[@]}"
 	"${S}"/configure "${myconf[@]}" || die
 
-	# Prevent makeinfo from running in releases.  It may not always be
-	# installed, and older binutils may fail with newer texinfo.
-	# Besides, we never patch the doc files anyways, so regenerating
-	# in the first place is useless. #193364
-	# For older versions, it means we don't get any info pages at all.
-	# Oh well, tough luck. #294617
-	if [[ -e ${S}/gas/doc/as.info ]] || ! version_is_at_least 2.24 ; then
+	# Prevent makeinfo from running if doc is unset.
+	if ! use doc ; then
 		sed -i \
 			-e '/^MAKEINFO/s:=.*:= true:' \
 			Makefile || die
@@ -254,9 +253,8 @@ src_compile() {
 	cd "${MY_BUILDDIR}"
 	emake all
 
-	# only build info pages if we user wants them, and if
-	# we have makeinfo (may not exist when we bootstrap)
-	if type -p makeinfo > /dev/null ; then
+	# only build info pages if the user wants them
+	if use doc ; then
 		emake info
 	fi
 
