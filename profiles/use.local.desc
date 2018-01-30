@@ -4280,6 +4280,8 @@ media-libs/opus:custom-modes - Build with custom-modes.
 media-libs/opusfile:fixed-point - Enable fixed-point arithmetic operations
 media-libs/opusfile:float - Enable floating point arithmetic operations
 media-libs/opusfile:http - Enable http connections
+media-libs/osl:cpu_flags_x86_avx512f - SIMD Optimization
+media-libs/osl:cpu_flags_x86_f16c - SIMD Optimization
 media-libs/osl:partio - Use media-libs/partio
 media-libs/phonon:designer - Install plugin for dev-qt/designer
 media-libs/phonon:vlc - Install VLC Phonon backend
@@ -5568,7 +5570,6 @@ net-firewall/shorewall:lite6 - Installs everything needed to just *run* an IPv6 
 net-firewall/ufw-frontends:kde - Use kdesu to gain root privileges (note: the flag has lower priority than "policykit")
 net-firewall/ufw-frontends:policykit - Use pkexec to gain root privileges
 net-fs/autofs:dmalloc - Enable debugging with the dmalloc library
-net-fs/autofs:hesiod - Install hesiod module
 net-fs/autofs:ldap - Install LDAP module
 net-fs/autofs:libtirpc - Use TiRPC library instead of SunRPC
 net-fs/autofs:mount-locking - Enable locking to prevent corruption of /etc/mtab in the presence of concurrent auto-mounting. If enabled, recursive auto-mounting (eg. using autofs to bind or loop mount a filesystem which is itself auto-mounted) is not possible.
