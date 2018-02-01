@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=>=x11-themes/gtk-engines-murrine-0.98.2 >=x11-themes/gtk-engines-unico-1.0.2
 RESTRICT=binchecks strip
 SLOT=0
-SRC_URI=http://www.deviantart.com/download/272660042/zukini_by_lassekongo83-d4ic1u2.zip -> zukini-20120806.zip
-_md5_=a28e0a2bd3d86b4c045f96f55cbd2c9d
+SRC_URI=https://dev.gentoo.org/~sping/distfiles/zukini-20120806.zip
+_md5_=0c67e4e4f948e07d2ad3a216f562ea3b
