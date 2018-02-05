@@ -4574,7 +4574,6 @@ media-sound/mpd:eventfd - Use the eventfd function in MPD's event loop
 media-sound/mpd:faad - Use external faad library for AAC decoding
 media-sound/mpd:fifo - Support writing audio to a FIFO
 media-sound/mpd:fluidsynth - Enables Fluidsynth MIDI software synthesis (discouraged)
-media-sound/mpd:glib - Enable GLib usage
 media-sound/mpd:gme - Enables support for media-libs/game-music-emu for playing various video game music formats.
 media-sound/mpd:id3tag - Support for ID3 tags
 media-sound/mpd:inotify - Use the Linux kernel inotify subsystem to notice changes to mpd music library
@@ -4711,6 +4710,7 @@ media-sound/tuxguitar:lilypond - Exports the score in a lilypond compatible form
 media-sound/tuxguitar:pdf - Exports the score as a PDF file using dev-java/itext.
 media-sound/tuxguitar:tray - Adds an icon to the tray that controls midi playback.
 media-sound/umurmur:shm - Enable shared memory support
+media-sound/upmpdcli:thirdparty - Enable streaming from Qobuz and Tidal external services
 media-sound/vimpc:boost - Use boost instead of C++11 libraries
 media-sound/vorbis-tools:kate - Adds support for Ogg Kate subtitles via libkate.
 media-sound/vorbis-tools:ogg123 - Build ogg123 player, needs libao and curl
