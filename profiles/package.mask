@@ -29,6 +29,35 @@
 
 #--- END OF EXAMPLES ---
 
+# Thomas Deutschmann <whissi@gentoo.org> (07 Feb 2018)
+# Intel recommends to pull these versions because they could
+# cause higher than expected reboots and other unpredictable
+# system behavior. Bug #646646
+=sys-firmware/intel-microcode-20171117_p20171215
+=sys-firmware/intel-microcode-20171117_p20171215-r1
+=sys-firmware/intel-microcode-20180108
+=sys-firmware/intel-microcode-20180108-r1
+
+# Matt Turner <mattst88@gentoo.org> (06 Feb 2018)
+# New package with subsuming lots of existing packages. Lots of reverse
+# dependencies will need to be updated.
+x11-proto/xorgproto
+
+# Matt Turner <mattst88@gentoo.org> (06 Feb 2018)
+# Dead and unused
+# Masked for removal in 30 days. Bug #646838
+x11-libs/libXCalibrate
+x11-libs/libXfontcache
+x11-misc/xtscal
+x11-proto/fontcacheproto
+x11-proto/xcalibrateproto
+x11-proto/xf86rushproto
+
+# Tim Harder <radhermit@gentoo.org> (05 Feb 2018)
+# Unmaintained, replaced by newsboat fork.
+# Masked for removal in 30 days.
+net-news/newsbeuter
+
 # Andreas Sturmlechner <asturm@gentoo.org> (03 Feb 2018)
 # Dead upstream, depends on deprecated Qt4.
 # Masked for removal in 30 days. Bug #644370
@@ -299,10 +328,6 @@ dev-libs/libFuzzer
 # Dead upstream, depends on dead Qt4.
 # Bug #643976. Masked for removal in 30 days.
 media-video/2mandvd
-
-# Andreas Sturmlechner <asturm@gentoo.org> (07 Jan 2018)
-# Masked for removal in 30 days, no more rdeps, bug #602816
-dev-python/python-poppler-qt4
 
 # Alice Ferrazzi <alicef@gentoo.org> (05 Jan 2018)
 # kernel: Meltdown and Spectre - Processor flaw. (#643228)
@@ -804,11 +829,6 @@ dev-ruby/poltergeist
 <dev-util/nvidia-cuda-sdk-8
 <dev-util/nvidia-cuda-toolkit-8
 net-wireless/cpyrit-cuda
-
-# Maciej Mrozowski <reavertm@gentoo.org> (18 May 2017)
-# Experimental, most consumers does not support it yet
->=dev-games/openscenegraph-3.5.5
->=dev-games/openscenegraph-qt-3.5.5
 
 # Bernard Cafarelli <voyageur@gentoo.org> (8 May 2017)
 # Coordinated conversion to wxGTK:3.0-gtk3

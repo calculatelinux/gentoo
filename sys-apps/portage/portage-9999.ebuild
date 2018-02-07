@@ -51,7 +51,7 @@ RDEPEND="
 	elibc_uclibc? ( >=sys-apps/sandbox-2.2 )
 	>=app-misc/pax-utils-0.1.17
 	rsync-verify? (
-		>=app-portage/gemato-10
+		>=app-portage/gemato-11
 		app-crypt/gentoo-keys
 		app-crypt/gnupg[ssl(-)]
 	)
@@ -98,6 +98,10 @@ python_prepare_all() {
 		sed -e 's:\("--dynamic-deps", \)\("y"\):\1"n":' \
 			-i pym/_emerge/create_depgraph_params.py || \
 			die "failed to patch create_depgraph_params.py"
+
+		einfo "Enabling additional FEATURES for gentoo-dev..."
+		echo 'FEATURES="${FEATURES} ipc-sandbox network-sandbox strict-keepdir"' \
+			>> cnf/make.globals || die
 	fi
 
 	if use native-extensions; then

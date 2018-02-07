@@ -1066,7 +1066,6 @@ app-portage/eix:sqlite - Compile in support for portage's sqlite backend; to act
 app-portage/g-sorcery:bson - Support BSON file format for package DB
 app-portage/gemato:blake2 - Install dependencies needed for BLAKE2 hash functions
 app-portage/gemato:gpg - Install dependencies needed for OpenPGP signature verification support
-app-portage/gemato:portage-postsync - Install a Portage hook to verify the repository after fetching via rsync
 app-portage/gemato:sha3 - Install dependencies needed for SHA3 hash functions
 app-portage/grs:server - Install all the tools building systems
 app-portage/layman:bazaar - Support dev-vcs/bzr based overlays
@@ -2215,7 +2214,6 @@ dev-libs/poco:zip - Add support for the zip & gz archive formats
 dev-libs/ppl:lpsol - Build the ppl_lpsol linear programming problem solver
 dev-libs/protobuf:java - Builds the Java implementation. This is not needed for Java support in protoc.
 dev-libs/protobuf:python - Builds the Python implementation. This is not needed for Python support in protoc.
-dev-libs/purpose:kaccounts - Enable support for system-wide defined KAccounts
 dev-libs/softhsm:migration-tool - Build db migration tool
 dev-libs/starpu:cuda - Enable NVIDIA CUDA toolkit support
 dev-libs/starpu:gcc-plugin - Enable GCC extension plugin (experimental)
@@ -3529,6 +3527,7 @@ kde-frameworks/kwallet:man - Build and install man pages
 kde-frameworks/kxmlgui:attica - Enable support for kde-frameworks/attica
 kde-frameworks/networkmanager-qt:teamd - Enable Teamd control support
 kde-frameworks/plasma:gles2 - Use GLES 2.0 or later instead of full OpenGL
+kde-frameworks/purpose:kaccounts - Enable support for system-wide defined KAccounts
 kde-frameworks/sonnet:aspell - Enable the app-text/aspell spell-checking backend
 kde-frameworks/sonnet:hunspell - Enable the app-text/hunspell spell-checking backend
 kde-misc/kdeconnect:app - Enable experimental kcapp frontend
@@ -3539,6 +3538,7 @@ kde-misc/kmarkdownwebview:webkit - Use dev-qt/qtwebkit instead of dev-qt/qtweben
 kde-misc/tellico:discid - Add support for reading disc IDs from audio CDs
 kde-plasma/kde-cli-tools:kdesu - Build graphical frontend for kde-frameworks/kdesu
 kde-plasma/kde-gtk-config:gtk3 - Add support for gtk+3-based applications.
+kde-plasma/kdeplasma-addons:dictionary - Enable dictionary applet using dev-qt/qtwebengine
 kde-plasma/kdeplasma-addons:share - Enable applet for quickly sharing data to a variety of sources
 kde-plasma/kinfocenter:gles2 - Show OpenGL ES information in kinfocenter
 kde-plasma/kinfocenter:pci - Show advanced PCI information
@@ -3571,6 +3571,7 @@ kde-plasma/plasma-workspace:appstream - Enable AppStream software metadata suppo
 kde-plasma/plasma-workspace:geolocation - Enables dataengine providing location information
 kde-plasma/plasma-workspace:prison - Enable support for barcodes/QRcodes
 kde-plasma/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/libqalculate
+kde-plasma/powerdevil:brightness-control - Enable screen brightness control using app-misc/ddcutil
 kde-plasma/powerdevil:consolekit - Enable sys-auth/consolekit support instead of logind session tracking
 kde-plasma/powerdevil:wireless - Enable wireless energy saving actions via kde-frameworks/bluez-qt and kde-frameworks/networkmanager-qt
 kde-plasma/systemsettings:classic - Enable classic mode plugin, requires kde-frameworks/khtml
@@ -8402,7 +8403,6 @@ sys-process/fcron:debug - Enable debug code and output. Since version 3.0.5 this
 sys-process/fcron:mta - Enable mta support for sending emails from fcron
 sys-process/fcron:pam - Enable PAM support for fcron. This means that fcron will pass through the "fcron" stack before executing the jobs, and fcrontab will use the "fcrontab" stack to authenticate the user before editing its crontab file.
 sys-process/fcron:system-crontab - Set up fcron to respect /etc/crontab and /etc/cron.d. If this flag is disabled, /etc/cron.d and /etc/crontab will be ignored, but /etc/cron.{hourly,daily,weekly,monthly} will still be respected.
-sys-process/htop:oom - Add column to track the OOM-killer score of processes
 sys-process/htop:openvz - Enable openvz support
 sys-process/htop:vserver - Enable vserver support
 sys-process/lsof:rpc - support looking up RPC service info
@@ -8845,6 +8845,7 @@ x11-terms/eterm:utempter - Include libutempter support
 x11-terms/gnome-terminal:gnome-shell - Integrate with gnome-base/gnome-shell search
 x11-terms/gnome-terminal:nautilus - Build gnome-base/nautilus extension
 x11-terms/hanterm:utempter - Records user logins. Useful on multi-user systems
+x11-terms/kitty:imagemagick - Support displaying images in the terminal with icat
 x11-terms/mate-terminal:gtk3 - Build with GTK+3 instead of GTK+2
 x11-terms/mlterm:fcitx - Enable support for app-i18n/fcitx
 x11-terms/mlterm:gtk2 - Build with x11-libs/gtk+:2 instead of x11-libs/gtk+:3
