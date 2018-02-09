@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/zile/${P}.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="acl test"
 
 RDEPEND=">=dev-libs/boehm-gc-7.2:=
@@ -31,6 +31,17 @@ src_configure() {
 		--without-emacs \
 		$(use_enable acl) \
 		CURSES_LIB="$("$(tc-getPKG_CONFIG)" --libs ncurses)"
+}
+
+src_test() {
+	if tput cup 0 0 >/dev/null || tput cuu1 >/dev/null; then
+		# We have a sane terminal that can move the cursor
+		emake check
+	else
+		ewarn "Terminal type \"${TERM}\" is too stupid to run zile"
+		ewarn "Running the tests with unset TERM instead"
+		( unset TERM; emake check )
+	fi
 }
 
 src_install() {
