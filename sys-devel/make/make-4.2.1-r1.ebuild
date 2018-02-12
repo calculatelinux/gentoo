@@ -23,10 +23,14 @@ RDEPEND="${CDEPEND}
 PATCHES=(
 	"${FILESDIR}"/${PN}-3.82-darwin-library_search-dylib.patch
 	"${FILESDIR}"/${PN}-4.2-default-cxx.patch
+	"${FILESDIR}"/${PN}-4.2.1-perl526.patch
+	"${FILESDIR}"/${PN}-4.2.1-glob-internals.patch
+	"${FILESDIR}"/${PN}-4.2.1-glob-v2.patch
 )
 
 src_prepare() {
 	epatch "${PATCHES[@]}"
+	epatch_user
 }
 
 src_configure() {

@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -22,7 +22,8 @@ RDEPEND="dev-lang/gnat-gpl:6.3.0
 	${PYTHON_DEPS}
 	gmp? ( dev-libs/gmp:* )
 	gtk? (
-		dev-ada/gtkada[gnat_2017,shared?,static?]
+		dev-ada/gtkada[gnat_2017,shared?]
+		static? ( dev-ada/gtkada[static-libs] )
 		dev-libs/atk
 		dev-libs/glib
 		x11-libs/cairo
@@ -34,7 +35,8 @@ RDEPEND="dev-lang/gnat-gpl:6.3.0
 	postgres? ( dev-db/postgresql:* )
 	sqlite? ( dev-db/sqlite )
 	projects? (
-		>=dev-ada/libgpr-2017[gnat_2017,shared?,static]
+		>=dev-ada/libgpr-2017[gnat_2017,shared?]
+		static? ( dev-ada/libgpr[static-libs] )
 	)"
 DEPEND="${RDEPEND}
 	dev-ada/gprbuild[gnat_2017]"
