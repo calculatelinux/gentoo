@@ -216,8 +216,8 @@ net-p2p/primecoind
 sci-physics/geant-python
 
 # Patrice Clement <monsieurp@gentoo.org> (18 Jan 2018)
-# mpv-0.28.0 requires changes currently only available in ffmpeg-9999.
-=media-video/mpv-0.28.0
+# mpv >= 0.28.0 requires changes currently only available in ffmpeg-9999.
+>=media-video/mpv-0.28.0
 
 # Andreas Sturmlechner <asturm@gentoo.org> (18 Jan 2018)
 # Broken by >=kde-apps/kcalcore-17.12.0, but also merged into
@@ -501,6 +501,7 @@ games-kids/crayon-physics
 >=dev-python/thunarx-python-0.4.0
 >=xfce-base/thunar-1.7
 >=xfce-extra/thunar-archive-plugin-0.4.0
+>=xfce-extra/thunar-media-tags-plugin-0.3.0
 
 # Andreas Sturmlechner <asturm@gentoo.org> (16 Nov 2017)
 # Qt4WebKit is ancient and full of security holes.

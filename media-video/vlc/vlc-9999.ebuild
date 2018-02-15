@@ -80,7 +80,7 @@ RDEPEND="
 	bluray? ( >=media-libs/libbluray-0.6.2:0= )
 	cddb? ( >=media-libs/libcddb-1.2:0 )
 	chromaprint? ( >=media-libs/chromaprint-0.6:0 )
-	chromecast? ( >=dev-libs/protobuf-2.5.0 )
+	chromecast? ( >=dev-libs/protobuf-2.5.0:= )
 	dbus? ( >=sys-apps/dbus-1.6:0 )
 	dc1394? (
 		>=media-libs/libdc1394-2.1:2
@@ -489,8 +489,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if [[ -e /usr/lib64/vlc/plugins/plugins.dat ]]; then
-		rm /usr/lib64/vlc/plugins/plugins.dat || die "Failed to rm plugins.dat"
+	if [[ -e /usr/$(get_libdir)/vlc/plugins/plugins.dat ]]; then
+		rm /usr/$(get_libdir)/vlc/plugins/plugins.dat || die "Failed to rm plugins.dat"
 	fi
 
 	gnome2_icon_cache_update
