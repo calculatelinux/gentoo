@@ -29,6 +29,32 @@
 
 #--- END OF EXAMPLES ---
 
+# Ulrich Müller <ulm@gentoo.org> (15 Feb 2018)
+# Masked for testing. Note that 11.92 and 12.1 are equivalent
+# in functionality.
+>=app-emacs/auctex-12.1
+
+# Brian Evans <grknight@gentoo.org (15 Feb 2018)
+# These PEAR packages are unmaintained upstream and
+# are difficult to test or have no tests.
+# PHP team no longer wants to maintain these for PHP7 and beyond
+# Removal in 30 days - Bug 647768
+dev-php/PEAR-Benchmark
+dev-php/PEAR-Calendar
+dev-php/PEAR-Console_Color
+dev-php/PEAR-Crypt_Blowfish
+dev-php/PEAR-Crypt_RC4
+dev-php/PEAR-XML_Beautifier
+dev-php/PEAR-XML_Feed_Parser
+dev-php/PEAR-Structures_DataGrid
+dev-php/PEAR-PHP_CompatInfo
+dev-php/PEAR-Net_Server
+dev-php/PEAR-Net_LMTP
+dev-php/PEAR-Net_IMAP
+dev-php/PEAR-Net_FTP
+dev-php/PEAR-Net_DIME
+dev-php/PEAR-Math_Stats
+
 # Sergey Popov <pinkbyte@gentoo.org> (13 Feb 2018)
 # Requires dead Qt4 (bug #645420). Removal in 30 days
 media-gfx/qiviewer
@@ -233,11 +259,6 @@ dev-tex/pstplus
 # Depends on dead PyQt4/Qt4, upstream needs help w/ PyQt5.
 # Masked for removal in 30 days. Bug #634986
 dev-tex/texamator
-
-# Kent Fredric <kentnl@gentoo.org> (10 Jan 2018)
-# Dead upstream, Broken since 2009.
-# Bug #644146. Removal in 30 days
-dev-perl/SVN-Simple
 
 # Michał Górny <mgorny@gentoo.org> (10 Jan 2018)
 # The Fuzzer library is now installed as part of core LLVM. That's
