@@ -10,12 +10,12 @@ HOMEPAGE="https://github.com/puppetlabs/leatherman"
 SRC_URI="https://github.com/puppetlabs/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
-SLOT="0"
 IUSE="debug static-libs test"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
+SLOT="0/1.4"
 
 RDEPEND="net-misc/curl"
-DEPEND=">=dev-libs/boost-1.54[nls]
+DEPEND=">=dev-libs/boost-1.54:=[nls]
 	net-misc/curl
 	>=sys-devel/gcc-4.8:*"
 
