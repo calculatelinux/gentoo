@@ -2588,6 +2588,8 @@ dev-python/scrapy:boto - Add support for Amazon S3 via dev-python/boto
 dev-python/scrapy:ibl - Use Instace Based Learning algorithm for automatic extraction
 dev-python/setuptools_scm:mercurial - Enables mercurial backend
 dev-python/simplecv:shell - Enable the iPython SimpleCV shell
+dev-python/simplespectral:faster - Use sci-libs/scipy to speed up drawing
+dev-python/simplespectral:fastest - Use dev-python/pyFFTW to speed up drawing to the max
 dev-python/sphinx:net - enable internet capabilities
 dev-python/sympy:imaging - Add support for dev-python/pillow
 dev-python/sympy:ipython - Add support for dev-python/ipython
@@ -6322,6 +6324,7 @@ net-misc/eventd:speech - Enable plugin for Text-To-Speech support
 net-misc/eventd:webhook - Enable plugin to send payloads to webhook handlers
 net-misc/eventd:websocket - Enable support for WebSocket protocol
 net-misc/fatrat:bittorrent - Use the bittorrent protocol via net-libs/libtorrent-rasterbar.
+net-misc/felix:bird - Use BIRD, e.g. for route reflection
 net-misc/freerdp:client - Build client binaries
 net-misc/freerdp:openh264 - Enable H.264 support using media-libs/openh264
 net-misc/freerdp:server - Build server binaries
@@ -6990,6 +6993,7 @@ net-wireless/gr-osmosdr:hackrf - Build with Great Scott Gadgets HackRF support
 net-wireless/gr-osmosdr:iqbalance - Enable support for I/Q balancing using gr-iqbal
 net-wireless/gr-osmosdr:mirisdr - Build with Mirics MSi2500 + MSi001 SDR support
 net-wireless/gr-osmosdr:rtlsdr - Build with Realtek RTL2832U (rtlsdr) support
+net-wireless/gr-osmosdr:soapy - Build with SoapySDR support
 net-wireless/gr-osmosdr:uhd - Build with Ettus Research USRP Hardware Driver support
 net-wireless/horst:pcap - Add support for network packet capture via net-libs/libpcap
 net-wireless/hostapd:crda - Add CRDA support
@@ -7013,6 +7017,12 @@ net-wireless/openbsc:gprs - Support GPRS via OpenGGSN
 net-wireless/osmocom-bb:transmit - Enable transmission capabilities.
 net-wireless/pyrit:cuda - Enable CUDA support via net-wireless/cpyrit-cuda
 net-wireless/pyrit:opencl - Enable OpenCL support via net-wireless/cpyrit-opencl
+net-wireless/soapy_power:faster - Use sci-libs/scipy to speed up drawing
+net-wireless/soapy_power:fastest - Use dev-python/pyFFTW to speed up drawing to the max
+net-wireless/soapysdr:bladerf - Add support for bladerf hardware
+net-wireless/soapysdr:hackrf - Add support for hackrf hardware
+net-wireless/soapysdr:rtlsdr - Add support for rtlsdr hardware
+net-wireless/soapysdr:uhd - Add support for Ettus USRP hardware
 net-wireless/spectools:debug - Build the raw output client for spectools. (for developers)
 net-wireless/spectools:gtk - Build the gtk-2 based client for spectools
 net-wireless/spectools:ncurses - Build the ncurses based client for spectools
@@ -8481,6 +8491,7 @@ www-client/uget:hide-temp-files - Make temporary files that are used while downl
 www-client/uget:openssl - Use dev-libs/openssl instead of net-libs/gnutls
 www-client/uget:rss - Enable uGet feed messages
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
+www-client/weboob:deprecated - Enable dev-python/mechanize support (deprecated in favor of dev-python/requests
 www-client/weboob:fast-libs - Enable fast libs
 www-client/weboob:secure-updates - Enable secure updates
 www-misc/gurlchecker:json - Enable support for parsing Google Chrome and derivatives bookmarks.
