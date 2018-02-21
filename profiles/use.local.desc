@@ -261,6 +261,8 @@ app-backup/dar:gcrypt - Enables strong encryption support
 app-backup/dar:gpg - Enables usage of asymetric crypto algorithms
 app-backup/deja-dup:nautilus - Build gnome-base/nautilus extension
 app-backup/duplicity:s3 - Support for backing up to the Amazon S3 system
+app-backup/fsarchiver:lz4 - Enable lz4 compression support
+app-backup/fsarchiver:zstd - Enable zstd compression support
 app-backup/holland-backup-mysql-meta:lvm - Install Holland LVM Plugin
 app-backup/holland-backup-mysql-meta:mysqldump - Install Holland mysqldump Plugin
 app-backup/holland-backup-mysql-meta:mysqlhotcopy - Install Holland mysqlhotcopy Plugin
@@ -3551,6 +3553,7 @@ kde-plasma/kdeplasma-addons:share - Enable applet for quickly sharing data to a 
 kde-plasma/kinfocenter:gles2 - Show OpenGL ES information in kinfocenter
 kde-plasma/kinfocenter:pci - Show advanced PCI information
 kde-plasma/kmenuedit:hotkeys - Enable support for hotkey editing
+kde-plasma/kscreenlocker:consolekit - Add support for killing the screenlocker when sys-auth/consolekit is the session tracker
 kde-plasma/kwin:gles2 - Use OpenGL ES 2 instead of full GL
 kde-plasma/kwin:multimedia - Enable effect video button in desktop effects KCM
 kde-plasma/libksysguard:detailedmemory - Enable display of detailed memory information using dev-qt/qtwebkit.
@@ -5341,6 +5344,9 @@ net-analyzer/smokeping:dig - Install net-dns/bind-tools for dig functionality
 net-analyzer/smokeping:echoping - Install net-analyzer/echoping for echoping functionality
 net-analyzer/smokeping:ssh - Install ssh functionality
 net-analyzer/smokeping:telnet - Install dev-perl/Net-Telnet for telnet functionality
+net-analyzer/sngrep:eep - Enable EEP packet send/receive support
+net-analyzer/sngrep:gnutls - Use net-libs/gnutls to parse captured TLS packets
+net-analyzer/sngrep:openssl - Use dev-libs/openssl to parse captured TLS packets
 net-analyzer/snort:active-response - Enables support for automatically sending TCP resets and ICMP unreachable messages to terminate connections. Used with inline deployments.
 net-analyzer/snort:control-socket - Enables Snort's control socket.
 net-analyzer/snort:dynamicplugin - Enable ability to dynamically load preprocessors, detection engine, and rules library. This is required if you want to use shared object (SO) snort rules.
@@ -7505,6 +7511,8 @@ sci-physics/thepeg:fastjet - Adds support for sci-physics/fastjet
 sci-physics/thepeg:hepmc - Adds support for High Energy Physics Monte Carlo Generators sci-physics/hepmc
 sci-physics/thepeg:lhapdf - Adds support for sci-physics/lhapdf
 sci-physics/thepeg:rivet - Adds support for sci-physics/rivet
+sci-physics/vgm:geant4 - Enable interaction with Geant4(sci-physics/geant:4)
+sci-physics/vgm:root - Enable interaction with ROOT (sci-physics/root)
 sci-physics/yoda:c++11 - Build using the C++11 standard
 sci-physics/yoda:root - Adds support for sci-physics/root
 sci-visualization/fityk:nlopt - Enable optimization with sci-libs/nlopt
