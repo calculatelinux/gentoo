@@ -29,6 +29,46 @@
 
 #--- END OF EXAMPLES ---
 
+# Brian Evans <grknight@gentoo.org> (22 Feb 2018)
+# Multiple vulnerablities, EOL upstream.
+# Masked for removal in 30 days. Bug #604182
+dev-php/ZendFramework
+
+# Michael Palimaka <kensington@gentoo.org> (22 Feb 2018)
+# Plugin for removed package media-sound/amarok. Dead upstream.
+# Depends on vulnerable gstreamer:0.10.
+# Masked for removal in 30 days. Bug #629184.
+media-sound/moodbar
+
+# Mart Raudsepp <leio@gentoo.org> (22 Feb 2018)
+# This package was renamed to dev-libs/libgnome-games-support without
+# a pkgmove; everything in tree uses it now instead of libgames-support.
+# Masked for removal in 30 days. Bug #648468.
+dev-libs/libgames-support
+
+# Thomas Deutschmann <whissi@gentoo.org> (22 Feb 2018)
+# Upstream's release tarball doesn't match Git content.
+# Masked until clarified.
+=app-admin/rsyslog-8.33.0
+
+# Ulrich Müller <ulm@gentoo.org> (21 Feb 2018)
+# Homepage is dead. Apparently the last release was in 2012
+# and it does not work with Emacs 25 and later.
+# Masked for removal in 30 days. Bug #590400.
+app-emacs/mcomplete
+
+# Ulrich Müller <ulm@gentoo.org> (21 Feb 2018)
+# Obsolete predecessor of js-mode, which is included
+# with Emacs since version 23. Homepage is dead.
+# Masked for removal in 30 days. Bug #648150.
+app-emacs/javascript
+
+# Ulrich Müller <ulm@gentoo.org> (21 Feb 2018)
+# Last release in 2006. Homepage is dead. Upstream says
+# that app-emacs/muse should be used as replacement.
+# Masked for removal in 30 days. Bug #619194.
+app-emacs/emacs-wiki
+
 # Ulrich Müller <ulm@gentoo.org> (15 Feb 2018)
 # Masked for testing. Note that 11.92 and 12.1 are equivalent
 # in functionality.
@@ -201,16 +241,6 @@ dev-ruby/test-unit:0
 dev-ruby/tilt:0
 virtual/ruby-minitest
 www-apps/jekyll-gist
-
-# Andreas Sturmlechner <asturm@gentoo.org> (23 Jan 2018)
-# Depends on deprecated Qt4, no revdeps left.
-# Masked for removal in 30 days.
-dev-libs/libindicate-qt
-
-# Andreas Sturmlechner <asturm@gentoo.org> (22 Jan 2018)
-# Depends on deprecated Qt4, dead project.
-# Masked for removal in 30 days.
-app-emulation/qtemu
 
 # Andreas Sturmlechner <asturm@gentoo.org> (22 Jan 2018)
 # Depends on deprecated Qt4, upstream is slowly doing a qml port.
