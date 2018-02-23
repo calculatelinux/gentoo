@@ -29,6 +29,44 @@
 
 #--- END OF EXAMPLES ---
 
+# Thomas Deutschmann <whissi@gentoo.org> (23 Feb 2018)
+# Unmaintained in Gentoo, known critical vulnerabilities like
+# auth bypass. Removal in 30 days. Bugs #559658, #592080.
+sys-cluster/ganglia-web
+
+# Mart Raudsepp <leio@gentoo.org> (23 Feb 2018)
+# Old net-libs/webkit-gtk SLOTs have hundreds of known security issues.
+# Use the security safe net-libs webkit-gtk SLOT=4 instead via
+# libraries and applications ported to gtk3 and webkit2gtk API.
+# Masked for removal in 30 days. Bug #577068.
+# Please keep this package.mask entry until at least 25th May 2018 for
+# extra notification of the security vulnerabilities.
+net-libs/webkit-gtk:2
+net-libs/webkit-gtk:3
+
+# Mart Raudsepp <leio@gentoo.org> (23 Feb 2018)
+# Older versions of GnuCash use security vulnerable old webkit-gtk slot.
+# Use gnucash-2.7.4 or newer instead, but pay attention to the news item:
+# https://www.gentoo.org/support/news-items/2018-01-14-gnucash.html
+<app-office/gnucash-2.7
+
+# Steve Dibb <beandog@gentoo.org> (22 Feb 2018)
+# Very old project of mine, hasn't worked in years, no plans to
+# support, and mpv can provide resume playback by default.
+# Masked for removal in 30 days. Bug #648568
+media-video/mplayer-resume
+
+# Steve Dibb <beandog@gentoo.org> (22 Feb 2018)
+# Dead upstream, never really used, libdvdread and libdvdnav provide
+# DVD access.
+# Masked for removal in 30 days. Bug #648566
+media-libs/libdvdplay
+
+# Steve Dibb <beandog@gentoo.org> (22 Feb 2018)
+# Dead upstream, long since replaced by libaacs for functionality.
+# Masked for removal in 30 days. Bug #648560
+media-video/aacskeys
+
 # Brian Evans <grknight@gentoo.org> (22 Feb 2018)
 # Multiple vulnerablities, EOL upstream.
 # Masked for removal in 30 days. Bug #604182
@@ -764,8 +802,8 @@ net-wireless/cpyrit-cuda
 # Bernard Cafarelli <voyageur@gentoo.org> (8 May 2017)
 # Coordinated conversion to wxGTK:3.0-gtk3
 # Drop mask after migration of existing wxGTK:3.0 users
-=net-ftp/filezilla-3.29.0-r300
 =net-ftp/filezilla-3.30.0-r300
+=net-ftp/filezilla-3.31.0-r300
 
 # Rick Farina <zerochaos@gentoo.org> (17 Apr 2017)
 # Masking old versions because upstream changed versioning
