@@ -29,6 +29,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Anthony G. Basile <blueness@gentoo.org> (25 Feb 2018)
+# Upstream has been dead since 2012.  Migrate to uclibc-ng.
+# See https://wiki.gentoo.org/wiki/Project:Hardened_uClibc
+sys-libs/uclibc
+
 # Thomas Deutschmann <whissi@gentoo.org> (23 Feb 2018)
 # Unmaintained in Gentoo, known critical vulnerabilities like
 # auth bypass. Removal in 30 days. Bugs #559658, #592080.
@@ -248,37 +253,6 @@ media-fonts/fontawesome:0/5
 # Requires dead Qt 4. Dead upstream.
 # Masked for removal in 30 days. Bug #644532.
 media-video/qx11grab
-
-# Hans de Graaff <graaff@gentoo.org> (24 Jan 2018)
-# Remove packages that are ruby22-only, and either cannot
-# be updated to ruby23, or are in old, obsolete, slots.
-# Masked for removal in 30 days.
-dev-ruby/amq-protocol:0
-dev-ruby/aws-sdk:0
-dev-ruby/bson:3
-dev-ruby/camping
-dev-ruby/execjs:1
-dev-ruby/mocha:0.11
-dev-ruby/mocha:0.12
-dev-ruby/mocha:0.13
-dev-ruby/mongo
-dev-ruby/net-ssh-multi
-dev-ruby/pcaprub:0.11
-dev-ruby/postgres_ext:2.4
-dev-ruby/rack:1.4
-dev-ruby/rack:1.5
-dev-ruby/rbtree
-dev-ruby/recog:2.0.14
-dev-ruby/right_http_connection
-dev-ruby/rspec-rails:2
-dev-ruby/sass:0
-dev-ruby/sass-rails:4.0
-dev-ruby/snmplib
-dev-ruby/sprockets:2
-dev-ruby/test-unit:0
-dev-ruby/tilt:0
-virtual/ruby-minitest
-www-apps/jekyll-gist
 
 # Andreas Sturmlechner <asturm@gentoo.org> (22 Jan 2018)
 # Depends on deprecated Qt4, upstream is slowly doing a qml port.

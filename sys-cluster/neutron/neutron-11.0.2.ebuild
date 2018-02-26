@@ -16,7 +16,7 @@ SRC_URI="https://dev.gentoo.org/~prometheanfire/dist/openstack/neutron/pike/conf
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="amd64 ~arm64 x86"
-IUSE="compute-only dhcp ipv6 l3 metadata openvswitch linuxbridge server sqlite mysql postgres"
+IUSE="compute-only dhcp haproxy ipv6 l3 metadata openvswitch linuxbridge server sqlite mysql postgres"
 REQUIRED_USE="!compute-only? ( || ( mysql postgres sqlite ) )
 						compute-only? ( !mysql !postgres !sqlite !dhcp !l3 !metadata !server
 						|| ( openvswitch linuxbridge ) )"
@@ -134,7 +134,7 @@ RDEPEND="
 	net-firewall/iptables
 	net-firewall/ebtables
 	net-firewall/conntrack-tools
-	net-proxy/haproxy
+	haproxy? ( net-proxy/haproxy )
 	openvswitch? ( <=net-misc/openvswitch-2.8.9999 )
 	ipv6? (
 		net-misc/radvd

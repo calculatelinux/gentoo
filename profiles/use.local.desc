@@ -79,7 +79,9 @@ app-admin/gtkdiskfree:gtk2 - Support GTK+ 2.x instead of GTK+ 3.x
 app-admin/hddtemp:network-cron - Monthly cronjob to update hddtemp.db.
 app-admin/keepass:aot - Generate native code at build time, rather than runtime.
 app-admin/keepassxc:autotype - Add support to autotype the passwords into other applications
+app-admin/keepassxc:browser - Enables browser plugin support
 app-admin/keepassxc:http - Add http support
+app-admin/keepassxc:network - Enable network support
 app-admin/keepassxc:yubikey - Enable database unlocking via YubiKey.
 app-admin/lastpass-cli:X - Use x11-misc/xclip or x11-misc/xsel to copy passwords to the clipboard.
 app-admin/lastpass-cli:pinentry - Use app-crypt/pinentry to prompt for passwords.
@@ -6437,6 +6439,29 @@ net-misc/nextcloud-client:shibboleth - Build support for Shibboleth single sign-
 net-misc/ntp:openntpd - Allow ntp to be installed alongside openntpd
 net-misc/ntp:parse-clocks - Add support for PARSE clocks
 net-misc/ntp:samba - Provide support for Samba's signing daemon (needed for Active Directory domain controllers)
+net-misc/ntpsec:early - Drop root privileges early
+net-misc/ntpsec:gdb - Enable debugging with gdb
+net-misc/ntpsec:heat - Install contrib heat generating scripts
+net-misc/ntpsec:nist - Enable lockclock
+net-misc/ntpsec:ntpviz - Make visualizations of offsets, jiffies, etc.
+net-misc/ntpsec:rclock_arbiter - Arbiter 1088A/B GPS driver
+net-misc/ntpsec:rclock_generic - Enable support for generic time radios and GPSDOs
+net-misc/ntpsec:rclock_gpsd - Enable gpsd daemon support
+net-misc/ntpsec:rclock_hpgps - Hewlett Packard GPS driver
+net-misc/ntpsec:rclock_jjy - JJY driver
+net-misc/ntpsec:rclock_local - Support for undisciplined local clock (not recommended)
+net-misc/ntpsec:rclock_modem - NIST/USNO/PTB Modem Time Services
+net-misc/ntpsec:rclock_neoclock - NeoClock4X DCF77/TDF driver
+net-misc/ntpsec:rclock_nmea - NMEA GPS driver
+net-misc/ntpsec:rclock_oncore - Oncore driver
+net-misc/ntpsec:rclock_pps - PPS cesium clock driver
+net-misc/ntpsec:rclock_shm - Obtain refclock info from shared memory-segment
+net-misc/ntpsec:rclock_spectracom - Spectracom driver
+net-misc/ntpsec:rclock_trimble - Trimble driver
+net-misc/ntpsec:rclock_truetime - Trutime driver (deprecated)
+net-misc/ntpsec:rclock_zyfer - Zyfer driver
+net-misc/ntpsec:smear - Specify the interval over which a leap second is applied (experimental)
+net-misc/ntpsec:tests - Enable tests
 net-misc/ofono:atmodem - ETSI AT modem support.
 net-misc/ofono:bluetooth - Enable Bluetooth modem support using net-wireless/bluez.
 net-misc/ofono:cdmamodem - Enable CDMA modem support.
@@ -7920,6 +7945,7 @@ sys-cluster/mvapich2:medium-cluster - Automatically generated description for me
 sys-cluster/mvapich2:romio - Automatically generated description for romio
 sys-cluster/neutron:compute-only - Only install things needed on compute hosts
 sys-cluster/neutron:dhcp - Installs the initscripts for the neutron dhcp service
+sys-cluster/neutron:haproxy - haproxy backend support
 sys-cluster/neutron:l3 - Installs the initscripts for the neutron l3 agent service
 sys-cluster/neutron:linuxbridge - Installs the initscripts for the neutron linuxbridge agent service
 sys-cluster/neutron:metadata - Installs the initscripts for the neutron metadata agent service
