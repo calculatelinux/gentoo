@@ -175,7 +175,7 @@ media-sound/lastfmplayer
 # Matt Turner <mattst88@gentoo.org> (06 Feb 2018)
 # New package with subsuming lots of existing packages. Lots of reverse
 # dependencies will need to be updated.
-x11-proto/xorgproto
+x11-base/xorg-proto
 >=x11-proto/bigreqsproto-1.1.2-r1
 >=x11-proto/compositeproto-0.4.2-r2
 >=x11-proto/damageproto-1.2.1-r2
@@ -279,6 +279,8 @@ dev-libs/libFuzzer
 
 # Richard Freeman <rich0@gentoo.org> (09 Jan 2018)
 # Bug 644048 - temp QA mask until it can get sorted out
+# Lars Wendler <polynomial-c@gentoo.org> (26 Feb 2018)
+# See also tracker bug: https://bugs.gentoo.org/648864
 ~sys-apps/attr-2.4.48
 # Lars Wendler <polynomial-c@gentoo.org> (10 Jan 2018)
 # Mask followup bugfixes for =sys-apps/attr-2.4.48 as well until proper
