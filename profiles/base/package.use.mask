@@ -7,6 +7,12 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Brian Evans <grknight@gentoo.org> (28 Feb 2018)
+# Mask client-libs USE to force users to install alternative standard pacakges
+>=dev-db/mariadb-10.3 client-libs
+>=dev-db/mysql-5.7 client-libs
+>=dev-db/percona-server-5.7 client-libs
+
 # Andreas Sturmlechner <asturm@gentoo.org> (25 Feb 2018)
 # Depends on obsolete media-libs/phonon[qt4]
 dev-qt/designer:4 phonon
@@ -159,12 +165,6 @@ media-video/mpv libav
 # Mask due to bug #621810
 dev-games/simgear gdal
 games-simulation/flightgear gdal
-
-# Michał Górny <mgorny@gentoo.org> (05 Jun 2017)
-# (on behalf of Treecleaner project)
-# dev-cpp/libgnomeuimm is masked for removal, mask flags that require
-# it.
-app-cdr/cdrdao gcdmaster
 
 # Michał Górny <mgorny@gentoo.org> (05 Jun 2017)
 # (on behalf of Treecleaner project)

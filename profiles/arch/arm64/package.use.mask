@@ -1,6 +1,11 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
+# Michał Górny <mgorny@gentoo.org> (28 Feb 2018)
+# Requires masked dependent flags.
+dev-lang/php ldap-sasl
+net-nds/openldap cxx
+
 # Matthew Thode <prometheanfire@gentoo.org> (23 Feb 2018)
 # net-proxy/haproxy isn't keyworded for arm64
 sys-cluster/neutron haproxy
@@ -139,10 +144,6 @@ app-emulation/libvirt openvz
 # Alexis Ballier <aballier@gentoo.org> (10 Jul 2017)
 # sys-firmware/ipxe does not build, mask x86 targets needing it
 app-emulation/qemu qemu_softmmu_targets_i386 qemu_softmmu_targets_x86_64
-
-# Alexis Ballier <aballier@gentoo.org> (10 Jul 2017)
-# pull webkit-gtk:2 which we would like to avoid
-x11-libs/wxGTK:3.0 webkit
 
 # Alexis Ballier <aballier@gentoo.org> (10 Jul 2017)
 # media-gfx/nvidia-texture-tools does not support arm64

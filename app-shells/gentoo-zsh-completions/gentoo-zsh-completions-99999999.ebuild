@@ -1,7 +1,7 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 
 if [[ ${PV} == 9999* ]] ; then
 	inherit git-r3
@@ -17,7 +17,8 @@ HOMEPAGE="https://github.com/gentoo/gentoo-zsh-completions"
 LICENSE="ZSH"
 SLOT="0"
 
-RDEPEND=">=app-shells/zsh-4.3.5"
+RDEPEND=">=app-shells/zsh-4.3.5
+	!<sys-apps/openrc-0.35"
 
 src_install() {
 	insinto /usr/share/zsh/site-functions

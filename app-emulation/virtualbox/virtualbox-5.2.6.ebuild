@@ -11,7 +11,7 @@ MY_PV="${MY_PV/rc/RC}"
 MY_P=VirtualBox-${MY_PV}
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise and home use"
-HOMEPAGE="http://www.virtualbox.org/"
+HOMEPAGE="https://www.virtualbox.org/"
 SRC_URI="https://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}.tar.bz2
 	https://dev.gentoo.org/~polynomial-c/${PN}/patchsets/${PN}-5.2.0-patches-01.tar.xz"
 

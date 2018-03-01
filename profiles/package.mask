@@ -131,6 +131,7 @@ app-emacs/javascript
 # that app-emacs/muse should be used as replacement.
 # Masked for removal in 30 days. Bug #619194.
 app-emacs/emacs-wiki
+app-emacs/emacs-wiki-blog
 
 # Ulrich Müller <ulm@gentoo.org> (15 Feb 2018)
 # Masked for testing. Note that 11.92 and 12.1 are equivalent
@@ -172,12 +173,6 @@ app-crypt/monkeysign
 # Fails to build (bug #538400). Requires dead Qt 4 (bug #637014).
 # Dead upstream. Masked for removal in 30 days.
 media-sound/lastfmplayer
-
-# Lars Wendler <polynomial-c@gentoo.org> (08 Feb 2018)
-# 4.4.0 server does not properly write lease changes to the lease file
-# in some cases:
-# https://lists.isc.org/pipermail/dhcp-users/2018-February/021164.html
-=net-misc/dhcp-4.4.0
 
 # Eray Aslan <eras@gentoo.org> (08 Feb 2018)
 # Mask experimental software
