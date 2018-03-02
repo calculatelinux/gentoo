@@ -33,6 +33,22 @@
 #-video_cards_vmware
 -input_devices_vmmouse
 
+# Michał Górny <mgorny@gentoo.org> (02 Mar 2018)
+# Requires dev-libs/libressl (not yet tested).
+curl_ssl_libressl
+
+# Michał Górny <mgorny@gentoo.org> (02 Mar 2018)
+# Someone needs to test them.
+input_devices_libinput
+
+# Michał Górny <mgorny@gentoo.org> (01 Mar 2018)
+# virtual/mpi not keyworded at the moment.
+mpi
+
+# Michał Górny <mgorny@gentoo.org> (01 Mar 2018)
+# sys-process/audit seems pretty Linux-specific.
+audit
+
 # Michał Górny <mgorny@gentoo.org> (25 Feb 2018)
 # google-perftools does not work on FreeBSD.
 tcmalloc

@@ -13,7 +13,7 @@ MY_P="${PN}-${MY_PV}"
 
 if [[ ${PV} == 9999 ]] ; then
 	inherit git-r3 autotools
-	EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux/util-linux.git"
+	EGIT_REPO_URI="https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git"
 else
 	[[ "${PV}" = *_rc* ]] || \
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
@@ -30,7 +30,7 @@ IUSE="build caps +cramfs fdformat kill ncurses nls pam python +readline selinux 
 # Most lib deps here are related to programs rather than our libs,
 # so we rarely need to specify ${MULTILIB_USEDEP}.
 RDEPEND="caps? ( sys-libs/libcap-ng )
-	cramfs? ( sys-libs/zlib )
+	cramfs? ( sys-libs/zlib:= )
 	ncurses? ( >=sys-libs/ncurses-5.2-r2:0=[unicode?] )
 	pam? ( sys-libs/pam )
 	python? ( ${PYTHON_DEPS} )
