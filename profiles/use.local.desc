@@ -1081,6 +1081,7 @@ app-portage/conf-update:colordiff - Use colors when displaying diffs (app-misc/c
 app-portage/conf-update:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
 app-portage/eix:debug - Build with upstream's CXXFLAGS/LDFLAGS for debugging support; not recommended for normal use.
 app-portage/eix:doc - Create description of the eix cache file additionally in html format
+app-portage/eix:jumbo-build - Compile faster and produce better binary. Recommended unless compiling on a quite memory-restricted system.
 app-portage/eix:sqlite - Compile in support for portage's sqlite backend; to actually use it you need additional configuration of portage and eix
 app-portage/g-sorcery:bson - Support BSON file format for package DB
 app-portage/gemato:blake2 - Install dependencies needed for BLAKE2 hash functions
@@ -5731,9 +5732,6 @@ net-im/err:plugins - Enable support for installing plugins with dev-vcs/git
 net-im/gajim:idle - Enable idle module
 net-im/gajim:srv - SRV capabilities
 net-im/gajim:xhtml - Enable XHTML support
-net-im/jabberd2:experimental - Enable experimental features such as TLS Everywhere.
-net-im/jabberd2:memdebug - Enable nad and pool debug. Requires USE="debug" to be set.
-net-im/jabberd2:websocket - Enable WebSocket support on C2S port.
 net-im/kadu:gadu - Enables Gadu communication protocol
 net-im/kadu:mpd - Enables Music Player Daemon support
 net-im/kadu:otr - Enable char encryption via OTR library

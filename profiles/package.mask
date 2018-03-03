@@ -38,6 +38,15 @@ dev-python/sepolgen
 # Masked for testing.
 >=dev-python/aiohttp-3
 
+# Ulrich Müller <ulm@gentoo.org> (01 Mar 2018)
+# Very old (Open)Motif version 2.2 installing libXm.so.3.
+# Released in 2004. Non-free. No revdeps in Gentoo repo.
+# Depends on x11-libs/libXp which is on its way out.
+# If you still need this for third-party binaries, try the
+# workaround outlined in https://bugs.gentoo.org/210021#c19.
+# Masked for removal in 90 days. Bug #649080.
+x11-libs/motif:2.2
+
 # Andreas Sturmlechner <asturm@gentoo.org> (28 Feb 2018)
 # Dead upstream, depends on dead Qt4.
 # Masked for removal in 30 days.
@@ -141,11 +150,6 @@ app-emacs/javascript
 # Masked for removal in 30 days. Bug #619194.
 app-emacs/emacs-wiki
 app-emacs/emacs-wiki-blog
-
-# Ulrich Müller <ulm@gentoo.org> (15 Feb 2018)
-# Masked for testing. Note that 11.92 and 12.1 are equivalent
-# in functionality.
->=app-emacs/auctex-12.1
 
 # Brian Evans <grknight@gentoo.org (15 Feb 2018)
 # These PEAR packages are unmaintained upstream and
@@ -315,21 +319,6 @@ app-misc/misterhouse
 app-forensics/autopsy
 
 # Pacho Ramos <pacho@gentoo.org> (04 Jan 2018)
-# Multiple security issues, init scripts need a major rework (#629416,
-# #629412, #631068, #623806). Removal in a month.
-net-im/jabberd2
-net-im/mu-conference
-
-# Pacho Ramos <pacho@gentoo.org> (04 Jan 2018)
-# Not compatible with current libmowgli, no reverse deps (#630030). Removal
-# in a month.
-dev-libs/libmcs
-
-# Pacho Ramos <pacho@gentoo.org> (04 Jan 2018)
-# No reverse deps, fails to build (#630866). Removal in a month.
-dev-libs/libmowgli-glib
-
-# Pacho Ramos <pacho@gentoo.org> (04 Jan 2018)
 # Deprecated tools replace by dev-python/awscli (#633374). Removal in a
 # month.
 app-admin/aws-as-tools
@@ -496,14 +485,8 @@ games-kids/crayon-physics
 >=xfce-extra/thunar-media-tags-plugin-0.3.0
 
 # Andreas Sturmlechner <asturm@gentoo.org> (16 Nov 2017)
-# Qt4WebKit is ancient and full of security holes.
-# Masked for removal in 30 days. Bug #620684
-dev-qt/qtwebkit:4
-
-# Andreas Sturmlechner <asturm@gentoo.org> (16 Nov 2017)
 # Depends on dead Qt4WebKit. Masked for removal in 30 days. Bug #620702
-<media-gfx/freecad-0.17
-=media-gfx/freecad-9999
+<media-gfx/freecad-0.18
 
 # Jonas Stein <jstein@gentoo.org> (11 Nov 2017)
 # The upstream developer and former maintainer asked to treeclean these
