@@ -1081,7 +1081,6 @@ app-portage/conf-update:colordiff - Use colors when displaying diffs (app-misc/c
 app-portage/conf-update:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
 app-portage/eix:debug - Build with upstream's CXXFLAGS/LDFLAGS for debugging support; not recommended for normal use.
 app-portage/eix:doc - Create description of the eix cache file additionally in html format
-app-portage/eix:jumbo-build - Compile faster and produce better binary. Recommended unless compiling on a quite memory-restricted system.
 app-portage/eix:sqlite - Compile in support for portage's sqlite backend; to actually use it you need additional configuration of portage and eix
 app-portage/g-sorcery:bson - Support BSON file format for package DB
 app-portage/gemato:blake2 - Install dependencies needed for BLAKE2 hash functions
@@ -3238,6 +3237,10 @@ games-fps/urbanterror:skeetshootmod - Build support for skeetshoot mod for speci
 games-fps/urbanterror:voip - Use ioq3 ingame VoIP (experimental)
 games-fps/worldofpadman:maps - Install extra maps (PadPack)
 games-fps/xonotic:ode - Enable support for physics engine from dev-games/ode
+games-fps/yamagi-quake2:client - Build client
+games-fps/yamagi-quake2:ctf - Build support for the 'Capture The Flag' addon
+games-fps/yamagi-quake2:rogue - Build support for the 'Ground Zero' Mission Pack
+games-fps/yamagi-quake2:xatrix - Build support for the 'The Reckoning' Mission Pack
 games-kids/crayon-physics:bundled-libs - Use the upstream provided bundled libraries.
 games-misc/katawa-shoujo:system-renpy - Use games-engines/renpy instead of the bundled one (experimental)
 games-misc/little-inferno:bundled-libs - Use bundled libraries.
@@ -7016,7 +7019,6 @@ net-wireless/gnuradio:wavelet - enable wavelet signal processing blocks
 net-wireless/gnuradio:zeromq - enable zeromq message passing blocks
 net-wireless/gqrx:gr-audio - Use audio support from net-wireless/gnuradio
 net-wireless/gr-air-modes:fgfs - Support FlightGear
-net-wireless/gr-air-modes:gui - Build the GUI
 net-wireless/gr-air-modes:rtlsdr - Build with Realtek RTL2832U (rtlsdr) support
 net-wireless/gr-air-modes:uhd - Build with Ettus Research USRP Hardware Driver support
 net-wireless/gr-baz:armadillo - install MUSIC DOA estimator block

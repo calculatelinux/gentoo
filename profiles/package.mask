@@ -29,6 +29,39 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (04 Mar 2018)
+# Dead upstream, depends on deprecated Qt4.
+# Masked for removal in 30 days. Bug 645436
+sci-chemistry/massxpert
+
+# Andreas Sturmlechner <asturm@gentoo.org> (04 Mar 2018)
+# Dead upstream, depends on deprecated Qt4.
+# Masked for removal in 30 days. Bug 514438, 644522
+sci-chemistry/gsim
+
+# Andreas Sturmlechner <asturm@gentoo.org> (04 Mar 2018)
+# Depends on deprecated dev-python/pyqwt, blocks Qt4 removal.
+# Masked for removal in 30 days unless someone bumps to 5.2.2.
+# Bug 645218, 649094
+sci-chemistry/PyMca
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (03 Mar 2018)
+# Fails to build without rpc support in glibc (bug 631044);
+# no maintainer, requires obsolete hardware. Removal in
+# 30 days.
+app-pda/p3nfs
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (03 Mar 2018)
+# Fails to build without rpc support in glibc (bug 377867);
+# fails to build with libtirpc; apparently functionality is
+# now included in libtirpc. No consumers. Removal in 30 days.
+net-libs/librpcsecgss
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (03 Mar 2018)
+# Marked obsolete on CTAN. EAPI=3 ebuild. No consumers.
+# Masked for removal in 30 days. Bug 644258
+app-text/noweb
+
 # Jason Zaman <perfinion@gentoo.org> (02 Mar 2018)
 # Became sys-apps/selinux-python in release 2.7
 # Masked for removal in 30 days.
@@ -214,16 +247,6 @@ x11-proto/xf86rushproto
 # Unmaintained, replaced by newsboat fork.
 # Masked for removal in 30 days.
 net-news/newsbeuter
-
-# Andreas Sturmlechner <asturm@gentoo.org> (03 Feb 2018)
-# Dead upstream, depends on deprecated Qt4.
-# Masked for removal in 30 days. Bug #644370
-media-libs/hupnp-ng
-
-# Andreas Sturmlechner <asturm@gentoo.org> (03 Feb 2018)
-# Depends on deprecated Qt4, unmaintained, no one bothers to bump.
-# Masked for removal in 30 days. Bug #464658
-sys-apps/ultracopier
 
 # Patrice Clement <monsieurp@gentoo.org> (26 Jan 2018)
 # Has different symbols. Known to cause issues with i3bar/swaybar.
@@ -483,6 +506,7 @@ games-kids/crayon-physics
 >=xfce-base/thunar-1.7
 >=xfce-extra/thunar-archive-plugin-0.4.0
 >=xfce-extra/thunar-media-tags-plugin-0.3.0
+>=xfce-extra/thunar-shares-plugin-0.3.0
 
 # Andreas Sturmlechner <asturm@gentoo.org> (16 Nov 2017)
 # Depends on dead Qt4WebKit. Masked for removal in 30 days. Bug #620702
