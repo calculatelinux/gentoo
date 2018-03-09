@@ -7068,6 +7068,16 @@ net-wireless/spectools:ncurses - Build the ncurses based client for spectools
 net-wireless/ubertooth:bluez - use bluez to support clock following and scanning
 net-wireless/ubertooth:specan - Enable the ubertooth spectrum analyzer
 net-wireless/ubertooth:ubertooth1-firmware - Build/install ubertooth1-firmware
+net-wireless/uhd:b100 - support B100 hardware
+net-wireless/uhd:b200 - support B200, B210, B200mini, B205mini hardware
+net-wireless/uhd:e300 - support E300, E310 hardware
+net-wireless/uhd:mpmd - support N300, N310 hardware
+net-wireless/uhd:n230 - support N230 harware
+net-wireless/uhd:octoclock - Octoclock Network Support
+net-wireless/uhd:usrp1 - support USRP1 hardware
+net-wireless/uhd:usrp2 - support USRP2, N200, N210 hardware
+net-wireless/uhd:utils - utilities needed to list, query, calibrate, or update FPGA/Firmware
+net-wireless/uhd:x300 - support X300, X310 hardware
 net-wireless/urh:hackrf - use native backend which directly uses net-libs/libhackrf
 net-wireless/urh:rtlsdr - use native backend which directly uses net-wireless/rtl-sdr
 net-wireless/urh:uhd - use native backend which directly uses net-wireless/uhd
