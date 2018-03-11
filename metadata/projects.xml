@@ -103,11 +103,6 @@
       <name>Steve Arnold</name>
       <role>Member (Gentoo/ARM Kernel)</role>
     </member>
-    <member is-lead="1">
-      <email>steev@gentoo.org</email>
-      <name>Steev Klimaszewski</name>
-      <role>Lead (Gentoo/ARM)</role>
-    </member>
     <member>
       <email>vapier@gentoo.org</email>
       <name>Mike Frysinger</name>
@@ -617,11 +612,6 @@
     <member>
       <email>mschiff@gentoo.org</email>
       <name>Marc Schiffbauer</name>
-      <role>developer</role>
-    </member>
-    <member>
-      <email>pchrist@gentoo.org</email>
-      <name>Panagiotis Christopoulos</name>
       <role>developer</role>
     </member>
     <member>
@@ -1537,6 +1527,11 @@
       <role>Member (security)</role>
     </member>
     <member>
+      <email>mattst88@gentoo.org</email>
+      <name>Matt Turner</name>
+      <role>Member</role>
+    </member>
+    <member>
       <email>slyfox@gentoo.org</email>
       <name>Sergei Trofimovich</name>
       <role>Member</role>
@@ -1645,10 +1640,6 @@
     <member>
       <email>mjo@gentoo.org</email>
       <name>Michael Orlitzky</name>
-    </member>
-    <member>
-      <email>qnikst@gentoo.org</email>
-      <name>Alexander Vershilov</name>
     </member>
     <member is-lead="1">
       <email>slyfox@gentoo.org</email>
@@ -1843,11 +1834,6 @@
     <member>
       <email>creffett@gentoo.org</email>
       <name>Chris Reffett</name>
-      <role>Developer</role>
-    </member>
-    <member>
-      <email>jcallen@gentoo.org</email>
-      <name>Jonathan Callen</name>
       <role>Developer</role>
     </member>
     <member>
@@ -2129,9 +2115,9 @@
     <subproject ref="emacs@gentoo.org" inherit-members="1"/>
     <subproject ref="scheme@gentoo.org" inherit-members="1"/>
     <member>
-      <email>pchrist@gentoo.org</email>
-      <name>Panagiotis Christopoulos</name>
-      <role>Developer (General maintainer)</role>
+      <email>nimiux@gentoo.org</email>
+      <name>Chema Alonso Josa</name>
+      <role>Developer</role>
     </member>
   </project>
   <project>
@@ -2170,7 +2156,7 @@
   </project>
   <project>
     <email>mips@gentoo.org</email>
-    <name>Gentoo/MIPS Port</name>
+    <name>Gentoo/MIPS Development</name>
     <url>https://wiki.gentoo.org/wiki/Project:MIPS</url>
     <description>Gentoo/MIPS is a port of the Gentoo GNU/Linux and the Gentoo Portage package management system to mips-based platforms.</description>
     <subproject ref="gentoo-yeeloong@gentoo.org"/>
@@ -2198,16 +2184,6 @@
       <email>mattst88@gentoo.org</email>
       <name>Matt Turner</name>
       <role>Lead</role>
-    </member>
-    <member>
-      <email>pchrist@gentoo.org</email>
-      <name>Panagiotis Christopoulos</name>
-      <role>Developer</role>
-    </member>
-    <member>
-      <email>vincent@gentoo.org</email>
-      <name>Vicente Olivert Riera</name>
-      <role>Developer</role>
     </member>
     <member>
       <email>zlogene@gentoo.org</email>
@@ -2462,11 +2438,6 @@ developers and volunteer mentors.</description>
       <role>Member</role>
     </member>
     <member>
-      <email>qnikst@gentoo.org</email>
-      <name>Alexander Vershilov</name>
-      <role>Member</role>
-    </member>
-    <member>
       <email>vapier@gentoo.org</email>
       <name>Mike Frysinger</name>
       <role>Member</role>
@@ -2487,20 +2458,10 @@ developers and volunteer mentors.</description>
     <name>Openstack</name>
     <url>https://wiki.gentoo.org/wiki/Project:Openstack</url>
     <description>Openstack is a virtualization orchestration suite that allows the creation and management of cloud infrastructures.</description>
-    <member>
-      <email>cardoe@gentoo.org</email>
-      <name>Doug Goldstein</name>
-      <role>Member</role>
-    </member>
     <member is-lead="1">
       <email>prometheanfire@gentoo.org</email>
       <name>Matthew Thode</name>
       <role>Lead</role>
-    </member>
-    <member>
-      <email>steev@gentoo.org</email>
-      <name>Steev Klimaszewski</name>
-      <role>Member</role>
     </member>
   </project>
   <project>
@@ -2609,11 +2570,6 @@ developers and volunteer mentors.</description>
     <member>
       <email>axs@gentoo.org</email>
       <name>Ian Stakenvicius</name>
-      <role>Developer</role>
-    </member>
-    <member>
-      <email>civil@gentoo.org</email>
-      <name>Vladimir Smirnov</name>
       <role>Developer</role>
     </member>
     <member>
@@ -2886,11 +2842,6 @@ developers and volunteer mentors.</description>
       <name>Benda Xu</name>
       <role>Developer</role>
     </member>
-    <member>
-      <email>jcallen@gentoo.org</email>
-      <name>Jonathan Callen</name>
-      <role>Developer</role>
-    </member>
   </project>
   <project>
     <email>printing@gentoo.org</email>
@@ -3110,11 +3061,6 @@ developers and volunteer mentors.</description>
     <member>
       <email>alicef@gentoo.org</email>
       <name>Alice Ferrazzi</name>
-      <role>Member</role>
-    </member>
-    <member>
-      <email>alunduil@gentoo.org</email>
-      <name>Alex Brandt</name>
       <role>Member</role>
     </member>
     <member>
@@ -3403,11 +3349,6 @@ developers and volunteer mentors.</description>
       <role>Infrastructure Liaison</role>
     </member>
     <member>
-      <email>steev@gentoo.org</email>
-      <name>Steev Klimaszewski</name>
-      <role>ARM stage building</role>
-    </member>
-    <member>
       <email>swift@gentoo.org</email>
       <name>Sven Vermeulen</name>
       <role>Documentation Liaison</role>
@@ -3605,11 +3546,6 @@ developers and volunteer mentors.</description>
     <name>SUSE</name>
     <url>https://wiki.gentoo.org/wiki/Project:SUSE</url>
     <description>This project manages all various rpm based tools for working with OBS and rpmbuild</description>
-    <member>
-      <email>miska@gentoo.org</email>
-      <name>Michal Hrušecký</name>
-      <role>Updates, Documentation</role>
-    </member>
   </project>
   <project>
     <email>samba@gentoo.org</email>
@@ -3757,11 +3693,6 @@ developers and volunteer mentors.</description>
     <member>
       <email>creffett@gentoo.org</email>
       <name>Chris Reffett</name>
-      <role>GLSA Coordinator</role>
-    </member>
-    <member>
-      <email>keytoaster@gentoo.org</email>
-      <name>Tobias Heinlein</name>
       <role>GLSA Coordinator</role>
     </member>
     <member>
@@ -3999,10 +3930,6 @@ developers and volunteer mentors.</description>
     <member>
       <email>nerdboy@gentoo.org</email>
       <name>Steve Arnold</name>
-    </member>
-    <member>
-      <email>rhill@gentoo.org</email>
-      <name>Ryan Hill</name>
     </member>
     <member>
       <email>slyfox@gentoo.org</email>
@@ -4328,10 +4255,6 @@ developers and volunteer mentors.</description>
     <member>
       <email>leio@gentoo.org</email>
       <name>Mart Raudsepp</name>
-    </member>
-    <member>
-      <email>rhill@gentoo.org</email>
-      <name>Ryan Hill</name>
     </member>
   </project>
   <project>

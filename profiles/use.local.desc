@@ -837,7 +837,6 @@ app-leechcraft/lc-gmailnotifier:notify - Pull in a plugin to show notifications 
 app-leechcraft/lc-gmailnotifier:quark - Pull in a plugin to show GMail Notifier's quark
 app-leechcraft/lc-lmp:fradj - Build FrAdj, the equalizer effect module
 app-leechcraft/lc-lmp:graffiti - Build media tags editor plugin
-app-leechcraft/lc-lmp:guess - Enable tags encoding guessing via the libguess library
 app-leechcraft/lc-lmp:mp3tunes - Build plugin for supporting the mp3tunes.com music locker service
 app-leechcraft/lc-lmp:mpris - Enable MPRIS support
 app-leechcraft/lc-lmp:potorchu - Enable the projectM-based visualization effects module for LMP
@@ -1892,7 +1891,10 @@ dev-lang/lua:deprecated - make deprecated data structures/routines available
 dev-lang/luajit:lua52compat - Enable some upwards-compatible features from Lua 5.2 that are unlikely to break existing code.
 dev-lang/mercury:erlang - Support Mercury Erlang grade
 dev-lang/mercury:trail - Support Mercury trail grades
-dev-lang/mlton:binary - install a binary version (need to do this once to bootstrap, until smlnj is supported)
+dev-lang/mlton:binary - install a binary version
+dev-lang/mlton:bootstrap-smlnj - Boostrap mlton with dev-lang/smlnj (takes a long time)
+dev-lang/mlton:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
+dev-lang/mlton:stage3 - After bootstrap building mlton with dev-lang/smlnj, rebuild mlton with the second stage build of mlton (recommended).
 dev-lang/moarvm:asan - Enable clang's Address Sanitizer functionality. Expect longer compile time.
 dev-lang/moarvm:clang - Use clang compiler instead of GCC
 dev-lang/moarvm:jit - Enable Just-In-Time-Compiler. Has no effect except on AMD64 and Darwin.
@@ -1953,6 +1955,7 @@ dev-lang/rust:jemalloc - Use dev-libs/jemalloc as the standard memory allocator
 dev-lang/rust:libcxx - Use sys-libs/libcxx as standard library when building with sys-devel/clang
 dev-lang/rust:system-llvm - Use system sys-devel/llvm in place of the bundled one
 dev-lang/scala:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
+dev-lang/smlnj:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
 dev-lang/spidermonkey:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
 dev-lang/spidermonkey:debug - Enable assertions to allow for easier debugging of programs that link to spidermonkey -- note this will often crash software on regular end-user systems
 dev-lang/spidermonkey:system-icu - Use the system-wide dev-libs/icu instead of bundled -- note, only takes effect when icu flag is enabled
@@ -2073,6 +2076,7 @@ dev-libs/gmime:smime - Enable experimental S/MIME support
 dev-libs/gmp:asm - Enable use of hand optimized assembly routines (faster execution)
 dev-libs/gmp:pgo - After building gmp, run some tests against to produce faster libraries -- this option will double the compile time
 dev-libs/gobject-introspection:doctool - Install g-ir-doc-tool for generating documentation from introspected data
+dev-libs/granite:demo - Build the Granite demo application (to present all available UI features provided by the library)
 dev-libs/hidapi:fox - Build a x11-libs/fox GUI
 dev-libs/input-pad:eekboard - Enable support for dev-libs/eekboard
 dev-libs/input-pad:xtest - Enable support for x11-libs/libXtst
@@ -2560,7 +2564,6 @@ dev-python/py-amqp:extras - Install extra tools to generate initial Python mod f
 dev-python/pygame:midi - Enable midi support using media-libs/portmidi
 dev-python/pygpu:cuda - Enable NVIDIA CUDA toolkit support
 dev-python/pygpu:opencl - Enable OpenCL support
-dev-python/pyhamcrest:numpy - Enable optional dependence on dev-python/numpy
 dev-python/pyilmbase:numpy - Add bindings for dev-python/numpy use.
 dev-python/pyocr:cuneiform - Enable support for the app-text/cuneiform OCR engine
 dev-python/pyocr:tesseract - Enable support for the app-text/tesseract OCR engine
@@ -3551,6 +3554,7 @@ kde-frameworks/kwallet:man - Build and install man pages
 kde-frameworks/kxmlgui:attica - Enable support for kde-frameworks/attica
 kde-frameworks/networkmanager-qt:teamd - Enable Teamd control support
 kde-frameworks/plasma:gles2 - Use GLES 2.0 or later instead of full OpenGL
+kde-frameworks/prison:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
 kde-frameworks/purpose:kaccounts - Enable support for system-wide defined KAccounts
 kde-frameworks/sonnet:aspell - Enable the app-text/aspell spell-checking backend
 kde-frameworks/sonnet:hunspell - Enable the app-text/hunspell spell-checking backend
@@ -6546,7 +6550,6 @@ net-misc/seafile-client:shibboleth - Build support for Shibboleth single sign-on
 net-misc/sitecopy:rsh - This allows the use of rsh (remote shell) and rcp (remote copy) for authoring websites. sftp is a much more secure protocol and is preferred.
 net-misc/sitecopy:webdav - Enable WebDav (Web-based Distributed Authoring and Versioning) support. This system allows users to collaborate on websites using a web based interface. See the ebuild for an FAQ page. Enables neon as well to handle webdav support.
 net-misc/sks:optimize - Enables bytecode optimization
-net-misc/slimrat:X - Install also GUI client
 net-misc/spice-gtk:dbus - Support for desktop integration such as automounting and other APIs exposed by your DE via D-Bus
 net-misc/spice-gtk:gstaudio - Using gstreamer backend as audio decodec support
 net-misc/spice-gtk:gstvideo - Using gstreamer backend as video decodec support
@@ -7554,7 +7557,6 @@ sci-physics/thepeg:lhapdf - Adds support for sci-physics/lhapdf
 sci-physics/thepeg:rivet - Adds support for sci-physics/rivet
 sci-physics/vgm:geant4 - Enable interaction with Geant4(sci-physics/geant:4)
 sci-physics/vgm:root - Enable interaction with ROOT (sci-physics/root)
-sci-physics/yoda:c++11 - Build using the C++11 standard
 sci-physics/yoda:root - Adds support for sci-physics/root
 sci-visualization/fityk:nlopt - Enable optimization with sci-libs/nlopt
 sci-visualization/gnuplot:bitmap - Enable dot-matrix printers and pbm terminal
@@ -7937,6 +7939,7 @@ sys-cluster/glusterfs:fuse - Add FUSE mount helper
 sys-cluster/glusterfs:georeplication - Enable support for georeplication (requires dev-lang/python)
 sys-cluster/glusterfs:glupy - Enable support for translators written in Python
 sys-cluster/glusterfs:infiniband - Add support for Infiniband ibverbs transport. Libraries can be found in science overlay
+sys-cluster/glusterfs:ipv6 - Use IPv6 by default, requires libtirpc
 sys-cluster/glusterfs:libtirpc - Build against net-libs/libtirpc for RPC support
 sys-cluster/glusterfs:qemu-block - Transparently create files as QCow2/QED images in the backend, including the possibility to snapshot.
 sys-cluster/glusterfs:rsyslog - Install configuration snippet for app-admin/rsyslog
@@ -8200,7 +8203,6 @@ sys-fs/multipath-tools:rbd - Enable Rados block device support via sys-cluster/c
 sys-fs/ntfs3g:external-fuse - Use external FUSE library instead of internal one. Must be disabled for unprivileged mounting to work.
 sys-fs/ntfs3g:ntfsdecrypt - Build and install the ntfsdecrypt application.
 sys-fs/ntfs3g:ntfsprogs - Include internal version of ntfsprogs.
-sys-fs/ocfs2-tools:external - Enable external locking
 sys-fs/owfs:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
 sys-fs/owfs:ftpd - Enable building the OWFS FTP server (owftpd)
 sys-fs/owfs:fuse - Enable building the FUSE-based OWFS client (owfs)
@@ -8361,7 +8363,6 @@ sys-power/nut:ups_drivers_usbhid-ups - Driver for USB/HID UPS equipment
 sys-power/nut:ups_drivers_victronups - Driver for IMV/Victron UPS unit Match, Match Lite, NetUps
 sys-power/nvclock:gtk - Install the GTK+ based graphical interface
 sys-power/nvclock:nvcontrol - Add NVCONTROL support for OpenGL options
-sys-power/phctool:sudo - Enable support for sudo to run gui from non-root user
 sys-power/pm-utils:ntp - Install support for net-misc/ntp
 sys-power/powermgmt-base:pm-utils - Adds support for on_ac_power through sys-power/pm-utils
 sys-power/sispmctl:gemplug - Install gemplug (management script)
