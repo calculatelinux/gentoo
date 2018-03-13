@@ -2108,6 +2108,7 @@ dev-libs/libffi:pax_kernel - Use PaX emulated trampolines, for we can't use PROT
 dev-libs/libflatarray:cuda - Enables plugins for NVIDIA GPUs (e.g. CUDAAllocator)
 dev-libs/libgcrypt:o-flag-munging - Enable O-flag mangling during build
 dev-libs/libgdata:gnome-online-accounts - Enable net-libs/gnome-online-accounts support
+dev-libs/libgit2:curl - Use net-misc/curl for HTTP support (otherwise, limited built-in implementation will be used)
 dev-libs/libgit2:gssapi - Enable GSSAPI support for SPNEGO auth
 dev-libs/libgit2:ssh - Enable SSH transport support
 dev-libs/libgit2:trace - Enable tracing support
@@ -4347,6 +4348,7 @@ media-libs/svgalib:kernel-helper - Build the helper kernel module
 media-libs/taglib:boost - Use dev-libs/boost instead of GCC built-ins
 media-libs/tremor:low-accuracy - enable 32bit only multiply operations
 media-libs/vigra:valgrind - Enable valgrind in make check
+media-libs/vulkan-loader:demos - Build vulkan demos and vulkaninfo
 media-libs/waffle:egl - Enable EGL support
 media-libs/waffle:gbm - Enable support for the Generic Buffer Manager (gbm)
 media-libs/waffle:wayland - Enable Wayland support
@@ -7752,7 +7754,7 @@ sys-apps/s390-tools:ncurses - build hyptop monitoring program
 sys-apps/s390-tools:pfm - build the cpacfstats tool
 sys-apps/s390-tools:zfcpdump - build the kernel disk dumping utility
 sys-apps/s390-tools:zlib - build the zgetdump utility
-sys-apps/sed:forced-sandbox - Always enable --sandbox mode for simpler/secure runtime (disables e/r/w commands)
+sys-apps/sed:forced-sandbox - Always enable --sandbox mode for simpler/secure runtime (disables e/r/w commands). Note: This may break many configure scripts, so it should be avoided on dev systems (and generally used on binpkg/final systems only).
 sys-apps/selinux-python:audit - Enable support for sys-process/audit and use the audit_* functions (like audit_getuid instead of getuid())
 sys-apps/smartmontools:caps - Build against sys-libs/libcap-ng to allow smartd to drop its privileges.
 sys-apps/smartmontools:daemon - Install the monitoring daemon (smartd) and associated scripts.
