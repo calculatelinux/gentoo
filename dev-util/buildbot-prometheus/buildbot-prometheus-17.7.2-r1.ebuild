@@ -20,6 +20,10 @@ RDEPEND="dev-python/prometheus_client[${PYTHON_USEDEP}]
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	${RDEPEND}"
 
+PATCHES=(
+	"$FILESDIR}/buildbot-prometheus-17.7.2-Migrate-duration-calculations-to-buildbot-09.patch"
+)
+
 python_prepare_all() {
 	sed -i -e "/^install_reqs.*$/d" -e "/^from pip.*$/d" -e "s/requires = .*/requires = ['buildbot', 'prometheus_client']/" setup.py || die
 	distutils-r1_python_prepare_all

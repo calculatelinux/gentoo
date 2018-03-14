@@ -29,6 +29,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Georgy Yakovlev <ya@sysdump.net> (13 Mar 2018)
+# 1.x version is no longer maintained by upstream
+# 2.x is in the tree and is better in almost every way
+# Removal in 90 days. Bug #650464
+=net-dns/dnscrypt-proxy-1.9.5-r1
+
 # Pacho Ramos <pacho@gentoo.org> (13 Mar 2018)
 # Tests need network, nothing requires this old lib anymore and upstream is
 # dead for a long time (#335233). Removal in a month.
@@ -64,7 +70,7 @@ sys-fs/gfs2-utils
 # Dead driver and with many incompatibilities with current kernels (#517250,
 # #523356, #551834, #646106). Removal in a month. Possible alternative
 # #device/driver: https://bugs.gentoo.org/517250#c5
-net-wireless/broadcom-sta 
+net-wireless/broadcom-sta
 
 # Pacho Ramos <pacho@gentoo.org> (13 Mar 2018)
 # Not buildable for a long time (#531586), pending many version bumps.
@@ -99,7 +105,7 @@ app-forensics/rdd
 # month.
 net-p2p/tribler
 
-# Tobias Klausmann <klausman@gentoo.org (13 Mar 2018)
+# Tobias Klausmann <klausman@gentoo.org> (13 Mar 2018)
 # Has a bug in the storage engine, details:
 # https://www.robustperception.io/new-features-in-prometheus-2-2-0/
 # https://github.com/prometheus/prometheus/issues/3943
@@ -472,7 +478,7 @@ games-kids/crayon-physics
 >=xfce-extra/thunar-shares-plugin-0.3.0
 
 # Andreas Sturmlechner <asturm@gentoo.org> (16 Nov 2017)
-# Depends on dead Qt4WebKit. Masked for removal in 30 days. Bug #620702
+# Depends on dead Qt4. Last-rites on hold for chance of Qt5-port. Bug #620702
 <media-gfx/freecad-0.18
 
 # Mike Gilbert <floppym@gentoo.org> (05 Nov 2017)

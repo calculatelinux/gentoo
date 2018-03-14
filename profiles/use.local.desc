@@ -485,6 +485,11 @@ app-emulation/dosemu:fluidsynth - use media-sound/fluidsynth for MIDI emulation
 app-emulation/e-uae:capslib - Add CAPS library support
 app-emulation/e-uae:sdl-sound - Use media-libs/sdl-sound for audio output
 app-emulation/free42:alsa - Adds support for Advanced Linux Sound Architecture
+app-emulation/fuse:backend-X - Use X11 rendering backend
+app-emulation/fuse:backend-fbcon - Use framebuffer rendering backend
+app-emulation/fuse:backend-gtk - Use GTK+ rendering backend
+app-emulation/fuse:backend-sdl - Use SDL rendering backend
+app-emulation/fuse:backend-svga - Use svgalib rendering backend
 app-emulation/fuse-utils:gcrypt - Use dev-libs/libgcrypt for low-level crypto of some features, including logfiles.
 app-emulation/ganeti:drbd - Enable DRBD support
 app-emulation/ganeti:experimental - Enable experimental patches. Warning! This will break RPC within major versions if the patches applied differ!
@@ -4084,7 +4089,6 @@ media-gfx/pstoedit:emf - Enable media-libs/libemf support
 media-gfx/pstoedit:flash - Enable media-libs/ming SWF support
 media-gfx/pstoedit:pptx - Enable support for generating PowerPoint pptx files
 media-gfx/qiv:magic - Use libmagic to determine mimetypes
-media-gfx/qiviewer:webp - Build support for WEBP image format
 media-gfx/sigal:s3 - Enables support for the Amazon S3 service.
 media-gfx/simple-scan:colord - Support color management using x11-misc/colord
 media-gfx/slic3r:gui - Enable GUI
@@ -8296,6 +8300,7 @@ sys-libs/musl-nscd:minimal - Only installs the header files
 sys-libs/ncurses:ada - Add bindings for the ADA programming language
 sys-libs/ncurses:tinfo - Build curses library (libncurses) sep from the low-level terminfo library (libtinfo) -- usually needed only for binary packages -- but it is binary compatible in either mode
 sys-libs/ncurses:trace - Enable test trace() support in ncurses calls
+sys-libs/newlib:nano - Build additional newlib-nano library
 sys-libs/pam:berkdb - Build the pam_userdb module, that allows to authenticate users against a Berkeley DB file. Please note that enabling this USE flag will create a PAM module that links to the Berkeley DB (as provided by sys-libs/db) installed in /usr/lib and will thus not work for boot-critical services authentication.
 sys-libs/pam:cracklib - Build the pam_cracklib module, that allows to verify the chosen passwords' strength through the use of sys-libs/cracklib. Please note that simply enabling the USE flag on this package will not make use of pam_cracklib by default, you should also enable it in sys-auth/pambase as well as update your configuration files.
 sys-libs/readline:utils - Install rlfe (ReadLine Front-End) helper tool -- a wrapper program for making any stdin use readline
