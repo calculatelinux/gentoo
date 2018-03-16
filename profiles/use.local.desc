@@ -3076,7 +3076,6 @@ games-action/minetest:redis - Enable redis backend via dev-libs/hiredis
 games-action/minetest:server - Build minetest server
 games-action/minetest:spatial - Enable SpatialIndex AreaStore backend
 games-action/solar2:bundled-libs - Use the upstream provided bundled libraries.
-games-action/super-hexagon:bundled-libs - Use the upstream provided bundled libraries.
 games-action/supermariowar:server - Compile and install Super Mario War server files
 games-action/supertuxkart:fribidi - Support for right-to-left languages
 games-action/supertuxkart:recorder - Enable recording with media-libs/libopenglrecorder
@@ -3285,7 +3284,6 @@ games-rpg/dungeon-defenders:bundled-libs - Use the upstream provided bundled lib
 games-rpg/eternal-lands-data:bloodsuckermaps - Will install Bloodsucker's Maps in place of the official map files
 games-rpg/eternal-lands-data:music - Enables in-game music
 games-rpg/eternal-lands-data:sound - Enables in-game sound effects
-games-rpg/grimrock:bundled-libs - Use bundled libraries.
 games-rpg/kqlives:cheats - Enable cheating mode
 games-rpg/manaplus:mumble - Enable support for voice chat
 games-rpg/manaplus:pugixml - Use dev-libs/pugixml for XML parsing isntead of dev-libs/libxml2
@@ -4098,7 +4096,6 @@ media-gfx/ufraw:fits - Enable support for the FITS image format through sci-libs
 media-gfx/ufraw:timezone - enable DST correction for file timestamps
 media-gfx/xpaint:pgf - Support for loading PGF images
 media-gfx/xsane:ocr - Enable support for Optical Character Recognition reader
-media-gfx/yafaray:blender - install media-gfx/blender scripts
 media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
 media-libs/allegro:dumb - Enable media-libs/dumb module library support
 media-libs/allegro:physfs - Enable physfs support
