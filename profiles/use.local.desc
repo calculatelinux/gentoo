@@ -101,6 +101,7 @@ app-admin/pass:dmenu - Add support for x11-misc/dmenu with the 'passmenu' progra
 app-admin/pass:fish-completion - Enable fish completion support.
 app-admin/pass:git - Use dev-vcs/git for password revisions.
 app-admin/pass:importers - Allow importing passwords from other password managers using various contributed scripts.
+app-admin/pass-otp:qrcode - Add support for qtcodes using media-gfx/qrencode
 app-admin/passwordsafe:minimal - Avoid collision with app-misc/pwsafe
 app-admin/passwordsafe:qr - Enable QR code password display
 app-admin/passwordsafe:xml - Enable XML import support
@@ -2933,6 +2934,7 @@ dev-util/google-perftools:minimal - Only build the tcmalloc_minimal library, ign
 dev-util/google-perftools:optimisememory - To build libtcmalloc with smaller internal caches.
 dev-util/gtk-doc:highlight - Enable source code highlighting
 dev-util/gtk-doc:vim - Enable source code highlighting through app-editors/vim
+dev-util/heaptrack:zstd - Enable support for ZSTD compression using app-arch/zstd
 dev-util/idea-community:custom-jdk - Install and use IntelliJ's custom JRE.
 dev-util/idea-ultimate:custom-jdk - Install and use IntelliJ's custom JRE.
 dev-util/intel-ocl-sdk:android - Install android related files
@@ -3817,6 +3819,7 @@ mail-mta/courier:fax - Enables fax support in the courier mail server
 mail-mta/courier:norewrite - Prevents courier mail server from mangling virtual user addresses when sending
 mail-mta/courier:web - Enable the web interface
 mail-mta/courier:webmail - Enable the webmail interface
+mail-mta/exim:arc - Adds support for Authenticated Receive Chain (ARC)
 mail-mta/exim:dane - Adds support for DNS-based Authentication of Named Entities
 mail-mta/exim:dcc - Adds support for Distributed Checksum Clearinghouse (DCC)
 mail-mta/exim:dkim - Adds support for DomainKeys Identified Mail (DKIM)
@@ -5428,6 +5431,7 @@ net-analyzer/wireshark:editcap - Install editcap, to edit and/or translate the f
 net-analyzer/wireshark:libssh - Use net-libs/libssh (for sshdump)
 net-analyzer/wireshark:libxml2 - Use dev-libs/libxml2 for handling XML configuration in dissectors
 net-analyzer/wireshark:lz4 - Use app-arch/lz4 for compression/decompression
+net-analyzer/wireshark:maxminddb - Use dev-libs/libmaxminddb for IP address geolocation
 net-analyzer/wireshark:mergecap - Install mergecap, to merge two or more capture files into one
 net-analyzer/wireshark:netlink - Use dev-libs/libnl
 net-analyzer/wireshark:nghttp2 - Use net-libs/nghttp2 for HTTP/2 support
@@ -8639,7 +8643,6 @@ www-servers/nginx:luajit - Use dev-lang/luajit instead of dev-lang/lua for lua s
 www-servers/nginx:pcre-jit - Enable JIT for pcre
 www-servers/nginx:rtmp - NGINX-based Media Streaming Server
 www-servers/nginx:ssl - Enable HTTPS module for http. Enable SSL/TLS support for POP3/IMAP/SMTP for mail.
-www-servers/pound:dynscaler - Enable dynamic rescaling of back-end priorities
 www-servers/pshs:magic - Enable automatic detection of Content-Type using libmagic (sys-apps/file)
 www-servers/pshs:netlink - Use libnetlink (sys-apps/iproute2) to get network interface addresses
 www-servers/pshs:qrcode - Enable generating QRCodes for server URL

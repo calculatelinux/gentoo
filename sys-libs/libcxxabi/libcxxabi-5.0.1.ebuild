@@ -84,6 +84,7 @@ multilib_src_configure() {
 }
 
 build_libcxx() {
+	local -x LDFLAGS="${LDFLAGS} -L${BUILD_DIR}/$(get_libdir)"
 	local CMAKE_USE_DIR=${WORKDIR}/libcxx
 	local BUILD_DIR=${BUILD_DIR}/libcxx
 	local mycmakeargs=(
@@ -111,7 +112,7 @@ multilib_src_test() {
 
 	# build a local copy of libc++ for testing to avoid circular dep
 	build_libcxx
-	cp "${BUILD_DIR}"/libcxx/lib/libc++* "${BUILD_DIR}/$(get_libdir)/" || die
+	mv "${BUILD_DIR}"/libcxx/lib/libc++* "${BUILD_DIR}/$(get_libdir)/" || die
 
 	cmake-utils_src_make check-libcxxabi
 }
