@@ -4639,6 +4639,7 @@ media-sound/mpd:zip - Support for ZIP files
 media-sound/mpfc:wav - Enable wav audio codec support
 media-sound/mpg123:int-quality - Use rounding instead of fast truncation for integer output, where possible
 media-sound/mumble:g15 - Enable support for the Logitech G15 LCD (and compatible devices).
+media-sound/mumble:opus - Enable Opus codec support via media-libs/opus.
 media-sound/mumble:speech - Enable text-to-speech support in Mumble.
 media-sound/murmur:ice - Use dev-libs/Ice to enable remote control capabilities.
 media-sound/musescore:portmidi - Enable support for building against media-libs/portmidi
@@ -6558,7 +6559,7 @@ net-misc/sks:optimize - Enables bytecode optimization
 net-misc/spice-gtk:dbus - Support for desktop integration such as automounting and other APIs exposed by your DE via D-Bus
 net-misc/spice-gtk:gstaudio - Using gstreamer backend as audio decodec support
 net-misc/spice-gtk:gstvideo - Using gstreamer backend as video decodec support
-net-misc/spice-gtk:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
+net-misc/spice-gtk:gtk3 - Build the spice client (spicy), requires x11-libs/gtk+:3
 net-misc/spice-gtk:lz4 - Enable support for LZ4 compression using app-arch/lz4
 net-misc/spice-gtk:mjpeg - Enable builtin mjpeg video decoder
 net-misc/spice-gtk:policykit - Enable sys-auth/polkit support for the usbredir acl helper
