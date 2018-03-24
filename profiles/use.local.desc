@@ -874,6 +874,8 @@ app-misc/byobu:screen - Use app-misc/screen as the default backend
 app-misc/ca-certificates:cacert - Include root certificates from CAcert (http://www.cacert.org/) and Software in the Public Interest (http://www.spi-inc.org/)
 app-misc/ca-certificates:insecure_certs - Install certificates which are known to be untrustworthy.
 app-misc/carbon-c-relay:lz4 - add support for LZ4 compressed transport
+app-misc/carbon-c-relay:oniguruma - use dev-libs/oniguruma as regex implementation
+app-misc/carbon-c-relay:pcre2 - use dev-libs/libpcre2 as regex implementation
 app-misc/ddccontrol:pci - enable direct PCI memory access (the setuid ddcpci util)
 app-misc/ddcutil:drm - Use x11-libs/libdrm for more verbose diagnostics.
 app-misc/ddcutil:usb-monitor - Adds support for monitors attached via USB.
@@ -954,6 +956,8 @@ app-misc/screen:multiuser - Enable multiuser support (by setting correct permiss
 app-misc/screen:nethack - Express error messages in nethack style
 app-misc/screen:utmp - Include utmp support
 app-misc/screenfetch:X - Use the media-gfx/scrot package to take screenshots
+app-misc/skim:tmux - Install sk-tmux script to run skim in a tmux pane
+app-misc/skim:vim - Install vim plugin for skim
 app-misc/sphinx:id64 - use 64-bit document and word IDs
 app-misc/sphinx:re2 - use the dev-libs/re2 regular expression library
 app-misc/sphinx:stemmer - Enable language stemming support
@@ -2601,10 +2605,11 @@ dev-python/pyudev:pyside - Install PySide bindings
 dev-python/pyudev:qt4 - Install PyQt4 bindings
 dev-python/pyudev:qt5 - Install PyQt5 bindings
 dev-python/pyyaml:libyaml - enable support for C implementation using libyaml
-dev-python/pyzor:gevent - Enable support for the gevent based handler
-dev-python/pyzor:mysql - Enables mysql support
-dev-python/pyzor:pyzord - enable support for pyzord
-dev-python/pyzor:redis - Enables redis support
+dev-python/pyzor:gdbm - Enables the Gdbm back-end database engine for pyzord
+dev-python/pyzor:gevent - Use dev-python/gevent to enable asynchronous operation
+dev-python/pyzor:mysql - Enables the MySQL back-end database engine for pyzord through dev-python/mysql-python. Only works with python-2.x!
+dev-python/pyzor:pyzord - Enable the pyzord server daemon
+dev-python/pyzor:redis - Enables the redis back-end database engine for pyzord through dev-python/redis-py
 dev-python/rarfile:compressed - Enables the module to support compressed v3 archives by calling the app-arch/unrar.
 dev-python/rdflib:redland - enable support for Redland triplestore
 dev-python/restkit:cli - Install the restcli command line interface/tool, based on dev-python/ipython
@@ -4002,8 +4007,10 @@ media-gfx/fbida:X - Install the Motif based image viewer "ida"
 media-gfx/fbida:fbcon - Install the framebuffer image viewer "fbi"
 media-gfx/fbida:ghostscript - Install the framebuffer ghostscript viewer "fbgs"
 media-gfx/fbida:webp - Enable support for the WebP image format
+media-gfx/fim:bmp - Enable BMP file support
 media-gfx/fim:dia - Enable DIA file support via app-office/dia
 media-gfx/fim:imagemagick - Use convert from media-gfx/imagemagick as fallback file opener
+media-gfx/fim:pcx - Enable PCX file support
 media-gfx/fim:xfig - Enable FIG file support via media-gfx/xfig
 media-gfx/fontforge:truetype-debugger - Enable truetype debugger in fontforge
 media-gfx/fotowall:webcam - Enable webcam support
@@ -5161,6 +5168,7 @@ media-video/vlc:sftp - Enable libssh2 to support SFTP file transfer
 media-video/vlc:shout - Enable libshout output
 media-video/vlc:sid - Adds support for playing C64 SID files through media-libs/libsidplay:2
 media-video/vlc:skins - Enable support for the skins2 interface
+media-video/vlc:soxr - Enable SoX Resampler support via media-libs/soxr
 media-video/vlc:swscale - Enable image scaling and conversion via libswscale (part of FFmpeg)
 media-video/vlc:tremor - Enable tremor, a fixed-point version of the Ogg Vorbis decoder
 media-video/vlc:twolame - Enable twolame support (MPEG Audio Layer 2 encoder)
@@ -7657,7 +7665,6 @@ sys-apps/proot:care - Build dynamic CARE binary (more info - http://reproducible
 sys-apps/qingy:consolekit - Enable native consolekit support
 sys-apps/qingy:opensslcrypt - Encrypt communications between qingy and its GUI using dev-libs/openssl
 sys-apps/razercfg:pm-utils - Installs the pm-utils hooks for suspend/resume and requires sys-power/pm-utils
-sys-apps/razercfg:qt4 - Installs a qt UI. Requires dev-python/pyside
 sys-apps/rng-tools:nistbeacon - Enable NIST beacon entropy support
 sys-apps/roccat-tools:input_devices_roccat_ryosmkfx - Enable support for Ryos Mk FX keyboard.
 sys-apps/roccat-tools:input_devices_roccat_skeltr - Enable support for Skeltr keyboard.

@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="debug nls openssl static-libs"
 
 RDEPEND="openssl? ( dev-libs/openssl:0=[${MULTILIB_USEDEP}] )"
@@ -34,6 +34,7 @@ src_prepare() {
 multilib_src_configure() {
 	set -- \
 		./configure \
+		--target="${CHOST}" \
 		--cc="$(tc-getCC)" \
 		--ar="$(tc-getAR)" \
 		--extra-cflags="${CFLAGS}" \
@@ -59,8 +60,9 @@ multilib_src_configure() {
 multilib_src_install() {
 	# -j1 needed due to race condition.
 	emake DESTDIR="${D}" -j1 \
-		  install{,-lib-so-link,-pkg-config} \
-		  $(use nls && echo install-gmo)
+		  install{,-pkg-config} \
+		  $(use nls && echo install-gmo) \
+		  $(use kernel_Winnt || echo install-lib-so-link)
 
 	emake DESTDIR="${D}" -j1 \
 		  -C lib${PN} install-headers
