@@ -1028,7 +1028,6 @@ app-office/calligra:spacenav - Enable support for the 3Dconnexion spacenav input
 app-office/glabels:barcode - Enable barcode support through external libraries.
 app-office/gnucash:aqbanking - Connect to some internet banks via AqBanking
 app-office/gnucash:chipcard - Enable support for chipcard reading and processing.
-app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
 app-office/gnucash:quotes - Enable Online Stock Quote retrieval
 app-office/gnucash:register2 - Use the new register (Experimental)
 app-office/gnumeric:libgda - Enable database support through gnome-extra/libgda.
@@ -1541,10 +1540,14 @@ dev-games/openscenegraph:openinventor - Build OpenInventor plugin
 dev-games/openscenegraph:osgapps - Build osg applications
 dev-games/openscenegraph:sdl2 - Use media-libs/libsdl2 additionally to media-libs/libsdl
 dev-games/openscenegraph:xrandr - Enable support for the X xrandr extension
+dev-games/physfs:7zip - Enable 7zip/lzma archive support
 dev-games/physfs:grp - Enable Build Engine GRP archive support
 dev-games/physfs:hog - Enable Descent I/II HOG archive support
+dev-games/physfs:iso - Enable ISO9660 file support
 dev-games/physfs:mvl - Enable Descent I/II MVL archive support
 dev-games/physfs:qpak - Enable Quake I/II QPAK archive support
+dev-games/physfs:slb - Enable Independence War SLB archive support
+dev-games/physfs:vdf - Enable Gothic/Gothic II VDF archive support
 dev-games/physfs:wad - Enable Doom WAD archive support
 dev-games/physfs:zip - Enable ZIP archive support
 dev-games/simgear:dns - Enable DNS resolver via net-libs/udns
@@ -3086,6 +3089,8 @@ games-action/supertuxkart:fribidi - Support for right-to-left languages
 games-action/supertuxkart:recorder - Enable recording with media-libs/libopenglrecorder
 games-action/supertuxkart:wiimote - Support for wiimote input devices
 games-action/swordandsworcery:bundled-libs - Use the upstream provided bundled libraries.
+games-action/trine:launcher - Install GTK+ launcher
+games-action/trine-enchanted-edition:launcher - Install GTK+ launcher
 games-action/trine2:bundled-libs - Use bundled libraries.
 games-action/trine2:launcher - Install gtk+ launcher
 games-arcade/bomns:editor - enables building the level editor
@@ -5071,6 +5076,7 @@ media-video/nvidia-settings:gtk3 - Additionally build the GTK 3 library
 media-video/nvidia_video_sdk:tools - Build and install example tools.
 media-video/obs-studio:fdk - Enable libfdk support for AAC encoding.
 media-video/obs-studio:imagemagick - Use ImageMagick for image loading instead of FFmpeg.
+media-video/obs-studio:nvenc - Enable NVENC encoding for nVidia video cards
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/orion:mpv - Use the media-video/mpv player (upstream default) instead of the dev-qt/qtmultimedia one
@@ -6088,7 +6094,6 @@ net-libs/udns:tools - Build and install dnsget, ex-rdns and rblcheck tools
 net-libs/wandio:http - Build support for reading files over HTTP using net-misc/curl
 net-libs/webkit-gtk:coverage - Enable code coverage support
 net-libs/webkit-gtk:egl - Enable EGL support
-net-libs/webkit-gtk:geoloc - Enable geolocation support through app-misc/geoclue
 net-libs/webkit-gtk:geolocation - Enable geolocation support through app-misc/geoclue
 net-libs/webkit-gtk:gles2 - Enable GLESv2 support
 net-libs/webkit-gtk:nsplugin - Enable full nsplugin support (GTK2 plugins)
@@ -8940,7 +8945,6 @@ xfce-extra/xfce4-pulseaudio-plugin:wnck - Enable experimental support for raisin
 xfce-extra/xfce4-soundmenu-plugin:glyr - Enable music metadata searchengine support using media-libs/glyr
 xfce-extra/xfce4-soundmenu-plugin:keybinder - Enable shortcut support using dev-libs/keybinder
 xfce-extra/xfce4-soundmenu-plugin:lastfm - Enable last.fm support using media-libs/libclastfm
-xfce-extra/xfce4-taskmanager:gksu - Build against x11-libs/libgksu to provide "Run as root" option in the application's menu
 xfce-extra/xfce4-taskmanager:gtk3 - Use GTK+3 instead of GTK+2
 xfce-extra/xfswitch-plugin:gdm - Compatibility with gnome-base/gdm only
 xfce-extra/xfswitch-plugin:lightdm - Compatibility with x11-misc/lightdm only

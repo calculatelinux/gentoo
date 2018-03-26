@@ -461,12 +461,6 @@ sys-power/phc-k8
 sys-fs/gfs2-utils
 
 # Pacho Ramos <pacho@gentoo.org> (13 Mar 2018)
-# Dead driver and with many incompatibilities with current kernels (#517250,
-# #523356, #551834, #646106). Removal in a month. Possible alternative
-# #device/driver: https://bugs.gentoo.org/517250#c5
-net-wireless/broadcom-sta
-
-# Pacho Ramos <pacho@gentoo.org> (13 Mar 2018)
 # Not buildable for a long time (#531586), pending many version bumps.
 # Removal in a month.
 media-sound/mup
@@ -643,17 +637,10 @@ sys-cluster/ganglia-web
 # Old net-libs/webkit-gtk SLOTs have hundreds of known security issues.
 # Use the security safe net-libs webkit-gtk SLOT=4 instead via
 # libraries and applications ported to gtk3 and webkit2gtk API.
-# Masked for removal in 30 days. Bug #577068.
 # Please keep this package.mask entry until at least 25th May 2018 for
-# extra notification of the security vulnerabilities.
+# extra notification of the security vulnerabilities. Bug #577068.
 net-libs/webkit-gtk:2
 net-libs/webkit-gtk:3
-
-# Mart Raudsepp <leio@gentoo.org> (23 Feb 2018)
-# Older versions of GnuCash use security vulnerable old webkit-gtk slot.
-# Use gnucash-2.7.4 or newer instead, but pay attention to the news item:
-# https://www.gentoo.org/support/news-items/2018-01-14-gnucash.html
-<app-office/gnucash-2.7
 
 # Steve Dibb <beandog@gentoo.org> (22 Feb 2018)
 # Very old project of mine, hasn't worked in years, no plans to
