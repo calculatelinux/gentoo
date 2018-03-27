@@ -29,6 +29,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Tony Vroon <chainsaw@gentoo.org> (24 Mar 2018)
+# This is a vulnerable version of Asterisk and should not be used except
+# to troubleshoot a purported memory leak in the 11.25.3 release.
+# Bug 629682.
+=net-misc/asterisk-11.25.1
+
 # Mike Gilbert <floppym@gentoo.org> (24 Mar 2018)
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
@@ -380,10 +386,6 @@ dev-util/bluej
 # Many build issues (#576612, #605318, #605320, #608772, #613824), doesn't
 # use python eclasses (#615946). Removal in a month.
 media-gfx/k3d
-
-# Pacho Ramos <pacho@gentoo.org> (17 Mar 2018)
-# Not buildable for a long time (#614498). Removal in a month.
-games-strategy/maxr
 
 # Pacho Ramos <pacho@gentoo.org> (17 Mar 2018)
 # Not compatible with current NetworkManager versions, use net-misc/networkmanager-libreswan
