@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu/ncurses/${MY_P}.tar.gz"
 LICENSE="MIT"
 # The subslot reflects the SONAME.
 SLOT="0/6"
-KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm arm64 ~hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="ada +cxx debug doc gpm minimal profile static-libs test threads tinfo trace unicode"
 
 DEPEND="gpm? ( sys-libs/gpm[${MULTILIB_USEDEP}] )"
@@ -132,6 +132,9 @@ do_configure() {
 		# The configure script uses ldd to parse the linked output which
 		# is flaky for cross-compiling/multilib/ldd versions/etc...
 		$(use_with gpm gpm libgpm.so.1)
+		# Required for building  on mingw-w64, and possibly other windows
+		# platforms, bug #639670
+		$(use_enable kernel_Winnt term-driver)
 		--disable-termcap
 		--enable-symlinks
 		--with-rcs-ids
@@ -238,7 +241,10 @@ multilib_src_install() {
 		# Provide a link for -lcurses.
 		ln -sf libncurses$(get_libname) "${ED}"/usr/$(get_libdir)/libcurses$(get_libname) || die
 	fi
-	use static-libs || find "${ED}"/usr/ -name '*.a' -delete
+	# don't delete '*.dll.a', needed for linking #631468
+	if ! use static-libs; then
+		find "${ED}"/usr/ -name '*.a' ! -name '*.dll.a' -delete || die
+	fi
 
 	# Build fails to create this ...
 	dosym ../share/terminfo /usr/$(get_libdir)/terminfo
