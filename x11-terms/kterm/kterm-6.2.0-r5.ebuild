@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=4
@@ -6,11 +6,11 @@ EAPI=4
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Japanese Kanji X Terminal"
-SRC_URI="ftp://ftp.x.org/contrib/applications/${P}.tar.gz
-	http://www.asahi-net.or.jp/~hc3j-tkg/kterm/${P}-wpi.patch.gz
-	http://www.st.rim.or.jp/~hanataka/${P}.ext02.patch.gz"
-# until someone who reads japanese can find a better place
-HOMEPAGE="http://www.asahi-net.or.jp/~hc3j-tkg/kterm/"
+#HOMEPAGE="http://www.asahi-net.or.jp/~hc3j-tkg/kterm/"
+HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage"
+SRC_URI="mirror://gentoo/${P}.tar.gz
+	mirror://gentoo/${P}-wpi.patch.gz
+	mirror://gentoo/${P}.ext02.patch.gz"
 
 LICENSE="MIT HPND XC"
 SLOT="0"
@@ -32,14 +32,11 @@ DEPEND="${RDEPEND}
 src_prepare(){
 	epatch "${WORKDIR}"/${P}-wpi.patch		# wallpaper patch
 	epatch "${WORKDIR}"/${P}.ext02.patch		# JIS 0213 support
-	epatch "${FILESDIR}"/${P}-openpty.patch
-	epatch "${FILESDIR}"/${P}-gentoo.patch
-	epatch "${FILESDIR}"/${PN}-ad-gentoo.diff
-	epatch "${FILESDIR}"/${PV}-underline.patch
-
-	if use Xaw3d ; then
-		epatch "${FILESDIR}"/kterm-6.2.0-Xaw3d.patch
-	fi
+	epatch "${FILESDIR}"/${PN}-openpty.patch
+	epatch "${FILESDIR}"/${PN}-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-ad-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-underline.patch
+	use Xaw3d && epatch "${FILESDIR}"/${PN}-Xaw3d.patch
 }
 
 src_compile(){
