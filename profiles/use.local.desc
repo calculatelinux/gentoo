@@ -33,11 +33,6 @@ app-admin/clsync:extra-hardened - Enable extra security checks. This will hurt p
 app-admin/clsync:gio - Enable GIO for FS monitoring (glib based alternative to inotify interface, not recommended; if both are compiled, may be selected at runtime).
 app-admin/clsync:highload-locks - Allows to use spinlocks for short delays instead of mutexes, but only on SMP systems.
 app-admin/clsync:namespaces - Enable namespaces isolation.
-app-admin/collectd:contrib - Install user-contributed files in the doc directory
-app-admin/collectd:filecaps - When set collectd daemon will have set required capabilities to run most plugins even if run as unprivileged user
-app-admin/collectd:java - Must be set (workaround for java-pkg-opt-2 eclass limitation) when you want java or genericjmx plugin
-app-admin/collectd:udev - Enable optional udev usage in disk plugin; Required for smart plugin
-app-admin/collectd:xfs - Enable optional capability to filter on XFS file system in df plugin; Requires XFS headers from sys-fs/xfsprogs
 app-admin/conky:apcupsd - Enable support for sys-power/apcupsd
 app-admin/conky:audacious - Enable monitoring of music played by media-sound/audacious
 app-admin/conky:cmus - Enable monitoring of music played by media-sound/cmus
@@ -125,6 +120,7 @@ app-admin/rsyslog:grok - Build the grok modify module (requires dev-libs/grok)
 app-admin/rsyslog:jemalloc - Use dev-libs/jemalloc for allocations.
 app-admin/rsyslog:kafka - Build the Apache Kafka input/output module (requires dev-libs/librdkafka)
 app-admin/rsyslog:kerberos - Build the GSSAPI input and output module (requires virtual/krb5)
+app-admin/rsyslog:kubernetes - Build the kubernetes modify plugin (requires net-misc/curl)
 app-admin/rsyslog:libressl - Use dev-libs/libressl for building the rfc5424hmac modify module (requires rfc5424hmac USE flag)
 app-admin/rsyslog:mdblookup - Build the MaxMind DB lookup message modify plugin using dev-libs/libmaxminddb
 app-admin/rsyslog:mongodb - Build the MongoDB output module (requires dev-libs/libmongo-client)
@@ -861,6 +857,11 @@ app-leechcraft/lc-poshuku:speeddial - Build SpeedDial module.
 app-leechcraft/lc-poshuku:webengine - Build WebEngine- (that is, Chromium-)based rendering backend.
 app-leechcraft/lc-secman:exposecontents - Build the GUI for viewing the stored data.
 app-leechcraft/leechcraft-meta:de - Install components, that allow using Leechcraft as Desktop Environment
+app-metrics/collectd:contrib - Install user-contributed files in the doc directory
+app-metrics/collectd:filecaps - When set collectd daemon will have set required capabilities to run most plugins even if run as unprivileged user
+app-metrics/collectd:java - Must be set (workaround for java-pkg-opt-2 eclass limitation) when you want java or genericjmx plugin
+app-metrics/collectd:udev - Enable optional udev usage in disk plugin; Required for smart plugin
+app-metrics/collectd:xfs - Enable optional capability to filter on XFS file system in df plugin; Requires XFS headers from sys-fs/xfsprogs
 app-misc/anki:recording - Enable support for audio recording
 app-misc/anki:sound - Enable support for adding sound to cards
 app-misc/binwalk:graph - Enable support for generating entropy graphs
@@ -3092,6 +3093,7 @@ games-arcade/commandergenius:tremor - Use media-libs/tremor as ogg decoder inste
 games-arcade/jumpnbump:music - Enable playing of background music
 games-arcade/lbreakout2:themes - Install additional themes
 games-arcade/moleinvasion:music - Download and install the music files
+games-arcade/oshu:osu-skin - Include more complete osu-skin (other is minimal)
 games-arcade/performous:midi - Enable MIDI I/O support
 games-arcade/performous:songs - Install a few demo songs
 games-arcade/performous:tools - Install tools
@@ -4036,7 +4038,6 @@ media-gfx/graphviz:gdk-pixbuf - Enables gdk-pixbuf2 plugin
 media-gfx/graphviz:gtk - Enables gtk+ output plugin -Tgtk (needs cairo)
 media-gfx/graphviz:gts - Enables support for gts
 media-gfx/graphviz:lasi - Enables PostScript output via media-libs/lasi, for plugin -Tlasi (needs cairo)
-media-gfx/graphviz:qt4 - Builds gvedit front-end
 media-gfx/gthumb:http - Enable webservice integration through net-libs/libsoup
 media-gfx/gthumb:json - Compile code that uses the libjson-glib library
 media-gfx/gthumb:slideshow - Enable slideshow plugin
@@ -4105,6 +4106,7 @@ media-libs/allegro:dumb - Enable media-libs/dumb module library support
 media-libs/allegro:physfs - Enable physfs support
 media-libs/allegro:vga - Enables the VGA graphics driver
 media-libs/alsa-lib:alisp - Enable support for ALISP (ALSA LISP) interpreter for advanced features.
+media-libs/alsa-lib:thread-safety - thread-safe API functions
 media-libs/alure:dumb - Enable media-libs/dumb module library support
 media-libs/alure:fluidsynth - Enables Fluidsynth MIDI software synthesis
 media-libs/assimp:boost - Build assimp with boost support
@@ -7055,7 +7057,6 @@ sci-biology/yass:dmalloc - Enable debugging with the dmalloc library
 sci-biology/yass:lowmem - Build for environments with low amounts of memory
 sci-calculators/datamash:openssl - Use dev-libs/openssl for cryptographic features
 sci-calculators/units:units_cur - Install the units_cur python script that updates currencies
-sci-chemistry/PyMca:matplotlib - Support for plotting through matplotlib
 sci-chemistry/apbs:fast - APBS fast mode (experimental)
 sci-chemistry/apbs:fetk - Include support for FeTK
 sci-chemistry/apbs:iapbs - C/C++/Fortran interface
@@ -7079,7 +7080,6 @@ sci-chemistry/gromacs:offensive - Enable gromacs partly offensive quotes
 sci-chemistry/gromacs:opencl - Enable opencl non-bonded kernels
 sci-chemistry/gromacs:single-precision - Single precision version of gromacs (default)
 sci-chemistry/gromacs:tng - Enable new trajectory format - tng
-sci-chemistry/gsim:emf - Support for .emf export
 sci-chemistry/jmol:client-only - Install the viewer only, no applet files for httpd
 sci-chemistry/molequeue:client - Build the client application
 sci-chemistry/molequeue:server - Build the serve application
@@ -7584,6 +7584,7 @@ sys-apps/fwupd:colorhug - Enable ColorHug support through x11-misc/colord packag
 sys-apps/fwupd:dell - Enable Dell-specific support.
 sys-apps/fwupd:gpg - Enable GPG support.
 sys-apps/fwupd:man - Build and install man pages
+sys-apps/fwupd:pkcs7 - Enable PKCS7 verification support via net-libs/gnutls.
 sys-apps/fwupd:uefi - Enable UEFI support
 sys-apps/fwupd:uefi_labels - Enable UEFI labels support
 sys-apps/gawk:forced-sandbox - Always enable --sandbox mode for simpler/secure runtime (disables e/r/w commands)
@@ -7692,6 +7693,7 @@ sys-apps/systemd:libidn2 - If IDN support is enabled, use net-dns/libidn2 instea
 sys-apps/systemd:lz4 - Enable lz4 compression for the journal
 sys-apps/systemd:nat - Enable support for network address translation in networkd
 sys-apps/systemd:qrcode - Enable qrcode output support in journal
+sys-apps/systemd:resolvconf - Install resolvconf symlink for systemd-resolve
 sys-apps/systemd:sysv-utils - Install sysvinit compatibility symlinks and manpages for init, telinit, halt, poweroff, reboot, runlevel, and shutdown
 sys-apps/systemd:usrmerge - Enable /usr merge (experimental)
 sys-apps/systemd:vanilla - Disable Gentoo-specific behavior and compatibility quirks
@@ -7953,6 +7955,7 @@ sys-devel/clang:multitarget - Build all host targets (default: host only)
 sys-devel/clang:static-analyzer - Install the Clang static analyzer
 sys-devel/clang:z3 - Enable the static analyzer constraint manager backend using sci-mathematics/z3
 sys-devel/clang-runtime:compiler-rt - Install sys-libs/compiler-rt for -rtlib=compiler-rt
+sys-devel/clang-runtime:crt - Require a package providing crt*.o files to make it possible to build software without GCC installed
 sys-devel/clang-runtime:libcxx - Install sys-libs/libcxx for -stdlib=libc++
 sys-devel/clang-runtime:openmp - Install sys-libs/libomp for -fopenmp support
 sys-devel/clang-runtime:sanitize - Enable compiler-rt sanitizer (-fsanitize*) support
@@ -8466,6 +8469,7 @@ www-client/uget:gtk3 - Use x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 www-client/uget:hide-temp-files - Make temporary files that are used while downloading hidden.
 www-client/uget:openssl - Use dev-libs/openssl instead of net-libs/gnutls
 www-client/uget:rss - Enable uGet feed messages
+www-client/w3m:gdk-pixbuf - Enable support for x11-libs/gdk-pixbuf
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-client/weboob:deprecated - Enable dev-python/mechanize support (deprecated in favor of dev-python/requests
 www-client/weboob:fast-libs - Enable fast libs

@@ -33,7 +33,7 @@ ALL_LLVM_TARGETS=( "${ALL_LLVM_TARGETS[@]/#/llvm_targets_}" )
 LICENSE="UoI-NCSA rc BSD public-domain
 	llvm_targets_ARM? ( LLVM-Grant )"
 SLOT="$(ver_cut 1)"
-KEYWORDS="amd64 ~arm ~arm64 x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~arm ~arm64 x86 ~amd64-fbsd ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="debug doc gold libedit +libffi ncurses test
 	kernel_Darwin kernel_linux ${ALL_LLVM_TARGETS[*]}"
 
@@ -244,4 +244,13 @@ _EOF_
 	fi
 
 	docompress "/usr/lib/llvm/${SLOT}/share/man"
+}
+
+pkg_postinst() {
+	elog "You can find additional opt-viewer utility scripts in:"
+	elog "  ${EROOT}/usr/lib/llvm/${SLOT}/share/opt-viewer"
+	elog "To use these scripts, you will need Python 2.7 along with the following"
+	elog "packages:"
+	elog "  dev-python/pygments (for opt-viewer)"
+	elog "  dev-python/pyyaml (for all of them)"
 }

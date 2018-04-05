@@ -29,6 +29,49 @@
 
 #--- END OF EXAMPLES ---
 
+# Rick Farina <zerochaos@gentoo.org> (04 Apr 2018)
+# Violates PMS and does not work with stable portage.
+# Masked for removal in 60 days, lift mask if bug #650126 is fixed
+sys-fs/aufs3
+sys-fs/aufs4
+
+# Andreas Sturmlechner <asturm@gentoo.org> (03 Mar 2018)
+# Dead upstream, depends on dead PyQt4.
+# Masked for removal in 30 days. Bugs #649118, #510066
+media-video/subdownloader
+
+# Andreas Sturmlechner <asturm@gentoo.org> (03 Mar 2018)
+# Build issues, depends on dead Qt4, no port to Qt5 (or far from ready).
+# Masked for removal in 30 days. Bugs #620474, #624740, #648668
+sci-electronics/qucs
+
+# Michał Górny (03 Apr 2018)
+# Starting with sys-apps/sandbox-2.13+, unloading is possible via
+# disabling (SANDBOX_ON=0) + wiping LD_PRELOAD. This renders the tool
+# obsolete. Removal in 30 days.
+app-portage/unsandbox
+
+# Matthias Maier <tamiko@gentoo.org> (3 Apr 2018)
+# Remove old Intel C/C++/Fortran compiler ebuilds. These packages require
+# to acquire a non-commercial license by Intel and download "Intel Parallel
+# Studio" in ancient versions (3+ years old). Current versions (as of 2018)
+# can be found in the ::science overlay.
+#
+# Corresponding eclass/intel-sdp eclass slated for removal as well.
+#
+# Masked for removal in 30 days.
+<dev-lang/icc-18
+<dev-lang/ifc-18
+dev-lang/idb
+<dev-libs/intel-common-18
+<sci-libs/ipp-18
+sci-chemistry/cyana
+
+# Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (3 Apr 2018)
+# Merged into >=dev-db/m17n-db-1.7.0.
+# Masked for removal in 30 days.
+dev-db/m17n-contrib
+
 # Aaron Bauman <bman@gentoo.org> (1 Apr 2018)
 # Unmaintained upstream. Relies on old PHP. EAPI=0.
 # Masked for removal in 30 days.
@@ -556,38 +599,6 @@ media-gfx/qosmic
 # Bug 649764 Removal in 30 days.
 dev-db/maxscale
 
-# Andreas Sturmlechner <asturm@gentoo.org> (06 Mar 2018)
-# Maintainer not responding, depends on deprecated Qt4.
-# Masked for removal in 30 days. Bug 598651, 635192, 644396
-media-gfx/photivo
-
-# Andreas Sturmlechner <asturm@gentoo.org> (05 Mar 2018)
-# Dead upstream, depends on deprecated Qt4.
-# Masked for removal in 30 days. Bug 644404
-net-fs/smbtatools
-
-# Andreas Sturmlechner <asturm@gentoo.org> (04 Mar 2018)
-# Dead upstream, depends on deprecated Qt4. media-sound/cantata
-# is an actively developed alternative based on Qt5.
-# Masked for removal in 30 days. Bug 644412
-media-sound/qmpdclient
-
-# Andreas Sturmlechner <asturm@gentoo.org> (04 Mar 2018)
-# Dead upstream, depends on deprecated Qt4.
-# Masked for removal in 30 days. Bug 645436
-sci-chemistry/massxpert
-
-# Andreas Sturmlechner <asturm@gentoo.org> (04 Mar 2018)
-# Dead upstream, depends on deprecated Qt4.
-# Masked for removal in 30 days. Bug 514438, 644522
-sci-chemistry/gsim
-
-# Andreas Sturmlechner <asturm@gentoo.org> (04 Mar 2018)
-# Depends on deprecated dev-python/pyqwt, blocks Qt4 removal.
-# Masked for removal in 30 days unless someone bumps to 5.2.2.
-# Bug 645218, 649094
-sci-chemistry/PyMca
-
 # Andreas K. Hüttel <dilfridge@gentoo.org> (03 Mar 2018)
 # Fails to build without rpc support in glibc (bug 631044);
 # no maintainer, requires obsolete hardware. Removal in
@@ -620,7 +631,7 @@ dev-python/sepolgen
 # Depends on x11-libs/libXp which is on its way out.
 # If you still need this for third-party binaries, try the
 # workaround outlined in https://bugs.gentoo.org/210021#c19.
-# Masked for removal in 90 days. Bug #649080.
+# Masked for removal in 30 days. Bug #649080.
 x11-libs/motif:2.2
 
 # Anthony G. Basile <blueness@gentoo.org> (25 Feb 2018)
