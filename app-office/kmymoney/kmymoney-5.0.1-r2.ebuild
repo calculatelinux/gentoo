@@ -17,7 +17,7 @@ HOMEPAGE="https://kmymoney.org"
 SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.xz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="activities addressbook calendar hbci holidays ofx quotes weboob"
 
 REQUIRED_USE="weboob? ( ${PYTHON_REQUIRED_USE} )"
@@ -113,4 +113,13 @@ src_configure() {
 		$(cmake-utils_use_find_package weboob PythonLibs)
 	)
 	kde5_src_configure
+}
+
+src_test() {
+	# bug: 652636
+	local myctestargs=(
+		-E "(reports-chart-test)"
+	)
+
+	kde5_src_test
 }

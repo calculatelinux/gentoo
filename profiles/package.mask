@@ -29,18 +29,28 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (06 Apr 2018)
+# Dead upstream, depends on dead Qt4.
+# Masked for removal in 30 days. Bugs #644478
+x11-libs/libqxt
+
+# Andreas Sturmlechner <asturm@gentoo.org> (06 Apr 2018)
+# Dead upstream, dead homepage, depends on dead Qt4.
+# Masked for removal in 30 days. Bugs #642448, #636472
+media-video/bdsup2sub++
+
 # Rick Farina <zerochaos@gentoo.org> (04 Apr 2018)
 # Violates PMS and does not work with stable portage.
 # Masked for removal in 60 days, lift mask if bug #650126 is fixed
 sys-fs/aufs3
 sys-fs/aufs4
 
-# Andreas Sturmlechner <asturm@gentoo.org> (03 Mar 2018)
+# Andreas Sturmlechner <asturm@gentoo.org> (03 Apr 2018)
 # Dead upstream, depends on dead PyQt4.
 # Masked for removal in 30 days. Bugs #649118, #510066
 media-video/subdownloader
 
-# Andreas Sturmlechner <asturm@gentoo.org> (03 Mar 2018)
+# Andreas Sturmlechner <asturm@gentoo.org> (03 Apr 2018)
 # Build issues, depends on dead Qt4, no port to Qt5 (or far from ready).
 # Masked for removal in 30 days. Bugs #620474, #624740, #648668
 sci-electronics/qucs
@@ -66,6 +76,11 @@ dev-lang/idb
 <dev-libs/intel-common-18
 <sci-libs/ipp-18
 sci-chemistry/cyana
+
+# Jeroen Roovers <jer@gentoo.org> (6 Apr 2018)
+# Requires >=dev-libs/icu-61.1
+# https://bugs.gentoo.org/651698
+=net-libs/nodejs-9.11*
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (3 Apr 2018)
 # Merged into >=dev-db/m17n-db-1.7.0.
@@ -580,16 +595,6 @@ dev-lisp/asdf-binary-locations
 # Obsolete package
 # Masked for removal in 30 days. Bug #648448
 dev-lisp/gentoo-init
-
-# Michael Palimaka <kensington@gentoo.org> (07 Mar 2018)
-# Depends on deprecated Qt 4. Dead upstream.
-# Masked for removal in 30 days. Bug #649116.
-media-video/qt-recordmydesktop
-
-# Michael Palimaka <kensington@gentoo.org> (07 Mar 2018)
-# Depends on deprecated Qt 4. Dead upstream.
-# Masked for removal in 30 days. Bug #644424.
-media-gfx/qosmic
 
 # Brian Evans <grknight@gentoo.org> (06 Mar 2018)
 # MariaDB MaxScale 1.x depends on the deprecated libmysqld

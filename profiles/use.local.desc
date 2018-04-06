@@ -2130,6 +2130,7 @@ dev-libs/libgit2:ssh - Enable SSH transport support
 dev-libs/libgit2:trace - Enable tracing support
 dev-libs/libgit2-glib:ssh - Enable SSH transport support
 dev-libs/libgpg-error:common-lisp - Install common-lisp files
+dev-libs/libgpiod:tools - Build some useful gpio tools that use libgpiod.
 dev-libs/libgpuarray:cuda - Enable NVIDIA CUDA toolkit support
 dev-libs/libgpuarray:opencl - Enable OpenCL support
 dev-libs/libgweather:glade - Installs catalog files for dev-util/glade
@@ -2929,6 +2930,11 @@ dev-util/geany-plugins:pretty-printer - Enable pretty-printer plugin
 dev-util/geany-plugins:scope - Enable the scope plugin which is a graphical GDB front-end
 dev-util/geany-plugins:soup - Enable updatechecker and geniuspaste plugins which require net-libs/libsoup
 dev-util/global:vim - Integrate the GNU GLOBAL source code tag system with Vim
+dev-util/gnome-builder:clang - Provide integration with sys-devel/clang for best possible C/C++ autocompletion, semantic highlighting, symbol resolving, and diagnostics support
+dev-util/gnome-builder:git - Provide support for the Git version control system via dev-libs/libgit2-glib (such as setup of Git for New Project, direct cloning for Open Project and changed lines indicators in the editor gutter)
+dev-util/gnome-builder:sysprof - Provide an integrated profiler via dev-util/sysprof
+dev-util/gnome-builder:vala - Provide an autoindenter, autocompletion, diagnostics, and symbol resolver for Vala
+dev-util/gnome-builder:webkit - Enable net-libs/webkit-gtk using plugins support and the HTML/Markdown previewer plugin
 dev-util/google-perftools:debug - Build a set of libraries with debug support (so-called debugalloc). These are available by default but are not needed unless you're actually developing using tcmalloc.
 dev-util/google-perftools:largepages - Use (experimental) larger pages for tcmalloc, this increases memory usage, but should speed up the allocation/free operations.
 dev-util/google-perftools:minimal - Only build the tcmalloc_minimal library, ignoring the heap checker and the profilers.
@@ -3400,11 +3406,6 @@ gnome-extra/evolution-data-server:berkdb - sys-libs/db support needed to migrate
 gnome-extra/evolution-data-server:gnome-online-accounts - Enable net-libs/gnome-online-accounts based Google authentication support
 gnome-extra/evolution-data-server:google - Enable internal Google authentication support. If gnome-online-accounts is enabled and used, this is not necessary, but both can be supported at the same time with different setup at runtime
 gnome-extra/evolution-data-server:weather - Enable optional weather calendar support
-gnome-extra/gnome-builder:clang - Provide integration with sys-devel/clang for best possible C/C++ autocompletion, semantic highlighting, symbol resolving, and diagnostics support
-gnome-extra/gnome-builder:git - Provide support for the Git version control system via dev-libs/libgit2-glib (such as setup of Git for New Project, direct cloning for Open Project and changed lines indicators in the editor gutter)
-gnome-extra/gnome-builder:sysprof - Provide an integrated profiler via dev-util/sysprof
-gnome-extra/gnome-builder:vala - Provide an autoindenter, autocompletion, diagnostics, and symbol resolver for Vala
-gnome-extra/gnome-builder:webkit - Enable net-libs/webkit-gtk using plugins support and the HTML/Markdown previewer plugin
 gnome-extra/gnome-color-manager:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
 gnome-extra/gnome-commander:chm - Enable metadata support for Microsoft Compiled HTML Help files
 gnome-extra/gnome-commander:gsf - Add metadata support for OLE, OLE2 and ODF
@@ -4669,6 +4670,7 @@ media-sound/potamus:opus - Adds support for the Opus codec.
 media-sound/pragha:glyr - Enable music metadata searchengine support using media-libs/glyr
 media-sound/pragha:grilo - Play songs on DLNA servers using media-libs/grilo
 media-sound/pragha:keybinder - Enable shortcut support using dev-libs/keybinder
+media-sound/pragha:koel - Append music on Koel server
 media-sound/pragha:lastfm - Enable last.fm support using media-libs/libclastfm
 media-sound/pragha:peas - Enable various plugins that will pull in dev-libs/libpeas as a dependency
 media-sound/pragha:playlist - Enable enhanced playlist support using dev-libs/totem-pl-parser
@@ -6365,13 +6367,14 @@ net-misc/felix:bird - Use BIRD, e.g. for route reflection
 net-misc/freerdp:client - Build client binaries
 net-misc/freerdp:openh264 - Enable H.264 support using media-libs/openh264
 net-misc/freerdp:server - Build server binaries
-net-misc/gerbera:curl - Support YouTube and external media sources (e.g. internet radio)
+net-misc/gerbera:curl - Support HTTP media sources (e.g. internet radio)
+net-misc/gerbera:exiv2 - Use media-gfx/exiv2 to extract EXIF information
 net-misc/gerbera:ffmpegthumbnailer - Enable video thumbnail support with media-video/ffmpegthumbnailer
 net-misc/gerbera:lastfm - Enable last.fm support
 net-misc/gerbera:magic - Use libmagic to determine file types
 net-misc/gerbera:mysql - Use dev-db/mysql as backend rather than SQLite3
 net-misc/gerbera:protocol-extensions - Enable partial DLNA support
-net-misc/gerbera:taglib - Use media-libs/taglib for reading files' metadata rather than id3lib
+net-misc/gerbera:taglib - Use media-libs/taglib for reading files' metadata
 net-misc/gnome-online-miners:flickr - Enable Flickr support
 net-misc/gsasl:gcrypt - Use dev-libs/libgcrypt for low-level crypto
 net-misc/gsasl:ntlm - Add support for Microsoft's NTLM mechanism using net-libs/libntlm

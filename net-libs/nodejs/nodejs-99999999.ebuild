@@ -22,19 +22,20 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	>=dev-libs/libuv-1.16.1:=
+	>=dev-libs/libuv-1.19.2:=
 	>=net-libs/http-parser-2.7.0:=
-	>=net-libs/nghttp2-1.25.0
+	>=net-libs/nghttp2-1.29.0
 	sys-libs/zlib
-	icu? ( >=dev-libs/icu-60.1:= )
+	icu? ( >=dev-libs/icu-61.1:= )
 	npm? ( ${PYTHON_DEPS} )
 	ssl? ( >=dev-libs/openssl-1.0.2g:0=[-bindist] )
 "
-DEPEND="${RDEPEND}
+DEPEND="
+	${RDEPEND}
 	${PYTHON_DEPS}
 	systemtap? ( dev-util/systemtap )
-	test? ( net-misc/curl )"
-
+	test? ( net-misc/curl )
+"
 PATCHES=(
 	"${FILESDIR}"/gentoo-global-npm-config.patch
 )

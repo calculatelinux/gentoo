@@ -5,6 +5,7 @@ EAPI=6
 
 KDE_TEST="true"
 QT_MINIMAL="5.9.2"
+VIRTUALX_REQUIRED="test"
 inherit kde5
 
 DESCRIPTION="Cross-platform web browser using QtWebEngine"
@@ -15,7 +16,7 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="dbus gnome-keyring kwallet libressl +X"
 
 COMMON_DEPEND="
