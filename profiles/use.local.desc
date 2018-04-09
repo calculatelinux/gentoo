@@ -1373,8 +1373,6 @@ dev-db/mariadb-galera:systemtap - Build support for profiling and tracing using 
 dev-db/mariadb-galera:test - Install upstream testsuites for end use.
 dev-db/mariadb-galera:tokudb - Add support for TokuDB storage engine
 dev-db/mariadb-galera:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
-dev-db/maxscale:jemalloc - Use dev-libs/jemalloc for allocations
-dev-db/maxscale:rabbitmq - Add support for RabbitMQ message queue
 dev-db/mongodb:mms-agent - Install the MongoDB Monitoring Service agent
 dev-db/mongodb:tools - Install the MongoDB tools (mongoimport, mongodump...) from app-admin/mongo-tools
 dev-db/mysql:cluster - Add support for NDB clustering (deprecated)
@@ -2419,10 +2417,6 @@ dev-php/PEAR-HTTP_Request2:fileinfo - Force dev-lang/php to be compiled with fil
 dev-php/PEAR-HTTP_Request2:ssl - Force dev-lang/php to be compiled with ssl extension
 dev-php/PEAR-HTTP_Request2:zlib - Force dev-lang/php to be compiled with zlib extension
 dev-php/PEAR-PHP_Beautifier:cli - Require dev-lang/php to be built with the "cli" SAPI and install the php_beautifier script.
-dev-php/ZendFramework:cli - Enables the CLI
-dev-php/ZendFramework:doc - Installs the documentation
-dev-php/ZendFramework:examples - Installs the examples
-dev-php/ZendFramework:minimal - Installs the minimal version without Dojo toolkit, tests and demos
 dev-php/agavi:executable - Install the "agavi" executable used to manage projects. This requires dev-php/phing, and may be omitted if you are (for example) deploying an existing site to a production server.
 dev-php/maxmind-db-reader:extension - Build the C extension that uses dev-libs/libmaxminddb
 dev-php/pecl-apcu:lock_pthreadmutex - Enable pthread mutex locking
@@ -7177,8 +7171,9 @@ sci-libs/armadillo:superlu - Use SuperLU for sparse linear equation solving sci-
 sci-libs/armadillo:tbb - Use matrix allocation from the Threads Building Blocks dev-cpp/tbb
 sci-libs/arprec:qd - Use sci-libs/qd for quad-double datatype
 sci-libs/atlas:generic - Build atlas assuming a fairly generic architecture (sse2 for x86, core2 for amd64)
+sci-libs/avogadrolibs:archive - Enable archive support using app-arch/libarchive
 sci-libs/avogadrolibs:static-plugins - Build all plugins statically into main plugin modules
-sci-libs/avogadrolibs:vtk - include vtk support
+sci-libs/avogadrolibs:vtk - Enable sci-libs/vtk support
 sci-libs/cddlib:tools - Add a few executables and tests for cddlib
 sci-libs/ceres-solver:c++11 - Build ceres-solver using the C++11 standard
 sci-libs/ceres-solver:cxsparse - Enable simple support for sparse matrix algebra from sci-libs/cxsparse with no LAPACK dependencies
@@ -8368,6 +8363,7 @@ www-apps/nikola:webmedia - Use dev-python/micawber to extract metadata from web 
 www-apps/nikola:websocket - Add websocket support thru dev-python/ws4py
 www-apps/otrs:mod_perl - Provide all dependencies for use of mod_perl instead of cgi
 www-apps/postfixadmin:vacation - Install vacation.pl script and dependencies
+www-apps/radicale:bcrypt - Depend on passlib to enable bcrypt and md5 authentication methods
 www-apps/redmine:markdown - Enable support for Markdown
 www-apps/redmine:passenger - Enable support for www-apache/passenger
 www-apps/rt:lighttpd - Add www-servers/lighttpd support
