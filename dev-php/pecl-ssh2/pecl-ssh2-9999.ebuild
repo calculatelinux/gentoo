@@ -5,12 +5,12 @@ EAPI=6
 
 PHP_EXT_NAME="ssh2"
 
-USE_PHP="php5-6 php7-0 php7-1"
+USE_PHP="php5-6 php7-0 php7-1 php7-2"
 EGIT_REPO_URI="https://git.php.net/repository/pecl/networking/ssh2.git"
 
 inherit php-ext-source-r3 git-r3
 
-USE_PHP="php7-0 php7-1"
+USE_PHP="php7-0 php7-1 php7-2"
 
 DESCRIPTION="PHP bindings for the libssh2 library"
 LICENSE="PHP-3.01"
@@ -23,7 +23,7 @@ RDEPEND="${DEPEND}
 HOMEPAGE="https://pecl.php.net/package/ssh2"
 
 src_prepare() {
-	if use php_targets_php7-0 || use php_targets_php7-1 ; then
+	if use php_targets_php7-0 || use php_targets_php7-1 || use php_targets_php7-2 ; then
 		php-ext-source-r3_src_prepare
 	else
 		default_src_prepare
