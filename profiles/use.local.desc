@@ -1960,7 +1960,6 @@ dev-lang/rust:clang - Use sys-devel/clang for building
 dev-lang/rust:extended - Build and install rls, rustfmt and cargo alongside the compiler and stdlib
 dev-lang/rust:jemalloc - Use dev-libs/jemalloc as the standard memory allocator
 dev-lang/rust:libcxx - Use sys-libs/libcxx as standard library when building with sys-devel/clang
-dev-lang/rust:system-llvm - Use system sys-devel/llvm in place of the bundled one
 dev-lang/scala:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
 dev-lang/smlnj:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
 dev-lang/spidermonkey:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
@@ -2307,8 +2306,6 @@ dev-libs/xmlsec:openssl - Install xmlsec-openssl library
 dev-libs/xqilla:faxpp - Use dev-libs/faxpp instead of Xerces-C for certain tasks
 dev-libs/xqilla:htmltidy - Use app-text/htmltidy when parsing HTML
 dev-libs/yaz:ziffy - Install ziffy, a promiscuous Z39.50 APDU sniffer
-dev-lisp/abcl:clisp - Build Armed Bear Common Lisp using GNU CLISP
-dev-lisp/abcl:cmucl - Build Armed Bear Common Lisp using CMU Common Lisp
 dev-lisp/abcl:jad - Enable support for disassembling compiled code using JAD
 dev-lisp/clisp:hyperspec - Use local hyperspec instead of online version
 dev-lisp/clisp:new-clx - Build CLISP with support for the NEW-CLX module which is a -C binding to the Xorg libraries
@@ -6539,7 +6536,7 @@ net-misc/rdesktop:kerberos - Enable CredSPP support + Kerberos authentication wi
 net-misc/rdesktop:pcsc-lite - Enable smartcard support with sys-apps/pcsc-lite driver
 net-misc/rdesktop:xrandr - Enable XRandR window extension support
 net-misc/remmina:spice - Support connecting to SPICE-enabled virtual machines
-net-misc/remmina:ssh - Enable support for SSH/SFTP protocol; see also 'vte'
+net-misc/remmina:ssh - Enable support for SSH/SFTP protocol
 net-misc/remmina:telepathy - Enable telepathy support
 net-misc/rsync:stunnel - Provide helper scripts for using rsync via >=net-misc/stunnel-4
 net-misc/rygel:tracker - Install dependencies for the tracker plugin
@@ -8079,6 +8076,7 @@ sys-fs/btrfs-progs:reiserfs - Enable reiserfs support in btrfs-convert tool.
 sys-fs/btrfs-progs:static - Build static binaries in addition to the dynamic ones
 sys-fs/btrfs-progs:zstd - Enable zstd compression support.
 sys-fs/btrfsmaintenance:systemd - Enable systemd services and timers instead of cron timers
+sys-fs/cryfs:custom-optimization - Use user-defined compiler optimization level
 sys-fs/cryfs:update-check - Enable automatic checking for updates and security vulnerabilities
 sys-fs/cryptsetup:argon2 - Enable password hashing algorithm from app-crypt/argon2
 sys-fs/cryptsetup:gcrypt - Use dev-libs/libgcrypt crypto backend
