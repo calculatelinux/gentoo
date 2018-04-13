@@ -95,21 +95,12 @@ src_configure() {
 }
 
 src_install() {
-	local soversion
-	if [[ "${PV}" = 9999 ]] ; then
-		soversion="$(sed -n '/^VERSION\b/s@.*= \([[:digit:]\.]\+\)$@\1@p' src/mumble.pri)"
-	else
-		soversion="${PV}"
-	fi
-
 	newdoc README.Linux README
 	dodoc CHANGES
 
-	local dir
+	local dir=release
 	if use debug; then
 		dir=debug
-	else
-		dir=release
 	fi
 
 	dobin "${dir}"/mumble
@@ -120,18 +111,12 @@ src_install() {
 
 	domenu scripts/mumble.desktop
 
-	insinto /usr/share/icons/hicolor/scalable/apps
-	doins icons/mumble.svg
+	doicon -s scalable icons/mumble.svg
 
 	doman man/mumble-overlay.1
 	doman man/mumble.1
 
-	insopts -o root -g root -m 0755
-	insinto "/usr/$(get_libdir)/mumble"
-	doins "${dir}"/libmumble.so.${soversion}
-	dosym libmumble.so.${soversion} /usr/$(get_libdir)/mumble/libmumble.so.1
-	doins "${dir}"/libcelt0.so.0.{7,11}.0
-	doins "${dir}"/plugins/lib*.so*
+	dolib.so "${dir}"/libmumble.so* "${dir}"/libcelt0.so* "${dir}"/plugins/lib*.so*
 }
 
 pkg_postinst() {

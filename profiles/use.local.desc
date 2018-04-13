@@ -194,6 +194,7 @@ app-admin/webapp-config:portage - Propagete python_targets dependencies to sys-a
 app-admin/yaala:storable - Support for persistence of Perl data structures.
 app-antivirus/clamav:clamdtop - A Top like tool which shows what clamd is currently scanning amongst other things
 app-antivirus/clamav:metadata-analysis-api - Enables collection of file property metadata using ClamAV API for analysis by ClamAV bytecode programs.
+app-antivirus/clamav:system-libmspack - Use system libmspack instead of built in
 app-arch/cabextract:extras - Install experimental extra tools: wince_info and wince_rename for examining and processing Windows CE installation cabinet header files; cabinfo for examining the structure of a cab file.
 app-arch/cfv:bittorrent - Enable support for checking .torrent files
 app-arch/deltarpm:system-zlib - Use system sys-libs/zlib. Do not enable features of rsync friendly.
@@ -2306,7 +2307,6 @@ dev-libs/xmlsec:openssl - Install xmlsec-openssl library
 dev-libs/xqilla:faxpp - Use dev-libs/faxpp instead of Xerces-C for certain tasks
 dev-libs/xqilla:htmltidy - Use app-text/htmltidy when parsing HTML
 dev-libs/yaz:ziffy - Install ziffy, a promiscuous Z39.50 APDU sniffer
-dev-lisp/abcl:jad - Enable support for disassembling compiled code using JAD
 dev-lisp/clisp:hyperspec - Use local hyperspec instead of online version
 dev-lisp/clisp:new-clx - Build CLISP with support for the NEW-CLX module which is a -C binding to the Xorg libraries
 dev-lisp/clisp:pari - Build CLISP with support for the PARI Computer Algebra System
