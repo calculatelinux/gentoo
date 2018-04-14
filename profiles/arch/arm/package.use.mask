@@ -35,11 +35,6 @@ app-doc/doxygen clang
 # Requires dev-libs/mongo-c-driver which isn't keyworded
 >=app-admin/rsyslog-8.31 mongodb
 
-# Ulrich Müller <ulm@gentoo.org> (23 Oct 2017)
-# Needs net-mail/mailutils which is not keyworded, bug #635216.
-app-editors/emacs mailutils
-app-editors/emacs-vcs mailutils
-
 # Andreas Sturmlechner <asturm@gentoo.org> (11 Oct 2017)
 # Required dependency dev-qt/qtspeech is not keyworded.
 kde-apps/konqueror speech
@@ -472,7 +467,7 @@ media-libs/phonon vlc
 
 # Michael Sterrett <mr_bones_@gentoo.org> (04 Mar 2012)
 # arm is missing keywords for >=dev-libs/json-glib-0.12
-app-admin/syslog-ng json
+app-admin/syslog-ng json mongodb
 
 # Anthony G. Basile <blueness@gentoo.org> (Dec 21, 2011)
 # Mask the vde flag on tinc because net-misc/vde is not
