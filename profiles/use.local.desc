@@ -2361,7 +2361,6 @@ dev-perl/App-Nopaste:clipboard - copying of URLs with -x/--copy
 dev-perl/App-Nopaste:github - Github authentication
 dev-perl/App-Nopaste:pastebin - pastebin.com support
 dev-perl/Business-ISBN:barcode - Install dev-perl/GD-Barcode for rendering ISBN numbers as barcodes
-dev-perl/Business-ISBN:xisbn - Install dev-perl/Mojolicious for querying xisbn.worldcat.org
 dev-perl/Config-Any:conf - Install dev-perl/Config-General to support decoding .conf/.cnf files
 dev-perl/Config-Any:ini - Install dev-perl/Config-Tiny to support decoding INI config files
 dev-perl/Config-Any:json - Install support libraries to support decoding JSON config files
@@ -4346,6 +4345,7 @@ media-libs/taglib:boost - Use dev-libs/boost instead of GCC built-ins
 media-libs/tremor:low-accuracy - enable 32bit only multiply operations
 media-libs/vigra:valgrind - Enable valgrind in make check
 media-libs/vulkan-loader:demos - Build vulkan demos and vulkaninfo
+media-libs/vulkan-loader:layers - Build the vulkan layers
 media-libs/waffle:egl - Enable EGL support
 media-libs/waffle:gbm - Enable support for the Generic Buffer Manager (gbm)
 media-libs/waffle:wayland - Enable Wayland support
@@ -5514,6 +5514,13 @@ net-dns/dnsmasq:libidn2 - Enable support for Internationalized Domain Names, via
 net-dns/dnsmasq:script - Enable support for calling scripts when leases change.
 net-dns/dnsmasq:tftp - Enables built in TFTP server for netbooting.
 net-dns/dnssec-validator:ecdsa-check - Requires openssl[-bindist]
+net-dns/getdns:getdns_query - Add getdns_query tool
+net-dns/getdns:getdns_server_mon - Add getdns_server_mon tool
+net-dns/getdns:libev - Enable dev-libs/libev support
+net-dns/getdns:libevent - Enable dev-libs/libevent support
+net-dns/getdns:libuv - Enable dev-libs/libuv support
+net-dns/getdns:stubby - Add Stubby DNS Privacy Deamon
+net-dns/getdns:unbound - Enable net-dns/unbound libraries support
 net-dns/hash-slinger:ipsec - Enable support for IPSECKEY records (ipseckey)
 net-dns/hash-slinger:openpgp - Enable support for OPENPGPKEY records (openpgpkey)
 net-dns/hash-slinger:ssh - Enable support for SSHFP records (sshfp)
