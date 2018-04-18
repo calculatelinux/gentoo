@@ -29,16 +29,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Lars Wendler <polynomial-c@gentoo.org> (17 Apr 2018)
+# Changed output for ELF files, which results in no files (either
+# executables or libraries) being stripped.
+# Masked for about two weeks so package managers can be adjusted.
+# See https://bugs.gentoo.org/653352
+>=sys-apps/file-5.33
+
 # Andreas Sturmlechner <asturm@gentoo.org> (10 Apr 2018)
 # Depends on dead Qt4. Switch to media-gfx/scantailor-advanced instead.
 # Masked for removal in 30 days. Bug #633386
 media-gfx/scantailor
-
-# Andreas Sturmlechner <asturm@gentoo.org> (09 Apr 2018)
-# Obsolete dev-texlive/* cleanup. Content moved into other packages.
-dev-texlive/texlive-documentation-base
-dev-texlive/texlive-mathextra
-dev-texlive/texlive-science
 
 # Andreas Sturmlechner <asturm@gentoo.org> (08 Apr 2018)
 # Depends on dead Qt4. Masked for removal in 30 days. Bug #649124
@@ -207,11 +208,6 @@ dev-db/mysql-udf-infusion
 dev-python/visual
 
 # Pacho Ramos <pacho@gentoo.org> (18 Mar 2018)
-# Version bump pending for a long time, depends in QT4 (#630476). Removal in
-# a month.
-x11-misc/treeline
-
-# Pacho Ramos <pacho@gentoo.org> (18 Mar 2018)
 # Security vulnerable (#630954, #635548). Removal in a month. 
 media-sound/mp3gain
 media-sound/aacgain
@@ -310,14 +306,6 @@ x11-misc/dockmanager
 games-arcade/monster-masher
 
 # Pacho Ramos <pacho@gentoo.org> (18 Mar 2018)
-# Relies on dead QT4 (#644422), build issues (#629728). Removal in a month.
-media-video/videocut
-
-# Pacho Ramos <pacho@gentoo.org> (18 Mar 2018)
-# Depends on dead QT4 (#644480). Removal in a month.
-sci-electronics/plcedit
-
-# Pacho Ramos <pacho@gentoo.org> (18 Mar 2018)
 # Tests fail, package has no reverse deps and is not really needed at
 # present time (#645166). Removal in a month.
 dev-python/jenkins-autojobs
@@ -364,10 +352,6 @@ net-dialup/hcfpcimodem
 # Pacho Ramos <pacho@gentoo.org> (18 Mar 2018)
 # Not useful anymore without warsow (#648676). Removal in a month.
 games-fps/warsow-community-map-pack
-
-# Pacho Ramos <pacho@gentoo.org> (18 Mar 2018)
-# Needs QT4, fails to build (#648706, #650640). Removal in a month.
-media-sound/qarecord
 
 # Pacho Ramos <pacho@gentoo.org> (18 Mar 2018)
 # Library dead for years, finally nothing in the tree requires it anymore
