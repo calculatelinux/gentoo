@@ -3321,6 +3321,7 @@ games-strategy/freeciv:server - Enable server support. Disabling this will also 
 games-strategy/freeciv:sound - Add support for sound provided by media-libs/sdl-mixer
 games-strategy/freeciv:system-lua - Use dev-lang/lua instead of the bundled liblua
 games-strategy/freesynd:devtools - Build development tools
+games-strategy/hedgewars:server - Enable local server
 games-strategy/heroes3:maps - Installs optional map data
 games-strategy/heroes3:music - Installs optional music data
 games-strategy/heroes3:sounds - Installs optional sound data
@@ -3507,6 +3508,7 @@ kde-apps/ktp-text-ui:speech - Enable incoming messages to be read out using text
 kde-apps/kwave:opus - Enable Opus audio codec support
 kde-apps/kwave:qtmedia - Enable playback via Qt5Multimedia
 kde-apps/libkdepim:designer - Build plugins for dev-qt/designer
+kde-apps/libksane:kwallet - Enable encrypted storage of passwords with kde-frameworks/kwallet
 kde-apps/mailcommon:designer - Build plugins for dev-qt/designer
 kde-apps/marble:aprs - Enable support for APRS data sources
 kde-apps/marble:designer - Install plugin for dev-qt/designer
@@ -4794,7 +4796,6 @@ media-tv/kodi:udev - Use sys-fs/udev rules to handle devices' permissions and ho
 media-tv/kodi:webserver - Enable internal webserver
 media-tv/kodi:xslt - Enable XSLT support using dev-libs/libxslt
 media-tv/linuxtv-dvb-apps:alevt - Build videotext decoder
-media-tv/me-tv:http - Installation of Web-frontend
 media-tv/mythtv:alsa - Allows MythTV to directly output sound to ALSA devices, this is needed if you are using ALSA dmix or SPDIF. Note, you will have to physically type your device into the MythTV configuration since it will only give you /dev/dsp devices in the drop down.
 media-tv/mythtv:altivec - Builds ffmpeg's codec libraries with altivec support.
 media-tv/mythtv:autostart - Uses a custom autostart configuration gleaned from experience with MythTV since its early versions and discussed with other MythTV maintainers and users. Does not rely on KDE being installed like most methods do.
@@ -5482,6 +5483,7 @@ net-dns/avahi:howl-compat - Enable compat libraries for howl
 net-dns/avahi:mdnsresponder-compat - Enable compat libraries for mDNSResponder
 net-dns/avahi:utils - Install the avahi gtk+ utils avahi-discover, bssh, and bvnc
 net-dns/bind:dlz - Enables dynamic loaded zones, 3rd party extension
+net-dns/bind:dnsrps - Enable the DNS Response Policy Service (DNSRPS) API, a mechanism to allow an external response policy provider
 net-dns/bind:dnstap - Enables dnstap packet logging
 net-dns/bind:filter-aaaa - Enable filtering of AAAA records over IPv4
 net-dns/bind:fixed-rrset - Enables fixed rrset-order option
