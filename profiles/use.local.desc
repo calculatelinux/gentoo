@@ -1409,6 +1409,7 @@ dev-db/mysql-cluster:systemtap - Build support for profiling and tracing using d
 dev-db/mysql-cluster:test - Install upstream testsuites for end use.
 dev-db/mysql-cluster:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
 dev-db/mysql-connector-c++:gcov - Build coverage support
+dev-db/mysql-connector-c++:legacy - Build the legacy 1.x API as well as the DevX API
 dev-db/oracle-instantclient:jdbc - Support for XA, Internationalization, and RowSet operations under JDBC
 dev-db/oracle-instantclient:odbc - Libraries for enabling ODBC applications
 dev-db/oracle-instantclient:sdk - Header files and an example makefile for developing Oracle applications
@@ -8378,7 +8379,6 @@ www-apps/redmine:markdown - Enable support for Markdown
 www-apps/redmine:passenger - Enable support for www-apache/passenger
 www-apps/rt:lighttpd - Add www-servers/lighttpd support
 www-apps/sitebar:plugins - Install optional plugins
-www-apps/sugarcrm:json - Add JSON (JavaScript Object Notation) support
 www-apps/trac:highlight - Enable syntax highlighting
 www-apps/trac:i18n - Enable support for i18n with dev-python/Babel
 www-apps/trac:restructuredtext - Enable support for reStructuredText for wiki formatting
@@ -8754,7 +8754,6 @@ x11-terms/eterm:escreen - Enable built-in app-misc/screen support
 x11-terms/eterm:utempter - Include libutempter support
 x11-terms/gnome-terminal:gnome-shell - Integrate with gnome-base/gnome-shell search
 x11-terms/gnome-terminal:nautilus - Build gnome-base/nautilus extension
-x11-terms/hanterm:utempter - Records user logins. Useful on multi-user systems
 x11-terms/kitty:imagemagick - Support displaying images in the terminal with icat
 x11-terms/mate-terminal:gtk3 - Build with GTK+3 instead of GTK+2
 x11-terms/mlterm:fcitx - Enable support for app-i18n/fcitx
