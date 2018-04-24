@@ -5,7 +5,7 @@ EAPI=6
 
 inherit desktop gnome2-utils java-vm-2 prefix versionator
 
-KEYWORDS="-* ~amd64 ~arm ~arm64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~sparc64-solaris ~x64-solaris"
+KEYWORDS="-* amd64 ~arm ~arm64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~sparc64-solaris ~x64-solaris"
 
 if [[ "$(get_version_component_range 4)" == 0 ]] ; then
 	S_PV="$(get_version_component_range 1-3)"
@@ -95,7 +95,7 @@ S="${WORKDIR}/jdk$(replace_version_separator 3 _  ${S_PV})"
 
 pkg_nofetch() {
 	local a
-	einfo "Please download these files and move them to ${DISTDIR}:"
+	einfo "Please download these files and move them to your distfiles directory:"
 	einfo
 	for a in ${A} ; do
 		[[ ! -f ${DISTDIR}/${a} ]] && einfo "  ${a}"

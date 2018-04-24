@@ -5,7 +5,7 @@ EAPI=6
 
 inherit desktop gnome2-utils java-vm-2 prefix versionator
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 
 if [[ "$(get_version_component_range 4)" == 0 ]] ; then
 	S_PV="$(get_version_component_range 1-3)"
@@ -77,7 +77,7 @@ S="${WORKDIR}/jre$(replace_version_separator 3 _  ${S_PV})"
 
 pkg_nofetch() {
 	einfo "Please download ${ARCH_FILES[${ARCH}]} and move it to"
-	einfo "${DISTDIR}:"
+	einfo "your distfiles directory:"
 	einfo
 	einfo "  http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html"
 	einfo
