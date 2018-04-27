@@ -29,6 +29,49 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (27 Apr 2018)
+# No longer supported upstream. Use ruby23 instead.
+# Masked for removal in 30 days. Bug #642258.
+dev-lang/ruby:2.2
+virtual/ruby
+dev-ruby/tzinfo:0
+
+# Andreas Sturmlechner <asturm@gentoo.org> (26 Apr 2018)
+# Package version depends on Qt-5.10 that was/is/will not be in tree.
+>=sci-misc/mendeleydesktop-1.18
+
+# Michał Górny <mgorny@gentoo.org> (26 Apr 2018)
+# Apparently redundant to built-in Python features.  Homepage gone
+# without trace.  Last release in 2003.  No reverse dependencies.
+# Removal in 30 days.  Bug #537720.
+dev-python/iconvcodec
+
+# Michał Górny <mgorny@gentoo.org> (26 Apr 2018)
+# Does not work with any of the unmasked django versions.  Unmaintained.
+# No reverse dependencies.  Removal in 30 days.  Bug #527176.
+dev-python/django-evolution
+
+# Michał Górny <mgorny@gentoo.org> (26 Apr 2018)
+# Produces a lot of Pango warnings, then segfaults.  Unmaintained.
+# No reverse dependencies.  Removal in 30 days.  Bug #526668.
+dev-python/kiwi
+
+# Michał Górny <mgorny@gentoo.org> (26 Apr 2018)
+# Obsolete package used during some past GSoC development
+# and unmaintained since.  All of its users have retired already.
+# No reverse dependencies.  The ebuild runs test suite of CPython
+# instead of its own.  Removal in 30 days.  Bug #526552.
+dev-python/tdaemon
+
+# Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (26 Apr 2018)
+# Merged into >=dev-cpp/gtest-1.8.0.
+# Masked for removal in 30 days.
+dev-cpp/gmock
+
+# Andreas Sturmlechner <asturm@gentoo.org> (26 Apr 2018)
+# Depends on dead Qt4, no more revdeps. Masked for removal in 30 days.
+dev-libs/qjson
+
 # Michał Górny <mgorny@gentoo.org> (22 Apr 2018)
 # Unmaintained buggy package with unresearched segfaults.  No support
 # for Python 3.  No reverse dependencies.
@@ -200,6 +243,10 @@ sci-chemistry/cyana
 # Requires >=dev-libs/icu-61.1
 # https://bugs.gentoo.org/651698
 =net-libs/nodejs-9.11*
+
+# Jeroen Roovers <jer@gentoo.org> (6 Apr 2018)
+# Requires >=dev-libs/openssl-1.1.0
+=net-libs/nodejs-10*
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (3 Apr 2018)
 # Merged into >=dev-db/m17n-db-1.7.0.

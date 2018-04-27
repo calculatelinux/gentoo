@@ -13,7 +13,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ppc ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~ppc ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="qt4 test"
 
 COMMON_DEPEND="
@@ -34,7 +34,7 @@ COMMON_DEPEND="
 "
 DEPEND="
 	${COMMON_DEPEND}
-	test? ( >=dev-cpp/gmock-1.6.0 )
+	test? ( >=dev-cpp/gtest-1.8.0 )
 	x11-proto/kbproto
 	x11-proto/randrproto
 	x11-proto/xextproto

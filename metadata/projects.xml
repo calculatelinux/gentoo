@@ -6,14 +6,9 @@
     <name>Gentoo 3D print</name>
     <url>https://wiki.gentoo.org/wiki/Project:3dprint</url>
     <description>Packages for 3d printing.</description>
-    <member>
+    <member is-lead="1">
       <email>alexxy@gentoo.org</email>
       <name>Alexey Shvetsov</name>
-      <role>Member</role>
-    </member>
-    <member is-lead="1">
-      <email>amynka@gentoo.org</email>
-      <name>Amy Liffey</name>
       <role>Member</role>
     </member>
   </project>
@@ -1087,6 +1082,11 @@
       <role>Member</role>
     </member>
     <member>
+      <email>johu@gentoo.org</email>
+      <name>Johannes Huber</name>
+      <role>Member</role>
+    </member>
+    <member>
       <email>jstein@gentoo.org</email>
       <name>Jonas Stein</name>
       <role>Member</role>
@@ -1786,11 +1786,6 @@
     <member is-lead="1">
       <email>chewi@gentoo.org</email>
       <name>James Le Cuirot</name>
-      <role>Developer</role>
-    </member>
-    <member>
-      <email>ercpe@gentoo.org</email>
-      <name>Johann Schmitz</name>
       <role>Developer</role>
     </member>
     <member>
@@ -3295,12 +3290,12 @@ developers and volunteer mentors.</description>
     <name>Gentoo Developer Recruiters</name>
     <url>https://wiki.gentoo.org/wiki/Project:Recruiters</url>
     <description>The Recruiters subproject provides a central location for information about developer recruitment and recruiter policy.</description>
-    <member is-lead="1">
+    <member>
       <email>amynka@gentoo.org</email>
       <name>Amy Liffey</name>
       <role>Recruiter</role>
     </member>
-    <member>
+    <member is-lead="1">
       <email>zlogene@gentoo.org</email>
       <name>Mikle Kolyada</name>
       <role>Recruiter</role>
@@ -3842,11 +3837,6 @@ developers and volunteer mentors.</description>
     <name>Gentoo Tcltk Project</name>
     <url>https://wiki.gentoo.org/wiki/Project:Tcltk</url>
     <description>Gentoo tcltk packages.</description>
-    <member>
-      <email>amynka@gentoo.org</email>
-      <name>Amy Liffey</name>
-      <role>Member</role>
-    </member>
   </project>
   <project>
     <email>tex@gentoo.org</email>
