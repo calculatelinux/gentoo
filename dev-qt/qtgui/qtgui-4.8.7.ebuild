@@ -49,6 +49,7 @@ RDEPEND="
 	)
 	mng? ( >=media-libs/libmng-1.0.10-r2:=[${MULTILIB_USEDEP}] )
 	nas? ( >=media-libs/nas-1.9.3-r1[${MULTILIB_USEDEP}] )
+	nis? ( elibc_glibc? ( net-libs/libnsl:=[${MULTILIB_USEDEP}] ) )
 	tiff? ( >=media-libs/tiff-4.0.3-r2:0[${MULTILIB_USEDEP}] )
 	!<dev-qt/qthelp-4.8.5:4
 "

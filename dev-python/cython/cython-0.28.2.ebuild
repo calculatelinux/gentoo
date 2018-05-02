@@ -52,12 +52,14 @@ python_compile_all() {
 
 python_test() {
 	tc-export CC
+	# https://github.com/cython/cython/issues/1911
+	local -x CFLAGS="${CFLAGS} -fno-strict-overflow"
 	"${PYTHON}" runtests.py -vv --work-dir "${BUILD_DIR}"/tests \
 		|| die "Tests fail with ${EPYTHON}"
 }
 
 python_install_all() {
-	local DOCS=( CHANGES.rst README.txt ToDo.txt USAGE.txt )
+	local DOCS=( CHANGES.rst README.rst ToDo.txt USAGE.txt )
 	use doc && local HTML_DOCS=( docs/build/html/. )
 	distutils-r1_python_install_all
 

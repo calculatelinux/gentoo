@@ -25,13 +25,13 @@ fi
 
 RELEASE_VER=${PV}
 
-GCC_BOOTSTRAP_VER="4.7.3-r1"
+GCC_BOOTSTRAP_VER=20180501
 
 # Gentoo patchset
 PATCH_VER=5
 
 SRC_URI+=" https://dev.gentoo.org/~dilfridge/distfiles/${P}-patches-${PATCH_VER}.tar.bz2"
-SRC_URI+=" multilib? ( https://dev.gentoo.org/~dilfridge/distfiles/gcc-${GCC_BOOTSTRAP_VER}-multilib-bootstrap.tar.bz2 )"
+SRC_URI+=" multilib? ( https://dev.gentoo.org/~dilfridge/distfiles/gcc-multilib-bootstrap-${GCC_BOOTSTRAP_VER}.tar.xz )"
 
 IUSE="audit caps compile-locales doc gd hardened headers-only multilib nscd profile selinux suid systemtap vanilla"
 
@@ -730,7 +730,7 @@ src_unpack() {
 	# Consistency is not guaranteed between pkg_ and src_ ...
 	sanity_prechecks
 
-	use multilib && unpack gcc-${GCC_BOOTSTRAP_VER}-multilib-bootstrap.tar.bz2
+	use multilib && unpack gcc-multilib-bootstrap-${GCC_BOOTSTRAP_VER}.tar.xz
 
 	setup_env
 
@@ -933,7 +933,7 @@ glibc_do_configure() {
 	if [[ -n ${GCC_BOOTSTRAP_VER} ]] && use multilib ; then
 		echo 'main(){}' > "${T}"/test.c
 		if ! $(tc-getCC ${CTARGET}) ${CFLAGS} ${LDFLAGS} "${T}"/test.c -Wl,-emain -lgcc 2>/dev/null ; then
-			sed -i -e '/^CC = /s:$: -B$(objdir)/../'"gcc-${GCC_BOOTSTRAP_VER}/${ABI}:" config.make || die
+			sed -i -e '/^CC = /s:$: -B$(objdir)/../'"gcc-multilib-bootstrap-${GCC_BOOTSTRAP_VER}/${ABI}:" config.make || die
 		fi
 	fi
 }
