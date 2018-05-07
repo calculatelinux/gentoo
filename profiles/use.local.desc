@@ -760,6 +760,7 @@ app-i18n/freewnn:uum - Build uum
 app-i18n/ibus:emoji - Enable support for Emoji
 app-i18n/ibus:gconf - Enable support for gnome-base/gconf
 app-i18n/ibus:gtk2 - Enable support for x11-libs/gtk+:2
+app-i18n/ibus:unicode - Enable support for Unicode choice
 app-i18n/ibus-chewing:gconf - Enable support for gnome-base/gconf
 app-i18n/ibus-handwrite:zinnia - Enable support for app-i18n/zinnia
 app-i18n/ibus-libpinyin:boost - Compile against dev-libs/boost libraries
@@ -1076,7 +1077,6 @@ app-office/scribus:tk - Install tk based scripts e.g. FontSample.py
 app-office/skrooge:activities - Enable kactivities support
 app-office/skrooge:designer - Build plugins for dev-qt/designer
 app-office/texmacs:netpbm - Add support for media-libs/netpbm
-app-office/texmacs:pdf - Add the experimental native pdf export
 app-office/texstudio:video - Use phonon for video embedding
 app-office/wps-office:sharedfonts - Install WPS fonts available system wide
 app-pda/barry:boost - Enable boost support
@@ -1092,6 +1092,7 @@ app-portage/g-sorcery:bson - Support BSON file format for package DB
 app-portage/gemato:blake2 - Install dependencies needed for BLAKE2 hash functions
 app-portage/gemato:gpg - Install dependencies needed for OpenPGP signature verification support
 app-portage/gemato:sha3 - Install dependencies needed for SHA3 hash functions
+app-portage/gemato:tools - Install additional utilities (benchmarks, hash testing tools, fast Manifest generators) to /usr/share/gemato.
 app-portage/grs:server - Install all the tools building systems
 app-portage/layman:bazaar - Support dev-vcs/bzr based overlays
 app-portage/layman:cvs - Support dev-vcs/cvs based overlays
@@ -2853,6 +2854,7 @@ dev-util/cmake:server - Enable cmake-server support.
 dev-util/cmake:system-jsoncpp - Use system copy of dev-libs/jsoncpp instead of bundled one.
 dev-util/coccigrep:vim - Install the coccigrep vim plugin
 dev-util/codeblocks:contrib - Build additional contrib components
+dev-util/codeblocks:fortran - Build FortranProject plugin which enables to use Code::Blocks IDE for Fortran language
 dev-util/cppcheck:htmlreport - install cppcheck-htmlreport
 dev-util/ctags:json - Enable JSON output support
 dev-util/ctags:xml - Enable XML parsing support
@@ -4102,6 +4104,7 @@ media-libs/clutter:gtk - Use gdk-pixbuf from x11-libs/gtk+ as image rendering ba
 media-libs/cogl:gles2 - Enable OpenGL ES 2.0 support
 media-libs/cogl:kms - Enable KMS support.
 media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
+media-libs/coin:qthelp - Build API documentation in QtHelp format
 media-libs/coin:simage - Texture loading via media-libs/simage library
 media-libs/devil:allegro - Add support for Allegro
 media-libs/devil:nvtt - Add support for media-gfx/nvidia-texture-tools
@@ -5548,7 +5551,9 @@ net-dns/unbound:dnstap - Enable dnstap support
 net-dns/unbound:ecdsa - Enable ECDSA support
 net-dns/unbound:gost - Enable GOST support
 net-firewall/arno-iptables-firewall:plugins - Install optional plugins
-net-firewall/conntrack-tools:libtirpc - Build against net-libs/libtirpc for RPC support
+net-firewall/conntrack-tools:cthelper - Use net-libs/libnetfilter_cthelper for userspace conntrack helper support
+net-firewall/conntrack-tools:cttimeout - Use net-libs/libnetfilter_cttimeout for conntrack timeout support
+net-firewall/conntrack-tools:libtirpc - Use net-libs/libtirpc for RPC support
 net-firewall/ebtables:perl - Install the ebtables-save script which uses perl
 net-firewall/firehol:ipset - Use net-firewall/ipset.
 net-firewall/firewalld:gui - Builds and installs GUI configurator and GTK+ applet
@@ -8633,10 +8638,6 @@ x11-libs/libdrm:valgrind - Compile in valgrind memory hints
 x11-libs/libfm:automount - Use gnome-base/gvfs for automounting
 x11-libs/libfm:udisks - Use libfm's udisks-based volume monitor implementation instead of using the one from gvfs
 x11-libs/libfm:vala - Support custom actions in menus
-x11-libs/libqxt:berkdb - Build the QxtBerkeley module
-x11-libs/libqxt:sql - Build the QxtSql module
-x11-libs/libqxt:web - Build the QxtWeb module
-x11-libs/libqxt:zeroconf - Build the QxtZeroconf module
 x11-libs/libva:drm - Enables VA/DRM API support.
 x11-libs/libva:egl - Enables EGL support.
 x11-libs/libva:utils - Install VA-API utility programs.
