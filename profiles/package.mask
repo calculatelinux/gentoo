@@ -29,6 +29,20 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (7 May 2018)
+# Old slots that are ruby23-only and no longer maintained
+# upstream, and that do not have packages depend on them.
+# Migrate to newer slot of the same package.
+dev-ruby/askismet:0
+dev-ruby/arel:5.0
+dev-ruby/autoprefixer-rails:6
+dev-ruby/blankslate:2
+dev-ruby/http:0.6
+dev-ruby/jquery-ui-rails:4
+dev-ruby/net-ssh:3
+dev-ruby/sanitize:0
+dev-ruby/twitter:5
+
 # Maciej Mrozowski <reavertm@gentoo.org> (6 May 2018)
 # SoQt does not build yet
 >=media-libs/coin-4.0.0
@@ -185,15 +199,6 @@ x11-libs/libXp
 # Depends on dead Qt4. Switch to media-gfx/scantailor-advanced instead.
 # Masked for removal in 30 days. Bug #633386
 media-gfx/scantailor
-
-# Andreas Sturmlechner <asturm@gentoo.org> (08 Apr 2018)
-# Depends on dead Qt4. Masked for removal in 30 days. Bug #649124
-dev-python/PyFoam
-
-# Andreas Sturmlechner <asturm@gentoo.org> (08 Apr 2018)
-# Depends on dead Qt4. Use sci-chemistry/avogadro2 instead.
-# Masked for removal in 30 days. Bug #645030
-sci-chemistry/avogadro
 
 # Jason Zaman <perfinion@gentoo.org> (08 Apr 2018)
 # Dead upstream, for an old version of Xfce
