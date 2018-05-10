@@ -4,18 +4,21 @@
 EAPI=6
 
 PYTHON_COMPAT=( python2_7 )
-inherit autotools flag-o-matic multilib-minimal python-any-r1 versionator
+inherit autotools flag-o-matic multilib-minimal python-any-r1 systemd versionator
 
 MY_P="${P/mit-}"
 P_DIR=$(get_version_component_range 1-2)
 DESCRIPTION="MIT Kerberos V"
-HOMEPAGE="http://web.mit.edu/kerberos/www/"
-SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}.tar.gz"
+HOMEPAGE="https://web.mit.edu/kerberos/www/"
+SRC_URI="https://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}.tar.gz"
 
 LICENSE="openafs-krb5-a BSD MIT OPENLDAP BSD-2 HPND BSD-4 ISC RSA CC-BY-SA-3.0 || ( BSD-2 GPL-2+ )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="doc +keyutils libressl nls openldap +pkinit selinux +threads test xinetd"
+
+# Test suite require network access
+RESTRICT="test"
 
 CDEPEND="
 	!!app-crypt/heimdal
@@ -26,6 +29,7 @@ CDEPEND="
 		>=dev-libs/libverto-0.2.5[tevent,${MULTILIB_USEDEP}]
 	)
 	keyutils? ( >=sys-apps/keyutils-1.5.8[${MULTILIB_USEDEP}] )
+	nls? ( sys-devel/gettext[${MULTILIB_USEDEP}] )
 	openldap? ( >=net-nds/openldap-2.4.38-r1[${MULTILIB_USEDEP}] )
 	pkinit? (
 		!libressl? ( >=dev-libs/openssl-1.0.1h-r2:0=[${MULTILIB_USEDEP}] )
@@ -53,9 +57,7 @@ MULTILIB_CHOST_TOOLS=(
 src_prepare() {
 	eapply "${FILESDIR}/${PN}-1.12_warn_cflags.patch"
 	eapply -p2 "${FILESDIR}/${PN}-config_LDFLAGS.patch"
-	eapply -p0 "${FILESDIR}/${PN}-1.14.2-redeclared-ttyname.patch"
-	eapply "${FILESDIR}/${PN}-1.14.4-disable-nls.patch"
-	eapply -p2 "${FILESDIR}/${PN}-1.15.2-fix-pkinit.patch"
+	eapply "${FILESDIR}/${PN}-libressl-version-check.patch"
 
 	# Make sure we always use the system copies.
 	rm -rf util/{et,ss,verto}
@@ -127,6 +129,12 @@ multilib_src_install_all() {
 	newconfd "${FILESDIR}"/mit-krb5kadmind.confd mit-krb5kadmind
 	newconfd "${FILESDIR}"/mit-krb5kdc.confd mit-krb5kdc
 	newconfd "${FILESDIR}"/mit-krb5kpropd.confd mit-krb5kpropd
+
+	systemd_newunit "${FILESDIR}"/mit-krb5kadmind.service mit-krb5kadmind.service
+	systemd_newunit "${FILESDIR}"/mit-krb5kdc.service mit-krb5kdc.service
+	systemd_newunit "${FILESDIR}"/mit-krb5kpropd.service mit-krb5kpropd.service
+	systemd_newunit "${FILESDIR}"/mit-krb5kpropd_at.service "mit-krb5kpropd@.service"
+	systemd_newunit "${FILESDIR}"/mit-krb5kpropd.socket mit-krb5kpropd.socket
 
 	insinto /etc
 	newins "${ED}/usr/share/doc/${PF}/examples/krb5.conf" krb5.conf.example
