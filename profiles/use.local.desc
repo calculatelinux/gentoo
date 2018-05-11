@@ -4707,8 +4707,7 @@ media-sound/supercollider:gpl3 - Build GPL-3 licensed code (recommended)
 media-sound/supercollider:server - Build with internal server
 media-sound/supercollider:vim - Enable the SCVIM user interface
 media-sound/supercollider:wiimote - Build sclang with Wii Remote support
-media-sound/teamspeak-server-bin:doc - Install TeamSpeak complete documentation.
-media-sound/teamspeak-server-bin:tsdns - Install TeamSpeak DNS.
+media-sound/teamspeak-server-bin:tsdns - Install TeamSpeaks own DNS service.
 media-sound/tomahawk:hatchet - Enable support for the synchronisation through Hatchet
 media-sound/tomahawk:telepathy - Enable support for the real-time communication framework telepathy
 media-sound/traverso:lv2 - Add support for Ladspa V2
