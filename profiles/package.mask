@@ -29,6 +29,28 @@
 
 #--- END OF EXAMPLES ---
 
+# Mikle Kolyada <zlogene@gentoo.org> (10 May 2018)
+# The upstream is totally dead (the last release is from 2006).
+# Does not compile against gcc-6, uses old EAPI=3 (#564998, #644262).
+# Use dev-libs/memcached istead. Removal in 30 days.
+dev-libs/libmemcache
+
+# Andreas Sturmlechner <asturm@gentoo.org> (10 May 2018)
+# Depends on dead Qt4. Masked for removal in 30 days.
+dev-python/pyside-tools
+
+# Andreas Sturmlechner <asturm@gentoo.org> (10 May 2018)
+# Depends on dead Qt4, newer versions do not provide a GUI.
+# Masked for removal, bug #649572
+<x11-misc/synergy-1.9.0
+
+# Andreas Sturmlechner <asturm@gentoo.org> (10 May 2018)
+# Depends on dead Qt4, does not build, needs someone to bump to Qt5.
+# Masked for removal in 30 days. Bugs #588892, #588898, #649656
+media-libs/libprojectm-qt
+media-sound/projectm-pulseaudio
+media-sound/projectm-jack
+
 # Andreas Sturmlechner <asturm@gentoo.org> (10 May 2018)
 # Depends on dead Qt4, no revdeps. Masked for removal in 30 days.
 dev-libs/sni-qt
@@ -294,6 +316,7 @@ media-plugins/gst-plugins-mad:1.0
 # Sebastian Pipping <sping@gentoo.org> (11 Mar 2018)
 # Breaks XFCE, 1.19.6 was fine (in that regard). Bug #650228
 >=x11-base/xorg-server-1.19.7
+>=x11-base/xorg-drivers-1.20
 
 # Tim Harder <radhermit@gentoo.org> (01 Mar 2018)
 # Masked for testing.
