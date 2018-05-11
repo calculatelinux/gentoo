@@ -1153,6 +1153,7 @@ app-text/groonga:dynamic-malloc-change - Allow dynamic memory allocation change 
 app-text/groonga:exact-alloc-count - Atomic counting for memory alloc count
 app-text/groonga:fmalloc - Make memory allocation failed in specified condition for debug
 app-text/groonga:futex - Use futex
+app-text/groonga:jemalloc - Enable dev-libs/jemalloc for memory management
 app-text/groonga:libevent - Enable dev-libs/libevent used for suggestion
 app-text/groonga:mecab - Use app-text/mecab for morphological analysis
 app-text/groonga:msgpack - Enable dev-libs/msgpack used for suggestion
@@ -1160,6 +1161,7 @@ app-text/groonga:nfkc - Use nfkc based utf8 normalization
 app-text/groonga:sphinx - Enable document generation by app-misc/sphinx
 app-text/groonga:uyield - Build for detecting race conditions
 app-text/groonga:zeromq - Enable net-libs/zeromq used for suggestion
+app-text/groonga:zstd - Utilize app-arch/zstd for Zstandard compression
 app-text/gtranslator:gnome-dictionary - Enable plugin for dictionary lookups using app-dicts/gnome-dictionary.
 app-text/gtranslator:gucharmap - Enable plugin for unicode symbols selection using gnome-extra/gucharmap.
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
@@ -8130,6 +8132,7 @@ sys-fs/udisks:systemd - Support sys-apps/systemd's logind
 sys-fs/zfs:kernel-builtin - Disable dependency on sys-fs/zfs-kmod under the assumption that ZFS is part of the kernel source tree
 sys-fs/zfs:rootfs - Enable dependencies required for booting off a pool containing a rootfs
 sys-fs/zfs:test-suite - Install regression test suite
+sys-fs/zfs-auto-snapshot:default-exclude - Only take snapshots if dataset has com.sun:auto-snapshot=true property set
 sys-fs/zfs-kmod:rootfs - Install zfs-shutdown script to support exporting a pool containing rootfs
 sys-kernel/aufs-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 sys-kernel/aufs-sources:module - Patch kernel to allow aufs being build as a module.
