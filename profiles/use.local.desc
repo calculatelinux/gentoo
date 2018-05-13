@@ -1736,7 +1736,6 @@ dev-haskell/tls:network - Use the base network library.
 dev-haskell/transformers-base:orphaninstances - Build instances for orphan datatypes.
 dev-haskell/transformers-compat:three - Use transformers-0.3
 dev-haskell/unix-compat:old-time - build against old-time package
-dev-haskell/uuagc:bootstrap_external - Use an external uuagc executable for bootstrapping.
 dev-haskell/uuagc:with-loag - Use dev-haskell/minisat external SAT-solver to schedule all Linear Ordered AGs.
 dev-haskell/vector:boundschecks - Enable bounds checking
 dev-haskell/vector:internalchecks - Enable internal consistency checks at the cost of a significant performance penalty
@@ -3177,16 +3176,18 @@ games-fps/doomsday:tools - Build additional tools such as doomsday-shell, md2too
 games-fps/duke3d:demo - Install the demo files
 games-fps/duke3d:pic - disable optimized assembly code that is not PIC friendly
 games-fps/duke3d-data:gog - Extract the data from the GOG.com installer.
-games-fps/eduke32:demo - Install games-fps/duke3d-demodata as well
-games-fps/eduke32:gtk - Compile with gtk launcher
-games-fps/eduke32:offensive - Include optional XXX texture pack (needs USE 'textures')
-games-fps/eduke32:opl-musicpack - Include optional OPL (AdLib) music pack
-games-fps/eduke32:samples - Install samples
-games-fps/eduke32:sc55-musicpack - Include optional Roland SC-55 music pack
-games-fps/eduke32:server - Compile with server support
-games-fps/eduke32:textures - Include optional high-resolution textures (needs USE 'opengl')
-games-fps/eduke32:tools - Build several tools for modding and development
-games-fps/eduke32:vpx - Enable support for WebM VP8 Codecs (needs USE 'opengl')
+games-fps/eduke32:demo - Install the Duke Nukem 3D demo files, provided by games-fps/duke3d-demodata.
+games-fps/eduke32:fluidsynth - Install media-libs/sdl2-mixer with fluidsynth support.
+games-fps/eduke32:hrp - Install the Duke Nukem 3D High Resolution Pack.
+games-fps/eduke32:offensive - Install the Duke Nukem 3D XXX Pack.
+games-fps/eduke32:opl - Install the Duke Nukem 3D OPL music files.
+games-fps/eduke32:psx - Install the Duke Nukem 3D PSX high resolution voice files.
+games-fps/eduke32:sc-55 - Install the Duke Nukem 3D Roland SC-55 music files.
+games-fps/eduke32:sdk - Install the SDK files.
+games-fps/eduke32:server - Enable support for multiplayer.
+games-fps/eduke32:tools - Install the support tools for mapster32.
+games-fps/eduke32:vpx - Enable support for media-libs/libvpx.
+games-fps/eduke32:xmp - Enable support for media-libs/exempi.
 games-fps/lsdldoom:freedoom - Install games-fps/freedoom wad file
 games-fps/lsdldoom:net - Enables network game support
 games-fps/lsdldoom:shareware - Install games-fps/doom-data for shareware wad file
