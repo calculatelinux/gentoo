@@ -9,7 +9,7 @@ if [[ ${PV} == 9999 ]]; then
 else
 	SRC_URI="https://github.com/systemd/systemd/archive/v${PV}/${P}.tar.gz
 		https://dev.gentoo.org/~floppym/dist/${P}-patches-1.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+	KEYWORDS="alpha amd64 ~arm arm64 ia64 ~mips ~ppc ppc64 ~sparc x86"
 fi
 
 PYTHON_COMPAT=( python{3_4,3_5,3_6} )
@@ -43,8 +43,8 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.30:0=[${MULTILIB_USEDEP}]
 		ssl? ( >=net-libs/gnutls-3.1.4:0= )
 	)
 	idn? (
-		libidn2? ( net-dns/libidn2 )
-		!libidn2? ( net-dns/libidn )
+		libidn2? ( net-dns/libidn2:= )
+		!libidn2? ( net-dns/libidn:= )
 	)
 	importd? (
 		app-arch/bzip2:0=
