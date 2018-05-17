@@ -2510,12 +2510,12 @@ dev-python/glance_store:vmware - enable vmware backend supprt
 dev-python/gmpy:mpir - Use sci-libs/mpir as gmp implementation
 dev-python/icalendar:doc - Generate examples and other extra documentation
 dev-python/ipython:matplotlib - Add support for dev-python/matplotlib
-dev-python/ipython:mongodb - Enable support for MongoDB via dev-python/pymongo
 dev-python/ipython:nbconvert - Enable support for converting notebooks to various formats using app-text/pandoc
 dev-python/ipython:notebook - Install requirements for the web notebook based on www-servers/tornado
-dev-python/ipython:octave - Enable octave bridge via dev-python/oct2py
 dev-python/jira:filemagic - Include filemagic support (for identifying uploaded filetypes)
 dev-python/jira:ipython - Include Interactive Python (IPython)
+dev-python/jira:jirashell - Include dependencies for jirashell (ipython, oauthlib)
+dev-python/jira:kerberos - Support Kerberos authentication
 dev-python/jira:oauth - Support OAuth authentication
 dev-python/kaa-base:tls - SSL/TLS support via dev-python/tlslite
 dev-python/kafka-python:snappy - Install snappy compression/decompression support
@@ -7964,6 +7964,7 @@ sys-devel/gcc:pgo - Build GCC using Profile Guided Optimization (PGO)
 sys-devel/gcc:regression-test - Run the testsuite and install the results (requires FEATURES=test)
 sys-devel/gcc:sanitize - Build support for various sanitizer functions (ASAN/TSAN/etc...)
 sys-devel/gcc:ssp - Build packages with stack smashing protector on by default
+sys-devel/gcc:systemtap - enable systemtap static probe points
 sys-devel/gcc:vtv - Build support for virtual table verification (a C++ hardening feature)
 sys-devel/gcc-apple:objc - Build support for the Objective C code language
 sys-devel/gcc-apple:objc++ - Build support for the Objective C++ language
