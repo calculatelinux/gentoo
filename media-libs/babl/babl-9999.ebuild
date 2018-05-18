@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit eutils
+inherit ltprune
 
 if [[ ${PV} == *9999* ]]; then
 	inherit autotools git-r3
@@ -19,13 +19,17 @@ HOMEPAGE="http://www.gegl.org/babl/"
 
 LICENSE="LGPL-3"
 SLOT="0"
-IUSE="altivec cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse4_1 cpu_flags_x86_mmx cpu_flags_x86_f16c"
+IUSE="altivec cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 cpu_flags_x86_sse4_1 cpu_flags_x86_mmx cpu_flags_x86_f16c"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2.2
 	virtual/pkgconfig
 "
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-0.1.48-configure-cflags.patch
+)
 
 src_prepare() {
 	default
@@ -46,6 +50,7 @@ src_configure() {
 		$(use_enable cpu_flags_x86_mmx mmx) \
 		$(use_enable cpu_flags_x86_sse sse) \
 		$(use_enable cpu_flags_x86_sse2 sse2) \
+		$(use_enable cpu_flags_x86_sse3 sse3) \
 		$(use_enable cpu_flags_x86_sse4_1 sse4_1)
 }
 

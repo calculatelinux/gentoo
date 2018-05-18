@@ -66,7 +66,6 @@ games-action/trine2
 games-misc/dont-starve
 games-puzzle/larry
 games-rpg/avadon
-games-rpg/bastion
 games-rpg/penumbra-collection
 games-rpg/wasteland2
 
@@ -732,12 +731,6 @@ dev-java/jcs
 # Keep it masked until they are done. sys-fs/duperemove is
 # the suggested replacement for the meantime.
 sys-fs/bedup
-
-# Lars Wendler <polynomial-c@gentoo.org> (20 Aug 2015)
-# Releases are not from original upstream but from a fork.
-# Masked as requested by vapier.
-~net-misc/iputils-20160308
-~net-misc/iputils-20161105
 
 # Justin Lecher <jlec@gentoo.org> (28 Feb 2015)
 # Unfixed security problems
