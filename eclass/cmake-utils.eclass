@@ -109,11 +109,11 @@ case ${EAPI} in
 	*) die "EAPI=${EAPI:-0} is not supported" ;;
 esac
 
-inherit toolchain-funcs ninja-utils flag-o-matic multiprocessing versionator xdg-utils
+inherit toolchain-funcs ninja-utils flag-o-matic multiprocessing xdg-utils
 
 case ${EAPI} in
 	7) ;;
-	*) inherit eutils multilib ;;
+	*) inherit eapi7-ver eutils multilib ;;
 esac
 
 EXPORT_FUNCTIONS src_prepare src_configure src_compile src_test src_install
@@ -512,7 +512,7 @@ cmake-utils_src_configure() {
 	# we need to add "<INCLUDES>"
 	local includes=
 	if [[ ${PN} == cmake ]] ; then
-		if $(version_is_at_least 3.4.0 $(get_version_component_range 1-3 ${PV})) ; then
+		if $(ver_test $(ver_cut 1-3 ${PV}) -ge 3.4.0) ; then
 			includes="<INCLUDES>"
 		fi
 	elif ROOT=/ has_version \>=dev-util/cmake-3.4.0_rc1 ; then
