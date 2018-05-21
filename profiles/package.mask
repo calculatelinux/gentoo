@@ -29,6 +29,27 @@
 
 #--- END OF EXAMPLES ---
 
+# Matt Turner <mattst88@gentoo.org> (20 May 2018)
+# Removal in 30 days. Bug #655102
+x11-libs/libXfont
+
+# Matt Turner <mattst88@gentoo.org> (20 May 2018)
+# Unmaintained. Dead homepage. Depends on dead libXfont.
+# Removal in 30 days. Bug #655104
+app-i18n/fbiterm
+
+# Joonas Niilola <juippis@gmail.com> (18 May 2018)
+# Unmaintained, bugs open without activity, makes users
+# install ancient version of enlightenment by typing
+# 'emerge enlightenment' due to obnoxious package slotting.
+# Bug #656020. Removal in ~30 days
+=x11-wm/enlightenment-1.0.17
+=x11-wm/enlightenment-0.16.9999
+app-doc/edox-data
+x11-misc/e16keyedit
+x11-misc/e16menuedit2
+x11-plugins/epplets
+
 # Andreas Sturmlechner <asturm@gentoo.org> (18 May 2018)
 # Breaking consumers by internal header cleanup and removal of deprecated
 # qt5_use_modules from Qt5CoreMacros.cmake. File bugs with fixes upstream
@@ -263,16 +284,6 @@ dev-libs/qjson
 # Removal in 30 days.  Bug #454680.
 dev-python/simpleparse
 
-# Matt Turner <mattst88@gentoo.org> (21 Apr 2018)
-# Awful, unmaintained, unused. Removal in 30 days. Bug #651300.
-x11-libs/xpyb
-
-# Matt Turner <mattst88@gentoo.org> (21 Apr 2018)
-# Protocol headers and client library for the long dead Xprint extension.
-# Removal in 30 days. Bug #649076.
-x11-proto/printproto
-x11-libs/libXp
-
 # Alexis Ballier <aballier@gentoo.org> (21 Apr 2018)
 # Needs porting of revdeps
 # See: https://bugs.gentoo.org/653678
@@ -282,11 +293,6 @@ x11-libs/libXp
 # Likely to break a lot of software
 # Masked for initial testing
 >=dev-db/mysql-connector-c++-8.0.0
-
-# Jason Zaman <perfinion@gentoo.org> (08 Apr 2018)
-# Dead upstream, for an old version of Xfce
-# Masked for removal in 30 days.
-xfce-extra/xfce-theme-manager
 
 # Rick Farina <zerochaos@gentoo.org> (04 Apr 2018)
 # Violates PMS and does not work with stable portage.
