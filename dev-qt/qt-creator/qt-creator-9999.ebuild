@@ -53,7 +53,7 @@ CDEPEND="
 	>=dev-qt/qtxml-${QT_PV}
 	clangcodemodel? ( >=sys-devel/clang-5:= )
 	designer? ( >=dev-qt/designer-${QT_PV} )
-	qbs? ( >=dev-util/qbs-1.10.1 )
+	qbs? ( >=dev-util/qbs-1.11.1 )
 	systemd? ( sys-apps/systemd:= )
 	webengine? ( >=dev-qt/qtwebengine-${QT_PV}[widgets] )
 "
@@ -102,9 +102,10 @@ src_prepare() {
 		fi
 	done
 
-	# avoid building unused support libraries
+	# avoid building unused support libraries and tools
 	if ! use clangcodemodel; then
 		sed -i -e '/clangsupport/d' src/libs/libs.pro || die
+		sed -i -e '/SUBDIRS += clang\(\|refactoring\|pchmanager\)backend/d' src/tools/tools.pro || die
 	fi
 	if ! use glsl; then
 		sed -i -e '/glsl/d' src/libs/libs.pro || die
@@ -123,7 +124,7 @@ src_prepare() {
 	sed -i -e '/sdktool/ d' tests/auto/auto.pro || die
 	sed -i -e '/\(dumpers\|offsets\)\.pro/ d' tests/auto/debugger/debugger.pro || die
 	sed -i -e '/CONFIG -=/ s/$/ testcase/' tests/auto/extensionsystem/pluginmanager/correctplugins1/plugin?/plugin?.pro || die
-	sed -i -e '/timeline\(items\|notes\|selection\)renderpass/ d' tests/auto/timeline/timeline.pro || die
+	sed -i -e '/timeline\(items\|notes\|selection\)renderpass/ d' tests/auto/tracing/tracing.pro || die
 	sed -i -e 's/\<memcheck\>//' tests/auto/valgrind/valgrind.pro || die
 
 	# fix path to some clang headers
