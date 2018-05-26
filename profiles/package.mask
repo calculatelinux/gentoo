@@ -29,10 +29,12 @@
 
 #--- END OF EXAMPLES ---
 
-# Lars Wendler <polynomial-c@gentoo.org> (22 May 2018)
-# Breaks revdeps (most likely because of GooHash removal).
-# See tracker bug https://bugs.gentoo.org/656264
->=app-text/poppler-0.65.0
+# Andreas Sturmlechner <asturm@gentoo.org> (24 May 2018)
+# Depends on dead Qt4. Masked for removal in 30 days. Bug #629018
+dev-libs/libattica
+kde-frameworks/kdelibs
+kde-frameworks/kdelibs-env
+kde-plasma/qguiplatformplugin_kde
 
 # Matt Turner <mattst88@gentoo.org> (20 May 2018)
 # Removal in 30 days. Bug #655102
@@ -135,8 +137,6 @@ sci-libs/freesteam
 # Remaining fetch-restricted game packages missing BLAKE2B hashes.
 # Please provide updated hashes if you have the matching distfiles.
 # Bug #642876.  Removal in 30 days.
-games-action/shadowgrounds-bin
-games-action/shadowgrounds-survivor-bin
 games-action/trine2
 games-misc/dont-starve
 games-puzzle/larry
@@ -270,10 +270,6 @@ dev-python/kiwi
 # No reverse dependencies.  The ebuild runs test suite of CPython
 # instead of its own.  Removal in 30 days.  Bug #526552.
 dev-python/tdaemon
-
-# Andreas Sturmlechner <asturm@gentoo.org> (26 Apr 2018)
-# Depends on dead Qt4, no more revdeps. Masked for removal in 30 days.
-dev-libs/qjson
 
 # Michał Górny <mgorny@gentoo.org> (22 Apr 2018)
 # Unmaintained buggy package with unresearched segfaults.  No support
