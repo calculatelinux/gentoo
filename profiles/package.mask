@@ -169,7 +169,6 @@ games-misc/dont-starve
 games-puzzle/larry
 games-rpg/avadon
 games-rpg/penumbra-collection
-games-rpg/wasteland2
 
 # Michał Górny <mgorny@gentoo.org> (15 May 2018)
 # All current versions are unfetchable.  No maintainer activity
@@ -452,7 +451,7 @@ media-fonts/fontawesome:0/5
 
 # Andreas Sturmlechner <asturm@gentoo.org> (21 Dec 2017)
 # Masked for testing
-=dev-libs/libical-3.0.1
+~dev-libs/libical-3.0.3
 
 # James Le Cuirot <chewi@gentoo.org> (17 Dec 2017)
 # Java 9 is not yet fully supported on Gentoo. Packages cannot depend

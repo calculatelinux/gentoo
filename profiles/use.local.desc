@@ -1046,15 +1046,12 @@ app-office/kmymoney:quotes - Enable Online Stock Quote retrieval
 app-office/kmymoney:weboob - Enable import of online banking transactions extracted by www-client/weboob
 app-office/kraft:pim - Enable support for KDE PIM resources integration
 app-office/libreoffice:coinmp - Use sci-libs/coinor-mp as alternative solver
-app-office/libreoffice:collada - Enable Collada for rendering 3D models stored in *.dae and *.kmz format
-app-office/libreoffice:gltf - Use media-libs/libgltf for inserting 3D models in the glTF format into presentations
 app-office/libreoffice:googledrive - Enable support for remote files on Google Drive
 app-office/libreoffice:gtk2 - Enable legacy gtk2 frontend
 app-office/libreoffice:gtk3 - Enable experimental gtk3 frontend
 app-office/libreoffice:jemalloc - Use dev-libs/jemalloc for allocations
 app-office/libreoffice:odk - Build the Office Development Kit
 app-office/libreoffice:pdfimport - Enable PDF import via the Poppler library
-app-office/libreoffice:quickstarter - Build the system tray quickstarter
 app-office/libreoffice:vlc - Use media-video/vlc for video embedding
 app-office/libreoffice-l10n:offlinehelp - Install help files locally instead of using the LibreOffice Wiki
 app-office/lyx:aspell - Add support for aspell spellchecking
@@ -4063,6 +4060,10 @@ media-gfx/ufraw:fits - Enable support for the FITS image format through sci-libs
 media-gfx/ufraw:timezone - enable DST correction for file timestamps
 media-gfx/xpaint:pgf - Support for loading PGF images
 media-gfx/xsane:ocr - Enable support for Optical Character Recognition reader
+media-gfx/yafaray:blender - Install addon for media-gfx/blender
+media-gfx/yafaray:fastmath - Enable mathematic approximations to make code faster
+media-gfx/yafaray:fasttrig - Enable trigonometric approximations to make code faster
+media-gfx/yafaray:opencv - Use media-libs/opencv
 media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
 media-libs/allegro:dumb - Enable media-libs/dumb module library support
 media-libs/allegro:physfs - Enable physfs support
@@ -8005,6 +8006,7 @@ sys-fabric/ofed:srp - Suport for userspace part for srp initiator
 sys-fabric/opensm:tools - Install ssld extra tool
 sys-firmware/edk2-ovmf:binary - Use pre-built binaries
 sys-firmware/intel-microcode:initramfs - install a small initramfs for use with CONFIG_MICROCODE_EARLY
+sys-firmware/intel-microcode:minimal - only install ucode(s) supported by currently available (=online) processor(s)
 sys-firmware/intel-microcode:monolithic - install the large text microcode.dat (used by older kernels via microcode_ctl)
 sys-firmware/intel-microcode:split-ucode - install the split binary ucode files (used by the kernel directly)
 sys-firmware/intel-microcode:vanilla - install only microcode updates from Intel's official microcode tarball

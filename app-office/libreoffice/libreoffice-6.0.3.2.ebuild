@@ -70,7 +70,7 @@ $(printf 'libreoffice_extensions_%s ' ${LO_EXTS})"
 LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS="amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux"
 
 COMMON_DEPEND="${PYTHON_DEPS}
 	app-arch/unzip
@@ -245,7 +245,7 @@ PATCHES=(
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-5.4-system-pyuno.patch"
 	"${FILESDIR}/${PN}-5.3.4.2-kioclient5.patch"
-	"${FILESDIR}/${PN}-6.0.3.2-disable-flaky-tests.patch" #bug 656676
+	"${FILESDIR}"/${PN}-6.0.3.2-disable-flaky-tests-{1,2}.patch #bug 656676
 	# 6.0 branch
 	"${FILESDIR}/${P}-poppler-0.64.patch"
 
