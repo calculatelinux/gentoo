@@ -3535,7 +3535,7 @@ kde-frameworks/purpose:kaccounts - Enable support for system-wide defined KAccou
 kde-frameworks/sonnet:aspell - Enable the app-text/aspell spell-checking backend
 kde-frameworks/sonnet:hunspell - Enable the app-text/hunspell spell-checking backend
 kde-misc/kdeconnect:app - Enable experimental kcapp frontend
-kde-misc/kdeconnect:sms - Enable SMS support using kde-frameworks/kpeople
+kde-misc/kdeconnect:mousepad - Enable remote mousepad plugin using x11-libs/libfakekey
 kde-misc/kdeconnect:wayland - Enable kwin_wayland support for mousepad plugin using kde-frameworks/kwayland
 kde-misc/kimtoy:scim - Enable Smart Common Input Method support
 kde-misc/kio-gdrive:kaccounts - Use kde-apps/kaccounts-integration backend (default) instead of dev-libs/qtkeychain
@@ -7506,6 +7506,7 @@ sys-apps/coreutils:caps - Add Linux capabilities support in output of file utili
 sys-apps/coreutils:hostname - Build the hostname program
 sys-apps/coreutils:kill - Build the kill program
 sys-apps/coreutils:multicall - Build all tools into a single `coreutils` program akin to busybox to save space
+sys-apps/coreutils:split-usr - Enable this if /bin and /usr/bin are separate directories
 sys-apps/dbus:elogind - Use sys-auth/elogind for session tracking.
 sys-apps/dbus:systemd - Build with sys-apps/systemd at_console support
 sys-apps/dbus:user-session - Enable user-session semantics for session bus under systemd
@@ -8005,8 +8006,8 @@ sys-fabric/ofed:rds - Tools to manage rds sockets
 sys-fabric/ofed:srp - Suport for userspace part for srp initiator
 sys-fabric/opensm:tools - Install ssld extra tool
 sys-firmware/edk2-ovmf:binary - Use pre-built binaries
+sys-firmware/intel-microcode:hostonly - only install ucode(s) supported by currently available (=online) processor(s)
 sys-firmware/intel-microcode:initramfs - install a small initramfs for use with CONFIG_MICROCODE_EARLY
-sys-firmware/intel-microcode:minimal - only install ucode(s) supported by currently available (=online) processor(s)
 sys-firmware/intel-microcode:monolithic - install the large text microcode.dat (used by older kernels via microcode_ctl)
 sys-firmware/intel-microcode:split-ucode - install the split binary ucode files (used by the kernel directly)
 sys-firmware/intel-microcode:vanilla - install only microcode updates from Intel's official microcode tarball
