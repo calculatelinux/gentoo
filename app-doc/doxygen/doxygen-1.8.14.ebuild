@@ -11,7 +11,7 @@ if [[ ${PV} = *9999* ]]; then
 	SRC_URI=""
 else
 	SRC_URI="https://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
 fi
 
 DESCRIPTION="Documentation system for most programming languages"
@@ -99,12 +99,14 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
-		-DDOC_INSTALL_DIR="share/doc/${P}"
 		-Duse_libclang=$(usex clang)
 		-Dbuild_doc=$(usex doc)
 		-Dbuild_search=$(usex doxysearch)
 		-Dbuild_wizard=$(usex qt5)
 		-Duse_sqlite3=$(usex sqlite)
+		)
+	use doc && mycmakeargs+=(
+		-DDOC_INSTALL_DIR="share/doc/${P}"
 		)
 
 	cmake-utils_src_configure

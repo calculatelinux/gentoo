@@ -32,10 +32,6 @@ DEPEND="${PYTHON_DEPS}
 		x11-libs/libXrandr:=[${MULTILIB_USEDEP}]
 	)"
 
-PATCHES=(
-	"${FILESDIR}/${P}-Use-usr-for-vulkan-headers.patch"
-)
-
 multilib_src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_SKIP_RPATH=True
@@ -45,6 +41,7 @@ multilib_src_configure() {
 		-DBUILD_WSI_WAYLAND_SUPPORT=$(usex wayland)
 		-DBUILD_WSI_XCB_SUPPORT=$(usex X)
 		-DBUILD_WSI_XLIB_SUPPORT=$(usex X)
+		-DVULKAN_HEADERS_INSTALL_DIR="/usr"
 	)
 	cmake-utils_src_configure
 }
@@ -57,5 +54,5 @@ multilib_src_install() {
 
 pkg_postinst() {
 	einfo "USE=demos has been dropped as per upstream packaging"
-	einfo "vulkaninfo is now available in the media-libs/vulkan-tools package"
+	einfo "vulkaninfo is now available in the dev-util/vulkan-tools package"
 }

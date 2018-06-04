@@ -10,7 +10,7 @@ SRC_URI="${HOMEPAGE}download/src/all-versions/${P/_/}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~arm ~hppa ia64 ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~hppa ia64 ~ppc64 ~x86"
 IUSE="
 	adns androiddump bcg729 +capinfos +captype ciscodump +dftest doc
 	+dumpcap +editcap gtk kerberos libxml2 lua lz4 maxminddb +mergecap +netlink
@@ -91,6 +91,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.6.0-androiddump-wsutil.patch
 	"${FILESDIR}"/${PN}-2.6.0-qtsvg.patch
 	"${FILESDIR}"/${PN}-2.6.0-redhat.patch
+	"${FILESDIR}"/${PN}-2.6.1-Qt-5.11.patch
 	"${FILESDIR}"/${PN}-99999999-androiddump.patch
 )
 

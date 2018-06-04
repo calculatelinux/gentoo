@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN::1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 ~hppa ia64 ~mips ~ppc ~ppc64 sparc x86 ~x64-cygwin ~amd64-fbsd"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ~ppc ~ppc64 s390 sparc x86 ~x64-cygwin ~amd64-fbsd"
 IUSE="+blake2 bzip2 +gpg lzma sha3 test tools"
 
 MODULE_RDEPEND="
@@ -26,7 +26,7 @@ MODULE_RDEPEND="
 
 RDEPEND="${MODULE_RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+DEPEND=">=dev-python/setuptools-34[${PYTHON_USEDEP}]
 	test? ( ${MODULE_RDEPEND} )"
 
 python_test() {
