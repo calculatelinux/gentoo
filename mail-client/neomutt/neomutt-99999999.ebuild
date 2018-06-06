@@ -5,7 +5,7 @@ EAPI=6
 
 inherit eutils flag-o-matic
 
-if [[ ${PV} =~ 9999$ ]]; then
+if [[ ${PV} =~ 99999999$ ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/neomutt/neomutt.git"
 	EGIT_CHECKOUT_DIR="${WORKDIR}/neomutt-${P}"
@@ -19,9 +19,9 @@ HOMEPAGE="https://neomutt.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="berkdb crypt doc gdbm gnutls gpg gpgme idn kerberos kyotocabinet
-	libressl lmdb nls notmuch pgp_classic qdbm sasl selinux slang smime
-	smime_classic ssl tokyocabinet"
+IUSE="berkdb doc gdbm gnutls gpgme idn kerberos kyotocabinet libressl
+	lmdb nls notmuch pgp_classic qdbm sasl selinux slang smime_classic
+	ssl tokyocabinet"
 
 CDEPEND="
 	app-misc/mime-types
@@ -40,7 +40,6 @@ CDEPEND="
 	qdbm? ( dev-db/qdbm )
 	tokyocabinet? ( dev-db/tokyocabinet )
 	gnutls? ( >=net-libs/gnutls-1.0.17 )
-	gpg? ( >=app-crypt/gpgme-0.9.0 )
 	gpgme? ( >=app-crypt/gpgme-0.9.0 )
 	idn? ( net-dns/libidn )
 	kerberos? ( virtual/krb5 )
@@ -74,14 +73,9 @@ src_configure() {
 		"$(use_enable nls)"
 		"$(use_enable notmuch)"
 
-		# During the transition of the crypto USE flags we need to support
-		# both sets of flags. We do not want to emit a configuration setting
-		# twice, since the second flag overrides the first, potentially
-		# leading to unwanted settings. See https://bugs.gentoo.org/640824 for
-		# details.
-		"$(if use gpg || use gpgme; then echo "--enable"; else echo "--disable"; fi)-gpgme"
-		"$(if use crypt || use pgp_classic; then echo "--enable"; else echo "--disable"; fi)-pgp"
-		"$(if use smime || use smime_classic; then echo "--enable"; else echo "--disable"; fi)-smime"
+		"$(use_enable gpgme)"
+		"$(use_enable pgp_classic pgp)"
+		"$(use_enable smime_classic smime)"
 
 		# Database backends.
 		"$(use_enable berkdb bdb)"
@@ -109,12 +103,17 @@ src_install() {
 	# A man-page is always handy, so fake one – here neomuttrc.5
 	# (neomutt.1 already exists)
 	if use !doc; then
-		sed -n '/^\(SRCDIR\|EXEEXT\|CC_FOR_BUILD\)\s*=/p;$a\\n' \
+		sed -n \
+			-e '/^\(CC_FOR_BUILD\|CFLAGS_FOR_BUILD\)\s*=/p' \
+			-e '/^\(EXTRA_CFLAGS_FOR_BUILD\|LDFLAGS_FOR_BUILD\)\s*=/p' \
+			-e '/^\(EXEEXT\|SRCDIR\)\s*=/p' \
 			Makefile > doc/Makefile.fakedoc || die
-		sed -n '/^\(MAKEDOC_CPP\s*=\|doc\/\(makedoc$(EXEEXT)\|neomuttrc.man\):\)/,/^[[:blank:]]*$/p' \
+		sed -n \
+			-e '/^MAKEDOC_CPP\s*=/,/^\s*$/p' \
+			-e '/^doc\/\(makedoc$(EXEEXT)\|neomutt\.1\|neomuttrc\.5\)\s*:/,/^\s*$/p' \
 			doc/Makefile.autosetup >> doc/Makefile.fakedoc || die
-		emake -f doc/Makefile.fakedoc doc/neomuttrc.man
-		cp doc/neomuttrc.man doc/neomuttrc.5 || die
+		emake -f doc/Makefile.fakedoc doc/neomutt.1
+		emake -f doc/Makefile.fakedoc doc/neomuttrc.5
 		doman doc/neomutt.1 doc/neomuttrc.5
 	fi
 
@@ -122,19 +121,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use crypt || use gpg || use smime; then
-		ewarn "Pleae note that the crypto related USE flags of neomutt have changed."
-		ewarn "(https://bugs.gentoo.org/637176)"
-		ewarn "crypt -> pgp_classic"
-		ewarn "gpg -> gpgme"
-		ewarn "smime -> smime_classic"
-		ewarn "The old USE flags still work but their use is deprecated and will"
-		ewarn "be removed in a future release."
-		if use gpg && ( use crypt || use smime ); then
-			ewarn "  Note that gpgme (old gpg) includes both pgp and smime"
-			ewarn "  support.  You can probably remove pgp_classic (old crypt)"
-			ewarn "  and smime_classic (old smime) from your USE-flags and"
-			ewarn "  only enable gpgme."
-		fi
+	if use gpgme && ( use pgp_classic || use smime_classic ); then
+		ewarn "  Note that gpgme (old gpg) includes both pgp and smime"
+		ewarn "  support.  You can probably remove pgp_classic (old crypt)"
+		ewarn "  and smime_classic (old smime) from your USE-flags and"
+		ewarn "  only enable gpgme."
 	fi
 }
