@@ -3,11 +3,11 @@
 
 EAPI=6
 
-inherit flag-o-matic
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="Tools for manipulating UEFI secure boot platforms"
 HOMEPAGE="https://git.kernel.org/cgit/linux/kernel/git/jejb/efitools.git"
-SRC_URI="https://git.kernel.org/pub/scm/linux/kernel/git/jejb/efitools.git/snapshot/efitools-1.8.1.tar.gz"
+SRC_URI="https://git.kernel.org/pub/scm/linux/kernel/git/jejb/efitools.git/snapshot/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
@@ -23,10 +23,7 @@ RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )
 DEPEND="${RDEPEND}
 	app-crypt/sbsigntool
 	dev-perl/File-Slurp
-	static? (
-		${LIB_DEPEND}
-		dev-util/pkgconfig
-	)
+	static? ( ${LIB_DEPEND} )
 	sys-apps/help2man
 	sys-boot/gnu-efi
 	virtual/pkgconfig"
@@ -39,7 +36,8 @@ PATCHES=(
 src_prepare() {
 	if use static; then
 		append-ldflags -static
-		sed -i 's/-lcrypto/`pkg-config --static --libs libcrypto`/g' Makefile || die
+		sed -i "s/-lcrypto\b/$($(tc-getPKG_CONFIG) --static --libs libcrypto)/g" \
+			Makefile || die
 	fi
 
 	# Respect users CFLAGS
