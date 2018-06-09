@@ -1,9 +1,9 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit git-r3
+inherit git-r3 systemd
 
 DESCRIPTION="Keybase Filesystem (KBFS)"
 HOMEPAGE="https://keybase.io/docs/kbfs"
@@ -14,10 +14,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="git"
 
-DEPEND="
-	>=dev-lang/go-1.6:0
-	>=app-crypt/keybase-1.0.17
-	"
+DEPEND=">=dev-lang/go-1.6:0"
 RDEPEND="
 	app-crypt/gnupg
 	sys-fs/fuse
@@ -49,4 +46,5 @@ src_install() {
 	dobin "${T}/kbfsfuse"
 	use git && \
 		dobin "${T}/git-remote-keybase"
+	systemd_douserunit "${S}/packaging/linux/systemd/kbfs.service"
 }
