@@ -420,6 +420,7 @@ app-editors/neovim:jemalloc - Use dev-libs/jemalloc for allocations
 app-editors/neovim:nvimpager - Install nvimpager symlink to less.sh macro
 app-editors/neovim:remote - Enable support for remote options using nvr
 app-editors/neovim:tui - Build the neovim unix tui
+app-editors/okteta:designer - Build plugins for dev-qt/designer
 app-editors/pluma:gtk3 - Build with GTK+3 instead of GTK+2
 app-editors/qhexedit2:gui - Install Qt5 hex editor
 app-editors/tea:aspell - Enable spellchecking using app-text/aspell
@@ -1279,6 +1280,7 @@ dev-ada/aws:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/aws:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/gnat_util:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/gnat_util:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
+dev-ada/gnat_util:gnat_2018 - Compile with dev-lang/gnat-gpl-2018
 dev-ada/gnat_util:shared - Build gnat_util shared library
 dev-ada/gnat_util:static-pic - Build gnat_util static library with pic code
 dev-ada/gnatcoll:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
@@ -1287,10 +1289,16 @@ dev-ada/gnatcoll:projects - Adds support for projects
 dev-ada/gnatcoll:pygobject - Adds support for pygobject
 dev-ada/gnatcoll:shared - Build shared library
 dev-ada/gnatcoll:tools - Build associated tools
+dev-ada/gnatcoll-core:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
+dev-ada/gnatcoll-core:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
+dev-ada/gnatcoll-core:gnat_2018 - Compile with dev-lang/gnat-gpl-2018
+dev-ada/gnatcoll-core:shared - Build shared library
+dev-ada/gnatcoll-core:static-pic - Build static library with pic code
 dev-ada/gnatmem:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/gnatmem:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/gprbuild:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/gprbuild:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
+dev-ada/gprbuild:gnat_2018 - Compile with dev-lang/gnat-gpl-2018
 dev-ada/gtkada:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/gtkada:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/gtkada:shared - Build gtkada as shared library
@@ -1298,10 +1306,12 @@ dev-ada/libadalang:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/libadalang:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/libgpr:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/libgpr:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
+dev-ada/libgpr:gnat_2018 - Compile with dev-lang/gnat-gpl-2018
 dev-ada/libgpr:shared - Build shared library
 dev-ada/libgpr:static-pic - Build static library with pic code
 dev-ada/xmlada:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/xmlada:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
+dev-ada/xmlada:gnat_2018 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/xmlada:shared - Build shared library
 dev-ada/xmlada:static-pic - Build static library with pic code
 dev-cpp/eigen:c++11 - Build using the C++11 standard
@@ -1798,11 +1808,15 @@ dev-java/icedtea:cups - Link against the CUPS library at compile time, rather th
 dev-java/icedtea:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
 dev-java/icedtea:jamvm - Use the JamVM virtual machine rather than HotSpot.
 dev-java/icedtea:jbootstrap - If possible, recompile the final IcedTea executables with itself.
+dev-java/icedtea:kerberos - Link against Kerberos in order to obtain the cache location.
 dev-java/icedtea:nsplugin - Enable browser plugin (NPPlugin), requires also the webstart flag to be enabled.
 dev-java/icedtea:pax_kernel - Apply patch needed for pax enabled kernels.
-dev-java/icedtea:shenandoah - Include the Shenandoah ultra-low pause time garbage collector (-XX:+UseShenandoahGC) (x86_64 only)
+dev-java/icedtea:pch - Build using pre-compiled headers.
+dev-java/icedtea:sctp - Build the SCTP NIO channel implementation against lksctp
+dev-java/icedtea:shenandoah - Include the Shenandoah ultra-low pause time garbage collector (-XX:+UseShenandoahGC) (arm64 and x86_64 only)
 dev-java/icedtea:smartcard - Build the PCSC driver against pcsc-lite
 dev-java/icedtea:sunec - Build the SunEC provider against system NSS
+dev-java/icedtea:system-lcms - Build against the system LCMS installation rather than the in-tree copy.
 dev-java/icedtea:webstart - Enable Web Start support (via NetX).
 dev-java/icedtea:zero - Enable Zero assembler port (usually for non-HotSpot architectures)
 dev-java/icedtea-bin:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
@@ -2883,6 +2897,8 @@ dev-util/diffoscope:zip - Use app-arch/unzip
 dev-util/edb-debugger:graphviz - Add support for the Graphviz library
 dev-util/edb-debugger:legacy-mem-write - Probe if writes to /proc/PID/mem are broken.
 dev-util/edb-debugger:pax_kernel - Enable building under a PaX enabled kernel
+dev-util/electron:gconf - Use gnome-base/gconf
+dev-util/electron:gtk3 - Use GTK+3 instead of GTK+2
 dev-util/electron:lto - Build with link time optimization enabled
 dev-util/electron:pic - Disable optimized assembly code that is not PIC friendly
 dev-util/electron:proprietary-codecs - Enable proprietary codecs like H.264, MP3
@@ -2928,7 +2944,7 @@ dev-util/intel-ocl-sdk:system-clang - Use system clang (sys-devel/clang) instead
 dev-util/intel-ocl-sdk:system-tbb - Use system Thread Building Blocks (dev-cpp/tbb) instead of bundled one
 dev-util/intel-ocl-sdk:tools - Install Intel Offline Compiler
 dev-util/kdevelop:gdbui - Enable GUI for attaching GDB to a running process
-dev-util/kdevelop:okteta - Enable hex editor plugin via kde-apps/okteta
+dev-util/kdevelop:hex - Enable hex editor plugin via app-editors/okteta
 dev-util/kdevelop:qmake - Enable support for QMake build system
 dev-util/kdevelop:reviewboard - Enable reviewboard support
 dev-util/kdevelop:webkit - Enable deprecated dev-qt/qtwebkit instead of dev-qt/qtwebengine for integrated documentation
@@ -3052,6 +3068,7 @@ games-action/dxx-rebirth:sc55-musicpack - Include alternate version of the game'
 games-action/dxx-rebirth:textures - Include high resolution (640x480) backgrounds, briefing images and fonts (Descent 1)
 games-action/hotline-miami:bundled-libs - Use bundled libraries.
 games-action/hotline-miami:launcher - Install qt launcher
+games-action/minetest:jsoncpp - Enable using a system-wide JSONCPP
 games-action/minetest:leveldb - Enable LevelDB backend
 games-action/minetest:postgres - Optionally use PostgreSQL as map backend
 games-action/minetest:redis - Enable redis backend via dev-libs/hiredis
@@ -3500,7 +3517,6 @@ kde-apps/marble:aprs - Enable support for APRS data sources
 kde-apps/marble:designer - Install plugin for dev-qt/designer
 kde-apps/marble:phonon - Enable sound support via media-libs/phonon
 kde-apps/marble:shapefile - Enable support for ESRI shapefiles
-kde-apps/okteta:designer - Build plugins for dev-qt/designer
 kde-apps/okular:chm - Enable support for Microsoft Compiled HTML Help files
 kde-apps/okular:epub - Enable E-Book support via app-text/ebook-tools
 kde-apps/okular:image-backend - Enable image viewing support
@@ -4457,7 +4473,6 @@ media-sound/aqualung:lua - Enable support for programmable title formatting with
 media-sound/aqualung:mac - Enable support for decoding Monkey's Audio files
 media-sound/aqualung:podcast - Enable podcast support
 media-sound/aqualung:systray - Enable system tray support
-media-sound/ardour:lv2 - Add support for Ladspa V2
 media-sound/ario:audioscrobbler - Enable song tracking via last.fm
 media-sound/ario:idle - Enable experimental support for MPD's idle command to reduce bandwidth and cpu usage, requires MPD 0.14
 media-sound/asunder:mac - Support for creation of Monkey's Audio files (APE)
@@ -4814,7 +4829,6 @@ media-tv/xmltv:ee - Estonia tv listing grabber
 media-tv/xmltv:es_laguiatv - Spain alternative grabber
 media-tv/xmltv:es_miguiatv - Spain alternative grabber
 media-tv/xmltv:eu_dotmedia - Grabber for Europe (xmltv.se / dotmedia)
-media-tv/xmltv:eu_egon - Grabber for german speaking area (Egon zappt)
 media-tv/xmltv:eu_epg - EPG grabber for some European countries.
 media-tv/xmltv:fi - Finland tv listing grabber
 media-tv/xmltv:fi_sv - Grabber for Finland (Swedish)
@@ -4835,14 +4849,12 @@ media-tv/xmltv:no_gf - Norway Gfeed tv listing grabber
 media-tv/xmltv:pt - Portugal tv listing grabber
 media-tv/xmltv:pt_meo - Grabber for Portugal (MEO)
 media-tv/xmltv:re - Reunion Island (France) tv listing grabber
-media-tv/xmltv:sd_json - Grabber for schedulesDirect.org SD-JSON service (many countries)
 media-tv/xmltv:se_swedb - Sweden tv listing grabber
 media-tv/xmltv:se_tvzon - Sweden (tvzon.se) tv listing grabber
 media-tv/xmltv:tr - Turkey (Digiturk) tv listing grabber
 media-tv/xmltv:tv_check - enable GUI checking
 media-tv/xmltv:tv_combiner - enable grabbers combiner
 media-tv/xmltv:tv_pick_cgi - enable CGI support
-media-tv/xmltv:uk_atlas - Fast UK and Ireland tv listing grabber
 media-tv/xmltv:uk_bleb - Britain tv listing grabber
 media-tv/xmltv:uk_rt - Britain alternative tv listing grabber
 media-tv/xmltv:uk_tvguide - UK and Ireland tv listing grabber using TV Guide website
@@ -5573,6 +5585,7 @@ net-firewall/iptables:conntrack - Build against net-libs/libnetfilter_conntrack 
 net-firewall/iptables:netlink - Build against libnfnetlink which enables the nfnl_osf util
 net-firewall/iptables:nftables - Support nftables kernel interface
 net-firewall/iptables:pcap - Build against net-libs/libpcap which enables the nfbpf_compile util
+net-firewall/nftables:json - Enable JSON support via dev-libs/jansson
 net-firewall/nufw:nfconntrack - Use netfilter_conntrack
 net-firewall/nufw:nfqueue - Use NFQUEUE instead of QUEUE
 net-firewall/nufw:pam_nuauth - Add support for pam nufw from PAM
@@ -5940,6 +5953,8 @@ net-libs/gnutls:test-full - Enable full test mode
 net-libs/gnutls:tls-heartbeat - Enable the Heartbeat Extension in TLS and DTLS
 net-libs/gnutls:tools - Build extra tools
 net-libs/gnutls:valgrind - Enable usage of dev-util/valgrind in debug
+net-libs/grpc:systemtap - Enable SystemTAP/DTrace tracing
+net-libs/grpc:tools - Install gRPC python tools
 net-libs/iax:snomhack - Use slower memset for SNOM phoneem
 net-libs/ldns:dane - Enable DNS-based Authentication of Named Entities (DANE) support
 net-libs/ldns:ecdsa - Enable ECDSA support
@@ -6708,10 +6723,14 @@ net-p2p/pybitmessage:qrcode - Enable dev-python/qrcode for QR code support
 net-p2p/qbittorrent:webui - Enable the Web UI
 net-p2p/resilio-sync:pax_kernel - Use paxctl to mark binaries
 net-p2p/retroshare:cli - Enables the CLI version of RetroShare
+net-p2p/retroshare:control-socket - Enables API via Unix socket support
 net-p2p/retroshare:feedreader - Enables the Feedreader plugin
 net-p2p/retroshare:gnome-keyring - Enables potentially insecure autologin capability via Gnome Keyring
 net-p2p/retroshare:gui - Enables the GUI version of RetroShare
+net-p2p/retroshare:settings-api - Enables settings control via API
+net-p2p/retroshare:sqlcipher - Enables GXS database encryption via SQLCipher
 net-p2p/retroshare:voip - Enables VOIP plugin
+net-p2p/retroshare:webui - Enables Web interface and API support
 net-p2p/rtorrent:daemon - Uses app-misc/screen to daemonize this application
 net-p2p/syncthing:tools - Install stdiscosrv, strelaysrv and other tools to /usr/libexec/syncthing/.
 net-p2p/transmission:lightweight - Optimize transmission for low-resource systems (smaller cache size, prefer unencrypted peer connections, etc.)
@@ -8192,6 +8211,10 @@ sys-libs/gwenhywfar:qml - Enable support for plugins using QML
 sys-libs/gwenhywfar:sensors - Enable support for dev-qt/qtsensors module
 sys-libs/gwenhywfar:serialport - Enable support for dev-qt/qtserialport module
 sys-libs/gwenhywfar:webkit - Enable support for dev-qt/qtwebkit
+sys-libs/ldb:doc - Builds documentation
+sys-libs/ldb:ldap - Enable LDAP support
+sys-libs/ldb:lmdb - Enable LMDB backend
+sys-libs/ldb:python - Enable Python support
 sys-libs/libblockdev:bcache - Enable block device cache support.
 sys-libs/libblockdev:cryptsetup - Enable sys-fs/cryptsetup support
 sys-libs/libblockdev:dmraid - Support for dmraid devices, also known as ATA-RAID, or Fake RAID.

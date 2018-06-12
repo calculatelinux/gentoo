@@ -2018,10 +2018,6 @@
     <url>https://wiki.gentoo.org/wiki/Project:LXQt</url>
     <description>Maintains LXQt DE related packages.</description>
     <member>
-      <email>johu@gentoo.org</email>
-      <name>Johannes Huber</name>
-    </member>
-    <member>
       <email>mrueg@gentoo.org</email>
       <name>Manuel Rüger</name>
     </member>
@@ -2170,11 +2166,6 @@
     <member>
       <email>blueness@gentoo.org</email>
       <name>Anthony G. Basile</name>
-      <role>Developer</role>
-    </member>
-    <member>
-      <email>hwoarang@gentoo.org</email>
-      <name>Markos Chandras</name>
       <role>Developer</role>
     </member>
     <member>
@@ -3133,32 +3124,6 @@ developers and volunteer mentors.</description>
     </member>
   </project>
   <project>
-    <email>qemu@gentoo.org</email>
-    <name>Gentoo QEMU Project</name>
-    <url>https://wiki.gentoo.org/wiki/Project:QEMU</url>
-    <description>The Gentoo QEMU Project maintains packages related to QEMU.</description>
-    <member>
-      <email>cardoe@gentoo.org</email>
-      <name>Doug Goldstein</name>
-      <role>Member</role>
-    </member>
-    <member>
-      <email>lu_zero@gentoo.org</email>
-      <name>Luca Barbato</name>
-      <role>Member</role>
-    </member>
-    <member>
-      <email>tamiko@gentoo.org</email>
-      <name>Matthias Maier</name>
-      <role>Member</role>
-    </member>
-    <member>
-      <email>vapier@gentoo.org</email>
-      <name>Mike Frysinger</name>
-      <role>Member</role>
-    </member>
-  </project>
-  <project>
     <email>qt@gentoo.org</email>
     <name>Gentoo Qt Project</name>
     <url>https://wiki.gentoo.org/wiki/Project:Qt</url>
@@ -4097,7 +4062,6 @@ developers and volunteer mentors.</description>
     <url>https://wiki.gentoo.org/wiki/Project:Virtualization</url>
     <description>The Gentoo Virtualization Project maintains packages shared between the different virtualization (sub-)projects and provides documentation and tools to the user to make Gentoo a first choice platform as both host and guest system.</description>
     <subproject ref="openstack@gentoo.org"/>
-    <subproject ref="qemu@gentoo.org"/>
     <subproject ref="vmware@gentoo.org"/>
     <subproject ref="xen@gentoo.org"/>
     <member>
@@ -4119,6 +4083,10 @@ developers and volunteer mentors.</description>
     <member>
       <email>tamiko@gentoo.org</email>
       <name>Matthias Maier</name>
+    </member>
+    <member>
+      <email>vapier@gentoo.org</email>
+      <name>Mike Frysinger</name>
     </member>
     <member>
       <email>vdupras@gentoo.org</email>
@@ -4275,13 +4243,10 @@ developers and volunteer mentors.</description>
       <email>leio@gentoo.org</email>
       <name>Mart Raudsepp</name>
     </member>
-    <member>
-      <email>lu_zero@gentoo.org</email>
-      <name>Luca Barbato</name>
-    </member>
-    <member>
+    <member is-lead="1">
       <email>mattst88@gentoo.org</email>
       <name>Matt Turner</name>
+      <role>Lead</role>
     </member>
     <member>
       <email>mrueg@gentoo.org</email>

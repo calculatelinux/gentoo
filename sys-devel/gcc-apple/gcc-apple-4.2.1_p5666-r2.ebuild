@@ -26,7 +26,6 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	>=sys-libs/ncurses-5.2-r2
 	nls? ( sys-devel/gettext )
 	>=sys-devel/gcc-config-1.8-r1
-	sys-libs/csu
 	!<sys-apps/portage-2.2.14
 	fortran? (
 		>=dev-libs/gmp-4.2.1
@@ -37,6 +36,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/bison-1.875
 	${CATEGORY}/binutils-apple
 	>=dev-libs/mpfr-2.2.0_p10"
+PDEPEND="sys-libs/csu"
 
 S=${WORKDIR}/gcc-${APPLE_VERS}
 
@@ -352,8 +352,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	# beware this also switches when it's on another branch version of GCC
-	gcc-config ${CTARGET}-${GCC_VERS}
+	# only activate this compiler if nothing else is activated
+	gcc-config -c >& /dev/null || gcc-config ${CTARGET}-${GCC_VERS}
 }
 
 pkg_postrm() {
