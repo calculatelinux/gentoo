@@ -288,6 +288,7 @@ app-crypt/aespipe:cpu_flags_x86_padlock - Use VIA padlock instructions, detected
 app-crypt/ccid:kobil-midentity - Build and install Kobil_mIDentity_switch tool
 app-crypt/ccid:twinserial - Enable twinserial reader
 app-crypt/codecrypt:cryptopp - Build algorithms that need Crypto++ support dev-libs/crypto++
+app-crypt/dehydrated:cron - Install cron job to sign/renew non-existent/changed/expiring certificates
 app-crypt/eid-mw:dialogs - Enable "askaccess" dialog box, by using x11-libs/gtk+
 app-crypt/eid-mw:gtk - All dialogs are available, by using x11-libs/gtk+
 app-crypt/eid-mw:p11-kit - Support for app-crypt/p11-kit.
@@ -763,6 +764,7 @@ app-i18n/fcitx:pango - Enable support for x11-libs/pango
 app-i18n/fcitx:qt4 - Install input method module for Qt 4
 app-i18n/fcitx:table - Install table input methods for Simplified Chinese
 app-i18n/fcitx-libpinyin:dictionary-manager - Install dictionary manager
+app-i18n/fcitx-rime:configuration_tool - Install configuration tool
 app-i18n/fcitx-unikey:macro-editor - Install macro editor
 app-i18n/freewnn:uum - Build uum
 app-i18n/ibus:emoji - Enable support for Emoji
@@ -1864,9 +1866,6 @@ dev-lang/crystal:blocking-stdio-hack - Keep STDIO file descriptors in blocking m
 dev-lang/crystal:debug - Build each module as a separate object file. Speeds build up.
 dev-lang/crystal:xml - Use the dev-libs/libxml2 library to enable Crystal xml module
 dev-lang/crystal:yaml - Use the dev-libs/libyaml library to enable Crystal yaml module
-dev-lang/ekopath:mpich - Include pre-built MPICH libraries
-dev-lang/ekopath:openmpi - Include pre-built OpenMPI 1.x libraries
-dev-lang/ekopath:openmpi2 - Include pre-built OpenMPI 2.x libraries
 dev-lang/erlang:compat-ethread - Enable compatibility with pre-pentium 4 CPUs in the ethread library.
 dev-lang/erlang:dirty-schedulers - Enable dirty schedulers
 dev-lang/erlang:hipe - HIgh Performance Erlang extension
@@ -7574,6 +7573,7 @@ sys-apps/flashrom:gfxnvidia - Enable NVIDIA programmer
 sys-apps/flashrom:internal - Enable internal/onboard support
 sys-apps/flashrom:internal_dmi - Enable internal DMI decoding rather than use sys-apps/dmidecode
 sys-apps/flashrom:it8212 - Support for ITE IT8212F ATA/RAID controllers
+sys-apps/flashrom:linux_mtd - Enable support for Linux mtd SPI flash devices
 sys-apps/flashrom:linux_spi - Enable support for Linux userspace spidev interface
 sys-apps/flashrom:mstarddc_spi - Support for SPI flash ROMs accessible through DDC in MSTAR-equipped displays
 sys-apps/flashrom:nic3com - Enable 3Com NIC programmer
@@ -7828,12 +7828,14 @@ sys-boot/woeusb:minimal - Install only woeusb tool
 sys-cluster/ceph:babeltrace - Add support for LTTng babeltrace
 sys-cluster/ceph:cephfs - Build support for cephfs, a POSIX compatible filesystem built on top of ceph
 sys-cluster/ceph:cryptopp - Use dev-libs/crypto++ for cryptography
+sys-cluster/ceph:dpdk - Enable DPDK messaging
 sys-cluster/ceph:fuse - Build fuse client
 sys-cluster/ceph:jemalloc - Use dev-libs/jemalloc for allocations
 sys-cluster/ceph:libaio - Use libaio as asynchronous input/output library
 sys-cluster/ceph:libatomic - Use libatomic instead of builtin atomic operations
 sys-cluster/ceph:lttng - Add support for LTTng
 sys-cluster/ceph:mgr - Build the ceph-mgr daemon
+sys-cluster/ceph:mgr-frontend - Build/install the mgr/dashboard frontend with npm
 sys-cluster/ceph:nss - Use dev-libs/nss for cryptography
 sys-cluster/ceph:radosgw - Add radosgw support
 sys-cluster/ceph:system-boost - Use system dev-libs/boost instead of the bundled one
@@ -8608,9 +8610,9 @@ www-servers/xsp:net35 - use .NET 3.5 Framework
 www-servers/xsp:net40 - use .NET 4.0 Framework
 www-servers/xsp:net45 - use .NET 4.5 Framework
 x11-apps/copyq:webkit - enables the application to use advanced HTML rendering and fetching remote images and other data
+x11-apps/intel-gpu-tools:chamelium - Enables support for building Chamelium tests
 x11-apps/intel-gpu-tools:glib - Support reading config files via glib helpers
 x11-apps/intel-gpu-tools:test-programs - Install test programs for DRM driver development
-x11-apps/intel-gpu-tools:unwind - Provide automatic stack traces on test failures
 x11-apps/intel-gpu-tools:valgrind - Support valgrind annotations
 x11-apps/intel-gpu-tools:xrandr - Enable support for the X RandR extension
 x11-apps/mesa-progs:egl - Build EGL utilities

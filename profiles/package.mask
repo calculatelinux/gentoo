@@ -29,37 +29,10 @@
 
 #--- END OF EXAMPLES ---
 
-# Matt Turner <mattst88@gentoo.org> (10 Jun 2018)
-# Packages combined into x11-base/xorg-proto. All reverse deps transitioned.
-# Removal in 30 days. Bug #656250
-x11-proto/bigreqsproto
-x11-proto/compositeproto
-x11-proto/damageproto
-x11-proto/dmxproto
-x11-proto/dri2proto
-x11-proto/dri3proto
-x11-proto/fixesproto
-x11-proto/fontsproto
-x11-proto/glproto
-x11-proto/inputproto
-x11-proto/kbproto
-x11-proto/presentproto
-x11-proto/randrproto
-x11-proto/recordproto
-x11-proto/renderproto
-x11-proto/resourceproto
-x11-proto/scrnsaverproto
-x11-proto/trapproto
-x11-proto/videoproto
-x11-proto/xcmiscproto
-x11-proto/xextproto
-x11-proto/xf86bigfontproto
-x11-proto/xf86dgaproto
-x11-proto/xf86driproto
-x11-proto/xf86miscproto
-x11-proto/xf86vidmodeproto
-x11-proto/xineramaproto
-x11-proto/xproto
+# Brian Evans <grknight@gentoo.org> (14 Jun 2018)
+# Mask new php pre-releases for initial testing
+dev-lang/php:7.3
+virtual/httpd-php:7.3
 
 # Andreas Sturmlechner <asturm@gentoo.org> (10 Jun 2018)
 # Dead upstream, no more revdeps after LO dropped support.
@@ -236,23 +209,6 @@ games-puzzle/larry
 games-rpg/avadon
 games-rpg/penumbra-collection
 
-# Michał Górny <mgorny@gentoo.org> (15 May 2018)
-# All current versions are unfetchable.  No maintainer activity
-# since 2014.  Bug #600962.  Removal in 30 days.
-net-misc/asterisk-g729
-
-# Michał Górny <mgorny@gentoo.org> (14 May 2018)
-# All current releases do not install, as well as the latest nightly
-# build upstream (dated July 2017).  Last upstream activity around
-# May 2017.  Masked for removal in 30 days.  Bug #638478.
-dev-lang/ekopath
-
-# Mikle Kolyada <zlogene@gentoo.org> (10 May 2018)
-# The upstream is totally dead (the last release is from 2006).
-# Does not compile against gcc-6, uses old EAPI=3 (#564998, #644262).
-# Use dev-libs/memcached istead. Removal in 30 days.
-dev-libs/libmemcache
-
 # Hans de Graaff <graaff@gentoo.org> (7 May 2018)
 # Old slots that are ruby23-only and no longer maintained
 # upstream, and that do not have packages depend on them.
@@ -368,10 +324,6 @@ sys-libs/uclibc
 =sys-firmware/intel-microcode-20171117_p20171215-r1
 =sys-firmware/intel-microcode-20180108
 =sys-firmware/intel-microcode-20180108-r1
-
-# Patrice Clement <monsieurp@gentoo.org> (26 Jan 2018)
-# Has different symbols. Known to cause issues with i3bar/swaybar.
-media-fonts/fontawesome:0/5
 
 # Eray Aslan <eras@gentoo.org> (22 Jan 2018)
 # Vulnerable - see https://bugs.gentoo.org/630684
