@@ -1276,6 +1276,7 @@ app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) sett
 app-vim/youcompleteme:clang - Enable semantic support for C-family languages using sys-devel/clang
 dev-ada/asis:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/asis:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
+dev-ada/asis:gnat_2018 - Compile with dev-lang/gnat-gpl-2018
 dev-ada/aunit:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/aunit:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/aws:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
