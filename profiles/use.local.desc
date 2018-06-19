@@ -2987,6 +2987,7 @@ dev-util/schroot:lvm - Enable support for chroots using LVM snapshots.
 dev-util/squashdelta:lz4 - Enable support for LZ4 compression using app-arch/lz4
 dev-util/squashmerge:lz4 - Enable support for LZ4 compression using app-arch/lz4
 dev-util/strace:aio - Enable dev-libs/libaio support for tracing Asynchronous I/O operations
+dev-util/strace:elfutils - Enable stack backtraces (-k flag) via dev-libs/elfutils
 dev-util/strace:unwind - Enable stack backtraces (-k flag) via sys-libs/libunwind
 dev-util/suse-build:symlink - Provide compatibility symlinks with original openSUSE package (might clash with other packages)
 dev-util/sysdig:modules - Build kernel modules needed for tracing local events. Disable this only if you intend to use sysdig purely to work with dumpfiles.
@@ -8685,8 +8686,6 @@ x11-libs/gtksourceview:glade - Install a glade catalog file
 x11-libs/libQGLViewer:designer - Installs dev-qt/designer plugin.
 x11-libs/libSM:uuid - Use UUID for session identification instead of IP address and system time.
 x11-libs/libXaw:deprecated - Install deprecated Xaw6 library.
-x11-libs/libXfont:bzip2 - Support bzip2 compressed PCF fonts.
-x11-libs/libXfont:truetype - Use media-libs/freetype for font rasterization.
 x11-libs/libXfont2:bzip2 - Support bzip2 compressed PCF fonts.
 x11-libs/libXfont2:truetype - Use media-libs/freetype for font rasterization.
 x11-libs/libaosd:pango - Enable the textual helpers (requires pangocairo).
