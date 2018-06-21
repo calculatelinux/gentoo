@@ -5051,12 +5051,13 @@ media-video/mpv:jpeg - Enable support for saving screenshots in JPEG format
 media-video/mpv:libass - Enable OSD (On Screen Display) and subtitles support via media-libs/libass
 media-video/mpv:libmpv - Build mpv shared library
 media-video/mpv:lua - Enable Lua scripting, OSC (On Screen Controller) GUI and net-misc/youtube-dl hook-script
-media-video/mpv:opengl - Enable the recommended 'opengl' video output
+media-video/mpv:opengl - Enable support for various OpenGL-based video backends
 media-video/mpv:raspberry-pi - Enable support for the Raspberry Pi
 media-video/mpv:rubberband - Enable high quality pitch correction via media-libs/rubberband
 media-video/mpv:sdl - Enable media-libs/libsdl2 based video and audio outputs (Note: these outputs exist for compatibility reasons only, avoid if possible)
 media-video/mpv:tools - Install extra tools: mpv_identify.sh, mpv_idet.sh, and umpv
 media-video/mpv:uchardet - Enable subtitles charset discovery via app-i18n/uchardet
+media-video/mpv:vulkan - Enable support for various Vulkan-based video backends
 media-video/noad:libmpeg2 - Support for libmpeg2 library
 media-video/nvidia-settings:gtk3 - Additionally build the GTK 3 library
 media-video/nvidia_video_sdk:tools - Build and install example tools.
@@ -7116,7 +7117,7 @@ sci-chemistry/pymol:web - Install Pymodule needed for web app support
 sci-chemistry/raster3d:gd - libgd support for PNG and JPEG output
 sci-chemistry/vmd:cuda - Use nvidia cuda toolkit for speeding up computations
 sci-chemistry/vmd:gromacs - Add support for TNG file format
-sci-chemistry/vmd:msms - Add support for MSMS SAS calcualtion tool
+sci-chemistry/vmd:msms - Add support for MSMS SES calcualtion tool
 sci-chemistry/vmd:povray - Add support for povray raytracer for HQ images
 sci-chemistry/vmd:tachyon - Add support for tachyon raytracer for HQ images
 sci-chemistry/votca-csg:extras - Pull in extra applications from sci-chemistry/votca-csgapps
@@ -8777,6 +8778,7 @@ x11-plugins/pidgin-sipe:ocs2005-message-hack - Disable message timeout for OCS20
 x11-plugins/pidgin-sipe:openssl - Enable crypto support via dev-libs/openssl
 x11-plugins/pidgin-sipe:telepathy - Support use as a telepathy backend
 x11-plugins/pidgin-sipe:voice - Enable experimental voice/video support
+x11-plugins/pidgin-telegram:gcrypt - Use dev-libs/libgcrypt instead of dev-libs/openssl.
 x11-plugins/purple-plugin_pack:talkfilters - Enable support for app-text/talkfilters
 x11-plugins/vicious:contrib - Install extra widgets, some for less common hardware, some contributed by Vicious users.
 x11-plugins/wmfire:session - Enable session management
