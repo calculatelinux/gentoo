@@ -29,6 +29,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Thomas Deutschmann <whissi@gentoo.org> (23 Jun 2018)
+# Doesn't pass QA full boot test
+=sys-kernel/ck-sources-4.16.17
+
+# Mike Auty <ikelos@gentoo.org> (22 Jun 2018)
+# Not maintained upstream, at least one bug and three upstream bugs
+# Removal in 30 days. Bug #658264
+dev-vcs/giggle
+
 # Matt Turner <mattst88@gentoo.org> (20 Jun 2018)
 # No reverse deps after removal of app-i18n/fbiterm
 # Removal in 30 days. Bug #658528
@@ -76,13 +85,6 @@ dev-java/jdom-jaxen
 # Fails to build, nothing requires it (#561366, #579600, #618936). Removal
 # in a month.
 net-misc/openvpn-auth-ldap
-
-# Pacho Ramos <pacho@gentoo.org> (17 Jun 2018)
-# Supposedly working with wxGTK:3.0 but with bugs that upstream never fixed,
-# this would be the last package still needing old wxGTK:2.8 to workaround
-# this bugs (#597194). Removal in a month except if someone figures out
-# about how to solve this bugs.
-net-p2p/amule
 
 # Pacho Ramos <pacho@gentoo.org> (17 Jun 2018)
 # Upstream dead for a long time, bug #606194. Removal in a month.
@@ -350,25 +352,6 @@ app-i18n/ibus-tutcode
 # x11-drivers/nvidia-drivers. Work in progress.
 media-libs/libglvnd
 
-# Andreas Sturmlechner <asturm@gentoo.org> (24 May 2018)
-# Depends on dead Qt4. Masked for removal in 30 days. Bug #629018
-dev-libs/libattica
-kde-frameworks/kdelibs
-kde-frameworks/kdelibs-env
-kde-plasma/qguiplatformplugin_kde
-
-# Joonas Niilola <juippis@gmail.com> (18 May 2018)
-# Unmaintained, bugs open without activity, makes users
-# install ancient version of enlightenment by typing
-# 'emerge enlightenment' due to obnoxious package slotting.
-# Bug #656020. Removal in ~30 days
-=x11-wm/enlightenment-1.0.17
-=x11-wm/enlightenment-0.16.9999
-app-doc/edox-data
-x11-misc/e16keyedit
-x11-misc/e16menuedit2
-x11-plugins/epplets
-
 # Andreas Sturmlechner <asturm@gentoo.org> (18 May 2018)
 # Breaking consumers by internal header cleanup and removal of deprecated
 # qt5_use_modules from Qt5CoreMacros.cmake. File bugs with fixes upstream
@@ -507,15 +490,6 @@ sys-libs/uclibc
 # Mask experimental software
 =mail-mta/postfix-3.4*
 
-# Thomas Deutschmann <whissi@gentoo.org> (07 Feb 2018)
-# Intel recommends to pull these versions because they could
-# cause higher than expected reboots and other unpredictable
-# system behavior. Bug #646646
-=sys-firmware/intel-microcode-20171117_p20171215
-=sys-firmware/intel-microcode-20171117_p20171215-r1
-=sys-firmware/intel-microcode-20180108
-=sys-firmware/intel-microcode-20180108-r1
-
 # Eray Aslan <eras@gentoo.org> (22 Jan 2018)
 # Vulnerable - see https://bugs.gentoo.org/630684
 # Please migrate to cyrus-imapd-3.0 releases
@@ -524,11 +498,6 @@ sys-libs/uclibc
 # Patrice Clement <monsieurp@gentoo.org> (18 Jan 2018)
 # mpv >= 0.28.0 requires currently masked ffmpeg >= 4.0.
 >=media-video/mpv-0.28.0
-
-# Matthias Maier <tamiko@gentoo.org> (26 Dec 2017)
-# gcc depends on mpfr and this version changes soname. Spare users with
-# FEATURES=-preserve-libs from completely frying their system.
->=dev-libs/mpfr-4.0.0
 
 # Thomas Beierlein <tomjbe@gentoo.org> (23 Dec 2017)
 # To adapt to changed version naming by upstream
