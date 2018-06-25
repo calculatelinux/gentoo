@@ -194,6 +194,10 @@ app-admin/yaala:storable - Support for persistence of Perl data structures.
 app-antivirus/clamav:clamdtop - A Top like tool which shows what clamd is currently scanning amongst other things
 app-antivirus/clamav:metadata-analysis-api - Enables collection of file property metadata using ClamAV API for analysis by ClamAV bytecode programs.
 app-antivirus/clamav:system-libmspack - Use system libmspack instead of built in
+app-antivirus/clamtk:kde - Install the Dolphin plugin.
+app-antivirus/clamtk:nautilus - Install the Nautilus plugin.
+app-antivirus/clamtk:nemo - Install the Nemo plugin.
+app-antivirus/clamtk:thunar - Install the Thunar plugin.
 app-arch/cabextract:extras - Install experimental extra tools: wince_info and wince_rename for examining and processing Windows CE installation cabinet header files; cabinfo for examining the structure of a cab file.
 app-arch/cfv:bittorrent - Enable support for checking .torrent files
 app-arch/deltarpm:system-zlib - Use system sys-libs/zlib. Do not enable features of rsync friendly.
@@ -1345,6 +1349,15 @@ dev-ada/gnatcoll-core:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/gnatcoll-core:gnat_2018 - Compile with dev-lang/gnat-gpl-2018
 dev-ada/gnatcoll-core:shared - Build shared library
 dev-ada/gnatcoll-core:static-pic - Build static library with pic code
+dev-ada/gnatcoll-db:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
+dev-ada/gnatcoll-db:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
+dev-ada/gnatcoll-db:gnat_2018 - Compile with dev-lang/gnat-gpl-2018
+dev-ada/gnatcoll-db:gnatcoll_db2ada - Build gnatcoll_db2ada
+dev-ada/gnatcoll-db:gnatinspect - Build gnatinspect
+dev-ada/gnatcoll-db:shared - Build shared library
+dev-ada/gnatcoll-db:sql - Build sql library
+dev-ada/gnatcoll-db:static-pic - Build shared library
+dev-ada/gnatcoll-db:xref - Build xref library
 dev-ada/gnatmem:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/gnatmem:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/gprbuild:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
@@ -2489,6 +2502,8 @@ dev-php/pecl-mysqlnd_qc:sqlite - Use dev-db/sqlite as a storage handler
 dev-php/pecl-redis:igbinary - Enables igbinary serialisation support
 dev-php/pecl-zmq:czmq - Use the czmq high level bindings
 dev-php/phing:zip - Support zip archives by requiring said support in dev-lang/php.
+dev-php/swoole:http2 - Add support for HTTP/2 protocol via net-libs/nghttp2
+dev-php/swoole:redis - Add support for redis via dev-libs/hiredis
 dev-php/twig:extension - Build the C extension (only for php-5.6.x).
 dev-php/xcache:coverage - Enable the coverager module (not recommended for production servers).
 dev-python/Kivy:camera - Install libraries needed to support camera
@@ -4789,7 +4804,7 @@ media-sound/supercollider:gedit - Enable the SCED user interface
 media-sound/supercollider:gpl3 - Build GPL-3 licensed code (recommended)
 media-sound/supercollider:server - Build with internal server
 media-sound/supercollider:vim - Enable the SCVIM user interface
-media-sound/teamspeak-server-bin:tsdns - Install TeamSpeaks own DNS service.
+media-sound/teamspeak-server:tsdns - Install TeamSpeaks own DNS service.
 media-sound/tomahawk:hatchet - Enable support for the synchronisation through Hatchet
 media-sound/tomahawk:telepathy - Enable support for the real-time communication framework telepathy
 media-sound/traverso:lv2 - Add support for Ladspa V2
@@ -6521,6 +6536,7 @@ net-misc/networkmanager:resolvconf - Use net-dns/openresolv for managing DNS inf
 net-misc/networkmanager:teamd - Enable Teamd control support
 net-misc/networkmanager:wext - Enable support for the deprecated Wext (Wireless Extensions) API; needed for some older drivers (e.g. ipw2200, ndiswrapper)
 net-misc/networkmanager:wifi - Enable support for wifi and 802.1x security using net-wireless/wpa_supplicant
+net-misc/networkmanager-strongswan:glib - Enable libnm-glib compatibility.
 net-misc/nextcloud-client:dolphin - Install the kde-apps/dolphin extension
 net-misc/nextcloud-client:nautilus - Install the gnome-base/nautilus extension
 net-misc/nextcloud-client:sftp - Enable sftp transfer support via net-libs/libssh
@@ -7225,6 +7241,7 @@ sci-geosciences/qgis:georeferencer - Determines whether georeferencer plugin sho
 sci-geosciences/qgis:grass - Add support for sci-geosciences/grass
 sci-geosciences/qgis:mapserver - Determines whether mapserver should be built
 sci-geosciences/qgis:polar - Enable support for the polar coordinate system via x11-libs/qwtpolar
+sci-geosciences/qgis:qml - Enable support Qml-based plugins using dev-qt/qtdeclarative
 sci-geosciences/viking:libexif - Use media-libs/libexif for EXIF support
 sci-geosciences/viking:magic - Use libmagic to determine mimetypes
 sci-geosciences/viking:mapnik - Enable a layer based on sci-geosciences/mapnik
@@ -8836,7 +8853,7 @@ x11-terms/gnome-terminal:gnome-shell - Integrate with gnome-base/gnome-shell sea
 x11-terms/gnome-terminal:nautilus - Build gnome-base/nautilus extension
 x11-terms/kitty:imagemagick - Support displaying images in the terminal with icat
 x11-terms/mate-terminal:gtk3 - Build with GTK+3 instead of GTK+2
-x11-terms/mlterm:brltty - Enable support for app-accessibilty/brltty
+x11-terms/mlterm:brltty - Enable support for app-accessibility/brltty
 x11-terms/mlterm:fcitx - Enable support for app-i18n/fcitx
 x11-terms/mlterm:gtk2 - Build with x11-libs/gtk+:2 instead of x11-libs/gtk+:3
 x11-terms/mlterm:harfbuzz - Enable support for OpenType Layout (media-libs/harfbuzz)
