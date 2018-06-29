@@ -45,6 +45,8 @@ S="${WORKDIR}/${MY_P}"
 
 PATCHES=(
 	"${FILESDIR}"/pillow-4.3.0-no-scripts.patch
+	# can be removed at v5, patch already uptream. See bug 593816.
+	"${FILESDIR}"/pillow-4.3.0-freetype2.9-test-metrics.patch
 )
 
 python_compile() {
