@@ -1359,6 +1359,7 @@ dev-ada/gnatcoll-db:static-pic - Build shared library
 dev-ada/gnatcoll-db:xref - Build xref library
 dev-ada/gnatmem:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/gnatmem:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
+dev-ada/gnatmem:gnat_2018 - Compile with dev-lang/gnat-gpl-2018
 dev-ada/gprbuild:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/gprbuild:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/gprbuild:gnat_2018 - Compile with dev-lang/gnat-gpl-2018
@@ -7651,6 +7652,7 @@ sys-apps/flashrom:bitbang_spi - Bitbanging SPI infrastructure
 sys-apps/flashrom:buspirate_spi - Enable Bus Pirate SPI programmer
 sys-apps/flashrom:ch341a_spi - Enable WCH CH341A SPI programmer
 sys-apps/flashrom:dediprog - Dediprog SF100 support
+sys-apps/flashrom:digilent_spi - Enable support for Digilent iCEblink40 development board
 sys-apps/flashrom:drkaiser - Enable Dr. Kaiser programmer
 sys-apps/flashrom:dummy - Enable dummy tracing
 sys-apps/flashrom:ft2232_spi - Enable ftdi programmer, flashing through FTDI/SPI USB interface
