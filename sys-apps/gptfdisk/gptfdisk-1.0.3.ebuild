@@ -11,19 +11,22 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="kernel_linux ncurses static"
 
 # libuuid from util-linux is required.
-LIB_DEPEND="
-	dev-libs/popt[static-libs(+)]
-	ncurses? ( >=sys-libs/ncurses-5.7-r7:0=[unicode,static-libs(+)] )
-	kernel_linux? ( sys-apps/util-linux[static-libs(+)] )
-"
-RDEPEND="!static? ( ${LIB_DEPEND//,static-libs(+)} )"
+RDEPEND="!static? (
+		dev-libs/popt
+		ncurses? ( >=sys-libs/ncurses-5.7-r7:0=[unicode] )
+		kernel_linux? ( sys-apps/util-linux )
+	)"
 DEPEND="
 	${RDEPEND}
-	static? ( ${LIB_DEPEND} )
+	static? (
+		dev-libs/popt[static-libs(+)]
+		ncurses? ( >=sys-libs/ncurses-5.7-r7:0=[unicode,static-libs(+)] )
+		kernel_linux? ( sys-apps/util-linux[static-libs(+)] )
+	)
 	virtual/pkgconfig
 "
 

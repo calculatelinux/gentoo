@@ -990,9 +990,7 @@ app-misc/lirc:devinput - Support the devinput input device
 app-misc/lirc:ftdi - Support FTDI devices
 app-misc/lirc:gtk - Include GTK support which enables the use of lirc-setup
 app-misc/lirc:hardware-carrier - The transmitter device generates its clock signal in hardware
-app-misc/lirc:iguanair - Support iguanaIR devices
 app-misc/lirc:inputlirc - Add a dependency on app-misc/inputlircd
-app-misc/lirc:irman - Add a dependency on media-libs/libirman
 app-misc/lirc:transmitter - Add transmitter support to some lirc-drivers (e.g. serial)
 app-misc/lirc:uinput - Enable support for uinput
 app-misc/mc:edit - Compile and install the mcedit application
@@ -4733,6 +4731,7 @@ media-sound/mpfc:wav - Enable wav audio codec support
 media-sound/mpg123:int-quality - Use rounding instead of fast truncation for integer output, where possible
 media-sound/mumble:g15 - Enable support for the Logitech G15 LCD (and compatible devices).
 media-sound/mumble:opus - Enable Opus codec support via media-libs/opus.
+media-sound/mumble:rnnoise - Enable alternative noise suppression option based on RNNoise.
 media-sound/mumble:speech - Enable text-to-speech support in Mumble.
 media-sound/murmur:ice - Use dev-libs/Ice to enable remote control capabilities.
 media-sound/musescore:portmidi - Enable support for building against media-libs/portmidi
@@ -7737,6 +7736,7 @@ sys-apps/iproute2:elf - support loading eBPF programs from ELFs (e.g. LLVM's eBP
 sys-apps/iproute2:iptables - include support for iptables filtering
 sys-apps/iproute2:minimal - only install ip and tc programs, without eBPF support
 sys-apps/irqbalance:numa - Support balancing IRQs across NUMA nodes
+sys-apps/irqbalance:tui - Enable build of irqbalance terminal user interface
 sys-apps/kexec-tools:booke - Include support for Book-E memory management
 sys-apps/kexec-tools:lzma - Enables support for LZMA compressed kernel images
 sys-apps/kexec-tools:xen - Enable extended xen support
