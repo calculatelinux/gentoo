@@ -29,6 +29,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Jonas Stein <jstein@gentoo.org> (10 Jul 2018)
+# Package is not maintained, has a broken SRC_URI and 
+# we may not mirror the files.
+# Removal on (10 Aug 2018) Bug #660750
+media-sound/neroaac
+
 # Kent Fredric <kentnl@gentoo.org> (10 Jul 2018)
 # Perl 5.28 Staging block
 =dev-lang/perl-5.28.0
@@ -79,6 +85,12 @@
 =virtual/perl-threads-shared-1.580.0
 =virtual/perl-threads-2.220.0
 =virtual/perl-version-0.992.300
+
+# Andreas Schuerch <nativemad@gentoo.org> (10 Jul 2018)
+# Packages have open bugs and mayor component is not working since years
+# Removal in 30 days. Bug 608540
+net-misc/guacamole-server
+www-apps/guacamole
 
 # Aaron W. Swenson <titanofold@gentoo.org> (9 Jul 2018)
 # Hasn’t been updated in years, upstream’s download source is blank, and depends
@@ -423,11 +435,6 @@ media-plugins/gst-plugins-schroedinger
 # Mask new php pre-releases for initial testing
 dev-lang/php:7.3
 virtual/httpd-php:7.3
-
-# Andreas Sturmlechner <asturm@gentoo.org> (10 Jun 2018)
-# Dead upstream, no more revdeps after LO dropped support.
-# Masked for removal in 30 days, bug #657400
-media-libs/libgltf
 
 # Mike Pagano <mpagano@gentoo.org> (30 May 2018)
 # Masking due to bad commit in the networking stack.

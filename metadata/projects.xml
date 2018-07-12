@@ -224,11 +224,6 @@
     <url>https://wiki.gentoo.org/wiki/Project:Artwork</url>
     <description>The Artwork project manages Gentoo artwork and related assets. This includes wallpapers, logos, themes, icons sets, etc.</description>
     <member>
-      <email>a3li@gentoo.org</email>
-      <name>Alex Legler</name>
-      <role>Developer</role>
-    </member>
-    <member>
       <email>alicef@gentoo.org</email>
       <name>Alice Ferrazzi</name>
       <role>Developer</role>
@@ -1697,11 +1692,6 @@
     <subproject ref="github@gentoo.org"/>
     <subproject ref="overlays@gentoo.org"/>
     <member>
-      <email>a3li@gentoo.org</email>
-      <name>Alex Legler</name>
-      <role>General system administration, Wiki, Security</role>
-    </member>
-    <member>
       <email>alicef@gentoo.org</email>
       <name>Alice Ferrazzi</name>
       <role>General system administration, Kernel, gitolite, wiki</role>
@@ -2451,11 +2441,6 @@ developers and volunteer mentors.</description>
     <url>https://wiki.gentoo.org/wiki/Project:Ops</url>
     <description>The &lt;span style="font-family: monospace; font-size: 95%;"&gt;[irc://irc.gentoo.org/gentoo #gentoo]&lt;/span&gt; Operators project describes the tasks and policies carried out by the operators of the #gentoo channel on the Freenode network.</description>
     <member>
-      <email>a3li@gentoo.org</email>
-      <name>Alex Legler</name>
-      <role>Operator</role>
-    </member>
-    <member>
       <email>blackace@gentoo.org</email>
       <name>Matt Kasa</name>
       <role>Operator</role>
@@ -3020,11 +3005,6 @@ developers and volunteer mentors.</description>
     <subproject ref="planet@gentoo.org"/>
     <subproject ref="www@gentoo.org"/>
     <member>
-      <email>a3li@gentoo.org</email>
-      <name>Alex Legler</name>
-      <role>Twitter</role>
-    </member>
-    <member>
       <email>alicef@gentoo.org</email>
       <name>Alice Ferrazzi</name>
       <role>Facebook (admin), G+ (owner), Twitter, Events, Telegram (admin), Slack (admin)</role>
@@ -3394,11 +3374,6 @@ developers and volunteer mentors.</description>
     <name>Gentoo Ruby Project</name>
     <url>https://wiki.gentoo.org/wiki/Project:Ruby</url>
     <description>The Ruby project maintains packages for Ruby implementations, libraries and development tools. This project also maintains the RubyGems package, the de facto standard for packaging Ruby projects.</description>
-    <member>
-      <email>a3li@gentoo.org</email>
-      <name>Alex Legler</name>
-      <role>Developer</role>
-    </member>
     <member is-lead="1">
       <email>graaff@gentoo.org</email>
       <name>Hans de Graaff</name>
@@ -3642,11 +3617,6 @@ developers and volunteer mentors.</description>
     <description>The Gentoo Security Project's mission is to ensure that vulnerabilities in software accessible through the Portage tree are found and fixed in a timely manner, so that our users remain protected against known vulnerabilities.</description>
     <subproject ref="security-audit@gentoo.org"/>
     <subproject ref="security-kernel@gentoo.org"/>
-    <member>
-      <email>a3li@gentoo.org</email>
-      <name>Alex Legler</name>
-      <role>GLSA Coordinator</role>
-    </member>
     <member>
       <email>ackle@gentoo.org</email>
       <name>Sean Amoss</name>
@@ -4141,9 +4111,9 @@ developers and volunteer mentors.</description>
     <name>Website maintainers</name>
     <url>https://wiki.gentoo.org/wiki/Project:Website</url>
     <description>The Website team maintains the Gentoo website and develops new sites for the community.</description>
-    <member is-lead="1">
-      <email>a3li@gentoo.org</email>
-      <name>Alex Legler</name>
+    <member>
+      <email>chrisadr@gentoo.org</email>
+      <name>Christopher Díaz Riveros</name>
     </member>
     <member>
       <email>dilfridge@gentoo.org</email>
@@ -4164,11 +4134,6 @@ developers and volunteer mentors.</description>
     <name>Wiki</name>
     <url>https://wiki.gentoo.org/wiki/Project:Wiki</url>
     <description>The wiki project oversees the community and the content surrounding wiki.gentoo.org</description>
-    <member>
-      <email>a3li@gentoo.org</email>
-      <name>Alex Legler</name>
-      <role>Administrator</role>
-    </member>
     <member>
       <email>creffett@gentoo.org</email>
       <name>Chris Reffett</name>
