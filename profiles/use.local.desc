@@ -2050,6 +2050,7 @@ dev-lang/rust:extended - Build and install rls, rustfmt and cargo alongside the 
 dev-lang/rust:jemalloc - Use dev-libs/jemalloc as the standard memory allocator
 dev-lang/rust:wasm - Build support for the wasm32-unknown-unknown target
 dev-lang/rust-bin:cargo - Install cargo component
+dev-lang/rust-bin:rustfmt - Install rustfmt component
 dev-lang/scala:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
 dev-lang/smlnj:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
 dev-lang/spidermonkey:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
@@ -3230,6 +3231,7 @@ games-emulation/dolphin:lto - Add support for link-time optimizations.
 games-emulation/dosbox:glide - Enable unofficial Glide emulation via media-libs/openglide
 games-emulation/fceux:logo - Enable the ability to add a logo screen when creating AVIs
 games-emulation/generator:sdlaudio - Enable SDL Audio
+games-emulation/hatari:sdl2 - Use libsdl2 instead of libsdl
 games-emulation/higan:icarus - Build icarus library manager
 games-emulation/higan:udev - Enable udev based input
 games-emulation/m64py:7z - Ensure support for .7z archives.
@@ -3599,7 +3601,6 @@ kde-apps/kopete:translator - Translate incoming and outgoing messages.
 kde-apps/kopete:urlpicpreview - Enables in conversation pictures preview.
 kde-apps/kopete:webpresence - Show your status and some more information on web.
 kde-apps/kopete:winpopup - Enable pop-up messages sending on windows. (same as good old "net send" messages ;])
-kde-apps/kopete:yahoo - Enable yahoo protocol support.
 kde-apps/kopete:zeroconf - Enable Link-Local Messaging via the bonjour protocol.
 kde-apps/kpimtextedit:designer - Build plugins for dev-qt/designer
 kde-apps/kpimtextedit:speech - Enable text-to-speech support
@@ -4787,6 +4788,10 @@ media-sound/pulseaudio:ssl - Use dev-libs/openssl to provide support for RAOP (A
 media-sound/pulseaudio:system-wide - Allow preparation and installation of the system-wide init script for PulseAudio. Since this support is only supported for embedded situations, do not enable without reading the upstream instructions at https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/WhatIsWrongWithSystemWide/ .
 media-sound/pulseaudio:systemd - Build with sys-apps/systemd support to replace standalone ConsoleKit.
 media-sound/pulseaudio:webrtc-aec - Uses the webrtc.org AudioProcessing library for enhancing VoIP calls greatly in applications that support it by performing acoustic echo cancellation, analog gain control, noise suppression and other processing.
+media-sound/pulseeffects:bs2b - Enable use of media-libs/libbs2b
+media-sound/pulseeffects:calf - Enable use of media-plugins/calf for adding various FX
+media-sound/pulseeffects:mda-lv2 - Enable use of media-plugins/mda-lv2 for the loudness FX
+media-sound/pulseeffects:rubberband - Enable usse of media-libs/rubberband for the pitch shifting FX
 media-sound/qmidiarp:lv2 - Enables Ladspa V2 plugins.
 media-sound/qmmp:analyzer - Enable visual analyzer
 media-sound/qmmp:archive - Enable archiving plugin via app-arch/libarchive.
@@ -5151,12 +5156,15 @@ media-video/mpv:sdl - Enable media-libs/libsdl2 based video and audio outputs (N
 media-video/mpv:tools - Install extra tools: mpv_identify.sh, mpv_idet.sh, and umpv
 media-video/mpv:uchardet - Enable subtitles charset discovery via app-i18n/uchardet
 media-video/mpv:vulkan - Enable support for various Vulkan-based video backends
-media-video/noad:libmpeg2 - Support for libmpeg2 library
+media-video/noad:libmpeg2 - Build support for mpeg2 over media-libs/libmpeg2 rather than using ffmpeg
 media-video/nvidia-settings:gtk3 - Additionally build the GTK 3 library
 media-video/nvidia_video_sdk:tools - Build and install example tools.
 media-video/obs-studio:fdk - Enable libfdk support for AAC encoding.
 media-video/obs-studio:imagemagick - Use ImageMagick for image loading instead of FFmpeg.
-media-video/obs-studio:nvenc - Enable NVENC encoding for nVidia video cards
+media-video/obs-studio:luajit - Build support for scripting via Luajit.
+media-video/obs-studio:nvenc - Enable NVENC encoding for nVidia video cards.
+media-video/obs-studio:python - Build support for scripting via Python 3.
+media-video/obs-studio:speexdsp - Enable noise suppression filter support via media-libs/speexdsp.
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/orion:mpv - Use the media-video/mpv player (upstream default) instead of the dev-qt/qtmultimedia one
@@ -7331,6 +7339,7 @@ sci-libs/coinor-utils:glpk - Enable GNU Linear Programming Kit sci-mathematics/g
 sci-libs/dlib:cblas - Build with CBLAS virtual/cblas
 sci-libs/dlib:cuda - Enable support for CUDA for Deep Neural Networks (cuDNN) on GPU (experimental)
 sci-libs/dlib:mkl - Enable support for Intel FFT sci-libs/mkl
+sci-libs/dlib:python - Enable support for Python API bindings
 sci-libs/dmlc-core:s3 - Support for the Amazon Simple Storage Service
 sci-libs/fftw:float - Link default library to single precision instead of double (symlinks only and fftw-2.1)
 sci-libs/fftw:quad - Build quadruple precision lib
@@ -7718,6 +7727,7 @@ sys-apps/fwupd:dell - Enable Dell-specific support.
 sys-apps/fwupd:gpg - Enable GPG support.
 sys-apps/fwupd:man - Build and install man pages
 sys-apps/fwupd:pkcs7 - Enable PKCS7 verification support via net-libs/gnutls.
+sys-apps/fwupd:redfish - Install redfish plugin
 sys-apps/fwupd:uefi - Enable UEFI support
 sys-apps/fwupd:uefi_labels - Enable UEFI labels support
 sys-apps/gawk:forced-sandbox - Always enable --sandbox mode for simpler/secure runtime (disables e/r/w commands)
@@ -8515,6 +8525,7 @@ www-apps/drupal:uploadprogress - Install dev-php/pecl-uploadprogress package
 www-apps/gitit:network-uri - Get Network.URI from the network-uri package.
 www-apps/gitit:plugins - enables optional plugin runtime loader
 www-apps/guacamole:noauth - enable support for leaving out any authentication on the webinterface
+www-apps/hugo:sass - Enable SASS/SCSS support
 www-apps/icingaweb2:nginx - Adds support for nginx
 www-apps/ikiwiki:extras - Installs additional modules used by ikiwiki plugins
 www-apps/klaus:ctags - Enable support for Exuberant ctags; makes all source code symbols hyperlinks to their definitions
@@ -8528,6 +8539,21 @@ www-apps/nikola:watchdog - Use dev-python/watchdog to monitor file system events
 www-apps/nikola:webmedia - Use dev-python/micawber to extract metadata from web media links
 www-apps/nikola:websocket - Add websocket support thru dev-python/ws4py
 www-apps/otrs:mod_perl - Provide all dependencies for use of mod_perl instead of cgi
+www-apps/phpsysinfo:apcupsd - Install sys-power/apcupsd to display those stats.
+www-apps/phpsysinfo:dmraid - Install sys-fs/dmraid to display those stats.
+www-apps/phpsysinfo:freeipmi - Install sys-libs/freeipmi to display those stats.
+www-apps/phpsysinfo:hddtemp - Install app-admin/hddtemp to display those stats.
+www-apps/phpsysinfo:ipmitool - Install sys-apps/ipmitool to display those stats.
+www-apps/phpsysinfo:ipmiutil - Install sys-apps/ipmiutil to display those stats.
+www-apps/phpsysinfo:iptables - Install net-firewall/iptables to display those stats.
+www-apps/phpsysinfo:lm_sensors - Install sys-apps/lm_sensors to display those stats.
+www-apps/phpsysinfo:mdadm - Install sys-fs/mdadm to display those stats.
+www-apps/phpsysinfo:megactl - Install sys-block/megactl to display those stats.
+www-apps/phpsysinfo:nut - Install sys-power/nut to display those stats.
+www-apps/phpsysinfo:quota - Install sys-fs/quota to display those stats.
+www-apps/phpsysinfo:smart - Install sys-apps/smartmontools to display those stats.
+www-apps/phpsysinfo:snmp - Install net-analyzer/net-snmp to display those stats.
+www-apps/phpsysinfo:uptime - Install app-misc/uptimed to display those stats.
 www-apps/postfixadmin:vacation - Install vacation.pl script and dependencies
 www-apps/radicale:bcrypt - Depend on passlib to enable bcrypt and md5 authentication methods
 www-apps/redmine:markdown - Enable support for Markdown

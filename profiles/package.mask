@@ -29,6 +29,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Corentin Pazdera <nado@troglodyte.be> (12 Jul 2018)
+# Pulseeffects depends on atoms only found in gnome overlay
+=media-sound/pulseeffects-9999
+=media-sound/pulseeffects-4.1.3
+
+# Michał Górny <mgorny@gentoo.org> (12 Jul 2018)
+# Abandoned upstream, no reverse dependencies.  Collides with
+# dev-python/promises (that has revdeps).
+# Removal in 30 days.  Bug #651156.
+dev-python/promise
+
 # Jonas Stein <jstein@gentoo.org> (10 Jul 2018)
 # Package is not maintained, has a broken SRC_URI and 
 # we may not mirror the files.
@@ -279,10 +290,6 @@ games-strategy/gorky17-demo
 # Dead since 2013, not compatible with latest profiles (#642568). Removal in
 # a month
 net-vpn/miredo
-
-# Pacho Ramos <pacho@gentoo.org> (17 Jun 2018)
-# Fails to build (#642996). Removal in a month.
-games-engines/gargoyle
 
 # Pacho Ramos <pacho@gentoo.org> (17 Jun 2018)
 # Fails to compile (#648430), crashes from time to time (#222065). Removal
