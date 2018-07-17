@@ -3,7 +3,7 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python2_7 python3_{4,5,6} pypy )
+PYTHON_COMPAT=( python2_7 python3_{4,5,6,7} pypy )
 
 inherit distutils-r1 eutils toolchain-funcs
 
@@ -34,7 +34,11 @@ PATCHES=(
 
 python_prepare_all() {
 	# avoid replacing PYTHONPATH in tests.
-	sed -i '/sys\.path/d' test.py || die
+	sed -i -e '/sys\.path/d' test.py || die
+
+	# apparently logs have changed with libxslt upgrade
+	# https://bugs.launchpad.net/lxml/+bug/1782078
+	sed -i -e '/assertEqual(4, len(log)/d' src/lxml/tests/test_threading.py || die
 
 	distutils-r1_python_prepare_all
 }
