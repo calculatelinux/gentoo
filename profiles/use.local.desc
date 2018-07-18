@@ -7491,6 +7491,7 @@ sci-mathematics/cgal:ntl - Enable support for dev-libs/ntl
 sci-mathematics/coq:camlp5 - Build using camlp5. This is required for some plugins like Ssreflect.
 sci-mathematics/cvc3:isabelle - Add integration support for the Isabelle/HOL theorem prover.
 sci-mathematics/cvc3:zchaff - Use the SAT solver zchaff whose copyright is owned by Princeton University and is more restrictive (see zchaff license).
+sci-mathematics/cvc4:cln - Use sci-libs/cln
 sci-mathematics/e:isabelle - Add integration support for the Isabelle/HOL theorem prover.
 sci-mathematics/flint:gc - Enable garbage collection support via dev-libs/boehm-gc
 sci-mathematics/flint:ntl - Build NTL interface
