@@ -464,7 +464,9 @@ app-emulation/bochs:debugger - Enable debugger (slows down emulation)
 app-emulation/bochs:gdb - Enable support for the remote GDB stub
 app-emulation/bochs:x86-64 - Enable support for emulation of 64-bit CPUs
 app-emulation/buildah:ostree - Enables dependencies for handling of OSTree images.
+app-emulation/containerd:apparmor - Support for AppArmor
 app-emulation/containerd:btrfs - Support for BTRFS snapshot driver
+app-emulation/containerd:cri - Support for Kubernetes CRI
 app-emulation/cri-o:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
 app-emulation/cri-o:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
 app-emulation/cri-o:ostree - Enables dependencies for handling of OSTree images.
@@ -8034,6 +8036,7 @@ sys-cluster/legion:gasnet - Enable GASNet lib support
 sys-cluster/legion:hwloc - Enable HWLoc lib support
 sys-cluster/maui:pbs - Enable pbs integration
 sys-cluster/maui:slurm - Enable slurm integration
+sys-cluster/minikube:libvirt - Build plugin for kvm
 sys-cluster/moosefs:cgi - Install CGI server and scripts.
 sys-cluster/moosefs:fuse - Install the mfsmount utility.
 sys-cluster/mpich:mpi-threads - Enable MPI_THREAD_MULTIPLE
