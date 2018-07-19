@@ -624,6 +624,7 @@ app-emulation/virt-viewer:vnc - Support connecting to VNC-enabled virtual machin
 app-emulation/virt-what:dmi - Use sys-apps/dmidecode to read firmware data
 app-emulation/virtualbox:headless - Build without any graphic frontend
 app-emulation/virtualbox:lvm - Build VBoxVolInfo that needs devicemapper from sys-fs/lvm2.
+app-emulation/virtualbox:opus - Adds support for the Opus codec via media-libs/opus
 app-emulation/virtualbox:pax_kernel - Apply patch needed for pax enabled kernels.
 app-emulation/virtualbox:sdk - Enable building of SDK
 app-emulation/virtualbox:udev - Controls installation of special USB udev rules.
@@ -2642,7 +2643,10 @@ dev-python/mpmath:matplotlib - Add support for dev-python/matplotlib
 dev-python/msgpack:native-extensions - Compiles native "C" extensions (speedups, instead of using python fallback code).
 dev-python/nbdime:webtools - Install web-based diff and merge tools.
 dev-python/netaddr:cli - Enable netaddr shell with dev-python/ipython
+dev-python/networkx:extras - Provide graph drawing and graph layout algorithms along with shapefile format reading and writing
+dev-python/networkx:pandas - Provides a DataFrame, which is a tabular data structure with labeled axes
 dev-python/networkx:scipy - Enables scipy backend
+dev-python/networkx:yaml - Provides YAML format reading and writing
 dev-python/nltk:numpy - Use numpy for the saved word tokenizer
 dev-python/numexpr:mkl - Enable support for Intel Vector Math Library, part of sci-libs/mkl.
 dev-python/pandas:full-support - Pull all packages to give pandas full support
