@@ -29,6 +29,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Virgil Dupras <vdupras@gentoo.org> (22 Jul 2018)
+# Depends on an unsupported version of django (1.8, will be removed soon) and
+# is rendered obsolete by the direct inclusion of django support in
+# >=dev-python/celery-4.0. Removal in 30 days. Bug #661804
+dev-python/django-celery
+
 # Mart Raudsepp <leio@gentoo.org> (16 Jul 2018)
 # Obsolete early GNOME 2 era print libraries. Applications
 # use printing support found directly in x11-libs/gtk+ now.
@@ -200,12 +206,6 @@ app-i18n/qimhangul
 # Thomas Deutschmann <whissi@gentoo.org> (23 Jun 2018)
 # Doesn't pass QA full boot test
 =sys-kernel/ck-sources-4.16.17
-
-# Mike Auty <ikelos@gentoo.org> (22 Jun 2018)
-# Not maintained upstream, at least one bug and three upstream bugs
-# Alternatives include gitg and git-cola.
-# Removal in 30 days. Bug #658264
-dev-vcs/giggle
 
 # Matt Turner <mattst88@gentoo.org> (20 Jun 2018)
 # No reverse deps after removal of app-i18n/fbiterm
@@ -865,19 +865,6 @@ dev-java/jcs
 # Keep it masked until they are done. sys-fs/duperemove is
 # the suggested replacement for the meantime.
 sys-fs/bedup
-
-# Justin Lecher <jlec@gentoo.org> (28 Feb 2015)
-# Unfixed security problems
-# No upstream support anymore
-# CVE-2015-{0219,0220,0221,0222,5145}
-# CVE-2016-{9013,9014},CVE-2017-{7233,7234}
-# #536586
-# #554864
-=dev-python/django-1.4*
-=dev-python/django-1.5*
-=dev-python/django-1.6*
-=dev-python/django-1.7*
-=dev-python/django-1.9*
 
 # Robin H. Johnson <robbat2@gentoo.org> (04 Aug 2014)
 # Masked for testing, presently fails upstream testsuite:
