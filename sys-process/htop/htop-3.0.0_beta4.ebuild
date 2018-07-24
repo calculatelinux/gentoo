@@ -3,9 +3,9 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python2_7 python3_{4,5,6} )
+PYTHON_COMPAT=( python2_7 python3_{4,5,6,7} )
 
-inherit autotools linux-info python-single-r1
+inherit autotools linux-info python-any-r1
 
 DESCRIPTION="interactive process viewer"
 HOMEPAGE="https://hisham.hm/htop/"
@@ -25,8 +25,6 @@ DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	virtual/pkgconfig"
 
-REQUIRED_USE=${PYTHON_REQUIRED_USE}
-
 DOCS=( ChangeLog README )
 
 CONFIG_CHECK="~TASKSTATS ~TASK_XACCT ~TASK_IO_ACCOUNTING ~CGROUPS"
@@ -39,11 +37,11 @@ PATCHES=(
 
 pkg_setup() {
 	if ! has_version sys-process/lsof; then
-		ewarn "To use lsof features in htop(what processes are accessing"
+		ewarn "To use lsof features in htop (what processes are accessing"
 		ewarn "what files), you must have sys-process/lsof installed."
 	fi
 
-	python-single-r1_pkg_setup
+	python-any-r1_pkg_setup
 	linux-info_pkg_setup
 }
 
