@@ -16,13 +16,19 @@ DESCRIPTION="Capybara aims to simplify the process of integration testing Rack a
 HOMEPAGE="https://github.com/jnicklas/capybara"
 LICENSE="MIT"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 SLOT="3"
 IUSE="test"
 
 DEPEND="${DEPEND} test? ( www-client/firefox )"
 
-ruby_add_bdepend "test? ( dev-ruby/rspec:3 dev-ruby/launchy >=dev-ruby/selenium-webdriver-2.0 dev-ruby/sinatra:2 )"
+ruby_add_bdepend "test? (
+	dev-ruby/rspec:3
+	>=dev-ruby/launchy-2.4.0
+	>=dev-ruby/selenium-webdriver-3.5:3
+	dev-ruby/sinatra:2
+	www-servers/puma
+)"
 
 ruby_add_rdepend "
 	dev-ruby/addressable

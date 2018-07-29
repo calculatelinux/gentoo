@@ -96,7 +96,7 @@ app-admin/pass:dmenu - Add support for x11-misc/dmenu with the 'passmenu' progra
 app-admin/pass:fish-completion - Enable fish completion support.
 app-admin/pass:git - Use dev-vcs/git for password revisions.
 app-admin/pass:importers - Allow importing passwords from other password managers using various contributed scripts.
-app-admin/pass-otp:qrcode - Add support for qtcodes using media-gfx/qrencode
+app-admin/pass-otp:qrcode - Add support for qrcodes using media-gfx/qrencode
 app-admin/passwordsafe:minimal - Avoid collision with app-misc/pwsafe
 app-admin/passwordsafe:qr - Enable QR code password display
 app-admin/passwordsafe:xml - Enable XML import support
@@ -813,6 +813,7 @@ app-i18n/mozc:renderer - Enable native candidate window
 app-i18n/pyzy:boost - Enable support for dev-libs/boost
 app-i18n/pyzy:doc - Generate API documentation
 app-i18n/pyzy:opencc - Enable support for app-i18n/opencc
+app-i18n/rime-data:extra - Install extra packages
 app-i18n/scim:gtk3 - Enable support for x11-libs/gtk+:3
 app-i18n/scim-anthy:gtk3 - Enable support for x11-libs/gtk+:3
 app-i18n/scim-anthy:kasumi - Use Anthy dictionary maintenance tool (app-dicts/kasumi)
@@ -1027,6 +1028,7 @@ app-misc/screenfetch:X - Use the media-gfx/scrot package to take screenshots
 app-misc/skim:tmux - Install sk-tmux script to run skim in a tmux pane
 app-misc/skim:vim - Install vim plugin for skim
 app-misc/sphinx:id64 - use 64-bit document and word IDs
+app-misc/sphinx:mariadb - Add mariadb database support
 app-misc/sphinx:re2 - use the dev-libs/re2 regular expression library
 app-misc/sphinx:stemmer - Enable language stemming support
 app-misc/task:sync - Enable "task sync" support
@@ -2072,24 +2074,6 @@ dev-lang/swi-prolog:uuid - Use ossp-uuid for UUID pack
 dev-lang/swi-prolog:yaml - Use libyaml for YAML pack
 dev-lang/swig:ccache - build ccache-swig(a fast compiler cache)
 dev-lang/yap:R - Enable support for connecting R to Prolog
-dev-libs/DirectFB:bmp - build BMP image provider
-dev-libs/DirectFB:divine - enable DiVine
-dev-libs/DirectFB:drmkms - build with DRM/KMS support
-dev-libs/DirectFB:dynload - enable dynload support
-dev-libs/DirectFB:egl - build with EGL support
-dev-libs/DirectFB:fusiondale - enable FusionDale
-dev-libs/DirectFB:fusionsound - enable FusionSound
-dev-libs/DirectFB:gles2 - build gles2 gfxdriver
-dev-libs/DirectFB:imlib2 - build Imlib2 image provider
-dev-libs/DirectFB:input_hub - provides an asynchronous interface to the input devices available and those being added/removed
-dev-libs/DirectFB:mpeg2 - build MPEG2 image provider
-dev-libs/DirectFB:mpeg3 - build Libmpeg3 video provider
-dev-libs/DirectFB:multicore - enable multicore support
-dev-libs/DirectFB:pnm - build PNM (PBM/PGM/PPM) image provider
-dev-libs/DirectFB:sawman - enable SaWMan (window manager and application manager)
-dev-libs/DirectFB:swfdec - build Swfdec (Flash decoder) video provider
-dev-libs/DirectFB:tremor - build Ogg/Vorbis music provider using Tremor
-dev-libs/DirectFB:webp - build WebP image provider
 dev-libs/ace:ciao - Include Component Intergraced Ace ORB into the build of ace
 dev-libs/ace:tao - Include the ACE ORB (CORBA stuff) (called tao) into the build of ace
 dev-libs/actor-framework:benchmarks - Due to the number of out-of-tree deps, these only get installed as docs
@@ -2605,7 +2589,6 @@ dev-python/django-cms:snippet - Install djangocms snippet plugin
 dev-python/django-cms:teaser - Install djangocms teaser plugin
 dev-python/django-cms:video - Install djangocms video plugin
 dev-python/django-tastypie:bip - An optional serialiser dev-python/biplist
-dev-python/django-two-factor-auth:yubikey - Adds support for Yubikeys via django-otp-yubikey
 dev-python/editorconfig-core-py:cli - Install command line interface as well as python library
 dev-python/falcon:cython - Build cython-based python modules
 dev-python/fastparquet:brotli - Enable support for brotli compression
@@ -2891,6 +2874,7 @@ dev-ruby/faraday_middleware:oauth - Include FaradayMiddleware::OAuth
 dev-ruby/faraday_middleware:parsexml - Include FaradayMiddleware::ParseXml
 dev-ruby/faraday_middleware:rashify - Include FaradayMiddleware::Rashify
 dev-ruby/maruku:highlight - Enable source code highlighting via dev-ruby/syntax
+dev-ruby/mysql2:mariadb - Use mariadb bindings
 dev-ruby/net-ssh:sodium - Use dev-libs/libsodium via dev-ruby/rbnacl for Ed25519 support
 dev-ruby/rails:asset-pipeline - Also install the default components for the asset pipeline. These are not required but they are activated automatically in new Rails projects by default.
 dev-ruby/rrdtool-bindings:graph - Enable support for graphing functions
@@ -2914,7 +2898,7 @@ dev-scheme/kawa:frontend - Build "kawa" front-end program using sys-libs/readlin
 dev-scheme/kawa:jemacs - Build JEmacs
 dev-scheme/kawa:krl - Build BRL emulation and KRL
 dev-scheme/kawa:sax - Assume SAX2 is available with dev-java/sax
-dev-scheme/kawa:servlets - Build support for generating servlets with dev-java/servletapi
+dev-scheme/kawa:servlets - Build support for generating servlets with Java servletapi
 dev-scheme/kawa:swing - Assume Swing is available
 dev-scheme/kawa:xqtests - Support XQuery Test Suite
 dev-scheme/racket:futures - Enable racket/future library for fine-grained hardware parallelism
@@ -3240,7 +3224,6 @@ games-board/xboard:zippy - Enable experimental zippy client
 games-emulation/dolphin:discord-presence - Enables Discord Rich Presence, show the current game on Discord
 games-emulation/dolphin:egl - Enable EGL support
 games-emulation/dolphin:evdev - Enable evdev input support
-games-emulation/dolphin:llvm - Enable the LLVM-based disassembler for debugger mode
 games-emulation/dolphin:log - Increase logging output
 games-emulation/dolphin:lto - Add support for link-time optimizations.
 games-emulation/dosbox:glide - Enable unofficial Glide emulation via media-libs/openglide
@@ -3307,8 +3290,6 @@ games-fps/doomsday:freedoom - Install launcher for doom1.wad from games-fps/free
 games-fps/doomsday:heretic - Install launcher for jheretic game
 games-fps/doomsday:hexen - Install launcher for jhexen game
 games-fps/doomsday:tools - Build additional tools such as doomsday-shell, md2tool and texc
-games-fps/duke3d:demo - Install the demo files
-games-fps/duke3d:pic - disable optimized assembly code that is not PIC friendly
 games-fps/duke3d-data:gog - Extract the data from the GOG.com installer.
 games-fps/eduke32:demo - Install the Duke Nukem 3D demo files, provided by games-fps/duke3d-demodata.
 games-fps/eduke32:fluidsynth - Install media-libs/sdl2-mixer with fluidsynth support.
@@ -3323,9 +3304,6 @@ games-fps/eduke32:tools - Install the support tools for mapster32.
 games-fps/eduke32:voxels - Install the Duke Nukem 3D Voxels Pack.
 games-fps/eduke32:vpx - Enable support for media-libs/libvpx.
 games-fps/eduke32:xmp - Enable support for media-libs/exempi.
-games-fps/lsdldoom:freedoom - Install games-fps/freedoom wad file
-games-fps/lsdldoom:net - Enables network game support
-games-fps/lsdldoom:shareware - Install games-fps/doom-data for shareware wad file
 games-fps/nexuiz:maps - Install the community map pack
 games-fps/quake2-icculus:demo - Install the demo files (quake2-demodata) and configure for use
 games-fps/quake2-icculus:qmax - Build the pretty version (quake max)
@@ -4792,9 +4770,8 @@ media-sound/pulseaudio:doc - Build the doxygen-described API documentation.
 media-sound/pulseaudio:equalizer - Enable the equalizer module (requires sci-libs/fftw).
 media-sound/pulseaudio:gconf - Ensure gnome-base/gconf is present for pulseaudio GConf to GSettings module automatic migration (keeping the user configuration)
 media-sound/pulseaudio:gdbm - Use sys-libs/gdbm to store PulseAudio databases. Recommended for desktop usage. This flag causes the whole package to be licensed under GPL-2 or later.
-media-sound/pulseaudio:glib - Add support to dev-libs/glib-based mainloop for the libpulse client library, to allow using libpulse on glib-based programs.
+media-sound/pulseaudio:glib - Add support to dev-libs/glib-based mainloop for the libpulse client library, to allow using libpulse on glib-based programs. Build the GSettings PA module.
 media-sound/pulseaudio:gnome - Use GConf to store user preferences on streams and so on. Don't enable this flag if you want to use a system wide instance. If unsure, enable this flag.
-media-sound/pulseaudio:gsettings - Use GSettings instead of GConf to store user preferences.
 media-sound/pulseaudio:native-headset - Build with native HSP backend for bluez 5.
 media-sound/pulseaudio:ofono-headset - Build with oFono HFP backend for bluez 5, requires net-misc/ofono.
 media-sound/pulseaudio:oss - Enable OSS sink/source (output/input). Deprecated, upstream does not support this on systems where other sink/source systems are available (i.e.: Linux). The padsp wrapper is now always build if the system supports OSS at all.
@@ -7594,7 +7571,6 @@ sci-physics/hepmc:cm - Build with cm instead of default mm for length units
 sci-physics/hepmc:gev - Build with GeV instead of default MeV for momentum units
 sci-physics/herwig++:c++11 - Build Herwig++ using the C++11 standard. Experimental feature, not for production use.
 sci-physics/herwig++:fastjet - Adds support for sci-physics/fastjet
-sci-physics/hoomd-blue:cuda - Enable cuda non-bonded kernels
 sci-physics/lammps:cuda - Enable cuda non-bonded kernels
 sci-physics/lammps:lammps-memalign - Enables the use of the posix_memalign() call instead of malloc() when large chunks or memory are allocated by LAMMPS. Aliengnment is on 16 byte boundaries.
 sci-physics/lhapdf:octave - Add bindings for sci-mathematics/octave
@@ -8242,22 +8218,6 @@ sys-freebsd/freebsd-usbin:audit - Build auditing tools.
 sys-freebsd/freebsd-usbin:floppy - Enable floppy disk utilities (fdcontrol, fdformat, fdread, fdwrite).
 sys-freebsd/freebsd-usbin:netware - Build libraries and tools to work with NetWare protocols (IPX and NCP).
 sys-freebsd/freebsd-usbin:zfs - Enable ZFS support.
-sys-fs/aufs3:debug - Enable additional debugging support
-sys-fs/aufs3:fuse - Enable fuse support
-sys-fs/aufs3:hfs - Enable hfs support
-sys-fs/aufs3:inotify - Enable inotify support
-sys-fs/aufs3:kernel-patch - Patch the current kernel for aufs3 support
-sys-fs/aufs3:nfs - Enable support for nfs export
-sys-fs/aufs3:pax_kernel - Apply patch needed for pax enabled kernels
-sys-fs/aufs3:ramfs - Enable initramfs/rootfs support
-sys-fs/aufs4:debug - Enable additional debugging support
-sys-fs/aufs4:fuse - Enable fuse support
-sys-fs/aufs4:hfs - Enable hfs support
-sys-fs/aufs4:inotify - Enable inotify support
-sys-fs/aufs4:kernel-patch - Patch the current kernel for aufs3 support
-sys-fs/aufs4:nfs - Enable support for nfs export
-sys-fs/aufs4:pax_kernel - Apply patch needed for pax enabled kernels
-sys-fs/aufs4:ramfs - Enable initramfs/rootfs support
 sys-fs/btrfs-progs:convert - Build ext2 conversion utility (btrfs-convert)
 sys-fs/btrfs-progs:reiserfs - Enable reiserfs support in btrfs-convert tool.
 sys-fs/btrfs-progs:static - Build static binaries in addition to the dynamic ones
@@ -8324,8 +8284,6 @@ sys-fs/squashfs-tools:lz4 - Enable support for LZ4 compression using app-arch/lz
 sys-fs/squashfs-tools:xz - Enable support for XZ ("LZMA2") compression using app-arch/xz-utils
 sys-fs/squashfs-tools:zstd - Enable support for ZSTD compression using app-arch/zstd
 sys-fs/squashfuse:lz4 - Enable support for lz4 compression
-sys-fs/udev:firmware-loader - Enable the userspace firmware loader (DEPRECATED, replaced by the in-kernel loader starting from 3.8)
-sys-fs/udev:gudev - Build the gobject interface library
 sys-fs/udev:kmod - Enable kernel module loading/unloading support using sys-apps/kmod
 sys-fs/udisks:cryptsetup - Enable sys-fs/cryptsetup support
 sys-fs/udisks:elogind - Use sys-auth/elogind for session tracking
@@ -8896,6 +8854,7 @@ x11-misc/fbpager:xrender - Enable transparency support via x11-libs/libXrender
 x11-misc/gpaste:applet - Enable gpaste-applet
 x11-misc/gpaste:gnome - Enable proper gnome support and enable gnome shell extension.
 x11-misc/gtkdialog:glade - Enable support for gnome-base/libglade
+x11-misc/gtkdialog:gtk3 - Build with GTK+3 instead of GTK+2
 x11-misc/gtkdialog:vte - Enable support for x11-libs/vte
 x11-misc/i3status:filecaps - Linux capabilities library is required for i3status to be able to read net bandwith
 x11-misc/ktsuss:sudo - Use the sudo backend instead the su one
