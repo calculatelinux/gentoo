@@ -2590,6 +2590,7 @@ dev-python/django-cms:teaser - Install djangocms teaser plugin
 dev-python/django-cms:video - Install djangocms video plugin
 dev-python/django-tastypie:bip - An optional serialiser dev-python/biplist
 dev-python/editorconfig-core-py:cli - Install command line interface as well as python library
+dev-python/fabric:fab2 - Install as "fab2", allowing side-by-side install with fabric 1.x
 dev-python/falcon:cython - Build cython-based python modules
 dev-python/fastparquet:brotli - Enable support for brotli compression
 dev-python/fastparquet:lz4 - Enable support for lz4 compression
