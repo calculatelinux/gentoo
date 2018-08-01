@@ -2147,7 +2147,6 @@ dev-libs/efl:ppm - Enable PMAPS image loader
 dev-libs/efl:psd - Enable PSD image loader
 dev-libs/efl:scim - Enable Smart Common Input Method
 dev-libs/efl:tga - Enable Tga image loader
-dev-libs/efl:tgv - Enable TGV image loader
 dev-libs/efl:tslib - Enable x11-libs/tslib for touchscreen events
 dev-libs/efl:unwind - Enable debug support via sys-libs/libunwind
 dev-libs/efl:valgrind - Enable usage of dev-util/valgrind in debug
@@ -7970,7 +7969,7 @@ sys-cluster/ceph:libaio - Use libaio as asynchronous input/output library
 sys-cluster/ceph:libatomic - Use libatomic instead of builtin atomic operations
 sys-cluster/ceph:lttng - Add support for LTTng
 sys-cluster/ceph:mgr - Build the ceph-mgr daemon
-sys-cluster/ceph:mgr-frontend - Build/install the mgr/dashboard frontend with npm
+sys-cluster/ceph:mgr-frontend - Build the mgr/dashboard frontend with npm, this is not required for the frontend to work
 sys-cluster/ceph:nss - Use dev-libs/nss for cryptography
 sys-cluster/ceph:radosgw - Add radosgw support
 sys-cluster/ceph:system-boost - Use system dev-libs/boost instead of the bundled one
