@@ -37,6 +37,7 @@ MULTILIB_WRAPPED_HEADERS=( /usr/include/jconfig.h )
 src_prepare() {
 	default
 
+	cmake-utils_src_prepare
 	java-pkg-opt-2_src_prepare
 }
 
@@ -76,8 +77,9 @@ multilib_src_install() {
 			INSTALL="install -m755" INSTALLDIR="install -d -m755" \
 			install
 
+		popd || die
 		if use java ; then
-			rm -rf "${ED%/}"/usr/classes
+			rm -rf "${ED%/}"/usr/classes || die
 			java-pkg_dojar java/turbojpeg.jar
 		fi
 	fi

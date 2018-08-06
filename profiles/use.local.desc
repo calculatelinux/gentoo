@@ -913,6 +913,7 @@ app-misc/ddcutil:user-permissions - Adds a udev rules to allow non-root users in
 app-misc/digitemp:ds2490 - Build support for the ds2490 sensor
 app-misc/digitemp:ds9097 - Build support for the ds9097 sensor
 app-misc/digitemp:ds9097u - Build support for the ds9097u sensor
+app-misc/elasticsearch:x-pack - Enable additional features (may need a license)
 app-misc/emelfm2:ansi - Add support for ANSI escape sequences
 app-misc/emelfm2:gtk3 - Use x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 app-misc/freemind:groovy - Build plugin for scripting via Groovy
@@ -1206,6 +1207,7 @@ app-text/enchant:aspell - Adds support for app-text/aspell spell checker
 app-text/enchant:hunspell - Adds support for app-text/hunspell spell checker
 app-text/evince:dvi - Enable the built-in DVI viewer
 app-text/evince:nautilus - Enable property page extension in gnome-base/nautilus
+app-text/evince:postscript - Enable support for PostScript and Adobe Illustrator documents with app-text/libspectre
 app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer (media-libs/t1lib)
 app-text/evince:xps - Enable XPS viewer using app-text/libgxps
 app-text/getxbook:ocr - Use app-text/tesseract for optical character recognition
@@ -2255,6 +2257,9 @@ dev-libs/libpcre2:zlib - Add support for pcregrep command to search within gzip-
 dev-libs/libpeas:glade - Install the glade catalog
 dev-libs/libpeas:python - Build support for loading dev-lang/python plugins
 dev-libs/librdkafka:lz4 - Enable support for Kafka's LZ4 compression based on KIP-57 (uses app-arch/lz4)
+dev-libs/librelp:gnutls - Use GnuTLS
+dev-libs/librelp:libressl - Use LibreSSL
+dev-libs/librelp:openssl - Use OpenSSL
 dev-libs/libressl:asm - Enables assembly
 dev-libs/libsecp256k1:asm - Enable x86_64 assembly optimisation
 dev-libs/libsecp256k1:ecdh - Enable ECDH shared secret computation
@@ -4154,7 +4159,6 @@ media-gfx/nvidia-texture-tools:glew - Enable support for The OpenGL Extension Wr
 media-gfx/openclipart:gzip - Compresses clip art using gzip
 media-gfx/openexr_viewers:cg - Add support for nvidia's cg shaders
 media-gfx/openvdb:abi3-compat - Enables compatibility with the old 3.x ABI. enabled by dfault.
-media-gfx/openvdb:openvdb-compression - Adds enhanced compression to files through dev-libs/c-blosc. Very useful so enabled by dfault.
 media-gfx/photoqt:devil - Support additional image formats using media-libs/devil
 media-gfx/photoqt:exiv2 - Use media-gfx/exiv2 as optional dependency
 media-gfx/photoqt:freeimage - Support additional iamge formats using media-libs/freeimage
@@ -4574,6 +4578,7 @@ media-sound/alsa-utils:libsamplerate - install utils that use libsamplerate (e.g
 media-sound/alsa-utils:ncurses - install utils that use ncurses (e.g. alsamixer)
 media-sound/alsaplayer:id3tag - Enables ID3 tagging with id3tag library
 media-sound/amsynth:dssi - Enable support for DSSI Soft Synth Interface
+media-sound/apulse:pa-headers - Install PulseAudio headers
 media-sound/aqualung:ifp - Enable support for iRiver iFP portable audio players
 media-sound/aqualung:lua - Enable support for programmable title formatting with dev-lang/lua
 media-sound/aqualung:mac - Enable support for decoding Monkey's Audio files
@@ -7271,6 +7276,7 @@ sci-geosciences/grass:opencl - Enable OpenCL support
 sci-geosciences/gshhs:data - Add earth data with sci-geosciences/gshhs-data
 sci-geosciences/liblas:gdal - Add support for the sci-libs/gdal geospatial raster library
 sci-geosciences/mapnik:gdal - Enable sci-libs/gdal library support
+sci-geosciences/mapnik:osmfonts - Enable openstreetmaps font styles
 sci-geosciences/mapserver:gdal - Enable sci-libs/gdal library support
 sci-geosciences/mapserver:geos - Enable sci-libs/geos library support
 sci-geosciences/mapserver:postgis - Enable dev-db/postgis support
@@ -8327,6 +8333,7 @@ sys-libs/db:rpc - Enable rpc client/server
 sys-libs/freeipmi:nagios - Install a nagios plugin to check sensors' status.
 sys-libs/gdbm:berkdb - enable compatibility layer for UNIX-like dbm and ndbm interfaces
 sys-libs/gdbm:exporter - enable gdbmexport binary for exporting data from gdbm-1.8 databases into gdbm-1.9
+sys-libs/glibc:cet - Enable Intel Control-flow Enforcement Technology (needs binutils 2.29 and gcc 8)
 sys-libs/glibc:compile-locales - build *all* locales in src_install; this is generally meant for stage building only as it ignores /etc/locale.gen file and can be pretty slow
 sys-libs/glibc:debug - When USE=hardened, allow fortify/stack violations to dump core (SIGABRT) and not kill self (SIGKILL)
 sys-libs/glibc:gd - build memusage and memusagestat tools
@@ -8506,6 +8513,7 @@ www-apps/guacamole:noauth - enable support for leaving out any authentication on
 www-apps/hugo:sass - Enable SASS/SCSS support
 www-apps/icingaweb2:nginx - Adds support for nginx
 www-apps/ikiwiki:extras - Installs additional modules used by ikiwiki plugins
+www-apps/kibana-bin:x-pack - Enable additional features (may need a license)
 www-apps/klaus:ctags - Enable support for Exuberant ctags; makes all source code symbols hyperlinks to their definitions
 www-apps/nikola:assets - Support web asset management through dev-python/assets
 www-apps/nikola:charts - Support chart generation through dev-python/pygal
