@@ -396,6 +396,7 @@ app-editors/emacs-vcs:gsettings - Use gsettings (dev-libs/glib) to read the syst
 app-editors/emacs-vcs:gtk3 - Prefer version 3 of the GIMP Toolkit to version 2 (x11-libs/gtk+)
 app-editors/emacs-vcs:gzip-el - Compress bundled Emacs Lisp source
 app-editors/emacs-vcs:imagemagick - Use media-gfx/imagemagick for image processing
+app-editors/emacs-vcs:json - Compile with native JSON support using dev-libs/jansson
 app-editors/emacs-vcs:libxml2 - Use dev-libs/libxml2 to parse XML instead of the internal Lisp implementations
 app-editors/emacs-vcs:mailutils - Retrieve e-mail using net-mail/mailutils instead of the internal movemail substitute
 app-editors/emacs-vcs:source - Install C source files and make them available for find-function
@@ -2522,22 +2523,6 @@ dev-php/twig:extension - Build the C extension (only for php-5.6.x).
 dev-php/xcache:coverage - Enable the coverager module (not recommended for production servers).
 dev-python/Kivy:camera - Install libraries needed to support camera
 dev-python/Kivy:garden - Install garden tool to manage user maintained widgets
-dev-python/PyQt4:X - Build bindings for the QtGui module
-dev-python/PyQt4:compat - Install the deprecated pyqtconfig module for backward compatibility
-dev-python/PyQt4:dbus - Build bindings for the QtDBus module
-dev-python/PyQt4:declarative - Build bindings for the QtDeclarative module
-dev-python/PyQt4:designer - Build bindings for the QtDesigner module and enable the designer plugin
-dev-python/PyQt4:help - Build bindings for the QtHelp module
-dev-python/PyQt4:multimedia - Build bindings for the QtMultimedia module
-dev-python/PyQt4:opengl - Build bindings for the QtOpenGL module
-dev-python/PyQt4:phonon - Build bindings for the phonon module
-dev-python/PyQt4:script - Build bindings for the QtScript module
-dev-python/PyQt4:scripttools - Build bindings for the QtScriptTools module
-dev-python/PyQt4:sql - Build bindings for the QtSql module
-dev-python/PyQt4:svg - Build bindings for the QtSvg module
-dev-python/PyQt4:testlib - Build bindings for the QtTest module
-dev-python/PyQt4:webkit - Build bindings for the QtWebKit module
-dev-python/PyQt4:xmlpatterns - Build bindings for the QtXmlPatterns module
 dev-python/PyQt5:bluetooth - Build bindings for the QtBluetooth module
 dev-python/PyQt5:dbus - Build bindings for the QtDBus module
 dev-python/PyQt5:declarative - Build bindings for the QtQml/QtQuick modules and enable the qmlscene plugin
@@ -2661,19 +2646,6 @@ dev-python/pypy:low-memory - Build using PyPy with the engine configured towards
 dev-python/pypy:sandbox - Enable sandboxing functionality
 dev-python/pypy3:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
 dev-python/pypy3:sandbox - Enable sandboxing functionality
-dev-python/pyside:X - Build QtGui and QtTest modules
-dev-python/pyside:declarative - Build QtDeclarative module
-dev-python/pyside:designer - Build QtDesigner and QtUiTools modules
-dev-python/pyside:help - Build QtHelp module
-dev-python/pyside:multimedia - Build QtMultimedia module
-dev-python/pyside:opengl - Build QtOpenGL module
-dev-python/pyside:phonon - Build phonon module
-dev-python/pyside:script - Build QtScript module
-dev-python/pyside:scripttools - Build QtScriptTools module
-dev-python/pyside:sql - Build QtSql module
-dev-python/pyside:svg - Build QtSvg module
-dev-python/pyside:webkit - Build QtWebKit module
-dev-python/pyside:xmlpatterns - Build QtXmlPatterns module
 dev-python/python-caja:gtk3 - Build with GTK+3 instead of GTK+2
 dev-python/python-stdnum:vies - Enable VIES
 dev-python/pyudev:pygobject - Install PyGobject bindings
@@ -2954,6 +2926,7 @@ dev-util/catalyst:ccache - Enables ccache support
 dev-util/catalyst:system-bootloader - Pulls in the depends needed to setup livecd bootloader from the host system rather than using a cdtar
 dev-util/cccc:apidoc - Build software docs with doxygen/graphviz and metrics with cccc
 dev-util/cccc:mfc - Add patch for MFC dialect options
+dev-util/clion:custom-jdk - Install and use IntelliJ's custom JRE.
 dev-util/cmake:server - Enable cmake-server support.
 dev-util/cmake:system-jsoncpp - Use system copy of dev-libs/jsoncpp instead of bundled one.
 dev-util/coccigrep:vim - Install the coccigrep vim plugin
@@ -3795,6 +3768,7 @@ mail-client/neomutt:qdbm - Enable QDBM (Quicker Database Manager) database backe
 mail-client/neomutt:smime - Enable support for smime
 mail-client/neomutt:smime_classic - Build classic_smime backend to support S/MIME
 mail-client/neomutt:tokyocabinet - Enable Tokyo Cabinet database backend for header caching
+mail-client/roundcube:change-password - Allow users to change passwords through Roundcube
 mail-client/roundcube:enigma - Add dependencies to support server-side GnuPG signing and/or encryption through the enigma plugin
 mail-client/roundcube:ldap - Add dependencies to support connecting to an LDAP address book server
 mail-client/roundcube:managesieve - Add dependencies to support the sieverules plugin
@@ -8599,6 +8573,7 @@ www-client/firefox:system-sqlite - Use the system-wide dev-db/sqlite installatio
 www-client/google-chrome:plugins - Add system plugins path to launcher
 www-client/google-chrome-beta:plugins - Add system plugins path to launcher
 www-client/google-chrome-unstable:plugins - Add system plugins path to launcher
+www-client/jd:oniguruma - Use dev-libs/oniguruma for regular expression
 www-client/links:libevent - Enable dev-libs/libevent support
 www-client/lynx:gnutls - Use gnutls library for HTTPS support (openssl is the default library for HTTPS support).
 www-client/lynx:ssl - Enable HTTPS support.
