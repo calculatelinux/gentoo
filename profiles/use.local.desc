@@ -1432,8 +1432,6 @@ dev-db/firebird:xinetd - Install ClassicServer
 dev-db/maatkit:udf - Build the MySQL UDFs shipped with maatkit, requires non-minimal MySQL
 dev-db/mariadb:backup - Build mariadb-backup which supports SST and hot backup of InnoDB, Aria and MyISAM including compression and encryption
 dev-db/mariadb:client-libs - Build the client libraries from the server package instead of the C Connector packages
-dev-db/mariadb:cluster - Add support for NDB clustering (deprecated)
-dev-db/mariadb:community - Enables the community features from upstream.
 dev-db/mariadb:embedded - Build embedded server (libmysqld)
 dev-db/mariadb:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
 dev-db/mariadb:galera - Enables galera replication
@@ -1444,8 +1442,6 @@ dev-db/mariadb:jdbc - Enable the CONNECT engine to access foreign databases via 
 dev-db/mariadb:jemalloc - Use dev-libs/jemalloc for allocations.
 dev-db/mariadb:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/mariadb:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
-dev-db/mariadb:max-idx-128 - Raise the max index per table limit from 64 to 128
-dev-db/mariadb:minimal - Install client programs only, no server
 dev-db/mariadb:mroonga - Add support for the Mroonga engine for interfacing with the Groonga text search
 dev-db/mariadb:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
 dev-db/mariadb:openssl - Enable SSL connections and crypto functions using dev-libs/openssl
@@ -3829,7 +3825,6 @@ mail-filter/rspamd:fann - Enable neural network plugin (requires sci-mathematics
 mail-filter/rspamd:jemalloc - Use dev-libs/jemalloc for allocations
 mail-filter/rspamd:pcre2 - Use dev-libs/libpcre2
 mail-filter/rspamd:torch - Enable torch support. This is required for the neural module
-mail-filter/spamassassin:bayes - Require a database (MySQL, SQLite, Postgres, or BerkDB) backend to enable the Bayesian filtering database. If you use the Redis backend, you do not need to enable this flag (Redis support is enabled automatically, and has no external dependencies).
 mail-filter/spamassassin:cron - Install a cron job to update SpamAssassin's rules daily.
 mail-filter/spamassassin:qmail - Build qmail functionality and docs
 mail-filter/spamdyke:ssl - Enables TLS protocol for spamdyke
