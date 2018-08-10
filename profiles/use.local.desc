@@ -819,6 +819,7 @@ app-i18n/rime-data:extra - Install extra packages
 app-i18n/scim:gtk3 - Enable support for x11-libs/gtk+:3
 app-i18n/scim-anthy:gtk3 - Enable support for x11-libs/gtk+:3
 app-i18n/scim-anthy:kasumi - Use Anthy dictionary maintenance tool (app-dicts/kasumi)
+app-i18n/scim-sunpinyin:gtk3 - Enable support for x11-libs/gtk+:3
 app-i18n/tomoe:hyperestraier - Enable support for app-text/hyperestraier
 app-i18n/translate-shell:tts - Enable text-to-speech support
 app-i18n/uim:anthy - Enable support for app-i18n/anthy
@@ -1545,6 +1546,7 @@ dev-db/postgis:address-standardizer - Normalize US and CA postal addresses
 dev-db/postgis:gtk - Build graphical interface for shp2pgsql (shp2pgsql-gui)
 dev-db/postgis:mapbox - Add capability to transform geometry into Mapbox Vector Tile
 dev-db/postgis:topology - Build topology spatial types and functions
+dev-db/postgresql:llvm - Add support for llvm JIT engine
 dev-db/postgresql:pg_legacytimestamp - Use double precision floating-point numbers instead of 64-bit integers for timestamp storage.
 dev-db/postgresql:server - Disable to build and install the clients and libraries only.
 dev-db/postgresql:uuid - Enable server side UUID generation (via dev-libs/ossp-uuid).
@@ -7287,6 +7289,7 @@ sci-libs/gdal:ogdi - Enable support for the open geographic datastore interface 
 sci-libs/gdal:opencl - Enable OpenCL support
 sci-libs/gdal:spatialite - Enable Spatial DBMS over sqlite dev-db/spatialite
 sci-libs/gdal:xls - Add the dev-libs/freexl library for xls import support
+sci-libs/gdal:zstd - Enable support for ZSTD compression using app-arch/zstd
 sci-libs/grib_api:aec - Build with Adaptive Entropy Coding compression, needs sci-libs/libaec
 sci-libs/grib_api:jasper - Use media-libs/jasper instead of media-libs/openjpeg for JPEG 2000 support
 sci-libs/gsl:cblas-external - Link gsl with external cblas provided by (virtual/cblas) instead of shipped internal version
