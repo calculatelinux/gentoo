@@ -171,6 +171,7 @@ app-admin/sudo:openssl - Use SHA2 from dev-libs/openssl instead of sudo's intern
 app-admin/sudo:sendmail - Allow sudo to send emails with sendmail
 app-admin/sysklogd:logrotate - use app-admin/logrotate for rotating logs rather than custom cron scripts
 app-admin/syslog-ng:amqp - Enable support for AMQP destinations
+app-admin/syslog-ng:geoip2 - Add support for geo lookup based on IPs via dev-libs/libmaxminddb
 app-admin/syslog-ng:http - Enable support for HTTP destinations
 app-admin/syslog-ng:json - Enable support for JSON template formatting via dev-libs/json-c
 app-admin/syslog-ng:mongodb - Enable support for mongodb destinations
@@ -3634,6 +3635,7 @@ kde-plasma/systemsettings:classic - Enable classic mode plugin, requires kde-fra
 lxde-base/lxdm:consolekit - Enables support for authorization using consolekit
 lxde-base/lxdm:gtk3 - Use GTK+3 instead of 2
 lxde-base/lxterminal:gtk3 - Use GTK+3 instead of GTK+2
+lxqt-base/lxqt-config:monitor - Build monitor settings tool
 lxqt-base/lxqt-meta:about - Install lxqt-base/lxqt-about
 lxqt-base/lxqt-meta:admin - Install lxqt-base/lxqt-admin
 lxqt-base/lxqt-meta:filemanager - Install x11-misc/pcmanfm-qt file manager
@@ -3643,13 +3645,17 @@ lxqt-base/lxqt-meta:lximage - Install media-gfx/lximage-qt image viewer
 lxqt-base/lxqt-meta:minimal - Do not install x11-wm/openbox window manager
 lxqt-base/lxqt-meta:oxygen - Prefer kde-frameworks/oxygen-icons (default)
 lxqt-base/lxqt-meta:powermanagement - Install lxqt-base/lxqt-powermanagement package
+lxqt-base/lxqt-meta:processviewer - Install x11-misc/qps package
+lxqt-base/lxqt-meta:screenshot - Install x11-misc/screengrab package
 lxqt-base/lxqt-meta:sddm - Install x11-misc/sddm display manager
 lxqt-base/lxqt-meta:ssh-askpass - Install lxqt-base/lxqt-openssh-askpass user password prompt tool
 lxqt-base/lxqt-meta:sudo - Install lxqt-base/lxqt-sudo
+lxqt-base/lxqt-meta:terminal - Install x11-terms/qterminal package
 lxqt-base/lxqt-panel:clock - Build clock plugin
 lxqt-base/lxqt-panel:colorpicker - Build colorpicker plugin
 lxqt-base/lxqt-panel:cpuload - Build cpuload plugin
 lxqt-base/lxqt-panel:desktopswitch - Build desktopswitch plugin
+lxqt-base/lxqt-panel:directorymenu - Build directorymenu plugin
 lxqt-base/lxqt-panel:dom - Build dom plugin
 lxqt-base/lxqt-panel:kbindicator - Build kbindicator plugin
 lxqt-base/lxqt-panel:mainmenu - Build mainmenu plugin
@@ -3658,12 +3664,14 @@ lxqt-base/lxqt-panel:networkmonitor - Build networkmonitor plugin
 lxqt-base/lxqt-panel:quicklaunch - Build quicklaunch plugin
 lxqt-base/lxqt-panel:sensors - Build sensors plugin
 lxqt-base/lxqt-panel:showdesktop - Build showdesktop plugin
+lxqt-base/lxqt-panel:spacer - Build spacer plugin
 lxqt-base/lxqt-panel:statusnotifier - Build statusnotifier plugin
 lxqt-base/lxqt-panel:sysstat - Build sysstat plugin
 lxqt-base/lxqt-panel:taskbar - Build taskbar plugin
 lxqt-base/lxqt-panel:tray - Build tray plugin
 lxqt-base/lxqt-panel:volume - Build volume plugin
 lxqt-base/lxqt-panel:worldclock - Build worldclock plugin
+lxqt-base/lxqt-session:themes - Install LXQt themes and graphics
 mail-client/alot:doc - Install user manual and API documentation
 mail-client/alpine:chappa - enhance alpine by applying Eduardo Chappa's patches
 mail-client/alpine:onlyalpine - installs only the alpine binary, so it does not collied with pico and/or pine
@@ -4240,7 +4248,6 @@ media-libs/libsdl:joystick - Control joystick support (disable at your own risk)
 media-libs/libsdl:sound - Control audio support (disable at your own risk)
 media-libs/libsdl:tslib - Build with tslib support for touchscreen devices
 media-libs/libsdl:video - Control video support (disable at your own risk)
-media-libs/libsdl2:fusionsound - use FusionSound audio driver
 media-libs/libsdl2:gles - include OpenGL ES support
 media-libs/libsdl2:haptic - Enable the haptic (force feedback) subsystem
 media-libs/libsdl2:joystick - Control joystick support (disable at your own risk)
@@ -5139,6 +5146,7 @@ media-video/vdr:yaepg - Enables support for the vdr-yaepg plugin
 media-video/vlc:X - Enable support for, e.g., fullscreen mode via the X Window System. By itself, this flag does not build a graphical interface
 media-video/vlc:aom - Enable experimental support for AV1 codec
 media-video/vlc:archive - Enable support for libarchive stream extractor
+media-video/vlc:aribsub - Enable support for decoding ARIB STD-B24 subtitles
 media-video/vlc:atmo - Enable support for AtmoLight (homebrew Ambient Lighting Technology)
 media-video/vlc:audioqueue - Enable AudioQueue audio module for Mac OS X
 media-video/vlc:avcodec - Enable libavcodec support for video/audio encoding/decoding. libavcodec is part of FFmpeg
@@ -5161,6 +5169,7 @@ media-video/vlc:growl - Enable growl notification support (over UDP for remote a
 media-video/vlc:gstreamer - Enable GStreamer based decoding support (currently supports only video decoding)
 media-video/vlc:httpd - Enable a web based interface for vlc
 media-video/vlc:kate - Adds support for Ogg Kate subtitles via libkate
+media-video/vlc:kms - Enable kernel mode setting video output plugin via x11-libs/libdrm
 media-video/vlc:libtar - Uses libtar instead of the built-in tar reader for reading custom skins
 media-video/vlc:libtiger - Enable Ogg Kate subtitles rendering using libtiger
 media-video/vlc:linsys - Enable support for Linux Linear Systems Ltd. SDI and HD-SDI input cards
@@ -5832,7 +5841,7 @@ net-im/psi:webkit - Enable themed, html-based chatlogs
 net-im/psi:whiteboarding - Enable experimental interactive SVG drawing
 net-im/pyicq-t:webinterface - Install dependencies needed for the web interface
 net-im/qtox:X - Adds support for X11
-net-im/qtox:gtk - Adds support for GTK and Status Notifier tray backends
+net-im/qtox:notification - Adds support for GTK Status Notifier tray backends
 net-im/skypeforlinux:pax_kernel - Triggers a paxmarking of the main skype binary
 net-im/slack-bin:pax_kernel - Triggers a paxmarking of the binary
 net-im/telepathy-connection-managers:gadu - Enable Gadu Gadu protocol support.
@@ -5846,8 +5855,10 @@ net-im/telepathy-connection-managers:yahoo - Enable Yahoo! messaging support.
 net-im/telepathy-connection-managers:zeroconf - Enable Link-Local Messaging via the zeroconf or Bonjour protocol.
 net-im/tkabber:plugins - Enables installation the extra plugins
 net-im/toxic:audio - Enables audio calling
+net-im/toxic:notification - Enables desktop notifications with libnotify, with sound support.
 net-im/toxic:notifications - Enables desktop notifications with libnotify, with sound support.
 net-im/toxic:qrcode - Enables QR code support
+net-im/toxic:sound - Enables audio calling
 net-im/toxic:video - Enables video calling
 net-im/vacuum:adiummessagestyle - Use UI styles created for Adium
 net-im/vacuum:annotations - Enable adding comments to the contacts in the roster
@@ -6050,8 +6061,9 @@ net-libs/libsrtp:aesicm - Use AES ICM cryptographic algorithm
 net-libs/libsrtp:console - Use /dev/console instead of stdout for error messages
 net-libs/libsrtp:openssl - Use OpenSSL crypto primitives
 net-libs/libsrtp:syslog - Use syslog for error messages
-net-libs/libssh:gcrypt - Prefer dev-libs/libgcrypt over dev-libs/openssl for encryption
+net-libs/libssh:gcrypt - Use dev-libs/libgcrypt as TLS provider
 net-libs/libssh:gssapi - Enable gssapi support
+net-libs/libssh:mbedtls - Use net-libs/mbedtls as TLS provider
 net-libs/libssh:pcap - Build with PCAP output support
 net-libs/libssh:server - Build with SSH server support
 net-libs/libssh:sftp - Build with SFTP support
@@ -6516,7 +6528,6 @@ net-misc/networkmanager:wifi - Enable support for wifi and 802.1x security using
 net-misc/networkmanager-strongswan:glib - Enable libnm-glib compatibility.
 net-misc/nextcloud-client:dolphin - Install the kde-apps/dolphin extension
 net-misc/nextcloud-client:nautilus - Install the gnome-base/nautilus extension
-net-misc/nextcloud-client:sftp - Enable sftp transfer support via net-libs/libssh
 net-misc/nextcloud-client:shibboleth - Build support for Shibboleth single sign-on
 net-misc/ntp:openntpd - Allow ntp to be installed alongside openntpd
 net-misc/ntp:parse-clocks - Add support for PARSE clocks
@@ -6568,7 +6579,6 @@ net-misc/openssh:ssl - Enable additional crypto algorithms via OpenSSL
 net-misc/openvswitch:monitor - Build the Python and GUI dependent monitor applications
 net-misc/owncloud-client:dolphin - Install the kde-apps/dolphin extension
 net-misc/owncloud-client:nautilus - Install the gnome-base/nautilus extension
-net-misc/owncloud-client:sftp - Enable sftp transfer support via net-libs/libssh
 net-misc/owncloud-client:shibboleth - Build support for Shibboleth single sign-on
 net-misc/plowshare:view-captcha - View captcha with aview
 net-misc/ps3mediaserver:multiuser - Allow renderer customization per-user.

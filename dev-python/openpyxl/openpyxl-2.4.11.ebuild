@@ -3,7 +3,7 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python2_7 python3_{5,6} )
+PYTHON_COMPAT=( python2_7 python3_{4,5,6} )
 
 inherit distutils-r1 vcs-snapshot
 
@@ -13,7 +13,7 @@ SRC_URI="https://bitbucket.org/${PN}/${PN}/get/${PV}.tar.bz2 -> ${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="
