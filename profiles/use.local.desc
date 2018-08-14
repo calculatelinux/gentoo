@@ -506,6 +506,7 @@ app-emulation/ganeti:restricted-commands - Enable restricted commands in the nod
 app-emulation/ganeti:xen - Enable Xen support
 app-emulation/hyperd:libvirt - Enable support for KVM via libvirt
 app-emulation/hyperd:xen - Enable support for the Xen Hypervisor
+app-emulation/libcacard:passthrough - Enable smartcard passthrough support via sys-apps/pcsc-lite
 app-emulation/libguestfs:erlang - Build Erlang bindings
 app-emulation/libguestfs:fuse - Enable image mount support via fuse
 app-emulation/libguestfs:inspect-icons - Use media-gfx/icoutilsfor acces icon file in image and inspect it
@@ -8238,6 +8239,7 @@ sys-fs/udisks:gptfdisk - Pull in sys-apps/gptfdisk for sgdisk command as used by
 sys-fs/udisks:lvm - Add support for Logical Volume Management via sys-fs/lvm2.
 sys-fs/udisks:remote-access - Control whether connections from other clients over LAN are allowed
 sys-fs/udisks:systemd - Support sys-apps/systemd's logind
+sys-fs/udisks:vdo - Enable Virtual Data Optimizer support.
 sys-fs/zfs:kernel-builtin - Disable dependency on sys-fs/zfs-kmod under the assumption that ZFS is part of the kernel source tree
 sys-fs/zfs:rootfs - Enable dependencies required for booting off a pool containing a rootfs
 sys-fs/zfs:test-suite - Install regression test suite
