@@ -13,14 +13,19 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD-2"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris"
+KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris"
 IUSE="test"
 
 RDEPEND="
 	>=dev-python/pytest-3[${PYTHON_USEDEP}]
+	<dev-python/pytest-3.3
 	>=dev-python/six-1[${PYTHON_USEDEP}]
 	>=dev-python/decorator-4[${PYTHON_USEDEP}]
 "
+
+# This package is a broken mess upstream. Tests don't work. Fortunately, it's
+# not actually used by many packages.
+RESTRICT="test"
 
 PATCHES=(
 	# We strip pytest-relaxed's entry point to stop it from autoloading on all

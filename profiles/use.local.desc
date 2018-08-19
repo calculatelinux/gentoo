@@ -1935,7 +1935,6 @@ dev-java/logback:tomcat - Builds Apache Tomcat support
 dev-java/lucene:contrib - Include extra functionality from contrib/
 dev-java/miglayout:swt - Add support for the SWT toolkit.
 dev-java/oracle-jdk-bin:commercial - Install features requiring a commercial license for production use
-dev-java/oracle-jdk-bin:derby - Install bundled Derby (Java database)
 dev-java/oracle-jdk-bin:gentoo-vm - Allow this JDK to be recognised by Gentoo (package manager, eselect, java-config, EXPERIMENTAL!)
 dev-java/oracle-jdk-bin:gtk2 - Enable GTK+ 2 support in JavaFX
 dev-java/oracle-jdk-bin:gtk3 - Enable GTK+ 3 support in JavaFX
@@ -2450,6 +2449,7 @@ dev-ml/zarith:mpir - Use MPIR library instead of GMP.
 dev-perl/App-Nopaste:browser - Spawn browser with pasted page
 dev-perl/App-Nopaste:clipboard - copying of URLs with -x/--copy
 dev-perl/App-Nopaste:github - Github authentication
+dev-perl/App-Nopaste:gitlab - Ensure git is installed for reading/passing GitLab authentication
 dev-perl/App-Nopaste:pastebin - pastebin.com support
 dev-perl/Business-ISBN:barcode - Install dev-perl/GD-Barcode for rendering ISBN numbers as barcodes
 dev-perl/Config-Any:conf - Install dev-perl/Config-General to support decoding .conf/.cnf files
@@ -5761,6 +5761,9 @@ net-im/corebird:glade - Install glade catalogs for corebird
 net-im/corebird:spellcheck - Support spell checking
 net-im/coturn:mongodb - Enable support for the mongodb database
 net-im/coturn:redis - Enable support for the redis database
+net-im/dino:gnupg - Enable OpenPGP encryption plugin
+net-im/dino:http - Enable HTTP file upload plugin
+net-im/dino:omemo - Enable OMEMO encryption plugin
 net-im/ejabberd:captcha - Support for CAPTCHA Forms (XEP-158) on registration
 net-im/ejabberd:full-xml - Use XML features in XMPP stream (ex: CDATA), requires XML compliant clients
 net-im/ejabberd:hipe - Compile natively with HiPE, not recommended
@@ -6424,8 +6427,6 @@ net-misc/gerbera:taglib - Use media-libs/taglib for reading files' metadata
 net-misc/gnome-online-miners:flickr - Enable Flickr support
 net-misc/gsasl:gcrypt - Use dev-libs/libgcrypt for low-level crypto
 net-misc/gsasl:ntlm - Add support for Microsoft's NTLM mechanism using net-libs/libntlm
-net-misc/guacamole-server:ssh - enable support for ssh connections
-net-misc/guacamole-server:telnet - enable support for telnet connections
 net-misc/gwget:epiphany - Build epiphany extensions
 net-misc/hotot:chrome - Build chrome browser extension
 net-misc/htbinit:esfq - Add support for Enhanced Stochastic Fairness queueing discipline.
@@ -8439,7 +8440,6 @@ www-apps/drupal:accelerator - Add dependency on a php accelerator
 www-apps/drupal:uploadprogress - Install dev-php/pecl-uploadprogress package
 www-apps/gitit:network-uri - Get Network.URI from the network-uri package.
 www-apps/gitit:plugins - enables optional plugin runtime loader
-www-apps/guacamole:noauth - enable support for leaving out any authentication on the webinterface
 www-apps/hugo:sass - Enable SASS/SCSS support
 www-apps/icingaweb2:nginx - Adds support for nginx
 www-apps/ikiwiki:extras - Installs additional modules used by ikiwiki plugins
