@@ -29,6 +29,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Bernard Cafarelli <voyageur@gentoo.org> (20 Aug 2018)
+# Requires >=dev-libs/openssl-1.1.0
+>=net-misc/nextcloud-client-2.5.0_beta1
+
 # Michael Orlitzky <mjo@gentoo.org> (16 Aug 2018)
 # Obsolete! Use net-analyzer/nagios-icinga-openvpn instead.
 # Will be removed in 30 days (bug 663774).
@@ -106,10 +110,6 @@ dev-python/django-celery
 # for extra notification of the unmerge need. Bug #661284
 x11-libs/wxGTK:2.8
 dev-python/wxpython:2.8
-
-# Corentin Pazdera <nado@troglodyte.be> (12 Jul 2018)
-# Pulseeffects depends on atoms only found in gnome overlay
->=media-sound/pulseeffects-4.0.0
 
 # Kent Fredric <kentnl@gentoo.org> (10 Jul 2018)
 # Perl 5.28 Staging block
