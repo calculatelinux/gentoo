@@ -1,9 +1,11 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI="6"
 
 inherit eutils flag-o-matic libtool multilib toolchain-funcs
+
+PATCHES=( "${FILESDIR}"/policy-hardening.patch )
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://github.com/ImageMagick/ImageMagick.git"
@@ -74,6 +76,13 @@ REQUIRED_USE="corefonts? ( truetype )
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
+	# Install default (unrestricted) policy in $HOME for test suite #664238
+	local _im_local_config_home="${HOME}/.config/ImageMagick"
+	mkdir -p "${_im_local_config_home}" || \
+		die "Failed to create IM config dir in '${_im_local_config_home}'"
+	cp "${FILESDIR}"/policy.test.xml "${_im_local_config_home}/policy.xml" || \
+		die "Failed to install default blank policy.xml in '${_im_local_config_home}'"
+
 	local ati_cards mesa_cards nvidia_cards render_cards
 	default
 
@@ -190,4 +199,34 @@ src_install() {
 
 	insinto /usr/share/${PN}
 	doins config/*icm
+}
+
+pkg_postinst() {
+	local _show_policy_xml_notice=
+
+	if [[ -z "${REPLACING_VERSIONS}" ]]; then
+		# This is a new installation
+		_show_policy_xml_notice=yes
+	else
+		local v
+		for v in ${REPLACING_VERSIONS}; do
+			if ! version_is_at_least "7.0.8.10-r1" ${v}; then
+				# This is an upgrade
+				_show_policy_xml_notice=yes
+
+				# Show this elog only once
+				break
+			fi
+		done
+	fi
+
+	if [[ -n "${_show_policy_xml_notice}" ]]; then
+		elog "For security reasons, a policy.xml file was installed in /etc/ImageMagick-7"
+		elog "which will prevent the usage of the following coders by default:"
+		elog ""
+		elog "  - PS"
+		elog "  - EPS"
+		elog "  - PDF"
+		elog "  - XPS"
+	fi
 }
