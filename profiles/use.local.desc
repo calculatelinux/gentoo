@@ -380,6 +380,7 @@ app-editors/emacs:games - Support shared score files for games
 app-editors/emacs:gconf - Use gnome-base/gconf to read the system font name
 app-editors/emacs:gfile - Use gfile (dev-libs/glib) for file notification
 app-editors/emacs:gsettings - Use gsettings (dev-libs/glib) to read the system font name
+app-editors/emacs:gtk2 - Prefer version 2 of the GIMP Toolkit to version 3 (x11-libs/gtk+)
 app-editors/emacs:gtk3 - Prefer version 3 of the GIMP Toolkit to version 2 (x11-libs/gtk+)
 app-editors/emacs:gzip-el - Compress bundled Emacs Lisp source
 app-editors/emacs:imagemagick - Use media-gfx/imagemagick for image processing
@@ -395,7 +396,7 @@ app-editors/emacs-vcs:games - Support shared score files for games
 app-editors/emacs-vcs:gconf - Use gnome-base/gconf to read the system font name
 app-editors/emacs-vcs:gfile - Use gfile (dev-libs/glib) for file notification
 app-editors/emacs-vcs:gsettings - Use gsettings (dev-libs/glib) to read the system font name
-app-editors/emacs-vcs:gtk3 - Prefer version 3 of the GIMP Toolkit to version 2 (x11-libs/gtk+)
+app-editors/emacs-vcs:gtk2 - Prefer version 2 of the GIMP Toolkit to version 3 (x11-libs/gtk+)
 app-editors/emacs-vcs:gzip-el - Compress bundled Emacs Lisp source
 app-editors/emacs-vcs:imagemagick - Use media-gfx/imagemagick for image processing
 app-editors/emacs-vcs:json - Compile with native JSON support using dev-libs/jansson
@@ -6506,6 +6507,7 @@ net-misc/chrony:refclock - Support for reference clocks
 net-misc/chrony:rtc - Support for the Linux Real Time Clock interface
 net-misc/connman:ethernet - Enable ethernet support.
 net-misc/connman:iptables - Use net-firewall/iptables as firewall.
+net-misc/connman:iwd - Enable wifi support via net-wireless/iwd
 net-misc/connman:l2tp - Use net-dialup/xl2tpd for L2TP VPN support.
 net-misc/connman:nftables - Use net-firewall/nftables as firewall.
 net-misc/connman:ofono - Use net-misc/ofono for telephony support.
@@ -7659,6 +7661,10 @@ sci-physics/geant:geant3 - Add compatibility for geant321 to geant4
 sci-physics/geant:inventor - Add support for Open Inventor SGI toolkit via Coin3D
 sci-physics/geant:raytracerx - Enable raytracing for physics events
 sci-physics/geant:vrml - Enable output of geant4 in vrml formats
+sci-physics/geant-vmc:g4root - Build G4Root (interface for GEANT4 simulation with a ROOT geometry)
+sci-physics/geant-vmc:geant3 - Build with Geant4 G3toG4 library
+sci-physics/geant-vmc:mtroot - Build MTRoot (provides ROOT IO manager classes with multi-threading support)
+sci-physics/geant-vmc:vgm - Enable the Virtual Geometry Model (sci-physics/vgm)
 sci-physics/hepmc:cm - Build with cm instead of default mm for length units
 sci-physics/hepmc:gev - Build with GeV instead of default MeV for momentum units
 sci-physics/herwig++:c++11 - Build Herwig++ using the C++11 standard. Experimental feature, not for production use.
