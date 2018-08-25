@@ -471,6 +471,7 @@ app-emulation/buildah:ostree - Enables dependencies for handling of OSTree image
 app-emulation/containerd:apparmor - Support for AppArmor
 app-emulation/containerd:btrfs - Support for BTRFS snapshot driver
 app-emulation/containerd:cri - Support for Kubernetes CRI
+app-emulation/containers-storage:ostree - Enables dependencies for handling of OSTree images.
 app-emulation/cri-o:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
 app-emulation/cri-o:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
 app-emulation/cri-o:ostree - Enables dependencies for handling of OSTree images.
@@ -5954,7 +5955,6 @@ net-im/gajim:xhtml - Enable XHTML support
 net-im/kadu:gadu - Enables Gadu communication protocol
 net-im/kadu:mpd - Enables Music Player Daemon support
 net-im/kadu:otr - Enable char encryption via OTR library
-net-im/kadu:phonon - Enables phonon audio plugin
 net-im/kadu:sdk - Install Kadu SDK (cmake module, API headers)
 net-im/kadu:speech - Enables speech module
 net-im/libcommuni:qml - Install optional qml files.
@@ -7678,6 +7678,7 @@ sci-physics/pythia:lhapdf - Support the use of external PDF sets via sci-physics
 sci-physics/pythia:root - Use sci-physics/root trees and histograms (in examples only)
 sci-physics/root:R - Enable support for dev-lang/R
 sci-physics/root:asimage - Enable support for media-libs/libafterimage
+sci-physics/root:cuda - Enable support for nVidia CUDA
 sci-physics/root:davix - Enable support for DAVIX Data Management Client (https://cern.ch/davix)
 sci-physics/root:fits - Enable support for images and data from FITS files with sci-libs/cfitsio
 sci-physics/root:fortran - Compile included Fortran programs
@@ -7685,7 +7686,6 @@ sci-physics/root:gdml - Enable GDML writer and reader
 sci-physics/root:http - Enable http server support including but not limited to fastcgi support
 sci-physics/root:jemalloc - Enable support for dev-libs/jemalloc
 sci-physics/root:libcxx - Build ROOT against sys-libs/libcxx
-sci-physics/root:math - Build all math related libraries plugins, needs sci-libs/gsl
 sci-physics/root:memstat - Build memory statistics library, helps to detect memory leaks
 sci-physics/root:minuit - Build ROOT's internal versions of minuit (fortran) and minuit2 (C++)
 sci-physics/root:pythia6 - Build the interface for sci-physics/pythia version 6.x
