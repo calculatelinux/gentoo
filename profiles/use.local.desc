@@ -471,6 +471,8 @@ app-emulation/buildah:ostree - Enables dependencies for handling of OSTree image
 app-emulation/containerd:apparmor - Support for AppArmor
 app-emulation/containerd:btrfs - Support for BTRFS snapshot driver
 app-emulation/containerd:cri - Support for Kubernetes CRI
+app-emulation/containers-storage:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
+app-emulation/containers-storage:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
 app-emulation/containers-storage:ostree - Enables dependencies for handling of OSTree images.
 app-emulation/cri-o:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
 app-emulation/cri-o:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
@@ -790,7 +792,6 @@ app-i18n/fcitx:gtk2 - Install input method module for GTK+ 2
 app-i18n/fcitx:gtk3 - Install input method module for GTK+ 3
 app-i18n/fcitx:opencc - Enable OpenCC engine (using app-i18n/opencc) for converter between Simplified Chinese and Traditional Chinese
 app-i18n/fcitx:pango - Enable support for x11-libs/pango
-app-i18n/fcitx:qt4 - Install input method module for Qt 4
 app-i18n/fcitx:table - Install table input methods for Simplified Chinese
 app-i18n/fcitx-libpinyin:dictionary-manager - Install dictionary manager
 app-i18n/fcitx-rime:configuration_tool - Install configuration tool
@@ -1955,7 +1956,6 @@ dev-java/oracle-jre-bin:headless-awt - Don't install the X backend for AWT, need
 dev-java/oracle-jre-bin:javafx - Install JavaFX libraries
 dev-java/oracle-jre-bin:jce - Install Java Cryptographic Extension Unlimited Strength Jurisdiction Policy Files
 dev-java/proguard:ant - Ant task for using ProGuard in build.xml scripts
-dev-java/proguard:j2me - Adds support for J2ME Wireless Toolkit
 dev-java/protobuf-java:nano - Enable code generator and runtime library designed specifically for resource-constrained systems, like Android
 dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
 dev-java/sbt:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
@@ -4643,7 +4643,6 @@ media-plugins/vdr-epgsearch:conflictcheckonly - install the "conflictcheckonly" 
 media-plugins/vdr-epgsearch:epgsearchonly - install the "epgsearchonly" vdr-plugin
 media-plugins/vdr-epgsearch:quicksearch - install the "quicksearch" vdr-plugin
 media-plugins/vdr-epgsearch:tre - Add support for unlimited fuzzy searching with help of dev-libs/tre library
-media-plugins/vdr-music:graphtft - Enable support for vdr-graphtft plugin
 media-plugins/vdr-pvr350:yaepg - Enables full support for the output format of vdr-yaepg
 media-plugins/vdr-streamdev:client - Compile the VDR plugin vdr-streamdev-client that acts like a dvb-budget card
 media-plugins/vdr-streamdev:server - Compile the VDR plugin vdr-streamdev-server that allows remote systems to access the DVB cards used for the local VDR
@@ -4855,7 +4854,6 @@ media-sound/patchage:session - Include experimental Jack session management (sav
 media-sound/pithos:appindicator - Enable usage of appindicator to export menu options in to unity
 media-sound/pithos:keybinder - Use keybinder to enable global key bindings
 media-sound/pms:regex - Enable regular expression searches
-media-sound/podcatcher:bittorrent - Enable support for bittorrent downloads
 media-sound/potamus:opus - Adds support for the Opus codec.
 media-sound/pragha:glyr - Enable music metadata searchengine support using media-libs/glyr
 media-sound/pragha:grilo - Play songs on DLNA servers using media-libs/grilo
@@ -5271,7 +5269,6 @@ media-video/smplayer:autoshutdown - Enable the option to shutdown your computer 
 media-video/smplayer:mpris - Enable support for MPRIS2 (Media Player Remote Interfacing Specification, version 2), a DBus interface for remote control, which requires dev-qt/qtdbus as dependency.
 media-video/subtitlecomposer:mpv - Build mpv backend support
 media-video/syncplay:client - Install Syncplay client
-media-video/syncplay:gui - Enable gui support
 media-video/syncplay:server - Install Syncplay server
 media-video/syncplay:vlc - Enable VLC2.x support
 media-video/totem:lirc - Enable support for controlling Totem with a remote control using app-misc/lirc
@@ -5476,7 +5473,6 @@ net-analyzer/nagios-plugin-check_raid:aacraid - Support Adaptec AAC-RAID control
 net-analyzer/nagios-plugin-check_raid:dmraid - Support Device-Mapper RAID
 net-analyzer/nagios-plugin-check_raid:hpa - Support HP Array controllers
 net-analyzer/nagios-plugin-check_raid:hpsa - Support HP SmartArray (CCISS) controllers
-net-analyzer/nagios-plugin-check_raid:i2o - Support DPT-I2O controllers (mostly Adaptec)
 net-analyzer/nagios-plugin-check_raid:megaraid-sas - Support LSI MegaRAID SAS controllers
 net-analyzer/nagios-plugin-check_raid:megaraid-scsi - Support LSI MegaRAID SCSI controllers
 net-analyzer/nagios-plugin-check_raid:mpt - Support LSI MPT Fusion controllers
@@ -5552,7 +5548,6 @@ net-analyzer/scanlogd:nids - Use net-libs/libnids for packet capturing
 net-analyzer/scanlogd:pcap - Use net-libs/libpcap for packet capturing
 net-analyzer/scapy:pyx - Enable dev-python/pyx support for psdump/pdfdump commands
 net-analyzer/scapy:tcpreplay - Enable net-analyzer/tcpreplay support for fast packet replay
-net-analyzer/scapy:visual - Enable visual package support for 3d graphs
 net-analyzer/smokeping:dig - Install net-dns/bind-tools for dig functionality
 net-analyzer/smokeping:echoping - Install net-analyzer/echoping for echoping functionality
 net-analyzer/smokeping:ssh - Install ssh functionality
@@ -5915,7 +5910,6 @@ net-im/bitlbee:twitter - Enable Twitter protocol support
 net-im/choqok:attica - Build Open Collaboration Services plugin using kde-frameworks/attica
 net-im/choqok:konqueror - Build Konqueror Choqok plugin
 net-im/choqok:telepathy - Enable support for the real-time communication framework telepathy
-net-im/climm:otr - Enable encrypted conversations
 net-im/corebird:glade - Install glade catalogs for corebird
 net-im/corebird:spellcheck - Support spell checking
 net-im/coturn:mongodb - Enable support for the mongodb database
@@ -6333,7 +6327,6 @@ net-mail/dovecot:solr - Add solr full text search (FTS) support
 net-mail/dovecot:textcat - Add libtextcat language guessing support for full text search (FTS)
 net-mail/dovecot:vpopmail - Add vpopmail support
 net-mail/fdm:courierauth - Add support for Courier authentication library
-net-mail/fetchmail:hesiod - Enable support for hesiod
 net-mail/fetchmail:socks - Enable support for socks proxy
 net-mail/fetchmail:tk - Enable support for Tk GUI toolkit, in particular it installs fetchmailconf
 net-mail/gnubiff:password - Enable save passwords to connect mail servers in user space
@@ -6845,7 +6838,6 @@ net-nds/gosa-core:mail - Manage mail accounts and servers with gosa.
 net-nds/gosa-core:samba - Manage samba accounts with gosa.
 net-nds/ldapvi:gnutls - Use net-libs/gnutls instead of dev-libs/openssl
 net-nds/nsscache:nsscache - Depend on sys-auth/libnss-cache to handle flat files
-net-nds/nsscache:nssdb - Depend on sys-libs/libnss_db to handle dbm files.
 net-nds/openldap:experimental - Enable experimental backend options
 net-nds/openldap:kinit - Enable support for kerberos init
 net-nds/openldap:minimal - Build libraries & userspace tools only. Does not install any server code
@@ -6854,6 +6846,7 @@ net-nds/openldap:overlays - Enable contributed OpenLDAP overlays
 net-nds/openldap:pbkdf2 - Enable support for pbkdf2 passwords
 net-nds/openldap:sha2 - Enable support for pw-sha2 password hashes
 net-nds/openldap:smbkrb5passwd - Enable overlay for syncing ldap, unix and lanman passwords
+net-nds/rpcbind:remotecalls - Enable remote calls
 net-nds/rpcbind:warmstarts - Enables rpcbind to cache configuration for warm restarts
 net-nds/tac_plus:finger - Adds support for checking user counts via fingering the NAS
 net-nds/tac_plus:maxsess - Enforce a limit on maximum sessions per user
@@ -7164,6 +7157,7 @@ net-wireless/gr-osmosdr:hackrf - Build with Great Scott Gadgets HackRF support
 net-wireless/gr-osmosdr:iqbalance - Enable support for I/Q balancing using gr-iqbal
 net-wireless/gr-osmosdr:mirisdr - Build with Mirics MSi2500 + MSi001 SDR support
 net-wireless/gr-osmosdr:rtlsdr - Build with Realtek RTL2832U (rtlsdr) support
+net-wireless/gr-osmosdr:sdrplay - Enable support for SDRplay devices through net-wireless/sdrplay
 net-wireless/gr-osmosdr:soapy - Build with SoapySDR support
 net-wireless/gr-osmosdr:uhd - Build with Ettus Research USRP Hardware Driver support
 net-wireless/horst:pcap - Add support for network packet capture via net-libs/libpcap
@@ -8269,7 +8263,6 @@ sys-devel/sparse:xml - Build the c2xml utility (requires dev-libs/libxml2)
 sys-fabric/ofed:dapl - Add support for DAPL abstraction layer
 sys-fabric/ofed:diags - Add dignostic tools for infiniband
 sys-fabric/ofed:ibacm - Add support for userspace pre-connection services
-sys-fabric/ofed:mstflint - Tools to burn Mellanox firmware
 sys-fabric/ofed:opensm - Add OpenSM - Subnet manager for infiniband
 sys-fabric/ofed:perftest - Add perftest utils
 sys-fabric/ofed:qperf - Add rdma tests
@@ -8296,7 +8289,6 @@ sys-firmware/sigrok-firmware-fx2lafw:binary - Use official upstream pre-built bi
 sys-firmware/vgabios:binary - Use official upstream pre-built binaries (only default and cirrus images)
 sys-freebsd/boot0:tftp - Enable PXE/TFTP boot support.
 sys-freebsd/boot0:zfs - Enable booting on ZFS filesystems.
-sys-freebsd/freebsd-lib:hesiod - Enable support for net-dns/hesiod
 sys-freebsd/freebsd-lib:netware - Build libraries and tools to work with NetWare protocols (IPX and NCP).
 sys-freebsd/freebsd-lib:zfs - Enable ZFS support.
 sys-freebsd/freebsd-rescue:netware - Build tools to work with NetWare protocols (IPX and NCP).
