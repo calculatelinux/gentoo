@@ -69,7 +69,6 @@ $(printf 'libreoffice_extensions_%s ' ${LO_EXTS})"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	bluetooth? ( dbus )
-	kde? ( gtk )
 	libreoffice_extensions_nlpsolver? ( java )
 	libreoffice_extensions_scripting-beanshell? ( java )
 	libreoffice_extensions_scripting-javascript? ( java )
@@ -120,6 +119,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	dev-libs/nss
 	>=dev-libs/redland-1.0.16
 	>=dev-libs/xmlsec-1.2.24[nss]
+	media-gfx/fontforge
 	media-gfx/graphite2
 	media-libs/fontconfig
 	media-libs/freetype:2
@@ -222,7 +222,7 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/cppunit-1.14.0
 	>=dev-util/gperf-3
 	dev-util/intltool
-	>=dev-util/mdds-1.2.3:1=
+	>=dev-util/mdds-1.4.1:1=
 	media-libs/glm
 	sys-devel/bison
 	sys-devel/flex
@@ -388,6 +388,7 @@ src_configure() {
 		--with-system-headers
 		--with-system-jars
 		--with-system-libs
+		--enable-build-opensymbol
 		--enable-cairo-canvas
 		--enable-largefile
 		--enable-mergelibs
@@ -433,7 +434,6 @@ src_configure() {
 		$(use_enable gstreamer gstreamer-1-0)
 		$(use_enable gtk gtk3)
 		$(use_enable gtk2 gtk)
-		$(use_enable kde gtk3-kde5)
 		$(use_enable kde kde5)
 		$(use_enable kde qt5)
 		$(use_enable mysql ext-mariadb-connector)
@@ -448,6 +448,10 @@ src_configure() {
 		$(use_with mysql system-mysql-cppconn)
 		$(use_with odk doxygen)
 	)
+
+	if use gtk && use kde; then
+		myeconfargs+=( --enable-gtk3-kde5 )
+	fi
 
 	if use eds || use gtk; then
 		myeconfargs+=( --enable-dconf --enable-gio )

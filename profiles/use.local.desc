@@ -1106,6 +1106,7 @@ app-office/calligra:spacenav - Enable support for the 3Dconnexion spacenav input
 app-office/glabels:barcode - Enable barcode support through external libraries.
 app-office/gnucash:aqbanking - Connect to some internet banks via AqBanking
 app-office/gnucash:chipcard - Enable support for chipcard reading and processing.
+app-office/gnucash:gui - Enable graphic interface (needs net-libs/webkit-gtk:4 and x11-libs/gtk+:3)
 app-office/gnucash:quotes - Enable Online Stock Quote retrieval
 app-office/gnucash:register2 - Use the new register (Experimental)
 app-office/gnumeric:libgda - Enable database support through gnome-extra/libgda.
@@ -2453,7 +2454,7 @@ dev-libs/log4cxx:smtp - Offer SMTP support via net-libs/libesmtp
 dev-libs/m17n-lib:X - Build the Graphical User Interface API and utilities
 dev-libs/m17n-lib:anthy - Enable support for app-i18n/anthy input method
 dev-libs/m17n-lib:athena - Enable the MIT Athena widget set (x11-libs/libXaw)
-dev-libs/m17n-lib:gd - Build API and utilities based on media-libs/gd. This flag is only meaningful if the X USE flag is also enabled.
+dev-libs/m17n-lib:gd - Build API and utilities based on media-libs/gd. This flag is only meaningful if the X USE flag is also enabled
 dev-libs/m17n-lib:libotf - Use dev-libs/libotf to handle OpenType fonts
 dev-libs/m17n-lib:libxml2 - Use dev-libs/libxml2 to parse XML
 dev-libs/nss:cacert - Include root/class3 certs from CAcert (http://www.cacert.org/)
@@ -3113,6 +3114,7 @@ dev-util/geany-plugins:scope - Enable the scope plugin which is a graphical GDB 
 dev-util/geany-plugins:soup - Enable updatechecker and geniuspaste plugins which require net-libs/libsoup
 dev-util/global:vim - Integrate the GNU GLOBAL source code tag system with Vim
 dev-util/gnome-builder:clang - Provide integration with sys-devel/clang for best possible C/C++ autocompletion, semantic highlighting, symbol resolving, and diagnostics support
+dev-util/gnome-builder:devhelp - Provide API docs browsing and integration via dev-util/devhelp
 dev-util/gnome-builder:git - Provide support for the Git version control system via dev-libs/libgit2-glib (such as setup of Git for New Project, direct cloning for Open Project and changed lines indicators in the editor gutter)
 dev-util/gnome-builder:sysprof - Provide an integrated profiler via dev-util/sysprof
 dev-util/gnome-builder:vala - Provide an autoindenter, autocompletion, diagnostics, and symbol resolver for Vala
@@ -4255,6 +4257,7 @@ media-gfx/nvidia-texture-tools:glew - Enable support for The OpenGL Extension Wr
 media-gfx/openclipart:gzip - Compresses clip art using gzip
 media-gfx/openexr_viewers:cg - Add support for nvidia's cg shaders
 media-gfx/openvdb:abi3-compat - Disables newer features to maintain compatibility with ABI3. Enabled by default.
+media-gfx/openvdb:abi4-compat - Disables newer features to maintain compatibility with ABI4. Enabled by default.
 media-gfx/photoqt:devil - Support additional image formats using media-libs/devil
 media-gfx/photoqt:exiv2 - Use media-gfx/exiv2 as optional dependency
 media-gfx/photoqt:freeimage - Support additional iamge formats using media-libs/freeimage
@@ -4318,7 +4321,6 @@ media-libs/coin:qthelp - Build API documentation in QtHelp format
 media-libs/coin:simage - Texture loading via media-libs/simage library
 media-libs/devil:allegro - Add support for Allegro
 media-libs/devil:nvtt - Add support for media-gfx/nvidia-texture-tools
-media-libs/elementary:quicklaunch - Enable quick-launch support
 media-libs/esdl:image - Enable image support
 media-libs/faad2:digitalradio - Digital Radio Mondiale (warning: disables other decoders)
 media-libs/flickcurl:raptor - Use media-libs/raptor for proper RDF serializing
@@ -5395,6 +5397,7 @@ net-analyzer/check_mk:smart - Install check_mk-agent S.M.A.R.T plugin.
 net-analyzer/check_mk:wato - Enable check_mk WATO - check_mk's Web Administration Tool.
 net-analyzer/check_mk:zypper - Install check_mk-agent zypper plugin.
 net-analyzer/check_mk_agent:apache_status - Install check_mk-agent apache-status plugin.
+net-analyzer/check_mk_agent:inventory - Install check_mk-agent linux inventory plugin.
 net-analyzer/check_mk_agent:logwatch - Install check_mk-agent logwatch plugin.
 net-analyzer/check_mk_agent:mysql - Install check_mk-agent mysql plugin.
 net-analyzer/check_mk_agent:nfsexports - Install check_mk-agent nfsexports plugin.

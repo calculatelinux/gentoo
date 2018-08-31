@@ -11,7 +11,7 @@ HOMEPAGE="http://www.pango.org/"
 
 LICENSE="LGPL-2+ FTL"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 
 IUSE="X +introspection test"
 
@@ -38,7 +38,7 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	default
+	gnome2_src_prepare
 	# This should be updated if next release fails to pre-generate the manpage as well, or src_prepare removed if is properly generated
 	# https://gitlab.gnome.org/GNOME/pango/issues/270
 	cp -v "${FILESDIR}"/${PV}-pango-view.1.in "${S}/utils/pango-view.1.in" || die

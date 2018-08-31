@@ -16,8 +16,6 @@ if [[ -z ${PV%%*9999} ]]; then
 	ECVS_USER="anonymous"
 	ECVS_CVS_OPTIONS="-dP"
 	MY_P="${PN}"
-	SRC_URI=""
-	KEYWORDS="alpha amd64 arm ia64 ppc ppc64 x86"
 else
 	MY_P="${P/_/.}"
 	SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz"
@@ -117,7 +115,7 @@ src_configure() {
 
 	if use wxwidgets; then
 		WX_GTK_VER="3.0"
-		need-wxwidgets unicode
+		setup-wxwidgets
 	fi
 
 	tc-export CC CXX			#453174

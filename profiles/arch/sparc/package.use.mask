@@ -1,6 +1,11 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
+# Sergei Trofimovich <slyfox@gentoo.org> (30 Aug 2018)
+# dev-games/openscenegraph is a heavy unkeyworded dependency.
+# Skip keywording it for now.
+app-office/scribus osg
+
 # Sergei Trofimovich <slyfox@gentoo.org> (17 Jun 2018)
 # Mask broken HIPE support on sparc32 (bug #656618)
 dev-lang/erlang hipe
@@ -116,10 +121,6 @@ gnome-extra/nm-applet teamd
 # Justin Lecher <jlec@gentoo.org> (22 Feb 2016)
 # Missing test deps keyword #575366
 dev-cpp/eigen test
-
-# Mike Frysinger <vapier@gentoo.org> (21 Feb 2016)
-# Needs arch love for elementary. #575322
-media-libs/elementary javascript
 
 # Pacho Ramos <pacho@gentoo.org> (20 Feb 2016)
 # Missing keywords, bug #551580

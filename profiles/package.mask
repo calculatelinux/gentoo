@@ -29,6 +29,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Mikle Kolyada <zlogene@gentoo.org> (30 Aug 2018)
+# Dead upstream, does not work properly.
+# Unmaintained.
+# Use sys-boot/woeusb instead.
+sys-boot/winusb
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (29 Aug 2018)
+# Masked for removal in 30 days. Multiple build failures. Upstream inactive.
+# (bugs #321017, #581284, #588692, #602786, #649006, #654140)
+www-plugins/gnash
+
 # Virgil Dupras <vdupras@gentoo.org> (27 Aug 2018)
 # Unmaintained for a long time, outdated, no revdep. Removal in 30 days.
 # Bug #626550
@@ -152,15 +163,6 @@ dev-python/jsonfield
 # wrong.  Bug #647964.
 ~app-portage/gemato-14.0m
 ~app-portage/gemato-9999m
-
-# Joonas Niilola <juippis@gmail.com> (31 Jul 2018)
-# Old and obsolete. Merged into one EFL package since 1.18 release. 
-# Removal in ~30 days. Bug #662510
-=dev-libs/efl-1.17.0-r1
-media-libs/elementary
-media-plugins/emotion_generic_players
-media-plugins/evas_generic_loaders
-x11-themes/ethemes
 
 # Mart Raudsepp <leio@gentoo.org> (16 Jul 2018)
 # Parallel-installable old versions with no remaining consumers

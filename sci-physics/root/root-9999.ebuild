@@ -7,7 +7,7 @@ CMAKE_BUILD_TYPE=Release
 # ninja does not work due to fortran
 CMAKE_MAKEFILE_GENERATOR=emake
 FORTRAN_NEEDED="fortran"
-PYTHON_COMPAT=( python2_7 python3_{4,5,6} )
+PYTHON_COMPAT=( python2_7 python3_{4,5,6,7} )
 
 inherit cmake-utils cuda eapi7-ver elisp-common eutils fortran-2 \
 	prefix python-single-r1 toolchain-funcs
@@ -117,6 +117,7 @@ RDEPEND="${CDEPEND}
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-6.12.04-no-ocaml.patch
+	"${FILESDIR}"/${PN}-6.12.06_cling-runtime-sysroot.patch
 	"${FILESDIR}"/${PN}-6.13.02-hsimple.patch
 )
 
@@ -320,5 +321,5 @@ src_install() {
 	fi
 
 	# clean up unnecessary files from installation
-	rm -r bin/clang* config emacs etc/vmc || die
+	rm -r bin/clang* emacs || die
 }

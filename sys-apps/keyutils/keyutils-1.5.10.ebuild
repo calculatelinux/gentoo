@@ -11,13 +11,14 @@ SRC_URI="https://people.redhat.com/dhowells/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="static static-libs test"
 
 RDEPEND=""
 DEPEND="!prefix? ( >=sys-kernel/linux-headers-2.6.11 )"
 
 PATCHES=(
+	"${FILESDIR}"/${PN}-1.5.10-endian-check-1.patch
 	"${FILESDIR}"/${PN}-1.5.10-makefile-fixup.patch
 	"${FILESDIR}"/${PN}-1.5.10-disable-tests.patch #519062 #522050
 	"${FILESDIR}"/${PN}-1.5.9-header-extern-c.patch
