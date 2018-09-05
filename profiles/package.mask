@@ -78,8 +78,9 @@ media-plugins/vdr-xvdr
 media-plugins/vdr-autosort
 
 # Matthias Maier <tamiko@gentoo.org> (1 Sep 2018)
-# Mask 1.0.0 for the time being until a compatible LLVM version made it
-# into the tree.
+# Mask 0.7.0 and  1.0.0 for the time being until a compatible LLVM version
+# made it into the tree, bug #665192
+~dev-lang/julia-0.7.0
 ~dev-lang/julia-1.0.0
 
 # Michał Górny <mgorny@gentoo.org> (31 Aug 2018)
@@ -204,17 +205,6 @@ sys-apps/microcode-ctl
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
 >=www-client/chromium-70
-
-# Virgil Dupras <vdupras@gentoo.org> (02 Aug 2018)
-# Django 1.8 is unsupported and insecure. These packages haven't been updated
-# to work with up-to-date django. Removal in 30 days. Bug #662632
-<dev-python/django-1.11
-dev-python/django-compressor
-dev-python/django-openstack-auth
-dev-python/django-tastypie
-dev-python/jingo
-dev-python/Coffin
-dev-python/jsonfield
 
 # Michał Górny <mgorny@gentoo.org> (01 Aug 2018)
 # Multiprocessing versions of gemato.  They are known to hang on some
