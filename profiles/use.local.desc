@@ -4018,7 +4018,7 @@ mail-mta/exim:redis - Adds support for querying dev-db/redis
 mail-mta/exim:spf - Adds support for Sender Policy Framework
 mail-mta/exim:srs - Adds support for Sender Rewriting Scheme
 mail-mta/exim:tpda - Adds support for Transport Post-Delivery Actions
-mail-mta/msmtp:libsecret - Enable libsecret support to store login credentials
+mail-mta/msmtp:daemon - Build/install msmtpd MTA daemon
 mail-mta/msmtp:mta - Enable this to install as system-wide MTA
 mail-mta/netqmail:authcram - Enable AUTHCRAM support
 mail-mta/netqmail:gencertdaily - Generate SSL certificates daily instead of hourly
@@ -4692,17 +4692,14 @@ media-sound/audacity:twolame - Enables twolame support (MPEG Audio Layer 2 encod
 media-sound/audacity:vamp - Enables vamp plugins support (Audio analysing plugins)
 media-sound/audacity:vst - Enable VST plugin support
 media-sound/beets:badfiles - Validate MP3 & FLAC files
-media-sound/beets:bpd - Enable support for media-sound/mpd server emulation
-media-sound/beets:chroma - Enable support for acoustic fingerprinting plugin using media-libs/chromaprint
-media-sound/beets:convert - Enable support for the convert plugin which makes it possible to transcode files
+media-sound/beets:chromaprint - Enable support for acoustic fingerprinting plugin using media-libs/chromaprint
 media-sound/beets:discogs - Enable support for the discogs API plugin
-media-sound/beets:lastgenre - Enable support for importing music genres from last.fm tags
-media-sound/beets:lastimport - Enable support for importing your last.fm playcounts
-media-sound/beets:mpdstats - Enable support for collecting statistic about listening habits from media-sound/mpd
-media-sound/beets:opus - Enable opus support in gstreamer-based replaygain
+media-sound/beets:ffmpeg - Enable support for the convert plugin to transcode files via media-video/ffmpeg
+media-sound/beets:lastfm - Enable support for importing personal last.fm playcounts and music genres from last.fm tags
+media-sound/beets:mpd - Enable support for media-sound/mpd server emulation and statistic gathered from media-sound/mpd
 media-sound/beets:replaygain - Enable support for Replay Gain metadata calculation during import
-media-sound/beets:thumbnails - Generate thumbnails for albums
-media-sound/beets:web - Enable embedded webserver support through dev-python/flask
+media-sound/beets:thumbnail - Enable album thumbnails generation
+media-sound/beets:webserver - Enable embedded webserver support through dev-python/flask
 media-sound/bluez-alsa:hcitop - Enable top-like monitoring tool for HCI
 media-sound/cantata:cdio - Use dev-libs/libcdio-paranoia for CD support (instead of cdparanoia)
 media-sound/cantata:http-server - Enable internal HTTP server to play non-MPD files

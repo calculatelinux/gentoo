@@ -29,6 +29,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Lars Wendler <polynomial-c@gentoo.org> (05 Sep 2018)
+# Broken "killall -SIG". Breaks many scripts.
+# See https://bugs.gentoo.org/664066
+=sys-process/psmisc-23.2
+
 # Joerg Bornkessel <hd_brummy@gentoo.org> (02/Sep/2018)
 # homepage dead
 # dead on upstream
@@ -379,10 +384,6 @@ media-libs/libglvnd
 # Poorly tested version bump followed by a series of quick hacks
 # that do not make it any more working. Bug #651030.
 >=sys-devel/distcc-3.3
-
-# Tim Harder <radhermit@gentoo.org> (01 Mar 2018)
-# Masked for testing.
->=dev-python/aiohttp-3
 
 # Anthony G. Basile <blueness@gentoo.org> (25 Feb 2018)
 # Upstream has been dead since 2012.  Migrate to uclibc-ng.
