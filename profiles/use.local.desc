@@ -223,7 +223,6 @@ app-arch/libarchive:e2fsprogs - Use file flags from sys-fs/e2fsprogs headers ins
 app-arch/libarchive:lz4 - Enable support for LZ4 compression using app-arch/lz4
 app-arch/libarchive:nettle - Use dev-libs/nettle as crypto backend
 app-arch/libarchive:zlib - Allow accessing gzip-compressed archives through sys-libs/zlib. This only affects libarchive's native support: bsdtar will keep using gunzip as a filter if that's not built-in. It's also needed for supporting extraction of ZIP files.
-app-arch/lz4:valgrind - Enable usage of dev-util/valgrind in tests
 app-arch/p7zip:rar - Enable support for non-free rar decoder
 app-arch/pbzip2:symlink - Install symlinks which override app-arch/bzip2 implementation
 app-arch/pigz:symlink - Install symlinks which override app-arch/gzip implementation
@@ -7329,6 +7328,8 @@ sci-electronics/gtkwave:packed - Enables '#pragma pack' for data arrays (saves m
 sci-electronics/kicad:github - Add github support into PCB editor
 sci-electronics/kicad:i18n - Allow GUI internationalization through l10n_* use flags
 sci-electronics/kicad:minimal - Build only binaries without parts library and examples
+sci-electronics/kicad:ngspice - Enable circuit simulation
+sci-electronics/kicad:oce - Enable viewing 3D rendering of designs via OCE
 sci-electronics/kicad:python - Enable python scripting support
 sci-electronics/ngspice:shared - Build ngspice as a shared library
 sci-electronics/pcb:gcode - gcode file export
@@ -7488,6 +7489,10 @@ sci-libs/netcdf:tools - Build the utilities nccopy, ncgen and ncdump
 sci-libs/nlopt:octave - Add plugin for sci-mathematics/octave
 sci-libs/o2scl:armadillo - Build matrix manipulation with sci-libs/armadillo
 sci-libs/o2scl:eigen - Build matrix manipulation with dev-cpp/eigen
+sci-libs/oce:freeimage - Enable support for image i/o via media-libs/freeimage
+sci-libs/oce:gl2ps - Use gl2ps PostScript printing library
+sci-libs/oce:tbb - Enable parallel meshing
+sci-libs/oce:vtk - Enable Virtualisation Toolkit
 sci-libs/octomap:dynamicEDT3D - Build and install dynamicEDT3D library: A library for incrementally updatable Euclidean distance transforms in 3D.
 sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/opencascade:gl2ps - Use gl2ps PostScript printing library
@@ -7968,7 +7973,6 @@ sys-auth/fingerprint-gui:upekbsapi - Add UPEK BSAPI drivers for identify functio
 sys-auth/keystone:memcached - Installs dependencies needed for using memcached as a backend
 sys-auth/keystone:mongo - Installs dependencies needed for using mongo as a backend
 sys-auth/munge:gcrypt - Use libgcrypt instead of openssl
-sys-auth/nss-mdns:search-domains - Honour search domains from /etc/resolv.conf (see bug #201948 for possible side effects)
 sys-auth/nss-pam-ldapd:pynslcd - Install the python implementation along with the standard implementation
 sys-auth/nss-pam-ldapd:utils - Install the command-line utilities
 sys-auth/oath-toolkit:pam - Build PAM module for pluggable login authentication for OATH
