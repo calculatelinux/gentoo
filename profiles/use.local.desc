@@ -7841,6 +7841,7 @@ sys-apps/fwupd:gpg - Enable GPG support.
 sys-apps/fwupd:man - Build and install man pages
 sys-apps/fwupd:pkcs7 - Enable PKCS7 verification support via net-libs/gnutls.
 sys-apps/fwupd:redfish - Install redfish plugin
+sys-apps/fwupd:thunderbolt - Install thunderbolt plugin
 sys-apps/fwupd:uefi - Enable UEFI support
 sys-apps/fwupd:uefi_labels - Enable UEFI labels support
 sys-apps/gawk:forced-sandbox - Always enable --sandbox mode for simpler/secure runtime (disables e/r/w commands)
