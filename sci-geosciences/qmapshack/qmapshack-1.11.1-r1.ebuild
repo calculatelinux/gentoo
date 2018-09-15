@@ -10,7 +10,7 @@ HOMEPAGE="https://bitbucket.org/maproom/qmapshack/wiki/Home"
 SRC_URI="https://bitbucket.org/maproom/${PN}/downloads/${P}.tar.gz"
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 RDEPEND="dev-qt/qtwebkit:5
 	dev-qt/qtscript:5
@@ -27,6 +27,8 @@ RDEPEND="dev-qt/qtwebkit:5
 	sci-libs/alglib"
 DEPEND="${RDEPEND}
 	dev-qt/linguist-tools:5"
+
+PATCHES=( "${FILESDIR}/${P}-qt-5.11.patch" )
 
 pkg_postinst() {
 	xdg_desktop_database_update
