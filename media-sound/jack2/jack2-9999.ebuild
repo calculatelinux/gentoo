@@ -1,7 +1,7 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="6"
+EAPI=6
 
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="threads(+)"
@@ -13,7 +13,6 @@ HOMEPAGE="http://jackaudio.org/"
 if [[ "${PV}" = "9999" ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/jackaudio/${PN}.git"
-	KEYWORDS=""
 else
 	MY_PV="${PV/_rc/-RC}"
 	MY_P="${PN}-${MY_PV}"
@@ -24,27 +23,26 @@ fi
 
 LICENSE="GPL-2"
 SLOT="2"
-IUSE="alsa celt dbus doc opus pam +classic sndfile libsamplerate readline"
+IUSE="alsa +classic dbus doc ieee1394 libsamplerate opus pam readline sndfile"
 
-REQUIRED_USE="
-	${PYTHON_REQUIRED_USE}
+REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	|| ( classic dbus )"
 
-CDEPEND="media-libs/libsamplerate
+COMMON_DEPEND="${PYTHON_DEPS}
+	media-libs/libsamplerate
 	media-libs/libsndfile
 	sys-libs/readline:0=
-	${PYTHON_DEPS}
 	alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
-	celt? ( media-libs/celt:0[${MULTILIB_USEDEP}] )
 	dbus? (
 		dev-libs/expat[${MULTILIB_USEDEP}]
 		sys-apps/dbus[${MULTILIB_USEDEP}]
 	)
+	ieee1394? ( media-libs/libffado:=[${MULTILIB_USEDEP}] )
 	opus? ( media-libs/opus[custom-modes,${MULTILIB_USEDEP}] )"
-DEPEND="${CDEPEND}
+DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
-RDEPEND="${CDEPEND}
+RDEPEND="${COMMON_DEPEND}
 	dbus? ( dev-python/dbus-python[${PYTHON_USEDEP}] )
 	pam? ( sys-auth/realtime-base )
 	!media-sound/jack-audio-connection-kit:0"
@@ -62,9 +60,9 @@ multilib_src_configure() {
 		$(usex dbus --dbus "")
 		$(usex classic --classic "")
 		--alsa=$(usex alsa yes no)
-		--celt=$(usex celt yes no)
+		--celt=no
 		--doxygen=$(multilib_native_usex doc yes no)
-		--firewire=no
+		--firewire=$(usex ieee1394 yes no)
 		--freebob=no
 		--iio=no
 		--opus=$(usex opus yes no)

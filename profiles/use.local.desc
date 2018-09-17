@@ -4775,7 +4775,6 @@ media-sound/herrie:xspf - Enable support for reading and saving XSPF playlists
 media-sound/hydrogen:archive - Use libarchive instead of libtar
 media-sound/hydrogen:portmidi - Add portmidi support
 media-sound/jack-audio-connection-kit:coreaudio - Build the CoreAudio driver on Mac OS X systems
-media-sound/jack-audio-connection-kit:cpudetection - Enables runtime cpudetection
 media-sound/jack-audio-connection-kit:pam - Add basic realtime configuration via sys-auth/realtime-base
 media-sound/jack2:celt - Support CELT low delay audio codec (media-libs/celt)
 media-sound/jack2:classic - Enable building of jackd
@@ -6822,7 +6821,6 @@ net-misc/stargazer:stargazer - Enable build of Stargazer billing system.
 net-misc/streamtuner:shout - Enable shoutcast plug-in.
 net-misc/streamtuner:xiph - Enable xiph.org plug-in.
 net-misc/stunnel:stunnel3 - Install the stunnel3 wrapper.
-net-misc/teamviewer:system-wine - Use virtual/wine instead of bundled wine.
 net-misc/termpkg:uucp - Adds support for uucp style device locking
 net-misc/tigervnc:dri3 - Build with DRI3 support
 net-misc/tigervnc:drm - Build with DRM support
@@ -9123,6 +9121,7 @@ x11-themes/zuki-themes:xfce - Install theme for xfce-base/xfwm4
 x11-themes/zukitwo:gnome-shell - Install theme for gnome-base/gnome-shell
 x11-wm/echinus:xrandr - Enable support for multihead configuration
 x11-wm/enlightenment:egl - Enable EGL rendering
+x11-wm/enlightenment:packagekit - Enable module for package manager integration
 x11-wm/enlightenment:ukit - Use upower/udisks to automount devices
 x11-wm/fluxbox:bidi - Enable bidirectional language support with dev-libs/fribidi
 x11-wm/fluxbox:slit - Enables the Fluxbox slit (or dock)
