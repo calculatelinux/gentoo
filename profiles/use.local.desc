@@ -1442,7 +1442,6 @@ dev-db/firebird:xinetd - Install ClassicServer
 dev-db/maatkit:udf - Build the MySQL UDFs shipped with maatkit, requires non-minimal MySQL
 dev-db/mariadb:backup - Build mariadb-backup which supports SST and hot backup of InnoDB, Aria and MyISAM including compression and encryption
 dev-db/mariadb:client-libs - Build the client libraries from the server package instead of the C Connector packages
-dev-db/mariadb:embedded - Build embedded server (libmysqld)
 dev-db/mariadb:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
 dev-db/mariadb:galera - Enables galera replication
 dev-db/mariadb:innodb-lz4 - Enables lz4 compression methods for InnoDB/XtraDB
@@ -1454,7 +1453,6 @@ dev-db/mariadb:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/mariadb:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
 dev-db/mariadb:mroonga - Add support for the Mroonga engine for interfacing with the Groonga text search
 dev-db/mariadb:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
-dev-db/mariadb:openssl - Enable SSL connections and crypto functions using dev-libs/openssl
 dev-db/mariadb:oqgraph - Add support for the Open Query GRAPH engine
 dev-db/mariadb:pam - Enable the optional PAM authentication plugin for the server
 dev-db/mariadb:profiling - Add support for statement profiling (requires USE=community).
@@ -1489,17 +1487,11 @@ dev-db/mariadb-galera:yassl - Enable SSL connections and crypto functions using 
 dev-db/mongodb:mms-agent - Install the MongoDB Monitoring Service agent
 dev-db/mongodb:tools - Install the MongoDB tools (mongoimport, mongodump...) from app-admin/mongo-tools
 dev-db/mysql:client-libs - Build the client libraries from the server package instead of the C Connector packages (not recommended)
-dev-db/mysql:cluster - Add support for NDB clustering (deprecated)
-dev-db/mysql:community - Enables the community features from upstream.
-dev-db/mysql:embedded - Build embedded server (libmysqld)
 dev-db/mysql:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
 dev-db/mysql:jemalloc - Use dev-libs/jemalloc for allocations.
 dev-db/mysql:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/mysql:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
-dev-db/mysql:max-idx-128 - Raise the max index per table limit from 64 to 128
-dev-db/mysql:minimal - Install client programs only, no server
 dev-db/mysql:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
-dev-db/mysql:openssl - Enable SSL connections and crypto functions using dev-libs/openssl
 dev-db/mysql:profiling - Add support for statement profiling (requires USE=community).
 dev-db/mysql:server - Build the server program
 dev-db/mysql:systemtap - Build support for profiling and tracing using dev-util/systemtap
@@ -1529,13 +1521,10 @@ dev-db/oracle-instantclient:sdk - Header files and an example makefile for devel
 dev-db/oracle-instantclient:sqlplus - Libraries and executable for running SQL*Plus
 dev-db/oracle-instantclient:tools - Workload Replay Client
 dev-db/percona-server:client-libs - Build the libmysqlclient libraries
-dev-db/percona-server:embedded - Build embedded server (libmysqld)
-dev-db/percona-server:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
 dev-db/percona-server:jemalloc - Use dev-libs/jemalloc for allocations.
 dev-db/percona-server:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/percona-server:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
 dev-db/percona-server:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
-dev-db/percona-server:openssl - Enable SSL connections and crypto functions using dev-libs/openssl
 dev-db/percona-server:profiling - Add support for statement profiling (requires USE=community).
 dev-db/percona-server:rocksdb - Add support for RocksDB; a key/value, LSM database optimized for flash storage
 dev-db/percona-server:server - Build the server program
@@ -2305,7 +2294,6 @@ dev-libs/efl:ico - Enable Ico image loader
 dev-libs/efl:ivi - Enable ivi-shell support
 dev-libs/efl:libuv - Enable dev-libs/libuv support
 dev-libs/efl:luajit - USE dev-lang/luajit instead of dev-lang/lua
-dev-libs/efl:oldlua - USE dev-lang/lua instead of dev-lang/luajit
 dev-libs/efl:physics - Enable Bullet physics effects and support
 dev-libs/efl:pixman - Enable PixMan for software rendering
 dev-libs/efl:ppm - Enable PMAPS image loader
@@ -4554,8 +4542,7 @@ media-libs/taglib:boost - Use dev-libs/boost instead of GCC built-ins
 media-libs/tremor:low-accuracy - enable 32bit only multiply operations
 media-libs/urt:tools - Install tools
 media-libs/vigra:valgrind - Enable valgrind in make check
-media-libs/vulkan-loader:demos - Build vulkan demos and vulkaninfo
-media-libs/vulkan-loader:layers - Build the vulkan layers
+media-libs/vulkan-loader:layers - Include the vulkan layers
 media-libs/waffle:egl - Enable EGL support
 media-libs/waffle:gbm - Enable support for the Generic Buffer Manager (gbm)
 media-libs/waffle:wayland - Enable Wayland support
@@ -8223,6 +8210,7 @@ sys-cluster/ucx:numa - Add support for numa memory allocation
 sys-cluster/vzctl:ploop - Add support for ploop devices via sys-cluster/ploop
 sys-cluster/vzctl:vzmigrate - Add support for container migration
 sys-devel/autogen:libopts - install the libopts tarball (a few packages want this for developing)
+sys-devel/bc:forced-sandbox - Always enable --sandbox mode for simpler/secure runtime (disables the ! command in dc)
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/binutils-apple:classic - Use nm, otool, etc. from this ebuild instead of llvm-based tools
 sys-devel/binutils-apple:libcxx - Add support for libcxx
@@ -9120,9 +9108,7 @@ x11-themes/zuki-themes:mate - Install Metacity theme for mate-base/mate
 x11-themes/zuki-themes:xfce - Install theme for xfce-base/xfwm4
 x11-themes/zukitwo:gnome-shell - Install theme for gnome-base/gnome-shell
 x11-wm/echinus:xrandr - Enable support for multihead configuration
-x11-wm/enlightenment:egl - Enable EGL rendering
 x11-wm/enlightenment:packagekit - Enable module for package manager integration
-x11-wm/enlightenment:ukit - Use upower/udisks to automount devices
 x11-wm/fluxbox:bidi - Enable bidirectional language support with dev-libs/fribidi
 x11-wm/fluxbox:slit - Enables the Fluxbox slit (or dock)
 x11-wm/fluxbox:systray - Enables the system tray in the Fluxbox toolbar

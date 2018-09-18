@@ -57,7 +57,7 @@ DOCS=( ChangeLog README TODO )
 PATCHES=(
 	"${FILESDIR}"/${P}+libav-9.patch
 	"${FILESDIR}"/${P}-ffmpeg2.patch
-	"${FILESDIR}"/CVE-2016-2399.patch
+	"${FILESDIR}"/${P}-CVE-2016-2399.patch
 )
 
 src_prepare() {
