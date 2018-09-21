@@ -4369,7 +4369,6 @@ media-libs/libbdplus:aacs - Add support for decryption of AACS
 media-libs/libbluray:aacs - Add support for decryption of AACS
 media-libs/libbluray:bdplus - Use media-libs/libbdplus for BD+ decryption
 media-libs/libbluray:java - Add support for BD-J
-media-libs/libbluray:udf - Add UDF (Universal Disk Format) support
 media-libs/libbluray:utils - Install command-line utilities and examples
 media-libs/libcanberra:alsa - Enables ALSA sound driver.
 media-libs/libcanberra:gstreamer - Enables gstreamer sound driver. Not useful when alsa or pulseaudio is available.
@@ -4834,7 +4833,6 @@ media-sound/musescore:webengine - Use dev-qt/qtwebengine for embedded web browse
 media-sound/ncmpc:artist-screen - Enable artist screen
 media-sound/ncmpc:async-connect - Enable asynchronous connect
 media-sound/ncmpc:chat-screen - Enable the chat screen
-media-sound/ncmpc:colors - Enable color support
 media-sound/ncmpc:help-screen - Enable the help screen
 media-sound/ncmpc:key-screen - Enable key editor screen
 media-sound/ncmpc:lyrics-screen - Enable lyrics screen
@@ -7181,6 +7179,8 @@ net-wireless/hostapd:sqlite - Adding sqlite support
 net-wireless/hostapd:wps - Add support for Wi-Fi Protected Setup
 net-wireless/iwd:client - Enable iwctl client tool
 net-wireless/iwd:monitor - Enable iwmon monitor tool
+net-wireless/iwd:ofono - Enable support for oFono SIM authentication
+net-wireless/iwd:wired - Enable ethernet authentication daemon
 net-wireless/kismet:client - Build the ncurses-based user interface
 net-wireless/kismet:pcre - Build with pcre support
 net-wireless/kismet:plugin-autowep - Build the autowep plugin
@@ -7395,7 +7395,6 @@ sci-libs/ViSP:coin - Enables Coin3D support.
 sci-libs/ViSP:demos - Installs demo programs.
 sci-libs/ViSP:dmtx - Enables barcode data matrix support.
 sci-libs/ViSP:ogre - Enables dev-games/ogre support.
-sci-libs/ViSP:ois - Enables dev-games/ois support via ogre.
 sci-libs/ViSP:opencv - Enables media-libs/opencv support.
 sci-libs/ViSP:tutorials - Installs tutorials.
 sci-libs/ViSP:zbar - Enables barcodes reading.
