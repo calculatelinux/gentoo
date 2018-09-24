@@ -39,7 +39,7 @@ KEYWORDS="~amd64 ~x86"
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="bindist eme-free +gmp-autoupdate hardened hwaccel jack +screenshot selinux test"
+IUSE="bindist eme-free geckodriver +gmp-autoupdate hardened hwaccel jack +screenshot selinux test"
 RESTRICT="!bindist? ( bindist )"
 
 SRCHASH=239e434d6d2b8e1e2b697c3416d1e96d48fe98e5
@@ -189,6 +189,14 @@ src_configure() {
 	# get your own set of keys.
 	_google_api_key=AIzaSyDEAOvatFo0eTgsV_ZlEzx0ObmepsMzfAc
 
+	# Add information about TERM to output (build.log) to aid debugging
+	# blessings problems
+	if [[ -n "${TERM}" ]] ; then
+		einfo "TERM is set to: \"${TERM}\""
+	else
+		einfo "TERM is unset."
+	fi
+
 	####################################
 	#
 	# mozconfig, CFLAGS and CXXFLAGS setup
@@ -197,6 +205,8 @@ src_configure() {
 
 	mozconfig_init
 	mozconfig_config
+
+	mozconfig_use_enable geckodriver
 
 	# enable JACK, bug 600002
 	mozconfig_use_enable jack
@@ -290,6 +300,13 @@ src_install() {
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" SHELL="${SHELL:-${EPREFIX}/bin/bash}" MOZ_NOSPAM=1 \
 	DESTDIR="${D}" ./mach install
 
+	if use geckodriver ; then
+		cp "${BUILD_OBJ_DIR}"/dist/bin/geckodriver "${ED%/}"${MOZILLA_FIVE_HOME} || die
+		pax-mark m "${ED%/}"${MOZILLA_FIVE_HOME}/geckodriver
+
+		dosym ${MOZILLA_FIVE_HOME}/geckodriver /usr/bin/geckodriver
+	fi
+
 	# Install language packs
 	mozlinguas_src_install
 
@@ -337,8 +354,16 @@ PROFILE_EOF
 			|| die
 	fi
 
+	# Don't install llvm-symbolizer from sys-devel/llvm package
+	[[ -f "${ED%/}${MOZILLA_FIVE_HOME}/llvm-symbolizer" ]] && \
+		rm "${ED%/}${MOZILLA_FIVE_HOME}/llvm-symbolizer"
+
+	# firefox and firefox-bin are identical
+	rm "${ED%/}"${MOZILLA_FIVE_HOME}/firefox-bin || die
+	dosym firefox ${MOZILLA_FIVE_HOME}/firefox-bin
+
 	# Required in order to use plugins and even run firefox on hardened.
-	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{firefox,firefox-bin,plugin-container}
+	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{firefox,plugin-container}
 }
 
 pkg_preinst() {
