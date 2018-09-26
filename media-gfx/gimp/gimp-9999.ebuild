@@ -18,7 +18,7 @@ KEYWORDS=""
 LANGS="am ar ast az be bg br ca ca@valencia cs csb da de dz el en_CA en_GB eo es et eu fa fi fr ga gl gu he hi hr hu id is it ja ka kk km kn ko lt lv mk ml ms my nb nds ne nl nn oc pa pl pt pt_BR ro ru rw si sk sl sr sr@latin sv ta te th tr tt uk vi xh yi zh_CN zh_HK zh_TW"
 IUSE="alsa aalib altivec aqua debug doc openexr gnome postscript jpeg2k cpu_flags_x86_mmx mng python smp cpu_flags_x86_sse udev vector-icons webp wmf xpm"
 
-RDEPEND=">=dev-libs/glib-2.54.2:2
+RDEPEND=">=dev-libs/glib-2.56.0:2
 	>=dev-libs/atk-2.2.0
 	>=x11-libs/gtk+-2.24.10:2
 	>=x11-libs/gdk-pixbuf-2.31:2
@@ -37,7 +37,6 @@ RDEPEND=">=dev-libs/glib-2.54.2:2
 	x11-themes/hicolor-icon-theme
 	>=media-libs/babl-0.1.56
 	>=media-libs/gegl-0.4.8:0.4[cairo]
-	>=dev-libs/glib-2.43
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	aqua? ( x11-libs/gtk-mac-integration )
@@ -165,6 +164,24 @@ _clean_up_locales() {
 	done
 }
 
+# for https://bugs.gentoo.org/664938
+_rename_plugins() {
+	einfo 'Renaming plug-ins to not collide with pre-2.10.6 file layout (bug #664938)...'
+	local prepend=gimp-org-
+	(
+		cd "${ED%/}"/usr/$(get_libdir)/gimp/2.0/plug-ins || exit 1
+		for plugin_slash in $(ls -d1 */); do
+		    plugin=${plugin_slash%/}
+		    if [[ -f ${plugin}/${plugin} ]]; then
+			# NOTE: Folder and file name need to match for Gimp to load that plug-in
+			#       so "file-svg/file-svg" becomes "${prepend}file-svg/${prepend}file-svg"
+			mv ${plugin}/{,${prepend}}${plugin} || exit 1
+			mv {,${prepend}}${plugin} || exit 1
+		    fi
+		done
+	)
+}
+
 src_test() {
 	virtx emake check
 }
@@ -185,6 +202,7 @@ src_install() {
 	# Prevent dead symlink gimp-console.1 from downstream man page compression (bug #433527)
 	mv "${ED%/}"/usr/share/man/man1/gimp-console{-*,}.1 || die
 
+	_rename_plugins || die
 	_clean_up_locales
 }
 
