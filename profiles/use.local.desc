@@ -2461,7 +2461,6 @@ dev-libs/oniguruma:crnl-as-line-terminator - enable CR+NL as line terminator
 dev-libs/opencryptoki:tpm - Enable support for Trusted Platform Module (TPM) using app-crypt/trousers
 dev-libs/openct:debug - Add debug output to the driver library for pcsc-lite.
 dev-libs/openct:pcsc-lite - Build a driver library for sys-apps/pcsc-lite, providing PC/SC API access to devices supported by OpenCT.
-dev-libs/openct:udev - Install rules for sys-fs/udev to auto-start openct.
 dev-libs/openobex:irda - Enable IrDA support
 dev-libs/opensc:ctapi - Use CT-API for accessing Smartcard hardware
 dev-libs/opensc:notify - Enable notifications
@@ -2812,8 +2811,6 @@ dev-python/pyzor:redis - Enables the redis back-end database engine for pyzord t
 dev-python/rarfile:compressed - Enables the module to support compressed v3 archives by calling the app-arch/unrar.
 dev-python/rdflib:redland - enable support for Redland triplestore
 dev-python/restkit:cli - Install the restcli command line interface/tool, based on dev-python/ipython
-dev-python/scrapy:boto - Add support for Amazon S3 via dev-python/boto
-dev-python/scrapy:ibl - Use Instace Based Learning algorithm for automatic extraction
 dev-python/setuptools_scm:mercurial - Enables mercurial backend
 dev-python/simplecv:shell - Enable the iPython SimpleCV shell
 dev-python/simplespectral:faster - Use sci-libs/scipy to speed up drawing
@@ -3901,6 +3898,7 @@ mail-client/roundcube:ldap - Add dependencies to support connecting to an LDAP a
 mail-client/roundcube:managesieve - Add dependencies to support the sieverules plugin
 mail-client/sylpheed:oniguruma - Use dev-libs/oniguruma for regular expression
 mail-client/thunderbird:bindist - Disable official Thunderbird branding (icons, name) which are not binary-redistributable according to upstream.
+mail-client/thunderbird:clang - Use Clang compiler instead of GCC
 mail-client/thunderbird:crypt - Enable encryption support with enigmail
 mail-client/thunderbird:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
 mail-client/thunderbird:gtk2 - Use the cairo-gtk2 rendering engine instead of the default cairo-gtk3
@@ -4321,6 +4319,9 @@ media-libs/cogl:kms - Enable KMS support.
 media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
 media-libs/coin:qthelp - Build API documentation in QtHelp format
 media-libs/coin:simage - Texture loading via media-libs/simage library
+media-libs/dav1d:10bit - Add support for building 10-bit AV1.
+media-libs/dav1d:8bit - Add support for decoding 8-bit AV1.
+media-libs/dav1d:asm - Enable custom x86 assembly for faster decoding.
 media-libs/devil:allegro - Add support for Allegro
 media-libs/devil:nvtt - Add support for media-gfx/nvidia-texture-tools
 media-libs/esdl:image - Enable image support
@@ -5260,7 +5261,9 @@ media-video/obs-studio:python - Build support for scripting via Python 3.
 media-video/obs-studio:speexdsp - Enable noise suppression filter support via media-libs/speexdsp.
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
-media-video/orion:mpv - Use the media-video/mpv player (upstream default) instead of the dev-qt/qtmultimedia one
+media-video/orion:mpv - Use the media-video/mpv player (upstream default)
+media-video/orion:qtav - Use the media-libs/qtav player
+media-video/orion:qtmedia - Use the dev-qt/qtmultimedia
 media-video/parole:clutter - Compile in Clutter GTK+ support
 media-video/peek:keybinder - Enable support for global hotkeys using dev-libs/keybinder
 media-video/simplescreenrecorder:asm - Enable x86 assembly optimisation.
@@ -7341,6 +7344,7 @@ sci-electronics/kicad:github - Add github support into PCB editor
 sci-electronics/kicad:i18n - Allow GUI internationalization through l10n_* use flags
 sci-electronics/kicad:minimal - Build only binaries without parts library and examples
 sci-electronics/kicad:ngspice - Enable circuit simulation
+sci-electronics/kicad:occ - Enable viewing 3D rendering of designs via opencascade
 sci-electronics/kicad:oce - Enable viewing 3D rendering of designs via OCE
 sci-electronics/kicad:python - Enable python scripting support
 sci-electronics/ngspice:shared - Build ngspice as a shared library

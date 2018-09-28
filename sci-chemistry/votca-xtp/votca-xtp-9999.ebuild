@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -26,10 +26,10 @@ LICENSE="Apache-2.0"
 SLOT="0"
 
 RDEPEND="
-	=sci-libs/votca-tools-${PV}[sqlite]
-	=sci-libs/votca-moo-${PV}
-	=sci-chemistry/votca-csg-${PV}
-	=sci-chemistry/votca-ctp-${PV}"
+	~sci-libs/votca-tools-${PV}[sqlite]
+	>=dev-cpp/eigen-3.3
+	~sci-chemistry/votca-csg-${PV}
+	~sci-chemistry/votca-ctp-${PV}"
 
 DEPEND="${RDEPEND}
 	doc? (
@@ -41,11 +41,10 @@ DEPEND="${RDEPEND}
 	>=app-text/txt2tags-2.5
 	virtual/pkgconfig"
 
-DOCS=( README NOTICE CHANGELOG.md )
+DOCS=( README.md NOTICE CHANGELOG.md )
 
 src_configure() {
 	mycmakeargs=(
-		-DLIB=$(get_libdir)
 		-DBUILD_XTP_MANUAL=$(usex doc)
 	)
 	cmake-utils_src_configure
