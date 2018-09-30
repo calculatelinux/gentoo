@@ -47,7 +47,7 @@ app-admin/conky:math - Enable support for glibc's libm math library
 app-admin/conky:moc - Enable monitoring of music played by media-sound/moc
 app-admin/conky:mpd - Enable monitoring of music controlled by media-sound/mpd
 app-admin/conky:nano-syntax - Enable syntax highlighting for app-editors/nano
-app-admin/conky:nvidia - Enable reading of nvidia card temperature sensors via media-video/nvidia-drivers
+app-admin/conky:nvidia - Enable reading of nvidia card temperature sensors via x11-drivers/nvidia-drivers
 app-admin/conky:portmon - Enable support for tcp (ip4) port monitoring
 app-admin/conky:thinkpad - Enable support for IBM/Lenovo notebooks
 app-admin/conky:weather-metar - Enable support for metar weather service
@@ -1965,6 +1965,7 @@ dev-lang/erlang:compat-ethread - Enable compatibility with pre-pentium 4 CPUs in
 dev-lang/erlang:dirty-schedulers - Enable dirty schedulers
 dev-lang/erlang:hipe - HIgh Performance Erlang extension
 dev-lang/erlang:kpoll - Enable kernel polling support
+dev-lang/erlang:pgo - Build erts with profile-guided optimizations
 dev-lang/fpc:ide - Build and install the Free Pascal Compiler IDE
 dev-lang/gdl:eigen - Build matrix manipulation with dev-cpp/eigen
 dev-lang/gdl:grib - Add support for the meteorological GRIB format with sci-libs/grib_api
@@ -8111,6 +8112,7 @@ sys-cluster/cinder:scheduler - Installs the initscripts for the cinder scheduler
 sys-cluster/cinder:tcp - Enables tcp support for the iscsi backend
 sys-cluster/cinder:tgt - Enable tgt storage backend support
 sys-cluster/cinder:volume - Installs the initscripts for the cinder volume service
+sys-cluster/cluster-glue:ipmilan - Install the ipmilan plugin (requires sys-libs/openipmi)
 sys-cluster/cluster-glue:libnet - Force use of net-libs/libnet
 sys-cluster/corosync:infiniband - Enable Infiniband RDMA transport support
 sys-cluster/drbd-utils:heartbeat - Enable Heartbeat integration
@@ -8343,6 +8345,7 @@ sys-freebsd/freebsd-usbin:floppy - Enable floppy disk utilities (fdcontrol, fdfo
 sys-freebsd/freebsd-usbin:netware - Build libraries and tools to work with NetWare protocols (IPX and NCP).
 sys-freebsd/freebsd-usbin:zfs - Enable ZFS support.
 sys-fs/android-file-transfer-linux:fuse - Add FUSE mount helper
+sys-fs/bees:tools - Build extra tools useful for debugging (fiemap, feiwalk, beestop)
 sys-fs/btrfs-progs:convert - Build ext2 conversion utility (btrfs-convert)
 sys-fs/btrfs-progs:reiserfs - Enable reiserfs support in btrfs-convert tool.
 sys-fs/btrfs-progs:static - Build static binaries in addition to the dynamic ones
