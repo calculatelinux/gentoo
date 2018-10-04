@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=4
@@ -25,7 +25,7 @@ DOCS="doc/*.txt README"
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}/gcc7.patch"
+	epatch "${FILESDIR}/${P}-gcc7.patch"
 	elibtoolize
 }
 
