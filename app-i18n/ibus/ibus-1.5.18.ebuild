@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/${PN}/${PN}/releases/download/${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~arm64 ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~arm64 ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="+X +emoji gconf +gtk +gtk2 +introspection kde +libnotify nls +python test +unicode vala wayland"
 REQUIRED_USE="emoji? ( gtk )
 	gtk2? ( gtk )
@@ -71,6 +71,8 @@ DEPEND="${CDEPEND}
 	)
 	nls? ( sys-devel/gettext )
 	unicode? ( app-i18n/unicode-data )"
+
+PATCHES=( "${FILESDIR}"/${P}-enable-gsettings-in-runtest.patch )
 
 src_prepare() {
 	vala_src_prepare --ignore-use

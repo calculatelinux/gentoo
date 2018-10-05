@@ -200,6 +200,7 @@ app-admin/yaala:storable - Support for persistence of Perl data structures.
 app-antivirus/clamav:clamdtop - A Top like tool which shows what clamd is currently scanning amongst other things
 app-antivirus/clamav:metadata-analysis-api - Enables collection of file property metadata using ClamAV API for analysis by ClamAV bytecode programs.
 app-antivirus/clamav:system-libmspack - Use system libmspack instead of built in
+app-antivirus/clamav:xml - DMG and XAR support
 app-antivirus/clamtk:kde - Install the Dolphin plugin.
 app-antivirus/clamtk:nautilus - Install the Nautilus plugin.
 app-antivirus/clamtk:nemo - Install the Nemo plugin.
@@ -2062,7 +2063,6 @@ dev-lang/ruby:readline - Use the sys-libs/readline library to provide the readli
 dev-lang/ruby:rubytests - Install ruby tests that can only be run after ruby is installed
 dev-lang/rust:cargo - Install cargo component
 dev-lang/rust:clippy - Install clippy component
-dev-lang/rust:extended - Build and install rls, rustfmt and cargo alongside the compiler and stdlib
 dev-lang/rust:jemalloc - Use dev-libs/jemalloc as the standard memory allocator
 dev-lang/rust:rls - Install rls component
 dev-lang/rust:rustfmt - Install rustfmt component
@@ -4256,6 +4256,7 @@ media-gfx/jpeg2ps:metric - Default to A4 paper size
 media-gfx/kphotoalbum:kipi - Support for the KDE Image Plugin Interface
 media-gfx/kphotoalbum:map - Enable map display support using kde-apps/libkgeomap
 media-gfx/krita:color-management - Enable color management via media-libs/opencolorio
+media-gfx/krita:heif - Enable support for ISO/IEC 23008-12:2017 HEIF/HEIC image format using media-libs/libheif
 media-gfx/krita:qtmedia - Enable sound support for animations via dev-qt/qtmultimedia
 media-gfx/krita:vc - Enable support for dev-libs/vc, could be a significant speed boost
 media-gfx/librecad:3d - Require all 2D coordinates stored as 3D
@@ -4983,6 +4984,7 @@ media-sound/xwax:fallback - Sets runtime dependencies to support decoding "other
 media-sound/xwax:jack - Adds support for audio input/output via the JACK Audio Connection Kit.
 media-sound/xwax:mp3 - Sets runtime dependencies to support decoding MP3 audio.
 media-sound/xwax:oss - Adds support for OSS (open sound system) audio input/output.
+media-sound/yarock:phonon - Use media-libs/phonon backend instead of media-video/vlc
 media-sound/yoshimi:lv2 - Add support for Ladspa V2
 media-tv/gentoo-vdr-scripts:nvram - Add support for using nvram-wakeup to set wakeup time in bios
 media-tv/kodi:airplay - enable AirPlay support
@@ -5268,7 +5270,7 @@ media-video/obs-studio:imagemagick - Use ImageMagick for image loading instead o
 media-video/obs-studio:luajit - Build support for scripting via Luajit.
 media-video/obs-studio:nvenc - Enable NVENC encoding for nVidia video cards.
 media-video/obs-studio:python - Build support for scripting via Python 3.
-media-video/obs-studio:speexdsp - Enable noise suppression filter support via media-libs/speexdsp.
+media-video/obs-studio:speex - Enable noise suppression filter support via media-libs/speexdsp.
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/orion:mpv - Use the media-video/mpv player (upstream default)
@@ -7903,6 +7905,7 @@ sys-apps/net-tools:slattach - build the slattach tool (for working with old seri
 sys-apps/nix:etc_profile - Install /etc/profile.d/ entry to inject nix support for all users.
 sys-apps/nix:gc - Enable garbage collection in the Nix expression evaluator (use dev-libs/boehm-gc).
 sys-apps/nix:sodium - Use dev-libs/libsodium for cryptography
+sys-apps/nvme-cli:uuid - UUID support
 sys-apps/openrc:netifrc - enable Gentoo's network stack (net.* scripts)
 sys-apps/openrc:newnet - enable the new network stack (experimental)
 sys-apps/pacman:doc - Install extended documentation using app-doc/doxygen. (Man pages are included by default.)
@@ -8018,7 +8021,6 @@ sys-auth/passwdqc:utils - Install pwqcheck and pwqgen helper utilities
 sys-auth/polkit:elogind - Use sys-auth/elogind instead of sys-auth/consolekit for session tracking
 sys-auth/polkit:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for session tracking
 sys-auth/sssd:acl - Build and use the cifsidmap plugin
-sys-auth/sssd:augeas - Build internal configuration library
 sys-auth/sssd:autofs - Build helper to let net-fs/autofs use sssd provided information
 sys-auth/sssd:locator - Install sssd's Kerberos plugin
 sys-auth/sssd:manpages - Build man pages with dev-libs/libxslt

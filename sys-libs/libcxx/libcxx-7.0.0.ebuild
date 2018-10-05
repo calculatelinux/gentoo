@@ -46,6 +46,10 @@ PATCHES=(
 	# Add link flag "-Wl,-z,defs" to avoid underlinking; this is needed in a
 	# out-of-tree build.
 	"${FILESDIR}/${PN}-3.9-cmake-link-flags.patch"
+
+	# Fix installing when using libsupc++ backend.
+	# https://bugs.gentoo.org/667174
+	"${FILESDIR}/${PN}-7.0.0-libsupcxx-install.patch"
 )
 
 # least intrusive of all
@@ -78,7 +82,9 @@ test_compiler() {
 		<<<'int main() { return 0; }' &>/dev/null
 }
 
-multilib_src_configure() {
+src_configure() {
+	# note: we need to do this before multilib kicks in since it will
+	# alter the CHOST
 	local cxxabi cxxabi_incs
 	if use libcxxabi; then
 		cxxabi=libcxxabi
@@ -92,6 +98,10 @@ multilib_src_configure() {
 		cxxabi_incs="${gcc_inc};${gcc_inc}/${CHOST}"
 	fi
 
+	multilib-minimal_src_configure
+}
+
+multilib_src_configure() {
 	# we want -lgcc_s for unwinder, and for compiler runtime when using
 	# gcc, clang with gcc runtime (or any unknown compiler)
 	local extra_libs=() want_gcc_s=ON
