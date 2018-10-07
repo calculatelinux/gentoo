@@ -20,6 +20,7 @@ SRC_URI="mirror://sourceforge/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v$
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+# USE=libraries needs working stage2 compiler: bug #665512
 IUSE="headers-only idl libraries tools"
 RESTRICT="strip"
 
