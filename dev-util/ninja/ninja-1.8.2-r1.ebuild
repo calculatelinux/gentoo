@@ -1,17 +1,20 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
 PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} )
 
-inherit bash-completion-r1 elisp-common python-any-r1 toolchain-funcs vcs-snapshot
+inherit bash-completion-r1 elisp-common python-any-r1 toolchain-funcs
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/ninja-build/ninja.git"
 else
-	SRC_URI="https://github.com/Kitware/${PN}/archive/v${PV}.g3bbbe.kitware.dyndep-1.jobserver-1.tar.gz -> ${P}-fortran.tar.gz"
+	KITWARE_VERSION="1.8.2.g3bbbe.kitware.dyndep-1.jobserver-1"
+	MY_P="ninja-${KITWARE_VERSION}"
+	S="${WORKDIR}/${MY_P}"
+	SRC_URI="https://github.com/Kitware/ninja/archive/v${KITWARE_VERSION}.tar.gz -> ${MY_P}.tar.gz"
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris"
 fi
 
@@ -43,8 +46,6 @@ RDEPEND="
 	)
 	zsh-completion? ( app-shells/zsh )
 	!<net-irc/ninja-1.5.9_pre14-r1" #436804
-
-S="${WORKDIR}/${P}-fortran"
 
 run_for_build() {
 	if tc-is-cross-compiler; then
