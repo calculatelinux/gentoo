@@ -1486,12 +1486,12 @@ dev-db/mariadb-galera:tokudb - Add support for TokuDB storage engine
 dev-db/mariadb-galera:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
 dev-db/mongodb:mms-agent - Install the MongoDB Monitoring Service agent
 dev-db/mongodb:tools - Install the MongoDB tools (mongoimport, mongodump...) from app-admin/mongo-tools
+dev-db/mysql:cjk - Add CJK support for InnoDB fulltext search using app-text/mecab
 dev-db/mysql:client-libs - Build the client libraries from the server package instead of the C Connector packages (not recommended)
 dev-db/mysql:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
 dev-db/mysql:jemalloc - Use dev-libs/jemalloc for allocations.
 dev-db/mysql:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/mysql:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
-dev-db/mysql:mecab - Build MeCab full-text parser plugin using app-text/mecab
 dev-db/mysql:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
 dev-db/mysql:profiling - Add support for statement profiling (requires USE=community).
 dev-db/mysql:server - Build the server program
@@ -1521,7 +1521,9 @@ dev-db/oracle-instantclient:odbc - Libraries for enabling ODBC applications
 dev-db/oracle-instantclient:sdk - Header files and an example makefile for developing Oracle applications
 dev-db/oracle-instantclient:sqlplus - Libraries and executable for running SQL*Plus
 dev-db/oracle-instantclient:tools - Workload Replay Client
+dev-db/percona-server:cjk - Add CJK support for InnoDB fulltext search using app-text/mecab
 dev-db/percona-server:client-libs - Build the libmysqlclient libraries
+dev-db/percona-server:experimental - Build experimental features aka "rapid" plugins
 dev-db/percona-server:jemalloc - Use dev-libs/jemalloc for allocations.
 dev-db/percona-server:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/percona-server:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
@@ -8594,7 +8596,6 @@ sys-process/systemd-cron:setgid - Compile setgid C helper for crontab. Needs GCC
 sys-process/systemd-cron:yearly - Support /etc/cron.yearly
 sys-process/tini:args - Enable argument parsing.
 virtual/ffmpeg:opus - Use the external opus library for encoding and decoding.
-virtual/libmysqlclient:mariadb - Prefer dev-db/mariadb-connector-c to prevent blocks on other packages
 virtual/linux-sources:firmware - Install linux kernel firmware
 virtual/mpi:romio - Enable romio, a high-performance portable MPI-IO
 virtual/mysql:embedded - Build embedded server (libmysqld)
