@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -15,7 +15,7 @@ if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="https://github.com/lxqt/${PN}.git"
 else
 	SRC_URI="https://downloads.lxqt.org/downloads/${PN}/${PV}/${P}.tar.xz"
-	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+	KEYWORDS="amd64 ~arm ~arm64 ~x86"
 fi
 
 LICENSE="LGPL-2.1+"
@@ -23,7 +23,10 @@ SLOT="0"
 IUSE="+alsa clock colorpicker cpuload +desktopswitch +directorymenu dom +kbindicator +mainmenu
 	+mount networkmonitor pulseaudio +quicklaunch sensors +showdesktop
 	+spacer statusnotifier sysstat +taskbar +tray +volume +worldclock"
-REQUIRED_USE="volume? ( || ( alsa pulseaudio ) )"
+REQUIRED_USE="
+	|| ( desktopswitch mainmenu showdesktop taskbar )
+	volume? ( || ( alsa pulseaudio ) )
+"
 
 RDEPEND="
 	>=dev-libs/libqtxdg-3.0.0
