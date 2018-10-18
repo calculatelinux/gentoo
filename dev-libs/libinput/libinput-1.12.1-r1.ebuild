@@ -12,7 +12,7 @@ SRC_URI="https://www.freedesktop.org/software/${PN}/${P}.tar.xz"
 
 LICENSE="MIT"
 SLOT="0/10"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc input_devices_wacom"
 # Tests require write access to udev rules directory which is a no-no for live system.
 # Other tests are just about logs, exported symbols and autotest of the test library.
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? (
 		$(python_gen_any_dep '
-			dev-python/CommonMark[${PYTHON_USEDEP}]
+			dev-python/commonmark[${PYTHON_USEDEP}]
 			dev-python/recommonmark[${PYTHON_USEDEP}]
 			dev-python/sphinx[${PYTHON_USEDEP}]
 		')
@@ -43,7 +43,7 @@ DEPEND="${RDEPEND}
 #		sys-libs/libunwind )
 
 python_check_deps() {
-	has_version "dev-python/CommonMark[${PYTHON_USEDEP}]" && \
+	has_version "dev-python/commonmark[${PYTHON_USEDEP}]" && \
 	has_version "dev-python/recommonmark[${PYTHON_USEDEP}]" && \
 	has_version "dev-python/sphinx[${PYTHON_USEDEP}]"
 }

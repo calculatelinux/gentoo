@@ -916,6 +916,7 @@ app-misc/ca-certificates:insecure_certs - Install certificates which are known t
 app-misc/carbon-c-relay:lz4 - add support for LZ4 compressed transport
 app-misc/carbon-c-relay:oniguruma - use dev-libs/oniguruma as regex implementation
 app-misc/carbon-c-relay:pcre2 - use dev-libs/libpcre2 as regex implementation
+app-misc/carbon-c-relay:snappy - add support for Snappy compressed transport
 app-misc/ddccontrol:pci - enable direct PCI memory access (the setuid ddcpci util)
 app-misc/ddcutil:drm - Use x11-libs/libdrm for more verbose diagnostics.
 app-misc/ddcutil:usb-monitor - Adds support for monitors attached via USB.
@@ -2934,6 +2935,7 @@ dev-qt/qtwayland:libinput - Enable support for input devices via dev-libs/libinp
 dev-qt/qtwebchannel:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtwebengine:designer - Install the QWebEngineView plugin used to add widgets in dev-qt/designer forms that display web pages.
 dev-qt/qtwebengine:geolocation - Enable physical position determination via dev-qt/qtpositioning
+dev-qt/qtwebengine:jumbo-build - Combine source files to speed up build process.
 dev-qt/qtwebengine:pax_kernel - Enable building under a PaX enabled kernel
 dev-qt/qtwebengine:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of bundled.
 dev-qt/qtwebengine:system-icu - Use the system-wide dev-libs/icu instead of bundled.
@@ -3807,12 +3809,10 @@ lxde-base/lxterminal:gtk3 - Use GTK+3 instead of GTK+2
 lxqt-base/lxqt-config:monitor - Build monitor settings tool
 lxqt-base/lxqt-meta:about - Install lxqt-base/lxqt-about
 lxqt-base/lxqt-meta:admin - Install lxqt-base/lxqt-admin
-lxqt-base/lxqt-meta:filemanager - Install x11-misc/pcmanfm-qt file manager
-lxqt-base/lxqt-meta:icons - Install an icon theme
-lxqt-base/lxqt-meta:lightdm - Install x11-misc/lightdm display manager
-lxqt-base/lxqt-meta:lximage - Install media-gfx/lximage-qt image viewer
-lxqt-base/lxqt-meta:minimal - Do not install x11-wm/openbox window manager
-lxqt-base/lxqt-meta:oxygen - Prefer kde-frameworks/oxygen-icons (default)
+lxqt-base/lxqt-meta:filemanager - Install x11-misc/pcmanfm-qtfile manager
+lxqt-base/lxqt-meta:lightdm - Install x11-misc/lightdmdisplay manager
+lxqt-base/lxqt-meta:lximage - Install media-gfx/lximage-qtimage viewer
+lxqt-base/lxqt-meta:minimal - Do not install x11-wm/openboxwindow manager
 lxqt-base/lxqt-meta:powermanagement - Install lxqt-base/lxqt-powermanagement package
 lxqt-base/lxqt-meta:processviewer - Install x11-misc/qps package
 lxqt-base/lxqt-meta:screenshot - Install x11-misc/screengrab package
@@ -4109,6 +4109,9 @@ media-fonts/terminus-font:ru-i - Changes view of Russian letter 'i' - not like L
 media-fonts/terminus-font:ru-k - Changes view of Russian letter 'k' (see homepage)
 media-fonts/unifont:fontforge - Use media-gfx/fontforge to build fonts from source
 media-fonts/unifont:utils - Install unifont utilities
+media-gfx/ahoviewer:libsecret - Support password storing using libsecret
+media-gfx/ahoviewer:rar - Rar archive support
+media-gfx/ahoviewer:zip - Zip archive support
 media-gfx/album:plugins - Install optional plugins
 media-gfx/album:themes - Install optional themes
 media-gfx/alembic:arnold - Add support for arnold renderer (experimental)
@@ -4921,7 +4924,6 @@ media-sound/snapcast:avahi - Build with avahi support
 media-sound/snapcast:client - Build and install Snapcast client component
 media-sound/snapcast:flac - Build with FLAC compression support
 media-sound/snapcast:server - Build and install Snapcast server component
-media-sound/snapcast:static-libs - Build static libs
 media-sound/snapcast:tremor - Build with TREMOR version of vorbis
 media-sound/snapcast:vorbis - Build with libvorbis support
 media-sound/snd:s7 - Enable the s7 extension language (a version of Scheme)
@@ -5704,6 +5706,7 @@ net-dns/dnsmasq:conntrack - Add support for Linux conntrack connection marking.
 net-dns/dnsmasq:dhcp - Enable support for acting as a DHCP server.
 net-dns/dnsmasq:dhcp-tools - Install extra command line tools for manually managing DHCP leases.
 net-dns/dnsmasq:dnssec - Enable support DNSSEC validation and caching.
+net-dns/dnsmasq:dumpfile - Include code to dump packets to a libpcap-format file for debugging
 net-dns/dnsmasq:id - Whether report *.bind CHAOS info to clients, otherwise forward such requests upstream instead
 net-dns/dnsmasq:libidn2 - Enable support for Internationalized Domain Names, via net-dns/libidn2 rather than net-dns/libidn
 net-dns/dnsmasq:script - Enable support for calling scripts when leases change.
@@ -5728,6 +5731,7 @@ net-dns/knot:geoip - Enable the Geography-based responses module
 net-dns/knot:libidn2 - If IDN support is enabled, use net-dns/libidn2 instead of net-dns/libidn
 net-dns/knot:noudp - Enable the module which can send empty truncated responses to UDP queries
 net-dns/knot:onlinesign - Enable the module that sign zones on the fly instead of pre-signing zone
+net-dns/knot:queryacl - Enable the module for query access control
 net-dns/knot:rosedb - Enable the module that staticaly override certain responses
 net-dns/knot:rrl - Enable the response rate limiting module
 net-dns/knot:stats - Enable the server statistics module
