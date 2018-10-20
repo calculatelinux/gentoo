@@ -17,7 +17,9 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="isa pcmcia debug"
 
 COMMONDEPEND=""
-RDEPEND="${COMMONDEPEND}"
+RDEPEND="${COMMONDEPEND}
+	!<sci-libs/linux-gpib-4.2.0_rc1
+"
 DEPEND="${COMMONDEPEND}
 	virtual/pkgconfig"
 
@@ -42,7 +44,6 @@ pkg_setup () {
 
 src_prepare () {
 	default
-	kernel_is ge 4 11 0 && eapply "${FILESDIR}"/${PN}-4.0.4_rc2-kernel-4.11.0.patch
 	eautoreconf
 }
 
@@ -68,6 +69,7 @@ src_install() {
 	emake \
 		DESTDIR="${D}" \
 		INSTALL_MOD_PATH="${D}" \
+		DEPMOD="/bin/true" \
 		docdir=/usr/share/doc/${PF}/html install
 
 	dodoc ChangeLog AUTHORS README* NEWS
