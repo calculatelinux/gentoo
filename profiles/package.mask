@@ -29,6 +29,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Pacho Ramos <pacho@gentoo.org> (21 Oct 2018)
+# Lots of pending bugs for years, this needs a dedicated maintainer that
+# fixes them: bug #354157, #354639, #398075, #398077, #417375, #499654,
+# #539358, #591682, #625798, #639912, #662316, #664270...
+# Removal in a month.
+media-gfx/splashutils
+media-gfx/bootsplash-themes
+media-gfx/splash-themes-gentoo
+media-gfx/splash-themes-livecd
+media-gfx/splash-themes-livedvd
+
 # Andreas K. Hüttel <dilfridge@gentoo.org> (20 Oct 2018)
 # Fails to build with glibc-2.27, bug 648620. No reverse
 # dependencies. Removal in 30 days.
@@ -152,22 +163,6 @@ dev-python/tinydb
 # Michał Górny <mgorny@gentoo.org> (24 Sep 2018)
 # Apparently breaks sys-devel/gcc.  Bug #666954.
 =dev-util/debugedit-4.14.2
-
-# Michał Górny <mgorny@gentoo.org> (17 Sep 2018)
-# Obsolete LogiLab packages that are full of issues and were never
-# maintained properly.  Recently dev-python/logilab-common started
-# colliding with dev-python/pytest, making it practically non-
-# installable.  The only revdep left is app-vim/python-mode where
-# the dep looks completely mistaken.  Bug #666152.
-app-vim/python-mode
-dev-python/astng
-dev-python/logilab-common
-dev-python/logilab-constraint
-
-# Andreas Sturmlechner <asturm@gentoo.org> (16 Sep 2018)
-# was merged into the IETF Opus codec and is now obsolete
-# Removal in 30 days, bug #664154
-media-libs/celt
 
 # Mike Gilbert <floppym@gentoo.org> (16 Sep 2018)
 # Dev channel releases are only for people who are developers or want more

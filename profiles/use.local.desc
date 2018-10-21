@@ -312,6 +312,7 @@ app-crypt/gnupg:smartcard - Build scdaemon software. Enables usage of OpenPGP ca
 app-crypt/gnupg:tofu - Enable support for Trust on First use trust model; requires dev-db/sqlite.
 app-crypt/gnupg:tools - Install extra tools (including gpgsplit and gpg-zip).
 app-crypt/gnupg:usb - Build direct CCID access for scdaemon; requires dev-libs/libusb.
+app-crypt/gnupg:user-socket - try a socket directory which is not removed by init manager at session end
 app-crypt/gnupg:wks-server - Install the wks-server
 app-crypt/gnupg-pkcs11-scd:proxy - Build the gnupg-pkcs11-scd-prox
 app-crypt/gpgme:common-lisp - Install common-lisp files
@@ -4726,7 +4727,7 @@ media-sound/hydrogen:archive - Use libarchive instead of libtar
 media-sound/hydrogen:portmidi - Add portmidi support
 media-sound/jack-audio-connection-kit:coreaudio - Build the CoreAudio driver on Mac OS X systems
 media-sound/jack-audio-connection-kit:pam - Add basic realtime configuration via sys-auth/realtime-base
-media-sound/jack2:celt - Support CELT low delay audio codec (media-libs/celt)
+media-sound/jack2:celt - Support CELT low delay audio codec
 media-sound/jack2:classic - Enable building of jackd
 media-sound/jack2:pam - Add basic realtime configuration via sys-auth/realtime-base
 media-sound/jalv:gtk2 - Adds support for GTK+2 in addition to GTK+3 controlled by the gtk useflag.
@@ -5046,7 +5047,7 @@ media-video/ffmpeg:armvfp - Enables VFP optimizations for ARM processors.
 media-video/ffmpeg:bluray - Enable playback of Blu-ray filesystems
 media-video/ffmpeg:bs2b - Enables media-libs/libbs2b based Bauer stereo-to-binaural filter.
 media-video/ffmpeg:cdio - Enables audio CD grabbing with dev-libs/libcdio.
-media-video/ffmpeg:celt - Adds Xiph CELT audio decoding support via media-libs/celt
+media-video/ffmpeg:celt - Adds Xiph CELT audio decoding support
 media-video/ffmpeg:chromaprint - Enables audio fingerprinting support with media-libs/chromaprint.
 media-video/ffmpeg:chromium - Builds libffmpeg.so to enable media playback in Chromium-based browsers like Opera and Vivaldi.
 media-video/ffmpeg:codec2 - Enables codec2 low bit rate speech codec support via media-libs/codec2.
