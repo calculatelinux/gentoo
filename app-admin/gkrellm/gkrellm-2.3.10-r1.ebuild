@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -20,9 +20,9 @@ IUSE="gnutls hddtemp libressl lm_sensors nls ntlm ssl kernel_FreeBSD X"
 RDEPEND="
 	dev-libs/glib:2
 	hddtemp? ( app-admin/hddtemp )
-	gnutls? ( net-libs/gnutls )
-	!gnutls? (
-		ssl? (
+	ssl? (
+		gnutls? ( net-libs/gnutls )
+		!gnutls? (
 			!libressl? ( dev-libs/openssl:0= )
 			libressl? ( dev-libs/libressl:0= )
 		)
@@ -53,6 +53,13 @@ S="${WORKDIR}/${MY_P}"
 
 DOCS=( Changelog CREDITS README )
 
+pkg_pretend() {
+	if use gnutls && ! use ssl ; then
+		ewarn "You have enabled the \"gnutls\" USE flag but not the \"ssl\" USE flag."
+		ewarn "No ssl backend will be built!"
+	fi
+}
+
 pkg_setup() {
 	enewgroup gkrellmd
 	enewuser gkrellmd -1 -1 -1 gkrellmd
@@ -75,15 +82,6 @@ src_prepare() {
 
 src_compile() {
 	if use X ; then
-		local sslopt=""
-		if use gnutls; then
-			sslopt="without-ssl=yes"
-		elif use ssl; then
-			sslopt="without-gnutls=yes"
-		else
-			sslopt="without-ssl=yes without-gnutls=yes"
-		fi
-
 		emake \
 			${TARGET} \
 			CC="$(tc-getCC)" \
@@ -94,7 +92,7 @@ src_compile() {
 			$(usex nls "" "enable_nls=0") \
 			$(usex lm_sensors "" "without-libsensors=yes") \
 			$(usex ntlm "" "without-ntlm=yes") \
-			${sslopt}
+			$(usex ssl $(usex gnutls 'without-ssl=yes' 'without-gnutls=yes') 'without-ssl=yes without-gnutls=yes')
 	else
 		cd server || die
 		emake \
