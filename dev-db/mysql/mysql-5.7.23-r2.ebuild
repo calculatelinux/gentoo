@@ -34,7 +34,7 @@ RESTRICT="libressl? ( test )"
 
 REQUIRED_USE="?? ( tcmalloc jemalloc ) static? ( yassl )"
 
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
 # Shorten the path because the socket path length must be shorter than 107 chars
 # and we will run a mysql server during test phase
@@ -540,6 +540,12 @@ src_test() {
 
 	for t in auth_sec.keyring_udf ; do
 			_disable_test "$t" "False positives in Gentoo"
+	done
+
+	# Unstable tests
+	# - main.xa_prepared_binlog_off: https://bugs.mysql.com/bug.php?id=83340
+	for t in main.xa_prepared_binlog_off ; do
+			_disable_test "$t" "Unstable test"
 	done
 
 	if use numa && use kernel_linux ; then

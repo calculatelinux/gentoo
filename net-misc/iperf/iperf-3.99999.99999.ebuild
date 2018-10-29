@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -11,9 +11,11 @@ EGIT_REPO_URI="${HOMEPAGE}"
 LICENSE="BSD"
 SLOT="3"
 KEYWORDS=""
-IUSE="profiling sctp static-libs"
+IUSE="libressl profiling sctp static-libs"
 
-DEPEND="sctp? ( net-misc/lksctp-tools )"
+DEPEND="!libressl? ( dev-libs/openssl:0= )
+	libressl? ( dev-libs/libressl:0= )
+	sctp? ( net-misc/lksctp-tools )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P/_/}

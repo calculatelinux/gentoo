@@ -75,7 +75,6 @@ app-admin/hddtemp:network-cron - Monthly cronjob to update hddtemp.db.
 app-admin/keepass:aot - Generate native code at build time, rather than runtime.
 app-admin/keepassxc:autotype - Add support to autotype the passwords into other applications
 app-admin/keepassxc:browser - Enables browser plugin support
-app-admin/keepassxc:http - Add http support
 app-admin/keepassxc:network - Enable network support
 app-admin/keepassxc:yubikey - Enable database unlocking via YubiKey.
 app-admin/lastpass-cli:X - Use x11-misc/xclip or x11-misc/xsel to copy passwords to the clipboard.
@@ -4878,12 +4877,9 @@ media-sound/qtractor:rubberband - Enable support for in-place audio clip pitch-s
 media-sound/rhythmbox:daap - Build the local network music sharing plugin which uses the DAAP protocol using net-libs/libdmapsharing
 media-sound/shntool:alac - Add support for Apple Lossless Audio Codec files
 media-sound/shntool:mac - Add support for Monkey's Audio files
-media-sound/snapcast:avahi - Build with avahi support
 media-sound/snapcast:client - Build and install Snapcast client component
-media-sound/snapcast:flac - Build with FLAC compression support
 media-sound/snapcast:server - Build and install Snapcast server component
 media-sound/snapcast:tremor - Build with TREMOR version of vorbis
-media-sound/snapcast:vorbis - Build with libvorbis support
 media-sound/snd:s7 - Enable the s7 extension language (a version of Scheme)
 media-sound/sonata:lyrics - Support for lyrics fetching
 media-sound/sonata:trayicon - Enable support for trayicon
@@ -7462,6 +7458,7 @@ sci-libs/oce:vtk - Enable Virtualisation Toolkit
 sci-libs/octomap:dynamicEDT3D - Build and install dynamicEDT3D library: A library for incrementally updatable Euclidean distance transforms in 3D.
 sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/opencascade:gl2ps - Use gl2ps PostScript printing library
+sci-libs/opencascade:gles2 - Use OpenGL ES 2.0
 sci-libs/opencascade:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
 sci-libs/opencascade:vtk - Enable Virtualisation Toolkit
 sci-libs/openfoam:opendx - Install opendx visualisation tool
@@ -8411,7 +8408,7 @@ sys-libs/glibc:cet - Enable Intel Control-flow Enforcement Technology (needs bin
 sys-libs/glibc:compile-locales - build *all* locales in src_install; this is generally meant for stage building only as it ignores /etc/locale.gen file and can be pretty slow
 sys-libs/glibc:debug - When USE=hardened, allow fortify/stack violations to dump core (SIGABRT) and not kill self (SIGKILL)
 sys-libs/glibc:gd - build memusage and memusagestat tools
-sys-libs/glibc:multiarch - enable single DSO with optimizations for multiple architectures
+sys-libs/glibc:multiarch - enable optimizations for multiple CPU architectures (detected at runtime)
 sys-libs/glibc:nscd - Build, and enable support for, the Name Service Cache Daemon
 sys-libs/glibc:rpc - Enable obsolete RPC/NIS layers
 sys-libs/glibc:suid - Make internal pt_chown helper setuid -- not needed if using Linux and have /dev/pts mounted with gid=5
@@ -8461,6 +8458,7 @@ sys-libs/uclibc-ng:symlink-compat - Explicitly add sym links for libdl.so.0, lib
 sys-libs/zlib:minizip - include the minizip library for quick and dirty zip extraction
 sys-power/apcupsd:modbus - Enable MODBUS support over USB
 sys-power/cpupower:cpufreq_bench - Build and install the cpufreq_bench binary
+sys-power/nut:gui - Install NUT-Monitor python gui
 sys-power/nut:ipmi - Support IPMI-based UPSes.
 sys-power/nut:ups_drivers_al175 - Driver for Eltek UPS models with AL175 alarm module
 sys-power/nut:ups_drivers_apcsmart - Driver for American Power Conversion Smart Protocol UPS equipment
@@ -8798,6 +8796,10 @@ www-servers/nginx:luajit - Use dev-lang/luajit instead of dev-lang/lua for lua s
 www-servers/nginx:pcre-jit - Enable JIT for pcre
 www-servers/nginx:rtmp - NGINX-based Media Streaming Server
 www-servers/nginx:ssl - Enable HTTPS module for http. Enable SSL/TLS support for POP3/IMAP/SMTP for mail.
+www-servers/nginx-unit:php5-6 - Support for PHP 5.6
+www-servers/nginx-unit:php7-0 - Support for PHP 7.0
+www-servers/nginx-unit:php7-1 - Support for PHP 7.1
+www-servers/nginx-unit:php7-2 - Support for PHP 7.2
 www-servers/pshs:magic - Enable automatic detection of Content-Type using libmagic (sys-apps/file)
 www-servers/pshs:netlink - Use libnetlink (sys-apps/iproute2) to get network interface addresses
 www-servers/pshs:qrcode - Enable generating QRCodes for server URL
@@ -8822,11 +8824,10 @@ www-servers/xsp:net35 - use .NET 3.5 Framework
 www-servers/xsp:net40 - use .NET 4.0 Framework
 www-servers/xsp:net45 - use .NET 4.5 Framework
 x11-apps/copyq:webkit - enables the application to use advanced HTML rendering and fetching remote images and other data
-x11-apps/intel-gpu-tools:chamelium - Enables support for building Chamelium tests
-x11-apps/intel-gpu-tools:glib - Support reading config files via glib helpers
-x11-apps/intel-gpu-tools:test-programs - Install test programs for DRM driver development
-x11-apps/intel-gpu-tools:valgrind - Support valgrind annotations
-x11-apps/intel-gpu-tools:xrandr - Enable support for the X RandR extension
+x11-apps/igt-gpu-tools:chamelium - Enables support for building Chamelium tests
+x11-apps/igt-gpu-tools:glib - Support reading config files via glib helpers
+x11-apps/igt-gpu-tools:valgrind - Support valgrind annotations
+x11-apps/igt-gpu-tools:xrandr - Enable support for the X RandR extension
 x11-apps/mesa-progs:egl - Build EGL utilities
 x11-apps/mesa-progs:gles2 - Build OpenGL ES 2 utilities
 x11-apps/xdm:consolekit - Enable native sys-auth/consolekit support
