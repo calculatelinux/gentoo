@@ -2531,6 +2531,11 @@ dev-libs/weston:xwayland - Enable ability support native X11 applications
 dev-libs/wlc:X - Enable X11 backend.
 dev-libs/wlc:systemd - Enable support for systemd-logind.
 dev-libs/wlc:xwayland - Enable XWayland application support.
+dev-libs/wlroots:X - Enable support for X11 applications (XWayland)
+dev-libs/wlroots:elogind - Enable support for rootless session via elogind
+dev-libs/wlroots:icccm - Use xcb-icccm (from x11-libs/xcb-util-wm) util library for improved Xwayland introspection
+dev-libs/wlroots:rootston - Build the rootston example compositor
+dev-libs/wlroots:x11-backend - Enable support for handling input/output devices through x11-libs/libxcb
 dev-libs/xapian:brass - Enabled brass backend db support
 dev-libs/xapian:chert - Enabled chert backend db support
 dev-libs/xapian:glass - Enabled glass backend db support
@@ -5463,6 +5468,10 @@ net-analyzer/nrpe:minimal - Only build the check plugins for Nagios/Icinga, and 
 net-analyzer/nsca:crypt - Build support for crypted communication with nsca, through dev-libs/libmcrypt. It's recommended not to disable this flag unless all the communication will be handled in an absolutely safe environment.
 net-analyzer/nsca:minimal - Only build and install the send_nsca command and not the daemon. This allows a very minimal install with no overhead when setting up a node.
 net-analyzer/openvas:pdf - Enable pdf report creation
+net-analyzer/ossec-hids:agent - Build "agent" installation target (see package description)
+net-analyzer/ossec-hids:hybrid - Build "hybrid" installation target
+net-analyzer/ossec-hids:local - Build "local" installation target
+net-analyzer/ossec-hids:server - Build "server" installation target
 net-analyzer/pchar:pcap - Use the net-libs/libpcap library
 net-analyzer/pinger:gtk2 - Install the gtkpinger GUI utility based on x11-libs/gtk+:2
 net-analyzer/pinger:gtk3 - Install the gtkpinger GUI utility based on x11-libs/gtk+:3
@@ -5596,6 +5605,7 @@ net-dialup/accel-ppp:shaper - Support for traffic shaping
 net-dialup/accel-ppp:valgrind - Compile in valgrind hints
 net-dialup/freeradius:memcached - Include dev-libs/libmemcached in caching drivers
 net-dialup/freeradius:pcap - Build the RADIUS sniffer which requires net-libs/libpcap.
+net-dialup/freeradius:redis - Include support for Redis database
 net-dialup/freeradius:rest - Include support for sending and receiving HTTP requests
 net-dialup/freeradius-client:scp - Add service type hints derived from username prefix
 net-dialup/freeradius-client:shadow - Enable shadow password support
@@ -5638,7 +5648,6 @@ net-dns/bind-tools:gost - Enables gost OpenSSL engine support
 net-dns/bind-tools:gssapi - Enable gssapi support
 net-dns/bind-tools:libidn2 - Enables IDN support using net-dns/libidn2 rather than using net-dns/idnkit
 net-dns/bind-tools:urandom - Use /dev/urandom instead of /dev/random
-net-dns/ddclient:cloudflare - Enable support for updating IP address via CloudFlare
 net-dns/ddclient:examples - Install various example files, like for cron.
 net-dns/ddclient:hardened - Use iproute2 instead of ifconfig to grab an IP address
 net-dns/ddclient:iproute2 - Use sys-apps/iproute2 instead of sys-apps/net-tools for interaction.
