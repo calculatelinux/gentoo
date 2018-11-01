@@ -3878,7 +3878,6 @@ mail-client/mutt:lmdb - Enable dev-db/lmdb database backend for header caching
 mail-client/mutt:notmuch - Enable support for net-mail/notmuch
 mail-client/mutt:pgp_classic - Build classic_pgp backend to support PGP/MIME and traditional/inline PGP
 mail-client/mutt:pop - Enable support for POP3 mailboxes
-mail-client/mutt:sidebar - Enable the sidebar feature
 mail-client/mutt:smime - Enable support for smime
 mail-client/mutt:smime_classic - Build classic_smime backend to support S/MIME
 mail-client/mutt:smtp - Enable support for direct SMTP delivery
@@ -6171,7 +6170,6 @@ net-libs/libssh:mbedtls - Use net-libs/mbedtls as TLS provider
 net-libs/libssh:pcap - Build with PCAP output support
 net-libs/libssh:server - Build with SSH server support
 net-libs/libssh:sftp - Build with SFTP support
-net-libs/libssh:ssh1 - Build with SSH1 support
 net-libs/libssh2:gcrypt - Use dev-libs/libgcrypt instead of dev-libs/openssl
 net-libs/libssh2:libressl - Use dev-libs/libressl instead of dev-libs/openssl
 net-libs/libssh2:mbedtls - Use net-libs/mbedtls instead of dev-libs/openssl
@@ -8946,6 +8944,8 @@ x11-misc/polybar:i3wm - Add support for i3 window manager
 x11-misc/polybar:ipc - Add support for Inter-Process Messaging
 x11-misc/polybar:mpd - Add support for Music Player Daemon
 x11-misc/polybar:network - Enable network support
+x11-misc/py3status:gevent - Install extra requirement dev-python/gevent to enable green threads.
+x11-misc/py3status:udev - Install extra requirement dev-python/pyudev to enable udev events monitoring on modules.
 x11-misc/qt5ct:dbus - Enable system tray and global menu support
 x11-misc/redshift:geoclue - Control dependency on app-misc/geoclue
 x11-misc/rofi:windowmode - Enable normal window mode
