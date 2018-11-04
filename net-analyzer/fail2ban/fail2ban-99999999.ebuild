@@ -68,6 +68,8 @@ python_install_all() {
 	# See http://thread.gmane.org/gmane.linux.gentoo.devel/35675
 	insinto /etc/logrotate.d
 	newins files/${PN}-logrotate ${PN}
+
+	keepdir /var/lib/${PN}
 }
 
 pkg_preinst() {
