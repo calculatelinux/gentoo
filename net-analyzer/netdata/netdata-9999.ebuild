@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} )
+PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6,3_7} )
 
 inherit autotools fcaps linux-info python-r1 systemd user
 
@@ -19,10 +19,12 @@ HOMEPAGE="https://github.com/netdata/netdata https://my-netdata.io/"
 
 LICENSE="GPL-3+ MIT BSD"
 SLOT="0"
-IUSE="caps +compression cpu_flags_x86_sse2 ipmi mysql nfacct nodejs postgres +python"
+IUSE="caps +compression cpu_flags_x86_sse2 ipmi mysql nfacct nodejs postgres +python tor"
 REQUIRED_USE="
 	mysql? ( python )
-	python? ( ${PYTHON_REQUIRED_USE} )"
+	python? ( ${PYTHON_REQUIRED_USE} )
+	tor? ( python )"
+
 # most unconditional dependencies are for plugins.d/charts.d.plugin:
 RDEPEND="
 	>=app-shells/bash-4:0
@@ -55,6 +57,7 @@ RDEPEND="
 			)
 		)
 		postgres? ( dev-python/psycopg:2[${PYTHON_USEDEP}] )
+		tor? ( net-libs/stem[${PYTHON_USEDEP}] )
 	)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

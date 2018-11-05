@@ -4382,6 +4382,7 @@ media-libs/libopenglrecorder:vpx - Enable VP8/VP9 codec support via media-libs/l
 media-libs/libpagemaker:tools - Build command line file format conversion tools
 media-libs/libpng:apng - support unofficial APNG (Animated PNG) spec
 media-libs/libpostproc:pic - Force shared libraries to be built as PIC (this is slower).
+media-libs/libprojectm:gles2 - Provide support for OpenGL ES 2 and 3
 media-libs/libquicktime:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec)
 media-libs/libraw:demosaic - Enable support for external interpolation algorithms
 media-libs/libsdl:joystick - Control joystick support (disable at your own risk)
@@ -5453,6 +5454,7 @@ net-analyzer/netdata:compression - Enable compression via zlib
 net-analyzer/netdata:ipmi - Install sys-apps/ipmitool required for monitoring IPMI sensors.
 net-analyzer/netdata:nfacct - Enable the nfacct plugin
 net-analyzer/netdata:nodejs - Enable use of nodejs (which some plugins use)
+net-analyzer/netdata:tor - Enable monitoring of tor
 net-analyzer/netperf:demo - Emit interim results during the run. May affect results
 net-analyzer/nfdump:compat15 - Enable read support for nfdump data files created with nfdump 1.5.x
 net-analyzer/nfdump:ftconv - Build the flow-tools to nfdump converter
@@ -8784,6 +8786,7 @@ www-servers/apache:suexec-caps - Install suexec with capabilities instead of SUI
 www-servers/apache:suexec-syslog - Log suexec to syslog instead of to a separate file
 www-servers/cherokee:admin - Install web based cherokee conf tool
 www-servers/cherokee:rrdtool - Enable rrdtool support
+www-servers/civetweb:server - Build standalone server
 www-servers/fnord:auth - Enable HTTP authentication support
 www-servers/gatling:diet - Compile against dev-libs/dietlibc
 www-servers/h2o:mruby - Enable support for mruby
