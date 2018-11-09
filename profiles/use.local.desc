@@ -315,6 +315,7 @@ app-crypt/gnupg:user-socket - try a socket directory which is not removed by ini
 app-crypt/gnupg:wks-server - Install the wks-server
 app-crypt/gnupg-pkcs11-scd:proxy - Build the gnupg-pkcs11-scd-prox
 app-crypt/gpgme:common-lisp - Install common-lisp files
+app-crypt/hashcat:brain - Enable the hashcat brain
 app-crypt/heimdal:hdb-ldap - Adds support for LDAP as a database backend
 app-crypt/heimdal:otp - Adds support for one-time passwords
 app-crypt/heimdal:pkinit - Adds support for PKINIT for the initial ticket
@@ -1928,6 +1929,11 @@ dev-java/log4j:jms - Build the JMSAppender
 dev-java/logback:tomcat - Builds Apache Tomcat support
 dev-java/lucene:contrib - Include extra functionality from contrib/
 dev-java/miglayout:swt - Add support for the SWT toolkit.
+dev-java/openjdk:gentoo-vm - Allow this JDK to be recognised by Gentoo (package manager, eselect, java-config, EXPERIMENTAL!)
+dev-java/openjdk:headless-awt - Don't install the X backend for AWT, needed by some GUIs
+dev-java/openjdk:jbootstrap - Build OpenJDK twice, the second time using the result of the first
+dev-java/openjdk:source - Install JVM sources
+dev-java/openjdk:webstart - Provide javaws command through symlink to icedtea-web
 dev-java/openjdk-bin:gentoo-vm - Allow this JDK to be recognised by Gentoo (package manager, eselect, java-config, EXPERIMENTAL!)
 dev-java/openjdk-bin:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
 dev-java/openjdk-bin:source - Install JVM sources
@@ -2274,7 +2280,8 @@ dev-libs/c-blosc:snappy - Enable snappy compression
 dev-libs/c-blosc:zstd - Enable zstd compression
 dev-libs/check:subunit - Enable support for the subunit unit test protocol
 dev-libs/crypto++:asm - Support assembly hand optimized crypto functions (i.e. faster run time)
-dev-libs/cyberjack:fox - Enable installation of x11-libs/fox based fxcyberjack program
+dev-libs/cyberjack:tools - Build and install optional management tools.
+dev-libs/cyberjack:usb - Enable support for usb based chipcard reader.
 dev-libs/cyrus-sasl:authdaemond - Add Courier-IMAP authdaemond unix socket support (net-mail/courier-imap, mail-mta/courier)
 dev-libs/cyrus-sasl:ldapdb - Enable ldapdb plugin
 dev-libs/cyrus-sasl:openldap - Add ldap support for saslauthd
@@ -2499,14 +2506,18 @@ dev-libs/starpu:gcc-plugin - Enable GCC extension plugin (experimental)
 dev-libs/starpu:opencl - Enable OpenCL support
 dev-libs/starpu:spinlock-check - Enable spinlock check
 dev-libs/starpu:valgrind - Enable dev-util/valgrind support
-dev-libs/sway:gdk-pixbuf - Enable additional image format support via the x11-libs/gdk-pixbuf library.
-dev-libs/sway:swaybar - Build 'swaybar': sway's status bar component.
-dev-libs/sway:swaybg - Build 'swaybg': allows to set a desktop background image.
-dev-libs/sway:swaygrab - Build 'swaygrab': allows taking screenshots or screencasts.
-dev-libs/sway:swaylock - Build 'swaylock': sway's screen locker.
-dev-libs/sway:swaymsg - Build 'swaymsg': tool for communicating with a running sway instance.
-dev-libs/sway:tray - Enable support for StatusNotifierItem tray specification.
-dev-libs/sway:wallpapers - Install sway's default wallpaper image.
+dev-libs/sway:X - Enable support for X11 applications (XWayland)
+dev-libs/sway:elogind - Enable support for rootless session via elogind
+dev-libs/sway:filecaps - Use Linux capability SYS_CAP_ADMIN rather than set*id for sway binary
+dev-libs/sway:fish-completion - Enable fish completion support
+dev-libs/sway:gdk-pixbuf - Enable additional image format support via the x11-libs/gdk-pixbuf library
+dev-libs/sway:swaybar - Install 'swaybar': sway's status bar component
+dev-libs/sway:swaybg - Install 'swaybg': allows to set a desktop background image
+dev-libs/sway:swaygrab - Install 'swaygrab': allows taking screenshots or screencasts
+dev-libs/sway:swaylock - Install 'swaylock': sway's screen locker
+dev-libs/sway:swaymsg - Install 'swaymsg': tool for communicating with a running sway instance
+dev-libs/sway:tray - Enable support for StatusNotifierItem tray specification
+dev-libs/sway:wallpapers - Install sway's default wallpaper image
 dev-libs/tinyxml:stl - Compile with TIXML_USE_STL support
 dev-libs/tntnet:server - Enable tntnet server daemon
 dev-libs/totem-pl-parser:archive - Enables support for accessing media files in archives transparently via app-arch/libarchive
@@ -3304,7 +3315,6 @@ games-board/freedoko:openclipartcards - Install the openclipartcards card set
 games-board/freedoko:pysolcards - Install the PySol card set
 games-board/freedoko:xskatcards - Install the XSkat card set
 games-board/grhino:gtp - Install the GTP (Go/Game Text Protocol) frontend
-games-board/knights:speech - Enable text-to-speech support
 games-board/pasang-emas:extras - Install some extra themes
 games-board/pioneers:help - Enable gnome ingame help via scrollkeeper
 games-board/pysolfc:extra-cardsets - Install extra cardsets
@@ -3675,6 +3685,7 @@ kde-apps/kio-extras:phonon - Enable file audio preview plugin using media-libs/p
 kde-apps/kio-extras:sftp - Enable SFTP protocol support using net-libs/libssh
 kde-apps/kio-extras:taglib - Enable audio thumbnails via media-libs/taglib
 kde-apps/kmag:keyboardfocus - Enable keyboard focus tracking
+kde-apps/knights:speech - Enable text-to-speech support
 kde-apps/konqueror:activities - Enable kactivities support
 kde-apps/konqueror:speech - Build text-to-speech plugin
 kde-apps/konqueror:webengine - Enable dev-qt/qtwebengine as web browser engine (fallback is kde-misc/kwebkitpart)
@@ -5304,9 +5315,7 @@ media-video/vlc:opencv - Enable OpenCV (computer vision) filter module
 media-video/vlc:optimisememory - Enable optimisation for memory rather than performance
 media-video/vlc:postproc - Enable image post-processing via libpostproc (part of FFmpeg)
 media-video/vlc:projectm - Enable the projectM visualization plugin
-media-video/vlc:rtsp - Enable real audio and RTSP modules
 media-video/vlc:run-as-root - Allows vlc to start for root. Don't enable this unless you have a very specific (e.g. embedded) need for it!
-media-video/vlc:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec)
 media-video/vlc:sdl-image - Enable sdl image video decoder (depends on sdl)
 media-video/vlc:sftp - Enable libssh2 to support SFTP file transfer
 media-video/vlc:shout - Enable libshout output
