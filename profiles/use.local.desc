@@ -3369,7 +3369,6 @@ games-emulation/pcsxr:sdl - Use SDL sound backend (other parts of SDL are used u
 games-emulation/ppsspp:headless - Build headless version of the PPSSPP
 games-emulation/ppsspp:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of bundled
 games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recommended)
-games-emulation/snes9x:xrandr - Enable support for the X xrandr extension
 games-emulation/vbam:link - Enable GBA linking functionality
 games-emulation/zsnes:debug - Enable the builtin debugger
 games-emulation/zsnes:pax_kernel - Triggers a paxmarking of the binary
