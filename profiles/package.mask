@@ -29,6 +29,30 @@
 
 #--- END OF EXAMPLES ---
 
+# Virgil Dupras <vdupras@gentoo.org> (14 Nov 2018)
+# Unmaintained and depending on an purged version (1.8) of Django.
+# Removal in 30 days. bug #664012
+dev-python/django-cms
+dev-python/djangocms-admin-style
+dev-python/djangocms-file
+dev-python/djangocms-flash
+dev-python/djangocms-inherit
+dev-python/djangocms-link
+dev-python/djangocms-picture
+dev-python/djangocms-snippet
+dev-python/djangocms-teaser
+dev-python/djangocms-video
+dev-python/django-classy-tags
+dev-python/django-formtools
+dev-python/djangocms-text-ckeditor
+dev-python/django-sekizai
+dev-python/django-treebeard
+dev-python/aldryn-search
+dev-python/aldryn-bootstrap3
+dev-python/django-filer
+dev-python/django-mptt
+dev-python/django-standard-form
+
 # Sergei Trofimovich <slyfox@gentoo.org> (13 Nov 2018)
 # New version started creating files when input file is not set.
 # This is unexpected behaviour change and causes sandbox
@@ -477,16 +501,6 @@ media-gfx/splash-themes-livedvd
 # Fails to build with glibc-2.27, bug 648620. No reverse
 # dependencies. Removal in 30 days.
 dev-tcltk/ck
-
-# Matt Turner <mattst88@gentoo.org> (16 Oct 2018)
-# Unmaintained. Unused. Removal in 30 days. Bug #668826
-media-libs/libomxil-bellagio
-
-# Virgil Dupras <vdupras@gentoo.org> (15 Oct 2018)
-# Unmaintained, no revdep. Removal in 30 days. Bug #650048
-dev-python/django-extensions
-dev-python/shortuuid
-dev-python/fexpect
 
 # Sobhan Mohammadpour <sobhan@gentoo.org> (15 Oct 2018)
 # Masked for testing.
@@ -966,12 +980,6 @@ www-plugins/chrome-binary-plugins:unstable
 # Michael Weber <xmw@gentoo.org> (17 Jul 2013)
 # Upstream next versions
 >=sys-boot/raspberrypi-firmware-1_pre
-
-# Richard Freeman <rich0@gentoo.org> (24 Mar 2013)
-# Contains known buffer overflows.  Package generally works
-# but should not be fed untrusted input (eg from strangers).
-# Masked to ensure users are aware before they install.
-app-text/cuneiform
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (03 Jan 2009)
 # These packages are not supposed to be merged directly, instead
