@@ -1391,6 +1391,9 @@ dev-ada/gnatmem:gnat_2018 - Compile with dev-lang/gnat-gpl-2018
 dev-ada/gprbuild:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/gprbuild:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/gprbuild:gnat_2018 - Compile with dev-lang/gnat-gpl-2018
+dev-ada/gps:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
+dev-ada/gps:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
+dev-ada/gps:gnat_2018 - Compile with dev-lang/gnat-gpl-2018
 dev-ada/gtkada:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/gtkada:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/gtkada:gnat_2018 - Compile with dev-lang/gnat-gpl-2018
@@ -2544,6 +2547,7 @@ dev-libs/weston:headless - Headless backend and a noop renderer, mainly for test
 dev-libs/weston:ivi - Enable the IVI shell
 dev-libs/weston:launch - Install weston-launch utility
 dev-libs/weston:rdp - Enable Remote Desktop Protocol compositor support
+dev-libs/weston:remoting - Enable plugin to stream output to remote hosts using media-libs/gstreamer
 dev-libs/weston:resize-optimization - Increase performance, allocate more RAM. Recommended to disable on Raspberry Pi
 dev-libs/weston:screen-sharing - Enable screen-sharing through RDP
 dev-libs/weston:unwind - Enable libunwind usage for backtraces
@@ -3687,7 +3691,6 @@ kde-apps/kget:mms - Enable MMS (Microsoft Media Server) plugin through media-lib
 kde-apps/kig:geogebra - Support files created by sci-mathematics/geogebra
 kde-apps/kig:scripting - Support Python scripting
 kde-apps/kio-extras:activities - Enable activities kioslave and fileitem plugin
-kde-apps/kio-extras:htmlthumbs - Enable HTML thumbnail previews via dev-qt/qtwebengine
 kde-apps/kio-extras:man - Enable manpages kioslave
 kde-apps/kio-extras:phonon - Enable file audio preview plugin using media-libs/phonon
 kde-apps/kio-extras:sftp - Enable SFTP protocol support using net-libs/libssh
