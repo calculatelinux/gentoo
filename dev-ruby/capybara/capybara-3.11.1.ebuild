@@ -16,11 +16,11 @@ DESCRIPTION="Capybara aims to simplify the process of integration testing Rack a
 HOMEPAGE="https://github.com/jnicklas/capybara"
 LICENSE="MIT"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 SLOT="3"
 IUSE="test"
 
-DEPEND="${DEPEND} test? ( www-client/firefox )"
+DEPEND="${DEPEND} test? ( || ( www-client/firefox www-client/firefox-bin ) )"
 
 ruby_add_bdepend "test? (
 	dev-ruby/rspec:3

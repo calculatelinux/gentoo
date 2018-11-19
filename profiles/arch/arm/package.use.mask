@@ -106,10 +106,6 @@ media-video/mpv -raspberry-pi
 # smallest wav files.
 media-sound/xmms2 mac
 
-# Gilles Dartiguelongue <eva@gentoo.org> (19 Aug 2017)
-# sys-fs/udftools is not keyworded, bug #628310
-sys-block/gparted udf
-
 # Michał Górny <mgorny@gentoo.org> (10 Aug 2017)
 # Requires USE=ipmi which is masked in this profile.
 sys-power/nut ups_drivers_nut-ipmipsu
@@ -130,10 +126,6 @@ net-misc/bfgminer adl lm_sensors
 # dev-tcltk/tcllib is not keyworded, and tests are restricted anyway, so
 # no point in pursuing it right now.
 app-shells/bash-completion test
-
-# Johannes Huber <johu@gentoo.org> (14 May 2017)
-# Depends on dev-qt/qtwebengine, not keyworded yet.
-kde-apps/kio-extras htmlthumbs
 
 # James Le Cuirot <chewi@gentoo.org> (25 Apr 2017)
 # Oracle doesn't include VisualVM on this platform.
