@@ -29,6 +29,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Sergei Trofimovich <slyfox@gentoo.org> (23 Nov 2018)
+# New version breaks kernel compilation as objtool seemingly
+# corrupts object files: bug #671760
+>=dev-libs/elfutils-0.175
+
 # Tiziano Müller <dev-zero@gentoo.org> (21 Nov 2018)
 # Project is in maintenance-only mode with the last big release in 2012.
 # Needs a dedicated maintainer with a matching LDAP setup (extra schemas required).
@@ -131,11 +136,6 @@ dev-db/mysql-proxy
 # Unmaintained, fails to build, nothing requires it anymore (#630400).
 # Removal in a month.
 app-forensics/libbfio
-
-# Pacho Ramos <pacho@gentoo.org> (11 Nov 2018)
-# Needs someone to finally take care of it, bump it and let it be
-# installable again (#635476, #645740). Removal in a month.
-net-analyzer/nessus-bin
 
 # Pacho Ramos <pacho@gentoo.org> (11 Nov 2018)
 # Pending version bump (#648380), doesn't build (#637350). Removal in a
