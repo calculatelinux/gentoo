@@ -29,6 +29,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (1 Dec 2018)
+# Old Rails 5.0 version. This version is no longer maintained
+# upstream. Please update to Rails 5.1 or newer.
+# Masked for removal in 30 days.
+dev-ruby/rails:5.0
+dev-ruby/railties:5.0
+dev-ruby/activerecord:5.0
+dev-ruby/actionmailer:5.0
+dev-ruby/actionpack:5.0
+dev-ruby/actionview:5.0
+dev-ruby/activejob:5.0
+dev-ruby/actioncable:5.0
+dev-ruby/activemodel:5.0
+dev-ruby/activesupport:5.0
+
 # David Seifert <soap@gentoo.org> (29 Nov 2018)
 # Uses ancient APIs, abandoned by upstream, unsalvageable.
 # Removal in 30 days. Bug #662142.
@@ -309,13 +324,6 @@ dev-libs/gost-engine
 =sys-libs/libcxxabi-7.0.1_rc*
 =sys-libs/libomp-7.0.1_rc*
 =sys-libs/llvm-libunwind-7.0.1_rc*
-
-# Andreas Sturmlechner <asturm@gentoo.org> (06 Nov 2018)
-# This was already outdated by the arrival of kde-apps/kdeartwork-iconthemes,
-# which itself was removed more than two years ago. Dead upstream.
-# Masked for removal by end of the month, bugs #670424, #670842
-x11-themes/nuvola
-x11-themes/Tulliana
 
 # Brian Evans <grknight@gentoo.org> (05 Nov 2018)
 # Causes a dependency loop in the OpenRC script. Bug #651998
