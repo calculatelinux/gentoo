@@ -2,16 +2,16 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
+		<email>bman@gentoo.org</email>
+		<name>Aaron Bauman</name>
+	</maintainer>
+	<maintainer type="person">
 		<email>hilobakho@gmail.com</email>
 		<name>Mykyta Holubakha</name>
 	</maintainer>
 	<maintainer restrict="&gt;=dev-libs/sway-1.0_beta1" type="person">
 		<email>speedjack95@gmail.com</email>
 		<name>Niccolò Scatena</name>
-	</maintainer>
-	<maintainer type="project">
-		<email>proxy-maint@gentoo.org</email>
-		<name>Proxy Maintainers</name>
 	</maintainer>
 	<longdescription lang="en">
 		"SirCmpwn's Wayland window manager" is an i3-compatible window manager
@@ -33,8 +33,10 @@
 		<flag name="swaybar">Install 'swaybar': sway's status bar component</flag>
 		<flag name="swaybg">Install 'swaybg': allows to set a desktop background image</flag>
 		<flag name="swaygrab">Install 'swaygrab': allows taking screenshots or screencasts</flag>
+		<flag name="swayidle">Install 'swayidle': idle manager to run commands when user is inactive</flag>
 		<flag name="swaylock">Install 'swaylock': sway's screen locker</flag>
 		<flag name="swaymsg">Install 'swaymsg': tool for communicating with a running sway instance</flag>
+		<flag name="swaynag">Install 'swaynag': shows a message with buttons</flag>
 		<flag name="tray">Enable support for StatusNotifierItem tray specification</flag>
 		<flag name="wallpapers">Install sway's default wallpaper image</flag>
 		<flag name="X">Enable support for X11 applications (XWayland)</flag>
