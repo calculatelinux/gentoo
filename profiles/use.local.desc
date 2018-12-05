@@ -2453,7 +2453,6 @@ dev-libs/libsecp256k1:test_openssl - Enable OpenSSL comparison tests
 dev-libs/libslz:tools - Install additional tools (zenc, zdec)
 dev-libs/libsodium:asm - Enables assembly implementations
 dev-libs/libsodium:urandom - Use /dev/urandom instead of /dev/random
-dev-libs/libsolv:rpm - Enable support for RPM files
 dev-libs/libspt:libtirpc - Build against net-libs/libtirpc for RPC support
 dev-libs/libsqlora8:orathreads - Use Oracle threads
 dev-libs/libtasn1:valgrind - Enable usage of dev-util/valgrind in debug
@@ -4102,7 +4101,7 @@ mate-extra/caja-extensions:wallpaper - Add an extension to support setting an im
 mate-extra/mate-polkit:accountsservice - Support extraction of data from AccountsService
 mate-extra/mate-polkit:appindicator - Add support for AppIndicator
 mate-extra/mate-power-manager:applet - Enable building of the MATE applet.
-mate-extra/mate-power-manager:pm-utils - Adds support for suspend/resume using sys-power/upower-pm-utils instead of sys-power/upower
+mate-extra/mate-power-manager:pm-utils - Adds support for suspend/resume using upower-pm-utils instead of sys-power/upower
 mate-extra/mate-screensaver:consolekit - Enable support for sys-auth/consolekit
 mate-extra/mate-utils:applet - Enable the mate dictionary applet
 media-fonts/corefonts:tahoma - Also install the Tahoma font. Due to the lack of a free bold variant, this may render badly. See bug 184790.
@@ -5401,7 +5400,6 @@ net-analyzer/fprobe:messages - enable console messages
 net-analyzer/goaccess:btree - Enable Tokyo Cabinet's on-disk B+ Tree database backend
 net-analyzer/goaccess:geoipv2 - Enable support for GeoIP2 through dev-libs/libmaxminddb
 net-analyzer/goaccess:getline - Use GNU getline() to parse full line requests
-net-analyzer/goaccess:memhash - Enable Tokyo Cabinet's on-memory hash database backend
 net-analyzer/goaccess:tokyocabinet - Enable Tokyo Cabinet's on-memory hash database backend
 net-analyzer/gr-fosphor:glfw - enable GLFW based interface
 net-analyzer/graphite-web:carbon - Enable carbon support
@@ -6867,8 +6865,6 @@ net-news/liferea:networkmanager - Use NetworkManager to monitor nerwork status
 net-news/liferea:notification - Enable support for Popup Notifications plugin that display popups informing about new updates
 net-news/liferea:tray - Enable support for Tray Icon (GNOME Classic) plugin that display a small system tray icon to hide/unhide Liferea
 net-news/rssguard:webengine - Use dev-qt/qtwebengine for embedded web browser
-net-nntp/inn:innkeywords - Enable automatic keyword generation support
-net-nntp/inn:inntaggedhash - Use tagged hash table for history (disables large file support)
 net-nntp/nzbget:parcheck - Enable support for checking PAR archives
 net-nntp/sabnzbd:7za - Add support for extracting 7za files
 net-nntp/sabnzbd:rar - Add support for extracting rar files
@@ -7195,6 +7191,7 @@ net-wireless/iwd:monitor - Enable iwmon monitor tool
 net-wireless/iwd:ofono - Enable support for oFono SIM authentication
 net-wireless/iwd:wired - Enable ethernet authentication daemon
 net-wireless/kismet:client - Build the ncurses-based user interface
+net-wireless/kismet:mousejack - Add support for mousejack hardware using dev-libs/libusb
 net-wireless/kismet:pcre - Build with pcre support
 net-wireless/kismet:plugin-autowep - Build the autowep plugin
 net-wireless/kismet:plugin-btscan - Build the btscan plugin
@@ -8205,13 +8202,13 @@ sys-cluster/openstack-meta:keystone - Installs Openstack Keystone
 sys-cluster/openstack-meta:neutron - Installs Openstack Neutron
 sys-cluster/openstack-meta:nova - Installs Openstack Nova
 sys-cluster/openstack-meta:swift - Installs Openstack Swift
-sys-cluster/pacemaker:cman - Enable sys-cluster/cman support.
+sys-cluster/pacemaker:cman - Enable cman support.
 sys-cluster/pacemaker:heartbeat - Enable sys-cluster/heartbeat support.
 sys-cluster/pacemaker:smtp - Enable SMTP support via net-libs/libesmtp
 sys-cluster/pmix:munge - Enable authentication via munge
 sys-cluster/pmix:pmi - Build PMI1 and PMI2 interface
 sys-cluster/resource-agents:libnet - Force use of net-libs/libnet
-sys-cluster/resource-agents:rgmanager - Install resources for sys-cluster/rgmanager
+sys-cluster/resource-agents:rgmanager - Install resources for rgmanager
 sys-cluster/singularity:slurm - Compile spank plugin for sys-cluster/slurm
 sys-cluster/slurm:html - Build html documentation
 sys-cluster/slurm:ipmi - Build support for collecting some ipmi stats

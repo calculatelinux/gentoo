@@ -3,7 +3,7 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python3_6 )
+PYTHON_COMPAT=( python2_7 )
 
 inherit autotools eutils multilib user python-single-r1
 
@@ -28,7 +28,7 @@ HOMEPAGE="https://www.kismetwireless.net"
 
 LICENSE="GPL-2"
 SLOT="0/${PV}"
-IUSE="lm_sensors networkmanager +pcre selinux +suid"
+IUSE="lm_sensors mousejack networkmanager +pcre selinux +suid"
 
 CDEPEND="
 	${PYTHON_DEPS}
@@ -42,6 +42,7 @@ CDEPEND="
 			dev-libs/libnl:3
 			net-libs/libpcap
 			)
+	mousejack? ( dev-libs/libusb:= )
 	dev-libs/protobuf-c:=
 	dev-libs/protobuf:=
 	sys-libs/ncurses:=
@@ -66,27 +67,21 @@ src_prepare() {
 	sed -i -e 's| -s||g' \
 		-e 's|@mangrp@|root|g' Makefile.in
 
-	epatch "${FILESDIR}"/fix-setuptools2.patch
+	eapply "${FILESDIR}"/fix-setuptools3.patch
 	eapply_user
 
-	if [[ ${PV} == "9999" ]] ; then
+	if [ "${PV}" = "9999" ]; then
 		eautoreconf
 	fi
-
-	if ! use lm_sensors; then
-		sed -i "s#HAVE_LMSENSORS_H=1#HAVE_LMSENSORS_H=0#" configure
-	fi
-	if use networkmanager; then
-		sed -i "s#havelibnm\=no#havelibnm\=yes#" configure
-	else
-		sed -i "s#havelibnm\=yes#havelibnm\=no#" configure
-	fi
-	sed -i 's#-O3##' configure
 }
 
 src_configure() {
 	econf \
-		$(use_enable pcre)
+		$(use_enable pcre) \
+		$(use_enable lm_sensors lmsensors) \
+		$(use_enable mousejack libusb) \
+		$(use_enable networkmanager libnm) \
+		--disable-optimization
 }
 
 src_install() {

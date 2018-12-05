@@ -334,116 +334,6 @@ dev-libs/gost-engine
 # experimental features and accept a more unstable release.
 >=www-client/chromium-72
 
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Unmaintained, needs someone to take care of bumping and maintaining it
-# (#509518). Removal in a month.
-dev-python/pyramid
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Upstream dead, multiple unresolved bugs (#540622). Removal in a month.
-app-crypt/tinyca
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# gitorious was closed (#544812), nothing needs it in the tree and we only
-# provide a live ebuild. Removal in a month.
-app-benchmarks/os-autoinst
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Pending version bumps (with security fixes) for a long time (#550188,
-# #544568, #227993). Removal in a month.
-www-apps/moinmoin
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Nobody willing to update and maintain this for years (#556306, #554488).
-# Removal in a month.
-net-proxy/squidclamav
-net-proxy/c-icap
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Outdated, doesn't respect CC, installs files in /usr/local (#565894,
-# #664370). Removal in a month.
-www-client/dooble
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Outdated, move to media-gfx/slic3r or other online alternatives (#570324).
-# Removal in a month.
-media-gfx/replicatorg
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Build issues (#587866), outdated, nothing needs it in the tree. Removal in
-# a month.
-dev-libs/libsolv
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Build issues (#590316, #603300), no reverse deps, needs a major version
-# bump. Removal in a month.
-dev-lua/lua-openssl
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Upstream dead for ages, crashes (#637286), build issues (#592580).
-# Migration to Google fork or other alternative will be needed. Removal in a
-# month.
-net-misc/tlsdate
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Hard to bump (#480160), uses get_libdir at global scope (#593400). Removal
-# in a month.
-net-analyzer/w3af
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# pkg_postinst calls pkg_config (#596648), upstream dead for ages. Removal
-# in a month.
-sys-auth/bioapi
-sys-auth/tfm-fingerprint
-sys-auth/pam_bioapi
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Dead for ages, not needed anymore (#596988). Removal in a month.
-sys-power/upower-pm-utils
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Broken and outdated (#445476, #448934, #599580). Removal in a month.
-media-plugins/mediastreamer-silk
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Fails to build (#601886), dead for a long time. Removal in a month.
-media-gfx/gimmage
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Fringe format, nothing really uses it, upstream disappeared, not really
-# working for some time (#602938). Removal in a month.
-media-libs/schroedinger
-
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Needs someone to maintain it and bump to a snapshot not relying on
-# gstreamer:0.10 (#610434, #560254). Removal in a month.
-app-accessibility/pocketsphinx
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Fails to build, hard to bump (#608908). Removal in a month.
-net-nntp/inn
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Dead since 2005, nobody else still ships it, it creates cruft dirs in /
-# (#565592). Removal in a month.
-app-admin/syslogread
-
-# Pacho Ramos <pacho@gentoo.org> (04 Nov 2018)
-# Upstream dead for many years and nobody taking care of them, bug #443842,
-# bug #618050. Removal in a month.
-sys-cluster/cman
-sys-cluster/ccs
-sys-cluster/rgmanager
-sys-cluster/rgmanager-agents
-sys-cluster/libdlm
-sys-cluster/fence-agents
-sys-cluster/libccs
-sys-cluster/libccs-perl
-sys-cluster/libcman
-sys-cluster/libfence
-sys-cluster/liblogthread
-
 # Andreas Sturmlechner <asturm@gentoo.org> (03 Nov 2018)
 # Breaks revdeps (GDir and GDirEntry split from gfile.h into new gdir.h)
 # See tracker: https://bugs.gentoo.org/670222
@@ -690,18 +580,6 @@ sys-devel/automake:1.8
 # Unset python_targets_python2_7 for ipykernel and ipyparallel if needed.
 >=dev-python/ipython-6
 
-# Mats Lidell <matsl@gentoo.org> (17 Aug 2017)
-# Masked ede and all its dependencies due to security reasons.
-# bug #398241
-<=app-xemacs/ede-1.03-r1
-<=app-xemacs/semantic-1.21
-<=app-xemacs/jde-1.52
-<=app-xemacs/xslt-process-1.12
-<=app-xemacs/xetla-1.02
-<=app-xemacs/cogre-1.02
-<=app-xemacs/ecb-1.22
-<=app-xemacs/xemacs-packages-all-2010.07.29
-
 # Kent Fredric <kentnl@gentoo.org> (21 Jul 2017)
 # Masked due to serious regression that introduces widespread data
 # corruption when storing data in blobs. Masked, because any code
@@ -826,8 +704,9 @@ app-admin/amazon-ec2-init
 # Removal in 14 days.  Bug #671240.
 dev-java/jcs
 
-# Andrey Grozin <grozin@gentoo.org> (04 Jan 2016)
-# Needs a bump and substantial ebuild rewrite
+# Andrey Grozin <grozin@gentoo.org> (03 Dec 2018)
+# Masked since 2016.
+# Removal in 30 days. Bug #671242.
 =sci-mathematics/reduce-20110414-r1
 
 # Robin H. Johnson <robbat2@gentoo.org> (04 Aug 2014)
