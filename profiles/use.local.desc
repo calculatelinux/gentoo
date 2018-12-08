@@ -246,6 +246,7 @@ app-backup/backup-manager:s3 - Support for backing up to the Amazon S3 system
 app-backup/bacula:bacula-clientonly - Disable DB support, and just build a client
 app-backup/bacula:bacula-nodir - Disable building of director
 app-backup/bacula:bacula-nosd - Disable building of storage daemon
+app-backup/bacula:batch-insert - Enable batch insert into data base
 app-backup/bacula:logwatch - Install support files for logwatch
 app-backup/bareos:cephfs - Enable cephfs storage backend
 app-backup/bareos:clientonly - Only install file-daemon (client)
@@ -518,7 +519,8 @@ app-emulation/hyperd:xen - Enable support for the Xen Hypervisor
 app-emulation/libcacard:passthrough - Enable smartcard passthrough support via sys-apps/pcsc-lite
 app-emulation/libguestfs:erlang - Build Erlang bindings
 app-emulation/libguestfs:fuse - Enable image mount support via fuse
-app-emulation/libguestfs:inspect-icons - Use media-gfx/icoutilsfor acces icon file in image and inspect it
+app-emulation/libguestfs:inspect-icons - Use media-gfx/icoutils for acces icon file in image and inspect it
+app-emulation/libguestfs:libvirt - Use app-emulation/libvirt to manipulate VMs
 app-emulation/libguestfs:systemtap - Use dev-util/systemtap to inspect VM via "probes" way
 app-emulation/libspectrum:gcrypt - Use dev-libs/libgcrypt for low-level crypto of some features, including logfiles.
 app-emulation/libvirt:apparmor - Enable AppArmor support
