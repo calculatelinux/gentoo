@@ -29,6 +29,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Thomas Deutschmann <whissi@gentoo.org> (10 Dec 2018)
+# Requires >=dev-lang/lua-5.2 which is masked
+>=app-admin/lsyncd-2.2.3
+
+# Hans de Graaff <graaff@gentoo.org> (9 Dec 2018)
+# Old component for Rails that is no longer used and no longer
+# maintained upstream. Masked for removal in 30 days.
+dev-ruby/hike
+
+# Hans de Graaff <graaff@gentoo.org> (9 Dec 2018)
+# No longer provides tests and no tagged upstream releases. No reverse
+# dependencies. Use classifier-reborn instead. Masked for removal
+# in 30 days.
+dev-ruby/classifier
+
 # Hans de Graaff <graaff@gentoo.org> (1 Dec 2018)
 # Old Rails 5.0 version. This version is no longer maintained
 # upstream. Please update to Rails 5.1 or newer.
@@ -108,12 +123,6 @@ dev-python/aldryn-bootstrap3
 dev-python/django-filer
 dev-python/django-mptt
 dev-python/django-standard-form
-
-# Sergei Trofimovich <slyfox@gentoo.org> (13 Nov 2018)
-# New version started creating files when input file is not set.
-# This is unexpected behaviour change and causes sandbox
-# violations: bug #670944
->=dev-lang/nasm-2.14
 
 # Hans de Graaff <graaff@gentoo.org> (12 Nov 2018)
 # Mask ruby23-only packages for removal. These packages are not
@@ -624,7 +633,7 @@ dev-ruby/poltergeist
 # switch the compiler / the binutils) ASAP. If you need them for a specific
 # (isolated) use case, feel free to unmask them on your system.
 <sys-devel/gcc-5.4
-<sys-libs/glibc-2.26
+<sys-libs/glibc-2.27
 <sys-devel/binutils-2.30-r2
 <sys-libs/binutils-libs-2.30-r2
 
