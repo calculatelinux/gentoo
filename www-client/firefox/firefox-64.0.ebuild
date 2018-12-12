@@ -62,7 +62,7 @@ CDEPEND="
 	>=x11-libs/gtk+-3.4.0:3
 	x11-libs/gdk-pixbuf
 	>=x11-libs/pango-1.22.0
-	>=media-libs/libpng-1.6.34:0=[apng]
+	>=media-libs/libpng-1.6.35:0=[apng]
 	>=media-libs/mesa-10.2:*
 	media-libs/fontconfig
 	>=media-libs/freetype-2.4.10
@@ -462,7 +462,7 @@ src_configure() {
 }
 
 src_compile() {
-	MOZ_MAKE_FLAGS="${MAKEOPTS}" SHELL="${SHELL:-${EPREFIX}/bin/bash}" MOZ_NOSPAM=1 \
+	MOZ_MAKE_FLAGS="${MAKEOPTS} -O" SHELL="${SHELL:-${EPREFIX}/bin/bash}" MOZ_NOSPAM=1 \
 	./mach build --verbose || die
 }
 

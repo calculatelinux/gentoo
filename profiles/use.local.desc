@@ -1452,7 +1452,6 @@ dev-db/cppdb:sqlite_internal - Don't build a separate sqlite3 loadable module bu
 dev-db/etcd:server - Installs etcd daemon
 dev-db/firebird:server - Install the server components of Firebird, not just the client
 dev-db/firebird:xinetd - Install ClassicServer
-dev-db/maatkit:udf - Build the MySQL UDFs shipped with maatkit, requires non-minimal MySQL
 dev-db/mariadb:backup - Build mariadb-backup which supports SST and hot backup of InnoDB, Aria and MyISAM including compression and encryption
 dev-db/mariadb:client-libs - Build the client libraries from the server package instead of the C Connector packages
 dev-db/mariadb:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
@@ -3631,6 +3630,7 @@ gnome-extra/gnome-commander:taglib - Add metadata support for ID3, Vorbis, FLAC 
 gnome-extra/gnome-commander:unique - Enable single instance support using dev-libs/libunique
 gnome-extra/gnome-contacts:telepathy - Start chat from contact details
 gnome-extra/gnome-dvb-daemon:totem - Build a plugin for media-video/totem
+gnome-extra/gnome-software:firmware - Enable firmware update support through sys-apps/fwupd
 gnome-extra/gnome-system-monitor:systemd - Display sys-apps/systemd metadata, e.g. unit names, for running processes
 gnome-extra/libgda:canvas - Enable support for x11-libs/goocanvas
 gnome-extra/libgda:http - Enable embedded net-libs/libsoup based server
@@ -4089,7 +4089,6 @@ mate-base/mate-control-center:appindicator - Add support for AppIndicator
 mate-base/mate-session-manager:xtrans - Build with Xtrans support; WARNING: Disabling this flag will result in ICE binding on all interfaces
 mate-extra/caja-extensions:cdr - Add an extension to burn files to cds using app-cdr/brasero.
 mate-extra/caja-extensions:gajim - Add an extension to support net-im/gajim.
-mate-extra/caja-extensions:gksu - Add an extension to support opening files as root with x11-libs/gksu.
 mate-extra/caja-extensions:image-converter - Add image conversion support.
 mate-extra/caja-extensions:mail - Add an extension to support e-mail functionality.
 mate-extra/caja-extensions:open-terminal - Add an extension to support an open terminal.
@@ -4409,7 +4408,6 @@ media-libs/libpagemaker:tools - Build command line file format conversion tools
 media-libs/libpng:apng - support unofficial APNG (Animated PNG) spec
 media-libs/libpostproc:pic - Force shared libraries to be built as PIC (this is slower).
 media-libs/libprojectm:gles2 - Provide support for OpenGL ES 2 and 3
-media-libs/libquicktime:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec)
 media-libs/libraw:demosaic - Enable support for external interpolation algorithms
 media-libs/libsdl:joystick - Control joystick support (disable at your own risk)
 media-libs/libsdl:sound - Control audio support (disable at your own risk)
@@ -4446,7 +4444,6 @@ media-libs/mediastreamer:ilbc - Use of iLBC (RFC3951) codec plugin
 media-libs/mediastreamer:ntp-timestamp - Turn on NTP timestamping on received packet
 media-libs/mediastreamer:ortp - Enable usage of net-libs/ortp
 media-libs/mediastreamer:pcap - Enable usage of net-libs/libpcap
-media-libs/mediastreamer:silk - Use silk (skype protocol) codec plugin
 media-libs/mediastreamer:video - Enable video support
 media-libs/mesa:classic - Build drivers based on the classic architecture.
 media-libs/mesa:d3d9 - Enable Direct 3D9 API through Nine state tracker. Can be used together with patched wine.
@@ -4628,20 +4625,6 @@ media-plugins/kipi-plugins:mediawiki - Build the mediawiki export plugin
 media-plugins/kipi-plugins:remotestorage - Build plugin for remote storage using network protocols such as FTP, SSH, SAMBA via kde-frameworks/kio
 media-plugins/kipi-plugins:vkontakte - Build plugin for vkontakte.ru
 media-plugins/mediastreamer-ilbc:20ms-frames - enable 20ms frame size (default is 30ms). Some VOIP providers such as Gizmo5 (aka Sipphone) require the codec to be compiled with the 30ms setting.
-media-plugins/mythplugins:cdr - Allows MythMusic to burn CD-Rs
-media-plugins/mythplugins:exif - Allows MythGallery to read EXIF data from photos
-media-plugins/mythplugins:fftw - Adds visual effects to MythMusic when playing back music
-media-plugins/mythplugins:hls - HTTP Live Streaming support
-media-plugins/mythplugins:mytharchive - Allows you to archive recorded content to CD or DVD
-media-plugins/mythplugins:mythbrowser - Adds a web browser within MythTV
-media-plugins/mythplugins:mythgallery - Adds a picture viewing gallery within MythTV
-media-plugins/mythplugins:mythgame - Adds a frontend to various ROM emulators within MythTV
-media-plugins/mythplugins:mythmusic - Adds the ability for MythTV to act as a music player
-media-plugins/mythplugins:mythnetvision - Adds the ability to view netvision devices within MythTV
-media-plugins/mythplugins:mythnews - Adds a news viewer within MythTV
-media-plugins/mythplugins:mythweather - Adds weather information within MythTV
-media-plugins/mythplugins:mythzoneminder - Adds support for zoneminder (requires a server with the appropriate mythtv daemon somewhere on the network).
-media-plugins/mythplugins:raw - Allows MythGallery to view photos saved in RAW format
 media-plugins/vdr-burn:dvdarchive - DMH DVD - Archive
 media-plugins/vdr-dvbapi:dvbcsa - use media-libs/libdvbcsa free implementation of the DVB Common Scrambling Algorithm
 media-plugins/vdr-epgsearch:conflictcheckonly - install the "conflictcheckonly" vdr-plugin
@@ -5131,7 +5114,6 @@ media-video/ffmpeg:openssl - Enables dev-libs/openssl support. Adds support for 
 media-video/ffmpeg:pic - Force shared libraries to be built as PIC (this is slower)
 media-video/ffmpeg:postproc - Build and install libpostproc.
 media-video/ffmpeg:rubberband - Adds time-stretching and pitch-shifting audio filter based on media-libs/rubberband.
-media-video/ffmpeg:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).
 media-video/ffmpeg:snappy - Enable app-arch/snappy support. Required for e.g. Vidvox Hap encoder.
 media-video/ffmpeg:sofalizer - Enables Sofalizer filter
 media-video/ffmpeg:srt - Enable support for Secure Reliable Transport (SRT) via net-libs/srt
@@ -5143,8 +5125,6 @@ media-video/ffmpeg:zeromq - Enables net-libs/zeromq support with the zmq/azmq fi
 media-video/ffmpeg:zimg - Enables media-libs/zimg based scale filter.
 media-video/ffmpeg:zvbi - Enables media-libs/zvbi based teletext decoder.
 media-video/ffmpeg2theora:kate - Adds support for Ogg Kate subtitles via libkate.
-media-video/gnome-mplayer:dconf - Enable support for gnome-base/dconf
-media-video/gnome-mplayer:gda - Enable support for gnome-extra/libgda
 media-video/google2srt:html - Install HTML documentation
 media-video/h264enc:ogm - Support for OGM container format
 media-video/handbrake:fdk - Support for encoding AAC using media-libs/fdk-aac.
@@ -5175,7 +5155,6 @@ media-video/libav:opus - Use the external opus library for encoding and decoding
 media-video/libav:pic - Force shared libraries to be built as PIC (this is slower).
 media-video/libav:pulseaudio - Enable pulseaudio input support.
 media-video/libav:rtmp - Enable Real Time Messaging Protocol using librtmp instead the native implementation.
-media-video/libav:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).
 media-video/libav:ssl - Enable SSL/TLS support using dev-libs/openssl or net-libs/gnutls.
 media-video/libav:tools - Build and install small tools like aviocat, cws2fws, graph2dot, ismindex, qt-faststart.
 media-video/libav:twolame - Enable MP2 encoding via media-sound/twolame as an alternative to the internal encoder
@@ -6929,7 +6908,6 @@ net-p2p/mldonkey:fasttrack - enable fasttrack support
 net-p2p/mldonkey:gnutella - enable gnutella and gnutella2 support
 net-p2p/mldonkey:guionly - enable client build only
 net-p2p/mldonkey:magic - enable use of libmagic
-net-p2p/ppcoind:logrotate - Use app-admin/logrotate for rotating logs
 net-p2p/pybitmessage:opencl - Enable dev-python/pyopencl for GPU acceleration
 net-p2p/pybitmessage:qrcode - Enable dev-python/qrcode for QR code support
 net-p2p/qbittorrent:webui - Enable the Web UI
@@ -7788,7 +7766,6 @@ sys-apps/dbus:user-session - Enable user-session semantics for session bus under
 sys-apps/dbus-broker:launcher - dbus-daemon compatibility launcher
 sys-apps/debianutils:installkernel - Install /sbin/installkernel script (for Linux)
 sys-apps/dstat:wifi - Enable wireless network functions
-sys-apps/dtc:valgrind - Use dev-util/valgrind in test phase
 sys-apps/duc:X - Use X11 for the GUI instead of OpenGL. This is the recommended option
 sys-apps/duc:cairo - Build support for exporting to PNG and PDF with x11-libs/cairo
 sys-apps/duc:gui - Build support for a graphical client
@@ -8199,7 +8176,6 @@ sys-cluster/openstack-meta:keystone - Installs Openstack Keystone
 sys-cluster/openstack-meta:neutron - Installs Openstack Neutron
 sys-cluster/openstack-meta:nova - Installs Openstack Nova
 sys-cluster/openstack-meta:swift - Installs Openstack Swift
-sys-cluster/pacemaker:cman - Enable cman support.
 sys-cluster/pacemaker:heartbeat - Enable sys-cluster/heartbeat support.
 sys-cluster/pacemaker:smtp - Enable SMTP support via net-libs/libesmtp
 sys-cluster/pmix:munge - Enable authentication via munge
@@ -8404,13 +8380,9 @@ sys-fs/lessfs:snappy - Enable snappy compression using the app-arch/snappy libra
 sys-fs/loop-aes:cpu_flags_x86_padlock - Use VIA padlock instructions, detected at run time, code still works on non-padlock processors
 sys-fs/loop-aes:extra-ciphers - Enable extra ciphers
 sys-fs/loop-aes:keyscrub - Protects the encryption key in memory but takes more cpu resources
-sys-fs/lvm2:clvm - Allow users to build clustered lvm2
-sys-fs/lvm2:cman - Cman support for clustered lvm
-sys-fs/lvm2:corosync - Corosync support for clustered lvm
 sys-fs/lvm2:device-mapper-only - Build only device-mapper and not the rest of LVM2 (UNSUPPORTED)
 sys-fs/lvm2:lvm1 - Allow users to build lvm2 with lvm1 support
 sys-fs/lvm2:lvm2create_initrd - Install lvm2create_initrd script and pull in sys-apps/makedev for the /sbin/MAKEDEV command
-sys-fs/lvm2:openais - Openais support for clustered lvm
 sys-fs/lvm2:sanlock - Enable lvmlockd with support for sanlock
 sys-fs/lvm2:thin - Support for thin volumes
 sys-fs/mtpfs:mad - Enable handling of MP3's metadata

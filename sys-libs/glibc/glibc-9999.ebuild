@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit prefix eutils versionator toolchain-funcs flag-o-matic gnuconfig \
+inherit prefix eutils eapi7-ver toolchain-funcs flag-o-matic gnuconfig \
 	multilib systemd multiprocessing
 
 DESCRIPTION="GNU libc C library"
@@ -259,18 +259,18 @@ setup_target_flags() {
 			sparc64-*)
 				case $(get-flag mcpu) in
 				niagara[234])
-					if version_is_at_least 2.8 ; then
+					if ver_test -ge 2.8 ; then
 						cpu="sparc64v2"
-					elif version_is_at_least 2.4 ; then
+					elif ver_test -ge 2.4 ; then
 						cpu="sparc64v"
-					elif version_is_at_least 2.2.3 ; then
+					elif ver_test -ge 2.2.3 ; then
 						cpu="sparc64b"
 					fi
 					;;
 				niagara)
-					if version_is_at_least 2.4 ; then
+					if ver_test -ge 2.4 ; then
 						cpu="sparc64v"
-					elif version_is_at_least 2.2.3 ; then
+					elif ver_test -ge 2.2.3 ; then
 						cpu="sparc64b"
 					fi
 					;;
@@ -288,20 +288,20 @@ setup_target_flags() {
 			sparc-*)
 				case $(get-flag mcpu) in
 				niagara[234])
-					if version_is_at_least 2.8 ; then
+					if ver_test -ge 2.8 ; then
 						cpu="sparcv9v2"
-					elif version_is_at_least 2.4 ; then
+					elif ver_test -ge 2.4 ; then
 						cpu="sparcv9v"
-					elif version_is_at_least 2.2.3 ; then
+					elif ver_test -ge 2.2.3 ; then
 						cpu="sparcv9b"
 					else
 						cpu="sparcv9"
 					fi
 					;;
 				niagara)
-					if version_is_at_least 2.4 ; then
+					if ver_test -ge 2.4 ; then
 						cpu="sparcv9v"
-					elif version_is_at_least 2.2.3 ; then
+					elif ver_test -ge 2.2.3 ; then
 						cpu="sparcv9b"
 					else
 						cpu="sparcv9"
@@ -433,7 +433,7 @@ use_multiarch() {
 	sparc)     nver="2.21" ;;
 	*)         return 1 ;;
 	esac
-	version_is_at_least ${nver} ${bver}
+	ver_test ${bver} -ge ${nver}
 }
 
 # Setup toolchain variables that had historically been defined in the
