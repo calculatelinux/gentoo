@@ -1,12 +1,11 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-PYTHON_COMPAT=( python3_{5,6} )
+PYTHON_COMPAT=( python3_{5,6,7} )
 DISTUTILS_SINGLE_IMPL=1
 DISABLE_AUTOFORMATTING=true
-
 EGIT_REPO_URI="https://github.com/metabrainz/picard"
 inherit distutils-r1 git-r3 gnome2-utils readme.gentoo-r1 xdg-utils
 

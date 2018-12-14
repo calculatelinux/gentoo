@@ -9,10 +9,10 @@ if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
 else
 	SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
-	KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~x86 ~amd64-fbsd ~x64-macos ~x64-solaris"
+	KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x64-macos ~x64-solaris"
 fi
 
-inherit distutils-r1
+inherit distutils-r1 toolchain-funcs
 
 DESCRIPTION="Open source build system"
 HOMEPAGE="http://mesonbuild.com/"
@@ -24,6 +24,24 @@ IUSE=""
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 
+python_prepare_all() {
+	# ASAN and sandbox both want control over LD_PRELOAD
+	# https://bugs.gentoo.org/673016
+	sed -i -e 's/test_generate_gir_with_address_sanitizer/_&/' run_unittests.py || die
+
+	distutils-r1_python_prepare_all
+}
+
+src_test() {
+	if tc-is-gcc; then
+		# LTO fails for static libs because the bfd plugin in missing.
+		# Remove this workaround after sys-devel/gcc-config-2.0 is stable.
+		# https://bugs.gentoo.org/672706
+		tc-getPROG AR gcc-ar >/dev/null
+	fi
+	distutils-r1_src_test
+}
+
 python_test() {
 	(
 		# test_meson_installed
@@ -31,11 +49,6 @@ python_test() {
 
 		# test_cross_file_system_paths
 		unset XDG_DATA_HOME
-
-		# ASAN and sandbox both want to control LDPRELOAD
-		# https://bugs.gentoo.org/673016
-		export SANDBOX_ON=0
-		unset LD_PRELOAD
 
 		${EPYTHON} -u run_tests.py
 	) || die "Testing failed with ${EPYTHON}"

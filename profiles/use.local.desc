@@ -3663,6 +3663,7 @@ kde-apps/artikulate:qtmedia - Enable playback via Qt5Multimedia
 kde-apps/cantor:R - Enable dev-lang/R backend support
 kde-apps/cantor:analitza - Enable kde-apps/analitza backend support
 kde-apps/cantor:julia - Enable dev-lang/julia backend support
+kde-apps/cantor:markdown - Enable Markdown support via app-text/discount
 kde-apps/cantor:qalculate - Enable sci-libs/libqalculate backend support
 kde-apps/dolphin:thumbnail - Enables thumbnail generation
 kde-apps/dolphin-plugins:bazaar - Enable support for the bazaar VCS
@@ -3685,14 +3686,27 @@ kde-apps/kdecore-meta:webengine - Enable www-client/falkon which depends on dev-
 kde-apps/kdeedu-meta:webengine - Enable kde-apps/kalzium and kde-apps/parley, requiring dev-qt/qtwebengine
 kde-apps/kdegraphics-mobipocket:thumbnail - Enables thumbnail generation
 kde-apps/kdemultimedia-meta:cdrom - Include packages for optical discs
+kde-apps/kdenetwork-meta:dropbox - Enable support for Dropbox in kde-apps/dolphin via kde-apps/dolphin-plugins-dropbox
 kde-apps/kdenetwork-meta:telepathy - Enable support for Plasma Telepathy (instant messaging) integration via kde-apps/plasma-telepathy-meta
 kde-apps/kdenlive:freesound - Enable freesound.org credentials support via dev-qt/qtwebkit to download files
 kde-apps/kdenlive:gles2 - Use GLES 2.0 or later instead of full OpenGL
 kde-apps/kdenlive:jogshuttle - Enable support for Jog-Shuttle devices
 kde-apps/kdenlive:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/kdepim-addons:importwizard - Enable additional import plugins for kde-apps/akonadi-import-wizard
+kde-apps/kdepim-addons:markdown - Enable Markdown support via app-text/discount
+kde-apps/kdepim-meta:bogofilter - Install mail-filter/bogofilter for spam filter support in kde-apps/kmail
+kde-apps/kdepim-meta:clamav - Install app-antivirus/clamav for virus detection support in kde-apps/kmail
+kde-apps/kdepim-meta:spamassassin - Install mail-filter/spamassassin for spam filter support in kde-apps/kmail
+kde-apps/kdepim-runtime:oauth - Enable support OAuth authentication for EWS via dev-qt/qtnetworkauth
 kde-apps/kdepim-runtime:speech - Enable text-to-speech support
+kde-apps/kdesdk-meta:bazaar - Enable support for Bazaar VCS in kde-apps/dolphin via kde-apps/dolphin-plugins-bazaar
+kde-apps/kdesdk-meta:git - Enable support for Git VCS in kde-apps/dolphin via kde-apps/dolphin-plugins-git
+kde-apps/kdesdk-meta:mercurial - Enable support for Mercurial VCS in kde-apps/dolphin via kde-apps/dolphin-plugins-mercurial
+kde-apps/kdesdk-meta:subversion - Enable support for Apache Subversion VCS in kde-apps/dolphin via kde-apps/dolphin-plugins-subversion
+kde-apps/kdeutils-meta:7zip - Install app-arch/p7zip for 7zip archive support in kde-apps/ark
 kde-apps/kdeutils-meta:floppy - Install kde-apps/kfloppy to format and create DOS or ext2fs filesystems in a floppy.
+kde-apps/kdeutils-meta:lrz - Install app-arch/lrzip for LRZ archive support in kde-apps/ark
+kde-apps/kdeutils-meta:rar - Install app-arch/unar or app-arch/unrar for RAR archive support in kde-apps/ark
 kde-apps/keditbookmarks:man - Build and install man pages
 kde-apps/kget:bittorrent - Enable bittorrent transfer plugin through net-libs/libktorrent
 kde-apps/kget:gpg - Enable signature verification by GpgME++ via app-crypt/gpgme
@@ -3742,8 +3756,10 @@ kde-apps/libksane:kwallet - Enable encrypted storage of passwords with kde-frame
 kde-apps/mailcommon:designer - Build plugins for dev-qt/designer
 kde-apps/marble:aprs - Enable support for APRS data sources
 kde-apps/marble:designer - Install plugin for dev-qt/designer
+kde-apps/marble:geolocation - Enable position information via dev-qt/qtpositioning
 kde-apps/marble:phonon - Enable sound support via media-libs/phonon
 kde-apps/marble:shapefile - Enable support for ESRI shapefiles
+kde-apps/marble:webengine - Use dev-qt/qtwebengine for embedded web browser
 kde-apps/okular:chm - Enable support for Microsoft Compiled HTML Help files
 kde-apps/okular:epub - Enable E-Book support via app-text/ebook-tools
 kde-apps/okular:image-backend - Enable image viewing support
@@ -3754,6 +3770,7 @@ kde-apps/okular:plucker - Enable Plucker E-Book for Palm OS devices support
 kde-apps/okular:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/okular:speech - Enable text-to-speech support
 kde-apps/pimcommon:designer - Build plugins for dev-qt/designer
+kde-apps/pimcommon:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/spectacle:kipi - Enable support for the KDE Image Plugin Interface
 kde-apps/spectacle:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/step:qalculate - Enable the libqalculate library for unit conversion
@@ -4576,13 +4593,10 @@ media-plugins/alsa-plugins:mix - Enables upmix and vdownmix plugin
 media-plugins/alsa-plugins:usb_stream - Enables usb_stream plugin
 media-plugins/audacious-plugins:adplug - Build with AdPlug (Adlib sound card emulation) support
 media-plugins/audacious-plugins:ampache - Support controlling audacious via www-apps/ampache
-media-plugins/audacious-plugins:aosd - Enable support for Audacious OSD
 media-plugins/audacious-plugins:bs2b - Enable Bauer Bauer stereophonic-to-binaural headphone filter
 media-plugins/audacious-plugins:cue - Support CUE sheets using the libcue library
 media-plugins/audacious-plugins:fluidsynth - Support FluidSynth as MIDI synth backend
 media-plugins/audacious-plugins:gme - Support various gaming console music formats
-media-plugins/audacious-plugins:gtk3 - Link against version 3 of the GIMP Toolkit instead of version 2 (x11-libs/gtk+)
-media-plugins/audacious-plugins:hotkeys - Enable support for controlling via hotkeys
 media-plugins/audacious-plugins:http - Support HTTP streams through neon
 media-plugins/audacious-plugins:qt5 - Build with Qt5 interface instead Gtk+
 media-plugins/audacious-plugins:qtmedia - Enable playback via dev-qt/qtmultimedia
@@ -4666,7 +4680,6 @@ media-sound/aqualung:systray - Enable system tray support
 media-sound/ario:idle - Enable experimental support for MPD's idle command to reduce bandwidth and cpu usage, requires MPD 0.14
 media-sound/ario:scrobbler - Enable audioscrobbler/last.fm support net-libs/libsoup
 media-sound/asunder:mac - Support for creation of Monkey's Audio files (APE)
-media-sound/audacious:gtk3 - Link against version 3 of the GIMP Toolkit instead of version 2 (x11-libs/gtk+)
 media-sound/audacious:qt5 - Build with Qt5 interface instead Gtk+
 media-sound/audacity:id3tag - Enables ID3 tagging with id3tag library
 media-sound/audacity:lv2 - Add support for Ladspa V2
@@ -8751,6 +8764,10 @@ www-client/uget:aria2 - Enable support for net-misc/aria2 through xmlrpc. You'll
 www-client/uget:control-socket - Enable JSON-RPC over unix domain socket
 www-client/uget:openssl - Use dev-libs/openssl instead of net-libs/gnutls
 www-client/uget:rss - Enable uGet feed messages
+www-client/vivaldi:l10n_es-PE - Spanish, Peru locale
+www-client/vivaldi:l10n_io - Ido locale
+www-client/vivaldi:l10n_jbo - Lojban locale
+www-client/vivaldi:l10n_sc - Sardinian locale
 www-client/vivaldi-snapshot:l10n_es-PE - Spanish, Peru locale
 www-client/vivaldi-snapshot:l10n_io - Ido locale
 www-client/vivaldi-snapshot:l10n_jbo - Lojban locale
@@ -8803,6 +8820,7 @@ www-servers/apache:apache2_modules_macro - Macros for the Apache config file.
 www-servers/apache:apache2_modules_md - Managing domains across virtual hosts, certificate provisioning via the ACME protocol.
 www-servers/apache:apache2_modules_proxy_fcgi - FCGI support module for mod_proxy.
 www-servers/apache:apache2_modules_proxy_html - Module to rewrite links in html pages behind a reverse proxy
+www-servers/apache:apache2_modules_proxy_http2 - HTTP2 support module for mod_proxy.
 www-servers/apache:apache2_modules_proxy_wstunnel - Provides support for the tunnelling of web socket connections to a backend websockets server.
 www-servers/apache:apache2_modules_ratelimit - Ratelimit module for transfer rate management
 www-servers/apache:apache2_modules_remoteip - Remotip module for logging
