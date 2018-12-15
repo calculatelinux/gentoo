@@ -29,6 +29,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Jeroen Roovers <jer@gentoo.org> (14 Dec 2018)
+# Deprecated short lived branches
+# https://www.nvidia.com/object/unix.html
+# File a bug report if you need to use one of these
+# Removal on or about 14 January 2019
+=x11-drivers/nvidia-drivers-375*
+=x11-drivers/nvidia-drivers-378*
+=x11-drivers/nvidia-drivers-381*
+=x11-drivers/nvidia-drivers-384*
+=x11-drivers/nvidia-drivers-387*
+=x11-drivers/nvidia-drivers-396*
+
 # Georgy Yakovlev <gyakovlev@gentoo.org> (12 Dec 2018)
 # mask new cmake based fish for testing while in beta
 >=app-shells/fish-3.0_beta1
@@ -218,10 +230,6 @@ dev-db/pgadmin3
 # Breaks dev-libs/gobject-introspection and its consumers
 # See #669278
 =xfce-base/xfconf-4.13.6
-
-# Sobhan Mohammadpour <sobhan@gentoo.org> (15 Oct 2018)
-# Masked for testing.
-sys-apps/bubblewrap
 
 # Thomas Deutschmann <whissi@gentoo.org> (12 Oct 2018)
 # EOL and has known vulnerabilities. Please move to
@@ -605,11 +613,14 @@ games-strategy/smac
 app-eselect/eselect-lua
 =dev-lang/lua-5.1.5-r100
 =dev-lang/lua-5.1.5-r101
+=dev-lang/lua-5.1.5-r102
 =dev-lang/lua-5.2.3
 =dev-lang/lua-5.2.3-r1
 =dev-lang/lua-5.2.3-r2
+=dev-lang/lua-5.2.3-r3
 =dev-lang/lua-5.3.3
 =dev-lang/lua-5.3.3-r1
+=dev-lang/lua-5.3.3-r2
 
 # Samuli Suominen <ssuominen@gentoo.org> (06 Mar 2012)
 # Masked for testing since this is known to break nearly
