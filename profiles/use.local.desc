@@ -2761,16 +2761,6 @@ dev-python/cvxopt:dsdp - Use interior point library sci-libs/dsdp
 dev-python/cvxopt:glpk - Use GNU Linear Programming Kit sci-mathematics/glpk
 dev-python/dap:server - Enable OpenDAP server support
 dev-python/dask:distributed - Add support for distributed computing with dev-python/distributed
-dev-python/django-cms:admin-style - Install plugin customizing admin panel styles
-dev-python/django-cms:ckeditor - Install text-ckeditor plugin for rich text editing
-dev-python/django-cms:file - Install djangocms file plugin
-dev-python/django-cms:flash - Install djangocms flash plugin
-dev-python/django-cms:inherit - Install djangocms inherit plugin
-dev-python/django-cms:link - Install djangocms link plugin
-dev-python/django-cms:picture - Install djangocms picture plugin
-dev-python/django-cms:snippet - Install djangocms snippet plugin
-dev-python/django-cms:teaser - Install djangocms teaser plugin
-dev-python/django-cms:video - Install djangocms video plugin
 dev-python/editorconfig-core-py:cli - Install command line interface as well as python library
 dev-python/fabric:fab2 - Install as "fab2", allowing side-by-side install with fabric 1.x
 dev-python/falcon:cython - Build cython-based python modules
@@ -8442,7 +8432,6 @@ sys-kernel/genkernel-next:iscsi - Enable support for open-iscsi (include open-is
 sys-kernel/genkernel-next:mdadm - Enable support for mdadm (include mdadm dependency)
 sys-kernel/genkernel-next:plymouth - Enable support for Plymouth (include Plymouth dependency)
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
-sys-kernel/linux-docs:html - Install HTML documentation
 sys-kernel/linux-firmware:savedconfig - Allows individual selection of firmware files
 sys-kernel/mips-sources:experimental - Apply experimental (80xx) patches.
 sys-kernel/mips-sources:ip27 - Enables additional support for SGI Origin (IP27)

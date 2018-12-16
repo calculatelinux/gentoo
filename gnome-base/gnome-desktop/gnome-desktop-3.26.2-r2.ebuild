@@ -12,7 +12,7 @@ SRC_URI+=" https://dev.gentoo.org/~leio/distfiles/${P}-patchset-r1.tar.xz"
 LICENSE="GPL-2+ FDL-1.1+ LGPL-2+"
 SLOT="3/12" # subslot = libgnome-desktop-3 soname version
 IUSE="debug +introspection seccomp udev"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~sh ~sparc ~x86-fbsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sh ~sparc ~x86-fbsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 # cairo[X] needed for gnome-bg
 COMMON_DEPEND="
@@ -44,7 +44,8 @@ DEPEND="${COMMON_DEPEND}
 	x11-base/xorg-proto
 	virtual/pkgconfig
 	app-text/yelp-tools
-" # app-text/yelp-tools for eautoreconf
+	gnome-base/gnome-common
+" # yelp-tools and gnome-common for eautoreconf
 # Includes X11/Xatom.h in libgnome-desktop/gnome-bg.c which comes from xorg-proto
 
 PATCHES=(
