@@ -7208,7 +7208,9 @@ net-wireless/uhd:usrp1 - support USRP1 hardware
 net-wireless/uhd:usrp2 - support USRP2, N200, N210 hardware
 net-wireless/uhd:utils - utilities needed to list, query, calibrate, or update FPGA/Firmware
 net-wireless/uhd:x300 - support X300, X310 hardware
+net-wireless/urh:bladerf - use native backend which directly uses net-wireless/bladerf
 net-wireless/urh:hackrf - use native backend which directly uses net-libs/libhackrf
+net-wireless/urh:plutosdr - use native backend which directly uses net-libs/libiio
 net-wireless/urh:rtlsdr - use native backend which directly uses net-wireless/rtl-sdr
 net-wireless/urh:uhd - use native backend which directly uses net-wireless/uhd
 net-wireless/wepattack:john - Build with app-crypt/johntheripper support
