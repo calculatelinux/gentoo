@@ -2880,13 +2880,17 @@ dev-qt/qt-creator:android - Build plugin for Android devices
 dev-qt/qt-creator:autotools - Enable autotools project manager plugin
 dev-qt/qt-creator:baremetal - Build plugin for bare metal devices
 dev-qt/qt-creator:bazaar - Add support for dev-vcs/bzr version control system
+dev-qt/qt-creator:clang - Build clang-based plugins (code model, format, static analysis)
 dev-qt/qt-creator:clangcodemodel - Build clang-based code model and refactoring plugins
 dev-qt/qt-creator:clangstaticanalyzer - Build clang-based static analyzer plugin
 dev-qt/qt-creator:clearcase - Add support for IBM ClearCase version control system (requires manual installation of ClearCase client)
 dev-qt/qt-creator:cmake - Enable cmake project manager plugin
+dev-qt/qt-creator:cppcheck - Enable integration with dev-util/cppcheck
 dev-qt/qt-creator:designer - Build widget designer plugin
 dev-qt/qt-creator:glsl - Enable GLSL source code editor
+dev-qt/qt-creator:help - Build the help plugin
 dev-qt/qt-creator:ios - Build plugin for Apple iOS devices
+dev-qt/qt-creator:lsp - Add support for the Language Server Protocol (LSP)
 dev-qt/qt-creator:mercurial - Add support for dev-vcs/mercurial version control system
 dev-qt/qt-creator:modeling - Enable graphical model editor
 dev-qt/qt-creator:nim - Enable Nim source code editor
@@ -2895,6 +2899,8 @@ dev-qt/qt-creator:python - Enable Python source code editor
 dev-qt/qt-creator:qbs - Enable QBS project manager plugin
 dev-qt/qt-creator:qnx - Build plugin for QNX devices
 dev-qt/qt-creator:scxml - Enable graphical SCXML editor
+dev-qt/qt-creator:serialterminal - Build serial terminal plugin
+dev-qt/qt-creator:silversearcher - Enable integration with sys-apps/the_silver_searcher
 dev-qt/qt-creator:systemd - Add support for retrieving application output from journald
 dev-qt/qt-creator:valgrind - Add support for memory debugging using dev-util/valgrind
 dev-qt/qt-creator:webengine - Use dev-qt/qtwebengine to view documentation
@@ -3800,6 +3806,7 @@ kde-misc/kio-gdrive:kaccounts - Use kde-apps/kaccounts-integration backend (defa
 kde-misc/kmarkdownwebview:webkit - Use dev-qt/qtwebkit instead of dev-qt/qtwebengine
 kde-misc/tellico:discid - Add support for reading disc IDs from audio CDs
 kde-misc/tellico:yaz - Add support for searching Z39.50 databases
+kde-misc/yakuake:absolute-position - Use kde-frameworks/kwayland for absolute window positioning in KWin
 kde-plasma/kde-cli-tools:kdesu - Build graphical frontend for kde-frameworks/kdesu
 kde-plasma/kdeplasma-addons:share - Enable applet for quickly sharing data to a variety of sources
 kde-plasma/kdeplasma-addons:webengine - Enable dictionary and web browser applets using dev-qt/qtwebengine
@@ -6266,7 +6273,6 @@ net-libs/tox:log-info - Log level: 3
 net-libs/tox:log-trace - Log level: 5
 net-libs/tox:log-warn - Log level: 2
 net-libs/tox:no-log - Log level: 0 (no debug info logged)
-net-libs/tox:ntox - Enable the testing nTox client.
 net-libs/udns:tools - Build and install dnsget, ex-rdns and rblcheck tools
 net-libs/wandio:http - Build support for reading files over HTTP using net-misc/curl
 net-libs/webkit-gtk:coverage - Enable code coverage support
@@ -7240,6 +7246,7 @@ sci-astronomy/esomidas:libtirpc - Build against net-libs/libtirpc for RPC suppor
 sci-astronomy/healpix:idl - Install healpix IDL/GDL routines
 sci-astronomy/kstars:fits - Enable support for NASA's sci-libs/cfitsio library
 sci-astronomy/kstars:indi - Enable support for Astronomical control library using libindi
+sci-astronomy/kstars:password - Store passwords securely via dev-libs/qtkeychain
 sci-astronomy/kstars:wcs - Enable support for World Coordinate System library using wcslib
 sci-astronomy/kstars:xplanet - Enable support for Xplanet
 sci-astronomy/predict:xforms - Add a "map" client which uses the x11-libs/xforms library for its GUI
@@ -9036,6 +9043,8 @@ x11-plugins/pidgin-telegram:gcrypt - Use dev-libs/libgcrypt instead of dev-libs/
 x11-plugins/purple-plugin_pack:talkfilters - Enable support for app-text/talkfilters
 x11-plugins/vicious:contrib - Install extra widgets, some for less common hardware, some contributed by Vicious users.
 x11-plugins/wmfire:session - Enable session management
+x11-plugins/wmudmount:gcr - Enable support for secure memory with app-crypt/gcr
+x11-plugins/wmudmount:secret - Enable support for secret service with app-crypt/libsecret
 x11-terms/aterm:background - Enable background image support via media-libs/libafterimage
 x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small version
 x11-terms/eterm:escreen - Enable built-in app-misc/screen support
