@@ -69,10 +69,6 @@ dev-tex/revtex
 <x11-base/xorg-server-1.20.3
 <x11-base/xorg-drivers-1.20
 
-# Georgy Yakovlev <gyakovlev@gentoo.org> (12 Dec 2018)
-# mask new cmake based fish for testing while in beta
->=app-shells/fish-3.0_beta1
-
 # Mikle Kolyada <zlogene@gentoo.org> (12 Dec 2018)
 # grub:0 is dead and not being developed by upstream.
 # Two open bugs (427340, 591574).
@@ -390,12 +386,6 @@ sys-devel/automake:1.8
 # Gilles Dartiguelongue <eva@gentoo.org> (2 Sep 1017)
 # Gnome 3.26 package mask
 >=app-text/libgepub-0.5
-
-# Patrice Clement <monsieurp@gentoo.org> (23 Aug 2017)
-# Packages depending on this library need to be tested first before
-# it is unmasked. Possibly some slotting is still needed.
-# Package testing tracked in bug #611022.
->=dev-libs/msgpack-1.4.2
 
 # Sébastien Fabbro <bicatali@gentoo.org> (19 Aug 2017)
 # ipython-6 is python-3 only and causes circular dependencies
