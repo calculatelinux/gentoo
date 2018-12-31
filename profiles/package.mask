@@ -29,6 +29,31 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (31 Dec 2018)
+# Superseded by www-client/falkon. Masked for removal in 30 days.
+www-client/qupzilla
+
+# Andreas Sturmlechner <asturm@gentoo.org> (31 Dec 2018)
+# Package outdated for years, build errors, unable to trade with.
+# Bugs 544800, 592946, 610736. Masked for removal in 30 days.
+app-office/QtBitcoinTrader
+
+# Andreas Sturmlechner <asturm@gentoo.org> (31 Dec 2018)
+# Dead upstream since 2014-02-09, does not build.
+# Bugs 463928, 476890, 623172, 662270. Masked for removal in 30 days.
+net-misc/hotot
+
+# Andreas Sturmlechner <asturm@gentoo.org> (31 Dec 2018)
+# Masked for removal.
+kde-apps/syndication
+lxqt-base/lxqt-common
+
+# Alon Bar-Lev <alonbl@gentoo.org> (30 Dec 2018)
+# Upstream is dead.
+# Package does not support openssl-1.1, significant change to package.
+# Removal in 30 days
+app-crypt/openssl-tpm-engine
+
 # Lars Wendler <polynomial-c@gentoo.org> (28 Dec 2018)
 # Masked while being tested and reverse deps aren't fully compatible
 =dev-libs/openssl-1.1.1*
@@ -39,8 +64,10 @@
 >=www-client/chromium-73
 
 # Andreas Sturmlechner <asturm@gentoo.org> (25 Dec 2018)
-# Everything breaks. Tracker bug #673720
+# API breakage, tracker bug #673720
 =media-gfx/exiv2-0.27*
+# Pre-release, adding masked for exiv2-0.27 compatibility
+=media-gfx/digikam-6.0.0_beta3
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (25 Dec 2018)
 # Included in dev-tex/texlive-publishers-2017; there is no
@@ -115,27 +142,6 @@ dev-ruby/activejob:5.0
 dev-ruby/actioncable:5.0
 dev-ruby/activemodel:5.0
 dev-ruby/activesupport:5.0
-
-# David Seifert <soap@gentoo.org> (29 Nov 2018)
-# Uses ancient APIs, abandoned by upstream, unsalvageable.
-# Removal in 30 days. Bug #662142.
-app-cdr/nero
-
-# Michał Górny <mgorny@gentoo.org> (28 Nov 2018)
-# The sources are no longer fetchable and are restricted from mirroring.
-# The maintainer is unable to find a matching replacement archive.
-# Removal in 30 days.  Bug #640580.
-games-server/ut2003-ded
-
-# Michał Górny <mgorny@gentoo.org> (28 Nov 2018)
-# dev-libs/libexplain does not build.  It is unmaintained upstream
-# and keeps accumulating local patches.  Furthermore, it seems to rely
-# on internal system implementation details.  app-arch/tardy
-# and dev-util/fhist are its only reverse dependencies.
-# Removal in 30 days.  Bug #669530.
-app-arch/tardy
-dev-libs/libexplain
-dev-util/fhist
 
 # Andreas Sturmlechner <asturm@gentoo.org> (25 Nov 2018)
 # Masked per security vulnerability CVE-2018-14345, bug #661510

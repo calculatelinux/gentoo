@@ -21,11 +21,10 @@ IUSE="debug nls pch test qt5"
 
 # check NEWS.md for build system changes entries for boost/libebml/libmatroska
 # version requirement updates and other packaging info
-# TODO: package fmt (http://fmtlib.net/)
 RDEPEND="
+	dev-libs/libfmt:=
 	>=dev-libs/boost-1.49.0:=
 	>=dev-libs/libebml-1.3.5:=
-	dev-libs/jsoncpp:=
 	dev-libs/pugixml
 	media-libs/flac
 	>=media-libs/libmatroska-1.4.8:=
@@ -45,6 +44,8 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}
+	dev-cpp/nlohmann_json
+	dev-libs/utfcpp
 	dev-ruby/rake
 	virtual/pkgconfig
 	dev-libs/libxslt
