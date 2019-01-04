@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -9,7 +9,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ppc ppc64 ~x86"
 IUSE="apparmor +archive +bzip2 ffmpeg flac gif gsf gstreamer gtk jpeg +magic midi mp4 mpeg tidy tiff vorbis +zlib" # test
 
 RESTRICT="test"
@@ -17,7 +17,7 @@ RESTRICT="test"
 DEPEND="
 	app-text/iso-codes
 	dev-libs/glib:2
-	<media-gfx/exiv2-0.27:=
+	media-gfx/exiv2:=
 	sys-devel/libtool
 	virtual/libiconv
 	virtual/libintl

@@ -1,7 +1,7 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="https://github.com/MidnightCommander/mc.git"
@@ -68,7 +68,7 @@ src_configure() {
 		--enable-charset
 		--enable-vfs
 		--with-homedir=$(usex xdg 'XDG' '.mc')
-		--with-screen=$(usex slang 'slang' "ncurses$(usex unicode 'w')")
+		--with-screen=$(usex slang 'slang' "ncurses$(usex unicode 'w' '')")
 		$(use_enable kernel_linux vfs-undelfs)
 		$(use_enable mclib)
 		$(use_enable nls)
