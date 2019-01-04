@@ -21,7 +21,8 @@ RDEPEND="
 	xfce-base/garcon:=
 	xfce-base/libxfce4ui:=
 	xfce-base/libxfce4util:=
-	xfce-base/xfce4-panel:="
+	xfce-base/xfce4-panel:=
+	x11-misc/mugshot:="
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
