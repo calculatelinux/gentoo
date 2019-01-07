@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit autotools libtool multilib-minimal
+inherit libtool multilib-minimal
 
 DESCRIPTION="A TLS 1.2 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
@@ -74,10 +74,10 @@ src_prepare() {
 	# Use sane .so versioning on FreeBSD.
 	elibtoolize
 
-	# bug#673574 - until upstream builds with guile.m4 of guile-2.2
-	# eautoreconf will run gtk-doc gen so let's avoid that
-	eaclocal
-	eautoconf
+	# detect also guile-2.2, bug#673574
+	# aclocal/autoreconf will require more dependencies
+	# that we want to have
+	sed -i 's/\(_guile_versions_to_search="\)\(.*\)\("\)/\1\2 2.2\3/' configure || die
 }
 
 multilib_src_configure() {
