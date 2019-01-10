@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python2_7 )
 # this ebuild currently only supports installing ruby bindings for a single ruby version
 # so USE_RUBY must contain only a single value (the latest stable) as the ebuild calls
 # /usr/bin/${USE_RUBY} directly
-USE_RUBY="ruby25"
+USE_RUBY="ruby24"
 inherit python-single-r1 ruby-single toolchain-funcs
 
 DESCRIPTION="Open source multimedia framework for television broadcasting"
