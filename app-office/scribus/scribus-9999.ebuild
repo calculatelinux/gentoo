@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -43,21 +43,21 @@ for l in ${IUSE_L10N}; do
 done
 unset l prev_l
 
-REQUIRED_USE="
-	${PYTHON_REQUIRED_USE}
+REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	tk? ( scripts )"
 
 # osg
 # couple of third_party libs bundled
 COMMON_DEPEND="${PYTHON_DEPS}
 	app-text/libmspub
+	app-text/libqxp
 	app-text/poppler:=
 	dev-libs/hyphen
 	>=dev-libs/icu-58.2:0=
 	dev-libs/librevenge
 	dev-libs/libxml2
 	dev-qt/qtcore:5
-	dev-qt/qtgui:5
+	dev-qt/qtgui:5[-gles2]
 	dev-qt/qtnetwork:5
 	dev-qt/qtopengl:5
 	dev-qt/qtprintsupport:5
@@ -72,18 +72,18 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	media-libs/libpagemaker
 	media-libs/libpng:0=
 	media-libs/libvisio
+	media-libs/libzmf
 	media-libs/tiff:0
 	net-print/cups
 	sys-libs/zlib[minizip]
 	virtual/jpeg:0=
 	>=x11-libs/cairo-1.10.0[X,svg]
 	boost? ( >=dev-libs/boost-1.62:= )
-	hunspell? ( app-text/hunspell )
-	graphicsmagick? ( media-gfx/graphicsmagick )
-	osg? ( dev-games/openscenegraph )
+	hunspell? ( app-text/hunspell:= )
+	graphicsmagick? ( media-gfx/graphicsmagick:= )
+	osg? ( dev-games/openscenegraph:= )
 	pdf? ( app-text/podofo:0= )
 	scripts? ( dev-python/pillow[tk?,${PYTHON_USEDEP}] )
-	tk? ( dev-python/pillow[tk?,${PYTHON_USEDEP}] )
 "
 RDEPEND="${COMMON_DEPEND}
 	app-text/ghostscript-gpl

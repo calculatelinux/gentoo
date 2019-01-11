@@ -29,6 +29,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Mikle Kolyada <zlogene@gentoo.org> (10 Jan 2019)
+# Masked due to QA violation (bug #672054)
+sci-electronics/librepcb
+
 # Craig Andrews <candrews@gentoo.org> (1 Jan 2019)
 # Requires dev-libs/openssl-1.1.1, Bug 674148
 dev-libs/gost-engine
@@ -94,12 +98,6 @@ dev-tex/revtex
 =x11-drivers/nvidia-drivers-396*
 <x11-base/xorg-server-1.20.3
 <x11-base/xorg-drivers-1.20
-
-# Mikle Kolyada <zlogene@gentoo.org> (12 Dec 2018)
-# grub:0 is dead and not being developed by upstream.
-# Two open bugs (427340, 591574).
-# Removal in 30 days.
-sys-boot/grub-static
 
 # Hans de Graaff <graaff@gentoo.org> (12 Dec 2018)
 # Old ruby23 only slots without any reverse dependencies.
