@@ -1,9 +1,11 @@
 # Copyright 2018-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=6
 
-inherit cmake-utils toolchain-funcs
+: ${CMAKE_MAKEFILE_GENERATOR:=ninja}
+
+inherit cmake-multilib toolchain-funcs
 
 DESCRIPTION="Video stabilization library"
 HOMEPAGE="http://public.hronopik.de/vid.stab/"
@@ -38,11 +40,10 @@ src_configure() {
 		-DUSE_OMP="$(usex openmp)"
 		-DSSE2_FOUND="$(usex cpu_flags_x86_sse2)"
 	)
-	cmake-utils_src_configure
+	cmake-multilib_src_configure
 }
 
-src_test() {
-	cd tests || die
+multilib_src_test() {
 	local mycmakeargs=(
 		-DUSE_OMP="$(usex openmp)"
 	)
