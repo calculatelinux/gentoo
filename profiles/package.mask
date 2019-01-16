@@ -116,12 +116,6 @@ dev-tex/revtex
 <x11-base/xorg-server-1.20.3
 <x11-base/xorg-drivers-1.20
 
-# Hans de Graaff <graaff@gentoo.org> (12 Dec 2018)
-# Old ruby23 only slots without any reverse dependencies.
-# Use the newer slots instead. Removal in 30 days.
-dev-ruby/net-ssh:2.6
-dev-ruby/rest-client:0
-
 # Zac Medico <zmedico@gentoo.org> (11 Dec 2018)
 # A Go library which has no consumers except those that include
 # it via EGO_VENDOR. Masked for removal in 30 days.
@@ -130,32 +124,6 @@ dev-go/sarama
 # Thomas Deutschmann <whissi@gentoo.org> (10 Dec 2018)
 # Requires >=dev-lang/lua-5.2 which is masked
 >=app-admin/lsyncd-2.2.3
-
-# Hans de Graaff <graaff@gentoo.org> (9 Dec 2018)
-# Old component for Rails that is no longer used and no longer
-# maintained upstream. Masked for removal in 30 days.
-dev-ruby/hike
-
-# Hans de Graaff <graaff@gentoo.org> (9 Dec 2018)
-# No longer provides tests and no tagged upstream releases. No reverse
-# dependencies. Use classifier-reborn instead. Masked for removal
-# in 30 days.
-dev-ruby/classifier
-
-# Hans de Graaff <graaff@gentoo.org> (1 Dec 2018)
-# Old Rails 5.0 version. This version is no longer maintained
-# upstream. Please update to Rails 5.1 or newer.
-# Masked for removal in 30 days.
-dev-ruby/rails:5.0
-dev-ruby/railties:5.0
-dev-ruby/activerecord:5.0
-dev-ruby/actionmailer:5.0
-dev-ruby/actionpack:5.0
-dev-ruby/actionview:5.0
-dev-ruby/activejob:5.0
-dev-ruby/actioncable:5.0
-dev-ruby/activemodel:5.0
-dev-ruby/activesupport:5.0
 
 # Andreas Sturmlechner <asturm@gentoo.org> (25 Nov 2018)
 # Masked per security vulnerability CVE-2018-14345, bug #661510
