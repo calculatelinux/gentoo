@@ -53,6 +53,11 @@ DOCS=(
 
 HTML_DOCS=()
 
+PATCHES=(
+	"${FILESDIR}/${P}-build.patch"
+	"${FILESDIR}/${P}-libressl.patch"
+)
+
 pkg_setup() {
 	# bug#520818
 	export TZ=UTC
