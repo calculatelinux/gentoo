@@ -848,6 +848,8 @@ app-laptop/ibam:gkrellm - Enable building of app-admin/gkrellm module
 app-laptop/pbbuttonsd:ibam - Enable support for Intelligent Battery Monitoring
 app-laptop/pbbuttonsd:macbook - Enable support for the Macbook and Macbook Pro
 app-laptop/thinkfan:atasmart - include libatasmart support to get disc temperature
+app-laptop/thinkfan:nvidia - allow thinkfan to read GPU temperature from the proprietary nVidia driver
+app-laptop/thinkfan:yaml - use YAML format for config file
 app-laptop/tp_smapi:hdaps - Install a compatible HDAPS module
 app-leechcraft/lc-azoth:acetamide - Build Acetamide, the IRC protocol support
 app-leechcraft/lc-azoth:adiumstyles - Build support for Adium styles
@@ -1176,7 +1178,6 @@ app-office/skrooge:designer - Build plugins for dev-qt/designer
 app-office/skrooge:webkit - Build with dev-qt/qtwebkit instead of dev-qt/qtwebengine
 app-office/texmacs:netpbm - Add support for media-libs/netpbm
 app-office/texstudio:video - Use phonon for video embedding
-app-office/wps-office:sharedfonts - Install WPS fonts available system wide
 app-pda/barry:boost - Enable boost support
 app-pda/barry:gui - Install the GUI backup tool
 app-pda/gtkpod:clutter - Enable clutter support for displaying coverart
@@ -3198,10 +3199,12 @@ dev-util/ostree:archive - Use libarchive
 dev-util/ostree:grub - Enable grub configuration generator
 dev-util/ostree:libmount - Use libmount
 dev-util/ostree:soup - Use libsoup for networking
+dev-util/perf:clang - Enable builtin clang and LLVM support
 dev-util/perf:demangle - Enable C++ symbol name demangling, using libbfd from sys-devel/binutils. When this flag is enabled, the package will have to be rebuilt after every version bump of binutils.
 dev-util/perf:doc - Build documentation and man pages. With this USE flag disabled, the --help parameter for perf and its sub-tools will not be available. This is optional because it depends on a few documentation handling tools that are not always welcome on user systems.
 dev-util/perf:numa - Enable NUMA support
 dev-util/perf:perl - Add support for Perl as a scripting language for perf tools.
+dev-util/perf:systemtap - Add support to define SDT event in perf tools.
 dev-util/perf:unwind - Use sys-libs/libunwind for frame unwinding support.
 dev-util/pkgconf:pkg-config - Install as a replacement for dev-util/pkgconfig
 dev-util/pkgconfig:internal-glib - Use internal copy of dev-libs/glib
@@ -5548,7 +5551,6 @@ net-analyzer/sngrep:gnutls - Use net-libs/gnutls to parse captured TLS packets
 net-analyzer/sngrep:openssl - Use dev-libs/openssl to parse captured TLS packets
 net-analyzer/snort:active-response - Enables support for automatically sending TCP resets and ICMP unreachable messages to terminate connections. Used with inline deployments.
 net-analyzer/snort:control-socket - Enables Snort's control socket.
-net-analyzer/snort:dynamicplugin - Enable ability to dynamically load preprocessors, detection engine, and rules library. This is required if you want to use shared object (SO) snort rules.
 net-analyzer/snort:file-inspect - Enables extended file inspection capabilities.
 net-analyzer/snort:flexresp3 - Enables support for new flexable response preprocessor for enabling connection tearing for inline deployments. Replaces flexresp and flexresp2.
 net-analyzer/snort:gre - Enable support for inspecting and processing Generic Routing Encapsulation (GRE) packet headders. Only needed if you are monitoring GRE tunnels.
@@ -5557,11 +5559,8 @@ net-analyzer/snort:inline-init-failopen - Enables support to allow traffic to pa
 net-analyzer/snort:large-pcap-64bit - Allows Snort to read pcap files that are larger than 2 GB. ONLY VALID FOR 64bit SYSTEMS!
 net-analyzer/snort:libtirpc - Build against net-libs/libtirpc for RPC support
 net-analyzer/snort:linux-smp-stats - Enable accurate statistics reporting through /proc on systems with multipule processors.
-net-analyzer/snort:mpls - Enables support for processing and inspecting Multiprotocol Label Switching MPLS network network traffic. Only needed if you are monitoring an MPLS network.
 net-analyzer/snort:non-ether-decoders - Enable decoding of non-ethernet protocols such as TokenRing, FDDI, IPX, etc.
-net-analyzer/snort:normalizer - Enables support for normalizing packets in inline deployments to help minimize the chances of detection evasion.
 net-analyzer/snort:open-appid - Enable OpenAppID, an open, application-focused detection language and processing module for Snort that enables users to create, share, and implement application detection. Requires dev-lang/luajit.
-net-analyzer/snort:paf - Enables support for Protocol Aware Flushing. This allows Snort to statefully scan a stream and reassemble a complete protocol data unit regardless of segmentation.
 net-analyzer/snort:perfprofiling - Enables support for preprocessor and rule performance profiling using the perfmonitor preprocessor.
 net-analyzer/snort:ppm - Enables support for setting per rule or per packet latency limits. Helps protect against introducing network latency with inline deployments.
 net-analyzer/snort:react - Enables support for the react rule keyword. Supports interception, termination, and redirection of HTTP connections.
@@ -5569,8 +5568,6 @@ net-analyzer/snort:reload-error-restart - Enables support for completely restart
 net-analyzer/snort:shared-rep - Enables the use of shared memory for the Reputation Preprocessor (Only available on Linux systems)
 net-analyzer/snort:side-channel - Enables Snort's the side channel.
 net-analyzer/snort:sourcefire - Enables Sourcefire specific build options, which include --enable-perfprofiling and --enable-ppm.
-net-analyzer/snort:targetbased - Enables support in snort for using a host attibute XML file (attribute_table.dtd). This file needs to be created by the user and should define the IP address, operating system, and services for all hosts on the monitored network. This is cumbersome, but can improve intrusion detection accuracy.
-net-analyzer/snort:zlib - Enables HTTP inspection of compressed web traffic. Requires dynamicplugin be enabled.
 net-analyzer/suricata:af-packet - Enable AF_PACKET support
 net-analyzer/suricata:control-socket - Enable unix socket
 net-analyzer/suricata:cuda - Enable NVIDIA Cuda computations support
@@ -5922,6 +5919,7 @@ net-im/coturn:redis - Enable support for the redis database
 net-im/dino:gnupg - Enable OpenPGP encryption plugin
 net-im/dino:http - Enable HTTP file upload plugin
 net-im/dino:omemo - Enable OMEMO encryption plugin
+net-im/discord-bin:pax_kernel - Triggers a paxmarking of the binary
 net-im/ejabberd:captcha - Support for CAPTCHA Forms (XEP-158) on registration
 net-im/ejabberd:full-xml - Use XML features in XMPP stream (ex: CDATA), requires XML compliant clients
 net-im/ejabberd:hipe - Compile natively with HiPE, not recommended
@@ -8927,7 +8925,6 @@ x11-apps/xsm:rsh - This allows the use of rsh (remote shell) and rcp (remote cop
 x11-base/xorg-server:dmx - Build the Distributed Multiheaded X server
 x11-base/xorg-server:glamor - Enable Glamor OpenGL 2D acceleration
 x11-base/xorg-server:kdrive - Build the kdrive X servers
-x11-base/xorg-server:tslib - Build with tslib support for touchscreen devices
 x11-base/xorg-server:unwind - Enable libunwind usage for backtraces
 x11-base/xorg-server:xcsecurity - Build Security extension
 x11-base/xorg-server:xephyr - Build the Xephyr server

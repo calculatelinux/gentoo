@@ -45,7 +45,7 @@ COMMON_DEPEND=">=app-eselect/eselect-rust-0.3_pre20150425
 		net-libs/libssh2
 		net-libs/http-parser:=
 		net-misc/curl[ssl]
-		system-llvm? ( >=sys-devel/llvm-6:= )"
+		system-llvm? ( >=sys-devel/llvm-7:= )"
 DEPEND="${COMMON_DEPEND}
 	${PYTHON_DEPS}
 	|| (
@@ -61,7 +61,10 @@ REQUIRED_USE="|| ( ${ALL_LLVM_TARGETS[*]} )
 
 S="${WORKDIR}/${MY_P}-src"
 
-PATCHES=( "${FILESDIR}"/1.30.1-clippy-sysroot.patch )
+PATCHES=(
+	"${FILESDIR}"/1.30.1-clippy-sysroot.patch
+	"${FILESDIR}"/1.32.0-fix-configure-of-bundled-llvm.patch
+)
 
 toml_usex() {
 	usex "$1" true false

@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -6,7 +6,7 @@ inherit autotools eutils gnome2-utils git-r3 toolchain-funcs
 
 DESCRIPTION="A Free Telnet/SSH Client"
 HOMEPAGE="https://www.chiark.greenend.org.uk/~sgtatham/putty/"
-EGIT_REPO_URI="git://git.tartarus.org/simon/putty.git"
+EGIT_REPO_URI="https://git.tartarus.org/simon/putty.git"
 SRC_URI="https://dev.gentoo.org/~jer/${PN}-icons.tar.bz2"
 LICENSE="MIT"
 
@@ -32,11 +32,6 @@ DEPEND="
 	virtual/pkgconfig
 "
 
-src_unpack() {
-	git-r3_src_unpack
-	default
-}
-
 src_prepare() {
 	default
 
@@ -60,6 +55,11 @@ src_configure() {
 src_compile() {
 	emake -C "${S}"/doc
 	emake -C "${S}"/unix AR=$(tc-getAR) $(usex ipv6 '' COMPAT=-DNO_IPV6)
+}
+
+src_test() {
+	emake -C unix cgtest
+	unix/cgtest || die
 }
 
 src_install() {
