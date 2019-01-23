@@ -226,6 +226,7 @@ app-arch/libarchive:e2fsprogs - Use file flags from sys-fs/e2fsprogs headers ins
 app-arch/libarchive:lz4 - Enable support for LZ4 compression using app-arch/lz4
 app-arch/libarchive:nettle - Use dev-libs/nettle as crypto backend
 app-arch/libarchive:zlib - Allow accessing gzip-compressed archives through sys-libs/zlib. This only affects libarchive's native support: bsdtar will keep using gunzip as a filter if that's not built-in. It's also needed for supporting extraction of ZIP files.
+app-arch/libarchive:zstd - Enable support for zstd compression using app-arch/zstd
 app-arch/p7zip:rar - Enable support for non-free rar decoder
 app-arch/pbzip2:symlink - Install symlinks which override app-arch/bzip2 implementation
 app-arch/pigz:symlink - Install symlinks which override app-arch/gzip implementation
@@ -1508,6 +1509,7 @@ dev-db/mariadb-galera:tokudb - Add support for TokuDB storage engine
 dev-db/mariadb-galera:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
 dev-db/mongodb:mms-agent - Install the MongoDB Monitoring Service agent
 dev-db/mongodb:tools - Install the MongoDB tools (mongoimport, mongodump...) from app-admin/mongo-tools
+dev-db/mycli:ssh - Add support for connection over SSH tunnel
 dev-db/mysql:cjk - Add CJK support for InnoDB fulltext search using app-text/mecab
 dev-db/mysql:client-libs - Build the client libraries from the server package instead of the C Connector packages (not recommended)
 dev-db/mysql:experimental - Build experimental features aka "rapid" plugins
@@ -7408,6 +7410,7 @@ sci-geosciences/qgis:grass - Add support for sci-geosciences/grass
 sci-geosciences/qgis:mapserver - Determines whether mapserver should be built
 sci-geosciences/qgis:polar - Enable support for the polar coordinate system via x11-libs/qwtpolar
 sci-geosciences/qgis:qml - Enable support Qml-based plugins using dev-qt/qtdeclarative
+sci-geosciences/viking:geoclue - Use app-misc/geoclue to determine current location
 sci-geosciences/viking:libexif - Use media-libs/libexif for EXIF support
 sci-geosciences/viking:magic - Use libmagic to determine mimetypes
 sci-geosciences/viking:mapnik - Enable a layer based on sci-geosciences/mapnik
