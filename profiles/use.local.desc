@@ -1150,6 +1150,7 @@ app-office/kraft:pim - Enable support for KDE PIM resources integration
 app-office/libreoffice:coinmp - Use sci-libs/coinor-mp as alternative solver
 app-office/libreoffice:googledrive - Enable support for remote files on Google Drive
 app-office/libreoffice:gtk2 - Enable legacy gtk2 frontend
+app-office/libreoffice:mariadb - Prefer mariadb connector over mysql connector
 app-office/libreoffice:odk - Build the Office Development Kit
 app-office/libreoffice:pdfimport - Enable PDF import via the Poppler library
 app-office/libreoffice:vlc - Use media-video/vlc for video embedding
@@ -1904,6 +1905,7 @@ dev-java/ant:jmf - Enable JMF (Java Media Framework) Ant tasks
 dev-java/ant:jsch - Disable Jsch (ssh, scp and related) Ant tasks
 dev-java/ant:junit - Enable JUnit Ant tasks
 dev-java/ant:junit4 - Enable JUnit4 Ant tasks
+dev-java/ant:junitlauncher - Enable JUnit5 Ant tasks
 dev-java/ant:log4j - Enable Apache log4j Ant tasks
 dev-java/ant:oro - Enable Apache Oro Ant tasks
 dev-java/ant:regexp - Enable Apache Regexp Ant tasks
@@ -6850,8 +6852,6 @@ net-nds/389-ds-base:dna - Enable dna (distributed numeric assignment ) plugin - 
 net-nds/389-ds-base:ldapi - Enable LDAP over unix domain socket (LDAPI) support
 net-nds/389-ds-base:pam-passthru - Enable pam-passthru plugin - for simple and fast system services used in ldap
 net-nds/389-ds-base:presence - Enable presence plugin - non-standard syntax validation
-net-nds/gosa-core:mail - Manage mail accounts and servers with gosa.
-net-nds/gosa-core:samba - Manage samba accounts with gosa.
 net-nds/ldapvi:gnutls - Use net-libs/gnutls instead of dev-libs/openssl
 net-nds/nsscache:nsscache - Depend on sys-auth/libnss-cache to handle flat files
 net-nds/openldap:experimental - Enable experimental backend options
