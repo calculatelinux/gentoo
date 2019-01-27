@@ -83,17 +83,6 @@ src_configure() {
 src_install() {
 	default
 
-	local libdirs=( /$(get_libdir) /usr/$(get_libdir) )
-	if [[ ${SYMLINK_LIB} = yes && $(get_libdir) != lib ]]; then
-		# Preserve lib -> lib64 symlinks in initramfs
-		libdirs+=( /lib /usr/lib )
-	fi
-
-	einfo "Setting libdirs to \"${libdirs[*]}\" ..."
-	echo "libdirs=\"${libdirs[*]}\"" > "${T}/gentoo.conf" || die
-	insinto "/usr/lib/dracut/dracut.conf.d"
-	doins "${T}/gentoo.conf"
-
 	insinto /etc/logrotate.d
 	newins dracut.logrotate dracut
 

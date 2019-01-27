@@ -29,10 +29,10 @@
 
 #--- END OF EXAMPLES ---
 
-# Andreas K. Hüttel <dilfridge@gentoo.org> (26 Jan 2019)
-# Fails to build with glibc-2.28, bug 669606. Removal in
-# 30 days (unless fixed).
-net-p2p/gtk-gnutella
+# Virgil Dupras <vdupras@gentoo.org> (27 Jan 2019)
+# Obsolete upstream. See bug #610466 and bug #645170
+dev-python/python-social-auth
+dev-python/python3-openid
 
 # Miroslav Šulc <fordfrog@gentoo.org> (23 Jan 2019)
 # Depends on >=virtual/{jdk,jre}-11 which is masked

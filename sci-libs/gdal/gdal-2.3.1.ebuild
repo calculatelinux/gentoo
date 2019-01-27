@@ -15,7 +15,7 @@ SRC_URI="https://download.osgeo.org/${PN}/${PV}/${P}.tar.gz"
 
 SLOT="0/2.3"
 LICENSE="BSD Info-ZIP MIT"
-KEYWORDS="~amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ~arm64 ~ia64 ppc ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="armadillo +aux_xml curl debug doc fits geos gif gml hdf5 java jpeg jpeg2k lzma mdb mysql netcdf odbc ogdi opencl oracle pdf perl png postgres python spatialite sqlite threads webp xls zstd"
 
 COMMON_DEPEND="
@@ -82,8 +82,9 @@ PATCHES=(
 	"${FILESDIR}/${PN}-2.2.3-soname.patch"
 	"${FILESDIR}/${PN}-2.2.3-bashcomp-path.patch" # bug 641866
 	"${FILESDIR}/${PN}-2.3.0-curl.patch" # bug 659840
-	"${FILESDIR}/${PN}-2.3.1-poppler-0.69.0.patch"
-	"${FILESDIR}/${PN}-2.3.1-poppler-0.71.0.patch" # bug 674556
+	# fixed in 2.4.0:
+	"${FILESDIR}/${P}-poppler-0.69.0.patch"
+	"${FILESDIR}/${P}-poppler-0.71.0.patch" # bug 674556
 )
 
 src_prepare() {
@@ -120,10 +121,9 @@ src_prepare() {
 
 	default
 
-	# not upstreamable, not fixed in 2.4.0 or master as of 2019-01-12:
-	has_version ">=app-text/poppler-0.72.0" && eapply "${FILESDIR}/${PN}-2.3.1-poppler-0.72.0.patch"
-	# not upstreamable, not fixed in 2.4.0 or master as of 2019-01-16:
-	has_version ">=app-text/poppler-0.73.0" && eapply "${FILESDIR}/${PN}-2.3.1-poppler-0.73.0.patch"
+	# fixed in git master or what will become 2.4.1:
+	has_version ">=app-text/poppler-0.72.0" && eapply "${FILESDIR}/${P}-poppler-0.72.0.patch"
+	has_version ">=app-text/poppler-0.73.0" && eapply "${FILESDIR}/${P}-poppler-0.73.0.patch"
 
 	eautoreconf
 }
