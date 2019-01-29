@@ -88,7 +88,7 @@ CDEPEND="
 	system-icu? ( >=dev-libs/icu-60.2:= )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
 	system-libevent? ( >=dev-libs/libevent-2.0:0= )
-	system-libvpx? ( >=media-libs/libvpx-1.5.0:0=[postproc] )
+	system-libvpx? ( >=media-libs/libvpx-1.7.0:0=[postproc] )
 	system-sqlite? ( >=dev-db/sqlite-3.25.3:3[secure-delete,debug=] )
 	system-webp? ( >=media-libs/libwebp-1.0.1:0= )
 	wifi? ( kernel_linux? ( >=sys-apps/dbus-0.60
@@ -106,7 +106,7 @@ RDEPEND="${CDEPEND}
 DEPEND="${CDEPEND}
 	app-arch/zip
 	app-arch/unzip
-	>=dev-util/cbindgen-0.6.4
+	>=dev-util/cbindgen-0.6.7
 	>=net-libs/nodejs-8.11.0
 	>=sys-devel/binutils-2.30
 	sys-apps/findutils
@@ -405,6 +405,10 @@ src_configure() {
 		mozconfig_annotate '' --with-system-libevent="${SYSROOT}${EPREFIX}"/usr
 	fi
 
+	if ! use x86 && [[ ${CHOST} != armv*h* ]] ; then
+		mozconfig_annotate '' --enable-rust-simd
+	fi
+
 	# skia has no support for big-endian platforms
 	if [[ $(tc-endian) == "big" ]] ; then
 		mozconfig_annotate 'big endian target' --disable-skia
@@ -485,7 +489,6 @@ src_compile() {
 
 		addpredict /root
 		addpredict /etc/gconf
-		set -x
 	fi
 
 	MOZ_MAKE_FLAGS="${MAKEOPTS} -O" SHELL="${SHELL:-${EPREFIX}/bin/bash}" MOZ_NOSPAM=1 ${_virtx} \
