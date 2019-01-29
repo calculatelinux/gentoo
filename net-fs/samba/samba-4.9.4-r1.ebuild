@@ -99,7 +99,7 @@ DEPEND="${CDEPEND}
 		!system-mitkrb5? (
 			>=sys-libs/nss_wrapper-1.1.3
 			>=net-dns/resolv_wrapper-1.1.4
-			>=net-libs/socket_wrapper-1.1.7
+			>=net-libs/socket_wrapper-1.1.9
 			>=sys-libs/uid_wrapper-1.2.1
 		)
 	)"
@@ -214,7 +214,7 @@ multilib_src_configure() {
 		$(multilib_native_usex python '' '--disable-python')
 		$(multilib_native_use_enable zeroconf avahi)
 		$(multilib_native_usex test '--enable-selftest' '')
-		$(usex system-mitkrb5 '--with-system-mitkrb5' '')
+		$(usex system-mitkrb5 "--with-system-mitkrb5 $(multilib_native_usex addc --with-experimental-mit-ad-dc '')" '')
 		$(use_enable gnutls)
 		$(use_with debug lttng)
 		$(use_with ldap)
