@@ -1,9 +1,11 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit prefix eutils eapi7-ver toolchain-funcs flag-o-matic gnuconfig \
+PYTHON_COMPAT=( python3_{4,5,6,7} )
+
+inherit python-any-r1 prefix eutils eapi7-ver toolchain-funcs flag-o-matic gnuconfig \
 	multilib systemd multiprocessing
 
 DESCRIPTION="GNU libc C library"
@@ -73,6 +75,7 @@ COMMON_DEPEND="
 	systemtap? ( dev-util/systemtap )
 "
 DEPEND="${COMMON_DEPEND}
+	${PYTHON_DEPS}
 	>=app-misc/pax-utils-0.1.10
 	sys-devel/bison
 	!<sys-apps/sandbox-1.6
