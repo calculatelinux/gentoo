@@ -3,10 +3,14 @@
 
 EAPI=6
 
+CMAKE_MIN_VERSION="3.11"
 inherit git-r3 cmake-utils xdg-utils gnome2-utils
 
 DESCRIPTION="WYSIWYG Music Score Typesetter"
 HOMEPAGE="https://musescore.org/"
+# MuseScore_General-0.1.3.tar.bz2 packaged from https://ftp.osuosl.org/pub/musescore/soundfont/MuseScore_General/
+# It has to be repackaged because the files are not versioned, current version can be found in VERSION file there.
+SRC_URI="https://dev.gentoo.org/~fordfrog/distfiles/MuseScore_General-0.1.3.tar.bz2"
 EGIT_REPO_URI="https://github.com/${PN}/MuseScore.git"
 
 LICENSE="GPL-2"
@@ -50,9 +54,22 @@ PATCHES=(
 	"${FILESDIR}/${PN}-3.0.1-porttime.patch"
 )
 
+src_unpack() {
+	git-r3_src_unpack
+	unpack ${A}
+}
+
+src_prepare() {
+	cmake-utils_src_prepare
+
+	# Move soundfonts to the correct directory
+	mv "${WORKDIR}"/sound/* "${S}"/share/sound/ || die "Failed to move soundfont files"
+}
+
 src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_SKIP_RPATH=ON
+		-DDOWNLOAD_SOUNDFONT=OFF
 		-DUSE_SYSTEM_QTSINGLEAPPLICATION=ON
 		-DUSE_PATH_WITH_EXPLICIT_QT_VERSION=ON
 		-DUSE_SYSTEM_FREETYPE=ON

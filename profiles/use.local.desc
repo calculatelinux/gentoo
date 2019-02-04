@@ -2330,9 +2330,8 @@ dev-libs/efl:bmp - Enable WBMP image loader
 dev-libs/efl:dds - Enable DDS image loader
 dev-libs/efl:drm - Enable DRM engine
 dev-libs/efl:eet - Enable Eet image loader
-dev-libs/efl:egl - Enable EGL rendering
 dev-libs/efl:fribidi - Enable bidirectional text support
-dev-libs/efl:gles - Enable the OpenGL ES GL implementation
+dev-libs/efl:gles2 - Enable the OpenGL ES GL implementation
 dev-libs/efl:glib - Enable dev-libs/glib support
 dev-libs/efl:harfbuzz - Enable complex text shaping and layout support
 dev-libs/efl:hyphen - Enable text hyphenation support
@@ -7423,6 +7422,7 @@ sci-geosciences/viking:geoclue - Use app-misc/geoclue to determine current locat
 sci-geosciences/viking:libexif - Use media-libs/libexif for EXIF support
 sci-geosciences/viking:magic - Use libmagic to determine mimetypes
 sci-geosciences/viking:mapnik - Enable a layer based on sci-geosciences/mapnik
+sci-geosciences/viking:oauth - Enable OAuth authentication for OSM
 sci-geosciences/viking:sqlite - Enable MBTiles support based on dev-db/sqlite
 sci-geosciences/xtide:gps - Use sci-geosciences/gpsd
 sci-libs/ViSP:coin - Enables Coin3D support.
@@ -9127,6 +9127,7 @@ x11-themes/gentoo-artwork:grub - Install extra sys-boot/grub themes
 x11-themes/gentoo-artwork:icons - Install icons
 x11-themes/gentoo-artwork:lilo - Install extra sys-boot/lilo themes
 x11-themes/gentoo-artwork:pixmaps - Install pixmaps
+x11-themes/greybird:xfce - Install theme for xfce-base/xfwm4
 x11-themes/gtk-engines-murrine:animation-rtl - Progressbar animation from right to left
 x11-themes/gtk-engines-murrine:themes - Pull in themes via x11-themes/murrine-themes
 x11-themes/gtk-engines-nodoka:animation-rtl - Progressbar animation from right to left

@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -12,7 +12,7 @@ GENTOO_DEPEND_ON_PERL=no
 inherit autotools distutils-r1 eutils perl-module systemd
 
 DESCRIPTION="Software for generating and retrieving SNMP data"
-HOMEPAGE="http://net-snmp.sourceforge.net/"
+HOMEPAGE="http://www.net-snmp.org/"
 SRC_URI="
 	mirror://sourceforge/project/${PN}/${PN}/${PV/_p*/}/${P/_p*/}.tar.gz
 	https://dev.gentoo.org/~jer/${PN}-5.7.3-patches-3.tar.xz
