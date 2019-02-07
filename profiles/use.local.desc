@@ -6063,6 +6063,18 @@ net-im/vacuum:socksstreams - Enable initiating SOCKS5 data streams between two X
 net-im/vacuum:urlprocessor - Allows other plugins to load data from custom types of URLs
 net-im/vacuum:vcard - Enable obtaining peer's personal contact information
 net-im/vacuum:xmppuriqueries - Allow other plugins to handle XMPP URI queries
+net-irc/anope:anope_modules_chanstats - Channel Statistics
+net-irc/anope:anope_modules_cs_fantasy_stats - Enables the STATS and GSTATS commands
+net-irc/anope:anope_modules_cs_fantasy_top - Enables the (G)TOP and (G)TOP10 commands
+net-irc/anope:anope_modules_irc2sql - Stores channel statistics in a mysql database
+net-irc/anope:anope_modules_ldap_auth - Authorize through LDAP
+net-irc/anope:anope_modules_ldap_oper - Dynamically ties users to Anope opertypes via LDAP
+net-irc/anope:anope_modules_sql_auth - Authorize through SQL
+net-irc/anope:anope_modules_sql_log - Additional log target in SQL
+net-irc/anope:anope_modules_sql_oper - Allows granting users services operator privileges from SQL
+net-irc/anope:posix - Add support for POSIX Compatible Regular Expressions
+net-irc/anope:ssl - Provide SSL services using OpenSSL
+net-irc/anope:tre - Use dev-libs/tre for regular expressions
 net-irc/atheme-services:cracklib - Enable nickserv/cracklib module for enforcing strong account passwords
 net-irc/atheme-services:largenet - Enable support/tweaks for large networks
 net-irc/atheme-services:ldap - Enable ldap-backed authentication module
