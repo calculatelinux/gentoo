@@ -2541,6 +2541,7 @@ dev-libs/starpu:opencl - Enable OpenCL support
 dev-libs/starpu:spinlock-check - Enable spinlock check
 dev-libs/starpu:valgrind - Enable dev-util/valgrind support
 dev-libs/sway:X - Enable support for X11 applications (XWayland)
+dev-libs/sway:clipboard - Install 'wl-clipboard': clipboard management
 dev-libs/sway:elogind - Enable support for rootless session via elogind
 dev-libs/sway:filecaps - Use Linux capability SYS_CAP_ADMIN rather than set*id for sway binary
 dev-libs/sway:fish-completion - Enable fish completion support
@@ -2554,6 +2555,10 @@ dev-libs/sway:swaymsg - Install 'swaymsg': tool for communicating with a running
 dev-libs/sway:swaynag - Install 'swaynag': shows a message with buttons
 dev-libs/sway:tray - Enable support for StatusNotifierItem tray specification
 dev-libs/sway:wallpapers - Install sway's default wallpaper image
+dev-libs/swayidle:elogind - Enable support for rootless session via elogind
+dev-libs/swayidle:fish-completion - Enable fish completion support
+dev-libs/swaylock:fish-completion - Enable fish completion support
+dev-libs/swaylock:gdk-pixbuf - Enable additional image format support via the x11-libs/gdk-pixbuf library
 dev-libs/tinyxml:stl - Compile with TIXML_USE_STL support
 dev-libs/tntnet:server - Enable tntnet server daemon
 dev-libs/totem-pl-parser:archive - Enables ISO detection with app-arch/libarchive
@@ -3366,6 +3371,11 @@ games-board/stockfish:general-32 - Generic unoptimized 32-bits build
 games-board/stockfish:general-64 - Generic unoptimized 64-bits build
 games-board/stockfish:optimize - Enable upstream -O3 optimizations (default enabled)
 games-board/tablebase-syzygy:6-pieces - Install tablebases for 6 pieces (huge!)
+games-board/teg:client - Compile the client
+games-board/teg:debug - Turn on debugging
+games-board/teg:ggz - Enable GGZ Gaming Zone support
+games-board/teg:robot - Compile the robot
+games-board/teg:server - Compile the server
 games-board/xboard:default-font - Install the default font that xboard uses
 games-board/xboard:zippy - Enable experimental zippy client
 games-emulation/dolphin:discord-presence - Enables Discord Rich Presence, show the current game on Discord
@@ -5895,6 +5905,7 @@ net-ftp/proftpd:rewrite - Enable support for the rewrite module
 net-ftp/proftpd:sftp - Enable support for the mod_sftp module and optionally mod_sftp_sql and mod_sftp_pam if matching USE flags are enabled
 net-ftp/proftpd:shaper - Enable support for the mod_shaper module
 net-ftp/proftpd:sitemisc - Enable support for the sitemisc module
+net-ftp/proftpd:sodium - Use dev-libs/libsodium for password encryption an key exchange
 net-ftp/proftpd:softquota - Enable support for the quotatab module
 net-ftp/proftpd:trace - Build with trace support. Should not be enabled on production servers
 net-ftp/proftpd:unique_id - Enable support for the mod_unique_id module, every connection gets unique ID.
@@ -8111,7 +8122,6 @@ sys-boot/grub:fonts - Build and install fonts for the gfxterm module
 sys-boot/grub:libzfs - Enable support for sys-fs/zfs
 sys-boot/grub:mount - Build and install the grub-mount utility
 sys-boot/grub:multislot - Allow concurrent installation of sys-boot/grub SLOT 0 and sys-boot/grub SLOT 2 by renaming all programs.
-sys-boot/grub:netboot - Enable network booting
 sys-boot/grub:themes - Build and install GRUB themes (starfield)
 sys-boot/grub:truetype - Build and install grub-mkfont conversion utility
 sys-boot/lilo:device-mapper - Enable support for device-mapper from sys-fs/lvm2
