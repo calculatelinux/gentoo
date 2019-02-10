@@ -1297,6 +1297,7 @@ app-text/poppler:utils - Install command-line PDF converters and various utiliti
 app-text/qpdf:perl - Install fix-qdf tool (for reverting PDF edits) written in perl
 app-text/qpdfview:fitz - Use experimental fitz rendering, provided by app-text/mupdf, instead of poppler
 app-text/qpdfview:synctex - Add support for searching TeX sources
+app-text/robodoc:examples - Installs usage examples in /usr/share for Perl
 app-text/sdcv:darkterm - Improve readability of color output on terminals with dark background.
 app-text/sgmltools-lite:jadetex - Add support for app-text/jadetex (for processing tex files produced by the TeX backend of Jade)
 app-text/stardict:advertisement - Enable stardict advertisements plugin
@@ -2525,6 +2526,7 @@ dev-libs/poco:crypto - Encryption and digital signing classes
 dev-libs/poco:data - Database abstraction layer to easily send/retrieve data to/from various databases
 dev-libs/poco:file2pagecompiler - Utility to convert ordinary files to Page Compiler source files
 dev-libs/poco:json - Add JSON support
+dev-libs/poco:mariadb - Prefer dev-db/mariadb-connector-c over dev-db/mysql-connector-c
 dev-libs/poco:mongodb - Add dev-db/mongodb support
 dev-libs/poco:net - Classes to write network clients & servers
 dev-libs/poco:pagecompiler - Simple compiler translating HTML pages containing embedded C++ code into HTTPRequestHandler classes
@@ -4881,6 +4883,7 @@ media-sound/ncmpc:async-connect - Enable asynchronous connect
 media-sound/ncmpc:chat-screen - Enable the chat screen
 media-sound/ncmpc:help-screen - Enable the help screen
 media-sound/ncmpc:key-screen - Enable key editor screen
+media-sound/ncmpc:library-screen - Enable library screen
 media-sound/ncmpc:lyrics-screen - Enable lyrics screen
 media-sound/ncmpc:mouse - Enable curses getmouse support
 media-sound/ncmpc:outputs-screen - Enable the outputs screen
@@ -5013,6 +5016,7 @@ media-sound/xwax:mp3 - Sets runtime dependencies to support decoding MP3 audio.
 media-sound/xwax:oss - Adds support for OSS (open sound system) audio input/output.
 media-sound/yarock:phonon - Use media-libs/phonon backend instead of media-video/vlc
 media-sound/yoshimi:lv2 - Add support for Ladspa V2
+media-sound/zynaddsubfx:dssi - Enable support for DSSI Soft Synth Interface
 media-tv/gentoo-vdr-scripts:nvram - Add support for using nvram-wakeup to set wakeup time in bios
 media-tv/kodi:airplay - enable AirPlay support
 media-tv/kodi:bluray - Enable playback of Blu-ray filesystems
