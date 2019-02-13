@@ -29,7 +29,12 @@
 
 #--- END OF EXAMPLES ---
 
-# Miroslav Šulc <fordfrog@gentoo.org> (10 Dwb 2019)
+# Mart Raudsepp <leio@gentoo.org> (12 Feb 2019)
+# Was not well maintained upstream, dropped with tracker-2.
+# Removal in 30 days. Bug 677798
+gnome-extra/nautilus-tracker-tags
+
+# Miroslav Šulc <fordfrog@gentoo.org> (10 Feb 2019)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
 =www-servers/tomcat-9.0.16
 
@@ -219,11 +224,6 @@ dev-db/pgadmin3
 # Andreas Sturmlechner <asturm@gentoo.org> (07 Oct 2018)
 # Masked for more testing especially of reverse-deps.
 >=dev-games/ogre-1.11.2
-
-# Mart Raudsepp <leio@gentoo.org> (06 Oct 2018)
-# Netspeed applet moved into mate-base/mate-applets since v1.14,
-# use that instead. Bug #667910
-net-analyzer/mate-netspeed
 
 # Thomas Deutschmann <whissi@gentoo.org> (06 Oct 2018)
 # Outdated and vulnerable snapshot; libav-12.3 is the better

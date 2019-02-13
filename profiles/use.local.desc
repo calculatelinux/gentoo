@@ -1070,7 +1070,6 @@ app-misc/tracker:gsf - Enable gnome-extra/libgsf based data extractor and for OD
 app-misc/tracker:iptc - Enable extraction of IPTC data from pictures
 app-misc/tracker:iso - Enable extraction of metadata from ISO disk images
 app-misc/tracker:miner-fs - Enable tracker-miner-fs (required for filesystem indexing)
-app-misc/tracker:nautilus - Enable tracker to integrate with gnome-base/nautilus by providing entries in its context menu
 app-misc/tracker:playlist - Add support for playlists
 app-misc/tracker:stemmer - Add word stemming via dev-libs/snowball-stemmer.
 app-misc/tracker:thunderbird - Install email data miner plugin for mail-client/thunderbird and mail-client/thunderbird-bin
@@ -2544,14 +2543,11 @@ dev-libs/starpu:opencl - Enable OpenCL support
 dev-libs/starpu:spinlock-check - Enable spinlock check
 dev-libs/starpu:valgrind - Enable dev-util/valgrind support
 dev-libs/sway:X - Enable support for X11 applications (XWayland)
-dev-libs/sway:clipboard - Install 'wl-clipboard': clipboard management
 dev-libs/sway:elogind - Enable support for rootless session via elogind
-dev-libs/sway:filecaps - Use Linux capability SYS_CAP_ADMIN rather than set*id for sway binary
 dev-libs/sway:fish-completion - Enable fish completion support
-dev-libs/sway:gdk-pixbuf - Enable additional image format support via the x11-libs/gdk-pixbuf library
+dev-libs/sway:man - Build and install man pages
 dev-libs/sway:swaybar - Install 'swaybar': sway's status bar component
 dev-libs/sway:swaybg - Install 'swaybg': allows to set a desktop background image
-dev-libs/sway:swaygrab - Install 'swaygrab': allows taking screenshots or screencasts
 dev-libs/sway:swayidle - Install 'swayidle': idle manager to run commands when user is inactive
 dev-libs/sway:swaylock - Install 'swaylock': sway's screen locker
 dev-libs/sway:swaymsg - Install 'swaymsg': tool for communicating with a running sway instance
@@ -2560,8 +2556,10 @@ dev-libs/sway:tray - Enable support for StatusNotifierItem tray specification
 dev-libs/sway:wallpapers - Install sway's default wallpaper image
 dev-libs/swayidle:elogind - Enable support for rootless session via elogind
 dev-libs/swayidle:fish-completion - Enable fish completion support
+dev-libs/swayidle:man - Build and install man pages
 dev-libs/swaylock:fish-completion - Enable fish completion support
 dev-libs/swaylock:gdk-pixbuf - Enable additional image format support via the x11-libs/gdk-pixbuf library
+dev-libs/swaylock:man - Build and install man pages
 dev-libs/tinyxml:stl - Compile with TIXML_USE_STL support
 dev-libs/tntnet:server - Enable tntnet server daemon
 dev-libs/totem-pl-parser:archive - Enables ISO detection with app-arch/libarchive
@@ -2626,6 +2624,7 @@ dev-lisp/ecls:precisegc - Use type information during garbage collection (experi
 dev-lisp/gcl:ansi - Build a GCL with ANSI support (else build a traditional CLtL1 image)
 dev-lisp/gcl:athena - Build xgcl - an interface to x11-libs/libXaw
 dev-lisp/sbcl:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
+dev-lua/lua-cjson:internal-fpconv - Enable internal number conversion routines, can increase overall performance by up to 50%
 dev-lua/luarocks:curl - Uses net-misc/curl for fetching lua packages instead of net-misc/wget.
 dev-lua/luarocks:openssl - Uses dev-libs/openssl for verifying lua packages instead of md5sum.
 dev-lua/luvit:bundled-libs - Use bundled versions of some libraries.
@@ -3855,6 +3854,7 @@ kde-plasma/kmenuedit:hotkeys - Enable support for hotkey editing
 kde-plasma/kscreenlocker:consolekit - Support for killing the screenlocker when sys-auth/consolekit is the session tracker
 kde-plasma/kwin:gles2 - Use OpenGL ES 2 instead of full GL
 kde-plasma/kwin:multimedia - Enable effect video button in desktop effects KCM
+kde-plasma/libksysguard:webengine - Enable display of detailed memory information using dev-qt/qtwebengine.
 kde-plasma/libksysguard:webkit - Enable display of detailed memory information using dev-qt/qtwebkit.
 kde-plasma/plasma-desktop:appstream - Enable AppStream software metadata support
 kde-plasma/plasma-desktop:ibus - Use ibus input method via app-i18n/ibus
@@ -5453,7 +5453,6 @@ net-analyzer/icinga2:plugins - Adds support for nagios plugins
 net-analyzer/icinga2:studio - Adds support for Icinga-studio
 net-analyzer/ipsumdump:nanotimestamp - Enable timestamps with nano-second resolution
 net-analyzer/linkchecker:sqlite - Mozilla Bookmark parsing
-net-analyzer/mate-netspeed:gtk3 - Build with GTK+3 instead of GTK+2
 net-analyzer/metasploit:development - Install dependencies needed for metasploit and exploit development
 net-analyzer/metasploit:nexpose - Enable the plugin to integrate with nexpose
 net-analyzer/metasploit:openvas - Enable the plugin to integrate net-analyzer/openvas
@@ -6124,6 +6123,7 @@ net-irc/iroffer-dinoex:http - Compile with HTTP server support
 net-irc/iroffer-dinoex:kqueue - Compile with kqueue() support
 net-irc/iroffer-dinoex:memsave - Compile with memory protection
 net-irc/iroffer-dinoex:telnet - Compile with Telnet server support
+net-irc/irssi:otr - Adds support for a loadable IRC otr module
 net-irc/irssi:proxy - Adds support for a loadable IRC proxy module
 net-irc/kvirc:dcc_video - Support video connections over DCC protocol
 net-irc/kvirc:phonon - Support Phonon for audio output
@@ -8282,7 +8282,10 @@ sys-cluster/vzctl:ploop - Add support for ploop devices via sys-cluster/ploop
 sys-cluster/vzctl:vzmigrate - Add support for container migration
 sys-devel/autogen:libopts - install the libopts tarball (a few packages want this for developing)
 sys-devel/bc:forced-sandbox - Always enable --sandbox mode for simpler/secure runtime (disables the ! command in dc)
+sys-devel/binutils:default-gold - Set ld to point to ld.gold instead of ld.bfd
+sys-devel/binutils:gold - Build ld.gold linker
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
+sys-devel/binutils:plugins - Enable plugin support in tools
 sys-devel/binutils-apple:classic - Use nm, otool, etc. from this ebuild instead of llvm-based tools
 sys-devel/binutils-apple:libcxx - Add support for libcxx
 sys-devel/binutils-apple:lto - Add support for Link-Time Optimization with LLVM
@@ -8745,6 +8748,7 @@ www-apps/webdavcgi:rcs - Adds support for a revision controlled backend with RCS
 www-apps/websvn:enscript - Add enscript support to colorize code stored in the repository
 www-apps/wordpress:akismet - Installs Akismet comment spam plug-in
 www-apps/wordpress:themes - Installs themes (including default theme)
+www-client/chromium:closure-compile - Enable closure type-checking for Chrome's web technology-based UI. Requires Java.
 www-client/chromium:component-build - Split build into more shared libraries to speed up linking. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
 www-client/chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/chromium:jumbo-build - Combine source files to speed up build process.

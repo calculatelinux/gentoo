@@ -1,6 +1,10 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Mikle Kolyada <zlogene@gentoo.org> (12 Feb 2019)
+# net-libs/libotr is not keyworded
+net-irc/irssi otr
+
 # Davide Pesavento <pesa@gentoo.org> (27 Dec 2018)
 # The corresponding Qt5 modules are not keyworded on arm64, and we don't want to
 # keyword them solely because of PyQt5 while there are no other in-tree users.
@@ -347,7 +351,6 @@ net-libs/libpcap bluetooth
 # Mart Raudsepp <leio@gentoo.org> (16 Feb 2017)
 # Not yet tested features/dependencies
 app-text/evince dvi nautilus postscript t1lib xps
-xfce-extra/xfce4-taskmanager gtk3
 net-wireless/blueman appindicator
 x11-libs/gtk+ cloudprint
 
