@@ -33,8 +33,8 @@ CDEPEND="
 	pam? ( virtual/pam )
 	ssl? (
 		!mbedtls? (
-			!libressl? ( >=dev-libs/openssl-0.9.8:* )
-			libressl? ( dev-libs/libressl )
+			!libressl? ( >=dev-libs/openssl-0.9.8:0= )
+			libressl? ( dev-libs/libressl:0= )
 		)
 		mbedtls? ( net-libs/mbedtls )
 	)

@@ -29,20 +29,6 @@
 
 #--- END OF EXAMPLES ---
 
-# Michał Górny <mgorny@gentoo.org> (14 Feb 2019)
-# Upstream switched install paths, and we no longer use Gentoo patches
-# for that.  Masked for testing, and for binary package builds.
-=dev-python/pypy-7.0.0
-=dev-python/pypy-bin-7.0.0
-=dev-python/pypy3-7.0.0
-=dev-python/pypy3-bin-7.0.0
-=virtual/pypy-7.0.0
-=virtual/pypy3-7.0.0
-
-# Mart Raudsepp <leio@gentoo.org> (13 Feb 2019)
-# Ongoing preparations for clean tracker-2 bumps
->=app-misc/tracker-2.1.7
-
 # Michał Górny <mgorny@gentoo.org> (13 Feb 2019)
 # Release candidate, masked for testing.
 =sys-devel/llvm-common-8.0.0_rc*
@@ -94,15 +80,11 @@ sys-fs/cloudfuse
 # Masked for removal in 30 days.
 mail-filter/dovecot-antispam
 
-# Brian Evans <grknight@gentoo.org> (5 Feb 2019)
-# Unsolvable dependencies
-# Bug 677284
-=gnome-extra/gucharmap-11.0.3
-
 # Jeroen Roovers <jer@gentoo.org> (31 Jan 2019)
 # Depends on =dev-libs/openssl-1.1.1*
 # bug #670574
 =net-libs/nodejs-11.9*
+=net-libs/nodejs-11.10*
 
 # Andreas Sturmlechner <asturm@gentoo.org> (30 Jan 2019)
 # Dead upstream, breaks every other poppler release due to private
@@ -137,11 +119,6 @@ dev-python/python3-openid
 =dev-java/eclipse-ecj-4.10
 =www-servers/tomcat-9.0.14
 
-# Ulrich Müller <ulm@gentoo.org> (19 Jan 2019)
-# Last release in 1999, last visible upstream activity in 2011.
-# Byte-compilation fails. Masked for removal in 30 days, bug #675814.
-app-emacs/tdtd
-
 # Zac Medico <zmedico@gentoo.org> (13 Jan 2019)
 # Deprecated upstream. Use hack/tls-setup from the etcd source tree
 # instead. Masked for removal in 30 days.
@@ -152,10 +129,6 @@ app-crypt/etcd-ca
 # Removal in 30 days, bug #675220.
 app-emulation/ganeti-htools
 
-# Mikle Kolyada <zlogene@gentoo.org> (10 Jan 2019)
-# Masked due to QA violation (bug #672054)
-sci-electronics/librepcb
-
 # Craig Andrews <candrews@gentoo.org> (1 Jan 2019)
 # Requires dev-libs/openssl-1.1.1, Bug 674148
 dev-libs/gost-engine
@@ -163,11 +136,6 @@ dev-libs/gost-engine
 # Lars Wendler <polynomial-c@gentoo.org> (28 Dec 2018)
 # Masked while being tested and reverse deps aren't fully compatible
 =dev-libs/openssl-1.1.1*
-
-# Mike Gilbert <floppym@gentoo.org> (25 Dec 2018)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-73
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (25 Dec 2018)
 # Included in dev-tex/texlive-publishers-2017; there is no
@@ -229,7 +197,8 @@ dev-go/sarama
 # Andreas Sturmlechner <asturm@gentoo.org> (03 Nov 2018)
 # Breaks revdeps (GDir and GDirEntry split from gfile.h into new gdir.h)
 # See tracker: https://bugs.gentoo.org/670222
->=app-text/poppler-0.71.0
+=app-text/poppler-0.71.0
+=app-text/poppler-0.72.0
 
 # Pacho Ramos <pacho@gentoo.org> (01 Nov 2018)
 # All this packages are broken and need major version bumps to fix them. See
@@ -305,8 +274,6 @@ media-libs/libglvnd
 
 # Aaron Bauman <bman@gentoo.org> (30 Apr 2018)
 # Masked for testing
-=dev-libs/libressl-2.7*
-=dev-libs/libressl-2.8*
 =dev-libs/libressl-2.9*
 
 # Brian Evans <grknight@gentoo.org> (20 Apr 2018)
@@ -368,10 +335,6 @@ sys-devel/automake:1.8
 # Gilles Dartiguelongue <eva@gentoo.org> (04 Sep 2017)
 # Incompatible changes in API in Enchant 2. Bug #629838.
 >=app-text/enchant-2
-
-# Gilles Dartiguelongue <eva@gentoo.org> (2 Sep 1017)
-# Gnome 3.26 package mask
->=app-text/libgepub-0.5
 
 # Sébastien Fabbro <bicatali@gentoo.org> (19 Aug 2017)
 # ipython-6 is python-3 only and causes circular dependencies

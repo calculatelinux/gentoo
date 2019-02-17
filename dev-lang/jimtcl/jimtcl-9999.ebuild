@@ -1,7 +1,7 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI="7"
 
 inherit eutils
 
@@ -9,8 +9,7 @@ if [[ ${PV} == *9999 ]] ; then
 	EGIT_REPO_URI="http://repo.or.cz/r/jimtcl.git"
 	inherit git-r3
 else
-	inherit vcs-snapshot
-	SRC_URI="https://github.com/msteveb/jimtcl/zipball/${PV} -> ${P}.zip"
+	SRC_URI="https://github.com/msteveb/jimtcl/archive/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~arm64 ~m68k ~mips ~s390 ~sh ~x86"
 fi
 
@@ -30,13 +29,7 @@ src_unpack() {
 		git-2_src_unpack
 	else
 		default
-		cd "${WORKDIR}"/msteveb-jimtcl-* || die
-		S=${PWD}
 	fi
-}
-
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.75-bootstrap.patch
 }
 
 src_configure() {
@@ -65,5 +58,5 @@ src_install() {
 	doins jim.h jimautoconf.h jim-subcmd.h jim-signal.h \
 		jim-win32compat.h jim-eventloop.h jim-config.h
 	dodoc AUTHORS README TODO
-	use doc && dohtml Tcl.html
+	dodoc Tcl.html
 }
