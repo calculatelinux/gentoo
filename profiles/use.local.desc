@@ -2776,6 +2776,7 @@ dev-python/celery:redis - Enables redis support
 dev-python/celery:sqs - Enables Amazon SQS transport module for celery
 dev-python/celery:yaml - Enable support of yaml as a configuration file format
 dev-python/cgkit:3ds - Enable support for importing 3D Studio models
+dev-python/cryptography:idna - enable support for the old, deprecated IDNA specification (RFC 3490)
 dev-python/cvxopt:dsdp - Use interior point library sci-libs/dsdp
 dev-python/cvxopt:glpk - Use GNU Linear Programming Kit sci-mathematics/glpk
 dev-python/dap:server - Enable OpenDAP server support
@@ -4526,6 +4527,7 @@ media-libs/mlt:opencv - Build motion tracking module using media-libs/opencv
 media-libs/mlt:python - Build SWIG bindings for Python
 media-libs/mlt:rtaudio - Builds rtaudio consumer for native audio support on multiple platforms.
 media-libs/mlt:ruby - Build SWIG bindings for Ruby
+media-libs/mlt:vidstab - Enabled video stabilization with media-libs/vidstab.
 media-libs/netpbm:rle - Build converters for the RLE format (utah raster toolkit)
 media-libs/opencv:contrib - Install user contributed scripts from opencv_contrib (Experimental!)
 media-libs/opencv:contrib_cvv - CVV module requires Qt5
@@ -6162,6 +6164,7 @@ net-irc/weechat:fifo - Enable FIFO support (sh pipes)
 net-irc/weechat:fset - Enable fast set plugin
 net-irc/weechat:irc - Enable IRC protocol support
 net-irc/weechat:logger - Enable support for logging
+net-irc/weechat:man - Build and install man pages
 net-irc/weechat:relay - Enable relay plugin (experimental)
 net-irc/weechat:scripts - Build infrastructure for scripting
 net-irc/weechat:trigger - Enable trigger plugin

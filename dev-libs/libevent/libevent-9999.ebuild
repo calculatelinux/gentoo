@@ -1,8 +1,8 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
-inherit autotools eutils git-r3 multilib-minimal
+EAPI=7
+inherit autotools git-r3 multilib-minimal
 
 DESCRIPTION="Library to execute a function when a specific event occurs on a file descriptor"
 EGIT_REPO_URI="https://github.com/libevent/libevent"
@@ -57,5 +57,5 @@ multilib_src_configure() {
 
 multilib_src_install_all() {
 	einstalldocs
-	prune_libtool_files
+	find "${ED}" -name '*.la' -delete || die
 }
