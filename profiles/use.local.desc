@@ -531,6 +531,7 @@ app-emulation/libguestfs:systemtap - Use dev-util/systemtap to inspect VM via "p
 app-emulation/libpod:apparmor - Enable AppArmor support.
 app-emulation/libpod:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
 app-emulation/libpod:ostree - Enables dependencies for handling of OSTree images.
+app-emulation/libpod:rootless - Enables dependencies for running in rootless mode.
 app-emulation/libspectrum:gcrypt - Use dev-libs/libgcrypt for low-level crypto of some features, including logfiles.
 app-emulation/libvirt:apparmor - Enable AppArmor support
 app-emulation/libvirt:firewalld - DBus interface to iptables/ebtables allowing for better runtime management of your firewall.
@@ -5160,6 +5161,7 @@ media-video/ffmpeg:sofalizer - Enables Sofalizer filter
 media-video/ffmpeg:srt - Enable support for Secure Reliable Transport (SRT) via net-libs/srt
 media-video/ffmpeg:ssh - Enable SSH/sftp support via net-libs/libssh.
 media-video/ffmpeg:twolame - Enables MP2 encoding via media-sound/twolame as an alternative to the internal encoder.
+media-video/ffmpeg:vidstab - Enables video stabilization filter using vid.stab library (media-libs/vidstab).
 media-video/ffmpeg:vpx - Enables vp8 codec support using libvpx: Decoding vp8 does not require this to be enabled but libvpx can also be used for decoding; encoding vp8 requires this useflag to be enabled though.
 media-video/ffmpeg:x265 - Enables HEVC encoding with media-libs/x265.
 media-video/ffmpeg:zeromq - Enables net-libs/zeromq support with the zmq/azmq filters.
