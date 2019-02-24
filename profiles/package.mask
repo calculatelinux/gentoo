@@ -29,6 +29,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (24 Feb 2019)
+# Making releng key cert-only broke validating old releases.  Mask
+# the relevant version until the key is fixed.  Bug #678660.
+=app-crypt/openpgp-keys-gentoo-release-20190223
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (23 Feb 2019)
+# Fails to build with glibc-2.28, bug 669206.
+# Removal in 30 days.
+app-arch/freeze
+
 # Michał Górny <mgorny@gentoo.org> (13 Feb 2019)
 # Release candidate, masked for testing.
 =sys-devel/llvm-common-8.0.0_rc*
@@ -178,11 +188,6 @@ dev-go/sarama
 # Keeping it masked while users have unsolved issues with >0.15.0.
 <x11-misc/sddm-0.18.0
 
-# Sergei Trofimovich <slyfox@gentoo.org> (23 Nov 2018)
-# New version breaks kernel compilation as objtool seemingly
-# corrupts object files: bug #671760
->=dev-libs/elfutils-0.175
-
 # Ian Stakenvicius <axs@gentoo.org> (07 Nov 2018)
 # on behalf of Mozilla Project <mozilla@gentoo.org>
 # Mask old/vuln thunderbird for removal by 2019,
@@ -243,11 +248,6 @@ dev-db/pgadmin3
 # <glibc-2.26.
 ~net-libs/libnsl-0
 ~net-libs/rpcsvc-proto-0
-
-# Matthias Maier <tamiko@gentoo.org> (1 Sep 2018)
-# Mask 0.7.0 and  1.0.1 for the time being until a compatible LLVM version
-# made it into the tree, bug #665192
-~dev-lang/julia-1.0.3
 
 # Bernard Cafarelli <voyageur@gentoo.org> (13 Aug 2018)
 # Beta release with new features, masked for testing
