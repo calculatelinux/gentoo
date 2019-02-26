@@ -28,12 +28,12 @@ DEPEND="
 	doc? ( dev-lang/php:* )
 	jack? (
 		virtual/jack
-		x11-libs/cairo
+		x11-libs/cairo[X]
 	)
 	ladspa? ( media-libs/ladspa-sdk )
 	lv2? (
 		media-libs/lv2
-		x11-libs/cairo
+		x11-libs/cairo[X]
 	)
 "
 RDEPEND="${DEPEND}"
@@ -48,5 +48,5 @@ src_compile(){
 }
 
 src_install(){
-	emake PREFIX="/usr" DESTDIR="${D}" install
+	emake PREFIX="/usr" DESTDIR="${D}" LIB_PATH="/usr/$(get_libdir)" install
 }
