@@ -29,6 +29,31 @@
 
 #--- END OF EXAMPLES ---
 
+# Matt Turner <mattst88@gentoo.org> (02 Mar 2019)
+# Old, unused drivers.
+# Masked for removal in 30 days. Bug #679256
+x11-drivers/xf86-input-elographics
+x11-drivers/xf86-video-newport
+x11-drivers/xf86-video-tdfx
+x11-drivers/xf86-video-voodoo
+
+# Matt Turner <mattst88@gentoo.org> (02 Mar 2019)
+# No reverse dependencies. No releases in 13 years.
+# Masked for removal in 30 days. Bug #679256
+x11-libs/libxkbui
+
+# Andreas Sturmlechner <asturm@gentoo.org> (02 Mar 2019)
+# Completely broken. Masked for removal in 30 days.
+# Bugs 630924, 639310, 640728, 644654, 654892, 655096, 670822
+media-video/dcpomatic
+media-libs/libasdcp-cth
+media-libs/libdcp
+media-libs/libsub
+
+# Eray Aslan <eras@gentoo.org> (01 Mar 2019)
+# Mask experimental software
+=mail-mta/postfix-3.5*
+
 # Michał Górny <mgorny@gentoo.org> (24 Feb 2019)
 # Making releng key cert-only broke validating old releases.  Mask
 # the relevant version until the key is fixed.  Bug #678660.
@@ -96,12 +121,6 @@ mail-filter/dovecot-antispam
 =net-libs/nodejs-11.9*
 =net-libs/nodejs-11.10*
 
-# Andreas Sturmlechner <asturm@gentoo.org> (30 Jan 2019)
-# Dead upstream, breaks every other poppler release due to private
-# interface use, blocks poppler security cleanup(s), bugs #656108, #674808
-# Masked for removal in 30 days.
-app-text/pdf2htmlEX
-
 # Dennis Lamm <expeditioneer@gentoo.org> (29 Jan 2019)
 # Depends on >=app-text/enchant-2.0.0 which is masked
 =gnome-extra/gtkhtml-4.10.0-r1
@@ -119,16 +138,6 @@ app-text/pdf2htmlEX
 =dev-java/ant-eclipse-ecj-4.10
 =dev-java/eclipse-ecj-4.10
 =www-servers/tomcat-9.0.14
-
-# Zac Medico <zmedico@gentoo.org> (13 Jan 2019)
-# Deprecated upstream. Use hack/tls-setup from the etcd source tree
-# instead. Masked for removal in 30 days.
-app-crypt/etcd-ca
-
-# Sergei Trofimovich <slyfox@gentoo.org> (13 Jan 2019)
-# Deprecated upstream. Use app-emulation/ganeti[htools] instead.
-# Removal in 30 days, bug #675220.
-app-emulation/ganeti-htools
 
 # Craig Andrews <candrews@gentoo.org> (1 Jan 2019)
 # Requires dev-libs/openssl-1.1.1, Bug 674148
@@ -165,11 +174,6 @@ dev-libs/gost-engine
 <x11-base/xorg-server-1.20.3
 <x11-base/xorg-drivers-1.20
 
-# Zac Medico <zmedico@gentoo.org> (11 Dec 2018)
-# A Go library which has no consumers except those that include
-# it via EGO_VENDOR. Masked for removal in 30 days.
-dev-go/sarama
-
 # Thomas Deutschmann <whissi@gentoo.org> (10 Dec 2018)
 # Requires >=dev-lang/lua-5.2 which is masked
 >=app-admin/lsyncd-2.2.3
@@ -189,12 +193,6 @@ dev-go/sarama
 # Brian Evans <grknight@gentoo.org> (05 Nov 2018)
 # Causes a dependency loop in the OpenRC script. Bug #651998
 =sys-fs/cryptsetup-2.0.5-r1
-
-# Andreas Sturmlechner <asturm@gentoo.org> (03 Nov 2018)
-# Breaks revdeps (GDir and GDirEntry split from gfile.h into new gdir.h)
-# See tracker: https://bugs.gentoo.org/670222
-=app-text/poppler-0.71.0
-=app-text/poppler-0.72.0
 
 # Pacho Ramos <pacho@gentoo.org> (01 Nov 2018)
 # All this packages are broken and need major version bumps to fix them. See
@@ -264,17 +262,14 @@ dev-db/pgadmin3
 media-libs/libglvnd
 
 # Aaron Bauman <bman@gentoo.org> (30 Apr 2018)
-# Masked for testing
+# Masked for testing. Will implement more of the 1.1 API
+# Which will require patch updates across the tree
 =dev-libs/libressl-2.9*
 
 # Brian Evans <grknight@gentoo.org> (20 Apr 2018)
 # Likely to break a lot of software
 # Masked for initial testing
 >=dev-db/mysql-connector-c++-8.0.0
-
-# Eray Aslan <eras@gentoo.org> (08 Feb 2018)
-# Mask experimental software
-=mail-mta/postfix-3.4*
 
 # Eray Aslan <eras@gentoo.org> (22 Jan 2018)
 # Vulnerable - see https://bugs.gentoo.org/630684
@@ -439,19 +434,6 @@ app-admin/amazon-ec2-init
 # the proxied maintainer Matthew Brewer <tomboy64@sina.cn>
 # for questions.
 <=media-gfx/slic3r-1.1.9999
-
-# James Le Cuirot <chewi@gentoo.org> (07 Feb 2016)
-# Masked until 2.0 final arrives, which hopefully won't depend on
-# commons-dbcp:0 as that requires Java 6. Note that the 2.0 in the
-# tree should have actually been 2.0_beta1. There are no revdeps.
-# Michał Górny <mgorny@gentoo.org> (01 Dec 2018)
-# Removal in 14 days.  Bug #671240.
-dev-java/jcs
-
-# Andrey Grozin <grozin@gentoo.org> (03 Dec 2018)
-# Masked since 2016.
-# Removal in 30 days. Bug #671242.
-=sci-mathematics/reduce-20110414-r1
 
 # Robin H. Johnson <robbat2@gentoo.org> (04 Aug 2014)
 # Masked for testing, presently fails upstream testsuite:
