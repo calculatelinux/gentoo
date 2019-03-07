@@ -5953,7 +5953,7 @@ net-im/choqok:telepathy - Enable support for the real-time communication framewo
 net-im/corebird:spellcheck - Support spell checking
 net-im/coturn:mongodb - Enable support for the mongodb database
 net-im/coturn:redis - Enable support for the redis database
-net-im/dino:gnupg - Enable OpenPGP encryption plugin
+net-im/dino:gpg - Enable OpenPGP encryption plugin
 net-im/dino:http - Enable HTTP file upload plugin
 net-im/dino:omemo - Enable OMEMO encryption plugin
 net-im/discord-bin:pax_kernel - Triggers a paxmarking of the binary

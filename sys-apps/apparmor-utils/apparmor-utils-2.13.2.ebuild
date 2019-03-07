@@ -1,16 +1,16 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
 PYTHON_COMPAT=( python3_{4,5,6} )
-inherit perl-module python-r1 toolchain-funcs versionator
+inherit eapi7-ver perl-module python-r1 toolchain-funcs
 
-MY_PV="$(get_version_component_range 1-2)"
+MY_PV="$(ver_cut 1-2)"
 
 DESCRIPTION="Additional userspace utils to assist with AppArmor profile management"
-HOMEPAGE="http://apparmor.net/"
-SRC_URI="https://launchpad.net/apparmor/${MY_PV}/${PV}/+download/apparmor-${MY_PV}.tar.gz"
+HOMEPAGE="https://gitlab.com/apparmor/apparmor/wikis/home"
+SRC_URI="https://launchpad.net/apparmor/${MY_PV}/${PV}/+download/apparmor-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,7 +20,9 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RESTRICT="test"
 
-DEPEND="dev-lang/perl
+DEPEND="
+	dev-lang/perl
+	~sys-libs/libapparmor-${PV}
 	${PYTHON_DEPS}"
 RDEPEND="${DEPEND}
 	~sys-libs/libapparmor-${PV}[perl,python]
@@ -31,7 +33,7 @@ RDEPEND="${DEPEND}
 	virtual/perl-Data-Dumper
 	virtual/perl-Getopt-Long"
 
-S=${WORKDIR}/apparmor-${MY_PV}
+S=${WORKDIR}/apparmor-${PV}
 
 src_prepare() {
 	default

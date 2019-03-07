@@ -1,31 +1,29 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 
-AUTOTOOLS_AUTORECONF=1
 DISTUTILS_OPTIONAL=1
 PYTHON_COMPAT=( python{2_7,3_4,3_5,3_6} )
 GENTOO_DEPEND_ON_PERL="no"
 
-inherit autotools-utils distutils-r1 perl-functions versionator
+inherit autotools distutils-r1 eapi7-ver perl-functions
 
-MY_PV="$(get_version_component_range 1-2)"
+MY_PV="$(ver_cut 1-2)"
 
 DESCRIPTION="Library to support AppArmor userspace utilities"
-HOMEPAGE="http://apparmor.net/"
-SRC_URI="https://launchpad.net/apparmor/${MY_PV}/${PV}/+download/apparmor-${MY_PV}.tar.gz"
+HOMEPAGE="https://gitlab.com/apparmor/apparmor/wikis/home"
+SRC_URI="https://launchpad.net/apparmor/${MY_PV}/${PV}/+download/apparmor-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc +perl +python static-libs"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="perl? ( dev-lang/perl:= )
 	python? ( ${PYTHON_DEPS} )"
-
 DEPEND="${RDEPEND}
 	sys-devel/autoconf-archive
 	sys-devel/bison
@@ -34,34 +32,34 @@ DEPEND="${RDEPEND}
 	perl? ( dev-lang/swig )
 	python? ( dev-lang/swig	)"
 
-S=${WORKDIR}/apparmor-${MY_PV}/libraries/${PN}
+S=${WORKDIR}/apparmor-${PV}/libraries/${PN}
+
+PATCHES=( "${FILESDIR}/${PN}-2.10-symbol_visibility.patch" )
 
 RESTRICT="test"
 
 src_prepare() {
 	rm -r m4 || die "failed to remove bundled macros"
-	epatch "${FILESDIR}"/${PN}-2.10-symbol_visibility.patch
-	autotools-utils_src_prepare
+	default
+	eautoreconf
 	use python && distutils-r1_src_prepare
 }
 
 src_configure() {
-	local myeconfargs=(
+	econf \
+		$(use_enable static-libs static) \
 		$(use_with perl) \
 		$(use_with python)
-	)
-
-	autotools-utils_src_configure
 }
 
 src_compile() {
-	autotools-utils_src_compile -C src
-	autotools-utils_src_compile -C include
-	use doc && autotools-utils_src_compile -C doc
-	use perl && autotools-utils_src_compile -C swig/perl
+	emake -C src
+	emake -C include
+	use doc && emake -C doc
+	use perl && emake -C swig/perl
 
 	if use python ; then
-		pushd "${BUILD_DIR}"/swig/python > /dev/null
+		pushd swig/python > /dev/null
 		emake libapparmor_wrap.c
 		distutils-r1_src_compile
 		popd > /dev/null
@@ -69,15 +67,15 @@ src_compile() {
 }
 
 src_install() {
-	autotools-utils_src_install -C src
-	autotools-utils_src_install -C include
-	use doc && autotools-utils_src_install -C doc
+	emake DESTDIR="${D}" -C src install
+	emake DESTDIR="${D}" -C include install
+	use doc && emake DESTDIR="${D}" -C doc install
 
 	if use perl ; then
-		autotools-utils_src_install -C swig/perl
+		emake DESTDIR="${D}" -C swig/perl install
 		perl_set_version
 		insinto "${VENDOR_ARCH}"
-		doins "${BUILD_DIR}"/swig/perl/LibAppArmor.pm
+		doins swig/perl/LibAppArmor.pm
 
 		# bug 620886
 		perl_delete_localpod
@@ -85,11 +83,15 @@ src_install() {
 	fi
 
 	if use python ; then
-		pushd "${BUILD_DIR}"/swig/python > /dev/null
+		pushd swig/python > /dev/null
 		distutils-r1_src_install
 
 		python_moduleinto LibAppArmor
 		python_foreach_impl python_domodule LibAppArmor.py
 		popd > /dev/null
 	fi
+
+	dodoc AUTHORS ChangeLog NEWS README
+
+	find "${D}" -name '*.la' -delete || die
 }
