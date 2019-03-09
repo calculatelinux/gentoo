@@ -29,6 +29,20 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (09 Mar 2019)
+# According to bug #678914, our version is over 5 years old.  It has
+# open bugs (#671742, #671990) and is non-trivial to bump due to being
+# merged into schily-tools (#672060).  It lacks dedicated maintainer
+# interested in doing that.  app-arch/tar (GPL) and app-arch/libarchive
+# (BSD) are good replacements for modern uses.
+# Removal in 30 days.  Bug #679030.
+app-arch/star
+
+# Michael Palimaka <kensington@gentoo.org> (07 Mar 2019)
+# Fails to build with ffmpeg-4 (bug #673352). Dead upstream.
+# Masked for removal in 30 days.
+media-sound/karlyriceditor
+
 # Matt Turner <mattst88@gentoo.org> (06 Mar 2019)
 # Does not build with glibc >= 2.25 (stabilized a year ago). Unmaintained by
 # maintainer-by-proxy: Bugs #628734 and #641176
@@ -139,6 +153,7 @@ mail-filter/dovecot-antispam
 # bug #670574
 =net-libs/nodejs-11.9*
 =net-libs/nodejs-11.10*
+=net-libs/nodejs-11.11*
 
 # Dennis Lamm <expeditioneer@gentoo.org> (29 Jan 2019)
 # Depends on >=app-text/enchant-2.0.0 which is masked

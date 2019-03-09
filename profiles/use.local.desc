@@ -34,7 +34,6 @@ app-admin/clsync:gio - Enable GIO for FS monitoring (glib based alternative to i
 app-admin/clsync:highload-locks - Allows to use spinlocks for short delays instead of mutexes, but only on SMP systems.
 app-admin/clsync:namespaces - Enable namespaces isolation.
 app-admin/conky:apcupsd - Enable support for sys-power/apcupsd
-app-admin/conky:audacious - Enable monitoring of music played by media-sound/audacious
 app-admin/conky:cmus - Enable monitoring of music played by media-sound/cmus
 app-admin/conky:eve - Enable support for the eve-online skill monitor
 app-admin/conky:ical - Enable support for events from iCalendar (RFC 5545) files using dev-libs/libical
@@ -51,7 +50,6 @@ app-admin/conky:nvidia - Enable reading of nvidia card temperature sensors via x
 app-admin/conky:portmon - Enable support for tcp (ip4) port monitoring
 app-admin/conky:thinkpad - Enable support for IBM/Lenovo notebooks
 app-admin/conky:weather-metar - Enable support for metar weather service
-app-admin/conky:weather-xoap - Enable support for metar and xoap weather service
 app-admin/conky:webserver - Enable support to act as a webserver serving conkys output using net-libs/libmicrohttpd
 app-admin/conky:xmms2 - Enable monitoring of music played by media-sound/xmms2
 app-admin/conserver:freeipmi - Compile in FreeIPMI support via sys-libs/freeipmi
@@ -3646,6 +3644,7 @@ gnome-extra/gnome-commander:taglib - Add metadata support for ID3, Vorbis, FLAC 
 gnome-extra/gnome-commander:unique - Enable single instance support using dev-libs/libunique
 gnome-extra/gnome-contacts:telepathy - Start chat from contact details
 gnome-extra/gnome-dvb-daemon:totem - Build a plugin for media-video/totem
+gnome-extra/gnome-shell-extension-gsconnect:nautilus - Install Nautilus extension for sending files via GSConnect
 gnome-extra/gnome-software:firmware - Enable firmware update support through sys-apps/fwupd
 gnome-extra/gnome-system-monitor:systemd - Display sys-apps/systemd metadata, e.g. unit names, for running processes
 gnome-extra/libgda:canvas - Enable support for x11-libs/goocanvas
@@ -4530,7 +4529,7 @@ media-libs/mesa:unwind - Add support for stack trace unwinding and function name
 media-libs/mesa:valgrind - Compile in valgrind memory hints
 media-libs/mesa:vdpau - Enable the VDPAU acceleration interface for the Gallium3D Video Layer.
 media-libs/mesa:vulkan - Enable Vulkan drivers
-media-libs/mesa:vulkan-overlay - Enable vulkan-overlay-layer for vulkan stats"
+media-libs/mesa:vulkan-overlay - Build vulkan-overlay-layer which displays Frames Per Second and other statistics
 media-libs/mesa:wayland - Enable support for dev-libs/wayland
 media-libs/mesa:xa - Enable the XA (X Acceleration) API for Gallium3D.
 media-libs/mesa:xvmc - Enable the XvMC acceleration interface for the Gallium3D Video Layer.
@@ -8547,6 +8546,7 @@ sys-libs/glibc:gd - build memusage and memusagestat tools
 sys-libs/glibc:multiarch - enable optimizations for multiple CPU architectures (detected at runtime)
 sys-libs/glibc:nscd - Build, and enable support for, the Name Service Cache Daemon
 sys-libs/glibc:rpc - Enable obsolete RPC/NIS layers
+sys-libs/glibc:ssp - protect stack of glibc internals
 sys-libs/glibc:suid - Make internal pt_chown helper setuid -- not needed if using Linux and have /dev/pts mounted with gid=5
 sys-libs/glibc:systemtap - enable systemtap static probe points
 sys-libs/gwenhywfar:designer - Build plugins for dev-qt/designer
@@ -9055,6 +9055,7 @@ x11-misc/colord:gusb - Enable dev-libs/libgusb support, needed for colorimeter d
 x11-misc/compton:drm - Enable VSync with DRM_IOCTL_WAIT_VBLANK
 x11-misc/compton:opengl - Enable VSync with SGI_swap_control OpenGL extension
 x11-misc/dunst:dunstify - Experimental replacement for notify-send.
+x11-misc/e16-keyedit:gtk2 - Build with x11-libs/gtk+:2 instead of x11-libs/gtk+:3
 x11-misc/fbpager:xrender - Enable transparency support via x11-libs/libXrender
 x11-misc/gpaste:applet - Enable gpaste-applet
 x11-misc/gpaste:gnome - Enable proper gnome support and enable gnome shell extension.
@@ -9113,6 +9114,8 @@ x11-misc/xscreensaver:new-login - Enable user switching support using gdmflexise
 x11-misc/xsr:cursor - Capture mouse cursor using x11-misc/xdotool, and place them on the screenshots using media-gfx/imagemagick
 x11-misc/xss-lock:man - Build and install man pages
 x11-plugins/bfm:gkrellm - Enable building of app-admin/gkrellm module
+x11-plugins/e16-epplets:cdaudio - Enable CD Audio support using media-libs/libcdaudio
+x11-plugins/e16-epplets:libgtop - Use gnome-base/libgtop to obtain system load information
 x11-plugins/pidgin-mbpurple:twitgin - Enable graphical plugin for Gtk+ interface of Pidgin.
 x11-plugins/pidgin-sipe:ocs2005-message-hack - Disable message timeout for OCS2005 clients which causes "false" not delivered error messages
 x11-plugins/pidgin-sipe:openssl - Enable crypto support via dev-libs/openssl
@@ -9198,6 +9201,20 @@ x11-themes/zuki-themes:gnome-shell - Install theme for gnome-base/gnome-shell
 x11-themes/zuki-themes:mate - Install Metacity theme for mate-base/mate
 x11-themes/zuki-themes:xfce - Install theme for xfce-base/xfwm4
 x11-themes/zukitwo:gnome-shell - Install theme for gnome-base/gnome-shell
+x11-wm/e16:container - Use container window (experimental)
+x11-wm/e16:debug - Build libtrip debugging library
+x11-wm/e16:dialogs - Enable support for configuration dialogs
+x11-wm/e16:libhack - Build libhack window mode helper library
+x11-wm/e16:modules - Enable support for loadable modules
+x11-wm/e16:pango - Enable pango font rendering using x11-libs/pango
+x11-wm/e16:themes - Install the official E16 themes using x11-themes/e16-themes
+x11-wm/e16:xi2 - Enable the experimental multipointer input XInput2. This incldues the MultiPointer X feature
+x11-wm/e16:xpresent - Enable support for the X Present extension via x11-libs/libXpresent
+x11-wm/e16:xrandr - Enable support for the X RandR extension via x11-libs/libXrandr
+x11-wm/e16:xrender - Enable transparency support using the X Render extension via x11-libs/libXrender
+x11-wm/e16:xsm - Enable X Session Management support using x11-libs/libSM
+x11-wm/e16:xsync - Enable X Sync support
+x11-wm/e16:zoom - Support resolution change of current window (zoom) usingx11-libs/libXxf86vm (xvidtune)
 x11-wm/echinus:xrandr - Enable support for multihead configuration
 x11-wm/enlightenment:packagekit - Enable module for package manager integration
 x11-wm/fluxbox:bidi - Enable bidirectional language support with dev-libs/fribidi
