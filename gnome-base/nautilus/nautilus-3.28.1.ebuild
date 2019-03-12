@@ -21,7 +21,7 @@ COMMON_DEPEND="
 	>=app-arch/gnome-autoar-0.2.1
 	>=gnome-base/gnome-desktop-3.0.0:3=
 	>=x11-libs/pango-1.28.3
-	>=x11-libs/gtk+-3.22.6:3[X,introspection?]
+	>=x11-libs/gtk+-3.22.26:3[X,introspection?]
 	selinux? ( >=sys-libs/libselinux-2.0 )
 	>=app-misc/tracker-2.0:=
 	x11-libs/libX11

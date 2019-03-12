@@ -79,6 +79,9 @@ src_configure() {
 		-DWITH_XC_SSHAGENT=ON
 		-DWITH_XC_YUBIKEY="$(usex yubikey)"
 	)
+	if [[ "${PV}" == *_beta* ]] ; then
+		mycmakeargs+=( -DOVERRIDE_VERSION="${PV/_/-}" )
+	fi
 	cmake-utils_src_configure
 }
 
