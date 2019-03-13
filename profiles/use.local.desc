@@ -5174,6 +5174,7 @@ media-video/ffmpeg:libilbc - Enables iLBC de/encoding via media-libs/libilbc.
 media-video/ffmpeg:librtmp - Enables Real Time Messaging Protocol using librtmp (media-video/rtmpdump) in addition to FFmpeg's native implementation.
 media-video/ffmpeg:libsoxr - Enables audio resampling through media-libs/soxr.
 media-video/ffmpeg:libv4l - Uses media-libs/libv4l for video4linux instead of direct calls. Adds support for more devices via the userspace library.
+media-video/ffmpeg:libxml2 - Uses dev-libs/libxml2 to enable dash demuxing support.
 media-video/ffmpeg:lv2 - Enables lv2 audio filter wrapper.
 media-video/ffmpeg:mipsdspr1 - Enables MIPS DSP ASE R1 optimizations.
 media-video/ffmpeg:mipsdspr2 - Enables MIPS DSP ASE R2 optimizations.
@@ -5458,6 +5459,7 @@ net-analyzer/goaccess:tokyocabinet - Enable Tokyo Cabinet's on-memory hash datab
 net-analyzer/gr-fosphor:glfw - enable GLFW based interface
 net-analyzer/graphite-web:carbon - Enable carbon support
 net-analyzer/graphite-web:memcached - Enable memcached support
+net-analyzer/greenbone-security-assistant:extras - Pdf results, extra fonts, html docs support
 net-analyzer/hexinject:experimental - Install experimental packets.tcl
 net-analyzer/hexinject:tools - Install hex2raw and prettypacket tools
 net-analyzer/httping:tfo - Enable support for TCP Fast Open
@@ -5554,7 +5556,18 @@ net-analyzer/nrpe:command-args - Build support for specifying the command-line a
 net-analyzer/nrpe:minimal - Only build the check plugins for Nagios/Icinga, and not the daemon.
 net-analyzer/nsca:crypt - Build support for crypted communication with nsca, through dev-libs/libmcrypt. It's recommended not to disable this flag unless all the communication will be handled in an absolutely safe environment.
 net-analyzer/nsca:minimal - Only build and install the send_nsca command and not the daemon. This allows a very minimal install with no overhead when setting up a node.
-net-analyzer/openvas:pdf - Enable pdf report creation
+net-analyzer/openvas:cli - Command Line Interface for OpenVAS Scanner throught net-analyzer/gvm-tools
+net-analyzer/openvas:extras - Extra fonts, pdf results and html docs support
+net-analyzer/openvas:gsa - Greenbone Security Assistant (WebUI) through net-analyzer/greenbone-security-assistant
+net-analyzer/openvas:ldap - Enable support for ldap through net-nds/openldap
+net-analyzer/openvas:ospd - Enable support for scanner wrappers through net-analyzer/ospd
+net-analyzer/openvas:radius - Enable support for radius through net-dialup/freeradius-client
+net-analyzer/openvas-libraries:extras - Html docs support
+net-analyzer/openvas-libraries:ldap - Enable support for ldap
+net-analyzer/openvas-libraries:radius - Enable support for radius
+net-analyzer/openvas-manager:extras - Html docs support
+net-analyzer/openvas-scanner:extras - Html docs support
+net-analyzer/ospd:extras - Html docs support
 net-analyzer/ossec-hids:agent - Build "agent" installation target (see package description)
 net-analyzer/ossec-hids:hybrid - Build "hybrid" installation target
 net-analyzer/ossec-hids:local - Build "local" installation target
@@ -6241,7 +6254,6 @@ net-libs/libbitcoinconsensus:asm - Enable assembly for optimization
 net-libs/libbitcoinconsensus:knots - Build enhanced Bitcoin Knots version, rather than Bitcoin Core
 net-libs/libbtbb:extras - Install pcapdump and btaptap tools
 net-libs/libbtbb:wireshark-plugins - Build the wireshark plugins for bluetooth baseband sniffing
-net-libs/libeXosip:srv - enable support for SRV records DNS queries
 net-libs/libesmtp:ntlm - Enable support for NTLM authentication
 net-libs/libetpan:liblockfile - Enable support for liblockfile library
 net-libs/libetpan:lmdb - Use dev-db/lmdb as cache DB
@@ -7100,11 +7112,6 @@ net-proxy/tsocks:server-lookups - Allow hostname resolution _for_ SOCKS servers
 net-proxy/tsocks:tordns - Apply tordns patch which allows transparent TORification of the DNS queries
 net-proxy/ufdbguard:doc - Download and install the ufdbguard reference manual in PDF.
 net-proxy/ufdbguard:httpd - Build, install and start the provided mini-http daemon with the redirect CGI integrated. Since there is no way to tell ufdbguard to not start it, this is a build-time option.
-net-voip/linphone:assistant - Turn on assistant compiling (needs gtk enabled)
-net-voip/linphone:gsm-nonstandard - Support non-standard GSM frequencies
-net-voip/linphone:sqlite - Turn on compilation of message storage
-net-voip/linphone:tools - Compile tools
-net-voip/linphone:video - Enable video support (display/capture)
 net-voip/telepathy-gabble:plugins - Enable plugin loader
 net-voip/yate:amrnb - use AMR-NB
 net-voip/yate:dahdi - Enable Dahdi driver
