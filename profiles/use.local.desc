@@ -8018,6 +8018,7 @@ sys-apps/razercfg:pm-utils - Installs the pm-utils hooks for suspend/resume and 
 sys-apps/ripgrep:man - Build and install man pages.
 sys-apps/rng-tools:jitterentropy - Enable Jitter RNG entropy support
 sys-apps/rng-tools:nistbeacon - Enable NIST beacon entropy support
+sys-apps/rng-tools:pkcs11 - Enable PKCS11 entropy support
 sys-apps/roccat-tools:input_devices_roccat_ryosmkfx - Enable support for Ryos Mk FX keyboard.
 sys-apps/roccat-tools:input_devices_roccat_skeltr - Enable support for Skeltr keyboard.
 sys-apps/roccat-tools:input_devices_roccat_sova - Enable support for Sova keyboard.
