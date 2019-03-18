@@ -90,7 +90,7 @@ CDEPEND="
 	system-harfbuzz? ( >=media-libs/harfbuzz-1.4.2:0= >=media-gfx/graphite2-1.3.9-r1 )
 	system-icu? ( >=dev-libs/icu-60.2:= )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
-	system-libevent? ( >=dev-libs/libevent-2.0:0= )
+	system-libevent? ( >=dev-libs/libevent-2.0:0=[threads] )
 	system-libvpx? (
 		>=media-libs/libvpx-1.7.0:0=[postproc]
 		<media-libs/libvpx-1.8:0=[postproc]
@@ -170,19 +170,19 @@ if [[ -z $GMP_PLUGIN_LIST ]] ; then
 fi
 
 llvm_check_deps() {
-	if ! has_version "sys-devel/clang:${LLVM_SLOT}" ; then
+	if ! has_version --host-root "sys-devel/clang:${LLVM_SLOT}" ; then
 		ewarn "sys-devel/clang:${LLVM_SLOT} is missing! Cannot use LLVM slot ${LLVM_SLOT} ..."
 		return 1
 	fi
 
 	if use clang ; then
-		if ! has_version "=sys-devel/lld-${LLVM_SLOT}*" ; then
+		if ! has_version --host-root "=sys-devel/lld-${LLVM_SLOT}*" ; then
 			ewarn "=sys-devel/lld-${LLVM_SLOT}* is missing! Cannot use LLVM slot ${LLVM_SLOT} ..."
 			return 1
 		fi
 
 		if use pgo ; then
-			if ! has_version "=sys-libs/compiler-rt-sanitizers-${LLVM_SLOT}*" ; then
+			if ! has_version --host-root "=sys-libs/compiler-rt-sanitizers-${LLVM_SLOT}*" ; then
 				ewarn "=sys-libs/compiler-rt-sanitizers-${LLVM_SLOT}* is missing! Cannot use LLVM slot ${LLVM_SLOT} ..."
 				return 1
 			fi

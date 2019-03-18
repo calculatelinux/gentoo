@@ -29,6 +29,253 @@
 
 #--- END OF EXAMPLES ---
 
+# Sobhan Mohammadpour <sobhan@gentoo.org> (17 Mar 2019)
+# Masked for testing
+=mail-client/geary-3.32.0
+
+# Patrice Clement <monsieurp@gentoo.org> (17 Mar 2019)
+# Old and unmaintained Java libraries. Removal in 30 days.
+dev-java/zemberek
+dev-java/echo2
+
+# Michał Górny <mgorny@gentoo.org> (17 Mar 2019)
+# The current Gentoo version has been added in 2015 and has not been
+# bumped since.  It fails to build with new versions of gperf (#609272)
+# and ffmpeg (#671256).  No maintainer.
+# Removal in 30 days.  Bug #680800.
+media-sound/forked-daapd
+
+# Michał Górny <mgorny@gentoo.org> (17 Mar 2019)
+# Unmaintained.  Last bump in 2016, leaving Gentoo a few releases
+# behind.  The current version fails to build, with two different
+# issues (#610966, #651278).
+# Removal in 30 days.  Bug #610966.
+net-analyzer/netsniff-ng
+
+# Michał Górny <mgorny@gentoo.org> (17 Mar 2019)
+# bzr-fastimport: Unmaintained.  Does not work with current Gentoo
+# versions of dev-python/python-fastimport.  No upstream release since
+# 2012.
+#
+# git-bzr-ng: Unmaintained.  Reverse depedency of bzr-fastimport.
+# Gentoo carries a 2012 snapshot, upstream did not touch the code
+# since 2013.
+#
+# Removal in 30 days.  Bug #591446.
+dev-vcs/bzr-fastimport
+dev-vcs/git-bzr-ng
+
+# Michał Górny <mgorny@gentoo.org> (17 Mar 2019)
+# Live ebuild adde in 2012 and not touched by the maintainer since.
+# Never seen a release ebuild or a snapshot.
+# Removal in 30 days.  Bug #680790.
+x11-misc/simpleswitcher
+
+# Michał Górny <mgorny@gentoo.org> (17 Mar 2019)
+# Added in 2012, started to fail at digest verification shortly
+# afterwards and not mirrored by Gentoo.  Not touched by maintainer
+# since.
+# Removal in 30 days.  Bug #434158.
+x11-misc/xwinwrap
+
+# Michał Górny <mgorny@gentoo.org> (17 Mar 2019)
+# Unmaintained, the previous maintainer last touched it in ~2013
+# and others have bumped it since (last in 2017).  The current version
+# fails tests, is outdated and really needs a bump.  net-misc/youtube-dl
+# is a suitable (and more frequently updated) replacement.
+# Removal in 30 days.  Bug #407381.
+media-video/get_flash_videos
+
+# Mart Raudsepp <leio@gentoo.org> (17 Mar 2019)
+# gjs-1.54 fails to configure with jemalloc-enabled dev-lang/spidermonkey:60
+# as found in main tree currently.  Bug #680006.
+~dev-libs/gjs-1.54.3
+~net-irc/polari-3.30.2
+
+# Lars Wendler <polynomial-c@gentoo.org> (17 Mar 2019)
+# Breaks user crontab (#680764)
+=sys-process/cronie-1.5.3-r1
+
+# Michał Górny <mgorny@gentoo.org> (16 Mar 2019)
+# The current Gentoo version has been added in 2011, and a bump is
+# pending since at least 2012.  Last touched upstream in 2015.
+# A library with no reverse dependencies.
+# Removal in 30 days.  Bug #404299.
+media-libs/rply
+
+# Michał Górny <mgorny@gentoo.org> (16 Mar 2019)
+# Added in 2004 and not updated since (even though upstream made new
+# releases).  Never had a dedicated maintainer.  Fails to build
+# with parallel make.
+# Removal in 30 days.  Bug #314667.
+net-nntp/xrn
+
+# Matt Turner <mattst88@gentoo.org> (16 Mar 2019)
+# Previously packaged drivers, now removed from Gentoo.
+# Keep this mask in place so users are aware, but can also easily unmask them
+# in an overlay if so desired.
+x11-drivers/xf86-input-citron
+x11-drivers/xf86-video-apm
+x11-drivers/xf86-video-ark
+x11-drivers/xf86-video-chips
+x11-drivers/xf86-video-cirrus
+x11-drivers/xf86-video-cyrix
+x11-drivers/xf86-video-i128
+x11-drivers/xf86-video-i740
+x11-drivers/xf86-video-impact
+x11-drivers/xf86-video-mach64
+x11-drivers/xf86-video-neomagic
+x11-drivers/xf86-video-newport
+x11-drivers/xf86-video-nsc
+x11-drivers/xf86-video-rendition
+x11-drivers/xf86-video-s3
+x11-drivers/xf86-video-s3virge
+x11-drivers/xf86-video-savage
+x11-drivers/xf86-video-sis
+x11-drivers/xf86-video-sisusb
+x11-drivers/xf86-video-sunbw2
+x11-drivers/xf86-video-suncg14
+x11-drivers/xf86-video-suncg3
+x11-drivers/xf86-video-suncg6
+x11-drivers/xf86-video-sunffb
+x11-drivers/xf86-video-sunleo
+x11-drivers/xf86-video-suntcx
+x11-drivers/xf86-video-tga
+x11-drivers/xf86-video-trident
+x11-drivers/xf86-video-tseng
+
+# Michał Górny <mgorny@gentoo.org> (16 Mar 2019)
+# The current Gentoo version of Nessus is from 2006 (!).  It does
+# not build for quite some time (#590226), also -client fails with new
+# openssl (#674424).  Upstream has stopped releasing non-proprietary
+# versions.  While at it, remove prelude-nessus that practically
+# has not been touched since 2003.  net-analyzer/openvas is a suggested
+# open source replacement; net-analyzer/nessus-bin provides (outdated)
+# proprietary versions of Nessus.
+# Removal in 30 days.  Bug #680636.
+net-analyzer/libnasl
+net-analyzer/nessus
+net-analyzer/nessus-client
+net-analyzer/nessus-core
+net-analyzer/nessus-libraries
+net-analyzer/nessus-plugins
+net-analyzer/prelude-nessus
+sec-policy/selinux-nessus
+
+# Michał Górny <mgorny@gentoo.org> (16 Mar 2019)
+# MayaVi requires Python 2, at the same time depending on IPython
+# which removed Python 2 support.  The current Gentoo version is
+# from 2016 and has not been bumped.  It fails with various versions
+# of sci-libs/vtk (#624082, #663152).
+#
+# ETS is a suite of NIH packages that have no reverse dependencies
+# except for MayaVi and Py2.7 support in recently added
+# dev-python/construct.  The packages were added without a dedicated
+# maintainer and were incidentally updated since.  Some of them have
+# various unsolved issues including segfaults (#654090), bundled
+# libraries (#450466), semi-broken ebuilds (#678042).
+#
+# Removal in 30 days.  Bug #672412.
+dev-python/apptools
+dev-python/blockcanvas
+dev-python/chaco
+dev-python/codetools
+dev-python/enable
+dev-python/enaml
+dev-python/encore
+dev-python/envisage
+dev-python/ets
+dev-python/etsdevtools
+dev-python/etsproxy
+dev-python/graphcanvas
+dev-python/pyface
+dev-python/scimath
+dev-python/traits
+dev-python/traitsui
+sci-visualization/mayavi
+
+# Michał Górny <mgorny@gentoo.org> (16 Mar 2019)
+# ProDy was added in 2015 and not bumped since (with upstream making
+# frequent releases).  The primary maintainer abandoned it.  The Gentoo
+# version requires Python 2, while it depends on IPython which dropped
+# support for Python 2.
+#
+# pymol-plugins-dynamics is its only revdep, added and abandoned
+# by the primary maintainer about the same time as ProDy.  Last bumped
+# in 2017, making it behind upstream.
+#
+# Removal in 30 days.  Bug #672410.
+sci-chemistry/prody
+sci-chemistry/pymol-plugins-dynamics
+
+# Michał Górny <mgorny@gentoo.org> (16 Mar 2019)
+# Major browsers stopped supporting NPAPI plugins a while ago.
+# Furthermore, modern browsers carry built-in multimedia support,
+# rendering media plugins redundant.  Last release in 2014.
+# Removal in 30 days.  Bug #671854.
+www-plugins/mozplugger
+
+# Michał Górny <mgorny@gentoo.org> (15 Mar 2019)
+# Package added in 2014 and not updated since.  The current Gentoo
+# version used to violate multilib-strict (#627944), now it does not
+# build at all.
+# Removal in 30 days.  Bug #638500.
+dev-util/igprof
+
+# Michał Górny <mgorny@gentoo.org> (15 Mar 2019)
+# The current release is from 2005, upstream is gone.  Last patch
+# added in 2010, since then the package is completely unmaintained.
+# Very bad ebuild quality, blocking strictening of Portage behavior.
+# Removal in 30 days.  Bug #587306.
+sys-boot/quik
+
+# Michał Górny <mgorny@gentoo.org> (15 Mar 2019)
+# Upstream website disappeared, and along with it remote index needed
+# for the program to work.  No maintainer; package last touched in 2012.
+# Removal in 30 days.  Bug #673600.
+app-text/rfcutil
+
+# Michał Górny <mgorny@gentoo.org> (15 Mar 2019)
+# Unmaintained in Gentoo, obsoleted upstream.  Tests fail (#632706).
+# Upstream suggests switching to Kubernetes.
+# Removal in 30 days.  Bug #676728.
+app-admin/fleet
+
+# Michał Górny <mgorny@gentoo.org> (15 Mar 2019)
+# Unmaintained in Gentoo, abandoned upstream.  Last commit in 2012.
+# Fails to build, in multiple ways (#638842, #672190, #672196).
+# One of the two remaining unconditional revdeps of dev-libs/dietlibc.
+# Many alternatives exist, starting with net-analyzer/dsniff.
+# Removal in 30 days.  Bug #678520.
+net-analyzer/dietsniff
+
+# Michał Górny <mgorny@gentoo.org> (15 Mar 2019)
+# Last reverse dependency of dev-libs/libgcrypt-1.5* (#656378).  Current
+# version is outdated, maintainer is MIA and the new versions are
+# in distro-unfriendly AppImage format (#661740).
+# Removal in 30 days.  Bug #677486.
+dev-util/staruml-bin
+=dev-libs/libgcrypt-1.5*
+
+# Michał Górny <mgorny@gentoo.org> (15 Mar 2019)
+# pyliblzma installs an old 'lzma' module that is incompatible with
+# the 'lzma' built-in in Python 3.  As a result, programs written
+# to conditionally import the latter when available (assuming it will
+# have Python 3 API) are broken by its presence.  The suggested
+# replacement is dev-python/backports-lzma that is backported
+# from Python 3.
+#
+# Yum is the only reverse dependency of pyliblzma left (#643312).  Its
+# last release is from 2011, and the current Gentoo snapshot is
+# from 2017.  Upstream git hosting / gitweb is broken and makes it
+# impossible to fetch current sources.  Fedora is apparently replacing
+# it with DNF.
+#
+# Removal in 30 days.  Bug #643308.
+app-arch/createrepo
+dev-python/pyliblzma
+sys-apps/yum
+
 # Michał Górny <mgorny@gentoo.org> (13 Mar 2019)
 # Obscure package with multiple bugs open.  Blocks removal
 # of dev-libs/dietlibc (#498256) and dev-libs/beecrypt (#666599).
@@ -149,7 +396,6 @@ sys-fs/cryptmount
 # Matt Turner <mattst88@gentoo.org> (02 Mar 2019)
 # Old, unused drivers.
 # Masked for removal in 30 days. Bug #679256
-x11-drivers/xf86-input-elographics
 x11-drivers/xf86-video-newport
 x11-drivers/xf86-video-tdfx
 x11-drivers/xf86-video-voodoo
@@ -203,8 +449,7 @@ app-arch/freeze
 # Jeroen Roovers <jer@gentoo.org> (31 Jan 2019)
 # Depends on =dev-libs/openssl-1.1.1*
 # bug #670574
-=net-libs/nodejs-11.10*
-=net-libs/nodejs-11.11*
+=net-libs/nodejs-11*
 
 # Dennis Lamm <expeditioneer@gentoo.org> (29 Jan 2019)
 # Depends on >=app-text/enchant-2.0.0 which is masked
@@ -385,10 +630,6 @@ sys-devel/automake:1.8
 # See: https://github.com/perl5-dbi/DBD-mysql/issues/117
 =dev-perl/DBD-mysql-4.42.0
 
-# Nicolas Bock <nicolasbock@gentoo.org> (17 Jul 2017)
-# Keep shotwell development series masked.
->=media-gfx/shotwell-0.29
-
 # Nicolas Bock <nicolasbock@gentoo.org> (31 Oct 2017)
 # There are multiple unresolved upstream issues with >=jabref-bin-4.0 (#636036).
 # If you still would like to use this version, please report any issues to
@@ -542,6 +783,8 @@ www-plugins/chrome-binary-plugins:unstable
 
 # Michael Weber <xmw@gentoo.org> (17 Jul 2013)
 # Upstream next versions
+# Michał Górny <mgorny@gentoo.org> (15 Mar 2019)
+# No single unmasked version since.  Removal in 30 days.  Bug #671238.
 >=sys-boot/raspberrypi-firmware-1_pre
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (03 Jan 2009)
