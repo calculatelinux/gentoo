@@ -119,7 +119,7 @@ DEPEND="${COMMON_DEPEND}
 "
 
 PATCHES=(
-	# Patches from gnome-3-26 branch on top of 3.26.2
+	# Patches from gnome-3-28 branch on top of 3.28.3
 	"${WORKDIR}"/patches/
 	# Change favorites defaults, bug #479918
 	"${FILESDIR}"/${PV}-defaults.patch

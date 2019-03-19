@@ -86,12 +86,6 @@ x11-misc/xwinwrap
 # Removal in 30 days.  Bug #407381.
 media-video/get_flash_videos
 
-# Mart Raudsepp <leio@gentoo.org> (17 Mar 2019)
-# gjs-1.54 fails to configure with jemalloc-enabled dev-lang/spidermonkey:60
-# as found in main tree currently.  Bug #680006.
-~dev-libs/gjs-1.54.3
-~net-irc/polari-3.30.2
-
 # Lars Wendler <polynomial-c@gentoo.org> (17 Mar 2019)
 # Breaks user crontab (#680764)
 =sys-process/cronie-1.5.3-r1
@@ -190,7 +184,8 @@ dev-python/etsproxy
 dev-python/graphcanvas
 dev-python/pyface
 dev-python/scimath
-dev-python/traits
+=dev-python/traits-4.5.0
+=dev-python/traits-4.6.0
 dev-python/traitsui
 sci-visualization/mayavi
 
@@ -373,12 +368,6 @@ app-arch/star
 # Fails to build with ffmpeg-4 (bug #673352). Dead upstream.
 # Masked for removal in 30 days.
 media-sound/karlyriceditor
-
-# Matt Turner <mattst88@gentoo.org> (06 Mar 2019)
-# Does not build with glibc >= 2.25 (stabilized a year ago). Unmaintained by
-# maintainer-by-proxy: Bugs #628734 and #641176
-# Removal in 30 days
-sys-fs/cryptmount
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (06 Mar 2019)
 # Mask rust 1.33.0 & co because it breaks firefox simd

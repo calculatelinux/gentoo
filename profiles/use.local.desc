@@ -6286,6 +6286,7 @@ net-libs/libproxy:gnome - Enable support for reading proxy settings from GNOME
 net-libs/libproxy:kde - Enable support for reading proxy settings from KDE
 net-libs/libproxy:spidermonkey - Use libmozjs from dev-lang/spidermonkey for PAC parsing
 net-libs/libproxy:webkit - Use libjavascriptcoregtk from net-libs/webkit-gtk for PAC parsing
+net-libs/libpsl:man - Build man-pages
 net-libs/libqmi:mbim - Support QMI over Mobile Broadband Interface Model (MBIM)
 net-libs/libsoup:gssapi - Enable GSSAPI support
 net-libs/libsoup:samba - Use net-fs/samba for NTLM Single Sign-On
@@ -8025,7 +8026,7 @@ sys-apps/portage:xattr - Preserve extended attributes (filesystem-stored metadat
 sys-apps/portage-mgorny:ipc - Use inter-process communication between Portage and running ebuilds.
 sys-apps/portage-mgorny:native-extensions - Compiles native "C" extensions (speedups, instead of using Python backup code). Currently includes libc-locales. This should only be temporarily disabled for some bootstrapping operations. Cross-compilation is not supported.
 sys-apps/portage-mgorny:xattr - Preserve extended attributes (filesystem-stored metadata) when installing files. Usually only required for hardened systems.
-sys-apps/proot:care - Build dynamic CARE binary (more info - http://reproducible.io/)
+sys-apps/proot:care - Build dynamic CARE binary (more info - https://proot-me.github.io)
 sys-apps/qingy:consolekit - Enable native consolekit support
 sys-apps/qingy:opensslcrypt - Encrypt communications between qingy and its GUI using dev-libs/openssl
 sys-apps/razercfg:pm-utils - Installs the pm-utils hooks for suspend/resume and requires sys-power/pm-utils
@@ -8457,6 +8458,14 @@ sys-fs/btrfs-progs:zstd - Enable zstd compression support.
 sys-fs/btrfsmaintenance:systemd - Enable systemd services and timers instead of cron timers
 sys-fs/cryfs:custom-optimization - Use user-defined compiler optimization level
 sys-fs/cryfs:update-check - Enable automatic checking for updates and security vulnerabilities
+sys-fs/cryptmount:argv0switch - Default action given by progname.
+sys-fs/cryptmount:cswap - Enable support for encrypted swap.
+sys-fs/cryptmount:fsck - Check filesystems before mounting.
+sys-fs/cryptmount:gcrypt - Support libgcrypt-encryption of keys.
+sys-fs/cryptmount:largefile - Enable support for large files.
+sys-fs/cryptmount:luks - Enable key management via LUKS
+sys-fs/cryptmount:mount - Use systemd mount/umount for operations.
+sys-fs/cryptmount:openssl - Support openssl-encryption of keys.
 sys-fs/cryptsetup:argon2 - Enable password hashing algorithm from app-crypt/argon2
 sys-fs/cryptsetup:gcrypt - Use dev-libs/libgcrypt crypto backend
 sys-fs/cryptsetup:kernel - Use kernel crypto backend (mainly for embedded systems)
