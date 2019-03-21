@@ -7575,6 +7575,12 @@ sci-libs/lapack-reference:deprecated - Build deprecated routines
 sci-libs/lemon:coin - Enable the sci-libs/coinor-clp and sci-libs/coinor-cbc graph algorithms
 sci-libs/lemon:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
 sci-libs/libccd:double - Use double precision floats.
+sci-libs/libgeodecomp:cuda - Enables plugins for NVIDIA GPUs
+sci-libs/libgeodecomp:hpx - Enables HPX backend
+sci-libs/libgeodecomp:opencl - Enables OpenCL backend
+sci-libs/libgeodecomp:opencv - Enables OpenCV related code
+sci-libs/libgeodecomp:silo - Enables SILO related code
+sci-libs/libgeodecomp:visit - Enables VisIt related code
 sci-libs/libghemical:mopac7 - Use sci-chemistry/mopac7 for semi-empirical calculations
 sci-libs/libghemical:mpqc - Use sci-chemistry/mpqc for quantum-mechanical calculations
 sci-libs/libsc:romio - Build with support for the ROMIO MPI-IO component
@@ -8203,6 +8209,7 @@ sys-cluster/ceph:libatomic - Use libatomic instead of builtin atomic operations
 sys-cluster/ceph:lttng - Add support for LTTng
 sys-cluster/ceph:mgr - Build the ceph-mgr daemon
 sys-cluster/ceph:nss - Use dev-libs/nss for cryptography
+sys-cluster/ceph:numa - Use sys-process/numactl for numa support in rocksdb
 sys-cluster/ceph:rabbitmq - Use rabbitmq-c to build rgw amqp push endpoint
 sys-cluster/ceph:radosgw - Add radosgw support
 sys-cluster/ceph:system-boost - Use system dev-libs/boost instead of the bundled one
