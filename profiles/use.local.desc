@@ -3671,6 +3671,7 @@ gnome-extra/gnome-contacts:telepathy - Start chat from contact details
 gnome-extra/gnome-dvb-daemon:totem - Build a plugin for media-video/totem
 gnome-extra/gnome-shell-extension-gsconnect:nautilus - Install Nautilus extension for sending files via GSConnect
 gnome-extra/gnome-software:firmware - Enable firmware update support through sys-apps/fwupd
+gnome-extra/gnome-software:packagekit - Enable module for package manager integration
 gnome-extra/gnome-system-monitor:systemd - Display sys-apps/systemd metadata, e.g. unit names, for running processes
 gnome-extra/libgda:canvas - Enable support for x11-libs/goocanvas
 gnome-extra/libgda:http - Enable embedded net-libs/libsoup based server
@@ -7328,6 +7329,7 @@ net-wireless/wpa_supplicant:eap-sim - Add support for EAP-SIM authentication alg
 net-wireless/wpa_supplicant:eapol_test - Build and install eapol_test binary
 net-wireless/wpa_supplicant:fasteap - Add support for FAST-EAP authentication algorithm
 net-wireless/wpa_supplicant:hs2-0 - Add support for 802.11u and Passpoint for HotSpot 2.0
+net-wireless/wpa_supplicant:macsec - Add support for wired macsec
 net-wireless/wpa_supplicant:p2p - Add support for Wi-Fi Direct mode
 net-wireless/wpa_supplicant:privsep - Enable wpa_priv privledge separation binary
 net-wireless/wpa_supplicant:ps3 - Add support for ps3 hypervisor driven gelic wifi
