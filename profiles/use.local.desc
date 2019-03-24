@@ -4780,6 +4780,8 @@ media-sound/beets:replaygain - Enable support for Replay Gain metadata calculati
 media-sound/beets:thumbnail - Enable album thumbnails generation
 media-sound/beets:webserver - Enable embedded webserver support through dev-python/flask
 media-sound/bluez-alsa:hcitop - Enable top-like monitoring tool for HCI
+media-sound/bluez-alsa:ldac - Enable support for AOSP media-libs/libldac dispatcher
+media-sound/bluez-alsa:ofono - Enable ofono elephony support
 media-sound/cantata:cdio - Use dev-libs/libcdio-paranoia for CD support (instead of cdparanoia)
 media-sound/cantata:http-server - Enable internal HTTP server to play non-MPD files
 media-sound/cantata:replaygain - Enable ReplayGain support, for relative volume adjustments
@@ -7203,7 +7205,6 @@ net-vpn/tinc:uml - Enable support for User Mode Linux Sockets
 net-vpn/tinc:vde - Enable Virtual Distributed Ethernet (VDE) based networking
 net-vpn/tor:scrypt - Use app-crypt/libscrypt for the scrypt algorithm
 net-vpn/tor:tor-hardening - Compile tor with hardening on vanilla compilers/linkers
-net-vpn/tor:web - Build a tor2web service instead of a tor client
 net-vpn/tor:zstd - Use app-arch/zstd for compression
 net-vpn/vpnc:resolvconf - Enable support for DNS managing framework net-dns/openresolv
 net-vpn/wireguard:debug - Enable verbose debug reporting in dmesg of various WireGuard peer and device information.
