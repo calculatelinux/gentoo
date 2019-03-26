@@ -6670,6 +6670,7 @@ net-misc/electrum-ltc:email - Enable plugin to support emailing invoices
 net-misc/electrum-ltc:qrcode - Enable QR code scanning with media-gfx/zbar
 net-misc/electrum-ltc:sync - Enable plugin to sync wallet metadata across multiple Electrum clients
 net-misc/electrum-ltc:vkb - Enable plugin for virtual keyboard
+net-misc/endlessh:tools - Install additional python script which can be used to parse logs and save summary to sqlite database
 net-misc/eventd:libcanberra - Enable plugin for sounds via media-libs/libcanberra
 net-misc/eventd:libnotify - Enable plugin to relay events to notification daemon (Note: not required for local notifications via net-misc/eventd)
 net-misc/eventd:notification - Enable plugin to display on-screen notifications
@@ -7885,6 +7886,7 @@ sec-policy/selinux-base-policy:unconfined - Enable support for the unconfined SE
 sys-apps/accountsservice:elogind - Use sys-auth/elogind instead of sys-auth/consolekit for session tracking
 sys-apps/accountsservice:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for session tracking
 sys-apps/baselayout:split-usr - Enable this if /bin and /usr/bin are separate directories
+sys-apps/baselayout-prefix:split-usr - Enable this if /bin and /usr/bin are separate directories
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin.
 sys-apps/busybox:math - Enable math support in gawk (requires libm)
 sys-apps/busybox:mdev - Create the appropriate symlink in /sbin and install mdev.conf and support files
@@ -8269,7 +8271,9 @@ sys-cluster/heat:memcached - Installs the memcached server
 sys-cluster/hpx:papi - Use dev-libs/papi for NaCl
 sys-cluster/hpx:perftools - Use dev-util/google-perftools for memory allocation
 sys-cluster/hpx:tbb - Use dev-cpp/tbb for memory allocation
+sys-cluster/keepalived:bfd - compile with support for Bidirectional Forwarding Detection (BFD).
 sys-cluster/keepalived:json - compile with signal to dump configuration and stats as JSON.
+sys-cluster/keepalived:regex - compile with support for regex in health checks
 sys-cluster/legion:gasnet - Enable GASNet lib support
 sys-cluster/legion:hwloc - Enable HWLoc lib support
 sys-cluster/maui:pbs - Enable pbs integration
