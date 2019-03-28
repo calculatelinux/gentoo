@@ -5765,6 +5765,7 @@ net-dns/ddclient:examples - Install various example files, like for cron.
 net-dns/ddclient:hardened - Use iproute2 instead of ifconfig to grab an IP address
 net-dns/ddclient:iproute2 - Use sys-apps/iproute2 instead of sys-apps/net-tools for interaction.
 net-dns/dnsdist:dnscrypt - Enable the ability to act as a DNSCrypt server
+net-dns/dnsdist:fstrm - Enable support for fstrm via dev-libs/fstrm
 net-dns/dnsdist:regex - Enable support for regular expression matching via dev-libs/re2
 net-dns/dnsdist:remote-logging - Enable support for remote logging via dev-libs/protobuf
 net-dns/dnsdist:ssl - Enable support for and encrypted client-server communication via dev-libs/libsodium
@@ -7964,6 +7965,7 @@ sys-apps/flashrom:tools - Install additional tools
 sys-apps/flashrom:usbblaster - Enable support for Altera USB-Blaster dongles
 sys-apps/flashrom:usbblaster_spi - Enable support for Altera USB-Blaster dongles
 sys-apps/flashrom:wiki - Enable wiki informations, like supported devices etc.
+sys-apps/fwupd:agent - Enable update notification agent
 sys-apps/fwupd:colorhug - Enable ColorHug support through x11-misc/colord package.
 sys-apps/fwupd:dell - Enable Dell-specific support.
 sys-apps/fwupd:elogind - Use sys-auth/elogind instead of sys-auth/consolekit for session tracking
