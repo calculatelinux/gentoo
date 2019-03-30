@@ -29,6 +29,31 @@
 
 #--- END OF EXAMPLES ---
 
+# Anthony G. Basile <blueness@gentoo.org>
+# Mask because it breaks the toolchain if
+# lto is enabled. Bug #682018
+=dev-libs/isl-0.21
+
+# Aaron Bauamn <bman@gentoo.org> (29 Mar 2019)
+# Longstanding security vulnerabilities
+# No upstream releases in years
+# Removal in 30 days. Bug #650888
+media-gfx/swftools
+
+# Michał Górny <mgorny@gentoo.org> (29 Mar 2019)
+# Unmaintained.  Fails to build with ncurses[tinfo]; fixing it reveals
+# further build failures.  Last release in 2001.  Upstream has shortly
+# revived coding in 2015 but did not finish the update.
+# Removal in 30 days.  Bug #617184.
+media-sound/playmidi
+
+# Michał Górny <mgorny@gentoo.org> (29 Mar 2019)
+# Unmaintained.  The current version was added in 2008, and a bump
+# was requested in 2010.  Since then, upstream has disappeared,
+# and the tool requires fetching extra files from the upstream website.
+# Removal in 30 days.  Bug #305121.
+media-video/episoder
+
 # Robin H. Johnson <robbat2@gentoo.org> (25 Mar 2019)
 # Requires >=dev-lang/lua-5.3 which is masked
 sys-apps/likwid
@@ -594,11 +619,6 @@ media-libs/libsub
 # Eray Aslan <eras@gentoo.org> (01 Mar 2019)
 # Mask experimental software
 =mail-mta/postfix-3.5*
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (23 Feb 2019)
-# Fails to build with glibc-2.28, bug 669206.
-# Removal in 30 days.
-app-arch/freeze
 
 # Miroslav Šulc <fordfrog@gentoo.org> (10 Feb 2019)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
