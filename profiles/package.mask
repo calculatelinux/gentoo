@@ -29,6 +29,55 @@
 
 #--- END OF EXAMPLES ---
 
+# Virgil Dupras <vdupras@gentoo.org> (31 Mar 2019)
+# Unmaintained, no revdeps.
+# Removal in 30 days. Bug #616596
+dev-python/statistics
+dev-python/reverend
+
+# Michał Górny <mgorny@gentoo.org> (31 Mar 2019)
+# Unmaintained.  Broken with new openssl (#674192) and new glibc
+# (#643460).  Last upstream beta release in 2002.  Carries ever-growing
+# pile of patches.  No reverse dependencies.
+# Removal in 30 days.  Bug #674192.
+net-analyzer/dsniff
+
+# Michał Górny <mgorny@gentoo.org> (31 Mar 2019)
+# Unmaintained.  The current snapshot was added by a non-maintainer to
+# stop blocking Qt4 removal.  Fails to build with new glibc.
+# Last upstream release in 2015, latest commits mid-2018.
+# No reverse dependencies.
+# Removal in 30 days.  Bug #656096.
+sci-chemistry/ball
+
+# Michał Górny <mgorny@gentoo.org> (31 Mar 2019)
+# Undermaintained.  Fails to build with new glibc (#638048), OpenGL
+# headers (#516292).  Missing dependencies (#586186).  No reverse
+# dependencies.
+# Removal in 30 days.  Bug #638048.
+sci-biology/arb
+
+# Michał Górny <mgorny@gentoo.org> (31 Mar 2019)
+# Unmaintained.  Still broken with new glibc.  Carries a lot of local
+# patches.  Last upstream release in 2011, with a few commits in git
+# since.  The only revdep is app-admin/rsyslog[grok].
+# Removal in 30 days.  Bug #660332.
+dev-libs/grok
+
+# Michał Górny <mgorny@gentoo.org> (31 Mar 2019)
+# Unmaintained.  Needs bump.  The current Gentoo version is from 2004,
+# with last upstream release in 2015.  Carries local patches and hacks
+# to even build.  Has format-security warnings.
+# Removal in 30 days.  Bug #532502.
+net-ftp/weex
+
+# Michał Górny <mgorny@gentoo.org> (31 Mar 2019)
+# Unmaintained.  The current version is apparently broken, and it is
+# unclear if the problem was ever fixed upstream.  Last release in 2011,
+# with low commit activity since.
+# Removal in 30 days.  Bug #389391.
+www-apache/mod_authnz_external
+
 # Anthony G. Basile <blueness@gentoo.org>
 # Mask because it breaks the toolchain if
 # lto is enabled. Bug #682018
@@ -608,14 +657,6 @@ x11-drivers/xf86-video-voodoo
 # Masked for removal in 30 days. Bug #679256
 x11-libs/libxkbui
 
-# Andreas Sturmlechner <asturm@gentoo.org> (02 Mar 2019)
-# Completely broken. Masked for removal in 30 days.
-# Bugs 630924, 639310, 640728, 644654, 654892, 655096, 670822
-media-video/dcpomatic
-media-libs/libasdcp-cth
-media-libs/libdcp
-media-libs/libsub
-
 # Eray Aslan <eras@gentoo.org> (01 Mar 2019)
 # Mask experimental software
 =mail-mta/postfix-3.5*
@@ -623,11 +664,6 @@ media-libs/libsub
 # Miroslav Šulc <fordfrog@gentoo.org> (10 Feb 2019)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
 =www-servers/tomcat-9.0.16
-
-# Jeroen Roovers <jer@gentoo.org> (31 Jan 2019)
-# Depends on =dev-libs/openssl-1.1.1*
-# bug #670574
-=net-libs/nodejs-11*
 
 # Dennis Lamm <expeditioneer@gentoo.org> (29 Jan 2019)
 # Depends on >=app-text/enchant-2.0.0 which is masked
@@ -885,10 +921,6 @@ app-admin/amazon-ec2-init
 # Masked for testing
 =sys-fs/fuse-3*
 =net-fs/sshfs-3*
-
-# Denis Dupeyron <calchan@gentoo.org> (12 Sep 2016)
-# Masked for testing, see bug #588894.
-=x11-misc/light-locker-1.7.0-r1
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (03 Apr 2016)
 # Can exhaust all available memory depending on task

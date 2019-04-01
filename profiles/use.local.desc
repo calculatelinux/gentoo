@@ -1144,6 +1144,7 @@ app-office/gnucash:register2 - Use the new register (Experimental)
 app-office/gnumeric:libgda - Enable database support through gnome-extra/libgda.
 app-office/gnumeric:perl - Enable perl plugin loader.
 app-office/gnumeric:python - Enable python plugin loader.
+app-office/grisbi:goffice - enable goffice graphic support
 app-office/kexi:experimental - Enable features deemed experimental by upstream
 app-office/kexi:marble - Enable displaying of maps using kde-apps/marble
 app-office/kexi:mdb - Enable support for Microsoft Access database
@@ -2158,6 +2159,7 @@ dev-libs/actor-framework:static - Provides a static build
 dev-libs/actor-framework:test - Builds the provided unit tests
 dev-libs/antlr-c:debugger - Compiles debug info into the library
 dev-libs/appstream:apt - Enables Debians APT support
+dev-libs/appstream-glib:fonts - Enable fonts support for appstream-builder.
 dev-libs/appstream-glib:stemmer - Add word stemming via dev-libs/snowball-stemmer.
 dev-libs/apr:older-kernels-compatibility - Enable binary compatibility with older kernels
 dev-libs/apr:urandom - Use /dev/urandom instead of /dev/random
@@ -5155,9 +5157,6 @@ media-video/chaplin:transcode - Enable DVD ripping and transcoding
 media-video/clive:clipboard - Support reading from X clipboard
 media-video/clive:pager - Support pager!?
 media-video/clive:password - Support password controlled sites
-media-video/dcpomatic:alsa - Utilize alsa output of media-libs/rtaudio.
-media-video/dcpomatic:jack - Utilize jack output of media-libs/rtaudio.
-media-video/dcpomatic:pulseaudio - Utilize pulseaudio output of media-libs/rtaudio.
 media-video/dv2sub:kino - install kino plugin
 media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/dvdrip:subtitles - Enables support for subtitle ripping
@@ -5881,6 +5880,8 @@ net-firewall/shorewall:ipv4 - Installs everything needed to create a full IPv4 f
 net-firewall/shorewall:ipv6 - Adds the capability to create a full IPv6 firewall (requires net-firewall/shorewall ipv4 USE flag)
 net-firewall/shorewall:lite4 - Installs everything needed to just *run* an IPv4 compiled firewall script created with net-firewall/shorewall ipv4 USE flag
 net-firewall/shorewall:lite6 - Installs everything needed to just *run* an IPv6 compiled firewall script created with net-firewall/shorewall ipv6 USE flag
+net-firewall/ufw:examples - Example ufw config files
+net-firewall/ufw:ipv6 - IPv6 support for iptables
 net-firewall/ufw-frontends:kde - Use kdesu to gain root privileges (note: the flag has lower priority than "policykit")
 net-firewall/ufw-frontends:policykit - Use pkexec to gain root privileges
 net-fs/autofs:dmalloc - Enable debugging with the dmalloc library
@@ -6713,12 +6714,11 @@ net-misc/iputils:arping - Build and install arping -- tool for sending ARP reque
 net-misc/iputils:clockdiff - Build and install clockdiff -- tool for comparing clocks via ICMP packets
 net-misc/iputils:gcrypt - Use dev-libs/libgcrypt for md5 support
 net-misc/iputils:nettle - Use dev-libs/nettle for md5 support
-net-misc/iputils:openssl - Use dev-libs/openssl for md5 support
 net-misc/iputils:rarpd - Build and install rarpd -- server for handling RARP (reverse ARP) requests; generally only used by old systems
 net-misc/iputils:rdisc - Build and install rdisc -- server for the client side of the ICMP router discover protocol
 net-misc/iputils:tftpd - Build and install tftpd -- server for the Trivial File Transfer Protocol (see also net-ftp/tftp-hpa)
 net-misc/iputils:tracepath - Build and install tracepath -- tool for tracing network paths for discovering MTU values
-net-misc/iputils:traceroute - Build and install traceroute -- tool for tracing network paths (see also net-analyzer/traceroute)
+net-misc/iputils:traceroute6 - Build and install deprecated traceroute6 tool. It's recommended to use net-analyzer/traceroute instead.
 net-misc/kafka-bin:internal-zookeeper - Use bundled local zookeeper instance
 net-misc/kafkacat:json - Enable json support
 net-misc/kea:openssl - Use dev-libs/openssl instead of Botan
