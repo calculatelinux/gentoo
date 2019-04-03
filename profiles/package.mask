@@ -29,6 +29,43 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (03 Apr 2019)
+# Does not build with ncurses[tinfo].  The current version is from 2004,
+# and it seems to have been abandoned upstream.
+# Removal in 30 days.  Bug #678866.
+games-roguelike/zangband
+
+# Michał Górny <mgorny@gentoo.org> (03 Apr 2019)
+# Does not build against libffi-3.3.  Also other unsolved build failures
+# (#619662, #606096).  Needs version bump for almost 2 years.
+# Removal in 30 days.  Bug #667476.
+dev-lang/polyml
+
+# Michał Górny <mgorny@gentoo.org> (03 Apr 2019)
+# Depends on dev-lang/polyml that no longer builds.  The current version
+# is two years old, and needs a bump for 1.5 year.
+# Removal in 30 days.  Bug #682406.
+sci-mathematics/isabelle
+
+# Michał Górny <mgorny@gentoo.org> (03 Apr 2019)
+# Unmaintained.  Multiple unresolved build failures (#630280, #638618,
+# #639648).  The current version was added in 2012, and haven't been
+# bumped since.  Upstream has released 1.0.0 in 2016 (#638464).
+# Removal in 30 days.  Bug #682402.
+dev-libs/blitz
+
+# Michał Górny <mgorny@gentoo.org> (03 Apr 2019)
+# Bundles dev-libs/rapidjson.  Fails to build with gcc-6+.  The packaged
+# version is from 2015, and needs bump for almost 2 years.
+# Removal in 30 days.  Bug #580358.
+dev-libs/handystats
+
+# Michał Górny <mgorny@gentoo.org> (03 Apr 2019)
+# Does not build against ffmpeg-4.  Last release in 2012.  Last upstream
+# commits in 2017.
+# Removal in 30 days.  Bug #673826.
+media-plugins/vdr-markad
+
 # Virgil Dupras <vdupras@gentoo.org> (31 Mar 2019)
 # Unmaintained, no revdeps.
 # Removal in 30 days. Bug #616596
