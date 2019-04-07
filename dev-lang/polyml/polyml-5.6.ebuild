@@ -35,6 +35,7 @@ src_configure() {
 		--enable-shared \
 		--disable-static \
 		--with-system-libffi \
+		--with-pic=pic-only \
 		$(use_with X x) \
 		$(use_with gmp) \
 		$(use_with portable) \

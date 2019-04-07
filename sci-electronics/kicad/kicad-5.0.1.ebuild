@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -50,7 +50,7 @@ CHECKREQS_DISK_BUILD="800M"
 
 PATCHES=(
 	"${FILESDIR}"/"${PN}-5.0.0-curl.patch"
-	"${FILESDIR}"/"${PN}-help-path.patch"
+	"${FILESDIR}"/"${PN}-5.0.0-help.patch"
 )
 
 pkg_setup() {
