@@ -3182,6 +3182,8 @@ dev-util/gtk-doc:highlight - Enable source code highlighting
 dev-util/gtk-doc:vim - Enable source code highlighting through app-editors/vim
 dev-util/heaptrack:zstd - Enable support for ZSTD compression using app-arch/zstd
 dev-util/idea-community:custom-jdk - Install and use IntelliJ's custom JRE.
+dev-util/idea-community:jbr11 - Install and use the Java 11 based version of JetBrains Runtime.
+dev-util/idea-community:jbr8 - Install and use the Java 8 based version of JetBrains Runtime.
 dev-util/idea-ultimate:custom-jdk - Install and use IntelliJ's custom JRE.
 dev-util/intel-ocl-sdk:android - Install android related files
 dev-util/intel-ocl-sdk:system-boost - Use system boost (dev-libs/boost) instead of bundled one
@@ -5052,7 +5054,6 @@ media-sound/wildmidi:player - Install the wildmidi player
 media-sound/xmms2:airplay - Support for airplay format
 media-sound/xmms2:asf - Support for Monkey's Audio (APE) format with help of bundled libasf
 media-sound/xmms2:fluidsynth - Enable fluidsynth support (MIDI)
-media-sound/xmms2:gvfs - Transport for glibs virtual filesystem
 media-sound/xmms2:ices - Icecast source output plugin
 media-sound/xmms2:mac - Support for Monkey's Audio (APE) format with help of media-sound/mac
 media-sound/xmms2:mlib-update - Enable building of xmms2-mlib-updater client
@@ -8886,7 +8887,6 @@ www-client/jd:oniguruma - Use dev-libs/oniguruma for regular expression
 www-client/links:libevent - Enable dev-libs/libevent support
 www-client/lynx:gnutls - Use gnutls library for HTTPS support (openssl is the default library for HTTPS support).
 www-client/lynx:ssl - Enable HTTPS support.
-www-client/midori:granite - Enable support for the elementary library dev-libs/granite
 www-client/netsurf:bmp - BMP bitmap image support (media-libs/libnsbmp)
 www-client/netsurf:duktape - Use duktape.org javascript engine
 www-client/netsurf:fbcon_frontend_sdl - Use framebuffer frontend sdl
