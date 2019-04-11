@@ -15,7 +15,7 @@ if [[ ${PV} == 9999* ]] ; then
 else
 	SRC_URI="https://github.com/vim/vim/archive/v${PV}.tar.gz -> ${P}.tar.gz
 		https://dev.gentoo.org/~radhermit/vim/vim-8.0.0938-gentoo-patches.tar.bz2"
-	KEYWORDS="alpha amd64 arm arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 s390 ~sh sparc ~x86 ~ppc-aix ~x64-cygwin ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+	KEYWORDS="alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 s390 ~sh sparc ~x86 ~ppc-aix ~x64-cygwin ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 fi
 
 DESCRIPTION="Vim, an improved vi-style text editor"
@@ -27,7 +27,6 @@ IUSE="X acl cscope debug gpm lua luajit minimal nls perl python racket ruby seli
 REQUIRED_USE="
 	luajit? ( lua )
 	python? ( ${PYTHON_REQUIRED_USE} )
-	vim-pager? ( !minimal )
 "
 
 RDEPEND="
@@ -58,7 +57,6 @@ DEPEND="
 	${RDEPEND}
 	sys-devel/autoconf
 	nls? ( sys-devel/gettext )
-	vim-pager? ( app-editors/vim-core[-minimal] )
 "
 
 pkg_setup() {

@@ -1065,17 +1065,8 @@ app-misc/sphinx:stemmer - Enable language stemming support
 app-misc/task:sync - Enable "task sync" support
 app-misc/tmux:utempter - Include libutempter support
 app-misc/towitoko:moneyplex - Makes libtowitoko work for the moneyplex home banking software
-app-misc/tracker:cue - Enable cue sheet parsing
-app-misc/tracker:firefox-bookmarks - Install bookmark data miner plugin for www-client/firefox and www-client/firefox-bin
-app-misc/tracker:gsf - Enable gnome-extra/libgsf based data extractor and for ODT.
-app-misc/tracker:iptc - Enable extraction of IPTC data from pictures
-app-misc/tracker:iso - Enable extraction of metadata from ISO disk images
-app-misc/tracker:miner-fs - Enable tracker-miner-fs (required for filesystem indexing)
 app-misc/tracker:miners - Install the app-misc/tracker-miners package for actual data mining support for tracker
-app-misc/tracker:playlist - Add support for playlists
 app-misc/tracker:stemmer - Add word stemming via dev-libs/snowball-stemmer.
-app-misc/tracker:thunderbird - Install email data miner plugin for mail-client/thunderbird and mail-client/thunderbird-bin
-app-misc/tracker:xps - Add support for XPS file format through app-text/libgxps.
 app-misc/tracker-miners:cue - Enable cue sheet parsing
 app-misc/tracker-miners:gsf - Enable gnome-extra/libgsf based data extractor and for ODT.
 app-misc/tracker-miners:iptc - Enable extraction of IPTC data from pictures
@@ -8794,6 +8785,7 @@ www-apps/icingaweb2:nginx - Adds support for nginx
 www-apps/ikiwiki:extras - Installs additional modules used by ikiwiki plugins
 www-apps/kibana-bin:x-pack - Enable additional features (may need a license)
 www-apps/klaus:ctags - Enable support for Exuberant ctags; makes all source code symbols hyperlinks to their definitions
+www-apps/netbox:webhooks - Enable webhooks via django-rq
 www-apps/nikola:assets - Support web asset management through dev-python/assets
 www-apps/nikola:charts - Support chart generation through dev-python/pygal
 www-apps/nikola:ghpages - Add support for direct uploading to github pages thru dev-python/ghp-import
@@ -9239,7 +9231,9 @@ x11-terms/rxvt-unicode:perl - Enable perl script support. You can still disable 
 x11-terms/rxvt-unicode:pixbuf - Enable transparency support using gtk's pixbuf
 x11-terms/rxvt-unicode:secondary-wheel - Support for wheel scrolling on secondary screens (like mutt). Read http://lists.schmorp.de/pipermail/rxvt-unicode/2011q4/001491.html
 x11-terms/rxvt-unicode:unicode3 - Use 21 instead of 16 bits to represent unicode characters
+x11-terms/rxvt-unicode:utmp - Enable utmp support
 x11-terms/rxvt-unicode:wcwidth - Enable wide char width support
+x11-terms/rxvt-unicode:wtmp - Enable wtmp support
 x11-terms/terminator:libnotify - Enables desktop notifications viadev-python/notify-python
 x11-terms/terminology:extras - Install additional testing tools
 x11-terms/xfce4-terminal:utempter - Include utmp management support via sys-libs/libutempter
