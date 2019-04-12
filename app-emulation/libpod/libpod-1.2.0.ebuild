@@ -1,9 +1,9 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-EGIT_COMMIT="2c74edd0ac6509d6e533cb4e012e3e3f9e03434d"
+EGIT_COMMIT="3bd528e583182b4249f3e6bbd8497a8831d89950"
 EGO_PN="github.com/containers/${PN}"
 
 inherit golang-vcs-snapshot systemd
@@ -15,14 +15,14 @@ LICENSE="Apache-2.0"
 SLOT="0"
 
 KEYWORDS="~amd64"
-IUSE="apparmor btrfs ostree selinux"
+IUSE="apparmor btrfs ostree +rootless selinux"
 REQUIRED_USE="!selinux? ( !ostree )"
 RESTRICT="test"
 
 COMMON_DEPEND="
 	app-crypt/gpgme:=
 	>=app-emulation/cri-o-1.13.0
-	app-emulation/runc
+	>=app-emulation/runc-1.0.0_rc6
 	dev-libs/libassuan:=
 	dev-libs/libgpg-error:=
 	sys-fs/lvm2
@@ -34,6 +34,7 @@ COMMON_DEPEND="
 		dev-libs/glib:=
 		dev-util/ostree:=
 	)
+	rootless? ( app-emulation/slirp4netns )
 	selinux? ( sys-libs/libselinux:= )
 "
 DEPEND="
@@ -83,7 +84,7 @@ src_compile() {
 		echo -e "#!/bin/sh\ntrue" > hack/selinux_tag.sh || die
 	fi
 
-	env -u LDFLAGS GOPATH="${WORKDIR}/${P}" GOBIN="${WORKDIR}/${P}/bin" \
+	env -u GOCACHE -u LDFLAGS -u XDG_CACHE_HOME GOPATH="${WORKDIR}/${P}" GOBIN="${WORKDIR}/${P}/bin" \
 		emake all \
 			GIT_BRANCH=master \
 			GIT_BRANCH_CLEAN=master \
@@ -96,6 +97,7 @@ src_install() {
 
 	insinto /etc/containers
 	newins test/registries.conf registries.conf.example
+	newins test/policy.json policy.json.example
 
 	newinitd "${FILESDIR}"/podman.initd podman
 
@@ -105,4 +107,33 @@ src_install() {
 	newins "${FILESDIR}/podman.logrotated" podman
 
 	keepdir /var/lib/containers
+}
+
+pkg_preinst() {
+	LIBPOD_ROOTLESS_UPGRADE=false
+	if use rootless; then
+		has_version 'app-emulation/libpod[rootless]' || LIBPOD_ROOTLESS_UPGRADE=true
+	fi
+}
+
+pkg_postinst() {
+	local want_newline=false
+	if [[ ! ( -e ${EROOT%/*}/etc/containers/policy.json && -e ${EROOT%/*}/etc/containers/registries.conf ) ]]; then
+		elog "You need to create the following config files:"
+		elog "/etc/containers/registries.conf"
+		elog "/etc/containers/policy.json"
+		elog "To copy over default examples, use:"
+		elog "cp /etc/containers/registries.conf{.example,}"
+		elog "cp /etc/containers/policy.json{.example,}"
+		want_newline=true
+	fi
+	if [[ ${LIBPOD_ROOTLESS_UPGRADE} == true ]] ; then
+		${want_newline} && elog ""
+		elog "For rootless operation, you need to configure subuid/subgid"
+		elog "for user running podman. In case subuid/subgid has only been"
+		elog "configured for root, run:"
+		elog "usermod --add-subuids 1065536-1131071 <user>"
+		elog "usermod --add-subgids 1065536-1131071 <user>"
+		want_newline=true
+	fi
 }

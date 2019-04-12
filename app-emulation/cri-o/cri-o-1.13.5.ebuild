@@ -3,14 +3,14 @@
 
 EAPI=6
 
-EGIT_COMMIT="728df92d3e4b77c5a1d3b8e2a5c3c8f3c5bc4f00"
-EGO_PN="github.com/kubernetes-incubator/${PN}"
+EGIT_COMMIT="a9d8dde49418572b6ea843a5d3346c966e82077f"
+EGO_PN="github.com/kubernetes-sigs/${PN}"
 
 inherit golang-vcs-snapshot systemd
 
 DESCRIPTION="OCI-based implementation of Kubernetes Container Runtime Interface"
 HOMEPAGE="https://cri-o.io/"
-SRC_URI="https://github.com/kubernetes-incubator/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/kubernetes-sigs/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -43,9 +43,16 @@ src_prepare() {
 	default
 
 	sed -e '/^GIT_.*/d' \
+		-e '/	git diff --exit-code/d' \
 		-e 's/$(GO) build/$(GO) build -v -work -x/' \
 		-e 's/\${GIT_COMMIT}/'${EGIT_COMMIT}'/' \
 		-i Makefile || die
+
+	echo ".NOTPARALLEL: binaries docs" >> Makefile || die
+
+	sed -e "s|^COMMIT_NO := .*|COMMIT_NO := ${EGIT_COMMIT}|" \
+		-e "s|^GIT_COMMIT := .*|GIT_COMMIT := ${EGIT_COMMIT}|" \
+		-i Makefile.inc || die
 
 	sed -e 's:/usr/local/bin:/usr/bin:' \
 		-i contrib/systemd/* || die
