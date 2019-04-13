@@ -203,7 +203,6 @@ app-admin/webalizer:xtended - Include the 404 extension
 app-admin/webapp-config:portage - Propagete python_targets dependencies to sys-apps/portage
 app-antivirus/clamav:clamdtop - A Top like tool which shows what clamd is currently scanning amongst other things
 app-antivirus/clamav:metadata-analysis-api - Enables collection of file property metadata using ClamAV API for analysis by ClamAV bytecode programs.
-app-antivirus/clamav:system-libmspack - Use system libmspack instead of built in
 app-antivirus/clamav:xml - DMG and XAR support
 app-antivirus/clamtk:kde - Install the Dolphin plugin.
 app-antivirus/clamtk:nautilus - Install the Nautilus plugin.
@@ -425,6 +424,7 @@ app-editors/gedit-plugins:terminal - Embed a terminal in the bottom pane
 app-editors/gnome-latex:latexmk - Install dev-tex/latexmk (used by default for the build tools)
 app-editors/gnome-latex:rubber - Install dev-tex/rubber (can be used for the build tools)
 app-editors/gvim:cscope - Enable cscope interface
+app-editors/gvim:gtk2 - Enable GTK+2 interface
 app-editors/gvim:gtk3 - Enable GTK+3 interface
 app-editors/gvim:netbeans - Include netbeans external editor integration support
 app-editors/gvim:racket - Enable support for Scheme using dev-scheme/racket
@@ -2872,6 +2872,12 @@ dev-python/sympy:symengine - Add support for a dev-python/symengine backend
 dev-python/sympy:texmacs - Add app-office/texmacs interface
 dev-python/sympy:theano - Add support for dev-python/theano
 dev-python/tappy:yaml - Pull dependencies needed to support YAML blocks associated with test results.
+dev-python/tinyrpc:gevent - Add support for gevent
+dev-python/tinyrpc:httpclient - Add support for httpclient
+dev-python/tinyrpc:jsonext - Add support for jsonext
+dev-python/tinyrpc:websocket - Add support for websocket
+dev-python/tinyrpc:wsgi - Add support for wsgi
+dev-python/tinyrpc:zmq - Add support for zmq
 dev-python/translate-toolkit:html - Support conversion between po and html files
 dev-python/translate-toolkit:ical - Support conversion between po and ical files
 dev-python/translate-toolkit:ini - Support conversion between po and ini files
@@ -6028,18 +6034,14 @@ net-im/empathy:map - Enable world map support through media-libs/libchamplain
 net-im/err:irc - Pull optional dependencies, needed for IRC backend
 net-im/gajim:crypt - End to end encryption and GPG encryption
 net-im/gajim:geolocation - Sharing your location
-net-im/gajim:idle - Enable idle module
 net-im/gajim:jingle - Audio and video calls
 net-im/gajim:keyring - Saving your password to your system keyring
 net-im/gajim:networkmanager - Network lose detection using NetworkManager
 net-im/gajim:remote - Controling Gajim instance from command line with gajim-remote
 net-im/gajim:rst - Generating XHTML output from RST code
 net-im/gajim:spell - Spellchecking of composed messages
-net-im/gajim:srv - SRV capabilities
 net-im/gajim:upnp - Ability to request your router to forward port for file transfer
 net-im/gajim:webp - Support WebP avatars
-net-im/gajim:xhtml - Enable XHTML support
-net-im/gajim:zeroconf - Serverless chatting with autodetected clients in a local network
 net-im/gitter-bin:pax_kernel - Triggers a paxmarking of the binary
 net-im/kadu:gadu - Enables Gadu communication protocol
 net-im/kadu:mpd - Enables Music Player Daemon support
@@ -6290,7 +6292,6 @@ net-libs/libetpan:lmdb - Use dev-db/lmdb as cache DB
 net-libs/libgsasl:gcrypt - Use dev-libs/libgcrypt for low-level crypto
 net-libs/libgsasl:ntlm - Add support for Microsoft's NTLM mechanism using net-libs/libntlm
 net-libs/libiio:aio - Enable asynchronous IO support
-net-libs/libinfinity:server - Build and install the server binary including init.d/conf.d-scripts. Needed if you want to host an infinote server for gobby.
 net-libs/libisds:openssl - Use dev-libs/openssl as crypto backend instead of app-crypt/gpgme and dev-libs/libgcrypt
 net-libs/libmicrohttpd:epoll - use epoll() system call
 net-libs/libmicrohttpd:messages - enable error messages
@@ -6862,7 +6863,6 @@ net-misc/quagga:pam - Add support for PAM (via sys-libs/pam) to the Quagga Virtu
 net-misc/quagga:protobuf - Enable support for dev-libs/protobuf
 net-misc/quagga:readline - Enable support for sys-libs/readline to provide the Quagga Virtual Terminal Interface Shell (vtysh)
 net-misc/quagga:tcp-zebra - Enable TCP zserv interface on port 2600 for Zebra/protocol-daemon communication. Unix domain sockets are chosen otherwise
-net-misc/rancid-git:git - Enable git (version control system) support
 net-misc/rdesktop:kerberos - Enable CredSPP support + Kerberos authentication with net-libs/libgssglue
 net-misc/rdesktop:pcsc-lite - Enable smartcard support with sys-apps/pcsc-lite driver
 net-misc/rdesktop:xrandr - Enable XRandR window extension support
@@ -8084,6 +8084,7 @@ sys-apps/systemd:apparmor - Enable AppArmor support
 sys-apps/systemd:audit - Enable support for sys-process/audit
 sys-apps/systemd:cryptsetup - Enable cryptsetup tools (includes unit generator for crypttab)
 sys-apps/systemd:curl - Enable support for uploading journals
+sys-apps/systemd:dns-over-tls - Enable DNS-over-TLS support
 sys-apps/systemd:elfutils - Enable coredump stacktraces in the journal
 sys-apps/systemd:gcrypt - Enable sealing of journal files using gcrypt
 sys-apps/systemd:gnuefi - Enable EFI boot manager and stub loader (built using sys-boot/gnu-efi)
@@ -8322,6 +8323,7 @@ sys-cluster/openstack-meta:heat - Installs Openstack Heat
 sys-cluster/openstack-meta:keystone - Installs Openstack Keystone
 sys-cluster/openstack-meta:neutron - Installs Openstack Neutron
 sys-cluster/openstack-meta:nova - Installs Openstack Nova
+sys-cluster/openstack-meta:placement - Installs Openstack Placement
 sys-cluster/openstack-meta:swift - Installs Openstack Swift
 sys-cluster/pacemaker:heartbeat - Enable sys-cluster/heartbeat support.
 sys-cluster/pacemaker:smtp - Enable SMTP support via net-libs/libesmtp

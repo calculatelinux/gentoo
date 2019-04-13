@@ -29,6 +29,107 @@
 
 #--- END OF EXAMPLES ---
 
+# Ulrich Müller <ulm@gentoo.org> (13 Apr 2019)
+# Last release in 2001, HOMEPAGE and SRC_URI are gone.
+# Byte-compilation with recent Emacs versions fails.
+# Masked for removal in 30 days, bug #683248.
+app-emacs/prom-wl
+
+# Michał Górny <mgorny@gentoo.org> (13 Apr 2019)
+# Unmaintained.  Contains vulnerable code and a large number of unsolved
+# (upstream) issues, including licensing issues that prevented Debian
+# from including it.  The current version is from 2004, and carries
+# some local patches.  Last upstream commits are from 2013, and involve
+# three successive branches, the 0.7.x not having a release since 2004,
+# and the two remaining branches never seeing a single release.
+# The suggested alternatives are net-analyzer/{netcat,openbsd-netcat}.
+# Removal in 30 days.  Bug #601742.
+net-analyzer/gnu-netcat
+
+# Michał Górny <mgorny@gentoo.org> (13 Apr 2019)
+# net-libs/ftplib: Unmaintained.  The ebuild suffers build failures due
+# to broken multilib conversion.  Last bumped in 2014, and needs local
+# patches to even work.  Obscure library with only two revdeps.
+#
+# media-video/hasciicam: Unmaintained.  The only unconditional revdep
+# of ftplib.  Upstream's FTP is down, and the current release is
+# no newer than 2011.  Upstream removed ftplib usage afterwards,
+# so a snapshot could help.
+#
+# Removal in 30 days.  Bug #520026.
+media-video/hasciicam
+net-libs/ftplib
+
+# Michał Górny <mgorny@gentoo.org> (13 Apr 2019)
+# Unmaintained.  Does not build (again).  Last release in 2000.  Carries
+# a large number of patches already.
+# Removal in 30 days.  Bug #637484.
+net-misc/netkit-rwho
+
+# Michał Górny <mgorny@gentoo.org> (13 Apr 2019)
+# Apparently this was last updated in 2012.  It's unclear if the proxied
+# maintainer actually ever maintained it since it was imported in 2010.
+# The HOMEPAGE is now empty.  app-admin/pass is a good alternative.
+# Removal in 30 days.  Bug #682914.
+app-crypt/sgeps
+
+# Michał Górny <mgorny@gentoo.org> (13 Apr 2019)
+# Fails to run.  The current release is from 2015, and upstream has not
+# made a release since.  Uses games.eclass.
+# Removal in 30 days.  Bug #654564.
+games-strategy/freecol
+
+# Hans de Graaff <graaff@gentoo.org> (13 Apr 2019)
+# Old ruby24-only slots of Rails-related packages
+# These no longer have reverse dependencies or newer
+# versions are available.
+# Masked for removal in 30 days.
+dev-ruby/arel:7.0
+dev-ruby/coffee-rails:4.1
+dev-ruby/d3_rails:0
+dev-ruby/i18n:0.6
+dev-ruby/i18n:0.8
+dev-ruby/mail:2.6
+dev-ruby/mysql2:0.3
+dev-ruby/sprockets-rails:2.3
+dev-ruby/uglifier:0
+dev-ruby/uglifier:3
+
+# Hans de Graaff <graaff@gentoo.org> (13 Apr 2019)
+# No longer maintained upstream. Does not work
+# with ruby25.
+# Masked for removal in 30 days.
+dev-ruby/celluloid
+dev-ruby/celluloid-essentials
+dev-ruby/celluloid-extras
+dev-ruby/celluloid-fsm
+dev-ruby/celluloid-io
+dev-ruby/celluloid-pool
+dev-ruby/celluloid-supervision
+
+# Aaron Bauman <bman@gentoo.org> (12 Apr 2019)
+# Multiple security vulnerabilities
+# No revbumps in several years
+# Removal in 30 days. Bug #675682
+dev-java/jackson-databind
+# rdeps
+app-text/languagetool
+app-vim/languagetool
+dev-java/jackson-dataformat-xml
+dev-java/jackson-dataformat-yaml
+dev-java/jackson-module-jaxb-annotations
+
+# Virgil Dupras <vdupras@gentoo.org> (12 Apr 2019)
+# Dead upstream, no revdeps.
+# Removal in 30 days. Bug #683146
+dev-python/readme
+
+# Georgy Yakovlev  (11 Apr 2019)
+# Rust provides zsh completion.
+# This one is old, unmaintained obsolete version.
+# Removal in 30 days.
+app-shells/rust-zshcomp
+
 # Michał Górny <mgorny@gentoo.org> (10 Apr 2019)
 # Unresolved vulnerability.  Last apparent upstream activity in 2015,
 # with the code last touched in 2010.  Local patches are already
@@ -670,80 +771,6 @@ dev-util/staruml-bin
 app-arch/createrepo
 dev-python/pyliblzma
 sys-apps/yum
-
-# Michał Górny <mgorny@gentoo.org> (13 Mar 2019)
-# Obscure package with multiple bugs open.  Blocks removal
-# of dev-libs/dietlibc (#498256) and dev-libs/beecrypt (#666599).
-# Unresolved segfaults (#641112) or build failures (#650578), depending
-# on the GCC version/profile.
-# Removal in 30 days.  Bug #680264.
-sys-cluster/util-vserver
-
-# Michał Górny <mgorny@gentoo.org> (13 Mar 2019)
-# Contains vulnerability (CVE-2016-2049) that has not been resolved
-# for almost 3 years.  No reverse dependencies.
-# Removal in 30 days.  Bug #572882.
-dev-php/php-openid
-
-# Michał Górny <mgorny@gentoo.org> (13 Mar 2019)
-# The eselect module is obsolete, now that dev-lang/gnat-gpl is the only
-# implementation in Gentoo.  It is unmaintained and has unresolved QA
-# issues.
-# Removal in 30 days.  Bug #362753.
-app-eselect/eselect-gnat
-
-# Michał Górny <mgorny@gentoo.org> (13 Mar 2019)
-# An ancient netcat clone that has been declared obsolete upstream,
-# yet keeps confusing Gentoo users into thinking it's better than
-# the original.  Recommended alternatives are net-analyzer/netcat,
-# net-analyzer/openbsd-netcat, net-misc/socat...
-# Removal in 30 days.  Bug #573814.
-net-analyzer/netcat6
-
-# Michał Górny <mgorny@gentoo.org> (13 Mar 2019)
-# An obscure GNU audio file library with no reverse dependencies.  Last
-# release in 2015 (and we are one release behind).  Fails to build.
-# Removal in 30 days.  Bug #545818.
-media-libs/ccaudio2
-
-# Michał Górny <mgorny@gentoo.org> (13 Mar 2019)
-# Library part of the gobby editor that has been removed in 2016.
-# It has no maintainer, no revdeps and suffers from GID collision
-# (#537488).
-# Removal in 30 days.  Bug #680216.
-net-libs/libinfinity
-
-# Michał Górny <mgorny@gentoo.org> (13 Mar 2019)
-# Ancient asynchronous DNS library.  The current Gentoo version is
-# from 2006, and lacks support for IPv6, NSS, /etc/hosts.  There were
-# some new upstream activity in 2014-2016 but there is probably
-# no reason to bump it, now that it has no reverse dependencies anymore.
-# It had no Gentoo maintainer since 2004, when metadata.xml was added.
-# A good alternative is net-dns/c-ares.
-# Removal in 30 days.  Bug #513238.
-net-libs/adns
-
-# Michał Górny <mgorny@gentoo.org> (13 Mar 2019)
-# Ancient event-loop library with no reverse dependencies.  The current
-# version has been released in 2003, and has no maintainer since
-# at least 2006 (when metadata.xml was added).  Upstream released 1.0.1
-# at some point but there's probably no use in bumping it.  Blocks
-# removal of net-libs/adns.  Alternatives includes dev-libs/glib,
-# dev-libs/libevent, dev-libs/libev and many more.
-# Removal in 30 days.  Bug #680212.
-dev-libs/liboop
-
-# Michał Górny <mgorny@gentoo.org> (13 Mar 2019)
-# Both packages duplicate each other (#511032) and share the same bugs.
-# They are both unmaintained, apparently fail to build (#541894)
-# and have a bump pending for over 3 years (#557284).
-# Removal in 30 days.  Bug #680208.
-net-misc/rancid
-net-misc/rancid-git
-
-# Hans de Graaff <graaff@gentoo.org> (12 Mar 2019)
-# Mask unused obsolete slot for removal in 30 days.
-dev-ruby/trollop:0
 
 # Eray Aslan <eras@gentoo.org> (01 Mar 2019)
 # Mask experimental software
