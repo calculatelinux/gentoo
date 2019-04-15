@@ -29,6 +29,61 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (15 Apr 2019)
+# Masked for testing, Bug #653878.
+>=dev-libs/boost-1.70.0
+>=dev-util/boost-build-1.70.0
+
+# Patrice Clement <monsieurp@gentoo.org> (14 Apr 2019)
+# Old, unmaintained and sometimes abandoned Java libraries/programs.
+# Removal in 30 days.
+dev-java/idm-console-framework
+dev-java/matrix-toolkits-java
+dev-java/sat4j-pseudo
+dev-java/sat4j-core
+dev-java/swarmcache
+dev-java/dbus-java
+dev-java/jinklevel
+dev-java/proguard
+dev-java/nailgun
+dev-java/jgroups
+dev-java/libmso
+dev-java/jicmp
+media-sound/jtagger
+app-admin/389-console
+
+# Michał Górny <mgorny@gentoo.org> (14 Apr 2019)
+# The ebuild violates EAPI and relies on STRIP_MASK.  The default
+# behavior makes it capable of executing arbitrary commands when running
+# files from untrusted sources.  Last maintainer activity in 2015.  Last
+# upstream release in 2011.
+# Removal in 30 days.  Bug #651430.
+app-text/active-dvi
+
+# Michał Górny <mgorny@gentoo.org> (14 Apr 2019)
+# The ebuild violates EAPI and relies on STRIP_MASK.  Also has
+# suspicious USE=debug logic.  Not touched since 2016.
+# Removal in 30 days.  Bug #651450.
+dev-util/cyclo
+
+# Michał Górny <mgorny@gentoo.org> (14 Apr 2019)
+# The ebuild violates EAPI and relies on STRIP_MASK.  Also has
+# suspicious USE=debug logic.  Not touched since 2016.
+# Removal in 30 days.  Bug #651446.
+dev-util/cccc
+
+# Michał Górny <mgorny@gentoo.org> (14 Apr 2019)
+# Integrated into dev-python/python-ldap-3.0+, and declared a deprecated
+# fork by upstream.  No reverse dependencies left.
+# Removal in 30 days.  Bug #668066.
+dev-python/pyldap
+
+# Aaron Bauman <bman@gentoo.org> (13 Apr 2019)
+# Unmaintained in Gentoo and outstanding vulnerability
+# Masked for removal in 30 days. Bug #522578
+dev-libs/ace
+net-proxy/bfilter
+
 # Ulrich Müller <ulm@gentoo.org> (13 Apr 2019)
 # Last release in 2001, HOMEPAGE and SRC_URI are gone.
 # Byte-compilation with recent Emacs versions fails.
@@ -37,8 +92,7 @@ app-emacs/prom-wl
 
 # Michał Górny <mgorny@gentoo.org> (13 Apr 2019)
 # Unmaintained.  Contains vulnerable code and a large number of unsolved
-# (upstream) issues, including licensing issues that prevented Debian
-# from including it.  The current version is from 2004, and carries
+# (upstream) issues.  The current version is from 2004, and carries
 # some local patches.  Last upstream commits are from 2013, and involve
 # three successive branches, the 0.7.x not having a release since 2004,
 # and the two remaining branches never seeing a single release.
@@ -73,12 +127,6 @@ net-misc/netkit-rwho
 # Removal in 30 days.  Bug #682914.
 app-crypt/sgeps
 
-# Michał Górny <mgorny@gentoo.org> (13 Apr 2019)
-# Fails to run.  The current release is from 2015, and upstream has not
-# made a release since.  Uses games.eclass.
-# Removal in 30 days.  Bug #654564.
-games-strategy/freecol
-
 # Hans de Graaff <graaff@gentoo.org> (13 Apr 2019)
 # Old ruby24-only slots of Rails-related packages
 # These no longer have reverse dependencies or newer
@@ -109,10 +157,9 @@ dev-ruby/celluloid-supervision
 
 # Aaron Bauman <bman@gentoo.org> (12 Apr 2019)
 # Multiple security vulnerabilities
-# No revbumps in several years
+# No revbumps in several years.
 # Removal in 30 days. Bug #675682
 dev-java/jackson-databind
-# rdeps
 app-text/languagetool
 app-vim/languagetool
 dev-java/jackson-dataformat-xml
@@ -337,11 +384,6 @@ sys-apps/prefix-chain-utils
 sys-auth/fprint_demo
 
 # Michał Górny <mgorny@gentoo.org> (23 Mar 2019)
-# Unmaintained.  Fails to build.  Probably needs a fresh snapshot.
-# Removal in 30 days.  Bug #669592.
-net-misc/casync
-
-# Michał Górny <mgorny@gentoo.org> (23 Mar 2019)
 # Unmaintained.  Fails to build due to patch that does not apply.
 # Even if that weren't the case, it would need to be updated for modern
 # kernel versions.
@@ -527,13 +569,6 @@ x11-plugins/wmpeople
 # Removal in 30 days.  Bug #252500.
 dev-util/synopsis
 
-# Michał Górny <mgorny@gentoo.org> (20 Mar 2019)
-# Unmaintained since 2015, with occasional uncoordinated updates
-# by varying developers.  The current version is outdated, and fails
-# to build.
-# Removal in 30 days.  Bug #669604.
-dev-util/trinity
-
 # Miroslav Šulc <fordfrog@gentoo.org> (19 Mar 2019)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
 =www-servers/tomcat-9.0.17
@@ -541,11 +576,6 @@ dev-util/trinity
 # Sobhan Mohammadpour <sobhan@gentoo.org> (17 Mar 2019)
 # Masked for testing
 =mail-client/geary-3.32.0-r1
-
-# Patrice Clement <monsieurp@gentoo.org> (17 Mar 2019)
-# Old and unmaintained Java libraries. Removal in 30 days.
-dev-java/zemberek
-dev-java/echo2
 
 # Michał Górny <mgorny@gentoo.org> (17 Mar 2019)
 # The current Gentoo version has been added in 2015 and has not been
@@ -710,67 +740,6 @@ sci-chemistry/pymol-plugins-dynamics
 # rendering media plugins redundant.  Last release in 2014.
 # Removal in 30 days.  Bug #671854.
 www-plugins/mozplugger
-
-# Michał Górny <mgorny@gentoo.org> (15 Mar 2019)
-# Package added in 2014 and not updated since.  The current Gentoo
-# version used to violate multilib-strict (#627944), now it does not
-# build at all.
-# Removal in 30 days.  Bug #638500.
-dev-util/igprof
-
-# Michał Górny <mgorny@gentoo.org> (15 Mar 2019)
-# The current release is from 2005, upstream is gone.  Last patch
-# added in 2010, since then the package is completely unmaintained.
-# Very bad ebuild quality, blocking strictening of Portage behavior.
-# Removal in 30 days.  Bug #587306.
-sys-boot/quik
-
-# Michał Górny <mgorny@gentoo.org> (15 Mar 2019)
-# Upstream website disappeared, and along with it remote index needed
-# for the program to work.  No maintainer; package last touched in 2012.
-# Removal in 30 days.  Bug #673600.
-app-text/rfcutil
-
-# Michał Górny <mgorny@gentoo.org> (15 Mar 2019)
-# Unmaintained in Gentoo, obsoleted upstream.  Tests fail (#632706).
-# Upstream suggests switching to Kubernetes.
-# Removal in 30 days.  Bug #676728.
-app-admin/fleet
-
-# Michał Górny <mgorny@gentoo.org> (15 Mar 2019)
-# Unmaintained in Gentoo, abandoned upstream.  Last commit in 2012.
-# Fails to build, in multiple ways (#638842, #672190, #672196).
-# One of the two remaining unconditional revdeps of dev-libs/dietlibc.
-# Many alternatives exist, starting with net-analyzer/dsniff.
-# Removal in 30 days.  Bug #678520.
-net-analyzer/dietsniff
-
-# Michał Górny <mgorny@gentoo.org> (15 Mar 2019)
-# Last reverse dependency of dev-libs/libgcrypt-1.5* (#656378).  Current
-# version is outdated, maintainer is MIA and the new versions are
-# in distro-unfriendly AppImage format (#661740).
-# Removal in 30 days.  Bug #677486.
-dev-util/staruml-bin
-=dev-libs/libgcrypt-1.5*
-
-# Michał Górny <mgorny@gentoo.org> (15 Mar 2019)
-# pyliblzma installs an old 'lzma' module that is incompatible with
-# the 'lzma' built-in in Python 3.  As a result, programs written
-# to conditionally import the latter when available (assuming it will
-# have Python 3 API) are broken by its presence.  The suggested
-# replacement is dev-python/backports-lzma that is backported
-# from Python 3.
-#
-# Yum is the only reverse dependency of pyliblzma left (#643312).  Its
-# last release is from 2011, and the current Gentoo snapshot is
-# from 2017.  Upstream git hosting / gitweb is broken and makes it
-# impossible to fetch current sources.  Fedora is apparently replacing
-# it with DNF.
-#
-# Removal in 30 days.  Bug #643308.
-app-arch/createrepo
-dev-python/pyliblzma
-sys-apps/yum
 
 # Eray Aslan <eras@gentoo.org> (01 Mar 2019)
 # Mask experimental software
