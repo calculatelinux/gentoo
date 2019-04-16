@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-PYTHON_COMPAT=( python3_{4,5,6} )
+PYTHON_COMPAT=( python3_{5,6} )
 
 if [[ "${PV}" == "9999" ]]; then
 	EGIT_REPO_URI="https://github.com/KhronosGroup/Vulkan-ValidationLayers.git"
@@ -25,7 +25,7 @@ SLOT="0"
 IUSE="X wayland"
 
 DEPEND="${PYTHON_DEPS}
-		>=dev-util/glslang-7.11.3113:=[${MULTILIB_USEDEP}]
+		>=dev-util/glslang-7.11.3114_pre20190415:=[${MULTILIB_USEDEP}]
 		>=dev-util/spirv-tools-2019.1-r1:=[${MULTILIB_USEDEP}]
 		>=dev-util/vulkan-headers-1.1.106
 		wayland? ( dev-libs/wayland:=[${MULTILIB_USEDEP}] )

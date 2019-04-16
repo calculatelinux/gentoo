@@ -29,10 +29,38 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (15 Apr 2019)
+# Old, ruby24-only, slots of ruby packages without any reverse
+# dependencies. Use the newer slot version instead.
+# Masked for removal in 30 days.
+dev-ruby/elasticsearch:5
+dev-ruby/elasticsearch-api:5
+dev-ruby/elasticsearch-transport:5
+dev-ruby/filesize:0.0.1
+dev-ruby/hiera-eyaml:0
+dev-ruby/jsobfu:0.3.0
+dev-ruby/mocha:0.10
+dev-ruby/rack-attack:0
+dev-ruby/rack-ssl:1.3
+dev-ruby/rack-test:0.7
+dev-ruby/rack-test:0.8
+dev-ruby/ruby_smb:0.0.23
+dev-ruby/ruby_smb:0
+dev-ruby/slop:3
+dev-ruby/temple:0
+dev-ruby/ttfunk:1.2
+dev-ruby/ttfunk:1.4
+dev-util/cucumber-core:3.0
+dev-util/cucumber-core:3.1
+dev-util/cucumber-expressions:4.0
+dev-util/cucumber-expressions:5.0
+
+
 # David Seifert <soap@gentoo.org> (15 Apr 2019)
 # Masked for testing, Bug #653878.
 >=dev-libs/boost-1.70.0
 >=dev-util/boost-build-1.70.0
+>=net-mail/libpst-0.6.66-r2
 
 # Patrice Clement <monsieurp@gentoo.org> (14 Apr 2019)
 # Old, unmaintained and sometimes abandoned Java libraries/programs.
@@ -576,62 +604,6 @@ dev-util/synopsis
 # Sobhan Mohammadpour <sobhan@gentoo.org> (17 Mar 2019)
 # Masked for testing
 =mail-client/geary-3.32.0-r1
-
-# Michał Górny <mgorny@gentoo.org> (17 Mar 2019)
-# The current Gentoo version has been added in 2015 and has not been
-# bumped since.  It fails to build with new versions of gperf (#609272)
-# and ffmpeg (#671256).  No maintainer.
-# Removal in 30 days.  Bug #680800.
-media-sound/forked-daapd
-
-# Michał Górny <mgorny@gentoo.org> (17 Mar 2019)
-# Unmaintained.  Last bump in 2016, leaving Gentoo a few releases
-# behind.  The current version fails to build, with two different
-# issues (#610966, #651278).
-# Removal in 30 days.  Bug #610966.
-net-analyzer/netsniff-ng
-
-# Michał Górny <mgorny@gentoo.org> (17 Mar 2019)
-# bzr-fastimport: Unmaintained.  Does not work with current Gentoo
-# versions of dev-python/python-fastimport.  No upstream release since
-# 2012.
-#
-# git-bzr-ng: Unmaintained.  Reverse depedency of bzr-fastimport.
-# Gentoo carries a 2012 snapshot, upstream did not touch the code
-# since 2013.
-#
-# Removal in 30 days.  Bug #591446.
-dev-vcs/bzr-fastimport
-dev-vcs/git-bzr-ng
-
-# Michał Górny <mgorny@gentoo.org> (17 Mar 2019)
-# Added in 2012, started to fail at digest verification shortly
-# afterwards and not mirrored by Gentoo.  Not touched by maintainer
-# since.
-# Removal in 30 days.  Bug #434158.
-x11-misc/xwinwrap
-
-# Michał Górny <mgorny@gentoo.org> (17 Mar 2019)
-# Unmaintained, the previous maintainer last touched it in ~2013
-# and others have bumped it since (last in 2017).  The current version
-# fails tests, is outdated and really needs a bump.  net-misc/youtube-dl
-# is a suitable (and more frequently updated) replacement.
-# Removal in 30 days.  Bug #407381.
-media-video/get_flash_videos
-
-# Michał Górny <mgorny@gentoo.org> (16 Mar 2019)
-# The current Gentoo version has been added in 2011, and a bump is
-# pending since at least 2012.  Last touched upstream in 2015.
-# A library with no reverse dependencies.
-# Removal in 30 days.  Bug #404299.
-media-libs/rply
-
-# Michał Górny <mgorny@gentoo.org> (16 Mar 2019)
-# Added in 2004 and not updated since (even though upstream made new
-# releases).  Never had a dedicated maintainer.  Fails to build
-# with parallel make.
-# Removal in 30 days.  Bug #314667.
-net-nntp/xrn
 
 # Matt Turner <mattst88@gentoo.org> (16 Mar 2019)
 # Previously packaged drivers, now removed from Gentoo.
