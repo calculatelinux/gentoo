@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python2_7 python3_{4,5,6,7} pypy3 )
+PYTHON_COMPAT=( python2_7 python3_{5,6,7} pypy3 )
 
 inherit distutils-r1
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/C/CherryPy/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 IUSE="ssl"
 # IUSE="ssl test"
 # See below to see what needs to be done before testing can be enabled

@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4,3_5,3_6,3_7} )
+PYTHON_COMPAT=( python{2_7,3_5,3_6,3_7} )
 
 inherit autotools flag-o-matic linux-info multilib-minimal pam python-r1 systemd toolchain-funcs
 
@@ -50,7 +50,7 @@ COMMON_DEP="
 	nls? ( >=sys-devel/gettext-0.18 )
 	virtual/libintl
 	netlink? ( dev-libs/libnl:3 )
-	samba? ( >=net-fs/samba-4.5 )
+	samba? ( >=net-fs/samba-4.10.2 )
 	"
 
 RDEPEND="${COMMON_DEP}

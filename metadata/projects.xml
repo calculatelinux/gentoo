@@ -3964,31 +3964,10 @@
     </member>
   </project>
   <project>
-    <email>web-apps@gentoo.org</email>
-    <name>Gentoo Webapps</name>
-    <url>https://wiki.gentoo.org/wiki/Project:Webapps</url>
-    <description>The web-apps team maintains web applications, an eclass to facilitate writing ebuilds for these packages, and the &lt;span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator"&gt;webapp-config&lt;/span&gt; tool.</description>
-    <member>
-      <email>blueness@gentoo.org</email>
-      <name>Anthony G. Basile</name>
-      <role>Member</role>
-    </member>
-    <member>
-      <email>jmbsvicetto@gentoo.org</email>
-      <name>Jorge Manuel B. S. Vicetto</name>
-      <role>Member</role>
-    </member>
-    <member>
-      <email>maffblaster@gentoo.org</email>
-      <name>Matthew Marchese</name>
-      <role>Member</role>
-    </member>
-  </project>
-  <project>
     <email>www@gentoo.org</email>
     <name>Website maintainers</name>
     <url>https://wiki.gentoo.org/wiki/Project:Website</url>
-    <description>The Website team maintains the Gentoo website and develops new sites for the community.</description>
+    <description>The website project maintains the Gentoo website and develops new sites for the community.</description>
     <member>
       <email>chrisadr@gentoo.org</email>
       <name>Christopher Díaz Riveros</name>
@@ -4198,10 +4177,31 @@
     <name>eselect configuration and management tool</name>
     <url>https://wiki.gentoo.org/wiki/Project:Eselect</url>
     <description>eselect is Gentoo's modular framework for configuration and administration utilities.</description>
-    <member is-lead="1">
+    <member>
       <email>ulm@gentoo.org</email>
       <name>Ulrich Müller</name>
-      <role>Lead</role>
+      <role>Member</role>
+    </member>
+  </project>
+  <project>
+    <email>web-apps@gentoo.org</email>
+    <name>Gentoo Webapps</name>
+    <url>https://wiki.gentoo.org/wiki/Project:Webapps</url>
+    <description>The web-apps team maintains web applications, an eclass to facilitate writing ebuilds for these packages, and the &lt;span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator"&gt;webapp-config&lt;/span&gt; tool.</description>
+    <member>
+      <email>blueness@gentoo.org</email>
+      <name>Anthony G. Basile</name>
+      <role>Member</role>
+    </member>
+    <member>
+      <email>jmbsvicetto@gentoo.org</email>
+      <name>Jorge Manuel B. S. Vicetto</name>
+      <role>Member</role>
+    </member>
+    <member>
+      <email>maffblaster@gentoo.org</email>
+      <name>Matthew Marchese</name>
+      <role>Member</role>
     </member>
   </project>
 </projects>
