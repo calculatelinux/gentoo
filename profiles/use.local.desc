@@ -88,8 +88,9 @@ app-admin/mcollective:client - Install client utilities
 app-admin/mms-agent:monitoring - Install the monitoring agent
 app-admin/openrc-settingsd:systemd - Use the versions of dbus and polkit files provided by sys-apps/systemd
 app-admin/packagekit-base:command-not-found - Enable packagekit support on shell "command not found"
+app-admin/packagekit-base:consolekit - Use sys-auth/consolekit to get user session
 app-admin/packagekit-base:cron - Install cron script for auto-update
-app-admin/packagekit-base:elogind - Enable elogind support to get user session
+app-admin/packagekit-base:elogind - Enable sys-auth/elogind support to get user session
 app-admin/packagekit-base:entropy - Enable Entropy backend
 app-admin/pass:X - Use x11-misc/xclip to copy passwords to the clipboard.
 app-admin/pass:dmenu - Add support for x11-misc/dmenu with the 'passmenu' program.
@@ -1462,7 +1463,8 @@ dev-cpp/eigen:c++11 - Build using the C++11 standard
 dev-cpp/eigen:cuda - Build with cuda support
 dev-cpp/glog:gflags - Use dev-cpp/gflags for flag parsing
 dev-cpp/glog:unwind - Use sys-libs/libunwind for stack unwinding instead of glibc/gcc (may be more reliable on x86_64)
-dev-cpp/libcmis:man - Build and install man pages.
+dev-cpp/libcmis:man - Build and install man pages
+dev-cpp/libcmis:tools - Build client tool for testing and viewing features
 dev-cpp/libjson-rpc-cpp:http-client - Build support for HTTP client using net-misc/curl
 dev-cpp/libjson-rpc-cpp:http-server - Build support for HTTP server using net-libs/libmicrohttpd
 dev-cpp/libjson-rpc-cpp:redis-client - Build support for Redis client using dev-libs/hiredis
@@ -4685,6 +4687,7 @@ media-libs/xine-lib:vis - Adds support for SIMD optimizations for UltraSPARC pro
 media-libs/xine-lib:vpx - Enable VP8 codec support via media-libs/libvpx.
 media-libs/xine-lib:xvmc - Enable support for XVideo Motion Compensation (accelerated mpeg playback).
 media-libs/xvid:pic - disable optimized assembly code that is not PIC friendly
+media-libs/zita-resampler:tools - Install zresample and zretune tools
 media-plugins/alsa-plugins:arcam_av - Enables Arcam AV control plugin
 media-plugins/alsa-plugins:mix - Enables upmix and vdownmix plugin
 media-plugins/alsa-plugins:usb_stream - Enables usb_stream plugin
@@ -4864,6 +4867,8 @@ media-sound/gimmix:lyrics - Enable lyric fetching
 media-sound/gmpc:unique - Enable single instance support using dev-libs/libunique
 media-sound/gmpc:xspf - Enable support for reading and saving XSPF playlists
 media-sound/gmusicbrowser:extras - Install some extra deps for plugins (ex. Titlebar)
+media-sound/guitarix:lv2 - Build lv2 plugins
+media-sound/guitarix:standalone - Build standalone application
 media-sound/herrie:http - Enable http streaming
 media-sound/herrie:xspf - Enable support for reading and saving XSPF playlists
 media-sound/hydrogen:archive - Use libarchive instead of libtar
@@ -5781,7 +5786,9 @@ net-dns/dnsmasq:id - Whether report *.bind CHAOS info to clients, otherwise forw
 net-dns/dnsmasq:libidn2 - Enable support for Internationalized Domain Names, via net-dns/libidn2 rather than net-dns/libidn
 net-dns/dnsmasq:script - Enable support for calling scripts when leases change.
 net-dns/dnsmasq:tftp - Enables built in TFTP server for netbooting.
+net-dns/dnssec-validator:dlv - Enable support for the DNSSEC look-aside validation
 net-dns/dnssec-validator:ecdsa-check - Requires openssl[-bindist]
+net-dns/dnssec-validator:nsec3 - Enable support for the NSEC3 Resource Record
 net-dns/getdns:getdns_query - Add getdns_query tool
 net-dns/getdns:getdns_server_mon - Add getdns_server_mon tool
 net-dns/getdns:libev - Enable dev-libs/libev support
@@ -7609,7 +7616,7 @@ sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/fre
 sci-libs/opencascade:gl2ps - Use gl2ps PostScript printing library
 sci-libs/opencascade:gles2 - Use OpenGL ES 2.0
 sci-libs/opencascade:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
-sci-libs/opencascade:vtk - Enable Virtualisation Toolkit
+sci-libs/opencascade:vtk - Enable Visualization Toolkit
 sci-libs/openfoam:opendx - Install opendx visualisation tool
 sci-libs/openfoam:paraview - Enable support for paraview library
 sci-libs/openfoam:src - Install source files
@@ -7860,8 +7867,9 @@ sec-policy/selinux-base:peer_perms - Enable the labeled networking peer permissi
 sec-policy/selinux-base:ubac - Enable User Based Access Control (UBAC) in the SELinux policy
 sec-policy/selinux-base:unconfined - Enable support for the unconfined SELinux module
 sec-policy/selinux-base-policy:unconfined - Enable support for the unconfined SELinux policy module
-sys-apps/accountsservice:elogind - Use sys-auth/elogind instead of sys-auth/consolekit for session tracking
-sys-apps/accountsservice:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for session tracking
+sys-apps/accountsservice:consolekit - Use sys-auth/consolekit for session tracking
+sys-apps/accountsservice:elogind - Use sys-auth/elogind for session tracking
+sys-apps/accountsservice:systemd - Use sys-apps/systemd for session tracking
 sys-apps/baselayout:split-usr - Enable this if /bin and /usr/bin are separate directories
 sys-apps/baselayout-prefix:split-usr - Enable this if /bin and /usr/bin are separate directories
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin.
@@ -7941,9 +7949,9 @@ sys-apps/flashrom:usbblaster - Enable support for Altera USB-Blaster dongles
 sys-apps/flashrom:usbblaster_spi - Enable support for Altera USB-Blaster dongles
 sys-apps/flashrom:wiki - Enable wiki informations, like supported devices etc.
 sys-apps/fwupd:agent - Enable update notification agent
-sys-apps/fwupd:colorhug - Enable ColorHug support through x11-misc/colord package.
+sys-apps/fwupd:colorhug - Enable ColorHug support throughx11-misc/colord package
+sys-apps/fwupd:consolekit - Use sys-auth/consolekit for session tracking
 sys-apps/fwupd:dell - Enable Dell-specific support.
-sys-apps/fwupd:elogind - Use sys-auth/elogind instead of sys-auth/consolekit for session tracking
 sys-apps/fwupd:gpg - Enable GPG support.
 sys-apps/fwupd:man - Build and install man pages
 sys-apps/fwupd:nvme - Build and install nvme plugin
