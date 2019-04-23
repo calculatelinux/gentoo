@@ -2633,7 +2633,6 @@ dev-lisp/sbcl:pax_kernel - Enable if the user plans to run the package under a p
 dev-lua/lua-cjson:internal-fpconv - Enable internal number conversion routines, can increase overall performance by up to 50%
 dev-lua/luarocks:curl - Uses net-misc/curl for fetching lua packages instead of net-misc/wget.
 dev-lua/luarocks:openssl - Uses dev-libs/openssl for verifying lua packages instead of md5sum.
-dev-lua/luvit:bundled-libs - Use bundled versions of some libraries.
 dev-ml/cairo-ocaml:pango - Enable support for x11-libs/pango
 dev-ml/csv:lwt - Enables the Lwt-based library for asynchronous operations.
 dev-ml/dose3:parmap - Adds multi-core CPU support via dev-ml/parmap.
@@ -6513,10 +6512,6 @@ net-misc/asterisk-moh-opsound:siren7 - Install the sounds files for the siren7 c
 net-misc/asterisk-moh-opsound:sln16 - Install the sounds files for the sln16 codec.
 net-misc/asterisk-moh-opsound:ulaw - Install the sounds files for the ulaw codec.
 net-misc/asterisk-moh-opsound:wav - Install the sounds files for the wav codec.
-net-misc/batman-adv:bla - B.A.T.M.A.N. bridge loop avoidance
-net-misc/batman-adv:dat - B.A.T.M.A.N. distributed arp table
-net-misc/batman-adv:mcast - B.A.T.M.A.N. multicast optimizations
-net-misc/batman-adv:nc - B.A.T.M.A.N. network coding
 net-misc/bfgminer:adl - Enable support for controlling fans and overclocking on AMD cards with AMD Display Library
 net-misc/bfgminer:alchemist - Enable support for mining with AlcheMist
 net-misc/bfgminer:antminer - Enable support for mining with AntMiner U1 sticks
@@ -7147,7 +7142,6 @@ net-vpn/badvpn:ncd - Build NCD, a lightweight scripting language especially suit
 net-vpn/badvpn:server - Build the badvpn-server program, a central server that manages the VPN network.
 net-vpn/badvpn:tun2socks - Build tun2socks, a program which implements a TUN device that forwards TCP traffic through a SOCKS5 server.
 net-vpn/badvpn:udpgw - Build udpgw, a small daemon which allows tun2socks to forward UDP traffic.
-net-vpn/i2p:ecdsa - Enables additional checks to make sure a setup is available that is capable of using I2Ps ECDSA provisions. I2P will work without it, but you will likely see warnings.
 net-vpn/i2p:nls - Adds Native Language Support using GNU gettext.
 net-vpn/i2pd:i2p-hardening - Compile with hardening on vanilla compilers/linkers
 net-vpn/i2pd:websocket - Enable websocket server

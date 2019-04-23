@@ -512,95 +512,9 @@ sys-apps/likwid
 app-portage/prefix-chain-setup
 sys-apps/prefix-chain-utils
 
-# Michał Górny <mgorny@gentoo.org> (23 Mar 2019)
-# Unmaintained.  Fails to build against current sys-auth/libfprint.
-# Obsoleted upstream, in favor of libfprint[examples].
-# Removal in 30 days.  Bug #665174.
-sys-auth/fprint_demo
-
-# Michał Górny <mgorny@gentoo.org> (23 Mar 2019)
-# Unmaintained.  Fails to build due to patch that does not apply.
-# Even if that weren't the case, it would need to be updated for modern
-# kernel versions.
-# Removal in 30 days.  Bug #663180.
-sys-power/phc-intel
-
-# Michał Górny <mgorny@gentoo.org> (23 Mar 2019)
-# Unmaintained.  Fails to build, probably due to Linux kernel changes.
-# Removal in 30 days.  Bug #646806.
-net-misc/batman-adv
-
-# Michał Górny <mgorny@gentoo.org> (23 Mar 2019)
-# Unmaintained.  Fails to build against ncurses[tinfo].  Last upstream
-# release in 2009.  No apparent fix in upstream git.
-# Removal in 30 days.  Bug #646922.
-app-editors/efte
-
-# Michał Górny <mgorny@gentoo.org> (23 Mar 2019)
-# Unmaintained.  Vulnerable.  Fails to build (#612236, #620916).
-# Removal in 30 days.  Bug #670028.
-app-misc/freeplane
-
-# Michał Górny <mgorny@gentoo.org> (23 Mar 2019)
-# Unmaintained.  No reverse dependencies.  Fails to link.  Last upstream
-# activity in 2012.
-# Removal in 30 days.  Bug #632066.
-dev-cpp/libassa
-
-# Michał Górny <mgorny@gentoo.org> (23 Mar 2019)
-# Unmaintained and ancient.  Upstream has abandoned the PAR 2.0 spec
-# effort in 2003-2004, and the code has not seen any attention since.
-# Removal in 30 days.  Bug #681364.
-app-arch/par
-
-# Michał Górny <mgorny@gentoo.org> (23 Mar 2019)
-# No maintainer.  Both the program and the ebuild are of bad quality,
-# the former requiring a patch and the latter failing to build in some
-# circumstances.  Last upstream activity in 2005.
-# Removal in 30 days.  Bug #456954.
-app-benchmarks/gtkperf
-
-# Michał Górny <mgorny@gentoo.org> (23 Mar 2019)
-# Proprietary executable with unclear license.  Unmaintained.
-# The current version in Gentoo is from 2004.  QA issues (#430712).
-# Removal in 30 days.  Bug #681360.
-app-cdr/poweriso
-
 # Andreas Sturmlechner <asturm@gentoo.org> (23 Mar 2019)
 # Everything breaks again. bug #681336
 >=app-text/poppler-0.75.0
-
-# Michał Górny <mgorny@gentoo.org> (22 Mar 2019)
-# Unmaintained.  No reverse dependencies.  The current Gentoo version
-# is from 2015, and upstream has made a lot of releases since.
-# It suffers from heavy bundling of dependencies.
-# Removal in 30 days.  Bug #469194.
-dev-lua/luvit
-
-# Michał Górny <mgorny@gentoo.org> (22 Mar 2019)
-# Unmaintained.  Last release in 2013, last commits in 2015.  Nested
-# bundled libraries (#253259, also causing #515384).  Fails to build
-# with [-dbus] (#560208).
-# Removal in 30 days.  Bug #681294.
-x11-wm/afterstep
-
-# Michał Górny <mgorny@gentoo.org> (22 Mar 2019)
-# Unmaintained, dead homepage (#680752).  Fails to build against
-# ncurses[tinfo] (#459490), fails to build against ncurses-6 (#649794).
-# Also has some unresolved segv (#407983).
-# Removal in 30 days.  Bug #459490.
-games-roguelike/rogue
-
-# Michał Górny <mgorny@gentoo.org> (22 Mar 2019)
-# SixXS has been discontinued, rendering the package defunct.
-# Removal in 30 days.  Bug #670678.
-net-vpn/aiccu
-
-# Michał Górny <mgorny@gentoo.org> (22 Mar 2019)
-# Homepage dead, and package is mirror-restricted.  Current release
-# was added in 2006 and has not been updated since.
-# Removal in 30 days.  Bug #681230.
-net-misc/sjphone
 
 # Miroslav Šulc <fordfrog@gentoo.org> (19 Mar 2019)
 # Depends on >=virtual/{jdk,jre}-11 which is masked

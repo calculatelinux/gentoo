@@ -47,10 +47,6 @@ opencl
 # dev-db/qdbm is net yet keyworded
 qdbm
 
-# Michał Górny <mgorny@gentoo.org> (17 Feb 2018)
-# net-dialup/freeradius{,-client} not keyworded.
-radius
-
 # Mart Raudsepp <leio@gentoo.org> (13 Feb 2018)
 # net-libs/libsmi not tested on arm64 yet
 smi
@@ -75,10 +71,6 @@ wimax
 # Kacper Kowalik <xarthisius@gentoo.org> (9 Aug 2010)
 # cblas-external as virtual/cblas is also masked
 cblas-external
-
-# Raúl Porcel <armin76@gentoo.org>
-# Fails to build/work
-openexr
 
 # Samuli Suominen <drac@gentoo.org>
 # media-libs/amrnb and media-libs/amrwb not tested.

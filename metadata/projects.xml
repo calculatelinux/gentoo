@@ -458,6 +458,11 @@
       <name>Marek Szuba</name>
       <role>Member</role>
     </member>
+    <member>
+      <email>mgorny@gentoo.org</email>
+      <name>Michał Górny</name>
+      <role>Accidental helper</role>
+    </member>
     <member is-lead="1">
       <email>wraeth@gentoo.org</email>
       <name>Sam Jorna</name>
@@ -1504,11 +1509,6 @@
       <email>quantumsummers@gentoo.org</email>
       <name>Matt Summers</name>
       <role>Documentation, Hardened sources</role>
-    </member>
-    <member>
-      <email>swift@gentoo.org</email>
-      <name>Sven Vermeulen</name>
-      <role>Integrity, SELinux</role>
     </member>
     <member>
       <email>williamh@gentoo.org</email>
