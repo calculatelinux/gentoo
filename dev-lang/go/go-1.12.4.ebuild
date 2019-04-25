@@ -37,7 +37,7 @@ case ${PV}  in
 	case ${PV} in
 	*_beta*|*_rc*) ;;
 	*)
-		KEYWORDS="-* amd64 ~arm ~arm64 ~ppc64 ~s390 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x64-macos ~x64-solaris"
+		KEYWORDS="-* amd64 ~arm ~arm64 ~ppc64 ~s390 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x64-macos ~x64-solaris"
 		# The upstream tests fail under portage but pass if the build is
 		# run according to their documentation [1].
 		# I am restricting the tests on released versions until this is
@@ -157,8 +157,11 @@ src_unpack()
 {
 	if [[ ${PV} = 9999 ]]; then
 		git-r3_src_unpack
+	else
+		unpack "go${MY_PV}.src.tar.gz"
 	fi
-	default
+	use gccgo ||
+		unpack "go-$(go_os ${CBUILD})-$(go_arch ${CBUILD})-${BOOTSTRAP_VERSION}.tbz"
 }
 
 src_compile()
