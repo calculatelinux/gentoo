@@ -29,6 +29,32 @@
 
 #--- END OF EXAMPLES ---
 
+# Virgil Dupras <vdupras@gentoo.org> (26 Apr 2019)
+# Should have been removed with django-cms a while back but wasn't.
+# Removal in 30 days. Bug #683862
+dev-python/djangocms-attributes-field
+
+# Virgil Dupras <vdupras@gentoo.org> (26 Apr 2019)
+# Unmaintained, no revdeps. Removal in 30 days. Bug #618734
+dev-python/yapps
+
+# Jason Zaman <perfinion@gentoo.org> (25 Apr 2019)
+# net-mail/perdition was last-rited in 2016. The
+# SELinux policy packge is no longer needed.
+# Removal in 30 days.
+sec-policy/selinux-perdition
+
+# Michał Górny <mgorny@gentoo.org> (25 Apr 2019)
+# This programs suffers severe code quality problems and should have
+# never been added to Gentoo.  It looks like a shell script badly
+# converted to a C program with a lot of system() calls with globs,
+# horribly unreadable code and broken memory management including
+# reading past end-of-string (which only recently replaced writing into
+# uninitialized memory).  Auditing the program completely would probably
+# be more costly than rewriting it from scratch.
+# Removal in 30 days.  Bug #684340.
+app-admin/lsat
+
 # Lars Wendler <polynomial-c@gentoo.org> (24 Apr 2019)
 # Breaks current available net-ftp/filezilla releases (#684282)
 =dev-libs/libfilezilla-0.16.0
@@ -554,12 +580,6 @@ media-video/episoder
 # Robin H. Johnson <robbat2@gentoo.org> (25 Mar 2019)
 # Requires >=dev-lang/lua-5.3 which is masked
 sys-apps/likwid
-
-# Michael Haubenwallner <haubi@gentoo.org> (25 Mar 2019)
-# Obsolete, in favor of app-portage/prefix-toolkit.
-# Removal in 30 days.  Bug #658572
-app-portage/prefix-chain-setup
-sys-apps/prefix-chain-utils
 
 # Andreas Sturmlechner <asturm@gentoo.org> (23 Mar 2019)
 # Everything breaks again. bug #681336
