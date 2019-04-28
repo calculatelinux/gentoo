@@ -11,10 +11,6 @@ www-servers/uwsgi uwsgi_plugins_rados
 # app-text/dblatex not keyword yet
 net-firewall/nftables doc
 
-# Hans de Graaff <graaff@gentoo.org> (08 Apr 2019)
-# Obsolete ruby version, no newer versions keyworded or stable.
-dev-vcs/subversion ruby
-
 # Roy Bamford <neddyseagoon@gentoo.org> (19 Mar 2019)
 # Let kde-apps/akonadi use mysql.
 dev-qt/qtsql -mysql
@@ -73,10 +69,6 @@ kde-apps/cantor lua
 # The corresponding Qt5 modules are not keyworded on arm64, and we don't want to
 # keyword them solely because of PyQt5 while there are no other in-tree users.
 dev-python/PyQt5 networkauth
-
-# Thomas Deutschmann <whissi@gentoo.org> (12 Oct 2018)
-# Requires www-client/firefox which isn't yet keyworded on ARM64
-dev-ruby/capybara test
 
 # Dirkjan Ochtman <djc@gentoo.org> (29 Sep 2018)
 # Upstream doesn't build docs for tier 2 and lower architectures.
@@ -222,10 +214,6 @@ dev-python/networkx scipy
 # Mart Raudsepp <leio@gentoo.org> (13 Feb 2018)
 # USE=dmraid requires sys-fs/dmraid that is not keyworded yet.
 sys-libs/libblockdev dmraid
-
-# Mart Raudsepp <leio@gentoo.org> (13 Feb 2018)
-# USE=smartcard requires net-libs/gnutls-3[pkcs11] that is use.masked.
-net-libs/glib-networking smartcard
 
 # Mart Raudsepp <leio@gentoo.org> (13 Feb 2018)
 # USE=sofalizer requires sci-libs/netcdf that is not keyworded yet.
@@ -522,11 +510,6 @@ app-office/libreoffice libreoffice_extensions_scripting-beanshell libreoffice_ex
 # Temporary mask-in-base, unmask-in-arch for dev-python/mako keywording for
 # gobject-introspection[doctool], bug #411761
 dev-libs/gobject-introspection -doctool
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (09 Jan 2012)
-# jsc JIT compilation is supported only on amd64/arm/x86 and their prefixes, so
-# it's masked in base profile and unmasked here (bug #396313).
-net-libs/webkit-gtk -jit
 
 # Anthony G. Basile <blueness@gentoo.org> (Dec 21, 2011)
 # Mask the vde flag on tinc because net-misc/vde is not

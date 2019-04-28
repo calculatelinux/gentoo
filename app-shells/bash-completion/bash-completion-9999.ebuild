@@ -1,11 +1,11 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 BASHCOMP_P=bashcomp-2.0.2
-PYTHON_COMPAT=( python3_{5,6} )
-inherit autotools eapi7-ver git-r3 python-any-r1
+PYTHON_COMPAT=( python3_{5,6,7} )
+inherit autotools git-r3 python-any-r1
 
 DESCRIPTION="Programmable Completion for bash"
 HOMEPAGE="https://github.com/scop/bash-completion"
@@ -36,31 +36,46 @@ DEPEND="app-arch/xz-utils
 	)"
 PDEPEND=">=app-shells/gentoo-bashcomp-20140911"
 
-# Remove unwanted completions.
-STRIP_COMPLETIONS=(
-	# Slackware package stuff, quite generic names cause collisions
-	# (e.g. with sys-apps/pacman)
-	explodepkg installpkg makepkg pkgtool removepkg upgradepkg
+strip_completions() {
+	# Remove unwanted completions.
+	local strip_completions=(
+		# Slackware package stuff, quite generic names cause collisions
+		# (e.g. with sys-apps/pacman)
+		explodepkg installpkg makepkg pkgtool removepkg upgradepkg
 
-	# Debian/Red Hat network stuff
-	ifdown ifup ifstatus
+		# Debian/Red Hat network stuff
+		ifdown ifup ifstatus
 
-	# Installed in app-editors/vim-core
-	xxd
+		# Installed in app-editors/vim-core
+		xxd
 
-	# Now-dead symlinks to deprecated completions
-	hd ncal
+		# Now-dead symlinks to deprecated completions
+		hd ncal
+	)
+	if [[ ${ARCH} != *-fbsd && ${ARCH} != *-freebsd ]]; then
+		strip_completions+=(
+			freebsd-update kldload kldunload portinstall portsnap
+			pkg_deinstall pkg_delete pkg_info
+		)
+	fi
 
-	# Installed by sys-apps/util-linux-2.28 (and now deprecated)
-	_mount _umount _mount.linux _umount.linux
+	local file
+	for file in "${strip_completions[@]}"; do
+		rm "${ED}"/usr/share/bash-completion/completions/${file} ||
+			die "stripping ${file} failed"
+	done
 
-	# Deprecated in favor of sys-apps/util-linux-2.31
-	_rfkill
-)
+	# remove deprecated completions (moved to other packages)
+	rm "${ED}"/usr/share/bash-completion/completions/_* || die
+}
 
 python_check_deps() {
 	has_version "dev-python/pexpect[${PYTHON_USEDEP}]" &&
 	has_version "dev-python/pytest[${PYTHON_USEDEP}]"
+}
+
+pkg_setup() {
+	use test && python-any-r1_pkg_setup
 }
 
 src_unpack() {
@@ -90,7 +105,7 @@ src_test() {
 	# than upstream anticipated (they run tests on pristine docker
 	# installs of binary distros)
 	nonfatal dtach -N "${T}/dtach.sock" \
-		bash -c 'emake check RUNTESTFLAGS="OPT_TIMEOUT=300 OPT_BUFFER_SIZE=1000000" \
+		bash -c 'emake check RUNTESTFLAGS="OPT_TIMEOUT=300 OPT_BUFFER_SIZE=1000000" PYTESTFLAGS="-vv" \
 			&> "${T}"/dtach-test.log; echo ${?} > "${T}"/dtach-test.out'
 
 	kill "${tail_pid}"
@@ -104,13 +119,7 @@ src_install() {
 
 	emake DESTDIR="${D}" profiledir="${EPREFIX}"/etc/bash/bashrc.d install
 
-	local file
-	for file in "${STRIP_COMPLETIONS[@]}"; do
-		rm "${ED}"/usr/share/bash-completion/completions/${file} ||
-			die "stripping ${file} failed"
-	done
-	# remove deprecated completions (moved to other packages)
-	rm "${ED}"/usr/share/bash-completion/completions/_* || die
+	strip_completions
 
 	dodoc AUTHORS CHANGES CONTRIBUTING.md README.md
 

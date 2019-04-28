@@ -1284,7 +1284,6 @@ app-text/mathtex:png - Generate png images by default instead of gif
 app-text/msort:heap - Use heap instead of alloca()
 app-text/msort:icu - Use dev-libs/icu instead of dev-libs/libutf8proc.
 app-text/msort:libuninum - Use dev-libs/libuninum for conversion.
-app-text/mupdf:openssl - Use dev-libs/openssl crypto backend
 app-text/pandoc:embed_data_files - Embed data files in binary for relocatable executable.
 app-text/pandoc:http-conduit - Enable downloading of resources over https.
 app-text/pandoc:https - Enable support for downloading of resources over https.
@@ -4283,6 +4282,8 @@ media-gfx/darktable:kwallet - Enable encrypted storage of passwords with kde-fra
 media-gfx/darktable:opencl - Enable opencl support
 media-gfx/darktable:pax_kernel - Triggers paxmarking of main darktable binary
 media-gfx/digikam:addressbook - Enable akonadi contact integration
+media-gfx/digikam:dnn - Build neural network faces engine module
+media-gfx/digikam:imagemagick - Enable support for additional image formats such as XCF, FITS, HEIC etc.
 media-gfx/digikam:lensfun - Enable support for media-libs/lensfun
 media-gfx/digikam:marble - Enable support for geolocation using kde-apps/marble
 media-gfx/digikam:mediaplayer - Enable support for media player using media-libs/qtav
@@ -6218,7 +6219,6 @@ net-irc/unrealircd:operoverride-verify - Enable requiring opers to invite themse
 net-irc/unrealircd:prefixaq - Enable chanadmin and chanowner prefixes
 net-irc/unrealircd:showlistmodes - Display channel modes in /LIST (only configured at compiletime)
 net-irc/unrealircd:shunnotices - Enable notifying a user when un-shunned
-net-irc/unrealircd:topicisnuhost - Enable displaying nick!user@host as topic setter
 net-irc/unrealircd:usermod - Enable /set* and /chg* commands
 net-irc/weechat:alias - Enable plugin for alias control
 net-irc/weechat:buflist - Enable buflist plugin
@@ -7475,7 +7475,10 @@ sci-geosciences/merkaartor:webengine - Enable dev-qt/qtwebengine in some plugins
 sci-geosciences/qgis:3d - Build QGIS 3D library using dev-qt/qt3d
 sci-geosciences/qgis:georeferencer - Determines whether georeferencer plugin should be built
 sci-geosciences/qgis:grass - Add support for sci-geosciences/grass
+sci-geosciences/qgis:hdf5 - Enable MDAL support for sci-libs/hdf5
 sci-geosciences/qgis:mapserver - Determines whether mapserver should be built
+sci-geosciences/qgis:netcdf - Enable MDAL support for GRIB and XMDF formats
+sci-geosciences/qgis:opencl - Enable OpenCL support
 sci-geosciences/qgis:polar - Enable support for the polar coordinate system via x11-libs/qwtpolar
 sci-geosciences/qgis:qml - Enable support Qml-based plugins using dev-qt/qtdeclarative
 sci-geosciences/viking:geoclue - Use app-misc/geoclue to determine current location
