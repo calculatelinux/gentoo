@@ -4933,7 +4933,6 @@ media-sound/murmur:ice - Use dev-libs/Ice to enable remote control capabilities.
 media-sound/musescore:portmidi - Enable support for building against media-libs/portmidi
 media-sound/musescore:vorbis - Enable SoundFont support using media-libs/libvorbis
 media-sound/musescore:webengine - Use dev-qt/qtwebengine for embedded web browser
-media-sound/ncmpc:artist-screen - Enable artist screen
 media-sound/ncmpc:async-connect - Enable asynchronous connect
 media-sound/ncmpc:chat-screen - Enable the chat screen
 media-sound/ncmpc:help-screen - Enable the help screen
@@ -4944,7 +4943,6 @@ media-sound/ncmpc:mouse - Enable curses getmouse support
 media-sound/ncmpc:outputs-screen - Enable the outputs screen
 media-sound/ncmpc:search-screen - Enable search screen
 media-sound/ncmpc:song-screen - Enable song viewer screen
-media-sound/ncmpc:tcp - Enable TCP support
 media-sound/ncmpcpp:clock - Enable clock screen
 media-sound/ncmpcpp:outputs - Enable outputs screen
 media-sound/ncmpcpp:visualizer - Enable visualizer screen with sound wave/frequency spectrum modes
@@ -5019,7 +5017,6 @@ media-sound/snapcast:server - Build and install Snapcast server component
 media-sound/snapcast:tremor - Build with TREMOR version of vorbis
 media-sound/snd:s7 - Enable the s7 extension language (a version of Scheme)
 media-sound/sonata:lyrics - Support for lyrics fetching
-media-sound/sonata:trayicon - Enable support for trayicon
 media-sound/sonic-visualiser:id3tag - Enables ID3 tagging with id3tag library
 media-sound/sox:amr - Enables Adaptive Multi-Rate Audio support
 media-sound/sox:id3tag - Enables ID3 tagging with id3tag library
