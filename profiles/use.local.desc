@@ -2046,7 +2046,8 @@ dev-lang/gnat-gpl:regression-test - Run the testsuite and install the results (r
 dev-lang/gnat-gpl:sanitize - Build support for various sanitizer functions (ASAN/TSAN/etc...)
 dev-lang/gnat-gpl:ssp - Build packages with stack smashing protector on by default
 dev-lang/gnat-gpl:vtv - Build support for virtual table verification (a C++ hardening feature)
-dev-lang/go:gccgo - Enable bootstrapping using gccgo
+dev-lang/go:gccgo - Bootstrap using sys-devel/gcc[go]
+dev-lang/go:system-bootstrap - Bootstrap using previously installed dev-lang/go
 dev-lang/icon:iplsrc - install the icon programming library source
 dev-lang/lazarus:minimal - Don't build extra packages from the bigide component
 dev-lang/logtalk:fop - Support for generating pdf documentation using fop
@@ -3711,6 +3712,7 @@ gnustep-base/gnustep-make:libobjc2 - Enables use of the GNUstep Objective-C runt
 gnustep-base/gnustep-make:native-exceptions - Enables use of the native Objective-C exception support (@try/@catch/@finally) built-in objective-c exceptions with compilers that support it
 gnustep-base/libobjc2:boehm-gc - Enable Hans Boehm's garbage collector (dev-libs/boehm-gc). Not recommended by upstream
 gui-apps/mako:icons - Enable support for icons
+gui-apps/swaybg:man - Build and install man pages
 gui-apps/swayidle:elogind - Enable support for rootless session via elogind
 gui-apps/swayidle:fish-completion - Enable fish completion support
 gui-apps/swayidle:man - Build and install man pages
@@ -5039,6 +5041,7 @@ media-sound/tuxguitar:fluidsynth - Enables Fluidsynth MIDI software synthesis (w
 media-sound/tuxguitar:lilypond - Exports the score in a lilypond compatible format.
 media-sound/tuxguitar:pdf - Exports the score as a PDF file using dev-java/itext.
 media-sound/tuxguitar:tray - Adds an icon to the tray that controls midi playback.
+media-sound/umurmur:mbedtls - Use net-libs/mbedtls as TLS provider
 media-sound/umurmur:shm - Enable shared memory support
 media-sound/upmpdcli:thirdparty - Enable streaming from Qobuz and Tidal external services
 media-sound/vimpc:boost - Use boost instead of C++11 libraries
@@ -7657,7 +7660,6 @@ sci-libs/symengine:mpc - Add support for multiprecision complex arithmetic(dev-l
 sci-libs/symengine:mpfr - Add support for multiprecision floating point rouding(dev-libs/mpfr)
 sci-libs/taucs:cilk - Enable multithreading using dev-lang/cilk
 sci-libs/tensorflow:cuda - Enable support for nVidia CUDA
-sci-libs/tensorflow:system-libs - Link with system instead of bundled libraries
 sci-libs/umfpack:cholmod - Use sci-libs/cholmod for matrix ordering
 sci-libs/vtk:R - Enable support for dev-lang/R
 sci-libs/vtk:all-modules - Build all modules
@@ -8765,21 +8767,6 @@ www-apps/nikola:watchdog - Use dev-python/watchdog to monitor file system events
 www-apps/nikola:webmedia - Use dev-python/micawber to extract metadata from web media links
 www-apps/nikola:websocket - Add websocket support thru dev-python/ws4py
 www-apps/otrs:mod_perl - Provide all dependencies for use of mod_perl instead of cgi
-www-apps/phpsysinfo:apcupsd - Install sys-power/apcupsd to display those stats.
-www-apps/phpsysinfo:dmraid - Install sys-fs/dmraid to display those stats.
-www-apps/phpsysinfo:freeipmi - Install sys-libs/freeipmi to display those stats.
-www-apps/phpsysinfo:hddtemp - Install app-admin/hddtemp to display those stats.
-www-apps/phpsysinfo:ipmitool - Install sys-apps/ipmitool to display those stats.
-www-apps/phpsysinfo:ipmiutil - Install sys-apps/ipmiutil to display those stats.
-www-apps/phpsysinfo:iptables - Install net-firewall/iptables to display those stats.
-www-apps/phpsysinfo:lm_sensors - Install sys-apps/lm_sensors to display those stats.
-www-apps/phpsysinfo:mdadm - Install sys-fs/mdadm to display those stats.
-www-apps/phpsysinfo:megactl - Install sys-block/megactl to display those stats.
-www-apps/phpsysinfo:nut - Install sys-power/nut to display those stats.
-www-apps/phpsysinfo:quota - Install sys-fs/quota to display those stats.
-www-apps/phpsysinfo:smart - Install sys-apps/smartmontools to display those stats.
-www-apps/phpsysinfo:snmp - Install net-analyzer/net-snmp to display those stats.
-www-apps/phpsysinfo:uptime - Install app-misc/uptimed to display those stats.
 www-apps/postfixadmin:vacation - Install vacation.pl script and dependencies
 www-apps/radicale:bcrypt - Depend on passlib to enable bcrypt and md5 authentication methods
 www-apps/redmine:markdown - Enable support for Markdown
