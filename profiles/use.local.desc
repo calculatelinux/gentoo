@@ -121,7 +121,6 @@ app-admin/rsyslog:dbi - Build the general database output module (requires dev-d
 app-admin/rsyslog:elasticsearch - Build the Elasticsearch output module (requires net-misc/curl)
 app-admin/rsyslog:gcrypt - Add support for encrypted log files using dev-libs/libgcrypt
 app-admin/rsyslog:gnutls - Build the GnuTLS network stream driver (requires net-libs/gnutls)
-app-admin/rsyslog:grok - Build the grok modify module (requires dev-libs/grok)
 app-admin/rsyslog:kafka - Build the Apache Kafka input/output module (requires dev-libs/librdkafka)
 app-admin/rsyslog:kerberos - Build the GSSAPI input and output module (requires virtual/krb5)
 app-admin/rsyslog:kubernetes - Build the kubernetes modify plugin (requires net-misc/curl)
@@ -497,6 +496,8 @@ app-emulation/docker:container-init - Makes the a staticly-linked init system ti
 app-emulation/docker:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
 app-emulation/docker:overlay - Enables dependencies for the "overlay" graph driver, including necessary kernel flags.
 app-emulation/docker:pkcs11 - Enables pkcs-11 support.
+app-emulation/docker-credential-helpers:gnome-keyring - Build secretservice helper which works with gnome-keyring or kwallet using D-Bus.
+app-emulation/docker-credential-helpers:pass - Build pass helper for the pass utility.
 app-emulation/docker-runc:ambient - Enable support for ambient capability
 app-emulation/docker-runc:apparmor - Enable AppArmor support
 app-emulation/dosemu:fluidsynth - use media-sound/fluidsynth for MIDI emulation
@@ -2410,6 +2411,7 @@ dev-libs/kreport:marble - Enable displaying of maps using kde-apps/marble
 dev-libs/kreport:scripting - Support Qml scripting using dev-qt/qtdeclarative
 dev-libs/leveldb:snappy - support the snappy compression library
 dev-libs/libbase58:tools - Build command line base58 tool
+dev-libs/libbytesize:tools - Build bscalc python CLI tool
 dev-libs/libcdio:minimal - Only build the libcdio library and little more, just to be used to link against from multimedia players. With this USE flag enabled, none of the command-line utilities are built, nor is the CDDA library.
 dev-libs/libcec:cubox - Enable support for enable support for the TDA995x
 dev-libs/libcec:exynos - Enable support for Exynos chipsets
@@ -4616,7 +4618,6 @@ media-libs/opensubdiv:cuda - Enable NVIDIA CUDA Toolkit support through dev-util
 media-libs/opensubdiv:opencl - Enable OpenCL support through virtual/opencl.
 media-libs/opensubdiv:ptex - Adds support for faster per-face texture mapping through media-libs/ptex.
 media-libs/opensubdiv:tbb - Enable multithreading with the Intel Threads Building Blocks through dev-cpp/tbb.
-media-libs/opus:ambisonics - Enable ambisonics support (experimental).
 media-libs/opus:custom-modes - Build with custom-modes.
 media-libs/opusfile:fixed-point - Enable fixed-point arithmetic operations
 media-libs/opusfile:float - Enable floating point arithmetic operations
@@ -7377,13 +7378,6 @@ sci-chemistry/apbs:iapbs - C/C++/Fortran interface
 sci-chemistry/apbs:tools - Install optional tools
 sci-chemistry/avogadro2:rpc - Enable RPC server
 sci-chemistry/avogadro2:vtk - include vtk support
-sci-chemistry/ball:cuda - Include cuda support
-sci-chemistry/ball:fftw - Build with sci-libs/fftw (switching BALL to GPL3)
-sci-chemistry/ball:gui - Build VIEW library required for visualization and graphical user interfaces
-sci-chemistry/ball:lpsolve - Enable support for the Mixed Integer Linear Programming solver
-sci-chemistry/ball:openbabel - Enable support for sci-chemistry/openbabel (switching BALL to GPL3)
-sci-chemistry/ball:svm - Enable support for the Support Vector Machine module
-sci-chemistry/ball:webengine - Enable QtWebEngine support with Qt5 (requires gui)
 sci-chemistry/chemtool:emf - EMF export support
 sci-chemistry/cns:aria - Support patch for sci-chemistry/aria
 sci-chemistry/eden:double-precision - More precise calculations at the expense of speed
