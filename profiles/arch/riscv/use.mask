@@ -8,4 +8,13 @@
 seccomp
 
 # Not tested
+elogind
+fuse
+gtk
+gtk2
+gtk3
+libedit
+libressl
+qt5
 slang
+X

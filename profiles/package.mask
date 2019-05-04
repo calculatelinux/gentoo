@@ -589,12 +589,6 @@ dev-ruby/did_you_mean:1
 dev-go/go-resiliency
 
 # Michał Górny <mgorny@gentoo.org> (03 Apr 2019)
-# Does not build with ncurses[tinfo].  The current version is from 2004,
-# and it seems to have been abandoned upstream.
-# Removal in 30 days.  Bug #678866.
-games-roguelike/zangband
-
-# Michał Górny <mgorny@gentoo.org> (03 Apr 2019)
 # Unmaintained.  Multiple unresolved build failures (#630280, #638618,
 # #639648).  The current version was added in 2012, and haven't been
 # bumped since.  Upstream has released 1.0.0 in 2016 (#638464).
@@ -617,10 +611,6 @@ sys-apps/likwid
 # Miroslav Šulc <fordfrog@gentoo.org> (19 Mar 2019)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
 =www-servers/tomcat-9.0.17
-
-# Sobhan Mohammadpour <sobhan@gentoo.org> (17 Mar 2019)
-# Masked for testing
-=mail-client/geary-3.32.0-r1
 
 # Matt Turner <mattst88@gentoo.org> (16 Mar 2019)
 # Previously packaged drivers, now removed from Gentoo.
