@@ -10,7 +10,7 @@ inherit toolchain-funcs distutils-r1
 
 DESCRIPTION="A data templating language for app and tool developers "
 HOMEPAGE="http://jsonnet.org/"
-SRC_URI="https://github.com/google/jsonnet/archive/v0.12.1.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/google/jsonnet/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 IUSE="python"
 
 LICENSE="Apache-2.0"
@@ -48,10 +48,7 @@ python_test() {
 }
 
 src_install() {
-	# no install target in the Makefile
-	exeinto /usr/$(get_libdir)
-	doexe libjsonnet*.so
-
+	dolib.so libjsonnet*.so
 	dobin jsonnet
 
 	use python && distutils-r1_src_install
