@@ -2323,7 +2323,6 @@ dev-libs/aws-sdk-cpp:aws_targets_xray - SDK Support for AWS xray
 dev-libs/beignet:ocl-icd - Enable compatibility with the dev-libs/ocl-icd OpenCL ICD loader
 dev-libs/beignet:ocl20 - Enable experimental OpenCL 2.0 support on Skylake and newer architectures
 dev-libs/bitset:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations
-dev-libs/blitz:boost - Enable usage of boost::serialization
 dev-libs/boost:context - Build and install the Boost.Context (and Boost.Fiber) library and all other Boost libraries that depend on it
 dev-libs/boost:debug - Build and install only the debug version of the Boost libraries. Only enable this flag if you're developing against boost.
 dev-libs/boost:doc - Install the full API documentation documentation. This takes over 200MB of extra disk space.
@@ -3098,6 +3097,7 @@ dev-util/buildbot:manhole - Add support for manhole (debug over ssh)
 dev-util/bustle:interactivetests - Build interactive test programs
 dev-util/bustle:threaded - Build with support for multithreaded execution.
 dev-util/catalyst:ccache - Enables ccache support
+dev-util/catalyst:iso - Pulls in the depends for building iso images
 dev-util/catalyst:system-bootloader - Pulls in the depends needed to setup livecd bootloader from the host system rather than using a cdtar
 dev-util/cccc:apidoc - Build software docs with doxygen/graphviz and metrics with cccc
 dev-util/cccc:mfc - Add patch for MFC dialect options
@@ -3621,6 +3621,7 @@ games-util/lgogdownloader:gui - Enable GUI login support for passing reCAPTCHA
 games-util/pyfa:graph - Enable support for graphs
 games-util/wit:fuse - Enable image mount support via fuse
 gnome-base/gconf:ldap - Build backend which enables default mail accounts, addressbooks and calendars for Evolution to be configured using each user's LDAP entry."
+gnome-base/gdm:bluetooth-sound - Allow loading of bluetooth sound modules. This may be necessary for accessibility screen readers, but may cause bluetooth sound issues for users logging in.
 gnome-base/gdm:elogind - Use sys-auth/elogind for session management
 gnome-base/gdm:fprint - Enables experimental fingerprint authentication using sys-auth/fprintd
 gnome-base/gdm:plymouth - Enable support for smooth transition from sys-boot/plymouth
@@ -7192,6 +7193,7 @@ net-vpn/strongswan:strongswan_plugins_vici - Enable support for the vici plugin
 net-vpn/strongswan:strongswan_plugins_whitelist - Enable support for the whitelist plugin
 net-vpn/tinc:uml - Enable support for User Mode Linux Sockets
 net-vpn/tinc:vde - Enable Virtual Distributed Ethernet (VDE) based networking
+net-vpn/tor:man - Build and install man pages
 net-vpn/tor:scrypt - Use app-crypt/libscrypt for the scrypt algorithm
 net-vpn/tor:tor-hardening - Compile tor with hardening on vanilla compilers/linkers
 net-vpn/vpnc:resolvconf - Enable support for DNS managing framework net-dns/openresolv

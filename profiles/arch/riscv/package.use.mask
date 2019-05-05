@@ -6,8 +6,39 @@ dev-libs/libpcre2 jit
 dev-libs/libpcre jit
 dev-vcs/git pcre-jit
 
-# Not yet tested
+# Not yet tested / unkeyworded dependencies
+# This includes also packages which do not support python-3 or
+# do not support python-3.7 yet.
 
-sys-devel/make guile
-sys-auth/pambase consolekit pam_ssh pam_krb5 passwdqc mktemp
+app-arch/unzip natspec
+app-crypt/gnupg smartcard tofu wks-server
+app-crypt/mit-krb5 doc test xinetd
+app-crypt/pinentry fltk gnome-keyring
+app-misc/pax-utils python
+app-text/asciidoc graphviz test
+app-text/po4a test
+app-text/xmlto text
+dev-lang/python tk
+dev-libs/check subunit
+dev-libs/glib gtk-doc test
+dev-libs/icu doc
+dev-libs/iniparser doc
+dev-libs/libnl python
+dev-libs/libxslt python
+dev-python/cython doc test
+dev-python/snakeoil test
+dev-util/catalyst iso
+dev-util/pkgconf test
+dev-vcs/git cvs gnome-keyring subversion tk xinetd
+net-libs/gnutls test-full
+net-libs/ldns doc python
+net-nds/openldap cxx kerberos sasl
+sys-apps/kmod doc
+sys-apps/portage epydoc
+sys-auth/pambase pam_ssh passwdqc mktemp
+sys-devel/gdb source-highlight
+sys-devel/gettext cvs
+sys-fs/squashfs-tools lz4 lzma lzo zstd
+sys-libs/libcap-ng python
+sys-process/audit python
 sys-process/procps test

@@ -29,6 +29,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Stefan Strogin <stefan.strogin@gmail.com> (04 May 2019)
+# Masked for testing reverse dependencies. Bug #591300.
+>=dev-libs/bglibs-2.04
+
 # Michał Górny <mgorny@gentoo.org> (02 May 2019)
 # Discontinued upstream, and no longer required by any packages
 # in Gentoo.  Removal in 30 days.  Bug #684828.
@@ -583,24 +587,6 @@ xfce-extra/xfce4-netspeed-plugin
 dev-lang/ruby:2.3
 dev-ruby/did_you_mean:1
 
-# Zac Medico <zmedico@gentoo.org> (04 Apr 2019)
-# Ebuild is not needed since consumers use EGO_VENDOR.
-# Removal in 30 days.  Bug #656972.
-dev-go/go-resiliency
-
-# Michał Górny <mgorny@gentoo.org> (03 Apr 2019)
-# Unmaintained.  Multiple unresolved build failures (#630280, #638618,
-# #639648).  The current version was added in 2012, and haven't been
-# bumped since.  Upstream has released 1.0.0 in 2016 (#638464).
-# Removal in 30 days.  Bug #682402.
-dev-libs/blitz
-
-# Michał Górny <mgorny@gentoo.org> (03 Apr 2019)
-# Bundles dev-libs/rapidjson.  Fails to build with gcc-6+.  The packaged
-# version is from 2015, and needs bump for almost 2 years.
-# Removal in 30 days.  Bug #580358.
-dev-libs/handystats
-
 # Requires >=dev-lang/lua-5.3 which is masked
 sys-apps/likwid
 
@@ -807,12 +793,6 @@ sys-devel/automake:1.8
 # Gilles Dartiguelongue <eva@gentoo.org> (04 Sep 2017)
 # Incompatible changes in API in Enchant 2. Bug #629838.
 >=app-text/enchant-2
-
-# Sébastien Fabbro <bicatali@gentoo.org> (19 Aug 2017)
-# ipython-6 is python-3 only and causes circular dependencies
-# Unset python_targets_python2_7 for ipykernel and ipyparallel if needed.
->=dev-python/ipython-6
->=dev-python/ipykernel-5
 
 # Kent Fredric <kentnl@gentoo.org> (21 Jul 2017)
 # Masked due to serious regression that introduces widespread data
