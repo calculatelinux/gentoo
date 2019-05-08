@@ -4,7 +4,7 @@
 EAPI="7"
 
 PYTHON_COMPAT=( python3_{5,6,7} )
-inherit gnome2-utils linux-info python-single-r1 systemd
+inherit gnome2-utils linux-info python-single-r1 systemd xdg-utils
 
 DESCRIPTION="Simple and intuitive GTK+ Bluetooth Manager"
 HOMEPAGE="https://github.com/blueman-project/blueman"
@@ -18,7 +18,9 @@ else
 	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 fi
 
-LICENSE="GPL-3"
+# icons are GPL-2
+# source files are mixed GPL-3+ and GPL-2+
+LICENSE="GPL-3+ GPL-2"
 SLOT="0"
 IUSE="appindicator network nls policykit pulseaudio"
 
@@ -31,7 +33,6 @@ BDEPEND="
 	virtual/pkgconfig
 	nls? ( dev-util/intltool sys-devel/gettext )"
 RDEPEND="${DEPEND}
-	dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-python/pycairo[${PYTHON_USEDEP}]
 	sys-apps/dbus
 	x11-libs/gtk+:3[introspection]
@@ -106,16 +107,15 @@ src_install() {
 		doins "${FILESDIR}/01-org.blueman.rules"
 	fi
 
-	python_fix_shebang "${D}"
 	rm "${D}"/$(python_get_sitedir)/*.la || die
 }
 
 pkg_postinst() {
-	gnome2_icon_cache_update
+	xdg_icon_cache_update
 	gnome2_schemas_update
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	xdg_icon_cache_update
 	gnome2_schemas_update
 }
