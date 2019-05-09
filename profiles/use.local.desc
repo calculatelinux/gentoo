@@ -1055,8 +1055,10 @@ app-misc/pip3line:distorm - Compile the Distorm plugin
 app-misc/pip3line:qscintilla - Use QScintilla for more efficient text display
 app-misc/pip3line:ssl - Compile the plugin adding miscellaneous hashes from OpenSSL
 app-misc/recoll:camelcase - Enable indexing for camelCase sentences and words
+app-misc/recoll:chm - Enable CHM file support via dev-python/pychm
 app-misc/recoll:inotify - Use the Linux Kernel notification subsystem for monitoring file alterations in realtime
 app-misc/recoll:session - Stop monitoring file alterations when X11 session terminates
+app-misc/recoll:webengine - Use dev-qt/qtwebengine for fancy result list display
 app-misc/rlwrap:debug - Enable debug
 app-misc/screen:multiuser - Enable multiuser support (by setting correct permissions)
 app-misc/screen:nethack - Express error messages in nethack style
@@ -5072,7 +5074,9 @@ media-sound/xwax:fallback - Sets runtime dependencies to support decoding "other
 media-sound/xwax:jack - Adds support for audio input/output via the JACK Audio Connection Kit.
 media-sound/xwax:mp3 - Sets runtime dependencies to support decoding MP3 audio.
 media-sound/xwax:oss - Adds support for OSS (open sound system) audio input/output.
-media-sound/yarock:phonon - Use media-libs/phonon backend instead of media-video/vlc
+media-sound/yarock:mpv - Enable media-video/mpv backend
+media-sound/yarock:phonon - Enable media-libs/phonon backend
+media-sound/yarock:vlc - Enable media-video/vlc backend
 media-sound/yoshimi:lv2 - Add support for Ladspa V2
 media-sound/zynaddsubfx:dssi - Enable support for DSSI Soft Synth Interface
 media-tv/gentoo-vdr-scripts:nvram - Add support for using nvram-wakeup to set wakeup time in bios
@@ -9244,6 +9248,7 @@ x11-wm/e16:xsync - Enable X Sync support
 x11-wm/e16:zoom - Support resolution change of current window (zoom) usingx11-libs/libXxf86vm (xvidtune)
 x11-wm/echinus:xrandr - Enable support for multihead configuration
 x11-wm/enlightenment:packagekit - Enable module for package manager integration
+x11-wm/enlightenment:xwayland - Enable XWayland application support
 x11-wm/fluxbox:bidi - Enable bidirectional language support with dev-libs/fribidi
 x11-wm/fluxbox:slit - Enables the Fluxbox slit (or dock)
 x11-wm/fluxbox:systray - Enables the system tray in the Fluxbox toolbar
