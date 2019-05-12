@@ -53,7 +53,7 @@ S="${WORKDIR}/jdk-${MY_PV}"
 
 src_install() {
 	local dest="/opt/${P}"
-	local ddest="${ED}${dest#/}"
+	local ddest="${ED%/}/${dest#/}"
 
 	# Not sure why they bundle this as it's commonly available and they
 	# only do so on x86_64. It's needed by libfontmanager.so. IcedTea
@@ -78,8 +78,12 @@ src_install() {
 		rm -v lib/src.zip || die
 	fi
 
+	mv lib/security/cacerts lib/security/cacerts.orig || die
+
 	dodir "${dest}"
 	cp -pPR * "${ddest}" || die
+
+	dosym "${EPREFIX}"/etc/ssl/certs/java/cacerts "${dest}"/lib/security/cacerts
 
 	use gentoo-vm && java-vm_install-env "${FILESDIR}"/${PN}-${SLOT}.env.sh
 	java-vm_set-pax-markings "${ddest}"

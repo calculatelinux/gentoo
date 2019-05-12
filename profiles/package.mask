@@ -29,6 +29,102 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (11 May 2019)
+# Perl 5.30 preparation block. DO NOT USE YET!
+=dev-lang/perl-5.30*
+~virtual/perl-Archive-Tar-2.320.0
+~virtual/perl-CPAN-2.220.0
+~virtual/perl-Compress-Raw-Bzip2-2.84.0
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (11 May 2019)
+# Perl 5.24 will be removed soon. Please upgrade.
+<dev-lang/perl-5.26.2
+=virtual/perl-Archive-Tar-2.40.100_rc-r6
+=virtual/perl-B-Debug-1.230.0-r3
+=virtual/perl-CPAN-2.110.100_rc-r6
+=virtual/perl-CPAN-Meta-2.150.5-r1
+=virtual/perl-Carp-1.400.0-r1
+=virtual/perl-Compress-Raw-Bzip2-2.69.0-r1
+=virtual/perl-Compress-Raw-Zlib-2.69.0-r1
+=virtual/perl-DB_File-1.835.0-r3
+=virtual/perl-Data-Dumper-2.160.0-r1
+=virtual/perl-Devel-PPPort-3.320.0-r1
+=virtual/perl-Digest-MD5-2.540.0-r3
+=virtual/perl-Digest-SHA-5.950.100_rc-r6
+=virtual/perl-Encode-2.800.100_rc-r4
+=virtual/perl-ExtUtils-MakeMaker-7.100.200_rc-r4
+=virtual/perl-ExtUtils-ParseXS-3.310.0-r1
+=virtual/perl-File-Spec-3.630.100_rc-r4
+=virtual/perl-Filter-Simple-0.920.0-r3
+=virtual/perl-Getopt-Long-2.480.0-r1
+=virtual/perl-HTTP-Tiny-0.56.1_rc-r4
+=virtual/perl-I18N-LangTags-0.400.0-r5
+=virtual/perl-IO-1.360.100_rc-r4
+=virtual/perl-IO-Compress-2.69.1_rc-r4
+=virtual/perl-IO-Socket-IP-0.370.0-r3
+=virtual/perl-IPC-Cmd-0.920.100_rc-r6
+=virtual/perl-JSON-PP-2.273.0.100_rc-r6
+=virtual/perl-Locale-Maketext-1.260.100_rc-r6
+=virtual/perl-Math-BigInt-1.999.715-r2
+=virtual/perl-Math-BigInt-FastCalc-0.400.0-r1
+=virtual/perl-Math-BigRat-0.260.802-r1
+=virtual/perl-Math-Complex-1.590.0-r9
+=virtual/perl-Module-CoreList-5.201.709.220-r2
+=virtual/perl-Module-Load-Conditional-0.640.0-r3
+=virtual/perl-Module-Metadata-1.0.31-r1
+=virtual/perl-Net-Ping-2.430.100_rc-r6
+=virtual/perl-Parse-CPAN-Meta-1.441.700.100_rc-r4
+=virtual/perl-Perl-OSType-1.9.0-r1
+=virtual/perl-Pod-Simple-3.320.0-r1
+=virtual/perl-Safe-2.390.0-r3
+=virtual/perl-Scalar-List-Utils-1.420.200_rc-r1
+=virtual/perl-Storable-2.560.100_rc-r4
+=virtual/perl-Sys-Syslog-0.330.100_rc-r6
+=virtual/perl-Term-ANSIColor-4.40.0-r1
+=virtual/perl-Term-ReadLine-1.150.0-r3
+=virtual/perl-Test-1.280.100_rc-r4
+=virtual/perl-Test-Harness-3.360.100_rc-r3
+=virtual/perl-Test-Simple-1.1.14_p522-r2
+=virtual/perl-Thread-Queue-3.90.0-r1
+=virtual/perl-Thread-Semaphore-2.120.0-r9
+=virtual/perl-Unicode-Collate-1.140.0-r2
+=virtual/perl-XSLoader-0.220.0-r4
+=virtual/perl-bignum-0.420.100_rc-r4
+=virtual/perl-libnet-3.80.100_rc-r4
+=virtual/perl-parent-0.234.0-r1
+=virtual/perl-podlators-4.70.0-r1
+=virtual/perl-threads-2.70.0-r1
+=virtual/perl-threads-shared-1.510.0-r1
+=virtual/perl-version-0.991.600-r1
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (11 May 2019)
+# Severely outdated, no commits since 2009, EAPI=2.
+# Bug 679686. Removal in 30 days.
+dev-lang/confluence
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (11 May 2019)
+# Build failures, other QA issues, EAPI=2. See bug 681046
+# Removal in 30 days.
+dev-embedded/tavrasm
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (11 May 2019)
+# Outdated, EAPI=2, unmaintained, segfaults immediately.
+# See bug 634928 and bug 612980. Removal in 30 days.
+app-accessibility/festival
+app-accessibility/festival-freebsoft-utils
+app-accessibility/festival-hts
+app-accessibility/festival-fi
+app-accessibility/festival-it
+app-accessibility/festival-ru
+app-accessibility/perlbox-voice
+app-accessibility/pidgin-festival
+dev-ros/sound_play
+
+# Virgil Dupras <vdupras@gentoo.org> (10 May 2019)
+# Has very limited use and is disruptive of other tests when activated.
+# Bug #685538. Removal in 30 days.
+dev-python/pytest-relaxed
+
 # Patrice Clement <monsieurp@gentoo.org> (06 May 2019)
 # Broken build. Outdated version. No interest from the Java team to maintain
 # it. Removal in 30 days. Bug #581720.
@@ -358,24 +454,6 @@ dev-util/cucumber-expressions:5.0
 >=dev-util/boost-build-1.70.0
 >=net-mail/libpst-0.6.66-r2
 
-# Patrice Clement <monsieurp@gentoo.org> (14 Apr 2019)
-# Old, unmaintained and sometimes abandoned Java libraries/programs.
-# Removal in 30 days.
-dev-java/idm-console-framework
-dev-java/matrix-toolkits-java
-dev-java/sat4j-pseudo
-dev-java/sat4j-core
-dev-java/swarmcache
-dev-java/dbus-java
-dev-java/jinklevel
-dev-java/proguard
-dev-java/nailgun
-dev-java/jgroups
-dev-java/libmso
-dev-java/jicmp
-media-sound/jtagger
-app-admin/389-console
-
 # Michał Górny <mgorny@gentoo.org> (14 Apr 2019)
 # The ebuild violates EAPI and relies on STRIP_MASK.  The default
 # behavior makes it capable of executing arbitrary commands when running
@@ -467,135 +545,9 @@ dev-ruby/sprockets-rails:2.3
 dev-ruby/uglifier:0
 dev-ruby/uglifier:3
 
-# Hans de Graaff <graaff@gentoo.org> (13 Apr 2019)
-# No longer maintained upstream. Does not work
-# with ruby25.
-# Masked for removal in 30 days.
-dev-ruby/celluloid
-dev-ruby/celluloid-essentials
-dev-ruby/celluloid-extras
-dev-ruby/celluloid-fsm
-dev-ruby/celluloid-io
-dev-ruby/celluloid-pool
-dev-ruby/celluloid-supervision
-
-# Aaron Bauman <bman@gentoo.org> (12 Apr 2019)
-# Multiple security vulnerabilities
-# No revbumps in several years.
-# Removal in 30 days. Bug #675682
-dev-java/jackson-databind
-dev-java/jackson-dataformat-xml
-dev-java/jackson-dataformat-yaml
-dev-java/jackson-module-jaxb-annotations
-
-# Virgil Dupras <vdupras@gentoo.org> (12 Apr 2019)
-# Dead upstream, no revdeps.
-# Removal in 30 days. Bug #683146
-dev-python/readme
-
-# Georgy Yakovlev  (11 Apr 2019)
-# Rust provides zsh completion.
-# This one is old, unmaintained obsolete version.
-# Removal in 30 days.
-app-shells/rust-zshcomp
-
-# Michał Górny <mgorny@gentoo.org> (10 Apr 2019)
-# Unresolved vulnerability.  Last apparent upstream activity in 2015,
-# with the code last touched in 2010.  Local patches are already
-# necessary for it to build.
-# Removal in 30 days.  Bug #630254.
-media-sound/aacplusenc
-
-# Michał Górny <mgorny@gentoo.org> (10 Apr 2019)
-# Fails to build for more than 3 years.  The project has been abandoned
-# upstream, with the current (and last) release made in 2010.
-# The author itself suggests media-gfx/eog as a replacement, though
-# there is a plenty of other image viewers worth considering.
-# Removal in 30 days.  Bug #561392.
-media-gfx/gliv
-
-# Michał Górny <mgorny@gentoo.org> (09 Apr 2019)
-# Obsolete XFCE library with its remaining dependencies.  In all cases,
-# the relevant plugins have been abandoned upstream and the upstream
-# repository is dead or not to be found.  All of them are unlikely
-# to be ported away from libxfcegui4 and/or into GTK+3.
-# Removal in 30 days.  Bug #590306.
-xfce-base/libxfcegui4
-xfce-extra/xfce4-gvfs-mount
-xfce-extra/xfce4-linelight-plugin
-xfce-extra/xfce4-messenger-plugin
-xfce-extra/xfce4-modemlights-plugin
-
-# Michał Górny <mgorny@gentoo.org> (09 Apr 2019)
-# Marked deprecated upstream.  Still uses xfce-base/libxfcegui4.
-# Unlikely to be ported to GTK+3.
-# Removal in 30 days.  Bug #682956.
-app-text/xfbib
-
-# Michał Górny <mgorny@gentoo.org> (09 Apr 2019)
-# Marked deprecated upstream.  Uses xfce-base/libxfcegui4.  Unlikely
-# to be ported to GTK+3.
-# Removal in 30 days.  Bug #682954.
-xfce-extra/xfce4-cellmodem-plugin
-
-# Michał Górny <mgorny@gentoo.org> (09 Apr 2019)
-# Marked deprecated upstream.  Uses xfce-base/libxfcegui4.  Unlikely
-# to be ported to GTK+3.  Still uses xfconf.eclass.
-# Removal in 30 days.  Bug #682950.
-xfce-extra/xfswitch-plugin
-
-# Michał Górny <mgorny@gentoo.org> (09 Apr 2019)
-# Unofficial plugin abandoned upstream.  The only release is from 2014,
-# last commits are from 2015.  Little chances of porting to GTK+3.
-# Still uses xfconf.eclass.
-# Removal in 30 days.  Bug #682940.
-xfce-extra/xfce4-soundmenu-plugin
-
-# Michał Górny <mgorny@gentoo.org> (09 Apr 2019)
-# Marked deprecated upstream.  Uses xfce-base/libxfcegui4.  Little
-# chances of porting to GTK+3.  Still uses xfconf.eclass.
-# Removal in 30 days.  Bug #682938.
-xfce-extra/xfce4-wmdock-plugin
-
-# Michał Górny <mgorny@gentoo.org> (09 Apr 2019)
-# Marked as deprecated upstream.  Does not build against modern kernels.
-# Little chances of GTK+3 port.  Still uses xfconf.eclass.
-# Removal in 30 days.  Bug #604134.
-xfce-extra/xfce4-radio-plugin
-
-# Michał Górny <mgorny@gentoo.org> (09 Apr 2019)
-# Marked as deprecated upstream.  Little chances of GTK+3 port.
-# Still uses xfconf.eclass.
-# Removal in 30 days.  Bug #682934.
-xfce-extra/xfce4-quicklauncher-plugin
-
-# Michał Górny <mgorny@gentoo.org> (09 Apr 2019)
-# Unofficial panel plugin whose upstream disappeared and sources are
-# nowhere to be found.  Possibly does not even work (#499156).
-# Unlikely to be ported to GTK+3.  Still uses xfconf.eclass.
-# Removal in 30 days.  Bug #682930.
-xfce-extra/xfce4-playercontrol-plugin
-
-# Michał Górny <mgorny@gentoo.org> (09 Apr 2019)
-# Unofficial panel plugin that has been abandoned upstream.
-# Last activity in 2013.  Unlikely to be ported to GTK+3.  Ebuild still
-# uses xfconf.eclass.
-# Removal in 30 days.  Bug #682928.
-xfce-extra/xfce4-netspeed-plugin
-
-# Hans de Graaff <graaff@gentoo.org> (8 Apr 2019)
-# Ruby 2.3 is no longer maintained and only receives security patches
-# until March 2019. Please use Ruby 2.4 or newer instead.
-# Masked for removal in 30 days
-dev-lang/ruby:2.3
-dev-ruby/did_you_mean:1
-
+# Robin H. Johnson <robbat2@gentoo.org> (25 Mar 2019)
 # Requires >=dev-lang/lua-5.3 which is masked
 sys-apps/likwid
-
-# Andreas Sturmlechner <asturm@gentoo.org> (23 Mar 2019)
-# Everything breaks again. bug #681336
->=app-text/poppler-0.75.0
 
 # Miroslav Šulc <fordfrog@gentoo.org> (19 Mar 2019)
 # Depends on >=virtual/{jdk,jre}-11 which is masked

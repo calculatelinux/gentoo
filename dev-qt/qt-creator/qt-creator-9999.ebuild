@@ -56,7 +56,7 @@ CDEPEND="
 		>=dev-qt/qthelp-${QT_PV}
 		webengine? ( >=dev-qt/qtwebengine-${QT_PV}[widgets] )
 	)
-	qbs? ( >=dev-util/qbs-1.12.2 )
+	qbs? ( >=dev-util/qbs-1.13.0 )
 	serialterminal? ( >=dev-qt/qtserialport-${QT_PV} )
 	systemd? ( sys-apps/systemd:= )
 "
@@ -139,6 +139,9 @@ src_prepare() {
 	sed -i -e 's/\(manual\|tools\|unit\)//g' tests/tests.pro || die
 	sed -i -e '/\(dumpers\|namedemangler\)\.pro/d' tests/auto/debugger/debugger.pro || die
 	sed -i -e '/CONFIG -=/s/$/ testcase/' tests/auto/extensionsystem/pluginmanager/correctplugins1/plugin?/plugin?.pro || die
+
+	# do not install test binaries
+	sed -i -e '/CONFIG +=/s/$/ no_testcase_installs/' tests/auto/{qttest.pri,json/json.pro} || die
 
 	# fix path to some clang headers
 	sed -i -e "/^CLANG_RESOURCE_DIR\s*=/s:\$\${LLVM_LIBDIR}:${EPREFIX}/usr/lib:" src/shared/clang/clang_defines.pri || die
