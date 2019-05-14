@@ -29,6 +29,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Brian Evans <grknight@gentoo.org> (14 May 2019)
+# MariaDB 10.0 has reached end of life and has security issues
+# dev-db/mariadb-galera users should upgrade to mariadb-10.1 or greater
+# Removal in 30 days
+dev-db/mariadb-galera
+=dev-db/mariadb-10.0*
+
+# Virgil Dupras <vdupras@gentoo.org> (13 May 2019)
+# detox has been deprecated by the release of tox 3.7.0 which duplicates the
+# feature. Removal in 30 days. Bug #685870
+dev-python/detox
+
 # Andreas K. Hüttel <dilfridge@gentoo.org> (11 May 2019)
 # Perl 5.30 preparation block. DO NOT USE YET!
 =dev-lang/perl-5.30*
@@ -40,6 +52,15 @@
 ~virtual/perl-Data-Dumper-2.174.0
 ~virtual/perl-Devel-PPPort-3.510.0
 ~virtual/perl-Digest-SHA-6.20.0
+~virtual/perl-Encode-3.10.0
+~virtual/perl-ExtUtils-CBuilder-0.280.231
+~virtual/perl-ExtUtils-Manifest-1.720.0
+~virtual/perl-ExtUtils-ParseXS-3.400.0
+~virtual/perl-File-Path-2.160.0
+~virtual/perl-File-Spec-3.780.0
+~perl-core/File-Temp-0.230.900
+~virtual/perl-File-Temp-0.230.900
+~virtual/perl-HTTP-Tiny-0.76.0
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (11 May 2019)
 # Perl 5.24 will be removed soon. Please upgrade.
@@ -230,15 +251,6 @@ dev-cpp/gstreamermm:0.10
 dev-python/gst-python:0.10
 media-libs/gnonlin:0.10
 net-libs/farstream:0.1
-
-# Patrice Clement <monsieurp@gentoo.org> (19 Apr 2019)
-# Another round of abandoned Java libraries that must go.
-# Removal in 30 days.
-dev-java/lucene-analyzers
-dev-java/sun-java3d-bin
-dev-java/sun-dtdparser
-dev-java/stax
-app-misc/bfm
 
 # Virgil Dupras <vdupras@gentoo.org> (26 Apr 2019)
 # Should have been removed with django-cms a while back but wasn't.
