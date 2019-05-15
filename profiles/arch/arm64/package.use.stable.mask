@@ -39,7 +39,7 @@ dev-vcs/git doc
 # Mart Raudsepp <leio@gentoo.org> (29 May 2018)
 # sys-devel/clang, dev-libs/xapian, app-text/texlive not stable yet
 # USE=doc requires USE=latex
-app-doc/doxygen clang doxysearch latex doc
+app-doc/doxygen clang doxysearch doc
 
 # Mart Raudsepp <leio@gentoo.org> (29 May 2018)
 # virtual/opengl and media-libs/freeglut not stable yet
@@ -64,7 +64,7 @@ app-portage/layman cvs subversion test
 app-text/xmlto latex
 dev-libs/apr-util freetds odbc
 sys-apps/man-pages l10n_fr
-sys-apps/systemd cryptsetup qrcode
+sys-apps/systemd qrcode
 sys-auth/pambase pam_krb5 pam_ssh passwdqc
 sys-block/thin-provisioning-tools test
 sys-devel/distcc gssapi
