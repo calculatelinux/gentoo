@@ -46,8 +46,8 @@ sys-devel/clang-runtime crt
 net-analyzer/wireshark doc
 
 # Andreas Sturmlechner <asturm@gentoo.org> (29 May 2018)
-# Depends on unstable media-libs/libaom, net-libs/srt
-media-video/vlc aom srt
+# Depends on unstable media-libs/libaom
+media-video/vlc aom
 
 # Andreas Sturmlechner <asturm@gentoo.org> (21 May 2018)
 # Depends on lots of unstable dependencies
@@ -56,10 +56,6 @@ dev-python/s3fs test
 # Andreas Sturmlechner <asturm@gentoo.org> (03 Mar 2018)
 # sci-geosciences/grass is not stable
 sci-geosciences/qgis grass
-
-# Thomas Beierlein <tomjbe@gentoo.org> (21 Mar 2018)
-# ~app-backup/bacula-9.0.6 does not compile with USE=libressl (bug #641492)
-~app-backup/bacula-9.0.6 libressl
 
 # Matthias Maier <tamiko@gentoo.org> (18 Mar 2018)
 # dev-libs/capstone hasn't been stabilized yet
