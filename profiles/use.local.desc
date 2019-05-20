@@ -5783,6 +5783,7 @@ net-dns/getdns:getdns_server_mon - Add getdns_server_mon tool
 net-dns/getdns:libev - Enable dev-libs/libev support
 net-dns/getdns:libevent - Enable dev-libs/libevent support
 net-dns/getdns:libuv - Enable dev-libs/libuv support
+net-dns/getdns:nettle - Use dev-libs/nettle as crypto backend
 net-dns/getdns:stubby - Add Stubby DNS Privacy Deamon
 net-dns/getdns:unbound - Enable net-dns/unbound libraries support
 net-dns/hash-slinger:ipsec - Enable support for IPSECKEY records (ipseckey)
@@ -9094,6 +9095,7 @@ x11-misc/light-locker:dpms - Turn on the display on screensaver deactivation.
 x11-misc/light-locker:gtk3 - Build with GTK+ 3 instead of GTK+ 2.
 x11-misc/light-locker:screensaver - Lock the screen on screensaver activation.
 x11-misc/lightdm:gtk - Pull in the gtk+ greeter
+x11-misc/lightdm:non_root - Use non-root user by default
 x11-misc/mugshot:gnome - Add support for gnome-base/gnome-control-center
 x11-misc/mugshot:libreoffice - Add support for app-office/libreoffice and app-office/libreoffice-bin
 x11-misc/mugshot:webcam - Add support for setting a profile photo in media-video/cheese
