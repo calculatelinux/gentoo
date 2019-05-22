@@ -29,6 +29,19 @@
 
 #--- END OF EXAMPLES ---
 
+# Lars Wendler <polynomial-c@gentoo.org> (21 May 2019)
+# Masked for testing
+=sys-libs/ncurses-6.1_p20181020
+
+# Stefan Strogin <steils@gentoo.org> (21 May 2019)
+# Unmaintained. Last release in 2005. Does not build with
+# >=dev-libs/bglibs-2.04. Bug #686438.
+net-mail/qmail-qfilter
+
+# Stefan Strogin <steils@gentoo.org> (21 May 2019)
+# Depends on >=dev-libs/bglibs-2.04. Bug #347479.
+>=net-mail/mailfront-2.22
+
 # Michał Górny <mgorny@gentoo.org> (19 May 2019)
 # Unmaintained.  The program breaks init.d script (#626580).  Homepage
 # and public sources disappeared.  Last release in 2006.
@@ -114,6 +127,7 @@ dev-python/detox
 ~virtual/perl-Math-BigInt-FastCalc-0.500.800
 ~virtual/perl-Math-BigRat-0.261.400
 ~virtual/perl-Module-CoreList-5.201.905.200
+~virtual/perl-Module-CoreList-5.201.905.220
 ~virtual/perl-Module-Load-0.340.0
 ~virtual/perl-Module-Metadata-1.0.36
 ~virtual/perl-Net-Ping-2.710.0

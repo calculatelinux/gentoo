@@ -6,7 +6,7 @@ EAPI=6
 WX_GTK_VER="3.0"
 PYTHON_COMPAT=( python{2_7,3_5,3_6} )
 
-inherit python-single-r1 wxwidgets cmake-utils eapi7-ver
+inherit python-single-r1 wxwidgets cmake-utils eapi7-ver xdg
 
 DESCRIPTION="GUI for the creation & processing of panoramic images"
 HOMEPAGE="http://hugin.sf.net"
@@ -55,6 +55,8 @@ DEPEND="${CDEPEND}
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 DOCS=( authors.txt README TODO )
+
+PATCHES=( "${FILESDIR}/${P}-exiv2-0.27.1.patch" ) # bug 686366
 
 S=${WORKDIR}/${PN}-$(ver_cut 1-2).0
 
