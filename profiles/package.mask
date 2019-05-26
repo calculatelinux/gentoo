@@ -29,6 +29,36 @@
 
 #--- END OF EXAMPLES ---
 
+# Virgil Dupras <vdupras@gentoo.org> (24 May 2019)
+# py2 only, dead upstream, removal in 30 days. Bug #686668
+dev-python/drpython
+
+# Aaron Bauman <bman@gentoo.org> (23 May 2019)
+# Upstreami now requires registration to download
+# EAPI2. Removal in 30 days.
+net-misc/mindterm
+
+# Aaron Bauman <bman@gentoo.org> (23 May 2019)
+# Unmaintained, EAPI2, updates available upstream
+# Oh yea, removal in 30 days
+dev-util/pmd
+
+# Patrick Lauer <patrick@gentoo.org> (23 May 2019)
+# PostgreSQL beta and release candidate releases are pre-release testing
+# versions, not meant for production use. They are feature-frozen, and are
+# released to the public for testing before final release
+#
+# NOTE: Successive beta or candidate releases may not be backwards compatible,
+# so it is important that you review the release notes before upgrading.
+#
+# For more information about beta and release candidate versions, see:
+#     https://www.postgresql.org/developer/beta/
+dev-db/postgresql:12
+
+# Stefan Strogin <steils@gentoo.org> (23 May 2019)
+# Depends on >=dev-libs/bglibs-2.04. Bug #685294.
+>=net-mail/qmail-autoresponder-2.0
+
 # Stefan Strogin <steils@gentoo.org> (22 May 2019)
 # Depends on >=dev-libs/bglibs-2.04. Bug #678928.
 >=sys-apps/ucspi-proxy-1.1
@@ -112,54 +142,6 @@ dev-db/mariadb-galera
 # detox has been deprecated by the release of tox 3.7.0 which duplicates the
 # feature. Removal in 30 days. Bug #685870
 dev-python/detox
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (11 May 2019)
-# Perl 5.30 preparation block. Will be unmasked some time after the
-# actual release of Perl 5.30.0.
-=dev-lang/perl-5.30*
-~virtual/perl-Archive-Tar-2.320.0
-~virtual/perl-CPAN-2.220.0
-~virtual/perl-Compress-Raw-Bzip2-2.84.0
-~virtual/perl-Compress-Raw-Zlib-2.84.0
-~virtual/perl-DB_File-1.843.0
-~virtual/perl-Data-Dumper-2.174.0
-~virtual/perl-Devel-PPPort-3.520.0
-~virtual/perl-Digest-SHA-6.20.0
-~virtual/perl-Encode-3.10.0
-~virtual/perl-ExtUtils-CBuilder-0.280.231
-~virtual/perl-ExtUtils-Manifest-1.720.0
-~virtual/perl-ExtUtils-ParseXS-3.400.0
-~virtual/perl-File-Path-2.160.0
-~virtual/perl-File-Spec-3.780.0
-~perl-core/File-Temp-0.230.900
-~virtual/perl-File-Temp-0.230.900
-~virtual/perl-HTTP-Tiny-0.76.0
-~virtual/perl-IO-1.400.0
-~virtual/perl-IO-Compress-2.84.0
-~virtual/perl-IPC-Cmd-1.20.0
-~virtual/perl-JSON-PP-4.20.0
-~virtual/perl-Math-BigInt-1.999.816
-~virtual/perl-Math-BigInt-FastCalc-0.500.800
-~virtual/perl-Math-BigRat-0.261.400
-~virtual/perl-Module-CoreList-5.201.905.200
-~virtual/perl-Module-CoreList-5.201.905.220
-~virtual/perl-Module-Load-0.340.0
-~virtual/perl-Module-Metadata-1.0.36
-~virtual/perl-Net-Ping-2.710.0
-~virtual/perl-Storable-3.150.0
-~virtual/perl-Test-Simple-1.302.162
-~virtual/perl-Thread-Queue-3.130.0
-~virtual/perl-Time-HiRes-1.976.0
-~virtual/perl-Time-Local-1.280.0
-~virtual/perl-Time-Piece-1.330.0
-~virtual/perl-Unicode-Collate-1.270.0
-~virtual/perl-bignum-0.510.0
-~virtual/perl-parent-0.237.0
-~virtual/perl-podlators-4.110.0
-~virtual/perl-threads-shared-1.600.0
-~virtual/perl-version-0.992.400
-~dev-perl/Math-BigInt-GMP-1.600.600
-~dev-perl/Math-BigInt-Lite-0.180.0
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (11 May 2019)
 # Perl 5.24 will be removed soon. Please upgrade.
@@ -442,13 +424,6 @@ app-emulation/e-uae
 # Depends on >=virtual/{jdk,jre}-11 which is masked
 =www-servers/tomcat-9.0.19
 
-# Georgy Yakovlev <gyakovlev@gentoo.org> (18 Apr 2019)
-# This version is provided for testing of the upcoming 0.8.0 release.
-# It is not recommended for use, it contains known bugs.
-# This version supports TRIM.
-=sys-fs/zfs-kmod-0.8.0_rc*
-=sys-fs/zfs-0.8.0_rc*
-
 # Michał Górny <mgorny@gentoo.org> (18 Apr 2019)
 # All current versions of SystemRescueCD contain vulnerable packages.
 # Bug #683724.
@@ -473,6 +448,7 @@ sys-boot/systemrescuecd-x86-grub
 >=dev-libs/boost-1.70.0
 >=dev-util/boost-build-1.70.0
 >=net-mail/libpst-0.6.66-r2
+>=net-proxy/trojan-1.12.2
 
 # Robin H. Johnson <robbat2@gentoo.org> (25 Mar 2019)
 # Requires >=dev-lang/lua-5.3 which is masked
@@ -577,11 +553,6 @@ dev-libs/gost-engine
 # supported upstream. Use dev-db/pgadmin4.
 # Masked for removal on 2018-11-24, bug #669650.
 dev-db/pgadmin3
-
-# Lars Wendler <polynomial-c@gentoo.org> (22 Oct 2018)
-# Breaks dev-libs/gobject-introspection and its consumers
-# See #669278
-=xfce-base/xfconf-4.13.6
 
 # Thomas Deutschmann <whissi@gentoo.org> (12 Oct 2018)
 # EOL and has known vulnerabilities. Please move to

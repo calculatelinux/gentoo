@@ -1213,12 +1213,14 @@ app-portage/layman:squashfs - Support mounting squashfs image overlays locally r
 app-portage/layman:subversion - Support dev-vcs/subversion based overlays
 app-portage/layman:sync-plugin-portage - Install the sys-apps/portage sync module
 app-portage/pfl:network-cron - Adds a cron job which does a weekly submit of the package database
+app-portage/portage-utils:qmanifest - Build qmanifest applet, this adds additional dependencies for GPG, OpenSSL and BLAKE2B hashing
 app-portage/tatt:templates - Install template scripts to be used with tatt
 app-shells/autojump:ipython - Add support for dev-python/ipython
 app-shells/bash:bashlogger - Log ALL commands typed into bash; should ONLY be used in restricted environments such as honeypots
 app-shells/bash:mem-scramble - Build with custom malloc/free overwriting allocated/freed memory
 app-shells/bash:net - Enable /dev/tcp/host/port redirection
 app-shells/bash:plugins - Add support for loading builtins at runtime via 'enable'
+app-shells/bash-completion:eselect - Support blacklisting of completions via 'eselect bash-completion'. This enables custom Gentoo patching of upstream completion loader.
 app-shells/dash:vanilla - Support echo -n, and enable echo -e all the time (unsupported)
 app-shells/pdsh:rsh - This allows the use of rsh (remote shell) and rcp (remote copy) for authoring websites. sftp is a much more secure protocol and is preferred.
 app-shells/shish:diet - Use dev-libs/dietlibc
@@ -5935,6 +5937,7 @@ net-fs/samba:dmapi - Enable support for DMAPI. This currently works only in comb
 net-fs/samba:gpg - Use app-crypt/gpgme for AD DC
 net-fs/samba:iprint - Enabling iPrint technology by Novell
 net-fs/samba:json - Enable json audit support through dev-libs/jansson
+net-fs/samba:profiling-data - Enables support for collecting profiling data
 net-fs/samba:quota - Enables support for user quotas
 net-fs/samba:system-heimdal - Use app-crypt/heimdal instead of bundled heimdal.
 net-fs/samba:system-mitkrb5 - Use app-crypt/mit-krb5 instead of app-crypt/heimdal.
@@ -6161,16 +6164,19 @@ net-irc/hexchat:plugin-checksum - Build Checksum plugin (needs plugins)
 net-irc/hexchat:plugin-fishlim - Build FiSHLiM plugin (needs plugins )
 net-irc/hexchat:plugin-sysinfo - Build SysInfo plugin (needs plugins)
 net-irc/hexchat:theme-manager - Build the theme manager (mono)
-net-irc/inspircd:geoip - Add geoip support for country and city lookup based on IPs
 net-irc/inspircd:gnutls - Enable TLS support
-net-irc/inspircd:ipv6 - Enable support for IP version 6
 net-irc/inspircd:ldap - Enable LDAP support
+net-irc/inspircd:maxminddb - Add support for geolocation using libMaxMindDB
+net-irc/inspircd:mbedtls - Add support for TLS using the mbedTLS library
 net-irc/inspircd:mysql - Enable MySQL database backend
 net-irc/inspircd:pcre - Adds support for Perl Compatible Regular Expressions
-net-irc/inspircd:posix - Adds support for POSIX-compatible functions
 net-irc/inspircd:postgres - Enable PostgreSQL database backend
+net-irc/inspircd:re2 - Add support for Google RE2 regular expressions library
+net-irc/inspircd:regex-posix - Adds support for POSIX Regular Expressions
+net-irc/inspircd:regex-stdlib - Add support for C++ stdlib regular expressions
 net-irc/inspircd:sqlite - Enable Sqlite database backend
 net-irc/inspircd:ssl - Enable SSL support
+net-irc/inspircd:sslrehashsignal - Enable rehashing SSL module by SIGUSR1
 net-irc/inspircd:tre - Enable support for TRE, a lightweight, robust, and efficient POSIX compliant regexp matching library
 net-irc/iroffer-dinoex:admin - Compile with HTTP Admin
 net-irc/iroffer-dinoex:blowfish - Compile with blowfish encryption support
@@ -6377,6 +6383,7 @@ net-libs/shairplay:tools - Build and install a binary shairplay in /usr/bin
 net-libs/telepathy-qt:farstream - Enable support for audio/video calls via farstream
 net-libs/tox:av - Adds support for audio and video.
 net-libs/tox:daemon - Enable the DHT Bootstrap Daemon.
+net-libs/tox:dht-node - Enables DHT Bootstrap Node.
 net-libs/tox:log-debug - Log level: 4
 net-libs/tox:log-error - Log level: 1
 net-libs/tox:log-info - Log level: 3
@@ -7458,6 +7465,7 @@ sci-geosciences/gshhs:data - Add earth data with sci-geosciences/gshhs-data
 sci-geosciences/liblas:gdal - Add support for the sci-libs/gdal geospatial raster library
 sci-geosciences/mapnik:gdal - Enable sci-libs/gdal library support
 sci-geosciences/mapnik:osmfonts - Enable openstreetmaps font styles
+sci-geosciences/mapserver:apache - Enable mapserver to run under apache
 sci-geosciences/mapserver:gdal - Enable sci-libs/gdal library support
 sci-geosciences/mapserver:geos - Enable sci-libs/geos library support
 sci-geosciences/mapserver:postgis - Enable dev-db/postgis support
@@ -8345,7 +8353,6 @@ sys-devel/clang-runtime:crt - Require a package providing crt*.o files to make i
 sys-devel/clang-runtime:libcxx - Install sys-libs/libcxx for -stdlib=libc++
 sys-devel/clang-runtime:openmp - Install sys-libs/libomp for -fopenmp support
 sys-devel/clang-runtime:sanitize - Enable compiler-rt sanitizer (-fsanitize*) support
-sys-devel/distcc:crossdev - Enable support for sys-devel/crossdev
 sys-devel/distcc:gssapi - Enable support for net-libs/libgssglue
 sys-devel/gcc:awt - Useful only when building GCJ, this enables Abstract Window Toolkit (AWT) peer support on top of GTK+
 sys-devel/gcc:boundschecking - Add the bounds checking patch by Haj Ten Brugge, this will DISABLE the hardened PIE+SSP patches
