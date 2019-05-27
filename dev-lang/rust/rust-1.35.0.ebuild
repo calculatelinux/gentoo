@@ -90,6 +90,7 @@ REQUIRED_USE="|| ( ${ALL_LLVM_TARGETS[*]} )
 PATCHES=(
 	"${FILESDIR}"/0001-llvm-cmake-Add-additional-headers-only-if-they-exist.patch
 	"${FILESDIR}"/1.35.0-revert-commits-triggering-multiple-llvm-rebuilds.patch
+	"${FILESDIR}"/1.34.0-libressl.patch # bug 684224
 )
 
 S="${WORKDIR}/${MY_P}-src"
@@ -272,6 +273,18 @@ src_install() {
 		cp "${ED}/usr/$(get_libdir)/${P}/rustlib/${rust_target}/lib"/*.so \
 		   "${ED}/usr/${abi_libdir}" || die
 	done
+
+		# temp fix for https://bugs.gentoo.org/672816
+	if use x86; then
+		local rust_target wrongdir rightdir
+		rust_target=$(rust_abi $(get_abi_CHOST ${v##*.}))
+		wrongdir="${ED}/usr/$(get_libdir)/${P}/${P}/rustlib/${rust_target}/codegen-backends"
+		rightdir="${ED}/usr/$(get_libdir)/${P}/rustlib/${rust_target}/codegen-backends"
+		if [[ -e ${wrongdir}/librustc_codegen_llvm-llvm.so ]]; then
+			mv "${wrongdir}" "${rightdir}" || die
+			rm -r "${ED}/usr/$(get_libdir)/${P}/${P}" || die
+		fi
+	fi # end temp fix
 
 	dodoc COPYRIGHT
 
