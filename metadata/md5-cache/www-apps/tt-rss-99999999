@@ -1,7 +1,8 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=configure install postinst prerm setup unpack
-DEPEND=!vhosts? ( daemon? ( acl? ( sys-apps/acl ) ) ) || ( virtual/httpd-cgi virtual/httpd-fastcgi ) >=dev-vcs/git-1.8.2.1[curl] >=app-admin/webapp-config-1.50.15
+DEPEND=!vhosts? ( daemon? ( acl? ( sys-apps/acl ) ) ) || ( virtual/httpd-cgi virtual/httpd-fastcgi ) >=app-admin/webapp-config-1.50.15
 DESCRIPTION=Tiny Tiny RSS - A web-based news feed (RSS/Atom) aggregator using AJAX
-EAPI=6
+EAPI=7
 HOMEPAGE=https://tt-rss.org/
 IUSE=+acl daemon +mysqli postgres vhosts
 LICENSE=GPL-3
@@ -9,4 +10,4 @@ RDEPEND=daemon? ( acl? ( sys-apps/acl ) ) daemon? ( dev-lang/php:*[mysqli?,postg
 REQUIRED_USE=|| ( mysqli postgres )
 SLOT=99999999
 _eclasses_=git-r3	0d4635eeb5a96cd5315597a47eba25c9	prefix	e51c7882b7b721e54e684f7eb143cbfe	user	8bd74731cafdcdad8f7a63637302e073	webapp	16783e418aca3ffa461d68310bf7ab12
-_md5_=a83553696c42517b345112fd14a3c983
+_md5_=15732b2927bbee0903215752c2191054

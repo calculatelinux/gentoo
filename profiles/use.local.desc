@@ -501,8 +501,6 @@ app-emulation/docker-credential-helpers:pass - Build pass helper for the pass ut
 app-emulation/docker-runc:ambient - Enable support for ambient capability
 app-emulation/docker-runc:apparmor - Enable AppArmor support
 app-emulation/dosemu:fluidsynth - use media-sound/fluidsynth for MIDI emulation
-app-emulation/e-uae:capslib - Add CAPS library support
-app-emulation/e-uae:sdl-sound - Use media-libs/sdl-sound for audio output
 app-emulation/faudio:ffmpeg - FAudio has optional support for decoding xWMA resources using FFmpeg, requiring: media-video/ffmpeg (note: this feature is not supported by media-video/libav).
 app-emulation/faudio:test - Build and run faudio testsuite.
 app-emulation/faudio:utils - Build all faudio utilities.
@@ -644,7 +642,6 @@ app-emulation/runv:xen - Enable support for the Xen Hypervisor
 app-emulation/spice:lz4 - Enable support for LZ4 compression using app-arch/lz4
 app-emulation/spice:smartcard - Enable smartcard remoting using app-emulation/libcacard
 app-emulation/spice-vdagent:consolekit - Use sys-auth/consolekit to determine the master vdagentd in case of multiple running vdagentds (highly recommended)
-app-emulation/uae:scsi - Enable the uaescsi.device
 app-emulation/vagrant:virtualbox - Use VirtualBox provider.
 app-emulation/vice:ethernet - Enable ethernet emulation
 app-emulation/vice:fullscreen - Enable the ability to run fullscreen
@@ -1591,7 +1588,6 @@ dev-db/postgresql:server - Disable to build and install the clients and librarie
 dev-db/postgresql:uuid - Enable server side UUID generation (via dev-libs/ossp-uuid).
 dev-db/psqlodbc:iodbc - Use dev-db/libiodbc. Disable to use dev-db/unixODBC.
 dev-db/redis:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
-dev-db/rethinkdb:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
 dev-db/soci:boost - Enable boost support
 dev-db/soci:empty - Build the sample backend called Empty
 dev-db/spatialite:geos - Add the sci-libs/geos library for exact topological tests
@@ -4122,8 +4118,6 @@ mail-filter/rspamd:torch - Enable torch support. This is required for the neural
 mail-filter/spamassassin:cron - Install a cron job to update SpamAssassin's rules daily.
 mail-filter/spamassassin:qmail - Build qmail functionality and docs
 mail-filter/spamdyke:ssl - Enables TLS protocol for spamdyke
-mail-filter/zdkimfilter:debug - Log process and signal information. Also leave the child process running for gdb examination.
-mail-filter/zdkimfilter:opendbx - An alternate statistics based storage engine.
 mail-mta/courier:fax - Enables fax support in the courier mail server
 mail-mta/courier:norewrite - Prevents courier mail server from mangling virtual user addresses when sending
 mail-mta/courier:web - Enable the web interface
@@ -6266,6 +6260,7 @@ net-libs/gnutls:test-full - Enable full test mode
 net-libs/gnutls:tls-heartbeat - Enable the Heartbeat Extension in TLS and DTLS
 net-libs/gnutls:tools - Build extra tools
 net-libs/gnutls:valgrind - Enable usage of dev-util/valgrind in debug
+net-libs/grpc:perftools - Enable profiling using dev-util/google-perftools
 net-libs/grpc:systemtap - Enable SystemTAP/DTrace tracing
 net-libs/grpc:tools - Install gRPC python tools
 net-libs/iax:snomhack - Use slower memset for SNOM phoneem
@@ -8256,8 +8251,6 @@ sys-cluster/legion:hwloc - Enable HWLoc lib support
 sys-cluster/maui:pbs - Enable pbs integration
 sys-cluster/maui:slurm - Enable slurm integration
 sys-cluster/minikube:libvirt - Build plugin for kvm
-sys-cluster/moosefs:cgi - Install CGI server and scripts.
-sys-cluster/moosefs:fuse - Install the mfsmount utility.
 sys-cluster/mpich:mpi-threads - Enable MPI_THREAD_MULTIPLE
 sys-cluster/mpich:romio - Build the ROMIO MPI-IO component
 sys-cluster/mpich2:mpi-threads - Enable MPI_THREAD_MULTIPLE
