@@ -29,6 +29,28 @@
 
 #--- END OF EXAMPLES ---
 
+# Fabian Groffen <grobian@gentoo.org> (30 May 2019)
+# Pre-release for upcoming 0.80
+# You're invited to try this version out (and report bugs), but beware,
+# it is still subject to changes, as well as some applets having changed
+# considerably
+=app-portage/portage-utils-0.80_pre20190530
+
+# Mikle Kolyada <zlogene@gentoo.org> (30 May 2019)
+# Start adding texlive-2019 (still may be terribly broken)
+=app-text/texlive-core-2019
+=dev-libs/ptexenc-1.3.7_p20190410
+=app-text/dvipsk-5.999_p20190410
+=app-text/ttf2pk2-2.0_p20190410
+=app-text/ps2pkm-1.8_p20190410
+=dev-tex/bibtexu-3.71_p20190410
+=dev-libs/kpathsea-6.3.1_p20190410
+
+# Zac Medico <zmedico@gentoo.org> (31 May 2019)
+# Upstream is dead and there are multiple security vulnerabilities.
+# Removal in 30 days. Bug #687100.
+app-emulation/rkt
+
 # Hanno Boeck <hanno@gentoo.org> (27 May 2019)
 # Obsolete LXDE modules, see #652658, #651964
 lxde-base/lxshortcut
@@ -356,6 +378,8 @@ sys-boot/systemrescuecd-x86-grub
 >=dev-util/boost-build-1.70.0
 >=net-mail/libpst-0.6.66-r2
 >=net-proxy/trojan-1.12.2
+>=dev-python/graph-tool-2.27
+=dev-python/graph-tool-9999
 
 # Robin H. Johnson <robbat2@gentoo.org> (25 Mar 2019)
 # Requires >=dev-lang/lua-5.3 which is masked
