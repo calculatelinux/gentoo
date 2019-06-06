@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit autotools ltprune toolchain-funcs
+inherit autotools toolchain-funcs
 
 DESCRIPTION="C library providing BLAKE2b, BLAKE2s, BLAKE2bp, BLAKE2sp"
 HOMEPAGE="https://github.com/BLAKE2/libb2"
@@ -12,8 +12,8 @@ SRC_URI="https://github.com/BLAKE2/libb2/archive/${GITHASH}.tar.gz -> ${P}.tar.g
 
 LICENSE="CC0-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x64-macos ~sparc-solaris ~x64-solaris"
-IUSE="static +native-cflags openmp"
+KEYWORDS="~amd64 ~hppa ~ppc64 ~amd64-linux ~x86-linux ~x64-macos ~sparc-solaris ~x64-solaris"
+IUSE="static native-cflags openmp"
 
 DEPEND="
 	openmp? (
@@ -35,6 +35,8 @@ src_prepare() {
 	default
 	# fix bashism
 	sed -i -e 's/ == / = /' configure.ac || die
+	# https://github.com/BLAKE2/libb2/pull/28
+	echo 'libb2_la_LDFLAGS = -no-undefined' >> src/Makefile.am || die
 	eautoreconf  # upstream doesn't make releases
 }
 
@@ -45,12 +47,21 @@ src_configure() {
 		$(use_enable openmp)
 }
 
-src_compile() {
+do_make() {
 	# respect our CFLAGS when native-cflags is not in effect
-	emake $(use native-cflags && echo no)CFLAGS="${CFLAGS}"
+	local openmp=$(use openmp && echo -fopenmp)
+	emake $(use native-cflags && echo no)CFLAGS="${CFLAGS} ${openmp}" "$@"
+}
+
+src_compile() {
+	do_make
+}
+
+src_test() {
+	do_make check
 }
 
 src_install() {
 	default
-	prune_libtool_files
+	use static || find "${ED}" -name '*.la' -type f -delete || die
 }

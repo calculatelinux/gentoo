@@ -323,9 +323,6 @@ app-crypt/heimdal:lmdb - Add support for using dev-db/lmdb for lookup tables
 app-crypt/heimdal:otp - Adds support for one-time passwords
 app-crypt/heimdal:pkinit - Adds support for PKINIT for the initial ticket
 app-crypt/hmaccalc:fips - Enable NSS FIPS mode and support only the FIPS-compliant functions
-app-crypt/johntheripper:cuda - Use nvidia cuda toolkit for speeding up cracking on capable devices
-app-crypt/johntheripper:mozilla - Support mozilla password cracking
-app-crypt/johntheripper:opencl - Enable opencl support for speeding up cracking on capable devices
 app-crypt/johntheripper-jumbo:opencl - Build with opencl/GPU cracking support
 app-crypt/johntheripper-jumbo:pcap - Build with pcap support
 app-crypt/kbfs:git - Build the Git remote helper for storing repositories in Keybase
@@ -4755,6 +4752,7 @@ media-radio/unixcw:ncurses - Enables building the curses based morse code tutor 
 media-radio/xastir:festival - Enable text to speech synthesizer
 media-radio/xastir:gdal - Support for some further map formats
 media-radio/xastir:geotiff - Install geotiff support. Allows using USGS DRG topo maps or other types of geotiff mapes/images
+media-sound/abcde:aiff - Enable support for Audio Interchange File Format (AIFF) output encoding
 media-sound/abcde:id3tag - Support ID3, ID3v2 tagging of audio files
 media-sound/abcde:mac - Enable support for Monkey's Audio files
 media-sound/abcde:normalize - Add support for normalizing audio file volume levels
@@ -4854,6 +4852,7 @@ media-sound/easytag:nautilus - Build gnome-base/nautilus extension
 media-sound/ecasound:lv2 - Add support for Ladspa V2
 media-sound/ecasound:oil - Use dev-libs/liboil for inner loop optimizations
 media-sound/elisa:mpris - Enable MPRIS support
+media-sound/elisa:vlc - Use media-video/vlc for output rather than dev-qt/qtmultimedia
 media-sound/exaile:scrobbler - Enable audioscrobbler/last.fm support
 media-sound/fapg:xspf - Enable support for saving XSPF playlists.
 media-sound/gimmix:cover - Enable cover art fetching
@@ -5551,6 +5550,7 @@ net-analyzer/nagios-plugins:snmp - Install dev-perl/Net-SNMP required for monito
 net-analyzer/nagios-plugins:ssh - Install net-misc/openssh required for monitoring SSH servers. Disabling the flag does not remove any plugin file.
 net-analyzer/nagios-plugins-flameeyes:smart - Install sys-apps/smartmontools required for S.M.A.R.T. disk monitoring. Disabling the flag removes the plugin file. This plugin also requires the sudo flag to be enable.
 net-analyzer/net-snmp:elf - Enable the use of elf utils to check uptime on some systems
+net-analyzer/net-snmp:kmem - Enable usage of /dev/kmem
 net-analyzer/net-snmp:mfd-rewrites - Use MFD rewrites of mib modules where available
 net-analyzer/net-snmp:netlink - Use dev-libs/libnl to fetch TCP statistics instead of using /proc/net/tcp (Linux only).
 net-analyzer/net-snmp:pci - Use libpci (from sys-apps/pciutils) to look up network interface description. This feature is only available on Linux.
@@ -7441,6 +7441,7 @@ sci-electronics/kicad:ngspice - Enable circuit simulation
 sci-electronics/kicad:occ - Enable viewing 3D rendering of designs via opencascade
 sci-electronics/kicad:oce - Enable viewing 3D rendering of designs via OCE
 sci-electronics/kicad:python - Enable python scripting support
+sci-electronics/kicad-meta:minimal - Do not install extra data like 3D packages and templates.
 sci-electronics/kicad-packages3d:occ - Use sci-libs/opencascade for data exchange
 sci-electronics/kicad-packages3d:oce - Use sci-libs/oce for data exchange
 sci-electronics/ngspice:shared - Build ngspice as a shared library
@@ -8086,6 +8087,7 @@ sys-apps/systemd:sysv-utils - Install sysvinit compatibility symlinks and manpag
 sys-apps/systemd:vanilla - Disable Gentoo-specific behavior and compatibility quirks
 sys-apps/systemd:xkb - Depend on x11-libs/libxkbcommon to allow logind to control the X11 keymap
 sys-apps/tcp-wrappers:netgroups - Support matching NIS (host) netgroup names via the @netgroup syntax (if you don't know what this means, you most likely do not need it)
+sys-apps/texinfo:standalone - Build standalone version that survives all Portage bugs
 sys-apps/timer_entropyd:debug - Enable printf debugging and logging to the syslog at DEBUG level
 sys-apps/ucspi-ssl:bindist - Disable EC/RC5 algorithms in OpenSSL for patent reasons.
 sys-apps/usb_modeswitch:jimtcl - Use dev-lang/jimtcl instead of dev-lang/tcl for smaller memory footprint
