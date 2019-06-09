@@ -29,6 +29,11 @@
 
 #--- END OF EXAMPLES ---
 
+# James Le Cuirot <chewi@gentoo.org> (9 Jun 2019)
+# Dead upstream, no release since 2008, not used by anything, possibly
+# doesn't work any more. Removal in 30 days.
+dev-libs/liblazy
+
 # Andreas K. Hüttel <dilfridge@gentoo.org> (5 Jun 2019)
 # Unhandled version bumps since 2015, bug 293306. EAPI=2.
 # Removal in 30 days unless updated.
@@ -126,12 +131,6 @@ dev-ruby/elasticsearch-api:0
 dev-ruby/elasticsearch-transport:0
 dev-ruby/filesize:0.1.1
 
-# Matt Turner <mattst88@gentoo.org> (16 May 2019)
-# Not supported by the Xserver since v1.6.0 (2008)
-# Masked for removal.
-x11-apps/xtrap
-x11-libs/libXTrap
-
 # Miroslav Šulc <fordfrog@gentoo.org> (15 May 2019)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
 =www-servers/tomcat-9.0.20
@@ -221,7 +220,9 @@ dev-embedded/tavrasm
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (11 May 2019)
 # Outdated, EAPI=2, unmaintained, segfaults immediately.
-# See bug 634928 and bug 612980. Removal in 30 days.
+# See bug 634928 and bug 612980.
+# Andrew Savchenko <bircoph@gentoo.org> (09 Jun 2019)
+# festival and speech-tools update is WIP now, so postponing removal.
 app-accessibility/festival
 app-accessibility/festival-freebsoft-utils
 app-accessibility/festival-hts
@@ -231,11 +232,6 @@ app-accessibility/festival-ru
 app-accessibility/perlbox-voice
 app-accessibility/pidgin-festival
 dev-ros/sound_play
-
-# Virgil Dupras <vdupras@gentoo.org> (10 May 2019)
-# Has very limited use and is disruptive of other tests when activated.
-# Bug #685538. Removal in 30 days.
-dev-python/pytest-relaxed
 
 # Patrice Clement <monsieurp@gentoo.org> (06 May 2019)
 # Broken build. Outdated version. No interest from the Java team to maintain
