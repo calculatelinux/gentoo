@@ -4242,7 +4242,6 @@ media-gfx/alembic:examples - Install alembic examples
 media-gfx/alembic:hdf5 - Add support sci-libs/hdf5
 media-gfx/alembic:maya - Compile Alembic plugin for Maya (experimental)
 media-gfx/alembic:prman - Compile Alembic plugin for Renderman (experimental)
-media-gfx/alembic:pyalembic - Build pyalembic python bindings (needs dev-python/pyilmbase)
 media-gfx/alembic:python - Build pyalembic python bindings (needs dev-python/pyilmbase)
 media-gfx/alembic:test - Build and run the test-suite
 media-gfx/alembic:zlib - Use sys-libs/zlib for compressions
@@ -6926,6 +6925,7 @@ net-misc/vinagre:spice - Enable access to SPICE-enabled virtual machines
 net-misc/vinagre:ssh - Enable ssh plugin using x11-libs/vte
 net-misc/vinagre:telepathy - Enable access to remote desktop via a net-libs/telepathy-glib client
 net-misc/vino:telepathy - Enable desktop sharing through a telepathy client
+net-misc/wget:cookie_check - Enable cookie checks via net-libs/libpsl
 net-misc/wget:ntlm - Enable support for NTLM (Windows-based) authorization
 net-misc/wget:uuid - Generate UUIDs for the WARC (Web ARChive file format) using libuuid; otherwise use a simple RNG (random number generator)
 net-misc/wicd:ambiance - Install icons from Ubuntu's ambiance theme
@@ -7065,6 +7065,7 @@ net-print/cups:python - Add support for the Python interpeter in the web server 
 net-print/cups-filters:foomatic - Build the included foomatic-rip printer driver. Strongly recommended.
 net-print/cups-filters:ipp_autosetup - Let cups-browsed automatically set up IPP network printers by default.
 net-print/cups-filters:pclm - Enable PCLm support
+net-print/dymo-cups-drivers:usb_modeswitch - Include usb_modeswitch for some hardware (bug #601242)
 net-print/fax4cups:efax - Install net-misc/efax backend
 net-print/fax4cups:hylafax - Install net-misc/hylafax backend
 net-print/fax4cups:mgetty-fax - Install net-dialup/mgetty backend
@@ -8913,7 +8914,6 @@ www-plugins/adobe-flash:nsplugin - Install the Netscape Flash API plugin (for Fi
 www-plugins/adobe-flash:ppapi - Install the Pepper Flash API plugin (for Chrome and similar browsers)
 www-plugins/chrome-binary-plugins:widevine - Install the Widevine DRM library
 www-plugins/freshplayerplugin:gles2 - Use system GLESv2 libraries instead of ANGLE for shader translation
-www-plugins/freshplayerplugin:gtk3 - Build with GTK+ 3 instead of GTK+ 2
 www-plugins/freshplayerplugin:v4l - Use libv4l2 for colorspace conversion
 www-plugins/lightspark:gles - Replace default OpenGL renderer with GLESv2
 www-plugins/lightspark:ppapi - Install the PPAPI plugin (for Chromium)
