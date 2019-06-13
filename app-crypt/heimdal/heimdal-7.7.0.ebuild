@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python{2_7,3_{5,6,7}} )
+PYTHON_COMPAT=( python3_{5,6,7} )
 VIRTUALX_REQUIRED="manual"
 
 inherit autotools db-use multilib multilib-minimal python-any-r1 virtualx flag-o-matic
@@ -15,8 +15,8 @@ SRC_URI="https://github.com/${PN}/${PN}/releases/download/${P}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ~ppc ~ppc64 s390 ~sh ~sparc x86 ~amd64-fbsd"
-IUSE="afs +berkdb caps gdbm hdb-ldap ipv6 libressl +lmdb otp selinux ssl static-libs test X"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd"
+IUSE="afs +berkdb caps gdbm hdb-ldap libressl +lmdb otp selinux ssl static-libs test X"
 
 CDEPEND="
 	ssl? (
@@ -48,8 +48,10 @@ DEPEND="${CDEPEND}
 	>=sys-devel/autoconf-2.62
 	test? ( X? ( ${VIRTUALX_DEPEND} ) )"
 
+# file collision with app-i18n/kcc
 RDEPEND="${CDEPEND}
-	selinux? ( sec-policy/selinux-kerberos )"
+	selinux? ( sec-policy/selinux-kerberos )
+	!app-i18n/kcc"
 
 MULTILIB_WRAPPED_HEADERS=(
 	/usr/include/krb5-types.h
@@ -98,6 +100,7 @@ multilib_src_configure() {
 		--enable-pthread-support
 		--enable-kx509
 		--enable-pk-init
+		--with-ipv6
 		$(use_enable afs afs-support)
 		$(use_enable gdbm ndbm-db)
 		$(use_enable lmdb mdb-db)
@@ -105,7 +108,6 @@ multilib_src_configure() {
 		$(use_enable static-libs static)
 		$(multilib_native_use_with caps capng)
 		$(multilib_native_use_with hdb-ldap openldap "${EPREFIX}"/usr)
-		$(use_with ipv6)
 		$(use_with ssl openssl "${EPREFIX}"/usr)
 		$(multilib_native_use_with X x)
 	)
