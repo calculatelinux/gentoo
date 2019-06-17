@@ -51,7 +51,7 @@ SRC_URI="
 IUSE="gnome java kde"
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 
 BIN_COMMON_DEPEND="
 	app-text/hunspell:0/1.6
@@ -97,6 +97,7 @@ COMMON_DEPEND="
 	app-text/mythes
 	>=dev-cpp/clucene-2.3.3.4-r2
 	=dev-cpp/libcmis-0.5*
+	dev-db/mariadb-connector-c
 	dev-db/unixODBC
 	dev-lang/perl
 	dev-libs/boost:=[nls]
