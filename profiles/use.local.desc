@@ -329,10 +329,11 @@ app-crypt/kbfs:git - Build the Git remote helper for storing repositories in Key
 app-crypt/kstart:afs - Enables afs support which means you can acquire an afs token and set PAGs. It's recommended to set this USE if you need authenticated access to an AFS cell for your daemon/app.
 app-crypt/libb2:native-cflags - Use CFLAGS as determined by configure script. These flags will enable all CPU specific features it find available, to further optimise the implementation. This discards any existing CFLAGS set in make.conf or similar.
 app-crypt/libu2f-host:systemd - Use user ACLs rather than plugdev group to give user access to the HIDRAW device.
-app-crypt/mit-krb5:doc - Creates and installs the API and implementation documentation. This is only useful if you want to develop software which depends on kerberos.
-app-crypt/mit-krb5:keyutils - Enable for the keyring ccache using keyutils.
-app-crypt/mit-krb5:openldap - Enable support for ldap as a database backend.
-app-crypt/mit-krb5:pkinit - Enable pkinit support for the initial ticket.
+app-crypt/mit-krb5:doc - Creates and installs the API and implementation documentation. This is only useful if you want to develop software which depends on kerberos
+app-crypt/mit-krb5:keyutils - Enable for the keyring ccache using keyutils
+app-crypt/mit-krb5:lmdb - Add support for using dev-db/lmdb for lookup tables
+app-crypt/mit-krb5:openldap - Enable support for ldap as a database backend
+app-crypt/mit-krb5:pkinit - Enable pkinit support for the initial ticket
 app-crypt/ophcrack:tables - Require the additional tables used to carry out cracking (app-crypt/ophcrack-tables)
 app-crypt/ophcrack-tables:vistafree - Installs the free Vista ophcrack tables
 app-crypt/ophcrack-tables:xpfast - Installs the fast XP ophcrack tables
@@ -1266,7 +1267,6 @@ app-text/groonga:uyield - Build for detecting race conditions
 app-text/groonga:zeromq - Enable net-libs/zeromq used for suggestion
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
 app-text/kbibtex:webengine - Use dev-qt/qtwebengine for HTML previews
-app-text/kbibtex:webkit - Use dev-qt/qtwebkit for HTML previews
 app-text/kbibtex:zotero - Enable support for synchronisation with zotero.org web service
 app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search library (TeX related)
 app-text/libebook:tools - Build file conversion tools
@@ -1454,6 +1454,7 @@ dev-ada/libadalang:shared - Build shared library
 dev-ada/libadalang-tools:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/libadalang-tools:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/libadalang-tools:gnat_2018 - Compile with dev-lang/gnat-gpl-2018
+dev-ada/libadalang-tools:gnat_2019 - Compile with dev-lang/gnat-gpl-2018
 dev-ada/libgpr:gnat_2016 - Compile with dev-lang/gnat-gpl-2016
 dev-ada/libgpr:gnat_2017 - Compile with dev-lang/gnat-gpl-2017
 dev-ada/libgpr:gnat_2018 - Compile with dev-lang/gnat-gpl-2018
@@ -4694,7 +4695,6 @@ media-plugins/grilo-plugins:gnome-online-accounts - Enable net-libs/gnome-online
 media-plugins/grilo-plugins:thetvdb - Build support for thetvdb.com
 media-plugins/grilo-plugins:tracker - Build support for content discovery using the app-misc/tracker indexer
 media-plugins/grilo-plugins:youtube - Build support for YouTube content discovery using dev-libs/libgdata
-media-plugins/gst-plugins-gl:libvisual - Enable visualization effects via media-libs/libvisual
 media-plugins/gst-plugins-gtk:egl - Enable EGL platform usage
 media-plugins/gst-plugins-gtk:gles2 - Enable gtkglsink OpenGL sink based on GLESv2 API
 media-plugins/gst-plugins-gtk:opengl - Enable gtkglsink OpenGL sink based on desktop OpenGL API
