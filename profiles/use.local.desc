@@ -1568,7 +1568,6 @@ dev-db/percona-server:systemtap - Build support for profiling and tracing using 
 dev-db/percona-server:tokudb - Add support for TokuDB storage engine
 dev-db/percona-server:tokudb-backup-plugin - Builds the TokuDB backup plugin
 dev-db/percona-server:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
-dev-db/pgadmin3:databasedesigner - Enable the Database Designer component
 dev-db/pgbouncer:c-ares - Use c-ares as the DNS backend instead of evdns (libevent).
 dev-db/pgbouncer:udns - Use udns as the DNS backend instead of evdns (libevent). Supports IPv4 only.
 dev-db/pgpool2:memcached - Use memcached for query caching.
@@ -3615,6 +3614,7 @@ gnome-base/gdm:fprint - Enables experimental fingerprint authentication using sy
 gnome-base/gdm:plymouth - Enable support for smooth transition from sys-boot/plymouth
 gnome-base/gnome:classic - Install gnome-extra/gnome-shell-extensions for the Gnome Shell Classic mode
 gnome-base/gnome:extras - Install additional GNOME applications
+gnome-base/gnome-applets:tracker - Build the tracker search bar applet
 gnome-base/gnome-control-center:flickr - Add support for using photos from flickr as desktop background
 gnome-base/gnome-control-center:gnome-online-accounts - Enable configuration panel for net-libs/gnome-online-accounts accounts
 gnome-base/gnome-control-center:ibus - Enable support for enhanced input methods through app-i18n/ibus
@@ -3935,7 +3935,6 @@ lxqt-base/lxqt-meta:ssh-askpass - Install lxqt-base/lxqt-openssh-askpass user pa
 lxqt-base/lxqt-meta:sudo - Install lxqt-base/lxqt-sudo
 lxqt-base/lxqt-meta:terminal - Install x11-terms/qterminal package
 lxqt-base/lxqt-meta:trash - Install gnome-base/gvfs to enable 'trash' functionality in x11-misc/pcmanfm-qt
-lxqt-base/lxqt-panel:clock - Build clock plugin
 lxqt-base/lxqt-panel:colorpicker - Build colorpicker plugin
 lxqt-base/lxqt-panel:cpuload - Build cpuload plugin
 lxqt-base/lxqt-panel:desktopswitch - Build desktopswitch plugin
@@ -8043,6 +8042,7 @@ sys-apps/s390-tools:fuse - build cmsfs-fuse to read files stored on a z/VM CMS d
 sys-apps/s390-tools:ncurses - build hyptop monitoring program
 sys-apps/s390-tools:pfm - build the cpacfstats tool
 sys-apps/s390-tools:zlib - build the zgetdump utility
+sys-apps/s6-linux-init:sysv-utils - Install sysvinit compatibility symlinks for telinit, halt, poweroff, reboot, and shutdown
 sys-apps/sed:forced-sandbox - Always enable --sandbox mode for simpler/secure runtime (disables e/r/w commands). Note: This may break many configure scripts, so it should be avoided on dev systems (and generally used on binpkg/final systems only).
 sys-apps/selinux-python:audit - Enable support for sys-process/audit and use the audit_* functions (like audit_getuid instead of getuid())
 sys-apps/smartmontools:caps - Build against sys-libs/libcap-ng to allow smartd to drop its privileges.
@@ -9265,6 +9265,8 @@ x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
 x11-wm/i3:doc - Build and install the HTML documentation and regenerate the man pages
 x11-wm/lumina:desktop-utils - Build and install lumina's desktop-utils
+x11-wm/metacity:libcanberra - Enable sound event support using media-libs/libcanberra
+x11-wm/metacity:vulkan - Enable Vulkan based compositor support via META_COMPOSITOR=vulkan environment variable
 x11-wm/musca:apis - Optionally install the experimental `apis' window manager
 x11-wm/musca:xlisten - Optionally install the xlisten utility
 x11-wm/mutter:elogind - Rely on sys-auth/elogind as logind provider for Wayland sessions
