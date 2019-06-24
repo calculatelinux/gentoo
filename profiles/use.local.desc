@@ -363,6 +363,7 @@ app-dicts/gwaei:mecab - Enable app-text/mecab support
 app-dicts/myspell-pt:preao - Use the pre ortographic agreement version of the dictionary
 app-doc/clsync-docs:api - Install doxygen generated API docs.
 app-doc/csound-manual:html - Install HTML documentation
+app-doc/devmanual:fallback - Use alternative minimal stylesheet instead of tyrian theme.
 app-doc/doxygen:clang - support for sys-devel/clang assisted parsing
 app-doc/doxygen:dot - allow to create dot graphs using media-gfx/graphviz
 app-doc/doxygen:doxysearch - build doxyindexer and doxysearch.cgi
@@ -3536,6 +3537,7 @@ games-rpg/dungeon-defenders:bundled-libs - Use the upstream provided bundled lib
 games-rpg/eternal-lands-data:bloodsuckermaps - Will install Bloodsucker's Maps in place of the official map files
 games-rpg/eternal-lands-data:music - Enables in-game music
 games-rpg/eternal-lands-data:sound - Enables in-game sound effects
+games-rpg/hatoful-boyfriend:gui - Install the GUI for configuring screen resolution and input
 games-rpg/kqlives:cheats - Enable cheating mode
 games-rpg/manaplus:mumble - Enable support for voice chat
 games-rpg/manaplus:pugixml - Use dev-libs/pugixml for XML parsing isntead of dev-libs/libxml2
@@ -3603,6 +3605,7 @@ games-strategy/uqm:remix - download and install music remix files (large)
 games-strategy/uqm:voice - download and install voice files (large)
 games-strategy/wesnoth:fribidi - Support for right-to-left languages
 games-strategy/wesnoth:server - Enable compilation of server
+games-util/deutex:man - Build and install man pages
 games-util/gslist:web - Enable the web interface
 games-util/lgogdownloader:gui - Enable GUI login support for passing reCAPTCHA
 games-util/pyfa:graph - Enable support for graphs
@@ -5484,7 +5487,6 @@ net-analyzer/icinga2:mail - Allows for mailing of alerts
 net-analyzer/icinga2:mariadb - Enable support for the mariadb database backend
 net-analyzer/icinga2:nano-syntax - Adds support for syntax used in the nano editor
 net-analyzer/icinga2:plugins - Adds support for nagios plugins
-net-analyzer/icinga2:studio - Adds support for Icinga-studio
 net-analyzer/ipsumdump:nanotimestamp - Enable timestamps with nano-second resolution
 net-analyzer/linkchecker:sqlite - Mozilla Bookmark parsing
 net-analyzer/metasploit:development - Install dependencies needed for metasploit and exploit development
@@ -7700,7 +7702,6 @@ sci-mathematics/fricas:gcl - Add support for GNU Common Lisp (dev-lisp/gcl)
 sci-mathematics/fricas:sbcl - Add support for Steel Bank Common Lisp (dev-lisp/sbcl)
 sci-mathematics/geomview:motionaveraging - Enable experimental motion averaging technique
 sci-mathematics/gmp-ecm:custom-tune - Improve performance of some operations by selecting machine-specific defaults
-sci-mathematics/gmp-ecm:gwnum - Use GWNum lib where possible
 sci-mathematics/gretl:R - Enable support for dev-lang/R
 sci-mathematics/gsl-shell:fox - Build a x11-libs/fox GUI
 sci-mathematics/isabelle:graphbrowsing - Generate theory browsing information, including HTML documents that show a theory's definition, the theorems proved in its ML file and the relationship with its ancestors and descendants.
