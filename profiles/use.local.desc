@@ -463,6 +463,7 @@ app-emacs/bbdb:vm - Add support for app-emacs/vm
 app-emacs/calfw:howm - Add support for the app-emacs/howm note-taking tool
 app-emacs/company-mode:ropemacs - Install backend for dev-python/ropemacs
 app-emacs/emacs-common-gentoo:games - Support shared score files for games
+app-emacs/mu-cite:bbdb - Include support for app-emacs/bbdb
 app-emacs/org-mode:contrib - Install user-contributed files
 app-emacs/org-mode:odt-schema - Install non-free schema files for OpenDocument Text exporter
 app-emacs/remember:bbdb - Include support for app-emacs/bbdb
@@ -3467,6 +3468,13 @@ games-fps/eduke32:vpx - Enable support for media-libs/libvpx.
 games-fps/eduke32:xmp - Enable support for media-libs/exempi.
 games-fps/gzdoom:gtk2 - Enable support for GTK+2 instead of GTK+3
 games-fps/nexuiz:maps - Install the community map pack
+games-fps/prboom-plus:dumb - Enable support for various tracker-style music formats via media-libs/dumb
+games-fps/prboom-plus:fluidsynth - Enable support for MIDI via media-sound/fluidsynth
+games-fps/prboom-plus:net - Enable support for network play
+games-fps/prboom-plus:nonfree - Enable non-free components
+games-fps/prboom-plus:portmidi - Enable support for MIDI via media-libs/portmidi
+games-fps/prboom-plus:sdl-image - Enable support for high-resolution texture support via media-libs/sdl-image
+games-fps/prboom-plus:sdl-mixer - Enable support for MIDI via media-libs/sdl-mixer
 games-fps/quake2-icculus:demo - Install the demo files (quake2-demodata) and configure for use
 games-fps/quake2-icculus:qmax - Build the pretty version (quake max)
 games-fps/quake2-icculus:rogue - Build support for the 'Ground Zero' Mission Pack (rogue)
@@ -6685,7 +6693,7 @@ net-misc/icaclient:l10n_zh_CN - Install Chinese translation
 net-misc/icecast:kate - Add karaoke and text encapsulation support for Ogg files
 net-misc/icecast:logrotate - Install support files for app-admin/logrotate?
 net-misc/icecast:yp - Build support for yp public directory listings
-net-misc/iperf:profiling - Create a profiled iperf3 binary
+net-misc/iperf:profiling - Install profiled iperf3 binary iperf3_profile
 net-misc/iputils:SECURITY_HAZARD - Allow non-root users to flood (ping -f). This is generally a very bad idea.
 net-misc/iputils:arping - Build and install arping -- tool for sending ARP requests to peers (see also net-analyzer/arping)
 net-misc/iputils:clockdiff - Build and install clockdiff -- tool for comparing clocks via ICMP packets
@@ -7075,6 +7083,7 @@ net-proxy/haproxy:net_ns - Enable network namespace support (CONFIG_NET_NS)
 net-proxy/haproxy:pcre-jit - Use JIT support for PCRE
 net-proxy/haproxy:pcre2 - Enable PCRE2 RegEx support
 net-proxy/haproxy:pcre2-jit - Use JIT support for PCRE2
+net-proxy/haproxy:prometheus-exporter - Also build the prometheus exporter
 net-proxy/haproxy:slz - Use dev-libs/libslz compression library
 net-proxy/haproxy:tools - Install additional tools (halog, iprange)
 net-proxy/haproxy:wurfl - Device Detection using WURFL
