@@ -4616,6 +4616,7 @@ media-libs/opusfile:http - Enable http connections
 media-libs/osl:cpu_flags_x86_avx512f - SIMD Optimization
 media-libs/osl:cpu_flags_x86_f16c - SIMD Optimization
 media-libs/osl:partio - Use media-libs/partio
+media-libs/osl:qt5 - Build the osltoy binary
 media-libs/phonon:designer - Install plugin for dev-qt/designer
 media-libs/phonon:vlc - Install VLC Phonon backend
 media-libs/phonon-gstreamer:network - Enable network streaming support via libsoup
@@ -7515,6 +7516,11 @@ sci-libs/atlas:generic - Build atlas assuming a fairly generic architecture (sse
 sci-libs/avogadrolibs:archive - Enable archive support using app-arch/libarchive
 sci-libs/avogadrolibs:static-plugins - Build all plugins statically into main plugin modules
 sci-libs/avogadrolibs:vtk - Enable sci-libs/vtk support
+sci-libs/blis:64bit-index - Enable 64bit array indexing, incompatible with runtime switching
+sci-libs/blis:eselect-ldso - Enable runtime library switching by eselect and ld.so.
+sci-libs/blis:openmp - Use openmp threadding model
+sci-libs/blis:pthread - Use pthread threadding model
+sci-libs/blis:serial - Use no threadding model
 sci-libs/cantera:cti - Install CTI tools (ck2cti, ctml_writer) for conversion of Chemkin files to Cantera format
 sci-libs/cddlib:tools - Add a few executables and tests for cddlib
 sci-libs/ceres-solver:c++11 - Build ceres-solver using the C++11 standard
@@ -7569,6 +7575,8 @@ sci-libs/hypre:fei - Build the internal Finite Element Interface routines
 sci-libs/hypre:int64 - Build the 64 bits integer library
 sci-libs/ipopt:hsl - hsl
 sci-libs/ipopt:mumps - Enable sci-libs/mumps support
+sci-libs/lapack:eselect-ldso - Enable runtime library switching by eselect and ld.so.
+sci-libs/lapack:lapacke - Build LAPACKE
 sci-libs/lapack-reference:deprecated - Build deprecated routines
 sci-libs/lemon:coin - Enable the sci-libs/coinor-clp and sci-libs/coinor-cbc graph algorithms
 sci-libs/lemon:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
@@ -8727,7 +8735,11 @@ sys-process/systemd-cron:minutely - Support /etc/cron.minutely
 sys-process/systemd-cron:setgid - Compile setgid C helper for crontab. Needs GCC or Clang.
 sys-process/systemd-cron:yearly - Support /etc/cron.yearly
 sys-process/tini:args - Enable argument parsing.
+virtual/blas:eselect-ldso - Enable runtime library switching by eselect and ld.so.
+virtual/cblas:eselect-ldso - Enable runtime library switching by eselect and ld.so.
 virtual/ffmpeg:opus - Use the external opus library for encoding and decoding.
+virtual/lapack:eselect-ldso - Enable runtime library switching by eselect and ld.so.
+virtual/lapacke:eselect-ldso - Enable runtime library switching by eselect and ld.so.
 virtual/linux-sources:firmware - Install linux kernel firmware
 virtual/mpi:romio - Enable romio, a high-performance portable MPI-IO
 virtual/mysql:embedded - Build embedded server (libmysqld)
