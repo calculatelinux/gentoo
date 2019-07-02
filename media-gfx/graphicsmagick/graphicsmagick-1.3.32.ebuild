@@ -16,11 +16,11 @@ if [[ ${PV} == "9999" ]] ; then
 	EHG_REPO_URI="http://hg.code.sf.net/p/${PN}/code"
 else
 	SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.xz"
-	KEYWORDS="~alpha amd64 ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
+	KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 fi
 
 IUSE="bzip2 cxx debug fpx imagemagick jbig jpeg jpeg2k lcms lzma modules openmp
-	perl png postscript q16 q32 static-libs svg test threads tiff truetype
+	perl png postscript q16 q32 static-libs svg threads tiff truetype
 	webp wmf X zlib"
 
 RDEPEND="dev-libs/libltdl:0
@@ -48,9 +48,7 @@ RDEPEND="dev-libs/libltdl:0
 		x11-libs/libXext
 		)
 	zlib? ( sys-libs/zlib )"
-# corefonts are required because needed arial font (bug #588398).
-DEPEND="${RDEPEND}
-	test? ( media-fonts/corefonts )"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
