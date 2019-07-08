@@ -35,6 +35,7 @@ app-admin/clsync:gio - Enable GIO for FS monitoring (glib based alternative to i
 app-admin/clsync:highload-locks - Allows to use spinlocks for short delays instead of mutexes, but only on SMP systems.
 app-admin/clsync:namespaces - Enable namespaces isolation.
 app-admin/conky:apcupsd - Enable support for sys-power/apcupsd
+app-admin/conky:bundled-toluapp - Enable support for bundled toluapp. This only makes sense in combination with the lua-* flags
 app-admin/conky:cmus - Enable monitoring of music played by media-sound/cmus
 app-admin/conky:eve - Enable support for the eve-online skill monitor
 app-admin/conky:ical - Enable support for events from iCalendar (RFC 5545) files using dev-libs/libical
@@ -1550,6 +1551,7 @@ dev-db/mysql-cluster:test - Install upstream testsuites for end use.
 dev-db/mysql-cluster:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
 dev-db/mysql-connector-c++:gcov - Build coverage support
 dev-db/mysql-connector-c++:legacy - Build the legacy 1.x API as well as the DevX API
+dev-db/opendbx:man - Build and install man pages
 dev-db/oracle-instantclient:jdbc - Support for XA, Internationalization, and RowSet operations under JDBC
 dev-db/oracle-instantclient:odbc - Libraries for enabling ODBC applications
 dev-db/oracle-instantclient:precomp - "proc" binary and related files to precompile a Pro*C application
@@ -3547,6 +3549,7 @@ games-rpg/eternal-lands-data:bloodsuckermaps - Will install Bloodsucker's Maps i
 games-rpg/eternal-lands-data:music - Enables in-game music
 games-rpg/eternal-lands-data:sound - Enables in-game sound effects
 games-rpg/hatoful-boyfriend:gui - Install the GUI for configuring screen resolution and input
+games-rpg/hatoful-boyfriend-holiday-star:gui - Install the GUI for configuring screen resolution and input
 games-rpg/kqlives:cheats - Enable cheating mode
 games-rpg/manaplus:mumble - Enable support for voice chat
 games-rpg/manaplus:pugixml - Use dev-libs/pugixml for XML parsing isntead of dev-libs/libxml2
@@ -3927,6 +3930,7 @@ kde-plasma/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/l
 kde-plasma/powerdevil:brightness-control - Enable screen brightness control using app-misc/ddcutil
 kde-plasma/powerdevil:wireless - Enable wireless energy saving actions via kde-frameworks/bluez-qt and kde-frameworks/networkmanager-qt
 kde-plasma/systemsettings:classic - Enable classic mode plugin, requires kde-frameworks/khtml
+kde-plasma/xdg-desktop-portal-kde:screencast - Enable screencast portal using media-video/pipewire
 lxde-base/lxdm:consolekit - Enables support for authorization using consolekit
 lxde-base/lxdm:gtk3 - Use GTK+3 instead of 2
 lxde-base/lxterminal:gtk3 - Use GTK+3 instead of GTK+2
@@ -5452,6 +5456,7 @@ net-analyzer/argus-clients:ft - Enable support for flow packets through net-anal
 net-analyzer/barnyard:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/barnyard2:gre - Enable GRE support
 net-analyzer/barnyard2:mpls - Enable support for mpls networks
+net-analyzer/barnyard2:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/bwm-ng:csv - Enable csv output
 net-analyzer/bwm-ng:html - Enable html output
 net-analyzer/cacti:doc - install html documentation
@@ -6337,8 +6342,9 @@ net-libs/libtrace:numa - Use sys-process/numactl
 net-libs/libupnp:blocking-tcp - Do not use async socket calls.
 net-libs/libupnp:reuseaddr - Allow clean restarts by binding the socket with SO_REUSEADDR.
 net-libs/libupnp:samples - Install sample applications.
-net-libs/libvncserver:24bpp - enable 24bpp support
-net-libs/libvncserver:gcrypt - enable support for gcrypt
+net-libs/libvncserver:24bpp - Enable 24bpp support
+net-libs/libvncserver:gcrypt - Enable support for additional authentication methods via dev-libs/libgcrypt
+net-libs/libvncserver:lzo - Enable LZO support via dev-libs/lzo instead of using internal miniLZO implementation
 net-libs/libwebsockets:access-log - Support generating Apache-compatible access logs
 net-libs/libwebsockets:cgi - Include CGI (spawn process with network-connected stdin/out/err) APIs
 net-libs/libwebsockets:client - The client part of the library and libwebsockets-test-client
@@ -6459,7 +6465,6 @@ net-mail/mailutils:kyotocabinet - Enable Kyoto Cabinet database support
 net-mail/mailutils:servers - Build server programs - imap4d pop3d comsatd
 net-mail/mailutils:tokyocabinet - Enable Tokyo Cabinet database support
 net-mail/mairix:gnus - Add support for the marks propagation feature in GNUS (provided by app-editors/emacs or app-xemacs/gnus for XEmacs users)
-net-mail/mpop:libsecret - Enable libsecret support to store login credentials
 net-mail/mu:emacs - Install the mu4e mail client.
 net-mail/notmuch:crypt - Support decryption and verification of PGP/MIME messages and in Emacs UI - encryption; support also S/MIME signature verification since version 0.22
 net-mail/notmuch:doc - Install API documentation
@@ -7632,6 +7637,10 @@ sci-libs/oce:gl2ps - Use gl2ps PostScript printing library
 sci-libs/oce:tbb - Enable parallel meshing
 sci-libs/oce:vtk - Enable Virtualisation Toolkit
 sci-libs/octomap:dynamicEDT3D - Build and install dynamicEDT3D library: A library for incrementally updatable Euclidean distance transforms in 3D.
+sci-libs/openblas:dynamic - Build dynamic architecture detection at run time (for multi targets)
+sci-libs/openblas:eselect-ldso - Enable BLAS/LAPACK runtime switching
+sci-libs/openblas:pthread - Build with pthread threadding model
+sci-libs/openblas:serial - Build without multi-thraedding
 sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/opencascade:gl2ps - Use gl2ps PostScript printing library
 sci-libs/opencascade:gles2 - Use OpenGL ES 2.0
@@ -8117,6 +8126,7 @@ sys-apps/util-linux:pam - build runuser helper
 sys-apps/util-linux:suid - install mount/umount as setuid so non-root users may mount/umount devices, and wall/write as setgid so non-root users can notify other users
 sys-apps/util-linux:tty-helpers - install the mesg/wall/write tools for talking to local users
 sys-apps/watchdog:nfs - enable support for checking nfs mounts
+sys-apps/xdg-desktop-portal:screencast - Enable screencast portal using media-video/pipewire
 sys-apps/xinetd:rpc - support RPC services
 sys-auth/consolekit:cgroups - Use the kernel to track processes instead of the session cookie.
 sys-auth/consolekit:evdev - For handling VT switching with a session controller.

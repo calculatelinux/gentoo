@@ -29,6 +29,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2019-07-07)
+# Initial package version, no potential revdeps have been tested yet
+# or amended for support. Please do test.
+media-video/pipewire
+
+# Daniel Pielmeier <billie@gentoo.org> (2019-07-06)
+# Requires >=dev-lang/lua-5.2 which is masked
+>=app-admin/conky-1.11.4
+
+# Ulrich Müller <ulm@gentoo.org> (2019-07-05)
+# Fetch restricted, SRC_URI is gone, last release in 2008.
+# Binary-only 32 bit package. Program fails with SIGSEGV.
+# Masked for removal in 30 days, bug #689158.
+media-sound/ventrilo-server-bin
+
 # Sobhan Mohammadpour <sobhan@gentoo.org> (2019-07-04)
 # Mask until further testing is done
 =dev-libs/libgdata-0.17.10
@@ -108,11 +123,6 @@ sci-biology/vaal
 # Bug #664708, #685924
 sci-biology/allpathslg
 
-# Sobhan Mohammadpour <sobhan@gentoo.org> (2019-06-19)
-# this is new and it needs testing
->=app-misc/geoclue-2.5.3
-=sys-apps/xdg-desktop-portal-1.4.2
-
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2019-06-17)
 # this is now provided by dev-lang/rust{-bin}[rustfmt]
 # it's tightly integrated with rust toolchain, eselect-rust
@@ -163,11 +173,6 @@ dev-libs/liblazy
 # Upstream is dead and there are multiple security vulnerabilities.
 # Removal in 30 days. Bug #687100.
 app-emulation/rkt
-
-# Hanno Boeck <hanno@gentoo.org> (2019-05-27)
-# Obsolete LXDE modules, see #652658, #651964
-lxde-base/lxshortcut
-lxde-base/lxsession-edit
 
 # Patrick Lauer <patrick@gentoo.org> (2019-05-23)
 # PostgreSQL beta and release candidate releases are pre-release testing
