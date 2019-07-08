@@ -2330,7 +2330,6 @@ dev-libs/c-blosc:lz4 - Enable lz4 compression
 dev-libs/c-blosc:snappy - Enable snappy compression
 dev-libs/check:subunit - Enable support for the subunit unit test protocol
 dev-libs/crypto++:asm - Support assembly hand optimized crypto functions (i.e. faster run time)
-dev-libs/crypto++:cpu_flags_x86_sha - Enable support for Intel's SHA instruction set (SHA-NI)
 dev-libs/cyberjack:tools - Build and install optional management tools.
 dev-libs/cyberjack:usb - Enable support for usb based chipcard reader.
 dev-libs/cyrus-sasl:authdaemond - Add Courier-IMAP authdaemond unix socket support (net-mail/courier-imap, mail-mta/courier)
@@ -2512,7 +2511,6 @@ dev-libs/m17n-lib:gd - Build API and utilities based on media-libs/gd. This flag
 dev-libs/m17n-lib:libotf - Use dev-libs/libotf to handle OpenType fonts
 dev-libs/m17n-lib:libxml2 - Use dev-libs/libxml2 to parse XML
 dev-libs/msgpack:boost - Enable boost support
-dev-libs/nettle:cpu_flags_x86_sha - Enable support for Intel's SHA instruction set (SHA-NI)
 dev-libs/nss:cacert - Include root/class3 certs from CAcert (http://www.cacert.org/)
 dev-libs/nss:nss-pem - Add support for libnsspem
 dev-libs/nss:utils - Install utilities included with the library
@@ -8342,7 +8340,6 @@ sys-cluster/pmix:munge - Enable authentication via munge
 sys-cluster/pmix:pmi - Build PMI1 and PMI2 interface
 sys-cluster/resource-agents:libnet - Force use of net-libs/libnet
 sys-cluster/resource-agents:rgmanager - Install resources for rgmanager
-sys-cluster/singularity:slurm - Compile spank plugin for sys-cluster/slurm
 sys-cluster/slurm:html - Build html documentation
 sys-cluster/slurm:ipmi - Build support for collecting some ipmi stats
 sys-cluster/slurm:json - Add support for json-persing via json-c
@@ -8351,6 +8348,7 @@ sys-cluster/slurm:munge - Enable authentication via munge
 sys-cluster/slurm:netloc - Add support for netloc (amd64 only)
 sys-cluster/slurm:numa - Add NUMA awareness
 sys-cluster/slurm:ofed - Add Infiniband support via ofed
+sys-cluster/slurm:slurmdbd - Install SQL server for slurmdbd
 sys-cluster/slurm:torque - Enable perl scripts that emulates pbs (qstat, qsub etc.)
 sys-cluster/swift:account - adds swift account support
 sys-cluster/swift:container - adds swift container support
@@ -8545,7 +8543,6 @@ sys-fs/ext4magic:file-attr - Enable the recovery of file attributes (append, imm
 sys-fs/lessfs:filelog - Enable the ability to log to a file instead of syslog
 sys-fs/lessfs:memtrace - Enable leefs to create a report regarding the memory allocation. This feature should be used for debugging purposes to avoid performance degradation
 sys-fs/lessfs:snappy - Enable snappy compression using the app-arch/snappy library
-sys-fs/loop-aes:cpu_flags_x86_padlock - Use VIA padlock instructions, detected at run time, code still works on non-padlock processors
 sys-fs/loop-aes:extra-ciphers - Enable extra ciphers
 sys-fs/loop-aes:keyscrub - Protects the encryption key in memory but takes more cpu resources
 sys-fs/lvm2:device-mapper-only - Build only device-mapper and not the rest of LVM2 (UNSUPPORTED)
