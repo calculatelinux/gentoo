@@ -4784,6 +4784,10 @@ media-sound/audacity:soundtouch - Enables soundtouch library support for pitch a
 media-sound/audacity:twolame - Enables twolame support (MPEG Audio Layer 2 encoder)
 media-sound/audacity:vamp - Enables vamp plugins support (Audio analysing plugins)
 media-sound/audacity:vst - Enable VST plugin support
+media-sound/audiotools:cue - Enable CUE sheet support
+media-sound/audiotools:dvda - Enable DVD-Audio support
+media-sound/audiotools:gui - Enable support for GUI tools
+media-sound/audiotools:twolame - Enable twolame support (MPEG Audio Layer 2 encoder)
 media-sound/beets:badfiles - Validate MP3 & FLAC files
 media-sound/beets:chromaprint - Enable support for acoustic fingerprinting plugin using media-libs/chromaprint
 media-sound/beets:discogs - Enable support for the discogs API plugin
