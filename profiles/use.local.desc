@@ -2662,6 +2662,8 @@ dev-perl/App-Nopaste:clipboard - copying of URLs with -x/--copy
 dev-perl/App-Nopaste:github - Github authentication
 dev-perl/App-Nopaste:gitlab - Ensure git is installed for reading/passing GitLab authentication
 dev-perl/App-Nopaste:pastebin - pastebin.com support
+dev-perl/Boulder:genbank - Provide support with Boulder::Genbank for decoding Genbank data records
+dev-perl/Boulder:store - Provide support with Boulder::Store for persisting Stone objects
 dev-perl/Business-ISBN:barcode - Install dev-perl/GD-Barcode for rendering ISBN numbers as barcodes
 dev-perl/Config-Any:conf - Install dev-perl/Config-General to support decoding .conf/.cnf files
 dev-perl/Config-Any:ini - Install dev-perl/Config-Tiny to support decoding INI config files
@@ -4889,6 +4891,9 @@ media-sound/lmms:libgig - Enables GIG player plugin.
 media-sound/lmms:soundio - Enalbes libsoundio support.
 media-sound/lmms:stk - Enables STK Mallet plugin.
 media-sound/lmms:vst - Enables the VeSTige plugin to run VST plugins through Wine.
+media-sound/loudness-scanner:mpg123 - build the mpg123 plugin
+media-sound/loudness-scanner:musepack - build the musepack plugin
+media-sound/loudness-scanner:sndfile - build the sndfile plugin
 media-sound/lyvi:mpris - Enable MPRIS support
 media-sound/mangler:espeak - Text to speech engine
 media-sound/mangler:g15 - Logitech g15 lcd support
@@ -7625,6 +7630,7 @@ sci-libs/mathgl:octave - Add bindings for sci-mathematics/octave
 sci-libs/matio:sparse - Extend formats for sparse matrix (not matlab)
 sci-libs/mkl:fortran95 - Installs the BLAS/LAPACK FORTRAN95 static libraries
 sci-libs/mkl:int64 - Installs the 64 bits integer libraries
+sci-libs/mkl-rt:eselect-ldso - Enable runtime library switching by eselect and ld.so.
 sci-libs/mpir:cpudetection - Enables runtime cpudetection (useful for bindist, compatability on other CPUs)
 sci-libs/mumps:metis - Enable matrix ordering with METIS (sci-libs/metis, sci-libs/parmetis)
 sci-libs/mumps:scotch - Enable matrix ordering with sci-libs/scotch
