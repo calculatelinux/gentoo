@@ -2674,6 +2674,8 @@ dev-perl/Convert-UUlib:system-uulib - Use dev-libs/uulib instead of bundled vers
 dev-perl/Cookie-Baker:xs - Install dev-perl/Cookie-Baker-XS for accelerated performance
 dev-perl/Coro:ev - Build support for using dev-perl/EV as an event-loop via Coro::EV
 dev-perl/Coro:event - Build support for using dev-perl/Event as an event-loop via Coro::Event
+dev-perl/DBD-MariaDB:mariadb - Use dev-db/mariadb-connector-c as the client library
+dev-perl/DBD-MariaDB:mysql - Use dev-db/mysql-connector-c as the client library
 dev-perl/DBD-SQLite:system-sqlite - Use the system-wide dev-db/sqlite installation
 dev-perl/DBD-mysql:embedded - Support embedded server (libmysqld)
 dev-perl/DBD-mysql:ssl - Compile in support for SSL connections via libmysqlclient
@@ -7322,6 +7324,8 @@ net-wireless/openbsc:gprs - Support GPRS via OpenGGSN
 net-wireless/osmocom-bb:transmit - Enable transmission capabilities.
 net-wireless/pyrit:cuda - Enable CUDA support via net-wireless/cpyrit-cuda
 net-wireless/pyrit:opencl - Enable OpenCL support via net-wireless/cpyrit-opencl
+net-wireless/rtl_433:rtlsdr - Build with Realtek RTL2832U (rtlsdr) support
+net-wireless/rtl_433:soapy - Build with SoapySDR support
 net-wireless/soapy_power:faster - Use sci-libs/scipy to speed up drawing
 net-wireless/soapy_power:fastest - Use dev-python/pyFFTW to speed up drawing to the max
 net-wireless/soapysdr:bladerf - Add support for bladerf hardware
