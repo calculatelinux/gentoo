@@ -11,7 +11,7 @@ else
 	MY_P=${PN}-${MY_PV}
 	S=${WORKDIR}/${MY_P}
 	SRC_URI="https://github.com/systemd/systemd/archive/v${MY_PV}/${MY_P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc ~x86"
 fi
 
 PYTHON_COMPAT=( python{3_5,3_6,3_7} )
@@ -23,7 +23,7 @@ HOMEPAGE="https://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
-IUSE="acl apparmor audit build cryptsetup curl dns-over-tls elfutils +gcrypt gnuefi gnutls http idn importd +kmod libidn2 +lz4 lzma nat pam pcre policykit qrcode +resolvconf +seccomp selinux +split-usr +sysv-utils test vanilla xkb"
+IUSE="acl apparmor audit build cryptsetup curl dns-over-tls elfutils +gcrypt gnuefi http idn importd +kmod libidn2 +lz4 lzma nat pam pcre policykit qrcode +resolvconf +seccomp selinux +split-usr +sysv-utils test vanilla xkb"
 
 REQUIRED_USE="importd? ( curl gcrypt lzma )"
 RESTRICT="!test? ( test )"
@@ -38,15 +38,12 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.30:0=[${MULTILIB_USEDEP}]
 	audit? ( >=sys-process/audit-2:0= )
 	cryptsetup? ( >=sys-fs/cryptsetup-1.6:0= )
 	curl? ( net-misc/curl:0= )
-	dns-over-tls? (
-		gnutls? ( >=net-libs/gnutls-3.5.3:0= )
-		!gnutls? ( >=dev-libs/openssl-1.1.0:0= )
-	)
+	dns-over-tls? ( >=net-libs/gnutls-3.5.3:0= )
 	elfutils? ( >=dev-libs/elfutils-0.158:0= )
 	gcrypt? ( >=dev-libs/libgcrypt-1.4.5:0=[${MULTILIB_USEDEP}] )
 	http? (
-		>=net-libs/libmicrohttpd-0.9.33:0=
-		gnutls? ( >=net-libs/gnutls-3.1.4:0= )
+		>=net-libs/libmicrohttpd-0.9.33:0=[epoll(+)]
+		>=net-libs/gnutls-3.1.4:0=
 	)
 	idn? (
 		libidn2? ( net-dns/libidn2:= )
@@ -66,6 +63,12 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.30:0=[${MULTILIB_USEDEP}]
 	seccomp? ( >=sys-libs/libseccomp-2.3.3:0= )
 	selinux? ( sys-libs/libselinux:0= )
 	xkb? ( >=x11-libs/libxkbcommon-0.4.1:0= )"
+
+# Newer linux-headers needed by ia64, bug #480218
+DEPEND="${COMMON_DEPEND}
+	>=sys-kernel/linux-headers-${MINKV}
+	gnuefi? ( >=sys-boot/gnu-efi-3.0.2 )
+"
 
 # baselayout-2.2 has /run
 RDEPEND="${COMMON_DEPEND}
@@ -90,12 +93,6 @@ PDEPEND=">=sys-apps/dbus-1.9.8[systemd]
 	>=sys-fs/udev-init-scripts-25
 	policykit? ( sys-auth/polkit )
 	!vanilla? ( sys-apps/gentoo-systemd-integration )"
-
-# Newer linux-headers needed by ia64, bug #480218
-DEPEND="
-	>=sys-kernel/linux-headers-${MINKV}
-	gnuefi? ( >=sys-boot/gnu-efi-3.0.2 )
-"
 
 BDEPEND="
 	app-arch/xz-utils:0
@@ -176,6 +173,7 @@ src_prepare() {
 		"${FILESDIR}"/242-file-max.patch
 		"${FILESDIR}"/242-rdrand-ryzen.patch
 		"${FILESDIR}"/242-networkd-ipv6-token.patch
+		"${FILESDIR}"/242-network-domains.patch
 	)
 
 	if ! use vanilla; then
@@ -242,11 +240,11 @@ multilib_src_configure() {
 		-Daudit=$(meson_multilib_native_use audit)
 		-Dlibcryptsetup=$(meson_multilib_native_use cryptsetup)
 		-Dlibcurl=$(meson_multilib_native_use curl)
+		-Ddns-over-tls=$(meson_multilib_native_use dns-over-tls)
 		-Delfutils=$(meson_multilib_native_use elfutils)
 		-Dgcrypt=$(meson_use gcrypt)
 		-Dgnu-efi=$(meson_multilib_native_use gnuefi)
-		-Dgnutls=$(meson_multilib_native_use gnutls)
-		-Defi-libdir="${EPREFIX}/usr/$(get_libdir)"
+		-Defi-libdir="${ESYSROOT}/usr/$(get_libdir)"
 		-Dmicrohttpd=$(meson_multilib_native_use http)
 		-Dimportd=$(meson_multilib_native_use importd)
 		-Dbzip2=$(meson_multilib_native_use importd)
@@ -304,15 +302,6 @@ multilib_src_configure() {
 		)
 	fi
 
-	if multilib_is_native_abi && use dns-over-tls; then
-		myconf+=(
-			-Ddns-over-tls=true
-			-Dopenssl=$(usex !gnutls true false)
-		)
-	else
-		myconf+=( -Ddns-over-tls=false -Dopenssl=false )
-	fi
-
 	meson_src_configure "${myconf[@]}"
 }
 
@@ -354,9 +343,14 @@ multilib_src_install_all() {
 
 	# Preserve empty dirs in /etc & /var, bug #437008
 	keepdir /etc/{binfmt.d,modules-load.d,tmpfiles.d}
-	keepdir /etc/systemd/{ntp-units.d,user} /var/lib/systemd
+	keepdir /etc/kernel/install.d
+	keepdir /etc/systemd/{network,user}
 	keepdir /etc/udev/{hwdb.d,rules.d}
-	keepdir /var/log/journal/remote
+	keepdir "${rootprefix}"/lib/systemd/{system-sleep,system-shutdown}
+	keepdir /usr/lib/{binfmt.d,modules-load.d}
+	keepdir /usr/lib/systemd/user-generators
+	keepdir /var/lib/systemd
+	rm -rf "${ED}"/var/log || die
 
 	# Symlink /etc/sysctl.conf for easy migration.
 	dosym ../sysctl.conf /etc/sysctl.d/99-sysctl.conf
@@ -441,7 +435,6 @@ pkg_postinst() {
 	enewgroup kvm 78
 	enewgroup render
 	enewgroup systemd-journal
-	newusergroup systemd-bus-proxy
 	newusergroup systemd-coredump
 	newusergroup systemd-journal-gateway
 	newusergroup systemd-journal-remote

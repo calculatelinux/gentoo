@@ -133,6 +133,7 @@ python_prepare_all() {
 
 	if use build || ! use rsync-verify; then
 		sed -e '/^sync-rsync-verify-metamanifest/s|yes|no|' \
+			-e '/^sync-webrsync-verify-signature/s|yes|no|' \
 			-i cnf/repos.conf || die "sed failed"
 	fi
 
