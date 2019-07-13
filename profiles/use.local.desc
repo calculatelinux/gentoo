@@ -4537,7 +4537,6 @@ media-libs/libvisio:tools - Build conversion tools
 media-libs/libvpx:highbitdepth - Enable 10 and 12 bit support for VP9.
 media-libs/libvpx:postproc - Enable additional post processing filters
 media-libs/libvpx:svc - Enable spatial-svc support (experimental)
-media-libs/libwebp:experimental - Build with -DWEBP_EXPERIMENTAL_FEATURES
 media-libs/libwebp:swap-16bit-csp - Enable byte swapping for 16 bit colorspace
 media-libs/libyami:dmabuf - Enable dma_buf buffer sharing.
 media-libs/libyami:egl - Enable EGL support.
@@ -6713,7 +6712,6 @@ net-misc/hylafaxplus:html - Convert faxes into html email
 net-misc/hylafaxplus:jbig - JBIG Fax Compression Support
 net-misc/hylafaxplus:mgetty - Receive faxes via serial port connections
 net-misc/hylafaxplus:pam - hfaxd authentication via PAM
-net-misc/icaclient:l10n_zh_CN - Install Chinese translation
 net-misc/icecast:kate - Add karaoke and text encapsulation support for Ogg files
 net-misc/icecast:logrotate - Install support files for app-admin/logrotate?
 net-misc/icecast:yp - Build support for yp public directory listings
