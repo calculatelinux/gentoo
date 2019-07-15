@@ -1211,6 +1211,7 @@ app-portage/layman:subversion - Support dev-vcs/subversion based overlays
 app-portage/layman:sync-plugin-portage - Install the sys-apps/portage sync module
 app-portage/pfl:network-cron - Adds a cron job which does a weekly submit of the package database
 app-portage/portage-utils:qmanifest - Build qmanifest applet, this adds additional dependencies for GPG, OpenSSL and BLAKE2B hashing
+app-portage/portage-utils:qtegrity - Build qtegrity applet, this adds additional dependencies for OpenSSL
 app-portage/tatt:templates - Install template scripts to be used with tatt
 app-shells/autojump:ipython - Add support for dev-python/ipython
 app-shells/bash:bashlogger - Log ALL commands typed into bash; should ONLY be used in restricted environments such as honeypots
@@ -9050,12 +9051,10 @@ www-servers/xsp:net45 - use .NET 4.5 Framework
 x11-apps/copyq:webkit - enables the application to use advanced HTML rendering and fetching remote images and other data
 x11-apps/igt-gpu-tools:X - Enable intel-gpu-overlay xlib/cairo backend
 x11-apps/igt-gpu-tools:chamelium - Enables support for building Chamelium tests
-x11-apps/igt-gpu-tools:glib - Support reading config files via glib helpers
 x11-apps/igt-gpu-tools:man - Build and install man pages
 x11-apps/igt-gpu-tools:overlay - Build the intel-gpu-overlay utility
 x11-apps/igt-gpu-tools:runner - Build the test runner
 x11-apps/igt-gpu-tools:valgrind - Support valgrind annotations
-x11-apps/igt-gpu-tools:xrandr - Enable support for the X RandR extension
 x11-apps/igt-gpu-tools:xv - Enable intel-gpu-overlay xv backend
 x11-apps/mesa-progs:egl - Build EGL utilities
 x11-apps/mesa-progs:gles2 - Build OpenGL ES 2 utilities
