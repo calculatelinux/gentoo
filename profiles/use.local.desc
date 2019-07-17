@@ -2542,7 +2542,6 @@ dev-libs/openssl-compat:sslv3 - Support for the old/insecure SSLv3 protocol -- n
 dev-libs/openssl-compat:tls-heartbeat - Enable the Heartbeat Extension in TLS and DTLS
 dev-libs/pkcs11-helper:nss - Enable NSS crypto engine
 dev-libs/poco:7z - Add Support for the 7z archive format
-dev-libs/poco:apache - Enable support to write Apache modules using POCO
 dev-libs/poco:cppparser - Build and install a minimal C++ parser
 dev-libs/poco:crypto - Encryption and digital signing classes
 dev-libs/poco:data - Database abstraction layer to easily send/retrieve data to/from various databases
@@ -4615,6 +4614,7 @@ media-libs/opencv:vtk - Build new 3D visualization module viz based on sci-libs/
 media-libs/openh264:plugin - Install the Gecko Media Plugin (GMP) for use with Mozilla packages
 media-libs/openh264:utils - Install the CLI encoder and decoder utilities
 media-libs/openimageio:color-management - Enable color management via media-libs/opencolorio
+media-libs/openimageio:dicom - Enable DICOM medical image file support via sci-libs/dcmtk
 media-libs/openimageio:field3d - Enable f3d file (write) support via media-libs/Field3D
 media-libs/openimageio:opencv - Enable OpenCV support via media-libs/opencv
 media-libs/openimageio:ptex - Enable Ptex texture mapping system file support via media-libs/ptex
@@ -4878,7 +4878,8 @@ media-sound/jack2:classic - Enable building of jackd
 media-sound/jack2:pam - Add basic realtime configuration via sys-auth/realtime-base
 media-sound/jalv:gtk2 - Adds support for GTK+2 in addition to GTK+3 controlled by the gtk useflag.
 media-sound/jalv:gtkmm - Adds support for dev-cpp/gtkmm: C++ interface for GTK+2
-media-sound/kid3:acoustid - Enable support for acoustic fingerprinting plugin using (media-libs/chromaprint)
+media-sound/kid3:acoustid - Build acoustic fingerprinting plugin using media-libs/chromaprint
+media-sound/kid3:mpris - Enable support for MPRIS2 interface using dev-qt/qtdbus
 media-sound/klick:rubberband - Enable rubberband support
 media-sound/lame:frontend - Build and install the 'lame' executable frontend to lame libraries.
 media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED**
@@ -7791,9 +7792,7 @@ sci-mathematics/why3-for-spark:hypothesis-selection - Enable hypothesis selectio
 sci-mathematics/why3-for-spark:profiling - Enable profiling
 sci-mathematics/why3-for-spark:zarith - Use dev-ml/zarith
 sci-mathematics/why3-for-spark:zip - Enable compression of session files
-sci-mathematics/yacas:doc - Generate HTML documentation
 sci-mathematics/yacas:gui - Build graphical interface for the native yacas engine. Requires Qt5
-sci-mathematics/yacas:java - Build the Java yacas engine and text console for it
 sci-mathematics/yacas:jupyter - Add support for jupyter notebook
 sci-mathematics/yafu:sieve - Use msieve for the sieving steps of NFS
 sci-mathematics/z3:isabelle - Add integration support for the Isabelle/HOL theorem prover.
@@ -8959,31 +8958,6 @@ www-plugins/passff-host:chrome - Install plugin for chrome (which also includes 
 www-plugins/passff-host:chromium - Install plugin for chromium
 www-plugins/passff-host:firefox - Install plugin for firefox
 www-plugins/passff-host:vivaldi - Install plugin for vivaldi
-www-servers/apache:apache2_modules_access_compat - Group authorizations based on host (name or IP address). Available as a compatibility module with previous versions.
-www-servers/apache:apache2_modules_authn_core - Provides core authentication capabilities common to all authentication providers (functionality provided by authn_alias in previous versions).
-www-servers/apache:apache2_modules_authz_core - Provides core authorization capabilities to various authorization/authorization modules, such as authn_file and authz_user.
-www-servers/apache:apache2_modules_authz_dbd - Provides authorization capabilities via SQL database so that authenticated users can be allowed or denied access to portions of the web site by group membership.
-www-servers/apache:apache2_modules_brotli - Enable brotli compression support
-www-servers/apache:apache2_modules_cache_disk - Disk based storage module for the HTTP caching filter (similar to mem_cache in previous versions).
-www-servers/apache:apache2_modules_cache_socache - Shared object cache (socache) based storage module for the HTTP caching filter.
-www-servers/apache:apache2_modules_http2 - Enable http2/alpn module
-www-servers/apache:apache2_modules_lbmethod_bybusyness - Pending request counting load balancer scheduler algorithm for proxy_balancer.
-www-servers/apache:apache2_modules_lbmethod_byrequests - Request counting load balancer scheduler algorithm for proxy_balancer.
-www-servers/apache:apache2_modules_lbmethod_bytraffic - Weighted traffic counting load balancer scheduler algorithm for proxy_balancer.
-www-servers/apache:apache2_modules_lbmethod_heartbeat - Heartbeat traffic counting load balancer scheduler algorithm for proxy_balancer.
-www-servers/apache:apache2_modules_macro - Macros for the Apache config file.
-www-servers/apache:apache2_modules_md - Managing domains across virtual hosts, certificate provisioning via the ACME protocol.
-www-servers/apache:apache2_modules_proxy_fcgi - FCGI support module for mod_proxy.
-www-servers/apache:apache2_modules_proxy_html - Module to rewrite links in html pages behind a reverse proxy
-www-servers/apache:apache2_modules_proxy_http2 - HTTP2 support module for mod_proxy.
-www-servers/apache:apache2_modules_proxy_wstunnel - Provides support for the tunnelling of web socket connections to a backend websockets server.
-www-servers/apache:apache2_modules_ratelimit - Ratelimit module for transfer rate management
-www-servers/apache:apache2_modules_remoteip - Remotip module for logging
-www-servers/apache:apache2_modules_slotmem_shm - Slot-based shared memory provider.
-www-servers/apache:apache2_modules_socache_shmcb - A shared object cache provider using a high-performance cyclic buffer inside a shared memory segment.
-www-servers/apache:apache2_modules_unixd - Basic (required) security for Unix-family platforms.
-www-servers/apache:apache2_modules_watchdog - Provides infrastructure for other modules to periodically run tasks
-www-servers/apache:apache2_modules_xml2enc - Enable xml2 encoding module
 www-servers/apache:static - Link in apache2 modules statically rather then plugins
 www-servers/apache:suexec - Install suexec with apache
 www-servers/apache:suexec-caps - Install suexec with capabilities instead of SUID
@@ -9213,7 +9187,6 @@ x11-plugins/vicious:contrib - Install extra widgets, some for less common hardwa
 x11-plugins/wmfire:session - Enable session management
 x11-plugins/wmudmount:gcr - Enable support for secure memory with app-crypt/gcr
 x11-plugins/wmudmount:secret - Enable support for secret service with app-crypt/libsecret
-x11-terms/alacritty:terminfo - Use tic from sys-libs/ncurses to generate alacritty terminfo files
 x11-terms/aterm:background - Enable background image support via media-libs/libafterimage
 x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small version
 x11-terms/eterm:escreen - Enable built-in app-misc/screen support

@@ -35,9 +35,9 @@
 
 # Kent Fredric <kentnl@gentoo.org> (2019-07-14)
 # Broken since 2007, Upstream not seen since 2004.
-# Removal after 2019-08-13
+# Removal after 2019-08-16
 # Bug #635792
-dev-libs/libvorbis-perl
+dev-perl/libvorbis-perl
 
 # David Seifert <soap@gentoo.org> (2019-07-14)
 # Unmaintained, removed from Debian and other distros, tons of CVEs,
@@ -313,11 +313,6 @@ app-accessibility/festival-ru
 app-accessibility/perlbox-voice
 app-accessibility/pidgin-festival
 dev-ros/sound_play
-
-# Patrice Clement <monsieurp@gentoo.org> (2019-05-06)
-# Broken build. Outdated version. No interest from the Java team to maintain
-# it. Removal in 30 days. Bug #581720.
-media-tv/tvbrowser
 
 # Jeroen Roovers <jer@gentoo.org> (2019-04-24)
 # Depends on =dev-libs/openssl-1.1.1* due to newly introduced
