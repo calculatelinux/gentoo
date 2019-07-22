@@ -1304,6 +1304,8 @@ app-text/qpdfview:synctex - Add support for searching TeX sources
 app-text/robodoc:examples - Installs usage examples in /usr/share for Perl
 app-text/sdcv:darkterm - Improve readability of color output on terminals with dark background.
 app-text/sgmltools-lite:jadetex - Add support for app-text/jadetex (for processing tex files produced by the TeX backend of Jade)
+app-text/sigil:plugins - Installed needed Python packages for using Sigil plugins
+app-text/sigil:system-mathjax - Use the system-wide dev-libs/mathjax instead of bundled
 app-text/stardict:advertisement - Enable stardict advertisements plugin
 app-text/stardict:cal - Enable calendar support using cal program
 app-text/stardict:dictdotcn - Enable dict.cn network plugin (for Chinese language)
@@ -2965,6 +2967,7 @@ dev-qt/qtgui:ibus - Build the IBus input method plugin
 dev-qt/qtgui:libinput - Enable support for input devices via dev-libs/libinput
 dev-qt/qtgui:tslib - Enable support for touchscreen devices via x11-libs/tslib
 dev-qt/qtgui:tuio - Build plugin to receive touch events over the TUIO protocol
+dev-qt/qtgui:wayland - Provide dev-qt/qtwayland to ensure Qt applications can be run as Wayland clients
 dev-qt/qtgui:xcb - Build the XCB platform plugin and enable X11 integration
 dev-qt/qtmultimedia:gles2 - Use GLES 2.0 or later instead of full OpenGL
 dev-qt/qtmultimedia:gstreamer - Enable audio support via media-libs/gstreamer using SLOT 1.0
@@ -5799,7 +5802,6 @@ net-dns/dnsmasq:libidn2 - Enable support for Internationalized Domain Names, via
 net-dns/dnsmasq:script - Enable support for calling scripts when leases change.
 net-dns/dnsmasq:tftp - Enables built in TFTP server for netbooting.
 net-dns/dnssec-validator:dlv - Enable support for the DNSSEC look-aside validation
-net-dns/dnssec-validator:ecdsa-check - Requires openssl[-bindist]
 net-dns/dnssec-validator:nsec3 - Enable support for the NSEC3 Resource Record
 net-dns/getdns:getdns_query - Add getdns_query tool
 net-dns/getdns:getdns_server_mon - Add getdns_server_mon tool
