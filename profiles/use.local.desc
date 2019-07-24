@@ -5995,7 +5995,6 @@ net-ftp/proftpd:shaper - Enable support for the mod_shaper module
 net-ftp/proftpd:sitemisc - Enable support for the sitemisc module
 net-ftp/proftpd:sodium - Use dev-libs/libsodium for password encryption an key exchange
 net-ftp/proftpd:softquota - Enable support for the quotatab module
-net-ftp/proftpd:trace - Build with trace support. Should not be enabled on production servers
 net-ftp/proftpd:unique_id - Enable support for the mod_unique_id module, every connection gets unique ID.
 net-ftp/proftpd:vroot - Enable support for the virtual root module
 net-ftp/pure-ftpd:anondel - Permit anonymous to delete files
@@ -7648,6 +7647,7 @@ sci-libs/oce:vtk - Enable Virtualisation Toolkit
 sci-libs/octomap:dynamicEDT3D - Build and install dynamicEDT3D library: A library for incrementally updatable Euclidean distance transforms in 3D.
 sci-libs/openblas:dynamic - Build dynamic architecture detection at run time (for multi targets)
 sci-libs/openblas:eselect-ldso - Enable BLAS/LAPACK runtime switching
+sci-libs/openblas:index-64bit - Compile a separate INTERFACE64 OpenBLAS
 sci-libs/openblas:pthread - Build with pthread threadding model
 sci-libs/openblas:serial - Build without multi-thraedding
 sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/freeimage
