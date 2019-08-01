@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python3_6 )
+PYTHON_COMPAT=( python3_{6,7} )
 PYTHON_REQ_USE="ncurses?"
 
 inherit desktop distutils-r1 xdg-utils
@@ -15,7 +15,7 @@ SRC_URI="https://download.electrum.org/${PV}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 MY_LANGS="ar_SA be_BY bg_BG cs_CZ da_DK de_DE el_GR eo_UY es_ES fa_IR fr_FR hu_HU hy_AM id_ID it_IT ja_JP ko_KR ky_KG lv_LV nb_NO nl_NL pl_PL pt_BR pt_PT ro_RO ru_RU sk_SK sl_SI sv_SE ta_IN th_TH tr_TR uk_UA vi_VN zh_CN zh_TW"
 
 my_langs_to_l10n() {
@@ -110,12 +110,10 @@ src_prepare() {
 
 	# And install requested ones...
 	for gui in  \
-		$(usex qt5      qt   '')  \
+		$(usex !qt5     qt   '')  \
 	; do
-		setup_py_gui="${setup_py_gui}'electrum_gui.${gui}',"
+		sed -i -e "/electrum\.gui\.${gui}/d" setup.py || die
 	done
-
-	sed -i "s/'electrum_gui\\.qt',/${setup_py_gui}/" setup.py || die
 
 	local bestgui
 	if use qt5; then

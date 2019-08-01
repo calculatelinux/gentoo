@@ -3254,6 +3254,7 @@ dev-util/sysprof:elogind - Build the sysprofd daemon service, required to run th
 dev-util/sysprof:systemd - Build the sysprofd daemon service, required to run the UI without root permissions. Relies on sys-apps/systemd for sd-bus API.
 dev-util/systemtap:libvirt - Support probing of libvirt domains.
 dev-util/trace-cmd:udis86 - Enable support for dev-libs/udis86 disassembler library
+dev-util/uftrace:capstone - Use capstone to provide dynamic tracing without recompilation
 dev-util/vulkan-tools:cube - Build the cube/cubepp demos
 dev-util/vulkan-tools:vulkaninfo - Build the vulkaninfo utility
 dev-vcs/bzr:sftp - Enable sftp support
@@ -6868,6 +6869,7 @@ net-misc/quagga:tcp-zebra - Enable TCP zserv interface on port 2600 for Zebra/pr
 net-misc/rdesktop:kerberos - Enable CredSPP support + Kerberos authentication with net-libs/libgssglue
 net-misc/rdesktop:pcsc-lite - Enable smartcard support with sys-apps/pcsc-lite driver
 net-misc/rdesktop:xrandr - Enable XRandR window extension support
+net-misc/remmina:kwallet - Enable KDE Wallet plugin
 net-misc/remmina:spice - Support connecting to SPICE-enabled virtual machines
 net-misc/remmina:ssh - Enable support for SSH/SFTP protocol
 net-misc/remmina:telepathy - Enable telepathy support
