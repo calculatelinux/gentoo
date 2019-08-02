@@ -29,6 +29,30 @@
 
 #--- END OF EXAMPLES ---
 
+# Thomas Deutschmann <whissi@gentoo.org> (2019-08-02)
+# Ebuild is still in development and shouldn't be used.
+=dev-db/mysql-8*
+
+# Michał Górny <mgorny@gentoo.org> (2019-08-01)
+# Discontinued upstream in July 2017.  Has irritating bugs, and is hard
+# to build from source (we have binary package only).  Upstream
+# recommends net-misc/electrum as a replacement.
+# See: https://multibit.org/blog/2017/07/26/multibit-shutdown.html
+# Removal in 30 days.  Bug #639530.
+net-p2p/multibit
+
+# David Seifert <soap@gentoo.org> (2019-08-01)
+# Dead upstream, last release over 5 years ago,
+# broken build system, fails with boost 1.70,
+# removal in 30 days. Bug #646014, #691162
+dev-games/vamos
+
+# David Seifert <soap@gentoo.org> (2019-08-01)
+# Last touched over 3 years ago, broken tests,
+# fails with boost 1.70, removal in 30 days.
+# Bug #655886, #690704
+dev-python/pgmagick
+
 # Brian Evans <grknight@gentoo.org> (2019-07-31)
 # MySQL 5.5 will no longer receive updates from Oracle
 # It may or may not have unaccounced security vulnerabilities
@@ -153,12 +177,6 @@ media-video/pipewire
 # Requires >=dev-lang/lua-5.2 which is masked
 >=app-admin/conky-1.11.4
 
-# Ulrich Müller <ulm@gentoo.org> (2019-07-05)
-# Fetch restricted, SRC_URI is gone, last release in 2008.
-# Binary-only 32 bit package. Program fails with SIGSEGV.
-# Masked for removal in 30 days, bug #689158.
-media-sound/ventrilo-server-bin
-
 # Sobhan Mohammadpour <sobhan@gentoo.org> (2019-07-04)
 # Mask until further testing is done
 =dev-libs/libgdata-0.17.10
@@ -189,12 +207,6 @@ sys-freebsd/ubin-wrappers
 # Source is broken. Upstream is dead since 2011.
 # Removal after 2019-08-01. (bug #688552)
 media-sound/sfc
-
-# David Seifert <soap@gentoo.org> (2019-06-23)
-# QA issues, fails tests, RWX sections, ignores CC/CFLAGS,
-# builds only static libs, fails with GCC 9.
-# Bug #452220, #461288, #623360, #685728
-sci-mathematics/gwnum
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2019-06-17)
 # this is now provided by dev-lang/rust{-bin}[rustfmt]
