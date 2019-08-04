@@ -29,6 +29,34 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2019-08-03)
+# ruby24-only, no longer compiles with gcc 9, last release in 2009,
+# upstream gone, no reverse dependencies.
+# Masked for removal in 30 days, bug #691302
+dev-ruby/priorityqueue
+
+# Matt Turner <mattst88@gentoo.org> (2019-08-02)
+# Incompatible with guile-2
+# Masked for removal in 30 days, Bugs #592188
+sci-mathematics/drgeo
+
+# Matt Turner <mattst88@gentoo.org> (2019-08-02)
+# Incompatible with guile-2. No longer a use case
+# Masked for removal in 30 days, Bugs #617792
+mail-filter/anubis
+
+# Matt Turner <mattst88@gentoo.org> (2019-08-02)
+# Unmaintained in Gentoo. Incompatible with guile-2
+# Masked for removal in 30 days, Bugs #685540, #629058
+sci-libs/libctl
+sci-physics/harminv
+sci-physics/meep
+
+# Matt Turner <mattst88@gentoo.org> (2019-08-02)
+# Unmaintained. Incompatible with guile-2
+# Masked for removal in 30 days, Bugs #641864, #647536, #688244
+x11-libs/guile-gtk
+
 # Thomas Deutschmann <whissi@gentoo.org> (2019-08-02)
 # Ebuild is still in development and shouldn't be used.
 =dev-db/mysql-8*
@@ -99,13 +127,6 @@ kde-misc/plasma-active-window-control
 # Lars Wendler <polynomial-c@gentoo.org> (2019-07-21)
 # Requires >=mail-client/thunderbird-68_beta1 which is not in the tree yet
 >=x11-plugins/enigmail-2.1
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2019-07-20)
-# Ancient theme for KDE SC 4.4, useless for Plasma 5
-# Removal in 15 days
-x11-themes/korilla
-x11-themes/noia
-x11-themes/oxygen-molecule
 
 # Sergei Trofimovich <slyfox@gentoo.org> (2019-07-20)
 # Mask linux-headers-5.2 as it breaks at least firefox

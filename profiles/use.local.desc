@@ -350,6 +350,7 @@ app-crypt/qca:pkcs11 - Enable PKCS#11 plugin
 app-crypt/qca:sasl - Enable SASL plugin
 app-crypt/qca:softstore - Enable softstore plugin
 app-crypt/seahorse:ldap - Enable seahorse to manipulate GPG keys on a LDAP server.
+app-crypt/swtpm:fuse - Support sys-fs/fuse based /dev/tpm interface
 app-crypt/tpm-emulator:mtm-emulator - Build the MTM emulator
 app-crypt/tpm-tools:pkcs11 - Build Token data management utilities based on OpenCryptoki's (dev-libs/opencryptoki) PKCS#11 implementation.
 app-crypt/tpm2-tss:gcrypt - Use dev-libs/libgcrypt as crypto engine
@@ -1542,6 +1543,7 @@ dev-db/mysql:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/mysql:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
 dev-db/mysql:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
 dev-db/mysql:profiling - Add support for statement profiling (requires USE=community).
+dev-db/mysql:router - Build the MySQL router program
 dev-db/mysql:server - Build the server program
 dev-db/mysql:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-db/mysql:test - Install upstream testsuites for end use.
@@ -2150,6 +2152,7 @@ dev-lang/swi-prolog:yaml - Use libyaml for YAML pack
 dev-lang/swig:ccache - build ccache-swig(a fast compiler cache)
 dev-lang/vala:valadoc - Installs valadoc documentation generation tool
 dev-lang/yap:R - Enable support for connecting R to Prolog
+dev-lang/zig:experimental - Enable builds that do not support all of LLVM's target architectures
 dev-libs/actor-framework:benchmarks - Due to the number of out-of-tree deps, these only get installed as docs
 dev-libs/actor-framework:boost - Make use of Boost's ASIO functionality
 dev-libs/actor-framework:cash - Build the C Actor Shell for introspection and debugging
@@ -2910,14 +2913,16 @@ dev-qt/designer:webkit - Build the qwebview plugin
 dev-qt/linguist-tools:qml - Enable QML support in lupdate
 dev-qt/qdoc:qml - Enable QML/JS parsing support
 dev-qt/qt-creator:android - Build plugin for Android devices
+dev-qt/qt-creator:autotest - Enable integration with popular unit testing frameworks (QtTest, Google Test, Boost.Test)
 dev-qt/qt-creator:autotools - Enable autotools project manager plugin
 dev-qt/qt-creator:baremetal - Build plugin for bare metal devices
 dev-qt/qt-creator:bazaar - Add support for dev-vcs/bzr version control system
-dev-qt/qt-creator:clang - Build clang-based plugins (code model, format, static analysis)
+dev-qt/qt-creator:beautifier - Build the beautifier plugin (supports astyle, clang-format, and uncrustify)
+dev-qt/qt-creator:clang - Build clang-based plugins (code model, formatting, refactoring, static analysis)
 dev-qt/qt-creator:clearcase - Add support for IBM ClearCase version control system (requires manual installation of ClearCase client)
 dev-qt/qt-creator:cmake - Enable cmake project manager plugin
 dev-qt/qt-creator:cppcheck - Enable integration with dev-util/cppcheck
-dev-qt/qt-creator:designer - Build widget designer plugin
+dev-qt/qt-creator:designer - Enable designer for QtWidgets-based UIs
 dev-qt/qt-creator:glsl - Enable GLSL source code editor
 dev-qt/qt-creator:help - Build the help plugin
 dev-qt/qt-creator:ios - Build plugin for Apple iOS devices
@@ -2926,9 +2931,13 @@ dev-qt/qt-creator:mercurial - Add support for dev-vcs/mercurial version control 
 dev-qt/qt-creator:modeling - Enable graphical model editor
 dev-qt/qt-creator:nim - Enable Nim source code editor
 dev-qt/qt-creator:perforce - Add support for Perforce version control system (requires manual installation of Perforce client)
+dev-qt/qt-creator:perfprofiler - Build the Linux Perf-based profiler plugin
 dev-qt/qt-creator:python - Enable Python source code editor
 dev-qt/qt-creator:qbs - Enable QBS project manager plugin
+dev-qt/qt-creator:qmldesigner - Enable designer for QML/QtQuick-based UIs
+dev-qt/qt-creator:qmlprofiler - Build the QML profiler plugin
 dev-qt/qt-creator:qnx - Build plugin for QNX devices
+dev-qt/qt-creator:remotelinux - Build remotelinux plugin
 dev-qt/qt-creator:scxml - Enable graphical SCXML editor
 dev-qt/qt-creator:serialterminal - Build serial terminal plugin
 dev-qt/qt-creator:silversearcher - Enable integration with sys-apps/the_silver_searcher
@@ -3148,11 +3157,11 @@ dev-util/edb-debugger:legacy-mem-write - Probe if writes to /proc/PID/mem are br
 dev-util/edb-debugger:pax_kernel - Enable building under a PaX enabled kernel
 dev-util/edi:clang - Provide integration with sys-devel/clang for autocompletion and inline errors
 dev-util/electron:gconf - Use gnome-base/gconf
-dev-util/electron:gtk3 - Use GTK+3 instead of GTK+2
 dev-util/electron:lto - Build with link time optimization enabled
 dev-util/electron:pic - Disable optimized assembly code that is not PIC friendly
 dev-util/electron:proprietary-codecs - Enable proprietary codecs like H.264, MP3
 dev-util/electron:system-ffmpeg - Use system ffmpeg instead of the bundled one
+dev-util/electron:system-libvpx - Use system libvpx instead of the bundled one
 dev-util/electron:system-ssl - Use system OpenSSL instead of the bundled one
 dev-util/electron:tcmalloc - Use bundled tcmalloc instead of system malloc
 dev-util/emilpro:system-binutils - Use the gentoo binutils instead of building against an unpatched vanilla version
@@ -3579,6 +3588,7 @@ games-simulation/openttd:dedicated - Build only the openttd server, and not the 
 games-simulation/openttd:lzo - Enables LZO compression for savegames. This is only needed to load extremely old savegames. (versions before 0.2)
 games-simulation/openttd:openmedia - Enables the free open media sets: OpenGFX, OpenSFX, OpenMSX, removing the requirement for proprietary TTD assets to play OpenTTD.
 games-simulation/singularity:music - Install music files
+games-simulation/train-valley:gui - Install the GUI for configuring screen resolution and input
 games-sports/speed-dreams:xrandr - Enable support for the X xrandr extension
 games-sports/xmoto:double-precision - more precise calculations at the expense of speed
 games-sports/xmoto:editor - Depend on inkscape, scripts to convert svg to level (svg2lvl)
@@ -7645,8 +7655,7 @@ sci-libs/octomap:dynamicEDT3D - Build and install dynamicEDT3D library: A librar
 sci-libs/openblas:dynamic - Build dynamic architecture detection at run time (for multi targets)
 sci-libs/openblas:eselect-ldso - Enable BLAS/LAPACK runtime switching
 sci-libs/openblas:index-64bit - Compile a separate INTERFACE64 OpenBLAS
-sci-libs/openblas:pthread - Build with pthread threadding model
-sci-libs/openblas:serial - Build without multi-thraedding
+sci-libs/openblas:pthread - Build with pthread threading model
 sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/opencascade:gl2ps - Use gl2ps PostScript printing library
 sci-libs/opencascade:gles2 - Use OpenGL ES 2.0
@@ -7951,7 +7960,12 @@ sys-apps/firejail:seccomp - Enable system call filtering
 sys-apps/firejail:userns - Enable attaching a new user namespace to a sandbox (--noroot option)
 sys-apps/firejail:whitelist - Enable whitelist
 sys-apps/firejail:x11 - Enable X11 sandboxing
+sys-apps/firejail-lts:apparmor - Enable support for custom AppArmor profiles
+sys-apps/firejail-lts:globalcfg - Enable global config file
+sys-apps/firejail-lts:network - Enable networking features
 sys-apps/firejail-lts:seccomp - Enable system call filtering
+sys-apps/firejail-lts:userns - Enable attaching a new user namespace to a sandbox (--noroot option)
+sys-apps/firejail-lts:whitelist - Enable file and directory whitelisting
 sys-apps/flashrom:atahpt - Highpoint (HPT) ATA/RAID controller support
 sys-apps/flashrom:atapromise - Support for Promise PDC2026x (FastTrak/Ultra)
 sys-apps/flashrom:atavia - Support for VIA VT6421A SATA controllers
@@ -8103,6 +8117,7 @@ sys-apps/superdiag:usb - Install all files, which are needed for an installation
 sys-apps/superiotool:pci - Support for PCI-attached "Super I/Os" (e.g. in VIA VT82686A/B).
 sys-apps/systemd:apparmor - Enable AppArmor support
 sys-apps/systemd:audit - Enable support for sys-process/audit
+sys-apps/systemd:cgroup-hybrid - Default to hybrid cgroup hierarchy instead of unified.
 sys-apps/systemd:cryptsetup - Enable cryptsetup tools (includes unit generator for crypttab)
 sys-apps/systemd:curl - Enable support for uploading journals
 sys-apps/systemd:dns-over-tls - Enable DNS-over-TLS support
@@ -8611,6 +8626,7 @@ sys-kernel/kpatch:contrib - Enable contrib kpatch services files.
 sys-kernel/kpatch:kmod - Enable a kernel module (.ko file) which provides an interface for the patch modules to register new functions for replacement.
 sys-kernel/kpatch:kpatch - Enable a command-line tool which allows a user to manage a collection of patch modules.
 sys-kernel/kpatch:kpatch-build - Enable tools which convert a source diff patch to a patch module.
+sys-kernel/linux-firmware:initramfs - Create and install initramfs for early microcode loading in /boot (only AMD for now)
 sys-kernel/linux-firmware:redistributable - Install also non-free (but redistributable) firmware files
 sys-kernel/linux-firmware:savedconfig - Allows individual selection of firmware files
 sys-kernel/linux-firmware:unknown-license - Install firmware files whose license is unknown
