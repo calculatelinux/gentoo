@@ -1049,6 +1049,9 @@ app-misc/note:text - Add support for text backend
 app-misc/openastro:jpeg - Enable exporting Astrological Charts to jpeg
 app-misc/openastro:png - Enable exporting Astrological Charts to png
 app-misc/pax-utils:python - Install a more powerful/faster version of lddtree
+app-misc/pip3line:distorm - Compile the Distorm plugin
+app-misc/pip3line:qscintilla - Use QScintilla for more efficient text display
+app-misc/pip3line:ssl - Compile the plugin adding miscellaneous hashes from OpenSSL
 app-misc/recoll:camelcase - Enable indexing for camelCase sentences and words
 app-misc/recoll:chm - Enable CHM file support via dev-python/pychm
 app-misc/recoll:inotify - Use the Linux Kernel notification subsystem for monitoring file alterations in realtime
@@ -6802,7 +6805,8 @@ net-misc/ntpclient:syslog - Enable logging to syslog instead of logging to stder
 net-misc/ntpsec:early - Drop root privileges early
 net-misc/ntpsec:gdb - Enable debugging with gdb
 net-misc/ntpsec:heat - Install contrib heat generating scripts
-net-misc/ntpsec:nist - Enable lockclock
+net-misc/ntpsec:libbsd - Use libbsd instead of internal funcs
+net-misc/ntpsec:nist - Set local clock deps
 net-misc/ntpsec:ntpviz - Make visualizations of offsets, jiffies, etc.
 net-misc/ntpsec:rclock_arbiter - Arbiter 1088A/B GPS driver
 net-misc/ntpsec:rclock_generic - Enable support for generic time radios and GPSDOs
@@ -7573,6 +7577,25 @@ sci-libs/coinor-clp:sparse - Enable support for sparse matrix with sci-libs/chol
 sci-libs/coinor-osi:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
 sci-libs/coinor-symphony:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
 sci-libs/coinor-utils:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
+sci-libs/dealii:adolc - Adds support for ADOL-C (sci-libs/adolc)
+sci-libs/dealii:arpack - Adds support for ARPACK (sci-libs/arpack)
+sci-libs/dealii:assimp - Add support for assimp (media-libs/assimp)
+sci-libs/dealii:cuda - Add support for cuda assimp (dev-util/nvidia-cuda-sdk)
+sci-libs/dealii:debug - Build an additional debug library with extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see <http://www.gentoo.org/proj/en/qa/backtraces.xml>
+sci-libs/dealii:gmsh - Add support for gmsh (sci-libs/gmsh)
+sci-libs/dealii:metis - Add support for metis (sci-libs/metis)
+sci-libs/dealii:muparser - Add support for muparser (dev-cpp/muParser)
+sci-libs/dealii:nanoflann - Adds support for nanoflann (sci-libs/nanoflann)
+sci-libs/dealii:opencascade - Add support for opencascade (sci-libs/opencascade)
+sci-libs/dealii:p4est - Add support for p4est (sci-libs/p4est)
+sci-libs/dealii:petsc - Add support for petsc (sci-mathematics/petsc)
+sci-libs/dealii:scalapack - Add support for ScaLAPACK (sci-libs/scalapack)
+sci-libs/dealii:slepc - Add support for slepc (sci-mathematics/slepc)
+sci-libs/dealii:sparse - Add support for suitesparse (sci-libs/suitesparse)
+sci-libs/dealii:sundials - Add support for sundials assimp (sci-libs/sundials)
+sci-libs/dealii:symengine - Add support for symengine (sci-libs/symengine)
+sci-libs/dealii:tbb - Add threading support with the help of the tbb library (dev-cpp/tbb)
+sci-libs/dealii:trilinos - Add support for trilinos (sci-libs/trilinos)
 sci-libs/dlib:cblas - Build with CBLAS virtual/cblas
 sci-libs/dlib:cuda - Enable support for CUDA for Deep Neural Networks (cuDNN) on GPU (experimental)
 sci-libs/dlib:mkl - Enable support for Intel FFT sci-libs/mkl
@@ -7594,6 +7617,12 @@ sci-libs/gdal:ogdi - Enable support for the open geographic datastore interface 
 sci-libs/gdal:opencl - Enable OpenCL support
 sci-libs/gdal:spatialite - Enable Spatial DBMS over sqlite dev-db/spatialite
 sci-libs/gdal:xls - Add the dev-libs/freexl library for xls import support
+sci-libs/gmsh:cgns - Enables cgns output support
+sci-libs/gmsh:med - Enables med support
+sci-libs/gmsh:metis - Enables metis support
+sci-libs/gmsh:netgen - Enable 3D Frontal triangulation using netgen lib
+sci-libs/gmsh:opencascade - Enable OpenCASCADE support
+sci-libs/gmsh:petsc - Enable sci-mathematics/petsc support
 sci-libs/grib_api:aec - Build with Adaptive Entropy Coding compression, needs sci-libs/libaec
 sci-libs/grib_api:jasper - Use media-libs/jasper instead of media-libs/openjpeg for JPEG 2000 support
 sci-libs/gsl:cblas-external - Link gsl with external cblas provided by (virtual/cblas) instead of shipped internal version
@@ -7710,6 +7739,32 @@ sci-libs/symengine:mpc - Add support for multiprecision complex arithmetic(dev-l
 sci-libs/symengine:mpfr - Add support for multiprecision floating point rouding(dev-libs/mpfr)
 sci-libs/taucs:cilk - Enable multithreading using dev-lang/cilk
 sci-libs/tensorflow:cuda - Enable support for nVidia CUDA
+sci-libs/trilinos:adolc - Add support for adolc (sci-libs/adolc)
+sci-libs/trilinos:arprec - Add support for arprec (sci-libs/arprec)
+sci-libs/trilinos:boost - Add support for boost (dev-libs/boost)
+sci-libs/trilinos:clp - Add support for clp (sci-libs/coinor-clp)
+sci-libs/trilinos:cuda - Add support for cuda (dev-util/nvidia-cuda-toolkit)
+sci-libs/trilinos:eigen - Add support for eigen (dev-cpp/eigen)
+sci-libs/trilinos:glpk - Add support for glpk (sci-mathematics/glpk)
+sci-libs/trilinos:gtest - Add support for gtest (dev-cpp/gtest)
+sci-libs/trilinos:hdf5 - Add support for hdf5 (sci-libs/hdf5)
+sci-libs/trilinos:hwloc - Add support for hwloc (sys-apps/hwloc)
+sci-libs/trilinos:hypre - Add support for hypre (sci-libs/hypre)
+sci-libs/trilinos:matio - Add support for matio (sci-libs/matio)
+sci-libs/trilinos:metis - Add support for metis (sci-libs/metis or sci-libs/parmetis)
+sci-libs/trilinos:mkl - Add support for mkl (sci-libs/mkl)
+sci-libs/trilinos:mumps - Add support for mumps (sci-libs/mumps)
+sci-libs/trilinos:netcdf - Add support for netcdf (sci-libs/netcdf)
+sci-libs/trilinos:petsc - Add support for petsc (sci-mathematics/petsc)
+sci-libs/trilinos:qd - Add support for qd (sci-libs/qd)
+sci-libs/trilinos:scalapack - Add support for scalapack (sci-libs/scalapack)
+sci-libs/trilinos:scotch - Add support for scotch (sci-libs/scotch)
+sci-libs/trilinos:sparse - Add support for sparse matrix solvers (sci-libs/umfpack)
+sci-libs/trilinos:superlu - Add support for superlu (sci-libs/superlu)
+sci-libs/trilinos:taucs - Add support for taucs (sci-libs/taucs)
+sci-libs/trilinos:tbb - Add support for threading building blocks library (dev-cpp/tbb)
+sci-libs/trilinos:tvmet - Add support for tvmet (dev-libs/tvmet)
+sci-libs/trilinos:yaml - Add support for yaml (dev-cpp/yaml-cpp)
 sci-libs/umfpack:cholmod - Use sci-libs/cholmod for matrix ordering
 sci-libs/vtk:R - Enable support for dev-lang/R
 sci-libs/vtk:all-modules - Build all modules
@@ -7779,6 +7834,15 @@ sci-mathematics/octave:qhull - Add support for media-libs/qhull, to allow `delau
 sci-mathematics/octave:qrupdate - Add support for sci-libs/qrupdatefor QR and Cholesky update functions
 sci-mathematics/octave:sparse - Add enhanced support for sparse matrix algebra with SuiteSparse
 sci-mathematics/pari:data - Add additional data (elldata, galdata, seadata, nftables)
+sci-mathematics/petsc:afterimage - Use Afterstep image library (media-libs/libafterimage)
+sci-mathematics/petsc:boost - Use boost (dev-libs/boost)
+sci-mathematics/petsc:complex-scalars - Make scalars complex
+sci-mathematics/petsc:hypre - Use HYPRE (sci-mathematics/hypre) and for preconditioning
+sci-mathematics/petsc:metis - Add support for metis (sci-libs/parmetis)
+sci-mathematics/petsc:mumps - Add support for mumps (sci-libs/mumps)
+sci-mathematics/petsc:scotch - Add support for scotch (sci-libs/scotch)
+sci-mathematics/petsc:sparse - Use suitesparse (sci-libs/suitesparse) including cholmod (sci-libs/cholmod) for sparse factorization
+sci-mathematics/petsc:superlu - Use superlu (sci-libs/superlu) for preconditioning
 sci-mathematics/polymake:bliss - Enable sci-libs/bliss interface for graph and face lattice isomorphism computations.
 sci-mathematics/polymake:cdd - Enable sci-libs/cddlib interface for convex hull computations (Should be kept enabled).
 sci-mathematics/polymake:group - Build extension for dealing with permutation groups and symmetric objects.
@@ -7790,6 +7854,7 @@ sci-mathematics/polymake:singular - Enable the interface to sci-mathematics/sing
 sci-mathematics/rstudio:server - Build and install the RStudio server
 sci-mathematics/rw:executable - Build the 'rw' program.
 sci-mathematics/singular:boost - Compile against external boost headers (dev-libs/boost)
+sci-mathematics/slepc:complex-scalars - Make scalars complex
 sci-mathematics/spass:isabelle - Add integration support for the Isabelle/HOL theorem prover.
 sci-mathematics/unuran:prng - Use sci-mathematics/prng library
 sci-mathematics/unuran:rngstreams - Use sci-mathematics/rngstreams library
@@ -7856,6 +7921,7 @@ sci-physics/root:http - Enable http server support including but not limited to 
 sci-physics/root:libcxx - Build ROOT against sys-libs/libcxx
 sci-physics/root:memstat - Build memory statistics library, helps to detect memory leaks
 sci-physics/root:minuit - Build ROOT's internal versions of minuit (fortran) and minuit2 (C++)
+sci-physics/root:nosplash - Disable ROOT's splash screen by default
 sci-physics/root:pythia6 - Build the interface for sci-physics/pythia version 6.x
 sci-physics/root:pythia8 - Build the interface for sci-physics/pythia version 8.x
 sci-physics/root:roofit - Build RooFit function fitting package
