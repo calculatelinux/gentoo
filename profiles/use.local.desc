@@ -3537,7 +3537,7 @@ games-misc/katawa-shoujo:system-renpy - Use games-engines/renpy instead of the b
 games-misc/little-inferno:bundled-libs - Use bundled libraries.
 games-misc/ponysay:fish-completion - Enable fish completion support
 games-misc/ponysay:non-free - Install non-free ponies (i.e. from the MLP franchise)
-games-misc/xcowsay:fortune - Installs the fortune-mod xcow binary
+games-misc/xcowsay:fortune - Enable support for fortune cookies via games-misc/fortune-mod
 games-mud/tf:atcp - enable ATCP support.
 games-mud/tf:gmcp - enable GMCP support.
 games-mud/tf:option102 - enable telnet option 102 support.
