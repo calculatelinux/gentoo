@@ -50,6 +50,7 @@ x11-libs/gdk-pixbuf jpeg2k
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2019-07-07)
 # media-video/pipewire is masked for now
+dev-libs/weston pipewire
 sys-apps/xdg-desktop-portal screencast
 kde-plasma/xdg-desktop-portal-kde screencast
 
@@ -200,11 +201,6 @@ dev-python/paramiko server
 # warned. (Also, works only on x86_64 and with certain CPUs
 # and compiler/binutils combinations.)
 sys-libs/glibc cet
-
-# Göktürk Yüksek <gokturk@gentoo.org> (2018-07-06)
-# Dependency app-crypt/jitterentropy is keyworded for
-# only a subset of the archs rng-tools supports
-sys-apps/rng-tools jitterentropy
 
 # Michał Górny <mgorny@gentoo.org> (2018-06-13)
 # Requires app-arch/snappy[static-libs] that is no longer available.
@@ -383,8 +379,9 @@ mate-base/mate bluetooth
 # Ulrich Müller <ulm@gentoo.org> (2016-10-15)
 # The --with-cairo option is considered as experimental by upstream
 # and causes problems with updating the X window, bug #592238
-app-editors/emacs cairo
-app-editors/emacs-vcs cairo
+app-editors/emacs:25 cairo
+app-editors/emacs:26 cairo
+app-editors/emacs-vcs:26 cairo
 
 # Michał Górny <mgorny@gentoo.org> (2016-07-05)
 # Mask system-clang support as it requires llvm-3.4 that is subject
