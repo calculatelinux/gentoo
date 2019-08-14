@@ -29,11 +29,38 @@
 
 #--- END OF EXAMPLES ---
 
-# Mike Gilbert <floppym@gentoo.org> (2019-08-08)
+# Aaron Bauman <bman@gentoo.org> (2019-08-14)
+# open sec bug #612914, unmaintained
+# Removal in 30 days
+dev-java/logback
+
+# Aaron Bauman <bman@gentoo.org> (2019-08-14)
+# open sec bug #607720, unmaintained
+# Removal in 30 days
+dev-java/svgsalamander
+dev-java/flyingsaucer
+
+# Aaron Bauman <bman@gentoo.org> (2019-08-14)
+# open sec bug #605690, unmaintained
+# Removal in 30 days
+dev-java/groovy
+app-misc/freemind
+
+# Aaron Bauman <bman@gentoo.org> (2019-08-14)
+# open sec bug #576874, unmaintained in Gentoo
+# no rdeps. Removal in 30 days
+dev-java/kryo
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2019-08-14)
+# EAPI=2, ages old, effectively unmaintained. Gone in
+# 30 days. Bug 688154
+dev-java/jlayer
+
+# Mike Gilbert <floppym@gentoo.org> (2019-08-13)
 # Dev channel releases are only for people who
 # are developers or want more experimental features
 # and accept a more unstable release.
->=www-client/chromium-77
+>=www-client/chromium-78
 
 # Mikle Kolyada <zlogene@gentoo.org> (2019-08-05)
 # dead upstream, does not work and compile

@@ -309,7 +309,6 @@ app-crypt/eid-mw:p11v220 - Enable PKCS#11 v2.20 features.
 app-crypt/ekeyd:minimal - Only install the ekey-egd-linux service rather than the full ekeyd package.
 app-crypt/ekeyd:munin - Install a plugin for net-analyzer/munin to graph statistical data from ekeyd.
 app-crypt/ekeyd:usb - Build the libusb-based userland daemon for accessing the EntropyKey (alternative to the CDC USB driver). It is suggested to use this option by default, as the CDC driver in the kernel often seems to be fragile (or the gadget implementation on the EntropyKey is too buggy), and can cause various problems.
-app-crypt/gnupg:mta - Build mta support using virtual/mta.
 app-crypt/gnupg:smartcard - Build scdaemon software. Enables usage of OpenPGP cards. For other type of smartcards, try app-crypt/gnupg-pkcs11-scd. Bring in dev-libs/libusb as a dependency; enable scdaemon.
 app-crypt/gnupg:tofu - Enable support for Trust on First use trust model; requires dev-db/sqlite.
 app-crypt/gnupg:tools - Install extra tools (including gpgsplit and gpg-zip).
@@ -9009,14 +9008,6 @@ www-client/uget:aria2 - Enable support for net-misc/aria2 through xmlrpc. You'll
 www-client/uget:control-socket - Enable JSON-RPC over unix domain socket
 www-client/uget:openssl - Use dev-libs/openssl instead of net-libs/gnutls
 www-client/uget:rss - Enable uGet feed messages
-www-client/vivaldi:l10n_es-PE - Spanish, Peru locale
-www-client/vivaldi:l10n_io - Ido locale
-www-client/vivaldi:l10n_jbo - Lojban locale
-www-client/vivaldi:l10n_sc - Sardinian locale
-www-client/vivaldi-snapshot:l10n_es-PE - Spanish, Peru locale
-www-client/vivaldi-snapshot:l10n_io - Ido locale
-www-client/vivaldi-snapshot:l10n_jbo - Lojban locale
-www-client/vivaldi-snapshot:l10n_sc - Sardinian locale
 www-client/w3m:gdk-pixbuf - Enable support for x11-libs/gdk-pixbuf
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-client/weboob:deprecated - Enable dev-python/mechanize support (deprecated in favor of dev-python/requests
