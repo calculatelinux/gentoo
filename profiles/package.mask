@@ -29,6 +29,28 @@
 
 #--- END OF EXAMPLES ---
 
+# Mart Raudsepp <leio@gentoo.org> (2019-08-18)
+# Fails to dbus activate properly for me. Help welcome figuring it out.
+net-misc/gnome-remote-desktop
+
+# Georgy Yakovlev <gyakovlev@gentoo.org> (2019-08-17)
+# Unmaintained both upstream and in gentoo, author retired
+# Removal in 30 days
+sys-kernel/bliss-initramfs
+
+# Aaron Bauman <bman@gentoo.org> (2019-08-17)
+# Relies on vulnerable automake:{1.9,1.10}
+# Removal in 30 days
+games-simulation/crrcsim
+media-gfx/pixie
+net-irc/eiwic
+net-misc/openrdate
+
+# Aaron Bauman <bman@gentoo.org> (2019-08-17)
+# Unmaintained, outstanding sec vuln bug #540360
+# Lots of new versions upstream. Removal in 30 days.
+dev-embedded/bitbake
+
 # Michał Górny <mgorny@gentoo.org> (2019-08-15)
 # Unmaintained, PPC-only.  The Gentoo version is outdated, ebuild
 # is still EAPI=0 and has QA violations.  Last upstream release in 2009,
@@ -171,10 +193,6 @@ sci-physics/meep
 # Masked for removal in 30 days, Bugs #641864, #647536, #688244
 x11-libs/guile-gtk
 
-# Thomas Deutschmann <whissi@gentoo.org> (2019-08-02)
-# Ebuild is still in development and shouldn't be used.
-=dev-db/mysql-8*
-
 # Michał Górny <mgorny@gentoo.org> (2019-08-01)
 # Discontinued upstream in July 2017.  Has irritating bugs, and is hard
 # to build from source (we have binary package only).  Upstream
@@ -242,17 +260,6 @@ kde-misc/plasma-active-window-control
 # Requires >=mail-client/thunderbird-68_beta1 which is not in the tree yet
 >=x11-plugins/enigmail-2.1
 
-# Hans de Graaff <graaff@gentoo.org> (2019-07-17)
-# Mask ruby24-only slots for removal in 30 days. These slots do not
-# have any reverse dependencies. Please migrate to or use a newer slot.
-dev-ruby/gherkin:4
-dev-ruby/net-http-persistent:0
-dev-ruby/net-ssh-gateway:2
-dev-ruby/rouge:0
-dev-ruby/vcr:2
-#dev-ruby/webmock:2
-dev-util/cucumber-core:0
-
 # Sobhan Mohammadpour <sobhan@gentoo.org> (2019-07-14)
 # Masked for testing
 >=media-video/totem-3.32.1
@@ -279,11 +286,6 @@ dev-perl/File-Slurp-Unicode
 # Needs LOTS of testing, broke boot on my laptop in early attempts, maybe needs
 # matching genkernel work?
 >=sys-fs/lvm2-2.03
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2019-07-07)
-# Initial package version, no potential revdeps have been tested yet
-# or amended for support. Please do test.
-media-video/pipewire
 
 # Daniel Pielmeier <billie@gentoo.org> (2019-07-06)
 # Requires >=dev-lang/lua-5.2 which is masked
@@ -320,12 +322,6 @@ sys-freebsd/ubin-wrappers
 # Removal after 2019-08-01. (bug #688552)
 media-sound/sfc
 
-# Georgy Yakovlev <gyakovlev@gentoo.org> (2019-06-17)
-# this is now provided by dev-lang/rust{-bin}[rustfmt]
-# it's tightly integrated with rust toolchain, eselect-rust
-# and it no longer makes sense ship this as standalone pkg
-dev-util/rustfmt
-
 # Mikle Kolyada <zlogene@gentoo.org> (2019-06-15)
 # Part of dev-texlive/texlive-latexextra
 # does not work with utf-8 (bug #688096)
@@ -335,14 +331,6 @@ dev-tex/quotchap
 # Miroslav Šulc <fordfrog@gentoo.org> (2019-06-12)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
 =www-servers/tomcat-9.0.21
-
-# Brian Evans <grknight@gentoo.org> (2019-06-11)
-# Mask these packages for further testing
-# There is known API breakage and some packages fail,
-# particuarly with "my_bool" dropped for "bool"
->=dev-db/myodbc-8.0
->=dev-db/mysql-connector-c-8.0
-~virtual/libmysqlclient-21
 
 # Zac Medico <zmedico@gentoo.org> (2019-05-31)
 # Upstream is dead and there are multiple security vulnerabilities.
@@ -447,13 +435,6 @@ app-accessibility/perlbox-voice
 app-accessibility/pidgin-festival
 dev-ros/sound_play
 
-# Jeroen Roovers <jer@gentoo.org> (2019-04-24)
-# Depends on =dev-libs/openssl-1.1.1* due to newly introduced
-# support for EVP_PKEY_ED25519 and EVP_PKEY_ED448 (bug #670574).
-=net-libs/nodejs-10.16*
-=net-libs/nodejs-11.15.0
-=net-libs/nodejs-12*
-
 # Michał Górny <mgorny@gentoo.org> (2019-04-18)
 # All current versions of SystemRescueCD contain vulnerable packages.
 # Bug #683724.
@@ -533,19 +514,6 @@ x11-drivers/xf86-video-voodoo
 # Depends on >=virtual/{jdk,jre}-11 which is masked
 =dev-java/ant-eclipse-ecj-4.10
 =dev-java/eclipse-ecj-4.10
-
-# Craig Andrews <candrews@gentoo.org> (2019-01-01)
-# Requires dev-libs/openssl-1.1.1, Bug 674148
-dev-libs/gost-engine
-
-# Lars Wendler <polynomial-c@gentoo.org> (2018-12-28)
-# Masked while being tested and reverse deps aren't fully compatible
-=dev-libs/openssl-1.1.1*
-
-# Hanno Boeck <hanno@gentoo.org (2018-12-23)
-# Needs new OpenSSL, should be unmasked together with
-# OpenSSL 1.1.1
->=app-crypt/osslsigncode-2.0
 
 # Thomas Deutschmann <whissi@gentoo.org> (2018-12-10)
 # Requires >=dev-lang/lua-5.2 which is masked

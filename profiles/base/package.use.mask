@@ -48,13 +48,6 @@ net-proxy/ziproxy jpeg2k
 sci-libs/grib_api jasper jpeg2k
 x11-libs/gdk-pixbuf jpeg2k
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2019-07-07)
-# media-video/pipewire is masked for now
-dev-libs/weston pipewire
-sys-apps/xdg-desktop-portal screencast
-kde-plasma/xdg-desktop-portal-kde screencast
-kde-apps/krfb wayland
-
 # James Le Cuirot <chewi@gentoo.org> (2019-05-21)
 # Doesn't support ffmpeg-4. Portage takes a long time to report the
 # conflict and the feature is half broken anyway. See
@@ -209,10 +202,6 @@ sys-cluster/ceph static-libs
 # Michał Górny <mgorny@gentoo.org> (2018-05-16)
 # Depends on last-rited sci-libs/coinhsl.
 sci-libs/ipopt hsl
-
-# Mike Gilbert <floppym@gentoo.org> (2018-05-01)
-# Requires >=media-video/ffmpeg-4 (bug 654208).
->=www-client/chromium-67 system-ffmpeg
 
 # Göktürk Yüksek <gokturk@gentoo.org> (2018-04-04)
 # libewf is getting treecleaned (#547418).
