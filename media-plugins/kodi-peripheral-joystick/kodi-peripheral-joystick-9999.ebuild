@@ -17,8 +17,9 @@ case ${PV} in
 	;;
 *)
 	KEYWORDS="~amd64 ~x86"
-	SRC_URI="https://github.com/xbmc/peripheral.joystick/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	S="${WORKDIR}/peripheral.joystick-${PV}"
+	CODENAME="Leia"
+	SRC_URI="https://github.com/xbmc/peripheral.joystick/archive/${PV}-${CODENAME}.tar.gz -> ${P}.tar.gz"
+	S="${WORKDIR}/peripheral.joystick-${PV}-${CODENAME}"
 	;;
 esac
 

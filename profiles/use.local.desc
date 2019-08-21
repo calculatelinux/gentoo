@@ -218,7 +218,6 @@ app-arch/dpkg:update-alternatives - Install update-alternatives
 app-arch/dump:ermt - encrypted rmt support
 app-arch/dump:uuid - Enable UUID support
 app-arch/engrampa:caja - Enable engrampa to integrate with mate-base/caja by providing entries in its context menu
-app-arch/engrampa:magic - Enable filetype auto-detection via sys-apps/file
 app-arch/engrampa:packagekit - Enable support for installing via app-admin/packagekit based on archive type
 app-arch/file-roller:nautilus - Build contextual menu extension for gnome-base/nautilus.
 app-arch/file-roller:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
@@ -1086,10 +1085,8 @@ app-misc/vcontrold:vsim - Build the vsim helper program (simulates the heating's
 app-misc/vifm:developer - Enable features of interest to developers
 app-misc/vifm:extended-keys - Support for extended keys (arrows, home etc)
 app-misc/vifm:gtk - Use gtk+ to determine mimetypes
-app-misc/vifm:magic - Use libmagic to determine mimetypes
 app-misc/vifm:vim - Install the vifm vim plugin and vim-compatible documentation
 app-misc/worker:avfs - Enable support for sys-fs/avfs
-app-misc/worker:magic - Add magic file support from sys-apps/file to automatically detect file types
 app-misc/workrave:mate - Add support for MATE panel
 app-misc/workrave:xfce - Add support for XFCE panel
 app-misc/zygrib:maps - Installs additional GSHHS maps for high resolution coastline data and cities
@@ -1383,7 +1380,6 @@ app-text/xpdf:metric - Use A4 instead of US Letter paper size by default for Pos
 app-text/xpdf:opi - Include support for OPI (Open Prepress Interface) comments
 app-text/xpdf:textselect - Allow text selection
 app-text/xpdf:utils - Install command-line PDF converters and various utilities
-app-text/zathura:magic - Use libmagic to determine mimetypes
 app-text/zathura:synctex - Use libsynctex to get latex codeline from pdf
 app-text/zathura-meta:cb - Install plug-in for ComicBook support
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
@@ -1961,7 +1957,6 @@ dev-java/icedtea:pch - Build using pre-compiled headers.
 dev-java/icedtea:sctp - Build the SCTP NIO channel implementation against lksctp
 dev-java/icedtea:shenandoah - Include the Shenandoah ultra-low pause time garbage collector (-XX:+UseShenandoahGC) (arm64 and x86_64 only)
 dev-java/icedtea:smartcard - Build the PCSC driver against pcsc-lite
-dev-java/icedtea:sunec - Build the SunEC provider against system NSS
 dev-java/icedtea:system-lcms - Build against the system LCMS installation rather than the in-tree copy.
 dev-java/icedtea:webstart - Enable Web Start support (via NetX).
 dev-java/icedtea:zero - Enable Zero assembler port (usually for non-HotSpot architectures)
@@ -2398,6 +2393,7 @@ dev-libs/gmp:asm - Enable use of hand optimized assembly routines (faster execut
 dev-libs/gobject-introspection:doctool - Install g-ir-doc-tool for generating documentation from introspected data
 dev-libs/granite:demo - Build the Granite demo application (to present all available UI features provided by the library)
 dev-libs/hidapi:fox - Build a x11-libs/fox GUI
+dev-libs/hsa-ext-rocr:deprecated - Install the deprecated debug/trace/profiling library
 dev-libs/input-pad:eekboard - Enable support for dev-libs/eekboard
 dev-libs/input-pad:xtest - Enable support for x11-libs/libXtst
 dev-libs/intel-neo:vaapi - Support the sharing of surfaces with Video Acceleration API (OpenCL Extension #36)
@@ -2430,7 +2426,6 @@ dev-libs/libffi:pax_kernel - Use PaX emulated trampolines, for we can't use PROT
 dev-libs/libflatarray:cuda - Enables plugins for NVIDIA GPUs (e.g. CUDAAllocator)
 dev-libs/libgcrypt:o-flag-munging - Enable O-flag mangling during build
 dev-libs/libgdata:gnome-online-accounts - Enable net-libs/gnome-online-accounts support
-dev-libs/libgit2:curl - Use net-misc/curl for HTTP support (otherwise, limited built-in implementation will be used)
 dev-libs/libgit2:gssapi - Enable GSSAPI support for SPNEGO auth
 dev-libs/libgit2:ssh - Enable SSH transport support
 dev-libs/libgit2:trace - Enable tracing support
@@ -2563,6 +2558,7 @@ dev-libs/poco:pocodoc - POCO documentation generator
 dev-libs/poco:util - Several utility classes (like logger, timer, config file parser)
 dev-libs/poco:zip - Add support for the zip & gz archive formats
 dev-libs/ppl:lpsol - Build the ppl_lpsol linear programming problem solver
+dev-libs/rocr-runtime:nonfree - Enables HSA image support using dev-libs/hsa-ext-rocr
 dev-libs/serdisplib:tools - Build optional tools.
 dev-libs/softhsm:gost - Enable gost algorithm
 dev-libs/softhsm:migration-tool - Build db migration tool
@@ -3245,9 +3241,9 @@ dev-util/sccache:dist-server - Enables the sccache-dist binary
 dev-util/sccache:gcs - Enable Google Cloud Storage support
 dev-util/sccache:redis - Enable Redis support
 dev-util/sccache:s3 - Enable Amazon S3 support
-dev-util/schroot:btrfs - Enable support for chroots using btrfs snapshots.
-dev-util/schroot:dchroot - Enables the building of a wrapper named "dchroot", replacing sys-apps/dchroot.
-dev-util/schroot:lvm - Enable support for chroots using LVM snapshots.
+dev-util/schroot:btrfs - Enable support for chroots using btrfs snapshots
+dev-util/schroot:dchroot - Enables the building of a wrapper named "dchroot", replacing sys-apps/dchroot
+dev-util/schroot:lvm - Enable support for chroots using LVM snapshots
 dev-util/spirv-llvm-translator:tools - Install the command-line translator llvm-spirv
 dev-util/squashdelta:lz4 - Enable support for LZ4 compression using app-arch/lz4
 dev-util/squashmerge:lz4 - Enable support for LZ4 compression using app-arch/lz4
@@ -3546,6 +3542,7 @@ games-puzzle/sgt-puzzles:gtk3 - Use x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 games-puzzle/tiny-and-big:bundled-libs - Use the upstream provided bundled libraries.
 games-puzzle/xlogical:alt_gfx - Use alternate graphics which are closer to the original Amiga version
 games-roguelike/FTL:bundled-libs - Use bundled libraries.
+games-roguelike/angband:sdl2 - Use libsdl2 instead of libsdl
 games-roguelike/angband:sound - Enable and install sounds
 games-roguelike/nethack:experimental - Enable experimental features (showscore and status_hilite)
 games-roguelike/stone-soup:ncurses - Enable for console (uses ncurses) based build. (can be enabled on top of tiles)
@@ -4419,7 +4416,6 @@ media-gfx/pstoedit:emf - Enable media-libs/libemf support
 media-gfx/pstoedit:flash - Enable media-libs/ming SWF support
 media-gfx/pstoedit:pptx - Enable support for generating PowerPoint pptx files
 media-gfx/qimgv:video - Add support for gif/webm playback via libmpv
-media-gfx/qiv:magic - Use libmagic to determine mimetypes
 media-gfx/shotwell:opencv - Enable face detection via media-libs/opencv
 media-gfx/sigal:s3 - Enables support for the Amazon S3 service.
 media-gfx/slic3r:gui - Enable GUI
@@ -4527,7 +4523,6 @@ media-libs/libepoxy:egl - Enable EGL support.
 media-libs/libextractor:apparmor - Enable apparmor support using sys-libs/libapparmor
 media-libs/libextractor:archive - Enable archive support using app-arch/libarchive
 media-libs/libextractor:gsf - Enable OLE2 (MS Office) plug-in support using gnome-extra/libgsf
-media-libs/libextractor:magic - Enable magic support using sys-apps/file
 media-libs/libextractor:midi - Enable MIDI support through media-libs/libsmf
 media-libs/libffado:test-programs - Install standalone test programs
 media-libs/libggi:vis - Enables sparc vis support for libggi
@@ -4922,7 +4917,6 @@ media-sound/mixxx:hid - Enable HID controller support
 media-sound/mixxx:lv2 - Add support for Ladspa V2 via media-libs/lilv
 media-sound/mixxx:shout - Enable broadcasting support via media-libs/libshout
 media-sound/moc:cache - Enable tags caching support
-media-sound/moc:magic - Use libmagic to determine mimetypes
 media-sound/moc:sid - Build with SID (Commodore 64 Audio) support
 media-sound/moc:tremor - Build vorbis support using an integer implementation of the vorbis library (media-libs/tremor)
 media-sound/mp3blaster:sid - Build with SID (Commodore 64 Audio) support
@@ -5216,7 +5210,8 @@ media-video/ffmpeg:chromaprint - Enables audio fingerprinting support with media
 media-video/ffmpeg:chromium - Builds libffmpeg.so to enable media playback in Chromium-based browsers like Opera and Vivaldi.
 media-video/ffmpeg:codec2 - Enables codec2 low bit rate speech codec support via media-libs/codec2.
 media-video/ffmpeg:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
-media-video/ffmpeg:dav1d - Enables AV1 decoding viamedia-libs/dav1d.
+media-video/ffmpeg:cuda - Enables CUDA-based acceleration. Mostly used for specific filters.
+media-video/ffmpeg:dav1d - Enables AV1 decoding via media-libs/dav1d.
 media-video/ffmpeg:ebur128 - Enables EBU R128 loudness normalization filter via media-libs/libebur128
 media-video/ffmpeg:fdk - Use external fdk-aac library for AAC encoding
 media-video/ffmpeg:flite - Adds a text-to-speech filter based on app-accessibility/flite.
@@ -5229,6 +5224,7 @@ media-video/ffmpeg:hardcoded-tables - Use pre-calculated tables rather than calc
 media-video/ffmpeg:iec61883 - Support for FireWire DV/HDV input device using media-libs/libiec61883.
 media-video/ffmpeg:kvazaar - Enables media-libs/kvazaar based HEVC encoder.
 media-video/ffmpeg:libaom - Enables media-libs/libaom based AV1 codec support.
+media-video/ffmpeg:libaribb24 - Enables ARIB text and caption decoding via media-libs/aribb24.
 media-video/ffmpeg:libdrm - Enables x11-libs/libdrm support for better screen grabbing and hardware accelerated codecs.
 media-video/ffmpeg:libilbc - Enables iLBC de/encoding via media-libs/libilbc.
 media-video/ffmpeg:librtmp - Enables Real Time Messaging Protocol using librtmp (media-video/rtmpdump) in addition to FFmpeg's native implementation.
@@ -6707,7 +6703,6 @@ net-misc/gerbera:curl - Support HTTP media sources (e.g. internet radio)
 net-misc/gerbera:exiv2 - Use media-gfx/exiv2 to extract EXIF information
 net-misc/gerbera:ffmpegthumbnailer - Enable video thumbnail support with media-video/ffmpegthumbnailer
 net-misc/gerbera:lastfm - Enable last.fm support
-net-misc/gerbera:magic - Use libmagic to determine file types
 net-misc/gerbera:mysql - Use dev-db/mysql as backend rather than SQLite3
 net-misc/gerbera:protocol-extensions - Enable partial DLNA support
 net-misc/gerbera:taglib - Use media-libs/taglib for reading files' metadata
@@ -7060,7 +7055,6 @@ net-p2p/mldonkey:bittorrent - enable bittorrent support
 net-p2p/mldonkey:fasttrack - enable fasttrack support
 net-p2p/mldonkey:gnutella - enable gnutella and gnutella2 support
 net-p2p/mldonkey:guionly - enable client build only
-net-p2p/mldonkey:magic - enable use of libmagic
 net-p2p/pybitmessage:opencl - Enable dev-python/pyopencl for GPU acceleration
 net-p2p/pybitmessage:qrcode - Enable dev-python/qrcode for QR code support
 net-p2p/qbittorrent:webui - Enable the Web UI
@@ -7530,7 +7524,6 @@ sci-geosciences/qgis:polar - Enable support for the polar coordinate system via 
 sci-geosciences/qgis:qml - Enable support Qml-based plugins using dev-qt/qtdeclarative
 sci-geosciences/viking:geoclue - Use app-misc/geoclue to determine current location
 sci-geosciences/viking:libexif - Use media-libs/libexif for EXIF support
-sci-geosciences/viking:magic - Use libmagic to determine mimetypes
 sci-geosciences/viking:mapnik - Enable a layer based on sci-geosciences/mapnik
 sci-geosciences/viking:oauth - Enable OAuth authentication for OSM
 sci-geosciences/viking:sqlite - Enable MBTiles support based on dev-db/sqlite
