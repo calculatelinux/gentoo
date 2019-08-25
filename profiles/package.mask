@@ -29,6 +29,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2019-08-25)
+# Discontinued upstream in 2015, and not touched in Gentoo since.
+# Has series of build failures reported due to growing incompatibility
+# with new kernels.  Removal in 30 days.  Bug #677618.
+sys-cluster/open-mx
+
+# Brian Evans <grknight@gentoo.org> (2019-08-23)
+# These packages are incompatible with current versions of PHP (7 or higher)
+# They need a maintainer but no one has volunteered.
+# Removal in 30 days if no one picks them up.
+# Bugs 615472 651166 and 651180 respectively
+www-apps/groupoffice
+www-apps/phpwebsite
+www-apps/sitebar
+
 # Matthias Maier <tamiko@gentoo.org> (2019-08-22)
 # Masked for removal in 30 days. Unmaintained and upstream has released
 # backdoored versions for more than a year due to a compromised development
@@ -273,12 +288,6 @@ dev-lang/vala:0.46
 dev-lang/php:7.4
 ~virtual/httpd-php-7.4
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2019-07-24)
-# Unmaintained and broken with current Plasma, removal in 30 days
-# Bugs: https://bugs.kde.org/show_bug.cgi?id=404359,
-# https://bugs.kde.org/show_bug.cgi?id=404360, see also HOMEPAGE comments
-kde-misc/plasma-active-window-control
-
 # Lars Wendler <polynomial-c@gentoo.org> (2019-07-21)
 # Requires >=mail-client/thunderbird-68_beta1 which is not in the tree yet
 >=x11-plugins/enigmail-2.1
@@ -313,10 +322,6 @@ dev-perl/File-Slurp-Unicode
 # Daniel Pielmeier <billie@gentoo.org> (2019-07-06)
 # Requires >=dev-lang/lua-5.2 which is masked
 >=app-admin/conky-1.11.4
-
-# Sobhan Mohammadpour <sobhan@gentoo.org> (2019-07-04)
-# Mask until further testing is done
-=dev-libs/libgdata-0.17.10
 
 # Michał Górny <mgorny@gentoo.org> (2019-07-04)
 # The core FreeBSD packages are outdated, and have not been subject

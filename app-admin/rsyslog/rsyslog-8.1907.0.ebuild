@@ -16,7 +16,7 @@ if [[ ${PV} == "9999" ]]; then
 
 	inherit git-r3
 else
-	KEYWORDS="~amd64 ~arm ~arm64 ~hppa x86"
+	KEYWORDS="~amd64 ~arm ~arm64 hppa x86"
 
 	SRC_URI="
 		https://www.rsyslog.com/files/download/${PN}/${P}.tar.gz
@@ -45,7 +45,7 @@ RDEPEND="
 	kubernetes? ( >=net-misc/curl-7.35.0 )
 	mdblookup? ( dev-libs/libmaxminddb:= )
 	mongodb? ( >=dev-libs/mongo-c-driver-1.1.10:= )
-	mysql? ( virtual/libmysqlclient:= )
+	mysql? ( dev-db/mysql-connector-c:= )
 	normalize? (
 		>=dev-libs/liblognorm-2.0.3:=
 	)
