@@ -29,6 +29,39 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2019-08-29)
+# Dead upstream, last release in 2008, no revdeps, removal in 30 days.
+dev-cpp/threadpool
+
+# Michał Górny <mgorny@gentoo.org> (2019-08-29)
+# Added in 2012 and not touched since.  Fails multilib-strict.  Pending
+# version bump.  No reverse dependencies.
+# Removal in 30 days.  Bug #667064.
+net-misc/libss7
+
+# Stefan Strogin <steils@gentoo.org> (2019-08-29)
+# Obsolete. No reverse dependencies (games-rpg/eternal-lands no longer
+# depends on them).
+# Removal in 30 days. Bug #549890.
+games-rpg/eternal-lands-bloodsucker
+games-rpg/eternal-lands-data
+
+# Michał Górny <mgorny@gentoo.org> (2019-08-28)
+# Last touched in 2010.  EAPI=0.  Last upstream release in 2011 (pending
+# bump).  No reverse dependencies.
+# Removal in 30 days.  Bug #681168.
+dev-embedded/scratchbox
+dev-embedded/scratchbox-devkit-apt-https
+dev-embedded/scratchbox-devkit-cputransp
+dev-embedded/scratchbox-devkit-debian
+dev-embedded/scratchbox-devkit-debian-squeeze
+dev-embedded/scratchbox-devkit-doctools
+dev-embedded/scratchbox-devkit-git
+dev-embedded/scratchbox-devkit-maemo3
+dev-embedded/scratchbox-devkit-perl
+dev-embedded/scratchbox-devkit-qemu
+dev-embedded/scratchbox-devkit-svn
+
 # Michał Górny <mgorny@gentoo.org> (2019-08-27)
 # Unmaintained.  No release since 2008.  Is reported to wrongly reject
 # 'pretty much all mails', also reported build failure.
@@ -131,7 +164,6 @@ sys-kernel/bliss-initramfs
 # Aaron Bauman <bman@gentoo.org> (2019-08-17)
 # Relies on vulnerable automake:{1.9,1.10}
 # Removal in 30 days
-games-simulation/crrcsim
 media-gfx/pixie
 net-irc/eiwic
 net-misc/openrdate
