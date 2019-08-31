@@ -74,12 +74,6 @@ games-emulation/vbam ffmpeg
 # bug #318841#c20.
 sys-kernel/linux-firmware unknown-license
 
-# Andreas K. Hüttel <dilfridge@gentoo.org> (2019-05-11)
-# app-accessibility/festival:
-# Outdated, EAPI=2, unmaintained, segfaults immediately.
-# See bug 634928 and bug 612980. Removal in 30 days.
-media-radio/xastir festival
-
 # Virgil Dupras <vdupras@gentoo.org> (2019-04-29)
 # Docs are temporarily broken. See bug #680014
 dev-python/pandas doc
@@ -95,10 +89,6 @@ app-text/ghostscript-gpl l10n_ja
 # Mask jre useflags for use as system java-vm until it's proven to work
 dev-java/openjdk-jre-bin:8 gentoo-vm
 dev-java/openjdk-jre-bin:11 gentoo-vm
-
-# Michał Górny <mgorny@gentoo.org> (2019-04-13)
-# net-libs/ftplib is slated for removal.
-app-cdr/xbiso ftp
 
 # Michał Górny <mgorny@gentoo.org> (2019-04-10)
 # media-sound/aacplusenc is slated for removal.

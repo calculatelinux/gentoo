@@ -29,6 +29,44 @@
 
 #--- END OF EXAMPLES ---
 
+# Joonas Niilola <juippis@gentoo.org> (2019-08-31)
+# No maintainer and no one stepped in to take it after a mailing 
+# list announcement. Has QA issues and continuous CI issues. Removal 
+# in 30 days.
+# Bugs: #690784, #691376, #693184
+app-misc/pip3line
+
+# Michał Górny <mgorny@gentoo.org> (2019-08-31)
+# Unmaintained.  EAPI 0 ebuilds with multiple QA issues.  Last release
+# added in 2003.  Upstream removed all traces of it.
+# Removal in 30 days.  Bug #693186.
+www-apache/mod_pcgi2
+www-apps/pcgi
+
+# Michał Górny <mgorny@gentoo.org> (2019-08-30)
+# All current releases are incompatible with the current version
+# of mail-mta/opensmtpd.  Not touched by maintainer since 2016.  Some
+# USE flag combinations fail to build with other errors.  Needs porting
+# to new Python eclasses.
+# Removal in 30 days.  Bug #693128.
+mail-filter/opensmtpd-extras
+
+# Michał Górny <mgorny@gentoo.org> (2019-08-30)
+# Unmaintained.  EAPI=0.  HOMEPAGE and SRC_URI are gone.  Last release
+# in 2006.  Removal in 30 days.  Bug #680412.
+mail-filter/ask
+
+# Ulrich Müller <ulm@gentoo.org> (2019-08-30)
+# Last visible upstream activity in 2013. Doesn't work with Emacs 24.3
+# or newer. Byte-compilation of newest upstream version 1.3.1 fails.
+# Masked for removal in 30 days, bug #693118.
+app-emacs/identica-mode
+
+# David Seifert <soap@gentoo.org> (2019-08-29)
+# Dead upstream, last commit over 10 years ago, no revdeps, EAPI=0,
+# Removal in 30 days.
+sci-electronics/gplcver
+
 # David Seifert <soap@gentoo.org> (2019-08-29)
 # Dead upstream, last release in 2008, no revdeps, removal in 30 days.
 dev-cpp/threadpool
@@ -200,12 +238,6 @@ sci-mathematics/spass
 # Removal in 30 days.  Bug #691840.
 sys-apps/lomoco
 
-# Michał Górny <mgorny@gentoo.org> (2019-08-14)
-# Replaced by sys-freebsd/freebsd-ubin, therefore not installable
-# anymore.  All revdeps support the replacement.
-# Removal in 14 days.  Bug #688502.
-sys-process/fuser-bsd
-
 # Aaron Bauman <bman@gentoo.org> (2019-08-14)
 # open sec bug #622428, unmaintained
 # list includes rdeps. Removal in 30 days.
@@ -274,13 +306,6 @@ dev-java/jlayer
 # and accept a more unstable release.
 >=www-client/chromium-78
 
-# Mikle Kolyada <zlogene@gentoo.org> (2019-08-05)
-# dead upstream, does not work and compile
-#(bug #688006, bug #686630)
-# masked for removal in 14 days
-app-text/winefish
-dev-tex/oesch
-
 # Aaron Bauman <bman@gentoo.org> (2019-08-04)
 # multiple open sec bugs. no response from upstream
 # Masked for removal in 30 days
@@ -315,43 +340,9 @@ sci-physics/meep
 # Masked for removal in 30 days, Bugs #641864, #647536, #688244
 x11-libs/guile-gtk
 
-# Michał Górny <mgorny@gentoo.org> (2019-08-01)
-# Discontinued upstream in July 2017.  Has irritating bugs, and is hard
-# to build from source (we have binary package only).  Upstream
-# recommends net-misc/electrum as a replacement.
-# See: https://multibit.org/blog/2017/07/26/multibit-shutdown.html
-# Removal in 30 days.  Bug #639530.
-net-p2p/multibit
-
-# David Seifert <soap@gentoo.org> (2019-08-01)
-# Dead upstream, last release over 5 years ago,
-# broken build system, fails with boost 1.70,
-# removal in 30 days. Bug #646014, #691162
-dev-games/vamos
-
-# David Seifert <soap@gentoo.org> (2019-08-01)
-# Last touched over 3 years ago, broken tests,
-# fails with boost 1.70, removal in 30 days.
-# Bug #655886, #690704
-dev-python/pgmagick
-
-# Brian Evans <grknight@gentoo.org> (2019-07-31)
-# MySQL 5.5 will no longer receive updates from Oracle
-# It may or may not have unaccounced security vulnerabilities
-# Please upgrade to 5.6 or use dev-db/mariadb
-# Removal in 30 days
-=dev-db/mysql-5.5*
-
 # Miroslav Šulc <fordfrog@gentoo.org> (2019-07-30)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
 =www-servers/tomcat-9.0.22
-
-# Michał Górny <mgorny@gentoo.org> (30 Jul 2019)
-# Obsolete virtual that was created back when dev-python/dnspython
-# needed separate slots for py2 & py3.  The versions needing it are long
-# gone.  Replace all its uses with dev-python/dnspython.
-# Removal in 30 days.
-virtual/python-dnspython
 
 # Mart Raudsepp <leio@gentoo.org> (2019-07-28)
 # GNOME 3.33 development release packages
@@ -375,24 +366,6 @@ dev-lang/php:7.4
 # Sobhan Mohammadpour <sobhan@gentoo.org> (2019-07-14)
 # Masked for testing
 >=media-video/totem-3.32.1
-
-# Kent Fredric <kentnl@gentoo.org> (2019-07-14)
-# Broken since 2007, Upstream not seen since 2004.
-# Removal after 2019-08-16
-# Bug #635792
-dev-perl/libvorbis-perl
-
-# David Seifert <soap@gentoo.org> (2019-07-14)
-# Unmaintained, removed from Debian and other distros, tons of CVEs,
-# unreachable upstream, removal in 30 days
-# Bug #601068, #614028, #614032, #614566, #619120, #624988, #629286,
-# #635552, #662160, #674154, #674214, #684826, #689784
-media-libs/jasper
-
-# Kent Fredric <kentnl@gentoo.org> (2019-07-10)
-# Dead upstream, no remaining revdeps.
-# Masked for removal after 2019-08-09, bug #631300
-dev-perl/File-Slurp-Unicode
 
 # Robin H. Johnson <robbat2@gentoo.org> (2019-07-08)
 # Needs LOTS of testing, broke boot on my laptop in early attempts, maybe needs
@@ -425,25 +398,9 @@ sys-freebsd/freebsd-ubin
 sys-freebsd/freebsd-usbin
 sys-freebsd/ubin-wrappers
 
-# Jonas Stein <jstein@gentoo.org> (2019-06-24)
-# Source is broken. Upstream is dead since 2011.
-# Removal after 2019-08-01. (bug #688552)
-media-sound/sfc
-
-# Mikle Kolyada <zlogene@gentoo.org> (2019-06-15)
-# Part of dev-texlive/texlive-latexextra
-# does not work with utf-8 (bug #688096)
-# removal in 30 days
-dev-tex/quotchap
-
 # Miroslav Šulc <fordfrog@gentoo.org> (2019-06-12)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
 =www-servers/tomcat-9.0.21
-
-# Zac Medico <zmedico@gentoo.org> (2019-05-31)
-# Upstream is dead and there are multiple security vulnerabilities.
-# Removal in 30 days. Bug #687100.
-app-emulation/rkt
 
 # Patrick Lauer <patrick@gentoo.org> (2019-05-23)
 # PostgreSQL beta and release candidate releases are pre-release testing
@@ -456,16 +413,6 @@ app-emulation/rkt
 # For more information about beta and release candidate versions, see:
 #     https://www.postgresql.org/developer/beta/
 dev-db/postgresql:12
-
-# Jonas Stein <jstein@gentoo.org> (2019-05-22)
-# Masked for removal after 2019-06-23. (bug #686260)
-# Wrong license, ships non-GPL image, maintainer needed.
-x11-plugins/gkrellflynn
-
-# Sebastian Pipping <sping@gentoo.org> (2019-05-22)
-# Masked for removal in 30 days (bug #686562)
-# Unfixed bug, dead upstream, not relevant enough
-sys-fs/pytagsfs
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2019-05-11)
 # Perl 5.24 will be removed soon. Please upgrade.
@@ -527,21 +474,6 @@ sys-fs/pytagsfs
 =virtual/perl-threads-2.70.0-r1
 =virtual/perl-threads-shared-1.510.0-r1
 =virtual/perl-version-0.991.600-r1
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (2019-05-11)
-# Outdated, EAPI=2, unmaintained, segfaults immediately.
-# See bug 634928 and bug 612980.
-# Andrew Savchenko <bircoph@gentoo.org> (2019-06-09)
-# festival and speech-tools update is WIP now, so postponing removal.
-app-accessibility/festival
-app-accessibility/festival-freebsoft-utils
-app-accessibility/festival-hts
-app-accessibility/festival-fi
-app-accessibility/festival-it
-app-accessibility/festival-ru
-app-accessibility/perlbox-voice
-app-accessibility/pidgin-festival
-dev-ros/sound_play
 
 # Michał Górny <mgorny@gentoo.org> (2019-04-18)
 # All current versions of SystemRescueCD contain vulnerable packages.
