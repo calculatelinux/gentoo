@@ -7,6 +7,14 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Thomas Deutschmann <whissi88@gentoo.org> (2019-09-02)
+# PGO not yet supported for comm-central, #693160
+>=mail-client/thunderbird-68 pgo
+
+# Matt Turner <mattst88@gentoo.org> (2019-09-01)
+# <dev-scheme/guile-2 is package.mask'd
+www-client/elinks guile
+
 # Michał Górny <mgorny@gentoo.org> (2019-08-27)
 # sci-libs/grib_api is slated for removal.
 dev-lang/gdl grib
@@ -119,7 +127,10 @@ app-admin/conserver freeipmi
 
 # Matt Turner <mattst88@gentoo.org> (2019-03-03)
 # Mask for testing. Bug 606924
+# Jeroen Roovers <jer@gentoo.org> (2019-09-02)
+# Bug 692170
 media-libs/mesa libglvnd
+x11-drivers/nvidia-drivers libglvnd
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2019-01-17)
 # Mask openjdk:8 for use as system java-vm until it's proven to work

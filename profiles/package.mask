@@ -29,6 +29,69 @@
 
 #--- END OF EXAMPLES ---
 
+# Matt Turner <mattst88@gentoo.org> (2019-09-01)
+# <dev-scheme/guile-2 is package.mask'd
+<media-sound/lilypond-2.19
+
+# Matt Turner <mattst88@gentoo.org> (2019-09-01)
+# dev-scheme/guile-gnome-platform depends on dev-scheme/guile:12. Its only
+# reverse dependency is sci-chemistry/burrow-owl, so include it. The others are
+# dependencies of sci-chemistry/burrow-owl as well, and it is their only
+# reverse dependency.
+# Bug #693290.
+dev-libs/g-wrap
+dev-scheme/guile-cairo
+dev-scheme/guile-gnome-platform
+dev-scheme/guile-lib
+sci-chemistry/burrow-owl
+sci-libs/starparse
+
+# Matt Turner <mattst88@gentoo.org> (2019-09-01)
+# Unmaintained, unpackaged versions from 2015. Incompatible with guile-2.2.
+# Removal in 30 days. # Bug #654654.
+games-strategy/liquidwar6
+
+# Matt Turner <mattst88@gentoo.org> (2019-09-01)
+# TeXmacs is the only remaining package in tree that requires guile-1.8, which
+# is unsupported upstream. A TeXmacs port to Guile-2 has been in progress for a
+# few years. Bug #436400
+app-office/texmacs
+<dev-scheme/guile-2
+
+# Michał Górny <mgorny@gentoo.org> (2019-09-01)
+# Remnant of Half-Life server stuff that was removed back in 2005.
+# Removal in 30 days.  Bug #693260.
+dev-games/hlsdk
+
+# Michał Górny <mgorny@gentoo.org> (2019-09-01)
+# Ancient, i386-only binary package.  Current version is a nightly
+# from 2006.  The package has had a release since, has found a new
+# upstream and has been forked multiple times as well.  Apparently
+# NetRadiant-custom is the most recently maintained fork (not packaged).
+# Removal in 30 days.  Bug #181372.
+dev-games/gtkradiant
+
+# Michał Górny <mgorny@gentoo.org> (2019-09-01)
+# Never keyworded on amd64 (and probably does not work on 64-bit
+# systems).  Last release from 2001.  Requires rare hardware.
+# Removal in 30 days.  Bug #693258.
+dev-games/flinker
+
+# Michał Górny <mgorny@gentoo.org> (2019-09-01)
+# Last bumped in 2007.  The current version is known to be broken
+# on amd64.  The game has been discontinued, and then revived/forked
+# multiple times.  It is pending a version bump since at least 2011.
+# See [1] for the 'revived' project and links to other forks.
+# [1] http://www.netpanzer.info/Download/
+# Removal in 30 days.  Bug #375237.
+games-strategy/netpanzer
+
+# Michał Górny <mgorny@gentoo.org> (2019-09-01)
+# Discontinued upstream.  Last release in 2003.  Replaced
+# by dev-embedded/urjtag.
+# Removal in 30 days.  Bug #693256.
+dev-embedded/jtag
+
 # Joonas Niilola <juippis@gentoo.org> (2019-08-31)
 # No maintainer and no one stepped in to take it after a mailing 
 # list announcement. Has QA issues and continuous CI issues. Removal 
@@ -318,28 +381,6 @@ dev-php/ming-php
 # Masked for removal in 30 days, bug #691302
 dev-ruby/priorityqueue
 
-# Matt Turner <mattst88@gentoo.org> (2019-08-02)
-# Incompatible with guile-2
-# Masked for removal in 30 days, Bugs #592188
-sci-mathematics/drgeo
-
-# Matt Turner <mattst88@gentoo.org> (2019-08-02)
-# Incompatible with guile-2. No longer a use case
-# Masked for removal in 30 days, Bugs #617792
-mail-filter/anubis
-
-# Matt Turner <mattst88@gentoo.org> (2019-08-02)
-# Unmaintained in Gentoo. Incompatible with guile-2
-# Masked for removal in 30 days, Bugs #685540, #629058
-sci-libs/libctl
-sci-physics/harminv
-sci-physics/meep
-
-# Matt Turner <mattst88@gentoo.org> (2019-08-02)
-# Unmaintained. Incompatible with guile-2
-# Masked for removal in 30 days, Bugs #641864, #647536, #688244
-x11-libs/guile-gtk
-
 # Miroslav Šulc <fordfrog@gentoo.org> (2019-07-30)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
 =www-servers/tomcat-9.0.22
@@ -358,10 +399,6 @@ dev-lang/vala:0.46
 # Mask new beta versions until release
 dev-lang/php:7.4
 ~virtual/httpd-php-7.4
-
-# Lars Wendler <polynomial-c@gentoo.org> (2019-07-21)
-# Requires >=mail-client/thunderbird-68_beta1 which is not in the tree yet
->=x11-plugins/enigmail-2.1
 
 # Sobhan Mohammadpour <sobhan@gentoo.org> (2019-07-14)
 # Masked for testing
