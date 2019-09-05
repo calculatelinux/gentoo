@@ -2795,7 +2795,6 @@ dev-python/rarfile:compressed - Enables the module to support compressed v3 arch
 dev-python/rdflib:redland - enable support for Redland triplestore
 dev-python/restkit:cli - Install the restcli command line interface/tool, based on dev-python/ipython
 dev-python/setuptools_scm:mercurial - Enables mercurial backend
-dev-python/simplecv:shell - Enable the iPython SimpleCV shell
 dev-python/simplespectral:faster - Use sci-libs/scipy to speed up drawing
 dev-python/simplespectral:fastest - Use dev-python/pyFFTW to speed up drawing to the max
 dev-python/sphinx:net - enable internet capabilities
@@ -7610,7 +7609,7 @@ sci-libs/magma:kepler - Compile for GPU NVIDIA Kepler family (GF 6xx cards)
 sci-libs/mathgl:hdf - Add support for the Hierarchical Data Format v.4 sci-libs/hdf
 sci-libs/mathgl:octave - Add bindings for sci-mathematics/octave
 sci-libs/matio:sparse - Extend formats for sparse matrix (not matlab)
-sci-libs/med:hdf5_16_api - Use -DH5_USE_16_API to build the package against old 1.6 API of HDF5
+sci-libs/med:hdf5-16-api - Use -DH5_USE_16_API to build the package against old 1.6 API of HDF5
 sci-libs/mkl:fortran95 - Installs the BLAS/LAPACK FORTRAN95 static libraries
 sci-libs/mkl:int64 - Installs the 64 bits integer libraries
 sci-libs/mkl-rt:eselect-ldso - Enable runtime library switching by eselect and ld.so.
