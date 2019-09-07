@@ -3397,10 +3397,11 @@ games-emulation/zsnes:pax_kernel - Triggers a paxmarking of the binary
 games-engines/exult:sdl2 - Use libsdl2 instead of libsdl
 games-engines/frobtads:tads2compiler - Build TADS2 compiler
 games-engines/frobtads:tads3compiler - Build TADS3 compiler
+games-engines/odamex:client - Build client target
 games-engines/odamex:master - Build master server target (advertises odamex server list)
-games-engines/odamex:odalaunch - Build the wxwidgets based launcher.
-games-engines/odamex:portmidi - Enable portmidi support.
-games-engines/odamex:server - Build server target.
+games-engines/odamex:odalaunch - Build the wxWidgets based launcher
+games-engines/odamex:portmidi - Enable PortMidi support
+games-engines/odamex:server - Build server target
 games-engines/openmw:devtools - Install development tools like bsatool, esmtool and opencs.
 games-engines/renpy:development - Install IDE for game developers and an empty game template
 games-engines/residualvm:mpeg2 - enable mpeg2 codec for cutscenes
@@ -3436,6 +3437,7 @@ games-fps/eduke32:voxels - Install the Duke Nukem 3D Voxels Pack.
 games-fps/eduke32:vpx - Enable support for media-libs/libvpx.
 games-fps/eduke32:xmp - Enable support for media-libs/exempi.
 games-fps/gzdoom:gtk2 - Enable support for GTK+2 instead of GTK+3
+games-fps/gzdoom:nonfree - Enable non-free components
 games-fps/nexuiz:maps - Install the community map pack
 games-fps/prboom-plus:dumb - Enable support for various tracker-style music formats via media-libs/dumb
 games-fps/prboom-plus:fluidsynth - Enable support for MIDI via media-sound/fluidsynth
@@ -3730,6 +3732,7 @@ kde-apps/k3b:emovix - Enable burning support for eMoviX images
 kde-apps/kalzium:editor - Enable the embedded molecule editor/viewer
 kde-apps/kalzium:solver - Enable the equation solver
 kde-apps/kanagram:speech - Enable text-to-speech support
+kde-apps/kate:activities - Enable Plasma Activities support via kde-frameworks/kactivities
 kde-apps/kate:addons - Build and install additional plugins
 kde-apps/kde-apps-meta:pim - Pull in KDE PIM suite
 kde-apps/kde-apps-meta:sdk - Pull in developer-specific meta-packages
@@ -4370,7 +4373,6 @@ media-gfx/povray:io-restrictions - POV-Ray's mechanism for control of I/O operat
 media-gfx/povray:mkl - Enable support for Intel Vector Math Library, part of sci-libs/mkl
 media-gfx/pqiv:archive - Enable support for images in archives and cbX comic book files
 media-gfx/pstoedit:emf - Enable media-libs/libemf support
-media-gfx/pstoedit:flash - Enable media-libs/ming SWF support
 media-gfx/pstoedit:pptx - Enable support for generating PowerPoint pptx files
 media-gfx/qimgv:video - Add support for gif/webm playback via libmpv
 media-gfx/shotwell:opencv - Enable face detection via media-libs/opencv
@@ -4987,6 +4989,7 @@ media-sound/qmmp:soxr - Use the SoX resampling library
 media-sound/qmmp:stereo - Enable stereo effect
 media-sound/qmmp:tray - Build tray icon
 media-sound/qsampler:libgig - Enable libgig support for loading Gigasampler files and DLS (Downloadable Sounds) Level 1/2 files
+media-sound/qtractor:aubio - Enable media-libs/aubio support
 media-sound/qtractor:dssi - Enable support for DSSI Soft Synth Interface
 media-sound/qtractor:rubberband - Enable support for in-place audio clip pitch-shifting through the rubberband library
 media-sound/rhythmbox:daap - Build the local network music sharing plugin which uses the DAAP protocol using net-libs/libdmapsharing
@@ -5064,9 +5067,7 @@ media-tv/kodi:libusb - Use virtual/libusb for usb device hotplug support. This f
 media-tv/kodi:lirc - Enable support for controlling Totem with a remote control using app-misc/lirc
 media-tv/kodi:mariadb - Add MariaDB support
 media-tv/kodi:nfs - Enable NFS client support
-media-tv/kodi:nonfree - Enable non-free components
 media-tv/kodi:raspberry-pi - Enable support for the Raspberry Pi
-media-tv/kodi:sftp - Support browsing files over SFTP
 media-tv/kodi:system-ffmpeg - Use system ffmpeg instead of the bundled one
 media-tv/kodi:udev - Use sys-fs/udev rules to handle devices' permissions and hotplug support. Unless you know what you're doing do not disable this flag on Linux kernels. This is provided as an option for completeness.
 media-tv/kodi:webserver - Enable internal webserver
@@ -5139,8 +5140,10 @@ media-tv/xmltv:uk_bleb - Britain tv listing grabber
 media-tv/xmltv:uk_tvguide - UK and Ireland tv listing grabber using TV Guide website
 media-tv/xmltv:zz_sdjson - Grabber for schedulesDirect.org SD-JSON service (many countries)
 media-video/aegisub:uchardet - Enable charset discovery via app-i18n/uchardet
-media-video/aravis:X - Build the GTK+-based video viewer for aravis. This requires GStreamer and a few plugins but technically not the GST plugin for aravis.
-media-video/aravis:gstreamer - Build the GStreamer plugin for aravis, but not the video viewer.
+media-video/aravis:X - Build the GTK+-based video viewer.
+media-video/aravis:fast-heartbeat - Enable faster heartbeat rate.
+media-video/aravis:gstreamer - Build the GStreamer plugin.
+media-video/aravis:packet-socket - Enable packet socket support.
 media-video/avidemux:nvenc - Adds support for NVIDIA Encoder (NVENC) API for hardware accelerated encoding on NVIDIA cards.
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
 media-video/clive:clipboard - Support reading from X clipboard
@@ -7404,7 +7407,6 @@ sci-chemistry/vmd:povray - Add support for povray raytracer for HQ images
 sci-chemistry/vmd:tachyon - Add support for tachyon raytracer for HQ images
 sci-chemistry/votca-csg:extras - Pull in extra applications from sci-chemistry/votca-csgapps
 sci-chemistry/votca-csg:gromacs - Add support for gromacs file formats through sci-chemistry/gromacs
-sci-chemistry/wxmacmolplt:flash - Add support for flash movie generation using media-libs/ming
 sci-electronics/geda:stroke - enable mouse gesture support
 sci-electronics/gerbv:unit-mm - Set default unit for coordinates in status bar to mm
 sci-electronics/gspiceui:schematics - Use sci-electronics/geda for schematics editing

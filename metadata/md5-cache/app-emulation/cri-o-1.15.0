@@ -12,4 +12,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/cri-o/cri-o/archive/v1.15.0.tar.gz -> cri-o-1.15.0.tar.gz
 _eclasses_=golang-base	c57d2c3f9e1a02d0feb8b87c7b689892	golang-vcs-snapshot	12177e83bede6f7fb87eae383864b40b
-_md5_=38adac7f0cd3a4e180cf4342ca51f7e5
+_md5_=d81873c68e3411f6d2a241645a03b23c

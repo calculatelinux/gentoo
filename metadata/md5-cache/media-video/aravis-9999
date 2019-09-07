@@ -1,13 +1,13 @@
-BDEPEND=>=dev-vcs/git-1.8.2.1[curl] >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
-DEFINED_PHASES=configure install prepare unpack
-DEPEND=>=dev-libs/glib-2.26 dev-libs/libxml2 X? ( >=x11-libs/gtk+-3.12:3 media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 media-libs/gst-plugins-base:1.0 x11-libs/libnotify ) caps? ( sys-libs/libcap-ng sys-process/audit ) gstreamer? ( media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 ) virtual/pkgconfig dev-libs/gobject-introspection
+BDEPEND=>=dev-util/meson-0.47.0 virtual/pkgconfig doc? ( dev-util/gtk-doc ) introspection? ( dev-libs/gobject-introspection ) >=dev-util/meson-0.48.2 >=dev-util/ninja-1.7.2 >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
+DEPEND=>=dev-libs/glib-2.34 dev-libs/libxml2:= sys-libs/zlib:= gstreamer? ( media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 ) packet-socket? ( sys-process/audit ) usb? ( virtual/libusb:1 ) X? ( media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 >=x11-libs/gtk+-3.12:3 x11-libs/libnotify ) dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=Library for video acquisition using Genicam cameras
 EAPI=7
-HOMEPAGE=https://wiki.gnome.org/Projects/Aravis
-IUSE=X gstreamer caps
-LICENSE=LGPL-2.1
+HOMEPAGE=https://github.com/AravisProject/aravis
+IUSE=doc fast-heartbeat gstreamer introspection packet-socket usb X
+LICENSE=LGPL-2
 PROPERTIES=live
-RDEPEND=>=dev-libs/glib-2.26 dev-libs/libxml2 X? ( >=x11-libs/gtk+-3.12:3 media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 media-libs/gst-plugins-base:1.0 x11-libs/libnotify ) caps? ( sys-libs/libcap-ng sys-process/audit ) gstreamer? ( media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 )
+RDEPEND=>=dev-libs/glib-2.34 dev-libs/libxml2:= sys-libs/zlib:= gstreamer? ( media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 ) packet-socket? ( sys-process/audit ) usb? ( virtual/libusb:1 ) X? ( media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 >=x11-libs/gtk+-3.12:3 x11-libs/libnotify )
 SLOT=0
-_eclasses_=autotools	1bf086cdd7356f5c9a4acd9727bd2065	git-r3	562b380fc59ae6a8622171d0acb777d1	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	1d91b03d42ab6308b5f4f6b598ed110e	toolchain-funcs	a3a237ef6c0c58546bf23b2c382f9e56
-_md5_=1091c1e88b7ec9296f5e8dc028931577
+_eclasses_=git-r3	562b380fc59ae6a8622171d0acb777d1	meson	b5ee7a05833ab91225acf30ffdeed006	multilib	1d91b03d42ab6308b5f4f6b598ed110e	multiprocessing	cac3169468f893670dac3e7cb940e045	ninja-utils	132cbb376048d079b5a012f5467c4e7f	python-utils-r1	08e17157a6807add7db1f8d01e7e391f	toolchain-funcs	a3a237ef6c0c58546bf23b2c382f9e56	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_md5_=239f82fdaf43edd2884da480375ef494
