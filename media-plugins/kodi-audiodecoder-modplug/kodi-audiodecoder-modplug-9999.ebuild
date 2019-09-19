@@ -29,7 +29,7 @@ IUSE=""
 
 DEPEND="
 	~media-tv/kodi-9999
-	media-libs/libmodplug
+	>=media-libs/libmodplug-0.8.9.0
 	"
 
 RDEPEND="

@@ -29,6 +29,63 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2019-09-18)
+# Distributing an entire prebuilt distribution as a package turned out
+# to be a bad idea.  All current upstream versions contain vulnerable
+# packages and lack correct license information.  Upstream does not
+# provide a publicly accessible bug tracker, and does not reply to mail.
+# Removal in 30 days.  Bug #683724.
+app-admin/systemrescuecd-x86
+sys-boot/systemrescuecd-x86-grub
+
+# Matt Turner <mattst88@gentoo.org> (2019-09-03)
+# Broken. Bug #694774
+>=media-libs/freeglut-3.2.0
+
+# Michał Górny <mgorny@gentoo.org> (2019-09-17)
+# Unmaintained EAPI 0 Apache modules + mod_access_dnsbl as a revdep.
+# Removal in 30 days.  Bug #694608.
+www-apache/mod_access_dnsbl
+www-apache/mod_authn_sasl
+www-apache/mod_depends
+www-apache/mod_dnsbl_lookup
+www-apache/mod_flvx
+www-apache/mod_geoip2
+www-apache/mod_macro
+www-apache/mod_umask
+
+# Michał Górny <mgorny@gentoo.org> (2019-09-17)
+# Unmaintained libraries with no reverse dependencies.
+# Removal in 30 days.  Bug #694602.
+dev-db/cppdb
+dev-db/odbtp
+dev-db/soci
+dev-db/xbase
+dev-db/xbsql
+
+# Michał Górny <mgorny@gentoo.org> (2019-09-17)
+# Last touched in 2005.  EAPI 0.  No clearly defined license.
+# Removal in 30 days.  Bug #694598.
+sys-fs/wpflash
+
+# Michał Górny <mgorny@gentoo.org> (2019-09-16)
+# Unmaintained.  Fails to build.  Last release in 2004.  EAPI 0.
+# Removal in 30 days.  Bug #592360.
+net-mail/mailsync
+
+# Michał Górny <mgorny@gentoo.org> (2019-09-16)
+# Unmaintained.  Does not work anymore.  Last release in 2007.
+# Our recommended alternative is app-text/wgetpaste.
+# Removal in 30 days.  Bug #678554.
+app-text/gnopaster
+
+# Michał Górny <mgorny@gentoo.org> (2019-09-16)
+# Unmaintained.  Last touched in 2005.  Keyworded ppc only.  Upstream
+# is still alive, so this thing needs a major version bump.
+# Removal in 30 days.  Bug #694562.
+app-emulation/vmips
+app-emulation/vmips-cross-bin
+
 # Michał Górny <mgorny@gentoo.org> (2019-09-15)
 # This was an attempt to provide more reliable package merging mechanism
 # for Portage.  However, it was never finished and with Portage's
@@ -1109,23 +1166,6 @@ virtual/ruby-ffi
 # Fails to dbus activate properly for me. Help welcome figuring it out.
 net-misc/gnome-remote-desktop
 
-# Georgy Yakovlev <gyakovlev@gentoo.org> (2019-08-17)
-# Unmaintained both upstream and in gentoo, author retired
-# Removal in 30 days
-sys-kernel/bliss-initramfs
-
-# Aaron Bauman <bman@gentoo.org> (2019-08-17)
-# Relies on vulnerable automake:{1.9,1.10}
-# Removal in 30 days
-media-gfx/pixie
-net-irc/eiwic
-net-misc/openrdate
-
-# Aaron Bauman <bman@gentoo.org> (2019-08-17)
-# Unmaintained, outstanding sec vuln bug #540360
-# Lots of new versions upstream. Removal in 30 days.
-dev-embedded/bitbake
-
 # Mike Gilbert <floppym@gentoo.org> (2019-08-13)
 # Dev channel releases are only for people who
 # are developers or want more experimental features
@@ -1240,12 +1280,6 @@ dev-db/postgresql:12
 =virtual/perl-threads-2.70.0-r1
 =virtual/perl-threads-shared-1.510.0-r1
 =virtual/perl-version-0.991.600-r1
-
-# Michał Górny <mgorny@gentoo.org> (2019-04-18)
-# All current versions of SystemRescueCD contain vulnerable packages.
-# Bug #683724.
-app-admin/systemrescuecd-x86
-sys-boot/systemrescuecd-x86-grub
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2019-04-17)
 # The Oracle JDK License has changed for releases starting 2019-04-16
