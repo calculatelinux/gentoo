@@ -17,8 +17,9 @@ case ${PV} in
 	;;
 *)
 	KEYWORDS="~amd64 ~x86"
-	SRC_URI="https://github.com/xbmc/audioencoder.flac/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	S="${WORKDIR}/audioencoder.flac-${PV}"
+	CODENAME="Leia"
+	SRC_URI="https://github.com/xbmc/audioencoder.flac/archive/${PV}-${CODENAME}.tar.gz -> ${P}.tar.gz"
+	S="${WORKDIR}/audioencoder.flac-${PV}-${CODENAME}"
 	;;
 esac
 
@@ -28,9 +29,14 @@ IUSE=""
 
 DEPEND="
 	~media-tv/kodi-9999
-	media-libs/libogg
+	>=media-libs/libogg-1.3.4
 	media-libs/flac
 	"
 RDEPEND="
 	${DEPEND}
 	"
+
+src_prepare(){
+	[ -d depends ] && rm -rf depends || die
+	cmake-utils_src_prepare
+}
