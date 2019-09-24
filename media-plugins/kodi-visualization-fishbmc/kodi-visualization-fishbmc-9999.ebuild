@@ -17,8 +17,9 @@ case ${PV} in
 	;;
 *)
 	KEYWORDS="~amd64 ~x86"
-	SRC_URI="https://github.com/notspiff/visualization.fishbmc/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	S="${WORKDIR}/visualization.fishbmc-${PV}"
+	CODENAME="Leia"
+	SRC_URI="https://github.com/notspiff/visualization.fishbmc/archive/${PV}-${CODENAME}.tar.gz -> ${P}.tar.gz"
+	S="${WORKDIR}/visualization.fishbmc-${PV}-${CODENAME}"
 	;;
 esac
 
@@ -29,8 +30,14 @@ IUSE=""
 DEPEND="
 	~media-tv/kodi-9999
 	virtual/opengl
+	media-libs/glm
 	"
 
 RDEPEND="
 	${DEPEND}
 	"
+
+src_prepare(){
+	[ -d depends ] && rm -rf depends || die
+	cmake-utils_src_prepare
+}

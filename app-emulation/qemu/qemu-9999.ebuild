@@ -15,6 +15,11 @@ inherit eutils linux-info toolchain-funcs multilib python-r1 \
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.qemu.org/qemu.git"
+	EGIT_SUBMODULES=(
+		slirp
+		tests/fp/berkeley-{test,soft}float-3
+		ui/keycodemapdb
+	)
 	inherit git-r3
 	SRC_URI=""
 else
@@ -27,12 +32,13 @@ HOMEPAGE="http://www.qemu.org http://www.linux-kvm.org"
 
 LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
+
 IUSE="accessibility +aio alsa bzip2 capstone +caps +curl debug doc
-	+fdt glusterfs gnutls gtk infiniband iscsi +jpeg kernel_linux
-	kernel_FreeBSD lzo ncurses nfs nls numa opengl +pin-upstream-blobs +png
-	pulseaudio python rbd sasl +seccomp sdl selinux smartcard snappy
+	+fdt glusterfs gnutls gtk infiniband iscsi +jpeg jemalloc kernel_linux
+	kernel_FreeBSD lzo ncurses nfs nls numa opengl +oss +pin-upstream-blobs
+	+png pulseaudio python rbd sasl +seccomp sdl selinux smartcard snappy
 	spice ssh static static-user systemtap tci test usb usbredir vde
-	+vhost-net virgl virtfs +vnc vte xattr xen xfs"
+	+vhost-net virgl virtfs +vnc vte xattr xen xfs +xkb"
 
 COMMON_TARGETS="aarch64 alpha arm cris hppa i386 m68k microblaze microblazeel
 	mips mips64 mips64el mipsel nios2 or1k ppc ppc64 riscv32 riscv64 s390x
@@ -80,7 +86,7 @@ ALL_DEPEND="
 # softmmu targets (qemu-system-*).
 SOFTMMU_TOOLS_DEPEND="
 	dev-libs/libxml2[static-libs(+)]
-	x11-libs/libxkbcommon[static-libs(+)]
+	xkb? ( x11-libs/libxkbcommon[static-libs(+)] )
 	>=x11-libs/pixman-0.28.0[static-libs(+)]
 	accessibility? (
 		app-accessibility/brltty[api]
@@ -108,6 +114,7 @@ SOFTMMU_TOOLS_DEPEND="
 		sys-fabric/librdmacm:=[static-libs(+)]
 	)
 	iscsi? ( net-libs/libiscsi )
+	jemalloc? ( dev-libs/jemalloc )
 	jpeg? ( virtual/jpeg:0=[static-libs(+)] )
 	lzo? ( dev-libs/lzo:2[static-libs(+)] )
 	ncurses? (
@@ -161,7 +168,7 @@ X86_FIRMWARE_DEPEND="
 	)"
 PPC64_FIRMWARE_DEPEND="
 	pin-upstream-blobs? (
-		~sys-firmware/seabios-1.11.0[binary,seavgabios]
+		~sys-firmware/seabios-1.12.0[binary,seavgabios]
 	)
 	!pin-upstream-blobs? (
 		>=sys-firmware/seabios-1.10.2[seavgabios]
@@ -357,8 +364,9 @@ src_prepare() {
 
 	default
 
-	# Fix ld and objcopy being called directly
-	tc-export AR LD OBJCOPY
+	# Use correct toolchain to fix cross-compiling
+	tc-export AR LD NM OBJCOPY PKG_CONFIG
+	export WINDRES=${CHOST}-windres
 
 	# Verbose builds
 	MAKEOPTS+=" V=1"
@@ -385,8 +393,13 @@ qemu_src_configure() {
 	local conf_opts=(
 		--prefix=/usr
 		--sysconfdir=/etc
+		--bindir=/usr/bin
 		--libdir=/usr/$(get_libdir)
+		--datadir=/usr/share
 		--docdir=/usr/share/doc/${PF}/html
+		--mandir=/usr/share/man
+		--with-confsuffix=/qemu
+		--localstatedir=/var
 		--disable-bsd-user
 		--disable-guest-agent
 		--disable-strip
@@ -431,6 +444,7 @@ qemu_src_configure() {
 		$(conf_notuser gtk)
 		$(conf_notuser infiniband rdma)
 		$(conf_notuser iscsi libiscsi)
+		$(conf_notuser jemalloc jemalloc)
 		$(conf_notuser jpeg vnc-jpeg)
 		$(conf_notuser kernel_linux kvm)
 		$(conf_notuser lzo)
@@ -458,6 +472,7 @@ qemu_src_configure() {
 		$(conf_notuser xen)
 		$(conf_notuser xen xen-pci-passthrough)
 		$(conf_notuser xfs xfsctl)
+		$(conf_notuser xkb xkbcommon)
 	)
 
 	if [[ ${buildtype} == "user" ]] ; then
@@ -468,12 +483,14 @@ qemu_src_configure() {
 
 	if [[ ! ${buildtype} == "user" ]] ; then
 		# audio options
-		local audio_opts="oss"
-		use alsa && audio_opts="alsa,${audio_opts}"
-		use sdl && audio_opts="sdl,${audio_opts}"
-		use pulseaudio && audio_opts="pa,${audio_opts}"
+		local audio_opts=(
+			$(usev alsa)
+			$(usev oss)
+			$(usev sdl)
+			$(usex pulseaudio pa "")
+		)
 		conf_opts+=(
-			--audio-drv-list="${audio_opts}"
+			--audio-drv-list=$(printf "%s," "${audio_opts[@]}")
 		)
 	fi
 

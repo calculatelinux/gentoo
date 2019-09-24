@@ -29,6 +29,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Joonas Niilola <juippis@gentoo.org> (2019-09-24)
+# Upstream decided to deprecate this service, and app. Removal in 
+# ~30 days. Bug #695562
+x11-misc/enlightenment-extra
+
+# Hanno Boeck <hanno@gentoo.org> (2019-09-23)
+# Depends on an API by German tax authorities that
+# has been disabled, bug #695434
+app-office/geierlein
 
 # Miroslav Šulc <fordfrog@gentoo.org> (2019-09-21)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
@@ -349,12 +358,6 @@ dev-libs/ltxml
 # Unmaintained.  EOL-ed upstream.  No reverse dependencies.
 # Removal in 30 days.  Bug #694212.
 dev-libs/log4shib
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-12)
-# Unmaintained.  Last bumped in 2014.  Homepage gone.  No reverse
-# dependencies.
-# Removal in 30 days.  Bug #694210.
-dev-libs/libwbxml
 
 # Michał Górny <mgorny@gentoo.org> (2019-09-12)
 # Unmaintained.  Old GNOME library, last release in 2000.  No reverse
@@ -1056,12 +1059,6 @@ mail-filter/opensmtpd-extras
 # in 2006.  Removal in 30 days.  Bug #680412.
 mail-filter/ask
 
-# Ulrich Müller <ulm@gentoo.org> (2019-08-30)
-# Last visible upstream activity in 2013. Doesn't work with Emacs 24.3
-# or newer. Byte-compilation of newest upstream version 1.3.1 fails.
-# Masked for removal in 30 days, bug #693118.
-app-emacs/identica-mode
-
 # David Seifert <soap@gentoo.org> (2019-08-29)
 # Dead upstream, last commit over 10 years ago, no revdeps, EAPI=0,
 # Removal in 30 days.
@@ -1134,12 +1131,6 @@ dev-tcltk/tkTheme
 # Removal in 30 days.  Bug #681044.
 net-misc/tokyotyrant
 
-# Ulrich Müller <ulm@gentoo.org> (2019-08-26)
-# A more recent version of thumbs.el is distributed
-# as part of GNU Emacs proper.
-# Masked for removal in 30 days, bug #692882.
-app-emacs/thumbs
-
 # Brian Evans <grknight@gentoo.org> (2019-08-26)
 # Deprecated virtual as it cannot solve the issue of ABI incompatibility
 # and rebuild consumers when provider changes
@@ -1151,28 +1142,6 @@ virtual/libmysqlclient
 # Has series of build failures reported due to growing incompatibility
 # with new kernels.  Removal in 30 days.  Bug #677618.
 sys-cluster/open-mx
-
-# Brian Evans <grknight@gentoo.org> (2019-08-23)
-# These packages are incompatible with current versions of PHP (7 or higher)
-# They need a maintainer but no one has volunteered.
-# Removal in 30 days if no one picks them up.
-# Bugs 615472 651166 and 651180 respectively
-www-apps/groupoffice
-www-apps/phpwebsite
-www-apps/sitebar
-
-# Matthias Maier <tamiko@gentoo.org> (2019-08-22)
-# Masked for removal in 30 days. Unmaintained and upstream has released
-# backdoored versions for more than a year due to a compromised development
-# server, http://www.webmin.com/exploit.html
-app-admin/webmin
-
-# Hans de Graaff <graaff@gentoo.org> (2019-08-21)
-# This virtual was useful when jruby was still around but this
-# has not been the case for a long time and there are no
-# reverse dependencies for this package anymore.
-# Removal in 30 days.
-virtual/ruby-ffi
 
 # Miroslav Šulc <fordfrog@gentoo.org> (2019-08-19)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
@@ -1443,6 +1412,7 @@ sys-devel/automake:1.5
 sys-devel/automake:1.6
 sys-devel/automake:1.7
 sys-devel/automake:1.8
+sys-devel/automake:1.9
 
 # Kent Fredric <kentnl@gentoo.org> (2017-10-11)
 # This package should now be provided entirely by dev-lang/perl,

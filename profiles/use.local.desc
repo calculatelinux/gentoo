@@ -597,6 +597,7 @@ app-emulation/qemu:fdt - Enables firmware device tree support
 app-emulation/qemu:glusterfs - Enables GlusterFS cluster fileystem via sys-cluster/glusterfs
 app-emulation/qemu:gnutls - Enable TLS support for the VNC console server. For 1.4 and newer this also enables WebSocket support. For 2.0 through 2.3 also enables disk quorum support.
 app-emulation/qemu:iscsi - Enable direct iSCSI support via net-libs/libiscsi instead of indirectly via the Linux block layer that sys-block/open-iscsi does.
+app-emulation/qemu:jemalloc - Enable jemalloc allocator support
 app-emulation/qemu:jpeg - Enable jpeg image support for the VNC console server
 app-emulation/qemu:ncurses - Enable the ncurses-based console
 app-emulation/qemu:nfs - Enable NFS support
@@ -622,6 +623,7 @@ app-emulation/qemu:vte - Enable terminal support (x11-libs/vte) in the GTK+ inte
 app-emulation/qemu:xattr - Add support for getting and setting POSIX extended attributes, through sys-apps/attr. Requisite for the virtfs backend.
 app-emulation/qemu:xen - Enables support for Xen backends
 app-emulation/qemu:xfs - Support xfsctl() notification and syncing for XFS backed virtual disks.
+app-emulation/qemu:xkb - Depend on x11-libs/libxkbcommon to build qemu-keymap tool for converting xkb keymaps
 app-emulation/qt-virt-manager:smartcard - Enable smartcard remoting using app-emulation/libcacard
 app-emulation/runc:ambient - Enable support for ambient capabilities set (Requires Linux kernel 4.3 or later).
 app-emulation/runc:apparmor - Enable AppArmor support.
@@ -637,6 +639,7 @@ app-emulation/vice:sdlsound - Use media-libs/libsdl for sound support
 app-emulation/vice:vte - Enable support for x11-libs/vte in the GTK+ interface
 app-emulation/virt-manager:policykit - Enables sys-auth/polkit authentication support, required when using app-emulation/libvirt with PolicyKit authentication
 app-emulation/virt-manager:sasl - Depend on the proper libraries needed to connect to SASL-enabled libvirtd instances (e.g. Kerberos-protected instances).
+app-emulation/virt-viewer:libvirt - Support connecting to virtual machines managed by libvirt.
 app-emulation/virt-viewer:spice - Support connecting to SPICE-enabled virtual machines.
 app-emulation/virt-viewer:vnc - Support connecting to VNC-enabled virtual machines.
 app-emulation/virt-what:dmi - Use sys-apps/dmidecode to read firmware data
@@ -1003,14 +1006,10 @@ app-misc/lcd4linux:wireless - Enable the wireless plugin, to get wireless statis
 app-misc/lcdproc:ethlcd - Enable support for ethlcd in the hd44780 driver.
 app-misc/lcdproc:extra-charmaps - Enable extra language specific charmaps.
 app-misc/lcdproc:freetype - Enable support for media-libs/freetype in the glcd driver.
-app-misc/lcdproc:ftdi - Enable support for dev-embedded/libftdi in the glcd,hd44780,i2500vfd,lis and ula200 driver.
-app-misc/lcdproc:hid - Enable support for dev-libs/libhid in the cfontz,cfontzpacket,cwlnx,glcd,lb216,mdm166a,mtc_s16209x and noritakevfd driver.
-app-misc/lcdproc:irman - Enable support for media-libs/libirman in the irman driver.
 app-misc/lcdproc:menu - Enable menu support in the lcdproc client.
 app-misc/lcdproc:nfs - Display NFS filesystem stats in the lcdproc client.
 app-misc/lcdproc:png - Enable support for media-libs/libpng in the glcd driver.
 app-misc/lcdproc:samba - Display SMBFS filesystem stats in the lcdproc client.
-app-misc/lcdproc:seamless-hbars - Don't produce any gaps in horizontal bar graphs, if hardware supports it.
 app-misc/lcdproc:test-menu - Enable test menu support for the lcdproc server.
 app-misc/lirc:audio - Support using an audio device connected to an IR receiver
 app-misc/lirc:devinput - Support the devinput input device
@@ -1729,7 +1728,7 @@ dev-haskell/lens:trustworthy - Assert that we are trustworthy when we can
 dev-haskell/lifted-async:monad-control-1 - Use moand-control == 1.*
 dev-haskell/linear:template-haskell - You can disable the use of the `template-haskell` package using `-f-template-haskell`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/monad-control:instancest - If enabled this package will export MonadBaseControl instances for the lazy and strict ST monad. If disabled these instances are only exported when base >= 4.4. If enabled it is required that the transformer-base package exports MonadBase instances for ST. It will do this by default.
-dev-haskell/monad-logger:template_haskell - Enable Template Haskell support.
+dev-haskell/monad-logger:template-haskell - Enable Template Haskell support.
 dev-haskell/monad-par:chaselev - Use Chase-Lev Deques for higher-perf work-stealing.
 dev-haskell/nats:hashable - You can disable the use of the `hashable` package using USE=-hashable. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If set we will not supply an instance of `Hashable`.
 dev-haskell/network-data:small_base - Build the split-up base package.
@@ -2101,7 +2100,7 @@ dev-libs/aws-sdk-cpp:cloudformation - Create and provision AWS infrastructure de
 dev-libs/aws-sdk-cpp:cloudfront - Delivers static and dynamic web content through a worldwide network of edge locations that provide low latency and high performance.
 dev-libs/aws-sdk-cpp:cloudhsm - Secure cryptographic key storage by providing managed hardware security modules in the AWS Cloud. Also enables cloudhsmv2.
 dev-libs/aws-sdk-cpp:cloudsearch - Fully managed service in the cloud to set up, manage, and scale a search solution for websites. Also enables cloudsearchdomain.
-dev-libs/aws-sdk-cpp:cloudwatch - Amazon CloudWatch monitors Amazon Web Services (AWS) resources and the applications run on AWS in real time. The following modules besides 'monitoring' are also enabled: Application Insights: Monitor .NET and SQL Server applications. App Mesh : Monitor and control microservices running on AWS. CloudTrail : Monitor AWS deployments in the cloud by getting a history of AWS API calls, including API calls made via the AWS Management Console, the AWS SDKs, the command line tools, and higher-level AWS services. GuardDuty : Continuous security monitoring service. Health : Provides personalized information about events that can affect the AWS infrastructure, guides through scheduled changes, and accelerates the troubleshooting of issues that affect AWS resources and accounts. Inspector : A security vulnerability assessment service that helps improve the security and compliance of AWS resources. Logs : Monitor, store, and access log files from Amazon EC2 instances, AWS CloudTrail, or other sources.
+dev-libs/aws-sdk-cpp:cloudwatch - Amazon CloudWatch monitors Amazon Web Services (AWS) resources and the applications run on AWS in real time. The following modules besides monitoring are also enabled: Application Insights: Monitor .NET and SQL Server applications. App Mesh : Monitor and control microservices running on AWS. CloudTrail : Monitor AWS deployments in the cloud by getting a history of AWS API calls, including API calls made via the AWS Management Console, the AWS SDKs, the command line tools, and higher-level AWS services. GuardDuty : Continuous security monitoring service. Health : Provides personalized information about events that can affect the AWS infrastructure, guides through scheduled changes, and accelerates the troubleshooting of issues that affect AWS resources and accounts. Inspector : A security vulnerability assessment service that helps improve the security and compliance of AWS resources. Logs : Monitor, store, and access log files from Amazon EC2 instances, AWS CloudTrail, or other sources.
 dev-libs/aws-sdk-cpp:cognito - Create unique identities, authenticate these identities with identity providers and save mobile user data in the AWS Cloud. Enables cognito-identity, cognito-idp and cognito-sync
 dev-libs/aws-sdk-cpp:config - Provides a detailed view of the resources associated with your AWS account, including how they are configured, how they are related to one another, and how the configurations and their relationships have changed over time.
 dev-libs/aws-sdk-cpp:dlm - Amazon Data Lifecycle Manager (DLM): Manage the lifecycle of AWS resources. Create lifecycle policies to automate operations on specified resources.
@@ -2120,7 +2119,7 @@ dev-libs/aws-sdk-cpp:fsx - Amazon FSx is a fully managed service to launch and u
 dev-libs/aws-sdk-cpp:globalaccelerator - AWS Global Accelerator is a network layer service for accelerators to improve availability and performance for internet applications used by a global audience.
 dev-libs/aws-sdk-cpp:http - Enable http support via curl
 dev-libs/aws-sdk-cpp:iot - AWS IoT This is a meta-flag for all Internet of Things modules provided by the SDK: iot : enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators, embedded devices, or smart appliances) and the AWS Cloud over MQTT and HTTP. greengrass : Extends AWS onto physical devices so they can act locally on the data they generate. iot1click : A service for simple devices to trigger AWS Lambda functions that execute a specific action. iotanalytics : Provides advanced data analysis for AWS IoT. iotevents : Monitor equipment or device fleets for failures or changes in operation, and trigger actions when such events occur. iotthingsgraph: Integrated set of tools that enable developers to build IoT applications using devices and services that use different data representation standards and communication protocols. Also enables iot1click-devices, iot1click-projects, iot-data, iotevents-data and iot-jobs-data.
-dev-libs/aws-sdk-cpp:kinesis - Amazon Kinesis Collect, process, and analyze video and data streams in real time. The following modules besides 'kinesis' are enabled: firehose : Load data streams into AWS data stores. kinesisanalytics : Process and analyze streaming data using SQL or Java. (Also enables kinesisanalyticsv2) kinesisvideo : Capture, process, and store video streams for analytics and machine learning. Additionally kinesis-video-archived-media and kinesis-video-media are enabled.
+dev-libs/aws-sdk-cpp:kinesis - Amazon Kinesis Collect, process, and analyze video and data streams in real time. The following modules besides kinesis are enabled: firehose : Load data streams into AWS data stores. kinesisanalytics : Process and analyze streaming data using SQL or Java. (Also enables kinesisanalyticsv2) kinesisvideo : Capture, process, and store video streams for analytics and machine learning. Additionally kinesis-video-archived-media and kinesis-video-media are enabled.
 dev-libs/aws-sdk-cpp:kms - AWS Key Management Service (KMS) An encryption and key management service scaled for the cloud.
 dev-libs/aws-sdk-cpp:lambda - AWS Lambda: Run code without provisioning or managing servers.
 dev-libs/aws-sdk-cpp:lex - Amazon Lex is an AWS service for building conversational interfaces into applications using voice and text. Also enables lex-models.
@@ -2129,10 +2128,10 @@ dev-libs/aws-sdk-cpp:lightsail - The easiest way to get started with AWS for dev
 dev-libs/aws-sdk-cpp:machinelearning - The algorithms of Amazon Machine Learning create machine learning (ML) models by finding patterns in existing data. The service uses these models to process new data and generate predictions for application.
 dev-libs/aws-sdk-cpp:macie - A security service that uses machine learning to automatically discover, classify, and protect sensitive data in AWS.
 dev-libs/aws-sdk-cpp:managedblockchain - Create and manage scalable blockchain networks using popular open source frameworks. Currently, Managed Blockchain supports the Hyperledger Fabric open source framework.
-dev-libs/aws-sdk-cpp:marketplace - AWS Marketplace is an online store where you can buy or sell software that runs on Amazon Web Services (AWS). Marketplace support consists of the marketplacecommerceanalytics module plus: Marketplace Entitlement Service: A contract verification feature that AWS Marketplace sellers can use to verify the amount of the seller’s product (for example, end user licenses or storage, data, or compute capacity) the customer has purchased. Marketplace Metering Service : A pricing and metering feature that AWS Marketplace sellers can use to directly charge for their software along one of four dimensions: users, data, bandwidth, or hosts. Also enables pricing.
+dev-libs/aws-sdk-cpp:marketplace - AWS Marketplace is an online store where you can buy or sell software that runs on Amazon Web Services (AWS). Marketplace support consists of the marketplacecommerceanalytics module plus: Marketplace Entitlement Service: A contract verification feature that AWS Marketplace sellers can use to verify the amount of the sellers product (for example, end user licenses or storage, data, or compute capacity) the customer has purchased. Marketplace Metering Service : A pricing and metering feature that AWS Marketplace sellers can use to directly charge for their software along one of four dimensions: users, data, bandwidth, or hosts. Also enables pricing.
 dev-libs/aws-sdk-cpp:opsworks - AWS OpsWorks is a simple and flexible way to create and manage stacks and applications. Also enables opsworkscm.
 dev-libs/aws-sdk-cpp:organizations - Account management service that to consolidate multiple AWS accounts into an organization to be centrally managed.
-dev-libs/aws-sdk-cpp:other - This is a meta-flag for rarely needed modules that in themselves need not much build time. If you would like to have any of the following modules to have their own USE flag, please open a bug report and it will most probably get one. Alexa for Business : Manage Alexa devices, enroll users, and assign skills. AWS Migration Hub : A single location to track migration tasks across multiple AWS tools and partner solutions. Amazon Cloud Directory : Store hundreds of millions of application-specific objects with multiple relationships and schemas. Amazon Comprehend : Natural language processing (NLP) to extract insights about the content of documents without the need of any special preprocessing. Comprehend Medical : Specialized Amazon Comprehend variant to extract insights from clinical documents such as doctor’s notes or clinical trial reports. Amazon Connect : A contact center as a service (CCaS) solution that offers easy, self- service configuration and enables dynamic, personal, and natural customer engagement at any scale. AWS Data Pipeline : A web service to automate the movement and transformation of data. AWS Data Sync : A data-transfer service that simplifies, automates, and accelerates moving and replicating data between on-premises storage systems and AWS storage services over the internet or AWS Direct Connect. AWS Direct Connect : Link your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit Ethernet fiber-optic cable. Application Discovery : Automatically identify applications running in on-premises data centers, their associated dependencies, and their performance profile. Database Migration (DMS): Migrate data from a database that is on-premises, on an Amazon Relational Database Service (Amazon RDS) DB instance, or in a database on an Amazon Elastic Compute Cloud (Amazon EC2) instance to a database on an AWS service. Amazon DocumentDB : Fully managed database service to set up, operate, and scale MongoDB- compatible databases. AWS Directory Service : A web service to setup and run directories in the AWS cloud, or connect AWS resources with an existing on-premises Microsoft Active Directory. Amazon DynamoDB : A fully managed NoSQL database with seamless scalability. Also enables dax and dynamodbstreams. Amazon GameLift : A fully managed service for deploying, operating, and scaling session- based multiplayer game servers in the cloud. Amazon Glue : Fully managed ETL (extract, transform, and load) service to categorize data, clean it, enrich it, and move it reliably between various data stores. Amazon Ground Statíon : Fully managed service that enables you to control satellite communications, process satellite data, and scale your satellite operations. AWS Import/Export : Accelerates transferring large amounts of data between the AWS cloud and portable storage devices that are mailed to Amazon. Amazon Kafka : Amazon Managed Streaming for Apache Kafka (Amazon MSK) AWS Lake Formation : A managed service to set up, secure, and manage your data lakes. Amazon MQ : A managed message broker service for Apache ActiveMQ to set up and operate message brokers in the cloud. Amazon Mechanical Turk : Request on-demand, scalable, human workforce to complete jobs that humans can do better than computers, such as recognizing objects in photographs. Amazon Neptune : Fast and reliable fully managed graph database service. Supports Apache TinkerPop Gremlin and W3C’s SPARQL Amazon QuickSight : A fast business analytics service to build visualizations, perform ad hoc analysis, and quickly get business insights from your data. Amazon Redshift : Fully managed petabyte-scale data warehouse service. Amazon Robomaker : A service to develop, simulate, and deploy intelligent robotics applications at scale. AWS ServiceCatalog : Create, manage, and distribute portfolios of approved products to end users, who can then access the products they need in a personalized portal. AWS ServiceDiscovery : Use AWS Cloud Map to configure public DNS, private DNS, or HTTP namespaces that microservice applications run in. AWS Service Quotas : Service for viewing and managing quotas AWS Simple DB (SDB) : A web service providing the core database functions of data indexing and querying in the cloud. AWS Code Signer : Use AWS Signer for FreeRTOS to sign code that you created for any of the IoT devices that Amazon Web Services supports. Server Migration Service: (SMS) Combines data collection tools with automated server replication to speed the migration of on-premises servers to AWS. AWS Snowball : A service to transport terabytes or petabytes of data to and from AWS AWS Systems Manager : (SSM) Organize, monitor, and automate management tasks on AWS resources. AWS Step Functions : (states) A service to coordinate the components of distributed applications and microservices using visual workflows. AWS Storage Gateway : Connect on-premises software with cloud-based storage. Amazon Support : Provides support for users of Amazon Web Services. Simple Workflow Service : (SWF) Build applications that coordinate work across distributed components.
+dev-libs/aws-sdk-cpp:other - This is a meta-flag for rarely needed modules that in themselves need not much build time. If you would like to have any of the following modules to have their own USE flag, please open a bug report and it will most probably get one. Alexa for Business : Manage Alexa devices, enroll users, and assign skills. AWS Migration Hub : A single location to track migration tasks across multiple AWS tools and partner solutions. Amazon Cloud Directory : Store hundreds of millions of application-specific objects with multiple relationships and schemas. Amazon Comprehend : Natural language processing (NLP) to extract insights about the content of documents without the need of any special preprocessing. Comprehend Medical : Specialized Amazon Comprehend variant to extract insights from clinical documents such as doctors notes or clinical trial reports. Amazon Connect : A contact center as a service (CCaS) solution that offers easy, self- service configuration and enables dynamic, personal, and natural customer engagement at any scale. AWS Data Pipeline : A web service to automate the movement and transformation of data. AWS Data Sync : A data-transfer service that simplifies, automates, and accelerates moving and replicating data between on-premises storage systems and AWS storage services over the internet or AWS Direct Connect. AWS Direct Connect : Link your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit Ethernet fiber-optic cable. Application Discovery : Automatically identify applications running in on-premises data centers, their associated dependencies, and their performance profile. Database Migration (DMS): Migrate data from a database that is on-premises, on an Amazon Relational Database Service (Amazon RDS) DB instance, or in a database on an Amazon Elastic Compute Cloud (Amazon EC2) instance to a database on an AWS service. Amazon DocumentDB : Fully managed database service to set up, operate, and scale MongoDB- compatible databases. AWS Directory Service : A web service to setup and run directories in the AWS cloud, or connect AWS resources with an existing on-premises Microsoft Active Directory. Amazon DynamoDB : A fully managed NoSQL database with seamless scalability. Also enables dax and dynamodbstreams. Amazon GameLift : A fully managed service for deploying, operating, and scaling session- based multiplayer game servers in the cloud. Amazon Glue : Fully managed ETL (extract, transform, and load) service to categorize data, clean it, enrich it, and move it reliably between various data stores. Amazon Ground Station : Fully managed service that enables you to control satellite communications, process satellite data, and scale your satellite operations. AWS Import/Export : Accelerates transferring large amounts of data between the AWS cloud and portable storage devices that are mailed to Amazon. Amazon Kafka : Amazon Managed Streaming for Apache Kafka (Amazon MSK) AWS Lake Formation : A managed service to set up, secure, and manage your data lakes. Amazon MQ : A managed message broker service for Apache ActiveMQ to set up and operate message brokers in the cloud. Amazon Mechanical Turk : Request on-demand, scalable, human workforce to complete jobs that humans can do better than computers, such as recognizing objects in photographs. Amazon Neptune : Fast and reliable fully managed graph database service. Supports Apache TinkerPop Gremlin and W3Cs SPARQL Amazon QuickSight : A fast business analytics service to build visualizations, perform ad hoc analysis, and quickly get business insights from your data. Amazon Redshift : Fully managed petabyte-scale data warehouse service. Amazon Robomaker : A service to develop, simulate, and deploy intelligent robotics applications at scale. AWS ServiceCatalog : Create, manage, and distribute portfolios of approved products to end users, who can then access the products they need in a personalized portal. AWS ServiceDiscovery : Use AWS Cloud Map to configure public DNS, private DNS, or HTTP namespaces that microservice applications run in. AWS Service Quotas : Service for viewing and managing quotas AWS Simple DB (SDB) : A web service providing the core database functions of data indexing and querying in the cloud. AWS Code Signer : Use AWS Signer for FreeRTOS to sign code that you created for any of the IoT devices that Amazon Web Services supports. Server Migration Service: (SMS) Combines data collection tools with automated server replication to speed the migration of on-premises servers to AWS. AWS Snowball : A service to transport terabytes or petabytes of data to and from AWS AWS Systems Manager : (SSM) Organize, monitor, and automate management tasks on AWS resources. AWS Step Functions : (states) A service to coordinate the components of distributed applications and microservices using visual workflows. AWS Storage Gateway : Connect on-premises software with cloud-based storage. Amazon Support : Provides support for users of Amazon Web Services. Simple Workflow Service : (SWF) Build applications that coordinate work across distributed components.
 dev-libs/aws-sdk-cpp:personalize - Real-time personalization and recommendations, based on the same technology used at Amazon.com. Also enables personalize-events and personalize-runtime.
 dev-libs/aws-sdk-cpp:polly - Amazon Polly A Text-to-Speech (TTS) cloud service that converts text into lifelike speech. Also enables text-to-speech.
 dev-libs/aws-sdk-cpp:queues - AWS Queues is a simple queue class. Allows standard queue operations top, delete, and push. Also has higher level, asynchronous interface with callbacks.
@@ -2141,7 +2140,7 @@ dev-libs/aws-sdk-cpp:rekognition - Add image and video analysis to applications.
 dev-libs/aws-sdk-cpp:resource-groups - AWS Resource Groups and Tag Editor Organize AWS resources into groups, tag resources using virtually any criteria, and manage, monitor, and automate tasks on grouped resources. Also enables resourcegroupstaggingapi. (Resource Groups Tagging API)
 dev-libs/aws-sdk-cpp:route53 - AWS Route 53 is a highly available and scalable Domain Name System (DNS) web service. Also enables route53domains and route53resolver.
 dev-libs/aws-sdk-cpp:rtti - Flag to enable/disable rtti within the library
-dev-libs/aws-sdk-cpp:s3 - Amazon Simple Storage Service Storage for the internet. Additionally to the s3 module, the following modules are activated: Athena : Interactive query service to analyze data in Amazon S3 using standard SQL. Glacier : Storage solution for 'cold data'. Transfer for SFTP: Transfer files directly into and out of Amazon S3 using SFTP. Also enables s3-encryption, s3control and transfer.
+dev-libs/aws-sdk-cpp:s3 - Amazon Simple Storage Service Storage for the internet. Additionally to the s3 module, the following modules are activated: Athena : Interactive query service to analyze data in Amazon S3 using standard SQL. Glacier : Storage solution for cold data. Transfer for SFTP: Transfer files directly into and out of Amazon S3 using SFTP. Also enables s3-encryption, s3control and transfer.
 dev-libs/aws-sdk-cpp:sagemaker - Amazon SageMaker Fully managed machine learning service. With Amazon SageMaker, data scientists and developers can quickly and easily build and train machine learning models, and then directly deploy them into a production-ready hosted environment. Also enables sagemaker-runtime.
 dev-libs/aws-sdk-cpp:secretsmanager - Encrypt, store, and retrieve credentials for databases and other services.
 dev-libs/aws-sdk-cpp:securityhub - Provides a comprehensive view of the security state of AWS resources.
@@ -2523,6 +2522,7 @@ dev-perl/DBD-mysql:mariadb - Use dev-db/mariadb-connector-c as the client librar
 dev-perl/DBD-mysql:mysql - Use dev-db/mysql-connector-c as the client library
 dev-perl/DBD-mysql:ssl - Compile in support for SSL connections via libmysqlclient
 dev-perl/DBIx-Class:admin - Modules required for the DBIx::Class administrative library
+dev-perl/DBIx-Class:admin-script - Modules required for the CLI DBIx::Class interface dbicadmin
 dev-perl/DBIx-Class:admin_script - Modules required for the CLI DBIx::Class interface dbicadmin
 dev-perl/DBIx-Class:deploy - Modules required for "deploy" in DBIx::Class::Storage::DBI and "deploymen_statements" in DBIx::Class::Storage::DBI
 dev-perl/DBIx-Class:replicated - Modules required for DBIx::Class::Storage::DBI::Replicated
@@ -3456,8 +3456,8 @@ games-strategy/0ad:nvtt - Support for some uncompressed data formats via media-g
 games-strategy/colobot:devbuild - TODO
 games-strategy/colobot:tools - Build tools
 games-strategy/colobot-data:music - Enable music support
-games-strategy/colobot-data:music_flac_convert - Fetch flac music and convert it to ogg
-games-strategy/colobot-data:music_ogg - Fetch ogg music
+games-strategy/colobot-data:music-flac-convert - Fetch flac music and convert it to ogg
+games-strategy/colobot-data:music-ogg - Fetch ogg music
 games-strategy/defcon-demo:system-libs - Use system libraries instead of the ones included in the upstream distribution.
 games-strategy/freeciv:aimodules - Support for dynamically loadable AI modules (server-side)
 games-strategy/freeciv:auth - Add authentication capability via mysql, postgres or sqlite3
@@ -3487,6 +3487,7 @@ games-strategy/megaglest:tools - Build model import/export tools
 games-strategy/megaglest:unicode - Use unicode strings for wxwidgets
 games-strategy/megaglest:wxuniversal - Use the wxUniversal port which implements the various GUI controls by drawing them itself
 games-strategy/naev:mixer - Enables media-libs/sdl-mixer sound backend in addition to media-libs/openal one.
+games-strategy/satellite-reign:gui - Install the GUI for configuring screen resolution and input
 games-strategy/ufoai:client - Build the main game client
 games-strategy/ufoai:editor - Build the map editor and compiler
 games-strategy/ufoai:server - Build the dedicated server
@@ -5032,35 +5033,35 @@ media-tv/tvheadend:xmltv - Use media-tv/xmltv
 media-tv/v4l-dvb-saa716x:firmware - Install firmware
 media-tv/v4l-utils:bpf - Enables support for IR BPF decoders.
 media-tv/xmltv:ar - Argentina tv listing grabber
-media-tv/xmltv:ch_search - Grabber for Switzerland
+media-tv/xmltv:ch-search - Grabber for Switzerland
 media-tv/xmltv:dk - Denmark tv listing grabber
 media-tv/xmltv:dtvla - Latin America digital tv listing grabber
-media-tv/xmltv:es_laguiatv - Spain alternative grabber
-media-tv/xmltv:eu_dotmedia - Grabber for Europe (xmltv.se / dotmedia)
-media-tv/xmltv:eu_epg - EPG grabber for some European countries.
+media-tv/xmltv:es-laguiatv - Spain alternative grabber
+media-tv/xmltv:eu-dotmedia - Grabber for Europe (xmltv.se / dotmedia)
+media-tv/xmltv:eu-epg - EPG grabber for some European countries.
 media-tv/xmltv:fi - Finland tv listing grabber
-media-tv/xmltv:fi_sv - Grabber for Finland (Swedish)
+media-tv/xmltv:fi-sv - Grabber for Finland (Swedish)
 media-tv/xmltv:fr - France tv listing grabber
-media-tv/xmltv:fr_kazer - France (Kazer) tv listing grabber
+media-tv/xmltv:fr-kazer - France (Kazer) tv listing grabber
 media-tv/xmltv:huro - Hungarian tv listing grabber
 media-tv/xmltv:il - Israel tv listing grabber
 media-tv/xmltv:is - Iceland tv listing grabber
 media-tv/xmltv:it - Italy tv listing grabber
-media-tv/xmltv:na_dd - North America tv listing grabber
-media-tv/xmltv:na_dtv - North America Direct TV grabber
-media-tv/xmltv:na_tvmedia - Grabber for North America (TVMedia)
+media-tv/xmltv:na-dd - North America tv listing grabber
+media-tv/xmltv:na-dtv - North America Direct TV grabber
+media-tv/xmltv:na-tvmedia - Grabber for North America (TVMedia)
 media-tv/xmltv:nl - Netherlands tv listing grabber
-media-tv/xmltv:no_gf - Norway Gfeed tv listing grabber
-media-tv/xmltv:pt_meo - Grabber for Portugal (MEO)
-media-tv/xmltv:se_swedb - Sweden tv listing grabber
-media-tv/xmltv:se_tvzon - Sweden (tvzon.se) tv listing grabber
+media-tv/xmltv:no-gf - Norway Gfeed tv listing grabber
+media-tv/xmltv:pt-meo - Grabber for Portugal (MEO)
+media-tv/xmltv:se-swedb - Sweden tv listing grabber
+media-tv/xmltv:se-tvzon - Sweden (tvzon.se) tv listing grabber
 media-tv/xmltv:tr - Turkey (Digiturk) tv listing grabber
-media-tv/xmltv:tv_check - enable GUI checking
-media-tv/xmltv:tv_combiner - enable grabbers combiner
-media-tv/xmltv:tv_pick_cgi - enable CGI support
-media-tv/xmltv:uk_bleb - Britain tv listing grabber
-media-tv/xmltv:uk_tvguide - UK and Ireland tv listing grabber using TV Guide website
-media-tv/xmltv:zz_sdjson - Grabber for schedulesDirect.org SD-JSON service (many countries)
+media-tv/xmltv:tv-check - enable GUI checking
+media-tv/xmltv:tv-combiner - enable grabbers combiner
+media-tv/xmltv:tv-pick-cgi - enable CGI support
+media-tv/xmltv:uk-bleb - Britain tv listing grabber
+media-tv/xmltv:uk-tvguide - UK and Ireland tv listing grabber using TV Guide website
+media-tv/xmltv:zz-sdjson - Grabber for schedulesDirect.org SD-JSON service (many countries)
 media-video/aegisub:uchardet - Enable charset discovery via app-i18n/uchardet
 media-video/aravis:fast-heartbeat - Enable faster heartbeat rate.
 media-video/aravis:gstreamer - Build the GStreamer plugin.
@@ -6055,16 +6056,16 @@ net-im/vacuum:socksstreams - Enable initiating SOCKS5 data streams between two X
 net-im/vacuum:urlprocessor - Allows other plugins to load data from custom types of URLs
 net-im/vacuum:vcard - Enable obtaining peer's personal contact information
 net-im/vacuum:xmppuriqueries - Allow other plugins to handle XMPP URI queries
-net-irc/anope:anope_modules_chanstats - Channel Statistics
-net-irc/anope:anope_modules_cs_fantasy_stats - Enables the STATS and GSTATS commands
-net-irc/anope:anope_modules_cs_fantasy_top - Enables the (G)TOP and (G)TOP10 commands
-net-irc/anope:anope_modules_irc2sql - Stores channel statistics in a mysql database
-net-irc/anope:anope_modules_ldap_auth - Authorize through LDAP
-net-irc/anope:anope_modules_ldap_oper - Dynamically ties users to Anope opertypes via LDAP
-net-irc/anope:anope_modules_sql_auth - Authorize through SQL
-net-irc/anope:anope_modules_sql_log - Additional log target in SQL
-net-irc/anope:anope_modules_sql_oper - Allows granting users services operator privileges from SQL
+net-irc/anope:chanstats - Channel Statistics
+net-irc/anope:cs-fantasy-stats - Enables the STATS and GSTATS commands
+net-irc/anope:cs-fantasy-top - Enables the (G)TOP and (G)TOP10 commands
+net-irc/anope:irc2sql - Stores channel statistics in a mysql database
+net-irc/anope:ldap-auth - Authorize through LDAP
+net-irc/anope:ldap-oper - Dynamically ties users to Anope opertypes via LDAP
 net-irc/anope:posix - Add support for POSIX Compatible Regular Expressions
+net-irc/anope:sql-auth - Authorize through SQL
+net-irc/anope:sql-log - Additional log target in SQL
+net-irc/anope:sql-oper - Allows granting users services operator privileges from SQL
 net-irc/anope:ssl - Provide SSL services using OpenSSL
 net-irc/anope:tre - Use dev-libs/tre for regular expressions
 net-irc/atheme-services:cracklib - Enable nickserv/cracklib module for enforcing strong account passwords
@@ -6892,7 +6893,7 @@ net-p2p/bitcoind:system-leveldb - Use the system-wide dev-libs/leveldb instead o
 net-p2p/bitcoind:upnp - Enable Universal Plug and Play
 net-p2p/bitcoind:wallet - Enable wallet support
 net-p2p/bitcoind:zeromq - Report blocks and transactions via zeromq
-net-p2p/dbhub:switch_user - Enable support for switching user
+net-p2p/dbhub:switch-user - Enable support for switching user
 net-p2p/deluge:console - Enable default console UI
 net-p2p/deluge:webinterface - Install dependencies needed for the web interface
 net-p2p/eiskaltdcpp:cli - Enable sample cli based on readline
@@ -8723,7 +8724,7 @@ virtual/ssh:minimal - Prefer net-misc/dropbear over net-misc/openssh
 virtual/wine:d3d9 - Enable Ixit's Gallium Nine Patchset
 virtual/wine:staging - Enable Wine-Staging's Patchset
 www-apache/mod_backtrace:unwind - Use sys-libs/libunwind to provide better resolution of function names.
-www-apache/mod_extract_forwarded:mod_proxy - Enable support for Apache's internal proxy
+www-apache/mod_extract_forwarded:mod-proxy - Enable support for Apache's internal proxy
 www-apache/mod_musicindex:archive - Add archive support
 www-apache/mod_musicindex:cache - Add File cache support
 www-apache/mod_musicindex:mysql - Add MySQL cache support
@@ -8775,7 +8776,6 @@ www-apps/roundup:tz - Enable full support of timezone
 www-apps/roundup:whoosh - Enable Whoosh full-text indexer
 www-apps/roundup:xapian - Enable Xapian full-text indexer
 www-apps/rt:lighttpd - Add www-servers/lighttpd support
-www-apps/sitebar:plugins - Install optional plugins
 www-apps/trac:highlight - Enable syntax highlighting
 www-apps/trac:i18n - Enable support for i18n with dev-python/Babel
 www-apps/trac:restructuredtext - Enable support for reStructuredText for wiki formatting
@@ -8838,9 +8838,6 @@ www-client/lynx:gnutls - Use gnutls library for HTTPS support (openssl is the de
 www-client/lynx:ssl - Enable HTTPS support.
 www-client/netsurf:bmp - BMP bitmap image support (media-libs/libnsbmp)
 www-client/netsurf:duktape - Use duktape.org javascript engine
-www-client/netsurf:fbcon_frontend_sdl - Use framebuffer frontend sdl
-www-client/netsurf:fbcon_frontend_vnc - Use framebuffer frontend vnc
-www-client/netsurf:fbcon_frontend_x - Use framebuffer frontend X
 www-client/netsurf:gtk - Build GTK3 GUI
 www-client/netsurf:gtk2 - Build GTK2 GUI
 www-client/netsurf:pdf-writer - PDF output support (media-libs/libharu)
