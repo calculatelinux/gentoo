@@ -29,6 +29,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Ulrich Müller <ulm@gentoo.org> (2019-09-26)
+# Blocks its own dependency. Bug #695606.
+=x11-libs/libXvMC-1.0.12
+
 # Joonas Niilola <juippis@gentoo.org> (2019-09-24)
 # Upstream decided to deprecate this service, and app. Removal in 
 # ~30 days. Bug #695562
@@ -1096,52 +1100,6 @@ dev-embedded/scratchbox-devkit-maemo3
 dev-embedded/scratchbox-devkit-perl
 dev-embedded/scratchbox-devkit-qemu
 dev-embedded/scratchbox-devkit-svn
-
-# Michał Górny <mgorny@gentoo.org> (2019-08-27)
-# Unmaintained.  No release since 2008.  Is reported to wrongly reject
-# 'pretty much all mails', also reported build failure.
-# Removal in 30 days.  Bug #519668.
-mail-filter/sid-milter
-
-# Michał Górny <mgorny@gentoo.org> (2019-08-27)
-# Fails to build against openssl-1.1.  Not touched by Gentoo maintainer
-# who is also upstream since 2016, and the problem has been reported
-# in Jan 2019.  Removal in 30 days.  Bug #674800.
-app-crypt/af_alg
-
-# Michał Górny <mgorny@gentoo.org> (2019-08-27)
-# Our version is seriously outdated and has numerous bugs reported,
-# including multilib-strict failures preventing it from being installed
-# on any modern system.  It has not been touched since 2016, and is
-# many releases behind upstream.  Furthermore, upstream has discontinued
-# it in favor of eeCodes.
-# Removal in 30 days.  Bug #628746.
-sci-libs/grib_api
-
-# Michał Górny <mgorny@gentoo.org> (2019-08-27)
-# Not touched since 2012.  Homepage gone, and no replacement found.
-# No reverse dependencies.
-# Removal in 30 days.  Bug #692796.
-dev-tcltk/tkTheme
-
-# Michał Górny <mgorny@gentoo.org> (2019-08-27)
-# Discontinued upstream, in favor of Tokyo Tycoon.  Last release
-# in 2010.  Not touched by the Gentoo maintainer since 2010, with bugs
-# having to be addressed by other developers.
-# Removal in 30 days.  Bug #681044.
-net-misc/tokyotyrant
-
-# Brian Evans <grknight@gentoo.org> (2019-08-26)
-# Deprecated virtual as it cannot solve the issue of ABI incompatibility
-# and rebuild consumers when provider changes
-# No revdeps. Removal in 30 days.
-virtual/libmysqlclient
-
-# Michał Górny <mgorny@gentoo.org> (2019-08-25)
-# Discontinued upstream in 2015, and not touched in Gentoo since.
-# Has series of build failures reported due to growing incompatibility
-# with new kernels.  Removal in 30 days.  Bug #677618.
-sys-cluster/open-mx
 
 # Miroslav Šulc <fordfrog@gentoo.org> (2019-08-19)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
