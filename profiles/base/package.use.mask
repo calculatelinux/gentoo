@@ -7,6 +7,10 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Michał Górny <mgorny@gentoo.org> (2019-09-28)
+# media-fonts/hkscs-ming is slated for removal.
+app-i18n/xcin unicode
+
 # Craig Andrews <candrews@gentoo.org> (2019-09-12)
 # OpenSSL (as of version 1.1.1) doesn't have APIs for QUIC support
 # see https://github.com/openssl/openssl/pull/8797
@@ -54,27 +58,6 @@ sys-kernel/linux-firmware initramfs
 # Lars Wendler <polynomial-c@gentoo.org> (2019-07-26)
 # Requires dev-libs/gumbo which is only keyworded for amd64 and x86
 mail-client/claws-mail litehtml
-
-# David Seifert <soap@gentoo.org> (2019-07-14)
-# media-libs/jasper will be removed in 30 days, bug #689784
-dev-games/openscenegraph jpeg2k
-dev-python/weasyprint jpeg2k
-dev-qt/qtimageformats jpeg2k
-media-gfx/dcraw jpeg2k
-media-gfx/digikam jpeg2k
-media-gfx/exact-image jpeg2k
-media-gfx/fim jpeg2k
-<media-gfx/gimp-2.10 jpeg2k
-media-gfx/graphicsmagick jpeg2k
-media-gfx/ufraw jpeg2k
-media-libs/devil jpeg2k
-media-libs/gegl jpeg2k
-media-libs/libraw jpeg2k
-media-libs/netpbm jpeg2k
-media-libs/opencv jpeg2k
-media-libs/simage jpeg2k
-net-proxy/ziproxy jpeg2k
-x11-libs/gdk-pixbuf jpeg2k
 
 # James Le Cuirot <chewi@gentoo.org> (2019-05-21)
 # Doesn't support ffmpeg-4. Portage takes a long time to report the

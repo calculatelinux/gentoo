@@ -29,6 +29,79 @@
 
 #--- END OF EXAMPLES ---
 
+# Matt Turner <mattst88@gentoo.org> (2019-09-28)
+# Merged into Mesa. No reverse dependencies. Bug #654464
+# Removal in 30 days
+media-libs/libtxc_dxtn
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2019-09-28)
+# ppc64/ia64 binary-only package was needed to workaround
+# gcc-3.3 bugs. Should not be needed anymore. To be removed
+# in 30 days.
+sys-libs/libstdc++-v3-bin
+
+# Michał Górny <mgorny@gentoo.org> (2019-09-28)
+# All of the following packages are unfetchable and mirror-restricted.
+#
+# games-fps/enemy-territory-etpro: #638092
+# games-fps/ut2003-bonuspack-cm: #640552
+# games-rpg/runescape-launcher: #625884
+# games-server/bf1942-lnxded: #640576
+# games-server/nwn-ded: #640578
+# games-strategy/mindrover-demo: #640586
+# media-fonts/hkscs-ming: #640590
+# net-print/adobeps: #687000
+# sci-chemistry/xdsstat-bin: #673962
+# sci-libs/parmgridgen (+ revdep sci-libs/openfoam): #633888
+#
+# Removal in 30 days.
+games-fps/enemy-territory-etpro
+games-fps/ut2003-bonuspack-cm
+games-rpg/runescape-launcher
+games-server/bf1942-lnxded
+games-server/nwn-ded
+games-strategy/mindrover-demo
+media-fonts/hkscs-ming
+net-print/adobeps
+sci-chemistry/xdsstat-bin
+sci-libs/openfoam
+sci-libs/parmgridgen
+
+# Michał Górny <mgorny@gentoo.org> (2019-09-28)
+# games-fps/ut2004 is unfetchable for almost 3 years.  The remaining
+# packagse are its reverse dependencies, some of them unfetchable
+# as well.
+# Removal in 30 days.  Bug #601402.
+games-fps/ut2004
+games-fps/ut2004-action
+games-fps/ut2004-airbuccaneers
+games-fps/ut2004-bonuspack-cbp1
+games-fps/ut2004-bonuspack-cbp2
+games-fps/ut2004-bonuspack-ece
+games-fps/ut2004-bonuspack-mega
+games-fps/ut2004-cor
+games-fps/ut2004-crossfire
+games-fps/ut2004-data
+games-fps/ut2004-deathball
+games-fps/ut2004-fragops
+games-fps/ut2004-hamsterbash
+games-fps/ut2004-muralis
+games-fps/ut2004-strikeforce
+games-fps/ut2004-troopers
+games-fps/ut2004-unwheel
+games-server/ut2004-ded
+
+# Stefan Strogin <steils@gentoo.org> (2019-09-27)
+# Requires >=dev-lang/lua-5.3 which is masked
+>=dev-util/bam-0.5.0
+
+# Michał Górny <mgorny@gentoo.org> (2019-09-27)
+# The virtual is not really useful since all reverse dependencies
+# support only Python 2.7.  All its uses were replaced with direct
+# dependencies on dev-python/pmw.
+# Removal in 30 days.
+virtual/python-pmw
+
 # Ulrich Müller <ulm@gentoo.org> (2019-09-26)
 # Blocks its own dependency. Bug #695606.
 =x11-libs/libXvMC-1.0.12
@@ -1063,44 +1136,6 @@ mail-filter/opensmtpd-extras
 # in 2006.  Removal in 30 days.  Bug #680412.
 mail-filter/ask
 
-# David Seifert <soap@gentoo.org> (2019-08-29)
-# Dead upstream, last commit over 10 years ago, no revdeps, EAPI=0,
-# Removal in 30 days.
-sci-electronics/gplcver
-
-# David Seifert <soap@gentoo.org> (2019-08-29)
-# Dead upstream, last release in 2008, no revdeps, removal in 30 days.
-dev-cpp/threadpool
-
-# Michał Górny <mgorny@gentoo.org> (2019-08-29)
-# Added in 2012 and not touched since.  Fails multilib-strict.  Pending
-# version bump.  No reverse dependencies.
-# Removal in 30 days.  Bug #667064.
-net-misc/libss7
-
-# Stefan Strogin <steils@gentoo.org> (2019-08-29)
-# Obsolete. No reverse dependencies (games-rpg/eternal-lands no longer
-# depends on them).
-# Removal in 30 days. Bug #549890.
-games-rpg/eternal-lands-bloodsucker
-games-rpg/eternal-lands-data
-
-# Michał Górny <mgorny@gentoo.org> (2019-08-28)
-# Last touched in 2010.  EAPI=0.  Last upstream release in 2011 (pending
-# bump).  No reverse dependencies.
-# Removal in 30 days.  Bug #681168.
-dev-embedded/scratchbox
-dev-embedded/scratchbox-devkit-apt-https
-dev-embedded/scratchbox-devkit-cputransp
-dev-embedded/scratchbox-devkit-debian
-dev-embedded/scratchbox-devkit-debian-squeeze
-dev-embedded/scratchbox-devkit-doctools
-dev-embedded/scratchbox-devkit-git
-dev-embedded/scratchbox-devkit-maemo3
-dev-embedded/scratchbox-devkit-perl
-dev-embedded/scratchbox-devkit-qemu
-dev-embedded/scratchbox-devkit-svn
-
 # Miroslav Šulc <fordfrog@gentoo.org> (2019-08-19)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
 =www-servers/tomcat-9.0.24
@@ -1333,7 +1368,6 @@ x11-drivers/xf86-video-voodoo
 # users, so let's keep them masked until somebody figures out what's
 # wrong.  Bug #647964.
 ~app-portage/gemato-14.1m
-~app-portage/gemato-14.0m
 ~app-portage/gemato-9999m
 
 # Kent Fredric <kentnl@gentoo.org> (2018-05-27)
@@ -1371,6 +1405,7 @@ sys-devel/automake:1.6
 sys-devel/automake:1.7
 sys-devel/automake:1.8
 sys-devel/automake:1.9
+sys-devel/automake:1.10
 
 # Kent Fredric <kentnl@gentoo.org> (2017-10-11)
 # This package should now be provided entirely by dev-lang/perl,

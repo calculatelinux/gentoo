@@ -1651,7 +1651,7 @@ dev-haskell/contravariant:semigroups - You can disable the use of the `semigroup
 dev-haskell/contravariant:statevar - You can disable the use of the `StateVar` package using `-f-StateVar`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/contravariant:tagged - You can disable the use of the `tagged` package on older versons of GHC using `-f-tagged`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/cpu:executable - build 'cpuid' tool
-dev-haskell/crypto-api:all_cpolys - Build all the CMAC polynomes up to 10000 bits instead of just the usual ones
+dev-haskell/crypto-api:all-cpolys - Build all the CMAC polynomes up to 10000 bits instead of just the usual ones
 dev-haskell/crypto-conduit:conduit11 - Use conduit >= 1.1.
 dev-haskell/cryptohash:cryptoapi - Defines crypto-api instances
 dev-haskell/cryptonite:integer-gmp - Whether or not to use GMP for some functions
@@ -1773,12 +1773,12 @@ dev-haskell/semigroups:transformers - provide instances for transformers package
 dev-haskell/semigroups:unordered-containers - You can disable the use of the `unordered-containers` package using USE=-unordered-containers. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/sendfile:portable - Explicitly enable portable sendfile support (implemented in Haskell)
 dev-haskell/sha:exe - Build a sha1 and a sha384 executable similar to 'md5sum'.
-dev-haskell/shakespeare:test_coffee - Render tests through coffeescript render function.
-dev-haskell/shakespeare:test_export - Test export.
-dev-haskell/shakespeare:test_roy - Render tests through roy render function.
-dev-haskell/shakespeare-js:test_coffee - Test coffee.
-dev-haskell/shakespeare-js:test_export - Test export.
-dev-haskell/shakespeare-js:test_roy - Test roy.
+dev-haskell/shakespeare:test-coffee - Render tests through coffeescript render function.
+dev-haskell/shakespeare:test-export - Test export.
+dev-haskell/shakespeare:test-roy - Render tests through roy render function.
+dev-haskell/shakespeare-js:test-coffee - Test coffee.
+dev-haskell/shakespeare-js:test-export - Test export.
+dev-haskell/shakespeare-js:test-roy - Test roy.
 dev-haskell/shelly:lifted - run the tests against Shelly.Lifted
 dev-haskell/shuffle:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/simple-sendfile:allow-bsd - Allow use of BSD sendfile (disable on GNU/kFreeBSD)
@@ -2699,6 +2699,7 @@ dev-python/pyzor:redis - Enables the redis back-end database engine for pyzord t
 dev-python/rarfile:compressed - Enables the module to support compressed v3 archives by calling the app-arch/unrar.
 dev-python/rdflib:redland - enable support for Redland triplestore
 dev-python/restkit:cli - Install the restcli command line interface/tool, based on dev-python/ipython
+dev-python/rfc3986:idna - enable support for the IDNA specification (RFC 5891)
 dev-python/setuptools_scm:mercurial - Enables mercurial backend
 dev-python/simplespectral:faster - Use sci-libs/scipy to speed up drawing
 dev-python/simplespectral:fastest - Use dev-python/pyFFTW to speed up drawing to the max
@@ -3421,9 +3422,6 @@ games-rpg/daimonin-client:music - Install extra music
 games-rpg/drascula:sound - Install optional audio files
 games-rpg/dreamweb:doc - High-resolution scans of the written material in the original UK game box
 games-rpg/dungeon-defenders:bundled-libs - Use the upstream provided bundled libraries.
-games-rpg/eternal-lands-data:bloodsuckermaps - Will install Bloodsucker's Maps in place of the official map files
-games-rpg/eternal-lands-data:music - Enables in-game music
-games-rpg/eternal-lands-data:sound - Enables in-game sound effects
 games-rpg/hatoful-boyfriend:gui - Install the GUI for configuring screen resolution and input
 games-rpg/hatoful-boyfriend-holiday-star:gui - Install the GUI for configuring screen resolution and input
 games-rpg/kqlives:cheats - Enable cheating mode

@@ -13,7 +13,7 @@ SRC_URI="https://github.com/Samsung/rlottie/archive/${MY_COMMIT}.tar.gz -> ${P}.
 
 LICENSE="BSD FTL LGPL-2.1 MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
 IUSE="test"
 
 RESTRICT="!test? ( test )"
@@ -21,6 +21,8 @@ RESTRICT="!test? ( test )"
 DEPEND="test? ( dev-cpp/gtest )"
 
 S="${WORKDIR}/rlottie-${MY_COMMIT}"
+
+PATCHES=( "${FILESDIR}"/rlottie-0.0.1_pre20190920-disable-werror.patch )
 
 src_configure() {
 	local emesonargs=(
