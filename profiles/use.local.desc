@@ -1031,9 +1031,6 @@ app-misc/note:text - Add support for text backend
 app-misc/openastro:jpeg - Enable exporting Astrological Charts to jpeg
 app-misc/openastro:png - Enable exporting Astrological Charts to png
 app-misc/pax-utils:python - Install a more powerful/faster version of lddtree
-app-misc/pip3line:distorm - Compile the Distorm plugin
-app-misc/pip3line:qscintilla - Use QScintilla for more efficient text display
-app-misc/pip3line:ssl - Compile the plugin adding miscellaneous hashes from OpenSSL
 app-misc/recoll:camelcase - Enable indexing for camelCase sentences and words
 app-misc/recoll:chm - Enable CHM file support via dev-python/pychm
 app-misc/recoll:inotify - Use the Linux Kernel notification subsystem for monitoring file alterations in realtime
@@ -1632,11 +1629,11 @@ dev-haskell/cgi:extensible-exceptions-in-base - Required to be enabled for >=dev
 dev-haskell/cgi:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/chell:color-output - use colors in program output
 dev-haskell/citeproc-hs:bibutils - use Chris Putnam's app-text/bibutils
-dev-haskell/citeproc-hs:embed_data_files - Embed locale files into the library (needed for windows packaging)
+dev-haskell/citeproc-hs:embed-data-files - Embed locale files into the library (needed for windows packaging)
 dev-haskell/citeproc-hs:hexpat - use dev-haskell/hexpat instead of dev-haskell/xml for XML parsing
 dev-haskell/citeproc-hs:network - use dev-haskell/network and dev-haskell/http to retrieve CSL file from URIs
-dev-haskell/citeproc-hs:small_base - Choose the new smaller, split-up base package.
-dev-haskell/citeproc-hs:unicode_collation - Use Haskell bindings to the dev-libs/icu
+dev-haskell/citeproc-hs:small-base - Choose the new smaller, split-up base package.
+dev-haskell/citeproc-hs:unicode-collation - Use Haskell bindings to the dev-libs/icu
 dev-haskell/cmark:system-cmark - use app-text/cmark instead of bundled copy
 dev-haskell/cmdargs:quotation - Build quote module
 dev-haskell/cmdargs:testprog - Build the test program
@@ -1674,7 +1671,7 @@ dev-haskell/gtk3:fmode-binary - Set the default file translation mode for file I
 dev-haskell/gtk3:gio - Depend on GIO package, thereby enabling certain features.
 dev-haskell/hackage-security:use-network-uri - Get Network.URI from the network-uri package.
 dev-haskell/happstack-server:network-uri - Get Network.URI from the network-uri package
-dev-haskell/happstack-server:template_haskell - Description: Template Haskell is available on this system
+dev-haskell/happstack-server:template-haskell - Description: Template Haskell is available on this system
 dev-haskell/hashed-storage:diff - Provide the Storage.Hashed.Diff module.
 dev-haskell/hashed-storage:hpc - Compile with the profiling ghc flag -fhpc.
 dev-haskell/hashtables:bounds-checking - if on, use bounds-checking array accesses
@@ -1732,11 +1729,11 @@ dev-haskell/monad-par:chaselev - Use Chase-Lev Deques for higher-perf work-steal
 dev-haskell/nats:hashable - You can disable the use of the `hashable` package using USE=-hashable. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If set we will not supply an instance of `Hashable`.
 dev-haskell/network-data:small-base - Build the split-up base package.
 dev-haskell/pandoc-citeproc:bibutils - use Chris Putnam's app-text/bibutils
-dev-haskell/pandoc-citeproc:embed_data_files - Embed locale files into the library (needed for windows packaging)
+dev-haskell/pandoc-citeproc:embed-data-files - Embed locale files into the library (needed for windows packaging)
 dev-haskell/pandoc-citeproc:hexpat - use dev-haskell/hexpat instead of dev-haskell/xml for XML parsing
 dev-haskell/pandoc-citeproc:network - use dev-haskell/network and dev-haskell/http to retrieve CSL file from URIs
-dev-haskell/pandoc-citeproc:small_base - Choose the new smaller, split-up base package.
-dev-haskell/pandoc-citeproc:test_citeproc - Build the test-citeproc program
+dev-haskell/pandoc-citeproc:small-base - Choose the new smaller, split-up base package.
+dev-haskell/pandoc-citeproc:test-citeproc - Build the test-citeproc program
 dev-haskell/pandoc-citeproc:unicode_collation - Use Haskell bindings to the dev-libs/icu
 dev-haskell/persistent:nooverlap - Use OverlappingInstances only for String. Only developers should use this.
 dev-haskell/persistent-sqlite:build-sanity-exe - Build a sanity check test executable.
@@ -3972,7 +3969,6 @@ mail-filter/amavisd-new:rspamd - Add support for mail-filter/rspamd extension (H
 mail-filter/amavisd-new:rspamd-https - Add support for mail-filter/rspamd extension (both HTTP and HTTPS)
 mail-filter/amavisd-new:spamassassin - Add support for mail-filter/spamassassin
 mail-filter/amavisd-new:zmq - Add support for zeromq sockets
-mail-filter/ask:procmail - Adds support for mail-filter/procmail
 mail-filter/bogofilter:tokyocabinet - Enable Tokyo Cabinet database support
 mail-filter/clamassassin:clamd - Use the app-antivirus/clamav daemon for virus checking
 mail-filter/clamassassin:subject-rewrite - Adds support for subject rewriting
@@ -4003,35 +3999,6 @@ mail-filter/opendkim:stats - Add support for statistics (requires 'opendbx' flag
 mail-filter/opendkim:unbound - Use the unbound dnssec library to perform DKIM DNS queries.
 mail-filter/opendmarc:reports - Install the reports binaries: expire, import, reports, params
 mail-filter/opendmarc:spf - Use the mail-filter/libspf2 for Sender Policy Framework checking
-mail-filter/opensmtpd-extras:filter-clamav - filter for scanning with app-antivirus/clamav
-mail-filter/opensmtpd-extras:filter-dkim-signer - filter for adding DKIM signatures to outgoing messages
-mail-filter/opensmtpd-extras:filter-dnsbl - filter for checking hosts against the DNS black lists
-mail-filter/opensmtpd-extras:filter-lua - filter for interfacing with dev-lang/lua
-mail-filter/opensmtpd-extras:filter-monkey - filter for arbitrarily rejecting random emails
-mail-filter/opensmtpd-extras:filter-pause - filter to pause on new connections
-mail-filter/opensmtpd-extras:filter-perl - filter for interfacing with dev-lang/perl
-mail-filter/opensmtpd-extras:filter-python - filter for interfacing with dev-lang/python
-mail-filter/opensmtpd-extras:filter-regex - filter for regular expression matching
-mail-filter/opensmtpd-extras:filter-spamassassin - filter for scanning with mail-filter/spamassassin
-mail-filter/opensmtpd-extras:filter-stub - stub filter
-mail-filter/opensmtpd-extras:filter-trace - trace filter
-mail-filter/opensmtpd-extras:filter-void - void filter
-mail-filter/opensmtpd-extras:queue-null - null queue
-mail-filter/opensmtpd-extras:queue-python - queue for interfacing with dev-lang/python
-mail-filter/opensmtpd-extras:queue-ram - ram queue
-mail-filter/opensmtpd-extras:queue-stub - stub queue
-mail-filter/opensmtpd-extras:scheduler-python - schedulre for interfacing with python
-mail-filter/opensmtpd-extras:scheduler-ram - ram scheduler
-mail-filter/opensmtpd-extras:scheduler-stub - stub scheduler
-mail-filter/opensmtpd-extras:table-ldap - table for lookups with net-nds/openldap
-mail-filter/opensmtpd-extras:table-mysql - table for lookups with virtual/mysql
-mail-filter/opensmtpd-extras:table-passwd - table for lookups using /etc/passwd
-mail-filter/opensmtpd-extras:table-postgres - table for lookups with dev-db/postgresql
-mail-filter/opensmtpd-extras:table-python - table for interfacing with dev-lang/python
-mail-filter/opensmtpd-extras:table-redis - table for lookups with dev-db/redis
-mail-filter/opensmtpd-extras:table-socketmap - table for lookups using a socket map
-mail-filter/opensmtpd-extras:table-sqlite - table for lookups with dev-db/sqlite3
-mail-filter/opensmtpd-extras:table-stub - stub table
 mail-filter/postfwd:tools - Install additional tools for testing postfwd
 mail-filter/postgrey:targrey - Enables the targrey patch
 mail-filter/rmilter:dkim - Enable support for DomainKeys Identified Mail
@@ -5594,7 +5561,7 @@ net-analyzer/wireshark:minizip - Build with zip file compression support
 net-analyzer/wireshark:netlink - Use dev-libs/libnl
 net-analyzer/wireshark:nghttp2 - Use net-libs/nghttp2 for HTTP/2 support
 net-analyzer/wireshark:pcap - Use net-libs/libpcap for network packet capturing (build dumpcap, rawshark)
-net-analyzer/wireshark:plugin_ifdemo - Install plugin interface demo
+net-analyzer/wireshark:plugin-ifdemo - Install plugin interface demo
 net-analyzer/wireshark:plugins - Install plugins
 net-analyzer/wireshark:randpkt - Install randpkt, a utility for creating pcap trace files full of random packets
 net-analyzer/wireshark:randpktdump - Install randpktdump, an extcap interface to provide access to the random packet generator (randpkt)
