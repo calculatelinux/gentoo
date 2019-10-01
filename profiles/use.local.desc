@@ -2251,6 +2251,7 @@ dev-libs/libdynd:cuda - Enable NVIDIA CUDA toolkit support
 dev-libs/libdynd:mkl - Enable a plugin for Intel Math Kernel Library sci-libs/mkl
 dev-libs/libevent:debug - Support runtime debug mode and malloc hooks (for programmers)
 dev-libs/libffi:pax_kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
+dev-libs/libffi-compat:pax_kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
 dev-libs/libflatarray:cuda - Enables plugins for NVIDIA GPUs (e.g. CUDAAllocator)
 dev-libs/libgcrypt:o-flag-munging - Enable O-flag mangling during build
 dev-libs/libgdata:crypt - Use app-crypt/gcr for keeping tokens and passwords in non-pageable memory for improved security
@@ -2559,10 +2560,10 @@ dev-php/PEAR-HTTP_Request2:zlib - Force dev-lang/php to be compiled with zlib ex
 dev-php/PEAR-PHP_Beautifier:cli - Require dev-lang/php to be built with the "cli" SAPI and install the php_beautifier script.
 dev-php/agavi:executable - Install the "agavi" executable used to manage projects. This requires dev-php/phing, and may be omitted if you are (for example) deploying an existing site to a production server.
 dev-php/maxmind-db-reader:extension - Build the C extension that uses dev-libs/libmaxminddb
-dev-php/pecl-apcu:lock_pthreadmutex - Enable pthread mutex locking
-dev-php/pecl-apcu:lock_pthreadrw - Enable pthread read/write locking
-dev-php/pecl-apcu:lock_semaphore - Enable semaphore locks instead of fcntl
-dev-php/pecl-apcu:lock_spinlock - Enable spin locks (EXPERIMENTAL)
+dev-php/pecl-apcu:lock-pthreadmutex - Enable pthread mutex locking
+dev-php/pecl-apcu:lock-pthreadrw - Enable pthread read/write locking
+dev-php/pecl-apcu:lock-semaphore - Enable semaphore locks instead of fcntl
+dev-php/pecl-apcu:lock-spinlock - Enable spin locks (EXPERIMENTAL)
 dev-php/pecl-event:extra - Add support of the Libevent extra API
 dev-php/pecl-memcached:igbinary - Enable support for the igbinary serializer
 dev-php/pecl-memcached:json - Enable support for json serialization
@@ -8586,6 +8587,7 @@ sys-libs/musl-nscd:minimal - Only installs the header files
 sys-libs/ncurses:ada - Add bindings for the ADA programming language
 sys-libs/ncurses:tinfo - Build curses library (libncurses) sep from the low-level terminfo library (libtinfo) -- usually needed only for binary packages -- but it is binary compatible in either mode
 sys-libs/ncurses:trace - Enable test trace() support in ncurses calls
+sys-libs/ncurses-compat:tinfo - Build curses library (libncurses) sep from the low-level terminfo library (libtinfo) -- usually needed only for binary packages -- but it is binary compatible in either mode
 sys-libs/newlib:nano - Build additional newlib-nano library
 sys-libs/pam:berkdb - Build the pam_userdb module, that allows to authenticate users against a Berkeley DB file. Please note that enabling this USE flag will create a PAM module that links to the Berkeley DB (as provided by sys-libs/db) installed in /usr/lib and will thus not work for boot-critical services authentication.
 sys-libs/pam:cracklib - Build the pam_cracklib module, that allows to verify the chosen passwords' strength through the use of sys-libs/cracklib. Please note that simply enabling the USE flag on this package will not make use of pam_cracklib by default, you should also enable it in sys-auth/pambase as well as update your configuration files.
@@ -9067,11 +9069,11 @@ x11-misc/x11vnc:xrandr - Enable support for the X xrandr extension
 x11-misc/xkbset:tk - Install the dev-perl/Tk based xkbset-gui utility
 x11-misc/xlockmore:vtlock - Enables support for virtual terminal locking
 x11-misc/xlockmore:xlockrc - Enables xlockrc for people without PAM
+x11-misc/xmobar:conduit - Use conduit to fetch weather data.
 x11-misc/xmobar:mpd - Support mpd plugin
 x11-misc/xmobar:mpris - Enables MPRIS v1, v2 support
 x11-misc/xmobar:timezone - Enables localized date support
-x11-misc/xmobar:with_conduit - Use conduit to fetch weather data.
-x11-misc/xmobar:with_uvmeter - Plugin to show UV data for Australia.
+x11-misc/xmobar:uvmeter - Plugin to show UV data for Australia.
 x11-misc/xscreensaver:gdm - Use gdmflexiserver from gnome-base/gdm instead of x11-misc/lightdm
 x11-misc/xscreensaver:new-login - Enable user switching support using gdmflexiserver (x11-misc/lightdm)
 x11-misc/xsr:cursor - Capture mouse cursor using x11-misc/xdotool, and place them on the screenshots using media-gfx/imagemagick
