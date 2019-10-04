@@ -30,9 +30,15 @@ IUSE=""
 DEPEND="
 	=dev-libs/libplatform-2*
 	~media-tv/kodi-9999
+	media-libs/glm
 	virtual/opengl
 	"
 
 RDEPEND="
 	${DEPEND}
 	"
+
+src_prepare(){
+	[ -d depends ] && rm -rf depends || die
+	cmake-utils_src_prepare
+}

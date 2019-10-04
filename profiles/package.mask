@@ -29,6 +29,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Patrice Clement <monsieurp@gentoo.org> (2019-10-02)
+# OTR support is fully integrated within irssi since version 1.2.0. Type /help otr
+# at the command prompt to find out more. The OTR module is therefore obsolete
+# and can be tree-cleaned.
+# Masked for removal in 30 days. Bug #696074.
+net-irc/irssi-otr
+
 # Ulrich Müller <ulm@gentoo.org> (2019-10-01)
 # Fails byte-compilation with recent Emacs versions.
 # Homepage and SRC_URI are gone. Upstream package
@@ -262,11 +269,6 @@ app-portage/hashgen
 # No reverse dependencies.
 # Removal in 30 days.  Bug #694390.
 dev-go/go-oauth2
-
-# Zac Medico <zmedico@gentoo.org> (2019-09-14)
-# No reverse dependencies.
-# Removal in 30 days.  Bug #694392.
-dev-go/go-protobuf
 
 # Michał Górny <mgorny@gentoo.org> (2019-09-14)
 # Unmaintained.  All of them were not bumped since 2016.  No reverse
@@ -1081,49 +1083,9 @@ app-text/docbook-sgml
 # Masked for removal.
 =www-client/seamonkey-2.49.9.1_p0
 
-# Matthias Maier <tamiko@gentoo.org> (2019-09-03)
-# Duplicate package - use sci-libs/med instead, bug #693146
-# (Expedited) removal in 7 days
-sci-libs/libmed
-
-# Matt Turner <mattst88@gentoo.org> (2019-09-03)
-# Not supported by the current browserpass extension.
-# Removal in 30 days
-<www-plugins/browserpass-3
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-02)
-# gnome-vfs was deprecated along with GNOME 2.22 in favor of gvfs.
-# gnome-vfsmm provides C++ bindings for it, with last release in 2009
-# and only one reverse dependency.
-#
-# assogiate is the last revdep of gnome-vfsmm.  It was last bumped
-# in 2007, and the homepage is long gone (last seen ~2009).
-#
-# Removal in 30 days.  Bug #649000.
-dev-cpp/gnome-vfsmm
-gnome-extra/assogiate
-
 # Matt Turner <mattst88@gentoo.org> (2019-09-01)
 # <dev-scheme/guile-2 is package.mask'd
 <media-sound/lilypond-2.19
-
-# Matt Turner <mattst88@gentoo.org> (2019-09-01)
-# dev-scheme/guile-gnome-platform depends on dev-scheme/guile:12. Its only
-# reverse dependency is sci-chemistry/burrow-owl, so include it. The others are
-# dependencies of sci-chemistry/burrow-owl as well, and it is their only
-# reverse dependency.
-# Bug #693290.
-dev-libs/g-wrap
-dev-scheme/guile-cairo
-dev-scheme/guile-gnome-platform
-dev-scheme/guile-lib
-sci-chemistry/burrow-owl
-sci-libs/starparse
-
-# Matt Turner <mattst88@gentoo.org> (2019-09-01)
-# Unmaintained, unpackaged versions from 2015. Incompatible with guile-2.2.
-# Removal in 30 days. # Bug #654654.
-games-strategy/liquidwar6
 
 # Matt Turner <mattst88@gentoo.org> (2019-09-01)
 # TeXmacs is the only remaining package in tree that requires guile-1.8, which
@@ -1131,40 +1093,6 @@ games-strategy/liquidwar6
 # few years. Bug #436400
 app-office/texmacs
 <dev-scheme/guile-2
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-01)
-# Remnant of Half-Life server stuff that was removed back in 2005.
-# Removal in 30 days.  Bug #693260.
-dev-games/hlsdk
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-01)
-# Ancient, i386-only binary package.  Current version is a nightly
-# from 2006.  The package has had a release since, has found a new
-# upstream and has been forked multiple times as well.  Apparently
-# NetRadiant-custom is the most recently maintained fork (not packaged).
-# Removal in 30 days.  Bug #181372.
-dev-games/gtkradiant
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-01)
-# Never keyworded on amd64 (and probably does not work on 64-bit
-# systems).  Last release from 2001.  Requires rare hardware.
-# Removal in 30 days.  Bug #693258.
-dev-games/flinker
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-01)
-# Last bumped in 2007.  The current version is known to be broken
-# on amd64.  The game has been discontinued, and then revived/forked
-# multiple times.  It is pending a version bump since at least 2011.
-# See [1] for the 'revived' project and links to other forks.
-# [1] http://www.netpanzer.info/Download/
-# Removal in 30 days.  Bug #375237.
-games-strategy/netpanzer
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-01)
-# Discontinued upstream.  Last release in 2003.  Replaced
-# by dev-embedded/urjtag.
-# Removal in 30 days.  Bug #693256.
-dev-embedded/jtag
 
 # Miroslav Šulc <fordfrog@gentoo.org> (2019-08-19)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
@@ -1197,18 +1125,6 @@ dev-lang/php:7.4
 # Daniel Pielmeier <billie@gentoo.org> (2019-07-06)
 # Requires >=dev-lang/lua-5.2 which is masked
 >=app-admin/conky-1.11.4
-
-# Patrick Lauer <patrick@gentoo.org> (2019-05-23)
-# PostgreSQL beta and release candidate releases are pre-release testing
-# versions, not meant for production use. They are feature-frozen, and are
-# released to the public for testing before final release
-#
-# NOTE: Successive beta or candidate releases may not be backwards compatible,
-# so it is important that you review the release notes before upgrading.
-#
-# For more information about beta and release candidate versions, see:
-#     https://www.postgresql.org/developer/beta/
-dev-db/postgresql:12
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2019-05-11)
 # Perl 5.24 will be removed soon. Please upgrade.
