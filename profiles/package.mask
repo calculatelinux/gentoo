@@ -29,6 +29,108 @@
 
 #--- END OF EXAMPLES ---
 
+# Stefan Strogin <steils@gentoo.org> (2019-10-05)
+# Masked for testing
+>=dev-libs/libressl-3.0.1
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-05)
+# Apparently included in apache-2.4, rendering split package obsolete.
+# Removal in 30 days.  Bug #680768.
+www-apache/mod_xml2enc
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-05)
+# Does not support kernels >3.11 (oldest gentoo-sources is 4.4 atm).
+# Not bumped since 2013.  Bump request waiting since 2014.
+# Removal in 30 days.  Bug #696376.
+sys-block/iscsitarget
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-05)
+# Open vulnerability for two years.  No maintainer activity since 2017.
+# Upstream is not making any new releases, and patches are accumulating.
+# Removal in 30 days.  Bug #662878.
+net-libs/openslp
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-04)
+# Unmaintained, EAPI 0 packages.  No reverse dependencies.  If you want
+# them to stay, please port them to EAPI 7, and preferably become
+# the maintainer.
+# Removal in 30 days.  Bug #696252.
+app-benchmarks/volanomark
+app-cdr/mode2cdmaker
+app-cdr/xdvdfs-tools
+app-mobilephone/cobex
+app-office/tedia2sql
+app-text/mht-rip
+dev-embedded/gnap
+dev-libs/xplc
+dev-util/smem
+dev-vcs/cvsd
+dev-vcs/cvsq
+dev-vcs/svn2cl
+mail-client/biabam
+mail-client/pinepgp
+mail-filter/clamassassin
+mail-filter/clamsmtp
+mail-filter/disspam
+mail-filter/sqlgrey
+media-gfx/cthumb
+media-gfx/fblogo
+net-dialup/globespan-adsl
+net-dns/bind-dns-keygen
+net-firewall/fwanalog
+net-firewall/fwipsec
+net-firewall/quicktables
+net-firewall/shapecfg
+net-irc/dircproxy
+net-irc/jircii
+net-irc/miau
+net-mail/hotwayd
+net-mail/popick
+net-mail/poppassd_ceti
+net-mail/qmail-notify
+net-mail/spamcup
+net-mail/vacation
+net-mail/yosucker
+net-misc/cgterm
+net-misc/clockspeed-conf
+net-misc/fmirror
+net-misc/hashcash
+net-misc/ng-utils
+net-misc/sendfile
+net-news/yencode
+net-nntp/slrnconf
+net-nntp/ubh
+net-p2p/createtorrent
+net-p2p/ctcs
+net-proxy/ratproxy
+net-wireless/airsnort
+sys-apps/hwdata-redhat
+sys-auth/pam-afs-session
+sys-auth/pam_chroot
+sys-auth/pam_require
+sys-block/dellmgr
+sys-fs/gt5
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-04)
+# Unmaintained, EAPI 0 packages.  No reverse dependencies.  If you want
+# them to stay, please sacrifice the 30 minutes of your life needed
+# to port them to EAPI 7, recheck license, update URIs, etc.
+# Removal in 30 days.  Bug #696248.
+app-dicts/dictd-devils
+app-dicts/dictd-dicts
+app-dicts/dictd-elements
+app-dicts/dictd-foldoc
+app-dicts/dictd-gazetteer
+app-dicts/dictd-jargon
+app-dicts/dictd-misc
+app-dicts/dictd-web1913
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-04)
+# Unmaintained.  EAPI 0.  Last release in 2009.  No reverse
+# dependencies.
+# Removal in 30 days.  Bug #696176.
+mail-filter/procmail-lib
+
 # Patrice Clement <monsieurp@gentoo.org> (2019-10-02)
 # OTR support is fully integrated within irssi since version 1.2.0. Type /help otr
 # at the command prompt to find out more. The OTR module is therefore obsolete
@@ -952,132 +1054,6 @@ games-emulation/daphne
 # Removal in 30 days.  Bug #693746.
 mail-mta/mini-qmail
 
-# Michał Górny <mgorny@gentoo.org> (2019-09-07)
-# Unmaintained.  Beta version from 2012.  The ebuild is currently
-# broken, and since it relies on CD install, so it needs someone with
-# the CD to fix it.  The original maintainer suggests trying Serious Sam
-# Fusion in wine instead.
-# Removal in 30 days.  Bug #551174.
-games-fps/serious-sam-tfe
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-07)
-# Has a build failure repoted.  Last bumped in 2006.  Homepage is gone,
-# and (newer) sources are nowhere to be found.
-# Removal in 30 days.  Bug #617188.
-sys-cluster/lspbs
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-07)
-# sci-mathematics/kodkod: reported to fail to build.  Last bumped
-# in 2012.  Homepage is gone, and sources are nowhere to be found.
-#
-# Removal in 30 days.  Bug #685802.
-sci-mathematics/kodkod
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-07)
-# Unmaintained.  Not bumped since 2011.
-# Removal in 30 days.  Bug #693232.
-net-mail/kuvert
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-07)
-# Both packages are (now) mirror-restricted and have non-working
-# SRC_URI.
-# Removal in 30 days.  Bug #601052.
-games-action/mutantstorm-demo
-games-action/spacetripper-demo
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-07)
-# Mirror-restricted, SRC_URI down and sources nowhere to be found.
-# Removal in 30 days.  Bug #692798.
-sys-apps/adjtime
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-07)
-# Unmaintained.  Installs world-writable directory.  Last release
-# in 2004.
-# Removal in 30 days.  Bug #692522.
-app-admin/yaala
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-07)
-# Last release in 2004.  EAPI 0.  x86-only.  Upstream recommends
-# switching to XML Forms.
-# Removal in 30 days.  Bug #693658.
-app-text/fdftk
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-07)
-# Proprietary, fetch-restricted package.  Last bumped in 2007.  EAPI 0.
-# No reverse dependencies.
-# Removal in 30 days.  Bug #693656.
-dev-java/jdbc-informix
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-07)
-# Unmaintained.  EAPI 0.  Last (pre-alpha) release in 2001.  No reverse
-# dependencies.  Removal in 30 days.  Bug #693644.
-media-libs/sdlmm
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-07)
-# Has reported build and test failures.  Last release in 2013.  Current
-# stable is EAPI 0, and there is no point in stabilizing the newer
-# version.  No reverse dependencies.
-# Removal in 30 days.  Bug #622340.
-media-libs/sdif
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-07)
-# Unmaintained.  EAPI 0.  Last bumped in 2005.  Upstream homepage
-# and sources gone.  No reverse dependencies.
-# Removal in 30 days.  Bug #693642.
-media-libs/libopendaap
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-07)
-# Does not install correctly on multilib systems.  EAPI 0.  Multiple
-# other QA issues.  Obscure format with unlikely real use.  The domain
-# for homepage expired.  Last upstream commit in 2013.
-# Removal in 30 days.  Bug #313087.
-media-libs/libnut
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-07)
-# Has a build failure reported.  Project discontinued and homepage gone.
-# Last bumped in 2007.  No reverse dependencies.
-# Removal in 30 days.  Bug #664494.
-media-libs/libjackasyn
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-07)
-# Last (and only) release in 2005.  EAPI 0.  No reverse dependencies.
-# Removal in 30 days.  Bug #693640.
-media-libs/libipod
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-07)
-# Proprietary software with restricted download access.  Last bumped
-# in 2011.  Still at EAPI 0.  Of the two revdeps, both make FMOD
-# optional and support alternative sound systems.
-# Removal in 30 days.  Bug #453748.
-media-libs/fmod
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-06)
-# Unmaintained.  Tests fail to build.  Last release in 2014.  No reverse
-# dependencies.  Removal in 30 days.  Bug #640860.
-dev-cpp/xsd
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (2019-09-04)
-# EAPI 2. Brutally outdated and untouched for ages. Removal in
-# 30 days, bug 688504
-sci-libs/openfoam-bin
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-04)
-# EAPI 0.  Keyworded only for x86-fbsd which is dead.  Practically untouched
-# since 2007.  Removal in 30 days.  Bug #693504.
-app-admin/consolehm
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-04)
-# Unmaintained.  EAPI 0.  Last touched in 2010.  No real homepage.
-# No clear advantage over app-text/tree.
-# Removal in 30 days.  Bug #693502.
-app-text/ddir
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-04)
-# A metapackage without a really clear purpose.  No reverse
-# dependencies.
-# Removal in 30 days.
-app-text/docbook-sgml
-
 # Lars Wendler <polynomial-c@gentoo.org> (2019-09-04)
 # Unofficial build. Superseded by official 2.49.5 release.
 # Masked for removal.
@@ -1477,7 +1453,6 @@ app-admin/amazon-ec2-init
 # See bugs #515926 and #510960.
 sys-libs/lib-compat
 sys-libs/lib-compat-loki
-games-action/mutantstorm-demo
 games-action/phobiaii
 games-fps/rtcw
 games-fps/unreal

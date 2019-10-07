@@ -11,7 +11,7 @@ SRC_URI="https://download.enlightenment.org/rel/libs/${PN}/${P}.tar.xz"
 
 LICENSE="BSD-2 GPL-2 LGPL-2.1 ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="X bmp connman dds debug doc +drm +eet elogind examples fbcon fontconfig
 	fribidi gif gles2 gnutls glib +gstreamer harfbuzz hyphen ibus ico libressl
 	lua +luajit jpeg2k json nls mono opengl +pdf physics pmaps postscript psd
@@ -145,7 +145,6 @@ src_configure() {
 
 		-D edje-sound-and-video=true
 		-D eeze=true
-		-D elua=true
 		-D libmount=true
 		-D native-arch-optimization=true
 		-D xinput2=true
@@ -162,6 +161,7 @@ src_configure() {
 		$(meson_use gstreamer)
 		$(meson_use harfbuzz)
 		$(meson_use hyphen)
+		$(meson_use luajit elua)
 		$(meson_use nls)
 		$(meson_use physics)
 		$(meson_use pulseaudio)

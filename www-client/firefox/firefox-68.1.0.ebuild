@@ -163,7 +163,6 @@ DEPEND="${CDEPEND}
 		)
 	)
 	pulseaudio? ( media-sound/pulseaudio )
-	>=virtual/cargo-1.34.0
 	>=virtual/rust-1.34.0
 	wayland? ( >=x11-libs/gtk+-3.11:3[wayland] )
 	amd64? ( >=dev-lang/yasm-1.1 virtual/opengl )
@@ -552,9 +551,6 @@ src_configure() {
 	mozconfig_annotate '' --with-google-safebrowsing-api-keyfile="${S}/google-api-key"
 
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
-
-	# disable webrtc for now, bug 667642
-	use arm && mozconfig_annotate 'broken on arm' --disable-webrtc
 
 	# allow elfhack to work in combination with unstripped binaries
 	# when they would normally be larger than 2GiB.

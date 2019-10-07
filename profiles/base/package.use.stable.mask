@@ -21,7 +21,6 @@ dev-python/aiohttp-socks test
 # Kent Fredric <kentnl@gentoo.org> (2019-07-30)
 # These features require dev-perl/GD, which currently can't be
 # considered stable due to serious defects upstream. Bug #661634
-app-admin/yaala gd
 app-misc/gcstar stats
 app-misc/g15daemon perl
 dev-lang/php coverage
@@ -65,10 +64,6 @@ media-plugins/grilo-plugins chromaprint
 # net-libs/libkvkontakte all not stable anywhere.
 kde-apps/kipi-plugins mediawiki vkontakte
 media-gfx/digikam dnn vkontakte
-
-# Brian Evans <grknight@gentoo.org> (2018-12-06)
-# Mask USE flag since argon2 dependency is not stable on most arches
-dev-lang/php argon2
 
 # Mikle Kolyada <zlogene@gentoo.org> (2018-11-07)
 # sssd is only stable for amd64 and x86

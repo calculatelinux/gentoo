@@ -124,7 +124,6 @@ media-libs/opencv contrib_dnn
 
 # Michał Górny <mgorny@gentoo.org> (2017-12-30)
 # Moved from use.mask since they are flags local to one package.
-dev-cpp/xsd ace
 media-tv/tvheadend hdhomerun
 
 # Michał Górny <mgorny@gentoo.org> (2017-11-29)
@@ -515,10 +514,6 @@ dev-qt/qtwebkit -jit
 # Markus Meier <maekke@gentoo.org> (2011-09-05)
 # unkeyworded deps for bug 379657 and bug 379651
 app-admin/packagekit-base entropy
-
-# Robin H. Johnson <robbat2@gentoo.org> (2011-09-03)
-# Remove this for your arch after you keyword dev-utils/google-perftools and virtual/gsasl (bug #381737)
-dev-libs/libmemcached sasl
 
 # Sebastian Pipping <sping@gentoo.org> (2011-02-22)
 # No media-sound/lilypond here, yet (bug #356069)

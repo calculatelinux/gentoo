@@ -1400,7 +1400,6 @@ dev-cpp/libjson-rpc-cpp:redis-client - Build support for Redis client using dev-
 dev-cpp/libjson-rpc-cpp:redis-server - Build support for Redis server using dev-libs/hiredis
 dev-cpp/libjson-rpc-cpp:stubgen - Build header stub code generator (needed for development and when pregenerated headers are not bundled)
 dev-cpp/sourcetrail:examples - Install example projects.
-dev-cpp/xsd:ace - Enable support for serializing to/from an ACE CDR stream
 dev-db/aerospike-server-community:tools - Install extra tools
 dev-db/clickhouse:client - Build CLI client.
 dev-db/clickhouse:kafka - Enables support for kafka consumer.
@@ -2572,6 +2571,7 @@ dev-php/pecl-memcached:json - Enable support for json serialization
 dev-php/pecl-mysqlnd_qc:memcached - Use dev-libs/libmemcached as a storage handler
 dev-php/pecl-mysqlnd_qc:sqlite - Use dev-db/sqlite as a storage handler
 dev-php/pecl-redis:igbinary - Enables igbinary serialisation support
+dev-php/pecl-redis:json - Enables json serializer support
 dev-php/pecl-zmq:czmq - Use the czmq high level bindings
 dev-php/phing:zip - Support zip archives by requiring said support in dev-lang/php.
 dev-php/swoole:http2 - Add support for HTTP/2 protocol via net-libs/nghttp2
@@ -4493,7 +4493,6 @@ media-libs/qtav:gui - Build a video player gui
 media-libs/quvi:json - Enable support for JSON output
 media-libs/raptor:json - Enable support for JSON parsing
 media-libs/raspberrypi-userland-bin:hardfp - Use armv6 hardfp ABI
-media-libs/sdif:ftruncate - Enables usage of ftruncate v. truncate
 media-libs/sdl-mixer:fluidsynth - Use media-sound/fluidsynth for MIDI support
 media-libs/sdl-mixer:midi - basic support for MIDI files
 media-libs/sdl-mixer:mod - basic support for MOD files
@@ -7335,7 +7334,7 @@ sci-geosciences/gmt:mex - Enable compilation of mex supplement which requires Oc
 sci-geosciences/gmt:octave - Enable octave support
 sci-geosciences/gpsbabel:gui - Enable the graphical user interface (requires dev-qt/qtwebengine)
 sci-geosciences/gpsd:dbus - export gpsd data over dbus connections
-sci-geosciences/gpsd:latency_timing - support latency timing information
+sci-geosciences/gpsd:latency-timing - support latency timing information
 sci-geosciences/gpsd:ntp - Enable net-misc/ntp shared memory interface and PPS kernel support for GPS time
 sci-geosciences/gpsd:shm - export gpsd over shared memory
 sci-geosciences/gpsd:sockets - export gpsd over unix sockets
@@ -8843,9 +8842,6 @@ www-client/weboob:secure-updates - Enable secure updates
 www-misc/litmus:libproxy - Support for automatic proxy configuratino management through net-libs/libproxy.
 www-misc/litmus:libxml2 - Use dev-libs/libxml2 to parse XML
 www-misc/litmus:pkcs11 - Support for PKCS #11 through PaKChoiS (dev-libs/pakchois).
-www-misc/monitorix:apcupsd - Make use of a daemon that controls APC UPSes with sys-power/apcupsd.
-www-misc/monitorix:httpd - Enables the CGI webserver with any package that satisfies virtual/httpd-cgi.
-www-misc/monitorix:postfix - Analyze postfix logs with net-mail/pflogsumm.
 www-misc/shellinabox:pam - Enable PAM support.
 www-misc/vdradmin-am:vdr - Support for media-video/vdr. Disable this if the VDR you want to control runs at a remote machine.
 www-misc/xxv:themes - Enable more themes via x11-themes/xxv-skins

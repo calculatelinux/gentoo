@@ -39,7 +39,7 @@ inherit check-reqs flag-o-matic toolchain-funcs gnome2-utils llvm mozcoreconf-v6
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="https://www.mozilla.org/thunderbird"
 
-KEYWORDS="~amd64 ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="bindist clang dbus debug hardened jack lightning neon pulseaudio
@@ -144,11 +144,9 @@ DEPEND="${CDEPEND}
 	)
 	pulseaudio? ( media-sound/pulseaudio )
 	elibc_glibc? (
-		virtual/cargo
 		virtual/rust
 	)
 	elibc_musl? (
-		virtual/cargo
 		virtual/rust
 	)
 	amd64? (
@@ -241,6 +239,7 @@ src_prepare() {
 	eapply "${WORKDIR}/firefox"
 
 	eapply "${FILESDIR}"/thunderbird-60-sqlite3-fts3-tokenizer.patch
+	eapply "${FILESDIR}"/thunderbird-60.9.0-rust-1.38-compat.patch
 
 	# Ensure that are plugins dir is enabled as default
 	sed -i -e "s:/usr/lib/mozilla/plugins:/usr/lib/nsbrowser/plugins:" \
