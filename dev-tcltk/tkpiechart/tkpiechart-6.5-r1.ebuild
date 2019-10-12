@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=0
@@ -16,6 +16,7 @@ IUSE=""
 
 DEPEND=">=dev-lang/tk-8.3
 	dev-tcltk/tcllib"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	dodir /usr/$(get_libdir)/tkpiechart

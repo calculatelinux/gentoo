@@ -128,7 +128,7 @@ app-admin/rsyslog:kerberos - Build the GSSAPI input and output module (requires 
 app-admin/rsyslog:kubernetes - Build the kubernetes modify plugin (requires net-misc/curl)
 app-admin/rsyslog:libressl - Use dev-libs/libressl instead of dev-libs/openssl (you still need to enable functionality which requires OpenSSL)
 app-admin/rsyslog:mdblookup - Build the MaxMind DB lookup message modify plugin using dev-libs/libmaxminddb
-app-admin/rsyslog:mongodb - Build the MongoDB output module (requires dev-libs/libmongo-client)
+app-admin/rsyslog:mongodb - Build the MongoDB output module (requires dev-libs/mongo-c-driver)
 app-admin/rsyslog:mysql - Build the MySQL database output module (requires virtual/mysql)
 app-admin/rsyslog:normalize - Build the normalize modify module (requires dev-libs/libee and dev-libs/liblognorm)
 app-admin/rsyslog:omhttp - Build the http output module (requires net-misc/curl)
@@ -2055,18 +2055,6 @@ dev-lang/swig:ccache - build ccache-swig(a fast compiler cache)
 dev-lang/vala:valadoc - Installs valadoc documentation generation tool
 dev-lang/yap:R - Enable support for connecting R to Prolog
 dev-lang/zig:experimental - Enable builds that do not support all of LLVM's target architectures
-dev-libs/actor-framework:benchmarks - Due to the number of out-of-tree deps, these only get installed as docs
-dev-libs/actor-framework:boost - Make use of Boost's ASIO functionality
-dev-libs/actor-framework:cash - Build the C Actor Shell for introspection and debugging
-dev-libs/actor-framework:debug - Raises log-level to DEBUG, enables runtime checks and address sanitizer
-dev-libs/actor-framework:doc - Compiles and installs the documentation as PDF and HTML
-dev-libs/actor-framework:examples - Installs the provided example source files
-dev-libs/actor-framework:mem_management - Enables built-in memory management
-dev-libs/actor-framework:nexus - Nexus is the central component for CAF's runtime inspection
-dev-libs/actor-framework:opencl - Compiles against the provided opencl implementation
-dev-libs/actor-framework:riac - Runtime inspection and configuration
-dev-libs/actor-framework:static - Provides a static build
-dev-libs/actor-framework:test - Builds the provided unit tests
 dev-libs/antlr-c:debugger - Compiles debug info into the library
 dev-libs/appstream:apt - Enables Debians APT support
 dev-libs/appstream-glib:fonts - Enable fonts support for appstream-builder.
@@ -2208,8 +2196,6 @@ dev-libs/folks:telepathy - Load contacts from the Telepathy framework
 dev-libs/folks:tracker - Load contacts from app-misc/tracker index
 dev-libs/folks:utils - Build the folks-inspect utility
 dev-libs/fstrm:utils - Build fstrm utility programs
-dev-libs/gecode:gist - Enable Gist, the Gecode Interactive Search Tool
-dev-libs/gecode:gmp - Enable trigonometric and transcendental float constraints
 dev-libs/gf2x:bindist - Disable automatic fine-tuning to local processor features like pclmul or sse2.
 dev-libs/gf2x:custom-tune - Extra long compile time for tuning hardware specific low-level routines
 dev-libs/gf2x:fft - Build an FFT API for multiplication of 2 polynomials over GF(2)
@@ -2274,7 +2260,6 @@ dev-libs/libisoburn:launch-frontend-setuid - Enable the tcl gui for xorriso unde
 dev-libs/libisofs:verbose-debug - Enable verbose debug messages
 dev-libs/liblogging:rfc3195 - Enables RFC 3195 protocol (aka syslog-reliable) support. If you don't know what this is, you don't need it!
 dev-libs/liblogging:stdlog - Enables liblogging's core component (think of it as a the next version of the syslog(3) API).
-dev-libs/libmail:apop - Enables the APOP authentication method
 dev-libs/libmemcached:hsieh - Use Hsieh hash algorithm.
 dev-libs/libmemcached:libevent - Use the libevent event loop interface.
 dev-libs/libmemcached:sasl - Use sasl auth for communications.
@@ -2316,13 +2301,8 @@ dev-libs/libslz:tools - Install additional tools (zenc, zdec)
 dev-libs/libsodium:asm - Enables assembly implementations
 dev-libs/libsodium:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/libspt:libtirpc - Build against net-libs/libtirpc for RPC support
-dev-libs/libsqlora8:orathreads - Use Oracle threads
 dev-libs/libtasn1:valgrind - Enable usage of dev-util/valgrind in debug
 dev-libs/libtermkey:demos - Install demos, which pulls in dev-libs/glib
-dev-libs/libucl:regex - Enable regex checking for schema
-dev-libs/libucl:signatures - Enable signatures check
-dev-libs/libucl:urlfetch - Enable URLs fetch
-dev-libs/libucl:utils - Install the chargen and objdump utilities
 dev-libs/libunibreak:doc - Install html API documentation.
 dev-libs/libunibreak:man - Generate man pages with doxygen.
 dev-libs/libverto:glib - Support event loops using dev-libs/glib
@@ -2432,8 +2412,6 @@ dev-libs/xapian:inmemory - Enabled inmemory backend db support
 dev-libs/xapian:remote - Enabled remote backend db support
 dev-libs/xerces-c:iconv - Use iconv (virtual/libiconv) as message loader and transcoder (in general it would be possible to use iconv only as message loader and something else like icu or the native method as transcoder and vice-versa, but this is a less common case and hard to handle)
 dev-libs/xerces-c:threads - Enable threading support through pthread (or other libraries on AIX, IRIX, HPUX, Solars). Highly recommended
-dev-libs/xml-security-c:nss - Use dev-libs/nss for certain crypto operations (configureable at runtime)
-dev-libs/xml-security-c:xalan - Enable support for XSLT and XPath parsing by dev-libs/xalan-c
 dev-libs/xmlrpc-c:abyss - Build the Abyss mini web-server.
 dev-libs/xmlrpc-c:libxml2 - Use dev-libs/libxml2 to parse XML instead of the internal expat library.
 dev-libs/xmlrpc-c:threads - Controls whether to build the Abyss web-server with pthreads or fork 'threading'.
@@ -3095,7 +3073,6 @@ dev-util/perf:unwind - Use sys-libs/libunwind for frame unwinding support.
 dev-util/pkgcheck:network - Enable support for network checks using dev-python/requests
 dev-util/pkgconf:pkg-config - Install as a replacement for dev-util/pkgconfig
 dev-util/pkgconfig:internal-glib - Use internal copy of dev-libs/glib
-dev-util/pkgconfig-openbsd:pkg-config - Install as a replacement for dev-util/pkgconfig
 dev-util/scanmem:gui - Enable the GameConqueror GUI
 dev-util/sccache:azure - Enable Azure Blob Storage support
 dev-util/sccache:dist-client - Enables distributed support in the sccache client
@@ -5351,7 +5328,7 @@ net-analyzer/hexinject:tools - Install hex2raw and prettypacket tools
 net-analyzer/httping:tfo - Enable support for TCP Fast Open
 net-analyzer/hydra:gcrypt - Enable radmin2 support through dev-libs/libgcrypt
 net-analyzer/hydra:libssh - Enable SSH support through net-libs/libssh
-net-analyzer/hydra:mongodb - MongoDB support through dev-libs/libmongo-client
+net-analyzer/hydra:mongodb - MongoDB support through dev-libs/mongo-c-driver
 net-analyzer/hydra:ncp - NCP protocol (NetWare) support through net-fs/ncpfs
 net-analyzer/icinga:contrib - additional scripts
 net-analyzer/icinga:eventhandler - Adds support for running custom scripts whenever a host or service state change occurs
@@ -8395,28 +8372,6 @@ sys-firmware/seabios:seavgabios - Include SeaVGABIOS binaries (replacement for v
 sys-firmware/sgabios:binary - Use pre-built binaries
 sys-firmware/sigrok-firmware-fx2lafw:binary - Use official upstream pre-built binaries
 sys-firmware/vgabios:binary - Use official upstream pre-built binaries (only default and cirrus images)
-sys-freebsd/boot0:tftp - Enable PXE/TFTP boot support.
-sys-freebsd/boot0:zfs - Enable booting on ZFS filesystems.
-sys-freebsd/freebsd-lib:netware - Build libraries and tools to work with NetWare protocols (IPX and NCP).
-sys-freebsd/freebsd-lib:zfs - Enable ZFS support.
-sys-freebsd/freebsd-rescue:netware - Build tools to work with NetWare protocols (IPX and NCP).
-sys-freebsd/freebsd-rescue:zfs - Enable ZFS support.
-sys-freebsd/freebsd-sbin:ipfilter - Build tools to administer the ipfilter firewall.
-sys-freebsd/freebsd-sbin:netware - Build libraries and tools to work with NetWare protocols (IPX and NCP).
-sys-freebsd/freebsd-sbin:pf - Build tools to administer the PF firewall.
-sys-freebsd/freebsd-sbin:zfs - Enable ZFS support.
-sys-freebsd/freebsd-share:zfs - Enable ZFS support.
-sys-freebsd/freebsd-sources:build-kernel - Build and install a kernel (recommended).
-sys-freebsd/freebsd-sources:dtrace - Enable DTrace support.
-sys-freebsd/freebsd-sources:zfs - Enable ZFS support.
-sys-freebsd/freebsd-ubin:ar - Build FreeBSD's ar and ranlib replacements based on libarchive. The toolchain will still use binutils' version but you can play with it. They have been renamed to freebsd-ar and freebsd-ranlib not to collide with binutils.
-sys-freebsd/freebsd-ubin:audit - Build auditing tools
-sys-freebsd/freebsd-ubin:netware - Build libraries and tools to work with NetWare protocols (IPX and NCP)
-sys-freebsd/freebsd-ubin:zfs - Enable ZFS support (for fstat actually).
-sys-freebsd/freebsd-usbin:audit - Build auditing tools.
-sys-freebsd/freebsd-usbin:floppy - Enable floppy disk utilities (fdcontrol, fdformat, fdread, fdwrite).
-sys-freebsd/freebsd-usbin:netware - Build libraries and tools to work with NetWare protocols (IPX and NCP).
-sys-freebsd/freebsd-usbin:zfs - Enable ZFS support.
 sys-fs/android-file-transfer-linux:fuse - Add FUSE mount helper
 sys-fs/bees:tools - Build extra tools useful for debugging (fiemap, fiewalk)
 sys-fs/btrfs-progs:convert - Build ext2 conversion utility (btrfs-convert)

@@ -13,6 +13,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="dev-tcltk/tcllib"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	dodir /usr/lib/scwoop
