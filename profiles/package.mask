@@ -29,6 +29,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Nick Sarnie <sarnex@gentoo.org> (2019-10-14)
+# No longer updated or supported by the Wine project
+# wine-any has no value without wine-d3d9
+# Removal in 30 days
+app-emulation/wine-any
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-13)
+# Last release in 2008.  Declared dead upstream, apparently broken
+# on newer systems.  EAPI 0.
+# Removal in 30 days.  Bug #697384.
+app-office/eqe
+
 # Michał Górny <mgorny@gentoo.org> (2019-10-12)
 # Utility library that is used only by net-analyzer/bsnmp
 # (to be removed).
@@ -70,6 +82,7 @@ net-analyzer/bsnmp
 net-firewall/pftop
 sys-apps/flock
 sys-auth/openpam
+virtual/pam
 sys-block/eject-bsd
 sys-fs/fuse4bsd
 sys-process/pidof-bsd
@@ -129,7 +142,6 @@ app-office/tedia2sql
 app-text/mht-rip
 dev-embedded/gnap
 dev-libs/xplc
-dev-util/smem
 dev-vcs/cvsd
 dev-vcs/cvsq
 dev-vcs/svn2cl
@@ -427,36 +439,10 @@ app-emulation/vmips-cross-bin
 # Removal in 30 days.  Bug #694514.
 dev-util/atomic-install
 
-# Fabian Groffen <grobian@gentoo.org> (2019-09-15)
-# Incorporated in >=app-portage/portage-utils-0.80 as qmanifest
-# Removal in 30 days.  Bug #694428
-app-portage/hashgen
-
 # Zac Medico <zmedico@gentoo.org> (2019-09-14)
 # No reverse dependencies.
 # Removal in 30 days.  Bug #694390.
 dev-go/go-oauth2
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-14)
-# Unmaintained.  All of them were not bumped since 2016.  No reverse
-# dependencies.
-# Removal in 30 days.  Bug #694398.
-dev-go/cli
-dev-go/go-gitlab-client
-dev-go/toml
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-14)
-# sci-biology/goby has been removed.  This package makes little sense
-# without it.
-# Removal in 30 days.
-sci-biology/goby-cpp
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-14)
-# Unmaintained.  Vulnerable to arbitrary code execution.  Debian (being
-# its current upstream) removed it.  The recommended replacement
-# is net-misc/dhcpcd.
-# Removal in 30 days.  Bug #694314.
-net-misc/pump
 
 # Thomas Sachau <tommy@gentoo.org> (2019-09-14)
 # Freemail has been completly rewritten so the current
@@ -525,64 +511,6 @@ dev-python/tracing
 dev-python/txsocksx
 dev-python/wsgilog
 dev-python/xmpppy
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-13)
-# Last bumped in 2017.  Newer version fails to fetch.  Pending bump.
-# Unresolved license issues.
-# Removal in 30 days.  Bug #694264.
-dev-util/idea-ultimate
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-13)
-# Unmaintained.  Last bumped in 2017.  Unresolved license issues.
-# Removal in 30 days.  Bug #694274.
-dev-util/webstorm
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-13)
-# Unmaintained.  No reverse dependencies.
-# Removal in 30 days.  Bug #694260.
-sys-libs/libmath++
-sys-libs/rvm
-sys-libs/system-config-base
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-13)
-# Unmaintained.  All look pretty dead.  No reverse dependencies.
-#
-# x11-libs/gtkhotkey: 2009
-# x11-libs/libaosd: 2010
-# x11-libs/libproplist: ancient?
-#
-# Removal in 30 days.  Bug #694258.
-x11-libs/gtkhotkey
-x11-libs/libaosd
-x11-libs/libproplist
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-13)
-# Unmaintained.  Not bumped since 2011.  Fails to build due to broken
-# build system.  No reverse dependencies.
-# Removal in 30 days.  Bug #500616.
-net-libs/nacl
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-13)
-# Unmaintained.  No reverse dependencies.
-# Removal in 30 days.  Bug #694256.
-net-libs/ccnet
-net-libs/ccrtp
-net-libs/dslib
-net-libs/libgmail
-net-libs/libs3
-net-libs/libyahoo2
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-13)
-# Unmaintained.  No reverse dependencies.
-#
-# media-libs/libbmp: 2010, homepage gone.
-# media-libs/libmkv: 2011.
-# media-libs/sampleicc: 2014, last upstream 2016.
-#
-# Removal in 30 days.  Bug #694254.
-media-libs/libbmp
-media-libs/libmkv
-media-libs/sampleicc
 
 # Lars Wendler <polynomial-c@gentoo.org> (2019-09-04)
 # Unofficial build. Superseded by official 2.49.5 release.
