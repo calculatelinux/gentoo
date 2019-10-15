@@ -556,6 +556,7 @@ app-emulation/libvirt:openvz - Support management of OpenVZ virtualisation (open
 app-emulation/libvirt:parted - Allow using real disk partitions as pool for disk image storage, using sys-block/parted to create, resize and delete them.
 app-emulation/libvirt:pcap - Support auto learning IP addreses for routing
 app-emulation/libvirt:phyp - Support IBM HMC / IVM hypervisor via PHYP protocol
+app-emulation/libvirt:pm-utils - Add runtime support for sys-power/pm-utils
 app-emulation/libvirt:qemu - Support management of QEMU virtualisation (app-emulation/qemu)
 app-emulation/libvirt:rbd - Enable rados block device support via sys-cluster/ceph
 app-emulation/libvirt:vepa - Virtual Ethernet Port Aggregator (VEPA) / 802.1Qbg support. Relies on macvtap support.
@@ -2626,7 +2627,6 @@ dev-python/jira:ipython - Include Interactive Python (IPython)
 dev-python/jira:jirashell - Include dependencies for jirashell (ipython, oauthlib)
 dev-python/jira:kerberos - Support Kerberos authentication
 dev-python/jira:oauth - Support OAuth authentication
-dev-python/kaa-base:tls - SSL/TLS support via dev-python/tlslite
 dev-python/kazoo:gevent - Enable support for the gevent based handler
 dev-python/kombu:mongodb - Enables MongoDB backend
 dev-python/kombu:msgpack - Enables MessagePack (de)serializer for Python
@@ -6474,11 +6474,13 @@ net-misc/crossbar:tor - include tor services connections support
 net-misc/csync:sftp - Enable sftp transfer support via net-libs/libssh
 net-misc/curl:alt-svc - Enable alt-svc support
 net-misc/curl:brotli - Enable brotli compression support
-net-misc/curl:http2 - Enabled HTTP/2.0 support
+net-misc/curl:http2 - Enable HTTP/2.0 support
 net-misc/curl:metalink - Enable metalink support
+net-misc/curl:nghttp3 - Enable HTTP/3.0 support using net-libs/nghttp3 and net-libs/ngtcp2
 net-misc/curl:progress-meter - Enable the progress meter
+net-misc/curl:quiche - Enable HTTP/3.0 support using net-libs/quiche
 net-misc/curl:rtmp - Enable RTMP Streaming Media support
-net-misc/curl:ssh - Enabled SSH urls in curl using libssh2
+net-misc/curl:ssh - Enable SSH urls in curl using libssh2
 net-misc/curl:ssl - Enable crypto engine support (via openssl if USE='-gnutls -nss')
 net-misc/dahdi:flash - Support (short) flash on FXS
 net-misc/dahdi-tools:ppp - Enables PPP/DAHDIRAS support

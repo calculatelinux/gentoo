@@ -29,6 +29,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2019-10-15)
+# Unmaintained and broken with current Frameworks.
+# Removal in 30 days. Bug #697780
+net-misc/knemo
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2019-10-15)
+# Fails self-tests badly, no revdeps, upstream doesnt care
+# since 1999. Removal in 30 days. Bug 641530.
+dev-perl/NetxAP
+
+# Lars Wendler <polynomial-c@gentoo.org> (2019-10-15)
+# Masked until webkit based packages no longer fail to build against
+>=dev-libs/icu-65.1
+>=dev-libs/icu-layoutex-65.1
+
 # Nick Sarnie <sarnex@gentoo.org> (2019-10-14)
 # No longer updated or supported by the Wine project
 # wine-any has no value without wine-d3d9
@@ -82,7 +97,6 @@ net-analyzer/bsnmp
 net-firewall/pftop
 sys-apps/flock
 sys-auth/openpam
-virtual/pam
 sys-block/eject-bsd
 sys-fs/fuse4bsd
 sys-process/pidof-bsd
@@ -431,14 +445,6 @@ app-text/gnopaster
 app-emulation/vmips
 app-emulation/vmips-cross-bin
 
-# Michał Górny <mgorny@gentoo.org> (2019-09-15)
-# This was an attempt to provide more reliable package merging mechanism
-# for Portage.  However, it was never finished and with Portage's
-# concept of bug-by-bug neverending backwards compatibility it would
-# never be accepted anyway.
-# Removal in 30 days.  Bug #694514.
-dev-util/atomic-install
-
 # Zac Medico <zmedico@gentoo.org> (2019-09-14)
 # No reverse dependencies.
 # Removal in 30 days.  Bug #694390.
@@ -450,67 +456,6 @@ dev-go/go-oauth2
 # has moved. So masking for removal.
 # Removal in 30 days. Bug #628914
 net-mail/Freemail
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-14)
-# The following packages are unmaintained and have not been tested
-# with Python 3.7.  Most of them are either in need of version bumps,
-# a few have been declared discontinued upstream.  None of them has
-# any reverse dependency.
-# Removal in 30 days.  Bug #694280.
-dev-python/attrdict
-dev-python/behave
-dev-python/cfgio
-dev-python/django-opensearch
-dev-python/django-otp-yubikey
-dev-python/django-phonenumber-field
-dev-python/grafanalib
-dev-python/libasyncns-python
-dev-python/maybe
-dev-python/mockredispy
-dev-python/parse
-dev-python/parse-type
-dev-python/pycallgraph
-dev-python/pyroma
-dev-python/pytest-raisesregexp
-dev-python/python-consul
-dev-python/python-ptrace
-dev-python/pyuv
-dev-python/safety
-dev-python/sphinxcontrib-cheeseshop
-dev-python/structlog
-dev-python/torment
-dev-python/twilio
-dev-python/xonsh
-dev-python/yubiotp
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-14)
-# The following packages are unmaintained and do not declare support
-# for Python 3.  Most of them are either in need of version bumps,
-# or are dead upstream (haven't had a release since 2009-2015).
-# None of them have any reverse dependencies.
-# Removal in 30 days.  Bug #694280.
-dev-python/Ming
-dev-python/casuarius
-dev-python/imdbpy
-dev-python/kaa-base
-dev-python/kaa-display
-dev-python/kaa-imlib2
-dev-python/kaa-metadata
-dev-python/larch
-dev-python/pybloomfiltermmap
-dev-python/pylirc
-dev-python/pyringe
-dev-python/pystdf
-dev-python/python-dsv
-dev-python/python-gudev
-dev-python/python-spidermonkey
-dev-python/python-virtkey
-dev-python/rtf2xml
-dev-python/tmdb3
-dev-python/tracing
-dev-python/txsocksx
-dev-python/wsgilog
-dev-python/xmpppy
 
 # Lars Wendler <polynomial-c@gentoo.org> (2019-09-04)
 # Unofficial build. Superseded by official 2.49.5 release.
