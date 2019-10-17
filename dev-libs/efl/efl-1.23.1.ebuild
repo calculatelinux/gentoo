@@ -37,6 +37,7 @@ RESTRICT="test"
 RDEPEND="
 	dev-libs/check
 	net-misc/curl
+	media-libs/giflib:=
 	media-libs/libpng:0=
 	sys-apps/dbus
 	sys-libs/zlib
@@ -72,7 +73,6 @@ RDEPEND="
 	)
 	fontconfig? ( media-libs/fontconfig )
 	fribidi? ( dev-libs/fribidi )
-	gif? ( media-libs/giflib:= )
 	gles2? (
 		media-libs/mesa[egl,gles2]
 		virtual/opengl
@@ -152,6 +152,7 @@ src_configure() {
 		-D xinput22=true
 
 		$(meson_use X x11)
+		$(meson_use debug debug-threads)
 		$(meson_use drm)
 		$(meson_use elogind)
 		$(meson_use examples build-examples)
@@ -209,7 +210,6 @@ src_configure() {
 	! use bmp && disabledEvasLoaders+="bmp,wbmp,"
 	! use dds && disabledEvasLoaders+="dds,"
 	! use eet && disabledEvasLoaders+="eet,"
-	! use gif && disabledEvasLoaders+="gif,"
 	! use gstreamer && disabledEvasLoaders+="gst,"
 	! use ico && disabledEvasLoaders+="ico,"
 	! use jpeg2k && disabledEvasLoaders+="jp2k,"

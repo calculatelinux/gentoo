@@ -5985,7 +5985,7 @@ net-im/vacuum:jabbersearch - Enable searching contacts in Jabber networks
 net-im/vacuum:messagearchiver - Enable saving the communication history both locally and on the server
 net-im/vacuum:messagecarbons - Allows to keep all user IM clients engaged in a conversation
 net-im/vacuum:multiuserchat - Enable Jabber multi-user conferences
-net-im/vacuum:pepmanager - Allows other plugins to recieve and publish PEP events
+net-im/vacuum:pepmanager - Allows other plugins to receive and publish PEP events
 net-im/vacuum:privacylists - Enable blocking the undesirable contacts
 net-im/vacuum:privatestorage - Allow other modules to store arbitrary data on the server
 net-im/vacuum:recentcontacts - Displays a recently used contacts
@@ -6697,7 +6697,7 @@ net-misc/quagga:pam - Add support for PAM (via sys-libs/pam) to the Quagga Virtu
 net-misc/quagga:protobuf - Enable support for dev-libs/protobuf
 net-misc/quagga:readline - Enable support for sys-libs/readline to provide the Quagga Virtual Terminal Interface Shell (vtysh)
 net-misc/quagga:tcp-zebra - Enable TCP zserv interface on port 2600 for Zebra/protocol-daemon communication. Unix domain sockets are chosen otherwise
-net-misc/rdesktop:kerberos - Enable CredSPP support + Kerberos authentication with net-libs/libgssglue
+net-misc/rdesktop:kerberos - Enable CredSPP support + Kerberos authentication
 net-misc/rdesktop:pcsc-lite - Enable smartcard support with sys-apps/pcsc-lite driver
 net-misc/rdesktop:xrandr - Enable XRandR window extension support
 net-misc/remmina:kwallet - Enable KDE Wallet plugin
@@ -7162,6 +7162,11 @@ net-wireless/soapysdr:uhd - Add support for Ettus USRP hardware
 net-wireless/spectools:debug - Build the raw output client for spectools. (for developers)
 net-wireless/spectools:gtk - Build the gtk-2 based client for spectools
 net-wireless/spectools:ncurses - Build the ncurses based client for spectools
+net-wireless/srslte:bladerf - support Nuand BladeRF hardware
+net-wireless/srslte:simcard - support hardware sim cards
+net-wireless/srslte:soapysdr - use soapysdr to support various hardware
+net-wireless/srslte:uhd - support Ettus Research hardware
+net-wireless/srslte:zeromq - enable zeromq message passing
 net-wireless/ubertooth:bluez - use bluez to support clock following and scanning
 net-wireless/ubertooth:ubertooth1-firmware - Build/install ubertooth1-firmware
 net-wireless/uhd:b100 - support B100 hardware
@@ -7788,7 +7793,6 @@ sec-policy/selinux-base-policy:unconfined - Enable support for the unconfined SE
 sys-apps/accountsservice:consolekit - Use sys-auth/consolekit for session tracking
 sys-apps/accountsservice:elogind - Use sys-auth/elogind for session tracking
 sys-apps/accountsservice:systemd - Use sys-apps/systemd for session tracking
-sys-apps/baselayout:split-usr - Enable this if /bin and /usr/bin are separate directories
 sys-apps/baselayout-prefix:split-usr - Enable this if /bin and /usr/bin are separate directories
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin.
 sys-apps/busybox:math - Enable math support in gawk (requires libm)
@@ -7874,15 +7878,17 @@ sys-apps/flashrom:tools - Install additional tools
 sys-apps/flashrom:usbblaster-spi - Enable support for Altera USB-Blaster dongles
 sys-apps/flashrom:wiki - Enable wiki informations, like supported devices etc.
 sys-apps/fwupd:agent - Enable update notification agent
+sys-apps/fwupd:amt - Build and install Intel AMT plugin
 sys-apps/fwupd:colorhug - Enable ColorHug support throughx11-misc/colord package
 sys-apps/fwupd:consolekit - Use sys-auth/consolekit for session tracking
 sys-apps/fwupd:dell - Enable Dell-specific support.
 sys-apps/fwupd:gpg - Enable GPG support.
 sys-apps/fwupd:man - Build and install man pages
-sys-apps/fwupd:nvme - Build and install nvme plugin
+sys-apps/fwupd:nvme - Build and install NVMe plugin
 sys-apps/fwupd:pkcs7 - Enable PKCS7 verification support via net-libs/gnutls
 sys-apps/fwupd:redfish - Install redfish plugin
-sys-apps/fwupd:thunderbolt - Install thunderbolt plugin
+sys-apps/fwupd:synaptics - Install synaptics plugin
+sys-apps/fwupd:thunderbolt - Install Thunderbolt plugin
 sys-apps/fwupd:uefi - Enable UEFI support
 sys-apps/gawk:forced-sandbox - Always enable --sandbox mode for simpler/secure runtime (disables e/r/w commands)
 sys-apps/gawk:mpfr - use mpfr for high precision arithmetic (-M / --bignum)
