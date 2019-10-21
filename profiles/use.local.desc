@@ -187,7 +187,6 @@ app-admin/syslog-ng:pacct - Enable support for reading Process Accounting files 
 app-admin/syslog-ng:redis - Enable support for Redis destinations
 app-admin/syslog-ng:smtp - Enable support for SMTP destinations
 app-admin/syslog-ng:spoof-source - Enable support for spoofed source addresses
-app-admin/systemrescuecd-x86:isohybrid - Pass downloaded images through isohybrid in order to make it possible to copy them directly to USB media and boot (requires sys-boot/syslinux at build time).
 app-admin/testdisk:ewf - Include ewf library
 app-admin/testdisk:ntfs - Include the ability to read NTFS filesystems
 app-admin/testdisk:reiserfs - Include reiserfs reading ability
@@ -1413,10 +1412,6 @@ dev-db/clickhouse:mongodb - Enabled support for MongoDB-based dictionaries
 dev-db/clickhouse:server - Build server.
 dev-db/clickhouse:tools - Build various tools, like benchmark, copier, etc.
 dev-db/clickhouse:zookeeper - Enable support for clustering (based on Zookeeper).
-dev-db/cppdb:mysql_internal - Don't build a separate mysql loadable module but rather build it into the cppdb library itself
-dev-db/cppdb:odbc_internal - Don't build a separate postgresql loadable module but rather build it into the cppdb library itself
-dev-db/cppdb:postgres_internal - Don't build a separate odbc loadable module but rather build it into the cppdb library itself
-dev-db/cppdb:sqlite_internal - Don't build a separate sqlite3 loadable module but rather build it into the cppdb library itself
 dev-db/etcd:server - Installs etcd daemon
 dev-db/firebird:server - Install the server components of Firebird, not just the client
 dev-db/firebird:xinetd - Install ClassicServer
@@ -1509,8 +1504,6 @@ dev-db/postgresql:server - Disable to build and install the clients and librarie
 dev-db/postgresql:uuid - Enable server side UUID generation (via dev-libs/ossp-uuid).
 dev-db/psqlodbc:iodbc - Use dev-db/libiodbc. Disable to use dev-db/unixODBC.
 dev-db/redis:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
-dev-db/soci:boost - Enable boost support
-dev-db/soci:empty - Build the sample backend called Empty
 dev-db/spatialite:geos - Add the sci-libs/geos library for exact topological tests
 dev-db/spatialite:proj - Add the sci-libs/proj library for reprojection features
 dev-db/spatialite:xls - Add the dev-libs/freexl library for xls import support
@@ -3327,6 +3320,7 @@ games-fps/eduke32:xmp - Enable support for media-libs/exempi.
 games-fps/gzdoom:gtk2 - Enable support for GTK+2 instead of GTK+3
 games-fps/gzdoom:nonfree - Enable non-free components
 games-fps/nexuiz:maps - Install the community map pack
+games-fps/openarena:client - Build OpenArena client
 games-fps/prboom-plus:dumb - Enable support for various tracker-style music formats via media-libs/dumb
 games-fps/prboom-plus:fluidsynth - Enable support for MIDI via media-sound/fluidsynth
 games-fps/prboom-plus:net - Enable support for network play
@@ -5606,7 +5600,6 @@ net-dns/bind:dnsrps - Enable the DNS Response Policy Service (DNSRPS) API, a mec
 net-dns/bind:dnstap - Enables dnstap packet logging
 net-dns/bind:fixed-rrset - Enables fixed rrset-order option
 net-dns/bind:geoip2 - Enable GeoIP2 API from MaxMind
-net-dns/bind:gost - Enables gost OpenSSL engine support
 net-dns/bind:gssapi - Enable gssapi support
 net-dns/bind:json - Enable JSON statistics channel
 net-dns/bind:lmdb - Enable LMDB support to store configuration for 'addzone' zones
@@ -7532,6 +7525,7 @@ sci-libs/plplot:octave - Add bindings for sci-mathematics/octave
 sci-libs/plplot:pdl - Add bindings for dev-perl/PDL
 sci-libs/plplot:qhull - Add bindings for media-libs/qhull
 sci-libs/plplot:shapefile - Enable support for ESRI shapefiles
+sci-libs/proj:europe - Install the PROJ collection of European grids and init-files
 sci-libs/rtabmap:openni2 - Adds support for Kinect-like 3D sensors devices with dev-libs/OpenNI2.
 sci-libs/scikits_image:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/scikits_image:pyamg - Enable support for algebraic solvers via dev-python/pyamg
@@ -8254,6 +8248,7 @@ sys-cluster/slurm:numa - Add NUMA awareness
 sys-cluster/slurm:ofed - Add Infiniband support via ofed
 sys-cluster/slurm:slurmdbd - Install SQL server for slurmdbd
 sys-cluster/slurm:torque - Enable perl scripts that emulates pbs (qstat, qsub etc.)
+sys-cluster/slurm:ucx - Enable Unified Communication X library support
 sys-cluster/swift:account - adds swift account support
 sys-cluster/swift:container - adds swift container support
 sys-cluster/swift:memcached - adds memcached support

@@ -29,6 +29,112 @@
 
 #--- END OF EXAMPLES ---
 
+# Matthew Thode <prometheanfire@gentoo.org> (2019-10-20)
+# defunct upstream, removal in 30 days. Bug #611580
+app-emulation/openstack-guest-agents-unix
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-20)
+# Fails to build.  Last release in 2009.  The stable version is EAPI 0.
+# Removal in 30 days.  Bug #698162.
+net-analyzer/nagios-sap-ccms-plugin
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-20)
+# Testing version that breaks multiple plugins.  Let's keep it masked
+# until upstream releases fixed versions.
+~xfce-base/xfce4-panel-4.15.0
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-20)
+# The XFCE GTK+ engines have been abandoned upstream.  They do not work
+# well with modern GTK+ versions, and have no seen any updates
+# since 2015.
+# Removal in 30 days.  Bug #577252.
+x11-themes/gtk-engines-xfce
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2019-10-20)
+# Full of ancient StarOffice era templates, last updated in 2006.
+# Removal in 30 days. Bug #697400
+app-office/ooextras
+
+# Hans de Graaff <graaff@gentoo.org> (2019-10-19)
+# ruby24-only packages with no reverse dependencies and no recent
+# releases. Masked for removal in 30 days.
+dev-ruby/cocaine
+dev-ruby/debugger-linecache
+dev-ruby/escape_utils
+dev-ruby/ruby-beautify
+dev-ruby/termcolor
+dev-ruby/terrapin
+dev-ruby/vcard
+www-servers/thin
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-20)
+# A dummy package with no revdeps.  Replaced by app-text/rarian.
+# Removal in 30 days.  Bug #697376.
+app-text/scrollkeeper
+
+# David Seifert <soap@gentoo.org> (2019-10-19)
+# EAPI 0, tarball completely broken, only contains
+# symlinks to /usr/portage/distdir.
+# Removal in 15 days. Bug #697306.
+media-fonts/jsmath-extra-light
+
+# David Seifert <soap@gentoo.org> (2019-10-19)
+# EAPI 0, broken build system, unmaintained,
+# Removal in 30 days.  Bug #679304, #688906, #697356.
+app-i18n/scim-wnn
+dev-libs/wnn7sdk
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-19)
+# sci-chemistry/ccpn is unfetchable and mirror-restricted.
+# sci-chemistry/aria is its reverse dependency which can't be installed
+# as a result.
+# sci-chemistry/cns is fetch-restricted and the package request form
+# is dead.  Also, its only dependency is aria.
+# Removal in 30 days.  Bug #695784.
+sci-chemistry/aria
+sci-chemistry/ccpn
+sci-chemistry/ccpn-data
+sci-chemistry/cns
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-19)
+# The Linux installer/update is unfetchable, and can't be redistributed.
+# Removal in 30 days.  Bug #695778.
+games-fps/postal2
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-19)
+# Upstream homepage and sources are gone.  The license raises doubt
+# as to whether we can redistribute it.  No new releases since being
+# added in 2005.
+# Removal in 30 days.  Bug #694926.
+sci-biology/ariadne
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-19)
+# Unmaintained package with incorrect LICENSE and a failing build
+# (#679204).
+# Removal in 30 days.  Bug #694450.
+sys-auth/sakcl
+
+# Agostino Sarubbo <ago@gentoo.org> (2019-10-18)
+# Superseded by app-admin/checksec
+# Removal in 30 days.
+app-admin/hardening-check
+
+# Thomas Deutschmann <whissi@gentoo.org> (2019-10-17)
+# clamav-milter completely broken, #697688
+~app-antivirus/clamav-0.102.0
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-17)
+# Homepage gone.  EAPI 0.  Used to be used with old versions
+# of www-apps/gallery that were removed back in 2016.
+# Removal in 30 days.  Bug #697280.
+media-gfx/galleryadd
+
+# David Seifert <soap@gentoo.org> (2019-10-17)
+# Dead upstream, EAPI 0, low quality ebuild,
+# hasn't been touched in ages
+# Removal in 30 days.  Bug #697274.
+media-sound/mserv
+
 # Mikle Kolyada <zlogene@gentoo.org> (2019-10-16)
 # not needed due to openpam removal. Please
 # update your packages running emerge with the
@@ -84,6 +190,7 @@ dev-perl/NetxAP
 # Nick Sarnie <sarnex@gentoo.org> (2019-10-14)
 # No longer updated or supported by the Wine project
 # wine-any has no value without wine-d3d9
+# Please use app-emulation/gallium-nine-standalone instead
 # Removal in 30 days
 app-emulation/wine-any
 
@@ -149,10 +256,6 @@ net-misc/ipsc
 # Removal in 30 days.  Bug #696294.
 mail-mta/qmail-ldap
 
-# Matt Turner <mattst88@gentoo.org> (2019-10-09)
-# Needs unreleased xorgproto. Bug #697098.
-=x11-libs/libX11-1.6.9
-
 # Michał Górny <mgorny@gentoo.org> (2019-10-07)
 # Unmaintained.  A few versions behind upstream.  Forces an old version
 # of dev-java/ant-contrib.
@@ -216,7 +319,6 @@ net-irc/miau
 net-mail/hotwayd
 net-mail/popick
 net-mail/poppassd_ceti
-net-mail/qmail-notify
 net-mail/spamcup
 net-mail/vacation
 net-mail/yosucker
@@ -400,10 +502,6 @@ games-server/ut2004-ded
 # Removal in 30 days.
 virtual/python-pmw
 
-# Ulrich Müller <ulm@gentoo.org> (2019-09-26)
-# Blocks its own dependency. Bug #695606.
-=x11-libs/libXvMC-1.0.12
-
 # Joonas Niilola <juippis@gentoo.org> (2019-09-24)
 # Upstream decided to deprecate this service, and app. Removal in 
 # ~30 days. Bug #695562
@@ -417,52 +515,6 @@ app-office/geierlein
 # Miroslav Šulc <fordfrog@gentoo.org> (2019-09-21)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
 =www-servers/tomcat-9.0.26
-
-# James Le Cuirot <chewi@gentoo.org> (2019-09-19)
-# Minetest Game is now installed and managed through the Minetest
-# engine in games-action/minetest. Removal in 30 days.
-games-action/minetest_game
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-19)
-# Last bumped in 2010.  Homepage & SRC_URI gone, redistribution
-# is forbidden by license.
-# Removal in 30 days.  Bug #680726.
-sci-chemistry/azara
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-18)
-# Distributing an entire prebuilt distribution as a package turned out
-# to be a bad idea.  All current upstream versions contain vulnerable
-# packages and lack correct license information.  Upstream does not
-# provide a publicly accessible bug tracker, and does not reply to mail.
-# Removal in 30 days.  Bug #683724.
-app-admin/systemrescuecd-x86
-sys-boot/systemrescuecd-x86-grub
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-17)
-# Unmaintained EAPI 0 Apache modules + mod_access_dnsbl as a revdep.
-# Removal in 30 days.  Bug #694608.
-www-apache/mod_access_dnsbl
-www-apache/mod_authn_sasl
-www-apache/mod_depends
-www-apache/mod_dnsbl_lookup
-www-apache/mod_flvx
-www-apache/mod_geoip2
-www-apache/mod_macro
-www-apache/mod_umask
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-17)
-# Unmaintained libraries with no reverse dependencies.
-# Removal in 30 days.  Bug #694602.
-dev-db/cppdb
-dev-db/odbtp
-dev-db/soci
-dev-db/xbase
-dev-db/xbsql
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-17)
-# Last touched in 2005.  EAPI 0.  No clearly defined license.
-# Removal in 30 days.  Bug #694598.
-sys-fs/wpflash
 
 # Michał Górny <mgorny@gentoo.org> (2019-09-16)
 # Unmaintained.  Fails to build.  Last release in 2004.  EAPI 0.
@@ -914,9 +966,7 @@ www-plugins/chrome-binary-plugins:unstable
 # These packages are not supposed to be merged directly, instead
 # please use sys-devel/crossdev to install them.
 dev-libs/cygwin
-dev-util/mingw-runtime
 dev-util/mingw64-runtime
-dev-util/w32api
 sys-libs/newlib
 dev-embedded/avr-libc
 

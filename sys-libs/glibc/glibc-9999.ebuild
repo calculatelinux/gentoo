@@ -19,7 +19,7 @@ if [[ ${PV} == 9999* ]]; then
 	EGIT_REPO_URI="https://sourceware.org/git/glibc.git"
 	inherit git-r3
 else
-	#KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+	#KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sh ~sparc ~x86"
 	KEYWORDS=""
 	SRC_URI="mirror://gnu/glibc/${P}.tar.xz"
 fi
@@ -58,11 +58,28 @@ export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} == ${CHOST} ]] ; then
 	if [[ ${CATEGORY} == cross-* ]] ; then
 		export CTARGET=${CATEGORY#cross-}
-		# portage's attempt to strip breaks non-native bianries
-		# at least on arm: bug #697428
-		RESTRICT=strip
 	fi
 fi
+
+# Note [Disable automatic stripping]
+# Disabling automatic stripping for a few reasons:
+# - portage's attempt to strip breaks non-native binaries at least on
+#   arm: bug #697428
+# - portage's attempt to strip libpthread.so.0 breaks gdb thread
+#   enumeration: bug #697910. This is quite subtle:
+#   * gdb uses glibc's libthread_db-1.0.so to enumerate threads.
+#   * libthread_db-1.0.so needs access to libpthread.so.0 local symbols
+#     via 'ps_pglobal_lookup' symbol defined in gdb.
+#   * 'ps_pglobal_lookup' uses '.symtab' section table to resolve all
+#     known symbols in 'libpthread.so.0'. Specifically 'nptl_version'
+#     (unexported) is used to sanity check compatibility before enabling
+#     debugging.
+#     Also see https://sourceware.org/gdb/wiki/FAQ#GDB_does_not_see_any_threads_besides_the_one_in_which_crash_occurred.3B_or_SIGTRAP_kills_my_program_when_I_set_a_breakpoint
+#   * normal 'strip' command trims '.symtab'
+#   Thus our main goal here is to prevent 'libpthread.so.0' from
+#   losing it's '.symtab' entries.
+# As Gentoo's strip does not allow us to pass less aggressive stripping
+# options and does not check the machine target we strip selectively.
 
 # We need a new-enough binutils/gcc to match upstream baseline.
 # Also we need to make sure our binutils/gcc supports TLS,
@@ -1183,6 +1200,13 @@ glibc_do_src_install() {
 	# to infer upstream version:
 	# '#define VERSION "2.26.90"' -> '2.26.90'
 	local upstream_pv=$(sed -n -r 's/#define VERSION "(.*)"/\1/p' "${S}"/version.h)
+
+	# Avoid stripping binaries not targeted by ${CHOST}. Or else
+	# ${CHOST}-strip would break binaries build for ${CTARGET}.
+	is_crosscompile && dostrip -x /
+	# gdb thread introspection relies on local libpthreas symbols. stripping breaks it
+	# See Note [Disable automatic stripping]
+	dostrip -x $(alt_libdir)/libpthread-${upstream_pv}.so
 
 	if [[ -e ${ED}/$(alt_usrlibdir)/libm-${upstream_pv}.a ]] ; then
 		# Move versioned .a file out of libdir to evade portage QA checks
