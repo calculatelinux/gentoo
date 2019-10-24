@@ -2206,7 +2206,6 @@ dev-libs/glib:utils - Install gtester-report utility to generate test report fil
 dev-libs/gmime:smime - Enable experimental S/MIME support
 dev-libs/gmp:asm - Enable use of hand optimized assembly routines (faster execution)
 dev-libs/gobject-introspection:doctool - Install g-ir-doc-tool for generating documentation from introspected data
-dev-libs/granite:demo - Build the Granite demo application (to present all available UI features provided by the library)
 dev-libs/hidapi:fox - Build a x11-libs/fox GUI
 dev-libs/hsa-ext-rocr:deprecated - Install the deprecated debug/trace/profiling library
 dev-libs/input-pad:eekboard - Enable support for dev-libs/eekboard
@@ -2379,6 +2378,7 @@ dev-libs/starpu:gcc-plugin - Enable GCC extension plugin (experimental)
 dev-libs/starpu:opencl - Enable OpenCL support
 dev-libs/starpu:spinlock-check - Enable spinlock check
 dev-libs/starpu:valgrind - Enable dev-util/valgrind support
+dev-libs/stp:python - Enable building the Python interface
 dev-libs/tinyxml:stl - Compile with TIXML_USE_STL support
 dev-libs/tntnet:server - Enable tntnet server daemon
 dev-libs/totem-pl-parser:archive - Enables ISO detection with app-arch/libarchive
@@ -3043,6 +3043,7 @@ dev-util/kdevelop:webkit - Enable deprecated dev-qt/qtwebkit instead of dev-qt/q
 dev-util/kernelshark:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS
 dev-util/ltrace:unwind - Use sys-libs/libunwind for frame unwinding support
 dev-util/lttng-tools:ust - Support LTTng-UST (Userspace Tracing)
+dev-util/lttng-ust:numa - Enable numa support
 dev-util/massif-visualizer:callgraph - Enable detailed snapshot analysis using media-gfx/kgraphviewer
 dev-util/mdds:valgrind - Add support for memory debugging using dev-util/valgrind
 dev-util/mingw64-runtime:idl - Install idl files.
@@ -3782,13 +3783,14 @@ kde-plasma/plasma-meta:discover - Pull in resources management GUI; a centralise
 kde-plasma/plasma-meta:display-manager - Pull in a graphical display manager
 kde-plasma/plasma-meta:elogind - Use sys-auth/elogind for session tracking
 kde-plasma/plasma-meta:grub - Pull in Breeze theme for sys-boot/grub
-kde-plasma/plasma-meta:gtk - Enable Breeze widget style and KCM for GTK2 and GTK3
+kde-plasma/plasma-meta:gtk - Enable Breeze widget style and system settings module for GTK+
 kde-plasma/plasma-meta:legacy-systray - Add support for legacy applications using kde-plasma/xembed-sni-proxy
 kde-plasma/plasma-meta:pam - Enable support for kwallet auto-unlocking
 kde-plasma/plasma-meta:plymouth - Pull in Breeze theme for sys-boot/plymouth
 kde-plasma/plasma-meta:pm-utils - Enable support for suspend/resume with sys-power/pm-utils when using sys-auth/consolekit
 kde-plasma/plasma-meta:pulseaudio - Install Plasma applet for PulseAudio volume management
-kde-plasma/plasma-meta:sddm - Pull in the x11-misc/sddm display manager and KCM
+kde-plasma/plasma-meta:qrcode - Enable support for easy WiFi network sharing using QR codes with kde-plasma/plasma-nm
+kde-plasma/plasma-meta:sddm - Pull in the x11-misc/sddm display manager and system settings module
 kde-plasma/plasma-meta:sdk - Pull in kde-plasma/plasma-sdk for Plasma development
 kde-plasma/plasma-meta:wallpapers - Install wallpapers for the Plasma Workspace
 kde-plasma/plasma-nm:modemmanager - Enable support for mobile broadband devices
@@ -8339,8 +8341,8 @@ sys-devel/parity:vc10_0 - Enable support for Visual Studio 2010
 sys-devel/parity:vc11_0 - Enable support for Visual Studio 2012
 sys-devel/parity:vc12_0 - Enable support for Visual Studio 2013
 sys-devel/parity:vc14_0 - Enable support for Visual Studio 2015
-sys-devel/parity:vc15_0 - Enable support for Visual Studio 2017
-sys-devel/parity:vc16_2 - Enable support for Visual Studio 2019
+sys-devel/parity:vc15 - Enable support for Visual Studio 2017
+sys-devel/parity:vc16 - Enable support for Visual Studio 2019
 sys-devel/parity:vc7_0 - Enable support for Visual Studio 2002
 sys-devel/parity:vc7_1 - Enable support for Visual Studio 2003
 sys-devel/parity:vc8_0 - Enable support for Visual Studio 2005

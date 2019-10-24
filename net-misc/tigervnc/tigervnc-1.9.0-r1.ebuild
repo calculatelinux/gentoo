@@ -85,12 +85,17 @@ src_prepare() {
 		cp -r "${WORKDIR}"/xorg-server-${XSERVER_VERSION}/. unix/xserver || die
 	fi
 
+	# do not rely on the build system to install docs
+	sed -i 's:^\(install(.* DESTINATION ${DOC_DIR})\):#\1:' \
+		cmake/BuildPackages.cmake || die
+
 	cmake-utils_src_prepare
 
 	if use server ; then
 		cd unix/xserver || die
 		eapply "${FILESDIR}"/xserver120.patch
 		eapply "${FILESDIR}"/xserver120-drmfourcc-header.patch
+		sed -i -e 's/"gl >= .*"/"gl"/' configure.ac || die
 		eautoreconf
 	fi
 }
