@@ -32,7 +32,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 DOCS=( docs/. )
-PATCHES=( "${FILESDIR}"/${P}-fix-path-builds.patch )
+PATCHES=( "${FILESDIR}"/${PN}-3.2.0-fix-path-builds.patch )
 
 src_prepare() {
 	default
@@ -83,7 +83,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D%/}" install
+	emake DESTDIR="${D}" install
 
 	# Default is '0750', which causes init errors.
 	fperms 0755 /usr/bin/inspircd{,-genssl}

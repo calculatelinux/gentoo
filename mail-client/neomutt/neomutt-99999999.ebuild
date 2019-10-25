@@ -20,7 +20,7 @@ HOMEPAGE="https://neomutt.org/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="berkdb doc gdbm gnutls gpgme idn kerberos kyotocabinet libressl
-	lmdb nls notmuch pgp_classic qdbm sasl selinux slang smime_classic
+	lmdb nls notmuch pgp-classic qdbm sasl selinux slang smime-classic
 	ssl tokyocabinet"
 
 CDEPEND="
@@ -70,12 +70,13 @@ S="${WORKDIR}/${PN}-${P}"
 src_configure() {
 	local myconf=(
 		"$(use_enable doc)"
+		"$(usex doc --full-doc)"
 		"$(use_enable nls)"
 		"$(use_enable notmuch)"
 
 		"$(use_enable gpgme)"
-		"$(use_enable pgp_classic pgp)"
-		"$(use_enable smime_classic smime)"
+		"$(use_enable pgp-classic pgp)"
+		"$(use_enable smime-classic smime)"
 
 		# Database backends.
 		"$(use_enable berkdb bdb)"
@@ -121,10 +122,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use gpgme && ( use pgp_classic || use smime_classic ); then
+	if use gpgme && ( use pgp-classic || use smime-classic ); then
 		ewarn "  Note that gpgme (old gpg) includes both pgp and smime"
-		ewarn "  support.  You can probably remove pgp_classic (old crypt)"
-		ewarn "  and smime_classic (old smime) from your USE-flags and"
+		ewarn "  support.  You can probably remove pgp-classic (old crypt)"
+		ewarn "  and smime-classic (old smime) from your USE-flags and"
 		ewarn "  only enable gpgme."
 	fi
 }
