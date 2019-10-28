@@ -186,7 +186,13 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 	tc_version_is_at_least 9.1 && IUSE+=" lto"
 fi
 
-SLOT="${GCC_CONFIG_VER}"
+if tc_version_is_at_least 10; then
+	# Note: currently we pull in prereleases, snapshots and
+	# git versions into the same SLOT.
+	SLOT="${GCCMAJOR}"
+else
+	SLOT="${GCC_CONFIG_VER}"
+fi
 
 #---->> DEPEND <<----
 
@@ -1545,6 +1551,13 @@ gcc_do_filter_flags() {
 	if ! tc_version_is_at_least 4.1 ; then
 		filter-flags -fdiagnostics-show-option
 		filter-flags -Wstack-protector
+	fi
+
+	if tc_version_is_between 6 8 ; then
+		# -mstackrealign triggers crashes in exception throwing
+		# at least on ada: bug #688580
+		# The reason is unknown. Drop the flag for now.
+		filter-flags -mstackrealign
 	fi
 
 	if tc_version_is_at_least 3.4 ; then

@@ -26,6 +26,7 @@ RDEPEND="
 		>=media-libs/flac-1.2.1-r5:=[${MULTILIB_USEDEP}]
 		>=media-libs/libogg-1.3.0:=[${MULTILIB_USEDEP}]
 		>=media-libs/libvorbis-1.3.3-r1:=[${MULTILIB_USEDEP}]
+		>=media-libs/opus-1.1:=[${MULTILIB_USEDEP}]
 	)
 	alsa? ( media-libs/alsa-lib:= )
 	sqlite? ( >=dev-db/sqlite-3.2 )"

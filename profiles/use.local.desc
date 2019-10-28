@@ -225,6 +225,7 @@ app-arch/file-roller:packagekit - Enable support for the distro-neutral package 
 app-arch/gzip:pic - disable optimized assembly code that is not PIC friendly
 app-arch/innoextract:debug - Enable debug logging and the --debug command-line option
 app-arch/innoextract:lzma - Enable support for extracting lzma-compressed installers using app-arch/xz-utils
+app-arch/libarchive:blake2 - Enable Blake2 hash support via app-crypt/libb2.
 app-arch/libarchive:bzip2 - Allow accessing bzip2-compressed archives through libbz2 (which comes with app-arch/bzip2). This only affects libarchive's native support: bsdtar will keep using bunzip2 as a filter if that's not built-in.
 app-arch/libarchive:e2fsprogs - Use file flags from sys-fs/e2fsprogs headers instead of virtual/os-headers headers
 app-arch/libarchive:nettle - Use dev-libs/nettle as crypto backend
@@ -2719,31 +2720,35 @@ dev-qt/qt-creator:autotools - Enable autotools project manager plugin
 dev-qt/qt-creator:baremetal - Build plugin for bare metal devices
 dev-qt/qt-creator:bazaar - Add support for dev-vcs/bzr version control system
 dev-qt/qt-creator:beautifier - Build the beautifier plugin (supports astyle, clang-format, and uncrustify)
+dev-qt/qt-creator:boot2qt - Build plugin for Boot2Qt devices
 dev-qt/qt-creator:clang - Build clang-based plugins (code model, formatting, refactoring, static analysis)
 dev-qt/qt-creator:clearcase - Add support for IBM ClearCase version control system (requires manual installation of ClearCase client)
 dev-qt/qt-creator:cmake - Enable cmake project manager plugin
 dev-qt/qt-creator:cppcheck - Enable integration with dev-util/cppcheck
+dev-qt/qt-creator:ctfvisualizer - Build the Chrome Trace Format visualizer plugin
 dev-qt/qt-creator:designer - Enable designer for QtWidgets-based UIs
-dev-qt/qt-creator:glsl - Enable GLSL source code editor
-dev-qt/qt-creator:help - Build the help plugin
+dev-qt/qt-creator:glsl - Enable GLSL editor
+dev-qt/qt-creator:help - Enable the integrated documentation viewer
 dev-qt/qt-creator:ios - Build plugin for Apple iOS devices
 dev-qt/qt-creator:lsp - Add support for the Language Server Protocol (LSP)
+dev-qt/qt-creator:mcu - Build plugin for MCU devices
 dev-qt/qt-creator:mercurial - Add support for dev-vcs/mercurial version control system
 dev-qt/qt-creator:modeling - Enable graphical model editor
-dev-qt/qt-creator:nim - Enable Nim source code editor
+dev-qt/qt-creator:nim - Build plugin for Nim language support
 dev-qt/qt-creator:perforce - Add support for Perforce version control system (requires manual installation of Perforce client)
 dev-qt/qt-creator:perfprofiler - Build the Linux Perf-based profiler plugin
-dev-qt/qt-creator:python - Enable Python source code editor
+dev-qt/qt-creator:python - Build plugin for Python language support
 dev-qt/qt-creator:qbs - Enable QBS project manager plugin
 dev-qt/qt-creator:qmldesigner - Enable designer for QML/QtQuick-based UIs
 dev-qt/qt-creator:qmlprofiler - Build the QML profiler plugin
 dev-qt/qt-creator:qnx - Build plugin for QNX devices
-dev-qt/qt-creator:remotelinux - Build remotelinux plugin
+dev-qt/qt-creator:remotelinux - Add support for deployment and execution on a remote Linux host
 dev-qt/qt-creator:scxml - Enable graphical SCXML editor
 dev-qt/qt-creator:serialterminal - Build serial terminal plugin
 dev-qt/qt-creator:silversearcher - Enable integration with sys-apps/the_silver_searcher
 dev-qt/qt-creator:systemd - Add support for retrieving application output from journald
-dev-qt/qt-creator:valgrind - Add support for memory debugging using dev-util/valgrind
+dev-qt/qt-creator:valgrind - Enable integration with dev-util/valgrind
+dev-qt/qt-creator:webassembly - Build WebAssembly plugin
 dev-qt/qt-creator:webengine - Use dev-qt/qtwebengine to view documentation
 dev-qt/qt-creator:winrt - Build plugin for WinRT devices
 dev-qt/qt-docs:3d - Install documentation for dev-qt/qt3d
@@ -5113,16 +5118,15 @@ media-video/libva-utils:drm - Enables VA/DRM API support.
 media-video/makemkv:gui - Build the Qt5 GUI
 media-video/minitube:download - Enable support for downloading YouTube videos
 media-video/mjpegtools:sdlgfx - Enables y4mhist to display a graphical histogram
-media-video/mjpg-streamer:input_control - Plugin giving ability to control camera movement (only specific cameras)
-media-video/mjpg-streamer:input_file - Plugin that watches given directory and send it's content
-media-video/mjpg-streamer:input_testpicture - Plugin for sending compiled in, test pictures
-media-video/mjpg-streamer:input_uvc - Plugin that sends video stream from UVC compatible camera
-media-video/mjpg-streamer:output_autofocus - Auto focusing plugin
-media-video/mjpg-streamer:output_file - Plugin that saves received content under given location
-media-video/mjpg-streamer:output_http - Small HTTP server plugin which sends WWW directory content and streams image content
-media-video/mjpg-streamer:output_rtsp - Plugin which provides a mechanism to take snapshots with a trigger from a UDP packet
-media-video/mjpg-streamer:output_udp - Plugin receiving content over UDP and storing to a directory
-media-video/mjpg-streamer:v4l - Uses media-libs/libv4l function mapping for input_uvc plugin
+media-video/mjpg-streamer:input-control - Plugin giving ability to control camera movement (only specific cameras)
+media-video/mjpg-streamer:input-file - Plugin that watches given directory and send it's content
+media-video/mjpg-streamer:input-testpicture - Plugin for sending compiled in, test pictures
+media-video/mjpg-streamer:input-uvc - Plugin that sends video stream from UVC compatible camera
+media-video/mjpg-streamer:output-autofocus - Auto focusing plugin
+media-video/mjpg-streamer:output-file - Plugin that saves received content under given location
+media-video/mjpg-streamer:output-http - Small HTTP server plugin which sends WWW directory content and streams image content
+media-video/mjpg-streamer:output-rtsp - Plugin which provides a mechanism to take snapshots with a trigger from a UDP packet
+media-video/mjpg-streamer:output-udp - Plugin receiving content over UDP and storing to a directory
 media-video/mjpg-streamer:www - Installs WWW content
 media-video/motion:mmal - Enables Multi-Media Abstraction Layer (MMAL) decoding support: Available e.g. on the Raspberry Pi.
 media-video/motiontrack:multiprocess - Enables multi-process support (SMP/cluster) for motiontrack programs
@@ -5165,6 +5169,7 @@ media-video/mpv:cplugins - Enable C plugins support
 media-video/mpv:cuda - Enable hardware video decoding via Nvidia CUDA
 media-video/mpv:drm - Enable Kernel Mode Setting / Direct Rendering Manager based video output
 media-video/mpv:egl - Enable support for various EGL-based video outputs / backends
+media-video/mpv:gamepad - Enable gamepad input support
 media-video/mpv:gbm - Enable Graphics Buffer Manager based EGL video backend
 media-video/mpv:jpeg - Enable support for saving screenshots in JPEG format
 media-video/mpv:libass - Enable OSD (On Screen Display) and subtitles support via media-libs/libass
@@ -5177,6 +5182,7 @@ media-video/mpv:sdl - Enable media-libs/libsdl2 based video and audio outputs (N
 media-video/mpv:tools - Install extra tools: mpv_identify.sh, mpv_idet.sh, and umpv
 media-video/mpv:uchardet - Enable subtitles charset discovery via app-i18n/uchardet
 media-video/mpv:vulkan - Enable support for various Vulkan-based video backends
+media-video/mpv:zimg - Enable libzimg support (for vf_fingerprint)
 media-video/noad:libmpeg2 - Build support for mpeg2 over media-libs/libmpeg2 rather than using ffmpeg
 media-video/nvidia_video_sdk:tools - Build and install example tools.
 media-video/obs-studio:fdk - Enable libfdk support for AAC encoding.
@@ -5325,6 +5331,13 @@ net-analyzer/gr-fosphor:glfw - enable GLFW based interface
 net-analyzer/graphite-web:carbon - Enable carbon support
 net-analyzer/graphite-web:memcached - Enable memcached support
 net-analyzer/greenbone-security-assistant:extras - Pdf results, extra fonts, html docs support
+net-analyzer/gvm:cli - Command Line Interface for OpenVAS Scanner
+net-analyzer/gvm:cron - A cron job to update GVM's vulnerability feeds daily
+net-analyzer/gvm:extras - Extra fonts, pdf-results! and html docs support
+net-analyzer/gvm:gsa - Greenbone Security Assistant (WebUI)
+net-analyzer/gvm:ospd - Enable support for scanner wrappers
+net-analyzer/gvm-libs:extras - Html docs support
+net-analyzer/gvmd:extras - Html docs support
 net-analyzer/hexinject:experimental - Install experimental packets.tcl
 net-analyzer/hexinject:tools - Install hex2raw and prettypacket tools
 net-analyzer/httping:tfo - Enable support for TCP Fast Open
@@ -5350,7 +5363,6 @@ net-analyzer/ipsumdump:nanotimestamp - Enable timestamps with nano-second resolu
 net-analyzer/linkchecker:sqlite - Mozilla Bookmark parsing
 net-analyzer/metasploit:development - Install dependencies needed for metasploit and exploit development
 net-analyzer/metasploit:nexpose - Enable the plugin to integrate with nexpose
-net-analyzer/metasploit:openvas - Enable the plugin to integrate net-analyzer/openvas
 net-analyzer/metasploit:oracle - Enable restricted oracle modules which have additional deps
 net-analyzer/metasploit:pcap - Enable libpcap for packet sniffing
 net-analyzer/mk-livestatus:nagios4 - Generate a net-analyzer/nagios-4 compatible plugin
@@ -5436,6 +5448,7 @@ net-analyzer/openvas-libraries:extras - Html docs support
 net-analyzer/openvas-libraries:ldap - Enable support for ldap
 net-analyzer/openvas-libraries:radius - Enable support for radius
 net-analyzer/openvas-manager:extras - Html docs support
+net-analyzer/openvas-scanner:cron - Install a cron job to update GVM's feed daily.
 net-analyzer/openvas-scanner:extras - Html docs support
 net-analyzer/ospd:extras - Html docs support
 net-analyzer/ossec-hids:agent - Build "agent" installation target (see package description)
@@ -8555,7 +8568,6 @@ sys-libs/pam:cracklib - Build the pam_cracklib module, that allows to verify the
 sys-libs/readline:utils - Install rlfe (ReadLine Front-End) helper tool -- a wrapper program for making any stdin use readline
 sys-libs/talloc:compat - Enable extra compatibility stuff
 sys-libs/timezone-data:leaps-timezone - Install the set of "right" timezones; these timezones include leap seconds when counting seconds since the epoch (while POSIX does not) as they are based on the TAI (International Atomic Time) clock
-sys-libs/uclibc-ng:rpc - Enable sun nis/rpc support (you should use libtirpc though)
 sys-libs/uclibc-ng:symlink-compat - Explicitly add sym links for libdl.so.0, libm.so.0, and friends for backward compatibility with sys-libs/uclibc-ng-1.0.17 and earlier
 sys-libs/zlib:minizip - include the minizip library for quick and dirty zip extraction
 sys-power/apcupsd:modbus - Enable MODBUS support over USB
@@ -8813,7 +8825,6 @@ www-misc/zoneminder:gcrypt - ...
 www-misc/zoneminder:vlc - Enable using media-libs/vlc for streaming from cameras
 www-plugins/adobe-flash:nsplugin - Install the Netscape Flash API plugin (for Firefox and similar browsers)
 www-plugins/adobe-flash:ppapi - Install the Pepper Flash API plugin (for Chrome and similar browsers)
-www-plugins/chrome-binary-plugins:widevine - Install the Widevine DRM library
 www-plugins/freshplayerplugin:gles2 - Use system GLESv2 libraries instead of ANGLE for shader translation
 www-plugins/freshplayerplugin:v4l - Use libv4l2 for colorspace conversion
 www-plugins/lightspark:gles - Replace default OpenGL renderer with GLESv2

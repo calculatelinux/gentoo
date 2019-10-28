@@ -29,6 +29,33 @@
 
 #--- END OF EXAMPLES ---
 
+# Hasan ÇALIŞIR <hasan.calisir@psauxit.com> (2019-10-28)
+# OpenVAS project name has been renamed in
+# Greenbone Vulnerability Management (GVM).
+# New loader package is net-analyzer/gvm.
+# Masked for removal in 30 days. Bugs #692004 #692076
+net-analyzer/openvas
+<=net-analyzer/openvas-libraries-8.0.0
+net-analyzer/openvas-cli
+net-analyzer/openvas-tools
+dev-ruby/openvas-omp
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2019-10-26)
+# Version in Gentoo is years old, does not work, no one stepped up
+# to maintain it. Package needs Google API key to actually work.
+# Removal in 30 days. Bug #608334
+media-video/minitube
+
+# Lars Wendler <polynomial-c@gentoo.org> (2019-10-26)
+# Breaks at least libreoffice (and perhaps more revdeps)
+~app-text/poppler-0.82.0
+
+# Michał Górny <mgorny@gentoo.org> (2019-10-26)
+# Incorrect LICENSE entry, and no clear license information to be found.
+# Homepage gone, and source of some of the files unknown.
+# Removal in 30 days.  Bug #698050.
+media-fonts/vc-fonts
+
 # Stephan Hartmann <stha09@googlemail.com> (2019-10-25)
 # Dev channel releases are only for people who
 # are developers or want more experimental features
@@ -474,7 +501,6 @@ sys-libs/libstdc++-v3-bin
 # All of the following packages are unfetchable and mirror-restricted.
 #
 # games-fps/enemy-territory-etpro: #638092
-# games-fps/ut2003-bonuspack-cm: #640552
 # games-rpg/runescape-launcher: #625884
 # games-server/bf1942-lnxded: #640576
 # games-server/nwn-ded: #640578
@@ -486,7 +512,6 @@ sys-libs/libstdc++-v3-bin
 #
 # Removal in 30 days.
 games-fps/enemy-territory-etpro
-games-fps/ut2003-bonuspack-cm
 games-rpg/runescape-launcher
 games-server/bf1942-lnxded
 games-server/nwn-ded
@@ -497,45 +522,9 @@ sci-chemistry/xdsstat-bin
 sci-libs/openfoam
 sci-libs/parmgridgen
 
-# Michał Górny <mgorny@gentoo.org> (2019-09-28)
-# games-fps/ut2004 is unfetchable for almost 3 years.  The remaining
-# packagse are its reverse dependencies, some of them unfetchable
-# as well.
-# Removal in 30 days.  Bug #601402.
-games-fps/ut2004
-games-fps/ut2004-action
-games-fps/ut2004-airbuccaneers
-games-fps/ut2004-bonuspack-cbp1
-games-fps/ut2004-bonuspack-cbp2
-games-fps/ut2004-bonuspack-ece
-games-fps/ut2004-bonuspack-mega
-games-fps/ut2004-cor
-games-fps/ut2004-crossfire
-games-fps/ut2004-data
-games-fps/ut2004-deathball
-games-fps/ut2004-fragops
-games-fps/ut2004-hamsterbash
-games-fps/ut2004-muralis
-games-fps/ut2004-strikeforce
-games-fps/ut2004-troopers
-games-fps/ut2004-unwheel
-games-server/ut2004-ded
-
 # Stefan Strogin <steils@gentoo.org> (2019-09-27)
 # Requires >=dev-lang/lua-5.3 which is masked
 >=dev-util/bam-0.5.0
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-27)
-# The virtual is not really useful since all reverse dependencies
-# support only Python 2.7.  All its uses were replaced with direct
-# dependencies on dev-python/pmw.
-# Removal in 30 days.
-virtual/python-pmw
-
-# Joonas Niilola <juippis@gentoo.org> (2019-09-24)
-# Upstream decided to deprecate this service, and app. Removal in 
-# ~30 days. Bug #695562
-x11-misc/enlightenment-extra
 
 # Miroslav Šulc <fordfrog@gentoo.org> (2019-09-21)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
@@ -744,10 +733,6 @@ dev-java/eclipse-ecj:4.10
 # see security bug 670102
 <mail-client/thunderbird-60.0
 <mail-client/thunderbird-bin-60.0
-
-# Brian Evans <grknight@gentoo.org> (2018-11-05)
-# Causes a dependency loop in the OpenRC script. Bug #651998
-=sys-fs/cryptsetup-2.0.5-r1
 
 # Thomas Deutschmann <whissi@gentoo.org> (2018-10-12)
 # EOL and has known vulnerabilities. Please move to
