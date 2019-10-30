@@ -21,5 +21,14 @@ PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
 
 src_prepare() {
 	default
+	mv configure.{in,ac}
+	sed -i \
+		-e "s:configure.in:configure.ac:g" \
+		Makefile.in || die
 	eautoreconf
+}
+
+src_compile() {
+	emake depend
+	default
 }

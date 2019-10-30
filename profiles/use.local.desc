@@ -267,6 +267,7 @@ app-backup/bareos:rados-striper - Enable use of rados-striper
 app-backup/bareos:scsi-crypto - Enable low level SCSI crypto support
 app-backup/bareos:sql-pooling - Enable SQL pooling support
 app-backup/bareos:storage-daemon - Install storage daemon (bareos-sd)
+app-backup/btrbk:mbuffer - Use sys-block/mbuffer to enable progress bar and buffering/limiting functionality
 app-backup/btrbk:pv - Use sys-apps/pv to enable progress bar functionality
 app-backup/bup:web - Support browsing backups via a web interface
 app-backup/dar:dar32 - Enables --enable-mode=32 option, which replace infinite by 32 bit integers
@@ -489,6 +490,7 @@ app-emulation/cri-o:device-mapper - Enables dependencies for the "devicemapper" 
 app-emulation/cri-o:ostree - Enables dependencies for handling of OSTree images.
 app-emulation/crossover-bin:capi - Enable ISDN support via CAPI
 app-emulation/crossover-bin:opencl - Enable OpenCL support
+app-emulation/crun:bpf - Enable in Kernel, eBPF (enhanced Berkley Packet Filter) support for managing device controllers.
 app-emulation/docker:apparmor - Enable AppArmor support.
 app-emulation/docker:aufs - Enables dependencies for the "aufs" graph driver, including necessary kernel flags.
 app-emulation/docker:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
@@ -3255,7 +3257,6 @@ games-emulation/higan:udev - Enable udev based input
 games-emulation/m64py:7z - Ensure support for .7z archives.
 games-emulation/m64py:rar - Ensure support for .rar archives.
 games-emulation/mednafen:debugger - Build with internal debugger
-games-emulation/mednafen:pax_kernel - Triggers a paxmarking of the binary
 games-emulation/mgba:elf - Enable the use of elf utils via dev-libs/elfutils
 games-emulation/mupen64plus:audio-sdl - Enable SDL audio plugin.
 games-emulation/mupen64plus:input-sdl - Enable SDL input plugin.
@@ -3280,7 +3281,6 @@ games-emulation/ppsspp:system-ffmpeg - Use the system-wide media-video/ffmpeg in
 games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recommended)
 games-emulation/vbam:link - Enable GBA linking functionality
 games-emulation/zsnes:debug - Enable the builtin debugger
-games-emulation/zsnes:pax_kernel - Triggers a paxmarking of the binary
 games-engines/exult:sdl2 - Use libsdl2 instead of libsdl
 games-engines/frobtads:tads2compiler - Build TADS2 compiler
 games-engines/frobtads:tads3compiler - Build TADS3 compiler
@@ -3797,6 +3797,7 @@ kde-plasma/plasma-meta:pulseaudio - Install Plasma applet for PulseAudio volume 
 kde-plasma/plasma-meta:qrcode - Enable support for easy WiFi network sharing using QR codes with kde-plasma/plasma-nm
 kde-plasma/plasma-meta:sddm - Pull in the x11-misc/sddm display manager and system settings module
 kde-plasma/plasma-meta:sdk - Pull in kde-plasma/plasma-sdk for Plasma development
+kde-plasma/plasma-meta:thunderbolt - Pull in kde-plasma/plasma-thunderbolt control center module
 kde-plasma/plasma-meta:wallpapers - Install wallpapers for the Plasma Workspace
 kde-plasma/plasma-nm:modemmanager - Enable support for mobile broadband devices
 kde-plasma/plasma-nm:openconnect - Build support for the OpenConnect VPN client

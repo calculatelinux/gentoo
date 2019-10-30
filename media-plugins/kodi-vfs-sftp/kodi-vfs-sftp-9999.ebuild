@@ -33,3 +33,8 @@ DEPEND="
 	~media-libs/kodi-platform-9999
 	~media-tv/kodi-9999
 	"
+
+src_prepare(){
+	[ -d depends ] && rm -rf depends || die
+	cmake-utils_src_prepare
+}

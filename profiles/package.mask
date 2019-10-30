@@ -29,6 +29,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2019-10-30)
+# In preparation...
+=dev-lang/perl-5.30.1*
+~virtual/perl-Module-CoreList-5.201.910.270
+
 # Hasan ÇALIŞIR <hasan.calisir@psauxit.com> (2019-10-28)
 # OpenVAS project name has been renamed in
 # Greenbone Vulnerability Management (GVM).
@@ -238,11 +243,6 @@ net-misc/knemo
 # Fails self-tests badly, no revdeps, upstream doesnt care
 # since 1999. Removal in 30 days. Bug 641530.
 dev-perl/NetxAP
-
-# Lars Wendler <polynomial-c@gentoo.org> (2019-10-15)
-# Masked until webkit based packages no longer fail to build against
->=dev-libs/icu-65.1
->=dev-libs/icu-layoutex-65.1
 
 # Nick Sarnie <sarnex@gentoo.org> (2019-10-14)
 # No longer updated or supported by the Wine project
@@ -810,12 +810,6 @@ sys-devel/automake:1.10
 #   emerge -C perl-core/Unicode-Collate
 # See bug #634040
 <perl-core/Unicode-Collate-1.190.0-r99
-
-# Patrice Clement <monsieurp@gentoo.org> (2017-09-09)
-# Python 3 port is almost complete with version 0.6.0. Users might run into
-# minor bumps here and there which is why the mask is still in place for the
-# time being.
->=dev-java/javatoolkit-0.6.0
 
 # Gilles Dartiguelongue <eva@gentoo.org> (2017-09-04)
 # Incompatible changes in API in Enchant 2. Bug #629838.
