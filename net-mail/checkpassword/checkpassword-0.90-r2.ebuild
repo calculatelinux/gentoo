@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=0
@@ -6,8 +6,8 @@ EAPI=0
 inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="A uniform password checking interface for root applications"
-HOMEPAGE="http://cr.yp.to/checkpwd.html"
-SRC_URI="http://cr.yp.to/checkpwd/${P}.tar.gz"
+HOMEPAGE="https://cr.yp.to/checkpwd.html"
+SRC_URI="https://cr.yp.to/checkpwd/${P}.tar.gz"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
@@ -18,7 +18,7 @@ RESTRICT="mirror bindist"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-errno.patch
+	epatch "${FILESDIR}"/${P}-errno.patch
 	epatch "${FILESDIR}"/${PV}-head-1.patch
 
 	use static && append-ldflags -static

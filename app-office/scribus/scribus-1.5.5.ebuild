@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/project/${PN}/${PN}-devel/${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86"
 IUSE="+boost debug examples graphicsmagick hunspell +minimal osg +pdf scripts +templates tk"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
@@ -67,6 +67,9 @@ RDEPEND="${DEPEND}
 "
 
 PATCHES=(
+	# upstream svn trunk
+	"${FILESDIR}"/${P}-poppler-0.82.patch
+	# non(?)-upstreamable
 	"${FILESDIR}"/${PN}-1.5.3-fpic.patch
 	"${FILESDIR}"/${P}-docdir.patch
 	"${FILESDIR}"/${P}-findhyphen.patch
