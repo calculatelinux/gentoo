@@ -3,19 +3,14 @@
 
 EAPI=7
 
-: ${CMAKE_MAKEFILE_GENERATOR:=ninja}
-# (needed due to CMAKE_BUILD_TYPE != Gentoo)
-CMAKE_MIN_VERSION=3.7.0-r1
 PYTHON_COMPAT=( python{2_7,3_{5,6,7}} )
-
-inherit cmake-utils flag-o-matic git-r3 llvm multiprocessing \
+inherit cmake-utils flag-o-matic llvm llvm.org multiprocessing \
 	python-any-r1 toolchain-funcs
 
 DESCRIPTION="Compiler runtime library for clang (built-in part)"
 HOMEPAGE="https://llvm.org/"
-SRC_URI=""
-EGIT_REPO_URI="https://github.com/llvm/llvm-project.git"
-S=${WORKDIR}/${P}/compiler-rt
+LLVM_COMPONENTS=( compiler-rt )
+llvm.org_set_globals
 
 LICENSE="Apache-2.0-with-LLVM-exceptions || ( UoI-NCSA MIT )"
 SLOT="$(ver_cut 1-3)"
@@ -47,11 +42,6 @@ pkg_pretend() {
 pkg_setup() {
 	llvm_pkg_setup
 	python-any-r1_pkg_setup
-}
-
-src_unpack() {
-	git-r3_fetch
-	git-r3_checkout '' '' '' compiler-rt
 }
 
 test_compiler() {

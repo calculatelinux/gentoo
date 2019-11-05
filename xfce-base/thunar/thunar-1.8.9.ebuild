@@ -13,7 +13,7 @@ SRC_URI="https://archive.xfce.org/src/xfce/${PN}/${PV%.*}/${MY_P}.tar.bz2"
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="0/3"
 KEYWORDS="alpha amd64 arm ~arm64 ~ia64 ~mips ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="exif introspection libnotify pcre test +trash-panel-plugin udisks"
+IUSE="exif introspection libnotify pcre +trash-panel-plugin udisks"
 
 GVFS_DEPEND=">=gnome-base/gvfs-1.18.3"
 COMMON_DEPEND=">=dev-lang/perl-5.6
@@ -66,6 +66,13 @@ src_install() {
 }
 
 pkg_postinst() {
+	elog "If you were using an older Xfce version and Thunar fails to start"
+	elog "with a message similar to:"
+	elog "  Failed to register: Timeout was reached"
+	elog "you may need to reset your xfce4 session:"
+	elog "  rm ~/.cache/sessions/xfce4-session-*"
+	elog "See https://bugs.gentoo.org/698914."
+
 	xdg_desktop_database_update
 	xdg_icon_cache_update
 }

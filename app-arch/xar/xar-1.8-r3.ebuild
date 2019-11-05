@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-inherit flag-o-matic multilib-minimal multilib ltprune
+inherit flag-o-matic multilib-minimal multilib
 
 APPLE_PV=417.1
 DESCRIPTION="An easily extensible archive format"
@@ -45,6 +45,12 @@ src_prepare() {
 	# strip RPATH pointing to ED
 	cd "${S}"/src || die
 	sed -i -e 's/@RPATH@//' Makefile.inc.in || die
+
+	# avoid GNU make (bug?) behaviour of removing xar.o as intermediate
+	# file, this doesn't happen outside portage, but it does from the
+	# ebuild env, causing the install phase to re-compile xar.o and link
+	# the executable
+	echo ".PRECIOUS: @objroot@src/%.o" >> Makefile.inc.in || die
 }
 
 multilib_src_configure() {
@@ -60,5 +66,5 @@ multilib_src_configure() {
 
 multilib_src_install() {
 	default
-	prune_libtool_files
+	find "${D}" -name '*.la' -delete || die
 }

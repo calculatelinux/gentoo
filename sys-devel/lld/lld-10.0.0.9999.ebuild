@@ -3,18 +3,14 @@
 
 EAPI=7
 
-: ${CMAKE_MAKEFILE_GENERATOR:=ninja}
-# (needed due to CMAKE_BUILD_TYPE != Gentoo)
-CMAKE_MIN_VERSION=3.7.0-r1
 PYTHON_COMPAT=( python{2_7,3_{5,6,7}} )
-
-inherit cmake-utils git-r3 llvm multiprocessing python-any-r1
+inherit cmake-utils llvm llvm.org multiprocessing python-any-r1
 
 DESCRIPTION="The LLVM linker (link editor)"
 HOMEPAGE="https://llvm.org/"
-SRC_URI=""
-EGIT_REPO_URI="https://github.com/llvm/llvm-project.git"
-S=${WORKDIR}/${P}/lld
+LLVM_COMPONENTS=( lld )
+LLVM_TEST_COMPONENTS=( llvm/utils/{lit,unittest} )
+llvm.org_set_globals
 
 LICENSE="Apache-2.0-with-LLVM-exceptions UoI-NCSA"
 SLOT="0"
@@ -38,13 +34,6 @@ pkg_setup() {
 	use test && python-any-r1_pkg_setup
 }
 
-src_unpack() {
-	local dirs=( lld )
-	use test && dirs+=( llvm/utils/{lit,unittest} )
-	git-r3_fetch
-	git-r3_checkout '' '' '' "${dirs[@]}"
-}
-
 src_configure() {
 	local mycmakeargs=(
 		-DBUILD_SHARED_LIBS=OFF
@@ -53,7 +42,7 @@ src_configure() {
 	)
 	use test && mycmakeargs+=(
 		-DLLVM_BUILD_TESTS=ON
-		-DLLVM_MAIN_SRC_DIR="${WORKDIR}/${P}/llvm"
+		-DLLVM_MAIN_SRC_DIR="${WORKDIR}/llvm"
 		-DLLVM_EXTERNAL_LIT="${EPREFIX}/usr/bin/lit"
 		-DLLVM_LIT_ARGS="-vv;-j;${LIT_JOBS:-$(makeopts_jobs "${MAKEOPTS}" "$(get_nproc)")}"
 	)

@@ -29,6 +29,37 @@
 
 #--- END OF EXAMPLES ---
 
+# Mikle Kolyada <zlogene@gentoo.org> (2019-11-04)
+# xcolor has been a part of dev-texlive/texlive-latexrecommended
+# for a long time, removal in 10 days.
+dev-tex/xcolor
+
+# Alfredo Tupone <tupone@gentoo.org> (2019-11-03)
+# No more needed. Substituted by dev-ada/gnatcoll-core and others
+# Removal in 30 days.
+dev-ada/gnatcoll
+
+# Thomas Deutschmann <whissi@gentoo.org> (2019-11-03)
+# Infinite loop in TAILQ_FOREACH_SAFE when running for some time
+# Bug #698856
+=net-misc/dhcpcd-8.1.1
+
+# Michał Górny <mgorny@gentoo.org> (2019-11-03)
+# Discontinued upstream.  Relies on app-portage/flaggie make.conf
+# editing support that was fragile and therefore was removed.
+# Removal in 30 days.  Bug #699244.
+app-portage/install-mask
+
+# Michał Górny <mgorny@gentoo.org> (2019-11-03)
+# This was only used by my packages, and the last revdep is gone now.
+# Removal in 14 days.  Bug #699238.
+sys-devel/systemd-m4
+
+# Alfredo Tupone <tupone@gentoo.org> (2019-11-03)
+# The binary for gps are included in dev-ada/gnat-suite-bin
+# Removal in 30 days.
+dev-ada/gps-bin
+
 # Michał Górny <mgorny@gentoo.org> (2019-11-01)
 # Both make no sense with dev-embedded/gnap removed.
 # Removal in 14 days.  Bug #699072.
@@ -161,7 +192,7 @@ dev-libs/wnn7sdk
 # Removal in 30 days.  Bug #695784.
 sci-chemistry/aria
 sci-chemistry/ccpn
-sci-chemistry/ccpn-data
+sci-libs/ccpn-data
 sci-chemistry/cns
 
 # Michał Górny <mgorny@gentoo.org> (2019-10-19)
@@ -295,19 +326,6 @@ sys-apps/man
 # This can be removed in 2019-11-11
 =sys-kernel/gentoo-sources-5.3.6
 
-# Michał Górny <mgorny@gentoo.org> (2019-10-11)
-# FreeBSD-only packages.  The project has been discontinued,
-# and the core FreeBSD packages are already gone.
-# Removal in 14 days.  Bug #683284.
-dev-libs/libexecinfo
-net-analyzer/bsnmp
-net-firewall/pftop
-sys-apps/flock
-sys-auth/openpam
-sys-block/eject-bsd
-sys-fs/fuse4bsd
-sys-process/pidof-bsd
-
 # Michał Górny <mgorny@gentoo.org> (2019-10-10)
 # Upstream gone.  Last bumped in 2006.  EAPI 0.  net-misc/sipcalc seems
 # like a good replacement.
@@ -324,10 +342,6 @@ mail-mta/qmail-ldap
 # of dev-java/ant-contrib.
 # Removal in 30 days.  Bug #696916.
 net-im/openfire
-
-# Stefan Strogin <steils@gentoo.org> (2019-10-05)
-# Masked for testing
->=dev-libs/libressl-3.0.1
 
 # Michał Górny <mgorny@gentoo.org> (2019-10-05)
 # Apparently included in apache-2.4, rendering split package obsolete.
@@ -361,13 +375,11 @@ dev-embedded/gnap
 dev-libs/xplc
 dev-vcs/cvsd
 dev-vcs/cvsq
-dev-vcs/svn2cl
 mail-client/biabam
 mail-client/pinepgp
 mail-filter/clamassassin
 mail-filter/clamsmtp
 mail-filter/disspam
-mail-filter/sqlgrey
 media-gfx/cthumb
 media-gfx/fblogo
 net-dialup/globespan-adsl
@@ -383,7 +395,6 @@ net-mail/hotwayd
 net-mail/popick
 net-mail/poppassd_ceti
 net-mail/spamcup
-net-mail/vacation
 net-mail/yosucker
 net-misc/cgterm
 net-misc/clockspeed-conf
@@ -393,7 +404,6 @@ net-misc/sendfile
 net-news/yencode
 net-nntp/slrnconf
 net-nntp/ubh
-net-p2p/createtorrent
 net-p2p/ctcs
 net-proxy/ratproxy
 net-wireless/airsnort
@@ -402,7 +412,6 @@ sys-auth/pam-afs-session
 sys-auth/pam_chroot
 sys-auth/pam_require
 sys-block/dellmgr
-sys-fs/gt5
 
 # Michał Górny <mgorny@gentoo.org> (2019-10-04)
 # Unmaintained, EAPI 0 packages.  No reverse dependencies.  If you want
@@ -430,13 +439,6 @@ mail-filter/procmail-lib
 # and can be tree-cleaned.
 # Masked for removal in 30 days. Bug #696074.
 net-irc/irssi-otr
-
-# Ulrich Müller <ulm@gentoo.org> (2019-10-01)
-# Fails byte-compilation with recent Emacs versions.
-# Homepage and SRC_URI are gone. Upstream package
-# is unmaintained, according to EmacsWiki.
-# Masked for removal in 30 days. Bug #666836.
-app-emacs/mode-compile
 
 # Brian Evans <grknight@gentoo.org> (2019-10-01)
 # End of life.  Please upgrade.
@@ -520,10 +522,6 @@ net-mail/mailsync
 # few years. Bug #436400
 app-office/texmacs
 <dev-scheme/guile-2
-
-# Miroslav Šulc <fordfrog@gentoo.org> (2019-08-19)
-# Depends on >=virtual/{jdk,jre}-11 which is masked
-=www-servers/tomcat-9.0.24
 
 # Mart Raudsepp <leio@gentoo.org> (2019-08-18)
 # Fails to dbus activate properly for me. Help welcome figuring it out.
@@ -733,22 +731,10 @@ dev-java/eclipse-ecj:4.10
 ~app-portage/gemato-14.1m
 ~app-portage/gemato-9999m
 
-# Kent Fredric <kentnl@gentoo.org> (2018-05-27)
-# Subject to Man-in-the-middle security bypass vulnerability.
-# Retained in tree only for users who need older versions
-# for compatibility reasons.
-# Bug: #623942
-<dev-perl/DBD-mysql-4.44.0
-
 # Matt Turner <mattst88@gentoo.org> (2018-05-25)
 # New package. Needs to interact with media-libs/mesa and
 # x11-drivers/nvidia-drivers. Work in progress.
 media-libs/libglvnd
-
-# Brian Evans <grknight@gentoo.org> (2018-04-20)
-# Likely to break a lot of software
-# Masked for initial testing
->=dev-db/mysql-connector-c++-8.0.0
 
 # James Le Cuirot <chewi@gentoo.org> (2017-12-17)
 # Java 9+ is not yet fully supported on Gentoo. Packages cannot depend
@@ -770,29 +756,9 @@ sys-devel/automake:1.8
 sys-devel/automake:1.9
 sys-devel/automake:1.10
 
-# Kent Fredric <kentnl@gentoo.org> (2017-10-11)
-# This package should now be provided entirely by dev-lang/perl,
-# stable perl 5.24 provides Unicode-Collate-1.140.0
-# testing perl 5.26 provides Unicode-Collate-1.190.0
-# This should only be unmasked if you're locking to perl-5.24 and need
-# a newer version of virtual/perl-Unicode-Collate
-# If you're upgrading to perl-5.26, please do:
-#   emerge -C perl-core/Unicode-Collate
-# See bug #634040
-<perl-core/Unicode-Collate-1.190.0-r99
-
 # Gilles Dartiguelongue <eva@gentoo.org> (2017-09-04)
 # Incompatible changes in API in Enchant 2. Bug #629838.
 >=app-text/enchant-2
-
-# Kent Fredric <kentnl@gentoo.org> (2017-07-21)
-# Masked due to serious regression that introduces widespread data
-# corruption when storing data in blobs. Masked, because any code
-# that is written to use this version is now dependent on this version
-# and older versions will corrupt your code instead.
-# However, any existing packages should not use this version.
-# See: https://github.com/perl5-dbi/DBD-mysql/issues/117
-=dev-perl/DBD-mysql-4.42.0
 
 # Nicolas Bock <nicolasbock@gentoo.org> (2017-10-31)
 # There are multiple unresolved upstream issues with >=jabref-bin-4.0 (#636036).
@@ -838,14 +804,6 @@ dev-ruby/poltergeist
 <dev-util/nvidia-cuda-sdk-8
 <dev-util/nvidia-cuda-toolkit-8
 net-wireless/cpyrit-cuda
-
-# Kent Fredric <kentnl@gentoo.org> (2017-02-04)
-# Unsecure versions that have been only restored to tree
-# to resolve compatibility problems with mail-filter/amavisd-new
-# Use with caution due to these being removed for CVE-2016-1251
-# Bug: #601144
-# Bug: #604678
-<dev-perl/DBD-mysql-4.41.0
 
 # Michael Orlitzky <mjo@gentoo.org> (2017-01-07)
 # This package has some dangerous quality and security issues, but
