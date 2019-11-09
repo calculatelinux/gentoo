@@ -26,7 +26,7 @@ for (( i=1 ; i<=${PATCHNO} ; i++ )) ; do
 done
 
 LICENSE="Sleepycat"
-SLOT="4.2"
+SLOT="$(ver_cut 1-2)"
 KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="tcl java doc cxx rpc"
 
@@ -107,13 +107,6 @@ src_prepare() {
 
 src_configure() {
 	local myconf=(
-		--prefix="${EPREFIX}"/usr
-		--mandir="${EPREFIX}"/usr/share/man
-		--infodir="${EPREFIX}"/usr/share/info
-		--datadir="${EPREFIX}"/usr/share
-		--sysconfdir="${EPREFIX}"/etc
-		--localstatedir="${EPREFIX}"/var/lib
-		--libdir="${EPREFIX}"/usr/"$(get_libdir)"
 		--enable-compat185
 		--with-uniquename
 		$(use_enable rpc)
@@ -132,8 +125,6 @@ src_configure() {
 			--with-javac-flags="$(java-pkg_javac-args)"
 		)
 	fi
-
-	[[ -n ${CBUILD} ]] && myconf+=( --build=${CBUILD} )
 
 	# the entire testsuite needs the TCL functionality
 	if use tcl && use test; then

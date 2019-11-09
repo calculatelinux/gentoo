@@ -29,6 +29,26 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2019-11-08)
+# Ancient vulnerable version of NumPy, plus all its revdeps.
+# Removal in 30 days.  Bug #627962.
+<dev-python/numpy-1.14.5
+dev-python/pyclimate
+dev-python/scientificpython
+sci-chemistry/parassign
+sci-chemistry/pymol-plugins-psico
+sci-libs/mmtk
+
+# Michał Górny <mgorny@gentoo.org> (2019-11-08)
+# Obsolete binary version.  Please use www-apps/trickster instead.
+# Removal in 30 days.  Bug #694884.
+www-apps/trickster-bin
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2019-11-07)
+# Development stalled. Fails to build against modern
+# postgresql: bug #697452. Masked for removal in 30 days.
+dev-haskell/hsql-postgresql
+
 # Thomas Deutschmann <whissi@gentoo.org> (2019-11-07)
 # EAPI 0. It's been almost a decade since that openssl bug.
 # Removal in 30 days.  Bug #697218.
@@ -149,10 +169,6 @@ dev-ruby/openvas-omp
 # to maintain it. Package needs Google API key to actually work.
 # Removal in 30 days. Bug #608334
 media-video/minitube
-
-# Lars Wendler <polynomial-c@gentoo.org> (2019-10-26)
-# Breaks at least libreoffice (and perhaps more revdeps)
-~app-text/poppler-0.82.0
 
 # Michał Górny <mgorny@gentoo.org> (2019-10-26)
 # Incorrect LICENSE entry, and no clear license information to be found.

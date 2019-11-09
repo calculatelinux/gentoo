@@ -266,6 +266,8 @@ src_prepare() {
 	rm "${WORKDIR}"/firefox/2015_fix_cssparser.patch
 	eapply "${WORKDIR}/firefox"
 
+	eapply "${FILESDIR}"/${PN}-68.2.0-rust-1.39+.patch
+
 	# Allow user to apply any additional patches without modifing ebuild
 	eapply_user
 

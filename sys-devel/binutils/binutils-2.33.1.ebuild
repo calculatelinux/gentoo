@@ -1,9 +1,9 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-inherit eutils libtool flag-o-matic gnuconfig multilib versionator
+inherit eutils libtool flag-o-matic gnuconfig multilib
 
 DESCRIPTION="Tools necessary to build programs"
 HOMEPAGE="https://sourceware.org/binutils/"
@@ -21,7 +21,6 @@ REQUIRED_USE="default-gold? ( gold )"
 
 PATCH_VER=1
 PATCH_DEV=dilfridge
-PATCH_BINUTILS_VER=2.33.1
 
 case ${PV} in
 	9999)
@@ -36,13 +35,14 @@ case ${PV} in
 		inherit git-r3
 		S=${WORKDIR}/binutils
 		EGIT_CHECKOUT_DIR=${S}
-		EGIT_BRANCH=$(get_version_component_range 1-2)
+		EGIT_BRANCH=$(ver_cut 1-2)
 		EGIT_BRANCH="binutils-${EGIT_BRANCH/./_}-branch"
-		SLOT=$(get_version_component_range 1-2)
+		SLOT=$(ver_cut 1-2)
 		;;
 	*)
 		SRC_URI="mirror://gnu/binutils/binutils-${PV}.tar.xz"
-		SLOT=$(get_version_component_range 1-2)
+		SLOT=$(ver_cut 1-2)
+		KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sh ~sparc ~x86"
 		;;
 esac
 
@@ -80,6 +80,8 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	virtual/yacc
 "
+
+RESTRICT="!test? ( test )"
 
 MY_BUILDDIR=${WORKDIR}/build
 
@@ -285,8 +287,7 @@ src_test() {
 	# bug 637066
 	filter-flags -Wall -Wreturn-type
 
-	# enable verbose test run and result logging
-	emake -k check RUNTESTFLAGS='-a -v' VERBOSE=1
+	emake -k check
 }
 
 src_install() {

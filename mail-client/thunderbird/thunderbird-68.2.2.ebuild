@@ -261,6 +261,8 @@ src_prepare() {
 	eapply "${FILESDIR}/1000_fix_gentoo_preferences.patch"
 	popd &>/dev/null || die
 
+	eapply "${FILESDIR}"/${PN}-68.2.2-rust-1.39+.patch
+
 	# Allow user to apply any additional patches without modifing ebuild
 	eapply_user
 
