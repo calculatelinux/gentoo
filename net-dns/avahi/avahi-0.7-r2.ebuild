@@ -6,15 +6,11 @@ EAPI="6"
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="gdbm"
 
-WANT_AUTOMAKE=1.11
-
 inherit autotools eutils flag-o-matic multilib multilib-minimal mono-env python-r1 systemd user
 
 DESCRIPTION="System which facilitates service discovery on a local network"
 HOMEPAGE="http://avahi.org/"
 SRC_URI="https://github.com/lathiat/avahi/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-
-S="${WORKDIR}/${P}"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -41,7 +37,7 @@ COMMON_DEPEND="
 	introspection? ( dev-libs/gobject-introspection:= )
 	mono? (
 		dev-lang/mono
-		gtk? ( dev-dotnet/gtk-sharp )
+		gtk? ( dev-dotnet/gtk-sharp:2 )
 	)
 	python? (
 		${PYTHON_DEPS}
@@ -56,6 +52,7 @@ COMMON_DEPEND="
 
 DEPEND="
 	${COMMON_DEPEND}
+	dev-util/glib-utils
 	doc? ( app-doc/doxygen )
 	app-doc/xmltoman
 	dev-util/intltool
@@ -71,7 +68,10 @@ RDEPEND="
 
 MULTILIB_WRAPPED_HEADERS=( /usr/include/avahi-qt5/qt-watch.h )
 
-PATCHES=( "${FILESDIR}/${P}-qt5.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-qt5.patch"
+	"${FILESDIR}/${P}-CVE-2017-6519.patch"
+)
 
 pkg_preinst() {
 	enewgroup netdev
@@ -191,6 +191,9 @@ multilib_src_install() {
 		insinto /usr/share/devhelp/books/avahi
 		doins avahi.devhelp || die
 	fi
+
+	# The build system creates an empty "/run" directory, so we clean it up here
+	rmdir "${ED}"/run
 }
 
 multilib_src_install_all() {

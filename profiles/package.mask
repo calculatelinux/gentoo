@@ -29,6 +29,98 @@
 
 #--- END OF EXAMPLES ---
 
+# Aaron Bauman <bman@gentoo.org> (2019-11-10)
+# Maintainer-needed, EAPI=0, Removal in 15 days
+# Upstream is dead and can't locate a new home
+net-p2p/createtorrent
+
+# Michał Górny <mgorny@gentoo.org> (2019-11-10)
+# Added in 2008 and not updated since.  Multiple releases behind
+# upstream.  Still at EAPI 0.
+# Removal in 30 days.  Bug #697344.
+dev-libs/cygwin
+
+# Michał Górny <mgorny@gentoo.org> (2019-11-10)
+# Those packages are at EAPI 0.  Their respective maintainers
+# are unresponsive and they require specific hardware to build.
+# If someone has the hardware, please bump them to a newer EAPI.
+#
+# sys-apps/ibm-powerpc-utils-papr (ppc*): bug #697210
+# sys-apps/lkcdutils (s390): bug #697212
+# sys-block/nwutil (arm): bug #697198
+# sys-boot/aboot (alpha): bug #697182
+# sys-boot/milo (alpha): bug #697180
+# sys-libs/libspe2 & sys-libs/mars (ppc64): bug #697158
+#
+# Removal in 30 days.
+sys-apps/ibm-powerpc-utils-papr
+sys-apps/lkcdutils
+sys-block/nwutil
+sys-boot/aboot
+sys-boot/milo
+sys-libs/libspe2
+sys-libs/mars
+
+# Michał Górny <mgorny@gentoo.org> (2019-11-10)
+# Known to segfault.  EAPI 0.  Nobody should get near that ebuild
+# without a ten foot pole.  Stuck at a beta from 2006.
+# Removal in 30 days.  Bug #612384.
+dev-embedded/tigcc
+
+# Michał Górny <mgorny@gentoo.org> (2019-11-10)
+# Incorrect LICENSE (claims to be @FREE while it is @EULA).  EAPI 0.
+# Two of them are in 2010 versions, one in 2014.  No revdeps.
+# Removal in 30 days.  Bug #699736.
+dev-embedded/sgpp-lite-arm-eabi-bin
+dev-embedded/sgpp-lite-arm-linux-bin
+dev-embedded/sgpp-lite-arm-uclinux-bin
+
+# Michał Górny <mgorny@gentoo.org> (2019-11-10)
+# Does not build on new profiles.  EAPI 0.  No revdeps.
+# Removal in 30 days.  Bug #681186.
+dev-dotnet/gsf-sharp
+
+# Michał Górny <mgorny@gentoo.org> (2019-11-10)
+# Fails to build since 2017.  EAPI 0.  No revdeps.
+# Removal in 30 days.  Bug #618464.
+sys-cluster/osc-mpiexec
+
+# Aaron Bauman <bman@gentoo.org> (2019-11-09)
+# EAPI=0, source archives are crazy
+# Removal in 30 days
+dev-tex/bera
+dev-tex/ppower4
+dev-tex/prosper
+
+# Michał Górny <mgorny@gentoo.org> (2019-11-09)
+# Remnants of 'Cluster Suite', with no external revdeps.  dlm-lib
+# does not build with modern kernels anymore.  EAPI 0.
+# Removal in 30 days.  Bug #533122.
+sys-cluster/cman-lib
+sys-cluster/dlm
+sys-cluster/dlm-lib
+
+# Michał Górny <mgorny@gentoo.org> (2019-11-09)
+# Multimedia distribution with last release in 2005.  Its usefulness
+# with modern media is doubtful.
+# Removal in 30 days.  Bug #699694.
+media-video/emovix
+
+# Aaron Bauman <bman@gentoo.org> (2019-11-09)
+# homepage dead, maintainer-needed
+# EAPI=4. Removal in 30 days
+app-forensics/magicrescue
+
+# Aaron Bauman <bman@gentoo.org> (2019-11-09)
+# maintainer-needed, no known upstream homepage
+# what does it even do? EAPI=4  Removal in 30 days
+app-backup/furball
+
+# Aaron Bauman <bman@gentoo.org> (2019-11-09)
+# maintainer-need, upstream website is dead
+# EAPI=4. Removal in 30 days
+app-admin/durep
+
 # Michał Górny <mgorny@gentoo.org> (2019-11-08)
 # Ancient vulnerable version of NumPy, plus all its revdeps.
 # Removal in 30 days.  Bug #627962.
@@ -146,12 +238,16 @@ sys-devel/systemd-m4
 dev-ada/gps-bin
 
 # Michał Górny <mgorny@gentoo.org> (2019-11-01)
+# Both make no sense with dev-embedded/gnap removed.
 # Removal in 14 days.  Bug #699072.
+dev-embedded/gnap-dev
+dev-embedded/gnap-ext
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2019-10-30)
 # In preparation...
 =dev-lang/perl-5.30.1*
 ~virtual/perl-Module-CoreList-5.201.910.270
+~virtual/perl-Module-CoreList-5.201.911.100
 
 # Hasan ÇALIŞIR <hasan.calisir@psauxit.com> (2019-10-28)
 # OpenVAS project name has been renamed in
@@ -242,12 +338,6 @@ www-servers/thin
 # A dummy package with no revdeps.  Replaced by app-text/rarian.
 # Removal in 30 days.  Bug #697376.
 app-text/scrollkeeper
-
-# David Seifert <soap@gentoo.org> (2019-10-19)
-# EAPI 0, tarball completely broken, only contains
-# symlinks to /usr/portage/distdir.
-# Removal in 15 days. Bug #697306.
-media-fonts/jsmath-extra-light
 
 # David Seifert <soap@gentoo.org> (2019-10-19)
 # EAPI 0, broken build system, unmaintained,
@@ -398,44 +488,6 @@ sys-apps/man
 # This can be removed in 2019-11-11
 =sys-kernel/gentoo-sources-5.3.6
 
-# Michał Górny <mgorny@gentoo.org> (2019-10-10)
-# Upstream gone.  Last bumped in 2006.  EAPI 0.  net-misc/sipcalc seems
-# like a good replacement.
-# Removal in 30 days.  Bug #697236.
-net-misc/ipsc
-
-# Michał Górny <mgorny@gentoo.org> (2019-10-10)
-# Unmaintained.  Does not build.  EAPI 0.
-# Removal in 30 days.  Bug #696294.
-mail-mta/qmail-ldap
-
-# Michał Górny <mgorny@gentoo.org> (2019-10-07)
-# Unmaintained.  A few versions behind upstream.  Forces an old version
-# of dev-java/ant-contrib.
-# Removal in 30 days.  Bug #696916.
-net-im/openfire
-
-# Michał Górny <mgorny@gentoo.org> (2019-10-04)
-# Unmaintained, EAPI 0 packages.  No reverse dependencies.  If you want
-# them to stay, please port them to EAPI 7, and preferably become
-# the maintainer.
-# Removal in 30 days.  Bug #696252.
-mail-filter/clamsmtp
-
-# Michał Górny <mgorny@gentoo.org> (2019-10-04)
-# Unmaintained, EAPI 0 packages.  No reverse dependencies.  If you want
-# them to stay, please sacrifice the 30 minutes of your life needed
-# to port them to EAPI 7, recheck license, update URIs, etc.
-# Removal in 30 days.  Bug #696248.
-app-dicts/dictd-devils
-app-dicts/dictd-dicts
-app-dicts/dictd-elements
-app-dicts/dictd-foldoc
-app-dicts/dictd-gazetteer
-app-dicts/dictd-jargon
-app-dicts/dictd-misc
-app-dicts/dictd-web1913
-
 # Brian Evans <grknight@gentoo.org> (2019-10-01)
 # End of life.  Please upgrade.
 # Removal in 90 days. Bug 651784
@@ -497,11 +549,6 @@ dev-php/xcache
 # Miroslav Šulc <fordfrog@gentoo.org> (2019-09-21)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
 =www-servers/tomcat-9.0.26
-
-# Michał Górny <mgorny@gentoo.org> (2019-09-16)
-# Unmaintained.  Fails to build.  Last release in 2004.  EAPI 0.
-# Removal in 30 days.  Bug #592360.
-net-mail/mailsync
 
 # Lars Wendler <polynomial-c@gentoo.org> (2019-09-04)
 # Unofficial build. Superseded by official 2.49.5 release.
@@ -845,7 +892,7 @@ app-admin/amazon-ec2-init
 # Ulrich Müller <ulm@gentoo.org> (2014-07-15)
 # Permanently mask sys-libs/lib-compat and its reverse dependencies,
 # pending multiple security vulnerabilities and QA issues.
-# See bugs #515926 and #510960.
+# See bugs #515926 and #510960. Removal in 10 days.
 sys-libs/lib-compat
 sys-libs/lib-compat-loki
 games-action/phobiaii
@@ -900,6 +947,7 @@ dev-embedded/avr-libc
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (2008-03-03)
 # Masking due to security bug #194607 and security bug #204067
+# Removal in 10 days
 games-fps/doom3
 games-fps/doom3-cdoom
 games-fps/doom3-chextrek

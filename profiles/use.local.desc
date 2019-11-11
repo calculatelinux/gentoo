@@ -1383,7 +1383,6 @@ dev-ada/gnatcoll-bindings:static-pic - Build shared library
 dev-ada/gnatcoll-core:shared - Build shared library
 dev-ada/gnatcoll-core:static-pic - Build static library with pic code
 dev-ada/gnatcoll-db:db2ada - Build gnatcoll_db2ada
-dev-ada/gnatcoll-db:gnatcoll_db2ada - Build gnatcoll_db2ada
 dev-ada/gnatcoll-db:gnatinspect - Build gnatinspect
 dev-ada/gnatcoll-db:shared - Build shared library
 dev-ada/gnatcoll-db:sql - Build sql library
@@ -3252,6 +3251,9 @@ games-emulation/dosbox:core-inline - Enable memory-increasing inlines for better
 games-emulation/dosbox:glide - Enable unofficial Glide emulation via media-libs/openglide
 games-emulation/fceux:logo - Enable the ability to add a logo screen when creating AVIs
 games-emulation/generator:sdlaudio - Enable SDL Audio
+games-emulation/hatari:capsimage - Use dev-libs/spsdeclib to read .IPF, .RAW, and .CTR disk images
+games-emulation/hatari:microphone - Use media-libs/portaudio for Falcon microphone handling
+games-emulation/hatari:portmidi - Use media-libs/portmidi as an alternative MIDI backend
 games-emulation/hatari:sdl2 - Use libsdl2 instead of libsdl
 games-emulation/higan:icarus - Build icarus library manager
 games-emulation/higan:udev - Enable udev based input
@@ -4028,11 +4030,6 @@ mail-mta/postfix:ldap-bind - Add support for binding to LDAP backend using dev-l
 mail-mta/postfix:lmdb - Add support for using dev-db/lmdb for lookup tables
 mail-mta/postfix:memcached - Add support for using net-misc/memcached for lookup tables
 mail-mta/postfix:vda - Add support for virtual delivery agent quota enforcing
-mail-mta/qmail-ldap:cluster - Enable this if you want to have cluster support in qmail-ldap
-mail-mta/qmail-ldap:gencertdaily - Generate SSL certificates daily instead of hourly
-mail-mta/qmail-ldap:highvolume - Prepare qmail for high volume servers
-mail-mta/qmail-ldap:rfc2307 - Add support for RFC2307 compliant uid/gid attributes
-mail-mta/qmail-ldap:rfc822 - Add support for RFC822 compliant mail attributes
 mail-mta/qpsmtpd:postfix - create user with permissions for proper postfix interaction
 mail-mta/ssmtp:mta - Install symlinks for sendmail-compatible MTA.
 mate-base/caja:mate - Install x11-themes/mate-icon-theme which is needed when this package is used in the MATE desktop environment.
@@ -5619,7 +5616,6 @@ net-dns/avahi:bookmarks - Install the avahi-bookmarks application (requires dev-
 net-dns/avahi:gtk3 - Build the avahi-ui-gtk3 library, and use gtk3 for the avahi utilities under USE=utils
 net-dns/avahi:howl-compat - Enable compat libraries for howl
 net-dns/avahi:mdnsresponder-compat - Enable compat libraries for mDNSResponder
-net-dns/avahi:utils - Install the avahi gtk+ utils avahi-discover, bssh, and bvnc
 net-dns/bind:dlz - Enables dynamic loaded zones, 3rd party extension
 net-dns/bind:dnsrps - Enable the DNS Response Policy Service (DNSRPS) API, a mechanism to allow an external response policy provider
 net-dns/bind:dnstap - Enables dnstap packet logging
