@@ -1,0 +1,14 @@
+BDEPEND=>=app-emacs/muse-3.02.6a app-emacs/bbdb app-emacs/emacs-w3m sys-apps/texinfo >=virtual/emacs-23
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DESCRIPTION=Maintain a local Wiki using Emacs-friendly markup
+EAPI=7
+HOMEPAGE=https://www.emacswiki.org/emacs/PlannerMode
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-3+
+PDEPEND=app-emacs/remember
+RDEPEND=>=app-emacs/muse-3.02.6a app-emacs/bbdb app-emacs/emacs-w3m >=virtual/emacs-23
+RESTRICT=test
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~ulm/distfiles/planner-3.42.tar.gz
+_eclasses_=elisp	11f1230b542918f2de1aef02bfbb3539	elisp-common	23f47b2e1de7abf387105eddd1318738
+_md5_=cddd455a6413785e32fd1056ec109509
