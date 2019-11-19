@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>radhermit@gentoo.org</email>
-		<name>Tim Harder</name>
+		<email>bman@gentoo.org</email>
+		<name>Aaron BaumanM</name>
 	</maintainer>
 	<upstream>
 		<remote-id type="github">libfuse/libfuse</remote-id>

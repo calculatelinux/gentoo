@@ -176,6 +176,7 @@ app-admin/sudo:secure-path - Replace PATH variable with compile time secure path
 app-admin/sudo:sendmail - Allow sudo to send emails with sendmail
 app-admin/sudo:sssd - Add System Security Services Daemon support
 app-admin/sudo:system-digest - Use message digest functions from dev-libs/libgcrypt, dev-libs/libressl or dev-libs/openssl instead of sudo's internal SHA2 implementation
+app-admin/sysklogd:klogd - Build and install (deprecated) kernel logging daemon
 app-admin/sysklogd:logrotate - use app-admin/logrotate for rotating logs rather than custom cron scripts
 app-admin/syslog-ng:amqp - Enable support for AMQP destinations
 app-admin/syslog-ng:geoip2 - Add support for geo lookup based on IPs via dev-libs/libmaxminddb
@@ -461,7 +462,6 @@ app-emacs/auctex:preview-latex - Use bundled preview-latex
 app-emacs/bbdb:tex - Install plain TeX support files
 app-emacs/bbdb:vm - Add support for app-emacs/vm
 app-emacs/calfw:howm - Add support for the app-emacs/howm note-taking tool
-app-emacs/company-mode:ropemacs - Install backend for dev-python/ropemacs
 app-emacs/elscreen:wanderlust - Include support for app-emacs/wanderlust
 app-emacs/emacs-common-gentoo:games - Support shared score files for games
 app-emacs/emacs-w3m:gzip-el - Compress bundled Emacs Lisp source
@@ -485,7 +485,6 @@ app-emulation/containerd:btrfs - Support for BTRFS snapshot driver
 app-emulation/containerd:cri - Support for Kubernetes CRI
 app-emulation/containers-storage:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
 app-emulation/containers-storage:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
-app-emulation/containers-storage:ostree - Enables dependencies for handling of OSTree images.
 app-emulation/cri-o:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
 app-emulation/cri-o:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
 app-emulation/cri-o:ostree - Enables dependencies for handling of OSTree images.
@@ -506,7 +505,6 @@ app-emulation/faudio:ffmpeg - FAudio has optional support for decoding xWMA reso
 app-emulation/faudio:test - Build and run faudio testsuite.
 app-emulation/faudio:utils - Build all faudio utilities.
 app-emulation/faudio:xnasong - Build support for optional XNG_SONG component (note: this not required by app-emulation/wine-staging, app-emulation/wine-vanilla for faudio XAudio support).
-app-emulation/free42:alsa - Adds support for Advanced Linux Sound Architecture
 app-emulation/fs-uae:fmv - Enable support for CD32 FMV (full motion video)
 app-emulation/fs-uae:glew - Enable support for The OpenGL Extension Wrangler Library (media-libs/glew)
 app-emulation/fs-uae-launcher:lha - Enable LHA archive support
@@ -2640,6 +2638,7 @@ dev-python/networkx:pandas - Provides a DataFrame, which is a tabular data struc
 dev-python/networkx:scipy - Enables scipy backend
 dev-python/networkx:yaml - Provides YAML format reading and writing
 dev-python/nltk:numpy - Use numpy for the saved word tokenizer
+dev-python/nose:coverage - Pull in dev-python/coverage needed for nose-xcover plugin.
 dev-python/numexpr:mkl - Enable support for Intel Vector Math Library, part of sci-libs/mkl.
 dev-python/pandas:full-support - Pull all packages to give pandas full support
 dev-python/paramiko:server - Enable server feature
@@ -3374,7 +3373,6 @@ games-fps/yamagi-quake2:ctf - Build support for the 'Capture The Flag' addon
 games-fps/yamagi-quake2:rogue - Build support for the 'Ground Zero' Mission Pack
 games-fps/yamagi-quake2:softrender - Build software renderer
 games-fps/yamagi-quake2:xatrix - Build support for the 'The Reckoning' Mission Pack
-games-misc/katawa-shoujo:system-renpy - Use games-engines/renpy instead of the bundled one (experimental)
 games-misc/little-inferno:bundled-libs - Use bundled libraries.
 games-misc/ponysay:fish-completion - Enable fish completion support
 games-misc/ponysay:non-free - Install non-free ponies (i.e. from the MLP franchise)
@@ -4541,13 +4539,15 @@ media-plugins/audacious-plugins:bs2b - Enable Bauer Bauer stereophonic-to-binaur
 media-plugins/audacious-plugins:cue - Support CUE sheets using the libcue library
 media-plugins/audacious-plugins:fluidsynth - Support FluidSynth as MIDI synth backend
 media-plugins/audacious-plugins:gme - Support various gaming console music formats
+media-plugins/audacious-plugins:gtk - Build with GTK interface instead of Qt5
 media-plugins/audacious-plugins:http - Support HTTP streams through neon
-media-plugins/audacious-plugins:qt5 - Build with Qt5 interface instead Gtk+
+media-plugins/audacious-plugins:qt5 - Build with Qt5 interface instead of GTK
 media-plugins/audacious-plugins:qtmedia - Enable playback via dev-qt/qtmultimedia
 media-plugins/audacious-plugins:scrobbler - Build with scrobbler/LastFM submission support
 media-plugins/audacious-plugins:sid - Build with SID (Commodore 64 Audio) support
 media-plugins/audacious-plugins:soxr - Build with SoX Resampler support
 media-plugins/audacious-plugins:speedpitch - Enable speed/pitch effects
+media-plugins/audacious-plugins:streamtuner - Build the streamtuner plugin
 media-plugins/calf:experimental - Enable experimental features/plugins
 media-plugins/calf:lv2 - Add support for Ladspa V2
 media-plugins/frei0r-plugins:facedetect - Enables building of facedetect plugin, which depends on media-libs/opencv
@@ -4575,6 +4575,21 @@ media-plugins/hexter:gtk2 - Enable x11-libs/gtk+:2 based GUI
 media-plugins/imlib2_loaders:eet - Enable Eet image loader
 media-plugins/imlib2_loaders:xcf - Enable XCF image loader
 media-plugins/mediastreamer-ilbc:20ms-frames - enable 20ms frame size (default is 30ms). Some VOIP providers such as Gizmo5 (aka Sipphone) require the codec to be compiled with the 30ms setting.
+media-plugins/mythplugins:cdr - Allows MythMusic to burn CD-Rs
+media-plugins/mythplugins:exif - Allows MythGallery to read EXIF data from photos
+media-plugins/mythplugins:fftw - Adds visual effects to MythMusic when playing back music
+media-plugins/mythplugins:hls - HTTP Live Streaming support
+media-plugins/mythplugins:mytharchive - Allows you to archive recorded content to CD or DVD
+media-plugins/mythplugins:mythbrowser - Adds a web browser within MythTV
+media-plugins/mythplugins:mythgallery - Adds a picture viewing gallery within MythTV
+media-plugins/mythplugins:mythgame - Adds a frontend to various ROM emulators within MythTV
+media-plugins/mythplugins:mythmusic - Adds the ability for MythTV to act as a music player
+media-plugins/mythplugins:mythnetvision - Adds the ability to view netvision devices within MythTV
+media-plugins/mythplugins:mythnews - Adds a news viewer within MythTV
+media-plugins/mythplugins:mythweather - Adds weather information within MythTV
+media-plugins/mythplugins:mythzmserver - Build mythzmserver daemon needed by zoneminder on LAN
+media-plugins/mythplugins:mythzoneminder - Adds support for zoneminder (requires active mythzmserver daemon on LAN).
+media-plugins/mythplugins:raw - Allows MythGallery to view photos saved in RAW format
 media-plugins/vdr-burn:dvdarchive - DMH DVD - Archive
 media-plugins/vdr-cdplayer:cdparanoia - Enable cdparanoia (audio CD ripper) support
 media-plugins/vdr-dvbapi:dvbcsa - use media-libs/libdvbcsa free implementation of the DVB Common Scrambling Algorithm
@@ -4582,7 +4597,6 @@ media-plugins/vdr-epgsearch:conflictcheckonly - install the "conflictcheckonly" 
 media-plugins/vdr-epgsearch:epgsearchonly - install the "epgsearchonly" vdr-plugin
 media-plugins/vdr-epgsearch:quicksearch - install the "quicksearch" vdr-plugin
 media-plugins/vdr-epgsearch:tre - Add support for unlimited fuzzy searching with help of dev-libs/tre library
-media-plugins/vdr-pvr350:yaepg - Enables full support for the output format of vdr-yaepg
 media-plugins/vdr-streamdev:client - Compile the VDR plugin vdr-streamdev-client that acts like a dvb-budget card
 media-plugins/vdr-streamdev:server - Compile the VDR plugin vdr-streamdev-server that allows remote systems to access the DVB cards used for the local VDR
 media-plugins/vdr-vdrmanager:stream - Add support for streaming Video to Android client
@@ -4619,7 +4633,8 @@ media-sound/aqualung:systray - Enable system tray support
 media-sound/ario:idle - Enable experimental support for MPD's idle command to reduce bandwidth and cpu usage, requires MPD 0.14
 media-sound/ario:scrobbler - Enable audioscrobbler/last.fm support net-libs/libsoup
 media-sound/asunder:mac - Support for creation of Monkey's Audio files (APE)
-media-sound/audacious:qt5 - Build with Qt5 interface instead Gtk+
+media-sound/audacious:gtk - Build with GTK interface instead of Qt5
+media-sound/audacious:qt5 - Build with Qt5 interface instead of GTK
 media-sound/audacity:id3tag - Enables ID3 tagging with id3tag library
 media-sound/audacity:lv2 - Add support for Ladspa V2
 media-sound/audacity:midi - Enables MIDI support
@@ -4733,7 +4748,7 @@ media-sound/linuxsampler:lv2 - Add support for Ladspa V2
 media-sound/linuxsampler:sf2 - Add support for SoundFont 2 sound bank files
 media-sound/lmms:fluidsynth - Enables Fluidsynth MIDI software synthesis plugin.
 media-sound/lmms:libgig - Enables GIG player plugin.
-media-sound/lmms:soundio - Enalbes libsoundio support.
+media-sound/lmms:soundio - Enables libsoundio support.
 media-sound/lmms:stk - Enables STK Mallet plugin.
 media-sound/lmms:vst - Enables the VeSTige plugin to run VST plugins through Wine.
 media-sound/loudness-scanner:mpg123 - build the mpg123 plugin
@@ -5092,6 +5107,7 @@ media-video/handbrake:fdk - Support for encoding AAC using media-libs/fdk-aac.
 media-video/handbrake:gstreamer - Support for the streaming media framework from media-libs/gstreamer.
 media-video/handbrake:gtk - Install the GTK UI, ghb.
 media-video/handbrake:libav-aac - Support for encoding AAC using media-video/libav's internal encoder.
+media-video/handbrake:numa - Adds support for x265's NUMA capabilities.
 media-video/handbrake:nvenc - Adds support for NVIDIA Encoder (NVENC) API for hardware accelerated encoding on NVIDIA cards.
 media-video/handbrake:x265 - Support for encoding h265 using media-libs/x265.
 media-video/kino:gpac - Enable GPAC support when exporting to 3GPP format
@@ -5236,8 +5252,8 @@ media-video/vdr:mainmenuhooks - Allows to replace main menu entries by some spec
 media-video/vdr:menuorg - Enables support for the media-plugins/vdr-menuorg
 media-video/vdr:menuselection - adds support for menu hotkeys of double digits
 media-video/vdr:naludump - Removes NALU fill data from h.264-Streams of TS files
-media-video/vdr:permashift - permanent timeshift by recording live TV on hard disk, need plugin media-plugins/vdr-permashift
-media-video/vdr:permashift_v1 - permanent timeshift by recording live TV on RAM, need plugin >=mediaplugins/vdr-permashift-1
+media-video/vdr:permashift - permanent timeshift by recording live TV into RAM, need plugin media-plugins/vdr-permashift
+media-video/vdr:permashift_v1 - permanent timeshift by recording live TV into RAM, need plugin media-plugins/vdr-permashift
 media-video/vdr:pinplugin - Support for media-plugins/vdr-pin
 media-video/vdr:resumereset - rreset resume of EOF
 media-video/vdr:rotor - Enable support for plugin vdr-rotor for dish-positioner.
@@ -7527,6 +7543,8 @@ sci-libs/openblas:pthread - Build with pthread threading model
 sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/opencascade:gl2ps - Use gl2ps PostScript printing library
 sci-libs/opencascade:gles2 - Use OpenGL ES 2.0
+sci-libs/opencascade:inspector - Build the OCCT inspector tool for low-level data inspection
+sci-libs/opencascade:optimize - Don't clear allocated memory. Use optimized memory manager unless tbb USE flag is set.
 sci-libs/opencascade:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
 sci-libs/opencascade:vtk - Enable Visualization Toolkit
 sci-libs/orocos_kdl:models - Build models for some well known robots.
@@ -7931,6 +7949,7 @@ sys-apps/kexec-tools:booke - Include support for Book-E memory management
 sys-apps/kexec-tools:lzma - Enables support for LZMA compressed kernel images
 sys-apps/kexec-tools:xen - Enable extended xen support
 sys-apps/kmod:lzma - Enable support for XZ compressed modules
+sys-apps/kmod:pkcs7 - Enable PKCS#7 signature parsing for modinfo.
 sys-apps/kmod:tools - Install module loading/unloading tools.
 sys-apps/kmod:zlib - Enable support for gzipped modules
 sys-apps/kmscon:drm - Enable Linux DRM for backend
@@ -9167,6 +9186,7 @@ x11-wm/fvwm:netpbm - Enable NetPBM support (used by FvwmScript-ScreenDump)
 x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
 x11-wm/i3:doc - Build and install the HTML documentation and regenerate the man pages
+x11-wm/icewm:gdk-pixbuf - Enable gdk-pixbuf rendering
 x11-wm/lumina:desktop-utils - Build and install lumina's desktop-utils
 x11-wm/metacity:libcanberra - Enable sound event support using media-libs/libcanberra
 x11-wm/metacity:vulkan - Enable Vulkan based compositor support via META_COMPOSITOR=vulkan environment variable

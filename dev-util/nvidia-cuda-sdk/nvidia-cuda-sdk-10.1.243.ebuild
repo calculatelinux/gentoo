@@ -10,7 +10,7 @@ DRIVER_PV="418.87.00"
 
 DESCRIPTION="NVIDIA CUDA Software Development Kit"
 HOMEPAGE="https://developer.nvidia.com/cuda-zone"
-SRC_URI="https://developer.nvidia.com/compute/cuda/${MYD}/Prod/local_installers/cuda_${PV}_${DRIVER_PV}_linux.run -> cuda_${PV}_${DRIVER_PV}_linux.run"
+SRC_URI="https://developer.download.nvidia.com/compute/cuda/${MYD}/Prod/local_installers/cuda_${PV}_${DRIVER_PV}_linux.run -> cuda_${PV}_${DRIVER_PV}_linux.run"
 
 LICENSE="CUDPP"
 SLOT="0/${PV}"
@@ -99,12 +99,12 @@ src_install() {
 	if use doc; then
 		ebegin "Installing docs ..."
 			while IFS="" read -d $'\0' -r f; do
-				treecopy "${f}" "${ED%/}"/usr/share/doc/${PF}/
+				treecopy "${f}" "${ED}"/usr/share/doc/${PF}/
 			done < <(find -type f \( -name 'readme.txt' -o -name '*.pdf' \) -print0)
 
 			while IFS="" read -d $'\0' -r f; do
-				docompress -x "${f#${ED%/}}"
-			done < <(find "${ED%/}"/usr/share/doc/${PF}/ -type f -name 'readme.txt' -print0)
+				docompress -x "${f#${ED}}"
+			done < <(find "${ED}"/usr/share/doc/${PF}/ -type f -name 'readme.txt' -print0)
 		eend
 	fi
 
@@ -133,9 +133,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use example && use prefix; then
+	if use examples && use prefix; then
 		ewarn "Gentoo Prefix does not manage kernel modules.  You need to make certain"
-		ewarn "the functionality counterpart to  >=x11-drivers/nvidia-drivers-${DRIVER_PV}[uvm]"
+		ewarn "the function counterpart to >=x11-drivers/nvidia-drivers-${DRIVER_PV}[uvm]"
 		ewarn "is available from the host"
 	fi
 }

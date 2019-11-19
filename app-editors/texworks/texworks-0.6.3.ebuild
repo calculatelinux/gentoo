@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python{2_7,3_6,3_7} )
 
-inherit python-single-r1 cmake-utils xdg-utils
+inherit python-single-r1 cmake-utils virtualx xdg-utils
 
 DESCRIPTION="A simple interface for working with TeX documents"
 HOMEPAGE="http://tug.org/texworks/"
@@ -34,6 +34,8 @@ BDEPEND="virtual/pkgconfig"
 
 S=${WORKDIR}/${PN}-release-${PV}
 
+RESTRICT="!test? ( test )"
+
 pkg_setup() {
 	python-single-r1_pkg_setup
 }
@@ -51,6 +53,10 @@ src_configure() {
 		-DBUILD_SHARED_PLUGINS=ON
 	)
 	cmake-utils_src_configure
+}
+
+src_test() {
+	virtx default_src_test
 }
 
 pkg_postinst() {

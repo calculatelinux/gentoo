@@ -31,9 +31,11 @@ RDEPEND="
 	app-arch/xz-utils
 	media-libs/speex
 	dev-libs/jansson
+	dev-libs/libxml2
 	media-libs/a52dec
 	media-libs/libass:=
 	>=media-libs/libbluray-1.0
+	>=media-libs/dav1d-0.5.1
 	media-libs/libdvdnav
 	media-libs/libdvdread:=
 	media-libs/libsamplerate

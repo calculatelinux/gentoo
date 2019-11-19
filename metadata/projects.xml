@@ -1853,10 +1853,10 @@
     <name>LXQt</name>
     <url>https://wiki.gentoo.org/wiki/Project:LXQt</url>
     <description>Maintains LXQt DE related packages.</description>
-    <member is-lead="1">
+    <member>
       <email>chiitoo@gentoo.org</email>
       <name>Jimi Huotari</name>
-      <role>Non-Technical Lead</role>
+      <role>Maintainer</role>
     </member>
   </project>
   <project>
@@ -3045,6 +3045,11 @@
     <name>Developer Recruiters</name>
     <url>https://wiki.gentoo.org/wiki/Project:Recruiters</url>
     <description>The Recruiters subproject provides a central location for information about developer recruitment and recruiter policy.</description>
+    <member>
+      <email>gokturk@gentoo.org</email>
+      <name>Göktürk Yüksek</name>
+      <role>Recruiter</role>
+    </member>
     <member is-lead="1">
       <email>zlogene@gentoo.org</email>
       <name>Mikle Kolyada</name>

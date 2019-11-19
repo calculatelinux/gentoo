@@ -28,10 +28,10 @@ COMMON_DEPEND="x11-libs/wxGTK:${WX_GTK_VER}[X,opengl]
 		dev-python/wxpython:4.0[${PYTHON_USEDEP}]
 		${PYTHON_DEPS}
 	)
-	>=dev-libs/boost-1.61[context,nls,threads,python?,${PYTHON_USEDEP}]
+	>=dev-libs/boost-1.61:=[context,nls,threads,python?,${PYTHON_USEDEP}]
 	github? ( net-misc/curl:=[ssl] )
 	media-libs/glew:0=
-	media-libs/glm
+	>=media-libs/glm-0.9.9.1
 	media-libs/freeglut
 	media-libs/mesa[X(+)]
 	ngspice? (
