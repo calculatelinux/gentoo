@@ -15,7 +15,7 @@ SRC_URI="mirror://apache/${PN}/tomcat-8/v${PV}/src/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="8.5"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="extra-webapps"
 
 RESTRICT="test" # can we run them on a production system?
@@ -26,7 +26,6 @@ SAPI_SLOT="3.1"
 COMMON_DEP="dev-java/eclipse-ecj:${ECJ_SLOT}
 	>=dev-java/tomcat-servlet-api-${SLOT}:${SAPI_SLOT}"
 RDEPEND="${COMMON_DEP}
-	!<dev-java/tomcat-native-1.1.24
 	>=virtual/jre-1.8"
 DEPEND="${COMMON_DEP}
 	app-admin/pwgen

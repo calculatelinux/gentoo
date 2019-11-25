@@ -30,6 +30,7 @@ DEPEND="
 		dev-python/mock[${PYTHON_USEDEP}]
 	)
 "
+RESTRICT="!test? ( test )"
 
 python_test() {
 	esetup.py test

@@ -7,7 +7,7 @@ inherit fcaps flag-o-matic multilib python-any-r1 qmake-utils user xdg-utils cma
 
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
 HOMEPAGE="https://www.wireshark.org/"
-SRC_URI="${HOMEPAGE}download/src/all-versions/${P/_/}.tar.xz"
+SRC_URI="https://www.wireshark.org/download/src/all-versions/${P/_/}.tar.xz"
 LICENSE="GPL-2"
 
 SLOT="0/${PV}"
@@ -147,7 +147,7 @@ src_configure() {
 		-DBUILD_tshark=$(usex tshark)
 		-DBUILD_udpdump=$(usex udpdump)
 		-DBUILD_wireshark=$(usex qt5)
-		-DCMAKE_INSTALL_DOCDIR="${EROOT%/}/usr/share/doc/${PF}"
+		-DCMAKE_INSTALL_DOCDIR="${EROOT}/usr/share/doc/${PF}"
 		-DDISABLE_WERROR=yes
 		-DENABLE_BCG729=$(usex bcg729)
 		-DENABLE_BROTLI=$(usex brotli)

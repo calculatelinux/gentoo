@@ -14,7 +14,7 @@ SRC_URI="https://github.com/fonttools/fonttools/archive/${PV}.tar.gz -> ${P}.tar
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="test"
 
 RDEPEND=""
@@ -26,6 +26,9 @@ DEPEND="${RDEPEND}
 		>=dev-python/fs-2.4.9[${PYTHON_USEDEP}]
 		app-arch/brotli[python,${PYTHON_USEDEP}]
 		app-arch/zopfli
+		python_targets_python2_7? (
+			dev-python/backports-os[python_targets_python2_7]
+		)
 	)"
 
 python_test() {
