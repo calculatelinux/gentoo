@@ -29,6 +29,19 @@
 
 #--- END OF EXAMPLES ---
 
+# Ulrich Müller <ulm@gentoo.org> (2019-11-26)
+# Upstream says: "Elib has been decommissioned as a separate package
+# since its useful functions have long since been included in Emacs."
+# Last release in 1995. Byte-compilation fails with Emacs 27.
+# Masked for removal in 30 days. Bug #701160.
+app-emacs/elib
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2019-11-25)
+# Mask for removal from main tree into ::nix-guix overlay.
+# Removal in 30 days.
+sys-apps/nix
+sys-apps/guix
+
 # Alfredo Tupone <tupone@gentoo.org> (2019-11-18)
 # No more needed.
 # Removal in 30 days.
@@ -278,12 +291,6 @@ net-analyzer/openvas-cli
 net-analyzer/openvas-tools
 dev-ruby/openvas-omp
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2019-10-26)
-# Version in Gentoo is years old, does not work, no one stepped up
-# to maintain it. Package needs Google API key to actually work.
-# Removal in 30 days. Bug #608334
-media-video/minitube
-
 # Michał Górny <mgorny@gentoo.org> (2019-10-26)
 # Incorrect LICENSE entry, and no clear license information to be found.
 # Homepage gone, and source of some of the files unknown.
@@ -304,11 +311,6 @@ dev-ruby/actioncable:5.1
 dev-ruby/activemodel:5.1
 dev-ruby/activesupport:5.1
 dev-ruby/arel:8.0
-
-# Matt Turner <mattst88@gentoo.org> (2019-10-21)
-# Replaced by introspection bindings. Bug #628938
-# Removal in 30 days
-dev-python/gnome-keyring-python
 
 # Michał Górny <mgorny@gentoo.org> (2019-10-20)
 # Testing version that breaks multiple plugins.  Let's keep it masked
@@ -775,7 +777,9 @@ app-admin/amazon-ec2-init
 # Ulrich Müller <ulm@gentoo.org> (2014-07-15)
 # Permanently mask sys-libs/lib-compat and its reverse dependencies,
 # pending multiple security vulnerabilities and QA issues.
-# See bugs #515926 and #510960. Removal in 10 days.
+# See bugs #515926 and #510960.
+# Aaron Bauman <bman@gentoo.org> (updated 2019-11-09)
+# Removal in 10 days.
 sys-libs/lib-compat
 sys-libs/lib-compat-loki
 games-action/phobiaii
