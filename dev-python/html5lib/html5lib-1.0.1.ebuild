@@ -27,6 +27,8 @@ DEPEND="${RDEPEND}
 		dev-python/mock[${PYTHON_USEDEP}]
 	)"
 
+RESTRICT="!test? ( test )"
+
 python_test() {
 	py.test -v || die "Tests fail with ${EPYTHON}"
 }

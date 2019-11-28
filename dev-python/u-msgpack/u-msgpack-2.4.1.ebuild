@@ -22,6 +22,8 @@ RDEPEND=""
 DEPEND="${RDEPEND}
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 
+RESTRICT="!test? ( test )"
+
 S=${WORKDIR}/${MY_P}
 
 PATCHES=("${FILESDIR}"/${P}-little-endian.patch)

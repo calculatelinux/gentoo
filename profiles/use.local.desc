@@ -2191,6 +2191,7 @@ dev-libs/efl:xpresent - Enable x11-libs/libXpresent support
 dev-libs/elfutils:lzma - Support automatic decompression of LZMA-compressed files and kernel images
 dev-libs/elfutils:threads - Build the libraries with thread safe support
 dev-libs/elfutils:utils - Install command-line utilities (all the eu-* programs)
+dev-libs/elfutils:valgrind - Add support for memory debugging using dev-util/valgrind
 dev-libs/ell:glib - Enable dev-libs/glib support
 dev-libs/fcgi:html - Install HTML documentation
 dev-libs/folks:telepathy - Load contacts from the Telepathy framework
@@ -3375,6 +3376,7 @@ games-fps/yamagi-quake2:ctf - Build support for the 'Capture The Flag' addon
 games-fps/yamagi-quake2:rogue - Build support for the 'Ground Zero' Mission Pack
 games-fps/yamagi-quake2:softrender - Build software renderer
 games-fps/yamagi-quake2:xatrix - Build support for the 'The Reckoning' Mission Pack
+games-kids/tuxtype:pango - Render fonts using media-libs/sdl-pango instead of media-libs/sdl-ttf
 games-misc/little-inferno:bundled-libs - Use bundled libraries.
 games-misc/ponysay:fish-completion - Enable fish completion support
 games-misc/ponysay:non-free - Install non-free ponies (i.e. from the MLP franchise)
@@ -6259,6 +6261,7 @@ net-libs/nghttp2:hpack-tools - Install HPACK (header compression) helper tools
 net-libs/nghttp2:utils - Install nghttp, nghttpd and nghttpx
 net-libs/nodejs:inspector - Enable V8 inspector
 net-libs/nodejs:npm - Enable NPM package manager
+net-libs/nodejs:pax_kernel - Enable building under a PaX enabled kernel
 net-libs/nodejs:snapshot - Enable snapshot creation for faster startup
 net-libs/nodejs:systemtap - Enable SystemTAP/DTrace tracing
 net-libs/ntirpc:gssapi - Include support for RPCSEC GSS
@@ -6400,7 +6403,7 @@ net-misc/asterisk-core-sounds:wav - Install the sounds files for the wav codec.
 net-misc/asterisk-extra-sounds:alaw - Install the sounds files for the alaw codec.
 net-misc/asterisk-extra-sounds:g722 - Install the sounds files for the g722 codec.
 net-misc/asterisk-extra-sounds:g729 - Install the sounds files for the g729 codec.
-net-misc/asterisk-extra-sounds:gsm - Install the sounds files for the +gsm codec.
+net-misc/asterisk-extra-sounds:gsm - Install the sounds files for the gsm codec.
 net-misc/asterisk-extra-sounds:siren14 - Install the sounds files for the siren14 codec.
 net-misc/asterisk-extra-sounds:siren7 - Install the sounds files for the siren7 codec.
 net-misc/asterisk-extra-sounds:sln16 - Install the sounds files for the sln16 codec.
@@ -6409,7 +6412,7 @@ net-misc/asterisk-extra-sounds:wav - Install the sounds files for the wav codec.
 net-misc/asterisk-moh-opsound:alaw - Install the sounds files for the alaw codec.
 net-misc/asterisk-moh-opsound:g722 - Install the sounds files for the g722 codec.
 net-misc/asterisk-moh-opsound:g729 - Install the sounds files for the g729 codec.
-net-misc/asterisk-moh-opsound:gsm - Install the sounds files for the +gsm codec.
+net-misc/asterisk-moh-opsound:gsm - Install the sounds files for the gsm codec.
 net-misc/asterisk-moh-opsound:siren14 - Install the sounds files for the siren14 codec.
 net-misc/asterisk-moh-opsound:siren7 - Install the sounds files for the siren7 codec.
 net-misc/asterisk-moh-opsound:sln16 - Install the sounds files for the sln16 codec.

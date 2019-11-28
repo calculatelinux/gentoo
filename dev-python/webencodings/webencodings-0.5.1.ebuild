@@ -23,6 +23,8 @@ DEPEND="${RDEPEND}
 		dev-python/pytest[${PYTHON_USEDEP}]
 	)"
 
+RESTRICT="!test? ( test )"
+
 python_prepare_all(){
 	cat >> setup.cfg <<- EOF
 	[pytest]
