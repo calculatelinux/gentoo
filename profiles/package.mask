@@ -29,6 +29,26 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2019-11-28)
+# No revdeps, blocking move to python 3.7, unnecessary maintenance
+# burden, bug #701426. Removal in 30 days.
+dev-python/pytest-datafiles
+dev-python/pytest-html
+dev-python/pytest-pythonpath
+dev-python/pytest-qt
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2019-11-28)
+# Multiple build failures, automagic, missing deps, no one to fix them
+# Bugs #542756, #554388, #555768, #557974, #574854, #574890 #589182,
+# #590640, #612302, #622574, #698940; Removal in 30 days.
+=sci-libs/vtk-6*
+sci-libs/vtkdata
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2019-11-28)
+# Depends on broken =sci-libs/vtk-6*, needs to be bumped to 3.0.2, bug #657952
+# Removal in 30 days.
+=sci-visualization/visit-2*
+
 # Mikle Kolyada <zlogene@gentoo.org> (2019-11-27)
 # luatex has been a part of texlive since at least 2014
 # no real consumers in the tree. Masked for removal
@@ -481,11 +501,6 @@ dev-lang/vala:0.46
 # Mask 5.x version
 # It breaks hundreds of py2 ebuilds and not all deps are keyworded
 >=dev-python/pytest-5.0.1
-
-# Brian Evans <grknight@gentoo.org> (2019-07-25)
-# Mask new beta versions until release
-dev-lang/php:7.4
-~virtual/httpd-php-7.4
 
 # Robin H. Johnson <robbat2@gentoo.org> (2019-07-08)
 # Needs LOTS of testing, broke boot on my laptop in early attempts, maybe needs

@@ -5,13 +5,13 @@ EAPI=7
 
 CMAKE_MAKEFILE_GENERATOR="emake"
 CHECKREQS_DISK_BUILD=3500M
-inherit git-r3 cmake-utils xdg-utils check-reqs
+inherit git-r3 cmake-utils xdg check-reqs
 
 DESCRIPTION="WYSIWYG Music Score Typesetter"
 HOMEPAGE="https://musescore.org/"
 # MuseScore_General-0.1.3.tar.bz2 packaged from https://ftp.osuosl.org/pub/musescore/soundfont/MuseScore_General/
 # It has to be repackaged because the files are not versioned, current version can be found in VERSION file there.
-SRC_URI="https://dev.gentoo.org/~fordfrog/distfiles/MuseScore_General-0.1.6.tar.bz2"
+SRC_URI="https://dev.gentoo.org/~fordfrog/distfiles/MuseScore_General-0.1.8.tar.bz2"
 EGIT_REPO_URI="https://github.com/${PN}/MuseScore.git"
 
 LICENSE="GPL-2"
@@ -33,6 +33,7 @@ DEPEND="
 	dev-qt/qthelp:5
 	dev-qt/qtnetwork:5
 	dev-qt/qtprintsupport:5
+	dev-qt/qtquickcontrols2:5
 	>=dev-qt/qtsingleapplication-2.6.1_p20171024
 	dev-qt/qtsvg:5
 	dev-qt/qtxml:5
@@ -90,16 +91,4 @@ src_compile() {
 	cd "${BUILD_DIR}" || die
 	cmake-utils_src_make -j1 lrelease manpages
 	cmake-utils_src_compile
-}
-
-pkg_postinst() {
-	xdg_mimeinfo_database_update
-	xdg_desktop_database_update
-	xdg_icon_cache_update
-}
-
-pkg_postrm() {
-	xdg_mimeinfo_database_update
-	xdg_desktop_database_update
-	xdg_icon_cache_update
 }
