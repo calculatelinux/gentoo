@@ -29,6 +29,90 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2019-12-01)
+# Added in 2013 and not updated since.  Unmaintained upstream since
+# inception.  Never had any keywords.
+# Removal in 30 days.  Bug #701462.
+net-dns/pdns-ldap-backend
+
+# Michał Górny <mgorny@gentoo.org> (2019-12-01)
+# Unmaintained.  Incorrect license and potential copyright infringement.
+# Removal in 30 days.  Bug #634332.
+games-misc/fortune-mod-powerpuff
+
+# Michał Górny <mgorny@gentoo.org> (2019-12-01)
+# Unmaintained.  No license and potential copyright infringement.
+# Removal in 30 days.  Bug #634318.
+games-misc/fortune-mod-smac
+
+# Michał Górny <mgorny@gentoo.org> (2019-12-01)
+# Not updated since 2009 and 2004 respectively.  Suspicious license.
+# Removal in 30 days.  Bug #691084.
+games-misc/fortune-mod-gentoo-dev
+games-misc/fortune-mod-gentoo-forums
+
+# Michał Górny <mgorny@gentoo.org> (2019-12-01)
+# The plugin is broken with multiple dependencies.  It is also dead
+# upstream.  Removing per maintainer's request.
+# Removal in 30 days.  Bug #314309.
+media-plugins/vdr-music
+
+# Michał Górny <mgorny@gentoo.org> (2019-12-01)
+# Unresolved vulnerability.  Also apparently fails to build (#574048).
+# Removal in 30 days.  Bug #463338.
+sys-fabric/ibutils
+
+# Michał Górny <mgorny@gentoo.org> (2019-12-01)
+# Unmaintained.  Not bumped since 2015.
+# Removal in 30 days.  Bug #585126.
+www-servers/hiawatha
+www-apps/hiawatha-monitor
+
+# Michał Górny <mgorny@gentoo.org> (2019-12-01)
+# Multiple unresolved vulnerabilities.  The current Gentoo version
+# has reached EOL upstream.  The package hasn't been bumped since
+# mid-2018.
+# Removal in 30 days.  Bug #686428.
+net-analyzer/suricata
+
+# Michał Górny <mgorny@gentoo.org> (2019-12-01)
+# Unresolved license issues.  No reply from maintainer.
+# Removal in 30 days.  Bug #694262.
+dev-util/idea-community
+
+# Michał Górny <mgorny@gentoo.org> (2019-12-01)
+# Unmaintained.  Last release in 2012.  Buggy ebuild.
+# Removal in 30 days.  Bug #658302.
+app-text/pdfshuffler
+
+# Michał Górny <mgorny@gentoo.org> (2019-12-01)
+# Not updated since 2015.  No reverse dependencies.
+# Removal in 30 days.  Bug #695392.
+dev-python/quixote
+
+# Michał Górny <mgorny@gentoo.org> (2019-12-01)
+# Unresolved license issues.  No reply from the maintainer.
+# Removal in 30 days.  Bug #694268.
+dev-util/goland
+
+# Matt Turner <mattst88@gentoo.org> (2019-12-01)
+# browserpass ebuild ported to go-modules, so these modules now have no reverse
+# dependencies.
+# Removal in 30 days. Bugs #683286, #683310, #687462, #700792
+=www-plugins/browserpass-3.0.6
+dev-go/zglob
+dev-go/logrus
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2019-11-30)
+# Version in Gentoo is multiple years old, broken by several dependencies
+# Bugs aren't being fixed: #497412, #509334, #511794, #651010, #654484, #701022
+# Removal in 30 days.
+media-libs/mediastreamer
+media-plugins/mediastreamer-amr
+media-plugins/mediastreamer-bcg729
+media-plugins/mediastreamer-ilbc
+media-plugins/mediastreamer-x264
+
 # Bernard Cafarelli <voyageur@gentoo.org> (2019-11-29)
 # Beta for new major version with initial Python 3 support
 =app-backup/rdiff-backup-1.4.0_beta*
@@ -333,11 +417,6 @@ media-gfx/exiftags
 app-admin/certmgr
 app-admin/ksonnet
 
-# Mikle Kolyada <zlogene@gentoo.org> (2019-11-04)
-# xcolor has been a part of dev-texlive/texlive-latexrecommended
-# for a long time, removal in 10 days.
-dev-tex/xcolor
-
 # Alfredo Tupone <tupone@gentoo.org> (2019-11-03)
 # No more needed. Substituted by dev-ada/gnatcoll-core and others
 # Removal in 30 days.
@@ -349,53 +428,10 @@ dev-ada/gnatcoll
 # Removal in 30 days.  Bug #699244.
 app-portage/install-mask
 
-# Michał Górny <mgorny@gentoo.org> (2019-11-03)
-# This was only used by my packages, and the last revdep is gone now.
-# Removal in 14 days.  Bug #699238.
-sys-devel/systemd-m4
-
 # Alfredo Tupone <tupone@gentoo.org> (2019-11-03)
 # The binary for gps are included in dev-ada/gnat-suite-bin
 # Removal in 30 days.
 dev-ada/gps-bin
-
-# Michał Górny <mgorny@gentoo.org> (2019-11-01)
-# Both make no sense with dev-embedded/gnap removed.
-# Removal in 14 days.  Bug #699072.
-dev-embedded/gnap-dev
-dev-embedded/gnap-ext
-
-# Hasan ÇALIŞIR <hasan.calisir@psauxit.com> (2019-10-28)
-# OpenVAS project name has been renamed in
-# Greenbone Vulnerability Management (GVM).
-# New loader package is net-analyzer/gvm.
-# Masked for removal in 30 days. Bugs #692004 #692076
-net-analyzer/openvas
-<=net-analyzer/openvas-libraries-8.0.0
-net-analyzer/openvas-cli
-net-analyzer/openvas-tools
-dev-ruby/openvas-omp
-
-# Michał Górny <mgorny@gentoo.org> (2019-10-26)
-# Incorrect LICENSE entry, and no clear license information to be found.
-# Homepage gone, and source of some of the files unknown.
-# Removal in 30 days.  Bug #698050.
-media-fonts/vc-fonts
-
-# Hans de Graaff <graaff@gentoo.org> (2019-10-25)
-# ruby24-only, no longer supported by upstream.
-# Migrate to Rails 5.2 instead. Masked for removal in 30 days.
-dev-ruby/rails:5.1
-dev-ruby/railties:5.1
-dev-ruby/activerecord:5.1
-dev-ruby/actionmailer:5.1
-dev-ruby/actionpack:5.1
-dev-ruby/actionview:5.1
-dev-ruby/activejob:5.1
-dev-ruby/actioncable:5.1
-dev-ruby/activemodel:5.1
-dev-ruby/activesupport:5.1
-dev-ruby/arel:8.0
 
 # Michał Górny <mgorny@gentoo.org> (2019-10-20)
 # Testing version that breaks multiple plugins.  Let's keep it masked

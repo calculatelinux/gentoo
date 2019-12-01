@@ -52,7 +52,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 		!libav? ( >=media-video/ffmpeg-2:0=[x264] )
 		libav? ( media-video/libav:0=[x264] ) )
 	jpeg? ( media-libs/libjpeg-turbo )
-	opengl? ( dev-python/pygtkglext )
+	opengl? ( dev-python/pyopengl )
 	pulseaudio? ( media-sound/pulseaudio )
 	sound? ( media-libs/gstreamer:1.0
 		media-libs/gst-plugins-base:1.0
@@ -66,6 +66,7 @@ RDEPEND="${COMMON_DEPEND}
 	dev-python/pillow[jpeg?,${PYTHON_USEDEP}]
 	virtual/ssh
 	x11-apps/xmodmap
+	x11-libs/gtk+:3[introspection]
 	cups? ( dev-python/pycups[${PYTHON_USEDEP}] )
 	dbus? ( dev-python/dbus-python[${PYTHON_USEDEP}] )
 	lz4? ( dev-python/lz4[${PYTHON_USEDEP}] )

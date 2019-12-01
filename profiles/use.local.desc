@@ -373,9 +373,9 @@ app-doc/doxygen:doxysearch - build doxyindexer and doxysearch.cgi
 app-doc/kicad-doc:html - Generate documentation in HTML format
 app-doc/kicad-doc:pdf - Generate documentation in PDF format
 app-doc/linuxfromscratch:htmlsingle - Install all-on-one-page HTML version.
-app-doc/pms:binary - Download pre-built files instead of building from sources
-app-doc/pms:html - Generate PMS as .html as well
+app-doc/pms:html - Generate and install PMS as .html as well
 app-doc/pms:twoside - Enable two-sided layout suitable for printing
+app-doc/pms-bin:html - Install PMS as .html as well
 app-doc/tldp-howto:html - Install multi-chapter HTML docs
 app-doc/tldp-howto:htmlsingle - Install all-on-one-page HTML docs
 app-doc/tldp-howto:pdf - Install pdf docs
@@ -711,7 +711,6 @@ app-emulation/wine-staging:capi - Enable ISDN support via CAPI
 app-emulation/wine-staging:custom-cflags - Bypass strip-flags; use at your own peril
 app-emulation/wine-staging:dos - Pull in games-emulation/dosbox to run DOS applications
 app-emulation/wine-staging:faudio - Pull in app-emulation/faudio to provide XAudio2 functionality
-app-emulation/wine-staging:ffmpeg - Use media-video/ffmpeg to decode WMA formats
 app-emulation/wine-staging:gecko - Add support for the Gecko engine when using iexplore
 app-emulation/wine-staging:gssapi - Use GSSAPI (Kerberos SSP support)
 app-emulation/wine-staging:gstreamer - Use media-libs/gstreamer to provide DirectShow functionality;
@@ -4464,6 +4463,7 @@ media-libs/opencv:cuda - Enable NVIDIA Cuda computations support (Experimental!)
 media-libs/opencv:dnnsamples - Download dnn caffeemodel samples
 media-libs/opencv:download - Enable download during cmake configure
 media-libs/opencv:eigen - Enable usage of dev-cpp/eigen for computations
+media-libs/opencv:features2d - Enable features2d module
 media-libs/opencv:gdal - Enable support for sci-libs/gdal library
 media-libs/opencv:gflags - Use Google's C++ argument parsing library
 media-libs/opencv:glog - Use Google's C++ loggin library
@@ -5480,12 +5480,6 @@ net-analyzer/nmap:zenmap - Install the GTK+ based nmap GUI, zenmap
 net-analyzer/nrpe:command-args - Build support for specifying the command-line arguments from the Nagios/Icinga master. Make sure you understand the implications of this flag as it can be a security risk.
 net-analyzer/nsca:crypt - Build support for crypted communication with nsca, through dev-libs/libmcrypt. It's recommended not to disable this flag unless all the communication will be handled in an absolutely safe environment.
 net-analyzer/nsca:minimal - Only build and install the send_nsca command and not the daemon. This allows a very minimal install with no overhead when setting up a node.
-net-analyzer/openvas:cli - Command Line Interface for OpenVAS Scanner throught net-analyzer/gvm-tools
-net-analyzer/openvas:extras - Extra fonts, pdf results and html docs support
-net-analyzer/openvas:gsa - Greenbone Security Assistant (WebUI) through net-analyzer/greenbone-security-assistant
-net-analyzer/openvas:ldap - Enable support for ldap through net-nds/openldap
-net-analyzer/openvas:ospd - Enable support for scanner wrappers through net-analyzer/ospd
-net-analyzer/openvas:radius - Enable support for radius through net-dialup/freeradius-client
 net-analyzer/openvas-libraries:extras - Html docs support
 net-analyzer/openvas-libraries:ldap - Enable support for ldap
 net-analyzer/openvas-libraries:radius - Enable support for radius
@@ -6280,6 +6274,7 @@ net-libs/pjproject:epoll - Use /dev/epoll ioqueue on Linux (experimental)
 net-libs/pjproject:g711 - Include G.711 codecs in the build
 net-libs/pjproject:g722 - Include G.722 codec in the build
 net-libs/pjproject:g7221 - Include G.722.1 codec in the build
+net-libs/pjproject:g729 - Include G.729 codec via net-libs/bcg729
 net-libs/pjproject:ilbc - Include iLBC codec in the build
 net-libs/pjproject:l16 - Include Linear/L16 codec family in the build
 net-libs/pjproject:libyuv - Include libyuv in the build
@@ -6394,6 +6389,7 @@ net-misc/asterisk:pjproject - Enable support for pjproject (pjsip)
 net-misc/asterisk:samples - Install sample sound and configuration files (default: on)
 net-misc/asterisk:span - Enable support for the spandsp codec
 net-misc/asterisk:srtp - Enable support for encrypted voice transmission (secure RTP)
+net-misc/asterisk:statsd - Enable statsd integration
 net-misc/asterisk-core-sounds:alaw - Install the sounds files for the alaw codec.
 net-misc/asterisk-core-sounds:g722 - Install the sounds files for the g722 codec.
 net-misc/asterisk-core-sounds:g729 - Install the sounds files for the g729 codec.
@@ -6523,7 +6519,6 @@ net-misc/crossbar:tor - include tor services connections support
 net-misc/csync:sftp - Enable sftp transfer support via net-libs/libssh
 net-misc/curl:alt-svc - Enable alt-svc support
 net-misc/curl:brotli - Enable brotli compression support
-net-misc/curl:esni - Enable Encrypted Server Name Indication support
 net-misc/curl:http2 - Enable HTTP/2.0 support
 net-misc/curl:metalink - Enable metalink support
 net-misc/curl:nghttp3 - Enable HTTP/3.0 support using net-libs/nghttp3 and net-libs/ngtcp2
@@ -8035,6 +8030,7 @@ sys-apps/s390-tools:pfm - build the cpacfstats tool
 sys-apps/s390-tools:zlib - build the zgetdump and dump2tar utilities
 sys-apps/s6-linux-init:sysv-utils - Install sysvinit compatibility symlinks for telinit, halt, poweroff, reboot, and shutdown
 sys-apps/sed:forced-sandbox - Always enable --sandbox mode for simpler/secure runtime (disables e/r/w commands). Note: This may break many configure scripts, so it should be avoided on dev systems (and generally used on binpkg/final systems only).
+sys-apps/shadow:bcrypt - build the bcrypt password encryption algorithm
 sys-apps/shadow:su - build the su program
 sys-apps/smartmontools:caps - Build against sys-libs/libcap-ng to allow smartd to drop its privileges.
 sys-apps/smartmontools:daemon - Install the monitoring daemon (smartd) and associated scripts.

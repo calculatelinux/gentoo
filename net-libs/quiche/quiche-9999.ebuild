@@ -122,7 +122,7 @@ wincolor-1.0.2
 ws2_32-sys-0.2.1
 "
 
-inherit cargo multilib-minimal
+inherit cargo cmake-utils flag-o-matic multilib-minimal rust-toolchain
 
 DESCRIPTION="Implementation of the QUIC transport protocol and HTTP/3"
 HOMEPAGE="https://github.com/cloudflare/quiche"
@@ -133,7 +133,7 @@ if [[ ${PV} == *9999 ]] ; then
 else
 	CRATES+=" ${P//_/-}"
 	SRC_URI="$(cargo_crate_uris ${CRATES})"
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~arm64"
 	S="${WORKDIR}/${P//_/-}"
 fi
 
@@ -151,12 +151,15 @@ IUSE=""
 DOCS=( CODEOWNERS  COPYING README.md )
 
 BDEPEND="
-	>=virtual/rust-1.39.0
+	>=dev-lang/rust-1.38.0[${MULTILIB_USEDEP}]
 	dev-util/cmake
 	dev-lang/go
+	dev-lang/perl
 "
 DEPEND=""
 RDEPEND=""
+
+CMAKE_USE_DIR="${S}/deps/boringssl"
 
 src_unpack() {
 	if [[ "${PV}" == *9999* ]]; then
@@ -170,15 +173,26 @@ src_unpack() {
 
 src_prepare(){
 	default
+	cmake-utils_src_prepare
 	multilib_copy_sources
 }
 
+multilib_src_configure(){
+	append-flags "-fPIC"
+	local mycmakeargs=(
+		-DOPENSSL_NO_ASM=ON
+		-DBUILD_SHARED_LIBS=OFF
+	)
+	BUILD_DIR="${BUILD_DIR}/deps/boringssl/build" cmake-utils_src_configure
+}
+
 multilib_src_compile(){
-	cargo_src_compile --features pkg-config-meta
+	BUILD_DIR="${BUILD_DIR}/deps/boringssl/build" cmake-utils_src_compile bssl
+	QUICHE_BSSL_PATH="${BUILD_DIR}/deps/boringssl" cargo_src_compile --features pkg-config-meta --target="$(rust_abi)"
 }
 
 multilib_src_test(){
-	cargo_src_test
+	QUICHE_BSSL_PATH="${BUILD_DIR}/deps/boringssl" cargo_src_test  --target="$(rust_abi)"
 }
 
 multilib_src_install() {
@@ -186,5 +200,5 @@ multilib_src_install() {
 	insinto "/usr/$(get_libdir)/pkgconfig"
 	doins target/release/quiche.pc
 	doheader -r include/*
-	dolib.so target/release/libquiche.so
+	dolib.so "target/$(rust_abi)/release/libquiche.so"
 }
