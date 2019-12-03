@@ -29,6 +29,43 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2019-12-02)
+# Obsolete by moving to KDE Frameworks.
+# kde-apps/zanshin is demoted to ~arch as a consequence.
+# Removal in 15 days.
+kde-apps/kcalcore
+kde-apps/kcontacts
+=kde-misc/zanshin-0.5.0-r1
+
+# Michał Górny <mgorny@gentoo.org> (2019-12-01)
+# Unmaintained Rust packages with incorrect license information.
+# Removal in 30 days.  Bug #694414.
+app-misc/rq
+
+# Michał Górny <mgorny@gentoo.org> (2019-12-01)
+# Multiple unmaintained Go packages with incorrect license information.
+# No reverse dependencies.
+#
+# app-admin/docker-bench: #694704
+# app-admin/linux-bench: #699274
+# app-emulation/{cadvisor,cri-tools,reg}: #694892
+# dev-go/glide: #694384
+# dev-util/drone{,-cli}: #695240  // TODO: promu?
+# net-misc/istioctl: #695288
+# sys-auth/docker_auth: #695298
+#
+# Removal in 30 days.
+app-admin/docker-bench
+app-admin/linux-bench
+app-emulation/cadvisor
+app-emulation/cri-tools
+app-emulation/reg
+dev-go/glide
+dev-util/drone
+dev-util/drone-cli
+net-misc/istioctl
+sys-auth/docker_auth
+
 # Michał Górny <mgorny@gentoo.org> (2019-12-01)
 # Added in 2013 and not updated since.  Unmaintained upstream since
 # inception.  Never had any keywords.
@@ -47,7 +84,7 @@ games-misc/fortune-mod-smac
 
 # Michał Górny <mgorny@gentoo.org> (2019-12-01)
 # Not updated since 2009 and 2004 respectively.  Suspicious license.
-# Removal in 30 days.  Bug #691084.
+# Removal in 30 days.  Bugs #691084 and #701732.
 games-misc/fortune-mod-gentoo-dev
 games-misc/fortune-mod-gentoo-forums
 
@@ -55,6 +92,7 @@ games-misc/fortune-mod-gentoo-forums
 # The plugin is broken with multiple dependencies.  It is also dead
 # upstream.  Removing per maintainer's request.
 # Removal in 30 days.  Bug #314309.
+media-plugins/vdr-coverviewer
 media-plugins/vdr-music
 
 # Michał Górny <mgorny@gentoo.org> (2019-12-01)
@@ -416,22 +454,6 @@ media-gfx/exiftags
 # Removal in 30 days.
 app-admin/certmgr
 app-admin/ksonnet
-
-# Alfredo Tupone <tupone@gentoo.org> (2019-11-03)
-# No more needed. Substituted by dev-ada/gnatcoll-core and others
-# Removal in 30 days.
-dev-ada/gnatcoll
-
-# Michał Górny <mgorny@gentoo.org> (2019-11-03)
-# Discontinued upstream.  Relies on app-portage/flaggie make.conf
-# editing support that was fragile and therefore was removed.
-# Removal in 30 days.  Bug #699244.
-app-portage/install-mask
-
-# Alfredo Tupone <tupone@gentoo.org> (2019-11-03)
-# The binary for gps are included in dev-ada/gnat-suite-bin
-# Removal in 30 days.
-dev-ada/gps-bin
 
 # Michał Górny <mgorny@gentoo.org> (2019-10-20)
 # Testing version that breaks multiple plugins.  Let's keep it masked

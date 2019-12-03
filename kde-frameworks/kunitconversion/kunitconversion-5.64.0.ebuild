@@ -9,7 +9,7 @@ inherit ecm kde.org
 
 DESCRIPTION="Framework for converting units"
 LICENSE="LGPL-2+"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="amd64 ~arm arm64 x86"
 IUSE=""
 
 DEPEND="
@@ -20,8 +20,9 @@ RDEPEND="${DEPEND}"
 
 src_test() {
 	# bug 623938 - needs internet connection
+	# bug 694804 - some LANG issue
 	local myctestargs=(
-		-E "(convertertest)"
+		-E "(convertertest|valuetest)"
 	)
 
 	ecm_src_test

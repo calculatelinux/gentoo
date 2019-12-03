@@ -550,7 +550,7 @@ app-emulation/libvirt:libssh - Use net-libs/libssh to communicate with remote li
 app-emulation/libvirt:libvirtd - Builds the libvirtd daemon as well as the client utilities instead of just the client utilities
 app-emulation/libvirt:lvm - Allow using the Logical Volume Manager (sys-fs/lvm2) as pool for disk image storage
 app-emulation/libvirt:lxc - Support management of Linux Containers virtualisation (app-emulation/lxc)
-app-emulation/libvirt:macvtap - Support for MAC-based TAP (macvlan/macvtap). For networking instead of the normal TUN/TAP. It has its advantages and disadvantages. macvtap support requires very new kernels and is currently evolving. Support for this is experimental at best.
+app-emulation/libvirt:macvtap - Support for MAC-based TAP (macvlan/macvtap). For networking instead of the normal TUN/TAP.
 app-emulation/libvirt:nfs - Allow using Network File System mounts as pool for disk image storage
 app-emulation/libvirt:numa - Use NUMA for memory segmenting via sys-process/numactl and sys-process/numad
 app-emulation/libvirt:openvz - Support management of OpenVZ virtualisation (openvz-sources)
@@ -1111,7 +1111,6 @@ app-office/calligra:spacenav - Enable support for the 3Dconnexion spacenav input
 app-office/calligraplan:activities - Enable kactivities support
 app-office/calligraplan:holidays - Enable kde-frameworks/kholidays integration
 app-office/calligraplan:kwallet - Enable access to encrypted OpenDocument files with kde-frameworks/kwallet storage
-app-office/calligraplan:pim - Enable support for KDE PIM resources integration
 app-office/glabels:barcode - Enable barcode support through external libraries.
 app-office/gnucash:aqbanking - Connect to some internet banks via AqBanking
 app-office/gnucash:chipcard - Enable support for chipcard reading and processing.
@@ -1200,6 +1199,7 @@ app-shells/bash:net - Enable /dev/tcp/host/port redirection
 app-shells/bash:plugins - Add support for loading builtins at runtime via 'enable'
 app-shells/bash-completion:eselect - Support blacklisting of completions via 'eselect bash-completion'. This enables custom Gentoo patching of upstream completion loader.
 app-shells/dash:vanilla - Support echo -n, and enable echo -e all the time (unsupported)
+app-shells/mksh:lksh - variant that uses POSIX-compliant arithmetics with the host “long” data type and is automatically in POSIX mode when called as /bin/sh
 app-shells/pdsh:rsh - This allows the use of rsh (remote shell) and rcp (remote copy) for authoring websites. sftp is a much more secure protocol and is preferred.
 app-shells/shish:diet - Use dev-libs/dietlibc
 app-text/asciidoc:highlight - Enable source code highlighting
@@ -1372,10 +1372,6 @@ app-vim/youcompleteme:clang - Enable semantic support for C-family languages usi
 app-xemacs/xemacs-packages-all:mule - Add multi-language support to XEmacs
 dev-ada/gnat_util:shared - Build gnat_util shared library
 dev-ada/gnat_util:static-pic - Build gnat_util static library with pic code
-dev-ada/gnatcoll:projects - Adds support for projects
-dev-ada/gnatcoll:pygobject - Adds support for pygobject
-dev-ada/gnatcoll:shared - Build shared library
-dev-ada/gnatcoll:tools - Build associated tools
 dev-ada/gnatcoll-bindings:shared - Build shared library
 dev-ada/gnatcoll-bindings:static-pic - Build shared library
 dev-ada/gnatcoll-core:shared - Build shared library
@@ -3425,8 +3421,8 @@ games-simulation/flightgear:gdal - Enable alternative terrain engine based on pa
 games-simulation/flightgear:qt5 - Build Qt5 launcher application
 games-simulation/flightgear:udev - Enable event-based Input devices through virtual/udev
 games-simulation/flightgear:utils - Build various utilities (fgpanel, fgviewer among others)
-games-simulation/openrct2:multiplayer - Enable multiplayer functionality
-games-simulation/openrct2:twitch - Enable Twitch support
+games-simulation/openrct2:lightfx - Enables LightFX for better lightning effects.
+games-simulation/openrct2:twitch - Enables streaming of ingame content to Twitch.
 games-simulation/openttd:aplaymidi - Enables midi music in game, using aplaymidi as an external player
 games-simulation/openttd:dedicated - Build only the openttd server, and not the client.
 games-simulation/openttd:lzo - Enables LZO compression for savegames. This is only needed to load extremely old savegames. (versions before 0.2)
@@ -3610,7 +3606,6 @@ kde-apps/cantor:julia - Enable dev-lang/julia backend support
 kde-apps/cantor:markdown - Enable Markdown support via app-text/discount
 kde-apps/cantor:qalculate - Enable sci-libs/libqalculate backend support
 kde-apps/dolphin:activities - Track which folders are frequently accessed on a Plasma desktop
-kde-apps/dolphin:thumbnail - Enables thumbnail generation
 kde-apps/gwenview:activities - Enable kactivities support
 kde-apps/gwenview:fits - Enable support for NASA's sci-libs/cfitsio library
 kde-apps/gwenview:kipi - Enable support for the KDE Image Plugin Interface
@@ -3679,7 +3674,6 @@ kde-apps/kopete:gadu - Enable the Gadu protocol handler.
 kde-apps/kopete:groupwise - Enable the Groupwise protocol handler.
 kde-apps/kopete:highlight - Allows you to specify highlights on specific events.
 kde-apps/kopete:history - Enables saving chat history.
-kde-apps/kopete:jingle - Enable voice calls for jabber
 kde-apps/kopete:latex - Embed latex formatted text into messages.
 kde-apps/kopete:meanwhile - Enable the Sametime protocol handler.
 kde-apps/kopete:nowlistening - Shows song you currently listen to in your status/etc. Bindings for many players.
@@ -3721,7 +3715,6 @@ kde-apps/okular:plucker - Enable Plucker E-Book for Palm OS devices support
 kde-apps/okular:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/okular:speech - Enable text-to-speech support
 kde-apps/pimcommon:designer - Build plugins for dev-qt/designer
-kde-apps/pimcommon:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/spectacle:kipi - Enable support for the KDE Image Plugin Interface
 kde-apps/spectacle:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/step:qalculate - Enable the libqalculate library for unit conversion
@@ -3731,8 +3724,6 @@ kde-frameworks/kcompletion:designer - Build plugins for dev-qt/designer
 kde-frameworks/kconfigwidgets:designer - Build plugins for dev-qt/designer
 kde-frameworks/kconfigwidgets:man - Build and install man pages
 kde-frameworks/kded:man - Build and install man pages
-kde-frameworks/kdesignerplugin:designer - Build KF5 widgets plugin for QtDesigner
-kde-frameworks/kdesignerplugin:webkit - Build kdewebkit plugin for QtDesigner
 kde-frameworks/kdewebkit:designer - Build plugins for dev-qt/designer
 kde-frameworks/kfilemetadata:epub - Enable support for reading EPUB ebook metadata
 kde-frameworks/kfilemetadata:office - Enable support for reading ODF and OOXML metadata
@@ -4034,7 +4025,6 @@ mail-mta/postfix:eai - Add support for SMTPUTF8
 mail-mta/postfix:ldap-bind - Add support for binding to LDAP backend using dev-libs/cyrus-sasl
 mail-mta/postfix:lmdb - Add support for using dev-db/lmdb for lookup tables
 mail-mta/postfix:memcached - Add support for using net-misc/memcached for lookup tables
-mail-mta/postfix:vda - Add support for virtual delivery agent quota enforcing
 mail-mta/qpsmtpd:postfix - create user with permissions for proper postfix interaction
 mail-mta/ssmtp:mta - Install symlinks for sendmail-compatible MTA.
 mate-base/caja:mate - Install x11-themes/mate-icon-theme which is needed when this package is used in the MATE desktop environment.
@@ -5257,26 +5247,17 @@ media-video/transcode:pic - disable optimized assembly code that is not PIC frie
 media-video/transcode:postproc - Build with ffmpeg libpostproc support
 media-video/vdr:alternatechannel - Use alternate channel on record
 media-video/vdr:bidi - fribidi support, for languages, written from right to left
-media-video/vdr:ddepgentry - remove duplicate EPG entries
-media-video/vdr:dvlvidprefer - controls video-dir choice on recording
 media-video/vdr:graphtft - support for vdr-graphtft plugin up from version 0.1.7
 media-video/vdr:html - Install HTML documentation
-media-video/vdr:jumpingseconds - skip seconds in played records
-media-video/vdr:jumpplay - Enables automatic jumping over cut marks while watching a recording
 media-video/vdr:kbd - enable keyboard support as remote device
 media-video/vdr:mainmenuhooks - Allows to replace main menu entries by some special plugins (like epgsearch, extrecmenu, ...)
 media-video/vdr:menuorg - Enables support for the media-plugins/vdr-menuorg
 media-video/vdr:menuselection - adds support for menu hotkeys of double digits
 media-video/vdr:naludump - Removes NALU fill data from h.264-Streams of TS files
 media-video/vdr:permashift - permanent timeshift by recording live TV into RAM, need plugin media-plugins/vdr-permashift
-media-video/vdr:permashift_v1 - permanent timeshift by recording live TV into RAM, need plugin media-plugins/vdr-permashift
 media-video/vdr:pinplugin - Support for media-plugins/vdr-pin
 media-video/vdr:resumereset - rreset resume of EOF
-media-video/vdr:rotor - Enable support for plugin vdr-rotor for dish-positioner.
 media-video/vdr:ttxtsubs - support for media-plugins/vdr-ttxtsubs
-media-video/vdr:vasarajanauloja - replacement for the liemikuutio patch, adds some nice must haves features
-media-video/vdr:wareagleicon - Replace original icon set in menu
-media-video/vdr:yaepg - Enables support for the vdr-yaepg plugin
 media-video/vlc:X - Enable support for e.g. fullscreen mode via X and the X C-language binding. It does not build a graphical interface
 media-video/vlc:aom - Enable experimental support for AV1 codec
 media-video/vlc:archive - Enable support for libarchive stream extractor
@@ -6817,6 +6798,7 @@ net-misc/vinagre:ssh - Enable ssh plugin using x11-libs/vte
 net-misc/vinagre:telepathy - Enable access to remote desktop via a net-libs/telepathy-glib client
 net-misc/vino:telepathy - Enable desktop sharing through a telepathy client
 net-misc/wget:cookie_check - Enable cookie checks via net-libs/libpsl
+net-misc/wget:metalink - Enable support for media-libs/libmetalink
 net-misc/wget:ntlm - Enable support for NTLM (Windows-based) authorization
 net-misc/wget:uuid - Generate UUIDs for the WARC (Web ARChive file format) using libuuid; otherwise use a simple RNG (random number generator)
 net-misc/wicd:ambiance - Install icons from Ubuntu's ambiance theme
