@@ -586,6 +586,7 @@ app-emulation/open-vm-tools:gtkmm - Compile with Gtkmm and sigc++ (Recommended)
 app-emulation/open-vm-tools:multimon - Enable multimon (Requires X)
 app-emulation/open-vm-tools:resolutionkms - Build the linux/unix resolutionkms module
 app-emulation/open-vm-tools:vgauth - Build vgauth
+app-emulation/pcem:networking - Enable support for emulation of network cards.
 app-emulation/playonlinux:winbind - Enables support for the winbind auth daemon
 app-emulation/punes:cg - Add support for Nvidia CG Toolkit
 app-emulation/q4wine:ico - Enable ico support via media-gfx/icoutils
@@ -2547,7 +2548,6 @@ dev-php/pecl-redis:json - Enables json serializer support
 dev-php/pecl-zmq:czmq - Use the czmq high level bindings
 dev-php/phing:zip - Support zip archives by requiring said support in dev-lang/php.
 dev-php/swoole:http2 - Add support for HTTP/2 protocol via net-libs/nghttp2
-dev-php/swoole:redis - Add support for redis via dev-libs/hiredis
 dev-php/xcache:coverage - Enable the coverager module (not recommended for production servers).
 dev-python/Kivy:camera - Install libraries needed to support camera
 dev-python/Kivy:garden - Install garden tool to manage user maintained widgets
@@ -2611,8 +2611,6 @@ dev-python/icalendar:doc - Generate examples and other extra documentation
 dev-python/ipython:matplotlib - Add support for dev-python/matplotlib
 dev-python/ipython:nbconvert - Enable support for converting notebooks to various formats using app-text/pandoc
 dev-python/ipython:notebook - Install requirements for the web notebook based on www-servers/tornado
-dev-python/jira:filemagic - Include filemagic support (for identifying uploaded filetypes)
-dev-python/jira:ipython - Include Interactive Python (IPython)
 dev-python/jira:jirashell - Include dependencies for jirashell (ipython, oauthlib)
 dev-python/jira:kerberos - Support Kerberos authentication
 dev-python/jira:oauth - Support OAuth authentication
@@ -3209,7 +3207,6 @@ games-arcade/performous:tools - Enable building of song extraction utilities for
 games-arcade/performous:webcam - Enable Webcam support
 games-arcade/savagewheels:fmod - Enable the fmod music and sound effects library
 games-arcade/tuxanci:physfs - Use dev-games/physfs instead of dev-libs/libzip to load compressed data
-games-arcade/tuxanci:sound - Enable sound
 games-board/cockatrice:client - Build with client
 games-board/cockatrice:oracle - Build with oracle
 games-board/cockatrice:server - Compile server support
@@ -3879,6 +3876,7 @@ mail-client/evolution:ldap - Enable support for fetching contacts from an LDAP o
 mail-client/evolution:spamassassin - Build mail-filter/spamassassin plugin
 mail-client/evolution:weather - Enable optional weather calendar support
 mail-client/evolution:ytnef - Enable optional TNEF attachments parser support using net-mail/ytnef
+mail-client/geary:ytnef - Enable optional TNEF attachments parser support using net-mail/ytnef
 mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by mail-client/sylpheed
 mail-client/mutt:berkdb - Enable sys-libs/db database backend for header caching
 mail-client/mutt:gdbm - Enable sys-libs/gdbm database backend for header caching
@@ -5749,7 +5747,7 @@ net-firewall/iptables:nftables - Support nftables kernel interface
 net-firewall/iptables:pcap - Build against net-libs/libpcap which enables the nfbpf_compile util
 net-firewall/nftables:doc - Create man pages for the package (requires app-text/asciidoc)
 net-firewall/nftables:json - Enable JSON support via dev-libs/jansson
-net-firewall/nftables:modern_kernel - Install init scripts for 3.18 or higher kernels with atomic rule updates
+net-firewall/nftables:modern-kernel - Install init scripts for 3.18 or higher kernels with atomic rule updates
 net-firewall/nftables:xtables - Add libxtables support to try to automatically translate rules added by iptables-compat
 net-firewall/nufw:nfconntrack - Use netfilter_conntrack
 net-firewall/nufw:nfqueue - Use NFQUEUE instead of QUEUE
@@ -6536,6 +6534,7 @@ net-misc/electrum-ltc:email - Enable plugin to support emailing invoices
 net-misc/electrum-ltc:qrcode - Enable QR code scanning with media-gfx/zbar
 net-misc/electrum-ltc:sync - Enable plugin to sync wallet metadata across multiple Electrum clients
 net-misc/electrum-ltc:vkb - Enable plugin for virtual keyboard
+net-misc/ethflop:tsr - Build the TSR program for DOS, which acts as a client.
 net-misc/eventd:libcanberra - Enable plugin for sounds via media-libs/libcanberra
 net-misc/eventd:libnotify - Enable plugin to relay events to notification daemon (Note: not required for local notifications via net-misc/eventd)
 net-misc/eventd:notification - Enable plugin to display on-screen notifications
@@ -7143,6 +7142,7 @@ net-wireless/gr-air-modes:uhd - Build with Ettus Research USRP Hardware Driver s
 net-wireless/gr-baz:armadillo - install MUSIC DOA estimator block
 net-wireless/gr-baz:rtlsdr - install rtlsdr source block
 net-wireless/gr-baz:uhd - install UHD aware blocks
+net-wireless/gr-osmosdr:airspy - Build with Airspy support
 net-wireless/gr-osmosdr:bladerf - Build with Nuand BladeRF support
 net-wireless/gr-osmosdr:fcd - Build with Funcube Dongle support
 net-wireless/gr-osmosdr:hackrf - Build with Great Scott Gadgets HackRF support
@@ -7483,6 +7483,7 @@ sci-libs/gsl:deprecated - Enable deprecated functions
 sci-libs/hdf5:hl - Enable high level API (https://support.hdfgroup.org/HDF5/doc/HL/index.html)
 sci-libs/hypre:fei - Build the internal Finite Element Interface routines
 sci-libs/hypre:int64 - Build the 64 bits integer library
+sci-libs/indilib:websocket - Enable support for WebSocket protocol
 sci-libs/ipopt:hsl - hsl
 sci-libs/ipopt:mumps - Enable sci-libs/mumps support
 sci-libs/lapack:eselect-ldso - Enable runtime library switching by eselect and ld.so.
@@ -7807,7 +7808,6 @@ sci-visualization/paraview:development - Install development files including hea
 sci-visualization/paraview:nvcontrol - Add NVCONTROL support for OpenGL options
 sci-visualization/paraview:offscreen - Offscreen rendering through OSMesa
 sci-visualization/paraview:plugins - Build and install additional plugins
-sci-visualization/veusz:emf - Add FITS format via dev-python/pyemf
 sci-visualization/veusz:fits - Add FITS format via dev-python/astropy
 sci-visualization/veusz:minuit - Use Minuit during fitting viadev-python/pyminuit
 sci-visualization/visit:cgns - Builds the reader for the CFD General Notation System file format.
@@ -9027,6 +9027,9 @@ x11-misc/mugshot:libreoffice - Add support for app-office/libreoffice and app-of
 x11-misc/mugshot:webcam - Add support for setting a profile photo in media-video/cheese
 x11-misc/openbox-menu:icons - Enable support for icons in menus
 x11-misc/openbox-menu:svg - Support SVG icons
+x11-misc/picom:config-file - Enable config file support
+x11-misc/picom:drm - Enable support for using drm for vsync
+x11-misc/picom:opengl - Enable features that require opengl (opengl backend, and opengl vsync methods)
 x11-misc/polybar:i3wm - Add support for i3 window manager
 x11-misc/polybar:ipc - Add support for Inter-Process Messaging
 x11-misc/polybar:mpd - Add support for Music Player Daemon
@@ -9224,6 +9227,7 @@ xfce-base/exo:gtk2 - Build deprecated GTK+2 libexo-1 library.
 xfce-base/garcon:gtk2 - Build the garcon-gtk2-1 library (required for xfce-base/xfce4-panel < 4.13 only).
 xfce-base/libxfce4ui:glade - Build support for Glade 3's GtkBuilder implementation
 xfce-base/libxfce4ui:gtk2 - Build deprecated GTK+2 libxfce4ui-1 library.
+xfce-base/libxfce4ui:libgtop - Enable system information via gnome-base/libgtop.
 xfce-base/thunar:trash-panel-plugin - Build the trash status indicator plugin for the XFCE panel
 xfce-base/xfce4-panel:gtk2 - Enable GTK+2 plugin support.
 xfce-base/xfce4-settings:libcanberra - Enable sound event support using media-libs/libcanberra

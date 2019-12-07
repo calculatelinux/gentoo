@@ -1233,6 +1233,11 @@
       <role>Lead ( Team Lead )</role>
     </member>
     <member>
+      <email>conikost@gentoo.org</email>
+      <name>Conrad Kostecki</name>
+      <role>Member ( general )</role>
+    </member>
+    <member>
       <email>soap@gentoo.org</email>
       <name>David Seifert</name>
       <role>Member ( general )</role>
@@ -2734,6 +2739,11 @@
       <role>Member</role>
     </member>
     <member>
+      <email>conikost@gentoo.org</email>
+      <name>Conrad Kostecki</name>
+      <role>Member</role>
+    </member>
+    <member>
       <email>gyakovlev@gentoo.org</email>
       <name>Georgy Yakovlev</name>
       <role>Member</role>
@@ -2849,7 +2859,7 @@
       <name>Maxim Koltsov</name>
       <role>Member</role>
     </member>
-    <member>
+    <member is-lead="1">
       <email>mgorny@gentoo.org</email>
       <name>Michał Górny</name>
       <role>Member</role>

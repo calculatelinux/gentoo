@@ -1,0 +1,25 @@
+# Copyright 1999-2019 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+# This file specifies packages that are considered deprecated (but not
+# masked yet).  This will cause QA tools to report dependencies on those
+# packages as requiring replacement.
+#
+# When you add an entry to the top of this file, add your name, the date
+# in the UTC timezone, and an explanation of why something is getting
+# deprecated.
+#
+## Example:
+##
+## # Dev E. Loper <developer@gentoo.org> (2019-07-01)
+## # This is no longer supported upstream, please switch to dev-foo/bar.
+## dev-foo/foo
+
+#--- END OF EXAMPLES ---
+
+# Zac Medico <zmedico@gentoo.org> (2019-12-06)
+# These golang libraries should be vendored either by upstream or via
+# the EGO_VENDOR variable.
+dev-go/go-crypto
+dev-go/go-net
+dev-go/go-sys

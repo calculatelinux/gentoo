@@ -1,3 +1,6 @@
+# Copyright 1999-2019 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
 ####################################################################
 #
 # When you add an entry to the top of this file, add your name, the date
@@ -29,6 +32,156 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2019-12-05)
+# Last maintainer activity in 2016.  Does not build for quite some time
+# already.  Needs a version bump, at the very least.
+# Removal in 30 days.  Bug #602024.
+app-laptop/nvidiabl
+
+# Michał Górny <mgorny@gentoo.org> (2019-12-05)
+# Unmaintained since 2016.  Last touched in 2018.  Pending bump since
+# Feb 2019.  Does not build anymore.
+# Removal in 30 days.  Bug #695580.
+net-wireless/ndiswrapper
+
+# Aaron Bauman <bman@gentoo.org> (2019-12-04)
+# These are (mostly) leaf packages with only py2.7
+# Please review commit msg. Removal in 30 days
+# THIS MASK HAS BEEN CONFIRMED BY THE QA TEAM VIA
+# MAJORITY VOTE. YOU CAN REMOVE SINGLE PACKAGES
+# IF YOU PERSONALLY STEP IN TO MAINTAIN THEM (AND
+# ADD YOURSELF TO THEIR METADATA).
+dev-python/inotifyx
+dev-python/disqus-python
+dev-python/figleaf
+dev-python/pysvg
+dev-python/sphinxcontrib-ditaa
+dev-python/pyrax
+dev-python/tgmochikit
+dev-python/pyndex
+dev-python/python-mhash
+dev-python/guppy
+dev-python/dib-utils
+dev-python/py-notify
+x11-misc/magick-rotation
+dev-python/superlance
+dev-python/rlcompleter2
+dev-python/pylibpcap
+dev-python/libextractor-python
+dev-python/happydoc
+dev-python/irman-python
+dev-python/python-recaptcha
+dev-python/dirq
+dev-python/ropemacs
+dev-python/lp_solve
+dev-python/stapler
+dev-python/flask-dashed
+dev-python/buzhug
+dev-python/pyao
+dev-python/libiscsi-python
+dev-python/ushlex
+dev-python/hcluster
+dev-python/lupy
+dev-python/snakefood
+dev-python/sqlitecachec
+dev-python/supervisor-quick
+dev-python/python-cdb
+dev-python/foolscap
+net-fs/tahoe-lafs
+dev-python/pyvtk
+dev-python/pycdio
+media-sound/whipper
+dev-python/hachoir-regex
+app-misc/hachoir-subfile
+dev-python/pymad
+dev-python/audioread
+dev-python/pyacoustid
+media-sound/beets
+dev-python/numdisplay
+dev-python/python-fastcgi
+dev-python/workerpool
+dev-python/py-smbpasswd
+dev-python/cherrytemplate
+dev-python/python-catcher
+dev-python/pystatgrab
+dev-python/pp
+dev-python/keyczar
+dev-python/keyrings_alt
+dev-util/Orange
+dev-python/python-exconsole
+dev-python/ttfquery
+dev-python/pyoembed
+www-apps/blohg-tumblelog
+dev-python/webhelpers
+dev-python/optcomplete
+dev-python/hcs-utils
+net-p2p/pybitmessage
+dev-python/asciitree
+net-misc/irrtree
+dev-python/python-pluginloader
+dev-vcs/hg-fast-export
+dev-python/pychef
+dev-python/mwlib-ext
+dev-python/vatnumber
+dev-python/pyml
+dev-python/bicyclerepair
+dev-python/cement
+app-misc/yworklog
+net-misc/pycnb
+dev-python/turbolift
+dev-python/PyZilla
+dev-python/pydvdread
+dev-python/m2secret
+dev-python/pyPdf
+app-text/pdfshuffler
+dev-python/hp3parclient
+dev-python/clientcookie
+dev-python/python-pam
+dev-python/python-caja
+dev-vcs/rabbitvcs
+dev-python/louie
+dev-python/graphy
+net-analyzer/namebench
+dev-python/gdmodule
+dev-python/qserve
+dev-python/pyifp
+dev-python/telarchive
+dev-python/XenAPI
+dev-python/sudsds
+dev-python/webpy
+dev-python/slowaes
+dev-python/beanstalkc
+dev-python/PySensors
+dev-python/RecSQL
+dev-python/pyclamav
+dev-python/pycdf
+dev-python/libnatpmp
+dev-python/weberror
+dev-python/sancho
+dev-python/jonpy
+dev-python/pyelemental
+dev-python/sclapp
+dev-python/pynag
+dev-python/newt_syrup
+dev-python/stripogram
+dev-python/anyvc
+dev-python/simplesettings
+dev-python/pykota
+net-print/pykota
+dev-python/ropeide
+dev-python/pycryptopp
+net-fs/tahoe-lafs
+dev-python/piddle
+dev-python/python-oembed
+dev-python/log4py
+dev-python/htmlgen
+dev-python/pyamf
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2019-12-03)
+# Project does not exist anymore.
+# Removal in 30 days.  Bug #680452.
+dev-java/balloontip
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2019-12-02)
 # Obsolete by moving to KDE Frameworks.
 # kde-apps/zanshin is demoted to ~arch as a consequence.
@@ -55,16 +208,10 @@ app-misc/rq
 # sys-auth/docker_auth: #695298
 #
 # Removal in 30 days.
-app-admin/docker-bench
 app-admin/linux-bench
-app-emulation/cadvisor
 app-emulation/cri-tools
-app-emulation/reg
 dev-go/glide
-dev-util/drone
-dev-util/drone-cli
 net-misc/istioctl
-sys-auth/docker_auth
 
 # Michał Górny <mgorny@gentoo.org> (2019-12-01)
 # Added in 2013 and not updated since.  Unmaintained upstream since
@@ -127,11 +274,6 @@ app-text/pdfshuffler
 # Not updated since 2015.  No reverse dependencies.
 # Removal in 30 days.  Bug #695392.
 dev-python/quixote
-
-# Michał Górny <mgorny@gentoo.org> (2019-12-01)
-# Unresolved license issues.  No reply from the maintainer.
-# Removal in 30 days.  Bug #694268.
-dev-util/goland
 
 # Matt Turner <mattst88@gentoo.org> (2019-12-01)
 # browserpass ebuild ported to go-modules, so these modules now have no reverse
@@ -269,11 +411,6 @@ dev-libs/qof
 # EAPI=4 and fails to build
 dev-util/ccglue
 
-# Aaron Bauman <bman@gentoo.org> (2019-11-16)
-# EAPI=4. If anyone has this hardware then speak up.
-# Removal in 15 days
-app-misc/rioutil
-
 # Lars Wendler <polynomial-c@gentoo.org> (2019-11-14)
 # Breaks archives containing relative paths
 # when being called with --no-absolute-filenames
@@ -285,11 +422,6 @@ app-misc/rioutil
 # are developers or want more experimental features
 # and accept a more unstable release.
 >=www-client/chromium-80
-
-# Aaron Bauman <bman@gentoo.org> (2019-11-10)
-# Maintainer-needed, EAPI=0, Removal in 15 days
-# Upstream is dead and can't locate a new home
-net-p2p/createtorrent
 
 # Michał Górny <mgorny@gentoo.org> (2019-11-10)
 # Added in 2008 and not updated since.  Multiple releases behind
@@ -360,11 +492,6 @@ sys-cluster/dlm-lib
 media-video/emovix
 
 # Aaron Bauman <bman@gentoo.org> (2019-11-09)
-# homepage dead, maintainer-needed
-# EAPI=4. Removal in 30 days
-app-forensics/magicrescue
-
-# Aaron Bauman <bman@gentoo.org> (2019-11-09)
 # maintainer-needed, no known upstream homepage
 # what does it even do? EAPI=4  Removal in 30 days
 app-backup/furball
@@ -398,62 +525,6 @@ dev-haskell/hsql-postgresql
 # EAPI 0. It's been almost a decade since that openssl bug.
 # Removal in 30 days.  Bug #697218.
 net-misc/openssh-blacklist
-
-# Michał Górny <mgorny@gentoo.org> (2019-11-06)
-# EAPI 0.  Last upstream release in 2006.
-# Removal in 30 days.  Bug #697372.
-app-text/info2html
-
-# Michał Górny <mgorny@gentoo.org> (2019-11-06)
-# EAPI 0.  Last bumped in 2004.  Upstream is active, so this really
-# needs a major version bump.  Multiple bugs reported.
-# Removal in 30 days.  Bug #697392.
-app-misc/matew
-
-# Michał Górny <mgorny@gentoo.org> (2019-11-06)
-# EAPI 0.  Last bumped in 2008.  Homepage gone.
-# Removal in 30 days.  Bug #697156.
-www-apps/mod_survey
-
-# Michał Górny <mgorny@gentoo.org> (2019-11-06)
-# EAPI 0.  Last bumped in 2005.  Homepage gone.
-# Removal in 30 days.  Bug #697154.
-www-apps/drraw
-
-# Michał Górny <mgorny@gentoo.org> (2019-11-06)
-# EAPI 0.  Last bumped in 2008.  Homepage gone.  No revdeps.
-# Removal in 30 days.  Bug #697238.
-net-misc/hsc
-
-# Michał Górny <mgorny@gentoo.org> (2019-11-06)
-# EAPI 0.  Last bumped in 2004, and no new releases since.
-# Removal in 30 days.  Bug #697286.
-media-gfx/opcion
-
-# Michał Górny <mgorny@gentoo.org> (2019-11-06)
-# Old EAPI 0 graphics-related packages.
-#
-# media-gfx/aoi was last bumped in Nov 2009.  It is still actively
-# developed upstream, and it's waiting for a bump since Dec 2009.
-# It suffers from bundled dependencies (#177026).
-#
-# media-gfx/exiftags was last bumped in 2007.  It did not have any new
-# releases since, and does not seem to have any unique features.
-# media-gfx/exiv2 seems to be a more commonly installed replacement.
-#
-# Removal in 30 days.  Bug #697288.
-media-gfx/aoi
-media-gfx/exiftags
-
-# Michał Górny <mgorny@gentoo.org> (2019-11-05)
-# The following packages are unmaintained and have incorrect LICENSE
-# entries.  All of them have additional bugs reported.
-#
-# app-admin/certmgr: #694690
-# app-admin/ksonnet: #694710
-# Removal in 30 days.
-app-admin/certmgr
-app-admin/ksonnet
 
 # Michał Górny <mgorny@gentoo.org> (2019-10-20)
 # Testing version that breaks multiple plugins.  Let's keep it masked
@@ -801,11 +872,6 @@ dev-java/eclipse-ecj:4.10
 # wrong.  Bug #647964.
 ~app-portage/gemato-14.1m
 ~app-portage/gemato-9999m
-
-# Matt Turner <mattst88@gentoo.org> (2018-05-25)
-# New package. Needs to interact with media-libs/mesa and
-# x11-drivers/nvidia-drivers. Work in progress.
-media-libs/libglvnd
 
 # James Le Cuirot <chewi@gentoo.org> (2017-12-17)
 # Java 9+ is not yet fully supported on Gentoo. Packages cannot depend
