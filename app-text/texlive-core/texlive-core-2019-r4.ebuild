@@ -83,7 +83,6 @@ MODULAR_X_DEPEND="X? (
 	)"
 
 COMMON_DEPEND="${MODULAR_X_DEPEND}
-	!dev-tex/luatex
 	sys-libs/zlib
 	>=media-libs/libpng-1.2.43-r2:0=
 	media-libs/gd[png]
@@ -95,12 +94,12 @@ COMMON_DEPEND="${MODULAR_X_DEPEND}
 	dev-libs/mpfr:0=
 	xetex? (
 		>=media-libs/harfbuzz-1.4.5[icu,graphite]
-		>=dev-libs/icu-50:=
 		>=app-text/teckit-2.5.3
 		media-libs/fontconfig
 		media-gfx/graphite2
 	)
 	media-libs/freetype:2
+	>=dev-libs/icu-50:=
 	>=dev-libs/kpathsea-6.2.3
 	cjk? ( >=dev-libs/ptexenc-1.3.7 )
 	>=app-text/poppler-0.76.1:="

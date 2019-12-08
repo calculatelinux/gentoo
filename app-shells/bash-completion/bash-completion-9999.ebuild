@@ -19,7 +19,6 @@ RESTRICT="!test? ( test )"
 # completion collision with net-fs/mc
 RDEPEND=">=app-shells/bash-4.3_p30-r1:0
 	sys-apps/miscfiles
-	!app-eselect/eselect-bashcomp
 	!!net-fs/mc"
 DEPEND="
 	test? (
@@ -92,6 +91,11 @@ src_prepare() {
 		emake -C "${WORKDIR}"/bashcomp2 bash-completion-blacklist-support.patch
 		eapply "${WORKDIR}"/bashcomp2/bash-completion-blacklist-support.patch
 	fi
+
+	# our setup is close enough to container to cause the same tests
+	# to fail
+	sed -i -e '/def in_container/a \
+    return True' test/t/conftest.py || die
 
 	eautoreconf
 }

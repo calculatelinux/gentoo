@@ -32,6 +32,82 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2019-12-08)
+# Unmaintained, build hangs, tons of other build failures, missing
+# dependencies.  Bug #663794, #666916, #666922, #667062, #678068,
+# #681678, #684420, #694488. Removal in 30 days.
+dev-db/clickhouse
+
+# David Seifert <soap@gentoo.org> (2019-12-08)
+# No revdeps, py2 only, needs version bump, practically unmaintained
+# in Gentoo. Removal in 30 days.
+sci-chemistry/pymol-plugins-psico
+
+# Michał Górny <mgorny@gentoo.org> (2019-12-08)
+# Not touched by maintainer since mid-2018.  Fails to build with gcc-9.
+# Requires llvm:6 (which is being removed).  Pending version bump.
+# Removal in 30 days.  Bug #686162.
+sys-devel/byfl
+
+# David Seifert <soap@gentoo.org> (2019-12-08)
+# No revdeps, py2 only (the py3 targets don't work properly), last
+# release in 2015. Use sci-mathematics/pymc3 as modern replacement.
+# Removal in 30 days.
+sci-mathematics/pymc
+
+# David Seifert <soap@gentoo.org> (2019-12-08)
+# No revdeps, py2 only, upstream HOMEPAGE gone, last release in 2007.
+# Removal in 30 days.
+sci-mathematics/lybniz
+
+# David Seifert <soap@gentoo.org> (2019-12-08)
+# Yet another NIH machine learning package in python. Last release in
+# 2012, no revdeps, py2 only. Removal in 30 days.
+sci-mathematics/mlpy
+
+# David Seifert <soap@gentoo.org> (2019-12-08)
+# No revdeps, py2 only, last release in 2015, lots of QA issues.
+# Bug #343743, #347928, #451394, #547714, #623756, #697562.
+# Removal in 30 days.
+sci-mathematics/nusmv
+
+# David Seifert <soap@gentoo.org> (2019-12-08)
+# No revdeps, py2 only, last release in 2008. Removal in 30 days.
+sci-mathematics/p9m4
+
+# David Seifert <soap@gentoo.org> (2019-12-08)
+# No revdeps, py2 only, bump required and very involved and messy
+# buildsystem, tons of QA issues.
+# Bug #345233, #459640, #474782, #474784, #474788, #474790, #474792,
+# #620942, #631876, #671130. Removal in 30 days.
+sci-mathematics/Macaulay2
+
+# David Seifert <soap@gentoo.org> (2019-12-08)
+# No revdeps, py2 only, upstream dead, last release in 2011.
+# file collisions with sci-chemistry/tinker, bug #597702.
+# Removal in 30 days.
+sci-mathematics/snns
+
+# David Seifert <soap@gentoo.org> (2019-12-08)
+# No revdeps, py2 only, upstream HOMEPAGE gone.
+# Removal in 30 days.
+sci-mathematics/factmsieve
+
+# David Seifert <soap@gentoo.org> (2019-12-08)
+# No revdeps, py2 only, bump required and very involved buildsystem,
+# has QA issues, bug #598840. Removal in 30 days.
+sci-mathematics/xmds
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2019-12-07)
+# Runtime errors/segfaults, ancient, unmaintained, depends on py27.
+# Bug 590986, removal in 30 days.
+x11-misc/calise
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2019-12-07)
+# Fails to build against dev-libs/boost-1.71.0, depends on py27.
+# Bug 624222, removal in 30 days.
+sci-astronomy/casacore
+
 # Michał Górny <mgorny@gentoo.org> (2019-12-05)
 # Last maintainer activity in 2016.  Does not build for quite some time
 # already.  Needs a version bump, at the very least.
@@ -89,14 +165,10 @@ dev-python/python-cdb
 dev-python/foolscap
 net-fs/tahoe-lafs
 dev-python/pyvtk
-dev-python/pycdio
+<dev-python/pycdio-2.1.0
 media-sound/whipper
 dev-python/hachoir-regex
 app-misc/hachoir-subfile
-dev-python/pymad
-dev-python/audioread
-dev-python/pyacoustid
-media-sound/beets
 dev-python/numdisplay
 dev-python/python-fastcgi
 dev-python/workerpool
@@ -151,7 +223,7 @@ dev-python/sudsds
 dev-python/webpy
 dev-python/slowaes
 dev-python/beanstalkc
-dev-python/PySensors
+=dev-python/PySensors-0.0.3
 dev-python/RecSQL
 dev-python/pyclamav
 dev-python/pycdf
@@ -365,12 +437,6 @@ sci-libs/vtkdata
 # Depends on broken =sci-libs/vtk-6*, needs to be bumped to 3.0.2, bug #657952
 # Removal in 30 days.
 =sci-visualization/visit-2*
-
-# Mikle Kolyada <zlogene@gentoo.org> (2019-11-27)
-# luatex has been a part of texlive since at least 2014
-# no real consumers in the tree. Masked for removal
-# in 7 days.
-dev-tex/luatex
 
 # Jonas Stein <jstein@gentoo.org> (2019-11-26)
 # Package is obsolete. Successor is net-wireless/b43-fwcutter
