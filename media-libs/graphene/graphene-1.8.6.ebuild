@@ -11,8 +11,9 @@ SRC_URI="https://github.com/ebassi/graphene/releases/download/${PV}/${P}.tar.xz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 arm arm64 ~hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 arm arm64 ~hppa ia64 ppc ppc64 ~sparc x86"
 IUSE="cpu_flags_arm_neon cpu_flags_x86_sse2 doc +introspection test"
+RESTRICT="!test? ( test )"
 
 RDEPEND="
 	>=dev-libs/glib-2.30.0:2[${MULTILIB_USEDEP}]

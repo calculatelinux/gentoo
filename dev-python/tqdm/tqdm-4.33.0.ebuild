@@ -12,7 +12,7 @@ if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="https://github.com/tqdm/tqdm"
 else
 	SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
-	KEYWORDS="~amd64 ~sparc ~x86"
+	KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 fi
 
 DESCRIPTION="Add a progress meter to your loops in a second"
@@ -21,6 +21,7 @@ HOMEPAGE="https://github.com/tqdm/tqdm"
 LICENSE="MIT"
 SLOT="0"
 IUSE="examples test"
+RESTRICT="!test? ( test )"
 
 # Uses pkg_resources
 RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"

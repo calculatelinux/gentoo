@@ -475,6 +475,12 @@ app-emacs/slime:xref - Install xref.lisp cross-referencing tool
 app-emacs/vm:bbdb - Include support for app-emacs/bbdb
 app-emacs/wanderlust:bbdb - Include support for app-emacs/bbdb
 app-emacs/wikipedia-mode:outline-magic - Enable support for outline-mode extensions (app-emacs/outline-magic)
+app-emulation/aranym:clipboard - Enable bidirectional clipboard transfer between the host and FreeMiNT
+app-emulation/aranym:jit - Build Just-In-Time compiler variant with increased performance
+app-emulation/aranym:lilo - Enable support for directly booting kernels such as Linux
+app-emulation/aranym:osmesa - Allow images to be rendered in memory using the host CPU
+app-emulation/aranym:pmmu - Build full PMMU variant, required for running mainline Linux
+app-emulation/aranym:standard - Build standard (no JIT or PMMU) variant
 app-emulation/bochs:3dnow - Enable support for emulating 3DNow! instructions (incomplete)
 app-emulation/bochs:avx - Enable support for emulating Advanced Vector Extensions (AVX)
 app-emulation/bochs:debugger - Enable debugger (slows down emulation)
@@ -662,31 +668,6 @@ app-emulation/virtualbox-bin:sdk - Enable building of SDK
 app-emulation/virtualbox-bin:vboxwebsrv - Install the VirtualBox webservice
 app-emulation/virtualbox-modules:pax_kernel - Apply patch needed for pax enabled kernels
 app-emulation/vkd3d:spirv-tools - Enable SPIRV shader debugging support using dev-util/spirv-tools
-app-emulation/wine-any:capi - Enable ISDN support via CAPI
-app-emulation/wine-any:custom-cflags - Bypass strip-flags; use at your own peril
-app-emulation/wine-any:d3d9 - Apply highly experimental patches for Gallium Nine support. This patch may break some applications.
-app-emulation/wine-any:dos - Pull in games-emulation/dosbox to run DOS applications
-app-emulation/wine-any:ffmpeg - Use media-video/ffmpeg to decode WMA formats
-app-emulation/wine-any:gecko - Add support for the Gecko engine when using iexplore
-app-emulation/wine-any:gssapi - Use GSSAPI (Kerberos SSP support)
-app-emulation/wine-any:gstreamer - Use media-libs/gstreamer to provide DirectShow functionality;
-app-emulation/wine-any:mono - Add support for .NET using Wine's Mono add-on
-app-emulation/wine-any:netapi - Use libnetapi from net-fs/samba to support Windows networks in netapi32.dll
-app-emulation/wine-any:opencl - Enable OpenCL support
-app-emulation/wine-any:osmesa - Add support for OpenGL in bitmaps using libOSMesa
-app-emulation/wine-any:pcap - Support packet capture software (e.g. wireshark)
-app-emulation/wine-any:perl - Install helpers written in perl (winedump/winemaker)
-app-emulation/wine-any:pipelight - Apply Wine-Staging patches for Pipelight/Silverlight support
-app-emulation/wine-any:prelink - Run prelink on DLLs during build; For Gentoo hardened, do not disable if you do not know what this means as it can break things at runtime
-app-emulation/wine-any:realtime - Pull in sys-auth/rtkit for low-latency pulseaudio support
-app-emulation/wine-any:run-exes - Use Wine to open and run .EXE and .MSI files
-app-emulation/wine-any:samba - Add support for NTLM auth. See: https://web.archive.org/web/20160108123008/http://wiki.winehq.org:80/NtlmAuthSetupGuide and https://web.archive.org/web/20150906013746/http://wiki.winehq.org/NtlmSigningAndSealing (these pages are not currently in the updated WineHQ Wiki).
-app-emulation/wine-any:sdl - Add support for gamepad detection using SDL
-app-emulation/wine-any:staging - Apply Wine-Staging patches for advanced feature support that haven't made it into upstream Wine yet
-app-emulation/wine-any:themes - Support GTK+:3 window theming through Wine-Staging
-app-emulation/wine-any:udev - Use virtual/libudev to provide plug and play support
-app-emulation/wine-any:vkd3d - Use app-emulation/vkd3d to provide Direct3D 12 support
-app-emulation/wine-any:vulkan - Enable Vulkan drivers
 app-emulation/wine-d3d9:capi - Enable ISDN support via CAPI
 app-emulation/wine-d3d9:custom-cflags - Bypass strip-flags; use at your own peril
 app-emulation/wine-d3d9:d3d9 - Apply highly experimental patches for Gallium Nine support. This patch may break some applications.
@@ -2590,6 +2571,7 @@ dev-python/celery:redis - Enables redis support
 dev-python/celery:sqs - Enables Amazon SQS transport module for celery
 dev-python/celery:yaml - Enable support of yaml as a configuration file format
 dev-python/cryptography:idna - enable support for the old, deprecated IDNA specification (RFC 3490)
+dev-python/ctypescrypto:gost - Build with support for GOST Message Authentication Code
 dev-python/cvxopt:dsdp - Use interior point library sci-libs/dsdp
 dev-python/cvxopt:glpk - Use GNU Linear Programming Kit sci-mathematics/glpk
 dev-python/dap:server - Enable OpenDAP server support
@@ -3026,7 +3008,6 @@ dev-util/google-perftools:optimisememory - To build libtcmalloc with smaller int
 dev-util/gtk-doc:highlight - Enable source code highlighting
 dev-util/gtk-doc:vim - Enable source code highlighting through app-editors/vim
 dev-util/heaptrack:gui - Install Qt5-based analyzer tool
-dev-util/idea-community:custom-jdk - Install and use IntelliJ's custom JRE.
 dev-util/idea-community:jbr11 - Install and use the Java 11 based version of JetBrains Runtime.
 dev-util/idea-community:jbr8 - Install and use the Java 8 based version of JetBrains Runtime.
 dev-util/intel-ocl-sdk:android - Install android related files
@@ -3299,8 +3280,6 @@ games-fps/darkplaces:cdsound - Enables using CD audio in the engine
 games-fps/darkplaces:demo - Uses the demo data from quake1 (quake1-demodata)
 games-fps/darkplaces:lights - Install and setup the updated light maps
 games-fps/darkplaces:textures - Install and setup the updated textures
-games-fps/doom3:dedicated - install only as a dedicated game server
-games-fps/doom3:roe - Adds support for the Resurrection of Evil expansion
 games-fps/doomsday:demo - Install launcher dor doom1.wad from games-fps/doom-data
 games-fps/doomsday:fluidsynth - Build the FluidSynth sound driver
 games-fps/doomsday:fmod - Enable support for fmod music and sound effects lib
@@ -3323,7 +3302,6 @@ games-fps/eduke32:xmp - Enable support for media-libs/exempi.
 games-fps/gzdoom:gtk2 - Enable support for GTK+2 instead of GTK+3
 games-fps/gzdoom:nonfree - Enable non-free components
 games-fps/nexuiz:maps - Install the community map pack
-games-fps/openarena:client - Build OpenArena client
 games-fps/prboom-plus:dumb - Enable support for various tracker-style music formats via media-libs/dumb
 games-fps/prboom-plus:fluidsynth - Enable support for MIDI via media-sound/fluidsynth
 games-fps/prboom-plus:net - Enable support for network play
@@ -3335,11 +3313,6 @@ games-fps/quake2-icculus:demo - Install the demo files (quake2-demodata) and con
 games-fps/quake2-icculus:qmax - Build the pretty version (quake max)
 games-fps/quake2-icculus:rogue - Build support for the 'Ground Zero' Mission Pack (rogue)
 games-fps/quake2-icculus:xatrix - Build support for the 'The Reckoning' Mission Pack (xatrix)
-games-fps/quake3:mumble - Adds player-location (positional audio) support to VoIP
-games-fps/quake3:teamarena - Adds support for Team Arena expansion pack
-games-fps/quake3:voice - Adds VoIP support
-games-fps/quake3-bin:teamarena - Adds support for Team Arena expansion pack
-games-fps/quake3-demo:dedicated - install only as a dedicated game serer
 games-fps/quakeforge:wildmidi - enable libWildMidi support
 games-fps/quakeforge:xdg - enable XDG support
 games-fps/qudos:demo - Install the demo files (quake2-demodata) and configure for use
@@ -3352,7 +3325,6 @@ games-fps/sauerbraten:server - Compile server support
 games-fps/turtlearena:mumble - Adds player-location (positional audio) support to VoIP
 games-fps/turtlearena:server - Build server target
 games-fps/turtlearena:voice - Adds VoIP support
-games-fps/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3)
 games-fps/urbanterror:altgamma - Alternative way for gamma setting with modesetting driver
 games-fps/urbanterror:client - Build binary for client (includes code for non-dedicated server)
 games-fps/urbanterror:mumble - Use Mumble for ingame VoIP (experimental)
@@ -3446,9 +3418,6 @@ games-strategy/freeciv:sound - Add support for sound provided by media-libs/sdl-
 games-strategy/freeciv:system-lua - Use dev-lang/lua instead of the bundled liblua
 games-strategy/freesynd:devtools - Build development tools
 games-strategy/hedgewars:server - Enable local server
-games-strategy/heroes3:maps - Installs optional map data
-games-strategy/heroes3:music - Installs optional music data
-games-strategy/heroes3:sounds - Installs optional sound data
 games-strategy/ja2-stracciatella:editor - Adds necessary file to run the editor
 games-strategy/ja2-stracciatella:ru-gold - Support for russian gold ja2 version
 games-strategy/megaglest:editor - Build map editor
@@ -7042,7 +7011,6 @@ net-vpn/libreswan:dnssec - Use DNSSEC resolver (requires net-dns/unbound)
 net-vpn/networkmanager-strongswan:glib - Enable libnm-glib compatibility.
 net-vpn/networkmanager-wireguard:glib - Enable libnm-glib compatibility.
 net-vpn/openconnect:gssapi - Build GSSAPI support
-net-vpn/openconnect:java - Build JNI bindings using jni.h
 net-vpn/openconnect:libproxy - Enable proxy support
 net-vpn/openconnect:stoken - Enable stoken support
 net-vpn/openvpn:down-root - Enable the down-root plugin
@@ -7264,8 +7232,6 @@ sci-biology/clustalw-mpi:static_pairalign - Use static (as opposed to dynamic) s
 sci-biology/exonerate:utils - Install all utilities
 sci-biology/fasttree:double-precision - use double precision instead of single-precision floating point (2x memroy required)
 sci-biology/mcl:blast - Add support for NCBI BLAST data
-sci-biology/plink:R - add support R language
-sci-biology/plink:webcheck - add support for online update checking every time the program starts
 sci-biology/seqan:tools - Build and install SeqAn commandline tools, such as the Yara aligner
 sci-biology/ucsc-genome-browser:server - Install genome browser Web application. If this flag is off, only libraries and utilities from the suite are installed.
 sci-biology/yass:dmalloc - Enable debugging with the dmalloc library

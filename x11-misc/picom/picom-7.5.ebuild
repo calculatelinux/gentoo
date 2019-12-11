@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3_{5,6,7,8} )
 inherit meson python-r1 xdg
 
 DESCRIPTION="A lightweight compositor for X11 (previously a compton fork)"
-HOMEPAGE="https://github.com/yshui/picomc"
+HOMEPAGE="https://github.com/yshui/picom"
 SRC_URI="https://github.com/yshui/picom/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MPL-2.0 MIT"
@@ -38,6 +38,10 @@ DEPEND="${RDEPEND}
 	x11-base/xorg-proto"
 BDEPEND="virtual/pkgconfig
 	doc? ( app-text/asciidoc )"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-no_opengl.patch
+	)
 
 src_configure() {
 	local emesonargs=(
