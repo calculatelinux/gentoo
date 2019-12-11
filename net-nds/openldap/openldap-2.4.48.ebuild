@@ -28,6 +28,7 @@ IUSE_CONTRIB="smbkrb5passwd kerberos kinit pbkdf2 sha2"
 IUSE_CONTRIB="${IUSE_CONTRIB} -cxx"
 IUSE="${IUSE_DAEMON} ${IUSE_BACKEND} ${IUSE_OVERLAY} ${IUSE_OPTIONAL} ${IUSE_CONTRIB}"
 
+RESTRICT="!test? ( test )"
 REQUIRED_USE="cxx? ( sasl )
 	pbkdf2? ( ssl )
 	test? ( berkdb )
@@ -720,7 +721,7 @@ multilib_src_compile() {
 multilib_src_test() {
 	if multilib_is_native_abi; then
 		cd tests || die
-		emake tests || die "make tests failed"
+		emake tests
 	fi
 }
 
