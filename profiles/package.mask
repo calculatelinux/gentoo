@@ -32,6 +32,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Aaron Bauman <bman@gentoo.org> (2019-12-12)
+# EAPI 4, new versions upstream, not bumped
+# Removal in 30 days
+dev-lang/opendylan
+dev-lang/opendylan-bin
+dev-libs/mps
+
+# Aaron Bauman <bman@gentoo.org> (2019-12-12)
+# Multiple QA issues and docs no longer build
+# Removal in 30 days
+dev-util/cmt
+
 # Ulrich Müller <ulm@gentoo.org> (2019-12-11)
 # No license. HOMEPAGE and SRC_URI are dead.
 # Last visible upstream activity in 2000.
@@ -181,7 +193,6 @@ net-wireless/ndiswrapper
 dev-python/inotifyx
 dev-python/disqus-python
 dev-python/figleaf
-dev-python/pysvg
 dev-python/sphinxcontrib-ditaa
 dev-python/pyrax
 dev-python/tgmochikit
@@ -216,8 +227,6 @@ dev-python/python-cdb
 dev-python/foolscap
 net-fs/tahoe-lafs
 dev-python/pyvtk
-<dev-python/pycdio-2.1.0
-media-sound/whipper
 dev-python/hachoir-regex
 app-misc/hachoir-subfile
 dev-python/numdisplay
@@ -613,7 +622,7 @@ dev-php/magickwand
 dev-php/pecl-bbcode
 dev-php/pecl-cairo
 dev-php/pecl-dbx
-dev-php/haru
+dev-php/pecl-haru
 dev-php/pecl-htscanner
 dev-php/pecl-libevent
 dev-php/pecl-memcache
