@@ -31,20 +31,24 @@ fi
 IUSE=""
 
 DEPEND="
-	dev-ros/ament_cmake_core[${PYTHON_USEDEP}]
-	dev-ros/ament_cmake_export_definitions[${PYTHON_USEDEP}]
-	dev-ros/ament_cmake_export_dependencies[${PYTHON_USEDEP}]
-	dev-ros/ament_cmake_export_include_directories[${PYTHON_USEDEP}]
-	dev-ros/ament_cmake_export_interfaces[${PYTHON_USEDEP}]
-	dev-ros/ament_cmake_export_libraries[${PYTHON_USEDEP}]
-	dev-ros/ament_cmake_export_link_flags[${PYTHON_USEDEP}]
-	dev-ros/ament_cmake_libraries[${PYTHON_USEDEP}]
-	dev-ros/ament_cmake_python[${PYTHON_USEDEP}]
-	dev-ros/ament_cmake_target_dependencies[${PYTHON_USEDEP}]
+	dev-ros/ament_cmake_core
+	dev-ros/ament_cmake_export_definitions
+	dev-ros/ament_cmake_export_dependencies
+	dev-ros/ament_cmake_export_include_directories
+	dev-ros/ament_cmake_export_interfaces
+	dev-ros/ament_cmake_export_libraries
+	dev-ros/ament_cmake_export_link_flags
+	dev-ros/ament_cmake_libraries
+	dev-ros/ament_cmake_python
+	dev-ros/ament_cmake_target_dependencies
 	dev-ros/ament_cmake_test[${PYTHON_USEDEP}]
-	dev-ros/ament_cmake_version[${PYTHON_USEDEP}]
+	dev-ros/ament_cmake_version
 	${PYTHON_DEPS}
+
+	dev-python/ament_package[${PYTHON_USEDEP}]
+	dev-python/catkin_pkg[${PYTHON_USEDEP}]
 "
+# Last batch of deps above are transitive (from ament_cmake_core) but we need this to propagate proper deps
 RDEPEND="${DEPEND}"
 BDEPEND="${DEPEND}"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
