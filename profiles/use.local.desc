@@ -4173,6 +4173,7 @@ media-gfx/imagemagick:opencl - Enable OpenCL support
 media-gfx/imagemagick:pango - Enable Pango support using x11-libs/pango
 media-gfx/imagemagick:q32 - Set quantum depth value to 32
 media-gfx/imagemagick:q8 - Set quantum depth value to 8
+media-gfx/imv:freeimage - Use media-libs/freeimage as image library
 media-gfx/inkscape:cdr - Enable support for CorelDRAW Diagrams via media-libs/libcdr
 media-gfx/inkscape:dia - pull in app-office/dia for dia import extension
 media-gfx/inkscape:inkjar - Enable support for OpenOffice.org SVG jar files
@@ -4702,6 +4703,7 @@ media-sound/elisa:mpris - Enable MPRIS support
 media-sound/elisa:vlc - Use media-video/vlc for output rather than dev-qt/qtmultimedia
 media-sound/exaile:scrobbler - Enable audioscrobbler/last.fm support
 media-sound/fapg:xspf - Enable support for saving XSPF playlists.
+media-sound/fluidsynth:network - enable network support (requires BSD sockets)
 media-sound/gimmix:cover - Enable cover art fetching
 media-sound/gimmix:lyrics - Enable lyric fetching
 media-sound/gmpc:unique - Enable single instance support using dev-libs/libunique
@@ -5506,14 +5508,17 @@ net-analyzer/snort:shared-rep - Enables the use of shared memory for the Reputat
 net-analyzer/snort:side-channel - Enables Snort's the side channel.
 net-analyzer/snort:sourcefire - Enables Sourcefire specific build options, which include --enable-perfprofiling and --enable-ppm.
 net-analyzer/suricata:af-packet - Enable AF_PACKET support
+net-analyzer/suricata:bpf - Enable support for eBPF (as well as XDP if supported by the kernel and the NIC driver) for low-level, high-speed packet processing
 net-analyzer/suricata:control-socket - Enable unix socket
 net-analyzer/suricata:cuda - Enable NVIDIA Cuda computations support
 net-analyzer/suricata:detection - Enable detection modules
 net-analyzer/suricata:logrotate - Install logrotate rule
+net-analyzer/suricata:lz4 - Enable support for compressed pcap logging using the LZ4 algorithm
 net-analyzer/suricata:nflog - Enable libnetfilter_log support
 net-analyzer/suricata:nfqueue - Enable NFQUEUE support for inline IDP
 net-analyzer/suricata:redis - Enable Redis support
 net-analyzer/suricata:rules - Install default ruleset
+net-analyzer/suricata:tools - Install suricatactl, suricatasc and suricata-update
 net-analyzer/symon:perl - Enables a generic perl symux client
 net-analyzer/symon:symon - Enables the system monitor. Offers no functionality but monitoring and forwarding of measured data
 net-analyzer/symon:symux - Enables the multiplexer which stores incoming symon streams on disk in RRD (net-analyzer/rrdtool) files
@@ -9007,6 +9012,7 @@ x11-misc/mugshot:webcam - Add support for setting a profile photo in media-video
 x11-misc/openbox-menu:icons - Enable support for icons in menus
 x11-misc/openbox-menu:svg - Support SVG icons
 x11-misc/picom:config-file - Enable config file support
+x11-misc/picom:doc - Build documentation and man pages (requires app-text/asciidoc)
 x11-misc/picom:drm - Enable support for using drm for vsync
 x11-misc/picom:opengl - Enable features that require opengl (opengl backend, and opengl vsync methods)
 x11-misc/polybar:i3wm - Add support for i3 window manager
