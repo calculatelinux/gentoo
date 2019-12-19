@@ -393,10 +393,13 @@ app-editors/emacs:gfile - Use gfile (dev-libs/glib) for file notification
 app-editors/emacs:gsettings - Use gsettings (dev-libs/glib) to read the system font name
 app-editors/emacs:gtk2 - Prefer version 2 of the GIMP Toolkit to version 3 (x11-libs/gtk+)
 app-editors/emacs:gzip-el - Compress bundled Emacs Lisp source
+app-editors/emacs:harfbuzz - Use media-libs/harfbuzz as text shaping engine
 app-editors/emacs:imagemagick - Use media-gfx/imagemagick for image processing
+app-editors/emacs:json - Compile with native JSON support using dev-libs/jansson
 app-editors/emacs:libxml2 - Use dev-libs/libxml2 to parse XML instead of the internal Lisp implementations
 app-editors/emacs:mailutils - Retrieve e-mail using net-mail/mailutils instead of the internal movemail substitute
 app-editors/emacs:source - Install C source files and make them available for find-function
+app-editors/emacs:threads - Add elisp threading support
 app-editors/emacs:toolkit-scroll-bars - Use the selected toolkit's scrollbars in preference to Emacs' own scrollbars
 app-editors/emacs:wide-int - Prefer wide Emacs integers (typically 62-bit). This option has an effect only on architectures where "long" and "long long" types have different size.
 app-editors/emacs:xwidgets - Enable use of GTK widgets in Emacs buffers (requires GTK3)
@@ -3949,7 +3952,6 @@ mail-filter/opendkim:lua - Enables control over signature verification, filterin
 mail-filter/opendkim:memcached - Add support for using dev-libs/libmemcached
 mail-filter/opendkim:opendbx - Use opendbx backend to facilitate dataset driven OpenDKIM configuration options like stats, bodylengthdb, etc. against a wide variety of database types
 mail-filter/opendkim:poll - Use poll() instead of select() for the provided asynchronous resolver library.
-mail-filter/opendkim:query_cache - Obsolete, use "querycache" instead. Flag will be removed after next stabilization.
 mail-filter/opendkim:querycache - Add support for query caching (requires 'berkdb' flag)
 mail-filter/opendkim:sasl - Used to authenticate to a LDAP server in various ways if required.
 mail-filter/opendkim:stats - Add support for statistics (requires 'opendbx' flag)
@@ -4111,6 +4113,7 @@ media-gfx/darktable:opencl - Enable opencl support
 media-gfx/darktable:pax_kernel - Triggers paxmarking of main darktable binary
 media-gfx/digikam:addressbook - Enable akonadi contact integration
 media-gfx/digikam:dnn - Build neural network faces engine module
+media-gfx/digikam:heif - Enable support for ISO/IEC 23008-12:2017 HEIF files using media-libs/x265
 media-gfx/digikam:imagemagick - Enable support for additional image formats such as XCF, FITS, HEIC etc.
 media-gfx/digikam:lensfun - Enable support for media-libs/lensfun
 media-gfx/digikam:marble - Enable support for geolocation using kde-apps/marble
@@ -5517,8 +5520,6 @@ net-analyzer/suricata:lz4 - Enable support for compressed pcap logging using the
 net-analyzer/suricata:nflog - Enable libnetfilter_log support
 net-analyzer/suricata:nfqueue - Enable NFQUEUE support for inline IDP
 net-analyzer/suricata:redis - Enable Redis support
-net-analyzer/suricata:rules - Install default ruleset
-net-analyzer/suricata:tools - Install suricatactl, suricatasc and suricata-update
 net-analyzer/symon:perl - Enables a generic perl symux client
 net-analyzer/symon:symon - Enables the system monitor. Offers no functionality but monitoring and forwarding of measured data
 net-analyzer/symon:symux - Enables the multiplexer which stores incoming symon streams on disk in RRD (net-analyzer/rrdtool) files
@@ -8745,7 +8746,6 @@ www-apps/wordpress:themes - Installs themes (including default theme)
 www-client/chromium:closure-compile - Enable closure type-checking for Chrome's web technology-based UI. Requires Java.
 www-client/chromium:component-build - Split build into more shared libraries to speed up linking. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
 www-client/chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
-www-client/chromium:jumbo-build - Combine source files to speed up build process.
 www-client/chromium:pic - Disable optimized assembly code that is not PIC friendly
 www-client/chromium:proprietary-codecs - Enable proprietary codecs like H.264, MP3
 www-client/chromium:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels

@@ -18,12 +18,12 @@ BDEPEND="
 	virtual/pkgconfig
 "
 CDEPEND="
+	dev-libs/libclthreads
 	media-libs/alsa-lib
-	media-libs/libclthreads
-	media-libs/libclxclient
 	>=media-libs/zita-alsa-pcmi-0.3
 	sys-libs/readline:0
 	virtual/jack
+	x11-libs/libclxclient
 	x11-libs/libX11
 	x11-libs/libXft
 "

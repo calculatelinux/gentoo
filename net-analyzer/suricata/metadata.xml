@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer type="person">
-    <email>slis@gentoo.org</email>
-  </maintainer>
-  <maintainer type="person">
     <email>marecki@gentoo.org</email>
     <name>Marek Szuba</name>
   </maintainer>
@@ -20,7 +17,5 @@
     <flag name="nflog">Enable libnetfilter_log support</flag>
     <flag name="nfqueue">Enable NFQUEUE support for inline IDP</flag>
     <flag name="redis">Enable Redis support</flag>
-    <flag name="rules">Install default ruleset</flag>
-    <flag name="tools">Install suricatactl, suricatasc and suricata-update</flag>
   </use>
 </pkgmetadata>
