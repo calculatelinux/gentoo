@@ -32,6 +32,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Brian Evans <grknight@gentoo.org> (2019-12-19)
+# PHP 7.1 is end of life and has security issues Bug 703326
+# Associated packages are not ready for new versions tracked in bug 702110
+# Removal in 30 days
+dev-lang/php:7.1
+dev-php/pecl-cassandra
+<dev-php/pecl-event-2.5
+virtual/httpd-php:7.1
+
 # Ulrich Müller <ulm@gentoo.org> (2019-12-18)
 # Live ebuilds for Emacs from Git have been consolidated
 # into separate slots of the app-editors/emacs package.
@@ -782,6 +791,7 @@ dev-php/pecl-apcu:0
 dev-php/pecl-dbase:0
 dev-php/pecl-http:2
 dev-php/pecl-mailparse:0
+dev-php/pecl-memcache:0
 dev-php/pecl-memcached:0
 dev-php/pecl-oauth:0
 dev-php/pecl-propro:0
@@ -795,7 +805,6 @@ dev-php/pecl-yaml:0
 
 # Brian Evans <grknight@gentoo.org> (2019-10-01)
 # Old extensions which only work with PHP <7
-# pecl-memcache is replaced by pecl-memcachd (with code changes)
 # pecl-mongo is replaced by pecl-monogodb
 # Removal in 90 days. Bug 651784
 dev-php/PEAR-MDB2_Driver_mysql
@@ -806,7 +815,6 @@ dev-php/pecl-dbx
 dev-php/pecl-haru
 dev-php/pecl-htscanner
 dev-php/pecl-libevent
-dev-php/pecl-memcache
 dev-php/pecl-mongo
 dev-php/pecl-mysqlnd_ms
 dev-php/pecl-mysqlnd_qc

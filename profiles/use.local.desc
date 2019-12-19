@@ -7145,6 +7145,7 @@ net-wireless/iwd:monitor - Enable iwmon monitor tool
 net-wireless/iwd:ofono - Enable support for oFono SIM authentication
 net-wireless/iwd:wired - Enable ethernet authentication daemon
 net-wireless/kismet:client - Build the ncurses-based user interface
+net-wireless/kismet:libusb - Support libusb based capture sources such as mousejack, cc2540(ble), and nrf51822(ble)
 net-wireless/kismet:mousejack - Add support for mousejack hardware using dev-libs/libusb
 net-wireless/kismet:pcre - Build with pcre support
 net-wireless/kismet:plugin-autowep - Build the autowep plugin
@@ -7153,9 +7154,11 @@ net-wireless/kismet:plugin-dot15d4 - Build the dot15d4 plugin
 net-wireless/kismet:plugin-ptw - Build the ptw plugin
 net-wireless/kismet:plugin-spectools - Build the spectools plugin. This uses net-wireless/spectools
 net-wireless/kismet:plugin-syslog - Build the syslog plugin.
+net-wireless/kismet:rtlsdr - Enable rtlsdr based kismet capture sources
 net-wireless/kismet:ruby - Build extras which are written in ruby, example plugins and the like.
 net-wireless/kismet:speech - Audio support using app-accessibility/flite
 net-wireless/kismet:suid - Install a setuid root helper binary with limited functionality; this allows running kismet as a normal user, significantly reducing security risks
+net-wireless/kismet:ubertooth - Enable capture source for ubertooth to sniff bluetooth low energy
 net-wireless/neard:tools - build and install extra helper utilities
 net-wireless/openbsc:gprs - Support GPRS via OpenGGSN
 net-wireless/osmocom-bb:transmit - Enable transmission capabilities.
@@ -7829,6 +7832,7 @@ sys-apps/elfix:xtpax - Enable XATTR_PAX_FLAGS support.
 sys-apps/entropy-server:matter - Pull in app-admin/matter
 sys-apps/etckeeper:bazaar - Support dev-vcs/bzr based repository
 sys-apps/etckeeper:cron - Install cron script
+sys-apps/file:xz - Enable support for XZ ("LZMA2") decompression using app-arch/xz-utils
 sys-apps/firejail:apparmor - Enable support for custom AppArmor profiles
 sys-apps/firejail:chroot - Enable chrooting to custom directory
 sys-apps/firejail:contrib - Install contrib scripts
@@ -8698,7 +8702,6 @@ www-apps/bugzilla:modperl - Enable www-apache/mod_perl support
 www-apps/cgit:highlight - Enable source code highlighting
 www-apps/cgit:jit - If the lua flag is enabled, jit uses LuaJIT instead of vanilla Lua
 www-apps/cgit:lua - Enable support for Lua scripting
-www-apps/drupal:accelerator - Add dependency on a php accelerator
 www-apps/drupal:uploadprogress - Install dev-php/pecl-uploadprogress package
 www-apps/gitea:acct - User and group management via acct-*/git packages
 www-apps/gitit:network-uri - Get Network.URI from the network-uri package.
