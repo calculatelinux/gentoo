@@ -7,7 +7,9 @@ inherit autotools elisp-common eutils xdg-utils
 
 DESCRIPTION="Free computer algebra environment based on Macsyma"
 HOMEPAGE="http://maxima.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+# the 5.43.0 tarball misses doc/info/de/include-maxima.de.texi #687244
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	https://dev.gentoo.org/~ulm/distfiles/${P}-missing-texi-file.tar.gz"
 
 LICENSE="GPL-2 GPL-2+"
 SLOT="0"
@@ -36,7 +38,7 @@ RDEPEND="!app-emacs/imaxima
 	X? ( x11-misc/xdg-utils
 		 sci-visualization/gnuplot[gd]
 		 tk? ( dev-lang/tk:0 ) )
-	emacs? ( virtual/emacs
+	emacs? ( >=app-editors/emacs-23.1:*
 		virtual/latex-base
 		app-emacs/auctex
 		app-text/ghostscript-gpl

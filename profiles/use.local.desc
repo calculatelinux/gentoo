@@ -591,7 +591,6 @@ app-emulation/open-vm-tools:deploypkg - Build deploypkg plugin
 app-emulation/open-vm-tools:dnet - Enable support for nicinfo
 app-emulation/open-vm-tools:doc - Generate API documentation
 app-emulation/open-vm-tools:fuse - Enable vmblock-fuse/vmhgfs-fuse
-app-emulation/open-vm-tools:grabbitmqproxy - Build grabbitmqproxy plugin
 app-emulation/open-vm-tools:gtkmm - Compile with Gtkmm and sigc++ (Recommended)
 app-emulation/open-vm-tools:multimon - Enable multimon (Requires X)
 app-emulation/open-vm-tools:resolutionkms - Build the linux/unix resolutionkms module
@@ -2015,6 +2014,7 @@ dev-lang/rakudo:moar - Use the MoarVM as backend
 dev-lang/ruby:rdoc - Install dev-ruby/rdoc after installing Ruby.
 dev-lang/ruby:rubytests - Install ruby tests that can only be run after ruby is installed
 dev-lang/rust:clippy - Install clippy component
+dev-lang/rust:nightly - Enable nightly (UNSTABLE) features
 dev-lang/rust:rls - Install rls component
 dev-lang/rust:rustfmt - Install rustfmt component
 dev-lang/rust:system-llvm - Use the system LLVM install
@@ -7832,7 +7832,6 @@ sys-apps/elfix:xtpax - Enable XATTR_PAX_FLAGS support.
 sys-apps/entropy-server:matter - Pull in app-admin/matter
 sys-apps/etckeeper:bazaar - Support dev-vcs/bzr based repository
 sys-apps/etckeeper:cron - Install cron script
-sys-apps/file:xz - Enable support for XZ ("LZMA2") decompression using app-arch/xz-utils
 sys-apps/firejail:apparmor - Enable support for custom AppArmor profiles
 sys-apps/firejail:chroot - Enable chrooting to custom directory
 sys-apps/firejail:contrib - Install contrib scripts
