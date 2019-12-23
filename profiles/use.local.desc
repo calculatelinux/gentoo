@@ -673,27 +673,6 @@ app-emulation/virtualbox-bin:sdk - Enable building of SDK
 app-emulation/virtualbox-bin:vboxwebsrv - Install the VirtualBox webservice
 app-emulation/virtualbox-modules:pax_kernel - Apply patch needed for pax enabled kernels
 app-emulation/vkd3d:spirv-tools - Enable SPIRV shader debugging support using dev-util/spirv-tools
-app-emulation/wine-d3d9:capi - Enable ISDN support via CAPI
-app-emulation/wine-d3d9:custom-cflags - Bypass strip-flags; use at your own peril
-app-emulation/wine-d3d9:d3d9 - Apply highly experimental patches for Gallium Nine support. This patch may break some applications.
-app-emulation/wine-d3d9:dos - Pull in games-emulation/dosbox to run DOS applications
-app-emulation/wine-d3d9:gecko - Add support for the Gecko engine when using iexplore
-app-emulation/wine-d3d9:gssapi - Use GSSAPI (Kerberos SSP support)
-app-emulation/wine-d3d9:gstreamer - Use media-libs/gstreamer to provide DirectShow functionality;
-app-emulation/wine-d3d9:mono - Add support for .NET using Wine's Mono add-on
-app-emulation/wine-d3d9:netapi - Use libnetapi from net-fs/samba to support Windows networks in netapi32.dll
-app-emulation/wine-d3d9:opencl - Enable OpenCL support
-app-emulation/wine-d3d9:osmesa - Add support for OpenGL in bitmaps using libOSMesa
-app-emulation/wine-d3d9:pcap - Support packet capture software (e.g. wireshark)
-app-emulation/wine-d3d9:perl - Install helpers written in perl (winedump/winemaker)
-app-emulation/wine-d3d9:prelink - Run prelink on DLLs during build; For Gentoo hardened, do not disable if you do not know what this means as it can break things at runtime
-app-emulation/wine-d3d9:realtime - Pull in sys-auth/rtkit for low-latency pulseaudio support
-app-emulation/wine-d3d9:run-exes - Use Wine to open and run .EXE and .MSI files
-app-emulation/wine-d3d9:samba - Add support for NTLM auth. See: https://web.archive.org/web/20160108123008/http://wiki.winehq.org:80/NtlmAuthSetupGuide and https://web.archive.org/web/20150906013746/http://wiki.winehq.org/NtlmSigningAndSealing (these pages are not currently in the updated WineHQ Wiki).
-app-emulation/wine-d3d9:sdl - Add support for gamepad detection using SDL
-app-emulation/wine-d3d9:udev - Use virtual/libudev to provide plug and play support
-app-emulation/wine-d3d9:vkd3d - Use app-emulation/vkd3d to provide Direct3D 12 support
-app-emulation/wine-d3d9:vulkan - Enable Vulkan drivers
 app-emulation/wine-staging:capi - Enable ISDN support via CAPI
 app-emulation/wine-staging:custom-cflags - Bypass strip-flags; use at your own peril
 app-emulation/wine-staging:dos - Pull in games-emulation/dosbox to run DOS applications
@@ -2553,7 +2532,6 @@ dev-python/PyQt5:sql - Build bindings for the QtSql module
 dev-python/PyQt5:svg - Build bindings for the QtSvg module
 dev-python/PyQt5:testlib - Build bindings for the QtTest module
 dev-python/PyQt5:webchannel - Build bindings for the QtWebChannel module
-dev-python/PyQt5:webengine - Build bindings for the QtWebEngine module
 dev-python/PyQt5:webkit - Build bindings for the QtWebKit module
 dev-python/PyQt5:websockets - Build bindings for the QtWebSockets module
 dev-python/PyQt5:widgets - Build bindings for the QtWidgets module
@@ -5207,6 +5185,22 @@ media-video/orion:mpv - Use the media-video/mpv player (upstream default)
 media-video/orion:qtav - Use the media-libs/qtav player
 media-video/orion:qtmedia - Use the dev-qt/qtmultimedia
 media-video/peek:keybinder - Enable support for global hotkeys using dev-libs/keybinder
+media-video/qmplay2:audiofilters - Build with AudioFilters module
+media-video/qmplay2:avdevice - Build FFmpeg module with libavdevice suport
+media-video/qmplay2:avresample - Use libavresample instead of libswresample
+media-video/qmplay2:cdio - Build with AudioCD module
+media-video/qmplay2:cuvid - Build with CUVID module
+media-video/qmplay2:extensions - Build with Extensions module
+media-video/qmplay2:gme - Build Chiptune with GME support
+media-video/qmplay2:inputs - Build with Inputs module
+media-video/qmplay2:lastfm - Build with LastFM support
+media-video/qmplay2:lyrics - Build with lyrics support
+media-video/qmplay2:mediabrowser - Build with MediaBrowser support
+media-video/qmplay2:mpris2 - Build Extensions with MPRIS2 support
+media-video/qmplay2:notifications - Build additional notifications module
+media-video/qmplay2:sid - Build Chiptune with SIDPLAY support
+media-video/qmplay2:videofilters - Build with VideoFilters module
+media-video/qmplay2:visualizations - Build with Visualizations module
 media-video/simplescreenrecorder:asm - Enable x86 assembly optimisation.
 media-video/simplescreenrecorder:vpx - Enable VP8 codec support via media-libs/libvpx.
 media-video/smplayer:autoshutdown - Enable the option to shutdown your computer after finishing the playlist. This requires dev-qt/qtdbus as dependency.
@@ -5227,7 +5221,6 @@ media-video/vdr:alternatechannel - Use alternate channel on record
 media-video/vdr:bidi - fribidi support, for languages, written from right to left
 media-video/vdr:graphtft - support for vdr-graphtft plugin up from version 0.1.7
 media-video/vdr:html - Install HTML documentation
-media-video/vdr:kbd - enable keyboard support as remote device
 media-video/vdr:keyboard - enable keyboard support as remote device
 media-video/vdr:mainmenuhooks - Allows to replace main menu entries by some special plugins (like epgsearch, extrecmenu, ...)
 media-video/vdr:menuorg - Enables support for the media-plugins/vdr-menuorg
@@ -6722,6 +6715,7 @@ net-misc/scponly:unison - Enables Unison compatibility with potential security r
 net-misc/scponly:wildcards - Enables wildcard processing with potential security risks
 net-misc/scponly:winscp - Enables WinSCP 2.0 compatibility with potential security risks
 net-misc/seafile-client:shibboleth - Build support for Shibboleth single sign-on
+net-misc/sipp:pcap - Enable functionality to replay RTP data from a pcap file
 net-misc/sitecopy:rsh - This allows the use of rsh (remote shell) and rcp (remote copy) for authoring websites. sftp is a much more secure protocol and is preferred.
 net-misc/sitecopy:webdav - Enable WebDav (Web-based Distributed Authoring and Versioning) support. This system allows users to collaborate on websites using a web based interface. See the ebuild for an FAQ page. Enables neon as well to handle webdav support.
 net-misc/sks:optimize - Enables bytecode optimization
@@ -8674,7 +8668,6 @@ virtual/mysql:server - Build server (mysqld)
 virtual/podofo-build:boost - Add support for boost
 virtual/podofo-build:tools - Build and install commandline tools.
 virtual/ssh:minimal - Prefer net-misc/dropbear over net-misc/openssh
-virtual/wine:d3d9 - Enable Ixit's Gallium Nine Patchset
 virtual/wine:staging - Enable Wine-Staging's Patchset
 www-apache/mod_backtrace:unwind - Use sys-libs/libunwind to provide better resolution of function names.
 www-apache/mod_extract_forwarded:mod-proxy - Enable support for Apache's internal proxy

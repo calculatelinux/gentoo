@@ -32,6 +32,15 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2019-12-22)
+# Unmaintained, dead upstreams, monstrous build systems.
+# Bug #568364, Removal in 30 days.
+sci-libs/jmol-acme
+sci-libs/libcore
+sci-libs/naga
+sci-libs/spooles
+sci-libs/vecmath-objectclub
+
 # Alfredo Tupone <tupone@gentoo.org> (2019-12-20)
 # dev-tcltk/tkXwin functionality is >=dev-lang/tk-8.5
 # Removal in 30 days
@@ -45,6 +54,12 @@ dev-lang/php:7.1
 dev-php/pecl-cassandra
 <dev-php/pecl-event-2.5
 virtual/httpd-php:7.1
+
+# Tomáš Mózes <hydrapolic@gentoo.org> (2019-12-19)
+# Needs more testing.
+=app-emulation/xen-4.13.0
+=app-emulation/xen-pvgrub-4.13.0
+=app-emulation/xen-tools-4.13.0
 
 # Ulrich Müller <ulm@gentoo.org> (2019-12-18)
 # Live ebuilds for Emacs from Git have been consolidated
@@ -288,12 +303,6 @@ dev-util/kelbt
 # EAPI=4, fails to build
 # Removal in 30 days
 dev-util/idutils
-
-# David Seifert <soap@gentoo.org> (2019-12-10)
-# Never keyworded, only worked with specific versions of boost that are
-# gone, integrated into boost as dev-libs/boost[python,numpy] nowadays.
-# Removal in 7 days.
-dev-libs/boost-numpy
 
 # David Seifert <soap@gentoo.org> (2019-12-10)
 # Abandoned upstream, broken ncurses linking, last release 8 years ago.
