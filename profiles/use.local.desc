@@ -4021,7 +4021,8 @@ media-fonts/infinality-ultimate-meta:free - Install fonts for the "free" preset
 media-fonts/infinality-ultimate-meta:latin - Install additional latin fonts
 media-fonts/infinality-ultimate-meta:minimal - Install a minimal set of fonts
 media-fonts/infinality-ultimate-meta:ms - Install (free) fonts for the "ms" preset
-media-fonts/intlfonts:bdf - Installs BDF fonts in addition to PCF
+media-fonts/intlfonts:bdf - Install BDF fonts in addition to PCF
+media-fonts/intlfonts:non-free - Install non-free Tibetan fonts
 media-fonts/liberation-fonts:fontforge - Use media-gfx/fontforge to build fonts from source
 media-fonts/montecarlo:bdf - Install BDF fonts in addition to PCF
 media-fonts/mplus-outline-fonts:ipafont - Generates new fonts merged with media-fonts/ja-ipafonts
@@ -4260,7 +4261,6 @@ media-libs/ganv:fdgl - Use experimental force-directed graph layout
 media-libs/gd:webp - Enable support for the webp format
 media-libs/gegl:lensfun - Enable support for media-libs/lensfun.
 media-libs/gegl:umfpack - Enable sparse solving via sci-libs/umfpack.
-media-libs/giflib:rle - Build converters for RLE format (utah raster toolkit)
 media-libs/gmtk:dconf - Enable support for gnome-base/dconf
 media-libs/grilo:network - Enable network access for media discovery using net-libs/libsoup
 media-libs/grilo:playlist - Enable support for playlists through dev-libs/totem-pl-parser
@@ -4646,7 +4646,6 @@ media-sound/cmus:systemd - Enable MPRIS support via sys-apps/systemd
 media-sound/cmus:tremor - Use libivorbis from media-libs/tremor instead of media-libs/libvorbis
 media-sound/csound:beats - Build the beats score frontend
 media-sound/csound:chua - Build the chua opcodes
-media-sound/csound:csoundac - Build the CsoundAC extension module
 media-sound/csound:double-precision - Use double-precision floating point for audio samples
 media-sound/csound:dssi - Build the DSSI opcodes
 media-sound/csound:fluidsynth - Build the fluidsynth opcodes
@@ -4655,9 +4654,7 @@ media-sound/csound:keyboard - Build Virtual MIDI keyboard
 media-sound/csound:linear - Build the linear algebra Opcodes
 media-sound/csound:portmidi - Build the PortMIDI I/O module
 media-sound/csound:samples - Install the HRTF datafiles for use with hrtfmove, hrtfmove2, hrtfstat, hrtfearly, and hrtfreverb
-media-sound/csound:score - Build the alternative score parser
 media-sound/csound:stk - Build the stk opcodes
-media-sound/csound:tcl - Build the tcl interface and clients
 media-sound/csound:utils - Build stand-alone executables for utilities that can also be used via `csound -U`
 media-sound/csound:websocket - Build the websocket opcode
 media-sound/darkice:aacplus - AAC+ encoding via media-libs/libaacplus
@@ -5210,9 +5207,7 @@ media-video/syncplay:client - Install Syncplay client
 media-video/syncplay:server - Install Syncplay server
 media-video/syncplay:vlc - Enable VLC2.x support
 media-video/totem:lirc - Enable support for controlling Totem with a remote control using app-misc/lirc
-media-video/totem:nautilus - Enable the nautilus extension
 media-video/totem:python - Build dev-lang/python using plugins (dbusservice for notifications and MPRIS control, interactive python console and opensubtitles lookup)
-media-video/totem:vala - Build the rotation plugin, which allows videos to be rotated if they are in the wrong orientation
 media-video/transcode:mjpeg - Enables mjpegtools support
 media-video/transcode:nuv - NuppelVideo container format demuxing
 media-video/transcode:pic - disable optimized assembly code that is not PIC friendly

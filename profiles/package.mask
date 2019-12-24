@@ -32,6 +32,11 @@
 
 #--- END OF EXAMPLES ---
 
+# James Le Cuirot <chewi@gentoo.org> (2019-12-23)
+# No license. HOMEPAGE and SRC_URI are dead.
+# Removal in 30 days. See bug #703552.
+games-util/xboxgw
+
 # David Seifert <soap@gentoo.org> (2019-12-22)
 # Unmaintained, dead upstreams, monstrous build systems.
 # Bug #568364, Removal in 30 days.
@@ -519,7 +524,6 @@ dev-vcs/hg-fast-export
 dev-vcs/rabbitvcs
 net-analyzer/namebench
 net-fs/tahoe-lafs
-net-fs/tahoe-lafs
 net-misc/irrtree
 net-misc/pycnb
 net-p2p/pybitmessage
@@ -731,12 +735,6 @@ dev-util/ccglue
 # when being called with --no-absolute-filenames
 # https://bugs.gentoo.org/700020
 =app-arch/cpio-2.13
-
-# Stephan Hartmann <stha09@googlemail.com> (2019-11-11)
-# Dev channel releases are only for people who
-# are developers or want more experimental features
-# and accept a more unstable release.
->=www-client/chromium-80
 
 # Michał Górny <mgorny@gentoo.org> (2019-10-20)
 # Testing version that breaks multiple plugins.  Let's keep it masked
