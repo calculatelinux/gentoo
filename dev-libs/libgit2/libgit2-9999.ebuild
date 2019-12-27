@@ -11,11 +11,11 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3
 else
 	SRC_URI="https://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~x86 ~ppc-macos"
+	KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86 ~ppc-macos"
 fi
 
 DESCRIPTION="A linkable library for Git"
-HOMEPAGE="https://libgit2.github.com/"
+HOMEPAGE="https://libgit2.org"
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="0/28"

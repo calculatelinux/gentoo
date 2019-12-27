@@ -32,6 +32,78 @@
 
 #--- END OF EXAMPLES ---
 
+# Miroslav Šulc <fordfrog@gentoo.org> (2019-12-26)
+# Deprecated by upstream, not used anymore in the tree.
+# Removal in 30 days.  Bug #703196.
+media-libs/libclalsadrv
+
+# David Seifert <soap@gentoo.org> (2019-12-25)
+# Py2 only, dead upstream, no py3 port in sight.
+# Removal in 30 days.  Bug #703792.
+games-rpg/dragonhunt
+
+# David Seifert <soap@gentoo.org> (2019-12-25)
+# Py2 only, dead upstream, no py3 port in sight.
+# Removal in 30 days.  Bug #703784.
+games-puzzle/jools
+
+# David Seifert <soap@gentoo.org> (2019-12-25)
+# Py2 only, dead upstream, no py3 port in sight.
+# Removal in 30 days.  Bug #703782.
+games-puzzle/hexamine
+
+# David Seifert <soap@gentoo.org> (2019-12-25)
+# Py2 only, dead upstream, no py3 port in sight.
+# Removal in 30 days.  Bug #703780.
+games-puzzle/4stattack
+
+# David Seifert <soap@gentoo.org> (2019-12-25)
+# Py2 only, dead upstream, no py3 port in sight.
+# Removal in 30 days.  Bug #703774.
+games-arcade/watermelons
+
+# David Seifert <soap@gentoo.org> (2019-12-25)
+# Py2 only, dead upstream, no py3 port in sight.
+# Removal in 30 days.  Bug #703772.
+games-arcade/triplexinvaders
+
+# David Seifert <soap@gentoo.org> (2019-12-25)
+# Py2 only, dead upstream, no py3 port in sight.
+# Removal in 30 days.  Bug #703770.
+games-arcade/pydance
+games-arcade/pydance-songs
+
+# David Seifert <soap@gentoo.org> (2019-12-25)
+# Py2 only, no other distro packages it anymore.
+# Removal in 30 days.  Bug #703768.
+games-arcade/pycadia
+
+# David Seifert <soap@gentoo.org> (2019-12-25)
+# Py2 only, no other distro packages it anymore.
+# Removal in 30 days.  Bug #703764.
+games-arcade/bub-n-bros
+
+# David Seifert <soap@gentoo.org> (2019-12-25)
+# Py2 only, upstream abandoned since 2005.
+# Removal in 30 days.  Bug #703762.
+games-action/accelerator3d
+
+# David Seifert <soap@gentoo.org> (2019-12-25)
+# Py2 only, upstream abandoned further development, Broken.
+# Removal in 30 days.  Bug #693032.
+games-kids/tuxmathscrabble
+
+# Ulrich Müller <ulm@gentoo.org> (2019-12-25)
+# Broken SRC_URI. Most distfiles have no license,
+# so we cannot distribute them on mirrors.
+# Masked for removal in 30 days. Bug #635372.
+x11-themes/audacious-themes
+
+# David Seifert <soap@gentoo.org> (2019-12-24)
+# Unmaintained, uses dead POSIX streams interface, EAPI 4.
+# Bug #692228, Removal in 30 days.
+x11-terms/multi-aterm
+
 # James Le Cuirot <chewi@gentoo.org> (2019-12-23)
 # No license. HOMEPAGE and SRC_URI are dead.
 # Removal in 30 days. See bug #703552.
@@ -677,13 +749,6 @@ dev-python/wcsaxes
 sci-astronomy/astrometry
 sci-astronomy/kapteyn
 
-# David Seifert <soap@gentoo.org> (2019-11-28)
-# No revdeps, blocking move to python 3.7, unnecessary maintenance
-# burden, bug #701426. Removal in 30 days.
-dev-python/pytest-datafiles
-dev-python/pytest-pythonpath
-dev-python/pytest-qt
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2019-11-28)
 # Multiple build failures, automagic, missing deps, no one to fix them
 # Bugs #542756, #554388, #555768, #557974, #574854, #574890 #589182,
@@ -702,29 +767,11 @@ sci-libs/vtkdata
 # Removal after 2020-01-01
 net-wireless/bcm43xx-fwcutter
 
-# Ulrich Müller <ulm@gentoo.org> (2019-11-26)
-# Upstream says: "Elib has been decommissioned as a separate package
-# since its useful functions have long since been included in Emacs."
-# Last release in 1995. Byte-compilation fails with Emacs 27.
-# Masked for removal in 30 days. Bug #701160.
-app-emacs/elib
-
 # Sergei Trofimovich <slyfox@gentoo.org> (2019-11-25)
 # Mask for removal from main tree into ::nix-guix overlay.
 # Removal in 30 days.
 sys-apps/nix
 sys-apps/guix
-
-# Mart Raudsepp <leio@gentoo.org> (2019-11-17)
-# Obsolete library with no remaining consumers.
-# Only older dev-libs/libreport versions used it.
-# Removal in 30 days.  Bug #700380.
-dev-libs/btparser
-
-# Mart Raudsepp <leio@gentoo.org> (2019-11-17)
-# Obsolete library with no consumers.
-# Removal in 30 days.  Bug #700332.
-dev-libs/qof
 
 # Aaron Bauman <bman@gentoo.org> (2019-11-16)
 # EAPI=4 and fails to build
@@ -1051,13 +1098,6 @@ dev-java/eclipse-ecj:4.10
 # <glibc-2.26.
 ~net-libs/libnsl-0
 ~net-libs/rpcsvc-proto-0
-
-# Michał Górny <mgorny@gentoo.org> (2018-08-01)
-# Multiprocessing versions of gemato.  They are known to hang on some
-# users, so let's keep them masked until somebody figures out what's
-# wrong.  Bug #647964.
-~app-portage/gemato-14.1m
-~app-portage/gemato-9999m
 
 # James Le Cuirot <chewi@gentoo.org> (2017-12-17)
 # Java 9+ is not yet fully supported on Gentoo. Packages cannot depend
