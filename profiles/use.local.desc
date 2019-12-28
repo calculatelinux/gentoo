@@ -4163,6 +4163,7 @@ media-gfx/inkscape:latex - pull in dependencies for LaTeX formulas
 media-gfx/inkscape:svg2 - Enable support for new SVG2 features
 media-gfx/inkscape:visio - Enable support for Microsoft Visio Diagrams via media-libs/libvisio
 media-gfx/inkscape:wpg - Enable support for WordPerfect Graphics via app-text/libwpg
+media-gfx/iscan:gui - Builds gtk-based minimal scan GUI
 media-gfx/iscan-plugin-gt-f500:minimal - Install the firmware only, and not the plugin.
 media-gfx/jpeg2ps:metric - Default to A4 paper size
 media-gfx/kphotoalbum:kipi - Support for the KDE Image Plugin Interface
@@ -6505,6 +6506,7 @@ net-misc/electrum-ltc:email - Enable plugin to support emailing invoices
 net-misc/electrum-ltc:qrcode - Enable QR code scanning with media-gfx/zbar
 net-misc/electrum-ltc:sync - Enable plugin to sync wallet metadata across multiple Electrum clients
 net-misc/electrum-ltc:vkb - Enable plugin for virtual keyboard
+net-misc/etherdfs:tsr - Build the TSR program for DOS, which acts as a client.
 net-misc/ethflop:tsr - Build the TSR program for DOS, which acts as a client.
 net-misc/eventd:libcanberra - Enable plugin for sounds via media-libs/libcanberra
 net-misc/eventd:libnotify - Enable plugin to relay events to notification daemon (Note: not required for local notifications via net-misc/eventd)
@@ -7058,10 +7060,6 @@ net-vpn/tor:man - Build and install man pages
 net-vpn/tor:scrypt - Use app-crypt/libscrypt for the scrypt algorithm
 net-vpn/tor:tor-hardening - Compile tor with hardening on vanilla compilers/linkers
 net-vpn/vpnc:resolvconf - Enable support for DNS managing framework net-dns/openresolv
-net-vpn/wireguard:debug - Enable verbose debug reporting in dmesg of various WireGuard peer and device information.
-net-vpn/wireguard:module - Compile the actual WireGuard kernel module. Most certainly you want this enabled, unless you're doing something strange.
-net-vpn/wireguard:module-src - Install the module source code to /usr/src, in case you like building kernel modules yourself.
-net-vpn/wireguard:tools - Compile the wg(8) tool and related helpers. You probably want this enabled.
 net-vpn/wireguard-modules:debug - Enable verbose debug reporting in dmesg of various WireGuard peer and device information.
 net-vpn/wireguard-modules:module - Compile the actual WireGuard kernel module. Most certainly you want this enabled, unless you're doing something strange.
 net-vpn/wireguard-modules:module-src - Install the module source code to /usr/src, in case you like building kernel modules yourself.
@@ -7814,7 +7812,7 @@ sys-apps/dbus:elogind - Use sys-auth/elogind for session tracking.
 sys-apps/dbus:systemd - Build with sys-apps/systemd at_console support
 sys-apps/dbus:user-session - Enable user-session semantics for session bus under systemd
 sys-apps/dbus-broker:launcher - dbus-daemon compatibility launcher
-sys-apps/debianutils:installkernel - Install /sbin/installkernel script (for Linux)
+sys-apps/debianutils:installkernel - Install /sbin/installkernel script (for Linux). installkernel is required whenever a kernel will be installed via make install
 sys-apps/duc:X - Use X11 for the GUI instead of OpenGL. This is the recommended option
 sys-apps/duc:cairo - Build support for exporting to PNG and PDF with x11-libs/cairo
 sys-apps/duc:gui - Build support for a graphical client
@@ -8673,6 +8671,10 @@ virtual/podofo-build:boost - Add support for boost
 virtual/podofo-build:tools - Build and install commandline tools.
 virtual/ssh:minimal - Prefer net-misc/dropbear over net-misc/openssh
 virtual/wine:staging - Enable Wine-Staging's Patchset
+virtual/wireguard:debug - Enable verbose debug reporting in dmesg of various WireGuard peer and device information.
+virtual/wireguard:module - Compile the actual WireGuard kernel module. Most certainly you want this enabled, unless you're doing something strange.
+virtual/wireguard:module-src - Install the module source code to /usr/src, in case you like building kernel modules yourself.
+virtual/wireguard:tools - Compile the wg(8) tool and related helpers. You probably want this enabled.
 www-apache/mod_backtrace:unwind - Use sys-libs/libunwind to provide better resolution of function names.
 www-apache/mod_extract_forwarded:mod-proxy - Enable support for Apache's internal proxy
 www-apache/mod_musicindex:archive - Add archive support
