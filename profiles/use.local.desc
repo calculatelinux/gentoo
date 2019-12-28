@@ -7063,6 +7063,7 @@ net-vpn/vpnc:resolvconf - Enable support for DNS managing framework net-dns/open
 net-vpn/wireguard-modules:debug - Enable verbose debug reporting in dmesg of various WireGuard peer and device information.
 net-vpn/wireguard-modules:module - Compile the actual WireGuard kernel module. Most certainly you want this enabled, unless you're doing something strange.
 net-vpn/wireguard-modules:module-src - Install the module source code to /usr/src, in case you like building kernel modules yourself.
+net-vpn/wireguard-tools:wg-quick - Install the wg-quick(8) helper tool. Most users want to use this.
 net-wireless/aircrack-ng:airdrop-ng - Build airdrop-ng
 net-wireless/aircrack-ng:airgraph-ng - Build airgraph-ng
 net-wireless/aircrack-ng:experimental - Build the "experimental" tools which may randomly fail to run properly
@@ -7560,6 +7561,7 @@ sci-libs/superlu_mt:int64 - Build the 64 bits integer library
 sci-libs/symengine:arb - Add support for arb (sci-mathematics/arb)
 sci-libs/symengine:benchmarks - Build benchmarks
 sci-libs/symengine:boost - Add support for boost integers(dev-libs/boost)
+sci-libs/symengine:ecm - Add support for ECM integer factorization library (sci-mathematics/gmp-ecm)
 sci-libs/symengine:flint - Add support for (sci-mathematics/flint)
 sci-libs/symengine:llvm - Build with LLVM
 sci-libs/symengine:mpc - Add support for multiprecision complex arithmetic(dev-libs/mpc)
@@ -8671,9 +8673,7 @@ virtual/podofo-build:boost - Add support for boost
 virtual/podofo-build:tools - Build and install commandline tools.
 virtual/ssh:minimal - Prefer net-misc/dropbear over net-misc/openssh
 virtual/wine:staging - Enable Wine-Staging's Patchset
-virtual/wireguard:debug - Enable verbose debug reporting in dmesg of various WireGuard peer and device information.
 virtual/wireguard:module - Compile the actual WireGuard kernel module. Most certainly you want this enabled, unless you're doing something strange.
-virtual/wireguard:module-src - Install the module source code to /usr/src, in case you like building kernel modules yourself.
 virtual/wireguard:tools - Compile the wg(8) tool and related helpers. You probably want this enabled.
 www-apache/mod_backtrace:unwind - Use sys-libs/libunwind to provide better resolution of function names.
 www-apache/mod_extract_forwarded:mod-proxy - Enable support for Apache's internal proxy
@@ -8947,6 +8947,7 @@ x11-libs/cairo:opengl - Build the OpenGL backend
 x11-libs/cairo:utils - Build support for Cairo script and trace utilities
 x11-libs/cairo:valgrind - Built-in support to mark memory regions
 x11-libs/fltk:games - Builds and installs some extra games
+x11-libs/fox:tools - Install adie, calculator, shutterbug, and pathfinder apps.
 x11-libs/gdk-pixbuf:X - Build and install the legacy gdk_pixbuf_xlib-2.0 library
 x11-libs/gtk+:broadway - Enable the GDK Broadway backend.
 x11-libs/gtk+:cloudprint - Enable printing via Google Cloud Print.
