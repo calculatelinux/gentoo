@@ -792,10 +792,11 @@ app-i18n/im-chooser:xfce - Enable support for XFCE panel
 app-i18n/imsettings:gconf - Enable support for gnome-base/gconf
 app-i18n/imsettings:gtk2 - Build with x11-libs/gtk+:2 instead of x11-libs/gtk+:3
 app-i18n/imsettings:xfconf - Enable support for xfce-base/xfconf
+app-i18n/librime:debug - Enable debugging (including logging of input of RIME input methods)
 app-i18n/mozc:fcitx4 - Enable support for app-i18n/fcitx 4
 app-i18n/mozc:gui - Install graphical user interface tool (mozc_tool)
-app-i18n/mozc:handwriting-tegaki - Use handwriting recognition model from app-i18n/tegaki-zinnia-japanese
-app-i18n/mozc:handwriting-tomoe - Use handwriting recognition model from app-i18n/zinnia-tomoe
+app-i18n/mozc:handwriting-tegaki - Use handwriting recognition model from app-i18n/tegaki-zinnia-japanese by default
+app-i18n/mozc:handwriting-tomoe - Use handwriting recognition model from app-i18n/zinnia-tomoe by default
 app-i18n/mozc:ibus - Enable support for app-i18n/ibus
 app-i18n/mozc:renderer - Enable native candidate window
 app-i18n/pyzy:boost - Enable support for dev-libs/boost
@@ -1994,8 +1995,10 @@ dev-lang/ruby:rdoc - Install dev-ruby/rdoc after installing Ruby.
 dev-lang/ruby:rubytests - Install ruby tests that can only be run after ruby is installed
 dev-lang/rust:clippy - Install clippy component
 dev-lang/rust:nightly - Enable nightly (UNSTABLE) features
+dev-lang/rust:parallel-compiler - Build a multi-threaded rustc
 dev-lang/rust:rls - Install rls component
 dev-lang/rust:rustfmt - Install rustfmt component
+dev-lang/rust:system-bootstrap - Bootstrap using installed rust compiler
 dev-lang/rust:system-llvm - Use the system LLVM install
 dev-lang/rust:wasm - Build support for the wasm32-unknown-unknown target
 dev-lang/rust-bin:clippy - Install clippy component
@@ -2612,12 +2615,8 @@ dev-python/pyocr:cuneiform - Enable support for the app-text/cuneiform OCR engin
 dev-python/pyocr:tesseract - Enable support for the app-text/tesseract OCR engine
 dev-python/pypax:ptpax - Enable PT_PAX_FLAGS support.
 dev-python/pypax:xtpax - Enable XATTR_PAX_FLAGS support.
-dev-python/pypy:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
-dev-python/pypy:sandbox - Enable sandboxing functionality
 dev-python/pypy-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
 dev-python/pypy-exe:sandbox - Enable sandboxing functionality
-dev-python/pypy3:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
-dev-python/pypy3:sandbox - Enable sandboxing functionality
 dev-python/pypy3-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
 dev-python/pypy3-exe:sandbox - Enable sandboxing functionality
 dev-python/python-mpd:twisted - Enable twisted support
@@ -6242,6 +6241,8 @@ net-libs/webkit-gtk:coverage - Enable code coverage support
 net-libs/webkit-gtk:egl - Enable EGL support
 net-libs/webkit-gtk:geolocation - Enable geolocation support through app-misc/geoclue
 net-libs/webkit-gtk:gles2 - Enable GLESv2 support
+net-libs/webkit-gtk:gles2-only - Use GLES 2.0 or later instead of full OpenGL
+net-libs/webkit-gtk:jumbo-build - Combine source files to speed up build process
 net-libs/webkit-gtk:nsplugin - Enable full nsplugin support (GTK2 plugins)
 net-libs/webkit-gtk:webgl - Build support for the WebGL HTML API using virtual/opengl
 net-libs/wvstreams:boost - Use dev-libs/boost to provide TR1-compatible functional interface. This USE flag is only needed with GCC earlier than version 4.1, or with other compilares not providing said interface.
@@ -7610,6 +7611,9 @@ sci-mathematics/cvc4:cln - Use sci-libs/cln
 sci-mathematics/cvc4:proofs - Support for proof generation
 sci-mathematics/cvc4:replay - Turn on the replay feature
 sci-mathematics/cvc4:statistics - Include statistics
+sci-mathematics/eclib:boost - Add parallel capabilities using dev-libs/boost.
+sci-mathematics/eclib:flint - Enable the use of sci-mathematics/flint for certain operations.
+sci-mathematics/eclib:minimal - Build only the "mwrank" program.
 sci-mathematics/flint:gc - Enable garbage collection support via dev-libs/boehm-gc
 sci-mathematics/flint:ntl - Build NTL interface
 sci-mathematics/form:devref - Build and install developers reference
@@ -7947,7 +7951,6 @@ sys-apps/pcsc-lite:libusb - Use dev-libs/libusb detection to hotplug new smartca
 sys-apps/pcsc-lite:policykit - Uses sys-auth/polkit to restrict access to smartcard readers or smartcars to given users.
 sys-apps/pcsc-lite:udev - Use sys-fs/udev rules to handle devices' permissions and hotplug support. Unless you know what you're doing do not disable this flag on Linux kernels. This is provided as an option for completeness.
 sys-apps/pcsc-tools:network-cron - Monthly cronjob the update-smartcard_list script
-sys-apps/pkgcore:doc - Build and install API docs.
 sys-apps/policycoreutils:audit - Enable support for sys-process/audit and use the audit_* functions (like audit_getuid instead of getuid())
 sys-apps/portage:epydoc - Build html API documentation with epydoc.
 sys-apps/portage:gentoo-dev - Enable features required for Gentoo ebuild development.
@@ -8873,7 +8876,7 @@ www-servers/tomcat:websockets - Builds websockets api and implementation (requir
 www-servers/uwsgi:embedded - Embed plugins instead of building them as real plugins. When disabling this USE flag make sure you specify all used plugins in your uWSGI configuration. Note: Language plugins will always be built as real plugins.
 www-servers/uwsgi:go - Build the gccgo plugin to run Go applications.
 www-servers/uwsgi:json - Support json as a configuration file format.
-www-servers/uwsgi:pypy - Build the pypy plugin to run your code using virtual/pypy.
+www-servers/uwsgi:pypy - Build the pypy plugin to run your code using dev-python/pypy.
 www-servers/uwsgi:python_asyncio - Use the EXPERIMENTAL asyncio (tulip) for python3.4 async request dispatching and as LoopEngine (see http://uwsgi-docs.readthedocs.org/en/latest/asyncio.html).
 www-servers/uwsgi:python_gevent - Use dev-python/gevent for async request dispatching and as LoopEngine (see http://projects.unbit.it/uwsgi/wiki/Gevent).
 www-servers/uwsgi:routing - Enable routing support
