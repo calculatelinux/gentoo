@@ -6,6 +6,10 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# James Le Cuirot <chewi@gentoo.org> (2020-01-01)
+# Debug is currently broken with ncurses[tinfo]. See bug #701688.
+games-emulation/dosbox debug
+
 # Brian Evans <grknight@gentoo.org> (2019-12-19)
 # PHP 7.1 is end of life and has security issues Bug 703326
 # Associated packages are not ready for new versions tracked in bug 702110
@@ -78,11 +82,6 @@ sys-libs/libxcrypt system
 net-nds/openldap slp
 sys-block/open-iscsi slp
 sys-block/open-isns slp
-
-# Ben Kohler <bkohler@gentoo.org> (2019-10-03)
-# iwd backend for connman hasn't kept up with iwd releases/API, mask 
-# until it catches up.
-net-misc/connman iwd
 
 # Brian Evans <grknight@gentoo.org> (2019-10-01)
 # PHP support is broken with current version
