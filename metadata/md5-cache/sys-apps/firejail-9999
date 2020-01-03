@@ -11,4 +11,4 @@ RDEPEND=apparmor? ( sys-libs/libapparmor )
 RESTRICT=test
 SLOT=0
 _eclasses_=git-r3	7d6c351ee8b1feb12ed8c8b0adae088b
-_md5_=2abb7459c3a6f7a90ccbb88a6f359c93
+_md5_=5445cd36563e9ba68cc90b8ee5985430
