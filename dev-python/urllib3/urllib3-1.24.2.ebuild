@@ -3,7 +3,7 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python2_7 python3_{5,6,7,8} pypy{,3} )
+PYTHON_COMPAT=( python2_7 python3_{6,7,8} pypy3 )
 PYTHON_REQ_USE="ssl(+)"
 
 inherit distutils-r1
@@ -37,7 +37,9 @@ DEPEND="
 	)
 "
 
-distutils_enable_sphinx docs
+distutils_enable_sphinx docs \
+	dev-python/alabaster \
+	dev-python/mock
 
 python_prepare_all() {
 	# skip appengine tests

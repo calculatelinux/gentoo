@@ -5,7 +5,7 @@ EAPI=7
 
 CMAKE_MAKEFILE_GENERATOR="ninja"
 
-PYTHON_COMPAT=( python3_{5,6,7} )
+PYTHON_COMPAT=( python3_{6,7} )
 
 DISTUTILS_SINGLE_IMPL=1
 
@@ -318,7 +318,7 @@ src_install() {
 	for x in "${ED}"/usr/bin/gmx-completion-*.bash ; do
 		local n=${x##*/gmx-completion-}
 		n="${n%.bash}"
-		cat "${ED}"/usr/bin/gmx-completion.bash "$x" > "${T}/${n}" || die
+		cat "${ED}"/usr/bin/gmx-completion-gmx.bash "$x" > "${T}/${n}" || die
 		newbashcomp "${T}"/"${n}" "${n}"
 	done
 	rm "${ED}"/usr/bin/gmx-completion*.bash || die

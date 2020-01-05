@@ -32,6 +32,204 @@
 
 #--- END OF EXAMPLES ---
 
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# The Maintainer give up this projecet and
+# it is dead on upstream since ~2008
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 703900
+media-plugins/vdr-fepg
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# This plugin is dead on upstream
+# No HOMEPAGE and upstream SRC_URI
+# You could use as replacement for this plugin
+# media-plugins/vdr-devstatus
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 703962
+media-plugins/vdr-recstatus
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# This plugin is dead on upstream
+# request about the project status to upstream was 
+# not answered
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 703966
+media-plugins/vdr-zaphistory
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# This plugin is for an a very old version of
+# media-video/vdr
+# dead on upstream
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 703970
+media-plugins/vdr-wapd
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# No Homepage and upstream SRC_URI
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 703972
+media-plugins/vdr-nordlichtsepg
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# This plugin is for an a very old version of
+# media-video/vdr
+# No upstream available
+# No Homepage and SRC_URI
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 703974
+media-plugins/vdr-pilotskin
+
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# several open bugs on upstream, the oldest is from
+# ~2010, the latest is from ~2016
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 703990
+media-plugins/vdr-sudoku
+
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# there are several open bugs up from ~2010 on
+# upstream
+# request about the project status to upstream was 
+# not answered
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 704000
+media-plugins/vdr-pvrinput
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# this plugin is from ~2008 and depends on a very
+# old version of vdr
+# As there is no upstream email, it is not possible to
+# request for fixing this issues
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 704006
+media-plugins/vdr-lcr
+
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# This plugin needs a KDE kicker applet
+# We do not have this applet in the tree anymore
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 704008
+media-plugins/vdr-kvdrmon
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# Requested to upstream, pstream answered to this:
+# “vdr-infosatepg was useful many years ago. 
+# today it delivers only additional EPG 
+# for "Eurosport" channel.”
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 704010
+media-plugins/vdr-infosatepg
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# This plugin is from ~2004
+# An Upstream url and src_uri is not available
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 704014
+media-plugins/vdr-extb
+
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# this plugin is from ~2005 and depends 
+# on a very old version of vdr
+# No upstream is available 
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 704016
+media-plugins/vdr-decruft
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# The last commit on upstream is from ~2012
+# request about the project status to upstream was 
+# not answered
+# https://projects.vdr-developer.org/issues/2597
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 704018
+media-plugins/vdr-chanman
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# this plugin is from ~2008 and depends 
+# on a very old version of vdr
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 704028
+media-plugins/vdr-spider
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# The last commit on upstream is from ~2012
+# upstream has several open bugs on ffmpeg/libav depends
+# request about the project status to upstream was 
+# not answered
+# https://projects.vdr-developer.org/issues/2596
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 704034
+media-plugins/vdr-osdpip
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
+# plugin is broken by update to
+# media-video/vdr-2.4.x
+# Last commmit on upstream is from ~2008
+# The plugin function is still available in the core vdr
+# No packages have a reverse RDEPEND on it
+# removal from tree ~4 Feb 2020
+# wrt bug 704050
+media-plugins/vdr-browse
+
+
+# Mike Gilbert <floppym@gentoo.org> (2020-01-04)
+# Un-fetchable distfile, bug 704782.
+# No maintainer.
+# Removal in 30 days.
+net-misc/chrome-remote-desktop
+
 # Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-03)
 # package is broken by all version of imagemagick
 # several open bugs on upstream
@@ -39,6 +237,7 @@
 # wrt bug 314315
 # removal ~2020-01-31
 media-plugins/vdr-skinenigmang
+x11-themes/skinenigmang-logos
 
 # Jonas Stein <jstein@gentoo.org> (2019-12-30)
 # Package masked for removal. Broken SRC_URI, 
@@ -506,196 +705,6 @@ sci-astronomy/casacore
 # already.  Needs a version bump, at the very least.
 # Removal in 30 days.  Bug #602024.
 app-laptop/nvidiabl
-
-# Michał Górny <mgorny@gentoo.org> (2019-12-05)
-# Unmaintained since 2016.  Last touched in 2018.  Pending bump since
-# Feb 2019.  Does not build anymore.
-# Removal in 30 days.  Bug #695580.
-net-wireless/ndiswrapper
-
-# Aaron Bauman <bman@gentoo.org> (2019-12-04)
-# These are (mostly) leaf packages with only py2.7
-# Please review commit msg. Removal in 30 days
-# THIS MASK HAS BEEN CONFIRMED BY THE QA TEAM VIA
-# MAJORITY VOTE. YOU CAN REMOVE SINGLE PACKAGES
-# IF YOU PERSONALLY STEP IN TO MAINTAIN THEM (AND
-# ADD YOURSELF TO THEIR METADATA).
-app-misc/hachoir-subfile
-app-misc/yworklog
-app-text/pdfshuffler
-dev-python/anyvc
-dev-python/asciitree
-dev-python/beanstalkc
-dev-python/bicyclerepair
-dev-python/buzhug
-dev-python/cement
-dev-python/cherrytemplate
-dev-python/clientcookie
-dev-python/dib-utils
-dev-python/dirq
-dev-python/disqus-python
-dev-python/figleaf
-dev-python/flask-dashed
-dev-python/foolscap
-dev-python/gdmodule
-dev-python/graphy
-dev-python/guppy
-dev-python/hachoir-regex
-dev-python/happydoc
-dev-python/hcluster
-dev-python/hcs-utils
-dev-python/hp3parclient
-dev-python/htmlgen
-dev-python/inotifyx
-dev-python/irman-python
-dev-python/jonpy
-dev-python/keyczar
-dev-python/keyrings_alt
-dev-python/libextractor-python
-dev-python/libiscsi-python
-dev-python/libnatpmp
-dev-python/log4py
-dev-python/louie
-dev-python/lp_solve
-dev-python/lupy
-dev-python/m2secret
-dev-python/mwlib-ext
-dev-python/newt_syrup
-dev-python/numdisplay
-dev-python/optcomplete
-dev-python/piddle
-dev-python/pp
-dev-python/pyamf
-dev-python/pyao
-dev-python/pycdf
-dev-python/pychef
-dev-python/pyclamav
-dev-python/pycryptopp
-dev-python/pydvdread
-dev-python/pyelemental
-dev-python/pyifp
-dev-python/pykota
-dev-python/pylibpcap
-dev-python/pyml
-dev-python/pynag
-dev-python/pyndex
-dev-python/py-notify
-dev-python/pyoembed
-dev-python/pyPdf
-dev-python/pyrax
-dev-python/py-smbpasswd
-dev-python/pystatgrab
-dev-python/python-caja
-dev-python/python-catcher
-dev-python/python-cdb
-dev-python/python-exconsole
-dev-python/python-fastcgi
-dev-python/python-mhash
-dev-python/python-oembed
-dev-python/python-pam
-dev-python/python-pluginloader
-dev-python/pyvtk
-dev-python/PyZilla
-dev-python/qserve
-dev-python/RecSQL
-dev-python/rlcompleter2
-dev-python/ropeide
-dev-python/ropemacs
-dev-python/sancho
-dev-python/sclapp
-dev-python/simplesettings
-dev-python/slowaes
-dev-python/snakefood
-dev-python/sphinxcontrib-ditaa
-dev-python/sqlitecachec
-dev-python/stripogram
-dev-python/sudsds
-dev-python/superlance
-dev-python/supervisor-quick
-dev-python/telarchive
-dev-python/tgmochikit
-dev-python/ttfquery
-dev-python/turbolift
-dev-python/ushlex
-dev-python/vatnumber
-dev-python/weberror
-dev-python/webhelpers
-dev-python/webpy
-dev-python/workerpool
-dev-util/Orange
-dev-vcs/hg-fast-export
-dev-vcs/rabbitvcs
-net-analyzer/namebench
-net-fs/tahoe-lafs
-net-misc/irrtree
-net-misc/pycnb
-net-p2p/pybitmessage
-net-print/pykota
-www-apps/blohg-tumblelog
-x11-misc/magick-rotation
-
-# Miroslav Šulc <fordfrog@gentoo.org> (2019-12-03)
-# Project does not exist anymore.
-# Removal in 30 days.  Bug #680452.
-dev-java/balloontip
-
-# Michał Górny <mgorny@gentoo.org> (2019-12-01)
-# Added in 2013 and not updated since.  Unmaintained upstream since
-# inception.  Never had any keywords.
-# Removal in 30 days.  Bug #701462.
-net-dns/pdns-ldap-backend
-
-# Michał Górny <mgorny@gentoo.org> (2019-12-01)
-# Unmaintained.  Incorrect license and potential copyright infringement.
-# Removal in 30 days.  Bug #634332.
-games-misc/fortune-mod-powerpuff
-
-# Michał Górny <mgorny@gentoo.org> (2019-12-01)
-# Unmaintained.  No license and potential copyright infringement.
-# Removal in 30 days.  Bug #634318.
-games-misc/fortune-mod-smac
-
-# Michał Górny <mgorny@gentoo.org> (2019-12-01)
-# Not updated since 2009 and 2004 respectively.  Suspicious license.
-# Removal in 30 days.  Bugs #691084 and #701732.
-games-misc/fortune-mod-gentoo-dev
-games-misc/fortune-mod-gentoo-forums
-
-# Michał Górny <mgorny@gentoo.org> (2019-12-01)
-# The plugin is broken with multiple dependencies.  It is also dead
-# upstream.  Removing per maintainer's request.
-# Removal in 30 days.  Bug #314309.
-media-plugins/vdr-coverviewer
-media-plugins/vdr-music
-
-# Michał Górny <mgorny@gentoo.org> (2019-12-01)
-# Unresolved vulnerability.  Also apparently fails to build (#574048).
-# Removal in 30 days.  Bug #463338.
-sys-fabric/ibutils
-
-# Michał Górny <mgorny@gentoo.org> (2019-12-01)
-# Unmaintained.  Not bumped since 2015.
-# Removal in 30 days.  Bug #585126.
-www-servers/hiawatha
-www-apps/hiawatha-monitor
-
-# Michał Górny <mgorny@gentoo.org> (2019-12-01)
-# Unmaintained.  Last release in 2012.  Buggy ebuild.
-# Removal in 30 days.  Bug #658302.
-app-text/pdfshuffler
-
-# Michał Górny <mgorny@gentoo.org> (2019-12-01)
-# Not updated since 2015.  No reverse dependencies.
-# Removal in 30 days.  Bug #695392.
-dev-python/quixote
-
-# Matt Turner <mattst88@gentoo.org> (2019-12-01)
-# browserpass ebuild ported to go-modules, so these modules now have no reverse
-# dependencies.
-# Removal in 30 days. Bugs #683286, #683310, #687462, #700792
-=www-plugins/browserpass-3.0.6
-dev-go/zglob
-dev-go/logrus
 
 # Bernard Cafarelli <voyageur@gentoo.org> (2019-11-29)
 # Beta for new major version with initial Python 3 support

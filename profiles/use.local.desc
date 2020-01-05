@@ -2541,8 +2541,6 @@ dev-python/QtPy:testlib - Build bindings for the QtTest module
 dev-python/QtPy:webengine - Build bindings for the QtWebEngine module
 dev-python/QtPy:webkit - Build bindings for the QtWebKit module
 dev-python/amqplib:extras - Install extra tools to generate initial Python mod from an AMQP XML file
-dev-python/anyvc:bazaar - Add support for Bazaar
-dev-python/anyvc:mercurial - Add support for Mercurial
 dev-python/celery:redis - Enables redis support
 dev-python/celery:sqs - Enables Amazon SQS transport module for celery
 dev-python/celery:yaml - Enable support of yaml as a configuration file format
@@ -2653,7 +2651,6 @@ dev-python/twisted:http2 - include http2 support
 dev-python/twisted:serial - include serial port support
 dev-python/twisted-core:serial - include serial port support
 dev-python/urllib3:brotli - Enable support for brotli compression
-dev-python/vatnumber:vies - Enable VIES
 dev-python/ws4py:client - Install client modules
 dev-python/ws4py:server - Install server modules
 dev-python/wxpython:examples - Install interactive demo module browser and sample applets.
@@ -3035,6 +3032,7 @@ dev-util/sccache:s3 - Enable Amazon S3 support
 dev-util/schroot:btrfs - Enable support for chroots using btrfs snapshots
 dev-util/schroot:dchroot - Enables the building of a wrapper named "dchroot", replacing sys-apps/dchroot
 dev-util/schroot:lvm - Enable support for chroots using LVM snapshots
+dev-util/schroot:zfs - Enable support for chroots using ZFS shapshots/clones
 dev-util/spirv-llvm-translator:tools - Install the command-line translator llvm-spirv
 dev-util/strace:aio - Enable dev-libs/libaio support for tracing Asynchronous I/O operations
 dev-util/strace:elfutils - Enable stack backtraces (-k flag) via dev-libs/elfutils
@@ -3103,12 +3101,6 @@ dev-vcs/mercurial:bugzilla - Support bugzilla integration.
 dev-vcs/mercurial:chg - Support Mercurial command server client
 dev-vcs/mercurial:gpg - Support signing with GnuPG.
 dev-vcs/mercurial:tk - Install dev-lang/tk for hgk script.
-dev-vcs/rabbitvcs:caja - Enable extension for mate-base/caja
-dev-vcs/rabbitvcs:cli - Eanble console based frontend
-dev-vcs/rabbitvcs:diff - Use for diff command dev-util/meld
-dev-vcs/rabbitvcs:gedit - Enable plugin for app-editors/gedit
-dev-vcs/rabbitvcs:nautilus - Enable extension for gnome-base/nautilus
-dev-vcs/rabbitvcs:thunar - Enable extension for xfce-base/thunar
 dev-vcs/subversion:ctypes-python - Build and install Ctypes Python bindings
 dev-vcs/subversion:dso - Enable runtime module search
 dev-vcs/subversion:extras - Install extra scripts (examples, tools, hooks)
@@ -4121,6 +4113,7 @@ media-gfx/gimp:vector-icons - Enable support for vector icons (experimental)
 media-gfx/gmic:cli - Build CLI interface
 media-gfx/gmic:krita - Build media-gfx/krita plugin
 media-gfx/gmic:opencv - Enable support for webcams using the OpenCV library
+media-gfx/gnofract4d:doc - Install user manual
 media-gfx/gnome-photos:flickr - Ensure runtime Flickr support
 media-gfx/graphicsmagick:fpx - Enable FlashPix support with media-libs/libfpx
 media-gfx/graphicsmagick:modules - Compile graphicsmagick with dynamically loadable modules
@@ -4146,6 +4139,7 @@ media-gfx/imagemagick:pango - Enable Pango support using x11-libs/pango
 media-gfx/imagemagick:q32 - Set quantum depth value to 32
 media-gfx/imagemagick:q8 - Set quantum depth value to 8
 media-gfx/imv:freeimage - Use media-libs/freeimage as image library
+media-gfx/imv:libnsgif - Use media-libs/libnsgif as image library
 media-gfx/inkscape:cdr - Enable support for CorelDRAW Diagrams via media-libs/libcdr
 media-gfx/inkscape:dia - pull in app-office/dia for dia import extension
 media-gfx/inkscape:inkjar - Enable support for OpenOffice.org SVG jar files
@@ -6035,7 +6029,6 @@ net-irc/quassel:crypt - Support core->network per-channel and per-query blowfish
 net-irc/quassel:dbus - Support desktop notifications via the StatusNotifier D-Bus service (used by most modern desktop environments).
 net-irc/quassel:monolithic - Build standalone client with integrated core, no external quasselcore needed. Only useful if you don't want to use Quassel's client/server model. The server and X flags are not needed in this case but it is possible to enable them too.
 net-irc/quassel:oxygen - Support the Oxygen icon set that was the default for KDE4.
-net-irc/quassel:phonon - Build client with phonon backend support. This enables sound playback in client.
 net-irc/quassel:server - Build the server binary. If this USE flag is disabled, the 'core' server binary for quassel is not built, and cannot be used. You need this enabled on the server, but you might want to disable it on the client.
 net-irc/quassel:snorenotify - Support for Snore notification framework.
 net-irc/quassel:urlpreview - Use QtWebEngine rendering engine for showing URL thumbnails.
@@ -6861,8 +6854,6 @@ net-p2p/mldonkey:bittorrent - enable bittorrent support
 net-p2p/mldonkey:fasttrack - enable fasttrack support
 net-p2p/mldonkey:gnutella - enable gnutella and gnutella2 support
 net-p2p/mldonkey:guionly - enable client build only
-net-p2p/pybitmessage:opencl - Enable dev-python/pyopencl for GPU acceleration
-net-p2p/pybitmessage:qrcode - Enable dev-python/qrcode for QR code support
 net-p2p/qbittorrent:webui - Enable the Web UI
 net-p2p/resilio-sync:pax_kernel - Use paxctl to mark binaries
 net-p2p/retroshare:cli - Enables the CLI version of RetroShare
@@ -8832,13 +8823,6 @@ www-servers/civetweb:server - Build standalone server
 www-servers/fnord:auth - Enable HTTP authentication support
 www-servers/gatling:diet - Compile against dev-libs/dietlibc
 www-servers/h2o:mruby - Enable support for mruby
-www-servers/hiawatha:cache - Enable caching of content
-www-servers/hiawatha:monitor - Pull in www-apps/hiawatha-monitor
-www-servers/hiawatha:rewrite - Enable the rewrite toolkit
-www-servers/hiawatha:rproxy - Enable reverse proxy support
-www-servers/hiawatha:ssl - Enable TLS support via net-libs/mbedtls
-www-servers/hiawatha:tomahawk - Enable Tomahawk control server
-www-servers/hiawatha:xslt - Enable XSLT support. This is also needed for directory listings
 www-servers/lighttpd:libev - Enable fdevent handler
 www-servers/lighttpd:mmap - Use mmap with files owned by lighttpd. This is a dangerous option as it may allow local users to trigger SIGBUS crashes.
 www-servers/lighttpd:rrdtool - Enable rrdtool support via mod_rrdtool
