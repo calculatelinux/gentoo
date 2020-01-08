@@ -32,6 +32,53 @@
 
 #--- END OF EXAMPLES ---
 
+# Ulrich Müller <ulm@gentoo.org> (2020-01-07)
+# No upstream SRC_URI. No license, so it cannot be mirrored.
+# Masked for removal in 30 days. Bug #702936.
+media-fonts/nepali-fonts
+
+# Ulrich Müller <ulm@gentoo.org> (2020-01-06)
+# No license, therefore we have no permission to redistribute
+# these packages on Gentoo mirrors. Distfiles are unversioned
+# zipballs, which are updated in place when a new version is
+# released. Since this will break digests, mirror restriction
+# is not feasible.
+# Masked for removal in 30 days. Bug #703604.
+app-dicts/sword-ab
+app-dicts/sword-abs_essay_goodsam_swb
+app-dicts/sword-br_en
+app-dicts/sword-bulcarigradnt
+app-dicts/sword-bwe
+app-dicts/sword-chincvs
+app-dicts/sword-chincvt
+app-dicts/sword-chiun
+app-dicts/sword-chiuns
+app-dicts/sword-czecep
+app-dicts/sword-czekms
+app-dicts/sword-czenkb
+app-dicts/sword-dbd
+app-dicts/sword-emtv
+app-dicts/sword-est
+app-dicts/sword-family
+app-dicts/sword-finpr92
+app-dicts/sword-frecrl
+app-dicts/sword-geneva
+app-dicts/sword-hebmodern
+app-dicts/sword-hunuj
+app-dicts/sword-icelandic
+app-dicts/sword-kekchi
+app-dicts/sword-korean
+app-dicts/sword-la_en
+app-dicts/sword-latvian
+app-dicts/sword-maori
+app-dicts/sword-romcor
+app-dicts/sword-umgreek
+app-dicts/sword-xhosa
+
+# Ulrich Müller <ulm@gentoo.org> (2020-01-06)
+# Snapshots from Git, masked for testing.
+=app-editors/emacs-27.0.50_pre*
+
 # Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-04)
 # plugin is broken by update to
 # media-video/vdr-2.4.x
@@ -690,16 +737,6 @@ sci-mathematics/factmsieve
 # has QA issues, bug #598840. Removal in 30 days.
 sci-mathematics/xmds
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2019-12-07)
-# Runtime errors/segfaults, ancient, unmaintained, depends on py27.
-# Bug 590986, removal in 30 days.
-x11-misc/calise
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2019-12-07)
-# Fails to build against dev-libs/boost-1.71.0, depends on py27.
-# Bug 624222, removal in 30 days.
-sci-astronomy/casacore
-
 # Michał Górny <mgorny@gentoo.org> (2019-12-05)
 # Last maintainer activity in 2016.  Does not build for quite some time
 # already.  Needs a version bump, at the very least.
@@ -715,12 +752,6 @@ app-laptop/nvidiabl
 # Bug #537786.
 # Removal after 2020-01-01
 net-wireless/bcm43xx-fwcutter
-
-# Sergei Trofimovich <slyfox@gentoo.org> (2019-11-25)
-# Mask for removal from main tree into ::nix-guix overlay.
-# Removal in 30 days.
-sys-apps/nix
-sys-apps/guix
 
 # Lars Wendler <polynomial-c@gentoo.org> (2019-11-14)
 # Breaks archives containing relative paths

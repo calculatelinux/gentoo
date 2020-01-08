@@ -77,6 +77,7 @@ app-admin/hddtemp:network-cron - Monthly cronjob to update hddtemp.db.
 app-admin/keepass:aot - Generate native code at build time, rather than runtime.
 app-admin/keepassxc:autotype - Add support to autotype the passwords into other applications
 app-admin/keepassxc:browser - Enables browser plugin support
+app-admin/keepassxc:ccache - Use dev-util/ccache to build keepassxc
 app-admin/keepassxc:keeshare - Enable KeeShare sharing integration
 app-admin/keepassxc:network - Enable network support
 app-admin/keepassxc:yubikey - Enable database unlocking via YubiKey.
@@ -1539,7 +1540,6 @@ dev-games/ogre:mobile - Build for OpenGL ES 2.0 only and use the mobile variants
 dev-games/ogre:ois - Pull in Object-oriented Input System library dev-games/ois for samples
 dev-games/ogre:poco - When USE=threads, use poco for threading
 dev-games/ogre:resman-pedantic - Resource Manager PEDANTIC : require an explicit resource group. Case sensitive lookup. Some demos might not work with this setting. (default: case-insensitive + sensitive lookup in all groups)
-dev-games/ogre:resman-strict - Resource Manager STRICT : search in default group if not specified otherwise. Case sensitive lookup. Some demos might not work with this setting. (default: case-insensitive + sensitive lookup in all groups)
 dev-games/ogre:tbb - When USE=threads, use tbb for threading
 dev-games/ogre:tools - Build and install helper tools
 dev-games/openscenegraph:asio - Enable support for dev-cpp/asio library
@@ -3265,8 +3265,10 @@ games-fps/eduke32:tools - Install the support tools for mapster32.
 games-fps/eduke32:voxels - Install the Duke Nukem 3D Voxels Pack.
 games-fps/eduke32:vpx - Enable support for media-libs/libvpx.
 games-fps/eduke32:xmp - Enable support for media-libs/exempi.
+games-fps/gzdoom:fluidsynth - Enable support for MIDI via media-sound/fluidsynth
 games-fps/gzdoom:gtk2 - Enable support for GTK+2 instead of GTK+3
-games-fps/gzdoom:nonfree - Enable non-free components
+games-fps/gzdoom:mpg123 - Enable support for MPEG audio playback via media-sound/mpg123
+games-fps/gzdoom:non-free - Enable non-free components
 games-fps/nexuiz:maps - Install the community map pack
 games-fps/prboom-plus:dumb - Enable support for various tracker-style music formats via media-libs/dumb
 games-fps/prboom-plus:fluidsynth - Enable support for MIDI via media-sound/fluidsynth
@@ -6783,11 +6785,6 @@ net-nds/rpcbind:remotecalls - Enable remote calls
 net-nds/rpcbind:warmstarts - Enables rpcbind to cache configuration for warm restarts
 net-nds/tac_plus:finger - Adds support for checking user counts via fingering the NAS
 net-nds/tac_plus:maxsess - Enforce a limit on maximum sessions per user
-net-news/liferea:gnome-keyring - Enable support for Libsecret Support plugin that allows Liferea to use app-crypt/libsecret as password store
-net-news/liferea:mediaplayer - Enable support for Media Player plugin that allows to play music and videos directly from Liferea
-net-news/liferea:networkmanager - Use NetworkManager to monitor nerwork status
-net-news/liferea:notification - Enable support for Popup Notifications plugin that display popups informing about new updates
-net-news/liferea:tray - Enable support for Tray Icon (GNOME Classic) plugin that display a small system tray icon to hide/unhide Liferea
 net-news/rssguard:webengine - Use dev-qt/qtwebengine for embedded web browser
 net-nntp/nzbget:parcheck - Enable support for checking PAR archives
 net-nntp/sabnzbd:7za - Add support for extracting 7za files
@@ -7189,8 +7186,6 @@ net-wireless/yatebts:bladerf - Build bladeRF transceiver
 net-wireless/yatebts:rad1 - Build RAD1 transceiver
 net-wireless/yatebts:uhd - Build UHD transceiver
 net-wireless/yatebts:usrp1 - Build USRP1 transceiver
-sci-astronomy/casacore:c++11 - Build casacore using the C++11 standard
-sci-astronomy/casacore:data - Installs measures and data (pulls sci-astronomy/casa-data)
 sci-astronomy/cpl:gasgano - Enable support for sci-astronomy/gasgano file organizer
 sci-astronomy/esomidas:libtirpc - Build against net-libs/libtirpc for RPC support
 sci-astronomy/healpix:idl - Install healpix IDL/GDL routines
@@ -7921,10 +7916,6 @@ sys-apps/net-tools:arp - build the arp and rarp tools (for manipulating the ARP 
 sys-apps/net-tools:hostname - build the hostname and dnsdomainname tools
 sys-apps/net-tools:plipconfig - build the plipconfig tool (for working with old PLIP hardware)
 sys-apps/net-tools:slattach - build the slattach tool (for working with old serial ports)
-sys-apps/nix:etc-profile - Install /etc/profile.d/ entry to inject nix support for all users.
-sys-apps/nix:gc - Enable garbage collection in the Nix expression evaluator (use dev-libs/boehm-gc).
-sys-apps/nix:s3 - Enable Amazon S3 bucket to load and store packages (use dev-libs/aws-sdk-cpp).
-sys-apps/nix:sodium - Use dev-libs/libsodium for cryptography
 sys-apps/nvme-cli:uuid - UUID support
 sys-apps/openrc:bash - enable the use of bash in service scripts (experimental)
 sys-apps/openrc:netifrc - enable Gentoo's network stack (net.* scripts)
@@ -7986,7 +7977,6 @@ sys-apps/systemd:gnuefi - Enable EFI boot manager and stub loader (built using s
 sys-apps/systemd:http - Enable embedded HTTP server in journald
 sys-apps/systemd:importd - Enable import daemon
 sys-apps/systemd:kmod - Enable kernel module loading via sys-apps/kmod
-sys-apps/systemd:libidn2 - If IDN support is enabled, use net-dns/libidn2 instead of net-dns/libidn
 sys-apps/systemd:lz4 - Enable lz4 compression for the journal
 sys-apps/systemd:nat - Enable support for network address translation in networkd
 sys-apps/systemd:qrcode - Enable qrcode output support in journal
