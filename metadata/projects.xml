@@ -729,12 +729,6 @@
     </member>
   </project>
   <project>
-    <email>crypto@gentoo.org</email>
-    <name>Crypto</name>
-    <url>https://wiki.gentoo.org/wiki/Project:Crypto</url>
-    <description>Project for maintaining crypto related packages</description>
-  </project>
-  <project>
     <email>deb-tools@gentoo.org</email>
     <name>Debian Tools Project</name>
     <url>https://wiki.gentoo.org/wiki/Project:Debian_Tools</url>
@@ -1226,11 +1220,6 @@
       <name>Stefan Strogin</name>
       <role>Member ( general )</role>
     </member>
-    <member>
-      <email>vapier@gentoo.org</email>
-      <name>Mike Frysinger</name>
-      <role>Member ( general )</role>
-    </member>
   </project>
   <project>
     <email>genkernel@gentoo.org</email>
@@ -1712,7 +1701,7 @@
     <member is-lead="1">
       <email>alicef@gentoo.org</email>
       <name>Alice Ferrazzi</name>
-      <role>Leader (Kernel, gentoo-sources, genpatches)</role>
+      <role>Leader (Kernel, gentoo-sources, genpatches, rt-sources)</role>
     </member>
     <member>
       <email>blueness@gentoo.org</email>
@@ -3723,6 +3712,11 @@
     <name>VDR project</name>
     <url>https://wiki.gentoo.org/wiki/Project:VDR</url>
     <description>The VDR Project maintains and updates the VDR packages in the portage tree. It integrates them with Gentoo as tight as possible. VDR is the abbreviation for Video Disk Recorder.</description>
+    <member>
+      <email>hd_brummy@gentoo.org</email>
+      <name>Joerg Bornkessel</name>
+      <role>Member</role>
+    </member>
     <member>
       <email>idl0r@gentoo.org</email>
       <name>Christian Ruppert</name>
