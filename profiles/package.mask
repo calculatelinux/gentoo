@@ -32,6 +32,52 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-01-12)
+# libcxxrt is no longer maintained upstream.  It used to be needed to
+# maintain ABI in Gentoo/FreeBSD but that is no longer supported.  Plus,
+# FreeBSD maintains their own fork anyway.  sys-libs/libcxxabi (from
+# LLVM upstream) is the suggested replacement (but it's not ABI
+# compatible!).
+# Removal in 30 days.  Bug #705268.
+sys-libs/libcxxrt
+
+# Michał Górny <mgorny@gentoo.org> (2020-01-12)
+# Backport to Python 2.4 - 2.6.  Not needed by anything.
+# Removal in 30 days.  Bug #705256.
+dev-python/ordereddict
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-01-12)
+# Unmaintained upstream and redundant. Use media-sound/audex instead.
+# Removal in 30 days.
+media-sound/kaudiocreator
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-01-12)
+# Unmaintained upstream and redundant. Use Night Color functionality built into
+# Plasma 5.17 instead, without needing x11-misc/redshift. Removal in 30 days.
+kde-misc/plasma-redshift-control
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-01-12)
+# Merged into dev-util/kdevelop months ago, unusable standalone
+# Removal in 10 days.
+dev-util/kdevelop-clang-tidy
+
+# Anthony G. Basile <blueness@gentoo.org> (2020-01-11)
+# Awaiting a fix from upstream, bug #705038
+=net-libs/mbedtls-2.18.1
+=net-libs/mbedtls-2.19.1
+
+# Mart Raudsepp <leio@gentoo.org> (2020-01-11)
+# End of life vala:0.42 series, please depclean.
+# This message shall be kept until 2020-02-11.
+dev-lang/vala:0.42
+
+# Mart Raudsepp <leio@gentoo.org> (2020-01-11)
+# Upstream considers this too broken to the point of thinking to
+# even deleting the tarballs and downgrading in pip.
+# https://github.com/mesonbuild/meson/issues/6442
+# https://bugs.gentoo.org/705144
+=dev-util/meson-0.53.0
+
 # Göktürk Yüksek <gokturk@gentoo.org> (2020-01-08)
 # Declared deprecated by upstream and is no longer being maintained.
 # Use app-crypt/yubikey-manager[,-qt] to configure a Yubikey device
@@ -486,42 +532,6 @@ dev-util/suse-build
 #There is no HOMAPAGE and SRC_URI available.
 #Package will be removed on ~15 Jan 2020.
 media-plugins/vdr-console
-
-# Aaron Bauman <bman@gentoo.org> (2019-12-13)
-# These are (mostly) leaf packages with only py2.7
-# Please review commit msg. Removal in 30 days
-dev-python/arrayterator
-dev-python/bjoern
-dev-python/carrot
-dev-python/cfgparse
-dev-python/dbutils
-dev-python/dingus
-dev-python/ed2551911
-dev-python/flask-evolution
-dev-python/fpconst
-dev-python/functest
-dev-python/librharris
-dev-python/mocker
-dev-python/pyamazon
-dev-python/pychart
-dev-python/pychecker
-dev-python/pyosd
-dev-python/pyptlib
-dev-python/pysctp
-dev-python/python-biggles
-dev-python/python-daap
-dev-python/python-digest
-dev-python/pyutmp
-dev-python/pyxenstore
-dev-python/py-xmlrpc
-dev-python/quixote
-dev-python/rackspace-monitoring-cli
-dev-python/reconfigure
-dev-python/sampy
-dev-python/shm
-dev-python/simples3
-dev-python/yolk
-dev-python/yolk-portage
 
 # Aaron Bauman <bman@gentoo.org> (2019-12-13)
 # Dead upstream. Fork is available as sci-electronics/drahnr-oregano

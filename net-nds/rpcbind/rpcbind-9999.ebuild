@@ -1,9 +1,9 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit systemd
+inherit flag-o-matic systemd
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://linux-nfs.org/~steved/rpcbind.git"
@@ -25,6 +25,8 @@ CDEPEND=">=net-libs/libtirpc-0.2.3:=
 	systemd? ( sys-apps/systemd:= )
 	tcpd? ( sys-apps/tcp-wrappers )"
 DEPEND="${CDEPEND}
+	net-libs/libnsl
+	sys-fs/quota[rpc]
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	selinux? ( sec-policy/selinux-rpcbind )"
@@ -45,6 +47,11 @@ src_configure() {
 		$(use_enable warmstarts)
 		$(use_enable tcpd libwrap)
 	)
+
+	# Allow configure to find /usr/include/rpc/rpc.h in rpcsvc/mount.h
+	# https://bugs.gentoo.org/665222
+	append-cppflags "$($(tc-getPKG_CONFIG) --cflags libtirpc)"
+
 	econf "${myeconfargs[@]}"
 }
 
