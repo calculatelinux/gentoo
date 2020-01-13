@@ -32,6 +32,49 @@
 
 #--- END OF EXAMPLES ---
 
+# Mikle Kolyada <zlogene@gentoo.org> (2020-0113)
+# Current versioning breaks portage logic and prevents
+# us from adding official releases made by google.
+# Please DOWNGRADE to dev-python/nototools-0_pre20200113
+=dev-python/nototools-20190320
+
+# Mike Gilbert <floppym@gentoo.org> (2020-01-12)
+# No upstream activity since 2014, no reverse deps.
+# Remove in 30 days.
+dev-python/transmissionrpc
+
+# Ulrich Müller <ulm@gentoo.org> (2020-01-12)
+# Runtime errors. Last upstream release in 2003. No license.
+# Masked for removal in 30 days. Bug #703548.
+games-board/cgoban2
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2020-01-12)
+# upstream has give up this project,
+# upstream is not interressted on any patches to fix this
+# If you really would like to stay on this plugin,
+# add a comment in this bug
+# wrt bug 704004
+# masked for removal ~12 Feb 2020
+media-plugins/vdr-mailbox
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-01-12)
+# Unmaintained upstream and redundant. Use kde-apps/kamera instead.
+# Only revdep of ancient media-libs/qimageblitz. Removal in 30 days.
+media-video/kamerka
+media-libs/qimageblitz
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-01-12)
+# Ancient, blocks x11-libs/gtkglext cleanup, open bug #649066
+# Masked for removal in 30 days.
+dev-cpp/gtkglextmm
+sci-misc/repsnapper
+
+# Michał Górny <mgorny@gentoo.org> (2020-01-12)
+# Python 2 only, depends on OpenStack which is Py3 now.  No release
+# since 2005.
+# Removal in 30 days.
+app-admin/supernova
+
 # Michał Górny <mgorny@gentoo.org> (2020-01-12)
 # libcxxrt is no longer maintained upstream.  It used to be needed to
 # maintain ABI in Gentoo/FreeBSD but that is no longer supported.  Plus,
@@ -115,7 +158,6 @@ app-dicts/sword-est
 app-dicts/sword-family
 app-dicts/sword-finpr92
 app-dicts/sword-frecrl
-app-dicts/sword-geneva
 app-dicts/sword-hebmodern
 app-dicts/sword-hunuj
 app-dicts/sword-icelandic
@@ -686,67 +728,6 @@ dev-db/clickhouse
 # No revdeps, py2 only, needs version bump, practically unmaintained
 # in Gentoo. Removal in 30 days.
 sci-chemistry/pymol-plugins-psico
-
-# Michał Górny <mgorny@gentoo.org> (2019-12-08)
-# Not touched by maintainer since mid-2018.  Fails to build with gcc-9.
-# Requires llvm:6 (which is being removed).  Pending version bump.
-# Removal in 30 days.  Bug #686162.
-sys-devel/byfl
-
-# David Seifert <soap@gentoo.org> (2019-12-08)
-# No revdeps, py2 only (the py3 targets don't work properly), last
-# release in 2015. Use sci-mathematics/pymc3 as modern replacement.
-# Removal in 30 days.
-sci-mathematics/pymc
-
-# David Seifert <soap@gentoo.org> (2019-12-08)
-# No revdeps, py2 only, upstream HOMEPAGE gone, last release in 2007.
-# Removal in 30 days.
-sci-mathematics/lybniz
-
-# David Seifert <soap@gentoo.org> (2019-12-08)
-# Yet another NIH machine learning package in python. Last release in
-# 2012, no revdeps, py2 only. Removal in 30 days.
-sci-mathematics/mlpy
-
-# David Seifert <soap@gentoo.org> (2019-12-08)
-# No revdeps, py2 only, last release in 2015, lots of QA issues.
-# Bug #343743, #347928, #451394, #547714, #623756, #697562.
-# Removal in 30 days.
-sci-mathematics/nusmv
-
-# David Seifert <soap@gentoo.org> (2019-12-08)
-# No revdeps, py2 only, last release in 2008. Removal in 30 days.
-sci-mathematics/p9m4
-
-# David Seifert <soap@gentoo.org> (2019-12-08)
-# No revdeps, py2 only, bump required and very involved and messy
-# buildsystem, tons of QA issues.
-# Bug #345233, #459640, #474782, #474784, #474788, #474790, #474792,
-# #620942, #631876, #671130. Removal in 30 days.
-sci-mathematics/Macaulay2
-
-# David Seifert <soap@gentoo.org> (2019-12-08)
-# No revdeps, py2 only, upstream dead, last release in 2011.
-# file collisions with sci-chemistry/tinker, bug #597702.
-# Removal in 30 days.
-sci-mathematics/snns
-
-# David Seifert <soap@gentoo.org> (2019-12-08)
-# No revdeps, py2 only, upstream HOMEPAGE gone.
-# Removal in 30 days.
-sci-mathematics/factmsieve
-
-# David Seifert <soap@gentoo.org> (2019-12-08)
-# No revdeps, py2 only, bump required and very involved buildsystem,
-# has QA issues, bug #598840. Removal in 30 days.
-sci-mathematics/xmds
-
-# Michał Górny <mgorny@gentoo.org> (2019-12-05)
-# Last maintainer activity in 2016.  Does not build for quite some time
-# already.  Needs a version bump, at the very least.
-# Removal in 30 days.  Bug #602024.
-app-laptop/nvidiabl
 
 # Bernard Cafarelli <voyageur@gentoo.org> (2019-11-29)
 # Beta for new major version with initial Python 3 support

@@ -168,7 +168,6 @@ app-admin/salt:openssl - Add support for using TLS via OpenSSL.
 app-admin/salt:portage - Add support for package state enforcement using sys-apps/portage
 app-admin/salt:raet - Add support for the new RAET transport.
 app-admin/salt:redis - Support returning data to a redis database.
-app-admin/salt:timelib - Use timelib to parse english textual date descriptions.
 app-admin/salt:zeromq - Add support for the zeromq transport.
 app-admin/sudo:gcrypt - Use message digest functions from dev-libs/libgcrypt instead of sudo's
 app-admin/sudo:libressl - Use message digest functions from dev-libs/libressl instead of sudo's
@@ -5329,7 +5328,9 @@ net-analyzer/metasploit:development - Install dependencies needed for metasploit
 net-analyzer/metasploit:nexpose - Enable the plugin to integrate with nexpose
 net-analyzer/metasploit:oracle - Enable restricted oracle modules which have additional deps
 net-analyzer/metasploit:pcap - Enable libpcap for packet sniffing
+net-analyzer/mk-livestatus:boost - Use dev-libs/boost for ASIO support
 net-analyzer/mk-livestatus:nagios4 - Generate a net-analyzer/nagios-4 compatible plugin
+net-analyzer/mk-livestatus:re2 - Use dev-libs/re2 for regex support
 net-analyzer/monitoring-plugins:dns - Install net-dns/bind-tools required for monitoring DNS servers. Disabling the flag does not remove any plugins.
 net-analyzer/monitoring-plugins:fping - Install net-analyzer/fping required for fancy ping monitoring. Disabling the flag does not remove any plugins.
 net-analyzer/monitoring-plugins:game - Install games-util/qstat required for monitoring FPS servers. Disabling the flag does not remove any plugins.
@@ -6221,7 +6222,6 @@ net-libs/tox:log-error - Log level: 1
 net-libs/tox:log-info - Log level: 3
 net-libs/tox:log-trace - Log level: 5
 net-libs/tox:log-warn - Log level: 2
-net-libs/tox:no-log - Log level: 0 (no debug info logged)
 net-libs/udns:tools - Build and install dnsget, ex-rdns and rblcheck tools
 net-libs/wandio:http - Build support for reading files over HTTP using net-misc/curl
 net-libs/webkit-gtk:coverage - Enable code coverage support
@@ -7576,7 +7576,6 @@ sci-libs/vtk:web - Install web component
 sci-libs/vtk:xdmf2 - Support for xdmf2 formatted data
 sci-libs/xkaapi:blas - Kaapi BLAS tasks for PLASMA
 sci-libs/xkaapi:gpu - Build library for gpu threading
-sci-mathematics/Macaulay2:optimization - Accept upstream's choices for -O option, i.e. -O3 almost everywhere.
 sci-mathematics/agda:cpphs - Use cpphs instead of cpp.
 sci-mathematics/agda:stdlib - Install the standard library.
 sci-mathematics/agda:uhc - Add support for the uhc backend.
@@ -7615,8 +7614,6 @@ sci-mathematics/maxima:sbcl - Compile maxima with Steel Bank Common Lisp (dev-li
 sci-mathematics/minisat:extended-solver - Build extended version of SAT solver with additional features.
 sci-mathematics/msieve:ecm - Enable support for the GMP-ECM library
 sci-mathematics/normaliz:extras - Install sci-mathematics/Macaulay2 and sci-mathematics/singularpackages as shipped by upstream
-sci-mathematics/nusmv:minisat - Enable support for MiniSat
-sci-mathematics/nusmv:zchaff - Enable support for zChaff
 sci-mathematics/octave:glpk - Add support for sci-mathematics/glpk for linear programming
 sci-mathematics/octave:openssl - Use dev-libs/openssl for low level hash functions
 sci-mathematics/octave:qhull - Add support for media-libs/qhull, to allow `delaunay', `convhull', and related functions
@@ -8102,6 +8099,7 @@ sys-boot/refind:hfs - Builds the EFI binary hfs filesystem driver
 sys-boot/refind:iso9660 - Builds the EFI binary iso9660 filesystem driver
 sys-boot/refind:ntfs - Builds the EFI binary ntfs filesystem driver
 sys-boot/refind:reiserfs - Builds the EFI binary reiserfs filesystem driver
+sys-boot/vboot-utils:libzip - Use dev-libs/libzip.
 sys-boot/woeusb:minimal - Install only woeusb tool
 sys-cluster/ceph:babeltrace - Add support for LTTng babeltrace
 sys-cluster/ceph:cephfs - Build support for cephfs, a POSIX compatible filesystem built on top of ceph
