@@ -38,7 +38,6 @@ DEPEND="
 	test? (
 		>=net-libs/libpcap-1.9.1
 		dev-lang/perl
-		|| ( app-arch/sharutils sys-freebsd/freebsd-ubin )
 	)
 "
 PATCHES=(
