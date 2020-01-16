@@ -32,7 +32,24 @@
 
 #--- END OF EXAMPLES ---
 
-# Mikle Kolyada <zlogene@gentoo.org> (2020-0113)
+# Michał Górny <mgorny@gentoo.org> (2020-01-16)
+# Python 2 only.  Last release in 2006.  No reverse dependencies.
+# Removal in 30 days.  Bug #705522.
+dev-python/pyemf
+
+# Michał Górny <mgorny@gentoo.org> (2020-01-16)
+# Abandoned upstream.  Python 2 only.  No reverse dependencies.
+# Removal in 30 days.  Bug #705518.
+dev-python/milk
+dev-python/milksets
+
+# Michał Górny <mgorny@gentoo.org> (2020-01-16)
+# The new version loses Python 2 support but does not introduce any real
+# changes.  Let's mask it to reduce the noise, and hopefully try to get
+# python2_7 out of default PYTHON_TARGETS first.
+>=dev-python/setuptools-45.0.0
+
+# Mikle Kolyada <zlogene@gentoo.org> (2020-01-13)
 # Current versioning breaks portage logic and prevents
 # us from adding official releases made by google.
 # Please DOWNGRADE to dev-python/nototools-0_pre20200113
@@ -543,58 +560,15 @@ sys-fs/yaffs2-utils
 # Removal in 14 days.  Bug #533052.
 net-analyzer/gsm-receiver
 
-# Michał Górny <mgorny@gentoo.org> (2019-12-15)
-# Unmaintained.  Most of those packages haven't been bumped since 2013,
-# few have been updated in 2015.
-# Removal in 30 days.  Bug #703032.
-dev-util/obs-service-cpanspec
-dev-util/obs-service-download_files
-dev-util/obs-service-download_src_package
-dev-util/obs-service-download_url
-dev-util/obs-service-extract_file
-dev-util/obs-service-format_spec_file
-dev-util/obs-service-generator_driver_update_disk
-dev-util/obs-service-github_tarballs
-dev-util/obs-service-git_tarballs
-dev-util/obs-service-meta
-dev-util/obs-service-rearchive
-dev-util/obs-service-recompress
-dev-util/obs-service-set_version
-dev-util/obs-service-source_validator
-dev-util/obs-service-tar_scm
-dev-util/obs-service-update_source
-dev-util/obs-service-verify_file
-dev-util/osc
-dev-util/suse-build
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (2019-12-15)
-#media-plugins/vdr-console failed after glibc update.
-#see wrt bug 692334
-#The project is given up by upstream years ago.
-#There is no HOMAPAGE and SRC_URI available.
-#Package will be removed on ~15 Jan 2020.
-media-plugins/vdr-console
-
 # David Seifert <soap@gentoo.org> (2019-12-08)
 # Unmaintained, build hangs, tons of other build failures, missing
 # dependencies.  Bug #663794, #666916, #666922, #667062, #678068,
 # #681678, #684420, #694488. Removal in 30 days.
 dev-db/clickhouse
 
-# David Seifert <soap@gentoo.org> (2019-12-08)
-# No revdeps, py2 only, needs version bump, practically unmaintained
-# in Gentoo. Removal in 30 days.
-sci-chemistry/pymol-plugins-psico
-
 # Bernard Cafarelli <voyageur@gentoo.org> (2019-11-29)
 # Beta for new major version with initial Python 3 support
 =app-backup/rdiff-backup-1.4.0_beta*
-
-# Jonas Stein <jstein@gentoo.org> (2019-11-26)
-# Package is obsolete. Successor is net-wireless/b43-fwcutter
-# Bug #537786.
-# Removal after 2020-01-01
-net-wireless/bcm43xx-fwcutter
 
 # Lars Wendler <polynomial-c@gentoo.org> (2019-11-14)
 # Breaks archives containing relative paths
