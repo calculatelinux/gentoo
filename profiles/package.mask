@@ -32,6 +32,103 @@
 
 #--- END OF EXAMPLES ---
 
+# Zac Medico <zmedico@gentoo.org> (2020-01-19)
+# This package has been replaced by dev-python/python-podman and has
+# no reverse dependencies.
+# Removal in 30 days.  Bug #705826.
+dev-python/pypodman
+
+# David Seifert <soap@gentoo.org> (2020-01-18)
+# Leftover from silc* removal (#522916), unmaintained, no
+# upstream releases since 2014, no revdeps, EAPI-4.
+# Bug #705462. Removal in 14 days.
+net-im/silc-toolkit
+
+# Michał Górny <mgorny@gentoo.org> (2020-01-18)
+# The following Gentoo packages are Python 2-only and have no reverse
+# dependencies.
+# Removal in 30 days.  Bug #705762.
+dev-python/aldryn-boilerplates
+dev-python/aldryn-common
+dev-python/aquarium
+dev-python/celementtree
+dev-python/collectd-rabbitmq
+dev-python/cosmolopy
+dev-python/django-annoying
+dev-python/django-endless-pagination
+dev-python/django-international
+dev-python/django-ldapdb
+dev-python/django-ldap-groups
+dev-python/django-oauth-plus
+dev-python/django-openid-auth
+dev-python/django-piston
+dev-python/django-registration
+dev-python/django-xslt
+dev-python/egg-python
+dev-python/Flask-KVSession
+dev-python/flask-openid
+dev-python/flask-xml-rpc
+dev-python/gdata
+dev-python/libwnck-python
+dev-python/lxc-python2
+dev-python/mantissa
+dev-python/mkpythonproj
+dev-python/morbid
+dev-python/myghty
+dev-python/myghtyutils
+dev-python/openstack-nose-plugin
+dev-python/paisley
+dev-python/pkipplib
+dev-python/processing
+dev-python/pSQL
+dev-python/pudge
+dev-python/pyds
+dev-python/pygene
+dev-python/pygtkhelpers
+dev-python/pynotifier
+dev-python/pypgsql
+dev-python/pythong
+dev-python/python-musicbrainz
+dev-python/python-nss
+dev-python/python-recaptcha
+dev-python/python-scw
+dev-python/python-tvrage
+dev-python/python-yadis
+dev-python/qpid-python
+dev-python/robotframework-selenium2library
+dev-python/robotframework-sshlibrary
+dev-python/rtgraph
+dev-python/ruledispatch
+dev-python/runsnakerun
+dev-python/sqlite3dbm
+dev-python/sqlobject
+dev-python/steadymark
+dev-python/storm
+dev-python/timelib
+dev-python/turbocheetah
+dev-python/turbojson
+dev-python/turbokid
+dev-python/weakrefmethod
+dev-python/webut
+dev-python/wehjit
+dev-python/zfec
+
+# David Seifert <soap@gentoo.org> (2020-01-18)
+# EAPI 4, last release in 2004, ebuild has QA and licensing issues.
+# Bug #426028, #454116. Removal in 30 days.
+net-ftp/oftpd
+
+# David Seifert <soap@gentoo.org> (2020-01-18)
+# EAPI 4, doesn't build against OpenSSL 1.1 API, last release in 2014,
+# lots of QA issues (calls cc directly, -Werror)
+# Bug #634442, #664766. Removal in 30 days.
+net-dns/validns
+
+# David Seifert <soap@gentoo.org> (2020-01-18)
+# EAPI 4, doesn't build, last release in 2005.
+# Bug #384031, #638492, #663644. Removal in 30 days.
+net-analyzer/pchar
+
 # Michał Górny <mgorny@gentoo.org> (2020-01-16)
 # Python 2 only.  Last release in 2006.  No reverse dependencies.
 # Removal in 30 days.  Bug #705522.
@@ -523,13 +620,6 @@ virtual/httpd-php:7.1
 =app-emulation/xen-4.13.0
 =app-emulation/xen-pvgrub-4.13.0
 =app-emulation/xen-tools-4.13.0
-
-# Ulrich Müller <ulm@gentoo.org> (2019-12-18)
-# Live ebuilds for Emacs from Git have been consolidated
-# into separate slots of the app-editors/emacs package.
-# Please update your package.accept_keywords file accordingly.
-# Masked for removal in 30 days. Bug #291296.
-app-editors/emacs-vcs
 
 # Anthony G. Basile <blueness@gentoo.org> (2019-12-17)
 # Project has been dead upstream for years.
