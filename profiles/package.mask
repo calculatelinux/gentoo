@@ -32,6 +32,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Victor Payno <vpayno+gentoo@gmail.com> (2020-01-23)
+# Requires slotted lua.
+=dev-lang/lua-5.1.5-r103
+=dev-lang/lua-5.2.4-r2
+=dev-lang/lua-5.3.5-r2
+
 # David Seifert <soap@gentoo.org> (2020-01-21)
 # Upstream disappeared, no other distro still carries this,
 # blocks removal of EOL gtkglext, no revdeps.
@@ -74,12 +80,6 @@ sci-physics/lightspeed
 # Last release over 7 years ago, depends on EOL gtkglext.
 # No revdeps, Removal in 30 days.
 sci-visualization/gfsview
-
-# David Seifert <soap@gentoo.org> (2020-01-21)
-# No sign of py3 port, depends on EOL pygtk and gtkglext.
-# Many open bugs, no revdeps.
-# Bug #443088, #582454, #598682, #623314. Removal in 30 days.
-sci-visualization/gwyddion
 
 # David Seifert <soap@gentoo.org> (2020-01-21)
 # No sign of py3 port, depends on EOL pygtk. No revdeps.
@@ -671,15 +671,6 @@ sci-libs/libcore
 sci-libs/naga
 sci-libs/spooles
 sci-libs/vecmath-objectclub
-
-# Brian Evans <grknight@gentoo.org> (2019-12-19)
-# PHP 7.1 is end of life and has security issues Bug 703326
-# Associated packages are not ready for new versions tracked in bug 702110
-# Removal in 30 days
-dev-lang/php:7.1
-dev-php/pecl-cassandra
-<dev-php/pecl-event-2.5
-virtual/httpd-php:7.1
 
 # Tomáš Mózes <hydrapolic@gentoo.org> (2019-12-19)
 # Needs more testing.
