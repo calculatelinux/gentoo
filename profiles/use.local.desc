@@ -3253,7 +3253,7 @@ games-fps/nexuiz:maps - Install the community map pack
 games-fps/prboom-plus:dumb - Enable support for various tracker-style music formats via media-libs/dumb
 games-fps/prboom-plus:fluidsynth - Enable support for MIDI via media-sound/fluidsynth
 games-fps/prboom-plus:net - Enable support for network play
-games-fps/prboom-plus:nonfree - Enable non-free components
+games-fps/prboom-plus:non-free - Enable non-free components
 games-fps/prboom-plus:portmidi - Enable support for MIDI via media-libs/portmidi
 games-fps/prboom-plus:sdl-image - Enable support for high-resolution texture support via media-libs/sdl-image
 games-fps/prboom-plus:sdl-mixer - Enable support for MIDI via media-libs/sdl-mixer
@@ -3305,7 +3305,6 @@ games-puzzle/xlogical:alt_gfx - Use alternate graphics which are closer to the o
 games-roguelike/FTL:bundled-libs - Use bundled libraries.
 games-roguelike/angband:sdl2 - Use libsdl2 instead of libsdl
 games-roguelike/angband:sound - Enable and install sounds
-games-roguelike/nethack:experimental - Enable experimental features (showscore and status_hilite)
 games-roguelike/stone-soup:ncurses - Enable for console (uses ncurses) based build. (can be enabled on top of tiles)
 games-roguelike/stone-soup:tiles - Enable for graphical (tiled) build. (can be enabled on top of ncurses)
 games-roguelike/tomenet:server - Compile server support
@@ -3375,7 +3374,6 @@ games-strategy/megaglest:wxuniversal - Use the wxUniversal port which implements
 games-strategy/naev:mixer - Enables media-libs/sdl-mixer sound backend in addition to media-libs/openal one.
 games-strategy/satellite-reign:gui - Install the GUI for configuring screen resolution and input
 games-strategy/ufoai:client - Build the main game client
-games-strategy/ufoai:editor - Build the map editor and compiler
 games-strategy/ufoai:server - Build the dedicated server
 games-strategy/uqm:music - download and install music files (large)
 games-strategy/uqm:remix - download and install music remix files (large)
@@ -5895,6 +5893,7 @@ net-im/spectrum2:twitter - Enables the Twitter backend.
 net-im/spectrum2:whatsapp - Enables the WhatsApp backend, based on net-im/transwhat.
 net-im/swift:client - Build the full graphical XMPP client.
 net-im/swift:gconf - Enable configuration through gnome-base/gconf.
+net-im/telegram-desktop:gtk3 - Enable GTK3 integration (tray, theme, filepicker, etc)
 net-im/telepathy-connection-managers:gadu - Enable Gadu Gadu protocol support.
 net-im/telepathy-connection-managers:icq - Enable ICQ IM protocol support.
 net-im/telepathy-connection-managers:irc - Enable Internet Relay Chat (IRC) support.
