@@ -32,6 +32,35 @@
 
 #--- END OF EXAMPLES ---
 
+# Georgy Yakovlev <gyakovlev@gentoo.org> (2020-01-26)
+# Not needed anymore, feel free to remove from your system
+# emerge -C virtual/cargo
+# update your rust packages running emerge with the
+# --changed-deps option if you have problems
+# https://bugs.gentoo.org/695698
+virtual/cargo
+
+# David Seifert <soap@gentoo.org> (2020-01-27)
+# Unmaintained, py2 only, depends on dead dev-python/pygtkglext, last release
+# over 8 years ago, no sign of py3 port. Removal in 30 days.
+sci-libs/pymmlib
+
+# David Seifert <soap@gentoo.org> (2020-01-27)
+# Unmaintained, py2 only, depends on dead dev-python/pygtkglext and
+# dev-python/librsvg-python, no revdeps.
+# Removal in 30 days.  Bug #640074.
+media-gfx/pycam
+
+# Robin H. Johnson <robbat2@gentoo.org> (2020-01-26)
+# EAPI conversion caused some regressions, need to redesign old ebuilds.
+=dev-lang/lua-5.1.5-r5
+
+# David Seifert <soap@gentoo.org> (2020-01-26)
+# Unmaintained, last release 14 years ago, tons of patches,
+# Autoconf script is broken, fails with gettext-0.20.
+# Removal in 30 days.  Bug #578234, #685928.
+app-i18n/zhcon
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-01-26)
 # No revdeps, blocks dev-python/pygtk cleanup, bug #706476
 # Masked for removal in 30 days.
