@@ -2517,9 +2517,6 @@ dev-python/QtPy:testlib - Build bindings for the QtTest module
 dev-python/QtPy:webengine - Build bindings for the QtWebEngine module
 dev-python/QtPy:webkit - Build bindings for the QtWebKit module
 dev-python/amqplib:extras - Install extra tools to generate initial Python mod from an AMQP XML file
-dev-python/celery:redis - Enables redis support
-dev-python/celery:sqs - Enables Amazon SQS transport module for celery
-dev-python/celery:yaml - Enable support of yaml as a configuration file format
 dev-python/cryptography:idna - enable support for the old, deprecated IDNA specification (RFC 3490)
 dev-python/ctypescrypto:gost - Build with support for GOST Message Authentication Code
 dev-python/cvxopt:dsdp - Use interior point library sci-libs/dsdp
@@ -2555,6 +2552,9 @@ dev-python/markdown:pygments - Enable fancy pygments support
 dev-python/matplotlib:excel - Pull dev-python/xlwt for the exceltools toolkit
 dev-python/matplotlib:gtk2 - Enable x11-libs/gtk+:2 support
 dev-python/matplotlib:gtk3 - Enable x11-libs/gtk+:3 support
+dev-python/matplotlib-python2:excel - Pull dev-python/xlwt for the exceltools toolkit
+dev-python/matplotlib-python2:gtk2 - Enable x11-libs/gtk+:2 support
+dev-python/matplotlib-python2:gtk3 - Enable x11-libs/gtk+:3 support
 dev-python/mpmath:matplotlib - Add support for dev-python/matplotlib
 dev-python/msgpack:native-extensions - Compiles native "C" extensions (speedups, instead of using python fallback code).
 dev-python/nbdime:webtools - Install web-based diff and merge tools.
@@ -2860,8 +2860,6 @@ dev-util/bazel:tools - Install extra bazel tools to build from sources
 dev-util/bitcoin-tx:knots - Build enhanced Bitcoin Knots version, rather than Bitcoin Core
 dev-util/buildbot:docker - Add support for worker docker command steps
 dev-util/buildbot:irc - Add support for status delivery through an ircbot.
-dev-util/buildbot:mail - Add support for watching a maildir for commits.
-dev-util/buildbot:manhole - Add support for manhole (debug over ssh)
 dev-util/bustle:interactivetests - Build interactive test programs
 dev-util/bustle:threaded - Build with support for multithreaded execution.
 dev-util/catalyst:ccache - Enables ccache support
@@ -4548,7 +4546,6 @@ media-sound/aqualung:mac - Enable support for decoding Monkey's Audio files
 media-sound/aqualung:podcast - Enable podcast support
 media-sound/aqualung:systray - Enable system tray support
 media-sound/ario:idle - Enable experimental support for MPD's idle command to reduce bandwidth and cpu usage, requires MPD 0.14
-media-sound/ario:scrobbler - Enable audioscrobbler/last.fm support net-libs/libsoup
 media-sound/asunder:mac - Support for creation of Monkey's Audio files (APE)
 media-sound/audacious:gtk - Build with GTK interface instead of Qt5
 media-sound/audacious:qt5 - Build with Qt5 interface instead of GTK
@@ -6248,7 +6245,6 @@ net-mail/fdm:courierauth - Add support for Courier authentication library
 net-mail/fetchmail:socks - Enable support for socks proxy
 net-mail/fetchmail:tk - Enable support for Tk GUI toolkit, in particular it installs fetchmailconf
 net-mail/gnubiff:password - Enable save passwords to connect mail servers in user space
-net-mail/isync:compat - Enable legacy utilities
 net-mail/lbdb:abook - Enables app-misc/abook support
 net-mail/lbdb:bbdb - Include support for app-emacs/bbdb
 net-mail/lbdb:evo - Add support for mail-client/evolution
@@ -6424,6 +6420,7 @@ net-misc/connman:openvpn - Use net-vpn/openvpn for openvpn support.
 net-misc/connman:pptp - Use net-dialup/pptpclient for PPTP VPN support.
 net-misc/connman:tools - Enable testing tools.
 net-misc/connman:vpnc - Use net-vpn/vpnc for cisco VPN support.
+net-misc/connman:wireguard - Enable WireGuard VPN support.
 net-misc/connman:wispr - Enable support for WISPr hotspot logins.
 net-misc/connman-gtk:openconnect - Support easier authentication to AnyConnect VPNs
 net-misc/crossbar:tor - include tor services connections support
@@ -7492,6 +7489,7 @@ sci-libs/rtabmap:openni2 - Adds support for Kinect-like 3D sensors devices with 
 sci-libs/scikits_image:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/scikits_image:pyamg - Enable support for algebraic solvers via dev-python/pyamg
 sci-libs/scipy:sparse - Adds support for sparse solving with sci-libs/umfpack
+sci-libs/scipy-python2:sparse - Adds support for sparse solving with sci-libs/umfpack
 sci-libs/scotch:int64 - Build the 64 bits integer library (needed for > 2^31 vertices)
 sci-libs/scotch:tools - Build and install extra exec tools
 sci-libs/shogun:R - Enable support for dev-lang/R

@@ -32,6 +32,61 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-01-28)
+# Live ebuild only for 3+ years now.  Python 2 only.  Last blocker
+# for pyzmq cleanup.  No revdeps.
+# Removal in 14 days.  Bug #707044.
+net-wireless/gr-air-modes
+
+# Michał Górny <mgorny@gentoo.org> (2020-01-28)
+# Replaced by configshell-fb.  Python 2 only.  No revdeps.
+# Removal in 30 days.  Bug #707034.
+dev-python/configshell
+
+# David Seifert <soap@gentoo.org> (2020-01-28)
+# Upstream declared EOL, py2 only, use sci-biology/STAR as modern replacement.
+# Removal in 30 days.
+sci-biology/tophat
+
+# Michał Górny <mgorny@gentoo.org> (2020-01-27)
+# Remaining split Twisted packages.  All remaining reverse dependencies
+# are entirely happy with merged dev-python/twisted.
+# Removal in 30 days.  Bug #706636.
+dev-python/twisted-core
+dev-python/twisted-names
+dev-python/twisted-web
+dev-python/twisted-words
+
+# Ulrich Müller <ulm@gentoo.org> (2020-01-27)
+# Removal requested by proxied maintainer:
+# "Game already available in Valve Steam."
+# License issues, unclear if zipball is redistributable.
+# Masked for removal in 30 days. Bug #703496.
+games-action/cs2d
+
+# Michał Górny <mgorny@gentoo.org> (2020-01-27)
+# Old split Twisted and related packages with no reverse dependencies
+# and only Python 2 support.
+# Removal in 30 days.  Bug #706636.
+dev-python/axiom
+dev-python/epsilon
+dev-python/pyutil
+dev-python/twisted-conch
+dev-python/twisted-lore
+dev-python/twisted-mail
+dev-python/twisted-news
+dev-python/twisted-pair
+dev-python/twisted-runner
+dev-python/vertex
+dev-python/zbase32
+dev-util/buildbot-slave
+
+# Michał Górny <mgorny@gentoo.org> (2020-01-27)
+# Dead upstream.  Last (alpha) release in 2007.  Requires old version
+# of Twisted.  Python 2-only.
+# Removal in 30 days.  Bug #660660.
+dev-python/zsi
+
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2020-01-26)
 # Not needed anymore, feel free to remove from your system
 # emerge -C virtual/cargo
