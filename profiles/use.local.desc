@@ -1465,11 +1465,16 @@ dev-embedded/sdcc:boehm-gc - Enable Hans Boehm's garbage collector dev-libs/boeh
 dev-embedded/sdcc:device-lib - Enable built of devices libraries
 dev-embedded/sdcc:ds390 - Add support for Dallas DS390
 dev-embedded/sdcc:ds400 - Add support for Dallas DS400
+dev-embedded/sdcc:ez80-z80 - Add support for EZ80-Z80
 dev-embedded/sdcc:gbz80 - Add support for Gameboy gbz80
 dev-embedded/sdcc:hc08 - Add support for Freescale/Motorola HC08 based
 dev-embedded/sdcc:mcs51 - Add support for Intel mcs51
 dev-embedded/sdcc:non-free - Enable non-free runtime library parts
 dev-embedded/sdcc:packihx - Enable Intel HEX files pack utility
+dev-embedded/sdcc:pdk13 - Add support for PDK13
+dev-embedded/sdcc:pdk14 - Add support for PDK14
+dev-embedded/sdcc:pdk15 - Add support for PDK15
+dev-embedded/sdcc:pdk16 - Add support for PDK16
 dev-embedded/sdcc:pic14 - Add support for Microchip 14 bits PICs
 dev-embedded/sdcc:pic16 - Add support for Microchip 16 bits PICs
 dev-embedded/sdcc:r2k - Add support for Rabbit 2000
@@ -3177,6 +3182,7 @@ games-emulation/higan:udev - Enable udev based input
 games-emulation/m64py:7z - Ensure support for .7z archives.
 games-emulation/m64py:rar - Ensure support for .rar archives.
 games-emulation/mednafen:debugger - Build with internal debugger
+games-emulation/mgba:discord - Enable Discord RPC support
 games-emulation/mgba:elf - Enable the use of elf utils via dev-libs/elfutils
 games-emulation/mupen64plus:audio-sdl - Enable SDL audio plugin.
 games-emulation/mupen64plus:input-sdl - Enable SDL input plugin.
@@ -4710,8 +4716,11 @@ media-sound/mumble:g15 - Enable support for the Logitech G15 LCD (and compatible
 media-sound/mumble:rnnoise - Enable alternative noise suppression option based on RNNoise.
 media-sound/mumble:speech - Enable text-to-speech support in Mumble.
 media-sound/murmur:ice - Use dev-libs/Ice to enable remote control capabilities.
+media-sound/musescore:omr - Enable PDF import (OMR - optical music recognition)
+media-sound/musescore:osc - Enable OSC remote control protocol
 media-sound/musescore:portmidi - Enable support for building against media-libs/portmidi
-media-sound/musescore:vorbis - Enable SoundFont support using media-libs/libvorbis
+media-sound/musescore:sf3 - Enable SoundFont 3 support using media-libs/libvorbis
+media-sound/musescore:sfz - Enable experimental SFZ sampler
 media-sound/musescore:webengine - Use dev-qt/qtwebengine for embedded web browser
 media-sound/ncmpc:async-connect - Enable asynchronous connect
 media-sound/ncmpc:chat-screen - Enable the chat screen
@@ -6511,6 +6520,7 @@ net-misc/iputils:tftpd - Build and install tftpd -- server for the Trivial File 
 net-misc/iputils:tracepath - Build and install tracepath -- tool for tracing network paths for discovering MTU values
 net-misc/iputils:traceroute6 - Build and install deprecated traceroute6 tool. It's recommended to use net-analyzer/traceroute instead.
 net-misc/kafka-bin:internal-zookeeper - Use bundled local zookeeper instance
+net-misc/kafkacat:avro - Enable avro serialization/deserialization support
 net-misc/kafkacat:json - Enable json support
 net-misc/kea:openssl - Use dev-libs/openssl instead of Botan
 net-misc/kea:samples - Install sample configuration files
