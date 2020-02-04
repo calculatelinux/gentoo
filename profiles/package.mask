@@ -32,6 +32,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Conrad Kostecki <conikost@gentoo.org> (2020-02-04)
+# Python2 only, no reverse dependencies left, since they got removed.
+# Masked for removal in 30 days.
+dev-python/e4u
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-02-04)
 # Python-2-only, blocks pygtk-removal. Use app-text/coolreader or
 # app-text/fbreader instead. Masked for removal in 30 days.
@@ -726,12 +731,6 @@ media-plugins/vdr-osdpip
 # removal from tree ~4 Feb 2020
 # wrt bug 704050
 media-plugins/vdr-browse
-
-# Mike Gilbert <floppym@gentoo.org> (2020-01-04)
-# Un-fetchable distfile, bug 704782.
-# No maintainer.
-# Removal in 30 days.
-net-misc/chrome-remote-desktop
 
 # Jonas Stein <jstein@gentoo.org> (2019-12-30)
 # Package masked for removal. Broken SRC_URI, 
