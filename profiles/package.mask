@@ -32,6 +32,41 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-04)
+# Python-2-only, blocks pygtk-removal. Use app-text/coolreader or
+# app-text/fbreader instead. Masked for removal in 30 days.
+app-text/pybookreader
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-04)
+# Python-2-only, blocks pygtk-removal, last release in 2010.
+# Masked for removal in 30 days.
+app-misc/hachoir-metadata
+app-misc/hachoir-urwid
+dev-python/hachoir-core
+dev-python/hachoir-parser
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-03)
+# No maintainer, py27-only, blocks pygtk-removal, last release in 2012.
+# Masked for removal in 30 days.
+app-misc/pystopwatch
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-03)
+# No maintainer, py27-only, broken at runtime, last release in 2010.
+# Masked for removal in 30 days.
+x11-misc/googsystray
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-03)
+# Ancient, no maintainer, py27-only, bug 708104. Masked for removal in 30 days.
+dev-util/gquilt
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-03)
+# Ancient, no maintainer, py27-only. Masked for removal in 30 days.
+dev-util/xesam-tools
+
+# Mart Raudsepp <leio@gentoo.org> (2020-02-03)
+# Known breakages that need to be handled first, bug 698922
+>=x11-libs/pango-1.43
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-02-02)
 # Ancient, dead, py27-only, all revdeps masked for removal, bugs 651346, 696974
 # Masked for removal in 30 days.
@@ -705,138 +740,11 @@ net-misc/chrome-remote-desktop
 # Removal after 2020-03-01
 app-backup/tob
 
-# Michał Górny <mgorny@gentoo.org> (2019-12-30)
-# The PyPy packages have been restructured and dev-python/pypy is now
-# used unconditionally as the main package.  If you wish to continue
-# using prebuilt executables, install dev-python/pypy{,3}-exe-bin
-# along with it.
-# Removal in 30 days.
-dev-python/pypy-bin
-dev-python/pypy3-bin
-
-# Hans de Graaff <graaff@gentoo.org> (2019-12-27)
-# Causes compatibility issues with the bundled versions in some
-# dev-lang/ruby slots. Use the bundled version instead. The only
-# reverse dependency is dev-ruby/jeweler, which is no longer
-# maintained upstream and ruby24-only.
-# Removal in 30 days. Bug #703950.
-dev-ruby/psych
-dev-ruby/jeweler
-
-# Miroslav Šulc <fordfrog@gentoo.org> (2019-12-26)
-# Deprecated by upstream, not used anymore in the tree.
-# Removal in 30 days.  Bug #703196.
-media-libs/libclalsadrv
-
-# David Seifert <soap@gentoo.org> (2019-12-25)
-# Py2 only, dead upstream, no py3 port in sight.
-# Removal in 30 days.  Bug #703792.
-games-rpg/dragonhunt
-
-# David Seifert <soap@gentoo.org> (2019-12-25)
-# Py2 only, dead upstream, no py3 port in sight.
-# Removal in 30 days.  Bug #703784.
-games-puzzle/jools
-
-# David Seifert <soap@gentoo.org> (2019-12-25)
-# Py2 only, dead upstream, no py3 port in sight.
-# Removal in 30 days.  Bug #703782.
-games-puzzle/hexamine
-
-# David Seifert <soap@gentoo.org> (2019-12-25)
-# Py2 only, dead upstream, no py3 port in sight.
-# Removal in 30 days.  Bug #703780.
-games-puzzle/4stattack
-
-# David Seifert <soap@gentoo.org> (2019-12-25)
-# Py2 only, dead upstream, no py3 port in sight.
-# Removal in 30 days.  Bug #703774.
-games-arcade/watermelons
-
-# David Seifert <soap@gentoo.org> (2019-12-25)
-# Py2 only, dead upstream, no py3 port in sight.
-# Removal in 30 days.  Bug #703772.
-games-arcade/triplexinvaders
-
-# David Seifert <soap@gentoo.org> (2019-12-25)
-# Py2 only, dead upstream, no py3 port in sight.
-# Removal in 30 days.  Bug #703770.
-games-arcade/pydance
-games-arcade/pydance-songs
-
-# David Seifert <soap@gentoo.org> (2019-12-25)
-# Py2 only, no other distro packages it anymore.
-# Removal in 30 days.  Bug #703768.
-games-arcade/pycadia
-
-# David Seifert <soap@gentoo.org> (2019-12-25)
-# Py2 only, no other distro packages it anymore.
-# Removal in 30 days.  Bug #703764.
-games-arcade/bub-n-bros
-
-# David Seifert <soap@gentoo.org> (2019-12-25)
-# Py2 only, upstream abandoned since 2005.
-# Removal in 30 days.  Bug #703762.
-games-action/accelerator3d
-
-# David Seifert <soap@gentoo.org> (2019-12-25)
-# Py2 only, upstream abandoned further development, Broken.
-# Removal in 30 days.  Bug #693032.
-games-kids/tuxmathscrabble
-
-# David Seifert <soap@gentoo.org> (2019-12-24)
-# Unmaintained, uses dead POSIX streams interface, EAPI 4.
-# Bug #692228, Removal in 30 days.
-x11-terms/multi-aterm
-
-# James Le Cuirot <chewi@gentoo.org> (2019-12-23)
-# No license. HOMEPAGE and SRC_URI are dead.
-# Removal in 30 days. See bug #703552.
-games-util/xboxgw
-
-# David Seifert <soap@gentoo.org> (2019-12-22)
-# Unmaintained, dead upstreams, monstrous build systems.
-# Bug #568364, Removal in 30 days.
-sci-libs/jmol-acme
-sci-libs/libcore
-sci-libs/naga
-sci-libs/spooles
-sci-libs/vecmath-objectclub
-
 # Tomáš Mózes <hydrapolic@gentoo.org> (2019-12-19)
 # Needs more testing.
 =app-emulation/xen-4.13.0
 =app-emulation/xen-pvgrub-4.13.0
 =app-emulation/xen-tools-4.13.0
-
-# Anthony G. Basile <blueness@gentoo.org> (2019-12-17)
-# Project has been dead upstream for years.
-# Removal in 30 days.
-app-benchmarks/spew
-
-# Jason A. Donenfeld <zx2c4@gentoo.org> (2019-12-16)
-# Simplify FOX packages. Adie, calculator, pathfinder, and shutterbug
-# can now be found behind x11-libs/fox[tools], and reswrap is always
-# installed by it.
-# Removal in 30 days.  Bug #703088. Bug #703084.
-app-editors/adie
-dev-util/reswrap
-sci-calculators/calculator
-x11-misc/pathfinder
-x11-misc/shutterbug
-
-# Michał Górny <mgorny@gentoo.org> (2019-12-15)
-# Live ebuild only.  Not touched since 2012.  Unsurprisingly,
-# the included patch no longer applies.  Actually, there's
-# sys-fs/yaffs2utils duplicate which is a release.
-# Removal in 14 days.  Bug #703040.
-sys-fs/yaffs2-utils
-
-# Michał Górny <mgorny@gentoo.org> (2019-12-15)
-# Repo gone in 2014.  Never had a release ebuild.  Apparently was broken
-# before anyway (bug #508924).
-# Removal in 14 days.  Bug #533052.
-net-analyzer/gsm-receiver
 
 # David Seifert <soap@gentoo.org> (2019-12-08)
 # Unmaintained, build hangs, tons of other build failures, missing

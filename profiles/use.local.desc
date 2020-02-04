@@ -367,7 +367,7 @@ app-dicts/gwaei:mecab - Enable app-text/mecab support
 app-dicts/myspell-pt:preao - Use the pre ortographic agreement version of the dictionary
 app-doc/clsync-docs:api - Install doxygen generated API docs.
 app-doc/csound-manual:html - Install HTML documentation
-app-doc/devmanual:fallback - Use alternative minimal stylesheet instead of tyrian theme.
+app-doc/devmanual:offline - Use alternative minimal stylesheet instead of Tyrian theme.
 app-doc/doxygen:clang - support for sys-devel/clang assisted parsing
 app-doc/doxygen:dot - allow to create dot graphs using media-gfx/graphviz
 app-doc/doxygen:doxysearch - build doxyindexer and doxysearch.cgi
@@ -4430,6 +4430,7 @@ media-libs/vulkan-loader:layers - Include the vulkan layers
 media-libs/waffle:egl - Enable EGL support
 media-libs/waffle:gbm - Enable support for the Generic Buffer Manager (gbm)
 media-libs/waffle:wayland - Enable Wayland support
+media-libs/webvfx:doc - Install doxygen developer documentation
 media-libs/x264:interlaced - enable interlaced encoding support, this can decrease encoding speed by up to 2%
 media-libs/x264:opencl - Add support for OpenCL.
 media-libs/x264:pic - disable optimized assembly code that is not PIC friendly
@@ -5482,7 +5483,6 @@ net-analyzer/tcpreplay:tcpdump - Use net-analyzer/tcpdump for packet decoding fe
 net-analyzer/testssl:bundled-openssl - Install precompiled versions of OpenSSL for greater testing coverage
 net-analyzer/wapiti:kerberos - Support Kerberos authentication
 net-analyzer/wapiti:ntlm - Support NTLM authentication
-net-analyzer/wireshark:adns - Use net-dns/c-ares to resolve DNS names
 net-analyzer/wireshark:androiddump - Install androiddump, an extcap interface to capture from Android devices
 net-analyzer/wireshark:bcg729 - Use media-libs/bcg729 for G.729 codec support in RTP Player
 net-analyzer/wireshark:brotli - Use app-arch/brotli for compression/decompression
@@ -6642,6 +6642,7 @@ net-misc/openvswitch:monitor - Build the Python and GUI dependent monitor applic
 net-misc/owncloud-client:dolphin - Install the kde-apps/dolphin extension
 net-misc/owncloud-client:nautilus - Install the gnome-base/nautilus extension
 net-misc/owncloud-client:shibboleth - Build support for Shibboleth single sign-on
+net-misc/packETH:cli - Build and install packETHcli
 net-misc/plowshare:view-captcha - View captcha with aview
 net-misc/ps3mediaserver:multiuser - Allow renderer customization per-user.
 net-misc/ps3mediaserver:transcode - Install optional dependencies for transcoding support via media-video/mplayer
@@ -7915,7 +7916,8 @@ sys-apps/pcsc-lite:policykit - Uses sys-auth/polkit to restrict access to smartc
 sys-apps/pcsc-lite:udev - Use sys-fs/udev rules to handle devices' permissions and hotplug support. Unless you know what you're doing do not disable this flag on Linux kernels. This is provided as an option for completeness.
 sys-apps/pcsc-tools:network-cron - Monthly cronjob the update-smartcard_list script
 sys-apps/policycoreutils:audit - Enable support for sys-process/audit and use the audit_* functions (like audit_getuid instead of getuid())
-sys-apps/portage:epydoc - Build html API documentation with epydoc.
+sys-apps/portage:apidoc - Build html API documentation with sphinx-apidoc.
+sys-apps/portage:epydoc - Build html API documentation with epydoc (deprecated).
 sys-apps/portage:gentoo-dev - Enable features required for Gentoo ebuild development.
 sys-apps/portage:ipc - Use inter-process communication between portage and running ebuilds.
 sys-apps/portage:native-extensions - Compiles native "C" extensions (speedups, instead of using python backup code). Currently includes libc-locales. This should only be temporarily disabled for some bootstrapping operations. Cross-compilation is not supported.
