@@ -84,10 +84,6 @@ dev-python/pymongo test
 # media-libs/qtav not keyworded
 media-video/orion qtav
 
-# Thomas Deutschmann <whissi@gentoo.org> (2018-08-23)
-# Dependency sys-cluster/ceph is keyworded for x86
-net-fs/samba -ceph
-
 # Rick Farina <zerochaos@gentoo.org> (2018-06-27)
 # Catalyst has support for assembling bootloader on this arch
 dev-util/catalyst -system-bootloader
