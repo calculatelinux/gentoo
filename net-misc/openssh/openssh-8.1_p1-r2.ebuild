@@ -3,8 +3,7 @@
 
 EAPI=7
 
-# user.eclass needed for egetshell
-inherit user flag-o-matic multilib autotools pam systemd
+inherit user-info flag-o-matic multilib autotools pam systemd
 
 # Make it more portable between straight releases
 # and _p? releases.
@@ -72,6 +71,7 @@ LIB_DEPEND="
 		)
 		libressl? ( dev-libs/libressl:0=[static-libs(+)] )
 	)
+	virtual/libcrypt:=[static-libs(+)]
 	>=sys-libs/zlib-1.2.3:=[static-libs(+)]
 "
 RDEPEND="
