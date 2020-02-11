@@ -25,6 +25,7 @@ RDEPEND="!net-im/telegram-desktop-bin
 	libressl? ( dev-libs/libressl:0= )
 	>=dev-cpp/ms-gsl-2.1.0
 	dev-cpp/range-v3
+	dev-libs/libdbusmenu-qt[qt5(+)]
 	dev-libs/xxhash
 	dev-qt/qtcore:5
 	dev-qt/qtimageformats:5
