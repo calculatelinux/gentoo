@@ -19,7 +19,7 @@ IUSE="alsa +dsp libressl pulseaudio"
 DEPEND="
 	!libressl? ( dev-libs/openssl:0= )
 	libressl? ( dev-libs/libressl:0= )
-	media-libs/opus
+	media-libs/opus:=
 	alsa? ( media-libs/alsa-lib )
 	pulseaudio? ( media-sound/pulseaudio )
 "
@@ -30,7 +30,10 @@ REQUIRED_USE="|| ( alsa pulseaudio )"
 
 S="${WORKDIR}/${PN}-${EGIT_COMMIT}"
 
-PATCHES=( "${FILESDIR}/2.4.4-pulseaudio.patch" )
+PATCHES=(
+	"${FILESDIR}/2.4.4-pulseaudio.patch"
+	"${FILESDIR}/musl.patch"
+)
 
 src_prepare() {
 	default
