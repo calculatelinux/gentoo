@@ -32,6 +32,14 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-02-15)
+# To reduce duplication of effort, prebuilt vanilla kernel packages
+# are discontinued.  Since Gentoo patchset is really minimal,
+# sys-kernel/gentoo-kernel-bin can be used as a replacement.  Vanilla
+# kernels can still be built using sys-kernel/vanilla-kernel.
+# Removal in 30 days.
+sys-kernel/vanilla-kernel-bin
+
 # Mart Raudsepp <leio@gentoo.org> (2020-02-12)
 # GNOME 3.35 development release packages
 >=dev-libs/vala-common-0.47
@@ -455,12 +463,6 @@ app-text/sary
 # maintain. Take this over if wanted, otherwise I will remove it in 30 days.
 app-admin/cli53
 
-# Stephan Hartmann <stha09@googlemail.com> (2020-01-20)
-# Dev channel releases are only for people who
-# are developers or want more experimental features
-# and accept a more unstable release.
->=www-client/chromium-81
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-01-19)
 # Ancient, last release in 2006, blocks x11-libs/gtkglext cleanup
 # Masked for removal in 30 days.
@@ -599,13 +601,6 @@ media-plugins/vdr-mailbox
 # End of life vala:0.42 series, please depclean.
 # This message shall be kept until 2020-02-11.
 dev-lang/vala:0.42
-
-# Mart Raudsepp <leio@gentoo.org> (2020-01-11)
-# Upstream considers this too broken to the point of thinking to
-# even deleting the tarballs and downgrading in pip.
-# https://github.com/mesonbuild/meson/issues/6442
-# https://bugs.gentoo.org/705144
-=dev-util/meson-0.53.0
 
 # Ulrich Müller <ulm@gentoo.org> (2020-01-06)
 # Snapshots from Git, masked for testing.
