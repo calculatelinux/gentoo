@@ -3,7 +3,7 @@
 
 EAPI=5
 
-inherit check-reqs cuda toolchain-funcs unpacker versionator
+inherit check-reqs cuda eutils toolchain-funcs unpacker versionator
 
 MYD=$(get_version_component_range 1)_$(get_version_component_range 2)
 
@@ -18,6 +18,7 @@ SLOT="0/${PV}"
 LICENSE="NVIDIA-CUDA"
 KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debugger doc eclipse profiler"
+RESTRICT="bindist mirror"
 
 DEPEND=""
 RDEPEND="${DEPEND}
