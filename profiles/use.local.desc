@@ -111,7 +111,6 @@ app-admin/prelude-manager:dbx - Enables Prelude Manager storing Prelude alerts i
 app-admin/prelude-manager:tcpwrapper - Enables Prelude Manager using tcp wrapper. It requires sys-apps/tcp-wrappers .
 app-admin/puppet:augeas - Enable augeas support
 app-admin/puppet:diff - Enable diff support
-app-admin/puppet:experimental - Add patches for things in testing
 app-admin/puppet:rrdtool - Enable rrdtool support
 app-admin/puppet:shadow - Enable shadow support
 app-admin/puppet-agent:puppetdb - Adds puppetdb support
@@ -5296,7 +5295,6 @@ net-analyzer/icinga:lighttpd - Adds Lighttpd support
 net-analyzer/icinga:plugins - Adds support for nagios plugins
 net-analyzer/icinga:web - Adds generic web interface support
 net-analyzer/icinga-web:pnp - Enables pnp4nagios integration
-net-analyzer/icinga2:classicui - Adds support for the old interface
 net-analyzer/icinga2:console - Adds support for line-editing in the console
 net-analyzer/icinga2:lto - Adds support for link time optimization
 net-analyzer/icinga2:mail - Allows for mailing of alerts
@@ -5428,8 +5426,6 @@ net-analyzer/sarg:glob - Disable to ignore wildcards in file names
 net-analyzer/sarg:pcre - Enable support for regular expressions in the hostalias file through dev-libs/libpcre
 net-analyzer/scanlogd:nids - Use net-libs/libnids for packet capturing
 net-analyzer/scanlogd:pcap - Use net-libs/libpcap for packet capturing
-net-analyzer/scapy:pyx - Enable dev-python/pyx support for psdump/pdfdump commands
-net-analyzer/scapy:tcpreplay - Enable net-analyzer/tcpreplay support for fast packet replay
 net-analyzer/smokeping:dig - Install net-dns/bind-tools for dig functionality
 net-analyzer/smokeping:echoping - Install net-analyzer/echoping for echoping functionality
 net-analyzer/smokeping:ssh - Install ssh functionality
@@ -7275,8 +7271,6 @@ sci-electronics/sigrok-cli:decode - Enable decoding of protocols while capturing
 sci-electronics/splat:hires - Builds additional high resolution application 'rfsplat-hd'
 sci-geosciences/gdal-grass:postgres - Include support for dev-db/postgresql
 sci-geosciences/gmt:gdal - Enable sci-libs/gdal library support
-sci-geosciences/gmt:gmtfull - Full resolution bathymetry database
-sci-geosciences/gmt:gmthigh - Add high resolution bathymetry database
 sci-geosciences/gmt:gmttria - Non GNU triangulation method, more efficient
 sci-geosciences/gmt:gshhg - Install coastline database
 sci-geosciences/gmt:htmldoc - Install html documentation
@@ -8734,7 +8728,10 @@ www-client/firefox:system-sqlite - Use the system-wide dev-db/sqlite installatio
 www-client/firefox:system-webp - Use the system-wide media-libs/libwebp instead of bundled.
 www-client/jd:migemo - Enable migemo support for Japanese
 www-client/jd:oniguruma - Use dev-libs/oniguruma for regular expression
+www-client/links:brotli - Enable app-arch/brotli support
+www-client/links:freetype - Enable media-libs/freetype support
 www-client/links:libevent - Enable dev-libs/libevent support
+www-client/links:lzip - Enable app-arch/lzip support
 www-client/lynx:gnutls - Use gnutls library for HTTPS support (openssl is the default library for HTTPS support).
 www-client/lynx:ssl - Enable HTTPS support.
 www-client/netsurf:bmp - BMP bitmap image support (media-libs/libnsbmp)
