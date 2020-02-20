@@ -14,6 +14,7 @@ app-accessibility/brltty:pcm - support for sound card digital audio
 app-accessibility/brltty:speech - speech support
 app-accessibility/eflite:16k_voice - Use a higher-quality voice.
 app-accessibility/emacspeak:espeak - Adds support for the espeak tts engine
+app-accessibility/flite:voices - Install synthetic voices
 app-accessibility/freetts:jsapi - build Java Speech API (JSAPI)
 app-accessibility/freetts:mbrola - Adds support for mbrola voices
 app-accessibility/orca:braille - Enable braille support
@@ -5209,7 +5210,6 @@ media-video/vlc:matroska - Enable matroska support using reference libraries (fa
 media-video/vlc:mpeg - Add libmpeg2 support for mpeg-1 and mpeg-2 video streams
 media-video/vlc:nfs - Enable support for nfs protocol via net-fs/libnfs
 media-video/vlc:omxil - Enable OpenMAX Integration Layer codec module
-media-video/vlc:opencv - Enable OpenCV (computer vision) filter module
 media-video/vlc:optimisememory - Enable optimisation for memory rather than performance
 media-video/vlc:postproc - Enable image post-processing via libpostproc (part of FFmpeg)
 media-video/vlc:projectm - Enable the projectM visualization plugin
@@ -6664,6 +6664,7 @@ net-misc/remmina:telepathy - Enable telepathy support
 net-misc/rsync:stunnel - Provide helper scripts for using rsync via >=net-misc/stunnel-4
 net-misc/rygel:tracker - Install dependencies for the tracker plugin
 net-misc/rygel:transcode - Install dependencies for transcoding support
+net-misc/scponly:chroot - Enables adding and configuring an 'scponlyc' chrooted user
 net-misc/scponly:gftp - Enables gFTP compatibility
 net-misc/scponly:logging - Enables SFTP logging compatibility
 net-misc/scponly:passwd - Enables passwd compatibility
