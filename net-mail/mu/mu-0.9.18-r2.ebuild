@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -33,14 +33,13 @@ src_prepare() {
 
 src_configure() {
 	# Todo: Make a guile USE-flag as soon as >=guile-2 is avaiable
-	# Note: --disable-silent-rules is included in EAPI-5
 	econf --disable-guile \
 		--disable-gtk \
 		--disable-webkit \
 		$(use_enable emacs mu4e)
 }
 
-src_install () {
+src_install() {
 	dobin mu/mu
 	dodoc AUTHORS HACKING NEWS NEWS.org TODO README README.org ChangeLog
 	if use emacs; then
@@ -55,7 +54,7 @@ src_install () {
 		  man/mu-view.1 man/mu.1
 }
 
-src_test () {
+src_test() {
 	# Note: Fails with parallel make
 	emake -j1 check
 }
