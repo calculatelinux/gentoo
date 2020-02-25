@@ -32,6 +32,54 @@
 
 #--- END OF EXAMPLES ---
 
+# Jason A. Donenfeld <zx2c4@gentoo.org> (2020-02-24)
+# Unsupported upstream version, likely has security bugs. Not removed
+# immediately because of backwards incompatible configuration changes
+# with the newer version in the tree.
+#
+# Removal in 14 days. Bug #710754.
+~mail-mta/opensmtpd-6.0.3_p1
+
+# Marek Szuba <marecki@gentoo.org> (2020-02-24)
+# Deprecated upstream in Q1'2018 in favour of dev-libs/intel-neo and
+# while it officially remains the recommended solution for "legacy HW
+# platforms" not supported by NEO (i.e. Sandy Bridge, Ivy Bridge and
+# Haswell GPUs), there has been no repository activity since August 2018.
+# Only really suitable for code development due to poor performance, some
+# OpenCL-aware software (e.g. media-gfx/darktable) explicitly
+# blacklists Beignet devices.
+# Upstream does not support LLVM versions newer than 7, third-party patches
+# exist for 8 and 9 but Beignet built against those versions fails some
+# unit tests.
+#
+# Removal in 30 days. Bug #710640.
+dev-libs/beignet
+
+# Michał Górny <mgorny@gentoo.org> (2020-02-24)
+# app-admin/packagekit-base is Python 2 only and behind upstream.
+# The Portage backend is unmaintained.  Other packages are its reverse
+# dependencies.
+#
+# It is unclear why app-backup/deja-dup needs it unconditionally.
+# However, it has not been bumped since 2016.
+#
+# Removal in 30 days.  Bug #708398.
+app-admin/packagekit
+app-admin/packagekit-base
+app-admin/packagekit-gtk
+app-admin/packagekit-qt
+app-backup/deja-dup
+gnome-extra/gnome-packagekit
+
+# Michał Górny <mgorny@gentoo.org> (2020-02-24)
+# Effectively unmaintained in Gentoo.  Multiple versions behind
+# upstream.  Python 2 only.
+# Removal in 30 days.  Bug #709466.
+app-admin/equo
+app-admin/matter
+sys-apps/entropy
+sys-apps/entropy-server
+
 # David Seifert <soap@gentoo.org> (2020-02-23)
 # Last release in 2013, the scons SConstruct script uses variables
 # that have been removed from Scons years ago and also uses a ton of
@@ -41,8 +89,7 @@ games-strategy/boswars
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-02-22)
 # Last release in 2009, py2-only, blocks dev-python/pygtk removal, bug #708100
-# media-gfx/mcomix meanwhile is a fork of comix that will be kept until its
-# fork mcomix3 was packaged. Masked for removal in 30 days.
+# Use media-gfx/mcomix instead. Masked for removal in 30 days.
 media-gfx/comix
 
 # Mart Raudsepp <leio@gentoo.org> (2020-02-21)
@@ -533,30 +580,12 @@ media-gfx/pycam
 # EAPI conversion caused some regressions, need to redesign old ebuilds.
 =dev-lang/lua-5.1.5-r5
 
-# David Seifert <soap@gentoo.org> (2020-01-26)
-# Unmaintained, last release 14 years ago, tons of patches,
-# Autoconf script is broken, fails with gettext-0.20.
-# Removal in 30 days.  Bug #578234, #685928.
-app-i18n/zhcon
-
-# Michał Górny <mgorny@gentoo.org> (2020-01-26)
-# Unmaintained.  Not bumped since Mar 2018.  No py3.7 compat.  Forces
-# old version of dev-python/idna.
-# Removal in 30 days.  Bug #706502.
-net-misc/crossbar
 
 # Andrew Ammerlaan <andrewammerlaan@riseup.net> (2020-01-26)
 # Proxy Maintainers <proxy-maint@gentoo.org>
 # v3.6.3 uses huge amounts of memory: Bug #705682
 # v3.6.1 is the latest version without this issue
 =dev-libs/libsass-3.6.3
-
-# Michał Górny <mgorny@gentoo.org> (2020-01-26)
-# Unmaintained in Gentoo.  Last bumped in 2013.  Multiple problems
-# reported both in release and live ebuild.  Python 2 only.  Version
-# bump is non-trivial.
-# Removal in 30 days.  Bug #706498.
-app-vim/youcompleteme
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2020-01-26)
 # Starting with Firefox 74 Mozilla removes xpi sideloading support
