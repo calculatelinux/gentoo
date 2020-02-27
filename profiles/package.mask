@@ -32,6 +32,32 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-02-26)
+# Effectively unmaintained.  Last upstream commit in 2016.  Multiple
+# unresolved bugs.  Python 2 only.  Repology (https://repology.org/)
+# provides quite a good replacement.
+# Removal in 30 days.  Bug #709458.
+app-portage/euscan
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-26)
+# Unmaintained revdeps on dev-python/pygtk blocking its removal, py2-only
+# All masked for removal in 30 days.
+# Last release in 2011, bug #708106
+app-cdr/gtkcdlabel
+# No plans upstream to port away from pygtk, suggested alternative dupeguru
+# not packaged in Gentoo, bug #708112
+app-misc/fslint
+# Last release in 2012, bug #708124
+app-text/keepnote
+# Last release in 2012, bug #708142
+x11-misc/revelation
+# Last release in 2011, bug #708150
+x11-misc/tintwizard
+# Last activity in 2013, bug #710162
+sci-misc/pythoncad
+# Last release in 2013, bug #710164
+sci-electronics/gresistor
+
 # Jason A. Donenfeld <zx2c4@gentoo.org> (2020-02-24)
 # Unsupported upstream version, likely has security bugs. Not removed
 # immediately because of backwards incompatible configuration changes
@@ -534,13 +560,6 @@ dev-python/twisted-core
 dev-python/twisted-names
 dev-python/twisted-web
 dev-python/twisted-words
-
-# Ulrich Müller <ulm@gentoo.org> (2020-01-27)
-# Removal requested by proxied maintainer:
-# "Game already available in Valve Steam."
-# License issues, unclear if zipball is redistributable.
-# Masked for removal in 30 days. Bug #703496.
-games-action/cs2d
 
 # Michał Górny <mgorny@gentoo.org> (2020-01-27)
 # Old split Twisted and related packages with no reverse dependencies
