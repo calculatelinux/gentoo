@@ -32,6 +32,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-29)
+# Breaks at least app-text/texlive-core and app-office/libreoffice right now,
+# bugs 711096, 711102.
+~app-text/poppler-0.86.0
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2020-02-27)
+# Depends on dev-java/eclipse-ecj:4.13 which
+# depends on >=virtual/{jdk,jre}-11 which is masked
+www-servers/tomcat:9
+
 # Michał Górny <mgorny@gentoo.org> (2020-02-26)
 # Effectively unmaintained.  Last upstream commit in 2016.  Multiple
 # unresolved bugs.  Python 2 only.  Repology (https://repology.org/)
@@ -519,86 +529,15 @@ dev-util/xesam-tools
 # Masked for removal in 30 days.
 dev-python/pygtkglext
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-01-31)
-# py2-only, 8.0 release is broken, upstream appears dormant, bug 707564,
-# blocks dev-python/pybluez py2 cleanup. Use kde-misc/kdeconnect instead.
-# Masked for removal in 30 days.
-kde-misc/kanyremote
-
 # Michał Górny <mgorny@gentoo.org> (2020-01-31)
 # Last release in 2009.  No tests.  Python 2 only.  No reverse
 # dependencies.
 # Removal in 30 days.  Bug #707550.
 app-mobilephone/lightblue
 
-# Michał Górny <mgorny@gentoo.org> (2020-01-29)
-# Abandoned in 2009.  Python 2 only.  No blockers left.
-# Removal in 30 days.  Bug #706218.
-dev-python/epydoc
-
-# Michał Górny <mgorny@gentoo.org> (2020-01-28)
-# Live ebuild only for 3+ years now.  Python 2 only.  Last blocker
-# for pyzmq cleanup.  No revdeps.
-# Removal in 14 days.  Bug #707044.
-net-wireless/gr-air-modes
-
-# Michał Górny <mgorny@gentoo.org> (2020-01-28)
-# Replaced by configshell-fb.  Python 2 only.  No revdeps.
-# Removal in 30 days.  Bug #707034.
-dev-python/configshell
-
-# David Seifert <soap@gentoo.org> (2020-01-28)
-# Upstream declared EOL, py2 only, use sci-biology/STAR as modern replacement.
-# Removal in 30 days.
-sci-biology/tophat
-
-# Michał Górny <mgorny@gentoo.org> (2020-01-27)
-# Remaining split Twisted packages.  All remaining reverse dependencies
-# are entirely happy with merged dev-python/twisted.
-# Removal in 30 days.  Bug #706636.
-dev-python/twisted-core
-dev-python/twisted-names
-dev-python/twisted-web
-dev-python/twisted-words
-
-# Michał Górny <mgorny@gentoo.org> (2020-01-27)
-# Old split Twisted and related packages with no reverse dependencies
-# and only Python 2 support.
-# Removal in 30 days.  Bug #706636.
-dev-python/axiom
-dev-python/epsilon
-dev-python/pyutil
-dev-python/twisted-conch
-dev-python/twisted-lore
-dev-python/twisted-mail
-dev-python/twisted-news
-dev-python/twisted-pair
-dev-python/twisted-runner
-dev-python/vertex
-dev-python/zbase32
-dev-util/buildbot-slave
-
-# Michał Górny <mgorny@gentoo.org> (2020-01-27)
-# Dead upstream.  Last (alpha) release in 2007.  Requires old version
-# of Twisted.  Python 2-only.
-# Removal in 30 days.  Bug #660660.
-dev-python/zsi
-
-# David Seifert <soap@gentoo.org> (2020-01-27)
-# Unmaintained, py2 only, depends on dead dev-python/pygtkglext, last release
-# over 8 years ago, no sign of py3 port. Removal in 30 days.
-sci-libs/pymmlib
-
-# David Seifert <soap@gentoo.org> (2020-01-27)
-# Unmaintained, py2 only, depends on dead dev-python/pygtkglext and
-# dev-python/librsvg-python, no revdeps.
-# Removal in 30 days.  Bug #640074.
-media-gfx/pycam
-
 # Robin H. Johnson <robbat2@gentoo.org> (2020-01-26)
 # EAPI conversion caused some regressions, need to redesign old ebuilds.
 =dev-lang/lua-5.1.5-r5
-
 
 # Andrew Ammerlaan <andrewammerlaan@riseup.net> (2020-01-26)
 # Proxy Maintainers <proxy-maint@gentoo.org>
@@ -611,21 +550,6 @@ media-gfx/pycam
 # install from addons.mozilla.org
 # passff-host remains in the tree
 www-plugins/passff
-
-# Michał Górny <mgorny@gentoo.org> (2020-01-18)
-# The following packages depend on django, support Python 2 only
-# and have no reverse dependencies.
-# Removal in 30 days.  Bug #706360.
-
-# David Seifert <soap@gentoo.org> (2020-01-25)
-# Upstream is mostly unresponsive and doesn't have the resources to
-# fix their code. Lots of bugs in the form of big endian issues, buffer
-# overflows, heap overflows, memory leaks and missing sanity checks.
-# Includes libbinio, which is only used by adplug and in a similarly poor
-# state. Multiple open CVEs, removal in 30 days. Bug #667170, #706346.
-media-libs/adplug
-dev-cpp/libbinio
-media-sound/adplay
 
 # Victor Payno <vpayno+gentoo@gmail.com> (2020-01-23)
 # Requires slotted lua.
@@ -656,12 +580,6 @@ media-sound/adplay
 # Removal after 2020-03-01
 app-backup/tob
 
-# Tomáš Mózes <hydrapolic@gentoo.org> (2019-12-19)
-# Needs more testing.
-=app-emulation/xen-4.13.0
-=app-emulation/xen-pvgrub-4.13.0
-=app-emulation/xen-tools-4.13.0
-
 # David Seifert <soap@gentoo.org> (2019-12-08)
 # Unmaintained, build hangs, tons of other build failures, missing
 # dependencies.  Bug #663794, #666916, #666922, #667062, #678068,
@@ -670,7 +588,8 @@ dev-db/clickhouse
 
 # Bernard Cafarelli <voyageur@gentoo.org> (2019-11-29)
 # Beta for new major version with initial Python 3 support
-=app-backup/rdiff-backup-1.4.0_beta*
+# Remove mask when stable version is released
+>=app-backup/rdiff-backup-1.4.0_beta
 
 # Lars Wendler <polynomial-c@gentoo.org> (2019-11-14)
 # Breaks archives containing relative paths
@@ -690,18 +609,8 @@ dev-libs/OpenSRF
 
 # Miroslav Šulc <fordfrog@gentoo.org> (2019-10-16)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
-=www-servers/tomcat-9.0.27
-
-# Miroslav Šulc <fordfrog@gentoo.org> (2019-10-16)
-# Depends on >=virtual/{jdk,jre}-11 which is masked
 dev-java/ant-eclipse-ecj:4.13
 dev-java/eclipse-ecj:4.13
-
-# Sergei Trofimovich <slyfox@gentoo.org> (2019-10-16)
-# Binary-only slot that provides libmpfr.so.1. If you need that
-# library please add a note to describe use case to the bug #697822.
-# Masked for removal in a year.
-dev-libs/mpfr:1
 
 # Sergei Trofimovich <slyfox@gentoo.org> (2019-10-16)
 # Binary-only slot that provides libgmp.so.3. If you need that
