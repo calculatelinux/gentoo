@@ -1,4 +1,4 @@
-BDEPEND=>=dev-lang/go-1.12
+BDEPEND=>=dev-lang/go-1.12 app-arch/unzip
 DEFINED_PHASES=compile install postinst prepare unpack
 DEPEND=app-crypt/gpgme:= app-emulation/conmon app-emulation/runc dev-libs/glib:= dev-libs/libassuan:= dev-libs/libgpg-error:= net-firewall/conntrack-tools net-firewall/iptables net-misc/cni-plugins net-misc/socat sys-apps/iproute2 sys-libs/libseccomp:= btrfs? ( sys-fs/btrfs-progs ) device-mapper? ( sys-fs/lvm2:= ) selinux? ( sys-libs/libselinux:= ) systemd? ( sys-apps/systemd:= )
 DESCRIPTION=OCI-based implementation of Kubernetes Container Runtime Interface
@@ -11,5 +11,5 @@ RDEPEND=app-crypt/gpgme:= app-emulation/conmon app-emulation/runc dev-libs/glib:
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/cri-o/cri-o/archive/v1.16.3.tar.gz -> cri-o-1.16.3.tar.gz
-_eclasses_=go-module	3a07ded6d4ec510a4d8c98cd1c2a07ab
+_eclasses_=go-module	fed1f8fd90b8957c6cb45f66536a3ee0
 _md5_=514eb315b499fd748d2df6b5c96143a7

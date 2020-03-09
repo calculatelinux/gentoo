@@ -32,6 +32,200 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-03-07)
+# The following packages are stuck on Python 3.6, and have no reverse
+# dependencies.  Please let the Python team know if you find some
+# of them still useful.
+# Removal in 30 days.  Bug #711808.
+dev-python/CacheControl
+dev-python/ImageHash
+dev-python/ReParser
+dev-python/aadict
+dev-python/abstract_rendering
+dev-python/aioeventlet
+dev-python/aiotest
+dev-python/amqplib
+dev-python/anyjson
+dev-python/asciimatics
+dev-python/asset
+dev-python/atom
+dev-python/batinfo
+dev-python/bcolz
+dev-python/beaker
+dev-python/biplist
+dev-python/blaze
+dev-python/cgroup-utils
+dev-python/chameleon
+dev-python/colander
+dev-python/colorful
+dev-python/columnize
+dev-python/common
+dev-python/crumbs
+dev-python/cssselect2
+dev-python/cx_Freeze
+dev-python/d2to1
+dev-python/datashape
+dev-python/deform
+dev-python/distlib
+dev-python/django-appconf
+dev-python/django-baker
+dev-python/django-crispy-forms
+dev-python/django-discover-runner
+dev-python/django-grappelli
+dev-python/django-haystack
+dev-python/django-nose
+dev-python/django-picklefield
+dev-python/django-recaptcha
+dev-python/django-select2
+dev-python/django-tinymce
+dev-python/dogpile-core
+dev-python/dynd-python
+dev-python/embedly
+dev-python/envoy
+dev-python/fedmsg
+dev-python/flask-admin
+dev-python/flask-peewee
+dev-python/flask-pymongo
+dev-python/flask-socketio
+dev-python/flask-uploads
+dev-python/flipflop
+dev-python/formencode
+dev-python/fudge
+dev-python/geoalchemy2
+dev-python/geopy
+dev-python/gevent-socketio
+dev-python/gitlabform
+dev-python/globre
+dev-python/glymur
+dev-python/hiredis
+dev-python/hiro
+dev-python/httreplay
+dev-python/husl
+dev-python/hvac
+dev-python/influxdb
+dev-python/intelhex
+dev-python/into
+dev-python/ipcalc
+dev-python/iso3166
+dev-python/iso_639
+dev-python/jog
+dev-python/jpype
+dev-python/jsmin
+dev-python/json-tools
+dev-python/keepassx
+dev-python/kitchen
+dev-python/libzilla
+dev-python/locustio
+dev-python/mailmanclient
+dev-python/meteor-ejson
+dev-python/mimerender
+dev-python/mmh3
+dev-python/mockldap
+dev-python/multipledispatch
+dev-python/netmiko
+dev-python/nltk
+dev-python/nosehtmloutput
+dev-python/odo
+dev-python/passwordmeter
+dev-python/pdb-clone
+dev-python/pdoc
+dev-python/peppercorn
+dev-python/pgpdump
+dev-python/pillowfight
+dev-python/placefinder
+dev-python/prettyprinter
+dev-python/prometheus_flask_exporter
+dev-python/pxml
+dev-python/py-lz4framed
+dev-python/py2neo
+dev-python/pycanberra
+dev-python/pycipher
+dev-python/pycmd
+dev-python/pycobertura
+dev-python/pydot-ng
+dev-python/pyee
+dev-python/pyev
+dev-python/pyfiglet
+dev-python/pygcrypt
+dev-python/pygeocoder
+dev-python/pyhcl
+dev-python/pykka
+dev-python/pymtp
+dev-python/pynzb
+dev-python/pyopencl
+dev-python/pyprof2calltree
+dev-python/pyshark
+dev-python/pysnmp-apps
+dev-python/pysnmp-mibs
+dev-python/pysolr
+dev-python/pystache
+dev-python/pytest-arraydiff
+dev-python/pytest-cython
+dev-python/pytest-isort
+dev-python/pytest-mpl
+dev-python/python-afl
+dev-python/python-cluster
+dev-python/python-ddp
+dev-python/python-ebtables
+dev-python/python-engineio
+dev-python/python-hpilo
+dev-python/python-meteor
+dev-python/python-otrs
+dev-python/python-scsi
+dev-python/python-socketio
+dev-python/python-twitter
+dev-python/python-uinput
+dev-python/pythonmagick
+<dev-python/pyx-0.15
+dev-python/rackspace-monitoring
+dev-python/readlike
+dev-python/redis-py-cluster
+dev-python/regendoc
+dev-python/ropemode
+dev-python/schedule
+dev-python/schema
+dev-python/scp
+dev-python/seaborn
+dev-python/setuptools_hg
+dev-python/simplekv
+dev-python/slackclient
+dev-python/spark-parser
+dev-python/sphinx-better-theme
+dev-python/sphinxcontrib-googleanalytics
+dev-python/sphinxcontrib-programoutput
+dev-python/tempest-lib
+dev-python/testify
+dev-python/tinycss2
+dev-python/tlslite
+dev-python/tpg
+dev-python/translationstring
+dev-python/trollius
+dev-python/twitter
+dev-python/twython
+dev-python/uhashring
+dev-python/uncompyle6
+dev-python/venusian
+dev-python/versiontools
+dev-python/vulture
+dev-python/weasyprint
+dev-python/wsgiintercept
+dev-python/wtf-peewee
+dev-python/xdis
+dev-python/zc-buildout
+
+# Mikle Kolyada <zlogene@gentoo.org> (2020-03-07)
+# virtual/shadow has the only alive provider.
+# sys-apps/hardened-shadow is unmaintained for the past
+# five years (at least). Upstream is dead.
+# Removal in 30 days.
+sys-apps/hardened-shadow
+virtual/shadow
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-06)
+# Python 2 only.  Last update in 2012.  Blocker for a few dependencies.
+# Removal in 30 days.  Bug #708336.
+www-apps/ownpaste
+
 # Michał Górny <mgorny@gentoo.org> (2020-03-04)
 # Dead.  Last commit in 2011.  Python 2 only.  Requires old version
 # of Django.  The Gentoo instance is being replaced by pluto
@@ -55,6 +249,7 @@ dev-libs/rocm-opencl-driver
 # Breaks at least app-text/texlive-core and app-office/libreoffice right now,
 # bugs 711096, 711102.
 ~app-text/poppler-0.86.0
+~app-text/poppler-0.86.1
 
 # Miroslav Šulc <fordfrog@gentoo.org> (2020-02-27)
 # Depends on dev-java/eclipse-ecj:4.13 which
@@ -103,14 +298,6 @@ sci-misc/pythoncad
 # Unmaintained revdep on dev-python/pygtk blocking its removal, py2-only
 # Last release in 2013, bug #710164, masked for removal in 30 days.
 sci-electronics/gresistor
-
-# Jason A. Donenfeld <zx2c4@gentoo.org> (2020-02-24)
-# Unsupported upstream version, likely has security bugs. Not removed
-# immediately because of backwards incompatible configuration changes
-# with the newer version in the tree.
-#
-# Removal in 14 days. Bug #710754.
-~mail-mta/opensmtpd-6.0.3_p1
 
 # Marek Szuba <marecki@gentoo.org> (2020-02-24)
 # Deprecated upstream in Q1'2018 in favour of dev-libs/intel-neo and
@@ -393,12 +580,6 @@ sys-apps/hbaapi
 # Dead upstream, broken by Qt 5.14, bug #703930. Masked for removal in 30 days.
 net-nntp/kwooty
 
-# Mike Pagano <mpagano@gentoo.org> (2020-02-07)
-# The standalone ebuild for this driver is made
-# unnecessary as it is included in the package:
-# sys-kernel/linux-firmware. Bug #708622
-sys-firmware/iwl6050-ucode
-
 # Patrick McLean <chutzpah@gentoo.org> (2020-02-07)
 # Mask until sys-libs/libxcrypt[system] is unmasked
 >=virtual/libcrypt-2
@@ -414,13 +595,6 @@ net-im/turses
 # All remaining reverse dependencies are masked for removal.
 # Removal in 30 days.  Bug #708332.
 dev-python/egenix-mx-base
-
-# Ulrich Müller <ulm@gentoo.org> (2020-02-05)
-# Last version bump in 2014, while upstream is at 2019/1.
-# Ebuild claims "free-noncomm", but has an inaccessible distfile
-# behind a registration wall. Unresponsive Gentoo maintainer.
-# Masked for removal in 30 days. Bug #702352.
-sci-chemistry/shelx
 
 # Joonas Niilola <juippis@gentoo.org> (2020-02-05)
 # Stagnant upstream with latest release from 2016, python2-only, no maintainer
@@ -528,12 +702,6 @@ dev-java/eclipse-ecj:4.13
 # library please add a note to describe use case to the bug #697826.
 # Masked for removal in a year.
 dev-libs/gmp:3
-
-# Mike Gilbert <floppym@gentoo.org> (2019-10-11)
-# Inactive upstream for many years.
-# Several open bugs.
-# Please migrate to sys-apps/man-db.
-sys-apps/man
 
 # Stefan Strogin <steils@gentoo.org> (2019-09-27)
 # Requires >=dev-lang/lua-5.3 which is masked
