@@ -32,6 +32,53 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-03-11)
+# Unmaintained Trac plugins.  Last bumped in 2013.  Blockers
+# for Python 2 removal.
+# Removal in 30 days.  Bug #712120.
+www-apps/trac-accountmanager
+www-apps/trac-mercurial
+www-apps/trac-tags
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-11)
+# The following Mercurial-related tools do not declare support
+# for Python 3 and have no maintainers.
+# Removal in 30 days.  Bug #712114.
+dev-vcs/hgsubversion
+dev-vcs/hgsvn
+dev-vcs/hgview
+dev-vcs/mercurial-server
+dev-vcs/tortoisehg
+
+# Alexander Tsoy <alexander@tsoy.me> (2020-03-10)
+# media-sound/gtklick: last commit in 2014, python 2 only, blocks
+# dev-python/pygtk removal.
+# Alternatives: media-sound/kmetronome, media-sound/gtick,
+# media-sound/klick (cli)
+#
+# media-libs/pyliblo: last commit in 2015, the only revdep is
+# media-sound/gtklick, there is an actively maintained fork named
+# pyliblo3.
+#
+# Removal in 30 days.  Bug #708172.
+media-sound/gtklick
+media-libs/pyliblo
+
+# Eray Aslan <eras@gentoo.org> (2020-03-09)
+# Mask experimental software
+=mail-mta/postfix-3.6*
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-09)
+# Multiple releases behind.  Stuck at py3.6.  No reverse dependencies.
+# Removal in 30 days.  Bug #711934.
+dev-python/tweepy
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-09)
+# Unmaintained.  Outdated.  Stuck on py3.6, wrong use of eclass.
+# No revdeps -- it is bundled by every consumer anyway.
+# Removal in 30 days.  Bug #711932.
+dev-util/waf
+
 # Michał Górny <mgorny@gentoo.org> (2020-03-07)
 # The following packages are stuck on Python 3.6, and have no reverse
 # dependencies.  Please let the Python team know if you find some
@@ -55,14 +102,11 @@ dev-python/beaker
 dev-python/biplist
 dev-python/blaze
 dev-python/cgroup-utils
-dev-python/chameleon
 dev-python/colander
 dev-python/colorful
 dev-python/columnize
 dev-python/common
 dev-python/crumbs
-dev-python/cssselect2
-dev-python/cx_Freeze
 dev-python/d2to1
 dev-python/datashape
 dev-python/deform
@@ -149,7 +193,6 @@ dev-python/pyfiglet
 dev-python/pygcrypt
 dev-python/pygeocoder
 dev-python/pyhcl
-dev-python/pykka
 dev-python/pymtp
 dev-python/pynzb
 dev-python/pyopencl
@@ -185,7 +228,6 @@ dev-python/ropemode
 dev-python/schedule
 dev-python/schema
 dev-python/scp
-dev-python/seaborn
 dev-python/setuptools_hg
 dev-python/simplekv
 dev-python/slackclient
@@ -195,7 +237,6 @@ dev-python/sphinxcontrib-googleanalytics
 dev-python/sphinxcontrib-programoutput
 dev-python/tempest-lib
 dev-python/testify
-dev-python/tinycss2
 dev-python/tlslite
 dev-python/tpg
 dev-python/translationstring
@@ -576,25 +617,9 @@ dev-lang/rebol-bin
 # packages this anymore, no revdeps. Removal in 30 days.
 sys-apps/hbaapi
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-09)
-# Dead upstream, broken by Qt 5.14, bug #703930. Masked for removal in 30 days.
-net-nntp/kwooty
-
 # Patrick McLean <chutzpah@gentoo.org> (2020-02-07)
 # Mask until sys-libs/libxcrypt[system] is unmasked
 >=virtual/libcrypt-2
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-05)
-# Unmaintained.  No Python 3 support.  Last release ~2014, homepage
-# gone.
-# Removal in 30 days.  Bug #708352.
-net-im/turses
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-05)
-# NIH utility package, last released 2015.  No Python 3 support.
-# All remaining reverse dependencies are masked for removal.
-# Removal in 30 days.  Bug #708332.
-dev-python/egenix-mx-base
 
 # Joonas Niilola <juippis@gentoo.org> (2020-02-05)
 # Stagnant upstream with latest release from 2016, python2-only, no maintainer
@@ -604,16 +629,6 @@ dev-python/egenix-mx-base
 # net-misc/connman, net-misc/dhcpcd, net-misc/netifrc, net-misc/NetworkManager
 # and so on. Removal in ~90 days. #708316
 net-misc/wicd
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-05)
-# Fails to build for at least 6 months.  No Python 3 support.  Last
-# bumped in 2016.  Bad quality ebuild.
-#
-# dev-python/dpkt has no other revdeps.
-#
-# Removal in 30 days.  Bug #692340.
-net-libs/nfqueue-bindings
-dev-python/dpkt
 
 # Mart Raudsepp <leio@gentoo.org> (2020-02-03)
 # Known breakages that need to be handled first, bug 698922
@@ -870,7 +885,7 @@ sys-devel/automake:1.10
 # switch the compiler / the binutils) ASAP. If you need them for a specific
 # (isolated) use case, feel free to unmask them on your system.
 <sys-devel/gcc-5.4
-<sys-libs/glibc-2.28
+<sys-libs/glibc-2.29
 <sys-devel/binutils-2.32-r1
 <sys-devel/binutils-hppa64-2.32-r1
 <sys-libs/binutils-libs-2.32-r1
