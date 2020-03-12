@@ -32,6 +32,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Ulrich Müller <ulm@gentoo.org> (2020-03-11)
+# No license. HOMEPAGE is gone.
+# Masked for removal in 14 days. Bug #450454.
+games-misc/fortune-mod-humorixfortunes
+
+# Matt Turner <mattst88@gentoo.org> (2020-03-11)
+# Masked for testing due to removal of libnm-glib (bug #665338)
+>=net-misc/networkmanager-1.20
+
 # Michał Górny <mgorny@gentoo.org> (2020-03-11)
 # Unmaintained Trac plugins.  Last bumped in 2013.  Blockers
 # for Python 2 removal.
@@ -589,11 +598,6 @@ dev-lang/vala:0.48
 # Stefan Strogin <steils@gentoo.org> (2020-02-12)
 # Mask for testing revdeps.
 >=dev-games/mygui-3.4.0
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-11)
-# Upstream "unable to port away from" dev-python/pygtk, bug #708156
-# Masked for removal in 30 days.
-sci-calculators/gonvert
 
 # David Seifert <soap@gentoo.org> (2020-02-11)
 # Unmaintained, EAPI 4, last release over 9 years ago, no revdeps.

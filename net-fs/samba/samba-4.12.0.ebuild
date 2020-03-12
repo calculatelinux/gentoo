@@ -41,7 +41,7 @@ MULTILIB_WRAPPED_HEADERS=(
 CDEPEND="
 	>=app-arch/libarchive-3.1.2[${MULTILIB_USEDEP}]
 	dev-lang/perl:=
-	dev-libs/icu[${MULTILIB_USEDEP}]
+	dev-libs/icu:=[${MULTILIB_USEDEP}]
 	dev-libs/libbsd[${MULTILIB_USEDEP}]
 	dev-libs/libtasn1[${MULTILIB_USEDEP}]
 	dev-libs/popt[${MULTILIB_USEDEP}]
@@ -289,7 +289,9 @@ multilib_src_install() {
 	keepdir /var/cache/samba
 	keepdir /var/lib/ctdb
 	keepdir /var/lib/samba/{bind-dns,private}
+	keepdir /var/lock/samba
 	keepdir /var/log/samba
+	keepdir /var/run/samba
 }
 
 multilib_src_test() {
