@@ -547,7 +547,6 @@ app-emulation/libvirt:openvz - Support management of OpenVZ virtualisation (open
 app-emulation/libvirt:parted - Allow using real disk partitions as pool for disk image storage, using sys-block/parted to create, resize and delete them.
 app-emulation/libvirt:pcap - Support auto learning IP addreses for routing
 app-emulation/libvirt:phyp - Support IBM HMC / IVM hypervisor via PHYP protocol
-app-emulation/libvirt:pm-utils - Add runtime support for sys-power/pm-utils
 app-emulation/libvirt:qemu - Support management of QEMU virtualisation (app-emulation/qemu)
 app-emulation/libvirt:rbd - Enable rados block device support via sys-cluster/ceph
 app-emulation/libvirt:vepa - Virtual Ethernet Port Aggregator (VEPA) / 802.1Qbg support. Relies on macvtap support.
@@ -2563,6 +2562,7 @@ dev-python/networkx:pandas - Provides a DataFrame, which is a tabular data struc
 dev-python/networkx:scipy - Enables scipy backend
 dev-python/networkx:yaml - Provides YAML format reading and writing
 dev-python/nltk:numpy - Use numpy for the saved word tokenizer
+dev-python/nltk-data:extra - Install the complete set of data files. Otherwise, only files required by tests are installed.
 dev-python/nose:coverage - Pull in dev-python/coverage needed for nose-xcover plugin.
 dev-python/numexpr:mkl - Enable support for Intel Vector Math Library, part of sci-libs/mkl.
 dev-python/pandas:full-support - Pull all packages to give pandas full support
@@ -3807,7 +3807,6 @@ mail-client/mutt:smtp - Enable support for direct SMTP delivery
 mail-client/mutt:tokyocabinet - Enable dev-db/tokyocabinet database backend for header caching
 mail-client/neomutt:berkdb - Enable BDB (Berkley DB) backend for header caching
 mail-client/neomutt:gdbm - Enable GDBM (GNU dbm) backend for header caching
-mail-client/neomutt:gpg - Enable support for app-crypt/gpgme
 mail-client/neomutt:gpgme - Build gpgme backend to support S/MIME, PGP/MIME and traditional/inline PGP
 mail-client/neomutt:kyotocabinet - Enable Kyoto Cabinet database backend for header caching
 mail-client/neomutt:lmdb - Enable LMDB (Lightning Memory-Mapped Database) backend for header caching
@@ -3815,7 +3814,6 @@ mail-client/neomutt:notmuch - Enable support for net-mail/notmuch
 mail-client/neomutt:pgp-classic - Build classic_pgp backend to support PGP/MIME and traditional/inline PGP
 mail-client/neomutt:pgp_classic - Build classic_pgp backend to support PGP/MIME and traditional/inline PGP
 mail-client/neomutt:qdbm - Enable QDBM (Quicker Database Manager) database backend for header caching
-mail-client/neomutt:smime - Enable support for smime
 mail-client/neomutt:smime-classic - Build classic_smime backend to support S/MIME
 mail-client/neomutt:smime_classic - Build classic_smime backend to support S/MIME
 mail-client/neomutt:tokyocabinet - Enable Tokyo Cabinet database backend for header caching
