@@ -5860,13 +5860,15 @@ net-im/prosody:libevent - Use libevent for event handling
 net-im/prosody:zlib - Support for compressing XMPP streams with mod_compression
 net-im/psi:aspell - Enable spellchecking using app-text/aspell
 net-im/psi:enchant - Enable spellchecking using app-text/enchant
-net-im/psi:extras - Enable Psi+ patcheset
+net-im/psi:extras - Enable Psi+ patchset
 net-im/psi:hunspell - Enable spellchecking using app-text/hunspell
-net-im/psi:iconsets - Install additional iconsets, some of them has not clear licensing
-net-im/psi:sql - Enable psi-new-history extras patch
-net-im/psi:webengine - Use dev-qt/qtwebengine instead of dev-qt/qtwebkit
-net-im/psi:webkit - Enable themed, html-based chatlogs
+net-im/psi:iconsets - Install additional iconsets, some of them have no clear licensing
+net-im/psi:keyring - Enable storing password in system keyring manager
+net-im/psi:webengine - Enable themed, html-based chatlogs using dev-qt/qtwebengine
+net-im/psi:webkit - Enable themed, html-based chatlogs using dev-qt/qtwebkit
 net-im/psi:whiteboarding - Enable experimental interactive SVG drawing
+net-im/psi:xscreensaver - Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events
+net-im/psimedia:extras - Enable Psi+ mode (required when built for Psi+)
 net-im/pyicq-t:webinterface - Install dependencies needed for the web interface
 net-im/qtox:X - Adds support for X11
 net-im/qtox:notification - Adds support for GTK Status Notifier tray backends
@@ -7664,8 +7666,12 @@ sci-physics/espresso:cuda - Enable cuda support
 sci-physics/espresso:examples - Installs the examples
 sci-physics/fastjet:cgal - Use sci-mathematics/cgal instead of bundled algorithms
 sci-physics/fastjet:plugins - Build all standard and C++ plugins
+sci-physics/geant:c++11 - Build using the C++11 standard
+sci-physics/geant:c++14 - Build using the C++14 standard
+sci-physics/geant:c++17 - Build using the C++17 standard
 sci-physics/geant:data - Add a lot of standard physics data files for geant4
 sci-physics/geant:dawn - Add support for media-gfx/dawn (3D postscript rendering)
+sci-physics/geant:freetype - Add support for media-libs/freetype
 sci-physics/geant:gdml - Enable geometry markup language for xml
 sci-physics/geant:geant3 - Add compatibility for geant321 to geant4
 sci-physics/geant:inventor - Add support for Open Inventor SGI toolkit via Coin3D
