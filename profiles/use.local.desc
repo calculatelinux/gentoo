@@ -5281,13 +5281,6 @@ net-analyzer/hydra:gcrypt - Enable radmin2 support through dev-libs/libgcrypt
 net-analyzer/hydra:libssh - Enable SSH support through net-libs/libssh
 net-analyzer/hydra:mongodb - MongoDB support through dev-libs/mongo-c-driver
 net-analyzer/hydra:ncp - NCP protocol (NetWare) support through net-fs/ncpfs
-net-analyzer/icinga:contrib - additional scripts
-net-analyzer/icinga:eventhandler - Adds support for running custom scripts whenever a host or service state change occurs
-net-analyzer/icinga:idoutils - Adds DB support
-net-analyzer/icinga:lighttpd - Adds Lighttpd support
-net-analyzer/icinga:plugins - Adds support for nagios plugins
-net-analyzer/icinga:web - Adds generic web interface support
-net-analyzer/icinga-web:pnp - Enables pnp4nagios integration
 net-analyzer/icinga2:console - Adds support for line-editing in the console
 net-analyzer/icinga2:lto - Adds support for link time optimization
 net-analyzer/icinga2:mail - Allows for mailing of alerts
@@ -5403,7 +5396,7 @@ net-analyzer/pmacct:rabbitmq - Enable support for RabbitMQ through net-libs/rabb
 net-analyzer/pmacct:st-bins - Link Streaming Telemetry daemon binaries
 net-analyzer/pmacct:traffic-bins - Link IPv4/IPv6 traffic accounting binaries
 net-analyzer/pmacct:zmq - Enable support for ZeroMQ through net-libs/zeromq
-net-analyzer/pnp4nagios:icinga - Build against net-analyzer/icinga2 or net-analyzer/icinga instead of net-analyzer/nagios-core
+net-analyzer/pnp4nagios:icinga - Build against net-analyzer/icinga2 instead of net-analyzer/nagios-core
 net-analyzer/pnp4nagios:nagios - Build against net-analyzer/nagios-core (the default)
 net-analyzer/prelude-lml:tls - Enables Prelude LML support Syslog through TLS using net-libs/gnutls.
 net-analyzer/rrdcollect:exec - Enable exec:/// support
@@ -5649,6 +5642,8 @@ net-firewall/conntrack-tools:cttimeout - Use net-libs/libnetfilter_cttimeout for
 net-firewall/conntrack-tools:libtirpc - Use net-libs/libtirpc for RPC support
 net-firewall/ebtables:perl - Install the ebtables-save script which uses perl
 net-firewall/firehol:ipset - Use net-firewall/ipset.
+net-firewall/firewalld:iptables - Add support for net-firewall/nftables as firewall backend
+net-firewall/firewalld:nftables - Add support for net-firewall/nftables as firewall backend
 net-firewall/fwknop:client - Build fwknop client
 net-firewall/fwknop:extras - Install utility scripts and AppArmor policy for fwknopd
 net-firewall/fwknop:firewalld - Use net-firewall/firewalld as the default server backend
@@ -5872,7 +5867,6 @@ net-im/psimedia:extras - Enable Psi+ mode (required when built for Psi+)
 net-im/pyicq-t:webinterface - Install dependencies needed for the web interface
 net-im/qtox:X - Adds support for X11
 net-im/qtox:notification - Adds support for GTK Status Notifier tray backends
-net-im/skypeforlinux:pax_kernel - Triggers a paxmarking of the main skype binary
 net-im/spectrum2:frotz - Enables the Z-Engine backend.
 net-im/spectrum2:irc - Enables the IRC backend, based on net-im/libcommuni.
 net-im/spectrum2:purple - Enables the libpurple backend, based on net-im/pidgin.
