@@ -32,6 +32,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2020-03-19)
+# Masked for security issues, bug #699840
+# No reverse dependencies. Use dev-ruby/haml:5 instead.
+# Removal in 30 days.
+dev-ruby/haml:4
+
 # Michał Górny <mgorny@gentoo.org> (2020-03-18)
 # Unmaintained.  Version bump pending.  No Python 3 support upstream.
 # Removal in 30 days.  Bug #708268.
@@ -185,7 +191,6 @@ dev-python/gevent-socketio
 dev-python/gitlabform
 dev-python/globre
 dev-python/glymur
-dev-python/hiredis
 dev-python/hiro
 dev-python/httreplay
 dev-python/husl
@@ -197,7 +202,6 @@ dev-python/iso3166
 dev-python/iso_639
 dev-python/jog
 dev-python/jpype
-dev-python/jsmin
 dev-python/json-tools
 dev-python/keepassx
 dev-python/kitchen
@@ -238,7 +242,6 @@ dev-python/pyhcl
 dev-python/pymtp
 dev-python/pynzb
 dev-python/pyopencl
-dev-python/pyprof2calltree
 dev-python/pyshark
 dev-python/pysnmp-apps
 dev-python/pysnmp-mibs
@@ -495,100 +498,6 @@ net-analyzer/zabbix
 # Removal in 30 days.  Bug #691044.
 dev-python/tlslite
 
-# Michał Górny <mgorny@gentoo.org> (2020-02-17)
-# Unmaintained.  Last bumped in 2018.  Blocks dev-qt/qtwebkit removal.
-# Removal in 30 days.  Bug #709850.
-app-text/openlp
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-17)
-# Unmaintained.  No Python 3 support.  Last bumped in 2013.  Numerous
-# releases behind upstream.
-# Removal in 30 days.  Bug #709460.
-app-admin/bcfg2
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-17)
-# Unmaintained.  No Python 3 support.  Needs a version bump.
-# Removal in 30 days.  Bug #708956.
-app-misc/tails-installer
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-17)
-# Unmaintained.  Last release in 2009.  Python 2 only, depends on dead
-# dev-python/pygtk and dev-python/pygtksourceview.  Multiple unresolved
-# bugs including crashes.
-# Removal in 30 days.  Bug #708096.
-app-portage/porthole
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-17)
-# Unmaintained upstream.  Last release in 2008.  Python 2 only.
-# No reverse dependencies left.
-# Removal in 30 days.  Bug #707906.
-dev-python/gnuplot-py
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-17)
-# Last release in 2011.  Python 2 only.
-# Removal in 30 days.  Bug #705652.
-sci-geosciences/tappy
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-17)
-# Unmaintained.  Last (alpha) release in 2008.  Python 2 only.  Multiple
-# bugs open.
-# Removal in 30 days.  Bug #705606.
-net-proxy/http-replicator
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-17)
-# Discontinued as a standalone package, merged into AstroPy.  No reverse
-# dependencies.
-# Removal in 30 days.  Bug #704038.
-dev-python/asciitable
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-17)
-# Superseded by media-gfx/gmic.  Fails to build.
-# Removal in 30 days.  Bug #628116.
-media-gfx/greycstoration
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-17)
-# Unmaintained upstream.  Last release in 2011.  Python 2 only.
-# Removal in 30 days.  Bug #703858.
-games-strategy/outerspace
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-17)
-# Unmaintained upstream.  Last release in 2011, 2.0 branch never
-# finished.  Python 2 only.
-# Removal in 30 days.  Bug #703856.
-games-strategy/lightyears
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-17)
-# SRC_URI is dead and the package cannot be mirrored.  Last updated
-# in 2016, newer versions are non-trivial to bump.
-# Removal in 30 days.  Bug #694548.
-net-p2p/soulseek-qt
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-17)
-# Effectively unmaintained.  Fails to build for almost a year now.
-# Removal in 30 days.  Bug #681054.
-games-rpg/arx-fatalis-data
-games-rpg/arx-fatalis-demo
-games-rpg/arx-libertatis
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-17)
-# Unmaintained.  Does not build with any version of app-antivirus/clamav
-# available in Gentoo.
-# Removal in 30 days.  Bug #672668.
-app-antivirus/skyldav
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-17)
-# Unmaintained.  Reported test failures.  No reverse dependencies.
-# Removal in 30 days.  Bug #659796.
-dev-python/Kivy
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-17)
-# Based on very old code needing a lot of patches.  Minimal upstream
-# activity since early 2011, last patches accepted in 2016.  Multiple
-# unresolved bugs.  app-editors/vim[minimal] is the recommended
-# replacement.
-# Removal in 30 days.  Bug #690102.
-app-editors/nvi
-
 # Rich Freeman <rich0@gentoo.org> (2020-02-16)
 # Dead upstream, obsolete deps.
 app-misc/sleepyhead
@@ -680,11 +589,6 @@ app-backup/tob
 # dependencies.  Bug #663794, #666916, #666922, #667062, #678068,
 # #681678, #684420, #694488. Removal in 30 days.
 dev-db/clickhouse
-
-# Bernard Cafarelli <voyageur@gentoo.org> (2019-11-29)
-# Beta for new major version with initial Python 3 support
-# Remove mask when stable version is released
->=app-backup/rdiff-backup-1.4.0_beta
 
 # Lars Wendler <polynomial-c@gentoo.org> (2019-11-14)
 # Breaks archives containing relative paths
