@@ -32,6 +32,31 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-03-20)
+# Deprecated GNOME libraries, replaced by introspection.  Python 2 only.
+# No reverse dependencies.
+# Removal in 30 days.  Bug #713566.
+dev-python/gnome-python-desktop-base
+dev-python/gnome-python-extras-base
+dev-python/gnome-vfs-python
+dev-python/gtkspell-python
+dev-python/libbonobo-python
+dev-python/libgnome-python
+dev-python/libgnomecanvas-python
+dev-python/librsvg-python
+dev-python/pyorbit
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-20)
+# Added in 2009, not bumped since.  Python 2 only, requires dead
+# dev-python/pygtk.  Gone from HOMEPAGE.
+# Removal in 30 days.  Bug #710166.
+sci-electronics/geda-xgsch2pcb
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-19)
+# Unmaintained.  Added in 2014 and not touched since.  Python 2 only.
+# Removal in 30 days.  Bug #713506.
+net-ftp/pybootd
+
 # Hans de Graaff <graaff@gentoo.org> (2020-03-19)
 # Masked for security issues, bug #699840
 # No reverse dependencies. Use dev-ruby/haml:5 instead.
@@ -484,13 +509,6 @@ media-sound/pympd
 # Abandoned upstream, broken by current dbus-python, py2-only, blocks
 # dev-python/pygtk removal, bug #626374. Masked for removal in 30 days.
 media-sound/volti
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-19)
-# (on behalf of QA team)
-# Masked due to unresolved vulnerabilities.  Please do not remove
-# the mask until they are resolved and confirmed fixed.
-# Bugs #629882, #629884.
-net-analyzer/zabbix
 
 # Michał Górny <mgorny@gentoo.org> (2020-02-18)
 # Dead and unmaintained.  Last release in 2015.  Broken with newer
