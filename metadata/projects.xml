@@ -411,6 +411,11 @@
       <role>Biology</role>
     </member>
     <member>
+      <email>pacho@gentoo.org</email>
+      <name>Pacho Ramos</name>
+      <role>Biology</role>
+    </member>
+    <member>
       <email>soap@gentoo.org</email>
       <name>David Seifert</name>
       <role>Biology</role>
@@ -516,6 +521,11 @@
     <member>
       <email>nicolasbock@gentoo.org</email>
       <name>Nicolas Bock</name>
+      <role>Chemistry</role>
+    </member>
+    <member>
+      <email>pacho@gentoo.org</email>
+      <name>Pacho Ramos</name>
       <role>Chemistry</role>
     </member>
   </project>
@@ -1841,10 +1851,6 @@
     <name>LXDE Project</name>
     <url>https://wiki.gentoo.org/wiki/Project:LXDE</url>
     <description>The LXDE project manages ebuilds in Gentoo for [http://lxde.org/ LXDE], the Lightweight X11 Desktop Environment, and handles related issues.</description>
-    <member is-lead="1">
-      <email>hanno@gentoo.org</email>
-      <name>Hanno Böck</name>
-    </member>
   </project>
   <project>
     <email>lxqt@gentoo.org</email>
