@@ -48,14 +48,6 @@ media-video/pymp
 # No signs of porting work, bug #708076, masked for removal in 30 days.
 x11-misc/xplanetFX
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-03-21)
-# Package appears dead upstream, purpose unclear after media-sound/audacious-3.9
-# is gone, bug #671828. GTK2 (3.10.1) or Qt5 (4.0) version of Audacious remains.
-# Masked for removal in 30 days.
-media-libs/freeverb3
-=media-sound/audacious-3.9*
-=media-plugins/audacious-plugins-3.9*
-
 # Jonas Stein <jstein@gentoo.org> (2020-03-21)
 # Package masked for removal. Broken SRC_URI,
 # upstream is dead.
@@ -255,7 +247,6 @@ dev-python/flask-socketio
 dev-python/flask-uploads
 dev-python/flipflop
 dev-python/formencode
-dev-python/fudge
 dev-python/geoalchemy2
 dev-python/geopy
 dev-python/gevent-socketio
@@ -400,9 +391,7 @@ dev-go/ed25519
 dev-libs/rocm-opencl-driver
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-02-29)
-# Breaks at least app-text/texlive-core and app-office/libreoffice right now,
-# bugs 711096, 711102.
-~app-text/poppler-0.86.0
+# Breaks app-office/libreoffice right now, bug #711102.
 ~app-text/poppler-0.86.1
 
 # Miroslav Šulc <fordfrog@gentoo.org> (2020-02-27)
