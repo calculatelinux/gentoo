@@ -32,6 +32,24 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-03-25)
+# Unmaintained.  Python 2 only.  Last commit in 2013.
+# Removal in 30 days.  Bug #714632.
+net-irc/redirbot
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-25)
+# Unmaintained.  Python 3 support requires a version bump.  Bad quality
+# ebuild.
+# Removal in 30 days.  Bug #710240.
+media-video/syncplay
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-25)
+# Unmaintained.  Python 2 only.  Last release in 2009, homepage
+# archived.  Last user of dev-python/nevow.
+# Removal in 30 days.  Bug #714626.
+net-im/pyicq-t
+dev-python/nevow
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-03-22)
 # Unmaintained revdep on dev-python/pygtk blocking its removal, py2-only
 # Possible alternative: media-video/simplescreenrecorder
@@ -135,11 +153,6 @@ mail-filter/spambayes
 # Matthew Thode <prometheanfire@gentoo.org> (2020-03-13)
 # masked for removal in 14 days. Bug #712310
 dev-python/cliff-tablib
-
-# Ulrich Müller <ulm@gentoo.org> (2020-03-11)
-# No license. HOMEPAGE is gone.
-# Masked for removal in 14 days. Bug #450454.
-games-misc/fortune-mod-humorixfortunes
 
 # Matt Turner <mattst88@gentoo.org> (2020-03-11)
 # Masked for testing due to removal of libnm-glib (bug #665338)
@@ -305,8 +318,6 @@ dev-python/pymtp
 dev-python/pynzb
 dev-python/pyopencl
 dev-python/pyshark
-dev-python/pysnmp-apps
-dev-python/pysnmp-mibs
 dev-python/pysolr
 dev-python/pystache
 dev-python/pytest-arraydiff
