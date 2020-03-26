@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit autotools
+inherit autotools desktop xdg-utils
 
 DESCRIPTION="A fast and lightweight web browser running in both graphics and text mode"
 HOMEPAGE="http://links.twibright.com/"
@@ -75,7 +75,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	fbcon? ( virtual/os-headers )
-	livecd? ( virtual/os-headers )"
+	livecd? ( virtual/os-headers )
+	X? ( dev-util/desktop-file-utils )"
 
 REQUIRED_USE="!livecd? ( fbcon? ( gpm ) )
 	svga? ( suid )"
@@ -83,10 +84,7 @@ REQUIRED_USE="!livecd? ( fbcon? ( gpm ) )
 DOCS=( AUTHORS BRAILLE_HOWTO ChangeLog KEYS NEWS README SITES )
 
 src_prepare() {
-	if use X; then
-		inherit xdg
-		xdg_src_prepare
-	fi
+	use X && xdg_environment_reset
 
 	if use unicode; then
 		pushd intl > /dev/null || die
@@ -104,6 +102,8 @@ src_prepare() {
 	# Upstream configure produced by broken autoconf-2.13. This also fixes
 	# toolchain detection.
 	mv configure.in configure.ac || die
+
+	default
 	eautoreconf #131440 and #103483#c23
 }
 
@@ -147,7 +147,6 @@ src_install() {
 	default
 
 	if use X; then
-		inherit desktop
 		newicon Links_logo.png links.png
 		make_desktop_entry 'links -g %u' Links links 'Network;WebBrowser'
 		local d="${ED}"/usr/share/applications
@@ -161,23 +160,10 @@ src_install() {
 	use suid && fperms 4755 /usr/bin/links
 }
 
-pkg_preinst() {
-	if use X; then
-		inherit xdg
-		xdg_pkg_preinst
-	fi
-}
-
 pkg_postinst() {
-	if use X; then
-		inherit xdg
-		xdg_pkg_postinst
-	fi
+	use X && xdg_desktop_database_update
 }
 
 pkg_postrm() {
-	if use X; then
-		inherit xdg
-		xdg_pkg_postrm
-	fi
+	use X && xdg_desktop_database_update
 }
