@@ -32,6 +32,109 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-03-29)
+# Unmaintained, seriously outdated, vulnerable.  Multiple bugs reported.
+# Stuck on Python 3.6.
+# Removal in 30 days.  Bug #711702.
+app-metrics/buildbot-prometheus
+dev-util/buildbot
+dev-util/buildbot-console-view
+dev-util/buildbot-grid-view
+dev-util/buildbot-pkg
+dev-util/buildbot-waterfall-view
+dev-util/buildbot-worker
+dev-util/buildbot-wsgi-dashboards
+dev-util/buildbot-www
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-28)
+# Unmaintained.  Python 2 only.  Last upstream commit in 2017.
+# Potential fork available (bug #705018) but not guaranteed a drop-in
+# replacement.
+# Removal in 30 days.  Bug #715044.
+dev-vcs/bzr
+dev-vcs/bzr-rewrite
+dev-vcs/bzr-xmloutput
+dev-vcs/bzrtools
+kde-apps/dolphin-plugins-bazaar
+
+# Joshua Kinard <kumba@gentoo.org> (2020-03-28)
+# In Linux ~4.18, IPX (Internetwork Packet eXchange) protocol and
+# NCPFS (NetWare Core Protocol Filesystem) support was removed due
+# to lack of maintenance.  Due to both being dead from a technology
+# standpoint and lack of any upstream activity, mask the below
+# packages and remove in 75 days.
+# Bug #681820
+net-fs/ncpfs
+net-misc/ipx-utils
+
+# Last release 2008. Last upstream commit 2013. Blocks removal of
+# gnome-base/libgnome-keyring
+# Bug #713030
+mail-client/mail-notification
+
+# Matt Turner <mattst88@gentoo.org> (2020-03-28)
+# Last release 2008. Last upstream commit 2013. Blocks removal of
+# gnome-base/libgnome-keyring
+# Bug #713030
+mail-client/mail-notification
+
+# Matt Turner <mattst88@gentoo.org> (2020-03-28)
+# Homepage gone. Dead project. Blocks removal of gnome-base/libgnome-keyring
+# Bug #713028
+games-puzzle/skoosh
+
+# Matt Turner <mattst88@gentoo.org> (2020-03-28)
+# No consumers. Dead project. Blocks removal of gnome-base/libgnome-keyring
+# Bug #713020
+dev-dotnet/gnome-keyring-sharp
+
+# Matthew Thode <prometheanfire@gentoo.org> (2020-03-28)
+# No consumers. requires old dev-python/pika, bug 715152. Removal in 14 days.
+dev-python/pika-pool
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2020-03-27)
+# No consumers. Build problems, bug 668244. Removal in 30 days.
+media-libs/openmoiv
+
+# Rafael G. Martins <rafaelmartins@gentoo.org> (2020-03-27)
+# Python 2 only. Uses old version of DNSimple API.
+# Removal in 30 days.  Bug #712960
+net-dns/dnsimple-dyndns
+
+# Georgy Yakovlev <gyakovlev@gentoo.org> (2020-03-27)
+# Vulnerable old version of icedtea-web #711392
+# new version uses maven + rust
+dev-java/icedtea-web
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-27)
+# Unmaintained.  Not tested for py3.7.  Last bumped in 2015.
+# Bad quality ebuild.
+# Removal in 30 days.  Bug #710230.
+dev-vcs/pwclient
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-27)
+# Unmaintained.  Not tested for py3.7.  Last bumped in 2017.
+# Bad quality ebuild.
+# Removal in 30 days.  Bug #710226.
+dev-util/fatrace
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-27)
+# It was integrated into dev-python/fonttools, and has no reverse
+# dependencies.
+# Removal in 30 days.  Bug #682146.
+dev-python/ufoLib
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-27)
+# No Python 3 support.  Last touched by maintainer in 2014.
+# Removal in 30 days.  Bug #674734.
+www-client/weboob
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2020-03-26)
+# Fail to build with glibc-2.30; no maintainer. Removal in 30days.
+# Bugs 691756, 691710
+x11-terms/aterm
+x11-terms/xvt
+
 # Michał Górny <mgorny@gentoo.org> (2020-03-26)
 # dev-python/aiohttp-cors is dead upstream and does not support
 # Python 3.7 and newer.
@@ -172,10 +275,6 @@ mail-filter/spambayes
 # and 1.8.25 being an old development release
 >=gnome-extra/nm-applet-1.8.25
 
-# Matthew Thode <prometheanfire@gentoo.org> (2020-03-13)
-# masked for removal in 14 days. Bug #712310
-dev-python/cliff-tablib
-
 # Matt Turner <mattst88@gentoo.org> (2020-03-11)
 # Masked for testing due to removal of libnm-glib (bug #665338)
 >=net-misc/networkmanager-1.20
@@ -249,7 +348,6 @@ dev-python/bcolz
 dev-python/beaker
 dev-python/biplist
 dev-python/blaze
-dev-python/cgroup-utils
 dev-python/colander
 dev-python/colorful
 dev-python/columnize
@@ -439,42 +537,6 @@ www-servers/tomcat:9
 # Removal in 30 days.  Bug #709458.
 app-portage/euscan
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-26)
-# Unmaintained revdep on dev-python/pygtk blocking its removal, py2-only
-# Last release in 2011, bug #708106, masked for removal in 30 days.
-app-cdr/gtkcdlabel
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-26)
-# Unmaintained revdep on dev-python/pygtk blocking its removal, py2-only
-# No plans upstream to port away from pygtk, suggested alternative dupeguru
-# not packaged in Gentoo, bug #708112. Masked for removal in 30 days.
-app-misc/fslint
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-26)
-# Unmaintained revdep on dev-python/pygtk blocking its removal, py2-only
-# Last release in 2012, bug #708124, masked for removal in 30 days.
-app-text/keepnote
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-26)
-# Unmaintained revdep on dev-python/pygtk blocking its removal, py2-only
-# Last release in 2012, bug #708142, masked for removal in 30 days.
-x11-misc/revelation
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-26)
-# Unmaintained revdep on dev-python/pygtk blocking its removal, py2-only
-# Last release in 2011, bug #708150, masked for removal in 30 days.
-x11-misc/tintwizard
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-26)
-# Unmaintained revdep on dev-python/pygtk blocking its removal, py2-only
-# Last activity in 2013, bug #710162, masked for removal in 30 days.
-sci-misc/pythoncad
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-26)
-# Unmaintained revdep on dev-python/pygtk blocking its removal, py2-only
-# Last release in 2013, bug #710164, masked for removal in 30 days.
-sci-electronics/gresistor
-
 # Michał Górny <mgorny@gentoo.org> (2020-02-24)
 # app-admin/packagekit-base is Python 2 only and behind upstream.
 # The Portage backend is unmaintained.  Other packages are its reverse
@@ -490,15 +552,6 @@ app-admin/packagekit-gtk
 app-admin/packagekit-qt
 app-backup/deja-dup
 gnome-extra/gnome-packagekit
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-24)
-# Effectively unmaintained in Gentoo.  Multiple versions behind
-# upstream.  Python 2 only.
-# Removal in 30 days.  Bug #709466.
-app-admin/equo
-app-admin/matter
-sys-apps/entropy
-sys-apps/entropy-server
 
 # David Seifert <soap@gentoo.org> (2020-02-23)
 # Last release in 2013, the scons SConstruct script uses variables

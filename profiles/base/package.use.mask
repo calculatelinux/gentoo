@@ -6,6 +6,40 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Joshua Kinard <kumba@gentoo.org> (2020-03-28)
+# NCP support is masked pending removal of net-fs/ncpfs
+# Bug #681820
+net-analyzer/hydra ncp
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-28)
+# Requires masked dev-vcs/bzr.  Remove the mask if breezy is packaged
+# and the package is confirmed to work with it.
+app-portage/layman bazaar
+dev-qt/qt-creator bazaar
+dev-vcs/cvs2svn bazaar
+kde-apps/kdesdk-meta bazaar
+sys-apps/etckeeper bazaar
+<=dev-util/rosinstall-0.7.8 test
+<=dev-util/wstool-0.1.18 test
+<=dev-python/vcstools-0.1.42 test
+
+# Georgy Yakovlev <gyakovlev@gentoo.org> (2020-03-27)
+# Depends on vulnerable old version of icedtea-web #711392
+# new version uses maven + rust
+dev-java/icedtea nsplugin webstart
+dev-java/icedtea-bin nsplugin webstart
+dev-java/openjdk nsplugin webstart
+dev-java/openjdk-bin nsplugin webstart
+dev-java/openjdk-jre-bin nsplugin webstart
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-27)
+# www-client/weboob is masked for removal.
+app-office/kmymoney weboob
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-27)
+# Requires old version of dev-python/docutils.
+dev-util/buildbot doc
+
 # Lars Wendler <polynomial-c@gentoo.org> (2020-03-26)
 # Requires deprecated python2 and pygtk
 mail-client/claws-mail python

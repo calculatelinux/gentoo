@@ -18,7 +18,7 @@ LICENSE="PHP-3.01
 	unicode? ( BSD-2 LGPL-2.1 )"
 
 SLOT="$(ver_cut 1-2)"
-KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ~ia64 ~mips ppc ppc64 ~s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 
 # We can build the following SAPIs in the given order
 SAPIS="embed cli cgi fpm apache2 phpdbg"
@@ -61,7 +61,7 @@ COMMON_DEPEND="
 	curl? ( >=net-misc/curl-7.10.5 )
 	enchant? ( <app-text/enchant-2.0:0 )
 	firebird? ( dev-db/firebird )
-	gd? ( virtual/jpeg:0 media-libs/libpng:0= sys-libs/zlib )
+	gd? ( >=virtual/jpeg-0-r3:0 media-libs/libpng:0= sys-libs/zlib )
 	gdbm? ( >=sys-libs/gdbm-1.8.0:0= )
 	gmp? ( dev-libs/gmp:0= )
 	iconv? ( virtual/libiconv )
