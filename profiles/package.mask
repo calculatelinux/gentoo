@@ -32,6 +32,75 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-03-30)
+# Unmaintained revdep on dev-python/pygtk blocking its removal, py2-only
+# Bugs #484270 and #705646, masked for removal in 30 days.
+dev-python/basemap
+
+# Michał Górny <mgorny@gentoo.org> (2020-03-30)
+# Unmaintained.  Humongous number of vulnerabilities.  Python 2 only.
+# Needs really active maintainer.  app-editors/atom is the only revdep.
+# Removal in 30 days.  Bug #699866.
+dev-util/electron
+app-editors/atom
+app-eselect/eselect-electron
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (2020-03-29)
+# Old releases gone from upstream, new releases use overly restrictive
+# license. For ancient scripts and symbols, use media-fonts/quivira instead.
+# For emojis and pictographs, use media-fonts/noto-emoji instead.
+# Masked for removal in 30 days, bug #715226
+media-fonts/symbola
+
+# Hans de Graaff <graaff@gentoo.org> (2020-03-29)
+# Old ruby24-only rails version that is no longer supported upstream
+# and has known security issues, including dependencies and slots
+# specific to Rails 4.2.
+# Migrate to Rails 5.2.
+# Masked for removal in 30 days.
+dev-ruby/rails:4.2
+dev-ruby/railties:4.2
+dev-ruby/activerecord:4.2
+dev-ruby/actionmailer:4.2
+dev-ruby/actionpack:4.2
+dev-ruby/actionview:4.2
+dev-ruby/activejob:4.2
+dev-ruby/activemodel:4.2
+dev-ruby/activesupport:4.2
+dev-ruby/arel:6.0
+dev-ruby/actionpack-xml_parser:0
+dev-ruby/jquery-rails:3
+dev-ruby/postgres_ext
+dev-ruby/protected_attributes
+dev-ruby/rails-dom-testing:1
+dev-ruby/web-console:0
+# Metasploit is a reverse dependency on Rails 4.2 Upstream shows no
+# sign of moving to a supported Rails version. Metasploit will most
+# likely be moved to an overlay.
+dev-ruby/metasploit-concern
+dev-ruby/metasploit-credential
+dev-ruby/metasploit-model
+dev-ruby/metasploit_data_models
+net-analyzer/metasploit
+dev-ruby/rex-arch
+dev-ruby/rex-bin_tools
+dev-ruby/rex-core
+dev-ruby/rex-encoder
+dev-ruby/rex-exploitation
+dev-ruby/rex-java
+dev-ruby/rex-mime
+dev-ruby/rex-nop
+dev-ruby/rex-ole
+dev-ruby/rex-powershell
+dev-ruby/rex-random_identifier
+dev-ruby/rex-registry
+dev-ruby/rex-rop_builder
+dev-ruby/rex-socket
+dev-ruby/rex-sslscan
+dev-ruby/rex-struct2
+dev-ruby/rex-text
+dev-ruby/rex-zip
+
 # Michał Górny <mgorny@gentoo.org> (2020-03-29)
 # Unmaintained, seriously outdated, vulnerable.  Multiple bugs reported.
 # Stuck on Python 3.6.
@@ -666,12 +735,6 @@ dev-libs/OpenSRF
 # Depends on >=virtual/{jdk,jre}-11 which is masked
 dev-java/ant-eclipse-ecj:4.13
 dev-java/eclipse-ecj:4.13
-
-# Sergei Trofimovich <slyfox@gentoo.org> (2019-10-16)
-# Binary-only slot that provides libgmp.so.3. If you need that
-# library please add a note to describe use case to the bug #697826.
-# Masked for removal in a year.
-dev-libs/gmp:3
 
 # Stefan Strogin <steils@gentoo.org> (2019-09-27)
 # Requires >=dev-lang/lua-5.3 which is masked
