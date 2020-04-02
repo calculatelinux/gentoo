@@ -32,6 +32,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-04-02)
+# Broken and unmaintained upstream, last commit in 2016, bug #715594
+# Use sys-block/partitionmanager instead. Masked for removal in 30 days.
+sys-block/kvpm
+
+# Michael Orlitzky <mjo@gentoo.org> (2020-04-01)
+# Upstream has no idea what they're doing, and every new version
+# introduces more security issues. Freshclam itself can now fetch
+# most third-party signatures, or app-antivirus/fangfrisch serves
+# as a replacement with a sane upstream.
+app-antivirus/clamav-unofficial-sigs
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-03-30)
 # Unmaintained revdep on dev-python/pygtk blocking its removal, py2-only
 # Bugs #484270 and #705646, masked for removal in 30 days.
@@ -135,11 +147,6 @@ kde-apps/dolphin-plugins-bazaar
 # Bug #681820
 net-fs/ncpfs
 net-misc/ipx-utils
-
-# Last release 2008. Last upstream commit 2013. Blocks removal of
-# gnome-base/libgnome-keyring
-# Bug #713030
-mail-client/mail-notification
 
 # Matt Turner <mattst88@gentoo.org> (2020-03-28)
 # Last release 2008. Last upstream commit 2013. Blocks removal of

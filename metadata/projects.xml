@@ -471,7 +471,7 @@
     <email>catalyst@gentoo.org</email>
     <name>Catalyst Project</name>
     <url>https://wiki.gentoo.org/wiki/Project:Catalyst</url>
-    <description>The Gentoo Catalyst Project develops and supports the Catalyst release building tool. Catalyst has been designed to be easy to use, customize, and maintain.</description>
+    <description>The Gentoo Catalyst Project develops and supports the [[Catalyst|Catalyst]] release building tool.</description>
     <member>
       <email>bkohler@gentoo.org</email>
       <name>Ben Kohler</name>
@@ -2534,11 +2534,6 @@
     <name>PostgreSQL</name>
     <url>https://wiki.gentoo.org/wiki/Project:PostgreSQL</url>
     <description>This project is focused on maintaining ebuilds and utilities that are closely tied to PostgreSQL including PostgreSQL itself.</description>
-    <member>
-      <email>mjo@gentoo.org</email>
-      <name>Michael Orlitzky</name>
-      <role>Member</role>
-    </member>
     <member>
       <email>patrick@gentoo.org</email>
       <name>Patrick Lauer</name>
