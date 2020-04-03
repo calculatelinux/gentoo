@@ -28,9 +28,9 @@ SLOT="0"
 
 CPU_FLAGS_X86=(sse{,2,3,4_1,4_2} ssse3)
 
-IUSE="babeltrace +cephfs dpdk fuse grafana jemalloc kerberos ldap libressl"
-IUSE+=" lttng +mgr numa rabbitmq +radosgw +ssl spdk static-libs system-boost"
-IUSE+=" systemd +tcmalloc test xfs zfs"
+IUSE="babeltrace +cephfs custom-cflags dpdk fuse grafana jemalloc kerberos ldap"
+IUSE+=" libressl lttng +mgr numa rabbitmq +radosgw +ssl spdk static-libs"
+IUSE+=" system-boost systemd +tcmalloc test xfs zfs"
 IUSE+=" $(printf "cpu_flags_x86_%s\n" ${CPU_FLAGS_X86[@]})"
 
 COMMON_DEPEND="
@@ -268,6 +268,7 @@ ceph_src_configure() {
 }
 
 src_configure() {
+	use custom-cflags || strip-flags
 	ceph_src_configure
 }
 
