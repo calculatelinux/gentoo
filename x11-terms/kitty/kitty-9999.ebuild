@@ -54,7 +54,7 @@ BDEPEND="virtual/pkgconfig"
 [[ ${PV} == *9999 ]] && BDEPEND+=" >=dev-python/sphinx-1.7"
 
 PATCHES=(
-	"${FILESDIR}"/kitty-9999-flags.patch
+	"${FILESDIR}"/kitty-0.17.2-flags.patch
 	"${FILESDIR}"/${PN}-0.14.4-svg-icon.patch
 )
 
