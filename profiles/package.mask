@@ -32,6 +32,31 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-04-05)
+# Breaks app-text/texlive-core right now, bug #716344.
+~app-text/poppler-0.87.0
+
+# Joonas Niilola <juippis@gentoo.org> (2020-04-05)
+# Not maintained in Gentoo, doesn't build for 2 years, has only
+# deprecated version present in Gentoo. Has a huge number of open
+# bugs. Removal in 30 days. #642952
+www-misc/zoneminder
+
+# Michał Górny <mgorny@gentoo.org> (2020-04-04)
+# Package that used to provide test data for dev-python/cryptography.
+# The modern versions fetch it via SRC_URI and the last version
+# needing split vectors has been removed.
+# Removal in 30 days.  Bug #716204.
+dev-python/cryptography-vectors
+
+# Mikle Kolyada <zlogene@gentoo.org> (2020-04-04)
+# py27-only vim plugins. Masked for removal in 30 days.
+app-vim/automatictexplugin
+app-vim/colorv
+app-vim/slimv
+app-vim/vimcalc
+app-vim/vimpress
+
 # Lars Wendler <polynomial-c@gentoo.org> (2020-04-02)
 # Introduced new privsep (chroot) feature. Masked for testing.
 >=net-misc/dhcpcd-9.0.0
@@ -592,10 +617,6 @@ www-apps/venus
 # Masked for removal in 30 days. Bug #711398
 dev-libs/rocm-opencl-driver
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-29)
-# Breaks app-office/libreoffice right now, bug #711102.
-~app-text/poppler-0.86.1
-
 # Miroslav Šulc <fordfrog@gentoo.org> (2020-02-27)
 # Depends on dev-java/eclipse-ecj:4.13 which
 # depends on >=virtual/{jdk,jre}-11 which is masked
@@ -645,11 +666,6 @@ net-misc/gnome-remote-desktop
 # are developers or want more experimental features
 # and accept a more unstable release.
 >=www-client/chromium-82
-
-# Mart Raudsepp <leio@gentoo.org> (2020-02-12)
-# GNOME 3.35 development release packages
->=dev-libs/vala-common-0.47
-dev-lang/vala:0.48
 
 # Stefan Strogin <steils@gentoo.org> (2020-02-12)
 # Mask for testing revdeps.

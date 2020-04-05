@@ -6,9 +6,9 @@ EAPI=6
 DESCRIPTION="The Nagios metapackage"
 HOMEPAGE="https://www.nagios.org/"
 
-LICENSE="GPL-2"
+LICENSE="metapackage"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ppc ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="~net-analyzer/nagios-core-${PV}
