@@ -14,7 +14,7 @@ tc_is_live() {
 }
 
 if tc_is_live ; then
-	EGIT_REPO_URI="git://gcc.gnu.org/git/gcc.git"
+	EGIT_REPO_URI="https://gcc.gnu.org/git/gcc.git"
 	# naming style:
 	# gcc-10.1.0_pre9999 -> gcc-10-branch
 	#  Note that the micro version is required or lots of stuff will break.
@@ -1730,12 +1730,12 @@ gcc_do_make() {
 		|| die "emake failed with ${GCC_MAKE_TARGET}"
 
 	if is_ada; then
-		# Building standard ada library
-		emake -C gcc gnatlib-shared
 		# Without these links it is not getting the good compiler
 		# Need to check why
 		ln -s gcc ../build/prev-gcc || die
 		ln -s ${CHOST} ../build/prev-${CHOST} || die
+		# Building standard ada library
+		emake -C gcc gnatlib-shared
 		# Building gnat toold
 		emake -C gcc gnattools
 	fi

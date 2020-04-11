@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit flag-o-matic toolchain-funcs autotools
+inherit autotools flag-o-matic toolchain-funcs
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://github.com/strace/strace.git"
@@ -22,6 +22,9 @@ IUSE="aio perl static unwind elfutils"
 
 REQUIRED_USE="?? ( unwind elfutils )"
 
+BDEPEND="
+	virtual/pkgconfig
+"
 LIB_DEPEND="
 	unwind? ( sys-libs/libunwind[static-libs(+)] )
 	elfutils? ( dev-libs/elfutils[static-libs(+)] )
@@ -37,11 +40,13 @@ RDEPEND="
 	perl? ( dev-lang/perl )
 "
 
+PATCHES=(
+	"${FILESDIR}/${PN}-5.5-static.patch"
+)
+
 src_prepare() {
 	default
 
-	# Needed for applied patch (#701516). Remove with next version.
-	# Don't forget about autotools inherit.
 	eautoreconf
 
 	if [[ ! -e configure ]] ; then
@@ -53,8 +58,6 @@ src_prepare() {
 	fi
 
 	filter-lfs-flags # configure handles this sanely
-	# Add -pthread since strace wants -lrt for timer_create, and -lrt uses -lpthread.
-	use static && append-ldflags -static -pthread
 
 	export ac_cv_header_libaio_h=$(usex aio)
 	use elibc_musl && export ac_cv_header_stdc=no
@@ -75,6 +78,7 @@ src_configure() {
 	# Don't require mpers support on non-multilib systems. #649560
 	local myeconfargs=(
 		--enable-mpers=check
+		$(use_enable static)
 		$(use_with unwind libunwind)
 		$(use_with elfutils libdw)
 	)

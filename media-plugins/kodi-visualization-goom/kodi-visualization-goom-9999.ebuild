@@ -28,6 +28,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="
+	media-libs/glm
 	~media-tv/kodi-9999
 	virtual/opengl
 	"

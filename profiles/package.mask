@@ -32,6 +32,37 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2020-04-11)
+# Work in progress, will be unmasked when ready
+~dev-lang/perl-5.30.2
+~virtual/perl-Compress-Raw-Bzip2-2.89.0
+~virtual/perl-Module-CoreList-5.202.003.140
+
+# Alfredo Tupone <tupone@gentoo.org> (2020-04-10)
+# Masked for removal
+# Last release 2002
+# No reverse dependency
+dev-tcltk/tcl-mccp
+
+# Stefan Strogin <steils@gentoo.org> (2020-04-09)
+# Masked for testing
+>=dev-libs/libressl-3.1.0
+
+# Marek Szuba <marecki@gentoo.org> (2020-04-08)
+# All of these block app-eselect/eselect-opencl in order to prevent
+# file collisions in /usr/include/CL and on /usr/lib/libOpenCL.so* .
+# However, eselect-opencl is still required by x11-drivers/nvidia-drivers
+# (even with USE=-uvm, i.e. when it does NOT handle OpenCL) - which by design
+# does not appear in virtual/opencl-3.
+# Moreover, upgrading to either of the loader ebuilds listed here
+# will on systems using FEATURES=collision-protect require prior manual
+# clean-up of libOpenCL links created by eselect-opencl so even with the Nvidia
+# situation taken care of, we should probably publish an appropriate news item
+# before unmasking these.
+>=dev-libs/ocl-icd-2.2.12-r3
+dev-libs/opencl-icd-loader
+dev-util/opencl-headers
+
 # Joonas Niilola <juippis@gentoo.org> (2020-04-05)
 # Not maintained in Gentoo, doesn't build for 2 years, has only
 # deprecated version present in Gentoo. Has a huge number of open
@@ -188,10 +219,6 @@ games-puzzle/skoosh
 # No consumers. Dead project. Blocks removal of gnome-base/libgnome-keyring
 # Bug #713020
 dev-dotnet/gnome-keyring-sharp
-
-# Matthew Thode <prometheanfire@gentoo.org> (2020-03-28)
-# No consumers. requires old dev-python/pika, bug 715152. Removal in 14 days.
-dev-python/pika-pool
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2020-03-27)
 # No consumers. Build problems, bug 668244. Removal in 30 days.
@@ -416,37 +443,6 @@ media-libs/pyliblo
 # Mask experimental software
 =mail-mta/postfix-3.6*
 
-# Michał Górny <mgorny@gentoo.org> (2020-03-09)
-# Multiple releases behind.  Stuck at py3.6.  No reverse dependencies.
-# Removal in 30 days.  Bug #711934.
-dev-python/tweepy
-
-# Michał Górny <mgorny@gentoo.org> (2020-03-09)
-# Unmaintained.  Outdated.  Stuck on py3.6, wrong use of eclass.
-# No revdeps -- it is bundled by every consumer anyway.
-# Removal in 30 days.  Bug #711932.
-dev-util/waf
-
-# Mikle Kolyada <zlogene@gentoo.org> (2020-03-07)
-# virtual/shadow has the only alive provider.
-# sys-apps/hardened-shadow is unmaintained for the past
-# five years (at least). Upstream is dead.
-# Removal in 30 days.
-sys-apps/hardened-shadow
-virtual/shadow
-
-# Michał Górny <mgorny@gentoo.org> (2020-03-06)
-# Python 2 only.  Last update in 2012.  Blocker for a few dependencies.
-# Removal in 30 days.  Bug #708336.
-www-apps/ownpaste
-
-# Michał Górny <mgorny@gentoo.org> (2020-03-04)
-# Dead.  Last commit in 2011.  Python 2 only.  Requires old version
-# of Django.  The Gentoo instance is being replaced by pluto
-# (https://github.com/feedreader/pluto).
-# Removal in 30 days.  Bug #706362.
-www-apps/venus
-
 # Miroslav Šulc <fordfrog@gentoo.org> (2020-02-27)
 # Depends on dev-java/eclipse-ecj:4.13 which
 # depends on >=virtual/{jdk,jre}-11 which is masked
@@ -474,11 +470,6 @@ app-admin/packagekit-gtk
 app-admin/packagekit-qt
 app-backup/deja-dup
 gnome-extra/gnome-packagekit
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-02-19)
-# No maintainer, py2-only, blocks dev-python/pygtk removal, needs version bump
-# See bugs #546024, #706486, pending PR #14720. Masked for removal in 40 days.
-gnome-extra/nautilus-dropbox
 
 # Mart Raudsepp <leio@gentoo.org> (2020-02-16)
 # Fails to automatically launch pipewire for me. Help welcome figuring it out.

@@ -6,6 +6,15 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Stephan Hartmann <stha09@googlemail.com> (2020-04-11)
+# Requires unreleased >=dev-libs/icu-67
+>=www-client/chromium-83.0.4103.7 system-icu
+
+# Ulrich Müller <ulm@gentoo.org> (2020-04-08)
+# Old versions of libjpeg-turbo have known security issues.
+# Use the bundled lib on your own risk. Bug #715106.
+net-im/zoom bundled-libjpeg-turbo
+
 # Alfredo Tupone <tupone@gentoo.org> (2020-04-04)
 # Ada support is not yet ready for sys-deve/gcc
 sys-devel/gcc ada
