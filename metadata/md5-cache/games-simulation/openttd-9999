@@ -12,4 +12,4 @@ RDEPEND=!dedicated? ( media-libs/libsdl[sound,X,video] icu? ( dev-libs/icu-layou
 RESTRICT=test
 SLOT=0
 _eclasses_=git-r3	86a0188f2ad9eb3d65e4d031ab8a0422	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
-_md5_=a3dd0653de796d614193352059dbebed
+_md5_=86eed44a6ed083c663ace75884cb5c4b
