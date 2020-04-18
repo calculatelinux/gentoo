@@ -2523,7 +2523,6 @@ dev-python/editorconfig-core-py:cli - Install command line interface as well as 
 dev-python/fabric:fab2 - Install as "fab2", allowing side-by-side install with fabric 1.x
 dev-python/falcon:cython - Build cython-based python modules
 dev-python/fastparquet:brotli - Enable support for brotli compression
-dev-python/flask-restful:paging - Enable resource paging support
 dev-python/glance_store:cinder - enable cinder backend supprt
 dev-python/glance_store:swift - enable swift backend supprt
 dev-python/glance_store:vmware - enable vmware backend supprt
@@ -2917,7 +2916,6 @@ dev-util/gnome-builder:git - Provide support for the Git version control system 
 dev-util/gnome-builder:glade - Provide integration with dev-util/glade UI designer for Gtk
 dev-util/gnome-builder:sysprof - Provide an integrated profiler via dev-util/sysprof
 dev-util/gnome-builder:vala - Provide an autoindenter, autocompletion, diagnostics, and symbol resolver for Vala
-dev-util/gnome-builder:webkit - Enable net-libs/webkit-gtk using plugins support and the HTML/Markdown previewer plugin
 dev-util/google-perftools:debug - Build a set of libraries with debug support (so-called debugalloc). These are available by default but are not needed unless you're actually developing using tcmalloc.
 dev-util/google-perftools:largepages - Use (experimental) larger pages for tcmalloc, this increases memory usage, but should speed up the allocation/free operations.
 dev-util/google-perftools:minimal - Only build the tcmalloc_minimal library, ignoring the heap checker and the profilers.
@@ -4827,6 +4825,7 @@ media-tv/kodi:nfs - Enable NFS client support
 media-tv/kodi:raspberry-pi - Enable support for the Raspberry Pi
 media-tv/kodi:system-ffmpeg - Use system ffmpeg instead of the bundled one
 media-tv/kodi:udev - Use sys-fs/udev rules to handle devices' permissions and hotplug support. Unless you know what you're doing do not disable this flag on Linux kernels. This is provided as an option for completeness.
+media-tv/kodi:udf - Enable UDF support. Required for playing blurays.
 media-tv/kodi:webserver - Enable internal webserver
 media-tv/kodi:xslt - Enable XSLT support using dev-libs/libxslt
 media-tv/linuxtv-dvb-apps:alevt - Build videotext decoder
@@ -6387,6 +6386,8 @@ net-misc/connman-gtk:openconnect - Support easier authentication to AnyConnect V
 net-misc/csync:sftp - Enable sftp transfer support via net-libs/libssh
 net-misc/curl:alt-svc - Enable alt-svc support
 net-misc/curl:brotli - Enable brotli compression support
+net-misc/curl:ftp - Enable FTP support
+net-misc/curl:gopher - Enable Gopher protocol support
 net-misc/curl:http2 - Enable HTTP/2.0 support
 net-misc/curl:imap - Enable Internet Message Access Protocol support
 net-misc/curl:metalink - Enable metalink support
@@ -6398,6 +6399,8 @@ net-misc/curl:rtmp - Enable RTMP Streaming Media support
 net-misc/curl:smtp - Enable Simple Mail Transfer Protocol support
 net-misc/curl:ssh - Enable SSH urls in curl using libssh2
 net-misc/curl:ssl - Enable crypto engine support (via openssl if USE='-gnutls -nss')
+net-misc/curl:telnet - Enable Telnet protocol support
+net-misc/curl:tftp - Enable TFTP support
 net-misc/dahdi:flash - Support (short) flash on FXS
 net-misc/dahdi:oslec - Enable OSLEC (software) echo canceller (require ECHO in kernel)
 net-misc/dahdi-tools:ppp - Enables PPP/DAHDIRAS support
@@ -8098,7 +8101,9 @@ sys-cluster/ceph:system-boost - Use system dev-libs/boost instead of the bundled
 sys-cluster/ceph:uring - Build with support for sys-libs/liburing
 sys-cluster/ceph:xfs - Add xfs support
 sys-cluster/ceph:zfs - Add zfs support
+sys-cluster/charliecloud:ch-grow - Build the internal builder ch-grow
 sys-cluster/charliecloud:pv - Use sys-apps/pv to enable progress bar functionality
+sys-cluster/charliecloud:squashfs - Use sys-fs/squashfs-tools for creating SquashFS images
 sys-cluster/charliecloud:squashfuse - Use sys-fs/squashfuse for the SquashFS workflow
 sys-cluster/charm:ampi - Build implementation of MPI on top of Charm++
 sys-cluster/charm:charmdebug - Enable the charm debugger
@@ -8207,6 +8212,8 @@ sys-cluster/rdma-core:python - Enable pyverbs support
 sys-cluster/rdma-core:valgrind - Enable valgrind notations
 sys-cluster/resource-agents:libnet - Force use of net-libs/libnet
 sys-cluster/resource-agents:rgmanager - Install resources for rgmanager
+sys-cluster/singularity:network - Install network plug-ins
+sys-cluster/singularity:suid - Install SUID helper binary
 sys-cluster/slurm:html - Build html documentation
 sys-cluster/slurm:ipmi - Build support for collecting some ipmi stats
 sys-cluster/slurm:json - Add support for json-persing via json-c

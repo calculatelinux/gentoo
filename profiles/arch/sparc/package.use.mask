@@ -1,6 +1,14 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Rolf Eike Beer <eike@sf-mail.de> (2020-04-17)
+# net-analyzer/icinga is not keyworded on sparc
+net-analyzer/pnp4nagios icinga
+
+# Rolf Eike Beer <eike@sf-mail.de> (2020-04-15)
+# net-libs/farstream is not keyworded on sparc
+net-im/pidgin gstreamer
+
 # Rolf Eike Beer <eike@sf-mail.de> (2020-04-15)
 # dev-qt/designer is not keyworded on sparc
 sys-libs/gwenhywfar designer
@@ -117,6 +125,7 @@ app-office/scribus osg
 # Sergei Trofimovich <slyfox@gentoo.org> (2018-06-17)
 # Mask broken HIPE support on sparc32 (bug #656618)
 dev-lang/erlang hipe
+net-im/ejabberd hipe
 
 # Sergei Trofimovich <slyfox@gentoo.org> (2018-05-08)
 # Mask USE=games to avoid unkeyworded games-util/qstat.

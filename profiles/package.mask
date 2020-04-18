@@ -32,6 +32,33 @@
 
 #--- END OF EXAMPLES ---
 
+# Mattéo Rossillol‑‑Laruelle <beatussum@protonmail.com> (2020-04-17)
+# Very little activity for almost a year and the link to download the
+# "compiled" man-pages is dead.
+# Use app-i18n/man-pages-l10n[l10n_fr] as replacement.
+# Masked for removal in 30 days (bug #717744).
+app-i18n/man-pages-fr
+
+# Jeroen Roovers <jer@gentoo.org> (2020-04-16)
+# Breaks API, see https://bugs.gentoo.org/717728
+=dev-libs/libuv-1.36.0
+
+
+# Michał Górny <mgorny@gentoo.org> (2020-04-16)
+# Both packages have been last bumped mid-2018.  They depend
+# on pytest-relaxed plugin that has been removed due to breaking pretty
+# much everything.  They do not have a dedicated maintainer, and they
+# don't fit python@.  No revdeps.
+# Removal in 30 days.  Bug #717670.
+dev-python/fabric
+dev-python/invoke
+
+# Michał Górny <mgorny@gentoo.org> (2020-04-16)
+# Unmaintained.  Last release in 2011.  Multiple vulnerabilities
+# via bundled code.
+# Removal in 30 days.  Bug #701820.
+net-misc/ssvnc
+
 # Ulrich Müller <ulm@gentoo.org> (2020-04-15)
 # Last upstream release in 2001. HOMEPAGE disappeared in 2010.
 # Use app-i18n/man-pages-l10n[l10n_nl] as replacement.
@@ -103,6 +130,44 @@ sys-apps/fwupdate
 ~dev-libs/kpathsea-6.3.2_p20200406
 ~dev-libs/ptexenc-1.3.8_p20200406
 ~dev-tex/bibtexu-3.71_p20200406
+~dev-texlive/texlive-basic-2020
+~dev-texlive/texlive-bibtexextra-2020
+~dev-texlive/texlive-context-2020
+~dev-texlive/texlive-fontsextra-2020
+~dev-texlive/texlive-fontsrecommended-2020
+~dev-texlive/texlive-fontutils-2020
+~dev-texlive/texlive-formatsextra-2020
+~dev-texlive/texlive-games-2020
+~dev-texlive/texlive-humanities-2020
+~dev-texlive/texlive-langarabic-2020
+~dev-texlive/texlive-langchinese-2020
+~dev-texlive/texlive-langcjk-2020
+~dev-texlive/texlive-langcyrillic-2020
+~dev-texlive/texlive-langczechslovak-2020
+~dev-texlive/texlive-langenglish-2020
+~dev-texlive/texlive-langeuropean-2020
+~dev-texlive/texlive-langfrench-2020
+~dev-texlive/texlive-langgerman-2020
+~dev-texlive/texlive-langgreek-2020
+~dev-texlive/texlive-langitalian-2020
+~dev-texlive/texlive-langjapanese-2020
+~dev-texlive/texlive-langkorean-2020
+~dev-texlive/texlive-langother-2020
+~dev-texlive/texlive-langpolish-2020
+~dev-texlive/texlive-langportuguese-2020
+~dev-texlive/texlive-langspanish-2020
+~dev-texlive/texlive-latex-2020
+~dev-texlive/texlive-latexextra-2020
+~dev-texlive/texlive-latexrecommended-2020
+~dev-texlive/texlive-luatex-2020
+~dev-texlive/texlive-mathscience-2020
+~dev-texlive/texlive-metapost-2020
+~dev-texlive/texlive-music-2020
+~dev-texlive/texlive-pictures-2020
+~dev-texlive/texlive-plaingeneric-2020
+~dev-texlive/texlive-pstricks-2020
+~dev-texlive/texlive-publishers-2020
+~dev-texlive/texlive-xetex-2020
 
 # Matt Turner <mattst88@gentoo.org> (2020-04-12)
 # In conjunction with Firefox's sandbox, breaks loading of i965 driver.
