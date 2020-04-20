@@ -6,6 +6,18 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Michał Górny <mgorny@gentoo.org> (2020-04-20)
+# Requires dev-python/rst2pdf that is masked for removal.
+media-video/mpv doc
+
+# Michał Górny <mgorny@gentoo.org> (2020-04-19)
+# Requires dev-vcs/ghp-import that is masked for removal.
+www-apps/nikola ghpages
+
+# Georgy Yakovlev <gyakovlev@gentoo.org> (2020-04-19)
+# oracle-jdk-bin masked for removal, mask revdep useflag.
+=app-forensics/sleuthkit-4.7.0 java
+
 # Ulrich Müller <ulm@gentoo.org> (2020-04-15)
 # Mattéo Rossillol‑‑Laruelle <beatussum@protonmail.com> (2020-04-17)
 # app-i18n/man-pages-{de,fr,nl} masked for removal.
@@ -98,10 +110,6 @@ dev-python/pyzmq doc
 # Michał Górny <mgorny@gentoo.org> (2020-02-24)
 # app-admin/packagekit* are masked for removal.
 kde-frameworks/frameworkintegration appstream
-
-# Michał Górny <mgorny@gentoo.org> (2020-02-24)
-# sys-apps/entropy is masked for removal.
-app-admin/packagekit-base entropy
 
 # Michał Górny <mgorny@gentoo.org> (2020-02-08)
 # The dependency is python-single-r1 while the package (and its revdeps)
