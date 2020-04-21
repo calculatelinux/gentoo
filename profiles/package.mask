@@ -33,6 +33,23 @@
 #--- END OF EXAMPLES ---
 
 # Michał Górny <mgorny@gentoo.org> (2020-04-20)
+# Stuck on Python 3.6.  Last release in 2012.  No revdeps.
+# dev-python/lxml is the recommended XML handling package.
+# Removal in 30 days.  Bug #718646.
+dev-python/dexml
+
+# Michał Górny <mgorny@gentoo.org> (2020-04-20)
+# Stuck on Python 3.6.  Relies on 2to3.  Last release in 2015.
+# No revdeps.  'json' is built-in in all modern Python versions.
+# Removal in 30 days.  Bug #718638.
+dev-python/demjson
+
+# Louis Sautier <sbraz@gentoo.org> (2020-04-20)
+# No revdeps, no release in 3 years, doesn't support Bootstrap 4.
+# Removal in 30 days.
+dev-python/flask-bootstrap
+
+# Michał Górny <mgorny@gentoo.org> (2020-04-20)
 # Effectively unmaintained.  Stuck on Python 2 and pygtk.  Last bumped
 # in 2014.
 # Removal in 30 days.  Bug #708168.
@@ -534,7 +551,6 @@ www-client/weboob
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2020-03-26)
 # Fail to build with glibc-2.30; no maintainer. Removal in 30days.
 # Bugs 691756, 691710
-x11-terms/aterm
 x11-terms/xvt
 
 # Michał Górny <mgorny@gentoo.org> (2020-03-26)
@@ -622,12 +638,6 @@ gnome-base/gnome-desktop:2
 # Matt Turner <mattst88@gentoo.org> (2020-03-11)
 # Masked for testing due to removal of libnm-glib (bug #665338)
 >=net-misc/networkmanager-1.20
-
-# Michał Górny <mgorny@gentoo.org> (2020-03-11)
-# The following Mercurial-related tools do not declare support
-# for Python 3 and have no maintainers.
-# Removal in 30 days.  Bug #712114.
-dev-vcs/tortoisehg
 
 # Eray Aslan <eras@gentoo.org> (2020-03-09)
 # Mask experimental software
