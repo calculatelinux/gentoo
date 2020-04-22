@@ -1,37 +1,37 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=7
 
-inherit eutils toolchain-funcs git-r3
+inherit desktop toolchain-funcs
 
 DESCRIPTION="OpenBSD fork of calmwm, a clean and lightweight window manager"
 HOMEPAGE="https://www.openbsd.org/cgi-bin/cvsweb/xenocara/app/cwm/
 	https://github.com/chneukirchen/cwm"
-EGIT_BRANCH=linux
+
+if [[ ${PV} == 9999 ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/leahneukirchen/${PN}.git"
+	KEYWORDS=""
+else
+	SRC_URI="https://github.com/leahneukirchen/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+fi
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS=""
-IUSE="vanilla"
 
 RDEPEND="x11-libs/libXft
 	x11-libs/libXinerama
-	x11-libs/libXrandr"
-DEPEND="${RDEPEND}
+	x11-libs/libXrandr
+"
+DEPEND="${RDEPEND}"
+BDEPEND="sys-devel/bison
 	virtual/pkgconfig
-	sys-devel/bison"
-
-pkg_setup() {
-	if use vanilla ; then
-		EGIT_REPO_URI="https://github.com/chneukirchen/cwm.git"
-	else
-		EGIT_REPO_URI="https://github.com/xmw/cwm.git"
-	fi
-}
+"
 
 src_compile() {
-	emake CFLAGS="${CFLAGS} -D_GNU_SOURCE" CC="$(tc-getCC)"
+	emake CFLAGS="${CFLAGS} -D_GNU_SOURCE" CC="$(tc-getCC)" PKG_CONFIG="$(tc-getPKG_CONFIG)"
 }
 
 src_install() {

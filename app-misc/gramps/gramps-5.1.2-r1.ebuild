@@ -2,10 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-PYTHON_COMPAT=( python3_{6,7} )
+PYTHON_COMPAT=( python3_{6,7,8} )
 PYTHON_REQ_USE="sqlite"
 
 DISTUTILS_SINGLE_IMPL=1
+DISTUTILS_USE_SETUPTOOLS=no
 inherit distutils-r1 xdg-utils
 
 DESCRIPTION="Genealogical Research and Analysis Management Programming System"
@@ -60,6 +61,17 @@ python_test_all() {
 		die "Failed to symlink build directory to source directory"
 
 	esetup.py test
+}
+
+# Ugly hack to work around Bug #717922
+python_install() {
+	local mydistutilsargs=(
+		--resourcepath=/usr/share
+		--no-compress-manpages
+		build
+	)
+	distutils-r1_python_install
+	echo -n "/usr/share" > "${D}$(python_get_sitedir)/gramps/gen/utils/resource-path" || die
 }
 
 pkg_postinst() {

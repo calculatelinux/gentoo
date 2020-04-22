@@ -29,6 +29,9 @@ get_headers() {
 }
 
 src_prepare() {
+	local PATCHES=(
+		"${FILESDIR}"/libbridge-substitute-AR-variable-from-configure.patch
+	)
 	default
 	eautoreconf
 }
