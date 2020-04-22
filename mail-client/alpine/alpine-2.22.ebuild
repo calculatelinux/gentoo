@@ -11,7 +11,7 @@ SRC_URI="http://alpine.x10host.com/alpine/release/src/${P}.tar.xz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc ipv6 kerberos ldap libressl nls onlyalpine passfile smime spell ssl threads"
 
 DEPEND=">=sys-libs/ncurses-5.1:0=
@@ -27,9 +27,15 @@ RDEPEND="${DEPEND}
 	app-misc/mime-types
 "
 
+PATCHES=(
+	"${FILESDIR}/${P}-cc.patch"
+)
+
 src_prepare() {
 	default
 	eautoreconf
+	tc-export CC RANLIB AR
+	export CC_FOR_BUILD=$(tc-getBUILD_CC)
 }
 
 src_configure() {

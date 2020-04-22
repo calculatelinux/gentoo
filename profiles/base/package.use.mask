@@ -6,6 +6,10 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Michał Górny <mgorny@gentoo.org> (2020-04-22)
+# Requires dev-python/filemagic that is broken and masked for removal.
+dev-python/jira magic
+
 # Michał Górny <mgorny@gentoo.org> (2020-04-20)
 # Requires dev-python/rst2pdf that is masked for removal.
 media-video/mpv doc
@@ -18,11 +22,11 @@ www-apps/nikola ghpages
 # oracle-jdk-bin masked for removal, mask revdep useflag.
 =app-forensics/sleuthkit-4.7.0 java
 
-# Ulrich Müller <ulm@gentoo.org> (2020-04-15)
+# Ulrich Müller <ulm@gentoo.org> (2020-04-15, updated 2020-04-22)
 # Mattéo Rossillol‑‑Laruelle <beatussum@protonmail.com> (2020-04-17)
-# app-i18n/man-pages-{de,fr,nl} masked for removal.
+# app-i18n/man-pages-{de,fr,nl,pl} masked for removal.
 # Bug #713590, bug #717744.
-<sys-apps/man-pages-5.05-r1 l10n_de l10n_fr l10n_nl
+<sys-apps/man-pages-5.05-r1 l10n_de l10n_fr l10n_nl l10n_pl
 
 # Stephan Hartmann <stha09@googlemail.com> (2020-04-11)
 # Requires unreleased >=dev-libs/icu-67
@@ -55,7 +59,9 @@ kde-apps/kdesdk-meta bazaar
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2020-03-27)
 # Depends on vulnerable old version of icedtea-web #711392
-# new version uses maven + rust
+# new version is not packaged yet
+# package/useflag is not going away anytime soon,
+# just masked. unmask as needed.
 dev-java/icedtea nsplugin webstart
 dev-java/icedtea-bin nsplugin webstart
 dev-java/openjdk nsplugin webstart
