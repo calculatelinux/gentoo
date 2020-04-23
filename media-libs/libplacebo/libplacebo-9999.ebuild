@@ -7,7 +7,7 @@ if [[ "${PV}" == "9999" ]]; then
 	EGIT_REPO_URI="https://code.videolan.org/videolan/libplacebo.git"
 	inherit git-r3
 else
-	KEYWORDS="~amd64 ~ppc64"
+	KEYWORDS="~amd64 ~ppc64 ~x86"
 	SRC_URI="https://code.videolan.org/videolan/libplacebo/-/archive/v${PV}/libplacebo-v${PV}.tar.gz"
 	S="${WORKDIR}/${PN}-v${PV}"
 fi
@@ -20,11 +20,12 @@ HOMEPAGE="https://github.com/haasn/libplacebo"
 LICENSE="LGPL-2.1+"
 # Please add a sub-slot for releases depending on libplacebo.so version
 SLOT="0"
-IUSE="glslang lcms +shaderc test +vulkan"
+IUSE="glslang lcms +opengl +shaderc test +vulkan"
 REQUIRED_USE="vulkan? ( || ( glslang shaderc ) )"
 
 RDEPEND="glslang? ( dev-util/glslang[${MULTILIB_USEDEP}] )
 	lcms? ( media-libs/lcms:2[${MULTILIB_USEDEP}] )
+	opengl? ( media-libs/libepoxy[${MULTILIB_USEDEP}] )
 	shaderc? ( >=media-libs/shaderc-2017.2[${MULTILIB_USEDEP}] )
 	vulkan? ( media-libs/vulkan-loader[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}"
@@ -36,6 +37,7 @@ multilib_src_configure() {
 	local emesonargs=(
 		$(meson_feature glslang)
 		$(meson_feature lcms)
+		$(meson_feature opengl)
 		$(meson_feature shaderc)
 		$(meson_feature vulkan)
 		$(meson_use test tests)
@@ -48,7 +50,7 @@ multilib_src_compile() {
 }
 
 multilib_src_test() {
-	meson_src_test
+	meson_src_test -t 10
 }
 
 multilib_src_install() {
