@@ -32,10 +32,24 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-04-24)
+# Stuck on Python 2.  Last release of obmenu in 2006, obtheme in 2013.
+# Require dead dev-python/pygtk.
+# Removal in 30 days.  Bug #708140.
+x11-misc/obmenu
+x11-misc/obtheme
+
+# Jonas Stein <jstein@gentoo.org> (2020-04-24)
+# Fails to install. Bug #154735
+# Developers do not have access to the cd.
+# Remove after 2020-05-24
+games-action/rune
+
 # Matthew Thode <prometheanfire@gentoo.org> (2020-04-23)
 # not needed anymore, no revdeps
 # removal in 14 days. Bug #718996.
 dev-python/ip-associations-python-novaclient-ext
+dev-python/rackspace-novaclient
 
 # Michał Górny <mgorny@gentoo.org> (2020-04-23)
 # Unmaintained.  Stuck on Python 3.6.  No revdeps.
