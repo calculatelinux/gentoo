@@ -5,7 +5,7 @@ EAPI=6
 DISTUTILS_OPTIONAL=true
 DISTUTILS_SINGLE_IMPL=true
 GENTOO_DEPEND_ON_PERL=no
-PYTHON_COMPAT=( python{2_7,3_6} )
+PYTHON_COMPAT=( python{2_7,3_{6,7,8}} )
 inherit autotools perl-module distutils-r1 flag-o-matic multilib
 
 MY_P=${P/_/-}
@@ -100,12 +100,13 @@ src_prepare() {
 			tests/Makefile.am || die
 	fi
 
-	export rd_cv_gcc_flag__Werror=no
-
 	eautoreconf
 }
 
 src_configure() {
+	export rd_cv_gcc_flag__Werror=no
+	export rd_cv_ms_async=ok
+
 	filter-flags -ffast-math
 
 	export RRDDOCDIR=${EPREFIX}/usr/share/doc/${PF}
