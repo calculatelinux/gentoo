@@ -18,7 +18,7 @@ SRC_URI="https://twistedmatrix.com/Releases/${TWISTED_PN}"
 SRC_URI="${SRC_URI}/${TWISTED_RELEASE}/${TWISTED_P}.tar.bz2
 	https://dev.gentoo.org/~mgorny/dist/twisted-regen-cache.gz"
 
-KEYWORDS="~alpha amd64 arm arm64 ~mips ~ppc64 ~s390 sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm arm64 ~mips ~ppc64 ~s390 sparc x86 ~amd64-linux ~x86-linux"
 
 LICENSE="MIT"
 SLOT="0"
@@ -85,6 +85,13 @@ python_prepare_all() {
 	# upstream test for making releases; not very useful and requires
 	# sphinx (including on py2)
 	rm src/twisted/python/test/test_release.py || die
+
+	# Conch doesn't work with latest >=OpenSSH 7.6
+	#   - https://twistedmatrix.com/trac/ticket/9311
+	#   - https://twistedmatrix.com/trac/ticket/9515
+	rm src/twisted/conch/test/test_ckeygen.py || die
+	rm src/twisted/conch/test/test_conch.py || die
+	rm src/twisted/conch/test/test_cftp.py || die
 
 	# puts system in EMFILE state, then the exception handler may fail
 	# trying to open more files due to some gi magic

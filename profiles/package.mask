@@ -32,6 +32,84 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-04-27)
+# Unmaintained.  Unresolved breakage with py3.8 for almost a year.
+# Python upstream included some async testing support in py3.8 too.
+# No revdeps.
+# Removal in 30 days.  Bug #719746.
+dev-python/asynctest
+
+# Zac Medico <zmedico@gentoo.org> (2020-04-26)
+# Stuck on py3.6.  No revdeps.
+# Removal in 30 days.  Bug #719540.
+dev-python/riak-python-client
+
+# Zac Medico <zmedico@gentoo.org> (2020-04-26)
+# Stuck on py3.6.  No revdeps.
+# Removal in 30 days.  Bug #718904.
+dev-python/flower
+
+# Sam James <sam@cmpct.info> (2020-04-24)
+# Out of date with security bugs.
+# Please use www-client/seamonkey instead.
+# Removal in 30 days. Bug #718738.
+www-client/seamonkey-bin
+
+# Zac Medico <zmedico@gentoo.org> (2020-04-26)
+# Mask obsolete and vulnerable dev-go/go-crypto, along with obsolete
+# reverse dependencies. Removal in 30 days.  Bug #710142.
+dev-go/go-crypto
+dev-go/go-net
+dev-go/go-sys
+=dev-embedded/arduino-builder-1.4.1
+
+# Michał Górny <mgorny@gentoo.org> (2020-04-26)
+# Unmaintained.  Stuck on py3.6.  Missing tests (but having an unused
+# test flag!).  The only revdep is app-admin/ara that is masked
+# for removal already.
+# Removal in 30 days.  Bug #719660.
+dev-python/xstatic
+dev-python/xstatic-bootstrap-scss
+dev-python/xstatic-datatables
+dev-python/xstatic-jquery
+dev-python/xstatic-patternfly
+dev-python/xstatic-patternfly-bootstrap-treeview
+
+# Michał Górny <mgorny@gentoo.org> (2020-04-26)
+# Stuck on py3.6.  Failing tests.  No revdeps.
+# Removal in 30 days.  Bug #639520.
+dev-python/versiontools
+
+# Michał Górny <mgorny@gentoo.org> (2020-04-26)
+# Stuck on py3.6.  Missing tests.  No revdeps.
+# Removal in 30 days.  Bug #719616.
+dev-python/utmp
+
+# Michał Górny <mgorny@gentoo.org> (2020-04-26)
+# Unmaintained.  Stuck on Python 3.6.  No revdeps.
+# Removal in 30 days.  Bug #719604.
+dev-python/txtorcon
+
+# Michał Górny <mgorny@gentoo.org> (2020-04-26)
+# Stuck on Python 3.6.  Missing tests.  No revdeps.
+# Removal in 30 days.  Bug #719568.
+dev-python/sphinxcontrib-googleanalytics
+
+# Michał Górny <mgorny@gentoo.org> (2020-04-26)
+# Unmaintained.  Stuck on py3.6.  Missing tests.  No revdeps.
+# Removal in 30 days.  Bug #719548.
+dev-python/sdnotify
+
+# Michał Górny <mgorny@gentoo.org> (2020-04-26)
+# Unmaintained.  Stuck on py3.6.  Missing tests.  No revdeps.
+# Removal in 30 days.  Bug #719546.
+dev-python/scoop
+
+# Michał Górny <mgorny@gentoo.org> (2020-04-26)
+# Unmaintained.  Stuck on Python 3.6.  No tests.  No revdeps.
+# Removal in 30 days.  Bug #719504.
+dev-python/pythonmagick
+
 # Michał Górny <mgorny@gentoo.org> (2020-04-26)
 # Unmaintained.  djvusmooth is stuck on py2, python-djvulibre on py3.6.
 # Unresolved test failures.  No other revdeps.
@@ -54,6 +132,7 @@ dev-python/pyodbc
 # Causes multilib glib failure.
 # https://bugs.gentoo.org/719382
 =dev-util/meson-0.54.0
+=dev-util/meson-0.54.1
 
 # Michał Górny <mgorny@gentoo.org> (2020-04-25)
 # Unmaintained.  Stuck on Python 3.6.  Missing tests.  The only revdep
@@ -137,6 +216,11 @@ dev-python/rackspace-novaclient
 dev-python/nose-testconfig
 dev-python/positional
 dev-python/posix_ipc
+dev-python/repoze-who
+dev-python/tablib
+dev-python/rackspace-auth-openstack
+dev-python/rax-default-network-flags-python-novaclient-ext
+dev-python/rax-scheduled-images-python-novaclient-ext
 
 # Michał Górny <mgorny@gentoo.org> (2020-04-23)
 # Unmaintained.  Stuck on Python 3.6.  No revdeps.
@@ -327,11 +411,6 @@ media-sound/beets
 # in 2016.
 # Removal in 30 days.  Bug #718340.
 media-gfx/qrencode-python
-
-# Michał Górny <mgorny@gentoo.org> (2020-04-19)
-# Unmaintained.  Stuck on Python 3.6.  Last release in 2014.
-# Removal in 30 days.  Bug #718312.
-games-misc/doge
 
 # Michał Górny <mgorny@gentoo.org> (2020-04-19)
 # Unmaintained.  Stuck on Python 3.6.
@@ -804,12 +883,6 @@ www-servers/tomcat:9
 # Mart Raudsepp <leio@gentoo.org> (2020-02-16)
 # Fails to automatically launch pipewire for me. Help welcome figuring it out.
 net-misc/gnome-remote-desktop
-
-# Stephan Hartmann <stha09@googlemail.com> (2020-02-16)
-# Dev channel releases are only for people who
-# are developers or want more experimental features
-# and accept a more unstable release.
->=www-client/chromium-82
 
 # Stefan Strogin <steils@gentoo.org> (2020-02-12)
 # Mask for testing revdeps.

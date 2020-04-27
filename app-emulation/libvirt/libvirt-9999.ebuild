@@ -9,7 +9,7 @@ inherit autotools out-of-source bash-completion-r1 eutils linux-info python-any-
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://libvirt.org/git/libvirt.git"
+	EGIT_REPO_URI="https://gitlab.com/libvirt/libvirt.git"
 	SRC_URI=""
 	KEYWORDS=""
 	SLOT="0"
@@ -77,7 +77,6 @@ RDEPEND="
 	iscsi-direct? ( >=net-libs/libiscsi-1.18.0 )
 	libssh? ( net-libs/libssh )
 	lvm? ( >=sys-fs/lvm2-2.02.48-r2[-device-mapper-only(-)] )
-	lxc? ( !sys-apps/systemd[-cgroup-hybrid(+)] )
 	nfs? ( net-fs/nfs-utils )
 	numa? (
 		>sys-process/numactl-2.0.2
