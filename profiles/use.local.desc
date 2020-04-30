@@ -145,7 +145,9 @@ app-admin/sagan:pcap - Add support for network packet capture via net-libs/libpc
 app-admin/sagan:smtp - Build witch SMTP (E-Mail) support
 app-admin/sagan:snort - Add support to interact with Snort IDE using net-analyzer/snortsam'
 app-admin/sagan-rules:lognorm - Install normalize rules support with dev-libs/liblognorm
+app-admin/salt:cheetah - Enable support for dev-python/cheetah3
 app-admin/salt:cherrypy - Enable support for using cherrypy.
+app-admin/salt:genshi - Enable support for dev-python/genshi
 app-admin/salt:gnupg - Enable support for gnupg via python-gnupg.
 app-admin/salt:keyring - Enable support for keyrings via python-keyring.
 app-admin/salt:libcloud - Enable salt-cloud support via libcloud.
@@ -2878,14 +2880,6 @@ dev-util/diffoscope:xz - Use app-arch/xz-utils
 dev-util/diffoscope:zip - Use app-arch/unzip
 dev-util/edb-debugger:jumbo-build - Experimental jumbo (also known as unity) build capability
 dev-util/edi:clang - Provide integration with sys-devel/clang for autocompletion and inline errors
-dev-util/electron:gconf - Use gnome-base/gconf
-dev-util/electron:lto - Build with link time optimization enabled
-dev-util/electron:pic - Disable optimized assembly code that is not PIC friendly
-dev-util/electron:proprietary-codecs - Enable proprietary codecs like H.264, MP3
-dev-util/electron:system-ffmpeg - Use system ffmpeg instead of the bundled one
-dev-util/electron:system-libvpx - Use system libvpx instead of the bundled one
-dev-util/electron:system-ssl - Use system OpenSSL instead of the bundled one
-dev-util/electron:tcmalloc - Use bundled tcmalloc instead of system malloc
 dev-util/emilpro:system-binutils - Use the gentoo binutils instead of building against an unpatched vanilla version
 dev-util/geany:gtk3 - Use GTK+3 instead of GTK+2
 dev-util/geany:vte - Enable Terminal support (x11-libs/vte)
@@ -3436,6 +3430,8 @@ gui-apps/swaylock:man - Build and install man pages
 gui-apps/waybar:mpd - Enable support for the Music Player Daemon
 gui-apps/waybar:network - Enable libnl support for network related features
 gui-apps/waybar:tray - Enable support for tray
+gui-apps/wf-recorder:man - Build and install man pages
+gui-apps/wf-recorder:opencl - Enable OpenCL
 gui-libs/libhandy:glade - Install module and catalog for dev-util/glade
 gui-libs/wlroots:X - Enable support for X11 applications (XWayland)
 gui-libs/wlroots:elogind - Enable support for rootless session via elogind
@@ -8691,11 +8687,9 @@ www-client/qutebrowser:scripts - Installs userscripts from the misc/userscripts 
 www-client/seamonkey:calendar - Build Mozilla's calendar
 www-client/seamonkey:chatzilla - Build Mozilla's IRC client (default on)
 www-client/seamonkey:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
-www-client/seamonkey:force-gtk3 - Use the cairo-gtk3 rendering engine
 www-client/seamonkey:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
 www-client/seamonkey:ipc - Use inter-process communication between tabs and plugins. Allows for greater stability in case of plugin crashes
 www-client/seamonkey:roaming - Build roaming extension support (default on)
-www-client/seamonkey:system-cairo - Use the system-wide x11-libs/cairo instead of bundled
 www-client/seamonkey:system-harfbuzz - Use the system-wide media-libs/harfbuzz instead of bundled
 www-client/seamonkey:system-icu - Use the sytem-wide dev-libs/icu instead of bundled
 www-client/seamonkey:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled
