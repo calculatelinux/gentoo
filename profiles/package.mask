@@ -32,6 +32,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2020-05-02)
+# Included in recent texlive versions. Please uninstall.
+# Removal in 30 days.
+dev-tex/revtex
+
+# David Seifert <soap@gentoo.org> (2020-05-02)
+# New boost, mask for potential breakage.
+>=dev-util/boost-build-1.73
+>=dev-libs/boost-1.73
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-05-01)
 # Currently packaged release from 2015, needs maintainer + bump. Bug #720346
 # Stuck on Python 2 and pygtk. Masked for removal in 30 days.
@@ -45,7 +55,7 @@ app-office/pybliographer
 # Michał Górny <mgorny@gentoo.org> (2020-05-01)
 # Wrongly adds '-*' to USE causing catastrophic system breakage.
 # Bug #649416.
-app-portage/ufed
+<app-portage/ufed-0.96
 
 # Thomas Deutschmann <whissi@gentoo.org> (2020-04-30)
 # Requires <OpenSSL-1.1.x. Please migrate to
@@ -229,12 +239,6 @@ dev-python/pyswisseph
 # Removal in 30 days.  Bug #719424.
 dev-python/pyodbc
 
-# Mike Gilbert <floppym@gentoo.org> (2020-04-25)
-# Causes multilib glib failure.
-# https://bugs.gentoo.org/719382
-=dev-util/meson-0.54.0
-=dev-util/meson-0.54.1
-
 # Michał Górny <mgorny@gentoo.org> (2020-04-25)
 # Unmaintained.  Stuck on Python 3.6.  Missing tests.  The only revdep
 # is masked for removal.
@@ -322,6 +326,7 @@ dev-python/tablib
 dev-python/rackspace-auth-openstack
 dev-python/rax-default-network-flags-python-novaclient-ext
 dev-python/rax-scheduled-images-python-novaclient-ext
+dev-python/zake
 
 # Michał Górny <mgorny@gentoo.org> (2020-04-23)
 # Unmaintained.  Stuck on Python 3.6.  No revdeps.
@@ -351,13 +356,11 @@ dev-python/junit-xml
 dev-python/ipdbplugin
 
 # Michał Górny <mgorny@gentoo.org> (2020-04-23)
-# Unmaintained.  Stuck at Python 3.6.  dev-python/rebulk is broken with
-# recent versions of dev-python/regex and has no fix (or activity)
-# upstream.  dev-python/guessit is its only revdep, and the only revdep
-# of that package is masked already.
+# Unmaintained.  Stuck at Python 3.6.  dev-python/guessit is broken
+# with modern pyyaml, and the only revdep of that package is masked
+# already.
 # Removal in 30 days.  Bug #718986.
 dev-python/guessit
-dev-python/rebulk
 
 # Michał Górny <mgorny@gentoo.org> (2020-04-22)
 # Unmaintained.  Stuck at Python 3.6.  The only revdep last rited.
@@ -894,9 +897,9 @@ net-misc/wicd
 
 # Andrew Ammerlaan <andrewammerlaan@riseup.net> (2020-01-26)
 # Proxy Maintainers <proxy-maint@gentoo.org>
-# v3.6.3 uses huge amounts of memory: Bug #705682
+# v3.6.4 uses huge amounts of memory: Bug #705682
 # v3.6.1 is the latest version without this issue
-=dev-libs/libsass-3.6.3
+>=dev-libs/libsass-3.6.2
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2020-01-26)
 # Starting with Firefox 74 Mozilla removes xpi sideloading support

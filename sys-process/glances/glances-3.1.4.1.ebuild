@@ -15,7 +15,7 @@ SRC_URI="https://github.com/nicolargo/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm arm64 ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="dev-python/future[${PYTHON_USEDEP}]
@@ -31,7 +31,6 @@ distutils_enable_tests setup.py
 distutils_enable_sphinx docs --no-autodoc
 
 pkg_setup() {
-	echo $DISTUTILS_USE_SETUPTOOLS
 	linux-info_pkg_setup
 }
 
@@ -43,7 +42,7 @@ python_prepare_all() {
 		-e "s/'CONTRIBUTING.md',//" \
 		-e "s:'conf/glances.conf':('${EPREFIX}/etc/glances', ['conf/glances.conf':g" \
 		-i setup.py || die
-
+	sed -i "s/, 'irq']/]/" unitest.py || die
 	distutils-r1_python_prepare_all
 }
 
