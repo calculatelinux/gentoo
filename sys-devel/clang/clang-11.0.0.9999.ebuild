@@ -13,6 +13,7 @@ LLVM_COMPONENTS=( clang clang-tools-extra )
 LLVM_TEST_COMPONENTS=(
 	llvm/lib/Testing/Support
 	llvm/utils/{lit,llvm-lit,unittest}
+	llvm/utils/{UpdateTestChecks,update_cc_test_checks.py}
 )
 llvm.org_set_globals
 # We need extra level of indirection for CLANG_RESOURCE_DIR
@@ -106,6 +107,10 @@ check_distribution_components() {
 					clang*|findAllSymbols)
 						continue
 						;;
+					# headers for clang-tidy static library
+					clang-tidy-headers)
+						continue
+						;;
 				esac
 
 				all_targets+=( "${l}" )
@@ -180,7 +185,6 @@ get_distribution_components() {
 			clang-query
 			clang-reorder-fields
 			clang-tidy
-			clang-tidy-headers
 			clangd
 			find-all-symbols
 			modularize

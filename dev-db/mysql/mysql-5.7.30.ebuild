@@ -30,7 +30,7 @@ RESTRICT="!test? ( test ) libressl? ( test )"
 
 REQUIRED_USE="?? ( tcmalloc jemalloc )"
 
-KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~arm arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
 # Shorten the path because the socket path length must be shorter than 107 chars
 # and we will run a mysql server during test phase
@@ -542,9 +542,15 @@ src_test() {
 		gis.spatial_utility_function_distance_sphere \
 		gis.spatial_utility_function_simplify \
 		gis.spatial_analysis_functions_centroid \
+		main.with_recursive \
 	; do
 		_disable_test "$t" "Known rounding error with latest AMD processors"
 	done
+
+	if ! hash zip 1>/dev/null 2>&1 ; then
+		# no need to force dep app-arch/zip for one test
+		_disable_test "innodb.partition_upgrade_create" "Requires app-arch/zip"
+	fi
 
 	if use numa && use kernel_linux ; then
 		# bug 584880

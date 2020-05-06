@@ -37,7 +37,7 @@ REQUIRED_USE="?? ( tcmalloc jemalloc )
 	router? ( server )
 	tcmalloc? ( server )"
 
-KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~arm arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
 # Shorten the path because the socket path length must be shorter than 107 chars
 # and we will run a mysql server during test phase
@@ -388,6 +388,7 @@ src_test() {
 	disabled_tests+=( "gis.spatial_analysis_functions_distance;5452;Known rounding error with latest AMD processors (PS)" )
 	disabled_tests+=( "main.window_std_var;0;Known rounding error with latest AMD processors -- no upstream bug yet" )
 	disabled_tests+=( "main.window_std_var_optimized;0;Known rounding error with latest AMD processors -- no upstream bug yet" )
+	disabled_tests+=( "main.with_recursive;0;Known rounding error with latest AMD processors -- no upstream bug yet" )
 	disabled_tests+=( "rpl_gtid.rpl_gtid_stm_drop_table;90612;Known test failure" )
 	disabled_tests+=( "rpl_gtid.rpl_multi_source_mtr_includes;0;Known failure - no upstream bug yet" )
 	disabled_tests+=( "sys_vars.myisam_data_pointer_size_func;87935;Test will fail on slow hardware")
@@ -395,6 +396,11 @@ src_test() {
 	disabled_tests+=( "main.mysqlpump_basic_lz4;0;Extra tool output causes false positive" )
 	disabled_tests+=( "x.message_compressed_payload;0;False positive caused by protobuff-3.11+" )
 	disabled_tests+=( "x.message_protobuf_nested;0;False positive caused by protobuff-3.11+" )
+
+	if ! hash zip 1>/dev/null 2>&1 ; then
+		# no need to force dep app-arch/zip for one test
+		disabled_tests+=( "innodb.partition_upgrade_create;0;Requires app-arch/zip" )
+	fi
 
 	local test_infos_str test_infos_arr
 	for test_infos_str in "${disabled_tests[@]}" ; do

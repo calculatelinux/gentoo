@@ -3712,6 +3712,7 @@ lxqt-base/lxqt-panel:worldclock - Build worldclock plugin
 lxqt-base/lxqt-session:themes - Install LXQt themes and graphics
 mail-client/aerc:notmuch - Enable support for net-mail/notmuch
 mail-client/alot:doc - Install user manual and API documentation
+mail-client/alpine:chappa - enhance Alpine by applying Eduardo Chappa's patches
 mail-client/alpine:onlyalpine - installs only the alpine binary, so it does not collied with pico and/or pine
 mail-client/alpine:passfile - Adds support for caching passwords into a file between sessions
 mail-client/alpine:smime - Enable support for S/MIME
@@ -4861,20 +4862,23 @@ media-tv/xmltv:dtvla - Latin America digital tv listing grabber
 media-tv/xmltv:es-laguiatv - Spain alternative grabber
 media-tv/xmltv:eu-dotmedia - Grabber for Europe (xmltv.se / dotmedia)
 media-tv/xmltv:eu-epg - EPG grabber for some European countries.
-media-tv/xmltv:fi - Finland tv listing grabber
+media-tv/xmltv:eu-epgdata - include fanart URLs for some European countries.
+media-tv/xmltv:eu-xmltvse - Grabbber for Europe [replaces eu-dotmedia and se-tvzon]
+media-tv/xmltv:fi - Finland tv listing grabber (0.6.1 add ampparit telsu)
 media-tv/xmltv:fi-sv - Grabber for Finland (Swedish)
 media-tv/xmltv:fr - France tv listing grabber
 media-tv/xmltv:fr-kazer - France (Kazer) tv listing grabber
 media-tv/xmltv:huro - Hungarian tv listing grabber
 media-tv/xmltv:il - Israel tv listing grabber
 media-tv/xmltv:is - Iceland tv listing grabber
-media-tv/xmltv:it - Italy tv listing grabber
+media-tv/xmltv:it - Italy tv listing grabber (RUV)
 media-tv/xmltv:na-dd - North America tv listing grabber
 media-tv/xmltv:na-dtv - North America Direct TV grabber
 media-tv/xmltv:na-tvmedia - Grabber for North America (TVMedia)
-media-tv/xmltv:nl - Netherlands tv listing grabber
+media-tv/xmltv:nl - Netherlands tv listing grabber [REMOVED 0.6.1]
 media-tv/xmltv:no-gf - Norway Gfeed tv listing grabber
 media-tv/xmltv:pt-meo - Grabber for Portugal (MEO)
+media-tv/xmltv:pt-vodafone - Grabber for Portugal (Vodafone)
 media-tv/xmltv:se-swedb - Sweden tv listing grabber
 media-tv/xmltv:se-tvzon - Sweden (tvzon.se) tv listing grabber
 media-tv/xmltv:tr - Turkey (Digiturk) tv listing grabber
@@ -4884,6 +4888,7 @@ media-tv/xmltv:tv-pick-cgi - enable CGI support
 media-tv/xmltv:uk-bleb - Britain tv listing grabber
 media-tv/xmltv:uk-tvguide - UK and Ireland tv listing grabber using TV Guide website
 media-tv/xmltv:zz-sdjson - Grabber for schedulesDirect.org SD-JSON service (many countries)
+media-tv/xmltv:zz-sdjson-sqlite - Grabber for schedulesDirect.org SD-JSON service (sqlite DB)
 media-video/aegisub:uchardet - Enable charset discovery via app-i18n/uchardet
 media-video/aravis:fast-heartbeat - Enable faster heartbeat rate.
 media-video/aravis:gstreamer - Build the GStreamer plugin.
@@ -5207,10 +5212,6 @@ net-analyzer/icinga2:nano-syntax - Adds support for syntax used in the nano edit
 net-analyzer/icinga2:plugins - Adds support for nagios plugins
 net-analyzer/ipsumdump:nanotimestamp - Enable timestamps with nano-second resolution
 net-analyzer/linkchecker:sqlite - Mozilla Bookmark parsing
-net-analyzer/metasploit:development - Install dependencies needed for metasploit and exploit development
-net-analyzer/metasploit:nexpose - Enable the plugin to integrate with nexpose
-net-analyzer/metasploit:oracle - Enable restricted oracle modules which have additional deps
-net-analyzer/metasploit:pcap - Enable libpcap for packet sniffing
 net-analyzer/mk-livestatus:boost - Use dev-libs/boost for ASIO support
 net-analyzer/mk-livestatus:nagios4 - Generate a net-analyzer/nagios-4 compatible plugin
 net-analyzer/mk-livestatus:re2 - Use dev-libs/re2 for regex support
@@ -5252,6 +5253,7 @@ net-analyzer/nagios-plugins:snmp - Install dev-perl/Net-SNMP required for monito
 net-analyzer/nagios-plugins:ssh - Install net-misc/openssh required for monitoring SSH servers. Disabling the flag does not remove any plugin file.
 net-analyzer/nagios-plugins-flameeyes:smart - Install sys-apps/smartmontools required for S.M.A.R.T. disk monitoring. Disabling the flag removes the plugin file. This plugin also requires the sudo flag to be enable.
 net-analyzer/nagios-plugins-linux-madrisan:curl - Build check_docker which requires net-misc/curl
+net-analyzer/nagios-plugins-linux-madrisan:varlink - Build check_podman which requires dev-libs/libvarlink
 net-analyzer/net-snmp:elf - Enable the use of elf utils to check uptime on some systems
 net-analyzer/net-snmp:kmem - Enable usage of /dev/kmem
 net-analyzer/net-snmp:mfd-rewrites - Use MFD rewrites of mib modules where available
@@ -6659,13 +6661,6 @@ net-misc/wget2:openssl - Enable crypto support via dev-libs/openssl
 net-misc/wget2:psl - Use public suffix list via media-libs/libnspsl
 net-misc/wget2:valgrind - Depend on dev-util/vagrind for test suite
 net-misc/whois:xcrypt - Enable crypt through sys-libs/libxcrypt package
-net-misc/wicd:ambiance - Install icons from Ubuntu's ambiance theme
-net-misc/wicd:gnome-shell - Install gnome-shell extension
-net-misc/wicd:gtk - Installs a gtk UI. This is enabled by default because it is intended behavior. Requires dev-python/pygtk
-net-misc/wicd:ioctl - Installs additional python libraries to use as a backend. This will improve speed but is experimental.
-net-misc/wicd:mac4lin - Change default icons to mac4lin icon set
-net-misc/wicd:ncurses - Installs a ncurses UI
-net-misc/wicd:pm-utils - Installs the pm-utils hooks for suspend/resume and requires sys-power/pm-utils
 net-misc/x2goserver:fuse - Use net-fs/sshfs to allow shared folders
 net-misc/youtube-viewer:gtk - Install the gtk3 GUI
 net-misc/youtube-viewer:gtk2 - Use the old gtk2 GUI instead of the gtk3 one
@@ -7362,6 +7357,7 @@ sci-libs/libsigrok:ftdi - Enable drivers that need libftdi
 sci-libs/libsigrok:parport - Enable drivers that are parallel (IEEE1284) based
 sci-libs/libsigrok:serial - Enable drivers that are serial (RS232) based
 sci-libs/libsvm:tools - Install python based tool scripts for data selection and visualization with sci-visualization/gnuplot
+sci-libs/linbox:opencl - Enable the use of OpenCL in LinBox
 sci-libs/linux-gpib:firmware - Install firmware
 sci-libs/linux-gpib-modules:isa - Build ISA kernel modules; from 3.12 on the setting is ignored and the decision based on the kernel configuration
 sci-libs/lis:quad - Enable quadruple precision operations
@@ -8715,9 +8711,6 @@ www-misc/litmus:libxml2 - Use dev-libs/libxml2 to parse XML
 www-misc/litmus:pkcs11 - Support for PKCS #11 through PaKChoiS (dev-libs/pakchois).
 www-misc/vdradmin-am:vdr - Support for media-video/vdr. Disable this if the VDR you want to control runs at a remote machine.
 www-misc/xxv:themes - Enable more themes via x11-themes/xxv-skins
-www-misc/zoneminder:curl - Enable using net-misc/curl for streaming from cameras
-www-misc/zoneminder:gcrypt - ...
-www-misc/zoneminder:vlc - Enable using media-libs/vlc for streaming from cameras
 www-plugins/adobe-flash:nsplugin - Install the Netscape Flash API plugin (for Firefox and similar browsers)
 www-plugins/adobe-flash:ppapi - Install the Pepper Flash API plugin (for Chrome and similar browsers)
 www-plugins/freshplayerplugin:v4l - Use libv4l2 for colorspace conversion
@@ -9041,7 +9034,6 @@ x11-wm/e16:xsm - Enable X Session Management support using x11-libs/libSM
 x11-wm/e16:xsync - Enable X Sync support
 x11-wm/e16:zoom - Support resolution change of current window (zoom) usingx11-libs/libXxf86vm (xvidtune)
 x11-wm/echinus:xrandr - Enable support for multihead configuration
-x11-wm/enlightenment:packagekit - Enable module for package manager integration
 x11-wm/enlightenment:xwayland - Enable XWayland application support
 x11-wm/fluxbox:slit - Enables the Fluxbox slit (or dock)
 x11-wm/fluxbox:systray - Enables the system tray in the Fluxbox toolbar

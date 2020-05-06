@@ -64,11 +64,6 @@ app-mobilephone/ganyremote
 # Stuck on Python 2 and pygtk. Masked for removal in 30 days.
 app-office/pybliographer
 
-# Michał Górny <mgorny@gentoo.org> (2020-05-01)
-# Wrongly adds '-*' to USE causing catastrophic system breakage.
-# Bug #649416.
-<app-portage/ufed-0.96
-
 # Thomas Deutschmann <whissi@gentoo.org> (2020-04-30)
 # Requires <OpenSSL-1.1.x. Please migrate to
 # >=dev-db/mysql-5.7. Masked for removal in 30 days.
@@ -705,12 +700,6 @@ dev-tcltk/tcl-mccp
 # Masked for testing
 >=dev-libs/libressl-3.1.0
 
-# Joonas Niilola <juippis@gentoo.org> (2020-04-05)
-# Not maintained in Gentoo, doesn't build for 2 years, has only
-# deprecated version present in Gentoo. Has a huge number of open
-# bugs. Removal in 30 days. #642952
-www-misc/zoneminder
-
 # Michał Górny <mgorny@gentoo.org> (2020-04-04)
 # Package that used to provide test data for dev-python/cryptography.
 # The modern versions fetch it via SRC_URI and the last version
@@ -743,57 +732,6 @@ app-antivirus/clamav-unofficial-sigs
 # For emojis and pictographs, use media-fonts/noto-emoji instead.
 # Masked for removal in 30 days, bug #715226
 media-fonts/symbola
-
-# Hans de Graaff <graaff@gentoo.org> (2020-03-29)
-# Old ruby24-only rails version that is no longer supported upstream
-# and has known security issues, including dependencies and slots
-# specific to Rails 4.2.
-# Migrate to Rails 5.2.
-# Masked for removal in 30 days.
-dev-ruby/rails:4.2
-dev-ruby/railties:4.2
-dev-ruby/activerecord:4.2
-dev-ruby/actionmailer:4.2
-dev-ruby/actionpack:4.2
-dev-ruby/actionview:4.2
-dev-ruby/activejob:4.2
-dev-ruby/activemodel:4.2
-dev-ruby/activesupport:4.2
-dev-ruby/arel:6.0
-dev-ruby/actionpack-xml_parser:0
-dev-ruby/jquery-rails:3
-dev-ruby/postgres_ext
-dev-ruby/protected_attributes
-dev-ruby/rails-dom-testing:1
-dev-ruby/web-console:0
-# Metasploit is a reverse dependency on Rails 4.2 Upstream shows no
-# sign of moving to a supported Rails version. Metasploit will most
-# likely be moved to an overlay.
-dev-ruby/metasploit-concern
-dev-ruby/metasploit-credential
-dev-ruby/metasploit-payloads
-dev-ruby/metasploit_payloads-mettle
-dev-ruby/metasploit-model
-dev-ruby/metasploit_data_models
-net-analyzer/metasploit
-dev-ruby/rex-arch
-dev-ruby/rex-bin_tools
-dev-ruby/rex-core
-dev-ruby/rex-encoder
-dev-ruby/rex-exploitation
-dev-ruby/rex-java
-dev-ruby/rex-mime
-dev-ruby/rex-nop
-dev-ruby/rex-ole
-dev-ruby/rex-powershell
-dev-ruby/rex-random_identifier
-dev-ruby/rex-registry
-dev-ruby/rex-rop_builder
-dev-ruby/rex-socket
-dev-ruby/rex-sslscan
-dev-ruby/rex-struct2
-dev-ruby/rex-text
-dev-ruby/rex-zip
 
 # Michał Górny <mgorny@gentoo.org> (2020-03-29)
 # Unmaintained, seriously outdated, vulnerable.  Multiple bugs reported.
@@ -837,7 +775,6 @@ dev-java/icedtea-web
 # that's pending for a long time (bug #688016) but not aiohttp-cors dep.
 #
 # Removal in 30 days.  Bug #712964.
-dev-python/aiohttp-cors
 net-misc/gns3-converter
 net-misc/gns3-gui
 net-misc/gns3-server
@@ -882,15 +819,6 @@ net-misc/gnome-remote-desktop
 # Patrick McLean <chutzpah@gentoo.org> (2020-02-07)
 # Mask until sys-libs/libxcrypt[system] is unmasked
 >=virtual/libcrypt-2
-
-# Joonas Niilola <juippis@gentoo.org> (2020-02-05)
-# Stagnant upstream with latest release from 2016, python2-only, no maintainer
-# in Gentoo, no notable ebuild action in years, multiple bugs open. Blocks
-# pygtk removal.
-# Switch to alternatives such as,
-# net-misc/connman, net-misc/dhcpcd, net-misc/netifrc, net-misc/NetworkManager
-# and so on. Removal in ~90 days. #708316
-net-misc/wicd
 
 # Mart Raudsepp <leio@gentoo.org> (2020-02-03)
 # Known breakages that need to be handled first, bug 698922
@@ -1126,7 +1054,7 @@ sys-devel/automake:1.10
 # switch the compiler / the binutils) ASAP. If you need them for a specific
 # (isolated) use case, feel free to unmask them on your system.
 <sys-devel/gcc-5.4
-<sys-libs/glibc-2.29
+<sys-libs/glibc-2.30-r8
 <sys-devel/binutils-2.33.1-r1
 <sys-devel/binutils-hppa64-2.33.1
 <sys-libs/binutils-libs-2.33.1-r1

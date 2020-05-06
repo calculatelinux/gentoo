@@ -43,6 +43,10 @@ if [[ -z ${_MESON_ECLASS} ]]; then
 
 inherit multiprocessing ninja-utils python-utils-r1 toolchain-funcs
 
+if [[ ${EAPI} == 6 ]]; then
+	inherit eapi7-ver
+fi
+
 fi
 
 EXPORT_FUNCTIONS src_configure src_compile src_test src_install
@@ -323,8 +327,8 @@ meson_src_configure() {
 		--prefix "${EPREFIX}/usr"
 		--sysconfdir "${EPREFIX}/etc"
 		--wrap-mode nodownload
-		--build.pkg-config-path "${BUILD_PKG_CONFIG_PATH:-${EPREFIX}/usr/share/pkgconfig}"
-		--pkg-config-path "${PKG_CONFIG_PATH:-${EPREFIX}/usr/share/pkgconfig}"
+		--build.pkg-config-path "${BUILD_PKG_CONFIG_PATH}${BUILD_PKG_CONFIG_PATH:+:}${EPREFIX}/usr/share/pkgconfig"
+		--pkg-config-path "${PKG_CONFIG_PATH}${PKG_CONFIG_PATH:+:}${EPREFIX}/usr/share/pkgconfig"
 		--native-file "$(_meson_create_native_file)"
 	)
 
@@ -362,11 +366,24 @@ meson_src_configure() {
 	# https://bugs.gentoo.org/625396
 	python_export_utf8_locale
 
-	# https://bugs.gentoo.org/720818
-	export -n {C,CPP,CXX,F,FC,OBJC,OBJCXX,LD}FLAGS PKG_CONFIG_{LIBDIR,PATH}
+	(
+		# https://bugs.gentoo.org/720860
+		if ver_test "$(meson --version)" -lt "0.54"; then
+			local -x CFLAGS=${BUILD_CFLAGS}
+			local -x CPPFLAGS=${BUILD_CPPFLAGS}
+			local -x CXXFLAGS=${BUILD_CXXFLAGS}
+			local -x FFLAGS=${BUILD_FCFLAGS}
+			local -x OBJCFLAGS=${BUILD_OBJCFLAGS}
+			local -x OBJCXXFLAGS=${BUILD_OBJCXXFLAGS}
+			local -x LDFLAGS=${BUILD_LDFLAGS}
+		else
+			# https://bugs.gentoo.org/720818
+			export -n {C,CPP,CXX,F,OBJC,OBJCXX,LD}FLAGS PKG_CONFIG_{LIBDIR,PATH}
+		fi
 
-	echo "${mesonargs[@]}" >&2
-	"${mesonargs[@]}" || die
+		echo "${mesonargs[@]}" >&2
+		"${mesonargs[@]}"
+	) || die
 }
 
 # @FUNCTION: meson_src_compile

@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6,7} )
+PYTHON_COMPAT=( python3_{6,7,8} )
 inherit cmake-multilib llvm llvm.org multiprocessing python-any-r1 toolchain-funcs
 
 DESCRIPTION="Low level support for a standard C++ library"
@@ -110,7 +110,7 @@ multilib_src_test() {
 	mv "${BUILD_DIR}"/libcxx/lib/libc++* "${BUILD_DIR}/$(get_libdir)/" || die
 
 	local -x LIT_PRESERVES_TMP=1
-	cmake-utils_src_make check-libcxxabi
+	cmake-utils_src_make check-cxxabi
 }
 
 multilib_src_install_all() {
