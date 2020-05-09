@@ -45,6 +45,7 @@ DOCS=(AUTHORS ChangeLog NEWS )
 PATCHES=(
 	"${FILESDIR}"/${PN}-3.22.1-debug.patch
 	"${FILESDIR}"/${PN}-3.47.0-metainfo.patch
+	"${FILESDIR}"/${PN}-3.47.0-disable-shellext_conf.patch
 )
 
 pkg_pretend() {

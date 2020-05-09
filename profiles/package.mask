@@ -32,6 +32,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Brian Dolbec <dolsen@gentoo.org> (2020-05-08)
+# Unmaintained.  Stuck on Python 3.6.  The only revdep
+# is masked for removal.  Newer buildbot no longer depends on it.
+# Removal in 30 days.  Bug #719518.
+dev-python/ramlfications
+
+# Matt Turner <mattst88@gentoo.org> (2020-05-08)
+# Client-side library for an X extension that has not been supported by Xorg
+# for about a decade. Masked for removal in 30 days. Bug #720150
+x11-libs/libXxf86misc
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-05-03)
 # Last release in 2015, not compatible with >=media-gfx/gimp-2.10.0
 # Masked for removal in 30 days.
@@ -48,11 +59,6 @@ x11-drivers/xf86-input-mouse
 # Included in recent texlive versions. Please uninstall.
 # Removal in 30 days.
 dev-tex/revtex
-
-# David Seifert <soap@gentoo.org> (2020-05-02)
-# New boost, mask for potential breakage.
->=dev-util/boost-build-1.73
->=dev-libs/boost-1.73
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-05-01)
 # Currently packaged release from 2015, needs maintainer + bump. Bug #720346
@@ -83,6 +89,7 @@ gnome-extra/cinnamon-translations
 gnome-extra/cjs
 gnome-extra/nemo
 x11-wm/muffin
+=dev-python/xapp-1.0.1-r2
 
 # Bernard Cafarelli <voyageur@gentoo.org> (2020-04-30)
 # Does not compile with latest windowmaker, bug #717418
@@ -138,13 +145,13 @@ sys-fs/pysize
 sys-cluster/openais
 
 # Jonas Stein <jstein@gentoo.org> (2020-04-28)
-# Package is no longer required after the removal of 
+# Package is no longer required after the removal of
 # net-irc/quassel-irssi. See also bug #719856.
 # Remove after 2020-06-28
 net-libs/quasselc
 
 # Jonas Stein <jstein@gentoo.org> (2020-04-28)
-# Upstream stopped development. Package should depend on 
+# Upstream stopped development. Package should depend on
 # <net-irc/quassel-0.13 which is no longer in the tree.
 # Bug #719728
 # Remove after 2020-05-28
@@ -249,6 +256,7 @@ dev-python/pyodbc
 # Michał Górny <mgorny@gentoo.org> (2020-04-25)
 # Unmaintained.  Stuck on Python 3.6.  Missing tests.  The only revdep
 # is masked for removal.
+# alternative package is dev-python/pypugjs which is a maintained fork of pyjade
 # Removal in 30 days.  Bug #719418.
 dev-python/pyjade
 
@@ -316,24 +324,6 @@ x11-misc/obtheme
 # Developers do not have access to the cd.
 # Remove after 2020-05-24
 games-action/rune
-
-# Matthew Thode <prometheanfire@gentoo.org> (2020-04-23)
-# not needed anymore, no revdeps
-# removal in 14 days. Bug #718996.
-dev-python/ip-associations-python-novaclient-ext
-dev-python/os-virtual-interfacesv2-python-novaclient-ext
-dev-python/os-networksv2-python-novaclient-ext
-dev-python/osc-placement
-dev-python/rackspace-novaclient
-dev-python/nose-testconfig
-dev-python/positional
-dev-python/posix_ipc
-dev-python/repoze-who
-dev-python/tablib
-dev-python/rackspace-auth-openstack
-dev-python/rax-default-network-flags-python-novaclient-ext
-dev-python/rax-scheduled-images-python-novaclient-ext
-dev-python/zake
 
 # Michał Górny <mgorny@gentoo.org> (2020-04-23)
 # Unmaintained.  Stuck on Python 3.6.  No revdeps.
@@ -700,13 +690,6 @@ dev-tcltk/tcl-mccp
 # Masked for testing
 >=dev-libs/libressl-3.1.0
 
-# Michał Górny <mgorny@gentoo.org> (2020-04-04)
-# Package that used to provide test data for dev-python/cryptography.
-# The modern versions fetch it via SRC_URI and the last version
-# needing split vectors has been removed.
-# Removal in 30 days.  Bug #716204.
-dev-python/cryptography-vectors
-
 # Mikle Kolyada <zlogene@gentoo.org> (2020-04-04)
 # py27-only vim plugins. Masked for removal in 30 days.
 app-vim/automatictexplugin
@@ -718,13 +701,6 @@ app-vim/vimpress
 # Lars Wendler <polynomial-c@gentoo.org> (2020-04-02)
 # Introduced new privsep (chroot) feature. Masked for testing.
 >=net-misc/dhcpcd-9.0.0
-
-# Michael Orlitzky <mjo@gentoo.org> (2020-04-01)
-# Upstream has no idea what they're doing, and every new version
-# introduces more security issues. Freshclam itself can now fetch
-# most third-party signatures, or app-antivirus/fangfrisch serves
-# as a replacement with a sane upstream.
-app-antivirus/clamav-unofficial-sigs
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (2020-03-29)
 # Old releases gone from upstream, new releases use overly restrictive

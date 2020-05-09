@@ -25,9 +25,10 @@ DESCRIPTION="Alliance for Open Media AV1 Codec SDK"
 HOMEPAGE="https://aomedia.org"
 
 LICENSE="BSD-2"
-SLOT="0/0"
+SLOT="0/1.9999"
 IUSE="doc examples"
-IUSE="${IUSE} cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 cpu_flags_x86_ssse3 cpu_flags_x86_sse4_1 cpu_flags_x86_avx cpu_flags_x86_avx2"
+IUSE="${IUSE} cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 cpu_flags_x86_ssse3"
+IUSE="${IUSE} cpu_flags_x86_sse4_1 cpu_flags_x86_sse4_2 cpu_flags_x86_avx cpu_flags_x86_avx2"
 IUSE="${IUSE} cpu_flags_arm_neon"
 
 REQUIRED_USE="
@@ -53,6 +54,7 @@ multilib_src_configure() {
 		-DENABLE_DOCS=$(multilib_native_usex doc ON OFF)
 		-DENABLE_EXAMPLES=$(multilib_native_usex examples ON OFF)
 		-DENABLE_NASM=OFF
+		-DENABLE_TESTS=OFF
 		-DENABLE_TOOLS=ON
 		-DENABLE_WERROR=OFF
 
@@ -64,6 +66,7 @@ multilib_src_configure() {
 		-DENABLE_SSE3=$(usex cpu_flags_x86_sse3 ON OFF)
 		-DENABLE_SSSE3=$(usex cpu_flags_x86_ssse3 ON OFF)
 		-DENABLE_SSE4_1=$(usex cpu_flags_x86_sse4_1 ON OFF)
+		-DENABLE_SSE4_2=$(usex cpu_flags_x86_sse4_2 ON OFF)
 		-DENABLE_AVX=$(usex cpu_flags_x86_avx ON OFF)
 		-DENABLE_AVX2=$(usex cpu_flags_x86_avx2 ON OFF)
 	)
@@ -75,4 +78,8 @@ multilib_src_install() {
 		local HTML_DOCS=( "${BUILD_DIR}"/docs/html/. )
 	fi
 	cmake_src_install
+}
+
+multilib_src_install_all() {
+	find "${ED}" -type f \( -name "*.a" -o -name "*.la" \) -delete || die
 }
