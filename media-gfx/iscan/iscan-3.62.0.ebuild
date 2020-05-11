@@ -32,6 +32,8 @@ S="${WORKDIR}/utsushi-0.$(ver_cut 2-3)"
 PATCHES=(
 	"${FILESDIR}"/${PN}-3.61.0-ijg-libjpeg.patch
 	"${FILESDIR}"/${PN}-3.61.0-imagemagick-7.patch
+	"${FILESDIR}"/${PN}-3.62.0-gcc-10.patch
+	"${FILESDIR}"/${PN}-3.62.0-boost-1.73.patch
 )
 
 src_prepare() {

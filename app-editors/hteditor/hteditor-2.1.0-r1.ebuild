@@ -33,6 +33,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-gcc-6-uchar.patch
 	"${FILESDIR}"/${P}-format-security.patch
 	"${FILESDIR}"/${P}-gcc-10.patch
+	"${FILESDIR}"/${P}-AR.patch
 )
 
 src_prepare() {
@@ -44,10 +45,6 @@ src_configure() {
 	econf \
 		$(use_enable X x11-textmode) \
 		--enable-maintainermode
-}
-
-src_compile() {
-	emake AR="$(tc-getAR)" CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
 }
 
 src_install() {
