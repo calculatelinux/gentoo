@@ -23,7 +23,7 @@ LICENSE+=" Apache-2.0"
 # admin icons, jquery, xregexp.js
 LICENSE+=" MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~x86"
 IUSE="doc sqlite test"
 RESTRICT="!test? ( test )"
 
@@ -41,6 +41,7 @@ BDEPEND="
 		dev-python/numpy[${PYTHON_USEDEP}]
 		dev-python/pillow[webp,${PYTHON_USEDEP}]
 		dev-python/pyyaml[${PYTHON_USEDEP}]
+		dev-python/selenium[${PYTHON_USEDEP}]
 		dev-python/tblib[${PYTHON_USEDEP}]
 	)"
 
