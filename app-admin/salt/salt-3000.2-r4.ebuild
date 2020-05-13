@@ -15,11 +15,10 @@ if [[ ${PV} == 9999* ]]; then
 	EGIT_REPO_URI="git://github.com/${PN}stack/${PN}.git"
 	EGIT_BRANCH="develop"
 	SRC_URI=""
-	KEYWORDS=""
 else
 	SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz
 		https://dev.gentoo.org/~chutzpah/dist/salt/salt-3000.2-py38-misc.patch.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 fi
 
 LICENSE="Apache-2.0"
