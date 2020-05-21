@@ -168,7 +168,6 @@ app-admin/sudo:secure-path - Replace PATH variable with compile time secure path
 app-admin/sudo:sendmail - Allow sudo to send emails with sendmail
 app-admin/sudo:sssd - Add System Security Services Daemon support
 app-admin/sudo:system-digest - Use message digest functions from dev-libs/libgcrypt, dev-libs/libressl or dev-libs/openssl instead of sudo's internal SHA2 implementation
-app-admin/sysklogd:klogd - Build and install (deprecated) kernel logging daemon
 app-admin/sysklogd:logger - Build the logger program
 app-admin/sysklogd:logrotate - use app-admin/logrotate for rotating logs rather than custom cron scripts
 app-admin/syslog-ng:amqp - Enable support for AMQP destinations
@@ -3687,10 +3686,13 @@ kde-plasma/xdg-desktop-portal-kde:screencast - Enable screencast portal using me
 lxde-base/lxdm:consolekit - Enables support for authorization using consolekit
 lxde-base/lxdm:gtk3 - Use GTK+3 instead of 2
 lxde-base/lxterminal:gtk3 - Use GTK+3 instead of GTK+2
+lxqt-base/liblxqt:backlight - Enable backlight control features.
 lxqt-base/lxqt-config:monitor - Build monitor settings tool
 lxqt-base/lxqt-config:touchpad - Build touchpad settings tool
 lxqt-base/lxqt-meta:about - Install lxqt-base/lxqt-about
 lxqt-base/lxqt-meta:admin - Install lxqt-base/lxqt-admin
+lxqt-base/lxqt-meta:archiver - Install app-arch/lxqt-archiver
+lxqt-base/lxqt-meta:display-manager - Install a graphical display manager
 lxqt-base/lxqt-meta:filemanager - Install x11-misc/pcmanfm-qtfile manager
 lxqt-base/lxqt-meta:lightdm - Install x11-misc/lightdmdisplay manager
 lxqt-base/lxqt-meta:lximage - Install media-gfx/lximage-qtimage viewer
@@ -7375,6 +7377,7 @@ sci-libs/libgeodecomp:opencv - Enables OpenCV related code
 sci-libs/libgeodecomp:silo - Enables SILO related code
 sci-libs/libghemical:mopac7 - Use sci-chemistry/mopac7 for semi-empirical calculations
 sci-libs/libghemical:mpqc - Use sci-chemistry/mpqc for quantum-mechanical calculations
+sci-libs/liborigin:tools - Install opj2dat command line util
 sci-libs/libsc:romio - Build with support for the ROMIO MPI-IO component
 sci-libs/libsigrok:ftdi - Enable drivers that need libftdi
 sci-libs/libsigrok:parport - Enable drivers that are parallel (IEEE1284) based
@@ -7614,9 +7617,13 @@ sci-physics/geant:geant3 - Add compatibility for geant321 to geant4
 sci-physics/geant:inventor - Add support for Open Inventor SGI toolkit via Coin3D
 sci-physics/geant:raytracerx - Enable raytracing for physics events
 sci-physics/geant:vrml - Enable output of geant4 in vrml formats
+sci-physics/geant-vmc:c++11 - Build using the C++11 standard
+sci-physics/geant-vmc:c++14 - Build using the C++14 standard
+sci-physics/geant-vmc:c++17 - Build using the C++17 standard
 sci-physics/geant-vmc:g4root - Build G4Root (interface for GEANT4 simulation with a ROOT geometry)
 sci-physics/geant-vmc:geant3 - Build with Geant4 G3toG4 library
 sci-physics/geant-vmc:mtroot - Build MTRoot (provides ROOT IO manager classes with multi-threading support)
+sci-physics/geant-vmc:rootvmc - Use sci-physics/root[vmc] (deprecated) instead of sci-physics/vmc as VMC provider
 sci-physics/geant-vmc:vgm - Enable the Virtual Geometry Model (sci-physics/vgm)
 sci-physics/hepmc:cm - Build with cm instead of default mm for length units
 sci-physics/hepmc:gev - Build with GeV instead of default MeV for momentum units
@@ -7663,8 +7670,14 @@ sci-physics/thepeg:fastjet - Adds support for sci-physics/fastjet
 sci-physics/thepeg:hepmc - Adds support for High Energy Physics Monte Carlo Generators sci-physics/hepmc
 sci-physics/thepeg:lhapdf - Adds support for sci-physics/lhapdf
 sci-physics/thepeg:rivet - Adds support for sci-physics/rivet
+sci-physics/vgm:c++11 - Build using the C++11 standard
+sci-physics/vgm:c++14 - Build using the C++14 standard
+sci-physics/vgm:c++17 - Build using the C++17 standard
 sci-physics/vgm:geant4 - Enable interaction with Geant4(sci-physics/geant:4)
 sci-physics/vgm:root - Enable interaction with ROOT (sci-physics/root)
+sci-physics/vmc:c++11 - Build using the C++11 standard
+sci-physics/vmc:c++14 - Build using the C++14 standard
+sci-physics/vmc:c++17 - Build using the C++17 standard
 sci-physics/yoda:root - Adds support for sci-physics/root
 sci-visualization/fityk:nlopt - Enable optimization with sci-libs/nlopt
 sci-visualization/gnuplot:bitmap - Enable dot-matrix printers and pbm terminal
@@ -8793,8 +8806,8 @@ www-servers/tomcat:websockets - Builds websockets api and implementation (requir
 www-servers/uwsgi:embedded - Embed plugins instead of building them as real plugins. When disabling this USE flag make sure you specify all used plugins in your uWSGI configuration. Note: Language plugins will always be built as real plugins.
 www-servers/uwsgi:go - Build the gccgo plugin to run Go applications.
 www-servers/uwsgi:json - Support json as a configuration file format.
-www-servers/uwsgi:python_asyncio - Use the EXPERIMENTAL asyncio (tulip) for python3.4 async request dispatching and as LoopEngine (see http://uwsgi-docs.readthedocs.org/en/latest/asyncio.html).
-www-servers/uwsgi:python_gevent - Use dev-python/gevent for async request dispatching and as LoopEngine (see http://projects.unbit.it/uwsgi/wiki/Gevent).
+www-servers/uwsgi:python-asyncio - Use the EXPERIMENTAL asyncio (tulip) for python3.4 async request dispatching and as LoopEngine (see http://uwsgi-docs.readthedocs.org/en/latest/asyncio.html).
+www-servers/uwsgi:python-gevent - Use dev-python/gevent for async request dispatching and as LoopEngine (see http://projects.unbit.it/uwsgi/wiki/Gevent).
 www-servers/uwsgi:routing - Enable routing support
 www-servers/uwsgi:yajl - Use dev-libs/yajl instead of dev-libs/jansson for parsing JSON configuration files (if USe=json is set)
 www-servers/uwsgi:yaml - Support yaml as a configuration file format.
