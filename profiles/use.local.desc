@@ -1052,7 +1052,6 @@ app-office/calligraplan:holidays - Enable kde-frameworks/kholidays integration
 app-office/calligraplan:kwallet - Enable access to encrypted OpenDocument files with kde-frameworks/kwallet storage
 app-office/glabels:barcode - Enable barcode support through external libraries.
 app-office/gnucash:aqbanking - Connect to some internet banks via AqBanking
-app-office/gnucash:chipcard - Enable support for chipcard reading and processing.
 app-office/gnucash:quotes - Enable Online Stock Quote retrieval
 app-office/gnucash:register2 - Use the new register (Experimental)
 app-office/gnumeric:libgda - Enable database support through gnome-extra/libgda.
@@ -3643,17 +3642,13 @@ kde-plasma/kde-cli-tools:kdesu - Build graphical frontend for kde-frameworks/kde
 kde-plasma/kdeplasma-addons:share - Enable applet for quickly sharing data to a variety of sources
 kde-plasma/kdeplasma-addons:webengine - Enable dictionary and web browser applets using dev-qt/qtwebengine
 kde-plasma/kinfocenter:pci - Show advanced PCI information
-kde-plasma/kmenuedit:hotkeys - Enable support for hotkey editing
 kde-plasma/kscreenlocker:consolekit - Support for killing the screenlocker when sys-auth/consolekit is the session tracker
 kde-plasma/ksysguard:pcap - Enable per-process network statistic collection using net-libs/libpcap
 kde-plasma/kwin:multimedia - Enable effect video button in desktop effects KCM
 kde-plasma/libksysguard:webengine - Enable display of detailed memory information using dev-qt/qtwebengine.
 kde-plasma/plasma-desktop:ibus - Use ibus input method via app-i18n/ibus
-kde-plasma/plasma-desktop:mouse - Enable mouse KCM
 kde-plasma/plasma-desktop:scim - Enable applets that use app-i18n/scim
-kde-plasma/plasma-desktop:touchpad - Enable touchpad KCM
 kde-plasma/plasma-meta:browser-integration - Enable integration with Chrome/Firefox with browser extensions
-kde-plasma/plasma-meta:consolekit - Enable sys-auth/consolekit support instead of logind session tracking
 kde-plasma/plasma-meta:crypt - Pull in kde-plasma/plasma-vault for encrypted vaults integration
 kde-plasma/plasma-meta:desktop-portal - Enable sys-apps/xdg-desktop-portal backend implementation for Plasma
 kde-plasma/plasma-meta:discover - Pull in resources management GUI; a centralised GHNS alternative and optional sys-apps/fwupd frontend
@@ -3663,9 +3658,7 @@ kde-plasma/plasma-meta:grub - Pull in Breeze theme for sys-boot/grub
 kde-plasma/plasma-meta:gtk - Enable Breeze widget style and system settings module for GTK+
 kde-plasma/plasma-meta:kwallet - Enable support for KWallet auto-unlocking via kde-plasma/kwallet-pam
 kde-plasma/plasma-meta:legacy-systray - Add support for legacy applications using kde-plasma/xembed-sni-proxy
-kde-plasma/plasma-meta:pam - Enable support for kwallet auto-unlocking
 kde-plasma/plasma-meta:plymouth - Pull in Breeze theme for sys-boot/plymouth
-kde-plasma/plasma-meta:pm-utils - Enable support for suspend/resume with sys-power/pm-utils when using sys-auth/consolekit
 kde-plasma/plasma-meta:pulseaudio - Install Plasma applet for PulseAudio volume management
 kde-plasma/plasma-meta:qrcode - Enable support for easy WiFi network sharing using QR codes with kde-plasma/plasma-nm
 kde-plasma/plasma-meta:sddm - Pull in the x11-misc/sddm display manager and system settings module
@@ -5173,8 +5166,6 @@ media-video/x264-encoder:avs - enable AvxSynth support in the AviSynth input mod
 media-video/x264-encoder:ffmpegsource - Enable ffmpegsource aka ffms support, disables lavf
 media-video/x264-encoder:interlaced - Enable interlaced encoding support, this can decrease encoding speed by up to 2%
 media-video/xine-ui:vdr - Enables Video Disk Recorder support
-media-video/yle-dl:php - Use a PHP script as download backend
-media-video/yle-dl:youtube-dl - Use youtube-dl script as a download backend
 net-analyzer/2ping:server - Install the server init scripts.
 net-analyzer/argus:libtirpc - Build against net-libs/libtirpc for RPC support
 net-analyzer/argus-clients:ft - Enable support for flow packets through net-analyzer/flow-tools
@@ -5976,7 +5967,6 @@ net-irc/weechat:scripts - Build infrastructure for scripting
 net-irc/weechat:trigger - Enable trigger plugin
 net-irc/weechat:xfer - Enable xfer plugin support
 net-irc/znc:zlib - Enable mod_deflate-like gzip support for znc's web interface using sys-libs/zlib.
-net-libs/aqbanking:chipcard - Enable support for DDV/RSA-chipcards
 net-libs/aqbanking:ebics - Enable support for Electronic Banking Internet Communication Standard (EBICS)
 net-libs/axtls:cgi-lua - Enables lua backed cgi for axhttpd server
 net-libs/axtls:cgi-php - Enables php backed cgi for axhttpd server
@@ -6784,12 +6774,10 @@ net-p2p/qbittorrent:webui - Enable the Web UI
 net-p2p/resilio-sync:pax_kernel - Use paxctl to mark binaries
 net-p2p/retroshare:cli - Enables the CLI version of RetroShare
 net-p2p/retroshare:control-socket - Enables API via Unix socket support
-net-p2p/retroshare:feedreader - Enables the Feedreader plugin
 net-p2p/retroshare:gnome-keyring - Enables potentially insecure autologin capability via Gnome Keyring
 net-p2p/retroshare:jsonapi - Enables the new RetroShare JSON API
 net-p2p/retroshare:service - Enables the new RetroShare service controllable only through JSON API
 net-p2p/retroshare:sqlcipher - Enables GXS database encryption via SQLCipher
-net-p2p/retroshare:voip - Enables VOIP plugin
 net-p2p/retroshare:webui - Enables Web interface and API support
 net-p2p/retroshare:xapian - Enables GXS content indexing and search through Xapian
 net-p2p/rtorrent:daemon - Uses app-misc/screen to daemonize this application
@@ -7308,8 +7296,9 @@ sci-libs/coinor-utils:glpk - Enable GNU Linear Programming Kit sci-mathematics/g
 sci-libs/dealii:adolc - Adds support for ADOL-C (sci-libs/adolc)
 sci-libs/dealii:arpack - Adds support for ARPACK (sci-libs/arpack)
 sci-libs/dealii:assimp - Add support for assimp (media-libs/assimp)
-sci-libs/dealii:cuda - Add support for cuda assimp (dev-util/nvidia-cuda-sdk)
+sci-libs/dealii:cuda - Add support for cuda (dev-util/nvidia-cuda-sdk)
 sci-libs/dealii:debug - Build an additional debug library with extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see <http://www.gentoo.org/proj/en/qa/backtraces.xml>
+sci-libs/dealii:ginkgo - Add support for ginkgo (sci-libs/ginkgo)
 sci-libs/dealii:gmsh - Add support for gmsh (sci-libs/gmsh)
 sci-libs/dealii:metis - Add support for metis (sci-libs/metis)
 sci-libs/dealii:muparser - Add support for muparser (dev-cpp/muParser)
@@ -7320,7 +7309,7 @@ sci-libs/dealii:petsc - Add support for petsc (sci-mathematics/petsc)
 sci-libs/dealii:scalapack - Add support for ScaLAPACK (sci-libs/scalapack)
 sci-libs/dealii:slepc - Add support for slepc (sci-mathematics/slepc)
 sci-libs/dealii:sparse - Add support for suitesparse (sci-libs/suitesparse)
-sci-libs/dealii:sundials - Add support for sundials assimp (sci-libs/sundials)
+sci-libs/dealii:sundials - Add support for sundials (sci-libs/sundials)
 sci-libs/dealii:symengine - Add support for symengine (sci-libs/symengine)
 sci-libs/dealii:tbb - Add threading support with the help of the tbb library (dev-cpp/tbb)
 sci-libs/dealii:trilinos - Add support for trilinos (sci-libs/trilinos)
