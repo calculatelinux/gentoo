@@ -2578,6 +2578,36 @@ dev-python/pypax:ptpax - Enable PT_PAX_FLAGS support.
 dev-python/pypax:xtpax - Enable XATTR_PAX_FLAGS support.
 dev-python/pypy-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
 dev-python/pypy3-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
+dev-python/pyside2:3d - Build Qt3DCore, Qt3DAnimation, Qt3DExtras, Qt3DInput, Qt3DLogic, and Qt3DRender modules
+dev-python/pyside2:charts - Build QtCharts module
+dev-python/pyside2:concurrent - Build QtConcurrent module
+dev-python/pyside2:datavis - Build QtDataVisualization module
+dev-python/pyside2:designer - Build QtDesigner and QtUiTools modules
+dev-python/pyside2:gles2-only - Build QtGui "QOpenGL*" classes
+dev-python/pyside2:gui - Build QtGui module
+dev-python/pyside2:help - Build QtHelp module
+dev-python/pyside2:location - Build QtLocation module
+dev-python/pyside2:multimedia - Build QtMultimedia and QtMultimediaWidgets modules
+dev-python/pyside2:network - Build QtNetwork module
+dev-python/pyside2:positioning - Build QtPositioning module
+dev-python/pyside2:printsupport - Build QtPrintSupport module
+dev-python/pyside2:qml - Build QtQml module
+dev-python/pyside2:quick - Build QtQuick and QtQuickWidgets modules
+dev-python/pyside2:script - Build QtScript module
+dev-python/pyside2:scripttools - Build QtScriptTools module
+dev-python/pyside2:scxml - Build QtScxml module
+dev-python/pyside2:sensors - Build QtSensors module
+dev-python/pyside2:speech - Build QtTextToSpeech module
+dev-python/pyside2:sql - Build QtSql module
+dev-python/pyside2:svg - Build QtSvg module
+dev-python/pyside2:testlib - Build QtTest module
+dev-python/pyside2:webchannel - Build QtWebChannel module
+dev-python/pyside2:webengine - Build QtWebEngine and QtWebEngineWidgets modules
+dev-python/pyside2:websockets - Build QtWebSockets module
+dev-python/pyside2:widgets - Build QtWidgets module
+dev-python/pyside2:x11extras - Build QtX11Extras module
+dev-python/pyside2:xml - Build QtXml module
+dev-python/pyside2:xmlpatterns - Build QtXmlPatterns module
 dev-python/python-mpd:twisted - Enable twisted support
 dev-python/python-stdnum:vies - Enable VIES
 dev-python/pyudev:qt5 - Install PyQt5 bindings
@@ -2587,6 +2617,9 @@ dev-python/rarfile:compressed - Enables the module to support compressed v3 arch
 dev-python/rdflib:redland - enable support for Redland triplestore
 dev-python/restkit:cli - Install the restcli command line interface/tool, based on dev-python/ipython
 dev-python/rfc3986:idna - enable support for the IDNA specification (RFC 5891)
+dev-python/shiboken2:docstrings - Expose documentation as Python docstrings (recommended)
+dev-python/shiboken2:numpy - Implicitly convert passed NumPy arrays to Qt lists
+dev-python/shiboken2:vulkan - Generate "QSurface::VulkanSurface" bindings
 dev-python/simplespectral:faster - Use sci-libs/scipy to speed up drawing
 dev-python/simplespectral:fastest - Use dev-python/pyFFTW to speed up drawing to the max
 dev-python/socketpool:eventlet - Install dev-python/eventlet as needed for the eventlet backend.
@@ -5293,12 +5326,10 @@ net-analyzer/nfdump:readpcap - Build nfcapd collector to read from pcap file ins
 net-analyzer/nfdump:sflow - Build sflow collector sfcpad
 net-analyzer/nmap:libssh2 - Enable SSH support through net-libs/libssh2
 net-analyzer/nmap:ncat - Install the ncat utility
-net-analyzer/nmap:ndiff - Install the ndiff utility
 net-analyzer/nmap:nmap-update - Install nmap-update, which uses dev-vcs/subversion to update nmap scripts in your home directory
 net-analyzer/nmap:nping - Install the nping utility
 net-analyzer/nmap:nse - Include support for the Nmap Scripting Engine (NSE)
 net-analyzer/nmap:system-lua - Use dev-lang/lua instead of the bundled liblua
-net-analyzer/nmap:zenmap - Install the GTK+ based nmap GUI, zenmap
 net-analyzer/nrpe:command-args - Build support for specifying the command-line arguments from the Nagios/Icinga master. Make sure you understand the implications of this flag as it can be a security risk.
 net-analyzer/nsca:crypt - Build support for crypted communication with nsca, through dev-libs/libmcrypt. It's recommended not to disable this flag unless all the communication will be handled in an absolutely safe environment.
 net-analyzer/nsca:minimal - Only build and install the send_nsca command and not the daemon. This allows a very minimal install with no overhead when setting up a node.
@@ -8223,6 +8254,7 @@ sys-devel/binutils-apple:libcxx - Add support for libcxx
 sys-devel/binutils-apple:lto - Add support for Link-Time Optimization with LLVM
 sys-devel/binutils-apple:multitarget - Compile for non-standard target architectures (ppc and ppc64) -- experimental, Gentoo only
 sys-devel/binutils-apple:tapi - Build against sys-libs/tapi
+sys-devel/binutils-config:native-symlinks - Install native symlinks like 'as' or 'ar' to /usr/bin. Otherwise keep only ${CTARGET}-as and friends.
 sys-devel/binutils-hppa64:default-gold - Set ld to point to ld.gold instead of ld.bfd
 sys-devel/binutils-hppa64:gold - Build ld.gold linker
 sys-devel/binutils-hppa64:multitarget - Adds support to binutils for cross compiling (does not work with gas)
@@ -8239,7 +8271,6 @@ sys-devel/clang-runtime:sanitize - Enable compiler-rt sanitizer (-fsanitize*) su
 sys-devel/distcc:gssapi - Enable support for net-libs/libgssglue
 sys-devel/gcc:ada - Build the ADA language (GNAT) frontend
 sys-devel/gcc:awt - Useful only when building GCJ, this enables Abstract Window Toolkit (AWT) peer support on top of GTK+
-sys-devel/gcc:boundschecking - Add the bounds checking patch by Haj Ten Brugge, this will DISABLE the hardened PIE+SSP patches
 sys-devel/gcc:cilk - Support the Cilk Plus language (C/C++ based languages for parallel programming)
 sys-devel/gcc:d - Enable support for the D programming language
 sys-devel/gcc:fixed-point - Enable fixed-point arithmetic support for MIPS targets in gcc (Warning: significantly increases compile time!)
@@ -8250,7 +8281,6 @@ sys-devel/gcc:jit - Enable libgccjit so other applications can embed gcc for Jus
 sys-devel/gcc:libssp - Build SSP support into a dedicated library rather than use the code in the C library (DO NOT ENABLE THIS IF YOU DON'T KNOW WHAT IT DOES)
 sys-devel/gcc:lto - Build using Link Time Optimizations (LTO)
 sys-devel/gcc:mpx - Enable support for Intel Memory Protection Extensions (MPX)
-sys-devel/gcc:mudflap - Add support for mudflap, a pointer use checking library
 sys-devel/gcc:nopie - Disable PIE support (NOT FOR GENERAL USE)
 sys-devel/gcc:nossp - Disable SSP support (NOT FOR GENERAL USE)
 sys-devel/gcc:nptl - Enable support for Native POSIX Threads Library, the new threading module (requires linux-2.6 or better usually)
@@ -8265,6 +8295,7 @@ sys-devel/gcc:vtv - Build support for virtual table verification (a C++ hardenin
 sys-devel/gcc-apple:bootstrap - !DO NOT SET THIS FLAG YOURSELF! avoids need for autoconf during bootstrap stage2
 sys-devel/gcc-apple:objc - Build support for the Objective C code language
 sys-devel/gcc-apple:objc++ - Build support for the Objective C++ language
+sys-devel/gcc-config:native-symlinks - Install native symlinks like 'gcc' or 'g++' to /usr/bin. Otherwise keep only ${CTARGET}-gcc and friends.
 sys-devel/gdb:client - Install the main "gdb" program (most people want this)
 sys-devel/gdb:lzma - Support lzma compression in ELF debug info
 sys-devel/gdb:multitarget - Support all known targets in one gdb binary
