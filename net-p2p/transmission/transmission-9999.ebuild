@@ -10,7 +10,7 @@ if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="https://github.com/transmission/transmission"
 else
 	SRC_URI="https://github.com/transmission/transmission-releases/raw/master/${P}.tar.xz"
-	KEYWORDS="~amd64 ~arm ~arm64 ~mips ~ppc ~ppc64 ~x86 ~amd64-linux"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 DESCRIPTION="A fast, easy, and free BitTorrent client"
@@ -83,14 +83,6 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	${ACCT_DEPEND}
 "
-
-src_unpack() {
-	if [[ ${PV} == 9999 ]]; then
-		git-r3_src_unpack
-	else
-		unpack ${P}.tar.gz
-	fi
-}
 
 src_configure() {
 	local mycmakeargs=(
