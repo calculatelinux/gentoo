@@ -15,7 +15,7 @@ HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Portage"
 LICENSE="GPL-2"
 KEYWORDS=""
 SLOT="0"
-IUSE="apidoc binpkg-zstd build doc gentoo-dev +ipc +native-extensions +rsync-verify selinux xattr"
+IUSE="apidoc build doc gentoo-dev +ipc +native-extensions +rsync-verify selinux xattr"
 
 DEPEND="!build? ( $(python_gen_impl_dep 'ssl(+)') )
 	>=app-arch/tar-1.27
@@ -32,6 +32,7 @@ DEPEND="!build? ( $(python_gen_impl_dep 'ssl(+)') )
 # app-portage/gemato goes without PYTHON_USEDEP since we're calling
 # the executable.
 RDEPEND="
+	app-arch/zstd
 	>=app-arch/tar-1.27
 	dev-lang/python-exec:2
 	!build? (
@@ -53,7 +54,6 @@ RDEPEND="
 	xattr? ( kernel_linux? (
 		>=sys-apps/install-xattr-0.3
 	) )
-	binpkg-zstd? ( app-arch/zstd )
 	!<app-admin/logrotate-3.8.0"
 PDEPEND="
 	!build? (
@@ -112,12 +112,6 @@ python_prepare_all() {
 	if use xattr && use kernel_linux ; then
 		einfo "Adding FEATURES=xattr to make.globals ..."
 		echo -e '\nFEATURES="${FEATURES} xattr"' >> cnf/make.globals \
-			|| die "failed to append to make.globals"
-	fi
-
-	if use binpkg-zstd ; then
-		einfo "Adding BINGPKG_COMPRESS=\"zstd\" to make.globals ..."
-		echo -e '\nBINGPKG_COMPRESS="zstd"' >> cnf/make.globals \
 			|| die "failed to append to make.globals"
 	fi
 
@@ -237,6 +231,10 @@ pkg_preinst() {
 		-u PORTDIR_OVERLAY \
 		PYTHONPATH="${D%/}${sitedir}${PYTHONPATH:+:${PYTHONPATH}}" \
 		"${PYTHON}" -m portage._compat_upgrade.default_locations || die
+
+	env -u BINPKG_COMPRESS \
+		PYTHONPATH="${D%/}${sitedir}${PYTHONPATH:+:${PYTHONPATH}}" \
+		"${PYTHON}" -m portage._compat_upgrade.binpkg_compression || die
 
 	# elog dir must exist to avoid logrotate error for bug #415911.
 	# This code runs in preinst in order to bypass the mapping of

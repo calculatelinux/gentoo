@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python2_7 python3_{6,7,8} pypy3 )
+PYTHON_COMPAT=( python2_7 python3_{6,7,8,9} pypy3 )
 
 inherit distutils-r1
 
@@ -41,6 +41,8 @@ python_compile() {
 }
 
 python_test() {
+	# Skip tests if cpp is not in PATH
+	type -P cpp >/dev/null || return 0
 	# change workdir to avoid '.' import
 	cd tests || die
 	"${EPYTHON}" -m unittest discover -v || die "Tests fail with ${EPYTHON}"

@@ -218,6 +218,7 @@ app-arch/file-roller:packagekit - Enable support for the distro-neutral package 
 app-arch/gzip:pic - disable optimized assembly code that is not PIC friendly
 app-arch/innoextract:debug - Enable debug logging and the --debug command-line option
 app-arch/innoextract:lzma - Enable support for extracting lzma-compressed installers using app-arch/xz-utils
+app-arch/lbzip2:symlink - Install symlinks which override app-arch/bzip2 implementation
 app-arch/libarchive:blake2 - Enable Blake2 hash support via app-crypt/libb2.
 app-arch/libarchive:bzip2 - Allow accessing bzip2-compressed archives through libbz2 (which comes with app-arch/bzip2). This only affects libarchive's native support: bsdtar will keep using bunzip2 as a filter if that's not built-in.
 app-arch/libarchive:e2fsprogs - Use file flags from sys-fs/e2fsprogs headers instead of virtual/os-headers headers
@@ -4413,6 +4414,7 @@ media-libs/x264:opencl - Add support for OpenCL.
 media-libs/x264:pic - disable optimized assembly code that is not PIC friendly
 media-libs/x265:10bit - Add support for producing 10bits HEVC.
 media-libs/x265:12bit - Add support for producing 12bits HEVC.
+media-libs/x265:asm - Enable x86_64 assembly optimizations.
 media-libs/x265:numa - Build with support for NUMA nodes.
 media-libs/x265:pic - Disable optimized assembly code that is not PIC friendly
 media-libs/x265:power8 - Enable support for Power 8 assembly optimizations.
@@ -5690,6 +5692,7 @@ net-fs/samba:iprint - Enabling iPrint technology by Novell
 net-fs/samba:json - Enable json audit support through dev-libs/jansson
 net-fs/samba:profiling-data - Enables support for collecting profiling data
 net-fs/samba:quota - Enables support for user quotas
+net-fs/samba:snapper - Enable vfs_snapper module (requires sys-apps/dbus)
 net-fs/samba:system-heimdal - Use app-crypt/heimdal instead of bundled heimdal.
 net-fs/samba:system-mitkrb5 - Use app-crypt/mit-krb5 instead of app-crypt/heimdal.
 net-fs/samba:winbind - Enables support for the winbind auth daemon
@@ -7895,7 +7898,6 @@ sys-apps/pcsc-lite:udev - Use sys-fs/udev rules to handle devices' permissions a
 sys-apps/pcsc-tools:network-cron - Monthly cronjob the update-smartcard_list script
 sys-apps/policycoreutils:audit - Enable support for sys-process/audit and use the audit_* functions (like audit_getuid instead of getuid())
 sys-apps/portage:apidoc - Build html API documentation with sphinx-apidoc.
-sys-apps/portage:binpkg-zstd - Use zstd compression with creating binary packages.
 sys-apps/portage:gentoo-dev - Enable features required for Gentoo ebuild development.
 sys-apps/portage:ipc - Use inter-process communication between portage and running ebuilds.
 sys-apps/portage:native-extensions - Compiles native "C" extensions (speedups, instead of using python backup code). Currently includes libc-locales. This should only be temporarily disabled for some bootstrapping operations. Cross-compilation is not supported.
