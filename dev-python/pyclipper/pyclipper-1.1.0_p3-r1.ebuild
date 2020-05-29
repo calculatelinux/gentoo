@@ -9,28 +9,22 @@ inherit distutils-r1
 DESCRIPTION="Cython wrapper for the C++ translation of the Angus Johnson's Clipper library"
 HOMEPAGE="https://github.com/fonttools/pyclipper"
 SRC_URI="https://github.com/fonttools/pyclipper/archive/${PV/_p/.post}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/${P/_p/.post}"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 BDEPEND="
 	dev-python/cython[${PYTHON_USEDEP}]
-	dev-python/setuptools-git[${PYTHON_USEDEP}]
 	dev-python/setuptools_scm[${PYTHON_USEDEP}]
-	dev-python/setuptools_scm_git_archive[${PYTHON_USEDEP}]
 	test? (
-		dev-python/pytest-runner[${PYTHON_USEDEP}]
 		dev-python/unittest2[${PYTHON_USEDEP}]
 	)
 "
-RDEPEND=""
-DEPEND=""
 
 distutils_enable_tests pytest
-
-S="${WORKDIR}/${P/_p/.post}"
 
 src_prepare() {
 	distutils-r1_src_prepare
