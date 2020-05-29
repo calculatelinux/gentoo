@@ -4,7 +4,7 @@
 EAPI=7
 
 DISTUTILS_USE_SETUPTOOLS=rdepend
-PYTHON_COMPAT=( python2_7 python3_{6,7,8} pypy3 )
+PYTHON_COMPAT=( python2_7 python3_{6,7,8,9} pypy3 )
 PYTHON_REQ_USE="ssl(+),threads(+)"
 
 inherit bash-completion-r1 distutils-r1 multiprocessing
@@ -56,6 +56,7 @@ DEPEND="
 python_prepare_all() {
 	local PATCHES=(
 		"${FILESDIR}/${PN}-19.3-disable-version-check.patch"
+		"${FILESDIR}/${P}-test-endian.patch"
 	)
 	if ! use vanilla; then
 		PATCHES+=( "${FILESDIR}/pip-20.0.2-disable-system-install.patch" )
