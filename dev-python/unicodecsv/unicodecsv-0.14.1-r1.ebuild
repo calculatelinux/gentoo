@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python{2_7,3_{6,7,8}} )
+PYTHON_COMPAT=( python{2_7,3_{6..9}} )
 
 inherit distutils-r1
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm64 hppa ~ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 arm64 hppa ~ia64 ~ppc ~ppc64 sparc x86"
 
 distutils_enable_tests unittest
 
