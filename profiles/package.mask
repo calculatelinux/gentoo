@@ -32,6 +32,54 @@
 
 #--- END OF EXAMPLES ---
 
+# Aaron Bauman <bman@gentoo.org> (2020-06-03)
+# py2 only. dead upstream. m-n. rdep.
+# Masked for removal in 15 days
+app-cdr/sync2cd
+app-text/getxbook
+app-text/pdfsandwich
+dev-python/assets
+dev-python/bz2file
+dev-python/kid
+dev-python/jaxml
+dev-python/python-urljr
+dev-python/selectors34
+dev-python/stomper
+dev-python/YURL
+media-gfx/exact-image
+x11-themes/fvwm-crystal
+
+
+
+# Stefan Strogin <steils@gentoo.org> (2020-06-03)
+# Masked for testing
+>=dev-libs/libressl-3.2.0
+
+# Michał Górny <mgorny@gentoo.org> (2020-06-03)
+# Very bad quality (upstream) package.  Stuck on py3.6.  No revdeps.
+# Removal in 30 days.  Bug #718762.
+dev-python/dnslib
+
+# Aaron Bauman <bman@gentoo.org> (2020-06-02)
+# py2 only. dead upstream. m-n.
+# Masked for removal in 30 days
+app-misc/webcomics-collector
+net-misc/pytvshows
+net-news/rawdog
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-06-02)
+# libgnomeui revdeps with no sign of upstream porting away or doing anything.
+# No maintainer. Bugs #726826, #726822. Masked for removal in 30 days.
+app-misc/cbrpager
+app-misc/ignuit
+
+# Joonas Niilola <juippis@gentoo.org> (2020-06-02)
+# Last snapshot is from 2+ years ago, which doesn't build. Latest 
+# upstream commit won't build with in-tree efl versions. Has a bug 
+# open and unanswered for 2 years, so this package seems unmaintained
+# in Gentoo. Removal in ~30 days. Bug #656098
+x11-themes/terminology-themes
+
 # Jonas Stein <jstein@gentoo.org> (2020-06-01)
 # Last rite package due to missing/unclear license.
 # Removal after 2020-08-01
@@ -83,7 +131,6 @@ dev-python/toro
 # Outdated.  Not touched since the initial commit.  Lacks py3.7 support.
 # No reverse dependencies outside the three packages.
 # Removal in 30 days.  Bug #708270.
-dev-python/Rx
 dev-python/graphql-core
 dev-python/gql
 
@@ -157,12 +204,6 @@ dev-python/symboltype
 <sys-fs/zfs-kmod-0.8.3
 sys-kernel/spl
 
-# Stephan Hartmann <stha09@googlemail.com> (2020-05-20)
-# Dev channel releases are only for people who
-# are developers or want more experimental features
-# and accept a more unstable release.
->=www-client/chromium-84
-
 # Amadeusz Żołnowski <aidecoe@gentoo.org> (2020-05-11)
 # Masked for removal in 30 days.  Unmaintained upstream.
 sys-boot/plymouth-openrc-plugin
@@ -192,11 +233,6 @@ dev-python/ramlfications
 # Client-side library for an X extension that has not been supported by Xorg
 # for about a decade. Masked for removal in 30 days. Bug #720150
 x11-libs/libXxf86misc
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-05-03)
-# Last release in 2015, not compatible with >=media-gfx/gimp-2.10.0
-# Masked for removal in 30 days.
-media-plugins/gimp-lensfun
 
 # Piotr Karbowski <slashbeast@gentoo.org> (2020-05-03)
 # Obsolete input drivers, use x11-drivers/xf86-input-libinput

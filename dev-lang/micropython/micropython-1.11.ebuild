@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -31,18 +31,18 @@ src_compile() {
 		-e 's#\/usr\/local#\/usr#g;' \
 		Makefile || die
 
-	emake CC="$(tc-getCC)" axtls
-	emake CC="$(tc-getCC)"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" axtls
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 }
 
 src_test() {
 	cd ports/unix || die
-	emake test
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" test
 }
 
 src_install() {
 	pushd ports/unix > /dev/null || die
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" DESTDIR="${D}" install
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" DESTDIR="${D}" install
 	popd > /dev/null || die
 
 	# remove .git files

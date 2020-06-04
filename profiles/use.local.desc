@@ -489,7 +489,7 @@ app-emulation/docker-credential-helpers:gnome-keyring - Build secretservice help
 app-emulation/docker-credential-helpers:pass - Build pass helper for the pass utility.
 app-emulation/dosemu:fluidsynth - use media-sound/fluidsynth for MIDI emulation
 app-emulation/faudio:dumpvoices - FAudio dumps buffer data to individual files with RIFF/XWMA headers, usable with players like ffplay/testxwma.
-app-emulation/faudio:ffmpeg - FAudio has optional support for decoding xWMA resources using FFmpeg, requiring: media-video/ffmpeg (note: this feature is not supported by media-video/libav).
+app-emulation/faudio:ffmpeg - FAudio has optional support for decoding xWMA resources using FFmpeg, requiring: media-video/ffmpeg
 app-emulation/faudio:test - Build and run faudio testsuite.
 app-emulation/faudio:utils - Build all faudio utilities.
 app-emulation/faudio:xnasong - Build support for optional XNG_SONG component (note: this not required by app-emulation/wine-staging, app-emulation/wine-vanilla for faudio XAudio support).
@@ -1130,7 +1130,6 @@ app-shells/bash:mem-scramble - Build with custom malloc/free overwriting allocat
 app-shells/bash:net - Enable /dev/tcp/host/port redirection
 app-shells/bash:plugins - Add support for loading builtins at runtime via 'enable'
 app-shells/bash-completion:eselect - Support blacklisting of completions via 'eselect bash-completion'. This enables custom Gentoo patching of upstream completion loader.
-app-shells/dash:vanilla - Support echo -n, and enable echo -e all the time (unsupported)
 app-shells/mksh:lksh - variant that uses POSIX-compliant arithmetics with the host “long” data type and is automatically in POSIX mode when called as /bin/sh
 app-shells/pdsh:rsh - This allows the use of rsh (remote shell) and rcp (remote copy) for authoring websites. sftp is a much more secure protocol and is preferred.
 app-shells/shish:diet - Use dev-libs/dietlibc
@@ -3135,7 +3134,6 @@ games-board/freedoko:net - Enable network game support
 games-board/freedoko:openclipartcards - Install the openclipartcards card set
 games-board/freedoko:pysolcards - Install the PySol card set
 games-board/freedoko:xskatcards - Install the XSkat card set
-games-board/grhino:gtp - Install the GTP (Go/Game Text Protocol) frontend
 games-board/pasang-emas:extras - Install some extra themes
 games-board/pioneers:help - Enable gnome ingame help via scrollkeeper
 games-board/pysolfc:extra-cardsets - Install extra cardsets
@@ -4442,7 +4440,6 @@ media-plugins/audacious-plugins:bs2b - Enable Bauer Bauer stereophonic-to-binaur
 media-plugins/audacious-plugins:cue - Support CUE sheets using the libcue library
 media-plugins/audacious-plugins:fluidsynth - Support FluidSynth as MIDI synth backend
 media-plugins/audacious-plugins:gme - Support various gaming console music formats
-media-plugins/audacious-plugins:gtk - Build with GTK interface instead of Qt5
 media-plugins/audacious-plugins:http - Support HTTP streams through neon
 media-plugins/audacious-plugins:qtmedia - Enable playback via dev-qt/qtmultimedia
 media-plugins/audacious-plugins:scrobbler - Build with scrobbler/LastFM submission support
@@ -4534,7 +4531,6 @@ media-sound/aqualung:systray - Enable system tray support
 media-sound/ardour:phonehome - contact ardour.org at startup for new announcements
 media-sound/ario:idle - Enable experimental support for MPD's idle command to reduce bandwidth and cpu usage, requires MPD 0.14
 media-sound/asunder:mac - Support for creation of Monkey's Audio files (APE)
-media-sound/audacious:gtk - Build with GTK interface instead of Qt5
 media-sound/audacity:id3tag - Enables ID3 tagging with id3tag library
 media-sound/audacity:lv2 - Add support for Ladspa V2
 media-sound/audacity:midi - Enables MIDI support
@@ -5023,7 +5019,9 @@ media-video/mjpg-streamer:output-http - Small HTTP server plugin which sends WWW
 media-video/mjpg-streamer:output-rtsp - Plugin which provides a mechanism to take snapshots with a trigger from a UDP packet
 media-video/mjpg-streamer:output-udp - Plugin receiving content over UDP and storing to a directory
 media-video/mjpg-streamer:www - Installs WWW content
+media-video/motion:mariadb - Add mariadb database support
 media-video/motion:mmal - Enables Multi-Media Abstraction Layer (MMAL) decoding support: Available e.g. on the Raspberry Pi.
+media-video/motion:supervise-daemon - Add experimental suppport for OpenRC's supervise-daemon process supervision
 media-video/motiontrack:multiprocess - Enables multi-process support (SMP/cluster) for motiontrack programs
 media-video/mplayer:bl - Blinkenlights video output
 media-video/mplayer:bluray - Enable playback of Blu-ray filesystems
@@ -7009,6 +7007,7 @@ net-wireless/gnuradio:fec - enable block for convolutional encoding using the CC
 net-wireless/gnuradio:filter - enable filter signal processing blocks
 net-wireless/gnuradio:grc - enable GNU Radio Companion graphical tool to design signal processing flow graphs
 net-wireless/gnuradio:log - enable logging to console and files
+net-wireless/gnuradio:modtool - enable modtool for editing GNU Radio modules and components
 net-wireless/gnuradio:noaa - enable NOAA POES HRPT receiver blocks
 net-wireless/gnuradio:pager - enable pager signal processing blocks
 net-wireless/gnuradio:performance-counters - enable block performance counters
@@ -7026,7 +7025,6 @@ net-wireless/gr-osmosdr:airspy - Build with Airspy support
 net-wireless/gr-osmosdr:bladerf - Build with Nuand BladeRF support
 net-wireless/gr-osmosdr:fcd - Build with Funcube Dongle support
 net-wireless/gr-osmosdr:hackrf - Build with Great Scott Gadgets HackRF support
-net-wireless/gr-osmosdr:iio - Build with Industrial IO support for devices such as Analog Devices Pluto
 net-wireless/gr-osmosdr:iqbalance - Enable support for I/Q balancing using gr-iqbal
 net-wireless/gr-osmosdr:mirisdr - Build with Mirics MSi2500 + MSi001 SDR support
 net-wireless/gr-osmosdr:rtlsdr - Build with Realtek RTL2832U (rtlsdr) support
@@ -8075,6 +8073,7 @@ sys-boot/refind:hfs - Builds the EFI binary hfs filesystem driver
 sys-boot/refind:iso9660 - Builds the EFI binary iso9660 filesystem driver
 sys-boot/refind:ntfs - Builds the EFI binary ntfs filesystem driver
 sys-boot/refind:reiserfs - Builds the EFI binary reiserfs filesystem driver
+sys-boot/silo:tilo-only - Install only the tilo netboot tool
 sys-boot/vboot-utils:libzip - Use dev-libs/libzip.
 sys-boot/woeusb:minimal - Install only woeusb tool
 sys-cluster/ceph:babeltrace - Add support for LTTng babeltrace
@@ -8836,6 +8835,7 @@ x11-apps/igt-gpu-tools:chamelium - Enables support for building Chamelium tests
 x11-apps/igt-gpu-tools:man - Build and install man pages
 x11-apps/igt-gpu-tools:overlay - Build the intel-gpu-overlay utility
 x11-apps/igt-gpu-tools:runner - Build the test runner
+x11-apps/igt-gpu-tools:tests - Build and install tests
 x11-apps/igt-gpu-tools:valgrind - Support valgrind annotations
 x11-apps/igt-gpu-tools:xv - Enable intel-gpu-overlay xv backend
 x11-apps/mesa-progs:egl - Build EGL utilities

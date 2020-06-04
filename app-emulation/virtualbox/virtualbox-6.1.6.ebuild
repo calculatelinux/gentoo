@@ -207,6 +207,9 @@ src_prepare() {
 		eapply "${FILESDIR}"/virtualbox-5.2.8-paxmark-bldprogs.patch
 	fi
 
+	eapply "${FILESDIR}"/${PN}-6.0.20-qt-5.15.patch # TODO: upstream,
+	eapply "${FILESDIR}"/${P}-qt-5.15.patch # ... bug #726154
+
 	eapply "${WORKDIR}/patches"
 
 	eapply_user
