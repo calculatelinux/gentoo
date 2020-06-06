@@ -12,7 +12,7 @@ doc? ( https://github.com/${PN}/${PN}/releases/download/v${PV}/${PN}-docs-${PV}.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="amd64 ~arm ~arm64 x86"
 IUSE="doc samples test"
 
 RESTRICT="!test? ( test )"
@@ -35,6 +35,10 @@ PATCHES=(
 	"${FILESDIR}/${PN}-5.0.0-unzip-of.patch"
 	"${FILESDIR}/${PN}-5.0.0-findassimp.patch"
 	"${FILESDIR}/${P}-GNUInstallDirs.patch" # bug 701912
+	"${FILESDIR}/${P}-projectversion.patch"
+	"${FILESDIR}/${P}-fix-unittests.patch"
+	"${FILESDIR}/${P}-fix-aiGetLegalStringTest.patch"
+	"${FILESDIR}/${P}-versiontest.patch"
 )
 
 src_configure() {

@@ -221,10 +221,6 @@ dev-python/symboltype
 <sys-fs/zfs-kmod-0.8.3
 sys-kernel/spl
 
-# Amadeusz Żołnowski <aidecoe@gentoo.org> (2020-05-11)
-# Masked for removal in 30 days.  Unmaintained upstream.
-sys-boot/plymouth-openrc-plugin
-
 # William Hubbs <williamh@gentoo.org> (2020-05-11)
 # No reverse dependencies, upstream has superseeded this with the
 # ggoogle.golang.org/protobuf module.
@@ -250,13 +246,6 @@ dev-python/ramlfications
 # Client-side library for an X extension that has not been supported by Xorg
 # for about a decade. Masked for removal in 30 days. Bug #720150
 x11-libs/libXxf86misc
-
-# Piotr Karbowski <slashbeast@gentoo.org> (2020-05-03)
-# Obsolete input drivers, use x11-drivers/xf86-input-libinput
-# or x11-drivers/xf86-input-evdev instead.
-# Removal in 30 days.
-x11-drivers/xf86-input-keyboard
-x11-drivers/xf86-input-mouse
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2020-05-02)
 # Included in recent texlive versions. Please uninstall.
