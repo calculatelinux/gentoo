@@ -102,7 +102,7 @@ src_install() {
 	default
 
 	if ! use doc; then
-		pushd "${WORKDIR}/${P}-manpages" >/dev/null || die
+		pushd doc >/dev/null || die
 		doman *.?
 		popd >/dev/null || die
 	fi
