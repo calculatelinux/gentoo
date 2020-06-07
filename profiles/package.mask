@@ -32,6 +32,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Jonas Stein <jstein@gentoo.org> (2020-06-07)
+# Last rite unusable package.
+# Removal after 2020-08-01
+# Bug 727360
+app-misc/ifp-line
+
+# Mart Raudsepp <leio@gentoo.org> (2020-06-06)
+# Meson port does not handle multilib yet and has issues
+# regarding runstatedir (not using /run).
+=net-misc/networkmanager-1.22.10-r11
+
 # Michał Górny <mgorny@gentoo.org> (2020-06-05)
 # Replaced by dev-util/ydiff, after upstream rename.
 # Removal in 30 days.  Bug #710538.
@@ -56,7 +67,6 @@ dev-libs/svrcore
 # Masked for removal in 15 days
 app-cdr/sync2cd
 app-text/getxbook
-app-text/pdfsandwich
 dev-python/assets
 dev-python/bz2file
 dev-python/kid
@@ -65,7 +75,6 @@ dev-python/python-urljr
 dev-python/selectors34
 dev-python/stomper
 dev-python/YURL
-media-gfx/exact-image
 x11-themes/fvwm-crystal
 
 # Stefan Strogin <steils@gentoo.org> (2020-06-03)
@@ -364,10 +373,6 @@ dev-java/icedtea-web
 # Masked for testing due to split of libnma needing migration
 # and 1.8.25 being an old development release
 >=gnome-extra/nm-applet-1.8.25
-
-# Matt Turner <mattst88@gentoo.org> (2020-03-11)
-# Masked for testing due to removal of libnm-glib (bug #665338)
->=net-misc/networkmanager-1.20
 
 # Eray Aslan <eras@gentoo.org> (2020-03-09)
 # Mask experimental software
