@@ -1267,6 +1267,7 @@ app-text/texlive:xetex - Add support for XeTeX macros (dev-texlive/texlive-xetex
 app-text/texlive:xindy - Add support for app-text/xindy, a flexible indexing system
 app-text/texlive-core:luajittex - Add support for LuaJitTeX: LuaTeX based on LuaJIT which is usually faster.
 app-text/texlive-core:xetex - Add support for XeTeX: a TeX system with Unicode and modern font technologies.
+app-text/texlive-core:xindy - Add support for Xindy: A general-purpose index processor.
 app-text/wdiff:experimental - Build experimental utilities (mdiff, unify, wdiff2)
 app-text/webgen:builder - Enable programmatic HTML/XML generation
 app-text/webgen:highlight - Enable syntax highlighting for certain plugins
@@ -2738,7 +2739,7 @@ dev-qt/qt3d:gamepad - Add support for gamepad hardware via dev-qt/qtgamepad
 dev-qt/qt3d:qml - Build QML/QtQuick bindings
 dev-qt/qtbluetooth:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtcharts:qml - Build QML/QtQuick bindings and imports
-dev-qt/qtcore:old-kernel - Disable syscalls not available on Linux kernels older than 3.17
+dev-qt/qtcore:old-kernel - Disable syscalls not available on Linux kernels older than 4.11
 dev-qt/qtcore:systemd - Enable native journald logging support
 dev-qt/qtdatavis3d:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtdeclarative:localstorage - Build the LocalStorage import for QtQuick (requires QtSql)
@@ -4371,10 +4372,11 @@ media-libs/openimageio:dicom - Enable DICOM medical image file support via sci-l
 media-libs/openimageio:field3d - Enable f3d file (write) support via media-libs/Field3D
 media-libs/openimageio:opencv - Enable OpenCV support via media-libs/opencv
 media-libs/openimageio:ptex - Enable Ptex texture mapping system file support via media-libs/ptex
-media-libs/opensubdiv:cuda - Enable NVIDIA CUDA Toolkit support through dev-util/nvidia-cuda-toolkit.
-media-libs/opensubdiv:opencl - Enable OpenCL support through virtual/opencl.
-media-libs/opensubdiv:ptex - Adds support for faster per-face texture mapping through media-libs/ptex.
-media-libs/opensubdiv:tbb - Enable multithreading with the Intel Threads Building Blocks through dev-cpp/tbb.
+media-libs/opensubdiv:cuda - Enable NVIDIA CUDA Toolkit support through dev-util/nvidia-cuda-toolkit
+media-libs/opensubdiv:opencl - Enable OpenCL support through virtual/opencl
+media-libs/opensubdiv:ptex - Adds support for faster per-face texture mapping through media-libs/ptex
+media-libs/opensubdiv:tbb - Enable multithreading with the Intel Threads Building Blocks through dev-cpp/tbb
+media-libs/opensubdiv:tutorials - Install the tutorials
 media-libs/opus:custom-modes - Enable non-Opus modes, e.g. 44.1 kHz and 2^n frames
 media-libs/opusfile:fixed-point - Enable fixed-point arithmetic operations
 media-libs/opusfile:float - Enable floating point arithmetic operations
@@ -4425,7 +4427,6 @@ media-libs/x265:12bit - Add support for producing 12bits HEVC.
 media-libs/x265:asm - Enable x86_64 assembly optimizations.
 media-libs/x265:numa - Build with support for NUMA nodes.
 media-libs/x265:pic - Disable optimized assembly code that is not PIC friendly
-media-libs/x265:power8 - Enable support for Power 8 assembly optimizations.
 media-libs/xine-lib:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
 media-libs/xine-lib:dxr3 - Enable support for DXR3 mpeg acceleration cards.
 media-libs/xine-lib:flac - Build the media-libs/flac based FLAC demuxer and decoder. This flag is not needed for playing FLAC content, neither standalone nor in Ogg container (OggFLAC), but might have better support for exotic features like 24-bit samples or 96kHz sample rates.

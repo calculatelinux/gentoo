@@ -32,6 +32,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Mikle Kolyada <zlogene@gentoo.org> (2020-06-08)
+# This version has critical changes.
+# Do NOT unmask it unless you are completly
+# sure about what you are doing!
+# This can make your system unbootable!
+~sys-libs/pam-1.4.0
+
 # Aaron Bauman <bman@gentoo.org> (2020-06-07)
 # py2 only. dead upstream. m-n. rdep.
 # Masked for removal in 15 days
@@ -257,11 +264,6 @@ www-apps/octoprint
 # Removal in 30 days.  Bug #719518.
 dev-python/ramlfications
 
-# Matt Turner <mattst88@gentoo.org> (2020-05-08)
-# Client-side library for an X extension that has not been supported by Xorg
-# for about a decade. Masked for removal in 30 days. Bug #720150
-x11-libs/libXxf86misc
-
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2020-05-02)
 # Included in recent texlive versions. Please uninstall.
 # Removal in 30 days.
@@ -330,11 +332,6 @@ dev-java/netbeans-harness
 games-util/pogo-manager-bin
 net-p2p/bisq
 sci-mathematics/geogebra
-
-# Matt Turner <mattst88@gentoo.org> (2020-04-12)
-# In conjunction with Firefox's sandbox, breaks loading of i965 driver.
-# Bug #716574
-=x11-libs/libdrm-2.4.101
 
 # Lars Wendler <polynomial-c@gentoo.org> (2020-04-02)
 # Introduced new privsep (chroot) feature. Masked for testing.
