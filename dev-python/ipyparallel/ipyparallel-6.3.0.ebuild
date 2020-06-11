@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6,7} )
+PYTHON_COMPAT=( python3_{6..9} )
 PYTHON_REQ_USE="threads(+)"
 DISTUTILS_USE_SETUPTOOLS=rdepend
 
@@ -45,7 +45,7 @@ BDEPEND="${RDEPEND}
 	)
 	"
 
-distutils_enable_sphinx docs
+distutils_enable_sphinx docs/source
 distutils_enable_tests pytest
 
 src_prepare() {
