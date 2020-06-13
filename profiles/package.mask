@@ -32,6 +32,27 @@
 
 #--- END OF EXAMPLES ---
 
+# Mikle Kolyada <zlogene@gentoo.org> (2020-06-13)
+# multiple forks.
+# Merged into the app-text/texlive-core package
+# Removal in 30 days.
+app-text/xindy
+
+# Aaron Bauman <bman@gentoo.org> (2020-06-11)
+# outstanding vulns. RCE. rdeps masked.
+# maintainer ignored w/irrelevant comment.
+# removal in 30 days. bug #719084
+net-analyzer/ntopng
+net-analyzer/pmacct
+net-libs/nDPI
+
+# Lars Wendler <polynomial-c@gentoo.org> (2020-06-10)
+# At least alsactl is broken:
+#   double free or corruption (fasttop)
+# https://bugs.gentoo.org/727838
+=media-libs/alsa-lib-1.2.3
+=media-sound/alsa-utils-1.2.3
+
 # Mikle Kolyada <zlogene@gentoo.org> (2020-06-08)
 # This version has critical changes.
 # Do NOT unmask it unless you are completly
@@ -234,12 +255,6 @@ dev-python/symboltype
 # version.
 # Removal after 2020-06-14.
 <dev-db/postgresql-9.5
-
-# William Hubbs <williamh@gentoo.org> (2020-05-11)
-# No reverse dependencies, upstream has superseeded this with the
-# ggoogle.golang.org/protobuf module.
-# Removal in 30 days. Bug #722542.
-dev-go/go-protobuf
 
 # Michał Górny <mgorny@gentoo.org> (2020-05-11)
 # Causes downgrades of multiple Python packages.  Not touched since

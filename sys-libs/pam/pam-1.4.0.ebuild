@@ -20,7 +20,8 @@ BDEPEND="
 	dev-libs/libxslt
 	sys-devel/flex
 	sys-devel/gettext
-	virtual/pkgconfig[${MULTILIB_USEDEP}]"
+	virtual/pkgconfig
+"
 
 DEPEND="
 	virtual/libcrypt:=[${MULTILIB_USEDEP}]
@@ -53,6 +54,7 @@ multilib_src_configure() {
 	export ac_cv_header_xcrypt_h=no
 
 	local myconf=(
+		CC_FOR_BUILD="$(tc-getBUILD_CC)"
 		--with-db-uniquename=-$(db_findver sys-libs/db)
 		--with-xml-catalog="${EPREFIX}"/etc/xml/catalog
 		--enable-securedir="${EPREFIX}"/$(get_libdir)/security
