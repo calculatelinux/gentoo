@@ -1118,6 +1118,7 @@ app-portage/layman:mercurial - Support dev-vcs/mercurial based overlays
 app-portage/layman:squashfs - Support mounting squashfs image overlays locally read-only
 app-portage/layman:subversion - Support dev-vcs/subversion based overlays
 app-portage/layman:sync-plugin-portage - Install the sys-apps/portage sync module
+app-portage/nattka:depgraph-order - Process packages in depgraph order whenever possible.
 app-portage/pfl:network-cron - Adds a cron job which does a weekly submit of the package database
 app-portage/portage-utils:qmanifest - Build qmanifest applet, this adds additional dependencies for GPG, OpenSSL and BLAKE2B hashing
 app-portage/portage-utils:qtegrity - Build qtegrity applet, this adds additional dependencies for OpenSSL
@@ -3981,6 +3982,7 @@ media-fonts/sil-gentium:compact - Also install more compact version of the font.
 media-fonts/terminus-font:a-like-o - Changes view of letter 'a' - a looks like o (see homepage)
 media-fonts/terminus-font:center-tilde - Place the '~' character vertically centered on the line instead of to the top.
 media-fonts/terminus-font:distinct-l - ll2 variant with more distinctive l (lowercase L)
+media-fonts/terminus-font:otf - Install Open Type Font (OTF) (required for HarfBuzz backend)
 media-fonts/terminus-font:pcf - Install Portable Compiled Font (PCF) (required for X11)
 media-fonts/terminus-font:pcf-unicode-only - Remove non-unicode PCF fonts that could be problematic. See bug #520222.
 media-fonts/terminus-font:psf - Install PC Screen Font (PSF) with unicode data (for linux console)
