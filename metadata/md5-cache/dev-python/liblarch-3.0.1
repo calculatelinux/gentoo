@@ -1,0 +1,16 @@
+BDEPEND=test? ( dev-python/nose[python_targets_python3_6(-)?,python_targets_python3_7(-)?,python_targets_python3_8(-)?,-python_single_target_python3_6(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-)] ) python_targets_python3_6? ( dev-lang/python:3.6 ) python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python3_8? ( dev-lang/python:3.8 ) >=dev-lang/python-exec-2:=[python_targets_python3_6(-)?,python_targets_python3_7(-)?,python_targets_python3_8(-)?,-python_single_target_python3_6(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-)] test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-python/pygobject:3[python_targets_python3_6(-)?,python_targets_python3_7(-)?,python_targets_python3_8(-)?,-python_single_target_python3_6(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-)] x11-libs/gtk+:3[introspection]
+DESCRIPTION=Library to handle directed acyclic graphs
+EAPI=7
+HOMEPAGE=https://wiki.gnome.org/Projects/liblarch
+IUSE=test python_targets_python3_6 python_targets_python3_7 python_targets_python3_8 test
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-3+
+RDEPEND=dev-python/pygobject:3[python_targets_python3_6(-)?,python_targets_python3_7(-)?,python_targets_python3_8(-)?,-python_single_target_python3_6(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-)] x11-libs/gtk+:3[introspection] python_targets_python3_6? ( dev-lang/python:3.6 ) python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python3_8? ( dev-lang/python:3.8 ) >=dev-lang/python-exec-2:=[python_targets_python3_6(-)?,python_targets_python3_7(-)?,python_targets_python3_8(-)?,-python_single_target_python3_6(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-)]
+REQUIRED_USE=|| ( python_targets_python3_6 python_targets_python3_7 python_targets_python3_8 )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/getting-things-gnome/liblarch/archive/v3.0.1.tar.gz -> liblarch-3.0.1.tar.gz
+_eclasses_=distutils-r1	44725b3eb803b8abcd6978759c231210	multibuild	40fe59465edacd730c644ec2bc197809	multilib	2477ebe553d3e4d2c606191fe6c33602	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	8386b016a2b3bbefa88443fdaa898057	python-utils-r1	ace0a9a129fcfeaae542c0d15c07f36a	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	virtualx	e49dbce7ac14426e1155497476915307
+_md5_=06866863eb446d1aabd3719ad64bb9b4

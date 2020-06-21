@@ -2423,7 +2423,6 @@ dev-perl/Config-Any:ini - Install dev-perl/Config-Tiny to support decoding INI c
 dev-perl/Config-Any:json - Install support libraries to support decoding JSON config files
 dev-perl/Config-Any:xml - Install support libraries to support decoding XML config files
 dev-perl/Config-Any:yaml - Install support libraries to support decoding YAML config files
-dev-perl/Convert-UUlib:system-uulib - Use dev-libs/uulib instead of bundled version.
 dev-perl/Cookie-Baker:xs - Install dev-perl/Cookie-Baker-XS for accelerated performance
 dev-perl/Coro:ev - Build support for using dev-perl/EV as an event-loop via Coro::EV
 dev-perl/Coro:event - Build support for using dev-perl/Event as an event-loop via Coro::Event
@@ -2614,7 +2613,6 @@ dev-python/pyyaml:libyaml - enable support for C implementation using libyaml
 dev-python/pyzmq:draft - Enable draft API support
 dev-python/rarfile:compressed - Enables the module to support compressed v3 archives by calling the app-arch/unrar.
 dev-python/rdflib:redland - enable support for Redland triplestore
-dev-python/restkit:cli - Install the restcli command line interface/tool, based on dev-python/ipython
 dev-python/rfc3986:idna - enable support for the IDNA specification (RFC 5891)
 dev-python/shiboken2:docstrings - Expose documentation as Python docstrings (recommended)
 dev-python/shiboken2:numpy - Implicitly convert passed NumPy arrays to Qt lists
@@ -6099,7 +6097,8 @@ net-libs/libupnp:blocking-tcp - Do not use async socket calls.
 net-libs/libupnp:reuseaddr - Allow clean restarts by binding the socket with SO_REUSEADDR.
 net-libs/libupnp:samples - Install sample applications.
 net-libs/libvncserver:24bpp - Enable 24bpp support
-net-libs/libvncserver:gcrypt - Enable support for additional authentication methods via dev-libs/libgcrypt
+net-libs/libvncserver:filetransfer - Enable support for TightVNC's file transfer protocol
+net-libs/libvncserver:gcrypt - Use dev-libs/libgcrypt as crypto backend
 net-libs/libvncserver:lzo - Enable LZO support via dev-libs/lzo instead of using internal miniLZO implementation
 net-libs/libwebsockets:access-log - Support generating Apache-compatible access logs
 net-libs/libwebsockets:cgi - Include CGI (spawn process with network-connected stdin/out/err) APIs

@@ -14,7 +14,7 @@ if [[ ${PV} == "9999" ]]; then
 	inherit git-r3
 else
 	SRC_URI="https://github.com/edenhill/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+	KEYWORDS="~amd64 ~arm arm64 ~hppa ~ppc ~ppc64 ~sparc x86"
 fi
 
 LICENSE="BSD-2"
@@ -39,6 +39,16 @@ DEPEND="
 	virtual/pkgconfig
 	static-libs? ( ${LIB_DEPEND} )
 "
+
+src_prepare() {
+	default
+
+	if [[ ${PV} != "9999" ]]; then
+		sed -i \
+			-e "s/^\(export RDKAFKA_GITVER=\).*/\1\"${PV}@release\"/" \
+			tests/run-test.sh || die
+	fi
+}
 
 src_configure() {
 	tc-export AR CC CXX LD NM OBJDUMP PKG_CONFIG STRIP
