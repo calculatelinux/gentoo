@@ -17,7 +17,7 @@ REQUIRED_USE="
 	test? ( wayland )"
 RESTRICT="!test? ( test )"
 
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 # gnome-settings-daemon is build checked, but used at runtime only for org.gnome.settings-daemon.peripherals.keyboard gschema
 # xorg-server is needed at build and runtime with USE=wayland for Xwayland
@@ -94,6 +94,7 @@ BDEPEND="
 PATCHES=(
 	"${FILESDIR}"/3.32-eglmesaext-include.patch
 	"${FILESDIR}"/${PV}-XInitThreads.patch
+	"${FILESDIR}"/${PV}-tests-dontreq-gdkwayland.patch
 )
 
 src_configure() {
