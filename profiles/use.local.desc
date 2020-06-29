@@ -6728,6 +6728,7 @@ net-nds/389-ds-base:pam-passthru - Enable pam-passthru plugin - for simple and f
 net-nds/389-ds-base:presence - Enable presence plugin - non-standard syntax validation
 net-nds/ldapvi:gnutls - Use net-libs/gnutls instead of dev-libs/openssl
 net-nds/nsscache:nsscache - Depend on sys-auth/libnss-cache to handle flat files
+net-nds/nsscache:s3 - Support for S3-based NSS sources
 net-nds/openldap:experimental - Enable experimental backend options
 net-nds/openldap:kinit - Enable support for kerberos init
 net-nds/openldap:minimal - Build libraries & userspace tools only. Does not install any server code
@@ -8706,6 +8707,7 @@ www-client/chromium:closure-compile - Enable closure type-checking for Chrome's 
 www-client/chromium:component-build - Split build into more shared libraries to speed up linking. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
 www-client/chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/chromium:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general use.
+www-client/chromium:js-type-check - Enable JavaScript type-checking for Chrome's web technology-based UI. Requires Java.
 www-client/chromium:ozone - Enable Ozone platform abstraction layer with X11 backend.
 www-client/chromium:pic - Disable optimized assembly code that is not PIC friendly
 www-client/chromium:proprietary-codecs - Enable proprietary codecs like H.264, MP3

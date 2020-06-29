@@ -183,7 +183,9 @@ src_prepare() {
 
 	# manpages don't use markdown
 	if ! use doc; then
-		sed -i -e '/source_parsers/d' docs/conf.py || die
+		sed -e "s:, 'recommonmark'::" \
+			-e '/markdown/d' \
+			-i docs/conf.py || die
 	fi
 
 	# Verify that the live ebuild is up-to-date
@@ -427,6 +429,10 @@ multilib_src_configure() {
 		local CFLAGS="${CFLAGS} -mno-bmi"
 		local CXXFLAGS="${CXXFLAGS} -mno-bmi"
 	fi
+
+	# LLVM can have very high memory consumption while linking,
+	# exhausting the limit on 32-bit linker executable
+	use x86 && local -x LDFLAGS="${LDFLAGS} -Wl,--no-keep-memory"
 
 	# LLVM_ENABLE_ASSERTIONS=NO does not guarantee this for us, #614844
 	use debug || local -x CPPFLAGS="${CPPFLAGS} -DNDEBUG"

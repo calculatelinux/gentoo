@@ -32,6 +32,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Stephan Hartmann <stha09@googlemail.com> (2020-06-29)
+# Dev channel releases are only for people who
+# are developers or want more experimental features
+# and accept a more unstable release.
+>=www-client/chromium-85
+
+# Michał Górny <mgorny@gentoo.org> (2020-06-29)
+# Unmaintained in Gentoo.  Multiple unresolved vulnerabilities.
+# Suggested replacement: sys-apps/portage (just kidding).
+# Removal in 30 days.  Bug #711134.
+sys-apps/pacman
+
 # Aaron Bauman <bman@gentoo.org> (2020-06-28)
 # More Py2 only stuff. Plz see -dev ML for discussions
 # Remove bindings, port to Py3, etc
@@ -40,6 +52,7 @@ app-arch/deltarpm
 app-crypt/virtualsmartcard
 app-text/duali
 app-text/duali-data
+app-dicts/duali-data
 app-text/mftrace
 app-text/queequeg
 app-text/referencer
@@ -48,7 +61,6 @@ dev-libs/tut
 dev-python/elib-intl
 dev-python/eunuchs
 dev-python/medusa
-dev-python/misaka
 dev-python/python-iwscan
 dev-util/confix
 dev-util/qmtest
@@ -60,7 +72,6 @@ net-dns/maradns
 net-irc/irker
 net-mail/archivemail
 net-mail/getmail
-net-nds/nsscache
 net-wireless/airpwn
 sci-chemistry/bkchem
 sci-chemistry/propka
@@ -68,7 +79,6 @@ sci-chemistry/pymol-plugins-bni-tools
 sci-chemistry/pymol-plugins-emovie
 sci-chemistry/viewmol
 sci-libs/chemkit
-sys-apps/x86info
 www-misc/surl
 x11-wm/plwm
 
