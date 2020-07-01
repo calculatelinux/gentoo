@@ -32,6 +32,44 @@
 
 #--- END OF EXAMPLES ---
 
+# Aaron Bauman <bman@gentoo.org> (2020-06-29)
+# More Py2 only stuff. Plz see -dev ML for discussions
+# Remove bindings, port to Py3, etc
+# Removal in 30 days
+app-dicts/opendict
+app-editors/editra
+app-office/taskcoach
+app-backup/holland
+app-backup/holland-backup-example
+app-backup/holland-backup-pgdump
+app-backup/holland-backup-random
+app-backup/holland-backup-sqlite
+app-backup/holland-lib-common
+app-backup/holland-lib-lvm
+app-cdr/burn-cd
+app-editors/leo
+app-emulation/playonlinux
+app-text/bibus
+dev-db/SchemaSync
+dev-python/squaremap
+dev-util/wxglade
+media-gfx/fontypython
+media-gfx/fr0st
+sci-chemistry/apbs
+sci-chemistry/autodock
+sci-chemistry/eden
+sci-chemistry/p3d
+sci-chemistry/pdb2pqr
+sci-chemistry/pdb-tools
+sci-chemistry/prodecomp
+sci-chemistry/pymol-plugins-caver
+sci-chemistry/pymol-plugins-dssp
+sci-chemistry/pymol-plugins-promol
+sci-chemistry/relax
+sci-chemistry/sparky
+www-apps/viewvc
+x11-misc/nts
+
 # Stephan Hartmann <stha09@googlemail.com> (2020-06-29)
 # Dev channel releases are only for people who
 # are developers or want more experimental features
@@ -74,7 +112,6 @@ net-mail/archivemail
 net-mail/getmail
 net-wireless/airpwn
 sci-chemistry/bkchem
-sci-chemistry/propka
 sci-chemistry/pymol-plugins-bni-tools
 sci-chemistry/pymol-plugins-emovie
 sci-chemistry/viewmol
@@ -376,13 +413,6 @@ net-news/rawdog
 # No maintainer. Bugs #726826, #726822. Masked for removal in 30 days.
 app-misc/cbrpager
 app-misc/ignuit
-
-# Joonas Niilola <juippis@gentoo.org> (2020-06-02)
-# Last snapshot is from 2+ years ago, which doesn't build. Latest 
-# upstream commit won't build with in-tree efl versions. Has a bug 
-# open and unanswered for 2 years, so this package seems unmaintained
-# in Gentoo. Removal in ~30 days. Bug #656098
-x11-themes/terminology-themes
 
 # Jonas Stein <jstein@gentoo.org> (2020-06-01)
 # Last rite package due to missing/unclear license.
