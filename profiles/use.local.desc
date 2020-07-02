@@ -2517,7 +2517,6 @@ dev-python/dask:distributed - Add support for distributed computing with dev-pyt
 dev-python/drf-yasg:validation - Enable swagger spec validation using swagger-spec-validator
 dev-python/editorconfig-core-py:cli - Install command line interface as well as python library
 dev-python/falcon:cython - Build cython-based python modules
-dev-python/fastparquet:brotli - Enable support for brotli compression
 dev-python/glance_store:cinder - enable cinder backend supprt
 dev-python/glance_store:swift - enable swift backend supprt
 dev-python/glance_store:vmware - enable vmware backend supprt
@@ -4108,9 +4107,7 @@ media-gfx/imv:libnsgif - Use media-libs/libnsgif as image library
 media-gfx/inkscape:cdr - Enable support for CorelDRAW files via media-libs/libcdr
 media-gfx/inkscape:dia - Enable DIA flow chart import via app-office/dia
 media-gfx/inkscape:inkjar - Enable support for OpenOffice.org SVG jar files
-media-gfx/inkscape:latex - Enable rendering of LaTeX formulas
 media-gfx/inkscape:svg2 - Enable support for new SVG2 features
-media-gfx/inkscape:uniconvertor - Enable conversion of vector graphic files via media-gfx/uniconvertor (needs Python 2)
 media-gfx/inkscape:visio - Enable support for Microsoft Visio diagrams via media-libs/libvisio
 media-gfx/inkscape:wpg - Enable support for WordPerfect graphics via app-text/libwpg
 media-gfx/iscan-plugin-gt-f500:minimal - Install the firmware only, and not the plugin.
