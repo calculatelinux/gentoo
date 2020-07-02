@@ -32,6 +32,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-07-01)
+# Depends on dead gnome-base/libgnomeui, bug #726816, dead upstream. Big Debian
+# patch exists, but we won't become new upstream. Masked for removal in 30 days.
+games-board/teg
+
 # Aaron Bauman <bman@gentoo.org> (2020-06-29)
 # More Py2 only stuff. Plz see -dev ML for discussions
 # Remove bindings, port to Py3, etc
@@ -106,7 +111,6 @@ dev-util/unrpyc
 games-engines/gemrb
 media-sound/lilycomp
 media-video/tovid
-net-dns/maradns
 net-irc/irker
 net-mail/archivemail
 net-mail/getmail
@@ -407,12 +411,6 @@ dev-python/dnslib
 app-misc/webcomics-collector
 net-misc/pytvshows
 net-news/rawdog
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-06-02)
-# libgnomeui revdeps with no sign of upstream porting away or doing anything.
-# No maintainer. Bugs #726826, #726822. Masked for removal in 30 days.
-app-misc/cbrpager
-app-misc/ignuit
 
 # Jonas Stein <jstein@gentoo.org> (2020-06-01)
 # Last rite package due to missing/unclear license.
