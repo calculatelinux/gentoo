@@ -32,6 +32,42 @@
 
 #--- END OF EXAMPLES ---
 
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-07-05)
+# No upstream activity in past few years.
+# Needs porting to gtk3/fxce4panel-4.15: bug #729492.
+# Removal in 30 days.
+x11-misc/xmonad-log-applet
+
+# Hans de Graaff <graaff@gentoo.org> (2020-07-05)
+# Obsolete slot with known security issues. Please
+# update to slot "5" instead.
+# Removal in 30 days.  Bug #728506.
+dev-ruby/sanitize:4
+
+# Michał Górny <mgorny@gentoo.org> (2020-07-04)
+# Unmaintained.  Requires scipy-python2.  Current version is from 2015,
+# latest upstream release from 2017.  The only revdep is masked
+# for removal.
+# Removal in 30 days.  Bug #730760.
+dev-python/algopy
+
+# Jonas Stein <jstein@gentoo.org> (2020-07-04)
+# Last rite, dead upstream, several open bugs.
+# Removal after 2020-09-01
+# Bug #730640
+net-misc/termpkg
+
+# Michał Górny <mgorny@gentoo.org> (2020-07-04)
+# Unmaintained.  Python 2 only.  Effectively depends on vulnerable
+# version of dev-python/pillow.  No revdeps.  Multiple bugs open.
+# Removal in 30 days.  Bug #715682.
+media-gfx/uniconvertor
+
+# Mikle Kolyada <zlogene@gentoo.org> (2020-07-03)
+# Merged into dev-texlive/texlive-langcjk.
+# Removal in 30 days.
+dev-tex/cjk-latex
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-07-01)
 # Depends on dead gnome-base/libgnomeui, bug #726816, dead upstream. Big Debian
 # patch exists, but we won't become new upstream. Masked for removal in 30 days.
@@ -277,47 +313,6 @@ media-libs/pymemphis
 # Use >=dev-texlive/texlive-metapost-2020-r1 as replacement.
 # Removal in 30 days. Bug #728904.
 dev-tex/feynmf
-
-# Aaron Bauman <bman@gentoo.org> (2020-06-20)
-# Py2 only
-# Removal in 14 days
-app-crypt/openvpn-blacklist
-app-forensics/volatility
-<=dev-libs/distorm64-3.4.2
-app-misc/yagtd
-app-text/pylize
-app-vim/easytags
-app-vim/notes
-dev-db/metakit
-dev-python/backports-ssl-match-hostname
-dev-python/backports-shutil_get_terminal_size
-dev-python/backports-shutil_which
-dev-python/python-wpactrl
-dev-util/bakefile
-dev-vcs/git-deps
-dev-vcs/git-remote-hg
-games-emulation/openmsx
-games-kids/childsplay
-games-mud/lyntin
-games-sports/ski
-mail-filter/tmda
-media-video/subdl
-media-sound/cplay
-media-sound/tunapie
-net-firewall/dshieldpy
-net-mail/offlineimap
-net-misc/switzerland
-net-wireless/multimode
-sci-biology/last
-sci-chemistry/hollow
-sci-chemistry/modeller
-sci-chemistry/pymol-plugins-msms
-sci-geosciences/tilecache
-sci-libs/deap
-sci-libs/pycifrw
-www-apps/curator
-x11-apps/whyteboard
-x11-plugins/purple-plugin_pack
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-06-18)
 # Games depending on dead gnome-base/libgnomeui.

@@ -2144,6 +2144,7 @@ dev-libs/jemalloc:lazy-lock - Enable lazy locking (only lock when multi-threaded
 dev-libs/jemalloc:prof - Enable allocation profiling
 dev-libs/jemalloc:stats - Enable statistics calculation/reporting
 dev-libs/jemalloc:xmalloc - Add support for xmalloc (abort-on-out-of-memory)
+dev-libs/json-c:cpu-flags-x86-rdrand - Enable RDRAND Hardware RNG Hash Seed
 dev-libs/kreport:marble - Enable displaying of maps using kde-apps/marble
 dev-libs/kreport:scripting - Support Qml scripting using dev-qt/qtdeclarative
 dev-libs/libbase58:tools - Build command line base58 tool
@@ -2161,7 +2162,10 @@ dev-libs/libclsync:extra-hardened - Enable extra security checks. This may hurt 
 dev-libs/libdbusmenu:gtk - Enable support for GTK+2
 dev-libs/libdbusmenu:gtk3 - Enable support for GTK+3
 dev-libs/libdynd:cuda - Enable NVIDIA CUDA toolkit support
-dev-libs/libevent:debug - Support runtime debug mode and malloc hooks (for programmers)
+dev-libs/libevent:clock-gettime - Disable use of clock_gettime even if it is available
+dev-libs/libevent:debug - Support for running in debug mode
+dev-libs/libevent:malloc-replacement - Support for replacing the memory management functions
+dev-libs/libevent:verbose-debug - Support for verbose debug logging
 dev-libs/libffi:pax_kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
 dev-libs/libffi:test-bhaible - Run extended regression tests (very slow).
 dev-libs/libffi-compat:pax_kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
@@ -2854,7 +2858,6 @@ dev-util/android-ndk:target-64 - Support for 64-bit targets
 dev-util/android-studio:custom-jdk - Install and use Android Studio's custom JRE.
 dev-util/anjuta:devhelp - Enable devhelp integration
 dev-util/anjuta:glade - Build glade plugin for anjuta
-dev-util/anjuta:packagekit - Use packagekit to search for missing tools
 dev-util/anjuta:terminal - Enable terminal plugin based on x11-libs/vte
 dev-util/bazel:tools - Install extra bazel tools to build from sources
 dev-util/bitcoin-tx:knots - Build enhanced Bitcoin Knots version, rather than Bitcoin Core
@@ -3001,6 +3004,7 @@ dev-util/strace:aio - Enable dev-libs/libaio support for tracing Asynchronous I/
 dev-util/strace:elfutils - Enable stack backtraces (-k flag) via dev-libs/elfutils
 dev-util/strace:unwind - Enable stack backtraces (-k flag) via sys-libs/libunwind
 dev-util/sysdig:modules - Build kernel modules needed for tracing local events. Disable this only if you intend to use sysdig purely to work with dumpfiles.
+dev-util/sysprof:unwind - Use sys-libs/libunwind to unwind the stack
 dev-util/systemtap:libvirt - Support probing of libvirt domains.
 dev-util/trace-cmd:udis86 - Enable support for dev-libs/udis86 disassembler library
 dev-util/uftrace:capstone - Use capstone to provide dynamic tracing without recompilation
@@ -3068,19 +3072,29 @@ dev-vcs/subversion:http - Enable http support using net-libs/serf
 dev-vcs/subversion:kwallet - Enable encrypted storage of passwords with kde-frameworks/kwallet
 games-action/beathazardultra:bundled-libs - Use the upstream provided bundled libraries.
 games-action/chromium-bsu:mixer - Enables media-libs/sdl-mixer sound backend instead of media-libs/openal one.
-games-action/d1x-rebirth:demo - Use the demo data instead of the full game
-games-action/d1x-rebirth:l10n_de - Provides German translations for the game's briefings, robot descriptions, and outro of the original campaign
-games-action/d1x-rebirth:music - Support for ingame music
-games-action/d1x-rebirth:opl3-musicpack - Include alternate version of the game's music, recorded with the Yamaha YMF262 OPL3 soundchip
-games-action/d1x-rebirth:sc55-musicpack - Include alternate version of the game's music, recorded with the Roland Sound Canvas SC-55 MIDI module
-games-action/dxx-rebirth:data - Install data files
-games-action/dxx-rebirth:descent1 - Install Descent 1 resources and executable
-games-action/dxx-rebirth:descent2 - Install Descent 2 resources and executable
+games-action/descent1-freedata:l10n_de - Provides German translations for the game's briefings, robot descriptions, and outro of the original campaign
+games-action/descent1-freedata:opl3-musicpack - Include alternate version of the game's music, recorded with the Yamaha YMF262 OPL3 soundchip
+games-action/descent1-freedata:sc55-musicpack - Include alternate version of the game's music, recorded with the Roland Sound Canvas SC-55 MIDI module
+games-action/descent1-freedata:textures - Include high resolution (640x480) backgrounds, briefing images and fonts (Descent 1)
+games-action/descent2-freedata:l10n_de - Provides German translations for the game's briefings, robot descriptions, and outro of the original campaign
+games-action/descent2-freedata:opl3-musicpack - Include alternate version of the game's music, recorded with the Yamaha YMF262 OPL3 soundchip
+games-action/descent2-freedata:sc55-musicpack - Include alternate version of the game's music, recorded with the Roland Sound Canvas SC-55 MIDI module
+games-action/dxx-rebirth:d1x - Install Descent 1 resources and executable
+games-action/dxx-rebirth:d2x - Install Descent 2 resources and executable
+games-action/dxx-rebirth:data - Ensure some game levels are present; if the full game's level data is not already installed then install the playable demo data (i.e. shareware levels)
+games-action/dxx-rebirth:debug - Enable various debugging code paths and sanity checks, not just output. Some of these checks date back to the retail build, and choke on some custom levels because the game was never coded to sufficiently distrust inputs
+games-action/dxx-rebirth:descent1 - Install Descent 1 resources and executable (used prior to version 0.61)
+games-action/dxx-rebirth:descent2 - Install Descent 2 resources and executable (used prior to version 0.61)
+games-action/dxx-rebirth:editor - Enable level editor support
 games-action/dxx-rebirth:l10n_de - Provides German translations for the game's briefings, robot descriptions, and outro of the original campaign
+games-action/dxx-rebirth:midi - Enforce that SDL-mixer is used and has midi support
 games-action/dxx-rebirth:music - Enable music support
 games-action/dxx-rebirth:opl3-musicpack - Include alternate version of the game's music, recorded with the Yamaha YMF262 OPL3 soundchip
 games-action/dxx-rebirth:sc55-musicpack - Include alternate version of the game's music, recorded with the Roland Sound Canvas SC-55 MIDI module
-games-action/dxx-rebirth:textures - Include high resolution (640x480) backgrounds, briefing images and fonts (Descent 1)
+games-action/dxx-rebirth:sdl2 - Use libSDL2, SDL2-mixer instead of libSDL-1* and SDL-mixer-1*
+games-action/dxx-rebirth:textures - Include high resolution (640x480) backgrounds, briefing images and fonts (for Descent 1)
+games-action/dxx-rebirth:tracker - Enable support for the PHP-based multiplayer game tracker
+games-action/dxx-rebirth:valgrind - Include a Valgrind header in build in order to support Memcheck client requests
 games-action/hotline-miami:bundled-libs - Use bundled libraries.
 games-action/hotline-miami:launcher - Install qt launcher
 games-action/minetest:client - Build Minetest client
@@ -3403,7 +3417,6 @@ gnome-base/libglade:tools - Install libglade-convert Python script.
 gnome-base/libgnomecanvas:glade - Enable glade support
 gnome-base/librsvg:tools - Build svg viewer tool
 gnome-base/nautilus:gstreamer - Enable the Audio/Video file properties page
-gnome-base/nautilus:packagekit - Use packagekit to search for programs to open unknown file types
 gnome-base/nautilus:previewer - Use gnome-extra/sushi to preview files from the file mananger
 gnome-base/nautilus:sendto - Enable the nautilus-sendto extension to send files to various locations/devices
 gnome-base/orbit:pic - Force libname-server-2 to be built as PIC; needed on hardened systems
@@ -4144,6 +4157,7 @@ media-gfx/povray:mkl - Enable support for Intel Vector Math Library, part of sci
 media-gfx/pqiv:archive - Enable support for images in archives and cbX comic book files
 media-gfx/pstoedit:emf - Enable media-libs/libemf support
 media-gfx/pstoedit:pptx - Enable support for generating PowerPoint pptx files
+media-gfx/qimgv:opencv - Enable HQ scaling via media-libs/opencv
 media-gfx/qimgv:video - Add support for gif/webm playback via libmpv
 media-gfx/shotwell:opencv - Enable face detection via media-libs/opencv
 media-gfx/sigal:s3 - Enables support for the Amazon S3 service.
@@ -6228,7 +6242,6 @@ net-mail/notmuch:emacs - Install Emacs UI (the main one)
 net-mail/notmuch:mutt - Install helper script for Mutt
 net-mail/notmuch:nmbug - Install experimental tag sharing / pseudo-bug-tracking script for Notmuch (see http://notmuchmail.org/nmbug/)
 net-mail/notmuch:valgrind - Depend on dev-util/vagrind for test suite
-net-mail/offlineimap:sqlite - Enable runtime support for sqlite mail status backend.
 net-mail/qmailadmin:maildrop - Filter spam using maildrop
 net-mail/tpop3d:authexternal - Enable authentication by an external program
 net-mail/tpop3d:flatfile - Enable authentication against /etc/passwd-style flat files
@@ -8434,6 +8447,7 @@ sys-fs/udisks:lvm - Add support for Logical Volume Management via sys-fs/lvm2.
 sys-fs/udisks:systemd - Support sys-apps/systemd's logind
 sys-fs/udisks:vdo - Enable Virtual Data Optimizer support.
 sys-fs/zfs:kernel-builtin - Disable dependency on sys-fs/zfs-kmod under the assumption that ZFS is part of the kernel source tree
+sys-fs/zfs:pam - Install zfs_key pam module, for automatically loading zfs encryption keys for home datasets
 sys-fs/zfs:rootfs - Enable dependencies required for booting off a pool containing a rootfs
 sys-fs/zfs:test-suite - Install regression test suite
 sys-fs/zfs-auto-snapshot:default-exclude - Only take snapshots if dataset has com.sun:auto-snapshot=true property set
@@ -9020,7 +9034,6 @@ x11-plugins/pidgin-sipe:openssl - Enable crypto support via dev-libs/openssl
 x11-plugins/pidgin-sipe:telepathy - Support use as a telepathy backend
 x11-plugins/pidgin-sipe:voice - Enable experimental voice/video support
 x11-plugins/pidgin-telegram:gcrypt - Use dev-libs/libgcrypt instead of dev-libs/openssl.
-x11-plugins/purple-plugin_pack:talkfilters - Enable support for app-text/talkfilters
 x11-plugins/vicious:contrib - Install extra widgets, some for less common hardware, some contributed by Vicious users.
 x11-plugins/wmbattery:apm - Add APM (Advanced Power Management) support
 x11-plugins/wmfire:session - Enable session management
