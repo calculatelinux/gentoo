@@ -32,6 +32,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Kent Fredric <kentnl@gentoo.org> (2020-07-10)
+# No reverse dependencies, and Gtk2 support is becomming
+# obsolete in Gentoo.
+# Removal in 30 days
+dev-perl/gnome2-perl
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-07-09)
+# Dead upstream, no reverse dependencies.
+# Removal in 30 days.
+kde-apps/kblog
+
 # Sergei Trofimovich <slyfox@gentoo.org> (2020-07-05)
 # No upstream activity in past few years.
 # Needs porting to gtk3/fxce4panel-4.15: bug #729492.
@@ -376,13 +387,7 @@ app-misc/ifp-line
 # Removal in 30 days.  Bug #710538.
 dev-util/cdiff
 
-# Sam James <sam@cmpct.info> (2020-06-04)
-# Large number of vulnerabilities (Bug #692398, Bug #664326)
-# Unmaintained.
-# Masked for removal in 30 days.
-www-apps/otrs
-
-# Sam James <sam@cmpct.info> (2020-06-04)
+# Sam James <sam@gentoo.org> (2020-06-04)
 # Multiple vulnerabilities (Bug #655176, Bug #701812)
 # Misc. other bugs, out of date, no maintainer.
 # Masked for removal in 30 days.
@@ -643,19 +648,6 @@ dev-java/eclipse-ecj:4.10
 # Masked per security vulnerability CVE-2018-14345, bug #661510
 # Keeping it masked while users have unsolved issues with >0.15.0.
 <x11-misc/sddm-0.18.0
-
-# Ian Stakenvicius <axs@gentoo.org> (2018-11-07)
-# on behalf of Mozilla Project <mozilla@gentoo.org>
-# Mask old/vuln thunderbird for removal by 2019,
-# see security bug 670102
-<mail-client/thunderbird-60.0
-<mail-client/thunderbird-bin-60.0
-
-# Thomas Deutschmann <whissi@gentoo.org> (2018-10-12)
-# EOL and has known vulnerabilities. Please move to
-# Firefox 60 or newer if you can.
-<www-client/firefox-60
-<www-client/firefox-bin-60
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2018-10-07)
 # Masked for more testing especially of reverse-deps.

@@ -1513,6 +1513,13 @@ dev-games/openscenegraph:openinventor - Build OpenInventor plugin
 dev-games/openscenegraph:osgapps - Build osg applications
 dev-games/openscenegraph:sdl2 - Use media-libs/libsdl2 additionally to media-libs/libsdl
 dev-games/openscenegraph:xrandr - Enable support for the X xrandr extension
+dev-games/openscenegraph-openmw:egl - Enable EGL support
+dev-games/openscenegraph-openmw:fox - Build examples using x11-libs/fox library
+dev-games/openscenegraph-openmw:gdal - Enable support for sci-libs/gdal library
+dev-games/openscenegraph-openmw:openinventor - Build OpenInventor plugin
+dev-games/openscenegraph-openmw:osgapps - Build osg applications
+dev-games/openscenegraph-openmw:sdl2 - Use media-libs/libsdl2 additionally to media-libs/libsdl
+dev-games/openscenegraph-openmw:xrandr - Enable support for the X xrandr extension
 dev-games/physfs:7zip - Enable 7zip/lzma archive support
 dev-games/physfs:grp - Enable Build Engine GRP archive support
 dev-games/physfs:hog - Enable Descent I/II HOG archive support
@@ -2510,6 +2517,7 @@ dev-python/PyQt5:xmlpatterns - Build bindings for the QtXmlPatterns module
 dev-python/PythonQt:extensions - Install extensions
 dev-python/QtPy:designer - Build bindings for the QtDesigner module and enable the designer plugin
 dev-python/QtPy:gui - Build bindings for the QtGui module
+dev-python/QtPy:printsupport - Build bindings for the QtPrintSupport module
 dev-python/QtPy:svg - Build bindings for the QtSvg module
 dev-python/QtPy:testlib - Build bindings for the QtTest module
 dev-python/QtPy:webengine - Build bindings for the QtWebEngine module
@@ -3210,6 +3218,7 @@ games-engines/odamex:odalaunch - Build the wxWidgets based launcher
 games-engines/odamex:portmidi - Enable PortMidi support
 games-engines/odamex:server - Build server target
 games-engines/openmw:devtools - Install development tools like bsatool, esmtool and opencs.
+games-engines/openmw:osg-fork - Use OpenSceneGraph forked by OpenMW instead of upstream OSG.
 games-engines/renpy:development - Install IDE for game developers and an empty game template
 games-engines/residualvm:mpeg2 - enable mpeg2 codec for cutscenes
 games-engines/scummvm:fluidsynth - compile with support for fluidsynth
@@ -3489,6 +3498,7 @@ gui-libs/wlroots:X - Enable support for X11 applications (XWayland)
 gui-libs/wlroots:elogind - Enable support for rootless session via elogind
 gui-libs/wlroots:icccm - Use xcb-icccm (from x11-libs/xcb-util-wm) util library for improved Xwayland introspection
 gui-libs/wlroots:x11-backend - Enable support for handling input/output devices through x11-libs/libxcb
+gui-libs/xdg-desktop-portal-wlr:elogind - Enable support for rootless session via elogind
 gui-wm/hikari:gamma - add gamma control for redshift
 gui-wm/hikari:layershell - add support for wayland apps using layer shell
 gui-wm/hikari:man - build and install man pages
@@ -3545,6 +3555,7 @@ kde-apps/kdegraphics-mobipocket:thumbnail - Enables thumbnail generation
 kde-apps/kdemultimedia-meta:cdrom - Include packages for optical discs
 kde-apps/kdenetwork-meta:dropbox - Enable support for Dropbox in kde-apps/dolphin via kde-apps/dolphin-plugins-dropbox
 kde-apps/kdenetwork-meta:telepathy - Enable support for Plasma Telepathy (instant messaging) integration via kde-apps/plasma-telepathy-meta
+kde-apps/kdenetwork-meta:webengine - Enable support for Plasma Telepathy (instant messaging) integration via kde-apps/plasma-telepathy-meta
 kde-apps/kdenlive:freesound - Enable freesound.org credentials support via dev-qt/qtwebkit to download files
 kde-apps/kdenlive:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/kdepim-addons:importwizard - Enable additional import plugins for kde-apps/akonadi-import-wizard
@@ -3681,6 +3692,7 @@ kde-misc/tellico:discid - Add support for reading disc IDs from audio CDs
 kde-misc/tellico:yaz - Add support for searching Z39.50 databases
 kde-plasma/discover:firmware - Enable support for firmware upgrades using sys-apps/fwupd
 kde-plasma/kde-cli-tools:kdesu - Build graphical frontend for kde-frameworks/kdesu
+kde-plasma/kdeplasma-addons:comic - Enable comic applet (requires deprecated kde-frameworks/kross)
 kde-plasma/kdeplasma-addons:share - Enable applet for quickly sharing data to a variety of sources
 kde-plasma/kdeplasma-addons:webengine - Enable dictionary and web browser applets using dev-qt/qtwebengine
 kde-plasma/kinfocenter:pci - Show advanced PCI information
@@ -3830,14 +3842,10 @@ mail-client/thunderbird:clang - Use Clang compiler instead of GCC
 mail-client/thunderbird:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
 mail-client/thunderbird:eme-free - Disable EME (DRM plugin) cabability at build time
 mail-client/thunderbird:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
-mail-client/thunderbird:gtk2 - Use the cairo-gtk2 rendering engine instead of the default cairo-gtk3
 mail-client/thunderbird:lightning - Enable app-global calendar support (note 38.0 and above bundles calendar support when this flag is off)
 mail-client/thunderbird:lto - Enable Link Time Optimization (LTO). Requires Gold linker when using GCC or LDD linker when using Clang
-mail-client/thunderbird:mozdom - Enable Mozilla's DOM inspector
 mail-client/thunderbird:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
-mail-client/thunderbird:rust - Enable support for using rust compiler (experimental)
 mail-client/thunderbird:system-av1 - Use the system-wide media-libs/dav1d and media-libs/libaom library instead of bundled.
-mail-client/thunderbird:system-cairo - Use the system-wide x11-libs/cairo instead of bundled.
 mail-client/thunderbird:system-harfbuzz - Use the system-wide media-libs/harfbuzz and media-gfx/graphite2 instead of bundled.
 mail-client/thunderbird:system-icu - Use the system-wide dev-libs/icu instead of bundled.
 mail-client/thunderbird:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled.
@@ -7276,11 +7284,11 @@ sci-geosciences/liblas:gdal - Add support for the sci-libs/gdal geospatial raste
 sci-geosciences/mapnik:gdal - Enable sci-libs/gdal library support
 sci-geosciences/mapnik:osmfonts - Enable openstreetmaps font styles
 sci-geosciences/mapserver:apache - Enable mapserver to run under apache
-sci-geosciences/mapserver:gdal - Enable sci-libs/gdal library support
+sci-geosciences/mapserver:gdal - Enable sci-libs/gdal library support; deprecated
 sci-geosciences/mapserver:geos - Enable sci-libs/geos library support
 sci-geosciences/mapserver:postgis - Enable dev-db/postgis support
-sci-geosciences/mapserver:proj - Enable sci-libs/proj library support (geographic projections)
-sci-geosciences/mapserver:xslt - Enable xslt and exslt support xml-mapfile support
+sci-geosciences/mapserver:proj - Enable sci-libs/proj library support (geographic projections); deprecated
+sci-geosciences/mapserver:xslt - Enable xslt and exslt support xml-mapfile support; deprecated
 sci-geosciences/merkaartor:libproxy - Use net-libs/libproxy for getting the HTTP/HTTPS/SOCKS proxy configuration
 sci-geosciences/merkaartor:webengine - Enable dev-qt/qtwebengine in some plugins
 sci-geosciences/qgis:3d - Build QGIS 3D library using dev-qt/qt3d
@@ -8696,7 +8704,6 @@ www-apps/nikola:jinja - Add support for dev-python/jinja as alternative templati
 www-apps/nikola:watchdog - Use dev-python/watchdog to monitor file system events
 www-apps/nikola:webmedia - Use dev-python/micawber to extract metadata from web media links
 www-apps/nikola:websocket - Add websocket support thru dev-python/ws4py
-www-apps/otrs:mod_perl - Provide all dependencies for use of mod_perl instead of cgi
 www-apps/postfixadmin:vacation - Install vacation.pl script and dependencies
 www-apps/radicale:bcrypt - Depend on passlib to enable bcrypt and md5 authentication methods
 www-apps/redmine:markdown - Enable support for Markdown
@@ -8749,15 +8756,13 @@ www-client/firefox:custom-optimization - Build with user-specified compiler opti
 www-client/firefox:eme-free - Disable EME (DRM plugin) cabability at build time
 www-client/firefox:geckodriver - Enable WebDriver support
 www-client/firefox:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
-www-client/firefox:gtk2 - Use the cairo-gtk2 rendering engine
 www-client/firefox:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
 www-client/firefox:lto - Enable Link Time Optimization (LTO). Requires Gold linker when using GCC or LDD linker when using Clang
 www-client/firefox:openh264 - Use media-libs/openh264 for H.264 support instead of downloading binary blob from Mozilla at runtime
 www-client/firefox:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
-www-client/firefox:rust - Enable support for using rust compiler (experimental)
+www-client/firefox:screencast - Enable support for remote desktop and screen cast using media-video/pipewire
 www-client/firefox:screenshot - Allow to disable screenshot extension in global profile
 www-client/firefox:system-av1 - Use the system-wide media-libs/dav1d and media-libs/libaom library instead of bundled.
-www-client/firefox:system-cairo - Use the system-wide x11-libs/cairo instead of bundled.
 www-client/firefox:system-harfbuzz - Use the system-wide media-libs/harfbuzz and media-gfx/graphite2 instead of bundled.
 www-client/firefox:system-icu - Use the system-wide dev-libs/icu instead of bundled.
 www-client/firefox:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled.

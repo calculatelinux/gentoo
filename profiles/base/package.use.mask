@@ -6,6 +6,10 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Thomas Deutschmann <whissi@gentoo.org> (2020-07-09)
+# media-video/pipewire:0/0.3 is currently masked
+www-client/firefox screencast
+
 # Mart Raudsepp <leio@gentoo.org> (2020-06-28)
 # media-video/pipewire:0/0.3 is ongoing work, 0.2 on mutter-3.34
 # is not worth trying to get to work.
@@ -216,7 +220,7 @@ sys-block/open-isns slp
 # Mask USE until they are fixed
 =dev-libs/xapian-bindings-1.2.25 php
 media-gfx/exact-image php
-sci-geosciences/mapserver php
+<sci-geosciences/mapserver-7.6.0 php
 
 # Michał Górny <mgorny@gentoo.org> (2019-09-28)
 # media-fonts/hkscs-ming is slated for removal.
@@ -438,11 +442,6 @@ sys-devel/gcc pie
 # Multiple test failures.
 sys-boot/grub:2 test
 
-# Ian Stakenvicius (2017-01-25)
-# rust on mozilla packages is experimental
-www-client/firefox rust
-mail-client/thunderbird rust
-
 # Lars Wendler <polynomial-c@gentoo.org> (2017-01-19)
 # Masked until system heimdal can finally be used with AD DC
 net-fs/samba system-heimdal
@@ -500,12 +499,6 @@ sys-devel/gcc vtv
 # Upstream supports using Clang's address sanitizer, but apparently
 # invokes it wrong.
 dev-lang/moarvm asan
-
-# Ian Stakenvicius <axs@gentoo.org> (2016-04-28)
-# system-cairo support causes lots of crashing in mozilla pkgs
-# (see bug #556378 and others)
-www-client/firefox system-cairo
-mail-client/thunderbird system-cairo
 
 # James Le Cuirot <chewi@gentoo.org> (2016-04-10)
 # Slower and less reliable than HotSpot and we don't support Java on
