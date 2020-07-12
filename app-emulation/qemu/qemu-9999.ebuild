@@ -16,7 +16,6 @@ inherit eutils linux-info toolchain-funcs multilib python-r1 \
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="https://git.qemu.org/git/qemu.git"
 	EGIT_SUBMODULES=(
-		slirp
 		tests/fp/berkeley-{test,soft}float-3
 		ui/keycodemapdb
 	)
@@ -38,6 +37,7 @@ IUSE="accessibility +aio alsa bzip2 capstone +caps +curl debug doc
 	jemalloc +jpeg kernel_linux
 	kernel_FreeBSD lzo ncurses nfs nls numa opengl +oss +pin-upstream-blobs
 	plugins +png pulseaudio python rbd sasl +seccomp sdl sdl-image selinux
+	slirp
 	smartcard snappy spice ssh static static-user systemtap tci test usb
 	usbredir vde +vhost-net vhost-user-fs virgl virtfs +vnc vte xattr xen
 	xfs +xkb zstd"
@@ -146,6 +146,7 @@ SOFTMMU_TOOLS_DEPEND="
 	)
 	sdl-image? ( media-libs/sdl2-image[static-libs(+)] )
 	seccomp? ( >=sys-libs/libseccomp-2.1.0[static-libs(+)] )
+	slirp? ( net-libs/libslirp )
 	smartcard? ( >=app-emulation/libcacard-2.5.0[static-libs(+)] )
 	snappy? ( app-arch/snappy:= )
 	spice? (
@@ -468,6 +469,7 @@ qemu_src_configure() {
 		$(conf_notuser sdl)
 		$(conf_notuser sdl-image)
 		$(conf_notuser seccomp)
+		$(conf_notuser slirp slirp system)
 		$(conf_notuser smartcard)
 		$(conf_notuser snappy)
 		$(conf_notuser spice)

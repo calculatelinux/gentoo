@@ -596,6 +596,7 @@ app-emulation/qemu:pulseaudio - Enable pulseaudio output for sound emulation
 app-emulation/qemu:rbd - Enable rados block device backend support, see http://ceph.newdream.net/wiki/QEMU-RBD
 app-emulation/qemu:sdl - Enable the SDL-based console
 app-emulation/qemu:sdl-image - SDL Image support for icons
+app-emulation/qemu:slirp - Enable TCP/IP in hypervisor via net-libs/libslirp
 app-emulation/qemu:spice - Enable Spice protocol support via app-emulation/spice
 app-emulation/qemu:ssh - Enable SSH based block device support via net-libs/libssh2
 app-emulation/qemu:static - Build the User and Software MMU (system) targets as well as tools as static binaries
@@ -2661,34 +2662,36 @@ dev-qt/linguist-tools:qml - Enable QML support in lupdate
 dev-qt/qdoc:qml - Enable QML/JS parsing support
 dev-qt/qt-creator:android - Build plugin for Android devices
 dev-qt/qt-creator:autotest - Enable integration with popular unit testing frameworks (QtTest, Google Test, Boost.Test)
-dev-qt/qt-creator:autotools - Enable autotools project manager plugin
+dev-qt/qt-creator:autotools - Build plugin for autotools-based projects
 dev-qt/qt-creator:baremetal - Build plugin for bare metal devices
+dev-qt/qt-creator:bazaar - Add support for GNU Bazaar version control system (requires manual installation of Bazaar client)
 dev-qt/qt-creator:beautifier - Build the beautifier plugin (supports astyle, clang-format, and uncrustify)
 dev-qt/qt-creator:boot2qt - Build plugin for Boot2Qt devices
-dev-qt/qt-creator:clang - Build clang-based plugins (code model, formatting, refactoring, static analysis)
+dev-qt/qt-creator:clang - Build clang-based plugins (code model, formatting, static analysis)
 dev-qt/qt-creator:clearcase - Add support for IBM ClearCase version control system (requires manual installation of ClearCase client)
-dev-qt/qt-creator:cmake - Enable cmake project manager plugin
+dev-qt/qt-creator:cmake - Build plugin for CMake-based projects
 dev-qt/qt-creator:cppcheck - Enable integration with dev-util/cppcheck
 dev-qt/qt-creator:ctfvisualizer - Build the Chrome Trace Format visualizer plugin
 dev-qt/qt-creator:designer - Enable designer for QtWidgets-based UIs
-dev-qt/qt-creator:glsl - Enable GLSL editor
+dev-qt/qt-creator:glsl - Build the GLSL editor plugin
 dev-qt/qt-creator:help - Enable the integrated documentation viewer
 dev-qt/qt-creator:ios - Build plugin for Apple iOS devices
 dev-qt/qt-creator:lsp - Add support for the Language Server Protocol (LSP)
 dev-qt/qt-creator:mcu - Build plugin for MCU devices
 dev-qt/qt-creator:mercurial - Add support for dev-vcs/mercurial version control system
-dev-qt/qt-creator:modeling - Enable graphical model editor
+dev-qt/qt-creator:modeling - Build the graphical model editor plugin
 dev-qt/qt-creator:nim - Build plugin for Nim language support
 dev-qt/qt-creator:perforce - Add support for Perforce version control system (requires manual installation of Perforce client)
 dev-qt/qt-creator:perfprofiler - Build the Linux Perf-based profiler plugin
 dev-qt/qt-creator:python - Build plugin for Python language support
-dev-qt/qt-creator:qbs - Enable QBS project manager plugin
+dev-qt/qt-creator:qbs - Build plugin for QBS-based projects
 dev-qt/qt-creator:qmldesigner - Enable designer for QML/QtQuick-based UIs
+dev-qt/qt-creator:qmljs - Build the QML/JavaScript editor plugin
 dev-qt/qt-creator:qmlprofiler - Build the QML profiler plugin
 dev-qt/qt-creator:qnx - Build plugin for QNX devices
 dev-qt/qt-creator:remotelinux - Add support for deployment and execution on a remote Linux host
-dev-qt/qt-creator:scxml - Enable graphical SCXML editor
-dev-qt/qt-creator:serialterminal - Build serial terminal plugin
+dev-qt/qt-creator:scxml - Build the graphical SCXML editor plugin
+dev-qt/qt-creator:serialterminal - Build the serial terminal plugin
 dev-qt/qt-creator:silversearcher - Enable integration with sys-apps/the_silver_searcher
 dev-qt/qt-creator:systemd - Add support for retrieving application output from journald
 dev-qt/qt-creator:valgrind - Enable integration with dev-util/valgrind
@@ -2946,8 +2949,6 @@ dev-util/google-perftools:debug - Build a set of libraries with debug support (s
 dev-util/google-perftools:largepages - Use (experimental) larger pages for tcmalloc, this increases memory usage, but should speed up the allocation/free operations.
 dev-util/google-perftools:minimal - Only build the tcmalloc_minimal library, ignoring the heap checker and the profilers.
 dev-util/google-perftools:optimisememory - To build libtcmalloc with smaller internal caches.
-dev-util/gtk-doc:highlight - Enable source code highlighting
-dev-util/gtk-doc:vim - Enable source code highlighting through app-editors/vim
 dev-util/heaptrack:gui - Install Qt5-based analyzer tool
 dev-util/idea-community:jbr11 - Install and use the Java 11 based version of JetBrains Runtime.
 dev-util/idea-community:jbr8 - Install and use the Java 8 based version of JetBrains Runtime.

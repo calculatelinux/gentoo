@@ -32,6 +32,24 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2020-07-11)
+# Fails to build with recent glibc, bug 719968
+# Removal in 30 days
+sys-kernel/genkernel-next
+
+# Marek Szuba <marecki@gentoo.org> (2020-07-11)
+# Uses golang-* eclasses, only a library, all former reverse
+# dependencies have long since switched to vendoring.
+# Removal in 30 days. Bug #732136.
+dev-go/goptlib
+
+# Mikle Kolyada <zlogene@gentoo.org> (2020-07-10)
+# Last major release in 2001. Was added into texlive
+# long ago.
+# Use dev-texlive/texlive-formatsextra instead.
+# Removal in 30 days.
+dev-tex/xmltex
+
 # Kent Fredric <kentnl@gentoo.org> (2020-07-10)
 # No reverse dependencies, and Gtk2 support is becomming
 # obsolete in Gentoo.
