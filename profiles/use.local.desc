@@ -275,8 +275,8 @@ app-backup/duplicity:s3 - Support for backing up to the Amazon S3 system
 app-backup/rear:udev - Have ReaR start backup when attaching your USB drive.
 app-backup/snapper:lvm - Enable LVM thinprovisioned snapshots support sys-fs/lvm2
 app-backup/snapper:xattr - Add support for getting and setting POSIX extended attributes, through sys-apps/attr.
-app-backup/tsm:tsm_cit - IBM Tivoli Common Inventory Technology
-app-backup/tsm:tsm_hw - Difference snapshot support for NetApp and N-Series file servers
+app-backup/tsm:tsm-cit - IBM Tivoli Common Inventory Technology
+app-backup/tsm:tsm-hw - Difference snapshot support for NetApp and N-Series file servers
 app-backup/zbackup:tartool - Install tartool utility
 app-benchmarks/filebench:auto-completion - Enable command-line autocompletion using dev-libs/libtecla
 app-benchmarks/httperf:idleconn - Build with the idleconn program
@@ -555,6 +555,7 @@ app-emulation/libvirt:zfs - Enable ZFS backend storage sys-fs/zfs
 app-emulation/lxc:apparmor - Enable AppArmor support
 app-emulation/lxc:templates - Install old style templates through app-emulation/lxc-templates
 app-emulation/lxc:tools - Build and install additional command line tools
+app-emulation/lxd:apparmor - Enable AppArmor support
 app-emulation/nemu:network-map - Adds possibility of exporting network map to SVG
 app-emulation/nemu:ovf - Adds support for OVA/OVF import
 app-emulation/nemu:savevm - Adds support for QEMU savevm snapshots (experimental, QEMU must be patched)
@@ -6740,13 +6741,6 @@ net-misc/youtube-viewer:gtk - Install the gtk3 GUI
 net-misc/youtube-viewer:gtk2 - Use the old gtk2 GUI instead of the gtk3 one
 net-misc/zerotier:clang - Use Clang compiler instead of GCC
 net-misc/zerotier:neon - Enable ARM32 neon-salsa2012-asm code
-net-nds/389-ds-base:auto-dn-suffix - Enable auto bind with auto dn suffix over unix domain socket (LDAPI) support
-net-nds/389-ds-base:autobind - Enable auto bind over unix domain socket (LDAPI) support
-net-nds/389-ds-base:bitwise - Enable bitwise plugin - supported data in raw/bitwise format
-net-nds/389-ds-base:dna - Enable dna (distributed numeric assignment ) plugin - to automatically assign unique uid numbers to new user entries as they are created.
-net-nds/389-ds-base:ldapi - Enable LDAP over unix domain socket (LDAPI) support
-net-nds/389-ds-base:pam-passthru - Enable pam-passthru plugin - for simple and fast system services used in ldap
-net-nds/389-ds-base:presence - Enable presence plugin - non-standard syntax validation
 net-nds/ldapvi:gnutls - Use net-libs/gnutls instead of dev-libs/openssl
 net-nds/nsscache:nsscache - Depend on sys-auth/libnss-cache to handle flat files
 net-nds/nsscache:s3 - Support for S3-based NSS sources
@@ -7283,11 +7277,8 @@ sci-geosciences/liblas:gdal - Add support for the sci-libs/gdal geospatial raste
 sci-geosciences/mapnik:gdal - Enable sci-libs/gdal library support
 sci-geosciences/mapnik:osmfonts - Enable openstreetmaps font styles
 sci-geosciences/mapserver:apache - Enable mapserver to run under apache
-sci-geosciences/mapserver:gdal - Enable sci-libs/gdal library support; deprecated
 sci-geosciences/mapserver:geos - Enable sci-libs/geos library support
 sci-geosciences/mapserver:postgis - Enable dev-db/postgis support
-sci-geosciences/mapserver:proj - Enable sci-libs/proj library support (geographic projections); deprecated
-sci-geosciences/mapserver:xslt - Enable xslt and exslt support xml-mapfile support; deprecated
 sci-geosciences/merkaartor:libproxy - Use net-libs/libproxy for getting the HTTP/HTTPS/SOCKS proxy configuration
 sci-geosciences/merkaartor:webengine - Enable dev-qt/qtwebengine in some plugins
 sci-geosciences/qgis:3d - Build QGIS 3D library using dev-qt/qt3d
