@@ -12,12 +12,14 @@ if [[ "${PV}" == *9999 ]] ; then
 	EGIT_REPO_URI="https://github.com/axboe/liburing.git"
 else
 	SRC_URI="https://git.kernel.dk/cgit/${PN}/snapshot/${P}.tar.bz2"
-	KEYWORDS="~alpha ~amd64 ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 fi
 LICENSE="MIT"
 SLOT="0"
 
 IUSE="static-libs"
+# fsync test hangs forever
+RESTRICT="test"
 
 src_prepare() {
 	default
@@ -46,4 +48,8 @@ multilib_src_install_all() {
 	if ! use static-libs ; then
 		find "${ED}" -type f -name "*.a" -delete || die
 	fi
+}
+
+multilib_src_test() {
+	emake V=1 runtests
 }
