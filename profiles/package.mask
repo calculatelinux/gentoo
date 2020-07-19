@@ -32,6 +32,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-07-19)
+# Unmaintained upstream and broken by ECM 5.72.0, masked for removal in 30 days.
+media-video/plasma-mediacenter
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-07-18)
+# Stuck on Python 2, depends on deprecated dev-python/pygtk, bug #708162.
+# Needs a maintainer and >=2.0.1 version bump. Masked for removal in 30 days.
+net-p2p/nicotine+
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-07-15)
 # Broken by scons-python3 for >1 year, depends on dead gnome-base/libgnomeui,
 # bugs #685576, #726818, no reverse dependencies. Removal in 30 days.
@@ -46,6 +55,9 @@ dev-perl/Data-Diver
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2020-07-15)
 # In preparation; do not use yet.
 =dev-lang/perl-5.32*
+~virtual/perl-Archive-Tar-2.360.0
+~virtual/perl-autodie-2.320.0
+~virtual/perl-Compress-Raw-Bzip2-2.93.0
 
 # Christoph Junghans <junghans@gentoo.org> (2020-07-14)
 # Unmaintained upstream and does not support systemd or firewalld. 
@@ -424,24 +436,6 @@ media-libs/pymemphis
 # Use >=dev-texlive/texlive-metapost-2020-r1 as replacement.
 # Removal in 30 days. Bug #728904.
 dev-tex/feynmf
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-06-18)
-# Games depending on dead gnome-base/libgnomeui.
-# games-board/gnono: Bug #726788, last release 2007, abandoned upstream.
-# games-puzzle/gtetrinet: Bug #726798 last release 2006, abandoned upstream.
-# games-board/mt_gtk_client: Bug #726808, last commit 17 years ago.
-# games-board/sirius: Bug #726814, last release 15 years ago, dead upstream.
-# Masked for removal in 30 days.
-games-board/gnono
-games-puzzle/gtetrinet
-games-board/mt_gtk_client
-games-board/sirius
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-06-18)
-# Depends on dead gnome-base/libgnomeui. Really, no one else is packaging
-# this, last (and only) release in 2006, abandoned upstream. Bug #726790
-# Masked for removal in 30 days.
-dev-embedded/gnome-avrdude
 
 # Hans de Graaff <graaff@gentoo.org> (2020-06-14)
 # Ruby 2.4 is no longer supported by upstream and no longer gets

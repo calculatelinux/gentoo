@@ -11,18 +11,19 @@ HOMEPAGE="http://www.hydrogen-music.org/"
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/${PN}-music/${PN}"
-	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+	KEYWORDS="amd64 ~ppc ~ppc64 x86"
 else
 	MY_PV=${PV/_/-}
 	SRC_URI="https://github.com/${PN}-music/${PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+	KEYWORDS="amd64 ~ppc ~ppc64 x86"
 	S="${WORKDIR}"/${PN}-${MY_PV}
 fi
 
 LICENSE="GPL-2 ZLIB"
 SLOT="0"
-IUSE="alsa +archive doc jack ladspa lash osc oss portaudio portmidi pulseaudio"
+IUSE="alsa +archive doc jack ladspa lash osc oss portaudio portmidi pulseaudio test"
 
+RESTRICT="!test? ( test )"
 REQUIRED_USE="lash? ( alsa )"
 
 BDEPEND="
@@ -30,7 +31,7 @@ BDEPEND="
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 "
-DEPEND="
+CDEPEND="
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
 	dev-qt/qtnetwork:5
@@ -49,7 +50,11 @@ DEPEND="
 	portmidi? ( media-libs/portmidi )
 	pulseaudio? ( media-sound/pulseaudio )
 "
-RDEPEND="${DEPEND}"
+DEPEND="
+	${CDEPEND}
+	test? ( dev-qt/qttest:5 )
+"
+RDEPEND="${CDEPEND}"
 
 DOCS=( AUTHORS ChangeLog DEVELOPERS README.txt )
 
