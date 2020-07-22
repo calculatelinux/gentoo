@@ -543,7 +543,6 @@ app-emulation/libvirt:numa - Use NUMA for memory segmenting via sys-process/numa
 app-emulation/libvirt:openvz - Support management of OpenVZ virtualisation (openvz-sources)
 app-emulation/libvirt:parted - Allow using real disk partitions as pool for disk image storage, using sys-block/parted to create, resize and delete them.
 app-emulation/libvirt:pcap - Support auto learning IP addreses for routing
-app-emulation/libvirt:phyp - Support IBM HMC / IVM hypervisor via PHYP protocol
 app-emulation/libvirt:qemu - Support management of QEMU virtualisation (app-emulation/qemu)
 app-emulation/libvirt:rbd - Enable rados block device support via sys-cluster/ceph
 app-emulation/libvirt:vepa - Virtual Ethernet Port Aggregator (VEPA) / 802.1Qbg support. Relies on macvtap support.
@@ -2579,6 +2578,7 @@ dev-python/pygame:midi - Enable midi support using media-libs/portmidi
 dev-python/pyglet:image - Enable support for image formats other than PNG and BMP
 dev-python/pygpu:cuda - Enable NVIDIA CUDA toolkit support
 dev-python/pygpu:opencl - Enable OpenCL support
+dev-python/pyilmbase:exceptions - Enable runtime floating point exceptions in PyIMath.
 dev-python/pyilmbase:numpy - Add bindings for dev-python/numpy use.
 dev-python/pyocr:cuneiform - Enable support for the app-text/cuneiform OCR engine
 dev-python/pyocr:tesseract - Enable support for the app-text/tesseract OCR engine
@@ -2958,7 +2958,6 @@ dev-util/intel-ocl-sdk:android - Install android related files
 dev-util/intel-ocl-sdk:system-boost - Use system boost (dev-libs/boost) instead of bundled one
 dev-util/intel-ocl-sdk:system-clang - Use system clang (sys-devel/clang) instead of bundled one
 dev-util/intel-ocl-sdk:system-tbb - Use system Thread Building Blocks (dev-cpp/tbb) instead of bundled one
-dev-util/intel-ocl-sdk:tools - Install Intel Offline Compiler
 dev-util/kdevelop:gdbui - Enable GUI for attaching GDB to a running process
 dev-util/kdevelop:hex - Enable hex editor plugin via app-editors/okteta
 dev-util/kdevelop:qmake - Enable support for QMake build system
@@ -4256,6 +4255,7 @@ media-libs/gstreamer:orc - Disable some PaX memory protections to allow plugins 
 media-libs/gstreamer:unwind - Enable sys-libs/libunwind usage for better backtrace support in leaks tracer module
 media-libs/harfbuzz:glib - Compile with GLib Unicode support
 media-libs/harfbuzz:graphite - Use graphite to render complex non-Roman writing systems
+media-libs/ilmbase:large-stack - Enables code to take advantage of large stack support
 media-libs/imlib2:X - Use the X window system
 media-libs/imlib2:bzip2 - Bzip2 loader support
 media-libs/imlib2:gif - Gif image loader support
@@ -4385,6 +4385,7 @@ media-libs/opencv:opencvapps - Enable compilation with opencvapps
 media-libs/opencv:tesseract - Use Google's OCR Engine
 media-libs/opencv:testprograms - Build and install programs for testing OpenCV (performance)
 media-libs/opencv:vtk - Build new 3D visualization module viz based on sci-libs/vtk
+media-libs/openexr:utils - Build several utility binaries for verifying and manipulating EXR files.
 media-libs/openh264:plugin - Install the Gecko Media Plugin (GMP) for use with Mozilla packages
 media-libs/openh264:utils - Install the CLI encoder and decoder utilities
 media-libs/openimageio:color-management - Enable color management via media-libs/opencolorio
@@ -7489,12 +7490,10 @@ sci-libs/shogun:R - Enable support for dev-lang/R
 sci-libs/shogun:octave - Enable support for sci-mathematics/octave
 sci-libs/shogun:opencl - Enable support for building against OpenCL
 sci-libs/silo:silex - Build silex data browser
-sci-libs/spqr:metis - Use sci-libs/metis or sci-libs/parmetis for partitioning
 sci-libs/spqr:partition - Use the partition module of sci-libs/cholmod for partitioning
 sci-libs/spqr:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
 sci-libs/spr:root - Add sci-physics/root graphics and i/o support
 sci-libs/suitesparse:cuda - Enable nvidia cuda toolkit for speeding up computations
-sci-libs/suitesparse:metis - Enable the Partition module to cholmod using sci-libs/metis
 sci-libs/suitesparse:partition - Enable graph partitioning and graph-partition-based orderings through sci-libs/metis or sci-libs/parmetis
 sci-libs/suitesparse:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
 sci-libs/sundials:hypre - Build with sci-libs/hypre conditioners
@@ -9003,6 +9002,9 @@ x11-misc/wbar:gtk - Enables the gtk-based wbar-config GUI
 x11-misc/x11vnc:xdamage - Enable support for the Xdamage library
 x11-misc/x11vnc:xfixes - Enable support for the Xfixes library
 x11-misc/x11vnc:xrandr - Enable support for the X xrandr extension
+x11-misc/xkbd:evdev - Enable dev-libs/libevdev support for xtg
+x11-misc/xkbd:xi - Enable XInput2 support through x11-libs/libXi
+x11-misc/xkbd:xrandr - Enable XRandR support through x11-libs/libXrandr
 x11-misc/xkbset:tk - Install the dev-perl/Tk based xkbset-gui utility
 x11-misc/xlockmore:vtlock - Enables support for virtual terminal locking
 x11-misc/xlockmore:xlockrc - Enables xlockrc for people without PAM
