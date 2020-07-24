@@ -9,7 +9,7 @@ HOMEPAGE="https://www.chiark.greenend.org.uk/~sgtatham/putty/"
 LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ppc ppc64 sparc x86"
 SRC_URI="
 	https://dev.gentoo.org/~jer/${PN}-icons.tar.bz2
 	https://the.earth.li/~sgtatham/${PN}/${PV}/${P}.tar.gz
@@ -58,6 +58,11 @@ src_configure() {
 src_compile() {
 	emake -C "${S}"/doc
 	emake -C "${S}"/unix AR=$(tc-getAR) $(usex ipv6 '' COMPAT=-DNO_IPV6)
+}
+
+src_test() {
+	emake -C unix cgtest
+	unix/cgtest || die
 }
 
 src_install() {

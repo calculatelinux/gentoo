@@ -24,10 +24,16 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="python static-libs"
 
-REQUIRED_USE="${PYTHON_REQUIRED_USE}
-	python? ( static-libs )"
+REQUIRED_USE="
+	python? (
+		static-libs
+		${PYTHON_REQUIRED_USE}
+	)"
 
-BDEPEND="python? ( ${PYTHON_DEPS} )"
+BDEPEND="
+	dev-util/gperf
+	python? ( ${PYTHON_DEPS} )
+"
 DEPEND="${BDEPEND}"
 RDEPEND="${DEPEND}"
 
