@@ -58,6 +58,11 @@
       <role>Developer</role>
     </member>
     <member>
+      <email>sam@gentoo.org</email>
+      <name>Sam James</name>
+      <role>Developer</role>
+    </member>
+    <member>
       <email>slashbeast@gentoo.org</email>
       <name>Piotr Karbowski</name>
       <role>Developer</role>
@@ -116,7 +121,7 @@
     <member>
       <email>sam@gentoo.org</email>
       <name>Sam James</name>
-      <role>Gentoo/ARM</role>
+      <role>Anything/everything</role>
     </member>
     <member>
       <email>vapier@gentoo.org</email>
@@ -136,7 +141,7 @@
   </project>
   <project>
     <email>arm64@gentoo.org</email>
-    <name>ARM64 development</name>
+    <name>ARM64 Development</name>
     <url>https://wiki.gentoo.org/wiki/Project:ARM64</url>
     <description>The ARM64 project is devoted to getting and keeping Gentoo in good shape on the ARM AArch64 architecture.</description>
     <member>
@@ -166,7 +171,7 @@
     <member>
       <email>sam@gentoo.org</email>
       <name>Sam James</name>
-      <role>Despicable minion</role>
+      <role>Anything/everything</role>
     </member>
     <member>
       <email>zlogene@gentoo.org</email>
@@ -798,10 +803,6 @@
     <url>https://wiki.gentoo.org/wiki/Project:Devmanual</url>
     <description>The Devmanual subproject is tasked with maintaining and updating the Gentoo Development Guide https://devmanual.gentoo.org/</description>
     <member>
-      <email>creffett@gentoo.org</email>
-      <name>Chris Reffett</name>
-    </member>
-    <member>
       <email>gokturk@gentoo.org</email>
       <name>Göktürk Yüksek</name>
     </member>
@@ -859,11 +860,6 @@
     <name>Elections</name>
     <url>https://wiki.gentoo.org/wiki/Project:Elections</url>
     <description>Gentoo Elections Project gathers all the information necessary to conduct elections in Gentoo.</description>
-    <member>
-      <email>creffett@gentoo.org</email>
-      <name>Chris Reffett</name>
-      <role>Member</role>
-    </member>
     <member>
       <email>dabbott@gentoo.org</email>
       <name>David Abbott</name>
@@ -1253,6 +1249,11 @@
       <email>jstein@gentoo.org</email>
       <name>Jonas Stein</name>
       <role>Member (QA and cleaning up bugs)</role>
+    </member>
+    <member>
+      <email>sam@gentoo.org</email>
+      <name>Sam James</name>
+      <role>Member ( general )</role>
     </member>
     <member>
       <email>soap@gentoo.org</email>
@@ -1693,11 +1694,6 @@
     <member is-lead="1">
       <email>asturm@gentoo.org</email>
       <name>Andreas Sturmlechner</name>
-      <role>Developer</role>
-    </member>
-    <member>
-      <email>creffett@gentoo.org</email>
-      <name>Chris Reffett</name>
       <role>Developer</role>
     </member>
     <member>
@@ -2574,6 +2570,11 @@
       <role>Python keywordreqs (on bogsucker/timberdoodle)</role>
     </member>
     <member>
+      <email>sam@gentoo.org</email>
+      <name>Sam James</name>
+      <role>ppc/ppc64 keywording/stabilisation</role>
+    </member>
+    <member>
       <email>slyfox@gentoo.org</email>
       <name>Sergei Trofimovich</name>
       <role>ppc/ppc64 keywording/stabilization</role>
@@ -3006,11 +3007,6 @@
       <role>Member</role>
     </member>
     <member>
-      <email>creffett@gentoo.org</email>
-      <name>Chris Reffett</name>
-      <role>Member</role>
-    </member>
-    <member>
       <email>zerochaos@gentoo.org</email>
       <name>Rick Farina</name>
       <role>Member</role>
@@ -3190,6 +3186,11 @@
       <email>mattst88@gentoo.org</email>
       <name>Matt Turner</name>
     </member>
+    <member>
+      <email>sam@gentoo.org</email>
+      <name>Sam James</name>
+      <role>As-needed stabilisations/keywording</role>
+    </member>
     <member is-lead="1">
       <email>vapier@gentoo.org</email>
       <name>Mike Frysinger</name>
@@ -3235,6 +3236,11 @@
       <email>mgorny@gentoo.org</email>
       <name>Michał Górny</name>
       <role>Python keywordreqs (on catbus)</role>
+    </member>
+    <member>
+      <email>sam@gentoo.org</email>
+      <name>Sam James</name>
+      <role>Focus on security/core bugs</role>
     </member>
     <member>
       <email>slyfox@gentoo.org</email>
@@ -3396,11 +3402,6 @@
       <role>GLSA Coordinator</role>
     </member>
     <member>
-      <email>creffett@gentoo.org</email>
-      <name>Chris Reffett</name>
-      <role>GLSA Coordinator</role>
-    </member>
-    <member>
       <email>k_f@gentoo.org</email>
       <name>Kristian Fiskerstrand</name>
       <role>Member</role>
@@ -3408,7 +3409,7 @@
     <member>
       <email>sam@gentoo.org</email>
       <name>Sam James</name>
-      <role>GLSA Coordinator</role>
+      <role>Member</role>
     </member>
     <member is-lead="1">
       <email>whissi@gentoo.org</email>
@@ -3586,11 +3587,6 @@
     <name>Theology</name>
     <url>https://wiki.gentoo.org/wiki/Project:Theology</url>
     <description>The theology project maintains religious, genealogy, and humanities-related packages</description>
-    <member is-lead="1">
-      <email>creffett@gentoo.org</email>
-      <name>Chris Reffett</name>
-      <role>Lead</role>
-    </member>
   </project>
   <project>
     <email>tinderbox-cluster@gentoo.org</email>
@@ -3863,11 +3859,6 @@
     <url>https://wiki.gentoo.org/wiki/Project:Wiki</url>
     <description>The wiki project oversees the community and the content surrounding wiki.gentoo.org</description>
     <member>
-      <email>creffett@gentoo.org</email>
-      <name>Chris Reffett</name>
-      <role>Administrator</role>
-    </member>
-    <member>
       <email>grknight@gentoo.org</email>
       <name>Brian Evans</name>
       <role>Administrator / Contributor</role>
@@ -3979,6 +3970,11 @@
       <email>pacho@gentoo.org</email>
       <name>Pacho Ramos</name>
       <role>keywording/stabilization</role>
+    </member>
+    <member>
+      <email>sam@gentoo.org</email>
+      <name>Sam James</name>
+      <role>Developer (stabilisation/keywording on core)</role>
     </member>
     <member>
       <email>whissi@gentoo.org</email>

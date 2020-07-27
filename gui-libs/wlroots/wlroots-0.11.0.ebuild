@@ -13,11 +13,11 @@ if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 else
 	SRC_URI="https://github.com/swaywm/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
+	KEYWORDS="amd64 arm64 ~ppc64 ~x86"
 fi
 
 LICENSE="MIT"
-SLOT="0/9999"
+SLOT="0/11"
 IUSE="elogind icccm systemd x11-backend X"
 REQUIRED_USE="?? ( elogind systemd )"
 
