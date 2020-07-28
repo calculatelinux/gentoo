@@ -32,6 +32,27 @@
 
 #--- END OF EXAMPLES ---
 
+# Andrey Utkin <andrey_utkin@gentoo.org> (2020-07-28)
+# Not used by other packages anymore.
+# Removal in 30 days.
+dev-python/ruamel-std-pathlib
+
+# Marek Szuba <marecki@gentoo.org> (2020-07-27)
+# No longer available upstream. Potentially copyrighted.
+# Removal in 30 days. Bug #734116.
+app-dicts/sword-Cro
+app-dicts/sword-Dan
+app-dicts/sword-FarsiOPV
+app-dicts/sword-FreLSG
+app-dicts/sword-FreMartin
+app-dicts/sword-HNV
+app-dicts/sword-KJVD
+app-dicts/sword-RST
+app-dicts/sword-SpaRVG2004
+app-dicts/sword-SpaSEV
+app-dicts/sword-WEB
+app-dicts/sword-WebstersDict
+
 # Ulrich Müller <ulm@gentoo.org> (2020-07-25)
 # Included with TeX Live. The separate Gentoo package is
 # unmaintained and had its last version bump in 2015.
@@ -345,41 +366,6 @@ x11-misc/nts
 # Suggested replacement: sys-apps/portage (just kidding).
 # Removal in 30 days.  Bug #711134.
 sys-apps/pacman
-
-# Aaron Bauman <bman@gentoo.org> (2020-06-28)
-# More Py2 only stuff. Plz see -dev ML for discussions
-# Remove bindings, port to Py3, etc
-# Removal in 30 days
-app-arch/deltarpm
-app-crypt/virtualsmartcard
-app-text/duali
-app-text/duali-data
-app-dicts/duali-data
-app-text/mftrace
-app-text/queequeg
-app-text/referencer
-dev-libs/libmacaroons
-dev-libs/tut
-dev-python/elib-intl
-dev-python/eunuchs
-dev-python/medusa
-dev-python/python-iwscan
-dev-util/confix
-dev-util/qmtest
-dev-util/unrpyc
-games-engines/gemrb
-media-sound/lilycomp
-media-video/tovid
-net-mail/archivemail
-net-mail/getmail
-net-wireless/airpwn
-sci-chemistry/bkchem
-sci-chemistry/pymol-plugins-bni-tools
-sci-chemistry/pymol-plugins-emovie
-sci-chemistry/viewmol
-sci-libs/chemkit
-www-misc/surl
-x11-wm/plwm
 
 # Mikle Kolyada <zlogene@gentoo.org> (2020-06-28)
 # Obsolete package.
