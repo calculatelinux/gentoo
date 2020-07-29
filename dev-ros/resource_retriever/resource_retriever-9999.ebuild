@@ -14,9 +14,14 @@ IUSE=""
 
 RDEPEND="
 	dev-ros/rosconsole
-	dev-ros/roslib[${PYTHON_USEDEP}]
+	dev-ros/roslib[${PYTHON_SINGLE_USEDEP}]
 	net-misc/curl
-	dev-python/rospkg[${PYTHON_USEDEP}]
+	$(python_gen_cond_dep "dev-python/rospkg[\${PYTHON_USEDEP}]")
 "
 DEPEND="${RDEPEND}
 	test? ( dev-cpp/gtest )"
+
+src_test() {
+	export ROS_PACKAGE_PATH="${S}:${ROS_PACKAGE_PATH}"
+	ros-catkin_src_test
+}

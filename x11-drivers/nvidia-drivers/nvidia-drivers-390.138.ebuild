@@ -124,10 +124,10 @@ pkg_setup() {
 		# expects x86_64 or i386 and then converts it to x86
 		# later on in the build process
 		BUILD_FIXES="ARCH=$(uname -m | sed -e 's/i.86/i386/')"
-	fi
 
-	if use kernel_linux && kernel_is lt 2 6 9; then
-		eerror "You must build this against 2.6.9 or higher kernels."
+		if kernel_is lt 2 6 9; then
+			eerror "You must build this against 2.6.9 or higher kernels."
+		fi
 	fi
 
 	# set variables to where files are in the package structure
@@ -405,7 +405,7 @@ src_install() {
 
 	if has_multilib_profile && use multilib; then
 		local OABI=${ABI}
-		for ABI in $(get_install_abis); do
+		for ABI in $(multilib_get_enabled_abis); do
 			src_install-libs
 		done
 		ABI=${OABI}
@@ -484,14 +484,14 @@ src_install-libs() {
 			)
 		fi
 
-		if use wayland && has_multilib_profile && [[ ${ABI} == "amd64" ]];
+		if use wayland && [[ ${ABI} == "amd64" ]];
 		then
 			NV_GLX_LIBRARIES+=(
 				"libnvidia-egl-wayland.so.1.0.2"
 			)
 		fi
 
-		if use kernel_linux && has_multilib_profile && [[ ${ABI} == "amd64" ]];
+		if use kernel_linux && [[ ${ABI} == "amd64" ]];
 		then
 			NV_GLX_LIBRARIES+=(
 				"libnvidia-wfb.so.${NV_SOVER}"
