@@ -902,7 +902,6 @@ app-misc/gramps:rcs - Adds support for family tree archives via dev-vcs/rcs
 app-misc/gramps:reports - All external software that is needed for graphical reports will be installed
 app-misc/graphlcd-base:fontconfig - Add support for media-libs/fontconfig font names.
 app-misc/graphlcd-base:freetype - Add support for media-libs/freetype.
-app-misc/graphlcd-base:g15 - Add support for app-misc/g15daemon, used by the Logitech G15 keyboard.
 app-misc/graphlcd-base:graphicsmagick - Add support for media-gfx/graphicsmagick.
 app-misc/graphlcd-base:imagemagick - Add support for media-gfx/imagemagick.
 app-misc/irtrans-irserver:mono - Enable mono support
@@ -2618,7 +2617,6 @@ dev-python/pyudev:qt5 - Install PyQt5 bindings
 dev-python/pyyaml:libyaml - enable support for C implementation using libyaml
 dev-python/pyzmq:draft - Enable draft API support
 dev-python/rarfile:compressed - Enables the module to support compressed v3 archives by calling the app-arch/unrar.
-dev-python/rdflib:redland - enable support for Redland triplestore
 dev-python/rfc3986:idna - enable support for the IDNA specification (RFC 5891)
 dev-python/shiboken2:docstrings - Expose documentation as Python docstrings (recommended)
 dev-python/shiboken2:numpy - Implicitly convert passed NumPy arrays to Qt lists
@@ -8257,9 +8255,7 @@ sys-devel/binutils-hppa64:plugins - Enable plugin support in tools
 sys-devel/clang:default-compiler-rt - Use compiler-rt instead of libgcc as the default rtlib for clang
 sys-devel/clang:default-libcxx - Use libc++ instead of libstdc++ as the default stdlib for clang
 sys-devel/clang:static-analyzer - Install the Clang static analyzer
-sys-devel/clang:z3 - Enable the static analyzer constraint manager backend using sci-mathematics/z3
 sys-devel/clang-runtime:compiler-rt - Install sys-libs/compiler-rt for -rtlib=compiler-rt
-sys-devel/clang-runtime:crt - Require a package providing crt*.o files to make it possible to build software without GCC installed
 sys-devel/clang-runtime:libcxx - Install sys-libs/libcxx for -stdlib=libc++
 sys-devel/clang-runtime:openmp - Install sys-libs/libomp for -fopenmp support
 sys-devel/clang-runtime:sanitize - Enable compiler-rt sanitizer (-fsanitize*) support
