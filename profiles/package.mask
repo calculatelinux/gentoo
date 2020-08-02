@@ -32,6 +32,155 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-08-02)
+# Discontinued.  Last patch in 2008.  Py2 only.
+# Removal in 30 days.  Bug #734632.
+x11-misc/pypanel
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-02)
+# Stuck on py2.  Last release in 2010, last commit in 2014.  No revdeps.
+# Blocks dev-python/mysql-python removal.
+# Removal in 30 days.  Bug #735178.
+dev-python/python-openid
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-02)
+# Discontinued upstream in favor of dev-python/mock.  Py2 only.
+# The only revdep is last rited now.
+# Removal in 30 days.  Bug #735158.
+dev-python/mox
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-02)
+# Discontinued upstream in 2015.  Python 2 only.  No revdeps.
+# abseil-py (not package) is the suggested replacement.
+# Removal in 30 days.  Bug #735156.
+dev-python/google-apputils
+
+# Mikle Kolyada <zlogene@gentoo.org> (2020-08-02)
+# consolekit is abandoned upstream.
+# People are encouraged to switch to any logind
+# implementation (systemd/elogind).
+# Removal in 60 days (bug #727730)
+sys-auth/consolekit
+sec-policy/selinux-consolekit
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-02)
+# Py3.6 backport for dataclasses. No rdeps left.
+# Removal in 30 days
+dev-python/dataclasses
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-01)
+# Py3.6 only. Dead upstream.
+# Removal in 30 days. Bug #718898
+dev-python/cloudlib
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-01)
+# Py2 only. Dead upstream.
+# Removal in 30 days. Bug #722060
+app-arch/cfv
+app-arch/ipkg-utils
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-01)
+# Py2 only. Dead upstream.
+# Removal in 30 days
+# Bug #568602,#340164,#560840,#716420,#560254
+# #476424,#643982
+app-accessibility/SphinxTrain
+app-accessibility/sphinx3
+app-accessibility/sphinxbase
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-01)
+# Py2 only. Upstream has py3 versions
+# m-n. Removal in 30 days.
+www-apps/scgi
+www-apache/mod_scgi
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-01)
+# Py2 only. Dead upstream.
+# Removal in 30 days
+app-crypt/openssl-blacklist
+app-crypt/ssh-multiadd
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-01)
+# Py2 only. Upstream has py3 version
+# Removal in 30 days. Bug #709278
+media-gfx/printrun
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-01)
+# Py2 only. Dead upstream.
+# Removal in 30 days
+dev-python/pyvorbis
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-01)
+# Py2 only. Dead upstream.
+# Removal in 30 days
+dev-python/pyrex
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-01)
+# Py2 only. Dead upstream. Fails to build
+# Removal in 30 days. Bug #662572,#730328
+dev-python/pyode
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-01)
+# Py2 only. Dead upstream.
+# Removal in 30 days
+dev-python/pylzma
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-01)
+# Py2 only. Dead upstream
+# Removal in 30 days
+dev-python/pyid3lib
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-01)
+# Py2 only. Dead upstream
+# Removal in 30 days
+dev-python/pupynere
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-01)
+# Py2 only. Dead upstream
+# Removal in 30 days
+dev-python/id3-py
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-01)
+# Py2 only. Dead upstream.
+# Removal in 30 days. Bug #706238
+dev-python/flup
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-01)
+# Python 2 backport, not used by anything anymore.
+# Removal in 30 days.
+dev-python/backports-abc
+dev-python/backports-lzma
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-01)
+# Py2 only. Use dev-python/lxml instead.
+# Removal in 30 days
+dev-python/elementtree
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-01)
+# Py2 only. Last upstream release 2013.
+# Removal in 30 days. Last 2 have deps on cddb.
+dev-python/cddb-py
+media-sound/exaile
+media-sound/jack
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-01)
+# This package's tests are seriously broken (they access random Internet
+# hosts for no good reason all the time), and it has no real revdeps.
+# Removal in 30 days.  Bug #735010.
+dev-python/distributed
+
+# Mikle Kolyada <zlogene@gentoo.org> (2020-07-31)
+# Broken package with dead upstream.
+# Libraries like tikz/pgf can be used as a replacement.
+# Removal in 30 days.
+dev-tex/herm-pic
+
+# Jason A. Donenfeld <zx2c4@gentoo.org> (2020-07-31)
+# This package has been deprecated for 8 months now, in addition to
+# loud ewarns upon every install. It is replaced with explicitly
+# installing net-vpn/wireguard-tools. Removal in 7 days.
+virtual/wireguard
+
 # Michał Górny <mgorny@gentoo.org> (2020-07-28)
 # Masked for the time being due to dep on LLVM 8.  Bug #720236.
 <=dev-ada/gps-2019-r1
@@ -236,17 +385,23 @@ dev-perl/Data-Diver
 ~virtual/perl-Archive-Tar-2.360.0
 ~virtual/perl-autodie-2.320.0
 ~virtual/perl-Compress-Raw-Bzip2-2.93.0
+~virtual/perl-Compress-Raw-Zlib-2.93.0
+~virtual/perl-CPAN-2.270.0
+~virtual/perl-DB_File-1.853.0
+~virtual/perl-Devel-PPPort-3.570.0
+~virtual/perl-Digest-MD5-2.550.100_rc
+~virtual/perl-Dumpvalue-1.210.0
+~virtual/perl-Encode-3.60.0
+~virtual/perl-Exporter-5.740.0
+~virtual/perl-ExtUtils-CBuilder-0.280.234
+~virtual/perl-ExtUtils-MakeMaker-7.440.0
+~virtual/perl-Filter-Simple-0.960.0
 
 # Christoph Junghans <junghans@gentoo.org> (2020-07-14)
 # Unmaintained upstream and does not support systemd or firewalld.
 # Please use net-analyzer/fail2ban instead. (bug #732076)
 # Removal in 30 days.
 app-admin/denyhosts
-
-# Matt Turner <mattst88@gentoo.org> (2019-09-01)
-# Icons look funny. E.g., the X (close) icon is wrong. I suspect files are
-# installed incorrectly
->=x11-themes/adwaita-icon-theme-3.36
 
 # William Hubbs <williamh@gentoo.org> (2020-07-14)
 # The kubernetes split packages are old versions with known security
@@ -370,22 +525,11 @@ media-gfx/uniconvertor
 # Removal in 30 days.
 dev-tex/cjk-latex
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-07-01)
-# Depends on dead gnome-base/libgnomeui, bug #726816, dead upstream. Big Debian
-# patch exists, but we won't become new upstream. Masked for removal in 30 days.
-games-board/teg
-
 # Stephan Hartmann <stha09@googlemail.com> (2020-06-29)
 # Dev channel releases are only for people who
 # are developers or want more experimental features
 # and accept a more unstable release.
 >=www-client/chromium-86
-
-# Mart Raudsepp <leio@gentoo.org> (2020-06-27)
-# Disappeared upstream and download locations. Potential replacements:
-# media-sound/quimup, xfce-extra/xfce4-mpc-plugin, media-sound/xfmpc
-# Bug 729822. Removal in 30 days.
-media-sound/guimup
 
 # Hans de Graaff <graaff@gentoo.org> (2020-06-14)
 # Ruby 2.4 is no longer supported by upstream and no longer gets
@@ -510,11 +654,6 @@ www-plugins/passff
 # python2_7 out of default PYTHON_TARGETS first.
 ~dev-python/setuptools-46.1.3
 >=dev-python/setuptools-47
-
-# Ulrich Müller <ulm@gentoo.org> (2020-01-06)
-# Snapshots from Git and pretest versions, masked for testing.
-=app-editors/emacs-27.0.50_pre*
-~app-editors/emacs-27.0.90
 
 # Lars Wendler <polynomial-c@gentoo.org> (2019-11-14)
 # Breaks archives containing relative paths
