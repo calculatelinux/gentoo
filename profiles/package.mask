@@ -32,6 +32,54 @@
 
 #--- END OF EXAMPLES ---
 
+# Aaron Bauman <bman@gentoo.org> (2020-08-02)
+# Py2 only. m-n. Bug #735340
+# Removal in 30 days
+dev-vcs/rapidsvn
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-02)
+# Py2 only. m-n. Bug #735364
+# Removal in 30 days
+media-gfx/cptutils
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-02)
+# Py2 only. m-n. Bug #709932
+# Removal in 30 days
+net-wireless/cpyrit-cuda
+net-wireless/cpyrit-opencl
+net-wireless/pyrit
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-02)
+# Py2 only. m-n. Bug #735486
+# Removal in 30 days
+sys-fs/ecryptfs-utils
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-02)
+# Py2 only. m-n. Bug #735524
+# Removal in 30 days
+www-misc/nx_util
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-02)
+# Unmaintained. New release upstream. Py3.6 only.
+# Removal in 30 days. Bug #696484,#718466
+sci-biology/HTSeq
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-02)
+# Dead upstream. Py3.6 only. Build issues.
+# Removal in 30 days. Bug #677900,#716384
+# #722408,723344
+app-mobilephone/obexftp
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-02)
+# Dead upstream. Py3.6 only.
+# Removal in 30 days. Bug #722334,#713686
+app-misc/evemu
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-02)
+# Needs bump. Py3 tests fail. Last release 2yrs.
+# Removal in 30 days. Bug #718196
+app-backup/cachedir
+
 # Michał Górny <mgorny@gentoo.org> (2020-08-02)
 # Discontinued.  Last patch in 2008.  Py2 only.
 # Removal in 30 days.  Bug #734632.
@@ -596,10 +644,6 @@ sci-mathematics/geogebra
 # package is not going away anytime soon, just masked
 # for security. unmask as needed.
 dev-java/icedtea-web
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-03-14)
-# Breaks at least dev-games/simgear right now, bug #709878.
-~dev-games/openscenegraph-3.6.5
 
 # Eray Aslan <eras@gentoo.org> (2020-03-09)
 # Mask experimental software

@@ -9,4 +9,4 @@ PROPERTIES=live
 RDEPEND=sys-apps/pciutils X? ( media-gfx/imagemagick media-libs/imlib2 www-client/w3m[imlib] x11-apps/xprop x11-apps/xrandr x11-apps/xwininfo )
 SLOT=0
 _eclasses_=git-r3	8ec5b53812bce105ae7943930e4660f8
-_md5_=76cf9ba6803629112a6c94c976b2b903
+_md5_=d47844ec92fff1124d97455746b8a721
