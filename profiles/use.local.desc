@@ -1611,6 +1611,7 @@ dev-haskell/happstack-server:template-haskell - Description: Template Haskell is
 dev-haskell/hashed-storage:diff - Provide the Storage.Hashed.Diff module.
 dev-haskell/hashed-storage:hpc - Compile with the profiling ghc flag -fhpc.
 dev-haskell/hashtables:bounds-checking - if on, use bounds-checking array accesses
+dev-haskell/hashtables:detailed-profiling - add detailed profiling information to profiled build-depends
 dev-haskell/hashtables:portable - if on, use only pure Haskell code and no GHC extensions.
 dev-haskell/hashtables:unsafe-tricks - turn on unsafe GHC tricks
 dev-haskell/haskeline:legacy-encoding - Use legacy iconv encoding for POSIX. This is only intended for testing.
@@ -1749,11 +1750,11 @@ dev-haskell/tasty-quickcheck:old-quickcheck - Use Quick-Check < 2.7.
 dev-haskell/texmath:executable - Compile test executable.
 dev-haskell/texmath:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/text:developer - operate in developer mode
+dev-haskell/text-short:asserts - Enable runtime-checks via 'assert'
 dev-haskell/thyme:bug-for-bug - bug-for-bug compatibility with time
 dev-haskell/thyme:lens - use the full lens package
 dev-haskell/thyme:show-internal - instance Show of internal representation
 dev-haskell/tls:compat - Accept SSLv2 compatible handshake.
-dev-haskell/tls:hans - Use the Haskell Network Stack (HaNS).
 dev-haskell/tls:network - Use the base network library.
 dev-haskell/transformers-base:orphaninstances - Build instances for orphan datatypes.
 dev-haskell/transformers-compat:three - Use transformers-0.3
@@ -1767,6 +1768,7 @@ dev-haskell/vector-algorithms:boundschecks - Enable bounds checking.
 dev-haskell/vector-algorithms:internalchecks - Enable internal consistency checks at the cost of a significant performance penalty.
 dev-haskell/vector-algorithms:properties - Enable quickcheck tests.
 dev-haskell/vector-algorithms:unsafechecks - Enable bounds checking in unsafe operations at the cost of a significant performance penalty.
+dev-haskell/vector-instances:hashable - use dev-haskell/hashable
 dev-haskell/void:safe - dissable effective but unsafe coersions
 dev-haskell/wai-app-static:print - print debug info.
 dev-haskell/warp:allow-sendfilefd - Allow use of sendfileFd (not available on GNU/kFreeBSD).
@@ -2134,7 +2136,6 @@ dev-libs/efl:dds - Enable DDS image loader
 dev-libs/efl:drm - Enable DRM engine
 dev-libs/efl:eet - Enable Eet image loader
 dev-libs/efl:fribidi - Enable bidirectional text support
-dev-libs/efl:gles2 - Enable the OpenGL ES GL implementation
 dev-libs/efl:glib - Enable dev-libs/glib support
 dev-libs/efl:harfbuzz - Enable complex text shaping and layout support
 dev-libs/efl:hyphen - Enable text hyphenation support
@@ -2152,7 +2153,6 @@ dev-libs/efl:tga - Enable Tga image loader
 dev-libs/efl:tgv - Enable Tgv image loader
 dev-libs/efl:tslib - Enable x11-libs/tslib for touchscreen events
 dev-libs/efl:unwind - Enable debug support via sys-libs/libunwind
-dev-libs/efl:vlc - Enable media-video/vlc support
 dev-libs/efl:xcf - Enable XCF image loader
 dev-libs/efl:xim - Enable X Input Method
 dev-libs/efl:xpresent - Enable x11-libs/libXpresent support
@@ -3081,11 +3081,9 @@ dev-vcs/git:tk - Include the 'gitk' and 'git gui' tools
 dev-vcs/git:webdav - Adds support for push'ing to HTTP/HTTPS repositories via DAV
 dev-vcs/git-annex:assistant - Enable git-annex assistant and watch command
 dev-vcs/git-annex:benchmark - Enable benchmarking
-dev-vcs/git-annex:concurrentoutput - Use concurrent-output library (experimental)
 dev-vcs/git-annex:debuglocks - Debug location of MVar/STM deadlocks
 dev-vcs/git-annex:magicmime - Use libmagic to determine file MIME types
 dev-vcs/git-annex:network-3 - Use network-3
-dev-vcs/git-annex:network-uri - Get Network.URI from the network-uri package.
 dev-vcs/git-annex:pairing - Enable pairing of git annex repositories
 dev-vcs/git-annex:s3 - Enable Amazon S3 remote
 dev-vcs/git-annex:torrentparser - Use haskell torrent library to parse torrent files
@@ -3210,6 +3208,8 @@ games-emulation/m64py:rar - Ensure support for .rar archives.
 games-emulation/mednafen:debugger - Build with internal debugger
 games-emulation/mgba:discord - Enable Discord RPC support
 games-emulation/mgba:elf - Enable the use of elf utils via dev-libs/elfutils
+games-emulation/mgba:gles2 - Build OpenGL ES 2.x RenderSystem
+games-emulation/mgba:gles3 - Build OpenGL ES 3.x RenderSystem
 games-emulation/mupen64plus:audio-sdl - Enable SDL audio plugin.
 games-emulation/mupen64plus:input-sdl - Enable SDL input plugin.
 games-emulation/mupen64plus:rsp-hle - Enable HLE RSP plugin.
@@ -3546,7 +3546,6 @@ kde-apps/akonadi:kaccounts - Enable support for system-wide defined KAccounts
 kde-apps/akonadi:tools - Install tools for developers and testing
 kde-apps/analitza:eigen - Enable dev-cpp/eigen mathematical templates support
 kde-apps/ark:zip - Enable ZIP archive support via dev-libs/libzip
-kde-apps/artikulate:qtmedia - Enable playback via Qt5Multimedia
 kde-apps/cantor:R - Enable dev-lang/R backend support
 kde-apps/cantor:analitza - Enable kde-apps/analitza backend support
 kde-apps/cantor:julia - Enable dev-lang/julia backend support
@@ -3577,7 +3576,6 @@ kde-apps/kdeedu-meta:webengine - Enable kde-apps/kalzium and kde-apps/parley, re
 kde-apps/kdegraphics-mobipocket:thumbnail - Enables thumbnail generation
 kde-apps/kdemultimedia-meta:cdrom - Include packages for optical discs
 kde-apps/kdenetwork-meta:dropbox - Enable support for Dropbox in kde-apps/dolphin via kde-apps/dolphin-plugins-dropbox
-kde-apps/kdenetwork-meta:telepathy - Enable support for Plasma Telepathy (instant messaging) integration via kde-apps/plasma-telepathy-meta
 kde-apps/kdenetwork-meta:webengine - Enable support for Plasma Telepathy (instant messaging) integration via kde-apps/plasma-telepathy-meta
 kde-apps/kdenlive:freesound - Enable freesound.org credentials support via dev-qt/qtwebkit to download files
 kde-apps/kdenlive:share - Enable support for a share menu using kde-frameworks/purpose
@@ -6436,11 +6434,15 @@ net-misc/csync:sftp - Enable sftp transfer support via net-libs/libssh
 net-misc/curl:alt-svc - Enable alt-svc support
 net-misc/curl:brotli - Enable brotli compression support
 net-misc/curl:ftp - Enable FTP support
+net-misc/curl:gnutls - Enable gnutls ssl backend
 net-misc/curl:gopher - Enable Gopher protocol support
 net-misc/curl:http2 - Enable HTTP/2.0 support
 net-misc/curl:imap - Enable Internet Message Access Protocol support
+net-misc/curl:mbedtls - Enable mbedtls ssl backend
 net-misc/curl:metalink - Enable metalink support
 net-misc/curl:nghttp3 - Enable HTTP/3.0 support using net-libs/nghttp3 and net-libs/ngtcp2
+net-misc/curl:nss - Enable nss ssl backend
+net-misc/curl:openssl - Enable openssl ssl backend
 net-misc/curl:pop3 - Enable Post Office Protocol 3 support
 net-misc/curl:progress-meter - Enable the progress meter
 net-misc/curl:quiche - Enable HTTP/3.0 support using net-libs/quiche
@@ -6450,6 +6452,7 @@ net-misc/curl:ssh - Enable SSH urls in curl using libssh2
 net-misc/curl:ssl - Enable crypto engine support (via openssl if USE='-gnutls -nss')
 net-misc/curl:telnet - Enable Telnet protocol support
 net-misc/curl:tftp - Enable TFTP support
+net-misc/curl:winssl - Enable winssl ssl backend
 net-misc/dahdi:flash - Support (short) flash on FXS
 net-misc/dahdi:oslec - Enable OSLEC (software) echo canceller (require ECHO in kernel)
 net-misc/dahdi-tools:ppp - Enables PPP/DAHDIRAS support

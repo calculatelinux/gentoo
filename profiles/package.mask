@@ -32,6 +32,90 @@
 
 #--- END OF EXAMPLES ---
 
+
+# Mikle Kolyada <zlogene@gentoo.org>
+# Starting with this version pambase was
+# completly rewritten in python.
+# Initial testing needed.
+=sys-auth/pambase-20200804
+
+# Jack Todaro <solpeth@posteo.org> (2020-08-04)
+# Deprecated in favour of dev-haskell/dbus.
+# Unmaintained since 2012.
+dev-haskell/dbus-core
+
+# Jack Todaro <solpeth@posteo.org> (2020-08-04)
+# Requires porting for MonadFail. No upstream
+# activity since January 2018.
+dev-haskell/hans
+
+# Sam James <sam@gentoo.org> (2020-08-04)
+# Dead upstream, unmaintained.
+# Open security bug. Large number of other bugs.
+# Removal in 30 days. bug #630884.
+# bug #520844, bug #665910, bug #626474,
+# bug #490322, bug #692436, bug #707274,
+# bug #713404. bug #680486, bug #459724.
+mail-filter/dspam
+www-apps/dspam-web
+
+# Sam James <sam@gentoo.org> (2020-08-04)
+# Dead upstream and now obsolete.
+# Not likely to work with newer rspam (>= 1.7)
+# Removal in 30 days. bug #630990
+mail-filter/rmilter
+
+# Sam James <sam@gentoo.org> (2020-08-04)
+# Unmaintained and out of date in Gentoo.
+# Has outstanding security issue.
+# Removal in 30 days. bug #710728, bug #588606
+sys-auth/pam_radius
+
+# Sam James <sam@gentoo.org> (2020-08-04)
+# Unmaintained, out of date, serious security
+# issue.
+# Removal in 30 days. bug #658448.
+net-analyzer/nikto
+
+# Matt Turner <mattst88@gentoo.org> (2020-08-03)
+# Package is dead and upstream maintainer asked that it be removed.
+# Removal in 30 days. Bug #735314
+dev-util/cmdtest
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-03)
+# Unmaintained.  Last release in 2011.  Py2 only.
+# Removal in 30 days.  Bug #735362.
+dev-vcs/svnmailer
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-03)
+# Unmaintained.  Last release in 2016.  Py2 only.
+# Removal in 30 days.  Bug #735336.
+dev-vcs/gitinspector
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-03)
+# Unmaintained.  Homepage gone.  Last bumped in 2009.  Py2 only.
+# Removal in 30 days.  Bug #735328.
+dev-util/tailor
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-03)
+# Last release in 2012.  Py2 only.  Has build failure reported.
+# Removal in 30 days.  Bug #717490.
+sys-fs/traydevice
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-03)
+# Unmaintained.  Py2 only.  The current Gentoo version is from 2015.
+# No reverse dependencies.
+# Removal in 30 days.  Bug #721476.
+net-mail/libpst
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-03)
+# dev-util/coccigrep is py2-only and requires coccinelle with Python
+# bindings.  dev-util/coccinelle has py2 bindings and fails to build
+# with python disabled (bug #701904).  Both packages are unmaintained.
+# Removal in 30 days.  Bug #734630.
+dev-util/coccigrep
+dev-util/coccinelle
+
 # Aaron Bauman <bman@gentoo.org> (2020-08-02)
 # Py2 only. m-n. Bug #735340
 # Removal in 30 days
@@ -58,11 +142,6 @@ sys-fs/ecryptfs-utils
 # Py2 only. m-n. Bug #735524
 # Removal in 30 days
 www-misc/nx_util
-
-# Aaron Bauman <bman@gentoo.org> (2020-08-02)
-# Unmaintained. New release upstream. Py3.6 only.
-# Removal in 30 days. Bug #696484,#718466
-sci-biology/HTSeq
 
 # Aaron Bauman <bman@gentoo.org> (2020-08-02)
 # Dead upstream. Py3.6 only. Build issues.
@@ -444,6 +523,13 @@ dev-perl/Data-Diver
 ~virtual/perl-ExtUtils-CBuilder-0.280.234
 ~virtual/perl-ExtUtils-MakeMaker-7.440.0
 ~virtual/perl-Filter-Simple-0.960.0
+~virtual/perl-Getopt-Long-2.510.0
+~virtual/perl-I18N-LangTags-0.440.0
+~virtual/perl-IO-1.430.0
+~virtual/perl-IO-Compress-2.93.0
+~virtual/perl-IPC-Cmd-1.40.0
+~virtual/perl-JSON-PP-4.40.0
+~virtual/perl-Math-BigInt-1.999.818
 
 # Christoph Junghans <junghans@gentoo.org> (2020-07-14)
 # Unmaintained upstream and does not support systemd or firewalld.
@@ -567,11 +653,6 @@ net-misc/termpkg
 # version of dev-python/pillow.  No revdeps.  Multiple bugs open.
 # Removal in 30 days.  Bug #715682.
 media-gfx/uniconvertor
-
-# Mikle Kolyada <zlogene@gentoo.org> (2020-07-03)
-# Merged into dev-texlive/texlive-langcjk.
-# Removal in 30 days.
-dev-tex/cjk-latex
 
 # Stephan Hartmann <stha09@googlemail.com> (2020-06-29)
 # Dev channel releases are only for people who

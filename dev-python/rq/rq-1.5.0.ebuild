@@ -14,10 +14,14 @@ SRC_URI="https://github.com/rq/rq/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86"
 
 BDEPEND="
-	test? ( dev-python/sentry-sdk[${PYTHON_USEDEP}] )
+	test? (
+		dev-db/redis
+		dev-python/mock[${PYTHON_USEDEP}]
+		dev-python/sentry-sdk[${PYTHON_USEDEP}]
+	)
 "
 DEPEND="
 	>=dev-python/click-5.0[${PYTHON_USEDEP}]
