@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-PYTHON_COMPAT=( python3_{6,7,8} )
+PYTHON_COMPAT=( python3_{6,7,8,9} )
 
 inherit elisp-common autotools python-single-r1 toolchain-funcs xdg-utils
 
@@ -57,7 +57,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.21.1-fix-font-size.patch
 )
 
-DOCS=( DEDICATION HACKING README.txt ROADMAP )
+DOCS=( DEDICATION HACKING Documentation/out/topdocs/README.txt ROADMAP )
 
 src_prepare() {
 	default
