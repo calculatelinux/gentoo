@@ -1643,7 +1643,6 @@ dev-haskell/httpd-shed:network-bsd - Get Network.BSD from the network-bsd packag
 dev-haskell/httpd-shed:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/hxt:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/icalendar:network-uri - use network-uri package
-dev-haskell/json:generic - Add support for generic encoder (dev-haskell/syb)
 dev-haskell/json:mapdict - Encode Haskell maps as JSON dicts
 dev-haskell/json:parsec - Add support for parsing with Parsec
 dev-haskell/json:pretty - Add support for using pretty printing combinators
@@ -1744,6 +1743,7 @@ dev-haskell/snap-server:openssl - enable https support using dev-haskell/hsopens
 dev-haskell/snap-server:portable - no non-haskell unportable code.
 dev-haskell/splitmix:optimised-mixer - Use JavaScript for mix32
 dev-haskell/splitmix:random - Providen RandomGen SMGen instance
+dev-haskell/stack:developer-mode - By default, should extra developer information be output?
 dev-haskell/store-core:force-alignment - No description
 dev-haskell/tagsoup:download - Build with Download module.
 dev-haskell/tagsoup:testprog - Build the test program.
@@ -3991,6 +3991,7 @@ mate-extra/caja-extensions:share - Add an extension to support sharing files.
 mate-extra/caja-extensions:wallpaper - Add an extension to support setting an image as the current wallpaper
 mate-extra/mate-polkit:accountsservice - Support extraction of data from AccountsService
 mate-extra/mate-power-manager:applet - Enable building of the MATE applet.
+mate-extra/mate-power-manager:libsecret - Support locking of keyring via app-crypt/libsecret
 mate-extra/mate-screensaver:consolekit - Enable support for sys-auth/consolekit
 mate-extra/mate-utils:applet - Enable the mate dictionary applet
 media-fonts/corefonts:tahoma - Also install the Tahoma font. Due to the lack of a free bold variant, this may render badly. See bug 184790.
@@ -4312,6 +4313,7 @@ media-libs/libextractor:archive - Enable archive support using app-arch/libarchi
 media-libs/libextractor:gsf - Enable OLE2 (MS Office) plug-in support using gnome-extra/libgsf
 media-libs/libextractor:midi - Enable MIDI support through media-libs/libsmf
 media-libs/libffado:test-programs - Install standalone test programs
+media-libs/libggi:3dfx - Enables support for Voodoo chipsets, also called 3DFX and TDFX
 media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libgphoto2:serial - Enable serial port support
 media-libs/libgpod:gtk - Enable ArtworkDB support
@@ -6463,7 +6465,6 @@ net-misc/dhcp:server - Install the dhcpd and dhcrelay programs
 net-misc/dhcpcd:embedded - Embed the definitions of dhcp options in the dhcpcd executable
 net-misc/dhcpcd:privsep - Enable support for privilege separation
 net-misc/dhcpcd-ui:gtk2 - Build with x11-libs/gtk+ version 2 instead of version 3
-net-misc/dhcpcd-ui:gtk3 - Add support for x11-libs/gtk+ version 3 (The GIMP Toolkit)
 net-misc/dibbler:resolvconf - Use resolvconf to handle /etc/resolv.conf updates
 net-misc/dropbear:bsdpty - Add support for legacy BSD pty's rather than dynamic UNIX pty's -- do not use this flag unless you are absolutely sure you actually want it
 net-misc/dropbear:multicall - Build all the programs as one little binary (to save space)
@@ -8663,8 +8664,6 @@ virtual/podofo-build:boost - Add support for boost
 virtual/podofo-build:tools - Build and install commandline tools.
 virtual/ssh:minimal - Prefer net-misc/dropbear over net-misc/openssh
 virtual/wine:staging - Enable Wine-Staging's Patchset
-virtual/wireguard:module - Compile the actual WireGuard kernel module. Most certainly you want this enabled, unless you're doing something strange.
-virtual/wireguard:tools - Compile the wg(8) tool and related helpers. You probably want this enabled.
 www-apache/mod_backtrace:unwind - Use sys-libs/libunwind to provide better resolution of function names.
 www-apache/mod_extract_forwarded:mod-proxy - Enable support for Apache's internal proxy
 www-apache/mod_musicindex:archive - Add archive support
@@ -8690,7 +8689,6 @@ www-apps/cgit:lua - Enable support for Lua scripting
 www-apps/drupal:uploadprogress - Install dev-php/pecl-uploadprogress package
 www-apps/gitea:acct - User and group management via acct-*/git packages
 www-apps/gitea:build-client - Build the client code, instead of using a precompiled one
-www-apps/gitit:network-uri - Get Network.URI from the network-uri package.
 www-apps/gitit:plugins - enables optional plugin runtime loader
 www-apps/hugo:sass - Enable SASS/SCSS support
 www-apps/icingaweb2:apache2-server - Adds support for the apache2-server

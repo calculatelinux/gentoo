@@ -32,6 +32,27 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2020-08-07)
+# Slot with known security issues. Please use a newer slot
+# instead. Removal in 30 days. Bug #713478.
+dev-ruby/json:0
+
+# Hans de Graaff <graaff@gentoo.org> (2020-08-07)
+# Slot with known security issues. Please use a newer slot
+# instead. Removal in 30 days. Bug #733116.
+dev-ruby/kramdown:0
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-06)
+# Py2.7 only.  Last release in 2009.  No reverse dependencies left.
+# Removal in 30 days.  Bug #735610.
+dev-python/pythonutils
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-06)
+# Py3.6 only.  Apparently randomly fails to build (bug #515736).
+# Last release in 2016.  No reverse dependencies left.
+# Removal in 30 days.  Bug #718968.
+dev-python/gntp
+
 # Jimi Huotari <chiitoo@gentoo.org> (2020-08-04)
 # No consumers since 2015, and no known stand-alone use.
 # Removal in 30 days.
@@ -41,7 +62,7 @@ dev-libs/liboobs
 # Starting with this version pambase was
 # completly rewritten in python.
 # Initial testing needed.
-=sys-auth/pambase-20200805
+=sys-auth/pambase-20200806
 
 # Jack Todaro <solpeth@posteo.org> (2020-08-04)
 # Deprecated in favour of dev-haskell/dbus.
@@ -306,12 +327,6 @@ dev-python/distributed
 # Removal in 30 days.
 dev-tex/herm-pic
 
-# Jason A. Donenfeld <zx2c4@gentoo.org> (2020-07-31)
-# This package has been deprecated for 8 months now, in addition to
-# loud ewarns upon every install. It is replaced with explicitly
-# installing net-vpn/wireguard-tools. Removal in 7 days.
-virtual/wireguard
-
 # Michał Górny <mgorny@gentoo.org> (2020-07-28)
 # Masked for the time being due to dep on LLVM 8.  Bug #720236.
 <=dev-ada/gps-2019-r1
@@ -438,7 +453,6 @@ dev-ruby/metasm:1.0.2
 dev-ruby/mime-types:0
 dev-ruby/nio4r:0
 dev-ruby/openssl-ccm:1.2.1
-dev-ruby/pcabrub:0.12
 dev-ruby/pundit:0
 dev-ruby/rack-attack:5
 dev-ruby/rack-protection:1
@@ -504,12 +518,6 @@ media-video/plasma-mediacenter
 # bugs #685576, #726818, no reverse dependencies. Removal in 30 days.
 app-text/glosung
 
-# Kent Fredric <kentnl@gentoo.org> (2020-07-15)
-# No LICENSE declaration by upstream, and no response from upstream
-# since at least 2013 as to what license to use (bug #732710)
-# Removal in 30 days.
-dev-perl/Data-Diver
-
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2020-07-15)
 # In preparation; do not use yet.
 =dev-lang/perl-5.32*
@@ -534,6 +542,13 @@ dev-perl/Data-Diver
 ~virtual/perl-IPC-Cmd-1.40.0
 ~virtual/perl-JSON-PP-4.40.0
 ~virtual/perl-Math-BigInt-1.999.818
+~virtual/perl-Math-BigInt-FastCalc-0.500.900
+~virtual/perl-Module-CoreList-5.202.6.200
+~virtual/perl-Module-Load-Conditional-0.700.0
+~virtual/perl-Module-Metadata-1.0.37
+~virtual/perl-Net-Ping-2.720.0
+~virtual/perl-parent-0.238.0
+~virtual/perl-podlators-4.140.0
 
 # Christoph Junghans <junghans@gentoo.org> (2020-07-14)
 # Unmaintained upstream and does not support systemd or firewalld.
@@ -549,7 +564,13 @@ app-admin/denyhosts
 #
 # https://www.gentoo.org/support/news-items/2020-04-03-kubernetes-moving-to-single-package.html
 #
+# dev-lang/go-1.12.17 has been added to this mask because it will be
+# removed at the same time since it has been out of support upstream for
+# months and was kept only to allow these kubernetes split packages to
+# build.
+#
 # Removal in 60 days. Bug #731804
+=dev-lang/go-1.12*
 sys-cluster/kubeadm
 sys-cluster/kube-apiserver
 sys-cluster/kube-controller-manager
@@ -633,12 +654,6 @@ kde-apps/kblog
 # Removal in 30 days.
 x11-misc/xmonad-log-applet
 
-# Hans de Graaff <graaff@gentoo.org> (2020-07-05)
-# Obsolete slot with known security issues. Please
-# update to slot "5" instead.
-# Removal in 30 days.  Bug #728506.
-dev-ruby/sanitize:4
-
 # Michał Górny <mgorny@gentoo.org> (2020-07-04)
 # Unmaintained.  Requires scipy-python2.  Current version is from 2015,
 # latest upstream release from 2017.  The only revdep is masked
@@ -663,13 +678,6 @@ media-gfx/uniconvertor
 # are developers or want more experimental features
 # and accept a more unstable release.
 >=www-client/chromium-86
-
-# Hans de Graaff <graaff@gentoo.org> (2020-06-14)
-# Ruby 2.4 is no longer supported by upstream and no longer gets
-# security updates since the 2.4.10 release. Use ruby 2.5 or later
-# instead.
-dev-lang/ruby:2.4
-dev-ruby/did_you_mean:2.4
 
 # Jonas Stein <jstein@gentoo.org> (2020-06-07)
 # Last rite unusable package.
@@ -781,7 +789,6 @@ www-plugins/passff
 # The new version loses Python 2 support but does not introduce any real
 # changes.  Let's mask it to reduce the noise, and hopefully try to get
 # python2_7 out of default PYTHON_TARGETS first.
-~dev-python/setuptools-46.1.3
 >=dev-python/setuptools-47
 
 # Lars Wendler <polynomial-c@gentoo.org> (2019-11-14)
@@ -789,11 +796,6 @@ www-plugins/passff
 # when being called with --no-absolute-filenames
 # https://bugs.gentoo.org/700020
 =app-arch/cpio-2.13
-
-# Michał Górny <mgorny@gentoo.org> (2019-10-20)
-# Testing version that breaks multiple plugins.  Let's keep it masked
-# until upstream releases fixed versions.
-~xfce-base/xfce4-panel-4.15.2
 
 # Lars Wendler <polynomial-c@gentoo.org> (2019-10-16)
 # Depends on apache-2.2
@@ -948,7 +950,6 @@ sys-devel/automake:1.10
 <sys-libs/glibc-2.30-r8
 <sys-devel/binutils-2.33.1-r1
 <sys-devel/binutils-hppa64-2.33.1
-<sys-libs/binutils-libs-2.33.1-r1
 
 # Michał Górny <mgorny@gentoo.org> (2017-05-20)
 # Old versions of CUDA and their reverse dependencies. They do not
