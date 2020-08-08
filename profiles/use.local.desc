@@ -61,6 +61,7 @@ app-admin/diamond:mongo - Enable MongoDB support
 app-admin/diamond:redis - Enable Redis support
 app-admin/diradm:automount - Support for automount data in LDAP
 app-admin/diradm:irixpasswd - Support for storing separate IRIX passwords
+app-admin/doas:timestamp - Adds support for "persist" feature (experimental)
 app-admin/elektra:augeas - Enable plugin for reading and writing configuration files with help from Augeas
 app-admin/elektra:ini - Enable new, advanced ini support
 app-admin/elektra:simpleini - Enable simpleini support
@@ -3054,8 +3055,6 @@ dev-vcs/cvs2svn:bazaar - Support for dev-vcs/bzr
 dev-vcs/cvsync:gcrypt - Use dev-libs/libgcrypt for hash functions.
 dev-vcs/cvsync:mhash - Use app-crypt/mhash for hash functions.
 dev-vcs/cvsync:openssl - Use dev-libs/openssl for hash functions.
-dev-vcs/darcs:diff - Use 'lcs' for diff building.
-dev-vcs/darcs:http - Use the pure Haskell HTTP package for HTTP support.
 dev-vcs/darcs:network-uri - Get Network.URI from the network-uri package.
 dev-vcs/darcs:terminfo - Use the terminfo package for enhanced console support.
 dev-vcs/darcs:threaded - Use threading and SMP support.
@@ -4883,7 +4882,6 @@ media-sound/xnoise:lyrics - Enable support for lyrics fetching
 media-sound/xwax:alsa - Adds support for ALSA audio input/output.
 media-sound/xwax:cdda - Sets runtime dependencies to support decoding audio from a compact disc.
 media-sound/xwax:fallback - Sets runtime dependencies to support decoding "other" audio files.
-media-sound/xwax:jack - Adds support for audio input/output via the JACK Audio Connection Kit.
 media-sound/xwax:mp3 - Sets runtime dependencies to support decoding MP3 audio.
 media-sound/xwax:oss - Adds support for OSS (open sound system) audio input/output.
 media-sound/yarock:mpv - Enable media-video/mpv backend

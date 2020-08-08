@@ -32,6 +32,33 @@
 
 #--- END OF EXAMPLES ---
 
+# Mikle Kolyada <zlogene@gentoo.org> (2020-08-08)
+# modutils is obsolete and does not build.
+# No consumers in the tree.
+# Removal in 30 days.
+sys-apps/modutils
+virtual/modutils
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2020-08-08)
+# HOMEPAGE dead.
+# Removal in 30 days. bug #736326
+media-sound/tapiir
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2020-08-08)
+# Last release in 2007, HOMEPAGE dead.
+# Removal in 30 days. bug #736322
+media-sound/specimen
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2020-08-08)
+# Last release in 2010.
+# Removal in 30 days. bug #736300
+media-sound/jackbeat
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-08)
+# Was not ported to >=ghc-8. Old dev-vcs/darcs was the only user.
+# Removal in 30 days. bug #736250
+dev-haskell/shellish
+
 # Michał Górny <mgorny@gentoo.org> (2020-08-07)
 # Last upstream (pre-)release in 2016.  Python 3 porting effort is not
 # progressing since February, and PRs are stuck.  Homepage is gone.
@@ -560,6 +587,20 @@ app-text/glosung
 ~virtual/perl-Net-Ping-2.720.0
 ~virtual/perl-parent-0.238.0
 ~virtual/perl-podlators-4.140.0
+~virtual/perl-Pod-Simple-3.400.0
+~virtual/perl-Safe-2.410.0
+~virtual/perl-Scalar-List-Utils-1.550.0
+~virtual/perl-Socket-2.29.0
+~virtual/perl-Storable-3.210.0
+~virtual/perl-Sys-Syslog-0.360.0
+~virtual/perl-Term-ANSIColor-5.10.0
+~virtual/perl-Test-Simple-1.302.175
+~virtual/perl-Thread-Queue-3.140.0
+~virtual/perl-threads-2.250.0
+~virtual/perl-threads-shared-1.610.0
+~virtual/perl-Time-HiRes-1.976.400
+~virtual/perl-Time-Piece-1.340.100
+~virtual/perl-Unicode-Normalize-1.270.0
 
 # Christoph Junghans <junghans@gentoo.org> (2020-07-14)
 # Unmaintained upstream and does not support systemd or firewalld.
@@ -653,11 +694,6 @@ dev-tex/xmltex
 # obsolete in Gentoo.
 # Removal in 30 days
 dev-perl/gnome2-perl
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-07-09)
-# Dead upstream, no reverse dependencies.
-# Removal in 30 days.
-kde-apps/kblog
 
 # Sergei Trofimovich <slyfox@gentoo.org> (2020-07-05)
 # No upstream activity in past few years.
