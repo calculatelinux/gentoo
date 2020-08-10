@@ -16,14 +16,19 @@ IUSE=""
 RDEPEND="
 	sci-physics/bullet:=
 	dev-ros/roscpp
-	media-libs/sdl-image
+	media-libs/sdl-image[png]
 	dev-ros/tf2
 	>=dev-cpp/yaml-cpp-0.5:=
 
 	dev-libs/boost:=
 "
 DEPEND="${RDEPEND}
-	test? ( dev-ros/rostest dev-ros/rospy dev-ros/rosunit )
+	test? (
+		dev-ros/rostest
+		dev-ros/rospy
+		dev-ros/rosunit
+		dev-cpp/gtest
+	)
 	dev-ros/nav_msgs[${CATKIN_MESSAGES_CXX_USEDEP}]
 "
 BDEPEND="
