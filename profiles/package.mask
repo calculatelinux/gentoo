@@ -32,6 +32,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-08-09)
+# Build tool with no revdeps left.
+# Removal in 30 days.  Bug #736517.
+dev-python/paver
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-09)
+# Python 2 only.  No commits since 2015.
+# Removal in 30 days.  Bug #735334.
+dev-vcs/git-bz
+
 # Mikle Kolyada <zlogene@gentoo.org> (2020-08-08)
 # modutils is obsolete and does not build.
 # No consumers in the tree.
@@ -95,12 +105,6 @@ dev-python/gntp
 # No consumers since 2015, and no known stand-alone use.
 # Removal in 30 days.
 dev-libs/liboobs
-
-# Mikle Kolyada <zlogene@gentoo.org> (2020-08-04)
-# Starting with this version pambase was
-# completly rewritten in python.
-# Initial testing needed.
-=sys-auth/pambase-20200806
 
 # Jack Todaro <solpeth@posteo.org> (2020-08-04)
 # Deprecated in favour of dev-haskell/dbus.
