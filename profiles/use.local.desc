@@ -3806,7 +3806,7 @@ mail-client/claws-mail:archive - Enable archiving plugin
 mail-client/claws-mail:bogofilter - Build mail-filter/bogofilter plugin
 mail-client/claws-mail:dillo - Enable dillo html viewer plugin
 mail-client/claws-mail:gdata - Enable plugin for access to Google data providers
-mail-client/claws-mail:gtk3 - Build support for GTK+3
+mail-client/claws-mail:gtk2 - Build support for GTK+-2 instead of GTK+-3 (live ebuild only)
 mail-client/claws-mail:libcanberra - Enable sound notification in connection with USE=notification
 mail-client/claws-mail:libindicate - Enable notification through DBUS in connection with USE=notification
 mail-client/claws-mail:libnotify - Enable notification on the desktop in connection with USE=notification
@@ -4378,6 +4378,7 @@ media-libs/mesa:vulkan-overlay - Build vulkan-overlay-layer which displays Frame
 media-libs/mesa:wayland - Enable support for dev-libs/wayland
 media-libs/mesa:xa - Enable the XA (X Acceleration) API for Gallium3D.
 media-libs/mesa:xvmc - Enable the XvMC acceleration interface for the Gallium3D Video Layer.
+media-libs/mesa:zink - Enable the Zink OpenGL-over-Vulkan Gallium driver
 media-libs/mlt:compressed-lumas - Compress the luma files in png.
 media-libs/mlt:frei0r - Build the module for media-plugins/frei0r-plugins
 media-libs/mlt:kdenlive - Build support for kde-apps/kdenlive
@@ -6993,6 +6994,7 @@ net-vpn/strongswan:openssl - Enable dev-libs/openssl plugin which is required fo
 net-vpn/strongswan:pkcs11 - Enable pkcs11 support
 net-vpn/strongswan:strongswan_plugins_aesni - Enable support for Intel AES-NI crypto plugin
 net-vpn/strongswan:strongswan_plugins_blowfish - Enable support for the blowfish plugin
+net-vpn/strongswan:strongswan_plugins_bypass-lan - Enable support for the bypass-lan plugin
 net-vpn/strongswan:strongswan_plugins_ccm - Enable support for the ccm plugin
 net-vpn/strongswan:strongswan_plugins_chapoly - Enable ChaCha20/Poly1305 AEAD implementation and ChaCha20 XOF plugin
 net-vpn/strongswan:strongswan_plugins_ctr - Enable support for the ctr plugin
