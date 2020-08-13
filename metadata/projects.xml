@@ -505,10 +505,6 @@
       <name>Brian Dolbec</name>
     </member>
     <member>
-      <email>jmbsvicetto@gentoo.org</email>
-      <name>Jorge Manuel B. S. Vicetto</name>
-    </member>
-    <member>
       <email>mattst88@gentoo.org</email>
       <name>Matt Turner</name>
     </member>
@@ -3065,11 +3061,6 @@
       <name>Brian Dolbec</name>
     </member>
     <member>
-      <email>jmbsvicetto@gentoo.org</email>
-      <name>Jorge Manuel B. S. Vicetto</name>
-      <role>AMD64 / X86 Release Coordinator</role>
-    </member>
-    <member>
       <email>maffblaster@gentoo.org</email>
       <name>Matthew Marchese</name>
       <role>Documentation Helper</role>
@@ -3093,11 +3084,6 @@
       <email>williamh@gentoo.org</email>
       <name>William Hubbs</name>
       <role>LiveCD Tools Maintainer</role>
-    </member>
-    <member>
-      <email>zerochaos@gentoo.org</email>
-      <name>Rick Farina</name>
-      <role>Builder of Things</role>
     </member>
   </project>
   <project>

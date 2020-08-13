@@ -2,7 +2,6 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-# oes not work with python3
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE='threads(+)'
 inherit eutils flag-o-matic waf-utils python-any-r1
