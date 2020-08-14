@@ -32,6 +32,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Matt Turner <mattst88@gentoo.org> (2020-08-13)
+# Masked for testing
+>=sys-auth/sssd-2.3.0
+
+# Jonas Stein <jstein@gentoo.org> (2020-08-13)
+# One of many password generators, but with dead upstream in this case.
+# Masked for removal after 2020-10-01.
+# Bug #629272
+app-admin/apg
+
 # Sam James <sam@gentoo.org> (2020-08-12)
 # Obsolete. Now included in texlive.
 # Removal in 30 days.
@@ -768,12 +778,6 @@ app-misc/ifp-line
 # Removal after 2020-08-01
 # Bug 687664
 app-dicts/stardict-quick-eng-fra
-
-# Aaron W. Swenson <titanofold@gentoo.org> (2020-05-15)
-# PostgreSQL 9.4 series is EOL. Migrate your database cluster to a more recent
-# version.
-# Removal after 2020-06-14.
-<dev-db/postgresql-9.5
 
 # Michael Orlitzky <mjo@gentoo.org> (2020-04-19)
 # Stuck on Python 3.6, support for which already required
