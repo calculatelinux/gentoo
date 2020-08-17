@@ -32,6 +32,135 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-08-17)
+# Dead pygtk-2 era library.  No reverse dependencies left.
+# Removal in 30 days.  Bug #706480.
+dev-python/notify-python
+
+# Mart Raudsepp <leio@gentoo.org> (2020-08-16)
+# Temporary mask until accidentally missed app-crypt/gcr
+# bump is finalized
+=gnome-base/gnome-core-apps-3.36.5
+
+# Alfredo Tupone <tupone@gentoo.org> (2020-08-16)
+# Ported to py3.8 but not yet released
+# Masked to allow py2.7 removal
+dev-ada/langkit
+dev-ada/libadalang
+dev-ada/libadalang-tools
+dev-ada/gps
+
+# Zac Medico <zmedico@gentoo.org> (2020-08-16)
+# Not ported to py3.7. No reverse deps.
+# Removal in 30 days. Bug #719098.
+dev-python/mem_top
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-16)
+# Unmaintained.  Not ported to py3.7.  The only revdep is queued
+# for removal.
+# Removal in 30 days.  Bug #719544.
+dev-python/robotframework
+
+# Zac Medico <zmedico@gentoo.org> (2020-08-01)
+# Not ported to py3.7. No reverse deps.
+# Removal in 30 days. Bug #719542.
+dev-python/robotbackgroundlogger
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-16)
+# Obsolete package without reverse dependencies.
+# Does not compile against ghc-8.8. Removal in 30 days.
+# Bug #735902.
+dev-haskell/frown
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-16)
+# Unmaintained.  Not ported to py3.7.  Not bumped for over a year.
+# Removal in 30 days.  Bug #737400.
+media-video/photofilmstrip
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-16)
+# Unmaintained.  Broken with py3.7.  Upstream archived the repository.
+# No reverse dependencies left.
+# Removal in 30 days.  Bug #719554.
+dev-python/sleekxmpp
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-16)
+# Unmaintained.  Not ported to py3.7.  Not bumped since introduction
+# in 2015.
+# Removal in 30 days.  Bug #719422.
+dev-python/pyminuit
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-16)
+# Not maintained since 2017.  Not ported to py3.7.  No reverse
+# dependencies.
+# Removal in 30 days.  Bug #719412.
+dev-python/pygpu
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-16)
+# Unmaintained.  Not ported to py3.7.  'blocks' is a snapshot from 2013,
+# last activity in 2014.  It is the only revdep of 'maintboot'.
+# Removal in 30 days.  Bug #718522.
+dev-python/maintboot
+sys-block/blocks
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-16)
+# Outdated.  Not tested (successfully) on py3.7.  The current version
+# fails tests.  No reverse dependencies.
+# Removal in 30 days.  Bug #718814.
+dev-python/emcee
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-16)
+# Obsolete package without reverse dependencies.
+# A metapackage. Removal in 30 days.
+dev-haskell/yesod-platform
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-16)
+# Obsolete package without reverse dependencies.
+# Does not compile against current ghc-8.8. Removal in 30 days.
+dev-haskell/yesod-routes
+
+# Hans de Graaff <graaff@gentoo.org> (2020-08-16)
+# Old unmaintained package without reverse dependencies. Block removal
+# of insecure dev-ruby/rack versions, bug 730786. Masked for removal
+# in 30 days.
+dev-ruby/bcat
+
+# Hans de Graaff <graaff@gentoo.org> (2020-08-16)
+# Mask old obsolete slots for removal in 30 days.
+# Use a newer slot of the same package instead.
+dev-ruby/mysql2:0.4
+dev-ruby/regexp_property_values:0
+dev-ruby/request_store:1.0.5
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-15)
+# Obsolete package without reverse dependencies.
+# Does not compile against current ghc-8.8. Removal in 30 days.
+dev-haskell/crypto-conduit
+
+# Mart Raudsepp <leio@gentoo.org> (2020-08-15)
+# Development release, needs testing to ensure valac-0.50
+# works for existing packages
+>=dev-libs/vala-common-0.49
+dev-lang/vala:0.50
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-15)
+# Obsolete package without reverse dependencies.
+# Does not compile against current ghc-8.8. Removal in 30 days.
+dev-haskell/blaze-builder-enumerator
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-14)
+# Was subsumed by dev-haskell/network. Use that instead.
+# Removal in 30 days. bug #735796
+dev-haskell/network-bytestring
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-14)
+# Was not ported to >=ghc-8. Old dev-vcs/darcs was the only user.
+# Removal in 30 days. bug #735998
+dev-haskell/hashed-storage
+
+# Rick Farina <zerochaos@gentoo.org> (2020-08-14)
+# Obsolete, nothing depends on it. Removal in 30 days.
+net-wireless/lorcon-old
+
 # Mikle Kolyada <zlogene@gentoo.org> (2020-08-14)
 # Obsolete package. Current version is py2-only.
 # py3 port has been abandoned for a long time.
@@ -242,11 +371,6 @@ media-gfx/cptutils
 net-wireless/cpyrit-cuda
 net-wireless/cpyrit-opencl
 net-wireless/pyrit
-
-# Aaron Bauman <bman@gentoo.org> (2020-08-02)
-# Py2 only. m-n. Bug #735486
-# Removal in 30 days
-sys-fs/ecryptfs-utils
 
 # Aaron Bauman <bman@gentoo.org> (2020-08-02)
 # Py2 only. m-n. Bug #735524
@@ -580,11 +704,6 @@ net-libs/osptoolkit
 =net-misc/asterisk-11*
 =net-misc/asterisk-g729-11*
 
-# Sergei Trofimovich <slyfox@gentoo.org> (2020-07-20)
-# Old erlang version. Removal in 30 days. bug #732188
-=dev-lang/erlang-21*
-<net-misc/rabbitmq-server-3.7.24
-
 # Hans de Graaff <graaff@gentoo.org> (2020-07-20)
 # Mask old obsolete slots for removal in 30 days.
 # Use a newer slot of the same package instead.
@@ -729,12 +848,6 @@ dev-go/goptlib
 # Removal in 30 days
 dev-perl/gnome2-perl
 
-# Sergei Trofimovich <slyfox@gentoo.org> (2020-07-05)
-# No upstream activity in past few years.
-# Needs porting to gtk3/fxce4panel-4.15: bug #729492.
-# Removal in 30 days.
-x11-misc/xmonad-log-applet
-
 # Michał Górny <mgorny@gentoo.org> (2020-07-04)
 # Unmaintained.  Requires scipy-python2.  Current version is from 2015,
 # latest upstream release from 2017.  The only revdep is masked
@@ -770,10 +883,6 @@ app-misc/ifp-line
 # Meson port does not handle multilib yet and has issues
 # regarding runstatedir (not using /run).
 =net-misc/networkmanager-1.22.10-r11
-
-# Stefan Strogin <steils@gentoo.org> (2020-06-03)
-# Masked for testing
->=dev-libs/libressl-3.2.0
 
 # Jonas Stein <jstein@gentoo.org> (2020-06-01)
 # Last rite package due to missing/unclear license.
