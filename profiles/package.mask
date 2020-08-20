@@ -32,8 +32,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-08-18)
+# Backports of hash algorithms that are built-in since Python 3.6.
+# No reverse dependencies left.
+# Removal in 30 days.  Bug #737712.
+dev-python/pyblake2
+dev-python/pysha3
+
 # Kent Fredric <kentnl@gentoo.org> (2020-08-17)
-# No reverse dependencies, and Gtk support is becomming
+# No reverse dependencies, and gtk2 support is becoming
 # obsolete in Gentoo
 # Removal in 30 days
 dev-perl/gnome2-vfs-perl
@@ -42,11 +49,6 @@ dev-perl/gnome2-vfs-perl
 # Dead pygtk-2 era library.  No reverse dependencies left.
 # Removal in 30 days.  Bug #706480.
 dev-python/notify-python
-
-# Mart Raudsepp <leio@gentoo.org> (2020-08-16)
-# Temporary mask until accidentally missed app-crypt/gcr
-# bump is finalized
-=gnome-base/gnome-core-apps-3.36.5
 
 # Alfredo Tupone <tupone@gentoo.org> (2020-08-16)
 # Ported to py3.8 but not yet released
@@ -711,10 +713,6 @@ dev-ruby/i18n:0.9
 dev-ruby/net-ssh:4
 dev-ruby/nokogumbo:0
 dev-ruby/zeitwerk:1
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-07-19)
-# Unmaintained upstream and broken by ECM 5.72.0, masked for removal in 30 days.
-media-video/plasma-mediacenter
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2020-07-15)
 # In preparation; do not use yet.

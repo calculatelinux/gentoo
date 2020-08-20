@@ -472,7 +472,6 @@ app-emulation/containers-storage:btrfs - Enables dependencies for the "btrfs" gr
 app-emulation/containers-storage:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
 app-emulation/cri-o:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
 app-emulation/cri-o:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
-app-emulation/cri-o:ostree - Enables dependencies for handling of OSTree images.
 app-emulation/crossover-bin:capi - Enable ISDN support via CAPI
 app-emulation/crossover-bin:opencl - Enable OpenCL support
 app-emulation/crossover-bin:osmesa - Add support for OpenGL in bitmaps using libOSMesa
@@ -3369,6 +3368,7 @@ games-simulation/flightgear:qt5 - Build Qt5 launcher application
 games-simulation/flightgear:udev - Enable event-based Input devices through virtual/udev
 games-simulation/flightgear:utils - Build various utilities (fgpanel, fgviewer among others)
 games-simulation/openrct2:lightfx - Enables LightFX for better lightning effects.
+games-simulation/openrct2:scripting - Enable the dev-lang/duktape scripting engine for executing user scripts.
 games-simulation/openrct2:twitch - Enables streaming of ingame content to Twitch.
 games-simulation/openttd:aplaymidi - Enables midi music in game, using aplaymidi as an external player
 games-simulation/openttd:dedicated - Build only the openttd server, and not the client.
@@ -5844,6 +5844,7 @@ net-im/ekg2:gpg - Enable jabber message encryption through app-crypt/gpgme.
 net-im/ekg2:minimal - Disable building extra plugins with no additional deps.
 net-im/ekg2:openssl - Support encryption in sim plugin, using OpenSSL.
 net-im/ekg2:sqlite - Support logging messages into SQLite3 database.
+net-im/element-desktop-bin:emoji - Use media-fonts/noto-emoji for displaying emoji
 net-im/empathy:gnome-online-accounts - Enable using net-libs/gnome-online-accounts for authorization (e.g. for Google Talk)
 net-im/empathy:map - Enable world map support through media-libs/libchamplain
 net-im/err:irc - Pull optional dependencies, needed for IRC backend
@@ -8310,6 +8311,7 @@ sys-devel/binutils-hppa64:multitarget - Adds support to binutils for cross compi
 sys-devel/binutils-hppa64:plugins - Enable plugin support in tools
 sys-devel/clang:default-compiler-rt - Use compiler-rt instead of libgcc as the default rtlib for clang
 sys-devel/clang:default-libcxx - Use libc++ instead of libstdc++ as the default stdlib for clang
+sys-devel/clang:default-lld - Use lld as the default linker for clang
 sys-devel/clang:static-analyzer - Install the Clang static analyzer
 sys-devel/clang-runtime:compiler-rt - Install sys-libs/compiler-rt for -rtlib=compiler-rt
 sys-devel/clang-runtime:libcxx - Install sys-libs/libcxx for -stdlib=libc++
@@ -8374,6 +8376,7 @@ sys-devel/parity:vcx86 - Enable support for 32bit Visual Studio compilers
 sys-devel/sparse:gtk - Build the test-inspect utility (requires x11-libs/gtk+ version 2)
 sys-devel/sparse:llvm - Build the sparse-llvm utility
 sys-devel/sparse:xml - Build the c2xml utility (requires dev-libs/libxml2)
+sys-fabric/mstflint:adb-generic-tools - Enable compiling the following tools: mstreg and mstlink
 sys-fabric/mstflint:inband - Enable firmware updates for Mellanox SwitchX and ConnectIB devices
 sys-fabric/ofed:dapl - Add support for DAPL abstraction layer
 sys-fabric/ofed:diags - Add dignostic tools for infiniband
