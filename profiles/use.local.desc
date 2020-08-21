@@ -1193,13 +1193,8 @@ app-text/msort:heap - Use heap instead of alloca()
 app-text/msort:icu - Use dev-libs/icu instead of dev-libs/libutf8proc.
 app-text/msort:libuninum - Use dev-libs/libuninum for conversion.
 app-text/pandoc:embed-data-files - Embed data files in binary for relocatable executable.
-app-text/pandoc:http-conduit - Enable downloading of resources over https.
-app-text/pandoc:https - Enable support for downloading of resources over https.
-app-text/pandoc:make-pandoc-man-pages - Build program to regenerate pandoc man pages from README.
-app-text/pandoc:network-uri - Get Network.URI from the network-uri package.
 app-text/pandoc:optimize - Enable -O1 optimizations (requires ~16GiB memory)
 app-text/pandoc:trypandoc - Build trypandoc cgi executable.
-app-text/pandoc:weigh-pandoc - Build weigh-pandoc to measure memory usage.
 app-text/pastebinit:crypt - Install pbputs for gpg-encrypted pastes
 app-text/pdfgrep:unac - Removing accents and ligatures before search
 app-text/pelican:markdown - Markdown support
@@ -1578,7 +1573,6 @@ dev-haskell/comonad:contravariant - You can disable the use of the `contravarian
 dev-haskell/comonad:distributive - You can disable the use of the `distributive` package using `-f-distributive`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Distributive`
 dev-haskell/comonad:test-doctests - Run the doctests test suite
 dev-haskell/conduit:nohandles - experimental code to use raw system calls in place of handles. Not recommended for general use
-dev-haskell/configfile:buildtests - Build the executable to run unit tests.
 dev-haskell/contravariant:safe - Get Safe guarantees rather than merely Trustworthy, but with worse constant factors.
 dev-haskell/contravariant:semigroups - You can disable the use of the `semigroups` package using `-f-semigroups`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/contravariant:statevar - You can disable the use of the `StateVar` package using `-f-StateVar`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
@@ -1619,8 +1613,6 @@ dev-haskell/hashtables:unsafe-tricks - turn on unsafe GHC tricks
 dev-haskell/haskeline:legacy-encoding - Use legacy iconv encoding for POSIX. This is only intended for testing.
 dev-haskell/haskeline:libiconv - Explicitly link against the libiconv library.
 dev-haskell/haskeline:terminfo - Use the terminfo package for POSIX consoles.
-dev-haskell/hdbc-odbc:buildstresstest - Build stress test
-dev-haskell/hdbc-sqlite3:buildtests - Build the executable to run unit tests
 dev-haskell/hdbc-sqlite3:splitbase - Choose the new smaller, split-up package.
 dev-haskell/hexpat:bundled-expat - Use bundled expat instead of dev-libs/expat
 dev-haskell/highlighting-kate:executable - Build the Highlight executable.
@@ -1676,14 +1668,11 @@ dev-haskell/nats:template-haskell - enable template_haskell
 dev-haskell/netlink:generators - build the generator scripts for constants
 dev-haskell/network-data:small-base - Build the split-up base package.
 dev-haskell/optparse-simple:build-example - Build the example executable
-dev-haskell/pandoc-citeproc:bibutils - use Chris Putnam's app-text/bibutils
+dev-haskell/pandoc-citeproc:bibutils - Use Chris Putnam's Bibutils.
+dev-haskell/pandoc-citeproc:debug - Turn on debug tracing.
 dev-haskell/pandoc-citeproc:embed-data-files - Embed locale files into the library (needed for windows packaging)
-dev-haskell/pandoc-citeproc:hexpat - use dev-haskell/hexpat instead of dev-haskell/xml for XML parsing
-dev-haskell/pandoc-citeproc:network - use dev-haskell/network and dev-haskell/http to retrieve CSL file from URIs
-dev-haskell/pandoc-citeproc:small-base - Choose the new smaller, split-up base package.
-dev-haskell/pandoc-citeproc:test-citeproc - Build the test-citeproc program
-dev-haskell/pandoc-citeproc:unicode-collation - Use Haskell bindings to the dev-libs/icu
-dev-haskell/pandoc-citeproc:unicode_collation - Use Haskell bindings to the dev-libs/icu
+dev-haskell/pandoc-citeproc:static - Use static linking.
+dev-haskell/pandoc-citeproc:unicode-collation - Use Haskell bindings to the International Components for Unicode (ICU) libraries
 dev-haskell/parsec-numbers:parsec1 - use dev-haskell/parsec1 instead of dev-haskell/parsec
 dev-haskell/parsers:attoparsec - Enable the use of the `attoparsec` package
 dev-haskell/parsers:parsec - Enable the use of the `parsec` package
@@ -1784,8 +1773,6 @@ dev-haskell/x509-store:executable - Build the executable
 dev-haskell/xss-sanitize:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/yaml:no-examples - don't build the examples
 dev-haskell/yaml:no-exe - don't install the yaml2json executable
-dev-haskell/yaml:no-unicode - Don't enable unicode output. Instead, unicode characters will be escaped.
-dev-haskell/yaml:system-libyaml - Use system libyaml instead on generic one
 dev-haskell/yesod-auth:network-uri - Get Network.URI from the network-uri package
 dev-haskell/yesod-form:network-uri - Get Network.URI from the network-uri package
 dev-haskell/zip-archive:executable - Build the Zip executable.
@@ -2982,6 +2969,7 @@ dev-util/gnome-builder:sysprof - Provide an integrated profiler via dev-util/sys
 dev-util/gnome-builder:vala - Provide an autoindenter, autocompletion, diagnostics, and symbol resolver for Vala
 dev-util/google-perftools:debug - Build a set of libraries with debug support (so-called debugalloc). These are available by default but are not needed unless you're actually developing using tcmalloc.
 dev-util/google-perftools:largepages - Use (experimental) larger pages for tcmalloc, this increases memory usage, but should speed up the allocation/free operations.
+dev-util/google-perftools:largepages64k - Use (experimental) 64K pages for tcmalloc, this increases memory usage, but should speed up the allocation/free operations.
 dev-util/google-perftools:minimal - Only build the tcmalloc_minimal library, ignoring the heap checker and the profilers.
 dev-util/google-perftools:optimisememory - To build libtcmalloc with smaller internal caches.
 dev-util/heaptrack:gui - Install Qt5-based analyzer tool
@@ -4134,7 +4122,6 @@ media-gfx/graphicsmagick:q16 - Set storage quantum size to 16 (~2*memory)
 media-gfx/graphicsmagick:q32 - Set storage quantum size to 32 (~5*memory)
 media-gfx/graphviz:X - Builds lefty front-end, builds plugin -Txlib, and enables support for x11 in various other modules (needs cairo)
 media-gfx/graphviz:devil - Enables DevIL output plugin -Tdevil
-media-gfx/graphviz:gdk-pixbuf - Enables gdk-pixbuf2 plugin
 media-gfx/graphviz:gtk - Enables gtk+ output plugin -Tgtk (needs cairo)
 media-gfx/graphviz:gts - Enables support for GNU Triangulated Surface Library (required for sfdp to work)
 media-gfx/graphviz:lasi - Enables PostScript output via media-libs/lasi, for plugin -Tlasi (needs cairo)
@@ -4542,7 +4529,6 @@ media-plugins/mythplugins:fftw - Adds visual effects to MythMusic when playing b
 media-plugins/mythplugins:hls - HTTP Live Streaming support
 media-plugins/mythplugins:mytharchive - Allows you to archive recorded content to CD or DVD
 media-plugins/mythplugins:mythbrowser - Adds a web browser within MythTV
-media-plugins/mythplugins:mythgallery - Adds a picture viewing gallery within MythTV
 media-plugins/mythplugins:mythgame - Adds a frontend to various ROM emulators within MythTV
 media-plugins/mythplugins:mythmusic - Adds the ability for MythTV to act as a music player
 media-plugins/mythplugins:mythnetvision - Adds the ability to view netvision devices within MythTV
@@ -7518,7 +7504,6 @@ sci-libs/rtabmap:openni2 - Adds support for Kinect-like 3D sensors devices with 
 sci-libs/scikits_image:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/scikits_image:pyamg - Enable support for algebraic solvers via dev-python/pyamg
 sci-libs/scipy:sparse - Adds support for sparse solving with sci-libs/umfpack
-sci-libs/scipy-python2:sparse - Adds support for sparse solving with sci-libs/umfpack
 sci-libs/scotch:int64 - Build the 64 bits integer library (needed for > 2^31 vertices)
 sci-libs/scotch:tools - Build and install extra exec tools
 sci-libs/shogun:R - Enable support for dev-lang/R
@@ -7962,7 +7947,6 @@ sys-apps/qingy:consolekit - Enable native consolekit support
 sys-apps/qingy:opensslcrypt - Encrypt communications between qingy and its GUI using dev-libs/openssl
 sys-apps/razercfg:gui - Installs GUI configuration utility and status bar applet. Requires dev-python/PyQt5
 sys-apps/razercfg:pm-utils - Installs the pm-utils hooks for suspend/resume and requires sys-power/pm-utils
-sys-apps/ripgrep:man - Build and install man pages.
 sys-apps/rng-tools:jitterentropy - Enable Jitter RNG entropy support
 sys-apps/rng-tools:nistbeacon - Enable NIST beacon entropy support
 sys-apps/rng-tools:pkcs11 - Enable PKCS11 entropy support
@@ -8494,12 +8478,6 @@ sys-kernel/ck-sources:experimental - Apply experimental patches; for more inform
 sys-kernel/dracut:debug - Module installing additional tools like strace, file editor, ssh and more
 sys-kernel/genkernel:cryptsetup - Enable support for Luks disk encryption using sys-fs/cryptsetup
 sys-kernel/genkernel:firmware - Prefer system firmware sys-kernel/linux-firmware over local copy.
-sys-kernel/genkernel-next:cryptsetup - Enable support for Luks disk enrcyption using sys-fs/cryptsetup
-sys-kernel/genkernel-next:dmraid - Enable support for DMRAID (include dmraid dependency)
-sys-kernel/genkernel-next:gpg - Enable support for GPG (include gnupg dependency)
-sys-kernel/genkernel-next:iscsi - Enable support for open-iscsi (include open-iscsi dependency)
-sys-kernel/genkernel-next:mdadm - Enable support for mdadm (include mdadm dependency)
-sys-kernel/genkernel-next:plymouth - Enable support for Plymouth (include Plymouth dependency)
 sys-kernel/gentoo-kernel:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-kernel-bin:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
