@@ -24,11 +24,13 @@ SLOT="4"
 KEYWORDS="~amd64 ~arm64"
 IUSE="doc test"
 
-DEPEND="test? ( >=dev-db/redis-3.2.0 )"
+DEPEND="test? ( =dev-db/redis-5* )"
 
 RUBY_S="${MY_P}"
 
 PATCHES=( "${FILESDIR}/${PN}-4.1.4-local-redis-server.patch" )
+
+ruby_add_bdepend "test? ( dev-ruby/mocha )"
 
 all_ruby_prepare() {
 	# call me impatient, but this way we don't need netcat

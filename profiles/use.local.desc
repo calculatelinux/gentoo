@@ -378,7 +378,6 @@ app-doc/tldp-howto:pdf - Install pdf docs
 app-doc/tldp-howto:text - Install plain-text docs
 app-editors/bluefish:gtk3 - Enable GTK3 interface (default)
 app-editors/bluefish:gucharmap - Enable gucharmap dictionary plugin
-app-editors/bluefish:python - Enable Python integration for zen-coding plugin
 app-editors/bluefish:spell - Enable spell checking capabilities via enchant library
 app-editors/emacs:athena - Enable the MIT Athena widget set (x11-libs/libXaw)
 app-editors/emacs:dynamic-loading - Enable loading of dynamic libraries at runtime
@@ -1559,6 +1558,7 @@ dev-haskell/certificate:executable - Build the executable
 dev-haskell/cgi:extensible-exceptions-in-base - Required to be enabled for >=dev-lang/ghc-7.
 dev-haskell/cgi:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/chell:color-output - use colors in program output
+dev-haskell/chimera:representable - Define Representable instance from adjunctions package
 dev-haskell/citeproc-hs:bibutils - use Chris Putnam's app-text/bibutils
 dev-haskell/citeproc-hs:embed-data-files - Embed locale files into the library (needed for windows packaging)
 dev-haskell/citeproc-hs:hexpat - use dev-haskell/hexpat instead of dev-haskell/xml for XML parsing
@@ -1578,11 +1578,11 @@ dev-haskell/contravariant:semigroups - You can disable the use of the `semigroup
 dev-haskell/contravariant:statevar - You can disable the use of the `StateVar` package using `-f-StateVar`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/contravariant:tagged - You can disable the use of the `tagged` package on older versons of GHC using `-f-tagged`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/cpu:executable - build 'cpuid' tool
+dev-haskell/criterion:embed-data-files - Embed the data files in the binary for a relocatable executable
 dev-haskell/crypto-api:all-cpolys - Build all the CMAC polynomes up to 10000 bits instead of just the usual ones
 dev-haskell/crypto-conduit:conduit11 - Use conduit >= 1.1.
 dev-haskell/cryptohash:cryptoapi - Defines crypto-api instances
 dev-haskell/cryptonite:integer-gmp - Whether or not to use GMP for some functions
-dev-haskell/dav:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/distributive:lib-werror - Compile with the ghc -Werror option
 dev-haskell/encoding:systemencoding - Provide the getSystemEncoding action to query the locale.
 dev-haskell/entropy:halvm - Build for the HaLVM.
@@ -1644,13 +1644,9 @@ dev-haskell/lens:benchmark-uniplate - Enable benchmarking against Neil Mitchell'
 dev-haskell/lens:dump-splices - Build and run the doctests test-suite.
 dev-haskell/lens:inlining - Generate inline pragmas when using template-haskell. This defaults to enabled, but you can to shut it off to benchmark the relative performance impact, or as last ditch effort to address compile errors resulting from the myriad versions of template-haskell that all purport to be 2.8.
 dev-haskell/lens:j - Attempt a parallel build with GHC 7.8.
-dev-haskell/lens:lib-werror - Turn on ghc-options: -Werror
 dev-haskell/lens:old-inline-pragmas - Some 7.6.1-rc1 users report their TH still uses old style inline pragmas. This lets them turn on inlining.
 dev-haskell/lens:safe - Disallow unsafeCoerce
 dev-haskell/lens:test-doctests - Build and run the doctests test-suite.
-dev-haskell/lens:test-hlint - You can disable the hlint test suite with -f-test-hlint
-dev-haskell/lens:test-hunit - You can disable the hunit test suite with -f-test-hunit
-dev-haskell/lens:test-properties - Build the properties test if we're building tests
 dev-haskell/lens:test-templates - Build the test templates if we're building tests
 dev-haskell/lens:trustworthy - Assert that we are trustworthy when we can
 dev-haskell/libyaml:no-unicode - Don't enable unicode output. Instead, unicode characters will be escaped.
@@ -1659,6 +1655,7 @@ dev-haskell/lifted-async:monad-control-1 - Use moand-control == 1.*
 dev-haskell/linear:template-haskell - You can disable the use of the `template-haskell` package using `-f-template-haskell`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/lukko:ofd-locking - Enable open file descriptor locking. Available on Linux (kernel 3.15, released Jun 8, 2014).
 dev-haskell/missingh:network-3 - Use network-3
+dev-haskell/mod:semirings - Derive semiring instances
 dev-haskell/monad-control:instancest - If enabled this package will export MonadBaseControl instances for the lazy and strict ST monad. If disabled these instances are only exported when base >= 4.4. If enabled it is required that the transformer-base package exports MonadBase instances for ST. It will do this by default.
 dev-haskell/monad-logger:template-haskell - Enable Template Haskell support.
 dev-haskell/monad-par:chaselev - Use Chase-Lev Deques for higher-perf work-stealing.
@@ -1690,12 +1687,19 @@ dev-haskell/pointed:unordered-containers - optional instances
 dev-haskell/publicsuffixlist:create - export Network.PublicSuffixList.Create module
 dev-haskell/publicsuffixlist:runtimelist - read suffix list from dist at startup instead of embedding list into library
 dev-haskell/quickcheck:template-haskell - Enable additional test modules requiring Template Haskell support.
+dev-haskell/quickcheck-classes:aeson - Enable the use of the `aeson` package. This may be useful for accelerating builds in sandboxes for expert users.
+dev-haskell/quickcheck-classes:binary-laws - Include infrastructure for testing class laws of binary type constructors. Disabling `unary-laws` while keeping `binary-laws` enabled is an unsupported configuration.
+dev-haskell/quickcheck-classes:semigroupoids - Enable the use of the `semigroupoids` package. This may be useful for accelerating builds in sandboxes for expert users.
+dev-haskell/quickcheck-classes:semirings - Enable the use of the `semirings` package. This may be useful for accelerating builds in sandboxes for expert users.
+dev-haskell/quickcheck-classes:unary-laws - Include infrastructure for testing class laws of unary type constructors.
+dev-haskell/quickcheck-classes:vector - Enable the use of the `vector` package. This may be useful for accelerating builds in sandboxes for expert users.
+dev-haskell/quickcheck-classes-base:binary-laws - Include infrastructure for testing class laws of binary type constructors. Disabling `unary-laws` while keeping `binary-laws` enabled is an unsupported configuration.
+dev-haskell/quickcheck-classes-base:unary-laws - Include infrastructure for testing class laws of unary type constructors.
 dev-haskell/recaptcha:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/reflection:template-haskell - Enable template haskell.
 dev-haskell/rfc5051:mkunicodedata - build codes generator itself
 dev-haskell/sandi:conduit - Build with conduit
 dev-haskell/sandi:with-conduit - Build with conduit
-dev-haskell/scientific:bytestring-builder - Provide the Data.ByteString.Builder.Scientific module (requires bytestring >= 0.10).
 dev-haskell/semigroupoid-extras:profunctors - You can disable the use of the `profunctors` package using `-f-profunctors`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/semigroupoids:comonad - You can disable the use of the `comonad` package using `-f-comonad`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Comonad`
 dev-haskell/semigroupoids:containers - You can disable the use of the `containers` package using `-f-containers`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
@@ -1711,6 +1715,9 @@ dev-haskell/semigroups:hashable - You can disable the use of the `hashable` pack
 dev-haskell/semigroups:text - You can disable the use of the `text` package using USE=-text. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/semigroups:transformers - provide instances for transformers package.
 dev-haskell/semigroups:unordered-containers - You can disable the use of the `unordered-containers` package using USE=-unordered-containers. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
+dev-haskell/semirings:containers - Enable the use of the `containers` package. Disabling this may be useful for accelerating builds in sandboxes for expert users.
+dev-haskell/semirings:hashable - Enisable the use of the `hashable` package. Disabling this may be useful for accelerating builds in sandboxes for expert users. Note: `-hashable` implies `-unordered-containers`, as we are necessarily not able to supply those instances as well.
+dev-haskell/semirings:unordered-containers - Enable the use of the `unordered-containers` package. Disabling this may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/sendfile:portable - Explicitly enable portable sendfile support (implemented in Haskell)
 dev-haskell/sha:exe - Build a sha1 and a sha384 executable similar to 'md5sum'.
 dev-haskell/shakespeare:test-coffee - Render tests through coffeescript render function.
@@ -1769,8 +1776,6 @@ dev-haskell/wcwidth:cli - Enable command line tool
 dev-haskell/wreq:aws - Enable AWS tests
 dev-haskell/wreq:httpbin - Install client
 dev-haskell/x11:screensaver - whether to build XScreenSaver.
-dev-haskell/x509-store:executable - Build the executable
-dev-haskell/xss-sanitize:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/yaml:no-examples - don't build the examples
 dev-haskell/yaml:no-exe - don't install the yaml2json executable
 dev-haskell/yesod-auth:network-uri - Get Network.URI from the network-uri package
@@ -2654,7 +2659,6 @@ dev-python/simplespectral:faster - Use sci-libs/scipy to speed up drawing
 dev-python/simplespectral:fastest - Use dev-python/pyFFTW to speed up drawing to the max
 dev-python/socketpool:eventlet - Install dev-python/eventlet as needed for the eventlet backend.
 dev-python/socketpool:gevent - Install dev-python/gevent as needed for the gevent backend.
-dev-python/sphinx:net - enable internet capabilities
 dev-python/sympy:imaging - Add support for dev-python/pillow
 dev-python/sympy:ipython - Add support for dev-python/ipython
 dev-python/sympy:mathml - Add support for mathml
@@ -2837,7 +2841,6 @@ dev-ruby/faraday_middleware:rashify - Include FaradayMiddleware::Rashify
 dev-ruby/maruku:highlight - Enable source code highlighting via dev-ruby/syntax
 dev-ruby/mysql2:mariadb - Use mariadb bindings
 dev-ruby/net-ssh:ed25519 - Use dev-ruby/ed25519 for Ed25519 support
-dev-ruby/net-ssh:sodium - Use dev-libs/libsodium via dev-ruby/rbnacl for Ed25519 support
 dev-ruby/rails:asset-pipeline - Also install the default components for the asset pipeline. These are not required but they are activated automatically in new Rails projects by default.
 dev-ruby/rrdtool-bindings:graph - Enable support for graphing functions
 dev-ruby/rspec-core:highlight - Enable source code highlighting via dev-ruby/coderay
@@ -3046,7 +3049,6 @@ dev-vcs/cvs2svn:bazaar - Support for dev-vcs/bzr
 dev-vcs/cvsync:gcrypt - Use dev-libs/libgcrypt for hash functions.
 dev-vcs/cvsync:mhash - Use app-crypt/mhash for hash functions.
 dev-vcs/cvsync:openssl - Use dev-libs/openssl for hash functions.
-dev-vcs/darcs:network-uri - Get Network.URI from the network-uri package.
 dev-vcs/darcs:terminfo - Use the terminfo package for enhanced console support.
 dev-vcs/darcs:threaded - Use threading and SMP support.
 dev-vcs/fossil:fusefs - Enable the Fuse Filesystem
@@ -3188,6 +3190,7 @@ games-emulation/dolphin:lto - Add support for link-time optimizations.
 games-emulation/dosbox:core-inline - Enable memory-increasing inlines for better performance but requiring more build time
 games-emulation/dosbox:glide - Enable unofficial Glide emulation via media-libs/openglide
 games-emulation/dosbox-staging:dynrec - Use recompiling cpu core instead of dynamic x86/x64 specific cpu core
+games-emulation/dosbox-staging:network - Enable networking features (modem, ipx)
 games-emulation/dosbox-staging:opus - Support compressed audio tracks (.opus) used with CDROM images
 games-emulation/fceux:logo - Enable the ability to add a logo screen when creating AVIs
 games-emulation/generator:sdlaudio - Enable SDL Audio
@@ -3321,6 +3324,8 @@ games-mud/tf:atcp - enable ATCP support.
 games-mud/tf:gmcp - enable GMCP support.
 games-mud/tf:option102 - enable telnet option 102 support.
 games-puzzle/cuyo:music - Enable playing of background music
+games-puzzle/gnome-tetravex:cli - Build the gnome-tetravex-cli command-line interface
+games-puzzle/gnome-tetravex:gui - Build the gnome-tetravex graphical Gtk user interface
 games-puzzle/nightsky:bundled-libs - Use the upstream provided bundled libraries.
 games-puzzle/numptyphysics:user-levels - Install some fun user-created levels
 games-puzzle/pingus:music - Enable playing of background music
@@ -4032,7 +4037,6 @@ media-gfx/alembic:examples - Install alembic examples
 media-gfx/alembic:hdf5 - Add support sci-libs/hdf5
 media-gfx/alembic:maya - Compile Alembic plugin for Maya (experimental)
 media-gfx/alembic:prman - Compile Alembic plugin for Renderman (experimental)
-media-gfx/alembic:python - Build pyalembic python bindings (needs dev-python/pyilmbase)
 media-gfx/alembic:test - Build and run the test-suite
 media-gfx/alembic:zlib - Use sys-libs/zlib for compressions
 media-gfx/apngasm:7z - Enable support for 7zip compression
@@ -4109,7 +4113,6 @@ media-gfx/geeqie:gpu-accel - Enable GPU acceleration support - experimental
 media-gfx/geeqie:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 media-gfx/geeqie:map - Enable items map display - experimental
 media-gfx/gimp:heif - Enable support for ISO/IEC 23008-12:2017 HEIF files
-media-gfx/gimp:smp - Enable support for multiprocessors
 media-gfx/gimp:vector-icons - Enable support for vector icons (experimental)
 media-gfx/gmic:cli - Build CLI interface
 media-gfx/gmic:krita - Build media-gfx/krita plugin
@@ -4758,6 +4761,8 @@ media-sound/ncmpcpp:outputs - Enable outputs screen
 media-sound/ncmpcpp:visualizer - Enable visualizer screen with sound wave/frequency spectrum modes
 media-sound/patchage:jack-dbus - Use Jack via D-Bus instead of libjack
 media-sound/patchage:session - Include experimental Jack session management (save/restore) support
+media-sound/picard:discid - Enable reading the ID of the inserted CD
+media-sound/picard:fingerprints - Enable calculation and lookup of AcoustID fingerprints
 media-sound/pithos:keybinder - Use keybinder to enable global key bindings
 media-sound/pms:regex - Enable regular expression searches
 media-sound/pragha:glyr - Enable music metadata searchengine support using media-libs/glyr
@@ -5711,7 +5716,6 @@ net-fs/netatalk:quota - Add support for user quota on various filesystems
 net-fs/netatalk:shadow - Add shadow support
 net-fs/netatalk:ssl - Use dev-libs/openssl to provide DHX User Access Modules. These are not used with most recent versions of OS X and can be kept disabled without risks.
 net-fs/netatalk:tracker - Add support for spotlight like tracker
-net-fs/netatalk:utils - Install afpstats script
 net-fs/nfs-utils:junction - Enable NFS junction support in nfsref
 net-fs/nfs-utils:ldap - Add ldap support
 net-fs/nfs-utils:libmount - Link mount.nfs with libmount
@@ -5815,11 +5819,9 @@ net-im/ejabberd:full-xml - Use XML features in XMPP stream (ex: CDATA), requires
 net-im/ejabberd:hipe - Compile natively with HiPE, not recommended
 net-im/ejabberd:mssql - Enable Microsoft SQL Server support (via ODBC) for data storage
 net-im/ejabberd:mysql - Enable MySQL support for data storage
-net-im/ejabberd:nls - Enable character set conversion for mod_irc
 net-im/ejabberd:odbc - Enable ODBC support to access data storage
 net-im/ejabberd:postgres - Enable PostgreSQL support for data storage
 net-im/ejabberd:redis - Enable Redis support for transient data
-net-im/ejabberd:riak - Enable support for Riak - distributed NoSQL key-value data store
 net-im/ejabberd:roster-gw - Turn on workaround for processing gateway subscriptions
 net-im/ejabberd:sip - Enable SIP support
 net-im/ejabberd:sqlite - Enable SQLite database support
@@ -7391,6 +7393,8 @@ sci-libs/dmlc-core:s3 - Support for the Amazon Simple Storage Service
 sci-libs/eccodes:defs - Install full set of definition files.
 sci-libs/eccodes:extra-test - Install full set of test data (large).
 sci-libs/eccodes:memfs - Enable memory based access to definition/sample files (conflicts with tests).
+sci-libs/fcl:octomap - OctoMap library support
+sci-libs/fcl:profiling - Enable profiling
 sci-libs/fftw:float - Link default library to single precision instead of double (symlinks only and fftw-2.1)
 sci-libs/fftw:quad - Build quadruple precision lib
 sci-libs/fftw:zbus - Adds support for ZBus cycle-counter of mips
@@ -8217,6 +8221,7 @@ sys-cluster/neutron:linuxbridge - Installs the initscripts for the neutron linux
 sys-cluster/neutron:metadata - Installs the initscripts for the neutron metadata agent service
 sys-cluster/neutron:openvswitch - Installs the initscripts for the neutron openvswitch agent service
 sys-cluster/neutron:server - Installs the initscripts for the neutron server service
+sys-cluster/nomad:nvidia - build with nvidia integration
 sys-cluster/nova:compute - Installs the initscripts for the nova volume service
 sys-cluster/nova:compute-only - only install stuff needed for a compute host
 sys-cluster/nova:iscsi - Installs iscsi helper udev scripts
@@ -8567,7 +8572,6 @@ sys-libs/uclibc-ng:symlink-compat - Explicitly add sym links for libdl.so.0, lib
 sys-libs/zlib:minizip - include the minizip library for quick and dirty zip extraction
 sys-power/apcupsd:modbus - Enable MODBUS support over USB
 sys-power/intel-undervolt:elogind - Use elogind hook to apply voltage after system sleep
-sys-power/nut:gui - Install NUT-Monitor python gui
 sys-power/nut:ipmi - Support IPMI-based UPSes.
 sys-power/nut:ups_drivers_al175 - Driver for Eltek UPS models with AL175 alarm module
 sys-power/nut:ups_drivers_apcsmart - Driver for American Power Conversion Smart Protocol UPS equipment
@@ -8691,12 +8695,13 @@ www-apps/icingaweb2:nginx - Adds support for nginx
 www-apps/ikiwiki:extras - Installs additional modules used by ikiwiki plugins
 www-apps/kibana-bin:x-pack - Enable additional features (may need a license)
 www-apps/klaus:ctags - Enable support for Exuberant ctags; makes all source code symbols hyperlinks to their definitions
-www-apps/nikola:assets - Support web asset management through dev-python/assets
+www-apps/nikola:assets - Support web asset management
 www-apps/nikola:charts - Support chart generation through dev-python/pygal
-www-apps/nikola:ghpages - Add support for direct uploading to github pages thru dev-vcs/ghp-import
+www-apps/nikola:ghpages - Add support for direct uploading to github pages
 www-apps/nikola:hyphenation - Add hyphenation support through dev-python/pyphen
 www-apps/nikola:ipython - Add IPython notebook compilation and LESS support
 www-apps/nikola:jinja - Add support for dev-python/jinja as alternative templating engine to Mako
+www-apps/nikola:server - Enable support for built-in web server using dev-python/aiohttp
 www-apps/nikola:watchdog - Use dev-python/watchdog to monitor file system events
 www-apps/nikola:webmedia - Use dev-python/micawber to extract metadata from web media links
 www-apps/nikola:websocket - Add websocket support thru dev-python/ws4py

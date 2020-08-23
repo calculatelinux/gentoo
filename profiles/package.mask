@@ -32,6 +32,167 @@
 
 #--- END OF EXAMPLES ---
 
+# Alfredo Tupone <tupone@gentoo.org> (2020-08-23)
+# Ported to py3 but not yet released
+# Masked to allow py2.7 removal
+dev-lang/spark
+
+# Jack Todaro <solpeth@posteo.org> (2020-08-23)
+# Its only reverse dependency is app-emacs/ghc-mod,
+# which is masked and dead upstream.
+dev-haskell/cabal-helper
+
+# Jack Todaro <solpeth@posteo.org> (2020-08-23)
+# Unmaintained package, does not build with modern
+# versions of GHC.
+app-emacs/ghc-mod
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-22)
+# Obsolete package without reverse dependencies.
+# Use dev-haskell/mustache instead.
+# Does not compile against ghc-8.8. Removal in 30 days.
+# Bug #735996.
+dev-haskell/hastache
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-22)
+# Obsolete package without reverse dependencies.
+# Does not compile against ghc-8.8. Removal in 30 days.
+# Bug #735782.
+dev-haskell/asn1-data
+dev-haskell/certificate
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-22)
+# Obsolete package without reverse dependencies.
+# Does not compile against ghc-8.8. Removal in 30 days.
+dev-lang/epic
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-22)
+# Obsolete package without reverse dependencies.
+# Does not compile against ghc-8.8. Removal in 30 days.
+# Bug #735868.
+dev-haskell/cmdlib
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-22)
+# Dead since 2011.  Frowned upon for years now.  Python 2 only.
+# Finally all reverse dependencies are masked.
+# Tracker bug #706462.  Removal in 30 days.
+dev-python/pygtk
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2020-08-22)
+# SLV2 has been replaced by Lilv. The latest and final version
+# of SLV2 is 0.6.6, released on May 26, 2009.
+# Removal in 30 days.  Bug #735380.
+media-libs/slv2
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-22)
+# These packages still require Python 3.6.  They are either dead
+# upstream or their maintainers are simply unresponsive.
+# Please do not remove any packages from this list unless you actually
+# port them to Python 3.7 *and* 3.8 (3.9 would also be nice).
+# Removal in 30 days.  Tracker bug #695996.
+app-portage/pqlop
+app-text/landslide
+dev-python/corner
+dev-python/dogpile-core
+dev-python/girder-client
+dev-python/ipynb
+dev-python/jira
+dev-python/jplephem
+dev-python/natgrid
+dev-python/pcapy
+dev-python/promises
+dev-python/pydotplus
+dev-python/pyds9
+dev-python/pyflann
+dev-python/pygsl
+dev-python/pyqt-distutils
+dev-python/python-ntpdshm
+dev-python/sphinxcontrib-napoleon
+dev-python/textfsm
+dev-python/whelk
+dev-util/molecule
+dev-util/molecule-core
+dev-util/molecule-plugins
+dev-vcs/git-spindle
+media-gfx/birdfont
+media-gfx/sigal
+media-libs/libxmlbird
+net-analyzer/nagstamon
+net-fs/s3ql
+net-misc/dmr_utils
+net-misc/s3cmd
+sci-chemistry/ParmEd
+sci-chemistry/freeon
+sci-chemistry/openbabel-python
+sci-libs/minfx
+sci-mathematics/pymc3
+sci-physics/qutip
+sci-visualization/fityk
+sci-visualization/yt
+sys-apps/elivepatch-client
+sys-apps/elivepatch-server
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-22)
+# Python 2 only.  You can use app-office/libreoffice{,-bin} instead.
+# Removal in 30 days.  Bug #715400.
+app-office/openoffice-bin
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-22)
+# Python 2 only.  No reverse dependencies left.
+# Removal in 30 days.  Bug #735604.
+dev-python/faulthandler
+dev-python/fdsend
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-22)
+# These packages (or package versions) still require Python 2.7.
+# They are either dead upstream, their Python 3 porting efforts are
+# not progressing or their maintainers are simply unresponsive.
+# Please do not remove any packages from this list unless you actually
+# port it to Python 3.
+# Removal in 30 days.  Tracker bug #694800.
+app-emulation/ganeti
+app-emulation/ganeti-instance-debootstrap
+app-emulation/ganeti-instance-image
+app-emulation/virtualbox-bin
+app-forensics/openscap
+app-misc/email2trac
+app-misc/workrave
+app-portage/etc-proposals
+app-portage/gpytage
+dev-db/mysql-workbench
+dev-lang/ispc
+dev-util/bam
+media-gfx/displaycal
+media-plugins/gimp-resynthesizer
+net-analyzer/linkchecker
+net-analyzer/pbgpp
+net-libs/openpgm
+<net-mail/mailman-3
+net-wireless/chirp
+net-wireless/rfcat
+sci-geosciences/gdal-grass
+sci-geosciences/grass
+www-apps/trac
+
+# Michał Górny <mgorny@gentoo.org> (2020-08-22)
+# Effectively unmaintained.  Optionally uses Python 2.  I could remove
+# that but it fails to build anyway.
+# Removal in 30 days.  Bug #646748.
+games-action/openclonk
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-21)
+# Obsolete package without reverse dependencies.
+# Use dev-haskell/regex-tdfa.
+# Does not compile against ghc-8.8. Removal in 30 days.
+# Bug #736244.
+dev-haskell/regex-tdfa-rc
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-21)
+# Obsolete package without reverse dependencies.
+# Does not compile against ghc-8.8. Removal in 30 days.
+# Bug #736248.
+dev-haskell/testpack
+
 # Michał Górny <mgorny@gentoo.org> (2020-08-18)
 # Backports of hash algorithms that are built-in since Python 3.6.
 # No reverse dependencies left.
@@ -693,26 +854,11 @@ net-analyzer/pmacct
 net-libs/nDPI
 
 # Jaco Kroon <jaco@uls.co.za> (2020-07-20)
-# net-misc/asterisk was only consumer, dependency now removed (due to failures
-# in osptoolkit build). No known users of USE=osplookup in net-misc/asterisk,
-# and unknown usefulness. bugs #674346, #731250
-# Removal in 30 days.
-net-libs/osptoolkit
-
-# Jaco Kroon <jaco@uls.co.za> (2020-07-20)
 # Asterisk 11 is EOL. All users should migrate to asterisk 13.
 # Removal unspecified, will remain for the foreseeable future. If you need
 # help migrating, contact jkroon in #gentoo-voip on freenode.
 =net-misc/asterisk-11*
 =net-misc/asterisk-g729-11*
-
-# Hans de Graaff <graaff@gentoo.org> (2020-07-20)
-# Mask old obsolete slots for removal in 30 days.
-# Use a newer slot of the same package instead.
-dev-ruby/i18n:0.9
-dev-ruby/net-ssh:4
-dev-ruby/nokogumbo:0
-dev-ruby/zeitwerk:1
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2020-07-15)
 # In preparation; do not use yet.
