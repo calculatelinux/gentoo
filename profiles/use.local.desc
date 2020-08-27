@@ -1488,21 +1488,21 @@ dev-games/ode:gyroscopic - enable gyroscopic term (may cause instability)
 dev-games/ogre:boost - Enable boost support
 dev-games/ogre:cache - Enable GL state cache support
 dev-games/ogre:cg - NVIDIA toolkit plugin
+dev-games/ogre:deprecated - Build deprecated component 'HLMS' and nodeless positioning of Lights and Cameras.
 dev-games/ogre:double-precision - More precise calculations at the expense of speed
 dev-games/ogre:egl - Use egl instead of glx
-dev-games/ogre:experimental - Build experimental BETA component 'HLMS'
+dev-games/ogre:fine-granularity - Enable fine light mask granularity. This impacts on performance and should not be enabled unless an application really needs it.
 dev-games/ogre:freeimage - Support images via media-libs/freeimage
 dev-games/ogre:gl3plus - Build OpenGL 3+ RenderSystem (EXPERIMENTAL)
 dev-games/ogre:gles2 - Build OpenGL ES 2.x RenderSystem
 dev-games/ogre:gles3 - Enable OpenGL ES 3.x Features
 dev-games/ogre:json - Use dev-libs/rapidjson (needed by Hlms JSON materials)
 dev-games/ogre:legacy-animations - Use the skeletal animation from 1.x. It's much slower, but the new system is still experimental.
-dev-games/ogre:mobile - Build for OpenGL ES 2.0 only and use the mobile variants of the PBS and unlit material systems.
 dev-games/ogre:ois - Pull in Object-oriented Input System library dev-games/ois for samples
 dev-games/ogre:poco - When USE=threads, use poco for threading
 dev-games/ogre:resman-pedantic - Resource Manager PEDANTIC : require an explicit resource group. Case sensitive lookup. Some demos might not work with this setting. (default: case-insensitive + sensitive lookup in all groups)
 dev-games/ogre:tbb - When USE=threads, use tbb for threading
-dev-games/ogre:tools - Build and install helper tools
+dev-games/ogre:tools - Build and install MeshUpgrader, VRMLConverter and XMLConverter
 dev-games/openscenegraph:asio - Enable support for dev-cpp/asio library
 dev-games/openscenegraph:dicom - Enable DICOM medical image file support via sci-libs/dcmtk
 dev-games/openscenegraph:egl - Enable EGL support
@@ -1775,7 +1775,6 @@ dev-haskell/warp:warp-debug - Add additional debuging information
 dev-haskell/wcwidth:cli - Enable command line tool
 dev-haskell/wreq:aws - Enable AWS tests
 dev-haskell/wreq:httpbin - Install client
-dev-haskell/x11:screensaver - whether to build XScreenSaver.
 dev-haskell/yaml:no-examples - don't build the examples
 dev-haskell/yaml:no-exe - don't install the yaml2json executable
 dev-haskell/yesod-auth:network-uri - Get Network.URI from the network-uri package
@@ -2353,7 +2352,6 @@ dev-libs/poco:util - Several utility classes (like logger, timer, config file pa
 dev-libs/poco:zip - Add support for the zip & gz archive formats
 dev-libs/ppl:cdd - Build the ppl_lcdd program for vertex/facet enumeration accepting the same input format as the programs shipped with sci-libs/cddlib and sci-libs/lrslib
 dev-libs/ppl:lpsol - Build the ppl_lpsol linear program solver that uses sci-mathematics/glpk for its input routines
-dev-libs/rocr-runtime:non-free - Enables HSA image support using dev-libs/hsa-ext-rocr
 dev-libs/serdisplib:tools - Build optional tools.
 dev-libs/softhsm:gost - Enable gost algorithm
 dev-libs/softhsm:migration-tool - Build db migration tool
@@ -3254,6 +3252,7 @@ games-engines/scummvm:unsupported - enable unsupported and/or broken game engine
 games-engines/solarus:doc - Install doxygen developer documentation.
 games-engines/stratagus:fluidsynth - compile with support for fluidsynth
 games-fps/alienarena:vidmode - Link against x11-libs/libXxf86vm. Required for full-screen support.
+games-fps/chocolate-doom:midi - basic support for MIDI files
 games-fps/darkplaces:cdsound - Enables using CD audio in the engine
 games-fps/darkplaces:demo - Uses the demo data from quake1 (quake1-demodata)
 games-fps/darkplaces:lights - Install and setup the updated light maps
@@ -5811,6 +5810,8 @@ net-ftp/pure-ftpd:paranoidmsg - Display paranoid messages instead of normal ones
 net-ftp/pure-ftpd:resolveids - Resolve UIDs/GIDs
 net-ftp/pure-ftpd:sysquota - Enables system quota support (needs sys-fs/quota)
 net-ftp/pure-ftpd:vchroot - Enable support for virtual chroot (possible security risk)
+net-ftp/tftp-hpa:client - Compile and install the tftp client
+net-ftp/tftp-hpa:server - Compile and install the tftp server
 net-ftp/yafc:ssh - Build with SFTP support
 net-im/bitlbee:libevent - Use libevent for event handling
 net-im/bitlbee:msn - Enable MSN Messenger IM protocol support.
@@ -8488,6 +8489,7 @@ sys-fs/udisks:systemd - Support sys-apps/systemd's logind
 sys-fs/udisks:vdo - Enable Virtual Data Optimizer support.
 sys-fs/udisks:zram - Enable ZRAM support (requires sys-apps/systemd).
 sys-fs/zfs:kernel-builtin - Disable dependency on sys-fs/zfs-kmod under the assumption that ZFS is part of the kernel source tree
+sys-fs/zfs:minimal - Don't install python scripts (arcstat, dbufstat etc) and avoid dependency on dev-lang/python
 sys-fs/zfs:pam - Install zfs_key pam module, for automatically loading zfs encryption keys for home datasets
 sys-fs/zfs:rootfs - Enable dependencies required for booting off a pool containing a rootfs
 sys-fs/zfs:test-suite - Install regression test suite
@@ -8742,7 +8744,6 @@ www-apps/webdavcgi:rcs - Adds support for a revision controlled backend with RCS
 www-apps/websvn:enscript - Add enscript support to colorize code stored in the repository
 www-apps/wordpress:akismet - Installs Akismet comment spam plug-in
 www-apps/wordpress:themes - Installs themes (including default theme)
-www-client/chromium:closure-compile - Enable closure type-checking for Chrome's web technology-based UI. Requires Java.
 www-client/chromium:component-build - Split build into more shared libraries to speed up linking. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
 www-client/chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/chromium:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general use.
@@ -9042,7 +9043,6 @@ x11-misc/xkbset:tk - Install the dev-perl/Tk based xkbset-gui utility
 x11-misc/xlockmore:vtlock - Enables support for virtual terminal locking
 x11-misc/xlockmore:xlockrc - Enables xlockrc for people without PAM
 x11-misc/xmobar:alsa - Use alsa-mixer to get the volume from soundcards
-x11-misc/xmobar:conduit - Use conduit to fetch weather data.
 x11-misc/xmobar:dbus - Publish a service on the session bus for controlling xmobar
 x11-misc/xmobar:inotify - inotify support (modern Linux only). Required for the Mail and MBox plugins
 x11-misc/xmobar:iwlib - Wireless info support via Wext ioctls (deprecated)

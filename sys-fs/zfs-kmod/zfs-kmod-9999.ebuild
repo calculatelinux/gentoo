@@ -71,12 +71,9 @@ pkg_setup() {
 		kernel_is -le "${kv_major_max}" "${kv_minor_max}" || die \
 			"Linux ${kv_major_max}.${kv_minor_max} is the latest supported version"
 
-		# 0.8.x requires at least 2.6.32
-		kernel_is ge 2 6 32 || die "Linux 2.6.32 or newer required"
-	else
-		# git master requires at least 3.10
-		kernel_is -ge 3 10 || die "Linux 3.10 or newer required"
 	fi
+
+	kernel_is -ge 3 10 || die "Linux 3.10 or newer required"
 
 	linux-mod_pkg_setup
 }
@@ -100,6 +97,8 @@ src_configure() {
 	filter-ldflags -Wl,*
 
 	local myconf=(
+		CROSS_COMPILE="${CHOST}-"
+		HOSTCC="$(tc-getBUILD_CC)"
 		--bindir="${EPREFIX}/bin"
 		--sbindir="${EPREFIX}/sbin"
 		--with-config=kernel
@@ -114,7 +113,11 @@ src_configure() {
 src_compile() {
 	set_arch_to_kernel
 
-	myemakeargs=( V=1 )
+	myemakeargs=(
+		CROSS_COMPILE="${CHOST}-"
+		HOSTCC="$(tc-getBUILD_CC)"
+		V=1
+	)
 
 	emake "${myemakeargs[@]}"
 }
