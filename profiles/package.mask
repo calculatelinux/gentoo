@@ -32,6 +32,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-27)
+# Abandoned upstream.
+# Does not compile against ghc-8.8. Removal in 30 days.
+dev-haskell/bio
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-27)
+# Abandoned upstream.
+# Does not compile against ghc-8.8. Removal in 30 days.
+# Bug #735844.
+dev-haskell/chell-quickcheck
+
 # Piotr Karbowski <slashbeast@gentoo.org> (2020-08-28)
 # Temporary mask due to multiple reports of segfaults at startup, bug #739056 
 =x11-base/xorg-server-1.20.9
@@ -191,7 +202,7 @@ dev-lang/ispc
 dev-util/bam
 media-gfx/displaycal
 media-plugins/gimp-resynthesizer
-net-analyzer/linkchecker
+<net-analyzer/linkchecker-10.0.0_pre
 net-analyzer/pbgpp
 net-libs/openpgm
 <net-mail/mailman-3
@@ -747,36 +758,6 @@ dev-tex/slatex
 # TexLive has its own CJK support.
 # Removal in 30 days.
 dev-tex/hlatex
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-07-29)
-# Py2-only, unmaintained, last release in 2008, dead upstream.
-# Removal in 30 days.
-app-cdr/cdcover
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-07-29)
-# Py2-only, unmaintained, last release in 2009, dead upstream.
-# Removal in 30 days.
-app-arch/cfv
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-07-29)
-# Py2-only, unmaintained, last release in 2012, dead upstream.
-# Ancient unresolved bugs #453918, #505076. Removal in 30 days.
-app-admin/conkyforecast
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-07-29)
-# Py2-only, last release in 2006, no one else is packaging this.
-# Removal in 30 days.
-media-sound/edna
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-07-29)
-# Py2-only, last release in 2004, no one else is packaging this.
-# Removal in 30 days.
-media-sound/positron
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-07-29)
-# Py2-only, last release in 2011, we have shortage of music players.
-# Removal in 30 days.
-media-sound/moosic
 
 # Andrey Utkin <andrey_utkin@gentoo.org> (2020-07-28)
 # Not used by other packages anymore.
