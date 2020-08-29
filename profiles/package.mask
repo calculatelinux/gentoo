@@ -32,6 +32,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-29)
+# Abandoned upstream. Use dev-haskell/cryptonite instead.
+# Does not compile against ghc-8.8. Removal in 30 days.
+dev-haskell/cipher-blowfish
+dev-haskell/cryptocipher
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-28)
+# EAPI=4 and fails to compile
+# Dead upstream. Removal in 30 days
+net-mail/maildirtree
+
 # Sergei Trofimovich <slyfox@gentoo.org> (2020-08-27)
 # Abandoned upstream.
 # Does not compile against ghc-8.8. Removal in 30 days.
@@ -725,12 +736,6 @@ media-sound/jack
 # Removal in 30 days.  Bug #735010.
 dev-python/distributed
 
-# Mikle Kolyada <zlogene@gentoo.org> (2020-07-31)
-# Broken package with dead upstream.
-# Libraries like tikz/pgf can be used as a replacement.
-# Removal in 30 days.
-dev-tex/herm-pic
-
 # Michał Górny <mgorny@gentoo.org> (2020-07-28)
 # Masked for the time being due to dep on LLVM 8.  Bug #720236.
 <=dev-ada/gps-2019-r1
@@ -740,24 +745,6 @@ dev-tex/herm-pic
 # Recommended replacement - sys-fs/rar2fs
 # Masked for removal in 30 days.
 sys-fs/rarfs
-
-# Mikle Kolyada <zlogene@gentoo.org> (2020-07-30)
-# Has been a part of dev-texlive/texlive-publishers
-# for a long time. Only Gentoo ships this one.
-# Removal in 30 days.
-dev-tex/aastex
-
-# Mikle Kolyada <zlogene@gentoo.org> (2020-07-30)
-# Obsolete package. Last release in 2009 and
-# upstream is dead. Use minted instead.
-# Removal in 30 days.
-dev-tex/slatex
-
-# Mikle Kolyada <zlogene@gentoo.org> (2020-07-30)
-# Obsolete package. Last release in 2005.
-# TexLive has its own CJK support.
-# Removal in 30 days.
-dev-tex/hlatex
 
 # Andrey Utkin <andrey_utkin@gentoo.org> (2020-07-28)
 # Not used by other packages anymore.
