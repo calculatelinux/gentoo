@@ -32,6 +32,63 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2020-08-30)
+# Serious security bug, unmaintained.
+# Stuck on long-obsolete EAPI 4.
+# Several open bugs.
+# bug 720732, bug 729714, bug 722644,
+# bug 724184.
+dev-db/sqliteodbc
+
+# Sam James <sam@gentoo.org> (2020-08-30)
+# Serious security vulns, outdated.
+# bug 699834. Removal in 30 days.
+www-apps/ampache
+
+# Sam James <sam@gentoo.org> (2020-08-30)
+# Collection of quite dead net-irc/* pkgs
+# Please speak up if you use any of these
+# and a modern alternative doesn't work for you.
+# None of these have alive upstreams, and we're
+# the only distro packaging them in many cases.
+# Unmaintained. Removal in 30 days.
+# bug 724940, bug 708408, bug 716264, bug 633346
+# bug 706898, bug 731188
+net-irc/ptlink-ircd
+net-irc/ptlink-opm
+net-irc/irc-server
+net-irc/xaric
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-29)
+# EAPI=4, use dev-embedded/libftd[tools] instead
+# Removal in 30 days
+dev-embedded/ftdi_eeprom
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-29)
+# EAPI=4, latest release 4.3.19 in 2019.
+# Unmaintained. Removal in 30 days.
+app-cdr/pburn
+
+# Aaron Bauman <bman@gentoo.org> (2020-08-29)
+# EAPI=4, simple script, relies on hardcoded
+# /usr/dict/words for generation. Removal in 30 days.
+app-admin/passook
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-29)
+# Abandoned upstream.
+# Does not compile against ghc-8.8. Removal in 30 days.
+dev-haskell/process-conduit
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-29)
+# Abandoned upstream.
+# Does not compile against ghc-8.8. Removal in 30 days.
+dev-haskell/citeproc-hs
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2020-08-29)
+# Upstream has version 1.1.2, but only for Windows,
+# sources are gone. Removal in 30 days.
+media-sound/traverso
+
 # Sergei Trofimovich <slyfox@gentoo.org> (2020-08-29)
 # Abandoned upstream. Use dev-haskell/cryptonite instead.
 # Does not compile against ghc-8.8. Removal in 30 days.
@@ -877,13 +934,7 @@ net-libs/nDPI
 #
 # https://www.gentoo.org/support/news-items/2020-04-03-kubernetes-moving-to-single-package.html
 #
-# dev-lang/go-1.12.17 has been added to this mask because it will be
-# removed at the same time since it has been out of support upstream for
-# months and was kept only to allow these kubernetes split packages to
-# build.
-#
 # Removal in 60 days. Bug #731804
-=dev-lang/go-1.12*
 sys-cluster/kubeadm
 sys-cluster/kube-apiserver
 sys-cluster/kube-controller-manager

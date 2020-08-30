@@ -5,7 +5,7 @@ EAPI=7
 
 inherit meson
 
-KEYWORDS="amd64 arm64 ~ppc ~ppc64"
+KEYWORDS="amd64 arm64 ~ppc ~ppc64 x86"
 MY_P="${PN}-v${PV}"
 SRC_URI="https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v${PV}/${MY_P}.tar.gz -> ${P}.tar.gz"
 DESCRIPTION="A general purpose TCP-IP emulator used by virtual machine hypervisors to provide virtual networking services."
@@ -13,6 +13,7 @@ HOMEPAGE="https://gitlab.freedesktop.org/slirp/libslirp"
 
 LICENSE="BSD"
 SLOT="0"
+IUSE="static-libs"
 
 RDEPEND="dev-libs/glib:="
 
@@ -24,4 +25,11 @@ src_prepare() {
 	default
 	echo "${PV}" > .tarball-version || die
 	echo -e "#!${BASH}\necho -n \$(cat '${S}/.tarball-version')" > build-aux/git-version-gen || die
+}
+
+src_configure() {
+	local emesonargs=(
+		-Ddefault_library=$(usex static-libs both shared)
+	)
+	meson_src_configure
 }

@@ -23,7 +23,7 @@ if [[ ${PV} = *9999* ]]; then
 	SRC_URI=""
 else
 	SRC_URI="https://download.qemu.org/${P}.tar.xz"
-	KEYWORDS="amd64 arm64 ~ppc ~ppc64 ~x86"
+	KEYWORDS="amd64 arm64 ~ppc ~ppc64 x86"
 fi
 
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
@@ -148,7 +148,7 @@ SOFTMMU_TOOLS_DEPEND="
 	)
 	sdl-image? ( media-libs/sdl2-image[static-libs(+)] )
 	seccomp? ( >=sys-libs/libseccomp-2.1.0[static-libs(+)] )
-	slirp? ( net-libs/libslirp )
+	slirp? ( net-libs/libslirp[static-libs(+)] )
 	smartcard? ( >=app-emulation/libcacard-2.5.0[static-libs(+)] )
 	snappy? ( app-arch/snappy:= )
 	spice? (
