@@ -13,7 +13,7 @@ SRC_URI="https://github.com/google/google-api-python-client/archive/v${PV}.tar.g
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 x86"
 IUSE="test"
 RESTRICT="!test? ( test )"
 
@@ -34,6 +34,7 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-python/google-auth-httplib2[${PYTHON_USEDEP}]
 		dev-python/oauth2client[${PYTHON_USEDEP}]
+		dev-python/rsa[${PYTHON_USEDEP}]
 		dev-python/unittest2[${PYTHON_USEDEP}]
 	)"
 

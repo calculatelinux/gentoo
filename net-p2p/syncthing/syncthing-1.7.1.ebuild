@@ -493,7 +493,7 @@ SRC_URI="https://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 
 LICENSE="Apache-2.0 BSD BSD-2 ISC MIT MPL-2.0 Unlicense"
 SLOT="0"
-KEYWORDS="~amd64 arm arm64 ~ppc64 ~x86"
+KEYWORDS="~amd64 arm arm64 ~ppc64 x86"
 IUSE="selinux tools"
 
 RDEPEND="acct-group/syncthing
@@ -503,7 +503,7 @@ RDEPEND="acct-group/syncthing
 		acct-user/stdiscosrv
 		acct-user/strelaysrv )
 	selinux? ( sec-policy/selinux-syncthing )"
-BDEPEND="<dev-lang/go-1.15"
+BDEPEND="=dev-lang/go-1.14*"
 
 DOCS=( README.md AUTHORS CONTRIBUTING.md )
 

@@ -1,14 +1,14 @@
 BDEPEND=virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=configure install postinst postrm unpack
-DEPEND=>=dev-libs/boost-1.62.0-r1:= dev-qt/qtcore:5 dev-qt/qtnetwork:5[ssl] >=dev-qt/qtsingleapplication-2.6.1_p20130904-r1[qt5(+),X?] dev-qt/qtxml:5 >=net-libs/libtorrent-rasterbar-1.2.0:0= sys-libs/zlib dbus? ( dev-qt/qtdbus:5 ) X? ( dev-libs/geoip dev-qt/qtgui:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 ) dev-qt/linguist-tools:5
+DEPEND=>=dev-libs/boost-1.62.0-r1:= dev-qt/qtcore:5 dev-qt/qtnetwork:5[ssl] dev-qt/qtxml:5 >=net-libs/libtorrent-rasterbar-1.2.0:0= sys-libs/zlib dbus? ( dev-qt/qtdbus:5 ) X? ( dev-libs/geoip dev-qt/qtgui:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 ) dev-qt/linguist-tools:5
 DESCRIPTION=BitTorrent client in C++ and Qt
 EAPI=7
 HOMEPAGE=https://www.qbittorrent.org https://github.com/qbittorrent
 IUSE=+dbus debug webui +X
 LICENSE=GPL-2
 PROPERTIES=live
-RDEPEND=>=dev-libs/boost-1.62.0-r1:= dev-qt/qtcore:5 dev-qt/qtnetwork:5[ssl] >=dev-qt/qtsingleapplication-2.6.1_p20130904-r1[qt5(+),X?] dev-qt/qtxml:5 >=net-libs/libtorrent-rasterbar-1.2.0:0= sys-libs/zlib dbus? ( dev-qt/qtdbus:5 ) X? ( dev-libs/geoip dev-qt/qtgui:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 )
+RDEPEND=>=dev-libs/boost-1.62.0-r1:= dev-qt/qtcore:5 dev-qt/qtnetwork:5[ssl] dev-qt/qtxml:5 >=net-libs/libtorrent-rasterbar-1.2.0:0= sys-libs/zlib dbus? ( dev-qt/qtdbus:5 ) X? ( dev-libs/geoip dev-qt/qtgui:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 )
 REQUIRED_USE=dbus? ( X )
 SLOT=0
 _eclasses_=git-r3	8ec5b53812bce105ae7943930e4660f8	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
-_md5_=d1ba852f9da46f4707e9f0f322c00ac0
+_md5_=623e736cecad7911f6a055fcdb19c86a

@@ -11,7 +11,7 @@ HOMEPAGE="http://sysprof.com/"
 LICENSE="GPL-3+ GPL-2+"
 API_VERSION="3"
 SLOT="0/${API_VERSION}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="gtk +unwind"
 
 RDEPEND="
@@ -33,6 +33,10 @@ BDEPEND="
 	>=sys-kernel/linux-headers-2.6.32
 	virtual/pkgconfig
 "
+
+PATCHES=(
+	"${FILESDIR}"/${PV}-fix-32bit-tests-build.patch
+)
 
 src_prepare() {
 	xdg_src_prepare

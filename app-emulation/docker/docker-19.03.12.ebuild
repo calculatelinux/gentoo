@@ -14,7 +14,7 @@ else
 	DOCKER_GITCOMMIT=48a66213fe
 	MY_PV=${PV/_/-}
 	SRC_URI="https://${EGO_PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="amd64 ~arm ~arm64 ~ppc64"
+	KEYWORDS="amd64 ~arm ~arm64 ~ppc64 ~x86"
 	[ "$DOCKER_GITCOMMIT" ] || die "DOCKER_GITCOMMIT must be added manually for each bump!"
 	inherit golang-vcs-snapshot
 fi
@@ -82,7 +82,7 @@ CONFIG_CHECK="
 	~USER_NS
 	~SECCOMP
 	~CGROUP_PIDS
-	~MEMCG_SWAP ~MEMCG_SWAP_ENABLED
+	~MEMCG_SWAP
 
 	~BLK_CGROUP ~BLK_DEV_THROTTLING
 	~CGROUP_PERF
@@ -155,6 +155,12 @@ pkg_setup() {
 	if kernel_is lt 5 2; then
 		CONFIG_CHECK+="
 			~NF_NAT_NEEDED
+		"
+	fi
+
+	if kernel_is lt 5 8; then
+		CONFIG_CHECK+="
+			~MEMCG_SWAP_ENABLED
 		"
 	fi
 
