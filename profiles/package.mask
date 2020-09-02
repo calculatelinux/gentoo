@@ -32,6 +32,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Marek Szuba <marecki@gentoo.org> (2020-09-01)
+# Uses golang-* eclasses, only a library, all former reverse
+# dependencies have long since switched to vendoring.
+# Removal in 30 days. Bug #732130.
+dev-go/siphash
+
 # Michał Górny <mgorny@gentoo.org> (2020-09-01)
 # The following packages are Python 2 only.  All but sys-boot/udk have
 # no reverse dependencies; sys-boot/udk's only revdep is sys-boot/refind
@@ -984,13 +990,6 @@ net-misc/termpkg
 # Meson port does not handle multilib yet and has issues
 # regarding runstatedir (not using /run).
 =net-misc/networkmanager-1.22.10-r11
-
-# Michael Orlitzky <mjo@gentoo.org> (2020-04-19)
-# Stuck on Python 3.6, support for which already required
-# backporting patches to a release from 2014. Upstream's git
-# HEAD works fine, but they can't be bothered to make a new
-# release. Bug 718326. Removal whenever it becomes an issue.
-mail-filter/pyzor
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2020-04-18)
 # Unmaintained, vulnerable oracle java ebuilds, even fetching distfiles

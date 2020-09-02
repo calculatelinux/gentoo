@@ -11,7 +11,7 @@ SRC_URI="https://github.com/warmcat/libwebsockets/archive/v${PV}.tar.gz -> ${P}.
 
 LICENSE="MIT"
 SLOT="0/16" # libwebsockets.so.16
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="~amd64 arm ~arm64 ~x86"
 IUSE="access-log caps cgi client dbus generic-sessions http-proxy http2 ipv6
 	+lejp libev libevent libressl libuv mbedtls peer-limits server-status smtp socks5
 	sqlite3 ssl static-libs threads zip"
@@ -22,12 +22,14 @@ REQUIRED_USE="
 	http-proxy? ( client )
 	smtp? ( libuv )
 	ssl? ( ?? ( libressl mbedtls ) )
+	mbedtls? ( ssl )
 	?? ( libev libevent )
 "
 
 RDEPEND="
 	sys-libs/zlib
 	caps? ( sys-libs/libcap )
+	dbus? ( sys-apps/dbus )
 	http-proxy? ( net-libs/libhubbub )
 	libev? ( dev-libs/libev )
 	libevent? ( dev-libs/libevent:= )
