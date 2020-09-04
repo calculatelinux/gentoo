@@ -12,7 +12,7 @@ DESCRIPTION="CMT (computer music toolkit) LADSPA library plugins"
 HOMEPAGE="http://www.ladspa.org/"
 SRC_URI="http://www.ladspa.org/download/${MY_P}.tgz"
 
-KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ~ppc ppc64 sparc x86"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE=""
@@ -22,6 +22,7 @@ RDEPEND=""
 
 PATCHES=(
 	"${FILESDIR}/${P}-makefile.patch"
+	"${FILESDIR}/${P}-clang.patch"
 )
 
 DOCS="../README"
