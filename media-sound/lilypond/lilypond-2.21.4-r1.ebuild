@@ -12,7 +12,7 @@ if [[ "${PV}" = "9999" ]]; then
 else
 	MAIN_VER=$(ver_cut 1-2)
 	SRC_URI="http://lilypond.org/download/sources/v${MAIN_VER}/${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~x86"
+	KEYWORDS="~amd64 ~arm ~arm64 ~hppa x86"
 fi
 
 DESCRIPTION="GNU Music Typesetter"
@@ -79,9 +79,11 @@ src_prepare() {
 }
 
 src_configure() {
+	# fix hardcoded `ar`
+	sed -i "s/AR=ar/AR=$(tc-getAR)/g" flower/GNUmakefile || die "Failed to fix ar command"
+
 	# documentation generation currently not supported since it requires a newer
 	# version of texi2html than is currently in the tree
-
 	local myeconfargs=(
 		--with-texgyre-dir=/usr/share/fonts/tex-gyre
 		--disable-documentation
@@ -90,9 +92,10 @@ src_configure() {
 		$(use_enable debug debugging)
 		$(use_enable profile profiling)
 	)
+
 	export VARTEXFONTS="${T}/fonts"  # https://bugs.gentoo.org/692010
 
-	econf "${myeconfargs[@]}"
+	econf "${myeconfargs[@]}" AR="$(tc-getAR)"
 }
 
 src_compile() {

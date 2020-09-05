@@ -14,7 +14,6 @@ valgrind
 
 # Not tested yet
 bluetooth
-consolekit
 dbus
 elogind
 emacs
@@ -33,7 +32,6 @@ lua
 qt5
 ruby
 slang
-sqlite
 sound
 systemtap
 X

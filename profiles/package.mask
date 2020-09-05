@@ -32,6 +32,26 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-09-04)
+# No maintainer, defunct with modern browsers, bug #694024.
+# Masked for removal in 30 days.
+www-plugins/freshplayerplugin
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-09-04)
+# Depends on deprecated dev-qt/qtwebkit, maintainer unresponsive for 1.5 yr.;
+# Upstream dead, fork available, bug #684678. Masked for removal in 30 days.
+app-text/cutemarked
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-09-04)
+# Depends on deprecated dev-qt/qtwebkit, no more revdeps; bug #737928
+# Masked for removal in 30 days.
+kde-apps/libkgeomap
+
+# Louis Sautier <sbraz@gentoo.org> (2020-09-04)
+# Masked for removal in 30 days, no revdeps. Dependency of
+# previously removed dev-python/flask-bootstrap
+dev-python/flask-appconfig
+
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2020-09-02)
 # Masked for removal. No revdeps.
 dev-python/ansimarkup
@@ -273,11 +293,9 @@ dev-python/jplephem
 dev-python/natgrid
 dev-python/pcapy
 dev-python/promises
-dev-python/pydotplus
 dev-python/pyds9
 dev-python/pyflann
 dev-python/pygsl
-dev-python/pyqt-distutils
 dev-python/python-ntpdshm
 dev-python/sphinxcontrib-napoleon
 dev-python/textfsm
@@ -289,7 +307,7 @@ dev-vcs/git-spindle
 media-gfx/birdfont
 media-gfx/sigal
 media-libs/libxmlbird
-net-analyzer/nagstamon
+<net-analyzer/nagstamon-3.4.1-r1
 net-fs/s3ql
 net-misc/dmr_utils
 sci-chemistry/ParmEd
@@ -569,17 +587,6 @@ media-sound/specimen
 # Removal in 30 days. bug #736300
 media-sound/jackbeat
 
-# Michał Górny <mgorny@gentoo.org> (2020-08-07)
-# Last upstream (pre-)release in 2016.  Python 3 porting effort is not
-# progressing since February, and PRs are stuck.  Homepage is gone.
-# Removal in 30 days.  Bug #695010.
-app-i18n/fcitx-sunpinyin
-app-i18n/ibus-sunpinyin
-app-i18n/scim-sunpinyin
-app-i18n/sunpinyin
-app-i18n/sunpinyin-data
-app-i18n/xsunpinyin
-
 # Hans de Graaff <graaff@gentoo.org> (2020-08-07)
 # Slot with known security issues. Please use a newer slot
 # instead. Removal in 30 days. Bug #713478.
@@ -590,32 +597,6 @@ dev-ruby/json:0
 # instead. Removal in 30 days. Bug #733116.
 dev-ruby/kramdown:0
 
-# Michał Górny <mgorny@gentoo.org> (2020-08-06)
-# Py2.7 only.  Last release in 2009.  No reverse dependencies left.
-# Removal in 30 days.  Bug #735610.
-dev-python/pythonutils
-
-# Michał Górny <mgorny@gentoo.org> (2020-08-06)
-# Py3.6 only.  Apparently randomly fails to build (bug #515736).
-# Last release in 2016.  No reverse dependencies left.
-# Removal in 30 days.  Bug #718968.
-dev-python/gntp
-
-# Jimi Huotari <chiitoo@gentoo.org> (2020-08-04)
-# No consumers since 2015, and no known stand-alone use.
-# Removal in 30 days.
-dev-libs/liboobs
-
-# Jack Todaro <solpeth@posteo.org> (2020-08-04)
-# Deprecated in favour of dev-haskell/dbus.
-# Unmaintained since 2012.
-dev-haskell/dbus-core
-
-# Jack Todaro <solpeth@posteo.org> (2020-08-04)
-# Requires porting for MonadFail. No upstream
-# activity since January 2018.
-dev-haskell/hans
-
 # Mikle Kolyada <zlogene@gentoo.org> (2020-08-02)
 # consolekit is abandoned upstream.
 # People are encouraged to switch to any logind
@@ -624,49 +605,9 @@ dev-haskell/hans
 sys-auth/consolekit
 sec-policy/selinux-consolekit
 
-# Aaron Bauman <bman@gentoo.org> (2020-08-01)
-# Py2 only. Last upstream release 2013.
-# Removal in 30 days. Last 2 have deps on cddb.
-<media-sound/jack-4.0.0_pre
-
 # Michał Górny <mgorny@gentoo.org> (2020-07-28)
 # Masked for the time being due to dep on LLVM 8.  Bug #720236.
 <=dev-ada/gps-2019-r1
-
-# Hans de Graaff <graaff@gentoo.org> (2020-07-22)
-# Mask old obsolete slots for removal in 30 days.
-# Use a newer slot of the same package instead.
-dev-ruby/autoprefixer-rails:7
-dev-ruby/autoprefixer-rails:8
-dev-ruby/capybara:2
-dev-ruby/cmdparse:0
-dev-ruby/haml-rails:0
-dev-ruby/highline:0
-dev-ruby/http-form_data:1.0
-dev-ruby/jquery-ui-rails:5
-dev-ruby/jwt:0
-dev-ruby/liquid:0
-dev-ruby/liquid:3
-dev-ruby/liquid-c:0
-dev-ruby/listen:0
-dev-ruby/metasm:1.0.2
-dev-ruby/mime-types:0
-dev-ruby/nio4r:0
-dev-ruby/openssl-ccm:1.2.1
-dev-ruby/pundit:0
-dev-ruby/rack-attack:5
-dev-ruby/rack-protection:1
-dev-ruby/rainbow:0
-dev-ruby/rainbow:2
-dev-ruby/redis:0
-dev-ruby/selenium-webdriver:0
-dev-ruby/sinatra:0
-dev-ruby/twitter-text:0
-dev-ruby/twitter-text:2.1
-dev-ruby/twitter-text:3.0
-dev-ruby/xdr:2.0.0
-dev-ruby/xdr:3.0.0
-dev-ruby/xpath:2
 
 # Sam James <sam@gentoo.org> (2020-07-20)
 # Serious security vulnerabilities, including
@@ -800,10 +741,7 @@ sci-mathematics/geogebra
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2020-03-27)
 # Vulnerable old version of icedtea-web #711392
-# new version is not packaged yet
-# package is not going away anytime soon, just masked
-# for security. unmask as needed.
-dev-java/icedtea-web
+<dev-java/icedtea-web-1.8.4
 
 # Eray Aslan <eras@gentoo.org> (2020-03-09)
 # Mask experimental software
