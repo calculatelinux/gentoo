@@ -21,7 +21,7 @@ SLOT="0"
 
 IUSE="debug nls static-libs"
 
-DEPEND="nls? ( sys-devel/gettext )"
+BDEPEND="nls? ( sys-devel/gettext )"
 
 pkg_setup() {
 	# Remove -flto* from flags as this breaks binaries (bug #644048)
@@ -65,7 +65,7 @@ multilib_src_install() {
 	local lib="${ED}/usr/$(get_libdir)/libattr.so.1"
 	if [[ -e ${lib} ]] ; then
 		local versions=$($(tc-getREADELF) -V "${lib}")
-		local symbols=$((tc-getREADELF) -sW "${lib}")
+		local symbols=$($(tc-getREADELF) -sW "${lib}")
 		if [[ "${versions}" != *"ATTR_1.0"* || \
 		      "${versions}" != *"ATTR_1.1"* || \
 		      "${versions}" != *"ATTR_1.2"* || \
