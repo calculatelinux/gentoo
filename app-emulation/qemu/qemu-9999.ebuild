@@ -16,7 +16,9 @@ inherit eutils linux-info toolchain-funcs multilib python-r1 \
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="https://git.qemu.org/git/qemu.git"
 	EGIT_SUBMODULES=(
-		tests/fp/berkeley-{test,soft}float-3
+		meson
+		tests/fp/berkeley-softfloat-3
+		tests/fp/berkeley-testfloat-3
 		ui/keycodemapdb
 	)
 	inherit git-r3
@@ -224,6 +226,7 @@ RDEPEND="${CDEPEND}
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.11.1-capstone_include_path.patch
 	"${FILESDIR}"/${PN}-9999-cflags.patch
+	"${FILESDIR}"/${PN}-9999-format-error.patch
 )
 
 QA_PREBUILT="
@@ -442,6 +445,14 @@ qemu_src_configure() {
 			use_enable "$@"
 		fi
 	}
+	# Ennable option only for softmmu build, but not 'user' or 'tools'
+	conf_softmmu() {
+		if [[ ${buildtype} == "softmmu" ]] ; then
+			use_enable "$@"
+		else
+			echo "--disable-${2:-$1}"
+		fi
+	}
 	conf_opts+=(
 		$(conf_notuser accessibility brlapi)
 		$(conf_notuser aio linux-aio)
@@ -470,7 +481,7 @@ qemu_src_configure() {
 		$(conf_notuser rbd)
 		$(conf_notuser sasl vnc-sasl)
 		$(conf_notuser sdl)
-		$(conf_notuser sdl-image)
+		$(conf_softmmu sdl-image)
 		$(conf_notuser seccomp)
 		$(conf_notuser slirp slirp system)
 		$(conf_notuser smartcard)
