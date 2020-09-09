@@ -32,6 +32,90 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-09-09)
+# Last release in <2003.  Fails to build (bug #691690).
+# Removal in 30 days.  Bug #731008.
+media-sound/freebirth
+
+# Michał Górny <mgorny@gentoo.org> (2020-09-09)
+# These packages still require Python 3.6.  They are either dead
+# upstream or their maintainers are simply unresponsive.
+# Please do not remove any packages from this list unless you actually
+# port them to Python 3.7 *and* 3.8 (3.9 would also be nice).
+# Removal in 30 days.  Please find relevant bugs on tracker bug #695996.
+app-crypt/acmebot
+app-vim/conque
+dev-python/redlock-py
+dev-python/root_numpy
+dev-python/rootpy
+dev-util/setconf
+sci-misc/vitables
+
+# Michał Górny <mgorny@gentoo.org> (2020-09-09)
+# These packages (or package versions) still require Python 2.7.
+# They are either dead upstream, their Python 3 porting efforts are
+# not progressing or their maintainers are simply unresponsive.
+# Please do not remove any packages from this list unless you actually
+# port them to Python 3.
+# Removal in 30 days.  Please find relevant bugs on tracker bug #694800.
+app-misc/mswinurl_launcher
+app-misc/mtail
+app-text/silvercity
+dev-libs/qrosspython
+dev-python/SchemaObject
+dev-python/oauth
+dev-ruby/pygments_rb
+dev-util/doxy-coverage
+dev-util/mpatch
+dev-vcs/cvs2svn
+dev-vcs/gitstats
+games-rpg/adonthell
+games-rpg/wastesedge
+games-strategy/0ad
+media-sound/codecgraph
+net-misc/pssh
+net-misc/ris-linux
+net-wireless/mousejack
+net-wireless/python-wifi
+sci-biology/amos
+sci-biology/embassy-meme
+sci-biology/meme
+sci-biology/shrimp
+sci-misc/gato
+sci-physics/rivet
+sys-cluster/heartbeat
+x11-misc/dsx
+
+# Michał Górny <mgorny@gentoo.org> (2020-09-09)
+# These packages are stuck on Python 2.7.  While the Python dependency
+# is optional, I can't test removing it because the packages fail
+# to build anyway.
+#
+# net-analyzer/mk-livestatus: py3 bug #735394, build failure bug #705430
+# sci-biology/vienna-rna: py3 bug #735438, build failure bug #707158
+# sci-libs/gmsh: py3 bug #735478, build failure bug #708386
+# sys-cluster/ganglia: py3 bug #735496, build failure bug #631270
+# sys-fs/owfs: py3 bug #735502, build failure bug #707438
+net-analyzer/mk-livestatus
+sci-biology/vienna-rna
+sci-libs/gmsh
+sys-cluster/ganglia
+sys-cluster/ganglia-web
+sys-fs/owfs
+
+# Louis Sautier <sbraz@gentoo.org> (2020-09-09)
+# Masked for removal in 30 days, no revdeps.
+# Backport of a module included in Python >= 3.3.
+dev-python/backports-unittest-mock
+
+# Michał Górny <mgorny@gentoo.org> (2020-09-09)
+# Multiple unresolved vulnerabilities.  Last release in 2013 (but has
+# some activity in git).  Not touched by maintainer since 2015.  Stuck
+# on Python 2 (bug #735522) with incorrect eclass usage (bug #710258).
+# Apparently broken with openssl-1.1 (bug #674246).
+# Removal in 30 days.  Bug #715204.
+www-servers/cherokee
+
 # Joonas Niilola <juippis@gentoo.org> (2020-09-07)
 # Nothing in the tree uses this lib anymore. Removing as redundant.
 # Removal in ~30 days. Bug #740868.
@@ -233,16 +317,6 @@ dev-haskell/drift
 # Ported to py3 but not yet released
 # Masked to allow py2.7 removal
 dev-lang/spark
-
-# Jack Todaro <solpeth@posteo.org> (2020-08-23)
-# Its only reverse dependency is app-emacs/ghc-mod,
-# which is masked and dead upstream.
-dev-haskell/cabal-helper
-
-# Jack Todaro <solpeth@posteo.org> (2020-08-23)
-# Unmaintained package, does not build with modern
-# versions of GHC.
-app-emacs/ghc-mod
 
 # Sergei Trofimovich <slyfox@gentoo.org> (2020-08-22)
 # Obsolete package without reverse dependencies.
