@@ -346,6 +346,7 @@ app-crypt/seahorse:ldap - Enable seahorse to manipulate GPG keys on a LDAP serve
 app-crypt/swtpm:fuse - Support sys-fs/fuse based /dev/tpm interface
 app-crypt/tpm-emulator:mtm-emulator - Build the MTM emulator
 app-crypt/tpm-tools:pkcs11 - Build Token data management utilities based on OpenCryptoki's (dev-libs/opencryptoki) PKCS#11 implementation.
+app-crypt/tpm2-pkcs11:fapi - Enable feature API backend
 app-crypt/tpm2-tools:fapi - Enable feature API tools
 app-crypt/tpm2-tss:fapi - Enable feature API (requires openssl as crypto backend)
 app-crypt/tpm2-tss:gcrypt - Use dev-libs/libgcrypt as crypto engine
@@ -1240,7 +1241,6 @@ app-text/tesseract:osd - Enable support orientation and script detection.
 app-text/tesseract:scrollview - Install viewer to debug recognition (ScrollView).
 app-text/tesseract:training - Install training applications to add support for new languages.
 app-text/texlive:context - Add support for the ConTeXt format (dev-texlive/texlive-context)
-app-text/texlive:detex - Add support for dev-tex/detex, a filter program that removes the LaTeX (or TeX) control sequences
 app-text/texlive:epspdf - Add support for app-text/epspdf, a tool for converting [e]ps files to pdf
 app-text/texlive:extra - Add support for extra TeXLive packages
 app-text/texlive:games - Add typesetting support for games (chess, etc.) (dev-texlive/texlive-games)
@@ -1546,16 +1546,11 @@ dev-haskell/bifunctors:tagged - You can disable the use of the `tagged` package 
 dev-haskell/biosff:fclip - Build the fclip executable.
 dev-haskell/biosff:flower - Build the flower executable.
 dev-haskell/biosff:frecover - Build the frecover executable.
-dev-haskell/blaze-builder-enumerator:newbuilder - use bytestring-builder instead of blaze-builder-0.3
 dev-haskell/bytedump:executable - build executable file
 dev-haskell/bytes:test-doctests - Enable the doctest suite when using the enable-tests option for cabal.
 dev-haskell/c2hs:regression - run regression tests
 dev-haskell/cabal-install:native-dns - Enable use of the resolv and windns packages for performing DNS lookups
-dev-haskell/cabal-install:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/cabal-install:noprefs - Ignore 'preferred-versions' file from hackage's tarball.
 dev-haskell/certificate:executable - Build the executable
-dev-haskell/cgi:extensible-exceptions-in-base - Required to be enabled for >=dev-lang/ghc-7.
-dev-haskell/cgi:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/chaselev-deque:debug - Enable the extra internal checks.
 dev-haskell/chell:color-output - use colors in program output
 dev-haskell/chimera:representable - Define Representable instance from adjunctions package
@@ -1569,21 +1564,15 @@ dev-haskell/cmark:system-cmark - use app-text/cmark instead of bundled copy
 dev-haskell/cmdargs:quotation - Build quote module
 dev-haskell/cmdargs:testprog - Build the test program
 dev-haskell/comonad:containers - You can disable the use of the `containers` package using `-f-containers`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/comonad:contravariant - You can disable the use of the `contravariant` package using `-f-contravariant`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Contravariant`
 dev-haskell/comonad:distributive - You can disable the use of the `distributive` package using `-f-distributive`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Distributive`
 dev-haskell/comonad:test-doctests - Run the doctests test suite
-dev-haskell/conduit:nohandles - experimental code to use raw system calls in place of handles. Not recommended for general use
-dev-haskell/contravariant:safe - Get Safe guarantees rather than merely Trustworthy, but with worse constant factors.
 dev-haskell/contravariant:semigroups - You can disable the use of the `semigroups` package using `-f-semigroups`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/contravariant:statevar - You can disable the use of the `StateVar` package using `-f-StateVar`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/contravariant:tagged - You can disable the use of the `tagged` package on older versons of GHC using `-f-tagged`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/cpu:executable - build 'cpuid' tool
 dev-haskell/criterion:embed-data-files - Embed the data files in the binary for a relocatable executable
 dev-haskell/crypto-api:all-cpolys - Build all the CMAC polynomes up to 10000 bits instead of just the usual ones
-dev-haskell/crypto-conduit:conduit11 - Use conduit >= 1.1.
-dev-haskell/cryptohash:cryptoapi - Defines crypto-api instances
 dev-haskell/cryptonite:integer-gmp - Whether or not to use GMP for some functions
-dev-haskell/distributive:lib-werror - Compile with the ghc -Werror option
 dev-haskell/encoding:systemencoding - Provide the getSystemEncoding action to query the locale.
 dev-haskell/entropy:halvm - Build for the HaLVM.
 dev-haskell/filestore:maxcount - Make use of a recent (>= 2.3.0) Darcs feature which vastly improves the performance of 'latest'. You should disable this flag if you plan to use gitit with an older version of Darcs, or 'latest' will raise an error.
@@ -1596,7 +1585,6 @@ dev-haskell/gtk2hs-buildtools:closuresignals - Use the the GClosure-based signal
 dev-haskell/gtk3:fmode-binary - Set the default file translation mode for file I/O operations to _O_BINARY.
 dev-haskell/gtk3:gio - Depend on GIO package, thereby enabling certain features.
 dev-haskell/hackage-security:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/hackage-security:use-network-uri - Get Network.URI from the network-uri package.
 dev-haskell/hakyll:buildwebsite - Build the hakyll website
 dev-haskell/hakyll:checkexternal - Include external link checking
 dev-haskell/hakyll:previewserver - Include the preview server
@@ -1622,18 +1610,14 @@ dev-haskell/hps:build-exec - Build the `hps-fractals' executable
 dev-haskell/hs3:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/hslogger:buildtests - Build the executable to run unit tests.
 dev-haskell/hslogger:network-3 - Use network-3
-dev-haskell/hslua:apicheck - Compile Lua with -DLUA_USE_APICHECK..
-dev-haskell/hslua:system-lua - Use the system-wide lua instead of the bundled copy.
 dev-haskell/hsopenssl:fast-bignum - Enable fast moving of bignums between OpenSSL and GMP (GHC Only)
 dev-haskell/http:conduit10 - Use version 1.0.x or below of the conduit package (for the test suite).
 dev-haskell/http:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/http-api-data:use-text-show - Use text-show library for efficient ToHttpApiData implementations
 dev-haskell/http-client:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/http-streams:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/httpd-shed:buildexamples - Build example executables.
 dev-haskell/httpd-shed:network-bsd - Get Network.BSD from the network-bsd package.
 dev-haskell/httpd-shed:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/hxt:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/icalendar:network-uri - use network-uri package
 dev-haskell/io-streams:network - Include network support
 dev-haskell/io-streams:zlib - Include zlib support
@@ -1699,7 +1683,6 @@ dev-haskell/recaptcha:network-uri - Get Network.URI from the network-uri package
 dev-haskell/reflection:template-haskell - Enable template haskell.
 dev-haskell/rfc5051:mkunicodedata - build codes generator itself
 dev-haskell/sandi:conduit - Build with conduit
-dev-haskell/sandi:with-conduit - Build with conduit
 dev-haskell/semigroupoid-extras:profunctors - You can disable the use of the `profunctors` package using `-f-profunctors`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/semigroupoids:comonad - You can disable the use of the `comonad` package using `-f-comonad`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Comonad`
 dev-haskell/semigroupoids:containers - You can disable the use of the `containers` package using `-f-containers`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
@@ -1723,9 +1706,6 @@ dev-haskell/sha:exe - Build a sha1 and a sha384 executable similar to 'md5sum'.
 dev-haskell/shakespeare:test-coffee - Render tests through coffeescript render function.
 dev-haskell/shakespeare:test-export - Test export.
 dev-haskell/shakespeare:test-roy - Render tests through roy render function.
-dev-haskell/shakespeare-js:test-coffee - Test coffee.
-dev-haskell/shakespeare-js:test-export - Test export.
-dev-haskell/shakespeare-js:test-roy - Test roy.
 dev-haskell/shelly:lifted - run the tests against Shelly.Lifted
 dev-haskell/shuffle:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/simple-sendfile:allow-bsd - Allow use of BSD sendfile (disable on GNU/kFreeBSD)
@@ -1742,10 +1722,6 @@ dev-haskell/splitmix:optimised-mixer - Use JavaScript for mix32
 dev-haskell/splitmix:random - Providen RandomGen SMGen instance
 dev-haskell/stack:developer-mode - By default, should extra developer information be output?
 dev-haskell/store-core:force-alignment - No description
-dev-haskell/tagsoup:download - Build with Download module.
-dev-haskell/tagsoup:testprog - Build the test program.
-dev-haskell/tasty:colors - Enable colorful output
-dev-haskell/tasty-quickcheck:old-quickcheck - Use Quick-Check < 2.7.
 dev-haskell/texmath:executable - Compile test executable.
 dev-haskell/texmath:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/text:developer - operate in developer mode
@@ -1756,7 +1732,6 @@ dev-haskell/thyme:show-internal - instance Show of internal representation
 dev-haskell/tls:compat - Accept SSLv2 compatible handshake.
 dev-haskell/tls:network - Use the base network library.
 dev-haskell/transformers-base:orphaninstances - Build instances for orphan datatypes.
-dev-haskell/transformers-compat:three - Use transformers-0.3
 dev-haskell/unix-compat:old-time - build against old-time package
 dev-haskell/uuagc:with-loag - Use dev-haskell/minisat external SAT-solver to schedule all Linear Ordered AGs.
 dev-haskell/vector:boundschecks - Enable bounds checking
@@ -2116,6 +2091,7 @@ dev-libs/cyrus-sasl:openldap - Add ldap support for saslauthd
 dev-libs/cyrus-sasl:sample - Enable sample client and server
 dev-libs/cyrus-sasl:srp - Enable SRP authentication
 dev-libs/cyrus-sasl:urandom - Use /dev/urandom instead of /dev/random
+dev-libs/date:only-c-locale - Build only the C locale
 dev-libs/dbus-c++:ecore - Use Ecore integration
 dev-libs/dbus-c++:glib - Use glib integration
 dev-libs/eekboard:libcanberra - Enable support for media-libs/libcanberra
@@ -2409,8 +2385,6 @@ dev-lisp/gcl:ansi - Build a GCL with ANSI support (else build a traditional CLtL
 dev-lisp/gcl:athena - Build xgcl - an interface to x11-libs/libXaw
 dev-lisp/sbcl:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
 dev-lua/lua-cjson:internal-fpconv - Enable internal number conversion routines, can increase overall performance by up to 50%
-dev-lua/luarocks:curl - Uses net-misc/curl for fetching lua packages instead of net-misc/wget.
-dev-lua/luarocks:openssl - Uses dev-libs/openssl for verifying lua packages instead of md5sum.
 dev-ml/cairo-ocaml:pango - Enable support for x11-libs/pango
 dev-ml/csv:lwt - Enables the Lwt-based library for asynchronous operations.
 dev-ml/dose3:parmap - Adds multi-core CPU support via dev-ml/parmap.
@@ -3514,6 +3488,8 @@ gui-apps/swaylock:gdk-pixbuf - Enable additional image format support via the x1
 gui-apps/swaylock:man - Build and install man pages
 gui-apps/waybar:mpd - Enable support for the Music Player Daemon
 gui-apps/waybar:network - Enable libnl support for network related features
+gui-apps/waybar:popups - Enable popup support with gtk-layer-shell
+gui-apps/waybar:pulseaudio - Enable support for volume control via PulseAudio
 gui-apps/waybar:tray - Enable support for tray
 gui-apps/wf-recorder:man - Build and install man pages
 gui-apps/wf-recorder:opencl - Enable OpenCL
@@ -5726,7 +5702,7 @@ net-fs/nfs-utils:nfsidmap - Enable support for newer nfsidmap helper
 net-fs/nfs-utils:nfsv4 - Enable support for NFSv4
 net-fs/nfs-utils:nfsv41 - Enable support for NFSv4.1
 net-fs/nfs-utils:uuid - Support UUID lookups in rpc.mountd
-net-fs/openafs:api - Build API documentation using app-doc/doxygen. May take a *long* time to build.
+net-fs/openafs:apidoc - Build API documentation using app-doc/doxygen. May take a *long* time to build.
 net-fs/openafs:bitmap-later - Enable fast startup of file server by not reading bitmap till needed.
 net-fs/openafs:fuse - Build fuse client.
 net-fs/openafs:kauth - Install the DEPRECATED kauth server, PAM modules, and utilities
@@ -6239,10 +6215,12 @@ net-mail/dovecot:argon2 - Add support for ARGON2 password schemes
 net-mail/dovecot:lucene - Add lucene full text search (FTS) support using dev-cpp/clucene
 net-mail/dovecot:lzma - Add support for lzma (de)compression
 net-mail/dovecot:managesieve - Add managesieve protocol support
+net-mail/dovecot:rpc - Add support for NFS quotas
 net-mail/dovecot:sieve - Add sieve support
 net-mail/dovecot:solr - Add solr full text search (FTS) support
 net-mail/dovecot:textcat - Add libtextcat language guessing support for full text search (FTS)
 net-mail/dovecot:vpopmail - Add vpopmail support
+net-mail/dovecot:zstd - Add support for zstd (de)compression
 net-mail/fdm:courierauth - Add support for Courier authentication library
 net-mail/fetchmail:socks - Enable support for socks proxy
 net-mail/fetchmail:tk - Enable support for Tk GUI toolkit, in particular it installs fetchmailconf
@@ -6730,7 +6708,6 @@ net-misc/stargazer:stargazer - Enable build of Stargazer billing system.
 net-misc/streamtuner:shout - Enable shoutcast plug-in.
 net-misc/streamtuner:xiph - Enable xiph.org plug-in.
 net-misc/stunnel:stunnel3 - Install the stunnel3 wrapper.
-net-misc/termpkg:uucp - Adds support for uucp style device locking
 net-misc/tigervnc:dri3 - Build with DRI3 support
 net-misc/tigervnc:drm - Build with DRM support
 net-misc/tigervnc:server - Build TigerVNC server
@@ -8738,7 +8715,6 @@ www-client/dillo:xembed - Enable X11 XEmbed support
 www-client/elinks:bittorrent - Enable support for the BitTorrent protocol
 www-client/elinks:brotli - Enable support for brotli compression
 www-client/elinks:finger - Enable support for the finger protocol
-www-client/elinks:gc - Enable garbage collection support via dev-libs/boehm-gc
 www-client/elinks:gopher - Enable support for the gopher protocol
 www-client/elinks:mouse - Make elinks to grab all mouse events
 www-client/elinks:tre - Enable support for regex searches via dev-libs/tre

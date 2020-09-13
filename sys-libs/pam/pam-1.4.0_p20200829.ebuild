@@ -22,6 +22,7 @@ BDEPEND="
 	sys-devel/flex
 	sys-devel/gettext
 	virtual/pkgconfig
+	virtual/yacc
 "
 
 DEPEND="
