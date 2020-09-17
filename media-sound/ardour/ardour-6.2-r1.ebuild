@@ -14,14 +14,14 @@ if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="https://git.ardour.org/ardour/ardour.git"
 	inherit git-r3
 else
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 x86"
 	SRC_URI="https://dev.gentoo.org/~fordfrog/distfiles/Ardour-${PV}.0.tar.bz2"
 	S="${WORKDIR}/Ardour-${PV}.0"
 fi
 
 LICENSE="GPL-2"
 SLOT="6"
-IUSE="altivec doc jack nls phonehome cpu_flags_x86_sse cpu_flags_x86_mmx cpu_flags_x86_3dnow"
+IUSE="altivec doc jack nls phonehome pulseaudio cpu_flags_x86_sse cpu_flags_x86_mmx cpu_flags_x86_3dnow"
 
 RDEPEND="
 	>=dev-cpp/glibmm-2.32.0
@@ -55,6 +55,7 @@ RDEPEND="
 	>=x11-libs/gtk+-2.8.1:2
 	x11-libs/pango
 	jack? ( virtual/jack )
+	pulseaudio? ( media-sound/pulseaudio )
 	media-libs/lilv
 	media-libs/sratom
 	dev-libs/sord
@@ -120,15 +121,19 @@ src_prepare() {
 }
 
 src_configure() {
+	local backends="alsa"
+	use jack && backends+=",jack"
+	use pulseaudio && backends+=",pulseaudio"
+
 	tc-export CC CXX
 	mkdir -p "${D}"
 	waf-utils_src_configure \
 		--destdir="${D}" \
 		--configdir=/etc \
 		--optimize \
+		--with-backends=${backends} \
 		$(usex doc "--docs" '') \
 		$({ use altivec || use cpu_flags_x86_sse; } && echo "--fpu-optimization" || echo "--no-fpu-optimization") \
-		$(usex jack "--with-backends=alsa,jack" "--with-backends=alsa  --libjack=weak") \
 		$(usex phonehome "--phone-home" "--no-phone-home") \
 		$(usex nls "--nls" "--no-nls")
 #not possible right now		--use-external-libs

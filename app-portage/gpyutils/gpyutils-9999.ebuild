@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND=">=app-portage/gentoopm-0.3.1[${PYTHON_USEDEP}]"
+RDEPEND=">=app-portage/gentoopm-0.3.2[${PYTHON_USEDEP}]"
 
 python_test() {
 	esetup.py test

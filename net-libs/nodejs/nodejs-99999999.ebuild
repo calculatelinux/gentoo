@@ -22,11 +22,11 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	>=dev-libs/libuv-1.35.0:=
-	>=net-dns/c-ares-1.15.0
-	>=net-libs/nghttp2-1.39.2
+	>=dev-libs/libuv-1.39.0:=
+	>=net-dns/c-ares-1.16.0
+	>=net-libs/nghttp2-1.41.0
 	sys-libs/zlib
-	icu? ( >=dev-libs/icu-66.1:= )
+	icu? ( >=dev-libs/icu-67.1:= )
 	system-ssl? ( >=dev-libs/openssl-1.1.1:0= )
 "
 BDEPEND="

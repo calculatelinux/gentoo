@@ -32,6 +32,48 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2020-09-16)
+# Stuck on EAPI 4, only source is mirror://gentoo,
+# unmaintained, HOMEPAGE gone.
+app-admin/recursos
+
+# David Seifert <soap@gentoo.org> (2020-09-16)
+# EAPI 4, last release in 2001, the Fortran source code
+# is terrible and has buffer overflows.
+# Removal in 30 days.  Bug #664120, #742008.
+sci-chemistry/ortep3
+
+# Hans de Graaff <graaff@gentoo.org> (2020-09-16)
+# Mask old ruby slots for removal in 30 days. Please use a newer slot
+# instead.
+dev-ruby/bindata:2.4.1
+dev-ruby/delayer:0
+dev-ruby/faker:0
+dev-ruby/roadie:0
+dev-ruby/roadie-rails:0
+dev-ruby/rbnacl:5
+dev-ruby/twitter:6
+
+# Hans de Graaff <graaff@gentoo.org> (2020-09-16)
+# Dependencies of the already removed metasploit that are relevant
+# only with metasploit. Masked for removal in 30 days.
+dev-ruby/meterpreter_bins
+dev-ruby/patch_finder
+dev-ruby/rb-readline-r7
+
+# Sam James <sam@gentoo.org> (2020-09-15)
+# No longer exists upstream, stuck on long-obsolete EAPI 4,
+# and fails to build with glibc-2.32.
+# Vestige of Gentoo/FreeBSD.
+# bug #715506, #737892, #740916, #547244.
+sys-fs/ufsutils
+
+# Stephan Hartmann <sultan@gentoo.org> (2020-09-15)
+# Stuck on EAPI 4, does not build, homepage gone, no maintainer.
+# Removal in 30 days. See bugs #717188, #725212, #736607,
+# #742158.
+net-nntp/sn
+
 # James Le Cuirot <chewi@gentoo.org> (2020-09-13)
 # License issues. app-arch/arj is a better alternative. Removal in 30
 # days. See bug #694746.
@@ -52,12 +94,6 @@ dev-python/args
 # Dead upstream, EAPI 4, no maintainer
 # Removal in 30 days
 net-dialup/tkvoice
-
-# Sam James <sam@gentoo.org> (2020-09-13)
-# Dead upstream, EAPI 4, no maintainer
-# Removal in 30 days
-# bug #740954
-dev-lang/cll1h
 
 # Sam James <sam@gentoo.org> (2020-09-12)
 # Merged into app-text/texlive-core
@@ -112,8 +148,8 @@ dev-db/mariadb:10.1
 =dev-python/pypy3-exe-7.3.2_rc*
 
 # Thomas Beierlein <tomjbe@gentoo.org> (2020-09-09)
-# Depends on obsolete gnome-base/libgnomeui. 
-# Upstream promised to have a better version 
+# Depends on obsolete gnome-base/libgnomeui.
+# Upstream promised to have a better version
 # for nearly a year now, but no release in sight.
 # Masked for removal in 30 days.
 sci-electronics/linsmith
@@ -374,7 +410,7 @@ net-mail/maildirtree
 dev-haskell/bio
 
 # Piotr Karbowski <slashbeast@gentoo.org> (2020-08-28)
-# Temporary mask due to multiple reports of segfaults at startup, bug #739056 
+# Temporary mask due to multiple reports of segfaults at startup, bug #739056
 =x11-base/xorg-server-1.20.9
 
 # Marek Szuba <marecki@gentoo.org> (2020-08-26)
@@ -629,45 +665,11 @@ dev-haskell/yesod-platform
 # Does not compile against current ghc-8.8. Removal in 30 days.
 dev-haskell/yesod-routes
 
-# Hans de Graaff <graaff@gentoo.org> (2020-08-16)
-# Old unmaintained package without reverse dependencies. Block removal
-# of insecure dev-ruby/rack versions, bug 730786. Masked for removal
-# in 30 days.
-dev-ruby/bcat
-
-# Hans de Graaff <graaff@gentoo.org> (2020-08-16)
-# Mask old obsolete slots for removal in 30 days.
-# Use a newer slot of the same package instead.
-dev-ruby/mysql2:0.4
-dev-ruby/regexp_property_values:0
-dev-ruby/request_store:1.0.5
-
 # Mart Raudsepp <leio@gentoo.org> (2020-08-15)
 # Development release, needs testing to ensure valac-0.50
 # works for existing packages
 >=dev-libs/vala-common-0.49
 dev-lang/vala:0.50
-
-# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-14)
-# Was subsumed by dev-haskell/network. Use that instead.
-# Removal in 30 days. bug #735796
-dev-haskell/network-bytestring
-
-# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-14)
-# Was not ported to >=ghc-8. Old dev-vcs/darcs was the only user.
-# Removal in 30 days. bug #735998
-dev-haskell/hashed-storage
-
-# Rick Farina <zerochaos@gentoo.org> (2020-08-14)
-# Obsolete, nothing depends on it. Removal in 30 days.
-net-wireless/lorcon-old
-
-# Mikle Kolyada <zlogene@gentoo.org> (2020-08-14)
-# Obsolete package. Current version is py2-only.
-# py3 port has been abandoned for a long time.
-# Use bibtex/biber as a replacement.
-# Removal in 30 days.
-dev-tex/crosstex
 
 # Matt Turner <mattst88@gentoo.org> (2020-08-13)
 # Masked for testing
@@ -678,26 +680,6 @@ dev-tex/crosstex
 # Masked for removal after 2020-10-01.
 # Bug #629272
 app-admin/apg
-
-# Michał Górny <mgorny@gentoo.org> (2020-08-09)
-# Build tool with no revdeps left.
-# Removal in 30 days.  Bug #736517.
-dev-python/paver
-
-# Michał Górny <mgorny@gentoo.org> (2020-08-09)
-# Python 2 only.  No commits since 2015.
-# Removal in 30 days.  Bug #735334.
-dev-vcs/git-bz
-
-# Hans de Graaff <graaff@gentoo.org> (2020-08-07)
-# Slot with known security issues. Please use a newer slot
-# instead. Removal in 30 days. Bug #713478.
-dev-ruby/json:0
-
-# Hans de Graaff <graaff@gentoo.org> (2020-08-07)
-# Slot with known security issues. Please use a newer slot
-# instead. Removal in 30 days. Bug #733116.
-dev-ruby/kramdown:0
 
 # Mikle Kolyada <zlogene@gentoo.org> (2020-08-02)
 # consolekit is abandoned upstream.
@@ -787,7 +769,6 @@ net-libs/nDPI
 # https://www.gentoo.org/support/news-items/2020-04-03-kubernetes-moving-to-single-package.html
 #
 # Removal in 60 days. Bug #731804
-sys-cluster/kubeadm
 sys-cluster/kube-apiserver
 sys-cluster/kube-controller-manager
 sys-cluster/kubectl
@@ -797,6 +778,7 @@ sys-cluster/kube-scheduler
 
 # Michał Górny <mgorny@gentoo.org> (2020-07-13)
 # Python 2 dev-python/pillow revdeps with extended removal time.
+# Also the only revdeps of dev-python/matplotlib-python2.
 # Removal in 90 days.  Bug #729672.
 <net-wireless/gnuradio-3.8
 <net-wireless/gr-iio-0.3_p20191219-r1
@@ -805,6 +787,7 @@ sys-cluster/kube-scheduler
 <net-wireless/gr-ieee802154-0.0_p20191006
 <net-wireless/gr-iqbal-0.38.1
 <net-wireless/gr-osmosdr-0.2.0
+dev-python/matplotlib-python2
 
 # Stephan Hartmann <sultan@gentoo.org> (2020-09-06)
 # Dev channel releases are only for people who

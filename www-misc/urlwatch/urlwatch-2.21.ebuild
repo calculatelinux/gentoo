@@ -34,11 +34,15 @@ BDEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
 		${RDEPEND}
+		dev-python/docutils[${PYTHON_USEDEP}]
+		dev-python/pycodestyle[${PYTHON_USEDEP}]
 		dev-python/pytest[${PYTHON_USEDEP}]
 	)
 "
 
 DOCS=( CHANGELOG.md README.md )
+
+distutils_enable_sphinx docs/source dev-python/alabaster
 
 python_test() {
 	local skipped_tests=(
