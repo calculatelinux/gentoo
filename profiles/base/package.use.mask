@@ -6,6 +6,14 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Michał Górny <mgorny@gentoo.org> (2020-09-20)
+# The respective dependencies are masked for removal.
+net-nntp/pan gnome-keyring
+
+# Michał Górny <mgorny@gentoo.org> (2020-09-19)
+# The respective dependencies are masked for removal.
+app-office/lyx docbook
+
 # Michał Górny <mgorny@gentoo.org> (2020-09-09)
 # The respective dependencies are masked for removal.
 media-plugins/mythplugins mythnetvision
@@ -411,7 +419,6 @@ media-video/ffmpeg appkit
 # packages. Those who wish to experiment with it as a fully recognised
 # Gentoo JVM can unmask the flag.
 dev-java/openjdk-jre-bin:11 gentoo-vm
-dev-java/oracle-jdk-bin:11 gentoo-vm
 dev-java/openjdk-bin:11 gentoo-vm
 dev-java/openjdk:11 gentoo-vm
 
