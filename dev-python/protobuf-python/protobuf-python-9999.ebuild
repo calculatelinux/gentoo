@@ -2,8 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
+
+DISTUTILS_USE_SETUPTOOLS=rdepend
 PYTHON_COMPAT=(python{2_7,3_6,3_7,3_8,3_9})
-DISTUTILS_USE_SETUPTOOLS="manual"
 
 inherit distutils-r1
 
@@ -30,7 +31,6 @@ IUSE=""
 BDEPEND="${PYTHON_DEPS}
 	~dev-libs/protobuf-${PV}
 	dev-python/namespace-google[${PYTHON_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]"
 DEPEND="${PYTHON_DEPS}
 	~dev-libs/protobuf-${PV}"
