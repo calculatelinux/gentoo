@@ -1,7 +1,7 @@
-BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile install postrm test unpack
-DEPEND=dev-db/sqlite:3 dev-libs/glib:2 dev-lua/luafilesystem[luajit=] net-libs/webkit-gtk:4= x11-libs/gtk+:3 luajit? ( dev-lang/luajit:2 ) !luajit? ( dev-lang/lua:0 ) virtual/pkgconfig doc? ( app-doc/doxygen ) test? ( dev-lua/luassert[luajit=] dev-lua/luacheck[luajit=] x11-base/xorg-server[xvfb] )
-DESCRIPTION=A fast, light, simple to use micro-browser using WebKit and Lua
+BDEPEND=virtual/pkgconfig doc? ( app-doc/doxygen ) >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
+DEPEND=dev-db/sqlite:3 dev-libs/glib:2 dev-lua/luafilesystem[luajit=] net-libs/webkit-gtk:4= x11-libs/gtk+:3 luajit? ( dev-lang/luajit:2 ) !luajit? ( dev-lang/lua:0 ) test? ( dev-lua/luassert[luajit=] dev-lua/luacheck[luajit=] x11-base/xorg-server[xvfb] ) dev-util/desktop-file-utils x11-misc/shared-mime-info
+DESCRIPTION=A fast, extensible, and customizable web browser
 EAPI=7
 HOMEPAGE=https://luakit.github.io/luakit
 IUSE=doc luajit test
@@ -10,5 +10,5 @@ PROPERTIES=live
 RDEPEND=dev-db/sqlite:3 dev-libs/glib:2 dev-lua/luafilesystem[luajit=] net-libs/webkit-gtk:4= x11-libs/gtk+:3 luajit? ( dev-lang/luajit:2 ) !luajit? ( dev-lang/lua:0 )
 RESTRICT=!test? ( test )
 SLOT=0
-_eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441	multilib	98584e405e2b0264d37e8f728327fed1	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
-_md5_=681370196af168006bdb121fe6cf64cb
+_eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441	multilib	98584e405e2b0264d37e8f728327fed1	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_md5_=28fe7d04453f0d56a90a365643c1e4e9

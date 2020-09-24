@@ -35,7 +35,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	# Not packaged in Gentoo yet, but we'd be interested in: 
-	# Data::Password, Data::Password::passwdqc, Crypt::PWSafe3, (Authen::OATH (& Convert::Base32)).
+	optfeature "time-based-one-time-only password support" "dev-perl/Authen-OATH dev-perl/Convert-Base32"
 	optfeature "X clipboard support" "dev-perl/Capture-Tiny dev-perl/Clipboard"
+	optfeature "password quality check" dev-perl/Data-Password
+	optfeature "better password quality check" dev-perl/Data-Password-passwdqc
+	optfeature "importing Password Safe v3 databases" dev-perl/Crypt-PWSafe3
 }

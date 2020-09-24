@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python{2_7,3_7} )
+PYTHON_COMPAT=( python3_7 )
 DISTUTILS_USE_SETUPTOOLS=no
 DISTUTILS_OPTIONAL=yes
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.speech.kth.se/snack/"
 SRC_URI="http://www.speech.kth.se/snack/dist/${PN}${PV}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 hppa ~ppc ~ppc64 sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 hppa ppc ~ppc64 sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 SLOT="0"
 IUSE="alsa examples python vorbis"
 RESTRICT="!test? ( test )"

@@ -467,6 +467,7 @@ app-emulation/bochs:x86-64 - Enable support for emulation of 64-bit CPUs
 app-emulation/containerd:apparmor - Support for AppArmor
 app-emulation/containerd:btrfs - Support for BTRFS snapshot driver
 app-emulation/containerd:cri - Support for Kubernetes CRI
+app-emulation/containerd:device-mapper - Support for device mapper snapshot driver
 app-emulation/containers-storage:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
 app-emulation/containers-storage:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
 app-emulation/cri-o:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
@@ -1107,7 +1108,6 @@ app-shells/bash-completion:eselect - Support blacklisting of completions via 'es
 app-shells/mksh:lksh - variant that uses POSIX-compliant arithmetics with the host “long” data type and is automatically in POSIX mode when called as /bin/sh
 app-shells/pdsh:rsh - This allows the use of rsh (remote shell) and rcp (remote copy) for authoring websites. sftp is a much more secure protocol and is preferred.
 app-shells/shish:diet - Use dev-libs/dietlibc
-app-text/asciidoc:highlight - Enable source code highlighting
 app-text/atril:caja - Enable property page extension in mate-base/caja
 app-text/atril:dvi - Enable build-in DVI viewer
 app-text/atril:epub - Enable build-in DVI viewer using net-libs/webkit-gtk
@@ -2064,10 +2064,12 @@ dev-libs/dbus-c++:ecore - Use Ecore integration
 dev-libs/dbus-c++:glib - Use glib integration
 dev-libs/eekboard:libcanberra - Enable support for media-libs/libcanberra
 dev-libs/eekboard:xtest - Enable support for x11-libs/libXtst
+dev-libs/efl:avif - Enable AVIF image loader
 dev-libs/efl:bmp - Enable WBMP image loader
 dev-libs/efl:dds - Enable DDS image loader
 dev-libs/efl:drm - Enable DRM engine
 dev-libs/efl:eet - Enable Eet image loader
+dev-libs/efl:efl-one - Combine multiple core libraries into one libefl.so
 dev-libs/efl:fribidi - Enable bidirectional text support
 dev-libs/efl:glib - Enable dev-libs/glib support
 dev-libs/efl:harfbuzz - Enable complex text shaping and layout support
@@ -3177,6 +3179,7 @@ games-engines/openmw:osg-fork - Use OpenSceneGraph forked by OpenMW instead of u
 games-engines/renpy:development - Install IDE for game developers and an empty game template
 games-engines/residualvm:mpeg2 - enable mpeg2 codec for cutscenes
 games-engines/scummvm:fluidsynth - compile with support for fluidsynth
+games-engines/scummvm:fribidi - Support for right-to-left languages via dev-libs/fribidi
 games-engines/scummvm:mpeg2 - enable mpeg2 codec for cutscenes
 games-engines/scummvm:net - enable cloud support via media-libs/sdl2-net
 games-engines/scummvm:speech - enable text-to-speech support through app-accessibility/speech-dispatcher
@@ -3297,7 +3300,6 @@ games-simulation/flightgear:udev - Enable event-based Input devices through virt
 games-simulation/flightgear:utils - Build various utilities (fgpanel, fgviewer among others)
 games-simulation/openrct2:lightfx - Enables LightFX for better lightning effects.
 games-simulation/openrct2:scripting - Enable the dev-lang/duktape scripting engine for executing user scripts.
-games-simulation/openrct2:twitch - Enables streaming of ingame content to Twitch.
 games-simulation/openttd:aplaymidi - Enables midi music in game, using aplaymidi as an external player
 games-simulation/openttd:dedicated - Build only the openttd server, and not the client.
 games-simulation/openttd:lzo - Enables LZO compression for savegames. This is only needed to load extremely old savegames. (versions before 0.2)
@@ -5264,6 +5266,8 @@ net-analyzer/monitoring-plugins:fping - Install net-analyzer/fping required for 
 net-analyzer/monitoring-plugins:game - Install games-util/qstat required for monitoring FPS servers. Disabling the flag does not remove any plugins.
 net-analyzer/monitoring-plugins:snmp - Install dev-perl/Net-SNMP and net-analyzer/net-snmp required for monitoring SNMP values. Disabling the flag does not remove any plugins.
 net-analyzer/monitoring-plugins:ssh - Install net-misc/openssh required for monitoring SSH servers. Disabling the flag does not remove any plugins.
+net-analyzer/mtr:ipinfo - Disable support for IP address lookups
+net-analyzer/mtr:jansson - Enable JSON output support through dev-libs/jansson
 net-analyzer/munin:asterisk - Install the packages required for monitoring Asterisk. Disabling the flag does not remove any plugin files.
 net-analyzer/munin:cgi - Install the CGI-compatible scripts for on-the-fly generation of web pages and graphs. This is only meaningful if the minimal USE flag is disabled.
 net-analyzer/munin:dhcpd - Install dev-perl/Net-IP, dev-perl/HTTP-Date and net-misc/dhcp to monitor DHCP lease usage. This only works if the server is on the same system as the node, so the server is also brought in. Disabling the flag does not remove any plugin file.
@@ -7041,7 +7045,7 @@ net-wireless/openbsc:gprs - Support GPRS via OpenGGSN
 net-wireless/osmocom-bb:transmit - Enable transmission capabilities.
 net-wireless/rtl-sdr:zerocopy - may cause a bus error on some ARM systems
 net-wireless/rtl_433:rtlsdr - Build with Realtek RTL2832U (rtlsdr) support
-net-wireless/rtl_433:soapy - Build with SoapySDR support
+net-wireless/rtl_433:soapysdr - Build with SoapySDR support
 net-wireless/soapy_power:faster - Use dev-python/scipy to speed up drawing
 net-wireless/soapy_power:fastest - Use dev-python/pyFFTW to speed up drawing to the max
 net-wireless/soapysdr:bladerf - Add support for bladerf hardware
@@ -7977,6 +7981,7 @@ sys-auth/ssh-ldap-pubkey:schema - Install a copy of the LPK schema, only needed 
 sys-auth/sssd:acl - Build and use the cifsidmap plugin
 sys-auth/sssd:autofs - Build helper to let net-fs/autofs use sssd provided information
 sys-auth/sssd:locator - Install sssd's Kerberos plugin
+sys-auth/sssd:man - Build man pages with dev-libs/libxslt
 sys-auth/sssd:manpages - Build man pages with dev-libs/libxslt
 sys-auth/sssd:netlink - Add support for netlink protocol via dev-libs/libnl
 sys-auth/sssd:nfsv4 - Add support for the nfsv4 idmapd plugin provided by net-libs/libnfsidmap

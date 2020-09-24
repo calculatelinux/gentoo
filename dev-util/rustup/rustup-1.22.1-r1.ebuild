@@ -251,7 +251,7 @@ SRC_URI="https://github.com/rust-lang/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz
 
 LICENSE="Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD Boost-1.0 CC0-1.0 MIT Unlicense ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64"
+KEYWORDS="~amd64 ~arm64 ~ppc64"
 IUSE=""
 
 # requires old libressl-2.5, so openssl only for now.
@@ -274,13 +274,18 @@ src_prepare() {
 	sed -i "/^home =/s:.*:home = { path = \"../home-${HOME_CRATE_COMMIT}\" }:" Cargo.toml || die
 }
 
+src_configure() {
+	local myfeatures=( no-self-update )
+	cargo_src_configure
+}
+
 src_compile() {
 	export OPENSSL_NO_VENDOR=true
-	cargo_src_compile --features no-self-update
+	cargo_src_compile
 }
 
 src_install() {
-	cargo_src_install --features no-self-update
+	cargo_src_install
 	einstalldocs
 	exeinto /usr/share/rustup
 	newexe "$(prefixify_ro "${FILESDIR}"/symlink_rustup.sh)" symlink_rustup
@@ -293,10 +298,6 @@ src_install() {
 
 	insinto /usr/share/zsh/site-functions
 	doins "${T}/_rustup"
-}
-
-src_test() {
-	cargo_src_test --features no-self-update
 }
 
 pkg_postinst() {
