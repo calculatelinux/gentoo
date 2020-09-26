@@ -32,6 +32,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-09-25)
+# PyPy3.7 alpha.  Known to break a few packages.  Masked until it
+# matures more.
+=dev-python/pypy3-7.3.2_p37*
+=dev-python/pypy3-exe-7.3.2_p37*
+
+# Michał Górny <mgorny@gentoo.org> (2020-09-25)
+# Effectively unmaintained.  Not ported to py3.7.  Multiple unresolved
+# build failures reported.  No reverse dependencies.
+# Removal in 30 days.  Bug #737412.
+sci-libs/shogun
+
 # Aaron Bauman <bman@gentoo.org> (2020-09-22)
 # Fails to build with new Python or at all.
 # QA issues (byte compiling etc). All live ebuilds.
@@ -370,13 +382,6 @@ net-vpn/peervpn
 dev-db/mariadb:5.5
 dev-db/mariadb:10.1
 
-# Michał Górny <mgorny@gentoo.org> (2020-09-11)
-# 7.3.2 release candidates.  Masked for testing.
-=dev-python/pypy-7.3.2_rc*
-=dev-python/pypy3-7.3.2_rc*
-=dev-python/pypy-exe-7.3.2_rc*
-=dev-python/pypy3-exe-7.3.2_rc*
-
 # Thomas Beierlein <tomjbe@gentoo.org> (2020-09-09)
 # Depends on obsolete gnome-base/libgnomeui.
 # Upstream promised to have a better version
@@ -411,7 +416,6 @@ dev-python/redlock-py
 dev-python/root_numpy
 dev-python/rootpy
 dev-util/setconf
-sci-misc/vitables
 
 # Michał Górny <mgorny@gentoo.org> (2020-09-09)
 # These packages (or package versions) still require Python 2.7.
@@ -455,12 +459,9 @@ x11-misc/dsx
 #
 # net-analyzer/mk-livestatus: py3 bug #735394, build failure bug #705430
 # sci-biology/vienna-rna: py3 bug #735438, build failure bug #707158
-# sys-cluster/ganglia: py3 bug #735496, build failure bug #631270
 # sys-fs/owfs: py3 bug #735502, build failure bug #707438
 net-analyzer/mk-livestatus
 sci-biology/vienna-rna
-sys-cluster/ganglia
-sys-cluster/ganglia-web
 sys-fs/owfs
 
 # Louis Sautier <sbraz@gentoo.org> (2020-09-09)
@@ -646,23 +647,6 @@ dev-haskell/bio
 # Removal in 30 days. Bug #739066.
 dev-libs/hsa-ext-rocr
 
-# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-24)
-# Abandoned upstream.
-# Does not compile against ghc-8.8. Removal in 30 days.
-# Bug #736052.
-games-roguelike/mazesofmonad
-
-# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-24)
-# Obsolete package without reverse dependencies.
-# Does not compile against ghc-8.8. Removal in 30 days.
-dev-haskell/glade
-
-# Sergei Trofimovich <slyfox@gentoo.org> (2020-08-24)
-# Obsolete package without reverse dependencies.
-# Does not compile against ghc-8.8. Removal in 30 days.
-# Bug #735914.
-dev-haskell/drift
-
 # Alfredo Tupone <tupone@gentoo.org> (2020-08-23)
 # Ported to py3 but not yet released
 # Masked to allow py2.7 removal
@@ -683,10 +667,6 @@ dev-ada/gnatcoll-db
 # works for existing packages
 >=dev-libs/vala-common-0.49
 dev-lang/vala:0.50
-
-# Matt Turner <mattst88@gentoo.org> (2020-08-13)
-# Masked for testing
->=sys-auth/sssd-2.3.0
 
 # Jonas Stein <jstein@gentoo.org> (2020-08-13)
 # One of many password generators, but with dead upstream in this case.
