@@ -16,6 +16,10 @@ IUSE="test"
 
 RESTRICT="!test? ( test )"
 
+PATCHES=(
+	"${FILESDIR}/${P}-cmake-prefix.patch"
+)
+
 src_configure() {
 	local mycmakeargs=(
 		-DBUILD_TESTING=$(usex test)
