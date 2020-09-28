@@ -1530,12 +1530,6 @@ dev-haskell/cabal-install:native-dns - Enable use of the resolv and windns packa
 dev-haskell/chaselev-deque:debug - Enable the extra internal checks.
 dev-haskell/chell:color-output - use colors in program output
 dev-haskell/chimera:representable - Define Representable instance from adjunctions package
-dev-haskell/citeproc-hs:bibutils - use Chris Putnam's app-text/bibutils
-dev-haskell/citeproc-hs:embed-data-files - Embed locale files into the library (needed for windows packaging)
-dev-haskell/citeproc-hs:hexpat - use dev-haskell/hexpat instead of dev-haskell/xml for XML parsing
-dev-haskell/citeproc-hs:network - use dev-haskell/network and dev-haskell/http to retrieve CSL file from URIs
-dev-haskell/citeproc-hs:small-base - Choose the new smaller, split-up base package.
-dev-haskell/citeproc-hs:unicode-collation - Use Haskell bindings to the dev-libs/icu
 dev-haskell/cmark:system-cmark - use app-text/cmark instead of bundled copy
 dev-haskell/cmdargs:quotation - Build quote module
 dev-haskell/cmdargs:testprog - Build the test program
@@ -1817,6 +1811,7 @@ dev-lang/erlang:hipe - HIgh Performance Erlang extension
 dev-lang/erlang:kpoll - Enable kernel polling support
 dev-lang/fpc:ide - Build and install the Free Pascal Compiler IDE
 dev-lang/gdl:eigen - Build matrix manipulation with dev-cpp/eigen
+dev-lang/gdl:glpk - Use GNU Linear Programming Kit sci-mathematics/glpk
 dev-lang/gdl:gshhs - Add support for projection adn continent maps with sci-geosciences/gshhs-data
 dev-lang/gdl:hdf - Add support for the Hierarchical Data Format v.4
 dev-lang/gdl:proj - Add support for sci-libs/proj (geographic projections)
@@ -3034,9 +3029,7 @@ dev-vcs/kdesvn:man - Build and install man pages
 dev-vcs/mercurial:chg - Support Mercurial command server client
 dev-vcs/mercurial:gpg - Support signing with GnuPG.
 dev-vcs/mercurial:tk - Install dev-lang/tk for hgk script.
-dev-vcs/subversion:dso - Enable runtime module search
 dev-vcs/subversion:extras - Install extra scripts (examples, tools, hooks)
-dev-vcs/subversion:http - Enable http support using net-libs/serf
 dev-vcs/subversion:kwallet - Enable encrypted storage of passwords with kde-frameworks/kwallet
 games-action/beathazardultra:bundled-libs - Use the upstream provided bundled libraries.
 games-action/chromium-bsu:mixer - Enables media-libs/sdl-mixer sound backend instead of media-libs/openal one.
@@ -4223,9 +4216,10 @@ media-libs/libafterimage:shaping - Use MIT shaped X windows extention.
 media-libs/libafterimage:shm - Use MIT shared memory extention for X image transfer.
 media-libs/libass:harfbuzz - Enables OpenType shaping via media-libs/harfbuzz.
 media-libs/libavif:aom - Enable support for the AOM codec encoding and decoding
-media-libs/libavif:dav1d - Enable support for the dav1d codec encoding and decoding
-media-libs/libavif:extras - Build extra apps and test files
-media-libs/libavif:rav1e - Enable support for the rav1e codec encoding and decoding
+media-libs/libavif:dav1d - Enable support for the dav1d codec decoding
+media-libs/libavif:extras - Build extra apps (avifenc, avifdec) and test files
+media-libs/libavif:gdk-pixbuf - Build a gdk-pixbuf loader
+media-libs/libavif:rav1e - Enable support for the rav1e codec encoding
 media-libs/libbdplus:aacs - Add support for decryption of AACS
 media-libs/libbluray:aacs - Add support for decryption of AACS
 media-libs/libbluray:bdplus - Use media-libs/libbdplus for BD+ decryption
@@ -5582,8 +5576,6 @@ net-dns/nsd:nsec3 - Enable NSEC3 support
 net-dns/nsd:ratelimit - Enables ratelimiting, based on query name, type and source
 net-dns/nsd:root-server - Configure NSD as a root server
 net-dns/nsd:runtime-checks - Enable runtime checks, this could lead to a reduced service level
-net-dns/opendnssec:auditor - Enables auditing capabilities for OpenDNSSEC
-net-dns/opendnssec:eppclient - Enables support for automatic submission of DNSSEC keys to an upstream epp server
 net-dns/opendnssec:external-hsm - Enables support for storing DNSSEC keys through an arbitrary non-portage PKCS#11 interface, specified through an environment variable
 net-dns/opendnssec:opensc - Enables support for storing DNSSEC keys through a dev-libs/opensc PKCS#11 interface
 net-dns/opendnssec:signer - Enables signing capabilities for OpenDNSSEC
@@ -8280,6 +8272,7 @@ sys-devel/llvm:gold - Build the gold linker plugin
 sys-devel/llvm:ncurses - Support querying terminal properties using ncurses' terminfo
 sys-devel/llvm:xar - Support dumping LLVM bitcode sections in Mach-O files (uses app-arch/xar)
 sys-devel/llvm:z3 - Enable support for sci-mathematics/z3 constraint solver
+sys-devel/llvm-roc:runtime - Builds the compiler runtime libraries.
 sys-devel/parity:vc10_0 - Enable support for Visual Studio 2010
 sys-devel/parity:vc11_0 - Enable support for Visual Studio 2012
 sys-devel/parity:vc12_0 - Enable support for Visual Studio 2013

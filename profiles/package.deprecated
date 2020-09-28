@@ -17,6 +17,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Jesus P Rey <gentoo@chuso.net> (2020-09-26)
+# Only one provider left; media-video/ffmpeg should be used instead
+# Bug #744787
+virtual/ffmpeg
+
 # Thomas Deutschmann <whissi@gentoo.org> (2020-09-08)
 # Dead implementations, please migrate to >=zeromq-4
 dev-perl/ZMQ-LibZMQ2
@@ -35,11 +40,6 @@ x11-libs/wxGTK:3.0
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-05-17)
 # Abandoned upstream, countless bugs. Removal tracked in bug #659616
 sys-power/pm-utils
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-05-03)
-# Obsolete package gets in the way of unmasking >=x11-libs/pango-1.44
-# Bug #698922
-x11-libs/pangox-compat
 
 # Kent Fredric <kentnl@gentoo.org> (2020-04-15)
 # Functionality now provided by Net::SMTP 3.25+
