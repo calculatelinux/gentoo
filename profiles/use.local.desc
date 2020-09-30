@@ -416,6 +416,7 @@ app-editors/nano:magic - Add magic file support (sys-apps/file) to automatically
 app-editors/nano:minimal - Disable all fancy features, including ones that otherwise have a dedicated USE flag (such as spelling).
 app-editors/nano:split-usr - Enable this if /bin and /usr/bin are separate directories
 app-editors/ne:tinfo - Link against libtinfo from sys-libs/ncurses
+app-editors/neovim:lto - Build with Link Time Optimization (LTO)
 app-editors/neovim:nvimpager - Install nvimpager symlink to less.sh macro
 app-editors/neovim:tui - Build the neovim unix tui
 app-editors/okteta:designer - Build plugins for dev-qt/designer
@@ -3454,7 +3455,6 @@ gui-libs/wlroots:x11-backend - Enable support for handling input/output devices 
 gui-libs/xdg-desktop-portal-wlr:elogind - Enable support for rootless session via elogind
 gui-wm/hikari:gamma - add gamma control for redshift
 gui-wm/hikari:layershell - add support for wayland apps using layer shell
-gui-wm/hikari:man - build and install man pages
 gui-wm/hikari:screencopy - add support for screen grabbing
 gui-wm/hikari:virtual-io - enable virtual input/output support, needed for remote I/O in VNC
 gui-wm/sway:X - Enable support for X11 applications (XWayland)
@@ -3654,6 +3654,7 @@ kde-plasma/kscreenlocker:consolekit - Support for killing the screenlocker when 
 kde-plasma/ksysguard:pcap - Enable per-process network statistic collection using net-libs/libpcap
 kde-plasma/kwin:multimedia - Enable effect video button in desktop effects KCM
 kde-plasma/libksysguard:webengine - Enable display of detailed memory information using dev-qt/qtwebengine.
+kde-plasma/plasma-desktop:emoji - Build emojipicker applet using app-i18n/ibus and media-fonts/noto-emoji
 kde-plasma/plasma-desktop:ibus - Use ibus input method via app-i18n/ibus
 kde-plasma/plasma-desktop:scim - Enable applets that use app-i18n/scim
 kde-plasma/plasma-meta:browser-integration - Enable integration with Chrome/Firefox with browser extensions
@@ -4583,6 +4584,13 @@ media-sound/csound:utils - Build stand-alone executables for utilities that can 
 media-sound/csound:websocket - Build the websocket opcode
 media-sound/darkice:aacplus - AAC+ encoding via media-libs/libaacplus
 media-sound/darkice:twolame - Build with twolame support
+media-sound/deadbeef:converter - File format converter
+media-sound/deadbeef:cover - Support for cover art
+media-sound/deadbeef:hotkeys - Keyboard shortcuts support
+media-sound/deadbeef:notify - Desktop notifications support
+media-sound/deadbeef:nullout - Dummy output driver
+media-sound/deadbeef:shellexec - Define custom shell commands that can be called on tracks
+media-sound/deadbeef:supereq - Enable equalizer
 media-sound/deinvert:liquid - improve sound quality using net-libs/liquid-dsp
 media-sound/deinvert:wav - wav file support using media-libs/libsndfile
 media-sound/denemo:alsa - Enable alsa support through media-libs/alsa-lib
@@ -4795,7 +4803,6 @@ media-sound/supercollider:vim - Enable the SCVIM user interface
 media-sound/supercollider:webengine - Enable the internal help system using QtWebengine
 media-sound/teamspeak-server:tsdns - Install TeamSpeaks own DNS service for handling multiple virtual servers.
 media-sound/tomahawk:telepathy - Enable support for the real-time communication framework telepathy
-media-sound/traverso:lv2 - Add support for Ladspa V2
 media-sound/umurmur:mbedtls - Use net-libs/mbedtls as TLS provider
 media-sound/umurmur:shm - Enable shared memory support
 media-sound/upmpdcli:thirdparty - Enable streaming from Qobuz and Tidal external services
@@ -5576,6 +5583,8 @@ net-dns/nsd:nsec3 - Enable NSEC3 support
 net-dns/nsd:ratelimit - Enables ratelimiting, based on query name, type and source
 net-dns/nsd:root-server - Configure NSD as a root server
 net-dns/nsd:runtime-checks - Enable runtime checks, this could lead to a reduced service level
+net-dns/opendnssec:auditor - Enables auditing capabilities for OpenDNSSEC
+net-dns/opendnssec:eppclient - Enables support for automatic submission of DNSSEC keys to an upstream epp server
 net-dns/opendnssec:external-hsm - Enables support for storing DNSSEC keys through an arbitrary non-portage PKCS#11 interface, specified through an environment variable
 net-dns/opendnssec:opensc - Enables support for storing DNSSEC keys through a dev-libs/opensc PKCS#11 interface
 net-dns/opendnssec:signer - Enables signing capabilities for OpenDNSSEC

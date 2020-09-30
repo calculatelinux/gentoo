@@ -13,12 +13,16 @@ if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="https://github.com/neovim/neovim.git"
 else
 	SRC_URI="https://github.com/neovim/neovim/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~x86"
+	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 fi
 
 LICENSE="Apache-2.0 vim"
 SLOT="0"
-IUSE="+luajit +nvimpager +tui"
+IUSE="+lto +luajit +nvimpager +tui"
+# Upstream say the test library needs LuaJIT
+# https://github.com/neovim/neovim/blob/91109ffda23d0ce61cec245b1f4ffb99e7591b62/CMakeLists.txt#L377
+#REQUIRED_USE="test? ( luajit )"
+#RESTRICT="!test? ( test )"
 
 BDEPEND="
 	dev-util/gperf
@@ -26,11 +30,12 @@ BDEPEND="
 	virtual/libintl
 	virtual/pkgconfig
 "
-
+# Once dev-lua/busted has luajit support, we can add tests.
+# bug #584694
 DEPEND="
 	dev-libs/libutf8proc:=
 	dev-libs/libuv:0=
-	>=dev-libs/libvterm-0.1
+	>=dev-libs/libvterm-0.1.2
 	dev-libs/msgpack:0=
 	dev-lua/lpeg[luajit=]
 	dev-lua/luv[luajit=]
@@ -46,13 +51,10 @@ DEPEND="
 		>=dev-libs/unibilium-2.0.0:0=
 	)
 "
-
 RDEPEND="
 	${DEPEND}
 	app-eselect/eselect-vi
 "
-
-CMAKE_BUILD_TYPE=Release
 
 src_prepare() {
 	# use our system vim dir
@@ -63,7 +65,13 @@ src_prepare() {
 }
 
 src_configure() {
+	# Upstream default to LTO on non-debug builds
+	# Let's expose it as a USE flag because upstream
+	# have preferences for how we should use LTO
+	# if we want it on (not just -flto)
+	# ... but allow turning it off.
 	local mycmakeargs=(
+		-DENABLE_LTO=$(usex lto)
 		-DFEAT_TUI=$(usex tui)
 		-DPREFER_LUA=$(usex luajit no yes)
 	)

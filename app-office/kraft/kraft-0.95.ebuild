@@ -3,6 +3,7 @@
 
 EAPI=7
 
+VIRTUALX_REQUIRED="test"
 inherit ecm
 
 DESCRIPTION="Software to manage quotes and invoices in small enterprises"
@@ -13,6 +14,8 @@ LICENSE="GPL-2+ LGPL-2+"
 SLOT="5"
 KEYWORDS="~amd64 ~x86"
 IUSE="pim"
+
+RESTRICT+=" test" # requires package installed, bug 745408
 
 DEPEND="
 	dev-cpp/ctemplate
