@@ -14,9 +14,8 @@ LICENSE="GPL-3 CC-BY-3.0"
 SLOT="0"
 #KEYWORDS="~amd64 ~arm64"
 LANGS=" af ca cs da de el es fi fr gl he hu it ja nb nl pl pt-BR pt-PT ro ru sk sl sq sv th uk zh-CN zh-TW"
-# TODO add lua once dev-lang/lua-5.2 is unmasked
 IUSE="colord cups cpu_flags_x86_sse3 doc flickr geolocation gnome-keyring gphoto2 graphicsmagick jpeg2k kwallet
-	lto nls opencl openmp openexr tools webp
+	lto lua nls opencl openmp openexr tools webp
 	${LANGS// / l10n_}"
 
 BDEPEND=">=dev-python/jsonschema-3.2.0
@@ -91,10 +90,12 @@ src_prepare() {
 }
 
 src_configure() {
+	# TODO: switch to system Lua once 5.3 has been unmasked
 	local mycmakeargs=(
-		-DBUILD_PRINT=$(usex cups)
+		-DDONT_USE_INTERNAL_LUA=OFF
 		-DBUILD_CURVE_TOOLS=$(usex tools)
 		-DBUILD_NOISE_TOOLS=$(usex tools)
+		-DBUILD_PRINT=$(usex cups)
 		-DCUSTOM_CFLAGS=ON
 		-DRAWSPEED_ENABLE_LTO=$(usex lto)
 		-DUSE_CAMERA_SUPPORT=$(usex gphoto2)
@@ -103,7 +104,7 @@ src_configure() {
 		-DUSE_GRAPHICSMAGICK=$(usex graphicsmagick)
 		-DUSE_KWALLET=$(usex kwallet)
 		-DUSE_LIBSECRET=$(usex gnome-keyring)
-		-DUSE_LUA=OFF
+		-DUSE_LUA=$(usex lua)
 		-DUSE_MAP=$(usex geolocation)
 		-DUSE_NLS=$(usex nls)
 		-DUSE_OPENCL=$(usex opencl)
