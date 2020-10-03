@@ -1521,9 +1521,9 @@ dev-haskell/authenticate:network-uri - Get Network.URI from the network-uri pack
 dev-haskell/aws:network-3 - Use network-3
 dev-haskell/bifunctors:semigroups - You can disable the use of the `semigroups` package using `-f-semigroups`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/bifunctors:tagged - You can disable the use of the `tagged` package using `-f-tagged`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/biosff:fclip - Build the fclip executable.
-dev-haskell/biosff:flower - Build the flower executable.
-dev-haskell/biosff:frecover - Build the frecover executable.
+dev-haskell/biosff:fclip - Build the 'fclip' executable.
+dev-haskell/biosff:flower - Build the 'flower' executable.
+dev-haskell/biosff:frecover - Build the 'frecover' executable.
 dev-haskell/bytedump:executable - build executable file
 dev-haskell/bytes:test-doctests - Enable the doctest suite when using the enable-tests option for cabal.
 dev-haskell/c2hs:regression - run regression tests
@@ -2848,7 +2848,6 @@ dev-util/cppcheck:htmlreport - install cppcheck-htmlreport
 dev-util/ctags:json - Enable JSON output support
 dev-util/ctags:xml - Enable XML parsing support
 dev-util/ctags:yaml - Enable YAML parsing support
-dev-util/cwdiff:a2ps - install app-text/a2ps for postscript output
 dev-util/cwdiff:mercurial - install hg wdiff alias for dev-vcs/mercurial
 dev-util/devhelp:gedit - Install plugin for app-editors/gedit
 dev-util/dialog:minimal - Disable library, install command-line program only
@@ -4030,7 +4029,6 @@ media-gfx/fim:xfig - Enable FIG file support via media-gfx/xfig
 media-gfx/fontforge:truetype-debugger - Enable truetype debugger in fontforge
 media-gfx/fontforge:woff2 - Enable support for WOFF2 format
 media-gfx/fotowall:webcam - Enable webcam support
-media-gfx/freewrl:glew - Enable glew extensions
 media-gfx/freewrl:java - Build and install java EAI/SAI support library
 media-gfx/freewrl:libeai - Build EAI C library
 media-gfx/freewrl:opencl - Enable OpenCL support
@@ -4120,7 +4118,6 @@ media-gfx/ufraw:fits - Enable support for the FITS image format through sci-libs
 media-gfx/ufraw:timezone - enable DST correction for file timestamps
 media-gfx/xpaint:pgf - Support for loading PGF images
 media-gfx/xsane:ocr - Enable support for Optical Character Recognition reader
-media-gfx/yafaray:blender - Install addon for media-gfx/blender
 media-gfx/yafaray:fastmath - Enable mathematic approximations to make code faster
 media-gfx/yafaray:fasttrig - Enable trigonometric approximations to make code faster
 media-gfx/yafaray:opencv - Use media-libs/opencv
@@ -5815,7 +5812,6 @@ net-im/profanity:omemo - Enable OMEMO encryption
 net-im/profanity:otr - Enable encrypted conversations using Off-The-Records messaging
 net-im/prosody:jit - Use LuaJIT instead of vanilla Lua
 net-im/prosody:libevent - Use libevent for event handling
-net-im/prosody:zlib - Support for compressing XMPP streams with mod_compression
 net-im/psi:aspell - Enable spellchecking using app-text/aspell
 net-im/psi:enchant - Enable spellchecking using app-text/enchant
 net-im/psi:extras - Enable Psi+ patchset
