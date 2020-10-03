@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6,7,8,9} )
+PYTHON_COMPAT=( python3_{7,8,9} )
 
 inherit meson bash-completion-r1 eutils linux-info python-any-r1 readme.gentoo-r1 systemd
 
@@ -40,14 +40,22 @@ REQUIRED_USE="
 	virtualbox? ( libvirtd )
 	xen? ( libvirtd )"
 
+BDEPEND="
+	acct-user/qemu
+	policykit? ( acct-group/libvirt )
+	app-text/xhtml1
+	dev-lang/perl
+	dev-libs/libxslt
+	dev-perl/XML-XPath
+	dev-python/docutils
+	virtual/pkgconfig"
+
 # gettext.sh command is used by the libvirt command wrappers, and it's
 # non-optional, so put it into RDEPEND.
 # We can use both libnl:1.1 and libnl:3, but if you have both installed, the
 # package will use 3 by default. Since we don't have slot pinning in an API,
 # we must go with the most recent
 RDEPEND="
-	acct-user/qemu
-	policykit? ( acct-group/libvirt )
 	app-misc/scrub
 	>=dev-libs/glib-2.48.0
 	dev-libs/libgcrypt:0
@@ -60,7 +68,6 @@ RDEPEND="
 	net-libs/rpcsvc-proto
 	>=net-misc/curl-7.18.0
 	sys-apps/dmidecode
-	>=sys-apps/util-linux-2.17
 	sys-devel/gettext
 	sys-libs/ncurses:0=
 	sys-libs/readline:=
@@ -101,26 +108,20 @@ RDEPEND="
 		net-misc/radvd
 		sys-apps/iproute2[-minimal]
 	)
-	virtualbox? ( || ( app-emulation/virtualbox >=app-emulation/virtualbox-bin-2.2.0 ) )
 	wireshark-plugins? ( net-analyzer/wireshark:= )
 	xen? (
 		>=app-emulation/xen-4.6.0
 		app-emulation/xen-tools:=
 	)
 	udev? (
-		virtual/udev
+		virtual/libudev
 		>=x11-libs/libpciaccess-0.10.9
 	)
 	zfs? ( sys-fs/zfs )"
 
-DEPEND="${RDEPEND}
-	${PYTHON_DEPS}
-	app-text/xhtml1
-	dev-lang/perl
-	dev-libs/libxslt
-	dev-perl/XML-XPath
-	dev-python/docutils
-	virtual/pkgconfig"
+DEPEND="${BDEPEND}
+	${RDEPEND}
+	${PYTHON_DEPS}"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-6.0.0-fix_paths_in_libvirt-guests_sh.patch
@@ -210,7 +211,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	touch "${S}/.mailmap"
+	touch "${S}/.mailmap" || die
 
 	default
 
@@ -296,9 +297,9 @@ src_install() {
 
 	# Remove bogus, empty directories. They are either not used, or
 	# libvirtd is able to create them on demand
-	rm -rf "${D}"/etc/sysconfig
-	rm -rf "${D}"/var
-	rm -rf "${D}"/run
+	rm -rf "${D}"/etc/sysconfig || die
+	rm -rf "${D}"/var || die
+	rm -rf "${D}"/run || die
 
 	newbashcomp "${S}/tools/bash-completion/vsh" virsh
 	bashcomp_alias virsh virt-admin
@@ -324,13 +325,13 @@ src_install() {
 pkg_preinst() {
 	# we only ever want to generate this once
 	if [[ -e "${ROOT}"/etc/libvirt/qemu/networks/default.xml ]]; then
-		rm -rf "${D}"/etc/libvirt/qemu/networks/default.xml
+		rm -rf "${D}"/etc/libvirt/qemu/networks/default.xml || die
 	fi
 }
 
 pkg_postinst() {
 	if [[ -e "${ROOT}"/etc/libvirt/qemu/networks/default.xml ]]; then
-		touch "${ROOT}"/etc/libvirt/qemu/networks/default.xml
+		touch "${ROOT}"/etc/libvirt/qemu/networks/default.xml || die
 	fi
 
 	use libvirtd || return 0
