@@ -32,6 +32,19 @@
 
 #--- END OF EXAMPLES ---
 
+# Ulrich Müller <ulm@gentoo.org> (2020-10-04)
+# Version 1.11 introduced different startup conventions for the server
+# which breaks the OpenRC init script. Bug #746227.
+>=net-misc/tigervnc-1.11.0
+
+# David Seifert <soap@gentoo.org> (2020-10-03)
+# Broken for over 2 years, declared EOL by upstream,
+# the only revdep is media-gfx/pinta, which is also
+# broken. Bug #612592, #644232, #659436, #688722,
+# Removal in 30 days.
+dev-dotnet/mono-addins
+media-gfx/pinta
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-09-27)
 # Obsolete package blocking unmasking of >=x11-libs/pango-1.44, dead upstream.
 # No reverse dependencies, bug #698922. Removal in 30 days.
@@ -536,21 +549,6 @@ www-servers/cherokee
 # Removal in ~30 days. Bug #740868.
 dev-python/mini-amf
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-09-04)
-# No maintainer, defunct with modern browsers, bug #694024.
-# Masked for removal in 30 days.
-www-plugins/freshplayerplugin
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-09-04)
-# Depends on deprecated dev-qt/qtwebkit, maintainer unresponsive for 1.5 yr.;
-# Upstream dead, fork available, bug #684678. Masked for removal in 30 days.
-app-text/cutemarked
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-09-04)
-# Depends on deprecated dev-qt/qtwebkit, no more revdeps; bug #737928
-# Masked for removal in 30 days.
-kde-apps/libkgeomap
-
 # Louis Sautier <sbraz@gentoo.org> (2020-09-04)
 # Masked for removal in 30 days, no revdeps. Dependency of
 # previously removed dev-python/flask-bootstrap
@@ -683,22 +681,6 @@ net-libs/nDPI
 ~virtual/perl-Time-HiRes-1.976.400
 ~virtual/perl-Time-Piece-1.340.100
 ~virtual/perl-Unicode-Normalize-1.270.0
-
-# William Hubbs <williamh@gentoo.org> (2020-07-14)
-# The kubernetes split packages are old versions with known security
-# issues.
-#
-#If you haven't already, please upgrade and migrate to sys-cluster/kubernetes:
-#
-# https://www.gentoo.org/support/news-items/2020-04-03-kubernetes-moving-to-single-package.html
-#
-# Removal in 60 days. Bug #731804
-sys-cluster/kube-apiserver
-sys-cluster/kube-controller-manager
-sys-cluster/kubectl
-sys-cluster/kubelet
-sys-cluster/kube-proxy
-sys-cluster/kube-scheduler
 
 # Michał Górny <mgorny@gentoo.org> (2020-07-13)
 # Python 2 dev-python/pillow revdeps with extended removal time.
