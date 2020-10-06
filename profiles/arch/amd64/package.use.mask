@@ -17,6 +17,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2020-10-05)
+# Guile only supports JIT on some arches
+# (See 9.3.8 in the Guile manual)
+dev-scheme/guile -jit
+
 # Thomas Deutschmann <whissi@gentoo.org> (2020-09-07)
 # dev-util/nvidia-cuda-toolkit is keyworded on amd64
 app-metrics/collectd -collectd_plugins_gpu_nvidia
@@ -73,6 +78,7 @@ dev-libs/gjs -sysprof
 dev-qt/qtdeclarative -vulkan
 dev-qt/qtgui -vulkan
 dev-qt/qtwayland -vulkan
+media-video/pipewire -vulkan
 
 # James Le Cuirot <chewi@gentoo.org> (2019-12-10)
 # The JIT feature only works on amd64 and x86.

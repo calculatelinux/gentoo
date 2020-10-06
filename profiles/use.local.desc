@@ -479,6 +479,7 @@ app-emulation/crossover-bin:osmesa - Add support for OpenGL in bitmaps using lib
 app-emulation/crossover-bin:pcap - Support packet capture software (e.g. wireshark)
 app-emulation/crossover-bin:vulkan - Enable Vulkan drivers
 app-emulation/crun:bpf - Enable in Kernel, eBPF (enhanced Berkley Packet Filter) support for managing device controllers.
+app-emulation/crun:criu - Enable CRIU based checkpoint/restore support
 app-emulation/crun:man - Build and install man pages
 app-emulation/docker:apparmor - Enable AppArmor support.
 app-emulation/docker:aufs - Enables dependencies for the "aufs" graph driver, including necessary kernel flags.
@@ -592,7 +593,6 @@ app-emulation/qemu:ssh - Enable SSH based block device support via net-libs/libs
 app-emulation/qemu:static - Build the User and Software MMU (system) targets as well as tools as static binaries
 app-emulation/qemu:static-user - Build the User targets as static binaries
 app-emulation/qemu:systemtap - Enable SystemTAP/DTrace tracing
-app-emulation/qemu:tci - Enable the TCG Interpreter which can speed up or slowdown workloads depending on the host and guest CPUs being emulated. In the future it will be a runtime option but for now its compile time.
 app-emulation/qemu:usb - Enable USB passthrough via dev-libs/libusb
 app-emulation/qemu:usbredir - Use sys-apps/usbredir to redirect USB devices to another machine over TCP
 app-emulation/qemu:vde - Enable VDE-based networking
@@ -4363,6 +4363,9 @@ media-libs/phonon:vlc - Install VLC Phonon backend
 media-libs/phonon-gstreamer:network - Enable network streaming support via libsoup
 media-libs/portmidi:test-programs - Install various example programs
 media-libs/qtav:gui - Build a video player gui
+media-libs/quarter:designer - Install plugin for dev-qt/designer
+media-libs/quarter:man - Build and install man pages
+media-libs/quarter:qthelp - Build API documentation in QtHelp format
 media-libs/quvi:json - Enable support for JSON output
 media-libs/raptor:json - Enable support for JSON parsing
 media-libs/raspberrypi-userland-bin:hardfp - Use armv6 hardfp ABI
