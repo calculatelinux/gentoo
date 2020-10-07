@@ -51,10 +51,6 @@ opencl
 # net-libs/libsmi not tested on arm64 yet
 smi
 
-# Michał Górny <mgorny@gentoo.org> (2018-01-23)
-# sci-geosciences/gpsd is not keyworded here.
-gps
-
 # Mart Raudsepp <leio@gentoo.org> (2017-02-01)
 # Unmask systemd since it is keyworded here.
 -systemd
@@ -77,7 +73,6 @@ cblas-external
 amr
 
 # No hardware to test by the team
-dvb
 ios
 ipod
 
@@ -86,10 +81,6 @@ ipod
 dmi
 
 # Stuff we don't want
-fuse
-R
-octave
-xindy
 mpi
 lasi
 hardened
@@ -98,14 +89,10 @@ prelude
 mssql
 
 # havent tested yet
-libproxy
 darcs
 afs
-lirc
-lm-sensors
 scanner
 zvbi
-fluidsynth
 sid
 mms
 ieee1394
@@ -113,22 +100,15 @@ pm-utils
 darcs
 bs2b
 ladspa
-ldns
 ggi
 nut
 dvd
 fits
-tokyocabinet
-rtmp
-vpx
 lpsol
 quvi
-libtar
 zvbi
-devil
 gts
 anthy
-sdl
 
 # Unmask ARM-only video-cards
 -video_cards_exynos

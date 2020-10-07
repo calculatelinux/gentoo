@@ -5,6 +5,7 @@ EAPI=7
 PYTHON_COMPAT=( python3_{6,7,8,9} )
 PYTHON_REQ_USE="sqlite"
 DISTUTILS_SINGLE_IMPL=1
+DISTUTILS_USE_SETUPTOOLS=no
 
 inherit distutils-r1 xdg
 
@@ -14,7 +15,7 @@ SRC_URI="https://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="+dbus bluetooth kernel_linux mtp test"
 RESTRICT="!test? ( test )"
 
