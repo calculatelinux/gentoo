@@ -32,6 +32,44 @@
 
 #--- END OF EXAMPLES ---
 
+# Andrew Savchenko <bircoph@gentoo.org> (2020-10-11)
+# Mask old openafs version and corresponding openafs-kernel with
+# multiple CVEs.
+# All kernel module functionality is merged back in the single
+# net-fs/openafs package using USE="modules" starting from 1.8 branch.
+# No reverse dependencies, bug #719136. Removal in 30 days.
+net-fs/openafs-kernel
+<net-fs/openafs-1.8
+
+# Sam James <sam@gentoo.org> (2020-10-11)
+# Current Wireshark in ~arch is vulnerable.
+# Not updated yet due to maintainer inactivity.
+# This forces a downgrade to the fixed, stable
+# version of Wireshark.
+# bug #744592
+=net-analyzer/wireshark-3.3.0
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-10-11)
+# Mask new version until calendar apps are sorted out:
+# bug #747538.
+>=sys-libs/timezone-data-2020b
+
+# Mikle Kolyada <zlogene@gentoo.org> (2020-10-09)
+# pam module separated from
+# the sys-auth/passwdqc package
+# (now merged back).
+# Removal in 30 days
+sys-auth/pam_passwdqc
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-10-09)
+# Mask older erlang releases for removal.
+# Bug #740894.
+<dev-lang/erlang-23
+
+# Azamat H. Hackimov <azamat.hackimov@gmail.com> (2020-10-06)
+# 1.3.3 is broken and failing unittests for net-im/prosody. Bug #746782.
+>=dev-lua/luaexpat-1.3.3
+
 # Sam James <sam@gentoo.org> (2020-10-05)
 # Masked for testing. New major versions of Guile
 # often break reverse dependencies.
@@ -458,34 +496,6 @@ net-vpn/peervpn
 dev-db/mariadb:5.5
 dev-db/mariadb:10.1
 
-# Louis Sautier <sbraz@gentoo.org> (2020-09-10)
-# Masked for removal in 30 days, no revdeps.
-# All former consumers now use os.sendfile available in Python >= 3.3.
-dev-python/pysendfile
-
-# Mikle Kolyada <zlogene@gentoo.org> (2020-09-10)
-# Merged into the app-text/texlive-core package.
-# Removal in 30 days
-dev-tex/dvi2tty
-
-# Michał Górny <mgorny@gentoo.org> (2020-09-09)
-# Last release in <2003.  Fails to build (bug #691690).
-# Removal in 30 days.  Bug #731008.
-media-sound/freebirth
-
-# Michał Górny <mgorny@gentoo.org> (2020-09-09)
-# These packages still require Python 3.6.  They are either dead
-# upstream or their maintainers are simply unresponsive.
-# Please do not remove any packages from this list unless you actually
-# port them to Python 3.7 *and* 3.8 (3.9 would also be nice).
-# Removal in 30 days.  Please find relevant bugs on tracker bug #695996.
-app-crypt/acmebot
-app-vim/conque
-dev-python/redlock-py
-dev-python/root_numpy
-dev-python/rootpy
-dev-util/setconf
-
 # Michał Górny <mgorny@gentoo.org> (2020-09-09)
 # These packages (or package versions) still require Python 2.7.
 # They are either dead upstream, their Python 3 porting efforts are
@@ -493,56 +503,8 @@ dev-util/setconf
 # Please do not remove any packages from this list unless you actually
 # port them to Python 3.
 # Removal in 30 days.  Please find relevant bugs on tracker bug #694800.
-app-misc/mswinurl_launcher
-app-misc/mtail
-app-text/silvercity
-dev-libs/qrosspython
-dev-python/SchemaObject
-dev-python/oauth
-dev-ruby/pygments_rb
-dev-util/doxy-coverage
-dev-util/mpatch
-dev-vcs/cvs2svn
 dev-vcs/gitstats
 games-strategy/0ad
-media-sound/codecgraph
-net-misc/pssh
-net-misc/ris-linux
-net-wireless/mousejack
-net-wireless/python-wifi
-sci-biology/amos
-sci-biology/embassy-meme
-sci-biology/meme
-sci-biology/shrimp
-sci-misc/gato
-sci-physics/rivet
-sys-cluster/heartbeat
-x11-misc/dsx
-
-# Michał Górny <mgorny@gentoo.org> (2020-09-09)
-# These packages are stuck on Python 2.7.  While the Python dependency
-# is optional, I can't test removing it because the packages fail
-# to build anyway.
-#
-# net-analyzer/mk-livestatus: py3 bug #735394, build failure bug #705430
-# sci-biology/vienna-rna: py3 bug #735438, build failure bug #707158
-# sys-fs/owfs: py3 bug #735502, build failure bug #707438
-net-analyzer/mk-livestatus
-sci-biology/vienna-rna
-sys-fs/owfs
-
-# Louis Sautier <sbraz@gentoo.org> (2020-09-09)
-# Masked for removal in 30 days, no revdeps.
-# Backport of a module included in Python >= 3.3.
-dev-python/backports-unittest-mock
-
-# Michał Górny <mgorny@gentoo.org> (2020-09-09)
-# Multiple unresolved vulnerabilities.  Last release in 2013 (but has
-# some activity in git).  Not touched by maintainer since 2015.  Stuck
-# on Python 2 (bug #735522) with incorrect eclass usage (bug #710258).
-# Apparently broken with openssl-1.1 (bug #674246).
-# Removal in 30 days.  Bug #715204.
-www-servers/cherokee
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (2020-09-01)
 # Mismatched version (bug #695022). Masked to force upgrade to 2.0.4_pre20200306162733.
@@ -649,19 +611,6 @@ net-libs/nDPI
 ~virtual/perl-Time-Piece-1.340.100
 ~virtual/perl-Unicode-Normalize-1.270.0
 
-# Michał Górny <mgorny@gentoo.org> (2020-07-13)
-# Python 2 dev-python/pillow revdeps with extended removal time.
-# Also the only revdeps of dev-python/matplotlib-python2.
-# Removal in 90 days.  Bug #729672.
-<net-wireless/gnuradio-3.8
-<net-wireless/gr-iio-0.3_p20191219-r1
-<net-wireless/gr-paint-0.0_p20200517
-<net-analyzer/gr-fosphor-0.0_p20200131
-<net-wireless/gr-ieee802154-0.0_p20191006
-<net-wireless/gr-iqbal-0.38.1
-<net-wireless/gr-osmosdr-0.2.0
-dev-python/matplotlib-python2
-
 # Stephan Hartmann <sultan@gentoo.org> (2020-09-06)
 # Dev channel releases are only for people who
 # are developers or want more experimental features
@@ -671,7 +620,7 @@ dev-python/matplotlib-python2
 # Mart Raudsepp <leio@gentoo.org> (2020-06-06)
 # Meson port does not handle multilib yet and has issues
 # regarding runstatedir (not using /run).
-=net-misc/networkmanager-1.22.10-r11
+=net-misc/networkmanager-1.22*
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2020-03-27)
 # Vulnerable old version of icedtea-web #711392
@@ -753,42 +702,6 @@ app-office/texmacs
 # Requires >=dev-lang/lua-5.3 which is masked
 sys-apps/likwid
 
-# Matt Turner <mattst88@gentoo.org> (2019-03-16)
-# Previously packaged drivers, now removed from Gentoo.
-# Keep this mask in place so users are aware, but can also easily unmask them
-# in an overlay if so desired.
-x11-drivers/xf86-input-citron
-x11-drivers/xf86-video-apm
-x11-drivers/xf86-video-ark
-x11-drivers/xf86-video-chips
-x11-drivers/xf86-video-cirrus
-x11-drivers/xf86-video-cyrix
-x11-drivers/xf86-video-i128
-x11-drivers/xf86-video-i740
-x11-drivers/xf86-video-impact
-x11-drivers/xf86-video-mach64
-x11-drivers/xf86-video-neomagic
-x11-drivers/xf86-video-newport
-x11-drivers/xf86-video-nsc
-x11-drivers/xf86-video-rendition
-x11-drivers/xf86-video-s3
-x11-drivers/xf86-video-s3virge
-x11-drivers/xf86-video-savage
-x11-drivers/xf86-video-sis
-x11-drivers/xf86-video-sisusb
-x11-drivers/xf86-video-sunbw2
-x11-drivers/xf86-video-suncg14
-x11-drivers/xf86-video-suncg3
-x11-drivers/xf86-video-suncg6
-x11-drivers/xf86-video-sunffb
-x11-drivers/xf86-video-sunleo
-x11-drivers/xf86-video-suntcx
-x11-drivers/xf86-video-tdfx
-x11-drivers/xf86-video-tga
-x11-drivers/xf86-video-trident
-x11-drivers/xf86-video-tseng
-x11-drivers/xf86-video-voodoo
-
 # Miroslav Šulc <fordfrog@gentoo.org> (2019-01-23)
 # Depends on >=virtual/{jdk,jre}-11 which is masked
 dev-java/ant-eclipse-ecj:4.10
@@ -856,7 +769,6 @@ sys-devel/automake:1.10
 # If you still use one of these old toolchain packages, please upgrade (and
 # switch the compiler / the binutils) ASAP. If you need them for a specific
 # (isolated) use case, feel free to unmask them on your system.
-<sys-devel/gcc-5.4
 <sys-libs/glibc-2.30-r8
 <sys-devel/binutils-2.33.1-r1
 <sys-devel/binutils-hppa64-2.33.1

@@ -11,7 +11,7 @@ DESCRIPTION="Displays real-time system information from your Linux/*BSD box on a
 HOMEPAGE="http://www.lcdproc.org/"
 SRC_URI="https://github.com/${PN}/${PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 
-KEYWORDS="~amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug doc ethlcd extra-charmaps freetype menu nfs png samba test-menu"
@@ -43,6 +43,7 @@ for LCD_DEVICE in "${IUSE_LCD_DEVICES[@]}"; do
 	IUSE+=" lcd_devices_${LCD_DEVICE} "
 	REQUIRED_USE+=" lcd_devices_${LCD_DEVICE} "
 done
+IUSE="${IUSE/lcd_devices_glcd/+lcd_devices_glcd}"
 REQUIRED_USE+=" ) "
 unset LCD_DEVICE
 

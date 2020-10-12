@@ -6,6 +6,11 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Georgy Yakovlev <gyakovlev@gentoo.org> (2020-10-08)
+# Broken
+# error: unresolved link to `crate::os::unix::ffi::OsStrExt`
+>=dev-lang/rust-1.47.0 doc
+
 # Michał Górny <mgorny@gentoo.org> (2020-09-27)
 # The respective dependencies are masked for removal.
 net-im/telepathy-connection-managers gadu icq meanwhile steam yahoo
@@ -18,10 +23,6 @@ net-im/telepathy-connection-managers gadu icq meanwhile steam yahoo
 # The respective dependencies are masked for removal.
 ~dev-db/percona-server-5.7.27.30 test
 sci-geosciences/viking mapnik
-
-# Ulrich Müller <ulm@gentoo.org> (2020-09-25)
-# Python 2 only. Bug #735496.
-sys-cluster/ganglia python
 
 # Joonas Niilola <juippis@gentoo.org> (2020-09-23)
 # Highly experimental, may cause breakages when updating. Use with 
@@ -39,9 +40,7 @@ app-office/lyx docbook
 # Michał Górny <mgorny@gentoo.org> (2020-09-09)
 # The respective dependencies are masked for removal.
 media-plugins/mythplugins mythnetvision
-sci-physics/thepeg rivet
 sys-cluster/drbd-utils heartbeat
-sys-cluster/pacemaker heartbeat
 
 # Michał Górny <mgorny@gentoo.org> (2020-09-09)
 # The respective dependencies are masked for removal.
@@ -50,7 +49,6 @@ app-metrics/collectd collectd_plugins_onewire
 
 # Michał Górny <mgorny@gentoo.org> (2020-08-22)
 # These flags depend on dev-python/pygtk that is masked for removal.
-app-mobilephone/sobexsrv gtk
 <media-gfx/gimp-3 python
 
 # Michał Górny <mgorny@gentoo.org> (2020-08-22)
@@ -152,7 +150,6 @@ net-analyzer/hydra ncp
 # Michał Górny <mgorny@gentoo.org> (2020-03-28)
 # Requires masked dev-vcs/bzr.  Remove the mask if breezy is packaged
 # and the package is confirmed to work with it.
-dev-vcs/cvs2svn bazaar
 <=dev-util/rosinstall-0.7.8 test
 <=dev-util/wstool-0.1.18 test
 <=dev-python/vcstools-0.1.42 test

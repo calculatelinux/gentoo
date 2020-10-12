@@ -15,4 +15,8 @@ SLOT="0"
 LICENSE="MPL-2.0"
 KEYWORDS="amd64 ~arm ~arm64 ~ppc64 x86 ~amd64-linux ~x86-linux"
 
+RDEPEND="
+	<dev-python/pytest-6.1.0
+"
+
 distutils_enable_tests pytest

@@ -10,7 +10,7 @@ if [[ ${PV} == *9999 ]]; then
 	EGIT_REPO_URI="https://github.com/xournalpp/xournalpp.git"
 	unset SRC_URI
 else
-	KEYWORDS="~amd64"
+	KEYWORDS="amd64"
 	SRC_URI="https://github.com/xournalpp/xournalpp/archive/${PV}.tar.gz -> ${P}.tgz"
 fi
 
@@ -39,6 +39,10 @@ BDEPEND="
 	virtual/pkgconfig
 	sys-apps/lsb-release
 "
+
+PATCHES=(
+	"${FILESDIR}/${P}-nostrip.patch" # bug 745255
+)
 
 src_prepare() {
 	cmake-utils_src_prepare

@@ -18,7 +18,7 @@ else
 	SLOT="stable/${ABI_VER}"
 	MY_P="rustc-${PV}"
 	SRC="${MY_P}-src.tar.xz"
-	KEYWORDS="~amd64 ~arm arm64 ppc64 ~x86"
+	KEYWORDS="amd64 arm arm64 ppc64 x86"
 fi
 
 RUST_STAGE0_VERSION="1.$(($(ver_cut 2) - 1)).1"
@@ -130,6 +130,7 @@ toml_usex() {
 
 boostrap_rust_version_check() {
 	# never call from pkg_pretend. eselect-rust may be not installed yet.
+	[[ ${MERGE_TYPE} == binary ]] && return
 	local rustc_wanted="$(ver_cut 1).$(($(ver_cut 2) - 1))"
 	local rustc_version=( $(eselect --brief rust show 2>/dev/null) )
 	rustc_version=${rustc_version[0]#rust-bin-}

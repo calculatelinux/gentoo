@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-FIREFOX_PATCHSET="firefox-esr-78-patches-02.tar.xz"
+FIREFOX_PATCHSET="firefox-esr-78-patches-03.tar.xz"
 
 LLVM_MAX_SLOT=11
 
@@ -49,7 +49,7 @@ SRC_URI="${MOZ_SRC_BASE_URI}/source/${MOZ_P}.source.tar.xz
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="https://www.mozilla.org/thunderbird"
 
-KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm64 ~ppc64 x86"
 
 SLOT="0/$(ver_cut 1)"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
@@ -201,7 +201,7 @@ llvm_check_deps() {
 		fi
 	fi
 
-	einfo "Will use LLVM slot ${LLVM_SLOT}!" >&2
+	einfo "Using LLVM slot ${LLVM_SLOT} to build" >&2
 }
 
 MOZ_LANGS=(
@@ -382,6 +382,25 @@ pkg_setup() {
 
 		llvm_pkg_setup
 
+		if use clang && use lto ; then
+			local version_lld=$(ld.lld --version 2>/dev/null | awk '{ print $2 }')
+			[[ -n ${version_lld} ]] && version_lld=$(ver_cut 1 "${version_lld}")
+			[[ -z ${version_lld} ]] && die "Failed to read ld.lld version!"
+
+			local version_llvm_rust=$(rustc -Vv 2>/dev/null | grep -F -- 'LLVM version:' | awk '{ print $3 }')
+			[[ -n ${version_llvm_rust} ]] && version_llvm_rust=$(ver_cut 1 "${version_llvm_rust}")
+			[[ -z ${version_llvm_rust} ]] && die "Failed to read used LLVM version from rustc!"
+
+			if ver_test "${version_lld}" -ne "${version_llvm_rust}" ; then
+				eerror "Rust is using LLVM version ${version_llvm_rust} but ld.lld version belongs to LLVM version ${version_lld}."
+				eerror "You will be unable to link ${CATEGORY}/${PN}. To proceed you have the following options:"
+				eerror "  - Manually switch rust version using 'eselect rust' to match used LLVM version"
+				eerror "  - Switch to dev-lang/rust[system-llvm] which will guarantee matching version"
+				eerror "  - Build ${CATEGORY}/${PN} without USE=lto"
+				die "LLVM version used by Rust (${version_llvm_rust}) does not match with ld.lld version (${version_lld})!"
+			fi
+		fi
+
 		python-any-r1_pkg_setup
 
 		# Avoid PGO profiling problems due to enviroment leakage
@@ -480,6 +499,11 @@ src_prepare() {
 }
 
 src_configure() {
+	# Show flags set at the beginning
+	einfo "Current CFLAGS:    ${CFLAGS}"
+	einfo "Current LDFLAGS:   ${LDFLAGS}"
+	einfo "Current RUSTFLAGS: ${RUSTFLAGS}"
+
 	local have_switched_compiler=
 	if use clang && ! tc-is-clang ; then
 		# Force clang
@@ -733,6 +757,9 @@ src_configure() {
 	# when they would normally be larger than 2GiB.
 	append-ldflags "-Wl,--compress-debug-sections=zlib"
 
+	# Make revdep-rebuild.sh happy; Also required for musl
+	append-ldflags -Wl,-rpath="${MOZILLA_FIVE_HOME}",--enable-new-dtags
+
 	# Pass $MAKEOPTS to build system
 	export MOZ_MAKE_FLAGS="${MAKEOPTS}"
 
@@ -747,6 +774,11 @@ src_configure() {
 
 	# Set build dir
 	mozconfig_add_options_mk 'Gentoo default' "MOZ_OBJDIR=${BUILD_DIR}"
+
+	# Show flags we will use
+	einfo "Build CFLAGS:    ${CFLAGS}"
+	einfo "Build LDFLAGS:   ${LDFLAGS}"
+	einfo "Build RUSTFLAGS: ${RUSTFLAGS}"
 
 	# Handle EXTRA_CONF and show summary
 	local ac opt hash reason

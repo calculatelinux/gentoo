@@ -106,7 +106,7 @@ src_install() {
 
 	dosym "${VENDOR_LIB}"/Slic3r/slic3r.pl /usr/bin/slic3r.pl
 
-	make_desktop_entry slic3r.pl \
+	make_desktop_entry "slic3r.pl --gui %F" \
 		Slic3r \
 		"${VENDOR_LIB}/Slic3r/var/Slic3r_128px.png" \
 		"Graphics;3DGraphics;Engineering;Development"
