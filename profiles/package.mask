@@ -42,9 +42,16 @@ dev-lua/luacrypto
 # All these ebuilds require slotted Lua, which is still masked.
 >=app-misc/worker-3.8.3-r100
 >=dev-lua/luv-1.32.0.0-r100
+>=dev-lua/luadbi-0.7.2-r100
 >=dev-lua/messagepack-0.3.2-r100
 >=dev-lua/toluapp-1.0.93_p20190513-r100
+>=games-engines/love-0.7.2-r100:0.7
+>=games-engines/love-0.8.0-r100:0.8
 >=games-engines/love-11.3-r100:0
+>=mail-filter/imapfilter-2.6.16-r100
+>=net-analyzer/suricata-6.0.0-r100
+>=net-p2p/eiskaltdcpp-2.2.10-r100
+>=www-servers/lighttpd-1.4.55-r100
 
 # Andrew Savchenko <bircoph@gentoo.org> (2020-10-11)
 # Mask old openafs version and corresponding openafs-kernel with
@@ -617,12 +624,6 @@ net-misc/gnome-remote-desktop
 # v3.6.1 is the latest version without this issue
 >=dev-libs/libsass-3.6.2
 
-# Victor Payno <vpayno+gentoo@gmail.com> (2020-01-23)
-# Requires slotted lua.
-=dev-lang/lua-5.1.5-r103
-=dev-lang/lua-5.2.4-r2
-=dev-lang/lua-5.3.5-r2
-
 # Lars Wendler <polynomial-c@gentoo.org> (2019-11-14)
 # Breaks archives containing relative paths
 # when being called with --no-absolute-filenames
@@ -778,20 +779,9 @@ app-admin/amazon-ec2-init
 # Rafael Martins <rafaelmartins@gentoo.org> (2016-12-04)
 # Adding Lua 5.3 to mask
 app-eselect/eselect-lua
-=dev-lang/lua-5.1.5-r100
-=dev-lang/lua-5.1.5-r101
-=dev-lang/lua-5.1.5-r102
-=dev-lang/lua-5.2.3
-=dev-lang/lua-5.2.3-r1
-=dev-lang/lua-5.2.3-r2
-=dev-lang/lua-5.2.3-r3
-=dev-lang/lua-5.2.4
-=dev-lang/lua-5.2.4-r1
-=dev-lang/lua-5.3.3
-=dev-lang/lua-5.3.3-r1
-=dev-lang/lua-5.3.3-r2
-=dev-lang/lua-5.3.5
-=dev-lang/lua-5.3.5-r1
+=dev-lang/lua-5.1.5-r103
+=dev-lang/lua-5.2.4-r2
+=dev-lang/lua-5.3.5-r2
 
 # Samuli Suominen <ssuominen@gentoo.org> (2012-03-06)
 # Masked for testing since this is known to break nearly
