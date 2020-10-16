@@ -13,9 +13,11 @@ LICENSE="Apache-2.0"
 SLOT="0/${PV}"
 KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 IUSE="+ocamlopt test"
+RESTRICT="!test? ( test )"
 
 DEPEND="
 	>=dev-ml/base-0.11.0:=
+	dev-ml/findlib:=
 	>=dev-ml/ocaml-compiler-libs-0.11:=
 	>=dev-ml/ocaml-migrate-parsetree-2.0.0:=
 		dev-ml/result:=

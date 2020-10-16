@@ -15,7 +15,7 @@ if [[ ${PV} == 9999* ]] ; then
 	inherit git-r3
 else
 	SRC_URI="https://www.freedesktop.org/software/libevdev/${P}.tar.xz"
-	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 s390 sparc x86"
+	KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~mips ppc ppc64 s390 sparc x86"
 fi
 
 LICENSE="MIT"
@@ -43,7 +43,7 @@ multilib_src_compile() {
 }
 
 multilib_src_test() {
-	meson_src_test
+	meson test -v -C "${BUILD_DIR}" -t 100 || die "tests failed"
 }
 
 multilib_src_install() {
