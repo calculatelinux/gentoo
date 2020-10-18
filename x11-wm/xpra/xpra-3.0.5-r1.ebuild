@@ -3,8 +3,8 @@
 
 EAPI=6
 
-# PyCObject_Check and PyCObject_AsVoidPtr vanished with python 3.3
 PYTHON_COMPAT=( python3_{6,7,8,9} )
+DISTUTILS_USE_SETUPTOOLS=no
 inherit xdg distutils-r1 eutils flag-o-matic user tmpfiles prefix
 
 DESCRIPTION="X Persistent Remote Apps (xpra) and Partitioning WM (parti) based on wimpiggy"
@@ -13,7 +13,7 @@ SRC_URI="http://xpra.org/src/${P}.tar.xz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="+client +clipboard csc cups dbus ffmpeg jpeg +lz4 lzo opengl pillow pulseaudio server sound test vpx webcam webp"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
@@ -73,6 +73,14 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.0-suid-warning.patch
 	"${FILESDIR}"/${PN}-3.0.2-ldconfig.patch
 )
+
+src_install() {
+	distutils-r1_src_install
+
+	mkdir -p "${ED}/usr/share/metainfo" || die
+	mv "${ED}/usr/share/appdata/"* "${ED}/usr/share/metainfo/" || die
+	rmdir "${ED}/usr/share/appdata" || die
+}
 
 pkg_postinst() {
 	enewgroup ${PN}

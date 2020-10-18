@@ -11,16 +11,17 @@ SRC_URI="https://github.com/janestreet/bin_prot/archive/v${PV}.tar.gz -> ${P}.ta
 
 LICENSE="Apache-2.0"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~arm ~arm64"
+KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 IUSE="+ocamlopt"
 
 RDEPEND="
-	dev-ml/base:=
-	dev-ml/ppx_compare:=
-	dev-ml/ppx_custom_printf:=
-	dev-ml/ppx_fields_conv:=
-	dev-ml/ppx_sexp_conv:=
-	dev-ml/ppx_variants_conv:=
-	!dev-ml/bin-prot
+	>=dev-ml/base-0.14.0:=
+	dev-ml/findlib:=
+	>=dev-ml/ppx_compare-0.14.0:=
+	>=dev-ml/ppx_custom_printf-0.14.0:=
+	>=dev-ml/ppx_fields_conv-0.14.0:=
+	>=dev-ml/ppx_optcomp-0.14.0:=
+	>=dev-ml/ppx_sexp_conv-0.14.0:=
+	>=dev-ml/ppx_variants_conv-0.14.0:=
 "
 DEPEND="${RDEPEND}"

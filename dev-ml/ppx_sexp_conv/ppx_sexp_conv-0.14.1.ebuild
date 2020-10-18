@@ -11,15 +11,17 @@ SRC_URI="https://github.com/janestreet/ppx_sexp_conv/archive/v${PV}.tar.gz -> ${
 
 LICENSE="Apache-2.0"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~arm ~arm64"
+KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 IUSE="+ocamlopt"
 
 DEPEND="
-	dev-ml/base:=
-	dev-ml/ocaml-migrate-parsetree:=
-		dev-ml/result:=
+	>=dev-ml/base-0.14.0:=
+	dev-ml/findlib:=
 	>=dev-ml/ppxlib-0.18.0:=
-		dev-ml/ocaml-compiler-libs:=
+		>=dev-ml/ocaml-compiler-libs-0.11.0:=
+		>=dev-ml/ocaml-migrate-parsetree-2.0.0:=
+			dev-ml/cinaps:=
+	dev-ml/sexplib0:=
 "
 RDEPEND="${DEPEND}"
 

@@ -1575,8 +1575,7 @@ dev-haskell/highlighting-kate:executable - Build the Highlight executable.
 dev-haskell/highlighting-kate:pcre-light - Use the pcre-light library instead of regex-pcre-builtin.
 dev-haskell/hlint:gpl - Use GPL libraries, specifically hscolour.
 dev-haskell/hps:build-exec - Build the `hps-fractals' executable
-dev-haskell/hs3:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/hslogger:buildtests - Build the executable to run unit tests.
+dev-haskell/hs3:network-uri - Get Network.URI from the network-uri package
 dev-haskell/hslogger:network-3 - Use network-3
 dev-haskell/hsopenssl:fast-bignum - Enable fast moving of bignums between OpenSSL and GMP (GHC Only)
 dev-haskell/http:conduit10 - Use version 1.0.x or below of the conduit package (for the test suite).
@@ -2661,7 +2660,6 @@ dev-qt/qt-docs:assistant - Install documentation for dev-qt/assistant
 dev-qt/qt-docs:bluetooth - Install documentation for dev-qt/qtbluetooth
 dev-qt/qt-docs:charts - Install documentation for dev-qt/qtcharts
 dev-qt/qt-docs:concurrent - Install documentation for dev-qt/qtconcurrent
-dev-qt/qt-docs:core - Install documentation for dev-qt/qtcore
 dev-qt/qt-docs:datavis - Install documentation for dev-qt/qtdatavis3d
 dev-qt/qt-docs:declarative - Install documentation for dev-qt/qtdeclarative
 dev-qt/qt-docs:designer - Install documentation for dev-qt/designer
@@ -2877,6 +2875,7 @@ dev-util/diffoscope:zip - Use app-arch/unzip
 dev-util/edb-debugger:jumbo-build - Experimental jumbo (also known as unity) build capability
 dev-util/edi:clang - Provide integration with sys-devel/clang for autocompletion and inline errors
 dev-util/emilpro:system-binutils - Use the gentoo binutils instead of building against an unpatched vanilla version
+dev-util/flatpak-builder:yaml - Use libyaml for yaml support
 dev-util/geany:gtk3 - Use GTK+3 instead of GTK+2
 dev-util/geany:vte - Enable Terminal support (x11-libs/vte)
 dev-util/geany-plugins:ctags - Enable ctags plugin
@@ -2935,10 +2934,12 @@ dev-util/nvidia-cuda-toolkit:vis-profiler - Install the NVIDIA CUDA visual profi
 dev-util/oprofile:apidoc - Provide doxygen generated API docs.
 dev-util/ostree:archive - Use libarchive
 dev-util/ostree:dracut - Install dracut module
+dev-util/ostree:gpg - Enable GPG support
 dev-util/ostree:grub - Enable grub configuration generator
 dev-util/ostree:http2 - Use http2
 dev-util/ostree:httpd - Enable ostree trivial-httpd entrypoint
 dev-util/ostree:libmount - Use libmount
+dev-util/ostree:sodium - Use libsodium for ed25519
 dev-util/ostree:soup - Use libsoup for networking
 dev-util/perf:clang - Enable builtin clang and LLVM support
 dev-util/perf:demangle - Enable C++ symbol name demangling, using libbfd from sys-devel/binutils. When this flag is enabled, the package will have to be rebuilt after every version bump of binutils.
@@ -4292,7 +4293,6 @@ media-libs/mesa:gallium - Build drivers based on Gallium3D, the new architecture
 media-libs/mesa:gbm - Enable the Graphics Buffer Manager for EGL on KMS.
 media-libs/mesa:gles1 - Enable GLESv1 support.
 media-libs/mesa:gles2 - Enable GLESv2 support.
-media-libs/mesa:libglvnd - Use libglvnd for dispatch.
 media-libs/mesa:llvm - Enable LLVM backend for Gallium3D.
 media-libs/mesa:lm-sensors - Enable Gallium HUD lm-sensors support.
 media-libs/mesa:opencl - Enable the Clover Gallium OpenCL state tracker.
@@ -5254,6 +5254,7 @@ net-analyzer/hydra:libssh - Enable SSH support through net-libs/libssh
 net-analyzer/hydra:mongodb - MongoDB support through dev-libs/mongo-c-driver
 net-analyzer/hydra:ncp - NCP protocol (NetWare) support through ncpfs
 net-analyzer/icinga2:console - Adds support for line-editing in the console
+net-analyzer/icinga2:jumbo-build - Combine source files to speed up build process, requires more memory
 net-analyzer/icinga2:lto - Adds support for link time optimization
 net-analyzer/icinga2:mail - Allows for mailing of alerts
 net-analyzer/icinga2:mariadb - Enable support for the mariadb database backend

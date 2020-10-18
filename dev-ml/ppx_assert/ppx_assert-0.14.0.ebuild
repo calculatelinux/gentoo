@@ -15,13 +15,15 @@ KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 IUSE="+ocamlopt"
 
 DEPEND="
-	dev-ml/base:=
-	dev-ml/ppx_cold:=
-	dev-ml/ppx_compare:=
-	dev-ml/ppx_here:=
-	dev-ml/ppx_sexp_conv:=
-	dev-ml/ppxlib:=
-		dev-ml/ocaml-migrate-parsetree:=
-			dev-ml/result:=
+	>=dev-ml/base-0.14.0:=
+	dev-ml/findlib:=
+	>=dev-ml/ppx_cold-0.14.0:=
+	>=dev-ml/ppx_compare-0.14.0:=
+	>=dev-ml/ppx_here-0.14.0:=
+	>=dev-ml/ppx_sexp_conv-0.14.1:=
+	>=dev-ml/ppxlib-0.18.0:=
+		>=dev-ml/ocaml-compiler-libs-0.11.0:=
+		>=dev-ml/ocaml-migrate-parsetree-2.0.0:=
+			dev-ml/cinaps:=
 "
 RDEPEND="${DEPEND}"

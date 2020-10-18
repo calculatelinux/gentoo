@@ -11,19 +11,19 @@ SRC_URI="https://github.com/janestreet/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.g
 
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~arm ~arm64"
+KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 IUSE="+ocamlopt"
 
 DEPEND="
-	dev-ml/base:=
-	dev-ml/ppx_base:=
-	dev-ml/ppx_fields_conv:=
-	dev-ml/ppx_let:=
-	dev-ml/ppx_sexp_message:=
-	dev-ml/ppx_sexp_value:=
+	>=dev-ml/base-0.14.0:=
+	>=dev-ml/ppx_base-0.14.0:=
+	>=dev-ml/ppx_fields_conv-0.14.1:=
+	>=dev-ml/ppx_let-0.14.0:=
+	>=dev-ml/ppx_sexp_message-0.14.0:=
+	>=dev-ml/ppx_sexp_value-0.14.0:=
 	dev-ml/splittable_random:=
-	dev-ml/ppxlib:=
-		dev-ml/ocaml-migrate-parsetree:=
-			dev-ml/result:=
+	>=dev-ml/ppxlib-0.18.0:=
+		>=dev-ml/ocaml-migrate-parsetree-2.0.0:=
+			dev-ml/cinaps:=
 "
 RDEPEND="${DEPEND}"

@@ -15,16 +15,14 @@ SLOT="0"
 KEYWORDS="amd64 ~arm64 x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-CDEPEND=">=dev-python/pbr-1.8[${PYTHON_USEDEP}]"
-DEPEND="
-	dev-python/setuptools[${PYTHON_USEDEP}]
-	${CDEPEND}"
+DEPEND=">=dev-python/pbr-1.8[${PYTHON_USEDEP}]"
 RDEPEND="
-	${CDEPEND}
+	>=dev-python/pbr-1.8[${PYTHON_USEDEP}]
 	>=dev-python/cryptography-1.1.0[${PYTHON_USEDEP}]
 	>=dev-python/cryptography-1.3.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-serialization-1.10.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-utils-3.16.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-i18n-2.1.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-log-1.14.0[${PYTHON_USEDEP}]
-	>=dev-python/castellan-0.4.0[${PYTHON_USEDEP}]"
+	>=dev-python/castellan-0.4.0[${PYTHON_USEDEP}]
+"
