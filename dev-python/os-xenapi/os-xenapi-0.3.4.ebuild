@@ -15,12 +15,9 @@ SLOT="0"
 KEYWORDS="amd64 ~arm64 x86"
 IUSE=""
 
-CDEPEND="
-	>=dev-python/pbr-2.0.0[${PYTHON_USEDEP}]"
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	${CDEPEND}"
+DEPEND=">=dev-python/pbr-2.0.0[${PYTHON_USEDEP}]"
 RDEPEND="
-	${CDEPEND}
+	>=dev-python/pbr-2.0.0[${PYTHON_USEDEP}]
 	>=dev-python/Babel-2.3.4[${PYTHON_USEDEP}]
 	>=dev-python/eventlet-0.18.4[${PYTHON_USEDEP}]
 	!~dev-python/eventlet-0.20.1[${PYTHON_USEDEP}]
@@ -28,9 +25,5 @@ RDEPEND="
 	>=dev-python/oslo-log-3.36.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-utils-3.33.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-i18n-3.15.3[${PYTHON_USEDEP}]
-	>=dev-python/six-1.9.0[${PYTHON_USEDEP}]"
-
-python_prepare_all() {
-	sed -i '/^hacking/d' test-requirements.txt || die
-	distutils-r1_python_prepare_all
-}
+	>=dev-python/six-1.9.0[${PYTHON_USEDEP}]
+"
