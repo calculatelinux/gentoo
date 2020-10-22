@@ -23,7 +23,6 @@ app-accessibility/simon:pim - Enable support for KDE PIM resources integration
 app-accessibility/simon:sphinx - Build sphinx backend (pulls app-accessibility/julius if disabled
 app-accessibility/speech-dispatcher:espeak - Adds support for espeak speech engine
 app-accessibility/speech-dispatcher:flite - Adds support for flite speech engine
-app-admin/calamares:pythonqt - Enable PythonQt-based module interface
 app-admin/clsync:apidoc - Provide doxygen generated API docs.
 app-admin/clsync:cgroups - Use cgroups to limit /dev access.
 app-admin/clsync:clsync - Build clsync binary. Most likely you want it. However it is possible to build only libclsync without clsync itself.
@@ -8018,6 +8017,9 @@ sys-cluster/hpx:tbb - Use dev-cpp/tbb for memory allocation
 sys-cluster/keepalived:bfd - compile with support for Bidirectional Forwarding Detection (BFD).
 sys-cluster/keepalived:json - compile with signal to dump configuration and stats as JSON.
 sys-cluster/keepalived:regex - compile with support for regex in health checks
+sys-cluster/kronosnet:lzo2 - Add support for lzo2 compression
+sys-cluster/kronosnet:nss - Add support for tls via nss
+sys-cluster/kronosnet:openssl - Add support for tls via openssl
 sys-cluster/kubernetes:kube-apiserver - Kubernetes API server
 sys-cluster/kubernetes:kube-controller-manager - Kubernetes controller manager
 sys-cluster/kubernetes:kube-proxy - Kubernetes proxy service
