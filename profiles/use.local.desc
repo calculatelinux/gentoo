@@ -116,6 +116,8 @@ app-admin/rsyslog:dbi - Build the general database output module (requires dev-d
 app-admin/rsyslog:elasticsearch - Build the Elasticsearch output module (requires net-misc/curl)
 app-admin/rsyslog:gcrypt - Add support for encrypted log files using dev-libs/libgcrypt
 app-admin/rsyslog:gnutls - Build the GnuTLS network stream driver (requires net-libs/gnutls)
+app-admin/rsyslog:imhttp - Build the http input module (requires www-servers/civetweb)
+app-admin/rsyslog:impcap - Build the pcap input module (requires net-libs/libpcap)
 app-admin/rsyslog:kafka - Build the Apache Kafka input/output module (requires dev-libs/librdkafka)
 app-admin/rsyslog:kerberos - Build the GSSAPI input and output module (requires virtual/krb5)
 app-admin/rsyslog:kubernetes - Build the kubernetes modify plugin (requires net-misc/curl)
@@ -542,6 +544,7 @@ app-emulation/libvirt:wireshark-plugins - Build the net-analyzer/wireshark plugi
 app-emulation/libvirt:xen - Support management of Xen virtualisation (app-emulation/xen)
 app-emulation/libvirt:zfs - Enable ZFS backend storage sys-fs/zfs
 app-emulation/lxc:apparmor - Enable AppArmor support
+app-emulation/lxc:man - Build manpages
 app-emulation/lxc:templates - Install old style templates through app-emulation/lxc-templates
 app-emulation/lxc:tools - Build and install additional command line tools
 app-emulation/lxd:apparmor - Enable AppArmor support
@@ -7725,6 +7728,7 @@ sys-apps/hwloc:xml - use libxml2 for XML support, instead of a custom minimalist
 sys-apps/ibm-powerpc-utils:rtas - Add support for the Run Time Abstraction Services (RTAS)
 sys-apps/iotools:make-symlinks - Generate sub-command symlinks to iotools -- note that a lot are simple like "xor"
 sys-apps/ipmicfg:uefi - Install compatible UEFI file for boot.
+sys-apps/ipmitool:openbmc - Enable OpenBMC D-Bus interface
 sys-apps/ipmitool:openipmi - Use the system OpenIPMI implementation.
 sys-apps/iproute2:berkdb - build programs that use berkdb (just arpd)
 sys-apps/iproute2:elf - support loading eBPF programs from ELFs (e.g. LLVM's eBPF backend)
