@@ -32,6 +32,101 @@
 
 #--- END OF EXAMPLES ---
 
+# Wiliam Hubbs <williamh@gentoo.org> (2020-10-26)
+# Combining kubernetes into one package breaks upgrades, so it is split
+# into separate packages. You need to upgrade and install the following
+# packages based on the needs of your cluster:
+#
+# sys-cluster/kubeadm, sys-cluster/kube-apiserver
+# sys-cluster/kube-controller-manager, sys-cluster/kubectl
+# sys-cluster/kubelet, sys-cluster/kube-proxy
+# sys-cluster/kube-scheduler
+#
+# This package is being removed in 30 days. bug #741572
+sys-cluster/kubernetes
+
+# Thomas Deutschmann <whissi@gentoo.org> (2020-10-26)
+# Depends on net-libs/zeromq-3 which is scheduled for removal.
+# Removal in 30 days.  Bug #741454.
+dev-perl/ZMQ-LibZMQ3
+
+# Thomas Deutschmann <whissi@gentoo.org> (2020-10-26)
+# Depends on net-libs/zeromq-2 which is scheduled for removal.
+# Removal in 30 days.  Bug #741454.
+dev-perl/ZMQ-LibZMQ2
+
+# Sam James <sam@gentoo.org> (2020-10-25)
+# EAPI 4, fails to build for some time.
+# Removal in 30 days.
+# bug #654244, #740952, #726912, #723060
+dev-lang/j
+
+# David Seifert <soap@gentoo.org> (2020-10-24)
+# EAPI 4, broken since 2012, upstream disappeared, multiple QA issues,
+# build system is completely broken. Removal in 30 days,
+# Bug #625118, #725438, #746029.
+sci-electronics/alliance
+
+# David Seifert <soap@gentoo.org> (2020-10-24)
+# EAPI 4, multiple QA issues, performs dangerous pointer-to-int
+# casts, can trash your computer, last release over 10 years ago.
+# Removal in 30 days. Bug #124755, #713472, #726020, #740912, #742434.
+sys-power/nvram-wakeup
+
+# David Seifert <soap@gentoo.org> (2020-10-24)
+# EAPI 4, doesn't build, outdated, ebuild has multiple QA issues.
+# Removal in 30 days. Bug #463188, #531104, #613116, #740926.
+sys-cluster/mvapich2
+
+# David Seifert <soap@gentoo.org> (2020-10-24)
+# EAPI 4, fetch restricted, download link disappeared, fails to build.
+# Removal in 30 days. Bug #365713, #405277, #405437, #414793, #415699,
+# #422799, #479288, #740928.
+sys-cluster/maui
+
+# David Seifert <soap@gentoo.org> (2020-10-24)
+# EAPI 4, abandoned upstream, fails to build, security vulnerabilities.
+# .NET is practically abandoned in Gentoo and needs a complete reboot.
+# Removal in 30 days. Bug #681194, #722256, #740986, #740988, #740990.
+dev-dotnet/gio-sharp
+dev-dotnet/ikvm-bin
+dev-dotnet/log4net
+
+# Michał Górny <mgorny@gentoo.org> (2020-10-24)
+# Last release in 2004, next release 'Soon(tm)'.  Fails to build
+# due to horrible code hacks.
+# Removal in 30 days.  Bug #638088.
+games-rpg/twclone
+
+# Michał Górny <mgorny@gentoo.org> (2020-10-24)
+# Deprecated GNOME2 era libraries with no reverse dependencies left.
+# Removal in 30 days.  Bug #751004.
+gnome-base/libbonobo
+gnome-base/libgnome-keyring
+gnome-base/orbit
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-10-23)
+# Depends on deprecated QtWebKit with no work towards QtWebEngine port at all.
+# Bug #688850, security bug #744199. Removal in 30 days.
+media-video/shotcut
+media-libs/webvfx
+
+# Michał Górny <mgorny@gentoo.org> (2020-10-23)
+# Fails to build.  Needs a dedicated maintainer and a version bump.
+# Removal in 30 days.  Bug #635592.
+games-strategy/asc
+
+# Michał Górny <mgorny@gentoo.org> (2020-10-23)
+# Needs a dedicated maintainer.  The current version fails to build.
+# Needs a version bump.
+# Removal in 30 days.  Bug #614408.
+games-strategy/megaglest
+
+# Michał Górny <mgorny@gentoo.org> (2020-10-23)
+# Committed with missing patch mid-2018.  Not fixed since.
+# Removal in 30 days.  Bug #653310.
+games-arcade/ceferino
+
 # Maciej Mrozowski <reavertm@gentoo.org> (2020-10-23)
 # Crashes at startup - bug #750770, dead upstream - bug #737936
 # Removal in 30 days.
@@ -78,14 +173,6 @@ dev-lua/luacrypto
 # No reverse dependencies, bug #719136. Removal in 30 days.
 net-fs/openafs-kernel
 <net-fs/openafs-1.8
-
-# Sam James <sam@gentoo.org> (2020-10-11)
-# Current Wireshark in ~arch is vulnerable.
-# Not updated yet due to maintainer inactivity.
-# This forces a downgrade to the fixed, stable
-# version of Wireshark.
-# bug #744592
-=net-analyzer/wireshark-3.3.0
 
 # Sergei Trofimovich <slyfox@gentoo.org> (2020-10-11)
 # Mask new version until calendar apps are sorted out:
@@ -189,12 +276,6 @@ sys-apps/lcdtest
 =dev-python/pypy3-7.3.2_p37*
 =dev-python/pypy3-exe-7.3.2_p37*
 =dev-python/pypy3-exe-bin-7.3.2_p37*
-
-# Michał Górny <mgorny@gentoo.org> (2020-09-25)
-# Effectively unmaintained.  Not ported to py3.7.  Multiple unresolved
-# build failures reported.  No reverse dependencies.
-# Removal in 30 days.  Bug #737412.
-sci-libs/shogun
 
 # Michał Górny <mgorny@gentoo.org> (2020-09-09)
 # These packages (or package versions) still require Python 2.7.
