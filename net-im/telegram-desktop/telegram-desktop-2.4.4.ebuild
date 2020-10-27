@@ -19,13 +19,10 @@ SRC_URI="https://github.com/telegramdesktop/tdesktop/releases/download/v${PV}/${
 	)
 "
 
-LICENSE="GPL-3-with-openssl-exception LGPL-2+
-	!system-rlottie? ( BSD FTL JSON MIT )
-	webrtc? ( BSD )
-"
+LICENSE="GPL-3-with-openssl-exception LGPL-2+ webrtc? ( BSD )"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64"
-IUSE="+alsa +dbus enchant +gtk +hunspell libressl +pulseaudio +spell system-rlottie +webrtc +X"
+IUSE="+alsa +dbus enchant +gtk +hunspell libressl +pulseaudio +spell +webrtc +X"
 
 RDEPEND="
 	!net-im/telegram-desktop-bin
@@ -63,7 +60,6 @@ RDEPEND="
 	hunspell? ( >=app-text/hunspell-1.7:= )
 	pulseaudio? ( media-sound/pulseaudio )
 	webrtc? ( media-libs/libjpeg-turbo:= )
-	system-rlottie? ( media-libs/rlottie:= )
 "
 
 DEPEND="
@@ -130,11 +126,12 @@ src_configure() {
 	# EXPECTED VARIANT
 	# gtk is really needed for image copy-paste due to https://bugreports.qt.io/browse/QTBUG-56595
 	local mycmakeargs=(
+		-DCMAKE_DISABLE_FIND_PACKAGE_rlottie=ON # it does not build with system one, prevent automagic.
+		-DCMAKE_DISABLE_FIND_PACKAGE_tl-expected=ON # header only lib, some git version. prevents warnings.
 		-DDESKTOP_APP_DISABLE_CRASH_REPORTS=ON
 		-DDESKTOP_APP_USE_GLIBC_WRAPS=OFF
 		-DDESKTOP_APP_USE_PACKAGED=ON
 		-DDESKTOP_APP_USE_PACKAGED_FONTS=ON
-		-DDESKTOP_APP_LOTTIE_USE_CACHE=$(usex system-rlottie OFF ON) # we disable cache with system rlottie
 		-DTDESKTOP_DISABLE_GTK_INTEGRATION="$(usex gtk OFF ON)"
 		-DTDESKTOP_LAUNCHER_BASENAME="${PN}"
 		-DDESKTOP_APP_DISABLE_DBUS_INTEGRATION="$(usex dbus OFF ON)"
