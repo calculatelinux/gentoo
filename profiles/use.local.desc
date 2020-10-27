@@ -5779,6 +5779,7 @@ net-im/teams:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of b
 net-im/teams:system-mesa - Use the system-wide media-libs/mesa instead of bundled.
 net-im/telegram-desktop:enchant - Enable the app-text/aspell spell-checking backend
 net-im/telegram-desktop:hunspell - Enable the app-text/hunspell spell-checking backend
+net-im/telegram-desktop:lto - Enable Link Time Optimization (LTO / IPO)
 net-im/telegram-desktop:webrtc - WebRTC based video call support
 net-im/telepathy-connection-managers:gadu - Enable Gadu Gadu protocol support.
 net-im/telepathy-connection-managers:icq - Enable ICQ IM protocol support.
@@ -7977,7 +7978,6 @@ sys-cluster/ceph:uring - Build with support for sys-libs/liburing
 sys-cluster/ceph:xfs - Add xfs support
 sys-cluster/ceph:zfs - Add zfs support
 sys-cluster/charliecloud:ch-grow - Build the internal builder ch-grow
-sys-cluster/charliecloud:pv - Use sys-apps/pv to enable progress bar functionality
 sys-cluster/charliecloud:squashfs - Use sys-fs/squashfs-tools for creating SquashFS images
 sys-cluster/charliecloud:squashfuse - Use sys-fs/squashfuse for the SquashFS workflow
 sys-cluster/charm:ampi - Build implementation of MPI on top of Charm++
