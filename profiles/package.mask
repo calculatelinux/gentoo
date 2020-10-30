@@ -32,6 +32,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Georgy Yakovlev <gyakovlev@gentoo.org> (2020-10-30)
+# broken acl handling, possible broken chattr handling
+# needs more testing
+# https://bugs.gentoo.org/751739
+>=sys-apps/opentmpfiles-0.3.1
+
+# Stephan Hartmann <sultan@gentoo.org> (2020-10-29)
+# Dev channel releases are only for people who
+# are developers or want more experimental features
+# and accept a more unstable release.
+>=www-client/chromium-88
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-10-26)
 # Historical metapackage that exists in slot 5 only for transition from KDE SC4.
 # Masked for removal on 2021-08-31. Replaced by:
@@ -191,11 +203,6 @@ dev-lua/luacrypto
 # No reverse dependencies, bug #719136. Removal in 30 days.
 net-fs/openafs-kernel
 <net-fs/openafs-1.8
-
-# Sergei Trofimovich <slyfox@gentoo.org> (2020-10-11)
-# Mask new version until calendar apps are sorted out:
-# bug #747538.
->=sys-libs/timezone-data-2020b
 
 # Mikle Kolyada <zlogene@gentoo.org> (2020-10-09)
 # pam module separated from
