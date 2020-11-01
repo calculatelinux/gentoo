@@ -1606,9 +1606,9 @@ dev-haskell/shakespeare:test-roy - Render tests through roy render function.
 dev-haskell/shelly:lifted - run the tests against Shelly.Lifted
 dev-haskell/shuffle:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/simple-sendfile:allow-bsd - Allow use of BSD sendfile (disable on GNU/kFreeBSD)
-dev-haskell/skein:big-endian - When manually selecting the endianness, use big-endian (default is little-endian)
-dev-haskell/skein:force-endianness - Use a manually selected endian when compiling (see flag 'big-endian')
-dev-haskell/skein:reference - Use the reference implementation instead of the optimized one
+dev-haskell/skein:big-endian - When manually selecting the endianness, use big-endian (default is little-endian).
+dev-haskell/skein:force-endianness - Use a manually selected endian when compiling (see flag 'big-endian').
+dev-haskell/skein:reference - Use the reference implementation instead of the optimized one.
 dev-haskell/skylighting:executable - Build the skylighting executable.
 dev-haskell/skylighting-core:executable - Build the skylighting executable.
 dev-haskell/snap-core:portable - No non-haskell unportable code.
@@ -5784,6 +5784,7 @@ net-im/teams:system-mesa - Use the system-wide media-libs/mesa instead of bundle
 net-im/telegram-desktop:enchant - Enable the app-text/aspell spell-checking backend
 net-im/telegram-desktop:hunspell - Enable the app-text/hunspell spell-checking backend
 net-im/telegram-desktop:lto - Enable Link Time Optimization (LTO / IPO)
+net-im/telegram-desktop:webrtc - WebRTC based audio/video call support ( via media-libs/tg_owt )
 net-im/telepathy-connection-managers:gadu - Enable Gadu Gadu protocol support.
 net-im/telepathy-connection-managers:icq - Enable ICQ IM protocol support.
 net-im/telepathy-connection-managers:irc - Enable Internet Relay Chat (IRC) support.
@@ -5800,7 +5801,6 @@ net-im/toxic:notification - Enables desktop notifications with libnotify, with s
 net-im/toxic:qrcode - Enables QR code support
 net-im/toxic:sound - Enables audio calling
 net-im/toxic:video - Enables video calling
-net-im/vacuum:adiummessagestyle - Use UI styles created for Adium
 net-im/vacuum:annotations - Enable adding comments to the contacts in the roster
 net-im/vacuum:aspell - Select app-text/aspell spell checker backend
 net-im/vacuum:autostatus - Change the status in accordance with the time of inactivity
@@ -7586,6 +7586,7 @@ sci-visualization/labplot:cantor - Enable support for different open-source comp
 sci-visualization/labplot:fits - Enable support for NASA's sci-libs/cfitsio library
 sci-visualization/labplot:libcerf - Enable special functions from sci-libs/libcerf
 sci-visualization/labplot:root - Enable support for CERN's ROOT file type
+sci-visualization/labplot:serial - Enable support for RS232 serial ports using dev-qt/qtserialport
 sci-visualization/opendx:cdf - Add support for sci-libs/cdf data exchange format
 sci-visualization/opendx:hdf - Add support for the Hierarchical Data Format (sci-libs/hdf)
 sci-visualization/paraview:boost - Enable the usage of dev-libs/boost

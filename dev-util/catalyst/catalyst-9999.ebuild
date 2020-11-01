@@ -12,7 +12,7 @@ else
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
 fi
 
-PYTHON_COMPAT=( python3_{7,8} )
+PYTHON_COMPAT=( python3_8 )
 DISTUTILS_USE_SETUPTOOLS=no
 
 inherit distutils-r1 linux-info optfeature ${SRC_ECLASS}
@@ -31,6 +31,7 @@ DEPEND="
 	sys-apps/portage[${PYTHON_USEDEP}]
 	>=dev-python/snakeoil-0.6.5[${PYTHON_USEDEP}]
 	dev-python/toml[${PYTHON_USEDEP}]
+	sys-apps/util-linux[python,${PYTHON_USEDEP}]
 "
 RDEPEND="
 	${DEPEND}
@@ -75,7 +76,10 @@ RDEPEND="
 "
 
 pkg_setup() {
-	CONFIG_CHECK="~UTS_NS ~IPC_NS"
+	CONFIG_CHECK="
+		~UTS_NS ~IPC_NS
+		~SQUASHFS ~SQUASHFS_ZLIB
+	"
 	linux-info_pkg_setup
 }
 
