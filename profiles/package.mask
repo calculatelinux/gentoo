@@ -32,6 +32,30 @@
 
 #--- END OF EXAMPLES ---
 
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-11-03)
+# Hackage release does not build against gcc-8:
+# https://github.com/Helium4Haskell/helium/issues/4
+# Masked for removal. Bugs: #751757, #736054
+dev-lang/helium
+dev-haskell/lvmlib
+
+# Joonas Niilola <juippis@gentoo.org> (2020-11-03)
+# Dead upstream, or broken for a long time, not maintained in Gentoo.
+# Removal in 30 days. Bug #752462
+app-emulation/rex-client
+app-i18n/kde-l10n-scripts
+media-plugins/xbmc-addon-xvdr
+net-analyzer/nagios-plugins-flameeyes
+net-libs/libosmo-abis
+net-libs/libosmo-netif
+net-misc/lcr
+net-misc/srf-ip-conn-srv
+net-wireless/dump978
+net-wireless/openbsc
+net-wireless/openggsn
+net-wireless/osmobts
+net-wireless/osmocom-bb
+
 # Aisha Tammy <gentoo@aisha.cc> (2020-10-31)
 # Redundant historical packages now being provided
 # together by sci-libs/lapack
@@ -150,9 +174,13 @@ gnome-base/libgnome-keyring
 gnome-base/orbit
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-10-23)
-# Depends on deprecated QtWebKit with no work towards QtWebEngine port at all.
+# Depends on deprecated QtWebKit, needs a new maintainer and version bump.
 # Bug #688850, security bug #744199. Removal in 30 days.
 media-video/shotcut
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-10-23)
+# Depends on deprecated QtWebKit with no work towards QtWebEngine port at all.
+# Bug #688850. Removal in 30 days.
 media-libs/webvfx
 
 # Michał Górny <mgorny@gentoo.org> (2020-10-23)
@@ -165,11 +193,6 @@ games-strategy/asc
 # Needs a version bump.
 # Removal in 30 days.  Bug #614408.
 games-strategy/megaglest
-
-# Michał Górny <mgorny@gentoo.org> (2020-10-23)
-# Committed with missing patch mid-2018.  Not fixed since.
-# Removal in 30 days.  Bug #653310.
-games-arcade/ceferino
 
 # Maciej Mrozowski <reavertm@gentoo.org> (2020-10-23)
 # Crashes at startup - bug #750770, dead upstream - bug #737936
@@ -225,11 +248,6 @@ net-fs/openafs-kernel
 # Removal in 30 days
 sys-auth/pam_passwdqc
 
-# Sergei Trofimovich <slyfox@gentoo.org> (2020-10-09)
-# Mask older erlang releases for removal.
-# Bug #740894.
-<dev-lang/erlang-23
-
 # Azamat H. Hackimov <azamat.hackimov@gmail.com> (2020-10-06)
 # 1.3.3 is broken and failing unittests for net-im/prosody. Bug #746782.
 >=dev-lua/luaexpat-1.3.3
@@ -245,19 +263,6 @@ sys-auth/pam_passwdqc
 # Version 1.11 introduced different startup conventions for the server
 # which breaks the OpenRC init script. Bug #746227.
 >=net-misc/tigervnc-1.11.0
-
-# David Seifert <soap@gentoo.org> (2020-10-03)
-# Broken for over 2 years, declared EOL by upstream,
-# the only revdep is media-gfx/pinta, which is also
-# broken. Bug #612592, #644232, #659436, #688722,
-# Removal in 30 days.
-dev-dotnet/mono-addins
-media-gfx/pinta
-
-# Alexey Sokolov <alexey+gentoo@asokolov.org> (2020-10-03)
-# Package with no available HOMEPAGE, SRC_URI and multiple compilation issues.
-# Bug #741468, removal in 30 days.
-games-board/spider
 
 # Michał Górny <mgorny@gentoo.org> (2020-09-25)
 # PyPy3.7 alpha.  Known to break a few packages.  Masked until it

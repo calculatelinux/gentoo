@@ -59,7 +59,7 @@ app-admin/diamond:mongo - Enable MongoDB support
 app-admin/diamond:redis - Enable Redis support
 app-admin/diradm:automount - Support for automount data in LDAP
 app-admin/diradm:irixpasswd - Support for storing separate IRIX passwords
-app-admin/doas:timestamp - Adds support for "persist" feature (experimental)
+app-admin/doas:persist - Adds support for "persist" feature (experimental)
 app-admin/elektra:augeas - Enable plugin for reading and writing configuration files with help from Augeas
 app-admin/elektra:ini - Enable new, advanced ini support
 app-admin/elektra:simpleini - Enable simpleini support
@@ -1630,7 +1630,7 @@ dev-haskell/tls:compat - Accept SSLv2 compatible handshake.
 dev-haskell/tls:network - Use the base network library.
 dev-haskell/transformers-base:orphaninstances - Build instances for orphan datatypes.
 dev-haskell/unix-compat:old-time - build against old-time package
-dev-haskell/uuagc:with-loag - Use dev-haskell/minisat external SAT-solver to schedule all Linear Ordered AGs.
+dev-haskell/uuagc:loag - Use MiniSat as external SAT-solver to schedule all Linear Ordered AGs
 dev-haskell/vector:boundschecks - Enable bounds checking
 dev-haskell/vector:internalchecks - Enable internal consistency checks at the cost of a significant performance penalty
 dev-haskell/vector:unsafechecks - Enable bounds checking in unsafe operations at the cost of a significant performance penalty
@@ -2848,7 +2848,6 @@ dev-util/kdevelop:gdbui - Enable GUI for attaching GDB to a running process
 dev-util/kdevelop:hex - Enable hex editor plugin via app-editors/okteta
 dev-util/kdevelop:qmake - Enable support for QMake build system
 dev-util/kdevelop:reviewboard - Enable reviewboard support
-dev-util/kdevelop:webkit - Enable deprecated dev-qt/qtwebkit instead of dev-qt/qtwebengine for integrated documentation
 dev-util/kernelshark:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS
 dev-util/ltrace:unwind - Use sys-libs/libunwind for frame unwinding support
 dev-util/lttng-tools:ust - Support LTTng-UST (Userspace Tracing)
@@ -3035,7 +3034,6 @@ games-board/pasang-emas:extras - Install some extra themes
 games-board/pioneers:help - Enable gnome ingame help via scrollkeeper
 games-board/pysolfc:extra-cardsets - Install extra cardsets
 games-board/pysolfc:sound - Enable sound support using dev-python/pygame
-games-board/spider:athena - Enable athena widgets
 games-board/stockfish:general-32 - Generic unoptimized 32-bits build
 games-board/stockfish:general-64 - Generic unoptimized 64-bits build
 games-board/stockfish:optimize - Enable upstream -O3 optimizations (default enabled)
@@ -3577,7 +3575,6 @@ kde-misc/kdeconnect:pulseaudio - Enable system volume control plugin using media
 kde-misc/kdeconnect:wayland - Enable remote input mousepad plugin using kde-frameworks/kwayland
 kde-misc/kimtoy:scim - Enable Smart Common Input Method support
 kde-misc/kio-gdrive:kaccounts - Use kde-apps/kaccounts-integration backend (default) instead of dev-libs/qtkeychain
-kde-misc/kmarkdownwebview:webkit - Use dev-qt/qtwebkit instead of dev-qt/qtwebengine
 kde-misc/tellico:discid - Add support for reading disc IDs from audio CDs
 kde-misc/tellico:yaz - Add support for searching Z39.50 databases
 kde-plasma/discover:firmware - Enable support for firmware upgrades using sys-apps/fwupd
@@ -5702,6 +5699,7 @@ net-im/coturn:mongodb - Enable support for the mongodb database
 net-im/coturn:redis - Enable support for the redis database
 net-im/dino:gpg - Enable OpenPGP encryption plugin
 net-im/dino:http - Enable HTTP file upload plugin
+net-im/dino:notification-sound - notification sounds plugin
 net-im/dino:omemo - Enable OMEMO encryption plugin
 net-im/ejabberd:captcha - Support for CAPTCHA Forms (XEP-158) on registration
 net-im/ejabberd:full-xml - Use XML features in XMPP stream (ex: CDATA), requires XML compliant clients
@@ -6143,6 +6141,7 @@ net-mail/mailutils:tokyocabinet - Enable Tokyo Cabinet database support
 net-mail/mboxgrep:dmalloc - Enable debugging using dev-libs/dmalloc
 net-mail/mu:emacs - Install the mu4e mail client
 net-mail/mu:mug - Install the mug toy client, not for normal use
+net-mail/notmuch:apidoc - Provide doxygen generated API docs
 net-mail/notmuch:crypt - Support decryption and verification of PGP/MIME messages and in Emacs UI - encryption; support also S/MIME signature verification since version 0.22
 net-mail/notmuch:doc - Install API documentation
 net-mail/notmuch:emacs - Install Emacs UI (the main one)
@@ -7048,11 +7047,12 @@ sci-biology/bioperl:db - Install sci-biology/bioperl-run
 sci-biology/bioperl:network - Install sci-biology/bioperl-run
 sci-biology/bioperl:run - Install sci-biology/bioperl-run
 sci-biology/bowtie:tbb - Enables building bowtie with the Intel Threading Building Blocks from dev-cpp/tbb. This flag is recommended.
-sci-biology/clustalw-mpi:mpi_njtree - Use MPI (as opposed to serial) code for computing neighbor-joining trees
-sci-biology/clustalw-mpi:static_pairalign - Use static (as opposed to dynamic) scheduling for pair alignments
+sci-biology/clustalw-mpi:mpi-njtree - Use MPI (as opposed to serial) code for computing neighbor-joining trees
+sci-biology/clustalw-mpi:static-pairalign - Use static (as opposed to dynamic) scheduling for pair alignments
 sci-biology/exonerate:utils - Install all utilities
 sci-biology/fasttree:double-precision - use double precision instead of single-precision floating point (2x memroy required)
 sci-biology/mcl:blast - Add support for NCBI BLAST data
+sci-biology/newick-utils:xml - Uses dev-libs/libxml2 to handle ornaments
 sci-biology/seqan:tools - Build and install SeqAn commandline tools, such as the Yara aligner
 sci-biology/ucsc-genome-browser:server - Install genome browser Web application. If this flag is off, only libraries and utilities from the suite are installed.
 sci-biology/yass:dmalloc - Enable debugging with the dmalloc library

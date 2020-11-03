@@ -12,7 +12,7 @@ SRC_URI="https://www.bitbucket.org/france/${PN}-tcforge/downloads/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~arm64 ppc ppc64 sparc x86"
 IUSE="cpu_flags_x86_3dnow a52 aac alsa altivec dv dvd +iconv imagemagick jpeg lzo mjpeg cpu_flags_x86_mmx mp3 mpeg nuv ogg oss pic postproc quicktime sdl cpu_flags_x86_sse cpu_flags_x86_sse2 theora truetype v4l vorbis X x264 xml xvid"
 
 RDEPEND="
@@ -69,6 +69,7 @@ PATCHES=(
 	"${WORKDIR}"/${P}-patchset/${P}-ffmpeg24.patch
 	"${FILESDIR}"/${P}-swresample.patch #722296
 	"${FILESDIR}"/${P}-gcc10-fno-common.patch
+	"${FILESDIR}"/${P}-glibc-2.32.patch
 )
 
 src_prepare() {
