@@ -5,21 +5,20 @@ EAPI=7
 inherit autotools
 
 DESCRIPTION="A Tool for network monitoring and data acquisition"
-HOMEPAGE="
-	https://www.tcpdump.org/
-	https://github.com/the-tcpdump-group/tcpdump
-"
-LICENSE="BSD"
-SRC_URI="
-	https://github.com/the-tcpdump-group/${PN}/archive/${P/_}.tar.gz
-"
+HOMEPAGE="https://www.tcpdump.org/ https://github.com/the-tcpdump-group/tcpdump"
+SRC_URI="https://github.com/the-tcpdump-group/${PN}/archive/${P/_}.tar.gz"
+S="${WORKDIR}/${PN}-${P/_}"
 
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="+drop-root libressl +smi +ssl +samba suid test"
 RESTRICT="!test? ( test )"
 REQUIRED_USE="test? ( samba )"
 
+BDEPEND="
+	drop-root? ( virtual/pkgconfig )
+"
 RDEPEND="
 	net-libs/libpcap
 	drop-root? (
@@ -37,9 +36,6 @@ RDEPEND="
 		acct-user/pcap
 	)
 "
-BDEPEND="
-	drop-root? ( virtual/pkgconfig )
-"
 DEPEND="
 	${RDEPEND}
 	test? (
@@ -50,11 +46,9 @@ DEPEND="
 PATCHES=(
 	"${FILESDIR}"/${PN}-9999-libdir.patch
 )
-S=${WORKDIR}/${PN}-${P/_}
 
 src_prepare() {
 	default
-
 	eautoreconf
 }
 
@@ -90,5 +84,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	use suid && elog "To let normal users run tcpdump add them to the pcap group."
+	use suid && elog "To let normal users run tcpdump, add them to the pcap group."
 }

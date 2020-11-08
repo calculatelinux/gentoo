@@ -49,7 +49,7 @@ SRC_URI="${MOZ_SRC_URI}
 DESCRIPTION="SpiderMonkey is Mozilla's JavaScript engine written in C and C++"
 HOMEPAGE="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey"
 
-KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 ~s390 sparc x86"
 
 SLOT="68"
 LICENSE="MPL-2.0"
@@ -196,6 +196,10 @@ src_test() {
 		KNOWN_TESTFAILURES+=( test262/language/types/number/S8.5_A2.2.js )
 		KNOWN_TESTFAILURES+=( test262/built-ins/Number/prototype/toPrecision/return-values.js )
 		KNOWN_TESTFAILURES+=( non262/Date/timeclip.js )
+	elif use sparc ; then
+		KNOWN_TESTFAILURES+=( non262/Array/regress-157652.js )
+		KNOWN_TESTFAILURES+=( non262/Array/regress-330812.js )
+		KNOWN_TESTFAILURES+=( non262/regress/regress-422348.js )
 	fi
 
 	if [[ $(tc-endian) == "big" ]] ; then

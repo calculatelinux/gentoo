@@ -32,6 +32,34 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-11-07)
+# sys-cluster/cluster-glue fails to install for almost a year now.
+# The remaining packages are its reverse dependencies.
+#
+# The stable version of sys-cluster/pacemaker is vulnerable.  It is also
+# using Python 2.  A newer version can not be stabilized because
+# of the above.
+#
+# Removal in 30 days.  Bug #704610.
+sys-cluster/cluster-glue
+sys-cluster/crmsh
+sys-cluster/pacemaker
+sys-cluster/resource-agents
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-11-05)
+# Replaced by kde-frameworks/kdav, masked for removal in 14 days.
+kde-apps/kdav
+
+# Dirkjan Ochtman <djc@gentoo.org> (2020-11-05)
+# Incorrect DISTUTILS_USE_SETUPTOOLS value, dead upstream.
+# Removal in 30 days. Bug #748063
+dev-python/couchdb-python
+
+# Alfredo Tupone <tupone@gentoo.org> (2020-11-05)
+# will be upgraded after new lua release
+www-apps/liquid_feedback_frontend
+www-apps/wepmcp
+
 # Sergei Trofimovich <slyfox@gentoo.org> (2020-11-03)
 # Hackage release does not build against gcc-8:
 # https://github.com/Helium4Haskell/helium/issues/4
@@ -219,7 +247,10 @@ dev-lua/luacrypto
 
 # Marek Szuba <marecki@gentoo.org> (2020-10-13)
 # All these ebuilds require slotted Lua, which is still masked.
+# Ulrich Müller <ulm@gentoo.org> (2020-11-06)
+# Added sci-visualization/gnuplot.
 >=app-misc/worker-3.8.3-r100
+=dev-libs/efl-1.25.1-r10
 >=dev-lua/luv-1.32.0.0-r100
 >=dev-lua/luadbi-0.7.2-r100
 >=dev-lua/lutok-0.4-r10
@@ -231,9 +262,10 @@ dev-lua/luacrypto
 >=mail-filter/imapfilter-2.6.16-r100
 >=net-analyzer/suricata-6.0.0-r100
 >=net-p2p/eiskaltdcpp-2.2.10-r100
+>=sci-visualization/gnuplot-5.4.0-r100
 >=www-servers/lighttpd-1.4.55-r100
 >=app-admin/conky-1.11.4
->=media-sound/aqualung-1.1-r1
+>=media-sound/aqualung-1.1-r100
 
 # Andrew Savchenko <bircoph@gentoo.org> (2020-10-11)
 # Mask old openafs version and corresponding openafs-kernel with

@@ -773,7 +773,7 @@
       <name>Johannes Huber</name>
       <role>Developer</role>
     </member>
-    <member>
+    <member is-lead="1">
       <email>jstein@gentoo.org</email>
       <name>Jonas Stein</name>
       <role>helping to dissolve desktop-misc properly</role>
@@ -2716,6 +2716,11 @@
       <email>mgorny@gentoo.org</email>
       <name>Michał Górny</name>
       <role>The bad boss</role>
+    </member>
+    <member>
+      <email>monsieurp@gentoo.org</email>
+      <name>Patrice Clement</name>
+      <role>Member</role>
     </member>
     <member>
       <email>sam@gentoo.org</email>
