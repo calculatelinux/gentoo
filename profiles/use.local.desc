@@ -32,6 +32,7 @@ app-admin/clsync:extra-debug - Enable extra debugging. This will hurt performanc
 app-admin/clsync:extra-hardened - Enable extra security checks. This will hurt performance.
 app-admin/clsync:gio - Enable GIO for FS monitoring (glib based alternative to inotify interface, not recommended; if both are compiled, may be selected at runtime).
 app-admin/clsync:highload-locks - Allows to use spinlocks for short delays instead of mutexes, but only on SMP systems.
+app-admin/clsync:lto - Build with link time optimization (LTO).
 app-admin/clsync:namespaces - Enable namespaces isolation.
 app-admin/clsync:socket-library - Build the control and monitoring socket library: libclsync.
 app-admin/conky:apcupsd - Enable support for sys-power/apcupsd
@@ -381,7 +382,7 @@ app-editors/bluefish:gtk3 - Enable GTK3 interface (default)
 app-editors/bluefish:gucharmap - Enable gucharmap dictionary plugin
 app-editors/bluefish:spell - Enable spell checking capabilities via enchant library
 app-editors/emacs:athena - Enable the MIT Athena widget set (x11-libs/libXaw)
-app-editors/emacs:dynamic-loading - Enable loading of dynamic libraries at runtime
+app-editors/emacs:dynamic-loading - Enable loading of dynamic libraries (modules) at runtime
 app-editors/emacs:games - Support shared score files for games
 app-editors/emacs:gconf - Use gnome-base/gconf to read the system font name
 app-editors/emacs:gfile - Use gfile (dev-libs/glib) for file notification
@@ -615,6 +616,7 @@ app-emulation/runv:libvirt - Enable support for KVM via libvirt
 app-emulation/runv:xen - Enable support for the Xen Hypervisor
 app-emulation/ski:debug - enable extra binary emulation debugging via sys-libs/binutils-libs
 app-emulation/skopeo:btrfs - Enables dependencies for the "btrfs" graph driver.
+app-emulation/snapd:apparmor - Enable AppArmor support.
 app-emulation/spice:smartcard - Enable smartcard remoting using app-emulation/libcacard
 app-emulation/vagrant:virtualbox - Use VirtualBox provider.
 app-emulation/vice:ethernet - Enable ethernet emulation
@@ -2030,6 +2032,7 @@ dev-libs/gf2x:fft - Build an FFT API for multiplication of 2 polynomials over GF
 dev-libs/gjs:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 dev-libs/glib:dbus - Enable dependencies required by glib libraries using dbus service to manage settings saving
 dev-libs/glib:mime - Pull in shared MIME database that many glib-based applications require at runtime to detect or open files. Warning: do not disable this flag unless installing on a headless server.
+dev-libs/glib:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 dev-libs/glib:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-libs/glib:utils - Install gtester-report utility to generate test report files for your software; build gresource utility with ELF support.
 dev-libs/gmime:smime - Enable experimental S/MIME support
@@ -3442,7 +3445,7 @@ kde-apps/kdeedu-meta:webengine - Enable kde-apps/kalzium and kde-apps/parley, re
 kde-apps/kdegraphics-mobipocket:thumbnail - Enables thumbnail generation
 kde-apps/kdemultimedia-meta:cdrom - Include packages for optical discs
 kde-apps/kdenetwork-meta:dropbox - Enable support for Dropbox in kde-apps/dolphin via kde-apps/dolphin-plugins-dropbox
-kde-apps/kdenetwork-meta:webengine - Enable support for Plasma Telepathy (instant messaging) integration via kde-apps/plasma-telepathy-meta
+kde-apps/kdenetwork-meta:webengine - Enable Google Drive support via kde-misc/kio-gdrive and instant messaging integration via kde-apps/plasma-telepathy-meta
 kde-apps/kdenlive:freesound - Enable freesound.org credentials support via dev-qt/qtwebkit to download files
 kde-apps/kdenlive:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/kdenlive:webengine - Enable freesound.org credentials support via dev-qt/qtwebengine to download files
@@ -3913,7 +3916,6 @@ media-gfx/blender:cycles - Build cycles renderer (requires media-libs/openimagei
 media-gfx/blender:dds - Adds DDS textures support to Blender.
 media-gfx/blender:doc - Build C and Python API documentation directly from the source code.
 media-gfx/blender:elbeem - Adds surface fluid simulation to Blender using El'Beem library.
-media-gfx/blender:game-engine - Adds Game Engine support to Blender.
 media-gfx/blender:headless - Build without graphical support (renderfarm, server mode only).
 media-gfx/blender:llvm - Enable features depending on llvm.
 media-gfx/blender:man - Build and install man pages.
@@ -3923,7 +3925,6 @@ media-gfx/blender:openimageio - Enable OpenImageIO Support
 media-gfx/blender:opensubdiv - Add rendering support form OpenSubdiv from Dreamworks Animation through media-libs/opensubdiv.
 media-gfx/blender:openvdb - Add GPU preview rendering. Only works with nVidia cards.
 media-gfx/blender:osl - Add support for OpenShadingLanguage scripting.
-media-gfx/blender:player - Build the Blender Player. THis requires the Game engine.
 media-gfx/blender:standalone - Build the standalone version of Cycles.
 media-gfx/blender:system-numpy - Use the system numpy implementation rather than a local copy.
 media-gfx/blender:system-python - Use the system python implementation rather than a local copy.
@@ -6060,6 +6061,7 @@ net-libs/nodejs:inspector - Enable V8 inspector
 net-libs/nodejs:npm - Enable NPM package manager
 net-libs/nodejs:pax_kernel - Enable building under a PaX enabled kernel
 net-libs/nodejs:snapshot - Enable snapshot creation for faster startup
+net-libs/nodejs:system-icu - Use system dev-libs/icu instead of the bundled version
 net-libs/nodejs:system-ssl - Use system OpenSSL instead of the bundled one
 net-libs/nodejs:systemtap - Enable SystemTAP/DTrace tracing
 net-libs/ntirpc:gssapi - Include support for RPCSEC GSS
@@ -6165,7 +6167,6 @@ net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
 net-mail/vpopmail:maildrop - Enables mail-filter/maildrop support in vdelivermail
 net-mail/vpopmail:spamassassin - Enables mail-filter/spamassassin support
 net-misc/AQtion:lro - Enable/disable Large Receive Offload. This MUST be disabled for bridging or forwarding.
-net-misc/apt-cacher-ng:fuse - Install the sys-fs/fuse based acngfs, to use a userspace filesystem for the apt cache.
 net-misc/aria2:bittorrent - Enable support for the bittorrent protocol.
 net-misc/aria2:gnutls - Use net-libs/gnutls as TLS provider (preferred). Otherwise, dev-libs/openssl will be used as TLS provider. Both apply only with USE=ssl.
 net-misc/aria2:libuv - Use dev-libs/libuv backend.
@@ -7302,8 +7303,6 @@ sci-libs/mathgl:hdf - Add support for the Hierarchical Data Format v.4 sci-libs/
 sci-libs/mathgl:octave - Add bindings for sci-mathematics/octave
 sci-libs/matio:sparse - Extend formats for sparse matrix (not matlab)
 sci-libs/med:hdf5-16-api - Use -DH5_USE_16_API to build the package against old 1.6 API of HDF5
-sci-libs/mkl:fortran95 - Installs the BLAS/LAPACK FORTRAN95 static libraries
-sci-libs/mkl:int64 - Installs the 64 bits integer libraries
 sci-libs/mkl-rt:eselect-ldso - Enable runtime library switching by eselect and ld.so.
 sci-libs/mpir:cpudetection - Enables runtime cpudetection (useful for bindist, compatability on other CPUs)
 sci-libs/mumps:metis - Enable matrix ordering with METIS (sci-libs/metis, sci-libs/parmetis)

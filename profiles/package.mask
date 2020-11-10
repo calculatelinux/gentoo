@@ -32,6 +32,40 @@
 
 #--- END OF EXAMPLES ---
 
+# Marek Szuba <marecki@gentoo.org> (2020-11-09)
+# Compilation using meson currently fails on most, if not all, non-x86
+# arches (Bug #720210). For consistency, mask it everywhere for now.
+=sys-apps/flashrom-1.2-r3
+
+# Michał Górny <mgorny@gentoo.org> (2020-11-09)
+# Python 2 backport.  Last revdep masked.
+# Removal in 30 days.  Bug #753725.
+dev-python/typing
+
+# Michał Górny <mgorny@gentoo.org> (2020-11-09)
+# Dead Python 2 package.  Replaced by dev-python/cheetah3.  The last
+# mongodb versions needing it are masked now.
+# Removal in 30 days.  Bug #753722.
+dev-python/cheetah
+
+# Alexys Jacob <ultrabug@gentoo.org> (2020-11-09)
+# Mask dev-db/mongodb versions which do not support python3 so we
+# can move forward in cleaning python2 from tree. Bug #708954.
+# We keep the ebuilds available since some of those versions are still
+# supported by upstream. See: https://jira.mongodb.org/browse/SERVER-52687
+<dev-db/mongodb-4.2.8
+
+# Benda Xu <heroxbd@gentoo.org> (2020-11-09)
+# sci-libs/mkl-rt is now subsumed by the updated sci-libs/mkl package
+# which also provides development header files and pkgconfig files
+# Removal in 30 days. Bug #747310.
+sci-libs/mkl-rt
+
+# Matt Turner <mattst88@gentoo.org> (2020-11-08)
+# Uninstallable because of fetch restriction and dead download link.
+# Removal in 30 days.  Bug #725646.
+media-fonts/mathematica-fonts
+
 # Michał Górny <mgorny@gentoo.org> (2020-11-07)
 # sys-cluster/cluster-glue fails to install for almost a year now.
 # The remaining packages are its reverse dependencies.
@@ -263,6 +297,7 @@ dev-lua/luacrypto
 >=net-analyzer/suricata-6.0.0-r100
 >=net-p2p/eiskaltdcpp-2.2.10-r100
 >=sci-visualization/gnuplot-5.4.0-r100
+>=www-apache/mod_security-2.9.3-r100
 >=www-servers/lighttpd-1.4.55-r100
 >=app-admin/conky-1.11.4
 >=media-sound/aqualung-1.1-r100
