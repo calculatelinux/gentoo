@@ -943,6 +943,11 @@ glibc_do_configure() {
 		$(use_enable static-pie)
 		$(use_enable systemtap)
 		$(use_enable nscd)
+
+		# locale data is arch-independent
+		# https://bugs.gentoo.org/753740
+		libc_cv_complocaledir='${exec_prefix}/lib/locale'
+
 		${EXTRA_ECONF}
 	)
 
@@ -1328,26 +1333,7 @@ glibc_do_src_install() {
 	insinto /etc
 	doins locale.gen
 
-	# Make sure all the ABI's can find the locales and so we only
-	# have to generate one set
-	local a
-	keepdir /usr/$(get_libdir)/locale
-	for a in $(get_install_abis) ; do
-		if [[ ! -e ${ED}/usr/$(get_abi_LIBDIR ${a})/locale ]] ; then
-			dosym ../$(get_libdir)/locale /usr/$(get_abi_LIBDIR ${a})/locale
-		fi
-	done
-
-	# HACK: If we're building for riscv, we need to additionally make sure that
-	# we can find the locale archive afterwards
-	case ${CTARGET} in
-		riscv*)
-			if [[ ! -e ${ED}/usr/lib/locale ]] ; then
-				dosym ../$(get_libdir)/locale /usr/lib/locale
-			fi
-			;;
-		*) ;;
-	esac
+	keepdir /usr/lib/locale
 
 	cd "${S}"
 
@@ -1474,6 +1460,12 @@ pkg_preinst() {
 	[[ -n ${ROOT} ]] && return 0
 	[[ -d ${ED}/$(get_libdir) ]] || return 0
 	[[ -z ${BOOTSTRAP_RAP} ]] && glibc_sanity_check
+
+	if [[ -L ${EROOT}/usr/lib/locale ]]; then
+		# Help portage migrate this to a directory
+		# https://bugs.gentoo.org/753740
+		rm "${EROOT}"/usr/lib/locale || die
+	fi
 }
 
 pkg_postinst() {
