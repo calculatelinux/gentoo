@@ -4,8 +4,9 @@
 EAPI=7
 
 PYTHON_COMPAT=( python3_{6,7,8,9} )
+LUA_COMPAT=( lua5-{1,2} )
 
-inherit autotools git-r3 python-any-r1
+inherit autotools git-r3 lua-single python-any-r1
 
 EGIT_REPO_URI="https://github.com/rkd77/felinks"
 
@@ -18,6 +19,7 @@ KEYWORDS=""
 IUSE="bittorrent brotli bzip2 debug finger ftp gopher gpm gnutls guile idn ipv6
 	libressl lua +mouse nls nntp perl ruby samba ssl tre unicode X xml zlib zstd"
 
+REQUIRED_USE="lua? ( ${LUA_REQUIRED_USE} )"
 BDEPEND="virtual/pkgconfig"
 RDEPEND="
 	brotli? ( app-arch/brotli:= )
@@ -25,7 +27,7 @@ RDEPEND="
 	gpm? ( >=sys-libs/ncurses-5.2:0= >=sys-libs/gpm-1.20.0-r5 )
 	guile? ( >=dev-scheme/guile-1.6.4-r1[deprecated] )
 	idn? ( net-dns/libidn:= )
-	lua? ( >=dev-lang/lua-5:0= )
+	lua? ( ${LUA_DEPS} )
 	perl? ( dev-lang/perl:= )
 	ruby? ( dev-lang/ruby:* dev-ruby/rubygems:* )
 	samba? ( net-fs/samba )

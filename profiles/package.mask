@@ -97,11 +97,6 @@ media-plugins/kodi-game-libretro-bnes
 <media-plugins/kodi-visualization-waveform-4.2
 <media-plugins/kodi-visualization-shadertoy-2.1
 
-# Marek Szuba <marecki@gentoo.org> (2020-11-09)
-# Compilation using meson currently fails on most, if not all, non-x86
-# arches (Bug #720210). For consistency, mask it everywhere for now.
-=sys-apps/flashrom-1.2-r3
-
 # Michał Górny <mgorny@gentoo.org> (2020-11-09)
 # Python 2 backport.  Last revdep masked.
 # Removal in 30 days.  Bug #753725.
@@ -355,6 +350,7 @@ dev-lua/luacrypto
 >=dev-lua/lutok-0.4-r10
 >=dev-lua/messagepack-0.3.2-r100
 >=dev-lua/toluapp-1.0.93_p20190513-r100
+>=dev-util/geany-plugins-1.37-r100
 >=games-engines/love-0.7.2-r100:0.7
 >=games-engines/love-0.8.0-r100:0.8
 >=games-engines/love-11.3-r100:0
@@ -363,6 +359,7 @@ dev-lua/luacrypto
 >=net-p2p/eiskaltdcpp-2.2.10-r100
 >=sci-visualization/gnuplot-5.4.0-r100
 >=www-apache/mod_security-2.9.3-r100
+>=www-client/elinks-0.13.5-r100
 >=www-servers/lighttpd-1.4.55-r100
 >=app-admin/conky-1.11.4
 >=media-sound/aqualung-1.1-r100
@@ -711,6 +708,7 @@ app-admin/amazon-ec2-init
 # Adding Lua 5.3 to mask
 app-eselect/eselect-lua
 =dev-lang/lua-5.1.5-r103
+=dev-lang/lua-5.1.5-r104
 =dev-lang/lua-5.2.4-r2
 =dev-lang/lua-5.3.5-r2
 
