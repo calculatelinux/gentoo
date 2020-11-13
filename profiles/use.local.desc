@@ -2185,7 +2185,7 @@ dev-libs/nss:utils - Install utilities included with the library
 dev-libs/ocl-icd:khronos-headers - Install Khronos OpenCL headers.
 dev-libs/onigmo:combination-explosion-check - enable combination explosion check
 dev-libs/onigmo:crnl-as-line-terminator - enable CR+NL as line terminator
-dev-libs/oniguruma:crnl-as-line-terminator - enable CR+NL as line terminator
+dev-libs/oniguruma:crnl-as-line-terminator - Enable CR+NL as line terminator
 dev-libs/opencryptoki:tpm - Enable support for Trusted Platform Module (TPM) using app-crypt/trousers
 dev-libs/openct:debug - Add debug output to the driver library for pcsc-lite.
 dev-libs/openct:pcsc-lite - Build a driver library for sys-apps/pcsc-lite, providing PC/SC API access to devices supported by OpenCT.
@@ -2911,6 +2911,7 @@ dev-util/systemtap:libvirt - Support probing of libvirt domains.
 dev-util/trace-cmd:udis86 - Enable support for dev-libs/udis86 disassembler library
 dev-util/uftrace:capstone - Use capstone to provide dynamic tracing without recompilation
 dev-util/vulkan-tools:cube - Build the cube/cubepp demos
+dev-util/watchman:python - Install pywatchman bindings and the watchman-{wait,make} utils
 dev-vcs/cssc:valgrind - Enable usage of dev-util/valgrind in tests
 dev-vcs/cvs:server - Enable server support
 dev-vcs/cvsync:gcrypt - Use dev-libs/libgcrypt for hash functions.
@@ -3950,7 +3951,6 @@ media-gfx/darktable:opencl - Enable opencl support
 media-gfx/darktable:system-lua - Use dev-lang/lua instead of the bundled liblua
 media-gfx/darktable:tools - Install tools for generating base curves and noise profiles
 media-gfx/digikam:addressbook - Enable akonadi contact integration
-media-gfx/digikam:dnn - Build neural network faces engine module
 media-gfx/digikam:heif - Enable support for ISO/IEC 23008-12:2017 HEIF files using media-libs/x265
 media-gfx/digikam:imagemagick - Enable support for additional image formats such as XCF, FITS, HEIC etc.
 media-gfx/digikam:lensfun - Enable support for media-libs/lensfun
@@ -3958,8 +3958,6 @@ media-gfx/digikam:marble - Enable support for geolocation using kde-apps/marble
 media-gfx/digikam:mediaplayer - Enable support for media player using media-libs/qtav
 media-gfx/digikam:panorama - Build the panorama plugin which requires media-gfx/hugin
 media-gfx/digikam:semantic-desktop - Enable kde-frameworks/kfilemetadata support
-media-gfx/digikam:vkontakte - Build net-libs/libkvkontakte plugin for vkontakte.ru
-media-gfx/digikam:webkit - Build with dev-qt/qtwebkit instead of dev-qt/qtwebengine
 media-gfx/eog-plugins:map - Enable world map display using media-libs/libchamplain
 media-gfx/eog-plugins:picasa - Enable uploading to Google's Picasa Web Albums
 media-gfx/eom:imagemagick - Use media-gfx/imagemagick as an external backend for the thumbnailer
@@ -4963,7 +4961,6 @@ media-video/handbrake:numa - Adds support for x265's NUMA capabilities.
 media-video/handbrake:nvenc - Adds support for NVIDIA Encoder (NVENC) API for hardware accelerated encoding on NVIDIA cards.
 media-video/handbrake:x265 - Support for encoding h265 using media-libs/x265.
 media-video/kino:gpac - Enable GPAC support when exporting to 3GPP format
-media-video/kmplayer:npp - Compile the npp backend that plays xembed style browser plugins.
 media-video/libva-utils:drm - Enables VA/DRM API support.
 media-video/mjpegtools:sdlgfx - Enables y4mhist to display a graphical histogram
 media-video/mjpg-streamer:input-control - Plugin giving ability to control camera movement (only specific cameras)
@@ -5998,15 +5995,6 @@ net-libs/libmicrohttpd:messages - enable error messages
 net-libs/libnids:glib - Use dev-libs/glib for multiprocessing support
 net-libs/libnids:libnet - Include code requiring net-libs/libnet
 net-libs/libnma:pkcs11 - Enable PKCS#11 support in certificate chooser via app-crypt/gcr
-net-libs/libnpupnp:client - control point code (client)
-net-libs/libnpupnp:device - device specific code (implies -webserver if disabled)
-net-libs/libnpupnp:gena - GENA part
-net-libs/libnpupnp:optssdp - optional SSDP headers support
-net-libs/libnpupnp:reuseaddr - bind the miniserver socket with reuseaddr
-net-libs/libnpupnp:soap - SOAP part
-net-libs/libnpupnp:ssdp - SSDP part
-net-libs/libnpupnp:tools - helper APIs in upnptools.h
-net-libs/libnpupnp:webserver - integrated web server
 net-libs/liboauth:bindist - Alias for the nss USE flag, since there are license compliancy trouble when using OpenSSL.
 net-libs/liboauth:curl - If enabled, net-misc/curl is used thorugh the libcurl library; if it's not, the curl command is used instead. Some features are only available when using the library, but using it as library requires matching SSL implementations.
 net-libs/liboauth:nss - Use Mozilla NSS (dev-libs/nss) as hash library; if this is disabled, dev-libs/openssl is used instead.
@@ -8024,6 +8012,8 @@ sys-cluster/cinder:tgt - Enable tgt storage backend support
 sys-cluster/cinder:volume - Installs the initscripts for the cinder volume service
 sys-cluster/cluster-glue:ipmilan - Install the ipmilan plugin (requires sys-libs/openipmi)
 sys-cluster/cluster-glue:libnet - Force use of net-libs/libnet
+sys-cluster/corosync:augeas - Enable augeas support
+sys-cluster/corosync:watchdog - Enable watchdog support
 sys-cluster/drbd-utils:heartbeat - Enable Heartbeat integration
 sys-cluster/drbd-utils:pacemaker - Enable Pacemaker integration
 sys-cluster/drbd-utils:xen - Enable Xen integration
