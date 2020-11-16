@@ -12,7 +12,7 @@ SRC_URI="https://github.com/aws-cloudformation/${PN}/archive/v${PV}.tar.gz -> ${
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="amd64 ~arm ~arm64 ~x86"
 
 RDEPEND="
 	>=dev-python/aws-sam-translator-1.25.0[${PYTHON_USEDEP}]
@@ -27,6 +27,13 @@ RDEPEND="
 	>=dev-python/requests-2.15.0[${PYTHON_USEDEP}]
 	>=dev-python/six-1.11[${PYTHON_USEDEP}]
 "
+BDEPEND="
+	test? (
+		dev-python/mock[${PYTHON_USEDEP}]
+	)
+"
+
+distutils_enable_tests unittest
 
 PATCHES=(
 	"${FILESDIR}/cfn-python-lint-0.30.1-tests.patch"

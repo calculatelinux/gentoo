@@ -18,7 +18,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm arm64 ~ia64 ppc ppc64 sparc x86"
 IUSE="examples"
 
 # Mirror requirements from pylint/__pkginfo__.py
@@ -61,9 +61,4 @@ python_install_all() {
 	fi
 
 	distutils-r1_python_install_all
-}
-
-pkg_postinst() {
-	# Optional dependency on "tk" USE flag would break support for Jython.
-	optfeature "pylint-gui script requires dev-lang/python with \"tk\" USE flag enabled." 'dev-lang/python[tk]'
 }
