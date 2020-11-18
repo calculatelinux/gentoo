@@ -7,12 +7,13 @@
 EAPI=7
 
 LUA_COMPAT=( lua5-{1..3} )
+PYTHON_COMPAT=( python3_{6,7,8,9} )
 VIRTUALX_REQUIRED="manual"
-inherit desktop eutils lua-single xdg-utils toolchain-funcs
+inherit desktop distutils-r1 eutils lua-single xdg-utils toolchain-funcs
 
 MY_P="stone_soup-${PV}"
 DESCRIPTION="Role-playing roguelike game of exploration and treasure-hunting in dungeons"
-HOMEPAGE="http://crawl.develz.org/wordpress/"
+HOMEPAGE="https://crawl.develz.org"
 SRC_URI="
 	https://github.com/crawl/crawl/releases/download/${PV}/${PN/-/_}-${PV}.zip
 	https://dev.gentoo.org/~hasufell/distfiles/${PN}.png
@@ -30,8 +31,6 @@ IUSE="debug ncurses sound test +tiles"
 # test is broken
 # see https://crawl.develz.org/mantis/view.php?id=6121
 RESTRICT="test"
-
-REQUIRED_USE="${LUA_REQUIRED_USE}"
 
 RDEPEND="
 	${LUA_DEPS}
@@ -53,8 +52,9 @@ RDEPEND="
 		virtual/opengl
 	)"
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	dev-lang/perl
-	dev-python/pyyaml
+	dev-python/pyyaml[${PYTHON_USEDEP}]
 	sys-devel/flex
 	tiles? (
 		sys-libs/ncurses:0
@@ -71,7 +71,6 @@ PATCHES=(
 )
 
 pkg_setup() {
-	lua-single_pkg_setup
 
 	if use !ncurses && use !tiles ; then
 		ewarn "Neither ncurses nor tiles frontend"

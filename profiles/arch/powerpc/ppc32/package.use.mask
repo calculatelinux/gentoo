@@ -34,6 +34,8 @@ sci-misc/boinc X
 net-mail/lbdb evo
 # needs dev-util/devhelp, depends on net-libs/webkit-gtk
 dev-util/anjuta devhelp
+# app-text/libgepub depends on webkit-gtk
+xfce-extra/tumbler epub
 
 # Mikle Kolyada <zlogene@gentoo.org> (2020-06-08)
 # clisp is keyworded on ppc
@@ -144,7 +146,3 @@ net-misc/connman openconnect
 # Julian Ospald <hasufell@gentoo.org> (2013-11-23)
 # FIXME: app-arch/innoextract not available under ppc yet
 games-fps/duke3d-data gog
-
-# Maciej Mrozowski <reavertm@gentoo.org> (2010-06-26)
-# Needs media-libs/simage keyworded, bug 325623
-media-libs/coin simage

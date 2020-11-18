@@ -306,6 +306,7 @@ app-crypt/eid-mw:p11v220 - Enable PKCS#11 v2.20 features.
 app-crypt/ekeyd:minimal - Only install the ekey-egd-linux service rather than the full ekeyd package.
 app-crypt/ekeyd:munin - Install a plugin for net-analyzer/munin to graph statistical data from ekeyd.
 app-crypt/ekeyd:usb - Build the libusb-based userland daemon for accessing the EntropyKey (alternative to the CDC USB driver). It is suggested to use this option by default, as the CDC driver in the kernel often seems to be fragile (or the gadget implementation on the EntropyKey is too buggy), and can cause various problems.
+app-crypt/gnupg:scd-shared-access - Allow concurrent access to scdaemon by multiple apps from same user. Useful if you want to use scdaemon with gnupg and for example NitroKey.
 app-crypt/gnupg:smartcard - Build scdaemon software. Enables usage of OpenPGP cards. For other type of smartcards, try app-crypt/gnupg-pkcs11-scd. Bring in dev-libs/libusb as a dependency; enable scdaemon.
 app-crypt/gnupg:tofu - Enable support for Trust on First use trust model; requires dev-db/sqlite.
 app-crypt/gnupg:tools - Install extra tools (including gpgsplit and gpg-zip).
@@ -3139,6 +3140,7 @@ games-fps/eduke32:sc-55 - Install the Duke Nukem 3D Roland SC-55 music files.
 games-fps/eduke32:sdk - Install the SDK files.
 games-fps/eduke32:server - Enable support for multiplayer.
 games-fps/eduke32:tools - Install the support tools for mapster32.
+games-fps/eduke32:voidsw - Enable support for Shadow Warrior (Classic) through VoidSW.
 games-fps/eduke32:voxels - Install the Duke Nukem 3D Voxels Pack.
 games-fps/eduke32:vpx - Enable support for media-libs/libvpx.
 games-fps/eduke32:xmp - Enable support for media-libs/exempi.
@@ -4639,6 +4641,7 @@ media-sound/mpg123:int-quality - Use rounding instead of fast truncation for int
 media-sound/mumble:g15 - Enable support for the Logitech G15 LCD (and compatible devices).
 media-sound/mumble:rnnoise - Enable alternative noise suppression option based on RNNoise.
 media-sound/mumble:speech - Enable text-to-speech support in Mumble.
+media-sound/murmur:grpc - Use net-libs/grpc to enable remote control capabilities.
 media-sound/murmur:ice - Use dev-libs/Ice to enable remote control capabilities.
 media-sound/musescore:omr - Enable PDF import (OMR - optical music recognition)
 media-sound/musescore:osc - Enable OSC remote control protocol
@@ -7863,7 +7866,6 @@ sys-apps/util-linux:tty-helpers - install the mesg/wall/write tools for talking 
 sys-apps/watchdog:nfs - enable support for checking nfs mounts
 sys-apps/xdg-desktop-portal:screencast - Enable screencast portal using media-video/pipewire
 sys-apps/xinetd:rpc - support RPC services
-sys-auth/fingerprint-gui:upekbsapi - Add UPEK BSAPI drivers for identify functions on some readers
 sys-auth/google-authenticator-libpam-hardened:qrcode - Display QRcode after setup to accomodate automatic setup of OTP client apps.
 sys-auth/keystone:memcached - Installs dependencies needed for using memcached as a backend
 sys-auth/keystone:mongo - Installs dependencies needed for using mongo as a backend
@@ -8237,6 +8239,7 @@ sys-firmware/sgabios:binary - Use pre-built binaries
 sys-firmware/sigrok-firmware-fx2lafw:binary - Use official upstream pre-built binaries
 sys-firmware/vgabios:binary - Use official upstream pre-built binaries (only default and cirrus images)
 sys-fs/android-file-transfer-linux:fuse - Add FUSE mount helper
+sys-fs/android-file-transfer-linux:zune - Enable support for Microsoft Zune
 sys-fs/bees:tools - Build extra tools useful for debugging (fiemap, fiewalk)
 sys-fs/btrfs-progs:convert - Build ext2 conversion utility (btrfs-convert)
 sys-fs/btrfs-progs:reiserfs - Enable reiserfs support in btrfs-convert tool.

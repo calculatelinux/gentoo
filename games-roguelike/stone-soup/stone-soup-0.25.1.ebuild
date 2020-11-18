@@ -5,12 +5,14 @@
 # - attempt +test, linked bug claims to be fixed
 
 EAPI=7
+
+PYTHON_COMPAT=( python3_{6,7,8,9} )
 VIRTUALX_REQUIRED="manual"
-inherit desktop eutils xdg-utils toolchain-funcs
+inherit desktop distutils-r1 eutils xdg-utils toolchain-funcs
 
 MY_P="stone_soup-${PV}"
 DESCRIPTION="Role-playing roguelike game of exploration and treasure-hunting in dungeons"
-HOMEPAGE="http://crawl.develz.org/wordpress/"
+HOMEPAGE="https://crawl.develz.org"
 SRC_URI="
 	https://github.com/crawl/crawl/releases/download/${PV}/${PN/-/_}-${PV}.zip
 	https://dev.gentoo.org/~hasufell/distfiles/${PN}.png
@@ -49,8 +51,9 @@ RDEPEND="
 		virtual/opengl
 	)"
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	dev-lang/perl
-	dev-python/pyyaml
+	dev-python/pyyaml[${PYTHON_USEDEP}]
 	sys-devel/flex
 	tiles? (
 		sys-libs/ncurses:0
