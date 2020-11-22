@@ -22,6 +22,7 @@ DEPEND="dev-python/pbr[${PYTHON_USEDEP}]
 		>=dev-python/coverage-4.0[${PYTHON_USEDEP}]
 		!~dev-python/coverage-4.4[${PYTHON_USEDEP}]
 		>=dev-python/keystoneauth-3.4.0[${PYTHON_USEDEP}]
+		dev-python/python-keystoneclient[${PYTHON_USEDEP}]
 		>=dev-python/mock-1.2.0[${PYTHON_USEDEP}]
 		>=dev-python/stestr-2.0.0[${PYTHON_USEDEP}]
 		!~dev-python/stestr-3.0.0[${PYTHON_USEDEP}]
@@ -39,8 +40,8 @@ python_prepare_all() {
 }
 
 python_test() {
-	testr init
-	testr run || die "tests failed under ${EPYTHON}"
+	stestr init
+	stestr run || die "tests failed under ${EPYTHON}"
 	flake8 tests && einfo "run of tests folder by flake8 passed"
 	flake8 bin/swift && einfo "run of ./bin/swift by flake8 passed"
 }

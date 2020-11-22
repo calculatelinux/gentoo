@@ -283,7 +283,10 @@ app-benchmarks/filebench:auto-completion - Enable command-line autocompletion us
 app-benchmarks/httperf:idleconn - Build with the idleconn program
 app-benchmarks/ioping:netdata - Add support for netdata
 app-benchmarks/ramspeed:pic - Force shared libraries to be built as PIC (this is slower)
-app-benchmarks/sysbench:aio - Enable libaio support
+app-benchmarks/sysbench:aio - Add support for AIO.
+app-benchmarks/sysbench:attachsql - Add support for AttachSQL.
+app-benchmarks/sysbench:drizzle - Add support for Drizzles.
+app-benchmarks/sysbench:largefile - Add support for large files.
 app-cdr/brasero:libburn - Enable dev-libs/libburn backend
 app-cdr/brasero:nautilus - Build the gnome-base/nautilus extension
 app-cdr/brasero:packagekit - Enable support for the distro-neutral package manager GUI PackageKit
@@ -989,11 +992,13 @@ app-office/kmymoney:quotes - Enable Online Stock Quote retrieval
 app-office/kraft:pim - Enable support for KDE PIM resources integration
 app-office/libalkimia:webengine - Use dev-qt/qtwebengine for embedded web browser widget
 app-office/libreoffice:base - Enable full support for LibreOffice Base databases (involves additional bundled libs)
+app-office/libreoffice:clang - Use Clang compiler instead of GCC
 app-office/libreoffice:coinmp - Use sci-libs/coinor-mp as alternative solver
 app-office/libreoffice:googledrive - Enable support for remote files on Google Drive
 app-office/libreoffice:mariadb - Prefer mariadb connector over mysql connector
 app-office/libreoffice:odk - Build the Office Development Kit
 app-office/libreoffice:pdfimport - Enable PDF import via the Poppler library
+app-office/libreoffice:vulkan - Enable Vulkan usage via the skia library (clang recommended)
 app-office/libreoffice-l10n:offlinehelp - Install help files locally instead of using the LibreOffice Wiki
 app-office/lyx:aspell - Add support for aspell spellchecking
 app-office/lyx:dia - Add support for diagrams (app-office/dia)
@@ -4354,7 +4359,6 @@ media-libs/vulkan-loader:layers - Include the vulkan layers
 media-libs/waffle:egl - Enable EGL support
 media-libs/waffle:gbm - Enable support for the Generic Buffer Manager (gbm)
 media-libs/waffle:wayland - Enable Wayland support
-media-libs/webvfx:doc - Install doxygen developer documentation
 media-libs/x264:interlaced - enable interlaced encoding support, this can decrease encoding speed by up to 2%
 media-libs/x264:opencl - Add support for OpenCL.
 media-libs/x264:pic - disable optimized assembly code that is not PIC friendly
@@ -6067,6 +6071,7 @@ net-libs/nghttp2:hpack-tools - Install HPACK (header compression) helper tools
 net-libs/nghttp2:utils - Install nghttp, nghttpd and nghttpx
 net-libs/nodejs:inspector - Enable V8 inspector
 net-libs/nodejs:npm - Enable NPM package manager
+net-libs/nodejs:pax_kernel - Enable building under a PaX enabled kernel
 net-libs/nodejs:snapshot - Enable snapshot creation for faster startup
 net-libs/nodejs:system-icu - Use system dev-libs/icu instead of the bundled version
 net-libs/nodejs:system-ssl - Use system OpenSSL instead of the bundled one
@@ -7642,6 +7647,7 @@ sys-apps/elfix:ptpax - Enable PT_PAX_FLAGS support.
 sys-apps/elfix:xtpax - Enable XATTR_PAX_FLAGS support.
 sys-apps/etckeeper:cron - Install cron script
 sys-apps/ethtool:netlink - Enable netlink interface via net-libs/libmnl
+sys-apps/firejail:X - Enable X11 sandboxing
 sys-apps/firejail:apparmor - Enable support for custom AppArmor profiles
 sys-apps/firejail:chroot - Enable chrooting to custom directory
 sys-apps/firejail:contrib - Install contrib scripts
@@ -7651,10 +7657,8 @@ sys-apps/firejail:globalcfg - Enable global config file
 sys-apps/firejail:network - Enable networking features
 sys-apps/firejail:overlayfs - Enable overlayfs
 sys-apps/firejail:private-home - Enable private home feature
-sys-apps/firejail:seccomp - Enable system call filtering
 sys-apps/firejail:userns - Enable attaching a new user namespace to a sandbox (--noroot option)
 sys-apps/firejail:whitelist - Enable whitelist
-sys-apps/firejail:x11 - Enable X11 sandboxing
 sys-apps/firejail-lts:apparmor - Enable support for custom AppArmor profiles
 sys-apps/firejail-lts:globalcfg - Enable global config file
 sys-apps/firejail-lts:network - Enable networking features
@@ -8046,16 +8050,11 @@ sys-cluster/lustre:dlc - Enable Dynamic LNET Configuration
 sys-cluster/lustre:server - Enable kernels server modules
 sys-cluster/lustre:tests - Enable installation of tests
 sys-cluster/lustre:utils - Enable lustre utils
-sys-cluster/maui:pbs - Enable pbs integration
-sys-cluster/maui:slurm - Enable slurm integration
 sys-cluster/minikube:libvirt - Build plugin for kvm
 sys-cluster/mpich:mpi-threads - Enable MPI_THREAD_MULTIPLE
 sys-cluster/mpich:romio - Build the ROMIO MPI-IO component
 sys-cluster/mpich2:mpi-threads - Enable MPI_THREAD_MULTIPLE
 sys-cluster/mpich2:romio - Enable romio, a high-performance portable MPI-IO implementation
-sys-cluster/mvapich2:large-cluster - Automatically generated description for large-cluster
-sys-cluster/mvapich2:medium-cluster - Automatically generated description for medium-cluster
-sys-cluster/mvapich2:romio - Automatically generated description for romio
 sys-cluster/neutron:compute-only - Only install things needed on compute hosts
 sys-cluster/neutron:dhcp - Installs the initscripts for the neutron dhcp service
 sys-cluster/neutron:haproxy - haproxy backend support
@@ -8557,14 +8556,11 @@ www-client/chromium:hangouts - Enable support for Google Hangouts features such 
 www-client/chromium:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general use.
 www-client/chromium:js-type-check - Enable JavaScript type-checking for Chrome's web technology-based UI. Requires Java.
 www-client/chromium:official - Enable Official build instead of Developer build.
-www-client/chromium:ozone - Enable Ozone platform abstraction layer with X11 backend.
-www-client/chromium:ozone-wayland - Enable Wayland backend for Ozone.
 www-client/chromium:pic - Disable optimized assembly code that is not PIC friendly
 www-client/chromium:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
 www-client/chromium:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels
 www-client/chromium:system-ffmpeg - Use system ffmpeg instead of the bundled one
 www-client/chromium:system-icu - Use system icu instead of the bundled one
-www-client/chromium:system-libvpx - Use system libvpx instead of the bundled one
 www-client/chromium:tcmalloc - Use bundled tcmalloc instead of system malloc
 www-client/chromium:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
 www-client/dillo:xembed - Enable X11 XEmbed support
@@ -8626,6 +8622,8 @@ www-client/uget:aria2 - Enable support for net-misc/aria2 through xmlrpc. You'll
 www-client/uget:control-socket - Enable JSON-RPC over unix domain socket
 www-client/uget:openssl - Use dev-libs/openssl instead of net-libs/gnutls
 www-client/uget:rss - Enable uGet feed messages
+www-client/vivaldi-snapshot:proprietary-codecs - Use system media-video/ffmpeg to support patent-encumbered media codecs
+www-client/vivaldi-snapshot:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
 www-client/w3m:gdk-pixbuf - Enable support for x11-libs/gdk-pixbuf
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/litmus:libproxy - Support for automatic proxy configuratino management through net-libs/libproxy.

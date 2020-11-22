@@ -82,8 +82,8 @@ unset ADDONS_SRC
 # Extensions that need extra work:
 LO_EXTS="nlpsolver scripting-beanshell scripting-javascript wiki-publisher"
 
-IUSE="accessibility base bluetooth +branding coinmp +cups +dbus debug eds firebird
-googledrive gstreamer +gtk kde ldap +mariadb odk pdfimport postgres test
+IUSE="accessibility base bluetooth +branding clang coinmp +cups custom-cflags +dbus debug eds firebird
+googledrive gstreamer +gtk kde ldap +mariadb odk pdfimport postgres test vulkan
 $(printf 'libreoffice_extensions_%s ' ${LO_EXTS})"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
@@ -182,6 +182,19 @@ COMMON_DEPEND="${PYTHON_DEPS}
 		dev-libs/glib:2
 		net-wireless/bluez
 	)
+	clang? (
+		|| (
+			(	sys-devel/clang:12
+				sys-devel/llvm:12
+				=sys-devel/lld-12*	)
+			(	sys-devel/clang:11
+				sys-devel/llvm:11
+				=sys-devel/lld-11*	)
+			(	sys-devel/clang:10
+				sys-devel/llvm:10
+				=sys-devel/lld-10*	)
+		)
+	)
 	coinmp? ( sci-libs/coinor-mp )
 	cups? ( net-print/cups )
 	dbus? ( sys-apps/dbus[X] )
@@ -278,6 +291,7 @@ PATCHES=(
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-5.3.4.2-kioclient5.patch"
 	"${FILESDIR}/${PN}-6.1-nomancompress.patch"
+	"${FILESDIR}/${PN}-7.0.3.1-qt5detect.patch"
 )
 
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -374,17 +388,58 @@ src_configure() {
 	local google_default_client_id="329227923882.apps.googleusercontent.com"
 	local google_default_client_secret="vgKG0NNv7GoDpbtoFNLxCUXu"
 
+	# Show flags set at the beginning
+	einfo "Preset CFLAGS:    ${CFLAGS}"
+	einfo "Preset LDFLAGS:   ${LDFLAGS}"
+
+	if use clang ; then
+		# Force clang
+		einfo "Enforcing the use of clang due to USE=clang ..."
+		AR=llvm-ar
+		CC=${CHOST}-clang
+		CXX=${CHOST}-clang++
+		NM=llvm-nm
+		RANLIB=llvm-ranlib
+		LDFLAGS+=" -fuse-ld=lld"
+	else
+		# Force gcc
+		einfo "Enforcing the use of gcc due to USE=-clang ..."
+		AR=gcc-ar
+		CC=${CHOST}-gcc
+		CXX=${CHOST}-g++
+		NM=gcc-nm
+		RANLIB=gcc-ranlib
+	fi
+
+	if use custom-cflags ; then
+		elog "USE=custom-cflags has been selected. You are on your own to make sure that"
+		elog "the build succeeds. Good luck!"
+		strip-unsupported-flags
+	else
+		strip-flags
+	fi
+
+	export LO_CLANG_CC=${CC}
+	export LO_CLANG_CXX=${CXX}
+
+	# Show flags set at the end
+	einfo "  Used CFLAGS:    ${CFLAGS}"
+	einfo "  Used LDFLAGS:   ${LDFLAGS}"
+
+	# Ensure we use correct toolchain
+	tc-export CC CXX LD AR NM OBJDUMP RANLIB PKG_CONFIG
+
+	if use vulkan && ! use clang ; then
+		ewarn "Building skia with gcc may lead to performance issues. Disable vulkan or enable clang."
+	fi
+
 	# optimization flags
 	export GMAKE_OPTIONS="${MAKEOPTS}"
 	# System python enablement:
 	export PYTHON_CFLAGS=$(python_get_CFLAGS)
 	export PYTHON_LIBS=$(python_get_LIBS)
 
-	if use kde; then
-		export QT_SELECT=5 # bug 639620 needs proper fix though
-		export QT5DIR="$(qt5_get_bindir)/../"
-		export MOC5="$(qt5_get_bindir)/moc"
-	fi
+	use kde && export QT5DIR="$(qt5_get_bindir)/.."
 
 	local gentoo_buildid="Gentoo official package"
 	if [[ -n ${LOCOREGIT_VERSION} ]]; then
@@ -465,6 +520,7 @@ src_configure() {
 		$(use_enable odk)
 		$(use_enable pdfimport)
 		$(use_enable postgres postgresql-sdbc)
+		$(use_enable vulkan skia)
 		$(use_with accessibility lxml)
 		$(use_with coinmp system-coinmp)
 		$(use_with googledrive gdrive-client-id ${google_default_client_id})
@@ -585,6 +641,11 @@ EOF
 			dosym ../../../../${loprogdir}/__pycache__/${pyc} $(python_get_sitedir)/__pycache__/${pyc}
 		done < <(find "${D}"${lodir}/program -type f -name ${py/.py/*.pyc} -print0)
 	done
+
+	# bug 709450
+	mkdir -p "${ED}"/usr/share/metainfo || die
+	mv "${ED}"/usr/share/appdata/* "${ED}"/usr/share/metainfo/ || die
+	rmdir "${ED}"/usr/share/appdata || die
 }
 
 pkg_postinst() {

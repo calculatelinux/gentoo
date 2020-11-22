@@ -32,6 +32,22 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2020-11-22)
+# Upstream abandoned since 2012, tons of QA issues and
+# build bugs, esoteric NIH build system. Bug #293567, #670954,
+# #697444, #699320, #708058, #746230, Removal in 30 days.
+games-emulation/fakenes
+
+# Joonas Niilola <juippis@gentoo.org> (2020-11-22)
+# Abandoned upstream, unbuildable, unkeyworded in ::gentoo. 
+# Removal in 14 days. Bug #https://bugs.gentoo.org/752456
+app-accessibility/simon
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-11-21)
+# Dead upstream, depends on deprecated kde-frameworks/kmediaplayer
+# Masked for removal in 30 days.
+media-video/kmplayer
+
 # Michał Górny <mgorny@gentoo.org> (2020-11-19)
 # These packages are maintained by the Python project, or have
 # no maintainer.  They have not been ported to Python 3.8 yet.
@@ -398,37 +414,6 @@ dev-perl/ZMQ-LibZMQ2
 # bug #654244, #740952, #726912, #723060
 dev-lang/j
 
-# David Seifert <soap@gentoo.org> (2020-10-24)
-# EAPI 4, broken since 2012, upstream disappeared, multiple QA issues,
-# build system is completely broken. Removal in 30 days,
-# Bug #625118, #725438, #746029.
-sci-electronics/alliance
-
-# David Seifert <soap@gentoo.org> (2020-10-24)
-# EAPI 4, multiple QA issues, performs dangerous pointer-to-int
-# casts, can trash your computer, last release over 10 years ago.
-# Removal in 30 days. Bug #124755, #713472, #726020, #740912, #742434.
-sys-power/nvram-wakeup
-
-# David Seifert <soap@gentoo.org> (2020-10-24)
-# EAPI 4, doesn't build, outdated, ebuild has multiple QA issues.
-# Removal in 30 days. Bug #463188, #531104, #613116, #740926.
-sys-cluster/mvapich2
-
-# David Seifert <soap@gentoo.org> (2020-10-24)
-# EAPI 4, fetch restricted, download link disappeared, fails to build.
-# Removal in 30 days. Bug #365713, #405277, #405437, #414793, #415699,
-# #422799, #479288, #740928.
-sys-cluster/maui
-
-# David Seifert <soap@gentoo.org> (2020-10-24)
-# EAPI 4, abandoned upstream, fails to build, security vulnerabilities.
-# .NET is practically abandoned in Gentoo and needs a complete reboot.
-# Removal in 30 days. Bug #681194, #722256, #740986, #740988, #740990.
-dev-dotnet/gio-sharp
-dev-dotnet/ikvm-bin
-dev-dotnet/log4net
-
 # Michał Górny <mgorny@gentoo.org> (2020-10-24)
 # Last release in 2004, next release 'Soon(tm)'.  Fails to build
 # due to horrible code hacks.
@@ -441,16 +426,6 @@ games-rpg/twclone
 gnome-base/libbonobo
 gnome-base/libgnome-keyring
 gnome-base/orbit
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-10-23)
-# Depends on deprecated QtWebKit, needs a new maintainer and version bump.
-# Bug #688850, security bug #744199. Removal in 30 days.
-media-video/shotcut
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-10-23)
-# Depends on deprecated QtWebKit with no work towards QtWebEngine port at all.
-# Bug #688850. Removal in 30 days.
-media-libs/webvfx
 
 # Michał Górny <mgorny@gentoo.org> (2020-10-23)
 # Fails to build.  Needs a dedicated maintainer and a version bump.
@@ -485,12 +460,15 @@ dev-lua/luacrypto
 # All these ebuilds require slotted Lua, which is still masked.
 # Ulrich Müller <ulm@gentoo.org> (2020-11-06)
 # Added sci-visualization/gnuplot.
+>=app-benchmarks/sysbench-1.0.20-r100
 >=app-benchmarks/wrk-4.1.0-r100
 >=app-misc/worker-3.8.3-r100
 =dev-libs/efl-1.25.1-r10
 >=dev-lua/lua-bit32-5.3.5-r100
 >=dev-lua/lua-zlib-1.2-r100
 >=dev-lua/luaevent-0.4.6-r100
+>=dev-lua/luasec-0.9-r100
+>=dev-lua/luasocket-3.0_rc1_p20200328-r100
 >=dev-lua/luv-1.32.0.0-r100
 >=dev-lua/luadbi-0.7.2-r100
 >=dev-lua/lutok-0.4-r10
@@ -503,6 +481,7 @@ dev-lua/luacrypto
 >=games-engines/love-11.3-r100:0
 >=mail-filter/imapfilter-2.6.16-r100
 >=net-analyzer/suricata-6.0.0-r100
+>=net-im/swift-4.0.2-r100
 >=net-p2p/eiskaltdcpp-2.2.10-r100
 >=sci-visualization/gnuplot-5.4.0-r100
 >=www-apache/mod_security-2.9.3-r100
@@ -543,6 +522,9 @@ net-fs/openafs-kernel
 =dev-python/pypy3-7.3.2_p37*
 =dev-python/pypy3-exe-7.3.2_p37*
 =dev-python/pypy3-exe-bin-7.3.2_p37*
+=dev-python/pypy3-7.3.3_p37*
+=dev-python/pypy3-exe-7.3.3_p37*
+=dev-python/pypy3-exe-bin-7.3.3_p37*
 
 # Michał Górny <mgorny@gentoo.org> (2020-09-09)
 # These packages (or package versions) still require Python 2.7.
