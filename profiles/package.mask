@@ -32,6 +32,53 @@
 
 #--- END OF EXAMPLES ---
 
+# Thomas Deutschmann <whissi@gentoo.org> (2020-11-24)
+# Serious data corruption bug when using XFS, see https://www.spinics.net/lists/linux-xfs/msg47004.html
+# Feel free to manually unmask when not using XFS.
+=sys-kernel/gentoo-sources-5.9.10
+=sys-kernel/gentoo-sources-5.9.9
+=sys-kernel/gentoo-sources-5.4.79
+=sys-kernel/gentoo-sources-5.4.78
+=sys-kernel/gentoo-sources-4.19.159
+=sys-kernel/gentoo-sources-4.19.158
+=sys-kernel/gentoo-sources-4.14.208
+=sys-kernel/gentoo-sources-4.14.207
+=sys-kernel/gentoo-sources-4.9.245
+=sys-kernel/gentoo-sources-4.9.244
+=sys-kernel/vanilla-sources-5.9.10
+=sys-kernel/vanilla-sources-5.9.9
+=sys-kernel/vanilla-sources-5.4.79
+=sys-kernel/vanilla-sources-5.4.78
+=sys-kernel/vanilla-sources-4.19.159
+=sys-kernel/vanilla-sources-4.19.158
+=sys-kernel/vanilla-sources-4.14.208
+=sys-kernel/vanilla-sources-4.14.207
+=sys-kernel/vanilla-sources-4.9.245
+=sys-kernel/vanilla-sources-4.9.244
+=sys-kernel/vanilla-kernel-5.9.10
+=sys-kernel/vanilla-kernel-5.9.9
+=sys-kernel/vanilla-kernel-5.4.79
+=sys-kernel/vanilla-kernel-5.4.78
+=sys-kernel/gentoo-kernel-5.9.10
+=sys-kernel/gentoo-kernel-5.9.9
+=sys-kernel/gentoo-kernel-5.4.79
+=sys-kernel/gentoo-kernel-5.4.78
+=sys-kernel/gentoo-kernel-bin-5.9.10-r1
+=sys-kernel/gentoo-kernel-bin-5.9.10
+=sys-kernel/gentoo-kernel-bin-5.9.9-r1
+=sys-kernel/gentoo-kernel-bin-5.9.9
+=sys-kernel/gentoo-kernel-bin-5.4.79-r1
+=sys-kernel/gentoo-kernel-bin-5.4.79
+=sys-kernel/gentoo-kernel-bin-5.4.78-r1
+=sys-kernel/gentoo-kernel-bin-5.4.78
+
+# Fabian Groffen <grobian@gentoo.org> (2020-11-23)
+# No longer used, not really functional either, noone should be using
+# this, removal in 30 days.
+sys-kernel/xnu-headers
+sys-libs/darwin-libc-headers
+dev-libs/libmissing
+
 # David Seifert <soap@gentoo.org> (2020-11-22)
 # Upstream abandoned since 2012, tons of QA issues and
 # build bugs, esoteric NIH build system. Bug #293567, #670954,
@@ -408,12 +455,6 @@ dev-perl/ZMQ-LibZMQ3
 # Removal in 30 days.  Bug #741454.
 dev-perl/ZMQ-LibZMQ2
 
-# Sam James <sam@gentoo.org> (2020-10-25)
-# EAPI 4, fails to build for some time.
-# Removal in 30 days.
-# bug #654244, #740952, #726912, #723060
-dev-lang/j
-
 # Michał Górny <mgorny@gentoo.org> (2020-10-24)
 # Last release in 2004, next release 'Soon(tm)'.  Fails to build
 # due to horrible code hacks.
@@ -454,18 +495,23 @@ dev-lua/luacrypto
 # All these ebuilds require slotted Lua, which is still masked.
 # Ulrich Müller <ulm@gentoo.org> (2020-11-06)
 # Added sci-visualization/gnuplot.
+>=app-admin/conky-1.11.4
 >=app-benchmarks/sysbench-1.0.20-r100
 >=app-benchmarks/wrk-4.1.0-r100
 >=app-misc/worker-3.8.3-r100
+=dev-games/openscenegraph-openmw-3.4_p20200425-r100
 =dev-libs/efl-1.25.1-r10
 >=dev-lua/lua-bit32-5.3.5-r100
 >=dev-lua/lua-zlib-1.2-r100
+>=dev-lua/luadbi-0.7.2-r100
 >=dev-lua/luaevent-0.4.6-r100
+=dev-lua/luaexpat-1.3.0-r100
+=dev-lua/luaexpat-1.3.3-r100
+>=dev-lua/luafilesystem-1.8.0-r100
 >=dev-lua/luasec-0.9-r100
 >=dev-lua/luasocket-3.0_rc1_p20200328-r100
->=dev-lua/luv-1.32.0.0-r100
->=dev-lua/luadbi-0.7.2-r100
 >=dev-lua/lutok-0.4-r10
+>=dev-lua/luv-1.32.0.0-r100
 >=dev-lua/messagepack-0.3.2-r100
 >=dev-lua/toluapp-1.0.93_p20190513-r100
 >=dev-util/geany-plugins-1.37-r100
@@ -473,7 +519,10 @@ dev-lua/luacrypto
 >=games-engines/love-0.7.2-r100:0.7
 >=games-engines/love-0.8.0-r100:0.8
 >=games-engines/love-11.3-r100:0
+>=games-roguelike/stone-soup-0.25.1-r100
 >=mail-filter/imapfilter-2.6.16-r100
+>=media-gfx/geeqie-1.5.1-r1
+>=media-sound/aqualung-1.1-r100
 >=net-analyzer/suricata-6.0.0-r100
 >=net-im/swift-4.0.2-r100
 >=net-p2p/eiskaltdcpp-2.2.10-r100
@@ -481,9 +530,6 @@ dev-lua/luacrypto
 >=www-apache/mod_security-2.9.3-r100
 >=www-client/elinks-0.13.5-r100
 >=www-servers/lighttpd-1.4.55-r100
->=app-admin/conky-1.11.4
->=media-sound/aqualung-1.1-r100
->=games-roguelike/stone-soup-0.25.1-r100
 
 # Andrew Savchenko <bircoph@gentoo.org> (2020-10-11)
 # Mask old openafs version and corresponding openafs-kernel with
