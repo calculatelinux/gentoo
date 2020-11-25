@@ -32,6 +32,24 @@
 
 #--- END OF EXAMPLES ---
 
+# Martin Dummer <martin.dummer@gmx.net> (2020-11-25)
+# Does not compile with kernels >=5.5, no upstream development
+# since years, for most hardware the in-kernel module
+# rtsx_pci_sdmmc should be preferred over this driver.
+# Open bugs #712484 #717184 #741909.
+# Removal in 30 days. (bug #756370)
+sys-block/rts_pstor
+
+# Sam James <sam@gentoo.org> (2020-11-25)
+# Temporary mask to fix tree breakage
+# Dependency x11-libs/pangox-compat does not exist
+=net-misc/anydesk-6.0.1
+
+# Marek Szuba <marecki@gentoo.org> (2020-11-24)
+# No releases since 2008, deprecated upstream in favour of dev-lua/ldoc,
+# unmaintained, no revdeps. Removal in 30 days (Bug #756343).
+dev-lua/luadoc
+
 # Thomas Deutschmann <whissi@gentoo.org> (2020-11-24)
 # Serious data corruption bug when using XFS, see https://www.spinics.net/lists/linux-xfs/msg47004.html
 # Feel free to manually unmask when not using XFS.
@@ -45,6 +63,7 @@
 =sys-kernel/gentoo-sources-4.14.207
 =sys-kernel/gentoo-sources-4.9.245
 =sys-kernel/gentoo-sources-4.9.244
+=sys-kernel/pf-sources-5.9_p5
 =sys-kernel/vanilla-sources-5.9.10
 =sys-kernel/vanilla-sources-5.9.9
 =sys-kernel/vanilla-sources-5.4.79
@@ -498,6 +517,7 @@ dev-lua/luacrypto
 >=app-admin/conky-1.11.4
 >=app-benchmarks/sysbench-1.0.20-r100
 >=app-benchmarks/wrk-4.1.0-r100
+>=app-crypt/ekeyd-1.1.5-r100
 >=app-misc/worker-3.8.3-r100
 =dev-games/openscenegraph-openmw-3.4_p20200425-r100
 =dev-libs/efl-1.25.1-r10
@@ -573,7 +593,6 @@ net-fs/openafs-kernel
 # Please do not remove any packages from this list unless you actually
 # port them to Python 3.
 # Removal in 30 days.  Please find relevant bugs on tracker bug #694800.
-dev-vcs/gitstats
 games-strategy/0ad
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (2020-09-01)
@@ -695,12 +714,10 @@ net-libs/nDPI
 =mail-mta/postfix-3.6*
 
 # Miroslav Šulc <fordfrog@gentoo.org> (2020-02-27)
-# dev-java/ant-eclipse-ecj:4.10 depends on masked >=virtual/{jdk,jre}-11
-# www-servers/tomcat:9 depends on masked dev-java/eclipse-ecj:4.13
-dev-java/ant-eclipse-ecj:4.13
-dev-java/eclipse-ecj:4.13
-dev-java/ant-eclipse-ecj:4.10
-dev-java/eclipse-ecj:4.10
+# >=dev-java/ant-eclipse-ecj-4.10 depends on masked >=virtual/{jdk,jre}-11
+# www-servers/tomcat:9 depends on masked dev-java/eclipse-ecj
+>=dev-java/ant-eclipse-ecj-4.10
+>=dev-java/eclipse-ecj-4.10
 www-servers/tomcat:9
 
 # Mart Raudsepp <leio@gentoo.org> (2020-02-16)
