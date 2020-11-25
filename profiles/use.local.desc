@@ -549,7 +549,6 @@ app-emulation/libvirt:xen - Support management of Xen virtualisation (app-emulat
 app-emulation/libvirt:zfs - Enable ZFS backend storage sys-fs/zfs
 app-emulation/lxc:apparmor - Enable AppArmor support
 app-emulation/lxc:man - Build manpages
-app-emulation/lxc:templates - Install old style templates through app-emulation/lxc-templates
 app-emulation/lxc:tools - Build and install additional command line tools
 app-emulation/lxd:apparmor - Enable AppArmor support
 app-emulation/nemu:network-map - Adds possibility of exporting network map to SVG
@@ -3463,7 +3462,6 @@ kde-apps/kdegraphics-mobipocket:thumbnail - Enables thumbnail generation
 kde-apps/kdemultimedia-meta:cdrom - Include packages for optical discs
 kde-apps/kdenetwork-meta:dropbox - Enable support for Dropbox in kde-apps/dolphin via kde-apps/dolphin-plugins-dropbox
 kde-apps/kdenetwork-meta:webengine - Enable Google Drive support via kde-misc/kio-gdrive and instant messaging integration via kde-apps/plasma-telepathy-meta
-kde-apps/kdenlive:freesound - Enable freesound.org credentials support via dev-qt/qtwebkit to download files
 kde-apps/kdenlive:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/kdenlive:webengine - Enable freesound.org credentials support via dev-qt/qtwebengine to download files
 kde-apps/kdepim-addons:importwizard - Enable additional import plugins for kde-apps/akonadi-import-wizard
@@ -3547,7 +3545,6 @@ kde-apps/okular:epub - Enable E-Book support via app-text/ebook-tools
 kde-apps/okular:image-backend - Enable image viewing support
 kde-apps/okular:markdown - Enable Markdown support via app-text/discount
 kde-apps/okular:mobi - Enable mobipocket support
-kde-apps/okular:mobile - Enable Plasma mobile support
 kde-apps/okular:plucker - Enable Plucker E-Book for Palm OS devices support
 kde-apps/okular:qml - Install Okular Qml components
 kde-apps/okular:share - Enable support for a share menu using kde-frameworks/purpose
@@ -5859,6 +5856,7 @@ net-im/vacuum:urlprocessor - Allows other plugins to load data from custom types
 net-im/vacuum:vcard - Enable obtaining peer's personal contact information
 net-im/vacuum:xmppuriqueries - Allow other plugins to handle XMPP URI queries
 net-im/zoom:bundled-libjpeg-turbo - Use bundled libturbojpeg instead of media-libs/libjpeg-turbo
+net-im/zoom:bundled-qt - Use bundled Qt and icu instead of system-wide libs
 net-irc/anope:ldap - Build LDAP modules for e.g. opertypes
 net-irc/anope:sql - Build modules which require SQL
 net-irc/anope:ssl - Provide SSL services using OpenSSL
@@ -8035,13 +8033,6 @@ sys-cluster/keepalived:regex - compile with support for regex in health checks
 sys-cluster/kronosnet:lzo2 - Add support for lzo2 compression
 sys-cluster/kronosnet:nss - Add support for tls via nss
 sys-cluster/kronosnet:openssl - Add support for tls via openssl
-sys-cluster/kubernetes:kube-apiserver - Kubernetes API server
-sys-cluster/kubernetes:kube-controller-manager - Kubernetes controller manager
-sys-cluster/kubernetes:kube-proxy - Kubernetes proxy service
-sys-cluster/kubernetes:kube-scheduler - Kubernetes scheduler
-sys-cluster/kubernetes:kubeadm - CLI to bootstrap a secure Kubernetes cluster
-sys-cluster/kubernetes:kubectl - CLI to run commands against Kubernetes clusters
-sys-cluster/kubernetes:kubelet - Kubernetes node agent
 sys-cluster/legion:gasnet - Enable GASNet lib support
 sys-cluster/legion:hwloc - Enable HWLoc lib support
 sys-cluster/lustre:client - Enable kernel client modules
@@ -8816,8 +8807,6 @@ x11-misc/rofi:windowmode - Enable normal window mode
 x11-misc/rss-glx:quesoglc - Enable support for OpenGL Character Renderer
 x11-misc/sddm:elogind - Use sys-auth/elogind for session tracking.
 x11-misc/sent:savedconfig - Without a saved config.h, this package depends on media-gfx/farbfeld for image conversions
-x11-misc/spacefm:gtk2 - Support GTK+ 2.x instead of GTK+ 3.x
-x11-misc/spacefm:gtk3 - Support GTK+ 3.x instead of GTK+ 2.x
 x11-misc/spacefm:video-thumbnails - Support video thumbnails with media-video/ffmpegthumbnailer
 x11-misc/stalonetray:graceful-exit - use non-portable hack to exit gracefuly on signal
 x11-misc/tint2:battery - Enable battery status plugin

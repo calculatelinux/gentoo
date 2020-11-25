@@ -32,6 +32,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-11-25)
+# KF5 PortingAids (from kdelibs4) without any remaining revdeps. Bug #755956
+# Masked for removal in 30 days.
+kde-frameworks/kdewebkit
+kde-frameworks/kjsembed
+kde-frameworks/kmediaplayer
+kde-frameworks/kxmlrpcclient
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-11-25)
+# Ddepends on deprecated dev-qt/qtwebkit and kde-frameworks/kdewebkit.
+# Barely maintained upstream and on the brink of being archived for good.
+# Patch for Qt5WebEngine exists but needs runtime testing, bug #756685
+# Masked for removal in 30 days.
+net-libs/libkvkontakte
+
 # Martin Dummer <martin.dummer@gmx.net> (2020-11-25)
 # Does not compile with kernels >=5.5, no upstream development
 # since years, for most hardware the in-kernel module
@@ -450,19 +465,6 @@ kde-apps/kdebase-meta:5
 # It has not been updated in 11 years, so it has been useless anyway.
 # Removal in 14 days.  Bug #559060.
 sci-geosciences/mapnik-world-boundaries
-
-# Wiliam Hubbs <williamh@gentoo.org> (2020-10-26)
-# Combining kubernetes into one package breaks upgrades, so it is split
-# into separate packages. You need to upgrade and install the following
-# packages based on the needs of your cluster:
-#
-# sys-cluster/kubeadm, sys-cluster/kube-apiserver
-# sys-cluster/kube-controller-manager, sys-cluster/kubectl
-# sys-cluster/kubelet, sys-cluster/kube-proxy
-# sys-cluster/kube-scheduler
-#
-# This package is being removed in 30 days. bug #741572
-sys-cluster/kubernetes
 
 # Thomas Deutschmann <whissi@gentoo.org> (2020-10-26)
 # Depends on net-libs/zeromq-3 which is scheduled for removal.
