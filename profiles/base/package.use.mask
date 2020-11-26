@@ -6,6 +6,11 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Joonas Niilola <juippis@gentoo.org> (2020-11-26)
+# Still too experimental. efl's upstream can't keep up with libavif's.
+# Bug: 756733
+dev-libs/efl avif
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-11-25)
 # Depends on masked net-libs/libkvkontakte
 kde-apps/kipi-plugins vkontakte
@@ -23,8 +28,8 @@ media-gfx/darktable system-lua
 # error: unresolved link to `crate::os::unix::ffi::OsStrExt`
 #
 # USE=miri seems to be not working on 1.48.0
-=dev-lang/rust-1.47.0-r1 doc
-=dev-lang/rust-1.48.0 doc miri
+~dev-lang/rust-1.47.0 doc
+~dev-lang/rust-1.48.0 doc miri
 
 # Michał Górny <mgorny@gentoo.org> (2020-09-27)
 # The respective dependencies are masked for removal.
