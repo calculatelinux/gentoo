@@ -1,11 +1,11 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=7
 
 WEBAPP_MANUAL_SLOT="yes"
 
-inherit webapp eutils multilib user toolchain-funcs git-r3
+inherit git-r3 toolchain-funcs webapp
 
 [[ -z "${CGIT_CACHEDIR}" ]] && CGIT_CACHEDIR="/var/cache/${PN}/"
 
@@ -17,18 +17,22 @@ EGIT_REPO_URI="https://git.zx2c4.com/cgit"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="doc +highlight +lua +luajit"
+IUSE="doc +highlight libressl +lua +luajit test"
+RESTRICT="!test? ( test )"
 
 RDEPEND="
+	acct-group/cgit
+	acct-user/cgit
 	dev-vcs/git
-	sys-libs/zlib
-	dev-libs/openssl:0
-	virtual/httpd-cgi
 	highlight? ( || ( dev-python/pygments app-text/highlight ) )
+	!libressl? ( dev-libs/openssl:0= )
+	libressl? ( dev-libs/libressl:0= )
 	lua? (
 		luajit? ( dev-lang/luajit )
 		!luajit? ( dev-lang/lua:0 )
 	)
+	sys-libs/zlib
+	virtual/httpd-cgi
 "
 # ebuilds without WEBAPP_MANUAL_SLOT="yes" are broken
 DEPEND="${RDEPEND}
@@ -38,8 +42,6 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	webapp_pkg_setup
-	enewgroup ${PN}
-	enewuser ${PN} -1 -1 -1 ${PN}
 }
 
 src_prepare() {
@@ -59,7 +61,7 @@ src_prepare() {
 		echo "NO_LUA = 1" >> cgit.conf
 	fi
 
-	epatch_user
+	eapply_user
 }
 
 src_compile() {
@@ -84,6 +86,10 @@ src_install() {
 	keepdir "${CGIT_CACHEDIR}"
 	fowners ${PN}:${PN} "${CGIT_CACHEDIR}"
 	fperms 700 "${CGIT_CACHEDIR}"
+}
+
+src_test() {
+	emake V=1 AR="$(tc-getAR)" CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" test
 }
 
 pkg_postinst() {
