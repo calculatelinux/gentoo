@@ -32,6 +32,11 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2020-11-28)
+# Last release in 2002, multiple open bugs, no maintainer, no revdeps.
+# Bug #709512, #713300, #729518, Removal in 30 days.
+app-text/cook
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-11-25)
 # KF5 PortingAids (from kdelibs4) without any remaining revdeps. Bug #755956
 # Masked for removal in 30 days.
@@ -189,11 +194,6 @@ app-text/kchmviewer
 # Depends on deprecated QtWebKit, no maintainer.
 # Bugs #712200 and 725388. Removal in 30 days.
 sci-misc/mendeleydesktop
-
-# Joonas Niilola <juippis@gentoo.org> (2020-11-18)
-# Doesn't compile, no maintainer, our package is multiple versions
-# behind from upstream. Removal in ~30 days. Bug: #739212
-games-emulation/ppsspp
 
 # Michał Górny <mgorny@gentoo.org> (2020-11-18)
 # Upstream has switched to aiobotocore.  It's a huge hack that requires
@@ -482,11 +482,6 @@ gnome-base/orbit
 # Removal in 30 days.  Bug #635592.
 games-strategy/asc
 
-# Maciej Mrozowski <reavertm@gentoo.org> (2020-10-23)
-# Crashes at startup - bug #750770, dead upstream - bug #737936
-# Removal in 30 days.
-~net-im/kadu-4.3
-
 # David Seifert <soap@gentoo.org> (2020-10-21)
 # No releases in over 3 years, no more revdeps in tree
 # upstream mostly unresponsive to requests for proper
@@ -504,6 +499,9 @@ dev-lua/luacrypto
 # All these ebuilds require slotted Lua, which is still masked.
 # Ulrich Müller <ulm@gentoo.org> (2020-11-06)
 # Added sci-visualization/gnuplot.
+# Robin H. Johnson <robbat2@gentoo.org> (2020-11-28)
+# Added dev-lua/lpeg
+# Added dev-lua/lgi
 >=app-admin/conky-1.11.4
 >=app-benchmarks/sysbench-1.0.20-r100
 >=app-benchmarks/wrk-4.1.0-r100
@@ -511,18 +509,35 @@ dev-lua/luacrypto
 >=app-misc/worker-3.8.3-r100
 =dev-games/openscenegraph-openmw-3.4_p20200425-r100
 =dev-libs/efl-1.25.1-r10
+>=dev-lua/busted-2.0.0-r100
+>=dev-lua/dkjson-2.5-r100
+>=dev-lua/ldoc-1.4.6-r100
+>=dev-lua/lpeg-1.0.2-r100
+>=dev-lua/lua-argparse-0.6.0-r100
 >=dev-lua/lua-bit32-5.3.5-r100
+>=dev-lua/lua-utf8-0.1.3-r100
 >=dev-lua/lua-zlib-1.2-r100
+>=dev-lua/LuaBitOp-1.0.2-r100
+>=dev-lua/luacheck-0.23.0-r100
 >=dev-lua/luadbi-0.7.2-r100
 >=dev-lua/luaevent-0.4.6-r100
 =dev-lua/luaexpat-1.3.0-r100
 =dev-lua/luaexpat-1.3.3-r100
+>=dev-lua/lua_cliargs-3.0_p2-r100
+>=dev-lua/lua-term-0.7-r100
 >=dev-lua/luafilesystem-1.8.0-r100
+>=dev-lua/luajson-1.3.4
 >=dev-lua/luasec-0.9-r100
 >=dev-lua/luasocket-3.0_rc1_p20200328-r100
+>=dev-lua/luassert-1.8.0-r100
+>=dev-lua/luasystem-0.2.1_p0-r100
 >=dev-lua/lutok-0.4-r10
 >=dev-lua/luv-1.32.0.0-r100
+>=dev-lua/mediator_lua-1.1.2_p0-r100
 >=dev-lua/messagepack-0.3.2-r100
+>=dev-lua/mpack-1.0.4-r100
+>=dev-lua/penlight-1.9.2-r100
+>=dev-lua/say-1.3_p1-r100
 >=dev-lua/toluapp-1.0.93_p20190513-r100
 >=dev-util/geany-plugins-1.37-r100
 =games-action/minetest-5.3.0-r100
@@ -540,6 +555,8 @@ dev-lua/luacrypto
 >=www-apache/mod_security-2.9.3-r100
 >=www-client/elinks-0.13.5-r100
 >=www-servers/lighttpd-1.4.55-r100
+>=dev-lua/lpeg-1.0.2-r100
+>=dev-lua/lgi-0.9.2-r100
 
 # Andrew Savchenko <bircoph@gentoo.org> (2020-10-11)
 # Mask old openafs version and corresponding openafs-kernel with
