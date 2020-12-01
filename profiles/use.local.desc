@@ -3727,9 +3727,9 @@ mail-client/neomutt:gpgme - Build gpgme backend to support S/MIME, PGP/MIME and 
 mail-client/neomutt:kyotocabinet - Enable Kyoto Cabinet database backend for header caching
 mail-client/neomutt:lmdb - Enable LMDB (Lightning Memory-Mapped Database) backend for header caching
 mail-client/neomutt:notmuch - Enable support for net-mail/notmuch
-mail-client/neomutt:pgp-classic - Build classic_pgp backend to support PGP/MIME and traditional/inline PGP
+mail-client/neomutt:pgp-classic - Build classic-pgp backend to support PGP/MIME and traditional/inline PGP
 mail-client/neomutt:qdbm - Enable QDBM (Quicker Database Manager) database backend for header caching
-mail-client/neomutt:smime-classic - Build classic_smime backend to support S/MIME
+mail-client/neomutt:smime-classic - Build classic-smime backend to support S/MIME
 mail-client/neomutt:tokyocabinet - Enable Tokyo Cabinet database backend for header caching
 mail-client/roundcube:change-password - Allow users to change passwords through Roundcube
 mail-client/roundcube:enigma - Add dependencies to support server-side GnuPG signing and/or encryption through the enigma plugin
@@ -7455,6 +7455,7 @@ sci-mathematics/octave:glpk - Add support for sci-mathematics/glpk for linear pr
 sci-mathematics/octave:qhull - Add support for media-libs/qhull, to allow `delaunay', `convhull', and related functions
 sci-mathematics/octave:qrupdate - Add support for sci-libs/qrupdatefor QR and Cholesky update functions
 sci-mathematics/octave:sparse - Add enhanced support for sparse matrix algebra with SuiteSparse
+sci-mathematics/octave:sundials - Enable the ode15i and ode15s ODE solvers using sci-libs/sundials
 sci-mathematics/pari:data - Add additional data (elldata, galdata, seadata, nftables)
 sci-mathematics/petsc:afterimage - Use Afterstep image library (media-libs/libafterimage)
 sci-mathematics/petsc:boost - Use boost (dev-libs/boost)
