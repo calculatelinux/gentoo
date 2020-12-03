@@ -32,6 +32,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Aaron Bauman <bman@gentoo.org> (2020-12-02)
+# Deprecated. Functionality is native to dev-python/pytest now
+# Removal in 14 days
+dev-python/pytest-catchlog
+
+# Joonas Niilola <juippis@gentoo.org> (2020-12-01)
+# Not maintained in Gentoo, multiple versions behind, unsafe, EAPI-5,
+# Use other kernel source / binary packages instead,
+# https://packages.gentoo.org/categories/sys-kernel
+# Removal in ~30 days.
+# Bugs: #716490 (aufs), #739782 (-ck), #757843 (-xbox)
+sys-kernel/aufs-sources
+sys-kernel/ck-sources
+sys-kernel/xbox-sources
+
 # Aaron Bauman <bman@gentoo.org> (2020-11-30)
 # EAPI=5. Multiple open bugs #603866 #713620
 # Dead upstream. Removal in 30 days.
@@ -423,23 +438,6 @@ www-apps/webmcp
 dev-lang/helium
 dev-haskell/lvmlib
 
-# Joonas Niilola <juippis@gentoo.org> (2020-11-03)
-# Dead upstream, or broken for a long time, not maintained in Gentoo.
-# Removal in 30 days. Bug #752462
-app-emulation/rex-client
-app-i18n/kde-l10n-scripts
-media-plugins/xbmc-addon-xvdr
-net-analyzer/nagios-plugins-flameeyes
-net-libs/libosmo-abis
-net-libs/libosmo-netif
-net-misc/lcr
-net-misc/srf-ip-conn-srv
-net-wireless/dump978
-net-wireless/openbsc
-net-wireless/openggsn
-net-wireless/osmobts
-net-wireless/osmocom-bb
-
 # Lars Wendler <polynomial-c@gentoo.org> (2020-10-30)
 # Removed public macro definitions for TRUE and FALSE which breaks lots of
 # revdeps. See tacker bug at https://bugs.gentoo.org/751919
@@ -489,11 +487,6 @@ gnome-base/libbonobo
 gnome-base/libgnome-keyring
 gnome-base/orbit
 
-# Michał Górny <mgorny@gentoo.org> (2020-10-23)
-# Fails to build.  Needs a dedicated maintainer and a version bump.
-# Removal in 30 days.  Bug #635592.
-games-strategy/asc
-
 # David Seifert <soap@gentoo.org> (2020-10-21)
 # No releases in over 3 years, no more revdeps in tree
 # upstream mostly unresponsive to requests for proper
@@ -531,18 +524,23 @@ dev-lua/luacrypto
 >=dev-lua/lpeg-1.0.2-r100
 >=dev-lua/lua-argparse-0.6.0-r100
 >=dev-lua/lua-bit32-5.3.5-r100
+>=dev-lua/lua-cjson-2.1.0.8-r100
 >=dev-lua/lua-term-0.7-r100
 >=dev-lua/lua-utf8-0.1.3-r100
 >=dev-lua/lua-zlib-1.2-r100
 >=dev-lua/lua_cliargs-3.0_p2-r100
 >=dev-lua/LuaBitOp-1.0.2-r100
 >=dev-lua/luacheck-0.23.0-r100
+>=dev-lua/luacov-0.14.0-r100
 >=dev-lua/luadbi-0.7.2-r100
 >=dev-lua/luaevent-0.4.6-r100
 =dev-lua/luaexpat-1.3.0-r101
 =dev-lua/luaexpat-1.3.3-r101
 >=dev-lua/luafilesystem-1.8.0-r100
+>=dev-lua/lualdap-1.2.5-r100
 >=dev-lua/luajson-1.3.4
+>=dev-lua/luaossl-20200709-r100
+>=dev-lua/luaposix-35.0-r100
 >=dev-lua/luarocks-3.4.0-r100
 >=dev-lua/luasec-0.9-r100
 >=dev-lua/luasocket-3.0_rc1_p20200328-r100
@@ -570,6 +568,12 @@ dev-lua/luacrypto
 >=games-rpg/kqlives-0.99-r100
 >=games-rpg/sumwars-0.5.8-r100
 >=games-simulation/corsix-th-0.64-r100
+>=games-sports/xmoto-0.6.1-r100
+>=games-strategy/hedgewars-1.0.0-r100
+>=games-strategy/naev-0.7.0-r100
+>=games-strategy/openra-20190314-r100
+>=games-strategy/s25rttr-0.9.0_pre20200723-r100
+>=games-util/slade-3.1.12a-r100
 >=mail-filter/imapfilter-2.6.16-r100
 >=media-gfx/geeqie-1.5.1-r1
 >=media-sound/aqualung-1.1-r100
@@ -629,10 +633,6 @@ games-strategy/0ad
 ~app-i18n/ibus-sunpinyin-3.0.0_rc1
 ~app-i18n/scim-sunpinyin-3.0.0_rc1
 ~app-i18n/xsunpinyin-3.0.0_rc1
-
-# Piotr Karbowski <slashbeast@gentoo.org> (2020-08-28)
-# Temporary mask due to multiple reports of segfaults at startup, bug #739056
-=x11-base/xorg-server-1.20.9
 
 # Alfredo Tupone <tupone@gentoo.org> (2020-08-23)
 # Ported to py3 but not yet released

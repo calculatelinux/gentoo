@@ -16,7 +16,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz
 
 LICENSE="|| ( Apache-2.0 BSD )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 ~sparc ~x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x64-solaris"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 ~sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x64-solaris"
 IUSE="libressl idna"
 
 RDEPEND="
@@ -50,13 +50,13 @@ src_prepare() {
 	default
 
 	# work around availability macros not supported in GCC (yet)
-	if [[ ${CHOST} == *-darwin ]] ; then
+	if [[ ${CHOST} == *-darwin* ]] ; then
 		local darwinok=0
 		if [[ ${CHOST##*-darwin} -ge 16 ]] ; then
 			darwinok=1
 		fi
 		sed -i -e 's/__builtin_available(macOS 10\.12, \*)/'"${darwinok}"'/' \
-			src/_cffi_src/openssl/src/osrandom_engine.c
+			src/_cffi_src/openssl/src/osrandom_engine.c || die
 	fi
 }
 

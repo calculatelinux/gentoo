@@ -116,7 +116,6 @@ RDEPEND="
 	X? (
 		>=x11-libs/libX11-1.6.2:=[${MULTILIB_USEDEP}]
 		>=x11-libs/libxshmfence-1.1:=[${MULTILIB_USEDEP}]
-		>=x11-libs/libXdamage-1.1.4-r1:=[${MULTILIB_USEDEP}]
 		>=x11-libs/libXext-1.3.2:=[${MULTILIB_USEDEP}]
 		>=x11-libs/libXxf86vm-1.1.3:=[${MULTILIB_USEDEP}]
 		>=x11-libs/libxcb-1.13:=[${MULTILIB_USEDEP}]
@@ -372,6 +371,12 @@ multilib_src_configure() {
 	use wayland && platforms+=",wayland"
 	[[ -n $platforms ]] && emesonargs+=(-Dplatforms=${platforms#,})
 
+	if use X || use egl; then
+		emesonargs+=(-Dglvnd=true)
+	else
+		emesonargs+=(-Dglvnd=false)
+	fi
+
 	if use gallium; then
 		emesonargs+=(
 			$(meson_feature llvm)
@@ -492,8 +497,7 @@ multilib_src_configure() {
 	emesonargs+=(
 		$(meson_use test build-tests)
 		-Dglx=$(usex X dri disabled)
-		-Dglvnd=true
-		-Dshared-glapi=true
+		-Dshared-glapi=enabled
 		$(meson_feature dri3)
 		$(meson_feature egl)
 		$(meson_feature gbm)
