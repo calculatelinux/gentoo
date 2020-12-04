@@ -64,7 +64,7 @@ app-arch/unzip natspec
 app-crypt/gnupg smartcard tofu wks-server
 app-crypt/mit-krb5 doc test xinetd
 app-crypt/pinentry fltk gnome-keyring
-app-doc/doxygen clang doc dot
+app-doc/doxygen clang doc 
 app-editors/emacs alsa json lcms mailutils
 app-misc/pax-utils python
 app-text/asciidoc test
@@ -110,10 +110,14 @@ dev-vcs/mercurial tk rust zsh-completion
 media-libs/freetype harfbuzz png
 media-libs/harfbuzz doc
 sys-libs/libomp hwloc
+sys-libs/libcxx libcxxabi libunwind static-libs
 sys-libs/libcxxabi libunwind
+media-gfx/graphviz devil svg pdf
 media-libs/mesa lm-sensors unwind
 media-libs/tiff jbig jpeg test webp
 net-fs/nfs-utils nfsv41
+media-libs/fontconfig doc
+net-irc/irssi socks5
 net-libs/gnutls doc test-full
 net-libs/ldns doc python
 net-libs/libpcap rdma
@@ -123,6 +127,7 @@ net-nds/openldap cxx kerberos sasl
 sys-apps/kmod doc
 sys-apps/portage apidoc
 sys-apps/rng-tools nistbeacon pkcs11
+sys-apps/systemd policykit
 sys-auth/pambase gnome-keyring pam_krb5 pam_ssh  mktemp
 sys-block/thin-provisioning-tools test
 sys-devel/automake test
@@ -132,3 +137,5 @@ sys-devel/llvm doc
 sys-fs/squashfs-tools lzma
 sys-libs/libcap-ng python
 sys-process/audit gssapi python
+x11-base/xorg-server  unwind
+x11-libs/libvdpau doc

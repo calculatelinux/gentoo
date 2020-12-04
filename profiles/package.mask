@@ -32,6 +32,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-12-03)
+# Explicit namespace support was necessary for Python 2 only.  Empty
+# directories work best for Python 3.
+# Removal in 14 days.
+dev-python/backports
+dev-python/namespace-jaraco
+
 # Aaron Bauman <bman@gentoo.org> (2020-12-02)
 # Deprecated. Functionality is native to dev-python/pytest now
 # Removal in 14 days
@@ -487,19 +494,6 @@ gnome-base/libbonobo
 gnome-base/libgnome-keyring
 gnome-base/orbit
 
-# David Seifert <soap@gentoo.org> (2020-10-21)
-# No releases in over 3 years, no more revdeps in tree
-# upstream mostly unresponsive to requests for proper
-# tarballs. Removed from Fedora and Ubuntu already.
-# Bug #708700, Removal in 30 days.
-dev-python/PythonQt
-
-# Marek Szuba <marecki@gentoo.org> (2020-10-13)
-# Not compatible with >=dev-libs/openssl-1.1.0, no maintainer in Gentoo,
-# no new commits to the upstream Git repository since September 2013.
-# No reverse dependencies. Removal in 30 days (Bug #736190).
-dev-lua/luacrypto
-
 # Marek Szuba <marecki@gentoo.org> (2020-10-13)
 # Ulrich Müller <ulm@gentoo.org> (2020-11-06)
 # Robin H. Johnson <robbat2@gentoo.org> (2020-11-28)
@@ -525,6 +519,7 @@ dev-lua/luacrypto
 >=dev-lua/lua-argparse-0.6.0-r100
 >=dev-lua/lua-bit32-5.3.5-r100
 >=dev-lua/lua-cjson-2.1.0.8-r100
+>=dev-lua/lua-openssl-0.7.8_p0-r100
 >=dev-lua/lua-term-0.7-r100
 >=dev-lua/lua-utf8-0.1.3-r100
 >=dev-lua/lua-zlib-1.2-r100
@@ -538,7 +533,7 @@ dev-lua/luacrypto
 =dev-lua/luaexpat-1.3.3-r101
 >=dev-lua/luafilesystem-1.8.0-r100
 >=dev-lua/lualdap-1.2.5-r100
->=dev-lua/luajson-1.3.4
+>=dev-lua/luajson-1.3.4-r100
 >=dev-lua/luaossl-20200709-r100
 >=dev-lua/luaposix-35.0-r100
 >=dev-lua/luarocks-3.4.0-r100
@@ -549,7 +544,7 @@ dev-lua/luacrypto
 >=dev-lua/lutok-0.4-r10
 >=dev-lua/luv-1.32.0.0-r100
 >=dev-lua/mediator_lua-1.1.2_p0-r100
->=dev-lua/messagepack-0.3.2-r100
+>=dev-lua/messagepack-0.5.2-r100
 >=dev-lua/mpack-1.0.8-r100
 >=dev-lua/penlight-1.9.2-r100
 >=dev-lua/say-1.3_p1-r100
@@ -589,6 +584,7 @@ dev-lua/luacrypto
 >=www-client/luakit-2.2.1-r100
 >=www-servers/lighttpd-1.4.55-r100
 >=x11-misc/devilspie2-0.43-r100
+>=x11-wm/awesome-4.3-r100
 
 # Azamat H. Hackimov <azamat.hackimov@gmail.com> (2020-10-06)
 # 1.3.3 is broken and failing unittests for net-im/prosody. Bug #746782.

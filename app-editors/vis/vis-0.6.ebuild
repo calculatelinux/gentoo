@@ -16,6 +16,7 @@ LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="+ncurses +lua selinux test tre"
+REQUIRED_USE="lua? ( ${LUA_REQUIRED_USE} )"
 RESTRICT="!test? ( test )"
 
 # - Known to also work with NetBSD curses
@@ -25,6 +26,10 @@ DEPEND="dev-libs/libtermkey
 	tre? ( dev-libs/tre:= )"
 RDEPEND="${DEPEND}
 	app-eselect/eselect-vi"
+
+pkg_setup() {
+	use lua && lua-single_pkg_setup
+}
 
 src_prepare() {
 	if use test; then
