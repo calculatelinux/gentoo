@@ -32,6 +32,22 @@
 
 #--- END OF EXAMPLES ---
 
+# Lars Wendler <polynomial-c@gentoo.org> (2020-12-07)
+# Masked for testing
+>=app-shells/bash-5.1
+>=sys-libs/readline-8.1
+
+# Joonas Niilola <juippis@gentoo.org> (2020-12-06)
+# Not keyworded, unmaintained, unbuildable for a long time, EAPI-5.
+# Removal in ~30 days. List sorted by their bug numbers.
+# Bugs: #752432, #752435, #752438, #752441, #752444, #752453.
+media-plugins/kodi-screensaver-crystalmorph
+media-plugins/kodi-visualization-nastyfft
+media-plugins/kodi-screensaver-rsxs
+net-wireless/qradiolink
+net-libs/liba53
+app-emulation/qt-virt-manager
+
 # Michał Górny <mgorny@gentoo.org> (2020-12-03)
 # Explicit namespace support was necessary for Python 2 only.  Empty
 # directories work best for Python 3.
@@ -157,11 +173,6 @@ dev-libs/libmissing
 # build bugs, esoteric NIH build system. Bug #293567, #670954,
 # #697444, #699320, #708058, #746230, Removal in 30 days.
 games-emulation/fakenes
-
-# Joonas Niilola <juippis@gentoo.org> (2020-11-22)
-# Abandoned upstream, unbuildable, unkeyworded in ::gentoo. 
-# Removal in 14 days. Bug #https://bugs.gentoo.org/752456
-app-accessibility/simon
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-11-21)
 # Dead upstream, depends on deprecated kde-frameworks/kmediaplayer
@@ -457,11 +468,11 @@ dev-haskell/lvmlib
 # https://bugs.gentoo.org/751739
 =sys-apps/opentmpfiles-0.3.1
 
-# Stephan Hartmann <sultan@gentoo.org> (2020-10-29)
+# Stephan Hartmann <sultan@gentoo.org> (2020-12-06)
 # Dev channel releases are only for people who
 # are developers or want more experimental features
 # and accept a more unstable release.
->=www-client/chromium-88
+>=www-client/chromium-89
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-10-26)
 # Historical metapackage that exists in slot 5 only for transition from KDE SC4.
@@ -494,12 +505,15 @@ gnome-base/libbonobo
 gnome-base/libgnome-keyring
 gnome-base/orbit
 
+# Thomas Deutschmann <whissi@gentoo.org> (2018-12-10)
 # Marek Szuba <marecki@gentoo.org> (2020-10-13)
 # Ulrich Müller <ulm@gentoo.org> (2020-11-06)
 # Robin H. Johnson <robbat2@gentoo.org> (2020-11-28)
+# Conrad Kostecki <conikost@gentoo.org> (2020-12-05)
 # ...and others who have not added their names here
 # All these ebuilds require slotted Lua, which is still masked.
 >=app-admin/conky-1.11.4
+>=app-admin/lsyncd-2.2.3
 >=app-benchmarks/sysbench-1.0.20-r100
 >=app-benchmarks/wrk-4.1.0-r100
 >=app-crypt/cardpeek-0.8.4
@@ -572,13 +586,15 @@ gnome-base/orbit
 >=mail-filter/imapfilter-2.6.16-r100
 >=media-gfx/geeqie-1.5.1-r1
 >=media-sound/aqualung-1.1-r100
->=net-analyzer/suricata-6.0.0-r100
+>=net-analyzer/suricata-6.0.1-r100
+>=net-im/prosody-0.11.7-r100
 >=net-im/swift-4.0.2-r100
 >=net-p2p/eiskaltdcpp-2.2.10-r100
 >=sci-astronomy/celestia-1.7.0_pre20200316-r100
 >=sci-libs/plplot-5.15.0-r100
 >=sci-visualization/gnuplot-5.4.0-r100
 >=sci-visualization/fityk-1.3.1-r100
+>=sys-apps/likwid-4.3.4
 >=www-apache/mod_security-2.9.3-r100
 >=www-client/elinks-0.13.5-r100
 >=www-client/luakit-2.2.1-r100
@@ -794,10 +810,6 @@ app-office/texmacs
 # Requires >=dev-lang/lua-5.3 which is masked
 sys-apps/likwid
 
-# Thomas Deutschmann <whissi@gentoo.org> (2018-12-10)
-# Requires >=dev-lang/lua-5.2 which is masked
->=app-admin/lsyncd-2.2.3
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2018-11-25)
 # Masked per security vulnerability CVE-2018-14345, bug #661510
 # Keeping it masked while users have unsolved issues with >0.15.0.
@@ -878,14 +890,6 @@ app-admin/amazon-ec2-init
 # over 2G but it 'currently performs 3-5% slower and has 1-2% worse
 # compression'.
 >=dev-util/xdelta-3.1.0
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (2016-04-03)
-# Can exhaust all available memory depending on task
-# but is made available for experts who heed this warning
-# as newer versions produce different output. Contact
-# the proxied maintainer Matthew Brewer <tomboy64@sina.cn>
-# for questions.
-<=media-gfx/slic3r-1.1.9999
 
 # Robin H. Johnson <robbat2@gentoo.org> (2014-08-04)
 # Masked for testing, presently fails upstream testsuite:

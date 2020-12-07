@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 BDEPEND="test? (
 	dev-python/matplotlib[${PYTHON_USEDEP}]
@@ -29,10 +29,5 @@ RDEPEND="
 	dev-python/pyyaml[${PYTHON_USEDEP}]
 "
 
-distutils_enable_tests pytest
+distutils_enable_tests --install pytest
 distutils_enable_sphinx doc dev-python/sphinx_rtd_theme
-
-python_test() {
-	distutils_install_for_testing
-	pytest -vv || die "Tests failed with ${EPYTHON}"
-}
