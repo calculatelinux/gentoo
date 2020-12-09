@@ -427,11 +427,6 @@ dev-python/cheetah
 # Removal in 30 days. Bug #747310.
 sci-libs/mkl-rt
 
-# Matt Turner <mattst88@gentoo.org> (2020-11-08)
-# Uninstallable because of fetch restriction and dead download link.
-# Removal in 30 days.  Bug #725646.
-media-fonts/mathematica-fonts
-
 # Dirkjan Ochtman <djc@gentoo.org> (2020-11-05)
 # Incorrect DISTUTILS_USE_SETUPTOOLS value, dead upstream.
 # Removal in 30 days. Bug #748063
@@ -500,11 +495,13 @@ gnome-base/orbit
 >=app-crypt/cardpeek-0.8.4
 >=app-crypt/ekeyd-1.1.5-r100
 =app-editors/scite-4.4.4-r10
+>=app-emulation/libguestfs-1.38.6-r100
 >=app-misc/worker-3.8.3-r100
 >=dev-games/cegui-0.8.7-r100
 =dev-games/openscenegraph-openmw-3.4_p20200425-r100
 =dev-libs/efl-1.25.1-r10
 =dev-libs/libprelude-5.2.0-r10
+>=dev-libs/libucl-0.8.1-r100
 >=dev-lua/busted-2.0.0-r100
 >=dev-lua/busted-htest-1.0.0-r100
 >=dev-lua/dkjson-2.5-r100
@@ -547,6 +544,7 @@ gnome-base/orbit
 >=dev-lua/say-1.3_p1-r100
 >=dev-lua/toluapp-1.0.93_p20190513-r100
 >=dev-util/geany-plugins-1.37-r100
+>=dev-util/hermes-2.8
 =games-action/minetest-5.3.0-r100
 >=games-arcade/jvgs-0.5-r100
 >=games-emulation/fceux-2.2.3-r100
@@ -573,6 +571,7 @@ gnome-base/orbit
 >=media-sound/aqualung-1.1-r100
 >=media-video/vlc-3.0.11.1-r100
 >=net-analyzer/rrdtool-1.7.2-r100
+>=net-analyzer/snort-2.9.16-r100
 >=net-analyzer/suricata-6.0.1-r100
 >=net-im/prosody-0.11.7-r100
 >=net-im/swift-4.0.2-r100

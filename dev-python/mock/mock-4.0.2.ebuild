@@ -13,7 +13,7 @@ SRC_URI="https://github.com/testing-cabal/mock/archive/${PV}.tar.gz -> ${P}.gh.t
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x64-solaris"
 
 RDEPEND="
 	$(python_gen_cond_dep '
@@ -22,6 +22,11 @@ RDEPEND="
 	>=dev-python/six-1.9[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	>=dev-python/setuptools-17.1[${PYTHON_USEDEP}]"
+
+src_prepare() {
+	sed -i -e '/  pytest.*/d' setup.cfg || die
+	distutils-r1_src_prepare
+}
 
 python_test() {
 	# Upstream supports running tests only in their dream pristine
@@ -39,6 +44,9 @@ python_test() {
 		sed -i -e 's:def test_copy:def _test_copy:' \
 			mock/tests/testmock.py || die
 	fi
+
+	# Avoid pytest dependency
+	sed -i -e '/import pytest/d' mock/tests/testhelpers.py || die
 
 	"${EPYTHON}" -m unittest discover -v || die "Tests failed with ${EPYTHON}"
 }
