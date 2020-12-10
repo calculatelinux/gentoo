@@ -1,12 +1,15 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
+
+LUA_COMPAT=( luajit )
+LUA_REQ_USE="lua52compat"
 
 WX_GTK_VER=3.0-gtk3
 PLOCALES="ar be bg ca cs da de el es eu fa fi fr_FR gl hu id it ja ko nl pl pt_BR pt_PT ru sr_RS sr_RS@latin uk_UA vi zh_CN zh_TW"
 
-inherit autotools gnome2-utils l10n wxwidgets xdg-utils git-r3
+inherit autotools l10n lua-single wxwidgets xdg-utils git-r3
 
 DESCRIPTION="Advanced subtitle editor"
 HOMEPAGE="http://www.aegisub.org/ https://github.com/Aegisub/Aegisub"
@@ -23,9 +26,8 @@ RESTRICT="test"
 # aegisub bundles luabins (https://github.com/agladysh/luabins).
 # Unfortunately, luabins upstream is practically dead since 2010.
 # Thus unbundling luabins isn't worth the effort.
-RDEPEND="
+RDEPEND="${LUA_DEPS}
 	x11-libs/wxGTK:${WX_GTK_VER}[X,opengl,debug?]
-	dev-lang/luajit:2[lua52compat]
 	dev-libs/boost:=[icu,nls,threads]
 	dev-libs/icu:=
 	media-libs/ffmpegsource:=
@@ -43,17 +45,22 @@ RDEPEND="
 	spell? ( app-text/hunspell:= )
 	uchardet? ( app-i18n/uchardet )
 "
-DEPEND="${RDEPEND}
-	dev-util/intltool
+DEPEND="${RDEPEND}"
+BDEPEND="dev-util/intltool
 	sys-devel/gettext
 	virtual/pkgconfig
 "
 
-REQUIRED_USE="|| ( alsa openal oss portaudio pulseaudio )"
+REQUIRED_USE="${LUA_REQUIRED_USE}
+	|| ( alsa openal oss portaudio pulseaudio )"
 
 PATCHES=(
 	"${FILESDIR}/${P}-git.patch"
 )
+
+pkg_setup() {
+	lua-single_pkg_setup
+}
 
 src_prepare() {
 	default_src_prepare
@@ -107,16 +114,12 @@ src_test() {
 	emake test-libaegisub
 }
 
-pkg_preinst() {
-	gnome2_icon_savelist
-}
-
 pkg_postinst() {
-	gnome2_icon_cache_update
+	xdg_icon_cache_update
 	xdg_desktop_database_update
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	xdg_icon_cache_update
 	xdg_desktop_database_update
 }

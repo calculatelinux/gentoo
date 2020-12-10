@@ -32,6 +32,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Lars Wendler <polynomial-c@gentoo.org> (2020-12-09)
+# Masked until most broken packages have been fixed (bug #732648)
+>=sys-devel/autoconf-2.70
+>=sys-devel/autoconf-wrapper-14
+
 # Thomas Deutschmann <whissi@gentoo.org> (2020-12-08)
 # Fails to validate certificates which have multiple trusted
 # paths.
@@ -494,12 +499,14 @@ gnome-base/orbit
 >=app-benchmarks/wrk-4.1.0-r100
 >=app-crypt/cardpeek-0.8.4
 >=app-crypt/ekeyd-1.1.5-r100
+>=app-editors/neovim-0.4.4-r100
 =app-editors/scite-4.4.4-r10
 >=app-emulation/libguestfs-1.38.6-r100
 >=app-misc/worker-3.8.3-r100
 >=dev-games/cegui-0.8.7-r100
 =dev-games/openscenegraph-openmw-3.4_p20200425-r100
 =dev-libs/efl-1.25.1-r10
+>=dev-libs/libpeas-1.26.0-r100
 =dev-libs/libprelude-5.2.0-r10
 >=dev-libs/libucl-0.8.1-r100
 >=dev-lua/busted-2.0.0-r100
@@ -565,10 +572,12 @@ gnome-base/orbit
 >=games-strategy/s25rttr-0.9.0_pre20200723-r100
 >=games-util/slade-3.1.12a-r100
 >=mail-filter/imapfilter-2.6.16-r100
+>=mail-filter/rspamd-2.6-r100
 >=media-gfx/geeqie-1.5.1-r1
 >=media-libs/libquvi-0.9.4-r100
 >=media-libs/libquvi-scripts-0.9.20131130-r100
 >=media-sound/aqualung-1.1-r100
+>=media-video/aegisub-3.2.2_p20160518-r100
 >=media-video/vlc-3.0.11.1-r100
 >=net-analyzer/rrdtool-1.7.2-r100
 >=net-analyzer/snort-2.9.16-r100
@@ -587,6 +596,7 @@ gnome-base/orbit
 >=www-servers/lighttpd-1.4.55-r100
 >=x11-misc/devilspie2-0.43-r100
 >=x11-wm/awesome-4.3-r100
+>=mail-filter/opendkim-2.10.3-r25
 
 # Azamat H. Hackimov <azamat.hackimov@gmail.com> (2020-10-06)
 # 1.3.3 is broken and failing unittests for net-im/prosody. Bug #746782.

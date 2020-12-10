@@ -1848,6 +1848,7 @@ dev-lang/python:bluetooth - Build Bluetooth protocol support in socket module
 dev-lang/python:threads - Enable threading support. (DON'T DISABLE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
 dev-lang/python:wide-unicode - Enable wide Unicode implementation which uses 4-byte Unicode characters. Switching of this USE flag changes ABI of Python and requires reinstallation of many Python modules. (DON'T DISABLE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
 dev-lang/python:wininst - Install Windows executables required to create an executable installer for MS Windows.
+dev-lang/python-exec:native-symlinks - Install generic symlinks like python and python3. If this flag is disabled, only versioned python3.X executables will be available to end users and ebuilds not using python eclasses.
 dev-lang/qu-prolog:pedro - Pedro subscription/notification communications system
 dev-lang/rakudo:clang - Use Clang to compile the MoarVM backend
 dev-lang/rakudo:moar - Use the MoarVM as backend
@@ -6305,6 +6306,7 @@ net-misc/curl:brotli - Enable brotli compression support
 net-misc/curl:ftp - Enable FTP support
 net-misc/curl:gnutls - Enable gnutls ssl backend
 net-misc/curl:gopher - Enable Gopher protocol support
+net-misc/curl:hsts - Enable HTTP Strict Transport Security
 net-misc/curl:http2 - Enable HTTP/2.0 support
 net-misc/curl:imap - Enable Internet Message Access Protocol support
 net-misc/curl:mbedtls - Enable mbedtls ssl backend
