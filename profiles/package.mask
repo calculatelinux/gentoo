@@ -32,6 +32,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2020-12-12)
+# Security issue with insecure use of /tmp, bug 743214
+# This slot masked for removal in 30 days, use slot 2 instead.
+dev-ruby/bundler:0
+
+# David Seifert <soap@gentoo.org> (2020-12-11)
+# Last MIT release in 2007, declared EOL by Intel in 2017.
+# Build and test failures, abandoned parallelism paradigm,
+# no revdeps. If you're really still using this, switch to
+# OpenMP. Bug #572130, #643590, Removal in 30 days.
+dev-lang/cilk
+
+# Aisha Tammy <gentoo@aisha.cc> (2020-12-11)
+# last update upstream in 2017, does not build.
+# OpenMP is a better alternative.
+# Bug #717692, #741594
+# Removal in 30 days.
+sci-libs/xkaapi
+
 # Michał Górny <mgorny@gentoo.org> (2020-12-10)
 # Synergy 2.0 was a beta branch, and it should have never been marked
 # stable.  It never reached feature parity with 1.x, and upstream
@@ -39,11 +58,6 @@
 # that is actively maintained.  The buggy 2.0.0 version will be removed
 # in 30 days.
 >=x11-misc/synergy-2
-
-# Sergei Trofimovich <slyfox@gentoo.org> (2020-12-10)
-# Masked for testing. Builtd failures around locales
-# and safe-stack detection
->=app-emulation/qemu-5.2.0
 
 # Michał Górny <mgorny@gentoo.org> (2020-12-10)
 # Stuck on LLVM 9.  Superseded by dev-util/cvise that features better
@@ -252,11 +266,6 @@ dev-python/zict
 sys-apps/hwdata-gentoo
 sys-apps/hwsetup
 sys-libs/libkudzu
-
-# Lars Wendler <polynomial-c@gentoo.org> (2020-11-19)
-# Breaks consumers like gnome-base/gnome-keyring and net-fs/cifs-utils
-# See https://bugs.gentoo.org/755596
-=sys-libs/libcap-ng-0.8.1
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-11-18)
 # Depends on deprecated QtWebKit, dead upstream.

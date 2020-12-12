@@ -1109,6 +1109,8 @@ app-text/libstaroffice:tools - Build conversion tools
 app-text/libstaroffice:zlib - Enable support for compressed data
 app-text/libwpd:tools - Build file conversion tools
 app-text/libwps:tools - Build file conversion tools
+app-text/mandoc:cgi - build man.cgi web plugin for viewing man pages
+app-text/mandoc:system-man - set as the default man provider
 app-text/mathtex:png - Generate png images by default instead of gif
 app-text/msort:heap - Use heap instead of alloca()
 app-text/msort:icu - Use dev-libs/icu instead of dev-libs/libutf8proc.
@@ -3083,6 +3085,7 @@ games-emulation/pcsxr:archive - Support compressed files (via libarchive)
 games-emulation/pcsxr:ccdda - Support compressed CDDA (requires ffmpeg)
 games-emulation/pcsxr:cdio - Use libcdio for CD support
 games-emulation/pcsxr:sdl - Use SDL sound backend (other parts of SDL are used unconditionally)
+games-emulation/ppsspp:discord - Enable interfacing with a locally running Discord desktop client
 games-emulation/ppsspp:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of bundled
 games-emulation/snes9x:libretro - Build libretro port
 games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recommended)
@@ -4816,7 +4819,6 @@ media-tv/mythtv:vpx - Enable VP8/VP9 support for media-libs/libvpx
 media-tv/mythtv:wrapper - Use Ubuntu mythtfrontend wrapper
 media-tv/mythtv:x265 - Enable h265 encoding using x265
 media-tv/mythtv:xmltv - Support media-tv/xmltv TV listing - not used by Schedules Direct]
-media-tv/mythtv:xnvctrl - External XNVCtrl support using Nvidia proprietary driver
 media-tv/tvheadend:capmt - Enable support for capmt (dvbapi) protocol
 media-tv/tvheadend:constcw - Enable support for the constcw protocol
 media-tv/tvheadend:cwc - Enable support for the cwc (newcamd) protocol
@@ -7357,7 +7359,6 @@ sci-libs/symengine:flint - Add support for (sci-mathematics/flint)
 sci-libs/symengine:llvm - Build with LLVM
 sci-libs/symengine:mpc - Add support for multiprecision complex arithmetic(dev-libs/mpc)
 sci-libs/symengine:mpfr - Add support for multiprecision floating point rouding(dev-libs/mpfr)
-sci-libs/taucs:cilk - Enable multithreading using dev-lang/cilk
 sci-libs/tensorflow:cuda - Enable support for nVidia CUDA
 sci-libs/tensorflow:xla - XLA (Accelerated Linear Algebra) Optimizing Compiler for TensorFlow
 sci-libs/trilinos:adolc - Add support for adolc (sci-libs/adolc)
@@ -8320,6 +8321,7 @@ sys-libs/glibc:crypt - build and install libcrypt and crypt.h
 sys-libs/glibc:debug - When USE=hardened, allow fortify/stack violations to dump core (SIGABRT) and not kill self (SIGKILL)
 sys-libs/glibc:gd - build memusage and memusagestat tools
 sys-libs/glibc:multiarch - enable optimizations for multiple CPU architectures (detected at runtime)
+sys-libs/glibc:multilib-bootstrap - Provide prebuilt libgcc.a and crt files if missing. Only needed for ABI switch.
 sys-libs/glibc:nscd - Build, and enable support for, the Name Service Cache Daemon
 sys-libs/glibc:rpc - Enable obsolete RPC/NIS layers
 sys-libs/glibc:ssp - protect stack of glibc internals
