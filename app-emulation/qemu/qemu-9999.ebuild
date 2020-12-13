@@ -39,9 +39,9 @@ IUSE="accessibility +aio alsa bzip2 capstone +caps +curl debug doc
 	ncurses nfs nls numa opengl +oss +pin-upstream-blobs
 	plugins +png pulseaudio python rbd sasl +seccomp sdl sdl-image selinux
 	+slirp
-	smartcard snappy spice ssh static static-user systemtap test usb
+	smartcard snappy spice ssh static static-user systemtap test udev usb
 	usbredir vde +vhost-net vhost-user-fs virgl virtfs +vnc vte xattr xen
-	xfs +xkb zstd"
+	xfs zstd"
 
 COMMON_TARGETS="aarch64 alpha arm cris hppa i386 m68k microblaze microblazeel
 	mips mips64 mips64el mipsel nios2 or1k ppc ppc64 riscv32 riscv64 s390x
@@ -69,6 +69,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	qemu_softmmu_targets_riscv64? ( fdt )
 	static? ( static-user !alsa !gtk !jack !opengl !pulseaudio !plugins !rbd !snappy )
 	static-user? ( !plugins )
+	vhost-user-fs? ( caps seccomp )
 	virtfs? ( caps xattr )
 	vte? ( gtk )
 	plugins? ( !static !static-user )
@@ -93,7 +94,6 @@ ALL_DEPEND="
 # softmmu targets (qemu-system-*).
 SOFTMMU_TOOLS_DEPEND="
 	dev-libs/libxml2[static-libs(+)]
-	xkb? ( x11-libs/libxkbcommon[static-libs(+)] )
 	>=x11-libs/pixman-0.28.0[static-libs(+)]
 	accessibility? (
 		app-accessibility/brltty[api]
@@ -157,6 +157,7 @@ SOFTMMU_TOOLS_DEPEND="
 		>=app-emulation/spice-0.12.0[static-libs(+)]
 	)
 	ssh? ( >=net-libs/libssh-0.8.6[static-libs(+)] )
+	udev? ( virtual/libudev[static-libs(+)] )
 	usb? ( >=virtual/libusb-1-r2[static-libs(+)] )
 	usbredir? ( >=sys-apps/usbredir-0.6[static-libs(+)] )
 	vde? ( net-misc/vde[static-libs(+)] )
@@ -170,13 +171,13 @@ SOFTMMU_TOOLS_DEPEND="
 X86_FIRMWARE_DEPEND="
 	pin-upstream-blobs? (
 		~sys-firmware/edk2-ovmf-201905[binary]
-		~sys-firmware/ipxe-1.0.0_p20190728[binary]
+		~sys-firmware/ipxe-1.0.0_p20190728[binary,qemu]
 		~sys-firmware/seabios-1.12.0[binary,seavgabios]
 		~sys-firmware/sgabios-0.1_pre8[binary]
 	)
 	!pin-upstream-blobs? (
 		sys-firmware/edk2-ovmf
-		sys-firmware/ipxe
+		sys-firmware/ipxe[qemu]
 		>=sys-firmware/seabios-1.10.2[seavgabios]
 		sys-firmware/sgabios
 	)"
@@ -437,6 +438,14 @@ qemu_src_configure() {
 			echo "--disable-${2:-$1}"
 		fi
 	}
+	# Enable option only for tools build, but not 'user' or 'softmmu'
+	conf_tools() {
+		if [[ ${buildtype} == "tools" ]] ; then
+			use_enable "$@"
+		else
+			echo "--disable-${2:-$1}"
+		fi
+	}
 	conf_opts+=(
 		$(conf_notuser accessibility brlapi)
 		$(conf_notuser aio linux-aio)
@@ -472,11 +481,13 @@ qemu_src_configure() {
 		$(conf_notuser snappy)
 		$(conf_notuser spice)
 		$(conf_notuser ssh libssh)
+		$(conf_notuser udev libudev)
 		$(conf_notuser usb libusb)
 		$(conf_notuser usbredir usb-redir)
 		$(conf_notuser vde)
 		$(conf_notuser vhost-net)
 		$(conf_notuser vhost-user-fs)
+		$(conf_tools vhost-user-fs virtiofsd)
 		$(conf_notuser virgl virglrenderer)
 		$(conf_notuser virtfs)
 		$(conf_notuser vnc)
@@ -484,7 +495,8 @@ qemu_src_configure() {
 		$(conf_notuser xen)
 		$(conf_notuser xen xen-pci-passthrough)
 		$(conf_notuser xfs xfsctl)
-		$(conf_notuser xkb xkbcommon)
+		# use prebuilt keymaps, bug #759604
+		--disable-xkbcommon
 		$(conf_notuser zstd)
 	)
 
