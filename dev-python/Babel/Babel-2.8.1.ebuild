@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris"
+KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris"
 
 RDEPEND="dev-python/pytz[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]"
@@ -27,6 +27,7 @@ distutils_enable_tests pytest
 
 PATCHES=(
 	"${FILESDIR}"/Babel-2.8.0-py39.patch
+	"${FILESDIR}"/Babel-2.9.0-pypy3.patch
 )
 
 src_test() {

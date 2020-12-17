@@ -13,7 +13,7 @@ SRC_URI="https://www.wireshark.org/download/src/all-versions/${P/_/}.tar.xz"
 LICENSE="GPL-2"
 
 SLOT="0/${PV}"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~arm arm64 ~hppa ~ia64 ~ppc64 ~x86"
 IUSE="
 	androiddump bcg729 brotli +capinfos +captype ciscodump +dftest doc dpauxmon
 	+dumpcap +editcap http2 ilbc kerberos libxml2 lto lua lz4 maxminddb
@@ -36,7 +36,7 @@ CDEPEND="
 	ilbc? ( media-libs/libilbc )
 	kerberos? ( virtual/krb5 )
 	libxml2? ( dev-libs/libxml2 )
-	lua? ( >=dev-lang/lua-5.1:* )
+	lua? ( >=dev-lang/lua-5.1:0= )
 	lz4? ( app-arch/lz4 )
 	maxminddb? ( dev-libs/libmaxminddb )
 	minizip? ( sys-libs/zlib[minizip] )

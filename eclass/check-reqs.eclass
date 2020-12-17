@@ -38,6 +38,11 @@
 # These checks should probably mostly work on non-Linux, and they should
 # probably degrade gracefully if they don't. Probably.
 
+# @VARIABLE: _CHECK_REQS_ECLASS_
+# @INTERNAL
+# @DESCRIPTION:
+# Please document me
+
 if [[ ! ${_CHECK_REQS_ECLASS_} ]]; then
 
 # @ECLASS-VARIABLE: CHECKREQS_MEMORY
@@ -67,6 +72,8 @@ esac
 
 EXPORT_FUNCTIONS pkg_pretend pkg_setup
 
+# @FUNCTION: check_reqs
+# @DESCRIPTION:
 # Obsolete function executing all the checks and printing out results
 check_reqs() {
 	eerror "Package calling old ${FUNCNAME} function."
@@ -350,8 +357,8 @@ check-reqs_unsatisfied() {
 	${msg} "There is NOT at least ${sizeunit} ${location}"
 
 	# @ECLASS-VARIABLE: CHECKREQS_FAILED
-	# @DESCRIPTION:
 	# @INTERNAL
+	# @DESCRIPTION:
 	# If set the checks failed and eclass should abort the build.
 	# Internal, do not set yourself.
 	CHECKREQS_FAILED="true"

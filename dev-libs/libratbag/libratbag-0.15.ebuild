@@ -27,6 +27,7 @@ BDEPEND="
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 	test? (
+		dev-libs/check
 		dev-libs/gobject-introspection
 		dev-util/valgrind
 		$(python_gen_cond_dep '
@@ -38,7 +39,7 @@ BDEPEND="
 RDEPEND="
 	${PYTHON_DEPS}
 	acct-group/plugdev
-	dev-libs/gobject-introspection
+	dev-libs/json-glib
 	dev-libs/libevdev
 	virtual/libudev
 	$(python_gen_cond_dep '
@@ -48,7 +49,10 @@ RDEPEND="
 	elogind? ( sys-auth/elogind )
 	systemd? ( sys-apps/systemd )
 "
-DEPEND="${RDEPEND}"
+DEPEND="
+	${RDEPEND}
+	dev-libs/gobject-introspection
+"
 
 src_prepare() {
 	default
