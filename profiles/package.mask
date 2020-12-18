@@ -177,11 +177,6 @@ net-libs/libkvkontakte
 # Removal in 30 days. (bug #756370)
 sys-block/rts_pstor
 
-# Sam James <sam@gentoo.org> (2020-11-25)
-# Temporary mask to fix tree breakage
-# Dependency x11-libs/pangox-compat does not exist
-=net-misc/anydesk-6.0.1
-
 # Marek Szuba <marecki@gentoo.org> (2020-11-24)
 # No releases since 2008, deprecated upstream in favour of dev-lua/ldoc,
 # unmaintained, no revdeps. Removal in 30 days (Bug #756343).
@@ -290,31 +285,6 @@ dev-python/zict
 sys-apps/hwdata-gentoo
 sys-apps/hwsetup
 sys-libs/libkudzu
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-11-18)
-# Depends on deprecated QtWebKit, dead upstream.
-# Alternatives: kde-apps/okular[chm], app-text/xchm
-# Removal in 30 days.
-app-text/kchmviewer
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-11-18)
-# Depends on deprecated QtWebKit, no maintainer.
-# Bugs #712200 and 725388. Removal in 30 days.
-sci-misc/mendeleydesktop
-
-# Michał Górny <mgorny@gentoo.org> (2020-11-18)
-# Upstream has switched to aiobotocore.  It's a huge hack that requires
-# a very specific botocore version, currently 3 months old.  Given that
-# boto* makes releases daily and various revdeps require newer boto3 /
-# botocore versions, this makes aiobotocore unmaintainable.
-# As a result, we'd be stuck with the old version forever.
-#
-# See also:
-# https://github.com/aio-libs/aiobotocore/issues/829
-# https://github.com/dask/s3fs/issues/357
-#
-# Removal in 30 days.  Bug #755266.
-dev-python/s3fs
 
 # Jonas Stein <jstein@gentoo.org> (2020-11-12)
 # Adobe will stop distributing Flash Player after 2020-12-31.
@@ -530,6 +500,9 @@ kde-apps/kdebase-meta:5
 =sci-visualization/gnuplot-5.4.1-r1
 >=sci-visualization/fityk-1.3.1-r100
 >=sys-apps/likwid-4.3.4
+>=sys-apps/qcontrol-0.4.2-r100
+>=sys-apps/roccat-tools-5.9.0-r100
+>=sys-cluster/slurm-20.11.0.1-r100
 >=www-apache/mod_security-2.9.3-r100
 >=www-client/elinks-0.13.5-r100
 >=www-client/luakit-2.2.1-r100

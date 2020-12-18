@@ -8,12 +8,14 @@ PYTHON_COMPAT=( python3_{6,7,8,9} pypy3 )
 inherit distutils-r1
 
 DESCRIPTION="A strictly RFC 4511 conforming LDAP V3 pure Python client"
-HOMEPAGE="https://github.com/cannatag/ldap3 https://pypi.python.org/pypi/ldap3"
+HOMEPAGE="
+	https://github.com/cannatag/ldap3/
+	https://pypi.org/project/ldap3/"
 SRC_URI="https://github.com/cannatag/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 RDEPEND="
 	>=dev-python/pyasn1-0.4.8[${PYTHON_USEDEP}]
