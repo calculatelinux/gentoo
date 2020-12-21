@@ -1313,8 +1313,6 @@ dev-db/oracle-instantclient:sdk - Header files and an example makefile for devel
 dev-db/oracle-instantclient:sqlplus - The SQL*Plus command line tool for SQL and PL/SQL queries
 dev-db/oracle-instantclient:tools - Data Pump, SQL*Loader and Workload Replay Client
 dev-db/percona-server:cjk - Add CJK support for InnoDB fulltext search using app-text/mecab
-dev-db/percona-server:client-libs - Build the libmysqlclient libraries
-dev-db/percona-server:experimental - Build experimental features aka "rapid" plugins
 dev-db/percona-server:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/percona-server:libressl - Enable SSL connections and crypto functions using dev-libs/libressl
 dev-db/percona-server:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
@@ -1322,10 +1320,8 @@ dev-db/percona-server:profiling - Add support for statement profiling (requires 
 dev-db/percona-server:rocksdb - Add support for RocksDB; a key/value, LSM database optimized for flash storage
 dev-db/percona-server:router - Build the MySQL router program
 dev-db/percona-server:server - Build the server program
-dev-db/percona-server:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-db/percona-server:tokudb - Add support for TokuDB storage engine
 dev-db/percona-server:tokudb-backup-plugin - Builds the TokuDB backup plugin
-dev-db/percona-server:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
 dev-db/pgbouncer:c-ares - Use c-ares as the DNS backend instead of evdns (libevent).
 dev-db/pgbouncer:udns - Use udns as the DNS backend instead of evdns (libevent). Supports IPv4 only.
 dev-db/pgpool2:memcached - Use memcached for query caching.
@@ -2156,6 +2152,8 @@ dev-libs/libsodium:asm - Enables assembly implementations
 dev-libs/libsodium:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/libtasn1:valgrind - Enable usage of dev-util/valgrind in debug
 dev-libs/libtermkey:demos - Install demos, which pulls in dev-libs/glib
+dev-libs/libtomcrypt:libtommath - Uses dev-libs/libtommath for mathematical operations
+dev-libs/libtomcrypt:tomsfastmath - Uses dev-libs/tomsfastmath for mathematical operations
 dev-libs/libucl:regex - Enable regex support
 dev-libs/libucl:sign - Enable signatures check
 dev-libs/libucl:urls - Enable URLs fetch
@@ -2801,7 +2799,7 @@ dev-util/diffoscope:gpg - Use app-crypt/gnupg
 dev-util/diffoscope:haskell - Use dev-lang/ghc
 dev-util/diffoscope:hdf5 - Use sci-libs/hdf5
 dev-util/diffoscope:hex - Use app-editors/vim-core
-dev-util/diffoscope:iso - Use virtual/cdrtools
+dev-util/diffoscope:iso - Use app-cdr/cdrtools
 dev-util/diffoscope:llvm - Use sys-devel/llvm
 dev-util/diffoscope:opendocument - Use app-text/odt2txt
 dev-util/diffoscope:pascal - Use dev-lang/fpc
@@ -3274,6 +3272,7 @@ games-strategy/ufoai:server - Build the dedicated server
 games-strategy/uqm:music - download and install music files (large)
 games-strategy/uqm:remix - download and install music remix files (large)
 games-strategy/uqm:voice - download and install voice files (large)
+games-strategy/wargus:bne - Support extracting data from the Battle.net Edition
 games-strategy/wesnoth:fribidi - Support for right-to-left languages
 games-strategy/wesnoth:server - Enable compilation of server
 games-util/deutex:man - Build and install man pages
@@ -6921,6 +6920,7 @@ net-wireless/dump1090:rtlsdr - Build with Realtek RTL2832U (rtlsdr) support
 net-wireless/gnuradio:analog - enable analog signal processing blocks
 net-wireless/gnuradio:audio - enable blocks to connect to audio sources (mic-in) and sinks (speaker-out) ports on a computer
 net-wireless/gnuradio:channels - enable channel mode blocks
+net-wireless/gnuradio:ctrlport - enable control port interface
 net-wireless/gnuradio:digital - enable digital signal processing blocks
 net-wireless/gnuradio:dtv - enable digital tv signal processing blocks
 net-wireless/gnuradio:fec - enable block for convolutional encoding using the CCSDS standard polynomial ("Voyager")
@@ -6944,6 +6944,7 @@ net-wireless/gr-osmosdr:rtlsdr - Build with Realtek RTL2832U (rtlsdr) support
 net-wireless/gr-osmosdr:sdrplay - Enable support for SDRplay devices through net-wireless/sdrplay
 net-wireless/gr-osmosdr:soapy - Build with SoapySDR support
 net-wireless/gr-osmosdr:uhd - Build with Ettus Research USRP Hardware Driver support
+net-wireless/gr-osmosdr:xtrx - Build with xtrx Hardware Driver support
 net-wireless/horst:pcap - Add support for network packet capture via net-libs/libpcap
 net-wireless/hostapd:crda - Add CRDA support
 net-wireless/hostapd:internal-tls - Use internal TLSv1 implementation instead of depending on OpenSSL, LibreSSL or GnuTLS
@@ -6963,6 +6964,7 @@ net-wireless/kismet:pcre - Build with pcre support
 net-wireless/kismet:rtlsdr - Enable rtlsdr based kismet capture sources
 net-wireless/kismet:suid - Install a setuid root helper binary with limited functionality; this allows running kismet as a normal user, significantly reducing security risks
 net-wireless/kismet:ubertooth - Enable capture source for ubertooth to sniff bluetooth low energy
+net-wireless/libxtrxll:usb3380 - support xtrx usb model
 net-wireless/neard:tools - build and install extra helper utilities
 net-wireless/rtl-sdr:zerocopy - may cause a bus error on some ARM systems
 net-wireless/rtl_433:rtlsdr - Build with Realtek RTL2832U (rtlsdr) support
@@ -7702,7 +7704,6 @@ sys-apps/fwupd:tpm - Install Trusted Platform Module plugin
 sys-apps/fwupd:uefi - Enable UEFI support
 sys-apps/gawk:mpfr - use mpfr for high precision arithmetic (-M / --bignum)
 sys-apps/gnome-disk-utility:fat - Include FAT16/FAT32 support (sys-fs/dosfstools)
-sys-apps/hwdata-gentoo:binary-drivers - Adds support for ATI/NVIDIA binary drivers
 sys-apps/hwids:net - Install the oui.txt and iab.txt databases
 sys-apps/hwids:pci - Install the pci.ids database
 sys-apps/hwids:udev - Install hwdb.d rules for udev
@@ -8270,7 +8271,6 @@ sys-fs/ntfs3g:ntfsdecrypt - Build and install the ntfsdecrypt application.
 sys-fs/ntfs3g:ntfsprogs - Include internal version of ntfsprogs.
 sys-fs/quota:netlink - Compile daemon receiving quota messages via netlink
 sys-fs/quota:rpc - Enable quota interaction via RPC
-sys-fs/squashfs-tools:xz - Enable support for XZ ("LZMA2") compression using app-arch/xz-utils
 sys-fs/squashfs-tools-ng:tools - Build the gensquashfs, rdsquashfs, sqfs2tar, sqfsdiff, and tar2sqfs tools
 sys-fs/squashfs-tools-ng:xz - Enable support for XZ ("LZMA2") compression using app-arch/xz-utils
 sys-fs/udev:kmod - Enable kernel module loading/unloading support using sys-apps/kmod
@@ -8534,6 +8534,7 @@ www-client/chromium:js-type-check - Enable JavaScript type-checking for Chrome's
 www-client/chromium:official - Enable Official build instead of Developer build.
 www-client/chromium:pic - Disable optimized assembly code that is not PIC friendly
 www-client/chromium:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
+www-client/chromium:screencast - Enable support for remote desktop and screen cast using media-video/pipewire
 www-client/chromium:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels
 www-client/chromium:system-ffmpeg - Use system ffmpeg instead of the bundled one
 www-client/chromium:system-icu - Use system icu instead of the bundled one

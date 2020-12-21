@@ -41,10 +41,10 @@ RDEPEND="
 	app-arch/tar[xattr]
 	dev-vcs/git
 	sys-fs/dosfstools
-	sys-fs/squashfs-tools-ng
+	sys-fs/squashfs-tools-ng[tools]
 
 	iso? (
-		virtual/cdrtools
+		app-cdr/cdrtools
 
 		amd64? (
 			sys-boot/grub[grub_platforms_efi-32,grub_platforms_efi-64]

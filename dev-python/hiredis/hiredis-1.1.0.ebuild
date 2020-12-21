@@ -7,12 +7,12 @@ PYTHON_COMPAT=( python3_{6,7,8,9} )
 inherit distutils-r1
 
 DESCRIPTION="Python extension that wraps hiredis"
-HOMEPAGE="https://github.com/pietern/hiredis-py"
+HOMEPAGE="https://github.com/redis/hiredis-py/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="system-libs"
 
 DEPEND="system-libs? ( dev-libs/hiredis:0/0.14 )"
@@ -27,6 +27,6 @@ src_prepare() {
 }
 
 python_test() {
-	cd test
+	cd test || die
 	"${EPYTHON}" -m unittest reader.ReaderTest || die "tests failed"
 }

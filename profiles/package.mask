@@ -32,6 +32,70 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-12-20)
+# Requires old dev-python/unidecode.  Last commit in 2017.  No revdeps.
+# Suggested replacement: dev-python/python-slugify.
+# Removal in 30 days.  Bug #714718.
+dev-python/awesome-slugify
+
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-12-20)
+# Needs a port to haskell-src-exts compatible with ghc-8.8.
+# https://github.com/ndmitchell/derive/pull/37
+dev-haskell/derive
+app-forensics/quickfuzz
+
+# Michał Górny <mgorny@gentoo.org> (2020-12-19)
+# Made redundant by compiler-rt's crt implementation.  No revdeps left.
+# Removal in 30 days.  Bug #760711.
+sys-libs/netbsd-csu
+
+# Mike Pagano <mpagano@gentoo.org> (2020-12-18)
+# Serious data corruption bug when using F2FS,
+# see https://bugzilla.kernel.org/show_bug.cgi?id=210765
+# Feel free to manually unmask when not using F2FS.
+=sys-kernel/gentoo-sources-5.10.0
+=sys-kernel/gentoo-sources-5.10.1
+=sys-kernel/vanilla-sources-5.10.1
+=sys-kernel/vanilla-sources-5.10.0
+
+# Michał Górny <mgorny@gentoo.org> (2020-12-18)
+# Unmaintained.  Last bumped in 2008.  Last upstream (beta) in 2014.
+# The current Gentoo version fails to install.
+# Removal in 30 days.  Bug #701044.
+net-mail/vacation
+
+# Michał Górny <mgorny@gentoo.org> (2020-12-18)
+# Unmaintained.  Homepage gone.  Last bumped in 2008.  Carries multiple
+# patches.  Fails to build again.
+# Removal in 30 days.  Bug #675364.
+net-ftp/tlswrap
+
+# Michał Górny <mgorny@gentoo.org> (2020-12-18)
+# Upstream gone.  Last bumped in 2007.  Fails to build, again.
+# Removal in 30 days.  Bug #648964.
+app-text/ots
+
+# Michał Górny <mgorny@gentoo.org> (2020-12-18)
+# Unmaintained.  The current Gentoo version fails to build, it needs
+# a version bump.
+# Removal in 30 days.  Bug #669452.
+net-misc/dhcpd-pools
+
+# Michał Górny <mgorny@gentoo.org> (2020-12-18)
+# Unmaintained.  Last bumped in 2018.  Vulnerable.  No revdeps.
+# Removal in 30 days.  Bug #736050.
+dev-db/aerospike-server-community
+
+# Michał Górny <mgorny@gentoo.org> (2020-12-18)
+# Abandoned upstream, circa 2013.  Vulnerable.  No revdeps.
+# Removal in 30 days.  Bug #744217.
+app-text/peg-markdown
+
+# Michał Górny <mgorny@gentoo.org> (2020-12-18)
+# Abandoned in 2008.  No reverse dependencies left.
+# Removal in 30 days.  Bug #652192.
+dev-libs/ustr
+
 # Jack Todaro <solpeth@posteo.org> (2020-12-17)
 # Old and redundant package. Has not been kept
 # up to date and no longer works. Masked for removal.
@@ -49,11 +113,6 @@ mail-filter/dovecot_deleted_to_trash
 # of Sphinx.  No revdeps.  Alternative: dev-python/sphinx-issues.
 # Removal in 30 days.  Bug #720066.
 dev-python/sphinxcontrib-issuetracker
-
-# Michael Palimaka <kensington@gentoo.org> (2020-12-13)
-# Buggy. Uncooperative upstream.
-# Masked for removal in 30 days.
-x11-misc/albert
 
 # Sam James <sam@gentoo.org> (2020-12-13)
 # This new version of libcap-ng seems to (still)
@@ -114,18 +173,6 @@ media-plugins/kodi-screensaver-rsxs
 net-wireless/qradiolink
 net-libs/liba53
 app-emulation/qt-virt-manager
-
-# Michał Górny <mgorny@gentoo.org> (2020-12-03)
-# Explicit namespace support was necessary for Python 2 only.  Empty
-# directories work best for Python 3.
-# Removal in 14 days.
-dev-python/backports
-dev-python/namespace-jaraco
-
-# Aaron Bauman <bman@gentoo.org> (2020-12-02)
-# Deprecated. Functionality is native to dev-python/pytest now
-# Removal in 14 days
-dev-python/pytest-catchlog
 
 # Joonas Niilola <juippis@gentoo.org> (2020-12-01)
 # Not maintained in Gentoo, multiple versions behind, unsafe, EAPI-5,
@@ -236,11 +283,6 @@ dev-libs/libmissing
 # #697444, #699320, #708058, #746230, Removal in 30 days.
 games-emulation/fakenes
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-11-21)
-# Dead upstream, depends on deprecated kde-frameworks/kmediaplayer
-# Masked for removal in 30 days.
-media-video/kmplayer
-
 # Michał Górny <mgorny@gentoo.org> (2020-11-19)
 # These packages are maintained by the Python project, or have
 # no maintainer.  They have not been ported to Python 3.8 yet.
@@ -278,13 +320,6 @@ dev-python/subvertpy
 dev-python/vcversioner
 dev-python/xlutils
 dev-python/zict
-
-# Matt Turner <mattst88@gentoo.org> (2020-11-19)
-# Ancient packages long since deprecated in the age of udev.
-# Removal in 30 days. Bug #755617
-sys-apps/hwdata-gentoo
-sys-apps/hwsetup
-sys-libs/libkudzu
 
 # Jonas Stein <jstein@gentoo.org> (2020-11-12)
 # Adobe will stop distributing Flash Player after 2020-12-31.
@@ -467,7 +502,7 @@ kde-apps/kdebase-meta:5
 >=games-engines/love-0.8.0-r100:0.8
 >=games-engines/love-11.3-r100:0
 >=games-engines/solarus-1.3.1-r100
->=games-engines/stratagus-2.4.3-r100
+=games-engines/stratagus-2.4.3-r100
 >=games-puzzle/fish-fillets-1.0.1-r100
 >=games-roguelike/crossfire-client-1.71.0-r100
 >=games-roguelike/stone-soup-0.25.1-r100
@@ -491,10 +526,18 @@ kde-apps/kdebase-meta:5
 >=net-analyzer/rrdtool-1.7.2-r100
 >=net-analyzer/snort-2.9.16-r100
 >=net-analyzer/suricata-6.0.1-r100
+>=net-analyzer/wireshark-3.4.2-r100
 >=net-im/prosody-0.11.7-r100
 >=net-im/swift-4.0.2-r100
+>=net-irc/hexchat-2.14.3-r100
+>=net-irc/weechat-3.0-r100
+>=net-libs/axtls-2.1.5-r100
+>=net-misc/asterisk-16.14.0-r100
+>=net-mail/dovecot-2.3.11.3-r100
 >=net-p2p/eiskaltdcpp-2.2.10-r100
 >=sci-astronomy/celestia-1.7.0_pre20200316-r100
+>=sci-libs/libsc-2.2-r100
+>=sci-libs/p4est-2.2-r100
 >=sci-libs/plplot-5.15.0-r100
 =sci-visualization/gnuplot-5.4.0-r100
 =sci-visualization/gnuplot-5.4.1-r1

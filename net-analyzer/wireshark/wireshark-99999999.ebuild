@@ -2,8 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-PYTHON_COMPAT=( python3_{6,7,8} )
-inherit fcaps flag-o-matic git-r3 multilib python-any-r1 qmake-utils xdg-utils cmake
+
+LUA_COMPAT=( lua5-{1..2} )
+PYTHON_COMPAT=( python3_{6..9} )
+
+inherit fcaps flag-o-matic git-r3 lua-single python-any-r1 qmake-utils xdg-utils cmake
 
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
 HOMEPAGE="https://www.wireshark.org/"
@@ -15,11 +18,10 @@ KEYWORDS=""
 IUSE="
 	androiddump bcg729 brotli +capinfos +captype ciscodump +dftest doc dpauxmon
 	+dumpcap +editcap http2 ilbc kerberos libxml2 lto lua lz4 maxminddb
-	+mergecap +minizip +netlink +plugins plugin-ifdemo +pcap +qt5 +randpkt
+	+mergecap +minizip +netlink opus +plugins plugin-ifdemo +pcap +qt5 +randpkt
 	+randpktdump +reordercap sbc selinux +sharkd smi snappy spandsp sshdump ssl
 	sdjournal test +text2pcap tfshark +tshark +udpdump zlib +zstd
 "
-RESTRICT="!test? ( test )"
 S=${WORKDIR}/${P/_/}
 
 CDEPEND="
@@ -35,11 +37,12 @@ CDEPEND="
 	ilbc? ( media-libs/libilbc )
 	kerberos? ( virtual/krb5 )
 	libxml2? ( dev-libs/libxml2 )
-	lua? ( >=dev-lang/lua-5.1:0= )
+	lua? ( ${LUA_DEPS} )
 	lz4? ( app-arch/lz4 )
 	maxminddb? ( dev-libs/libmaxminddb )
 	minizip? ( sys-libs/zlib[minizip] )
 	netlink? ( dev-libs/libnl:3 )
+	opus? ( media-libs/opus )
 	pcap? ( net-libs/libpcap )
 	qt5? (
 		dev-qt/qtcore:5
@@ -88,12 +91,19 @@ RDEPEND="
 	selinux? ( sec-policy/selinux-wireshark )
 "
 REQUIRED_USE="
+	lua? ( ${LUA_REQUIRED_USE} )
 	plugin-ifdemo? ( plugins )
 "
+RESTRICT="!test? ( test )"
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.6.0-redhat.patch
+	"${FILESDIR}"/${PN}-3.4.2-cmake-lua-version.patch
 	"${FILESDIR}"/${PN}-99999999-ui-needs-wiretap.patch
 )
+
+pkg_setup() {
+	use lua && lua-single_pkg_setup
+}
 
 src_configure() {
 	local mycmakeargs
@@ -159,6 +169,7 @@ src_configure() {
 		-DENABLE_MINIZIP=$(usex minizip)
 		-DENABLE_NETLINK=$(usex netlink)
 		-DENABLE_NGHTTP2=$(usex http2)
+		-DENABLE_OPUS=$(usex opus)
 		-DENABLE_PCAP=$(usex pcap)
 		-DENABLE_PLUGINS=$(usex plugins)
 		-DENABLE_PLUGIN_IFDEMO=$(usex plugin-ifdemo)
