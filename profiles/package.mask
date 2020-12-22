@@ -32,6 +32,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Eray Aslan <eras@gentoo.org> (2020-12-21)
+# Vulnerable. upgrade to >= 2.3.11.3. Masked until
+# mail-filter/dovecot_deleted_to_trash is treecleaned
+# to prevent breaking the tree (bug #756217)
+=net-mail/dovecot-2.2.36.4
+
 # Michał Górny <mgorny@gentoo.org> (2020-12-20)
 # Requires old dev-python/unidecode.  Last commit in 2017.  No revdeps.
 # Suggested replacement: dev-python/python-slugify.
@@ -442,16 +448,24 @@ kde-apps/kdebase-meta:5
 >=app-benchmarks/wrk-4.1.0-r100
 >=app-crypt/cardpeek-0.8.4
 >=app-crypt/ekeyd-1.1.5-r100
+>=app-editors/gvim-8.2.0814-r100
 >=app-editors/neovim-0.4.4-r100
 =app-editors/scite-4.4.4-r10
+>=app-editors/texworks-0.6.5-r100
+>=app-editors/vim-8.2.0814-r100
 >=app-emulation/libguestfs-1.38.6-r100
+>=app-metrics/nginx-lua-prometheus-0.1_pre20170610-r100
 >=app-misc/worker-3.8.3-r100
+>=dev-db/redis-6.0.9-r100
 >=dev-games/cegui-0.8.7-r100
+>=dev-games/openscenegraph-3.6.5-r100
 =dev-games/openscenegraph-openmw-3.4_p20200425-r100
 =dev-libs/efl-1.25.1-r10
 >=dev-libs/libpeas-1.26.0-r100
 =dev-libs/libprelude-5.2.0-r10
 >=dev-libs/libucl-0.8.1-r100
+>=dev-libs/redland-bindings-1.0.17.1-r100
+>=dev-libs/xapian-bindings-1.4.17-r100
 >=dev-lua/busted-2.0.0-r100
 >=dev-lua/busted-htest-1.0.0-r100
 >=dev-lua/dkjson-2.5-r100
@@ -493,8 +507,11 @@ kde-apps/kdebase-meta:5
 >=dev-lua/penlight-1.9.2-r100
 >=dev-lua/say-1.3_p1-r100
 >=dev-lua/toluapp-1.0.93_p20190513-r100
+>=dev-util/bcc-0.17.0-r100
 >=dev-util/geany-plugins-1.37-r100
 >=dev-util/hermes-2.8
+>=dev-util/sysdig-0.27.1-r100
+>=dev-util/uftrace-0.9.4-r100
 =games-action/minetest-5.3.0-r100
 >=games-arcade/jvgs-0.5-r100
 >=games-emulation/fceux-2.2.3-r100
@@ -527,6 +544,7 @@ kde-apps/kdebase-meta:5
 >=net-analyzer/snort-2.9.16-r100
 >=net-analyzer/suricata-6.0.1-r100
 >=net-analyzer/wireshark-3.4.2-r100
+>=net-dns/dnsmasq-2.82-r100
 >=net-im/prosody-0.11.7-r100
 >=net-im/swift-4.0.2-r100
 >=net-irc/hexchat-2.14.3-r100

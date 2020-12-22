@@ -60,7 +60,7 @@ SRC_URI="${MOZ_SRC_BASE_URI}/source/${MOZ_P}.source.tar.xz -> ${MOZ_P_DISTFILES}
 DESCRIPTION="SpiderMonkey is Mozilla's JavaScript engine written in C and C++"
 HOMEPAGE="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey"
 
-KEYWORDS="~amd64 ~arm ~arm64 ~mips ~ppc64 ~s390 ~x86"
+KEYWORDS="amd64 ~arm ~arm64 ~mips ~ppc64 ~s390 x86"
 
 SLOT="78"
 LICENSE="MPL-2.0"
@@ -228,6 +228,7 @@ src_prepare() {
 src_configure() {
 	# Show flags set at the beginning
 	einfo "Current CFLAGS:    ${CFLAGS}"
+	einfo "Current CXXFLAGS:  ${CXXFLAGS}"
 	einfo "Current LDFLAGS:   ${LDFLAGS}"
 	einfo "Current RUSTFLAGS: ${RUSTFLAGS}"
 
@@ -315,8 +316,16 @@ src_configure() {
 	# LTO flag was handled via configure
 	filter-flags '-flto*'
 
+	if tc-is-gcc ; then
+		if ver_test $(gcc-fullversion) -ge 10 ; then
+			einfo "Forcing -fno-tree-loop-vectorize to workaround GCC bug, see bug 758446 ..."
+			append-cxxflags -fno-tree-loop-vectorize
+		fi
+	fi
+
 	# Show flags we will use
 	einfo "Build CFLAGS:    ${CFLAGS}"
+	einfo "Build CXXFLAGS:  ${CXXFLAGS}"
 	einfo "Build LDFLAGS:   ${LDFLAGS}"
 	einfo "Build RUSTFLAGS: ${RUSTFLAGS}"
 
@@ -347,9 +356,16 @@ src_test() {
 	KNOWN_TESTFAILURES+=( non262/Date/time-zones-imported.js )
 	KNOWN_TESTFAILURES+=( non262/Date/toString-localized.js )
 	KNOWN_TESTFAILURES+=( non262/Date/toString-localized-posix.js )
+	KNOWN_TESTFAILURES+=( non262/Intl/Date/toLocaleString_timeZone.js )
+	KNOWN_TESTFAILURES+=( non262/Intl/Date/toLocaleDateString_timeZone.js )
+	KNOWN_TESTFAILURES+=( non262/Intl/DateTimeFormat/format.js )
+	KNOWN_TESTFAILURES+=( non262/Intl/DateTimeFormat/format_timeZone.js )
 	KNOWN_TESTFAILURES+=( non262/Intl/DateTimeFormat/timeZone_backward_links.js )
 	KNOWN_TESTFAILURES+=( non262/Intl/DateTimeFormat/tz-environment-variable.js )
+	KNOWN_TESTFAILURES+=( non262/Intl/DisplayNames/language.js )
+	KNOWN_TESTFAILURES+=( non262/Intl/DisplayNames/region.js )
 	KNOWN_TESTFAILURES+=( non262/Intl/Locale/likely-subtags.js )
+	KNOWN_TESTFAILURES+=( non262/Intl/Locale/likely-subtags-generated.js )
 	KNOWN_TESTFAILURES+=( test262/intl402/Locale/prototype/minimize/removing-likely-subtags-first-adds-likely-subtags.js )
 
 	if use x86 ; then
