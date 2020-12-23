@@ -32,6 +32,14 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2020-12-22)
+# Renamed version of dev-python/pycryptodome.  The ebuild is missing
+# fixes from the original.  Maintaining and installing two copies
+# of the same thing makes little sense, so we're forcing the former
+# everywhere.
+# Removal in 14 days.
+dev-python/pycryptodomex
+
 # Eray Aslan <eras@gentoo.org> (2020-12-21)
 # Vulnerable. upgrade to >= 2.3.11.3. Masked until
 # mail-filter/dovecot_deleted_to_trash is treecleaned
@@ -456,6 +464,8 @@ kde-apps/kdebase-meta:5
 >=app-emulation/libguestfs-1.38.6-r100
 >=app-metrics/nginx-lua-prometheus-0.1_pre20170610-r100
 >=app-misc/worker-3.8.3-r100
+>=app-text/highlight-3.57-r100
+>=app-text/podofo-0.9.6_p20190928-r100
 >=dev-db/redis-6.0.9-r100
 >=dev-games/cegui-0.8.7-r100
 >=dev-games/openscenegraph-3.6.5-r100
@@ -537,14 +547,23 @@ kde-apps/kdebase-meta:5
 >=media-gfx/geeqie-1.5.1-r1
 >=media-libs/libquvi-0.9.4-r100
 >=media-libs/libquvi-scripts-0.9.20131130-r100
+>=media-libs/mlt-6.22.1-r100
 >=media-sound/aqualung-1.1-r100
+>=media-sound/csound-6.15.0-r100
 >=media-video/aegisub-3.2.2_p20160518-r100
+>=media-video/mpv-0.33.0-r100
+>=media-video/obs-studio-25.0.8-r100
 >=media-video/vlc-3.0.11.1-r100
 >=net-analyzer/rrdtool-1.7.2-r100
 >=net-analyzer/snort-2.9.16-r100
 >=net-analyzer/suricata-6.0.1-r100
+>=net-analyzer/tracebox-0.4.4-r100
 >=net-analyzer/wireshark-3.4.2-r100
+>=net-dialup/accel-ppp-1.12.0_p20200913-r100
+>=net-dns/dnsdist-1.5.1-r100
 >=net-dns/dnsmasq-2.82-r100
+>=net-dns/pdns-4.4.0-r100
+>=net-dns/pdns-recursor-4.4.2-r100
 >=net-im/prosody-0.11.7-r100
 >=net-im/swift-4.0.2-r100
 >=net-irc/hexchat-2.14.3-r100
