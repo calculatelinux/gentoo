@@ -3,9 +3,10 @@
 
 EAPI=7
 
+LUA_COMPAT=( lua5-{1..2} luajit )
 WEBAPP_MANUAL_SLOT="yes"
 
-inherit git-r3 toolchain-funcs webapp
+inherit git-r3 lua-single toolchain-funcs webapp
 
 [[ -z "${CGIT_CACHEDIR}" ]] && CGIT_CACHEDIR="/var/cache/${PN}/"
 
@@ -17,7 +18,8 @@ EGIT_REPO_URI="https://git.zx2c4.com/cgit"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="doc +highlight libressl +lua +luajit test"
+IUSE="doc +highlight libressl +lua test"
+REQUIRED_USE="lua? ( ${LUA_REQUIRED_USE} )"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
@@ -27,10 +29,7 @@ RDEPEND="
 	highlight? ( || ( dev-python/pygments app-text/highlight ) )
 	!libressl? ( dev-libs/openssl:0= )
 	libressl? ( dev-libs/libressl:0= )
-	lua? (
-		luajit? ( dev-lang/luajit )
-		!luajit? ( dev-lang/lua:0 )
-	)
+	lua? ( ${LUA_DEPS} )
 	sys-libs/zlib
 	virtual/httpd-cgi
 "
@@ -42,6 +41,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	webapp_pkg_setup
+	use lua && lua-single_pkg_setup
 }
 
 src_prepare() {
@@ -52,11 +52,7 @@ src_prepare() {
 	echo "CACHE_ROOT = ${CGIT_CACHEDIR}" >> cgit.conf
 	echo "DESTDIR = ${D}" >> cgit.conf
 	if use lua; then
-		if use luajit; then
-			echo "LUA_PKGCONFIG = luajit" >> cgit.conf
-		else
-			echo "LUA_PKGCONFIG = lua" >> cgit.conf
-		fi
+		echo "LUA_PKGCONFIG = ${ELUA}" >> cgit.conf
 	else
 		echo "NO_LUA = 1" >> cgit.conf
 	fi
