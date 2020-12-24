@@ -3,9 +3,11 @@
 
 EAPI=7
 
-inherit cmake flag-o-matic toolchain-funcs xdg
+LUA_COMPAT=( lua5-3 )
 
-DOC_PV="3.0.0"
+inherit cmake flag-o-matic lua-single toolchain-funcs xdg
+
+DOC_PV="3.4.0"
 MY_PV="${PV/_/}"
 MY_P="${P/_/.}"
 
@@ -17,11 +19,12 @@ SRC_URI="https://github.com/darktable-org/${PN}/releases/download/release-${MY_P
 LICENSE="GPL-3 CC-BY-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
-LANGS=" de es fr he it pl pt-BR ru sl"
-# TODO add lua once dev-lang/lua-5.2 is unmasked
-IUSE="colord cups cpu_flags_x86_sse3 doc flickr geolocation gnome-keyring gphoto2 graphicsmagick jpeg2k kwallet
-	lto nls opencl openmp openexr tools webp
+LANGS=" af cs de es fi fr he hu it pl pt-BR ru sk sl"
+IUSE="colord cups cpu_flags_x86_sse3 doc flickr geolocation gmic gnome-keyring gphoto2 graphicsmagick jpeg2k kwallet
+	lto lua nls opencl openmp openexr system-lua tools webp
 	${LANGS// / l10n_}"
+
+REQUIRED_USE="system-lua? ( lua ${LUA_REQUIRED_USE} )"
 
 BDEPEND="
 	dev-util/intltool
@@ -50,12 +53,14 @@ COMMON_DEPEND="
 	cups? ( net-print/cups )
 	flickr? ( media-libs/flickcurl )
 	geolocation? ( >=sci-geosciences/osm-gps-map-1.1.0 )
+	gmic? ( media-gfx/gmic )
 	gnome-keyring? ( >=app-crypt/libsecret-0.18 )
 	gphoto2? ( media-libs/libgphoto2:= )
 	graphicsmagick? ( media-gfx/graphicsmagick )
 	jpeg2k? ( media-libs/openjpeg:2= )
 	opencl? ( virtual/opencl )
 	openexr? ( media-libs/openexr:0= )
+	system-lua? ( ${LUA_DEPS} )
 	webp? ( media-libs/libwebp:0= )
 "
 DEPEND="${COMMON_DEPEND}
@@ -99,19 +104,23 @@ src_prepare() {
 }
 
 src_configure() {
+	# As of darktable-3.2.1, AVIF support is not compatible with >=media-libs/libavif-0.8.0; see Bug #751352.
 	local mycmakeargs=(
 		-DBUILD_CURVE_TOOLS=$(usex tools)
 		-DBUILD_NOISE_TOOLS=$(usex tools)
 		-DBUILD_PRINT=$(usex cups)
 		-DCUSTOM_CFLAGS=ON
+		-DDONT_USE_INTERNAL_LUA=$(usex system-lua)
 		-DRAWSPEED_ENABLE_LTO=$(usex lto)
+		-DUSE_AVIF=no
 		-DUSE_CAMERA_SUPPORT=$(usex gphoto2)
 		-DUSE_COLORD=$(usex colord)
 		-DUSE_FLICKR=$(usex flickr)
+		-DUSE_GMIC=$(usex gmic)
 		-DUSE_GRAPHICSMAGICK=$(usex graphicsmagick)
 		-DUSE_KWALLET=$(usex kwallet)
 		-DUSE_LIBSECRET=$(usex gnome-keyring)
-		-DUSE_LUA=OFF
+		-DUSE_LUA=$(usex lua)
 		-DUSE_MAP=$(usex geolocation)
 		-DUSE_NLS=$(usex nls)
 		-DUSE_OPENCL=$(usex opencl)
