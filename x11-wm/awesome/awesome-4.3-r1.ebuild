@@ -22,7 +22,7 @@ RDEPEND="
 	>=dev-libs/libxdg-basedir-1
 	>=dev-lua/lgi-0.8
 	x11-libs/cairo[X,xcb(+)]
-	x11-libs/gdk-pixbuf:2
+	x11-libs/gdk-pixbuf:2[introspection]
 	>=x11-libs/libxcb-1.6[xkb]
 	>=x11-libs/pango-1.19.3[introspection]
 	>=x11-libs/startup-notification-0.10_p20110426
@@ -61,6 +61,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.0-convert-path.patch"  # bug #408025
 	"${FILESDIR}/${PN}-xsession.patch"          # bug #408025
 	"${FILESDIR}/${PN}-4.0-cflag-cleanup.patch" # bug #509658
+	"${FILESDIR}/${PN}-4.3-fno-common.patch"    # bug #707262
 )
 
 src_configure() {

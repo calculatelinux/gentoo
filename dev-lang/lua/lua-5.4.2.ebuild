@@ -5,16 +5,16 @@ EAPI=7
 inherit autotools multilib multilib-minimal portability toolchain-funcs
 
 DESCRIPTION="A powerful light-weight programming language designed for extending applications"
-HOMEPAGE="http://www.lua.org/"
+HOMEPAGE="https://www.lua.org/"
 TEST_PV="5.4.2"
 TEST_P="${PN}-${TEST_PV}-tests"
 SRC_URI="
-	http://www.lua.org/ftp/${P}.tar.gz
+	https://www.lua.org/ftp/${P}.tar.gz
 	test? ( https://www.lua.org/tests/${TEST_P}.tar.gz )"
 
 LICENSE="MIT"
 SLOT="5.4"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~ppc-aix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="+deprecated readline test test-complete"
 
 COMMON_DEPEND="

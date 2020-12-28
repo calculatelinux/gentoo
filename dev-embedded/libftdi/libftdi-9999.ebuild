@@ -1,10 +1,10 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 PYTHON_COMPAT=( python3_{6,7,8,9} )
-inherit cmake-utils python-single-r1
+inherit cmake python-single-r1
 
 MY_P="${PN}1-${PV}"
 if [[ ${PV} == 9999* ]] ; then
@@ -17,6 +17,7 @@ fi
 
 DESCRIPTION="Userspace access to FTDI USB interface chips"
 HOMEPAGE="https://www.intra2net.com/en/developer/libftdi/"
+S="${WORKDIR}/${MY_P}"
 
 LICENSE="LGPL-2"
 SLOT="1"
@@ -24,6 +25,10 @@ IUSE="cxx doc examples python static-libs test tools"
 RESTRICT="!test? ( test )"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
+BDEPEND="
+	doc? ( app-doc/doxygen )
+	python? ( dev-lang/swig )
+"
 RDEPEND="virtual/libusb:1
 	cxx? ( dev-libs/boost )
 	python? ( ${PYTHON_DEPS} )
@@ -31,15 +36,11 @@ RDEPEND="virtual/libusb:1
 		!<dev-embedded/ftdi_eeprom-1.0
 		dev-libs/confuse:=
 	)"
-DEPEND="${RDEPEND}
-	python? ( dev-lang/swig )
-	doc? ( app-doc/doxygen )"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
 }
-
-S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	local mycmakeargs=(
@@ -52,21 +53,27 @@ src_configure() {
 		-DFTDI_EEPROM=$(usex tools)
 		-DCMAKE_SKIP_BUILD_RPATH=ON
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
+}
+
+src_test() {
+	cd "${BUILD_DIR}/test" || die
+	./test_libftdi1	-l all || die
 }
 
 src_install() {
-	cmake-utils_src_install
+	cmake_src_install
 	use python && python_optimize
 	dodoc AUTHORS ChangeLog README TODO
 
 	if use doc ; then
 		# Clean up crap man pages. #356369
-		rm -vf "${CMAKE_BUILD_DIR}"/doc/man/man3/_* || die
+		rm -vf "${BUILD_DIR}"/doc/man/man3/_* || die
 
-		doman "${CMAKE_BUILD_DIR}"/doc/man/man3/*
-		dodoc -r "${CMAKE_BUILD_DIR}"/doc/html
+		doman "${BUILD_DIR}"/doc/man/man3/*
+		dodoc -r "${BUILD_DIR}"/doc/html
 	fi
+
 	if use examples ; then
 		docinto examples
 		dodoc examples/*.c
