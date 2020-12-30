@@ -11,7 +11,7 @@ SRC_URI="https://linuxtv.org/downloads/v4l-utils/${P}.tar.bz2"
 
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~arm64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm arm64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+bpf dvb opengl qt5 +udev"
 
 RDEPEND="
@@ -47,7 +47,7 @@ PATCHES=(
 QA_PREBUILT="*/rc_keymaps/protocols/*.o"
 
 pkg_pretend() {
-	if use bpf; then
+	if [[ ${MERGE_TYPE} != binary ]] && use bpf; then
 		local clang=${ac_cv_prog_CLANG:-${CLANG:-clang}}
 		${clang} -target bpf -print-supported-cpus &>/dev/null ||
 			die "${clang} does not support the BPF target. Please check LLVM_TARGETS."
