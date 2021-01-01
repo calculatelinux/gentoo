@@ -796,8 +796,6 @@ app-metrics/collectd:filecaps - When set collectd daemon will have set required 
 app-metrics/collectd:java - Must be set (workaround for java-pkg-opt-2 eclass limitation) when you want java or genericjmx plugin
 app-metrics/collectd:udev - Enable optional udev usage in disk plugin; Required for smart plugin
 app-metrics/collectd:xfs - Enable optional capability to filter on XFS file system in df plugin; Requires XFS headers from sys-fs/xfsprogs
-app-misc/anki:recording - Enable support for audio recording
-app-misc/anki:sound - Enable support for adding sound to cards
 app-misc/blink1:mini-tool - Build and install command-line mini-tool blink1-mini-tool (normally used for embedded devices)
 app-misc/blink1:server - Build and install REST API server (currently hard-coded to TCP port 8080)
 app-misc/blink1:tool - Build and install command-line tool blink1-tool
@@ -2765,7 +2763,7 @@ dev-util/bitcoin-tx:knots - Build enhanced Bitcoin Knots version, rather than Bi
 dev-util/buildbot:docker - Add support for worker docker command steps
 dev-util/buildbot:irc - Add support for status delivery through an ircbot.
 dev-util/bustle:interactivetests - Build interactive test programs
-dev-util/bustle:threaded - Build with support for multithreaded execution.
+dev-util/bustle:threaded - Build with the multi-threaded runtime
 dev-util/cargo-audit:fix - Add support for 'fix' subcommand (experimental)
 dev-util/catalyst:ccache - Enables ccache support
 dev-util/catalyst:iso - Pulls in the depends for building iso images
@@ -5311,7 +5309,6 @@ net-analyzer/pmacct:traffic-bins - Link IPv4/IPv6 traffic accounting binaries
 net-analyzer/pmacct:zmq - Enable support for ZeroMQ through net-libs/zeromq
 net-analyzer/pnp4nagios:icinga - Build against net-analyzer/icinga2 instead of net-analyzer/nagios-core
 net-analyzer/pnp4nagios:nagios - Build against net-analyzer/nagios-core (the default)
-net-analyzer/prelude-lml:tls - Enables Prelude LML support Syslog through TLS using net-libs/gnutls.
 net-analyzer/rrdcollect:exec - Enable exec:/// support
 net-analyzer/rrdcollect:librrd - Use the librrd library from net-analyzer/rrdtool
 net-analyzer/rrdtool:graph - Enable support for graphing functions
@@ -7678,7 +7675,7 @@ sys-apps/flashrom:nicrealtek - Support for Realtek NICs
 sys-apps/flashrom:ogp-spi - Enable support for OGP (Open Graphics Project) SPI flashing
 sys-apps/flashrom:pickit2-spi - SUpport for SPI flash ROMs accessible via Microchip PICkit2
 sys-apps/flashrom:pony-spi - Enable support for SI-Prog like hardware by Lancos
-sys-apps/flashrom:raiden - Enable ChromiumOS Servo DUT debug board
+sys-apps/flashrom:raiden-debug-spi - Enable ChromiumOS Servo DUT debug board
 sys-apps/flashrom:rayer-spi - RayeR SPIPGM hardware support
 sys-apps/flashrom:realtek-mst-i2c-spi - Enable support for Realtek MultiStream Transport (MST)
 sys-apps/flashrom:satamv - Enable programmer for Marvell SATA controllers
@@ -7780,7 +7777,6 @@ sys-apps/portage:xattr - Preserve extended attributes (filesystem-stored metadat
 sys-apps/proot:care - Build dynamic CARE binary (more info - https://proot-me.github.io)
 sys-apps/qingy:opensslcrypt - Encrypt communications between qingy and its GUI using dev-libs/openssl
 sys-apps/razercfg:gui - Installs GUI configuration utility and status bar applet. Requires dev-python/PyQt5
-sys-apps/razercfg:pm-utils - Installs the pm-utils hooks for suspend/resume and requires sys-power/pm-utils
 sys-apps/rng-tools:jitterentropy - Enable Jitter RNG entropy support
 sys-apps/rng-tools:nistbeacon - Enable NIST beacon entropy support
 sys-apps/rng-tools:pkcs11 - Enable PKCS11 entropy support
@@ -8687,7 +8683,6 @@ x11-apps/xsm:rsh - This allows the use of rsh (remote shell) and rcp (remote cop
 x11-base/xorg-server:dmx - Build the Distributed Multiheaded X server
 x11-base/xorg-server:elogind - Use elogind to get control over framebuffer when running as regular user
 x11-base/xorg-server:kdrive - Build the kdrive X servers
-x11-base/xorg-server:libglvnd - Use libglvnd for dispatch.
 x11-base/xorg-server:unwind - Enable libunwind usage for backtraces
 x11-base/xorg-server:xcsecurity - Build Security extension
 x11-base/xorg-server:xephyr - Build the Xephyr server
