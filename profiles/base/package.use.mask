@@ -6,6 +6,11 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Sam James <sam@gentoo.org> (2021-01-04)
+# Doc generation is broken, needs gtkdoc-mktmpl (gone from gtk-doc)
+# bug #723438
+app-i18n/enca doc
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2021-01-01)
 # media-video/pipewire:0/0.2 cleanup
 <dev-libs/weston-9 pipewire
@@ -373,6 +378,7 @@ dev-python/paramiko server
 # warned. (Also, works only on x86_64 and with certain CPUs
 # and compiler/binutils combinations.)
 sys-libs/glibc cet
+sys-devel/gdb cet
 
 # Michał Górny <mgorny@gentoo.org> (2018-06-13)
 # Requires app-arch/snappy[static-libs] that is no longer available.

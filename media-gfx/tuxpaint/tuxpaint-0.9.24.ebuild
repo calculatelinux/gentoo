@@ -1,9 +1,9 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-inherit desktop toolchain-funcs xdg
+inherit desktop optfeature toolchain-funcs xdg
 
 DESCRIPTION="Drawing program designed for young children"
 HOMEPAGE="http://www.tuxpaint.org/"
@@ -29,7 +29,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 BDEPEND="
 	dev-util/gperf
-	media-gfx/imagemagick[png]
+	media-gfx/imagemagick[jpeg,png,svg]
 	sys-devel/gettext
 "
 
@@ -66,8 +66,6 @@ src_install() {
 
 pkg_postinst() {
 	xdg_pkg_postinst
-	if ! has_version "media-gfx/tuxpaint-stamps"; then
-		elog "For additional graphic stamps, you can emerge the"
-		elog "media-gfx/tuxpaint-stamps package."
-	fi
+	elog "Optional uninstalled features:"
+	optfeature "additional graphic stamps" media-gfx/tuxpaint-stamps
 }

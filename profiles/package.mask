@@ -32,6 +32,33 @@
 
 #--- END OF EXAMPLES ---
 
+# Jaco Kroon <jaco@uls.co.za> (2021-01-04)
+# media-libs/libilbc is (for every package I manage) a drop-in for
+# dev-libs/ilbc-rfc3951. The latter had net-misc/asterisk,
+# net-libs/pjproject and net-voip/yate as dependencies.
+# (All of which has been bumped to no longer have this dependency.)
+# Removal in 30 days, bug #444470
+dev-libs/ilbc-rfc3951
+
+# Mikle Kolyada <zlogene@gentoo.org> (2021-01-04)
+# This release is broken multiple ways.
+# Do not use
+=app-admin/terraform-0.14.3
+
+# Jakov Smolic <jakov.smolic@sartura.hr> (2021-01-02)
+# sci-physics/cernlib fails to build with gcc-10, last release in 2006,
+# multiple open bugs, all revdeps also broken and declared EOL upstream.
+# Removal in 30 days, bug #763183
+sci-physics/cernlib
+sci-physics/cernlib-montecarlo
+sci-physics/paw
+
+# Jakov Smolic <jakov.smolic@sartura.hr> (2021-01-02)
+# Fails to build with gcc-10, no maintainer, upstream gone,
+# multiple open bugs.
+# Removal in 30 days, bug #677322, bug #707200, bug #716012
+net-dialup/diald
+
 # Conrad Kostecki <conikost@gentoo.org> (2021-01-01)
 # NetworkManager has buildin support for WireGuard,
 # this plugin is old and unmaintained, so let's drop it.
@@ -95,11 +122,6 @@ dev-ruby/rack:2.1
 # Masked for removal after 2021-02-01
 # Bug #762361
 media-sound/takcd
-
-# Alfredo Tupone <tupone@gentoo.org> (2020-12-28)
-# Masked for testing
->=dev-lang/tk-8.6.10
->=dev-lang/tcl-8.6.10
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-12-26)
 # Dead upstream, only two revdeps.
@@ -329,12 +351,6 @@ app-emulation/qt-virt-manager
 =sys-kernel/gentoo-kernel-bin-5.4.79
 =sys-kernel/gentoo-kernel-bin-5.4.78-r1
 =sys-kernel/gentoo-kernel-bin-5.4.78
-
-# Jonas Stein <jstein@gentoo.org> (2020-11-12)
-# Adobe will stop distributing Flash Player after 2020-12-31.
-# Masked for removal after 2020-12-31
-# Bug #754192
-www-plugins/adobe-flash
 
 # Michał Górny <mgorny@gentoo.org> (2020-11-10)
 # This old Kodi version requires vulnerable dev-python/pillow
