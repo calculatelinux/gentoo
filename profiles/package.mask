@@ -32,6 +32,24 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2021-01-06)
+# (on behalf of QA)
+# The new docker version splits the docker(1) executable into a separate
+# app-emulation/docker-cli package.  However, the package is not pulled
+# automatically and the new version does not even warn the user about
+# that.  In other words, the upgrade breaks people's systems hard.
+>=app-emulation/docker-20.1.0
+>=app-emulation/docker-cli-20.1.0
+
+# Michał Górny <mgorny@gentoo.org> (2021-01-05)
+# The portable version has been discontinued upstream (i.e. it is now
+# available only as tightly coupled part of OpenBSD).  The current
+# version relies on dev-libs/libressl implementation details, and can
+# not be easily ported to dev-libs/openssl.  Reported to fail to build
+# with gcc-10.  There are multiple alternative ACME clients available.
+# Removal in 30 days.  Bug #762310.
+app-crypt/acme-client
+
 # Jaco Kroon <jaco@uls.co.za> (2021-01-04)
 # media-libs/libilbc is (for every package I manage) a drop-in for
 # dev-libs/ilbc-rfc3951. The latter had net-misc/asterisk,
@@ -299,17 +317,6 @@ dev-util/creduce
 # Fails to validate certificates which have multiple trusted
 # paths.
 =net-libs/gnutls-3.7.0
-
-# Joonas Niilola <juippis@gentoo.org> (2020-12-06)
-# Not keyworded, unmaintained, unbuildable for a long time, EAPI-5.
-# Removal in ~30 days. List sorted by their bug numbers.
-# Bugs: #752432, #752435, #752438, #752441, #752444, #752453.
-media-plugins/kodi-screensaver-crystalmorph
-media-plugins/kodi-visualization-nastyfft
-media-plugins/kodi-screensaver-rsxs
-net-wireless/qradiolink
-net-libs/liba53
-app-emulation/qt-virt-manager
 
 # Thomas Deutschmann <whissi@gentoo.org> (2020-11-24)
 # Serious data corruption bug when using XFS, see https://www.spinics.net/lists/linux-xfs/msg47004.html

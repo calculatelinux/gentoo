@@ -607,7 +607,6 @@ app-emulation/qemu:xattr - Add support for getting and setting POSIX extended at
 app-emulation/qemu:xen - Enables support for Xen backends
 app-emulation/qemu:xfs - Support xfsctl() notification and syncing for XFS backed virtual disks.
 app-emulation/qemu:xkb - Depend on x11-libs/libxkbcommon to build qemu-keymap tool for converting xkb keymaps
-app-emulation/qt-virt-manager:smartcard - Enable smartcard remoting using app-emulation/libcacard
 app-emulation/runc:ambient - Enable support for ambient capabilities set (Requires Linux kernel 4.3 or later).
 app-emulation/runc:apparmor - Enable AppArmor support.
 app-emulation/runc:kmem - Enable Kernel Memory Accounting.
@@ -6505,6 +6504,7 @@ net-misc/ofono:qmimodem - Enable Qualcomm QMI modem support
 net-misc/ofono:tools - Enable testing tools
 net-misc/oidentd:masquerade - Enable support for masqueraded/NAT connections
 net-misc/olsrd:pud - Install the Node Position Update plugin
+net-misc/openntpd:constraints - Enable HTTPS TLS time constraint support
 net-misc/openntpd:libressl - Enable HTTPS TLS time constraint support using dev-libs/libressl
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:bindist - Disable EC/RC5 algorithms in OpenSSL for patent reasons.
@@ -6768,24 +6768,28 @@ net-proxy/haproxy:prometheus-exporter - Also build the prometheus exporter
 net-proxy/haproxy:slz - Use dev-libs/libslz compression library
 net-proxy/haproxy:tools - Install additional tools (halog, iprange)
 net-proxy/haproxy:wurfl - Device Detection using WURFL
+net-proxy/privoxy:brotli - Decompress brotli compressed data using app-arch/brotli before filtering
 net-proxy/privoxy:client-tags - Enable support for client-specific tags
 net-proxy/privoxy:compression - Allow privoxy to compress buffered content before sending to the client, if it supports it
 net-proxy/privoxy:editor - Enable the web-based actions file editor
-net-proxy/privoxy:extended-host-patterns - Enable and require PCRE syntax in host patterns. You must convert action files to PCRE, see privoxy-url-pattern-translator.pl Use at your own risk!
+net-proxy/privoxy:extended-host-patterns - Enable and require PCRE syntax in host patterns. You must convert action files to PCRE, see privoxy-url-pattern-translator.pl (see tools USE flag). Use at your own risk!
+net-proxy/privoxy:extended-statistics - Gather extended statistics
 net-proxy/privoxy:external-filters - Allow to filter content with scripts and programs. Experimental
 net-proxy/privoxy:fast-redirects - Support fast redirects
 net-proxy/privoxy:force - Allow single-page disable (force load)
 net-proxy/privoxy:fuzz - Exposes Privoxy internals to input from files or stdout. Intended for fuzzing testing
 net-proxy/privoxy:graceful-termination - Allow to shutdown Privoxy through the webinterface
-net-proxy/privoxy:ie-images - Enable a quick but not always reliable auto-detect whether requests from MS Internet Explorer are for an image or not
 net-proxy/privoxy:image-blocking - Allows the +handle-as-image action, to send "blocked" images instead of HTML
 net-proxy/privoxy:lfs - Support large files (>2GB) on 32-bit systems
+net-proxy/privoxy:mbedtls - Use net-libs/mbedtls for HTTPS filtering
+net-proxy/privoxy:openssl - Use dev-libs/openssl for HTTPS filtering
 net-proxy/privoxy:png-images - Use PNG format instead of GIF for built-in images
+net-proxy/privoxy:ssl - HTTPS inspection support. Enables privoxy to perform SSL MITM filtering, see docs, use with care
 net-proxy/privoxy:stats - Keep statistics
 net-proxy/privoxy:toggle - Support temporary disable toggle via web interface
 net-proxy/privoxy:tools - Install log parser, regression tester and user agent generator tools
 net-proxy/privoxy:whitelists - Support trust files (white lists)
-net-proxy/privoxy:zlib - Use sys-libs/zlib to decompress data before filtering
+net-proxy/privoxy:zlib - Decompress zlib compressed data using sys-libs/zlib before filtering
 net-proxy/rejik:banlists - Install upstream provided simple banlists
 net-proxy/squid:ecap - Adds support for loadable content adaptation modules (http://www.e-cap.org)
 net-proxy/squid:esi - Enable ESI for accelerators, will cause squid reverse proxies to be capable of the Edge Acceleration Specification (www.esi.org)
@@ -7342,8 +7346,6 @@ sci-libs/plplot:qhull - Add bindings for media-libs/qhull
 sci-libs/plplot:shapefile - Enable support for ESRI shapefiles
 sci-libs/proj:europe - Install the PROJ collection of European grids and init-files
 sci-libs/rtabmap:openni2 - Adds support for Kinect-like 3D sensors devices with dev-libs/OpenNI2.
-sci-libs/scikit-image:freeimage - Enable support for image i/o viamedia-libs/freeimage
-sci-libs/scikit-image:pyamg - Enable support for algebraic solvers via dev-python/pyamg
 sci-libs/scotch:int64 - Build the 64 bits integer library (needed for > 2^31 vertices)
 sci-libs/scotch:tools - Provides the graph, mesh, architecture, mapping/ordering, output handling programs (see Scotch User's Guide).
 sci-libs/silo:silex - Build silex data browser
