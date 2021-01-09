@@ -13,7 +13,7 @@ if [[ ${PV} == *9999* ]]; then
 	ELL_EGIT_REPO_URI="https://git.kernel.org/pub/scm/libs/ell/ell.git"
 else
 	SRC_URI="https://www.kernel.org/pub/linux/network/wireless/${P}.tar.xz"
-	KEYWORDS="~alpha amd64 arm arm64 ~ia64 ppc ~ppc64 ~sparc x86"
+	KEYWORDS="~alpha amd64 arm arm64 ~ia64 ppc ppc64 ~sparc x86"
 fi
 
 DESCRIPTION="Wireless daemon for linux"
@@ -54,7 +54,6 @@ pkg_setup() {
 		~ASYMMETRIC_PUBLIC_KEY_SUBTYPE
 		~CFG80211
 		~CRYPTO_AES
-		~CRYPTO_ARC4
 		~CRYPTO_CBC
 		~CRYPTO_CMAC
 		~CRYPTO_DES

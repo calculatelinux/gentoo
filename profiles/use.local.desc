@@ -486,6 +486,7 @@ app-emulation/crun:man - Build and install man pages
 app-emulation/docker:apparmor - Enable AppArmor support.
 app-emulation/docker:aufs - Enables dependencies for the "aufs" graph driver, including necessary kernel flags.
 app-emulation/docker:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
+app-emulation/docker:cli - This is a temporary use flag which pulls in app-emulation/docker-cli, the docker command line client. This flag is here to assist in the transition to split packages and will be removed in a future release.
 app-emulation/docker:container-init - Makes the a staticly-linked init system tini available inside a container.
 app-emulation/docker:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
 app-emulation/docker:overlay - Enables dependencies for the "overlay" graph driver, including necessary kernel flags.
@@ -3377,6 +3378,7 @@ gui-apps/waybar:network - Enable libnl support for network related features
 gui-apps/waybar:popups - Enable popup support with gtk-layer-shell
 gui-apps/waybar:pulseaudio - Enable support for volume control via PulseAudio
 gui-apps/waybar:tray - Enable support for tray
+gui-apps/waybar:wifi - Enable support for wifi/rfkill
 gui-apps/wf-recorder:man - Build and install man pages
 gui-apps/wf-recorder:opencl - Enable OpenCL
 gui-libs/greetd:man - Build and install man pages
@@ -3542,6 +3544,7 @@ kde-apps/okular:qml - Install Okular Qml components
 kde-apps/okular:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/okular:speech - Enable text-to-speech support
 kde-apps/pimcommon:designer - Build plugins for dev-qt/designer
+kde-apps/spectacle:annotate - Enable support for screenshot annotations using media-libs/kimageannotator
 kde-apps/spectacle:kipi - Enable support for the KDE Image Plugin Interface
 kde-apps/spectacle:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/step:qalculate - Enable the libqalculate library for unit conversion
@@ -5761,7 +5764,6 @@ net-im/psi:webengine - Enable themed, html-based chatlogs using dev-qt/qtwebengi
 net-im/psi:whiteboarding - Enable experimental interactive SVG drawing
 net-im/psi:xscreensaver - Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events
 net-im/psimedia:extras - Enable Psi+ mode (required when built for Psi+)
-net-im/qtox:X - Adds support for X11
 net-im/qtox:notification - Adds support for GTK Status Notifier tray backends
 net-im/spectrum2:frotz - Enables the Z-Engine backend.
 net-im/spectrum2:irc - Enables the IRC backend, based on net-im/libcommuni.

@@ -5,7 +5,7 @@ EAPI="6"
 
 DESCRIPTION="Indents C/C++ source code"
 HOMEPAGE="https://invisible-island.net/bcpp/"
-SRC_URI="ftp://invisible-island.net/bcpp/${P}.tgz"
+SRC_URI="ftp://ftp.invisible-island.net/bcpp/${P}.tgz"
 
 LICENSE="MIT"
 SLOT="0"

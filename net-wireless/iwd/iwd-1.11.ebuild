@@ -5,7 +5,7 @@ EAPI=6
 inherit flag-o-matic linux-info systemd
 
 #Set this variable to the required external ell version
-ELL_REQ="0.35"
+ELL_REQ="0.36"
 
 if [[ ${PV} == *9999* ]]; then
 	inherit autotools git-r3
@@ -54,7 +54,6 @@ pkg_setup() {
 		~ASYMMETRIC_PUBLIC_KEY_SUBTYPE
 		~CFG80211
 		~CRYPTO_AES
-		~CRYPTO_ARC4
 		~CRYPTO_CBC
 		~CRYPTO_CMAC
 		~CRYPTO_DES

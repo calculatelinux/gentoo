@@ -32,6 +32,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-01-09)
+# media-sound/patchage used to depend on it but the dependency
+# has been dropped in v1.0.0. There are no other packages in the tree
+# depending on it. Also having issues compiling it. Removal in 30 days.
+media-libs/raul
+
+# Brian Evans <grknight@gentoo.org> (2021-01-07)
+# PHP 7.2 is security vulnerable and end-of-life
+# Please upgrade to a newer slot
+dev-lang/php:7.2
+virtual/httpd-php:7.2
+=dev-php/phpunit-5.7.15-r3
+=dev-php/PHP_CodeCoverage-4.0.7-r2
+=dev-php/PHP_TokenStream-1.4.11-r1
+
 # Joonas Niilola <juippis@gentoo.org> (2020-01-07)
 # Eterm's development stopped 2014 and upstream brought to life 
 # its successor, terminology. Eterm is unmaintained in Gentoo with 
@@ -57,18 +72,10 @@ app-admin/cgmanager
 sys-libs/libnih
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2021-01-06)
-# Abandoned upstream, countless bugs. Removal in 30 days. Bug #659616.
+# Abandoned upstream, countless bugs. Replaced by builtin functionality in
+# elogind or systemd. Removal in 30 days. Bug #659616.
 sys-power/pm-utils
 sys-power/pm-quirks
-
-# Michał Górny <mgorny@gentoo.org> (2021-01-06)
-# (on behalf of QA)
-# The new docker version splits the docker(1) executable into a separate
-# app-emulation/docker-cli package.  However, the package is not pulled
-# automatically and the new version does not even warn the user about
-# that.  In other words, the upgrade breaks people's systems hard.
->=app-emulation/docker-20.1.0
->=app-emulation/docker-cli-20.1.0
 
 # Michał Górny <mgorny@gentoo.org> (2021-01-05)
 # The portable version has been discontinued upstream (i.e. it is now
