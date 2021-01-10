@@ -3306,19 +3306,9 @@
     <subproject ref="security-audit@gentoo.org"/>
     <subproject ref="security-kernel@gentoo.org"/>
     <member>
-      <email>blueknight@gentoo.org</email>
-      <name>Yury German</name>
-      <role>GLSA Coordinator</role>
-    </member>
-    <member>
       <email>bman@gentoo.org</email>
       <name>Aaron Bauman</name>
       <role>GLSA Coordinator</role>
-    </member>
-    <member>
-      <email>k_f@gentoo.org</email>
-      <name>Kristian Fiskerstrand</name>
-      <role>Member</role>
     </member>
     <member>
       <email>sam@gentoo.org</email>
