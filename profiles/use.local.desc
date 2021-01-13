@@ -1123,7 +1123,6 @@ app-text/podofo:boost - Add support for boost
 app-text/podofo:tools - Build and install commandline tools.
 app-text/poppler:nss - Enable signatures handling with dev-libs/nss
 app-text/poppler:utils - Install command-line PDF converters and various utilities.
-app-text/qpdf:perl - Install fix-qdf tool (for reverting PDF edits) written in perl
 app-text/qpdfview:fitz - Use experimental fitz rendering, provided by app-text/mupdf, instead of poppler
 app-text/qpdfview:synctex - Add support for searching TeX sources
 app-text/robodoc:examples - Installs usage examples in /usr/share for Perl
@@ -3122,8 +3121,9 @@ games-fps/doomsday:fluidsynth - Build the FluidSynth sound driver
 games-fps/doomsday:fmod - Enable support for fmod music and sound effects lib
 games-fps/doomsday:freedoom - Install launcher for doom1.wad from games-fps/freedoom
 games-fps/doomsday:tools - Build additional tools such as doomsday-shell, md2tool and texc
-games-fps/duke3d-data:gog - Extract the data from the GOG.com installer.
-games-fps/eduke32:demo - Install the Duke Nukem 3D demo files, provided by games-fps/duke3d-demodata.
+games-fps/duke3d-data:demo - Extract data files from the shareware version.
+games-fps/duke3d-data:gog - Extract data files from the GOG.com version.
+games-fps/eduke32:duke3d - Install the Duke Nukem 3D data files, provided by games-fps/duke3d-data.
 games-fps/eduke32:fluidsynth - Install media-libs/sdl2-mixer with fluidsynth support.
 games-fps/eduke32:hrp - Install the Duke Nukem 3D High Resolution Pack.
 games-fps/eduke32:offensive - Install the Duke Nukem 3D XXX Pack.
@@ -4120,6 +4120,7 @@ media-libs/ganv:fdgl - Use experimental force-directed graph layout
 media-libs/gd:webp - Enable support for the webp format
 media-libs/gegl:lensfun - Enable support for media-libs/lensfun.
 media-libs/gegl:umfpack - Enable sparse solving via sci-libs/umfpack.
+media-libs/gmmlib:custom-cflags - Do not override user CFLAGS like -march, -msse and similar with lib defaults. Not tested by upstream.
 media-libs/gmtk:dconf - Enable support for gnome-base/dconf
 media-libs/grilo:network - Enable network access for media discovery using net-libs/libsoup
 media-libs/grilo:playlist - Enable support for playlists through dev-libs/totem-pl-parser
@@ -6281,7 +6282,6 @@ net-misc/cgminer:minion - Enable support for mining with BlackArrow Bitfury
 net-misc/cgminer:modminer - Enable support for mining with ModMiner FPGAs
 net-misc/cgminer:sp10 - Enable support for Spondoolies SP10
 net-misc/cgminer:sp30 - Enable support for Spondoolies SP30
-net-misc/chrome-remote-desktop:xrandr - Enable support for the XRandR extension for dynamic desktop resizing
 net-misc/chrony:cmdmon - Support for command and monitoring
 net-misc/chrony:html - Install HTML documentation
 net-misc/chrony:nettle - Use dev-libs/nettle for hash functions
@@ -8209,6 +8209,7 @@ sys-firmware/sigrok-firmware-fx2lafw:binary - Use official upstream pre-built bi
 sys-firmware/vgabios:binary - Use official upstream pre-built binaries (only default and cirrus images)
 sys-fs/android-file-transfer-linux:fuse - Add FUSE mount helper
 sys-fs/android-file-transfer-linux:zune - Enable support for Microsoft Zune
+sys-fs/avfs:webdav - Allow mounting WebDAV shares via net-libs/neon
 sys-fs/bees:tools - Build extra tools useful for debugging (fiemap, fiewalk)
 sys-fs/btrfs-progs:convert - Build ext2 conversion utility (btrfs-convert)
 sys-fs/btrfs-progs:reiserfs - Enable reiserfs support in btrfs-convert tool.
@@ -8739,6 +8740,8 @@ x11-libs/libva:drm - Enables VA/DRM API support.
 x11-libs/libva:utils - Install VA-API utility programs.
 x11-libs/libva-compat:drm - Enables VA/DRM API support.
 x11-libs/libva-compat:egl - Enables EGL support.
+x11-libs/libva-intel-media-driver:custom-cflags - Do not override user CFLAGS like -02, -march, -msse and similar with lib defaults. Not tested by upstream.
+x11-libs/libva-intel-media-driver:set-as-default - Override libva automatic driver selection and set this (iHD) driver as default one.
 x11-libs/libwnck:tools - Install wnckprop-3 and wnck-urgency-monitor-3 command-line tools
 x11-libs/libxcb:xkb - Enable the XCB keyboard extension
 x11-libs/motif:motif22-compatibility - Compatibility with Open Motif 2.2
