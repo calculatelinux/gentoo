@@ -1,6 +1,13 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Sam James <sam@gentoo.org> (2021-01-14)
+# Needs libsdl2[vulkan]
+# Vulkan may be supported on x86, as per
+# Qt unmasking below, but not able to test
+# libsdl2 + Vulkan on x86 at the moment.
+games-strategy/warzone2100 vulkan
+
 # Michał Górny <mgorny@gentoo.org> (2020-12-21)
 # Sanitizers supported on this architecture.
 sys-libs/compiler-rt-sanitizers -asan -lsan
@@ -12,11 +19,6 @@ sys-libs/compiler-rt-sanitizers -profile
 # dev-qt/linguist-tools-5.15.0 and 5.15.1 OOM with bad_alloc.
 # https://bugs.gentoo.org/751418
 >=sci-astronomy/stellarium-0.20.3 nls
-
-# Thomas Deutschmann <whissi@gentoo.org> (2020-10-07)
-# <app-admin/salt-3000 is Python 3.6 but last Python 3.6
-# compatible dev-python/libvirt-python version was removed
-<app-admin/salt-3000 libvirt
 
 # Sam James <sam@gentoo.org> (2020-10-05)
 # Guile only supports JIT on some arches
