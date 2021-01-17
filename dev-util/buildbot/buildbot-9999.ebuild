@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="7"
@@ -31,9 +31,8 @@ RDEPEND="
 	>=dev-python/jinja-2.1[${PYTHON_USEDEP}]
 	>=dev-python/twisted-17.9.0[${PYTHON_USEDEP},crypt?]
 	>=dev-python/autobahn-0.16.0[${PYTHON_USEDEP}]
-	>=dev-python/sqlalchemy-0.8[${PYTHON_USEDEP}]
-	>=dev-python/sqlalchemy-migrate-0.9[${PYTHON_USEDEP}]
-	dev-python/future[${PYTHON_USEDEP}]
+	>=dev-python/sqlalchemy-1.2.0[${PYTHON_USEDEP}]
+	>=dev-python/sqlalchemy-migrate-0.13[${PYTHON_USEDEP}]
 	>=dev-python/python-dateutil-1.5[${PYTHON_USEDEP}]
 	>=dev-python/txaio-2.2.2[${PYTHON_USEDEP}]
 	dev-python/pyjwt[${PYTHON_USEDEP}]

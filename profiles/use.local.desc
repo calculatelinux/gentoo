@@ -701,7 +701,6 @@ app-emulation/xen-tools:api - Build the C libxenapi bindings
 app-emulation/xen-tools:flask - Enable the Flask XSM module from NSA
 app-emulation/xen-tools:hvm - Enable support for hardware based virtualization (VT-x,AMD-v)
 app-emulation/xen-tools:ipxe - Enable ipxe support
-app-emulation/xen-tools:ocaml - Enable support for the ocaml language
 app-emulation/xen-tools:ovmf - Enable support to boot UEFI guest vm, needed by hvm
 app-emulation/xen-tools:pygrub - Install the pygrub boot loader
 app-emulation/xen-tools:qemu - Enable IOEMU support via the use of qemu-dm
@@ -7193,7 +7192,6 @@ sci-libs/armadillo:tbb - Use matrix allocation from the Threads Building Blocks 
 sci-libs/arprec:qd - Use sci-libs/qd for quad-double datatype
 sci-libs/atlas:generic - Build atlas assuming a fairly generic architecture (sse2 for x86, core2 for amd64)
 sci-libs/avogadrolibs:archive - Enable archive support using app-arch/libarchive
-sci-libs/avogadrolibs:static-plugins - Build all plugins statically into main plugin modules
 sci-libs/avogadrolibs:vtk - Enable sci-libs/vtk support
 sci-libs/blis:64bit-index - Enable 64bit array indexing, incompatible with runtime switching
 sci-libs/blis:eselect-ldso - Enable runtime library switching by eselect and ld.so.
@@ -7282,7 +7280,6 @@ sci-libs/gsl:cblas-external - Link gsl with external cblas provided by (virtual/
 sci-libs/gsl:deprecated - Enable deprecated functions
 sci-libs/hdf5:hl - Enable high level API (https://support.hdfgroup.org/HDF5/doc/HL/index.html)
 sci-libs/hdf5:unsupported - Enable unsupported combinations of configuration options
-sci-libs/hypre:fei - Build the internal Finite Element Interface routines
 sci-libs/hypre:int64 - Build the 64 bits integer library
 sci-libs/indilib:websocket - Enable support for WebSocket protocol
 sci-libs/ipopt:hsl - hsl
@@ -8948,6 +8945,7 @@ x11-wm/e16:dialogs - Enable support for configuration dialogs
 x11-wm/e16:libhack - Build libhack window mode helper library
 x11-wm/e16:modules - Enable support for loadable modules
 x11-wm/e16:pango - Enable pango font rendering using x11-libs/pango
+x11-wm/e16:player - Enable audio using aplay from media-sound/alsa-utils
 x11-wm/e16:themes - Install the official E16 themes using x11-themes/e16-themes
 x11-wm/e16:xi2 - Enable the experimental multipointer input XInput2. This incldues the MultiPointer X feature
 x11-wm/e16:xpresent - Enable support for the X Present extension via x11-libs/libXpresent

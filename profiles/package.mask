@@ -32,6 +32,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Jonas Stein <jstein@gentoo.org> (2021-01-17)
+# Removal in 30 days.  
+# Fails to compile Bug #765697.
+x11-misc/rss-glx
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2021-01-11)
 # KF5 PortingAid (from kdelibs4) without any remaining revdeps. Bug #755956
 # Masked for removal in 30 days.
@@ -469,6 +474,7 @@ kde-apps/kdebase-meta:5
 # port them to Python 3.
 # Removal in 30 days.  Please find relevant bugs on tracker bug #694800.
 games-strategy/0ad
+~games-strategy/0ad-data-0.0.24_alpha_pre20210116040036
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (2020-09-01)
 # Mismatched version (bug #695022). Masked to force upgrade to 2.0.4_pre20200306162733.
