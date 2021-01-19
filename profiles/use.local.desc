@@ -515,10 +515,6 @@ app-emulation/libguestfs:fuse - Enable image mount support via fuse
 app-emulation/libguestfs:inspect-icons - Use media-gfx/icoutils for acces icon file in image and inspect it
 app-emulation/libguestfs:libvirt - Use app-emulation/libvirt to manipulate VMs
 app-emulation/libguestfs:systemtap - Use dev-util/systemtap to inspect VM via "probes" way
-app-emulation/libpod:apparmor - Enable AppArmor support.
-app-emulation/libpod:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
-app-emulation/libpod:fuse - Enables fuse dependencies (fuse-overlayfs is especially useful for rootless mode).
-app-emulation/libpod:rootless - Enables dependencies for running in rootless mode.
 app-emulation/libspectrum:gcrypt - Use dev-libs/libgcrypt for low-level crypto of some features, including logfiles.
 app-emulation/libvirt:apparmor - Enable AppArmor support
 app-emulation/libvirt:dtrace - Enable dtrace support via dev-util/systemtap
@@ -563,6 +559,10 @@ app-emulation/open-vm-tools:multimon - Enable multimon (Requires X)
 app-emulation/open-vm-tools:resolutionkms - Build the linux/unix resolutionkms module
 app-emulation/open-vm-tools:vgauth - Build vgauth
 app-emulation/pcem:networking - Enable support for emulation of network cards.
+app-emulation/podman:apparmor - Enable AppArmor support.
+app-emulation/podman:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
+app-emulation/podman:fuse - Enables fuse dependencies (fuse-overlayfs is especially useful for rootless mode).
+app-emulation/podman:rootless - Enables dependencies for running in rootless mode.
 app-emulation/punes:cg - Add support for Nvidia CG Toolkit
 app-emulation/q4wine:ico - Enable ico support via media-gfx/icoutils
 app-emulation/q4wine:iso - Support unprivileged mounting of ISO9660 images via sys-fs/fuseiso
@@ -1244,7 +1244,6 @@ dev-cpp/libjson-rpc-cpp:redis-client - Build support for Redis client using dev-
 dev-cpp/libjson-rpc-cpp:redis-server - Build support for Redis server using dev-libs/hiredis
 dev-cpp/libjson-rpc-cpp:stubgen - Build header stub code generator (needed for development and when pregenerated headers are not bundled)
 dev-cpp/sourcetrail:examples - Install example projects.
-dev-db/aerospike-server-community:tools - Install extra tools
 dev-db/etcd:server - Installs etcd daemon
 dev-db/firebird:server - Install the server components of Firebird, not just the client
 dev-db/firebird:xinetd - Install ClassicServer
@@ -1277,7 +1276,6 @@ dev-db/mariadb:test - Install upstream testsuites for end use.
 dev-db/mariadb:tokudb - Add support for TokuDB storage engine
 dev-db/mariadb:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
 dev-db/mongodb:lto - Adds support for link time optimization
-dev-db/mongodb:mms-agent - Install the MongoDB Monitoring Service agent
 dev-db/mongodb:tools - Install the MongoDB tools (mongoimport, mongodump...) from app-admin/mongo-tools
 dev-db/mycli:ssh - Add support for connection over SSH tunnel
 dev-db/mysql:cjk - Add CJK support for InnoDB fulltext search using app-text/mecab
@@ -1471,6 +1469,8 @@ dev-haskell/cabal-install:native-dns - Enable use of the resolv and windns packa
 dev-haskell/chaselev-deque:debug - Enable the extra internal checks.
 dev-haskell/chell:color-output - use colors in program output
 dev-haskell/chimera:representable - Define Representable instance from adjunctions package
+dev-haskell/citeproc:executable - Build citeproc executable
+dev-haskell/citeproc:icu - Use Haskell bindings to the ICU library
 dev-haskell/cmark:system-cmark - use app-text/cmark instead of bundled copy
 dev-haskell/cmdargs:quotation - Build quote module
 dev-haskell/cmdargs:testprog - Build the test program
@@ -1514,6 +1514,7 @@ dev-haskell/hlint:gpl - Use GPL libraries, specifically hscolour.
 dev-haskell/hps:build-exec - Build the `hps-fractals' executable
 dev-haskell/hs3:network-uri - Get Network.URI from the network-uri package
 dev-haskell/hslogger:network-3 - Use network-3
+dev-haskell/hslua:hardcode-reg-keys - Don't use CAPI to determine the names of certain registry key names but Use hard coded values for instead. This flag is required when compiling against Lua 5.3.3 or earlier, as those do not expose the necessary information in the @lauxlib.h@ header file.
 dev-haskell/hsopenssl:fast-bignum - Enable fast moving of bignums between OpenSSL and GMP (GHC Only)
 dev-haskell/http:conduit10 - Use version 1.0.x or below of the conduit package (for the test suite).
 dev-haskell/http:network-uri - Get Network.URI from the network-uri package.
@@ -2241,7 +2242,6 @@ dev-libs/totem-pl-parser:crypt - Support AmazonAMZ decoding with dev-libs/libgcr
 dev-libs/totem-pl-parser:quvi - Use media-libs/libquvi for parsing video links
 dev-libs/tvision:gpm - Support text mode mouse through sys-libs/gpm
 dev-libs/userspace-rcu:regression-test - Run regression tests (requires FEATURES=test)
-dev-libs/ustr:ustr-import - Install ustr-import developer program and source code for bundling.
 dev-libs/weston:desktop - Enable the desktop shell
 dev-libs/weston:drm - Enable drm compositor support
 dev-libs/weston:editor - Install wayland-editor example application
@@ -4491,8 +4491,11 @@ media-sound/audiotools:dvda - Enable DVD-Audio support
 media-sound/audiotools:twolame - Enable twolame support (MPEG Audio Layer 2 encoder)
 media-sound/beets:badfiles - Validate MP3 & FLAC files
 media-sound/beets:chromaprint - Enable support for acoustic fingerprinting plugin using media-libs/chromaprint
+media-sound/beets:cors - Enable cors support for the webserver dev-python/flask-cors
 media-sound/beets:discogs - Enable support for the discogs API plugin
 media-sound/beets:ffmpeg - Enable support for the convert plugin to transcode files via media-video/ffmpeg
+media-sound/beets:gstreamer - Enable support for the gstreamer backend
+media-sound/beets:icu - Enable support for the icu plugin to support non-ASCII characters in dev-db/sqlite
 media-sound/beets:lastfm - Enable support for importing personal last.fm playcounts and music genres from last.fm tags
 media-sound/beets:mpd - Enable support for media-sound/mpd server emulation and statistic gathered from media-sound/mpd
 media-sound/beets:replaygain - Enable support for Replay Gain metadata calculation during import
@@ -7417,8 +7420,6 @@ sci-libs/vtk:tbb - Use dev-cpp/tbb to handle smp support
 sci-libs/vtk:views - Building Views modules
 sci-libs/vtk:web - Install web component
 sci-libs/vtk:xdmf2 - Support for xdmf2 formatted data
-sci-libs/xkaapi:blas - Kaapi BLAS tasks for PLASMA
-sci-libs/xkaapi:gpu - Build library for gpu threading
 sci-mathematics/agda:cpphs - Use cpphs instead of cpp.
 sci-mathematics/agda:debug - Enable debugging features that may slow Agda down.
 sci-mathematics/agda:enable-cluster-counting - Enable the --count-clusters flag. (If enable-cluster-counting is False, then the --count-clusters flag triggers an error message.)
@@ -7710,6 +7711,7 @@ sys-apps/fwupd:tpm - Install Trusted Platform Module plugin
 sys-apps/fwupd:uefi - Enable UEFI support
 sys-apps/gawk:mpfr - use mpfr for high precision arithmetic (-M / --bignum)
 sys-apps/gnome-disk-utility:fat - Include FAT16/FAT32 support (sys-fs/dosfstools)
+sys-apps/groff:uchardet - Enable automatic encoding detection via app-i18n/uchardet
 sys-apps/hwids:net - Install the oui.txt and iab.txt databases
 sys-apps/hwids:pci - Install the pci.ids database
 sys-apps/hwids:udev - Install hwdb.d rules for udev

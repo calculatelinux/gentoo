@@ -32,8 +32,34 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2021-01-19)
+# Fails to build.  Last release in 2000.
+# Removal on 2021-02-18.  Bug #722204.
+media-sound/mp3_check
+
+# Michał Górny <mgorny@gentoo.org> (2021-01-19)
+# Does not build against vdr-2.4.  Last release in 2009.  Upstream
+# repository is gone.
+# Removal on 2021-02-18.  Bug #710814.
+media-plugins/vdr-atscepg
+
+# Michał Górny <mgorny@gentoo.org> (2021-01-19)
+# Discontinued.  Last release in 2017.  The code is broken with py3.7
+# and we're doing only the minimal patching to make it not explode
+# immediately.  No revdeps left.
+# Removal on 2021-02-18.  Bug #718688.
+dev-python/pdfrw
+
+# Sam James <sam@gentoo.org> (2021-01-18)
+# Older versions: need Python 2
+# Newer versions: ported to Python 3, but need
+# testing on real hardware.
+# bug #735352
+games-strategy/0ad
+~games-strategy/0ad-data-0.0.24_alpha_pre20210116040036
+
 # Jonas Stein <jstein@gentoo.org> (2021-01-17)
-# Removal in 30 days.  
+# Removal in 30 days.
 # Fails to compile Bug #765697.
 x11-misc/rss-glx
 
@@ -66,9 +92,9 @@ virtual/httpd-php:7.2
 =dev-php/PHP_TokenStream-1.4.11-r1
 
 # Joonas Niilola <juippis@gentoo.org> (2020-01-07)
-# Eterm's development stopped 2014 and upstream brought to life 
-# its successor, terminology. Eterm is unmaintained in Gentoo with 
-# multiple bugs open for a long time. Switch to any available 
+# Eterm's development stopped 2014 and upstream brought to life
+# its successor, terminology. Eterm is unmaintained in Gentoo with
+# multiple bugs open for a long time. Switch to any available
 # alternative, https://packages.gentoo.org/categories/x11-terms
 # For Esetroot replacement, use feh from media-gfx/feh or wmsetbg
 # from x11-wm/windowmaker.
@@ -76,8 +102,8 @@ virtual/httpd-php:7.2
 x11-terms/eterm
 
 # Joonas Niilola <juippis@gentoo.org> (2020-01-07)
-# Doesn't compile, no maintainer, EAPI-5. Last version bump 3 years 
-# ago. Use any of the available alternatives, 
+# Doesn't compile, no maintainer, EAPI-5. Last version bump 3 years
+# ago. Use any of the available alternatives,
 # https://packages.gentoo.org/categories/x11-terms
 # Removal in ~30 days. Bug: #764353
 x11-terms/pangoterm
@@ -222,36 +248,17 @@ media-gfx/wkhtmltopdf
 app-doc/clsync-docs
 dev-libs/libclsync
 
-# Michał Górny <mgorny@gentoo.org> (2020-12-22)
-# Renamed version of dev-python/pycryptodome.  The ebuild is missing
-# fixes from the original.  Maintaining and installing two copies
-# of the same thing makes little sense, so we're forcing the former
-# everywhere.
-# Removal in 14 days.
-dev-python/pycryptodomex
-
 # Eray Aslan <eras@gentoo.org> (2020-12-21)
 # Vulnerable. upgrade to >= 2.3.11.3. Masked until
 # mail-filter/dovecot_deleted_to_trash is treecleaned
 # to prevent breaking the tree (bug #756217)
 =net-mail/dovecot-2.2.36.4
 
-# Michał Górny <mgorny@gentoo.org> (2020-12-20)
-# Requires old dev-python/unidecode.  Last commit in 2017.  No revdeps.
-# Suggested replacement: dev-python/python-slugify.
-# Removal in 30 days.  Bug #714718.
-dev-python/awesome-slugify
-
 # Sergei Trofimovich <slyfox@gentoo.org> (2020-12-20)
 # Needs a port to haskell-src-exts compatible with ghc-8.8.
 # https://github.com/ndmitchell/derive/pull/37
 dev-haskell/derive
 app-forensics/quickfuzz
-
-# Michał Górny <mgorny@gentoo.org> (2020-12-19)
-# Made redundant by compiler-rt's crt implementation.  No revdeps left.
-# Removal in 30 days.  Bug #760711.
-sys-libs/netbsd-csu
 
 # Mike Pagano <mpagano@gentoo.org> (2020-12-18)
 # Serious data corruption bug when using F2FS,
@@ -261,90 +268,6 @@ sys-libs/netbsd-csu
 =sys-kernel/gentoo-sources-5.10.1
 =sys-kernel/vanilla-sources-5.10.1
 =sys-kernel/vanilla-sources-5.10.0
-
-# Michał Górny <mgorny@gentoo.org> (2020-12-18)
-# Unmaintained.  Last bumped in 2008.  Last upstream (beta) in 2014.
-# The current Gentoo version fails to install.
-# Removal in 30 days.  Bug #701044.
-net-mail/vacation
-
-# Michał Górny <mgorny@gentoo.org> (2020-12-18)
-# Unmaintained.  Homepage gone.  Last bumped in 2008.  Carries multiple
-# patches.  Fails to build again.
-# Removal in 30 days.  Bug #675364.
-net-ftp/tlswrap
-
-# Michał Górny <mgorny@gentoo.org> (2020-12-18)
-# Upstream gone.  Last bumped in 2007.  Fails to build, again.
-# Removal in 30 days.  Bug #648964.
-app-text/ots
-
-# Michał Górny <mgorny@gentoo.org> (2020-12-18)
-# Unmaintained.  The current Gentoo version fails to build, it needs
-# a version bump.
-# Removal in 30 days.  Bug #669452.
-net-misc/dhcpd-pools
-
-# Michał Górny <mgorny@gentoo.org> (2020-12-18)
-# Unmaintained.  Last bumped in 2018.  Vulnerable.  No revdeps.
-# Removal in 30 days.  Bug #736050.
-dev-db/aerospike-server-community
-
-# Michał Górny <mgorny@gentoo.org> (2020-12-18)
-# Abandoned upstream, circa 2013.  Vulnerable.  No revdeps.
-# Removal in 30 days.  Bug #744217.
-app-text/peg-markdown
-
-# Michał Górny <mgorny@gentoo.org> (2020-12-18)
-# Abandoned in 2008.  No reverse dependencies left.
-# Removal in 30 days.  Bug #652192.
-dev-libs/ustr
-
-# Jack Todaro <solpeth@posteo.org> (2020-12-17)
-# Old and redundant package. Has not been kept
-# up to date and no longer works. Masked for removal.
-sci-mathematics/agda-lib-ffi
-
-# Eray Aslan <eras@gentoo.org> (2020-12-14)
-# Dead. Last release in 2014. Only works with vulnerable dovecot version.
-# Recent Outlook versions should have this functionality built in.  Switch to a
-# better mail client if you are still using this package. Removal in 30 days.
-# Bug #756217
-mail-filter/dovecot_deleted_to_trash
-
-# Michał Górny <mgorny@gentoo.org> (2020-12-13)
-# Dead.  Last commit in 2014.  Does not work with modern versions
-# of Sphinx.  No revdeps.  Alternative: dev-python/sphinx-issues.
-# Removal in 30 days.  Bug #720066.
-dev-python/sphinxcontrib-issuetracker
-
-# David Seifert <soap@gentoo.org> (2020-12-11)
-# Last MIT release in 2007, declared EOL by Intel in 2017.
-# Build and test failures, abandoned parallelism paradigm,
-# no revdeps. If you're really still using this, switch to
-# OpenMP. Bug #572130, #643590, Removal in 30 days.
-dev-lang/cilk
-
-# Aisha Tammy <gentoo@aisha.cc> (2020-12-11)
-# last update upstream in 2017, does not build.
-# OpenMP is a better alternative.
-# Bug #717692, #741594
-# Removal in 30 days.
-sci-libs/xkaapi
-
-# Michał Górny <mgorny@gentoo.org> (2020-12-10)
-# Synergy 2.0 was a beta branch, and it should have never been marked
-# stable.  It never reached feature parity with 1.x, and upstream
-# eventually abandoned it.  The users are asked to 'downgrade' to 1.x
-# that is actively maintained.  The buggy 2.0.0 version will be removed
-# in 30 days.
->=x11-misc/synergy-2
-
-# Michał Górny <mgorny@gentoo.org> (2020-12-10)
-# Stuck on LLVM 9.  Superseded by dev-util/cvise that features better
-# parallelization and more acive development.
-# Removal in 30 days.  Bug #735762.
-dev-util/creduce
 
 # Lars Wendler <polynomial-c@gentoo.org> (2020-12-09)
 # Masked until most broken packages have been fixed (bug #732648)
@@ -465,16 +388,6 @@ kde-apps/kdebase-meta:5
 =dev-python/pypy3-7.3.3_p37*
 =dev-python/pypy3-exe-7.3.3_p37*
 =dev-python/pypy3-exe-bin-7.3.3_p37*
-
-# Michał Górny <mgorny@gentoo.org> (2020-09-09)
-# These packages (or package versions) still require Python 2.7.
-# They are either dead upstream, their Python 3 porting efforts are
-# not progressing or their maintainers are simply unresponsive.
-# Please do not remove any packages from this list unless you actually
-# port them to Python 3.
-# Removal in 30 days.  Please find relevant bugs on tracker bug #694800.
-games-strategy/0ad
-~games-strategy/0ad-data-0.0.24_alpha_pre20210116040036
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (2020-09-01)
 # Mismatched version (bug #695022). Masked to force upgrade to 2.0.4_pre20200306162733.

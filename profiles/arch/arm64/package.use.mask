@@ -1,6 +1,13 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Sam James <sam@gentoo.org> (2021-01-19)
+# Joonas Niilola <juippis@gentoo.org> (2021-01-10)
+# Test-dep needs keywording on multiple arches, best to just mask it
+# globally for now. Resolves issue by b5248bbb1b5
+# bug #766147
+app-text/enchant test
+
 # Sam James <sam@gentoo.org> (2020-01-17)
 # gnuefi + systemd-boot works on arm64
 # bug #729720
@@ -26,8 +33,8 @@ net-proxy/haproxy device-atlas
 media-sound/clementine lastfm
 
 # Roy Bamford <neddyseagoon@gentoo.org< (2020-12-01)
-# hfs xfs fail build and/or tests on arm64 
-# See bug #747181 
+# hfs xfs fail build and/or tests on arm64
+# See bug #747181
 sys-block/gparted xfs
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-11-08)
@@ -124,6 +131,10 @@ sys-libs/glibc -static-pie
 # Not keyworded on arm64
 net-misc/whois xcrypt
 
+# Patrick McLean <chutzpah@gentoo.org> (2019-03-26)
+# Some test deps aren't keyworded on arm64
+dev-python/kazoo test
+
 # Ettore Di Giacinto <mudler@gentoo.org> (2016-11-10)
 # Dependency has no stable keyword
 # and as for now we have only stable mate versions
@@ -137,7 +148,7 @@ net-dialup/freeradius mongodb
 # Unkeyworded dep.
 kde-apps/cantor julia
 
-# Rick Farina <zerochaos@gentoo.com> (2020-01-03)
+# Rick Farina <zerochaos@gentoo.org> (2020-01-03)
 # ubertooth needs net-libs/libbtbb and net-wireless/ubertooth which aren't keyworded
 net-wireless/kismet ubertooth
 
@@ -297,7 +308,7 @@ dev-libs/libpeas lua
 # Michał Górny <mgorny@gentoo.org> (2018-01-23)
 # USE=eds requires USE=gnome that is masked here.
 # USE=postgres requires dev-db/postgresql[kerberos] (USE masked).
-# NeddySeagoon <neddysegoon@gentoo.org> (2017-08-21)
+# Roy Bamford <neddysegoon@gentoo.org> (2017-08-21)
 # Pulls in sci-libs/coinor-mp which wants immintrin.h not on arm64
 # Markus Meier <maekke@gentoo.org> (2012-12-08)
 # mask app-office/libreoffice java extensions
@@ -315,7 +326,11 @@ media-video/mjpegtools sdlgfx
 # Those require USE=doc that is masked in this profile.
 dev-python/python-neutronclient test
 
-# NeddySeagoon <neddysegoon@gentoo.org> (2017-08-24)
+# Ian Whyman <thev00d00@gentoo.org> (2017-09-05)
+# missing keywords media-libs/lastfmlib
+net-misc/gerbera lastfm
+
+# Roy Bamford <neddysegoon@gentoo.org> (2017-08-24)
 # Support for g15daemon still needs -9999 packages on all arches
 media-sound/mumble g15
 
@@ -441,7 +456,3 @@ dev-libs/gobject-introspection -doctool
 
 # missing keywords
 media-plugins/gst-plugins-meta aac dts dv lame libvisual taglib vcd wavpack
-
-# Ian Whyman <thev00d00@gentoo.org> (2017-09-05)
-# missing keywords media-libs/lastfmlib
-net-misc/gerbera lastfm
