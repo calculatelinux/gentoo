@@ -5489,6 +5489,7 @@ net-dns/dnsmasq:dnssec - Enable support DNSSEC validation and caching.
 net-dns/dnsmasq:dumpfile - Include code to dump packets to a libpcap-format file for debugging
 net-dns/dnsmasq:id - Whether report *.bind CHAOS info to clients, otherwise forward such requests upstream instead
 net-dns/dnsmasq:libidn2 - Enable support for Internationalized Domain Names, via net-dns/libidn2 rather than net-dns/libidn
+net-dns/dnsmasq:nettlehash - Use hashing functions from dev-libs/nettle
 net-dns/dnsmasq:script - Enable support for calling scripts when leases change.
 net-dns/dnsmasq:tftp - Enables built in TFTP server for netbooting.
 net-dns/dnssec-validator:dlv - Enable support for the DNSSEC look-aside validation
@@ -7455,7 +7456,6 @@ sci-mathematics/maxima:cmucl - Compile maxima with CMU Common Lisp (dev-lisp/cmu
 sci-mathematics/maxima:ecls - Compile maxima with Embeddable Common Lisp (dev-lisp/ecls)
 sci-mathematics/maxima:gcl - Compile maxima with GNU Common Lisp (dev-lisp/gcl)
 sci-mathematics/maxima:sbcl - Compile maxima with Steel Bank Common Lisp (dev-lisp/sbcl)
-sci-mathematics/minisat:extended-solver - Build extended version of SAT solver with additional features.
 sci-mathematics/msieve:ecm - Enable support for the GMP-ECM library
 sci-mathematics/normaliz:extras - Install Macaulay2 and sci-mathematics/singularpackages as shipped by upstream
 sci-mathematics/octave:glpk - Add support for sci-mathematics/glpk for linear programming
@@ -7504,9 +7504,7 @@ sci-misc/nco:udunits - Add sci-libs/udunits files support
 sci-misc/tango:dbserver - Enable build of tango dbserver
 sci-misc/tango:mariadb - Use dev-db/mariadb
 sci-misc/tango:zeromq - Allow to use ZeroMQ broker via net-libs/zeromq
-sci-physics/bullet:bullet3 - Build Bullet 3
 sci-physics/bullet:double-precision - Build libraries in double precision
-sci-physics/bullet:extras - Build additional libraries
 sci-physics/bullet:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
 sci-physics/cernlib-montecarlo:herwig - Build Herwig internal event generator, newer version available in sci-physics/herwig
 sci-physics/espresso:cuda - Enable cuda support
@@ -8785,6 +8783,7 @@ x11-misc/grsync:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 x11-misc/gtkdialog:glade - Enable support for gnome-base/libglade
 x11-misc/gtkdialog:gtk2 - Build with GTK+2 instead of GTK+3
 x11-misc/gtkdialog:vte - Enable support for x11-libs/vte
+x11-misc/i3blocks:contrib - Install contrib modules
 x11-misc/i3status:filecaps - Linux capabilities library is required for i3status to be able to read net bandwith
 x11-misc/j4-dmenu-desktop:dmenu - Use x11-misc/dmenu as default. Disable to use a different implementation.
 x11-misc/ktsuss:sudo - Use the sudo backend instead the su one
@@ -8996,10 +8995,6 @@ x11-wm/xpra:brotli - Enable brotli compression support
 x11-wm/xpra:client - Build client-side code
 x11-wm/xpra:clipboard - Enable clipboard support
 x11-wm/xpra:csc - Enable csc softscaler support
-x11-wm/xpra:dec_avcodec2 - Enable avcodec2 decoder support
-x11-wm/xpra:enc_ffmpeg - Enable advanced ffmpeg/libav encoder support
-x11-wm/xpra:enc_x264 - Enable x264 encoder support
-x11-wm/xpra:enc_x265 - Enable x265 encoder support
 x11-wm/xpra:pillow - Enable pillow support
 x11-wm/xpra:server - Build server-side code
 x11-wm/xpra:vpx - Enable vpx image format support
