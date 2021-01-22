@@ -2143,7 +2143,6 @@ dev-libs/libsecp256k1:ecdh - Enable ECDH shared secret computation
 dev-libs/libsecp256k1:endomorphism - Enable endomorphism
 dev-libs/libsecp256k1:experimental - Allow experimental USE flags
 dev-libs/libsecp256k1:recovery - Enable ECDSA pubkey recovery module
-dev-libs/libsecp256k1:schnorr - Enable Schnorr signature module
 dev-libs/libsecp256k1:test-openssl - Enable OpenSSL comparison tests
 dev-libs/libslz:tools - Install additional tools (zenc, zdec)
 dev-libs/libsodium:asm - Enables assembly implementations
@@ -2310,6 +2309,9 @@ dev-ml/ocaml-cstruct:async - Support for asynchronous execution
 dev-ml/ocaml-cstruct:lwt - Enable threads via lwt
 dev-ml/ocaml-cstruct:ppx - Enable the ppx syntax extension
 dev-ml/ocaml-fileutils:ocamlopt - Whether the OCaml native code compiler is used. Must be set globally and match dev-lang/ocaml.
+dev-ml/ocaml-gettext:ocamlopt - Whether the OCaml native code compiler is used. Must be set globally and match dev-lang/ocaml.
+dev-ml/ocaml-gettext-camomile:ocamlopt - Whether the OCaml native code compiler is used. Must be set globally and match dev-lang/ocaml.
+dev-ml/ocaml-gettext-stub:ocamlopt - Whether the OCaml native code compiler is used. Must be set globally and match dev-lang/ocaml.
 dev-ml/ocamlnet:httpd - Enables net-httpd web server component
 dev-ml/ocamlnet:zip - Enables netzip support to read/write gzip data using object channels
 dev-ml/pgocaml:camlp4 - Enable PG'Ocaml syntax extension.
@@ -6183,7 +6185,9 @@ net-misc/aria2:metalink - Enable support for metalink.
 net-misc/aria2:nettle - Use dev-libs/nettle for message digests, plus dev-libs/gmp for bittorrent (if enabled). If this flag is disabled, dev-libs/libgcrypt is used instead. This flag is ignored if dev-libs/openssl is used.
 net-misc/aria2:scripts - Install additional scripts which use aria2's xmlrpc functionality.
 net-misc/aria2:ssh - Enable SFTP support.
+net-misc/asterisk:blocks - Utlize -fblocks (only supported by, and required when using, clang/LLVM)
 net-misc/asterisk:cluster - Enable high-availability support through the Corosync Cluster Engine
+net-misc/asterisk:codec2 - Enable Codec2 support in asterisk
 net-misc/asterisk:dahdi - Support Digium compatible hardware (formerly known as Zaptel).
 net-misc/asterisk:gtalk - Enable support for Google Talk services
 net-misc/asterisk:http - Enable embedded web server
@@ -6646,6 +6650,13 @@ net-misc/youtube-viewer:gtk - Install the gtk3 GUI
 net-misc/youtube-viewer:gtk2 - Use the old gtk2 GUI instead of the gtk3 one
 net-misc/zerotier:clang - Use Clang compiler instead of GCC
 net-misc/zerotier:neon - Enable ARM32 neon-salsa2012-asm code
+net-nds/389-ds-base:accountpolicy - Enable account policy plugin - automatically lock an account after a certain amount of time has elapsed
+net-nds/389-ds-base:auto-dn-suffix - Enable auto bind with auto dn suffix over unix domain socket (LDAPI) support
+net-nds/389-ds-base:autobind - Enable auto bind over unix domain socket (LDAPI) support
+net-nds/389-ds-base:bitwise - Enable bitwise plugin - supported data in raw/bitwise format
+net-nds/389-ds-base:dna - Enable dna (distributed numeric assignment ) plugin - to automatically assign unique uid numbers to new user entries as they are created.
+net-nds/389-ds-base:ldapi - Enable LDAP over unix domain socket (LDAPI) support
+net-nds/389-ds-base:pam-passthru - Enable pam-passthru plugin - for simple and fast system services used in ldap
 net-nds/ldapvi:gnutls - Use net-libs/gnutls instead of dev-libs/openssl
 net-nds/nsscache:nsscache - Depend on sys-auth/libnss-cache to handle flat files
 net-nds/nsscache:s3 - Support for S3-based NSS sources
@@ -6680,9 +6691,7 @@ net-p2p/amule:remote - Enable remote controlling of the client
 net-p2p/amule:stats - Enable statistic reporting
 net-p2p/bitcoin-cli:knots - Build enhanced Bitcoin Knots version, rather than Bitcoin Core
 net-p2p/bitcoin-qt:asm - Enable assembly for optimization
-net-p2p/bitcoin-qt:bip70 - Enable support for the BIP70 payment protocol
 net-p2p/bitcoin-qt:knots - Build enhanced Bitcoin Knots version, rather than Bitcoin Core
-net-p2p/bitcoin-qt:libevent - Use dev-libs/libevent (needed for JSON-RPC, REST, and Tor auto-configuration
 net-p2p/bitcoin-qt:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/bitcoin-qt:system-leveldb - Use the system-wide dev-libs/leveldb instead of bundled
 net-p2p/bitcoin-qt:upnp - Enable Universal Plug and Play

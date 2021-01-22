@@ -32,6 +32,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Conrad Kostecki <conikost@gentoo.org> (2020-01-21)
+# All kernels >= 4.17 removed IrDA drivers and support,
+# the package has also multiple bugs open and is unmaintained.
+# Removal in 30 days.
+net-wireless/irda-utils
+
+# Marek Szuba <marecki@gentoo.org> (2021-01-21)
+# Masked for testing and further work - the golang-vcs-snapshot variant
+# seems to be incompatible with revdeps using go-module, the variant
+# using the latter is still broken.
+dev-go/qt
+
 # Michał Górny <mgorny@gentoo.org> (2021-01-19)
 # Fails to build.  Last release in 2000.
 # Removal on 2021-02-18.  Bug #722204.
@@ -247,12 +259,6 @@ media-gfx/wkhtmltopdf
 <app-admin/clsync-0.4.5
 app-doc/clsync-docs
 dev-libs/libclsync
-
-# Eray Aslan <eras@gentoo.org> (2020-12-21)
-# Vulnerable. upgrade to >= 2.3.11.3. Masked until
-# mail-filter/dovecot_deleted_to_trash is treecleaned
-# to prevent breaking the tree (bug #756217)
-=net-mail/dovecot-2.2.36.4
 
 # Sergei Trofimovich <slyfox@gentoo.org> (2020-12-20)
 # Needs a port to haskell-src-exts compatible with ghc-8.8.
