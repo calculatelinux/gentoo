@@ -2083,6 +2083,7 @@ dev-libs/libevent:verbose-debug - Support for verbose debug logging
 dev-libs/libffi:pax_kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
 dev-libs/libffi-compat:pax_kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
 dev-libs/libflatarray:cuda - Enables plugins for NVIDIA GPUs (e.g. CUDAAllocator)
+dev-libs/libgcrypt:asm - Enable assembly for optimization
 dev-libs/libgcrypt:o-flag-munging - Enable O-flag mangling during build
 dev-libs/libgdata:crypt - Use app-crypt/gcr for keeping tokens and passwords in non-pageable memory for improved security
 dev-libs/libgdata:gnome-online-accounts - Enable net-libs/gnome-online-accounts support
@@ -4199,8 +4200,12 @@ media-libs/libgpod:gtk - Enable ArtworkDB support
 media-libs/libgroove:chromaprint - Enable audio fingerprinting using media-libs/chromaprint.
 media-libs/libgroove:loudness - Enable loudness detection according to the EBU R128 standard using media-libs/libebur128.
 media-libs/libgroove:sound - Enable audio playing.
+media-libs/libheif:aom - Use media-libs/libaom for AVIF encoding/decoding
 media-libs/libheif:gdk-pixbuf - Enable x11-libs/gdk-pixbuf plugin
 media-libs/libheif:go - Enable building dev-lang/go code/examples
+media-libs/libheif:libde265 - Use media-libs/libde265 for HEIF decoding
+media-libs/libheif:rav1e - Use media-video/rav1e for AVIF encoding
+media-libs/libheif:x265 - Use media-libs/x265 for HEIF encoding
 media-libs/liblastfm:fingerprint - Build the lastfm-fingerprint library
 media-libs/libmp4v2:utils - Install command-line utilities
 media-libs/libmypaint:gegl - Add support for media-libs/gegl
@@ -8700,7 +8705,6 @@ x11-apps/mesa-progs:egl - Build EGL utilities
 x11-apps/mesa-progs:gles2 - Build OpenGL ES 2 utilities
 x11-apps/xdpyinfo:dmx - Builds support for Distributed Multiheaded X x11-base/xorg-server
 x11-apps/xinit:twm - Control dependencies on legacy apps (xterm, twm, ...). Safe to disable if you use a modern desktop environment.
-x11-apps/xsm:rsh - This allows the use of rsh (remote shell) and rcp (remote copy).
 x11-base/xorg-server:dmx - Build the Distributed Multiheaded X server
 x11-base/xorg-server:elogind - Use elogind to get control over framebuffer when running as regular user
 x11-base/xorg-server:kdrive - Build the kdrive X servers
