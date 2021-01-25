@@ -2048,7 +2048,6 @@ dev-libs/input-pad:eekboard - Enable support for dev-libs/eekboard
 dev-libs/input-pad:xtest - Enable support for x11-libs/libXtst
 dev-libs/intel-neo:l0 - Install the oneAPI Level Zero driver alongside the OpenCL one
 dev-libs/intel-neo:vaapi - Support the sharing of surfaces with Video Acceleration API (OpenCL Extension #36)
-dev-libs/jemalloc:hugepages - Enable transparent huge page support
 dev-libs/jemalloc:lazy-lock - Enable lazy locking (only lock when multi-threaded)
 dev-libs/jemalloc:prof - Enable allocation profiling
 dev-libs/jemalloc:stats - Enable statistics calculation/reporting
@@ -3326,6 +3325,7 @@ gnome-base/nautilus:gstreamer - Enable the Audio/Video file properties page
 gnome-base/nautilus:previewer - Use gnome-extra/sushi to preview files from the file mananger
 gnome-base/nautilus:sendto - Enable the nautilus-sendto extension to send files to various locations/devices
 gnome-extra/cinnamon-control-center:modemmanager - Enable support for mobile broadband devices using net-misc/modemmanager
+gnome-extra/cjs:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 gnome-extra/eiciel:nautilus - Build gnome-base/nautilus extension
 gnome-extra/evolution-data-server:berkdb - sys-libs/db support needed to migrate old (pre-3.13 evolution versions) addressbook data
 gnome-extra/evolution-data-server:gnome-online-accounts - Enable net-libs/gnome-online-accounts based Google authentication support
@@ -3609,7 +3609,6 @@ kde-plasma/kdeplasma-addons:webengine - Enable dictionary and web browser applet
 kde-plasma/kinfocenter:pci - Show advanced PCI information
 kde-plasma/ksysguard:network - Enable per-process network statistic collection using dev-libs/libnl
 kde-plasma/ksysguard:networkmanager - Enable improved backend for Network statistics using kde-frameworks/networkmanager-qt
-kde-plasma/ksysguard:pcap - Enable per-process network statistic collection using net-libs/libpcap
 kde-plasma/kwin:multimedia - Enable effect video button in desktop effects KCM
 kde-plasma/kwin:screencast - Enable screencast portal using media-video/pipewire
 kde-plasma/libksysguard:designer - Build plugins for dev-qt/designer
@@ -3642,12 +3641,10 @@ kde-plasma/plasma-nm:teamd - Enable Teamd control support
 kde-plasma/plasma-workspace:appstream - Enable AppStream software metadata support
 kde-plasma/plasma-workspace:geolocation - Enables dataengine providing location information
 kde-plasma/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/libqalculate
-kde-plasma/plasma-workspace:qrcode - Enable support for creating QR codes from clipboard data using kde-frameworks/prison
 kde-plasma/plasma-workspace:screencast - Enable screencast portal using media-video/pipewire
 kde-plasma/plasma-workspace:telemetry - Enable User Feedback control module for kde-plasma/systemsettings
 kde-plasma/powerdevil:brightness-control - Enable screen brightness control using app-misc/ddcutil
 kde-plasma/powerdevil:wireless - Enable wireless energy saving actions via kde-frameworks/bluez-qt and kde-frameworks/networkmanager-qt
-kde-plasma/xdg-desktop-portal-kde:screencast - Enable screencast portal using media-video/pipewire
 lxde-base/lxdm:gtk3 - Use GTK+3 instead of 2
 lxde-base/lxterminal:gtk3 - Use GTK+3 instead of GTK+2
 lxqt-base/liblxqt:backlight - Enable backlight control features.
@@ -4060,7 +4057,6 @@ media-gfx/photoqt:freeimage - Support additional image formats using media-libs/
 media-gfx/pngcrush:system-libs - Use libpng and libz provided by system
 media-gfx/potrace:metric - default to a4 paper size and metric measurement
 media-gfx/povray:io-restrictions - POV-Ray's mechanism for control of I/O operations
-media-gfx/povray:mkl - Enable support for Intel Vector Math Library, part of sci-libs/mkl
 media-gfx/pqiv:archive - Enable support for images in archives and cbX comic book files
 media-gfx/pstoedit:emf - Enable media-libs/libemf support
 media-gfx/pstoedit:pptx - Enable support for generating PowerPoint pptx files
@@ -4347,7 +4343,6 @@ media-libs/sdl2-mixer:fluidsynth - Use media-sound/fluidsynth for MIDI support
 media-libs/sdl2-mixer:midi - basic support for MIDI files
 media-libs/sdl2-mixer:mod - basic support for MOD files
 media-libs/sdl2-mixer:playtools - Install playwave and playmus tools (useful for testing)
-media-libs/sdl2-mixer:smpeg - Use media-libs/smpeg for MP3 support
 media-libs/sdl2-mixer:tremor - enable OGG Vorbis music via libtremor
 media-libs/sdl2-mixer:wav - support WAVE files
 media-libs/sge:image - enable sdl-image support
@@ -4496,18 +4491,6 @@ media-sound/audacity:vst - Enable VST plugin support
 media-sound/audiotools:cue - Enable CUE sheet support
 media-sound/audiotools:dvda - Enable DVD-Audio support
 media-sound/audiotools:twolame - Enable twolame support (MPEG Audio Layer 2 encoder)
-media-sound/beets:badfiles - Validate MP3 & FLAC files
-media-sound/beets:chromaprint - Enable support for acoustic fingerprinting plugin using media-libs/chromaprint
-media-sound/beets:cors - Enable cors support for the webserver dev-python/flask-cors
-media-sound/beets:discogs - Enable support for the discogs API plugin
-media-sound/beets:ffmpeg - Enable support for the convert plugin to transcode files via media-video/ffmpeg
-media-sound/beets:gstreamer - Enable support for the gstreamer backend
-media-sound/beets:icu - Enable support for the icu plugin to support non-ASCII characters in dev-db/sqlite
-media-sound/beets:lastfm - Enable support for importing personal last.fm playcounts and music genres from last.fm tags
-media-sound/beets:mpd - Enable support for media-sound/mpd server emulation and statistic gathered from media-sound/mpd
-media-sound/beets:replaygain - Enable support for Replay Gain metadata calculation during import
-media-sound/beets:thumbnail - Enable album thumbnails generation
-media-sound/beets:webserver - Enable embedded webserver support through dev-python/flask
 media-sound/bluez-alsa:hcitop - Enable top-like monitoring tool for HCI
 media-sound/bluez-alsa:ldac - Enable support for AOSP media-libs/libldac dispatcher
 media-sound/bluez-alsa:man - Generate (and install) man pages with app-text/pandoc
@@ -4772,7 +4755,6 @@ media-sound/supercollider:vim - Enable the SCVIM user interface
 media-sound/supercollider:webengine - Enable the internal help system using QtWebengine
 media-sound/teamspeak-client:system-libcxx - Use sys-libs/libcxx instead of shipped libs.
 media-sound/teamspeak-server:tsdns - Install TeamSpeaks own DNS service for handling multiple virtual servers.
-media-sound/tomahawk:telepathy - Enable support for the real-time communication framework telepathy
 media-sound/umurmur:mbedtls - Use net-libs/mbedtls as TLS provider
 media-sound/umurmur:shm - Enable shared memory support
 media-sound/upmpdcli:thirdparty - Enable streaming from Qobuz and Tidal external services
@@ -7595,7 +7577,6 @@ sci-physics/vmc:c++17 - Build using the C++17 standard
 sci-physics/yoda:root - Adds support for sci-physics/root
 sci-visualization/fityk:nlopt - Enable optimization with sci-libs/nlopt
 sci-visualization/gnuplot:bitmap - Enable dot-matrix printers and pbm terminal
-sci-visualization/gnuplot:compat - Enable backwards compatibility with version 4 syntax
 sci-visualization/gnuplot:gd - Add support for media-libs/gd. Needed for GIF, JPEG, and PNG image output.
 sci-visualization/gnuplot:libcerf - Enable special functions from sci-libs/libcerf
 sci-visualization/gnuplot:regis - Enable ReGIS terminal
