@@ -8610,6 +8610,7 @@ www-client/seamonkey:chatzilla - Build Mozilla's IRC client (default on)
 www-client/seamonkey:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
 www-client/seamonkey:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
 www-client/seamonkey:ipc - Use inter-process communication between tabs and plugins. Allows for greater stability in case of plugin crashes
+www-client/seamonkey:lto - Enable Link Time Optimization (LTO). Requires Gold linker
 www-client/seamonkey:roaming - Build roaming extension support (default on)
 www-client/seamonkey:system-av1 - Use the system-wide media-libs/dav1d and media-libs/libaom library instead of bundled
 www-client/seamonkey:system-harfbuzz - Use the system-wide media-libs/harfbuzz instead of bundled
@@ -8648,10 +8649,17 @@ www-servers/fnord:auth - Enable HTTP authentication support
 www-servers/gatling:diet - Compile against dev-libs/dietlibc
 www-servers/h2o:libh2o - Build and install libh2o
 www-servers/h2o:mruby - Enable support for mruby
+www-servers/lighttpd:brotli - Enable output compression via Brotli (recommended)
+www-servers/lighttpd:bzip2 - Enable output compression via bzip2
+www-servers/lighttpd:gnutls - Build module for TLS via GnuTLS
 www-servers/lighttpd:libev - Enable fdevent handler
+www-servers/lighttpd:maxminddb - Add support for geolocation using libMaxMindDB
+www-servers/lighttpd:mbedtls - Build module for TLS via Mbed TLS
 www-servers/lighttpd:mmap - Use mmap with files owned by lighttpd. This is a dangerous option as it may allow local users to trigger SIGBUS crashes.
+www-servers/lighttpd:nss - Build module for TLS via Mozilla's Network Security Services
 www-servers/lighttpd:rrdtool - Enable rrdtool support via mod_rrdtool
 www-servers/lighttpd:webdav - Enable webdav properties
+www-servers/lighttpd:zlib - Enable output compression via gzip or deflate algorithms
 www-servers/monkeyd:debug - Enable lots of debugging info
 www-servers/monkeyd:static-plugins - Build statically linked plugins
 www-servers/nginx:aio - Enables file AIO support
