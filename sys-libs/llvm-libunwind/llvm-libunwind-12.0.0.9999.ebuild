@@ -1,10 +1,10 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
 CMAKE_ECLASS=cmake
-PYTHON_COMPAT=( python3_{6..9} )
+PYTHON_COMPAT=( python3_{7..9} )
 inherit cmake-multilib llvm llvm.org python-any-r1
 
 DESCRIPTION="C++ runtime stack unwinder from LLVM"
@@ -25,8 +25,8 @@ BDEPEND="
 		$(python_gen_any_dep 'dev-python/lit[${PYTHON_USEDEP}]')
 	)"
 
-LLVM_COMPONENTS=( libunwind )
-LLVM_TEST_COMPONENTS=( libcxx{,abi} llvm/cmake )
+LLVM_COMPONENTS=( libunwind libcxx llvm/cmake/modules )
+LLVM_TEST_COMPONENTS=( libcxxabi )
 llvm.org_set_globals
 
 python_check_deps() {

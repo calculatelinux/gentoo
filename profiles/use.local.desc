@@ -362,7 +362,6 @@ app-dicts/aspell-be:classic - Support classic spelling by default
 app-dicts/gwaei:hunspell - Enable app-text/hunspell spellchecking and morphological analysis
 app-dicts/gwaei:mecab - Enable app-text/mecab support
 app-dicts/myspell-pt:preao - Use the pre ortographic agreement version of the dictionary
-app-doc/clsync-docs:api - Install doxygen generated API docs.
 app-doc/csound-manual:html - Install HTML documentation
 app-doc/devmanual:offline - Use alternative minimal stylesheet instead of Tyrian theme
 app-doc/doxygen:clang - support for sys-devel/clang assisted parsing
@@ -1219,14 +1218,7 @@ dev-ada/gnatcoll-bindings:shared - Build shared library
 dev-ada/gnatcoll-bindings:static-pic - Build shared library
 dev-ada/gnatcoll-core:shared - Build shared library
 dev-ada/gnatcoll-core:static-pic - Build static library with pic code
-dev-ada/gnatcoll-db:db2ada - Build gnatcoll_db2ada
-dev-ada/gnatcoll-db:gnatinspect - Build gnatinspect
-dev-ada/gnatcoll-db:shared - Build shared library
-dev-ada/gnatcoll-db:sql - Build sql library
-dev-ada/gnatcoll-db:static-pic - Build shared library
-dev-ada/gnatcoll-db:xref - Build xref library
 dev-ada/gtkada:shared - Build gtkada as shared library
-dev-ada/libadalang:shared - Build shared library
 dev-ada/libgpr:shared - Build shared library
 dev-ada/libgpr:static-pic - Build static library with pic code
 dev-ada/xmlada:shared - Build shared library
@@ -2067,8 +2059,6 @@ dev-libs/libcec:xrandr - Enable detection of active HDMI using xrandr extensions
 dev-libs/libcgroup:daemon - Install the configuration tools and init/config files.
 dev-libs/libcgroup:tools - Install the cgroup rules processing daemon and init/config files.
 dev-libs/libcharon:client - Install the charon client library
-dev-libs/libclsync:extra-debug - Enable extra debugging. This will hurt performance badly. Be ready for tons of output.
-dev-libs/libclsync:extra-hardened - Enable extra security checks. This may hurt performance.
 dev-libs/libdbusmenu:gtk - Enable support for GTK+2
 dev-libs/libdbusmenu:gtk3 - Enable support for GTK+3
 dev-libs/libdynd:cuda - Enable NVIDIA CUDA toolkit support
@@ -3105,7 +3095,6 @@ games-engines/odamex:portmidi - Enable PortMidi support
 games-engines/odamex:server - Build server target
 games-engines/openmw:devtools - Install development tools like bsatool, esmtool and opencs.
 games-engines/openmw:osg-fork - Use OpenSceneGraph forked by OpenMW instead of upstream OSG.
-games-engines/renpy:development - Install IDE for game developers and an empty game template
 games-engines/residualvm:mpeg2 - enable mpeg2 codec for cutscenes
 games-engines/scummvm:fluidsynth - compile with support for fluidsynth
 games-engines/scummvm:fribidi - Support for right-to-left languages via dev-libs/fribidi
@@ -3256,7 +3245,6 @@ games-strategy/freeciv:server - Enable server support. Disabling this will also 
 games-strategy/freeciv:sound - Add support for sound provided by media-libs/sdl-mixer
 games-strategy/freeciv:system-lua - Use dev-lang/lua instead of the bundled liblua
 games-strategy/freesynd:devtools - Build development tools
-games-strategy/hedgewars:server - Enable local server
 games-strategy/ja2-stracciatella:editor - Adds necessary file to run the editor
 games-strategy/ja2-stracciatella:ru-gold - Support for russian gold ja2 version
 games-strategy/megaglest:editor - Build map editor
@@ -5044,7 +5032,6 @@ media-video/noad:libmpeg2 - Build support for mpeg2 over media-libs/libmpeg2 rat
 media-video/nvidia_video_sdk:tools - Build and install example tools.
 media-video/obs-studio:fdk - Enable libfdk support for AAC encoding.
 media-video/obs-studio:imagemagick - Use ImageMagick for image loading instead of FFmpeg.
-media-video/obs-studio:luajit - Build support for scripting via Luajit.
 media-video/obs-studio:nvenc - Enable NVENC encoding for nVidia video cards.
 media-video/obs-studio:python - Build support for scripting via Python 3.
 media-video/obs-studio:speex - Enable noise suppression filter support via media-libs/speexdsp.
@@ -5746,7 +5733,6 @@ net-im/gajim:rst - Generating XHTML output from RST code
 net-im/gajim:spell - Spellchecking of composed messages
 net-im/gajim:upnp - Ability to request your router to forward port for file transfer
 net-im/gajim:webp - Support WebP avatars
-net-im/gitter-bin:pax_kernel - Triggers a paxmarking of the binary
 net-im/libcommuni:qml - Install optional qml files.
 net-im/libcommuni:uchardet - Use app-i18n/uchardet, which is upstreams default, instead of dev-libs/icu, which makes impossible to run tests.
 net-im/mcabber:aspell - Adds support for app-text/aspell spell checker.
@@ -8250,6 +8236,7 @@ sys-fs/dmraid:mini - Create a minimal binary suitable for early boot environment
 sys-fs/dosfstools:compat - Install symlinks for legacy names of the tools
 sys-fs/e2fsprogs:cron - Install e2scrub_all cron script
 sys-fs/e2fsprogs:fuse - Build fuse2fs, a FUSE file system client for ext2/ext3/ext4 file systems
+sys-fs/e2fsprogs:lto - Build with link time optimization (LTO)
 sys-fs/ecryptfs-utils:gpg - Enable app-crypt/gnupg key module
 sys-fs/ecryptfs-utils:openssl - Enable dev-libs/openssl key module
 sys-fs/ecryptfs-utils:pkcs11 - Enable PKCS#11 (Smartcards) key module
@@ -8325,6 +8312,7 @@ sys-libs/compiler-rt-sanitizers:gwp-asan - Build GWP-ASAN runtime.
 sys-libs/compiler-rt-sanitizers:hwasan - Build Hardware ASAN runtime.
 sys-libs/compiler-rt-sanitizers:libfuzzer - Build fuzzing runtime.
 sys-libs/compiler-rt-sanitizers:lsan - Build Leak Sanitizer runtime.
+sys-libs/compiler-rt-sanitizers:memprof - Build memory profiler runtime.
 sys-libs/compiler-rt-sanitizers:msan - Build Memory Sanitizer runtime.
 sys-libs/compiler-rt-sanitizers:profile - Build profiling runtime.
 sys-libs/compiler-rt-sanitizers:safestack - Build SafeStack runtime.

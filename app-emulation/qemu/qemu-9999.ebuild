@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-PYTHON_COMPAT=( python3_{6,7,8,9} )
+PYTHON_COMPAT=( python3_{7,8,9} )
 PYTHON_REQ_USE="ncurses,readline"
 
 FIRMWARE_ABI_VERSION="4.0.0-r50"
@@ -226,6 +226,9 @@ RDEPEND="${CDEPEND}
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.11.1-capstone_include_path.patch
 	"${FILESDIR}"/${PN}-5.2.0-strings.patch
+	"${FILESDIR}"/${PN}-5.2.0-cleaner-werror.patch
+	"${FILESDIR}"/${PN}-5.2.0-disable-keymap.patch
+	"${FILESDIR}"/${PN}-9999-fix-firmware-path.patch
 )
 
 QA_PREBUILT="

@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6..9} )
+PYTHON_COMPAT=( python3_{7..9} )
 inherit check-reqs cmake flag-o-matic llvm llvm.org python-any-r1
 
 DESCRIPTION="Compiler runtime libraries for clang (sanitizers & xray)"
@@ -49,7 +49,7 @@ LLVM_TEST_COMPONENTS=( llvm/lib/Testing/Support llvm/utils/unittest )
 llvm.org_set_globals
 
 PATCHES=(
-	"${FILESDIR}/9999/compiler-rt-prefix-paths.patch"
+	"${FILESDIR}/11.1.0/compiler-rt-prefix-paths.patch"
 )
 
 python_check_deps() {

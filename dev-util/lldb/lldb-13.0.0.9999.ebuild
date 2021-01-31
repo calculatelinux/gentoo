@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{6..9} )
+PYTHON_COMPAT=( python3_{7..9} )
 inherit cmake llvm llvm.org python-single-r1 toolchain-funcs
 
 DESCRIPTION="The LLVM debugger"
@@ -72,6 +72,8 @@ src_configure() {
 		# ncurses with complete library set (including autodetection
 		# of -ltinfo)
 		-DCURSES_NEED_NCURSES=ON
+
+		-DLLDB_EXTERNAL_CLANG_RESOURCE_DIR="${BROOT}/usr/lib/clang/${PV%_*}"
 
 		-DPython3_EXECUTABLE="${PYTHON}"
 	)

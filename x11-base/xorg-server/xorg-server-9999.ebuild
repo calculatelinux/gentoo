@@ -101,6 +101,7 @@ DEPEND="${CDEPEND}
 	)"
 
 RDEPEND="${CDEPEND}
+	gui-libs/display-manager-init
 	selinux? ( sec-policy/selinux-xserver )
 "
 
@@ -197,10 +198,6 @@ src_install() {
 		# Install xorg.conf.example into docs
 		dodoc "${S}"/hw/xfree86/xorg.conf.example
 	fi
-
-	newinitd "${FILESDIR}"/xdm-setup.initd-1 xdm-setup
-	newinitd "${FILESDIR}"/xdm.initd-11 xdm
-	newconfd "${FILESDIR}"/xdm.confd-4 xdm
 
 	# install the @x11-module-rebuild set for Portage
 	insinto /usr/share/portage/config/sets
