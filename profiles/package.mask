@@ -138,14 +138,6 @@ x11-misc/rss-glx
 # Masked for removal in 30 days.
 kde-frameworks/kdesignerplugin
 
-# Conrad Kostecki <conikost@gentoo.org> (2021-01-10)
-# The Duke Nukem 3D demo data files will be now handled by the
-# 'games-fps/duke3d-data' package, so this package isn't
-# needed anymore. Just remove it and switch to the above one.
-# Enable use flag 'demo' for demo data files.
-# Removal in 14 days.
-games-fps/duke3d-demodata
-
 # Miroslav Šulc <fordfrog@gentoo.org> (2021-01-09)
 # media-sound/patchage used to depend on it but the dependency
 # has been dropped in v1.0.0. There are no other packages in the tree
@@ -209,13 +201,6 @@ app-crypt/acme-client
 # (All of which has been bumped to no longer have this dependency.)
 # Removal in 30 days, bug #444470
 dev-libs/ilbc-rfc3951
-
-# Sam James <sam@gentoo.org> (2021-01-01)
-# UnrealIRCd 4.x is EOL. Please upgrade to 5.x.
-# To be removed shortly.
-# https://www.unrealircd.org/docs/UnrealIRCd_4_EOL
-# bug 762715
-<net-irc/unrealircd-5.0.0
 
 # Sergei Trofimovich <slyfox@gentoo.org> (2020-12-20)
 # Needs a port to haskell-src-exts compatible with ghc-8.8.
@@ -284,16 +269,6 @@ kde-apps/kdebase-meta:5
 # Version 1.11 introduced different startup conventions for the server
 # which breaks the OpenRC init script. Bug #746227.
 >=net-misc/tigervnc-1.11.0
-
-# Michał Górny <mgorny@gentoo.org> (2020-09-25)
-# PyPy3.7 alpha.  Known to break a few packages.  Masked until it
-# matures more.
-=dev-python/pypy3-7.3.2_p37*
-=dev-python/pypy3-exe-7.3.2_p37*
-=dev-python/pypy3-exe-bin-7.3.2_p37*
-=dev-python/pypy3-7.3.3_p37*
-=dev-python/pypy3-exe-7.3.3_p37*
-=dev-python/pypy3-exe-bin-7.3.3_p37*
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (2020-09-01)
 # Mismatched version (bug #695022). Masked to force upgrade to 2.0.4_pre20200306162733.
