@@ -6,6 +6,13 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Sam James <sam@gentoo.org> (2021-02-07)
+# Fails to build with USE=doc for now.
+# Needs rework to use Python eclasses
+# for conditional doc dependencies.
+# bug #759523
+sci-libs/gdal doc
+
 # Lars Wendler <polynomial-c@gentoo.org> (2021-01-26)
 # Fails to build:
 #
@@ -140,7 +147,6 @@ sys-cluster/drbd-utils heartbeat
 
 # Michał Górny <mgorny@gentoo.org> (2020-09-09)
 # The respective dependencies are masked for removal.
-app-metrics/collectd collectd_plugins_gmond
 app-metrics/collectd collectd_plugins_onewire
 
 # Michał Górny <mgorny@gentoo.org> (2020-08-22)
@@ -378,7 +384,6 @@ dev-lang/gnat-gpl go
 
 # Pacho Ramos <pacho@gentoo.org> (2018-11-11)
 # pm-utils will be removed, bug #659616
-sys-apps/razercfg pm-utils
 sys-power/powermgmt-base pm-utils
 
 # Alfredo Tupone <tupone@gentoo.org> (2018-10-24)
@@ -664,7 +669,7 @@ sci-libs/mathgl octave
 # Diego E. Pettenò <flameeyes@gentoo.org> (2011-03-27)
 #
 # Mask pdnsd's Linux-specific USE flags.
-net-dns/pdnsd isdn urandom
+net-dns/pdnsd urandom
 
 # Raúl Porcel <armin76@gentoo.org> (2011-02-13)
 # Masked until devs know how to use repoman

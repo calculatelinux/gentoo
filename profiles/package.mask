@@ -32,6 +32,44 @@
 
 #--- END OF EXAMPLES ---
 
+# Sergei Trofimovich <slyfox@gentoo.org> (2020-02-08)
+# Abandoned upstream. Was never ported from gtk-2.
+# A possible alternative is media-gfx/geeqie (gqview fork).
+# Removal in 3 months. Bug #769440.
+media-gfx/gqview
+
+# Alexys Jacob <ultrabug@gentoo.org> (2021-02-08)
+# Multiple QA issues, CVE affected, unmaintained for packaging upstream.
+# Removal on 2021-03-08.  Bug #769509
+app-admin/mms-agent
+
+# Michał Górny <mgorny@gentoo.org> (2021-02-07)
+# Fails tests (and does not seem to test the old installed version
+# at least partially).  Needs further testing.
+>=dev-python/numpy-1.20
+
+# Michał Górny <mgorny@gentoo.org> (2021-02-07)
+# Discontinued upstream.  Last release was for Xfce 4.12, last commit
+# in 2015.  Still uses GTK+2.
+# Removal on 2021-03-09.  Bug #732750.
+app-office/orage
+
+# Michał Górny <mgorny@gentoo.org> (2021-02-07)
+# These plugins have not been ported to Xfce 4.16 / GTK+3.
+# They do not build against to-be-stable xfce4-panel.
+# Removal on 2021-03-09.  Bug #732754.
+xfce-extra/multiload-nandhp
+xfce-extra/xfce4-embed-plugin
+xfce-extra/xfce4-equake-plugin
+xfce-extra/xfce4-kbdleds-plugin
+xfce-extra/xfce4-windowck-plugin
+
+# Michał Górny <mgorny@gentoo.org> (2021-02-07)
+# Fails to start due to unpackaged Ruby modules.  Abandoned upstream
+# in 2010.
+# Removal on 2021-03-09.  Bug #769371.
+xfce-extra/eatmonkey
+
 # Alfredo Tupone <tupone@gentoo.org> (2021-02-01)
 # no package uses it
 # Removal on 2021-03-04
@@ -73,11 +111,6 @@ app-text/csvfix
 # wddx in general failed overall as a protocol. No real maintainer.
 # Removal in 30 days. Bug #688066
 net-analyzer/jffnms
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2021-01-24)
-# (New and QML-based) functionality moved into kde-plasma/plasma-desktop:5
-# Masked for removal in 14 days.
-kde-plasma/user-manager:5
 
 # Aisha Tammy <gentoo@aisha.cc> (2021-01-24)
 # Dead package, wrongly named, only installs
@@ -138,12 +171,6 @@ x11-misc/rss-glx
 # Masked for removal in 30 days.
 kde-frameworks/kdesignerplugin
 
-# Miroslav Šulc <fordfrog@gentoo.org> (2021-01-09)
-# media-sound/patchage used to depend on it but the dependency
-# has been dropped in v1.0.0. There are no other packages in the tree
-# depending on it. Also having issues compiling it. Removal in 30 days.
-media-libs/raul
-
 # Brian Evans <grknight@gentoo.org> (2021-01-07)
 # PHP 7.2 is security vulnerable and end-of-life
 # Please upgrade to a newer slot
@@ -152,30 +179,6 @@ virtual/httpd-php:7.2
 =dev-php/phpunit-5.7.15-r3
 =dev-php/PHP_CodeCoverage-4.0.7-r2
 =dev-php/PHP_TokenStream-1.4.11-r1
-
-# Joonas Niilola <juippis@gentoo.org> (2020-01-07)
-# Eterm's development stopped 2014 and upstream brought to life
-# its successor, terminology. Eterm is unmaintained in Gentoo with
-# multiple bugs open for a long time. Switch to any available
-# alternative, https://packages.gentoo.org/categories/x11-terms
-# For Esetroot replacement, use feh from media-gfx/feh or wmsetbg
-# from x11-wm/windowmaker.
-# Removal in ~30 days. Bug: #764359
-x11-terms/eterm
-
-# Joonas Niilola <juippis@gentoo.org> (2020-01-07)
-# Doesn't compile, no maintainer, EAPI-5. Last version bump 3 years
-# ago. Use any of the available alternatives,
-# https://packages.gentoo.org/categories/x11-terms
-# Removal in ~30 days. Bug: #764353
-x11-terms/pangoterm
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2021-01-06)
-# Post-consolekit cleanup, dead upstream since 2016.
-# https://s3hh.wordpress.com/2016/06/18/whither-cgmanager/
-# Masked for removal in 30 days.
-app-admin/cgmanager
-sys-libs/libnih
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2021-01-06)
 # Abandoned upstream, countless bugs. Replaced by builtin functions in elogind
@@ -201,12 +204,6 @@ app-crypt/acme-client
 # (All of which has been bumped to no longer have this dependency.)
 # Removal in 30 days, bug #444470
 dev-libs/ilbc-rfc3951
-
-# Sergei Trofimovich <slyfox@gentoo.org> (2020-12-20)
-# Needs a port to haskell-src-exts compatible with ghc-8.8.
-# https://github.com/ndmitchell/derive/pull/37
-dev-haskell/derive
-app-forensics/quickfuzz
 
 # Lars Wendler <polynomial-c@gentoo.org> (2020-12-09)
 # Masked until most broken packages have been fixed (bug #732648)

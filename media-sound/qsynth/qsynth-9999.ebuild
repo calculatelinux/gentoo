@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake desktop qmake-utils xdg-utils
+inherit cmake desktop qmake-utils xdg
 
 DESCRIPTION="Qt application to control FluidSynth"
 HOMEPAGE="https://qsynth.sourceforge.io/"
@@ -66,12 +66,4 @@ src_install() {
 	fi
 
 	make_desktop_entry "${cmd}" Qsynth qsynth
-}
-
-pkg_postinst() {
-	xdg_icon_cache_update
-}
-
-pkg_postrm() {
-	xdg_icon_cache_update
 }
