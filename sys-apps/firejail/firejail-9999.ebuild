@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -21,7 +21,7 @@ HOMEPAGE="https://firejail.wordpress.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="X apparmor +chroot contrib +dbusproxy +file-transfer +globalcfg +network +overlayfs +private-home +suid test +userns +whitelist"
+IUSE="X apparmor +chroot contrib +dbusproxy +file-transfer +globalcfg +network +private-home +suid test +userns +whitelist"
 RESTRICT="!test? ( test )"
 
 RDEPEND="!sys-apps/firejail-lts
@@ -63,7 +63,6 @@ src_configure() {
 		$(use_enable file-transfer) \
 		$(use_enable globalcfg) \
 		$(use_enable network) \
-		$(use_enable overlayfs) \
 		$(use_enable private-home) \
 		$(use_enable suid) \
 		$(use_enable userns) \

@@ -12,9 +12,13 @@ SRC_URI="https://github.com/USBGuard/usbguard/releases/download/${P}/${P}.tar.gz
 LICENSE="GPL-2+"
 SLOT="0/1"  # due to libusbguard.so.<1>.0.0
 KEYWORDS="~amd64 ~x86"
-IUSE="bash-completion dbus ldap policykit static-libs systemd"
+IUSE="bash-completion dbus ldap policykit static-libs systemd test"
 
 REQUIRED_USE="policykit? ( dbus )"
+
+# https://github.com/USBGuard/usbguard/issues/449
+# https://bugs.gentoo.org/769692
+REQUIRED_USE+=" test? ( static-libs )"
 
 CDEPEND="
 	<dev-libs/pegtl-3
@@ -46,6 +50,8 @@ DEPEND="${CDEPEND}
 		dev-util/gdbus-codegen
 	)
 	"
+
+RESTRICT="!test? ( test )"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.0.0-pthreads-link.patch
