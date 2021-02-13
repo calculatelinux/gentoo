@@ -32,6 +32,34 @@
 
 #--- END OF EXAMPLES ---
 
+# Jakov Smolic <jakov.smolic@sartura.hr> (2021-02-13)
+# Fails to build with gcc-10, stuck on EAPI 5, dead upstream
+# multiple reported bugs, not touched by maintainer in years.
+# Removal in 30 days. Bug #762904
+dev-db/4store
+
+# Jakov Smolic <jakov.smolic@sartura.hr> (2021-02-13)
+# Fails to build with gcc-10, no maintainer, last release in 2004,
+# no reverse dependencies.
+# Removal in 30 days.  Bug #707504.
+app-misc/slmon
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2021-02-12)
+# Does not build against clang/LLVM toolchain.
+# Last release in 2009. Upstream repository is gone.
+# Depends minimal on very old vdr version
+# Removal on 2021-03-12.  Bug #740302
+media-plugins/vdr-cpumon
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (2021-02-12)
+# Last release in 2006. Upstream repository is gone.
+# Hompage shows only to a wiki entry.
+# Has open bugs.
+# If you still relies on this plugin, leave a comment in
+# the depended bug.
+# Removal on 2021-03-12.  Bug #740302
+media-plugins/vdr-mount
+
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2021-02-11)
 # Needs some workarounds in mozilla ebuilds
 # https://bugs.gentoo.org/768543
@@ -209,11 +237,6 @@ games-strategy/0ad
 # Removal in 30 days.
 # Fails to compile Bug #765697.
 x11-misc/rss-glx
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2021-01-11)
-# KF5 PortingAid (from kdelibs4) without any remaining revdeps. Bug #755956
-# Masked for removal in 30 days.
-kde-frameworks/kdesignerplugin
 
 # Brian Evans <grknight@gentoo.org> (2021-01-07)
 # PHP 7.2 is security vulnerable and end-of-life
