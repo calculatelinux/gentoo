@@ -4172,7 +4172,6 @@ media-libs/libcanberra:tdb - Enables Trivial Database support for caching purpos
 media-libs/libde265:dec265 - Enable build of dec265 example program
 media-libs/libde265:enc265 - Enable build of enc265 tool
 media-libs/libde265:sdl - Enable video output of dec265 example program with media-libs/libsdl
-media-libs/libde265:static-libs - Enable build of static libraries
 media-libs/libde265:tools - Enable installation of varous binary tools
 media-libs/libepoxy:egl - Enable EGL support.
 media-libs/libextractor:apparmor - Enable apparmor support using sys-libs/libapparmor
@@ -7045,6 +7044,7 @@ sci-astronomy/stellarium:deep-sky - Install extra deep sky objects catalog (may 
 sci-astronomy/stellarium:media - Enable sound and video support
 sci-astronomy/stellarium:stars - Install extra star catalogs
 sci-astronomy/stellarium:telescope - Enable telescope control via sci-libs/indilib
+sci-astronomy/swarp:cfitsio - Link with sci-libs/cfitsio
 sci-astronomy/wcslib:fits - Enable support for the FITS format through sci-libs/cfitsio
 sci-astronomy/wcslib:pgplot - Builds PGBSOX routines, needs sci-libs/pgplot library
 sci-astronomy/wcslib:tools - Builds and installs extra command line utilities for WCS checking
@@ -8007,6 +8007,9 @@ sys-cluster/kronosnet:nss - Add support for tls via nss
 sys-cluster/kronosnet:openssl - Add support for tls via openssl
 sys-cluster/legion:gasnet - Enable GASNet lib support
 sys-cluster/legion:hwloc - Enable HWLoc lib support
+sys-cluster/lmod:auto-swap - enable auto swapping of compiler
+sys-cluster/lmod:cache - enable caching of modules
+sys-cluster/lmod:duplicate-paths - allow duplicate entries in path
 sys-cluster/lustre:client - Enable kernel client modules
 sys-cluster/lustre:dlc - Enable Dynamic LNET Configuration
 sys-cluster/lustre:server - Enable kernels server modules
@@ -8698,9 +8701,7 @@ x11-base/xorg-x11:fonts - Install fonts from X.Org
 x11-drivers/nvidia-drivers:X - Install the X.org driver, OpenGL libraries, XvMC libraries, and VDPAU libraries
 x11-drivers/nvidia-drivers:compat - Install non-GLVND libGL for backwards compatibility
 x11-drivers/nvidia-drivers:driver - Install the kernel driver module
-x11-drivers/nvidia-drivers:gtk3 - Install nvidia-settings with support for GTK+ 3
 x11-drivers/nvidia-drivers:kms - Enable support for kernel mode setting (KMS)
-x11-drivers/nvidia-drivers:libglvnd - Use media-libs/libglvnd for dispatch
 x11-drivers/nvidia-drivers:tools - Install additional tools such as nvidia-settings
 x11-drivers/nvidia-drivers:uvm - Install the Unified Memory kernel module (nvidia-uvm) for sharing memory between CPU and GPU in CUDA programs
 x11-drivers/xf86-video-geode:ztv - Enable building the V4L2 ZTV driver
@@ -8709,6 +8710,7 @@ x11-drivers/xf86-video-intel:tools - Build the intel-virtual-output tool
 x11-drivers/xf86-video-intel:uxa - Enable UMA Acceleration Architecture
 x11-drivers/xf86-video-intel:xvmc - Enables X-Video Motion Compensation support
 x11-drivers/xf86-video-openchrome:viaregtool - Install registers dumper tool
+x11-drivers/xf86-video-qxl:xspice - Include Xspice, a standard X server that is also a Spice server
 x11-libs/agg:gpc - Enable gpc polygon clipper library
 x11-libs/cairo:gles2-only - Build the OpenGL ES 2 backend
 x11-libs/cairo:glib - Compile with GLib Object System support

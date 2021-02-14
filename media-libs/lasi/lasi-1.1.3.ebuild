@@ -13,7 +13,7 @@ HOMEPAGE="http://www.unifont.org/lasi"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="0/2"
 KEYWORDS="~alpha ~amd64 ~arm64 ~hppa ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples"
 
@@ -44,7 +44,7 @@ src_prepare() {
 		examples/CMakeLists.txt || die
 
 	if use !examples; then
-		sed -i -e '/add_subdirectory(examples)/d' CMakeLists.txt
+		sed -i -e '/add_subdirectory(examples)/d' CMakeLists.txt || die
 	fi
 }
 
