@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{7,8} )
+PYTHON_COMPAT=( python3_{7,8,9} )
 
 inherit distutils-r1 xdg
 
@@ -13,7 +13,6 @@ HOMEPAGE="http://vidcutter.ozmartians.com https://github.com/ozmartian/vidcutter
 if [[ ${PV} == 9999 ]];then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/ozmartian/vidcutter"
-	KEYWORDS=""
 else
 	SRC_URI="https://github.com/ozmartian/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
@@ -34,6 +33,7 @@ RDEPEND="${DEPEND}
 BDEPEND="
 	${PYTHON_DEPS}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_install() {
 	distutils-r1_src_install
