@@ -194,7 +194,7 @@ app-admin/ulogd:pcap - Build PCAP output plugin to save packets in libpcap file 
 app-admin/ulogd:ulog - Build ULOG input plugin to support deprecated packet-based logging via ULOG target
 app-admin/vault:webui - Enable the Web UI
 app-admin/webalizer:xtended - Include the 404 extension
-app-admin/webapp-config:portage - Propagete python_targets dependencies to sys-apps/portage
+app-admin/webapp-config:portage - Propagate python_targets dependencies to sys-apps/portage
 app-antivirus/clamav:clamdtop - A Top like tool which shows what clamd is currently scanning amongst other things
 app-antivirus/clamav:clamonacc - Build the clamonacc on-access scanner
 app-antivirus/clamav:clamsubmit - A tool to submit false positives / negatives
@@ -7655,7 +7655,6 @@ sys-apps/firejail:dbusproxy - Enable DBus proxying to filter access in supportin
 sys-apps/firejail:file-transfer - Enable file transfers between sandboxes and the host system
 sys-apps/firejail:globalcfg - Enable global config file
 sys-apps/firejail:network - Enable networking features
-sys-apps/firejail:overlayfs - Enable overlayfs
 sys-apps/firejail:private-home - Enable private home feature
 sys-apps/firejail:userns - Enable attaching a new user namespace to a sandbox (--noroot option)
 sys-apps/firejail:whitelist - Enable whitelist
@@ -9018,14 +9017,10 @@ x11-wm/xpra:pillow - Enable pillow support
 x11-wm/xpra:server - Build server-side code
 x11-wm/xpra:vpx - Enable vpx image format support
 x11-wm/xpra:webcam - Enable webcam support via opencv
-xfce-base/exo:gtk2 - Build deprecated GTK+2 libexo-1 library.
-xfce-base/garcon:gtk2 - Build the garcon-gtk2-1 library (required for xfce-base/xfce4-panel < 4.13 only).
 xfce-base/libxfce4ui:glade - Build support for Glade 3's GtkBuilder implementation
-xfce-base/libxfce4ui:gtk2 - Build deprecated GTK+2 libxfce4ui-1 library.
 xfce-base/libxfce4ui:system-info - Enable system information in xfce4-about.
 xfce-base/thunar:trash-panel-plugin - Build the trash status indicator plugin for the XFCE panel
 xfce-base/xfce4-panel:dbusmenu - Enable dev-libs/libdbusmenu integration (in status notifier plugin)
-xfce-base/xfce4-panel:gtk2 - Enable GTK+2 plugin support.
 xfce-base/xfce4-settings:libcanberra - Enable sound event support using media-libs/libcanberra
 xfce-base/xfce4-settings:xklavier - Enable keyboard layout selection support using x11-libs/libxklavier
 xfce-base/xfdesktop:thunar - Build support for desktop icons (for example, launchers and folders)
