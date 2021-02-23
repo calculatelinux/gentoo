@@ -3,12 +3,12 @@
 
 EAPI=7
 
-LUA_COMPAT=( lua5-{1..3} luajit )
+LUA_COMPAT=( lua5-{1..4} luajit )
 
 inherit lua toolchain-funcs
 
 DESCRIPTION="LuaExpat is a SAX XML parser based on the Expat library"
-HOMEPAGE="https://matthewwild.co.uk/projects/luaexpat/"
+HOMEPAGE="https://matthewwild.co.uk/projects/luaexpat/ https://code.matthewwild.co.uk/lua-expat"
 SRC_URI="https://matthewwild.co.uk/projects/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
