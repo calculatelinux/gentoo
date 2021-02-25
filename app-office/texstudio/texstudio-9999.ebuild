@@ -3,9 +3,9 @@
 
 EAPI=7
 
-MY_PV="${PV/_/}"
 inherit desktop git-r3 qmake-utils xdg
 
+MY_PV="${PV/_/}"
 DESCRIPTION="Free cross-platform LaTeX editor (fork from texmakerX)"
 HOMEPAGE="https://www.texstudio.org https://github.com/texstudio-org/texstudio"
 EGIT_REPO_URI="https://github.com/texstudio-org/texstudio.git"
@@ -36,7 +36,8 @@ DEPEND="
 	x11-libs/libXext
 	video? ( >=media-libs/phonon-4.11.0 )
 "
-RDEPEND="${DEPEND}
+RDEPEND="
+	${DEPEND}
 	app-text/ghostscript-gpl
 	app-text/psutils
 	media-libs/netpbm
@@ -44,7 +45,9 @@ RDEPEND="${DEPEND}
 "
 BDEPEND="virtual/pkgconfig"
 
-PATCHES=( "${FILESDIR}/${PN}-3.0.5-quazip1.patch" ) # TODO: upstream
+PATCHES=(
+	"${FILESDIR}/${PN}-3.0.5-quazip1.patch" # TODO: upstream
+)
 
 src_prepare() {
 	xdg_src_prepare
@@ -69,5 +72,6 @@ src_install() {
 	for i in 16x16 22x22 32x32 48x48 64x64 128x128; do
 		newicon -s ${i} utilities/${PN}${i}.png ${PN}.png
 	done
+
 	emake DESTDIR="${D}" INSTALL_ROOT="${ED}" install
 }
