@@ -32,15 +32,45 @@
 
 #--- END OF EXAMPLES ---
 
+# Bernd Waibel <waebbl-gentoo@posteo.net> (2021-02-27)
+# No longer actively supported upstream.
+# Removal needed to clean-up {ilmbase,openexr}-2.3.0
+# Masked for removal in 30 days.
+media-gfx/openexr_viewers
+
+# Sam James <sam@gentoo.org> (2021-02-27)
+# Fails to build with GCC 10 (or otherwise!)
+# bug #708508, bug #728026, bug #542280
+# Removal in 30 days
+sci-mathematics/ggnfs
+
+# Sam James <sam@gentoo.org> (2021-02-27)
+# Fails to build with GCC 10, out of date.
+# bug #723192, bug #737058
+# Removal in 30 days
+dev-lang/ats
+
+# Sam James <sam@gentoo.org> (2021-02-27)
+# Broken with newer(?) dev-scheme/guile, dead upstream
+# bug #642736, bug #773196
+# Removal in 30 days
+dev-scheme/greg
+
+# David Seifert <soap@gentoo.org> (2021-02-25)
+# Unmaintained, python 3.7 only, relies on wrong libgd, which isn't
+# packaged.  Removal on 2021-03-27.  Bug #683358, #696476, #741936.
+sys-auth/authenticator
+
+# David Seifert <soap@gentoo.org> (2021-02-25)
+# Last release in 2006, no other distro carries this anymore,
+# blocks sci-libs/fftw:2.1 removal, no revdeps.
+# Removal on 2021-03-27.  Bug #731038, #772812.
+media-gfx/videorbits
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2021-02-24)
 # Completely dissolved and moved into other PIM libraries upstream.
 # Masked for removal on 2021-03-10.
 kde-apps/kdepim-apps-libs
-
-# James Le Cuirot <chewi@gentoo.org> (2021-02-24)
-# Has very annoying bug where tabs cannot be closed after a while. See
-# bug #726802. Expect a new snapshot soon or use the older one.
-=www-client/vivaldi-snapshot-3.7.2202.3
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2021-02-23)
 # Slotted mistakenly
@@ -214,15 +244,6 @@ dev-go/qt
 # bug #735352
 games-strategy/0ad
 ~games-strategy/0ad-data-0.0.24_alpha_pre20210116040036
-
-# Brian Evans <grknight@gentoo.org> (2021-01-07)
-# PHP 7.2 is security vulnerable and end-of-life
-# Please upgrade to a newer slot
-dev-lang/php:7.2
-virtual/httpd-php:7.2
-=dev-php/phpunit-5.7.15-r3
-=dev-php/PHP_CodeCoverage-4.0.7-r2
-=dev-php/PHP_TokenStream-1.4.11-r1
 
 # Lars Wendler <polynomial-c@gentoo.org> (2020-12-09)
 # Masked until most broken packages have been fixed (bug #732648)
