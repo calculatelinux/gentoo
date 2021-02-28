@@ -2999,7 +2999,6 @@ games-arcade/performous:midi - Enable MIDI I/O support
 games-arcade/performous:songs - Install a few demo songs
 games-arcade/performous:tools - Enable building of song extraction utilities for SingStar and Guitar Hero
 games-arcade/performous:webcam - Enable Webcam support
-games-arcade/savagewheels:fmod - Enable the fmod music and sound effects library
 games-arcade/tuxanci:physfs - Use dev-games/physfs instead of dev-libs/libzip to load compressed data
 games-board/cockatrice:client - Build with client
 games-board/cockatrice:oracle - Build with oracle
@@ -3880,6 +3879,7 @@ media-gfx/alembic:zlib - Use sys-libs/zlib for compressions
 media-gfx/apngasm:7z - Enable support for 7zip compression
 media-gfx/apngasm:zopfli - Enable support for Zopfli compression
 media-gfx/asymptote:boehm-gc - Enables using the Boehm-Demers-Weiser conservative garbage collector
+media-gfx/asymptote:curl - Enables running remote programs via net-misc/curl
 media-gfx/asymptote:offscreen - Enables off-screen rendering
 media-gfx/asymptote:sigsegv - Enables using dev-libs/libsigsegv
 media-gfx/blender:abi6-compat - Build for OpenVDB ABI 6.
@@ -5283,14 +5283,12 @@ net-analyzer/ossec-hids:local - Build "local" installation target
 net-analyzer/ossec-hids:server - Build "server" installation target
 net-analyzer/pinger:gtk2 - Install the gtkpinger GUI utility based on x11-libs/gtk+:2
 net-analyzer/pinger:gtk3 - Install the gtkpinger GUI utility based on x11-libs/gtk+:3
-net-analyzer/pmacct:64bit - Use 64bit counters instead of 32bit ones
 net-analyzer/pmacct:bgp-bins - Link BGP daemon binaries
 net-analyzer/pmacct:bmp-bins - Link BMP daemon binaries
 net-analyzer/pmacct:geoipv2 - Enable support for GeoIP2 through dev-libs/libmaxminddb
 net-analyzer/pmacct:jansson - Enable support for JSON through dev-libs/jansson
 net-analyzer/pmacct:kafka - Enable support for Apache Kafka through dev-libs/librdkafka
 net-analyzer/pmacct:l2 - Enable Layer-2 features and support
-net-analyzer/pmacct:mongodb - Enable support for MongoDB through dev-libs/mongo-c-driver
 net-analyzer/pmacct:ndpi - Enable support for nDPI through net-libs/nDPI
 net-analyzer/pmacct:nflog - Enable support for NFLOG through uacctd
 net-analyzer/pmacct:plabel - Enable IP prefix labels
@@ -6681,7 +6679,7 @@ net-p2p/deluge:webinterface - Install dependencies needed for the web interface
 net-p2p/eiskaltdcpp:cli - Enable sample cli based on readline
 net-p2p/eiskaltdcpp:daemon - Enable eiskaltdcpp-daemon
 net-p2p/eiskaltdcpp:dht - Enable DHT (distributed hash table) support for libeiskaltdcpp
-net-p2p/eiskaltdcpp:json - Enable JSON for cli and daemon
+net-p2p/eiskaltdcpp:gold - Use gold.ld instead of ld
 net-p2p/eiskaltdcpp:libcanberra - Enable sound notifications support over libcanberra in EiskaltDC++ Gtk
 net-p2p/eiskaltdcpp:minimal - Don't install headers
 net-p2p/fms:frost - Add support for frost boards

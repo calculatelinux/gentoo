@@ -12,7 +12,7 @@ if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="https://github.com/${PN}/MuseScore.git"
 else
 	SRC_URI="https://github.com/musescore/MuseScore/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm64 ~x86"
+	KEYWORDS="~amd64 ~arm64 x86"
 	S="${WORKDIR}/MuseScore-${PV}"
 fi
 
@@ -63,6 +63,7 @@ RDEPEND="${DEPEND}"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-3.0.1-man-pages.patch"
+	"${FILESDIR}/${P}-rename-audioitem.patch"
 )
 
 src_unpack() {
