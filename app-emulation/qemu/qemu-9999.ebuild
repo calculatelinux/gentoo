@@ -722,7 +722,7 @@ src_install() {
 		[[ -e check-report.html ]] && dodoc check-report.html
 
 		if use kernel_linux; then
-			udev_newrules "${FILESDIR}"/65-kvm.rules-r1 65-kvm.rules
+			udev_newrules "${FILESDIR}"/65-kvm.rules-r2 65-kvm.rules
 		fi
 
 		if use python; then
