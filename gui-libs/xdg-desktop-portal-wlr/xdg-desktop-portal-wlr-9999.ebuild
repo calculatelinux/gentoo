@@ -22,7 +22,7 @@ IUSE="elogind systemd"
 REQUIRED_USE="?? ( elogind systemd )"
 
 DEPEND="
-	>=media-video/pipewire-0.2.9:=
+	>=media-video/pipewire-0.3.2:=
 	dev-libs/wayland
 	>=dev-libs/wayland-protocols-1.14:=
 	elogind? ( >=sys-auth/elogind-237 )
@@ -33,9 +33,9 @@ RDEPEND="
 	sys-apps/xdg-desktop-portal
 "
 BDEPEND="
-	>=media-video/pipewire-0.2.9:=
+	>=media-video/pipewire-0.3.2:=
 	>=dev-libs/wayland-protocols-1.14
-	>=dev-util/meson-0.47.0
+	>=dev-util/meson-0.50.0
 	virtual/pkgconfig
 "
 

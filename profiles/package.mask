@@ -32,6 +32,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2021-03-01)
+# Mask new proj 8.x as it removes deprecated
+# API. Likely to break several consumers
+# which haven't yet ported.
+# bug #729098
+~sci-libs/proj-8.0.0
+
 # Sam James <sam@gentoo.org> (2021-02-28)
 # games-strategy/0ad-data has been merged
 # into games-strategy/0ad for simplicity.
@@ -220,7 +227,7 @@ app-office/orage
 xfce-extra/multiload-nandhp
 xfce-extra/xfce4-embed-plugin
 xfce-extra/xfce4-equake-plugin
-xfce-extra/xfce4-kbdleds-plugin
+<xfce-extra/xfce4-kbdleds-plugin-0.2.3
 xfce-extra/xfce4-windowck-plugin
 
 # Michał Górny <mgorny@gentoo.org> (2021-02-07)
