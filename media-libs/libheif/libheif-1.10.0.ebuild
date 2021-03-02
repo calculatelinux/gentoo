@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -10,7 +10,7 @@ if [[ ${PV} == *9999 ]] ; then
 	inherit git-r3
 else
 	SRC_URI="https://github.com/strukturag/libheif/releases/download/v${PV}/${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~x86"
+	KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 x86"
 fi
 
 DESCRIPTION="ISO/IEC 23008-12:2017 HEIF file format decoder and encoder"
@@ -19,7 +19,7 @@ HOMEPAGE="https://github.com/strukturag/libheif"
 LICENSE="GPL-3"
 SLOT="0/1.10"
 IUSE="+aom gdk-pixbuf go libde265 rav1e test +threads x265"
-REQUIRED_USE="test? ( go )"
+REQUIRED_USE="test? ( go libde265 )"
 RESTRICT="!test? ( test )"
 
 BDEPEND="test? ( dev-lang/go )"
@@ -48,6 +48,7 @@ src_prepare() {
 }
 
 multilib_src_configure() {
+	export GO111MODULE=auto
 	local econf_args=(
 		--disable-static
 		$(multilib_is_native_abi && use go || echo --disable-go)
