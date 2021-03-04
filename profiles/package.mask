@@ -32,6 +32,23 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2021-03-03)
+# Declared abandoned upstream and stuck
+# on Python 3.7.
+# Removal in 30 days.
+app-office/moneyguru
+
+# Sam James <sam@gentoo.org> (2021-03-03)
+# Doesn't seem to sync clock correctly
+# in some cases.
+# bug #772998
+~net-misc/openntpd-6.8_p1
+
+# Alfredo Tupone <tupone@gentoo.org> (2021-03-03)
+# no package uses it
+# Removal on 2021-04-02
+dev-ml/core_extended
+
 # Sam James <sam@gentoo.org> (2021-03-01)
 # Mask new proj 8.x as it removes deprecated
 # API. Likely to break several consumers
