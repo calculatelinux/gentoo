@@ -31,6 +31,20 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+# Conrad Kostecki <conikost@gentoo.org> (2021-03-05)
+# Dead upstream and unmaintained.
+# Removal in 30 days.
+app-misc/towitoko
+
+# Conrad Kostecki <conikost@gentoo.org> (2021-03-04)
+# Dead upstream and unmaintained.
+# Removal in 30 days.
+app-misc/logserial
+
+# Conrad Kostecki <conikost@gentoo.org> (2021-03-04)
+# Dead upstream, open bugs and unmaintained.
+# Removal in 30 days.
+net-dns/sheerdns
 
 # Mike Pagano <mpagano@gentoo.org> (2021-03-04)
 # This kernel version could corrupt your
