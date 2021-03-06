@@ -31,6 +31,40 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# David Seifert <soap@gentoo.org> (2021-03-06)
+# Unmaintained, abandoned upstream, tests fail, broken USE=doc, no revdeps
+# in tree. Removal on 2021-04-03.  Bug #623488, #697804, #774447.
+dev-libs/libgpuarray
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-03-06)
+# Fails to build, multiple bugs, outdated, nontrival, unmaintained
+# Bug 729876 and several others; removal in 30days
+dev-libs/klibc
+
+# Alfredo Tupone <tupone@gentoo.org> (2021-03-05)
+# unbuildable
+# Removal on 2021-04-0r52
+www-servers/ocsigenserver
+dev-ml/eliom
+dev-ml/js_of_ocaml
+
+# Conrad Kostecki <conikost@gentoo.org> (2021-03-05)
+# Deprecated by upstream and unsupported due EOL.
+# Multiple bugs open and unmaintained.
+# Removal in 30 days.
+sys-apps/newrelic-sysmond
+
+# Conrad Kostecki <conikost@gentoo.org> (2021-03-05)
+# Dead upstream, multiple bugs open and unmaintained.
+# Removal in 30 days.
+app-mobilephone/smsclient
+
+# Conrad Kostecki <conikost@gentoo.org> (2021-03-05)
+# Dead upstream, multiple bugs open and unmaintained.
+# Removal in 30 days.
+net-misc/capi4hylafax
+
 # Conrad Kostecki <conikost@gentoo.org> (2021-03-05)
 # Dead upstream and unmaintained.
 # Removal in 30 days.
