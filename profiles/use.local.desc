@@ -4034,6 +4034,9 @@ media-gfx/nvidia-texture-tools:glew - Enable support for The OpenGL Extension Wr
 media-gfx/openclipart:gzip - Compresses clip art using gzip
 media-gfx/openexr_viewers:cg - Add support for nvidia's cg shaders
 media-gfx/openscad:ccache - Use dev-util/ccache to speed up rebuilds
+media-gfx/openscad:gamepad - Add support for gamepads through dev-qt/qtgamepad
+media-gfx/openscad:headless - Build a binary without GUI
+media-gfx/openscad:spacenav - Add support for space navigator devices through dev-libs/libspnav
 media-gfx/openvdb:abi3-compat - Disables newer features to maintain compatibility with ABI3.
 media-gfx/openvdb:abi4-compat - Disables newer features to maintain compatibility with ABI4.
 media-gfx/openvdb:abi5-compat - Disables newer features to maintain compatibility with ABI5.
@@ -4112,6 +4115,7 @@ media-libs/freetype:utils - Install utilities and examples from ft2demos
 media-libs/freeverb3:forcefpu - Disable assembly code
 media-libs/freeverb3:plugdouble - Build plugins in double precision mode (default is float)
 media-libs/ganv:fdgl - Use experimental force-directed graph layout
+media-libs/gd:heif - Enable support for the heif format via media-libs/libheif
 media-libs/gd:webp - Enable support for the webp format
 media-libs/gegl:lensfun - Enable support for media-libs/lensfun.
 media-libs/gegl:umfpack - Enable sparse solving via sci-libs/umfpack.
@@ -7756,7 +7760,7 @@ sys-apps/pcmciautils:staticsocket - Add support for static sockets
 sys-apps/pcsc-lite:embedded - limit RAM and CPU ressources by disabling features
 sys-apps/pcsc-lite:libusb - Use dev-libs/libusb detection to hotplug new smartcard readers. This flag should only be enabled if you're running a non-Linux kernel or you don't want to use sys-fs/udev.
 sys-apps/pcsc-lite:policykit - Uses sys-auth/polkit to restrict access to smartcard readers or smartcars to given users.
-sys-apps/pcsc-lite:udev - Use sys-fs/udev rules to handle devices' permissions and hotplug support. Unless you know what you're doing do not disable this flag on Linux kernels. This is provided as an option for completeness.
+sys-apps/pcsc-lite:udev - Use virtual/libudev rules to handle devices' permissions and hotplug support. Unless you know what you're doing do not disable this flag on Linux kernels. This is provided as an option for completeness.
 sys-apps/pcsc-tools:network-cron - Monthly cronjob the update-smartcard_list script
 sys-apps/policycoreutils:audit - Enable support for sys-process/audit and use the audit_* functions (like audit_getuid instead of getuid())
 sys-apps/portage:apidoc - Build html API documentation with sphinx-apidoc.

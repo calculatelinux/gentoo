@@ -32,6 +32,23 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-03-07)
+# Unresolved build issue since 2019, QA issues, bugs #697870 and #705236
+# Blocks cleanup of equally broken sci-physics/looptools-2.8, bug #770796
+# Masked for removal on 2021-03-06.
+sci-physics/herwig++
+
+# Conrad Kostecki <conikost@gentoo.org> (2021-03-07)
+# Upstream since 2004 gone, does not supportnon-English characters,
+# multiple bugs open and unmaintained.
+# Removal in 30 days.
+app-portage/splat
+
+# William Hubbs <williamh@gentoo.org> (2021-03-07)
+# Dependency issues, need resolution upstream
+=app-emulation/docker-20.10.4
+=app-emulation/docker-20.10.5
+
 # David Seifert <soap@gentoo.org> (2021-03-06)
 # Unmaintained, abandoned upstream, tests fail, broken USE=doc, no revdeps
 # in tree. Removal on 2021-04-03.  Bug #623488, #697804, #774447.
@@ -42,12 +59,24 @@ dev-libs/libgpuarray
 # Bug 729876 and several others; removal in 30days
 dev-libs/klibc
 
-# Alfredo Tupone <tupone@gentoo.org> (2021-03-05)
+# Alfredo Tupone <tupone@gentoo.org> (2021-03-07)
 # unbuildable
-# Removal on 2021-04-0r52
+# Removal on 2021-04-05
 www-servers/ocsigenserver
 dev-ml/eliom
 dev-ml/js_of_ocaml
+dev-ml/ocaml-conduit
+dev-ml/dns
+dev-ml/ocaml-cohttp
+dev-ml/ocaml-dispatch
+dev-ml/ocaml-cstruct
+dev-ml/ocaml-ipaddr
+dev-ml/ocaml-uri
+dev-ml/re2
+dev-ml/bin-prot
+dev-ml/configurator
+dev-ml/ppx_traverse
+dev-ml/ppx_type_conv
 
 # Conrad Kostecki <conikost@gentoo.org> (2021-03-05)
 # Deprecated by upstream and unsupported due EOL.
