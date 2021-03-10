@@ -86,7 +86,6 @@ app-admin/logrotate:cron - Installs cron file
 app-admin/logrotate:selinux - Installs Security Enhanced Linux support
 app-admin/logstash-bin:x-pack - Enable additional features (may need a license)
 app-admin/mcollective:client - Install client utilities
-app-admin/mms-agent:monitoring - Install the monitoring agent
 app-admin/openrc-settingsd:systemd - Use the versions of dbus and polkit files provided by sys-apps/systemd
 app-admin/pass:X - Use x11-misc/xclip to copy passwords to the clipboard.
 app-admin/pass:dmenu - Add support for x11-misc/dmenu with the 'passmenu' program.
@@ -994,7 +993,6 @@ app-office/lyx:rcs - Add support for revision control via dev-vcs/rcs
 app-office/lyx:rtf - Add support for RTF import/export packages
 app-office/magicpoint:contrib - Install additional contributed scripts
 app-office/mdbtools:glib - Use functions provided by dev-libs/glib, not built-in
-app-office/orage:clock-panel-plugin - Build the clock plugin for the XFCE panel
 app-office/scribus:boost - Enable support for Boost based enhancement
 app-office/scribus:hunspell - Enable support for spell checking with app-text/hunspell
 app-office/scribus:minimal - Don't install headers (only required for e.g. plug-in developers)
@@ -3879,6 +3877,7 @@ media-gfx/alembic:zlib - Use sys-libs/zlib for compressions
 media-gfx/apngasm:7z - Enable support for 7zip compression
 media-gfx/apngasm:zopfli - Enable support for Zopfli compression
 media-gfx/asymptote:boehm-gc - Enables using the Boehm-Demers-Weiser conservative garbage collector
+media-gfx/asymptote:context - Enables support for ConTeXt format (dev-texlive/texlive-context)
 media-gfx/asymptote:curl - Enables running remote programs via net-misc/curl
 media-gfx/asymptote:offscreen - Enables off-screen rendering
 media-gfx/asymptote:sigsegv - Enables using dev-libs/libsigsegv
@@ -4046,7 +4045,6 @@ media-gfx/openvdb:numpy - Build pyopenvdb with support for dev-python/numpy
 media-gfx/openvdb:utils - Build utility binaries
 media-gfx/photoqt:devil - Support additional image formats using media-libs/devil
 media-gfx/photoqt:freeimage - Support additional image formats using media-libs/freeimage
-media-gfx/pngcrush:system-libs - Use libpng and libz provided by system
 media-gfx/potrace:metric - default to a4 paper size and metric measurement
 media-gfx/povray:io-restrictions - POV-Ray's mechanism for control of I/O operations
 media-gfx/pqiv:archive - Enable support for images in archives and cbX comic book files
@@ -4062,7 +4060,7 @@ media-gfx/xpaint:pgf - Support for loading PGF images
 media-gfx/xsane:ocr - Enable support for Optical Character Recognition reader
 media-gfx/yafaray:fastmath - Enable mathematic approximations to make code faster
 media-gfx/yafaray:fasttrig - Enable trigonometric approximations to make code faster
-media-gfx/yafaray:opencv - Use media-libs/opencv
+media-gfx/yafaray:opencv - Add support for media-libs/opencv image processing.
 media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
 media-libs/allegro:dumb - Enable media-libs/dumb module library support
 media-libs/allegro:physfs - Enable physfs support
@@ -4613,6 +4611,7 @@ media-sound/mpd:qobuz - Build plugin to access qobuz
 media-sound/mpd:recorder - Enables output plugin for recording radio streams
 media-sound/mpd:sid - Build with SID (Commodore 64 Audio) support
 media-sound/mpd:signalfd - Use the signalfd function in MPD's event loop
+media-sound/mpd:sndio - Enable support for the media-sound/sndio backend
 media-sound/mpd:soundcloud - Build plugin to access soundcloud
 media-sound/mpd:systemd - Enable support for systemd socket activation
 media-sound/mpd:tidal - Build plugin to access tidal
@@ -5397,6 +5396,7 @@ net-analyzer/wireshark:tfshark - Install tfshark, a terminal-based version of th
 net-analyzer/wireshark:tshark - Install tshark, to dump and analyzer network traffic from the command line
 net-analyzer/wireshark:udpdump - Install udpdump, to get packets exported from a source (like a network device or a GSMTAP producer) that are dumped to a pcap file
 net-analyzer/zabbix:agent - Enable zabbix agent (for to-be-monitored machines)
+net-analyzer/zabbix:agent2 - Enable go-based zabbix agent 2 (for to-be-monitored machines)
 net-analyzer/zabbix:frontend - Enable zabbix web frontend
 net-analyzer/zabbix:ipv6 - Turn on support of IPv6
 net-analyzer/zabbix:java - Enable Zabbix Java JMX Management Gateway
@@ -5896,7 +5896,6 @@ net-irc/rbot:figlet - Add dependency over app-misc/figlet, which is used by the 
 net-irc/rbot:fortune - Add dependency over games-misc/fortune-mod, which is needed to enable the "fortune" plugin for rbot. If the USE flag is disabled the plugin is also disabled by default.
 net-irc/rbot:host - Add dependency over net-dns/bind-tools (providing /usr/bin/host), which is needed to enable the "host" plugin for rbot. If the USE flag is disabled the plugin is also disabled by default.
 net-irc/rbot:nls - Build and install translation for the messages coming from the bot and its plugins (through dev-ruby/ruby-gettext).
-net-irc/rbot:shorturl - Add dependency over dev-ruby/shorturl, which is needed to enable the "shortenurl" plugin for rbot. If the USE flag is disabled the plugin is also disabled by default.
 net-irc/rbot:timezone - Add dependency over dev-ruby/tzinfo to enable the "time" plugin for rbot. If the USE flag is disabled the plugin is also disabled by default.
 net-irc/rbot:toilet - Add dependency over app-misc/toilet, which is used by the "figlet" plugin for rbot. If the USE flag is disabled the plugin will be unable to use toilet; if figlet is also disabled, the plugin will be disabled.
 net-irc/rbot:translator - Add dependency over dev-ruby/mechanize, which is needed to enable the "translator" plugin for rbot. If the USE flag is disabled the plugin is also disabled by default.
@@ -6329,7 +6328,6 @@ net-misc/dhcp:client - Install the dhclient program
 net-misc/dhcp:server - Install the dhcpd and dhcrelay programs
 net-misc/dhcpcd:embedded - Embed the definitions of dhcp options in the dhcpcd executable
 net-misc/dhcpcd:privsep - Enable support for privilege separation
-net-misc/dhcpcd-ui:gtk2 - Build with x11-libs/gtk+ version 2 instead of version 3
 net-misc/dibbler:resolvconf - Use resolvconf to handle /etc/resolv.conf updates
 net-misc/dropbear:bsdpty - Add support for legacy BSD pty's rather than dynamic UNIX pty's -- do not use this flag unless you are absolutely sure you actually want it
 net-misc/dropbear:multicall - Build all the programs as one little binary (to save space)
@@ -8436,7 +8434,6 @@ sys-power/nut:ups_drivers_usbhid-ups - Driver for USB/HID UPS equipment
 sys-power/nut:ups_drivers_victronups - Driver for IMV/Victron UPS unit Match, Match Lite, NetUps
 sys-power/nvclock:gtk - Install the GTK+ based graphical interface
 sys-power/nvclock:nvcontrol - Add NVCONTROL support for OpenGL options
-sys-power/sispmctl:gemplug - Install gemplug (management script)
 sys-power/suspend:crypt - Allows suspend and resume from encrypted disk
 sys-process/audit:gssapi - Enable GSSAPI support
 sys-process/criu:setproctitle - Make process titles of service workers to be more verbose

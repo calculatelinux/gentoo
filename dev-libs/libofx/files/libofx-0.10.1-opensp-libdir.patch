@@ -1,5 +1,4 @@
-https://github.com/libofx/libofx/pull/40
-https://bugs.gentoo.org/693458
+https://github.com/libofx/libofx/commit/a647c1db417459bded7fb47af69dff375eae83c1
 
 From a647c1db417459bded7fb47af69dff375eae83c1 Mon Sep 17 00:00:00 2001
 From: Sam James <sam@gentoo.org>
@@ -22,7 +21,6 @@ search for OpenSP in the right place.
 
 Bug: https://bugs.gentoo.org/693458
 Signed-off-by: Sam James <sam@gentoo.org>
-
 --- a/configure.ac
 +++ b/configure.ac
 @@ -112,7 +112,7 @@ AC_ARG_WITH(opensp-libs,

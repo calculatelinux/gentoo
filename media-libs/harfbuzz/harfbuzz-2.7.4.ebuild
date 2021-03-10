@@ -15,7 +15,7 @@ if [[ ${PV} = 9999 ]] ; then
 	inherit git-r3
 else
 	SRC_URI="https://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 fi
 
 LICENSE="Old-MIT ISC icu"
@@ -34,10 +34,10 @@ RDEPEND="
 	truetype? ( >=media-libs/freetype-2.5.0.1:2=[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}
-	${PYTHON_DEPS}
 	>=dev-libs/gobject-introspection-common-1.34
 "
 BDEPEND="
+	${PYTHON_DEPS}
 	virtual/pkgconfig
 	doc? ( dev-util/gtk-doc )
 	introspection? ( dev-util/glib-utils )

@@ -32,10 +32,61 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2021-03-09)
+# Last upstream release in 2013, ruby25-only.
+# Masked for removal in 30 days.
+dev-ruby/shorturl
+
+# Brian Evans <grknight@gentoo.org> (2021-03-08)
+# No longer consistently maintained, severely broken with PHP 8
+# No reverse dependencies, fails tests
+# Removal in 30 days.
+dev-php/PEAR-Config
+
+# Hans de Graaff <graaff@gentoo.org> (2021-03-08)
+# Last litc upstream release in 2010, no reverse dependencies,
+# ruby25-only. Includes fakeweb test dependency which is also
+# ruby25-only and has no other reverse dependencies.
+# Masked for removal in 30 days.
+dev-ruby/litc
+dev-ruby/fakeweb
+
+# Hans de Graaff <graaff@gentoo.org> (2021-03-08)
+# Last upstream release in 2009, no reverse dependencies,
+# no test suite.
+# Masked for removal in 30 days.
+dev-ruby/metaid
+
+# Hans de Graaff <graaff@gentoo.org> (2021-03-08)
+# Last upstream release in 2018, no reverse dependencies,
+# stuck on ruby25.
+# Masked for removal in 30 days.
+dev-ruby/nexpose
+
+# Hans de Graaff <graaff@gentoo.org> (2021-03-08)
+# No longer maintained upstream, last release in 2014.
+# ruby25-only.
+# Masked for removal in 30 days.
+dev-ruby/session
+
+# Hans de Graaff <graaff@gentoo.org> (2021-03-08)
+# gitsh is maintainer-needed and stuck on ruby25.
+# parslet is only needed for gitsh and also ruby25-only.
+# Masked for removal in 30 days.
+dev-vcs/gitsh
+dev-ruby/parslet
+
+# Hans de Graaff <graaff@gentoo.org> (2021-03-08)
+# Old ruby25-only slots. Use the newer slot instead.
+# Masked for removal in 30 days.
+dev-ruby/i18n:0.7
+dev-ruby/pcaprub:0.12
+dev-ruby/pg:0
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2021-03-07)
 # Unresolved build issue since 2019, QA issues, bugs #697870 and #705236
 # Blocks cleanup of equally broken sci-physics/looptools-2.8, bug #770796
-# Masked for removal on 2021-03-06.
+# Masked for removal on 2021-04-06.
 sci-physics/herwig++
 
 # Conrad Kostecki <conikost@gentoo.org> (2021-03-07)
@@ -43,11 +94,6 @@ sci-physics/herwig++
 # multiple bugs open and unmaintained.
 # Removal in 30 days.
 app-portage/splat
-
-# William Hubbs <williamh@gentoo.org> (2021-03-07)
-# Dependency issues, need resolution upstream
-=app-emulation/docker-20.10.4
-=app-emulation/docker-20.10.5
 
 # David Seifert <soap@gentoo.org> (2021-03-06)
 # Unmaintained, abandoned upstream, tests fail, broken USE=doc, no revdeps
@@ -77,6 +123,12 @@ dev-ml/bin-prot
 dev-ml/configurator
 dev-ml/ppx_traverse
 dev-ml/ppx_type_conv
+dev-ml/bin-prot
+dev-ml/ppx_driver
+dev-ml/ppx_core
+dev-ml/ppx_ast
+dev-ml/ppx_traverse_builtins
+dev-ml/jbuilder
 
 # Conrad Kostecki <conikost@gentoo.org> (2021-03-05)
 # Deprecated by upstream and unsupported due EOL.
@@ -304,42 +356,10 @@ media-plugins/vdr-quicktimer
 # Removal in 3 months. Bug #769440.
 media-gfx/gqview
 
-# Alexys Jacob <ultrabug@gentoo.org> (2021-02-08)
-# Multiple QA issues, CVE affected, unmaintained for packaging upstream.
-# Removal on 2021-03-08.  Bug #769509
-app-admin/mms-agent
-
 # Michał Górny <mgorny@gentoo.org> (2021-02-07)
 # Fails tests (and does not seem to test the old installed version
 # at least partially).  Needs further testing.
 >=dev-python/numpy-1.20
-
-# Michał Górny <mgorny@gentoo.org> (2021-02-07)
-# Discontinued upstream.  Last release was for Xfce 4.12, last commit
-# in 2015.  Still uses GTK+2.
-# Removal on 2021-03-09.  Bug #732750.
-app-office/orage
-
-# Michał Górny <mgorny@gentoo.org> (2021-02-07)
-# These plugins have not been ported to Xfce 4.16 / GTK+3.
-# They do not build against to-be-stable xfce4-panel.
-# Removal on 2021-03-09.  Bug #732754.
-xfce-extra/multiload-nandhp
-xfce-extra/xfce4-embed-plugin
-xfce-extra/xfce4-equake-plugin
-<xfce-extra/xfce4-kbdleds-plugin-0.2.3
-xfce-extra/xfce4-windowck-plugin
-
-# Michał Górny <mgorny@gentoo.org> (2021-02-07)
-# Fails to start due to unpackaged Ruby modules.  Abandoned upstream
-# in 2010.
-# Removal on 2021-03-09.  Bug #769371.
-xfce-extra/eatmonkey
-
-# Alfredo Tupone <tupone@gentoo.org> (2021-02-01)
-# no package uses it
-# Removal on 2021-03-04
-dev-ml/ocaml-data-notation
 
 # Michał Górny <mgorny@gentoo.org> (2021-02-01)
 # LibreSSL support is discontinued.  Please read the relevant news item
@@ -349,7 +369,7 @@ dev-ml/ocaml-data-notation
 dev-libs/libressl
 
 # Ulrich Müller <ulm@gentoo.org> (2021-01-29)
-# Pretest versions, masked for testing.
+# Preliminary test versions, masked for testing.
 ~app-editors/emacs-27.1.91
 ~app-editors/emacs-27.1.92
 ~app-editors/emacs-27.1.93
@@ -359,11 +379,6 @@ dev-libs/libressl
 # seems to be incompatible with revdeps using go-module, the variant
 # using the latter is still broken.
 dev-go/qt
-
-# Lars Wendler <polynomial-c@gentoo.org> (2020-12-09)
-# Masked until most broken packages have been fixed (bug #732648)
->=sys-devel/autoconf-2.70
->=sys-devel/autoconf-wrapper-14
 
 # Michał Górny <mgorny@gentoo.org> (2020-11-10)
 # This old Kodi version requires vulnerable dev-python/pillow
