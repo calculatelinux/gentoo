@@ -141,8 +141,9 @@ app-admin/rsyslog:zeromq - Build the ZeroMQ input and output modules (requires n
 app-admin/sagan:libdnet - Add support for dev-libs/libdnet
 app-admin/sagan:lognorm - Add support for log/rules normalizations via dev-libs/liblognorm
 app-admin/sagan:pcap - Add support for network packet capture via net-libs/libpcap
+app-admin/sagan:redis - Add support for the Redis database via dev-libs/hiredis
 app-admin/sagan:smtp - Build witch SMTP (E-Mail) support
-app-admin/sagan:snort - Add support to interact with Snort IDE using net-analyzer/snortsam'
+app-admin/sagan:snort - Add support to interact with Snort IDE using net-analyzer/snortsam
 app-admin/sagan-rules:lognorm - Install normalize rules support with dev-libs/liblognorm
 app-admin/salt:cheetah - Enable support for dev-python/cheetah3
 app-admin/salt:cherrypy - Enable support for using cherrypy.
@@ -265,7 +266,8 @@ app-backup/btrbk:mbuffer - Use sys-block/mbuffer to enable progress bar and buff
 app-backup/dar:dar32 - Enables --enable-mode=32 option, which replace infinite by 32 bit integers
 app-backup/dar:dar64 - Enables --enable-mode=64 option, which replace infinite by 64 bit integers
 app-backup/dar:gcrypt - Enables strong encryption support
-app-backup/dar:gpg - Enables usage of asymetric crypto algorithms
+app-backup/dar:gpg - Enables usage of asymmetric encryption algorithms
+app-backup/dar:rsync - Enables linking with net-libs/librsync for delta compression support
 app-backup/duplicity:s3 - Support for backing up to the Amazon S3 system
 app-backup/rear:udev - Have ReaR start backup when attaching your USB drive.
 app-backup/snapper:lvm - Enable LVM thinprovisioned snapshots support sys-fs/lvm2
@@ -299,7 +301,6 @@ app-crypt/dehydrated:cron - Install cron job to sign/renew non-existent/changed/
 app-crypt/eid-mw:dialogs - Enable "askaccess" dialog box, by using x11-libs/gtk+
 app-crypt/eid-mw:gtk - All dialogs are available, by using x11-libs/gtk+
 app-crypt/eid-mw:p11-kit - Support for app-crypt/p11-kit.
-app-crypt/eid-mw:p11v220 - Enable PKCS#11 v2.20 features.
 app-crypt/ekeyd:minimal - Only install the ekey-egd-linux service rather than the full ekeyd package.
 app-crypt/ekeyd:munin - Install a plugin for net-analyzer/munin to graph statistical data from ekeyd.
 app-crypt/ekeyd:usb - Build the libusb-based userland daemon for accessing the EntropyKey (alternative to the CDC USB driver). It is suggested to use this option by default, as the CDC driver in the kernel often seems to be fragile (or the gadget implementation on the EntropyKey is too buggy), and can cause various problems.
@@ -2391,12 +2392,30 @@ dev-python/PyQt5:websockets - Build bindings for the QtWebSockets module
 dev-python/PyQt5:widgets - Build bindings for the QtWidgets module
 dev-python/PyQt5:x11extras - Build bindings for the QtX11Extras module
 dev-python/PyQt5:xmlpatterns - Build bindings for the QtXmlPatterns module
-dev-python/QtPy:designer - Build bindings for the QtDesigner module and enable the designer plugin
-dev-python/QtPy:gui - Build bindings for the QtGui module
-dev-python/QtPy:printsupport - Build bindings for the QtPrintSupport module
-dev-python/QtPy:svg - Build bindings for the QtSvg module
-dev-python/QtPy:testlib - Build bindings for the QtTest module
-dev-python/QtPy:webengine - Build bindings for the QtWebEngine module
+dev-python/QtPy:declarative - Pull in bindings for the QtQml/QtQuick modules and enable the qmlscene plugin
+dev-python/QtPy:designer - Pull in bindings for the QtDesigner module and enable the designer plugin
+dev-python/QtPy:gui - Pull in bindings for the QtGui module
+dev-python/QtPy:help - Pull in bindings for the QtHelp module
+dev-python/QtPy:location - Pull in bindings for the QtLocation module
+dev-python/QtPy:multimedia - Pull in QtMultimedia and QtMultimediaWidgets modules
+dev-python/QtPy:network - Pull in bindings for the QtNetwork module
+dev-python/QtPy:opengl - Pull in bindings for the QtOpenGL module
+dev-python/QtPy:positioning - Pull in bindings for the QtPositioning module
+dev-python/QtPy:printsupport - Pull in bindings for the QtPrintSupport module
+dev-python/QtPy:qml - Pull in QtQml module
+dev-python/QtPy:quick - Pull in QtQuick and QtQuickWidgets modules
+dev-python/QtPy:sensors - Pull in bindings for the QtSensors module
+dev-python/QtPy:serialport - Pull in bindings for the QtSerialPort module
+dev-python/QtPy:sql - Pull in bindings for the QtSql module
+dev-python/QtPy:svg - Pull in bindings for the QtSvg module
+dev-python/QtPy:testlib - Pull in bindings for the QtTest module
+dev-python/QtPy:webchannel - Pull in bindings for the QtWebChannel module
+dev-python/QtPy:webengine - Pull in QtWebEngine and QtWebEngineWidgets modules
+dev-python/QtPy:websockets - Pull in bindings for the QtWebSockets module
+dev-python/QtPy:widgets - Pull in bindings for the QtWidgets module
+dev-python/QtPy:x11extras - Pull in bindings for the QtX11Extras module
+dev-python/QtPy:xml - Pull in QtXml module
+dev-python/QtPy:xmlpatterns - Pull in bindings for the QtXmlPatterns module
 dev-python/autobahn:scram - Add support for WAMP-SCRAM authentication
 dev-python/autobahn:xbr - Add support for XBR decentralized data markets and etherium blockchain
 dev-python/cryptography:idna - enable support for the old, deprecated IDNA specification (RFC 3490)
@@ -3687,6 +3706,7 @@ mail-client/mutt:pop - Enable support for POP3 mailboxes
 mail-client/mutt:smime-classic - Build classic_smime backend to support S/MIME
 mail-client/mutt:smtp - Enable support for direct SMTP delivery
 mail-client/mutt:tokyocabinet - Enable dev-db/tokyocabinet database backend for header caching
+mail-client/neomutt:autocrypt - Enable autocrypt.org support
 mail-client/neomutt:berkdb - Enable BDB (Berkley DB) backend for header caching
 mail-client/neomutt:gdbm - Enable GDBM (GNU dbm) backend for header caching
 mail-client/neomutt:gpgme - Build gpgme backend to support S/MIME, PGP/MIME and traditional/inline PGP
@@ -4113,6 +4133,7 @@ media-libs/freetype:utils - Install utilities and examples from ft2demos
 media-libs/freeverb3:forcefpu - Disable assembly code
 media-libs/freeverb3:plugdouble - Build plugins in double precision mode (default is float)
 media-libs/ganv:fdgl - Use experimental force-directed graph layout
+media-libs/gd:avif - Enable support for the avif format via media-libs/libavif
 media-libs/gd:heif - Enable support for the heif format via media-libs/libheif
 media-libs/gd:webp - Enable support for the webp format
 media-libs/gegl:lensfun - Enable support for media-libs/lensfun.
@@ -7159,7 +7180,6 @@ sci-geosciences/qgis:polar - Enable support for the polar coordinate system via 
 sci-geosciences/qgis:qml - Enable support Qml-based plugins using dev-qt/qtdeclarative
 sci-geosciences/viking:geoclue - Use app-misc/geoclue to determine current location
 sci-geosciences/viking:libexif - Use media-libs/libexif for EXIF support
-sci-geosciences/viking:mapnik - Enable a layer based on mapnik
 sci-geosciences/viking:oauth - Enable OAuth authentication for OSM
 sci-geosciences/viking:sqlite - Enable MBTiles support based on dev-db/sqlite
 sci-libs/ViSP:coin - Enables Coin3D support.
@@ -8224,7 +8244,6 @@ sys-fs/cryptmount:openssl - Support openssl-encryption of keys.
 sys-fs/cryptsetup:argon2 - Enable password hashing algorithm from app-crypt/argon2
 sys-fs/cryptsetup:gcrypt - Use dev-libs/libgcrypt crypto backend
 sys-fs/cryptsetup:kernel - Use kernel crypto backend (mainly for embedded systems)
-sys-fs/cryptsetup:luks1_default - Default to LUKS1 on disk encryption format rather than new LUKS2
 sys-fs/cryptsetup:nettle - Use dev-libs/nettle crypto backend
 sys-fs/cryptsetup:openssl - Use dev-libs/openssl crypto backend
 sys-fs/cryptsetup:pwquality - Use dev-libs/libpwquality for password quality checking
