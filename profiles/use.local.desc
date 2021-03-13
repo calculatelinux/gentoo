@@ -603,7 +603,6 @@ app-emulation/qemu:vte - Enable terminal support (x11-libs/vte) in the GTK+ inte
 app-emulation/qemu:xattr - Add support for getting and setting POSIX extended attributes, through sys-apps/attr. Requisite for the virtfs backend.
 app-emulation/qemu:xen - Enables support for Xen backends
 app-emulation/qemu:xfs - Support xfsctl() notification and syncing for XFS backed virtual disks.
-app-emulation/qemu:xkb - Depend on x11-libs/libxkbcommon to build qemu-keymap tool for converting xkb keymaps
 app-emulation/runc:ambient - Enable support for ambient capabilities set (Requires Linux kernel 4.3 or later).
 app-emulation/runc:apparmor - Enable AppArmor support.
 app-emulation/runc:kmem - Enable Kernel Memory Accounting.
@@ -3550,6 +3549,7 @@ kde-frameworks/kfilemetadata:office - Enable support for reading ODF and OOXML m
 kde-frameworks/kiconthemes:designer - Build plugins for dev-qt/designer
 kde-frameworks/kimageformats:avif - Support the AVIF image file format
 kde-frameworks/kimageformats:eps - Support the EPS graphics file format
+kde-frameworks/kimageformats:heif - Support for HEIF/HEIC images
 kde-frameworks/kinit:caps - Capabilities support for improved security and better OOM handling
 kde-frameworks/kio:designer - Build plugins for dev-qt/designer
 kde-frameworks/kio:kwallet - Enable permanent storage of passwords for kpasswdserver with kde-frameworks/kwallet
@@ -3559,6 +3559,7 @@ kde-frameworks/knotifications:phonon - Play notification sounds via media-libs/p
 kde-frameworks/knotifications:speech - Enable text-to-speech notification support
 kde-frameworks/knotifyconfig:phonon - Add sound support via media-libs/phonon
 kde-frameworks/kplotting:designer - Build plugins for dev-qt/designer
+kde-frameworks/krunner:activities - Enable search runner for KDE Activities history
 kde-frameworks/ktexteditor:editorconfig - Enable support for EditorConfig configuration files
 kde-frameworks/ktextwidgets:designer - Build plugins for dev-qt/designer
 kde-frameworks/ktextwidgets:speech - Enable text-to-speech support
@@ -4335,6 +4336,7 @@ media-libs/quarter:qthelp - Build API documentation in QtHelp format
 media-libs/quvi:json - Enable support for JSON output
 media-libs/raptor:json - Enable support for JSON parsing
 media-libs/raspberrypi-userland-bin:hardfp - Use armv6 hardfp ABI
+media-libs/rubberband:jni - Enables building of Java Native Interface library
 media-libs/rubberband:programs - Builds also executable applications
 media-libs/rubberband:vamp - Enables vamp plugins support (Audio analysing plugins)
 media-libs/sdl-mixer:fluidsynth - Use media-sound/fluidsynth for MIDI support
@@ -7429,7 +7431,6 @@ sci-mathematics/agda:stdlib - Install the standard library.
 sci-mathematics/bertini:optimization - Accept upstream's choices for -O option.
 sci-mathematics/cgal:mpfi - Enable support for multiple recision interval arithmetic via sci-libs/mpfi
 sci-mathematics/cgal:ntl - Enable support for dev-libs/ntl
-sci-mathematics/coq:camlp5 - Build using camlp5. This is required for some plugins like Ssreflect.
 sci-mathematics/cvc4:cln - Use sci-libs/cln
 sci-mathematics/cvc4:proofs - Support for proof generation
 sci-mathematics/cvc4:replay - Turn on the replay feature
