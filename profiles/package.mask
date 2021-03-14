@@ -32,6 +32,11 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2021-03-13)
+# Integrated into >=sys-apps/hwloc-2, completely broken, unmaintained,
+# no revdeps. Removal in 14 days. Bug #721938, #722916, #732046.
+sys-apps/netloc
+
 # Sam James <sam@gentoo.org> (2021-03-13)
 # Stuck on oasis.eclass, out of date
 # No reverse dependencies
@@ -291,11 +296,6 @@ sys-auth/authenticator
 # blocks sci-libs/fftw:2.1 removal, no revdeps.
 # Removal on 2021-03-27.  Bug #731038, #772812.
 media-gfx/videorbits
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2021-02-24)
-# Completely dissolved and moved into other PIM libraries upstream.
-# Masked for removal on 2021-03-10.
-kde-apps/kdepim-apps-libs
 
 # Matthew Thode <prometheanfire@gentoo.org> (2021-02-22)
 # Removing unneeded packages from tree Bug #772200
