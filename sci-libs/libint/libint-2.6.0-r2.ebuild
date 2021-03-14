@@ -42,6 +42,7 @@ src_configure() {
 		--with-g12-max-am=5 --with-g12-opt-am=3 \
 		--with-g12dkh-max-am=5 --with-g12dkh-opt-am=3 \
 		--enable-contracted-ints \
+		--enable-shared
 		$(use_enable static-libs static)
 }
 
