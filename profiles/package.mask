@@ -32,6 +32,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Göktürk Yüksek <gokturk@gentoo.org> (2021-03-14)
+# Dead upstream. No revdeps.
+# Removal in 60 days to allow people extra time
+# for transitioning out. Bug #776262.
+app-admin/lastpass-cli
+
+# Göktürk Yüksek <gokturk@gentoo.org> (2021-03-14)
+# Upstream's lack of versioning keeps breaking the Manifest.
+# They are also not responsive to license clarification questions.
+# No revdeps. Removal in 14 days. Bug #581102, #7513730
+app-admin/lastpass-binary-component
+
 # David Seifert <soap@gentoo.org> (2021-03-13)
 # Integrated into >=sys-apps/hwloc-2, completely broken, unmaintained,
 # no revdeps. Removal in 14 days. Bug #721938, #722916, #732046.
@@ -241,16 +253,6 @@ dev-ml/core_extended
 # which haven't yet ported.
 # bug #729098
 ~sci-libs/proj-8.0.0
-
-# Sam James <sam@gentoo.org> (2021-02-28)
-# games-strategy/0ad-data has been merged
-# into games-strategy/0ad for simplicity.
-# Note that in most cases, the latter uses
-# upstream pre-built assets anyway.
-# Nothing should really be using this.
-# bug #735352, bug #768930
-# Removal in 14 days.
-games-strategy/0ad-data
 
 # Bernd Waibel <waebbl-gentoo@posteo.net> (2021-02-27)
 # Mask until removal of media-gfx/openexr_viewers.
