@@ -1468,6 +1468,7 @@ dev-haskell/gtk:gio - Depend on GIO package, thereby enabling certain features.
 dev-haskell/gtk2hs-buildtools:closuresignals - Use the the GClosure-based signals implementation.
 dev-haskell/gtk3:fmode-binary - Set the default file translation mode for file I/O operations to _O_BINARY.
 dev-haskell/gtk3:gio - Depend on GIO package, thereby enabling certain features.
+dev-haskell/hackage-security:lukko - Use @lukko@ for file-locking, otherwise use @GHC.IO.Handle.Lock@
 dev-haskell/hackage-security:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/hakyll:buildwebsite - Build the hakyll website
 dev-haskell/hakyll:checkexternal - Include external link checking
@@ -3999,7 +4000,6 @@ media-gfx/gmic:cli - Build CLI interface
 media-gfx/gmic:digikam - Build media-gfx/digikam plugin
 media-gfx/gmic:krita - Build media-gfx/krita plugin
 media-gfx/gmic:opencv - Enable support for webcams using the OpenCV library
-media-gfx/gnofract4d:doc - Install user manual
 media-gfx/gnome-photos:flickr - Ensure runtime Flickr support
 media-gfx/graphicsmagick:dynamic-loading - Compile graphicsmagick with dynamically loadable modules
 media-gfx/graphicsmagick:fpx - Enable FlashPix support with media-libs/libfpx
@@ -5166,7 +5166,6 @@ media-video/x264-encoder:ffmpegsource - Enable ffmpegsource aka ffms support, di
 media-video/x264-encoder:interlaced - Enable interlaced encoding support, this can decrease encoding speed by up to 2%
 media-video/xine-ui:vdr - Enables Video Disk Recorder support
 net-analyzer/2ping:server - Install the server init scripts.
-net-analyzer/argus:libtirpc - Build against net-libs/libtirpc for RPC support
 net-analyzer/argus-clients:ft - Enable support for flow packets through net-analyzer/flow-tools
 net-analyzer/barnyard:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/barnyard2:gre - Enable GRE support
@@ -5211,7 +5210,6 @@ net-analyzer/httping:tfo - Enable support for TCP Fast Open
 net-analyzer/hydra:gcrypt - Enable radmin2 support through dev-libs/libgcrypt
 net-analyzer/hydra:libssh - Enable SSH support through net-libs/libssh
 net-analyzer/hydra:mongodb - MongoDB support through dev-libs/mongo-c-driver
-net-analyzer/hydra:ncp - NCP protocol (NetWare) support through ncpfs
 net-analyzer/icinga2:console - Adds support for line-editing in the console
 net-analyzer/icinga2:jumbo-build - Combine source files to speed up build process, requires more memory
 net-analyzer/icinga2:lto - Adds support for link time optimization
@@ -5284,8 +5282,11 @@ net-analyzer/netdata:tor - Enable monitoring of tor
 net-analyzer/netdata:xen - Enable monitoring of xen
 net-analyzer/netperf:demo - Emit interim results during the run. May affect results
 net-analyzer/nfdump:ftconv - Build the flow-tools to nfdump converter
+net-analyzer/nfdump:jnat - Build nfudmp to support JunOS NAT event logging
+net-analyzer/nfdump:nfpcapd - Build nfpcapd collector to create netflow data from precollected pcap traffic
 net-analyzer/nfdump:nfprofile - Build nfprofile used by NfSen
 net-analyzer/nfdump:nftrack - Build nfprofile used by PortTracker
+net-analyzer/nfdump:nsel - Build nfudmp to support NSEL/NEL event data
 net-analyzer/nfdump:readpcap - Build nfcapd collector to read from pcap file instead ofnetwork data
 net-analyzer/nfdump:sflow - Build sflow collector sfcpad
 net-analyzer/nmap:libssh2 - Enable SSH support through net-libs/libssh2
