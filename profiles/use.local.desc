@@ -35,7 +35,6 @@ app-admin/clsync:socket-library - Build the control and monitoring socket librar
 app-admin/conky:apcupsd - Enable support for sys-power/apcupsd
 app-admin/conky:bundled-toluapp - Enable support for bundled toluapp. This only makes sense in combination with the lua-* flags
 app-admin/conky:cmus - Enable monitoring of music played by media-sound/cmus
-app-admin/conky:eve - Enable support for the eve-online skill monitor
 app-admin/conky:ical - Enable support for events from iCalendar (RFC 5545) files using dev-libs/libical
 app-admin/conky:iostats - Enable support for per-task I/O statistics
 app-admin/conky:irc - Enable support for displaying everything from an irc channel using net-libs/libircclient
@@ -416,7 +415,6 @@ app-editors/nano:justify - Enable justify/unjustify functions for text formattin
 app-editors/nano:magic - Add magic file support (sys-apps/file) to automatically detect appropriate syntax highlighting
 app-editors/nano:minimal - Disable all fancy features, including ones that otherwise have a dedicated USE flag (such as spelling).
 app-editors/nano:split-usr - Enable this if /bin and /usr/bin are separate directories
-app-editors/ne:tinfo - Link against libtinfo from sys-libs/ncurses
 app-editors/neovim:lto - Build with Link Time Optimization (LTO)
 app-editors/neovim:nvimpager - Install nvimpager symlink to less.sh macro
 app-editors/neovim:tui - Build the neovim unix tui
@@ -4676,6 +4674,8 @@ media-sound/pragha:peas - Enable various plugins that will pull in dev-libs/libp
 media-sound/pragha:playlist - Enable enhanced playlist support using dev-libs/totem-pl-parser
 media-sound/pragha:rygel - Share music on DLNA using net-misc/rygel
 media-sound/pragha:soup - Search metadata on AcoustID and radios on TuneIn using net-libs/libsoup
+media-sound/puddletag:acoustid - Use media-libs/chromaprint for acoustic fingerprinting
+media-sound/puddletag:quodlibet - Enables support for editing media-sound/quodlibet databases
 media-sound/pulseaudio:X - Build the X11 publish module to export PulseAudio information through X11 protocol for clients to make use. Don't enable this flag if you want to use a system wide instance. If unsure, enable this flag.
 media-sound/pulseaudio:alsa-plugin - Request installing media-plugins/alsa-plugins with PulseAudio plugin enabled. This ensures that clients supporting ALSA only will use PulseAudio.
 media-sound/pulseaudio:asyncns - Use libasyncns for asynchronous name resolution.
@@ -5452,7 +5452,6 @@ net-dialup/ppp:eap-tls - Enables support for Extensible Authentication Protocol 
 net-dialup/ppp:gtk - Installs GTK+ password prompting program that can be used by passprompt.so PPP plugin for reading the password from a X11 input terminal
 net-dialup/ppp:ipv6 - Enables support for IP version 6
 net-dialup/ppp:radius - Enables RADIUS support
-net-dialup/xl2tpd:dnsretry - Patch for host lookup retries, activated by redial feature
 net-dialup/xl2tpd:kernel - Enable kernel interface for PPPoL2TP
 net-dns/avahi:autoipd - Build and install the IPv4LL (RFC3927) network address configuration daemon
 net-dns/avahi:bookmarks - Install the avahi-bookmarks application (requires dev-python/twisted)
@@ -8392,6 +8391,7 @@ sys-libs/timezone-data:leaps-timezone - Install the set of "right" timezones; th
 sys-libs/timezone-data:zic-slim - Default to 'slim' file format for /usr/share/zoneinfo. Otherwise 'fat' format is used. Not all programs can handle 'slim' format'.
 sys-libs/uclibc-ng:symlink-compat - Explicitly add sym links for libdl.so.0, libm.so.0, and friends for backward compatibility with sys-libs/uclibc-ng-1.0.17 and earlier
 sys-libs/zlib:minizip - include the minizip library for quick and dirty zip extraction
+sys-libs/zlib-ng:compat - Enable compatibility to sys-libs/zlib
 sys-power/apcupsd:modbus - Enable MODBUS support over USB
 sys-power/intel-undervolt:elogind - Use elogind hook to apply voltage after system sleep
 sys-power/nut:ipmi - Support IPMI-based UPSes.
@@ -8452,7 +8452,6 @@ sys-power/suspend:crypt - Allows suspend and resume from encrypted disk
 sys-process/audit:gssapi - Enable GSSAPI support
 sys-process/criu:setproctitle - Make process titles of service workers to be more verbose
 sys-process/cronie:anacron - Install the periodic anacron command scheduler.
-sys-process/cronie:inotify - Enable inotify filesystem monitoring support.
 sys-process/fcron:debug - Enable debug code and output. Since version 3.0.5 this will no longer force foreground execution, and fcron will be able to run as a service properly.
 sys-process/fcron:mta - Enable mta support for sending emails from fcron
 sys-process/fcron:pam - Enable PAM support for fcron. This means that fcron will pass through the "fcron" stack before executing the jobs, and fcrontab will use the "fcrontab" stack to authenticate the user before editing its crontab file.
@@ -8782,7 +8781,6 @@ x11-misc/compton:opengl - Enable VSync with SGI_swap_control OpenGL extension
 x11-misc/dunst:dunstify - Experimental replacement for notify-send.
 x11-misc/e16-keyedit:gtk2 - Build with x11-libs/gtk+:2 instead of x11-libs/gtk+:3
 x11-misc/fbpager:xrender - Enable transparency support via x11-libs/libXrender
-x11-misc/gpaste:applet - Enable gpaste-applet
 x11-misc/gpaste:gnome - Enable proper gnome support and enable gnome shell extension.
 x11-misc/grsync:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 x11-misc/gtkdialog:gtk2 - Build with GTK+2 instead of GTK+3
