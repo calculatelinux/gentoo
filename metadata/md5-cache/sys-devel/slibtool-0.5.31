@@ -1,9 +1,9 @@
 DEFINED_PHASES=configure
 DESCRIPTION=A skinny libtool implementation, written in C
 EAPI=7
-HOMEPAGE=https://git.midipix.org/cgit.cgi/slibtool
-KEYWORDS=~amd64 ~arm
+HOMEPAGE=https://git.foss21.org/slibtool
+KEYWORDS=~amd64 ~arm ~ia64 ~sparc
 LICENSE=MIT
 SLOT=0
-SRC_URI=https://git.midipix.org/cgit.cgi/slibtool/snapshot/slibtool-0.5.31.tar.xz
-_md5_=53894ae7da4ec4316b043651eafc42ae
+SRC_URI=https://dl.midipix.org/slibtool/slibtool-0.5.31.tar.xz
+_md5_=15105b867a39a6cc59bd00c6307b985b

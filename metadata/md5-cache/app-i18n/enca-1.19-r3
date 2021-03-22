@@ -10,5 +10,5 @@ LICENSE=GPL-2
 RDEPEND=iconv? ( virtual/libiconv ) recode? ( app-text/recode:= )
 SLOT=0
 SRC_URI=https://dl.cihar.com/enca/enca-1.19.tar.xz
-_eclasses_=autotools	9988ecbe04129214297a7bbf3d253710	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	4ba6c345bf49883c84d5fa5c9bf40c0b	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=c45efca6cc7b3498978a7d90a9984178

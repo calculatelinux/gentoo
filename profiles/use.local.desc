@@ -441,7 +441,7 @@ app-emacs/bbdb:tex - Install plain TeX support files
 app-emacs/bbdb:vm - Add support for app-emacs/vm
 app-emacs/calfw:howm - Add support for the app-emacs/howm note-taking tool
 app-emacs/elscreen:wanderlust - Include support for app-emacs/wanderlust
-app-emacs/emacs-common-gentoo:games - Support shared score files for games
+app-emacs/emacs-common:games - Support shared score files for games
 app-emacs/emacs-w3m:gzip-el - Compress bundled Emacs Lisp source
 app-emacs/mu-cite:bbdb - Include support for app-emacs/bbdb
 app-emacs/org-mode:contrib - Install user-contributed files
@@ -2009,6 +2009,7 @@ dev-libs/gf2x:custom-tune - Extra long compile time for tuning hardware specific
 dev-libs/gf2x:fft - Build an FFT API for multiplication of 2 polynomials over GF(2)
 dev-libs/gjs:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 dev-libs/glib:dbus - Enable dependencies required by glib libraries using dbus service to manage settings saving
+dev-libs/glib:elf - Enable support for listing and extracting from ELF resource files with gresource tool
 dev-libs/glib:mime - Pull in shared MIME database that many glib-based applications require at runtime to detect or open files. Warning: do not disable this flag unless installing on a headless server.
 dev-libs/glib:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 dev-libs/glib:systemtap - Build support for profiling and tracing using dev-util/systemtap
@@ -2725,6 +2726,7 @@ dev-scheme/kawa:sax - Assume SAX2 is available with dev-java/sax
 dev-scheme/kawa:servlets - Build support for generating servlets with Java servletapi
 dev-scheme/kawa:swing - Assume Swing is available
 dev-scheme/kawa:xqtests - Support XQuery Test Suite
+dev-scheme/racket:chez - Build Racket on Chez (Racket CS)
 dev-scheme/racket:futures - Enable racket/future library for fine-grained hardware parallelism
 dev-scheme/racket:places - Enable racket/place library for share-nothing parallelism and message-passing communication. Compared to futures, places are heavyweight, but they have a simpler performance model.
 dev-scheme/racket:threads - Enable support for green threads
@@ -3768,7 +3770,6 @@ mail-filter/opendkim:stats - Add support for statistics (requires 'opendbx' flag
 mail-filter/opendkim:unbound - Use the unbound dnssec library to perform DKIM DNS queries.
 mail-filter/opendmarc:reports - Install the reports binaries: expire, import, reports, params
 mail-filter/opendmarc:spf - Use the mail-filter/libspf2 for Sender Policy Framework checking
-mail-filter/postfwd:tools - Install additional tools for testing postfwd
 mail-filter/pyzor:gdbm - Enables the Gdbm back-end database engine for pyzord
 mail-filter/pyzor:gevent - Use dev-python/gevent to enable asynchronous operation
 mail-filter/pyzor:mysql - Enables the MySQL back-end database engine for pyzord through dev-python/mysqlclient.
@@ -3851,6 +3852,8 @@ media-fonts/culmus:fancy - Install fancy fonts
 media-fonts/culmus:fontforge - Use media-gfx/fontforge to build fonts from source
 media-fonts/culmus:taamey - Install taamey fonts
 media-fonts/dejavu:fontforge - Use media-gfx/fontforge to build fonts from source
+media-fonts/essays1743:otf - Install the OpenType version of the font
+media-fonts/essays1743:ttf - Install the TrueType version of the font
 media-fonts/fira-mono:otf - Install the OpenType version of the font
 media-fonts/fira-mono:ttf - Install the TrueType version of the font
 media-fonts/fira-sans:otf - Install the OpenType version of the font
@@ -5061,17 +5064,12 @@ media-video/pipewire:pulseaudio - Enable emulation to be able to run PulseAudio 
 media-video/pipewire:vulkan - Enable vulkan spa plugin integration
 media-video/qmplay2:audiofilters - Build with AudioFilters module
 media-video/qmplay2:avdevice - Build FFmpeg module with libavdevice suport
-media-video/qmplay2:avresample - Use libavresample instead of libswresample
 media-video/qmplay2:cdio - Build with AudioCD module
 media-video/qmplay2:cuvid - Build with CUVID module
 media-video/qmplay2:extensions - Build with Extensions module and enable other plugins
 media-video/qmplay2:gme - Build Chiptune with GME support
 media-video/qmplay2:inputs - Build with Inputs module
-media-video/qmplay2:lastfm - Build with LastFM support
 media-video/qmplay2:libass - Build with SSA/ASS subtitles rendering support
-media-video/qmplay2:lyrics - Build with lyrics support
-media-video/qmplay2:mediabrowser - Build with MediaBrowser support
-media-video/qmplay2:mpris2 - Build Extensions with MPRIS2 support
 media-video/qmplay2:notifications - Build additional notifications module
 media-video/qmplay2:shaders - Compile Vulkan shaders using media-libs/shaderc
 media-video/qmplay2:sid - Build Chiptune with SIDPLAY support
@@ -6010,6 +6008,7 @@ net-libs/libqmi:mbim - Support QMI over Mobile Broadband Interface Model (MBIM)
 net-libs/libsoup:brotli - Enable brotli decompression support
 net-libs/libsoup:gssapi - Enable GSSAPI support
 net-libs/libsoup:samba - Use net-fs/samba for NTLM Single Sign-On
+net-libs/libsoup:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 net-libs/libsrtp:aesicm - Use AES ICM cryptographic algorithm
 net-libs/libsrtp:console - Use /dev/console instead of stdout for error messages
 net-libs/libsrtp:nss - Use NSS crypto primitives
@@ -7779,6 +7778,7 @@ sys-apps/pcsc-lite:libusb - Use dev-libs/libusb detection to hotplug new smartca
 sys-apps/pcsc-lite:policykit - Uses sys-auth/polkit to restrict access to smartcard readers or smartcars to given users.
 sys-apps/pcsc-lite:udev - Use virtual/libudev rules to handle devices' permissions and hotplug support. Unless you know what you're doing do not disable this flag on Linux kernels. This is provided as an option for completeness.
 sys-apps/pcsc-tools:network-cron - Monthly cronjob the update-smartcard_list script
+sys-apps/plocate:io-uring - Enable efficient I/O via sys-libs/liburing.
 sys-apps/policycoreutils:audit - Enable support for sys-process/audit and use the audit_* functions (like audit_getuid instead of getuid())
 sys-apps/portage:apidoc - Build html API documentation with sphinx-apidoc.
 sys-apps/portage:gentoo-dev - Enable features required for Gentoo ebuild development.
@@ -8597,7 +8597,6 @@ www-client/opera:widevine - Unsupported closed-source DRM capability (required b
 www-client/opera-beta:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
 www-client/opera-beta:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
 www-client/opera-developer:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
-www-client/opera-developer:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
 www-client/qutebrowser:scripts - Installs userscripts from the misc/userscripts directory to /usr/share/qutebrowser/userscripts.
 www-client/seamonkey:chatzilla - Build Mozilla's IRC client (default on)
 www-client/seamonkey:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
@@ -8710,9 +8709,8 @@ x11-base/xorg-server:xnest - Build the Xnest server
 x11-base/xorg-server:xorg - Build the Xorg X server (HIGHLY RECOMMENDED)
 x11-base/xorg-server:xvfb - Build the Xvfb server
 x11-base/xorg-x11:fonts - Install fonts from X.Org
-x11-drivers/nvidia-drivers:X - Install the X.org driver, OpenGL libraries, XvMC libraries, and VDPAU libraries
 x11-drivers/nvidia-drivers:compat - Install non-GLVND libGL for backwards compatibility
-x11-drivers/nvidia-drivers:driver - Install the kernel driver module
+x11-drivers/nvidia-drivers:driver - Install kernel driver modules
 x11-drivers/nvidia-drivers:kms - Enable support for kernel mode setting (KMS)
 x11-drivers/nvidia-drivers:tools - Install additional tools such as nvidia-settings
 x11-drivers/nvidia-drivers:uvm - Install the Unified Memory kernel module (nvidia-uvm) for sharing memory between CPU and GPU in CUDA programs
@@ -8760,6 +8758,7 @@ x11-libs/libwnck:tools - Install wnckprop-3 and wnck-urgency-monitor-3 command-l
 x11-libs/libxcb:xkb - Enable the XCB keyboard extension
 x11-libs/motif:motif22-compatibility - Compatibility with Open Motif 2.2
 x11-libs/pango:X - Build and install the legacy pangoxft library
+x11-libs/pango:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 x11-libs/pixman:loongson2f - Enable Loongson2f MMI optimizations.
 x11-libs/qscintilla:designer - Build plugin for Qt Designer
 x11-libs/qwt:designer - Installs dev-qt/designer plugin.

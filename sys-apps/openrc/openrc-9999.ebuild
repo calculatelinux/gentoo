@@ -72,6 +72,7 @@ src_compile() {
 
 	MAKE_ARGS="${MAKE_ARGS}
 		LIBNAME=$(get_libdir)
+		LIBDIR=${EPREFIX}/$(get_libdir)
 		LIBEXECDIR=${EPREFIX}/lib/rc
 		MKBASHCOMP=yes
 		MKNET=$(usex newnet)
@@ -81,13 +82,11 @@ src_compile() {
 		MKPAM=$(usev pam)
 		MKSTATICLIBS=no
 		MKZSHCOMP=yes
+		OS=Linux
 		SH=$(usex bash /bin/bash /bin/sh)"
 
-	local brand="Unknown"
-	MAKE_ARGS="${MAKE_ARGS} OS=Linux"
-	brand="Linux"
-	export BRANDING="Gentoo ${brand}"
 	use prefix && MAKE_ARGS="${MAKE_ARGS} MKPREFIX=yes PREFIX=${EPREFIX}"
+export BRANDING="Gentoo Linux"
 	export DEBUG=$(usev debug)
 	export MKTERMCAP=$(usev ncurses)
 

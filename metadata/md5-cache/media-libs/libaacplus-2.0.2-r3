@@ -11,5 +11,5 @@ RDEPEND=!media-sound/aacplusenc fftw? ( >=sci-libs/fftw-3.3.3-r2:3.0[abi_x86_32(
 RESTRICT=bindist mirror
 SLOT=0
 SRC_URI=https://tipok.org.ua/downloads/media/aacplus/libaacplus/libaacplus-2.0.2.tar.gz https://dev.gentoo.org/~aballier/libaacplus-2.0.2.tar.gz http://www.3gpp.org/ftp/Specs/archive/26_series/26.410/26410-800.zip
-_eclasses_=autotools	9988ecbe04129214297a7bbf3d253710	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	6b3d5ee849dafe6cdfd7b859c211fb01	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	9a65133006c608964888346a412cc454	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	4ba6c345bf49883c84d5fa5c9bf40c0b	libtool	f143db5a74ccd9ca28c1234deffede96	multibuild	6b3d5ee849dafe6cdfd7b859c211fb01	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	9a65133006c608964888346a412cc454	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=8a1a65b30db911d025c6114c4941bf36
