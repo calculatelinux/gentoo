@@ -7,4 +7,4 @@ LICENSE=BSD
 SLOT=0/4
 SRC_URI=https://github.com/cjlin1/liblinear/archive/v243.tar.gz -> liblinear-243.tar.gz
 _eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=666b7426ad4c1456fc5ecb54b208c7d7
+_md5_=933c6c9b366cc93636d280d3bbec08a8

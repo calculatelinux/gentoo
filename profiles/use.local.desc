@@ -2200,6 +2200,7 @@ dev-libs/poco:util - Several utility classes (like logger, timer, config file pa
 dev-libs/poco:zip - Add support for the zip & gz archive formats
 dev-libs/ppl:cdd - Build the ppl_lcdd program for vertex/facet enumeration accepting the same input format as the programs shipped with sci-libs/cddlib and sci-libs/lrslib
 dev-libs/ppl:lpsol - Build the ppl_lpsol linear program solver that uses sci-mathematics/glpk for its input routines
+dev-libs/raft:zfs - ZFS support
 dev-libs/serdisplib:tools - Build optional tools.
 dev-libs/simdjson:tools - Build and install extra command line tools
 dev-libs/softhsm:gost - Enable gost algorithm
@@ -5299,6 +5300,7 @@ net-analyzer/nsca:crypt - Build support for crypted communication with nsca, thr
 net-analyzer/nsca:minimal - Only build and install the send_nsca command and not the daemon. This allows a very minimal install with no overhead when setting up a node.
 net-analyzer/openvas-scanner:cron - Install a cron job to update GVM's feed daily.
 net-analyzer/openvas-scanner:extras - Html docs support
+net-analyzer/openvas-scanner:snmp - Build againts net-analyzer/net-snmp for "improved SNMP support"
 net-analyzer/ospd:extras - Html docs support
 net-analyzer/ossec-hids:agent - Build "agent" installation target (see package description)
 net-analyzer/ossec-hids:hybrid - Build "hybrid" installation target

@@ -46,7 +46,7 @@ if [[ ${PV} != *9999 ]]; then
 			${SRC_URI_KORG}/${PN}-htmldocs-${DOC_VER}.tar.${SRC_URI_SUFFIX}
 			)"
 	[[ "${PV}" == *_rc* ]] || \
-	KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc ~x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+	KEYWORDS="~alpha amd64 ~arm ~arm64 hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc ~x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 fi
 
 LICENSE="GPL-2"
@@ -55,7 +55,10 @@ IUSE="+blksha1 +curl cgi doc emacs gnome-keyring +gpg highlight +iconv libressl 
 
 # Common to both DEPEND and RDEPEND
 DEPEND="
-	gnome-keyring? ( app-crypt/libsecret )
+	gnome-keyring? (
+		app-crypt/libsecret
+		dev-libs/glib:2
+	)
 	!libressl? ( dev-libs/openssl:0= )
 	libressl? ( dev-libs/libressl:= )
 	sys-libs/zlib
@@ -69,7 +72,6 @@ DEPEND="
 		net-misc/curl
 		webdav? ( dev-libs/expat )
 	)
-	emacs? ( >=app-editors/emacs-23.1:* )
 	iconv? ( virtual/libiconv )
 "
 
@@ -113,6 +115,8 @@ BDEPEND="
 		app-text/xmlto
 		sys-apps/texinfo
 	)
+	emacs? ( >=app-editors/emacs-23.1:* )
+	gnome-keyring? ( virtual/pkgconfig )
 	nls? ( sys-devel/gettext )
 	test? (	app-crypt/gnupg	)
 "
@@ -372,7 +376,7 @@ src_compile() {
 
 	if use gnome-keyring ; then
 		pushd contrib/credential/libsecret &>/dev/null || die
-		git_emake || die "emake git-credential-libsecret failed"
+		git_emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" PKG_CONFIG="$(tc-getPKG_CONFIG)"
 		popd &>/dev/null || die
 	fi
 

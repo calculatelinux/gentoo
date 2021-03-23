@@ -6,5 +6,5 @@ HOMEPAGE=https://git.foss21.org/slibtool
 LICENSE=MIT
 PROPERTIES=live
 SLOT=0
-_eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
-_md5_=e86bd187f111258d0f01ba645025d757
+_eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=7dafb1128908f5ad129123684bc1b90a

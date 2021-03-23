@@ -6,4 +6,5 @@ KEYWORDS=~amd64 ~arm ~ia64 ~sparc
 LICENSE=MIT
 SLOT=0
 SRC_URI=https://dl.midipix.org/slibtool/slibtool-0.5.32.tar.xz
-_md5_=e86bd187f111258d0f01ba645025d757
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=7dafb1128908f5ad129123684bc1b90a
