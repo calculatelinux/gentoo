@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install prepare
 DEPEND=python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python3_8? ( dev-lang/python:3.8 ) python_targets_python3_9? ( dev-lang/python:3.9 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
-DESCRIPTION=Python extension module generator for C and C++ libraries
+DESCRIPTION=Python bindings generator for C/C++ libraries
 EAPI=7
 HOMEPAGE=https://www.riverbankcomputing.com/software/sip/intro
 IUSE=doc python_targets_python3_7 python_targets_python3_8 python_targets_python3_9
@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( python_targets_python3_7 python_targets_python3_8 python_targe
 SLOT=0/12
 SRC_URI=https://www.riverbankcomputing.com/static/Downloads/sip/4.19.25/sip-4.19.25.tar.gz
 _eclasses_=multibuild	6b3d5ee849dafe6cdfd7b859c211fb01	multilib	d410501a125f99ffb560b0c523cd3d1e	python-r1	6d099888c5b4dd4868c26508df307e95	python-utils-r1	2dc8e06a3429719b43e9140f7292a425	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=593e79694c883b0e6f2b347e248f0d79
+_md5_=9b7b162bea8d96ba0b1cf98fd65d55db
