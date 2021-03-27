@@ -32,6 +32,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Jimi Huotari <chiitoo@gentoo.org> (2021-03-26)
+# No consumers since 2020-09-05 (dev-libs/liboobs), and no known
+# stand-alone use.
+# Removal on 2021-04-25.
+app-admin/system-tools-backends
+
+# Michał Górny <mgorny@gentoo.org> (2021-03-26)
+# Pins to a vulnerable version of dev-python/urllib3.  No maintainer
+# in Gentoo.
+# Removal on 2021-04-25.  Bug #714860.
+dev-python/elasticsearch-curator
+
 # Lars Wendler <polynomial-c@gentoo.org> (2021-03-22)
 # Has unidentified race condition on very fast CPUs that causes maintainer-
 # mode to be triggered.
@@ -395,12 +407,6 @@ media-gfx/gqview
 # Removal on 2021-05-01.  Bug #762847.
 dev-libs/libressl
 
-# Ulrich Müller <ulm@gentoo.org> (2021-01-29)
-# Preliminary test versions, masked for testing.
-~app-editors/emacs-27.1.91
-~app-editors/emacs-27.1.92
-~app-editors/emacs-27.1.93
-
 # Marek Szuba <marecki@gentoo.org> (2021-01-21)
 # Masked for testing and further work - the golang-vcs-snapshot variant
 # seems to be incompatible with revdeps using go-module, the variant
@@ -529,7 +535,6 @@ net-misc/gnome-remote-desktop
 >=dev-cpp/pangomm-2.48
 
 # Andrew Ammerlaan <andrewammerlaan@riseup.net> (2020-01-26)
-# Proxy Maintainers <proxy-maint@gentoo.org>
 # v3.6.4 uses huge amounts of memory: Bug #705682
 # v3.6.1 is the latest version without this issue
 >=dev-libs/libsass-3.6.2

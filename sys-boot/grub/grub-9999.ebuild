@@ -239,7 +239,7 @@ src_configure() {
 	unset LDFLAGS
 
 	tc-export CC NM OBJCOPY RANLIB STRIP
-	tc-export BUILD_CC # Bug 485592
+	tc-export BUILD_CC BUILD_PKG_CONFIG
 
 	MULTIBUILD_VARIANTS=()
 	local p
@@ -292,5 +292,10 @@ pkg_postinst() {
 		optfeature "Detect other operating systems (grub-mkconfig)" sys-boot/os-prober
 		optfeature "Create rescue media (grub-mkrescue)" dev-libs/libisoburn
 		optfeature "Enable RAID device detection" sys-fs/mdadm
+	fi
+
+	if has_version sys-boot/os-prober; then
+		ewarn "Due to security concerns, os-prober is disabled by default."
+		ewarn "Set GRUB_DISABLE_OS_PROBER=false in /etc/default/grub to enable it."
 	fi
 }

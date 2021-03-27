@@ -12,8 +12,8 @@ SRC_URI="https://github.com/phaag/nfdump/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0/1.6.22"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug doc jnat ftconv nfpcapd nfprofile nftrack nsel readpcap sflow
-	static-libs"
+IUSE="debug doc jnat ftconv nfpcapd nfprofile nftrack nsel readpcap sflow"
+
 REQUIRED_USE="?? ( jnat nsel )"
 
 RDEPEND="
@@ -38,6 +38,7 @@ BDEPEND="
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.6.19-compiler.patch
 	"${FILESDIR}"/${PN}-1.6.19-libft.patch
+	"${FILESDIR}"/${P}-libtool-archives-slibtool.patch
 )
 
 DOCS=( AUTHORS ChangeLog README.md )
