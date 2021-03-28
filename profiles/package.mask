@@ -32,6 +32,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-03-28)
+# No release since 2012, depends on deprecated dev-ml/lablgtk:2, no more
+# revdeps in Gentoo ebuild repository.
+# Removal on 2021-04-07, bug #769326
+dev-ml/cairo-ocaml
+
+# Jonas Stein <jstein@gentoo.org> (2021-03-27)
+# Upstream is gone. Open bugs. Removal after 2021-05-01.
+# Bug #778800
+x11-themes/nimbus
+
 # Jimi Huotari <chiitoo@gentoo.org> (2021-03-26)
 # No consumers since 2020-09-05 (dev-libs/liboobs), and no known
 # stand-alone use.
@@ -304,12 +315,6 @@ app-misc/logserial
 # Dead upstream, open bugs and unmaintained.
 # Removal in 30 days.
 net-dns/sheerdns
-
-# Mike Pagano <mpagano@gentoo.org> (2021-03-04)
-# This kernel version could corrupt your
-# filesystem by overwritting it with 
-# random swap data 
-=sys-kernel/git-sources-5.12_rc1
 
 # Sam James <sam@gentoo.org> (2021-03-03)
 # Declared abandoned upstream and stuck

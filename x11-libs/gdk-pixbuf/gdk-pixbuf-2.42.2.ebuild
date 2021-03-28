@@ -70,7 +70,7 @@ multilib_src_configure() {
 	)
 	if multilib_is_native_abi; then
 		emesonargs+=(
-			$(meson_use gtk-doc gtk_docs)
+			$(meson_use gtk-doc gtk_doc)
 			$(meson_feature introspection)
 			-Dman=true
 		)

@@ -16,10 +16,14 @@ SRC_URI="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~ia64 ~x86"
 
 RDEPEND="
-	>=dev-python/pytest-5.3.0[${PYTHON_USEDEP}]"
+	>=dev-python/pytest-5.3.0[${PYTHON_USEDEP}]
+	$(python_gen_cond_dep '
+		dev-python/typing-extensions
+	' python3_7 pypy3)
+"
 # pytest-xdist is used to test compatibility
 BDEPEND="
 	dev-python/setuptools_scm[${PYTHON_USEDEP}]

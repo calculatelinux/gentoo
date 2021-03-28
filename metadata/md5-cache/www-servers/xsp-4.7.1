@@ -1,0 +1,15 @@
+BDEPEND=>=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.2-r1:1.16 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 dev-lang/mono virtual/pkgconfig
+DEFINED_PHASES=configure install preinst prepare setup
+DEPEND=dev-db/sqlite:3
+DESCRIPTION=XSP is a small web server that can host ASP.NET pages
+EAPI=7
+HOMEPAGE=http://www.mono-project.com/ASP.NET
+IUSE=developer doc test net35 net40 net45
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=MIT
+RDEPEND=dev-db/sqlite:3
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/mono/xsp/archive/refs/tags/4.7.1.tar.gz -> xsp-4.7.1.tar.gz
+_eclasses_=autotools	4ba6c345bf49883c84d5fa5c9bf40c0b	dotnet	0d7eb217485ac38df61bde3631fca53c	libtool	f143db5a74ccd9ca28c1234deffede96	mono-env	1f24c032c78290b0d9a07d5b343051a7	multilib	d410501a125f99ffb560b0c523cd3d1e	systemd	74b223e42834adf09a2d21fe5fe13741	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	user	b0a0d4ca9e3f79c38f8f4143b8d5a2d8	user-info	a2abd4e2f4c3b9b06d64bf1329359a02
+_md5_=cc7b9c682efd53a1545694a99b1e9cca
