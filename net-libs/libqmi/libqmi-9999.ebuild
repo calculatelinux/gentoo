@@ -34,11 +34,14 @@ src_prepare() {
 }
 
 src_configure() {
-	econf \
-		--disable-Werror \
-		--disable-static \
-		$(use_enable mbim mbim-qmux) \
+	local myconf=(
+		--disable-Werror
+		--disable-static
+		--disable-qrtr # libqrtr-glib not packaged
+		$(use_enable mbim mbim-qmux)
 		$(use_enable {,gtk-}doc)
+	)
+	econf "${myconf[@]}"
 }
 
 src_install() {

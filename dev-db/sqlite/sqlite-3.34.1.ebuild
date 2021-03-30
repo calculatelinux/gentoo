@@ -22,7 +22,7 @@ fi
 
 LICENSE="public-domain"
 SLOT="3"
-KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="debug doc icu +readline secure-delete static-libs tcl test tools"
 if [[ "${PV}" == "9999" ]]; then
 	PROPERTIES="live"
@@ -40,7 +40,7 @@ RDEPEND="sys-libs/zlib:0=[${MULTILIB_USEDEP}]
 	icu? ( dev-libs/icu:0=[${MULTILIB_USEDEP}] )
 	readline? ( sys-libs/readline:0=[${MULTILIB_USEDEP}] )
 	tcl? ( dev-lang/tcl:0=[${MULTILIB_USEDEP}] )
-	tools? ( dev-lang/tcl:0=[${MULTILIB_USEDEP}] )"
+	tools? ( dev-lang/tcl:0= )"
 DEPEND="${RDEPEND}
 	test? ( >=dev-lang/tcl-8.6:0[${MULTILIB_USEDEP}] )"
 
@@ -311,7 +311,14 @@ multilib_src_configure() {
 	options+=($(use_enable static-libs static))
 
 	# tcl, test, tools USE flags.
-	options+=(--enable-tcl)
+	if use tcl || use test || { use tools && multilib_is_native_abi; }; then
+		options+=(
+			--enable-tcl
+			--with-tcl="${ESYSROOT}/usr/$(get_libdir)"
+		)
+	else
+		options+=(--disable-tcl)
+	fi
 
 	if [[ "${CHOST}" == *-mint* ]]; then
 		# sys/mman.h not available in MiNTLib.

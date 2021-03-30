@@ -1,6 +1,10 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Mike Gilbert <floppym@gentoo.org> (2021-03-29)
+# Unmask TPM on supported archs.
+sys-apps/systemd -tpm
+
 # Viorel Munteanu <ceamac.paragon@gmail.com> (2020-03-11)
 # new package dev-libs/libthreadar has no keywords
 app-backup/dar threads
@@ -333,10 +337,6 @@ sys-apps/hwloc -gl -nvml
 # Diego Elio Pettenò <flameeyes@gentoo.org> (2012-11-03)
 # Unmask here, as it's masked in base.
 net-libs/gnutls -dane
-
-# Ben de Groot <yngwin@gentoo.org> (2012-07-30)
-# dependency keyworded here, masked in base
-media-libs/freetype -infinality
 
 # Michał Górny <mgorny@gentoo.org> (2012-04-11)
 # JIT compilation in zpaq generates code for x86/amd64.
