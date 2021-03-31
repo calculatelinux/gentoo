@@ -10,5 +10,5 @@ LICENSE=public-domain
 RESTRICT=strip binchecks
 SLOT=0
 SRC_URI=mirror://sourceforge/xfonts/lfpfonts-var-src-0.84.tar.bz2
-_eclasses_=font	0667878c2b594871023dd1833d05996f	font-ebdftopcf	257d7865c36eee74e3524ef07dfd9195
+_eclasses_=font	0667878c2b594871023dd1833d05996f	font-ebdftopcf	001dd168de549653fcba973f58d54a9b
 _md5_=603d11ceaad39cda08bd7fe76bbcca4f
