@@ -7,5 +7,5 @@ LICENSE=MIT
 PROPERTIES=live
 RDEPEND=net-misc/curl sys-apps/file sys-apps/sed
 SLOT=0
-_eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
+_eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52
 _md5_=6964dc20f459f754722118ece7a23fa4

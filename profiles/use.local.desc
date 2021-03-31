@@ -2055,6 +2055,7 @@ dev-libs/libevent:ssl - Support for dev-libs/openssl encryption
 dev-libs/libevent:verbose-debug - Support for verbose debug logging
 dev-libs/libffi:pax_kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
 dev-libs/libffi-compat:pax_kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
+dev-libs/libfido2:nfc - Enable experimental NFC support
 dev-libs/libflatarray:cuda - Enables plugins for NVIDIA GPUs (e.g. CUDAAllocator)
 dev-libs/libgcrypt:asm - Enable assembly for optimization
 dev-libs/libgcrypt:o-flag-munging - Enable O-flag mangling during build
@@ -4051,7 +4052,6 @@ media-gfx/nomacs:plugins - Build officially support plugins
 media-gfx/nvidia-texture-tools:cg - Enable NVIDIA C graphics compiler toolkit plug-in
 media-gfx/nvidia-texture-tools:glew - Enable support for The OpenGL Extension Wrangler Library (media-libs/glew)
 media-gfx/openclipart:gzip - Compresses clip art using gzip
-media-gfx/openexr_viewers:cg - Add support for nvidia's cg shaders
 media-gfx/openscad:ccache - Use dev-util/ccache to speed up rebuilds
 media-gfx/openscad:gamepad - Add support for gamepads through dev-qt/qtgamepad
 media-gfx/openscad:headless - Build a binary without GUI
@@ -6389,7 +6389,7 @@ net-misc/frr:fpm - Enable Forwarding Plane Manager support
 net-misc/frr:grpc - Enable gRPC plugin
 net-misc/frr:nhrp - Build Next Hop Resolution Protocol daemon
 net-misc/frr:ospfapi - Build OSPFAPI support
-net-misc/frr:pam - Add support for PAM (via sys-libs/pam) to the Virtual Terminal Interface Shell (vtysh);
+net-misc/frr:pam - Add support for PAM (via sys-libs/pam) to the Virtual Terminal Interface Shell (vtysh)
 net-misc/frr:rpki - Enable RPKI
 net-misc/gerbera:curl - Support HTTP media sources (e.g. internet radio)
 net-misc/gerbera:exiv2 - Use media-gfx/exiv2 to extract EXIF information
@@ -7495,7 +7495,6 @@ sci-mathematics/why3-for-spark:profiling - Enable profiling
 sci-mathematics/why3-for-spark:zarith - Use dev-ml/zarith
 sci-mathematics/why3-for-spark:zip - Enable compression of session files
 sci-mathematics/yacas:jupyter - Add support for jupyter notebook
-sci-mathematics/yafu:sieve - Use msieve for the sieving steps of NFS
 sci-mathematics/z3:isabelle - Add integration support for the Isabelle/HOL theorem prover.
 sci-misc/boinc:cuda - Use nvidia cuda toolkit for speeding up computations. NOTE: works only for subset of nvidia graphic cards so make sure your card is supported before opening a bug about it.
 sci-misc/h5utils:hdf - Build hdf to hdf5 (and vice-versa) converter

@@ -32,6 +32,28 @@
 
 #--- END OF EXAMPLES ---
 
+# Rick Farina <zerochaos@gentoo.org> (2021-03-30)
+# Gentoo doesn't use this package, and the one package which needs it now uses the bundled version
+# Masked for removal in 30 days
+dev-libs/go-usb
+
+# Sam James <sam@gentoo.org> (2021-03-30)
+# Seems to break dev-tex/culmus-latex
+# Masking until we can investigate & fix
+# bug #737406
+=media-fonts/culmus-0.133-r1
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-03-30)
+# Completely broken since profile 17.1, package needs a real maintainer,
+# bugfix and 3.0.4 version bump. Bugs #677374, #692928
+# Removal on 2021-04-29
+app-office/ical
+
+# Michał Górny <mgorny@gentoo.org> (2021-03-30)
+# Too strict entry_points.txt parsing causes revdeps to crash when
+# dev-python/paste is installed.
+>=dev-python/importlib_metadata-3.9
+
 # Craig Andrews <candrews@gentoo.org> (2021-03-29)
 # Unmaintained upstream.
 # Project is also not useful due to changes in cryptocurrency mining.
@@ -141,6 +163,8 @@ dev-haskell/encoding
 <lxde-base/lxsession-0.5.5
 <lxde-base/lxtask-0.1.10
 <lxde-base/lxterminal-0.3.2-r1
+<x11-libs/libfm-1.3.2
+<x11-libs/libfm-extra-1.3.2
 <x11-misc/pcmanfm-1.3.2
 
 # Sergei Trofimovich <slyfox@gentoo.org> (2021-03-15)
@@ -153,17 +177,6 @@ dev-haskell/geniplate
 # Removal in 60 days to allow people extra time
 # for transitioning out. Bug #776262.
 app-admin/lastpass-cli
-
-# Göktürk Yüksek <gokturk@gentoo.org> (2021-03-14)
-# Upstream's lack of versioning keeps breaking the Manifest.
-# They are also not responsive to license clarification questions.
-# No revdeps. Removal in 14 days. Bug #581102, #7513730
-app-admin/lastpass-binary-component
-
-# David Seifert <soap@gentoo.org> (2021-03-13)
-# Integrated into >=sys-apps/hwloc-2, completely broken, unmaintained,
-# no revdeps. Removal in 14 days. Bug #721938, #722916, #732046.
-sys-apps/netloc
 
 # Sam James <sam@gentoo.org> (2021-03-13)
 # Stuck on oasis.eclass, out of date
@@ -360,51 +373,6 @@ dev-ml/core_extended
 # which haven't yet ported.
 # bug #729098
 ~sci-libs/proj-8.0.0
-
-# Bernd Waibel <waebbl-gentoo@posteo.net> (2021-02-27)
-# Mask until removal of media-gfx/openexr_viewers.
-# Version has several vulnerabilities. See #717474
-=media-libs/ilmbase-2.3.0
-
-# Bernd Waibel <waebbl-gentoo@posteo.net> (2021-02-27)
-# Mask until removal of media-gfx/openexr_viewers.
-# Version has several vulnerabilities. See #717474
-=media-libs/openexr-2.3.0
-
-# Bernd Waibel <waebbl-gentoo@posteo.net> (2021-02-27)
-# No longer actively supported upstream.
-# Removal needed to clean-up {ilmbase,openexr}-2.3.0
-# Masked for removal in 30 days.
-media-gfx/openexr_viewers
-
-# Sam James <sam@gentoo.org> (2021-02-27)
-# Fails to build with GCC 10 (or otherwise!)
-# bug #708508, bug #728026, bug #542280
-# Removal in 30 days
-sci-mathematics/ggnfs
-
-# Sam James <sam@gentoo.org> (2021-02-27)
-# Fails to build with GCC 10, out of date.
-# bug #723192, bug #737058
-# Removal in 30 days
-dev-lang/ats
-
-# Sam James <sam@gentoo.org> (2021-02-27)
-# Broken with newer(?) dev-scheme/guile, dead upstream
-# bug #642736, bug #773196
-# Removal in 30 days
-dev-scheme/greg
-
-# David Seifert <soap@gentoo.org> (2021-02-25)
-# Unmaintained, python 3.7 only, relies on wrong libgd, which isn't
-# packaged.  Removal on 2021-03-27.  Bug #683358, #696476, #741936.
-sys-auth/authenticator
-
-# David Seifert <soap@gentoo.org> (2021-02-25)
-# Last release in 2006, no other distro carries this anymore,
-# blocks sci-libs/fftw:2.1 removal, no revdeps.
-# Removal on 2021-03-27.  Bug #731038, #772812.
-media-gfx/videorbits
 
 # Sam James <sam@gentoo.org> (2021-02-18)
 # 0.9.27 included a regression wrt deletes

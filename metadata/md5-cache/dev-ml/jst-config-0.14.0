@@ -10,5 +10,5 @@ LICENSE=MIT
 RDEPEND=dev-ml/base:= dev-ml/ppx_assert:= dev-ml/stdio:= dev-ml/dune-configurator:= >=dev-lang/ocaml-4:=[ocamlopt?]
 SLOT=0/0.14.0
 SRC_URI=https://github.com/janestreet/jst-config/archive/v0.14.0.tar.gz -> jst-config-0.14.0.tar.gz
-_eclasses_=dune	46e13a2340ab32b2ad8ae98b653695ea
+_eclasses_=dune	3cafc471b3e2c22dfa1c289440929c5b
 _md5_=07610653412a8ccc56fcdd31c4085d12

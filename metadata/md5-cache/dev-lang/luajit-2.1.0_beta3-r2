@@ -7,5 +7,5 @@ KEYWORDS=~arm64 -hppa -sparc
 LICENSE=MIT
 SLOT=2
 SRC_URI=https://luajit.org/download/LuaJIT-2.1.0-beta3.tar.gz
-_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	pax-utils	a41d1fd1c111289ffa04490de6ee79d7	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	pax-utils	d3fc79d3d50544347e324864f95206e2	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
 _md5_=6bc5df82fbb1cea8703c5d885d3b38c7
