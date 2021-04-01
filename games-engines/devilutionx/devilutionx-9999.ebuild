@@ -25,7 +25,7 @@ fi
 LICENSE="public-domain"
 SLOT="0"
 
-IUSE="debug +hellfire lto"
+IUSE="debug lto"
 
 RDEPEND="
 	dev-libs/libsodium
@@ -40,7 +40,7 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}/${PN}-1.1.0-no_bundled_font.patch" #704508
+	"${FILESDIR}/${PN}-1.2.0_pre-no_bundled_font.patch" #704508
 )
 
 src_configure() {
@@ -50,7 +50,6 @@ src_configure() {
 		-DDISABLE_LTO="$(usex !lto)"
 		-DDIST="ON"
 		-DUBSAN="OFF"
-		-DHELLFIRE="$(usex hellfire)"
 	)
 	cmake_src_configure
 
