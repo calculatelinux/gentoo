@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -40,7 +40,7 @@ BDEPEND="sys-devel/autoconf-archive
 	virtual/pkgconfig"
 
 PATCHES=(
-	"$FILESDIR/${PN}-1.3.2-Remove-WError.patch"
+	"${FILESDIR}/${PN}-1.3.2-Remove-WError.patch"
 )
 
 src_prepare() {
@@ -64,5 +64,5 @@ src_install() {
 	cd "${S}/tools" || die
 	BUILD_DIR="${S}/tools" python_foreach_impl distutils-r1_python_install
 	dobin "${S}/tools/tpm2_ptool"
-	find "${D}" -name '*.la' -delete || die
+	find "${ED}" -name '*.la' -delete || die
 }
