@@ -5,6 +5,7 @@ EAPI=7
 
 USE_RUBY="ruby25 ruby26 ruby27 ruby30"
 
+RUBY_FAKEGEM_RECIPE_DOC="none"
 RUBY_FAKEGEM_EXTRADOC="NEWS.md README.md"
 
 RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
@@ -21,6 +22,10 @@ KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~a
 SLOT="3"
 
 all_ruby_prepare() {
-	sed -i -e 's:require_relative ":require "./:' ${RUBY_FAKEGEM_GEMSPEC} || die
-	sed -i -e '/bundler/ s:^:#:' Rakefile || die
+	sed -i -e 's:require_relative ":require "./:' -e 's/__dir__/"."/' ${RUBY_FAKEGEM_GEMSPEC} || die
+	sed -i -e '/bundler/I s:^:#:' Rakefile || die
+}
+
+each_ruby_test() {
+	${RUBY} test/run.rb || die
 }
