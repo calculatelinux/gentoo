@@ -32,6 +32,20 @@
 
 #--- END OF EXAMPLES ---
 
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-06)
+# Last release of dev-java/cal10n in 2013, no consumer
+# in the tree except dev-java/slf4j-ext which is not
+# needed by any package aswell. Removal in 30 days.
+dev-java/cal10n
+dev-java/slf4j-ext
+
+# Sergey Popov <pinkbyte@gentoo.org> (2021-04-06)
+# Ancient version, currently no consumers in main tree
+# The only one consumer was mail-client/roundcube
+# and now it uses bundled version
+# Masked for removal in 30 days.
+dev-php/PEAR-Net_LDAP3
+
 # Matt Turner <mattst88@gentoo.org> (2021-04-05)
 # Masked for testing and for dependence on masked pango
 gui-libs/gtk
@@ -302,12 +316,6 @@ dev-ruby/parslet
 dev-ruby/i18n:0.7
 dev-ruby/pcaprub:0.12
 dev-ruby/pg:0
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2021-03-07)
-# Unresolved build issue since 2019, QA issues, bugs #697870 and #705236
-# Blocks cleanup of equally broken sci-physics/looptools-2.8, bug #770796
-# Masked for removal on 2021-04-06.
-sci-physics/herwig++
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2021-03-06)
 # Fails to build, multiple bugs, outdated, nontrival, unmaintained

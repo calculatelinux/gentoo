@@ -8,14 +8,14 @@ TRANS_COMMIT="974298653ba71b958e1b6c83f6011f5fefff6236"
 
 inherit cmake toolchain-funcs xdg-utils python-single-r1
 
-DESCRIPTION="A Qt and C++ GUI for radare2 reverse engineering framework"
+DESCRIPTION="A Qt and C++ GUI for rizin reverse engineering framework"
 HOMEPAGE="https://cutter.re https://github.com/rizinorg/cutter/"
 SRC_URI="https://github.com/rizinorg/cutter/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/rizinorg/cutter-translations/archive/${TRANS_COMMIT}.tar.gz -> cutter-translations-${TRANS_COMMIT}.tar.gz"
 
 LICENSE="CC-BY-SA-3.0 GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMON_DEPEND="${PYTHON_DEPS}

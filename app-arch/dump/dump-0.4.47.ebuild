@@ -12,7 +12,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86"
 # We keep uuid USE flag default dsiabled for this version. Don't forget
 # to default enable it for later versions as this is the upstream default.
 IUSE="bzip2 debug ermt lzo readline selinux sqlite ssl static test uuid zlib"
@@ -26,9 +26,15 @@ RDEPEND="
 	>=sys-fs/e2fsprogs-1.27:=
 	>=sys-libs/e2fsprogs-libs-1.27:=
 	sys-apps/util-linux
-	bzip2? ( >=app-arch/bzip2-1.0.2:= )
+	bzip2? (
+		app-arch/bzip2:=
+		static? ( app-arch/bzip2[static-libs] )
+	)
 	zlib? ( >=sys-libs/zlib-1.1.4:= )
-	lzo? ( dev-libs/lzo:2= )
+	lzo? (
+		dev-libs/lzo:2=
+		static? ( dev-libs/lzo:2[static-libs] )
+	)
 	sqlite? ( dev-db/sqlite:3= )
 	ermt? ( dev-libs/openssl:0= )
 	ssl? ( dev-libs/openssl:0= )

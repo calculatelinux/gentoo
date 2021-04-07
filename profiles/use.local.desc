@@ -2785,7 +2785,7 @@ dev-util/diffoscope:tcpdump - Use net-analyzer/tcpdump
 dev-util/diffoscope:xz - Use app-arch/xz-utils
 dev-util/diffoscope:zip - Use app-arch/unzip
 dev-util/edb-debugger:jumbo-build - Experimental jumbo (also known as unity) build capability
-dev-util/edi:clang - Provide integration with sys-devel/clang for autocompletion and inline errors
+dev-util/edi:clang - Provide integration with sys-devel/clang and dev-util/bear for autocompletion, inline errors and information about compilation units.
 dev-util/emilpro:system-binutils - Use the gentoo binutils instead of building against an unpatched vanilla version
 dev-util/flatpak-builder:yaml - Use libyaml for yaml support
 dev-util/geany:gtk2 - Use GTK+2 instead of GTK+3
@@ -2987,7 +2987,6 @@ games-arcade/jazz2-data:cc - Install The Christmas Chronicles additional data
 games-arcade/jazz2-data:demo - Use the free demo data instead of the full retail game data
 games-arcade/jazz2-data:gles2-only - Use GLES 2.0 or later instead of full OpenGL 2.1
 games-arcade/jumpnbump:gtk - Install Python-based GTK menu
-games-arcade/jumpnbump:music - Enable playing of background music
 games-arcade/lbreakout2:themes - Install additional themes
 games-arcade/moleinvasion:music - Download and install the music files
 games-arcade/oshu:osu-skin - Include more complete osu-skin (other is minimal)
@@ -3430,7 +3429,8 @@ kde-apps/kdegraphics-mobipocket:thumbnail - Enables thumbnail generation
 kde-apps/kdemultimedia-meta:cdrom - Include packages for optical discs
 kde-apps/kdenetwork-meta:bittorrent - Pull in net-p2p/ktorrent for BitTorrent protocol support
 kde-apps/kdenetwork-meta:dropbox - Enable support for Dropbox in kde-apps/dolphin via kde-apps/dolphin-plugins-dropbox
-kde-apps/kdenetwork-meta:webengine - Enable Google Drive support via kde-misc/kio-gdrive and instant messaging integration via kde-apps/plasma-telepathy-meta
+kde-apps/kdenetwork-meta:samba - Enable support for net-fs/samba file sharing plugin from within file properties
+kde-apps/kdenetwork-meta:webengine - Enable support for Plasma Telepathy (instant messaging) integration via kde-apps/plasma-telepathy-meta
 kde-apps/kdenlive:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/kdenlive:webengine - Enable freesound.org credentials support via dev-qt/qtwebengine to download files
 kde-apps/kdepim-addons:importwizard - Enable additional import plugins for kde-apps/akonadi-import-wizard
@@ -3462,7 +3462,6 @@ kde-apps/kio-extras:taglib - Enable audio thumbnails via media-libs/taglib
 kde-apps/kipi-plugins:flashexport - Build the flash export plugin
 kde-apps/kipi-plugins:mediawiki - Build the mediawiki export plugin
 kde-apps/kipi-plugins:remotestorage - Build plugin for remote storage using network protocols such as FTP, SSH, SAMBA via kde-frameworks/kio
-kde-apps/kipi-plugins:vkontakte - Build plugin for vkontakte.ru
 kde-apps/kitinerary:barcode - Enable support for PDF417 and Aztec barcode decoding using media-libs/zxing-cpp
 kde-apps/kmag:keyboardfocus - Enable keyboard focus tracking
 kde-apps/knights:speech - Enable text-to-speech support
@@ -5964,7 +5963,6 @@ net-libs/libgsasl:ntlm - Add support for Microsoft's NTLM mechanism using net-li
 net-libs/libiio:aio - Enable asynchronous IO support
 net-libs/libisds:openssl - Use dev-libs/openssl as crypto backend instead of app-crypt/gpgme and dev-libs/libgcrypt
 net-libs/libmicrohttpd:epoll - Use epoll() system call
-net-libs/libmicrohttpd:messages - enable error messages
 net-libs/libmicrohttpd:thread-names - Assign thread names to internal threads
 net-libs/libnids:glib - Use dev-libs/glib for multiprocessing support
 net-libs/libnids:libnet - Include code requiring net-libs/libnet
@@ -7514,8 +7512,6 @@ sci-physics/geant-vmc:rootvmc - Use sci-physics/root[vmc] (deprecated) instead o
 sci-physics/geant-vmc:vgm - Enable the Virtual Geometry Model (sci-physics/vgm)
 sci-physics/hepmc:cm - Build with cm instead of default mm for length units
 sci-physics/hepmc:gev - Build with GeV instead of default MeV for momentum units
-sci-physics/herwig++:c++11 - Build Herwig++ using the C++11 standard. Experimental feature, not for production use.
-sci-physics/herwig++:fastjet - Adds support for sci-physics/fastjet
 sci-physics/lammps:cuda - Enable cuda non-bonded kernels
 sci-physics/lammps:kokkos - Enable kokkos non-bonded kernels
 sci-physics/lammps:lammps-memalign - Enables the use of the posix_memalign() call instead of malloc() when large chunks or memory are allocated by LAMMPS. Aliengnment is on 16 byte boundaries.
