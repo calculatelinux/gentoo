@@ -10,7 +10,7 @@ inherit ecm kde.org
 
 DESCRIPTION="Framework for providing spell-checking through abstraction of popular backends"
 LICENSE="LGPL-2+ LGPL-2.1+"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm arm64 ~ppc ~ppc64 x86"
 IUSE="aspell +hunspell nls"
 
 BDEPEND="
@@ -34,9 +34,10 @@ src_configure() {
 }
 
 src_test() {
-	# bugs: 680032
+	# sonnet-test_settings: bug 680032
+	# sonnet-test_autodetect: bug 779994
 	local myctestargs=(
-		-E "(sonnet-test_settings|sonnet-test_highlighter)"
+		-E "(sonnet-test_autodetect|sonnet-test_settings|sonnet-test_highlighter)"
 	)
 
 	ecm_src_test

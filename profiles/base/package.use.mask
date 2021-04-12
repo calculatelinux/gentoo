@@ -6,6 +6,18 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Sam James <sam@gentoo.org> (2021-04-09)
+# Crashes at runtime.
+# Mask LTO for now until issue with Qt
+# (to be resolved in Wireshark?) is resolved
+# bug #754021
+net-analyzer/wireshark lto
+
+# Sam James <sam@gentoo.org> (2021-04-09)
+# Fails to build right now
+# bug #651740
+net-misc/openssh debug
+
 # Stephan Hartmann <sultan@gentoo.org> (2021-03-21)
 # Requires unreleased sys-devel/icu-69.1
 >=www-client/chromium-91 system-icu
@@ -58,18 +70,9 @@ dev-php/symfony-finder test
 # bug #723438
 app-i18n/enca doc
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2021-01-01)
-# media-video/pipewire:0/0.2 cleanup
-<dev-libs/weston-9 pipewire
-
 # Marek Szuba <marecki@gentoo.org> (2020-12-26)
 # User manual is only available for releases
 =media-gfx/darktable-9999 doc
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-12-26)
-# Depends on masked media-libs/qt-gstreamer and kde-apps/ktp-call-ui
-kde-apps/artikulate gstreamer
-kde-apps/plasma-telepathy-meta gstreamer
 
 # Rick Farina <zerochaos@gentoo.org> (2020-12-21)
 # This use flag enables code which appears to be broken
@@ -111,10 +114,6 @@ mail-mta/protonmail-bridge gui
 # Michał Górny <mgorny@gentoo.org> (2020-11-29)
 # libclangformat-ide is masked for removal.
 dev-qt/qt-creator clang
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-11-25)
-# Depends on masked net-libs/libkvkontakte
-kde-apps/kipi-plugins vkontakte
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2020-10-08)
 # USE=doc broken on 1.47.0 and later

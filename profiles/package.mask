@@ -32,6 +32,19 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2021-04-10)
+# Obsolete backport to Python < 3.4.  No reverse dependencies left.
+# Removal on 2021-05-10.  Bug #781902.
+dev-python/monotonic
+
+# Sam James <sam@gentoo.org> (2021-04-09)
+# Support package for games.eclass (which is now being last-rited). Please
+# port away from games.eclass and use general ebuild functions/helpers.
+# No specific eclass is needed for general games installation.
+# Removal on 2021-05-09.
+# bug #574082
+games-misc/games-envd
+
 # Lars Wendler <polynomial-c@gentoo.org> (2021-04-08)
 # Masked for testing and until revdeps have been fixed:
 # https://bugs.gentoo.org/781188
@@ -166,8 +179,8 @@ app-office/ical
 net-p2p/xmr-stak
 
 # Jonas Stein <jstein@gentoo.org> (2021-03-29)
-# Depends on gtk-2, no release since 2010. 
-# Removal on 2021-05-01.  
+# Depends on gtk-2, no release since 2010.
+# Removal on 2021-05-01.
 # Bug #779148.
 app-editors/beaver
 
@@ -262,70 +275,11 @@ dev-libs/zookeeper-c
 # for transitioning out. Bug #776262.
 app-admin/lastpass-cli
 
-# Hans de Graaff <graaff@gentoo.org> (2021-03-12)
-# Requires a (proxy) maintainer with access to Oracle development
-# libraries. Please express your interest on bug 772128 if you can
-# help.
-# Masked for removal in 30 days.
-dev-ruby/ruby-oci8
-
-# Hans de Graaff <graaff@gentoo.org> (2021-03-11)
-# Last upstream release in 2018, uses outdated dependencies.  No
-# longer works with dev-ruby/parser, bug 775206. No reverse
-# dependencies.
-# Masked for removal in 30 days.
-dev-ruby/astrolabe
-
-# Hans de Graaff <graaff@gentoo.org> (2021-03-09)
-# Last upstream release in 2013, ruby25-only.
-# Masked for removal in 30 days.
-dev-ruby/shorturl
-
 # Brian Evans <grknight@gentoo.org> (2021-03-08)
 # No longer consistently maintained, severely broken with PHP 8
 # No reverse dependencies, fails tests
 # Removal in 30 days.
 dev-php/PEAR-Config
-
-# Hans de Graaff <graaff@gentoo.org> (2021-03-08)
-# Last litc upstream release in 2010, no reverse dependencies,
-# ruby25-only. Includes fakeweb test dependency which is also
-# ruby25-only and has no other reverse dependencies.
-# Masked for removal in 30 days.
-dev-ruby/litc
-dev-ruby/fakeweb
-
-# Hans de Graaff <graaff@gentoo.org> (2021-03-08)
-# Last upstream release in 2009, no reverse dependencies,
-# no test suite.
-# Masked for removal in 30 days.
-dev-ruby/metaid
-
-# Hans de Graaff <graaff@gentoo.org> (2021-03-08)
-# Last upstream release in 2018, no reverse dependencies,
-# stuck on ruby25.
-# Masked for removal in 30 days.
-dev-ruby/nexpose
-
-# Hans de Graaff <graaff@gentoo.org> (2021-03-08)
-# No longer maintained upstream, last release in 2014.
-# ruby25-only.
-# Masked for removal in 30 days.
-dev-ruby/session
-
-# Hans de Graaff <graaff@gentoo.org> (2021-03-08)
-# gitsh is maintainer-needed and stuck on ruby25.
-# parslet is only needed for gitsh and also ruby25-only.
-# Masked for removal in 30 days.
-dev-vcs/gitsh
-dev-ruby/parslet
-
-# Hans de Graaff <graaff@gentoo.org> (2021-03-08)
-# Old ruby25-only slots. Use the newer slot instead.
-# Masked for removal in 30 days.
-dev-ruby/i18n:0.7
-dev-ruby/pcaprub:0.12
-dev-ruby/pg:0
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2021-03-06)
 # Fails to build, multiple bugs, outdated, nontrival, unmaintained

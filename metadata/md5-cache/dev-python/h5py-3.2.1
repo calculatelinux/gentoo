@@ -5,12 +5,12 @@ DESCRIPTION=Simple Python interface to HDF5 files
 EAPI=7
 HOMEPAGE=https://www.h5py.org
 IUSE=examples test doc python_targets_python3_7 python_targets_python3_8 python_targets_python3_9
-KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=BSD
 RDEPEND=sci-libs/hdf5:=[hl(+)] python_targets_python3_7? ( dev-python/cached-property[python_targets_python3_7(-)?,-python_single_target_python3_7(-)] ) dev-python/numpy[python_targets_python3_7(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] python_targets_python3_7? ( dev-lang/python:3.7 ) python_targets_python3_8? ( dev-lang/python:3.8 ) python_targets_python3_9? ( dev-lang/python:3.9 ) >=dev-lang/python-exec-2:=[python_targets_python3_7(-)?,python_targets_python3_8(-)?,python_targets_python3_9(-)?,-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
 REQUIRED_USE=|| ( python_targets_python3_7 python_targets_python3_8 python_targets_python3_9 )
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=mirror://pypi/h/h5py/h5py-3.2.1.tar.gz
-_eclasses_=distutils-r1	2ac0db834bfc8d76a5ad34d536d15b35	edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	2d5b3f4b315094768576b6799e4f926e	flag-o-matic	09a8beb8e6a8e02dc1e1bd83ac353741	l10n	8cdd85e169b835d518bc2fd59f780d8e	multibuild	6b3d5ee849dafe6cdfd7b859c211fb01	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	a0dcde4775c7b2f7530678fc8143340e	python-utils-r1	543b53e4d003ebd889082f4673e52af5	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	wrapper	4251d4c84c25f59094fd557e0063a974
-_md5_=d0ac4519324d5391f56be4c171d3648e
+_eclasses_=distutils-r1	d8655e1387589a2e1930339b1627d5c1	edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	2d5b3f4b315094768576b6799e4f926e	flag-o-matic	c0964e43ba712cb933da5f65b958fa88	l10n	8cdd85e169b835d518bc2fd59f780d8e	multibuild	6b3d5ee849dafe6cdfd7b859c211fb01	multilib	d410501a125f99ffb560b0c523cd3d1e	multiprocessing	cac3169468f893670dac3e7cb940e045	python-r1	26e4ad0a4190b14f70973dc253e86535	python-utils-r1	3ea803de86891185c7b1db2c0b5bc8c8	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	wrapper	4251d4c84c25f59094fd557e0063a974
+_md5_=0e0ee80a2347acf9cadfd03653fe2f67

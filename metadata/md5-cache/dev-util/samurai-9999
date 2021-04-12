@@ -1,0 +1,10 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install unpack
+DESCRIPTION=ninja-compatible build tool written in C
+EAPI=7
+HOMEPAGE=https://github.com/michaelforney/samurai
+LICENSE=ISC Apache-2.0 MIT
+PROPERTIES=live
+SLOT=0
+_eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52
+_md5_=7c11d8c8e57619c5eac590ae8738ffbe

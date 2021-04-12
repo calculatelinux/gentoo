@@ -40,7 +40,7 @@ src_prepare() {
 }
 
 _emake() {
-	emake -j1 \
+	emake \
 		SHARED_LIBDIR="/usr/$(get_libdir)" \
 		SECUREDIR="$(getpam_mod_dir)" \
 		CONFDIR="/etc/security" \
@@ -52,7 +52,7 @@ _emake() {
 }
 
 src_compile() {
-	_emake pam utils
+	_emake all
 }
 
 src_install() {
