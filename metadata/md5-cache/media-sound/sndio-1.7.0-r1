@@ -10,4 +10,4 @@ RDEPEND=dev-libs/libbsd[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n
 SLOT=0/7.0
 SRC_URI=http://www.sndio.org/sndio-1.7.0.tar.gz
 _eclasses_=multibuild	6b3d5ee849dafe6cdfd7b859c211fb01	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	ac696f0bea6c503f5980bfd5a0f312e5	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=c8afa3171ca00a7fcfaa8100ac50054e
+_md5_=f5a525a1fde006f5625b07a7fc6e9eba

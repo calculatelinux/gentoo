@@ -1,12 +1,12 @@
+BDEPEND=>=app-editors/emacs-23.1:*
 DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
-DEPEND=>=app-editors/emacs-23.1:*
 DESCRIPTION=An Emacs major mode for editing Jasmin Java bytecode assembler files
-EAPI=5
-HOMEPAGE=http://www.neilvandyke.org/jasmin-emacs/
+EAPI=7
+HOMEPAGE=https://www.neilvandyke.org/jasmin-emacs/
 KEYWORDS=~alpha amd64 ~s390 x86
 LICENSE=GPL-2+
 RDEPEND=>=app-editors/emacs-23.1:*
 SLOT=0
 SRC_URI=mirror://gentoo/jasmin-1.2.tar.gz
-_eclasses_=eapi7-ver	f9ec87e93172b25ce65a85303dc06964	elisp	023dd24ad9e6d5e62907e7007f548ca3	elisp-common	36f97076abd90f943a34f8bcd58b5bcc	epatch	9f813bb3c47cf2e60619a663b87c5f4e	estack	055c42df72f76a4f45ec92b35e83cd56
-_md5_=634d2e0eaf0c28176e51b40e43966c3c
+_eclasses_=elisp	023dd24ad9e6d5e62907e7007f548ca3	elisp-common	36f97076abd90f943a34f8bcd58b5bcc
+_md5_=69f3f31e55fe19d1ec00e20e32e1fece

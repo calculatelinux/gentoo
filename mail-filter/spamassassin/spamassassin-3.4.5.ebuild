@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/spamassassin/source/${MY_P}.tar.bz2"
 
 LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="berkdb cron ipv6 ldap libressl mysql postgres qmail sqlite ssl test"
 RESTRICT="!test? ( test )"
 
@@ -106,6 +106,13 @@ src_prepare() {
 	# spamd tests themselves -- see src_test), so use a crude
 	# workaround.
 	perl_rm_files t/spamc_*.t
+
+	# Some tests need extra dependencies
+	# e.g. t/sql_based_whitelist.t needs DBD
+	# This is kinder than REQUIRED_USE for tests which hurts automation
+	if ! use mysql && ! use postgres && ! use sqlite ; then
+		perl_rm_files t/sql_based_whitelist.t
+	fi
 
 	# Disable plugin by default
 	sed -i -e 's/^loadplugin/\#loadplugin/g' \

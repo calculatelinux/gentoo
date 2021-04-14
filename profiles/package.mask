@@ -32,6 +32,23 @@
 
 #--- END OF EXAMPLES ---
 
+# Jonas Stein <jstein@gentoo.org> (2021-04-14)
+# Open bugs, dead upstream.
+# Removal on 2021-06-01.  Bug #782730.
+x11-misc/superswitcher
+
+# Jonas Stein <jstein@gentoo.org> (2021-04-14)
+# dead upstream, no valid SRC_URI
+# Removal on 2021-06-01.  Bug #782727.
+x11-misc/xstroke
+
+# Matt Turner <mattst88@gentoo.org> (2021-04-13)
+# Masked for testing
+>=app-misc/tracker-3
+>=app-misc/tracker-miners-3
+>=gnome-base/nautilus-40
+>=sys-process/gnome-usage-3.38
+
 # Michał Górny <mgorny@gentoo.org> (2021-04-10)
 # Obsolete backport to Python < 3.4.  No reverse dependencies left.
 # Removal on 2021-05-10.  Bug #781902.
@@ -226,12 +243,13 @@ sys-devel/autoconf:2.71
 # Many reverse dependencies need to be ported due to changes in new glib
 # Masking until they've been updated, see tracker bug for details
 # bug #777675
-=dev-libs/gobject-introspection-common-1.68.0
-=dev-libs/gobject-introspection-1.68.0
-=dev-util/gdbus-codegen-2.68.0
-=dev-util/glib-utils-2.68.0
-=dev-libs/glib-2.68.0
-=net-libs/glib-networking-2.68.0
+>=dev-libs/gobject-introspection-common-1.68.0
+>=dev-libs/gobject-introspection-1.68.0
+>=dev-util/gdbus-codegen-2.68.0
+>=dev-util/glib-utils-2.68.0
+>=dev-libs/glib-2.68.0
+>=net-libs/glib-networking-2.68.0
+>=gnome-base/nautilus-40
 
 # Marek Szuba <marecki@gentoo.org> (2021-03-19)
 # Depends on bundled out-of-date Qt5 libraries, and even with those
@@ -245,29 +263,6 @@ mail-mta/protonmail-bridge-bin
 # A library without consumers, unbuildable for years, ebuilds not
 # touched in years either. Bugs #664776, #747592. Removal in ~30 days.
 dev-libs/zookeeper-c
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2021-03-15)
-# Unmaintained for >1 year, blocking cleanup of deprecated libraries.
-# Succeeded by LXQt many years ago (see also: lxqt-base/lxqt-meta).
-# Removal on 2021-04-14 or replacement by GTK3-based versions available
-# in ~arch. No more stabilisation is going to happen without the packages
-# getting a new maintainer. Bugs #708188, #751076, #769524
-<lxde-base/lxappearance-0.6.3-r2
-<lxde-base/lxappearance-obconf-0.2.3-r1
-<lxde-base/lxde-icon-theme-0.5.1-r1
-<lxde-base/lxde-common-0.99.2-r1
-<lxde-base/lxde-meta-0.5.5-r7
-<lxde-base/lxmenu-data-0.1.5
-<lxde-base/lxinput-0.3.5-r2
-<lxde-base/lxlauncher-0.2.5-r1
-<lxde-base/lxpanel-0.10.1
-<lxde-base/lxrandr-0.3.2-r1
-<lxde-base/lxsession-0.5.5
-<lxde-base/lxtask-0.1.10
-<lxde-base/lxterminal-0.3.2-r1
-<x11-libs/libfm-1.3.2
-<x11-libs/libfm-extra-1.3.2
-<x11-misc/pcmanfm-1.3.2
 
 # Göktürk Yüksek <gokturk@gentoo.org> (2021-03-14)
 # Dead upstream. No revdeps.
@@ -394,22 +389,6 @@ dev-lang/spark
 # works for existing packages
 >=dev-libs/vala-common-0.49
 dev-lang/vala:0.50
-
-# Sam James <sam@gentoo.org> (2020-07-20)
-# Serious security vulnerabilities, including
-# remote code execution. Upstream have not yet
-# made a stable release in response to numerous
-# CVEs. Applying patches is not a workable
-# solution for now because of the fragility
-# of reverse dependencies.
-# Indefinitely masking until we have a solution
-# for this.
-# bug #719084
-# Furthermore, ntopng ebuilds depending directly on dev-lang/lua{,jit}
-# must be migrated to lua eclasses before unmasking (bug #752777).
-net-analyzer/ntopng
-net-analyzer/pmacct
-net-libs/nDPI
 
 # Mart Raudsepp <leio@gentoo.org> (2020-06-06)
 # Meson port does not handle multilib yet and has issues

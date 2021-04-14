@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-inherit flag-o-matic multilib-minimal multilib
+inherit flag-o-matic toolchain-funcs multilib-minimal multilib
 
 APPLE_PV=417.1
 DESCRIPTION="An easily extensible archive format"
@@ -24,6 +24,7 @@ DEPEND="
 	dev-libs/libxml2[${MULTILIB_USEDEP}]
 "
 RDEPEND="${DEPEND}"
+BDEPEND="virtual/pkgconfig"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.6.1-ext2.patch
@@ -65,8 +66,8 @@ src_prepare() {
 }
 
 multilib_src_configure() {
-	append-libs $(pkg-config --libs openssl)
-	use elibc_musl && append-libs $(pkg-config --libs fts-standalone)
+	append-libs $($(tc-getPKG_CONFIG) --libs openssl)
+	use elibc_musl && append-libs $($(tc-getPKG_CONFIG) --libs fts-standalone)
 	ECONF_SOURCE=${S} \
 	econf \
 		--disable-static

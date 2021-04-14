@@ -11,7 +11,7 @@ SRC_URI="https://breakfastquay.com/files/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~ppc ppc64 ~sparc x86"
 IUSE="ladspa jni static-libs +programs vamp"
 
 BDEPEND="
@@ -20,7 +20,7 @@ BDEPEND="
 CDEPEND="
 	media-libs/libsamplerate[${MULTILIB_USEDEP}]
 	sci-libs/fftw:3.0[${MULTILIB_USEDEP}]
-	jni? ( virtual/jdk:* )
+	jni? ( >=virtual/jdk-1.8:* )
 	ladspa? ( media-libs/ladspa-sdk )
 	programs? ( media-libs/libsndfile )
 	vamp? ( media-libs/vamp-plugin-sdk[${MULTILIB_USEDEP}] )
@@ -58,6 +58,6 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
-	! use jni && find ${ED} -name "*.a" -delete
+	! use jni && find "${ED}" -name "*.a" -delete
 	einstalldocs
 }

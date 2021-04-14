@@ -5,7 +5,7 @@ EAPI=7
 
 inherit meson
 
-DESCRIPTION="lib that implements the client side of the SMTP protocol"
+DESCRIPTION="Lib that implements the client side of the SMTP protocol"
 HOMEPAGE="https://libesmtp.github.io/"
 if [[ "${PV}" == *9999 ]] ; then
 	inherit git-r3
@@ -16,14 +16,10 @@ else
 fi
 
 LICENSE="LGPL-2.1 GPL-2"
-SLOT="0"
-IUSE="libressl ssl static-libs threads"
+SLOT="0/7"
+IUSE="ssl static-libs threads"
 
-RDEPEND="
-	ssl? (
-		!libressl? ( >=dev-libs/openssl-1.1.0:0= )
-		libressl? ( dev-libs/libressl:0= )
-	)"
+RDEPEND="ssl? ( >=dev-libs/openssl-1.1.0:0= )"
 DEPEND="${RDEPEND}"
 
 DOCS=( AUTHORS docs/{bugreport,ChangeLog,faq}.md NEWS Notes README.md TODO )

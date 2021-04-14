@@ -12,15 +12,16 @@ SRC_URI="https://github.com/MongoEngine/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-# TODO: make it run a local database server
-#RESTRICT="test"
+KEYWORDS="~amd64"
 
 RDEPEND="dev-python/blinker[${PYTHON_USEDEP}]
 	dev-python/pillow[${PYTHON_USEDEP}]
 	dev-python/pymongo[${PYTHON_USEDEP}]"
 BDEPEND="
-	test? ( dev-python/mongomock[${PYTHON_USEDEP}] )"
+	test? (
+		dev-db/mongodb
+		dev-python/mongomock[${PYTHON_USEDEP}]
+	)"
 
 distutils_enable_tests pytest
 
@@ -41,4 +42,39 @@ src_prepare() {
 		-i tests/queryset/test_queryset.py || die
 
 	distutils-r1_src_prepare
+}
+
+python_test() {
+	local dbpath=${TMPDIR}/mongo.db
+	local logpath=${TMPDIR}/mongod.log
+
+	mkdir -p "${dbpath}" || die
+	ebegin "Trying to start mongod on port ${DB_PORT}"
+
+	LC_ALL=C \
+	mongod --dbpath "${dbpath}" --nojournal \
+		--bind_ip 127.0.0.1 --port 27017 \
+		--unixSocketPrefix "${TMPDIR}" \
+		--logpath "${logpath}" --fork || die
+	sleep 2
+
+	# Now we need to check if the server actually started...
+	if [[ -S "${TMPDIR}"/mongodb-27017.sock ]]; then
+		# yay!
+		eend 0
+	else
+		eend 1
+		eerror "Unable to start mongod for tests. See the server log:"
+		eerror "	${logpath}"
+		die "Unable to start mongod for tests."
+	fi
+
+	local failed
+	nonfatal epytest || failed=1
+
+	mongod --dbpath "${dbpath}" --shutdown || die
+
+	[[ ${failed} ]] && die "Tests fail with ${EPYTHON}"
+
+	rm -rf "${dbpath}" || die
 }

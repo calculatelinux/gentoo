@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare
-DEPEND=sys-libs/ncurses:0=
+DEPEND=sys-libs/ncurses:0= virtual/pkgconfig
 DESCRIPTION=sophisticated graphical program which corrects your miss typing
 EAPI=6
 HOMEPAGE=http://www.tkl.iis.u-tokyo.ac.jp/~toyoda/index_e.html https://github.com/mtoyoda/sl/
@@ -10,4 +10,4 @@ RDEPEND=sys-libs/ncurses:0=
 SLOT=0
 SRC_URI=https://github.com/mtoyoda/sl/archive/5.02.tar.gz -> sl-5.02.tar.gz
 _eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=2dac816db5747d7df9ca5832466cadcc
+_md5_=3bc489b3a32a258d69832601cce3c4f3
