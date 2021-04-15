@@ -8,4 +8,4 @@ PROPERTIES=live
 RDEPEND=app-shells/bash sys-process/procps x11-apps/xprop x11-apps/xrandr x11-apps/xwininfo x11-misc/xdotool
 SLOT=0
 _eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52
-_md5_=3274f5826dc18eee3d47d8bd34ea6e29
+_md5_=8dde4178f013a95d08b1b8a4900af816

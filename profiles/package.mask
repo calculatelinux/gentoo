@@ -32,6 +32,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Jonas Stein <jstein@gentoo.org> (2021-04-15)
+# Depends on gtk2, which is EOL
+# Removal on 2021-06-01.  Bug #782904.
+x11-themes/gtk-engines-aurora
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-14)
+# java libraries not used by any other package,
+# masked for removal
+dev-java/odfdom
+dev-java/saaj
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-04-14)
+# QA: Mask sys-apps/openrc-0.43 because of bug 782808
+=sys-apps/openrc-0.43*
+
 # Jonas Stein <jstein@gentoo.org> (2021-04-14)
 # Open bugs, dead upstream.
 # Removal on 2021-06-01.  Bug #782730.
@@ -64,7 +79,7 @@ games-misc/games-envd
 
 # Lars Wendler <polynomial-c@gentoo.org> (2021-04-08)
 # Masked for testing and until revdeps have been fixed:
-# https://bugs.gentoo.org/781188
+# bug #781188
 >=dev-libs/icu-69.1
 >=dev-libs/icu-layoutex-69.1
 
@@ -103,11 +118,6 @@ sci-biology/gatk
 # Tests broken since perl 5.22, last release in 2008,
 # Bug #625492, removal in 30 days.
 sci-biology/diya
-
-# Michał Górny <mgorny@gentoo.org> (2021-04-04)
-# Reported to contain an unintentional ABI breakage leading to crashes
-# when loading extensions on 32-bit systems.
-=dev-lang/python-3.9.3
 
 # Mikle Kolyada <zlogene@gentoo.org> (2021-04-02)
 # TexLive 2021 mask
@@ -259,33 +269,11 @@ sys-devel/autoconf:2.71
 # Removal in 30 days. Bug #768228.
 mail-mta/protonmail-bridge-bin
 
-# Joonas Niilola <juippis@gentoo.org> (2021-03-16)
-# A library without consumers, unbuildable for years, ebuilds not
-# touched in years either. Bugs #664776, #747592. Removal in ~30 days.
-dev-libs/zookeeper-c
-
 # Göktürk Yüksek <gokturk@gentoo.org> (2021-03-14)
 # Dead upstream. No revdeps.
 # Removal in 60 days to allow people extra time
 # for transitioning out. Bug #776262.
 app-admin/lastpass-cli
-
-# Brian Evans <grknight@gentoo.org> (2021-03-08)
-# No longer consistently maintained, severely broken with PHP 8
-# No reverse dependencies, fails tests
-# Removal in 30 days.
-dev-php/PEAR-Config
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-03-06)
-# Fails to build, multiple bugs, outdated, nontrival, unmaintained
-# Bug 729876 and several others; removal in 30days
-dev-libs/klibc
-
-# Sam James <sam@gentoo.org> (2021-03-03)
-# Declared abandoned upstream and stuck
-# on Python 3.7.
-# Removal in 30 days.
-app-office/moneyguru
 
 # Sam James <sam@gentoo.org> (2021-03-03)
 # Doesn't seem to sync clock correctly
@@ -337,7 +325,7 @@ www-apps/webmcp
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2020-10-30)
 # broken acl handling, possible broken chattr handling
 # needs more testing
-# https://bugs.gentoo.org/751739
+# bug #751739
 =sys-apps/opentmpfiles-0.3.1
 
 # Stephan Hartmann <sultan@gentoo.org> (2021-03-21)
@@ -395,10 +383,6 @@ dev-lang/vala:0.50
 # regarding runstatedir (not using /run).
 =net-misc/networkmanager-1.22*
 
-# Georgy Yakovlev <gyakovlev@gentoo.org> (2020-03-27)
-# Vulnerable old version of icedtea-web #711392
-<dev-java/icedtea-web-1.8.4
-
 # Eray Aslan <eras@gentoo.org> (2020-03-09)
 # Mask experimental software
 =mail-mta/postfix-3.6*
@@ -435,7 +419,7 @@ net-misc/gnome-remote-desktop
 # Lars Wendler <polynomial-c@gentoo.org> (2019-11-14)
 # Breaks archives containing relative paths
 # when being called with --no-absolute-filenames
-# https://bugs.gentoo.org/700020
+# bug #700020
 =app-arch/cpio-2.13
 
 # Matt Turner <mattst88@gentoo.org> (2019-09-01)

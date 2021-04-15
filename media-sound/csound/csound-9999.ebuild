@@ -244,6 +244,8 @@ src_install() {
 
 	use python && python_optimize
 
+	use java && (dosym lib_jcsound6.so usr/lib64/lib_jcsound.so.1 || die "Failed to create java lib symlink")
+
 	# install docs
 	if [[ ${PV} != "9999" ]] && use doc ; then
 		dodoc "${WORKDIR}"/*.pdf
