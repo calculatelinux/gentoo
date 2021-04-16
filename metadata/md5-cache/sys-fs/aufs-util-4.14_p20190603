@@ -10,4 +10,4 @@ RDEPEND=!sys-fs/aufs2 !<sys-fs/aufs3-3_p20130318
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~jlec/distfiles/aufs-util-4.14_p20190603.tar.xz
 _eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	2d5b3f4b315094768576b6799e4f926e	flag-o-matic	c0964e43ba712cb933da5f65b958fa88	l10n	8cdd85e169b835d518bc2fd59f780d8e	linux-info	30ded7f9adbdd03d3e848cdd74f6c395	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4	wrapper	4251d4c84c25f59094fd557e0063a974
-_md5_=708b65e98b79dcc71519c47eb51cecd5
+_md5_=31bbbf6bb3f1632545b77d300fe48d79
