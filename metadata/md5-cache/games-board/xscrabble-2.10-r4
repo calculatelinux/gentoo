@@ -1,0 +1,14 @@
+BDEPEND=x11-misc/gccmakedep >=x11-misc/imake-1.0.8-r1
+DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=x11-libs/libXaw
+DESCRIPTION=An X11 clone of the well-known Scrabble
+EAPI=7
+HOMEPAGE=http://freshmeat.net/projects/xscrabble/?topic_id=80
+IUSE=l10n_fr
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2+
+RDEPEND=x11-libs/libXaw acct-group/gamestat !<x11-terms/kterm-6.2.0-r7
+SLOT=0
+SRC_URI=ftp://ftp.ac-grenoble.fr/ge/educational_games/xscrabble-2.10.tgz l10n_fr? ( ftp://ftp.ac-grenoble.fr/ge/educational_games/xscrabble_fr.tgz ) ftp://ftp.ac-grenoble.fr/ge/educational_games/xscrabble_en.tgz
+_eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=fc9ce34a2f5b6288318337c8ed0bcc35

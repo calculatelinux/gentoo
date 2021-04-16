@@ -32,12 +32,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Bernard Cafarelli <voyageur@gentoo.org> (2021-04-15)
+# Abandoned upstream, does not work with current API,
+# does not compile with current mpv
+# Removal on 2021-05-15, bug #782601
+media-video/orion
+
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-04-15)
 # dev-java/jcodings-1.0.55 depends on masked >=virtual/{jdk,jre}-11
 # dev-java/joni-2.1.41 depends on masked >=virtual/{jdk,jre}-11
 >=dev-java/jcodings-1.0.55
 >=dev-java/joni-2.1.41
-
 
 # Jonas Stein <jstein@gentoo.org> (2021-04-15)
 # Depends on gtk2, which is EOL
@@ -70,6 +75,8 @@ x11-misc/xstroke
 >=app-misc/tracker-miners-3
 >=gnome-base/nautilus-40
 >=sys-process/gnome-usage-3.38
+>=media-plugins/grilo-plugins-0.3.13
+>=media-sound/gnome-music-40
 
 # Michał Górny <mgorny@gentoo.org> (2021-04-10)
 # Obsolete backport to Python < 3.4.  No reverse dependencies left.
@@ -114,6 +121,7 @@ gui-libs/gtk
 >=gnome-base/gnome-shell-40
 >=gnome-extra/gnome-shell-extensions-40
 >=x11-wm/mutter-40
+>=media-sound/gnome-music-40
 
 # David Seifert <soap@gentoo.org> (2021-04-05)
 # Completely broken, unmaintained, does not build. Newer version
@@ -216,6 +224,7 @@ sys-devel/autoconf:2.71
 >=dev-libs/glib-2.68.0
 >=net-libs/glib-networking-2.68.0
 >=gnome-base/nautilus-40
+>=gnome-extra/gnome-calendar-40
 
 # Marek Szuba <marecki@gentoo.org> (2021-03-19)
 # Depends on bundled out-of-date Qt5 libraries, and even with those
