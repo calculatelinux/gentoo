@@ -32,6 +32,38 @@
 
 #--- END OF EXAMPLES ---
 
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-18)
+# the project has been abandoned and the developement
+# is now under name SpotBugs
+# see: https://github.com/findbugsproject/findbugs
+dev-util/findbugs
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-18)
+# obsolete deps, not used by any package
+# removal in 30 days
+dev-java/classmate
+dev-java/commons-configuration
+dev-java/commons-jelly
+dev-java/ezmorph
+dev-java/ical4j
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-04-18)
+# Broken, stay tuned
+=sys-devel/binutils-2.36*
+=sys-devel/binutils-hppa64-2.36*
+=sys-libs/binutils-libs-2.36*
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-04-18)
+# dev-java/xerces-2.12.1 depends on masked >=virtual/{jdk,jre}-11
+# https://bugs.gentoo.org/782697
+>=dev-java/xerces-2.12.1
+
+# Matt Turner <mattst88@gentoo.org> (2021-04-18)
+# Masked for testing.
+>=dev-libs/vala-common-0.51
+dev-lang/vala:0.52
+>=games-board/gnome-chess-40
+
 # Michał Górny <mgorny@gentoo.org> (2021-04-17)
 # Superseded by dev-python/pycodestyle.  Last revdep masked for removal.
 # Removal on 2021-05-17.  Bug #783369.
@@ -105,6 +137,9 @@ x11-misc/xstroke
 >=media-plugins/grilo-plugins-0.3.13
 >=media-sound/gnome-music-40
 >=media-gfx/gnome-photos-40
+>=net-misc/rygel-0.40
+>=app-misc/bijiben-40
+>=gnome-extra/gnome-boxes-40
 
 # Michał Górny <mgorny@gentoo.org> (2021-04-10)
 # Obsolete backport to Python < 3.4.  No reverse dependencies left.
@@ -150,6 +185,7 @@ gui-libs/gtk
 >=gnome-extra/gnome-shell-extensions-40
 >=x11-wm/mutter-40
 >=media-sound/gnome-music-40
+>=games-board/gnome-chess-40
 
 # David Seifert <soap@gentoo.org> (2021-04-05)
 # Completely broken, unmaintained, does not build. Newer version
@@ -184,11 +220,6 @@ dev-libs/go-usb
 # bugfix and 3.0.4 version bump. Bugs #677374, #692928
 # Removal on 2021-04-29
 app-office/ical
-
-# Michał Górny <mgorny@gentoo.org> (2021-03-30)
-# Too strict entry_points.txt parsing causes revdeps to crash when
-# dev-python/paste is installed.
->=dev-python/importlib_metadata-3.9
 
 # Craig Andrews <candrews@gentoo.org> (2021-03-29)
 # Unmaintained upstream.
@@ -253,6 +284,9 @@ sys-devel/autoconf:2.71
 >=net-libs/glib-networking-2.68.0
 >=gnome-base/nautilus-40
 >=gnome-extra/gnome-calendar-40
+# Bug #780633
+>=dev-libs/libgweather-40
+>=gnome-base/gnome-settings-daemon-40
 
 # Marek Szuba <marecki@gentoo.org> (2021-03-19)
 # Depends on bundled out-of-date Qt5 libraries, and even with those

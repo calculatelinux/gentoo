@@ -81,6 +81,10 @@ multilib_src_install() {
 	gnome2_src_install
 }
 
+multilib_src_install_all() {
+	find "${ED}" -name '*.la' -delete || die
+}
+
 pkg_postinst() {
 	# causes segfault if set, see bug 375615
 	unset __GL_NO_DSO_FINALIZER

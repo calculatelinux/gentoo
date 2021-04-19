@@ -488,7 +488,6 @@ app-emulation/docker-credential-helpers:gnome-keyring - Build secretservice help
 app-emulation/docker-credential-helpers:pass - Build pass helper for the pass utility.
 app-emulation/dosemu:fluidsynth - use media-sound/fluidsynth for MIDI emulation
 app-emulation/faudio:dumpvoices - FAudio dumps buffer data to individual files with RIFF/XWMA headers, usable with players like ffplay/testxwma.
-app-emulation/faudio:ffmpeg - FAudio has optional support for decoding xWMA resources using FFmpeg, requiring: media-video/ffmpeg
 app-emulation/faudio:test - Build and run faudio testsuite.
 app-emulation/faudio:utils - Build all faudio utilities.
 app-emulation/faudio:xnasong - Build support for optional XNG_SONG component (note: this not required by app-emulation/wine-staging, app-emulation/wine-vanilla for faudio XAudio support).
@@ -1672,6 +1671,9 @@ dev-java/icedtea:smartcard - Build the PCSC driver against pcsc-lite
 dev-java/icedtea:system-lcms - Build against the system LCMS installation rather than the in-tree copy.
 dev-java/icedtea:zero - Enable Zero assembler port (usually for non-HotSpot architectures)
 dev-java/icedtea-bin:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
+dev-java/jaxen:dom4j - Includes org.jaxen.dom4j package
+dev-java/jaxen:jdom - Includes org.jaxen.jdom package
+dev-java/jaxen:xom - Includes org.jaxen.xom package
 dev-java/jdbc-mysql:c3p0 - Enable c3p0 support
 dev-java/jdbc-mysql:log4j - Enable log4 support
 dev-java/jfreesvg:debug - Enable debugging during compilation.
@@ -2799,6 +2801,7 @@ dev-util/geany-plugins:pretty-printer - Enable pretty-printer plugin
 dev-util/geany-plugins:scope - Enable the scope plugin which is a graphical GDB front-end
 dev-util/geany-plugins:soup - Enable updatechecker and geniuspaste plugins which require net-libs/libsoup
 dev-util/geany-plugins:workbench - Enable workbench plugin
+dev-util/glade:gjs - Build catalog support for dev-libs/gjs widgets.
 dev-util/glade:webkit - Build catalog support for net-libs/webkit-gtk:4 widgets.
 dev-util/global:vim - Integrate the GNU GLOBAL source code tag system with Vim
 dev-util/gnome-builder:clang - Provide integration with sys-devel/clang for best possible C/C++ autocompletion, semantic highlighting, symbol resolving, and diagnostics support
@@ -3306,7 +3309,9 @@ gnome-extra/gnome-commander:unique - Enable single instance support using dev-li
 gnome-extra/gnome-contacts:telepathy - Start chat from contact details
 gnome-extra/gnome-shell-extension-gsconnect:nautilus - Install Nautilus extension for sending files via GSConnect
 gnome-extra/gnome-software:firmware - Enable firmware update support through sys-apps/fwupd
+gnome-extra/gnome-software:flatpak - Enable support for flatpak applications using sys-apps/flatpak
 gnome-extra/gnome-software:packagekit - Enable module for package manager integration
+gnome-extra/gnome-software:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 gnome-extra/gnome-system-monitor:systemd - Display sys-apps/systemd metadata, e.g. unit names, for running processes
 gnome-extra/libgda:canvas - Enable support for x11-libs/goocanvas
 gnome-extra/libgda:http - Enable embedded net-libs/libsoup based server
@@ -4726,6 +4731,7 @@ media-sound/split2flac:enca - Try to guess the charset using enca
 media-sound/split2flac:flake - Add support for Flake, alternative FLAC encoder
 media-sound/split2flac:mac - Add support for Monkey's Audio files
 media-sound/split2flac:replaygain - Support for Replay Gain metadata, for relative volume adjustment
+media-sound/spotify:local-playback - Allows playing local files with the Spotify client
 media-sound/spotify:pax_kernel - Triggers a paxmarking of the main Spotify binary
 media-sound/spotify:pulseaudio - Controls the dependency on pulseaudio or apulse
 media-sound/spotify:systray - Pulls in dependencies needed for systray support on some desktop environments
@@ -4985,7 +4991,6 @@ media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:md5sum - Enables md5sum video output
 media-video/mplayer:mng - MNG input support
 media-video/mplayer:network - Enables network streaming support
-media-video/mplayer:nut - Enables support for the NUT container format
 media-video/mplayer:osdmenu - Enables support for on-screen display (OSD) menus
 media-video/mplayer:pnm - Add PNM video output option, to create PPM/PGM/PGMYUV images
 media-video/mplayer:pvr - Enable Video4Linux2 MPEG PVR

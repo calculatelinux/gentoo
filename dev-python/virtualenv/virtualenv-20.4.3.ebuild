@@ -17,7 +17,7 @@ HOMEPAGE="
 SRC_URI="mirror://pypi/${PN::1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~x64-macos"
+KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-macos"
 SLOT="0"
 
 RDEPEND="
@@ -72,12 +72,16 @@ python_test() {
 		'tests/unit/create/test_creator.py::test_zip_importer_can_import_setuptools'
 		'tests/unit/discovery/py_info/test_py_info_exe_based_of.py::test_discover_ok[PyPy-3.7.9-64-bin-]'
 		'tests/unit/discovery/py_info/test_py_info_exe_based_of.py::test_discover_ok[PyPy-3.7.9--bin-]'
+		'tests/unit/discovery/py_info/test_py_info_exe_based_of.py::test_discover_ok[PyPy-3.7.10-64-bin-]'
+		'tests/unit/discovery/py_info/test_py_info_exe_based_of.py::test_discover_ok[PyPy-3.7.10--bin-]'
 		'tests/unit/discovery/py_info/test_py_info_exe_based_of.py::test_discover_ok[PyPy-3.7-64-bin-]'
 		'tests/unit/discovery/py_info/test_py_info_exe_based_of.py::test_discover_ok[PyPy-3.7--bin-]'
 		'tests/unit/discovery/py_info/test_py_info_exe_based_of.py::test_discover_ok[PyPy-3-64-bin-]'
 		'tests/unit/discovery/py_info/test_py_info_exe_based_of.py::test_discover_ok[PyPy-3--bin-]'
 		'tests/unit/discovery/py_info/test_py_info_exe_based_of.py::test_discover_ok[python-3.7.9-64-bin-]'
 		'tests/unit/discovery/py_info/test_py_info_exe_based_of.py::test_discover_ok[python-3.7.9--bin-]'
+		'tests/unit/discovery/py_info/test_py_info_exe_based_of.py::test_discover_ok[python-3.7.10-64-bin-]'
+		'tests/unit/discovery/py_info/test_py_info_exe_based_of.py::test_discover_ok[python-3.7.10--bin-]'
 		'tests/unit/discovery/py_info/test_py_info_exe_based_of.py::test_discover_ok[python-3.7-64-bin-]'
 		'tests/unit/discovery/py_info/test_py_info_exe_based_of.py::test_discover_ok[python-3.7--bin-]'
 		'tests/unit/discovery/py_info/test_py_info_exe_based_of.py::test_discover_ok[python-3-64-bin-]'
