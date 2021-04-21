@@ -32,6 +32,20 @@
 
 #--- END OF EXAMPLES ---
 
+# Ulrich Müller <ulm@gentoo.org> (2021-04-20)
+# Version 3.15 is broken with Emacs 27.2.
+=app-emacs/mic-paren-3.15-r0
+
+# Matt Turner <mattst88@gentoo.org> (2021-04-18)
+# Pretty dead. Needs GTK+3 port. Doesn't build with glib-2.68.
+# Removal on 2021-05-19.  Bug #784266.
+net-nntp/pan
+
+# Jonas Stein <jstein@gentoo.org> (2021-04-19)
+# Bad SRC_URI, missing license files
+# Removal on 2021-07-01.  Bug #784221.
+x11-apps/amlc
+
 # Miroslav Šulc <fordfrog@gentoo.org> (2021-04-18)
 # our version is outdated with security issues, new version
 # uses gradle to build which we don't support atm,
@@ -54,12 +68,6 @@ dev-java/commons-configuration
 dev-java/commons-jelly
 dev-java/ezmorph
 dev-java/ical4j
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-04-18)
-# Broken, stay tuned
-=sys-devel/binutils-2.36*
-=sys-devel/binutils-hppa64-2.36*
-=sys-libs/binutils-libs-2.36*
 
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-04-18)
 # dev-java/xerces-2.12.1 depends on masked >=virtual/{jdk,jre}-11

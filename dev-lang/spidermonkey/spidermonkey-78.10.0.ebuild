@@ -7,7 +7,7 @@ EAPI="7"
 FIREFOX_PATCHSET="firefox-78esr-patches-10.tar.xz"
 SPIDERMONKEY_PATCHSET="spidermonkey-78-patches-03.tar.xz"
 
-LLVM_MAX_SLOT=12
+LLVM_MAX_SLOT=11
 
 PYTHON_COMPAT=( python3_{7..9} )
 
@@ -60,7 +60,7 @@ SRC_URI="${MOZ_SRC_BASE_URI}/source/${MOZ_P}.source.tar.xz -> ${MOZ_P_DISTFILES}
 DESCRIPTION="SpiderMonkey is Mozilla's JavaScript engine written in C and C++"
 HOMEPAGE="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey"
 
-KEYWORDS="~amd64 ~arm ~arm64 ~mips ~ppc64 ~s390 ~x86"
+KEYWORDS="amd64 ~arm ~arm64 ~mips ~ppc64 ~s390 x86"
 
 SLOT="78"
 LICENSE="MPL-2.0"
@@ -72,13 +72,6 @@ BDEPEND="${PYTHON_DEPS}
 	>=virtual/rust-1.41.0
 	virtual/pkgconfig
 	|| (
-		(
-			sys-devel/llvm:12
-			clang? (
-				sys-devel/clang:12
-				lto? ( =sys-devel/lld-12* )
-			)
-		)
 		(
 			sys-devel/llvm:11
 			clang? (
