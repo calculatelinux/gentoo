@@ -1478,7 +1478,9 @@ dev-haskell/hdbc-sqlite3:splitbase - Choose the new smaller, split-up package.
 dev-haskell/hexpat:bundled-expat - Use bundled expat instead of dev-libs/expat
 dev-haskell/highlighting-kate:executable - Build the Highlight executable.
 dev-haskell/highlighting-kate:pcre-light - Use the pcre-light library instead of regex-pcre-builtin.
-dev-haskell/hlint:gpl - Use GPL libraries, specifically hscolour.
+dev-haskell/hlint:gpl - Use GPL libraries, specifically hscolour
+dev-haskell/hlint:hsyaml - Use HsYAML instead of yaml
+dev-haskell/hlint:threaded - Build with support for multithreaded execution
 dev-haskell/hps:build-exec - Build the `hps-fractals' executable
 dev-haskell/hs3:network-uri - Get Network.URI from the network-uri package
 dev-haskell/hslogger:network-3 - Use network-3
@@ -7553,6 +7555,7 @@ sci-physics/root:shadow - Enable shadow authentication in rootd and proofd
 sci-physics/root:tbb - Enable implicit multi-threading (IMT) with dev-cpp/tbb
 sci-physics/root:tmva - Built TMVA (ROOT's multi-variate analysis toolkit for machine learning)
 sci-physics/root:unuran - Enable support for sci-mathematics/unuran
+sci-physics/root:uring - Enable support for sys-libs/liburing in RNTuple
 sci-physics/root:vc - Enable support for dev-libs/vc with VecCore
 sci-physics/root:vmc - Built the Virtual Monte Carlo library
 sci-physics/root:xrootd - Build the interface for net-libs/xrootd
@@ -8701,11 +8704,8 @@ x11-base/xorg-server:xnest - Build the Xnest server
 x11-base/xorg-server:xorg - Build the Xorg X server (HIGHLY RECOMMENDED)
 x11-base/xorg-server:xvfb - Build the Xvfb server
 x11-base/xorg-x11:fonts - Install fonts from X.Org
-x11-drivers/nvidia-drivers:compat - Install non-GLVND libGL for backwards compatibility
 x11-drivers/nvidia-drivers:driver - Install kernel driver modules
-x11-drivers/nvidia-drivers:kms - Enable support for kernel mode setting (KMS)
 x11-drivers/nvidia-drivers:tools - Install additional tools such as nvidia-settings
-x11-drivers/nvidia-drivers:uvm - Install the Unified Memory kernel module (nvidia-uvm) for sharing memory between CPU and GPU in CUDA programs
 x11-drivers/xf86-video-geode:ztv - Enable building the V4L2 ZTV driver
 x11-drivers/xf86-video-intel:sna - Enable SandyBridge's New Acceleration (useful on all chipsets, not just SandyBridge)
 x11-drivers/xf86-video-intel:tools - Build the intel-virtual-output tool

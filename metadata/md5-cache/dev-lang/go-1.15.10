@@ -10,4 +10,4 @@ RESTRICT=strip
 SLOT=0/1.15.10
 SRC_URI=https://storage.googleapis.com/golang/go1.15.10.src.tar.gz
 _eclasses_=multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=32708bc6ad54f2615d7c84049dd672dd
+_md5_=bb446fa19a1b62bb2be8530b240a1ea0

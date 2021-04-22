@@ -23,7 +23,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 LICENSE="MIT openssl PHP-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~ia64 ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="libressl test"
 REQUIRED_USE="${LUA_REQUIRED_USE}"
 RESTRICT="!test? ( test )"
@@ -49,9 +49,10 @@ src_prepare() {
 	# Allow override of LUA* variables
 	sed -e '/LUA  /s/:=/?=/g' -e '/LUA_VERSION/s/:=/?=/g' -i Makefile || die
 
-	# Disable TestCMS test suite, as it fails
+	# Disable TestCMS and TestCRL test suite, as it fails
 	# See: https://github.com/zhaozg/lua-openssl/issues/230
-	sed -e '/6.cms.lua/d' -i test/test.lua || die
+	# See: https://github.com/zhaozg/lua-openssl/issues/231
+	sed -e '/6.cms.lua/d' -e '/5.x509_crl.lua/d' -i test/test.lua || die
 
 	# Prepare needed dependencies (source code files only)
 	rm -r deps/{auxiliar,lua-compat} || die
