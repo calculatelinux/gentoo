@@ -382,21 +382,11 @@ dev-go/qt
 media-plugins/kodi-game-libretro-nestopia
 media-plugins/kodi-game-libretro-dosbox
 
-# Alfredo Tupone <tupone@gentoo.org> (2020-11-05)
-# will be upgraded after new lua release
-www-apps/liquid_feedback_frontend
-
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2020-10-30)
 # broken acl handling, possible broken chattr handling
 # needs more testing
 # bug #751739
 =sys-apps/opentmpfiles-0.3.1
-
-# Stephan Hartmann <sultan@gentoo.org> (2021-03-21)
-# Dev channel releases are only for people who
-# are developers or want more experimental features
-# and accept a more unstable release.
->=www-client/chromium-91
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-10-26)
 # Historical metapackage that exists in slot 5 only for transition from KDE SC4.
