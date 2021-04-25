@@ -32,6 +32,73 @@
 
 #--- END OF EXAMPLES ---
 
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-25)
+# obsolete package, nothing depends on it
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/785508
+dev-java/velocity-dvsl
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-25)
+# nothing depends on it
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/785532
+dev-java/cdegroot-db
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-25)
+# uses depracated classes, not used by anything,
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/785415
+dev-java/codemodel
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-25)
+# seems to be obsolete, nothing uses it
+# removal in 30 days
+dev-java/istack-commons-buildtools
+
+# David Seifert <soap@gentoo.org> (2021-04-24)
+# Doesn't build, live ebuild broken too, blocks wxwidgets.eclass
+# modernization, unmaintained, requires unreleased changes in
+# net-libs/liquid-dsp. Bug #777720, removal in 30 days.
+net-wireless/cubicsdr
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-04-24)
+# dev-dotnet/gtk-sharp is effectively unmaintained. Last upstream release
+# in 2016, version packaged in Gentoo from 2013. gtk-sharp-3 never made it
+# out of beta state. An actively developed fork that targets GTK3 exists:
+# https://github.com/GtkSharp/GtkSharp
+# Removal on 2021-05-24. Tracker bug #769041
+dev-dotnet/gtk-sharp
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-04-24)
+# Depends on deprecated dev-dotnet/gtk-sharp, bug #769077
+# Removal on 2021-05-24
+app-misc/gnutu
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-04-24)
+# Depends on deprecated dev-dotnet/gtk-sharp, bug #769083
+# Alternatives (all in app-editors category): curses-hexedit, dhex, ghex,
+# hexcurse, okteta, qhexedit2, shed, wxhexeditor
+# Removal on 2021-05-24
+dev-util/bless
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-04-24)
+# Unmaintained, depends on dev-dotnet/gtk-sharp which is dead upstream.
+# Removal on 2021-05-24; bugs #769050, #769059
+dev-dotnet/gkeyfile-sharp
+dev-dotnet/notify-sharp
+
+# David Seifert <soap@gentoo.org> (2021-04-24)
+# Masked for testing and until revdeps have been fixed, Bug #763201.
+# Sync concurrent unmasking with icu/chromium/qtwebengine.
+>=dev-libs/boost-1.76.0
+>=dev-util/boost-build-1.76.0
+
+# Stephan Hartmann <sultan@gentoo.org> (2021-04-24)
+# Dev channel releases are only for people who
+# are developers or want more experimental features
+# and accept a more unstable release.
+>=www-client/chromium-92
+
 # Michał Górny <mgorny@gentoo.org> (2021-04-22)
 # py3.7 backport with no revdeps left.
 # Removal on 2021-05-22.  Bug #784983.
@@ -280,28 +347,10 @@ app-eselect/eselect-lcdfilter
 media-libs/fontconfig-ultimate
 media-libs/fontconfig-infinality
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2021-03-28)
-# No release since 2012, depends on deprecated dev-ml/lablgtk:2, no more
-# revdeps in Gentoo ebuild repository.
-# Removal on 2021-04-07, bug #769326
-dev-ml/cairo-ocaml
-
 # Jonas Stein <jstein@gentoo.org> (2021-03-27)
 # Upstream is gone. Open bugs. Removal after 2021-05-01.
 # Bug #778800
 x11-themes/nimbus
-
-# Jimi Huotari <chiitoo@gentoo.org> (2021-03-26)
-# No consumers since 2020-09-05 (dev-libs/liboobs), and no known
-# stand-alone use.
-# Removal on 2021-04-25.
-app-admin/system-tools-backends
-
-# Michał Górny <mgorny@gentoo.org> (2021-03-26)
-# Pins to a vulnerable version of dev-python/urllib3.  No maintainer
-# in Gentoo.
-# Removal on 2021-04-25.  Bug #714860.
-dev-python/elasticsearch-curator
 
 # Lars Wendler <polynomial-c@gentoo.org> (2021-03-22)
 # Has unidentified race condition on very fast CPUs that causes maintainer-
@@ -325,14 +374,6 @@ sys-devel/autoconf:2.71
 # Bug #780633
 >=dev-libs/libgweather-40
 >=gnome-base/gnome-settings-daemon-40
-
-# Marek Szuba <marecki@gentoo.org> (2021-03-19)
-# Depends on bundled out-of-date Qt5 libraries, and even with those
-# installed recent upstream versions fail to run. Moreover, we have now
-# got a source variant in the tree which, while still CLI-only for now,
-# is up to date and actually works.
-# Removal in 30 days. Bug #768228.
-mail-mta/protonmail-bridge-bin
 
 # Göktürk Yüksek <gokturk@gentoo.org> (2021-03-14)
 # Dead upstream. No revdeps.
