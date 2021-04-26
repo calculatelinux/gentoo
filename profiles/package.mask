@@ -32,6 +32,19 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-04-25)
+# Broken, bug 616986; removal in 30 days
+dev-perl/HTTPD-User-Manage
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-04-25)
+# Broken, bug 663274; removal in 30 days
+dev-perl/Text-Unaccent
+
+# Jonas Stein <jstein@gentoo.org> (2021-04-25)
+# Bad SRC_URI, dead upstream.
+# Removal on 2021-06-01.  Bug #785736.
+app-misc/logitech-applet
+
 # Miroslav Šulc <fordfrog@gentoo.org> (2021-04-25)
 # obsolete package, nothing depends on it
 # removal in 30 days
@@ -338,14 +351,6 @@ net-p2p/xmr-stak
 # Removal on 2021-05-01.
 # Bug #779148.
 app-editors/beaver
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2021-03-27)
-# Dead upstream. Bugs #437056, #453964, #550592, #768303
-# Removal on 2021-04-26.
-app-eselect/eselect-infinality
-app-eselect/eselect-lcdfilter
-media-libs/fontconfig-ultimate
-media-libs/fontconfig-infinality
 
 # Jonas Stein <jstein@gentoo.org> (2021-03-27)
 # Upstream is gone. Open bugs. Removal after 2021-05-01.
