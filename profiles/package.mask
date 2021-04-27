@@ -32,6 +32,78 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-04-27)
+# Unmaintained, dead service, EAPI-5.
+# Removal on 2021-05-14
+app-misc/mediacrush-cli
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-27)
+# library with no consumer
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786117
+dev-java/helpgui
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-27)
+# library with no consumer
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786120
+dev-java/higlayout
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-27)
+# library with no consumer
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786096
+dev-java/hamcrest-integration
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-27)
+# library with no consumer
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786090
+dev-java/fscript
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-27)
+# library with no consumer
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786087
+dev-java/fastinfoset
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-27)
+# library with no consumer
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/785985
+dev-java/ehcache
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-27)
+# library with no consumer
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/785886
+dev-java/easymock-classextension
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-27)
+# libraries with no consumer
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/785883
+dev-java/httpcomponents-client
+dev-java/httpcomponents-core
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-27)
+# library with no consumer
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/785877
+dev-java/dtdparser
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-26)
+# no consumer
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/785847
+dev-java/commons-fileupload
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-26)
+# does not compile with java 1.8, no consumer
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/785796
+dev-java/commons-el
+
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2021-04-25)
 # Broken, bug 616986; removal in 30 days
 dev-perl/HTTPD-User-Manage
@@ -363,22 +435,6 @@ x11-themes/nimbus
 # Most likely caused by the following upstream commit:
 #   https://git.savannah.gnu.org/cgit/autoconf.git/commit/?id=aba75f6d4a9c875a9d5d90a07c6b3678db66a4bf
 sys-devel/autoconf:2.71
-
-# Sam James <sam@gentoo.org> (2021-03-22)
-# Many reverse dependencies need to be ported due to changes in new glib
-# Masking until they've been updated, see tracker bug for details
-# bug #777675
->=dev-libs/gobject-introspection-common-1.68.0
->=dev-libs/gobject-introspection-1.68.0
->=dev-util/gdbus-codegen-2.68.0
->=dev-util/glib-utils-2.68.0
->=dev-libs/glib-2.68.0
->=net-libs/glib-networking-2.68.0
->=gnome-base/nautilus-40
->=gnome-extra/gnome-calendar-40
-# Bug #780633
->=dev-libs/libgweather-40
->=gnome-base/gnome-settings-daemon-40
 
 # Göktürk Yüksek <gokturk@gentoo.org> (2021-03-14)
 # Dead upstream. No revdeps.

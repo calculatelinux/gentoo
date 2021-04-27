@@ -1646,7 +1646,6 @@ dev-java/ant:resolver - Enable Apache Resolver Ant tasks
 dev-java/ant:swing - Enable Swing Ant tasks
 dev-java/ant:testutil - Enable optional test util classes
 dev-java/ant:xz - Enable XZ Ant tasks
-dev-java/commons-collections:test-framework - Install the test framework
 dev-java/commons-logging:avalon-framework - Add optional support for avalon-framework
 dev-java/commons-logging:avalon-logkit - Add optional support for avalon-logkit
 dev-java/commons-logging:log4j - Add optional support for log4j
@@ -8909,8 +8908,8 @@ x11-themes/arc-theme:gtk3 - Install GTK+3 theme
 x11-themes/arc-theme:mate - Install Metacity theme for mate-base/mate
 x11-themes/arc-theme:pre-rendered - Avoid media-gfx/inkscape and media-gfx/optipng dependencies by using pre-rendered PNGs
 x11-themes/arc-theme:xfce - Install theme for xfce-base/xfwm4
-x11-themes/comix-xcursors:lefthanded - Install lefthanded version of theme in addition to default one
-x11-themes/comix-xcursors:opaque - Install non-transparent version of theme in addition to default one
+x11-themes/comix-xcursors:lefthanded - Install lefthanded version of theme in addition to default one.
+x11-themes/comix-xcursors:opaque - Install non-transparent version of theme in addition to default one.
 x11-themes/gentoo-artwork:grub - Install extra sys-boot/grub themes
 x11-themes/gentoo-artwork:icons - Install icons
 x11-themes/gentoo-artwork:lilo - Install extra sys-boot/lilo themes
