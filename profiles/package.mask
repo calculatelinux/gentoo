@@ -32,6 +32,128 @@
 
 #--- END OF EXAMPLES ---
 
+# Eray Aslan <eras@gentoo.org> (2021-04-29)
+# Mask experimental software
+=mail-mta/postfix-3.7*
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786522
+dev-java/netty-codec
+dev-java/netty-codec-http
+dev-java/netty-handler
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# obsolete, use dev-util/visualvm
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786513
+dev-java/jvmstat
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786510
+dev-java/junrar
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786507
+dev-java/junit-addons
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786486
+dev-java/jstun
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786483
+dev-java/l2fprod-common
+dev-java/jreleaseinfo
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786480
+dev-java/jortho
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786441
+dev-java/jlibeps
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786438
+dev-java/jisp
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786435
+dev-java/jinput
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786432
+dev-java/jid3
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786426
+dev-java/jebl
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# project abandoned
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786420
+dev-java/jdbm
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786417
+dev-java/jdbc2-stdext
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786414
+dev-java/jcmdline
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786408
+dev-java/jboss-logmanager
+dev-java/jboss-logging
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# last release in 2017, website is offline
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786381
+dev-java/javolution
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# library with no consumer
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786237
+dev-java/jarbundler
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# library with no consumer
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786234
+dev-java/j2ssh
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2021-04-27)
 # Unmaintained, dead service, EAPI-5.
 # Removal on 2021-05-14
@@ -318,19 +440,6 @@ x11-misc/superswitcher
 # Removal on 2021-06-01.  Bug #782727.
 x11-misc/xstroke
 
-# Matt Turner <mattst88@gentoo.org> (2021-04-13)
-# Masked for testing
->=app-misc/tracker-3
->=app-misc/tracker-miners-3
->=gnome-base/nautilus-40
->=sys-process/gnome-usage-3.38
->=media-plugins/grilo-plugins-0.3.13
->=media-sound/gnome-music-40
->=media-gfx/gnome-photos-40
->=net-misc/rygel-0.40
->=app-misc/bijiben-40
->=gnome-extra/gnome-boxes-40
-
 # Michał Górny <mgorny@gentoo.org> (2021-04-10)
 # Obsolete backport to Python < 3.4.  No reverse dependencies left.
 # Removal on 2021-05-10.  Bug #781902.
@@ -410,13 +519,6 @@ dev-libs/go-usb
 # bugfix and 3.0.4 version bump. Bugs #677374, #692928
 # Removal on 2021-04-29
 app-office/ical
-
-# Craig Andrews <candrews@gentoo.org> (2021-03-29)
-# Unmaintained upstream.
-# Project is also not useful due to changes in cryptocurrency mining.
-# Open security issue, bug #779004
-# Removal on 2021-04-29, bug #779166
-net-p2p/xmr-stak
 
 # Jonas Stein <jstein@gentoo.org> (2021-03-29)
 # Depends on gtk-2, no release since 2010.
@@ -527,12 +629,6 @@ kde-apps/kdebase-meta:5
 # Ported to py3 but not yet released
 # Masked to allow py2.7 removal
 dev-lang/spark
-
-# Mart Raudsepp <leio@gentoo.org> (2020-08-15)
-# Development release, needs testing to ensure valac-0.50
-# works for existing packages
->=dev-libs/vala-common-0.49
-dev-lang/vala:0.50
 
 # Mart Raudsepp <leio@gentoo.org> (2020-06-06)
 # Meson port does not handle multilib yet and has issues

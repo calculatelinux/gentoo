@@ -17,7 +17,7 @@ SLOT="0/$(ver_cut 1)"
 RDEPEND="python? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}"
 
-IUSE="python test"
+IUSE="python static-libs test"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 LICENSE="MIT python? ( Apache-2.0 )"
@@ -29,7 +29,7 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://github.com/google/${PN}.git"
 	inherit git-r3
 else
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x64-solaris"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x64-solaris"
 	SRC_URI="https://github.com/google/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
 
@@ -73,6 +73,7 @@ src_test() {
 
 multilib_src_install() {
 	cmake-utils_src_install
+	use static-libs || rm "${ED}"/usr/$(get_libdir)/*.a || die
 }
 multilib_src_install_all() {
 	use python && distutils-r1_src_install

@@ -6737,11 +6737,6 @@ net-p2p/syncthing:tools - Install stdiscosrv, strelaysrv and other tools to /usr
 net-p2p/transmission:lightweight - Optimize transmission for low-resource systems (smaller cache size, prefer unencrypted peer connections, etc.)
 net-p2p/transmission:mbedtls - Use mbed TLS instead of OpenSSL
 net-p2p/transmission-remote-gtk:libproxy - Use net-libs/libproxy for getting the HTTP/HTTPS/SOCKS proxy configuration.
-net-p2p/xmr-stak:cuda - Enable NVIDIA CUDA toolkit support
-net-p2p/xmr-stak:devfee - Enable payment of devfee to the developer
-net-p2p/xmr-stak:hwloc - Enable CPU affinity support via hwloc
-net-p2p/xmr-stak:opencl - Enable OpenCL support
-net-p2p/xmr-stak:webserver - Enable internal webserver
 net-p2p/xmr-stak-rx:cuda - Enable NVIDIA CUDA toolkit support
 net-p2p/xmr-stak-rx:hwloc - Enable CPU affinity support via hwloc
 net-p2p/xmr-stak-rx:opencl - Enable OpenCL support
@@ -8525,6 +8520,7 @@ www-apps/nikola:server - Enable support for built-in web server using dev-python
 www-apps/nikola:watchdog - Use dev-python/watchdog to monitor file system events
 www-apps/nikola:webmedia - Use dev-python/micawber to extract metadata from web media links
 www-apps/postfixadmin:vacation - Install vacation.pl script and dependencies
+www-apps/radicale:bcrypt - Enable bcrypt
 www-apps/redmine:markdown - Enable support for Markdown
 www-apps/redmine:passenger - Enable support for www-apache/passenger
 www-apps/roundup:jinja - Enable Jinja2 support
