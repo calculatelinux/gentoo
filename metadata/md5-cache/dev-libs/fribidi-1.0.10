@@ -1,5 +1,5 @@
 BDEPEND=virtual/pkgconfig
-DEFINED_PHASES=compile configure install test
+DEFINED_PHASES=compile configure install prepare test
 DESCRIPTION=A free implementation of the unicode bidirectional algorithm
 EAPI=7
 HOMEPAGE=https://fribidi.org/
@@ -9,4 +9,4 @@ LICENSE=LGPL-2.1+
 SLOT=0
 SRC_URI=https://github.com/fribidi/fribidi/releases/download/v1.0.10/fribidi-1.0.10.tar.xz
 _eclasses_=multibuild	6b3d5ee849dafe6cdfd7b859c211fb01	multilib	d410501a125f99ffb560b0c523cd3d1e	multilib-build	ac696f0bea6c503f5980bfd5a0f312e5	multilib-minimal	8bddda43703ba94d8341f4e247f97566	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=6bf6f175a1aa51c53f63b769ef3012c0
+_md5_=a106f479c07f7921611daf764b7150c3

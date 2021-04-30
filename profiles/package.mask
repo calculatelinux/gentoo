@@ -32,9 +32,133 @@
 
 #--- END OF EXAMPLES ---
 
+# Fabian Groffen <grobian@gentoo.org> (2021-04-30)
+# doesn't build without patching, upstream disagrees with suggested patch
+# https://github.com/trusteddomainproject/OpenDMARC/issues/163
+=mail-filter/opendmarc-1.4.1
+
+# Matt Turner <mattst88@gentoo.org> (2021-04-29)
+# Incompatible with gdm-3.36. Bug #786573
+>=gnome-base/gnome-settings-daemon-40
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786888
+dev-java/zeus-jscl
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786864
+dev-java/sun-jmx
+java-virtuals/jmx
+dev-util/jconfig
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786843
+dev-java/sun-httpserver-bin
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786840
+dev-java/stax-ex
+dev-java/xmlstreambuffer
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786831
+dev-java/stax2-api
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786756
+dev-java/nekohtml
+dev-java/boilerpipe
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786786
+dev-java/spymemcached
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786783
+dev-java/skinlf
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786780
+dev-java/sblim-cim-client
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786774
+dev-java/radeox
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bugs: https://bugs.gentoo.org/786771
+dev-java/prefuse
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786768
+dev-java/picocontainer
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786753
+dev-java/msv
+dev-java/relaxngcc
+dev-java/wstx
+dev-java/jettison
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786744
+dev-java/minlog
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786714
+dev-java/libmatthew-java
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/786711
+dev-java/ldapsdk
+
+# Michał Górny <mgorny@gentoo.org> (2021-04-29)
+# The most recent release is still broken with current
+# dev-python/coverage.  Inactive downstream maintainer.  No revdeps.
+# Removal on 2021-05-29.  Bug #786666.
+dev-python/pytest-testmon
+
 # Eray Aslan <eras@gentoo.org> (2021-04-29)
 # Mask experimental software
 =mail-mta/postfix-3.7*
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
+# security issues, last release in 2004
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/631394
+media-sound/bladeenc
 
 # Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
 # no consumers
@@ -514,12 +638,6 @@ dev-libs/go-usb
 # bug #737406
 =media-fonts/culmus-0.133-r1
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2021-03-30)
-# Completely broken since profile 17.1, package needs a real maintainer,
-# bugfix and 3.0.4 version bump. Bugs #677374, #692928
-# Removal on 2021-04-29
-app-office/ical
-
 # Jonas Stein <jstein@gentoo.org> (2021-03-29)
 # Depends on gtk-2, no release since 2010.
 # Removal on 2021-05-01.
@@ -634,10 +752,6 @@ dev-lang/spark
 # Meson port does not handle multilib yet and has issues
 # regarding runstatedir (not using /run).
 =net-misc/networkmanager-1.22*
-
-# Eray Aslan <eras@gentoo.org> (2020-03-09)
-# Mask experimental software
-=mail-mta/postfix-3.6*
 
 # Miroslav Šulc <fordfrog@gentoo.org> (2020-02-27)
 # >=dev-java/ant-eclipse-ecj-4.10 depends on masked >=virtual/{jdk,jre}-11
