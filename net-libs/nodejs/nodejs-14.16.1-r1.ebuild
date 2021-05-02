@@ -22,8 +22,7 @@ REQUIRED_USE="inspector? ( icu ssl )
 	system-icu? ( icu )
 	system-ssl? ( ssl )"
 
-# FIXME: test-fs-mkdir fails with "no such file or directory". Investigate.
-RESTRICT="test"
+RESTRICT="!test? ( test )"
 
 RDEPEND=">=app-arch/brotli-1.0.9
 	>=dev-libs/libuv-1.40.0:=
@@ -54,7 +53,15 @@ pkg_pretend() {
 
 	if [[ ${MERGE_TYPE} != "binary" ]]; then
 		if use lto; then
-			tc-is-gcc || die "${PN} only supports LTO for gcc"
+			if tc-is-gcc; then
+				if [[ $(gcc-major-version) -ge 11 ]]; then
+					# Bug #787158
+					die "LTO builds of ${PN} using gcc-11+ currently fail tests and produce runtime errors. Either switch to gcc-10 or unset USE=lto for this ebuild"
+				fi
+			else
+				# configure.py will abort on this later if we do not
+				die "${PN} only supports LTO for gcc"
+			fi
 		fi
 	fi
 }
@@ -215,6 +222,12 @@ src_install() {
 }
 
 src_test() {
+	# parallel/test-fs-mkdir is known to fail with FEATURES=usersandbox
+	if has usersandbox ${FEATURES}; then
+		ewarn "You are emerging ${P} with 'usersandbox' enabled." \
+			"Expect some test failures or emerge with 'FEATURES=-usersandbox'!"
+	fi
+
 	out/${BUILDTYPE}/cctest || die
 	"${EPYTHON}" tools/test.py --mode=${BUILDTYPE,,} -J message parallel sequential || die
 }

@@ -20,8 +20,8 @@ LICENSE="MIT"
 # pypy3 -c 'import sysconfig; print(sysconfig.get_config_var("SOABI"))'
 # also check pypy/interpreter/pycode.py -> pypy_incremental_magic
 SLOT="0/pypy37-pp73"
-KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="bzip2 gdbm +jit libressl ncurses sqlite test tk"
+KEYWORDS="amd64 ~arm64 ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+IUSE="bzip2 gdbm +jit ncurses sqlite test tk"
 # pypy3.7 is in alpha state and a lot of tests are failing
 RESTRICT="test"
 
@@ -30,8 +30,7 @@ RDEPEND="
 		>=dev-python/pypy3-exe-7.3.3_p37_p2:${PV%_p*}[bzip2?,ncurses?]
 		>=dev-python/pypy3-exe-bin-7.3.3_p37_p2:${PV%_p*}
 	)
-	!libressl? ( dev-libs/openssl:0= )
-	libressl? ( dev-libs/libressl:0= )
+	dev-libs/openssl:0=
 	gdbm? ( sys-libs/gdbm:0= )
 	sqlite? ( dev-db/sqlite:3= )
 	tk? (

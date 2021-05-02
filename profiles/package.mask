@@ -32,14 +32,52 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-05-01)
+# nsplugin is dead, bug #771801
+# Removal on 2021-05-31
+www-plugins/google-talkplugin
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-05-01)
+# Unmaintained, java depends on deprecated JDK-7, nsplugin is dead.
+# Multiple bugs: #446508, #678776, #682600, #787407
+# Removal on 2021-05-31
+media-gfx/freewrl
+
+# Michał Górny <mgorny@gentoo.org> (2021-05-01)
+# The following packages have not been ported to Python 3.8, and are
+# therefore going to be removed when support for Python 3.7 target is
+# removed.  Please do not unmask them unless you port them both to
+# Python 3.8 *and* Python 3.9 (that is becoming the default
+# on 2021-06-01).
+#
+# Removal on 2021-05-31.  Relevant bugs found on tracker #701178.
+dev-python/quex
+gnome-extra/gnome-dvb-daemon
+sci-chemistry/gmxapi
+www-apps/netbox
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-04-30)
+# Superceded by dev-perl/Image-Sane. Tests hang, bug 626594
+# Removal in 30 days.
+dev-perl/Sane
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-04-30)
+# Outdated, not pulled in by any virtuals anymore, no
+# keywords. Removal in 30 days.
+perl-core/Devel-PPPort
+perl-core/Time-Local
+perl-core/Unicode-Normalize
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-04-30)
+# no consumers
+# removal in 30 days
+# see bug: https://bugs.gentoo.org/787152
+dev-java/tagsoup
+
 # Fabian Groffen <grobian@gentoo.org> (2021-04-30)
 # doesn't build without patching, upstream disagrees with suggested patch
 # https://github.com/trusteddomainproject/OpenDMARC/issues/163
 =mail-filter/opendmarc-1.4.1
-
-# Matt Turner <mattst88@gentoo.org> (2021-04-29)
-# Incompatible with gdm-3.36. Bug #786573
->=gnome-base/gnome-settings-daemon-40
 
 # Miroslav Šulc <fordfrog@gentoo.org> (2021-04-28)
 # no consumers
@@ -601,15 +639,6 @@ dev-java/slf4j-ext
 # Masked for removal in 30 days.
 dev-php/PEAR-Net_LDAP3
 
-# Matt Turner <mattst88@gentoo.org> (2021-04-05)
-# Masked for testing and for dependence on masked pango
-gui-libs/gtk
->=gnome-base/gnome-shell-40
->=gnome-extra/gnome-shell-extensions-40
->=x11-wm/mutter-40
->=media-sound/gnome-music-40
->=games-board/gnome-chess-40
-
 # David Seifert <soap@gentoo.org> (2021-04-05)
 # Completely broken, unmaintained, does not build. Newer version
 # use Maven, good luck with that. Bugs #418625, #431644, #515816
@@ -683,13 +712,6 @@ app-admin/lastpass-cli
 # Lars Wendler <polynomial-c@gentoo.org> (2021-02-15)
 # Mask development versions now that they were bumped...
 =net-misc/kea-1.9*
-
-# Michał Górny <mgorny@gentoo.org> (2021-02-01)
-# LibreSSL support is discontinued.  Please read the relevant news item
-# and either migrate to dev-libs/openssl, or use the unsupported
-# user-maintained libressl overlay.
-# Removal on 2021-05-01.  Bug #762847.
-dev-libs/libressl
 
 # Marek Szuba <marecki@gentoo.org> (2021-01-21)
 # Masked for testing and further work - the golang-vcs-snapshot variant
@@ -771,11 +793,6 @@ net-misc/gnome-remote-desktop
 # Patrick McLean <chutzpah@gentoo.org> (2020-02-07)
 # Mask until sys-libs/libxcrypt[system] is unmasked
 >=virtual/libcrypt-2
-
-# Mart Raudsepp <leio@gentoo.org> (2020-02-03)
-# Needs news item, known breakages that need to be handled first, bug 698922
->=x11-libs/pango-1.43
->=dev-cpp/pangomm-2.48
 
 # Andrew Ammerlaan <andrewammerlaan@riseup.net> (2020-01-26)
 # v3.6.4 uses huge amounts of memory: Bug #705682
