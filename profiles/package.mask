@@ -32,6 +32,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-05-03)
+# Sync concurrent unmasking with icu/chromium/boost.
+~dev-qt/qtwebengine-5.15.2_p20210421
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2021-05-01)
 # nsplugin is dead, bug #771801
 # Removal on 2021-05-31
@@ -781,10 +785,6 @@ dev-lang/spark
 >=dev-java/ant-eclipse-ecj-4.10
 >=dev-java/eclipse-ecj-4.10
 >=www-servers/tomcat-9
-
-# Mart Raudsepp <leio@gentoo.org> (2020-02-16)
-# Fails to automatically launch pipewire for me. Help welcome figuring it out.
-net-misc/gnome-remote-desktop
 
 # Stefan Strogin <steils@gentoo.org> (2020-02-12)
 # Mask for testing revdeps.
