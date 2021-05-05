@@ -22,7 +22,7 @@ KEYWORDS="~amd64"
 COMMON_DEPEND="
 	>=dev-libs/fribidi-0.19.7
 	>=dev-libs/glib-2.66.0:2
-	>=media-libs/graphene-1.9.1
+	>=media-libs/graphene-1.9.1[introspection?]
 	>=media-libs/libepoxy-1.4[X(+)?]
 	>=x11-libs/cairo-1.14[aqua?,glib,svg,X?]
 	>=x11-libs/gdk-pixbuf-2.30:2[introspection?]
@@ -161,7 +161,19 @@ src_test() {
 
 src_install() {
 	meson_src_install
-	mv "${ED}"/usr/share/doc/{gtk4,${P}} || die
+
+	if use gtk-doc ; then
+		mkdir "${ED}"/usr/share/doc/${PF}/html || die
+
+		local docdirs=( gdk4 gsk4 gtk4 )
+		use wayland && docdirs+=( gdk4-wayland )
+		use X && docdirs+=( gdk4-x11 )
+
+		local d
+		for d in "${docdirs[@]}"; do
+			mv "${ED}"/usr/share/doc/{${d},${PF}/html/} || die
+		done
+	fi
 }
 
 pkg_preinst() {

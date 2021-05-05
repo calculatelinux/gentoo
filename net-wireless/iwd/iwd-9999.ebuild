@@ -53,7 +53,6 @@ pkg_setup() {
 		~ASYMMETRIC_PUBLIC_KEY_SUBTYPE
 		~CFG80211
 		~CRYPTO_AES
-		~CRYPTO_ARC4
 		~CRYPTO_CBC
 		~CRYPTO_CMAC
 		~CRYPTO_DES
@@ -173,6 +172,7 @@ src_install() {
 		echo "EnableNetworkConfiguration=true" >> "${iwdconf}"
 		echo "[Network]" >> "${iwdconf}"
 		echo "NameResolvingService=$(usex systemd systemd resolvconf)" >> "${iwdconf}"
+		dodir /etc/conf.d
 		echo "rc_provide=\"net\"" > ${ED}/etc/conf.d/iwd
 	fi
 }
