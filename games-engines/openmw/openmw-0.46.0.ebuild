@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -31,7 +31,7 @@ RESTRICT="!test? ( test )"
 RDEPEND="
 	dev-games/mygui
 	dev-games/recastnavigation
-	dev-libs/boost:=[threads]
+	dev-libs/boost:=[threads,zlib]
 	dev-libs/tinyxml[stl]
 	media-libs/libsdl2[joystick,opengl,video]
 	media-libs/openal
@@ -72,6 +72,7 @@ PATCHES=(
 	# https://gitlab.com/OpenMW/openmw/-/merge_requests/163
 	"${DISTDIR}"/openmw-0.46.0-floattest.patch
 	"${FILESDIR}"/openmw-0.46.0-floattest2.patch
+	"${FILESDIR}"/openmw-0.46.0-gcc11.patch
 )
 
 src_prepare() {
