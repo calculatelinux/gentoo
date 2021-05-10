@@ -32,6 +32,35 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-05-09)
+# Unmaintained, last revdep of dev-perl/gtk2-spell, bugs #724796, #769296
+# Removal on 2021-06-08
+app-misc/gcstar
+dev-perl/gtk2-spell
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-05-09)
+# Work in progress, do not use yet
+=dev-lang/perl-5.34*
+
+# David Seifert <soap@gentoo.org> (2021-05-09)
+# All revdeps masked, last release in 1999, needs to do now.
+# Bug #772815, removal in 30 days.
+sci-libs/fftw:2.1
+
+# David Seifert <soap@gentoo.org> (2021-05-09)
+# Last consumer of sci-libs/fftw:2.1, last release over 20 years
+# ago, dead upstream. Bug #779421, removal in 30 days.
+media-sound/gramofile
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-05-09)
+# PortageXS saw its last release in 2016 and would need
+# a new upstream maintainer. Multiple bugs, e.g.,
+# 688238, 625536, 613114, 473394, 332611, 289524, 264680
+# Masked for removal in 30 days, including reverse deps.
+dev-perl/PortageXS
+app-portage/demerge
+app-portage/perl-info
+
 # Sam James <sam@gentoo.org> (2021-05-09)
 # Not working properly with cmake.eclass port
 # bug #788448
@@ -661,14 +690,6 @@ x11-misc/xstroke
 # Removal on 2021-05-10.  Bug #781902.
 dev-python/monotonic
 
-# Sam James <sam@gentoo.org> (2021-04-09)
-# Support package for games.eclass (which is now being last-rited). Please
-# port away from games.eclass and use general ebuild functions/helpers.
-# No specific eclass is needed for general games installation.
-# Removal on 2021-05-09.
-# bug #574082
-games-misc/games-envd
-
 # Lars Wendler <polynomial-c@gentoo.org> (2021-04-08)
 # Masked for testing
 >=app-crypt/gnupg-2.3.0
@@ -679,12 +700,6 @@ games-misc/games-envd
 # and now it uses bundled version
 # Masked for removal in 30 days.
 dev-php/PEAR-Net_LDAP3
-
-# Michał Górny <mgorny@gentoo.org> (2021-03-31)
-# New versions remove PORTAGE_CONFIGROOT support, breaking a lot
-# of scripts.
->=dev-util/pkgdev-0.1.3
->=sys-apps/pkgcore-0.11.7
 
 # Sam James <sam@gentoo.org> (2021-03-30)
 # Seems to break dev-tex/culmus-latex
