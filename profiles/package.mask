@@ -70,7 +70,7 @@ app-portage/perl-info
 # Masked for testing. Two major releases ahead of last packaged version.
 # Please report bugs but this is experimental for now.
 # bug #731266
-~net-mail/cyrus-imapd-3.4.0
+>=net-mail/cyrus-imapd-3.4.0
 
 # Joonas Niilola <juippis@gentoo.org> (2021-05-06)
 # sci-libs/cbflib: Doesn't compile with GCC-10 or GCC-11. Was never
@@ -114,12 +114,6 @@ media-sound/entagged-tageditor
 # removal in 30 days
 # see bug: https://bugs.gentoo.org/787434
 media-sound/protux
-
-# Miroslav Šulc <fordfrog@gentoo.org> (2021-05-05)
-# no consumers, last release in 2013
-# removal in 30 days
-# see bug: https://bugs.gentoo.org/787638
-net-nds/jxplorer
 
 # Miroslav Šulc <fordfrog@gentoo.org> (2021-05-05)
 # no consumers, last release in 2011
@@ -685,21 +679,9 @@ x11-misc/superswitcher
 # Removal on 2021-06-01.  Bug #782727.
 x11-misc/xstroke
 
-# Michał Górny <mgorny@gentoo.org> (2021-04-10)
-# Obsolete backport to Python < 3.4.  No reverse dependencies left.
-# Removal on 2021-05-10.  Bug #781902.
-dev-python/monotonic
-
 # Lars Wendler <polynomial-c@gentoo.org> (2021-04-08)
 # Masked for testing
 >=app-crypt/gnupg-2.3.0
-
-# Sergey Popov <pinkbyte@gentoo.org> (2021-04-06)
-# Ancient version, currently no consumers in main tree
-# The only one consumer was mail-client/roundcube
-# and now it uses bundled version
-# Masked for removal in 30 days.
-dev-php/PEAR-Net_LDAP3
 
 # Sam James <sam@gentoo.org> (2021-03-30)
 # Seems to break dev-tex/culmus-latex
