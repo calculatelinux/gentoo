@@ -4,7 +4,7 @@
 EAPI=7
 
 DISTUTILS_USE_SETUPTOOLS=rdepend
-PYTHON_COMPAT=( python3_{7..9} pypy3 )
+PYTHON_COMPAT=( python3_{7..10} pypy3 )
 PYTHON_REQ_USE="threads(+)"
 
 inherit distutils-r1 toolchain-funcs elisp-common
@@ -32,6 +32,8 @@ BDEPEND="${RDEPEND}
 PATCHES=(
 	"${FILESDIR}/${PN}-0.29.14-sphinx-update.patch"
 	"${FILESDIR}/${PN}-0.29.22-spawn-multiprocessing.patch"
+	"${FILESDIR}/${PN}-0.29.23-test_exceptions-py310.patch"
+	"${FILESDIR}/${PN}-0.29.23-tracing-py310.patch"
 )
 
 SITEFILE=50cython-gentoo.el

@@ -32,6 +32,49 @@
 
 #--- END OF EXAMPLES ---
 
+# Georgy Yakovlev <gyakovlev@gentoo.org> (2011-05-15)
+# Dead upstream, homepage missing, EAPI=5, no systemd units.
+# https://bugs.gentoo.org/790413 , #434900, #552760
+# Use any of or combination of the following instead:
+# sys-apps/rng-tools
+# sys-apps/haveged
+# app-crypt/jitterentropy-rngd
+sys-apps/timer_entropyd
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-05-15)
+# Dead upstream, dead downstream, GTK+2 based.  Bug #770898
+# Removal on 2021-06-14.
+app-editors/amyedit
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-05-15)
+# Unmaintained, GTK+2-based, dubiously duplicating app-mobilephone/gnokii[X]
+# Removal on 2021-06-14. Bug #769032
+app-mobilephone/gnocky
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-05-15)
+# Long-standing bugs, GTK+2-based, last revdep of media-libs/libexif-gtk.
+# Alternative: media-gfx/shotwell
+# Removal on 2021-06-14.  Bugs #560032, #740020, #769095
+media-gfx/gtkam
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-05-15)
+# Unmaintained, pending version bump request since 2014, no revdeps.
+# Removal on 2021-06-14.  Bug #507760
+media-libs/libexif-gtk
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-05-15)
+# Unmaintained, dead upstream since 2004, no hope to port away from GTK+2.
+# Removal on 2021-06-14.  Bug #769110
+media-gfx/gimageview
+
+# Michał Górny <mgorny@gentoo.org> (2021-05-15)
+# Relies on dev-python/astunparse that is broken with Python 3.8+
+# and abandoned upstream.  The current version is also broken
+# w/ sphinx-4 but with Python 3.7 being removed in half a month, bumping
+# makes little sense.  No reverse dependencies.
+# Removal on 2021-06-14.  Bug #743889.
+dev-python/sphinxcontrib-httpexample
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2021-05-09)
 # Unmaintained, last revdep of dev-perl/gtk2-spell, bugs #724796, #769296
 # Removal on 2021-06-08
@@ -404,11 +447,6 @@ dev-java/jarbundler
 # removal in 30 days
 # see bug: https://bugs.gentoo.org/786234
 dev-java/j2ssh
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2021-04-27)
-# Unmaintained, dead service, EAPI-5.
-# Removal on 2021-05-14
-app-misc/mediacrush-cli
 
 # Miroslav Šulc <fordfrog@gentoo.org> (2021-04-27)
 # library with no consumer
