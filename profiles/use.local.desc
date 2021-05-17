@@ -1440,7 +1440,6 @@ dev-haskell/comonad:indexed-traversable - You can disable the use of the `indexe
 dev-haskell/contravariant:semigroups - You can disable the use of the `semigroups` package using `-f-semigroups`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/contravariant:statevar - You can disable the use of the `StateVar` package using `-f-StateVar`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/contravariant:tagged - You can disable the use of the `tagged` package on older versons of GHC using `-f-tagged`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/cpu:executable - build 'cpuid' tool
 dev-haskell/criterion:embed-data-files - Embed the data files in the binary for a relocatable executable
 dev-haskell/crypto-api:all-cpolys - Build all the CMAC polynomes up to 10000 bits instead of just the usual ones
 dev-haskell/cryptonite:integer-gmp - Whether or not to use GMP for some functions
@@ -4644,6 +4643,7 @@ media-sound/ncmpc:outputs-screen - Enable the outputs screen
 media-sound/ncmpc:search-screen - Enable search screen
 media-sound/ncmpc:song-screen - Enable song viewer screen
 media-sound/ncmpcpp:clock - Enable clock screen
+media-sound/ncmpcpp:lto - Build with link-time optimisation
 media-sound/ncmpcpp:outputs - Enable outputs screen
 media-sound/ncmpcpp:visualizer - Enable visualizer screen with sound wave/frequency spectrum modes
 media-sound/patchage:jack-dbus - Use Jack via D-Bus instead of libjack
@@ -5423,6 +5423,7 @@ net-analyzer/zabbix:static - Build statically linked binaries
 net-analyzer/zmap:mongo - Add support for storing in a mongo DB via dev-db/mongodb
 net-analyzer/zmap:redis - Add support for storing in a redis DB via dev-libs/hiredis
 net-dialup/accel-ppp:ipoe - Build IPoE kernel module
+net-dialup/accel-ppp:libtomcrypt - Support crypto algorithms through dev-libs/libtomcrypt instead of dev-libs/openssl
 net-dialup/accel-ppp:shaper - Support for traffic shaping
 net-dialup/accel-ppp:valgrind - Compile in valgrind hints
 net-dialup/freeradius:memcached - Include dev-libs/libmemcached in caching drivers
