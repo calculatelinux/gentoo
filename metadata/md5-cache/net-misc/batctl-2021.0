@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=compile install setup
+DEPEND=dev-libs/libnl:3
+DESCRIPTION=BATMAN advanced control and management tool
+EAPI=7
+HOMEPAGE=https://www.open-mesh.org/
+IUSE=kernel_linux
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 MIT ISC
+RDEPEND=dev-libs/libnl:3
+SLOT=0
+SRC_URI=https://downloads.open-mesh.org/batman/releases/batman-adv-2021.0/batctl-2021.0.tar.gz
+_eclasses_=linux-info	30ded7f9adbdd03d3e848cdd74f6c395	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_md5_=8bef0fc8fde8779fc76237fc54be31ed
