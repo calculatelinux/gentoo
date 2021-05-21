@@ -24,4 +24,9 @@ RDEPEND="
 BDEPEND="
 	test? ( dev-python/pytest-asyncio[${PYTHON_USEDEP}] )"
 
+PATCHES=(
+	# Provided to upstream: https://github.com/django/asgiref/pull/262
+	"${FILESDIR}/${P}-py310-warnings.patch"
+)
+
 distutils_enable_tests pytest

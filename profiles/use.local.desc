@@ -1932,6 +1932,7 @@ dev-libs/aws-sdk-cpp:unity-build - Build using a single unified .cpp file for ea
 dev-libs/aws-sdk-cpp:waf - The Web Application Firewall (WAF) can monitor web requests that are forwarded to Amazon CloudFront distributions or an Application Load Balancer. Can also be used to block or allow requests based on conditions such as the IP addresses that requests originate from or values in the requests. Also enables fms, network-firewall, waf-regional and wafv2
 dev-libs/aws-sdk-cpp:wellarchitected - Use the AWS Well-Architected Tool to review your workloads against current AWS architectural best practices. The AWS Well-Architected Tool measures the workload and provides recommendations on how to improve your architecture.
 dev-libs/bitset:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations
+dev-libs/boehm-gc:large - optimize for large heap size (also increases max root sets)x
 dev-libs/boost:context - Build and install the Boost.Context (and Boost.Fiber) library and all other Boost libraries that depend on it
 dev-libs/boost:debug - Build and install only the debug version of the Boost libraries. Only enable this flag if you're developing against boost.
 dev-libs/boost:doc - Install the full API documentation documentation. This takes over 200MB of extra disk space.
@@ -2363,13 +2364,30 @@ dev-python/PyQt5:websockets - Build bindings for the QtWebSockets module
 dev-python/PyQt5:widgets - Build bindings for the QtWidgets module
 dev-python/PyQt5:x11extras - Build bindings for the QtX11Extras module
 dev-python/PyQt5:xmlpatterns - Build bindings for the QtXmlPatterns module
+dev-python/QtPy:declarative - Pull in bindings for the QtQml/QtQuick modules and enable the qmlscene plugin
 dev-python/QtPy:designer - Pull in bindings for the QtDesigner module and enable the designer plugin
 dev-python/QtPy:gui - Pull in bindings for the QtGui module
+dev-python/QtPy:help - Pull in bindings for the QtHelp module
+dev-python/QtPy:location - Pull in bindings for the QtLocation module
+dev-python/QtPy:multimedia - Pull in QtMultimedia and QtMultimediaWidgets modules
+dev-python/QtPy:network - Pull in bindings for the QtNetwork module
 dev-python/QtPy:opengl - Pull in bindings for the QtOpenGL module
+dev-python/QtPy:positioning - Pull in bindings for the QtPositioning module
 dev-python/QtPy:printsupport - Pull in bindings for the QtPrintSupport module
+dev-python/QtPy:pyqt5 - Use dev-python/PyQt5 as Qt for Python implementation
+dev-python/QtPy:pyside2 - Use dev-python/pyside2 as Qt for Python implementation
+dev-python/QtPy:sensors - Pull in bindings for the QtSensors module
+dev-python/QtPy:serialport - Pull in bindings for the QtSerialPort module
+dev-python/QtPy:sql - Pull in bindings for the QtSql module
 dev-python/QtPy:svg - Pull in bindings for the QtSvg module
 dev-python/QtPy:testlib - Pull in bindings for the QtTest module
+dev-python/QtPy:webchannel - Pull in bindings for the QtWebChannel module
 dev-python/QtPy:webengine - Pull in QtWebEngine and QtWebEngineWidgets modules
+dev-python/QtPy:websockets - Pull in bindings for the QtWebSockets module
+dev-python/QtPy:widgets - Pull in bindings for the QtWidgets module
+dev-python/QtPy:x11extras - Pull in bindings for the QtX11Extras module
+dev-python/QtPy:xml - Pull in QtXml module
+dev-python/QtPy:xmlpatterns - Pull in bindings for the QtXmlPatterns module
 dev-python/autobahn:scram - Add support for WAMP-SCRAM authentication
 dev-python/autobahn:xbr - Add support for XBR decentralized data markets and etherium blockchain
 dev-python/ctypescrypto:gost - Build with support for GOST Message Authentication Code
@@ -4192,6 +4210,7 @@ media-libs/libsdl2:haptic - Enable the haptic (force feedback) subsystem
 media-libs/libsdl2:ibus - Enable support for app-i18n/ibus
 media-libs/libsdl2:joystick - Control joystick support (disable at your own risk)
 media-libs/libsdl2:kms - Build the KMSDRM video driver
+media-libs/libsdl2:sndio - Enable support for the media-sound/sndio backend
 media-libs/libsdl2:sound - Control audio support (disable at your own risk)
 media-libs/libsdl2:tslib - Build with tslib support for touchscreen devices
 media-libs/libsdl2:video - Control video support (disable at your own risk)
@@ -7665,7 +7684,7 @@ sys-apps/fwupd:dell - Enable Dell-specific support.
 sys-apps/fwupd:flashrom - Enable flashrom plugin via sys-apps/flashrom
 sys-apps/fwupd:gusb - Enable dev-libs/libgusb support
 sys-apps/fwupd:nvme - Build and install NVMe plugin
-sys-apps/fwupd:redfish - Install redfish plugin
+sys-apps/fwupd:spi - Install Intel-SPI plugin
 sys-apps/fwupd:synaptics - Install synaptics plugin
 sys-apps/fwupd:thunderbolt - Install Thunderbolt plugin
 sys-apps/fwupd:tpm - Install Trusted Platform Module plugin
