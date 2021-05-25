@@ -32,6 +32,22 @@
 
 #--- END OF EXAMPLES ---
 
+# Fabian Groffen <grobian@gentoo.org> (2021-05-24)
+# Hack on hack no longer sustainable
+# - seemingly dead upstream
+# - no (official) Python 3 support
+# removal in 30 days, bug: https://bugs.gentoo.org/791613
+app-admin/diamond
+
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-05-24)
+# it's just a demo project, not a real app, see disclaimer
+# at https://github.com/romainguy/jext
+# removal in 30 days
+# also removing an obsolete package that has only this dependant
+# see bug: https://bugs.gentoo.org/791106
+app-editors/jext
+dev-java/jgoodies-looks:1.2
+
 # Andrew Ammmerlaan <andrewammerlaan@gentoo.org> (2021-05-20)
 # dev-python/QtPy-1.9.0-r4 now uses USE flags to control if it uses
 # PySide2 or PyQt5. With the removal of -r3, this eselect module does
