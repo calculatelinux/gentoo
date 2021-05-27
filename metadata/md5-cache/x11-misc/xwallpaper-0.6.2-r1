@@ -11,4 +11,4 @@ RDEPEND=x11-libs/pixman x11-libs/xcb-util x11-libs/xcb-util-image jpeg? ( media-
 SLOT=0
 SRC_URI=https://github.com/stoeckmann/xwallpaper/releases/download/v0.6.2/xwallpaper-0.6.2.tar.xz
 _eclasses_=autotools	9e63f92c2a5d867fea55ecb160c7d354	gnuconfig	9f91b4b0c84e734a87492d4293f03de5	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	d410501a125f99ffb560b0c523cd3d1e	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=72a850b7f839f03e780c78b3dd2bf9f8
+_md5_=cf7bb8fda099c8ad6d38941940eff24a
