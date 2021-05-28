@@ -12,7 +12,7 @@ SRC_URI="https://www.alsa-project.org/files/pub/lib/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ~ppc ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="alisp debug doc elibc_uclibc python +thread-safety"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
@@ -25,7 +25,8 @@ RDEPEND="python? ( ${PYTHON_DEPS} )
 DEPEND="${RDEPEND}"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-1.1.6-missing_files.patch" #652422
+	"${FILESDIR}/${PN}-1.1.6-missing_files.patch" # bug #652422
+	"${FILESDIR}/${PN}-1.2.4-musl.patch" # bug #792570
 )
 
 pkg_setup() {
