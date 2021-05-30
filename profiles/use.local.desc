@@ -3078,6 +3078,7 @@ games-engines/scummvm:fribidi - Support for right-to-left languages via dev-libs
 games-engines/scummvm:glew - enable support for OpenGL Extension Wrangler Library (media-libs/glew)
 games-engines/scummvm:mpeg2 - enable mpeg2 codec for cutscenes
 games-engines/scummvm:net - enable cloud support via media-libs/sdl2-net
+games-engines/scummvm:sndio - Enable support for MIDI music using media-sound/sndio
 games-engines/scummvm:speech - enable text-to-speech support through app-accessibility/speech-dispatcher
 games-engines/scummvm:unsupported - enable unsupported and/or broken game engines (you're on your own)
 games-engines/solarus:doc - Install doxygen developer documentation.
@@ -7477,7 +7478,6 @@ sci-mathematics/polymake:lrs - Enable sci-libs/lrslib interface for convex hull 
 sci-mathematics/polymake:ppl - Enable dev-libs/ppl interface for convex hull computations.
 sci-mathematics/polymake:singular - Enable the interface to sci-mathematics/singular for ideal related computations.
 sci-mathematics/rstudio:server - Build and install the RStudio server
-sci-mathematics/singular:boost - Compile against external boost headers (dev-libs/boost)
 sci-mathematics/slepc:complex-scalars - Make scalars complex
 sci-mathematics/unuran:prng - Use sci-mathematics/prng library
 sci-mathematics/unuran:rngstreams - Use sci-mathematics/rngstreams library
@@ -8990,7 +8990,9 @@ x11-wm/xpra:brotli - Enable brotli compression support
 x11-wm/xpra:client - Build client-side code
 x11-wm/xpra:clipboard - Enable clipboard support
 x11-wm/xpra:csc - Enable csc softscaler support
+x11-wm/xpra:ibus - Use ibus input method via app-i18n/ibus
 x11-wm/xpra:pillow - Enable pillow support
+x11-wm/xpra:pinentry - Use app-crypt/pinentry for password entry
 x11-wm/xpra:server - Build server-side code
 x11-wm/xpra:vpx - Enable vpx image format support
 x11-wm/xpra:webcam - Enable webcam support via opencv
