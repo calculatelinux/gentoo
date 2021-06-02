@@ -60,17 +60,9 @@ src_unpack() {
 src_prepare() {
 	# Allow users to apply patches to src/drivers for example,
 	# i.e. anything outside ${S}/${PN}
-	pushd ../ >/dev/null || die
+	pushd ../ &>/dev/null || die
 	default
-
-	# CVE-2019-16275 bug #696032
-	eapply "${FILESDIR}/hostapd-2.9-AP-Silently-ignore-management-frame-from-unexpected.patch"
-	# CVE-2020-12695 bug #727542
-	eapply "${FILESDIR}/${P}-0001-WPS-UPnP-Do-not-allow-event-subscriptions-with-URLs-.patch"
-	eapply "${FILESDIR}/${P}-0002-WPS-UPnP-Fix-event-message-generation-using-a-long-U.patch"
-	eapply "${FILESDIR}/${P}-0003-WPS-UPnP-Handle-HTTP-initiation-failures-for-events-.patch"
-
-	popd >/dev/null || die
+	popd &>/dev/null || die
 
 	sed -i -e "s:/etc/hostapd:/etc/hostapd/hostapd:g" \
 		"${S}/hostapd.conf" || die
@@ -162,6 +154,7 @@ src_configure() {
 	echo "CONFIG_IEEE80211W=y" >> ${CONFIG} || die
 	echo "CONFIG_IEEE80211N=y" >> ${CONFIG} || die
 	echo "CONFIG_IEEE80211AC=y" >> ${CONFIG} || die
+	echo "CONFIG_OCV=y" >> ${CONFIG} || die
 	echo "CONFIG_PEERKEY=y" >> ${CONFIG} || die
 	echo "CONFIG_RSN_PREAUTH=y" >> ${CONFIG} || die
 	echo "CONFIG_INTERWORKING=y" >> ${CONFIG} || die
@@ -202,7 +195,7 @@ src_configure() {
 src_compile() {
 	emake V=1
 
-	if  use internal-tls; then
+	if ! use internal-tls; then
 		emake V=1 nt_password_hash
 		emake V=1 hlr_auc_gw
 	fi
