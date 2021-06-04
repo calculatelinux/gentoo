@@ -8,4 +8,4 @@ LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=https://extensions.libreoffice.org/extensions/russian-dictionary-pack/0-4.3/@@download/file/dict_pack_ru-aot-0-4-3.oxt
 _eclasses_=myspell-r2	c3ce3195fd25a3958492bf548ef8b1f9
-_md5_=046d798ce1ef7cc94d64ef80faeb7327
+_md5_=93c430c163d540a5a67b2b11f7f31abf

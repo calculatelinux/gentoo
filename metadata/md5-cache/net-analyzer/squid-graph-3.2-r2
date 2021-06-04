@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=Squid logfile analyzer and traffic grapher
+EAPI=7
+HOMEPAGE=http://squid-graph.sourceforge.net/
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=dev-perl/GD[png(+)]
+SLOT=0
+SRC_URI=mirror://sourceforge/squid-graph/squid-graph-3.2.tar.gz
+_md5_=310c606e94ab4705cf325efe617cfb0a
