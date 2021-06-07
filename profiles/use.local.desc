@@ -1005,6 +1005,7 @@ app-portage/g-sorcery:bson - Support BSON file format for package DB
 app-portage/gemato:gpg - Install dependencies needed for OpenPGP signature verification support
 app-portage/gemato:tools - Install additional utilities (benchmarks, hash testing tools, fast Manifest generators) to /usr/share/gemato.
 app-portage/grs:server - Install all the tools building systems
+app-portage/kuroneko:scraper - Include the dependencies necessary for Bugzilla scraping.
 app-portage/layman:cvs - Support dev-vcs/cvs based overlays
 app-portage/layman:darcs - Support dev-vcs/darcs based overlays
 app-portage/layman:g-sorcery - Support app-portage/g-sorcery based overlays
@@ -2426,7 +2427,6 @@ dev-python/networkx:pandas - Provides a DataFrame, which is a tabular data struc
 dev-python/networkx:scipy - Enables scipy backend
 dev-python/networkx:yaml - Provides YAML format reading and writing
 dev-python/nltk-data:extra - Install the complete set of data files. Otherwise, only files required by tests are installed.
-dev-python/nose:coverage - Pull in dev-python/coverage needed for nose-xcover plugin.
 dev-python/numexpr:mkl - Enable support for Intel Vector Math Library, part of sci-libs/mkl.
 dev-python/pandas:full-support - Pull all packages to give pandas full support
 dev-python/paramiko:server - Enable server feature
@@ -3125,8 +3125,8 @@ games-fps/quake2-icculus:demo - Install the demo files (quake2-demodata) and con
 games-fps/quake2-icculus:qmax - Build the pretty version (quake max)
 games-fps/quake2-icculus:rogue - Build support for the 'Ground Zero' Mission Pack (rogue)
 games-fps/quake2-icculus:xatrix - Build support for the 'The Reckoning' Mission Pack (xatrix)
-games-fps/quakeforge:wildmidi - enable libWildMidi support
-games-fps/quakeforge:xdg - enable XDG support
+games-fps/quakeforge:client - Build Normal and QuakeWorld clients alongside the servers
+games-fps/quakeforge:wildmidi - Use media-sound/wildmidi for midi support
 games-fps/qudos:demo - Install the demo files (quake2-demodata) and configure for use
 games-fps/qudos:mods - Build support for the quake2 mission packs
 games-fps/qudos:qmax - Build the pretty version (quake max)
@@ -7783,6 +7783,7 @@ sys-apps/portage:ipc - Use inter-process communication between portage and runni
 sys-apps/portage:native-extensions - Compiles native "C" extensions (speedups, instead of using python backup code). Currently includes libc-locales. This should only be temporarily disabled for some bootstrapping operations. Cross-compilation is not supported.
 sys-apps/portage:rsync-verify - Enable full-tree cryptographic verification of Gentoo repository rsync checkouts using app-portage/gemato.
 sys-apps/portage:xattr - Preserve extended attributes (filesystem-stored metadata) when installing files. Usually only required for hardened systems.
+sys-apps/ppc64-diag:rtas - Add support for the Run Time Abstraction Services (RTAS)
 sys-apps/proot:care - Build dynamic CARE binary (more info - https://proot-me.github.io)
 sys-apps/qingy:opensslcrypt - Encrypt communications between qingy and its GUI using dev-libs/openssl
 sys-apps/razercfg:gui - Installs GUI configuration utility and status bar applet. Requires dev-python/PyQt5

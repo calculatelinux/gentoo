@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Interface to Thomas Boutell's gd library"
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~sparc"
+KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc64 ~sparc"
 IUSE="animgif fcgi test truetype xpm"
 
 RDEPEND="
@@ -58,7 +58,7 @@ src_configure() {
 
 	# The following flags do not work properly. This is why we force-enable
 	# at least some of them. See bug 787404 as tracker.
-	use gif && use animgif && myconf+=",ANIMGIF"
+	use animgif && myconf+=",ANIMGIF"
 	myconf+=",JPEG"
 	use truetype && myconf+=",FT"
 	myconf+=",PNG"

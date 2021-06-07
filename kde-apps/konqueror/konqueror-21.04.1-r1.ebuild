@@ -62,7 +62,7 @@ RDEPEND="${COMMON_DEPEND}
 	kde-plasma/kde-cli-tools:5
 "
 
-PATCHES=( "${FILESDIR}/${P}-use-new-QComboBox-signal.patch" ) # KDE-bug 437161
+PATCHES=( "${FILESDIR}/${PN}-20.12.3-use-new-QComboBox-signal.patch" ) # KDE-bug 437161
 
 src_prepare() {
 	[[ ${CHOST} == *-solaris* ]] && append-ldflags -lmalloc

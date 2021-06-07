@@ -1,13 +1,13 @@
-BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=install postinst prepare setup unpack
-DEPEND=app-crypt/gcr[gtk] dev-libs/glib:2 net-libs/webkit-gtk:4 x11-libs/gtk+:3 x11-libs/libX11 virtual/pkgconfig
+DEPEND=app-crypt/gcr[gtk] dev-libs/glib:2 net-libs/webkit-gtk:4 x11-libs/gtk+:3 x11-libs/libX11
 DESCRIPTION=a simple web browser based on WebKit/GTK+
 EAPI=7
 HOMEPAGE=https://surf.suckless.org/
 IUSE=tabbed savedconfig
 LICENSE=MIT
 PROPERTIES=live
-RDEPEND=!sci-chemistry/surf app-crypt/gcr[gtk] dev-libs/glib:2 net-libs/webkit-gtk:4 x11-libs/gtk+:3 x11-libs/libX11 !savedconfig? ( >=x11-misc/dmenu-4.7 net-misc/curl x11-apps/xprop x11-terms/st ) tabbed? ( x11-misc/tabbed )
+RDEPEND=app-crypt/gcr[gtk] dev-libs/glib:2 net-libs/webkit-gtk:4 x11-libs/gtk+:3 x11-libs/libX11 !sci-chemistry/surf !savedconfig? ( net-misc/curl x11-apps/xprop x11-misc/dmenu x11-terms/st ) tabbed? ( x11-misc/tabbed )
 SLOT=0
 _eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52	multilib	d410501a125f99ffb560b0c523cd3d1e	portability	c10bdc40668533b1faf15b1d89df0303	savedconfig	0bc45cb0429003c9abc73bae24a0d5bd	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
-_md5_=91591362b317b7031f936a39402c81db
+_md5_=ec6f093b41858bbae1b0cab06d7be896
