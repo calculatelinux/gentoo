@@ -3033,7 +3033,6 @@ games-emulation/generator:sdlaudio - Enable SDL Audio
 games-emulation/hatari:capsimage - Use dev-libs/spsdeclib to read .IPF, .RAW, and .CTR disk images
 games-emulation/hatari:microphone - Use media-libs/portaudio for Falcon microphone handling
 games-emulation/hatari:portmidi - Use media-libs/portmidi as an alternative MIDI backend
-games-emulation/hatari:sdl2 - Use libsdl2 instead of libsdl
 games-emulation/higan:gtk - Use GTK3 (Qt5 if disabled) user interface backend
 games-emulation/m64py:7z - Ensure support for .7z archives.
 games-emulation/m64py:rar - Ensure support for .rar archives.
@@ -3182,7 +3181,6 @@ games-rpg/drascula:sound - Install optional audio files
 games-rpg/dreamweb:doc - High-resolution scans of the written material in the original UK game box
 games-rpg/freedroidrpg:devtools - Compile the additional dev tools
 games-rpg/freedroidrpg:profile - Enable the integration of the ingame real-time profiler
-games-rpg/freedroidrpg:sanitize - Compile with address sanitizer
 games-rpg/hatoful-boyfriend:gui - Install the GUI for configuring screen resolution and input
 games-rpg/hatoful-boyfriend-holiday-star:gui - Install the GUI for configuring screen resolution and input
 games-rpg/kqlives:cheats - Enable cheating mode
@@ -3290,6 +3288,7 @@ gnome-base/librsvg:tools - Build svg viewer tool
 gnome-base/nautilus:gstreamer - Enable the Audio/Video file properties page
 gnome-base/nautilus:previewer - Use gnome-extra/sushi to preview files from the file mananger
 gnome-base/nautilus:sendto - Enable the nautilus-sendto extension to send files to various locations/devices
+gnome-extra/cinnamon-control-center:gnome-online-accounts - Enable configuration panel for net-libs/gnome-online-accounts accounts
 gnome-extra/cinnamon-control-center:modemmanager - Enable support for mobile broadband devices using net-misc/modemmanager
 gnome-extra/cjs:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 gnome-extra/eiciel:nautilus - Build gnome-base/nautilus extension
@@ -8288,6 +8287,7 @@ sys-fs/zfs-kmod:rootfs - Install zfs-shutdown script to support exporting a pool
 sys-kernel/bliss-kernel-bin:initramfs - Build initramfs along with the kernel.
 sys-kernel/genkernel:cryptsetup - Enable support for Luks disk encryption using sys-fs/cryptsetup
 sys-kernel/genkernel:firmware - Prefer system firmware sys-kernel/linux-firmware over local copy.
+sys-kernel/gentoo-kernel:hardened - Use selection of hardening options recommended by Kernel Self Protection Project
 sys-kernel/gentoo-kernel:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-kernel-bin:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".

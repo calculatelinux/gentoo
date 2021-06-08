@@ -6,7 +6,7 @@ EAPI=7
 LUA_COMPAT=( lua5-1 )
 PYTHON_COMPAT=( python3_{7,8,9} )
 
-inherit autotools bash-completion-r1 l10n linux-info lua-single perl-functions python-single-r1 xdg-utils flag-o-matic
+inherit autotools bash-completion-r1 l10n linux-info lua-single perl-functions python-single-r1 toolchain-funcs xdg-utils flag-o-matic
 
 MY_PV_1="$(ver_cut 1-2)"
 MY_PV_2="$(ver_cut 2)"
@@ -46,6 +46,7 @@ COMMON_DEPEND="
 	>=app-admin/augeas-1.8.0
 	sys-fs/squashfs-tools:*
 	dev-libs/libconfig:=
+	dev-libs/jansson:=
 	sys-libs/readline:0=
 	>=sys-libs/db-4.6:*
 	app-arch/xz-utils
@@ -135,6 +136,14 @@ src_prepare() {
 }
 
 src_configure() {
+	# bug #794877
+	tc-export AR
+
+	# Skip Bash test
+	# (See 13-test-suite.log in linked bug)
+	# bug #794874
+	export SKIP_TEST_COMPLETE_IN_SCRIPT_SH=1
+
 	# Disable feature test for kvm for more reason
 	# i.e: not loaded module in __build__ time,
 	# build server not supported kvm, etc. ...
