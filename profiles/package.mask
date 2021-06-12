@@ -32,6 +32,34 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2021-06-12)
+# Package miscompiles and fails to resolve most
+# types of NSS query. See bug #795579.
+=sys-auth/nss-mdns-0.15
+
+# Joonas Niilola <juippis@gentoo.org> (2021-06-12)
+# A library without consumers, old dep of tree-cleaned gnome-mplayer,
+# EAPI-5. Removal in ~30 days. #776898
+media-libs/gmtk
+
+# Sam James <sam@gentoo.org> (2021-06-12)
+# Masked until all reverse dependencies support
+# OCaml 4.12.
+# bug #795138
+>=dev-lang/ocaml-4.12
+=dev-ml/camlp4-4.12
+
+# Alfredo Tupone <tupone@gentoo.org> (2021-06-11)
+# Masked for removal in 30 days. No more supported
+<dev-lang/gnat-gpl-2017
+<dev-ada/gnat-suite-bin-2017
+
+# Tomáš Mózes <hydrapolic@gmail.com> (2021-06-10)
+# Based on unsupported grub-legacy, replaced by
+# pvgrub2.
+# Removal on 2021-07-08.  Bug #790668.
+app-emulation/xen-pvgrub
+
 # Sam James <sam@gentoo.org> (2021-06-10)
 # Fails to build with modern libetpan. Unmaintained.
 # See bug #699570, bug #448574.
