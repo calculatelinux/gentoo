@@ -32,10 +32,10 @@
 
 #--- END OF EXAMPLES ---
 
-# Sam James <sam@gentoo.org> (2021-06-12)
-# Package miscompiles and fails to resolve most
-# types of NSS query. See bug #795579.
-=sys-auth/nss-mdns-0.15
+# Miroslav Šulc <fordfrog@gentoo.org> (2021-06-13)
+# no consumer, removal in 30 days
+# see bug: https://bugs.gentoo.org/785856
+dev-java/commons-validator
 
 # Joonas Niilola <juippis@gentoo.org> (2021-06-12)
 # A library without consumers, old dep of tree-cleaned gnome-mplayer,
@@ -609,7 +609,7 @@ sys-devel/automake:1.10
 # If you still use one of these old toolchain packages, please upgrade (and
 # switch the compiler / the binutils) ASAP. If you need them for a specific
 # (isolated) use case, feel free to unmask them on your system.
-<sys-libs/glibc-2.32-r3
+<sys-libs/glibc-2.33
 <sys-devel/binutils-2.35.2
 <sys-devel/binutils-hppa64-2.35.2
 

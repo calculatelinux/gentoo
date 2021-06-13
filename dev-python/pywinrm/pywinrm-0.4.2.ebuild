@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{8..9} )
+PYTHON_COMPAT=( python3_{8..10} )
 
 inherit distutils-r1
 
@@ -25,9 +25,5 @@ RDEPEND="dev-python/requests[${PYTHON_USEDEP}]
 		dev-python/requests-credssp[${PYTHON_USEDEP}]
 	)"
 BDEPEND="test? ( dev-python/mock[${PYTHON_USEDEP}] )"
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-0.4.2_test-installation.patch
-)
 
 distutils_enable_tests pytest
