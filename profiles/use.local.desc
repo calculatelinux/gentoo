@@ -808,6 +808,7 @@ app-misc/irtrans-irserver:mono - Enable mono support
 app-misc/jp:jp - Install jp which is the official jp CLI for JMESPath
 app-misc/jp:jpp - Install jpp which is an extended superset of the jp CLI for JMESPath
 app-misc/jpipe:jp-symlink - Install a jp symlink that points to jpipe.
+app-misc/jpipe:jpp - Install jpp which is an extended superset of the jp CLI for JMESPath.
 app-misc/jq:oniguruma - Use dev-libs/oniguruma for regular expression support
 app-misc/kryoflux-dtc:demos - Install example floppy game files.
 app-misc/kryoflux-dtc:fast-firmware - Install fast firmware instead of slow firmware.
@@ -2205,7 +2206,6 @@ dev-libs/tntnet:server - Enable tntnet server daemon
 dev-libs/totem-pl-parser:archive - Enables ISO detection with app-arch/libarchive
 dev-libs/totem-pl-parser:crypt - Support AmazonAMZ decoding with dev-libs/libgcrypt
 dev-libs/totem-pl-parser:quvi - Use media-libs/libquvi for parsing video links
-dev-libs/tvision:gpm - Support text mode mouse through sys-libs/gpm
 dev-libs/userspace-rcu:regression-test - Run regression tests (requires FEATURES=test)
 dev-libs/weston:desktop - Enable the desktop shell
 dev-libs/weston:drm - Enable drm compositor support
@@ -3883,7 +3883,6 @@ media-gfx/album:plugins - Install optional plugins
 media-gfx/album:themes - Install optional themes
 media-gfx/alembic:hdf5 - Add support sci-libs/hdf5
 media-gfx/alembic:test - Build and run the test-suite
-media-gfx/alembic:zlib - Use sys-libs/zlib for compressions
 media-gfx/apngasm:7z - Enable support for 7zip compression
 media-gfx/apngasm:zopfli - Enable support for Zopfli compression
 media-gfx/asymptote:boehm-gc - Enables using the Boehm-Demers-Weiser conservative garbage collector
@@ -4161,6 +4160,7 @@ media-libs/leptonica:utils - Install command-line utilities
 media-libs/lib3mf:system-act - Use system-provided dev-go/act as code generator instead of package provided binaries. This flag will be removed after some time used for testing!
 media-libs/libafterimage:shaping - Use MIT shaped X windows extention.
 media-libs/libafterimage:shm - Use MIT shared memory extention for X image transfer.
+media-libs/libao:sndio - Add support for media-sound/sndio
 media-libs/libavif:aom - Enable support for the AOM codec encoding and decoding
 media-libs/libavif:dav1d - Enable support for the dav1d codec decoding
 media-libs/libavif:extras - Build extra apps (avifenc, avifdec) and test files
@@ -6827,6 +6827,7 @@ net-proxy/tsocks:dns - Force DNS queries to use SOCKS server via tcp
 net-proxy/tsocks:envconf - Allow TSOCKS_CONF_FILE to specify configuration file
 net-proxy/tsocks:server-lookups - Allow hostname resolution _for_ SOCKS servers
 net-proxy/tsocks:tordns - Apply tordns patch which allows transparent TORification of the DNS queries
+net-voip/captagent:redis - Enable redis support
 net-voip/telepathy-gabble:jingle - Enable voice calls for jabber
 net-voip/telepathy-gabble:plugins - Enable plugin loader
 net-voip/yate:amrnb - use AMR-NB
@@ -7419,7 +7420,6 @@ sci-libs/vtk:rendering - Building Redering modules
 sci-libs/vtk:tbb - Use dev-cpp/tbb to handle smp support
 sci-libs/vtk:views - Building Views modules
 sci-libs/vtk:web - Install web component
-sci-libs/vtk:xdmf2 - Support for xdmf2 formatted data
 sci-mathematics/agda:cpphs - Use cpphs instead of cpp.
 sci-mathematics/agda:debug - Enable debugging features that may slow Agda down.
 sci-mathematics/agda:enable-cluster-counting - Enable the --count-clusters flag. (If enable-cluster-counting is False, then the --count-clusters flag triggers an error message.)
@@ -8053,9 +8053,11 @@ sys-cluster/nova:rabbitmq - Installs the rabbitmq server
 sys-cluster/openmpi:cma - Enable the CMA (Cross Memory Attach) MCA
 sys-cluster/openmpi:cuda - Add GPU direct support
 sys-cluster/openmpi:heterogeneous - Enable features required for heterogeneous platform support
+sys-cluster/openmpi:libompitrace - Enable support for contributed package libompitrace
 sys-cluster/openmpi:mpi-threads - Enable MPI_THREAD_MULTIPLE
 sys-cluster/openmpi:numa - Enable numactl to allow binding processes to CPUs
 sys-cluster/openmpi:pbs - Add support for the Portable Batch System (PBS)
+sys-cluster/openmpi:peruse - Enable PERUSE interface
 sys-cluster/openmpi:romio - Build the ROMIO MPI-IO component
 sys-cluster/openmpi:vt - Enable bundled VampirTrace support
 sys-cluster/openstack-meta:cinder - Installs Openstack Cinder

@@ -32,6 +32,12 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2021-06-15)
+# New versions >=1.6.0 are broken at runtime because
+# of a missing new dependency.
+# bug #791835, bug #791307.
+>=sys-apps/fwupd-1.6.0
+
 # Davide Pesavento <pesa@gentoo.org> (2021-06-15)
 # Masked for revdep testing.
 >=dev-python/sip-6
@@ -40,7 +46,7 @@
 # Fails to build with GCC 11. Strange build system that needs more
 # work to function properly (and integrate better). Several open bugs.
 # bug #795999, bug #787902, bug #766033, bug #724674, bug #713206.
-# Removal on 15-07-2021.
+# Removal on 2021-07-15.
 media-sound/sc2mpd
 
 # Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2021-06-14)
