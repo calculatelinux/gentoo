@@ -2164,6 +2164,7 @@ dev-libs/opensc:pcsc-lite - Use sys-apps/pcsc-lite (and PC/SC API) for accessing
 dev-libs/opensc:secure-messaging - Enable secure messaging
 dev-libs/openssl:asm - Support assembly hand optimized crypto functions (i.e. faster run time)
 dev-libs/openssl:bindist - Disable/Restrict EC algorithms (as they seem to be patented) -- note: changes the ABI
+dev-libs/openssl:ktls - Enable support for Kernel implementation of TLS (kTLS)
 dev-libs/openssl:rfc3779 - Enable support for RFC 3779 (X.509 Extensions for IP Addresses and AS Identifiers)
 dev-libs/openssl:sslv2 - Support for the old/insecure SSLv2 protocol -- note: not required for TLS/https
 dev-libs/openssl:sslv3 - Support for the old/insecure SSLv3 protocol -- note: not required for TLS/https
@@ -3235,8 +3236,8 @@ games-strategy/naev:mixer - Enables media-libs/sdl-mixer sound backend in additi
 games-strategy/satellite-reign:gui - Install the GUI for configuring screen resolution and input
 games-strategy/ufoai:client - Build the main game client
 games-strategy/ufoai:server - Build the dedicated server
-games-strategy/uqm:music - download and install music files (large)
-games-strategy/uqm:remix - download and install music remix files (large)
+games-strategy/uqm:music - download and install original 3DO music files
+games-strategy/uqm:remix - download and install remixed music files (large)
 games-strategy/uqm:voice - download and install voice files (large)
 games-strategy/wargus:bne - Support extracting data from the Battle.net Edition
 games-strategy/warzone2100:discord - Enable Discord presence/join integration
@@ -7082,6 +7083,7 @@ sci-chemistry/avogadro2:rpc - Enable RPC server
 sci-chemistry/avogadro2:vtk - include vtk support
 sci-chemistry/chemtool:emf - EMF export support
 sci-chemistry/gnome-chemistry-utils:gnumeric - Add a Gnumeric plugin to provide a molarmass function for the spreadsheet
+sci-chemistry/gromacs:build-manual - Build manual instead of downloading it
 sci-chemistry/gromacs:cuda - Enable cuda non-bonded kernels
 sci-chemistry/gromacs:double-precision - More precise calculations at the expense of speed
 sci-chemistry/gromacs:gmxapi - Add support for gmxapi library
