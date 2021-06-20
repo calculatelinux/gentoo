@@ -1,6 +1,11 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# John Helmert III <ajak@gentoo.org> (2021-06-19)
+# netkit-rsh is last-rited and torque has
+# '!crypt? ( net-misc/netkit-rsh )', so force USE=crypt
+sys-cluster/torque crypt
+
 # Sam James <sam@gentoo.org> (2021-05-07)
 # Forced on for now as generated headers are now
 # included unconditionally.
@@ -93,8 +98,8 @@ sys-kernel/vanilla-kernel initramfs
 
 # Sergei Trofimovich <slyfox@gentoo.org> (2019-11-06)
 # Upstream plans to drop libcrypt.so.1/crypt.h from glibc
-# distribution and rely on external providers lke libxcrypt.
-# Gentoo will follow the suit but today we are not ready.
+# distribution and rely on external providers like libxcrypt.
+# Gentoo will follow suit but today we are not yet ready.
 # Unmask at your risk. Bug #699422 tracks the effort.
 sys-libs/glibc crypt
 

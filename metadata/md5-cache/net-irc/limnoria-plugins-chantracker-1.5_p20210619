@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst unpack
+DESCRIPTION=supybot ban management and channel flood/spam/repeat protections plugin
+EAPI=7
+HOMEPAGE=https://github.com/ncoevoet/ChanTracker
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=net-irc/limnoria
+SLOT=0
+SRC_URI=https://github.com/ncoevoet/ChanTracker/archive/a3d25c44b7a56e3af7b3d8b48ee68a311deed5df.tar.gz -> limnoria-plugins-chantracker-1.5_p20210619.tar.gz
+_eclasses_=vcs-snapshot	b1abf460a493fc59ebb25de0df3f09dd
+_md5_=c001c998f1729e1725d5d6618e05b72a

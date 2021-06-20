@@ -19,7 +19,7 @@ else
 	SLOT="stable/${ABI_VER}"
 	MY_P="rustc-${PV}"
 	SRC="${MY_P}-src.tar.xz"
-	#KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
+	KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
 fi
 
 RUST_STAGE0_VERSION="1.$(($(ver_cut 2) - 1)).0"
@@ -149,6 +149,7 @@ PATCHES=(
 	"${FILESDIR}"/1.47.0-ignore-broken-and-non-applicable-tests.patch
 	"${FILESDIR}"/1.49.0-gentoo-musl-target-specs.patch
 	"${FILESDIR}"/1.53.0-rustversion-1.0.5.patch # https://github.com/rust-lang/rust/pull/86425
+	"${FILESDIR}"/1.53.0-miri-vergen.patch # https://github.com/rust-lang/rust/issues/84182
 )
 
 S="${WORKDIR}/${MY_P}-src"
@@ -260,7 +261,7 @@ src_configure() {
 		if use system-llvm; then
 			# un-hardcode rust-lld linker for this target
 			# https://bugs.gentoo.org/715348
-			sed -i '/linker:/ s/rust-lld/wasm-ld/' compiler/rustc_target/src/spec/wasm32_base.rs || die
+			sed -i '/linker:/ s/rust-lld/wasm-ld/' compiler/rustc_target/src/spec/wasm_base.rs || die
 		fi
 	fi
 	rust_targets="${rust_targets#,}"
@@ -293,6 +294,7 @@ src_configure() {
 	rust_target="$(rust_abi)"
 
 	cat <<- _EOF_ > "${S}"/config.toml
+		changelog-seen = 2
 		[llvm]
 		download-ci-llvm = false
 		optimize = $(toml_usex !debug)
@@ -303,6 +305,9 @@ src_configure() {
 		experimental-targets = ""
 		link-shared = $(toml_usex system-llvm)
 		[build]
+		build-stage = 2
+		test-stage = 2
+		doc-stage = 2
 		build = "${rust_target}"
 		host = ["${rust_target}"]
 		target = [${rust_targets}]
@@ -498,7 +503,7 @@ src_compile() {
 	(
 	IFS=$'\n'
 	env $(cat "${S}"/config.env) RUST_BACKTRACE=1\
-		"${EPYTHON}" ./x.py dist -vv --config="${S}"/config.toml -j$(makeopts_jobs) || die
+		"${EPYTHON}" ./x.py build -vv --config="${S}"/config.toml -j$(makeopts_jobs) || die
 	)
 }
 
@@ -562,7 +567,7 @@ src_install() {
 	(
 	IFS=$'\n'
 	env $(cat "${S}"/config.env) DESTDIR="${D}" \
-		"${EPYTHON}" ./x.py install -vv --config="${S}"/config.toml -j$(makeopts_jobs) || die
+		"${EPYTHON}" ./x.py install	-vv --config="${S}"/config.toml -j$(makeopts_jobs) || die
 	)
 
 	# bug #689562, #689160
