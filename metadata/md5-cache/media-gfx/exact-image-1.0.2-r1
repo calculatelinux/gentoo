@@ -11,5 +11,5 @@ RDEPEND=x11-libs/agg[truetype] sys-libs/zlib expat? ( dev-libs/expat ) jpeg? ( v
 REQUIRED_USE=lua? ( swig )
 SLOT=0
 SRC_URI=http://dl.exactcode.de/oss/exact-image/exact-image-1.0.2.tar.bz2
-_eclasses_=lua-single	f91b5656f00869c220a6e35ae0521c54	lua-utils	f89d52950f35686c55327aa60782641c	multilib	ba7da83f763a749a2870c28785c6dc0b	toolchain-funcs	2545dc6f0aaecb2dea61424911e82674
+_eclasses_=lua-single	20268f317853c44164a3065f1e6ff68b	lua-utils	a2553e8a65058f277bf0b2da4be361b0	multilib	f8d35c2432bb32c4f1e779c4287b31ec	toolchain-funcs	e867df3870e8ff04a5b94f925be8b06a
 _md5_=483352b76d77767deae6747436ec7ecb

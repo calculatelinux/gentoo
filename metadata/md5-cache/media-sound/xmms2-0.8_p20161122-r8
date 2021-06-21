@@ -11,5 +11,5 @@ REQUIRED_USE=^^ ( python_single_target_python3_8 python_single_target_python3_9 
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~slyfox/distfiles/xmms2-0.8DrO_o-949-gca15e830.tar.bz2 https://waf.io/waf-2.0.19.tar.bz2
-_eclasses_=multilib	ba7da83f763a749a2870c28785c6dc0b	multiprocessing	65f88f0e80751d45b06bbcfc4b149ccc	perl-functions	fea344a91ebf37efadf172c6a3de5a72	python-single-r1	d25ac9d5d91fe9d44fda6ec192aca11a	python-utils-r1	6e84b7d3d8d0bb1ee12774f4a66909e2	ruby-single	dd06178c43afcd54225a7d0fca6342a8	ruby-utils	ca0692a9bcdc8aec6efe486e3d1d0218	toolchain-funcs	2545dc6f0aaecb2dea61424911e82674
+_eclasses_=multilib	f8d35c2432bb32c4f1e779c4287b31ec	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	perl-functions	fea344a91ebf37efadf172c6a3de5a72	python-single-r1	d25ac9d5d91fe9d44fda6ec192aca11a	python-utils-r1	6e84b7d3d8d0bb1ee12774f4a66909e2	ruby-single	dd06178c43afcd54225a7d0fca6342a8	ruby-utils	685587efe9ff6315b82811810827f69a	toolchain-funcs	e867df3870e8ff04a5b94f925be8b06a
 _md5_=ca94bc18fc01bfe615b8662573377757

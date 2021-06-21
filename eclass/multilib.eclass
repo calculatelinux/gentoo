@@ -4,13 +4,14 @@
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
 # toolchain@gentoo.org
-# @BLURB: This eclass is for all functions pertaining to handling multilib configurations.
 # @SUPPORTED_EAPIS: 5 6 7
+# @BLURB: This eclass is for all functions pertaining to handling multilib configurations.
 # @DESCRIPTION:
 # This eclass is for all functions pertaining to handling multilib configurations.
 
 case ${EAPI:-0} in
-	[567]) ;;
+	# EAPI=0 is still used by crossdev, bug #797367
+	[0567]) ;;
 	*) die "${ECLASS}: EAPI ${EAPI:-0} not supported" ;;
 esac
 
@@ -53,7 +54,7 @@ has_multilib_profile() {
 #   fall back on old behavior.  Any profile that has these set should also
 #   depend on a newer version of portage (not yet released) which uses these
 #   over CONF_LIBDIR in econf, dolib, etc...
-if [[ ${EAPI} == 5 ]] ; then
+if [[ ${EAPI} == [05] ]] ; then
 	get_libdir() {
 		local CONF_LIBDIR
 		if [ -n  "${CONF_LIBDIR_OVERRIDE}" ] ; then
