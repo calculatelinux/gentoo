@@ -1,0 +1,15 @@
+BDEPEND=app-arch/unzip dev-java/java-config >=dev-util/bazel-3 >=dev-util/bazel-0.20 python_targets_python3_8? ( dev-lang/python:3.8 ) >=dev-lang/python-exec-2:=[python_targets_python3_8(-)?,-python_single_target_python3_8(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-)?,-python_single_target_python3_8(-)]
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=sci-libs/tensorflow[python,python_targets_python3_8(-)?,-python_single_target_python3_8(-)]
+DESCRIPTION=A high-level TensorFlow API that greatly simplifies machine learning programming
+EAPI=7
+HOMEPAGE=https://www.tensorflow.org/
+IUSE=python_targets_python3_8
+KEYWORDS=~amd64
+LICENSE=Apache-2.0
+RDEPEND=sci-libs/tensorflow[python,python_targets_python3_8(-)?,-python_single_target_python3_8(-)] python_targets_python3_8? ( dev-lang/python:3.8 ) >=dev-lang/python-exec-2:=[python_targets_python3_8(-)?,-python_single_target_python3_8(-)]
+REQUIRED_USE=|| ( python_targets_python3_8 )
+SLOT=0
+SRC_URI=https://github.com/tensorflow/estimator/archive/v2.5.0.tar.gz -> tensorflow-estimator-2.5.0.tar.gz https://github.com/bazelbuild/rules_cc/archive/0d5f3f2768c6ca2faca0079a997a97ce22997a0c.zip -> bazelbuild-rules_cc-0d5f3f2768c6ca2faca0079a997a97ce22997a0c.zip https://github.com/bazelbuild/rules_cc/archive/8bd6cd75d03c01bb82561a96d9c1f9f7157b13d0.zip -> bazelbuild-rules_cc-8bd6cd75d03c01bb82561a96d9c1f9f7157b13d0.zip https://github.com/bazelbuild/rules_cc/archive/b1c40e1de81913a3c40e5948f78719c28152486d.zip -> bazelbuild-rules_cc-b1c40e1de81913a3c40e5948f78719c28152486d.zip https://github.com/bazelbuild/rules_java/archive/7cf3cefd652008d0a64a419c34c13bdca6c8f178.zip -> bazelbuild-rules_java-7cf3cefd652008d0a64a419c34c13bdca6c8f178.zip
+_eclasses_=bazel	59a065fda63cffd0092d61c79599e1c2	distutils-r1	c21cf58c1e3c67e0ea53c96a7b37eddd	edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	f93c6ebbcd4a4e3e3f2328a13511b73a	flag-o-matic	bc2e7662a4a9a8643be851982a837ddc	l10n	6da6797255ab7fb848a02afa0cbc406f	multibuild	6b3d5ee849dafe6cdfd7b859c211fb01	multilib	ba7da83f763a749a2870c28785c6dc0b	multiprocessing	65f88f0e80751d45b06bbcfc4b149ccc	python-r1	26e4ad0a4190b14f70973dc253e86535	python-utils-r1	6e84b7d3d8d0bb1ee12774f4a66909e2	toolchain-funcs	2545dc6f0aaecb2dea61424911e82674	wrapper	4251d4c84c25f59094fd557e0063a974
+_md5_=64806b5aea78f0d733a7824d134047d8

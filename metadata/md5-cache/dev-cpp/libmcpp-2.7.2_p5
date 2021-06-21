@@ -7,5 +7,5 @@ KEYWORDS=amd64 ~arm ~ia64 x86 ~x86-linux ~x64-macos
 LICENSE=BSD
 SLOT=0
 SRC_URI=mirror://sourceforge/mcpp/mcpp-2.7.2.tar.gz https://deb.debian.org/debian/pool/main/m/mcpp/mcpp_2.7.2-5.debian.tar.xz
-_eclasses_=autotools	9e63f92c2a5d867fea55ecb160c7d354	gnuconfig	9f91b4b0c84e734a87492d4293f03de5	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	ebdbaed22e873a5abe6205f41349b479	toolchain-funcs	24921b57d6561d87cbef4916a296ada4
+_eclasses_=autotools	9e63f92c2a5d867fea55ecb160c7d354	gnuconfig	9f91b4b0c84e734a87492d4293f03de5	libtool	f143db5a74ccd9ca28c1234deffede96	multilib	ba7da83f763a749a2870c28785c6dc0b	toolchain-funcs	2545dc6f0aaecb2dea61424911e82674
 _md5_=71ce6ca070445c5e1baf74d94bf7b4dd
