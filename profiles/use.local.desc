@@ -53,8 +53,6 @@ app-admin/conky:weather-metar - Enable support for metar weather service
 app-admin/conky:webserver - Enable support to act as a webserver serving conkys output using net-libs/libmicrohttpd
 app-admin/conky:xmms2 - Enable monitoring of music played by media-sound/xmms2
 app-admin/conserver:freeipmi - Compile in FreeIPMI support via sys-libs/freeipmi
-app-admin/diamond:mongo - Enable MongoDB support
-app-admin/diamond:redis - Enable Redis support
 app-admin/diradm:automount - Support for automount data in LDAP
 app-admin/diradm:irixpasswd - Support for storing separate IRIX passwords
 app-admin/doas:persist - Adds support for "persist" feature (experimental)
@@ -603,6 +601,7 @@ app-emulation/snapd:cgroup-hybrid - Default to hybrid (legacy) cgroup hierarchy 
 app-emulation/snapd:forced-devmode - Automatically disable application confinement if feature detection fails.
 app-emulation/spice:smartcard - Enable smartcard remoting using app-emulation/libcacard
 app-emulation/vagrant:virtualbox - Use VirtualBox provider.
+app-emulation/vice:cpuhistory - Enable 65xx CPU history support (may decrease performance)
 app-emulation/vice:ethernet - Enable ethernet emulation
 app-emulation/vice:headless - Include the headless variant of the emulator
 app-emulation/vice:mpg123 - Enable mp3@64 cartridge support
@@ -2252,7 +2251,6 @@ dev-lisp/ecls:libatomic - Use dev-libs/libatomic_ops library
 dev-lisp/ecls:precisegc - Use type information during garbage collection (experimental)
 dev-lisp/gcl:ansi - Build a GCL with ANSI support (else build a traditional CLtL1 image)
 dev-lisp/gcl:athena - Build xgcl - an interface to x11-libs/libXaw
-dev-lisp/sbcl:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
 dev-lua/lua-cjson:internal-fpconv - Enable internal number conversion routines, can increase overall performance by up to 50%
 dev-ml/dose3:parmap - Adds multi-core CPU support via dev-ml/parmap.
 dev-ml/dose3:rpm4 - Adds support for handling rpm4 files.
@@ -5045,7 +5043,7 @@ media-video/mpv:tools - Install extra tools: mpv_identify.sh, mpv_idet.sh, and u
 media-video/mpv:uchardet - Enable subtitles charset discovery via app-i18n/uchardet
 media-video/mpv:vulkan - Enable support for various Vulkan-based video backends
 media-video/mpv:zimg - Enable libzimg support (for vf_fingerprint)
-media-video/noad:libmpeg2 - Build support for mpeg2 over media-libs/libmpeg2 rather than using ffmpeg
+media-video/noad:libmpeg2 - Build support for mpeg2 through media-libs/libmpeg2 rather than using media-video/ffmpeg
 media-video/nvidia_video_sdk:tools - Build and install example tools.
 media-video/obs-studio:decklink - Build the Decklink plugin.
 media-video/obs-studio:fdk - Build with LibFDK AAC support.
@@ -8657,6 +8655,9 @@ x11-base/xorg-server:xnest - Build the Xnest server
 x11-base/xorg-server:xorg - Build the Xorg X server (HIGHLY RECOMMENDED)
 x11-base/xorg-server:xvfb - Build the Xvfb server
 x11-base/xorg-x11:fonts - Install fonts from X.Org
+x11-base/xwayland:rpc - Enable secure rpc
+x11-base/xwayland:unwind - Enable libunwind usage for backtraces
+x11-base/xwayland:xcsecurity - Build Security extension
 x11-drivers/nvidia-drivers:driver - Install kernel driver modules
 x11-drivers/nvidia-drivers:tools - Install additional tools such as nvidia-settings
 x11-drivers/xf86-video-geode:ztv - Enable building the V4L2 ZTV driver
