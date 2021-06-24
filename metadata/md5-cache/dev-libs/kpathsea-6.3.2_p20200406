@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/tmpfiles
 SLOT=0/6.3.2
 SRC_URI=https://dev.gentoo.org/~zlogene/distfiles/texlive/texlive-20200406-source.tar.xz https://dev.gentoo.org/~zlogene/distfiles/texlive/kpathsea-texmf.d-10.tar.xz https://dev.gentoo.org/~zlogene/distfiles/texlive/tl-kpathsea-2020.tar.xz doc? ( https://dev.gentoo.org/~zlogene/distfiles/texlive/tl-kpathsea.doc-2020.tar.xz )
-_eclasses_=libtool	f143db5a74ccd9ca28c1234deffede96	multilib	f8d35c2432bb32c4f1e779c4287b31ec	prefix	245bf72183394aa1b43afa1dbc97ab2c	texlive-common	0ed8c0ce6e8c9bb49ab84344ac802665	tmpfiles	5cd6e8cf3288d5b19ff8b5c78c7e3e31	toolchain-funcs	e867df3870e8ff04a5b94f925be8b06a
+_eclasses_=libtool	241a8f577b9781a42a7421e53448a44e	multilib	97566c1a256d07b00848aa767e38a352	prefix	245bf72183394aa1b43afa1dbc97ab2c	texlive-common	0ed8c0ce6e8c9bb49ab84344ac802665	tmpfiles	5cd6e8cf3288d5b19ff8b5c78c7e3e31	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
 _md5_=657bc185370c298bd7eaf84d684f0ce6
