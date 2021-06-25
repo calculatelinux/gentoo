@@ -32,6 +32,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2021-06-25)
+# Missing patch file for now.
+# bug #798471
+=dev-python/numpy-1.21.0
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-06-21)
+# library with no consumer, removal in 30 days
+# see https://bugs.gentoo.org/794562
+dev-java/bctsp
+
 # Michał Górny <mgorny@gentoo.org> (2021-06-24)
 # Package of huge complexity, given its premise.  Unmaintained
 # in Gentoo.  No revdeps.
@@ -80,10 +90,6 @@ dev-java/jibx-tools
 # Removal on 2021-07-19.  Bug #786279.
 app-misc/rq
 
-# John Helmert III <ajak@gentoo.org> (2021-06-19)
-# Unmaintained, open security bug.
-# Removal on 2021-07-19.  Bug #717794.
-net-misc/netkit-rsh
 
 # Michał Górny <mgorny@gentoo.org> (2021-06-19)
 # Conflicts with app-arch/brotli[python].  Discontinued in favor
@@ -294,10 +300,6 @@ dev-python/csv23
 # DEPENDs on sci-libs/proj-8
 # Unmask after unmasking proj-8
 >=sci-geosciences/qmapshack-1.16
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-05-25)
-# dev-java/jakarta-activation-api-2.0.1 depends on masked >=virtual/{jdk,jre}-11
->=dev-java/jakarta-activation-api-2.0.1
 
 # Miroslav Šulc <fordfrog@gentoo.org> (2021-05-24)
 # it's just a demo project, not a real app, see disclaimer
