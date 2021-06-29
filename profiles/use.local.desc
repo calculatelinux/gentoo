@@ -2973,11 +2973,9 @@ games-action/trine2:launcher - Install GTK+ launcher
 games-arcade/bomns:editor - enables building the level editor
 games-arcade/burgerspace:network - Enable client-server support
 games-arcade/commandergenius:downloader - Allows some Keen games to be downloaded from the menu
-games-arcade/jazz2:gles2-only - Use GLES 2.0 or later instead of full OpenGL 2.1
 games-arcade/jazz2:server - Build the multiplayer game server
 games-arcade/jazz2-data:cc - Install The Christmas Chronicles additional data
 games-arcade/jazz2-data:demo - Use the free demo data instead of the full retail game data
-games-arcade/jazz2-data:gles2-only - Use GLES 2.0 or later instead of full OpenGL 2.1
 games-arcade/jumpnbump:gtk - Install Python-based GTK menu
 games-arcade/lbreakout2:themes - Install additional themes
 games-arcade/moleinvasion:music - Download and install the music files
@@ -3188,8 +3186,9 @@ games-simulation/flightgear:udev - Enable event-based Input devices through virt
 games-simulation/flightgear:utils - Build various utilities (fgpanel, fgviewer among others)
 games-simulation/openrct2:lightfx - Enables LightFX for better lightning effects.
 games-simulation/openrct2:scripting - Enable the dev-lang/duktape scripting engine for executing user scripts.
-games-simulation/openttd:aplaymidi - Enables midi music in game, using aplaymidi as an external player
+games-simulation/openttd:allegro - Add support for Allegro
 games-simulation/openttd:dedicated - Build only the openttd server, and not the client.
+games-simulation/openttd:fluidsynth - Compile with support for FluidSynth
 games-simulation/openttd:lzo - Enables LZO compression for savegames. This is only needed to load extremely old savegames. (versions before 0.2)
 games-simulation/openttd:openmedia - Enables the free open media sets: OpenGFX, OpenSFX, OpenMSX, removing the requirement for proprietary TTD assets to play OpenTTD.
 games-simulation/simutrans:pak128 - Install more detailed scenario data
@@ -4344,6 +4343,7 @@ media-libs/spandsp:fixed-point - Enable fixed point support
 media-libs/speex:utils - Enables speex commandline utilities (speexenc, speexdec).
 media-libs/speex:vbr - Enable VBR support.
 media-libs/svgalib:kernel-helper - Build the helper kernel module
+media-libs/tg_owt:screencast - Enable support for remote desktop and screen cast using media-video/pipewire
 media-libs/tremor:low-accuracy - enable 32bit only multiply operations
 media-libs/urt:tools - Install tools
 media-libs/vigra:valgrind - Enable valgrind in make check
@@ -5789,6 +5789,7 @@ net-im/spectrum2:purple - Enables the libpurple backend, based on net-im/pidgin.
 net-im/spectrum2:sms - Enables the SMS backend, based on app-mobilephone/smstools.
 net-im/spectrum2:twitter - Enables the Twitter backend.
 net-im/spectrum2:whatsapp - Enables the WhatsApp backend, based on net-im/transwhat.
+net-im/teams:swiftshader - Install SwiftShader OpenGL libaries.
 net-im/teams:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of bundled.
 net-im/teams:system-mesa - Use the system-wide media-libs/mesa instead of bundled.
 net-im/telegram-desktop:enchant - Enable the app-text/aspell spell-checking backend
@@ -7511,6 +7512,7 @@ sci-physics/fastjet:plugins - Build all standard and C++ plugins
 sci-physics/geant:c++11 - Build using the C++11 standard
 sci-physics/geant:c++14 - Build using the C++14 standard
 sci-physics/geant:c++17 - Build using the C++17 standard
+sci-physics/geant:c++20 - Build using the C++20 standard
 sci-physics/geant:data - Add a lot of standard physics data files for geant4
 sci-physics/geant:dawn - Add support for media-gfx/dawn (3D postscript rendering)
 sci-physics/geant:freetype - Add support for media-libs/freetype
@@ -7519,13 +7521,9 @@ sci-physics/geant:geant3 - Add compatibility for geant321 to geant4
 sci-physics/geant:inventor - Add support for Open Inventor SGI toolkit via Coin3D
 sci-physics/geant:raytracerx - Enable raytracing for physics events
 sci-physics/geant:vrml - Enable output of geant4 in vrml formats
-sci-physics/geant-vmc:c++11 - Build using the C++11 standard
-sci-physics/geant-vmc:c++14 - Build using the C++14 standard
-sci-physics/geant-vmc:c++17 - Build using the C++17 standard
 sci-physics/geant-vmc:g4root - Build G4Root (interface for GEANT4 simulation with a ROOT geometry)
 sci-physics/geant-vmc:geant3 - Build with Geant4 G3toG4 library
 sci-physics/geant-vmc:mtroot - Build MTRoot (provides ROOT IO manager classes with multi-threading support)
-sci-physics/geant-vmc:rootvmc - Use sci-physics/root[vmc] (deprecated) instead of sci-physics/vmc as VMC provider
 sci-physics/geant-vmc:vgm - Enable the Virtual Geometry Model (sci-physics/vgm)
 sci-physics/hepmc:cm - Build with cm instead of default mm for length units
 sci-physics/hepmc:gev - Build with GeV instead of default MeV for momentum units
@@ -7566,9 +7564,6 @@ sci-physics/thepeg:c++11 - Build ThePEG using the C++11 standard. Experimental f
 sci-physics/thepeg:fastjet - Adds support for sci-physics/fastjet
 sci-physics/thepeg:hepmc - Adds support for High Energy Physics Monte Carlo Generators sci-physics/hepmc
 sci-physics/thepeg:lhapdf - Adds support for sci-physics/lhapdf
-sci-physics/vgm:c++11 - Build using the C++11 standard
-sci-physics/vgm:c++14 - Build using the C++14 standard
-sci-physics/vgm:c++17 - Build using the C++17 standard
 sci-physics/vgm:geant4 - Enable interaction with Geant4(sci-physics/geant:4)
 sci-physics/vgm:root - Enable interaction with ROOT (sci-physics/root)
 sci-physics/vmc:c++11 - Build using the C++11 standard
@@ -8723,6 +8718,7 @@ x11-misc/albert:python-extensions - Install default python extensions system-wid
 x11-misc/albert:statistics - Enable local statistics
 x11-misc/albert:virtualbox - Enable app-emulation/virtualbox extension
 x11-misc/alock:doc - Build and install manpage with app-text/asciidoc.
+x11-misc/autorandr:launcher - Install the launcher
 x11-misc/bumblebee:bbswitch - Add dependency on sys-power/bbswitch for PM feature
 x11-misc/colord:argyllcms - Enable ArgyllCMS sensor
 x11-misc/colord:extra-print-profiles - Generate extra print profiles. Warning: significant build time and memory requirements.
