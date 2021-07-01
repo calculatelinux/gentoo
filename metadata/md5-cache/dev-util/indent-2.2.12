@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=nls? ( virtual/libintl )
 SLOT=0
 SRC_URI=mirror://gnu/indent/indent-2.2.12.tar.xz
-_eclasses_=l10n	f45cb23732f151c1ea9ab1d057c2f541	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7
-_md5_=2065509e81722fb060d5c0fc5c51b0dc
+_eclasses_=strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7
+_md5_=ba55aeb7524e5d49279715c2b3224e25
