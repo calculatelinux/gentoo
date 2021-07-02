@@ -332,8 +332,13 @@
       <role>Specialized block devices and lots of other miscellaneous stuff</role>
     </member>
     <member>
+      <email>sam@gentoo.org</email>
+      <name>Sam James</name>
+    </member>
+    <member>
       <email>soap@gentoo.org</email>
       <name>David Seifert</name>
+      <role>NFS</role>
     </member>
     <member>
       <email>vapier@gentoo.org</email>
@@ -2617,6 +2622,11 @@
     <member>
       <email>gokturk@gentoo.org</email>
       <name>Göktürk Yüksek</name>
+      <role>Recruiter</role>
+    </member>
+    <member>
+      <email>juippis@gentoo.org</email>
+      <name>Joonas Niilola</name>
       <role>Recruiter</role>
     </member>
     <member is-lead="1">

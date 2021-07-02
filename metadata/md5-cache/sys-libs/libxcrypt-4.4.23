@@ -1,4 +1,4 @@
-BDEPEND=sys-apps/findutils test? ( || ( ( dev-lang/python:3.10 dev-python/passlib[python_targets_python3_10(-)] ) ( dev-lang/python:3.9 dev-python/passlib[python_targets_python3_9(-)] ) ( dev-lang/python:3.8 dev-python/passlib[python_targets_python3_8(-)] ) ) ) sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.2-r1:1.16 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+BDEPEND=dev-lang/perl sys-apps/findutils test? ( || ( ( dev-lang/python:3.10 dev-python/passlib[python_targets_python3_10(-)] ) ( dev-lang/python:3.9 dev-python/passlib[python_targets_python3_9(-)] ) ( dev-lang/python:3.8 dev-python/passlib[python_targets_python3_8(-)] ) ) )
 DEFINED_PHASES=compile configure install prepare setup test
 DEPEND=system? ( elibc_glibc? ( sys-libs/glibc[-crypt(+)] ) !sys-libs/musl )
 DESCRIPTION=Extended crypt library for descrypt, md5crypt, bcrypt, and others
@@ -11,6 +11,6 @@ RDEPEND=system? ( elibc_glibc? ( sys-libs/glibc[-crypt(+)] ) !sys-libs/musl )
 REQUIRED_USE=split-usr? ( system )
 RESTRICT=!test? ( test )
 SLOT=0/1
-SRC_URI=https://github.com/besser82/libxcrypt/archive/v4.4.23.tar.gz -> libxcrypt-4.4.23.tar.gz
-_eclasses_=autotools	9e63f92c2a5d867fea55ecb160c7d354	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	gnuconfig	262062cef0ba4f22b397193da514a350	libtool	241a8f577b9781a42a7421e53448a44e	multibuild	05a584848db4901c97fcd94ae7cc3a97	multilib	97566c1a256d07b00848aa767e38a352	multilib-build	c311a933538fe97b72600926696ea66f	multilib-minimal	12533389e8f5cc25f70ffcddbc9b3d29	python-any-r1	901d9e22c7a848a1196502edf060f330	python-utils-r1	969dff6876159a10dfdad9e01d265d1c	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
-_md5_=6f107a881a5a9ba9d755d3ed5d7cc800
+SRC_URI=https://dev.gentoo.org/~sam/distfiles/sys-libs/libxcrypt/libxcrypt-4.4.23-autotools.tar.xz
+_eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multibuild	05a584848db4901c97fcd94ae7cc3a97	multilib	97566c1a256d07b00848aa767e38a352	multilib-build	c311a933538fe97b72600926696ea66f	multilib-minimal	12533389e8f5cc25f70ffcddbc9b3d29	python-any-r1	901d9e22c7a848a1196502edf060f330	python-utils-r1	969dff6876159a10dfdad9e01d265d1c	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=adedd146598dbae50f6d98b4906979d2
