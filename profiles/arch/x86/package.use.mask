@@ -1,6 +1,10 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Ionen Wolkens <ionen@gentoo.org> (2021-07-04)
+# Needed until media-libs/libsdl2[vulkan] is unmasked on this arch.
+games-fps/yamagi-quake2 vulkan
+
 # Ionen Wolkens <ionen@gentoo.org> (2021-07-01)
 # Feature currently relies on amd64 prebuilt binaries.
 media-video/obs-studio browser
@@ -56,11 +60,6 @@ sys-libs/compiler-rt-sanitizers -asan -lsan
 sys-libs/compiler-rt-sanitizers -ubsan -safestack -cfi -scudo
 sys-libs/compiler-rt-sanitizers -gwp-asan
 sys-libs/compiler-rt-sanitizers -profile
-
-# Alexey Sokolov <alexey+gentoo@asokolov.org> (2020-10-28)
-# dev-qt/linguist-tools-5.15.0 and 5.15.1 OOM with bad_alloc.
-# bug #751418
->=sci-astronomy/stellarium-0.20.3 nls
 
 # Sam James <sam@gentoo.org> (2020-10-05)
 # Guile only supports JIT on some arches

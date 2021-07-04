@@ -13,7 +13,7 @@ IUSE="rpc unwind ipv6 xcsecurity selinux video_cards_nvidia"
 
 LICENSE="MIT"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS=""
 
 CDEPEND="
 	>=x11-libs/pixman-0.27.2
@@ -36,6 +36,7 @@ CDEPEND="
 	x11-libs/libxkbfile
 	>=x11-libs/xtrans-1.3.5
 	x11-base/xorg-proto
+	>=x11-misc/xkeyboard-config-2.4.1-r3
 "
 
 DEPEND="

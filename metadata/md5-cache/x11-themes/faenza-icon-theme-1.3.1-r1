@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=x11-themes/hicolor-icon-theme
 SLOT=0
 SRC_URI=mirror://gentoo/faenza-icon-theme_1.3.1.tar.gz
-_eclasses_=xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	ff2ff954e6b17929574eee4efc5152ba
+_eclasses_=xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	27f9a2f19502b925ac117bd657aa2979
 _md5_=57f20598dad6c043db92bd31ea0ccce8
