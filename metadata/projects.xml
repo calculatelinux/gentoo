@@ -1052,19 +1052,14 @@
     </member>
   </project>
   <project>
-    <email>gsoc@gentoo.org</email>
+    <email>soc@gentoo.org</email>
     <name>Google Summer of Code</name>
     <url>https://wiki.gentoo.org/wiki/Project:GSoC</url>
     <description>The central project to unite efforts for Google Summer of Code participation</description>
     <member>
-      <email>alicef@gentoo.org</email>
-      <name>Alice Ferrazzi</name>
-      <role>admin</role>
-    </member>
-    <member>
-      <email>lu_zero@gentoo.org</email>
-      <name>Luca Barbato</name>
-      <role>mentor</role>
+      <email>mattst88@gentoo.org</email>
+      <name>Matt Turner</name>
+      <role>2021 Mentor</role>
     </member>
     <member>
       <email>zlogene@gentoo.org</email>
@@ -2370,6 +2365,10 @@
     <member>
       <email>gyakovlev@gentoo.org</email>
       <name>Georgy Yakovlev</name>
+    </member>
+    <member>
+      <email>ionen@gentoo.org</email>
+      <name>Ionen Wolkens</name>
     </member>
     <member>
       <email>jstein@gentoo.org</email>

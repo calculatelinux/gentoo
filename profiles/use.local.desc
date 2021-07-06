@@ -2140,7 +2140,9 @@ dev-libs/libzip:mbedtls - Use net-libs/mbedtls as TLS provider
 dev-libs/libzip:tools - Install binary tools to compare, modify and merge zip files
 dev-libs/link-grammar:aspell - Adds support for app-text/aspell spell checker
 dev-libs/link-grammar:hunspell - Adds support for app-text/hunspell spell checker
+dev-libs/log4cplus:explicit-initialization - Require explicit initialization
 dev-libs/log4cplus:iconv - Use inconv for wchar_t <-> char conversions. See also log4cplus's unicode.txt documentation
+dev-libs/log4cplus:server - Build the logging server
 dev-libs/log4cplus:working-c-locale - Use the C99 locale facilities for wchar_t <-> char conversions. See also log4cplus's unicode.txt documentation
 dev-libs/log4cplus:working-locale - Use C++'s std::locale for wchar_t <-> char conversions. See also log4cplus's unicode.txt documentation
 dev-libs/log4cxx:smtp - Offer SMTP support via net-libs/libesmtp
@@ -3024,6 +3026,7 @@ games-emulation/dosbox:core-inline - Enable memory-increasing inlines for better
 games-emulation/dosbox:glide - Enable unofficial Glide emulation via media-libs/openglide
 games-emulation/dosbox-staging:dynrec - Use recompiling cpu core instead of dynamic x86/x64 specific cpu core
 games-emulation/dosbox-staging:fluidsynth - use media-sound/fluidsynth for MIDI emulation
+games-emulation/dosbox-staging:mt-32 - use media-sound/munt for MT-32 emulation
 games-emulation/dosbox-staging:network - Enable networking features (modem, ipx)
 games-emulation/dosbox-staging:opus - Support compressed audio tracks (.opus) used with CDROM images
 games-emulation/generator:sdlaudio - Enable SDL Audio
@@ -6474,12 +6477,14 @@ net-misc/mrouted:rsrr - Enable Routing Support for Resource Reservations, for RS
 net-misc/mulk:checksum - Enable checksum verification for Metalink from dev-libs/openssl
 net-misc/mulk:metalink - Enable support for media-libs/libmetalink
 net-misc/netkit-bootparamd:libtirpc - Build against net-libs/libtirpc for RPC support
-net-misc/networkmanager:connection-sharing - Use net-dns/dnsmasq and net-firewall/iptables for connection sharing
-net-misc/networkmanager:dhclient - Use dhclient from net-misc/dhcp for getting ip
-net-misc/networkmanager:dhcpcd - Use net-misc/dhcpcd for getting ip
+net-misc/networkmanager:connection-sharing - Support connection sharing (uses net-dns/dnsmasq)
+net-misc/networkmanager:dhclient - Use dhclient from net-misc/dhcp for getting an IP via DHCP
+net-misc/networkmanager:dhcpcd - Use net-misc/dhcpcd for getting an IP
 net-misc/networkmanager:elogind - Use sys-auth/elogind for session tracking
+net-misc/networkmanager:iptables - Use net-firewall/iptables for connection sharing
 net-misc/networkmanager:iwd - Use net-wireless/iwd instead of net-wireless/wpa_supplicant for wifi support by default
 net-misc/networkmanager:modemmanager - Enable support for mobile broadband devices using net-misc/modemmanager
+net-misc/networkmanager:nftables - Use net-firewall/nftables for connection sharing
 net-misc/networkmanager:nss - Use dev-libs/nss for cryptography
 net-misc/networkmanager:ofono - Use net-misc/ofono for telephony support.
 net-misc/networkmanager:ovs - Enable OpenVSwitch support
