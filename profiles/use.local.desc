@@ -3026,7 +3026,7 @@ games-emulation/dosbox:core-inline - Enable memory-increasing inlines for better
 games-emulation/dosbox:glide - Enable unofficial Glide emulation via media-libs/openglide
 games-emulation/dosbox-staging:dynrec - Use recompiling cpu core instead of dynamic x86/x64 specific cpu core
 games-emulation/dosbox-staging:fluidsynth - use media-sound/fluidsynth for MIDI emulation
-games-emulation/dosbox-staging:mt-32 - use media-sound/munt for MT-32 emulation
+games-emulation/dosbox-staging:mt-32 - use media-libs/munt-mt32emu for MT-32 emulation
 games-emulation/dosbox-staging:network - Enable networking features (modem, ipx)
 games-emulation/dosbox-staging:opus - Support compressed audio tracks (.opus) used with CDROM images
 games-emulation/generator:sdlaudio - Enable SDL Audio
@@ -3326,6 +3326,7 @@ gnome-extra/synapse:plugins - Build support for plugins using net-libs/rest
 gnustep-apps/gemas:projectcenter - Build and install plugin for gnustep-apps/projectcenter
 gnustep-apps/gworkspace:gwmetadata - Enable the metadata indexing and searching system
 gnustep-apps/sogo:activesync - Build the ActiveSync support code
+gnustep-apps/sogo:sodium - Enable support for Argon2 password schemes using dev-libs/libsodium
 gnustep-base/gnustep-back-art:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-cairo:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-xlib:xim - Enable X11 XiM input method
@@ -3707,6 +3708,7 @@ mail-client/neomutt:smime-classic - Build classic-smime backend to support S/MIM
 mail-client/neomutt:tokyocabinet - Enable Tokyo Cabinet database backend for header caching
 mail-client/roundcube:change-password - Allow users to change passwords through Roundcube
 mail-client/roundcube:enigma - Add dependencies to support server-side GnuPG signing and/or encryption through the enigma plugin
+mail-client/roundcube:fileinfo - Use the dev-lang/php fileinfo extension to guess the mime_type of attachments
 mail-client/roundcube:ldap - Add dependencies to support connecting to an LDAP address book server
 mail-client/s-nail:kerberos - If network is enabled, this adds support for GSSAPI login on IMAP through virtual/krb5.
 mail-client/s-nail:net - Enable support for network protocols (POP, IMAP and SMTP). If you only need to send mail with the local Transport Agent, disabling this will get you support for only /usr/sbin/sendmail call.
@@ -6495,6 +6497,7 @@ net-misc/networkmanager:wext - Enable support for the deprecated Wext (Wireless 
 net-misc/networkmanager:wifi - Enable support for wifi and 802.1x security
 net-misc/nextcloud-client:dolphin - Install the kde-apps/dolphin extension
 net-misc/nextcloud-client:nautilus - Install the gnome-base/nautilus extension
+net-misc/nextcloud-client:webengine - Enable old Flow1 login using dev-qt/qtwebengine
 net-misc/ntp:openntpd - Allow ntp to be installed alongside openntpd
 net-misc/ntp:parse-clocks - Add support for PARSE clocks
 net-misc/ntp:samba - Provide support for Samba's signing daemon (needed for Active Directory domain controllers)
@@ -7442,6 +7445,7 @@ sci-mathematics/agda:stdlib - Install the standard library.
 sci-mathematics/bertini:optimization - Accept upstream's choices for -O option.
 sci-mathematics/cgal:mpfi - Enable support for multiple recision interval arithmetic via sci-libs/mpfi
 sci-mathematics/cgal:ntl - Enable support for dev-libs/ntl
+sci-mathematics/cgal:shared - Build shared library
 sci-mathematics/cvc4:cln - Use sci-libs/cln
 sci-mathematics/cvc4:proofs - Support for proof generation
 sci-mathematics/cvc4:replay - Turn on the replay feature

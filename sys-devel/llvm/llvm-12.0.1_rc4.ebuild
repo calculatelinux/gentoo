@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{7..9} )
+PYTHON_COMPAT=( python3_{8..10} )
 inherit cmake llvm.org multilib-minimal pax-utils python-any-r1 \
 	toolchain-funcs
 
@@ -67,7 +67,7 @@ PDEPEND="sys-devel/llvm-common
 
 LLVM_COMPONENTS=( llvm )
 LLVM_MANPAGES=build
-LLVM_PATCHSET=9999-1
+LLVM_PATCHSET=12.0.1-rc4-1
 llvm.org_set_globals
 
 python_check_deps() {

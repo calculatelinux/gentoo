@@ -14,7 +14,7 @@ SRC_URI="https://github.com/systemd/systemd/archive/v${PV}.tar.gz -> systemd-${P
 
 LICENSE="BSD-2 GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm arm64 ~hppa ppc ppc64 ~riscv ~s390 sparc x86"
+KEYWORDS="~alpha amd64 arm arm64 hppa ppc ppc64 ~riscv ~s390 sparc x86"
 IUSE="selinux test"
 RESTRICT="!test? ( test )"
 
@@ -38,8 +38,8 @@ BDEPEND="
 	dev-libs/libxslt:0
 	dev-util/gperf
 	>=dev-util/meson-0.46
-	>=dev-util/intltool-0.50
 	>=sys-apps/coreutils-8.16
+	sys-devel/gettext
 	sys-devel/m4
 	virtual/pkgconfig
 "

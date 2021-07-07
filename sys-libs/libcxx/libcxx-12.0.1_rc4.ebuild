@@ -4,7 +4,7 @@
 EAPI=7
 
 CMAKE_ECLASS=cmake
-PYTHON_COMPAT=( python3_{7..9} )
+PYTHON_COMPAT=( python3_{8..10} )
 inherit cmake-multilib llvm llvm.org python-any-r1 toolchain-funcs
 
 DESCRIPTION="New implementation of the C++ standard library, targeting C++11"
@@ -35,7 +35,7 @@ BDEPEND="
 DOCS=( CREDITS.TXT )
 
 LLVM_COMPONENTS=( libcxx{,abi} llvm/{cmake/modules,utils/llvm-lit} )
-LLVM_PATCHSET=9999-1
+LLVM_PATCHSET=12.0.1-rc4-1
 llvm.org_set_globals
 
 python_check_deps() {

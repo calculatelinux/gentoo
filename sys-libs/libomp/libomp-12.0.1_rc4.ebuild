@@ -4,7 +4,7 @@
 EAPI=7
 
 CMAKE_ECLASS=cmake
-PYTHON_COMPAT=( python3_{7..9} )
+PYTHON_COMPAT=( python3_{8..10} )
 inherit cmake-multilib linux-info llvm.org python-any-r1
 
 DESCRIPTION="OpenMP runtime library for LLVM/clang compiler"
@@ -38,6 +38,7 @@ BDEPEND="dev-lang/perl
 	)"
 
 LLVM_COMPONENTS=( openmp llvm/include )
+LLVM_PATCHSET=12.0.1-rc4-1
 llvm.org_set_globals
 
 python_check_deps() {
