@@ -32,6 +32,28 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2021-07-09)
+# Last release in 2016. Tests fail with recent git versions.
+# No reverse dependencies, no maintainer.
+# Masked for removal in 30 days.
+dev-vcs/git-num
+
+# Hans de Graaff <graaff@gentoo.org> (2021-07-09)
+# Last release in 2014 and no longer supported upstream. Obsolete CSS
+# framework with known issues.
+# Masked for removal in 30 days.
+dev-ruby/compass
+dev-ruby/compass-core
+dev-ruby/compass-import-once
+
+# Hans de Graaff <graaff@gentoo.org> (2021-07-09)
+# Mask ruby25 for removal. This version is no longer supported
+# upstream. Use a newer ruby version, e.g ruby26.
+# Masked for removal in 30 days.
+dev-lang/ruby:2.5
+=dev-ruby/rubygems-2.7*
+dev-ruby/did_you_mean:2.5
+
 # Pacho Ramos <pacho@gentoo.org> (2021-07-08)
 # Doesn't support Gnome 40, use gnome-shell-extension-desktop-icons-ng
 # instead. Removal in 30 days.
@@ -540,12 +562,6 @@ dev-go/qt
 # Bug #729672.
 media-plugins/kodi-game-libretro-nestopia
 media-plugins/kodi-game-libretro-dosbox
-
-# Georgy Yakovlev <gyakovlev@gentoo.org> (2020-10-30)
-# broken acl handling, possible broken chattr handling
-# needs more testing
-# bug #751739
-=sys-apps/opentmpfiles-0.3.1
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2020-10-26)
 # Historical metapackage that exists in slot 5 only for transition from KDE SC4.

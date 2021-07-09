@@ -1067,6 +1067,11 @@
       <role>2021 Mentor</role>
     </member>
     <member>
+      <email>mgorny@gentoo.org</email>
+      <name>Michał Górny</name>
+      <role>admin</role>
+    </member>
+    <member>
       <email>zlogene@gentoo.org</email>
       <name>Mikle Kolyada</name>
       <role>admin</role>
@@ -3181,6 +3186,10 @@
     <member>
       <email>sam@gentoo.org</email>
       <name>Sam James</name>
+    </member>
+    <member>
+      <email>slyfox@gentoo.org</email>
+      <name>Sergei Trofimovich</name>
     </member>
     <member>
       <email>soap@gentoo.org</email>

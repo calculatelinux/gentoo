@@ -4,6 +4,7 @@
 EAPI=7
 
 XORG_DOC=doc
+XORG_TARBALL_SUFFIX="xz"
 inherit xorg-3 multilib flag-o-matic toolchain-funcs
 EGIT_REPO_URI="https://gitlab.freedesktop.org/xorg/xserver.git"
 
