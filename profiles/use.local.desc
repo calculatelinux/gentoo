@@ -3153,7 +3153,6 @@ games-fps/yamagi-quake2:softrender - Build software renderer
 games-fps/yamagi-quake2:vulkan - Build experimental Vulkan renderer
 games-fps/yamagi-quake2:xatrix - Build support for the 'The Reckoning' Mission Pack
 games-kids/gcompris:kiosk - Enable kiosk mode by default (for use by small children or on a self-service host machine)
-games-misc/little-inferno:bundled-libs - Use bundled libraries.
 games-misc/ponysay:fish-completion - Enable fish completion support
 games-misc/ponysay:non-free - Install non-free ponies (i.e. from the MLP franchise)
 games-misc/xcowsay:fortune - Enable support for fortune cookies via games-misc/fortune-mod
@@ -3956,16 +3955,13 @@ media-gfx/fontforge:truetype-debugger - Enable truetype debugger in fontforge
 media-gfx/fontforge:woff2 - Enable support for WOFF2 format
 media-gfx/fotowall:webcam - Enable webcam support
 media-gfx/freecad:addonmgr - Build the addon manager module for automatic handling of 3rd party addons
-media-gfx/freecad:arch - Build the architecture workbench for working with architectural elements
 media-gfx/freecad:cloud - Build the Cloud workbench, to access cloud providers (mostly Amazon S3).
-media-gfx/freecad:drawing - Build the drawing module and workbench to display 3D work on a 2D sheet
 media-gfx/freecad:fem - Build the FEM module and workbench which provides Finite Element Analysis (FEA) workflows
 media-gfx/freecad:headless - Build FreeCAD without a GUI, usable for server-side instances. The Python modules are still available, without their GUI parts though.
 media-gfx/freecad:idf - Build the IDF module to provide file exchange capabilities with IDF files
 media-gfx/freecad:image - Build the image module and workbench for working with bitmap images
 media-gfx/freecad:inspection - Build the inspection workbench which gives you specific tools for examination of shapes (experimental)
 media-gfx/freecad:material - Build the material module and workbench to work with materials
-media-gfx/freecad:mesh - Build the mesh module and workbench to work with triangulated meshes
 media-gfx/freecad:openscad - Build the OpenSCAD module for interoperability with OpenSCAD and repairing Constructive Solid Geometry (CSG) history
 media-gfx/freecad:part-design - Build the part design module and workbench for build part shapes from sketches
 media-gfx/freecad:path - Build the path module and workbench to procude G-Code instructions for CNC
@@ -3976,7 +3972,6 @@ media-gfx/freecad:raytracing - Build the raytracing module and workbench for ray
 media-gfx/freecad:robot - Build the robot module and workbench for studying robot movements
 media-gfx/freecad:ship - Build the ship module and workbench which works over ship entities, that must be created on top of provided geometry. NOTE: This conflicts with the external ship workbench, which you can add via the Addon Manager!
 media-gfx/freecad:show - Build the show module, a helper module for visibility automation
-media-gfx/freecad:spreadsheet - Build the spreadsheet module and workbench to create and manipulate spreadsheet data
 media-gfx/freecad:surface - Build the surface module and workbench
 media-gfx/freecad:techdraw - Build the techdraw module and workbench, a more advanced and feature-rich successor of the drawing workbench
 media-gfx/freecad:tux - Build the Tux module
@@ -4996,6 +4991,7 @@ media-video/libva-utils:examples - Build and install decode, encode, videoproces
 media-video/libva-utils:putsurface - Build and install putsurface tool.
 media-video/libva-utils:test-va-api - Install test_va_api tool for thorough testing of the installed VA-API.
 media-video/libva-utils:vainfo - Build and install vainfo tool.
+media-video/makemkv:java - Handle additional Blu-ray protection mechanisms involving Java
 media-video/mjpegtools:sdlgfx - Enables y4mhist to display a graphical histogram
 media-video/mjpg-streamer:input-control - Plugin giving ability to control camera movement (only specific cameras)
 media-video/mjpg-streamer:input-file - Plugin that watches given directory and send it's content
