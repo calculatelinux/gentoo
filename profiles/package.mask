@@ -32,6 +32,31 @@
 
 #--- END OF EXAMPLES ---
 
+# Marek Szuba <marecki@gentoo.org> (2021-07-12)
+# No releases since March 2015, no upstream repo activity since November
+# 2019. Unmaintained in Gentoo. Depends on effectively EOLed Lua 5.2,
+# fails to build against any other version. Removal in 30 days (Bug #801883)
+app-crypt/cardpeek
+
+# Marek Szuba <marecki@gentoo.org> (2021-07-12)
+# Effectively EOL, no packages in the tree strictly require this
+# particular version. Removal, of both the ebuilds and target support,
+# in 30 days (bug #801865).
+dev-lang/lua:5.2
+
+# Craig Andrews <candrews@gentoo.org> (2021-07-10)
+# Masked until November, 2021
+# This release adds enforcement of the Taproot protocol change to the Bitcoin
+# rules, beginning in November. Protocol changes require user consent to be
+# effective, and if enforced inconsistently within the community may compromise
+# your security or others! If you do not know what you are doing, learn more
+# before November. (You must make a decision either way - simply not upgrading
+# is insecure in all scenarios.)
+# To learn more, see https://bitcointaproot.cc
+>=net-p2p/bitcoind-0.21.1
+>=net-p2p/bitcoin-qt-0.21.1
+>=net-libs/libbitcoinconsensus-0.21.1
+
 # Lars Wendler <polynomial-c@gentoo.org> (2021-07-10)
 # Masked for testing
 >=mail-client/claws-mail-4.0.0
@@ -304,22 +329,12 @@ dev-python/pyls-black
 # see bug: https://bugs.gentoo.org/787410
 media-gfx/povtree
 
-# Joonas Niilola <juippis@gentoo.org> (2021-06-12)
-# A library without consumers, old dep of tree-cleaned gnome-mplayer,
-# EAPI-5. Removal in ~30 days. #776898
-media-libs/gmtk
-
 # Sam James <sam@gentoo.org> (2021-06-12)
 # Masked until all reverse dependencies support
 # OCaml 4.12.
 # bug #795138
 >=dev-lang/ocaml-4.12
 =dev-ml/camlp4-4.12
-
-# Alfredo Tupone <tupone@gentoo.org> (2021-06-11)
-# Masked for removal in 30 days. No more supported
-<dev-lang/gnat-gpl-2017
-<dev-ada/gnat-suite-bin-2017
 
 # Tomáš Mózes <hydrapolic@gmail.com> (2021-06-10)
 # Based on unsupported grub-legacy, replaced by

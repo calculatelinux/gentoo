@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="
 	>=dev-libs/mathjax-2.4
@@ -58,6 +58,8 @@ python_prepare_all() {
 python_test() {
 	local deselect=(
 		# trash doesn't seem to work for us
+		notebook/services/contents/tests/test_contents_api.py::APITest::test_checkpoints_follow_file
+		notebook/services/contents/tests/test_contents_api.py::APITest::test_delete
 		notebook/services/contents/tests/test_contents_api.py::GenericFileCheckpointsAPITest::test_checkpoints_follow_file
 		notebook/services/contents/tests/test_contents_api.py::GenericFileCheckpointsAPITest::test_delete
 		notebook/services/contents/tests/test_contents_api.py::GenericFileCheckpointsAPITest::test_delete_dirs

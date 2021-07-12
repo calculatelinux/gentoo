@@ -10,5 +10,5 @@ PDEPEND=emacs? ( app-emacs/eselect-mode ) vim-syntax? ( app-vim/eselect-syntax )
 PROPERTIES=live
 RDEPEND=sys-apps/sed || ( sys-apps/coreutils app-misc/realpath ) sys-apps/file sys-libs/ncurses:0
 SLOT=0
-_eclasses_=autotools	9e63f92c2a5d867fea55ecb160c7d354	bash-completion-r1	8e7c071081c68c2c398b77fe3a1d6908	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	gnuconfig	262062cef0ba4f22b397193da514a350	libtool	241a8f577b9781a42a7421e53448a44e	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_eclasses_=autotools	2a36908d5f63f41614b450a2459567da	bash-completion-r1	8e7c071081c68c2c398b77fe3a1d6908	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	gnuconfig	262062cef0ba4f22b397193da514a350	libtool	241a8f577b9781a42a7421e53448a44e	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
 _md5_=1bcfefe8af8b4ee71bfcb71bf28aa31c

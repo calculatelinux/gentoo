@@ -606,6 +606,7 @@ app-emulation/snapd:apparmor - Enable AppArmor support.
 app-emulation/snapd:cgroup-hybrid - Default to hybrid (legacy) cgroup hierarchy instead of unified (modern).
 app-emulation/snapd:forced-devmode - Automatically disable application confinement if feature detection fails.
 app-emulation/spice:smartcard - Enable smartcard remoting using app-emulation/libcacard
+app-emulation/uade:fuse - Enable sys-fs/fuse uadefs frontend for on-the-fly WAV conversion
 app-emulation/vagrant:virtualbox - Use VirtualBox provider.
 app-emulation/vice:cpuhistory - Enable 65xx CPU history support (may decrease performance)
 app-emulation/vice:ethernet - Enable ethernet emulation
@@ -1697,6 +1698,7 @@ dev-java/openjfx:media - Compile media module, based on gstreamer-minimal (does 
 dev-java/openjfx:source - Install JavaFX sources
 dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
 dev-java/sbt:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
+dev-lang/R:lto - Use link-time optimization for R and its recommended packages.
 dev-lang/bas:lr0 - Use the LR0 parser instead of the recursive descending parser
 dev-lang/crystal:blocking-stdio-hack - Keep STDIO file descriptors in blocking mode.
 dev-lang/crystal:debug - Build each module as a separate object file. Speeds build up.
@@ -1730,8 +1732,6 @@ dev-lang/gnat-gpl:graphite - Add support for the framework for loop optimization
 dev-lang/gnat-gpl:libssp - Build SSP support into a dedicated library rather than use the code in the C library (DO NOT ENABLE THIS IF YOU DON'T KNOW WHAT IT DOES)
 dev-lang/gnat-gpl:lto - Build using Link Time Optimizations (LTO)
 dev-lang/gnat-gpl:mpx - Enable support for Intel Memory Protection Extensions (MPX)
-dev-lang/gnat-gpl:nopie - Disable PIE support (NOT FOR GENERAL USE)
-dev-lang/gnat-gpl:nossp - Disable SSP support (NOT FOR GENERAL USE)
 dev-lang/gnat-gpl:nptl - Enable support for Native POSIX Threads Library, the new threading module (requires linux-2.6 or better usually)
 dev-lang/gnat-gpl:objc - Build support for the Objective C code language
 dev-lang/gnat-gpl:objc++ - Build support for the Objective C++ language
@@ -2412,7 +2412,6 @@ dev-python/cvxopt:glpk - Use GNU Linear Programming Kit sci-mathematics/glpk
 dev-python/drf-yasg:validation - Enable swagger spec validation using swagger-spec-validator
 dev-python/editorconfig-core-py:cli - Install command line interface as well as python library
 dev-python/falcon:cython - Build cython-based python modules
-dev-python/gmpy:mpir - Use sci-libs/mpir as gmp implementation
 dev-python/hiredis:system-libs - Use dev-libs/hiredis from system
 dev-python/hypothesis:cli - Install a CLI tool used to write tests.
 dev-python/icalendar:doc - Generate examples and other extra documentation
@@ -2542,7 +2541,6 @@ dev-qt/qt-creator:ctfvisualizer - Build the Chrome Trace Format visualizer plugi
 dev-qt/qt-creator:designer - Enable designer for QtWidgets-based UIs
 dev-qt/qt-creator:glsl - Build the GLSL editor plugin
 dev-qt/qt-creator:help - Enable the integrated documentation viewer
-dev-qt/qt-creator:ios - Build plugin for Apple iOS devices
 dev-qt/qt-creator:lsp - Add support for the Language Server Protocol (LSP)
 dev-qt/qt-creator:mcu - Build plugin for MCU devices
 dev-qt/qt-creator:mercurial - Add support for dev-vcs/mercurial version control system
@@ -2564,7 +2562,6 @@ dev-qt/qt-creator:systemd - Add support for retrieving application output from j
 dev-qt/qt-creator:valgrind - Enable integration with dev-util/valgrind
 dev-qt/qt-creator:webassembly - Build WebAssembly plugin
 dev-qt/qt-creator:webengine - Use dev-qt/qtwebengine to view documentation
-dev-qt/qt-creator:winrt - Build plugin for WinRT devices
 dev-qt/qt-docs:3d - Install documentation for dev-qt/qt3d
 dev-qt/qt-docs:assistant - Install documentation for dev-qt/assistant
 dev-qt/qt-docs:bluetooth - Install documentation for dev-qt/qtbluetooth
@@ -2782,7 +2779,6 @@ dev-util/diffoscope:squashfs - Use sys-fs/squashfs-tools
 dev-util/diffoscope:ssh - Use net-misc/openssh
 dev-util/diffoscope:tar - Use app-arch/tar
 dev-util/diffoscope:tcpdump - Use net-analyzer/tcpdump
-dev-util/diffoscope:xz - Use app-arch/xz-utils
 dev-util/diffoscope:zip - Use app-arch/unzip
 dev-util/edb-debugger:jumbo-build - Experimental jumbo (also known as unity) build capability
 dev-util/edi:clang - Provide integration with sys-devel/clang and dev-util/bear for autocompletion, inline errors and information about compilation units.
@@ -4128,7 +4124,6 @@ media-libs/gd:webp - Enable support for the webp format
 media-libs/gegl:lensfun - Enable support for media-libs/lensfun.
 media-libs/gegl:umfpack - Enable sparse solving via sci-libs/umfpack.
 media-libs/gmmlib:custom-cflags - Do not override user CFLAGS like -march, -msse and similar with lib defaults. Not tested by upstream.
-media-libs/gmtk:dconf - Enable support for gnome-base/dconf
 media-libs/grilo:playlist - Enable support for playlists through dev-libs/totem-pl-parser
 media-libs/gst-plugins-bad:bzip2 - Enable bzip2 encoder/decoder plugin
 media-libs/gst-plugins-bad:egl - Enable EGL support
@@ -4559,6 +4554,9 @@ media-sound/dir2ogg:mac - Add support for decoding Monkey's Audio files
 media-sound/dir2ogg:wma - Add support for wma files through mplayer
 media-sound/drumstick:fluidsynth - Enable support for media-sound/fluidsynth
 media-sound/drumstick:network - Build Network RT backend
+media-sound/easyeffects:bs2b - Enable use of media-libs/libbs2b
+media-sound/easyeffects:calf - Enable use of media-plugins/calf for adding various FX
+media-sound/easyeffects:rubberband - Enable usse of media-libs/rubberband for the pitch shifting FX
 media-sound/easytag:nautilus - Build gnome-base/nautilus extension
 media-sound/ecasound:lv2 - Add support for Ladspa V2
 media-sound/ecasound:oil - Use dev-libs/liboil for inner loop optimizations
