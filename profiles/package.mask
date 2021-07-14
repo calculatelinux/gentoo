@@ -32,6 +32,11 @@
 
 #--- END OF EXAMPLES ---
 
+# John Helmert III <ajak@gentoo.org> (2021-07-14)
+# Dead upstream, unfixed security issue.
+# Removal on 2021-08-13.  Bugs #755896, #781467.
+net-proxy/polipo
+
 # Marek Szuba <marecki@gentoo.org> (2021-07-14)
 # New, considerably refactored major version with a new build system.
 # Masked for further testing.
@@ -318,29 +323,6 @@ sys-apps/rescan-scsi-bus
 # bug #795999, bug #787902, bug #766033, bug #724674, bug #713206.
 # Removal on 2021-07-15.
 media-sound/sc2mpd
-
-# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2021-06-14)
-# The original Python Language Server by Palantir is no longer actively
-# developed [1]. Development on a language server for Python is continued by
-# the Spyder IDE community under a new name and in a new package. To continue
-# using pyls, please switch to the maintained forks [2]:
-# dev-python/python-language-server --> dev-python/python-lsp-server
-# dev-python/python-jsonrpc-server --> dev-python/python-lsp-jsonrpc
-# dev-python/pyls-black --> dev-python/python-lsp-black
-# -
-# Note that dev-python/pyls-spyder has already switched to the new language
-# server as of version 0.4.0. Users of the Spyder IDE will automatically
-# switch to the new language server when upgrading to version 4.2.5-r1 or
-# 5.0.4-r1. Manual adjustments to the settings may be required in certain
-# configurations [3].
-# -
-# Masked for removal in 30 days (2021-07-14).
-# [1] https://github.com/palantir/python-language-server/issues/935
-# [2] https://bugs.gentoo.org/795924
-# [3] https://bugs.gentoo.org/783615
-dev-python/python-language-server
-dev-python/python-jsonrpc-server
-dev-python/pyls-black
 
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-06-14)
 # DeprecatedDep jre-1.3, upstream dead,removal in 30 days
@@ -650,11 +632,6 @@ kde-apps/kdebase-meta:5
 # Stefan Strogin <steils@gentoo.org> (2020-02-12)
 # Mask for testing revdeps.
 >=dev-games/mygui-3.4.0
-
-# Patrick McLean <chutzpah@gentoo.org> (2020-02-07)
-# Mask until sys-libs/libxcrypt[system] is unmasked
-# (NOTE: Likely needs to be moved to musl + uclibc profiles, not dropped entirely)
-~virtual/libcrypt-2
 
 # Lars Wendler <polynomial-c@gentoo.org> (2019-11-14)
 # Breaks archives containing relative paths
