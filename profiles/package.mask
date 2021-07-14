@@ -32,6 +32,24 @@
 
 #--- END OF EXAMPLES ---
 
+# Marek Szuba <marecki@gentoo.org> (2021-07-14)
+# New, considerably refactored major version with a new build system.
+# Masked for further testing.
+>=sci-libs/pastix-6.0.0
+
+# Marco Scardovi <marco@scardovi.vom> (2021-07-13)
+# These packages were only ported for netbox. Not useful for anything else
+# No revdeps. Removal in 30 days (Bug #801991)
+dev-python/markuppy
+dev-python/tablib
+
+# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2021-07-12)
+# Version 3.3.0 suffers from ridiculously high CPU usage, this version has
+# therefore been retracted upstream.
+# https://github.com/RocketChat/Rocket.Chat.Electron/issues/2068
+# https://github.com/RocketChat/Rocket.Chat.Electron/issues/2070
+=net-im/rocketchat-desktop-bin-3.3.0
+
 # Marek Szuba <marecki@gentoo.org> (2021-07-12)
 # No releases since March 2015, no upstream repo activity since November
 # 2019. Unmaintained in Gentoo. Depends on effectively EOLed Lua 5.2,
