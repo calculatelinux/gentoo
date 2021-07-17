@@ -32,6 +32,23 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2021-07-17)
+# Deprecated upstream, replaced with factory_bot.
+# Last release in 2017, no dependencies.
+# Masked for removal in 30 days.
+dev-ruby/factory_girl
+
+# Hans de Graaff <graaff@gentoo.org> (2021-07-17)
+# Deprecated upstream, no longer needed with rspec 2+
+# Last release in 2016, factory_girl was last dependency.
+# Masked for removal in 30 days.
+dev-ruby/bourne
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-07-16)
+# library with no consumer, multiple vulnerabilities
+# removal in 30 days (bug #713098)
+dev-java/xmlrpc
+
 # Kai Krakow <hurikhan77+bgo@gmail.com> (2021-07-16)
 # To be replaced by net-p2p/go-ipfs, no migration needed.
 # Simply deselect the masked package and install the replacement.
@@ -281,16 +298,6 @@ dev-java/bytelist
 dev-java/jcodings
 dev-java/joni
 dev-java/jvyamlb
-
-# David Seifert <soap@gentoo.org> (2021-06-20)
-# Abandoned upstream, last release 17 years ago, unmaintained, tons of
-# QA bugs, eclass is terrible. Bug #796878, removal in 30 days.
-app-dicts/canna-cannadic
-app-dicts/canna-2ch
-app-emacs/yc
-app-i18n/canna
-app-i18n/canfep
-app-i18n/im-canna
 
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-06-20)
 # no consumer, removal in 30 days

@@ -6,10 +6,6 @@
 app-text/texlive-core luajittex
 dev-texlive/texlive-basic luajittex
 
-# Alex Fan <alexfanqi@yahoo.com> (2021-07-13)
-# dependencies not keyworded/ use flag not tested
-net-analyzer/net-snmp lm-sensors rpm smux
-
 # Marek Szuba <marecki@gentoo.org> (2021-07-11)
 # Causes 35 tests to fail with "fatal llvm error"
 dev-db/postgresql llvm
@@ -51,12 +47,6 @@ net-analyzer/rrdtool rados
 sys-cluster/openmpi openmpi_fabrics_ofed openmpi_fabrics_knem openmpi_fabrics_psm openmpi_ofed_features_control-hdr-padding openmpi_ofed_features_dynamic-sl openmpi_ofed_features_rdmacm openmpi_ofed_features_udcm
 #  - sci-libs/hdf5, sys-fabric/ofed, dev-db/mariadb | dev-db/mysql
 sys-cluster/slurm hdf5 ofed slurmdbd
-
-# Ye Cao <ye.c@rioslab.org> (2021-06-24)
-# media-libs/openexr not keyworded yet - it compiles fine but the its test
-# suite times out, even with the time limit increased from 1500 to 3600 s.
-# Needs more work.
-media-gfx/imagemagick openexr
 
 # Yixun Lan <dlan@gentoo.org> (2021-05-24)
 # Dependencies not keyworded, not tested
@@ -136,7 +126,6 @@ dev-libs/libpcre jit
 app-admin/syslog-ng amqp geoip2 kafka mongodb redis spoof-source smtp test
 app-arch/p7zip wxwidgets
 app-doc/doxygen doc
-app-editors/emacs mailutils
 app-text/asciidoc test
 app-text/ghostscript-gpl cups
 app-text/po4a test
