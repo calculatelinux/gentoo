@@ -32,6 +32,44 @@
 
 #--- END OF EXAMPLES ---
 
+# Marek Szuba <marecki@gentoo.org> (2021-07-18)
+# No gtk4 and friends in the tree yet
+>=media-sound/easyeffects-6.0.0
+
+# Hans de Graaff <graaff@gentoo.org> (2021-07-18)
+# Compatibility package for ruby 1.8. No longer maintained upstream.
+# Last release in 2016, but current release in gentoo is from 2012.
+# No reverse dependencies.
+# Masked for removal in 30 days.
+dev-ruby/sfl
+
+# William Hubbs <williamh@gentoo.org> (2021-07-17)
+# Does not build and has multiple open bugs including a security issue.
+# Dead upstream (last release in 2006).
+# Removal in 30 days (2021-08-16) (bug #602594).
+app-accessibility/eflite
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-07-17)
+# Obsolete; all versions in current Perl core distributions
+# are newer, and no virtuals currently pull these packages.
+# Removal in 30 days.
+perl-core/Archive-Tar
+perl-core/CPAN-Meta
+perl-core/CPAN-Meta-Requirements
+perl-core/Data-Dumper
+perl-core/Digest
+perl-core/Digest-MD5
+perl-core/Digest-SHA
+perl-core/Dumpvalue
+perl-core/Encode
+perl-core/ExtUtils-Constant
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-07-17)
+# Obsolete virtual; package was removed from the Perl
+# core distribution. Please depend on dev-perl/Pod-Parser
+# instead. Removal in 30 days.
+virtual/perl-Pod-Parser
+
 # Hans de Graaff <graaff@gentoo.org> (2021-07-17)
 # Deprecated upstream, replaced with factory_bot.
 # Last release in 2017, no dependencies.
