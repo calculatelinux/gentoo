@@ -134,12 +134,9 @@ app-admin/rsyslog:uuid - Include UUIDs in messages (requires sys-apps/util-linux
 app-admin/rsyslog:xxhash - Enable xxHash support in fmhash module (requires dev-libs/xxhash)
 app-admin/rsyslog:zeromq - Build the ZeroMQ input and output modules (requires net-libs/czmq)
 app-admin/sagan:libdnet - Add support for dev-libs/libdnet
-app-admin/sagan:lognorm - Add support for log/rules normalizations via dev-libs/liblognorm
 app-admin/sagan:pcap - Add support for network packet capture via net-libs/libpcap
 app-admin/sagan:redis - Add support for the Redis database via dev-libs/hiredis
 app-admin/sagan:smtp - Build witch SMTP (E-Mail) support
-app-admin/sagan:snort - Add support to interact with Snort IDE using net-analyzer/snortsam
-app-admin/sagan-rules:lognorm - Install normalize rules support with dev-libs/liblognorm
 app-admin/salt:cheetah - Enable support for dev-python/cheetah3
 app-admin/salt:cherrypy - Enable support for using cherrypy.
 app-admin/salt:genshi - Enable support for dev-python/genshi
@@ -8256,7 +8253,6 @@ sys-fs/ntfs3g:ntfsprogs - Include internal version of ntfsprogs.
 sys-fs/quota:netlink - Compile daemon receiving quota messages via netlink
 sys-fs/quota:rpc - Enable quota interaction via RPC
 sys-fs/squashfs-tools-ng:tools - Build the gensquashfs, rdsquashfs, sqfs2tar, sqfsdiff, and tar2sqfs tools
-sys-fs/squashfs-tools-ng:xz - Enable support for XZ ("LZMA2") compression using app-arch/xz-utils
 sys-fs/udev:kmod - Enable kernel module loading/unloading support using sys-apps/kmod
 sys-fs/udisks:daemon - Build the system daemon, not just the client tool
 sys-fs/udisks:elogind - Use sys-auth/elogind for session tracking
