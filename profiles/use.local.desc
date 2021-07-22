@@ -4849,7 +4849,6 @@ media-tv/mythtv:vpx - Enable VP8/VP9 support for media-libs/libvpx
 media-tv/mythtv:wrapper - Use Ubuntu mythtfrontend wrapper
 media-tv/mythtv:x265 - Enable h265 encoding using x265
 media-tv/mythtv:xmltv - Support media-tv/xmltv TV listing - not used by Schedules Direct]
-media-tv/plex-media-server:system-openssl - Use system copy of dev-libs/openssl instead of the bundled one. Unsupported upstream.
 media-tv/tvheadend:capmt - Enable support for capmt (dvbapi) protocol
 media-tv/tvheadend:constcw - Enable support for the constcw protocol
 media-tv/tvheadend:cwc - Enable support for the cwc (newcamd) protocol
@@ -6570,6 +6569,7 @@ net-misc/quagga:pam - Add support for PAM (via sys-libs/pam) to the Quagga Virtu
 net-misc/quagga:protobuf - Enable support for dev-libs/protobuf
 net-misc/quagga:readline - Enable support for sys-libs/readline to provide the Quagga Virtual Terminal Interface Shell (vtysh)
 net-misc/quagga:tcp-zebra - Enable TCP zserv interface on port 2600 for Zebra/protocol-daemon communication. Unix domain sockets are chosen otherwise
+net-misc/r8168:use-firmware - Enable support for automatic firmware loading
 net-misc/rdesktop:kerberos - Enable CredSPP support + Kerberos authentication
 net-misc/rdesktop:pcsc-lite - Enable smartcard support with sys-apps/pcsc-lite driver
 net-misc/rdesktop:xrandr - Enable XRandR window extension support

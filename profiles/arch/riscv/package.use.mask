@@ -1,6 +1,10 @@
 # Copyright 2019-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Georgy Yakovlev <gyakovlev@gentoo.org> (2021-07-20)
+# sys-auth/sssd and it's deps not keyworded yet
+app-admin/sudo sssd
+
 # Alex Fan <alexfanqi@yahoo.com> (2021-07-20)
 # sci-libs/hdf5 fails tests with these 2 use flags enabled,
 # otherwise passes all tests
@@ -53,8 +57,8 @@ dev-util/ragel doc
 media-libs/allegro dumb openal
 #  - media-gfx/nvidia-texture-tools
 media-libs/devil nvtt
-#  - sys-cluster/ceph
-net-analyzer/rrdtool rados
+#  - sys-cluster/ceph, dev-ruby/rrdtool-bindings
+net-analyzer/rrdtool rados ruby
 #  - dev-util/aruba & dev-util/cucumber
 sys-block/thin-provisioning-tools test
 #  - sys-cluster/rdma-core | sys-fabric/ofed, sys-cluster/knem, sys-fabric/infinipath-psm, sys-fabric/librdmacm
