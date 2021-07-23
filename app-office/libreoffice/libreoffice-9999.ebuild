@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{8,9} )
+PYTHON_COMPAT=( python3_{8..10} )
 PYTHON_REQ_USE="threads(+),xml"
 
 MY_PV="${PV/_alpha/.alpha}"
@@ -213,7 +213,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 		dev-libs/glib:2
 		dev-libs/gobject-introspection
 		gnome-base/dconf
-		media-libs/mesa[egl]
+		media-libs/mesa[egl(+)]
 		x11-libs/gtk+:3[X]
 		x11-libs/pango
 	)
