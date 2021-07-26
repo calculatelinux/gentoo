@@ -1105,8 +1105,8 @@ app-text/pdfgrep:unac - Removing accents and ligatures before search
 app-text/pelican:markdown - Markdown support
 app-text/podofo:boost - Add support for boost
 app-text/podofo:tools - Build and install commandline tools.
+app-text/poppler:boost - Use boost::small_vector for a serious performance gain
 app-text/poppler:nss - Enable signatures handling with dev-libs/nss
-app-text/poppler:splash - Build the Splash graphics backend (requires dev-libs/boost)
 app-text/poppler:utils - Install command-line PDF converters and various utilities.
 app-text/qpdfview:fitz - Use experimental fitz rendering, provided by app-text/mupdf, instead of poppler
 app-text/qpdfview:synctex - Add support for searching TeX sources
@@ -1499,10 +1499,7 @@ dev-haskell/lens:benchmark-uniplate - Enable benchmarking against Neil Mitchell'
 dev-haskell/lens:dump-splices - Build and run the doctests test-suite.
 dev-haskell/lens:inlining - Generate inline pragmas when using template-haskell. This defaults to enabled, but you can to shut it off to benchmark the relative performance impact, or as last ditch effort to address compile errors resulting from the myriad versions of template-haskell that all purport to be 2.8.
 dev-haskell/lens:j - Attempt a parallel build with GHC 7.8.
-dev-haskell/lens:old-inline-pragmas - Some 7.6.1-rc1 users report their TH still uses old style inline pragmas. This lets them turn on inlining.
 dev-haskell/lens:safe - Disallow unsafeCoerce
-dev-haskell/lens:test-doctests - Build and run the doctests test-suite.
-dev-haskell/lens:test-templates - Build the test templates if we're building tests
 dev-haskell/lens:trustworthy - Assert that we are trustworthy when we can
 dev-haskell/libyaml:no-unicode - Don't enable unicode output. Instead, unicode characters will be escaped.
 dev-haskell/libyaml:system-libyaml - Use the system-wide libyaml instead of the bundled copy
@@ -2215,7 +2212,6 @@ dev-libs/tinyxml:stl - Compile with TIXML_USE_STL support
 dev-libs/tntnet:server - Enable tntnet server daemon
 dev-libs/totem-pl-parser:archive - Enables ISO detection with app-arch/libarchive
 dev-libs/totem-pl-parser:crypt - Support AmazonAMZ decoding with dev-libs/libgcrypt
-dev-libs/totem-pl-parser:quvi - Use media-libs/libquvi for parsing video links
 dev-libs/totem-pl-parser:uchardet - Enable charset discovery via app-i18n/uchardet
 dev-libs/userspace-rcu:regression-test - Run regression tests (requires FEATURES=test)
 dev-libs/weston:desktop - Enable the desktop shell
@@ -4050,9 +4046,6 @@ media-gfx/pstoedit:pptx - Enable support for generating PowerPoint pptx files
 media-gfx/qimgv:opencv - Enable HQ scaling via media-libs/opencv
 media-gfx/qimgv:video - Add support for gif/webm playback via libmpv
 media-gfx/shotwell:opencv - Enable face detection via media-libs/opencv
-media-gfx/ufraw:contrast - enable contrast setting option
-media-gfx/ufraw:fits - Enable support for the FITS image format through sci-libs/cfitsio
-media-gfx/ufraw:timezone - enable DST correction for file timestamps
 media-gfx/xpaint:pgf - Support for loading PGF images
 media-gfx/xsane:ocr - Enable support for Optical Character Recognition reader
 media-gfx/yafaray:fastmath - Enable mathematic approximations to make code faster
@@ -4222,7 +4215,6 @@ media-libs/libsdl2:joystick - Control joystick support (disable at your own risk
 media-libs/libsdl2:kms - Build the KMSDRM video driver
 media-libs/libsdl2:sndio - Enable support for the media-sound/sndio backend
 media-libs/libsdl2:sound - Control audio support (disable at your own risk)
-media-libs/libsdl2:tslib - Build with tslib support for touchscreen devices
 media-libs/libsdl2:video - Control video support (disable at your own risk)
 media-libs/libsdl2:vulkan - Enable Vulkan support
 media-libs/libtgvoip:dsp - Enable signal processing (echo cancellation, noise suppression, and automatic gain control)
@@ -5386,7 +5378,6 @@ net-analyzer/suricata:bpf - Enable support for eBPF (as well as XDP if supported
 net-analyzer/suricata:control-socket - Enable unix socket
 net-analyzer/suricata:cuda - Enable NVIDIA Cuda computations support
 net-analyzer/suricata:detection - Enable detection modules
-net-analyzer/suricata:logrotate - Install logrotate rule
 net-analyzer/suricata:lz4 - Enable support for compressed pcap logging using the LZ4 algorithm
 net-analyzer/suricata:nflog - Enable libnetfilter_log support
 net-analyzer/suricata:nfqueue - Enable NFQUEUE support for inline IDP
@@ -5998,7 +5989,6 @@ net-libs/ldns:gost - Enable GOST support
 net-libs/libbitcoinconsensus:asm - Enable assembly for optimization
 net-libs/libbitcoinconsensus:knots - Build enhanced Bitcoin Knots version, rather than Bitcoin Core
 net-libs/libbtbb:wireshark-plugins - Build the wireshark plugins for bluetooth baseband sniffing
-net-libs/libesmtp:ntlm - Enable support for NTLM authentication
 net-libs/libetpan:liblockfile - Enable support for liblockfile library
 net-libs/libetpan:lmdb - Use dev-db/lmdb as cache DB
 net-libs/libgsasl:gcrypt - Use dev-libs/libgcrypt for low-level crypto
@@ -8273,7 +8263,6 @@ sys-fs/zfs-auto-snapshot:cron - Install /etc/cron.* files
 sys-fs/zfs-auto-snapshot:default-exclude - Only take snapshots of datasets with com.sun:auto-snapshot=true property set
 sys-fs/zfs-kmod:rootfs - Install zfs-shutdown script to support exporting a pool containing rootfs
 sys-kernel/bliss-kernel-bin:initramfs - Build initramfs along with the kernel.
-sys-kernel/genkernel:cryptsetup - Enable support for Luks disk encryption using sys-fs/cryptsetup
 sys-kernel/genkernel:firmware - Prefer system firmware sys-kernel/linux-firmware over local copy.
 sys-kernel/gentoo-kernel:hardened - Use selection of hardening options recommended by Kernel Self Protection Project
 sys-kernel/gentoo-kernel:initramfs - Build initramfs along with the kernel.

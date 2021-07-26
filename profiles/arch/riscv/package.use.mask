@@ -1,8 +1,16 @@
 # Copyright 2019-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Alex Fan <alexfanqi@yahoo.com> (2021-07-22)
+# lack an ios device to test it
+kde-frameworks/solid ios
+
+# Alex Fan <alexfanqi@yahoo.com> (2021-07-22)
+# dependencies not keyworded/not tested
+dev-qt/qtnetwork networkmanager connman
+
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2021-07-20)
-# sys-auth/sssd and it's deps not keyworded yet
+# sys-auth/sssd and its deps not keyworded yet
 app-admin/sudo sssd
 
 # Alex Fan <alexfanqi@yahoo.com> (2021-07-20)
@@ -59,6 +67,8 @@ media-libs/allegro dumb openal
 media-libs/devil nvtt
 #  - sys-cluster/ceph, dev-ruby/rrdtool-bindings
 net-analyzer/rrdtool rados ruby
+#  - net-wireless/iwd, net-misc/ofono
+net-misc/connman iwd ofono
 #  - dev-util/aruba & dev-util/cucumber
 sys-block/thin-provisioning-tools test
 #  - sys-cluster/rdma-core | sys-fabric/ofed, sys-cluster/knem, sys-fabric/infinipath-psm, sys-fabric/librdmacm
