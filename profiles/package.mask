@@ -32,6 +32,33 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2021-08-01)
+# Broken with GCC 11, out of date, unmaintained in Gentoo.
+# bug #763651, bug #774009, bug #789027, bug #759988.
+# Removal on 2021-09-01.
+dev-util/intel-graphics-compiler
+dev-libs/intel-neo
+
+# Sam James <sam@gentoo.org> (2021-08-01)
+# Fails to compile, multiple open bugs.
+# No activity upstream since 2015.
+# bug #570484, bug #715412, bug #723204.
+# Removal on 2021-09-01.
+sys-apps/lmctfy
+
+# Sam James <sam@gentoo.org> (2021-08-01)
+# Fails to build with network-sandbox and variety
+# of other open bugs. Unmaintained.
+# bug #632638, bug #688530, bug #709992, bug #757768,
+# bug #796920. Removal on 2021-09-01.
+sys-apps/habitat
+
+# David Seifert <soap@gentoo.org> (2021-08-01)
+# Dropped into ::gentoo, then unmaintained. Multiple versions behind
+# upstream, GCC 11 bug open, lacks python 3.10, python library without
+# revdeps. Bug #790137, #792870, removal in 30 days.
+sci-libs/sktime
+
 # David Seifert <soap@gentoo.org> (2021-08-01)
 # Last release 10 years ago, EOL upstream, no other distro packages this
 # anymore, tons of bugs. Revdeps are unmaintained too and out of date.
@@ -68,7 +95,7 @@ dev-java/jgoodies-binding
 dev-java/jgoodies-forms
 
 # Joonas Niilola <juippis@gentoo.org> (2021-07-29)
-# Upstream provided migration instructions from 2. -> 3. update, 
+# Upstream provided migration instructions from 2. -> 3. update,
 # breaks if not all at least many revdeps. #805011 for tracker bug.
 >=net-libs/mbedtls-3.0.0
 
@@ -435,6 +462,7 @@ dev-java/jibx-tools
 # Davide Pesavento <pesa@gentoo.org> (2021-06-15)
 # Masked for revdep testing.
 >=dev-python/sip-6
+>=dev-python/PyQt5-5.15.5_pre
 
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-06-14)
 # DeprecatedDep jre-1.3, upstream dead,removal in 30 days
@@ -541,10 +569,9 @@ dev-java/werken-xpath
 =media-fonts/culmus-0.133-r1
 
 # Lars Wendler <polynomial-c@gentoo.org> (2021-03-22)
-# Has unidentified race condition on very fast CPUs that causes maintainer-
-# mode to be triggered.
-# Most likely caused by the following upstream commit:
-#   https://git.savannah.gnu.org/cgit/autoconf.git/commit/?id=aba75f6d4a9c875a9d5d90a07c6b3678db66a4bf
+# On fast CPUs eautoreconf skips intermediate steps,
+# enables maintainer-mode or fails automake assertions:
+# bug #782985
 sys-devel/autoconf:2.71
 
 # Sam James <sam@gentoo.org> (2021-03-03)
