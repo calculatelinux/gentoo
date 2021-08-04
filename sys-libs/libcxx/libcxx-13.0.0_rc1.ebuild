@@ -34,7 +34,7 @@ BDEPEND="
 
 DOCS=( CREDITS.TXT )
 
-LLVM_COMPONENTS=( libcxx{,abi} llvm/{cmake/modules,utils/llvm-lit} )
+LLVM_COMPONENTS=( libcxx{,abi} llvm/{cmake,utils/llvm-lit} )
 LLVM_PATCHSET=9999-1
 llvm.org_set_globals
 
@@ -142,6 +142,7 @@ multilib_src_configure() {
 		mycmakeargs+=(
 			-DLLVM_EXTERNAL_LIT="${EPREFIX}/usr/bin/lit"
 			-DLLVM_LIT_ARGS="$(get_lit_flags);--param=cxx_under_test=${clang_path}"
+			-DLIBCXX_LINK_TESTS_WITH_SHARED_LIBCXXABI=ON
 			-DPython3_EXECUTABLE="${PYTHON}"
 		)
 	fi
