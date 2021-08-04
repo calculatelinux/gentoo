@@ -32,6 +32,33 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2021-08-04)
+# Last release over 4 years ago, upstream pretty much dead, the
+# ecosystem has switched to dev-util/pkgconf, which is alive. Testing
+# and prefix bugs, blocks WANT_AUTOMAKE=1.12 removal.
+# Bug #245228, #632124, #691268, #767853, removal in 30 days.
+dev-util/pkgconfig
+
+# David Seifert <soap@gentoo.org> (2021-08-04)
+# Last release 11 years ago, XDG env issue, no revdeps, blocks
+# WANT_AUTOMAKE=1.11 removal, last major distro to package this.
+# Bug #586586, removal in 30 days.
+media-libs/memphis
+
+# David Seifert <soap@gentoo.org> (2021-08-04)
+# Last release 16 years ago, multiple build failures, unmaintained,
+# upstream disappeared, last distro that still packages this.
+# Bug #722376, #742938, #742941, removal in 30 days.
+app-i18n/libtabe
+app-i18n/xcin
+
+# David Seifert <soap@gentoo.org> (2021-08-04)
+# Last release 7 years ago, multiple test failures, unmaintained,
+# last distro that still packages this.
+# Bug #629610, #646690, removal in 30 days.
+dev-libs/hyperleveldb
+dev-libs/replicant
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2021-08-02)
 # Two years after the tracker was opened it is time to mask dev-qt/qtwebkit
 # for good. No commits to upstream repository for >9 months, latest available
@@ -155,7 +182,6 @@ sci-electronics/drawtiming
 # Only one reverse dependency (media-libs/openexr_ctl) which
 # is uninstallable.
 # Removal on 2021-08-25. bug #789792, bug #715298.
-media-libs/ctl
 media-libs/openexr_ctl
 
 # Michał Górny <mgorny@gentoo.org> (2021-07-25)
