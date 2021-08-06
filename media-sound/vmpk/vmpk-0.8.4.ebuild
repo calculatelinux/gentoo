@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/vmpk/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="dbus"
 
 BDEPEND="
@@ -25,7 +25,7 @@ DEPEND="
 	dev-qt/qtnetwork:5
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
-	>=media-sound/drumstick-2.3
+	media-sound/drumstick
 	x11-libs/libxcb
 	dbus? ( dev-qt/qtdbus:5 )
 "
