@@ -13,7 +13,7 @@ S="${WORKDIR}/sentry-python-${PV}"
 
 LICENSE="PSF-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 arm arm64 ~ppc ~ppc64 ~sparc x86"
 
 RDEPEND="
 	dev-python/urllib3[${PYTHON_USEDEP}]
@@ -35,6 +35,7 @@ BDEPEND="
 		dev-python/pytest-forked[${PYTHON_USEDEP}]
 		dev-python/pytest-localserver[${PYTHON_USEDEP}]
 		dev-python/werkzeug[${PYTHON_USEDEP}]
+		dev-python/zope-event[${PYTHON_USEDEP}]
 	)
 "
 

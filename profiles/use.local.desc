@@ -857,6 +857,7 @@ app-misc/lcdproc:nfs - Display NFS filesystem stats in the lcdproc client.
 app-misc/lcdproc:png - Enable support for media-libs/libpng in the glcd driver.
 app-misc/lcdproc:samba - Display SMBFS filesystem stats in the lcdproc client.
 app-misc/lcdproc:test-menu - Enable test menu support for the lcdproc server.
+app-misc/libdatovka:openssl - Use openssl backend
 app-misc/lirc:audio - Support using an audio device connected to an IR receiver
 app-misc/lirc:devinput - Support the devinput input device
 app-misc/lirc:ftdi - Support FTDI devices
@@ -3206,6 +3207,7 @@ games-sports/xmoto:double-precision - more precise calculations at the expense o
 games-strategy/0ad:editor - Include Atlas scenario editor projects
 games-strategy/0ad:lobby - Enable the use of net-libs/gloox and the multiplayer lobby
 games-strategy/0ad:nvtt - Support for some uncompressed data formats via media-gfx/nvidia-texture-tools (might be needed for some mods)
+games-strategy/augustus:uncapped - Uncap grand temple count
 games-strategy/colobot:devbuild - TODO
 games-strategy/colobot:tools - Build tools
 games-strategy/colobot-data:music - Enable music support
@@ -4735,6 +4737,7 @@ media-sound/qtractor:aubio - Enable media-libs/aubio support
 media-sound/qtractor:dssi - Enable support for DSSI Soft Synth Interface
 media-sound/qtractor:rubberband - Enable support for in-place audio clip pitch-shifting through the rubberband library
 media-sound/rhythmbox:daap - Build the local network music sharing plugin which uses the DAAP protocol using net-libs/libdmapsharing
+media-sound/scream:pcap - Support sniffing packets from network using net-libs/libpcap
 media-sound/shntool:alac - Add support for Apple Lossless Audio Codec files
 media-sound/shntool:mac - Add support for Monkey's Audio files
 media-sound/shntool:shorten - Add support for the shorten audio compressor
@@ -6741,14 +6744,17 @@ net-p2p/mldonkey:fasttrack - enable fasttrack support
 net-p2p/mldonkey:gnutella - enable gnutella and gnutella2 support
 net-p2p/mldonkey:guionly - enable client build only
 net-p2p/qbittorrent:webui - Enable the Web UI
-net-p2p/retroshare:cli - Enables the CLI version of RetroShare
+net-p2p/retroshare:autologin - Enables potentially insecure autologin capability via app-crypt/libsecret
+net-p2p/retroshare:cli - Enables terminal login support for retroshare-service
 net-p2p/retroshare:control-socket - Enables API via Unix socket support
-net-p2p/retroshare:gnome-keyring - Enables potentially insecure autologin capability via Gnome Keyring
+net-p2p/retroshare:gnome-keyring - Enables potentially insecure autologin capability via gnome-base/gnome-keyring
 net-p2p/retroshare:jsonapi - Enables the new RetroShare JSON API
-net-p2p/retroshare:service - Enables the new RetroShare service controllable only through JSON API
+net-p2p/retroshare:libupnp - Enables UPnP port forwarding via net-libs/libupnp
+net-p2p/retroshare:miniupnp - Enables UPnP port forwarding via net-libs/miniupnpc
+net-p2p/retroshare:service - Enables the new RetroShare service
 net-p2p/retroshare:sqlcipher - Enables GXS database encryption via SQLCipher
 net-p2p/retroshare:webui - Enables Web interface and API support
-net-p2p/retroshare:xapian - Enables GXS content indexing and search through Xapian
+net-p2p/retroshare:xapian - Enables GXS content indexing and search via dev-libs/xapian
 net-p2p/rtorrent:daemon - Uses app-misc/screen to daemonize this application
 net-p2p/syncthing:tools - Install stdiscosrv, strelaysrv and other tools to /usr/libexec/syncthing/.
 net-p2p/transmission:lightweight - Optimize transmission for low-resource systems (smaller cache size, prefer unencrypted peer connections, etc.)
@@ -7445,7 +7451,6 @@ sci-mathematics/cvc4:statistics - Include statistics
 sci-mathematics/eclib:boost - Add parallel capabilities using dev-libs/boost.
 sci-mathematics/eclib:flint - Enable the use of sci-mathematics/flint for certain operations.
 sci-mathematics/eclib:minimal - Build only the "mwrank" program.
-sci-mathematics/flint:gc - Enable garbage collection support via dev-libs/boehm-gc
 sci-mathematics/flint:ntl - Build NTL interface
 sci-mathematics/form:devref - Build and install developers reference
 sci-mathematics/form:doxygen - Build and install API documentation
@@ -7895,6 +7900,8 @@ sys-auth/pambase:sha512 - Switch Linux-PAM's pam_unix module to use sha512 for p
 sys-auth/pambase:systemd - Use pam_systemd module to register user sessions in the systemd control group hierarchy.
 sys-auth/polkit:elogind - Use sys-auth/elogind for session tracking
 sys-auth/polkit:systemd - Use sys-apps/systemd for session tracking
+sys-auth/seatd:builtin - Enable embedded server in libseat
+sys-auth/seatd:server - Enable standalone seatd server
 sys-auth/ssh-ldap-pubkey:schema - Install a copy of the LPK schema, only needed on LDAP servers.
 sys-auth/sssd:acl - Build and use the cifsidmap plugin
 sys-auth/sssd:locator - Install sssd's Kerberos plugin

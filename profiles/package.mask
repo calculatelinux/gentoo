@@ -32,6 +32,24 @@
 
 #--- END OF EXAMPLES ---
 
+# Louis Sautier <sbraz@gentoo.org> (2021-08-07)
+# No reverse dependencies, no upstream activity for more than 5 years,
+# failing tests with Python 3.10. Removal on 2021-09-06.
+dev-python/pydiff
+
+# Stephan Hartmann <sultan@gentoo.org> (2021-08-06)
+# Dev channel releases are only for people who
+# are developers or want more experimental features
+# and accept a more unstable release.
+>=www-client/chromium-94
+
+# Ulrich Müller <ulm@gentoo.org> (2021-08-06)
+# Masked for removal in 30 days. Upstream has joined the
+# manpages-l10n project, so 5.06 was their ultimate release
+# as a separate package. Use app-i18n/man-pages-l10n[l10n_it]
+# as replacement. Bug #769017.
+app-i18n/man-pages-it
+
 # David Seifert <soap@gentoo.org> (2021-08-05)
 # Dead upstream, last release over 5 years ago, multiple
 # build issues, fails to build with GCC 11. Use something like

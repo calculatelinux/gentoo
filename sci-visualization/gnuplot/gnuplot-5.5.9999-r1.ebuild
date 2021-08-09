@@ -28,7 +28,9 @@ S="${WORKDIR}/${MY_P}"
 LICENSE="gnuplot"
 SLOT="0"
 IUSE="aqua bitmap cairo doc examples +gd ggi latex libcaca libcerf lua qt5 readline regis wxwidgets X"
-REQUIRED_USE="lua? ( ${LUA_REQUIRED_USE} )"
+REQUIRED_USE="
+	doc? ( gd )
+	lua? ( ${LUA_REQUIRED_USE} )"
 
 RDEPEND="
 	cairo? (
@@ -67,6 +69,7 @@ BDEPEND="
 		virtual/latex-base
 		dev-texlive/texlive-latexextra
 		dev-texlive/texlive-langgreek
+		dev-texlive/texlive-mathscience
 		app-text/ghostscript-gpl )
 	qt5? ( dev-qt/linguist-tools:5 )"
 

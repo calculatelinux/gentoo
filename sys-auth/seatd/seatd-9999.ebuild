@@ -1,4 +1,4 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -16,7 +16,7 @@ else
 fi
 LICENSE="MIT"
 SLOT="0/1"
-IUSE="elogind systemd"
+IUSE="builtin elogind +server systemd"
 REQUIRED_USE="?? ( elogind systemd )"
 
 DEPEND="
@@ -30,6 +30,8 @@ src_configure() {
 	local emesonargs=(
 		-Dman-pages=enabled
 		-Dwerror=false
+		$(meson_feature builtin libseat-builtin)
+		$(meson_feature server)
 	)
 
 	if use elogind || use systemd; then
@@ -43,6 +45,9 @@ src_configure() {
 
 src_install() {
 	meson_src_install
-	newinitd "${FILESDIR}/seatd.initd" seatd
-	systemd_dounit contrib/systemd/seatd.service
+
+	if use server; then
+		newinitd "${FILESDIR}/seatd.initd" seatd
+		systemd_dounit contrib/systemd/seatd.service
+	fi
 }
