@@ -56,12 +56,12 @@ BDEPEND="
 		media-gfx/transfig
 	)"
 
-PATCHES=(
-	"${FILESDIR}"/${PN}-0.7.2_p20210722-skipped-tests.patch
-)
-
 src_prepare() {
 	default
+
+	# These seem to fail at high precision and shouldn't affect normal use.
+	# quat/simd: may fail with -mavx, sebvf: random? (likely hardware related)
+	sed -i '/test-\(quat\|simd\|sebvf\)/d' libs/util/test/Makemodule.am || die
 
 	echo ${PV} > .tarball-version || die
 	eautoreconf
@@ -90,6 +90,7 @@ src_configure() {
 		$(use_with client x)
 		--disable-Werror
 		--disable-dga
+		--disable-simd # all this does is append -mavx2 and similar
 		--enable-xdg
 		# non-x11 clients are mostly abandoned/broken (SDL1 still useful for pulseaudio)
 		--with-clients=$(usev client x11)
