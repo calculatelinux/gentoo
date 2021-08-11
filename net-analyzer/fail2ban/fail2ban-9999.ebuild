@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{7,8,9} )
+PYTHON_COMPAT=( python3_{8,9} )
 DISTUTILS_SINGLE_IMPL=1
 
 inherit bash-completion-r1 distutils-r1 systemd tmpfiles
@@ -37,6 +37,10 @@ RDEPEND="
 "
 
 DOCS=( ChangeLog DEVELOP README.md THANKS TODO doc/run-rootless.txt )
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-0.11.2-adjust-apache-logs-paths.patch
+)
 
 python_prepare_all() {
 	# Replace /var/run with /run, but not in the top source directory

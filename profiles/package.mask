@@ -32,6 +32,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-08-10)
+# EAPI-5, dead, unused; last consumer dropped in bug #352952
+# Removal on 2021-09-09.
+net-print/libgnomecups
+
 # Joshua Kinard <kumba@gentoo.org> (2021-08-09)
 # Dead upstream and has build issues in modern times.
 # See bugs #551786 and #715846.  Removal in 30 days.
@@ -322,7 +327,6 @@ perl-core/Digest
 perl-core/Digest-MD5
 perl-core/Digest-SHA
 perl-core/Dumpvalue
-perl-core/Encode
 perl-core/ExtUtils-Constant
 
 # Hans de Graaff <graaff@gentoo.org> (2021-07-17)
@@ -358,11 +362,6 @@ dev-ruby/spork
 # Dead upstream, unfixed security issue.
 # Removal on 2021-08-13.  Bugs #755896, #781467.
 net-proxy/polipo
-
-# Marek Szuba <marecki@gentoo.org> (2021-07-14)
-# New, considerably refactored major version with a new build system.
-# Masked for further testing.
->=sci-libs/pastix-6.0.0
 
 # Marco Scardovi <marco@scardovi.vom> (2021-07-13)
 # These packages were only ported for netbox. Not useful for anything else
@@ -427,16 +426,6 @@ dev-ruby/compass-import-once
 dev-lang/ruby:2.5
 =dev-ruby/rubygems-2.7*
 dev-ruby/did_you_mean:2.5
-
-# Pacho Ramos <pacho@gentoo.org> (2021-07-08)
-# Doesn't support Gnome 40, use gnome-shell-extension-desktop-icons-ng
-# instead. Removal in 30 days.
-gnome-extra/gnome-shell-extension-desktop-icons
-
-# Pacho Ramos <pacho@gentoo.org> (2021-07-08)
-# Doesn't support Gnome 40, use gnome-shell-extension-appindicator instead
-# (also supports legacy tray icons). Removal in 30 days.
-gnome-extra/gnome-shell-extensions-topicons-plus
 
 # Hans de Graaff <graaff@gentoo.org> (2021-07-07)
 # Security bug CVE-2015-9284, bug 761960. Use slot 2 instead.
@@ -607,12 +596,6 @@ media-sound/loudness-scanner
 # Lars Wendler <polynomial-c@gentoo.org> (2021-02-15)
 # Mask development versions now that they were bumped...
 =net-misc/kea-1.9*
-
-# Marek Szuba <marecki@gentoo.org> (2021-01-21)
-# Masked for testing and further work - the golang-vcs-snapshot variant
-# seems to be incompatible with revdeps using go-module, the variant
-# using the latter is still broken.
-dev-go/qt
 
 # Michał Górny <mgorny@gentoo.org> (2020-11-10)
 # This old Kodi version requires vulnerable dev-python/pillow

@@ -8,12 +8,10 @@
 dev-python/ipython qt5
 
 # Alex Fan <alexfanqi@yahoo.com> (2021-08-08)
-# portaudio & pulseaudio are not tested yet
+# portaudio is not tested yet
 app-accessibility/espeak portaudio
-
-# Alex Fan <alexfanqi@yahoo.com> (2021-08-08)
-# portaudio & pulseaudio are not tested yet
-media-libs/openal portaudio pulseaudio
+media-libs/openal portaudio
+media-sound/mpg123 portaudio
 
 # Alex Fan <alexfanqi@yahoo.com> (2021-08-05)
 # pdfannotextractor depends on java, not (sustainably) supported yet
@@ -23,16 +21,12 @@ app-text/texlive pdfannotextractor
 # Boost.Context can be built on riscv
 dev-libs/boost -context
 
-# Ye Cao <ye.c@rioslab.org> (2021-07-31)
-# Dependencies not keyworded, not tested
-dev-util/perf unwind
-
 # Marek Szuba <marecki@gentoo.org> (2021-07-28)
 # app-cdr/cdrtools fails to compile on riscv
 dev-util/catalyst iso
 
 # Marek Szuba <marecki@gentoo.org> (2021-07-27)
-# dev-libs/boxfort does not support riscv64 yet, meaning
+# dev-libs/boxfort does not support riscv yet, meaning
 # dev-libs/criterion cannot be keyworded here
 app-admin/syslog-ng test
 
@@ -44,10 +38,6 @@ dev-python/pymongo test
 # Alex Fan <alexfanqi@yahoo.com> (2021-07-22)
 # lack an ios device to test it
 kde-frameworks/solid ios
-
-# Alex Fan <alexfanqi@yahoo.com> (2021-07-22)
-# dependencies not keyworded/not tested
-dev-qt/qtnetwork networkmanager
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2021-07-20)
 # sys-auth/sssd and its deps not keyworded yet
@@ -91,12 +81,16 @@ dev-python/ipython nbconvert notebook
 
 # Marek Szuba <marecki@gentoo.org> (2021-07-05)
 # Dependencies not keyworded here yet:
-#  - gnome-base/gconf, dev-libs/libotf & dev-libs/m17n-lib
-app-editors/emacs gconf m17n-lib
 #  - net-fs/openafs
 app-crypt/heimdal afs
+#  - gnome-base/gconf, dev-libs/libotf & dev-libs/m17n-lib
+app-editors/emacs gconf m17n-lib
+#  - media-libs/portaudio, dev-embedded/libftdi, app-misc/inputlircd
+app-misc/lirc audio ftdi inputlirc
 #  - app-xemacs/ruby-modes (and by extension xemacs itself)
 dev-lang/ruby xemacs
+#  - media-libs/libcddb
+dev-libs/libcdio cddb
 #  - dev-ruby/asciidoctor
 dev-libs/nanomsg doc
 #  - sci-libs/gdal
@@ -105,17 +99,25 @@ dev-python/networkx extras
 dev-util/ragel doc
 #  - Qt5 & KDE
 dev-vcs/subversion kwallet
-#  - media-libs/dumb, media-libs/openal
-media-libs/allegro dumb openal
+#  - media-sound/pavucontrol-qt
+lxqt-base/lxqt-panel pulseaudio
+#  - media-libs/dumb
+media-libs/allegro dumb
 #  - media-gfx/nvidia-texture-tools
 media-libs/devil nvtt
-#  - media-libs/libcddb
-dev-libs/libcdio cddb
-#  - sys-cluster/ceph, dev-ruby/rrdtool-bindings
-net-analyzer/rrdtool rados ruby
+#  - dev-lang/php
+media-libs/libvpx doc
+#  - bluetooth, net-misc/ofono
+media-sound/pulseaudio native-headset ofono-headset
+#  - maaaaaany
+media-video/ffmpeg amrenc bluray bs2b cdio chromaprint codec2 fdk frei0r gme iec61883 ieee1394 kvazaar libaribb24 libilbc libsoxr libtesseract lv2 openh264 rubberband sdl speex srt vidstab xvid zimg zvbi
+#  - media-libs/libquicktime, media-libs/sdl-gfx
+media-video/mjpegtools quicktime sdlgfx
+#  - sys-cluster/ceph
+net-analyzer/rrdtool rados
 #  - net-wireless/iwd, net-misc/ofono
 net-misc/connman iwd ofono
-#  - dev-util/aruba & dev-util/cucumber
+#  - dev-util/aruba
 sys-block/thin-provisioning-tools test
 #  - sys-cluster/knem, sys-fabric/infinipath-psm
 sys-cluster/openmpi openmpi_fabrics_knem openmpi_fabrics_psm
@@ -126,30 +128,26 @@ sys-cluster/slurm ofed slurmdbd
 # Dependencies not keyworded, not tested
 dev-libs/libdbusmenu test
 virtual/notification-daemon gnome kde
-media-libs/libsdl nas pulseaudio
-media-libs/libsdl2 nas pulseaudio
 media-libs/libcaca doc imlib
 dev-libs/libbytesize test
 sys-libs/libblockdev dmraid escrow
-app-misc/geoclue modemmanager
 gnome-base/gvfs bluray cdda mtp ios
 sys-power/upower ios
 net-libs/gnome-online-accounts gnome
-net-libs/webkit-gtk gstreamer
 xfce-base/xfce4-settings libcanberra
-xfce-extra/tumbler epub ffmpeg gstreamer odf pdf raw
-xfce-extra/xfce4-power-manager networkmanager
+xfce-extra/tumbler epub ffmpeg odf pdf raw
 xfce-base/xfce4-meta pulseaudio
 # KDE not tested, so mask
 sys-auth/polkit kde
 
-# Ye Cao <ye.c@rioslab.org> (2021-06-26)
+# Ye Cao <ye.c@rioslab.org> (2021-07-31)
 # Piotr Karbowski <slashbeast@gentoo.org> (2021-06-22)
 # Yixun Lan <dlan@gentoo.org> (2021-05-21)
 # Mikle Kolyada <zlogene@gentoo.org> (2020-12-03)
 # Göktürk Yüksek <gokturk@gentoo.org> (2019-10-10)
 #   sys-libs/libunwind do not support riscv
 dev-libs/efl unwind
+dev-util/perf unwind
 dev-util/strace unwind
 media-libs/gstreamer unwind
 media-libs/mesa unwind
@@ -158,22 +156,20 @@ net-mail/dovecot unwind
 x11-base/xorg-server unwind
 x11-base/xwayland unwind
 
+# Alex Fan <alexfanqi@yahoo.com> (2021-07-22)
+# Yixun Lan <dlan@gentoo.org> (2021-05-24)
+# net-misc/networkmanager fails tests on this arch (Bug #807553)
+dev-qt/qtnetwork networkmanager
+net-libs/libproxy networkmanager
+xfce-extra/xfce4-power-manager networkmanager
+
 # Yixun Lan <dlan@gentoo.org> (2021-05-19)
 # Dependencies not keyworded, not tested
-net-libs/libproxy spidermonkey kde networkmanager
-
-# Sam James <sam@gentoo.org> (2021-03-11)
-# Yixun Lan <dlan@gentoo.org> (2021-07-27)
-# media-libs/libheif isn't keyworded here
-media-libs/gd heif
+net-libs/libproxy spidermonkey kde
 
 # Joonas Niilola <juippis@gentoo.org> (2021-01-15)
 # Dependency not keyworded on this arch.
 app-text/enchant voikko
-
-# Patrick McLean <chutzpah@gentoo.org> (2020-04-16)
-# dev-python/breathe not keyworded here
-dev-libs/libcbor doc
 
 # This doesn't work for (any) riscv yet.
 dev-libs/libpcre2 jit

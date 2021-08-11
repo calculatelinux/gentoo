@@ -3368,7 +3368,6 @@ gui-wm/hikari:screencopy - add support for screen grabbing
 gui-wm/hikari:virtual-io - enable virtual input/output support, needed for remote I/O in VNC
 gui-wm/sway:X - Enable support for X11 applications (XWayland)
 gui-wm/sway:elogind - Enable support for rootless session via elogind
-gui-wm/sway:fish-completion - Enable fish completion support
 gui-wm/sway:seatd - Enable support for rootless session via sys-auth/seatd
 gui-wm/sway:swaybar - Install 'swaybar': sway's status bar component
 gui-wm/sway:swaybg - Install 'swaybg': allows to set a desktop background image
@@ -4212,6 +4211,7 @@ media-libs/libsdl2:haptic - Enable the haptic (force feedback) subsystem
 media-libs/libsdl2:ibus - Enable support for app-i18n/ibus
 media-libs/libsdl2:joystick - Control joystick support (disable at your own risk)
 media-libs/libsdl2:kms - Build the KMSDRM video driver
+media-libs/libsdl2:pipewire - Enable support for the media-video/pipewire audio backend
 media-libs/libsdl2:sndio - Enable support for the media-sound/sndio backend
 media-libs/libsdl2:sound - Control audio support (disable at your own risk)
 media-libs/libsdl2:video - Control video support (disable at your own risk)
@@ -4863,15 +4863,12 @@ media-tv/xmltv:ar - Argentina tv listing grabber
 media-tv/xmltv:ch-search - Grabber for Switzerland
 media-tv/xmltv:dk - Denmark tv listing grabber
 media-tv/xmltv:dtvla - Latin America digital tv listing grabber
-media-tv/xmltv:es-laguiatv - Spain alternative grabber
 media-tv/xmltv:eu-dotmedia - Grabber for Europe (xmltv.se / dotmedia)
-media-tv/xmltv:eu-epg - EPG grabber for some European countries.
 media-tv/xmltv:eu-epgdata - include fanart URLs for some European countries.
 media-tv/xmltv:eu-xmltvse - Grabbber for Europe [replaces eu-dotmedia and se-tvzon]
 media-tv/xmltv:fi - Finland tv listing grabber (0.6.1 add ampparit telsu)
 media-tv/xmltv:fi-sv - Grabber for Finland (Swedish)
 media-tv/xmltv:fr - France tv listing grabber
-media-tv/xmltv:fr-kazer - France (Kazer) tv listing grabber
 media-tv/xmltv:huro - Hungarian tv listing grabber
 media-tv/xmltv:il - Israel tv listing grabber
 media-tv/xmltv:is - Iceland tv listing grabber
@@ -4879,8 +4876,6 @@ media-tv/xmltv:it - Italy tv listing grabber (RUV)
 media-tv/xmltv:na-dd - North America tv listing grabber
 media-tv/xmltv:na-dtv - North America Direct TV grabber
 media-tv/xmltv:na-tvmedia - Grabber for North America (TVMedia)
-media-tv/xmltv:nl - Netherlands tv listing grabber [REMOVED 0.6.1]
-media-tv/xmltv:no-gf - Norway Gfeed tv listing grabber
 media-tv/xmltv:pt-meo - Grabber for Portugal (MEO)
 media-tv/xmltv:pt-vodafone - Grabber for Portugal (Vodafone)
 media-tv/xmltv:se-swedb - Sweden tv listing grabber
