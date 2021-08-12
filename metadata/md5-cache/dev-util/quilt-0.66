@@ -1,6 +1,6 @@
 DEFINED_PHASES=configure install prepare setup
 DESCRIPTION=quilt patch manager
-EAPI=6
+EAPI=8
 HOMEPAGE=https://savannah.nongnu.org/projects/quilt
 IUSE=emacs graphviz elibc_Darwin elibc_SunOS
 KEYWORDS=amd64 arm ~mips ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-solaris
@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=https://savannah.nongnu.org/download/quilt/quilt-0.66.tar.gz
 _eclasses_=bash-completion-r1	d3a60385655d9b402be765a6de333245	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
-_md5_=076fc8cb770925674502b5d35f389299
+_md5_=1d4ebfb6d62063c681c7d177c1a83ad5

@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI=7
 
 if [[ ${PV} == "9999" ]] ; then
 	_GIT=git-r3
@@ -23,6 +23,8 @@ IUSE="systemd"
 DEPEND="sys-apps/texinfo"
 RDEPEND=""
 
+PATCHES=( "${FILESDIR}/${P}-cve-2020-36420.patch" )
+
 pkg_setup() {
 	enewgroup ${PN}
 	enewuser ${PN} -1 -1 /var/cache/${PN} ${PN}
@@ -43,8 +45,7 @@ src_install() {
 		exeinto /etc/cron.weekly ; newexe "${FILESDIR}/${PN}.crond-2" ${PN}
 	fi
 
-	dodoc CHANGES README
-	dohtml html/*
+	dodoc -r CHANGES README html
 }
 
 pkg_postinst() {

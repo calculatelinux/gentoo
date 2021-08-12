@@ -1,6 +1,19 @@
 # Copyright 2019-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Marek Szuba <marecki@gentoo.org> (2021-08-11)
+# dev-ruby/httpclient not keyworded here due to failing tests
+# (Bug #807727). That said, with httpclient-2.8.3 installed manually
+# (and without testing) all webmock-3.13.0 tests passed.
+dev-ruby/webmock test
+# Currently requires dev-lang/spidermonkey:68, which explicitly
+# does not support riscv. Hopefully temporary, see Bug #807772.
+net-libs/libproxy spidermonkey
+
+# Alex Fan <alexfanqi@yahoo.com> (2021-08-12)
+# lua requires specifically luajit for gimp
+media-gfx/gimp lua unwind
+
 # Alex Fan <alexfanqi@yahoo.com> (2021-08-09)
 # ipython[qt5] depends on qtconsole, which depends on QtPy.
 # QtPy cannot be tested atm because QtPy[test] has a hard
@@ -134,6 +147,7 @@ sys-libs/libblockdev dmraid escrow
 gnome-base/gvfs bluray cdda mtp ios
 sys-power/upower ios
 net-libs/gnome-online-accounts gnome
+net-libs/libproxy kde
 xfce-base/xfce4-settings libcanberra
 xfce-extra/tumbler epub ffmpeg odf pdf raw
 xfce-base/xfce4-meta pulseaudio
@@ -163,10 +177,6 @@ dev-qt/qtnetwork networkmanager
 net-libs/libproxy networkmanager
 xfce-extra/xfce4-power-manager networkmanager
 
-# Yixun Lan <dlan@gentoo.org> (2021-05-19)
-# Dependencies not keyworded, not tested
-net-libs/libproxy spidermonkey kde
-
 # Joonas Niilola <juippis@gentoo.org> (2021-01-15)
 # Dependency not keyworded on this arch.
 app-text/enchant voikko
@@ -177,7 +187,9 @@ dev-libs/libpcre jit
 <dev-vcs/git-2.31.0 pcre-jit
 www-servers/nginx pcre-jit
 
-# app-shells/fish not keyworded due to failing tests
+# app-shells/fish not keyworded due to failing tests (Bug #807742).
+# That said, with fish-3.3.1-r1 installed manually (and without testing)
+# all argcomplete-1.12.3 tests passed.
 dev-python/argcomplete test
 
 # Several dependencies not keyworded due to failing tests.
