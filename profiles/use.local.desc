@@ -5791,6 +5791,7 @@ net-im/teams:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of b
 net-im/teams:system-mesa - Use the system-wide media-libs/mesa instead of bundled.
 net-im/telegram-desktop:enchant - Enable the app-text/aspell spell-checking backend
 net-im/telegram-desktop:hunspell - Enable the app-text/hunspell spell-checking backend
+net-im/telegram-desktop:screencast - Enable support for remote desktop and screen cast using media-video/pipewire
 net-im/telepathy-connection-managers:gadu - Enable Gadu Gadu protocol support.
 net-im/telepathy-connection-managers:icq - Enable ICQ IM protocol support.
 net-im/telepathy-connection-managers:irc - Enable Internet Relay Chat (IRC) support.
@@ -6926,6 +6927,8 @@ net-wireless/bluez:test-programs - Install tools for testing of various Bluetoot
 net-wireless/bluez:user-session - Allow compatibility with user-session semantics for session bus under systemd
 net-wireless/crda:gcrypt - Use libgcrypt instead of openssl for key checking
 net-wireless/dump1090:bladerf - Build with Nuand BladeRF support
+net-wireless/dump1090:hackrf - Build with Great Scott Gadgets HackRF support
+net-wireless/dump1090:minimal - Exclude all HTML/webserver extras for a tiny build, e.g. to export data only
 net-wireless/dump1090:rtlsdr - Build with Realtek RTL2832U (rtlsdr) support
 net-wireless/gnuradio:analog - enable analog signal processing blocks
 net-wireless/gnuradio:audio - enable blocks to connect to audio sources (mic-in) and sinks (speaker-out) ports on a computer
