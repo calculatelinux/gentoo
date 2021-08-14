@@ -5,7 +5,7 @@ EAPI=7
 
 LUA_COMPAT=( lua5-1 luajit )
 
-inherit cmake lua-single systemd xdg
+inherit cmake flag-o-matic lua-single systemd xdg
 
 DESCRIPTION="A free open-source voxel game engine with easy modding and game creation"
 HOMEPAGE="https://www.minetest.net"
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1+ CC-BY-SA-3.0 OFL-1.1 Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~riscv ~x86"
 IUSE="+client +curl doc +leveldb ncurses nls postgres prometheus redis +server +sound spatial test +truetype"
 REQUIRED_USE="
 	${LUA_REQUIRED_USE}
@@ -72,6 +72,9 @@ src_prepare() {
 
 	# remove bundled libraries
 	rm -rf lib || die
+
+	# To avoid TEXTRELs on riscv
+	append-flags -fPIC
 }
 
 src_configure() {

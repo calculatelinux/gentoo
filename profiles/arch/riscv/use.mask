@@ -7,10 +7,6 @@
 # Unmask systemd
 -systemd
 
-# James Le Cuirot <chewi@gentoo.org> (2021-08-10)
-# media-video/pipewire is not keyworded. Bug #807616.
-pipewire
-
 # Yixun Lan <dlan@gentoo.org> (2021-05-19)
 # Unmask for more testing
 -elogind
@@ -20,10 +16,8 @@ pipewire
 -introspection
 
 # Marek Szuba <marecki@gentoo.org> (2021-07-05)
-# dev-lang/lua:5.2 and dev-lang/luajit known not to work here
-lua_single_target_lua5-2
+# dev-lang/luajit does not support this arch
 lua_single_target_luajit
-lua_targets_lua5-2
 lua_targets_luajit
 
 # Sergei Trofimovich <slyfox@gentoo.org> (2019-11-27)
@@ -33,18 +27,12 @@ valgrind
 # Not tested yet
 bluetooth
 emacs
-fuse
 jack
 java
-latex
-libedit
 mono
 motif
 opencl
 rsh
-slang
-sound
-webkit
 
 # Mattéo Rossillol‑‑Laruelle <beatussum@protonmail.com> (2019‑08‑31)
 # Dependencies not keyworded.

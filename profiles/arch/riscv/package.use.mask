@@ -1,6 +1,15 @@
 # Copyright 2019-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Marek Szuba <marecki@gentoo.org> (2021-08-14)
+# virtual/mysql & co. round-up:
+#  dev-db/mariadb fails tests here, see Bug #807995
+#  dev-db/mysql and dev-db/percona-server do not support this arch
+#  dev-db/mariadb-galera has been absent from the tree since June 2019
+#  dev-db/mysql-cluster not tested yet, seriously outdated in the tree
+sci-libs/gdal mysql
+sys-cluster/slurm slurmdbd
+
 # Marek Szuba <marecki@gentoo.org> (2021-08-11)
 # dev-ruby/httpclient not keyworded here due to failing tests
 # (Bug #807727). That said, with httpclient-2.8.3 installed manually
@@ -19,12 +28,6 @@ media-gfx/gimp lua unwind
 # QtPy cannot be tested atm because QtPy[test] has a hard
 # dependency on PyQt5[bluetooth].
 dev-python/ipython qt5
-
-# Alex Fan <alexfanqi@yahoo.com> (2021-08-08)
-# portaudio is not tested yet
-app-accessibility/espeak portaudio
-media-libs/openal portaudio
-media-sound/mpg123 portaudio
 
 # Alex Fan <alexfanqi@yahoo.com> (2021-08-05)
 # pdfannotextractor depends on java, not (sustainably) supported yet
@@ -98,16 +101,16 @@ dev-python/ipython nbconvert notebook
 app-crypt/heimdal afs
 #  - gnome-base/gconf, dev-libs/libotf & dev-libs/m17n-lib
 app-editors/emacs gconf m17n-lib
-#  - media-libs/portaudio, dev-embedded/libftdi, app-misc/inputlircd
-app-misc/lirc audio ftdi inputlirc
+#  - dev-embedded/libftdi, app-misc/inputlircd
+app-misc/lirc ftdi inputlirc
 #  - app-xemacs/ruby-modes (and by extension xemacs itself)
 dev-lang/ruby xemacs
-#  - media-libs/libcddb
-dev-libs/libcdio cddb
 #  - dev-ruby/asciidoctor
 dev-libs/nanomsg doc
 #  - sci-libs/gdal
 dev-python/networkx extras
+#  - dev-ruby{kramdown,maruku,rdiscount}
+dev-ruby/yard doc
 #  - app-text/dblatex & media-gfx/transfig
 dev-util/ragel doc
 #  - Qt5 & KDE
@@ -122,8 +125,10 @@ media-libs/devil nvtt
 media-libs/libvpx doc
 #  - bluetooth, net-misc/ofono
 media-sound/pulseaudio native-headset ofono-headset
+#  - media-sound/jack2
+media-video/pipewire jack-client
 #  - maaaaaany
-media-video/ffmpeg amrenc bluray bs2b cdio chromaprint codec2 fdk frei0r gme iec61883 ieee1394 kvazaar libaribb24 libilbc libsoxr libtesseract lv2 openh264 rubberband sdl speex srt vidstab xvid zimg zvbi
+media-video/ffmpeg amrenc bluray bs2b cdio chromaprint codec2 fdk frei0r gme iec61883 ieee1394 kvazaar libaribb24 libilbc libsoxr libtesseract lv2 openh264 rubberband speex srt vidstab xvid zimg zvbi
 #  - media-libs/libquicktime, media-libs/sdl-gfx
 media-video/mjpegtools quicktime sdlgfx
 #  - sys-cluster/ceph
@@ -134,8 +139,8 @@ net-misc/connman iwd ofono
 sys-block/thin-provisioning-tools test
 #  - sys-cluster/knem, sys-fabric/infinipath-psm
 sys-cluster/openmpi openmpi_fabrics_knem openmpi_fabrics_psm
-#  - sys-fabric/ofed, dev-db/mariadb | dev-db/mysql
-sys-cluster/slurm ofed slurmdbd
+#  - sys-fabric/ofed
+sys-cluster/slurm ofed
 
 # Yixun Lan <dlan@gentoo.org> (2021-05-24)
 # Dependencies not keyworded, not tested
@@ -148,7 +153,6 @@ gnome-base/gvfs bluray cdda mtp ios
 sys-power/upower ios
 net-libs/gnome-online-accounts gnome
 net-libs/libproxy kde
-xfce-base/xfce4-settings libcanberra
 xfce-extra/tumbler epub ffmpeg odf pdf raw
 xfce-base/xfce4-meta pulseaudio
 # KDE not tested, so mask

@@ -32,6 +32,18 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2021-08-13)
+# Dead upstream, new "forked" upstream that just added the last version
+# on Github but doesn't maintain them. Unmaintained for the past 10
+# years in ::gentoo, no other real distros package these anymore.
+# HOMEPAGE leads to some scammy site.
+# Bug #318143, #626666, #626668, Removal in ~30 days.
+dev-libs/libbrahe
+dev-libs/libcoyotl
+dev-libs/libevocosm
+app-benchmarks/acovea
+app-benchmarks/acovea-gtk
+
 # Agostino Sarubbo <ago@gentoo.org> (2021-08-12)
 # Latest release 2012, not anymore useful for current routers
 # Removal in ~30 days.
@@ -392,18 +404,6 @@ dev-python/tablib
 # https://github.com/RocketChat/Rocket.Chat.Electron/issues/2068
 # https://github.com/RocketChat/Rocket.Chat.Electron/issues/2070
 =net-im/rocketchat-desktop-bin-3.3.0
-
-# Marek Szuba <marecki@gentoo.org> (2021-07-12)
-# No releases since March 2015, no upstream repo activity since November
-# 2019. Unmaintained in Gentoo. Depends on effectively EOLed Lua 5.2,
-# fails to build against any other version. Removal in 30 days (Bug #801883)
-app-crypt/cardpeek
-
-# Marek Szuba <marecki@gentoo.org> (2021-07-12)
-# Effectively EOL, no packages in the tree strictly require this
-# particular version. Removal, of both the ebuilds and target support,
-# in 30 days (bug #801865).
-dev-lang/lua:5.2
 
 # Craig Andrews <candrews@gentoo.org> (2021-07-10)
 # Masked until November, 2021

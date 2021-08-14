@@ -2023,6 +2023,7 @@ dev-libs/jemalloc:xmalloc - Add support for xmalloc (abort-on-out-of-memory)
 dev-libs/kosmindoormap:openinghours - Enable support for highlighting currently open amenities/shops/etc.
 dev-libs/kreport:marble - Enable displaying of maps using kde-apps/marble
 dev-libs/kreport:scripting - Support Qml scripting using dev-qt/qtdeclarative
+dev-libs/leveldb:crc32c - Link against dev-libs/crc32c for accelerated CRC32C calculation
 dev-libs/libbase58:tools - Build command line base58 tool
 dev-libs/libbytesize:tools - Build bscalc python CLI tool
 dev-libs/libcbor:custom-alloc - Custom, dynamically defined allocator support
@@ -4976,8 +4977,12 @@ media-video/libva-utils:test-va-api - Install test_va_api tool for thorough test
 media-video/libva-utils:vainfo - Build and install vainfo tool.
 media-video/makemkv:java - Handle additional Blu-ray protection mechanisms involving Java
 media-video/mjpegtools:sdlgfx - Enables y4mhist to display a graphical histogram
+media-video/mjpg-streamer:http-management - Enable experimental HTTP management option
 media-video/mjpg-streamer:input-control - Plugin giving ability to control camera movement (only specific cameras)
 media-video/mjpg-streamer:input-file - Plugin that watches given directory and send it's content
+media-video/mjpg-streamer:input-http - Plugin that takes http-input
+media-video/mjpg-streamer:input-ptp2 - Plugin that sends video stream from PTP2 compatible camera
+media-video/mjpg-streamer:input-raspicam - Raspberry Pi camera support via the input_raspicam plugin
 media-video/mjpg-streamer:input-testpicture - Plugin for sending compiled in, test pictures
 media-video/mjpg-streamer:input-uvc - Plugin that sends video stream from UVC compatible camera
 media-video/mjpg-streamer:output-autofocus - Auto focusing plugin
@@ -4985,7 +4990,10 @@ media-video/mjpg-streamer:output-file - Plugin that saves received content under
 media-video/mjpg-streamer:output-http - Small HTTP server plugin which sends WWW directory content and streams image content
 media-video/mjpg-streamer:output-rtsp - Plugin which provides a mechanism to take snapshots with a trigger from a UDP packet
 media-video/mjpg-streamer:output-udp - Plugin receiving content over UDP and storing to a directory
+media-video/mjpg-streamer:output-viewer - Plugin which allows to see output with viewer
+media-video/mjpg-streamer:output-zmqserver - Plugin which provides zmqserver processing
 media-video/mjpg-streamer:www - Installs WWW content
+media-video/mjpg-streamer:wxp-compat - Enable camera WXP compatible format
 media-video/motion:mariadb - Add mariadb database support
 media-video/motion:mmal - Enables Multi-Media Abstraction Layer (MMAL) decoding support: Available e.g. on the Raspberry Pi.
 media-video/motiontrack:multiprocess - Enables multi-process support (SMP/cluster) for motiontrack programs
@@ -8192,7 +8200,6 @@ sys-fs/btrfs-progs:convert - Build ext2 conversion utility (btrfs-convert)
 sys-fs/btrfs-progs:reiserfs - Enable reiserfs support in btrfs-convert tool.
 sys-fs/btrfs-progs:static - Build static binaries in addition to the dynamic ones
 sys-fs/btrfsmaintenance:systemd - Enable systemd services and timers instead of cron timers
-sys-fs/cryfs:custom-optimization - Use user-defined compiler optimization level
 sys-fs/cryptmount:argv0switch - Default action given by progname.
 sys-fs/cryptmount:cswap - Enable support for encrypted swap.
 sys-fs/cryptmount:fsck - Check filesystems before mounting.
