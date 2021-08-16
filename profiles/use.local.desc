@@ -2522,7 +2522,6 @@ dev-python/urllib3:brotli - Enable support for brotli compression
 dev-python/ws4py:client - Install client modules
 dev-python/ws4py:server - Install server modules
 dev-python/zeep:async - Add async support
-dev-python/zeep:tornado - Add tornado support
 dev-qt/designer:declarative - Build the qdeclarativeview plugin
 dev-qt/linguist-tools:qml - Enable QML support in lupdate
 dev-qt/qdoc:qml - Enable QML/JS parsing support
@@ -4585,9 +4584,6 @@ media-sound/lmms:libgig - Enables GIG player plugin.
 media-sound/lmms:soundio - Enables libsoundio support.
 media-sound/lmms:stk - Enables STK Mallet plugin.
 media-sound/lmms:vst - Enables the VeSTige plugin to run VST plugins through Wine.
-media-sound/loudness-scanner:mpg123 - build the mpg123 plugin
-media-sound/loudness-scanner:musepack - build the musepack plugin
-media-sound/loudness-scanner:sndfile - build the sndfile plugin
 media-sound/mangler:espeak - Text to speech engine
 media-sound/mangler:g15 - Logitech g15 lcd support
 media-sound/mixxx:hid - Enable HID controller support
@@ -4872,6 +4868,7 @@ media-tv/xmltv:huro - Hungarian tv listing grabber
 media-tv/xmltv:il - Israel tv listing grabber
 media-tv/xmltv:is - Iceland tv listing grabber
 media-tv/xmltv:it - Italy tv listing grabber (RUV)
+media-tv/xmltv:it-dvb - Italy tv listing grabber
 media-tv/xmltv:na-dd - North America tv listing grabber
 media-tv/xmltv:na-dtv - North America Direct TV grabber
 media-tv/xmltv:na-tvmedia - Grabber for North America (TVMedia)

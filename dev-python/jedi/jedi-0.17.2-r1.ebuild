@@ -23,7 +23,7 @@ SRC_URI="
 LICENSE="MIT
 	test? ( Apache-2.0 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm arm64 ~ia64 ~ppc ppc64 ~riscv ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm arm64 ~hppa ~ia64 ~ppc ppc64 ~riscv ~sparc x86"
 
 RDEPEND="=dev-python/parso-0.7*[${PYTHON_USEDEP}]"
 
@@ -57,6 +57,8 @@ python_test() {
 		# assume pristine virtualenv
 		test/test_utils.py::TestSetupReadline::test_local_import
 		test/test_inference/test_imports.py::test_os_issues
+		# fragile
+		test/test_speed.py
 	)
 	[[ ${EPYTHON} == python3.10 ]] && deselect+=(
 		# new features increased the match count again
