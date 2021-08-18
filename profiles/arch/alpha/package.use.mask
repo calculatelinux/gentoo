@@ -1,6 +1,10 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Marek Szuba <marecki@gentoo.org> (2021-08-17)
+# net-wireless/rtl-sdr not keyworded here
+sys-apps/rng-tools rtlsdr
+
 # Marek Szuba <marecki@gentoo.org> (2021-08-11)
 # dev-ruby/{thor,tty-editor} not keyworded here yet (Bug #807685)
 app-text/htmltidy test
@@ -238,7 +242,7 @@ x11-themes/qtcurve plasma
 dev-db/mariadb numa
 
 # Gilles Dartiguelongue <eva@gentoo.org> (2017-08-16)
-# missing keyword on dev-python/dbusmock, bug #620024
+# missing keyword on dev-python/python-dbusmock, bug #620024
 >=gnome-base/gnome-settings-daemon-3.24 test
 
 # Michał Górny <mgorny@gentoo.org> (2017-08-08)

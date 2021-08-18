@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI="8"
 
 inherit multilib
 
@@ -19,7 +19,8 @@ DEPEND="sys-devel/libtool"
 RDEPEND="!sys-apps/rescan-scsi-bus"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-1.26-stdint.patch #580236
+	# Bug #808600
+	"${FILESDIR}"/${PN}-1.46-musl-drand48-compat.patch
 )
 
 src_configure() {

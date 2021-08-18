@@ -1,12 +1,39 @@
 # Copyright 2019-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Marek Szuba <marecki@gentoo.org> (2021-08-18)
+# media-libs/libffado does not recognise this arch, fails src_configure
+# (Bug #808853).
+media-sound/jack2 ieee1394
+
+# Alex Fan <alexfanqi@yahoo.com> (2021-08-17)
+# dependencies not keyworded/tested
+sys-apps/xdg-desktop-portal screencast
+kde-plasma/powerdevil wireless
+kde-plasma/plasma-vault networkmanager
+kde-plasma/plasma-desktop emoji
+kde-plasma/ksystemstats networkmanager
+kde-plasma/libksysguard webengine
+kde-frameworks/kfilemetadata ffmpeg
+kde-plasma/plasma-workspace appstream screencast gps geolocation
+kde-plasma/kdeplasma-addons webengine
+kde-plasma/plasma-meta networkmanager accessibility grub plymouth pulseaudio
+kde-plasma/discover firmware flatpak
+kde-plasma/kwin accessibility screencast
+kde-plasma/plasma-firewall firewalld
+# vlc has libatomic issue, bug #803473
+media-libs/phonon vlc gstreamer
+
+# Marek Szuba <marecki@gentoo.org> (2021-08-17)
+# sys-libs/libfaketime does not work properly on this arch
+sys-auth/sssd test
+
 # Marek Szuba <marecki@gentoo.org> (2021-08-14)
 # virtual/mysql & co. round-up:
 #  dev-db/mariadb fails tests here, see Bug #807995
 #  dev-db/mysql and dev-db/percona-server do not support this arch
-#  dev-db/mariadb-galera has been absent from the tree since June 2019
 #  dev-db/mysql-cluster not tested yet, seriously outdated in the tree
+dev-python/pymysql test
 sci-libs/gdal mysql
 sys-cluster/slurm slurmdbd
 
@@ -59,18 +86,11 @@ dev-python/pymongo test
 # lack an ios device to test it
 kde-frameworks/solid ios
 
-# Georgy Yakovlev <gyakovlev@gentoo.org> (2021-07-20)
-# sys-auth/sssd and its deps not keyworded yet
-app-admin/sudo sssd
-
 # Alex Fan <alexfanqi@yahoo.com> (2021-07-20)
-# sci-libs/hdf5 fails tests with these 2 use flags enabled,
-# otherwise passes all tests
-sci-libs/hdf5 fortran debug
-
-# Marek Szuba <marecki@gentoo.org> (2021-07-19)
-# dependencies not keyworded here yet
-dev-python/pandas doc full-support test
+# hdf5-1.10 always fails tests with these 2 use flags enabled, otherwise
+# passes all tests on at least some systems. No longer needed for 1.12,
+# though.
+<sci-libs/hdf5-1.12.1 fortran debug
 
 # Marek Szuba <marecki@gentoo.org> (2021-07-14)
 # LuaJIT does not support riscv
@@ -120,10 +140,12 @@ media-libs/devil nvtt
 media-libs/libvpx doc
 #  - bluetooth, net-misc/ofono
 media-sound/pulseaudio native-headset ofono-headset
-#  - media-sound/jack2
-media-video/pipewire jack-client
-#  - maaaaaany
-media-video/ffmpeg amrenc bluray bs2b cdio chromaprint codec2 fdk frei0r gme iec61883 ieee1394 kvazaar libaribb24 libilbc libsoxr libtesseract lv2 openh264 rubberband speex srt vidstab xvid zimg zvbi
+#  - media-libs/vo-amrwbenc, media-libs/libbluray, media-libs/libbs2b, dev-libs/libcdio-paranoia,
+#    media-libs/chromaprint, media-libs/codec2, media-libs/fdk-aac,  media-plugins/frei0r-plugins,
+#    media-libs/game-music-emu, media-libs/kvazaar, media-libs/aribb24, media-libs/libilbc,
+#    app-text/tesseract, media-libs/lv2 & media-libs/lilv, media-libs/openh264, media-libs/rubberband,
+#    net-libs/srt, media-libs/vidstab, media-libs/xvid, media-libs/zimg, media-libs/zvbi
+media-video/ffmpeg amrenc bluray bs2b cdio chromaprint codec2 fdk frei0r gme kvazaar libaribb24 libilbc libtesseract lv2 openh264 rubberband srt vidstab xvid zimg zvbi
 #  - media-libs/libquicktime, media-libs/sdl-gfx
 media-video/mjpegtools quicktime sdlgfx
 #  - sys-cluster/ceph
@@ -150,8 +172,6 @@ net-libs/gnome-online-accounts gnome
 net-libs/libproxy kde
 xfce-extra/tumbler epub ffmpeg odf pdf raw
 xfce-base/xfce4-meta pulseaudio
-# KDE not tested, so mask
-sys-auth/polkit kde
 
 # Ye Cao <ye.c@rioslab.org> (2021-07-31)
 # Piotr Karbowski <slashbeast@gentoo.org> (2021-06-22)

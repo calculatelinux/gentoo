@@ -32,10 +32,11 @@
 
 #--- END OF EXAMPLES ---
 
-# Michał Górny <mgorny@gentoo.org> (2021-08-16)
-# Broken ebuild that does not install data files.  Masked until
-# pyproject2setuppy is fixed to handle the package correctly.
-=dev-python/babelfish-0.6.0
+# Sam James <sam@gentoo.org> (2021-08-17)
+# Fails to build with >= Boost 1.73, so broken for well over a year.
+# Several open bugs: bug #722882, bug #742290, bug #808673.
+# Removal on 2021-09-17.
+sys-fs/e4rat
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2021-08-15)
 # Broken since Perl 5.22, bug 662318. Removal in 30 days.
@@ -207,13 +208,6 @@ dev-qt/qtwebkit:5
 app-text/fb2edit
 mail-client/trojita
 <media-video/openshot-2.5.1_p20210228
-
-# Sam James <sam@gentoo.org> (2021-08-01)
-# Broken with GCC 11, out of date, unmaintained in Gentoo.
-# bug #763651, bug #774009, bug #789027, bug #759988.
-# Removal on 2021-09-01.
-dev-util/intel-graphics-compiler
-dev-libs/intel-neo
 
 # Sam James <sam@gentoo.org> (2021-08-01)
 # Fails to compile, multiple open bugs.

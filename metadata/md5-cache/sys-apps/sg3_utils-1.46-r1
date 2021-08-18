@@ -1,7 +1,7 @@
 DEFINED_PHASES=configure install
 DEPEND=sys-devel/libtool
 DESCRIPTION=Apps for querying the sg SCSI interface
-EAPI=7
+EAPI=8
 HOMEPAGE=http://sg.danny.cz/sg/
 IUSE=static-libs
 KEYWORDS=~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 ~s390 sparc x86
@@ -10,4 +10,4 @@ RDEPEND=!sys-apps/rescan-scsi-bus
 SLOT=0/1.46
 SRC_URI=http://sg.danny.cz/sg/p/sg3_utils-1.46.tar.xz
 _eclasses_=multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
-_md5_=4a9cca2d70e44ae80615f393a96ca566
+_md5_=b6abab25d94dfdccec119a7d9987e74b

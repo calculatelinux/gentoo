@@ -31,18 +31,14 @@ valgrind
 
 # Not tested yet
 bluetooth
-emacs
 jack
-java
 mono
-motif
-opencl
-rsh
 
-# Mattéo Rossillol‑‑Laruelle <beatussum@protonmail.com> (2019‑08‑31)
-# Dependencies not keyworded.
-appindicator
-ayatana
+# No proper support for this arch yet
+java
+
+# Neither the virtual nor any of the runtimes (except mesa) keyworded here yet
+opencl
 
 # not supported / tested cards
 
