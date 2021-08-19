@@ -165,6 +165,10 @@ DOCS=( NEWS README )
 
 S="${WORKDIR}/${MY_P}"
 
+PATCHES=(
+	"${FILESDIR}"/pulseaudio-15.0-xice-xsm-xtst-daemon-only.patch
+)
+
 src_prepare() {
 	default
 
@@ -268,7 +272,7 @@ multilib_src_install_all() {
 			use "${1}" && echo "-D${define}" || echo "-U${define}"
 		}
 
-		unifdef \
+		unifdef -x 1 \
 			$(use_define zeroconf AVAHI) \
 			$(use_define alsa) \
 			$(use_define bluetooth) \

@@ -5,13 +5,14 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_9 )
 
-inherit check-reqs cmake flag-o-matic pax-utils python-single-r1 toolchain-funcs subversion xdg-utils
+inherit check-reqs cmake flag-o-matic pax-utils python-single-r1 toolchain-funcs xdg-utils
 
 DESCRIPTION="3D Creation/Animation/Publishing System"
 HOMEPAGE="https://www.blender.org"
 
 if [[ ${PV} = *9999* ]] ; then
-	inherit git-r3
+	# Subversion is needed for downloading unit test files
+	inherit git-r3 subversion
 	EGIT_REPO_URI="https://git.blender.org/blender.git"
 else
 	SRC_URI="https://download.blender.org/source/${P}.tar.xz"
@@ -79,7 +80,7 @@ RDEPEND="${PYTHON_DEPS}
 	nls? ( virtual/libiconv )
 	openal? ( media-libs/openal )
 	opencl? ( virtual/opencl )
-	oidn? ( >=media-libs/oidn-1.3.0 )
+	oidn? ( >=media-libs/oidn-1.4.1 )
 	openimageio? ( >=media-libs/openimageio-2.2.13.1:= )
 	openexr? (
 		media-libs/ilmbase:=
@@ -98,7 +99,6 @@ RDEPEND="${PYTHON_DEPS}
 	sdl? ( media-libs/libsdl2[sound,joystick] )
 	sndfile? ( media-libs/libsndfile )
 	tbb? ( dev-cpp/tbb )
-	test? ( dev-vcs/subversion )
 	tiff? ( media-libs/tiff )
 	valgrind? ( dev-util/valgrind )
 "
@@ -260,11 +260,8 @@ src_configure() {
 		-DWITH_USD=OFF
 		-DWITH_XR_OPENXR=OFF
 	)
-	if ! use debug ; then
-		append-flags  -DNDEBUG
-	else
-		append-flags  -DDEBUG
-	fi
+	append-flags $(usex debug '-DDEBUG' '-DNDEBUG')
+
 	cmake_src_configure
 }
 
