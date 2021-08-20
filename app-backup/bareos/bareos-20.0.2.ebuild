@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{7,8,9} )
+PYTHON_COMPAT=( python3_{7..10} )
 CMAKE_WARN_UNUSED_CLI=no
 #CMAKE_REMOVE_MODULES=yes
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="X acl ceph clientonly +director glusterfs ipv6 jansson lmdb
 	logwatch mysql ndmp +postgres readline scsi-crypto
-	sqlite static +storage-daemon systemd tcpd vim-syntax xattr"
+	sqlite static +storage-daemon systemd tcpd vim-syntax -vmware xattr"
 
 # get cmake variables from core/cmake/BareosSetVariableDefaults.cmake
 DEPEND="
@@ -42,6 +42,7 @@ DEPEND="
 		)
 	)
 	logwatch? ( sys-apps/logwatch )
+	ndmp? ( net-libs/rpcsvc-proto )
 	tcpd? ( sys-apps/tcp-wrappers )
 	readline? ( sys-libs/readline:0 )
 	static? (
@@ -58,6 +59,7 @@ DEPEND="
 		sys-libs/ncurses:=
 		sys-libs/zlib
 	)
+	vmware? ( dev-lang/python:2.7 )
 	"
 RDEPEND="${DEPEND}
 	!clientonly? (
@@ -89,8 +91,8 @@ src_prepare() {
 			|| die "sed on MyCatalog.conf.in failed"
 	popd >&/dev/null || die
 
-	# fix gentoo version detection
-	eapply -p0 "${FILESDIR}/${PN}-cmake-gentoo.patch"
+	# fix gentoo platform support
+	eapply -p1 "${FILESDIR}/${P}-cmake-gentoo.patch"
 
 	# fix missing DESTDIR in symlink creation
 	sed -i '/bareos-symlink-default-db-backend.cmake/d' "${S}/core/src/cats/CMakeLists.txt"
@@ -137,7 +139,7 @@ src_configure() {
 		-Dbatch-insert=yes
 		-Dbsrdir=/var/lib/bareos/bsr
 		-Dconfdir=/etc/bareos
-		-Dcoverage=yes
+		-Dcoverage=no
 		-Ddb_password=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 16 | head -n 1`
 		-Ddir-group=bareos
 		-Ddir-password="`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`"
@@ -175,6 +177,10 @@ src_configure() {
 		-Dx=$(usex X)
 		)
 
+		# disable droplet support for now as it does not build with gcc 10
+		# ... and this is a bundled lib, which should have its own package
+		cd core && cmake_comment_add_subdirectory "src/droplet"
+
 		cmake_src_configure
 }
 
@@ -187,6 +193,12 @@ src_install() {
 
 	# remove upstream init scripts
 	rm -f "${D}"/etc/init.d/bareos-*
+
+	# get rid of py2 stuff if USE=-vmware
+	if ! use vmware; then
+		rm -f "$D"/usr/lib64/bareos/plugin/{BareosFdPluginVMware.py,bareos-fd-vmware.py,python-fd.so}
+		rm -rf "$D"/usr/lib64/python2.7
+	fi
 
 	# rename statically linked apps
 	if use clientonly && use static ; then
