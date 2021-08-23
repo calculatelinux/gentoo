@@ -1,6 +1,10 @@
 # Copyright 2019-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Marek Szuba <marecki@gentoo.org> (2021-08-18)
+# net-fs/openafs does not support riscv
+app-crypt/heimdal afs
+
 # Yixun Lan <dlan@gentoo.org> (2021-08-20)
 # dependencies not keyworded/tested
 net-misc/networkmanager ofono
@@ -25,8 +29,18 @@ kde-plasma/plasma-meta networkmanager accessibility grub plymouth pulseaudio
 kde-plasma/discover firmware flatpak
 kde-plasma/kwin accessibility screencast
 kde-plasma/plasma-firewall firewalld
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-08-21)
+# Please don't keyword media-libs/phonon w/o at least one of those.
 # vlc has libatomic issue, bug #803473
 media-libs/phonon vlc gstreamer
+kde-frameworks/knotifications phonon
+kde-frameworks/knotifyconfig phonon
+kde-apps/kio-extras phonon
+kde-apps/marble phonon
+app-office/calligra phonon
+media-sound/yarock phonon
+net-irc/kvirc phonon
 
 # Marek Szuba <marecki@gentoo.org> (2021-08-17)
 # sys-libs/libfaketime does not work properly on this arch
@@ -37,6 +51,7 @@ sys-auth/sssd test
 #  dev-db/mariadb fails tests here, see Bug #807995
 #  dev-db/mysql and dev-db/percona-server do not support this arch
 #  dev-db/mysql-cluster not tested yet, seriously outdated in the tree
+dev-python/mysqlclient test
 dev-python/pymysql test
 sci-libs/gdal mysql
 sys-cluster/slurm slurmdbd
@@ -120,8 +135,6 @@ dev-python/ipython nbconvert notebook
 
 # Marek Szuba <marecki@gentoo.org> (2021-07-05)
 # Dependencies not keyworded here yet:
-#  - net-fs/openafs
-app-crypt/heimdal afs
 #  - gnome-base/gconf, dev-libs/libotf & dev-libs/m17n-lib
 app-editors/emacs gconf m17n-lib
 #  - dev-embedded/libftdi, app-misc/inputlircd
@@ -134,22 +147,24 @@ dev-libs/nanomsg doc
 dev-util/ragel doc
 #  - Qt5 & KDE
 dev-vcs/subversion kwallet
-#  - media-sound/pavucontrol-qt
-lxqt-base/lxqt-panel pulseaudio
+#  - kde-frameworks/bluez-qt
+kde-frameworks/purpose bluetooth
+#  - kde-plasma/bluedevil
+kde-plasma/plasma-meta bluetooth
 #  - media-libs/dumb
 media-libs/allegro dumb
 #  - media-gfx/nvidia-texture-tools
 media-libs/devil nvtt
 #  - dev-lang/php
 media-libs/libvpx doc
-#  - bluetooth, net-misc/ofono
-media-sound/pulseaudio native-headset ofono-headset
-#  - media-libs/vo-amrwbenc, media-libs/libbluray, media-libs/libbs2b, dev-libs/libcdio-paranoia,
-#    media-libs/chromaprint, media-libs/codec2, media-libs/fdk-aac,  media-plugins/frei0r-plugins,
-#    media-libs/game-music-emu, media-libs/kvazaar, media-libs/aribb24, media-libs/libilbc,
-#    app-text/tesseract, media-libs/lv2 & media-libs/lilv, media-libs/openh264, media-libs/rubberband,
-#    net-libs/srt, media-libs/vidstab, media-libs/xvid, media-libs/zimg, media-libs/zvbi
-media-video/ffmpeg amrenc bluray bs2b cdio chromaprint codec2 fdk frei0r gme kvazaar libaribb24 libilbc libtesseract lv2 openh264 rubberband srt vidstab xvid zimg zvbi
+#  - net-misc/ofono
+media-sound/pulseaudio ofono-headset
+#  - media-libs/vo-amrwbenc, media-libs/libbs2b, dev-libs/libcdio-paranoia,
+#    media-libs/codec2, media-plugins/frei0r-plugins,
+#    media-libs/kvazaar, media-libs/libilbc,
+#    app-text/tesseract, media-libs/lv2 & media-libs/lilv, media-libs/rubberband,
+#    media-libs/vidstab, media-libs/xvid, media-libs/zimg
+media-video/ffmpeg amrenc bs2b cdio codec2 frei0r kvazaar libilbc libtesseract lv2 rubberband vidstab xvid zimg
 #  - media-libs/libquicktime, media-libs/sdl-gfx
 media-video/mjpegtools quicktime sdlgfx
 #  - sys-cluster/ceph
