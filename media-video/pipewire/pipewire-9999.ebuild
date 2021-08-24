@@ -96,6 +96,7 @@ DOCS=( {README,INSTALL}.md NEWS )
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.3.25-enable-failed-mlock-warning.patch
+	"${FILESDIR}"/${PN}-0.3.33-revert-libfreeaptx-switch.patch
 	"${FILESDIR}"/${PN}-0.3.31-revert-openaptx-restriction.patch
 )
 

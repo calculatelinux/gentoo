@@ -1,9 +1,16 @@
 # Copyright 2019-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-# Marek Szuba <marecki@gentoo.org> (2021-08-18)
+# Marek Szuba <marecki@gentoo.org> (2021-08-23)
+# sys-cluster/ceph keywording blocked by libatomic issues in dev-libs/rocksdb-6.14,
+# see Bug #809830.
+net-analyzer/rrdtool rados
+
+# Marek Szuba <marecki@gentoo.org> (2021-08-22)
 # net-fs/openafs does not support riscv
 app-crypt/heimdal afs
+# app-editors/xemacs reports arch as unknown, fails to build
+dev-lang/ruby xemacs
 
 # Yixun Lan <dlan@gentoo.org> (2021-08-20)
 # dependencies not keyworded/tested
@@ -16,7 +23,6 @@ media-sound/jack2 ieee1394
 
 # Alex Fan <alexfanqi@yahoo.com> (2021-08-17)
 # dependencies not keyworded/tested
-sys-apps/xdg-desktop-portal screencast
 kde-plasma/powerdevil wireless
 kde-plasma/plasma-vault networkmanager
 kde-plasma/plasma-desktop emoji
@@ -28,19 +34,6 @@ kde-plasma/kdeplasma-addons webengine
 kde-plasma/plasma-meta networkmanager accessibility grub plymouth pulseaudio
 kde-plasma/discover firmware flatpak
 kde-plasma/kwin accessibility screencast
-kde-plasma/plasma-firewall firewalld
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2021-08-21)
-# Please don't keyword media-libs/phonon w/o at least one of those.
-# vlc has libatomic issue, bug #803473
-media-libs/phonon vlc gstreamer
-kde-frameworks/knotifications phonon
-kde-frameworks/knotifyconfig phonon
-kde-apps/kio-extras phonon
-kde-apps/marble phonon
-app-office/calligra phonon
-media-sound/yarock phonon
-net-irc/kvirc phonon
 
 # Marek Szuba <marecki@gentoo.org> (2021-08-17)
 # sys-libs/libfaketime does not work properly on this arch
@@ -65,10 +58,6 @@ dev-ruby/webmock test
 # does not support riscv. Hopefully temporary, see Bug #807772.
 net-libs/libproxy spidermonkey
 
-# Alex Fan <alexfanqi@yahoo.com> (2021-08-12)
-# lua requires specifically luajit for gimp
-media-gfx/gimp lua unwind
-
 # Alex Fan <alexfanqi@yahoo.com> (2021-08-09)
 # ipython[qt5] depends on qtconsole, which depends on QtPy.
 # QtPy cannot be tested atm because QtPy[test] has a hard
@@ -80,6 +69,8 @@ dev-python/ipython qt5
 # These USE flags depend on java, not (sustainably) supported yet
 #  - dev-tex/pdfannotextractor
 app-text/texlive pdfannotextractor
+#  - JDK
+media-libs/rubberband jni
 #  - dev-java/jackcess
 sci-libs/gdal mdb
 
@@ -111,10 +102,12 @@ kde-frameworks/solid ios
 # though.
 <sci-libs/hdf5-1.12.1 fortran debug
 
+# Alex Fan <alexfanqi@yahoo.com> (2021-08-12)
 # Marek Szuba <marecki@gentoo.org> (2021-07-14)
 # LuaJIT does not support riscv
 app-text/texlive-core luajittex
 dev-texlive/texlive-basic luajittex
+media-gfx/gimp lua
 www-servers/nginx nginx_modules_http_lua
 
 # Marek Szuba <marecki@gentoo.org> (2021-07-11)
@@ -135,40 +128,26 @@ dev-python/ipython nbconvert notebook
 
 # Marek Szuba <marecki@gentoo.org> (2021-07-05)
 # Dependencies not keyworded here yet:
-#  - gnome-base/gconf, dev-libs/libotf & dev-libs/m17n-lib
-app-editors/emacs gconf m17n-lib
-#  - dev-embedded/libftdi, app-misc/inputlircd
-app-misc/lirc ftdi inputlirc
-#  - app-xemacs/ruby-modes (and by extension xemacs itself)
-dev-lang/ruby xemacs
 #  - dev-ruby/asciidoctor
 dev-libs/nanomsg doc
-#  - app-text/dblatex & media-gfx/transfig
-dev-util/ragel doc
-#  - Qt5 & KDE
-dev-vcs/subversion kwallet
-#  - kde-frameworks/bluez-qt
-kde-frameworks/purpose bluetooth
+#  - dev-libs/weston
+gui-libs/gtk wayland
 #  - kde-plasma/bluedevil
 kde-plasma/plasma-meta bluetooth
-#  - media-libs/dumb
-media-libs/allegro dumb
 #  - media-gfx/nvidia-texture-tools
 media-libs/devil nvtt
 #  - dev-lang/php
 media-libs/libvpx doc
 #  - net-misc/ofono
 media-sound/pulseaudio ofono-headset
-#  - media-libs/vo-amrwbenc, media-libs/libbs2b, dev-libs/libcdio-paranoia,
+#  - media-libs/vo-amrwbenc, media-libs/libbs2b,
 #    media-libs/codec2, media-plugins/frei0r-plugins,
 #    media-libs/kvazaar, media-libs/libilbc,
 #    app-text/tesseract, media-libs/lv2 & media-libs/lilv, media-libs/rubberband,
 #    media-libs/vidstab, media-libs/xvid, media-libs/zimg
-media-video/ffmpeg amrenc bs2b cdio codec2 frei0r kvazaar libilbc libtesseract lv2 rubberband vidstab xvid zimg
+media-video/ffmpeg amrenc bs2b codec2 frei0r kvazaar libilbc libtesseract lv2 rubberband vidstab xvid zimg
 #  - media-libs/libquicktime, media-libs/sdl-gfx
 media-video/mjpegtools quicktime sdlgfx
-#  - sys-cluster/ceph
-net-analyzer/rrdtool rados
 #  - net-wireless/iwd, net-misc/ofono
 net-misc/connman iwd ofono
 #  - dev-util/aruba
@@ -180,18 +159,12 @@ sys-cluster/slurm ofed
 
 # Yixun Lan <dlan@gentoo.org> (2021-05-24)
 # Dependencies not keyworded, not tested
-dev-libs/libdbusmenu test
-virtual/notification-daemon gnome kde
-media-libs/libcaca doc imlib
-dev-libs/libbytesize test
-sys-libs/libblockdev dmraid escrow
-gnome-base/gvfs bluray cdda mtp ios
-sys-power/upower ios
+virtual/notification-daemon gnome
 net-libs/gnome-online-accounts gnome
-net-libs/libproxy kde
-xfce-extra/tumbler epub ffmpeg odf pdf raw
+xfce-extra/tumbler epub
 xfce-base/xfce4-meta pulseaudio
 
+# Alex Fan <alexfanqi@yahoo.com> (2021-08-17)
 # Ye Cao <ye.c@rioslab.org> (2021-07-31)
 # Piotr Karbowski <slashbeast@gentoo.org> (2021-06-22)
 # Yixun Lan <dlan@gentoo.org> (2021-05-21)
@@ -201,23 +174,13 @@ xfce-base/xfce4-meta pulseaudio
 dev-libs/efl unwind
 dev-util/perf unwind
 dev-util/strace unwind
+media-gfx/gimp unwind
 media-libs/gstreamer unwind
 media-libs/mesa unwind
 net-libs/zeromq unwind
 net-mail/dovecot unwind
 x11-base/xorg-server unwind
 x11-base/xwayland unwind
-
-# Alex Fan <alexfanqi@yahoo.com> (2021-07-22)
-# Yixun Lan <dlan@gentoo.org> (2021-05-24)
-# net-misc/networkmanager fails tests on this arch (Bug #807553)
-dev-qt/qtnetwork networkmanager
-net-libs/libproxy networkmanager
-xfce-extra/xfce4-power-manager networkmanager
-
-# Joonas Niilola <juippis@gentoo.org> (2021-01-15)
-# Dependency not keyworded on this arch.
-app-text/enchant voikko
 
 # This doesn't work for (any) riscv yet.
 dev-libs/libpcre2 jit
