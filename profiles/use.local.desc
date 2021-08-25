@@ -2622,6 +2622,7 @@ dev-qt/qtgui:eglfs - Build the EGL Full Screen/Single Surface platform plugin
 dev-qt/qtgui:evdev - Enable support for input devices via evdev
 dev-qt/qtgui:ibus - Build the IBus input method plugin
 dev-qt/qtgui:libinput - Enable support for input devices via dev-libs/libinput
+dev-qt/qtgui:linuxfb - Enable Linux framebuffer support for embedded devices
 dev-qt/qtgui:tslib - Enable support for touchscreen devices via x11-libs/tslib
 dev-qt/qtgui:tuio - Build plugin to receive touch events over the TUIO protocol
 dev-qt/qtgui:vulkan - Enable support for Vulkan
@@ -2640,6 +2641,7 @@ dev-qt/qtquickcontrols:widgets - Enable QtWidgets support
 dev-qt/qtquickcontrols2:widgets - Enable QtWidgets support
 dev-qt/qtscript:scripttools - Build the QtScriptTools module (requires QtWidgets)
 dev-qt/qtsensors:qml - Build QML bindings
+dev-qt/qtspeech:flite - Enable text-to-speech synthesizer plugin using app-accessibility/flite engine
 dev-qt/qtvirtualkeyboard:handwriting - Adds handwriting recognition integration support
 dev-qt/qtwayland:vulkan - Enable support for Vulkan-based server buffer integration
 dev-qt/qtwebchannel:qml - Build QML/QtQuick bindings and imports
@@ -3202,7 +3204,6 @@ games-simulation/simutrans:pak192-comic - Install comic-like scenario data
 games-simulation/train-valley:gui - Install the GUI for configuring screen resolution and input
 games-sports/speed-dreams:osggraph - Enable the new work-in-progress 3D engine using dev-games/openscenegraph
 games-sports/speed-dreams:webstats - Enable support for sending racing statistics to a web server (experimental)
-games-sports/speed-dreams:xrandr - Enable support for the X xrandr extension
 games-sports/xmoto:double-precision - more precise calculations at the expense of speed
 games-strategy/0ad:editor - Include Atlas scenario editor projects
 games-strategy/0ad:lobby - Enable the use of net-libs/gloox and the multiplayer lobby
@@ -3368,8 +3369,6 @@ gui-wm/hikari:layershell - add support for wayland apps using layer shell
 gui-wm/hikari:screencopy - add support for screen grabbing
 gui-wm/hikari:virtual-io - enable virtual input/output support, needed for remote I/O in VNC
 gui-wm/sway:X - Enable support for X11 applications (XWayland)
-gui-wm/sway:elogind - Enable support for rootless session via elogind
-gui-wm/sway:seatd - Enable support for rootless session via sys-auth/seatd
 gui-wm/sway:swaybar - Install 'swaybar': sway's status bar component
 gui-wm/sway:swaybg - Install 'swaybg': allows to set a desktop background image
 gui-wm/sway:swayidle - Install 'swayidle': idle manager to run commands when user is inactive
@@ -3556,6 +3555,7 @@ kde-misc/kdeconnect:wayland - Enable remote input mousepad plugin using kde-fram
 kde-misc/kimtoy:scim - Enable Smart Common Input Method support
 kde-misc/kio-gdrive:kaccounts - Use kde-apps/kaccounts-integration backend (default) instead of dev-libs/qtkeychain
 kde-misc/kio-gdrive:share - Enable support for a share menu using kde-frameworks/purpose
+kde-misc/tellico:bibtex - Add support for bibtex importing using btparse from dev-perl/Text-BibTeX
 kde-misc/tellico:discid - Add support for reading disc IDs from audio CDs
 kde-misc/tellico:yaz - Add support for searching Z39.50 databases
 kde-plasma/discover:firmware - Enable support for firmware upgrades using sys-apps/fwupd
@@ -6341,6 +6341,7 @@ net-misc/curl:mbedtls - Enable mbedtls ssl backend
 net-misc/curl:metalink - Enable metalink support
 net-misc/curl:nghttp3 - Enable HTTP/3.0 support using net-libs/nghttp3 and net-libs/ngtcp2
 net-misc/curl:nss - Enable nss ssl backend
+net-misc/curl:ntlm - Enable ntlm support
 net-misc/curl:openssl - Enable openssl ssl backend
 net-misc/curl:pop3 - Enable Post Office Protocol 3 support
 net-misc/curl:progress-meter - Enable the progress meter
