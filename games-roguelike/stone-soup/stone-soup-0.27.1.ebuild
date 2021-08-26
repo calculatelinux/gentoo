@@ -1,13 +1,10 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-# TODO
-# - attempt +test, linked bug claims to be fixed
-
-EAPI=7
+EAPI=8
 
 LUA_COMPAT=( lua5-{1..3} )
-PYTHON_COMPAT=( python3_{7,8,9} )
+PYTHON_COMPAT=( python3_{7,8,9,10} )
 VIRTUALX_REQUIRED="manual"
 inherit desktop python-any-r1 lua-single xdg-utils toolchain-funcs
 
@@ -27,10 +24,7 @@ SRC_URI="
 # MIT: json.cc/json.h, some .js files in webserver/static/scripts/contrib/
 LICENSE="GPL-2 BSD BSD-2 public-domain CC0-1.0 MIT"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug ncurses sound test +tiles"
-# test is broken
-# see https://crawl.develz.org/mantis/view.php?id=6121
-RESTRICT="test"
+IUSE="debug ncurses sound +tiles"
 
 RDEPEND="
 	${LUA_DEPS}
@@ -58,6 +52,7 @@ DEPEND="${RDEPEND}
 	$(python_gen_any_dep 'dev-python/pyyaml[${PYTHON_USEDEP}]')
 	sys-devel/flex
 	tiles? (
+		media-gfx/pngcrush
 		sys-libs/ncurses:0
 	)
 	virtual/pkgconfig
@@ -65,11 +60,9 @@ DEPEND="${RDEPEND}
 	"
 
 S=${WORKDIR}/${MY_P}/source
-S_TEST=${WORKDIR}/${MY_P}_test/source
 PATCHES=(
-	"${FILESDIR}"/fixed-font-path.patch
-	"${FILESDIR}"/gitless-1.patch
-	"${FILESDIR}"/rltiles-ldflags-libs.patch
+	"${FILESDIR}"/make.patch
+	"${FILESDIR}"/rltiles-make.patch
 )
 
 python_check_deps() {
@@ -104,9 +97,6 @@ src_compile() {
 	# Insurance that we're not using bundled lib sources
 	rm -rf contrib || die "Couldn't delete contrib directory"
 
-	export HOSTCXX=$(tc-getBUILD_CXX)
-
-	# leave DATADIR at the top
 	myemakeargs=(
 		$(usex debug "FULLDEBUG=y DEBUG=y" "")
 		BUILD_LUA=
@@ -115,8 +105,8 @@ src_compile() {
 		CFOTHERS="${CXXFLAGS}"
 		CONTRIBS=
 		DATADIR="/usr/share/${PN}-${SLOT}"
-		GCC="$(tc-getCC)"
-		GXX="$(tc-getCXX)"
+		FORCE_CC="$(tc-getCC)"
+		FORCE_CXX="$(tc-getCXX)"
 		LDFLAGS="${LDFLAGS}"
 		MAKEOPTS="${MAKEOPTS}"
 		PKGCONFIG="$(tc-getPKG_CONFIG)"
@@ -136,13 +126,25 @@ src_compile() {
 	fi
 
 	if use tiles ; then
-		emake clean
+		emake "${myemakeargs[@]}" clean
 		emake "${myemakeargs[@]}" "TILES=y"
 	fi
 }
 
+src_test() {
+	emake "${myemakeargs[@]}" \
+		  $(usex tiles "TILES=y" "") \
+		  catch2-tests
+}
+
 src_install() {
-	emake "${myemakeargs[@]}" $(usex tiles "TILES=y" "") DESTDIR="${D}" prefix_fp="" bin_prefix="${D}/usr/bin" install
+	emake "${myemakeargs[@]}" \
+		  $(usex tiles "TILES=y" "") \
+		  DESTDIR="${D}" \
+		  prefix_fp="" \
+		  bin_prefix="${D}/usr/bin" \
+		  install
+
 	[[ -e "${WORKDIR}/crawl-ncurses-${SLOT}" ]] && dobin "${WORKDIR}/crawl-ncurses-${SLOT}"
 
 	# don't relocate docs, needed at runtime
@@ -163,13 +165,9 @@ src_install() {
 pkg_postinst() {
 	xdg_icon_cache_update
 
-	elog "Since version 0.25.1-r101, crawl is a slotted install"
-	elog "that supports having multiple versions installed.  The"
-	elog "binary has the slot appened, e.g. 'crawl-"${SLOT}"'."
-	elog
-	elog "The local save directory also has the slot appended."
-	elog "If you have saved games from 0.25 but before 0.25.1-r101"
-	elog "you can 'mv ~/.crawl ~/.crawl-0.25' to fix it"
+	elog "crawl is a slotted install that supports having"
+	elog "multiple versions installed.  The binary has the"
+	elog "slot appened, e.g. 'crawl-"${SLOT}"'."
 
 	if use tiles && use ncurses ; then
 		elog
