@@ -1140,6 +1140,7 @@ app-text/tessdata_best:osd - Enable support orientation and script detection.
 app-text/tessdata_fast:osd - Enable support orientation and script detection.
 app-text/tessdata_legacy:math - Enable support for recognition of equations.
 app-text/tessdata_legacy:osd - Enable support orientation and script detection.
+app-text/tesseract:float32 - Support float for model training and text recognition (faster, requires less RAM)
 app-text/tesseract:math - Enable support for recognition of equations.
 app-text/tesseract:opencl - Enable opencl support for speedup using GPU computation.
 app-text/tesseract:osd - Enable support orientation and script detection.
@@ -5064,16 +5065,11 @@ media-video/obs-studio:vlc - Build with VLC media source support.
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/peek:keybinder - Enable support for global hotkeys using dev-libs/keybinder
-media-video/pipewire:aac - AAC over Bluetooth (iPhone compatible headphones)
-media-video/pipewire:aptx - aptX (HD) over Bluetooth (many Android compatible headphones)
+media-video/pipewire:echo-cancel - Enable WebRTC-based echo canceller via media-libs/webrtc-audio-processing
 media-video/pipewire:extra - Build pw-cat/pw-play/pw-record
-media-video/pipewire:ffmpeg - Builds an unsupported SPA (file a Gentoo bug if you need this)
-media-video/pipewire:jack - Enable SPA JACK plugin and emulation to be able to run JACK applications on top of PipeWire
 media-video/pipewire:jack-client - Install a plugin for running PipeWire as a JACK client
 media-video/pipewire:jack-sdk - Use PipeWire as JACK replacement
-media-video/pipewire:ldac - LDAC over Bluetooth (primarily Sony headphones)
 media-video/pipewire:pipewire-alsa - Replace PulseAudio's ALSA plugin with PipeWire's plugin
-media-video/pipewire:vulkan - Uses Vulkan compute shaders to provide a CGI video source
 media-video/qmplay2:audiofilters - Build with AudioFilters module
 media-video/qmplay2:avdevice - Build FFmpeg module with libavdevice suport
 media-video/qmplay2:cdio - Build with AudioCD module
@@ -6341,7 +6337,6 @@ net-misc/curl:mbedtls - Enable mbedtls ssl backend
 net-misc/curl:metalink - Enable metalink support
 net-misc/curl:nghttp3 - Enable HTTP/3.0 support using net-libs/nghttp3 and net-libs/ngtcp2
 net-misc/curl:nss - Enable nss ssl backend
-net-misc/curl:ntlm - Enable ntlm support
 net-misc/curl:openssl - Enable openssl ssl backend
 net-misc/curl:pop3 - Enable Post Office Protocol 3 support
 net-misc/curl:progress-meter - Enable the progress meter
@@ -7376,6 +7371,10 @@ sci-libs/plplot:octave - Add bindings for sci-mathematics/octave
 sci-libs/plplot:qhull - Add bindings for media-libs/qhull
 sci-libs/plplot:shapefile - Enable support for ESRI shapefiles
 sci-libs/proj:europe - Install the PROJ collection of European grids and init-files
+sci-libs/rocBLAS:benchmark - Build and install rocblas-bench.
+sci-libs/rocBLAS:test - Perform rocblas-test to compare the result between rocBLAS and system BLAS.
+sci-libs/rocPRIM:benchmark - Build and install benchmark programs.
+sci-libs/rocSPARSE:benchmark - Build and install rocblas-bench.
 sci-libs/rtabmap:openni2 - Adds support for Kinect-like 3D sensors devices with dev-libs/OpenNI2.
 sci-libs/scotch:int64 - Build the 64 bits integer library (needed for > 2^31 vertices)
 sci-libs/scotch:tools - Provides the graph, mesh, architecture, mapping/ordering, output handling programs (see Scotch User's Guide).
