@@ -30,7 +30,7 @@ REQUIRED_USE="${LUA_REQUIRED_USE}
 RDEPEND="${LUA_DEPS}
 	$(lua_gen_cond_dep '
 		dev-lua/LuaBitOp[${LUA_USEDEP}]
-	' lua5-{1,2})
+	')
 	acct-group/rspamd
 	acct-user/rspamd
 	app-arch/zstd:=
@@ -40,7 +40,7 @@ RDEPEND="${LUA_DEPS}
 	dev-libs/libev
 	dev-libs/libfmt:=
 	dev-libs/libsodium:=
-	dev-libs/snowball-stemmer
+	dev-libs/snowball-stemmer:=
 	sys-apps/file
 	blas? (
 		virtual/blas

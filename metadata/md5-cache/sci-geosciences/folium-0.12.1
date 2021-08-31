@@ -1,6 +1,6 @@
 BDEPEND=test? ( sci-libs/branca[python_targets_python3_8(-)?,python_targets_python3_9(-)?] dev-python/jinja[python_targets_python3_8(-)?,python_targets_python3_9(-)?] dev-python/numpy[python_targets_python3_8(-)?,python_targets_python3_9(-)?] >=dev-python/pytest-4.5.0[python_targets_python3_8(-)?,python_targets_python3_9(-)?] ) python_targets_python3_8? ( dev-lang/python:3.8 ) python_targets_python3_9? ( dev-lang/python:3.9 ) >=dev-lang/python-exec-2:=[python_targets_python3_8(-)?,python_targets_python3_9(-)?] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-)?,python_targets_python3_9(-)?]
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=sci-libs/branca[python_targets_python3_8(-)?,python_targets_python3_9(-)?] dev-python/jinja[python_targets_python3_8(-)?,python_targets_python3_9(-)?] dev-python/numpy[python_targets_python3_8(-)?,python_targets_python3_9(-)?] test? ( dev-python/pillow[python_targets_python3_8(-)?,python_targets_python3_9(-)?] )
+DEPEND=sci-libs/branca[python_targets_python3_8(-)?,python_targets_python3_9(-)?] dev-python/jinja[python_targets_python3_8(-)?,python_targets_python3_9(-)?] dev-python/numpy[python_targets_python3_8(-)?,python_targets_python3_9(-)?] test? ( dev-python/pillow[python_targets_python3_8(-)?,python_targets_python3_9(-)?] dev-python/pandas[python_targets_python3_8(-)?,python_targets_python3_9(-)?] )
 DESCRIPTION=Python Data, Leaflet.js Maps
 EAPI=7
 HOMEPAGE=https://github.com/python-visualization/folium
@@ -13,4 +13,4 @@ RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/python-visualization/folium/archive/refs/tags/v0.12.1.tar.gz -> folium-0.12.1.tar.gz
 _eclasses_=distutils-r1	e297e8afd355d60fb9d2d7b37b81214f	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multibuild	05a584848db4901c97fcd94ae7cc3a97	multilib	97566c1a256d07b00848aa767e38a352	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	python-r1	e20b80360497e6215aed0dd4ca7d6bad	python-utils-r1	08d890890f70fe0096093016e55438d5	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
-_md5_=efe3b761725e679702aa4921c1469a91
+_md5_=99cfe0ad9d0e9058bfede819e29aef79

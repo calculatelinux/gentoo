@@ -32,6 +32,48 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2021-08-29)
+# Version in tree is over 7 years old with numerous bugs. A modern
+# version 4 is available, but this really requires a dedicated
+# maintainer.
+# Bug #802417, #808669, removal in 30 days.
+sci-chemistry/dssp
+
+# David Seifert <soap@gentoo.org> (2021-08-29)
+# Broken for the past 5 years (#585942), no new upstream release in over
+# 5 years. Same issues as sci-biology/wgs-assembler, use a modern
+# assembler like sci-biology/abyss or canu.
+# Bug #585942, #731880, #808667, removal in 30 days.
+sci-biology/mira
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2021-08-28)
+# Both versions have several bugs and have been pulled off PyPI
+# Bugs #810808 and #810790.
+=dev-python/setuptools_scm-6.1.0
+=dev-python/setuptools_scm-6.2.0
+
+# Alexey Sokolov <alexey+gentoo@asokolov.org> (2021-08-30)
+# Homepage dead, uses gtk2, fails to build, https://bugs.gentoo.org/711344
+games-puzzle/gnudoku
+
+# Stephan Hartmann <sultan@gentoo.org> (2021-08-28)
+# Dev channel releases are only for people who
+# are developers or want more experimental features
+# and accept a more unstable release.
+>=www-client/chromium-95
+
+# Michał Górny <mgorny@gentoo.org> (2021-08-28)
+# EOL kernel with known vulnerabilities.  Please move to 5.13 or one
+# of the LTS branches.  Bug #808990.
+=sys-kernel/gentoo-kernel-5.12*
+=sys-kernel/gentoo-kernel-bin-5.12*
+=sys-kernel/vanilla-kernel-5.12*
+=virtual/dist-kernel-5.12*
+
+# Anthony G. Basile <blueness@gentoo.org> (2021-08-27)
+# Masked for removal in 30 days.  Deprecated upstream.
+net-vpn/ipsec-tools
+
 # Bernard Cafarelli <voyageur@gentoo.org> (2021-08-26)
 # Preparing for final 5.0.0 release
 >=app-text/tesseract-5.0.0_beta
@@ -218,36 +260,6 @@ app-text/fb2edit
 mail-client/trojita
 <media-video/openshot-2.5.1_p20210228
 
-# Sam James <sam@gentoo.org> (2021-08-01)
-# Fails to compile, multiple open bugs.
-# No activity upstream since 2015.
-# bug #570484, bug #715412, bug #723204.
-# Removal on 2021-09-01.
-sys-apps/lmctfy
-
-# Sam James <sam@gentoo.org> (2021-08-01)
-# Fails to build with network-sandbox and variety
-# of other open bugs. Unmaintained.
-# bug #632638, bug #688530, bug #709992, bug #757768,
-# bug #796920. Removal on 2021-09-01.
-sys-apps/habitat
-
-# David Seifert <soap@gentoo.org> (2021-08-01)
-# Dropped into ::gentoo, then unmaintained. Multiple versions behind
-# upstream, GCC 11 bug open, lacks python 3.10, python library without
-# revdeps. Bug #790137, #792870, removal in 30 days.
-sci-libs/sktime
-
-# David Seifert <soap@gentoo.org> (2021-08-01)
-# Last release 10 years ago, EOL upstream, no other distro packages this
-# anymore, tons of bugs. Revdeps are unmaintained too and out of date.
-# Bug #798015, removal in 30 days.
-sci-biology/ncbi-tools
-sci-biology/njplot
-sci-biology/psipred
-sci-chemistry/mars
-sci-libs/rosetta-fragments
-
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2021-07-31)
 # Obsolete; all versions in current Perl core distributions
 # are newer, and no virtuals currently pull these packages.
@@ -259,19 +271,6 @@ perl-core/Getopt-Long
 perl-core/HTTP-Tiny
 perl-core/JSON-PP
 perl-core/libnet
-
-# David Seifert <soap@gentoo.org> (2021-07-30)
-# games-engines/renpy has been gone for 6 months, the
-# eselect module has no use anymore and the ebuild has
-# QA issues. Bug #805275, removal in 30 days.
-app-eselect/eselect-renpy
-
-# Miroslav Šulc <fordfrog@gentoo.org> (2021-07-30)
-# these libs have no consumers, removal in 30 days
-# see bug: https://bugs.gentoo.org/805152
-dev-java/jgoodies-animation
-dev-java/jgoodies-binding
-dev-java/jgoodies-forms
 
 # Joonas Niilola <juippis@gentoo.org> (2021-07-29)
 # Upstream provided migration instructions from 2. -> 3. update,
@@ -424,11 +423,6 @@ sys-libs/db:5.1
 # bug #729098
 >=sci-libs/proj-8.0.0
 >=sci-geosciences/qmapshack-1.16
-
-# Sam James <sam@gentoo.org> (2021-02-18)
-# 0.9.27 included a regression wrt deletes
-# bug #768948
-=dev-db/lmdb-0.9.27
 
 # Lars Wendler <polynomial-c@gentoo.org> (2021-02-15)
 # Mask development versions now that they were bumped...

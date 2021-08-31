@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=acct-group/gamestat x11-libs/libX11 x11-libs/libXaw x11-libs/libXt
+DESCRIPTION=Minesweeper clone with hexagonal, rectangular and triangular grid
+EAPI=8
+HOMEPAGE=http://www.gedanken.org.uk/software/xbomb/
+KEYWORDS=~amd64 ~ppc64 ~x86
+LICENSE=GPL-2+
+RDEPEND=acct-group/gamestat x11-libs/libX11 x11-libs/libXaw x11-libs/libXt media-fonts/font-misc-misc
+SLOT=0
+SRC_URI=http://www.gedanken.org.uk/software/xbomb/download/xbomb-2.2b.tgz
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=48fcda1d5bdeaa8065a704f38f18bfb0

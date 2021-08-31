@@ -43,7 +43,6 @@ games-action/heretic2
 games-action/heretic2-demo
 games-action/hotline-miami
 games-action/intrusion2
-games-action/lugaru
 games-action/shadowgrounds-bin
 games-action/shadowgrounds-survivor-bin
 games-action/solar2
@@ -102,5 +101,4 @@ net-print/cndrvcups-common-lb
 net-print/cndrvcups-lb
 sci-biology/foldingathome
 sci-chemistry/cara-bin
-sci-chemistry/mars
 sci-electronics/eagle

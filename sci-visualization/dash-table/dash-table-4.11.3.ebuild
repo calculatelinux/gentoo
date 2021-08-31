@@ -10,6 +10,9 @@ DESCRIPTION="First-Class interactive DataTable for Dash"
 HOMEPAGE="https://plot.ly/dash"
 SRC_URI="https://github.com/plotly/${PN}/archive/refs/tags/v${PV}.tar.gz
 	-> ${P}.tar.gz"
+# Test execution depends on sci-visualization/dash being installed
+# but sci-visualization/dash depends on this
+RESTRICT="test"
 
 LICENSE="MIT"
 SLOT="0"
@@ -18,3 +21,12 @@ KEYWORDS="~amd64 ~x86"
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND=""
+
+distutils_enable_tests pytest
+
+python_prepare_all() {
+	# Needs percy - not available
+	rm -r tests/selenium || die
+
+	distutils-r1_python_prepare_all
+}

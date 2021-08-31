@@ -822,6 +822,11 @@
       <role>AMD64, ARM, X86, MIPS, PPC</role>
     </member>
     <member>
+      <email>jsmolic@gentoo.org</email>
+      <name>Jakov Smolić</name>
+      <role>ARM, ARM64, dev-embedded</role>
+    </member>
+    <member>
       <email>lu_zero@gentoo.org</email>
       <name>Luca Barbato</name>
       <role>PPC, newlib</role>
@@ -2961,6 +2966,11 @@
       <role>Astronomy, Mathematics, Physics</role>
     </member>
     <member>
+      <email>jsmolic@gentoo.org</email>
+      <name>Jakov Smolić</name>
+      <role>Mathematics, *</role>
+    </member>
+    <member>
       <email>marecki@gentoo.org</email>
       <name>Marek Szuba</name>
       <role>Physics, Mathematics, Electronics, *</role>
@@ -3217,6 +3227,10 @@
     <member>
       <email>johu@gentoo.org</email>
       <name>Johannes Huber</name>
+    </member>
+    <member>
+      <email>jsmolic@gentoo.org</email>
+      <name>Jakov Smolić</name>
     </member>
     <member>
       <email>mgorny@gentoo.org</email>
