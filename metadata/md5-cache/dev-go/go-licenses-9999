@@ -1,5 +1,5 @@
 BDEPEND=>=dev-lang/go-1.12 app-arch/unzip >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile install postinst prepare test unpack
+DEFINED_PHASES=compile install prepare test unpack
 DEPEND=dev-go/licenseclassifier
 DESCRIPTION=Reports on the licenses used by a Go package and its dependencies
 EAPI=7
@@ -9,5 +9,5 @@ PROPERTIES=live
 RDEPEND=dev-go/licenseclassifier
 RESTRICT=test
 SLOT=0
-_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	go-module	8aabf8812bab7a6f07e7a32958c505ef
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	go-module	66ced1f8651b6b35c0262d39e015fe24
 _md5_=2929ef41bdc65022ae30ef19740686ac

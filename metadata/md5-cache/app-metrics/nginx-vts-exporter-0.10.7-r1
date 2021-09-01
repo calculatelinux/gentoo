@@ -1,5 +1,5 @@
 BDEPEND=dev-util/promu >=dev-lang/go-1.12 app-arch/unzip
-DEFINED_PHASES=compile install postinst prepare unpack
+DEFINED_PHASES=compile install prepare unpack
 DEPEND=acct-group/nginx-vts-exporter acct-user/nginx-vts-exporter
 DESCRIPTION=Nginx virtual host traffic stats exporter for Prometheus
 EAPI=7
@@ -10,5 +10,5 @@ RDEPEND=acct-group/nginx-vts-exporter acct-user/nginx-vts-exporter
 RESTRICT=strip
 SLOT=0
 SRC_URI=https://github.com/hnlq715/nginx-vts-exporter/archive/v0.10.7.tar.gz -> nginx-vts-exporter-0.10.7.tar.gz
-_eclasses_=go-module	8aabf8812bab7a6f07e7a32958c505ef
+_eclasses_=go-module	66ced1f8651b6b35c0262d39e015fe24
 _md5_=967377a43cf695ca5509aa6e6cd824ef
