@@ -11,5 +11,5 @@ RDEPEND=dev-libs/glib:2 dev-libs/libpcre net-misc/curl >=x11-libs/gtk+-3.4:3 gnu
 REQUIRED_USE=^^ ( gnutls openssl )
 SLOT=0
 SRC_URI=mirror://sourceforge/urlget/uget-2.2.1.tar.gz
-_eclasses_=xdg	e73b9df80596ab8f9c542c01196dec23	xdg-utils	27f9a2f19502b925ac117bd657aa2979
+_eclasses_=xdg	6024fbc93167fad782e2032933654857	xdg-utils	27f9a2f19502b925ac117bd657aa2979
 _md5_=18d55e6c91f6fb2661cebfc6944a3942
