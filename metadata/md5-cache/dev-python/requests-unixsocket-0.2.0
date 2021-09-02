@@ -4,7 +4,7 @@ DESCRIPTION=Use requests to talk HTTP via a UNIX domain socket
 EAPI=8
 HOMEPAGE=https://github.com/msabramo/requests-unixsocket
 IUSE=test python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
-KEYWORDS=amd64 arm arm64 ~ia64 ppc ~ppc64 ~sparc x86
+KEYWORDS=amd64 arm arm64 ~ia64 ppc ~ppc64 ~riscv ~sparc x86
 LICENSE=Apache-2.0
 RDEPEND=dev-python/requests[python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?] dev-python/urllib3[python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?] python_targets_python3_8? ( dev-lang/python:3.8 ) python_targets_python3_9? ( dev-lang/python:3.9 ) python_targets_python3_10? ( dev-lang/python:3.10 ) >=dev-lang/python-exec-2:=[python_targets_python3_8(-)?,python_targets_python3_9(-)?,python_targets_python3_10(-)?]
 REQUIRED_USE=|| ( python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 )
@@ -12,4 +12,4 @@ RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=mirror://pypi/r/requests-unixsocket/requests-unixsocket-0.2.0.tar.gz
 _eclasses_=distutils-r1	e297e8afd355d60fb9d2d7b37b81214f	multibuild	05a584848db4901c97fcd94ae7cc3a97	multilib	97566c1a256d07b00848aa767e38a352	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	python-r1	e20b80360497e6215aed0dd4ca7d6bad	python-utils-r1	08d890890f70fe0096093016e55438d5	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
-_md5_=1b805f47ef92836abe03d98ed2fec065
+_md5_=9c322bef6c5967383feafc6d7780c215
