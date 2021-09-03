@@ -387,6 +387,7 @@ app-editors/emacs:toolkit-scroll-bars - Use the selected toolkit's scrollbars in
 app-editors/emacs:wide-int - Prefer wide Emacs integers (typically 62-bit). This option has an effect only on architectures where "long" and "long long" types have different size.
 app-editors/emacs:xwidgets - Enable use of GTK widgets in Emacs buffers (requires GTK3)
 app-editors/fe:sendmail - Send mail after editor abend
+app-editors/featherpad:X - Link application against X11 libraries which adds support for virtual desktop awareness and tab DND
 app-editors/gedit-plugins:charmap - Insert special characters just by clicking on them
 app-editors/gedit-plugins:git - Shows document changes related to git's HEAD
 app-editors/gedit-plugins:terminal - Embed a terminal in the bottom pane
@@ -8492,6 +8493,7 @@ www-apps/xpra-html5:brotli - Install assets compressed with brotli
 www-apps/xpra-html5:gzip - Install assets compressed with gzip
 www-apps/xpra-html5:minify - Minify JavaScript code for smaller transfers
 www-client/chromium:component-build - Split build into more shared libraries to speed up linking. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
+www-client/chromium:debug - Enable DCHECK feature with severity configurable at runtime. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
 www-client/chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/chromium:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general use.
 www-client/chromium:js-type-check - Enable JavaScript type-checking for Chrome's web technology-based UI. Requires Java.
