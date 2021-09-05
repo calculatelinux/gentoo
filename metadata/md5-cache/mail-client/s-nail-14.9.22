@@ -10,5 +10,5 @@ LICENSE=BSD BSD-4 ISC RSA
 RDEPEND=sys-libs/ncurses:0= virtual/libiconv idn? ( net-dns/libidn2 ) net? ( ssl? ( dev-libs/openssl:0= ) kerberos? ( virtual/krb5 ) ) !mail-client/mailx !net-mail/mailutils !mail-client/nail
 SLOT=0
 SRC_URI=https://ftp.sdaoden.eu/s-nail-14.9.22.tar.xz
-_eclasses_=multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_eclasses_=multilib	4b66d835ec72e021e359bb81eacfe988	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
 _md5_=a4d9b6f440a3d3f4ea9bd0444f6cf1fd

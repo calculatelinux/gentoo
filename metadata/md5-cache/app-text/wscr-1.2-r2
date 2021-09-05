@@ -7,5 +7,5 @@ LICENSE=public-domain
 RDEPEND=sys-apps/miscfiles
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~jer/wscr-1.2.tar.gz
-_eclasses_=multilib	97566c1a256d07b00848aa767e38a352	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_eclasses_=multilib	4b66d835ec72e021e359bb81eacfe988	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
 _md5_=8e0ae3b997e00a602af57a0995dc658f

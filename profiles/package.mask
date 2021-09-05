@@ -32,18 +32,35 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-09-04)
+# EAPI-5, dead, unused, bug 808213; Removal on 2021-10-04.
+x11-libs/mx
+
+# David Seifert <soap@gentoo.org> (2021-09-04)
+# Last upstream release over 2.5 years ago, removed by Fedora,
+# unresponsive maintainer in Gentoo, broken with linux-headers-5.13,
+# relies on glibc implementation details.
+# Bug #717114, #801457, removal in 30 days.
+dev-util/trinity
+
+# Ionen Wolkens <ionen@gentoo.org> (2021-09-03)
+# Currently may not function with kde-plasma/kwin (black screen),
+# so keeping masked for testing due to being a primary consumer.
+# Should be safe to unmask if you are using x11-wm/mutter instead.
+>=gui-libs/egl-wayland-1.1.8
+
+# Sam James <sam@gentoo.org> (2021-09-03)
+# Mask broken version of setuptools_scm with
+# missing runtime dependency.
+# bug #811504
+=dev-python/setuptools_scm-6.3.0
+
 # David Seifert <soap@gentoo.org> (2021-08-29)
 # Broken for the past 5 years (#585942), no new upstream release in over
 # 5 years. Same issues as sci-biology/wgs-assembler, use a modern
 # assembler like sci-biology/abyss or canu.
 # Bug #585942, #731880, #808667, removal in 30 days.
 sci-biology/mira
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2021-08-28)
-# Both versions have several bugs and have been pulled off PyPI
-# Bugs #810808 and #810790.
-=dev-python/setuptools_scm-6.1.0
-=dev-python/setuptools_scm-6.2.0
 
 # Alexey Sokolov <alexey+gentoo@asokolov.org> (2021-08-30)
 # Homepage dead, uses gtk2, fails to build, https://bugs.gentoo.org/711344
@@ -169,20 +186,6 @@ dev-python/pydiff
 # as replacement. Bug #769017.
 app-i18n/man-pages-it
 
-# David Seifert <soap@gentoo.org> (2021-08-05)
-# Dead upstream, last release over 5 years ago, multiple
-# build issues, fails to build with GCC 11. Use something like
-# sci-biology/abyss or canu as a modern day replacement.
-# Bug #610094, #715874, #731860, #739486, removal in 30 days.
-sci-biology/wgs-assembler
-
-# Sam James <sam@gentoo.org> (2021-08-05)
-# Fails to build with GCC 11. No activity upstream.
-# bug #740308, bug #789816. Removal on 2021-09-05.
-app-eselect/eselect-audicle
-app-eselect/eselect-miniaudicle
-media-sound/audicle
-
 # David Seifert <soap@gentoo.org> (2021-08-04)
 # Last release over 4 years ago, upstream pretty much dead, the
 # ecosystem has switched to dev-util/pkgconf, which is alive. Testing
@@ -190,30 +193,23 @@ media-sound/audicle
 # (If you hit blockers, please run:
 # $ emerge --deselect dev-util/pkgconfig
 # This is necessary as your world file should not contain dependencies.)
-# Bug #245228, #632124, #691268, #767853, removal in 30 days.
 dev-util/pkgconfig
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2021-08-02)
-# Two years after the tracker was opened it is time to mask dev-qt/qtwebkit
-# for good. No commits to upstream repository for >9 months, latest available
-# tarball still "alpha" with warning about known unpatched vulnerabilities.
-# Bugs: #684580, #685750, #709858, #740416
-dev-qt/qtwebkit:5
-app-text/fb2edit
+# Depends on Qt5WebKit with more holes in it than swiss cheese. Bug #685750
+# Last release in 2016. Removal on 2021-10-04.
 mail-client/trojita
-<media-video/openshot-2.5.1_p20210228
 
-# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-07-31)
-# Obsolete; all versions in current Perl core distributions
-# are newer, and no virtuals currently pull these packages.
-# Removal in 30 days.
-perl-core/ExtUtils-MakeMaker
-perl-core/ExtUtils-Manifest
-perl-core/File-Path
-perl-core/Getopt-Long
-perl-core/HTTP-Tiny
-perl-core/JSON-PP
-perl-core/libnet
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-08-02)
+# Depends on Qt5WebKit with more holes in it than swiss cheese. Bug #740416
+# Removal on 2021-10-04.
+app-text/fb2edit
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-08-02)
+# No commits to upstream repository for >9 months, latest available tarball
+# still "alpha" with warning about known unpatched vulnerabilities. Bug #684580
+# Removal on 2021-10-04.
+dev-qt/qtwebkit:5
 
 # Joonas Niilola <juippis@gentoo.org> (2021-07-29)
 # Upstream provided migration instructions from 2. -> 3. update,
@@ -372,18 +368,6 @@ sys-libs/db:5.1
 # Bug #729672.
 media-plugins/kodi-game-libretro-nestopia
 media-plugins/kodi-game-libretro-dosbox
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-10-26)
-# Historical metapackage that exists in slot 5 only for transition from KDE SC4.
-# Masked for removal on 2021-08-31. Replaced by:
-# emerge --noreplace kde-plasma/plasma-meta kde-apps/kde-apps-meta
-kde-apps/kde-meta:5
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2020-10-26)
-# Historical metapackage that exists in slot 5 only for transition from KDE SC4.
-# Masked for removal on 2021-08-31. Replaced by:
-# emerge --noreplace kde-plasma/plasma-meta kde-apps/kdecore-meta
-kde-apps/kdebase-meta:5
 
 # Sam James <sam@gentoo.org> (2020-10-05)
 # Masked for testing. New major versions of Guile
