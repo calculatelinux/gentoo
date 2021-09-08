@@ -204,9 +204,10 @@ getfilevar() {
 		unset ARCH
 
 		# We use nonfatal because we want the caller to take care of things #373151
+		# Pass need-config= to make to avoid config check in kernel Makefile.
 		[[ ${EAPI:-0} == [0123] ]] && nonfatal() { "$@"; }
 		echo -e "e:\\n\\t@echo \$(${1})\\ninclude ${basefname}" | \
-			nonfatal emake -C "${basedname}" M="${T}" ${BUILD_FIXES} -s -f - 2>/dev/null
+			nonfatal emake -C "${basedname}" M="${T}" need-config= ${BUILD_FIXES} -s -f - 2>/dev/null
 
 		ARCH=${myARCH}
 	fi
@@ -961,21 +962,6 @@ linux-info_pkg_setup() {
 	use kernel_linux || return
 
 	linux-info_get_any_version
-
-	if kernel_is 2 4; then
-		if [ "$( gcc-major-version )" -eq "4" ] ; then
-			echo
-			ewarn "Be warned !! >=sys-devel/gcc-4.0.0 isn't supported with"
-			ewarn "linux-2.4 (or modules building against a linux-2.4 kernel)!"
-			echo
-			ewarn "Either switch to another gcc-version (via gcc-config) or use a"
-			ewarn "newer kernel that supports >=sys-devel/gcc-4."
-			echo
-			ewarn "Also, be aware that bug reports about gcc-4 not working"
-			ewarn "with linux-2.4 based ebuilds will be closed as INVALID!"
-			echo
-		fi
-	fi
 
 	[ -n "${CONFIG_CHECK}" ] && check_extra_config;
 }
