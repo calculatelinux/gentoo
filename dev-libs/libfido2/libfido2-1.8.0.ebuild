@@ -41,17 +41,14 @@ pkg_pretend() {
 
 src_configure() {
 	local mycmakeargs=(
-		-DNFC_LINUX="$(usex nfc)"
+		-DBUILD_EXAMPLES=OFF
+		-DBUILD_STATIC_LIBS=$(usex static-libs ON OFF)
+		-DNFC_LINUX=$(usex nfc ON OFF)
 	)
 	cmake_src_configure
 }
 
 src_install() {
 	cmake_src_install
-
-	if ! use static-libs; then
-		rm -f "${ED}/$(get_libdir)"/*.a || die
-	fi
-
 	udev_newrules udev/70-u2f.rules 70-libfido2-u2f.rules
 }
