@@ -10,7 +10,7 @@ inherit ecm kde.org
 
 DESCRIPTION="An assortment of high-level widgets for common tasks"
 LICENSE="LGPL-2.1+"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
+KEYWORDS="amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
 IUSE="nls"
 
 BDEPEND="
@@ -30,7 +30,7 @@ src_configure() {
 }
 
 src_test() {
-	# bug 650216, 653186, 697866
-	local myctestargs=( -E "(kdatecomboboxtest|ksqueezedtextlabelautotest)" )
+	# bug 650216, 653186, 697866, 808216
+	local myctestargs=( -E "(kdatecomboboxtest|ksqueezedtextlabelautotest|ktwofingertaptest|ktwofingerswipetest)" )
 	ecm_src_test
 }

@@ -32,6 +32,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Ionen Wolkens <ionen@gentoo.org> (2021-09-12)
+# No reverse dependencies, stuck on EAPI-5.
+# Replaced by dev-libs/spsdeclib.
+# Removal on 2021-10-12. bug #812806
+games-emulation/caps
+
+# Ionen Wolkens <ionen@gentoo.org> (2021-09-12)
+# No reverse dependencies, stuck on EAPI-5, last release in 2006.
+# Please report if anyone still need this.
+# Removal on 2021-10-12. bug #776904
+media-libs/sdl-terminal
+
+# Ionen Wolkens <ionen@gentoo.org> (2021-09-12)
+# Stuck on x86 / amd64-multilib, no upstream, code relies on
+# several implicit constructs and undefined behavior, ebuild
+# semi-broken and runtime seems broken even if built.
+# Removal on 2021-10-12. bug #701414, bug #739188.
+games-emulation/nestra
+
 # Arthur Zamarin <arthurzam@gentoo.org> (2021-09-11)
 # No reverse dependencies. Implements ordered set, which was needed
 # for the python 2.6 era, and since python 2.7 isn't needed and is
@@ -203,23 +222,6 @@ dev-perl/MooseX-Types-DateTimeX
 # no easy fix. Removal in 30 days.
 dev-perl/Perlbal-XS-HTTPHeaders
 
-# David Seifert <soap@gentoo.org> (2021-08-13)
-# Dead upstream, new "forked" upstream that just added the last version
-# on Github but doesn't maintain them. Unmaintained for the past 10
-# years in ::gentoo, no other real distros package these anymore.
-# HOMEPAGE leads to some scammy site.
-# Bug #318143, #626666, #626668, Removal in ~30 days.
-dev-libs/libbrahe
-dev-libs/libcoyotl
-dev-libs/libevocosm
-app-benchmarks/acovea
-app-benchmarks/acovea-gtk
-
-# Agostino Sarubbo <ago@gentoo.org> (2021-08-12)
-# Latest release 2012, not anymore useful for current routers
-# Removal in ~30 days.
-app-crypt/WiRouterKeyRec
-
 # David Seifert <soap@gentoo.org> (2021-08-04)
 # Last release over 4 years ago, upstream pretty much dead, the
 # ecosystem has switched to dev-util/pkgconf, which is alive. Testing
@@ -267,14 +269,6 @@ dev-qt/qtwebkit:5
 # Masked for testing
 >=mail-client/claws-mail-4.0.0
 
-# Hans de Graaff <graaff@gentoo.org> (2021-07-09)
-# Mask ruby25 for removal. This version is no longer supported
-# upstream. Use a newer ruby version, e.g ruby26.
-# Masked for removal in 30 days.
-dev-lang/ruby:2.5
-=dev-ruby/rubygems-2.7*
-dev-ruby/did_you_mean:2.5
-
 # Michał Górny <mgorny@gentoo.org> (2021-07-06)
 # Upstream changed license to GPL-3+ in order to deliberately cause
 # incompatiblity with revdep licenses.  Mask until the situation
@@ -299,14 +293,6 @@ sys-libs/db:5.1
 # New Minecraft server release needs at least Java 16,
 # which is currently not available in Gentoo.
 >=games-server/minecraft-server-1.17
-
-# Davide Pesavento <pesa@gentoo.org> (2021-06-15)
-# Masked for revdep testing.
->=dev-python/sip-6
->=dev-python/PyQt5-5.15.5_pre
->=dev-python/PyQtWebEngine-5.15.5_pre
->=dev-python/qscintilla-python-2.13
->=app-text/calibre-5.25.0
 
 # Sam James <sam@gentoo.org> (2021-06-12)
 # Masked until all reverse dependencies support

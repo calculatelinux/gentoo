@@ -14,7 +14,7 @@ S="${WORKDIR}/PyDev.Debugger-pydev_debugger_${PV//./_}"
 
 LICENSE="EPL-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~riscv"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~sparc"
 
 # After removing and recompiling the prebuilt lib the tests fail?
 # For some reason the test suite is executing a slightly different gdb command
@@ -41,6 +41,12 @@ distutils_enable_tests pytest
 
 python_prepare_all() {
 	distutils-r1_python_prepare_all
+
+	# Drop -O3 and -flto compiler args
+	sed -i \
+		-e 's/extra_link_args = extra_compile_args\[\:\]/pass/g' \
+		-e '/extra_compile_args/d' \
+		setup.py || die
 
 	# Clean up some prebuilt files
 	rm -r third_party || die

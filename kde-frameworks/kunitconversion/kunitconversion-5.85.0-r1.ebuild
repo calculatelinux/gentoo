@@ -9,7 +9,7 @@ inherit ecm kde.org
 
 DESCRIPTION="Framework for converting units"
 LICENSE="LGPL-2+"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
+KEYWORDS="amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
 IUSE=""
 
 DEPEND="
@@ -24,9 +24,11 @@ PATCHES=( # KDE-bug 441337
 )
 
 src_test() {
-	# bug 623938 - needs internet connection
 	local myctestargs=(
-		-E "(convertertest)"
+		# convertertest: bug 623938 - needs internet connection
+		# categorytest: bug 808216 - needs internet connection
+		# currencytableinittest: bug 808216 - unknown, reported upstream
+		-E "(convertertest|categorytest|currencytableinittest)"
 	)
 
 	LC_NUMERIC="C" ecm_src_test # bug 694804
