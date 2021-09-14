@@ -10,5 +10,5 @@ RDEPEND=>=dev-lang/erlang-22[ssl]
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.8.14/rabbitmq-server-3.8.14.tar.xz
-_eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multilib	4b66d835ec72e021e359bb81eacfe988	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	python-any-r1	13f6d423c5c5bc519a9b552654cc745f	python-utils-r1	08d890890f70fe0096093016e55438d5	systemd	c846b9e02ac8293bfc9ca38a195c2a18	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	user	1033b6bed7cf367c4507ea9a3ff503d0	user-info	2e75eaea3582b052ec16d9d5aa74ced3
+_eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multilib	4b66d835ec72e021e359bb81eacfe988	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	python-any-r1	13f6d423c5c5bc519a9b552654cc745f	python-utils-r1	655fe65f186504e455c2f3116808fda8	systemd	c846b9e02ac8293bfc9ca38a195c2a18	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa	user	1033b6bed7cf367c4507ea9a3ff503d0	user-info	2e75eaea3582b052ec16d9d5aa74ced3
 _md5_=3682a157dde8fc9083008a3e035cd9e0
