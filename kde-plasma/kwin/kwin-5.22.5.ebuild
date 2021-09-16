@@ -15,7 +15,7 @@ DESCRIPTION="Flexible, composited Window Manager for windowing systems on Linux"
 
 LICENSE="GPL-2+"
 SLOT="5"
-KEYWORDS="amd64 ~arm ~arm64 ~ppc64 ~riscv x86"
+KEYWORDS="amd64 ~arm arm64 ~ppc64 ~riscv x86"
 IUSE="accessibility caps gles2-only multimedia plasma screencast"
 
 RESTRICT="test"
@@ -103,7 +103,10 @@ PDEPEND="
 	>=kde-plasma/kde-cli-tools-${PVCUT}:5
 "
 
-PATCHES=( "${FILESDIR}/${P}-libglvnd-1.3.4.patch" ) # KDE-bug 440372, bug 810511
+PATCHES=(
+	"${FILESDIR}/${P}-libglvnd-1.3.4.patch" # KDE-bug 440372, bug 810511
+	"${FILESDIR}/${P}-32bit.patch" # bug 813228
+)
 
 src_prepare() {
 	ecm_src_prepare
