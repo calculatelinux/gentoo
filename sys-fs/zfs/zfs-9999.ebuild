@@ -5,7 +5,7 @@ EAPI=7
 
 DISTUTILS_OPTIONAL=1
 DISTUTILS_USE_SETUPTOOLS=manual
-PYTHON_COMPAT=( python3_{7,8,9} )
+PYTHON_COMPAT=( python3_{8,9,10} )
 
 inherit autotools bash-completion-r1 dist-kernel-utils distutils-r1 flag-o-matic linux-info pam systemd udev usr-ldscript
 
@@ -25,7 +25,7 @@ else
 	S="${WORKDIR}/${P%_rc?}"
 
 	if [[ ${PV} != *_rc* ]]; then
-		KEYWORDS="~amd64 ~arm64 ~ppc64"
+		KEYWORDS="~amd64 ~arm64 ~ppc64 ~riscv"
 	fi
 fi
 
@@ -130,7 +130,6 @@ pkg_setup() {
 }
 
 libsoversion_check() {
-
 	local bugurl libzfs_sover
 	bugurl="https://bugs.gentoo.org/enter_bug.cgi?form_name=enter_bug&product=Gentoo+Linux&component=Current+packages"
 
