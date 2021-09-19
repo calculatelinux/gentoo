@@ -1,7 +1,7 @@
 BDEPEND=virtual/pkgconfig
 DEFINED_PHASES=compile install prepare test
 DEPEND=dev-db/sqlite
-DESCRIPTION=static analysis tool for C
+DESCRIPTION=Static analysis tool for C
 EAPI=7
 HOMEPAGE=http://smatch.sourceforge.net/
 KEYWORDS=~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86
@@ -10,4 +10,4 @@ RDEPEND=dev-db/sqlite
 SLOT=0
 SRC_URI=http://repo.or.cz/w/smatch.git/snapshot/1.60.tar.gz -> smatch-1.60.tar.gz mirror://gentoo/smatch-1.60.tar.gz
 _eclasses_=multilib	4b66d835ec72e021e359bb81eacfe988	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
-_md5_=aa845c6c79716fbfaf52ac525b3aef75
+_md5_=1d3183d9e8596968abd5e63f0e84613d

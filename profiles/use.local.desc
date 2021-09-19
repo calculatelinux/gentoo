@@ -150,6 +150,7 @@ app-admin/salt:portage - Add support for package state enforcement using sys-app
 app-admin/salt:raet - Add support for the new RAET transport.
 app-admin/salt:redis - Support returning data to a redis database.
 app-admin/salt:zeromq - Add support for the zeromq transport.
+app-admin/setools:infoflow - Depend on dev-python/networkx to use seinfoflow
 app-admin/sudo:gcrypt - Use message digest functions from dev-libs/libgcrypt instead of sudo's
 app-admin/sudo:offensive - Let sudo print insults when the user types the wrong password
 app-admin/sudo:secure-path - Replace PATH variable with compile time secure paths
@@ -8402,6 +8403,7 @@ sys-power/nvclock:gtk - Install the GTK+ based graphical interface
 sys-power/nvclock:nvcontrol - Add NVCONTROL support for OpenGL options
 sys-power/suspend:crypt - Allows suspend and resume from encrypted disk
 sys-process/audit:gssapi - Enable GSSAPI support
+sys-process/bottom:battery - Include support for laptop battery information.
 sys-process/criu:setproctitle - Make process titles of service workers to be more verbose
 sys-process/cronie:anacron - Install the periodic anacron command scheduler.
 sys-process/fcron:debug - Enable debug code and output. Since version 3.0.5 this will no longer force foreground execution, and fcron will be able to run as a service properly.
