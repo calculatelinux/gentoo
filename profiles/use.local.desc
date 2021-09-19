@@ -4178,7 +4178,6 @@ media-libs/libgroove:sound - Enable audio playing.
 media-libs/libheif:aom - Use media-libs/libaom for AVIF encoding/decoding
 media-libs/libheif:gdk-pixbuf - Enable x11-libs/gdk-pixbuf plugin
 media-libs/libheif:go - Enable building dev-lang/go code/examples
-media-libs/libheif:libde265 - Use media-libs/libde265 for HEIF decoding
 media-libs/libheif:rav1e - Use media-video/rav1e for AVIF encoding
 media-libs/libheif:x265 - Use media-libs/x265 for HEIF encoding
 media-libs/liblastfm:fingerprint - Build the lastfm-fingerprint library
@@ -4538,6 +4537,7 @@ media-sound/drumstick:fluidsynth - Enable support for media-sound/fluidsynth
 media-sound/drumstick:network - Build Network RT backend
 media-sound/easyeffects:bs2b - Enable use of media-libs/libbs2b for the crossfeed FX
 media-sound/easyeffects:calf - Enable use of media-plugins/calf for adding various FX
+media-sound/easyeffects:doc - Install packages needed to display built-in user documentation
 media-sound/easyeffects:mda-lv2 - Enable use of media-plugins/mda-lv2 for the loudness FX
 media-sound/easyeffects:rnnoise - Enable use of media-libs/rnnoise for the neural network-based noise-reduction FX
 media-sound/easyeffects:rubberband - Enable use of media-libs/rubberband for the pitch-shifting FX
@@ -4690,6 +4690,7 @@ media-sound/pulseaudio-modules-bt:native-headset - Build with native HSP (Headse
 media-sound/pulseaudio-modules-bt:ofono-headset - Build with oFono HFP (Hands Free Profile) headset for bluez 5, requires net-misc/ofono.
 media-sound/pulseeffects:bs2b - Enable use of media-libs/libbs2b for the crossfeed FX
 media-sound/pulseeffects:calf - Enable use of media-plugins/calf for adding various FX
+media-sound/pulseeffects:doc - Install packages needed to display built-in user documentation
 media-sound/pulseeffects:rnnoise - Enable use of media-libs/rnnoise for the neural network-based noise-reduction FX
 media-sound/pulseeffects:rubberband - Enable use of media-libs/rubberband for the pitch-shifting FX
 media-sound/pulseeffects:webrtc - Enable use of media-plugins/gst-plugins-webrtc for various voice-enhancement FX
