@@ -92,7 +92,7 @@ src_prepare() {
 	popd >&/dev/null || die
 
 	# fix gentoo platform support
-	eapply -p1 "${FILESDIR}/${P}-cmake-gentoo.patch"
+	eapply -p1 "${FILESDIR}/${PN}-20.0.2-cmake-gentoo.patch"
 
 	# fix missing DESTDIR in symlink creation
 	sed -i '/bareos-symlink-default-db-backend.cmake/d' "${S}/core/src/cats/CMakeLists.txt"
@@ -194,8 +194,9 @@ src_install() {
 	# remove upstream init scripts and systemd units
 	rm -f "${D}"/etc/init.d/bareos-* "${D}"/lib/systemd/system/bareos-*.service
 
-	# remove misc stuffwe do not need in production
+	# remove misc stuff we do not need in production
 	rm -f "${D}"/etc/bareos/bareos-regress.conf
+	rm -f "${D}"/etc/logrotate.d/bareos-dir
 
 	# get rid of py2 stuff if USE=-vmware
 	if ! use vmware; then
