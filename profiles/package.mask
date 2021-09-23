@@ -33,6 +33,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2021-09-23)
+# Ancient version from 2016 that collides with dev-python/pyjwt.
+# Never bumped by the maintainer.  The only revdep turned out to be
+# false positive.
+# Removal on 2021-10-23.  Bug #814449.
+dev-python/python-jwt
+
 # Louis Sautier <sbraz@gentoo.org> (2021-09-19)
 # Last release in 2019, no reverse dependencies.
 # dev-python/isort provides similar functionality.
@@ -100,6 +107,7 @@ net-libs/libsoup:3.0
 >=net-libs/glib-networking-2.69
 >=dev-libs/gobject-introspection-common-1.69
 >=dev-libs/gobject-introspection-1.69
+>=dev-python/pygobject-3.41
 
 # Ionen Wolkens <ionen@gentoo.org> (2021-09-12)
 # No reverse dependencies, stuck on EAPI-5.
