@@ -108,6 +108,6 @@ src_install() {
 
 	# Install third_party/libyuv anyway...
 	dodir /usr/include/tg_owt/third_party/libyuv/include
-	cd "${S}/src/third_party/libyuv/include"
-	find -type f -name "*.h" -exec install -Dm644 '{}' "${ED}/usr/include/tg_owt/third_party/libyuv/include/{}" \;
+	cd "${S}/src/third_party/libyuv/include" || die
+	find -type f -name "*.h" -exec install -Dm644 '{}' "${ED}/usr/include/tg_owt/third_party/libyuv/include/{}" \; || die
 }

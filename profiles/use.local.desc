@@ -1945,10 +1945,8 @@ dev-libs/boost:tools - Build and install the boost tools (bcp, quickbook, inspec
 dev-libs/botan:boost - use dev-libs/boost
 dev-libs/check:subunit - Enable support for the subunit unit test protocol
 dev-libs/crypto++:asm - Support assembly hand optimized crypto functions (i.e. faster run time)
-dev-libs/cudnn:cuda10-2 - On nVidia CUDA 10.2.
-dev-libs/cudnn:cuda11 - On nVidia CUDA 11.x.
-dev-libs/cudnn:cuda11-1 - On nVidia CUDA 11.1.
-dev-libs/cudnn:cuda11-4 - On nVidia CUDA 11.4
+dev-libs/cudnn:cuda10-2 - On Nvidia CUDA 10.2
+dev-libs/cudnn:cuda11-4 - On Nvidia CUDA 11.4
 dev-libs/cyberjack:tools - Build and install optional management tools.
 dev-libs/cyrus-sasl:authdaemond - Add Courier-IMAP authdaemond unix socket support (net-mail/courier-imap, mail-mta/courier)
 dev-libs/cyrus-sasl:ldapdb - Enable ldapdb plugin
@@ -3934,6 +3932,7 @@ media-gfx/eog-plugins:map - Enable world map display using media-libs/libchampla
 media-gfx/eog-plugins:picasa - Enable uploading to Google's Picasa Web Albums
 media-gfx/eom:imagemagick - Use media-gfx/imagemagick as an external backend for the thumbnailer
 media-gfx/exact-image:swig - Adds Swig support dev-lang/swig
+media-gfx/exiv2:bmff - Add support for the ISOBMFF format
 media-gfx/exiv2:webready - Support reading metadata over the internet
 media-gfx/fbida:X - Install the Motif based image viewer "ida"
 media-gfx/fbida:fbcon - Install the framebuffer image viewer "fbi"
@@ -4201,6 +4200,9 @@ media-libs/libplacebo:vulkan - Add support for the vulkan graphics API
 media-libs/libpng:apng - support unofficial APNG (Animated PNG) spec
 media-libs/libpng-compat:apng - support unofficial APNG (Animated PNG) spec
 media-libs/libprojectm:gles2 - Provide support for OpenGL ES 2 and 3
+media-libs/libpulse:asyncns - Use libasyncns for asynchronous name resolution.
+media-libs/libpulse:doc - Build the doxygen-described API documentation.
+media-libs/libpulse:glib - Add support to dev-libs/glib-based mainloop for the libpulse client library, to allow using libpulse on glib-based programs.
 media-libs/libsdl:joystick - Control joystick support (disable at your own risk)
 media-libs/libsdl:sound - Control audio support (disable at your own risk)
 media-libs/libsdl:tslib - Build with tslib support for touchscreen devices
@@ -4690,6 +4692,20 @@ media-sound/pulseaudio:ssl - Use dev-libs/openssl to provide support for RAOP (A
 media-sound/pulseaudio:system-wide - Allow preparation and installation of the system-wide init script for PulseAudio. Since this support is only supported for embedded situations, do not enable without reading the upstream instructions at https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/WhatIsWrongWithSystemWide/ .
 media-sound/pulseaudio:systemd - Build with sys-apps/systemd support to replace standalone ConsoleKit.
 media-sound/pulseaudio:webrtc-aec - Uses the webrtc.org AudioProcessing library for enhancing VoIP calls greatly in applications that support it by performing acoustic echo cancellation, analog gain control, noise suppression and other processing.
+media-sound/pulseaudio-daemon:X - Build the X11 publish module to export PulseAudio information through X11 protocol for clients to make use. Don't enable this flag if you want to use a system wide instance. If unsure, enable this flag.
+media-sound/pulseaudio-daemon:alsa-plugin - Request installing media-plugins/alsa-plugins with PulseAudio plugin enabled. This ensures that clients supporting ALSA only will use PulseAudio.
+media-sound/pulseaudio-daemon:asyncns - Use libasyncns for asynchronous name resolution.
+media-sound/pulseaudio-daemon:elogind - Use sys-auth/elogind for giving each session a PA client
+media-sound/pulseaudio-daemon:equalizer - Enable the equalizer module (requires sci-libs/fftw).
+media-sound/pulseaudio-daemon:gdbm - Use sys-libs/gdbm to store PulseAudio databases. Recommended for desktop usage. This flag causes the whole package to be licensed under GPL-2 or later.
+media-sound/pulseaudio-daemon:glib - Build the GSettings PA module.
+media-sound/pulseaudio-daemon:native-headset - Build with native HSP backend for bluez 5.
+media-sound/pulseaudio-daemon:ofono-headset - Build with oFono HFP backend for bluez 5, requires net-misc/ofono.
+media-sound/pulseaudio-daemon:oss - Enable OSS sink/source (output/input). Deprecated, upstream does not support this on systems where other sink/source systems are available (i.e.: Linux). The padsp wrapper is now always build if the system supports OSS at all.
+media-sound/pulseaudio-daemon:ssl - Use dev-libs/openssl to provide support for RAOP (AirPort) streaming.
+media-sound/pulseaudio-daemon:system-wide - Allow preparation and installation of the system-wide init script for PulseAudio. Since this support is only supported for embedded situations, do not enable without reading the upstream instructions at https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/WhatIsWrongWithSystemWide/ .
+media-sound/pulseaudio-daemon:systemd - Build with sys-apps/systemd support to replace standalone ConsoleKit.
+media-sound/pulseaudio-daemon:webrtc-aec - Uses the webrtc.org AudioProcessing library for enhancing VoIP calls greatly in applications that support it by performing acoustic echo cancellation, analog gain control, noise suppression and other processing.
 media-sound/pulseaudio-modules-bt:fdk - AAC encoding support using media-libs/fdk-aac
 media-sound/pulseaudio-modules-bt:ffmpeg - APTX, APTX-HD encoding support
 media-sound/pulseaudio-modules-bt:ldac - LDAC encoding support, using media-libs/libldac
@@ -6637,6 +6653,7 @@ net-misc/whois:xcrypt - Enable crypt through sys-libs/libxcrypt package
 net-misc/x2goserver:fuse - Use net-fs/sshfs to allow shared folders
 net-misc/xmrig:donate - Set the default donation level to 1% instead of 0
 net-misc/xmrig:hwloc - Use sys-apps/hwloc for CPU affinity support
+net-misc/xmrig:opencl - Enable OpenCL support
 net-misc/youtube-viewer:gtk - Install the gtk3 GUI
 net-misc/youtube-viewer:gtk2 - Use the old gtk2 GUI instead of the gtk3 one
 net-misc/zerotier:clang - Use Clang compiler instead of GCC

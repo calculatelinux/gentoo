@@ -5,14 +5,14 @@ EAPI=7
 
 inherit autotools linux-info pam systemd
 
-DESCRIPTION="Opensourced tools for VMware guests"
+DESCRIPTION="Tools for VMware guests"
 HOMEPAGE="https://github.com/vmware/open-vm-tools"
 MY_P="${PN}-${PV/_p/-}"
 SRC_URI="https://github.com/vmware/open-vm-tools/releases/download/stable-${PV%_p*}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="X +deploypkg +dnet doc +fuse gtkmm +icu multimon pam +resolutionkms +ssl +vgauth"
 REQUIRED_USE="
 	multimon? ( X )

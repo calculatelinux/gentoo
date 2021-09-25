@@ -215,8 +215,7 @@ src_prepare() {
 	if use prefix; then
 		hprefixify -e "/EUID/s,0,${EUID}," -q '"' etc/profile
 		hprefixify etc/{env.d/50baselayout,shells} share.Linux/passwd
-		echo PATH=/usr/bin:/bin >> etc/env.d/99host
-		echo ROOTPATH=/usr/sbin:/sbin:/usr/bin:/bin >> etc/env.d/99host
+		echo PATH=/usr/sbin:/sbin:/usr/bin:/bin >> etc/env.d/99host
 	fi
 
 	# don't want symlinked directories in PATH on systems with usr-merge
@@ -242,9 +241,6 @@ src_prepare() {
 		ldpaths+=":${EPREFIX}/usr/local/${libdir}"
 	done
 	echo "LDPATH='${ldpaths#:}'" >> etc/env.d/50baselayout
-
-	# rc-scripts version for testing of features that *should* be present
-	echo "Gentoo Base System release ${PV}" > etc/gentoo-release
 }
 
 src_install() {
@@ -258,11 +254,6 @@ src_install() {
 	# need the makefile in pkg_preinst
 	insinto /usr/share/${PN}
 	doins Makefile
-
-	# This is needed for https://bugs.gentoo.org/732142
-	dodir /usr/lib
-	mv "${ED}"/etc/os-release "${ED}"/usr/lib || die
-	dosym ../usr/lib/os-release /etc/os-release
 }
 
 pkg_postinst() {
