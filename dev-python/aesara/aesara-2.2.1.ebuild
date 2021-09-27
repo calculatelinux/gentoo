@@ -4,7 +4,7 @@
 EAPI=8
 
 PYTHON_COMPAT=( python3_{8..10} )
-inherit distutils-r1 optfeature
+inherit distutils-r1 multiprocessing optfeature
 
 MY_P=aesara-rel-${PV}
 DESCRIPTION="Library for operating on mathematical expressions with multi-dimensional arrays"
@@ -14,7 +14,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="amd64 ~arm ~arm64 x86"
 
 RDEPEND="
 	dev-python/filelock[${PYTHON_USEDEP}]
