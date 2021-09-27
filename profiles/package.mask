@@ -33,6 +33,23 @@
 
 #--- END OF EXAMPLES ---
 
+# Joonas Niilola <juippis@gentoo.org> (2021-09-26)
+# A library without revdeps, EAPI-5. #776901
+# Removal in ~30 days.
+media-libs/libyami
+
+# Brian Evans <grknight@gentoo.org> (2021-09-26)
+# Mask for 8.1 RC
+dev-lang/php:8.1
+virtual/httpd-php:8.1
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-09-25)
+# Upstream renamed the Theano project and continued as dev-python/aesara.
+# No reverse dependencies.
+# Removal on 2021-10-25.
+dev-python/theano
+dev-python/theano-pymc
+
 # Mart Raudsepp <leio@gentoo.org> (2021-09-24)
 # Experimental split media-sound/pulseaudio packages, bug #536780.
 media-libs/libpulse
@@ -103,16 +120,6 @@ sys-devel/automake:1.11
 # end up loaded into the same process together with the earlier libsoup ABI.
 # Migration to it is expected for GNOME 42, NOT to be unmasked with GNOME 41.
 net-libs/libsoup:3.0
-
-# Gnome Team <gnome@gentoo.org> (2021-09-13)
-# GNOME 41 mask, bug #812986
->=dev-util/gdbus-codegen-2.69
->=dev-util/glib-utils-2.69
->=dev-libs/glib-2.69
->=net-libs/glib-networking-2.69
->=dev-libs/gobject-introspection-common-1.69
->=dev-libs/gobject-introspection-1.69
->=dev-python/pygobject-3.41
 
 # Ionen Wolkens <ionen@gentoo.org> (2021-09-12)
 # No reverse dependencies, stuck on EAPI-5.
@@ -244,11 +251,11 @@ sci-biology/mira
 # Homepage dead, uses gtk2, fails to build, https://bugs.gentoo.org/711344
 games-puzzle/gnudoku
 
-# Stephan Hartmann <sultan@gentoo.org> (2021-08-28)
+# Stephan Hartmann <sultan@gentoo.org> (2021-09-25)
 # Dev channel releases are only for people who
 # are developers or want more experimental features
 # and accept a more unstable release.
->=www-client/chromium-95
+>=www-client/chromium-96
 
 # Anthony G. Basile <blueness@gentoo.org> (2021-08-27)
 # Masked for removal in 30 days.  Deprecated upstream.
@@ -507,7 +514,7 @@ virtual/jre:11
 # switch the compiler / the binutils) ASAP. If you need them for a specific
 # (isolated) use case, feel free to unmask them on your system.
 <sys-libs/glibc-2.33
-<sys-devel/binutils-2.35.2
+<sys-devel/binutils-2.36.1-r2
 
 # Michael Orlitzky <mjo@gentoo.org> (2017-01-07)
 # This package has some dangerous quality and security issues, but

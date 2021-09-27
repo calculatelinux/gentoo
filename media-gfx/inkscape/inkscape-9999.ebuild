@@ -15,8 +15,8 @@ EGIT_REPO_URI="https://gitlab.com/inkscape/inkscape.git"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="cdr dbus dia exif graphicsmagick imagemagick inkjar jemalloc jpeg lcms
-openmp postscript spell static-libs svg2 visio wpg"
+IUSE="cdr dbus dia exif graphicsmagick imagemagick inkjar jemalloc jpeg
+openmp postscript readline spell static-libs svg2 test visio wpg"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
@@ -43,6 +43,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	media-gfx/potrace
 	media-libs/fontconfig
 	media-libs/freetype:2
+	media-libs/lcms:2
 	media-libs/libpng:0=
 	net-libs/libsoup:2.4
 	sci-libs/gsl:=
@@ -66,11 +67,8 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	)
 	jemalloc? ( dev-libs/jemalloc )
 	jpeg? ( virtual/jpeg:0 )
-	lcms? ( media-libs/lcms:2 )
-	spell? (
-		app-text/aspell
-		app-text/gtkspell:3
-	)
+	readline? ( sys-libs/readline:= )
+	spell? ( app-text/gspell )
 	visio? (
 		app-text/libwpg:0.3
 		dev-libs/librevenge
@@ -94,9 +92,10 @@ RDEPEND="${COMMON_DEPEND}
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-libs/boost-1.65
+	test? ( dev-cpp/gtest )
 "
 
-RESTRICT="test"
+RESTRICT="!test? ( test )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -121,12 +120,15 @@ src_configure() {
 		-DENABLE_POPPLER=ON
 		-DENABLE_POPPLER_CAIRO=ON
 		-DWITH_PROFILING=OFF
+		-DBUILD_TESTING=$(usex test)
 		-DWITH_LIBCDR=$(usex cdr)
 		-DWITH_DBUS=$(usex dbus)
 		-DWITH_IMAGE_MAGICK=$(usex imagemagick $(usex !graphicsmagick)) # requires ImageMagick 6, only IM must be enabled
 		-DWITH_GRAPHICS_MAGICK=$(usex graphicsmagick $(usex imagemagick)) # both must be enabled to use GraphicsMagick
+		-DWITH_GNU_READLINE=$(usex readline)
+		-DWITH_GSPELL=$(usex spell)
 		-DWITH_JEMALLOC=$(usex jemalloc)
-		-DENABLE_LCMS=$(usex lcms)
+		-DENABLE_LCMS=ON
 		-DWITH_OPENMP=$(usex openmp)
 		-DBUILD_SHARED_LIBS=$(usex !static-libs)
 		-DWITH_SVG2=$(usex svg2)
@@ -155,4 +157,8 @@ src_install() {
 
 	# Empty directory causes sandbox issues, see bug #761915
 	rm -r "${ED}/usr/share/inkscape/fonts" || die "Failed to remove fonts directory."
+}
+
+src_test() {
+	cmake_build -j1 check
 }

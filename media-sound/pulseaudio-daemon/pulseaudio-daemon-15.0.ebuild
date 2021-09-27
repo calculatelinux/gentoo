@@ -58,7 +58,7 @@ REQUIRED_USE="
 # - media-libs/speexdsp is providing echo canceller implementation and used in resampler
 # TODO: libatomic_ops is only needed on some architectures and conditions, and then at runtime too
 COMMON_DEPEND="
-	>=media-libs/libpulse-${PV}[glib?]
+	>=media-libs/libpulse-${PV}[glib?,systemd?]
 	dev-libs/libatomic_ops
 	>=media-libs/libsndfile-1.0.20
 	>=media-libs/speexdsp-1.2
@@ -224,7 +224,7 @@ src_install() {
 	meson_src_install
 
 	# Installed by media-libs/libpulse
-	rm "${ED}/$(get_bashcompdir)"/pulseaudio || die
+	rm "${D}/$(get_bashcompdir)"/pulseaudio || die
 
 	if use system-wide; then
 		newconfd "${FILESDIR}"/pulseaudio.conf.d pulseaudio
