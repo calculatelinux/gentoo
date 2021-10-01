@@ -8,16 +8,16 @@ inherit qt5-build
 DESCRIPTION="Qt module to support gamepad hardware"
 
 if [[ ${QT5_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64 ~arm64 ~x86"
+	KEYWORDS="amd64 arm64 x86"
 fi
 
 IUSE="evdev qml sdl"
 
 DEPEND="
-	~dev-qt/qtcore-${PV}
-	~dev-qt/qtgui-${PV}[evdev?]
+	=dev-qt/qtcore-${QT5_PV}*
+	=dev-qt/qtgui-${QT5_PV}*[evdev?]
 	evdev? ( virtual/libudev:= )
-	qml? ( ~dev-qt/qtdeclarative-${PV} )
+	qml? ( =dev-qt/qtdeclarative-${QT5_PV}* )
 	sdl? ( media-libs/libsdl2 )
 "
 RDEPEND="${DEPEND}"

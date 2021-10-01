@@ -9,20 +9,20 @@ inherit qt5-build
 DESCRIPTION="3D rendering module for the Qt5 framework"
 
 if [[ ${QT5_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64 ~arm64 ~x86"
+	KEYWORDS="amd64 arm64 x86"
 fi
 
 # TODO: tools
 IUSE="gamepad gles2-only qml vulkan"
 
 RDEPEND="
-	~dev-qt/qtconcurrent-${PV}
-	~dev-qt/qtcore-${PV}
-	~dev-qt/qtgui-${PV}:5=[vulkan=]
-	~dev-qt/qtnetwork-${PV}
+	=dev-qt/qtconcurrent-${QT5_PV}*
+	=dev-qt/qtcore-${QT5_PV}*
+	=dev-qt/qtgui-${QT5_PV}*:5=[vulkan=]
+	=dev-qt/qtnetwork-${QT5_PV}*
 	>=media-libs/assimp-4.0.0
-	gamepad? ( ~dev-qt/qtgamepad-${PV} )
-	qml? ( ~dev-qt/qtdeclarative-${PV}[gles2-only=] )
+	gamepad? ( =dev-qt/qtgamepad-${QT5_PV}* )
+	qml? ( =dev-qt/qtdeclarative-${QT5_PV}*[gles2-only=] )
 "
 DEPEND="${RDEPEND}
 	vulkan? ( dev-util/vulkan-headers )

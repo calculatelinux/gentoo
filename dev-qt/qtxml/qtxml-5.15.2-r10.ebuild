@@ -3,23 +3,23 @@
 
 EAPI=8
 
-KDE_ORG_COMMIT=c2ea67ecefe049f6e9bb8f910d7f9c60319d8619
+KDE_ORG_COMMIT=a4f9e56975fa6ab4a1f63a9b34a4d77b1cfe4acd
 QT5_MODULE="qtbase"
 inherit qt5-build
 
 DESCRIPTION="Implementation of SAX and DOM for the Qt5 framework"
 
 if [[ ${QT5_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~riscv ~sparc ~x86"
+	KEYWORDS="amd64 arm arm64 ~hppa ~ppc ~ppc64 ~riscv ~sparc x86"
 fi
 
 IUSE=""
 
 RDEPEND="
-	~dev-qt/qtcore-${PV}:5=
+	=dev-qt/qtcore-${QT5_PV}*:5=
 "
 DEPEND="${RDEPEND}
-	test? ( ~dev-qt/qtnetwork-${PV} )
+	test? ( =dev-qt/qtnetwork-${QT5_PV}* )
 "
 
 QT5_TARGET_SUBDIRS=(

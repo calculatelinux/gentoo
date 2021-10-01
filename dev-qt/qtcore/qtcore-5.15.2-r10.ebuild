@@ -3,7 +3,7 @@
 
 EAPI=8
 
-KDE_ORG_COMMIT=64a0068011e12f178fb7ff65fafe7cfaa4620719
+KDE_ORG_COMMIT=a4f9e56975fa6ab4a1f63a9b34a4d77b1cfe4acd
 QT5_MODULE="qtbase"
 inherit linux-info qt5-build
 
@@ -11,7 +11,7 @@ DESCRIPTION="Cross-platform application development framework"
 SLOT=5/$(ver_cut 1-3)
 
 if [[ ${QT5_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~riscv ~sparc ~x86"
+	KEYWORDS="amd64 arm arm64 ~hppa ~ppc ~ppc64 ~riscv ~sparc x86"
 fi
 
 IUSE="icu old-kernel systemd"

@@ -11,23 +11,23 @@ DESCRIPTION="Location (places, maps, navigation) library for the Qt5 framework"
 if [[ ${QT5_BUILD_TYPE} == release ]]; then
 	MAPBOXGL_COMMIT=d3101bbc22edd41c9036ea487d4a71eabd97823d
 	SRC_URI+=" https://invent.kde.org/qt/qt/${PN}-mapboxgl/-/archive/${MAPBOXGL_COMMIT}/${PN}-mapboxgl-${MAPBOXGL_COMMIT}.tar.gz -> ${PN}-mapboxgl-${PV}-${MAPBOXGL_COMMIT:0:8}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~arm64 ~riscv ~x86"
+	KEYWORDS="amd64 arm arm64 ~riscv x86"
 fi
 
 IUSE=""
 
 RDEPEND="
 	dev-libs/icu:=
-	~dev-qt/qtcore-${PV}
-	~dev-qt/qtdeclarative-${PV}
-	~dev-qt/qtgui-${PV}
-	~dev-qt/qtnetwork-${PV}
-	~dev-qt/qtpositioning-${PV}[qml]
-	~dev-qt/qtsql-${PV}
+	=dev-qt/qtcore-${QT5_PV}*
+	=dev-qt/qtdeclarative-${QT5_PV}*
+	=dev-qt/qtgui-${QT5_PV}*
+	=dev-qt/qtnetwork-${QT5_PV}*
+	=dev-qt/qtpositioning-${QT5_PV}*[qml]
+	=dev-qt/qtsql-${QT5_PV}*
 	sys-libs/zlib
 "
 DEPEND="${RDEPEND}
-	~dev-qt/qtconcurrent-${PV}
+	=dev-qt/qtconcurrent-${QT5_PV}*
 "
 
 QT5_TARGET_SUBDIRS=(

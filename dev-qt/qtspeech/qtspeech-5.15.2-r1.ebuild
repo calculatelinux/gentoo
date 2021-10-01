@@ -8,17 +8,17 @@ inherit qt5-build
 DESCRIPTION="Text-to-speech library for the Qt5 framework"
 
 if [[ ${QT5_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
+	KEYWORDS="amd64 arm arm64 ~ppc64 ~riscv x86"
 fi
 
 IUSE="alsa flite"
 
 RDEPEND="
 	>=app-accessibility/speech-dispatcher-0.8.7
-	~dev-qt/qtcore-${PV}
+	=dev-qt/qtcore-${QT5_PV}*
 	flite? (
 		>=app-accessibility/flite-2[alsa?]
-		~dev-qt/qtmultimedia-${PV}[alsa?]
+		=dev-qt/qtmultimedia-${QT5_PV}*[alsa?]
 		alsa? ( media-libs/alsa-lib )
 	)
 "

@@ -9,15 +9,15 @@ inherit qt5-build
 DESCRIPTION="Implementation of the WebSocket protocol for the Qt5 framework"
 
 if [[ ${QT5_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~riscv ~sparc ~x86"
+	KEYWORDS="amd64 arm arm64 ~hppa ~ppc ~ppc64 ~riscv ~sparc x86"
 fi
 
 IUSE="qml +ssl"
 
 DEPEND="
-	~dev-qt/qtcore-${PV}
-	~dev-qt/qtnetwork-${PV}[ssl=]
-	qml? ( ~dev-qt/qtdeclarative-${PV} )
+	=dev-qt/qtcore-${QT5_PV}*
+	=dev-qt/qtnetwork-${QT5_PV}*[ssl=]
+	qml? ( =dev-qt/qtdeclarative-${QT5_PV}* )
 
 "
 RDEPEND="${DEPEND}"

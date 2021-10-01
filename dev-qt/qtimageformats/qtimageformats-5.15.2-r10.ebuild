@@ -9,14 +9,14 @@ inherit qt5-build
 DESCRIPTION="Additional format plugins for the Qt image I/O system"
 
 if [[ ${QT5_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc64 ~riscv ~sparc ~x86"
+	KEYWORDS="amd64 ~arm arm64 ~hppa ~ppc64 ~riscv ~sparc x86"
 fi
 
 IUSE="mng"
 
 DEPEND="
-	~dev-qt/qtcore-${PV}
-	~dev-qt/qtgui-${PV}
+	=dev-qt/qtcore-${QT5_PV}*
+	=dev-qt/qtgui-${QT5_PV}*
 	media-libs/libwebp:=
 	media-libs/tiff:0
 	mng? ( media-libs/libmng:= )
