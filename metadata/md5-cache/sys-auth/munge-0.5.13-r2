@@ -10,5 +10,5 @@ LICENSE=GPL-3
 RDEPEND=app-arch/bzip2 sys-libs/zlib gcrypt? ( dev-libs/libgcrypt:0 ) !gcrypt? ( dev-libs/openssl:0= ) acct-group/munge acct-user/munge virtual/tmpfiles
 SLOT=0
 SRC_URI=https://github.com/dun/munge/releases/download/munge-0.5.13/munge-0.5.13.tar.xz
-_eclasses_=autotools	c7052b276346587968d52ea8eaf5aca1	gnuconfig	262062cef0ba4f22b397193da514a350	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4b66d835ec72e021e359bb81eacfe988	prefix	d04f14b297013ad1410550c0757f14f8	tmpfiles	5cd6e8cf3288d5b19ff8b5c78c7e3e31	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_eclasses_=autotools	c9df06c186913b43eb211100ef5fe2cf	gnuconfig	262062cef0ba4f22b397193da514a350	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4b66d835ec72e021e359bb81eacfe988	prefix	d04f14b297013ad1410550c0757f14f8	tmpfiles	5cd6e8cf3288d5b19ff8b5c78c7e3e31	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
 _md5_=f2ef7c20a92ea604bf2ccc1a823184f5
