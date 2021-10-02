@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{7..9} )
+PYTHON_COMPAT=( python3_{8..10} )
 inherit distutils-r1
 
 MY_PN="Flask-Migrate"
@@ -12,7 +12,7 @@ MY_P="${MY_PN}-${PV}"
 DESCRIPTION="SQLAlchemy database migrations for Flask applications using Alembic"
 HOMEPAGE="https://pypi.org/project/Flask-Migrate/"
 SRC_URI="mirror://pypi/${MY_P:0:1}/${MY_PN}/${MY_P}.tar.gz"
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 LICENSE="BSD"
 SLOT="0"
@@ -24,4 +24,4 @@ RDEPEND="
 	>=dev-python/flask-sqlalchemy-1.0[${PYTHON_USEDEP}]
 "
 
-distutils_enable_tests unittest
+distutils_enable_tests --install unittest

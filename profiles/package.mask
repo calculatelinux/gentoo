@@ -33,6 +33,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Joonas Niilola <juippis@gentoo.org> (2021-10-02)
+# A library without revdeps. Last upstream release in 2009, huge amount
+# of open bugs not fixed has led the project being forked already.
+# Bug #776895. Removal in ~30 days.
+dev-libs/rapidxml
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2021-10-01)
 # KDE Plasma 5.22.90 (5.23 Beta) mask - Pre-release version
 # See also: https://kde.org/announcements/plasma/5/5.22.90/
@@ -409,10 +415,6 @@ dev-qt/qtwebkit:5
 # Please report bugs but this is experimental for now.
 # bug #731266
 >=net-mail/cyrus-imapd-3.4.0
-
-# David Seifert <soap@gentoo.org> (2021-05-05)
-# Causes unsolvable package conflicts, bug #788310
->=media-libs/openexr-3
 
 # Eray Aslan <eras@gentoo.org> (2021-04-29)
 # Mask experimental software
