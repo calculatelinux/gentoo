@@ -868,7 +868,6 @@ app-misc/lirc:uinput - Enable support for uinput
 app-misc/mc:edit - Compile and install the mcedit application
 app-misc/mc:sftp - Add support for sftp (uses net-libs/libssh2 for it).
 app-misc/mc:slang - Use sys-libs/slang instead of sys-libs/ncurses.
-app-misc/mc:xdg - Toggles mc's config dir location. Enable for $XDG_CONFIG_HOME/mc, disable for $HOME/.mc
 app-misc/mosquitto:bridge - Enable bridge support in the MQTT broker.
 app-misc/mosquitto:persistence - Store messages and subscriptions to a file.
 app-misc/mosquitto:srv - Include SRV lookup support.
@@ -2011,8 +2010,8 @@ dev-libs/hidapi:fox - Build a x11-libs/fox GUI
 dev-libs/imath:large-stack - Enables code to take advantage of large stack support
 dev-libs/input-pad:eekboard - Enable support for dev-libs/eekboard
 dev-libs/input-pad:xtest - Enable support for x11-libs/libXtst
-dev-libs/intel-neo:l0 - Install the oneAPI Level Zero driver alongside the OpenCL one
-dev-libs/intel-neo:vaapi - Support the sharing of surfaces with Video Acceleration API (OpenCL Extension #36)
+dev-libs/intel-compute-runtime:l0 - Install the oneAPI Level Zero driver alongside the OpenCL one
+dev-libs/intel-compute-runtime:vaapi - Support the sharing of surfaces with Video Acceleration API (OpenCL Extension #36)
 dev-libs/jemalloc:lazy-lock - Enable lazy locking (only lock when multi-threaded)
 dev-libs/jemalloc:prof - Enable allocation profiling
 dev-libs/jemalloc:stats - Enable statistics calculation/reporting
@@ -5077,7 +5076,6 @@ media-video/nvidia_video_sdk:tools - Build and install example tools.
 media-video/obs-studio:browser - Enable browser source support via (precompiled) CEF.
 media-video/obs-studio:decklink - Build the Decklink plugin.
 media-video/obs-studio:fdk - Build with LibFDK AAC support.
-media-video/obs-studio:imagemagick - Use ImageMagick for image loading instead of FFmpeg.
 media-video/obs-studio:nvenc - Build with NVENC encoding support for nVidia video cards.
 media-video/obs-studio:pipewire - Build with PipeWire support.
 media-video/obs-studio:python - Build with scripting support for Python 3.
@@ -6063,6 +6061,7 @@ net-libs/libtrace:numa - Use sys-process/numactl
 net-libs/libupnp:blocking-tcp - Do not use async socket calls
 net-libs/libupnp:reuseaddr - Allow clean restarts by binding the socket with SO_REUSEADDR
 net-libs/libupnp:samples - Install sample applications
+net-libs/libupnp:tools - Install additional tools
 net-libs/libvncserver:24bpp - Enable 24bpp support
 net-libs/libvncserver:filetransfer - Enable support for TightVNC's file transfer protocol
 net-libs/libvncserver:gcrypt - Use dev-libs/libgcrypt as crypto backend

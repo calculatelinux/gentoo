@@ -12,7 +12,7 @@ S="${WORKDIR}/opam-${PV/_/-}"
 
 LICENSE="LGPL-2.1"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 arm arm64 ppc ppc64 ~x86"
 IUSE="+ocamlopt test"
 RESTRICT="!test? ( test )"
 
@@ -39,8 +39,4 @@ src_prepare() {
 		 (release
 		  (flags (:standard -warn-error -3-9-33))))
 	EOF
-}
-
-src_compile() {
-	dune build @install --profile release || die
 }
