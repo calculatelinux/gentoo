@@ -12,7 +12,7 @@ if [ "${PV}" = "9999" ]; then
 	EGIT_REPO_URI="https://github.com/hmatuschek/qdmr.git"
 else
 	SRC_URI="https://github.com/hmatuschek/qdmr/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 
 LICENSE="GPL-3+"

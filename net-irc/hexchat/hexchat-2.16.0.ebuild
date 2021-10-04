@@ -16,15 +16,13 @@ if [[ "${PV}" == "9999" ]] ; then
 	SRC_URI=""
 	EGIT_REPO_URI="https://github.com/${PN}/${PN}.git"
 else
-	SRC_URI="https://dl.hexchat.net/${PN}/${P}.tar.xz
-		https://github.com/hexchat/hexchat/commit/a25f2381689d2c2279a0e43b33f6c0ec8305a096.patch -> ${PN}-add-libera-chat.patch
-		https://github.com/hexchat/hexchat/commit/d3545f37cd5f551ed8bc0ab7b20e5c8140adc0a6.patch -> ${PN}-default-network.patch"
+	SRC_URI="https://dl.hexchat.net/${PN}/${P}.tar.xz"
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 fi
 
 LICENSE="GPL-2 plugin-fishlim? ( MIT )"
 SLOT="0"
-IUSE="dbus debug +gtk libcanberra libnotify libproxy lua perl plugin-checksum plugin-fishlim plugin-sysinfo python ssl theme-manager"
+IUSE="dbus debug +gtk libcanberra lua perl plugin-checksum plugin-fishlim plugin-sysinfo python ssl theme-manager"
 REQUIRED_USE="lua? ( ${LUA_REQUIRED_USE} )
 	python? ( ${PYTHON_REQUIRED_USE} )"
 
@@ -38,12 +36,13 @@ RDEPEND="
 		x11-libs/pango
 	)
 	libcanberra? ( media-libs/libcanberra )
-	libproxy? ( net-libs/libproxy )
-	libnotify? ( x11-libs/libnotify )
 	lua? ( ${LUA_DEPS} )
 	perl? ( dev-lang/perl:= )
 	plugin-sysinfo? ( sys-apps/pciutils )
-	python? ( ${PYTHON_DEPS} )
+	python? (
+		${PYTHON_DEPS}
+		virtual/python-cffi
+	)
 	ssl? ( dev-libs/openssl:0= )
 	theme-manager? (
 		|| (
@@ -72,23 +71,22 @@ pkg_setup() {
 
 src_configure() {
 	local emesonargs=(
-		-Dwith-gtk="$(usex gtk true false)"
-		-Dwith-text="$(usex gtk false true)"
-		-Dwith-ssl="$(usex ssl true false)"
-		-Dwith-plugin=true
-		-Dwith-dbus="$(usex dbus true false)"
-		-Dwith-libproxy="$(usex libproxy true false)"
-		-Dwith-libnotify="$(usex libnotify true false)"
-		-Dwith-libcanberra="$(usex libcanberra true false)"
-		-Dwith-theme-manager="$(usex theme-manager true false)"
 		-Ddbus-service-use-appid=false
-		-Dwith-checksum="$(usex plugin-checksum true false)"
-		-Dwith-fishlim="$(usex plugin-fishlim true false)"
+		-Dinstall-appdata=false
+		-Dplugin=true
+		$(meson_feature dbus)
+		$(meson_feature libcanberra)
+		$(meson_feature ssl tls)
+		$(meson_use gtk gtk-frontend)
+		$(meson_use !gtk text-frontend)
+		$(meson_use theme-manager)
+
+		$(meson_use plugin-checksum with-checksum)
+		$(meson_use plugin-fishlim with-fishlim)
 		-Dwith-lua="$(usex lua "${ELUA}" false)"
 		-Dwith-perl="$(usex perl "${EPREFIX}"/usr/bin/perl false)"
 		-Dwith-python="$(usex python "${EPYTHON/.*}" false)"
-		-Dwith-sysinfo="$(usex plugin-sysinfo true false)"
-		-Dwith-appdata=false
+		$(meson_use plugin-sysinfo with-sysinfo)
 	)
 	meson_src_configure
 }

@@ -805,7 +805,6 @@ app-misc/graphlcd-base:freetype - Add support for media-libs/freetype.
 app-misc/graphlcd-base:graphicsmagick - Add support for media-gfx/graphicsmagick.
 app-misc/graphlcd-base:imagemagick - Add support for media-gfx/imagemagick.
 app-misc/irtrans-irserver:mono - Enable mono support
-app-misc/jp:jp - Install jp which is the official jp CLI for JMESPath
 app-misc/jp:jpp - Install jpp which is an extended superset of the jp CLI for JMESPath
 app-misc/jpipe:jp-symlink - Install a jp symlink that points to jpipe.
 app-misc/jpipe:jpp-symlink - Install a jpp symlink that points to jpipe.
@@ -6061,7 +6060,6 @@ net-libs/libtrace:numa - Use sys-process/numactl
 net-libs/libupnp:blocking-tcp - Do not use async socket calls
 net-libs/libupnp:reuseaddr - Allow clean restarts by binding the socket with SO_REUSEADDR
 net-libs/libupnp:samples - Install sample applications
-net-libs/libupnp:tools - Install additional tools
 net-libs/libvncserver:24bpp - Enable 24bpp support
 net-libs/libvncserver:filetransfer - Enable support for TightVNC's file transfer protocol
 net-libs/libvncserver:gcrypt - Use dev-libs/libgcrypt as crypto backend
@@ -7284,6 +7282,7 @@ sci-libs/gmsh:petsc - Enable sci-mathematics/petsc support
 sci-libs/gsl:cblas-external - Link gsl with external cblas provided by (virtual/cblas) instead of shipped internal version
 sci-libs/gsl:deprecated - Enable deprecated functions
 sci-libs/hdf5:hl - Enable high level API (https://support.hdfgroup.org/HDF5/doc/HL/index.html)
+sci-libs/hdf5:ros3 - Enable support for read-only S3 access (https://portal.hdfgroup.org/display/HDF5/Configuration+and+Setup+for+HDF5+Read+Only+S3+VFD)
 sci-libs/hdf5:unsupported - Enable unsupported combinations of configuration options
 sci-libs/hypre:int64 - Build the 64 bits integer library
 sci-libs/indilib:rtlsdr - Enable support for devices supported by net-wireless/rtl-sdr
