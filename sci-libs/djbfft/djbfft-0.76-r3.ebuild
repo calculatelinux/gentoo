@@ -11,12 +11,13 @@ SRC_URI="https://cr.yp.to/djbfft/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm arm64 ~hppa ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-gcc3.patch
 	"${FILESDIR}"/${P}-shared.patch
 	"${FILESDIR}"/${P}-headers.patch
+	"${FILESDIR}"/${P}-tc-directly.patch
 )
 
 DOCS=( CHANGES README TODO VERSION )
@@ -35,6 +36,7 @@ src_prepare() {
 }
 
 multilib_src_configure() {
+	tc-export AR RANLIB
 	[[ ${ABI} == x86* ]] && append-cflags -malign-double
 
 	sed -i -e "s:\"lib\":\"$(get_libdir)\":" hier.c || die

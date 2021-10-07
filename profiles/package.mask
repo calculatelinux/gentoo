@@ -42,7 +42,6 @@
 # Old obsolete slots. Use a newer slot instead.
 # Masked for removal in 30 days.
 dev-ruby/hashie:0
-dev-ruby/hashie:3
 dev-ruby/thor:0
 
 # Joonas Niilola <juippis@gentoo.org> (2021-10-02)
@@ -296,16 +295,6 @@ dev-python/oauth2
 # Requires OpenSSL >= 3.0.0
 # Masked until dev-libs/openssl-3.0* is unmasked
 =dev-libs/gost-engine-3.0*
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2021-09-07)
-# EAPI-5, dead upstream, last (and only) version added in 2011
-# Bug 644344; Removal on 2021-10-07.
-net-libs/gsnmp
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2021-09-07)
-# EAPI-5, dead upstream, last bump in 2012
-# Bug 644344; Removal on 2021-10-07.
-net-analyzer/scli
 
 # Ionen Wolkens <ionen@gentoo.org> (2021-09-03)
 # Currently may not function with kde-plasma/kwin (black screen),

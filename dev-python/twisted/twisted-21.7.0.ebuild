@@ -17,7 +17,7 @@ S=${WORKDIR}/${PN}-${P}
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm arm64 ~hppa ~ia64 ppc ppc64 ~riscv ~s390 sparc x86"
+KEYWORDS="~alpha ~amd64 arm arm64 hppa ~ia64 ppc ppc64 ~riscv ~s390 sparc x86"
 IUSE="conch crypt http2 serial test"
 RESTRICT="!test? ( test )"
 
@@ -43,8 +43,8 @@ RDEPEND="
 	)
 	serial? ( >=dev-python/pyserial-3.0[${PYTHON_USEDEP}] )
 	http2? (
-		>=dev-python/hyper-h2-3.0.0[${PYTHON_USEDEP}]
-		<dev-python/hyper-h2-4.0.0[${PYTHON_USEDEP}]
+		>=dev-python/h2-3.0.0[${PYTHON_USEDEP}]
+		<dev-python/h2-4.0.0[${PYTHON_USEDEP}]
 		>=dev-python/priority-1.1.0[${PYTHON_USEDEP}]
 		<dev-python/priority-2.0[${PYTHON_USEDEP}]
 	)
