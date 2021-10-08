@@ -6,6 +6,15 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Georgy Yakovlev <gyakovlev@gentoo.org> (2021-10-07)
+# parallel-compiler feature is not tested by upstream
+# and is not recommended for general usage and may silently
+# miscompile code if used (unlikely, but not impossible)
+# feel free to unmask, but be prepared to deal with possible bugs
+# https://bugs.gentoo.org/813954
+# https://github.com/rust-lang/rust/issues/89108
+dev-lang/rust parallel-compiler
+
 # Stephan Hartmann <sultan@gentoo.org> (2021-09-16)
 # Uses a function that is not available in media-video/ffmpeg.
 >=www-client/chromium-94 system-ffmpeg
@@ -15,12 +24,6 @@
 # It is caused by -Wl,--as-needed linker flag,
 # see also: https://github.com/rspamd/rspamd/issues/3871
 ~mail-filter/rspamd-3.0 jemalloc
-
-# James Le Cuirot <chewi@gentoo.org> (2021-09-04)
-# Currently requires an unreleased version of FFmpeg. If you really want it,
-# unmask the flag and emerge ffmpeg-9999 with this environment variable set:
-# EGIT_OVERRIDE_COMMIT_FFMPEG=8649f5dca6688feb66f787dcf232d42ed20fdb28
->=www-client/vivaldi-snapshot-4.2.2406.4 proprietary-codecs
 
 # Matt Turner <mattst88@gentoo.org> (2021-08-28)
 # Mask experimental options.
