@@ -33,6 +33,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Patrice Clement <monsieurp@gentoo.org> (2021-10-09)
+# Obsolete and unmaintained. Please switch to app-text/htmltidy.
+# Bug #564884. Masked for removal in 30 days.
+app-text/tidy-html5
+
+# Ionen Wolkens <ionen@gentoo.org> (2021-10-09)
+# Vulkan beta driver branch aimed at Vulkan developers for testing
+# new features. Beside vulkan, it is typically behind the main branch
+# and may be buggier or less secure. Only unmask if really wanted.
+x11-drivers/nvidia-drivers:0/vulkan
+
+# Gnome Team <gnome@gentoo.org> (2021-10-09)
+# GNOME 41 mask, bug #812986
+>=gnome-extra/evolution-data-server-3.41
+>=mail-client/evolution-3.41
+>=gnome-extra/evolution-ews-3.41
+>=gnome-extra/gnome-calendar-41.0
+>=gnome-extra/gnome-contacts-41.0
+
 # Fabian Groffen <grobian@gentoo.org> (2021-10-03)
 # Masked for erratic behaviour
 # https://bugs.exim.org/show_bug.cgi?id=2813
@@ -249,42 +268,12 @@ dev-python/py-gfm
 # Removal on 2021-10-11.  Bug #812521.
 dev-python/txgithub
 
-# Jakov Smolić <jsmolic@gentoo.org> (2021-09-09)
-# Relies on setuptools' deprecated use_2to3 option.
-# Last release in 2019, no revdeps.
-# Removal on 2021-10-09. Bug #812236
-dev-python/sparql-wrapper
-
-# Jakov Smolić <jsmolic@gentoo.org> (2021-09-09)
-# Relies on setuptools' deprecated use_2to3 option.
-# Last release in 2019, no revdeps.
-# Removal on 2021-10-09. Bug #812233
-dev-python/pybluez
-
-# Jakov Smolić <jsmolic@gentoo.org> (2021-09-09)
-# Relies on setuptools' deprecated use_2to3 option.
-# Last release in 2015, no revdeps.
-# Removal on 2021-10-09. Bug #812224
-dev-python/lcdproc
-
-# Jakov Smolić <jsmolic@gentoo.org> (2021-09-09)
-# Relies on setuptools' use_2to3 option.
-# Last release in 2017, no revdeps.
-# Removal on 2021-10-09. Bug #812221
-dev-python/fudge
-
 # Anna Vyalkova <cyber+gentoo@sysrq.in> (2021-09-07)
 # Mask backwards-incompatible version to avoid autodeletion of previous one.
 # Data migration is not supported upstream and can't be done automatically.
 # https://github.com/martinrotter/rssguard/releases/tag/4.0.0
 # https://github.com/martinrotter/rssguard/blob/master/resources/docs/Documentation.md#migratt
 >=net-news/rssguard-4.0.0
-
-# Louis Sautier <sbraz@gentoo.org> (2021-09-09)
-# No reverse dependencies, no upstream activity for more than 3 years.
-# dev-python/oauthlib is maintained and provides the same functionality.
-# Removal on 2021-10-09.
-dev-python/oauth2
 
 # Thomas Deutschmann <whissi@gentoo.org> (2021-09-07)
 # Masked while being tested and reverse deps aren't fully compatible
@@ -297,10 +286,11 @@ dev-python/oauth2
 =dev-libs/gost-engine-3.0*
 
 # Ionen Wolkens <ionen@gentoo.org> (2021-09-03)
-# Currently may not function with kde-plasma/kwin (black screen),
-# so keeping masked for testing due to being a primary consumer.
-# Should be safe to unmask if you are using x11-wm/mutter instead.
->=gui-libs/egl-wayland-1.1.8
+# Known to break kde-plasma/kwin (black screen), and several
+# other applications on wayland with current drivers.
+# https://github.com/NVIDIA/egl-wayland/issues/40
+# https://github.com/NVIDIA/egl-wayland/issues/41
+~gui-libs/egl-wayland-1.1.8
 
 # Alexey Sokolov <alexey+gentoo@asokolov.org> (2021-08-30)
 # Homepage dead, uses gtk2, fails to build, https://bugs.gentoo.org/711344

@@ -6,6 +6,12 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-10-09)
+# ld.gold is essentially abandoned; using it as default may have
+# unintended consequences. Disabling this feature in future ebuilds.
+>sys-devel/binutils-2.37_p1 default-gold
+>sys-devel/binutils-hppa64-2.37_p1 default-gold
+
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2021-10-07)
 # parallel-compiler feature is not tested by upstream
 # and is not recommended for general usage and may silently
@@ -441,10 +447,14 @@ dev-db/mysql client-libs
 media-video/ffmpeg appkit
 
 # James Le Cuirot <chewi@gentoo.org> (2017-12-17)
+# Georgy Yakovlev <gyakovlev@gentoo.org (2021-10-08)
 # Java 9+ is not yet fully supported on Gentoo. Having a masked
 # gentoo-vm flag allows us to provide it without it breaking Gentoo
 # packages. Those who wish to experiment with it as a fully recognised
 # Gentoo JVM can unmask the flag.
+dev-java/openjdk-jre-bin:17 gentoo-vm
+dev-java/openjdk-bin:17 gentoo-vm
+dev-java/openjdk:17 gentoo-vm
 dev-java/openjdk-jre-bin:11 gentoo-vm
 dev-java/openjdk-bin:11 gentoo-vm
 dev-java/openjdk:11 gentoo-vm
