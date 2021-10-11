@@ -12,7 +12,7 @@ DESCRIPTION="Lightweight interface to the SOAP protocol both on client and serve
 
 IUSE="ssl test xmpp"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~arm64 ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 
 myconf="${myconf} --noprompt"
 
@@ -36,6 +36,7 @@ RDEPEND="
 BDEPEND="${RDEPEND}
 	virtual/perl-ExtUtils-MakeMaker
 	test? (
+		dev-perl/HTTP-Daemon
 		virtual/perl-IO
 		virtual/perl-Test-Simple
 		dev-perl/Test-Warn

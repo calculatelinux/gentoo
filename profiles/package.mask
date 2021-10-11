@@ -33,6 +33,57 @@
 
 #--- END OF EXAMPLES ---
 
+# Arthur Zamarin <arthurzam@gentoo.org> (2021-10-10)
+# Archived upstream, and no longer maintained. Has issues with
+# python 3.9 and python 3.10.
+# Extra bugs: #798348 #798351 #812908
+# Removal on 2021-11-09.  Bug #817401.
+dev-python/python-ceilometerclient
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2021-10-10)
+# Inactive upstream with reported bugs. Has issues with python 3.9
+# and python 3.10.
+# Extra bugs: #798252 #812734
+# Removal on 2021-11-09.  Bug #817392.
+dev-python/onkyo-eiscp
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2021-10-10)
+# Archived upstream repo, and deprecated by Microsoft. Doesn't work
+# with the latest Visual Studio. Has issues with python 3.9 and
+# python 3.10.
+# Extra bugs: #798192 #723741 #727212 #730330
+# Removal on 2021-11-09.  Bug #817389.
+dev-python/ptvsd
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2021-10-10)
+# Inactive upstream with reported bugs. Has issues with python 3.9
+# and python 3.10.
+# Removal on 2021-11-09.  Bug #817386.
+dev-python/pipfile
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2021-10-10)
+# Upstream lost to history. Web archive finds a very broken repo.
+# Has issues with python 3.9 and python 3.10.
+# Extra Bugs: Bug #696674, Bug #814572
+# Removal on 2021-11-09.  Bug #817383.
+dev-db/sadisplay
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2021-10-10)
+# Old project, has problems with symlinks in repo. Fails for new
+# GitHub projects.
+# Removal on 2021-11-09.  Bug #817380.
+dev-vcs/github-pages-publish
+
+# Joonas Niilola <juippis@gentoo.org> (2021-10-10)
+# Development stopped by upstream. Switch to its actively developed
+# fork, x11-misc/picom. Bug #817338. Removal in ~30 days.
+x11-misc/compton
+
+# Joonas Niilola <juippis@gentoo.org> (2021-10-10)
+# LiveOnlyPackage with no maintainer. Upstream has multiple releases.
+# Bug #817320. Removal in ~30 days.
+dev-vcs/gti
+
 # Sam James <sam@gentoo.org> (2021-10-10)
 # Needs upstream build system fixes (currently in progress).
 # Python toggles don't work correctly right now.
@@ -57,6 +108,11 @@ x11-drivers/nvidia-drivers:0/vulkan
 >=gnome-extra/evolution-ews-3.41
 >=gnome-extra/gnome-calendar-41.0
 >=gnome-extra/gnome-contacts-41.0
+>=x11-wm/mutter-41.0
+>=dev-libs/gjs-1.69
+>=gnome-base/gsettings-desktop-schemas-41.0
+>=gnome-base/gnome-shell-41.0
+>=gnome-extra/gnome-shell-extensions-41.0
 
 # Fabian Groffen <grobian@gentoo.org> (2021-10-03)
 # Masked for erratic behaviour
@@ -241,32 +297,6 @@ media-libs/sdl-terminal
 # semi-broken and runtime seems broken even if built.
 # Removal on 2021-10-12. bug #701414, bug #739188.
 games-emulation/nestra
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2021-09-11)
-# No reverse dependencies. Implements ordered set, which was needed
-# for the python 2.6 era, and since python 2.7 isn't needed and is
-# builtin in the language. Upstream isn't active at all.
-# No other distros package it anymore.
-# Removal on 2021-10-11.  Bug #812554
-dev-python/oset
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2021-09-11)
-# No reverse dependencies. Has issues with porting to python 3.10.
-# Has known upstream issues with latest GitHub's markdown parsing.
-# Last year upstream planned to archive the repository, no activity
-# since. No other distros package it anymore.
-# Extra bug: #798195
-# Removal on 2021-10-11.  Bug #812530.
-dev-python/py-gfm
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2021-09-11)
-# Upstream repository was archived. No reverse dependencies (only blocked
-# by one other package). Implements GitHub API in python, while better and
-# maintained packages are in tree. Has non trivial issues with bump to
-# python 3.10. No other distros package it anymore.
-# Extra bugs: #791673, #723542, #802999
-# Removal on 2021-10-11.  Bug #812521.
-dev-python/txgithub
 
 # Anna Vyalkova <cyber+gentoo@sysrq.in> (2021-09-07)
 # Mask backwards-incompatible version to avoid autodeletion of previous one.
@@ -518,7 +548,7 @@ virtual/jre:11
 # switch the compiler / the binutils) ASAP. If you need them for a specific
 # (isolated) use case, feel free to unmask them on your system.
 <sys-libs/glibc-2.33
-<sys-devel/binutils-2.36.1-r2
+<sys-devel/binutils-2.37_p1
 
 # Michael Orlitzky <mjo@gentoo.org> (2017-01-07)
 # This package has some dangerous quality and security issues, but

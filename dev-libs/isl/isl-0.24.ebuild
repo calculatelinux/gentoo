@@ -1,7 +1,7 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI=7
 
 inherit multilib-minimal preserve-libs toolchain-funcs
 
@@ -35,6 +35,7 @@ multilib_src_configure() {
 		# https://wiki.gentoo.org/wiki/Project:Toolchain/use_native_symlinks
 		CC_FOR_BUILD="$(tc-getBUILD_CC)"
 	)
+
 	if ! tc-is-cross-compiler; then
 		# Incorrect CFLAGS handling as CFLAGS_FOR_BUILD
 		# even for native builds. As a result -O3 is being used
@@ -49,7 +50,8 @@ multilib_src_configure() {
 
 multilib_src_install_all() {
 	einstalldocs
-	find "${ED}" -type f -name '*.la' -delete
+
+	find "${ED}" -type f -name '*.la' -delete || die
 }
 
 pkg_preinst() {

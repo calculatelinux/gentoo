@@ -556,6 +556,7 @@ app-emulation/q4wine:wineappdb - Enable Wine AppDB browser support
 app-emulation/qemu:accessibility - Adds support for braille displays using brltty
 app-emulation/qemu:aio - Enables support for Linux's Async IO
 app-emulation/qemu:alsa - Enable alsa output for sound emulation
+app-emulation/qemu:bpf - Enable eBPF support for RSS implementation.
 app-emulation/qemu:capstone - Enable disassembly support with dev-libs/capstone
 app-emulation/qemu:curl - Support ISOs / -cdrom directives via HTTP or HTTPS.
 app-emulation/qemu:fdt - Enables firmware device tree support
@@ -779,6 +780,7 @@ app-metrics/collectd:xfs - Enable optional capability to filter on XFS file syst
 app-misc/blink1:mini-tool - Build and install command-line mini-tool blink1-mini-tool (normally used for embedded devices)
 app-misc/blink1:server - Build and install REST API server (currently hard-coded to TCP port 8080)
 app-misc/blink1:tool - Build and install command-line tool blink1-tool
+app-misc/broot:X - X11 clipboard interaction
 app-misc/byobu:screen - Use app-misc/screen as the default backend
 app-misc/ca-certificates:cacert - Include root/class3 certs from CAcert (https://www.cacert.org/)
 app-misc/carbon-c-relay:lz4 - add support for LZ4 compressed transport
@@ -7367,6 +7369,7 @@ sci-libs/proj:europe - Install the PROJ collection of European grids and init-fi
 sci-libs/rocBLAS:benchmark - Build and install rocblas-bench.
 sci-libs/rocBLAS:test - Perform rocblas-test to compare the result between rocBLAS and system BLAS.
 sci-libs/rocPRIM:benchmark - Build and install benchmark programs.
+sci-libs/rocRAND:benchmark - Build and install benchmark programs.
 sci-libs/rocSPARSE:benchmark - Build and install rocblas-bench.
 sci-libs/rtabmap:openni2 - Adds support for Kinect-like 3D sensors devices with dev-libs/OpenNI2.
 sci-libs/scotch:int64 - Build the 64 bits integer library (needed for > 2^31 vertices)
