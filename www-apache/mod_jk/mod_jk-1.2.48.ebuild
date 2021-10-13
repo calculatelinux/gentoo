@@ -5,7 +5,7 @@ EAPI=7
 
 MY_P="tomcat-connectors-${PV#-*}-src"
 
-inherit apache-module
+inherit apache-module autotools
 
 DESCRIPTION="Provides an AJP Apache2-JK-connector for the Tomcat servlet engine"
 HOMEPAGE="https://tomcat.apache.org/connectors-doc/"
@@ -14,7 +14,7 @@ S="${WORKDIR}/${MY_P}/native"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 DEPEND="dev-libs/apr:1="
 RDEPEND="${DEPEND}"
@@ -35,6 +35,10 @@ pkg_setup() {
 
 src_prepare() {
 	default
+
+	# Don't add '-Wl,' as prefix for CFLAGS, as linker will fail
+	sed -e '/JK_PREFIX_IF_MISSING/d' -i configure.ac || die
+	eautoreconf
 
 	# Adjust confpath and logpath for Gentoo
 	local logs_path="/var/log/apache2"

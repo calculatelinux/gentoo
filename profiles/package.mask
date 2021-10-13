@@ -33,6 +33,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Jaco Kroon <jaco@uls.co.za> (2021-10-05)
+# Masked for removal in 30 days.
+# Last upstream release in 2012.
+# Looks to be broken (iax-config --libs references not installed libiax.so).
+# No consumers in ::gentoo. Bug #817989
+net-libs/iax
+
 # Arthur Zamarin <arthurzam@gentoo.org> (2021-10-10)
 # Archived upstream, and no longer maintained. Has issues with
 # python 3.9 and python 3.10.
@@ -279,25 +286,6 @@ sys-devel/automake:1.11
 # Migration to it is expected for GNOME 42, NOT to be unmasked with GNOME 41.
 net-libs/libsoup:3.0
 
-# Ionen Wolkens <ionen@gentoo.org> (2021-09-12)
-# No reverse dependencies, stuck on EAPI-5.
-# Replaced by dev-libs/spsdeclib.
-# Removal on 2021-10-12. bug #812806
-games-emulation/caps
-
-# Ionen Wolkens <ionen@gentoo.org> (2021-09-12)
-# No reverse dependencies, stuck on EAPI-5, last release in 2006.
-# Please report if anyone still need this.
-# Removal on 2021-10-12. bug #776904
-media-libs/sdl-terminal
-
-# Ionen Wolkens <ionen@gentoo.org> (2021-09-12)
-# Stuck on x86 / amd64-multilib, no upstream, code relies on
-# several implicit constructs and undefined behavior, ebuild
-# semi-broken and runtime seems broken even if built.
-# Removal on 2021-10-12. bug #701414, bug #739188.
-games-emulation/nestra
-
 # Anna Vyalkova <cyber+gentoo@sysrq.in> (2021-09-07)
 # Mask backwards-incompatible version to avoid autodeletion of previous one.
 # Data migration is not supported upstream and can't be done automatically.
@@ -340,19 +328,6 @@ games-puzzle/gnudoku
 # Upstream provided migration instructions from 2. -> 3. update,
 # breaks if not all at least many revdeps. #805011 for tracker bug.
 >=net-libs/mbedtls-3.0.0
-
-# Craig Andrews <candrews@gentoo.org> (2021-07-10)
-# Masked until November, 2021
-# This release adds enforcement of the Taproot protocol change to the Bitcoin
-# rules, beginning in November. Protocol changes require user consent to be
-# effective, and if enforced inconsistently within the community may compromise
-# your security or others! If you do not know what you are doing, learn more
-# before November. (You must make a decision either way - simply not upgrading
-# is insecure in all scenarios.)
-# To learn more, see https://bitcointaproot.cc
->=net-p2p/bitcoind-0.21.1
->=net-p2p/bitcoin-qt-0.21.1
->=net-libs/libbitcoinconsensus-0.21.1
 
 # Lars Wendler <polynomial-c@gentoo.org> (2021-07-10)
 # Masked for testing
