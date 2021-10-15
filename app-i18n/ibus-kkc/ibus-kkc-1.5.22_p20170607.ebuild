@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-inherit autotools vala
+inherit autotools vala vcs-snapshot
 
 EGIT_COMMIT="f7516ae20cb648cd8b0904aec5853d3a3d2611c4"
 
@@ -29,8 +29,8 @@ BDEPEND="$(vala_depend)
 
 src_prepare() {
 	vala_src_prepare
-	eautoreconf
 	default
+	eautoreconf
 }
 
 src_configure() {

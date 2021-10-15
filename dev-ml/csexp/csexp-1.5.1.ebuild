@@ -11,15 +11,10 @@ SRC_URI="https://github.com/ocaml-dune/csexp/releases/download/${PV}/${P}.tbz"
 
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~arm ~arm64 ppc ~ppc64 x86"
+KEYWORDS="amd64 ~arm arm64 ppc ~ppc64 x86"
 IUSE="+ocamlopt test"
 RESTRICT="!test? ( test )"
 
-DEPEND="
-	>=dev-ml/result-1.5:=[ocamlopt=]
-"
-RDEPEND="${DEPEND}"
-BDEPEND=""
-DEPEND="${DEPEND}
-	test? ( dev-ml/ppx_expect )
-"
+RDEPEND=">=dev-ml/result-1.5:=[ocamlopt=]"
+DEPEND="${RDEPEND}
+	test? ( dev-ml/ppx_expect )"

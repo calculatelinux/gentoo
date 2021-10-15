@@ -1,8 +1,9 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-inherit desktop git-r3 multilib savedconfig toolchain-funcs
+
+inherit desktop git-r3 savedconfig toolchain-funcs
 
 DESCRIPTION="simple terminal implementation for X"
 HOMEPAGE="https://st.suckless.org/"
@@ -21,9 +22,9 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
-	virtual/pkgconfig
 	x11-base/xorg-proto
 "
+BDEPEND="virtual/pkgconfig"
 
 src_prepare() {
 	default

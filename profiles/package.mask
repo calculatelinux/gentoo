@@ -33,6 +33,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2021-10-15)
+# Drop broken packages with no reverse dependencies
+# Removal on 2021-11-15. bug #817965, bug #771756, bug #767196
+dev-ml/async_ssl
+dev-ml/ppx_tools_versioned
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (2021-10-14)
+# Unused and outdated packages; the version in core Perl is
+# newer. Removal in 30 days.
+perl-core/Locale-Maketext-Simple
+perl-core/Math-BigInt
+perl-core/Math-Complex
+perl-core/Memoize
+perl-core/MIME-Base64
+
 # Jaco Kroon <jaco@uls.co.za> (2021-10-05)
 # Masked for removal in 30 days.
 # Last upstream release in 2012.
@@ -137,63 +152,6 @@ dev-ruby/thor:0
 # of open bugs not fixed has led the project being forked already.
 # Bug #776895. Removal in ~30 days.
 dev-libs/rapidxml
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2021-10-01)
-# KDE Plasma 5.22.90 (5.23 Beta) mask - Pre-release version
-# See also: https://kde.org/announcements/plasma/5/5.22.90/
-# KDE Plasma Beta Review Day on 2021-10-01: https://tinyurl.com/kdereview
-~kde-plasma/bluedevil-5.22.90
-~kde-plasma/breeze-5.22.90
-~kde-plasma/breeze-grub-5.22.90
-~kde-plasma/breeze-gtk-5.22.90
-~kde-plasma/breeze-plymouth-5.22.90
-~kde-plasma/discover-5.22.90
-~kde-plasma/drkonqi-5.22.90
-~kde-plasma/kactivitymanagerd-5.22.90
-~kde-plasma/kde-cli-tools-5.22.90
-~kde-plasma/kde-gtk-config-5.22.90
-~kde-plasma/kdecoration-5.22.90
-~kde-plasma/kdeplasma-addons-5.22.90
-~kde-plasma/kgamma-5.22.90
-~kde-plasma/khotkeys-5.22.90
-~kde-plasma/kinfocenter-5.22.90
-~kde-plasma/kmenuedit-5.22.90
-~kde-plasma/kscreen-5.22.90
-~kde-plasma/kscreenlocker-5.22.90
-~kde-plasma/ksshaskpass-5.22.90
-~kde-plasma/ksystemstats-5.22.90
-~kde-plasma/kwallet-pam-5.22.90
-~kde-plasma/kwayland-integration-5.22.90
-~kde-plasma/kwayland-server-5.22.90
-~kde-plasma/kwin-5.22.90
-~kde-plasma/kwrited-5.22.90
-~kde-plasma/layer-shell-qt-5.22.90
-~kde-plasma/libkscreen-5.22.90
-~kde-plasma/libksysguard-5.22.90
-~kde-plasma/libkworkspace-5.22.90
-~kde-plasma/milou-5.22.90
-~kde-plasma/oxygen-5.22.90
-~kde-plasma/plasma-browser-integration-5.22.90
-~kde-plasma/plasma-desktop-5.22.90
-~kde-plasma/plasma-disks-5.22.90
-~kde-plasma/plasma-firewall-5.22.90
-~kde-plasma/plasma-integration-5.22.90
-~kde-plasma/plasma-meta-5.22.90
-~kde-plasma/plasma-nm-5.22.90
-~kde-plasma/plasma-pa-5.22.90
-~kde-plasma/plasma-sdk-5.22.90
-~kde-plasma/plasma-systemmonitor-5.22.90
-~kde-plasma/plasma-thunderbolt-5.22.90
-~kde-plasma/plasma-workspace-5.22.90
-~kde-plasma/plasma-workspace-wallpapers-5.22.90
-~kde-plasma/plasma-vault-5.22.90
-~kde-plasma/plymouth-kcm-5.22.90
-~kde-plasma/polkit-kde-agent-5.22.90
-~kde-plasma/powerdevil-5.22.90
-~kde-plasma/sddm-kcm-5.22.90
-~kde-plasma/systemsettings-5.22.90
-~kde-plasma/xdg-desktop-portal-kde-5.22.90
-~kde-plasma/xembed-sni-proxy-5.22.90
 
 # Alfredo Tupone <tupone@gentoo.org> (2021-09-30)
 # Deprecated upstream
@@ -304,11 +262,12 @@ net-libs/libsoup:3.0
 =dev-libs/gost-engine-3.0*
 
 # Ionen Wolkens <ionen@gentoo.org> (2021-09-03)
-# Known to break kde-plasma/kwin (black screen), and several
-# other applications on wayland with current drivers.
+# Known to break plasma, and several other applications on EGLStream
+# wayland. egl-wayland-1.1.7-r1 is still usable with newer drivers
+# and does not prevent using wlroots-based compositors with GBM.
 # https://github.com/NVIDIA/egl-wayland/issues/40
 # https://github.com/NVIDIA/egl-wayland/issues/41
-~gui-libs/egl-wayland-1.1.8
+>=gui-libs/egl-wayland-1.1.8
 
 # Alexey Sokolov <alexey+gentoo@asokolov.org> (2021-08-30)
 # Homepage dead, uses gtk2, fails to build, https://bugs.gentoo.org/711344
