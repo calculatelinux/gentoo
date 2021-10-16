@@ -12,7 +12,7 @@ S=${WORKDIR}/${PN}-${P}
 
 LICENSE="Apache-2.0"
 SLOT="0/7.13.1" # ffmpeg subslot naming: SONAME tuple of {libmbedcrypto.so,libmbedtls.so,libmbedx509.so}
-KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 ~sparc x86"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86"
 IUSE="cpu_flags_x86_sse2 doc havege programs static-libs test threads zlib"
 RESTRICT="!test? ( test )"
 
@@ -64,6 +64,13 @@ multilib_src_compile() {
 }
 
 multilib_src_test() {
+	# psa isn't ready yet, it might be in 3.x(?) but certainly not
+	# at the moment.
+	# bug #718390
+	local myctestargs=(
+		-E "(psa_crypto|psa_its-suite)"
+	)
+
 	LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${BUILD_DIR}/library" \
 		cmake_src_test
 }

@@ -21,12 +21,17 @@ BDEPEND="${RDEPEND}
 PDEPEND="emacs? ( app-emacs/ocaml-mode )
 	xemacs? ( app-xemacs/ocaml )"
 
-PATCHES=("${FILESDIR}"/${PN}-4.09.0-gcc-10.patch)
+PATCHES=( "${FILESDIR}"/${PN}-4.09.0-gcc-10.patch )
 
 src_prepare() {
 	default
 
 	cp "${FILESDIR}"/ocaml.conf "${T}" || die
+
+	# Broken until 4.12
+	# bug #818445
+	filter-flags '-flto*'
+	append-flags -fno-strict-aliasing
 
 	# OCaml generates textrels on 32-bit arches
 	# We can't do anything about it, but disabling it means that tests

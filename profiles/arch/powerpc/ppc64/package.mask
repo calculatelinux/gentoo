@@ -1,5 +1,24 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
+
+# Sam James <sam@gentoo.org> (2021-10-16)
+# Mask for media-libs/openexr and its reverse dependencies.
+# Broken on big endian.
+# bug #818424
+dev-games/openscenegraph
+dev-games/openscenegraph-qt
+media-libs/openexr
+media-libs/ctl
+media-gfx/openvdb
+media-libs/embree
+media-libs/opencolorio
+media-libs/openimageio
+media-libs/osl
+
+# Sam James <sam@gentoo.org> (2021-10-16)
+# Fails with "No byte-swap function available on big-endian platform."
+# bug #711940
+dev-db/mysql-connector-c++
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2021-05-17)
 # chromium does not work on ppc64be

@@ -12,7 +12,7 @@ DESCRIPTION="An implementation of XML-RPC"
 
 SLOT="0"
 LICENSE="|| ( Artistic-2 LGPL-2.1 )"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="test"
 RESTRICT="!test? ( test )"
 
@@ -29,9 +29,13 @@ BDEPEND="${RDEPEND}
 	>=virtual/perl-ExtUtils-MakeMaker-7.560.0
 	test? (
 		virtual/perl-IO-Socket-IP
+		dev-perl/Net-Server
 		>=virtual/perl-Test-Simple-1.302.183
 	)
 "
+
+# tests seem to be a bit flaky
+DIST_TEST=do
 
 src_compile() {
 	perl-module_src_compile
