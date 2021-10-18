@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=Decode EDID data in a human-readable format
+EAPI=8
+HOMEPAGE=https://git.linuxtv.org/edid-decode.git/
+IUSE=examples
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~conikost/files/edid-decode-0_pre20211012.tar.gz
+_eclasses_=multilib	4b66d835ec72e021e359bb81eacfe988	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=7f52643d0ad051e17c249440a40ef64b

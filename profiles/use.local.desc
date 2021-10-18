@@ -184,7 +184,7 @@ app-admin/ulogd:ulog - Build ULOG input plugin to support deprecated packet-base
 app-admin/vault:webui - Enable the Web UI
 app-admin/webalizer:xtended - Include the 404 extension
 app-admin/webapp-config:portage - Propagate python_targets dependencies to sys-apps/portage
-app-antivirus/clamav:clamapp - Build applications (clamscan, clamd, clamdscan, clamonacc(also has it's own USE flag), sigtool, clambc, clamav-milter(also requires milter USE flag), clamdtop, clamsubmit, clamconf).
+app-antivirus/clamav:clamapp - Build applications (clamscan, clamd, clamdscan, clamonacc (also has its own USE flag), sigtool, clambc, clamav-milter (also requires milter USE flag), clamdtop, clamsubmit, clamconf).
 app-antivirus/clamav:clamdtop - A Top like tool which shows what clamd is currently scanning amongst other things
 app-antivirus/clamav:clamonacc - Build the clamonacc on-access scanner
 app-antivirus/clamav:clamsubmit - A tool to submit false positives / negatives
@@ -739,7 +739,6 @@ app-i18n/ibus-libpinyin:boost - Compile against dev-libs/boost libraries
 app-i18n/ibus-libpinyin:opencc - Enable support for app-i18n/opencc
 app-i18n/ibus-pinyin:boost - Enable support for dev-libs/boost
 app-i18n/ibus-sunpinyin:gui - Install graphical user interface tool (ibus-setup-sunpinyin)
-app-i18n/ibus-unikey:gtk2 - Enable support for x11-libs/gtk+:2
 app-i18n/im-chooser:gtk2 - Build with x11-libs/gtk+:2 instead of x11-libs/gtk+:3
 app-i18n/im-chooser:xfce - Enable support for XFCE panel
 app-i18n/imsettings:gconf - Enable support for gnome-base/gconf
@@ -857,12 +856,12 @@ app-misc/lcd4linux:w1retap - Enable the w1retap plugin.
 app-misc/lcd4linux:wireless - Enable the wireless plugin, to get wireless statistics.
 app-misc/lcdproc:ethlcd - Enable support for ethlcd in the hd44780 driver.
 app-misc/lcdproc:extra-charmaps - Enable extra language specific charmaps.
-app-misc/lcdproc:freetype - Enable support for media-libs/freetype in the glcd driver.
 app-misc/lcdproc:menu - Enable menu support in the lcdproc client.
 app-misc/lcdproc:nfs - Display NFS filesystem stats in the lcdproc client.
 app-misc/lcdproc:png - Enable support for media-libs/libpng in the glcd driver.
 app-misc/lcdproc:samba - Display SMBFS filesystem stats in the lcdproc client.
 app-misc/lcdproc:test-menu - Enable test menu support for the lcdproc server.
+app-misc/lcdproc:truetype - Enable support for media-libs/freetype in the glcd driver.
 app-misc/libdatovka:openssl - Use openssl backend
 app-misc/lirc:audio - Support using an audio device connected to an IR receiver
 app-misc/lirc:devinput - Support the devinput input device
@@ -2415,7 +2414,6 @@ dev-python/cvxopt:glpk - Use GNU Linear Programming Kit sci-mathematics/glpk
 dev-python/drf-yasg:validation - Enable swagger spec validation using swagger-spec-validator
 dev-python/editorconfig-core-py:cli - Install command line interface as well as python library
 dev-python/elasticsearch-py:async - Add async support
-dev-python/falcon:cython - Build cython-based python modules
 dev-python/gevent:events - Enables the gevent events system which is required by libraries that use gevent monkey patching. This adds dev-python/zope-event and dev-python/zope-interface as runtime dependencies.
 dev-python/hiredis:system-libs - Use dev-libs/hiredis from system
 dev-python/hypothesis:cli - Install a CLI tool used to write tests.
@@ -2444,7 +2442,6 @@ dev-python/py-amqp:extras - Install extra tools to generate initial Python mod f
 dev-python/pygame:midi - Enable midi support using media-libs/portmidi
 dev-python/pyglet:image - Enable support for image formats other than PNG and BMP
 dev-python/pyilmbase:exceptions - Enable runtime floating point exceptions in PyIMath.
-dev-python/pyilmbase:numpy - Add bindings for dev-python/numpy use.
 dev-python/pyocr:cuneiform - Enable support for the app-text/cuneiform OCR engine
 dev-python/pyocr:tesseract - Enable support for the app-text/tesseract OCR engine
 dev-python/pypax:ptpax - Enable PT_PAX_FLAGS support.
@@ -6594,6 +6591,7 @@ net-misc/remmina:gvnc - Enable GVNC plugin using gtk-vnc, suitable for KVM and V
 net-misc/remmina:kwallet - Enable KDE Wallet plugin
 net-misc/remmina:spice - Support connecting to SPICE-enabled virtual machines
 net-misc/remmina:ssh - Enable support for SSH/SFTP protocol
+net-misc/remmina:x2go - Enable support for X2Go
 net-misc/rsync:stunnel - Provide helper scripts for using rsync via >=net-misc/stunnel-4
 net-misc/rsync:system-zlib - Use system zlib instead of bundled one. This is incompatible with older rsync releases!
 net-misc/rsync:xxhash - Enable dev-libs/xxhash support for hashing
@@ -7266,6 +7264,7 @@ sci-libs/gdal:aux-xml - Enable Portable Auxilliary Metadata generation
 sci-libs/gdal:fits - Enable support for NASA's sci-libs/cfitsio library
 sci-libs/gdal:geos - Add support for geometry engine (sci-libs/geos)
 sci-libs/gdal:gml - Enable support for dev-libs/xerces-c C++ API
+sci-libs/gdal:heif - Enable support for ISO/IEC 23008-12:2017 HEIF/HEIC image format using media-libs/libheif
 sci-libs/gdal:mdb - Enable support for Microsoft Access database
 sci-libs/gdal:ogdi - Enable support for the open geographic datastore interface (sci-libs/ogdi)
 sci-libs/gdal:opencl - Enable OpenCL support
