@@ -1,14 +1,14 @@
-BDEPEND=doc? ( app-text/docbook-sgml-utils ) sys-apps/sed >=app-text/opensp-1.5 dev-vcs/subversion[http(+)] net-misc/rsync
+BDEPEND=>=app-text/opensp-1.5 doc? ( app-text/docbook-sgml-utils ) dev-vcs/subversion[http(+)] net-misc/rsync
 DEFINED_PHASES=configure preinst prepare unpack
-DEPEND=X? ( x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXpm ) sdl? ( media-libs/libsdl ) svga? ( media-libs/svgalib ) readline? ( sys-libs/readline:= ) ncurses? ( sys-libs/ncurses:= ) X? ( x11-base/xorg-proto )
+DEPEND=ncurses? ( sys-libs/ncurses:= ) readline? ( sys-libs/readline:= ) sdl? ( media-libs/libsdl ) X? ( x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXpm ) X? ( x11-base/xorg-proto )
 DESCRIPTION=LGPL-ed pc emulator
 EAPI=7
 HOMEPAGE=http://bochs.sourceforge.net/
-IUSE=3dnow avx debugger doc gdb ncurses readline svga sdl +smp vnc X +x86-64
+IUSE=3dnow avx debugger doc gdb ncurses readline sdl +smp vnc X +x86-64
 LICENSE=LGPL-2.1
 PROPERTIES=live
-RDEPEND=X? ( x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXpm ) sdl? ( media-libs/libsdl ) svga? ( media-libs/svgalib ) readline? ( sys-libs/readline:= ) ncurses? ( sys-libs/ncurses:= )
+RDEPEND=ncurses? ( sys-libs/ncurses:= ) readline? ( sys-libs/readline:= ) sdl? ( media-libs/libsdl ) X? ( x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXpm )
 REQUIRED_USE=avx? ( x86-64 ) gdb? ( !debugger !smp ) debugger? ( !gdb )
 SLOT=0
 _eclasses_=estack	055c42df72f76a4f45ec92b35e83cd56	subversion	c74febd1baf21b1229704d6a953c27db
-_md5_=06d5ea22735ec2185c21604b4b897575
+_md5_=4fa47eda0cc3f3711ac03201ba4fbeb0
