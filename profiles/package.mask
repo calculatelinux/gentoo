@@ -33,6 +33,78 @@
 
 #--- END OF EXAMPLES ---
 
+# Sergey Popov <pinkbyte@gentoo.org> (2021-10-22)
+# Upstream support discontinued, see https://bw.org/2019/03/19/bw-whois/
+# Suggested replacement - net-misc/whois
+# Masked for removal on 2021-11-22
+net-misc/bwwhois
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-21)
+# Dead upstream, EAPI 5, broken build system, no revdeps.
+# Removal on 2021-11-20. Bug #819366
+net-analyzer/quidscor
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-21)
+# No maintainer, no revdeps, dead upstream, EAPI 5.
+# No other distro is packaging this.
+# Removal on 2021-11-20. Bug #819363
+net-dialup/cistronradius
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-21)
+# No maintainer, no revdeps, dead upstream, EAPI 5.
+# No other distro is packaging this.
+# Removal on 2021-11-20. Bug #819354
+net-dialup/fbgetty
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-21)
+# Legacy package, no revdeps, EAPI 5.
+# Removal on 2021-11-20. Bug #819345
+net-fs/openafs-legacy
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-21)
+# No maintainer, dead upstream, EAPI 5.
+# No other distro is packaging this. Bug #819339
+# Removal on 2021-11-20.
+net-ftp/profxp
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-21)
+# No maintainer, dead upstream, EAPI 5.
+# No other distro is packaging this. Bug #819231
+# Removal on 2021-11-20.
+sys-auth/ykneo-ccid-tools
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-21)
+# No maintainer, dead upstream, EAPI 5.
+# No other distro is packaging this. Bug #819171
+# Removal on 2021-11-20.
+x11-apps/xwarppointer
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-21)
+# No maintainer, EAPI 5, no other distro is packaging this.
+# Removal on 2021-11-20. Bug #819165
+x11-misc/3dfb
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-21)
+# Unmaintained, stuck on EAPI 5, full of hacks and patches.
+# No other distro is packaging this. Bug #819141
+# Removal on 2021-11-20.
+x11-themes/redhat-artwork
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-21)
+# No maintainer, EAPI 5, no other distro is packaging this.
+# Removal on 2021-11-20. Bug #819126
+sci-geosciences/swmm
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-21)
+# No maintainer, EAPI 5, no other distro is packaging this.
+# Removal on 2021-11-20. Bug #819123
+sci-geosciences/harmonics-dwf-free-noncomm
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-21)
+# Stuck on EAPI 5, no other distro is packaging this. Bug #575684
+# Removal on 2021-11-20.
+sci-electronics/quartus-prime-lite
+
 # David Seifert <soap@gentoo.org> (2021-10-17)
 # Broken since pretty much forever, last release 17 years ago, already
 # removed by Fedora. Bug #386275, #731042, #762346, removal in 30 days.
@@ -309,16 +381,6 @@ net-libs/libsoup:3.0
 # https://github.com/NVIDIA/egl-wayland/issues/40
 # https://github.com/NVIDIA/egl-wayland/issues/41
 >=gui-libs/egl-wayland-1.1.8
-
-# Alexey Sokolov <alexey+gentoo@asokolov.org> (2021-08-30)
-# Homepage dead, uses gtk2, fails to build, https://bugs.gentoo.org/711344
-games-puzzle/gnudoku
-
-# Stephan Hartmann <sultan@gentoo.org> (2021-09-25)
-# Dev channel releases are only for people who
-# are developers or want more experimental features
-# and accept a more unstable release.
->=www-client/chromium-96
 
 # Bernard Cafarelli <voyageur@gentoo.org> (2021-08-26)
 # Preparing for final 5.0.0 release

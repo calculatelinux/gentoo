@@ -5,10 +5,10 @@ DESCRIPTION=EmACT, a fork of Conroy's MicroEmacs
 EAPI=7
 HOMEPAGE=http://www.eligis.com/emacs/
 IUSE=gui
-KEYWORDS=amd64 x86
+KEYWORDS=amd64 ~riscv x86
 LICENSE=GPL-2+ BSD
 RDEPEND=sys-libs/ncurses:0= gui? ( x11-libs/libX11 )
 SLOT=0
 SRC_URI=mirror://sourceforge/emact/emact-2.58.0.tar.gz
 _eclasses_=multilib	4b66d835ec72e021e359bb81eacfe988	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
-_md5_=e1364e7e16ba8729197587cc2ad03a79
+_md5_=f0dc202d6c64f3f6a7042e29c4c99c30
