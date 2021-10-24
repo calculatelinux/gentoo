@@ -33,6 +33,42 @@
 
 #--- END OF EXAMPLES ---
 
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-24)
+# No maintainer, EAPI 5, dead upstream.
+# Removal on 2021-11-23. Bug #819300.
+net-misc/pmsvn
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-24)
+# No maintainer, EAPI 5, dead upstream.
+# Removal on 2021-11-23. Bug #819294.
+net-misc/gcap
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-24)
+# No maintainer, EAPI 5, dead upstream.
+# Removal on 2021-11-23. Bug #819264.
+net-print/lm1100
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-24)
+# No maintainer, EAPI 5, no other distro is packaging this.
+# Removal on 2021-11-23. Bug #819237.
+sys-apps/hexdump-esr
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-24)
+# No maintainer, EAPI 5, dead upstream.
+# Removal on 2021-11-23. Bug #819153.
+x11-plugins/pidgin-latex
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-24)
+# No maintainer, EAPI 5, no other distro is packaging this.
+# Removal on 2021-11-23. Bug #819150.
+x11-plugins/hexchat-javascript
+
+# Zac Medico <zmedico@gentoo.org> (2021-10-23)
+# Mask go-etcd which fails to compile, and etcd-fs revdep.
+# Removal on 2021-11-22. Bug #771042.
+dev-db/go-etcd
+sys-fs/etcd-fs
+
 # Jakov Smolić <jsmolic@gentoo.org> (2021-10-23)
 # EAPI 5 java package, no revdeps.
 # Removal on 2021-11-22. Bug #819756.
@@ -451,10 +487,6 @@ dev-python/theano-pymc
 media-libs/libpulse
 media-sound/pulseaudio-daemon
 >=media-sound/pulseaudio-15.0-r100
-
-# Anthony G. Basile <blueness@gentoo.org> (2021-09-24)
-# Masked for removal in 30 days.  Dead upstream.
-dev-lang/bashforth
 
 # Michał Górny <mgorny@gentoo.org> (2021-08-28)
 # EOL kernel with known vulnerabilities.  Please move to 5.14 or one
