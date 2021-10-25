@@ -33,6 +33,31 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2021-10-25)
+# Fails to build with glibc-2.34 and binutils-2.34+. Not many other
+# distros packaging this and no upstream commits since 2011. No reverse
+# dependencies.
+# bug #707848, bug #806476. Removal on 2021-11-25.
+dev-util/mutrace
+
+# Sam James <sam@gentoo.org> (2021-10-25)
+# Fails to build with glibc-2.34 and appears to be obsolete. No
+# reverse dependencies.
+# bug #806079. Removal on 2021-11-25.
+sys-libs/libhugetlbfs
+
+# Sam James <sam@gentoo.org> (2021-10-25)
+# Fails to build with glibc-2.33 and no activity upstream; seems like
+# a new fork should be packaged.
+# bug #775962. Removal on 2021-11-25.
+sys-apps/mtree
+
+# Sam James <sam@gentoo.org> (2021-10-25)
+# Fails to build with glibc-2.30(!) and was abandoned upstream
+# a few years ago. No reverse dependencies in tree.
+# bug #728556. Removal on 2021-11-25.
+dev-perl/MongoDB
+
 # Jakov Smolić <jsmolic@gentoo.org> (2021-10-24)
 # No maintainer, EAPI 5, dead upstream.
 # Removal on 2021-11-23. Bug #819300.
@@ -458,7 +483,7 @@ dev-libs/rapidxml
 
 # Alfredo Tupone <tupone@gentoo.org> (2021-09-30)
 # Deprecated upstream
-# bug #815466.
+# bug #815466. Removal on 2021-10-30.
 dev-ml/ppx_metaquot
 
 # John Helmert III <ajak@gentoo.org> (2021-09-29)
