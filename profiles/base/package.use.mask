@@ -6,6 +6,10 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Jakov Smolić <jsmolic@gentoo.org> (2021-10-26)
+# Depends on masked sys-fabric/dapl
+sys-fabric/ofed dapl
+
 # Conrad Kostecki <conikost@gentoo.org> (2021-10-23)
 # Build tools is currently broken, so masking until upstream fixes
 # See https://voidpoint.io/terminx/eduke32/-/issues/206
@@ -208,10 +212,6 @@ dev-libs/efl efl-one
 # Michał Górny <mgorny@gentoo.org> (2020-09-09)
 # The respective dependencies are masked for removal.
 app-metrics/collectd collectd_plugins_onewire
-
-# Michał Górny <mgorny@gentoo.org> (2020-08-22)
-# These flags depend on packages masked for removal due to py2.
-sci-geosciences/qgis grass
 
 # Thomas Deutschmann <whissi@gentoo.org> (2020-08-17)
 # Only supported on 64bit systems, see storage/columnstore/CMakeLists.txt
