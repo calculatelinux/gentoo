@@ -2321,6 +2321,10 @@
       <email>heroxbd@gentoo.org</email>
       <name>Benda Xu</name>
     </member>
+    <member>
+      <email>sam@gentoo.org</email>
+      <name>Sam James</name>
+    </member>
   </project>
   <project>
     <email>printing@gentoo.org</email>
@@ -2673,6 +2677,11 @@
       <email>aballier@gentoo.org</email>
       <name>Alexis Ballier</name>
       <role>Almost everything</role>
+    </member>
+    <member>
+      <email>arthurzam@gentoo.org</email>
+      <name>Arthur Zamarin</name>
+      <role>Python coordinator</role>
     </member>
   </project>
   <project>
