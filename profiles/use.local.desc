@@ -2314,7 +2314,6 @@ dev-perl/File-HomeDir:xdg - Ensure XDG Semantics for returned paths via x11-misc
 dev-perl/File-Which:pwhich - Install dev-perl/App-pwhich which used to be a part of this package
 dev-perl/GD:animgif - Enable animated gif support
 dev-perl/GD:fcgi - Build for FastCGI compatibility via dev-libs/fcgi instead of using PerlIO
-dev-perl/Graphics-ColorNames:recommended - Install recommended support modules
 dev-perl/HTML-Mason:modperl - Enable www-apache/mod_perl support
 dev-perl/HTTP-Entity-Parser:xs - Install C-Based dependieces for faster performance
 dev-perl/JSON:xs - Install C-based dev-perl/JSON-XS for faster performance
@@ -3350,9 +3349,6 @@ gui-libs/neatvnc:examples - Build and install examples
 gui-libs/neatvnc:jpeg - Enable fast encodings
 gui-libs/neatvnc:tracing - Trace kernel and memory calls
 gui-libs/wlroots:X - Enable support for X11 applications (XWayland)
-gui-libs/wlroots:elogind - Enable support for rootless session via elogind
-gui-libs/wlroots:icccm - Use xcb-icccm (from x11-libs/xcb-util-wm) util library for improved Xwayland introspection
-gui-libs/wlroots:seatd - Enable support for rootless session via sys-auth/seatd
 gui-libs/wlroots:x11-backend - Enable support for handling input/output devices through x11-libs/libxcb
 gui-libs/xdg-desktop-portal-wlr:elogind - Enable support for rootless session via elogind
 gui-wm/hikari:X - Enable support for X11 applications (XWayland)
@@ -4027,6 +4023,7 @@ media-gfx/openvdb:abi5-compat - Disables newer features to maintain compatibilit
 media-gfx/openvdb:abi6-compat - Disables newer features to maintain compatibility with ABI6.
 media-gfx/openvdb:abi7-compat - Disables newer features to maintain compatibility with ABI7.
 media-gfx/openvdb:abi8-compat - Disables newer features to maintain compatibility with ABI8.
+media-gfx/openvdb:blosc - Allow using blosc compression via dev-libs/c-blosc
 media-gfx/openvdb:numpy - Build pyopenvdb with support for dev-python/numpy
 media-gfx/openvdb:utils - Build utility binaries
 media-gfx/photoqt:devil - Support additional image formats using media-libs/devil
@@ -4077,6 +4074,7 @@ media-libs/coin:qthelp - Build API documentation in QtHelp format
 media-libs/dav1d:10bit - Add support for building 10-bit and 12-bit AV1.
 media-libs/dav1d:8bit - Add support for decoding 8-bit AV1.
 media-libs/dav1d:asm - Enable custom assembly for faster decoding.
+media-libs/dav1d:xxhash - Enable dev-libs/xxhash support for hashing muxer
 media-libs/devil:allegro - Add support for Allegro
 media-libs/devil:nvtt - Add support for media-gfx/nvidia-texture-tools
 media-libs/dumb:allegro - Add support for Allegro 4
@@ -7332,7 +7330,6 @@ sci-libs/openblas:pthread - Build with pthread threading model
 sci-libs/openblas:relapack - Build the ReLAPACK extension to OpenBLAS
 sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/opencascade:gles2 - Use OpenGL ES 2.0
-sci-libs/opencascade:inspector - Build the OCCT inspector tool for low-level data inspection
 sci-libs/opencascade:json - Enable JSON support through dev-libs/rapidjson
 sci-libs/opencascade:optimize - Don't clear allocated memory. Use optimized memory manager unless tbb USE flag is set.
 sci-libs/opencascade:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
@@ -8226,6 +8223,7 @@ sys-fs/dosfstools:compat - Install symlinks for legacy names of the tools
 sys-fs/e2fsprogs:cron - Install e2scrub_all cron script
 sys-fs/e2fsprogs:fuse - Build fuse2fs, a FUSE file system client for ext2/ext3/ext4 file systems
 sys-fs/e2fsprogs:lto - Build with link time optimization (LTO)
+sys-fs/e2fsprogs:tools - Build extfs tools (mke2fs, e2fsck, tune2fs, etc.)
 sys-fs/ecryptfs-utils:gpg - Enable app-crypt/gnupg key module
 sys-fs/ecryptfs-utils:openssl - Enable dev-libs/openssl key module
 sys-fs/ecryptfs-utils:pkcs11 - Enable PKCS#11 (Smartcards) key module
@@ -8480,7 +8478,6 @@ www-apps/cgit:highlight - Enable source code highlighting
 www-apps/cgit:lua - Enable support for Lua scripting
 www-apps/drupal:uploadprogress - Install dev-php/pecl-uploadprogress package
 www-apps/gitea:acct - User and group management via acct-*/git packages
-www-apps/gitea:build-client - Build the client code, instead of using a precompiled one
 www-apps/gitit:plugins - enables optional plugin runtime loader
 www-apps/hugo:sass - Enable SASS/SCSS support
 www-apps/icingaweb2:apache2-server - Adds support for the apache2-server

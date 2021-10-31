@@ -17,7 +17,7 @@ else
 	SRC_URI="https://download.blender.org/source/${P}.tar.xz"
 	TEST_TARBALL_VERSION=2.93.0
 	SRC_URI+=" test? ( https://dev.gentoo.org/~sam/distfiles/${CATEGORY}/${PN}/${PN}-${TEST_TARBALL_VERSION}-tests.tar.bz2 )"
-	KEYWORDS="~amd64"
+	KEYWORDS="amd64"
 fi
 
 SLOT="${PV%.*}"
@@ -99,7 +99,7 @@ RDEPEND="${PYTHON_DEPS}
 	pulseaudio? ( media-sound/pulseaudio )
 	sdl? ( media-libs/libsdl2[sound,joystick] )
 	sndfile? ( media-libs/libsndfile )
-	tbb? ( dev-cpp/tbb:= )
+	tbb? ( <dev-cpp/tbb-2021.4.0:= )
 	test? ( dev-vcs/subversion )
 	tiff? ( media-libs/tiff )
 	valgrind? ( dev-util/valgrind )
