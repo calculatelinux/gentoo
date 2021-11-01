@@ -100,6 +100,11 @@
       <name>Yixun Lan</name>
     </member>
     <member>
+      <email>gyakovlev@gentoo.org</email>
+      <name>Georgy Yakovlev</name>
+      <role>installcd maintainer, misc helper</role>
+    </member>
+    <member>
       <email>maekke@gentoo.org</email>
       <name>Markus Meier</name>
     </member>
@@ -2185,6 +2190,10 @@
     <subproject ref="tools-portage@gentoo.org"/>
     <subproject ref="sandbox@gentoo.org"/>
     <member>
+      <email>floppym@gentoo.org</email>
+      <name>Mike Gilbert</name>
+    </member>
+    <member>
       <email>grobian@gentoo.org</email>
       <name>Fabian Groffen</name>
       <role>Prefix liaison</role>
@@ -2658,6 +2667,11 @@
     <member>
       <email>gokturk@gentoo.org</email>
       <name>Göktürk Yüksek</name>
+    </member>
+    <member>
+      <email>gyakovlev@gentoo.org</email>
+      <name>Georgy Yakovlev</name>
+      <role>can do keywording</role>
     </member>
     <member>
       <email>marecki@gentoo.org</email>

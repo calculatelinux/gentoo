@@ -7,7 +7,7 @@ MODULES_OPTIONAL_USE="driver"
 inherit desktop eapi8-dosym linux-mod multilib-build \
 	readme.gentoo-r1 systemd toolchain-funcs unpacker
 
-NV_KERNEL_MAX="5.14"
+NV_KERNEL_MAX="5.15"
 NV_URI="https://download.nvidia.com/XFree86/"
 
 DESCRIPTION="NVIDIA Accelerated Graphics Driver"
@@ -74,6 +74,7 @@ DEPEND="
 	)"
 BDEPEND="
 	app-misc/pax-utils
+	sys-devel/m4
 	virtual/pkgconfig"
 
 QA_PREBUILT="lib/firmware/* opt/bin/* usr/lib*"
