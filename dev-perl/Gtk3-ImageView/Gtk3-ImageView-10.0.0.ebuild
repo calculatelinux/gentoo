@@ -11,7 +11,7 @@ inherit perl-module virtualx
 DESCRIPTION="Image viewer widget for Gtk3"
 
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 RDEPEND="
 	dev-perl/Cairo
@@ -23,6 +23,7 @@ BDEPEND="${RDEPEND}
 	virtual/perl-ExtUtils-MakeMaker
 	test? (
 		dev-perl/Carp-Always
+		dev-perl/Test-Deep
 		dev-perl/Test-Differences
 		dev-perl/Test-MockObject
 		dev-perl/Try-Tiny
