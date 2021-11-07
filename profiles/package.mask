@@ -33,6 +33,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Jakov Smolić <jsmolic@gentoo.org> (2021-11-07)
+# Fails to build with glibc-2.34, dead upstream.
+# Only revdep (media-video/clive) is outdated
+# and uses EAPI 5.
+# Removal on 2021-12-07. Bug #807172.
+media-libs/quvi
+media-video/clive
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-11-07)
+# Unresolved security vulnerability, still uses EAPI 5.
+# Removal on 2021-12-07. Bug #811168.
+app-misc/rundeck-bin
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-11-07)
+# Dead upstream, uses EAPI 5, no revdeps.
+# Replaced by dev-db/mytop.
+# Removal on 2021-12-07. Bug #819675.
+dev-db/mtop
+
 # Jakov Smolić <jsmolic@gentoo.org> (2021-11-06)
 # Dead upstream, multiple open bugs, no maintainer,
 # uses EAPI 5, no revdeps.
@@ -551,12 +570,6 @@ x11-drivers/nvidia-drivers:0/vulkan
 # https://bugs.exim.org/show_bug.cgi?id=2813
 =mail-mta/exim-4.95
 
-# Hans de Graaff <graaff@gentoo.org> (2021-10-03)
-# Old obsolete slots. Use a newer slot instead.
-# Masked for removal in 30 days.
-dev-ruby/hashie:0
-dev-ruby/thor:0
-
 # John Helmert III <ajak@gentoo.org> (2021-09-29)
 # VM image data corruption bug, causing I/O errors in VMs. Bug #815379
 =app-emulation/qemu-6.1.0-r1
@@ -676,6 +689,7 @@ net-libs/libsoup:3.0
 # bug #816498
 >=dev-lang/ocaml-4.13
 >=dev-ml/camlp4-4.13
+>=dev-ml/labltk-8.06.11
 
 # Bernard Cafarelli <voyageur@gentoo.org> (2021-06-04)
 # Alpha versions of fetchmail 7
