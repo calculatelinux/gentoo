@@ -33,6 +33,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Jakov Smolić <jsmolic@gentoo.org> (2021-11-06)
+# Dead upstream, multiple open bugs, no maintainer,
+# uses EAPI 5, no revdeps.
+# Removal on 2021-12-06. Bug #819750.
+app-pda/gnupod
+
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2021-11-05)
 # 'btrfs filesystem usage' reports incorecct values
 # https://github.com/kdave/btrfs-progs/issues/422
@@ -550,11 +556,6 @@ x11-drivers/nvidia-drivers:0/vulkan
 # Masked for removal in 30 days.
 dev-ruby/hashie:0
 dev-ruby/thor:0
-
-# Alfredo Tupone <tupone@gentoo.org> (2021-09-30)
-# Deprecated upstream
-# bug #815466. Removal on 2021-10-30.
-dev-ml/ppx_metaquot
 
 # John Helmert III <ajak@gentoo.org> (2021-09-29)
 # VM image data corruption bug, causing I/O errors in VMs. Bug #815379
