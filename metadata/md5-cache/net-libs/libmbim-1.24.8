@@ -1,5 +1,5 @@
-BDEPEND=dev-util/glib-utils dev-util/gtk-doc-am virtual/pkgconfig
-DEFINED_PHASES=configure install
+BDEPEND=|| ( dev-lang/python:3.10 dev-lang/python:3.9 dev-lang/python:3.8 ) dev-util/glib-utils dev-util/gtk-doc-am virtual/pkgconfig
+DEFINED_PHASES=configure install setup
 DEPEND=>=dev-libs/glib-2.48:2 udev? ( dev-libs/libgudev:= )
 DESCRIPTION=Mobile Broadband Interface Model (MBIM) modem protocol helper library
 EAPI=7
@@ -10,4 +10,5 @@ LICENSE=LGPL-2
 RDEPEND=>=dev-libs/glib-2.48:2 udev? ( dev-libs/libgudev:= )
 SLOT=0
 SRC_URI=https://www.freedesktop.org/software/libmbim/libmbim-1.24.8.tar.xz
-_md5_=79c3c35bf78a8bd2abf67a74a404f28a
+_eclasses_=eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multilib	4b66d835ec72e021e359bb81eacfe988	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	python-any-r1	13f6d423c5c5bc519a9b552654cc745f	python-utils-r1	a8b7938ade305f087865de7e52d079b5	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=efacc445abd2bc0f4005268dbbe0a2d4

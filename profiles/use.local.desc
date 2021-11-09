@@ -2317,7 +2317,6 @@ dev-perl/HTML-Mason:modperl - Enable www-apache/mod_perl support
 dev-perl/HTTP-Entity-Parser:xs - Install C-Based dependieces for faster performance
 dev-perl/JSON:xs - Install C-based dev-perl/JSON-XS for faster performance
 dev-perl/JSON-MaybeXS:xs - Install a C-Based backend to make JSON encode/decode fast
-dev-perl/Lab-VXI11:libtirpc - Build against net-libs/libtirpc for RPC support
 dev-perl/List-MoreUtils:xs - Install C-Based backend implementation for performance
 dev-perl/MCE:sereal - Install dev-perl/Sereal-Encoder and decoder for faster worker IPC
 dev-perl/Mail-IMAPClient:md5 - Install support for DIGEST-MD5 and CRAM-MD5 Authentication
@@ -2406,6 +2405,10 @@ dev-python/QtPy:xml - Pull in QtXml module
 dev-python/QtPy:xmlpatterns - Pull in bindings for the QtXmlPatterns module
 dev-python/autobahn:scram - Add support for WAMP-SCRAM authentication
 dev-python/autobahn:xbr - Add support for XBR decentralized data markets and etherium blockchain
+dev-python/bpython:clipboard - Enable copying to clipboard using dev-python/pyperclip
+dev-python/bpython:jedi - Enable autocompletion using dev-python/jedi
+dev-python/bpython:urwid - Ebable dev-python/urwid-based interface
+dev-python/bpython:watch - Enable watching paths using dev-python/watchdog
 dev-python/ctypescrypto:gost - Build with support for GOST Message Authentication Code
 dev-python/cvxopt:dsdp - Use interior point library sci-libs/dsdp
 dev-python/cvxopt:glpk - Use GNU Linear Programming Kit sci-mathematics/glpk
@@ -2891,7 +2894,6 @@ dev-vcs/git:gpg - Pull in gnupg for signing -- without gnupg, attempts at signin
 dev-vcs/git:highlight - GitWeb support for app-text/highlight
 dev-vcs/git:mediawiki - Support pulling and pushing from MediaWiki
 dev-vcs/git:mediawiki-experimental - Add experimental patches for improved MediaWiki support
-dev-vcs/git:pcre-jit - Enable JIT for pcre
 dev-vcs/git:perforce - Add support for Perforce version control system (requires manual installation of Perforce client)
 dev-vcs/git:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arch
 dev-vcs/git:subversion - Include git-svn for dev-vcs/subversion support
@@ -5096,7 +5098,6 @@ media-video/simplescreenrecorder:asm - Enable x86 assembly optimisation.
 media-video/simplescreenrecorder:vpx - Enable VP8 codec support via media-libs/libvpx.
 media-video/smplayer:autoshutdown - Enable the option to shutdown your computer after finishing the playlist. This requires dev-qt/qtdbus as dependency.
 media-video/smplayer:mpris - Enable support for MPRIS2 (Media Player Remote Interfacing Specification, version 2), a DBus interface for remote control, which requires dev-qt/qtdbus as dependency.
-media-video/subtitlecomposer:mpv - Build mpv backend support
 media-video/totem:python - Build dev-lang/python using plugins (dbusservice for notifications and MPRIS control, interactive python console and opensubtitles lookup)
 media-video/transcode:mjpeg - Enables mjpegtools support
 media-video/transcode:nuv - NuppelVideo container format demuxing
@@ -8248,7 +8249,7 @@ sys-fs/lessfs:memtrace - Enable leefs to create a report regarding the memory al
 sys-fs/loop-aes:extra-ciphers - Enable extra ciphers
 sys-fs/loop-aes:keyscrub - Protects the encryption key in memory but takes more cpu resources
 sys-fs/lvm2:device-mapper-only - Build only device-mapper and not the rest of LVM2 (UNSUPPORTED)
-sys-fs/lvm2:lvm2create_initrd - Install lvm2create_initrd script and pull in sys-apps/makedev for the /sbin/MAKEDEV command
+sys-fs/lvm2:lvm2create-initrd - Install lvm2create_initrd script and pull in sys-apps/makedev for the /sbin/MAKEDEV command
 sys-fs/lvm2:sanlock - Enable lvmlockd with support for sanlock
 sys-fs/lvm2:thin - Support for thin volumes
 sys-fs/mtpfs:mad - Enable handling of MP3's metadata
@@ -8311,7 +8312,6 @@ sys-libs/compiler-rt-sanitizers:msan - Build Memory Sanitizer runtime.
 sys-libs/compiler-rt-sanitizers:orc - Build ORC runtime.
 sys-libs/compiler-rt-sanitizers:profile - Build profiling runtime.
 sys-libs/compiler-rt-sanitizers:safestack - Build SafeStack runtime.
-sys-libs/compiler-rt-sanitizers:sanitize - Build sanitizer runtimes.
 sys-libs/compiler-rt-sanitizers:scudo - Build Scudo Hardened Allocator.
 sys-libs/compiler-rt-sanitizers:shadowcallstack - Build ShadowCallStack.
 sys-libs/compiler-rt-sanitizers:tsan - Build Thread Sanitizer runtime.

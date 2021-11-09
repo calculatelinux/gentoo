@@ -1,0 +1,13 @@
+BDEPEND=>=app-editors/emacs-23.1:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DEPEND=sci-mathematics/pari
+DESCRIPTION=sci-mathematics/pari emacs mode
+EAPI=8
+HOMEPAGE=http://iml.univ-mrs.fr/~ramare/ServeurPerso/GP-PARI/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=sci-mathematics/pari >=app-editors/emacs-23.1:*
+SLOT=0
+SRC_URI=http://iml.univ-mrs.fr/~ramare/ServeurPerso/GP-PARI/latest-pari-distrib/pariemacs-3.14.tar.gz
+_eclasses_=elisp	532fa549a4f54b2a3f83b827b272a4a9	elisp-common	cf4fd1b0835b9f3e638724840468064a
+_md5_=7b1f0ccff9b213713b2b772c54cd1a98
