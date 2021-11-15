@@ -4,10 +4,10 @@ DESCRIPTION=Dynamic virtual terminal manager
 EAPI=6
 HOMEPAGE=https://www.brain-dump.org/projects/dvtm/
 IUSE=savedconfig
-KEYWORDS=amd64 arm x86
+KEYWORDS=amd64 arm ~arm64 x86
 LICENSE=MIT
 RDEPEND=>=sys-libs/ncurses-6.1:=[unicode(+)]
 SLOT=0
 SRC_URI=https://www.brain-dump.org/projects/dvtm/dvtm-0.15.tar.gz
 _eclasses_=multilib	4b66d835ec72e021e359bb81eacfe988	portability	d1186f1e621de7b27ddcae82e6253259	savedconfig	7cb1bf66b4acedc4f06802a012d3b08d	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
-_md5_=1cce2954a42ffb0162831e6433c29f54
+_md5_=2aeb73662dce47d6125a5f862af54ec3

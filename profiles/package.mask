@@ -33,9 +33,55 @@
 
 #--- END OF EXAMPLES ---
 
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-13)
+# java package without consumers,
+# bug_808948 (CVE-2021-37714).  Removal in 30 days.
+dev-java/jsoup
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-11-13)
+# Broken, no maintainer, outdated, multiple bugs reported, EAPI 5,
+# only revdep sys-fs/tmsu fails to build with go 1.16.
+# Removal on 2021-12-13. Bug #819612. Bug #771054.
+dev-libs/go-fuse
+sys-fs/tmsu
+
+# Jakov Smolić <jsmolic@gentoo.org> (2021-11-13)
+# Outdated, multiple bugs reported, uses EAPI 5, no revdeps.
+# Please use sci-geosciences/josm-bin instead.
+# Removal on 2021-12-13. Bug #819129.
+sci-geosciences/josm
+
+# Hans de Graaff <graaff@gentoo.org> (2021-11-13)
+# No longer maintained upstream. Stuck on an old version 4.x of d3
+# while d3 upstream is now on 7.x. Probably best to use directly via
+# npm or yarn.
+# Masked for removal on 2021-12-13.
+dev-ruby/d3_rails
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-13)
+# java package without consumers, bug #787338. Removal in 30 days.
+dev-db/db-je
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-13)
+# depends on deprecated jdk / jre, bug #787449
+# stuck with EAPI 5, latest release in 2005
+# Removal in 30 days.
+net-analyzer/neti
+
+# John Helmert III <ajak@gentoo.org> (2021-11-13)
+# Unmaintained in Gentoo, open security bug, many unfixed otther
+# bugs. Removal on 2021-12-13, bug #764719.
+mail-client/cone
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-12)
+# Libraries with no other consumers. Removal in 30 days.
+dev-java/trident
+dev-java/okio
+dev-java/moshi
+
 # John Helmert III <ajak@gentoo.org> (2021-11-12)
 # Unfixed code execution bug, unmaintained in Gentoo.
-# Removal on 2021-11-11, bugs #672352, #794511.
+# Removal on 2021-12-11, bugs #672352, #794511.
 www-apps/websvn
 
 # Michał Górny <mgorny@gentoo.org> (2021-11-11)
@@ -149,13 +195,6 @@ perl-core/Term-ANSIColor
 >=dev-util/meson-0.60.0
 
 # Sam James <sam@gentoo.org> (2021-11-03)
-# Masked for testing. Minor changes which expose
-# some rare build failures. bug #821397.
-# (Only masked to avoid too many build failures
-# due to other changes hitting tree at the same time.)
-=sys-kernel/linux-headers-5.15
-
-# Sam James <sam@gentoo.org> (2021-11-03)
 # Known issues with YAMA (kernel.yama.ptrace_scope=1) which is on by default
 # in at least the sys-kernel/gento-kernel kernel config.
 # Work is in progress to fix these but latest sandbox versions still seem
@@ -195,12 +234,6 @@ sci-libs/libbufr
 # Fails to build with glibc-2.34, uses EAPI 5.
 # Removal on 2021-11-25. Bug #806577.
 sys-fabric/dapl
-
-# Jakov Smolić <jsmolic@gentoo.org> (2021-10-26)
-# Fails to build with glibc-2.34, broken test suite,
-# dead upstream, no revdeps.
-# Removal on 2021-11-25. Bug #806344.
-app-shells/heirloom-sh
 
 # Hans de Graaff <graaff@gentoo.org> (2021-10-26)
 # New rubygems versions check extension installation and will
@@ -368,7 +401,6 @@ dev-java/jutils
 dev-java/jvyaml
 dev-java/metadata-extractor
 dev-java/nachocalendar
-dev-java/netty-tcnative
 dev-java/offo-hyphenation
 dev-java/opencsv
 dev-java/pat
@@ -501,64 +533,6 @@ dev-ruby/archive-tar-minitar
 # bug #806508
 # Removal on 2021-11-17.
 dev-cpp/rttr
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-10-16)
-# Binary-only package, cannot be distributed, download
-# is an unversioned URL which changes content. In brief,
-# a pain. Unmaintained from now on. If you pick it up,
-# you'll have to watch it closely. Removal in 30 days
-# otherwise. Bug 794700.
-net-im/webex
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-10-16)
-# Outdated virtual; the respective module was removed
-# from core Perl with Perl 5.32. Use dev-perl/Pod-Parser
-# instead. Removal in 30days.
-virtual/perl-Pod-Parser
-
-# David Seifert <soap@gentoo.org> (2021-10-16)
-# EAPI 5, open bugs, practically maintainer-needed,
-# abandoned upstream, no other distro carries this.
-# Bug #632237, bug #656818, removal in 30 days.
-x11-themes/gtk-engines-flat
-
-# David Seifert <soap@gentoo.org> (2021-10-16)
-# EAPI 5, fails to compile with OpenSSL 1.1, bug #719974.
-# Removal in 30 days.
-mail-filter/spamdyke
-
-# David Seifert <soap@gentoo.org> (2021-10-16)
-# EAPI 5, fails to compile with OpenSSL 1.1, bug #674242.
-# Removal in 30 days.
-dev-java/netty-tcnative
-
-# David Seifert <soap@gentoo.org> (2021-10-16)
-# EAPI 5, fails to compile, QA issues, .NET team is
-# abandoned, bug #643452, bug #688404.
-# Removal in 30 days.
-dev-dotnet/dbus-sharp
-dev-dotnet/dbus-sharp-glib
-
-# Sam James <sam@gentoo.org> (2021-10-16)
-# Fails to compile with modern OCaml
-# bug #704464, bug #780090
-# Removal on 2021-11-16.
-app-text/htmlc
-
-# Sam James <sam@gentoo.org> (2021-10-15)
-# Drop broken packages with no reverse dependencies
-# Removal on 2021-11-15. bug #817965, bug #771756, bug #767196
-dev-ml/async_ssl
-dev-ml/ppx_tools_versioned
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (2021-10-14)
-# Unused and outdated packages; the version in core Perl is
-# newer. Removal in 30 days.
-perl-core/Locale-Maketext-Simple
-perl-core/Math-BigInt
-perl-core/Math-Complex
-perl-core/Memoize
-perl-core/MIME-Base64
 
 # Sam James <sam@gentoo.org> (2021-10-10)
 # Needs upstream build system fixes (currently in progress).

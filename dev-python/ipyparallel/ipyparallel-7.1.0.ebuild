@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 sparc x86"
+KEYWORDS="amd64 ~hppa ~ia64 sparc x86"
 
 RDEPEND="
 	dev-python/entrypoints[${PYTHON_USEDEP}]
@@ -41,6 +41,10 @@ BDEPEND="${RDEPEND}
 # TODO: package myst_parser
 # distutils_enable_sphinx docs/source
 distutils_enable_tests pytest
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-7.1.0-test-timeouts.patch
+)
 
 python_test() {
 	local deselect=(
