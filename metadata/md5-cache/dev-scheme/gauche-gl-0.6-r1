@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.2-r1:1.16 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install prepare
+DEPEND=dev-scheme/gauche:= media-libs/freeglut virtual/opengl x11-libs/libXmu cg? ( media-gfx/nvidia-cg-toolkit )
+DESCRIPTION=OpenGL binding for Gauche
+EAPI=8
+HOMEPAGE=https://practical-scheme.net/gauche/
+IUSE=cg examples
+KEYWORDS=amd64 ~ppc x86
+LICENSE=BSD
+RDEPEND=dev-scheme/gauche:= media-libs/freeglut virtual/opengl x11-libs/libXmu cg? ( media-gfx/nvidia-cg-toolkit )
+SLOT=0
+SRC_URI=mirror://sourceforge/gauche/Gauche-gl-0.6.tgz
+_eclasses_=autotools	c9df06c186913b43eb211100ef5fe2cf	gnuconfig	262062cef0ba4f22b397193da514a350	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4b66d835ec72e021e359bb81eacfe988	toolchain-funcs	9ea1c67b6f8315fdc2568abb674519aa
+_md5_=df951691a719f38867da7fd8f445217d
