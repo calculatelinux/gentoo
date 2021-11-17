@@ -33,6 +33,23 @@
 
 #--- END OF EXAMPLES ---
 
+# Jakov Smolić <jsmolic@gentoo.org> (2021-11-16)
+# Outdated java package, uses EAPI 5, no revdeps,
+# no other distro is packaging this.
+# Removal on 2021-12-16. Bug #819420.
+media-video/google2srt
+
+# Uses EAPI 5, multiple bugs reported, fails to compile,
+# no revdeps, upstream doesn't do regular releases,
+# no other distro is packaging this
+# Removal on 2021-12-16. Bug #770610. Bug #813873. Bug #810682.
+net-libs/onion
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-15)
+# Library without consumers,
+# bug #771693 (multiple CVEs); Removal in 30 days.
+dev-java/jackson
+
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-14)
 # java packages without consumers, Removal in 30 days.
 dev-java/milton-mail-api
@@ -178,11 +195,6 @@ dev-java/jnr-enxio
 # uses EAPI 5, no revdeps.
 # Removal on 2021-12-06. Bug #819750.
 app-pda/gnupod
-
-# Georgy Yakovlev <gyakovlev@gentoo.org> (2021-11-05)
-# 'btrfs filesystem usage' reports incorecct values
-# https://github.com/kdave/btrfs-progs/issues/422
-=sys-fs/btrfs-progs-5.15*
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (2021-11-04)
 # Unused and outdated packages; the version in core Perl is
@@ -523,22 +535,6 @@ sci-geosciences/harmonics-dwf-free-noncomm
 # Removal on 2021-11-20.
 sci-electronics/quartus-prime-lite
 
-# David Seifert <soap@gentoo.org> (2021-10-17)
-# Broken since pretty much forever, last release 17 years ago, already
-# removed by Fedora. Bug #386275, #731042, #762346, removal in 30 days.
-media-sound/cdcd
-
-# Hans de Graaff <graaff@gentoo.org> (2021-10-17)
-# Obsolete package, replaced by dev-ruby/minitar.
-# No reverse dependencies left. Masked for removal in 30 days.
-dev-ruby/archive-tar-minitar
-
-# Sam James <sam@gentoo.org> (2021-10-17)
-# Fails to build with glibc 2.34 and no reverse dependencies.
-# bug #806508
-# Removal on 2021-11-17.
-dev-cpp/rttr
-
 # Sam James <sam@gentoo.org> (2021-10-10)
 # Needs upstream build system fixes (currently in progress).
 # Python toggles don't work correctly right now.
@@ -751,10 +747,6 @@ media-plugins/kodi-game-libretro-dosbox
 >=dev-java/ant-eclipse-ecj-4.10
 >=dev-java/eclipse-ecj-4.10
 >=www-servers/tomcat-9
-
-# Stefan Strogin <steils@gentoo.org> (2020-02-12)
-# Mask for testing revdeps.
->=dev-games/mygui-3.4.0
 
 # Lars Wendler <polynomial-c@gentoo.org> (2019-11-14)
 # Breaks archives containing relative paths

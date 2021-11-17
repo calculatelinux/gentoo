@@ -270,6 +270,7 @@ app-benchmarks/filebench:auto-completion - Enable command-line autocompletion us
 app-benchmarks/httperf:idleconn - Build with the idleconn program
 app-benchmarks/ioping:netdata - Add support for netdata
 app-benchmarks/ramspeed:pic - Force shared libraries to be built as PIC (this is slower)
+app-benchmarks/stress-ng:apparmor - Add support for AppArmor.
 app-benchmarks/sysbench:aio - Add support for AIO.
 app-benchmarks/sysbench:attachsql - Add support for AttachSQL.
 app-benchmarks/sysbench:drizzle - Add support for Drizzles.
@@ -1694,6 +1695,7 @@ dev-java/openjdk-jre-bin:gentoo-vm - Allow this JDK to be recognised by Gentoo (
 dev-java/openjdk-jre-bin:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
 dev-java/openjfx:media - Compile media module, based on gstreamer-minimal (does not pull gstreamer)
 dev-java/openjfx:source - Install JavaFX sources
+dev-java/pdfbox:tools - Build and install pdfbox-tools
 dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
 dev-java/sbt:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
 dev-lang/R:lto - Use link-time optimization for R and its recommended packages.
@@ -1806,6 +1808,8 @@ dev-lang/php:xslt - Enable the XSL extension
 dev-lang/php:zip-encryption - Enable ZIP file encryption from dev-libs/libzip
 dev-lang/polyml:portable - Build the portable interpreter version of Poly/ML instead of native
 dev-lang/python:bluetooth - Build Bluetooth protocol support in socket module
+dev-lang/python:lto - Optimize the build using Link Time Optimization (LTO)
+dev-lang/python:pgo - Optimize the build using Profile Guided Optimization (PGO)
 dev-lang/python:wininst - Install Windows executables required to create an executable installer for MS Windows.
 dev-lang/python-exec:native-symlinks - Install generic symlinks like python and python3. If this flag is disabled, only versioned python3.X executables will be available to end users and ebuilds not using python eclasses.
 dev-lang/qu-prolog:pedro - Pedro subscription/notification communications system
@@ -7679,7 +7683,6 @@ sys-apps/flashrom:developerbox-spi - Enable Devloperbox SPI recovery support
 sys-apps/flashrom:digilent-spi - Enable support for Digilent iCEblink40 development board
 sys-apps/flashrom:drkaiser - Enable Dr. Kaiser programmer
 sys-apps/flashrom:dummy - Enable dummy tracing
-sys-apps/flashrom:ene-lpc - Enable ENE LPC interface keyboard controller
 sys-apps/flashrom:ft2232-spi - Enable ftdi programmer, flashing through FTDI/SPI USB interface
 sys-apps/flashrom:gfxnvidia - Enable NVIDIA programmer
 sys-apps/flashrom:internal - Enable internal/onboard support
@@ -7689,7 +7692,6 @@ sys-apps/flashrom:jlink-spi - Support for SEGGER J-Link and compatible devices
 sys-apps/flashrom:linux-mtd - Enable support for Linux mtd SPI flash devices
 sys-apps/flashrom:linux-spi - Enable support for Linux userspace spidev interface
 sys-apps/flashrom:lspcon-i2c-spi - Enable support for Parade lspcon USB-C to HDMI protocol translator
-sys-apps/flashrom:mec1308 - Enable support for Microchip MEC1308 embedded controller
 sys-apps/flashrom:mstarddc-spi - Support for SPI flash ROMs accessible through DDC in MSTAR-equipped displays
 sys-apps/flashrom:nic3com - Enable 3Com NIC programmer
 sys-apps/flashrom:nicintel - Support for Intel NICs
