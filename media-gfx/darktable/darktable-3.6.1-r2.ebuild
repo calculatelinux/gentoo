@@ -25,7 +25,7 @@ else
 	SRC_URI="https://github.com/darktable-org/${PN}/releases/download/release-${MY_PV}/${MY_P}.tar.xz
 		doc? ( https://docs.darktable.org/usermanual/${DOC_PV}/${PN}_user_manual.pdf -> ${PN}-usermanual-${DOC_PV}.pdf )"
 
-	KEYWORDS="amd64 ~arm64 -x86"
+	KEYWORDS="amd64 arm64 -x86"
 	LANGS=" af de eo es fr he hu it nl pt-BR ru sl uk"
 fi
 
@@ -76,7 +76,7 @@ RDEPEND="${DEPEND}
 	kwallet? ( >=kde-frameworks/kwallet-5.34.0-r1 )"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-find-opencl-header.patch
+	"${FILESDIR}"/${PN}-3.0.0_find-opencl-header.patch
 	"${FILESDIR}"/${PN}-3.0.2_cmake-march-autodetection.patch
 	"${FILESDIR}"/${PN}-3.4.0_jsonschema-automagic.patch
 	"${FILESDIR}"/${PN}-3.4.1_libxcf-cmake.patch

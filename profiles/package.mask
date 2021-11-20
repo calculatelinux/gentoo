@@ -33,6 +33,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2021-11-20)
+# Obsolete package. Last upstream release in 2014, upstream itself is
+# gone. No reverse dependencies in Gentoo.
+# Masked for removal in 30 days.
+dev-ruby/rack-ssl
+
 # Arthur Zamarin <arthurzam@gentoo.org> (2021-11-19)
 # Doesn't work with latest versions of adb, source not easily ported
 # to python 3.9 and 3.10. No upstream activity for 7 years.
@@ -228,11 +234,6 @@ perl-core/Sys-Syslog
 perl-core/Term-ANSIColor
 
 # Sam James <sam@gentoo.org> (2021-11-03)
-# Newer Meson versions make unknown arguments fatal.
-# Masked for testing. bug #821544
->=dev-util/meson-0.60.0
-
-# Sam James <sam@gentoo.org> (2021-11-03)
 # Known issues with YAMA (kernel.yama.ptrace_scope=1) which is on by default
 # in at least the sys-kernel/gento-kernel kernel config.
 # Work is in progress to fix these but latest sandbox versions still seem
@@ -365,12 +366,6 @@ dev-db/henplus
 # Dead upstream, stuck on EAPI 5, multiple open bugs, not updated in years.
 # Removal on 2021-11-22. Bug #819624.
 dev-lang/nwcc
-
-# Stephan Hartmann <sultan@gentoo.org> (2021-10-23)
-# Dev channel releases are only for people who
-# are developers or want more experimental features
-# and accept a more unstable release.
->=www-client/chromium-97
 
 # Arthur Zamarin <arthurzam@gentoo.org> (2021-10-22)
 # EAPI=5, no revdeps, dead upstream. As documentation only package,
