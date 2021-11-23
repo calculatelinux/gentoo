@@ -33,6 +33,41 @@
 
 #--- END OF EXAMPLES ---
 
+# Sergey Popov <pinkbyte@gentoo.org> (2021-11-22)
+# Upstream is pretty much dead
+# Has at least one security issue - bug #825358
+# Replaced by net-misc/frr
+# Removal in 30 days
+net-misc/quagga
+
+# Marek Szuba <marecki@gentoo.org> (2021-11-22)
+# Upstream switched from static documentation to the Wiki format
+# around 10 years ago, and the ebuild we've got in the tree was
+# massively outdated even then (our version: 812, last static
+# upstream version: 2001). No maintainer in Gentoo, EAPI 5.
+# Removal in 30 days. Bug #826454
+app-doc/selfhtml
+
+# Marek Szuba <marecki@gentoo.org> (2021-11-22)
+# Last release in 2008 at the latest, no maintainer in Gentoo for years,
+# EAPI 5, upstream is gone, the only distros which still package it are
+# Gentoo, Funtoo and LiGurOS.
+# Removal in 30 days. Bug #826682
+app-admin/psmon
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-11-22)
+# Unmaintained upstream, never made it to a KF5-based release and Gentoo
+# was the only distro ever packaging such a snapshot. Use kimpanel from
+# kde-plasma/plasma-desktop instead.
+# Removal on 2021-12-22. Bug #824822
+kde-misc/kimtoy
+
+# Stephan Hartmann <sultan@gentoo.org> (2021-11-22)
+# Dev channel releases are only for people who
+# are developers or want more experimental features
+# and accept a more unstable release.
+>=www-client/chromium-98
+
 # Michael Orlitzky <mjo@gentoo.org> (2021-11-22)
 # Cool package, but no longer developed upstream, and my immediate use
 # for it has expired. No reverse dependencies, deprecated EAPI;

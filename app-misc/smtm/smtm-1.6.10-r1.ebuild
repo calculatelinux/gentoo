@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -6,8 +6,8 @@ EAPI=5
 inherit perl-module
 
 DESCRIPTION="Stock ticker, profit/loss calculator and chart tool"
-HOMEPAGE="http://eddelbuettel.com/dirk/code/smtm.html"
-SRC_URI="http://eddelbuettel.com/dirk/code/smtm/smtm_${PV}.tar.gz"
+HOMEPAGE="https://eddelbuettel.com/dirk/code/smtm.html"
+SRC_URI="https://eddelbuettel.com/dirk/code/smtm/smtm_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
