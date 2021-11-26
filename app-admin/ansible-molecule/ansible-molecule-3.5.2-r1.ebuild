@@ -41,6 +41,7 @@ BDEPEND="$(python_gen_cond_dep '
 	>=dev-python/setuptools_scm-3.5.0[${PYTHON_USEDEP}]
 	>=dev-python/setuptools_scm_git_archive-1.1[${PYTHON_USEDEP}]
 	doc? (
+		dev-python/ansible-pygments[${PYTHON_USEDEP}]
 		>=dev-python/simplejson-3.17.2[${PYTHON_USEDEP}]
 	)
 	test? (
@@ -51,8 +52,13 @@ BDEPEND="$(python_gen_cond_dep '
 		>=dev-python/pytest-plus-0.2[${PYTHON_USEDEP}]
 		>=dev-python/pytest-testinfra-6.1.0[${PYTHON_USEDEP}]
 		>=dev-python/pytest-xdist-2.1.0[${PYTHON_USEDEP}]
+		dev-util/yamllint
 	)
 ')"
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-3.5.2_pyyaml6.patch
+)
 
 S="${WORKDIR}"/${MY_P}
 
@@ -72,8 +78,6 @@ src_prepare() {
 	#  - tests involving creation of a new scenario fail on ansible-lint errors, even though
 	#    a config file is deployed which should skip expected issues.
 	rm -f src/molecule/test/functional/test_command.py
-	# Uses unpackaged yamllint
-	rm -f src/molecule/test/unit/cookiecutter/test_molecule.py
 }
 
 python_test() {

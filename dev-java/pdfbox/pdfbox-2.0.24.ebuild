@@ -59,7 +59,7 @@ SRC_URI="mirror://apache/${PN}/${PV}/${P}-src.zip
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm64 ppc64 x86"
 IUSE="+tools"
 
 PROPERTIES="test_network"
@@ -182,8 +182,8 @@ src_compile() {
 	fi
 
 	JAVA_SRC_DIR=(
-		"${S}/pdfbox"
-		"${S}/debugger"
+		"${S}/pdfbox/src/main/java"
+		"${S}/debugger/src/main/java"
 	)
 	if use tools; then
 		JAVA_SRC_DIR+=( "${S}/tools" )
