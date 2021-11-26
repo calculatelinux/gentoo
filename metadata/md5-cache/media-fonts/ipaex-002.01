@@ -2,12 +2,12 @@ BDEPEND=app-arch/unzip X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
 DEFINED_PHASES=install postinst postrm setup
 DESCRIPTION=Japanese IPA extended TrueType fonts
 EAPI=7
-HOMEPAGE=https://ipafonts.osdn.jp/
+HOMEPAGE=https://moji.or.jp/ipafont/
 IUSE=X
 KEYWORDS=~alpha amd64 arm ~hppa ~ia64 ppc ppc64 ~s390 x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=IPAfont
-RESTRICT=binchecks strip test
+RESTRICT=binchecks strip
 SLOT=0
-SRC_URI=https://osdn.mirror.liquidtelecom.com/ipafonts/57330/IPAexfont00201.zip
+SRC_URI=https://moji.or.jp/wp-content/ipafont/IPAexfont/IPAexfont00201.zip
 _eclasses_=font	0667878c2b594871023dd1833d05996f
-_md5_=04f51f09dd7575c63215503239b01b16
+_md5_=7a536303b597f016c7e7d2453252e354

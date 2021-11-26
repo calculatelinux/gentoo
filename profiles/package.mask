@@ -33,6 +33,77 @@
 
 #--- END OF EXAMPLES ---
 
+# Marek Szuba <marecki@gentoo.org> (2021-11-25)
+# Ancient, very few distributions still package it. Both upstream
+# and the Debian package we use in SRC_URI are now gone. EAPI 5,
+# unmaintained in Gentoo. Consider using net-misc/frr, which supports
+# both RIP and many other routing protocols, instead.
+# Removal in 30 days. Bug #827322
+net-misc/netkit-routed
+
+# Marek Szuba <marecki@gentoo.org> (2021-11-25)
+# Upstream is gone. Unmaintained in Gentoo, last updated
+# back in the CVS era, EAPI 5, open bugs.
+# Removal in 30 days. Bug #826790
+net-analyzer/nagios-check_pidfile
+
+# Marek Szuba <marecki@gentoo.org> (2021-11-25)
+# Upstream is gone. Unmaintained in Gentoo, last updated
+# back in the CVS era, EAPI 5, open bugs.
+# Removal in 30 days. Bug #826786
+net-analyzer/nagios-check_fail2ban
+
+# Hans de Graaff <graaff@gentoo.org> (2021-11-25)
+# Old slot that no longer has reverse dependencies. Last release in
+# 2013. Use minitest 5.x instead.
+# Masked for removal in 30 days.
+dev-ruby/minitest:0
+
+# Hans de Graaff <graaff@gentoo.org> (2021-11-25)
+# Last upstream release in 2012 and upstream itself is no longer
+# available. Unlikely to still work correctly. No reverse dependencies.
+# Masked for removal in 30 days.
+dev-ruby/aws-s3
+
+# Marek Szuba <marecki@gentoo.org> (2021-11-23)
+# No new releases since July 2013, no commits to upstream Git repository
+# since May 2019, long list of known issues (including Bug #681520),
+# unmaintained in Gentoo, EAPI 5. Consider using dev-util/uglifyjs instead.
+# Removal in 30 days. Bug #826470
+dev-util/yuicompressor
+
+# Lars Wendler <polynomial-c@gentoo.org> (2021-11-24)
+# No real development since Q1 2020. Last release from 2016.
+# Users should switch over to media-sound/strawberry which is an actively
+# developed fork.
+# Masked for removal in 30 days.
+media-sound/clementine
+
+# Hans de Graaff <graaff@gentoo.org> (2021-11-23)
+# Obsolete slot, last release in 2017, uses EAPI 5.
+# Use one of the newer slots.
+# Masked for removal in 30 days.
+dev-ruby/ttfunk:1.5
+
+# Marek Szuba <marecki@gentoo.org> (2021-11-23)
+# Last release in 2009, dead upstream. Rendered obsolete by native PDF
+# importers provided by LibreOffice/OpenOffice, which actually read PDFs
+# instead of converting them to images. Unmaintained in Gentoo, EAPI 5.
+# Removal in 30 days. Bug #826382
+app-text/pdf2oo
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-23)
+# Does not support updated dev-java/pdfbox-2.0.24, Bug #803488
+# Blocks (CVE-2018-11797, CVE-2021-{27807,27906,31811,31812})
+dev-tex/pdfannotextractor
+
+# Marek Szuba <marecki@gentoo.org> (2021-11-23)
+# No releases or repo activity upstream since 2013, both versions currently
+# in the tree fail to build (for different reasons), unmaintained in Gentoo,
+# stable ebuild uses EAPI 5.
+# Removal in 30 days. Bug #756925
+app-text/dbacl
+
 # Sergey Popov <pinkbyte@gentoo.org> (2021-11-22)
 # Upstream is pretty much dead
 # Has at least one security issue - bug #825358
@@ -314,14 +385,6 @@ sci-libs/libbufr
 # Fails to build with glibc-2.34, uses EAPI 5.
 # Removal on 2021-11-25. Bug #806577.
 sys-fabric/dapl
-
-# Hans de Graaff <graaff@gentoo.org> (2021-10-26)
-# New rubygems versions check extension installation and will
-# fail to find gems when extensions are not installed correctly.
-# Not all packages in the tree have been updated for this yet.
-# Also Gentoo defaults need to be updated for this to work correctly.
-# Masked pending fixes in dev-ruby packages.
->=dev-ruby/rubygems-3.2.22
 
 # Sam James <sam@gentoo.org> (2021-10-25)
 # Fails to build with glibc-2.34 and binutils-2.34+. Not many other

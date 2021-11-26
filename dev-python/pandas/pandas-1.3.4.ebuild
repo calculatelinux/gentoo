@@ -18,7 +18,7 @@ S="${WORKDIR}/${P/_/}"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~arm arm64 ~hppa ~ia64 ~ppc ~ppc64 ~riscv ~s390 ~x86"
+KEYWORDS="amd64 ~arm arm64 ~hppa ~ia64 ~ppc ~ppc64 ~riscv ~s390 ~x86"
 IUSE="doc full-support minimal test X"
 RESTRICT="!test? ( test )"
 
@@ -158,6 +158,10 @@ python_test() {
 		# TODO: some data path problems?
 		pandas/tests/io/test_fsspec.py::test_read_csv
 		pandas/tests/io/test_fsspec.py::test_markdown_options
+
+		# Broken by Python changes
+		# https://github.com/pandas-dev/pandas/issues/44420
+		pandas/tests/io/parser/test_quoting.py::test_bad_quote_char
 	)
 
 	local -x LC_ALL=C.UTF-8
