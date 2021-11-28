@@ -180,6 +180,7 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 		IUSE+=" systemtap" TC_FEATURES+=(systemtap)
 	tc_version_is_at_least 9.0 && IUSE+=" d"
 	tc_version_is_at_least 9.1 && IUSE+=" lto"
+	tc_version_is_at_least 10 && IUSE+=" cet"
 	tc_version_is_at_least 10 && IUSE+=" zstd" TC_FEATURES+=(zstd)
 	tc_version_is_at_least 11 && IUSE+=" valgrind" TC_FEATURES+=(valgrind)
 	tc_version_is_at_least 11 && IUSE+=" custom-cflags"
@@ -289,12 +290,16 @@ S=$(
 )
 
 gentoo_urls() {
-	local devspace="HTTP~vapier/dist/URI HTTP~rhill/dist/URI
-	HTTP~zorry/patches/gcc/URI HTTP~blueness/dist/URI
-	HTTP~tamiko/distfiles/URI HTTP~sam/distfiles/URI
-	HTTP~sam/distfiles/sys-devel/gcc/URI HTTP~slyfox/distfiles/URI"
+	local devspace="
+		HTTP~soap/distfiles/URI
+		HTTP~sam/distfiles/URI
+		HTTP~sam/distfiles/sys-devel/gcc/URI
+		HTTP~tamiko/distfiles/URI
+		HTTP~zorry/patches/gcc/URI
+		HTTP~vapier/dist/URI
+		HTTP~blueness/dist/URI"
 	devspace=${devspace//HTTP/https:\/\/dev.gentoo.org\/}
-	echo mirror://gentoo/$1 ${devspace//URI/$1}
+	echo ${devspace//URI/$1} mirror://gentoo/$1
 }
 
 # This function handles the basics of setting the SRC_URI for a gcc ebuild.
@@ -625,6 +630,11 @@ make_gcc_hard() {
 			# -z now
 			# see *_all_extra-options.patch gcc patches.
 			gcc_hard_flags+=" -DEXTRA_OPTIONS"
+
+			if _tc_use_if_iuse cet && [[ ${CTARGET} == *x86_64*-linux* ]] ; then
+				gcc_hard_flags+=" -DEXTRA_OPTIONS_CF"
+			fi
+
 			# rebrand to make bug reports easier
 			BRANDING_GCC_PKGVERSION=${BRANDING_GCC_PKGVERSION/Gentoo/Gentoo Hardened}
 		fi
@@ -1171,6 +1181,10 @@ toolchain_src_configure() {
 
 	if in_iuse ada ; then
 		confgcc+=( --disable-libada )
+	fi
+
+	if in_iuse cet ; then
+		confgcc+=( $(use_enable cet) )
 	fi
 
 	if in_iuse cilk ; then

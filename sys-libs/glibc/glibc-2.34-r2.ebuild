@@ -102,11 +102,18 @@ fi
 # Lastly, let's avoid some openssh nastiness, bug 708224, as
 # convenience to our users.
 
+# gzip, grep, awk are needed by locale-gen, bug 740750
+
 BDEPEND="
 	${PYTHON_DEPS}
 	>=app-misc/pax-utils-${MIN_PAX_UTILS_VER}
 	sys-devel/bison
 	doc? ( sys-apps/texinfo )
+	!compile-locales? (
+		app-arch/gzip
+		sys-apps/grep
+		virtual/awk
+	)
 "
 COMMON_DEPEND="
 	gd? ( media-libs/gd:2= )
@@ -119,9 +126,17 @@ COMMON_DEPEND="
 	systemtap? ( dev-util/systemtap )
 "
 DEPEND="${COMMON_DEPEND}
+	compile-locales? (
+		app-arch/gzip
+		sys-apps/grep
+		virtual/awk
+	)
 	test? ( >=net-dns/libidn2-2.3.0 )
 "
 RDEPEND="${COMMON_DEPEND}
+	app-arch/gzip
+	sys-apps/grep
+	virtual/awk
 	sys-apps/gentoo-functions
 	!<app-misc/pax-utils-${MIN_PAX_UTILS_VER}
 	!<net-misc/openssh-8.1_p1-r2
@@ -315,9 +330,9 @@ setup_target_flags() {
 			# Workaround for https://bugs.gentoo.org/823780. This really should
 			# be removed when the upstream bug https://gcc.gnu.org/bugzilla/show_bug.cgi?id=103275
 			# is fixed in our tree, either via 11.3 or an 11.2p2 patch set.
-			if [[ ${ABI} == x86 ]] && tc-is-gcc && (($(gcc-major-version) == 11)) && (($(gcc-minor-version) < 3)); then
+			if [[ ${ABI} == x86 ]] && tc-is-gcc && (($(gcc-major-version) == 11)) && (($(gcc-minor-version) <= 2)) && (($(gcc-micro-version) == 0)); then
 				export CFLAGS_x86="${CFLAGS_x86} -mno-avx512f"
-				einfo "Auto adding -mno-avx512f to CFLAGS_x86 #823780 (ABI=${ABI})"
+				einfo "Auto adding -mno-avx512f to CFLAGS_x86 (bug #823780) (ABI=${ABI})"
 			fi
 		;;
 		mips)
