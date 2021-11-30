@@ -33,6 +33,22 @@
 
 #--- END OF EXAMPLES ---
 
+# William Hubbs <williamh@gentoo.org> (2021-11-30)
+# Dead upstream, no releases since 2015
+# Bug #770619; masked for removal on 2021-12-30.
+net-vpn/badvpn
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-11-30)
+# Blocks cleanup of sci-libs/fcl-0.5.0, unmaintained in Gentoo.
+# Upstream master claims to target sci-libs/fcl-0.6.1, but that
+# requires someone adopting the package.
+# Bug #770589; masked for removal on 2021-12-30.
+dev-python/python-fcl
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2021-11-30)
+# No revdeps, bug #774498; masked for removal on 2021-12-30.
+dev-libs/qrosscore
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2021-11-29)
 # KDE Gear 21.11.90 (21.12 RC) mask
 # Pre-release version.
