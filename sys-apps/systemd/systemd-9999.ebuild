@@ -30,7 +30,7 @@ HOMEPAGE="https://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
-IUSE="acl apparmor audit build cgroup-hybrid cryptsetup curl dns-over-tls elfutils fido2 +gcrypt gnuefi homed hostnamed-fallback http +hwdb idn importd +kmod +lz4 lzma nat pam pcre pkcs11 policykit pwquality qrcode repart +resolvconf +seccomp selinux split-usr +sysv-utils test tpm vanilla xkb +zstd"
+IUSE="acl apparmor audit build cgroup-hybrid cryptsetup curl dns-over-tls elfutils fido2 +gcrypt gnuefi homed hostnamed-fallback http idn importd +kmod +lz4 lzma nat pam pcre pkcs11 policykit pwquality qrcode repart +resolvconf +seccomp selinux split-usr +sysv-utils test tpm vanilla xkb +zstd"
 
 REQUIRED_USE="
 	homed? ( cryptsetup pam )
@@ -134,6 +134,7 @@ RDEPEND="${COMMON_DEPEND}
 		sys-process/procps[kill(+)]
 		sys-apps/coreutils[kill(-)]
 	) )
+	!sys-apps/hwids[udev]
 	!sys-auth/nss-myhostname
 	!sys-fs/eudev
 	!sys-fs/udev
@@ -141,7 +142,6 @@ RDEPEND="${COMMON_DEPEND}
 
 # sys-apps/dbus: the daemon only (+ build-time lib dep for tests)
 PDEPEND=">=sys-apps/dbus-1.9.8[systemd]
-	hwdb? ( sys-apps/hwids[systemd(+),udev] )
 	>=sys-fs/udev-init-scripts-34
 	policykit? ( sys-auth/polkit )
 	!vanilla? ( sys-apps/gentoo-systemd-integration )"
@@ -291,7 +291,6 @@ multilib_src_configure() {
 		-Defi-ld="$(tc-getLD)"
 		-Defi-libdir="${ESYSROOT}/usr/$(get_libdir)"
 		$(meson_native_use_bool homed)
-		$(meson_native_use_bool hwdb)
 		$(meson_native_use_bool http microhttpd)
 		$(meson_native_use_bool idn)
 		$(meson_native_use_bool importd)
@@ -384,9 +383,7 @@ multilib_src_install_all() {
 	keepdir /etc/systemd/{network,system,user}
 	keepdir /etc/udev/rules.d
 
-	if use hwdb; then
-		keepdir /etc/udev/hwdb.d
-	fi
+	keepdir /etc/udev/hwdb.d
 
 	keepdir "${rootprefix}"/lib/systemd/{system-sleep,system-shutdown}
 	keepdir /usr/lib/{binfmt.d,modules-load.d}
@@ -399,10 +396,6 @@ multilib_src_install_all() {
 
 	if use pam; then
 		newpamd "${FILESDIR}"/systemd-user.pam systemd-user
-	fi
-
-	if use hwdb; then
-		rm -r "${ED}${rootprefix}"/lib/udev/hwdb.d || die
 	fi
 
 	if use split-usr; then
@@ -491,9 +484,7 @@ pkg_postinst() {
 
 	# Keep this here in case the database format changes so it gets updated
 	# when required.
-	if use hwdb; then
-		systemd-hwdb --root="${ROOT}" update
-	fi
+	systemd-hwdb --root="${ROOT}" update
 
 	udev_reload || FAIL=1
 

@@ -295,7 +295,6 @@ app-crypt/eid-mw:p11-kit - Support for app-crypt/p11-kit.
 app-crypt/ekeyd:minimal - Only install the ekey-egd-linux service rather than the full ekeyd package.
 app-crypt/ekeyd:munin - Install a plugin for net-analyzer/munin to graph statistical data from ekeyd.
 app-crypt/ekeyd:usb - Build the libusb-based userland daemon for accessing the EntropyKey (alternative to the CDC USB driver). It is suggested to use this option by default, as the CDC driver in the kernel often seems to be fragile (or the gadget implementation on the EntropyKey is too buggy), and can cause various problems.
-app-crypt/gnupg:scd-shared-access - Allow concurrent access to scdaemon by multiple apps from same user. Useful if you want to use scdaemon with gnupg and for example NitroKey.
 app-crypt/gnupg:smartcard - Build scdaemon software. Enables usage of OpenPGP cards. For other type of smartcards, try app-crypt/gnupg-pkcs11-scd. Bring in dev-libs/libusb as a dependency; enable scdaemon.
 app-crypt/gnupg:tofu - Enable support for Trust on First use trust model; requires dev-db/sqlite.
 app-crypt/gnupg:tools - Install extra tools (including gpgsplit and gpg-zip).
@@ -2561,7 +2560,8 @@ dev-qt/qt-creator:nim - Build plugin for Nim language support
 dev-qt/qt-creator:perforce - Add support for Perforce version control system (requires manual installation of Perforce client)
 dev-qt/qt-creator:perfprofiler - Build the Linux Perf-based profiler plugin
 dev-qt/qt-creator:python - Build plugin for Python language support
-dev-qt/qt-creator:qbs - Build plugin for QBS-based projects
+dev-qt/qt-creator:qbs - Build plugin for Qbs-based projects
+dev-qt/qt-creator:qmake - Build plugin for qmake-based projects
 dev-qt/qt-creator:qml - Build plugins for QML-based development (designer, editor, project manager)
 dev-qt/qt-creator:qmldesigner - Enable designer for QML/QtQuick-based UIs
 dev-qt/qt-creator:qmljs - Build the QML/JavaScript editor plugin
@@ -3445,6 +3445,7 @@ kde-apps/kdepim-meta:spamassassin - Install mail-filter/spamassassin for spam fi
 kde-apps/kdesdk-meta:git - Enable support for Git VCS in kde-apps/dolphin via kde-apps/dolphin-plugins-git
 kde-apps/kdesdk-meta:mercurial - Enable support for Mercurial VCS in kde-apps/dolphin via kde-apps/dolphin-plugins-mercurial
 kde-apps/kdesdk-meta:subversion - Enable support for Apache Subversion VCS in kde-apps/dolphin via kde-apps/dolphin-plugins-subversion
+kde-apps/kdesdk-meta:webengine - Enable dev-util/kdevelop, requiring dev-qt/qtwebengine
 kde-apps/kdeutils-meta:7zip - Install app-arch/p7zip for 7zip archive support in kde-apps/ark
 kde-apps/kdeutils-meta:floppy - Install kde-apps/kfloppy to format and create DOS or ext2fs filesystems in a floppy.
 kde-apps/kdeutils-meta:gpg - Install kde-apps/kgpg which depends on kde-apps/akonadi
@@ -3563,7 +3564,6 @@ kde-frameworks/sonnet:hunspell - Enable the app-text/hunspell spell-checking bac
 kde-frameworks/sonnet:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
 kde-misc/kdeconnect:X - Enable remote input mousepad plugin using x11-libs/libfakekey
 kde-misc/kdeconnect:pulseaudio - Enable system volume control plugin using media-sound/pulseaudio
-kde-misc/kdeconnect:wayland - Enable remote input mousepad plugin using kde-frameworks/kwayland
 kde-misc/kimtoy:scim - Enable Smart Common Input Method support
 kde-misc/kio-gdrive:kaccounts - Use kde-apps/kaccounts-integration backend (default) instead of dev-libs/qtkeychain
 kde-misc/kio-gdrive:share - Enable support for a share menu using kde-frameworks/purpose
@@ -4267,9 +4267,7 @@ media-libs/mesa:wayland - Enable support for dev-libs/wayland
 media-libs/mesa:xa - Enable the XA (X Acceleration) API for Gallium3D.
 media-libs/mesa:xvmc - Enable the XvMC acceleration interface for the Gallium3D Video Layer.
 media-libs/mesa:zink - Enable the Zink OpenGL-over-Vulkan Gallium driver
-media-libs/mlt:compressed-lumas - Compress the luma files in png.
 media-libs/mlt:frei0r - Build the module for media-plugins/frei0r-plugins
-media-libs/mlt:lua - Build SWIG bindings for Lua
 media-libs/mlt:opencv - Build motion tracking module using media-libs/opencv
 media-libs/mlt:python - Build SWIG bindings for Python
 media-libs/mlt:rtaudio - Builds rtaudio consumer for native audio support on multiple platforms
@@ -6738,7 +6736,6 @@ net-p2p/ktorrent:bwscheduler - Schedule upload and download limits over a period
 net-p2p/ktorrent:downloadorder - Specify the download order of a multi-file torrent
 net-p2p/ktorrent:infowidget - Displays general information about a torrent in several tabs
 net-p2p/ktorrent:ipfilter - Filter IP addresses through a blocklist
-net-p2p/ktorrent:kross - Enable kross scripting support
 net-p2p/ktorrent:logviewer - Displays the logging output
 net-p2p/ktorrent:magnetgenerator - Generates magnet URI's
 net-p2p/ktorrent:mediaplayer - Phonon-based media player
@@ -8194,7 +8191,6 @@ sys-devel/sparse:llvm - Build the sparse-llvm utility
 sys-devel/sparse:xml - Build the c2xml utility (requires dev-libs/libxml2)
 sys-fabric/mstflint:adb-generic-tools - Enable compiling the following tools: mstreg and mstlink
 sys-fabric/mstflint:inband - Enable firmware updates for Mellanox SwitchX and ConnectIB devices
-sys-fabric/ofed:dapl - Add support for DAPL abstraction layer
 sys-fabric/ofed:diags - Add dignostic tools for infiniband
 sys-fabric/ofed:ibacm - Add support for userspace pre-connection services
 sys-fabric/ofed:opensm - Add OpenSM - Subnet manager for infiniband

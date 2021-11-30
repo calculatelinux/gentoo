@@ -41,7 +41,7 @@ RDEPEND="${DEPEND}
 		sys-apps/ethtool
 		sys-apps/usbutils
 		sys-apps/pciutils )
-	sys-apps/hwids
+	sys-apps/hwdata
 	airdrop-ng? ( net-wireless/lorcon[python,${PYTHON_USEDEP}] )"
 
 REQUIRED_USE="
