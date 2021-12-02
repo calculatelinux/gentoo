@@ -11,5 +11,5 @@ RDEPEND=dev-db/oracle-instantclient dev-java/java-config:2 >=virtual/jre-1.8 >=d
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-21.3.1.281.1748.zip
-_eclasses_=java-pkg-2	a3d583b3f640032c3eff643a4191bd03	java-utils-2	8a3af9303fdbeca4510a6ba6e91b1460
+_eclasses_=java-pkg-2	2d0eb1353bf1264bd6e61736d3e409a2	java-utils-2	32fe52795e36e76dcbcf92d89bb1c4d0
 _md5_=700779b2d3a40a6ac7415e157778166e
