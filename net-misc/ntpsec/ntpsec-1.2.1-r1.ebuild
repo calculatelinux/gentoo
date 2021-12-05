@@ -15,7 +15,7 @@ if [[ ${PV} == *9999* ]]; then
 else
 	SRC_URI="ftp://ftp.ntpsec.org/pub/releases/${PN}-${PV}.tar.gz"
 	RESTRICT="mirror"
-	KEYWORDS="amd64 arm arm64 ~x86"
+	KEYWORDS="amd64 arm arm64 ~riscv ~x86"
 fi
 
 DESCRIPTION="The NTP reference implementation, refactored"
@@ -58,11 +58,8 @@ DEPEND="${CDEPEND}
 "
 
 PATCHES=(
-	"${FILESDIR}/${PN}-1.1.8-fix-missing-scmp_sys-on-aarch64.patch"
 	"${FILESDIR}/${PN}-1.1.9-remove-asciidoctor-from-config.patch"
-	"${FILESDIR}/${PN}-1.2.0-move-newfstatat.patch"
-	"${FILESDIR}/${PN}-1.2.0-seccomp.patch"
-	"${FILESDIR}/${PN}-1.2.1-seccomp-glibc-2-3-4.patch"
+	"${FILESDIR}/${PN}-1.2.1-seccomp-rollup.patch"
 )
 
 WAF_BINARY="${S}/waf"

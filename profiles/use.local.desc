@@ -1769,6 +1769,7 @@ dev-lang/moarvm:optimize - Enable optimization via CFLAGS
 dev-lang/moarvm:ubsan - Enable clang's Undefined Behavior Sanitizer functionality. Expect longer compile time.
 dev-lang/mono:pax-kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
 dev-lang/mono:xen - Make mono generate code that is considerably faster on xen VMs but slightly slower on for normal systems.
+dev-lang/neko:apache - Build Apache modules
 dev-lang/nqp:clang - Toggle usage of the clang compiler in conjunction with MoarVM
 dev-lang/nqp:moar - Build the MoarVM backend (experimental/broken)
 dev-lang/ocaml:flambda - Enables the Flambda optimizer: A new intermediate representation (introduced in ocaml 4.03) in the depths of the compiler designed to allow for better inlining.
@@ -4108,11 +4109,9 @@ media-libs/esdl:image - Enable image support
 media-libs/faad2:digitalradio - Digital Radio Mondiale (warning: disables other decoders)
 media-libs/flickcurl:raptor - Use media-libs/raptor for proper RDF serializing
 media-libs/freetype:adobe-cff - Use Adobe CFF as default font-renderer
-media-libs/freetype:bindist - Disable ClearType support (see http://freetype.org/patents.html)
 media-libs/freetype:brotli - Enable brotli decompression support via app-arch/brotli
 media-libs/freetype:bzip2 - Support bzip2 compressed PCF fonts.
 media-libs/freetype:cleartype-hinting - Bytecode hinting mode for TrueType fonts that activates subpixel hinting (a.k.a. ClearType hinting) by default
-media-libs/freetype:cleartype_hinting - New bytecode hinting mode for TrueType fonts that activates subpixel hinting (a.k.a. ClearType hinting) by default
 media-libs/freetype:fontforge - Install internal headers required for TrueType debugger in media-gfx/fontforge (built with USE=truetype-debugger)
 media-libs/freetype:harfbuzz - Use media-libs/harfbuzz for auto-hinting OpenType fonts. WARNING: may trigger circular dependencies!
 media-libs/freetype:infinality - Enable infinality options for improved LCD filtering
@@ -8478,6 +8477,7 @@ virtual/jdk:headless-awt - Don't install the X backend for AWT, needed by some G
 virtual/lapack:eselect-ldso - Enable runtime library switching by eselect and ld.so.
 virtual/lapacke:eselect-ldso - Enable runtime library switching by eselect and ld.so.
 virtual/linux-sources:firmware - Install linux kernel firmware
+virtual/mpi:nullmpi - Allow sys-cluster/nullmpi a minimal incomplete MPI implementation as a provider
 virtual/mpi:romio - Enable romio, a high-performance portable MPI-IO
 virtual/mysql:embedded - Build embedded server (libmysqld)
 virtual/mysql:server - Build server (mysqld)
@@ -8782,6 +8782,9 @@ x11-misc/albert:virtualbox - Enable app-emulation/virtualbox extension
 x11-misc/alock:doc - Build and install manpage with app-text/asciidoc.
 x11-misc/autorandr:launcher - Install the launcher
 x11-misc/bumblebee:bbswitch - Add dependency on sys-power/bbswitch for PM feature
+x11-misc/clipmenu:dmenu - Use dmenu as default launcher
+x11-misc/clipmenu:fzf - Use fzf as default launcher
+x11-misc/clipmenu:rofi - Use rofi as default launcher
 x11-misc/colord:argyllcms - Enable ArgyllCMS sensor
 x11-misc/colord:extra-print-profiles - Generate extra print profiles. Warning: significant build time and memory requirements.
 x11-misc/colord:gusb - Enable dev-libs/libgusb support, needed for colorimeter drivers

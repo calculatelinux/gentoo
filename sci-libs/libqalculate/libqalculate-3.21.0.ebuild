@@ -3,6 +3,8 @@
 
 EAPI=8
 
+# Bump with sci-calculators/qalculate-gtk!
+
 inherit toolchain-funcs
 
 DESCRIPTION="A modern multi-purpose calculator library"
