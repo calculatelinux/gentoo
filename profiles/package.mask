@@ -33,6 +33,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Lars Wendler <polynomial-c@gentoo.org> (2021-12-07)
+# Fails to build with recent kernel headers (bug #801688).
+# Upstream is gone for a long time. Masked for removal in 30 days.
+# Users should switch over to net-dns/dnsmasq which provides similar features.
+net-dns/pdnsd
+
+# David Seifert <soap@gentoo.org> (2021-12-06)
+# Ancient release, EAPI 5, downloads random data,
+# latest version uses Gradle.
+# Bug #572142, #580176, #776298, removal in 30 days.
+sci-biology/picard
+
 # Conrad Kostecki <conikost@gentoo.org> (2021-12-04)
 # Masking newer versions for both packages,
 # as they cannot be compiled due upstream change.
@@ -614,52 +626,6 @@ net-misc/ssh-chain
 # LLVM or Python versions timely.  No reverse dependencies.
 # Removal on 2021-12-08.  Bug #822435.
 dev-python/llvmlite
-
-# Jakov Smolić <jsmolic@gentoo.org> (2021-11-07)
-# No maintainer, not compatible with llvm-11 or higher.
-# Removal on 2021-12-07. Bug #812566.
-dev-libs/vc-intrinsics
-
-# Jakov Smolić <jsmolic@gentoo.org> (2021-11-07)
-# Fails to build with glibc-2.34, dead upstream.
-# Only revdep (media-video/clive) is outdated
-# and uses EAPI 5.
-# Removal on 2021-12-07. Bug #807172.
-media-libs/quvi
-media-video/clive
-
-# Jakov Smolić <jsmolic@gentoo.org> (2021-11-07)
-# Unresolved security vulnerability, still uses EAPI 5.
-# Removal on 2021-12-07. Bug #811168.
-app-misc/rundeck-bin
-
-# Jakov Smolić <jsmolic@gentoo.org> (2021-11-07)
-# Dead upstream, uses EAPI 5, no revdeps.
-# Replaced by dev-db/mytop.
-# Removal on 2021-12-07. Bug #819675.
-dev-db/mtop
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-06)
-# Libraries with no other consumers. Removal in 30 days.
-dev-java/mina-core
-dev-java/jnr-unixsocket
-dev-java/jnr-enxio
-
-# Jakov Smolić <jsmolic@gentoo.org> (2021-11-06)
-# Dead upstream, multiple open bugs, no maintainer,
-# uses EAPI 5, no revdeps.
-# Removal on 2021-12-06. Bug #819750.
-app-pda/gnupod
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (2021-11-04)
-# Unused and outdated packages; the version in core Perl is
-# newer. Removal in 30 days.
-perl-core/Module-Metadata
-perl-core/parent
-perl-core/podlators
-perl-core/Pod-Simple
-perl-core/Sys-Syslog
-perl-core/Term-ANSIColor
 
 # Sam James <sam@gentoo.org> (2021-11-03)
 # Known issues with YAMA (kernel.yama.ptrace_scope=1) which is on by default
