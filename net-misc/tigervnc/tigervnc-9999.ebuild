@@ -16,20 +16,20 @@ EGIT_REPO_URI="https://github.com/TigerVNC/tigervnc/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="dri3 +drm gnutls nls +opengl pam server xinerama +xorgmodule"
+IUSE="dri3 +drm gnutls nls +opengl server xinerama +xorgmodule"
 
 CDEPEND="
 	virtual/jpeg:0
 	sys-libs/zlib:=
 	>=x11-libs/fltk-1.3.1
-	gnutls? ( net-libs/gnutls:= )
-	nls? ( virtual/libiconv )
-	pam? ( sys-libs/pam )
+	sys-libs/pam
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXrender
 	x11-libs/libxcvt
 	x11-libs/pixman
+	gnutls? ( net-libs/gnutls:= )
+	nls? ( virtual/libiconv )
 	server? (
 		x11-libs/libXau
 		x11-libs/libXdamage
@@ -103,7 +103,6 @@ src_configure() {
 	local mycmakeargs=(
 		-DENABLE_GNUTLS=$(usex gnutls)
 		-DENABLE_NLS=$(usex nls)
-		-DENABLE_PAM=$(usex pam)
 		-DBUILD_JAVA=no
 	)
 

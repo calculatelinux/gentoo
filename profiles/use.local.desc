@@ -809,6 +809,8 @@ app-misc/graphlcd-base:freetype - Add support for media-libs/freetype.
 app-misc/graphlcd-base:graphicsmagick - Add support for media-gfx/graphicsmagick.
 app-misc/graphlcd-base:imagemagick - Add support for media-gfx/imagemagick.
 app-misc/irtrans-irserver:mono - Enable mono support
+app-misc/jdupes:dedupe - Enable deduplication support
+app-misc/jdupes:lowmem - Enable support for low-memory operation
 app-misc/jp:jpp - Install jpp which is an extended superset of the jp CLI for JMESPath
 app-misc/jpipe:jp-symlink - Install a jp symlink that points to jpipe.
 app-misc/jpipe:jpp-symlink - Install a jpp symlink that points to jpipe.
@@ -2508,6 +2510,7 @@ dev-python/simplespectral:faster - Use dev-python/scipy to speed up drawing
 dev-python/simplespectral:fastest - Use dev-python/pyFFTW to speed up drawing to the max
 dev-python/socketpool:eventlet - Install dev-python/eventlet as needed for the eventlet backend.
 dev-python/socketpool:gevent - Install dev-python/gevent as needed for the gevent backend.
+dev-python/sqlalchemy:asyncio - Depend on virtual/python-greenlet for asyncio capabilities
 dev-python/subprocess-tee:test-full - Enable full test mode. Pulls in many additional dependencies, and requires having been emerged without this flag first in order to avoid a circular dependency.
 dev-python/sympy:aesara - Add support for dev-python/aesara
 dev-python/sympy:imaging - Add support for dev-python/pillow
@@ -7624,6 +7627,7 @@ sci-visualization/paraview:offscreen - Offscreen rendering through OSMesa
 sci-visualization/paraview:plugins - Build and install additional plugins
 sci-visualization/paraview:webengine - Add support for dev-qt/qtwebengine
 sci-visualization/scidavis:assistant - Compile with QAssistant (documentation broweser) support from dev-qt/assistant.
+sci-visualization/scidavis:muparser - Build support for muparser scripting.
 sci-visualization/scidavis:origin - Add support for reading OriginLab OPJ project files through sci-libs/liborigin.
 sci-visualization/scidavis:python - Build support for python scripting.
 sec-policy/selinux-base:ubac - Enable User Based Access Control (UBAC) in the SELinux policy
