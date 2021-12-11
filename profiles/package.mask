@@ -33,6 +33,19 @@
 
 #--- END OF EXAMPLES ---
 
+# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2021-12-10)
+# As of MultiMC version 0.6.14 source built versions of MultiMC are no longer
+# usable for anything but development. The sources have been de-branded and
+# secret API keys and other required files are not included with the sources.
+# Please use the official upstream binary packaged in games-action/multimc-bin
+# instead.
+# Removal in 30 days
+games-action/multimc
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-12-10)
+# Package without consumers. Bug #828740.  Removal in 30 days.
+www-apache/mod_caucho
+
 # Lars Wendler <polynomial-c@gentoo.org> (2021-12-07)
 # Fails to build with recent kernel headers (bug #801688).
 # Upstream is gone for a long time. Masked for removal in 30 days.
@@ -396,38 +409,6 @@ app-emulation/firecracker
 # Needs testing to ensure valac-0.54 works for existing packages
 >=dev-libs/vala-common-0.53
 dev-lang/vala:0.54
-
-# Jakov Smolić <jsmolic@gentoo.org> (2021-11-10)
-# Uses EAPI 5, dead upstream, no other distro is
-# packaging this.
-# Removal on 2021-12-10. Bug #819333.
-net-im/kouchat
-
-# Jakov Smolić <jsmolic@gentoo.org> (2021-11-10)
-# Uses EAPI 5, outdated and current version has
-# security vulnerabilities.
-# Removal on 2021-12-10. Bug #819327. Bug #739594.
-net-irc/cgiirc
-
-# Jakov Smolić <jsmolic@gentoo.org> (2021-11-10)
-# Uses EAPI 5, no maintainer, only revdep sobby is
-# also broken and unmaintained.
-# Removal on 2021-12-10. Bug #819318.
-net-libs/obby
-net-misc/sobby
-
-# Jakov Smolić <jsmolic@gentoo.org> (2021-11-09)
-# Uses EAPI 5, no maintainer in Gentoo, no other
-# distro is packaging this.
-# Removal on 2021-12-09. Bug #819312. Bug #819321.
-net-libs/balde
-net-libs/balde-markdown
-
-# Jakov Smolić <jsmolic@gentoo.org> (2021-11-09)
-# Uses EAPI 5, upstream gone, no revdeps,
-# no other distro is packaging this.
-# Removal on 2021-12-09. Bug #819303.
-net-misc/ssh-chain
 
 # Sam James <sam@gentoo.org> (2021-11-03)
 # Known issues with YAMA (kernel.yama.ptrace_scope=1) which is on by default

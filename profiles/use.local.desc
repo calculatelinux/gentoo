@@ -8787,7 +8787,6 @@ x11-misc/clipmenu:rofi - Use rofi as default launcher
 x11-misc/colord:argyllcms - Enable ArgyllCMS sensor
 x11-misc/colord:extra-print-profiles - Generate extra print profiles. Warning: significant build time and memory requirements.
 x11-misc/colord:gusb - Enable dev-libs/libgusb support, needed for colorimeter drivers
-x11-misc/e16-keyedit:gtk2 - Build with x11-libs/gtk+:2 instead of x11-libs/gtk+:3
 x11-misc/fbpager:xrender - Enable transparency support via x11-libs/libXrender
 x11-misc/gpaste:gnome - Enable proper gnome support and enable gnome shell extension.
 x11-misc/grsync:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
@@ -8949,6 +8948,8 @@ x11-wm/e16:libhack - Build libhack window mode helper library
 x11-wm/e16:modules - Enable support for loadable modules
 x11-wm/e16:pango - Enable pango font rendering using x11-libs/pango
 x11-wm/e16:player - Enable audio using aplay from media-sound/alsa-utils
+x11-wm/e16:poll - Use poll() event handler API (recommended)
+x11-wm/e16:select - Use select() event handler API
 x11-wm/e16:themes - Install the official E16 themes using x11-themes/e16-themes
 x11-wm/e16:xi2 - Enable the experimental multipointer input XInput2. This incldues the MultiPointer X feature
 x11-wm/e16:xpresent - Enable support for the X Present extension via x11-libs/libXpresent

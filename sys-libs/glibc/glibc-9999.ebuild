@@ -526,8 +526,13 @@ setup_env() {
 		export MAKEINFO=/dev/null
 	fi
 
-	# Reset CC to the value at start of emerge
-	export CC=${__ORIG_CC:-${CC}}
+	# Reset CC and CXX to the value at start of emerge
+	export CC=${__ORIG_CC:-${CC:-$(tc-getCC ${CTARGET})}}
+	export CXX=${__ORIG_CXX:-${CXX:-$(tc-getCXX ${CTARGET})}}
+
+	# and make sure __ORIC_CC and __ORIG_CXX is defined now.
+	export __ORIG_CC=${CC}
+	export __ORIG_CXX=${CXX}
 
 	if tc-is-clang && ! use custom-cflags && ! is_crosscompile ; then
 
@@ -543,8 +548,6 @@ setup_env() {
 		local current_binutils_path=$(binutils-config -B)
 		local current_gcc_path=$(gcc-config -B)
 		einfo "Overriding clang configuration, since it won't work here"
-
-		export __ORIG_CC=${CC}
 
 		export CC="${current_gcc_path}/gcc"
 		export CXX="${current_gcc_path}/g++"
@@ -567,8 +570,6 @@ setup_env() {
 	else
 
 		# this is the "normal" case
-
-		export __ORIG_CC=${CC}
 
 		export CC="$(tc-getCC ${CTARGET})"
 		export CXX="$(tc-getCXX ${CTARGET})"
@@ -598,10 +599,10 @@ setup_env() {
 	# Note: Passing CFLAGS via CPPFLAGS overrides glibc's arch-specific CFLAGS
 	# and breaks multiarch support. See 659030#c3 for an example.
 	# The glibc configure script doesn't properly use LDFLAGS all the time.
-	export CC="${__GLIBC_CC} ${__abi_CFLAGS} ${LDFLAGS}"
+	export CC="${__GLIBC_CC} ${__abi_CFLAGS} ${CFLAGS} ${LDFLAGS}"
 
 	# Some of the tests are written in C++, so we need to force our multlib abis in, bug 623548
-	export CXX="${__GLIBC_CXX} ${__abi_CFLAGS}"
+	export CXX="${__GLIBC_CXX} ${__abi_CFLAGS} ${CFLAGS}"
 
 	if is_crosscompile; then
 		# Assume worst-case bootstrap: glibc is buil first time
