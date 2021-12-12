@@ -334,9 +334,9 @@ media-video/google2srt
 net-libs/onion
 
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-15)
-# Library without consumers,
-# bug #771693 (multiple CVEs); Removal in 30 days.
-dev-java/jackson
+# bug #771693 (multiple CVEs).
+# Library still needed for bumping dev-java/log4j
+=dev-java/jackson-2.9.10
 
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-14)
 # java packages without consumers, Removal in 30 days.
@@ -382,28 +382,6 @@ net-analyzer/neti
 # Unmaintained in Gentoo, open security bug, many unfixed otther
 # bugs. Removal on 2021-12-13, bug #764719.
 mail-client/cone
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-12)
-# Libraries with no other consumers. Removal in 30 days.
-dev-java/trident
-dev-java/okio
-dev-java/moshi
-
-# John Helmert III <ajak@gentoo.org> (2021-11-12)
-# Unfixed code execution bug, unmaintained in Gentoo.
-# Removal on 2021-12-11, bugs #672352, #794511.
-www-apps/websvn
-
-# Michał Górny <mgorny@gentoo.org> (2021-11-11)
-# Last release was for XFCE 4.10, back in 2013.  Does not support modern
-# Vala versions.  No revdeps.
-# Removal on 2021-12-11.  Bug #823128.
-xfce-extra/xfce4-vala
-
-# John Helmert III <ajak@gentoo.org> (2021-11-11)
-# Unmaintained and vulnerable.
-# Removal on 2021-12-11. Bugs #735978, #794907
-app-emulation/firecracker
 
 # Mart Raudsepp <leio@gentoo.org> (2021-11-11)
 # Needs testing to ensure valac-0.54 works for existing packages

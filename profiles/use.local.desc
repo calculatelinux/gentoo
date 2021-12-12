@@ -4,6 +4,10 @@
 
 acct-user/git:gitea - Set home directory for git hosting via www-apps/gitea.
 acct-user/git:gitolite - Set home directory for git hosting via dev-vcs/gitolite or dev-vcs/gitolite-gentoo.
+acct-user/vdr:graphlcd - Prepare group membership for media-plugins/vdr-graphlcd.
+acct-user/vdr:legacy-homedir - Keep old home directory /var/vdr of an existing installation. When this useflag is cleared, the home directory is switched to FHS conformant /var/lib/vdr
+acct-user/vdr:remote - Prepare group membership for media-plugins/vdr-remote.
+acct-user/vdr:serial - Prepare group membership for media-plugins/vdr-serial.
 app-accessibility/brltty:api - build brltty's application program interface
 app-accessibility/brltty:beeper - support the console tone generator
 app-accessibility/brltty:contracted-braille - support in-line contracted braille
@@ -7521,6 +7525,13 @@ sci-mathematics/rstudio:server - Build and install the RStudio server
 sci-mathematics/slepc:complex-scalars - Make scalars complex
 sci-mathematics/unuran:prng - Use sci-mathematics/prng library
 sci-mathematics/unuran:rngstreams - Use sci-mathematics/rngstreams library
+sci-mathematics/vampire:z3 - Enable support for sci-mathematics/z3
+sci-mathematics/why3:coq - Add sci-mathematics/coq support
+sci-mathematics/why3:gtk - Build the IDE x11-libs/gtk+
+sci-mathematics/why3:re - Use Re (dev-ml/re) instead of Str for regular expressions
+sci-mathematics/why3:sexp - Add support for outputting S-expressions with dev-ml/ppx_sexp_conv
+sci-mathematics/why3:zarith - Use Zarith (dev-ml/zarith) instead of Nums (dev-ml/num) for computations
+sci-mathematics/why3:zip - Enable compression of session files
 sci-mathematics/why3-for-spark:coq - Add sci-mathematics/coq support
 sci-mathematics/why3-for-spark:html - Build HTML documentation
 sci-mathematics/why3-for-spark:hypothesis-selection - Enable hypothesis selection
@@ -8536,7 +8547,6 @@ www-apps/roundup:xapian - Enable Xapian full-text indexer
 www-apps/rt:lighttpd - Add www-servers/lighttpd support
 www-apps/tt-rss:daemon - Install additional init scripts for automated RSS updates
 www-apps/webdavcgi:rcs - Adds support for a revision controlled backend with RCS (dev-vcs/rcs)
-www-apps/websvn:enscript - Add enscript support to colorize code stored in the repository
 www-apps/wordpress:akismet - Installs Akismet comment spam plug-in
 www-apps/wordpress:themes - Installs themes (including default theme)
 www-apps/xpra-html5:brotli - Install assets compressed with brotli
