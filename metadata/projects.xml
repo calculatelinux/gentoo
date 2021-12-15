@@ -1301,10 +1301,18 @@
     <email>hppa@gentoo.org</email>
     <name>HPPA Development</name>
     <url>https://wiki.gentoo.org/wiki/Project:HPPA</url>
-    <description>The Gentoo HPPA project is designed to bring the Gentoo GNU/Linux operating system to the HP Precision Architecture platforms. We aim to provide a usable computing environment for your various HPPA related endeavors.</description>
+    <description>The Gentoo HPPA project is designed to bring the Gentoo GNU/Linux operating system to the HP Precision Architecture (PA-RISC) platforms. We aim to provide a usable computing environment for your various HPPA related endeavors.</description>
+    <member>
+      <email>arthurzam@gentoo.org</email>
+      <name>Arthur Zamarin</name>
+    </member>
     <member>
       <email>mattst88@gentoo.org</email>
       <name>Matt Turner</name>
+    </member>
+    <member>
+      <email>sam@gentoo.org</email>
+      <name>Sam James</name>
     </member>
     <member>
       <email>vapier@gentoo.org</email>
@@ -2460,6 +2468,10 @@
     <name>Proxy Maintainers</name>
     <url>https://wiki.gentoo.org/wiki/Project:Proxy_Maintainers</url>
     <description>Proxy Maintainers facilitates high quality user contributions and works to enhance user-developer cooperation in maintaining packages.</description>
+    <member>
+      <email>ajak@gentoo.org</email>
+      <name>John Helmert III</name>
+    </member>
     <member>
       <email>amynka@gentoo.org</email>
       <name>Amy Liffey</name>
