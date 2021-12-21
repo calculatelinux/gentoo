@@ -33,6 +33,67 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2021-12-20)
+# Requires GCC 8, security vulnerabilities, switch to CUDA 11,
+# consider using clang+NVPTX backend for sm_30 cards.
+# Removal in 90 days, bug #721808, #760708.
+<dev-util/nvidia-cuda-sdk-11
+<dev-util/nvidia-cuda-toolkit-11
+
+# Michał Górny <mgorny@gentoo.org> (2021-12-20)
+# Switches from deprecated stdlib distutils to vendored distutils
+# by default.  Masked for testing.  See tracker bug #822354.
+>=dev-python/setuptools-60
+
+# Jonas Stein <jstein@gentoo.org> (2021-12-20)
+# Package is broken and obsolete.
+# Removal on 2022-02-01.  Bug #828875.
+x11-misc/3ddesktop
+
+# Jonas Stein <jstein@gentoo.org> (2021-12-20)
+# Package is broken and obsolete.
+# Removal on 2022-02-01.  Bug #464364.
+x11-misc/habak
+
+# Piotr Karbowski <slashbeast@gentoo.org> (2021-12-19)
+# No package depends on those bindings anymore.
+# Removal in 30 days.
+dev-python/pytaglib
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-12-19)
+# Outdated and not needed anymore (this was a releng workaround)
+# Removal in 30 days, please compile it yourself from app-emulation/qemu
+app-emulation/qemu-riscv64-bin
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-19)
+# Package without consumers. Bug #771693 (multiple CVEs). Removal in 30 days.
+dev-java/jackson
+
+# Zac Medico <zmedico@gentoo.org> (2021-12-18)
+# Fails to compile and has no reverse dependencies.
+# Removal in 30 days. Bug #800141
+dev-go/go-text
+
+# Mart Raudsepp <leio@gentoo.org> (2021-12-18)
+# GNOME 42 mask
+>=gui-libs/libhandy-1.5.0
+
+# Michał Górny <mgorny@gentoo.org> (2021-12-18)
+# EOL kernel with known vulnerabilities.  Please move to one of the LTS
+# branches.  Bug #829491.
+=sys-kernel/gentoo-kernel-5.14*
+=sys-kernel/gentoo-kernel-bin-5.14*
+=sys-kernel/vanilla-kernel-5.14*
+=virtual/dist-kernel-5.14*
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-12-18)
+# Package without consumers. Bug #829517 Bug_#614480.  Removal in 30 days.
+dev-java/libreadline-java
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-12-18)
+# Package without consumers. Bug_#736880. Removal in 30 days.
+dev-java/jrrd
+
 # Michał Górny <mgorny@gentoo.org> (2021-12-17)
 # Annoying package with deps pinned to old versions of packages.
 # All revdeps were eliminated.
@@ -73,6 +134,12 @@ net-fs/docker-volume-netshare
 # Removal on 2022-01-12.  Bug #824830.
 media-gfx/apngasm
 
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-12-13)
+# Blocks removal of dev-java/log4j:0 bug #828657.
+# Java packages with no active consumer. Removal in 30 days.
+dev-java/slf4j-log4j12
+dev-java/jibx
+
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2021-12-13)
 # Outdated, all versions in core Perl are newer. Removal in 30 days.
 perl-core/IO-Zlib
@@ -88,6 +155,10 @@ perl-core/version
 # log4j-2.15.0 depends on masked >=virtual/{jdk,jre}-11
 >=dev-java/log4j-api-java9-2.15.0
 >=dev-java/log4j-api-2.15.0
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-12-11)
+# Package without consumers. Bug #732792.  Removal in 30 days.
+app-arch/fastjar
 
 # Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2021-12-10)
 # As of MultiMC version 0.6.14 source built versions of MultiMC are no longer
@@ -201,11 +272,6 @@ www-apache/mod_extract_forwarded
 # Removal in 30 days. Bug #827654
 www-apache/mod_evasive
 
-# Mike Gilbert <floppym@gentoo.org> (2021-11-27)
-# eudev will be removed on 2022-01-01.
-# Please see the news item published on 2021-08-24 for more information.
-sys-fs/eudev
-
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-26)
 # Library without consumers. Removal in 30 days.
 dev-java/jss
@@ -270,13 +336,6 @@ dev-ruby/aws-s3
 # unmaintained in Gentoo, EAPI 5. Consider using dev-util/uglifyjs instead.
 # Removal in 30 days. Bug #826470
 dev-util/yuicompressor
-
-# Lars Wendler <polynomial-c@gentoo.org> (2021-11-24)
-# No real development since Q1 2020. Last release from 2016.
-# Users should switch over to media-sound/strawberry which is an actively
-# developed fork.
-# Masked for removal in 30 days.
-media-sound/clementine
 
 # Hans de Graaff <graaff@gentoo.org> (2021-11-23)
 # Obsolete slot, last release in 2017, uses EAPI 5.
@@ -344,22 +403,6 @@ kde-misc/kimtoy
 # removal in 30 days.  Bug #826386.
 app-text/XML-Schema-learner
 
-# Hans de Graaff <graaff@gentoo.org> (2021-11-20)
-# Obsolete package. Last upstream release in 2014, upstream itself is
-# gone. No reverse dependencies in Gentoo.
-# Masked for removal in 30 days.
-dev-ruby/rack-ssl
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2021-11-19)
-# Doesn't work with latest versions of adb, source not easily ported
-# to python 3.9 and 3.10. No upstream activity for 7 years.
-# Removal on 2021-12-19.  Bug #825038.
-app-mobilephone/adb-sync
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-18)
-# Library without consumers, Removal in 30 days.
-dev-java/piccolo2d
-
 # Mike Pagano <mpagano@gentoo.org> (2021-11-18)
 # Bug introduced in this version that can
 # cause system freeze with data loss.
@@ -370,11 +413,6 @@ dev-java/piccolo2d
 ~sys-kernel/gentoo-kernel-bin-5.14.19
 ~sys-kernel/vanilla-kernel-5.14.19
 ~virtual/dist-kernel-5.14.19
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-15)
-# bug #771693 (multiple CVEs).
-# Library still needed for bumping dev-java/log4j
-=dev-java/jackson-2.9.10
 
 # Mart Raudsepp <leio@gentoo.org> (2021-11-11)
 # Needs testing to ensure valac-0.54 works for existing packages
@@ -411,14 +449,6 @@ x11-drivers/nvidia-drivers:0/vulkan
 media-libs/libpulse
 media-sound/pulseaudio-daemon
 >=media-sound/pulseaudio-15.0-r100
-
-# Michał Górny <mgorny@gentoo.org> (2021-08-28)
-# EOL kernel with known vulnerabilities.  Please move to 5.14 or one
-# of the LTS branches.  Bug #814464.
-=sys-kernel/gentoo-kernel-5.13*
-=sys-kernel/gentoo-kernel-bin-5.13*
-=sys-kernel/vanilla-kernel-5.13*
-=virtual/dist-kernel-5.13*
 
 # Mart Raudsepp <leio@gentoo.org> (2021-09-23)
 # Incompatible with c++17 abseil-cpp, no in-tree consumers yet

@@ -41,7 +41,7 @@ DESCRIPTION="GNAT Ada Compiler - GPL version"
 HOMEPAGE="http://libre.adacore.com/"
 
 LICENSE+=" GPL-2 GPL-3"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+ada +bootstrap"
 RESTRICT="test"
 
@@ -82,7 +82,11 @@ src_prepare() {
 		GNATMAKE="${gnatpath}/${GNATMAKE}"
 	fi
 	if use bootstrap; then
-		rm "${WORKDIR}"/${BTSTRP}/libexec/gcc/*/4.7.4/ld || die
+		rm "${WORKDIR}"/${BTSTRP}/libexec/gcc/x86_64-pc-linux-gnu/4.7.4/ld \
+			|| die
+		ln -s /usr/bin/$CHOST-ld \
+			"${WORKDIR}"/${BTSTRP}/libexec/gcc/x86_64-pc-linux-gnu/4.7.4/ld \
+			|| die
 	fi
 
 	CC=${GCC}

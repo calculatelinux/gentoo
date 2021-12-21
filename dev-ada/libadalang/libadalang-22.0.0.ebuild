@@ -14,22 +14,23 @@ SRC_URI="https://github.com/AdaCore/${PN}/archive/refs/tags/v${PV}.tar.gz
 	-> ${P}.tar.gz"
 
 LICENSE="GPL-3 gcc-runtime-library-exception-3.1"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64"
-IUSE="test shared static-libs static-pic"
-REQUIRED_USE="${PYTHON_REQUIRED_USE}
+IUSE="test shared +static-libs static-pic"
+REQUIRED_USE="|| ( shared static-libs static-pic )
+	${PYTHON_REQUIRED_USE}
 	${ADA_REQUIRED_USE}"
 RESTRICT="!test? ( test )"
 
 RDEPEND="dev-python/pyyaml
 	dev-ada/gnatcoll-bindings[${ADA_USEDEP},gmp,iconv,shared?,static-libs?,static-pic?]
 	${ADA_DEPS}
-	${PYTHON_DEPS}"
+	${PYTHON_DEPS}
+	$(python_gen_cond_dep '
+		dev-ada/langkit[${PYTHON_USEDEP},shared?,static-libs?,static-pic?]
+	')"
 DEPEND="${RDEPEND}
 	dev-ada/gprbuild[${ADA_USEDEP}]
-	$(python_gen_cond_dep '
-		dev-ada/langkit[${PYTHON_USEDEP}]
-	')
 "
 BDEPEND="test? (
 		dev-ml/dune

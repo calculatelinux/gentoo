@@ -1,4 +1,4 @@
-BDEPEND=verify-sig? ( app-crypt/openpgp-keys-linuxcontainers ) python_targets_python3_8? ( dev-lang/python:3.8 ) python_targets_python3_9? ( dev-lang/python:3.9 ) >=dev-lang/python-exec-2:=[python_targets_python3_8(-)?,python_targets_python3_9(-)?] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-)?,python_targets_python3_9(-)?] verify-sig? ( app-crypt/gnupg >=app-portage/gemato-16 )
+BDEPEND=verify-sig? ( sec-keys/openpgp-keys-linuxcontainers ) python_targets_python3_8? ( dev-lang/python:3.8 ) python_targets_python3_9? ( dev-lang/python:3.9 ) >=dev-lang/python-exec-2:=[python_targets_python3_8(-)?,python_targets_python3_9(-)?] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-)?,python_targets_python3_9(-)?] verify-sig? ( app-crypt/gnupg >=app-portage/gemato-16 )
 DEFINED_PHASES=compile configure install prepare test unpack
 DESCRIPTION=Python bindings for LXC
 EAPI=7
@@ -6,9 +6,9 @@ HOMEPAGE=https://linuxcontainers.org/lxc/
 IUSE=verify-sig python_targets_python3_8 python_targets_python3_9 verify-sig
 KEYWORDS=amd64 ~arm ~arm64 ~ppc64 ~riscv x86
 LICENSE=LGPL-2.1+
-RDEPEND=app-emulation/lxc python_targets_python3_8? ( dev-lang/python:3.8 ) python_targets_python3_9? ( dev-lang/python:3.9 ) >=dev-lang/python-exec-2:=[python_targets_python3_8(-)?,python_targets_python3_9(-)?]
+RDEPEND=app-containers/lxc python_targets_python3_8? ( dev-lang/python:3.8 ) python_targets_python3_9? ( dev-lang/python:3.9 ) >=dev-lang/python-exec-2:=[python_targets_python3_8(-)?,python_targets_python3_9(-)?]
 REQUIRED_USE=|| ( python_targets_python3_8 python_targets_python3_9 )
 SLOT=0
 SRC_URI=https://linuxcontainers.org/downloads/lxc/python3-lxc-3.0.4.tar.gz verify-sig? ( https://linuxcontainers.org/downloads/lxc/python3-lxc-3.0.4.tar.gz.asc )
-_eclasses_=distutils-r1	8041037f74e1f9d149c038c2fe2c97cf	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multibuild	05a584848db4901c97fcd94ae7cc3a97	multilib	4b66d835ec72e021e359bb81eacfe988	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	python-r1	e574a3642f886323f18f867ecc4d91c4	python-utils-r1	a8b7938ade305f087865de7e52d079b5	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	verify-sig	c777c0c815c60c9460f1ded02a8edb0a
-_md5_=290ecec85a3c670777d2d038b0792c4f
+_eclasses_=distutils-r1	8041037f74e1f9d149c038c2fe2c97cf	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multibuild	05a584848db4901c97fcd94ae7cc3a97	multilib	4b66d835ec72e021e359bb81eacfe988	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	python-r1	e574a3642f886323f18f867ecc4d91c4	python-utils-r1	a8b7938ade305f087865de7e52d079b5	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	verify-sig	5cf1b4c749926e7fdeef16c8c3245267
+_md5_=1061cf80417f31af2cc29f0ed0e903e3

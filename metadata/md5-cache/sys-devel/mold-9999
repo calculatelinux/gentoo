@@ -1,13 +1,13 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile install prepare test unpack
-DEPEND=>=dev-cpp/tbb-2021.4.0:= dev-libs/xxhash:= sys-libs/zlib !kernel_Darwin? ( dev-libs/mimalloc:= dev-libs/openssl:= )
+DEPEND=>=dev-cpp/tbb-2021.4.0:= dev-libs/xxhash:= sys-libs/zlib !kernel_Darwin? ( >=dev-libs/mimalloc-2:= dev-libs/openssl:= )
 DESCRIPTION=A Modern Linker
 EAPI=8
 HOMEPAGE=https://github.com/rui314/mold
 LICENSE=AGPL-3
 PROPERTIES=live
-RDEPEND=>=dev-cpp/tbb-2021.4.0:= dev-libs/xxhash:= sys-libs/zlib !kernel_Darwin? ( dev-libs/mimalloc:= dev-libs/openssl:= )
+RDEPEND=>=dev-cpp/tbb-2021.4.0:= dev-libs/xxhash:= sys-libs/zlib !kernel_Darwin? ( >=dev-libs/mimalloc-2:= dev-libs/openssl:= )
 RESTRICT=test
 SLOT=0
 _eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	multilib	4b66d835ec72e021e359bb81eacfe988	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
-_md5_=00a2895664f17a908093040f0f46aede
+_md5_=7a0770a24e51639d79a9b4d14d09dbc5
