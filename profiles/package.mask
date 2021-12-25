@@ -33,6 +33,14 @@
 
 #--- END OF EXAMPLES ---
 
+# Mike Gilbert <floppym@gentoo.org> (2021-12-24)
+# Replaced by sys-apps/hwdata. Removal on 2022-01-23.
+sys-apps/hwids
+
+# Jonas Stein <jstein@gentoo.org> (2021-12-24)
+# Alpha version
+=app-editors/ghex-4.0.0_alpha
+
 # David Seifert <soap@gentoo.org> (2021-12-20)
 # Requires GCC 8, security vulnerabilities, switch to CUDA 11,
 # consider using clang+NVPTX backend for sm_30 cards.
@@ -292,38 +300,6 @@ sci-biology/ApE
 # newer slot instead.
 # Masked for removal in 30 days.
 dev-ruby/typhoeus:0
-
-# Marek Szuba <marecki@gentoo.org> (2021-11-25)
-# Ancient, very few distributions still package it. Both upstream
-# and the Debian package we use in SRC_URI are now gone. EAPI 5,
-# unmaintained in Gentoo. Consider using net-misc/frr, which supports
-# both RIP and many other routing protocols, instead.
-# Removal in 30 days. Bug #827322
-net-misc/netkit-routed
-
-# Marek Szuba <marecki@gentoo.org> (2021-11-25)
-# Upstream is gone. Unmaintained in Gentoo, last updated
-# back in the CVS era, EAPI 5, open bugs.
-# Removal in 30 days. Bug #826790
-net-analyzer/nagios-check_pidfile
-
-# Marek Szuba <marecki@gentoo.org> (2021-11-25)
-# Upstream is gone. Unmaintained in Gentoo, last updated
-# back in the CVS era, EAPI 5, open bugs.
-# Removal in 30 days. Bug #826786
-net-analyzer/nagios-check_fail2ban
-
-# Hans de Graaff <graaff@gentoo.org> (2021-11-25)
-# Old slot that no longer has reverse dependencies. Last release in
-# 2013. Use minitest 5.x instead.
-# Masked for removal in 30 days.
-dev-ruby/minitest:0
-
-# Hans de Graaff <graaff@gentoo.org> (2021-11-25)
-# Last upstream release in 2012 and upstream itself is no longer
-# available. Unlikely to still work correctly. No reverse dependencies.
-# Masked for removal in 30 days.
-dev-ruby/aws-s3
 
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-23)
 # Does not support updated dev-java/pdfbox-2.0.24, Bug #803488
