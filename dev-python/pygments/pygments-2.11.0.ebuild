@@ -17,15 +17,18 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~ia64 ~sparc"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~sparc"
 
 BDEPEND="
 	test? (
+		dev-python/lxml[${PYTHON_USEDEP}]
+		dev-python/pillow[${PYTHON_USEDEP}]
 		dev-python/wcag-contrast-ratio[${PYTHON_USEDEP}]
 		virtual/ttf-fonts
 	)"
 
-distutils_enable_sphinx doc
+distutils_enable_sphinx doc \
+	dev-python/wcag-contrast-ratio
 distutils_enable_tests pytest
 
 python_install_all() {
