@@ -3903,6 +3903,7 @@ media-gfx/apngasm:zopfli - Enable support for Zopfli compression
 media-gfx/asymptote:boehm-gc - Enables using the Boehm-Demers-Weiser conservative garbage collector
 media-gfx/asymptote:context - Enables support for ConTeXt format (dev-texlive/texlive-context)
 media-gfx/asymptote:curl - Enables running remote programs via net-misc/curl
+media-gfx/asymptote:lsp - Enables Language Server Protocol
 media-gfx/asymptote:offscreen - Enables off-screen rendering
 media-gfx/asymptote:sigsegv - Enables using dev-libs/libsigsegv
 media-gfx/blender:alembic - Add support for Alembic through media-gfx/alembic.
@@ -4100,6 +4101,8 @@ media-libs/cogl:kms - Enable KMS support.
 media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
 media-libs/coin:exceptions - Compile with C++ exceptions
 media-libs/coin:qthelp - Build API documentation in QtHelp format
+media-libs/cubeb:rust - Use the newer rust-based audio backends if available
+media-libs/cubeb:sndio - Enable support for the media-sound/sndio backend
 media-libs/dav1d:10bit - Add support for building 10-bit and 12-bit AV1.
 media-libs/dav1d:8bit - Add support for decoding 8-bit AV1.
 media-libs/dav1d:asm - Enable custom assembly for faster decoding.
@@ -4555,13 +4558,9 @@ media-sound/dir2ogg:mac - Add support for decoding Monkey's Audio files
 media-sound/dir2ogg:wma - Add support for wma files through mplayer
 media-sound/drumstick:fluidsynth - Enable support for media-sound/fluidsynth
 media-sound/drumstick:network - Build Network RT backend
-media-sound/easyeffects:bs2b - Enable use of media-libs/libbs2b for the crossfeed FX
 media-sound/easyeffects:calf - Enable use of media-plugins/calf for adding various FX
 media-sound/easyeffects:doc - Install packages needed to display built-in user documentation
 media-sound/easyeffects:mda-lv2 - Enable use of media-plugins/mda-lv2 for the loudness FX
-media-sound/easyeffects:rnnoise - Enable use of media-libs/rnnoise for the neural network-based noise-reduction FX
-media-sound/easyeffects:rubberband - Enable use of media-libs/rubberband for the pitch-shifting FX
-media-sound/easyeffects:webrtc - Enable use of media-plugins/gst-plugins-webrtc for various voice-enhancement FX
 media-sound/easyeffects:zamaudio - Enable use of media-plugins/zam-plugins for the maximizer FX
 media-sound/easytag:nautilus - Build gnome-base/nautilus extension
 media-sound/ecasound:lv2 - Add support for Ladspa V2
@@ -8393,7 +8392,6 @@ sys-libs/readline:utils - Install rlfe (ReadLine Front-End) helper tool -- a wra
 sys-libs/talloc:compat - Enable extra compatibility stuff
 sys-libs/timezone-data:leaps-timezone - Install the set of "right" timezones; these timezones include leap seconds when counting seconds since the epoch (while POSIX does not) as they are based on the TAI (International Atomic Time) clock
 sys-libs/timezone-data:zic-slim - Default to 'slim' file format for /usr/share/zoneinfo. Otherwise 'fat' format is used. Not all programs can handle 'slim' format'.
-sys-libs/uclibc-ng:symlink-compat - Explicitly add sym links for libdl.so.0, libm.so.0, and friends for backward compatibility with sys-libs/uclibc-ng-1.0.17 and earlier
 sys-libs/zlib:minizip - include the minizip library for quick and dirty zip extraction
 sys-libs/zlib-ng:compat - Enable compatibility to sys-libs/zlib
 sys-power/apcupsd:modbus - Enable MODBUS support over USB
@@ -8938,6 +8936,20 @@ x11-themes/gtk-engines-murrine:themes - Pull in themes via x11-themes/murrine-th
 x11-themes/gtk-engines-nodoka:animation-rtl - Progressbar animation from right to left
 x11-themes/kfaenza:additional - Install additional KFaenza icons. See third homepage for details
 x11-themes/mate-themes-meta:gtk2-only - Allow dependency-resolution for a system without GTK+3
+x11-themes/tela-icon-theme:black - Install black folder version
+x11-themes/tela-icon-theme:blue - Install blue folder version
+x11-themes/tela-icon-theme:brown - Install bworn folder version
+x11-themes/tela-icon-theme:green - Install green folder version
+x11-themes/tela-icon-theme:grey - Install grey folder version
+x11-themes/tela-icon-theme:hardlink - Hardlink duplicate icons to greatly reduce installation size
+x11-themes/tela-icon-theme:manjaro - Install manjaro folder version
+x11-themes/tela-icon-theme:orange - Install orange folder version
+x11-themes/tela-icon-theme:pink - Install pink folder version
+x11-themes/tela-icon-theme:purple - Install purple folder version
+x11-themes/tela-icon-theme:red - Install red older version
+x11-themes/tela-icon-theme:standard - Install standard folder version
+x11-themes/tela-icon-theme:ubuntu - Install ubuntu folder version
+x11-themes/tela-icon-theme:yellow - Install yellow folder version
 x11-themes/vertex-theme:cinnamon - Install theme for gnome-extra/cinnamon
 x11-themes/vertex-theme:gnome-shell - Install theme for gnome-base/gnome-shell
 x11-themes/vertex-theme:mate - Install Metacity theme for mate-base/mate

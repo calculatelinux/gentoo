@@ -52,7 +52,7 @@ LICENSE="|| ( Artistic GPL-1+ )"
 SLOT="0/${SUBSLOT}"
 
 if [[ "${PV##*.}" != "9999" ]] && [[ "${PV/rc//}" == "${PV}" ]] ; then
-KEYWORDS="~alpha ~amd64 arm arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 ~sparc ~x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 fi
 
 IUSE="berkdb debug doc gdbm ithreads minimal"
@@ -525,7 +525,7 @@ src_configure() {
 	[[ ${COLUMNS:-1} -ge 1 ]] || unset COLUMNS # bug #394091
 
 	# Perl has problems compiling with -Os in your flags with glibc
-	use elibc_uclibc || replace-flags "-Os" "-O2"
+	replace-flags "-Os" "-O2"
 
 	# xlocale.h is going away in glibc-2.26, so it's counterproductive
 	# if we use it and include it in CORE/perl.h ... Perl builds just
@@ -736,7 +736,6 @@ src_test() {
 		ewarn "Test fails with a sandbox error (#328793) if run as root. Skipping tests..."
 		return 0
 	fi
-	use elibc_uclibc && export MAKEOPTS+=" -j1"
 	TEST_JOBS="$(makeopts_jobs)" make test_harness || die "test failed"
 }
 

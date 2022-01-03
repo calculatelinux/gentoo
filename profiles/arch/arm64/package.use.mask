@@ -1,5 +1,9 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
+
+# Sam James <sam@gentoo.org> (2022-01-02)
+# sys-fabric/ofed is not keyworded here
+sys-cluster/slurm ofed
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2021-11-16)
 # requires sys-apps/dbus-broker, which keyworded here.
@@ -355,11 +359,6 @@ media-sound/mumble g15
 # Alexis Ballier <aballier@gentoo.org> (2017-07-20)
 # media-libs/libemf fails with #error unknown CPU.
 media-gfx/pstoedit emf
-
-# Alexis Ballier <aballier@gentoo.org> (2017-07-14)
-# zfs does not build on arm64 (yet?)
-app-emulation/libvirt zfs
-sys-cluster/ceph zfs
 
 # Alexis Ballier <aballier@gentoo.org> (2017-07-10)
 # openvz-sources are likely too old for any proper arm64 usage
