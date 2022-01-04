@@ -20,7 +20,7 @@ LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL RDBMS"
 HOMEPAGE="https://www.postgresql.org/"
 
-IUSE="debug doc icu kerberos kernel_linux ldap nls pam perl
+IUSE="debug doc icu kerberos ldap nls pam perl
 	  python +readline selinux +server systemd ssl static-libs tcl
 	  threads uuid xml zlib"
 
@@ -63,7 +63,6 @@ nest_usedep() {
 	echo "${front}${1}${back}"
 }
 
-IUSE+=" ${UTIL_LINUX_LIBC[@]} ${BSD_LIBC[@]}"
 CDEPEND+="
 uuid? (
 	${UTIL_LINUX_LIBC[@]/%/? ( sys-apps/util-linux )}

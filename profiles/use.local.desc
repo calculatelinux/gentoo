@@ -1994,6 +1994,7 @@ dev-libs/efl:efl-one - Combine multiple core libraries into one libefl.so
 dev-libs/efl:fribidi - Enable bidirectional text support
 dev-libs/efl:glib - Enable dev-libs/glib support
 dev-libs/efl:harfbuzz - Enable complex text shaping and layout support
+dev-libs/efl:heif - Enable HEIF image loader
 dev-libs/efl:hyphen - Enable text hyphenation support
 dev-libs/efl:ibus - Enable Intelligent Input Bus
 dev-libs/efl:ico - Enable Ico image loader
@@ -2453,7 +2454,6 @@ dev-python/mpmath:matplotlib - Add support for dev-python/matplotlib
 dev-python/msgpack:native-extensions - Compiles native "C" extensions (speedups, instead of using python fallback code).
 dev-python/nbdime:webtools - Install web-based diff and merge tools.
 dev-python/nltk-data:extra - Install the complete set of data files. Otherwise, only files required by tests are installed.
-dev-python/numexpr:mkl - Enable support for Intel Vector Math Library, part of sci-libs/mkl.
 dev-python/pandas:full-support - Pull all packages to give pandas full support
 dev-python/paramiko:server - Enable server feature
 dev-python/pillow:imagequant - Build with Image Quantization Library support
@@ -5917,7 +5917,6 @@ net-irc/iroffer-dinoex:admin - Compile with HTTP Admin
 net-irc/iroffer-dinoex:blowfish - Compile with blowfish encryption support
 net-irc/iroffer-dinoex:chroot - Compile with chroot support
 net-irc/iroffer-dinoex:http - Compile with HTTP server support
-net-irc/iroffer-dinoex:kqueue - Compile with kqueue() support
 net-irc/iroffer-dinoex:memsave - Compile with memory protection
 net-irc/iroffer-dinoex:telnet - Compile with Telnet server support
 net-irc/irssi:otr - Adds support for a loadable IRC otr module
@@ -6819,10 +6818,7 @@ net-proxy/rejik:banlists - Install upstream provided simple banlists
 net-proxy/squid:ecap - Adds support for loadable content adaptation modules (http://www.e-cap.org)
 net-proxy/squid:esi - Enable ESI for accelerators, will cause squid reverse proxies to be capable of the Edge Acceleration Specification (www.esi.org)
 net-proxy/squid:htcp - Enable HTCP protocol
-net-proxy/squid:ipf-transparent - Adds transparent proxy support for systems using IP-Filter (only for *bsd)
-net-proxy/squid:kqueue - Enables *BSD kqueue() support
 net-proxy/squid:logrotate - Use app-admin/logrotate for rotating logs
-net-proxy/squid:pf-transparent - Adds transparent proxy support for systems using PF (only for *bsd)
 net-proxy/squid:qos - Adds support for Quality of Service using netfilter conntrack - see qos_flow directive for more info
 net-proxy/squid:ssl-crtd - Adds support for dynamic SSL certificate generation in SslBump environments
 net-proxy/squid:tproxy - Enables real Transparent Proxy support for Linux Netfilter TPROXY
@@ -7061,6 +7057,7 @@ sci-astronomy/stellarium:deep-sky - Install extra deep sky objects catalog (may 
 sci-astronomy/stellarium:media - Enable sound and video support
 sci-astronomy/stellarium:stars - Install extra star catalogs
 sci-astronomy/stellarium:telescope - Enable telescope control via sci-libs/indilib
+sci-astronomy/stellarium:webengine - Show online results about the selected star in an embedded window using dev-qt/qtwebengine
 sci-astronomy/swarp:cfitsio - Link with sci-libs/cfitsio
 sci-astronomy/wcslib:fits - Enable support for the FITS format through sci-libs/cfitsio
 sci-astronomy/wcslib:pgplot - Builds PGBSOX routines, needs sci-libs/pgplot library
@@ -7282,6 +7279,7 @@ sci-libs/gmsh:metis - Enables metis support
 sci-libs/gmsh:netgen - Enable 3D Frontal triangulation using netgen lib
 sci-libs/gmsh:opencascade - Enable OpenCASCADE support
 sci-libs/gmsh:petsc - Enable sci-mathematics/petsc support
+sci-libs/gmsh:shared - Install shared library and headers
 sci-libs/gsl:cblas-external - Link gsl with external cblas provided by (virtual/cblas) instead of shipped internal version
 sci-libs/gsl:deprecated - Enable deprecated functions
 sci-libs/hdf5:hl - Enable high level API (https://support.hdfgroup.org/HDF5/doc/HL/index.html)
@@ -7500,6 +7498,7 @@ sci-mathematics/petsc:afterimage - Use Afterstep image library (media-libs/libaf
 sci-mathematics/petsc:boost - Use boost (dev-libs/boost)
 sci-mathematics/petsc:complex-scalars - Make scalars complex
 sci-mathematics/petsc:hypre - Use HYPRE (sci-mathematics/hypre) and for preconditioning
+sci-mathematics/petsc:int64 - Use 64 bit indexes
 sci-mathematics/petsc:metis - Add support for metis (sci-libs/parmetis)
 sci-mathematics/petsc:mumps - Add support for mumps (sci-libs/mumps)
 sci-mathematics/petsc:scotch - Add support for scotch (sci-libs/scotch)
@@ -8927,6 +8926,9 @@ x11-themes/arc-theme:pre-rendered - Avoid media-gfx/inkscape and media-gfx/optip
 x11-themes/arc-theme:xfce - Install theme for xfce-base/xfwm4
 x11-themes/comix-xcursors:lefthanded - Install lefthanded version of theme in addition to default one.
 x11-themes/comix-xcursors:opaque - Install non-transparent version of theme in addition to default one.
+x11-themes/fluent-icon-theme:black - Install the black version of symbolic icons (for white color-scheme panels)
+x11-themes/fluent-icon-theme:hardlink - Hardlink duplicate icons to greatly reduce installation size
+x11-themes/fluent-icon-theme:round - Install the round version of symbolic icons
 x11-themes/gentoo-artwork:grub - Install extra sys-boot/grub themes
 x11-themes/gentoo-artwork:icons - Install icons
 x11-themes/gentoo-artwork:lilo - Install extra sys-boot/lilo themes
@@ -8942,6 +8944,7 @@ x11-themes/tela-icon-theme:brown - Install bworn folder version
 x11-themes/tela-icon-theme:green - Install green folder version
 x11-themes/tela-icon-theme:grey - Install grey folder version
 x11-themes/tela-icon-theme:hardlink - Hardlink duplicate icons to greatly reduce installation size
+x11-themes/tela-icon-theme:kde - Install colorshceme version for KDE plasma (folder color follow the colorscheme)
 x11-themes/tela-icon-theme:manjaro - Install manjaro folder version
 x11-themes/tela-icon-theme:orange - Install orange folder version
 x11-themes/tela-icon-theme:pink - Install pink folder version

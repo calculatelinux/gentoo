@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -23,12 +23,8 @@ SRC_URI="
 LICENSE="MIT"
 SLOT="${MY_PV}"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="elibc_glibc"
 
-RDEPEND="
-	!dev-lang/julia
-	app-arch/p7zip
-"
+RDEPEND="app-arch/p7zip"
 DEPEND="${RDEPEND}"
 
 RESTRICT="strip"

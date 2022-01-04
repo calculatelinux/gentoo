@@ -4,10 +4,9 @@ DEPEND=>=sys-libs/ncurses-5.3-r2:0= dev-libs/confuse:= dev-libs/libnl:3
 DESCRIPTION=Interface bandwidth monitor
 EAPI=7
 HOMEPAGE=http://www.infradead.org/~tgr/bmon/ https://github.com/tgraf/bmon/
-IUSE=kernel_linux
 LICENSE=BSD-2 MIT
 PROPERTIES=live
 RDEPEND=>=sys-libs/ncurses-5.3-r2:0= dev-libs/confuse:= dev-libs/libnl:3
 SLOT=0
-_eclasses_=autotools	c9df06c186913b43eb211100ef5fe2cf	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	gnuconfig	262062cef0ba4f22b397193da514a350	libtool	241a8f577b9781a42a7421e53448a44e	linux-info	6b67971d8a0a029d13181f2cfb9f5fa9	multilib	de4beb52bfa93c4c5d96792a6b5e1784	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=autotools	c9df06c186913b43eb211100ef5fe2cf	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	gnuconfig	262062cef0ba4f22b397193da514a350	libtool	241a8f577b9781a42a7421e53448a44e	linux-info	2f039741fe92bcea55c78806d16ac0f5	multilib	de4beb52bfa93c4c5d96792a6b5e1784	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
 _md5_=c08eda68d470598387fd53b33674f1e1
