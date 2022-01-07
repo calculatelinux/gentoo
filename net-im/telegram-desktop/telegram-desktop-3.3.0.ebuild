@@ -1,4 +1,4 @@
-# Copyright 2020-2021 Gentoo Authors
+# Copyright 2020-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -71,6 +71,7 @@ S="${WORKDIR}/${MY_P}"
 PATCHES=(
 	"${FILESDIR}/tdesktop-3.1.0-jemalloc-only-telegram.patch"
 	"${FILESDIR}/tdesktop-3.1.0-fix-openssl3.patch"
+	"${FILESDIR}/tdesktop-3.3.0-fix-enchant.patch"
 )
 
 pkg_pretend() {
