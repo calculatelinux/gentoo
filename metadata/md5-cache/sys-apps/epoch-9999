@@ -1,10 +1,10 @@
-DEFINED_PHASES=compile install postinst prepare pretend setup unpack
-DEPEND=>=dev-vcs/git-1.8.2.1[curl]
-DESCRIPTION=An init system, a /sbin/init replacement; designed for simplicity
-EAPI=5
-HOMEPAGE=http://universe2.us/epoch.html
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile install postinst pretend setup unpack
+DESCRIPTION=Init system, /sbin/init replacement; designed for simplicity
+EAPI=8
+HOMEPAGE=https://universe2.us/epoch.html
 LICENSE=public-domain
 PROPERTIES=live
 SLOT=0
-_eclasses_=eapi7-ver	1a0a60ad07c8b32d2faba2d085dc0f24	epatch	9f813bb3c47cf2e60619a663b87c5f4e	estack	055c42df72f76a4f45ec92b35e83cd56	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	linux-info	2f039741fe92bcea55c78806d16ac0f5	multilib	de4beb52bfa93c4c5d96792a6b5e1784	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
-_md5_=9de17d62ef7e7a3bdb9bc18036b3c1b4
+_eclasses_=git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	linux-info	2f039741fe92bcea55c78806d16ac0f5	multilib	de4beb52bfa93c4c5d96792a6b5e1784	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_md5_=4d4164bae35183aed8d071df28fd4dd5

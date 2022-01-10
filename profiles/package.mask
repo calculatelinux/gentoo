@@ -33,6 +33,26 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2022-01-09)
+# No more revdeps after sys-cluster/mpe2 last-rites was initiated.
+# Removal on 2022-01-31, bug #547208
+sys-cluster/mpich2
+
+# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2022-01-08)
+# Ancient versions of spyder preventing clean up of things down the tree.
+# Sadly, this means we are also going to have to say goodbye to some plugins
+# that never got ported to the newer plugin system.
+# Removal in 15 days
+<dev-python/spyder-5.1.0
+<dev-python/spyder-kernels-2.1.0
+# Stuck on spyder-4
+dev-python/spyder-line-profiler
+dev-python/spyder-memory-profiler
+# Stuck on spyder-5.0
+dev-python/spyder-notebook
+<=dev-python/spyder-unittest-0.4.1-r50
+dev-python/spyder-vim
+
 # Brian Evans <grknight@gentoo.org> (2022-01-07)
 # The main consumer, phpunit, does not initiate the new timer correctly
 # This is likely to cause issues in tests; Unmask if using for other purposes
@@ -42,6 +62,12 @@
 # Unmaintained, cmake warnings, QA notices, weird build error, no revdeps.
 # Removal on 2022-02-06. Bug #830727
 net-libs/jreen
+
+# Marco Scardovi <marco@scardovi.com> (2022-01-01)
+# Dead upstream (also sourceforge page is dead)
+# We are the only one who still supports it
+# Removing in 30 days. # Bug 830389
+sys-cluster/onesis
 
 # Florian Schmaus <flow@gentoo.org> (2022-01-04)
 # Outdated, unmaintained, and has multiple open bugs (bug #732582, bug
@@ -217,37 +243,12 @@ perl-core/version
 # Package without consumers. Bug #732792.  Removal in 30 days.
 app-arch/fastjar
 
-# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2021-12-10)
-# As of MultiMC version 0.6.14 source built versions of MultiMC are no longer
-# usable for anything but development. The sources have been de-branded and
-# secret API keys and other required files are not included with the sources.
-# Please use the official upstream binary packaged in games-action/multimc-bin
-# instead.
-# Removal in 30 days
-games-action/multimc
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-12-10)
-# Package without consumers. Bug #828740.  Removal in 30 days.
-www-apache/mod_caucho
-
-# David Seifert <soap@gentoo.org> (2021-12-06)
-# Ancient release, EAPI 5, downloads random data,
-# latest version uses Gradle.
-# Bug #572142, #580176, #776298, removal in 30 days.
-sci-biology/picard
-
 # Conrad Kostecki <conikost@gentoo.org> (2021-12-04)
 # Masking newer versions for both packages,
 # as they cannot be compiled due upstream change.
 # See bug #827651 for more information.
 >=dev-libs/intel-compute-runtime-21.47.21710
 >=dev-util/intel-graphics-compiler-1.0.9389
-
-# Jonas Stein <jstein@gentoo.org> (2021-12-01)
-# Removal on 2022-01-01.
-# Disbanded by upstream who sugessted to
-# use nmap instead many years ago. (bug #680546)
-net-analyzer/amap
 
 # Sam James <sam@gentoo.org> (2021-12-01)
 # OSL 12 is a development release (for now).
@@ -508,8 +509,6 @@ app-office/texmacs
 # on it so these virtuals are not yet required. If you wish to use
 # Java 11+ then install openjdk-(jdk|jre)-bin directly.
 # bug #697014
-virtual/jdk:11
-virtual/jre:11
 virtual/jdk:17
 virtual/jre:17
 
