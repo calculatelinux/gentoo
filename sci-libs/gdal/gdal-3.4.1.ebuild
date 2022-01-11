@@ -15,7 +15,7 @@ SRC_URI="https://download.osgeo.org/${PN}/${PV}/${P}.tar.gz"
 # subslot is libgdal.so.<SONAME>
 SLOT="0/30"
 LICENSE="BSD Info-ZIP MIT"
-KEYWORDS="~amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~riscv ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~riscv x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="armadillo +aux-xml curl cpu_flags_x86_avx cpu_flags_x86_sse cpu_flags_x86_ssse3 debug doc fits geos gif gml hdf5 heif java jpeg jpeg2k lzma mdb mysql netcdf odbc ogdi opencl oracle pdf perl png postgres python spatialite sqlite threads webp xls zstd"
 
 REQUIRED_USE="
@@ -91,6 +91,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-2.2.3-soname.patch"
 	"${FILESDIR}/${PN}-2.3.0-curl.patch" # bug 659840
 	"${FILESDIR}/${PN}-3.3.0-libdir.patch"
+	"${FILESDIR}/${P}-poppler-22.01.0-c++17.patch"
 )
 
 src_prepare() {
