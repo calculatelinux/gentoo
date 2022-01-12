@@ -1,12 +1,12 @@
 BDEPEND=virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=configure install prepare unpack
-DEPEND=dev-libs/hidapi:= dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 net-libs/mbedtls:= virtual/libusb:1 dev-cpp/nlohmann_json
+DEPEND=dev-libs/hidapi dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 net-libs/mbedtls:= virtual/libusb:1 dev-cpp/nlohmann_json
 DESCRIPTION=Open source RGB lighting control that doesn't depend on manufacturer software
-EAPI=7
+EAPI=8
 HOMEPAGE=https://openrgb.org https://gitlab.com/CalcProgrammer1/OpenRGB/
 LICENSE=GPL-2
 PROPERTIES=live
-RDEPEND=dev-libs/hidapi:= dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 net-libs/mbedtls:= virtual/libusb:1
-SLOT=0/1
-_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	dab5d8ec471d025b79c9e6906bcf3bff	flag-o-matic	d5e1306543bc457213f68bb18f830d14	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	multilib	de4beb52bfa93c4c5d96792a6b5e1784	qmake-utils	f5eb2f69fffe94292aaaf802fb21c8d1	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	wrapper	4251d4c84c25f59094fd557e0063a974
-_md5_=155fae6004eefa64b2c2f4d59f29df05
+RDEPEND=dev-libs/hidapi dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 net-libs/mbedtls:= virtual/libusb:1
+SLOT=0/2
+_eclasses_=flag-o-matic	d5e1306543bc457213f68bb18f830d14	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	multilib	de4beb52bfa93c4c5d96792a6b5e1784	qmake-utils	f5eb2f69fffe94292aaaf802fb21c8d1	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_md5_=458ee848164a2435d6270c9c8e693d74
