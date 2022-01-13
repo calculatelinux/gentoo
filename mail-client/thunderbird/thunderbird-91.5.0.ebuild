@@ -3,7 +3,7 @@
 
 EAPI="7"
 
-FIREFOX_PATCHSET="firefox-91esr-patches-03.tar.xz"
+FIREFOX_PATCHSET="firefox-91esr-patches-04.tar.xz"
 
 LLVM_MAX_SLOT=13
 
@@ -48,7 +48,7 @@ if [[ ${PV} == *_rc* ]] ; then
 fi
 
 PATCH_URIS=(
-	https://dev.gentoo.org/~{polynomial-c,whissi}/mozilla/patchsets/${FIREFOX_PATCHSET}
+	https://dev.gentoo.org/~{juippis,polynomial-c,whissi}/mozilla/patchsets/${FIREFOX_PATCHSET}
 )
 
 SRC_URI="${MOZ_SRC_BASE_URI}/source/${MOZ_P}.source.tar.xz -> ${MOZ_P_DISTFILES}.source.tar.xz
@@ -57,7 +57,7 @@ SRC_URI="${MOZ_SRC_BASE_URI}/source/${MOZ_P}.source.tar.xz -> ${MOZ_P_DISTFILES}
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="https://www.thunderbird.net/"
 
-KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm64 ~ppc64 x86"
 
 SLOT="0/$(ver_cut 1)"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"

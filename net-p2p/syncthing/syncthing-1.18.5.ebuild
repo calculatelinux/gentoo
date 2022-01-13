@@ -793,7 +793,7 @@ SRC_URI="https://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 
 LICENSE="Apache-2.0 BSD BSD-2 CC0-1.0 ISC MIT MPL-2.0 Unlicense"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~x86"
+KEYWORDS="amd64 arm ~arm64 ~ppc64 x86"
 IUSE="selinux tools"
 
 RDEPEND="acct-group/syncthing
@@ -828,10 +828,8 @@ src_prepare() {
 }
 
 src_compile() {
-	go run build.go -version "v${PV}" -no-upgrade build \
+	go run build.go -version "v${PV}" -no-upgrade install \
 		$(usex tools "all" "") || die "build failed"
-	mkdir bin || die
-	mv "${PN}$(go env GOEXE)" bin/ || die
 }
 
 src_test() {
