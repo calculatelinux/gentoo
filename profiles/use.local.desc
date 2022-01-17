@@ -693,6 +693,7 @@ app-emulation/wine-vanilla:vulkan - Enable Vulkan drivers
 app-emulation/winetricks:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
 app-emulation/x48:readline - Enables support for libreadline
 app-emulation/xe-guest-utilities:xenstore - Use xenstore binaries bundled by Citrix instead of building app-emulation/xen-tools
+app-emulation/xen:boot-symlinks - Symlink xen.gz variants in /boot, disable on fat filesystems
 app-emulation/xen:efi - Adds efi boot support, requires LDFLAG -melf_x86_64 for amd64
 app-emulation/xen:flask - Enable the Flask XSM module from NSA
 app-emulation/xen-tools:api - Build the C libxenapi bindings
@@ -1967,7 +1968,6 @@ dev-libs/boost:debug - Build and install only the debug version of the Boost lib
 dev-libs/boost:doc - Install the full API documentation documentation. This takes over 200MB of extra disk space.
 dev-libs/boost:nls - Build libboost_locale. This library requires compatible C library interfaces, which might not be provided by uClibc or other embedded libraries.
 dev-libs/boost:numpy - Optionally build NumPy extensions when Boost.Python is enabled
-dev-libs/boost:threads - Build multi-thread-compatible libraries instead of single-threaded only.
 dev-libs/boost:tools - Build and install the boost tools (bcp, quickbook, inspect, wave)
 dev-libs/botan:boost - use dev-libs/boost
 dev-libs/check:subunit - Enable support for the subunit unit test protocol
@@ -2801,7 +2801,6 @@ dev-util/edb-debugger:jumbo-build - Experimental jumbo (also known as unity) bui
 dev-util/edi:clang - Provide integration with sys-devel/clang and dev-util/bear for autocompletion, inline errors and information about compilation units.
 dev-util/flatpak-builder:yaml - Use libyaml for yaml support
 dev-util/geany:gtk2 - Use GTK+2 instead of GTK+3
-dev-util/geany:gtk3 - Use GTK+3 instead of GTK+2
 dev-util/geany:vte - Enable Terminal support (x11-libs/vte)
 dev-util/geany-plugins:ctags - Enable ctags plugin
 dev-util/geany-plugins:debugger - Enable the debugger plugin which interfaces with sys-devel/gdb
@@ -4978,6 +4977,7 @@ media-video/ffmpeg:snappy - Enable app-arch/snappy support. Required for e.g. Vi
 media-video/ffmpeg:sndio - Enable support for the media-sound/sndio backend
 media-video/ffmpeg:srt - Enable support for Secure Reliable Transport (SRT) via net-libs/srt
 media-video/ffmpeg:ssh - Enable SSH/sftp support via net-libs/libssh.
+media-video/ffmpeg:svt-av1 - Enables AV1 encoding support via media-libs/svt-av1.
 media-video/ffmpeg:twolame - Enables MP2 encoding via media-sound/twolame as an alternative to the internal encoder.
 media-video/ffmpeg:vidstab - Enables video stabilization filter using vid.stab library (media-libs/vidstab).
 media-video/ffmpeg:vpx - Enables VP8 and VP9 codec support using libvpx: Decoding does not require this to be enabled but libvpx can also be used for decoding; encoding requires this useflag to be enabled though.
@@ -6633,7 +6633,7 @@ net-misc/vinagre:spice - Enable access to SPICE-enabled virtual machines
 net-misc/vinagre:ssh - Enable ssh plugin using x11-libs/vte
 net-misc/vinagre:telepathy - Enable access to remote desktop via a net-libs/telepathy-glib client
 net-misc/vino:telepathy - Enable desktop sharing through a telepathy client
-net-misc/wget:cookie_check - Enable cookie checks via net-libs/libpsl
+net-misc/wget:cookie-check - Enable cookie checks via net-libs/libpsl
 net-misc/wget:metalink - Enable support for media-libs/libmetalink
 net-misc/wget:ntlm - Enable support for NTLM (Windows-based) authorization
 net-misc/wget:uuid - Generate UUIDs for the WARC (Web ARChive file format) using libuuid; otherwise use a simple RNG (random number generator)

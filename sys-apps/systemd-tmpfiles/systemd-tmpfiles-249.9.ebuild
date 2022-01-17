@@ -24,7 +24,7 @@ SRC_URI="https://github.com/systemd/${MY_PN}/archive/v${PV}.tar.gz -> ${MY_PN}-$
 
 LICENSE="BSD-2 GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc x86"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86"
 IUSE="selinux test"
 RESTRICT="!test? ( test )"
 
@@ -74,13 +74,16 @@ pkg_setup() {
 }
 
 src_prepare() {
+	local PATCHES=(
+		"${FILESDIR}/249.9-cross-compile.patch"
+	)
+
 	# musl patchset from:
 	# http://cgit.openembedded.org/openembedded-core/tree/meta/recipes-core/systemd/systemd
 	# check SRC_URI_MUSL in systemd_${PV}.bb file for exact list of musl patches
 	# we share patch tarball with sys-fs/udev
 	if use elibc_musl; then
-		einfo "applying musl patches and workarounds"
-		eapply "${WORKDIR}/musl-patches"
+		PATCHES+=( "${WORKDIR}/musl-patches" )
 
 		# avoids re-definition of struct ethhdr, also 0006-Include-netinet-if_ether.h.patch
 		append-cppflags '-D__UAPI_DEF_ETHHDR=0'

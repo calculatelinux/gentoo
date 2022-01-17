@@ -1752,8 +1752,6 @@
     <name>Lisp</name>
     <url>https://wiki.gentoo.org/wiki/Project:Lisp</url>
     <description>The Lisp project handles Lisp related packages in the Gentoo package tree.</description>
-    <subproject ref="common-lisp@gentoo.org" inherit-members="1"/>
-    <subproject ref="scheme@gentoo.org" inherit-members="1"/>
   </project>
   <project>
     <email>lua@gentoo.org</email>
@@ -1810,10 +1808,6 @@
     <member>
       <email>kumba@gentoo.org</email>
       <name>Joshua Kinard</name>
-    </member>
-    <member>
-      <email>leio@gentoo.org</email>
-      <name>Mart Raudsepp</name>
     </member>
     <member is-lead="1">
       <email>mattst88@gentoo.org</email>
