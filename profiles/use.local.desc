@@ -641,8 +641,6 @@ app-emulation/wine-mono:shared - Install pre-unpacked files which do not need to
 app-emulation/wine-staging:capi - Enable ISDN support via CAPI
 app-emulation/wine-staging:custom-cflags - Bypass strip-flags; use at your own peril
 app-emulation/wine-staging:dos - Pull in games-emulation/dosbox to run DOS applications
-app-emulation/wine-staging:faudio - Pull in app-emulation/faudio to provide XAudio2 functionality
-app-emulation/wine-staging:gcrypt - Add support for the Diffie-Hellman key exchanges using dev-libs/libgcrypt
 app-emulation/wine-staging:gecko - Add support for the Gecko engine when using iexplore
 app-emulation/wine-staging:gssapi - Use GSSAPI (Kerberos SSP support)
 app-emulation/wine-staging:gstreamer - Use media-libs/gstreamer to provide DirectShow functionality;
@@ -660,7 +658,6 @@ app-emulation/wine-staging:run-exes - Use Wine to open and run .EXE and .MSI fil
 app-emulation/wine-staging:samba - Add support for NTLM auth. See: https://web.archive.org/web/20160108123008/http://wiki.winehq.org:80/NtlmAuthSetupGuide and https://web.archive.org/web/20150906013746/http://wiki.winehq.org/NtlmSigningAndSealing (these pages are not currently in the updated WineHQ Wiki).
 app-emulation/wine-staging:sdl - Add support for gamepad detection using SDL
 app-emulation/wine-staging:staging - Apply Wine-Staging patches for advanced feature support that haven't made it into upstream Wine yet
-app-emulation/wine-staging:themes - Support GTK+:3 window theming through Wine-Staging
 app-emulation/wine-staging:udev - Use virtual/libudev to provide plug and play support
 app-emulation/wine-staging:unwind - Use sys-libs/libunwind to unwind the stack
 app-emulation/wine-staging:usb - Use virtual/libusb to provide USB support
@@ -3618,6 +3615,7 @@ kde-plasma/plasma-nm:teamd - Enable Teamd control support
 kde-plasma/plasma-workspace:appstream - Enable AppStream software metadata support
 kde-plasma/plasma-workspace:calculator - Enable calculator runner using sci-libs/libqalculate
 kde-plasma/plasma-workspace:geolocation - Enables dataengine providing location information
+kde-plasma/plasma-workspace:policykit - Build the Users KCM using sys-apps/accountsservice and sys-auth/polkit
 kde-plasma/plasma-workspace:screencast - Enable screencast portal using media-video/pipewire
 kde-plasma/plasma-workspace:telemetry - Enable User Feedback control module for kde-plasma/systemsettings
 kde-plasma/powerdevil:brightness-control - Enable screen brightness control using app-misc/ddcutil
@@ -4608,6 +4606,7 @@ media-sound/mangler:g15 - Logitech g15 lcd support
 media-sound/mixxx:hid - Enable HID controller support
 media-sound/mixxx:keyfinder - Enable musical key detection support via media-libs/libkeyfinder
 media-sound/mixxx:lv2 - Add support for Ladspa V2 via media-libs/lilv
+media-sound/mixxx:modplug - Add libmodplug support
 media-sound/mixxx:qtkeychain - Enable Secure credential storage support via dev-libs/qtkeychain
 media-sound/mixxx:shout - Enable broadcasting support via media-libs/libshout
 media-sound/moc:cache - Enable tags caching support
