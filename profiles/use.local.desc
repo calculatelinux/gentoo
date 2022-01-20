@@ -1702,6 +1702,7 @@ dev-java/openjdk:headless-awt - Don't install the X backend for AWT, needed by s
 dev-java/openjdk:javafx - Import OpenJFX modules at build time, via dev-java/openjfx
 dev-java/openjdk:jbootstrap - Build OpenJDK twice, the second time using the result of the first
 dev-java/openjdk:source - Install JVM sources
+dev-java/openjdk:system-bootstrap - Bootstrap using installed openjdk
 dev-java/openjdk:systemtap - Enable SystemTAP/DTrace tracing
 dev-java/openjdk-bin:gentoo-vm - Allow this JDK to be recognised by Gentoo (package manager, eselect, java-config, EXPERIMENTAL!)
 dev-java/openjdk-bin:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
@@ -5980,7 +5981,8 @@ net-libs/axtls:static - Statically build axhttpd server
 net-libs/c-client:chappa - Enable Eduardo Chappa's patches for use with mail-client/alpine (mainly adds support for maildir)
 net-libs/c-client:doc - Install RFCs related to IMAP
 net-libs/c-client:topal - Enable support for net-mail/topal for use with mail-client/alpine
-net-libs/canlock:legacy - Enable or disable building legacy code (v2 compatible)
+net-libs/canlock:header-parser - Build article header parsers
+net-libs/canlock:legacy - Build legacy API (v2 compatible)
 net-libs/cvm:vpopmail - Enable vpopmail support
 net-libs/czmq:drafts - Build draft API, which may change at any time without any notice, and is therefore not recommended for normal use. (requires draft support in net-libs/zeromq as well)
 net-libs/czmq:http-client - Build support for HTTP client using net-misc/curl
