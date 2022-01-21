@@ -3,14 +3,14 @@
 
 EAPI=8
 
-KDE_ORG_COMMIT=38ad2f39daec09168728033969265834b6a2d924
+KDE_ORG_COMMIT=f4ac0b55c37f2b594ffbe639db43dac365825c7c
 QT5_MODULE="qtbase"
 inherit qt5-build
 
 DESCRIPTION="Network abstraction library for the Qt5 framework"
 
 if [[ ${QT5_BUILD_TYPE} == release ]]; then
-	KEYWORDS="amd64 ~arm arm64 ~hppa ppc ppc64 ~riscv ~sparc ~x86"
+	KEYWORDS="amd64 arm arm64 ~hppa ppc ppc64 ~riscv ~sparc x86"
 fi
 
 IUSE="connman gssapi libproxy networkmanager sctp +ssl"
