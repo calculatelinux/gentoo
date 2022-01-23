@@ -6653,7 +6653,6 @@ net-misc/xmrig:donate - Set the default donation level to 1% instead of 0
 net-misc/xmrig:hwloc - Use sys-apps/hwloc for CPU affinity support
 net-misc/xmrig:opencl - Enable OpenCL support
 net-misc/youtube-viewer:gtk - Install the gtk3 GUI
-net-misc/youtube-viewer:gtk2 - Use the old gtk2 GUI instead of the gtk3 one
 net-misc/ytfzf:minimal - Skip app-shells/fzf and media-video/mpv dependencies (requires custom settings)
 net-misc/zerotier:clang - Use Clang compiler instead of GCC
 net-nds/389-ds-base:accountpolicy - Enable account policy plugin - automatically lock an account after a certain amount of time has elapsed
@@ -8127,6 +8126,7 @@ sys-devel/binutils:cet - Enable Intel Control-flow Enforcement Technology.
 sys-devel/binutils:default-gold - Set ld to point to ld.gold instead of ld.bfd
 sys-devel/binutils:gold - Build ld.gold linker
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
+sys-devel/binutils:pgo - Build binutils with Profile Guided Optimization (PGO) and LTO
 sys-devel/binutils:plugins - Enable plugin support in tools
 sys-devel/binutils-apple:classic - Use nm, otool, etc. from this ebuild instead of llvm-based tools
 sys-devel/binutils-apple:lto - Add support for Link-Time Optimization with LLVM
@@ -8136,6 +8136,7 @@ sys-devel/binutils-hppa64:cet - Enable Intel Control-flow Enforcement Technology
 sys-devel/binutils-hppa64:default-gold - Set ld to point to ld.gold instead of ld.bfd
 sys-devel/binutils-hppa64:gold - Build ld.gold linker
 sys-devel/binutils-hppa64:multitarget - Adds support to binutils for cross compiling (does not work with gas)
+sys-devel/binutils-hppa64:pgo - Build binutils with Profile Guided Optimization (PGO) and LTO
 sys-devel/binutils-hppa64:plugins - Enable plugin support in tools
 sys-devel/clang:default-compiler-rt - Use compiler-rt instead of libgcc as the default rtlib for clang
 sys-devel/clang:default-libcxx - Use libc++ instead of libstdc++ as the default stdlib for clang
@@ -8665,18 +8666,20 @@ www-servers/fnord:auth - Enable HTTP authentication support
 www-servers/gatling:diet - Compile against dev-libs/dietlibc
 www-servers/h2o:libh2o - Build and install libh2o
 www-servers/h2o:mruby - Enable support for mruby
-www-servers/lighttpd:brotli - Enable output compression via Brotli (recommended)
+www-servers/lighttpd:brotli - Enable output compression via app-arch/brotli (recommended)
 www-servers/lighttpd:bzip2 - Enable output compression via bzip2
-www-servers/lighttpd:gnutls - Build module for TLS via GnuTLS
+www-servers/lighttpd:gnutls - Build module for TLS via net-libs/gnutls
 www-servers/lighttpd:libev - Enable fdevent handler
-www-servers/lighttpd:maxminddb - Add support for geolocation using libMaxMindDB
-www-servers/lighttpd:mbedtls - Build module for TLS via Mbed TLS
-www-servers/lighttpd:mmap - Use mmap with files owned by lighttpd. This is a dangerous option as it may allow local users to trigger SIGBUS crashes.
+www-servers/lighttpd:maxminddb - Add support for geolocation using dev-libs/libmaxminddb
+www-servers/lighttpd:mbedtls - Build module for TLS via net-libs/mbedtls
+www-servers/lighttpd:mmap - Use mmap when sendfile is not available
+www-servers/lighttpd:nettle - Use dev-libs/nettle as crypto backend
 www-servers/lighttpd:nss - Build module for TLS via Mozilla's Network Security Services
 www-servers/lighttpd:rrdtool - Enable rrdtool support via mod_rrdtool
+www-servers/lighttpd:system-xxhash - Use system provided dev-libs/xxhash
 www-servers/lighttpd:webdav - Enable webdav properties
-www-servers/lighttpd:zlib - Enable output compression via gzip or deflate algorithms
-www-servers/lighttpd:zstd - Enable output compression via Zstandard algorithm
+www-servers/lighttpd:zlib - Enable output compression via gzip or deflate algorithms from sys-libs/zlib
+www-servers/lighttpd:zstd - Enable output compression via Zstandard (app-arch/zstd) algorithm
 www-servers/monkeyd:debug - Enable lots of debugging info
 www-servers/monkeyd:static-plugins - Build statically linked plugins
 www-servers/nginx:aio - Enables file AIO support

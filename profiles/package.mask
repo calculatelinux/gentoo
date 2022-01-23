@@ -33,6 +33,36 @@
 
 #--- END OF EXAMPLES ---
 
+# Mike Gilbert <floppym@gentoo.org> (2022-01-22)
+# Breaks many GNOME packages.
+# https://bugs.gentoo.org/831474
+=dev-util/meson-0.61*
+
+# Joonas Niilola <juippis@gentoo.org> (2022-01-22)
+# Served its purpose. Not supported or used by any browser anymore.
+# Bug #831819. Removal in ~30 days.
+net-misc/npapi-sdk
+
+# Georgy Yakovlev <gyakovlev@gentoo.org> (2022-01-22)
+# Vulnerable versions of rust, along with ebuilds that
+# do not build with fixed rust verions
+# removal in 7 days
+# https://bugs.gentoo.org/831638
+# https://bugs.gentoo.org/821157
+# https://bugs.gentoo.org/824066
+<dev-lang/rust-1.58.1
+<dev-lang/rust-bin-1.58.1
+<virtual/rust-1.58.1
+<=www-client/seamonkey-2.53.9.1-r1
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2022-01-22)
+# Prelink support is being removed from glibc and was
+# already somewhat broken for a while...
+# hmaccalc hard-depends on it (?).
+# Removal in 30 days.
+sys-devel/prelink
+app-crypt/hmaccalc
+
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-01-17)
 # Java-packages with no consumers and depending on virtual/{jdk,jre}-1.6
 # Removal in 30 days.
@@ -260,20 +290,6 @@ net-analyzer/jmx2munin
 # Removal on 2022-01-31, bug #547208
 sys-cluster/mpich2
 
-# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2022-01-08)
-# Ancient versions of spyder preventing clean up of things down the tree.
-# Sadly, this means we are also going to have to say goodbye to some plugins
-# that never got ported to the newer plugin system.
-# Removal in 15 days
-<dev-python/spyder-5.1.0
-<dev-python/spyder-kernels-2.1.0
-# Stuck on spyder-4
-dev-python/spyder-line-profiler
-dev-python/spyder-memory-profiler
-# Stuck on spyder-5.0
-dev-python/spyder-notebook
-dev-python/spyder-vim
-
 # Brian Evans <grknight@gentoo.org> (2022-01-07)
 # The main consumer, phpunit, does not initiate the new timer correctly
 # This is likely to cause issues in tests; Unmask if using for other purposes
@@ -323,16 +339,6 @@ www-servers/bozohttpd
 # Removal after 2022-05-01.  Bug #830331.
 # Broken and upstream needs new maintainer.
 x11-plugins/purple-facebook
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-19)
-# java-virtuals and packages without consumers.
-# Bug #828719. Removal in 30 days.
-java-virtuals/ejb-api
-java-virtuals/saaj-api
-java-virtuals/transaction-api
-java-virtuals/xmlrpc-api
-dev-java/jsr67
-dev-java/glassfish-ejb-api
 
 # Mike Gilbert <floppym@gentoo.org> (2021-12-24)
 # Replaced by sys-apps/hwdata. Removal on 2022-01-23.
