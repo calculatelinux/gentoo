@@ -33,6 +33,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Eray Aslan <eras@gentoo.org> (2022-01-24)
+# Mask experimental software
+=mail-mta/postfix-3.8*
+
 # Mike Gilbert <floppym@gentoo.org> (2022-01-22)
 # Breaks many GNOME packages.
 # https://bugs.gentoo.org/831474
@@ -339,10 +343,6 @@ www-servers/bozohttpd
 # Removal after 2022-05-01.  Bug #830331.
 # Broken and upstream needs new maintainer.
 x11-plugins/purple-facebook
-
-# Mike Gilbert <floppym@gentoo.org> (2021-12-24)
-# Replaced by sys-apps/hwdata. Removal on 2022-01-23.
-sys-apps/hwids
 
 # Jonas Stein <jstein@gentoo.org> (2021-12-24)
 # Alpha version
