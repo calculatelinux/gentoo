@@ -4,10 +4,10 @@ DEPEND=>=dev-libs/wayland-1.17.0 dev-libs/wayland-protocols
 DESCRIPTION=Display information about supported Wayland protocols and current compositor
 EAPI=8
 HOMEPAGE=https://gitlab.freedesktop.org/wayland/wayland-utils
-KEYWORDS=~amd64 ~arm64 ~ppc64 ~riscv ~x86
+KEYWORDS=~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86
 LICENSE=MIT
 RDEPEND=>=dev-libs/wayland-1.17.0
 SLOT=0
 SRC_URI=https://gitlab.freedesktop.org/wayland/wayland-utils/-/archive/wayland-utils-1.0.0/wayland-utils-wayland-utils-1.0.0.tar.gz
 _eclasses_=meson	9f3e84959ae1d60e19bc91f212774dcc	multilib	de4beb52bfa93c4c5d96792a6b5e1784	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	python-utils-r1	25287947a5a70b86268775aaf87e3467	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
-_md5_=903000506e944847bd6896d5c0a55b33
+_md5_=6968719accdad0d72df825330f1f62c7

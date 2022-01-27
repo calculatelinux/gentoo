@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_SETUPTOOLS=pyproject.toml
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( pypy3 python3_{8..10} )
 inherit distutils-r1
 
 DESCRIPTION="An implementation of JSON-Schema validation for Python"
@@ -34,12 +34,6 @@ RDEPEND+="
 		dev-python/rfc3987[${PYTHON_USEDEP}]
 		dev-python/uritemplate[${PYTHON_USEDEP}]
 		>=dev-python/webcolors-1.11[${PYTHON_USEDEP}]
-"
-
-BDEPEND="
-	test? (
-		dev-python/twisted[${PYTHON_USEDEP}]
-	)
 "
 
 distutils_enable_tests pytest
