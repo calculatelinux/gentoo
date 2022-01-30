@@ -12,7 +12,7 @@ app-accessibility/brltty:api - build brltty's application program interface
 app-accessibility/brltty:beeper - support the console tone generator
 app-accessibility/brltty:contracted-braille - support in-line contracted braille
 app-accessibility/brltty:fm - support for the sound card synthesizer
-app-accessibility/brltty:louis - Use braille tranlator dev-libs/liblouis
+app-accessibility/brltty:louis - Use braille translator dev-libs/liblouis
 app-accessibility/brltty:midi - support the musical instrument digital interface
 app-accessibility/brltty:pcm - support for sound card digital audio
 app-accessibility/brltty:speech - speech support
@@ -723,6 +723,13 @@ app-forensics/libewf:uuid - Enable UUID support in the ewftools
 app-forensics/lynis:cron - Install /etc/cron.* files
 app-forensics/sleuthkit:aff - Enable extra aff formats
 app-forensics/sleuthkit:ewf - Enable libewf support
+app-forensics/yara:cuckoo - Enable cockoo module
+app-forensics/yara:dex - Enable dex module
+app-forensics/yara:dotnet - Enable dotnet module
+app-forensics/yara:macho - Enable macho module
+app-forensics/yara:magic - Enable magic module
+app-forensics/yara:profiling - Enable rules profiling
+app-forensics/yara:python - Pulls in python binding via dev-python/yara-python
 app-i18n/fcitx:autostart - Enable XDG-compatible autostart of Fcitx
 app-i18n/fcitx:enchant - Enable Enchant backend (using app-text/enchant) for spelling hinting
 app-i18n/fcitx:gtk2 - Install input method module for GTK+ 2
@@ -2877,6 +2884,7 @@ dev-util/plan9port:freefonts - Don't install BigelowHolmes fonts
 dev-util/poke:machine-interface - enable machine-interface protocol using dev-libs/json-c
 dev-util/pycharm-community:bundled-jdk - Use bundled jdk
 dev-util/pycharm-professional:bundled-jdk - Use bundled jdk
+dev-util/ropper:z3 - Enable Z3 contraint solver support
 dev-util/scanmem:gui - Enable the GameConqueror GUI
 dev-util/sccache:azure - Enable Azure Blob Storage support
 dev-util/sccache:dist-client - Enables distributed support in the sccache client
@@ -4651,6 +4659,7 @@ media-sound/mpd:wildmidi - Enable MIDI support via wildmidi
 media-sound/mpfc:wav - Enable wav audio codec support
 media-sound/mpg123:int-quality - Use rounding instead of fast truncation for integer output, where possible
 media-sound/mumble:g15 - Enable support for the Logitech G15 LCD (and compatible devices).
+media-sound/mumble:pipewire - Enable pipewire support for audio output.
 media-sound/mumble:rnnoise - Enable alternative noise suppression option based on RNNoise.
 media-sound/mumble:speech - Enable text-to-speech support in Mumble.
 media-sound/murmur:grpc - Use net-libs/grpc to enable remote control capabilities.
@@ -8077,14 +8086,9 @@ sys-cluster/mpich2:romio - Enable romio, a high-performance portable MPI-IO impl
 sys-cluster/nomad:nvidia - build with nvidia integration
 sys-cluster/openmpi:cma - Enable the CMA (Cross Memory Attach) MCA
 sys-cluster/openmpi:cuda - Add GPU direct support
-sys-cluster/openmpi:heterogeneous - Enable features required for heterogeneous platform support
 sys-cluster/openmpi:libompitrace - Enable support for contributed package libompitrace
-sys-cluster/openmpi:mpi-threads - Enable MPI_THREAD_MULTIPLE
-sys-cluster/openmpi:numa - Enable numactl to allow binding processes to CPUs
-sys-cluster/openmpi:pbs - Add support for the Portable Batch System (PBS)
 sys-cluster/openmpi:peruse - Enable PERUSE interface
 sys-cluster/openmpi:romio - Build the ROMIO MPI-IO component
-sys-cluster/openmpi:vt - Enable bundled VampirTrace support
 sys-cluster/pacemaker:smtp - Enable SMTP support via net-libs/libesmtp
 sys-cluster/pmix:munge - Enable authentication via munge
 sys-cluster/pmix:pmi - Build PMI1 and PMI2 interface
@@ -8560,9 +8564,11 @@ www-apps/xpra-html5:gzip - Install assets compressed with gzip
 www-apps/xpra-html5:minify - Minify JavaScript code for smaller transfers
 www-client/chromium:component-build - Split build into more shared libraries to speed up linking. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
 www-client/chromium:debug - Enable DCHECK feature with severity configurable at runtime. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
+www-client/chromium:gtk4 - Build with GTK4 headers.
 www-client/chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/chromium:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general use.
 www-client/chromium:js-type-check - Enable JavaScript type-checking for Chrome's web technology-based UI. Requires Java.
+www-client/chromium:libcxx - Use bundled libc++ instead of libstdc++ for building.
 www-client/chromium:official - Enable Official build instead of Developer build.
 www-client/chromium:pic - Disable optimized assembly code that is not PIC friendly
 www-client/chromium:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
@@ -8609,6 +8615,7 @@ www-client/links:lzip - Enable app-arch/lzip support
 www-client/lynx:gnutls - Use gnutls library for HTTPS support (openssl is the default library for HTTPS support).
 www-client/lynx:ssl - Enable HTTPS support.
 www-client/microsoft-edge-beta:mip - Install Microsoft Information Protection plugin.
+www-client/microsoft-edge-dev:mip - Install Microsoft Information Protection plugin.
 www-client/netsurf:bmp - BMP bitmap image support (media-libs/libnsbmp)
 www-client/netsurf:duktape - Use duktape.org javascript engine
 www-client/netsurf:gtk - Build GTK3 GUI

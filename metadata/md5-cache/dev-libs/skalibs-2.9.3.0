@@ -7,4 +7,5 @@ KEYWORDS=amd64 ~arm x86
 LICENSE=ISC
 SLOT=0/2.9
 SRC_URI=https://www.skarnet.org/software/skalibs/skalibs-2.9.3.0.tar.gz
-_md5_=c982e2e880bd7e414d1b063fc4ad7027
+_eclasses_=multilib	de4beb52bfa93c4c5d96792a6b5e1784	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_md5_=b5aaf9ab956a3dc1cf51dbb328ac2078

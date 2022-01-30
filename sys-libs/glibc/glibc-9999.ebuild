@@ -47,7 +47,7 @@ SRC_URI+=" https://gitweb.gentoo.org/proj/locale-gen.git/snapshot/locale-gen-${L
 SRC_URI+=" multilib-bootstrap? ( https://dev.gentoo.org/~dilfridge/distfiles/gcc-multilib-bootstrap-${GCC_BOOTSTRAP_VER}.tar.xz )"
 SRC_URI+=" systemd? ( https://gitweb.gentoo.org/proj/toolchain/glibc-systemd.git/snapshot/glibc-systemd-${GLIBC_SYSTEMD_VER}.tar.gz )"
 
-IUSE="audit caps cet +clone3 compile-locales +crypt custom-cflags doc gd headers-only +multiarch multilib multilib-bootstrap nscd profile selinux +ssp +static-libs static-pie suid systemd systemtap test vanilla"
+IUSE="audit caps cet +clone3 compile-locales +crypt custom-cflags doc gd headers-only +multiarch multilib multilib-bootstrap nscd profile selinux +ssp +static-libs suid systemd systemtap test vanilla"
 
 # Minimum kernel version that glibc requires
 MIN_KERN_VER="3.2.0"
@@ -260,8 +260,8 @@ do_compile_test() {
 	rm -f glibc-test*
 	printf '%b' "$*" > glibc-test.c
 
-	# Most of the time CC is already set, but not in early sanity checks.
-	nonfatal emake glibc-test CC="${CC-$(tc-getCC ${CTARGET})}"
+	# We assume CC is already set up.
+	nonfatal emake glibc-test
 	ret=$?
 
 	popd >/dev/null
@@ -441,33 +441,6 @@ setup_flags() {
 	replace-flags -O0 -O1
 
 	filter-flags '-fstack-protector*'
-}
-
-want_tls() {
-	# Archs that can use TLS (Thread Local Storage)
-	case $(tc-arch) in
-		x86)
-			# requires i486 or better #106556
-			[[ ${CTARGET} == i[4567]86* ]] && return 0
-			return 1
-		;;
-	esac
-	return 0
-}
-
-want__thread() {
-	want_tls || return 1
-
-	# For some reason --with-tls --with__thread is causing segfaults on sparc32.
-	[[ ${PROFILE_ARCH} == "sparc" ]] && return 1
-
-	[[ -n ${WANT__THREAD} ]] && return ${WANT__THREAD}
-
-	# only test gcc -- can't test linking yet
-	tc-has-tls -c ${CTARGET}
-	WANT__THREAD=$?
-
-	return ${WANT__THREAD}
 }
 
 use_multiarch() {
@@ -770,7 +743,7 @@ sanity_prechecks() {
 			ebegin "Checking that IA32 emulation is enabled in the running kernel"
 			echo 'int main(){return 0;}' > "${T}/check-ia32-emulation.c"
 			local STAT
-			if "${CC-${CHOST}-gcc}" ${CFLAGS_x86} "${T}/check-ia32-emulation.c" -o "${T}/check-ia32-emulation.elf32"; then
+			if ${CC-${CHOST}-gcc} ${CFLAGS_x86} "${T}/check-ia32-emulation.c" -o "${T}/check-ia32-emulation.elf32"; then
 				"${T}/check-ia32-emulation.elf32"
 				STAT=$?
 			else
@@ -788,14 +761,6 @@ sanity_prechecks() {
 
 	# When we actually have to compile something...
 	if ! just_headers && [[ ${MERGE_TYPE} != "binary" ]] ; then
-		ebegin "Checking gcc for __thread support"
-		if ! eend $(want__thread ; echo $?) ; then
-			echo
-			eerror "Could not find a gcc that supports the __thread directive!"
-			eerror "Please update your binutils/gcc and try again."
-			die "No __thread support in gcc!"
-		fi
-
 		if [[ ${CTARGET} == *-linux* ]] ; then
 			local run_kv build_kv want_kv
 
@@ -844,9 +809,6 @@ upgrade_warning() {
 # pkg_pretend
 
 pkg_pretend() {
-	# All the checks...
-	einfo "Checking general environment sanity."
-	sanity_prechecks
 	upgrade_warning
 }
 
@@ -858,12 +820,12 @@ pkg_setup() {
 # src_unpack
 
 src_unpack() {
-	# Consistency is not guaranteed between pkg_ and src_ ...
+	setup_env
+
+	einfo "Checking general environment sanity."
 	sanity_prechecks
 
 	use multilib-bootstrap && unpack gcc-multilib-bootstrap-${GCC_BOOTSTRAP_VER}.tar.xz
-
-	setup_env
 
 	if [[ ${PV} == 9999* ]] ; then
 		EGIT_REPO_URI="https://anongit.gentoo.org/git/proj/toolchain/glibc-patches.git"
@@ -1019,7 +981,6 @@ glibc_do_configure() {
 		--with-pkgversion="$(glibc_banner)"
 		$(use_enable crypt)
 		$(use_multiarch || echo --disable-multi-arch)
-		$(use_enable static-pie)
 		$(use_enable systemtap)
 		$(use_enable nscd)
 
