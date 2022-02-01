@@ -1,6 +1,10 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Viorel Munteanu <ceamac.paragon@gmail.com> (2022-02-01)
+# Binary package linked to glibc
+net-im/mattermost-desktop-bin
+
 # Ulrich Müller <ulm@gentoo.org> (2022-01-25)
 # Binary package linked to glibc
 media-gfx/brscan4
@@ -25,6 +29,8 @@ dev-db/sqlcl-bin
 # Binary package linked to glibc
 app-text/zotero-bin
 media-video/popcorntime-bin
+net-im/rocketchat-desktop-bin
+net-im/whatsapp-desktop-bin
 
 # Ulrich Müller <ulm@gentoo.org> (2022-01-04)
 # Emacs 23 does not support x86_64-gentoo-linux-musl systems
