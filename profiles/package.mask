@@ -353,15 +353,6 @@ sys-cluster/onesis
 # Removal after 2022-02-04. Bug #830588.
 games-util/springlobby
 
-# Ionen Wolkens <ionen@gentoo.org> (2022-01-03)
-# Obsolete, higan-purify is now provided by games-emulation/higan
-# as the icarus utility (bug #821121) and dev-games/higan-ananke
-# has no known uses without higan-purify (bug #821124). Further
-# stuck on gtk2 with dead HOMEPAGE / SRC_URI.
-# Removal after 2022-02-02.
-games-util/higan-purify
-dev-games/higan-ananke
-
 # Florian Schmaus <flow@gentoo.org> (2022-01-02)
 # Unmaintained, upstream gone, only packaged by
 # Gentoo, and the whole idea to unlock based on
@@ -390,16 +381,6 @@ x11-plugins/purple-facebook
 <dev-util/nvidia-cuda-sdk-11
 <dev-util/nvidia-cuda-toolkit-11
 
-# Jonas Stein <jstein@gentoo.org> (2021-12-20)
-# Package is broken and obsolete.
-# Removal on 2022-02-01.  Bug #828875.
-x11-misc/3ddesktop
-
-# Jonas Stein <jstein@gentoo.org> (2021-12-20)
-# Package is broken and obsolete.
-# Removal on 2022-02-01.  Bug #464364.
-x11-misc/habak
-
 # Mart Raudsepp <leio@gentoo.org> (2021-12-18)
 # GNOME 42 mask
 >=gui-libs/libhandy-1.5.0
@@ -425,9 +406,8 @@ x11-misc/habak
 ~sci-libs/vtk-9.1.0
 
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-12-12)
-# log4j-2.15.0 depends on masked >=virtual/{jdk,jre}-11
+# Needs masked >=virtual/{jdk,jre}-11
 >=dev-java/log4j-api-java9-2.15.0
->=dev-java/log4j-api-2.15.0
 
 # Conrad Kostecki <conikost@gentoo.org> (2021-12-04)
 # Masking newer versions for both packages,
