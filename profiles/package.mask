@@ -33,6 +33,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Zoltan Puskas <zoltan@sinustrom.info> (2022-02-07)
+# Fork of sci-libs/opencascade. Upstream unmaintained due to opencascade
+# becoming community friendly and making this fork obsolete. Recommends moving
+# to opencascade. See: https://github.com/tpaviot/oce/issues/745
+# Blocks deprecation of sci-libs/vtk-8.2.0.
+# Removal on 2022-03-01. Bug #832625.
+sci-libs/oce
+
+# Stephan Hartmann <sultan@gentoo.org> (2022-02-06)
+# Dev channel releases are only for people who
+# are developers or want more experimental features
+# and accept a more unstable release.
+>=www-client/chromium-100
+
+# Jonas Stein <jstein@gentoo.org> (2022-02-06)
+# Dead upstream, unmaintained, open bugs.
+# Removal after 2022-04-01.  Bug #832808.
+app-misc/emelfm2
+
 # Sam James <sam@gentoo.org> (2022-01-31)
 # Fork of media-video/atomicparsley. media-video/atomicparsley now uses this
 # fork (wez), so just switch to that. No need for a separate package for the fork.
@@ -329,11 +348,6 @@ net-analyzer/jmx2munin
 # This is likely to cause issues in tests; Unmask if using for other purposes
 >=dev-php/PHP_Timer-5.0
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2022-01-07)
-# Unmaintained, cmake warnings, QA notices, weird build error, no revdeps.
-# Removal on 2022-02-06. Bug #830727
-net-libs/jreen
-
 # Florian Schmaus <flow@gentoo.org> (2022-01-02)
 # Unmaintained, upstream gone, only packaged by
 # Gentoo, and the whole idea to unlock based on
@@ -412,12 +426,6 @@ x11-plugins/purple-facebook
 # Does not support updated dev-java/pdfbox-2.0.24, Bug #803488
 # Blocks (CVE-2018-11797, CVE-2021-{27807,27906,31811,31812})
 dev-tex/pdfannotextractor
-
-# Stephan Hartmann <sultan@gentoo.org> (2022-01-12)
-# Dev channel releases are only for people who
-# are developers or want more experimental features
-# and accept a more unstable release.
->=www-client/chromium-99
 
 # Mike Pagano <mpagano@gentoo.org> (2021-11-18)
 # Bug introduced in this version that can
@@ -510,18 +518,6 @@ net-libs/libsoup:3.0
 # breaks if not all at least many revdeps. #805011 for tracker bug.
 >=net-libs/mbedtls-3.0.0
 
-# Luke Dashjr <luke-jr+gentoobugs@utopios.org> (2021-11-04)
-# This release adds enforcement of the Taproot protocol change to the Bitcoin
-# rules, beginning in November. Protocol changes require user consent to be
-# effective, and if enforced inconsistently within the community may compromise
-# your security or others! If you do not know what you are doing, learn more
-# before November. (You must make a decision either way - simply not upgrading
-# is insecure in all scenarios.)
-# To learn more, see https://bitcointaproot.cc
->=net-p2p/bitcoind-0.21.1
->=net-p2p/bitcoin-qt-0.21.1
->=net-libs/libbitcoinconsensus-0.21.1
-
 # Lars Wendler <polynomial-c@gentoo.org> (2021-07-10)
 # Masked for testing
 # bug #802186
@@ -559,10 +555,6 @@ net-libs/libsoup:3.0
 # Mask gcc-6 branch (ended upstream support). Please switch
 # to a fresher gcc branch.
 <sys-devel/gcc-7
-
-# Eray Aslan <eras@gentoo.org> (2021-04-29)
-# Mask experimental software
-=mail-mta/postfix-3.7*
 
 # Ulrich Müller <ulm@gentoo.org> (2021-04-20)
 # Version 3.15 is broken with Emacs 27.2.
