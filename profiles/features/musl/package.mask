@@ -1,6 +1,36 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Stephan Hartmann <sultan@gentoo.org> (2022-02-10)
+# Binary package linked to glibc
+www-apps/chromedriver-bin
+
+# Stephan Hartmann <sultan@gentoo.org> (2022-02-10)
+# Doesn't build on musl, bug #833028
+www-client/chromium
+
+# Stephan Hartmann <sultan@gentoo.org> (2022-02-10)
+# Binary package linked to glibc
+www-plugins/chrome-binary-plugins
+
+# Stephan Hartmann <sultan@gentoo.org> (2022-02-10)
+# Binary packages linked to glibc
+www-client/opera
+www-client/opera-beta
+www-client/opera-developer
+
+# Stephan Hartmann <sultan@gentoo.org> (2022-02-10)
+# Binary packages linked to glibc
+www-client/google-chrome
+www-client/google-chrome-beta
+www-client/google-chrome-unstable
+
+# Stephan Hartmann <sultan@gentoo.org> (2022-02-10)
+# Binary packages linked to glibc
+www-client/microsoft-edge
+www-client/microsoft-edge-beta
+www-client/microsoft-edge-dev
+
 # Paolo Pedroni <paolo.pedroni@iol.it> (2022-02-09)
 # Binary package linked to glibc
 sci-mathematics/gimps
