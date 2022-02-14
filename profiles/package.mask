@@ -33,6 +33,27 @@
 
 #--- END OF EXAMPLES ---
 
+# Matthew Smith <matthew@gentoo.org> (2022-02-13)
+# Dead upstream, incompatible with newer versions of makeself.
+# Removal after 2022-03-15.  Bug #781947.
+app-arch/unmakeself
+
+# Jonas Stein <jstein@gentoo.org> (2022-02-11)
+# Blocks gtk2 removal, which is EOL
+# Removal after 2022-04-01.  Bug #833145.
+x11-misc/gtk2fontsel
+
+# Jonas Stein <jstein@gentoo.org> (2022-02-11)
+# Not usable anymore
+# Removal after 2022-06-01.  Bug #833144.
+x11-misc/i855crt
+
+# Conrad Kostecki <conikost@gentoo.org> (2022-02-11)
+# Mask for last-rite, as source for kernel modules
+# is now provided directly with sys-apps/smc-sum.
+# Removal after 2022-02-24.
+sys-apps/smc-sum-driver
+
 # Jonas Stein <jstein@gentoo.org> (2022-02-09)
 # Upstream is 404, open bugs, not maintained.
 # Removal after 2022-05-01.  Bug #832954.
@@ -206,50 +227,9 @@ dev-db/oracle-instantclient-jdbc
 dev-db/oracle-instantclient-odbc
 dev-db/oracle-instantclient-sqlplus
 
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-01-15)
-# Java-packages with no consumers and depending on virtual/{jdk,jre}-1.6
-# Removal in 30 days.
-app-emulation/edumips64
-dev-java/appframework
-dev-java/commons-jexl
-dev-java/cssparser
-dev-java/felix-bundlerepository
-dev-java/glassfish-servlet-api
-dev-java/jacoco
-dev-java/jargs
-dev-java/junitperf
-dev-java/kunststoff
-dev-java/saxpath
-dev-java/sun-jaf
-dev-java/tijmp
-dev-java/tomcat-jstl-impl
-dev-java/touchgraph-graphlayout
-dev-java/trove
-dev-java/unkrig-nullanalysis
-dev-java/xmldb
-dev-util/appinventor
-dev-util/scala-ide
-sci-astronomy/healpix
-
 # Ulrich Müller <ulm@gentoo.org> (2022-01-15)
 # Pretest versions, masked for testing.
 <app-editors/emacs-28.0.9999:28-vcs
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-01-13)
-# java-package without consumers. Bug #831107. Removal in 30 days.
-dev-java/dnsjava
-
-# Michał Górny <mgorny@gentoo.org> (2022-01-13)
-# A temporary hack used by flit to workaround a problem with pip.
-# No longer used by modern flit versions.
-# Removal on 2022-02-12.  Bug #831156.
-dev-python/intreehooks
-
-# Jakov Smolić <jsmolic@gentoo.org> (2022-01-13)
-# Dead upstream, uses EAPI 5, multiple open bugs, no revdeps,
-# no other distro is packaging this.
-# Removal on 2022-02-12. Bug #828703.
-sci-chemistry/povscript+
 
 # Brian Evans <grknight@gentoo.org> (2022-01-07)
 # The main consumer, phpunit, does not initiate the new timer correctly
@@ -341,10 +321,6 @@ dev-tex/pdfannotextractor
 # Bug #824558.
 =sys-kernel/gentoo-sources-5.14.19
 =sys-kernel/vanilla-sources-5.14.19
-~sys-kernel/gentoo-kernel-5.14.19
-~sys-kernel/gentoo-kernel-bin-5.14.19
-~sys-kernel/vanilla-kernel-5.14.19
-~virtual/dist-kernel-5.14.19
 
 # Mart Raudsepp <leio@gentoo.org> (2021-11-11)
 # Needs testing to ensure valac-0.54 works for existing packages

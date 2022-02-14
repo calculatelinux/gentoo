@@ -17,7 +17,7 @@ if [[ ${PV} = *9999* ]] ; then
 else
 	SRC_URI="https://download.blender.org/source/${P}.tar.xz"
 	# Update these between major releases.
-	#TEST_TARBALL_VERSION=SLOT_NUMBER
+	#TEST_TARBALL_VERSION="3.0.0"
 	#SRC_URI+=" test? ( https://dev.gentoo.org/~sam/distfiles/${CATEGORY}/${PN}/${PN}-${TEST_TARBALL_VERSION}-tests.tar.bz2 )"
 	KEYWORDS="~amd64 ~arm ~arm64"
 fi
@@ -60,9 +60,9 @@ RDEPEND="${PYTHON_DEPS}
 	virtual/jpeg
 	virtual/libintl
 	virtual/opengl
-	alembic? ( >=media-gfx/alembic-1.7.12[boost(+),hdf(+)] )
+	alembic? ( >=media-gfx/alembic-1.8.3-r2[boost(+),hdf(+)] )
 	collada? ( >=media-libs/opencollada-1.6.68 )
-	color-management? ( >=media-libs/opencolorio-2.0.0 )
+	color-management? ( >=media-libs/opencolorio-2.1.1-r3:= )
 	cuda? ( dev-util/nvidia-cuda-toolkit:= )
 	embree? ( >=media-libs/embree-3.10.0[raymask] )
 	ffmpeg? ( media-video/ffmpeg:=[x264,mp3,encode,theora,jpeg2k,vpx,vorbis,opus,xvid] )
@@ -83,17 +83,17 @@ RDEPEND="${PYTHON_DEPS}
 	nls? ( virtual/libiconv )
 	openal? ( media-libs/openal )
 	oidn? ( >=media-libs/oidn-1.4.1 )
-	openimageio? ( >=media-libs/openimageio-2.2.13.1:= )
+	openimageio? ( >=media-libs/openimageio-2.3.12.0:= )
 	openexr? (
-		media-libs/ilmbase:=
-		media-libs/openexr:=
+		dev-libs/imath:=
+		media-libs/openexr:3=
 	)
 	opensubdiv? ( >=media-libs/opensubdiv-3.4.0[cuda=] )
 	openvdb? (
-		>=media-gfx/openvdb-7.1.0
+		>=media-gfx/openvdb-8.2.0-r2:=
 		dev-libs/c-blosc:=
 	)
-	osl? ( >=media-libs/osl-1.11.10.0 )
+	osl? ( >=media-libs/osl-1.11.16.0-r3:= )
 	pdf? ( media-libs/libharu )
 	potrace? ( media-gfx/potrace )
 	pugixml? ( dev-libs/pugixml )
@@ -122,6 +122,11 @@ BDEPEND="
 	)
 	nls? ( sys-devel/gettext )
 "
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-3.0.1-openexr.patch
+	"${FILESDIR}"/${PN}-3.0.1-openimageio-2.3.patch
+)
 
 blender_check_requirements() {
 	[[ ${MERGE_TYPE} != binary ]] && use openmp && tc-check-openmp
@@ -229,6 +234,7 @@ src_configure() {
 		-DWITH_HEADLESS=$(usex headless)
 		-DWITH_INSTALL_PORTABLE=OFF
 		-DWITH_IMAGE_DDS=$(usex dds)
+		-DOPENEXR_ROOT_DIR="${ESYSROOT}/usr/$(get_libdir)/OpenEXR-3"
 		-DWITH_IMAGE_OPENEXR=$(usex openexr)
 		-DWITH_IMAGE_OPENJPEG=$(usex jpeg2k)
 		-DWITH_IMAGE_TIFF=$(usex tiff)

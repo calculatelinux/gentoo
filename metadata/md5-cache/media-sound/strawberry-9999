@@ -11,4 +11,4 @@ RDEPEND=dev-db/sqlite:= dev-libs/glib:2 dev-libs/protobuf:= dev-qt/qtconcurrent:
 REQUIRED_USE=cdda? ( gstreamer ) || ( gstreamer vlc )
 SLOT=0
 _eclasses_=cmake	11fee991ab428a3370e5c20fa8231fb6	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	git-r3	cc875b0c1e9b3bdac1af0f82f3ba29da	multilib	de4beb52bfa93c4c5d96792a6b5e1784	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	a4dab848a4490e8e48cf0baab3e61bc2	plocale	89c6aac5da68423465e6fd79fb4ad5fb	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	xdg	6024fbc93167fad782e2032933654857	xdg-utils	4f29a8b760a594a212abe9c2ba957c31
-_md5_=1c7794660fa33533043319e86c2f6878
+_md5_=33c187243dd82229aa825f9ef90a3e60

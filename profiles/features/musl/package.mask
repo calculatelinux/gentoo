@@ -1,6 +1,10 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Conrad Kostecki <conikost@gentoo.org> (2022-02-12)
+# Binary package linked to glibc
+x11-misc/xflux
+
 # Stephan Hartmann <sultan@gentoo.org> (2022-02-10)
 # Binary package linked to glibc
 www-apps/chromedriver-bin
@@ -134,6 +138,7 @@ net-im/rocketchat-desktop-bin
 net-im/whatsapp-desktop-bin
 sci-misc/jupyterlab-desktop-bin
 sci-misc/netlogo-bin
+sci-electronics/eagle
 
 # Ulrich Müller <ulm@gentoo.org> (2022-01-04)
 # Emacs 23 does not support x86_64-gentoo-linux-musl systems

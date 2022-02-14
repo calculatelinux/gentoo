@@ -27,7 +27,8 @@ RDEPEND="
 	sci-physics/root:=[c++17,-vmc]
 	sci-physics/vmc:=[c++17]
 	vgm? ( sci-physics/vgm:= )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	test? ( >=sci-physics/geant-4.11[gdml] )"
 BDEPEND="doc? ( app-doc/doxygen[dot] )"
 RESTRICT="
 	!examples? ( test )
@@ -45,6 +46,7 @@ src_configure() {
 		-DGeant4VMC_USE_G4Root="$(usex g4root)"
 		-DGeant4VMC_BUILD_EXAMPLES="$(usex test)"
 		-DGeant4VMC_INSTALL_EXAMPLES="$(usex examples)"
+		-DGeant4VMC_BUILD_G4Root_TEST="$(usex test)"
 	)
 	cmake_src_configure
 }

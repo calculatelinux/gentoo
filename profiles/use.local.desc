@@ -217,7 +217,6 @@ app-arch/libarchive:blake2 - Enable Blake2 hash support via app-crypt/libb2.
 app-arch/libarchive:bzip2 - Allow accessing bzip2-compressed archives through libbz2 (which comes with app-arch/bzip2). This only affects libarchive's native support: bsdtar will keep using bunzip2 as a filter if that's not built-in.
 app-arch/libarchive:e2fsprogs - Use file flags from sys-fs/e2fsprogs headers instead of virtual/os-headers headers
 app-arch/libarchive:nettle - Use dev-libs/nettle as crypto backend
-app-arch/libarchive:zlib - Allow accessing gzip-compressed archives through sys-libs/zlib. This only affects libarchive's native support: bsdtar will keep using gunzip as a filter if that's not built-in. It's also needed for supporting extraction of ZIP files.
 app-arch/p7zip:rar - Enable support for non-free rar decoder
 app-arch/pbzip2:symlink - Install symlinks which override app-arch/bzip2 implementation
 app-arch/pigz:symlink - Install symlinks which override app-arch/gzip implementation
@@ -358,6 +357,7 @@ app-crypt/mit-krb5:keyutils - Enable for the keyring ccache using keyutils
 app-crypt/mit-krb5:lmdb - Add support for using dev-db/lmdb for lookup tables
 app-crypt/mit-krb5:openldap - Enable support for ldap as a database backend
 app-crypt/mit-krb5:pkinit - Enable pkinit support for the initial ticket
+app-crypt/mkp224o:pcre2 - Search with a regex instead of prefix/suffix matching
 app-crypt/ophcrack:tables - Require the additional tables used to carry out cracking (app-crypt/ophcrack-tables)
 app-crypt/ophcrack-tables:vistafree - Installs the free Vista ophcrack tables
 app-crypt/ophcrack-tables:xpfast - Installs the fast XP ophcrack tables
@@ -487,6 +487,13 @@ app-emacs/slime:xref - Install xref.lisp cross-referencing tool
 app-emacs/vm:bbdb - Include support for app-emacs/bbdb
 app-emacs/wanderlust:bbdb - Include support for app-emacs/bbdb
 app-emacs/wikipedia-mode:outline-magic - Enable support for outline-mode extensions (app-emacs/outline-magic)
+app-emulation/86Box:dinput - Enable legacy Dinput mode instead of Xinput for older controllers.
+app-emulation/86Box:dynarec - Enable dynamic recompiler, which should provide a better emulation speed.
+app-emulation/86Box:experimental - Enable hardware from devbranch, which may be unstable or unusable.
+app-emulation/86Box:fluidsynth - Enable MIDI support through media-sound/fluidsynth.
+app-emulation/86Box:munt - Enable MIDI MT-32 support through media-libs/munt-mt32emu.
+app-emulation/86Box:new-dynarec - Enable new dynamic recompiler from PCem 15, which should provide an even better emulation speed.
+app-emulation/86Box:vramdump - Enable the posibility to dump the virtual Video RAM.
 app-emulation/aranym:clipboard - Enable bidirectional clipboard transfer between the host and FreeMiNT
 app-emulation/aranym:jit - Build Just-In-Time compiler variant with increased performance
 app-emulation/aranym:lilo - Enable support for directly booting kernels such as Linux
@@ -3703,6 +3710,7 @@ mail-client/mutt:autocrypt - Enable autocrypt.org support
 mail-client/mutt:berkdb - Enable sys-libs/db database backend for header caching
 mail-client/mutt:gdbm - Enable sys-libs/gdbm database backend for header caching
 mail-client/mutt:gpgme - Build gpgme backend to support S/MIME, PGP/MIME and traditional/inline PGP
+mail-client/mutt:gsasl - Use GNU SASL via virtual/gsasl instead of Cyrus SASL (requires USE=sasl)
 mail-client/mutt:hcache - Enable header cache, one database backend needs to be enabled
 mail-client/mutt:lmdb - Enable dev-db/lmdb database backend for header caching
 mail-client/mutt:pgp-classic - Build classic_pgp backend to support PGP/MIME and traditional/inline PGP
@@ -4076,6 +4084,8 @@ media-gfx/pstoedit:emf - Enable media-libs/libemf support
 media-gfx/pstoedit:pptx - Enable support for generating PowerPoint pptx files
 media-gfx/qimgv:opencv - Enable HQ scaling via media-libs/opencv
 media-gfx/qimgv:video - Add support for gif/webm playback via libmpv
+media-gfx/renderdoc:pyside2 - Expose the QRenderdoc UI to Python scripting to allow for customisation
+media-gfx/renderdoc:qt5 - Build and install the qrenderdoc GUI
 media-gfx/shotwell:opencv - Enable face detection via media-libs/opencv
 media-gfx/xpaint:pgf - Support for loading PGF images
 media-gfx/xsane:ocr - Enable support for Optical Character Recognition reader
@@ -7065,7 +7075,6 @@ net-wireless/yatebts:uhd - Build UHD transceiver
 net-wireless/yatebts:usrp1 - Build USRP1 transceiver
 sci-astronomy/cpl:gasgano - Enable support for sci-astronomy/gasgano file organizer
 sci-astronomy/esomidas:libtirpc - Build against net-libs/libtirpc for RPC support
-sci-astronomy/healpix:idl - Install healpix IDL/GDL routines
 sci-astronomy/kstars:fits - Enable support for NASA's sci-libs/cfitsio library
 sci-astronomy/kstars:indi - Enable support for Astronomical control library using libindi
 sci-astronomy/kstars:password - Store passwords securely via dev-libs/qtkeychain
