@@ -18,7 +18,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="HPND"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~riscv ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="examples imagequant +jpeg jpeg2k lcms test tiff tk truetype webp xcb zlib"
 REQUIRED_USE="test? ( jpeg jpeg2k tiff truetype )"
 RESTRICT="!test? ( test )"
@@ -46,15 +46,6 @@ BDEPEND="
 		)
 	)
 "
-
-EPYTEST_DESELECT=(
-	# Fails because of ghostscript?
-	# https://github.com/python-pillow/Pillow/issues/6013
-	Tests/test_file_eps.py::test_showpage
-	Tests/test_file_eps.py::test_bytesio_object
-	Tests/test_file_eps.py::test_render_scale1
-	Tests/test_file_eps.py::test_render_scale2
-)
 
 python_configure_all() {
 	# It's important that these flags are also passed during the install phase
