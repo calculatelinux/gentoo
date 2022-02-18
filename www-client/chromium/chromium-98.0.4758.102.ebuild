@@ -20,7 +20,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 
 LICENSE="BSD"
 SLOT="0/stable"
-KEYWORDS="~amd64 ~arm64 ~x86"
+KEYWORDS="amd64 ~arm64 ~x86"
 IUSE="component-build cups cpu_flags_arm_neon debug +hangouts headless +js-type-check kerberos +official pic +proprietary-codecs pulseaudio screencast selinux +suid +system-ffmpeg +system-harfbuzz +system-icu +system-png vaapi wayland widevine"
 REQUIRED_USE="
 	component-build? ( !suid )
@@ -517,6 +517,9 @@ src_prepare() {
 	if use ppc64; then
 		pushd third_party/libvpx >/dev/null || die
 		mkdir -p source/config/linux/ppc64 || die
+		# requires git and clang, bug #832803
+		sed -i -e "s|^update_readme||g; s|clang-format|${EPREFIX}/bin/true|g" \
+			generate_gni.sh || die
 		./generate_gni.sh || die
 		popd >/dev/null || die
 	fi

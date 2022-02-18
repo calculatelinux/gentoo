@@ -33,6 +33,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2022-02-18)
+# Breaks some reverse dependencies w/ stricter(?)
+# parsing. bug #833586.
+=dev-libs/libxslt-1.1.35
+
+# Brian Evans <grknight@gentoo.org> (2022-02-17)
+# Ancient version which likely does not work with modern software
+# New upstream exists but php team does not want to maintain
+# No revdeps. Removal in 30 days. Bug 833537
+dev-php/php-codebrowser
+
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-02-15)
 # Java libraries without consumers. Removal in 30 days.
 dev-java/upnplib
@@ -170,29 +181,6 @@ net-misc/npapi-sdk
 # Removal in 30 days.
 sys-devel/prelink
 app-crypt/hmaccalc
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-01-17)
-# Java-packages with no consumers and depending on virtual/{jdk,jre}-1.6
-# Removal in 30 days.
-dev-java/felix-shell
-dev-java/felix-utils
-dev-java/glassfish-transaction-api
-dev-java/jnlp-api
-dev-java/kxml
-dev-java/myfaces-builder-annotations
-dev-java/nanoxml
-dev-java/osgi-obr
-dev-java/tomcat-jstl-spec
-
-# Jakov Smolić <jsmolic@gentoo.org> (2022-01-19)
-# The following list of packages is still using EAPI 5
-# and has no reverse dependencies.
-# Removal on 2022-02-18.
-dev-java/ecj-gcj
-dev-java/freehep-graphicsio-tests
-dev-java/freehep-graphicsio
-dev-java/freehep-graphics2d
-dev-java/colt
 
 # James Beddek <telans@posteo.de> (2022-01-19)
 # FFmpeg 5.0 ABI/API changes break many packages.
