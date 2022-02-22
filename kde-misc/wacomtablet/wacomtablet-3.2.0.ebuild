@@ -12,6 +12,8 @@ inherit ecm kde.org
 DESCRIPTION="System settings module for Wacom tablets"
 HOMEPAGE="https://apps.kde.org/wacomtablet/
 https://userbase.kde.org/Wacomtablet"
+SRC_URI="mirror://kde/stable/${PN}/${PV}/${P}.tar.xz
+https://dev.gentoo.org/~asturm/distfiles/${P}-patchset-1.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="5"
@@ -45,7 +47,7 @@ DEPEND="${RDEPEND}
 	x11-libs/libX11
 "
 
-PATCHES=( "${FILESDIR}/${P}-qt-5.15.patch" )
+PATCHES=( "${WORKDIR}/${P}-qt-5.15.patch" )
 
 src_test() {
 	# test needs DBus, bug 675548
