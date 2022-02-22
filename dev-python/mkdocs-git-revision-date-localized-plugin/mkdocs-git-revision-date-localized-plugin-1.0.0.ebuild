@@ -25,7 +25,7 @@ SRC_URI="https://github.com/timvink/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
 	>=dev-python/Babel-2.7.0[${PYTHON_USEDEP}]
@@ -36,6 +36,7 @@ BDEPEND="
 	test? (
 		dev-python/click[${PYTHON_USEDEP}]
 		dev-python/mkdocs-material[${PYTHON_USEDEP}]
+		dev-python/mkdocs-i18n[${PYTHON_USEDEP}]
 		dev-vcs/git
 	)
 	doc? ( dev-vcs/git )
