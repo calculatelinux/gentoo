@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{7,8,9} )
+PYTHON_COMPAT=( python3_{7,8,9,10} )
 DISTUTILS_SINGLE_IMPL=yes
 DISTUTILS_USE_SETUPTOOLS=no
 inherit xdg xdg-utils distutils-r1 tmpfiles udev
@@ -188,6 +188,9 @@ python_install_all() {
 	local dir=$(get_udevdir)
 	dodir "${dir%/*}"
 	mv -vnT "${ED}"/usr/lib/udev "${ED}${dir}" || die
+
+	# TODO: Write a Gentoo init script.
+	rm -r "${ED}"/etc/{init.d,sysconfig}/ || die
 }
 
 pkg_postinst() {

@@ -33,6 +33,19 @@
 
 #--- END OF EXAMPLES ---
 
+# Fabian Groffen <grobian@gentoo.org> (2022-02-27)
+# Masked for removal, needs updates, significant amount of work, no
+# Clang toolchain available to test with
+# Removal on 2022-03-29.  Bug #834306
+sys-apps/tapi
+
+# Michał Górny <mgorny@gentoo.org> (2022-02-26)
+# The original Midori browser has been discontinued, and the new
+# Electron-based "Midori" (sic!) does not seem worth the effort
+# of packaging it.
+# Removal on 2022-03-28.  Bug #834120.
+www-client/midori
+
 # Ionen Wolkens <ionen@gentoo.org> (2022-02-25)
 # Has issues on non-amd64, but mask everywhere as a precaution
 # until further investigation (bug #834019, bug #834037)
@@ -273,11 +286,6 @@ x11-plugins/purple-facebook
 # Blender compatibility (no mixed LLVM versions).
 =media-libs/osl-1.12*
 
-# Hans de Graaff <graaff@gentoo.org> (2021-11-26)
-# Mask new rubygems version for testing. This version uses a new
-# gentoo-defaults profile, bug #789957
->=dev-ruby/rubygems-3.2.31
-
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-23)
 # Does not support updated dev-java/pdfbox-2.0.24, Bug #803488
 # Blocks (CVE-2018-11797, CVE-2021-{27807,27906,31811,31812})
@@ -465,11 +473,6 @@ media-plugins/kodi-game-libretro-dosbox
 # few years. Bug #436400
 app-office/texmacs
 <dev-scheme/guile-2
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2018-11-25)
-# Masked per security vulnerability CVE-2018-14345, bug #661510
-# Keeping it masked while users have unsolved issues with >0.15.0.
-<x11-misc/sddm-0.18.0
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2018-10-07)
 # Masked for more testing especially of reverse-deps.
