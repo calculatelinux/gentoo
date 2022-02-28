@@ -33,11 +33,42 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2022-02-27)
+# Fails to build with modern GCC, stuck on cmake-utils.eclass too.
+# bug #723194, bug #834301. Removal on 2022-03-27.
+sci-chemistry/mm-align
+
+# David Seifert <soap@gentoo.org> (2022-02-27)
+# Last release 10 years ago, no other distro packages this,
+# stuck on cmake-utils.eclass and QA issues.
+# Bug #711880, #774519, removal on 2022-03-27.
+net-fs/smbtad
+
+# Sam James <sam@gentoo.org> (2022-02-27)
+# EAPI=6 consumer of deprecated cmake-utils.eclass. No reverse
+# dependencies and will soon be unbuildable with new CMake.
+# bug #774495. Dead HOMEPAGE. Removal on 2022-03-27.
+dev-libs/smack
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2022-02-27)
+# Outdated, fails to build with glibc-2.34, bug 806755
+# Has been integrated into net-fs/nfs-utils, please use that instead.
+# Removal in 30 days.
+net-libs/libnfsidmap
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2022-02-27)
+# No revdeps since begin of gentoo.git history, outdated and unmaintained.
+# Bug #834307. Removal on 2022-03-29.
+x11-libs/libyui
+x11-libs/libyui-gtk
+x11-libs/libyui-ncurses
+x11-libs/libyui-qt
+
 # Fabian Groffen <grobian@gentoo.org> (2022-02-27)
 # Masked for removal, needs updates, significant amount of work, no
 # Clang toolchain available to test with
 # Removal on 2022-03-29.  Bug #834306
-sys-apps/tapi
+sys-libs/tapi
 
 # Michał Górny <mgorny@gentoo.org> (2022-02-26)
 # The original Midori browser has been discontinued, and the new
@@ -45,11 +76,6 @@ sys-apps/tapi
 # of packaging it.
 # Removal on 2022-03-28.  Bug #834120.
 www-client/midori
-
-# Ionen Wolkens <ionen@gentoo.org> (2022-02-25)
-# Has issues on non-amd64, but mask everywhere as a precaution
-# until further investigation (bug #834019, bug #834037)
-=net-misc/openssh-8.9_p1
 
 # Sam James <sam@gentoo.org> (2022-02-24)
 # Obsolete, ex-dependency of xfsprogs. Fails to build on 32-bit arches.
@@ -117,12 +143,6 @@ x11-misc/gtk2fontsel
 # Removal after 2022-06-01.  Bug #833144.
 x11-misc/i855crt
 
-# Conrad Kostecki <conikost@gentoo.org> (2022-02-11)
-# Mask for last-rite, as source for kernel modules
-# is now provided directly with sys-apps/smc-sum.
-# Removal after 2022-02-24.
-sys-apps/smc-sum-driver
-
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-02-09)
 # No longer maintained upstream.
 # Upstream recommends Airline 2 or Picocli as a replacement.
@@ -171,31 +191,9 @@ media-video/atomicparsley-wez
 # Removal on 2022-03-01.  Bug #832366.
 dev-python/python-slip
 
-# Fabian Groffen <grobian@gentoo.org> (2022-01-29)
-# Fails to compile with GCC on macOS.  No revdeps.
-# Removal on 2022-02-28.  Bug #832309.
-dev-perl/Mac-Pasteboard
-
-# Michał Górny <mgorny@gentoo.org> (2022-01-29)
-# No maintainer.  No upstream activity since Dec 2019.
-# Tests not enabled.  No revdeps.
-# Removal on 2022-02-28.  Bug #832318.
-dev-python/django-pglocks
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-01-27)
-# Java-library + java-virtual with no consumers.
-# Removal in 30 days.
-java-virtuals/script-api
-dev-java/jsr223
-
 # Eray Aslan <eras@gentoo.org> (2022-01-24)
 # Mask experimental software
 =mail-mta/postfix-3.8*
-
-# Mike Gilbert <floppym@gentoo.org> (2022-01-22)
-# Breaks many GNOME packages.
-# https://bugs.gentoo.org/831474
-=dev-util/meson-0.61*
 
 # James Beddek <telans@posteo.de> (2022-01-19)
 # FFmpeg 5.0 ABI/API changes break many packages.
@@ -388,14 +386,6 @@ net-libs/libsoup:3.0
 # incompatiblity with revdep licenses.  Mask until the situation
 # is resolved.  Bug #791259.
 >=media-libs/libopenaptx-0.2.1
-
-# Sam James <sam@gentoo.org> (2021-06-12)
-# Masked until all reverse dependencies support
-# OCaml 4.13.
-# bug #816498
->=dev-lang/ocaml-4.13
->=dev-ml/camlp4-4.13
->=dev-ml/labltk-8.06.11
 
 # Bernard Cafarelli <voyageur@gentoo.org> (2021-06-04)
 # Alpha versions of fetchmail 7
