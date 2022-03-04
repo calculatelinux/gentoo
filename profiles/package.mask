@@ -179,12 +179,6 @@ x11-misc/sisctrl
 # Removal after 2022-07-01.  Bug #832953.
 x11-misc/easystroke
 
-# Stephan Hartmann <sultan@gentoo.org> (2022-02-06)
-# Dev channel releases are only for people who
-# are developers or want more experimental features
-# and accept a more unstable release.
->=www-client/chromium-100
-
 # Jonas Stein <jstein@gentoo.org> (2022-02-06)
 # Dead upstream, unmaintained, open bugs.
 # Removal after 2022-04-01.  Bug #832808.
@@ -217,10 +211,10 @@ media-video/atomicparsley-wez
 
 # Ulrich Müller <ulm@gentoo.org> (2022-01-15)
 # Pretest versions, masked for testing.
-=app-editors/emacs-28.0.90:28-vcs
-=app-editors/emacs-28.0.91:28-vcs
-=app-editors/emacs-28.0.92:28-vcs
-=app-editors/emacs-28.0.93:28-vcs
+~app-editors/emacs-28.0.90
+~app-editors/emacs-28.0.91
+~app-editors/emacs-28.0.92
+~app-editors/emacs-28.0.93
 
 # Brian Evans <grknight@gentoo.org> (2022-01-07)
 # The main consumer, phpunit, does not initiate the new timer correctly

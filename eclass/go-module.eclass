@@ -83,10 +83,8 @@ export GO111MODULE=on
 export GOCACHE="${T}/go-build"
 
 # Set the default for the go module cache
-# This could potentially be shared so that all go packages put the
-# modules they download in a shared location.
 # See "go help environment" for information on this setting
-export GOMODCACHE="${T}/go-mod"
+export GOMODCACHE="${WORKDIR}/go-mod"
 
 # The following go flags should be used for all builds.
 # -modcacherw makes the build cache read/write
@@ -177,12 +175,10 @@ declare -A -g _GOMODULE_GOSUM_REVERSE_MAP
 # @DEFAULT_UNSET
 # @PRE_INHERIT
 # @DESCRIPTION:
-# If set to a non-null value before inherit, then the Go part of the
+# If set to a non-null value before inherit, the Go part of the
 # ebuild will be considered optional. No dependencies will be added and
-# no phase functions will be exported.
-#
-# If you enable GO_OPTIONAL, you have to set BDEPEND on >=dev-lang/go-1.12
-# for your package and call go-module_src_unpack manually.
+# no phase functions will be exported. You will need to set BDEPEND and
+# call go-module_src_unpack in your ebuild.
 
 # @FUNCTION: ego
 # @USAGE: [<args>...]
@@ -435,7 +431,7 @@ _go-module_src_unpack_verify_gosum() {
 	# This will print 'downloading' messages, but it's accessing content from
 	# the $GOPROXY file:/// URL!
 	einfo "Tidying go.mod/go.sum"
-	go mod tidy >/dev/null
+	ego mod tidy >/dev/null
 
 	# This used to call 'go get' to verify by fetching everything from the main
 	# go.mod. However 'go get' also turns out to recursively try to fetch
@@ -461,7 +457,7 @@ go-module_live_vendor() {
 		die "${FUNCNAME} only allowed when upstream isn't vendoring"
 
 	pushd "${S}" >& /dev/null || die
-	go mod vendor || die
+	ego mod vendor
 	popd >& /dev/null || die
 }
 
