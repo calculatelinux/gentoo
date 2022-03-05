@@ -287,6 +287,8 @@ app-cdr/cdemu:cdemu-daemon - Pull app-cdr/cdemu-daemon dependency, useful in chr
 app-cdr/dvdisaster:debug - Enable memory debugging.
 app-cdr/gaffitter:scripts - Install additional gaffitter scripts for external programs
 app-cdr/mirage2iso:pinentry - Support app-crypt/pinentry password input backend.
+app-containers/apptainer:network - Install network plug-ins
+app-containers/apptainer:suid - Install SUID helper binary
 app-containers/containerd:apparmor - Support for AppArmor
 app-containers/containerd:btrfs - Support for BTRFS snapshot driver
 app-containers/containerd:cri - Support for Kubernetes CRI
@@ -2300,7 +2302,6 @@ dev-lisp/cmucl:X - Build CLX, CLM, or Hemlock
 dev-lisp/cmucl:doc - Installs package documentation
 dev-lisp/cmucl:source - Include source code for CMUCL in installation
 dev-lisp/ecls:gengc - Use generational garbage collection (experimental)
-dev-lisp/ecls:libatomic - Use dev-libs/libatomic_ops library
 dev-lisp/ecls:precisegc - Use type information during garbage collection (experimental)
 dev-lisp/gcl:ansi - Build a GCL with ANSI support (else build a traditional CLtL1 image)
 dev-lisp/gcl:athena - Build xgcl - an interface to x11-libs/libXaw
@@ -3096,6 +3097,7 @@ games-engines/frobtads:tads2compiler - Build TADS2 compiler
 games-engines/frobtads:tads3compiler - Build TADS3 compiler
 games-engines/love:gme - Use media-libs/game-music-emu to support additional music formats
 games-engines/odamex:client - Build client target
+games-engines/odamex:hidpi - Use bundled FLTK 1.4, which has better support for HiDPI screens
 games-engines/odamex:master - Build master server target (advertises odamex server list)
 games-engines/odamex:odalaunch - Build the wxWidgets based launcher
 games-engines/odamex:portmidi - Enable PortMidi support
