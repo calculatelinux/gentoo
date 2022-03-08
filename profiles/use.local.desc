@@ -496,7 +496,6 @@ app-emulation/86Box:experimental - Enable hardware from devbranch, which may be 
 app-emulation/86Box:fluidsynth - Enable MIDI support through media-sound/fluidsynth.
 app-emulation/86Box:munt - Enable MIDI MT-32 support through media-libs/munt-mt32emu.
 app-emulation/86Box:new-dynarec - Enable new dynamic recompiler from PCem 15, which should provide an even better emulation speed.
-app-emulation/86Box:vramdump - Enable the posibility to dump the virtual Video RAM.
 app-emulation/aranym:clipboard - Enable bidirectional clipboard transfer between the host and FreeMiNT
 app-emulation/aranym:jit - Build Just-In-Time compiler variant with increased performance
 app-emulation/aranym:lilo - Enable support for directly booting kernels such as Linux
@@ -7402,8 +7401,6 @@ sci-libs/opencascade:vtk - Enable Visualization Toolkit support via sci-libs/vtk
 sci-libs/orocos_kdl:models - Build models for some well known robots.
 sci-libs/p4est:romio - Build with support for the ROMIO MPI-IO component
 sci-libs/p4est:vtk-binary - Enable binary vtk output. If disabled vtk files will be written in ASCII text format.
-sci-libs/parmetis:double-precision - Floating-point operation done as double precision
-sci-libs/parmetis:int64 - Build the 64 bits integer library (needed for > 2^31 vertices)
 sci-libs/pastix:cuda - Enable GPU support using CUDA kernels
 sci-libs/pastix:fortran - Install the Fortran interface
 sci-libs/pastix:int64 - Use 64- rather than 32-bit integer representation
@@ -8147,7 +8144,6 @@ sys-cluster/spark-bin:scala212 - Install Spark JARs pre-built with Scala 2.12.
 sys-cluster/torque:autorun - Enable the AUTORUN_JOBS codebase
 sys-cluster/torque:cgroups - Enable pbs_mom to use linux cgroups to isolate jobs
 sys-cluster/torque:cpusets - Enable pbs_mom to utilize linux cpusets if available
-sys-cluster/torque:drmaa - Enable the Distributed Resource Management Application API
 sys-cluster/torque:munge - Enable authentication via munge
 sys-cluster/torque:nvidia - Enable management of Nvidia GPUs
 sys-cluster/torque:quickcommit - Enable the QUICKCOMMIT codebase
