@@ -13,7 +13,7 @@ LUA_COMPAT=( lua5-{1..4} luajit )
 inherit php-ext-source-r3 lua-single toolchain-funcs
 
 DESCRIPTION="A fast, modern and generic image processing library"
-HOMEPAGE="http://www.exactcode.de/site/open_source/exactimage/"
+HOMEPAGE="https://exactcode.com/opensource/exactimage/"
 SRC_URI="http://dl.exactcode.de/oss/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -21,6 +21,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="expat jpeg lua openexr php perl png ruby swig tiff truetype X"
 REQUIRED_USE="lua? ( swig ) perl? ( swig ) php? ( swig ) ruby? ( swig )"
+# Tests are broken; 'make check' fails and referenced testsuite dir not found
+RESTRICT="test"
 
 RDEPEND="
 	x11-libs/agg[truetype]
