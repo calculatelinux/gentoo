@@ -33,6 +33,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Alfredo Tupone <tupone@gentoo.org> (2022-03-13)
+# No revdeps, last update on 2011
+# Removal on 2022-04-13.
+www-apps/rocketwiki-lqfb
+
+# David Seifert <soap@gentoo.org> (2022-03-12)
+# Unmaintained, no revdeps in tree, no other distro packages this,
+# HOMEPAGE gone, stuck on deprecated (and soon-to-stop-working)
+# cmake-utils. bug #725610, #732056, #834117.
+# Removal on 2022-04-11.
+sys-apps/rtl-entropy
+
+# David Seifert <soap@gentoo.org> (2022-03-12)
+# Unmaintained, no revdeps in tree, no other distro packages this,
+# wrong dependencies, out of date, stuck on deprecated
+# (and soon-to-stop-working) cmake-utils. bug #702980, #834121.
+# Removal on 2022-04-11.
+net-wireless/rtl_power_fftw
+
 # Sam James <sam@gentoo.org> (2022-03-11)
 # No maintainer, out of date, stuck on deprecated
 # (and soon-to-stop-working) cmake-utils. bug #774480.
@@ -358,7 +377,6 @@ app-misc/emelfm2
 # Requires GCC 8, security vulnerabilities, switch to CUDA 11,
 # consider using clang+NVPTX backend for sm_30 cards.
 # Removal in 90 days, bug #721808, #760708.
-<dev-util/nvidia-cuda-sdk-11
 <dev-util/nvidia-cuda-toolkit-11
 
 # Mart Raudsepp <leio@gentoo.org> (2021-12-18)
