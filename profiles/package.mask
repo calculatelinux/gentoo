@@ -33,6 +33,58 @@
 
 #--- END OF EXAMPLES ---
 
+# Jakov Smolić <jsmolic@gentoo.org> (2022-03-16)
+# Unmaintaned, broken packages, no revdeps.
+# Bugs 822234, 809539, 809536, 832618, 731720, 713684,
+# 733662, 741082, and many others.
+# Removal on 2022-04-16.
+net-wireless/yatebts
+net-wireless/srslte
+net-wireless/nanovna-saver
+net-wireless/gr-scan
+
+# Jakov Smolić <jsmolic@gentoo.org> (2022-03-16)
+# Unmaintaned, broken library with no revdeps.
+# Removal on 2022-04-16. Bug #643444. Bug #749639. Bug #684758.
+net-libs/libosmocore
+
+# Jakov Smolić <jsmolic@gentoo.org> (2022-03-16)
+# 9999-only ebuilds, various other QA issues (no python
+# 3.10, using deprecated EAPI, ...)
+# Removal on 2022-04-15.
+net-libs/libmirisdr
+media-sound/deinvert
+net-wireless/gr-m2k
+
+# Jakov Smolić <jsmolic@gentoo.org> (2022-03-16)
+# Python packages with no revdeps, tests are not
+# enabled, not ported to python 3.10
+# Removal on 2022-04-15.
+net-wireless/soapy_power
+dev-python/simplesoapy
+dev-python/simplespectral
+
+# Fabian Groffen <grobian@gentoo.org> (2022-03-16)
+# little activity upstream, doesn't work with PHP 8.0
+# Removal in 30 days
+www-apps/agendav
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-03-16)
+# Java library without consumers.
+# Removal in 30 days. Bug #835389.
+dev-java/android-util
+
+# Michał Górny <mgorny@gentoo.org> (2022-03-15)
+# No maintainer.  This package is repeatedly non-bumpable due to missing
+# upstream tags.  No revdeps.
+# Removal on 2022-04-14.  Bug #835352.
+dev-python/sphinx-jinja
+
+# Sam James <sam@gentoo.org> (2022-03-15)
+# No reverse dependencies, stuck on deprecated EAPI 5.
+# Removal on 2022-04-15. bug #835350.
+dev-java/headius-options
+
 # Matthew Smith <matthew@gentoo.org> (2022-03-14)
 # Dead upstream, multiple open bugs.
 # Bug #835162. Removal on 2022-04-13.
@@ -87,90 +139,6 @@ dev-java/edtftpj
 # No reverse dependencies and no updates upstream for a long while.
 # Stuck on EAPI 5 too. Removal on 2022-04-09. bug #832313.
 dev-perl/JavaScript-SpiderMonkey
-
-# Sam James <sam@gentoo.org> (2022-03-08)
-# GStreamer 1.20: masked for testing.
-~media-libs/gst-plugins-bad-1.20.0
-~media-libs/gst-plugins-base-1.20.0
-~media-libs/gst-plugins-good-1.20.0
-~media-libs/gst-plugins-ugly-1.20.0
-~media-libs/gstreamer-1.20.0
-~media-libs/gst-rtsp-server-1.20.0
-~media-plugins/gst-plugins-a52dec-1.20.0
-~media-plugins/gst-plugins-amr-1.20.0
-~media-plugins/gst-plugins-aom-1.20.0
-~media-plugins/gst-plugins-assrender-1.20.0
-~media-plugins/gst-plugins-bluez-1.20.0
-~media-plugins/gst-plugins-bs2b-1.20.0
-~media-plugins/gst-plugins-cairo-1.20.0
-~media-plugins/gst-plugins-cdio-1.20.0
-~media-plugins/gst-plugins-cdparanoia-1.20.0
-~media-plugins/gst-plugins-chromaprint-1.20.0
-~media-plugins/gst-plugins-colormanagement-1.20.0
-~media-plugins/gst-plugins-dash-1.20.0
-~media-plugins/gst-plugins-dtls-1.20.0
-~media-plugins/gst-plugins-dts-1.20.0
-~media-plugins/gst-plugins-dv-1.20.0
-~media-plugins/gst-plugins-dvb-1.20.0
-~media-plugins/gst-plugins-dvdread-1.20.0
-~media-plugins/gst-plugins-faac-1.20.0
-~media-plugins/gst-plugins-faad-1.20.0
-~media-plugins/gst-plugins-flac-1.20.0
-~media-plugins/gst-plugins-gdkpixbuf-1.20.0
-~media-plugins/gst-plugins-gtk-1.20.0
-~media-plugins/gst-plugins-hls-1.20.0
-~media-plugins/gst-plugins-jack-1.20.0
-~media-plugins/gst-plugins-jpeg-1.20.0
-~media-plugins/gst-plugins-kate-1.20.0
-~media-plugins/gst-plugins-ladspa-1.20.0
-~media-plugins/gst-plugins-lame-1.20.0
-~media-plugins/gst-plugins-ldac-1.20.0
-~media-plugins/gst-plugins-libav-1.20.0
-~media-plugins/gst-plugins-libde265-1.20.0
-~media-plugins/gst-plugins-libpng-1.20.0
-~media-plugins/gst-plugins-libvisual-1.20.0
-~media-plugins/gst-plugins-lv2-1.20.0
-~media-plugins/gst-plugins-meta-1.20.0
-~media-plugins/gst-plugins-modplug-1.20.0
-~media-plugins/gst-plugins-mpeg2dec-1.20.0
-~media-plugins/gst-plugins-mpeg2enc-1.20.0
-~media-plugins/gst-plugins-mpg123-1.20.0
-~media-plugins/gst-plugins-mplex-1.20.0
-~media-plugins/gst-plugins-neon-1.20.0
-~media-plugins/gst-plugins-openaptx-1.20.0
-~media-plugins/gst-plugins-opencv-1.20.0
-~media-plugins/gst-plugins-openh264-1.20.0
-~media-plugins/gst-plugins-opus-1.20.0
-~media-plugins/gst-plugins-oss-1.20.0
-~media-plugins/gst-plugins-pulse-1.20.0
-~media-plugins/gst-plugins-raw1394-1.20.0
-~media-plugins/gst-plugins-resindvd-1.20.0
-~media-plugins/gst-plugins-rtmp-1.20.0
-~media-plugins/gst-plugins-sbc-1.20.0
-~media-plugins/gst-plugins-sctp-1.20.0
-~media-plugins/gst-plugins-shout2-1.20.0
-~media-plugins/gst-plugins-sidplay-1.20.0
-~media-plugins/gst-plugins-smoothstreaming-1.20.0
-~media-plugins/gst-plugins-soundtouch-1.20.0
-~media-plugins/gst-plugins-soup-1.20.0
-~media-plugins/gst-plugins-speex-1.20.0
-~media-plugins/gst-plugins-srt-1.20.0
-~media-plugins/gst-plugins-srtp-1.20.0
-~media-plugins/gst-plugins-taglib-1.20.0
-~media-plugins/gst-plugins-twolame-1.20.0
-~media-plugins/gst-plugins-uvch264-1.20.0
-~media-plugins/gst-plugins-v4l2-1.20.0
-~media-plugins/gst-plugins-vaapi-1.20.0
-~media-plugins/gst-plugins-voaacenc-1.20.0
-~media-plugins/gst-plugins-voamrwbenc-1.20.0
-~media-plugins/gst-plugins-vpx-1.20.0
-~media-plugins/gst-plugins-wavpack-1.20.0
-~media-plugins/gst-plugins-webrtc-1.20.0
-~media-plugins/gst-plugins-x264-1.20.0
-~media-plugins/gst-plugins-x265-1.20.0
-~media-plugins/gst-plugins-ximagesrc-1.20.0
-~media-plugins/gst-plugins-zbar-1.20.0
-~net-libs/libnice-0.1.18
 
 # Matthew Smith <matthew@gentoo.org> (2022-03-08)
 # Dead upstream, multiple vulnerabilities.
@@ -320,11 +288,6 @@ dev-java/apple-java-extensions-bin
 # Bug #831106, bug #784107.
 games-strategy/triplea
 
-# Matthew Smith <matthew@gentoo.org> (2022-02-13)
-# Dead upstream, incompatible with newer versions of makeself.
-# Removal after 2022-03-15.  Bug #781947.
-app-arch/unmakeself
-
 # Jonas Stein <jstein@gentoo.org> (2022-02-11)
 # Blocks gtk2 removal, which is EOL
 # Removal after 2022-04-01.  Bug #833145.
@@ -392,8 +355,10 @@ app-misc/emelfm2
 <dev-util/nvidia-cuda-toolkit-11
 
 # Mart Raudsepp <leio@gentoo.org> (2021-12-18)
-# GNOME 42 mask
+# GNOME 42 mask, bug #835448
 >=gui-libs/libhandy-1.5.0
+>=gui-libs/gtksourceview-5.3
+>=app-editors/gnome-text-editor-42_alpha
 
 # Michał Górny <mgorny@gentoo.org> (2021-12-18)
 # EOL kernel with known vulnerabilities.  Please move to one of the LTS

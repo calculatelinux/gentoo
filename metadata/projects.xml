@@ -721,6 +721,11 @@
       <name>Michael Palimaka</name>
     </member>
     <member>
+      <email>maffblaster@gentoo.org</email>
+      <name>Matthew Marchese</name>
+      <role>General editing</role>
+    </member>
+    <member>
       <email>mattst88@gentoo.org</email>
       <name>Matt Turner</name>
     </member>
@@ -1835,6 +1840,10 @@
       <name>Anthony G. Basile</name>
     </member>
     <member>
+      <email>dilfridge@gentoo.org</email>
+      <name>Andreas K. Hüttel</name>
+    </member>
+    <member>
       <email>kumba@gentoo.org</email>
       <name>Joshua Kinard</name>
     </member>
@@ -1842,6 +1851,10 @@
       <email>mattst88@gentoo.org</email>
       <name>Matt Turner</name>
       <role>Lead</role>
+    </member>
+    <member>
+      <email>xen0n@gentoo.org</email>
+      <name>WANG Xuerui</name>
     </member>
     <member>
       <email>zlogene@gentoo.org</email>
@@ -2776,6 +2789,10 @@
     <member>
       <email>nerdboy@gentoo.org</email>
       <name>Steve Arnold</name>
+    </member>
+    <member>
+      <email>xen0n@gentoo.org</email>
+      <name>WANG Xuerui</name>
     </member>
     <member>
       <email>zlogene@gentoo.org</email>
