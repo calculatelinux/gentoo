@@ -33,6 +33,12 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2022-03-19)
+# Unmaintained, no revdeps in tree, not even on latest version, EAPI 5,
+# typical 'webapp' smell, last upstream release more than 9 years ago.
+# Bug #402849, #513594, #690042, #828702, removal on 2022-04-18.
+sci-biology/GBrowse
+
 # Michał Górny <mgorny@gentoo.org> (2022-03-18)
 # The new version breaks building docs w/o Internet access (because it
 # tries to fetch and install all dependencies locally).
@@ -60,6 +66,7 @@ net-libs/libosmocore
 net-libs/libmirisdr
 media-sound/deinvert
 net-wireless/gr-m2k
+net-wireless/libm2k
 
 # Jakov Smolić <jsmolic@gentoo.org> (2022-03-16)
 # Python packages with no revdeps, tests are not
@@ -553,11 +560,6 @@ media-plugins/kodi-game-libretro-dosbox
 # Guile in Gentoo is not slotted, so let's be cautious.
 # bug #705554, bug #689408.
 >=dev-scheme/guile-3.0.4
-
-# Ulrich Müller <ulm@gentoo.org> (2020-10-04)
-# Version 1.11 introduced different startup conventions for the server
-# which breaks the OpenRC init script. Bug #746227.
->=net-misc/tigervnc-1.11.0
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (2020-09-01)
 # Mismatched version (bug #695022). Masked to force upgrade to 2.0.4_pre20200306162733.

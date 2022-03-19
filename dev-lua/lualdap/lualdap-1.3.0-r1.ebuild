@@ -13,7 +13,7 @@ SRC_URI="https://github.com/lualdap/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ia64 ~sparc ~x86"
 IUSE="test"
 REQUIRED_USE="${LUA_REQUIRED_USE}"
 RESTRICT="test"
@@ -29,6 +29,7 @@ BDEPEND="
 "
 
 HTML_DOCS=( "docs/." )
+PATCHES=( "${FILESDIR}/${PN}-1.3.0-lua5-4.patch" )
 
 src_prepare() {
 	default
