@@ -1103,6 +1103,7 @@ app-text/htmltidy:deprecated - Install tools and header files which are now cons
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
 app-text/kbibtex:webengine - Use dev-qt/qtwebengine for HTML previews
 app-text/kbibtex:zotero - Enable support for synchronisation with zotero.org web service
+app-text/kjots:speech - Enable text-to-speech support
 app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search library (TeX related)
 app-text/libebook:tools - Build file conversion tools
 app-text/libmwaw:tools - Build file conversion tools
@@ -1248,6 +1249,8 @@ dev-cpp/libjson-rpc-cpp:http-server - Build support for HTTP server using net-li
 dev-cpp/libjson-rpc-cpp:redis-client - Build support for Redis client using dev-libs/hiredis
 dev-cpp/libjson-rpc-cpp:redis-server - Build support for Redis server using dev-libs/hiredis
 dev-cpp/libjson-rpc-cpp:stubgen - Build header stub code generator (needed for development and when pregenerated headers are not bundled)
+dev-cpp/sdbus-c++:systemd - Use external libsystemd instead of statically-linked build
+dev-cpp/sdbus-c++:tools - Install interface stub code generator
 dev-cpp/sourcetrail:examples - Install example projects.
 dev-db/etcd:server - Installs etcd daemon
 dev-db/firebird:server - Install the server components of Firebird, not just the client
@@ -1984,7 +1987,6 @@ dev-libs/boost:tools - Build and install the boost tools (bcp, quickbook, inspec
 dev-libs/botan:boost - use dev-libs/boost
 dev-libs/check:subunit - Enable support for the subunit unit test protocol
 dev-libs/crypto++:asm - Support assembly hand optimized crypto functions (i.e. faster run time)
-dev-libs/cudnn:cuda10-2 - On Nvidia CUDA 10.2
 dev-libs/cudnn:cuda11-5 - On Nvidia CUDA 11.5
 dev-libs/cyberjack:tools - Build and install optional management tools.
 dev-libs/cyrus-sasl:authdaemond - Add Courier-IMAP authdaemond unix socket support (net-mail/courier-imap, mail-mta/courier)
@@ -2856,7 +2858,6 @@ dev-util/nemiver:memoryview - Enable the optional hexadecimal memory inspection 
 dev-util/nvidia-cuda-sdk:cuda - Build CUDA binaries
 dev-util/nvidia-cuda-sdk:opencl - Build OpenCL binaries
 dev-util/nvidia-cuda-toolkit:debugger - Install the CUDA debugger
-dev-util/nvidia-cuda-toolkit:eclipse - Install Eclipse plugins
 dev-util/nvidia-cuda-toolkit:nsight - Install profiling and optimizing tools (nsight-compute, nsight-systems)
 dev-util/nvidia-cuda-toolkit:profiler - Install the NVIDIA CUDA profiler (nvprof) and the related libraries
 dev-util/nvidia-cuda-toolkit:sanitizer - Install compute-sanitizer tool
@@ -6990,6 +6991,7 @@ net-wireless/dump1090:bladerf - Build with Nuand BladeRF support
 net-wireless/dump1090:hackrf - Build with Great Scott Gadgets HackRF support
 net-wireless/dump1090:minimal - Exclude all HTML/webserver extras for a tiny build, e.g. to export data only
 net-wireless/dump1090:rtlsdr - Build with Realtek RTL2832U (rtlsdr) support
+net-wireless/gnome-bluetooth:sendto - Build the bluetooth-sendto application to send files to various locations/devices
 net-wireless/gnuradio:analog - enable analog signal processing blocks
 net-wireless/gnuradio:audio - enable blocks to connect to audio sources (mic-in) and sinks (speaker-out) ports on a computer
 net-wireless/gnuradio:channels - enable channel mode blocks

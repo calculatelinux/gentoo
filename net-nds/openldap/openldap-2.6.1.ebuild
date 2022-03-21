@@ -23,7 +23,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 
 IUSE_DAEMON="argon2 +cleartext crypt experimental minimal samba tcpd"
-IUSE_OVERLAY="overlays perl"
+IUSE_OVERLAY="overlays perl autoca"
 IUSE_OPTIONAL="debug gnutls iodbc ipv6 odbc sasl ssl selinux static-libs +syslog test"
 IUSE_CONTRIB="kerberos kinit pbkdf2 sha2 smbkrb5passwd"
 IUSE_CONTRIB="${IUSE_CONTRIB} cxx"
@@ -34,17 +34,10 @@ RESTRICT="!test? ( test )"
 REQUIRED_USE="cxx? ( sasl )
 	pbkdf2? ( ssl )
 	test? ( cleartext sasl )
+	autoca? ( !gnutls )
 	?? ( test minimal )"
 
 S=${WORKDIR}/${PN}-OPENLDAP_REL_ENG_${MY_PV}
-
-# always list newer first
-# Do not add any AGPL-3 BDB here!
-# See bug 525110, comment 15.
-# Advanced usage: OPENLDAP_BDB_SLOTS in the environment can be used to force a slot during build.
-BDB_SLOTS="${OPENLDAP_BDB_SLOTS:=5.3 4.8}"
-BDB_PKGS=''
-for _slot in $BDB_SLOTS; do BDB_PKGS="${BDB_PKGS} sys-libs/db:${_slot}" ; done
 
 # openssl is needed to generate lanman-passwords required by samba
 COMMON_DEPEND="
@@ -144,6 +137,8 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.6.1-cloak.patch
 	"${FILESDIR}"/${PN}-2.6.1-flags.patch
 	"${FILESDIR}"/${PN}-2.6.1-fix-missing-mapping.patch
+	"${FILESDIR}"/${PN}-2.6.1-make-flags.patch
+	"${FILESDIR}"/${PN}-2.6.1-fix-bashism-configure.patch
 )
 
 openldap_filecount() {
@@ -228,6 +223,7 @@ openldap_find_versiontags() {
 	[[ "${have_files}" == "1" ]] && einfo "DB files present" || einfo "No DB files present"
 
 	# Now we must check for the major version of sys-libs/db linked against.
+	# TODO: remove this as we dropped bdb support (gone upstream) in 2.6.1?
 	SLAPD_PATH="${EROOT}/usr/$(get_libdir)/openldap/slapd"
 	if [[ "${have_files}" == "1" ]] && [[ -f "${SLAPD_PATH}" ]]; then
 		OLDVER="$(/usr/bin/ldd ${SLAPD_PATH} \
@@ -421,6 +417,7 @@ multilib_src_configure() {
 		fi
 
 		use overlays && myconf+=( --enable-overlays=mod )
+		use autoca && myconf+=( --enable-autoca=mod ) || myconf+=( --enable-autoca=no )
 		# compile-in the syncprov
 		myconf+=( --enable-syncprov=yes )
 
@@ -440,6 +437,7 @@ multilib_src_configure() {
 			--disable-slapd
 			--disable-mdb
 			--disable-overlays
+			--disable-autoca
 			--disable-syslog
 			--without-systemd
 		)
@@ -514,7 +512,7 @@ src_configure_cxx() {
 
 multilib_src_compile() {
 	tc-export AR CC CXX
-	emake CC=$(tc-getCC) SHELL="${EPREFIX}"/bin/sh
+	emake CC="$(tc-getCC)" SHELL="${EPREFIX}"/bin/sh
 
 	if ! use minimal && multilib_is_native_abi ; then
 		if use cxx ; then
@@ -553,7 +551,7 @@ multilib_src_compile() {
 
 			emake \
 				LDAP_BUILD="${BUILD_DIR}" \
-				CC=$(tc-getCC) libexecdir="${EPREFIX}"/usr/$(get_libdir)/openldap
+				CC="$(tc-getCC)" libexecdir="${EPREFIX}/usr/$(get_libdir)/openldap"
 			popd &>/dev/null || die
 		fi
 
@@ -610,12 +608,20 @@ multilib_src_compile() {
 
 multilib_src_test() {
 	if multilib_is_native_abi; then
-		emake test
+		cd "tests"
+		pwd
+		# emake test => runs only lloadd & mdb, in serial; skips ldif,sql,wt,regression
+		# emake partests => runs ALL of the tests in parallel
+		# wt/WiredTiger is not supported in Gentoo
+		TESTS=( plloadd pmdb )
+		#TESTS+=( pldif ) # not done by default, so also exclude here
+		#use odbc && TESTS+=( psql ) # not done by default, so also exclude here
+		emake "${TESTS[@]}"
 	fi
 }
 
 multilib_src_install() {
-	emake CC=$(tc-getCC) \
+	emake CC="$(tc-getCC)" \
 		DESTDIR="${D}" SHELL="${EPREFIX}"/bin/sh install
 
 	if ! use minimal && multilib_is_native_abi; then
@@ -732,8 +738,6 @@ multilib_src_install() {
 	if ! use static-libs ; then
 		find "${ED}" \( -name '*.a' -o -name '*.la' \) -delete || die
 	fi
-
-	rmdir "${ED}/run" || die
 }
 
 multilib_src_install_all() {
@@ -787,9 +791,6 @@ pkg_postinst() {
 		elog "Getting started using OpenLDAP? There is some documentation available:"
 		elog "Gentoo Guide to OpenLDAP Authentication"
 		elog "(https://wiki.gentoo.org/wiki/Centralized_authentication_using_OpenLDAP)"
-		elog "---"
-		elog "An example file for tuning BDB backends with openldap is"
-		elog "DB_CONFIG.fast.example in /usr/share/doc/${PF}/"
 	fi
 
 	preserve_old_lib_notify /usr/$(get_libdir)/{liblber,libldap,libldap_r}-2.4$(get_libname 0)
