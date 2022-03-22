@@ -2260,6 +2260,9 @@ dev-libs/tntnet:server - Enable tntnet server daemon
 dev-libs/totem-pl-parser:archive - Enables ISO detection with app-arch/libarchive
 dev-libs/totem-pl-parser:crypt - Support AmazonAMZ decoding with dev-libs/libgcrypt
 dev-libs/totem-pl-parser:uchardet - Enable charset discovery via app-i18n/uchardet
+dev-libs/tre:agrep - Build agrep tool
+dev-libs/tre:alloca - Enable if you want TRE to use alloca() instead of malloc() when allocating memory needed for regexec operations
+dev-libs/tre:approx - Enable the approximate matching functionality
 dev-libs/userspace-rcu:regression-test - Run regression tests (requires FEATURES=test)
 dev-libs/weston:desktop - Enable the desktop shell
 dev-libs/weston:drm - Enable drm compositor support
@@ -8284,6 +8287,7 @@ sys-fs/cryptmount:luks - Enable key management via LUKS
 sys-fs/cryptmount:mount - Use systemd mount/umount for operations.
 sys-fs/cryptmount:openssl - Support openssl-encryption of keys.
 sys-fs/cryptsetup:argon2 - Enable password hashing algorithm from app-crypt/argon2
+sys-fs/cryptsetup:fips - Enable FIPS mode restrictions
 sys-fs/cryptsetup:gcrypt - Use dev-libs/libgcrypt crypto backend
 sys-fs/cryptsetup:kernel - Use kernel crypto backend (mainly for embedded systems)
 sys-fs/cryptsetup:nettle - Use dev-libs/nettle crypto backend
