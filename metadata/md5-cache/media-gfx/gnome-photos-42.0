@@ -1,0 +1,15 @@
+BDEPEND=dev-libs/appstream-glib dev-libs/libxslt app-text/docbook-xsl-stylesheets dev-util/desktop-file-utils dev-util/gdbus-codegen dev-util/glib-utils dev-util/itstool >=sys-devel/gettext-0.19.8 virtual/pkgconfig test? ( || ( ( >=dev-lang/python-3.10.0_p1-r1:3.10 dev-util/dogtail[python_targets_python3_10(-)] ) ( >=dev-lang/python-3.9.9-r1:3.9 dev-util/dogtail[python_targets_python3_9(-)] ) ( >=dev-lang/python-3.8.12_p1-r1:3.8 dev-util/dogtail[python_targets_python3_8(-)] ) ) ) app-arch/xz-utils >=dev-util/meson-0.59.4 >=dev-util/ninja-1.8.2 dev-util/meson-format-array test? ( x11-base/xorg-server[xvfb] x11-apps/xhost )
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test
+DEPEND=media-libs/babl >=x11-libs/cairo-1.14.0 >=x11-libs/gdk-pixbuf-2.36.8:2 >=media-libs/gegl-0.4.0:0.4[cairo,raw] sci-geosciences/geocode-glib >=media-libs/gexiv2-0.10.8 >=dev-libs/glib-2.62.0:2 >=net-libs/gnome-online-accounts-3.8.0:= >=media-libs/grilo-0.3.5:0.3= gnome-base/gsettings-desktop-schemas >=x11-libs/gtk+-3.22.16:3 >=dev-libs/libdazzle-3.26.0 >=dev-libs/libgdata-0.17.13:0=[gnome-online-accounts] >=net-libs/libgfbgraph-0.2.1:0.2 >=gui-libs/libhandy-1.1.90:1= virtual/jpeg:0 >=media-libs/libpng-1.6:0= app-misc/tracker:3= sys-apps/dbus
+DESCRIPTION=Access, organize and share your photos on GNOME
+EAPI=8
+HOMEPAGE=https://wiki.gnome.org/Apps/Photos
+IUSE=flickr test upnp-av test
+KEYWORDS=~amd64 ~arm64 ~ppc64 ~riscv ~x86
+LICENSE=GPL-3+ LGPL-2+ CC0-1.0
+RDEPEND=media-libs/babl >=x11-libs/cairo-1.14.0 >=x11-libs/gdk-pixbuf-2.36.8:2 >=media-libs/gegl-0.4.0:0.4[cairo,raw] sci-geosciences/geocode-glib >=media-libs/gexiv2-0.10.8 >=dev-libs/glib-2.62.0:2 >=net-libs/gnome-online-accounts-3.8.0:= >=media-libs/grilo-0.3.5:0.3= gnome-base/gsettings-desktop-schemas >=x11-libs/gtk+-3.22.16:3 >=dev-libs/libdazzle-3.26.0 >=dev-libs/libgdata-0.17.13:0=[gnome-online-accounts] >=net-libs/libgfbgraph-0.2.1:0.2 >=gui-libs/libhandy-1.1.90:1= virtual/jpeg:0 >=media-libs/libpng-1.6:0= app-misc/tracker:3= sys-apps/dbus net-misc/gnome-online-miners[flickr?] upnp-av? ( media-plugins/grilo-plugins:0.3[upnp-av] ) flickr? ( media-plugins/grilo-plugins:0.3[flickr] ) app-misc/tracker-miners:3
+RESTRICT=!test? ( test ) !test? ( test )
+SLOT=0
+SRC_URI=mirror://gnome/sources/gnome-photos/42/gnome-photos-42.0.tar.xz
+_eclasses_=gnome.org	429073e99d7067d3462e875bf5c6e14a	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	meson	2d8a51910bc57e004c37aa55c7d99ce4	multilib	de4beb52bfa93c4c5d96792a6b5e1784	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	fef481272d4a8e136a7d8a0fb1329384	python-any-r1	9006edf4b9c90f9ba1dc9ea9fee1b0bd	python-utils-r1	dfa3a38467793e97fcf791b156510654	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	virtualx	975d49ff3b3f451efe7a95f230532135	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
+_md5_=0443bf2a3f32b4c7534d296cf107bc6f

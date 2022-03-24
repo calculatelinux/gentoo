@@ -2125,13 +2125,11 @@ dev-libs/libpcre:bzip2 - Add support for pcregrep command to search within bzip2
 dev-libs/libpcre:pcre16 - Build PCRE library for 16 bit characters (e.g. UTF-16).
 dev-libs/libpcre:pcre32 - Build PCRE library for 32 bit characters (e.g. UTF-32).
 dev-libs/libpcre:readline - Add support for command line editing to pcretest, through sys-libs/readline.
-dev-libs/libpcre:recursion-limit - Limit match recursion to 8192; if disabled, the default limit is used, which is the same as the match limit.
 dev-libs/libpcre:zlib - Add support for pcregrep command to search within gzip-compressed files (via sys-libs/zlib).
 dev-libs/libpcre2:bzip2 - Add support for pcregrep command to search within bzip2-compressed files (via app-arch/bzip2).
 dev-libs/libpcre2:pcre16 - Build PCRE library for 16 bit characters (e.g. UTF-16).
 dev-libs/libpcre2:pcre32 - Build PCRE library for 32 bit characters (e.g. UTF-32).
 dev-libs/libpcre2:readline - Add support for command line editing to pcretest, through sys-libs/readline.
-dev-libs/libpcre2:recursion-limit - Limit match recursion to 8192; if disabled, the default limit is used, which is the same as the match limit.
 dev-libs/libpcre2:zlib - Add support for pcregrep command to search within gzip-compressed files (via sys-libs/zlib).
 dev-libs/libpeas:glade - Install the glade catalog
 dev-libs/libpeas:python - Build support for loading dev-lang/python plugins
@@ -2531,8 +2529,6 @@ dev-python/shiboken2:numpy - Implicitly convert passed NumPy arrays to Qt lists
 dev-python/shiboken2:vulkan - Generate "QSurface::VulkanSurface" bindings
 dev-python/simplespectral:faster - Use dev-python/scipy to speed up drawing
 dev-python/simplespectral:fastest - Use dev-python/pyFFTW to speed up drawing to the max
-dev-python/socketpool:eventlet - Install dev-python/eventlet as needed for the eventlet backend.
-dev-python/socketpool:gevent - Install dev-python/gevent as needed for the gevent backend.
 dev-python/subprocess-tee:test-full - Enable full test mode. Pulls in many additional dependencies, and requires having been emerged without this flag first in order to avoid a circular dependency.
 dev-python/sympy:aesara - Add support for dev-python/aesara
 dev-python/sympy:imaging - Add support for dev-python/pillow
@@ -4026,6 +4022,7 @@ media-gfx/geeqie:gpu-accel - Enable GPU acceleration support - experimental
 media-gfx/geeqie:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 media-gfx/geeqie:map - Enable items map display - experimental
 media-gfx/gimp:heif - Enable support for ISO/IEC 23008-12:2017 HEIF files
+media-gfx/gimp:jpegxl - Enable support for JPEG XL image format
 media-gfx/gimp:vector-icons - Enable support for vector icons (experimental)
 media-gfx/gmic:cli - Build CLI interface
 media-gfx/gmic:krita - Build media-gfx/krita plugin
@@ -4249,6 +4246,8 @@ media-libs/libheif:gdk-pixbuf - Enable x11-libs/gdk-pixbuf plugin
 media-libs/libheif:go - Enable building dev-lang/go code/examples
 media-libs/libheif:rav1e - Use media-video/rav1e for AVIF encoding
 media-libs/libheif:x265 - Use media-libs/x265 for HEIF encoding
+media-libs/libjxl:gdk-pixbuf - Build a gdk-pixbuf loader
+media-libs/libjxl:gimp210 - Enable plugin for GIMP 2.10.x series
 media-libs/liblastfm:fingerprint - Build the lastfm-fingerprint library
 media-libs/libmp4v2:utils - Install command-line utilities
 media-libs/libmypaint:gegl - Add support for media-libs/gegl
@@ -4412,6 +4411,7 @@ media-libs/x265:12bit - Add support for producing 12bits HEVC.
 media-libs/x265:numa - Build with support for NUMA nodes.
 media-libs/x265:pic - Disable optimized assembly code that is not PIC friendly
 media-libs/xine-lib:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
+media-libs/xine-lib:dav1d - Enable support for media-libs/dav1d AV1 decoder
 media-libs/xine-lib:dxr3 - Enable support for DXR3 mpeg acceleration cards.
 media-libs/xine-lib:flac - Build the media-libs/flac based FLAC demuxer and decoder. This flag is not needed for playing FLAC content, neither standalone nor in Ogg container (OggFLAC), but might have better support for exotic features like 24-bit samples or 96kHz sample rates.
 media-libs/xine-lib:gtk - Build the gdkpixbuf-based image decoder plugin.
@@ -5800,7 +5800,6 @@ net-im/dino:notification-sound - notification sounds plugin
 net-im/dino:omemo - Enable OMEMO encryption plugin
 net-im/ejabberd:captcha - Support for CAPTCHA Forms (XEP-158) on registration
 net-im/ejabberd:full-xml - Use XML features in XMPP stream (ex: CDATA), requires XML compliant clients
-net-im/ejabberd:hipe - Compile natively with HiPE, not recommended
 net-im/ejabberd:mssql - Enable Microsoft SQL Server support (via ODBC) for data storage
 net-im/ejabberd:mysql - Enable MySQL support for data storage
 net-im/ejabberd:odbc - Enable ODBC support to access data storage

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sci-mathematics/pari >=app-editors/emacs-23.1:*
 SLOT=0
 SRC_URI=http://iml.univ-mrs.fr/~ramare/ServeurPerso/GP-PARI/latest-pari-distrib/pariemacs-3.14.tar.gz
-_eclasses_=elisp	532fa549a4f54b2a3f83b827b272a4a9	elisp-common	cf4fd1b0835b9f3e638724840468064a
+_eclasses_=elisp	ba40293f44b2e5c3c19d4671c19ce01a	elisp-common	f9c72486dbcb18b633c9d0949211d86e
 _md5_=7b1f0ccff9b213713b2b772c54cd1a98
