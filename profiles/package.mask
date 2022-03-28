@@ -33,6 +33,52 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2022-03-28)
+# Hangs in src_compile when net-libs/nodejs is installed
+# Masked pending either a workaround in reportlab or
+# adaptations to nodejs.
+# bug #836301
+=dev-python/reportlab-3.6.9
+
+# Matt Turner <mattst88@gentoo.org> (2022-03-27)
+# Dead package. No reverse dependencies.
+# Removal on 2022-04-27
+dev-util/fix-la-relink-command
+
+# Matt Turner <mattst88@gentoo.org> (2022-03-27)
+# Dead package. No reverse dependencies since 2017.
+# Removal on 2022-04-27
+dev-libs/gtx
+
+# Matt Turner <mattst88@gentoo.org> (2022-03-27)
+# Dead package. See https://blogs.gnome.org/hughsie/2014/10/30/appdata-tools-is-dead/
+# Bug #680552
+# Removal on 2022-04-27
+dev-util/appdata-tools
+
+# Matt Turner <mattst88@gentoo.org> (2022-03-27)
+# GNOME 2 era packages. No reverse dependencies.
+# Removal on 2022-04-27
+dev-perl/gnome2-canvas
+dev-perl/Gtk2-Ex-PodViewer
+dev-perl/Gtk2-Ex-PrintDialog
+dev-perl/Gtk2-Ex-Simple-List
+dev-perl/Gtk2-ImageView
+
+# Conrad Kostecki <conikost@gentoo.org> (2022-03-27)
+# Long abandoned upstream, multiple bugs open,
+# no other major distro carries this anymore and
+# depends on deprecated jabber-base.
+# Bug #632622, #655566, #716850, removal on 2022-04-27.
+net-im/gg-transport
+
+# David Seifert <soap@gentoo.org> (2022-03-27)
+# Long abandoned upstreams, segfaults, bunch of tests fail,
+# no other major distro carries this anymore.
+# Bug #631320, #740484, #830090, #836278, removal on 2022-04-26.
+media-libs/libtaginfo
+media-sound/xnoise
+
 # Piotr Karbowski <slashbeast@gentoo.org> (2022-03-25)
 # Abandoned upstream, officialy limited to kernel 5.6,
 # no longer builds with kernel >=5.14. Use kernel's 
@@ -287,12 +333,6 @@ dev-libs/device-atlas-api-c
 # if still needed. Removal on 2022-04-07.
 dev-lang/python:3.6
 
-# Conrad Kostecki <conikost@gentoo.org> (2022-03-06)
-# Since prelink has been already last-rited,
-# this package has no more use and can be removed.
-# Removal in 14 days, after 2022-03-22.
-sec-policy/selinux-prelink
-
 # Stephan Hartmann <sultan@gentoo.org> (2022-03-06)
 # Dev channel releases are only for people who
 # are developers or want more experimental features
@@ -471,13 +511,6 @@ app-misc/emelfm2
 # Masked for testing
 ~sci-libs/vtk-9.1.0
 
-# Conrad Kostecki <conikost@gentoo.org> (2021-12-04)
-# Masking newer versions for both packages,
-# as they cannot be compiled due upstream change.
-# See bug #827651 for more information.
->=dev-libs/intel-compute-runtime-21.47.21710
->=dev-util/intel-graphics-compiler-1.0.9389
-
 # Sam James <sam@gentoo.org> (2021-12-01)
 # OSL 12 is a development release (for now).
 # Doesn't work with LLVM 13 yet; mask to help
@@ -509,12 +542,6 @@ dev-lang/vala:0.56
 # to cause hangs in some situations. Mask for now to avoid duplicate reports.
 # bug #821532, bug #821523 (and bug #821403 but shouldn't be in 3.1+).
 >=sys-apps/sandbox-3.0
-
-# Sam James <sam@gentoo.org> (2021-10-10)
-# Needs upstream build system fixes (currently in progress).
-# Python toggles don't work correctly right now.
-# Masking this development release for now.
-=media-libs/gexiv2-0.13.0
 
 # Ionen Wolkens <ionen@gentoo.org> (2021-10-09)
 # Vulkan beta driver branch aimed at Vulkan developers for testing
