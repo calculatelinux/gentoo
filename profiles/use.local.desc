@@ -7686,7 +7686,9 @@ sci-visualization/gnuplot:gd - Add support for media-libs/gd. Needed for GIF, JP
 sci-visualization/gnuplot:libcerf - Enable special functions from sci-libs/libcerf
 sci-visualization/gnuplot:regis - Enable ReGIS terminal
 sci-visualization/gwyddion:fits - Enable FITS image import via sci-libs/cfitsio
+sci-visualization/gwyddion:jansson - Enable JSON data manipulation via dev-libs/jansson
 sci-visualization/gwyddion:sourceview - Enable support for x11-libs/gtksourceview
+sci-visualization/gwyddion:unique - Enable remote control backend via dev-libs/libunique
 sci-visualization/labplot:cantor - Enable support for different open-source computer algebra systems via kde-apps/cantor
 sci-visualization/labplot:fits - Enable support for NASA's sci-libs/cfitsio library
 sci-visualization/labplot:libcerf - Enable special functions from sci-libs/libcerf
@@ -7994,7 +7996,7 @@ sys-auth/ssh-ldap-pubkey:schema - Install a copy of the LPK schema, only needed 
 sys-auth/sssd:acl - Build and use the cifsidmap plugin
 sys-auth/sssd:locator - Install sssd's Kerberos plugin
 sys-auth/sssd:netlink - Add support for netlink protocol via dev-libs/libnl
-sys-auth/sssd:nfsv4 - Add support for the nfsv4 idmapd plugin provided by net-libs/libnfsidmap
+sys-auth/sssd:nfsv4 - Add support for the nfsv4 idmapd plugin provided by net-fs/nfs-utils
 sys-auth/sssd:pac - Add Privileged Attribute Certificate Support for Kerberos
 sys-auth/sssd:sudo - Build helper to let app-admin/sudo use sssd provided information
 sys-auth/sssd:systemtap - Enable SystemTAP/DTrace tracing
@@ -8776,6 +8778,7 @@ x11-base/xwayland:unwind - Enable libunwind usage for backtraces
 x11-base/xwayland:xcsecurity - Build Security extension
 x11-drivers/nvidia-drivers:driver - Install kernel driver modules
 x11-drivers/nvidia-drivers:persistenced - Install the persistence daemon for keeping devices state when unused
+x11-drivers/nvidia-drivers:static-libs - Install the XNVCtrl static library for accessing sensors and other features
 x11-drivers/nvidia-drivers:tools - Install additional tools such as nvidia-settings
 x11-drivers/xf86-video-geode:ztv - Enable building the V4L2 ZTV driver
 x11-drivers/xf86-video-intel:sna - Enable SandyBridge's New Acceleration (useful on all chipsets, not just SandyBridge)
