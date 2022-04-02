@@ -63,10 +63,11 @@ DOC_CONTENTS="
 TBD="${WORKDIR}/${P}-tests-build"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-enable-elogind.patch"
-	"${FILESDIR}/${PN}-daemon-optional.patch" # bug #653136
+	"${FILESDIR}/dbus-enable-elogind.patch"
+	"${FILESDIR}/dbus-daemon-optional.patch" # bug #653136
 
-	"${FILESDIR}/${P}-x-autoconf-fixes.patch"
+	"${FILESDIR}/dbus-1.14.0-x-autoconf-fixes.patch"
+	"${FILESDIR}/dbus-1.12.22-check-fd.patch"
 )
 
 pkg_setup() {
@@ -206,6 +207,9 @@ multilib_src_compile() {
 }
 
 src_test() {
+	# https://bugs.gentoo.org/836560
+	addwrite /proc/self/oom_score_adj
+
 	# DBUS_TEST_MALLOC_FAILURES=0 to avoid huge test logs
 	# https://gitlab.freedesktop.org/dbus/dbus/-/blob/master/CONTRIBUTING.md#L231
 	DBUS_TEST_MALLOC_FAILURES=0 DBUS_VERBOSE=1 virtx emake -j1 -C "${TBD}" check

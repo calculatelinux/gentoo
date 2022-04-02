@@ -12,12 +12,12 @@ MY_P="${MY_PN}-${MY_PV}"
 DESCRIPTION="FFmpeg based gstreamer plugin"
 HOMEPAGE="https://gstreamer.freedesktop.org/modules/gst-libav.html"
 SRC_URI="https://gstreamer.freedesktop.org/src/${MY_PN}/${MY_P}.tar.xz"
-SRC_URI+=" https://cmpct.info/~sam/gentoo/distfiles/${CATEGORY}/${PN}/${P}_ffmpeg-5.patch.bz2"
+SRC_URI+=" https://cmpct.info/~sam/gentoo/distfiles/${CATEGORY}/${PN}/${PN}-1.18.4_ffmpeg-5.patch.bz2"
 S="${WORKDIR}/${MY_P}"
 
 LICENSE="LGPL-2+"
 SLOT="1.0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~x86"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 ~riscv x86"
 IUSE=""
 
 RDEPEND="
@@ -29,5 +29,5 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 PATCHES=(
-	"${WORKDIR}/${P}_ffmpeg-5.patch"
+	"${WORKDIR}/${PN}-1.18.4_ffmpeg-5.patch"
 )
