@@ -3,8 +3,7 @@
 
 EAPI=8
 
-CMAKE_ECLASS=cmake
-inherit cmake-multilib git-r3 xdg
+inherit cmake-multilib git-r3
 
 DESCRIPTION="JPEG XL image format reference implementation"
 HOMEPAGE="https://github.com/libjxl/libjxl"
@@ -23,7 +22,7 @@ DEPEND="app-arch/brotli:=[${MULTILIB_USEDEP}]
 	media-libs/libpng:=[${MULTILIB_USEDEP}]
 	sys-libs/zlib[${MULTILIB_USEDEP}]
 	virtual/jpeg[${MULTILIB_USEDEP}]
-	x11-misc/shared-mime-info
+	>=x11-misc/shared-mime-info-2.2
 	gdk-pixbuf? (
 		dev-libs/glib:2
 		x11-libs/gdk-pixbuf:2
@@ -31,7 +30,6 @@ DEPEND="app-arch/brotli:=[${MULTILIB_USEDEP}]
 	gimp210? ( >=media-gfx/gimp-2.10.28:0/2 )
 	openexr? ( media-libs/openexr:= )
 "
-
 RDEPEND="${DEPEND}"
 
 multilib_src_configure() {
@@ -62,6 +60,7 @@ multilib_src_configure() {
 			-DJPEGXL_ENABLE_PLUGINS=ON
 			-DJPEGXL_ENABLE_PLUGIN_GDKPIXBUF=$(usex gdk-pixbuf)
 			-DJPEGXL_ENABLE_PLUGIN_GIMP210=$(usex gimp210)
+			-DJPEGXL_ENABLE_PLUGIN_MIME=OFF
 		)
 	else
 		mycmakeargs+=(
