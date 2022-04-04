@@ -20,7 +20,7 @@ SRC_URI="
 
 LICENSE="MPL-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~m68k ~x86"
+KEYWORDS="~amd64 ~m68k ~riscv ~x86"
 
 RDEPEND="
 	>=dev-python/packaging-20.7[${PYTHON_USEDEP}]
@@ -37,6 +37,10 @@ BDEPEND="
 distutils_enable_tests pytest
 
 export SETUPTOOLS_SCM_PRETEND_VERSION=${PV}
+
+PATCHES=(
+	"${FILESDIR}"/${P}-test.patch
+)
 
 EPYTEST_DESELECT=(
 	# pyproject_fmt is not packaged
