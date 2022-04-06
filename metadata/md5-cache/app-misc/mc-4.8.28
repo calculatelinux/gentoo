@@ -13,4 +13,4 @@ RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=http://ftp.midnight-commander.org/mc-4.8.28.tar.xz
 _eclasses_=autotools	ed3ef2014ee93d24bde80f0c0ea9732e	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	gnuconfig	262062cef0ba4f22b397193da514a350	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
-_md5_=d2a9be4756c05b17a4022531b49ae3a4
+_md5_=9ad2b7b62fdf5b5aecef97ef214aecca

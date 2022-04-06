@@ -33,6 +33,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2022-04-05)
+# First version with py3 buildsystem support.
+# May be succeeded quickly by another snapshot.
+~dev-qt/qtwebengine-5.15.3_p20220330
+
+# Sergey Popov <pinkbyte@gentoo.org> (2022-04-05)
+# Upstream is dead long time ago
+# SRC_URI and HOMEPAGE are gone(bug #680362)
+# Has file collision with dev-util/bcc(bug #834093)
+# Suggested modern replacement is incorporated in dev-util/bcc
+# Removal in 30 days
+app-misc/ttysnoop
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-04-04)
+# Last upstream activities in 2009.
+# Fails to compile with java 11 or higher (bug #831262).
+# Removal in 30 days.
+net-misc/jrdesktop
+
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-04-03)
 # Java library without consumers.
 # Multiple vulnerabilities (bug #719146).
@@ -264,16 +283,6 @@ dev-perl/JavaScript-SpiderMonkey
 # Bug #834739. Removal on 2022-04-07.
 media-gfx/slic3r
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2022-03-07)
-# Obsolete by >=sci-chemistry/openbabel-3[perl].
-# Bug #834261. Removal on 2022-04-06.
-sci-chemistry/openbabel-perl
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2022-03-07)
-# Proprietary, requires login to download, no maintainer, blocks cleanup.
-# Bug #770499. Removal on 2022-04-06.
-dev-libs/device-atlas-api-c
-
 # Sam James <sam@gentoo.org> (2022-03-07)
 # Python 3.6 was declared end-of-life by upstream on 2021-11-04.
 # Please migrate to a newer Python version/slot or use a virtualenv
@@ -285,15 +294,6 @@ dev-lang/python:3.6
 # are developers or want more experimental features
 # and accept a more unstable release.
 >=www-client/chromium-102
-
-# Brian Evans <grknight@gentoo.org> (2022-03-03)
-# PHP 7.3 is end-of-life
-# Please upgrade to a newer slot
-# Guide at https://www.php.net/manual/en/migration74.incompatible.php
-# Removal in 30 days
-dev-lang/php:7.3
-virtual/httpd-php:7.3
-<www-apps/icingaweb2-module-director-1.8.1
 
 # Anton Fischl <github@fischl-online.de> (2022-02-23)
 # Version 2.5.* is not meant for production according to upstream

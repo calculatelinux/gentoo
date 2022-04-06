@@ -28,9 +28,14 @@ HOMEPAGE="https://ffmpeg.org/"
 if [ "${PV#9999}" != "${PV}" ] ; then
 	SRC_URI=""
 elif [ "${PV%_p*}" != "${PV}" ] ; then # Snapshot
-	SRC_URI="mirror://gentoo/${P}.tar.bz2"
+	SRC_URI="mirror://gentoo/${P}.tar.xz"
 else # Release
-	SRC_URI="https://ffmpeg.org/releases/${P/_/-}.tar.bz2"
+	VERIFY_SIG_OPENPGP_KEY_PATH="${BROOT}"/usr/share/openpgp-keys/ffmpeg.asc
+	inherit verify-sig
+	SRC_URI="https://ffmpeg.org/releases/${P/_/-}.tar.xz"
+	SRC_URI+=" verify-sig? ( https://ffmpeg.org/releases/${P/_/-}.tar.xz.asc )"
+
+	BDEPEND=" verify-sig? ( sec-keys/openpgp-keys-ffmpeg )"
 fi
 FFMPEG_REVISION="${PV#*_p}"
 
@@ -95,7 +100,7 @@ FFMPEG_FLAG_MAP=(
 
 # Same as above but for encoders, i.e. they do something only with USE=encode.
 FFMPEG_ENCODER_FLAG_MAP=(
-	amf amrenc:libvo-amrwbenc kvazaar:libkvazaar libaom mp3:libmp3lame
+	amf amrenc:libvo-amrwbenc kvazaar:libkvazaar libaom	mp3:libmp3lame
 	openh264:libopenh264 rav1e:librav1e snappy:libsnappy svt-av1:libsvtav1
 	theora:libtheora twolame:libtwolame webp:libwebp x264:libx264
 	x265:libx265 xvid:libxvid
@@ -245,12 +250,12 @@ RDEPEND="
 	sndio? ( media-sound/sndio:=[${MULTILIB_USEDEP}] )
 	speex? ( >=media-libs/speex-1.2_rc1-r1[${MULTILIB_USEDEP}] )
 	srt? ( >=net-libs/srt-1.3.0:=[${MULTILIB_USEDEP}] )
-	ssh? ( >=net-libs/libssh-0.5.5[${MULTILIB_USEDEP}] )
+	ssh? ( >=net-libs/libssh-0.5.5:=[sftp,${MULTILIB_USEDEP}] )
 	svg? (
 		gnome-base/librsvg:2=[${MULTILIB_USEDEP}]
 		x11-libs/cairo[${MULTILIB_USEDEP}]
 	)
-	nvenc? ( >=media-libs/nv-codec-headers-9.1.23.1[${MULTILIB_USEDEP}] )
+	nvenc? ( >=media-libs/nv-codec-headers-9.1.23.1 )
 	svt-av1? ( >=media-libs/svt-av1-0.8.4[${MULTILIB_USEDEP}] )
 	truetype? ( >=media-libs/freetype-2.5.0.1:2[${MULTILIB_USEDEP}] )
 	vaapi? ( >=x11-libs/libva-1.2.1-r1:0=[${MULTILIB_USEDEP}] )
@@ -285,7 +290,9 @@ DEPEND="${RDEPEND}
 	ladspa? ( >=media-libs/ladspa-sdk-1.13-r2[${MULTILIB_USEDEP}] )
 	v4l? ( sys-kernel/linux-headers )
 "
-BDEPEND="
+
+# += for verify-sig above
+BDEPEND+="
 	>=sys-devel/make-3.81
 	virtual/pkgconfig
 	amf? ( media-libs/amf-headers )
@@ -459,6 +466,7 @@ multilib_src_configure() {
 		$(multilib_native_enable manpages)
 	)
 
+	# Fixed in 5.0.1? Waiting for verification from someone who hit the issue.
 	local extra_libs
 	if use arm || use ppc || use mips || [[ ${CHOST} == *i486* ]] ; then
 		# bug #782811

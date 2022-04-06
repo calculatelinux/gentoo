@@ -1817,7 +1817,6 @@ dev-lang/php:filter - Add filter extension support
 dev-lang/php:flatfile - Add dbm support for flat files
 dev-lang/php:fpm - Enable the FastCGI Process Manager SAPI
 dev-lang/php:gd - Adds support for gd (bundled with PHP)
-dev-lang/php:hash - Enable the hash extension
 dev-lang/php:inifile - Add dbm support for .ini files
 dev-lang/php:intl - Enables the intl extension for extended internalization support
 dev-lang/php:jit - Enable PCRE JIT support
@@ -1836,12 +1835,10 @@ dev-lang/php:sodium - Enable support for crypto through dev-libs/libsodium
 dev-lang/php:sysvipc - Support for System V-compatible inter-process communication
 dev-lang/php:tokenizer - Add support for the PHP file parser
 dev-lang/php:tokyocabinet - Enable support for dev-db/tokyocabinet db backend
-dev-lang/php:wddx - Add support for Web Distributed Data eXchange
 dev-lang/php:webp - Enable webp support for GD in php-7.x
 dev-lang/php:xmlreader - Enable XMLReader support
 dev-lang/php:xmlwriter - Enable XMLWriter support
 dev-lang/php:xslt - Enable the XSL extension
-dev-lang/php:zip-encryption - Enable ZIP file encryption from dev-libs/libzip
 dev-lang/polyml:portable - Build the portable interpreter version of Poly/ML instead of native
 dev-lang/python:bluetooth - Build Bluetooth protocol support in socket module
 dev-lang/python:libedit - Link readline extension against dev-libs/libedit instead of sys-libs/readline.
@@ -2680,6 +2677,7 @@ dev-qt/qtwebchannel:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtwebengine:designer - Install the QWebEngineView plugin used to add widgets in dev-qt/designer forms that display web pages.
 dev-qt/qtwebengine:geolocation - Enable physical position determination via dev-qt/qtpositioning
 dev-qt/qtwebengine:jumbo-build - Combine source files to speed up build process.
+dev-qt/qtwebengine:screencast - Enable support for remote desktop and screen cast using media-video/pipewire
 dev-qt/qtwebengine:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of bundled.
 dev-qt/qtwebengine:system-icu - Use the system-wide dev-libs/icu instead of bundled.
 dev-qt/qtwebengine:widgets - Enable QtWidgets support
@@ -4045,7 +4043,9 @@ media-gfx/graphviz:gtk - Enables gtk+ output plugin -Tgtk (needs cairo)
 media-gfx/graphviz:gts - Enables support for GNU Triangulated Surface Library (required for sfdp to work)
 media-gfx/graphviz:lasi - Enables PostScript output via media-libs/lasi, for plugin -Tlasi (needs cairo)
 media-gfx/graphviz:lefty - Builds lefty front-end, requires x11-libs/libXmu and x11-libs/libXaw
+media-gfx/gthumb:heif - Enable support for ISO/IEC 23008-12:2017 HEIF/HEIC image format using media-libs/libheif
 media-gfx/gthumb:http - Enable webservice integration through net-libs/webkit-gtk
+media-gfx/gthumb:jpegxl - Support for JPEG XL image format
 media-gfx/gthumb:slideshow - Enable slideshow plugin
 media-gfx/hugin:sift - automatically align images with media-gfx/autopano-sift-C
 media-gfx/imagemagick:corefonts - Use media-fonts/corefonts which is required by some commands
@@ -5419,6 +5419,7 @@ net-analyzer/rrdcollect:exec - Enable exec:/// support
 net-analyzer/rrdcollect:librrd - Use the librrd library from net-analyzer/rrdtool
 net-analyzer/rrdtool:graph - Enable support for graphing functions
 net-analyzer/rrdtool:rados - Enable support for librados from sys-cluster/ceph
+net-analyzer/rrdtool:rrdcached - Build support for write-caching daemon
 net-analyzer/rrdtool:rrdcgi - Build rrdcgi support
 net-analyzer/sancp:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/sarg:doublecheck - Make sarg double check the data it manipulates and output a warning if an error is found
