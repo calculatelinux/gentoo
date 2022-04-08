@@ -1,0 +1,13 @@
+BDEPEND=|| ( >=dev-lang/python-3.10.0_p1-r1:3.10 >=dev-lang/python-3.9.9-r1:3.9 >=dev-lang/python-3.8.12_p1-r1:3.8 ) >=dev-util/meson-0.56.0 cinnamon? ( dev-lang/sassc gnome-extra/cinnamon ) gnome-shell? ( dev-libs/glib dev-lang/sassc >=gnome-base/gnome-shell-3.28 ) gtk3? ( dev-libs/glib dev-lang/sassc ) gtk4? ( dev-libs/glib dev-lang/sassc ) >=dev-util/meson-0.59.4 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
+DEFINED_PHASES=compile configure install setup test
+DESCRIPTION=A flat theme with transparent elements for GTK 2/3/4 and GNOME Shell
+EAPI=8
+HOMEPAGE=https://github.com/jnsh/arc-theme
+IUSE=cinnamon gnome-shell +gtk2 +gtk3 +gtk4 mate +transparency xfce
+KEYWORDS=~amd64 ~arm ~arm64 ~ppc64 ~x86
+LICENSE=GPL-3
+RDEPEND=gtk2? ( x11-themes/gnome-themes-standard x11-themes/gtk-engines-murrine )
+SLOT=0
+SRC_URI=https://github.com/jnsh/arc-theme/releases/download/20220405/arc-theme-20220405.tar.xz
+_eclasses_=meson	2d8a51910bc57e004c37aa55c7d99ce4	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	fef481272d4a8e136a7d8a0fb1329384	python-any-r1	9006edf4b9c90f9ba1dc9ea9fee1b0bd	python-utils-r1	59dddabd6a41ab69723654916142f63b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_md5_=645399f34a178930ff35d20a7764b577

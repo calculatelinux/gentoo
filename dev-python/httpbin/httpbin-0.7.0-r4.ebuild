@@ -9,8 +9,10 @@ PYTHON_COMPAT=( python3_{8..10} pypy3 )
 inherit distutils-r1
 
 DESCRIPTION="HTTP Request and Response Service"
-HOMEPAGE="https://github.com/postmanlabs/httpbin
-	https://pypi.org/project/httpbin/"
+HOMEPAGE="
+	https://github.com/postmanlabs/httpbin/
+	https://pypi.org/project/httpbin/
+"
 SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
@@ -24,7 +26,8 @@ RDEPEND="
 	dev-python/itsdangerous[${PYTHON_USEDEP}]
 	dev-python/markupsafe[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]
-	>=dev-python/werkzeug-0.14.1[${PYTHON_USEDEP}]"
+	<dev-python/werkzeug-2.1[${PYTHON_USEDEP}]
+"
 
 PATCHES=(
 	# do not import raven if it's not going to be used
