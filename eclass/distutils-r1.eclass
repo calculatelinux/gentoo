@@ -100,6 +100,8 @@ esac
 #
 # - hatchling - hatchling backend (from hatch)
 #
+# - jupyter - jupyter_packaging backend
+#
 # - pdm - pdm.pep517 backend
 #
 # - poetry - poetry-core backend
@@ -199,6 +201,10 @@ _distutils_set_globals() {
 			hatchling)
 				bdep+='
 					dev-python/hatchling[${PYTHON_USEDEP}]'
+				;;
+			jupyter)
+				bdep+='
+					dev-python/jupyter_packaging[${PYTHON_USEDEP}]'
 				;;
 			pdm)
 				bdep+='
@@ -927,6 +933,9 @@ _distutils-r1_backend_to_key() {
 		hatchling.build)
 			echo hatchling
 			;;
+		jupyter_packaging.build_api)
+			echo jupyter
+			;;
 		pdm.pep517.api)
 			echo pdm
 			;;
@@ -1274,7 +1283,10 @@ distutils-r1_python_install() {
 		# are already in scriptdir
 		rm -r "${root}${scriptdir}" || die
 		if [[ ${DISTUTILS_SINGLE_IMPL} ]]; then
-			mv "${root}$(python_get_scriptdir)" "${root}${scriptdir}" || die
+			local wrapped_scriptdir=${root}$(python_get_scriptdir)
+			if [[ -d ${wrapped_scriptdir} ]]; then
+				mv "${wrapped_scriptdir}" "${root}${scriptdir}" || die
+			fi
 		fi
 	else
 		local root=${D%/}/_${EPYTHON}

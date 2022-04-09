@@ -23,7 +23,7 @@ S=${WORKDIR}/${MY_P}/backend
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~riscv"
+KEYWORDS="~amd64 ~hppa ~ia64 ~riscv ~s390 ~sparc"
 
 RDEPEND="
 	>=dev-python/editables-0.2[${PYTHON_USEDEP}]
@@ -35,14 +35,13 @@ RDEPEND="
 BDEPEND="
 	${RDEPEND}
 	test? (
-		$(python_gen_cond_dep '
-			dev-python/atomicwrites[${PYTHON_USEDEP}]
-			dev-python/click[${PYTHON_USEDEP}]
-			dev-python/httpx[${PYTHON_USEDEP}]
-			dev-python/platformdirs[${PYTHON_USEDEP}]
-			dev-python/rich[${PYTHON_USEDEP}]
-			dev-python/tomli-w[${PYTHON_USEDEP}]
-		' 'python*')
+		dev-python/atomicwrites[${PYTHON_USEDEP}]
+		dev-python/click[${PYTHON_USEDEP}]
+		dev-python/httpx[${PYTHON_USEDEP}]
+		dev-python/platformdirs[${PYTHON_USEDEP}]
+		dev-python/rich[${PYTHON_USEDEP}]
+		dev-python/tomli-w[${PYTHON_USEDEP}]
+		dev-python/virtualenv[${PYTHON_USEDEP}]
 	)
 "
 
@@ -55,11 +54,6 @@ python_compile() {
 }
 
 python_test() {
-	if [[ ${EPYTHON} != python* ]]; then
-		einfo "Skipping tests on ${EPYTHON}"
-		return
-	fi
-
 	local -x EPYTEST_DESELECT=(
 		# these run pip to install stuff
 		tests/backend/dep/test_core.py::test_dependency_found
@@ -74,5 +68,5 @@ python_test() {
 	# and hatchling
 	cd "${WORKDIR}/${MY_P}" || die
 	local -x PYTHONPATH="src:${PYTHONPATH}"
-	epytest -x tests/backend
+	epytest tests/backend
 }
