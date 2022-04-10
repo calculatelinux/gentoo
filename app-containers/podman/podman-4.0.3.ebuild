@@ -14,7 +14,7 @@ SRC_URI="https://github.com/containers/podman/archive/v${PV}.tar.gz -> ${MY_P}.t
 LICENSE="Apache-2.0 BSD BSD-2 CC-BY-SA-4.0 ISC MIT MPL-2.0"
 SLOT="0"
 
-KEYWORDS="amd64 ~arm64 ~ppc64 ~riscv"
+KEYWORDS="amd64 arm64 ~ppc64 ~riscv"
 IUSE="apparmor btrfs cgroup-hybrid +fuse +init +rootless selinux"
 RESTRICT+=" test"
 
@@ -39,7 +39,8 @@ DEPEND="
 	${COMMON_DEPEND}
 	dev-go/go-md2man"
 RDEPEND="${COMMON_DEPEND}
-	fuse? ( sys-fs/fuse-overlayfs )"
+	fuse? ( sys-fs/fuse-overlayfs )
+	selinux? ( sec-policy/selinux-podman )"
 
 S=${WORKDIR}/${MY_P}
 

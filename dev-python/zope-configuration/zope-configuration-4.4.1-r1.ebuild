@@ -22,7 +22,7 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="ZPL"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
 
 RDEPEND="
 	dev-python/zope-i18nmessageid[${PYTHON_USEDEP}]
@@ -37,6 +37,12 @@ BDEPEND="
 "
 
 distutils_enable_tests unittest
+
+src_prepare() {
+	# strip rdep specific to namespaces
+	sed -i -e "/'setuptools'/d" setup.py || die
+	distutils-r1_src_prepare
+}
 
 python_compile() {
 	distutils-r1_python_compile

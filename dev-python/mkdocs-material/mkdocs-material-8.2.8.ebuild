@@ -17,8 +17,8 @@ inherit distutils-r1 docs
 
 DESCRIPTION="A Material Design theme for MkDocs"
 HOMEPAGE="
-	https://github.com/squidfunk/mkdocs-material
-	https://pypi.org/project/mkdocs-material
+	https://github.com/squidfunk/mkdocs-material/
+	https://pypi.org/project/mkdocs-material/
 "
 SRC_URI="
 	https://github.com/squidfunk/${PN}/archive/${PV}.tar.gz
@@ -27,7 +27,7 @@ SRC_URI="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~riscv ~x86"
+KEYWORDS="amd64 ~riscv x86"
 
 RDEPEND="
 	>=dev-python/jinja-2.11.1[${PYTHON_USEDEP}]

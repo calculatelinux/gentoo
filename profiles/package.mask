@@ -33,6 +33,22 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2022-04-10)
+# Unmaintained, last release upstream 16 years ago, Fedora dropped it,
+# relies on sys-libs/db, low quality port to EAPI 6, removal on 2022-05-10.
+net-p2p/syrep
+
+# Michał Górny <mgorny@gentoo.org> (2022-04-10)
+# Last release in 2016.  Last git commit in 2020.  No revdeps.
+# Removal on 2022-05-10.  Bug #837641.
+dev-python/repoze-sphinx-autointerface
+
+# Michał Górny <mgorny@gentoo.org> (2022-04-09)
+# A test runner specific to zope packages that was never really used
+# (only as a mistaken test-dep).  No revdeps left.
+# Removal on 2022-05-09.  Bug #837530.
+dev-python/zope-testrunner
+
 # Matt Turner <mattst88@gentoo.org> (2022-04-06)
 # Dead package upstream. No reverse dependencies.
 # Removal on 2022-05-06
@@ -281,12 +297,6 @@ dev-java/edtftpj
 # No reverse dependencies and no updates upstream for a long while.
 # Stuck on EAPI 5 too. Removal on 2022-04-09. bug #832313.
 dev-perl/JavaScript-SpiderMonkey
-
-# Matthew Smith <matthew@gentoo.org> (2022-03-08)
-# Dead upstream, multiple vulnerabilities.
-# Try the fork media-gfx/prusaslicer instead.
-# Bug #834739. Removal on 2022-04-07.
-media-gfx/slic3r
 
 # Sam James <sam@gentoo.org> (2022-03-07)
 # Python 3.6 was declared end-of-life by upstream on 2021-11-04.
