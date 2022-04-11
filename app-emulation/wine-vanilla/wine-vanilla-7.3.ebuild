@@ -1,12 +1,12 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=8
 
 PLOCALES="ar ast bg ca cs da de el en en_US eo es fa fi fr he hi hr hu it ja ko lt ml nb_NO nl or pa pl pt_BR pt_PT rm ro ru si sk sl sr_RS@cyrillic sr_RS@latin sv ta te th tr uk wa zh_CN zh_TW"
 PLOCALE_BACKUP="en"
 
-inherit autotools eapi7-ver estack eutils flag-o-matic gnome2-utils multilib multilib-minimal pax-utils plocale toolchain-funcs virtualx xdg-utils
+inherit autotools estack flag-o-matic multilib-minimal pax-utils plocale toolchain-funcs virtualx wrapper xdg-utils
 
 MY_PN="${PN%%-*}"
 MY_P="${MY_PN}-${PV}"
@@ -46,6 +46,11 @@ REQUIRED_USE="|| ( abi_x86_32 abi_x86_64 )
 # FIXME: the test suite is unsuitable for us; many tests require net access
 # or fail due to Xvfb's opengl limitations.
 RESTRICT="test"
+
+BDEPEND="mingw? ( !!>=cross-i686-w64-mingw32/binutils-2.38 !!>=cross-x86_64-w64-mingw32/binutils-2.38 )
+	sys-devel/flex
+	virtual/yacc
+	virtual/pkgconfig"
 
 COMMON_DEPEND="
 	X? (
@@ -99,7 +104,6 @@ COMMON_DEPEND="
 RDEPEND="${COMMON_DEPEND}
 	app-emulation/wine-desktop-common
 	>app-eselect/eselect-wine-0.3
-	!app-emulation/wine:0
 	dos? ( >=games-emulation/dosbox-0.74_p20160629 )
 	gecko? ( app-emulation/wine-gecko:2.47.2[abi_x86_32?,abi_x86_64?] )
 	mono? ( app-emulation/wine-mono:7.1.1 )
@@ -116,10 +120,8 @@ RDEPEND="${COMMON_DEPEND}
 
 # tools/make_requests requires perl
 DEPEND="${COMMON_DEPEND}
-	sys-devel/flex
+	${BDEPEND}
 	>=sys-kernel/linux-headers-2.6
-	virtual/pkgconfig
-	virtual/yacc
 	X? ( x11-base/xorg-proto )
 	xinerama? ( x11-base/xorg-proto )"
 
@@ -243,8 +245,8 @@ pkg_pretend() {
 	# Verify OSS support
 	if use oss; then
 		if ! has_version ">=media-sound/oss-4"; then
-			eerror "You cannot build wine with USE=oss without having support from a"
-			eerror "FreeBSD kernel or >=media-sound/oss-4 (only available through external repos)"
+			eerror "You cannot build wine with USE=oss without having support from"
+			eerror ">=media-sound/oss-4 (only available through external repos)"
 			eerror
 			die
 		fi
@@ -477,12 +479,12 @@ multilib_src_install_all() {
 	find "${ED}" -name *.la -delete || die
 
 	if ! use perl ; then # winedump calls function_grep.pl, and winemaker is a perl script
-		rm "${D%/}${MY_PREFIX}"/bin/{wine{dump,maker},function_grep.pl} \
-			"${D%/}${MY_MANDIR}"/man1/wine{dump,maker}.1 || die
+		rm "${D%}${MY_PREFIX}"/bin/{wine{dump,maker},function_grep.pl} \
+			"${D%}${MY_MANDIR}"/man1/wine{dump,maker}.1 || die
 	fi
 
-	use abi_x86_32 && pax-mark psmr "${D%/}${MY_PREFIX}"/bin/wine{,-preloader} #255055
-	use abi_x86_64 && pax-mark psmr "${D%/}${MY_PREFIX}"/bin/wine64{,-preloader}
+	use abi_x86_32 && pax-mark psmr "${D%}${MY_PREFIX}"/bin/wine{,-preloader} #255055
+	use abi_x86_64 && pax-mark psmr "${D%}${MY_PREFIX}"/bin/wine64{,-preloader}
 
 	# Avoid double prefix from dosym and make_wrapper
 	MY_PREFIX=${MY_PREFIX#${EPREFIX}}
@@ -497,7 +499,7 @@ multilib_src_install_all() {
 	# Make wrappers for binaries for handling multiple variants
 	# Note: wrappers instead of symlinks because some are shell which use basename
 	local b
-	for b in "${ED%/}${MY_PREFIX}"/bin/*; do
+	for b in "${ED%}${MY_PREFIX}"/bin/*; do
 		make_wrapper "${b##*/}-${WINE_VARIANT}" "${MY_PREFIX}/bin/${b##*/}"
 	done
 	eshopts_pop
