@@ -11,5 +11,5 @@ RDEPEND=gtk? ( dev-libs/glib:2 x11-libs/gtk+:3 ) jansson? ( dev-libs/jansson:= )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/traviscross/mtr/archive/v0.95.tar.gz -> mtr-0.95.tar.gz
-_eclasses_=autotools	ed3ef2014ee93d24bde80f0c0ea9732e	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	fcaps	babe6282ea5c195981bd302af1adaf3a	gnuconfig	262062cef0ba4f22b397193da514a350	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=autotools	a7813cfab8862ac10bcf3e01efb3f5c4	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	fcaps	babe6282ea5c195981bd302af1adaf3a	gnuconfig	262062cef0ba4f22b397193da514a350	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
 _md5_=e7476a4429cc710330946e92a85a1a78

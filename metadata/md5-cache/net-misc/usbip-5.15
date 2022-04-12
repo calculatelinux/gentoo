@@ -11,5 +11,5 @@ RDEPEND=>=dev-libs/glib-2.6 sys-apps/hwdata >=sys-kernel/linux-headers-3.17 virt
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.15.tar.xz
-_eclasses_=autotools	ed3ef2014ee93d24bde80f0c0ea9732e	estack	055c42df72f76a4f45ec92b35e83cd56	gnuconfig	262062cef0ba4f22b397193da514a350	kernel-2	f9d6a14b50d3be154a492a47c7d341a0	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=autotools	a7813cfab8862ac10bcf3e01efb3f5c4	estack	055c42df72f76a4f45ec92b35e83cd56	gnuconfig	262062cef0ba4f22b397193da514a350	kernel-2	f9d6a14b50d3be154a492a47c7d341a0	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
 _md5_=b5ee7a841f08fb2cb467128d0b8d0faf

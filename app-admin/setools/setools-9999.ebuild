@@ -26,7 +26,7 @@ IUSE="test infoflow X"
 RESTRICT="!test? ( test )"
 
 RDEPEND="${PYTHON_DEPS}
-	dev-python/setuptools
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	>=sys-libs/libsepol-3.2:=
 	>=sys-libs/libselinux-3.2:=
 	infoflow? ( >=dev-python/networkx-2.0[${PYTHON_USEDEP}] )
@@ -34,8 +34,8 @@ RDEPEND="${PYTHON_DEPS}
 		dev-python/PyQt5[gui,widgets,${PYTHON_USEDEP}]
 	)"
 DEPEND="${RDEPEND}"
-BDEPEND=">=dev-python/cython-0.27
-	dev-python/setuptools
+BDEPEND=">=dev-python/cython-0.27[${PYTHON_USEDEP}]
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
 		>=dev-python/networkx-2.0[${PYTHON_USEDEP}]
 		sys-apps/checkpolicy
