@@ -1,0 +1,12 @@
+BDEPEND=dev-scheme/racket:=[-minimal] >=app-editors/emacs-25.1:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DESCRIPTION=Emacs modes for Racket: edit, REPL, check-syntax, debug, profile, and more
+EAPI=8
+HOMEPAGE=https://github.com/greghendershott/racket-mode/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2+
+RDEPEND=dev-scheme/racket:=[-minimal] >=app-editors/emacs-25.1:*
+SLOT=0
+SRC_URI=https://github.com/greghendershott/racket-mode/archive/e7efbb52fdf2219532230a199153d8a33889c26f.tar.gz -> racket-mode-20220411.tar.gz
+_eclasses_=elisp	ba40293f44b2e5c3c19d4671c19ce01a	elisp-common	f9c72486dbcb18b633c9d0949211d86e
+_md5_=10bae43282fbb3b2473f01e6cb88cfef
