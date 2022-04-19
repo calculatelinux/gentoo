@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person" proxied="yes">
 		<email>adel.ks@zegrapher.com</email>
@@ -16,4 +16,7 @@
 		<remote-id type="github">Netflix/vmaf</remote-id>
 		<bugs-to>https://github.com/Netflix/vmaf/issues</bugs-to>
 	</upstream>
+	<use>
+		<flag name="embed-models">Compile default vmaf models into the library (needs <pkg>app-editors/vim-core</pkg>)</flag>
+	</use>
 </pkgmetadata>

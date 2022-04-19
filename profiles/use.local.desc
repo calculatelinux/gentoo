@@ -1076,6 +1076,7 @@ app-text/ebook-tools:lit2epub - Install lit2epub script
 app-text/editorconfig-core-c:cli - Install command line interface.
 app-text/enchant:aspell - Adds support for app-text/aspell spell checker
 app-text/enchant:hunspell - Adds support for app-text/hunspell spell checker
+app-text/enchant:nuspell - Adds support for app-text/nuspell spell checker
 app-text/enchant:voikko - Adds support for dev-libs/libvoikko spell checker
 app-text/evince:dvi - Enable the built-in DVI viewer
 app-text/evince:nautilus - Enable property page extension in gnome-base/nautilus
@@ -4275,9 +4276,9 @@ media-libs/libsdl2:video - Control video support (disable at your own risk)
 media-libs/libsdl2:vulkan - Enable Vulkan support
 media-libs/libtgvoip:dsp - Enable signal processing (echo cancellation, noise suppression, and automatic gain control)
 media-libs/libvisio:tools - Build conversion tools
+media-libs/libvmaf:embed-models - Compile default vmaf models into the library (needs app-editors/vim-core)
 media-libs/libvpx:highbitdepth - Enable 10 and 12 bit support for VP9.
 media-libs/libvpx:postproc - Enable additional post processing filters
-media-libs/libvpx:svc - Enable spatial-svc support (experimental)
 media-libs/libwebp:swap-16bit-csp - Enable byte swapping for 16 bit colorspace
 media-libs/libzmf:tools - Build conversion tools
 media-libs/lilv:dyn-manifest - Add LV2 Dynamic Manifest support. See http://lv2plug.in/ns/ext/dynmanifest/
@@ -4844,7 +4845,6 @@ media-sound/vorbis-tools:kate - Adds support for Ogg Kate subtitles via libkate.
 media-sound/vorbis-tools:ogg123 - Build ogg123 player, needs libao and curl
 media-sound/wildmidi:player - Install the wildmidi player
 media-sound/xmms2:airplay - Support for airplay format
-media-sound/xmms2:asf - Support for Advanced Systems Format (ASF) by using bundled libasf
 media-sound/xmms2:fluidsynth - Enable fluidsynth support (MIDI)
 media-sound/xmms2:gme - Support for various game audio formats using media-libs/game-music-emu
 media-sound/xmms2:ices - Icecast source output plugin
@@ -7281,7 +7281,7 @@ sci-libs/dealii:adolc - Adds support for ADOL-C (sci-libs/adolc)
 sci-libs/dealii:arpack - Adds support for ARPACK (sci-libs/arpack)
 sci-libs/dealii:assimp - Add support for assimp (media-libs/assimp)
 sci-libs/dealii:cuda - Add support for cuda (dev-util/nvidia-cuda-sdk)
-sci-libs/dealii:debug - Build an additional debug library with extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see <http://www.gentoo.org/proj/en/qa/backtraces.xml>
+sci-libs/dealii:debug - Build an additional debug library with extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see <https://www.gentoo.org/proj/en/qa/backtraces.xml>
 sci-libs/dealii:ginkgo - Add support for ginkgo (sci-libs/ginkgo)
 sci-libs/dealii:gmsh - Add support for gmsh (sci-libs/gmsh)
 sci-libs/dealii:metis - Add support for metis (sci-libs/metis)
@@ -7923,6 +7923,7 @@ sys-apps/systemd:tpm - Enable TPM support
 sys-apps/systemd:vanilla - Disable Gentoo-specific behavior and compatibility quirks
 sys-apps/systemd:xkb - Depend on x11-libs/libxkbcommon to allow logind to control the X11 keymap
 sys-apps/systemd-utils:boot - Enable systemd-boot (UEFI boot manager)
+sys-apps/systemd-utils:kmod - Enable kernel module loading via sys-apps/kmod
 sys-apps/systemd-utils:sysusers - Enable systemd-sysusers
 sys-apps/systemd-utils:tmpfiles - Enable systemd-tmpfiles
 sys-apps/systemd-utils:udev - Enable systemd-udev (userspace device manager)
@@ -8029,7 +8030,7 @@ sys-boot/lilo:device-mapper - Enable support for device-mapper from sys-fs/lvm2
 sys-boot/lilo:minimal - Do not install the dolilo helper script
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
 sys-boot/netboot:bootrom - Install the bootrom binary for creation of rom files, which can be used for booting via floppy or rom.
-sys-boot/plymouth:libkms - Provides abstraction to the DRM drivers (intel, nouveau and vmwgfx at this moment)
+sys-boot/plymouth:drm - Provides abstraction to the DRM drivers (intel, nouveau and vmwgfx at this moment)
 sys-boot/plymouth:pango - Adds support for printing text on splash screen and text prompts, e.g. for password
 sys-boot/plymouth:split-usr - Enable this if /bin and /usr/bin are separate directories
 sys-boot/refind:btrfs - Builds the EFI binary btrfs filesystem driver
