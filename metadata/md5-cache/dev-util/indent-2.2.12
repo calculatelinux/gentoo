@@ -1,5 +1,6 @@
-BDEPEND=app-text/texi2html nls? ( sys-devel/gettext )
+BDEPEND=app-text/texi2html nls? ( sys-devel/gettext ) sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
 DEFINED_PHASES=configure install prepare test
+DEPEND=nls? ( virtual/libintl )
 DESCRIPTION=Indent program source files
 EAPI=7
 HOMEPAGE=https://www.gnu.org/software/indent/
@@ -9,5 +10,5 @@ LICENSE=GPL-3
 RDEPEND=nls? ( virtual/libintl )
 SLOT=0
 SRC_URI=mirror://gnu/indent/indent-2.2.12.tar.xz
-_eclasses_=strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7
-_md5_=ba55aeb7524e5d49279715c2b3224e25
+_eclasses_=autotools	9724194ab651ce63fd9bc06e4e1410b4	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_md5_=b4fbab2e75a9962d4e7e8e65fdf8bb8c
