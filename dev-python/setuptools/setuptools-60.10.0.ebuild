@@ -18,7 +18,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm arm64 ~hppa ~ia64 ~m68k ~ppc ppc64 ~riscv ~s390 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm arm64 ~hppa ~ia64 ~m68k ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="test"
 RESTRICT="!test? ( test )"
 
@@ -89,7 +89,7 @@ python_test() {
 	local -x SETUPTOOLS_USE_DISTUTILS=stdlib
 
 	# keep in sync with python_gen_cond_dep above!
-	has "${EPYTHON}" python3.{8..10} pypy3 || continue
+	has "${EPYTHON}" python3.{8..10} pypy3 || return
 
 	local EPYTEST_DESELECT=(
 		# network
