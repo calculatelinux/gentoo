@@ -15,7 +15,8 @@ KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ~ia64 ppc ppc64 sparc x86"
 IUSE="spf +reports static-libs"
 
 DEPEND="reports? ( dev-perl/DBI )
-	|| ( mail-filter/libmilter mail-mta/sendmail )"
+	|| ( mail-filter/libmilter mail-mta/sendmail )
+	elibc_glibc? ( <sys-libs/glibc-2.34 )"  #839951
 RDEPEND="${DEPEND}
 	acct-user/opendmarc
 	reports? (

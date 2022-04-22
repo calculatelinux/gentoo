@@ -98,6 +98,8 @@ esac
 #
 # - flit - flit_core backend
 #
+# - flit_scm - flit_scm backend
+#
 # - hatchling - hatchling backend (from hatch)
 #
 # - jupyter - jupyter_packaging backend
@@ -197,6 +199,10 @@ _distutils_set_globals() {
 			flit)
 				bdep+='
 					>=dev-python/flit_core-3.7.1[${PYTHON_USEDEP}]'
+				;;
+			flit_scm)
+				bdep+='
+					dev-python/flit_scm[${PYTHON_USEDEP}]'
 				;;
 			hatchling)
 				bdep+='
@@ -977,6 +983,9 @@ _distutils-r1_backend_to_key() {
 		flit_core.buildapi|flit.buildapi)
 			echo flit
 			;;
+		flit_scm:buildapi)
+			echo flit_scm
+			;;
 		hatchling.build)
 			echo hatchling
 			;;
@@ -1162,7 +1171,7 @@ distutils-r1_python_compile() {
 	# call setup.py build when using setuptools (either via PEP517
 	# or in legacy mode)
 	if [[ ${DISTUTILS_USE_PEP517:-setuptools} == setuptools ]]; then
-		if [[ ${GPEP517_TESTING} ]]; then
+		if [[ ${GPEP517_TESTING} && ${DISTUTILS_USE_PEP517} ]]; then
 			if [[ -d build ]]; then
 				eqawarn "A 'build' directory exists already.  Artifacts from this directory may"
 				eqawarn "be picked up by setuptools when building for another interpreter."
