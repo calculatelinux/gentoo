@@ -378,7 +378,6 @@ app-crypt/tpm2-pkcs11:fapi - Enable feature API backend
 app-crypt/tpm2-tools:fapi - Enable feature API tools
 app-crypt/tpm2-totp:plymouth - Add sys-boot/plymouth support
 app-crypt/tpm2-tss:fapi - Enable feature API (requires openssl as crypto backend)
-app-crypt/tpm2-tss:gcrypt - Use dev-libs/libgcrypt as crypto engine
 app-crypt/tpm2-tss:mbedtls - Use net-libs/mbedtls as crypto engine
 app-crypt/tpm2-tss:openssl - Use dev-libs/openssl as crypto engine
 app-crypt/veracrypt:asm - Enable assembly for optimization
@@ -2515,6 +2514,7 @@ dev-python/sympy:mathml - Add support for mathml
 dev-python/sympy:pyglet - Use dev-python/pyglet for plots and print preview
 dev-python/sympy:symengine - Add support for a dev-python/symengine backend
 dev-python/sympy:texmacs - Add app-office/texmacs interface
+dev-python/tpm2-pytss:fapi - Enable feature API (requires tpm2-tss be compile with thes same)
 dev-python/translate-toolkit:html - Support conversion between po and html files
 dev-python/translate-toolkit:ical - Support conversion between po and ical files
 dev-python/translate-toolkit:ini - Support conversion between po and ini files
@@ -8335,6 +8335,7 @@ sys-kernel/linux-firmware:initramfs - Create and install initramfs for early mic
 sys-kernel/linux-firmware:redistributable - Install also non-free (but redistributable) firmware files
 sys-kernel/linux-firmware:savedconfig - Allows individual selection of firmware files
 sys-kernel/linux-firmware:unknown-license - Install firmware files whose license is unknown
+sys-kernel/linux-headers:experimental-loong - Add experimental LoongArch patchset
 sys-kernel/mips-sources:experimental - Apply experimental (80xx) patches.
 sys-kernel/mips-sources:ip27 - Enables additional support for SGI Origin (IP27)
 sys-kernel/mips-sources:ip28 - Enables additional support for SGI Indigo2 Impact R10000 (IP28)
