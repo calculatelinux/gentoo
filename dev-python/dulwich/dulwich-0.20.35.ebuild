@@ -16,7 +16,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2+ Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm arm64 ~ia64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm arm64 ~ia64 ppc ~ppc64 ~riscv ~s390 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc examples test"
 RESTRICT="!test? ( test )"
 
@@ -27,10 +27,10 @@ RDEPEND="
 BDEPEND="
 	test? (
 		${RDEPEND}
-		!hppa? ( !ia64? (
+		!hppa? ( !ia64? ( !s390? (
 			dev-python/gevent[${PYTHON_USEDEP}]
 			dev-python/geventhttpclient[${PYTHON_USEDEP}]
-		) )
+		) ) )
 		app-crypt/gpgme[python,${PYTHON_USEDEP}]
 		dev-python/mock[${PYTHON_USEDEP}]
 		dev-python/fastimport[${PYTHON_USEDEP}]

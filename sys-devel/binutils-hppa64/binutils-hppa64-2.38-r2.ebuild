@@ -345,9 +345,10 @@ src_install() {
 		done
 
 		if [[ -d ${ED}/usr/${CHOST}/${CTARGET} ]] ; then
-			mv "${ED}"/usr/${CHOST}/${CTARGET}/include "${ED}"/${INCPATH} || die
-			mv "${ED}"/usr/${CHOST}/${CTARGET}/lib/* "${ED}"/${LIBPATH}/ || die
-			rm -r "${ED}"/usr/${CHOST}/{include,lib} || die
+			# No die for now, dies on hppa?
+			mv "${ED}"/usr/${CHOST}/${CTARGET}/include "${ED}"/${INCPATH}
+			mv "${ED}"/usr/${CHOST}/${CTARGET}/lib/* "${ED}"/${LIBPATH}/
+			rm -r "${ED}"/usr/${CHOST}/{include,lib}
 		fi
 	fi
 
@@ -364,8 +365,9 @@ src_install() {
 	)
 	doins "${libiberty_headers[@]/#/${S}/include/}"
 	if [[ -d ${ED}/${LIBPATH}/lib ]] ; then
-		mv "${ED}"/${LIBPATH}/lib/* "${ED}"/${LIBPATH}/ || die
-		rm -r "${ED}"/${LIBPATH}/lib || die
+		# TODO: add || die here, fails on hppa?
+		mv "${ED}"/${LIBPATH}/lib/* "${ED}"/${LIBPATH}/
+		rm -r "${ED}"/${LIBPATH}/lib
 	fi
 
 	# Generate an env.d entry for this binutils
@@ -408,7 +410,7 @@ src_install() {
 	rm -f "${ED}"/${DATAPATH}/info/{dir,configure.info,standards.info} || die
 
 	# Trim all empty dirs
-	find "${ED}" -depth -type d -exec rmdir {} + 2>/dev/null || die
+	find "${ED}" -depth -type d -exec rmdir {} + 2>/dev/null
 
 	# the hppa64 hack; this should go into 9999 as a PN-conditional
 	# tweak the default fake list a little bit

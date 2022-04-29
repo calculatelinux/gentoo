@@ -7,8 +7,10 @@
 # In the meantime, force-enable on loong only.
 # This is not inside use.mask, because crossdev toolchain packages would
 # want to have the flag enabled without hassle.
+dev-libs/libffi experimental-loong
 sys-kernel/linux-headers experimental-loong
 sys-libs/glibc experimental-loong
+sys-libs/libseccomp experimental-loong
 
 # James Le Cuirot <chewi@gentoo.org> (2022-02-24)
 # These GRUB platforms are only for MIPS.
@@ -336,6 +338,7 @@ app-arch/zpaq jit
 # webrtc-audio-processing is only supported on x86/amd64. Possibly arm can be
 # added.
 media-sound/pulseaudio webrtc-aec
+media-sound/pulseaudio-daemon webrtc-aec
 
 # Christoph Junghans <junghans@gentoo.org> (2012-02-04)
 # mips only use flags

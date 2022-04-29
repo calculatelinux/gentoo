@@ -20,7 +20,7 @@ SRC_URI="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
 	>=dev-python/attrs-20.1.0[${PYTHON_USEDEP}]
@@ -47,9 +47,6 @@ distutils_enable_tests pytest
 src_prepare() {
 	sed -e 's:--benchmark.*::' \
 		-e '/addopts/d' \
-		-i pyproject.toml || die
-	# backport pyproject.toml fix (50ba769c8349f5891b157d2bb7f06602822ac0a3)
-	sed -e 's:group.dev.dependencies:dev-dependencies:' \
 		-i pyproject.toml || die
 	distutils-r1_src_prepare
 }

@@ -33,7 +33,74 @@
 
 #--- END OF EXAMPLES ---
 
-# Alfredo Tupone <tupone@gentoo.org> (2022-04-24)
+# Joonas Niilola <juippis@gentoo.org> (2022-04-29)
+# Apparently the "b" in version means "beta". 3.24 is available, we
+# should update to that. #841437
+~sci-physics/bullet-3.22b
+
+# Conrad Kostecki <conikost@gentoo.org> (2022-04-27)
+# Old base package for jabber services, which is not being used anymore,
+# as jabber services do now use their own user instead of generic jabber user.
+# Removal in 30 days on 2022-05-27.
+net-im/jabber-base
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-04-22)
+# Blocks removal of vulnerable dev-java/guava:20, bug #833309.
+# Removal on 2022-05-30
+dev-util/checkstyle
+app-emacs/jde
+
+# Matt Turner <mattst88@gentoo.org> (2022-04-26)
+# Dead package. No reverse dependencies.
+# Removal on 2022-05-26
+gnome-base/gnome-vfs
+
+# Mike Pagano <mpagano@gentoo.org> (2022-04-26)
+# These kernels contain a major regression that causes power button
+# to stop working, apparently making it impossible to leave suspend
+# on some laptops without a (difficult) hard reset.
+~sys-kernel/gentoo-sources-5.10.111
+=sys-kernel/gentoo-sources-5.10.112
+~sys-kernel/gentoo-sources-5.15.34
+=sys-kernel/gentoo-sources-5.15.35
+~sys-kernel/gentoo-sources-5.16.20
+~sys-kernel/gentoo-sources-5.17.3
+=sys-kernel/gentoo-sources-5.17.4
+~sys-kernel/vanilla-sources-5.10.112
+~sys-kernel/vanilla-sources-5.15.35
+~sys-kernel/vanilla-sources-5.17.4
+
+# Michał Górny <mgorny@gentoo.org> (2022-04-26)
+# These kernels contain a major regression that causes power button
+# to stop working, apparently making it impossible to leave suspend
+# on some laptops without a (difficult) hard reset.
+~sys-kernel/gentoo-kernel-5.10.111
+=sys-kernel/gentoo-kernel-5.10.112
+~sys-kernel/gentoo-kernel-5.15.34
+=sys-kernel/gentoo-kernel-5.15.35
+~sys-kernel/gentoo-kernel-5.16.20
+~sys-kernel/gentoo-kernel-5.17.3
+=sys-kernel/gentoo-kernel-5.17.4
+~sys-kernel/gentoo-kernel-bin-5.10.111
+=sys-kernel/gentoo-kernel-bin-5.10.112
+~sys-kernel/gentoo-kernel-bin-5.15.34
+=sys-kernel/gentoo-kernel-bin-5.15.35
+~sys-kernel/gentoo-kernel-bin-5.16.20
+~sys-kernel/gentoo-kernel-bin-5.17.3
+=sys-kernel/gentoo-kernel-bin-5.17.4
+~sys-kernel/vanilla-kernel-5.10.111
+~sys-kernel/vanilla-kernel-5.10.112
+~sys-kernel/vanilla-kernel-5.15.34
+~sys-kernel/vanilla-kernel-5.15.35
+~sys-kernel/vanilla-kernel-5.16.20
+~sys-kernel/vanilla-kernel-5.17.3
+~sys-kernel/vanilla-kernel-5.17.4
+~virtual/dist-kernel-5.10.111
+~virtual/dist-kernel-5.15.34
+~virtual/dist-kernel-5.16.20
+~virtual/dist-kernel-5.17.3
+
+# Alfredo Tupone <tupone@gentoo.org> (2022-04-27)
 # New release of janestreet packages need to tested
 dev-ml/sexplib0:0/0.15
 dev-ml/base:0/0.15
@@ -45,15 +112,53 @@ dev-ml/ppx_hash:0/0.15
 dev-ml/ppx_cold:0/0.15
 dev-ml/parsexp:0/0.15
 dev-ml/ppx_base:0/0.15
-#dev-ml/fieldslib
 dev-ml/ppx_fields_conv:0/0.15
 dev-ml/ppx_here:0/0.15
 dev-ml/ppx_let:0/0.15
 dev-ml/ppx_sexp_message:0/0.15
 dev-ml/ppx_sexp_value:0/0.15
 dev-ml/ppx_assert:0/0.15
-dev-ml/ppx_inline_test:0/0.15.0
-dev-ml/ppx_expect:0/0.15.0
+dev-ml/ppx_optcomp:0/0.15
+dev-ml/time_now:0/0.15
+dev-ml/ppx_inline_test:0/0.15
+dev-ml/ppx_bench:0/0.15
+dev-ml/splittable_random:0/0.15
+dev-ml/base_quickcheck:0/0.15
+dev-ml/ppx_bin_prot:0/0.15
+dev-ml/ppx_custom_printf:0/0.15
+dev-ml/ppx_disable_unused_warnings:0/0.15
+dev-ml/ppx_expect:0/0.15
+dev-ml/ppx_fixed_literal:0/0.15
+dev-ml/ppx_log:0/0.15
+dev-ml/ppx_module_timer:0/0.15
+dev-ml/ppx_optional:0/0.15
+dev-ml/ppx_stable:0/0.15
+dev-ml/ppx_string:0/0.15
+dev-ml/typerep:0/0.15
+dev-ml/ppx_typerep_conv:0/0.15
+dev-ml/variantslib:0/0.15
+dev-ml/ppx_variants_conv:0/0.15
+dev-ml/ppx_jane:0/0.15
+dev-ml/int_repr:0/0.15
+dev-ml/base_bigstring:0/0.15
+dev-ml/ppx_js_style:0/0.15
+dev-ml/core:0/0.15
+dev-ml/core_kernel:0/0.15
+dev-ml/sexp_pretty:0/0.15
+dev-ml/expect_test_helpers_core:0/0.15
+dev-ml/timezone:0/0.15
+dev-ml/core_unix:0/0.15
+dev-ml/textutils_kernel:0/0.15
+dev-ml/textutils:0/0.15
+dev-ml/async_kernel:0/0.15
+dev-ml/protocol_version_header:0/0.15
+dev-ml/async_rpc_kernel:0/0.15
+dev-ml/async_unix:0/0.15
+dev-ml/async:0/0.15
+dev-ml/async_extra:0/0.15
+dev-ml/core_bench:0/0.15
+dev-ml/patience_diff:0/0.15
+dev-util/patdiff:0/0.15
 
 # Hans de Graaff <graaff@gentoo.org> (2022-04-23)
 # Obsolete slots that are no longer used by current
@@ -75,6 +180,7 @@ dev-python/namespace-lazr
 dev-python/namespace-paste
 dev-python/namespace-repoze
 dev-python/namespace-ruamel
+dev-python/namespace-sphinxcontrib
 dev-python/namespace-zope
 
 # Hans de Graaff <graaff@gentoo.org> (2022-04-22)
@@ -249,72 +355,6 @@ net-misc/jrdesktop
 # Removal in 30 days.
 dev-java/log4j
 
-# Matt Turner <mattst88@gentoo.org> (2022-03-27)
-# Dead package. Homepage doesn't resolve. Unmaintained in Gentoo for at
-# least 6 years.
-# Removal on 2022-05-02
-app-pda/gtkpod
-
-# Ulrich Müller <ulm@gentoo.org> (2022-04-01)
-# Illegal instruction errors seen by several users.
-# Masked for testing. (bug #835930)
->=net-im/zoom-5.10
-
-# Matt Turner <mattst88@gentoo.org> (2022-03-27)
-# Dead package. No reverse dependencies.
-# Removal on 2022-04-27
-dev-util/fix-la-relink-command
-
-# Matt Turner <mattst88@gentoo.org> (2022-03-27)
-# Dead package. No reverse dependencies since 2017.
-# Removal on 2022-04-27
-dev-libs/gtx
-
-# Matt Turner <mattst88@gentoo.org> (2022-03-27)
-# Dead package. See https://blogs.gnome.org/hughsie/2014/10/30/appdata-tools-is-dead/
-# Bug #680552
-# Removal on 2022-04-27
-dev-util/appdata-tools
-
-# Matt Turner <mattst88@gentoo.org> (2022-03-27)
-# GNOME 2 era packages. No reverse dependencies.
-# Removal on 2022-04-27
-dev-perl/gnome2-canvas
-dev-perl/Gtk2-Ex-PodViewer
-dev-perl/Gtk2-Ex-PrintDialog
-dev-perl/Gtk2-Ex-Simple-List
-dev-perl/Gtk2-ImageView
-
-# Conrad Kostecki <conikost@gentoo.org> (2022-03-27)
-# Long abandoned upstream, multiple bugs open,
-# no other major distro carries this anymore and
-# depends on deprecated jabber-base.
-# Bug #632622, #655566, #716850, removal on 2022-04-27.
-net-im/gg-transport
-
-# David Seifert <soap@gentoo.org> (2022-03-27)
-# Long abandoned upstreams, segfaults, bunch of tests fail,
-# no other major distro carries this anymore.
-# Bug #631320, #740484, #830090, #836278, removal on 2022-04-26.
-media-libs/libtaginfo
-media-sound/xnoise
-
-# Piotr Karbowski <slashbeast@gentoo.org> (2022-03-25)
-# Abandoned upstream, officialy limited to kernel 5.6,
-# no longer builds with kernel >=5.14. Use kernel's
-# CONFIG_USB_RTL8152 and CONFIG_USB_USBNET since 5.13.
-# Removal on 2022-04-25.
-net-misc/realtek-r8152
-
-# Sam James <sam@gentoo.org> (2022-03-22)
-# Abandoned upstream (archived many years ago), fails
-# to build with modern versions of gnupg, and is
-# stuck on EAPI 5. No reverse dependencies.
-# bug #835388, bug #828948, bug #733010.
-# Maintainers welcome to take over.
-# Removal on 2022-04-22.
-app-crypt/seahorse-sharing
-
 # David Seifert <soap@gentoo.org> (2022-03-20)
 # Mask gcc-8 branch (ended upstream support). Please switch
 # to a fresher gcc branch.
@@ -433,12 +473,6 @@ x11-drivers/nvidia-drivers:0/vulkan
 # Masked for erratic behaviour
 # https://bugs.exim.org/show_bug.cgi?id=2813
 =mail-mta/exim-4.95-r1
-
-# Mart Raudsepp <leio@gentoo.org> (2021-09-24)
-# Experimental split media-sound/pulseaudio packages, bug #536780.
-media-libs/libpulse
-media-sound/pulseaudio-daemon
->=media-sound/pulseaudio-15.0-r100
 
 # Mart Raudsepp <leio@gentoo.org> (2021-09-23)
 # Incompatible with c++17 abseil-cpp, no in-tree consumers yet

@@ -20,7 +20,7 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~riscv ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	dev-python/cryptography[${PYTHON_USEDEP}]
@@ -28,11 +28,11 @@ RDEPEND="
 "
 BDEPEND="
 	test? (
-		!hppa? ( !sparc? (
-			gnome-base/gnome-keyring
+		!hppa? ( !sparc? ( !s390? (
 			sys-apps/dbus
+			virtual/secret-service
 		)
-	) )
+	) ) )
 "
 
 distutils_enable_tests unittest

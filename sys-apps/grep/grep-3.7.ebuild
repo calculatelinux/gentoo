@@ -13,7 +13,7 @@ SRC_URI+=" verify-sig? ( mirror://gnu/${PN}/${P}.tar.xz.sig )"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="nls pcre static"
 
 # We lack dev-libs/libsigsegv[static-libs] for now
@@ -31,7 +31,10 @@ BDEPEND="
 	nls? ( sys-devel/gettext )
 	verify-sig? ( sec-keys/openpgp-keys-grep )"
 
-PATCHES=( "${FILESDIR}/ppc-musl.patch" )
+PATCHES=(
+	"${FILESDIR}/ppc-musl.patch"
+	"${FILESDIR}/loong-fix-build.patch"
+)
 
 DOCS=( AUTHORS ChangeLog NEWS README THANKS TODO )
 
@@ -42,6 +45,12 @@ src_prepare() {
 		src/egrep.sh || die #523898
 
 	default
+
+	# touch generated files after patching m4, to avoid activating maintainer
+	# mode
+	# remove when loong-fix-build.patch is no longer necessary
+	touch ./aclocal.m4 ./config.hin ./configure || die
+	find . -name Makefile.in -exec touch {} + || die
 }
 
 src_configure() {

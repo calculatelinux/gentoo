@@ -17,7 +17,7 @@ else
 	SRC_URI="mirror://gnu/${PN}/${P}.tar.xz"
 	SRC_URI+=" https://dev.gentoo.org/~floppym/dist/${P}-test-198-sysval-r1.patch.gz"
 	SRC_URI+=" verify-sig? ( mirror://gnu/${PN}/${P}.tar.xz.sig )"
-	KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+	KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 fi
 
 LICENSE="GPL-3"
@@ -38,6 +38,7 @@ BDEPEND="app-arch/xz-utils
 
 PATCHES=(
 	"${FILESDIR}"/ppc-musl.patch
+	"${FILESDIR}"/loong-fix-build.patch
 	"${WORKDIR}"/${P}-test-198-sysval-r1.patch
 )
 
@@ -48,6 +49,16 @@ src_unpack() {
 	fi
 
 	default
+}
+
+src_prepare() {
+	default
+
+	# touch generated files after patching m4, to avoid activating maintainer
+	# mode
+	# remove when loong-fix-build.patch is no longer necessary
+	touch ./aclocal.m4 ./lib/config.hin ./configure ./doc/stamp-vti || die
+	find . -name Makefile.in -exec touch {} + || die
 }
 
 src_configure() {

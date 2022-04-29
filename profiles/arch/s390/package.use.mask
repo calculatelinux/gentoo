@@ -1,6 +1,56 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Sam James <sam@gentoo.org> (2022-04-26)
+# Unkeyworded dependencies
+app-text/htmltidy test
+dev-ruby/activerecord mysql postgres sqlite test
+dev-ruby/stringex test
+
+# Sam James <sam@gentoo.org> (2022-04-26)
+# eps: app-text/libspectre not keyworded here
+# heif: media-libs/libheif not keyworded here
+# svg: rustified librsvg not keyworded here
+# jpegxl: libjxl not keyworded here
+media-libs/imlib2 eps heif svg jpegxl
+
+# Sam James <sam@gentoo.org> (2022-04-26)
+# Avoid unkeyworded dependencies
+app-text/enchant hunspell nuspell voikko
+
+# Sam James <sam@gentoo.org> (2022-04-26)
+# Needs unkeyworded virtual/szip provider
+sci-libs/hdf5 szip
+
+# Sam James <sam@gentoo.org> (2022-04-26)
+# Needs unkeyworded dev-libs/librdkafka
+# dev-libs/boxfort does not support s390 either
+app-admin/syslog-ng kafka test
+
+# Sam James <sam@gentoo.org> (2022-04-26)
+# Large number of unkeyworded sci testdeps
+dev-cpp/eigen test
+
+# Sam James <sam@gentoo.org> (2022-04-26)
+# Avoid unkeyworded sci-libs/umfpack
+dev-python/scipy sparse
+
+# Sam James <sam@gentoo.org> (2022-04-26)
+# Avoid unkeyworded media-gfx/libimagequant
+dev-python/pillow imagequant
+
+# Sam James <sam@gentoo.org> (2022-04-26)
+# Avoid unkeyworded media-gfx/inkscape
+app-text/dblatex inkscape
+
+# Sam James <sam@gentoo.org> (2022-04-25)
+# Needs unkeyworded dev-python/commonmark, dev-python/recommonmark
+dev-libs/libinput doc
+
+# Sam James <sam@gentoo.org> (2022-04-25)
+# Needs unkeyworded dev-python/markdown
+dev-libs/gobject-introspection doctool
+
 # Sam James <sam@gentoo.org> (2022-04-24)
 # dev-libs/efl not keyworded here and is a desktop application mainly
 app-crypt/pinentry efl

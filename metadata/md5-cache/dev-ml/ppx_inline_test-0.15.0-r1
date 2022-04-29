@@ -1,0 +1,15 @@
+BDEPEND=dev-ml/dune dev-lang/ocaml
+DEFINED_PHASES=compile install test
+DEPEND=dev-ml/time_now:0/0.15 >=dev-lang/ocaml-4:=[ocamlopt?] dev-ml/dune:=
+DESCRIPTION=Syntax extension for writing in-line tests in ocaml code
+EAPI=8
+HOMEPAGE=https://github.com/janestreet/ppx_inline_test
+IUSE=+ocamlopt
+KEYWORDS=~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86
+LICENSE=Apache-2.0
+RDEPEND=dev-ml/time_now:0/0.15 >=dev-lang/ocaml-4:=[ocamlopt?] dev-ml/dune:=
+RESTRICT=test
+SLOT=0/0.15
+SRC_URI=https://github.com/janestreet/ppx_inline_test/archive/v0.15.0.tar.gz -> ppx_inline_test-0.15.0.tar.gz
+_eclasses_=dune	c8f275f00adf2380fe0a57d8a249885c	multiprocessing	61c959fc55c15c00bbb1079d6a71370b
+_md5_=cc1ca552d8f9780d67cdb61f34dbd5b2

@@ -12,9 +12,9 @@ MY_PN="OpenRCT2"
 MY_PN_OBJ="objects"
 MY_PN_RPL="replays"
 MY_PN_TS="title-sequences"
-MY_PV_OBJ="1.2.4"
-MY_PV_RPL="0.0.62"
-MY_PV_TS="0.1.2c"
+MY_PV_OBJ="1.2.7"
+MY_PV_RPL="0.0.67"
+MY_PV_TS="0.4.0"
 
 DESCRIPTION="An open source re-implementation of Chris Sawyer's RollerCoaster Tycoon 2"
 HOMEPAGE="https://openrct2.org/"
@@ -71,8 +71,8 @@ BDEPEND="
 RESTRICT="!test? ( test )"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-0.2.4-include-additional-paths.patch"
 	"${FILESDIR}/${PN}-0.2.6-gtest-1.10.patch"
+	"${FILESDIR}/${PN}-0.4.0-include-additional-paths.patch"
 )
 
 src_unpack() {
