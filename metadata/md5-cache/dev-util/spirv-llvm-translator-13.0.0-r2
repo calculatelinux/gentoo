@@ -13,4 +13,4 @@ RESTRICT=!test? ( test )
 SLOT=13
 SRC_URI=https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v13.0.0.tar.gz -> spirv-llvm-translator-13.0.0.tar.gz https://dev.gentoo.org/~sam/distfiles/dev-util/spirv-llvm-translator/spirv-llvm-translator-13.0.0-rename-OpConstFunctionPointerINTEL.patch.bz2
 _eclasses_=cmake	3c38df051095289667b6f09ebd0cc149	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	llvm	6f88d422e49b917bf254b2594f3d903c	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	fef481272d4a8e136a7d8a0fb1329384	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
-_md5_=ef344120333f56754c27d5b094f27114
+_md5_=f0eeae55475367db9d488bd40c20d45f
