@@ -4,6 +4,7 @@ DEPEND=app-crypt/qca:2[qt5(+),ssl] >=dev-db/spatialite-4.2.0 dev-db/sqlite:3 dev
 DESCRIPTION=User friendly Geographic Information System
 EAPI=8
 HOMEPAGE=https://www.qgis.org/
+INHERIT=cmake python-single-r1 xdg
 IUSE=3d examples georeferencer grass hdf5 mapserver netcdf opencl oracle pdal polar postgres python qml serial python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2+ GPL-3+
@@ -12,5 +13,5 @@ REQUIRED_USE=^^ ( python_single_target_python3_8 python_single_target_python3_9 
 RESTRICT=test
 SLOT=0
 SRC_URI=https://qgis.org/downloads/qgis-3.22.5.tar.bz2 examples? ( https://qgis.org/downloads/data/qgis_sample_data.tar.gz -> qgis_sample_data-2.8.14.tar.gz )
-_eclasses_=cmake	3c38df051095289667b6f09ebd0cc149	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	fef481272d4a8e136a7d8a0fb1329384	python-single-r1	a5747fe6dc0651d95cb78eddd5e160a8	python-utils-r1	777767a09e8cd6db1d4cebe8400bc974	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
+_eclasses_=cmake	90e2b29417d53718328f3a95227137a0	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	891c4d3862cbc1ce8808ea427facbcd1	python-single-r1	a5747fe6dc0651d95cb78eddd5e160a8	python-utils-r1	6d4bdf68f7dcd9a5491613be687ae665	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
 _md5_=7cc743c87c72a1a88d06f61604fdac84

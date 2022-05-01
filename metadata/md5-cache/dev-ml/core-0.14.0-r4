@@ -4,6 +4,7 @@ DEPEND=<dev-lang/ocaml-4.12 dev-ml/base:= <dev-ml/core_kernel-0.15:= <dev-ml/jst
 DESCRIPTION=Jane Street's alternative to the standard library
 EAPI=7
 HOMEPAGE=https://github.com/janestreet/core
+INHERIT=dune
 IUSE=+ocamlopt
 KEYWORDS=amd64 arm arm64 ~ppc ppc64 x86
 LICENSE=MIT
@@ -11,5 +12,5 @@ RDEPEND=<dev-lang/ocaml-4.12 dev-ml/base:= <dev-ml/core_kernel-0.15:= <dev-ml/js
 RESTRICT=test
 SLOT=0/0.14.0
 SRC_URI=https://github.com/janestreet/core/archive/v0.14.0.tar.gz -> core-0.14.0.tar.gz
-_eclasses_=dune	c8f275f00adf2380fe0a57d8a249885c	multiprocessing	61c959fc55c15c00bbb1079d6a71370b
+_eclasses_=dune	c8f275f00adf2380fe0a57d8a249885c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730
 _md5_=9a85bae1aaa5ea0db428ba0cdbedd41a

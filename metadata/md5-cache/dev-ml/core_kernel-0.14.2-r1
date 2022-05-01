@@ -4,6 +4,7 @@ DEPEND=dev-lang/ocaml:= <dev-ml/jst-config-0.15.0 >=dev-ml/ppx_optcomp-0.14.3:= 
 DESCRIPTION=System-independent part of Core
 EAPI=8
 HOMEPAGE=https://github.com/janestreet/core_kernel
+INHERIT=dune
 IUSE=+ocamlopt
 KEYWORDS=~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86
 LICENSE=LGPL-2.1-with-linking-exception
@@ -11,5 +12,5 @@ RDEPEND=dev-lang/ocaml:= <dev-ml/jst-config-0.15.0 >=dev-ml/ppx_optcomp-0.14.3:=
 RESTRICT=test
 SLOT=0/0.14.2
 SRC_URI=https://github.com/janestreet/core_kernel/archive/v0.14.2.tar.gz -> core_kernel-0.14.2.tar.gz
-_eclasses_=dune	c8f275f00adf2380fe0a57d8a249885c	multiprocessing	61c959fc55c15c00bbb1079d6a71370b
+_eclasses_=dune	c8f275f00adf2380fe0a57d8a249885c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730
 _md5_=9a960d947586301f6103e064bdff3c51

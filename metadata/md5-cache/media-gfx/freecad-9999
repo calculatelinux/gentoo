@@ -4,6 +4,7 @@ DEPEND=python_single_target_python3_8? ( >=dev-lang/python-3.8.12_p1-r1:3.8 ) py
 DESCRIPTION=QT based Computer Aided Design application
 EAPI=8
 HOMEPAGE=https://www.freecadweb.org/ https://github.com/FreeCAD/FreeCAD
+INHERIT=check-reqs cmake optfeature python-single-r1 xdg git-r3
 IUSE=debug designer headless test +addonmgr +fem +idf +image +inspection +material +openscad +part-design +path +points +raytracing +robot +show +surface +techdraw +tux cloud pcl plot ship python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 LICENSE=LGPL-2 CC-BY-SA-4.0
 PROPERTIES=live
@@ -11,5 +12,5 @@ RDEPEND=python_single_target_python3_8? ( >=dev-lang/python-3.8.12_p1-r1:3.8 ) p
 REQUIRED_USE=^^ ( python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10 ) inspection? ( points ) path? ( robot ) ship? ( image plot )
 RESTRICT=!test? ( test )
 SLOT=0
-_eclasses_=check-reqs	82234bf011d5453330773cd5fc3f0199	cmake	3c38df051095289667b6f09ebd0cc149	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	git-r3	b9ac6f96d2a88edb5b351df634dc5e53	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	fef481272d4a8e136a7d8a0fb1329384	optfeature	d524f291c80f9d21ad80fe978e3ca760	python-single-r1	a5747fe6dc0651d95cb78eddd5e160a8	python-utils-r1	777767a09e8cd6db1d4cebe8400bc974	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
+_eclasses_=check-reqs	82234bf011d5453330773cd5fc3f0199	cmake	90e2b29417d53718328f3a95227137a0	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	git-r3	b9ac6f96d2a88edb5b351df634dc5e53	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	891c4d3862cbc1ce8808ea427facbcd1	optfeature	d524f291c80f9d21ad80fe978e3ca760	python-single-r1	a5747fe6dc0651d95cb78eddd5e160a8	python-utils-r1	6d4bdf68f7dcd9a5491613be687ae665	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
 _md5_=ba725ddc4ce3e679b5fa8322925f8fdf

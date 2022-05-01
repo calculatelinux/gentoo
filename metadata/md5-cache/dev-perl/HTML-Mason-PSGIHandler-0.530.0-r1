@@ -4,6 +4,7 @@ DEPEND=dev-perl/CGI-PSGI dev-perl/HTML-Mason dev-lang/perl
 DESCRIPTION=PSGI handler for HTML::Mason
 EAPI=8
 HOMEPAGE=https://metacpan.org/release/HTML-Mason-PSGIHandler
+INHERIT=perl-module
 IUSE=test test
 KEYWORDS=amd64 ~x86
 LICENSE=|| ( Artistic GPL-1+ )
@@ -11,5 +12,5 @@ RDEPEND=dev-perl/CGI-PSGI dev-perl/HTML-Mason dev-lang/perl:=
 RESTRICT=!test? ( test ) !test? ( test )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/R/RU/RUZ/HTML-Mason-PSGIHandler-0.53.tar.gz
-_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	8eed4e2982026c684ff7c19cd4c88ed0	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	8eed4e2982026c684ff7c19cd4c88ed0	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55
 _md5_=b2de56389464fb23d5a201b1c37f9ae4

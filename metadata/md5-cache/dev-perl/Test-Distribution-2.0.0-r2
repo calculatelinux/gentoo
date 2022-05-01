@@ -4,6 +4,7 @@ DEPEND=dev-lang/perl
 DESCRIPTION=perform tests on all modules of a distribution
 EAPI=8
 HOMEPAGE=https://metacpan.org/release/Test-Distribution
+INHERIT=perl-module
 IUSE=test
 KEYWORDS=~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86
 LICENSE=|| ( Artistic GPL-1+ )
@@ -11,5 +12,5 @@ RDEPEND=>=dev-perl/Pod-Coverage-0.200.0 >=dev-perl/File-Find-Rule-0.300.0 dev-pe
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/S/SR/SRSHAH/Test-Distribution-2.00.tar.gz
-_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	8eed4e2982026c684ff7c19cd4c88ed0	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	8eed4e2982026c684ff7c19cd4c88ed0	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55
 _md5_=5acc93beabdcfc0e8b8b8fe33030f9b1

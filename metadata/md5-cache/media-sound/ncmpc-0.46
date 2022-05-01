@@ -4,11 +4,12 @@ DEPEND=>=media-libs/libmpdclient-2.9 sys-libs/ncurses:=[unicode(+)] lirc? ( app-
 DESCRIPTION=Ncurses client for the Music Player Daemon (MPD)
 EAPI=8
 HOMEPAGE=https://www.musicpd.org/clients/ncmpc/ https://github.com/MusicPlayerDaemon/ncmpc
+INHERIT=meson
 IUSE=async-connect chat-screen doc +help-screen key-screen +library-screen lirc lyrics-screen +mouse nls outputs-screen pcre search-screen +song-screen
 KEYWORDS=amd64 ppc ppc64 ~sparc x86
 LICENSE=GPL-2+
 RDEPEND=>=media-libs/libmpdclient-2.9 sys-libs/ncurses:=[unicode(+)] lirc? ( app-misc/lirc ) pcre? ( dev-libs/libpcre2 )
 SLOT=0
 SRC_URI=https://www.musicpd.org/download/ncmpc/0/ncmpc-0.46.tar.xz
-_eclasses_=meson	4e69b4b5d15387549776392e83e8c42c	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	fef481272d4a8e136a7d8a0fb1329384	python-utils-r1	777767a09e8cd6db1d4cebe8400bc974	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=meson	4e69b4b5d15387549776392e83e8c42c	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	891c4d3862cbc1ce8808ea427facbcd1	python-utils-r1	6d4bdf68f7dcd9a5491613be687ae665	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
 _md5_=543837db7a5f370b0b92e41938ff792d

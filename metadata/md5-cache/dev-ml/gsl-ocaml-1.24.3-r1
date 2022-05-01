@@ -4,11 +4,12 @@ DEPEND=dev-ml/dune-configurator >=sci-libs/gsl-1.19:= >=dev-lang/ocaml-4:=[ocaml
 DESCRIPTION=OCaml bindings for the GSL library (successor of dev-ml/ocamlgsl)
 EAPI=7
 HOMEPAGE=https://github.com/mmottl/gsl-ocaml
+INHERIT=dune
 IUSE=+ocamlopt
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=dev-ml/dune-configurator >=sci-libs/gsl-1.19:= !dev-ml/ocamlgsl >=dev-lang/ocaml-4:=[ocamlopt?] dev-ml/dune:=
 SLOT=0
 SRC_URI=https://github.com/mmottl/gsl-ocaml/releases/download/1.24.3/gsl-1.24.3.tbz
-_eclasses_=dune	c8f275f00adf2380fe0a57d8a249885c	multiprocessing	61c959fc55c15c00bbb1079d6a71370b
+_eclasses_=dune	c8f275f00adf2380fe0a57d8a249885c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730
 _md5_=da97ad6f1e66f7fbd4ee7c33c6e8e003

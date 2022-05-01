@@ -4,6 +4,7 @@ DEPEND=python? ( python_targets_python3_8? ( >=dev-lang/python-3.8.12_p1-r1:3.8 
 DESCRIPTION=Network Kanji code conversion Filter with UTF-8/16 support
 EAPI=7
 HOMEPAGE=https://osdn.net/projects/nkf/
+INHERIT=distutils-r1 perl-module toolchain-funcs vcs-snapshot
 IUSE=perl python l10n_ja python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS=~alpha amd64 ~hppa ~ia64 ppc ppc64 sparc x86
 LICENSE=ZLIB python? ( BSD )
@@ -11,5 +12,5 @@ RDEPEND=python? ( python_targets_python3_8? ( >=dev-lang/python-3.8.12_p1-r1:3.8
 REQUIRED_USE=python? ( || ( python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 ) )
 SLOT=0
 SRC_URI=mirror://sourceforge.jp/nkf/70406/nkf-2.1.5.tar.gz python? ( https://github.com/fumiyas/python-nkf/archive/c2c6724714b66f295137c8818dae4c09fc09e0a3.tar.gz -> python-nkf-0.2.0_p20191121.tar.gz )
-_eclasses_=distutils-r1	7713800ff2cee821dbce961a575875f4	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multibuild	d26d81f242cb193d899a72bca423d0bd	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	8eed4e2982026c684ff7c19cd4c88ed0	python-r1	8638751691200e941f26fe0ac3aef1d1	python-utils-r1	777767a09e8cd6db1d4cebe8400bc974	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	vcs-snapshot	19dc666868420457132a7514d4621476
+_eclasses_=distutils-r1	0827198943c9287a83534fd8cbe3d897	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	multibuild	d26d81f242cb193d899a72bca423d0bd	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	8eed4e2982026c684ff7c19cd4c88ed0	python-r1	8638751691200e941f26fe0ac3aef1d1	python-utils-r1	6d4bdf68f7dcd9a5491613be687ae665	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	vcs-snapshot	19dc666868420457132a7514d4621476
 _md5_=bccc10240f3d0d2738e83fb42dcee861

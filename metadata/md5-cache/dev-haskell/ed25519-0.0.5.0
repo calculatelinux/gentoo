@@ -3,6 +3,7 @@ DEPEND=>=dev-lang/ghc-7.4.1:= >=dev-haskell/cabal-1.10 hscolour? ( dev-haskell/h
 DESCRIPTION=Ed25519 cryptographic signatures
 EAPI=8
 HOMEPAGE=http://thoughtpolice.github.com/hs-ed25519
+INHERIT=haskell-cabal
 IUSE=doc hscolour profile
 KEYWORDS=~amd64 ~x86
 LICENSE=MIT
@@ -10,5 +11,5 @@ RDEPEND=>=dev-lang/ghc-7.4.1:=
 RESTRICT=test
 SLOT=0/0.0.5.0
 SRC_URI=https://hackage.haskell.org/package/ed25519-0.0.5.0/ed25519-0.0.5.0.tar.gz
-_eclasses_=ghc-package	6344fef4405bc9a6cca6a0a39eee4a32	haskell-cabal	ebeaf198ca6bf70c43b10488b7cdcdcf	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=ghc-package	6344fef4405bc9a6cca6a0a39eee4a32	haskell-cabal	ebeaf198ca6bf70c43b10488b7cdcdcf	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
 _md5_=cf6957bdce534fb9ad9466d1a9260eee

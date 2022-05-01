@@ -4,6 +4,7 @@ DEPEND=dev-perl/Clone virtual/perl-Storable >=virtual/perl-ExtUtils-MakeMaker-6.
 DESCRIPTION=Recursively merge two or more hashes, simply
 EAPI=8
 HOMEPAGE=https://metacpan.org/release/Hash-Merge-Simple
+INHERIT=perl-module
 IUSE=test
 KEYWORDS=~amd64 ~x86
 LICENSE=|| ( Artistic GPL-1+ )
@@ -11,5 +12,5 @@ RDEPEND=dev-perl/Clone virtual/perl-Storable dev-lang/perl:=
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/R/RO/ROKR/Hash-Merge-Simple-0.051.tar.gz
-_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	8eed4e2982026c684ff7c19cd4c88ed0	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	8eed4e2982026c684ff7c19cd4c88ed0	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55
 _md5_=8bca35043de7bf4961ad4d7aacbe6895

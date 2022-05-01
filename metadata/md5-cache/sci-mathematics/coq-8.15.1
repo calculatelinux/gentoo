@@ -4,6 +4,7 @@ DEPEND=dev-ml/zarith:= || ( dev-ml/num <dev-lang/ocaml-4.09.0[ocamlopt?] ) gtk? 
 DESCRIPTION=Proof assistant written in O'Caml
 EAPI=8
 HOMEPAGE=http://coq.inria.fr/
+INHERIT=desktop dune
 IUSE=doc gtk debug +ocamlopt
 KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2.1
@@ -11,5 +12,5 @@ RDEPEND=dev-ml/zarith:= || ( dev-ml/num <dev-lang/ocaml-4.09.0[ocamlopt?] ) gtk?
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/coq/coq/archive/V8.15.1.tar.gz -> coq-8.15.1.tar.gz
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	dune	c8f275f00adf2380fe0a57d8a249885c	multiprocessing	61c959fc55c15c00bbb1079d6a71370b
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	dune	c8f275f00adf2380fe0a57d8a249885c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730
 _md5_=b1485dd39cb0ad08c03e41357f67bdc1

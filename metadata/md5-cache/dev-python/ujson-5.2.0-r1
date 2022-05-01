@@ -4,6 +4,7 @@ DEPEND=dev-libs/double-conversion:=
 DESCRIPTION=Ultra fast JSON encoder and decoder for Python
 EAPI=8
 HOMEPAGE=https://pypi.org/project/ujson/
+INHERIT=distutils-r1
 IUSE=test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS=~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86 ~amd64-linux ~x86-linux
 LICENSE=BSD
@@ -12,5 +13,5 @@ REQUIRED_USE=|| ( python_targets_pypy3 python_targets_python3_8 python_targets_p
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=mirror://pypi/u/ujson/ujson-5.2.0.tar.gz
-_eclasses_=distutils-r1	7713800ff2cee821dbce961a575875f4	multibuild	d26d81f242cb193d899a72bca423d0bd	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	python-r1	8638751691200e941f26fe0ac3aef1d1	python-utils-r1	777767a09e8cd6db1d4cebe8400bc974	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=distutils-r1	0827198943c9287a83534fd8cbe3d897	multibuild	d26d81f242cb193d899a72bca423d0bd	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	python-r1	8638751691200e941f26fe0ac3aef1d1	python-utils-r1	6d4bdf68f7dcd9a5491613be687ae665	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
 _md5_=72be546ba1401c22790964d01a50d102

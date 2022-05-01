@@ -4,6 +4,7 @@ DEPEND=lua_single_target_luajit? ( dev-lang/luajit:=[deprecated(+)] ) lua_single
 DESCRIPTION=Enlightenment Foundation Libraries all-in-one package
 EAPI=7
 HOMEPAGE=https://www.enlightenment.org
+INHERIT=docs lua-single meson python-any-r1 xdg-utils
 IUSE=+X avif bmp connman cpu_flags_arm_neon dds debug drm +eet efl-one elogind examples fbcon +fontconfig fribidi gif gles2-only gnutls glib +gstreamer harfbuzz hyphen ibus ico jpeg2k json nls mono opengl +pdf physics pmaps postscript psd pulseaudio raw scim sdl +sound +ssl +svg +system-lz4 systemd tga tgv tiff tslib unwind v4l vnc wayland webp xcf xim xpm xpresent zeroconf doc lua_single_target_luajit lua_single_target_lua5-1
 KEYWORDS=amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~riscv x86
 LICENSE=BSD-2 GPL-2 LGPL-2.1 ZLIB
@@ -12,5 +13,5 @@ REQUIRED_USE=^^ ( lua_single_target_luajit lua_single_target_lua5-1 ) ?? ( elogi
 RESTRICT=test
 SLOT=0
 SRC_URI=https://download.enlightenment.org/rel/libs/efl/efl-1.25.1.tar.xz
-_eclasses_=docs	8ed2a8a28ff109e7a3582c9abb7fe327	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	lua-single	f2c2fb82c912dd65d53bdae3613a331f	lua-utils	e69ff116248d78546ae1a234c086fe80	meson	4e69b4b5d15387549776392e83e8c42c	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	fef481272d4a8e136a7d8a0fb1329384	python-any-r1	9006edf4b9c90f9ba1dc9ea9fee1b0bd	python-utils-r1	777767a09e8cd6db1d4cebe8400bc974	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
+_eclasses_=docs	8ed2a8a28ff109e7a3582c9abb7fe327	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	lua-single	f2c2fb82c912dd65d53bdae3613a331f	lua-utils	e69ff116248d78546ae1a234c086fe80	meson	4e69b4b5d15387549776392e83e8c42c	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	891c4d3862cbc1ce8808ea427facbcd1	python-any-r1	9006edf4b9c90f9ba1dc9ea9fee1b0bd	python-utils-r1	6d4bdf68f7dcd9a5491613be687ae665	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
 _md5_=a0d50e62f63f0ac9ea35ccc02cb867a9

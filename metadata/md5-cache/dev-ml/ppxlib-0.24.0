@@ -4,6 +4,7 @@ DEPEND=>=dev-ml/ocaml-compiler-libs-0.11.0:= >=dev-ml/ocaml-migrate-parsetree-2.
 DESCRIPTION=Base library and tools for ppx rewriters
 EAPI=7
 HOMEPAGE=https://github.com/ocaml-ppx/ppxlib
+INHERIT=dune
 IUSE=+ocamlopt test
 KEYWORDS=~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86
 LICENSE=Apache-2.0
@@ -11,5 +12,5 @@ RDEPEND=>=dev-ml/ocaml-compiler-libs-0.11.0:= >=dev-ml/ocaml-migrate-parsetree-2
 RESTRICT=!test? ( test )
 SLOT=0/0.24.0
 SRC_URI=https://github.com/ocaml-ppx/ppxlib/archive/0.24.0.tar.gz -> ppxlib-0.24.0.tar.gz
-_eclasses_=dune	c8f275f00adf2380fe0a57d8a249885c	multiprocessing	61c959fc55c15c00bbb1079d6a71370b
+_eclasses_=dune	c8f275f00adf2380fe0a57d8a249885c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730
 _md5_=e252cb87b91dfe34ee93944343383a77

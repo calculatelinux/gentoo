@@ -4,6 +4,7 @@ DEPEND=test? ( dev-ml/ounit2 ) >=dev-lang/ocaml-4:=[ocamlopt?] dev-ml/dune:=
 DESCRIPTION=Convert dates between gregorian/julian/french/hebrew calendars
 EAPI=7
 HOMEPAGE=https://github.com/geneweb/calendars
+INHERIT=dune
 IUSE=+ocamlopt test
 KEYWORDS=amd64 x86
 LICENSE=GPL-3
@@ -11,5 +12,5 @@ RDEPEND=>=dev-lang/ocaml-4:=[ocamlopt?] dev-ml/dune:=
 RESTRICT=!test? ( test )
 SLOT=0/1.0.0
 SRC_URI=https://github.com/geneweb/calendars/archive/v1.0.0.tar.gz -> calendars-1.0.0.tar.gz
-_eclasses_=dune	c8f275f00adf2380fe0a57d8a249885c	multiprocessing	61c959fc55c15c00bbb1079d6a71370b
+_eclasses_=dune	c8f275f00adf2380fe0a57d8a249885c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730
 _md5_=6c6a7a2a96c5d77de26591ddd5d9ff2f

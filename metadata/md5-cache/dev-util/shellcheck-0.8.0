@@ -3,6 +3,7 @@ DEPEND=dev-haskell/aeson:=[profile?] >=dev-haskell/diff-0.2.0:=[profile?] >=dev-
 DESCRIPTION=Shell script analysis tool
 EAPI=8
 HOMEPAGE=https://www.shellcheck.net/
+INHERIT=haskell-cabal
 IUSE=doc hscolour profile test
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
@@ -10,5 +11,5 @@ RDEPEND=dev-haskell/aeson:=[profile?] >=dev-haskell/diff-0.2.0:=[profile?] >=dev
 RESTRICT=!test? ( test )
 SLOT=0/0.8.0
 SRC_URI=https://hackage.haskell.org/package/ShellCheck-0.8.0/ShellCheck-0.8.0.tar.gz
-_eclasses_=ghc-package	6344fef4405bc9a6cca6a0a39eee4a32	haskell-cabal	ebeaf198ca6bf70c43b10488b7cdcdcf	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=ghc-package	6344fef4405bc9a6cca6a0a39eee4a32	haskell-cabal	ebeaf198ca6bf70c43b10488b7cdcdcf	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
 _md5_=1c85135a5d4792d758fb18b8b77145f1

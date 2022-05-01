@@ -4,6 +4,7 @@ DEPEND=dev-lang/ocaml:= dev-ml/base:= dev-ml/base_bigstring:= dev-ml/base_quickc
 DESCRIPTION=System-independent part of Core
 EAPI=7
 HOMEPAGE=https://github.com/janestreet/core_kernel
+INHERIT=dune
 IUSE=+ocamlopt
 KEYWORDS=amd64 arm arm64 ~ppc ppc64 x86
 LICENSE=LGPL-2.1-with-linking-exception
@@ -11,5 +12,5 @@ RDEPEND=dev-lang/ocaml:= dev-ml/base:= dev-ml/base_bigstring:= dev-ml/base_quick
 RESTRICT=test
 SLOT=0/0.14.1
 SRC_URI=https://github.com/janestreet/core_kernel/archive/v0.14.1.tar.gz -> core_kernel-0.14.1.tar.gz
-_eclasses_=dune	c8f275f00adf2380fe0a57d8a249885c	multiprocessing	61c959fc55c15c00bbb1079d6a71370b
+_eclasses_=dune	c8f275f00adf2380fe0a57d8a249885c	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730
 _md5_=8de16568d806a26f4faf50a2c9811db8

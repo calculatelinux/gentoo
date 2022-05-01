@@ -4,6 +4,7 @@ DEPEND=dev-db/sqlcipher dev-libs/libsodium:= dev-qt/qtconcurrent:5 dev-qt/qtcore
 DESCRIPTION=Instant messaging client using the encrypted p2p Tox protocol
 EAPI=8
 HOMEPAGE=https://qtox.github.io/
+INHERIT=cmake xdg
 IUSE=notification +spellcheck test X
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3+
@@ -11,5 +12,5 @@ RDEPEND=dev-db/sqlcipher dev-libs/libsodium:= dev-qt/qtconcurrent:5 dev-qt/qtcor
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/qTox/qTox/releases/download/v1.17.6/v1.17.6.tar.gz -> qTox-1.17.6.tar.gz
-_eclasses_=cmake	3c38df051095289667b6f09ebd0cc149	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	61c959fc55c15c00bbb1079d6a71370b	ninja-utils	fef481272d4a8e136a7d8a0fb1329384	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
+_eclasses_=cmake	90e2b29417d53718328f3a95227137a0	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	891c4d3862cbc1ce8808ea427facbcd1	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
 _md5_=8601796167a28d844942588f6b357805

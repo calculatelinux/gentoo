@@ -4,6 +4,7 @@ DEPEND=dev-lang/perl
 DESCRIPTION=Easily create test classes in an xUnit/JUnit style
 EAPI=8
 HOMEPAGE=https://metacpan.org/release/Test-Class
+INHERIT=perl-module
 IUSE=test
 KEYWORDS=~alpha amd64 ~ia64 ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=|| ( Artistic GPL-1+ )
@@ -11,5 +12,5 @@ RDEPEND=>=virtual/perl-Attribute-Handlers-0.770.0 virtual/perl-Carp virtual/perl
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/S/SZ/SZABGAB/Test-Class-0.52.tar.gz
-_eclasses_=multiprocessing	61c959fc55c15c00bbb1079d6a71370b	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	8eed4e2982026c684ff7c19cd4c88ed0	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	perl-functions	fea344a91ebf37efadf172c6a3de5a72	perl-module	8eed4e2982026c684ff7c19cd4c88ed0	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55
 _md5_=ab55a8cb83d20bfd867f343a3e392b24
