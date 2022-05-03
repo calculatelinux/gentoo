@@ -3,6 +3,7 @@ DEPEND=>=virtual/jdk-1.8:* >=dev-java/java-config-2.2.0-r3 source? ( app-arch/zi
 DESCRIPTION=An efficient sparse bitset implementation for Java
 EAPI=7
 HOMEPAGE=https://github.com/brettwooldridge/SparseBitSet
+INHERIT=java-pkg-2 java-pkg-simple
 IUSE=doc source test
 KEYWORDS=amd64 arm64 ppc64 x86
 LICENSE=Apache-2.0
@@ -10,5 +11,5 @@ RDEPEND=>=virtual/jre-1.8:* >=dev-java/java-config-2.2.0-r3 source? ( app-arch/z
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/brettwooldridge/SparseBitSet/archive/refs/tags/SparseBitSet-1.2.tar.gz -> sparsebitset-1.2.tar.gz
-_eclasses_=java-pkg-2	3b09e051fc2045a0f0b9471b87d4f8bd	java-pkg-simple	8a2b8811bad7877b5ec349bddeceabb6	java-utils-2	2eba11a89c0e37f9c9be15c34884aaa3
+_eclasses_=java-pkg-2	3b09e051fc2045a0f0b9471b87d4f8bd	java-pkg-simple	8a2b8811bad7877b5ec349bddeceabb6	java-utils-2	e38ea02d8ed864a74078ecf46aa06f30
 _md5_=12a6f2e60d75f585b97926231f87136b

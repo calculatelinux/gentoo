@@ -3,6 +3,7 @@ DEPEND=>=virtual/jdk-1.8:* >=dev-java/jakarta-activation-1.2.2:1 >=dev-java/java
 DESCRIPTION=Jakarta Mail API
 EAPI=8
 HOMEPAGE=https://eclipse-ee4j.github.io/mail/
+INHERIT=java-pkg-2 java-pkg-simple
 IUSE=doc source test
 KEYWORDS=amd64 ~arm arm64 ppc64 x86
 LICENSE=EPL-1.0 EPL-2.0 GPL-2-with-classpath-exception
@@ -10,5 +11,5 @@ RDEPEND=>=virtual/jre-1.8:* >=dev-java/jakarta-activation-1.2.2:1 >=dev-java/jav
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/eclipse-ee4j/mail/archive/refs/tags/1.6.7.tar.gz -> javax-mail-1.6.7.tar.gz
-_eclasses_=java-pkg-2	3b09e051fc2045a0f0b9471b87d4f8bd	java-pkg-simple	8a2b8811bad7877b5ec349bddeceabb6	java-utils-2	2eba11a89c0e37f9c9be15c34884aaa3
+_eclasses_=java-pkg-2	3b09e051fc2045a0f0b9471b87d4f8bd	java-pkg-simple	8a2b8811bad7877b5ec349bddeceabb6	java-utils-2	e38ea02d8ed864a74078ecf46aa06f30
 _md5_=f23ccfe629108df360e2d8c45fde5df8

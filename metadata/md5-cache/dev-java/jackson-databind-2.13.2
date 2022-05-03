@@ -3,6 +3,7 @@ DEPEND=>=virtual/jdk-1.8:* ~dev-java/jackson-annotations-2.13.2:2 ~dev-java/jack
 DESCRIPTION=General data-binding functionality for Jackson: works on core streaming API
 EAPI=8
 HOMEPAGE=https://github.com/FasterXML/jackson-databind
+INHERIT=java-pkg-2 java-pkg-simple
 IUSE=doc source test
 KEYWORDS=amd64 ~arm arm64 ppc64 x86
 LICENSE=Apache-2.0
@@ -10,5 +11,5 @@ RDEPEND=>=virtual/jre-1.8:* ~dev-java/jackson-annotations-2.13.2:2 ~dev-java/jac
 RESTRICT=test !test? ( test )
 SLOT=0
 SRC_URI=https://github.com/FasterXML/jackson-databind/archive/jackson-databind-2.13.2.tar.gz
-_eclasses_=java-pkg-2	3b09e051fc2045a0f0b9471b87d4f8bd	java-pkg-simple	8a2b8811bad7877b5ec349bddeceabb6	java-utils-2	2eba11a89c0e37f9c9be15c34884aaa3
+_eclasses_=java-pkg-2	3b09e051fc2045a0f0b9471b87d4f8bd	java-pkg-simple	8a2b8811bad7877b5ec349bddeceabb6	java-utils-2	e38ea02d8ed864a74078ecf46aa06f30
 _md5_=4dabe97dc4c3090074061d23c52b7679

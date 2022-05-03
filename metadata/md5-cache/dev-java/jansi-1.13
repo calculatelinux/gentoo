@@ -3,6 +3,7 @@ DEPEND=dev-java/jansi-native:0 test? ( dev-java/junit:4 ) >=virtual/jdk-1.8:* >=
 DESCRIPTION=A library that allows you to use ANSI escape sequences in your console output
 EAPI=7
 HOMEPAGE=https://fusesource.github.io/jansi/
+INHERIT=java-pkg-2 java-pkg-simple
 IUSE=doc source test
 KEYWORDS=amd64 ~arm arm64 ppc64 x86
 LICENSE=Apache-2.0
@@ -10,5 +11,5 @@ RDEPEND=dev-java/jansi-native:0 >=virtual/jre-1.8:* >=dev-java/java-config-2.2.0
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/fusesource/jansi/archive/jansi-project-1.13.tar.gz -> jansi-1.13.tar.gz
-_eclasses_=java-pkg-2	3b09e051fc2045a0f0b9471b87d4f8bd	java-pkg-simple	8a2b8811bad7877b5ec349bddeceabb6	java-utils-2	2eba11a89c0e37f9c9be15c34884aaa3
+_eclasses_=java-pkg-2	3b09e051fc2045a0f0b9471b87d4f8bd	java-pkg-simple	8a2b8811bad7877b5ec349bddeceabb6	java-utils-2	e38ea02d8ed864a74078ecf46aa06f30
 _md5_=ee1233c04a41ea2639d3127438b6cc82

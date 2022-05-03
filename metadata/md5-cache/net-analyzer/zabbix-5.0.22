@@ -4,6 +4,7 @@ DEPEND=curl? ( net-misc/curl ) gnutls? ( net-libs/gnutls:0= ) java? ( >=virtual/
 DESCRIPTION=ZABBIX is software for monitoring of your applications, network and servers
 EAPI=8
 HOMEPAGE=https://www.zabbix.com/
+INHERIT=webapp java-pkg-opt-2 systemd tmpfiles toolchain-funcs go-module user-info
 IUSE=+agent +agent2 curl frontend gnutls ipv6 java ldap libxml2 mysql odbc openipmi +openssl oracle +postgres proxy server snmp sqlite ssh static java
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
@@ -12,5 +13,5 @@ REQUIRED_USE=|| ( agent agent2 frontend proxy server ) ?? ( gnutls openssl ) pro
 RESTRICT=test strip
 SLOT=0/5.0
 SRC_URI=https://cdn.zabbix.com/zabbix/sources/stable/5.0/zabbix-5.0.22.tar.gz agent2? ( https://dev.gentoo.org/~fordfrog/distfiles/zabbix-5.0.22-go-deps.tar.xz )
-_eclasses_=go-module	a13d34fe4e2996720e1ca6c53b9ea95a	java-pkg-opt-2	a71433e535af8faae0c0f6c861a32054	java-utils-2	2eba11a89c0e37f9c9be15c34884aaa3	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	systemd	2736b403a83f194b59b767f3b344c2c1	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	user-info	69a1ed744ec33cf2c910ff2bd6084d11	webapp	d872f28d7595b70dd46545199ef35fb0
+_eclasses_=go-module	a13d34fe4e2996720e1ca6c53b9ea95a	java-pkg-opt-2	a71433e535af8faae0c0f6c861a32054	java-utils-2	e38ea02d8ed864a74078ecf46aa06f30	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	systemd	2736b403a83f194b59b767f3b344c2c1	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	user-info	69a1ed744ec33cf2c910ff2bd6084d11	webapp	d872f28d7595b70dd46545199ef35fb0
 _md5_=8e4bc99a15cb2d2cb6a57f3e163d5874

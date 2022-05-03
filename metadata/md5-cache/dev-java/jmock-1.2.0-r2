@@ -3,11 +3,12 @@ DEPEND=app-arch/unzip >=virtual/jdk-1.8:* dev-java/junit:0 >=dev-java/java-confi
 DESCRIPTION=Library for testing Java code using mock objects
 EAPI=7
 HOMEPAGE=http://jmock.org/
+INHERIT=java-pkg-2 java-pkg-simple
 IUSE=doc source
 KEYWORDS=amd64 ~arm arm64 ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos
 LICENSE=BSD
 RDEPEND=>=virtual/jre-1.8:* dev-java/junit:0 >=dev-java/java-config-2.2.0-r3 source? ( app-arch/zip )
 SLOT=1.0
 SRC_URI=http://jmock.org/downloads/jmock-1.2.0-jars.zip
-_eclasses_=java-pkg-2	3b09e051fc2045a0f0b9471b87d4f8bd	java-pkg-simple	8a2b8811bad7877b5ec349bddeceabb6	java-utils-2	2eba11a89c0e37f9c9be15c34884aaa3
+_eclasses_=java-pkg-2	3b09e051fc2045a0f0b9471b87d4f8bd	java-pkg-simple	8a2b8811bad7877b5ec349bddeceabb6	java-utils-2	e38ea02d8ed864a74078ecf46aa06f30
 _md5_=aff79e108dae2fe4b9e30b2acf617385

@@ -3,6 +3,7 @@ DEPEND=>=virtual/jdk-1.8:* test? ( dev-java/ant-junit:0 dev-java/emma:0 dev-java
 DESCRIPTION=An open-source implementation of JavaScript written in Java
 EAPI=8
 HOMEPAGE=https://github.com/mozilla/rhino
+INHERIT=java-pkg-2 java-pkg-simple
 IUSE=doc source test
 KEYWORDS=amd64 ~arm arm64 ppc64 x86
 LICENSE=MPL-1.1 GPL-2
@@ -10,5 +11,5 @@ RDEPEND=>=virtual/jre-1.8:* >=dev-java/java-config-2.2.0-r3 source? ( app-arch/z
 RESTRICT=test !test? ( test )
 SLOT=1.6
 SRC_URI=https://github.com/mozilla/rhino/archive/Rhino1_7_14_Release.tar.gz -> rhino-1.7.14.tar.gz
-_eclasses_=java-pkg-2	3b09e051fc2045a0f0b9471b87d4f8bd	java-pkg-simple	8a2b8811bad7877b5ec349bddeceabb6	java-utils-2	2eba11a89c0e37f9c9be15c34884aaa3
+_eclasses_=java-pkg-2	3b09e051fc2045a0f0b9471b87d4f8bd	java-pkg-simple	8a2b8811bad7877b5ec349bddeceabb6	java-utils-2	e38ea02d8ed864a74078ecf46aa06f30
 _md5_=e22c22e09284defb9a49b15e471af42c

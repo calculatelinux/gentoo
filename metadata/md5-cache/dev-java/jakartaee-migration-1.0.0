@@ -3,6 +3,7 @@ DEPEND=>=virtual/jdk-1.8:* dev-java/ant-core:0 dev-java/bcel:0 >=dev-java/common
 DESCRIPTION=Apache Tomcat tool for migration from Java EE 8 to Jakarta EE 9
 EAPI=7
 HOMEPAGE=https://tomcat.apache.org
+INHERIT=java-pkg-2 java-pkg-simple
 IUSE=doc source test
 KEYWORDS=amd64
 LICENSE=Apache-2.0
@@ -10,5 +11,5 @@ RDEPEND=>=virtual/jre-1.8:* dev-java/ant-core:0 dev-java/bcel:0 >=dev-java/commo
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=mirror://apache/tomcat/jakartaee-migration/v1.0.0/source/jakartaee-migration-1.0.0-src.tar.gz -> jakartaee-migration-1.0.0-sources.tar.gz
-_eclasses_=java-pkg-2	3b09e051fc2045a0f0b9471b87d4f8bd	java-pkg-simple	8a2b8811bad7877b5ec349bddeceabb6	java-utils-2	2eba11a89c0e37f9c9be15c34884aaa3
+_eclasses_=java-pkg-2	3b09e051fc2045a0f0b9471b87d4f8bd	java-pkg-simple	8a2b8811bad7877b5ec349bddeceabb6	java-utils-2	e38ea02d8ed864a74078ecf46aa06f30
 _md5_=4f6cec3ec86c9e19c57456e02da5f39b
