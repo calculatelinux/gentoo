@@ -4,6 +4,7 @@ DEPEND=dev-libs/wayland =dev-qt/qtcore-5.15.3*:5= =dev-qt/qtdeclarative-5.15.3*:
 DESCRIPTION=Wayland platform plugin for Qt
 EAPI=8
 HOMEPAGE=https://www.qt.io/ https://invent.kde.org/qt/qt/qtwayland https://community.kde.org/Qt5PatchCollection
+INHERIT=qt5-build
 IUSE=vulkan X debug test
 KEYWORDS=amd64 arm arm64 ~hppa ppc ppc64 ~riscv ~sparc x86
 LICENSE=|| ( GPL-2 GPL-3 LGPL-3 ) FDL-1.3
