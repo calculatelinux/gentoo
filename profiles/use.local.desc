@@ -1250,6 +1250,8 @@ dev-cpp/libjson-rpc-cpp:http-server - Build support for HTTP server using net-li
 dev-cpp/libjson-rpc-cpp:redis-client - Build support for Redis client using dev-libs/hiredis
 dev-cpp/libjson-rpc-cpp:redis-server - Build support for Redis server using dev-libs/hiredis
 dev-cpp/libjson-rpc-cpp:stubgen - Build header stub code generator (needed for development and when pregenerated headers are not bundled)
+dev-cpp/opentelemetry-cpp:jaeger - Include the jaeger exporter
+dev-cpp/opentelemetry-cpp:prometheus - include the Prometheus Client in the SDK
 dev-cpp/sdbus-c++:systemd - Use external libsystemd instead of statically-linked build
 dev-cpp/sdbus-c++:tools - Install interface stub code generator
 dev-cpp/sourcetrail:examples - Install example projects.
@@ -1694,8 +1696,6 @@ dev-java/jaxen:jdom - Includes org.jaxen.jdom package
 dev-java/jaxen:xom - Includes org.jaxen.xom package
 dev-java/jna:awt - Enables support for Java AWT
 dev-java/jna:nio-buffers - Enables support for NIO buffers
-dev-java/log4j:javamail - Build the SMTPAppender
-dev-java/log4j:jms - Build the JMSAppender
 dev-java/miglayout:swt - Add support for the SWT toolkit.
 dev-java/openjdk:gentoo-vm - Allow this JDK to be recognised by Gentoo (package manager, eselect, java-config, EXPERIMENTAL!)
 dev-java/openjdk:headless-awt - Don't install the X backend for AWT, needed by some GUIs
@@ -4292,6 +4292,7 @@ media-libs/mesa:llvm - Enable LLVM backend for Gallium3D.
 media-libs/mesa:lm-sensors - Enable Gallium HUD lm-sensors support.
 media-libs/mesa:opencl - Enable the Clover Gallium OpenCL state tracker.
 media-libs/mesa:osmesa - Build the Mesa library for off-screen rendering.
+media-libs/mesa:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
 media-libs/mesa:valgrind - Compile in valgrind memory hints
 media-libs/mesa:vdpau - Enable the VDPAU acceleration interface for the Gallium3D Video Layer.
 media-libs/mesa:vulkan - Enable Vulkan drivers
@@ -8613,19 +8614,20 @@ www-client/firefox:geckodriver - Enable WebDriver support
 www-client/firefox:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
 www-client/firefox:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
 www-client/firefox:libproxy - Enable libproxy support
-www-client/firefox:lto - Enable Link Time Optimization (LTO). Requires Gold linker when using GCC or LDD linker when using Clang
-www-client/firefox:openh264 - Use media-libs/openh264 for H.264 support instead of downloading binary blob from Mozilla at runtime
-www-client/firefox:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
+www-client/firefox:lto - Enable Link Time Optimization (LTO) - Uses BFD linker with GCC and LLD linker with Clang
+www-client/firefox:openh264 - Use media-libs/openh264 for H264 support instead of downloading binary blob from Mozilla at runtime
+www-client/firefox:pgo - Add support for profile-guided optimization for faster binaries - this option will double the compile time
 www-client/firefox:screencast - Enable support for remote desktop and screen cast using media-video/pipewire
 www-client/firefox:sndio - Enable support for the media-sound/sndio backend
-www-client/firefox:system-av1 - Use the system-wide media-libs/dav1d and media-libs/libaom library instead of bundled.
-www-client/firefox:system-harfbuzz - Use the system-wide media-libs/harfbuzz and media-gfx/graphite2 instead of bundled.
-www-client/firefox:system-icu - Use the system-wide dev-libs/icu instead of bundled.
-www-client/firefox:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled.
-www-client/firefox:system-libevent - Use the system-wide dev-libs/libevent instead of bundled.
-www-client/firefox:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
-www-client/firefox:system-png - Use the system-wide media-libs/libpng instead of bundled (requires APNG patches).
-www-client/firefox:system-webp - Use the system-wide media-libs/libwebp instead of bundled.
+www-client/firefox:system-av1 - Use the system-wide media-libs/dav1d and media-libs/libaom library instead of bundled
+www-client/firefox:system-harfbuzz - Use the system-wide media-libs/harfbuzz and media-gfx/graphite2 instead of bundled
+www-client/firefox:system-icu - Use the system-wide dev-libs/icu instead of bundled
+www-client/firefox:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled
+www-client/firefox:system-libevent - Use the system-wide dev-libs/libevent instead of bundled
+www-client/firefox:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled
+www-client/firefox:system-png - Use the system-wide media-libs/libpng instead of bundled (requires APNG patches)
+www-client/firefox:system-python-libs - Use system's python site instead of bundled python libraries
+www-client/firefox:system-webp - Use the system-wide media-libs/libwebp instead of bundled
 www-client/firefox-bin:alsa - When pulseaudio isn't set, this prefers apulse
 www-client/firefox-bin:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
 www-client/jd:migemo - Enable migemo support for Japanese
