@@ -2209,6 +2209,7 @@ dev-libs/pocl:hardening - Enable hardening against various attacks. May worsen p
 dev-libs/pocl:hwloc - Enable hwloc support
 dev-libs/pocl:memmanager - Enables custom memory manager. Except for special circumstances, this should be disabled
 dev-libs/poco:7z - Add Support for the 7z archive format
+dev-libs/poco:activerecord - Add ActiveRecord support
 dev-libs/poco:cppparser - Build and install a minimal C++ parser
 dev-libs/poco:crypto - Encryption and digital signing classes
 dev-libs/poco:data - Database abstraction layer to easily send/retrieve data to/from various databases
@@ -5800,7 +5801,6 @@ net-im/ekg2:gpg - Enable jabber message encryption through app-crypt/gpgme.
 net-im/ekg2:minimal - Disable building extra plugins with no additional deps.
 net-im/ekg2:openssl - Support encryption in sim plugin, using OpenSSL.
 net-im/ekg2:sqlite - Support logging messages into SQLite3 database.
-net-im/element-desktop-bin:emoji - Use media-fonts/noto-emoji for displaying emoji
 net-im/empathy:gnome-online-accounts - Enable using net-libs/gnome-online-accounts for authorization (e.g. for Google Talk)
 net-im/empathy:map - Enable world map support through media-libs/libchamplain
 net-im/err:irc - Pull optional dependencies, needed for IRC backend
@@ -6921,21 +6921,25 @@ net-vpn/strongswan:gcrypt - Enable dev-libs/libgcrypt plugin which provides 3DES
 net-vpn/strongswan:non-root - Force IKEv1/IKEv2 daemons to normal user privileges. This might impose some restrictions mainly to the IKEv1 daemon. Disable only if you really require superuser privileges.
 net-vpn/strongswan:openssl - Enable dev-libs/openssl plugin which is required for Elliptic Curve Cryptography (DH groups 19-21,25,26) and ECDSA. Also provides 3DES, AES, Blowfish, Camellia, CAST, DES, IDEA and RC5 ciphers along with MD2, MD4, MD5 and SHA1/2 hash algorithms, RSA and DH groups 1,2,5,14-18 and 22-24(4.4+) dev-libs/openssl has to be compiled with USE="-bindist".
 net-vpn/strongswan:pkcs11 - Enable pkcs11 support
+net-vpn/strongswan:strongswan_plugins_addrblock - Enable support for the addrblock crypto plugin
 net-vpn/strongswan:strongswan_plugins_aesni - Enable support for Intel AES-NI crypto plugin
 net-vpn/strongswan:strongswan_plugins_blowfish - Enable support for the blowfish plugin
 net-vpn/strongswan:strongswan_plugins_bypass-lan - Enable support for the bypass-lan plugin
 net-vpn/strongswan:strongswan_plugins_ccm - Enable support for the ccm plugin
 net-vpn/strongswan:strongswan_plugins_chapoly - Enable ChaCha20/Poly1305 AEAD implementation and ChaCha20 XOF plugin
 net-vpn/strongswan:strongswan_plugins_ctr - Enable support for the ctr plugin
+net-vpn/strongswan:strongswan_plugins_error-notify - Enable support for the error-notify plugin
 net-vpn/strongswan:strongswan_plugins_forecast - Enable multicast and broadcast forwarding plugin
 net-vpn/strongswan:strongswan_plugins_gcm - Enable support for the gcm plugin
 net-vpn/strongswan:strongswan_plugins_ha - Enable support for the ha plugin
 net-vpn/strongswan:strongswan_plugins_ipseckey - Enable support for the ipseckey plugin
+net-vpn/strongswan:strongswan_plugins_kdf - Enable support for the kdf plugin
 net-vpn/strongswan:strongswan_plugins_led - Enable support for the led plugin
 net-vpn/strongswan:strongswan_plugins_lookip - Enable support for the lookip plugin
 net-vpn/strongswan:strongswan_plugins_newhope - Enable plugin that allows key exchange based on post-quantum computer New Hope algorithm
 net-vpn/strongswan:strongswan_plugins_ntru - Enable support for the ntru plugin
 net-vpn/strongswan:strongswan_plugins_padlock - Enable support for the padlock plugin
+net-vpn/strongswan:strongswan_plugins_prf-plus - Enable support for the prf-plus plugin
 net-vpn/strongswan:strongswan_plugins_rdrand - Enable support for the rdrand plugin
 net-vpn/strongswan:strongswan_plugins_save-keys - Enable plugin that saves IKE and/or ESP keys to files compatible with Wireshark (for debugging)
 net-vpn/strongswan:strongswan_plugins_systime-fix - Enable support for the systime-fix plugin
@@ -7513,6 +7517,7 @@ sci-mathematics/geomview:motionaveraging - Enable experimental motion averaging 
 sci-mathematics/giac:ecm - Enable the use of sci-mathematics/gmp-ecm
 sci-mathematics/giac:gc - Enable garbage collection support via dev-libs/boehm-gc
 sci-mathematics/giac:glpk - Enable the use of sci-mathematics/glpk
+sci-mathematics/gmp-ecm:cuda - Use NVidia's cuda toolkit for computations
 sci-mathematics/gmp-ecm:custom-tune - Improve performance of some operations by selecting machine-specific defaults
 sci-mathematics/gretl:R - Enable support for dev-lang/R
 sci-mathematics/gretl:extras - Build and install add-ons bundled with gretl
@@ -8552,7 +8557,6 @@ www-apps/icingaweb2:apache2-server - Adds support for the apache2-server
 www-apps/icingaweb2:fpm - Adds FPM support to php
 www-apps/icingaweb2:nginx - Adds support for nginx
 www-apps/ikiwiki:extras - Installs additional modules used by ikiwiki plugins
-www-apps/kibana-bin:x-pack - Enable additional features (may need a license)
 www-apps/klaus:ctags - Enable support for Exuberant ctags; makes all source code symbols hyperlinks to their definitions
 www-apps/nikola:assets - Support web asset management
 www-apps/nikola:charts - Support chart generation through dev-python/pygal
