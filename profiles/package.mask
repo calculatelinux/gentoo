@@ -33,6 +33,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2022-05-07)
+# Old slot without reverse dependencies. Originally introduced for
+# dev-ruby/gherkin but no longer used there. Upgrade to the new slotted
+# version. Masked for removal in 30 days.
+dev-ruby/c21e:1
+
 # Michał Górny <mgorny@gentoo.org> (2022-05-06)
 # The "better quality" dependencies of Mailman.  These packages were
 # generally fixed by the Python team but they have no reverse
@@ -387,11 +393,6 @@ dev-python/repoze-sphinx-autointerface
 # Removal on 2022-05-09.  Bug #837530.
 dev-python/zope-testrunner
 
-# Matt Turner <mattst88@gentoo.org> (2022-04-06)
-# Dead package upstream. No reverse dependencies.
-# Removal on 2022-05-06
-dev-util/nemiver
-
 # David Seifert <soap@gentoo.org> (2022-04-06)
 # Unsupported branches, no consumers left, removal on 2023-01-01.
 sys-devel/automake:1.13
@@ -414,11 +415,11 @@ sys-devel/automake:1.15
 # necessity.
 net-p2p/arti
 
-# Stephan Hartmann <sultan@gentoo.org> (2022-04-01)
+# Stephan Hartmann <sultan@gentoo.org> (2022-05-06)
 # Dev channel releases are only for people who
 # are developers or want more experimental features
 # and accept a more unstable release.
->=www-client/chromium-102
+>=www-client/chromium-103
 
 # Anton Fischl <github@fischl-online.de> (2022-02-23)
 # Version 2.5.* is not meant for production according to upstream
