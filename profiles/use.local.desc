@@ -2809,6 +2809,7 @@ dev-util/glade:webkit - Build catalog support for net-libs/webkit-gtk:4 widgets.
 dev-util/global:vim - Integrate the GNU GLOBAL source code tag system with Vim
 dev-util/gnome-builder:clang - Provide integration with sys-devel/clang for best possible C/C++ autocompletion, semantic highlighting, symbol resolving, and diagnostics support
 dev-util/gnome-builder:devhelp - Provide API docs browsing and integration via dev-util/devhelp
+dev-util/gnome-builder:flatpak - Enable support for flatpak applications using sys-apps/flatpak
 dev-util/gnome-builder:git - Provide support for the Git version control system via dev-libs/libgit2-glib (such as setup of Git for New Project, direct cloning for Open Project and changed lines indicators in the editor gutter)
 dev-util/gnome-builder:glade - Provide integration with dev-util/glade UI designer for Gtk
 dev-util/gnome-builder:sysprof - Provide an integrated profiler via dev-util/sysprof
@@ -7535,6 +7536,7 @@ sci-mathematics/maxima:sbcl - Compile maxima with Steel Bank Common Lisp (dev-li
 sci-mathematics/maxima:vtk - Support plotting with sci-libs/vtk
 sci-mathematics/msieve:ecm - Enable support for the GMP-ECM library
 sci-mathematics/normaliz:extras - Install Macaulay2 and sci-mathematics/singularpackages as shipped by upstream
+sci-mathematics/normaliz:nauty - Use sci-mathematics/nauty to compute automorphism groups.
 sci-mathematics/octave:glpk - Add support for sci-mathematics/glpk for linear programming
 sci-mathematics/octave:json - Allow using jsonencode and jsondecode commands via dev-libs/rapidjson
 sci-mathematics/octave:qhull - Add support for media-libs/qhull, to allow `delaunay', `convhull', and related functions
@@ -7575,6 +7577,7 @@ sci-mathematics/why3:coq - Add sci-mathematics/coq support
 sci-mathematics/why3:gtk - Build the IDE x11-libs/gtk+
 sci-mathematics/why3:re - Use Re (dev-ml/re) instead of Str for regular expressions
 sci-mathematics/why3:sexp - Add support for outputting S-expressions with dev-ml/ppx_sexp_conv
+sci-mathematics/why3:stackify - Enable structure reconstruction algorithm for MLCFG
 sci-mathematics/why3:zarith - Use Zarith (dev-ml/zarith) instead of Nums (dev-ml/num) for computations
 sci-mathematics/why3:zip - Enable compression of session files
 sci-mathematics/why3-for-spark:coq - Add sci-mathematics/coq support
@@ -8173,12 +8176,9 @@ sys-devel/clang-runtime:openmp - Install sys-libs/libomp for -fopenmp support
 sys-devel/clang-runtime:sanitize - Enable compiler-rt sanitizer (-fsanitize*) support
 sys-devel/distcc:gssapi - Enable support for net-libs/libgssglue
 sys-devel/gcc:ada - Build the ADA language (GNAT) frontend
-sys-devel/gcc:awt - Useful only when building GCJ, this enables Abstract Window Toolkit (AWT) peer support on top of GTK+
 sys-devel/gcc:cet - Enable support for Intel Control Flow Enforcement Technology (CET)
-sys-devel/gcc:cilk - Support the Cilk Plus language (C/C++ based languages for parallel programming)
 sys-devel/gcc:d - Enable support for the D programming language
 sys-devel/gcc:fixed-point - Enable fixed-point arithmetic support for MIPS targets in gcc (Warning: significantly increases compile time!)
-sys-devel/gcc:gcj - Build the GCJ Java language frontend.
 sys-devel/gcc:go - Build the GCC Go language frontend.
 sys-devel/gcc:graphite - Add support for the framework for loop optimizations based on a polyhedral intermediate representation
 sys-devel/gcc:jit - Enable libgccjit so other applications can embed gcc for Just-In-Time compilation. This will slow down the compiler a bit as it forces all of the toolchain to be shared libs.
@@ -8399,6 +8399,7 @@ sys-libs/libblockdev:dmraid - Support for dmraid devices, also known as ATA-RAID
 sys-libs/libblockdev:escrow - Support for building crypto plugin with escrow device support
 sys-libs/libblockdev:kbd - Enable kernel block device support.
 sys-libs/libblockdev:lvm - Enable support for Logical Volume Management via sys-fs/lvm2.
+sys-libs/libblockdev:nvme - Add nvme support via sys-libs/libnvme
 sys-libs/libblockdev:tools - Build tools
 sys-libs/libblockdev:vdo - Enable Virtual Data Optimizer support.
 sys-libs/libcap:tools - Install captree, which requires dev-lang/go

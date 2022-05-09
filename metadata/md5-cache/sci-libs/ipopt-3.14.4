@@ -4,6 +4,7 @@ DEPEND=virtual/blas hsl? ( sci-libs/coinhsl:0= ) lapack? ( virtual/lapack ) mpi?
 DESCRIPTION=Interior-Point Optimizer for large-scale nonlinear optimization
 EAPI=8
 HOMEPAGE=https://github.com/coin-or/Ipopt
+INHERIT=docs fortran-2 toolchain-funcs
 IUSE=hsl +lapack mpi mumps static-libs test doc
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=EPL-1.0 hsl? ( HSL )
@@ -12,4 +13,4 @@ RESTRICT=!test? ( test )
 SLOT=0/1
 SRC_URI=https://github.com/coin-or/Ipopt/archive/refs/tags/releases/3.14.4.tar.gz -> ipopt-3.14.4.tar.gz
 _eclasses_=docs	8ed2a8a28ff109e7a3582c9abb7fe327	fortran-2	72d28c6872beb1e7cb99684b0ae4715d	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
-_md5_=253e561806b310577b1878c41b9d1804
+_md5_=bd3e5bc55734682d9bcc3beae4188dd8
