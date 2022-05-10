@@ -33,6 +33,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-05-06)
+# Unused java library. Removal on 2022-06-06
+dev-java/commons-jxpath
+
 # Michał Górny <mgorny@gentoo.org> (2022-05-07)
 # The current version is severely outdated and blocks upgrade
 # of dependencies.  Packaging a new release poses serious problems.
@@ -335,69 +339,6 @@ media-video/gxine
 # but a newer slot is available.
 dev-ruby/nokogumbo
 dev-ruby/sanitize:5
-
-# Michał Górny <mgorny@gentoo.org> (2022-04-11)
-# Tests are broken once again.  Last activity in Jan 2020, last release
-# in Aug 2019.  No revdeps.
-# Removal on 2022-05-11.  Bug #832317.
-dev-python/ctypescrypto
-
-# Matt Turner <mattst88@gentoo.org> (2022-04-10)
-# Dead package upstream. Uses GTK+ 2. No reverse dependencies.
-# Removal on 2022-05-10
-x11-misc/gcolor2
-
-# Matt Turner <mattst88@gentoo.org> (2022-04-10)
-# Dead package upstream. No reverse dependencies.
-# Removal on 2022-05-10
-net-misc/vinagre
-net-misc/vino
-
-# Matt Turner <mattst88@gentoo.org> (2022-04-10)
-# Dead package upstream (last release in 2004). No reverse dependencies.
-# Removal on 2022-05-10
-net-misc/grdesktop
-
-# Matt Turner <mattst88@gentoo.org> (2022-04-10)
-# Dead package upstream. EAPI 5. Only reverse dependency is gnome-extra/gnome-utils.
-# Removal on 2022-05-10
-gnome-extra/gnome-search-tool
-
-# Matt Turner <mattst88@gentoo.org> (2022-04-10)
-# Dead package upstream. No reverse dependencies.
-# Removal on 2022-05-10
-gnome-extra/filemanager-actions
-
-# Matt Turner <mattst88@gentoo.org> (2022-04-10)
-# Dead package upstream. No reverse dependencies.
-# Removal on 2022-05-10
-app-office/pinpoint
-
-# Matt Turner <mattst88@gentoo.org> (2022-04-10)
-# Dead package upstream. Only reverse dependency is gnome-extra/gnome-utils.
-# Removal on 2022-05-10
-app-admin/gnome-system-log
-
-# Matt Turner <mattst88@gentoo.org> (2022-04-10)
-# Dead (meta)packagesupstream. No reverse dependencies.
-# Removal on 2022-05-10
-gnome-extra/gnome-utils
-
-# David Seifert <soap@gentoo.org> (2022-04-10)
-# Unmaintained, last release upstream 16 years ago, Fedora dropped it,
-# relies on sys-libs/db, low quality port to EAPI 6, removal on 2022-05-10.
-net-p2p/syrep
-
-# Michał Górny <mgorny@gentoo.org> (2022-04-10)
-# Last release in 2016.  Last git commit in 2020.  No revdeps.
-# Removal on 2022-05-10.  Bug #837641.
-dev-python/repoze-sphinx-autointerface
-
-# Michał Górny <mgorny@gentoo.org> (2022-04-09)
-# A test runner specific to zope packages that was never really used
-# (only as a mistaken test-dep).  No revdeps left.
-# Removal on 2022-05-09.  Bug #837530.
-dev-python/zope-testrunner
 
 # David Seifert <soap@gentoo.org> (2022-04-06)
 # Unsupported branches, no consumers left, removal on 2023-01-01.

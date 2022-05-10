@@ -4,6 +4,7 @@ DEPEND=sys-libs/zlib:0= dev-libs/libpcre:3 >=dev-libs/cyrus-sasl-2.1.13:2 dev-li
 DESCRIPTION=The Cyrus IMAP Server
 EAPI=7
 HOMEPAGE=https://www.cyrusimap.org/
+INHERIT=autotools flag-o-matic pam ssl-cert
 IUSE=afs backup calalarm caps clamav http kerberos ldap lmdb mysql nntp pam perl postgres replication +server sieve snmp sqlite ssl static-libs tcpd test xapian ssl
 KEYWORDS=amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86
 LICENSE=BSD-with-attribution GPL-2
