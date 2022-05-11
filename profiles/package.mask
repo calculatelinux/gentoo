@@ -33,6 +33,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Florian Schmaus <flow@gentoo.org> (2022-05-10)
+# Was split by upstream (and us) into
+# net-analyzer/gsa and net-analyzer/gsad.
+# Removal on 2022-06-10.
+net-analyzer/greenbone-security-assistant
+
+# Florian Schmaus <flow@gentoo.org> (2022-05-10)
+# Functionality now in net-analyzer/ospd-openvas.
+# Removal on 2022-06-10.
+net-analyzer/ospd
+
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-05-06)
 # Unused java library. Removal on 2022-06-06
 dev-java/commons-jxpath
@@ -104,12 +115,6 @@ sys-apps/xdg-desktop-portal-gnome
 # Matt Turner <mattst88@gentoo.org> (2022-04-30)
 # Masked for testing. Apparently causes crashes. Bug #841857.
 >=x11-libs/libX11-1.8
-
-# John Helmert III <ajak@gentoo.org> (2022-04-29)
-# New capstone rc installs broken pkgconfig and cmake build
-# configuration files, breaking reverse dependencies. #841716
-=dev-libs/capstone-5.0_rc2
-=dev-util/ROPgadget-6.7
 
 # Joonas Niilola <juippis@gentoo.org> (2022-04-29)
 # Apparently the "b" in version means "beta". 3.24 is available, we
@@ -344,6 +349,11 @@ dev-ruby/sanitize:5
 # Unsupported branches, no consumers left, removal on 2023-01-01.
 sys-devel/automake:1.13
 sys-devel/automake:1.15
+
+# Ulrich Müller <ulm@gentoo.org> (2022-04-01)
+# Illegal instruction errors seen by several users.
+# Masked for testing. (bug #835930)
+>=net-im/zoom-5.10
 
 # David Seifert <soap@gentoo.org> (2022-03-20)
 # Mask gcc-8 branch (ended upstream support). Please switch
