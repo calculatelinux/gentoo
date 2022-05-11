@@ -4,6 +4,7 @@ DEPEND=>=dev-qt/qtconcurrent-5.15:5 >=dev-qt/qtcore-5.15:5 >=dev-qt/qtdeclarativ
 DESCRIPTION=Lightweight IDE for C++/QML development centering around Qt
 EAPI=7
 HOMEPAGE=https://doc.qt.io/qtcreator/
+INHERIT=llvm qmake-utils virtualx xdg
 IUSE=doc systemd test webengine android +autotest autotools baremetal bazaar beautifier boot2qt +clang clearcase +cmake conan cppcheck ctfvisualizer cvs +designer docker +git glsl +help incredibuild +lsp mcu mercurial meson modeling nim perforce perfprofiler python qbs +qmake +qml qmlprofiler qnx remotelinux scxml serialterminal silversearcher subversion valgrind webassembly l10n_cs l10n_da l10n_de l10n_fr l10n_hr l10n_ja l10n_pl l10n_ru l10n_sl l10n_uk l10n_zh-CN l10n_zh-TW test
 KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-3
@@ -12,5 +13,5 @@ REQUIRED_USE=android? ( lsp ) boot2qt? ( remotelinux ) clang? ( lsp ) mcu? ( bar
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://download.qt.io/official_releases/qtcreator/6.0/6.0.0/qt-creator-opensource-src-6.0.0.tar.xz
-_eclasses_=llvm	6f88d422e49b917bf254b2594f3d903c	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	qmake-utils	f5eb2f69fffe94292aaaf802fb21c8d1	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	virtualx	975d49ff3b3f451efe7a95f230532135	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
+_eclasses_=llvm	6f88d422e49b917bf254b2594f3d903c	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	qmake-utils	59420c906278d16deaaa629f9d115707	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	virtualx	975d49ff3b3f451efe7a95f230532135	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
 _md5_=78bd9a1543bfea48aefcc1cbeec654ec
