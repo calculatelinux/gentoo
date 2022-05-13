@@ -4,6 +4,7 @@ DEPEND=acct-group/docker >=dev-db/sqlite-3.7.9:3 apparmor? ( sys-libs/libapparmo
 DESCRIPTION=The core functions you need to create Docker images and run Docker containers
 EAPI=7
 HOMEPAGE=https://www.docker.com/
+INHERIT=linux-info systemd udev golang-vcs-snapshot
 IUSE=apparmor aufs btrfs +cli +container-init device-mapper hardened overlay seccomp selinux
 KEYWORDS=~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86
 LICENSE=Apache-2.0
@@ -11,5 +12,5 @@ RDEPEND=acct-group/docker >=dev-db/sqlite-3.7.9:3 apparmor? ( sys-libs/libapparm
 RESTRICT=installsources strip test
 SLOT=0
 SRC_URI=https://github.com/moby/moby/archive/v20.10.14.tar.gz -> docker-20.10.14.tar.gz
-_eclasses_=golang-base	9f0e420ab37bc55a318d74bab3aae891	golang-vcs-snapshot	6864f899c6843043ba23620fcd4a908c	linux-info	3cfb791b045bfb6773a6d0f2d80ce9fd	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	systemd	2736b403a83f194b59b767f3b344c2c1	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	udev	2d229ad4bfa09058e0184b1ca900db32
+_eclasses_=golang-base	9f0e420ab37bc55a318d74bab3aae891	golang-vcs-snapshot	6864f899c6843043ba23620fcd4a908c	linux-info	a6f11292b0a7bb371aa10fec195f78a0	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	systemd	2736b403a83f194b59b767f3b344c2c1	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	udev	2d229ad4bfa09058e0184b1ca900db32
 _md5_=1fb722625d77a534112b8851a3a02271

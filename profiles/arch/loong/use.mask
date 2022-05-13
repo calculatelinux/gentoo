@@ -10,6 +10,9 @@
 # Things without support yet
 java
 llvm
+lua_single_target_luajit
+lua_targets_luajit
+opencl
 valgrind
 
 # Temporarily masked during initial keywording
@@ -20,6 +23,7 @@ efl
 elogind
 emacs
 fam
+fontforge
 gd
 gpm
 gtk

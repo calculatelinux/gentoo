@@ -148,10 +148,26 @@ esac
 # @DESCRIPTION:
 # Set the env ARCH to match what the kernel expects.
 set_arch_to_kernel() { export ARCH=$(tc-arch-kernel); }
+
 # @FUNCTION: set_arch_to_portage
 # @DESCRIPTION:
 # Set the env ARCH to match what portage expects.
-set_arch_to_portage() { export ARCH=$(tc-arch); }
+set_arch_to_portage() { 
+
+	ewarn "The function name: set_arch_to_portage is being deprecated and"
+	ewarn "being changed to:  set_arch_to_pkgmgr to comply with pms policy."
+	ewarn "See bug #843686"
+	ewarn "The old function name will be removed on or about July 1st, 2022."
+	ewarn "Please update your ebuild or eclass before this date."
+	ewarn ""
+
+	export ARCH=$(tc-arch); 
+}
+
+# @FUNCTION: set_arch_to_pkgmgr
+# @DESCRIPTION:
+# Set the env ARCH to match what the package manager expects.
+set_arch_to_pkgmgr() { export ARCH=$(tc-arch); }
 
 # qeinfo "Message"
 # -------------------
@@ -420,26 +436,6 @@ kernel_is() {
 		"${KV_MAJOR:-0}.${KV_MINOR:-0}.${KV_PATCH:-0}" \
 		"${operator}" \
 		"${1:-${KV_MAJOR:-0}}.${2:-${KV_MINOR:-0}}.${3:-${KV_PATCH:-0}}"
-}
-
-get_localversion() {
-	local lv_list i x
-
-	local shopt_save=$(shopt -p nullglob)
-	shopt -s nullglob
-	local files=( ${1}/localversion* )
-	${shopt_save}
-
-	# ignore files with ~ in it.
-	for i in "${files[@]}"; do
-		[[ -n ${i//*~*} ]] && lv_list="${lv_list} ${i}"
-	done
-
-	for i in ${lv_list}; do
-		x="${x}$(<${i})"
-	done
-	x=${x/ /}
-	echo ${x}
 }
 
 # Check if the Makefile is valid for direct parsing.
