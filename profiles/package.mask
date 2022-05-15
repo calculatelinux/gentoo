@@ -33,6 +33,20 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2022-05-15)
+# Unmaintained, doesn't support Python 3.10+, no tests.
+# Removal on 2022-06-15.
+dev-python/django-taggit-serializer
+
+# Sam James <sam@gentoo.org> (2022-05-15)
+# Unmaintained, does not support Python 3.10+. Removal on 2022-06-15.
+dev-python/django-rq
+
+# Sam James <sam@gentoo.org> (2022-05-15)
+# Masked for removal. No reverse dependencies, no releases in 2 years,
+# does not support Python 3.10+. Removal on 2022-06-15.
+dev-python/python-iptables
+
 # Michał Górny <mgorny@gentoo.org> (2022-05-11)
 # A backport with no revdeps left.
 # Removal on 2022-06-10.  Bug #843791.
@@ -116,11 +130,6 @@ net-mail/postorius
 dev-java/glassfish-jms-api
 dev-java/sun-jms
 java-virtuals/jms
-
-# Pacho Ramos <pacho@gentoo.org> (2022-05-03)
-# Waiting for keywording and adapting reverse deps. Bug #816135.
->=sys-apps/xdg-desktop-portal-gtk-1.14.0
-sys-apps/xdg-desktop-portal-gnome
 
 # Matt Turner <mattst88@gentoo.org> (2022-04-30)
 # Masked for testing. Apparently causes crashes. Bug #841857.
@@ -335,18 +344,6 @@ sys-cluster/singularity
 # on a local repository controlled by a user you do not trust.
 >=dev-vcs/git-2.35.2
 
-# Conrad Kostecki <conikost@gentoo.org> (2022-04-13)
-# Abandoned by upstream, does not work correctly anymore.
-# Removal on 2022-06-13. Bug #832431.
-x11-plugins/pidgin-telegram
-
-# Michał Górny <mgorny@gentoo.org> (2022-04-13)
-# Unmaintained.  Last release in 2017, the Gentoo ebuild has not been
-# even bumped to it.  Requires old dev-lang/spidermonkey that requires
-# Python 2.7.
-# Removal on 2022-05-13.  Bug #838139.
-media-video/gxine
-
 # Hans de Graaff <graaff@gentoo.org> (2022-04-12)
 # dev-ruby/nokogumbo is now part of dev-ruby/nokogiri and nokogiri
 # versions still supporting a separate nokogumbo have known security
@@ -452,10 +449,6 @@ x11-misc/easystroke
 # New version is maintained at https://github.com/ksh93/ksh
 # and is available as app-shells/ksh-1.0.0_beta1 at time of writing.
 ~app-shells/ksh-2020.0.0
-
-# Bernd Waibel <waebbl-gentoo@posteo.net> (2021-12-07)
-# Masked for testing
-~sci-libs/vtk-9.1.0
 
 # Sam James <sam@gentoo.org> (2021-12-01)
 # OSL 12 is a development release (for now).

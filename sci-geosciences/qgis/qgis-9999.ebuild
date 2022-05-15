@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8,9,10} )
+PYTHON_COMPAT=( python3_{8..10} )
 PYTHON_REQ_USE="sqlite"
 
 if [[ ${PV} = *9999* ]]; then
@@ -120,10 +120,6 @@ BDEPEND="
 		')
 	)
 "
-
-pkg_setup() {
-	python-single-r1_pkg_setup
-}
 
 src_prepare() {
 	cmake_src_prepare

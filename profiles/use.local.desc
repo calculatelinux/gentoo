@@ -3635,6 +3635,7 @@ lxqt-base/lxqt-config:touchpad - Build touchpad settings tool
 lxqt-base/lxqt-meta:about - Install lxqt-base/lxqt-about
 lxqt-base/lxqt-meta:admin - Install lxqt-base/lxqt-admin
 lxqt-base/lxqt-meta:archiver - Install app-arch/lxqt-archiver
+lxqt-base/lxqt-meta:desktop-portal - Enable the LXQt sys-apps/xdg-desktop-portal backend implementation
 lxqt-base/lxqt-meta:display-manager - Install a graphical display manager
 lxqt-base/lxqt-meta:filemanager - Install x11-misc/pcmanfm-qtfile manager
 lxqt-base/lxqt-meta:lximage - Install media-gfx/lximage-qtimage viewer
@@ -5609,6 +5610,7 @@ net-dns/opendnssec:external-hsm - Enables support for storing DNSSEC keys throug
 net-dns/opendnssec:opensc - Enables support for storing DNSSEC keys through a dev-libs/opensc PKCS#11 interface
 net-dns/opendnssec:signer - Enables signing capabilities for OpenDNSSEC
 net-dns/opendnssec:softhsm - Enables support for storing DNSSEC keys in a dev-libs/softhsm PKCS#11 object
+net-dns/pdns:lmdb - Use LMDB as backend.
 net-dns/pdns:lua-records - Enable LUA records.
 net-dns/pdns:mydns - Making it possible to use a MyDNS MySQL database with PowerDNS (not recommended for new deployments).
 net-dns/pdns:remote - Use a generic socket or pipe as a backend (via JSON RPC requests).
@@ -8850,7 +8852,7 @@ x11-misc/ktsuss:sudo - Use the sudo backend instead the su one
 x11-misc/light-locker:dpms - Turn on the display on screensaver deactivation.
 x11-misc/light-locker:screensaver - Lock the screen on screensaver activation.
 x11-misc/lightdm:gtk - Pull in the gtk+ greeter
-x11-misc/lightdm:non_root - Use non-root user by default
+x11-misc/lightdm:non-root - Use non-root user by default
 x11-misc/mugshot:gnome - Add support for gnome-base/gnome-control-center
 x11-misc/mugshot:libreoffice - Add support for app-office/libreoffice and app-office/libreoffice-bin
 x11-misc/mugshot:webcam - Add support for setting a profile photo in media-video/cheese
@@ -8922,7 +8924,6 @@ x11-plugins/pidgin-sipe:ocs2005-message-hack - Disable message timeout for OCS20
 x11-plugins/pidgin-sipe:openssl - Enable crypto support via dev-libs/openssl
 x11-plugins/pidgin-sipe:telepathy - Support use as a telepathy backend
 x11-plugins/pidgin-sipe:voice - Enable experimental voice/video support
-x11-plugins/pidgin-telegram:gcrypt - Use dev-libs/libgcrypt instead of dev-libs/openssl.
 x11-plugins/vicious:contrib - Install extra widgets, some for less common hardware, some contributed by Vicious users.
 x11-plugins/wmbattery:apm - Add APM (Advanced Power Management) support
 x11-plugins/wmfire:session - Enable session management

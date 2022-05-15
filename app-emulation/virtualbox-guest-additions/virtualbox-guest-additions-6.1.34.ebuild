@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit linux-mod systemd toolchain-funcs
+inherit linux-mod systemd toolchain-funcs udev
 
 MY_PN="VirtualBox"
 MY_PV="${PV/beta/BETA}"
@@ -74,8 +74,8 @@ src_prepare() {
 	# Provide kernel sources
 	pushd src/VBox/Additions &>/dev/null || die
 	ebegin "Extracting guest kernel module sources"
-	kmk GuestDrivers-src vboxguest-src vboxsf-src vboxvideo-src &>/dev/null || die
-	eend
+	kmk GuestDrivers-src vboxguest-src vboxsf-src vboxvideo-src &>/dev/null
+	eend $? || die
 	popd &>/dev/null || die
 
 	# PaX fixes (see bug #298988)
@@ -185,6 +185,7 @@ src_install() {
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
+	udev_reload
 	if ! use X ; then
 		elog "use flag X is off, enable it to install the"
 		elog "X Window System video driver."

@@ -4,6 +4,7 @@ DEPEND=dev-libs/boost:=
 DESCRIPTION=Collection of multi-dimensional data structure and indexing algorithm
 EAPI=8
 HOMEPAGE=https://gitlab.com/mdds/mdds
+INHERIT=autotools toolchain-funcs
 IUSE=doc openmp valgrind test
 KEYWORDS=~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86 ~amd64-linux ~x86-linux
 LICENSE=MIT
@@ -12,4 +13,4 @@ RESTRICT=!test? ( test )
 SLOT=1/2.0
 SRC_URI=https://kohei.us/files/mdds/src/mdds-2.0.2.tar.xz
 _eclasses_=autotools	b46e8992a8126c894fbdc8084fc040c4	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
-_md5_=3097eb48267d4874b29c7d42bcffd748
+_md5_=1a2f60ace6d364ac211ec84296f2186a
