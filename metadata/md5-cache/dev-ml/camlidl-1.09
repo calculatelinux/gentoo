@@ -3,10 +3,11 @@ DEPEND=>=dev-lang/ocaml-3.10.2:=[ocamlopt]
 DESCRIPTION=CamlIDL is a stub code generator for using C/C++ libraries from O'Caml
 EAPI=7
 HOMEPAGE=http://caml.inria.fr/camlidl/
+INHERIT=toolchain-funcs
 KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
 LICENSE=QPL-1.0 LGPL-2
 RDEPEND=>=dev-lang/ocaml-3.10.2:=[ocamlopt]
 SLOT=0/1.09
 SRC_URI=https://github.com/xavierleroy/camlidl/archive/camlidl109.tar.gz
-_eclasses_=multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=23fdc3a939ab49b21ad4f3a436f3dd36

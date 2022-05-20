@@ -4,11 +4,12 @@ DEPEND=jpeg? ( virtual/jpeg:0= ) mpi? ( virtual/mpi ) opengl? ( virtual/glu virt
 DESCRIPTION=A portable, high performance parallel ray tracing system
 EAPI=7
 HOMEPAGE=http://jedi.ks.uiuc.edu/~johns/raytracer/
+INHERIT=toolchain-funcs
 IUSE=doc examples jpeg mpi +opengl openmp png threads
 KEYWORDS=~amd64 ~ppc ~x86 ~x64-macos
 LICENSE=BSD
 RDEPEND=jpeg? ( virtual/jpeg:0= ) mpi? ( virtual/mpi ) opengl? ( virtual/glu virtual/opengl ) png? ( media-libs/libpng:0= )
 SLOT=0
 SRC_URI=http://jedi.ks.uiuc.edu/~johns/raytracer/files/0.99b6/tachyon-0.99b6.tar.gz
-_eclasses_=multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=9c5e369336a0dd681635a25254be1751

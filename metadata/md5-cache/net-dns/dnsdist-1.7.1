@@ -4,6 +4,7 @@ DEPEND=acct-group/dnsdist acct-user/dnsdist >=dev-libs/boost-1.35:= dev-libs/lib
 DESCRIPTION=A highly DNS-, DoS- and abuse-aware loadbalancer
 EAPI=7
 HOMEPAGE=https://dnsdist.org
+INHERIT=lua-single
 IUSE=dnscrypt dnstap doh gnutls +lmdb regex remote-logging snmp +ssl systemd test lua_single_target_luajit lua_single_target_lua5-1 lua_single_target_lua5-3 lua_single_target_lua5-4
 KEYWORDS=~amd64
 LICENSE=GPL-2
@@ -12,5 +13,5 @@ REQUIRED_USE=^^ ( lua_single_target_luajit lua_single_target_lua5-1 lua_single_t
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://downloads.powerdns.com/releases/dnsdist-1.7.1.tar.bz2
-_eclasses_=lua-single	f2c2fb82c912dd65d53bdae3613a331f	lua-utils	e69ff116248d78546ae1a234c086fe80	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=lua-single	f2c2fb82c912dd65d53bdae3613a331f	lua-utils	e69ff116248d78546ae1a234c086fe80	multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=4e9bda477b4080d2b2e7ac9aeac14db2

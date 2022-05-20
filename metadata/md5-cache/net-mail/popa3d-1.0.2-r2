@@ -3,6 +3,7 @@ DEPEND=acct-group/popa3d acct-user/popa3d virtual/libcrypt:= pam? ( >=sys-libs/p
 DESCRIPTION=A security oriented POP3 server
 EAPI=7
 HOMEPAGE=http://www.openwall.com/popa3d/
+INHERIT=flag-o-matic toolchain-funcs
 IUSE=pam mbox +maildir
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=Openwall
@@ -10,5 +11,5 @@ RDEPEND=acct-group/popa3d acct-user/popa3d virtual/libcrypt:= pam? ( >=sys-libs/
 REQUIRED_USE=^^ ( maildir mbox )
 SLOT=0
 SRC_URI=http://www.openwall.com/popa3d/popa3d-1.0.2.tar.gz mirror://gentoo/popa3d-0.6.3-vname-2.diff.gz maildir? ( mirror://gentoo/popa3d-0.5.9-maildir-2.diff.gz )
-_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	dab5d8ec471d025b79c9e6906bcf3bff	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	wrapper	4a1902f969e5718126434fc35f3a0d9c
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	dab5d8ec471d025b79c9e6906bcf3bff	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multilib	4fbbbc98f236f1b43acd99476bc3cd85	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	toolchain-funcs	fd9cde67030b26e479eeadaced488253	wrapper	4a1902f969e5718126434fc35f3a0d9c
 _md5_=0bc83139edff014280894c54d9585e83

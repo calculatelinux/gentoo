@@ -3,6 +3,7 @@ DEPEND=media-libs/imlib2[X] >=media-libs/libpng-1.2:0= x11-libs/libX11 curl? ( n
 DESCRIPTION=A fast, lightweight imageviewer using imlib2
 EAPI=7
 HOMEPAGE=https://feh.finalrewind.org/
+INHERIT=toolchain-funcs xdg-utils
 IUSE=debug curl exif test xinerama inotify
 KEYWORDS=~amd64 ~arm ~arm64 ~mips ~ppc ~ppc64 ~x86
 LICENSE=feh
@@ -10,5 +11,5 @@ RDEPEND=media-libs/imlib2[X] >=media-libs/libpng-1.2:0= x11-libs/libX11 curl? ( 
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://feh.finalrewind.org/feh-3.6.2.tar.bz2
-_eclasses_=multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
+_eclasses_=multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
 _md5_=db2d56f4c454c11eecd2ee12df6b6c11

@@ -4,6 +4,7 @@ DEPEND=dev-db/sqlite:3 dev-libs/glib:2 net-libs/webkit-gtk:4= x11-libs/gtk+:3 lu
 DESCRIPTION=A fast, extensible, and customizable web browser
 EAPI=7
 HOMEPAGE=https://luakit.github.io/luakit
+INHERIT=lua-single toolchain-funcs xdg
 IUSE=doc test lua_single_target_luajit lua_single_target_lua5-1
 KEYWORDS=~amd64 ~arm64
 LICENSE=GPL-3+
@@ -12,5 +13,5 @@ REQUIRED_USE=^^ ( lua_single_target_luajit lua_single_target_lua5-1 )
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/luakit/luakit/archive/2.3.tar.gz -> luakit-2.3.tar.gz
-_eclasses_=lua-single	f2c2fb82c912dd65d53bdae3613a331f	lua-utils	e69ff116248d78546ae1a234c086fe80	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
+_eclasses_=lua-single	f2c2fb82c912dd65d53bdae3613a331f	lua-utils	e69ff116248d78546ae1a234c086fe80	multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
 _md5_=2d2c9c8d95116e03b0db5f188c978b19

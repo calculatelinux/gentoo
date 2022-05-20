@@ -1,9 +1,9 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-inherit autotools flag-o-matic qmake-utils toolchain-funcs
+inherit autotools qmake-utils
 
 DESCRIPTION="Simple passphrase entry dialogs which utilize the Assuan protocol"
 HOMEPAGE="https://gnupg.org/aegypten2"
@@ -52,8 +52,6 @@ src_prepare() {
 }
 
 src_configure() {
-	[[ "$(gcc-major-version)" -ge 5 ]] && append-cxxflags -std=gnu++11
-
 	export QTLIB="$(qt5_get_libdir)"
 
 	econf \

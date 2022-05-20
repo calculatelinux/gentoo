@@ -13,6 +13,7 @@ llvm
 luajittex
 lua_single_target_luajit
 lua_targets_luajit
+mono
 opencl
 valgrind
 
@@ -27,11 +28,9 @@ fam
 fontforge
 gd
 gpm
-gtk
-gtk2
-gtk3
 gtk4
 gtk-doc
+kde
 latex
 ldap
 mpi
@@ -40,3 +39,4 @@ sctp
 systemtap
 tk
 tpm
+xemacs

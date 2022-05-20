@@ -4,6 +4,7 @@ DEPEND=media-libs/libpng:0= media-libs/libsdl2:0=[joystick,opengl,video] sys-lib
 DESCRIPTION=A fork of Mupen64 Nintendo 64 emulator, core library
 EAPI=7
 HOMEPAGE=https://www.mupen64plus.org/
+INHERIT=toolchain-funcs
 IUSE=debugger gles2-only lirc new-dynarec opencv +osd cpu_flags_x86_sse
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2+
@@ -11,5 +12,5 @@ RDEPEND=media-libs/libpng:0= media-libs/libsdl2:0=[joystick,opengl,video] sys-li
 REQUIRED_USE=gles2-only? ( !osd )
 SLOT=0/2-sdl2
 SRC_URI=https://github.com/mupen64plus/mupen64plus-core/releases/download/2.5.9/mupen64plus-core-src-2.5.9.tar.gz
-_eclasses_=multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=d99c06c3c393f408c64a45d862e65f9d

@@ -3,11 +3,12 @@ DEPEND=>=app-accessibility/at-spi2-core-2.0.0 media-libs/alsa-lib net-print/cups
 DESCRIPTION=IRCCloud Desktop Client
 EAPI=7
 HOMEPAGE=https://github.com/irccloud/irccloud-desktop https://www.irccloud.com/
+INHERIT=desktop unpacker xdg
 KEYWORDS=~amd64
 LICENSE=Apache-2.0
 RDEPEND=>=app-accessibility/at-spi2-core-2.0.0 media-libs/alsa-lib net-print/cups >=x11-libs/gtk+-3.0 x11-libs/libnotify >=dev-libs/nss-3 x11-libs/libXScrnSaver x11-libs/libXtst x11-misc/xdg-utils
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/irccloud/irccloud-desktop/releases/download/v0.16.0/irccloud-desktop_0.16.0_linux_amd64.deb
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	unpacker	697382d119fd3d195f110b7979184285	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253	unpacker	697382d119fd3d195f110b7979184285	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
 _md5_=d6f4174091dbdb62ccdc6115421e8398

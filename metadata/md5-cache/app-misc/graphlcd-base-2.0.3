@@ -4,6 +4,7 @@ DEPEND=dev-libs/libhid net-libs/libvncserver freetype? ( media-libs/freetype:2= 
 DESCRIPTION=Contains the lowlevel lcd drivers for GraphLCD
 EAPI=8
 HOMEPAGE=https://projects.vdr-developer.org/projects/graphlcd-base
+INHERIT=optfeature toolchain-funcs udev
 IUSE=fontconfig freetype graphicsmagick imagemagick lcd_devices_ax206dpf lcd_devices_picolcd_256x64 lcd_devices_vnc
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
@@ -11,5 +12,5 @@ RDEPEND=dev-libs/libhid net-libs/libvncserver freetype? ( media-libs/freetype:2=
 REQUIRED_USE=?? ( graphicsmagick imagemagick )
 SLOT=0
 SRC_URI=https://projects.vdr-developer.org/git/graphlcd-base.git/snapshot/graphlcd-base-2.0.3.tar.bz2
-_eclasses_=multilib	4a33c9008e5ee30cb8840a3fdc24df2b	optfeature	d524f291c80f9d21ad80fe978e3ca760	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	udev	2d229ad4bfa09058e0184b1ca900db32
+_eclasses_=multilib	4fbbbc98f236f1b43acd99476bc3cd85	optfeature	d524f291c80f9d21ad80fe978e3ca760	toolchain-funcs	fd9cde67030b26e479eeadaced488253	udev	2d229ad4bfa09058e0184b1ca900db32
 _md5_=41f4e37acf53c9b2658bd8a56236816c

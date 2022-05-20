@@ -4,11 +4,12 @@ DEPEND=gcrypt? ( dev-libs/libgcrypt:0= ) idn? ( net-dns/libidn:= ) kerberos? ( v
 DESCRIPTION=The GNU SASL client, server, and library
 EAPI=7
 HOMEPAGE=https://www.gnu.org/software/gsasl/
+INHERIT=autotools
 IUSE=doc gcrypt idn kerberos nls ntlm static-libs +threads
 KEYWORDS=amd64 ppc ~riscv x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=GPL-3
 RDEPEND=gcrypt? ( dev-libs/libgcrypt:0= ) idn? ( net-dns/libidn:= ) kerberos? ( virtual/krb5 ) nls? ( >=sys-devel/gettext-0.18.1 ) ntlm? ( net-libs/libntlm )
 SLOT=0
 SRC_URI=mirror://gnu/gsasl/gsasl-1.10.0.tar.gz
-_eclasses_=autotools	b46e8992a8126c894fbdc8084fc040c4	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=autotools	136117fb43a9bf5598530e9cc642f710	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=8b6b7ae9b4d7dd74f809d75acce0c849

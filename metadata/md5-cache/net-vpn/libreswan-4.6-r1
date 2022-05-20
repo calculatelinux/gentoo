@@ -4,6 +4,7 @@ DEPEND=dev-libs/gmp:0= dev-libs/libevent:0= dev-libs/nspr >=dev-libs/nss-3.42 >=
 DESCRIPTION=IPsec implementation for Linux, fork of Openswan
 EAPI=8
 HOMEPAGE=https://libreswan.org/
+INHERIT=systemd flag-o-matic toolchain-funcs tmpfiles
 IUSE=caps curl dnssec ldap networkmanager pam seccomp selinux systemd test
 KEYWORDS=amd64 ~arm ~ppc x86
 LICENSE=GPL-2 BSD-4 RSA DES
@@ -11,5 +12,5 @@ RDEPEND=dev-libs/gmp:0= dev-libs/libevent:0= dev-libs/nspr >=dev-libs/nss-3.42 >
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://download.libreswan.org/libreswan-4.6.tar.gz
-_eclasses_=flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	systemd	2736b403a83f194b59b767f3b344c2c1	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multilib	4fbbbc98f236f1b43acd99476bc3cd85	systemd	2736b403a83f194b59b767f3b344c2c1	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=fb6ff66ae6f7b4877dae8ddae79d1bc5

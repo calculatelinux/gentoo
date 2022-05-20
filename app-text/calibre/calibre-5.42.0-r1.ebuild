@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..9} )
+PYTHON_COMPAT=( python3_{8..10} )
 PYTHON_REQ_USE="ipv6(+),sqlite,ssl"
 
 inherit toolchain-funcs python-single-r1 qmake-utils xdg-utils
@@ -134,14 +134,6 @@ PATCHES=(
 	# assert for now.
 	"${FILESDIR}/${PN}-5.31.0-qt-image-test.patch"
 )
-
-pkg_pretend() {
-	if [[ ${MERGE_TYPE} != binary ]] && tc-is-gcc && [[ $(gcc-major-version) -lt 6 ]]; then
-		eerror "Calibre cannot be built with this version of gcc."
-		eerror "You need at least gcc-6.0"
-		die "Your C compiler is too old for this package."
-	fi
-}
 
 src_prepare() {
 	default

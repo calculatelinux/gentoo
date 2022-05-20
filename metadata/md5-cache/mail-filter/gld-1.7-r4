@@ -3,11 +3,12 @@ DEPEND=sys-libs/zlib dev-libs/openssl:0= !postgres? ( dev-db/mysql-connector-c:0
 DESCRIPTION=A standalone anti-spam greylisting algorithm on top of Postfix
 EAPI=7
 HOMEPAGE=http://www.gasmi.net/gld.html
+INHERIT=toolchain-funcs
 IUSE=postgres
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2
 RDEPEND=sys-libs/zlib dev-libs/openssl:0= !postgres? ( dev-db/mysql-connector-c:0= ) postgres? ( dev-db/postgresql:*[server] )
 SLOT=0
 SRC_URI=http://www.gasmi.net/down/gld-1.7.tgz
-_eclasses_=multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=41ed5d3d18d77e66e5f2cdebab907358

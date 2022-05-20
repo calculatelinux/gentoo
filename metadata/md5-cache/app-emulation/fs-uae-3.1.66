@@ -4,11 +4,12 @@ DEPEND=dev-libs/glib:2 media-libs/libpng:0= media-libs/libsdl2[opengl,X] media-l
 DESCRIPTION=Integrates the most accurate Amiga emulation code available from WinUAE
 EAPI=8
 HOMEPAGE=https://fs-uae.net/
+INHERIT=autotools xdg
 IUSE=fmv glew +jit
 KEYWORDS=~amd64 ~ppc64
 LICENSE=GPL-2
 RDEPEND=dev-libs/glib:2 media-libs/libpng:0= media-libs/libsdl2[opengl,X] media-libs/openal sys-libs/zlib virtual/opengl x11-libs/libdrm x11-libs/libX11 fmv? ( media-libs/libmpeg2 ) glew? ( media-libs/glew:0= )
 SLOT=0
 SRC_URI=https://fs-uae.net/files/FS-UAE/Stable/3.1.66/fs-uae-3.1.66.tar.xz
-_eclasses_=autotools	b46e8992a8126c894fbdc8084fc040c4	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
+_eclasses_=autotools	136117fb43a9bf5598530e9cc642f710	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
 _md5_=3fcca609f536c82ff9330f8a513202ec

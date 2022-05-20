@@ -4,11 +4,12 @@ DEPEND=sys-libs/ncurses:0=
 DESCRIPTION=Jonathan's Own Version of Emacs, a light emacs-like editor without LISP bindings
 EAPI=7
 HOMEPAGE=ftp://ftp.cs.toronto.edu/cs/ftp/pub/hugh/jove-dev/
+INHERIT=toolchain-funcs
 IUSE=doc
 KEYWORDS=amd64 ppc x86
 LICENSE=JOVE
 RDEPEND=sys-libs/ncurses:0=
 SLOT=0
 SRC_URI=ftp://ftp.cs.toronto.edu/cs/ftp/pub/hugh/jove-dev/jove4.16.0.73.tgz
-_eclasses_=multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=0e048e1299ad161ef7950180847ee08a

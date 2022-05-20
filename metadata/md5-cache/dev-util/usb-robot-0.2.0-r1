@@ -3,10 +3,11 @@ DEPEND=virtual/libusb:0 sys-libs/readline:=
 DESCRIPTION=USB Reverse engineering tools
 EAPI=6
 HOMEPAGE=http://usb-robot.sourceforge.net/
+INHERIT=toolchain-funcs
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2
 RDEPEND=virtual/libusb:0 sys-libs/readline:=
 SLOT=0
 SRC_URI=mirror://sourceforge/usb-robot/usb-robot-0.2.0.tar.gz
-_eclasses_=multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=a47c365d6822c3c9914ed4567d2c896d

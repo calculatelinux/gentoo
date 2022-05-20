@@ -943,7 +943,6 @@ app-misc/wildq:toml - TOML support via pytoml
 app-misc/wildq:xml - XML support via xmltodict
 app-misc/worker:avfs - Enable support for sys-fs/avfs
 app-misc/zygrib:maps - Installs additional GSHHS maps for high resolution coastline data and cities
-app-mobilephone/gammu:bluetooth - Enables bluetooth support
 app-mobilephone/gammu:curl - Enables curl support
 app-mobilephone/gammu:irda - Enables infrared support
 app-mobilephone/gammu:mysql - Use mysql for data storage
@@ -1683,7 +1682,6 @@ dev-java/commons-logging:servletapi - Add optional support for servletapi
 dev-java/dom4j:jaxen - Includes org.jaxen.dom4j package
 dev-java/eclipse-ecj:ant - Support using ecj in Ant builds via dev-java/ant-eclipse-ecj
 dev-java/emma:launcher - Install /usr/bin/emma. Collides with sci-biology/emboss.
-dev-java/gcj-jdk:awt - Install AWT libraries, needed by some GUIs (not needed to build icedtea)
 dev-java/icedtea:cacao - Use the CACAO virtual machine rather than HotSpot.
 dev-java/icedtea:cups - Link against the CUPS library at compile time, rather than using it dynamically at runtime.
 dev-java/icedtea:headless-awt - Don't install the X backend for AWT, needed by some GUIs (used to be X flag)
@@ -2100,6 +2098,8 @@ dev-libs/liblogging:stdlog - Enables liblogging's core component (think of it as
 dev-libs/libmemcached:hsieh - Use Hsieh hash algorithm.
 dev-libs/libmemcached:libevent - Use the libevent event loop interface.
 dev-libs/libmemcached:sasl - Use sasl auth for communications.
+dev-libs/libmemcached-awesome:libevent - Use the libevent event loop interface.
+dev-libs/libmemcached-awesome:sasl - Use sasl auth for communications.
 dev-libs/libnfc:pcsc-lite - Enable NFC drivers that require pcsc-lite
 dev-libs/libnl:python - Install experimental dev-lang/python bindings
 dev-libs/libnl:utils - Install command line interface utils
@@ -6199,7 +6199,6 @@ net-mail/cyrus-imapd:xapian - Enable Xapian search engine support
 net-mail/dbmail:sieve - Enable sieve filter support
 net-mail/dovecot:argon2 - Add support for ARGON2 password schemes
 net-mail/dovecot:lucene - Add lucene full text search (FTS) support using dev-cpp/clucene
-net-mail/dovecot:lzma - Add support for lzma (de)compression
 net-mail/dovecot:managesieve - Add managesieve protocol support
 net-mail/dovecot:rpc - Add support for NFS quotas
 net-mail/dovecot:sieve - Add sieve support
@@ -6492,6 +6491,7 @@ net-misc/kafkacat:avro - Enable avro serialization/deserialization support
 net-misc/kafkacat:json - Enable json support
 net-misc/kea:openssl - Use dev-libs/openssl instead of dev-libs/botan
 net-misc/kea:samples - Install sample configuration files
+net-misc/kea:shell - Install kea-shell text management client for Control Agent
 net-misc/knock:server - Installs the knockd server daemon.
 net-misc/libteam:zmq - Build witch net-libs/zeromq support
 net-misc/lldpd:cdp - Enable Cisco Discovery Protocol
@@ -6525,6 +6525,7 @@ net-misc/mosh:utempter - Include libutempter support
 net-misc/mrouted:rsrr - Enable Routing Support for Resource Reservations, for RSVP
 net-misc/mulk:checksum - Enable checksum verification for Metalink from dev-libs/openssl
 net-misc/mulk:metalink - Enable support for media-libs/libmetalink
+net-misc/netifrc:dhcp - Allow interfaces to configure via DHCP
 net-misc/netkit-bootparamd:libtirpc - Build against net-libs/libtirpc for RPC support
 net-misc/networkmanager:concheck - Enable connectivity checking support
 net-misc/networkmanager:connection-sharing - Support connection sharing (uses net-dns/dnsmasq)
@@ -6814,7 +6815,6 @@ net-print/hplip:fax - Enable fax on multifunction devices which support it
 net-print/hplip:hpcups - Build the hpcups driver for cups (by HP)
 net-print/hplip:hpijs - Build the IJS driver for cups (Foomatic)
 net-print/hplip:kde - Enables kde-misc/skanlite as scanner GUI with USE="scanner X"
-net-print/hplip:libnotify - Enables desktop notifications
 net-print/hplip:libusb0 - Depend on virtual/libusb SLOT 0. Some old printers do not work with virtual/libusb SLOT 1.
 net-print/hplip:minimal - Only build internal hpijs/hpcups driver (not recommended at all, make sure you know what you are doing)
 net-print/hplip:parport - Enable parallel port for devices which require it
@@ -7234,6 +7234,10 @@ sci-libs/ViSP:opencv - Enables media-libs/opencv support.
 sci-libs/ViSP:pcl - Enables sci-libs/pcl support.
 sci-libs/ViSP:tutorials - Installs tutorials.
 sci-libs/ViSP:zbar - Enables barcodes reading.
+sci-libs/XNNPACK:assembly - Build with assembly micro-kernels
+sci-libs/XNNPACK:jit - Build with JIT micro-kernels
+sci-libs/XNNPACK:memopt - Build with optimized memory allocation scheme
+sci-libs/XNNPACK:sparse - Build with graph rewriting for sparse inference
 sci-libs/adolc:boost - Use the boost allocator from dev-libs/boost
 sci-libs/adolc:sparse - Add support for sparse matrix algebra with sci-libs/colpack
 sci-libs/armadillo:arpack - Link with sci-libs/arpack libraries for eigen decomposition
@@ -8038,7 +8042,6 @@ sys-boot/plymouth:split-usr - Enable this if /bin and /usr/bin are separate dire
 sys-boot/refind:btrfs - Builds the EFI binary btrfs filesystem driver
 sys-boot/refind:ext2 - Builds the EFI binary ext2 filesystem driver
 sys-boot/refind:ext4 - Builds the EFI binary ext4 filesystem driver
-sys-boot/refind:gnuefi - Compile using GNU-EFI instead of Tianocore
 sys-boot/refind:hfs - Builds the EFI binary hfs filesystem driver
 sys-boot/refind:iso9660 - Builds the EFI binary iso9660 filesystem driver
 sys-boot/refind:ntfs - Builds the EFI binary ntfs filesystem driver

@@ -4,10 +4,11 @@ DEPEND=>=dev-libs/ucl-1.03 sys-libs/zlib
 DESCRIPTION=Ultimate Packer for eXecutables (free version using UCL compression and not NRV)
 EAPI=7
 HOMEPAGE=https://upx.github.io/
+INHERIT=toolchain-funcs
 KEYWORDS=~amd64 ~arm ~arm64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2+ UPX-exception
 RDEPEND=!app-arch/upx-bin
 SLOT=0
 SRC_URI=https://github.com/upx/upx/releases/download/v3.96/upx-3.96-src.tar.xz
-_eclasses_=multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=ed8c79217d0a194be6850a98491fd2fd

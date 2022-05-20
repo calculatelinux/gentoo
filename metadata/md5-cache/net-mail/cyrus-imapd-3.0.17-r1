@@ -4,6 +4,7 @@ DEPEND=sys-libs/zlib:= dev-libs/libpcre:3 >=dev-libs/cyrus-sasl-2.1.13:2 dev-lib
 DESCRIPTION=The Cyrus IMAP Server
 EAPI=8
 HOMEPAGE=https://www.cyrusimap.org/
+INHERIT=autotools flag-o-matic pam ssl-cert
 IUSE=afs backup calalarm caps clamav http kerberos ldap lmdb mysql nntp pam perl postgres replication +server sieve snmp sqlite ssl static-libs tcpd test xapian ssl
 KEYWORDS=~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=BSD-with-attribution GPL-2
@@ -12,5 +13,5 @@ REQUIRED_USE=afs? ( kerberos ) backup? ( sqlite ) calalarm? ( http ) http? ( sql
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/cyrusimap/cyrus-imapd/releases/download/cyrus-imapd-3.0.17/cyrus-imapd-3.0.17.tar.gz
-_eclasses_=autotools	b46e8992a8126c894fbdc8084fc040c4	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	pam	e44a1dd98f13e1ad76de01e919bde1f1	ssl-cert	6dbe6a8a3dccb3d2f28f8404cd02c7d7	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=autotools	136117fb43a9bf5598530e9cc642f710	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4fbbbc98f236f1b43acd99476bc3cd85	pam	e44a1dd98f13e1ad76de01e919bde1f1	ssl-cert	6dbe6a8a3dccb3d2f28f8404cd02c7d7	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=0724e2a14792988cb9b9a81d7c977ace

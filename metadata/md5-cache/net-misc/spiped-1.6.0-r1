@@ -3,10 +3,11 @@ DEPEND=dev-libs/openssl:0=
 DESCRIPTION=secure pipe daemon
 EAPI=6
 HOMEPAGE=http://www.tarsnap.com/spiped.html
+INHERIT=toolchain-funcs
 KEYWORDS=amd64 x86
 LICENSE=BSD
 RDEPEND=dev-libs/openssl:0= !net-mail/qlogtools
 SLOT=0
 SRC_URI=http://www.tarsnap.com/spiped/spiped-1.6.0.tgz
-_eclasses_=multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=25b51dd51bdd40db6b85ca7fc3d40e52

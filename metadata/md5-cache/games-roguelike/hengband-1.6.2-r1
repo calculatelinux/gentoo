@@ -4,11 +4,12 @@ DEPEND=>=sys-libs/ncurses-5:0= X? ( x11-libs/libX11 ) X? ( x11-libs/libXt )
 DESCRIPTION=An Angband variant, with a Japanese/fantasy theme
 EAPI=7
 HOMEPAGE=http://hengband.sourceforge.jp/en/
+INHERIT=autotools
 IUSE=X l10n_ja
 KEYWORDS=~x86
 LICENSE=Moria
 RDEPEND=>=sys-libs/ncurses-5:0= X? ( x11-libs/libX11 )
 SLOT=0
 SRC_URI=mirror://sourceforge.jp/hengband/10331/hengband-1.6.2.tar.bz2 mirror://gentoo/hengband-1.6.2-mispellings.patch.gz
-_eclasses_=autotools	b46e8992a8126c894fbdc8084fc040c4	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=autotools	136117fb43a9bf5598530e9cc642f710	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=d70186f25456fbf7c04fdee9b0008e29

@@ -3,11 +3,12 @@ DEPEND=emacs? ( >=app-editors/emacs-23.1:* )
 DESCRIPTION=Scheme48 is an implementation of the Scheme Programming Language
 EAPI=8
 HOMEPAGE=https://www.s48.org/
+INHERIT=elisp-common flag-o-matic toolchain-funcs
 IUSE=doc emacs
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=BSD
 RDEPEND=emacs? ( >=app-editors/emacs-23.1:* )
 SLOT=0
 SRC_URI=https://www.s48.org/1.9.2/scheme48-1.9.2.tgz
-_eclasses_=elisp-common	e7aaa047873789f549ea3df2f04b2145	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=elisp-common	e7aaa047873789f549ea3df2f04b2145	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=85251a10e2233507cac3c3482896efb8

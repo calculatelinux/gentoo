@@ -4,10 +4,11 @@ DEPEND=>=media-libs/libsdl-1.2 >=media-libs/sdl-mixer-1.2 >=media-libs/sdl-image
 DESCRIPTION=Create as many words as you can before the time runs out
 EAPI=7
 HOMEPAGE=http://www.coralquest.com/anagramarama/
+INHERIT=desktop toolchain-funcs vcs-clean
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=>=media-libs/libsdl-1.2 >=media-libs/sdl-mixer-1.2 >=media-libs/sdl-image-1.2 sys-apps/miscfiles
 SLOT=0
 SRC_URI=http://www.omega.clara.net/anagramarama/dist/anagramarama-0.2.tar.gz
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	vcs-clean	d271b7bc7e6a009758d7d4ef749174e3
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253	vcs-clean	d271b7bc7e6a009758d7d4ef749174e3
 _md5_=443a5310580513752c42a951fcdee196

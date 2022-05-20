@@ -16,7 +16,7 @@ VERIFY_SIG_OPENPGP_KEY_PATH=${BROOT}/usr/share/openpgp-keys/openssl.org.asc
 LICENSE="openssl"
 SLOT="0/1.1" # .so version of libssl/libcrypto
 [[ "${PV}" = *_pre* ]] || \
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
+KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
 IUSE="+asm rfc3779 sctp cpu_flags_x86_sse2 sslv3 static-libs test tls-compression tls-heartbeat vanilla verify-sig weak-ssl-ciphers"
 RESTRICT="!test? ( test )"
 
@@ -106,9 +106,19 @@ src_prepare() {
 	# and 'make depend' uses -Werror for added fun (#417795 again)
 	[[ ${CC} == *clang* ]] && append-flags -Qunused-arguments
 
+	# We really, really need to build OpenSSL w/ strict aliasing disabled.
+	# It's filled with violations and it *will* result in miscompiled
+	# code. This has been in the ebuild for > 10 years but even in 2022,
+	# it's still relevant:
+	# - https://github.com/llvm/llvm-project/issues/55255
+	# - https://github.com/openssl/openssl/issues/18225
+	# Don't remove the no strict aliasing bits below!
+	filter-flags -fstrict-aliasing
 	append-flags -fno-strict-aliasing
-	append-flags $(test-flags-CC -Wa,--noexecstack)
+
 	append-cppflags -DOPENSSL_NO_BUF_FREELISTS
+
+	append-flags $(test-flags-CC -Wa,--noexecstack)
 
 	# Prefixify Configure shebang (#141906)
 	sed \
@@ -191,6 +201,7 @@ multilib_src_configure() {
 		$(use_ssl asm) \
 		$(use_ssl rfc3779) \
 		$(use_ssl sctp) \
+		$(use test || echo "no-tests") \
 		$(use_ssl tls-compression zlib) \
 		$(use_ssl tls-heartbeat heartbeats) \
 		$(use_ssl weak-ssl-ciphers) \

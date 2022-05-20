@@ -4,11 +4,12 @@ DEPEND=sys-libs/ncurses:0=
 DESCRIPTION=console based mp3 ripper, with cddb support
 EAPI=7
 HOMEPAGE=http://wspse.de/WSPse/Linux-MP3c.php3
+INHERIT=flag-o-matic toolchain-funcs
 IUSE=mp3 vorbis
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses:0= app-cdr/cdrtools mp3? ( media-sound/lame media-sound/mp3info ) vorbis? ( media-sound/vorbis-tools )
 SLOT=0
 SRC_URI=ftp://ftp.wspse.de/pub/linux/wspse/mp3c-0.31.tar.bz2
-_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	dab5d8ec471d025b79c9e6906bcf3bff	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	wrapper	4a1902f969e5718126434fc35f3a0d9c
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	dab5d8ec471d025b79c9e6906bcf3bff	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	multilib	4fbbbc98f236f1b43acd99476bc3cd85	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	toolchain-funcs	fd9cde67030b26e479eeadaced488253	wrapper	4a1902f969e5718126434fc35f3a0d9c
 _md5_=0ef5b9a515f590e670f2d515cfd3490f

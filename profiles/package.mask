@@ -33,6 +33,92 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2022-05-20)
+# Unused slots of cucumber components that are no longer or were never
+# used by current cucumber versions. Masked for removal in 30 days.
+dev-util/cucumber-core:9
+dev-util/cucumber-create-meta:4
+dev-util/cucumber-cucumber-expressions:10
+dev-util/cucumber-gherkin:18
+dev-util/cucumber-gherkin:20
+dev-util/cucumber-html-formatter:13
+dev-util/cucumber-html-formatter:16
+dev-util/cucumber-messages:13
+dev-util/cucumber-messages:14
+dev-util/cucumber-messages:15
+dev-util/cucumber-tag-expressions:2
+dev-util/cucumber-tag-expressions:3
+dev-util/cucumber-wire:5
+
+# Sam James <sam@gentoo.org> (2022-05-20)
+# Unmaintained, out of date, failing tests, and uses deprecated eclass methods
+# (EGO_SUM). bug #700846, bug #844445. Removal on 2022-06-20.
+dev-util/kubebuilder
+
+# Matt Turner <mattst88@gentoo.org> (2022-05-19)
+# Dead package upstream for more than 7 years.
+# Removal on 2022-06-19.
+dev-cpp/gconfmm
+
+# Matt Turner <mattst88@gentoo.org> (2022-05-19)
+# Dead package upstream for more than 10 years.
+# Removal on 2022-06-19. Bug #808237
+dev-cpp/libglademm
+
+# Matt Turner <mattst88@gentoo.org> (2022-05-19)
+# Dead package upstream for more than 10 years.
+# Removal on 2022-06-19. Bug #808375
+dev-cpp/libgnomecanvasmm
+
+# Matt Turner <mattst88@gentoo.org> (2022-05-19)
+# Last release in 2006. Last upstream commit in 2007. One of two remaining
+# reverse dependencies of dev-cpp/libglademm, which is dead. Last remaining
+# reverse dependency of dev-cpp/libgnomecanvasmm, which is dead.
+# Removal on 2022-06-19. Bug #845228
+games-board/ascal
+
+# Matt Turner <mattst88@gentoo.org> (2022-05-19)
+# Last release in 2013. Last upstream commit in 2015. One of two remaining
+# reverse dependencies of dev-cpp/libglademm, which is dead.
+# Removal on 2022-06-19. Bug #845231
+app-pda/barry
+
+# Matt Turner <mattst88@gentoo.org> (2022-05-19)
+# Last release in 2010. Only one commit upstream since 2010 (in 2015). Only
+# remaining reverse dependency of dev-cpp/gconfmm, which is dead.
+# Removal on 2022-06-19. Bug #845234
+games-board/ccgo
+
+# Sam James <sam@gentoo.org> (2022-05-19)
+# Masked for removal. No upstream activity since 2013. nose is considered
+# obsolete and on life-support anyway. Removal on 2022-06-19. bug #845762
+dev-python/nose-exclude
+
+# Sam James <sam@gentoo.org> (2022-05-19)
+# Masked for removal. No upstream activity since 2013. nose is considered
+# obsolete and on life-support anyway. Removal on 2022-06-19.
+dev-python/nose_fixes
+
+# Michał Górny <mgorny@gentoo.org> (2022-05-19)
+# No upstream commits since 2015.  The project seems only relevant
+# to Python 2.  No revdeps left.
+# Removal on 2022-06-18.  Bug #846449.
+dev-python/unicodecsv
+
+# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2022-05-19)
+# Unfortunately this has completely stopped working due to
+# upstream changes in WhatsApp. Bug 844985. As an alternative
+# try: *net-im/wazzapp-bin* which still works and also
+# offers additional features over whatsapp-desktop-bin
+# Masked for removal in 30 days
+net-im/whatsapp-desktop-bin
+
+# Matt Turner <mattst88@gentoo.org> (2022-05-17)
+# Dead packages. No reverse dependencies.
+# Removal on 2022-06-17
+dev-perl/Gtk2-SourceView2
+dev-perl/Gtk2-Unique
+
 # Michał Górny <mgorny@gentoo.org> (2022-05-16)
 # This was only added for dev-python/nptyping, and nptyping-2.0.0
 # no longer uses it.  No activity since Aug 2021.
@@ -285,19 +371,6 @@ dev-ruby/rqrcode_core:0
 # Unused java library. Removal on 2022-05-24.
 dev-java/jgraph
 
-# Michał Górny <mgorny@gentoo.org> (2022-04-22)
-# Obsolete namespace packages.  PEP 420 implicit namespaces are now
-# the preferred solution.  Upgrade the reverse dependencies to get
-# these packages unmerged.
-# Removal on 2022-05-09.
-dev-python/namespace-google
-dev-python/namespace-lazr
-dev-python/namespace-paste
-dev-python/namespace-repoze
-dev-python/namespace-ruamel
-dev-python/namespace-sphinxcontrib
-dev-python/namespace-zope
-
 # Hans de Graaff <graaff@gentoo.org> (2022-04-22)
 # Obsolete slots that are no longer used by current
 # dev-ruby/simplecov versions and have no use on their own.
@@ -315,20 +388,6 @@ dev-java/jempbox
 dev-java/microba
 dev-java/spin
 
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-04-17)
-# Unused java libraries. Removal in 30 days.
-dev-java/boot-bin
-dev-java/eclipsito
-dev-java/gcj-jdk
-dev-java/japitools
-dev-java/jboss-marshalling
-dev-java/jdbc-mssqlserver
-dev-java/jsr250
-dev-java/maven-hawtjni-plugin
-dev-java/mimepull
-dev-java/oracle-javamail
-dev-java/xjavac
-
 # David Seifert <soap@gentoo.org> (2022-04-17)
 # Dead library, part of >=sys-fs/e2fsprogs-1.46.5 now, bug #806875,
 # removal on 2022-05-17.
@@ -336,12 +395,6 @@ dev-java/xjavac
 # $ emerge --deselect sys-libs/e2fsprogs-libs
 # This is necessary as your world file should not contain dependencies.)
 sys-libs/e2fsprogs-libs
-
-# Michał Górny <mgorny@gentoo.org> (2022-04-17)
-# Unmaintained in Gentoo.  Pending a bump since January.  Non-trivial
-# to test.  No revdeps.
-# Removal on 2022-05-17.  Bug #838895.
-dev-python/pymssql
 
 # Marek Szuba <marecki@gentoo.org> (2022-04-14)
 # Singularity has been renamed upstream to Apptainer. Therefore, up-to-date
@@ -595,15 +648,6 @@ app-office/texmacs
 # <glibc-2.26.
 ~net-libs/libnsl-0
 ~net-libs/rpcsvc-proto-0
-
-# James Le Cuirot <chewi@gentoo.org> (2017-12-17)
-# Georgy Yakovlev <gyakovlev@gentoo.org> (2021-10-16)
-# Java 11+ is not yet fully supported on Gentoo. Packages cannot depend
-# on it so these virtuals are not yet required. If you wish to use
-# Java 11+ then install openjdk-(jdk|jre)-bin directly.
-# bug #697014
-virtual/jdk:17
-virtual/jre:17
 
 # Nicolas Bock <nicolasbock@gentoo.org> (2017-10-31)
 # There are multiple unresolved upstream issues with >=jabref-bin-4.0 (#636036).

@@ -3,6 +3,7 @@
 
 EAPI=8
 
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{8..10} )
 
 inherit distutils-r1
@@ -18,6 +19,7 @@ DESCRIPTION="Google's Protocol Buffers - Python bindings"
 HOMEPAGE="
 	https://developers.google.com/protocol-buffers/
 	https://github.com/protocolbuffers/protobuf/
+	https://pypi.org/project/protobuf/
 "
 if [[ "${PV}" != "9999" ]]; then
 	SRC_URI="
@@ -63,7 +65,7 @@ src_configure() {
 	DISTUTILS_ARGS=(--cpp_implementation)
 }
 
-python_install_all() {
-	distutils-r1_python_install_all
-	find "${ED}" -name "*.pth" -type f -delete || die
+python_compile() {
+	distutils-r1_python_compile
+	find "${BUILD_DIR}/install" -name "*.pth" -type f -delete || die
 }

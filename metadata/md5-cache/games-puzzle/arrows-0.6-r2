@@ -4,10 +4,11 @@ DEPEND=dev-libs/glib:2 x11-libs/gtk+:2 x11-libs/pango
 DESCRIPTION=Simple maze-like game where you navigate around and destroy arrows
 EAPI=8
 HOMEPAGE=http://noreason.ca/?file=software
+INHERIT=desktop toolchain-funcs
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2+
 RDEPEND=dev-libs/glib:2 x11-libs/gtk+:2 x11-libs/pango
 SLOT=0
 SRC_URI=http://noreason.ca/data/arrows-0.6.tar.gz
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=a429063b9b121de154a94c1f5769ccea

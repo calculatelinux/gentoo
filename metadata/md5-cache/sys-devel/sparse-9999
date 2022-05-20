@@ -4,11 +4,12 @@ DEPEND=gtk? ( x11-libs/gtk+:3 ) llvm? ( <sys-devel/llvm-13:= ) sqlite? ( dev-db/
 DESCRIPTION=C semantic parser
 EAPI=7
 HOMEPAGE=https://sparse.wiki.kernel.org/index.php/Main_Page
+INHERIT=llvm toolchain-funcs git-r3
 IUSE=gtk llvm sqlite test xml
 LICENSE=MIT
 PROPERTIES=live
 RDEPEND=gtk? ( x11-libs/gtk+:3 ) llvm? ( <sys-devel/llvm-13:= ) sqlite? ( dev-db/sqlite:= ) xml? ( dev-libs/libxml2 )
 RESTRICT=!test? ( test )
 SLOT=0
-_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53	llvm	6f88d422e49b917bf254b2594f3d903c	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53	llvm	6f88d422e49b917bf254b2594f3d903c	multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=0b587f579f8b3db89ea6ac258768ce8f

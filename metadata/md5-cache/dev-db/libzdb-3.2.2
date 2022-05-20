@@ -3,6 +3,7 @@ DEPEND=mysql? ( dev-db/mysql-connector-c:0= ) postgres? ( dev-db/postgresql:* ) 
 DESCRIPTION=A thread safe high level multi-database connection pool library
 EAPI=6
 HOMEPAGE=https://www.tildeslash.com/libzdb/
+INHERIT=toolchain-funcs
 IUSE=debug doc mysql postgres +sqlite ssl static-libs
 KEYWORDS=amd64 x86
 LICENSE=GPL-3
@@ -11,5 +12,5 @@ REQUIRED_USE=|| ( postgres mysql sqlite )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://www.tildeslash.com/libzdb/dist/libzdb-3.2.2.tar.gz
-_eclasses_=multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8
+_eclasses_=multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253
 _md5_=fb74f04aef85b84682f8e3bd0e96e517

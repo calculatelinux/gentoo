@@ -4,11 +4,12 @@ DEPEND=~media-libs/libmediainfo-22.03[curl=,mms=] >=media-libs/libzen-0.4.37 sys
 DESCRIPTION=MediaInfo supplies technical and tag information about media files
 EAPI=8
 HOMEPAGE=https://mediaarea.net/mediainfo/ https://github.com/MediaArea/MediaInfo
+INHERIT=xdg-utils autotools wxwidgets
 IUSE=curl mms wxwidgets
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD-2
 RDEPEND=~media-libs/libmediainfo-22.03[curl=,mms=] >=media-libs/libzen-0.4.37 sys-libs/zlib wxwidgets? ( x11-libs/wxGTK:3.0-gtk3[X] )
 SLOT=0
 SRC_URI=https://mediaarea.net/download/source/mediainfo/22.03/mediainfo_22.03.tar.xz
-_eclasses_=autotools	b46e8992a8126c894fbdc8084fc040c4	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4a33c9008e5ee30cb8840a3fdc24df2b	toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	wxwidgets	c09e9b94378cadaf6ef86ec1534c0fd6	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
+_eclasses_=autotools	136117fb43a9bf5598530e9cc642f710	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253	wxwidgets	c09e9b94378cadaf6ef86ec1534c0fd6	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
 _md5_=e07e91004af3489a09a8fafdd600666f
