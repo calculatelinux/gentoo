@@ -1,15 +1,6 @@
 # Copyright 2019-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-# Jimi Huotari <chiitoo@gentoo.org> (2022-05-08)
-# Not keyworded here yet.
-lxqt-base/lxqt-meta desktop-portal
-
-# Sam James <sam@gentoo.org> (2022-05-08)
-# Requires dev-util/pahole.
-sys-kernel/gentoo-kernel debug
-sys-kernel/vanilla-kernel debug
-
 # Marek Szuba <marecki@gmail.com> (2022-04-30)
 # net-wireless/sdrplay contains prebuilt binaries, currently available
 # upstream only for amd64/x86 and arm
@@ -44,10 +35,6 @@ app-containers/crun criu
 # failures on riscv (bug #811477)
 dev-python/pytest-services test
 
-# Adel Kara Slimane <adel.ks@zegrapher.com> (2022-03-14)
-# Untested useflag on other arches, needs keywording
-media-video/ffmpeg vmaf
-
 # Alex Fan <alex.fan.q@gmail.com> (2022-02-28)
 # dev-libs/vc is a dummy implementation on this arch
 # krita fails to build with it
@@ -61,8 +48,8 @@ media-video/ffmpeg amf
 # Yongxinag Liang <tanekliang@gmail.com> (2022-01-09)
 # app-emulation/xen-tools doesn't support riscv yet
 app-emulation/qemu xen
-# untested useflag: rbd glusterfs
-app-emulation/qemu rbd glusterfs
+# unkeyworded depdendency - sys-cluster/ceph
+app-emulation/qemu rbd
 sys-fs/multipath-tools rbd
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2022-01-16)

@@ -33,6 +33,86 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2022-05-22)
+# Doesn't support Python 3.10, out of date, unmaintained in Gentoo.
+# Removal on 2022-06-22. bug #731674, bug #846158.
+net-misc/omniORB
+
+# Sam James <sam@gentoo.org> (2022-05-22)
+# No upstream activity since 2017. Doesn't support Python 3.10.
+# Removal on 2022-06-22. bug #845732.
+dev-python/gevent-websocket
+
+# Sam James <sam@gentoo.org> (2022-05-22)
+# Several open bugs. No upstream activity for a while, doesn't
+# support Python 3.10+, test suite not being run. Removal on 2022-06-22.
+# bug #625800, bug #796974, bug #796977, bug #831916, bug #845888.
+dev-python/sqlalchemy-migrate
+
+# Sam James <sam@gentoo.org> (2022-05-22)
+# No upstream activity since 2015, no reverse dependencies,
+# no Python 3.10 support. Removal on 2022-06-22. bug #845822.
+dev-python/pypeg2
+
+# Sam James <sam@gentoo.org> (2022-05-22)
+# Unmaintained, no upstream activity since 2013, upstream repository disappeared.
+# Long obsolete with no reverse dependencies, as now integrated within pytest.
+# Doesn't support Python 3.10+.
+# Removal on 2022-06-22. bug #700944, bug #845834
+dev-python/pytest-cache
+
+# Sam James <sam@gentoo.org> (2022-05-21)
+# No activity upstream since 2018, unmaintained upstream, does not support
+# Python 3.10+. Removal on 2022-06-21. bug #845726.
+dev-python/fusepy
+
+# Sam James <sam@gentoo.org> (2022-05-21)
+# Unmaintained in Gentoo, no recent activity upstream, and most importantly
+# does not yet support Python 3.10+. Removal on 2022-06-21. bugs #845720, #797850.
+dev-python/drf-yasg
+
+# Michał Górny <mgorny@gentoo.org> (2022-05-21)
+# No commit activity since 2016.  Requires patching for Python 3.10.
+# No tests.  No revdeps.
+# Removal on 2022-06-20.  Bug #846788.
+dev-python/dicttoxml
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2022-05-21)
+# Work in progress, do not use yet
+=dev-lang/perl-5.36*
+~virtual/perl-Archive-Tar-2.400.0
+~virtual/perl-Attribute-Handlers-1.20.0
+~virtual/perl-bignum-0.650.0
+~virtual/perl-Compress-Raw-Zlib-2.105.0
+~virtual/perl-CPAN-2.330.0
+~virtual/perl-Data-Dumper-2.184.0
+~virtual/perl-DB_File-1.857.0
+~virtual/perl-Devel-PPPort-3.680.0
+~virtual/perl-Digest-1.200.0
+~virtual/perl-Encode-3.170.0
+~virtual/perl-Exporter-5.770.0
+~virtual/perl-ExtUtils-MakeMaker-7.640.0
+
+# Michał Górny <mgorny@gentoo.org> (2022-05-21)
+# dev-python/mongoengine has had repeated test regressions, and this
+# time I am unable to get them anywhere close to passing.  The current
+# Gentoo version is over a year old.  There are no revdeps to the two
+# packages remaining.
+# Removal on 2022-06-20.  Bug #846656.
+dev-python/flask-mongoengine
+dev-python/mongoengine
+
+# Till Schäfer <till2.schaefer@uni-dortmund.de> (2022-05-20)
+# Upstream unmaintained for a long time.
+# Has known bugs.
+# Removal in 30 days, bug #837092
+kde-misc/playbar2
+
+# Bernd Waibel <waebbl-gentoo@posteo.net> (2022-05-20)
+# No consumers left. Superseded by dev-libs/imath[python]
+# Removal in 30 days. Bug #845810
+dev-python/pyilmbase
+
 # Hans de Graaff <graaff@gentoo.org> (2022-05-20)
 # Unused slots of cucumber components that are no longer or were never
 # used by current cucumber versions. Masked for removal in 30 days.
@@ -270,36 +350,6 @@ gnome-base/gnome-vfs
 ~sys-kernel/vanilla-sources-5.10.112
 ~sys-kernel/vanilla-sources-5.15.35
 ~sys-kernel/vanilla-sources-5.17.4
-
-# Michał Górny <mgorny@gentoo.org> (2022-04-26)
-# These kernels contain a major regression that causes power button
-# to stop working, apparently making it impossible to leave suspend
-# on some laptops without a (difficult) hard reset.
-~sys-kernel/gentoo-kernel-5.10.111
-=sys-kernel/gentoo-kernel-5.10.112
-~sys-kernel/gentoo-kernel-5.15.34
-=sys-kernel/gentoo-kernel-5.15.35
-~sys-kernel/gentoo-kernel-5.16.20
-~sys-kernel/gentoo-kernel-5.17.3
-=sys-kernel/gentoo-kernel-5.17.4
-~sys-kernel/gentoo-kernel-bin-5.10.111
-=sys-kernel/gentoo-kernel-bin-5.10.112
-~sys-kernel/gentoo-kernel-bin-5.15.34
-=sys-kernel/gentoo-kernel-bin-5.15.35
-~sys-kernel/gentoo-kernel-bin-5.16.20
-~sys-kernel/gentoo-kernel-bin-5.17.3
-=sys-kernel/gentoo-kernel-bin-5.17.4
-~sys-kernel/vanilla-kernel-5.10.111
-~sys-kernel/vanilla-kernel-5.10.112
-~sys-kernel/vanilla-kernel-5.15.34
-~sys-kernel/vanilla-kernel-5.15.35
-~sys-kernel/vanilla-kernel-5.16.20
-~sys-kernel/vanilla-kernel-5.17.3
-~sys-kernel/vanilla-kernel-5.17.4
-~virtual/dist-kernel-5.10.111
-~virtual/dist-kernel-5.15.34
-~virtual/dist-kernel-5.16.20
-~virtual/dist-kernel-5.17.3
 
 # Alfredo Tupone <tupone@gentoo.org> (2022-04-27)
 # New release of janestreet packages need to tested
@@ -573,11 +623,6 @@ net-libs/libsoup:3.0
 # incompatiblity with revdep licenses.  Mask until the situation
 # is resolved.  Bug #791259.
 >=media-libs/libopenaptx-0.2.1
-
-# Bernard Cafarelli <voyageur@gentoo.org> (2021-06-04)
-# Alpha versions of fetchmail 7
-# Add support for OAUTH2 for those needing it
-=net-mail/fetchmail-7.0.0_alpha*
 
 # Michał Górny <mgorny@gentoo.org> (2021-05-31)
 # Requires removed media-libs/opencv version.
