@@ -24,7 +24,9 @@ DEPEND="kmod? ( sys-apps/kmod )
 	!static-libs? ( ${LIB_DEPEND//static-libs([+-]),} )"
 RDEPEND="${DEPEND}
 	sys-apps/hwdata"
+# See bug #847133 re binutils check
 BDEPEND="sys-apps/which
+	|| ( >=sys-devel/binutils-2.37:* sys-devel/lld sys-devel/native-cctools )
 	kmod? ( virtual/pkgconfig )"
 
 MULTILIB_WRAPPED_HEADERS=( /usr/include/pci/config.h )
@@ -35,6 +37,62 @@ switch_config() {
 
 	sed "s@^\(${opt}=\).*\$@\1${val}@" -i Makefile || die
 	return 0
+}
+
+check_binutils_version() {
+	if [[ -z ${I_KNOW_WHAT_I_AM_DOING} ]] && ! tc-ld-is-gold && ! tc-ld-is-lld ; then
+		# Okay, hopefully it's Binutils' bfd.
+		# bug #847133
+
+		# Convert this:
+		# ```
+		# GNU ld (Gentoo 2.38 p4) 2.38
+		# Copyright (C) 2022 Free Software Foundation, Inc.
+		# This program is free software; you may redistribute it under the terms of
+		# the GNU General Public License version 3 or (at your option) a later version.
+		# This program has absolutely no warranty.
+		# ```
+		#
+		# into...
+		# ```
+		# 2.38
+		# ```
+		local ver=$($(tc-getLD) --version 2>&1 | head -1 | rev | cut -d' ' -f1 | rev)
+
+		if ! [[ ${ver} =~ [0-9].[0-9][0-9] ]] ; then
+			# Skip if unrecognised format so we don't pass something
+			# odd into ver_cut.
+			return
+		fi
+
+		ver_major=$(ver_cut 1 "${ver}")
+		ver_minor=$(ver_cut 2 "${ver}")
+
+		# We use 2.37 here, not 2.35, as https://github.com/pciutils/pciutils/issues/98 mentions
+		# because we've had other miscompiles with older Binutils (not just build failures!)
+		# and we don't want people running any unsupported versions of Binutils. An example
+		# of this is where glibc is completely broken with old binutils: bug #802036. It's
+		# just not sustainable to support.
+		if [[ ${ver_major} -eq 2 && ${ver_minor} -lt 37 ]] ; then
+			eerror "Old version of binutils activated! ${P} cannot be built with an old version."
+			eerror "Please follow these steps:"
+			eerror "1. Select a newer binutils (>= 2.37) using binutils-config"
+			eerror "2. Run: . /etc/profile"
+			eerror "3. Try emerging again with: emerge -v1 ${CATEGORY}/${P}"
+			eerror "4. Complete your world upgrade if you were performing one."
+			eerror "4. Perform a depclean (emerge -acv)"
+			eerror "\tYou MUST depclean after every world upgrade in future!"
+			die "Old binutils found! Change to a newer ld using binutils-config (bug #847133)."
+		fi
+	fi
+}
+
+pkg_pretend() {
+	[[ ${MERGE_TYPE} != binary ]] && check_binutils_version
+}
+
+pkg_setup() {
+	[[ ${MERGE_TYPE} != binary ]] && check_binutils_version
 }
 
 src_prepare() {

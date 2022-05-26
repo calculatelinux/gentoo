@@ -7,6 +7,9 @@
 # Unmask systemd
 -systemd
 
+# Things we actually can support
+-input_devices_synaptics
+
 # Things without support yet
 java
 llvm
@@ -25,18 +28,17 @@ efl
 elogind
 emacs
 fam
-fontforge
-gd
-gpm
 gtk4
 gtk-doc
 kde
 latex
 ldap
 mpi
-qt5
 sctp
 systemtap
 tk
 tpm
 xemacs
+
+# Things not supposed to ever get support
+video_cards_glint

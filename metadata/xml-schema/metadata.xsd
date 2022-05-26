@@ -279,7 +279,6 @@
 			<xs:enumeration value='gentoo'/>
 			<xs:enumeration value='github'/>
 			<xs:enumeration value='gitlab'/>
-			<xs:enumeration value='gitorious'/>
 			<xs:enumeration value='google-code'/>
 			<xs:enumeration value='heptapod'/>
 			<xs:enumeration value='launchpad'/>
@@ -289,7 +288,6 @@
 			<xs:enumeration value='pypi'/>
 			<xs:enumeration value='rubygems'/>
 			<xs:enumeration value='sourceforge'/>
-			<xs:enumeration value='sourceforge-jp'/>
 			<xs:enumeration value='vim'/>
 		</xs:restriction>
 	</xs:simpleType>

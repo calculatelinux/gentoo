@@ -7,6 +7,8 @@ PYTHON_COMPAT=( python3_{8..10} )
 # Avoid QA warnings
 TMPFILES_OPTIONAL=1
 
+QA_PKGCONFIG_VERSION=$(ver_cut 1)
+
 if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="https://github.com/systemd/systemd.git"
 	inherit git-r3
@@ -23,7 +25,7 @@ else
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
 fi
 
-inherit bash-completion-r1 linux-info meson-multilib pam python-any-r1 systemd toolchain-funcs udev usr-ldscript
+inherit bash-completion-r1 flag-o-matic linux-info meson-multilib pam python-any-r1 systemd toolchain-funcs udev usr-ldscript
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="https://www.freedesktop.org/wiki/Software/systemd"
@@ -235,6 +237,9 @@ src_prepare() {
 
 	# Add local patches here
 	PATCHES+=(
+		# Breaks Clang. Revert the commit for now and force off F_S=3.
+		# bug #841770.
+		"${FILESDIR}/251-revert-fortify-source-3-fix.patch"
 	)
 
 	if ! use vanilla; then
@@ -254,6 +259,21 @@ src_prepare() {
 src_configure() {
 	# Prevent conflicts with i686 cross toolchain, bug 559726
 	tc-export AR CC NM OBJCOPY RANLIB
+
+	# Broken with FORTIFY_SOURCE=3 without a patch. We have to revert
+	# the upstream patch for it because it breaks Clang: bug #841770.
+	#
+	# Our toolchain sets F_S=2 by default w/ >= -O2, so we need
+	# to unset F_S first, then explicitly set 2, to negate any default
+	# and anything set by the user if they're choosing 3 (or if they've
+	# modified GCC to set 3).
+	#
+	if is-flagq '-O[23]' || is-flagq '-Ofast' ; then
+		# We can't unconditionally do this b/c we fortify needs
+		# some level of optimisation.
+		filter-flags -D_FORTIFY_SOURCE=3
+		append-cppflags -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
+	fi
 
 	python_setup
 

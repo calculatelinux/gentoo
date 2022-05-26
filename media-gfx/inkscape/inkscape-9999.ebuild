@@ -22,7 +22,7 @@ HOMEPAGE="https://inkscape.org/"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 IUSE="cdr dbus dia exif graphicsmagick imagemagick inkjar jemalloc jpeg
-openmp postscript readline spell svg2 test visio wpg"
+openmp postscript readline spell svg2 test visio wpg X"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
@@ -55,9 +55,9 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	media-libs/libpng:0=
 	net-libs/libsoup:2.4
 	sci-libs/gsl:=
-	x11-libs/libX11
 	>=x11-libs/pango-1.37.2
-	x11-libs/gtk+:3
+	x11-libs/gtk+:3[X?]
+	X? ( x11-libs/libX11 )
 	$(python_gen_cond_dep '
 		dev-python/lxml[${PYTHON_USEDEP}]
 		media-gfx/scour[${PYTHON_USEDEP}]
@@ -154,6 +154,7 @@ src_configure() {
 		-DWITH_SVG2=$(usex svg2)
 		-DWITH_LIBVISIO=$(usex visio)
 		-DWITH_LIBWPG=$(usex wpg)
+		-DWITH_X11=$(usex X)
 	)
 
 	cmake_src_configure

@@ -19,8 +19,8 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 	https://github.com/stha09/chromium-patches/releases/download/${PATCHSET_NAME}/${PATCHSET_NAME}.tar.xz"
 
 LICENSE="BSD"
-SLOT="0/beta"
-KEYWORDS="~amd64 ~arm64 ~x86"
+SLOT="0/stable"
+KEYWORDS="~amd64 ~arm64"
 IUSE="component-build cups cpu_flags_arm_neon debug gtk4 +hangouts headless +js-type-check kerberos libcxx +official pic +proprietary-codecs pulseaudio screencast selinux +suid +system-ffmpeg +system-harfbuzz +system-icu +system-png vaapi wayland widevine"
 REQUIRED_USE="
 	component-build? ( !suid !libcxx )
@@ -828,6 +828,11 @@ src_configure() {
 		fi
 	else
 		myconf_gn+=" ozone_platform=\"x11\""
+	fi
+
+	# Results in undefined references in chrome linking, may require CFI to work
+	if use arm64; then
+		myconf_gn+=" arm_control_flow_integrity=\"none\""
 	fi
 
 	# Enable official builds
