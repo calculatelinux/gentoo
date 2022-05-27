@@ -158,6 +158,7 @@ PATCHES=(
 	"${FILESDIR}"/1.61.0-gentoo-musl-target-specs.patch
 	"${FILESDIR}"/1.61.0-llvm_selectInterleaveCount.patch
 	"${FILESDIR}"/1.61.0-llvm_addrspacecast.patch
+	"${FILESDIR}"/1.61.0-miri-cow.patch
 )
 
 S="${WORKDIR}/${MY_P}-src"
@@ -258,7 +259,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local rust_target="" rust_targets="" arch_cflags
+	local rust_target="" rust_targets="" arch_cflags use_libcxx="false"
 
 	# Collect rust target names to compile standard libs for all ABIs.
 	for v in $(multilib_get_enabled_abi_pairs); do
@@ -307,6 +308,14 @@ src_configure() {
 
 	rust_target="$(rust_abi)"
 
+	# https://bugs.gentoo.org/732632
+	if tc-is-clang; then
+		local clang_slot="$(clang-major-version)"
+		if { has_version "sys-devel/clang:${clang_slot}[default-libcxx]" || is-flagq -stdlib=libc++; }; then
+			use_libcxx="true"
+		fi
+	fi
+
 	cat <<- _EOF_ > "${S}"/config.toml
 		changelog-seen = 2
 		[llvm]
@@ -318,12 +327,15 @@ src_configure() {
 		targets = "${LLVM_TARGETS// /;}"
 		experimental-targets = ""
 		link-shared = $(toml_usex system-llvm)
+		use-libcxx = ${use_libcxx}
 		$(case "${rust_target}" in
 			i586-*-linux-*)
 				# https://github.com/rust-lang/rust/issues/93059
 				echo 'cflags = "-fcf-protection=none"'
 				echo 'cxxflags = "-fcf-protection=none"'
 				echo 'ldflags = "-fcf-protection=none"'
+				;;
+			*)
 				;;
 		esac)
 		[build]
