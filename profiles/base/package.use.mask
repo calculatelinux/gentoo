@@ -6,6 +6,10 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Stephan Hartmann <sultan@gentoo.org> (2022-05-29)
+# Not ready for general use.
+>=www-client/chromium-104 pgo
+
 # Michał Górny <mgorny@gentoo.org> (2022-05-25)
 # dev-python/sphinxcontrib-openapi is masked for removal.
 dev-python/jupyter_server doc
@@ -56,6 +60,7 @@ media-video/wireplumber system-service
 # runtime crashes. The effect of using USE=custom-cflags globally in make.conf
 # isn't the same as it is for just glibc specifically.
 sys-libs/glibc custom-cflags
+sys-devel/gcc custom-cflags
 
 # Sam James <sam@gentoo.org> (2022-01-12)
 # Unmask PCH for now for GCC to avoid unnecessary rebuilds

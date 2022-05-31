@@ -33,6 +33,59 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2022-05-30)
+# Doesn't support Python 3.10+, maintainer-needed, and out of date.
+# Bugs #818847, #845936, #786585.
+# Removal on 2022-06-30.
+dev-util/dput-ng
+dev-util/distro-info
+dev-util/distro-info-data
+
+# Sam James <sam@gentoo.org> (2022-05-30)
+# No upstream activity since 2019, doesn't even support Python 3.9+ properly,
+# and doesn't support Python 3.10. Bugs #845819, #798384. Removal on 2022-06-30.
+dev-python/pypcap
+
+# Sam James <sam@gentoo.org> (2022-05-30)
+# Obsolete, no new releases since 2015, doesn't support Python 3.10.
+# Bugs #845681, #747982. Removal on 2022-06-30.
+dev-python/3to2
+
+# Sam James <sam@gentoo.org> (2022-05-30)
+# No upstream development since 2017, doesn't support Python 3.10. Bug #845678.
+# Removal on 2022-06-30.
+dev-perl/Inline-Python
+
+# Sam James <sam@gentoo.org> (2022-05-30)
+# Out of date, no tests, and most importantly, doesn't yet support Python 3.10
+# which will soon be the default. Bugs #845783, #822540, #798204.
+# Removal on 2022-06-30.
+dev-python/pycapnp
+
+# Matt Turner <mattst88@gentoo.org> (2022-05-30)
+# libwacom-2 broke ABI compatibility; reverse dependencies need to be updated.
+# Bug #848501
+>=dev-libs/libwacom-2.0
+>=x11-drivers/xf86-input-wacom-1.0
+
+# Hans de Graaff <graaff@gentoo.org> (2022-05-29)
+# Old slots that are no longer used by dependencies. Upgrade to the
+# latest slot instead. Masked for removal in one month.
+dev-ruby/regexp_parser:0
+dev-ruby/regexp_parser:1
+
+# Sam James <sam@gentoo.org> (2022-05-28)
+# GCC 9 and older no longer receive upstream support or fixes for
+# bugs. Please switch to a newer GCC version using gcc-config.
+# The lowest supported version of GCC is GCC 10.
+<sys-devel/gcc-10
+
+# Sam James <sam@gentoo.org> (2022-05-28)
+# Masked for removal. Dead upstream, no releases in a long time, and superseded
+# by dev-python/python-pam. Fails tests in a few scary ways too. Removal
+# on 2022-06-28. Bugs #833297, #802927.
+dev-python/pypam
+
 # Andrey Grozin <grozin@gentoo.org> (2022-05-25)
 # Does not work with the current dev-python/pyx
 # Removal on 2022-06-24
@@ -367,23 +420,6 @@ java-virtuals/jms
 # should update to that. #841437
 ~sci-physics/bullet-3.22b
 
-# Conrad Kostecki <conikost@gentoo.org> (2022-04-27)
-# Old base package for jabber services, which is not being used anymore,
-# as jabber services do now use their own user instead of generic jabber user.
-# Removal in 30 days on 2022-05-27.
-net-im/jabber-base
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-04-22)
-# Blocks removal of vulnerable dev-java/guava:20, bug #833309.
-# Removal on 2022-05-30
-dev-util/checkstyle
-app-emacs/jde
-
-# Matt Turner <mattst88@gentoo.org> (2022-04-26)
-# Dead package. No reverse dependencies.
-# Removal on 2022-05-26
-gnome-base/gnome-vfs
-
 # Mike Pagano <mpagano@gentoo.org> (2022-04-26)
 # These kernels contain a major regression that causes power button
 # to stop working, apparently making it impossible to leave suspend
@@ -459,20 +495,6 @@ dev-ml/core_bench:0/0.15
 dev-ml/patience_diff:0/0.15
 dev-util/patdiff:0/0.15
 
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-04-22)
-# Unused java library. Removal on 2022-05-24.
-dev-java/jgraph
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-04-19)
-# Release of the source-based ebuild is from 2014. At the moment
-# impossible to provide source-based ebuild for the current version.
-# Up-to-date binary package exists. Removal on 2022-05-30
-app-text/jabref
-dev-java/glazedlists
-dev-java/jempbox
-dev-java/microba
-dev-java/spin
-
 # David Seifert <soap@gentoo.org> (2022-04-17)
 # Dead library, part of >=sys-fs/e2fsprogs-1.46.5 now, bug #806875,
 # removal on 2022-05-17.
@@ -500,11 +522,6 @@ sys-cluster/singularity
 sys-devel/automake:1.13
 sys-devel/automake:1.15
 
-# David Seifert <soap@gentoo.org> (2022-03-20)
-# Mask gcc-8 branch (ended upstream support). Please switch
-# to a fresher gcc branch.
-<sys-devel/gcc-9
-
 # Michał Górny <mgorny@gentoo.org> (2022-03-18)
 # The new version breaks building docs w/o Internet access (because it
 # tries to fetch and install all dependencies locally).
@@ -517,11 +534,11 @@ sys-devel/automake:1.15
 # necessity.
 net-p2p/arti
 
-# Stephan Hartmann <sultan@gentoo.org> (2022-05-06)
+# Stephan Hartmann <sultan@gentoo.org> (2022-05-29)
 # Dev channel releases are only for people who
 # are developers or want more experimental features
 # and accept a more unstable release.
->=www-client/chromium-103
+>=www-client/chromium-104
 
 # Anton Fischl <github@fischl-online.de> (2022-02-23)
 # Version 2.5.* is not meant for production according to upstream
@@ -545,11 +562,6 @@ net-p2p/arti
 <sci-electronics/kicad-symbols-6.0.2
 <sci-electronics/kicad-templates-6.0.2
 <app-doc/kicad-doc-6.0.2
-
-# Jonas Stein <jstein@gentoo.org> (2022-02-11)
-# Not usable anymore
-# Removal after 2022-06-01.  Bug #833144.
-x11-misc/i855crt
 
 # Jonas Stein <jstein@gentoo.org> (2022-02-08)
 # Not maintained, open bugs, upstream outdated.

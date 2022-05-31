@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3_{8..11} )
 inherit cmake python-any-r1
 
 DESCRIPTION="A linkable library for Git"
@@ -15,7 +15,7 @@ S=${WORKDIR}/${P/_/-}
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="0/$(ver_cut 1-2)"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86 ~ppc-macos"
+KEYWORDS="amd64 ~arm arm64 ppc ppc64 ~riscv x86 ~ppc-macos"
 IUSE="examples gssapi +ssh test +threads trace"
 RESTRICT="!test? ( test )"
 
@@ -34,6 +34,10 @@ BDEPEND="
 	${PYTHON_DEPS}
 	virtual/pkgconfig
 "
+
+PATCHES=(
+	"${FILESDIR}"/${P}-test.patch
+)
 
 src_prepare() {
 	cmake_src_prepare

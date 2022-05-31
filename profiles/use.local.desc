@@ -3024,6 +3024,7 @@ games-board/stockfish:optimize - Enable upstream -O3 optimizations (default enab
 games-board/tablebase-syzygy:6-pieces - Install tablebases for 6 pieces (huge!)
 games-board/xboard:default-font - Install the default font that xboard uses
 games-board/xboard:zippy - Enable experimental zippy client
+games-emulation/atari800:encode-mp3 - Support recording sound in MP3 format
 games-emulation/desmume:gdb - Enable support for the remote GDB stub
 games-emulation/desmume:openal - Use media-libs/openal for microphone input
 games-emulation/desmume:wifi - Enable support for Wi-Fi (experimental and discouraged)
@@ -4252,6 +4253,7 @@ media-libs/libprojectm:gles2 - Provide support for OpenGL ES 2 and 3
 media-libs/libpulse:asyncns - Use libasyncns for asynchronous name resolution.
 media-libs/libpulse:doc - Build the doxygen-described API documentation.
 media-libs/libpulse:glib - Add support to dev-libs/glib-based mainloop for the libpulse client library, to allow using libpulse on glib-based programs.
+media-libs/libpulse:valgrind - Compile in valgrind memory hints
 media-libs/libsdl:joystick - Control joystick support (disable at your own risk)
 media-libs/libsdl:sound - Control audio support (disable at your own risk)
 media-libs/libsdl:tslib - Build with tslib support for touchscreen devices
@@ -4762,6 +4764,7 @@ media-sound/pulseaudio-daemon:oss - Enable OSS sink/source (output/input). Depre
 media-sound/pulseaudio-daemon:ssl - Use dev-libs/openssl to provide support for RAOP (AirPort) streaming.
 media-sound/pulseaudio-daemon:system-wide - Allow preparation and installation of the system-wide init script for PulseAudio. Since this support is only supported for embedded situations, do not enable without reading the upstream instructions at https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/WhatIsWrongWithSystemWide/ .
 media-sound/pulseaudio-daemon:systemd - Build with sys-apps/systemd support to replace standalone ConsoleKit.
+media-sound/pulseaudio-daemon:valgrind - Compile in valgrind memory hints
 media-sound/pulseaudio-daemon:webrtc-aec - Uses the webrtc.org AudioProcessing library for enhancing VoIP calls greatly in applications that support it by performing acoustic echo cancellation, analog gain control, noise suppression and other processing.
 media-sound/pulseaudio-modules-bt:fdk - AAC encoding support using media-libs/fdk-aac
 media-sound/pulseaudio-modules-bt:ffmpeg - APTX, APTX-HD encoding support
@@ -6427,7 +6430,6 @@ net-misc/dropbear:multicall - Build all the programs as one little binary (to sa
 net-misc/dropbear:shadow - Enable shadow password support
 net-misc/dropbox-cli:gpg - Use app-crypt/gpgme to verify signatures
 net-misc/electron-cash:amodem - Enable plugin to support Audio Modem
-net-misc/electron-cash:audio_modem - Deprecated name for amodem
 net-misc/electron-cash:cli - Enables the CLI interface
 net-misc/electron-cash:cosign - Enable plugin to support multisig wallets between multiple Electrum clients
 net-misc/electron-cash:digitalbitbox - Enable plugin to support Digital Bitbox hardware wallet
@@ -6805,6 +6807,7 @@ net-p2p/transmission:lightweight - Optimize transmission for low-resource system
 net-p2p/transmission:mbedtls - Use mbed TLS instead of OpenSSL
 net-p2p/transmission:web - Build Web client
 net-p2p/transmission-remote-gtk:libproxy - Use net-libs/libproxy for getting the HTTP/HTTPS/SOCKS proxy configuration.
+net-print/cups:openssl - Use dev-libs/openssl instead of net-libs/gnutls for TLS support
 net-print/cups-filters:foomatic - Build the included foomatic-rip printer driver. Strongly recommended.
 net-print/cups-filters:pclm - Enable PCLm support
 net-print/dymo-cups-drivers:usb-modeswitch - Include usb_modeswitch for some hardware (bug #601242)
@@ -7260,7 +7263,9 @@ sci-libs/ceres-solver:cxsparse - Enable simple support for sparse matrix algebra
 sci-libs/ceres-solver:gflags - Use dev-cpp/gflags for flag parsing
 sci-libs/ceres-solver:schur - Enable fixed-size schur specializations (disable if binary size is an issue)
 sci-libs/ceres-solver:sparse - Enable support for sparse matrix algebra with various packages from SuiteSparse
+sci-libs/cgnslib:base-scope - Enable base scoped families or connectivities
 sci-libs/cgnslib:legacy - Enable or disable building legacy code (3.0 compatible)
+sci-libs/cgnslib:scoping - Enable scoping of enumeration values
 sci-libs/cgnslib:tools - A number of utility programs: cgnscheck, cgnscompress, cgnsdiff, cgnslist, cgnsnames, cgnsupdate, cgnsconvert, adf2hdf, hdf2adf.
 sci-libs/cholmod:cuda - Use nvidia cuda toolkit for speeding up computations
 sci-libs/cholmod:matrixops - Support basic sparse and dense matrix operations (add, multiply, scale, et cetera)
@@ -7824,6 +7829,7 @@ sys-apps/iproute2:elf - support loading eBPF programs from ELFs (e.g. LLVM's eBP
 sys-apps/iproute2:iptables - include support for iptables filtering
 sys-apps/iproute2:libbsd - Use dev-libs/libbsd instead of internal funcs
 sys-apps/iproute2:minimal - only install ip and tc programs, without eBPF support
+sys-apps/iproute2:nfs - Support RPC lookups via net-libs/libtirpc in ss
 sys-apps/irqbalance:numa - Support balancing IRQs across NUMA nodes
 sys-apps/irqbalance:tui - Enable build of irqbalance terminal user interface
 sys-apps/kexec-tools:booke - Include support for Book-E memory management
@@ -8048,6 +8054,8 @@ sys-boot/refind:iso9660 - Builds the EFI binary iso9660 filesystem driver
 sys-boot/refind:ntfs - Builds the EFI binary ntfs filesystem driver
 sys-boot/refind:reiserfs - Builds the EFI binary reiserfs filesystem driver
 sys-boot/silo:tilo-only - Install only the tilo netboot tool
+sys-boot/syslinux:bios - Enable BIOS support
+sys-boot/syslinux:efi - Enable EFI support
 sys-boot/vboot-utils:libzip - Use dev-libs/libzip.
 sys-cluster/ceph:babeltrace - Add support for LTTng babeltrace
 sys-cluster/ceph:cephfs - Build support for cephfs, a POSIX compatible filesystem built on top of ceph
@@ -8597,6 +8605,7 @@ www-client/chromium:js-type-check - Enable JavaScript type-checking for Chrome's
 www-client/chromium:libcxx - Use bundled libc++ instead of libstdc++ for building.
 www-client/chromium:lto - Build with Link Time Optimizations (via clang's ThinLTO)
 www-client/chromium:official - Enable Official build instead of Developer build.
+www-client/chromium:pgo - Build with Profile Guided Optimizations (2-stage compilation)
 www-client/chromium:pic - Disable optimized assembly code that is not PIC friendly
 www-client/chromium:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
 www-client/chromium:screencast - Enable support for remote desktop and screen cast using media-video/pipewire

@@ -13,7 +13,7 @@ HOMEPAGE="https://developer.gnome.org/libpeas/stable/"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~riscv ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm arm64 ~ia64 ~ppc ~ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux"
 
 IUSE="glade +gtk gtk-doc lua +python vala"
 REQUIRED_USE="lua? ( ${LUA_REQUIRED_USE} )
@@ -41,6 +41,7 @@ DEPEND="${RDEPEND}"
 BDEPEND="
 	dev-util/glib-utils
 	gtk-doc? ( >=dev-util/gtk-doc-1.11
+		>=dev-util/gi-docgen-2021.7
 		app-text/docbook-xml-dtd:4.3 )
 	>=sys-devel/gettext-0.19.8
 	virtual/pkgconfig

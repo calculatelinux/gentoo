@@ -3,10 +3,10 @@
 
 EAPI=8
 
-PATCH_VER="5"
-PATCH_GCC_VER="12.0.0"
+PATCH_VER="6"
+PATCH_GCC_VER="12.1.0"
 MUSL_VER="4"
-MUSL_GCC_VER="12.0.0"
+MUSL_GCC_VER="12.1.0"
 
 if [[ $(ver_cut 3) == 9999 ]] ; then
 	MY_PV_2=$(ver_cut 2)
@@ -32,7 +32,7 @@ EGIT_BRANCH=releases/gcc-$(ver_cut 1)
 # bug #830454
 RDEPEND="elibc_glibc? ( sys-libs/glibc[cet(-)?] )"
 DEPEND="${RDEPEND}"
-BDEPEND="${CATEGORY}/binutils[cet(-)?]"
+BDEPEND=">=${CATEGORY}/binutils-2.30[cet(-)?]"
 
 src_prepare() {
 	local p upstreamed_patches=(

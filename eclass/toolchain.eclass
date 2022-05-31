@@ -19,7 +19,7 @@ _TOOLCHAIN_ECLASS=1
 DESCRIPTION="The GNU Compiler Collection"
 HOMEPAGE="https://gcc.gnu.org/"
 
-inherit flag-o-matic gnuconfig libtool multilib pax-utils toolchain-funcs prefix
+inherit edo flag-o-matic gnuconfig libtool multilib pax-utils toolchain-funcs prefix
 
 tc_is_live() {
 	[[ ${PV} == *9999* ]]
@@ -493,6 +493,11 @@ toolchain_pkg_setup() {
 
 	# bug #265283
 	unset LANGUAGES
+
+	# See https://www.gnu.org/software/make/manual/html_node/Parallel-Output.html
+	# Avoid really confusing logs from subconfigure spam, makes logs far
+	# more legible.
+	MAKEOPTS="--output-sync=line ${MAKEOPTS}"
 }
 
 #---->> src_unpack <<----
@@ -812,6 +817,8 @@ toolchain_src_configure() {
 
 	local confgcc=( --host=${CHOST} )
 
+	local build_config_targets=()
+
 	if is_crosscompile || tc-is-cross-compiler ; then
 		# Straight from the GCC install doc:
 		# "GCC has code to correctly determine the correct value for target
@@ -851,7 +858,6 @@ toolchain_src_configure() {
 	is_d   && GCC_LANG+=",d"
 	is_gcj && GCC_LANG+=",java"
 	is_go  && GCC_LANG+=",go"
-	is_jit && GCC_LANG+=",jit"
 	if is_objc || is_objcxx ; then
 		GCC_LANG+=",objc"
 		use objc-gc && confgcc+=( --enable-objc-gc )
@@ -914,17 +920,17 @@ toolchain_src_configure() {
 
 	# Build compiler itself using LTO
 	if tc_version_is_at_least 9.1 && _tc_use_if_iuse lto ; then
-		confgcc+=( --with-build-config=bootstrap-lto )
+		build_config_targets+=( bootstrap-lto )
+	fi
+
+	if tc_version_is_at_least 12 && _tc_use_if_iuse cet ; then
+		build_config_targets+=( bootstrap-cet )
 	fi
 
 	# Support to disable PCH when building libstdcxx
 	if tc_version_is_at_least 6.0 && ! _tc_use_if_iuse pch ; then
 		confgcc+=( --disable-libstdcxx-pch )
 	fi
-
-	# The JIT support requires this.
-	# But see bug #843341.
-	is_jit && confgcc+=( --enable-host-shared )
 
 	# build-id was disabled for file collisions: bug #526144
 	#
@@ -1079,7 +1085,7 @@ toolchain_src_configure() {
 			case ${CTARGET//_/-} in
 				*-hardfloat-*|*eabihf)
 					confgcc+=( --with-float=hard )
-					;;
+				;;
 			esac
 	esac
 
@@ -1096,6 +1102,8 @@ toolchain_src_configure() {
 				fi
 			done
 
+			# Convert armv6m to armv6-m
+			[[ ${arm_arch} == armv6m ]] && arm_arch=armv6-m
 			# Convert armv7{a,r,m} to armv7-{a,r,m}
 			[[ ${arm_arch} == armv7? ]] && arm_arch=${arm_arch/7/7-}
 			# See if this is a valid --with-arch flag
@@ -1272,6 +1280,8 @@ toolchain_src_configure() {
 		confgcc+=( $(use_with zstd) )
 	fi
 
+	# This only controls whether the compiler *supports* LTO, not whether
+	# it's *built using* LTO. Hence we do it without a USE flag.
 	if tc_version_is_at_least 4.6 ; then
 		confgcc+=( --enable-lto )
 	elif tc_version_is_at_least 4.5 ; then
@@ -1323,6 +1333,11 @@ toolchain_src_configure() {
 
 	confgcc+=( "$@" ${EXTRA_ECONF} )
 
+	if [[ -n ${build_config_targets} ]] ; then
+		# ./configure --with-build-config='bootstrap-lto bootstrap-cet'
+		confgcc+=( --with-build-config="${build_config_targets[*]}" )
+	fi
+
 	# Nothing wrong with a good dose of verbosity
 	echo
 	einfo "PREFIX:          ${PREFIX}"
@@ -1333,24 +1348,40 @@ toolchain_src_configure() {
 	echo
 	einfo "Languages:       ${GCC_LANG}"
 	echo
-	einfo "Configuring GCC with: ${confgcc[@]//--/\n\t--}"
-	echo
 
 	# Build in a separate build tree
-	mkdir -p "${WORKDIR}"/build
+	mkdir -p "${WORKDIR}"/build || die
 	pushd "${WORKDIR}"/build > /dev/null
 
 	# ...and now to do the actual configuration
 	addwrite /dev/zero
 
-	echo "${S}"/configure "${confgcc[@]}"
+	if is_jit ; then
+		einfo "Configuring JIT gcc"
+
+		mkdir -p "${WORKDIR}"/build-jit || die
+		pushd "${WORKDIR}"/build-jit > /dev/null || die
+		CONFIG_SHELL="${BROOT}"/bin/bash edo "${BROOT}"/bin/bash "${S}"/configure \
+				"${confgcc[@]}" \
+				--disable-libada \
+				--disable-libsanitizer \
+				--disable-libvtv \
+				--disable-libgomp \
+				--disable-libquadmath \
+				--disable-libatomic \
+				--disable-lto \
+				--disable-bootstrap \
+				--enable-host-shared \
+				--enable-languages=jit
+		popd > /dev/null || die
+	fi
+
 	# Older gcc versions did not detect bash and re-exec itself, so force the
 	# use of bash. Newer ones will auto-detect, but this is not harmful.
-	CONFIG_SHELL="${BROOT}/bin/bash" \
-		"${BROOT}"/bin/bash "${S}"/configure "${confgcc[@]}" || die "failed to run configure"
+	CONFIG_SHELL="${BROOT}"/bin/bash edo "${BROOT}"/bin/bash "${S}"/configure "${confgcc[@]}"
 
 	# Return to whatever directory we were in before
-	popd > /dev/null
+	popd > /dev/null || die
 }
 
 # Replace -m flags unsupported by the version being built with the best
@@ -1640,8 +1671,8 @@ gcc_do_make() {
 
 	# default target
 	if is_crosscompile || tc-is-cross-compiler ; then
-		# 3 stage bootstrapping doesnt quite work when you cant run the
-		# resulting binaries natively ^^;
+		# 3 stage bootstrapping doesn't quite work when you can't run the
+		# resulting binaries natively
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-all}
 	else
 		if _tc_use_if_iuse pgo; then
@@ -1674,6 +1705,19 @@ gcc_do_make() {
 		# cross-compiler.
 		BOOT_CFLAGS=${BOOT_CFLAGS-"$(get_abi_CFLAGS ${TARGET_DEFAULT_ABI}) ${CFLAGS}"}
 	fi
+
+	if is_jit ; then
+		# TODO: docs for jit?
+		pushd "${WORKDIR}"/build-jit > /dev/null || die
+
+		einfo "Building JIT"
+		emake \
+			LDFLAGS="${LDFLAGS}" \
+			STAGE1_CFLAGS="${STAGE1_CFLAGS}" \
+			LIBPATH="${LIBPATH}" \
+			BOOT_CFLAGS="${BOOT_CFLAGS}"
+		popd > /dev/null || die
+        fi
 
 	einfo "Compiling ${PN} (${GCC_MAKE_TARGET})..."
 
@@ -1762,8 +1806,32 @@ toolchain_src_install() {
 			&& rm -f "${x}"
 	done < <(find gcc/include*/ -name '*.h')
 
+	if is_jit ; then
+		# See https://gcc.gnu.org/onlinedocs/gcc-11.3.0/jit/internals/index.html#packaging-notes
+		# and bug #843341.
+		#
+		# Both of the non-JIT and JIT builds  are configured to install to $(DESTDIR)
+		# Install the configuration with --enable-host-shared first
+		# *then* the one without, so that the faster build
+		# of "cc1" et al overwrites the slower build.
+		#
+		# Do the 'make install' from the build directory
+		pushd "${WORKDIR}"/build-jit > /dev/null || die
+		S="${WORKDIR}"/build-jit emake DESTDIR="${D}" install
+
+		# Punt some tools which are really only useful while building gcc
+		find "${ED}" -name install-tools -prune -type d -exec rm -rf "{}" \;
+		# This one comes with binutils
+		find "${ED}" -name libiberty.a -delete
+
+		# Move the libraries to the proper location
+		gcc_movelibs
+
+		popd > /dev/null || die
+	fi
+
 	# Do the 'make install' from the build directory
-	S="${WORKDIR}"/build emake DESTDIR="${D}" install || die
+	S="${WORKDIR}"/build emake DESTDIR="${D}" install
 
 	# Punt some tools which are really only useful while building gcc
 	find "${ED}" -name install-tools -prune -type d -exec rm -rf "{}" \;
@@ -1956,9 +2024,10 @@ gcc_movelibs() {
 		dodir "${HOSTLIBPATH#${EPREFIX}}"
 		mv "${ED}"/usr/$(get_libdir)/libcc1* "${D}${HOSTLIBPATH}" || die
 	fi
+
 	# libgccjit gets installed to /usr/lib, not /usr/$(get_libdir). Probably
 	# due to a bug in gcc build system.
-	if is_jit ; then
+	if [[ ${PWD} == "${WORKDIR}"/build-jit ]] && is_jit ; then
 		dodir "${LIBPATH#${EPREFIX}}"
 		mv "${ED}"/usr/lib/libgccjit* "${D}${LIBPATH}" || die
 	fi
