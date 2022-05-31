@@ -20,7 +20,7 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86"
 
 BDEPEND="
 	test? (
@@ -31,12 +31,6 @@ BDEPEND="
 	)
 "
 
-PATCHES=(
-	"${FILESDIR}/${PN}-2.11.2-fix-docs-relative.patch"
-)
-
-distutils_enable_sphinx doc \
-	dev-python/wcag-contrast-ratio
 distutils_enable_tests pytest
 
 python_install_all() {
