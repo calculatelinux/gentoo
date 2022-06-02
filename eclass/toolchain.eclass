@@ -26,7 +26,7 @@ tc_is_live() {
 }
 
 if tc_is_live ; then
-	EGIT_REPO_URI="https://gcc.gnu.org/git/gcc.git"
+	EGIT_REPO_URI="https://gcc.gnu.org/git/gcc.git https://github.com/gcc-mirror/gcc"
 	# Naming style:
 	# gcc-10.1.0_pre9999 -> gcc-10-branch
 	#  Note that the micro version is required or lots of stuff will break.
@@ -34,6 +34,8 @@ if tc_is_live ; then
 	#  inheriting this eclass.
 	EGIT_BRANCH="releases/${PN}-${PV%.?.?_pre9999}"
 	EGIT_BRANCH=${EGIT_BRANCH//./_}
+	inherit git-r3
+elif [[ -n ${TOOLCHAIN_USE_GIT_PATCHES} ]] ; then
 	inherit git-r3
 fi
 
@@ -78,6 +80,20 @@ tc_version_is_between() {
 # @DESCRIPTION:
 # Used to override GCC version. Useful for e.g. live ebuilds or snapshots.
 # Defaults to ${PV}.
+
+# @ECLASS_VARIABLE: TOOLCHAIN_USE_GIT_PATCHES
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# Used to force fetching patches from git. Useful for non-released versions
+# of GCC where we don't want to keep creating patchset tarballs for a new
+# release series (e.g. suppose 12.0 just got released, then adding snapshots
+# for 13.0, we don't want to create new patchsets for every single 13.0 snapshot,
+# so just grab patches from git each time if this variable is set).
+
+# @ECLASS_VARIABLE: TOOLCHAIN_PATCH_DEV
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# Indicate the developer who hosts the patchset for an ebuild.
 
 # @ECLASS_VARIABLE: GCC_PV
 # @INTERNAL
@@ -275,6 +291,9 @@ DEPEND="${RDEPEND}"
 if tc_has_feature gcj ; then
 	DEPEND+="
 		gcj? (
+			app-arch/zip
+			app-arch/unzip
+			>=media-libs/libart_lgpl-2.1
 			awt? (
 				x11-base/xorg-proto
 				x11-libs/libXt
@@ -284,9 +303,6 @@ if tc_has_feature gcj ; then
 				x11-libs/pango
 				virtual/pkgconfig
 			)
-			>=media-libs/libart_lgpl-2.1
-			app-arch/zip
-			app-arch/unzip
 		)
 	"
 fi
@@ -348,6 +364,31 @@ if [[ ${TOOLCHAIN_SET_S} == yes ]] ; then
 fi
 
 gentoo_urls() {
+	# slyfox's distfiles are mirrored to sam's devspace
+	declare -A devspace_urls=(
+		[soap]=HTTP~soap/distfiles/URI
+		[sam]=HTTP~sam/distfiles/sys-devel/gcc/URI
+		[slyfox]=HTTP~sam/distfiles/URI
+		[tamiko]=HTTP~tamiko/distfiles/URI
+		[zorry]=HTTP~zorry/patches/gcc/URI
+		[vapier]=HTTP~vapier/dist/URI
+		[blueness]=HTTP~blueness/dist/URI
+	)
+
+	# Newer ebuilds should set TOOLCHAIN_PATCH_DEV and we'll just
+	# return the full URL from the array.
+	if [[ -n ${TOOLCHAIN_PATCH_DEV} ]] ; then
+		local devspace_url=${devspace_urls[${TOOLCHAIN_PATCH_DEV}]}
+		if [[ -n ${devspace_url} ]] ; then
+			local devspace_url_exp=${devspace_url//HTTP/https:\/\/dev.gentoo.org\/}
+			devspace_url_exp=${devspace_url_exp//URI/$1}
+			echo ${devspace_url_exp}
+			return
+		fi
+	fi
+
+	# But we keep the old fallback list for compatibility with
+	# older ebuilds (overlays etc).
 	local devspace="
 		HTTP~soap/distfiles/URI
 		HTTP~sam/distfiles/URI
@@ -502,12 +543,40 @@ toolchain_pkg_setup() {
 
 #---->> src_unpack <<----
 
+# @FUNCTION: toolchain_fetch_git_patches
+# @INTERNAL
+# @DESCRIPTION:
+# Fetch patches from Gentoo's gcc-patches repository.
+toolchain_fetch_git_patches() {
+	local gcc_patches_repo="https://anongit.gentoo.org/git/proj/gcc-patches.git https://github.com/gentoo/gcc-patches"
+
+	# If we weren't given a patchset number, pull it from git too.
+	einfo "Fetching patchset from git as PATCH_VER is unset"
+	EGIT_REPO_URI=${gcc_patches_repo} EGIT_BRANCH="master" \
+		EGIT_CHECKOUT_DIR="${WORKDIR}"/patch.tmp \
+		git-r3_src_unpack
+
+	mkdir "${WORKDIR}"/patch || die
+	mv "${WORKDIR}"/patch.tmp/${PATCH_GCC_VER}/gentoo/* "${WORKDIR}"/patch || die
+
+	if [[ -n ${MUSL_VER} || -d "${WORKDIR}"/musl ]] && [[ ${CTARGET} == *musl* ]] ; then
+		mkdir "${WORKDIR}"/musl || die
+		mv "${WORKDIR}"/patch.tmp/${PATCH_GCC_VER}/musl/* "${WORKDIR}"/musl || die
+	fi
+}
+
 toolchain_src_unpack() {
 	if tc_is_live ; then
 		git-r3_src_unpack
+
+		if [[ -z ${PATCH_VER} ]] && ! use vanilla ; then
+			toolchain_fetch_git_patches
+		fi
+	elif [[ -z ${PATCH_VER} && -n ${TOOLCHAIN_USE_GIT_PATCHES} ]] ; then
+		toolchain_fetch_git_patches
 	fi
 
-	default_src_unpack
+	default
 }
 
 #---->> src_prepare <<----
@@ -596,13 +665,13 @@ toolchain_src_prepare() {
 
 do_gcc_gentoo_patches() {
 	if ! use vanilla ; then
-		if [[ -n ${PATCH_VER} ]] ; then
+		if [[ -n ${PATCH_VER} || -d "${WORKDIR}"/patch ]] ; then
 			einfo "Applying Gentoo patches ..."
 			eapply "${WORKDIR}"/patch/*.patch
 			BRANDING_GCC_PKGVERSION="${BRANDING_GCC_PKGVERSION} p${PATCH_VER}"
 		fi
 
-		if [[ -n ${MUSL_VER} ]] && [[ ${CTARGET} == *musl* ]] ; then
+		if [[ -n ${MUSL_VER} || -d "${WORKDIR}"/musl ]] && [[ ${CTARGET} == *musl* ]] ; then
 			if [[ ${CATEGORY} == cross-* ]] ; then
 				# We don't want to apply some patches when cross-compiling.
 				if [[ -d "${WORKDIR}"/musl/nocross ]] ; then
@@ -1655,7 +1724,7 @@ toolchain_src_compile() {
 	# use of bash.  Newer ones will auto-detect, but this is not harmful.
 	# This needs to be set for compile as well, as it's used in libtool
 	# generation, which will break install otherwise (at least in 3.3.6): bug #664486
-	CONFIG_SHELL="${EPREFIX}/bin/bash" \
+	CONFIG_SHELL="${BROOT}/bin/bash" \
 		gcc_do_make ${GCC_MAKE_TARGET}
 }
 

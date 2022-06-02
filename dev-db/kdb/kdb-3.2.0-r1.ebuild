@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -14,7 +14,8 @@ DESCRIPTION="Database connectivity and creation framework for various vendors"
 HOMEPAGE="https://community.kde.org/KDb"
 
 if [[ ${KDE_BUILD_TYPE} = release ]]; then
-	SRC_URI="mirror://kde/stable/${PN}/src/${P}.tar.xz"
+	SRC_URI="mirror://kde/stable/${PN}/src/${P}.tar.xz
+	https://dev.gentoo.org/~asturm/distfiles/${P}-patches.tar.xz"
 	KEYWORDS="amd64 x86"
 fi
 
@@ -44,11 +45,11 @@ RDEPEND="${DEPEND}"
 PATCHES=(
 	# 3.2 branch
 	"${FILESDIR}"/${P}-cmake-pg12.patch
-	"${FILESDIR}"/${P}-build-w-pg12.patch
+	"${WORKDIR}"/${P}-patches/${P}-build-w-pg12.patch
 	"${FILESDIR}"/${P}-cmake-pg13.patch
-	"${FILESDIR}"/${P}-qt-5.15.patch
+	"${WORKDIR}"/${P}-patches/${P}-qt-5.15.patch
 	# master
-	"${FILESDIR}"/${P}-KDEInstallDirs.patch
+	"${WORKDIR}"/${P}-patches/${P}-KDEInstallDirs.patch
 )
 
 pkg_setup() {
