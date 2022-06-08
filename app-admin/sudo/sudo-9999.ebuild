@@ -136,6 +136,13 @@ src_configure() {
 	# until `make` time, so we have to use a full path here rather than
 	# basing off other values.
 	myeconfargs=(
+		# We set all of the relevant options by ourselves (patched
+		# into the toolchain) and setting these in the build system
+		# actually causes a downgrade when using e.g. -D_FORTIFY_SOURCE=3
+		# (it'll downgrade to =2). So, this has no functional effect on
+		# the hardening for users. It's safe.
+		--disable-hardening
+
 		# requires some python eclass
 		--disable-python
 		--enable-tmpfiles.d="${EPREFIX}"/usr/lib/tmpfiles.d

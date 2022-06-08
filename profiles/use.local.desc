@@ -220,7 +220,7 @@ app-arch/libarchive:nettle - Use dev-libs/nettle as crypto backend
 app-arch/p7zip:rar - Enable support for non-free rar decoder
 app-arch/pbzip2:symlink - Install symlinks which override app-arch/bzip2 implementation
 app-arch/pigz:symlink - Install symlinks which override app-arch/gzip implementation
-app-arch/rar:all_sfx - Install all SFX (Self-Extracting) files rather than just the native format (allows creation of Windows EXEs on Linux ELF systems)
+app-arch/rar:all-sfx - Install all SFX (Self-Extracting) files rather than just the native format (allows creation of Windows EXEs on Linux ELF systems)
 app-arch/tar:minimal - just install `tar`
 app-arch/unzip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii file names archived in Windows.
 app-arch/wimlib:fuse - Use fuse libraries
@@ -2740,9 +2740,6 @@ dev-tex/abntex:lyx - Install with app-office/lyx layout
 dev-tex/biblatex:biber - Install the unicode compatible backend processor
 dev-tex/pythontex:highlighting - Syntax highlighting using dev-python/pygments
 dev-texlive/texlive-basic:luajittex - Add support for LuaJitTeX: LuaTeX based on LuaJIT which is usually faster.
-dev-util/anjuta:devhelp - Enable devhelp integration
-dev-util/anjuta:glade - Build glade plugin for anjuta
-dev-util/anjuta:terminal - Enable terminal plugin based on x11-libs/vte
 dev-util/bazel:tools - Install extra bazel tools to build from sources
 dev-util/bitcoin-tx:knots - Build enhanced Bitcoin Knots version, rather than Bitcoin Core
 dev-util/bpftool:caps - Use sys-libs/libcap to enable unprivileged run support
@@ -3108,6 +3105,7 @@ games-fps/darkplaces:demo - Uses the demo data from quake1 (quake1-demodata)
 games-fps/darkplaces:lights - Install and setup the updated light maps
 games-fps/darkplaces:textures - Install and setup the updated textures
 games-fps/doomsday:demo - Install launcher dor doom1.wad from games-fps/doom-data
+games-fps/doomsday:display-mode - Include the ability to set the display mode
 games-fps/doomsday:fluidsynth - Build the FluidSynth sound driver
 games-fps/doomsday:freedoom - Install launcher for doom1.wad from games-fps/freedoom
 games-fps/doomsday:tools - Build additional tools such as doomsday-shell, md2tool and texc
@@ -4341,7 +4339,6 @@ media-libs/openexr:utils - Build several binary tools for verifying and manipula
 media-libs/openh264:plugin - Install the Gecko Media Plugin (GMP) for use with Mozilla packages
 media-libs/openh264:utils - Install the CLI encoder and decoder utilities
 media-libs/openimageio:dicom - Enable DICOM medical image file support via sci-libs/dcmtk
-media-libs/openimageio:field3d - Enable f3d file (write) support via media-libs/Field3D
 media-libs/openimageio:opencv - Enable OpenCV support via media-libs/opencv
 media-libs/openimageio:openvdb - Enable OpenVDB support via media-gfx/openvdb
 media-libs/openimageio:ptex - Enable Ptex texture mapping system file support via media-libs/ptex
@@ -7330,13 +7327,19 @@ sci-libs/gdal:spatialite - Enable Spatial DBMS over sqlite dev-db/spatialite
 sci-libs/gdal:xls - Add the dev-libs/freexl library for xls import support
 sci-libs/ginkgo:cuda - Add support for cuda assimp (dev-util/nvidia-cuda-sdk)
 sci-libs/ginkgo:hwloc - Add support for hwloc (sys-apps/hwloc)
+sci-libs/gmsh:alglib - Enable alglib support for mesh optimizers
 sci-libs/gmsh:cgns - Enables cgns output support
+sci-libs/gmsh:eigen - Build matrix manipulation with dev-cpp/eigen
+sci-libs/gmsh:gmm - A simple alternative to petsc based on sci-mathematics/gmm
 sci-libs/gmsh:med - Enables med support
 sci-libs/gmsh:metis - Enables metis support
+sci-libs/gmsh:mumps - Enables mumps solver support
 sci-libs/gmsh:netgen - Enable 3D Frontal triangulation using netgen lib
 sci-libs/gmsh:opencascade - Enable OpenCASCADE support
 sci-libs/gmsh:petsc - Enable sci-mathematics/petsc support
 sci-libs/gmsh:shared - Install shared library and headers
+sci-libs/gmsh:slepc - Enable sci-mathematics/slepc support
+sci-libs/gmsh:voro - Enable support to sci-libs/voro++ meshing
 sci-libs/gsl:cblas-external - Link gsl with external cblas provided by (virtual/cblas) instead of shipped internal version
 sci-libs/gsl:deprecated - Enable deprecated functions
 sci-libs/hdf5:hl - Enable high level API (https://support.hdfgroup.org/HDF5/doc/HL/index.html)
@@ -7850,9 +7853,15 @@ sys-apps/lm-sensors:contrib - Installs user contributed configuration files so y
 sys-apps/lm-sensors:sensord - Enable sensord - a daemon that can be used to periodically log sensor readings from hardware health-monitoring chips
 sys-apps/man-db:manpager - Enable manpager wrapper for colorizing output
 sys-apps/memtest86:serial - Compile with serial console support
+sys-apps/memtest86+:bios32 - Compile a BIOS-bootable 32bit memtest image
+sys-apps/memtest86+:bios64 - Compile a BIOS-bootable 64bit memtest image
 sys-apps/memtest86+:boot - Also install to /boot instead of just /usr/share/memtest86+/
+sys-apps/memtest86+:efi32 - Compile a EFI32-bootable 32bit memtest image
+sys-apps/memtest86+:efi64 - Compile a UEFI-bootable 64bit memtest image
 sys-apps/memtest86+:floppy - Install a script to create floppy disks containing memtest86+ binaries.
 sys-apps/memtest86+:iso - Compile an ISO image
+sys-apps/memtest86+:iso32 - Compile a 32bit ISO image
+sys-apps/memtest86+:iso64 - Compile a 64bit ISO image
 sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/moreutils:perl - Install scripts written in Perl
 sys-apps/net-tools:arp - build the arp and rarp tools (for manipulating the ARP cache)

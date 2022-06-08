@@ -32,6 +32,7 @@ BDEPEND="doc? ( app-doc/doxygen[dot] )"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-0.7.0-cmake-build-type.patch"
+	"${FILESDIR}"/symengine-0.9.0-pthread-cmake.patch
 )
 
 pkg_pretend() {

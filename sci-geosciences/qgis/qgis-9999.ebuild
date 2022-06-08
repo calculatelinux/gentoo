@@ -71,6 +71,7 @@ COMMON_DEPEND="
 	postgres? ( dev-db/postgresql:= )
 	python? (
 		${PYTHON_DEPS}
+		>=sci-libs/gdal-2.2.3[python,${PYTHON_SINGLE_USEDEP}]
 		$(python_gen_cond_dep '
 			dev-python/future[${PYTHON_USEDEP}]
 			dev-python/httplib2[${PYTHON_USEDEP}]
@@ -87,7 +88,6 @@ COMMON_DEPEND="
 			dev-python/requests[${PYTHON_USEDEP}]
 			<dev-python/sip-5:=[${PYTHON_USEDEP}]
 			dev-python/six[${PYTHON_USEDEP}]
-			>=sci-libs/gdal-2.2.3[python,${PYTHON_USEDEP}]
 			postgres? ( dev-python/psycopg:2[${PYTHON_USEDEP}] )
 		')
 	)
