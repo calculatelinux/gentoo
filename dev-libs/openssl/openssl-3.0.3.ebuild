@@ -1,8 +1,9 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI=7
 
+VERIFY_SIG_OPENPGP_KEY_PATH="${BROOT}"/usr/share/openpgp-keys/openssl.org.asc
 inherit edo flag-o-matic linux-info toolchain-funcs multilib-minimal multiprocessing verify-sig
 
 DESCRIPTION="Robust, full-featured Open Source Toolkit for the Transport Layer Security (TLS)"
@@ -18,7 +19,6 @@ else
 	SRC_URI="mirror://openssl/source/${MY_P}.tar.gz
 		https://dev.gentoo.org/~sam/distfiles/${CATEGORY}/${PN}/${P}-test-fixes-expiry.patch.xz
 		verify-sig? ( mirror://openssl/source/${MY_P}.tar.gz.asc )"
-	VERIFY_SIG_OPENPGP_KEY_PATH="${BROOT}"/usr/share/openpgp-keys/openssl.org.asc
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~x86-linux"
 fi
 
@@ -92,6 +92,7 @@ src_unpack() {
 
 	default
 }
+
 src_prepare() {
 	# Allow openssl to be cross-compiled
 	cp "${FILESDIR}"/gentoo.config-1.0.2 gentoo.config || die
@@ -216,9 +217,7 @@ multilib_src_configure() {
 		threads
 	)
 
-	CFLAGS= LDFLAGS= edo \
-		./${config} \
-		"${myeconfargs[@]}"
+	CFLAGS= LDFLAGS= edo ./${config} "${myeconfargs[@]}"
 
 	# Clean out hardcoded flags that openssl uses
 	local DEFAULT_CFLAGS=$(grep ^CFLAGS= Makefile | LC_ALL=C sed \
@@ -286,7 +285,9 @@ multilib_src_install_all() {
 	cd "${ED}"/usr/share/man || die
 	local m d s
 	for m in $(find . -type f | xargs grep -L '#include') ; do
-		d=${m%/*} ; d=${d#./} ; m=${m##*/}
+		d=${m%/*}
+		d=${d#./}
+		m=${m##*/}
 
 		[[ ${m} == openssl.1* ]] && continue
 
@@ -302,6 +303,7 @@ multilib_src_install_all() {
 		# We assume that any broken links are due to the above renaming
 		for s in $(find -L ${d} -type l) ; do
 			s=${s##*/}
+
 			rm -f ${d}/${s}
 
 			# We don't want to "|| die" here
