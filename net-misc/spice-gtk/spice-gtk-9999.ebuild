@@ -1,23 +1,32 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 VALA_MIN_API_VERSION="0.14"
 VALA_USE_DEPEND="vapigen"
 
-PYTHON_COMPAT=( python3_{7..10} )
+PYTHON_COMPAT=( python3_{8..10} )
 
-inherit desktop git-r3 meson python-any-r1 readme.gentoo-r1 vala xdg-utils
+inherit desktop meson optfeature python-any-r1 readme.gentoo-r1 vala xdg
 
 DESCRIPTION="Set of GObject and Gtk objects for connecting to Spice servers and a client GUI"
 HOMEPAGE="https://www.spice-space.org https://cgit.freedesktop.org/spice/spice-gtk/"
+if [[ ${PV} == *9999* ]] ; then
+	EGIT_REPO_URI="https://anongit.freedesktop.org/git/spice/spice-gtk.git"
+	inherit git-r3
+
+	SPICE_PROTOCOL_VER=9999
+else
+	SRC_URI="https://www.spice-space.org/download/gtk/${P}.tar.xz"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+
+	SPICE_PROTOCOL_VER=0.14.3
+fi
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-EGIT_REPO_URI="https://anongit.freedesktop.org/git/spice/spice-gtk.git"
-KEYWORDS=""
-IUSE="+gtk3 +introspection lz4 mjpeg policykit pulseaudio sasl smartcard usbredir vala webdav"
+IUSE="+gtk3 +introspection lz4 mjpeg policykit sasl smartcard usbredir vala wayland webdav"
 
 # TODO:
 # * check if sys-freebsd/freebsd-lib (from virtual/acl) provides acl/libacl.h
@@ -29,17 +38,15 @@ RDEPEND="
 	media-libs/gst-plugins-good:1.0
 	media-libs/gstreamer:1.0[introspection?]
 	media-libs/opus
+	media-libs/libjpeg-turbo:=
 	sys-libs/zlib
-	virtual/jpeg:0=
 	>=x11-libs/cairo-1.2
 	>=x11-libs/pixman-0.17.7
+	x11-libs/libX11
 	gtk3? ( x11-libs/gtk+:3[introspection?] )
 	introspection? ( dev-libs/gobject-introspection )
-	dev-libs/openssl:0=
+	dev-libs/openssl:=
 	lz4? ( app-arch/lz4 )
-	pulseaudio? (
-		media-plugins/gst-plugins-pulse:1.0
-	)
 	sasl? ( dev-libs/cyrus-sasl )
 	smartcard? ( app-emulation/qemu[smartcard] )
 	usbredir? (
@@ -53,7 +60,8 @@ RDEPEND="
 	)
 	webdav? (
 		net-libs/phodav:2.0
-		>=net-libs/libsoup-2.49.91:2.4 )
+		>=net-libs/libsoup-2.49.91:2.4
+	)
 "
 # TODO: spice-gtk has an automagic dependency on x11-libs/libva without a
 # configure knob. The package is relatively lightweight so we just depend
@@ -65,16 +73,13 @@ RDEPEND="${RDEPEND}
 	x86? ( x11-libs/libva:= )
 "
 DEPEND="${RDEPEND}
-	~app-emulation/spice-protocol-9999
+	>=app-emulation/spice-protocol-${SPICE_PROTOCOL_VER}"
+BDEPEND="
 	dev-perl/Text-CSV
 	dev-util/glib-utils
-	>=dev-util/gtk-doc-am-1.14
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 	vala? ( $(vala_depend) )
-"
-
-BDEPEND="
 	$(python_gen_any_dep '
 		dev-python/six[${PYTHON_USEDEP}]
 		dev-python/pyparsing[${PYTHON_USEDEP}]
@@ -82,8 +87,8 @@ BDEPEND="
 "
 
 python_check_deps() {
-	has_version "dev-python/six[${PYTHON_USEDEP}]" &&
-	has_version "dev-python/pyparsing[${PYTHON_USEDEP}]"
+	python_has_version "dev-python/six[${PYTHON_USEDEP}]" &&
+	python_has_version "dev-python/pyparsing[${PYTHON_USEDEP}]"
 }
 
 src_prepare() {
@@ -98,18 +103,20 @@ src_configure() {
 		$(meson_feature introspection)
 		$(meson_use mjpeg builtin-mjpeg)
 		$(meson_feature policykit polkit)
-		$(meson_feature pulseaudio pulse)
 		$(meson_feature lz4)
 		$(meson_feature sasl)
 		$(meson_feature smartcard)
 		$(meson_feature usbredir)
 		$(meson_feature vala vapi)
 		$(meson_feature webdav)
+		$(meson_feature wayland wayland-protocols)
 	)
 
 	if use usbredir; then
-		emesonargs+=( -D "usb-acl-helper-dir=/usr/libexec" )
-		emesonargs+=( -D "usb-ids-path=${EPREFIX}/usr/share/hwdata/usb.ids" )
+		emesonargs+=(
+			-Dusb-acl-helper-dir=/usr/libexec
+			-Dusb-ids-path="${EPREFIX}"/usr/share/hwdata/usb.ids
+		)
 	fi
 
 	meson_src_configure
@@ -118,6 +125,15 @@ src_configure() {
 src_install() {
 	meson_src_install
 
+	# bug #775554
+	fowners root:root /usr/libexec/spice-client-glib-usb-acl-helper
+	fperms 4755 /usr/libexec/spice-client-glib-usb-acl-helper
+
 	make_desktop_entry spicy Spicy "utilities-terminal" "Network;RemoteAccess;"
 	readme.gentoo_create_doc
+}
+
+pkg_postinst() {
+	xdg_pkg_postinst
+	optfeature "Sound support (via pulseaudio)" media-plugins/gst-plugins-pulse
 }

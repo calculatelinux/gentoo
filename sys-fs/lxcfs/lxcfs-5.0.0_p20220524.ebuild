@@ -3,7 +3,9 @@
 
 EAPI=8
 
-inherit cmake meson systemd
+PYTHON_COMPAT=( python3_{9..11} )
+
+inherit cmake meson python-any-r1 systemd
 
 MY_COMMIT="18e78f70fa6764be4e4f6fcc6ae8d314da7f3a91"
 
@@ -18,7 +20,10 @@ IUSE="doc test"
 
 DEPEND="sys-fs/fuse:3"
 RDEPEND="${DEPEND}"
-BDEPEND="dev-python/jinja
+BDEPEND="${PYTHON_DEPS}
+	$(python_gen_any_dep '
+		dev-python/jinja[${PYTHON_USEDEP}]
+	')
 	doc? ( sys-apps/help2man )"
 
 # Needs some black magic to work inside container/chroot.
@@ -26,8 +31,20 @@ RESTRICT="test"
 
 S="${WORKDIR}/${PN}-${MY_COMMIT}"
 
+python_check_deps() {
+	python_has_version -b "dev-python/jinja[${PYTHON_USEDEP}]"
+}
+
+pkg_setup() {
+	python-any-r1_pkg_setup
+}
+
 src_prepare() {
 	default
+
+	# Fix python shebangs for python-exec[-native-symlinks], #851480
+	local shebangs=($(grep -rl "#!/usr/bin/env python3" || die))
+	python_fix_shebang -q ${shebangs[*]}
 }
 
 src_configure() {
