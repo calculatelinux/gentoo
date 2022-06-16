@@ -2,7 +2,7 @@ BDEPEND=sys-devel/bison virtual/pkgconfig >=app-portage/elt-patches-20170815 dev
 DEFINED_PHASES=configure install postinst prepare unpack
 DEPEND=sys-libs/zlib:= virtual/libcrypt:= gcrypt? ( dev-libs/libgcrypt:= ) ldap? ( >=net-nds/openldap-2.1.30-r1:= sasl? ( dev-libs/cyrus-sasl net-nds/openldap:=[sasl] ) ) pam? ( sys-libs/pam ) sasl? ( dev-libs/cyrus-sasl ) skey? ( >=sys-auth/skey-1.1.5-r1 ) ssl? ( dev-libs/openssl:0= ) sssd? ( sys-auth/sssd[sudo] )
 DESCRIPTION=Allows users or groups to run commands as other users
-EAPI=7
+EAPI=8
 HOMEPAGE=https://www.sudo.ws/
 INHERIT=pam libtool tmpfiles toolchain-funcs mercurial
 IUSE=gcrypt ldap nls offensive pam sasl +secure-path selinux +sendmail skey ssl sssd
@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=sys-libs/zlib:= virtual/libcrypt:= gcrypt? ( dev-libs/libgcrypt:= ) ldap? ( >=net-nds/openldap-2.1.30-r1:= sasl? ( dev-libs/cyrus-sasl net-nds/openldap:=[sasl] ) ) pam? ( sys-libs/pam ) sasl? ( dev-libs/cyrus-sasl ) skey? ( >=sys-auth/skey-1.1.5-r1 ) ssl? ( dev-libs/openssl:0= ) sssd? ( sys-auth/sssd[sudo] ) >=app-misc/editor-wrapper-3 virtual/editor ldap? ( dev-lang/perl ) pam? ( sys-auth/pambase ) selinux? ( sec-policy/selinux-sudo ) sendmail? ( virtual/mta ) virtual/tmpfiles
 REQUIRED_USE=?? ( pam skey ) ?? ( gcrypt ssl )
 SLOT=0
-_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	dab5d8ec471d025b79c9e6906bcf3bff	flag-o-matic	a500d7cc40da3de38c361e889153bdf7	libtool	241a8f577b9781a42a7421e53448a44e	mercurial	53b96197cb26db4afb5056f1bbfa4845	multilib	4fbbbc98f236f1b43acd99476bc3cd85	pam	e44a1dd98f13e1ad76de01e919bde1f1	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f	toolchain-funcs	fd9cde67030b26e479eeadaced488253	wrapper	4a1902f969e5718126434fc35f3a0d9c
-_md5_=21ce1178f7c3441042eca113b7ef6409
+_eclasses_=flag-o-matic	a500d7cc40da3de38c361e889153bdf7	libtool	241a8f577b9781a42a7421e53448a44e	mercurial	53b96197cb26db4afb5056f1bbfa4845	multilib	4fbbbc98f236f1b43acd99476bc3cd85	pam	e44a1dd98f13e1ad76de01e919bde1f1	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f	toolchain-funcs	fd9cde67030b26e479eeadaced488253
+_md5_=c8468dd9e5db6dc8b9b10074b3864101

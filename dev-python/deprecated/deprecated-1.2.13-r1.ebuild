@@ -11,7 +11,7 @@ inherit distutils-r1
 DESCRIPTION="Python @deprecated decorator to deprecate old API"
 HOMEPAGE="
 	https://github.com/tantale/deprecated/
-	https://pypi.org/project/deprecated/
+	https://pypi.org/project/Deprecated/
 "
 SRC_URI="
 	https://github.com/tantale/deprecated/archive/v${PV}.tar.gz
@@ -20,7 +20,7 @@ SRC_URI="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~riscv ~sparc ~x86"
+KEYWORDS="amd64 arm arm64 ~hppa ppc ppc64 ~riscv sparc x86"
 
 RDEPEND="
 	dev-python/wrapt[${PYTHON_USEDEP}]

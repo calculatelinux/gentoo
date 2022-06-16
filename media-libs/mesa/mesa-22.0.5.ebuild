@@ -17,7 +17,7 @@ if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 else
 	SRC_URI="https://archive.mesa3d.org/${MY_P}.tar.xz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
+	KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
 fi
 
 LICENSE="MIT"
@@ -111,9 +111,10 @@ RDEPEND="${RDEPEND}
 # 1. List all the working slots (with min versions) in ||, newest first.
 # 2. Update the := to specify *max* version, e.g. < 10.
 # 3. Specify LLVM_MAX_SLOT, e.g. 9.
-LLVM_MAX_SLOT="13"
+LLVM_MAX_SLOT="14"
 LLVM_DEPSTR="
 	|| (
+		sys-devel/llvm:14[${MULTILIB_USEDEP}]
 		sys-devel/llvm:13[${MULTILIB_USEDEP}]
 		sys-devel/llvm:12[${MULTILIB_USEDEP}]
 	)

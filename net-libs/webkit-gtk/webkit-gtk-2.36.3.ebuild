@@ -15,7 +15,7 @@ SRC_URI="https://www.webkitgtk.org/releases/${MY_P}.tar.xz"
 
 LICENSE="LGPL-2+ BSD"
 SLOT="4/37" # soname version of libwebkit2gtk-4.0
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
+KEYWORDS="amd64 ~arm arm64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
 
 IUSE="aqua avif +egl examples gamepad +geolocation gles2-only gnome-keyring +gstreamer gtk-doc +introspection +jpeg2k +jumbo-build lcms libnotify seccomp spell systemd test wayland X"
 
@@ -107,6 +107,7 @@ BDEPEND="
 	${PYTHON_DEPS}
 	${RUBY_DEPS}
 	>=app-accessibility/at-spi2-core-2.5.3
+	dev-util/gdbus-codegen
 	dev-util/glib-utils
 	>=dev-util/gperf-3.0.1
 	>=sys-devel/bison-2.4.3
@@ -120,8 +121,6 @@ BDEPEND="
 	virtual/perl-JSON-PP
 
 	gtk-doc? ( >=dev-util/gtk-doc-1.32 )
-	geolocation? ( dev-util/gdbus-codegen )
-	>=dev-util/cmake-3.10
 "
 #	test? (
 #		dev-python/pygobject:3[python_targets_python2_7]

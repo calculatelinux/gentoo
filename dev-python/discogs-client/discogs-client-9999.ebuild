@@ -18,8 +18,10 @@ else
 fi
 
 DESCRIPTION="Continuation of the official Python API client for Discogs"
-HOMEPAGE="https://github.com/joalla/discogs_client
-	https://pypi.org/project/python3-discogs-client/"
+HOMEPAGE="
+	https://github.com/joalla/discogs_client/
+	https://pypi.org/project/python3-discogs-client/
+"
 
 LICENSE="BSD-2"
 SLOT="0"

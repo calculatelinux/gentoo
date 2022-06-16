@@ -125,9 +125,11 @@ src_configure() {
 src_install() {
 	meson_src_install
 
-	# bug #775554
-	fowners root:root /usr/libexec/spice-client-glib-usb-acl-helper
-	fperms 4755 /usr/libexec/spice-client-glib-usb-acl-helper
+	if use usbredir && use policykit; then
+		# bug #775554 (and bug #851657)
+		fowners root:root /usr/libexec/spice-client-glib-usb-acl-helper
+		fperms 4755 /usr/libexec/spice-client-glib-usb-acl-helper
+	fi
 
 	make_desktop_entry spicy Spicy "utilities-terminal" "Network;RemoteAccess;"
 	readme.gentoo_create_doc
@@ -135,5 +137,6 @@ src_install() {
 
 pkg_postinst() {
 	xdg_pkg_postinst
+
 	optfeature "Sound support (via pulseaudio)" media-plugins/gst-plugins-pulse
 }
