@@ -1,7 +1,7 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 DISTUTILS_OPTIONAL=1
 PYTHON_COMPAT=( python3_{8..11} )
@@ -33,7 +33,7 @@ RESTRICT="test? ( userpriv ) !test? ( test )"
 
 RDEPEND="
 	>=net-libs/libmnl-1.0.4:0=
-	>=net-libs/libnftnl-1.2.1:0=
+	>=net-libs/libnftnl-1.2.2:0=
 	gmp? ( dev-libs/gmp:= )
 	json? ( dev-libs/jansson:= )
 	python? ( ${PYTHON_DEPS} )
@@ -56,11 +56,6 @@ REQUIRED_USE="
 	python? ( ${PYTHON_REQUIRED_USE} )
 	libedit? ( !readline )
 "
-
-PATCHES=(
-	"${FILESDIR}"/${P}-optimize-segfault.patch
-	"${FILESDIR}"/${P}-test-shell-sets.patch
-)
 
 pkg_setup() {
 	if kernel_is ge 3 13; then
@@ -165,6 +160,20 @@ src_install() {
 	fi
 
 	find "${ED}" -type f -name "*.la" -delete || die
+}
+
+pkg_preinst() {
+	if [[ -d /sys/module/nf_tables ]] && [[ -x /sbin/nft ]] && [[ -z ${ROOT} ]]; then
+		if ! /sbin/nft -t list ruleset | "${ED}"/sbin/nft -c -f -; then
+			eerror "Your currently loaded ruleset cannot be parsed by the newly built instance of"
+			eerror "nft. This probably means that there is a regression introduced by v${PV}."
+			eerror "(To make the ebuild fail instead of warning, set NFTABLES_ABORT_ON_RELOAD_FAILURE=1.)"
+
+			if [[ -n ${NFTABLES_ABORT_ON_RELOAD_FAILURE} ]] ; then
+				die "Aborting because of failed nft reload!"
+			fi
+		fi
+	fi
 }
 
 pkg_postinst() {
