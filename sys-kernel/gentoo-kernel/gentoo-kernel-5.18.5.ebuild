@@ -10,6 +10,7 @@ GENPATCHES_P=genpatches-${PV%.*}-$(( ${PV##*.} + 3 ))
 # https://koji.fedoraproject.org/koji/packageinfo?packageID=8
 # forked to https://github.com/mgorny/fedora-kernel-config-for-gentoo
 CONFIG_VER=5.18.4-gentoo
+# update to g2 on bump!
 GENTOO_CONFIG_VER=g1
 
 DESCRIPTION="Linux kernel built with Gentoo patches"

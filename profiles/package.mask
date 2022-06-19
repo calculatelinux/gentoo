@@ -33,6 +33,76 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2022-06-19)
+# Obsolete slot. Use a newer slot instead.
+# Removal in 30 days.
+dev-ruby/tomlrb:1
+
+# Hans de Graaff <graaff@gentoo.org> (2022-06-19)
+# Obsolete slot. Use a newer slot instead.
+# Removal in 30 days.
+dev-ruby/ttfunk:1.6
+
+# Hans de Graaff <graaff@gentoo.org> (2022-06-19)
+# Obsolete slot. Use the "3" slot instead which provides a single slot
+# for all compatible versions. Removal in 30 days.
+dev-ruby/xdr:3.0.1
+
+# Hans de Graaff <graaff@gentoo.org> (2022-06-19)
+# Obsolete slot. Slot 2 provides support for all rails versions
+# currently available. Removal in 30 days.
+dev-util/cucumber-rails:1
+
+# Sam James <sam@gentoo.org> (2022-06-19)
+# Unsupported by upstream, no updates in a long time,
+# vulnerable to issues fixed in the main firejail package.
+# bug #834601.
+# Please migrate to sys-apps/firejail. Removal on 2022-07-19.
+sys-apps/firejail-lts
+
+# Hans de Graaff <graaff@gentoo.org> (2022-06-19)
+# ruby26-only, fails tests, no longer maintained upstream,
+# no reverse dependencies. Removal in 30 days.
+dev-ruby/best_in_place
+
+# Hans de Graaff <graaff@gentoo.org> (2022-06-19)
+# ruby26-only, no tests, no reverse dependencies
+# Removal in 30 days.
+dev-ruby/cinch
+
+# Hans de Graaff <graaff@gentoo.org> (2022-06-19)
+# ruby26-only, fails tests, last upstream release in 2020,
+# no reverse dependencies. Removal in 30 days.
+dev-ruby/dotenv
+
+# Hans de Graaff <graaff@gentoo.org> (2022-06-19)
+# ruby26-only, no longer maintained upstream,
+# no reverse dependencies. Removal in 30 days.
+dev-ruby/origin
+
+# Hans de Graaff <graaff@gentoo.org> (2022-06-19)
+# ruby26-only, fails tests, no longer maintained upstream,
+# no reverse dependencies. Removal in 30 days.
+dev-ruby/packetfu
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-06-19)
+# Unused java libraries. Removal on 2022-07-19
+dev-java/netty-transport
+dev-java/netty-buffer
+dev-java/netty-common
+
+# John Helmert III <ajak@gentoo.org> (2022-06-19)
+# Untouched by maintainer since Git transition. No reverse dependencies,
+# unused by upstream, vulnerable. Removal in 30 days. Bug #678705
+dev-libs/libvterm-neovim
+
+# Hans de Graaff <graaff@gentoo.org> (2022-06-18)
+# Obsolete ruby26-only slots. Please use a newer slot instead.
+# Masked for removal in 30 days.
+dev-ruby/autoprefixer-rails:9
+dev-ruby/sass:3.5
+dev-ruby/slim:0
+
 # William Hubbs <williamh@gentoo.org> (2022-06-17)
 # Dead upstream, please use dev-util/github-cli
 # Bug #845921
@@ -96,13 +166,6 @@ dev-python/polygon
 # Use dev-python/mysqlclient instead.
 # Removal on 2022-07-05.  Bug #845756.
 dev-python/mysql-connector-python
-
-# Joonas Niilola <juippis@gentoo.org> (2022-06-05)
-# Version which allows wayland-only build, still experimental. Weeding
-# out all bugs before unmasking. Please see bug #848858 and its
-# blockers.
-=www-client/firefox-101.0-r10
-=www-client/firefox-101.0.1-r10
 
 # Michał Górny <mgorny@gentoo.org> (2022-06-02)
 # The current Gentoo version requires setup.py to exist which breaks
@@ -279,112 +342,6 @@ dev-util/cucumber-wire:5
 # Unmaintained, out of date, failing tests, and uses deprecated eclass methods
 # (EGO_SUM). bug #700846, bug #844445. Removal on 2022-06-20.
 dev-util/kubebuilder
-
-# Matt Turner <mattst88@gentoo.org> (2022-05-19)
-# Dead package upstream for more than 7 years.
-# Removal on 2022-06-19.
-dev-cpp/gconfmm
-
-# Matt Turner <mattst88@gentoo.org> (2022-05-19)
-# Dead package upstream for more than 10 years.
-# Removal on 2022-06-19. Bug #808237
-dev-cpp/libglademm
-
-# Matt Turner <mattst88@gentoo.org> (2022-05-19)
-# Dead package upstream for more than 10 years.
-# Removal on 2022-06-19. Bug #808375
-dev-cpp/libgnomecanvasmm
-
-# Matt Turner <mattst88@gentoo.org> (2022-05-19)
-# Last release in 2006. Last upstream commit in 2007. One of two remaining
-# reverse dependencies of dev-cpp/libglademm, which is dead. Last remaining
-# reverse dependency of dev-cpp/libgnomecanvasmm, which is dead.
-# Removal on 2022-06-19. Bug #845228
-games-board/ascal
-
-# Matt Turner <mattst88@gentoo.org> (2022-05-19)
-# Last release in 2013. Last upstream commit in 2015. One of two remaining
-# reverse dependencies of dev-cpp/libglademm, which is dead.
-# Removal on 2022-06-19. Bug #845231
-app-pda/barry
-
-# Matt Turner <mattst88@gentoo.org> (2022-05-19)
-# Last release in 2010. Only one commit upstream since 2010 (in 2015). Only
-# remaining reverse dependency of dev-cpp/gconfmm, which is dead.
-# Removal on 2022-06-19. Bug #845234
-games-board/ccgo
-
-# Sam James <sam@gentoo.org> (2022-05-19)
-# Masked for removal. No upstream activity since 2013. nose is considered
-# obsolete and on life-support anyway. Removal on 2022-06-19. bug #845762
-dev-python/nose-exclude
-
-# Sam James <sam@gentoo.org> (2022-05-19)
-# Masked for removal. No upstream activity since 2013. nose is considered
-# obsolete and on life-support anyway. Removal on 2022-06-19.
-dev-python/nose_fixes
-
-# Michał Górny <mgorny@gentoo.org> (2022-05-19)
-# No upstream commits since 2015.  The project seems only relevant
-# to Python 2.  No revdeps left.
-# Removal on 2022-06-18.  Bug #846449.
-dev-python/unicodecsv
-
-# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2022-05-19)
-# Unfortunately this has completely stopped working due to
-# upstream changes in WhatsApp. Bug 844985. As an alternative
-# try: *net-im/wazzapp-bin* which still works and also
-# offers additional features over whatsapp-desktop-bin
-# Masked for removal in 30 days
-net-im/whatsapp-desktop-bin
-
-# Michał Górny <mgorny@gentoo.org> (2022-05-16)
-# This was only added for dev-python/nptyping, and nptyping-2.0.0
-# no longer uses it.  No activity since Aug 2021.
-# Removal on 2022-06-15.  Bug #837299.
-dev-python/typish
-
-# Jakov Smolić <jsmolic@gentoo.org> (2022-05-15)
-# Outdated, stuck on deprecated EAPI 5. Recent versions
-# require nvidia developer account to obtain source files.
-# No other major distro is packaging this.
-# Removal on 2022-06-14. Bug #819429.
-media-video/nvidia_video_sdk
-
-# Sam James <sam@gentoo.org> (2022-05-15)
-# Unmaintained, doesn't support Python 3.10+, no tests.
-# Removal on 2022-06-15.
-dev-python/django-taggit-serializer
-
-# Sam James <sam@gentoo.org> (2022-05-15)
-# Unmaintained, does not support Python 3.10+. Removal on 2022-06-15.
-dev-python/django-rq
-
-# Sam James <sam@gentoo.org> (2022-05-15)
-# Masked for removal. No reverse dependencies, no releases in 2 years,
-# does not support Python 3.10+. Removal on 2022-06-15.
-dev-python/python-iptables
-
-# Florian Schmaus <flow@gentoo.org> (2022-05-10)
-# Was split by upstream (and us) into
-# net-analyzer/gsa and net-analyzer/gsad.
-# Removal on 2022-06-10.
-net-analyzer/greenbone-security-assistant
-
-# Florian Schmaus <flow@gentoo.org> (2022-05-10)
-# Functionality now in net-analyzer/ospd-openvas.
-# Removal on 2022-06-10.
-net-analyzer/ospd
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-05-06)
-# Unused java library. Removal on 2022-06-06
-dev-java/commons-jxpath
-
-# Michał Górny <mgorny@gentoo.org> (2022-05-07)
-# The current version is severely outdated and blocks upgrade
-# of dependencies.  Packaging a new release poses serious problems.
-# Removal on 2022-06-06.  Bug #836282.
-dev-db/pgadmin4
 
 # Matt Turner <mattst88@gentoo.org> (2022-04-30)
 # Masked for testing. Apparently causes crashes. Bug #841857.

@@ -5,23 +5,15 @@ EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( pypy3 python3_{8..11} )
-
 inherit distutils-r1
 
 DESCRIPTION="Pure-python utilities in the same spirit as the standard library"
-HOMEPAGE="
-	https://boltons.readthedocs.io/
-	https://github.com/mahmoud/boltons/
-	https://pypi.org/project/boltons/
-"
-SRC_URI="
-	https://github.com/mahmoud/boltons/archive/${PV}.tar.gz
-		-> ${P}.gh.tar.gz
-"
+HOMEPAGE="https://boltons.readthedocs.io/"
+SRC_URI="https://github.com/mahmoud/boltons/archive/${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm64 ~x86"
+KEYWORDS="amd64 ~arm ~arm64 ~x86"
 
 distutils_enable_tests pytest
 distutils_enable_sphinx docs \
