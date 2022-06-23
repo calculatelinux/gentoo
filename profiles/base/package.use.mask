@@ -21,7 +21,6 @@ dev-python/jaraco-stream doc
 dev-python/jaraco-text doc
 dev-python/jsonpickle doc
 dev-python/keyring doc
-dev-python/tempora doc
 
 # Maciej Barć <xgqt@gentoo.org> (2022-05-31)
 # "doc" require old version of dev-python/antlr4-python3-runtime (4.9.3)
@@ -86,8 +85,6 @@ sys-devel/gcc custom-cflags
 <sys-devel/gcc-10.4:10 -pch
 =sys-devel/gcc-9* -pch
 =sys-devel/gcc-8* -pch
-=sys-devel/gcc-7* -pch
-=sys-devel/gcc-6* -pch
 
 # John Helmert III <ajak@gentoo.org> (2021-12-31)
 # Rizin tests require a tarball of binaries of ambiguous license.
@@ -217,10 +214,6 @@ net-analyzer/wireshark lto
 # Fails to build right now
 # bug #651740
 net-misc/openssh debug
-
-# Michał Górny <mgorny@gentoo.org> (2021-03-06)
-# LLVM 9 has been removed.
-<dev-util/perf-5.15 clang
 
 # Thomas Deutschmann <whissi@gentoo.org> (2021-02-17)
 # PCRE JIT support via dev-libs/libpcre2[jit] is only available for certain architectures
@@ -459,10 +452,6 @@ app-admin/conserver freeipmi
 # (bug #674364)
 sys-apps/memtest86+ floppy
 
-# Michał Górny <mgorny@gentoo.org> (2018-11-28)
-# Requires last-rited games-server/ut2003-ded.
-games-fps/ut2003 dedicated
-
 # Alfredo Tupone <tupone@gentoo.org> (2018-11-18)
 # go brokes build of gnat-gpl
 dev-lang/gnat-gpl go
@@ -504,11 +493,6 @@ net-fs/samba ceph
 # Jan Ziak <0xe2.0x9a.0x9b@gmail.com> (2018-03-14)
 # media-libs/svgalib is not keyworded everywhere
 app-emulation/fuse backend-svga
-
-# Patrick McLean <chutzpah@gentoo.org> (2018-03-06)
-# Andreas K. Hüttel <dilfridge@gentoo.org> (2020-12-25)
-# Requires dev-libs/boost-1.72 that is gone
-<sys-cluster/ceph-15 system-boost
 
 # Brian Evans <grknight@gentoo.org> (2018-03-05)
 # Mask embedded USE on virtual/mysql and friends to transition it to be obsolete
@@ -618,13 +602,6 @@ dev-java/icedtea cacao jamvm
 # Rick Farina <zerochaos@gentoo.org> (2015-10-06)
 # forward porting this patch is non-trivial, mask for now
 >=net-wireless/wpa_supplicant-2.5 wimax
-
-# James Le Cuirot <chewi@gentoo.org> (2015-08-18)
-# gcc[awt] is only used by gcj-jdk[awt] and that isn't needed by
-# anything in the tree. The toolchain folks aren't keen to support it
-# and it should probably only be used if you really know what you're
-# doing *and* your name is gnu_andrew. ;) See bug #531900.
-sys-devel/gcc awt
 
 # Mike Gilbert <floppym@gentoo.org> (2015-05-16)
 # dev-lang/python[berkdb] fails with recent multilib sys-libs/db (bug 519584).

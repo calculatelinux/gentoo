@@ -1,6 +1,11 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Sergey Torokhov <torokhov-s-a@yandex.ru> (2022-06-22)
+# media-libs/libjxl is not keyworded
+# bug https://bugs.gentoo.org/853628
+media-gfx/gimp jpegxl
+
 # Sam James <sam@gentoo.org> (2022-04-29)
 # Needs unkeyworded dev-util/umockdev
 sys-power/upower test
@@ -140,10 +145,6 @@ x11-misc/synergy gui
 # media-sound/lash not keyworded, bug #736725
 media-sound/fluidsynth lash
 
-# Cédric Krier <cedk@gentoo.org> (2020-11-10)
-# virtual/rust has no alpha keyword
-dev-vcs/mercurial rust
-
 # Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (2020-10-14)
 # app-i18n/fcitx:4 not keyworded.
 media-libs/libsdl2 fcitx4
@@ -159,10 +160,6 @@ mail-filter/pyzor mysql
 # Matt Turner <mattst88@gentoo.org> (2020-08-11)
 # No drivers on this architecture support Vulkan
 media-libs/mesa vulkan vulkan-overlay zink
-
-# Mart Raudsepp <leio@gentoo.org> (2020-08-02)
-# alpha has no virtual/rust support, needed by newer gnome-base/librsvg, et al
->=media-gfx/eog-3.33.1 svg
 
 # Sergei Trofimovich <slyfox@gentoo.org> (2020-07-18)
 # net-libs/webkit-gtk has no alpha keywords
@@ -311,7 +308,6 @@ net-libs/gnutls test-full
 # Michał Górny <mgorny@gentoo.org> (2017-08-08)
 # Requires USE=bluetooth that is masked in this profile.
 media-sound/pulseaudio native-headset
-media-sound/pulseaudio-daemon native-headset
 
 # Tobias Klausmann <klausman@gentoo.org> (2017-05-18)
 # Stack protector code is not ported to alpha (and may not ever be)

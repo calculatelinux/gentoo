@@ -4,11 +4,12 @@ DEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=Atmospheric side-scrolling action adventure platformer set in a gorgeous forest
 EAPI=7
 HOMEPAGE=http://badlandgame.com
+INHERIT=desktop wrapper xdg
 KEYWORDS=-* ~amd64 ~x86
 LICENSE=all-rights-reserved
 RDEPEND=dev-db/sqlite:3[abi_x86_32] media-libs/fontconfig:1.0[abi_x86_32] media-libs/freetype:2[abi_x86_32] media-libs/libpng-compat:1.2[abi_x86_32] media-libs/libsdl2[abi_x86_32,joystick,opengl,sound,threads,video] net-misc/curl[abi_x86_32] >=sys-devel/gcc-4.6[cxx] >=sys-libs/glibc-2.14 virtual/opengl[abi_x86_32] x11-libs/libX11[abi_x86_32]
 RESTRICT=bindist fetch mirror splitdebug
 SLOT=0
 SRC_URI=Badland_GotY_121.tar https://dev.gentoo.org/~chewi/distfiles/badland.png
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	wrapper	4a1902f969e5718126434fc35f3a0d9c	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
+_eclasses_=desktop	22952d8f27cac191d75529d4c38e6bfa	wrapper	4a1902f969e5718126434fc35f3a0d9c	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
 _md5_=4ff2f233a7a42bb410030a85e4e21bf7

@@ -3,6 +3,7 @@ DEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=The Curse of Monkey Island, the third game in the series
 EAPI=6
 HOMEPAGE=https://en.wikipedia.org/wiki/The_Curse_of_Monkey_Island
+INHERIT=cdrom estack desktop wrapper xdg
 IUSE=doc
 KEYWORDS=~amd64 ~x86
 LICENSE=comi
@@ -11,5 +12,5 @@ RDEPEND=>=games-engines/scummvm-0.4.0
 RESTRICT=bindist
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~chewi/distfiles/comi.jpg
-_eclasses_=cdrom	03e2d7752b66208567758120f15471cc	desktop	c0d27bf73aa08ca05b663dbd31fbef28	estack	055c42df72f76a4f45ec92b35e83cd56	portability	d33a77692bb47e8227f27e17fb9c3c05	wrapper	4a1902f969e5718126434fc35f3a0d9c	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
+_eclasses_=cdrom	03e2d7752b66208567758120f15471cc	desktop	22952d8f27cac191d75529d4c38e6bfa	estack	055c42df72f76a4f45ec92b35e83cd56	portability	d33a77692bb47e8227f27e17fb9c3c05	wrapper	4a1902f969e5718126434fc35f3a0d9c	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
 _md5_=089f84ddf86de2523a8ed7c622040582

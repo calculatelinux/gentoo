@@ -4,11 +4,12 @@ DEPEND=gnome-base/libglade:2.0 sys-libs/zlib virtual/libcrypt:= virtual/fam x11-
 DESCRIPTION=GUI tool used to make the management of Pure-FTPd a little easier
 EAPI=7
 HOMEPAGE=http://purify.sourceforge.net/
+INHERIT=desktop xdg
 IUSE=doc
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2
 RDEPEND=gnome-base/libglade:2.0 sys-libs/zlib virtual/libcrypt:= virtual/fam x11-libs/gtk+:2 x11-libs/libX11
 SLOT=0
 SRC_URI=mirror://sourceforge/purify/pureadmin-0.4.tar.gz
-_eclasses_=desktop	c0d27bf73aa08ca05b663dbd31fbef28	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
+_eclasses_=desktop	22952d8f27cac191d75529d4c38e6bfa	xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
 _md5_=2aca3c2825d5739f6e1371623ab3fbe7
