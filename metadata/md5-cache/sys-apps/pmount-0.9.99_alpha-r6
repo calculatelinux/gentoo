@@ -11,4 +11,4 @@ RDEPEND=acct-group/plugdev >=sys-apps/util-linux-2.17.2 crypt? ( >=sys-fs/crypts
 SLOT=0
 SRC_URI=mirror://debian/pool/main/p/pmount/pmount_0.9.99-alpha.orig.tar.bz2
 _eclasses_=bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253
-_md5_=48fea456d71196aebc2da1d343d9f535
+_md5_=5069638ed04ffac970df383585f2b9e2

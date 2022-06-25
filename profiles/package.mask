@@ -33,6 +33,31 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2022-06-25)
+# Obsolete slot. Use a newer slot instead.
+# Removal in 30 days.
+dev-ruby/hashie:3
+
+# Hans de Graaff <graaff@gentoo.org> (2022-06-25)
+# Obsolete slot. Use a newer slot instead.
+# Removal in 30 days.
+dev-ruby/marcel:0
+
+# Hans de Graaff <graaff@gentoo.org> (2022-06-25)
+# Obsolete slot. Use a newer slot instead.
+# Removal in 30 days.
+dev-ruby/paramesan:0
+
+# Hans de Graaff <graaff@gentoo.org> (2022-06-25)
+# Obsolete slot. Use a newer slot instead.
+# Removal in 30 days.
+dev-ruby/paramesan:0
+
+# Hans de Graaff <graaff@gentoo.org> (2022-06-24)
+# Obsolete slot. Use a newer slot instead.
+# Removal in 30 days.
+dev-ruby/rspec-rails:3
+
 # Marc Schiffbauer <mschiff@gentoo.org> (2022-06-22)
 # Deprecated package. Removal in 30 days.
 # see bug #843746
@@ -256,26 +281,6 @@ dev-ruby/regexp_parser:1
 # by dev-python/python-pam. Fails tests in a few scary ways too. Removal
 # on 2022-06-28. Bugs #833297, #802927.
 dev-python/pypam
-
-# Andrey Grozin <grozin@gentoo.org> (2022-05-25)
-# Does not work with the current dev-python/pyx
-# Removal on 2022-06-24
-dev-python/pyfeyn
-
-# Michał Górny <mgorny@gentoo.org> (2022-05-25)
-# dev-python/m2r has not seen any activity since Jun 2019 and requires
-# old version of dev-python/mistune.  dev-python/sphinxcontrib-openapi
-# has not seen any activity since Oct 2020.  Their only revdep
-# is dev-python/jupyter_server[doc], so let's mask the flag and remove
-# them.
-# Removal on 2022-06-24.  Bug #843881.
-dev-python/m2r
-dev-python/sphinxcontrib-openapi
-
-# Matt Turner <mattst88@gentoo.org> (2022-05-23)
-# Dead package upstream. Depends on dead app-misc/tracker:0.
-# Removal on 2022-06-23. Bug #846605
-gnome-extra/gnome-documents
 
 # Hans de Graaff <graaff@gentoo.org> (2022-05-20)
 # Unused slots of cucumber components that are no longer or were never
