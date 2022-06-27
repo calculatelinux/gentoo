@@ -50,6 +50,8 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+PATCHES=( "${FILESDIR}"/${PN}-22.04.2-musl_malloc_trim.patch )
+
 src_configure() {
 	local mycmakeargs=(
 		$(cmake_use_find_package X X11)

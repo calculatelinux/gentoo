@@ -256,6 +256,9 @@ pre_build_checks() {
 				die "At least clang 12 is required"
 			fi
 		fi
+		if use js-type-check; then
+			"${EPREFIX}"/usr/bin/java --version 2>1 > /dev/null || die "Java VM not setup correctly"
+		fi
 	fi
 
 	# Check build requirements, bug #541816 and bug #471810 .
@@ -806,9 +809,9 @@ chromium_configure() {
 			filter-flags "-g*"
 		fi
 
-		# Prevent libvpx build failures. Bug 530248, 544702, 546984.
+		# Prevent libvpx/xnnpack build failures. Bug 530248, 544702, 546984, 853646.
 		if [[ ${myarch} == amd64 || ${myarch} == x86 ]]; then
-			filter-flags -mno-mmx -mno-sse2 -mno-ssse3 -mno-sse4.1 -mno-avx -mno-avx2 -mno-fma -mno-fma4
+			filter-flags -mno-mmx -mno-sse2 -mno-ssse3 -mno-sse4.1 -mno-avx -mno-avx2 -mno-fma -mno-fma4 -mno-xop
 		fi
 	fi
 
