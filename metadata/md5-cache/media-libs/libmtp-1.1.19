@@ -1,5 +1,5 @@
 BDEPEND=>sys-devel/gettext-0.18.3 virtual/pkgconfig doc? ( app-doc/doxygen ) virtual/pkgconfig
-DEFINED_PHASES=configure install prepare
+DEFINED_PHASES=configure install postinst postrm prepare
 DEPEND=acct-group/plugdev virtual/libiconv virtual/libusb:1 crypt? ( >=dev-libs/libgcrypt-1.5.4:0= )
 DESCRIPTION=Implementation of Microsoft's Media Transfer Protocol (MTP)
 EAPI=7
@@ -11,5 +11,5 @@ LICENSE=LGPL-2.1
 RDEPEND=acct-group/plugdev virtual/libiconv virtual/libusb:1 crypt? ( >=dev-libs/libgcrypt-1.5.4:0= )
 SLOT=0/9
 SRC_URI=mirror://sourceforge/libmtp/libmtp-1.1.19.tar.gz
-_eclasses_=multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	fd9cde67030b26e479eeadaced488253	udev	f3a0a3964e2028a140c181f00eea9712
-_md5_=0cffe6cf4ab2b43853736868cfb43764
+_eclasses_=multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	udev	f3a0a3964e2028a140c181f00eea9712
+_md5_=8884463c7338d637b6a62e7155100044

@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>polynomial-c@gentoo.org</email>
-		<name>Lars Wendler</name>
+		<email>ionen@gentoo.org</email>
+		<name>Ionen Wolkens</name>
 	</maintainer>
 	<longdescription>
 inotify-tools is a set of command-line programs for Linux providing a simple

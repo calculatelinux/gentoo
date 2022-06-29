@@ -164,11 +164,6 @@ dev-lang/rust parallel-compiler
 # Mask experimental options.
 gui-libs/gtk ffmpeg vulkan
 
-# Marek Szuba <marecki@gentoo.org> (2021-07-14)
-# Even on a clean install, 8 phdf5 tests fail (Bug #808612)
-# Mask for further study.
->=sci-libs/hdf5-1.12.1 mpi
-
 # Sam James <sam@gentoo.org> (2021-07-24)
 # USE=exec-static-trampoline can break consumers due to
 # faulty assumptions. Masked for now due to the possibility
@@ -566,8 +561,6 @@ net-fs/samba system-heimdal
 # Robin H. Johnson <robbat2@gentoo.org> (2016-12-04)
 # Additional HAProxy functionality waiting for related stuff to land in the
 # tree.
-# bug #541042 - lua 5.3
-net-proxy/haproxy lua
 # bug (none) - 51Degrees
 net-proxy/haproxy 51degrees
 # bug (none) - WURFL
