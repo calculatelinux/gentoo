@@ -100,6 +100,10 @@ REQUIRED_USE="
 
 RESTRICT="test"
 
+PATCHES=(
+	"${FILESDIR}"/2.1.5-dracut-zfs-missing.patch
+)
+
 pkg_pretend() {
 	use rootfs || return 0
 

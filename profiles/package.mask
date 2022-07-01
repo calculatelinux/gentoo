@@ -33,14 +33,16 @@
 
 #--- END OF EXAMPLES ---
 
-# Sam James <sam@gentoo.org> (2022-06-29)
-# Pre-emptively mask broken upstream versions.
-# 1. openssl 1.1.1o fails tests (https://github.com/openssl/openssl/issues/18619)
-# 2. openssl 3.0.4 has a buffer overflow w/ AVX512 (https://github.com/openssl/openssl/issues/18625)
-# Gentoo isn't vulnerable to the original CVE which caused these releases
-# (CVE-2022-2068) as we have our own rehash script.
-=dev-libs/openssl-1.1.1p
-=dev-libs/openssl-3.0.4
+# Ulrich Müller <ulm@gentoo.org> (2022-06-30)
+# Pretest versions, masked for testing.
+~app-editors/emacs-28.1.90
+~app-editors/emacs-28.1.91
+~app-editors/emacs-28.1.92
+
+# Marek Szuba <marecki@gentoo.org> (2022-06-30)
+# A GNOME 2-era library with no consumers left in the tree, marked
+# as deprecated since March 2022. Removal in 30 days (Bug #855299).
+gnome-extra/gtkhtml
 
 # Piotr Karbowski <slashbeast@gentoo.org> (2022-06-26)
 # Abandoned upstream, depends on API that no longer exists.
@@ -243,58 +245,17 @@ dev-python/jaraco-packaging
 # no upstream activity in years. Removal on 2022-07-02.
 dev-python/chai
 
-# Sam James <sam@gentoo.org> (2022-05-30)
-# Doesn't support Python 3.10+, maintainer-needed, and out of date.
-# Bugs #818847, #845936, #786585.
-# Removal on 2022-06-30.
-dev-util/dput-ng
-dev-util/distro-info
-dev-util/distro-info-data
-
-# Sam James <sam@gentoo.org> (2022-05-30)
-# No upstream activity since 2019, doesn't even support Python 3.9+ properly,
-# and doesn't support Python 3.10. Bugs #845819, #798384. Removal on 2022-06-30.
-dev-python/pypcap
-
-# Sam James <sam@gentoo.org> (2022-05-30)
-# Obsolete, no new releases since 2015, doesn't support Python 3.10.
-# Bugs #845681, #747982. Removal on 2022-06-30.
-dev-python/3to2
-
-# Sam James <sam@gentoo.org> (2022-05-30)
-# No upstream development since 2017, doesn't support Python 3.10. Bug #845678.
-# Removal on 2022-06-30.
-dev-perl/Inline-Python
-
-# Sam James <sam@gentoo.org> (2022-05-30)
-# Out of date, no tests, and most importantly, doesn't yet support Python 3.10
-# which will soon be the default. Bugs #845783, #822540, #798204.
-# Removal on 2022-06-30.
-dev-python/pycapnp
-
 # Matt Turner <mattst88@gentoo.org> (2022-05-30)
 # libwacom-2 broke ABI compatibility; reverse dependencies need to be updated.
 # Bug #848501
 >=dev-libs/libwacom-2.0
 >=x11-drivers/xf86-input-wacom-1.0
 
-# Hans de Graaff <graaff@gentoo.org> (2022-05-29)
-# Old slots that are no longer used by dependencies. Upgrade to the
-# latest slot instead. Masked for removal in one month.
-dev-ruby/regexp_parser:0
-dev-ruby/regexp_parser:1
-
 # Sam James <sam@gentoo.org> (2022-05-28)
 # GCC 9 and older no longer receive upstream support or fixes for
 # bugs. Please switch to a newer GCC version using gcc-config.
 # The lowest supported version of GCC is GCC 10.
 <sys-devel/gcc-10
-
-# Sam James <sam@gentoo.org> (2022-05-28)
-# Masked for removal. Dead upstream, no releases in a long time, and superseded
-# by dev-python/python-pam. Fails tests in a few scary ways too. Removal
-# on 2022-06-28. Bugs #833297, #802927.
-dev-python/pypam
 
 # Hans de Graaff <graaff@gentoo.org> (2022-05-20)
 # Unused slots of cucumber components that are no longer or were never
