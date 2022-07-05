@@ -1,0 +1,16 @@
+BDEPEND=dev-lang/perl test? ( virtual/perl-Test-Simple )
+DEFINED_PHASES=compile configure install postinst prepare test
+DEPEND=dev-perl/Monitoring-Plugin dev-perl/Module-Pluggable dev-lang/perl
+DESCRIPTION=Nagios/Icinga plugin to check current server's RAID status
+EAPI=8
+HOMEPAGE=https://github.com/glensc/nagios-plugin-check_raid
+INHERIT=perl-module
+IUSE=3ware aacraid dmraid hpa hpsa megaraid-sas mpt mpt-sas2 test
+KEYWORDS=~amd64 ~sparc ~x86
+LICENSE=GPL-2
+RDEPEND=dev-perl/Monitoring-Plugin dev-perl/Module-Pluggable sys-apps/smartmontools sys-fs/lsscsi 3ware? ( sys-block/tw_cli ) aacraid? ( sys-block/arcconf ) dmraid? ( sys-fs/dmraid ) hpa? ( sys-block/hpacucli ) hpsa? ( sys-apps/cciss_vol_status ) megaraid-sas? ( sys-block/megacli ) mpt-sas2? ( sys-block/sas2ircu ) mpt? ( sys-block/mpt-status ) dev-lang/perl:=
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/glensc/nagios-plugin-check_raid/archive/4.0.10.tar.gz -> nagios-plugin-check_raid-4.0.10.tar.gz
+_eclasses_=multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	perl-functions	95b2df43c5f3057b6e77bd00b4d953da	perl-module	f2c1b0dd41761ffc8441cd041e4bb7ec	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55
+_md5_=63deb69af5e82ca1b8173c7b83ebd6b3

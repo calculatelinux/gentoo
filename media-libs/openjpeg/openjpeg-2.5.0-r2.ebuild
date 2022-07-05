@@ -20,7 +20,7 @@ SRC_URI="https://github.com/uclouvain/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 
 LICENSE="BSD-2"
 SLOT="2/7" # based on SONAME
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc static-libs test"
 RESTRICT="!test? ( test )"
 
@@ -120,7 +120,7 @@ multilib_src_test() {
 	local FAILEDTEST=
 	local HAS_UNKNOWN_TEST_FAILURES=0
 
-	awk -F: '{ print $2 }' "${FAILEDTEST_LOG}" | while read FAILEDTEST; do
+	while read FAILEDTEST; do
 		# is this failure known?
 		if grep -xq "${FAILEDTEST}" "${KNOWN_FAILURES_LIST}" ; then
 			elog "Test '${FAILEDTEST}' is known to fail, ignoring ..."
@@ -128,7 +128,7 @@ multilib_src_test() {
 			eerror "New/unknown test failure found: '${FAILEDTEST}'"
 			HAS_UNKNOWN_TEST_FAILURES=1
 		fi
-	done
+	done < <(awk -F: '{ print $2 }' "${FAILEDTEST_LOG}")
 
 	[[ ${HAS_UNKNOWN_TEST_FAILURES} -eq 0 ]] || die "Test suite failed. New/unknown test failure(s) found!"
 

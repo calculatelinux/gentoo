@@ -22,6 +22,7 @@ IUSE="+crypt doc examples static-libs"
 
 RDEPEND="
 	acct-group/plugdev
+	virtual/libiconv
 	virtual/libusb:1
 	crypt? ( dev-libs/libgcrypt:0= )"
 DEPEND="${RDEPEND}"
@@ -57,6 +58,7 @@ src_configure() {
 		--with-udev-group=plugdev
 		--with-udev-mode=0660
 	)
+
 	econf "${myeconfargs[@]}"
 }
 

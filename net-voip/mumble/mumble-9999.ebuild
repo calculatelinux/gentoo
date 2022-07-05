@@ -3,14 +3,15 @@
 
 EAPI=7
 
-inherit cmake xdg
+PYTHON_COMPAT=( python3_{8..10} )
+inherit cmake flag-o-matic python-any-r1 xdg
 
 DESCRIPTION="Mumble is an open source, low-latency, high quality voice chat software"
 HOMEPAGE="https://wiki.mumble.info"
 if [[ "${PV}" == 9999 ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/mumble-voip/mumble.git"
-	EGIT_SUBMODULES=( '-*' celt-0.7.0-src celt-0.11.0-src themes/Mumble 3rdparty/rnnoise-src 3rdparty/FindPythonInterpreter 3rdparty/tracy )
+	EGIT_SUBMODULES=( '-*' celt-0.7.0-src celt-0.11.0-src themes/Mumble 3rdparty/rnnoise-src 3rdparty/FindPythonInterpreter 3rdparty/tracy 3rdparty/gsl )
 else
 	if [[ "${PV}" == *_pre* ]] ; then
 		SRC_URI="https://dev.gentoo.org/~polynomial-c/dist/${P}.tar.xz"
@@ -57,6 +58,7 @@ RDEPEND="
 	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )
 "
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	dev-cpp/nlohmann_json
 	dev-qt/qtconcurrent:5
 	dev-qt/qttest:5
@@ -67,6 +69,10 @@ BDEPEND="
 	dev-qt/linguist-tools:5
 	virtual/pkgconfig
 "
+
+pkg_setup() {
+	python-any-r1_pkg_setup
+}
 
 src_prepare() {
 	sed '/TRACY_ON_DEMAND/s@ ON @ OFF @' -i src/CMakeLists.txt || die
@@ -106,6 +112,10 @@ src_configure() {
 		mycmakeargs+=( -DBUILD_NUMBER="$(ver_cut 3)" )
 	fi
 
+	# https://bugs.gentoo.org/832978
+	# fix tests (and possibly runtime issues) on arches with unsigned chars
+	append-cxxflags -fsigned-char
+
 	cmake_src_configure
 }
 
@@ -121,6 +131,9 @@ src_install() {
 		mv "${ED}"/${libdir_64}/libmumbleoverlay.x86.so* \
 			"${ED}"/${libdir_32}/ || die
 	fi
+
+	insinto /usr/share/mumble
+	doins -r samples
 }
 
 pkg_postinst() {

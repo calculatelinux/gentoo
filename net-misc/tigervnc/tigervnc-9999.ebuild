@@ -16,7 +16,11 @@ EGIT_REPO_URI="https://github.com/TigerVNC/tigervnc/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="dri3 +drm gnutls java nls +opengl server xinerama +xorgmodule"
+IUSE="dri3 +drm gnutls java nls +opengl +server xinerama"
+REQUIRED_USE="
+	dri3? ( drm )
+	opengl? ( server )
+"
 
 CDEPEND="
 	media-libs/libjpeg-turbo:=
@@ -48,7 +52,6 @@ CDEPEND="
 		x11-apps/xsetroot
 		x11-misc/xkeyboard-config
 		opengl? ( media-libs/libglvnd[X] )
-		xorgmodule? ( =x11-base/xorg-server-${XSERVER_VERSION%.*}* )
 	)
 	"
 
@@ -79,11 +82,12 @@ PATCHES=(
 	# Restore Java viewer
 	"${FILESDIR}"/${PN}-1.11.0-install-java-viewer.patch
 	"${FILESDIR}"/${PN}-1.12.0-xsession-path.patch
+	"${FILESDIR}"/${PN}-1.12.80-disable-server-and-pam.patch
 )
 
 src_unpack() {
 	git-r3_src_unpack
-	unpack xorg-server-${XSERVER_VERSION}.tar.xz
+	use server && unpack xorg-server-${XSERVER_VERSION}.tar.xz
 }
 
 src_prepare() {
@@ -99,8 +103,9 @@ src_prepare() {
 		eautoreconf
 		sed -i 's:\(present.h\):../present/\1:' os/utils.c || die
 		sed -i '/strcmp.*-fakescreenfps/,/^        \}/d' os/utils.c || die
+
+		cd "${WORKDIR}" && sed -i 's:\(drm_fourcc.h\):libdrm/\1:' $(grep drm_fourcc.h -rl .) || die
 	fi
-	cd "${WORKDIR}" && sed -i 's:\(drm_fourcc.h\):libdrm/\1:' $(grep drm_fourcc.h -rl .) || die
 }
 
 src_configure() {
@@ -112,6 +117,7 @@ src_configure() {
 		-DENABLE_GNUTLS=$(usex gnutls)
 		-DENABLE_NLS=$(usex nls)
 		-DBUILD_JAVA=$(usex java)
+		-DBUILD_SERVER=$(usex server)
 	)
 
 	cmake_src_configure
@@ -168,11 +174,7 @@ src_install() {
 
 	if use server; then
 		emake -C unix/xserver/hw/vnc DESTDIR="${D}" install
-		if ! use xorgmodule; then
-			rm -rv "${ED}"/usr/$(get_libdir)/xorg || die
-		else
-			rm -v "${ED}"/usr/$(get_libdir)/xorg/modules/extensions/libvnc.la || die
-		fi
+		rm -v "${ED}"/usr/$(get_libdir)/xorg/modules/extensions/libvnc.la || die
 
 		newconfd "${FILESDIR}"/${PN}-1.12.0.confd ${PN}
 		newinitd "${FILESDIR}"/${PN}-1.12.0.initd ${PN}
@@ -185,15 +187,6 @@ src_install() {
 
 		# install vncserver to /usr/bin too, see bug #836620
 		dosym -r /usr/libexec/vncserver /usr/bin/vncserver
-	else
-		local f
-		for f in x0vncserver vncconfig; do
-			rm "${ED}"/usr/bin/${f} || die
-			rm "${ED}"/usr/share/man/man1/${f}.1 || die
-		done
-		rm -r "${ED}"/usr/{sbin,libexec} || die
-		rm -r "${ED}"/usr/share/man/man8 || die
-		rm -r "${ED}"/etc || die
 	fi
 }
 
@@ -202,6 +195,7 @@ pkg_postinst() {
 
 	local OPTIONAL_DM="gnome-base/gdm x11-misc/lightdm x11-misc/sddm x11-misc/slim"
 	use server && \
+		optfeature "keeping track of the xorg-server module" net-misc/tigervnc-xorg-module && \
 		optfeature_header "Install any additional display manager package:" && \
 		optfeature "proper session support" ${OPTIONAL_DM}
 }

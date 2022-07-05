@@ -33,6 +33,42 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2022-07-02)
+# Unmaintained, no response on bugs, stuck on python 3.9. If you
+# want to unmask these, you have to at least port them to python 3.10.
+# Bugs #809524, #809527, #809530, #809533, #809833, #845729, #845816,
+# #846017, #846200, #846203, #846206, #853844, removal on 2022-08-01.
+app-misc/siglo
+dev-python/gatt-python
+dev-python/pynput
+media-libs/elgato-streamdeck
+media-video/streamdeck-ui
+net-wireless/jackit
+net-wireless/kismet-rest
+net-wireless/kismetdb
+
+# Sam James <sam@gentoo.org> (2022-07-02)
+# Deprecated dependencies, no activity upstream. Bugs #845615, #796326.
+# Removal on 2022-08-02.
+app-vim/pyclewn
+
+# Michał Górny <mgorny@gentoo.org> (2022-07-02)
+# Last release in 2014.  Archived upstream, and superseded by GeoIP2
+# (not packaged).  There is only one revdep (net-p2p/deluge) for which
+# it is optional.
+# Removal on 2022-08-01.  Bug #855737.
+dev-python/geoip-python
+
+# Matthew Smith <matthew@gentoo.org> (2022-07-02)
+# Superseded by dev-util/rebar:3.
+# Removal in 30 days. Bug #855728.
+dev-util/rebar-bin
+
+# Fabian Groffen <grobian@gentoo.org> (2022-07-02)
+# Segfaults handling SPF validations (warn on permerror), like the
+# previous release, better not to trust your important mail to
+~mail-mta/exim-4.96
+
 # Ulrich Müller <ulm@gentoo.org> (2022-06-30)
 # Pretest versions, masked for testing.
 ~app-editors/emacs-28.1.90
@@ -231,20 +267,6 @@ dev-python/polygon
 # Removal on 2022-07-05.  Bug #845756.
 dev-python/mysql-connector-python
 
-# Michał Górny <mgorny@gentoo.org> (2022-06-02)
-# The current Gentoo version requires setup.py to exist which breaks
-# the new versions of its revdeps.  The new upstream release is broken
-# by design and requires installing setuptools in a virtualenv (enjoy
-# pep517) to get the package's version, so fails without Internet.
-# No reply on the bug for 3 months already.
-# Removal on 2022-07-02.  Bug #834534.
-dev-python/jaraco-packaging
-
-# Sam James <sam@gentoo.org> (2022-06-02)
-# No reverse dependencies, uses long-deprecated and abandoned nose for tests,
-# no upstream activity in years. Removal on 2022-07-02.
-dev-python/chai
-
 # Matt Turner <mattst88@gentoo.org> (2022-05-30)
 # libwacom-2 broke ABI compatibility; reverse dependencies need to be updated.
 # Bug #848501
@@ -257,27 +279,6 @@ dev-python/chai
 # The lowest supported version of GCC is GCC 10.
 <sys-devel/gcc-10
 
-# Hans de Graaff <graaff@gentoo.org> (2022-05-20)
-# Unused slots of cucumber components that are no longer or were never
-# used by current cucumber versions. Masked for removal in 30 days.
-dev-util/cucumber-core:9
-dev-util/cucumber-create-meta:4
-dev-util/cucumber-cucumber-expressions:10
-dev-util/cucumber-gherkin:18
-dev-util/cucumber-gherkin:20
-dev-util/cucumber-html-formatter:13
-dev-util/cucumber-html-formatter:16
-dev-util/cucumber-messages:13
-dev-util/cucumber-messages:14
-dev-util/cucumber-messages:15
-dev-util/cucumber-tag-expressions:2
-dev-util/cucumber-tag-expressions:3
-dev-util/cucumber-wire:5
-
-# Matt Turner <mattst88@gentoo.org> (2022-04-30)
-# Masked for testing. Apparently causes crashes. Bug #841857.
->=x11-libs/libX11-1.8
-
 # Joonas Niilola <juippis@gentoo.org> (2022-04-29)
 # Apparently the "b" in version means "beta". 3.24 is available, we
 # should update to that. #841437
@@ -286,6 +287,7 @@ dev-util/cucumber-wire:5
 # Alfredo Tupone <tupone@gentoo.org> (2022-04-27)
 # New release of janestreet packages need to tested
 dev-ml/sexplib0:0/0.15
+dev-ml/sexplib:0/0.15
 dev-ml/base:0/0.15
 dev-ml/stdio:0/0.15
 dev-ml/ppx_sexp_conv:0/0.15
@@ -397,11 +399,6 @@ net-p2p/arti
 <sci-electronics/kicad-symbols-6.0.2
 <sci-electronics/kicad-templates-6.0.2
 <app-doc/kicad-doc-6.0.2
-
-# Jonas Stein <jstein@gentoo.org> (2022-02-08)
-# Not maintained, open bugs, upstream outdated.
-# Removal after 2022-07-01.  Bug #832953.
-x11-misc/easystroke
 
 # Eray Aslan <eras@gentoo.org> (2022-01-24)
 # Mask experimental software

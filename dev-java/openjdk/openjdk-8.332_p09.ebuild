@@ -161,7 +161,7 @@ src_configure() {
 		unset _JAVA_OPTIONS JAVA JAVA_TOOL_OPTIONS JAVAC MAKE XARGS
 		CFLAGS= CXXFLAGS= LDFLAGS= \
 		CONFIG_SITE=/dev/null \
-		CONFIG_SHELL="${EPREFIX}/bin/bash"
+		CONFIG_SHELL="${BROOT}/bin/bash"
 		econf "${myconf[@]}"
 	)
 }
@@ -205,7 +205,7 @@ src_install() {
 	dodir "${dest}"
 	cp -pPR * "${ddest}" || die
 
-	dosym -r /etc/ssl/certs/java/cacerts "${dest}"/jre/lib/security/cacerts
+	dosym8 -r /etc/ssl/certs/java/cacerts "${dest}"/jre/lib/security/cacerts
 
 	java-vm_install-env "${FILESDIR}"/${PN}-${SLOT}.env.sh
 	java-vm_set-pax-markings "${ddest}"
