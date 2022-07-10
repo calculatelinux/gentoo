@@ -16,7 +16,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 sparc x86 ~amd64-linux ~x86-linux ~x64-macos"
 IUSE="+cxx perl static-libs test"
 RESTRICT="!test? ( test )"
 
@@ -83,5 +83,7 @@ src_install() {
 
 	mv "${ED}"/usr/$(get_libdir)/pkgconfig/{,ossp-}uuid.pc || die
 	mv "${ED}"/usr/share/man/man3/uuid.3{,ossp} || die
-	mv "${ED}"/usr/share/man/man3/uuid++.3{,ossp} || die
+	if use cxx; then
+		mv "${ED}"/usr/share/man/man3/uuid++.3{,ossp} || die
+	fi
 }

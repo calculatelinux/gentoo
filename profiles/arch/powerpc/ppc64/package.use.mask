@@ -1,6 +1,10 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Matthew Smith <matthew@gentoo.org> (2022-07-10)
+# Needs unkeyworded app-doc/halibut
+>=net-misc/putty-0.77 doc
+
 # Jimi Huotari <chiitoo@gentoo.org> (2022-05-08)
 # Not keyworded here yet.
 lxqt-base/lxqt-meta desktop-portal
@@ -141,10 +145,6 @@ net-analyzer/snort open-appid
 # Jeroen Roovers <jer@gentoo.org> (2017-01-16)
 # Incomplete support, bug #605878.
 net-vpn/tor seccomp
-
-# Robin H. Johnson <robbat2@gentoo.org> (2016-11-18)
-# dev-lang/luajit lacks ppc64 keyword. luajit upstream does not support ppc64
-dev-db/redis luajit
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (2016-08-01)
 # kde-frameworks/*:5 not keyworded.
