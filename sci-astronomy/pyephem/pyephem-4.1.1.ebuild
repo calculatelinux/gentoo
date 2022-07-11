@@ -14,10 +14,16 @@ SRC_URI="https://github.com/brandon-rhodes/pyephem/archive/refs/tags/${PV}.tar.g
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="doc"
 
 BDEPEND="doc? ( dev-python/sphinx )"
+
+EPYTEST_DESELECT=(
+	# Can't find its test files (class not loaded properly in test env?)
+	# bug #855461
+	tests/test_jpl.py::JPLTest::runTest
+)
 
 distutils_enable_tests pytest
 

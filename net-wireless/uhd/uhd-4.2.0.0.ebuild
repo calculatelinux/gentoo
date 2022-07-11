@@ -18,14 +18,14 @@ SRC_URI="https://github.com/EttusResearch/uhd/archive/v${PV}.tar.gz -> EttusRese
 LICENSE="GPL-3"
 SLOT="0/$(ver_cut 1-3)"
 KEYWORDS="~amd64 ~arm ~riscv ~x86"
-IUSE="+b100 +b200 doc e300 examples +mpmd octoclock +n230 test +usb +usrp1 +usrp2 +utils +x300"
+IUSE="+b100 +b200 doc e300 examples +mpmd octoclock test +usb +usrp1 +usrp2 +utils +x300"
 RESTRICT="!test? ( test )"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 			b100? ( usb )
 			b200? ( usb )
 			usrp1? ( usb )
 			usrp2? ( usb )
-			|| ( b100 b200 e300 mpmd n230 usrp1 usrp2 x300 )"
+			|| ( b100 b200 e300 mpmd usrp1 usrp2 x300 )"
 
 RDEPEND="${PYTHON_DEPS}
 	e300? ( virtual/udev )
@@ -86,6 +86,7 @@ src_configure() {
 		-DENABLE_OCTOCLOCK="$(usex octoclock)"
 		-DPYTHON_EXECUTABLE="${PYTHON}"
 		-DPKG_DOC_DIR="${EPREFIX}/usr/share/doc/${PF}"
+		-DUHD_VERSION="${PV}"
 	)
 	cmake_src_configure
 }
@@ -96,6 +97,10 @@ src_install() {
 	use utils && python_fix_shebang "${ED}"/usr/$(get_libdir)/${PN}/utils/
 	if [[ "${PV}" != "9999" ]]; then
 		rm -r "${ED}/usr/bin/uhd_images_downloader" || die
+	fi
+	# do not install test files (bug #857492)
+	if use test; then
+		rm "${ED}/usr/lib64/${PN}/tests" -R || die
 	fi
 
 	udev_dorules "${S}/utils/uhd-usrp.rules"
@@ -113,9 +118,6 @@ src_install() {
 	if ! use mpmd; then
 		rm "${WORKDIR}"/images/usrp_n310* || die
 	fi
-	if ! use n230; then
-		rm "${WORKDIR}"/images/usrp_n230* || die
-	fi
 	if ! use octoclock; then
 		rm "${WORKDIR}"/images/octoclock* || die
 	fi
@@ -132,4 +134,12 @@ src_install() {
 	fi
 	insinto /usr/share/${PN}
 	doins -r "${WORKDIR}/images"
+}
+
+pkg_postinst() {
+	udev_reload
+}
+
+pkg_postrm() {
+	udev_reload
 }

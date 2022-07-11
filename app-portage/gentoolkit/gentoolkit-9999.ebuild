@@ -4,7 +4,7 @@
 EAPI=7
 
 DISTUTILS_USE_SETUPTOOLS=no
-PYTHON_COMPAT=( python3_{7..10} pypy3 )
+PYTHON_COMPAT=( python3_{8..11} pypy3 )
 PYTHON_REQ_USE="xml(+),threads(+)"
 
 inherit distutils-r1 tmpfiles
@@ -26,7 +26,7 @@ SLOT="0"
 DEPEND="
 	sys-apps/portage[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}
-	sys-apps/gawk
+	virtual/awk
 	sys-apps/gentoo-functions"
 
 distutils_enable_tests setup.py

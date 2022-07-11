@@ -33,6 +33,37 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2022-07-11)
+# Unmaintained, companion lib of dev-cpp/commoncpp2 which has already
+# been removed, fails with USE=-ssl, no revdeps, upstream mostly dead.
+# Bug #830581, removal on 2022-08-10.
+dev-libs/ucommon
+
+# Brian Evans <grknight@gentoo.org> (2022-07-11)
+# The database behind this extension is no longer available
+# Please migrate to dev-php/maxmind-db-reader optionally with its
+# bundled extension. Bug 857636
+# Removal on 2022-08-10.
+dev-php/pecl-geoip
+
+# David Seifert <soap@gentoo.org> (2022-07-11)
+# Crashes with latest emboss, no other distro packages this,
+# ancient release, bug #361411, removal on 2022-08-10.
+sci-biology/transfac
+
+# Sam James <sam@gentoo.org> (2022-07-10)
+# Broken with autoconf 2.70+, stuck on EAPI 6, plenty
+# of concerning warnings. Even Debian's fork isn't
+# enough to fix all the issues (w/ autoconf).
+# Removal on 2022-07-10.
+net-mail/mpack
+
+# David Seifert <soap@gentoo.org> (2022-07-10)
+# Unmaintained, last release in 2010, ebuild added by author and then
+# abandoned, terrible macros break compiling with GCC 12.
+# Bugs #851867, removal on 2022-08-09.
+games-engines/nazghul
+
 # Michał Górny <mgorny@gentoo.org> (2022-07-10)
 # The original package was discontinued in 2015.  This is a fork that
 # lived for two months in 2017, and is not name-compatible with
@@ -238,12 +269,6 @@ sys-cluster/csync2
 # or dev-python/ukkonen.
 # Removal on 2022-07-13.  Bug #851678.
 dev-python/editdistance-s
-
-# Sam James <sam@gentoo.org> (2022-06-10)
-# Masked for removal on 2022-07-10. No upstream activity in a long time,
-# no reverse dependencies, and Gentoo maintains a huge number of patches
-# w/ no hope of them being upstreamed. Bug #850958.
-dev-cpp/commoncpp2
 
 # Matt Turner <mattst88@gentoo.org> (2022-05-30)
 # libwacom-2 broke ABI compatibility; reverse dependencies need to be updated.
