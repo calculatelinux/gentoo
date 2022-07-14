@@ -33,6 +33,35 @@
 
 #--- END OF EXAMPLES ---
 
+# Bernard Cafarelli <voyageur@gentoo.org> (2022-07-14)
+# Dead upstream (last release in 2013, no tarballs or git download)
+# No reverse dependencies for a long time, several test and build failures
+# Bug #857948, removal on 2022-08-13.
+net-misc/csync
+
+# David Seifert <soap@gentoo.org> (2022-07-14)
+# Unmaintained, no other major distro carries this, code quality is
+# abysmal, build system has major issues, tons of patches, EAPI 6,
+# no other revdeps in tree. Bug #822762, #831874, removal on 2022-08-13.
+sci-visualization/opendx
+sci-visualization/opendx-samples
+
+# Marek Szuba <marecki@gentoo.org> (2022-07-13)
+# Upstream has switched from CMake to hand-crafted Makefiles (yes, TO them),
+# which have seriously messed up dependency handling and trigger several
+# QA violations in Gentoo. Mask until all of the latter have been resolved
+# and the jumbo patch fixing the former has been thoroughly tested.
+>media-gfx/gmic-3.1.0
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-07-12)
+# Unused java libraries, all asm-* included in dev-java/asm,
+# log4j-api-java9 never to be used as a package. Removal on 2022-08-12.
+dev-java/asm-analysis
+dev-java/asm-commons
+dev-java/asm-tree
+dev-java/asm-util
+dev-java/log4j-api-java9
+
 # Sam James <sam@gentoo.org> (2022-07-12)
 # Huge number of open bugs, deprecated upstream (they recommend
 # using other video editors like Shotcut, Kdenlive, ...). Removal on 2022-08-12.
@@ -270,13 +299,6 @@ media-gfx/jpeg2ps
 # 2020. Removal on 2022-07-15.  Bug #718550.
 sys-cluster/csync2
 
-# Michał Górny <mgorny@gentoo.org> (2022-06-13)
-# Upstream has discontinued the fork.  No revdeps.  They recommend using
-# the original editdistance (not packaged on Gentoo)
-# or dev-python/ukkonen.
-# Removal on 2022-07-13.  Bug #851678.
-dev-python/editdistance-s
-
 # Matt Turner <mattst88@gentoo.org> (2022-05-30)
 # libwacom-2 broke ABI compatibility; reverse dependencies need to be updated.
 # Bug #848501
@@ -354,11 +376,6 @@ dev-ml/async_extra:0/0.15
 dev-ml/core_bench:0/0.15
 dev-ml/patience_diff:0/0.15
 dev-util/patdiff:0/0.15
-
-# Marek Szuba <marecki@gentoo.org> (2022-04-14)
-# Singularity has been renamed upstream to Apptainer. Therefore, up-to-date
-# versions of this software are now available as app-containers/apptainer.
-sys-cluster/singularity
 
 # Sam James <sam@gentoo.org> (2022-04-13)
 # 2.35.2 was a quick release to mitigate a security issue (bug #838127), but

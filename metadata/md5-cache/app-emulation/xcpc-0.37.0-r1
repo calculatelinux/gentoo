@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure postinst postrm preinst
+DEPEND=app-arch/bzip2 sys-libs/zlib x11-libs/gtk+:3 x11-libs/libX11 x11-libs/libXext
+DESCRIPTION=XCPC is a portable Amstrad CPC 464/664/6128 emulator written in C
+EAPI=8
+HOMEPAGE=http://www.xcpc-emulator.net/doku.php/index
+INHERIT=xdg
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=app-arch/bzip2 sys-libs/zlib x11-libs/gtk+:3 x11-libs/libX11 x11-libs/libXext
+SLOT=0
+SRC_URI=https://bitbucket.org/ponceto/xcpc/downloads/xcpc-0.37.0.tar.gz
+_eclasses_=xdg	6024fbc93167fad782e2032933654857	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e
+_md5_=338f2f9b04e40325d812f08c96ba96aa
