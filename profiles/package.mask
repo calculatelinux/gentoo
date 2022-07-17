@@ -33,6 +33,22 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2022-07-17)
+# Code quality issues, out of date by several versions in Gentoo,
+# unmaintained, and several open bugs: bugs #521272, #729684, #855230.
+# Removal on 2022-08-17.
+dev-db/gigabase
+
+# Hans de Graaff <graaff@gentoo.org> (2022-07-16)
+# No longer supported upstream. Use a newer ruby version instead.
+# Masked for removal in 30 days.
+dev-lang/ruby:2.6
+
+# Sam James <sam@gentoo.org> (2022-07-15)
+# No activity upstream since early 2021, uses deprecated Go eclass,
+# open bugs: bug #680358, bug #844694. Removal on 2022-08-15.
+dev-util/docker-ls
+
 # Bernard Cafarelli <voyageur@gentoo.org> (2022-07-14)
 # Dead upstream (last release in 2013, no tarballs or git download)
 # No reverse dependencies for a long time, several test and build failures
@@ -274,30 +290,12 @@ dev-java/netty-common
 # unused by upstream, vulnerable. Removal in 30 days. Bug #678705
 dev-libs/libvterm-neovim
 
-# Hans de Graaff <graaff@gentoo.org> (2022-06-18)
-# Obsolete ruby26-only slots. Please use a newer slot instead.
-# Masked for removal in 30 days.
-dev-ruby/autoprefixer-rails:9
-dev-ruby/sass:3.5
-dev-ruby/slim:0
-
-# William Hubbs <williamh@gentoo.org> (2022-06-17)
-# Dead upstream, please use dev-util/github-cli
-# Bug #845921
-# Removal: 2022-07-17
-dev-util/cligh
-
 # Ulrich Müller <ulm@gentoo.org> (2022-06-16)
 # Last release in 2002. The distfile cannot be redistributed
 # and is no longer available upstream. Use media-gfx/imagemagick
 # ("convert" with eps2 or eps3 output format) as replacement.
 # Masked for removal in 30 days. Bug #851708.
 media-gfx/jpeg2ps
-
-# John Helmert III <ajak@gentoo.org> (2022-06-15)
-# Open security bug with patches for years. Upstream seems dead since
-# 2020. Removal on 2022-07-15.  Bug #718550.
-sys-cluster/csync2
 
 # Matt Turner <mattst88@gentoo.org> (2022-05-30)
 # libwacom-2 broke ABI compatibility; reverse dependencies need to be updated.
@@ -402,7 +400,7 @@ net-p2p/arti
 # Dev channel releases are only for people who
 # are developers or want more experimental features
 # and accept a more unstable release.
->=www-client/chromium-104
+>=www-client/chromium-105
 
 # Anton Fischl <github@fischl-online.de> (2022-02-23)
 # Version 2.5.* is not meant for production according to upstream

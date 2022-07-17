@@ -3,6 +3,8 @@
 
 EAPI=8
 
+# Please bump with app-misc/astrolog
+
 DESCRIPTION="ephemeris files for optional extended accuracy of astrolog's calculations"
 HOMEPAGE="https://www.astrolog.org/astrolog.htm"
 SRC_URI="https://www.astrolog.org/ftp/ephem/ephemall.zip"
@@ -10,7 +12,7 @@ SRC_URI="https://www.astrolog.org/ftp/ephem/ephemall.zip"
 LICENSE="astrolog"
 SLOT="0"
 # works fine on x86 - runs probably on other architectures, too
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 S="${WORKDIR}"

@@ -1,0 +1,15 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=configure install
+DEPEND=dev-libs/libcdio media-libs/xine-lib[v4l?,X,imagemagick] virtual/libcrypt:= curl? ( net-misc/curl ) dvb? ( media-libs/xine-lib[v4l] ) joystick? ( media-libs/libjsw ) jpeg? ( media-libs/netpbm[jpeg,zlib(+)] media-video/mjpegtools virtual/imagemagick-tools[jpeg] ) lirc? ( app-misc/lirc ) nls? ( virtual/libintl sys-devel/gettext ) png? ( media-libs/netpbm[png,zlib(+)] media-video/mjpegtools virtual/imagemagick-tools[png] ) X? ( x11-libs/libXext x11-libs/libX11 )
+DESCRIPTION=OSD frontend for Xine
+EAPI=8
+HOMEPAGE=http://oxine.sourceforge.net/
+INHERIT=flag-o-matic
+IUSE=curl debug dvb exif joystick jpeg lirc nls png v4l X
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/libcdio media-libs/xine-lib[v4l?,X,imagemagick] virtual/libcrypt:= curl? ( net-misc/curl ) dvb? ( media-libs/xine-lib[v4l] ) joystick? ( media-libs/libjsw ) jpeg? ( media-libs/netpbm[jpeg,zlib(+)] media-video/mjpegtools virtual/imagemagick-tools[jpeg] ) lirc? ( app-misc/lirc ) nls? ( virtual/libintl sys-devel/gettext ) png? ( media-libs/netpbm[png,zlib(+)] media-video/mjpegtools virtual/imagemagick-tools[png] ) X? ( x11-libs/libXext x11-libs/libX11 ) sys-apps/util-linux
+SLOT=0
+SRC_URI=mirror://sourceforge/oxine/oxine-0.7.1.tar.gz
+_eclasses_=flag-o-matic	a3abd6002fafb3022597be6b8d01f88b	multilib	4fbbbc98f236f1b43acd99476bc3cd85	toolchain-funcs	3484f775017f532a8d1ae02c65defe13
+_md5_=9d3ba9f76839ee13cfe784241cba3aaa

@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit cmake
+inherit cmake flag-o-matic
 
 DESCRIPTION="Emulator of x86-based machines based on PCem"
 HOMEPAGE="https://github.com/86Box/86Box"
@@ -45,6 +45,11 @@ RDEPEND="
 BDEPEND="virtual/pkgconfig"
 
 src_configure() {
+	# LTO needs to be filtered
+	# See https://bugs.gentoo.org/854507
+	filter-lto
+	append-flags -fno-strict-aliasing
+
 	local mycmakeargs=(
 		-DCPPTHREADS="$(usex threads)"
 		-DDEV_BRANCH="$(usex experimental)"

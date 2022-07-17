@@ -827,8 +827,6 @@ app-misc/gramps:rcs - Adds support for family tree archives via dev-vcs/rcs
 app-misc/gramps:reports - All external software that is needed for graphical reports will be installed
 app-misc/graphlcd-base:fontconfig - Add support for media-libs/fontconfig font names.
 app-misc/graphlcd-base:freetype - Add support for media-libs/freetype.
-app-misc/graphlcd-base:graphicsmagick - Add support for media-gfx/graphicsmagick.
-app-misc/graphlcd-base:imagemagick - Add support for media-gfx/imagemagick.
 app-misc/irtrans-irserver:mono - Enable mono support
 app-misc/jdupes:dedupe - Enable deduplication support
 app-misc/jdupes:lowmem - Enable support for low-memory operation
@@ -910,6 +908,7 @@ app-misc/recoll:inotify - Use the Linux Kernel notification subsystem for monito
 app-misc/recoll:session - Stop monitoring file alterations when X11 session terminates
 app-misc/recoll:webengine - Use dev-qt/qtwebengine for fancy result list display
 app-misc/rlwrap:debug - Enable debug
+app-misc/rundeck-cli-bin:binary - Copy the precompiled jar file and skip the rest of src_compile
 app-misc/screen:multiuser - Enable multiuser support (by setting correct permissions)
 app-misc/screen:nethack - Express error messages in nethack style
 app-misc/screenfetch:X - Use the media-gfx/scrot package to take screenshots
@@ -2501,6 +2500,7 @@ dev-python/python-mpd:twisted - Enable twisted support
 dev-python/python-stdnum:vies - Enable VIES
 dev-python/pyudev:qt5 - Install PyQt5 bindings
 dev-python/pyzmq:draft - Enable draft API support
+dev-python/qiskit-terra:visualization - Enable visualization modules
 dev-python/rarfile:compressed - Enables the module to support compressed v3 archives by calling the app-arch/unrar.
 dev-python/rfc3986:idna - enable support for the IDNA specification (RFC 5891)
 dev-python/rpyc:gdb - Run tests depending on sys-devel/gdb
@@ -3469,8 +3469,8 @@ kde-apps/kget:mms - Enable MMS (Microsoft Media Server) plugin through media-lib
 kde-apps/kig:geogebra - Support files created by sci-mathematics/geogebra-bin
 kde-apps/kig:scripting - Support Python scripting
 kde-apps/kio-extras:X - Enable support for XCursor thumbnails via x11-libs/libX11
-kde-apps/kio-extras:activities - Enable activities kioslave and fileitem plugin
-kde-apps/kio-extras:man - Enable manpages kioslave
+kde-apps/kio-extras:activities - Enable activities KIO worker and fileitem plugin
+kde-apps/kio-extras:man - Enable manpages KIO worker
 kde-apps/kio-extras:nfs - Enable NFS support using net-libs/libtirpc
 kde-apps/kio-extras:phonon - Enable file audio preview plugin using media-libs/phonon
 kde-apps/kio-extras:sftp - Enable SFTP protocol support using net-libs/libssh
@@ -6671,7 +6671,7 @@ net-misc/wget:uuid - Generate UUIDs for the WARC (Web ARChive file format) using
 net-misc/wget2:brotli - Enable support for brotli compression
 net-misc/wget2:gpgme - Build app-crypt/gpgme backend
 net-misc/wget2:http2 - Enable HTTP/2.0 support via net-libs/nghttp2
-net-misc/wget2:lzip - Enable app-arch/lzip support
+net-misc/wget2:lzip - Enable app-arch/lzip support via app-arch/lzlib
 net-misc/wget2:openssl - Enable crypto support via dev-libs/openssl
 net-misc/wget2:psl - Use public suffix list via net-libs/libpsl
 net-misc/wget2:valgrind - Depend on dev-util/valgrind for test suite
@@ -6993,8 +6993,11 @@ net-wireless/gnuradio:dtv - enable digital tv signal processing blocks
 net-wireless/gnuradio:fec - enable block for convolutional encoding using the CCSDS standard polynomial ("Voyager")
 net-wireless/gnuradio:filter - enable filter signal processing blocks
 net-wireless/gnuradio:grc - enable GNU Radio Companion graphical tool to design signal processing flow graphs
+net-wireless/gnuradio:iio - enable enable support for IIO devices
 net-wireless/gnuradio:modtool - enable modtool for editing GNU Radio modules and components
+net-wireless/gnuradio:network - enable block for networking support
 net-wireless/gnuradio:performance-counters - enable block performance counters
+net-wireless/gnuradio:soapy - enable support for SoapySDR blocks
 net-wireless/gnuradio:trellis - enable trellis blocks for FSM
 net-wireless/gnuradio:uhd - install UHD source and sink blocks
 net-wireless/gnuradio:utils - install scripts to enable viewing and analysis of files produced by flow graphs
@@ -7099,6 +7102,7 @@ sci-astronomy/psfex:plplot - Build with sci-libs/plplot to allow diagnostic plot
 sci-astronomy/scamp:plplot - Build with sci-libs/plplot to allow diagnostic plots during processing
 sci-astronomy/sextractor:modelfit - Enable profile model fitting, needs sci-libs/atlas and sci-libs/fftw
 sci-astronomy/siril:heif - Add support for the HEIF image format
+sci-astronomy/siril:libconfig - Require dev-libs/libconfig to read old configuration files
 sci-astronomy/siril:wcs - Add supprt astrometry features using sci-astronomy/wcslib
 sci-astronomy/stellarium:deep-sky - Install extra deep sky objects catalog (may affect performance)
 sci-astronomy/stellarium:media - Enable sound and video support
@@ -7209,6 +7213,7 @@ sci-geosciences/grass:geos - Use sci-libs/geos for v.buffer and adds extended op
 sci-geosciences/grass:las - Include support for LAS and LAZ encoded LiDAR files through sci-geosciences/liblas
 sci-geosciences/grass:liblas - Include support for LAS and LAZ encoded LiDAR files through sci-geosciences/liblas
 sci-geosciences/grass:opencl - Enable OpenCL support
+sci-geosciences/grass:pdal - Enable support for PDAL for point clouds via sci-libs/pdal
 sci-geosciences/gshhs:data - Add earth data with sci-geosciences/gshhs-data
 sci-geosciences/liblas:gdal - Add support for the sci-libs/gdal geospatial raster library
 sci-geosciences/mapserver:apache - Enable mapserver to run under apache
@@ -8699,7 +8704,6 @@ www-client/seamonkey:custom-optimization - Build with user-specified compiler op
 www-client/seamonkey:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
 www-client/seamonkey:ipc - Use inter-process communication between tabs and plugins. Allows for greater stability in case of plugin crashes
 www-client/seamonkey:lto - Enable Link Time Optimization (LTO). Requires Gold linker
-www-client/seamonkey:roaming - Build roaming extension support (default on)
 www-client/seamonkey:system-av1 - Use the system-wide media-libs/dav1d and media-libs/libaom library instead of bundled
 www-client/seamonkey:system-harfbuzz - Use the system-wide media-libs/harfbuzz instead of bundled
 www-client/seamonkey:system-icu - Use the sytem-wide dev-libs/icu instead of bundled
@@ -8873,6 +8877,7 @@ x11-misc/albert:python-extensions - Install default python extensions system-wid
 x11-misc/albert:statistics - Enable local statistics
 x11-misc/albert:virtualbox - Enable app-emulation/virtualbox extension
 x11-misc/alock:doc - Build and install manpage with app-text/asciidoc.
+x11-misc/appmenu-gtk-module:gtk2 - Build module for GTK+2
 x11-misc/autorandr:launcher - Install the launcher, i.e., an alternative to the udev/systemd hooks
 x11-misc/bumblebee:bbswitch - Add dependency on sys-power/bbswitch for PM feature
 x11-misc/clipmenu:dmenu - Use dmenu as default launcher
