@@ -4,7 +4,7 @@
 EAPI=8
 
 PYTHON_COMPAT=( python3_{8..10} )
-PYTHON_REQ_USE="xml"
+PYTHON_REQ_USE="xml(+)"
 MY_P="${P/_/}"
 inherit cmake flag-o-matic xdg toolchain-funcs python-single-r1
 
@@ -13,7 +13,7 @@ if [[ ${PV} = 9999* ]]; then
 	EGIT_REPO_URI="https://gitlab.com/inkscape/inkscape.git"
 else
 	SRC_URI="https://media.inkscape.org/dl/resources/file/${P}.tar.xz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
+	KEYWORDS="~alpha ~amd64"
 fi
 
 DESCRIPTION="SVG based generic vector-drawing program"
@@ -60,7 +60,9 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	x11-libs/gtk+:3[X?]
 	X? ( x11-libs/libX11 )
 	$(python_gen_cond_dep '
+		dev-python/cachecontrol[${PYTHON_USEDEP}]
 		dev-python/cssselect[${PYTHON_USEDEP}]
+		dev-python/lockfile[${PYTHON_USEDEP}]
 		dev-python/lxml[${PYTHON_USEDEP}]
 		media-gfx/scour[${PYTHON_USEDEP}]
 	')
