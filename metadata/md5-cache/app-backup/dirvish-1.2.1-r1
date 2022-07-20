@@ -1,0 +1,11 @@
+BDEPEND=app-arch/tar
+DEFINED_PHASES=install prepare
+DESCRIPTION=Dirvish is a fast, disk based, rotating network backup system
+EAPI=8
+HOMEPAGE=http://www.dirvish.org/
+KEYWORDS=amd64 ppc x86
+LICENSE=OSL-2.0
+RDEPEND=dev-perl/Time-ParseDate dev-perl/Time-Period net-misc/rsync
+SLOT=0
+SRC_URI=http://dirvish.org/dirvish-1.2.1.tgz
+_md5_=6007d656a31ca7fe776d37c016c521ae

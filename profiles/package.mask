@@ -33,6 +33,24 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2022-07-20)
+# Obsolete ruby26-only slot without reverse dependencies. Use a newer
+# slot instead. Masked for removal in 30 days.
+dev-ruby/activeldap:5
+dev-ruby/web-console:3
+
+# Sam James <sam@gentoo.org> (2022-07-19)
+# Unaddressed file collisions, fails to build with slibtool, EAPI 6, and
+# out of date. Bugs #800617, #658318. No reverse dependencies in ::gentoo
+# and needs a dependency in ::sci to run tests. Removal on 2022-08-19.
+sci-libs/io_lib
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2022-07-19)
+# No upstream commits since 2017, broken by yr.no widget discontinuation.
+# Replaced by kde-misc/kweather from KDE Plasma Mobile Gear.
+# Removal on 2022-08-18.
+kde-misc/plasma-applet-weather-widget
+
 # Sam James <sam@gentoo.org> (2022-07-17)
 # Code quality issues, out of date by several versions in Gentoo,
 # unmaintained, and several open bugs: bugs #521272, #729684, #855230.
@@ -226,18 +244,6 @@ app-backup/kfoldersync
 # support Python 3.10+. Use app-crypt/gpgme[python] instead.
 # Bugs #845807, #798372, #748531. Removal on 2022-07-21.
 dev-python/pygpgme
-
-# Sam James <sam@gentoo.org> (2022-06-19)
-# Unsupported by upstream, no updates in a long time,
-# vulnerable to issues fixed in the main firejail package.
-# bug #834601.
-# Please migrate to sys-apps/firejail. Removal on 2022-07-19.
-sys-apps/firejail-lts
-
-# John Helmert III <ajak@gentoo.org> (2022-06-19)
-# Untouched by maintainer since Git transition. No reverse dependencies,
-# unused by upstream, vulnerable. Removal in 30 days. Bug #678705
-dev-libs/libvterm-neovim
 
 # Matt Turner <mattst88@gentoo.org> (2022-05-30)
 # libwacom-2 broke ABI compatibility; reverse dependencies need to be updated.
