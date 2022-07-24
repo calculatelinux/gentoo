@@ -18,6 +18,7 @@ IUSE="jemalloc jit static-libs"
 
 CDEPEND="
 	sys-libs/readline:0=
+	dev-libs/libedit
 	dev-libs/libpcre[jit?]
 	jemalloc? ( dev-libs/jemalloc )
 	sys-libs/ncurses:0="
@@ -96,4 +97,6 @@ src_install() {
 	fowners root:varnish /etc/varnish/
 	fowners varnish:varnish /var/lib/varnish/
 	fperms 0750 /var/lib/varnish/ /etc/varnish/
+
+	find "${ED}" -name "*.la" -delete || die
 }

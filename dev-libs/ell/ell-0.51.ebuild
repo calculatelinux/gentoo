@@ -12,7 +12,7 @@ if [[ "${PV}" == *9999 ]] ; then
 	EGIT_REPO_URI="https://git.kernel.org/pub/scm/libs/ell/ell.git"
 else
 	SRC_URI="https://mirrors.edge.kernel.org/pub/linux/libs/${PN}/${P}.tar.xz"
-	KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ppc64 ~riscv ~sparc x86"
+	KEYWORDS="~alpha amd64 ~arm arm64 ~hppa ~ia64 ~mips ppc ppc64 ~riscv ~sparc x86"
 fi
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -39,6 +39,8 @@ PATCHES=(
 
 src_prepare() {
 	default
+	sed -i -e "s#/tmp/ell-test-bus#/tmp/ell-test-bus-$(uuidgen)#" \
+		unit/test-dbus*.c unit/dbus.conf || die
 	[[ "${PV}" == *9999 ]] && eautoreconf
 }
 

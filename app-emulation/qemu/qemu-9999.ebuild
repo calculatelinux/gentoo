@@ -3,6 +3,16 @@
 
 EAPI=8
 
+# Generate using https://github.com/thesamesam/sam-gentoo-scripts/blob/main/niche/generate-qemu-docs
+# Set to 1 if prebuilt, 0 if not
+# (the construct below is to allow overriding from env for script)
+QEMU_DOCS_PREBUILT=${QEMU_DOCS_PREBUILT:-1}
+QEMU_DOCS_PREBUILT_DEV=sam
+QEMU_DOCS_VERSION=$(ver_cut 1-3)
+# Default to generating docs (inc. man pages) if no prebuilt; overridden later
+# bug #830088
+QEMU_DOC_USEFLAG="+doc"
+
 PYTHON_COMPAT=( python3_{8,9,10} )
 PYTHON_REQ_USE="ncurses,readline"
 
@@ -12,6 +22,8 @@ inherit linux-info toolchain-funcs python-r1 udev fcaps readme.gentoo-r1 \
 		pax-utils xdg-utils
 
 if [[ ${PV} == *9999* ]]; then
+	QEMU_DOCS_PREBUILT=0
+
 	EGIT_REPO_URI="https://gitlab.com/qemu-project/qemu.git/"
 	EGIT_SUBMODULES=(
 		meson
@@ -24,6 +36,11 @@ if [[ ${PV} == *9999* ]]; then
 else
 	MY_P="${PN}-${PV/_rc/-rc}"
 	SRC_URI="https://download.qemu.org/${MY_P}.tar.xz"
+
+	if [[ ${QEMU_DOCS_PREBUILT} == 1 ]] ; then
+		SRC_URI+=" !doc? ( https://dev.gentoo.org/~${QEMU_DOCS_PREBUILT_DEV}/distfiles/${CATEGORY}/${PN}/${PN}-${QEMU_DOCS_VERSION}-docs.tar.xz )"
+	fi
+
 	KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~x86"
 	S="${WORKDIR}/${MY_P}"
 fi
@@ -34,7 +51,9 @@ HOMEPAGE="https://www.qemu.org https://www.linux-kvm.org"
 LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
 
-IUSE="accessibility +aio alsa bpf bzip2 capstone +caps +curl debug +doc
+[[ ${QEMU_DOCS_PREBUILT} == 1 ]] && QEMU_DOC_USEFLAG="doc"
+
+IUSE="accessibility +aio alsa bpf bzip2 capstone +caps +curl debug ${QEMU_DOC_USEFLAG}
 	+fdt fuse glusterfs +gnutls gtk infiniband iscsi io-uring
 	jack jemalloc +jpeg
 	lzo multipath
@@ -794,6 +813,11 @@ src_install() {
 
 	cd "${S}/tools-build" || die
 	emake DESTDIR="${ED}" install
+
+	# If USE=doc, there'll be newly generated docs which we install instead.
+	if ! use doc && [[ ${QEMU_DOCS_PREBUILT} == 1 ]] ; then
+		doman "${WORKDIR}"/${PN}-${QEMU_DOCS_VERSION}-docs/docs/*.[0-8]
+	fi
 
 	# Disable mprotect on the qemu binaries as they use JITs to be fast #459348
 	pushd "${ED}"/usr/bin >/dev/null || die

@@ -1119,7 +1119,6 @@ app-text/msort:heap - Use heap instead of alloca()
 app-text/msort:icu - Use dev-libs/icu instead of dev-libs/libutf8proc.
 app-text/msort:libuninum - Use dev-libs/libuninum for conversion.
 app-text/pandoc:embed-data-files - Embed data files in binary for relocatable executable.
-app-text/pandoc:optimize - Enable -O1 optimizations (requires ~16GiB memory)
 app-text/pandoc:trypandoc - Build trypandoc cgi executable.
 app-text/pandoc-bin:pandoc-symlink - Install pandoc symlink that points to pandoc-bin
 app-text/pastebinit:crypt - Install pbputs for gpg-encrypted pastes
@@ -1451,14 +1450,13 @@ dev-games/simgear:gdal - Enable alternative terrain engine based on pagedLOD via
 dev-games/simgear:subversion - Enable terrasync scenery downloader
 dev-haskell/abstract-deque:usecas - Enable the reference implementation to use hardware compare-and-swap.
 dev-haskell/aeson:cffi - Controls whether to include c-ffi bits or pure haskell. Default to False for security.
-dev-haskell/aeson:fast - compile without optimizations
+dev-haskell/aeson:ordered-keymap - Use ordered @Data.Map.Strict@ for KeyMap implementation.
 dev-haskell/aeson-pretty:lib-only - don't build 'aeson-pretty' executable.
 dev-haskell/ansi-terminal:example - Build the example application.
-dev-haskell/ansi-wl-pprint:example - Build the example application.
+dev-haskell/atomic-primops:debug - Enable extra internal checks.
 dev-haskell/attoparsec-iso8601:developer - operate in developer mode
 dev-haskell/attoparsec-iso8601:fast - compile without optimizations
 dev-haskell/authenticate:network-uri - Get Network.URI from the network-uri package
-dev-haskell/aws:network-3 - Use network-3
 dev-haskell/bifunctors:semigroups - You can disable the use of the `semigroups` package using `-f-semigroups`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/bifunctors:tagged - You can disable the use of the `tagged` package using `-f-tagged`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/biosff:fclip - Build the 'fclip' executable.
@@ -1467,7 +1465,8 @@ dev-haskell/biosff:frecover - Build the 'frecover' executable.
 dev-haskell/bytedump:executable - build executable file
 dev-haskell/bytes:test-doctests - Enable the doctest suite when using the enable-tests option for cabal.
 dev-haskell/c2hs:regression - run regression tests
-dev-haskell/cabal-install:native-dns - Enable use of the resolv and windns packages for performing DNS lookups
+dev-haskell/cabal-install:lukko - Use @lukko@ for file-locking
+dev-haskell/cabal-install:native-dns - Enable use of the [resolv](https://hackage.haskell.org/package/resolv) & [windns](https://hackage.haskell.org/package/windns) packages for performing DNS lookups
 dev-haskell/chaselev-deque:debug - Enable the extra internal checks.
 dev-haskell/chell:color-output - use colors in program output
 dev-haskell/chimera:representable - Define Representable instance from adjunctions package
@@ -1483,6 +1482,7 @@ dev-haskell/contravariant:tagged - You can disable the use of the `tagged` packa
 dev-haskell/criterion:embed-data-files - Embed the data files in the binary for a relocatable executable
 dev-haskell/crypto-api:all-cpolys - Build all the CMAC polynomes up to 10000 bits instead of just the usual ones
 dev-haskell/cryptonite:integer-gmp - Whether or not to use GMP for some functions
+dev-haskell/cryptonite:target-attributes - use GCC / clang function attributes instead of global target options.
 dev-haskell/entropy:halvm - Build for the HaLVM.
 dev-haskell/filestore:maxcount - Make use of a recent (>= 2.3.0) Darcs feature which vastly improves the performance of 'latest'. You should disable this flag if you plan to use gitit with an older version of Darcs, or 'latest' will raise an error.
 dev-haskell/foundation:experimental - enable building experimental features, known as highly unstable or without good support cross-platform
@@ -1494,7 +1494,6 @@ dev-haskell/gtk2hs-buildtools:closuresignals - Use the the GClosure-based signal
 dev-haskell/gtk3:fmode-binary - Set the default file translation mode for file I/O operations to _O_BINARY.
 dev-haskell/gtk3:gio - Depend on GIO package, thereby enabling certain features.
 dev-haskell/hackage-security:lukko - Use @lukko@ for file-locking, otherwise use @GHC.IO.Handle.Lock@
-dev-haskell/hackage-security:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/hakyll:buildwebsite - Build the hakyll website
 dev-haskell/hakyll:checkexternal - Include external link checking
 dev-haskell/hakyll:previewserver - Include the preview server
@@ -1517,8 +1516,8 @@ dev-haskell/hs3:network-uri - Get Network.URI from the network-uri package
 dev-haskell/hslogger:network-3 - Use network-3
 dev-haskell/hslua:hardcode-reg-keys - Don't use CAPI to determine the names of certain registry key names but Use hard coded values for instead. This flag is required when compiling against Lua 5.3.3 or earlier, as those do not expose the necessary information in the @lauxlib.h@ header file.
 dev-haskell/hsopenssl:fast-bignum - Enable fast moving of bignums between OpenSSL and GMP (GHC Only)
-dev-haskell/http:conduit10 - Use version 1.0.x or below of the conduit package (for the test suite).
-dev-haskell/http:network-uri - Get Network.URI from the network-uri package.
+dev-haskell/hsyaml-aeson:exe - Enable @exe:yaml-test@ component
+dev-haskell/http-api-data:text-show - Use text-show library for efficient ToHttpApiData implementation.
 dev-haskell/http-client:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/http-streams:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/httpd-shed:buildexamples - Build example executables.
@@ -1539,7 +1538,13 @@ dev-haskell/lens:trustworthy - Assert that we are trustworthy when we can
 dev-haskell/libyaml:no-unicode - Don't enable unicode output. Instead, unicode characters will be escaped.
 dev-haskell/libyaml:system-libyaml - Use the system-wide libyaml instead of the bundled copy
 dev-haskell/linear:template-haskell - You can disable the use of the `template-haskell` package using `-f-template-haskell`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/lukko:ofd-locking - Enable open file descriptor locking. Available on Linux (kernel 3.15, released Jun 8, 2014).
+dev-haskell/lpeg:rely-on-shared-lpeg-library - Do not build lpeg from source, but trust that lpeg is made available in other ways, e.g., through a system-wide installation. The loader will be replaced with a placeholder function that only emits a message.
+dev-haskell/lua:allow-unsafe-gc - Allow optimizations which make Lua's garbage collection potentially unsafe; enabling this should be safe if there are no callbacks into Haskell during Lua garbage collection cycles. The flag should be *disabled* if Lua objects can have Haskell finalizers, i.e., @__gc@ metamethods that call Haskell function.
+dev-haskell/lua:apicheck - Compile Lua with -DLUA_USE_APICHECK.
+dev-haskell/lua:export-dynamic - Add all symbols to dynamic symbol table; disabling this will make it possible to create fully static binaries, but renders loading of dynamic C libraries impossible.
+dev-haskell/lua:hardcode-reg-keys - Don't use CAPI to determine the names of certain registry key names but use hard coded values instead. This flag is required when compiling against Lua 5.3.3 or earlier, as those versions do not expose the necessary information in the @lauxlib.h@ header file. Setting this flag should usually be unproblematic, except if the used Lua version has been patched heavily.
+dev-haskell/lua:lua-32bits - Compile Lua with -DLUA_32BITS
+dev-haskell/lua:system-lua - Use @pkg-config@ to discover library and include paths. Setting this flag implies `pkg-config`.
 dev-haskell/missingh:network-3 - Use network-3
 dev-haskell/mod:semirings - Derive semiring instances
 dev-haskell/monad-logger:template-haskell - Enable Template Haskell support.
@@ -1557,6 +1562,7 @@ dev-haskell/pandoc-citeproc:static - Use static linking.
 dev-haskell/pandoc-citeproc:unicode-collation - Use Haskell bindings to the International Components for Unicode (ICU) libraries
 dev-haskell/parsec-numbers:parsec1 - use dev-haskell/parsec1 instead of dev-haskell/parsec
 dev-haskell/parsers:attoparsec - Enable the use of the `attoparsec` package
+dev-haskell/parsers:binary - You can disable the use of the `binary` package using `-f-binary`.
 dev-haskell/parsers:parsec - Enable the use of the `parsec` package
 dev-haskell/persistent-sqlite:build-sanity-exe - Build a sanity check test executable.
 dev-haskell/pointed:comonad - optional instances
@@ -1583,6 +1589,8 @@ dev-haskell/recaptcha:network-uri - Get Network.URI from the network-uri package
 dev-haskell/rfc5051:mkunicodedata - build codes generator itself
 dev-haskell/sandi:conduit - Build with conduit
 dev-haskell/semigroupoid-extras:profunctors - You can disable the use of the `profunctors` package using `-f-profunctors`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
+dev-haskell/semigroupoids:comonad - You can disable the use of the `comonad` package using `-f-comonad`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Comonad`
+dev-haskell/semigroupoids:containers - You can disable the use of the `containers` package using `-f-containers`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/semigroupoids:contravariant - You can disable the use of the `contravariant` package using `-f-contravariant`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Contravariant`
 dev-haskell/semigroupoids:distributive - You can disable the use of the `distributive` package using `-f-distributive`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Distributive`
 dev-haskell/semigroupoids:tagged - You can disable the use of the `tagged` package using `-f-tagged`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
@@ -1610,10 +1618,10 @@ dev-haskell/snap-server:openssl - enable https support using dev-haskell/hsopens
 dev-haskell/snap-server:portable - no non-haskell unportable code.
 dev-haskell/splitmix:optimised-mixer - Use JavaScript for mix32
 dev-haskell/splitmix:random - Providen RandomGen SMGen instance
-dev-haskell/stack:developer-mode - By default, should extra developer information be output?
 dev-haskell/store-core:force-alignment - No description
 dev-haskell/texmath:executable - Compile test executable.
 dev-haskell/texmath:network-uri - Get Network.URI from the network-uri package.
+dev-haskell/texmath:server - Compile webserver.
 dev-haskell/text-short:asserts - Enable runtime-checks via 'assert'
 dev-haskell/thyme:bug-for-bug - bug-for-bug compatibility with time
 dev-haskell/thyme:lens - use the full lens package
@@ -1621,6 +1629,8 @@ dev-haskell/thyme:show-internal - instance Show of internal representation
 dev-haskell/tls:compat - Accept SSLv2 compatible handshake.
 dev-haskell/tls:network - Use the base network library.
 dev-haskell/transformers-base:orphaninstances - Build instances for orphan datatypes.
+dev-haskell/unicode-collation:doctests - Run doctests as part of test suite. Use with: @--write-ghc-environment-files=always@.
+dev-haskell/unicode-collation:executable - Build the unicode-collate executable.
 dev-haskell/unix-compat:old-time - build against old-time package
 dev-haskell/uri-encode:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/uri-encode:tools - Build executables.
@@ -1641,8 +1651,8 @@ dev-haskell/warp:warp-debug - Add additional debuging information
 dev-haskell/wcwidth:cli - Enable command line tool
 dev-haskell/wreq:aws - Enable AWS tests
 dev-haskell/wreq:httpbin - Install client
-dev-haskell/yaml:no-examples - don't build the examples
-dev-haskell/yaml:no-exe - don't install the yaml2json executable
+dev-haskell/yaml:examples - Install the haskell-yaml-examples executable
+dev-haskell/yaml:executable - Install the yaml2json and json2yaml executables
 dev-haskell/yesod-auth:network-uri - Get Network.URI from the network-uri package
 dev-haskell/yesod-form:network-uri - Get Network.URI from the network-uri package
 dev-haskell/zip-archive:executable - Build the Zip executable.
@@ -2235,6 +2245,7 @@ dev-libs/ppl:lpsol - Build the ppl_lpsol linear program solver that uses sci-mat
 dev-libs/qcoro5:network - Build dev-qt/qtnetwork support
 dev-libs/qcoro5:websockets - Build dev-qt/qtwebsockets support
 dev-libs/raft:zfs - ZFS support
+dev-libs/serd:tools - Build command line utilities
 dev-libs/serdisplib:tools - Build optional tools.
 dev-libs/simdjson:tools - Build and install extra command line tools
 dev-libs/softhsm:gost - Enable gost algorithm
@@ -2942,7 +2953,6 @@ dev-vcs/gitg:glade - Install a glade catalog file
 dev-vcs/gitg:python - Install Python bindings for those plugins requiring it.
 dev-vcs/gitolite:contrib - Install user-contributed files
 dev-vcs/gitolite:tools - Install tools to e.g. convert a Gitosis config to gitolite or one to check if your setup is gitolite >= 3.x compatible
-dev-vcs/gitolite-gentoo:contrib - Install user-contributed files
 dev-vcs/gitolite-gentoo:tools - Install tools to e.g. convert a Gitosis config to gitolite or one to check if your setup is gitolite >= 3.x compatible
 dev-vcs/mercurial:chg - Support Mercurial command server client
 dev-vcs/mercurial:gpg - Support signing with GnuPG.
@@ -3047,7 +3057,6 @@ games-emulation/fceux:ffmpeg - Use media-video/ffmpeg for video recording
 games-emulation/fceux:x265 - Use media-libs/x265 for video recording (HEVC)
 games-emulation/generator:sdlaudio - Enable SDL Audio
 games-emulation/hatari:capsimage - Use dev-libs/spsdeclib to read .IPF, .RAW, and .CTR disk images
-games-emulation/hatari:microphone - Use media-libs/portaudio for Falcon microphone handling
 games-emulation/hatari:portmidi - Use media-libs/portmidi as an alternative MIDI backend
 games-emulation/higan:gtk - Use GTK3 (Qt5 if disabled) user interface backend
 games-emulation/m64py:7z - Ensure support for .7z archives.
@@ -3079,7 +3088,6 @@ games-emulation/snes9x:glslang - Build support for slang-type shaders
 games-emulation/snes9x:libretro - Build libretro port
 games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recommended)
 games-emulation/vbam:link - Enable GBA linking functionality
-games-engines/devilutionx:lto - Build with link time optimization enabled
 games-engines/devilutionx:sodium - Enable network packet encryption using dev-libs/libsodium
 games-engines/devilutionx:zerotier - Enable ZeroTier for online public games
 games-engines/exult:fluidsynth - Compile with support for FluidSynth
@@ -3300,7 +3308,7 @@ gnome-base/gnome-session:elogind - Support sys-auth/elogind for session tracking
 gnome-base/gnome-settings-daemon:elogind - Rely on sys-auth/elogind as runtime logind provider
 gnome-base/gnome-settings-daemon:modemmanager - Enable WWAN support via net-misc/modemmanager
 gnome-base/gnome-settings-daemon:systemd - Rely on sys-apps/systemd as runtime logind provider
-gnome-base/gnome-shell:browser-extension - Ensure the presence of extensions.gnome.org native connector gnome-extra/chrome-gnome-shell
+gnome-base/gnome-shell:browser-extension - Ensure the presence of extensions.gnome.org native connector gnome-extra/gnome-browser-connector
 gnome-base/gnome-shell:elogind - Use sys-auth/elogind for session tracking and suspend support.
 gnome-base/gnome-shell:ibus - Enable support for enhanced input methods through app-i18n/ibus
 gnome-base/gnome-shell:telepathy - Ensure presence of telepathy chat integration
@@ -3452,7 +3460,8 @@ kde-apps/kdemultimedia-meta:cdrom - Include packages for optical discs
 kde-apps/kdenetwork-meta:bittorrent - Pull in net-p2p/ktorrent for BitTorrent protocol support
 kde-apps/kdenetwork-meta:dropbox - Enable support for Dropbox in kde-apps/dolphin via kde-apps/dolphin-plugins-dropbox
 kde-apps/kdenetwork-meta:samba - Enable support for net-fs/samba file sharing plugin from within file properties
-kde-apps/kdenetwork-meta:webengine - Enable support for Plasma Telepathy (instant messaging) integration via kde-apps/plasma-telepathy-meta
+kde-apps/kdenetwork-meta:telepathy - Enable support for Plasma Telepathy (instant messaging) integration via kde-apps/plasma-telepathy-meta
+kde-apps/kdenetwork-meta:webengine - Enable support for Google Drive integration via kde-misc/kio-gdrive
 kde-apps/kdenlive:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/kdepim-addons:importwizard - Enable additional import plugins for kde-apps/akonadi-import-wizard
 kde-apps/kdepim-addons:markdown - Enable Markdown support via app-text/discount
@@ -8257,7 +8266,6 @@ sys-devel/gettext:git - When running `autopoint`, use git to store the internal 
 sys-devel/llvm:binutils-plugin - Build the binutils plugin
 sys-devel/llvm:doc - Build and install the HTML documentation and regenerate the man pages
 sys-devel/llvm:exegesis - Enable performance counter support for llvm-exegesis tool that can be used to measure host machine instruction characteristics
-sys-devel/llvm:gold - Build the binutils plugin
 sys-devel/llvm:ncurses - Support querying terminal properties using ncurses' terminfo
 sys-devel/llvm:xar - Support dumping LLVM bitcode sections in Mach-O files (uses app-arch/xar)
 sys-devel/llvm:z3 - Enable support for sci-mathematics/z3 constraint solver
@@ -8737,9 +8745,7 @@ www-servers/gatling:diet - Compile against dev-libs/dietlibc
 www-servers/h2o:libh2o - Build and install libh2o
 www-servers/h2o:mruby - Enable support for mruby
 www-servers/lighttpd:brotli - Enable output compression via app-arch/brotli (recommended)
-www-servers/lighttpd:bzip2 - Enable output compression via bzip2
 www-servers/lighttpd:gnutls - Build module for TLS via net-libs/gnutls
-www-servers/lighttpd:libev - Enable fdevent handler
 www-servers/lighttpd:maxminddb - Add support for geolocation using dev-libs/libmaxminddb
 www-servers/lighttpd:mbedtls - Build module for TLS via net-libs/mbedtls
 www-servers/lighttpd:mmap - Use mmap when sendfile is not available
@@ -9045,7 +9051,6 @@ x11-themes/vertex-theme:mate - Install Metacity theme for mate-base/mate
 x11-themes/vertex-theme:xfce - Install theme for xfce-base/xfwm4
 x11-themes/zuki-themes:gnome-shell - Install theme for gnome-base/gnome-shell
 x11-themes/zuki-themes:gtk2 - Install GTK+2 theme
-x11-themes/zuki-themes:mate - Install Metacity theme for mate-base/mate
 x11-themes/zuki-themes:xfce - Install theme for xfce-base/xfwm4
 x11-themes/zukitwo:gnome-shell - Install theme for gnome-base/gnome-shell
 x11-wm/ctwm:jpeg - Enable jpeg image support with virtual/jpeg
@@ -9109,6 +9114,7 @@ x11-wm/windowmaker:modelock - Enable XKB language status lock support. README sa
 x11-wm/windowmaker:xrandr - Enable XRandR window extension support
 x11-wm/wmfs:imlib2 - Enable image support through media-libs/imlib2
 x11-wm/xmonad:no-autorepeat-keys - Allow ignoring of keyboard autorepeat.
+x11-wm/xmonad-contrib:xft - Use Xft to render text
 x11-wm/xpra:brotli - Enable brotli compression support
 x11-wm/xpra:client - Build client-side code
 x11-wm/xpra:clipboard - Enable clipboard support
