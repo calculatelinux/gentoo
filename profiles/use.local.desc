@@ -76,7 +76,6 @@ app-admin/hddtemp:network-cron - Monthly cronjob to update hddtemp.db.
 app-admin/keepass:aot - Generate native code at build time, rather than runtime.
 app-admin/keepassxc:autotype - Add support to autotype the passwords into other applications
 app-admin/keepassxc:browser - Enables browser plugin support
-app-admin/keepassxc:ccache - Use dev-util/ccache to build keepassxc
 app-admin/keepassxc:keeshare - Enable KeeShare sharing integration
 app-admin/keepassxc:network - Enable network support
 app-admin/keepassxc:yubikey - Enable database unlocking via YubiKey.
@@ -827,6 +826,8 @@ app-misc/gramps:rcs - Adds support for family tree archives via dev-vcs/rcs
 app-misc/gramps:reports - All external software that is needed for graphical reports will be installed
 app-misc/graphlcd-base:fontconfig - Add support for media-libs/fontconfig font names.
 app-misc/graphlcd-base:freetype - Add support for media-libs/freetype.
+app-misc/graphlcd-base:graphicsmagick - Add support for media-gfx/graphicsmagick.
+app-misc/graphlcd-base:imagemagick - Add support for media-gfx/imagemagick.
 app-misc/irtrans-irserver:mono - Enable mono support
 app-misc/jdupes:dedupe - Enable deduplication support
 app-misc/jdupes:lowmem - Enable support for low-memory operation
@@ -1548,7 +1549,6 @@ dev-haskell/lua:system-lua - Use @pkg-config@ to discover library and include pa
 dev-haskell/missingh:network-3 - Use network-3
 dev-haskell/mod:semirings - Derive semiring instances
 dev-haskell/monad-logger:template-haskell - Enable Template Haskell support.
-dev-haskell/monad-par:chaselev - Use Chase-Lev Deques for higher-perf work-stealing.
 dev-haskell/nats:binary - enable binary instances
 dev-haskell/nats:hashable - enable hashable instances
 dev-haskell/nats:template-haskell - enable template_haskell
@@ -1602,9 +1602,6 @@ dev-haskell/semirings:hashable - Enisable the use of the `hashable` package. Dis
 dev-haskell/semirings:unordered-containers - Enable the use of the `unordered-containers` package. Disabling this may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/sendfile:portable - Explicitly enable portable sendfile support (implemented in Haskell)
 dev-haskell/sha:exe - Build a sha1 and a sha384 executable similar to 'md5sum'.
-dev-haskell/shakespeare:test-coffee - Render tests through coffeescript render function.
-dev-haskell/shakespeare:test-export - Test export.
-dev-haskell/shakespeare:test-roy - Render tests through roy render function.
 dev-haskell/shelly:lifted - run the tests against Shelly.Lifted
 dev-haskell/simple-sendfile:allow-bsd - Allow use of BSD sendfile (disable on GNU/kFreeBSD)
 dev-haskell/skein:big-endian - When manually selecting the endianness, use big-endian (default is little-endian).
@@ -1646,8 +1643,8 @@ dev-haskell/vector-algorithms:unsafechecks - Enable bounds checking in unsafe op
 dev-haskell/vector-instances:hashable - use dev-haskell/hashable
 dev-haskell/void:safe - dissable effective but unsafe coersions
 dev-haskell/wai-app-static:print - print debug info.
-dev-haskell/warp:allow-sendfilefd - Allow use of sendfileFd (not available on GNU/kFreeBSD).
-dev-haskell/warp:warp-debug - Add additional debuging information
+dev-haskell/warp:allow-sendfilefd - Allow use of sendfileFd (not available on GNU/kFreeBSD)
+dev-haskell/warp:x509 - Adds a dependency on the x509 library to enable getting TLS client certificates.
 dev-haskell/wcwidth:cli - Enable command line tool
 dev-haskell/wreq:aws - Enable AWS tests
 dev-haskell/wreq:httpbin - Install client
@@ -1721,6 +1718,9 @@ dev-java/pdfbox:tools - Build and install pdfbox-tools
 dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
 dev-java/sbt:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
 dev-lang/R:lto - Use link-time optimization for R and its recommended packages.
+dev-lang/ammonite-repl-bin:scala2-13 - Install Ammonite for Scala 2.13
+dev-lang/ammonite-repl-bin:scala3-0 - Install Ammonite for Scala 3.0
+dev-lang/ammonite-repl-bin:scala3-1 - Install Ammonite for Scala 3.1
 dev-lang/bas:lr0 - Use the LR0 parser instead of the recursive descending parser
 dev-lang/crystal:debug - Build each module as a separate object file. Speeds build up.
 dev-lang/erlang:hipe - HIgh Performance Erlang extension
@@ -3455,7 +3455,6 @@ kde-apps/kdecore-meta:share - Install kde-frameworks/purpose for share file cont
 kde-apps/kdecore-meta:thumbnail - Install kde-apps/ffmpegthumbs and kde-apps/thumbnailers for thumbnail generation in kde-apps/dolphin
 kde-apps/kdecore-meta:webengine - Enable www-client/falkon which depends on dev-qt/qtwebengine
 kde-apps/kdeedu-meta:webengine - Enable packages requiring dev-qt/qtwebengine
-kde-apps/kdegraphics-mobipocket:thumbnail - Enables thumbnail generation
 kde-apps/kdemultimedia-meta:cdrom - Include packages for optical discs
 kde-apps/kdenetwork-meta:bittorrent - Pull in net-p2p/ktorrent for BitTorrent protocol support
 kde-apps/kdenetwork-meta:dropbox - Enable support for Dropbox in kde-apps/dolphin via kde-apps/dolphin-plugins-dropbox
@@ -3595,7 +3594,6 @@ kde-frameworks/sonnet:hunspell - Enable the app-text/hunspell spell-checking bac
 kde-frameworks/sonnet:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
 kde-misc/kdeconnect:X - Enable remote input mousepad plugin using x11-libs/libfakekey
 kde-misc/kdeconnect:pulseaudio - Enable system volume control plugin using media-sound/pulseaudio
-kde-misc/kio-gdrive:kaccounts - Use kde-apps/kaccounts-integration backend (default) instead of dev-libs/qtkeychain
 kde-misc/kio-gdrive:share - Enable support for a share menu using kde-frameworks/purpose
 kde-misc/tellico:bibtex - Add support for bibtex importing using btparse from dev-perl/Text-BibTeX
 kde-misc/tellico:discid - Add support for reading disc IDs from audio CDs
@@ -5282,7 +5280,6 @@ net-analyzer/graphite-web:memcached - Enable memcached support
 net-analyzer/gvm:cli - Command Line Interface for OpenVAS Scanner
 net-analyzer/gvm:gsa - Greenbone Security Assistant (WebUI)
 net-analyzer/gvm:ospd - Enable support for scanner wrappers
-net-analyzer/gvm-libs:extras - Html docs support
 net-analyzer/hexinject:experimental - Install experimental packets.tcl
 net-analyzer/hexinject:tools - Install hex2raw and prettypacket tools
 net-analyzer/httping:tfo - Enable support for TCP Fast Open
