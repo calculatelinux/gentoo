@@ -4,6 +4,7 @@ DEPEND=ssl? ( dev-libs/openssl:0= ) X? ( x11-libs/libX11 x11-libs/libXaw x11-lib
 DESCRIPTION=Complete 3270 access package
 EAPI=7
 HOMEPAGE=http://x3270.bgp.nu/
+INHERIT=font
 IUSE=cjk doc ncurses ssl tcl X X
 KEYWORDS=~amd64 ~ppc ~s390 ~sparc ~x86
 LICENSE=GPL-2
@@ -11,4 +12,4 @@ RDEPEND=ssl? ( dev-libs/openssl:0= ) X? ( x11-libs/libX11 x11-libs/libXaw x11-li
 SLOT=0
 SRC_URI=mirror://sourceforge/x3270/suite3270-4.1ga11-src.tgz
 _eclasses_=font	d31f12a0f6e13d56dc3062e76ae58a61
-_md5_=ea376c776f0deba6ade96f4c543d5d36
+_md5_=0f167b9197f717ce404c2eb4ad115635

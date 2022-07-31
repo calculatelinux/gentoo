@@ -33,6 +33,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Matthew Smith <matthew@gentoo.org> (2022-07-31)
+# No updates since 2010, dead homepage, and incompatible with newer
+# sci-libs/gsl. Bug #862486. Removal on 2022-08-31.
+sci-chemistry/numbat
+
+# Marc Schiffbauer <mschiff@gentoo.org> (2022-07-30)
+# No update since 2016, compilation and build system
+# errors
+# Bugs #637150, #686078, #733066, #733068, #828986, #854744
+# removal in 30 days (2022-08-29)
+app-misc/zygrib
+
 # David Seifert <soap@gentoo.org> (2022-07-28)
 # Unmaintained, EOL upstream, QA and build issues, EAPI 6.
 # Bug #682346, #844592, removal on 2022-08-27.
@@ -517,11 +529,6 @@ dev-util/rebar-bin
 ~app-editors/emacs-28.1.90
 ~app-editors/emacs-28.1.91
 ~app-editors/emacs-28.1.92
-
-# Marek Szuba <marecki@gentoo.org> (2022-06-30)
-# A GNOME 2-era library with no consumers left in the tree, marked
-# as deprecated since March 2022. Removal in 30 days (Bug #855299).
-gnome-extra/gtkhtml
 
 # Sam James <sam@gentoo.org> (2022-05-28)
 # GCC 9 and older no longer receive upstream support or fixes for

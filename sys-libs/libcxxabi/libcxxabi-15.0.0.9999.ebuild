@@ -4,8 +4,9 @@
 EAPI=8
 
 CMAKE_ECLASS=cmake
-PYTHON_COMPAT=( python3_{8..10} )
-inherit cmake-multilib llvm llvm.org python-any-r1 toolchain-funcs
+PYTHON_COMPAT=( python3_{8..11} )
+inherit cmake-multilib flag-o-matic llvm llvm.org python-any-r1 \
+	toolchain-funcs
 
 DESCRIPTION="Low level support for a standard C++ library"
 HOMEPAGE="https://libcxxabi.llvm.org/"
@@ -13,7 +14,8 @@ HOMEPAGE="https://libcxxabi.llvm.org/"
 LICENSE="Apache-2.0-with-LLVM-exceptions || ( UoI-NCSA MIT )"
 SLOT="0"
 KEYWORDS=""
-IUSE="+libunwind static-libs test"
+IUSE="+clang +libunwind static-libs test"
+REQUIRED_USE="test? ( clang )"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
@@ -24,17 +26,23 @@ RDEPEND="
 		)
 	)
 "
+# in 15.x, cxxabi.h is moving from libcxx to libcxxabi
+RDEPEND+="
+	!<sys-libs/libcxx-15
+"
 # llvm-6 for new lit options
 DEPEND="
 	${RDEPEND}
 	>=sys-devel/llvm-6
 "
 BDEPEND="
+	clang? (
+		sys-devel/clang
+	)
 	!test? (
 		${PYTHON_DEPS}
 	)
 	test? (
-		>=sys-devel/clang-3.9.0
 		$(python_gen_any_dep 'dev-python/lit[${PYTHON_USEDEP}]')
 	)
 "
@@ -58,6 +66,14 @@ pkg_setup() {
 }
 
 multilib_src_configure() {
+	if use clang && ! tc-is-clang; then
+		# Only do this conditionally to allow overriding with
+		# e.g. CC=clang-13 in case of breakage
+		local -x CC=${CHOST}-clang
+		local -x CXX=${CHOST}-clang++
+		strip-unsupported-flags
+	fi
+
 	# link against compiler-rt instead of libgcc if we are using clang with libunwind
 	local want_compiler_rt=OFF
 	if use libunwind && tc-is-clang; then
@@ -70,6 +86,7 @@ multilib_src_configure() {
 
 	local libdir=$(get_libdir)
 	local mycmakeargs=(
+		-DCMAKE_CXX_COMPILER_TARGET="${CHOST}"
 		-DPython3_EXECUTABLE="${PYTHON}"
 		-DLLVM_ENABLE_RUNTIMES="libcxxabi;libcxx"
 		-DLLVM_INCLUDE_TESTS=OFF
@@ -83,20 +100,16 @@ multilib_src_configure() {
 		# upstream is omitting standard search path for this
 		# probably because gcc & clang are bundling their own unwind.h
 		-DLIBCXXABI_LIBUNWIND_INCLUDES="${EPREFIX}"/usr/include
-		-DLIBCXXABI_TARGET_TRIPLE="${CHOST}"
 
 		-DLIBCXX_LIBDIR_SUFFIX=
 		-DLIBCXX_ENABLE_SHARED=ON
 		-DLIBCXX_ENABLE_STATIC=OFF
-		-DLIBCXX_ENABLE_EXPERIMENTAL_LIBRARY=OFF
 		-DLIBCXX_CXX_ABI=libcxxabi
-		-DLIBCXX_CXX_ABI_INCLUDE_PATHS="${WORKDIR}"/libcxxabi/include
 		-DLIBCXX_ENABLE_ABI_LINKER_SCRIPT=OFF
 		-DLIBCXX_HAS_MUSL_LIBC=$(usex elibc_musl)
 		-DLIBCXX_HAS_GCC_S_LIB=OFF
 		-DLIBCXX_INCLUDE_BENCHMARKS=OFF
 		-DLIBCXX_INCLUDE_TESTS=OFF
-		-DLIBCXX_TARGET_TRIPLE="${CHOST}"
 	)
 	if use test; then
 		local clang_path=$(type -P "${CHOST:+${CHOST}-}clang" 2>/dev/null)
@@ -104,7 +117,7 @@ multilib_src_configure() {
 
 		mycmakeargs+=(
 			-DLLVM_EXTERNAL_LIT="${EPREFIX}/usr/bin/lit"
-			-DLLVM_LIT_ARGS="$(get_lit_flags);--param=cxx_under_test=${clang_path}"
+			-DLLVM_LIT_ARGS="$(get_lit_flags)"
 			-DPython3_EXECUTABLE="${PYTHON}"
 		)
 	fi
@@ -122,9 +135,4 @@ multilib_src_test() {
 
 multilib_src_install() {
 	DESTDIR="${D}" cmake_build install-cxxabi
-}
-
-multilib_src_install_all() {
-	insinto /usr/include/libcxxabi
-	doins -r "${WORKDIR}"/libcxxabi/include/.
 }

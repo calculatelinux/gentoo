@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3_{8..11} )
 inherit cmake llvm llvm.org python-single-r1
 
 DESCRIPTION="The LLVM debugger"
@@ -51,7 +51,7 @@ BDEPEND="
 	)
 "
 
-LLVM_COMPONENTS=( lldb )
+LLVM_COMPONENTS=( lldb cmake )
 LLVM_TEST_COMPONENTS=( llvm/lib/Testing/Support llvm/utils/unittest )
 llvm.org_set_globals
 

@@ -537,7 +537,7 @@ app-emulation/libspectrum:gcrypt - Use dev-libs/libgcrypt for low-level crypto o
 app-emulation/libvirt:apparmor - Enable AppArmor support
 app-emulation/libvirt:dtrace - Enable dtrace support via dev-util/systemtap
 app-emulation/libvirt:firewalld - DBus interface to iptables/ebtables allowing for better runtime management of your firewall.
-app-emulation/libvirt:fuse - Allow LXC to use sys-fs/fuse for mount points
+app-emulation/libvirt:fuse - Allow LXC to use sys-fs/fuse for mountpoints
 app-emulation/libvirt:glusterfs - Enable GlusterFS support via sys-cluster/glusterfs
 app-emulation/libvirt:iscsi - Allow using an iSCSI remote storage server as pool for disk image storage
 app-emulation/libvirt:iscsi-direct - Allow using libiscsi for iSCSI storage pool backend
@@ -1455,8 +1455,6 @@ dev-haskell/aeson:ordered-keymap - Use ordered @Data.Map.Strict@ for KeyMap impl
 dev-haskell/aeson-pretty:lib-only - don't build 'aeson-pretty' executable.
 dev-haskell/ansi-terminal:example - Build the example application.
 dev-haskell/atomic-primops:debug - Enable extra internal checks.
-dev-haskell/attoparsec-iso8601:developer - operate in developer mode
-dev-haskell/attoparsec-iso8601:fast - compile without optimizations
 dev-haskell/authenticate:network-uri - Get Network.URI from the network-uri package
 dev-haskell/bifunctors:semigroups - You can disable the use of the `semigroups` package using `-f-semigroups`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/bifunctors:tagged - You can disable the use of the `tagged` package using `-f-tagged`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
@@ -1484,6 +1482,7 @@ dev-haskell/criterion:embed-data-files - Embed the data files in the binary for 
 dev-haskell/crypto-api:all-cpolys - Build all the CMAC polynomes up to 10000 bits instead of just the usual ones
 dev-haskell/cryptonite:integer-gmp - Whether or not to use GMP for some functions
 dev-haskell/cryptonite:target-attributes - use GCC / clang function attributes instead of global target options.
+dev-haskell/dlist:werror - Enable -Werror
 dev-haskell/entropy:halvm - Build for the HaLVM.
 dev-haskell/filestore:maxcount - Make use of a recent (>= 2.3.0) Darcs feature which vastly improves the performance of 'latest'. You should disable this flag if you plan to use gitit with an older version of Darcs, or 'latest' will raise an error.
 dev-haskell/foundation:experimental - enable building experimental features, known as highly unstable or without good support cross-platform
@@ -1503,8 +1502,6 @@ dev-haskell/hakyll:watchserver - wait for filesystem changes and rebuild pages
 dev-haskell/happstack-server:network-uri - Get Network.URI from the network-uri package
 dev-haskell/hashtables:bounds-checking - if on, use bounds-checking array accesses
 dev-haskell/hashtables:detailed-profiling - add detailed profiling information to profiled build-depends
-dev-haskell/hashtables:portable - if on, use only pure Haskell code and no GHC extensions.
-dev-haskell/hashtables:unsafe-tricks - turn on unsafe GHC tricks
 dev-haskell/haskeline:terminfo - Use the terminfo package for POSIX consoles.
 dev-haskell/hdbc-sqlite3:splitbase - Choose the new smaller, split-up package.
 dev-haskell/highlighting-kate:executable - Build the Highlight executable.
@@ -1514,45 +1511,27 @@ dev-haskell/hlint:hsyaml - Use HsYAML instead of yaml
 dev-haskell/hlint:threaded - Build with support for multithreaded execution
 dev-haskell/hps:build-exec - Build the `hps-fractals' executable
 dev-haskell/hs3:network-uri - Get Network.URI from the network-uri package
-dev-haskell/hslogger:network-3 - Use network-3
-dev-haskell/hslua:hardcode-reg-keys - Don't use CAPI to determine the names of certain registry key names but Use hard coded values for instead. This flag is required when compiling against Lua 5.3.3 or earlier, as those do not expose the necessary information in the @lauxlib.h@ header file.
 dev-haskell/hsopenssl:fast-bignum - Enable fast moving of bignums between OpenSSL and GMP (GHC Only)
 dev-haskell/hsyaml-aeson:exe - Enable @exe:yaml-test@ component
 dev-haskell/http-api-data:text-show - Use text-show library for efficient ToHttpApiData implementation.
-dev-haskell/http-client:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/http-streams:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/httpd-shed:buildexamples - Build example executables.
-dev-haskell/httpd-shed:network-bsd - Get Network.BSD from the network-bsd package.
-dev-haskell/httpd-shed:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/io-streams:network - Include network support
 dev-haskell/io-streams:zlib - Include zlib support
 dev-haskell/json:mapdict - Encode Haskell maps as JSON dicts
 dev-haskell/json:parsec - Add support for parsing with Parsec
 dev-haskell/json:pretty - Add support for using pretty printing combinators
 dev-haskell/language-dot:executable - Build the `ppdot' executable
-dev-haskell/lens:benchmark-uniplate - Enable benchmarking against Neil Mitchell's uniplate library for comparative performance analysis. Defaults to being turned off to avoid the extra dependency.
-dev-haskell/lens:dump-splices - Build and run the doctests test-suite.
-dev-haskell/lens:inlining - Generate inline pragmas when using template-haskell. This defaults to enabled, but you can to shut it off to benchmark the relative performance impact, or as last ditch effort to address compile errors resulting from the myriad versions of template-haskell that all purport to be 2.8.
-dev-haskell/lens:j - Attempt a parallel build with GHC 7.8.
-dev-haskell/lens:safe - Disallow unsafeCoerce
-dev-haskell/lens:trustworthy - Assert that we are trustworthy when we can
 dev-haskell/libyaml:no-unicode - Don't enable unicode output. Instead, unicode characters will be escaped.
 dev-haskell/libyaml:system-libyaml - Use the system-wide libyaml instead of the bundled copy
-dev-haskell/linear:template-haskell - You can disable the use of the `template-haskell` package using `-f-template-haskell`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/lpeg:rely-on-shared-lpeg-library - Do not build lpeg from source, but trust that lpeg is made available in other ways, e.g., through a system-wide installation. The loader will be replaced with a placeholder function that only emits a message.
-dev-haskell/lua:allow-unsafe-gc - Allow optimizations which make Lua's garbage collection potentially unsafe; enabling this should be safe if there are no callbacks into Haskell during Lua garbage collection cycles. The flag should be *disabled* if Lua objects can have Haskell finalizers, i.e., @__gc@ metamethods that call Haskell function.
-dev-haskell/lua:apicheck - Compile Lua with -DLUA_USE_APICHECK.
-dev-haskell/lua:export-dynamic - Add all symbols to dynamic symbol table; disabling this will make it possible to create fully static binaries, but renders loading of dynamic C libraries impossible.
-dev-haskell/lua:hardcode-reg-keys - Don't use CAPI to determine the names of certain registry key names but use hard coded values instead. This flag is required when compiling against Lua 5.3.3 or earlier, as those versions do not expose the necessary information in the @lauxlib.h@ header file. Setting this flag should usually be unproblematic, except if the used Lua version has been patched heavily.
-dev-haskell/lua:lua-32bits - Compile Lua with -DLUA_32BITS
 dev-haskell/lua:system-lua - Use @pkg-config@ to discover library and include paths. Setting this flag implies `pkg-config`.
-dev-haskell/missingh:network-3 - Use network-3
 dev-haskell/mod:semirings - Derive semiring instances
 dev-haskell/monad-logger:template-haskell - Enable Template Haskell support.
+dev-haskell/monad-par:chaselev - Use Chase-Lev Deques for higher-perf work-stealing.
 dev-haskell/nats:binary - enable binary instances
 dev-haskell/nats:hashable - enable hashable instances
 dev-haskell/nats:template-haskell - enable template_haskell
-dev-haskell/netlink:generators - build the generator scripts for constants
+dev-haskell/network:devel - using tests for developers
 dev-haskell/network-data:small-base - Build the split-up base package.
 dev-haskell/optparse-simple:build-example - Build the example executable
 dev-haskell/pandoc-citeproc:bibutils - Use Chris Putnam's Bibutils.
@@ -1564,16 +1543,16 @@ dev-haskell/parsec-numbers:parsec1 - use dev-haskell/parsec1 instead of dev-hask
 dev-haskell/parsers:attoparsec - Enable the use of the `attoparsec` package
 dev-haskell/parsers:binary - You can disable the use of the `binary` package using `-f-binary`.
 dev-haskell/parsers:parsec - Enable the use of the `parsec` package
+dev-haskell/path:dev - Turn on development settings.
 dev-haskell/persistent-sqlite:build-sanity-exe - Build a sanity check test executable.
-dev-haskell/pointed:comonad - optional instances
-dev-haskell/pointed:containers - optional instances
-dev-haskell/pointed:kan-extensions - optional instances
-dev-haskell/pointed:semigroupoids - optional instances
-dev-haskell/pointed:semigroups - optional instances
-dev-haskell/pointed:stm - optional instances
-dev-haskell/pointed:tagged - optional instances
-dev-haskell/pointed:transformers - optional instances
-dev-haskell/pointed:unordered-containers - optional instances
+dev-haskell/pointed:comonad - You can disable the use of the `comonad` package using `-f-transformers`.
+dev-haskell/pointed:kan-extensions - You can disable the use of the `kan-extensions` package using `-f-kan-extensions`.
+dev-haskell/pointed:semigroupoids - You can disable the use of the `semigroupoids` package using `-f-semigroupoids`.
+dev-haskell/pointed:semigroups - You can disable the use of the `semigroups` package using `-f-semigroups`.
+dev-haskell/pointed:stm - You can disable the use of the `stm` package using `-f-stm`.
+dev-haskell/pointed:tagged - You can disable the use of the `tagged` package using `-f-tagged`.
+dev-haskell/pointed:transformers - You can disable the use of the `transformers` package using `-f-transformers`.
+dev-haskell/pointed:unordered-containers - You can disable the use of the `unordered-containers` package using `-f-unordered-containers`.
 dev-haskell/publicsuffixlist:create - export Network.PublicSuffixList.Create module
 dev-haskell/publicsuffixlist:runtimelist - read suffix list from dist at startup instead of embedding list into library
 dev-haskell/quickcheck:template-haskell - Enable additional test modules requiring Template Haskell support.
@@ -1586,7 +1565,6 @@ dev-haskell/quickcheck-classes:vector - Enable the use of the `vector` package. 
 dev-haskell/quickcheck-classes-base:binary-laws - Include infrastructure for testing class laws of binary type constructors. Disabling `unary-laws` while keeping `binary-laws` enabled is an unsupported configuration.
 dev-haskell/quickcheck-classes-base:unary-laws - Include infrastructure for testing class laws of unary type constructors.
 dev-haskell/recaptcha:network-uri - Get Network.URI from the network-uri package.
-dev-haskell/rfc5051:mkunicodedata - build codes generator itself
 dev-haskell/sandi:conduit - Build with conduit
 dev-haskell/semigroupoid-extras:profunctors - You can disable the use of the `profunctors` package using `-f-profunctors`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/semigroupoids:comonad - You can disable the use of the `comonad` package using `-f-comonad`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Comonad`
@@ -1595,11 +1573,6 @@ dev-haskell/semigroupoids:contravariant - You can disable the use of the `contra
 dev-haskell/semigroupoids:distributive - You can disable the use of the `distributive` package using `-f-distributive`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Distributive`
 dev-haskell/semigroupoids:tagged - You can disable the use of the `tagged` package using `-f-tagged`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/semigroupoids:unordered-containers - Enable the use of the `unordered-containers` package (and also its dependency `hashable`). Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/semigroups:binary - provide instances for binary package
-dev-haskell/semigroups:transformers - provide instances for transformers package.
-dev-haskell/semirings:containers - Enable the use of the `containers` package. Disabling this may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/semirings:hashable - Enisable the use of the `hashable` package. Disabling this may be useful for accelerating builds in sandboxes for expert users. Note: `-hashable` implies `-unordered-containers`, as we are necessarily not able to supply those instances as well.
-dev-haskell/semirings:unordered-containers - Enable the use of the `unordered-containers` package. Disabling this may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/sendfile:portable - Explicitly enable portable sendfile support (implemented in Haskell)
 dev-haskell/sha:exe - Build a sha1 and a sha384 executable similar to 'md5sum'.
 dev-haskell/shelly:lifted - run the tests against Shelly.Lifted
@@ -1609,15 +1582,13 @@ dev-haskell/skein:force-endianness - Use a manually selected endian when compili
 dev-haskell/skein:reference - Use the reference implementation instead of the optimized one.
 dev-haskell/skylighting:executable - Build the skylighting executable.
 dev-haskell/skylighting-core:executable - Build the skylighting executable.
-dev-haskell/snap-core:portable - No non-haskell unportable code.
-dev-haskell/snap-server:build-pong - Build a server that just returns "PONG"
-dev-haskell/snap-server:openssl - enable https support using dev-haskell/hsopenssl
-dev-haskell/snap-server:portable - no non-haskell unportable code.
+dev-haskell/snap-server:debug - Enable support for debugging.
+dev-haskell/snap-server:openssl - Enable https support using the HsOpenSSL library.
+dev-haskell/snap-server:pong-server - Build a server that just returns "PONG". Normally useful only for benchmarks.
+dev-haskell/snap-server:test-server - Build the blackbox testserver
 dev-haskell/splitmix:optimised-mixer - Use JavaScript for mix32
-dev-haskell/splitmix:random - Providen RandomGen SMGen instance
 dev-haskell/store-core:force-alignment - No description
 dev-haskell/texmath:executable - Compile test executable.
-dev-haskell/texmath:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/texmath:server - Compile webserver.
 dev-haskell/text-short:asserts - Enable runtime-checks via 'assert'
 dev-haskell/thyme:bug-for-bug - bug-for-bug compatibility with time
@@ -1646,11 +1617,8 @@ dev-haskell/wai-app-static:print - print debug info.
 dev-haskell/warp:allow-sendfilefd - Allow use of sendfileFd (not available on GNU/kFreeBSD)
 dev-haskell/warp:x509 - Adds a dependency on the x509 library to enable getting TLS client certificates.
 dev-haskell/wcwidth:cli - Enable command line tool
-dev-haskell/wreq:aws - Enable AWS tests
-dev-haskell/wreq:httpbin - Install client
 dev-haskell/yaml:examples - Install the haskell-yaml-examples executable
 dev-haskell/yaml:executable - Install the yaml2json and json2yaml executables
-dev-haskell/yesod-auth:network-uri - Get Network.URI from the network-uri package
 dev-haskell/yesod-form:network-uri - Get Network.URI from the network-uri package
 dev-haskell/zip-archive:executable - Build the Zip executable.
 dev-haskell/zlib:bundled-c-zlib - Use the bundled zlib C sources. Requires pkg-config to be False. For windows, this is the default.
@@ -1964,7 +1932,7 @@ dev-libs/aws-sdk-cpp:unity-build - Build using a single unified .cpp file for ea
 dev-libs/aws-sdk-cpp:waf - The Web Application Firewall (WAF) can monitor web requests that are forwarded to Amazon CloudFront distributions or an Application Load Balancer. Can also be used to block or allow requests based on conditions such as the IP addresses that requests originate from or values in the requests. Also enables fms, network-firewall, waf-regional and wafv2
 dev-libs/aws-sdk-cpp:wellarchitected - Use the AWS Well-Architected Tool to review your workloads against current AWS architectural best practices. The AWS Well-Architected Tool measures the workload and provides recommendations on how to improve your architecture.
 dev-libs/bitset:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations
-dev-libs/boehm-gc:large - optimize for large heap size (also increases max root sets)x
+dev-libs/boehm-gc:large - optimize for large heap size (also increases max root sets)
 dev-libs/boost:context - Build and install the Boost.Context (and Boost.Fiber) library and all other Boost libraries that depend on it
 dev-libs/boost:debug - Build and install only the debug version of the Boost libraries. Only enable this flag if you're developing against boost.
 dev-libs/boost:doc - Install the full API documentation documentation. This takes over 200MB of extra disk space.
@@ -2248,6 +2216,7 @@ dev-libs/serdisplib:tools - Build optional tools.
 dev-libs/simdjson:tools - Build and install extra command line tools
 dev-libs/softhsm:gost - Enable gost algorithm
 dev-libs/softhsm:migration-tool - Build db migration tool
+dev-libs/sord:tools - Build command line utilities
 dev-libs/starpu:cuda - Enable NVIDIA CUDA toolkit support
 dev-libs/starpu:gcc-plugin - Enable GCC extension plugin (experimental)
 dev-libs/starpu:opencl - Enable OpenCL support
@@ -2937,16 +2906,11 @@ dev-vcs/git:webdav - Adds support for push'ing to HTTP/HTTPS repositories via DA
 dev-vcs/git-annex:assistant - Enable git-annex assistant and watch command
 dev-vcs/git-annex:benchmark - Enable benchmarking
 dev-vcs/git-annex:dbus - Enable dbus support
-dev-vcs/git-annex:debuglocks - Debug location of MVar/STM deadlocks
 dev-vcs/git-annex:gitlfs - Build with git-lfs library (rather than vendored copy)
-dev-vcs/git-annex:httpclientrestricted - Build with http-client-restricted library (rather than vendored copy)
 dev-vcs/git-annex:magicmime - Use libmagic to determine file MIME types
-dev-vcs/git-annex:networkbsd - Build with network-3.0 which split out network-bsd
 dev-vcs/git-annex:pairing - Enable pairing
-dev-vcs/git-annex:s3 - Enable S3 support
 dev-vcs/git-annex:torrentparser - Use haskell torrent library to parse torrent files
 dev-vcs/git-annex:webapp - Enable git-annex webapp
-dev-vcs/git-annex:webdav - Enable WebDAV support
 dev-vcs/gitg:glade - Install a glade catalog file
 dev-vcs/gitg:python - Install Python bindings for those plugins requiring it.
 dev-vcs/gitolite:contrib - Install user-contributed files
@@ -4184,6 +4148,7 @@ media-libs/harfbuzz:glib - Enable dev-libs/glib unicode functions
 media-libs/harfbuzz:graphite - Enable media-gfx/graphite2 complementary shaper
 media-libs/ilmbase:large-stack - Enables code to take advantage of large stack support
 media-libs/imlib2:X - Use the X window system
+media-libs/imlib2:apidoc - Provide doxygen generated API docs
 media-libs/imlib2:bzip2 - Bzip2 loader support
 media-libs/imlib2:eps - Eps image loader support
 media-libs/imlib2:gif - Gif image loader support
@@ -4285,6 +4250,7 @@ media-libs/libvpx:postproc - Enable additional post processing filters
 media-libs/libwebp:swap-16bit-csp - Enable byte swapping for 16 bit colorspace
 media-libs/libzmf:tools - Build conversion tools
 media-libs/lilv:dyn-manifest - Add LV2 Dynamic Manifest support. See http://lv2plug.in/ns/ext/dynmanifest/
+media-libs/lilv:tools - Build command line utilities
 media-libs/lsp-plugins:lv2 - build lv2 plugins
 media-libs/lv2:plugins - Enables examples plugins.
 media-libs/lvtk:gtk2 - Enable x11-libs/gtk+:2 based GUI support
@@ -4723,27 +4689,9 @@ media-sound/pragha:rygel - Share music on DLNA using net-misc/rygel
 media-sound/pragha:soup - Search metadata on AcoustID and radios on TuneIn using net-libs/libsoup
 media-sound/puddletag:acoustid - Use media-libs/chromaprint for acoustic fingerprinting
 media-sound/puddletag:quodlibet - Enables support for editing media-sound/quodlibet databases
-media-sound/pulseaudio:X - Build the X11 publish module to export PulseAudio information through X11 protocol for clients to make use. Don't enable this flag if you want to use a system wide instance. If unsure, enable this flag.
-media-sound/pulseaudio:alsa-plugin - Request installing media-plugins/alsa-plugins with PulseAudio plugin enabled. This ensures that clients supporting ALSA only will use PulseAudio.
-media-sound/pulseaudio:aptx - aptX (HD) over Bluetooth (many Android compatible headphones), requires media-plugins/gst-plugins-openaptx.
-media-sound/pulseaudio:asyncns - Use libasyncns for asynchronous name resolution.
 media-sound/pulseaudio:daemon - Build the pulseaudio binary (not-needed for pipewire-pulse)
-media-sound/pulseaudio:doc - Build the doxygen-described API documentation.
-media-sound/pulseaudio:elogind - Use sys-auth/elogind for giving each session a PA client
-media-sound/pulseaudio:equalizer - Enable the equalizer module (requires sci-libs/fftw).
-media-sound/pulseaudio:gconf - Ensure gnome-base/gconf is present for pulseaudio GConf to GSettings module automatic migration (keeping the user configuration)
-media-sound/pulseaudio:gdbm - Use sys-libs/gdbm to store PulseAudio databases. Recommended for desktop usage. This flag causes the whole package to be licensed under GPL-2 or later.
 media-sound/pulseaudio:glib - Add support to dev-libs/glib-based mainloop for the libpulse client library, to allow using libpulse on glib-based programs. Build the GSettings PA module.
-media-sound/pulseaudio:gstreamer - Build with support for gstreamer including ability to use bluetooth codecs. For bluetooth codecs see USE ldac and aptx.
-media-sound/pulseaudio:ldac - LDAC over Bluetooth (primarily Sony headphones), requires media-plugins/gst-plugins-ldac.
-media-sound/pulseaudio:native-headset - Build with native HSP backend for bluez 5.
 media-sound/pulseaudio:ofono-headset - Build with oFono HFP backend for bluez 5, requires net-misc/ofono.
-media-sound/pulseaudio:oss - Enable OSS sink/source (output/input). Deprecated, upstream does not support this on systems where other sink/source systems are available (i.e.: Linux). The padsp wrapper is now always build if the system supports OSS at all.
-media-sound/pulseaudio:realtime - Makes PulseAudio use RealtimeKit (sys-auth/rtkit) to get real-time priority while running.
-media-sound/pulseaudio:ssl - Use dev-libs/openssl to provide support for RAOP (AirPort) streaming.
-media-sound/pulseaudio:system-wide - Allow preparation and installation of the system-wide init script for PulseAudio. Since this support is only supported for embedded situations, do not enable without reading the upstream instructions at https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/WhatIsWrongWithSystemWide/ .
-media-sound/pulseaudio:systemd - Build with sys-apps/systemd support to replace standalone ConsoleKit.
-media-sound/pulseaudio:webrtc-aec - Uses the webrtc.org AudioProcessing library for enhancing VoIP calls greatly in applications that support it by performing acoustic echo cancellation, analog gain control, noise suppression and other processing.
 media-sound/pulseaudio-daemon:X - Build the X11 publish module to export PulseAudio information through X11 protocol for clients to make use. Don't enable this flag if you want to use a system wide instance. If unsure, enable this flag.
 media-sound/pulseaudio-daemon:alsa-plugin - Request installing media-plugins/alsa-plugins with PulseAudio plugin enabled. This ensures that clients supporting ALSA only will use PulseAudio.
 media-sound/pulseaudio-daemon:aptx - aptX (HD) over Bluetooth (many Android compatible headphones), requires media-plugins/gst-plugins-openaptx.
@@ -8451,8 +8399,10 @@ sys-libs/libblockdev:nvme - Add nvme support via sys-libs/libnvme
 sys-libs/libblockdev:tools - Build tools
 sys-libs/libblockdev:vdo - Enable Virtual Data Optimizer support.
 sys-libs/libcap:tools - Install captree, which requires dev-lang/go
+sys-libs/libcxx:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
 sys-libs/libcxx:libcxxabi - Build on top of sys-libs/libcxxabi instead of gcc's libsupc++ (avoids depending on gcc).
 sys-libs/libcxx:libunwind - Use libunwind instead of libgcc_s for stack unwinding, thus avoiding dependence on gcc.
+sys-libs/libcxxabi:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
 sys-libs/libcxxabi:libunwind - Use libunwind instead of libgcc_s for stack unwinding, thus avoiding dependency on gcc
 sys-libs/libnvme:json - Support JSON output via dev-libs/json-c
 sys-libs/libnvme:uuid - UUID support via sys-apps/util-linux
@@ -8466,6 +8416,7 @@ sys-libs/libunwind:debug-frame - Adds support for DWARF .debug_frame section: Us
 sys-libs/libunwind:libatomic - Use libatomic instead of builtin atomic operations
 sys-libs/libxcrypt:compat - Build with compatibility interfaces for other crypt implementations
 sys-libs/libxcrypt:system - Install as system libcrypt.so rather than to an alternate directory (will collide with sys-libs/glibc's version)
+sys-libs/llvm-libunwind:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
 sys-libs/musl-nscd:minimal - Only installs the header files
 sys-libs/ncurses:ada - Add bindings for the ADA programming language
 sys-libs/ncurses:stack-realign - Realign the stack in the 32-bit build for compatibility with older binaries at some performance cost. Avoids crashes in older 32-bit binaries. Only affects x86/32-bit multilib builds on amd64.
@@ -8933,19 +8884,17 @@ x11-misc/xkbd:xrandr - Enable XRandR support through x11-libs/libXrandr
 x11-misc/xkbset:tk - Install the dev-perl/Tk based xkbset-gui utility
 x11-misc/xlockmore:vtlock - Enables support for virtual terminal locking
 x11-misc/xlockmore:xlockrc - Enables xlockrc for people without PAM
-x11-misc/xmobar:alsa - Use alsa-mixer to get the volume from soundcards
-x11-misc/xmobar:dbus - Publish a service on the session bus for controlling xmobar
-x11-misc/xmobar:inotify - inotify support (modern Linux only). Required for the Mail and MBox plugins
-x11-misc/xmobar:iwlib - Wireless info support via Wext ioctls (deprecated)
-x11-misc/xmobar:mpd - Support mpd plugin
-x11-misc/xmobar:mpris - Enables MPRIS v1, v2 support
-x11-misc/xmobar:rtsopts - Reduce process wakekups frequency to decrease CPU usage
-x11-misc/xmobar:timezone - Enables localized date support
-x11-misc/xmobar:uvmeter - Plugin to show UV data for Australia
-x11-misc/xmobar:weather - Enable weather plugin
-x11-misc/xmobar:wifi - Wireless info support via nl80211. Required for the Wireless plugin on systems running Linux
-x11-misc/xmobar:xft - Use Xft to render text. UTF-8 support included
-x11-misc/xmobar:xpm - Enable usage of xpm for icons
+x11-misc/xmobar:alsa - Use alsa-mixer to get the volume from soundcards.
+x11-misc/xmobar:dbus - Publish a service on the session bus for controlling xmobar.
+x11-misc/xmobar:mpd - MPD support. Needs libmpd installed.
+x11-misc/xmobar:mpris - MPRIS v1, v2 support.
+x11-misc/xmobar:rtsopts - Use -with-rtsopts=-V0 to reduce wakeups.
+x11-misc/xmobar:timezone - Enables localized date support.
+x11-misc/xmobar:uvmeter - UVMeter only useful to australians.
+x11-misc/xmobar:weather - Enable weather plugin.
+x11-misc/xmobar:wifi - Wireless info support via nl80211. Required for the Wireless plugin on systems running Linux, the kernel.
+x11-misc/xmobar:xft - Use Xft to render text. UTF-8 support included.
+x11-misc/xmobar:xpm - Enable usage of xpm for icons.
 x11-misc/xscreensaver:fonts - Install the fonts shipped with XScreenSaver that have clear licensing
 x11-misc/xscreensaver:gdk-pixbuf - Include support for the x11-libs/gdk-pixbuf library in some demos, which will make it possible for them to read GIF, JPEG, and PNG files as well
 x11-misc/xscreensaver:gdm - Use gdmflexiserver from gnome-base/gdm instead of x11-misc/lightdm
@@ -9052,18 +9001,19 @@ x11-wm/ctwm:jpeg - Enable jpeg image support with virtual/jpeg
 x11-wm/ctwm:rplay - Enable sound support from media-sound/rplay
 x11-wm/ctwm:test - Enable upstream test suite, build required binary
 x11-wm/ctwm:xpm - Enable xpm icon support with x11-libs/libXpm
-x11-wm/e16:container - Use container window (experimental)
+x11-wm/e16:container - Use container window
 x11-wm/e16:debug - Build libtrip debugging library
 x11-wm/e16:dialogs - Enable support for configuration dialogs
 x11-wm/e16:libhack - Build libhack window mode helper library
 x11-wm/e16:modules - Enable support for loadable modules
+x11-wm/e16:no-container - Do not use container window (experimental)
 x11-wm/e16:pango - Enable pango font rendering using x11-libs/pango
 x11-wm/e16:player - Enable audio using aplay from media-sound/alsa-utils
 x11-wm/e16:poll - Use poll() event handler API (recommended)
 x11-wm/e16:select - Use select() event handler API
 x11-wm/e16:themes - Install the official E16 themes using x11-themes/e16-themes
 x11-wm/e16:xi2 - Enable the experimental multipointer input XInput2. This incldues the MultiPointer X feature
-x11-wm/e16:xpresent - Enable support for the X Present extension via x11-libs/libXpresent
+x11-wm/e16:xpresent - Enable support for the X Present extension via x11-libs/libXpresent (experimental)
 x11-wm/e16:xrandr - Enable support for the X RandR extension via x11-libs/libXrandr
 x11-wm/e16:xrender - Enable transparency support using the X Render extension via x11-libs/libXrender
 x11-wm/e16:xsm - Enable X Session Management support using x11-libs/libSM
