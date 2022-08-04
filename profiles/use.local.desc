@@ -1798,10 +1798,11 @@ dev-lang/php:xmlwriter - Enable XMLWriter support
 dev-lang/php:xslt - Enable the XSL extension
 dev-lang/polyml:portable - Build the portable interpreter version of Poly/ML instead of native
 dev-lang/python:bluetooth - Build Bluetooth protocol support in socket module
-dev-lang/python:libedit - Link readline extension against dev-libs/libedit instead of sys-libs/readline.
+dev-lang/python:ensurepip - Install the ensurepip module that uses bundled wheels to bootstrap pip and setuptools (if disabled, it will be only possible to use venv `--without-pip`)
+dev-lang/python:libedit - Link readline extension against dev-libs/libedit instead of sys-libs/readline
 dev-lang/python:lto - Optimize the build using Link Time Optimization (LTO)
 dev-lang/python:pgo - Optimize the build using Profile Guided Optimization (PGO)
-dev-lang/python:wininst - Install Windows executables required to create an executable installer for MS Windows.
+dev-lang/python:wininst - Install Windows executables required to create an executable installer for MS Windows
 dev-lang/python-exec:native-symlinks - Install generic symlinks like python and python3. If this flag is disabled, only versioned python3.X executables will be available to end users and ebuilds not using python eclasses.
 dev-lang/qu-prolog:pedro - Pedro subscription/notification communications system
 dev-lang/rakudo:clang - Use Clang to compile the MoarVM backend
@@ -2386,6 +2387,28 @@ dev-python/PyQt5:websockets - Build bindings for the QtWebSockets module
 dev-python/PyQt5:widgets - Build bindings for the QtWidgets module
 dev-python/PyQt5:x11extras - Build bindings for the QtX11Extras module
 dev-python/PyQt5:xmlpatterns - Build bindings for the QtXmlPatterns module
+dev-python/PyQt6:dbus - Build bindings for the QtDBus module
+dev-python/PyQt6:designer - Build bindings for the QtDesigner module and enable the designer plugin
+dev-python/PyQt6:gui - Build bindings for the QtGui module
+dev-python/PyQt6:help - Build bindings for the QtHelp module
+dev-python/PyQt6:multimedia - Build bindings for the QtMultimedia module
+dev-python/PyQt6:network - Build bindings for the QtNetwork module
+dev-python/PyQt6:opengl - Build bindings for the QtOpenGL module
+dev-python/PyQt6:positioning - Build bindings for the QtPositioning module
+dev-python/PyQt6:printsupport - Build bindings for the QtPrintSupport module
+dev-python/PyQt6:qml - Build bindings for the QtQml module and enable the qml plugin
+dev-python/PyQt6:quick - Build bindings for the QtQuick module
+dev-python/PyQt6:quick3d - Build bindings for the QtQuick3D module
+dev-python/PyQt6:serialport - Build bindings for the QtSerialPort module
+dev-python/PyQt6:sql - Build bindings for the QtSql module
+dev-python/PyQt6:svg - Build bindings for the QtSvg module
+dev-python/PyQt6:testlib - Build bindings for the QtTest module
+dev-python/PyQt6:webchannel - Build bindings for the QtWebChannel module
+dev-python/PyQt6:websockets - Build bindings for the QtWebSockets module
+dev-python/PyQt6:widgets - Build bindings for the QtWidgets module
+dev-python/PyQt6:xml - Build bindings for the QtXml module
+dev-python/PyQt6-WebEngine:quick - Build bindings for the QtWebEngineQuick module
+dev-python/PyQt6-WebEngine:widgets - Build bindings for the QtWebEngineWidgets module
 dev-python/QtPy:declarative - Build bindings for the QtQml and QtQuick modules and enable the qmlscene plugin
 dev-python/QtPy:designer - Pull in bindings for the QtDesigner module and enable the designer plugin
 dev-python/QtPy:gui - Pull in bindings for the QtGui module
@@ -2448,6 +2471,7 @@ dev-python/pyocr:tesseract - Enable support for the app-text/tesseract OCR engin
 dev-python/pypax:ptpax - Enable PT_PAX_FLAGS support.
 dev-python/pypax:xtpax - Enable XATTR_PAX_FLAGS support.
 dev-python/pypy-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
+dev-python/pypy3:ensurepip - Install the ensurepip module that uses bundled wheels to bootstrap pip and setuptools (if disabled, it will be only possible to use venv `--without-pip`)
 dev-python/pypy3-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
 dev-python/pyside2:3d - Build Qt3DCore, Qt3DAnimation, Qt3DExtras, Qt3DInput, Qt3DLogic, and Qt3DRender modules
 dev-python/pyside2:charts - Build QtCharts module
@@ -2602,12 +2626,33 @@ dev-qt/qt-docs:xmlpatterns - Install documentation for dev-qt/qtxmlpatterns
 dev-qt/qt3d:gamepad - Add support for gamepad hardware via dev-qt/qtgamepad
 dev-qt/qt3d:qml - Build QML/QtQuick bindings
 dev-qt/qt3d:vulkan - Enable support for Vulkan
+dev-qt/qtbase:X - Build the XCB platform plugin and enable X11 integration
+dev-qt/qtbase:brotli - Enable support for Brotli decompression
+dev-qt/qtbase:concurrent - Build Qt6Concurrent module
+dev-qt/qtbase:dbus - Build Qt6DBus module
+dev-qt/qtbase:egl - Enable EGL integration
+dev-qt/qtbase:eglfs - Build the EGL Full Screen/Single Surface platform plugin
+dev-qt/qtbase:evdev - Enable support for input devices via evdev
+dev-qt/qtbase:gssapi - Enable support for GSSAPI (virtual/krb5)
+dev-qt/qtbase:gtk - Build the GTK platform theme plugin
+dev-qt/qtbase:gui - Build Qt6Gui module
+dev-qt/qtbase:libinput - Enable support for input devices via dev-libs/libinput
+dev-qt/qtbase:libproxy - Use net-libs/libproxy for automatic HTTP/SOCKS proxy configuration
+dev-qt/qtbase:network - Build Qt6Network module
+dev-qt/qtbase:sql - Build Qt6Sql module
+dev-qt/qtbase:systemd - Enable native journald logging support
+dev-qt/qtbase:tslib - Enable support for touchscreen devices via x11-libs/tslib
+dev-qt/qtbase:tuio - Build plugin to receive touch events over the TUIO protocol
+dev-qt/qtbase:vulkan - Enable support for Vulkan
+dev-qt/qtbase:widgets - Build Qt6Widgets module
 dev-qt/qtbluetooth:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtcharts:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtcore:old-kernel - Disable syscalls not available on Linux kernels older than 4.11
 dev-qt/qtcore:systemd - Enable native journald logging support
 dev-qt/qtdatavis3d:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtdeclarative:localstorage - Build the LocalStorage import for QtQuick (requires QtSql)
+dev-qt/qtdeclarative:opengl - Enable OpenGL support
+dev-qt/qtdeclarative:sql - Enable QtSQL support
 dev-qt/qtdeclarative:vulkan - Enable support for Vulkan
 dev-qt/qtdeclarative:widgets - Enable QtWidgets support
 dev-qt/qtdiag:network - Report network information
@@ -2639,6 +2684,16 @@ dev-qt/qtquickcontrols2:widgets - Enable QtWidgets support
 dev-qt/qtscript:scripttools - Build the QtScriptTools module (requires QtWidgets)
 dev-qt/qtsensors:qml - Build QML bindings
 dev-qt/qtspeech:flite - Enable text-to-speech synthesizer plugin using app-accessibility/flite engine
+dev-qt/qttools:assistant - Build Qt Assistant
+dev-qt/qttools:designer - Build Qt Designer
+dev-qt/qttools:distancefieldgenerator - Build Qt Distance Field Generator
+dev-qt/qttools:linguist - Build Qt Linguist
+dev-qt/qttools:pixeltool - Build Qt Pixeltool
+dev-qt/qttools:qdbus - Build the Qt D-Bus Interface and D-Bus Viewer
+dev-qt/qttools:qdoc - Build Qt Documentation Generator
+dev-qt/qttools:qtattributionsscanner - Build Qt Source Code Attribution Scanner
+dev-qt/qttools:qtdiag - Build Qt Diag
+dev-qt/qttools:qtplugininfo - Build Qt Plugin Info
 dev-qt/qtvirtualkeyboard:handwriting - Adds handwriting recognition integration support
 dev-qt/qtwayland:vulkan - Enable support for Vulkan-based server buffer integration
 dev-qt/qtwebchannel:qml - Build QML/QtQuick bindings and imports
@@ -3075,7 +3130,6 @@ games-engines/scummvm:sndio - Enable support for MIDI music using media-sound/sn
 games-engines/scummvm:speech - enable text-to-speech support through app-accessibility/speech-dispatcher
 games-engines/scummvm:unsupported - enable unsupported and/or broken game engines (you're on your own)
 games-engines/solarus:doc - Install doxygen developer documentation.
-games-engines/stratagus:fluidsynth - compile with support for fluidsynth
 games-fps/alienarena:vidmode - Link against x11-libs/libXxf86vm. Required for full-screen support.
 games-fps/chocolate-doom:midi - basic support for MIDI files
 games-fps/darkplaces:cdsound - Enables using CD audio in the engine
@@ -4531,17 +4585,11 @@ media-sound/cmus:pidgin - Install support script for net-im/pidgin
 media-sound/cmus:systemd - Enable MPRIS support via sys-apps/systemd
 media-sound/cmus:tremor - Use libivorbis from media-libs/tremor instead of media-libs/libvorbis
 media-sound/csound:beats - Build the beats score frontend
-media-sound/csound:chua - Build the chua opcodes
 media-sound/csound:double-precision - Use double-precision floating point for audio samples
 media-sound/csound:dssi - Build the DSSI opcodes
-media-sound/csound:fluidsynth - Build the fluidsynth opcodes
-media-sound/csound:keyboard - Build Virtual MIDI keyboard
-media-sound/csound:linear - Build the linear algebra Opcodes
 media-sound/csound:portmidi - Build the PortMIDI I/O module
 media-sound/csound:samples - Install the HRTF datafiles for use with hrtfmove, hrtfmove2, hrtfstat, hrtfearly, and hrtfreverb
-media-sound/csound:stk - Build the stk opcodes
 media-sound/csound:utils - Build stand-alone executables for utilities that can also be used via `csound -U`
-media-sound/csound:websocket - Build the websocket opcode
 media-sound/darkice:aacplus - AAC+ encoding via media-libs/libaacplus
 media-sound/darkice:twolame - Build with twolame support
 media-sound/deadbeef:converter - File format converter
@@ -5804,6 +5852,7 @@ net-im/teams:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of b
 net-im/teams:system-mesa - Use the system-wide media-libs/mesa instead of bundled.
 net-im/telegram-desktop:enchant - Enable the app-text/aspell spell-checking backend
 net-im/telegram-desktop:hunspell - Enable the app-text/hunspell spell-checking backend
+net-im/telegram-desktop:qt6 - Build with Qt6 support
 net-im/telepathy-connection-managers:gadu - Enable Gadu Gadu protocol support.
 net-im/telepathy-connection-managers:icq - Enable ICQ IM protocol support.
 net-im/telepathy-connection-managers:irc - Enable Internet Relay Chat (IRC) support.
@@ -6470,6 +6519,7 @@ net-misc/modemmanager:qrtr - Enable support for the QMI over IPC Router bus (QRT
 net-misc/mosh:client - Build network client
 net-misc/mosh:examples - Include example scripts
 net-misc/mosh:mosh-hardening - Enable compiler and linker options to frustrate memory corruption exploits
+net-misc/mosh:nettle - Use dev-libs/nettle for some cryptographic functions instead of dev-libs/openssl. With Nettle, some of mosh's own code is used for OCB.
 net-misc/mosh:server - Build network server
 net-misc/mosh:ufw - Install net-firewall/ufw rule set
 net-misc/mosh:utempter - Include libutempter support
@@ -7589,6 +7639,7 @@ sci-mathematics/why3-for-spark:zip - Enable compression of session files
 sci-mathematics/yacas:jupyter - Add support for jupyter notebook
 sci-mathematics/z3:isabelle - Add integration support for the Isabelle/HOL theorem prover.
 sci-misc/boinc:cuda - Use nvidia cuda toolkit for speeding up computations. NOTE: works only for subset of nvidia graphic cards so make sure your card is supported before opening a bug about it.
+sci-misc/boinc:opencl - Use OpenCL to enable computations using your GPU.
 sci-misc/h5utils:hdf - Build hdf to hdf5 (and vice-versa) converter
 sci-misc/h5utils:octave - Build Octave plugins
 sci-misc/nco:dap - Support for remote data access with the NETCDF DAP client
@@ -7908,7 +7959,6 @@ sys-apps/systemd:fido2 - Enable FIDO2 support
 sys-apps/systemd:gcrypt - Enable use of dev-libs/libgcrypt for various features
 sys-apps/systemd:gnuefi - Enable EFI boot manager and stub loader (built using sys-boot/gnu-efi)
 sys-apps/systemd:homed - Enable portable home directories
-sys-apps/systemd:hostnamed-fallback - Enable setting hostname with networkd/hostnamed without polkit (requires running sys-apps/dbus-broker)
 sys-apps/systemd:http - Enable embedded HTTP server in journald
 sys-apps/systemd:importd - Enable import daemon
 sys-apps/systemd:iptables - Use libiptc from net-firewall/iptables for NAT support in systemd-networkd; this is used only if the running kernel does not support nftables
@@ -8645,6 +8695,7 @@ www-client/opera:proprietary-codecs - Enable codecs for patent-encumbered audio 
 www-client/opera-beta:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
 www-client/opera-developer:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
 www-client/qutebrowser:adblock - Enable Brave's ABP-style adblocker library for improved adblocking
+www-client/qutebrowser:qt6 - Use Qt6 that provides a newer Chromium version
 www-client/qutebrowser:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
 www-client/seamonkey:chatzilla - Build Mozilla's IRC client (default on)
 www-client/seamonkey:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
