@@ -26,19 +26,10 @@ fi
 LICENSE="LGPL-3"
 SLOT="0"
 
-IUSE_VIDEO_CARDS="
-		video_cards_amdgpu
-		video_cards_intel
-		video_cards_nvidia
-		video_cards_radeonsi
-"
-
-IUSE="${IUSE_VIDEO_CARDS} X cuda curl_ssl_gnutls +curl_ssl_openssl opencl"
+IUSE="X cuda curl_ssl_gnutls +curl_ssl_openssl opencl"
 
 REQUIRED_USE="
 	^^ ( curl_ssl_gnutls curl_ssl_openssl )
-	cuda? ( video_cards_nvidia )
-	opencl? ( || ( ${IUSE_VIDEO_CARDS} ) )
 "
 
 # libcurl must not be using an ssl backend boinc does not support.
@@ -51,10 +42,6 @@ DEPEND="
 	)
 	opencl? (
 		virtual/opencl
-		video_cards_amdgpu?   ( amd64? ( dev-libs/rocm-opencl-runtime ) )
-		video_cards_intel?    ( amd64? ( dev-libs/intel-compute-runtime ) )
-		video_cards_nvidia?   ( x11-drivers/nvidia-drivers )
-		video_cards_radeonsi? ( media-libs/mesa[opencl] )
 	)
 	dev-libs/openssl:=
 	net-misc/curl[curl_ssl_gnutls(-)=,-curl_ssl_nss(-),curl_ssl_openssl(-)=,-curl_ssl_axtls(-),-curl_ssl_cyassl(-)]

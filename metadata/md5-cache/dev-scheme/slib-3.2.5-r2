@@ -1,0 +1,13 @@
+BDEPEND=>=dev-scheme/guile-1.8.8:= gambit? ( dev-scheme/gambit ) scm? ( dev-scheme/scm ) >=sys-apps/texinfo-5.0 app-arch/unzip
+DEFINED_PHASES=compile configure install postinst postrm
+DESCRIPTION=Portable Scheme library for all standard Scheme implementations
+EAPI=8
+HOMEPAGE=http://people.csail.mit.edu/jaffer/SLIB
+IUSE=gambit scm
+KEYWORDS=~alpha amd64 ~ia64 ppc ~ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris
+LICENSE=public-domain BSD
+RDEPEND=>=dev-scheme/guile-1.8.8:= gambit? ( dev-scheme/gambit ) scm? ( dev-scheme/scm )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=http://groups.csail.mit.edu/mac/ftpdir/scm/slib-3b5.zip
+_md5_=61c6043a34f29815afc9e25766486025
