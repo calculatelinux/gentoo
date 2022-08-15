@@ -33,6 +33,44 @@
 
 #--- END OF EXAMPLES ---
 
+# John Helmert III <ajak@gentoo.org> (2022-08-14)
+# Vulnerable, unmaintained in Gentoo, EAPI6. Removal in 30 days,
+# bug #772209
+app-crypt/keybase
+
+# John Helmert III <ajak@gentoo.org> (2022-08-14)
+# Remote code execution vulnerability, dead upstream. Removal in 30
+# days, bug #791004.
+x11-terms/mrxvt
+
+# John Helmert III <ajak@gentoo.org> (2022-08-14)
+# Dead upstream, vulnerable, no revdeps except a usedep. Removal in 30
+# days, bug #618000
+media-libs/libaacplus
+
+# John Helmert III <ajak@gentoo.org> (2022-08-14)
+# Many vulnerabilities (including code execution and root privilege
+# escalation), effectively unmaintained. Removal in 30 days, bugs
+# #631552, #790296, #842789
+sys-cluster/slurm
+
+# John Helmert III <ajak@gentoo.org> (2022-08-14)
+# Vulnerable and unmaintained for years, many open bugs, no revdeps,
+# EAPI 6. Removal in 30 days, bug 733354
+net-misc/calico-cni-plugin
+net-misc/calicoctl
+
+# Sam James <sam@gentoo.org> (2022-08-14)
+# Removes MSVC functionality which some packages are relying on - they
+# need time to adapt to upstream setuptools changes.
+# bug #865183.
+=dev-python/setuptools-65.0.0
+
+# John Helmert III <ajak@gentoo.org> (2022-08-14)
+# Vulnerable and unmaintained for years, many open bugs, no revdeps
+# Removal in 30 days, bug #631140
+net-analyzer/smokeping
+
 # Andrew Ammerlaan <andrewammerlaan@gentoo.org>
 # Masked for testing, depends on dev-qt/qt*:6
 # Pyside6 is stuck on python3_10 for the moment being
