@@ -145,7 +145,7 @@ multilib_src_test() {
 	emake check
 
 	multilib_is_native_abi && use python &&
-		python_foreach_impl run_in_build_dir libxml2_py_emake test
+		python_foreach_impl run_in_build_dir libxml2_py_emake check
 }
 
 multilib_src_install() {
