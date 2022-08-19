@@ -3,11 +3,12 @@ DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
 DESCRIPTION=EditorConfig plugin for emacs
 EAPI=7
 HOMEPAGE=https://github.com/editorconfig/editorconfig-emacs
+INHERIT=elisp readme.gentoo-r1
 KEYWORDS=amd64 x86
 LICENSE=GPL-3+
 RDEPEND=>=app-editors/emacs-23.1:*
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/editorconfig/editorconfig-emacs/archive/v0.7.8.tar.gz -> editorconfig-emacs-0.7.8.tar.gz
-_eclasses_=elisp	c1c17e9c24d72d3bd58c611de8116fb6	elisp-common	e7aaa047873789f549ea3df2f04b2145	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55
+_eclasses_=elisp	c1c17e9c24d72d3bd58c611de8116fb6	elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55
 _md5_=b78a78b6812195c340c981b9cd77464a

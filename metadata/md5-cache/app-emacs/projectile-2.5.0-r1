@@ -3,6 +3,7 @@ DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpa
 DESCRIPTION=A project interaction library for Emacs
 EAPI=8
 HOMEPAGE=https://docs.projectile.mx
+INHERIT=elisp
 IUSE=test
 KEYWORDS=~amd64
 LICENSE=GPL-3+
@@ -10,5 +11,5 @@ RDEPEND=>=app-editors/emacs-25.1:*
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/bbatsov/projectile/archive/refs/tags/v2.5.0.tar.gz -> projectile-2.5.0.tar.gz
-_eclasses_=elisp	c1c17e9c24d72d3bd58c611de8116fb6	elisp-common	e7aaa047873789f549ea3df2f04b2145
+_eclasses_=elisp	c1c17e9c24d72d3bd58c611de8116fb6	elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b
 _md5_=6180b27d7622cc98d7e80fe059d0e259

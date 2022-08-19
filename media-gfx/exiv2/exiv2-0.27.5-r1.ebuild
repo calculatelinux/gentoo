@@ -12,7 +12,6 @@ else
 	S="${WORKDIR}/${P}-Source"
 fi
 
-CMAKE_ECLASS=cmake
 PYTHON_COMPAT=( python3_{8..10} )
 inherit cmake-multilib python-any-r1
 
@@ -49,6 +48,10 @@ DEPEND="${DEPEND}
 	test? ( dev-cpp/gtest )"
 
 DOCS=( README.md doc/ChangeLog doc/cmd.txt )
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-0.27.5-musl-tests.patch
+)
 
 pkg_setup() {
 	use doc && python-any-r1_pkg_setup

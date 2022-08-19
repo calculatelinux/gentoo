@@ -4,10 +4,11 @@ DEPEND=app-emacs/color-moccur
 DESCRIPTION=An improved interface to color-moccur for editing
 EAPI=7
 HOMEPAGE=http://www.bookshelf.jp/ https://www.emacswiki.org/emacs/SearchBuffers
+INHERIT=elisp
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3+
 RDEPEND=app-emacs/color-moccur >=app-editors/emacs-23.1:*
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~ulm/distfiles/moccur-edit-2.16.el.bz2
-_eclasses_=elisp	c1c17e9c24d72d3bd58c611de8116fb6	elisp-common	e7aaa047873789f549ea3df2f04b2145
+_eclasses_=elisp	c1c17e9c24d72d3bd58c611de8116fb6	elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b
 _md5_=220e17a2ac4484621fe20637aa03d633
