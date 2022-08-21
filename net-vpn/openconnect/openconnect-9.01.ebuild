@@ -85,6 +85,9 @@ src_unpack() {
 }
 
 src_prepare() {
+	local PATCHES=(
+		"${FILESDIR}/openconnect-9.01-inttypes.patch"
+	)
 	default
 	if [[ ${PV} == 9999 ]]; then
 		eautoreconf
@@ -114,6 +117,7 @@ src_configure() {
 		$(use_with smartcard libpcsclite)
 		$(use_with stoken)
 		--with-vpnc-script="${EPREFIX}/etc/vpnc/vpnc-script"
+		--with-builtin-json
 		--without-java
 	)
 
