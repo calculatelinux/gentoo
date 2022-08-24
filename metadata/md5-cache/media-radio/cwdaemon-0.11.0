@@ -5,10 +5,10 @@ DESCRIPTION=A morse daemon for the parallel or serial port
 EAPI=8
 HOMEPAGE=http://cwdaemon.sourceforge.net
 INHERIT=flag-o-matic
-KEYWORDS=~alpha ~amd64 ~ppc ~x86
+KEYWORDS=~alpha amd64 ppc x86
 LICENSE=GPL-2
 RDEPEND=>=media-radio/unixcw-3.3.1
 SLOT=0
 SRC_URI=mirror://sourceforge/cwdaemon/cwdaemon-0.11.0.tar.gz
-_eclasses_=flag-o-matic	38d6ec96711cea42a5cb1cc723a6e906	multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	1542e649be915f43f6908a9e93909961
-_md5_=1a8b5aff25e40d5e78189a9f7703e0e8
+_eclasses_=flag-o-matic	29a755b1291d64133634d80b0328f153	multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	1542e649be915f43f6908a9e93909961
+_md5_=03540cf7865e0b708f2e61ad32f5fb2e
