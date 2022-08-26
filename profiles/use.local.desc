@@ -909,7 +909,6 @@ app-misc/recoll:inotify - Use the Linux Kernel notification subsystem for monito
 app-misc/recoll:session - Stop monitoring file alterations when X11 session terminates
 app-misc/recoll:webengine - Use dev-qt/qtwebengine for fancy result list display
 app-misc/rlwrap:debug - Enable debug
-app-misc/rundeck-cli-bin:binary - Copy the precompiled jar file and skip the rest of src_compile
 app-misc/screen:multiuser - Enable multiuser support (by setting correct permissions)
 app-misc/screen:nethack - Express error messages in nethack style
 app-misc/screenfetch:X - Use the media-gfx/scrot package to take screenshots
@@ -1468,7 +1467,6 @@ dev-haskell/bifunctors:tagged - You can disable the use of the `tagged` package 
 dev-haskell/c2hs:regression - run regression tests
 dev-haskell/cabal-install:lukko - Use @lukko@ for file-locking
 dev-haskell/cabal-install:native-dns - Enable use of the [resolv](https://hackage.haskell.org/package/resolv) & [windns](https://hackage.haskell.org/package/windns) packages for performing DNS lookups
-dev-haskell/chaselev-deque:debug - Enable the extra internal checks.
 dev-haskell/chell:color-output - use colors in program output
 dev-haskell/citeproc:executable - Build citeproc executable
 dev-haskell/citeproc:icu - Use Haskell bindings to the ICU library
@@ -4247,9 +4245,6 @@ media-libs/libggi:3dfx - Enables support for Voodoo chipsets, also called 3DFX a
 media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libgphoto2:serial - Enable serial port support
 media-libs/libgpod:gtk - Enable ArtworkDB support
-media-libs/libgroove:chromaprint - Enable audio fingerprinting using media-libs/chromaprint.
-media-libs/libgroove:loudness - Enable loudness detection according to the EBU R128 standard using media-libs/libebur128.
-media-libs/libgroove:sound - Enable audio playing.
 media-libs/libheif:aom - Use media-libs/libaom for AVIF encoding/decoding
 media-libs/libheif:gdk-pixbuf - Enable x11-libs/gdk-pixbuf plugin
 media-libs/libheif:go - Enable building dev-lang/go code/examples
@@ -7081,9 +7076,9 @@ net-wireless/wpa_supplicant:privsep - Enable wpa_priv privledge separation binar
 net-wireless/wpa_supplicant:ps3 - Add support for ps3 hypervisor driven gelic wifi
 net-wireless/wpa_supplicant:smartcard - Add support for smartcards
 net-wireless/wpa_supplicant:tdls - Add support for Tunneled Direct Link Setup (802.11z)
-net-wireless/wpa_supplicant:tkip - Add support for WPA TKIP (deprecated 2009)
+net-wireless/wpa_supplicant:tkip - Add support for WPA TKIP (deprecated due to security flaws in 2009)
 net-wireless/wpa_supplicant:uncommon-eap-types - Add support for GPSK, SAKE, GPSK_SHA256, IKEV2 and EKE
-net-wireless/wpa_supplicant:wep - Add support for Wired Equivalent Privacy (deprecated 2004)
+net-wireless/wpa_supplicant:wep - Add support for Wired Equivalent Privacy (deprecated due to security flaws in 2004)
 net-wireless/wpa_supplicant:wimax - Add support for Wimax EAP-PEER authentication algorithm
 net-wireless/wpa_supplicant:wps - Add support for Wi-Fi Protected Setup
 sci-astronomy/cpl:gasgano - Enable support for sci-astronomy/gasgano file organizer
