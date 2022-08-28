@@ -343,7 +343,6 @@ app-crypt/heimdal:otp - Adds support for one-time passwords
 app-crypt/ima-evm-utils:tpm - Enable TPM support
 app-crypt/johntheripper-jumbo:opencl - Build with opencl/GPU cracking support
 app-crypt/johntheripper-jumbo:pcap - Build with pcap support
-app-crypt/kbfs:git - Build the Git remote helper for storing repositories in Keybase
 app-crypt/kstart:afs - Enables afs support which means you can acquire an afs token and set PAGs. It's recommended to set this USE if you need authenticated access to an AFS cell for your daemon/app.
 app-crypt/libb2:native-cflags - Use CFLAGS as determined by configure script. These flags will enable all CPU specific features it find available, to further optimise the implementation. This discards any existing CFLAGS set in make.conf or similar.
 app-crypt/libsecret:tpm - Enable Trusted Platform Module support via app-crypt/tpm2-tss
@@ -3228,10 +3227,6 @@ games-simulation/openttd:fluidsynth - Compile with support for FluidSynth
 games-simulation/openttd:lzo - Enables LZO compression for savegames. This is only needed to load extremely old savegames. (versions before 0.2)
 games-simulation/openttd:openmedia - Enables the free open media sets: OpenGFX, OpenSFX, OpenMSX, removing the requirement for proprietary TTD assets to play OpenTTD.
 games-simulation/simutrans:minimal - Don't install any PakSets (scenario data)
-games-simulation/simutrans:pak128 - Install more detailed scenario data
-games-simulation/simutrans:pak128-britain - Install British scenario data
-games-simulation/simutrans:pak128-german - Install German scenario data
-games-simulation/simutrans:pak192-comic - Install comic-like scenario data
 games-simulation/simutrans-paksets:128 - Install higher resolution scenario data (128 px graphics)
 games-simulation/simutrans-paksets:comic192 - Install comic-like scenario data (192 px graphics)
 games-simulation/simutrans-paksets:cs128 - Install Czech-Slovak scenario data (128 px graphics)
@@ -4972,11 +4967,14 @@ media-video/ffmpeg:gme - Enables support for media-libs/game-music-emu for playi
 media-video/ffmpeg:gpl - Build GPL code. Should be enabled unless you require LGPL binaries.
 media-video/ffmpeg:hardcoded-tables - Use pre-calculated tables rather than calculating them on the fly.
 media-video/ffmpeg:iec61883 - Support for FireWire DV/HDV input device using media-libs/libiec61883.
+media-video/ffmpeg:jpegxl - Enable JPEG XL de/encoding via media-libs/libjxl.
 media-video/ffmpeg:kvazaar - Enables media-libs/kvazaar based HEVC encoder.
+media-video/ffmpeg:lcms - Enable ICC profile support via media-libs/lcms.
 media-video/ffmpeg:libaom - Enables media-libs/libaom based AV1 codec support.
 media-video/ffmpeg:libaribb24 - Enables ARIB text and caption decoding via media-libs/aribb24.
 media-video/ffmpeg:libdrm - Enables x11-libs/libdrm support for better screen grabbing and hardware accelerated codecs.
 media-video/ffmpeg:libilbc - Enables iLBC de/encoding via media-libs/libilbc.
+media-video/ffmpeg:libplacebo - Adds flexible GPU-accelerated processing filter based on media-libs/libplacebo.
 media-video/ffmpeg:librtmp - Enables Real Time Messaging Protocol using librtmp (media-video/rtmpdump) in addition to FFmpeg's native implementation.
 media-video/ffmpeg:libsoxr - Enables audio resampling through media-libs/soxr.
 media-video/ffmpeg:libtesseract - Enables the OCR filter via app-text/tesseract.
@@ -7657,6 +7655,7 @@ sci-physics/geant4_vmc:mtroot - Build MTRoot (provides ROOT IO manager classes w
 sci-physics/geant4_vmc:vgm - Enable the Virtual Geometry Model (sci-physics/vgm)
 sci-physics/hepmc:cm - Build with cm instead of default mm for length units
 sci-physics/hepmc:gev - Build with GeV instead of default MeV for momentum units
+sci-physics/hepmc:root - Build with ROOTIO enabled
 sci-physics/lammps:cuda - Enable cuda gpu computing support
 sci-physics/lammps:hip - Enable hip gpu computing support
 sci-physics/lammps:lammps-memalign - Enables the use of the posix_memalign() call instead of malloc() when large chunks or memory are allocated by LAMMPS. Aliengnment is on 16 byte boundaries.
@@ -7691,7 +7690,6 @@ sci-physics/root:uring - Enable support for sys-libs/liburing in RNTuple
 sci-physics/root:vc - Enable support for dev-libs/vc with VecCore
 sci-physics/root:vmc - Built the Virtual Monte Carlo library
 sci-physics/root:xrootd - Build the interface for net-libs/xrootd
-sci-physics/thepeg:c++11 - Build ThePEG using the C++11 standard. Experimental feature, not for production use.
 sci-physics/thepeg:fastjet - Adds support for sci-physics/fastjet
 sci-physics/thepeg:hepmc - Adds support for High Energy Physics Monte Carlo Generators sci-physics/hepmc
 sci-physics/thepeg:lhapdf - Adds support for sci-physics/lhapdf
@@ -8194,6 +8192,7 @@ sys-devel/autogen:libopts - install the libopts tarball (a few packages want thi
 sys-devel/binutils:cet - Enable Intel Control-flow Enforcement Technology.
 sys-devel/binutils:default-gold - Set ld to point to ld.gold instead of ld.bfd
 sys-devel/binutils:gold - Build ld.gold linker
+sys-devel/binutils:gprofng - Enable the next-generation gprofng profiler
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/binutils:pgo - Build binutils with Profile Guided Optimization (PGO) and LTO
 sys-devel/binutils:plugins - Enable plugin support in tools

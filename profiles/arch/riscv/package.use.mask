@@ -1,12 +1,12 @@
 # Copyright 2019-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-# Arthur Zamarin <arthurzam@gentoo.org> (2022-08-15)
-# deps not keyworded
-dev-util/pkgcheck emacs
+# Jakov Smolić <jsmolic@gentoo.org> (2022-08-27)
+# depends on <sys-libs/libfaketime-0.9.7 which is not available on riscv
+app-admin/rsyslog jemalloc
 
 # Yixun Lan <dlan@gentoo.org> (2022-08-11)
-# lua not support on riscv
+# luajit is currently not supported on riscv
 dev-util/bcc lua
 
 # Yu Gu <guyu2876@gmail.com> (2022-07-26)
@@ -122,9 +122,7 @@ net-analyzer/suricata hyperscan
 
 # Yixun Lan <dlan@gentoo.org> (2021-08-29)
 #  sys-apps/fwupd not tested, USE=spi,uefi,dell
-#  sys-apps/flashrom no risc-v support, bug 810880
-#  sys-apps/flashrom USE=introspection fail to build, bug 811321
-sys-apps/fwupd flashrom introspection spi uefi
+sys-apps/fwupd spi uefi
 
 # Marek Szuba <marecki@gentoo.org> (2021-08-23)
 # sys-cluster/ceph not keyworded here yet due to several dependencies
