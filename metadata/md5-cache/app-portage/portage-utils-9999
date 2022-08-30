@@ -1,14 +1,14 @@
-BDEPEND=>=dev-vcs/git-1.8.2.1[curl] sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
-DEFINED_PHASES=configure unpack
-DEPEND=qmanifest? ( openmp? ( || ( >=sys-devel/gcc-4.2:*[openmp] sys-devel/clang-runtime:*[openmp] ) ) static? ( app-crypt/libb2:=[static-libs] dev-libs/openssl:0=[static-libs] sys-libs/zlib:=[static-libs] app-crypt/gpgme:=[static-libs] ) !static? ( app-crypt/libb2:= dev-libs/openssl:0= sys-libs/zlib:= app-crypt/gpgme:= ) ) qtegrity? ( openmp? ( || ( >=sys-devel/gcc-4.2:*[openmp] sys-devel/clang-runtime:*[openmp] ) ) static? ( dev-libs/openssl:0=[static-libs] ) !static? ( dev-libs/openssl:0= ) )
+BDEPEND=virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl] sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure prepare pretend setup unpack
+DEPEND=qmanifest? ( !static? ( app-crypt/gpgme:= app-crypt/libb2:= dev-libs/openssl:= sys-libs/zlib:= ) ) qtegrity? ( !static? ( dev-libs/openssl:= ) ) qmanifest? ( static? ( app-crypt/gpgme[static-libs] app-crypt/libb2[static-libs] dev-libs/openssl[static-libs] sys-libs/zlib[static-libs] ) ) qtegrity? ( static? ( dev-libs/openssl[static-libs] ) )
 DESCRIPTION=Small and fast Portage helper tools written in C
-EAPI=7
+EAPI=8
 HOMEPAGE=https://wiki.gentoo.org/wiki/Portage-utils
-INHERIT=git-r3 autotools
-IUSE=nls static openmp +qmanifest +qtegrity
+INHERIT=flag-o-matic toolchain-funcs git-r3 autotools
+IUSE=openmp +qmanifest +qtegrity static
 LICENSE=GPL-2
 PROPERTIES=live
-RDEPEND=qmanifest? ( openmp? ( || ( >=sys-devel/gcc-4.2:*[openmp] sys-devel/clang-runtime:*[openmp] ) ) static? ( app-crypt/libb2:=[static-libs] dev-libs/openssl:0=[static-libs] sys-libs/zlib:=[static-libs] app-crypt/gpgme:=[static-libs] ) !static? ( app-crypt/libb2:= dev-libs/openssl:0= sys-libs/zlib:= app-crypt/gpgme:= ) ) qtegrity? ( openmp? ( || ( >=sys-devel/gcc-4.2:*[openmp] sys-devel/clang-runtime:*[openmp] ) ) static? ( dev-libs/openssl:0=[static-libs] ) !static? ( dev-libs/openssl:0= ) )
+RDEPEND=qmanifest? ( !static? ( app-crypt/gpgme:= app-crypt/libb2:= dev-libs/openssl:= sys-libs/zlib:= ) ) qtegrity? ( !static? ( dev-libs/openssl:= ) )
 SLOT=0
-_eclasses_=autotools	9e6965bfaa00f52cc61e0d4bc44c87b3	git-r3	b9ac6f96d2a88edb5b351df634dc5e53	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	1542e649be915f43f6908a9e93909961
-_md5_=68fba694111270f5c66f7b9b941d36ad
+_eclasses_=autotools	9e6965bfaa00f52cc61e0d4bc44c87b3	flag-o-matic	29a755b1291d64133634d80b0328f153	git-r3	b9ac6f96d2a88edb5b351df634dc5e53	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	1542e649be915f43f6908a9e93909961
+_md5_=57d61e7b07df65a218f64c719222c78a

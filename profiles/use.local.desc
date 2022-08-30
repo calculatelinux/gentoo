@@ -937,7 +937,6 @@ app-misc/wildq:hcl - HCL support via pyhcl
 app-misc/wildq:toml - TOML support via pytoml
 app-misc/wildq:xml - XML support via xmltodict
 app-misc/worker:avfs - Enable support for sys-fs/avfs
-app-misc/zygrib:maps - Installs additional GSHHS maps for high resolution coastline data and cities
 app-mobilephone/gammu:curl - Enables curl support
 app-mobilephone/gammu:irda - Enables infrared support
 app-mobilephone/gammu:mysql - Use mysql for data storage
@@ -1008,6 +1007,13 @@ app-office/lyx:rcs - Add support for revision control via dev-vcs/rcs
 app-office/lyx:rtf - Add support for RTF import/export packages
 app-office/magicpoint:contrib - Install additional contributed scripts
 app-office/mdbtools:glib - Use functions provided by dev-libs/glib, not built-in
+app-office/sc-im:X - Use x11-misc/xclip for clipboard copy/paste
+app-office/sc-im:ods - Add ods import support
+app-office/sc-im:plots - Add sci-visualization/gnuplot for plotting support
+app-office/sc-im:tmux - Use app-misc/tmux for clipboard copy/paste
+app-office/sc-im:wayland - Use gui-apps/wl-clipboard for clipboard copy/paste
+app-office/sc-im:xls - Add xls support
+app-office/sc-im:xlsx - Add xlsx support
 app-office/scribus:boost - Enable support for Boost based enhancement
 app-office/scribus:hunspell - Enable support for spell checking with app-text/hunspell
 app-office/scribus:minimal - Don't install headers (only required for e.g. plug-in developers)
@@ -1776,7 +1782,6 @@ dev-lang/rust-bin:rls - Install rls, Rust Language Server (used with IDEs suppor
 dev-lang/rust-bin:rust-src - Install rust-src, needed by developer tools and for build-std (cross)
 dev-lang/rust-bin:rustfmt - Install rustfmt, Rust code formatter
 dev-lang/scala:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
-dev-lang/smlnj:pax-kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
 dev-lang/spidermonkey:clang - Use Clang compiler instead of GCC
 dev-lang/spidermonkey:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
 dev-lang/spidermonkey:debug - Enable assertions to allow for easier debugging of programs that link to spidermonkey -- note this will often crash software on regular end-user systems
@@ -2074,6 +2079,7 @@ dev-libs/libverto:libevent - Support event loops using dev-libs/libevent
 dev-libs/libverto:tevent - Support event loops using sys-libs/tevent
 dev-libs/libvoikko:expvfst - Enable experimental features of VFST morphology backend
 dev-libs/libvoikko:hfst - Enable HFST morphology backend
+dev-libs/libxlsxwriter:openssl - Use dev-libs/openssl for MD5 digest
 dev-libs/libxmlb:stemmer - Enable language stemming support
 dev-libs/libzia:ftdi - Enable support for FTDI USB chips
 dev-libs/libzip:mbedtls - Use net-libs/mbedtls as TLS provider
@@ -6140,9 +6146,7 @@ net-libs/pjproject:webrtc - Enable WebRTC support
 net-libs/qxmpp:vpx - Enable VP8 codec support via media-libs/libvpx
 net-libs/rabbitmq-c:tools - Builds cli tools to interact with brokers
 net-libs/rtrlib:ssh - Enable SSH support
-net-libs/shairplay:alac - Add support for Apple Lossless Audio Codec files
 net-libs/shairplay:playfair - Add support for handling fairplay handshake (used in for example screen mirroring)
-net-libs/shairplay:tools - Build and install a binary shairplay in /usr/bin
 net-libs/telepathy-qt:farstream - Enable support for audio/video calls via farstream
 net-libs/tox:av - Adds support for audio and video.
 net-libs/tox:daemon - Enable the DHT Bootstrap Daemon.
@@ -8874,6 +8878,7 @@ x11-misc/clipmenu:rofi - Use rofi as default launcher
 x11-misc/colord:argyllcms - Enable ArgyllCMS sensor
 x11-misc/colord:extra-print-profiles - Generate extra print profiles. Warning: significant build time and memory requirements.
 x11-misc/fbpager:xrender - Enable transparency support via x11-libs/libXrender
+x11-misc/gmrun:xdg - Enable xdf spec for configuration and history file location
 x11-misc/gpaste:gnome - Enable proper gnome support and enable gnome shell extension.
 x11-misc/grsync:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 x11-misc/gtkdialog:gtk2 - Build with GTK+2 instead of GTK+3
