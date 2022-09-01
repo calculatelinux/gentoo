@@ -49,7 +49,6 @@ dev-python/flask-mail
 dev-python/flask-principal
 dev-python/flask-wtf
 dev-python/mongomock
-dev-python/peewee
 dev-python/pony
 dev-python/pyqrcode
 dev-python/sentinels
@@ -133,6 +132,9 @@ dev-haskell/either
 dev-haskell/filelock
 dev-haskell/filepattern
 dev-haskell/fsnotify
+dev-haskell/genvalidity
+dev-haskell/genvalidity-hspec
+dev-haskell/genvalidity-property
 dev-haskell/ghc-lib-parser
 dev-haskell/ghc-lib-parser-ex
 dev-haskell/githash
@@ -173,6 +175,7 @@ dev-haskell/open-browser
 dev-haskell/openssl-streams
 dev-haskell/optparse-simple
 dev-haskell/pantry
+dev-haskell/path
 dev-haskell/path-io
 dev-haskell/pointed
 dev-haskell/polyparse
@@ -199,6 +202,7 @@ dev-haskell/th-expand-syns
 dev-haskell/th-orphans
 dev-haskell/th-reify-many
 dev-haskell/threads
+dev-haskell/validity
 dev-haskell/vector-builder
 dev-haskell/vector-instances
 dev-haskell/weigh
@@ -313,11 +317,6 @@ dev-qt/qtwebsockets:6
 # Sam James <sam@gentoo.org> (2022-08-02)
 # Multiple rendering/font issues reported: bug #844115, bug #851141.
 =app-text/ghostscript-gpl-9.56.1
-
-# Marek Szuba <marecki@gentoo.org> (2022-08-01)
-# Suricata-5 has reached end of life upstream. Please switch to major version 6.
-# Removal in 30 days (Bug #)
-<net-analyzer/suricata-6.0.0
 
 # Marek Szuba <marecki@gentoo.org> (2022-07-13)
 # Upstream has switched from CMake to hand-crafted Makefiles (yes, TO them),
