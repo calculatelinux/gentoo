@@ -33,6 +33,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Marc Schiffbauer <mschiff@gentoo.org> (2022-09-02)
+# Dead upstream, open bugs, removal in 30 days
+# bugs #829447, #836227, #862504
+mail-filter/sigh
+
 # Michał Górny <mgorny@gentoo.org> (2022-08-30)
 # Flask-Security-Too is a package with high maintenance cost
 # and no revdeps in ::gentoo.  The next version bump (once more)
@@ -317,13 +322,6 @@ dev-qt/qtwebsockets:6
 # Sam James <sam@gentoo.org> (2022-08-02)
 # Multiple rendering/font issues reported: bug #844115, bug #851141.
 =app-text/ghostscript-gpl-9.56.1
-
-# Marek Szuba <marecki@gentoo.org> (2022-07-13)
-# Upstream has switched from CMake to hand-crafted Makefiles (yes, TO them),
-# which have seriously messed up dependency handling and trigger several
-# QA violations in Gentoo. Mask until all of the latter have been resolved
-# and the jumbo patch fixing the former has been thoroughly tested.
->media-gfx/gmic-3.1.0
 
 # Fabian Groffen <grobian@gentoo.org> (2022-07-02)
 # Segfaults handling SPF validations (warn on permerror), like the
