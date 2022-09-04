@@ -648,6 +648,13 @@ app-emulation/vkd3d-proton:crossdev-mingw - Use sys-devel/crossdev for the toolc
 app-emulation/vkd3d-proton:extras - Install extra tools and demos in /usr/lib/vkd3d-proton
 app-emulation/wine-gecko:shared - Install pre-unpacked files which do not need to be copied into the Wine prefix
 app-emulation/wine-mono:shared - Install pre-unpacked files which do not need to be copied into the Wine prefix
+app-emulation/wine-proton:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
+app-emulation/wine-proton:gecko - Enable mshtml support using app-emulation/wine-gecko
+app-emulation/wine-proton:mono - Enable .NET support using app-emulation/wine-mono
+app-emulation/wine-proton:osmesa - Enable off-screen rendering (OpenGL in bitmaps) support
+app-emulation/wine-proton:perl - Install helpers that require perl (winedump/winemaker)
+app-emulation/wine-proton:sdl - Enable gamepad support using media-libs/libsdl2
+app-emulation/wine-proton:vkd3d - Enable DirectX 12 support using app-emulation/vkd3d
 app-emulation/wine-staging:capi - Enable ISDN support via CAPI
 app-emulation/wine-staging:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
 app-emulation/wine-staging:custom-cflags - Bypass strip-flags; use at your own peril
@@ -2952,6 +2959,7 @@ dev-vcs/git-annex:magicmime - Use libmagic to determine file MIME types
 dev-vcs/git-annex:pairing - Enable pairing
 dev-vcs/git-annex:torrentparser - Use haskell torrent library to parse torrent files
 dev-vcs/git-annex:webapp - Enable git-annex webapp
+dev-vcs/git-delete-merged-branches:full-name-executable - Install executable /usr/bin/git-delete-merged-branches that is in conflict with dev-vcs/git-extras
 dev-vcs/gitg:glade - Install a glade catalog file
 dev-vcs/gitg:python - Install Python bindings for those plugins requiring it.
 dev-vcs/gitolite:contrib - Install user-contributed files
@@ -5123,6 +5131,7 @@ media-video/peek:keybinder - Enable support for global hotkeys using dev-libs/ke
 media-video/pipewire:X - Enable audible bell for X11
 media-video/pipewire:echo-cancel - Enable WebRTC-based echo canceller via media-libs/webrtc-audio-processing
 media-video/pipewire:extra - Build pw-cat/pw-play/pw-record
+media-video/pipewire:flatpak - Enable Flatpak support
 media-video/pipewire:jack-client - Install a plugin for running PipeWire as a JACK client
 media-video/pipewire:jack-sdk - Use PipeWire as JACK replacement
 media-video/pipewire:lv2 - Allow loading LV2 plugins via media-libs/lv2
@@ -8582,6 +8591,7 @@ virtual/podofo-build:boost - Add support for boost
 virtual/podofo-build:tools - Build and install commandline tools
 virtual/rust:rustfmt - Install rustfmt, Rust code formatter
 virtual/ssh:minimal - Prefer net-misc/dropbear over net-misc/openssh
+virtual/wine:proton - Enable Valve Software's fork of Wine
 virtual/wine:staging - Enable Wine-Staging's Patchset
 www-apache/mod_backtrace:unwind - Use sys-libs/libunwind to provide better resolution of function names.
 www-apache/mod_musicindex:archive - Add archive support

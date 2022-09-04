@@ -133,7 +133,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	>=dev-cpp/libcmis-0.5.2
 	dev-db/unixODBC
 	dev-lang/perl
-	>=dev-libs/boost-1.72.0:=[nls]
+	dev-libs/boost:=[nls]
 	dev-libs/expat
 	dev-libs/hyphen
 	dev-libs/icu:=
@@ -294,8 +294,10 @@ PATCHES=(
 	"${FILESDIR}/${PN}-6.1-nomancompress.patch"
 	"${FILESDIR}/${PN}-7.2.0.4-qt5detect.patch"
 
-	# Upstream
+	# 7.4 branch
 	"${FILESDIR}/${PN}-7.3.5.2-gpgme-1.18.0.patch"
+
+	# pending upstream
 	"${FILESDIR}/${PN}-7.3.5.2-poppler-22.09.0.patch"
 )
 
