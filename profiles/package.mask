@@ -33,6 +33,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Mike Gilbert <floppym@gentoo.org> (2022-09-05)
+# Crash due to double-free.
+# https://bugs.gentoo.org/868567
+=sys-apps/gawk-5.2.0
+
 # Marc Schiffbauer <mschiff@gentoo.org> (2022-09-02)
 # Dead upstream, open bugs, removal in 30 days
 # bugs #829447, #836227, #862504
@@ -83,11 +88,6 @@ dev-ruby/aws-sdk
 dev-ruby/aws-sdk-core
 dev-ruby/aws-sdk-resources
 dev-ruby/travis
-
-# Matthew Smith <matthew@gentoo.org> (2022-08-26)
-# Unmaintained upstream. Superseded by modern GTK.
-# Bug #698950, removal in 30 days.
-x11-libs/gtkglext
 
 # Jaco Kroon <jaco@uls.co.za> (2022-08-22)
 # Superceded by bgpq4 (already in tree).  Non-co-operative upstream.  Removal
@@ -293,10 +293,6 @@ app-admin/logcheck
 <dev-lang/erlang-24
 ~dev-lang/elixir-1.11.4
 
-# Fabian Groffen <grobian@gentoo.org> (2022-08-06)
-# superseeded by sys-apps/baselayout, removal in 30 days.  bug #836114
-sys-apps/baselayout-prefix
-
 # Jimi Huotari <chiitoo@gentoo.org> (2022-08-02)
 # Masked for testing. The split of some packages may still
 # change. bug #838970.
@@ -417,7 +413,7 @@ sys-devel/automake:1.15
 # not use this program yet if you seriously need anonymity, privacy,
 # security, or stability." Feel free to unmask if this is not a
 # necessity.
-net-p2p/arti
+<net-p2p/arti-1.0.0
 
 # Stephan Hartmann <sultan@gentoo.org> (2022-08-20)
 # Dev channel releases are only for people who
