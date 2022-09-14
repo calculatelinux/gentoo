@@ -193,6 +193,7 @@ app-antivirus/clamav:clamapp - Build applications (clamscan, clamd, clamdscan, c
 app-antivirus/clamav:clamdtop - A Top like tool which shows what clamd is currently scanning amongst other things
 app-antivirus/clamav:clamonacc - Build the clamonacc on-access scanner
 app-antivirus/clamav:clamsubmit - A tool to submit false positives / negatives
+app-antivirus/clamav:experimental - Enable experimental features
 app-antivirus/clamav:libclamav-only - Bypass building of libfreshclam and the ClamAV CLI applications.
 app-antivirus/clamav:metadata-analysis-api - Enables collection of file property metadata using ClamAV API for analysis by ClamAV bytecode programs.
 app-antivirus/clamav:rar - RAR support
@@ -267,7 +268,6 @@ app-benchmarks/filebench:auto-completion - Enable command-line autocompletion us
 app-benchmarks/httperf:idleconn - Build with the idleconn program
 app-benchmarks/ioping:netdata - Add support for netdata
 app-benchmarks/ramspeed:pic - Force shared libraries to be built as PIC (this is slower)
-app-benchmarks/stress-ng:apparmor - Add support for AppArmor.
 app-benchmarks/sysbench:aio - Add support for AIO.
 app-benchmarks/sysbench:attachsql - Add support for AttachSQL.
 app-benchmarks/sysbench:drizzle - Add support for Drizzles.
@@ -282,7 +282,6 @@ app-cdr/gaffitter:scripts - Install additional gaffitter scripts for external pr
 app-cdr/mirage2iso:pinentry - Support app-crypt/pinentry password input backend.
 app-containers/apptainer:network - Install network plug-ins
 app-containers/apptainer:suid - Install SUID helper binary
-app-containers/containerd:apparmor - Support for AppArmor
 app-containers/containerd:btrfs - Support for BTRFS snapshot driver
 app-containers/containerd:cri - Support for Kubernetes CRI
 app-containers/containerd:device-mapper - Support for device mapper snapshot driver
@@ -292,7 +291,6 @@ app-containers/cri-o:btrfs - Enables dependencies for the "btrfs" graph driver, 
 app-containers/cri-o:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
 app-containers/crun:bpf - Enable in Kernel, eBPF (enhanced Berkley Packet Filter) support for managing device controllers.
 app-containers/crun:criu - Enable CRIU based checkpoint/restore support
-app-containers/docker:apparmor - Enable AppArmor support.
 app-containers/docker:aufs - Enables dependencies for the "aufs" graph driver, including necessary kernel flags.
 app-containers/docker:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
 app-containers/docker:cli - This is a temporary use flag which pulls in app-containers/docker-cli, the docker command line client. This flag is here to assist in the transition to split packages and will be removed in a future release.
@@ -301,20 +299,15 @@ app-containers/docker:device-mapper - Enables dependencies for the "devicemapper
 app-containers/docker:overlay - Enables dependencies for the "overlay" graph driver, including necessary kernel flags.
 app-containers/docker-credential-helpers:gnome-keyring - Build secretservice helper which works with gnome-keyring or kwallet using D-Bus.
 app-containers/docker-credential-helpers:pass - Build pass helper for the pass utility.
-app-containers/lxc:apparmor - Enable AppArmor support
 app-containers/lxc:io-uring - Enable io_uring support, and use io_uring instead of epoll
 app-containers/lxc:tools - Build and install additional command line tools
-app-containers/lxd:apparmor - Enable AppArmor support
-app-containers/podman:apparmor - Enable AppArmor support.
 app-containers/podman:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
 app-containers/podman:cgroup-hybrid - Default to hybrid (legacy) cgroup hierarchy instead of unified (modern).
 app-containers/podman:fuse - Enables fuse dependencies (fuse-overlayfs is especially useful for rootless mode).
 app-containers/podman:init - Enables catatonit dependency required for podman run --init.
 app-containers/podman:rootless - Enables dependencies for running in rootless mode.
-app-containers/runc:apparmor - Enable AppArmor support.
 app-containers/runc:kmem - Enable Kernel Memory Accounting.
 app-containers/skopeo:btrfs - Enables dependencies for the "btrfs" graph driver.
-app-containers/snapd:apparmor - Enable AppArmor support.
 app-containers/snapd:forced-devmode - Automatically disable application confinement if feature detection fails.
 app-crypt/aespipe:asm - Enable assembly modules
 app-crypt/aespipe:cpu_flags_x86_padlock - Use VIA padlock instructions, detected at run time, code still works on non-padlock processors
@@ -534,7 +527,6 @@ app-emulation/libguestfs:inspect-icons - Use media-gfx/icoutils for accessing/in
 app-emulation/libguestfs:libvirt - Use app-emulation/libvirt to manipulate VMs
 app-emulation/libguestfs:systemtap - Use dev-util/systemtap to inspect VM via "probes"
 app-emulation/libspectrum:gcrypt - Use dev-libs/libgcrypt for low-level crypto of some features, including logfiles.
-app-emulation/libvirt:apparmor - Enable AppArmor support
 app-emulation/libvirt:dtrace - Enable dtrace support via dev-util/systemtap
 app-emulation/libvirt:firewalld - DBus interface to iptables/ebtables allowing for better runtime management of your firewall.
 app-emulation/libvirt:fuse - Allow LXC to use sys-fs/fuse for mountpoints
@@ -656,52 +648,41 @@ app-emulation/wine-proton:osmesa - Enable off-screen rendering (OpenGL in bitmap
 app-emulation/wine-proton:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-proton:sdl - Enable gamepad support using media-libs/libsdl2
 app-emulation/wine-proton:vkd3d - Enable DirectX 12 support using app-emulation/vkd3d
-app-emulation/wine-staging:capi - Enable ISDN support via CAPI
+app-emulation/wine-staging:capi - Enable ISDN support using net-libs/libcapi
 app-emulation/wine-staging:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
-app-emulation/wine-staging:custom-cflags - Bypass strip-flags; use at your own peril
 app-emulation/wine-staging:dos - Pull in games-emulation/dosbox to run DOS applications
-app-emulation/wine-staging:gecko - Add support for the Gecko engine when using iexplore
-app-emulation/wine-staging:gssapi - Use GSSAPI (Kerberos SSP support)
-app-emulation/wine-staging:gstreamer - Use media-libs/gstreamer to provide DirectShow functionality;
-app-emulation/wine-staging:mingw - Build PE files using a MinGW cross compiler
-app-emulation/wine-staging:mono - Add support for .NET using Wine's Mono add-on
-app-emulation/wine-staging:netapi - Use libnetapi from net-fs/samba to support Windows networks in netapi32.dll
+app-emulation/wine-staging:gecko - Enable mshtml support using app-emulation/wine-gecko
+app-emulation/wine-staging:mingw - Build PE files using a MinGW toolchain for better compatibility
+app-emulation/wine-staging:mono - Enable .NET support using app-emulation/wine-mono
+app-emulation/wine-staging:netapi - Enable support for configuring remote shares using net-fs/samba
 app-emulation/wine-staging:opencl - Enable OpenCL support
-app-emulation/wine-staging:osmesa - Add support for OpenGL in bitmaps using libOSMesa
+app-emulation/wine-staging:osmesa - Enable off-screen rendering (OpenGL in bitmaps) support
 app-emulation/wine-staging:pcap - Support packet capture software (e.g. wireshark)
-app-emulation/wine-staging:perl - Install helpers written in perl (winedump/winemaker)
+app-emulation/wine-staging:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-staging:pipelight - Apply Wine-Staging patches for Pipelight/Silverlight support
 app-emulation/wine-staging:realtime - Pull in sys-auth/rtkit for low-latency pulseaudio support
 app-emulation/wine-staging:run-exes - Use Wine to open and run .EXE and .MSI files
-app-emulation/wine-staging:samba - Add support for NTLM auth. See: https://web.archive.org/web/20160108123008/http://wiki.winehq.org:80/NtlmAuthSetupGuide and https://web.archive.org/web/20150906013746/http://wiki.winehq.org/NtlmSigningAndSealing (these pages are not currently in the updated WineHQ Wiki).
-app-emulation/wine-staging:sdl - Add support for gamepad detection using SDL
+app-emulation/wine-staging:samba - Pull in net-fs/samba with winbind for NTLM auth support
+app-emulation/wine-staging:sdl - Enable gamepad support using media-libs/libsdl2
 app-emulation/wine-staging:staging - Apply Wine-Staging patches for advanced feature support that haven't made it into upstream Wine yet
-app-emulation/wine-staging:udev - Use virtual/libudev to provide plug and play support
-app-emulation/wine-staging:unwind - Use sys-libs/libunwind to unwind the stack
-app-emulation/wine-staging:usb - Use virtual/libusb to provide USB support
 app-emulation/wine-staging:vulkan - Enable Vulkan drivers
-app-emulation/wine-vanilla:capi - Enable ISDN support via CAPI
+app-emulation/wine-vanilla:capi - Enable ISDN support using net-libs/libcapi
 app-emulation/wine-vanilla:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
-app-emulation/wine-vanilla:custom-cflags - Bypass strip-flags; use at your own peril
 app-emulation/wine-vanilla:dos - Pull in games-emulation/dosbox to run DOS applications
-app-emulation/wine-vanilla:gecko - Add support for the Gecko engine when using iexplore
+app-emulation/wine-vanilla:gecko - Enable mshtml support using app-emulation/wine-gecko
 app-emulation/wine-vanilla:gssapi - Use GSSAPI (Kerberos SSP support)
-app-emulation/wine-vanilla:gstreamer - Use media-libs/gstreamer to provide DirectShow functionality;
-app-emulation/wine-vanilla:mingw - Build PE files using a MinGW cross compiler
-app-emulation/wine-vanilla:mono - Add support for .NET using Wine's Mono add-on
-app-emulation/wine-vanilla:netapi - Use libnetapi from net-fs/samba to support Windows networks in netapi32.dll
+app-emulation/wine-vanilla:mingw - Build PE files using a MinGW toolchain for better compatibility
+app-emulation/wine-vanilla:mono - Enable .NET support using app-emulation/wine-mono
+app-emulation/wine-vanilla:netapi - Enable support for configuring remote shares using net-fs/samba
 app-emulation/wine-vanilla:opencl - Enable OpenCL support
-app-emulation/wine-vanilla:osmesa - Add support for OpenGL in bitmaps using libOSMesa
+app-emulation/wine-vanilla:osmesa - Enable off-screen rendering (OpenGL in bitmaps) support
 app-emulation/wine-vanilla:pcap - Support packet capture software (e.g. wireshark)
-app-emulation/wine-vanilla:perl - Install helpers written in perl (winedump/winemaker)
+app-emulation/wine-vanilla:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-vanilla:realtime - Pull in sys-auth/rtkit for low-latency pulseaudio support
 app-emulation/wine-vanilla:run-exes - Use Wine to open and run .EXE and .MSI files
-app-emulation/wine-vanilla:samba - Add support for NTLM auth. See: https://web.archive.org/web/20160108123008/http://wiki.winehq.org:80/NtlmAuthSetupGuide and https://web.archive.org/web/20150906013746/http://wiki.winehq.org/NtlmSigningAndSealing (these pages are not currently in the updated WineHQ Wiki).
-app-emulation/wine-vanilla:sdl - Add support for gamepad detection using SDL
-app-emulation/wine-vanilla:udev - Use virtual/libudev to provide plug and play support
-app-emulation/wine-vanilla:unwind - Use sys-libs/libunwind to unwind the stack
-app-emulation/wine-vanilla:usb - Use virtual/libusb to provide USB support
-app-emulation/wine-vanilla:vkd3d - Use app-emulation/vkd3d to provide Direct3D 12 support
+app-emulation/wine-vanilla:samba - Pull in net-fs/samba with winbind for NTLM auth support
+app-emulation/wine-vanilla:sdl - Enable gamepad support using media-libs/libsdl2
+app-emulation/wine-vanilla:vkd3d - Enable DirectX 12 support using app-emulation/vkd3d
 app-emulation/wine-vanilla:vulkan - Enable Vulkan drivers
 app-emulation/winetricks:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
 app-emulation/x48:readline - Enables support for libreadline
@@ -993,7 +974,7 @@ app-office/kmymoney:addressbook - Enable kde-apps/akonadi contact integration
 app-office/kmymoney:hbci - Enable HBCI support using net-libs/aqbanking
 app-office/kmymoney:holidays - Enable kde-frameworks/kholidays integration
 app-office/kraft:pim - Enable support for KDE PIM resources integration
-app-office/libalkimia:webengine - Use dev-qt/qtwebengine for embedded web browser widget
+app-office/libalkimia:webengine - Enable online quotes using dev-qt/qtwebengine
 app-office/libreoffice:base - Enable full support for LibreOffice Base databases (involves additional bundled libs)
 app-office/libreoffice:clang - Use Clang compiler instead of GCC
 app-office/libreoffice:coinmp - Use sci-libs/coinor-mp as alternative solver
@@ -2148,7 +2129,6 @@ dev-libs/openssl-compat:weak-ssl-ciphers - Build support for SSL/TLS ciphers tha
 dev-libs/optix:headers-only - Download and install only the header files
 dev-libs/pkcs11-helper:nss - Enable NSS crypto engine
 dev-libs/pocl:accel - Enable the generic hardware accelerator device driver
-dev-libs/pocl:cl20 - Enable reporting OpenCL 2.0 for the CPU device
 dev-libs/pocl:conformance - Ensures that certain build options which would result in non-conformant pocl build stay disabled. Note that this does not quarantee a fully conformant build of pocl.
 dev-libs/pocl:cuda - Enable the CUDA backend for NVIDIA GPUs
 dev-libs/pocl:float-conversion - When enabled, OpenCL printf() call's f/e/g formatters are handled by pocl. When disabled, these are handled by system C library.
@@ -2174,6 +2154,8 @@ dev-libs/ppl:cdd - Build the ppl_lcdd program for vertex/facet enumeration accep
 dev-libs/ppl:lpsol - Build the ppl_lpsol linear program solver that uses sci-mathematics/glpk for its input routines
 dev-libs/qcoro5:network - Build dev-qt/qtnetwork support
 dev-libs/qcoro5:websockets - Build dev-qt/qtwebsockets support
+dev-libs/quazip:qt5 - Build with Qt5 support
+dev-libs/quazip:qt6 - Build with Qt6 support
 dev-libs/raft:zfs - ZFS support
 dev-libs/serd:tools - Build command line utilities
 dev-libs/serdisplib:tools - Build optional tools.
@@ -2817,7 +2799,6 @@ dev-util/diffoscope:ssh - Use net-misc/openssh
 dev-util/diffoscope:tar - Use app-arch/tar
 dev-util/diffoscope:tcpdump - Use net-analyzer/tcpdump
 dev-util/diffoscope:zip - Use app-arch/unzip
-dev-util/edb-debugger:jumbo-build - Experimental jumbo (also known as unity) build capability
 dev-util/edi:clang - Provide integration with sys-devel/clang and dev-util/bear for autocompletion, inline errors and information about compilation units.
 dev-util/flatpak-builder:yaml - Use libyaml for yaml support
 dev-util/geany:gtk2 - Use GTK+2 instead of GTK+3
@@ -2859,6 +2840,7 @@ dev-util/kdevelop:qmake - Enable support for QMake build system
 dev-util/kdevelop:reviewboard - Enable reviewboard support
 dev-util/kernelshark:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS
 dev-util/kup:gitolite - Enable support for dev-vcs/gitolite in kup-server
+dev-util/librnp:botan - Use Botan crypto backend instead of OpenSSL
 dev-util/ltrace:unwind - Use sys-libs/libunwind for frame unwinding support
 dev-util/lttng-tools:ust - Support LTTng-UST (Userspace Tracing)
 dev-util/lttng-ust:numa - Enable numa support
@@ -3559,7 +3541,7 @@ kde-apps/okular:crypt - Enable support for password-encrypted documents via kde-
 kde-apps/okular:epub - Enable E-Book support via app-text/ebook-tools
 kde-apps/okular:image-backend - Enable image viewing support
 kde-apps/okular:markdown - Enable Markdown support via app-text/discount
-kde-apps/okular:mobi - Enable mobipocket support
+kde-apps/okular:mobi - Enable mobipocket support via kde-apps/kdegraphics-mobipocket
 kde-apps/okular:plucker - Enable Plucker E-Book for Palm OS devices support
 kde-apps/okular:qml - Install Okular Qml components
 kde-apps/okular:share - Enable support for a share menu using kde-frameworks/purpose
@@ -4074,7 +4056,10 @@ media-gfx/inkscape:visio - Enable support for Microsoft Visio diagrams via media
 media-gfx/inkscape:wpg - Enable support for WordPerfect graphics via app-text/libwpg
 media-gfx/iscan-plugin-gt-f500:minimal - Install the firmware only, and not the plugin.
 media-gfx/kphotoalbum:map - Enable map display support using kde-apps/marble
+media-gfx/kphotoalbum:phonon - Enable media-libs/phonon video backend (known to crash on some video formats)
+media-gfx/kphotoalbum:qtav - Enable media-libs/qtav video backend (audio and video may get out of sync)
 media-gfx/kphotoalbum:share - Enable support for a share menu using kde-frameworks/purpose
+media-gfx/kphotoalbum:vlc - Enable media-video/vlc video backend (recommended for X11)
 media-gfx/krita:color-management - Enable color management via media-libs/opencolorio
 media-gfx/krita:heif - Enable support for ISO/IEC 23008-12:2017 HEIF/HEIC image format using media-libs/libheif
 media-gfx/krita:jpegxl - Support for JPEG XL image format
@@ -4247,7 +4232,6 @@ media-libs/libde265:enc265 - Enable build of enc265 tool
 media-libs/libde265:sdl - Enable video output of dec265 example program with media-libs/libsdl
 media-libs/libde265:tools - Enable installation of varous binary tools
 media-libs/libepoxy:egl - Enable EGL support.
-media-libs/libextractor:apparmor - Enable apparmor support using sys-libs/libapparmor
 media-libs/libextractor:archive - Enable archive support using app-arch/libarchive
 media-libs/libextractor:gsf - Enable OLE2 (MS Office) plug-in support using gnome-extra/libgsf
 media-libs/libextractor:midi - Enable MIDI support through media-libs/libsmf
@@ -6174,7 +6158,6 @@ net-libs/webkit-gtk:avif - Enable support for AVIF images via media-libs/libavif
 net-libs/webkit-gtk:egl - Enable EGL support
 net-libs/webkit-gtk:examples - Install the MiniBrowser example application
 net-libs/webkit-gtk:gamepad - Enable gamepad input support via dev-libs/libmanette
-net-libs/webkit-gtk:geolocation - Enable geolocation support through app-misc/geoclue
 net-libs/webkit-gtk:jumbo-build - Combine source files to speed up build process
 net-libs/wvstreams:boost - Use dev-libs/boost to provide TR1-compatible functional interface. This USE flag is only needed with GCC earlier than version 4.1, or with other compilares not providing said interface.
 net-libs/xdp-tools:tools - Install various helper tools rather than just libxdp.
@@ -7879,7 +7862,6 @@ sys-apps/kmod:zlib - Enable support for gzipped modules
 sys-apps/kmscon:drm - Enable Linux DRM for backend
 sys-apps/kmscon:fbdev - Enable Linux FBDev for backend
 sys-apps/kmscon:gles2 - Enable GLES2 for backend
-sys-apps/kmscon:optimizations - Enable optimizations
 sys-apps/kmscon:pango - Enable pango font rendering
 sys-apps/kmscon:pixman - Enable pixman font rendering
 sys-apps/kmscon:systemd - Enable multiseat support via systemd
@@ -7953,7 +7935,6 @@ sys-apps/smc-sum:module - Install Supermicro's kernel module.
 sys-apps/superdiag:iso - Install an iso image, which can be used with sys-apps/smc-sum.
 sys-apps/superdiag:usb - Install all files, which are needed for an installation on an usb thumb drive.
 sys-apps/superiotool:pci - Support for PCI-attached "Super I/Os" (e.g. in VIA VT82686A/B).
-sys-apps/systemd:apparmor - Enable AppArmor support
 sys-apps/systemd:audit - Enable support for sys-process/audit
 sys-apps/systemd:cgroup-hybrid - Default to hybrid (legacy) cgroup hierarchy instead of unified (modern).
 sys-apps/systemd:cryptsetup - Enable cryptsetup tools (includes unit generator for crypttab)

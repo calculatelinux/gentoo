@@ -1,6 +1,14 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Alfredo Tupone <tupone@gentoo.org> (2022-08-30)
+# ada bootstrap currently only available on amd64/x86
+sys-devel/gcc -ada
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2020-09-11)
+# media-libs/qtav not keyworded yet
+media-gfx/kphotoalbum qtav
+
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-04-25)
 # Mask tests until test dependencies are keyworded.
 app-text/pdftk test

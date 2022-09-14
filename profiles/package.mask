@@ -33,6 +33,51 @@
 
 #--- END OF EXAMPLES ---
 
+# Stephan Hartmannr <sultan@gentoo.org> (2022-09-12)
+# Unpatched security vulerabilities, bug #868156, bug #868354.
+www-client/chromium-bin
+
+# Mike Gilbert <floppym@gentoo.org> (2022-09-12)
+# repoman is no longer maintained and has been removed from the portage
+# git repository. Please use dev-util/pkgcheck and dev-util/pkgdev instead.
+# Removal on 2022-11-11. Bug #835013.
+app-portage/repoman
+
+# Michał Górny <mgorny@gentoo.org> (2022-09-11)
+# Bad quality package with failing tests.  No revdeps.
+# Removal on 2022-10-11.  Bug #869650.
+dev-python/pytest-pylint
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2022-09-10)
+# Python 3.8 only. EAPI=6 ebuild. 5 open bugs. Issues with newer
+# dependencies versions.
+# Removal: 2022-10-10.  Bugs #869524, #684334.
+net-analyzer/flent
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2022-09-10)
+# Python 3.8 only package. Tests are disabled. Newer targets fail
+# more tests then 3.8 target.
+# Removal: 2022-10-10.  Bug #869521.
+net-nds/nsscache
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2022-09-10)
+# Python 3.8 only package, with inactive since 2017 upstream.
+# Tests fail and doesn't work on newer python targets.
+# Removal: 2022-10-10.  Bug #869512.
+dev-python/python-etcd
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2022-09-10)
+# Python 3.8 only package, with capped old dependencies, and open
+# bugs and issues.
+# Removal: 2022-10-10.  Bugs #869506, #695090, #792219, #809272.
+net-misc/electrum-ltc
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2022-09-10)
+# Upstream repository archived. Python 3.8 only, with issues for
+# newer targets. No reverse dependencies in tree.
+# Removal: 2022-10-10.  Bugs #869503, #747997, #832242.
+dev-python/SaltTesting
+
 # Matthias Schwarzott <zzam@gentoo.org> (2022-09-08)
 # Breaks kernel builds with BTF enabled.
 # Bug #868762.
@@ -64,11 +109,11 @@ mail-filter/sigh
 # Flask-Security-Too is a package with high maintenance cost
 # and no revdeps in ::gentoo.  The next version bump (once more)
 # introduces more dependencies.
-#
+# 
 # The remaining listed packages are used exclusively by this package
 # (or its tests).  If you find one of them useful, please let us know
 # and we'll keep it.
-#
+# 
 # Removal on 2022-09-29.  Bug #867415.
 dev-python/flask-security
 dev-python/flask-babelex
@@ -333,12 +378,6 @@ dev-qt/qtwebsockets:6
 # Segfaults handling SPF validations (warn on permerror), like the
 # previous release, better not to trust your important mail to
 ~mail-mta/exim-4.96
-
-# Ulrich Müller <ulm@gentoo.org> (2022-06-30)
-# Pretest versions, masked for testing.
-~app-editors/emacs-28.1.90
-~app-editors/emacs-28.1.91
-~app-editors/emacs-28.1.92
 
 # Sam James <sam@gentoo.org> (2022-05-28)
 # GCC 9 and older no longer receive upstream support or fixes for
@@ -611,7 +650,7 @@ app-office/texmacs
 # switch the compiler / the binutils) ASAP. If you need them for a specific
 # (isolated) use case, feel free to unmask them on your system.
 <sys-libs/glibc-2.33
-<sys-devel/binutils-2.37_p1
+<sys-devel/binutils-2.38
 
 # Michael Orlitzky <mjo@gentoo.org> (2017-01-07)
 # This package has some dangerous quality and security issues, but
