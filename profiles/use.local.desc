@@ -6779,7 +6779,6 @@ net-p2p/retroshare:service - Enables the new RetroShare service
 net-p2p/retroshare:sqlcipher - Enables GXS database encryption via SQLCipher
 net-p2p/retroshare:webui - Enables Web interface and API support
 net-p2p/retroshare:xapian - Enables GXS content indexing and search via dev-libs/xapian
-net-p2p/rtorrent:daemon - Uses app-misc/screen to daemonize this application
 net-p2p/syncthing:tools - Install stdiscosrv, strelaysrv and other tools to /usr/libexec/syncthing/.
 net-p2p/transmission:cli - Build command-line client
 net-p2p/transmission:lightweight - Optimize transmission for low-resource systems (smaller cache size, prefer unencrypted peer connections, etc.)
@@ -7764,6 +7763,7 @@ sys-apps/elfix:ptpax - Enable PT_PAX_FLAGS support.
 sys-apps/elfix:xtpax - Enable XATTR_PAX_FLAGS support.
 sys-apps/etckeeper:cron - Install cron script
 sys-apps/ethtool:netlink - Enable netlink interface via net-libs/libmnl
+sys-apps/file:lzip - Enable app-arch/lzip decompression support via app-arch/lzlib
 sys-apps/firejail:X - Enable X11 sandboxing
 sys-apps/firejail:apparmor - Enable support for custom AppArmor profiles
 sys-apps/firejail:chroot - Enable chrooting to custom directory
@@ -8012,7 +8012,7 @@ sys-auth/pambase:yescrypt - Switch Linux-PAM's pam_unix module to use yescrypt f
 sys-auth/polkit:duktape - Use dev-lang/duktape instead of dev-lang/spidermonkey as JavaScript engine
 sys-auth/polkit:systemd - Use sys-apps/systemd for session tracking
 sys-auth/seatd:builtin - Enable embedded server in libseat
-sys-auth/seatd:server - Enable standalone seatd server
+sys-auth/seatd:server - Enable standalone seatd server, replacement to (e)logind
 sys-auth/ssh-ldap-pubkey:schema - Install a copy of the LPK schema, only needed on LDAP servers.
 sys-auth/sssd:acl - Build and use the cifsidmap plugin
 sys-auth/sssd:locator - Install sssd's Kerberos plugin
@@ -8165,12 +8165,15 @@ sys-cluster/slurm:ipmi - Build support for collecting some ipmi stats
 sys-cluster/slurm:json - Add support for json-persing via json-c
 sys-cluster/slurm:multiple-slurmd - Allow multiple slurmd to run
 sys-cluster/slurm:munge - Enable authentication via munge
-sys-cluster/slurm:netloc - Add support for netloc (amd64 only)
 sys-cluster/slurm:numa - Add NUMA awareness
+sys-cluster/slurm:nvml - Enable the NVML device discovery
 sys-cluster/slurm:ofed - Add Infiniband support via ofed
+sys-cluster/slurm:rrdtool - Enable RRD export plugin
 sys-cluster/slurm:slurmdbd - Install SQL server for slurmdbd
+sys-cluster/slurm:slurmrestd - Enable interface to Slurm via REST API
 sys-cluster/slurm:torque - Enable perl scripts that emulates pbs (qstat, qsub etc.)
 sys-cluster/slurm:ucx - Enable Unified Communication X library support
+sys-cluster/slurm:yaml - Enable YAML support
 sys-cluster/spark-bin:scala211 - Install Spark JARs pre-built with Scala 2.11.
 sys-cluster/spark-bin:scala212 - Install Spark JARs pre-built with Scala 2.12.
 sys-cluster/torque:autorun - Enable the AUTORUN_JOBS codebase

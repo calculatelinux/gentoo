@@ -35,6 +35,8 @@ multilib_src_configure() {
 	# delete them later rather than not compile them at all
 	local myconf=(
 		--enable-largefile
+		# static needed for tests, bug #869677
+		--enable-static
 		--disable-werror
 		--disable-examples
 		$(use_enable flac)

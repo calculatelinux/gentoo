@@ -33,6 +33,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Joonas Niilola <juippis@gentoo.org> (2022-09-15)
+# Upstream split this font into separate packages: media-fonts/
+# source-code-pro, source-sans, source-serif. The current non-split
+# version is broken. Removal in 30 days. #865103
+media-fonts/source-pro
+
 # Stephan Hartmannr <sultan@gentoo.org> (2022-09-12)
 # Unpatched security vulerabilities, bug #868156, bug #868354.
 www-client/chromium-bin
@@ -308,12 +314,6 @@ x11-terms/mrxvt
 # Dead upstream, vulnerable, no revdeps except a usedep. Removal in 30
 # days, bug #618000
 media-libs/libaacplus
-
-# John Helmert III <ajak@gentoo.org> (2022-08-14)
-# Many vulnerabilities (including code execution and root privilege
-# escalation), effectively unmaintained. Removal in 30 days, bugs
-# #631552, #790296, #842789
-sys-cluster/slurm
 
 # John Helmert III <ajak@gentoo.org> (2022-08-14)
 # Vulnerable and unmaintained for years, many open bugs, no revdeps,
