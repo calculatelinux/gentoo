@@ -788,6 +788,7 @@ app-metrics/collectd:filecaps - When set collectd daemon will have set required 
 app-metrics/collectd:java - Must be set (workaround for java-pkg-opt-2 eclass limitation) when you want java or genericjmx plugin
 app-metrics/collectd:udev - Enable optional udev usage in disk plugin; Required for smart plugin
 app-metrics/collectd:xfs - Enable optional capability to filter on XFS file system in df plugin; Requires XFS headers from sys-fs/xfsprogs
+app-misc/FreeSSM:small-resolution - Build the app for small resolution screeens
 app-misc/blink1:mini-tool - Build and install command-line mini-tool blink1-mini-tool (normally used for embedded devices)
 app-misc/blink1:server - Build and install REST API server (currently hard-coded to TCP port 8080)
 app-misc/blink1:tool - Build and install command-line tool blink1-tool
@@ -5458,6 +5459,7 @@ net-analyzer/wireshark:netlink - Use dev-libs/libnl
 net-analyzer/wireshark:pcap - Use net-libs/libpcap for network packet capturing (build dumpcap, rawshark)
 net-analyzer/wireshark:plugin-ifdemo - Install plugin interface demo
 net-analyzer/wireshark:plugins - Install plugins
+net-analyzer/wireshark:qt6 - Build with Qt6 support instead of the default Qt5 for GUI support
 net-analyzer/wireshark:randpkt - Install randpkt, a utility for creating pcap trace files full of random packets
 net-analyzer/wireshark:randpktdump - Install randpktdump, an extcap interface to provide access to the random packet generator (randpkt)
 net-analyzer/wireshark:reordercap - Install reordercap, to reorder input file by timestamp into output file
@@ -9130,5 +9132,6 @@ xfce-extra/xfce4-clipman-plugin:qrcode - Enable support for media-gfx/qrencode
 xfce-extra/xfce4-mpc-plugin:libmpd - Build using media-libs/libmpd backend, instead of native fallback which is preferred
 xfce-extra/xfce4-power-manager:panel-plugin - Build the power management plugin for the XFCE panel
 xfce-extra/xfce4-pulseaudio-plugin:keybinder - Enable support for global hotkeys using dev-libs/keybinder.
+xfce-extra/xfce4-pulseaudio-plugin:libcanberra - Enable sound event support using media-libs/libcanberra
 xfce-extra/xfce4-pulseaudio-plugin:wnck - Enable experimental support for raising media player windows using x11-libs/libwnck.
 xfce-extra/xfce4-screensaver:locking - Enable screen locking support

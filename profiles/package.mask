@@ -33,6 +33,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Joonas Niilola <juippis@gentoo.org> (2022-09-16)
+# This theme has been incorporated to enlightenment-0.25, and with
+# 0.24 removed from Gentoo's git tree, this ebuild is useless. Removal
+# in 30 days. #870355
+x11-themes/e-flat-theme
+
 # Joonas Niilola <juippis@gentoo.org> (2022-09-15)
 # Upstream split this font into separate packages: media-fonts/
 # source-code-pro, source-sans, source-serif. The current non-split
@@ -372,7 +378,7 @@ dev-qt/qtwebsockets:6
 
 # Sam James <sam@gentoo.org> (2022-08-02)
 # Multiple rendering/font issues reported: bug #844115, bug #851141.
-=app-text/ghostscript-gpl-9.56.1
+>=app-text/ghostscript-gpl-9.56.1
 
 # Fabian Groffen <grobian@gentoo.org> (2022-07-02)
 # Segfaults handling SPF validations (warn on permerror), like the
@@ -545,6 +551,7 @@ sys-devel/automake:1.11
 # New major parallel-installable release which needs special care to not
 # end up loaded into the same process together with the earlier libsoup ABI.
 # Migration to it is expected for GNOME 42, NOT to be unmasked with GNOME 41.
+>=gnome-extra/gnome-calculator-43
 net-libs/libsoup:3.0
 
 # Thomas Deutschmann <whissi@gentoo.org> (2021-09-07)
