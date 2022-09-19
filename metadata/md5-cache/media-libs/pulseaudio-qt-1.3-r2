@@ -4,6 +4,7 @@ DEPEND=>=dev-qt/qtdbus-5.15.2:5 >=dev-qt/qtgui-5.15.2:5 media-libs/libpulse test
 DESCRIPTION=Qt bindings for libpulse
 EAPI=8
 HOMEPAGE=https://invent.kde.org/libraries/pulseaudio-qt
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm kde.org
 IUSE=debug +handbook doc test
 KEYWORDS=amd64 arm64 ~ppc64 ~riscv x86

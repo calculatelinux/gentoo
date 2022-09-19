@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst postrm
 DESCRIPTION=Simple yet flexible PHP mock object framework for use in unit testing
 EAPI=6
 HOMEPAGE=https://github.com/padraic/mockery
+INHERIT=php-pear-r2
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
 RDEPEND=>=dev-php/pear-1.8.1

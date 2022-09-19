@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/glib-2.32:2 >=x11-libs/gtk+-3.0:3 vte? ( x11-libs/vte:2.91 ) d
 DESCRIPTION=GTK+ based fast and lightweight IDE
 EAPI=8
 HOMEPAGE=https://www.geany.org
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=strip-linguas xdg
 IUSE=+vte
 KEYWORDS=~alpha amd64 arm ~ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux

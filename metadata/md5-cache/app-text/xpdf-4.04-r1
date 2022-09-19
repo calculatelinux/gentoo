@@ -4,6 +4,7 @@ DEPEND=cups? ( dev-qt/qtprintsupport:5[cups] net-print/cups ) fontconfig? ( medi
 DESCRIPTION=The PDF viewer and tools
 EAPI=8
 HOMEPAGE=https://www.xpdfreader.com
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake desktop verify-sig xdg
 IUSE=cmyk cups +fontconfig i18n icons +libpaper metric opi png +textselect utils verify-sig
 KEYWORDS=amd64 x86

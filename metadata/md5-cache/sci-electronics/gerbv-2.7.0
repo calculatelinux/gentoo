@@ -4,6 +4,7 @@ DEPEND=x11-libs/gtk+:2 x11-libs/cairo dev-util/desktop-file-utils x11-misc/share
 DESCRIPTION=A RS-274X (Gerber) and NC drill (Excellon) file viewer
 EAPI=7
 HOMEPAGE=http://gerbv.geda-project.org/
+INHERIT=xdg
 IUSE=doc examples unit-mm
 KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2

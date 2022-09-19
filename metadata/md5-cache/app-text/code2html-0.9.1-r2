@@ -2,6 +2,7 @@ DEFINED_PHASES=install prepare
 DESCRIPTION=Converts source files to colored HTML output
 EAPI=7
 HOMEPAGE=http://www.palfrader.org/code2html/
+INHERIT=prefix
 KEYWORDS=amd64 ~hppa ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=MIT
 RDEPEND=>=dev-lang/perl-5

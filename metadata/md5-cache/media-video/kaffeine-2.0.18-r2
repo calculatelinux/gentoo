@@ -4,6 +4,7 @@ DEPEND=>=dev-qt/qtdbus-5.15.5:5 >=dev-qt/qtgui-5.15.5:5 >=dev-qt/qtnetwork-5.15.
 DESCRIPTION=Media player with digital TV support by KDE
 EAPI=8
 HOMEPAGE=https://apps.kde.org/kaffeine/ https://userbase.kde.org/Kaffeine
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm kde.org
 IUSE=dvb debug +handbook
 KEYWORDS=~amd64 ~x86

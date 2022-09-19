@@ -4,6 +4,7 @@ DEPEND=dev-libs/glib:2 dev-libs/openssl:= media-libs/alsa-lib sys-libs/zlib:= x1
 DESCRIPTION=Flash Player emulator written in Rust
 EAPI=8
 HOMEPAGE=https://ruffle.rs/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cargo desktop flag-o-matic python-any-r1 xdg
 IUSE=debug
 KEYWORDS=~amd64

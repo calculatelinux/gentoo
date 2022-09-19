@@ -4,6 +4,7 @@ DEPEND=python_single_target_python3_9? ( >=dev-lang/python-3.9.12:3.9 ) python_s
 DESCRIPTION=A 3D model slicing application for 3D printing
 EAPI=8
 HOMEPAGE=https://github.com/Ultimaker/Cura
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake desktop python-single-r1 xdg
 IUSE=debug test +usb zeroconf python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=amd64 ~arm64 ~x86

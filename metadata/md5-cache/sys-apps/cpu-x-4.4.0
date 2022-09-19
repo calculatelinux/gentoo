@@ -4,6 +4,7 @@ DEPEND=test? ( sys-apps/mawk sys-apps/nawk ) dev-libs/glib:2 x11-libs/cairo x11-
 DESCRIPTION=A Free software that gathers information on CPU, motherboard and more
 EAPI=8
 HOMEPAGE=https://x0rg.github.io/CPU-X/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake gnome2-utils xdg
 IUSE=+cpu force-libstatgrab +gpu +gui +ncurses +nls opencl +pci test
 KEYWORDS=-* ~amd64

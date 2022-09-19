@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/glib-2.36.0:2 >=dev-libs/libxml2-2.4.16:2 >=gnome-extra/libgsf
 DESCRIPTION=Programs and library containing GTK widgets and C++ classes related to chemistry
 EAPI=8
 HOMEPAGE=http://gchemutils.nongnu.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=autotools flag-o-matic xdg
 IUSE=gnumeric
 KEYWORDS=~amd64 ~x86

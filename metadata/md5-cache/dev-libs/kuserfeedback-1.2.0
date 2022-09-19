@@ -4,6 +4,7 @@ DEPEND=>=dev-qt/qtcharts-5.15.2:5 >=dev-qt/qtdeclarative-5.15.2:5 >=dev-qt/qtgui
 DESCRIPTION=Framework to collect user feedback for applications via telemetry and surveys
 EAPI=8
 HOMEPAGE=https://kde.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm kde.org
 IUSE=doc test debug test
 KEYWORDS=amd64 ~arm arm64 ~ppc64 ~riscv x86

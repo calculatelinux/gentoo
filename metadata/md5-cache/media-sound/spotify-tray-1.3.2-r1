@@ -4,6 +4,7 @@ DEPEND=x11-libs/gtk+:3[X]
 DESCRIPTION=Wrapper around the Spotify client that adds a tray icon
 EAPI=8
 HOMEPAGE=https://github.com/tsmetana/spotify-tray
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=autotools xdg
 KEYWORDS=~amd64
 LICENSE=GPL-3

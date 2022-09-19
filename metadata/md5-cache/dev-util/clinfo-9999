@@ -3,6 +3,7 @@ DEPEND=>=virtual/opencl-3 >=dev-vcs/git-1.8.2.1[curl]
 DESCRIPTION=A tool to display info about the system's OpenCL capabilities
 EAPI=6
 HOMEPAGE=https://github.com/Oblomov/clinfo
+INHERIT=git-r3
 LICENSE=CC0-1.0
 PROPERTIES=live
 RDEPEND=>=virtual/opencl-3

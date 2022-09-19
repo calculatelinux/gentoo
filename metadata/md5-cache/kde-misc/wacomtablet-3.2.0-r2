@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/libwacom-0.30:= >=dev-qt/qtdbus-5.15.2:5 >=dev-qt/qtdeclarativ
 DESCRIPTION=System settings module for Wacom tablets
 EAPI=8
 HOMEPAGE=https://apps.kde.org/wacomtablet/ https://userbase.kde.org/Wacomtablet
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm kde.org
 IUSE=test debug +handbook
 KEYWORDS=amd64 x86

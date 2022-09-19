@@ -4,6 +4,7 @@ DEPEND=virtual/libintl x11-libs/gtk+:3 doc? ( app-text/gnome-doc-utils ) ffmpegt
 DESCRIPTION=A lightweight GTK image viewer forked from GQview
 EAPI=8
 HOMEPAGE=http://www.geeqie.org
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=autotools git-r3 lua-single xdg
 IUSE=debug doc exif ffmpegthumbnailer gpu-accel jpeg lcms lirc lua map nls pdf tiff xmp lua_single_target_lua5-1 lua_single_target_lua5-3
 LICENSE=GPL-2

@@ -3,6 +3,7 @@ DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup t
 DESCRIPTION=gtk ebook reader built with gjs
 EAPI=8
 HOMEPAGE=https://github.com/johnfactotum/foliate/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=meson python-any-r1 plocale xdg gnome2-utils
 IUSE=handy spell
 KEYWORDS=amd64

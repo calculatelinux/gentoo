@@ -3,6 +3,7 @@ DEPEND=>=dev-lang/go-1.10
 DESCRIPTION=Basic QR code library for Go
 EAPI=6
 HOMEPAGE=https://github.com/rsc/qr
+INHERIT=golang-vcs-snapshot golang-build
 KEYWORDS=~amd64
 LICENSE=MIT
 RESTRICT=strip

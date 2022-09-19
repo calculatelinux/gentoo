@@ -4,6 +4,7 @@ DEPEND=dev-libs/libbsd dev-libs/libyaml dev-libs/openssl:= idn? ( net-dns/libidn
 DESCRIPTION=Modern asynchronous DNS API
 EAPI=8
 HOMEPAGE=https://getdnsapi.net/
+IDEPEND=filecaps? ( sys-libs/libcap )
 INHERIT=cmake fcaps systemd tmpfiles
 IUSE=doc examples +getdns-query +getdns-server-mon gnutls +idn libev libevent libuv static-libs stubby test +unbound +filecaps
 KEYWORDS=~amd64 ~x86

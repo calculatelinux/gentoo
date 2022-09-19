@@ -4,6 +4,7 @@ DEPEND=media-libs/libpng:= sys-libs/zlib:=[minizip] debug? ( dev-libs/libedit ) 
 DESCRIPTION=Game Boy Advance Emulator
 EAPI=8
 HOMEPAGE=https://mgba.io/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake lua-single xdg git-r3
 IUSE=debug discord elf ffmpeg gles2 gles3 gui libretro lua opengl +sdl sqlite test lua_single_target_lua5-3 lua_single_target_lua5-4
 LICENSE=MPL-2.0 BSD LGPL-2.1+ public-domain discord? ( MIT )

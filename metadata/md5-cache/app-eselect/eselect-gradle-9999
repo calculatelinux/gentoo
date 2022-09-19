@@ -3,6 +3,7 @@ DEFINED_PHASES=install unpack
 DESCRIPTION=Manage multiple Gradle versions on one system
 EAPI=7
 HOMEPAGE=https://wiki.gentoo.org/wiki/Project:Java
+INHERIT=git-r3
 LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=app-admin/eselect

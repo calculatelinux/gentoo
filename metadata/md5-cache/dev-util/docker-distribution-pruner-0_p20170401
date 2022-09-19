@@ -3,6 +3,7 @@ DEPEND=>=dev-lang/go-1.10
 DESCRIPTION=Clean all old container revisions from registry
 EAPI=6
 HOMEPAGE=https://gitlab.com/gitlab-org/docker-distribution-pruner
+INHERIT=golang-build golang-vcs-snapshot
 KEYWORDS=~amd64 ~arm64
 LICENSE=MIT
 RESTRICT=test

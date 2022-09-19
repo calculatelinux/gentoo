@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst postrm preinst
 DESCRIPTION=An open-world game whose gameplay revolves around breaking and placing blocks
 EAPI=8
 HOMEPAGE=https://www.minecraft.net/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop xdg
 KEYWORDS=-* ~amd64
 LICENSE=Mojang

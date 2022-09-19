@@ -4,6 +4,7 @@ DEPEND=dev-lang/perl dev-libs/glib:2 >=dev-perl/Alien-SDL-1.413 dev-perl/Compres
 DESCRIPTION=A Puzzle Bubble clone written in perl (now with network support)
 EAPI=8
 HOMEPAGE=http://www.frozen-bubble.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop perl-module toolchain-funcs xdg
 IUSE=test
 KEYWORDS=~amd64 ~x86

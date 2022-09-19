@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst postrm prepare
 DESCRIPTION=Generation of CAPTCHAs
 EAPI=6
 HOMEPAGE=https://pear.php.net/package/Text_CAPTCHA
+INHERIT=php-pear-r2
 IUSE=minimal
 KEYWORDS=amd64 x86
 LICENSE=BSD

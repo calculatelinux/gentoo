@@ -2,6 +2,7 @@ DEFINED_PHASES=install nofetch postinst postrm preinst pretend setup
 DESCRIPTION=Platform-adventure game with cinematic style and customizable psychic powers
 EAPI=8
 HOMEPAGE=https://www.humblebundle.com/store/psychonauts-2
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=check-reqs desktop xdg
 KEYWORDS=-* ~amd64
 LICENSE=all-rights-reserved

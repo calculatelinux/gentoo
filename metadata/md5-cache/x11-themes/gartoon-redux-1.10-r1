@@ -4,6 +4,7 @@ DEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=A massively improved variant of the well-known Gartoon theme
 EAPI=7
 HOMEPAGE=https://gnome-look.org/content/show.php/?content=74841
+INHERIT=xdg
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RESTRICT=binchecks strip

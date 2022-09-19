@@ -4,6 +4,7 @@ DEPEND=|| ( >=dev-lang/python-3.10.4:3.10 >=dev-lang/python-3.9.12:3.9 >=dev-lan
 DESCRIPTION=Open-source, GPL-licensed, multiplatform, multithreaded video transcoder
 EAPI=8
 HOMEPAGE=https://handbrake.fr/ https://github.com/HandBrake/HandBrake
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=autotools python-any-r1 toolchain-funcs xdg
 IUSE=+fdk gstreamer gtk libav-aac numa nvenc x265
 KEYWORDS=amd64 ~x86

@@ -4,6 +4,7 @@ DEPEND=<dev-libs/libfmt-9.0.0:= media-libs/glew:0= media-libs/libepoxy media-lib
 DESCRIPTION=OpenGL 3D space simulator
 EAPI=8
 HOMEPAGE=https://celestia.space
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop flag-o-matic lua-single xdg cmake
 IUSE=ffmpeg glut lua nls +qt5 lua_single_target_luajit lua_single_target_lua5-1 lua_single_target_lua5-3
 KEYWORDS=~amd64 ~x86

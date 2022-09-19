@@ -4,6 +4,7 @@ DEPEND=dev-java/java-config app-eselect/eselect-java
 DESCRIPTION=Prebuilt Java JRE binaries provided by Eclipse Temurin
 EAPI=8
 HOMEPAGE=https://adoptopenjdk.net
+IDEPEND=app-eselect/eselect-java
 INHERIT=java-vm-2
 IUSE=alsa cups headless-awt selinux
 KEYWORDS=~amd64

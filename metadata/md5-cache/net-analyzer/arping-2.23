@@ -4,6 +4,7 @@ DEPEND=net-libs/libpcap net-libs/libnet:1.1 sys-libs/libcap seccomp? ( sys-libs/
 DESCRIPTION=A utility to see if a specific IP is taken and what MAC owns it
 EAPI=8
 HOMEPAGE=http://www.habets.pp.se/synscan/programs.php?prog=arping
+IDEPEND=filecaps? ( sys-libs/libcap )
 INHERIT=autotools fcaps
 IUSE=+seccomp test +filecaps
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux

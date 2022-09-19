@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst postrm preinst prepare unpack
 DESCRIPTION=Allows you to send and receive messages of Signal Messenger on your computer
 EAPI=8
 HOMEPAGE=https://signal.org/ https://github.com/signalapp/Signal-Desktop
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=pax-utils unpacker xdg
 IUSE=+sound
 KEYWORDS=-* amd64

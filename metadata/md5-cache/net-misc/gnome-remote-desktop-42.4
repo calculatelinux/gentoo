@@ -4,6 +4,7 @@ DEPEND=x11-libs/cairo >=dev-libs/glib-2.68:2 >=media-video/pipewire-0.3.0:= app-
 DESCRIPTION=Remote desktop daemon for GNOME using pipewire
 EAPI=8
 HOMEPAGE=https://gitlab.gnome.org/GNOME/gnome-remote-desktop
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome.org gnome2-utils meson python-any-r1 systemd xdg
 IUSE=+rdp systemd +vnc
 KEYWORDS=~amd64

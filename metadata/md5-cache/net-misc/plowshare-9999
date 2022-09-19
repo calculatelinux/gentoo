@@ -3,6 +3,7 @@ DEFINED_PHASES=compile install postinst prepare test unpack
 DESCRIPTION=Command-line downloader and uploader for file-sharing websites
 EAPI=8
 HOMEPAGE=https://github.com/mcrapet/plowshare
+INHERIT=git-r3
 IUSE=javascript view-captcha
 LICENSE=GPL-3
 PROPERTIES=live

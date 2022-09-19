@@ -4,6 +4,7 @@ DEPEND=dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/
 DESCRIPTION=Featureful and configurable Qt client for the music player daemon (MPD)
 EAPI=8
 HOMEPAGE=https://github.com/CDrummond/cantata
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake plocale xdg
 IUSE=cdda cddb cdio http-server mtp musicbrainz replaygain streaming taglib udisks zeroconf
 KEYWORDS=amd64 ~ppc64 x86

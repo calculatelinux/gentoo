@@ -4,6 +4,7 @@ DEPEND=dev-cpp/muParser:= dev-libs/quazip:=[qt5(+)] dev-qt/qtcore:5 dev-qt/qtcon
 DESCRIPTION=Free EDA software to develop printed circuit boards
 EAPI=8
 HOMEPAGE=https://librepcb.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake virtualx xdg
 IUSE=test
 KEYWORDS=~amd64

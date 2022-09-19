@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/efl-1.26.1
 DESCRIPTION=System and process monitor written with EFL
 EAPI=8
 HOMEPAGE=https://www.enlightenment.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=meson xdg
 KEYWORDS=amd64 ~riscv x86
 LICENSE=GPL-2 ISC

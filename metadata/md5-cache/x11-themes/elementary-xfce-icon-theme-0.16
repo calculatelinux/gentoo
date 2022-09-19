@@ -3,6 +3,7 @@ DEFINED_PHASES=compile configure install postinst postrm preinst prepare
 DESCRIPTION=Elementary icons forked from upstream, extended and maintained for Xfce
 EAPI=8
 HOMEPAGE=https://github.com/shimmerproject/elementary-xfce
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=xdg toolchain-funcs
 KEYWORDS=~amd64 ~riscv ~x86
 LICENSE=public-domain GPL-1 GPL-2 GPL-3

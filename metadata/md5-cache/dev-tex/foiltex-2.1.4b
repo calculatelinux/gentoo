@@ -3,6 +3,7 @@ DEFINED_PHASES=compile install postinst postrm
 DESCRIPTION=LaTeX package used to create foils and slides
 EAPI=7
 HOMEPAGE=ftp://ftp.dante.de/tex-archive/help/Catalogue/entries/foiltex.html
+INHERIT=latex-package
 KEYWORDS=amd64 ppc x86
 LICENSE=FoilTeX
 RDEPEND=virtual/latex-base

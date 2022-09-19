@@ -3,6 +3,7 @@ DEPEND=>=dev-lang/go-1.10
 DESCRIPTION=A Go function to provide sanitized anchor names
 EAPI=6
 HOMEPAGE=https://github.com/shurcooL/sanitized_anchor_name
+INHERIT=golang-vcs-snapshot golang-build
 KEYWORDS=amd64 ~arm ~arm64
 LICENSE=BSD
 RESTRICT=strip

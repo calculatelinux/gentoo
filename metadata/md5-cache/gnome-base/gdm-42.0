@@ -4,6 +4,7 @@ DEPEND=virtual/udev >=dev-libs/libgudev-232:= >=dev-libs/glib-2.56:2 >=x11-libs/
 DESCRIPTION=GNOME Display Manager for managing graphical display servers and user logins
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/Projects/GDM
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop gnome2 meson pam readme.gentoo-r1 systemd udev
 IUSE=accessibility audit bluetooth-sound branding elogind fprint plymouth selinux systemd tcpd test wayland
 KEYWORDS=amd64 ~arm arm64 ~ppc64 ~riscv x86

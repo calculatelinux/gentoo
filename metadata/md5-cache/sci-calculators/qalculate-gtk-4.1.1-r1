@@ -4,6 +4,8 @@ DEPEND=dev-libs/glib:2 >=sci-libs/libqalculate-4.1.1:= x11-libs/cairo x11-libs/g
 DESCRIPTION=Modern multi-purpose calculator
 EAPI=8
 HOMEPAGE=https://qalculate.github.io/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=xdg
 KEYWORDS=~alpha ~amd64 ~arm64 ~hppa ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2
 RDEPEND=dev-libs/glib:2 >=sci-libs/libqalculate-4.1.1:= x11-libs/cairo x11-libs/gdk-pixbuf x11-libs/gtk+:3 x11-libs/pango

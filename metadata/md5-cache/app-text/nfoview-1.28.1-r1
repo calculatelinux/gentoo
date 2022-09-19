@@ -4,6 +4,7 @@ DEPEND=dev-python/pygobject:3[python_targets_python3_8(-)?,python_targets_python
 DESCRIPTION=Simple viewer for NFO files, which are ASCII art in the CP437 codepage
 EAPI=8
 HOMEPAGE=https://otsaloma.io/nfoview/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=distutils-r1 virtualx xdg
 IUSE=test python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 test
 KEYWORDS=~amd64 ~x86

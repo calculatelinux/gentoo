@@ -4,6 +4,7 @@ DEPEND=dev-db/sqlite:3 dev-libs/crypto++:= dev-libs/glib:2 dev-libs/protobuf:= d
 DESCRIPTION=Modern music player and library organizer based on Amarok 1.4 and Qt
 EAPI=8
 HOMEPAGE=https://www.clementine-player.org https://github.com/clementine-player/Clementine
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake flag-o-matic plocale virtualx xdg
 IUSE=alsa box cdda +dbus debug dropbox googledrive ipod lastfm mms moodbar mtp projectm pulseaudio seafile skydrive test +udisks wiimote test
 KEYWORDS=~amd64 ~arm64 ~ppc64 ~x86

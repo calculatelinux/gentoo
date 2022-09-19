@@ -3,6 +3,7 @@ DEFINED_PHASES=compile install test unpack
 DESCRIPTION=Change the console foreground and background colors
 EAPI=7
 HOMEPAGE=https://github.com/daviddengcn/go-colortext
+INHERIT=golang-build golang-vcs-snapshot
 KEYWORDS=~amd64
 LICENSE=BSD
 RESTRICT=strip

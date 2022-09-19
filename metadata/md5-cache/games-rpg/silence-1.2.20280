@@ -3,6 +3,7 @@ DEFINED_PHASES=install nofetch postinst postrm preinst prepare
 DESCRIPTION=3D point and click adventure, sequel to The Whispered World
 EAPI=8
 HOMEPAGE=https://www.daedalic.com/silence
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop wrapper xdg
 IUSE=l10n_de +l10n_en l10n_pl l10n_zh
 KEYWORDS=-* ~amd64 ~x86

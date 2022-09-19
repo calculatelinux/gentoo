@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/kproperty-3.2.0:5= >=dev-qt/qtgui-5.15.2:5 >=dev-qt/qtprintsup
 DESCRIPTION=Framework for creation and generation of reports in multiple formats
 EAPI=8
 HOMEPAGE=https://community.kde.org/KReport
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm kde.org python-any-r1
 IUSE=marble +scripting test debug doc test
 KEYWORDS=amd64 x86

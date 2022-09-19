@@ -3,6 +3,7 @@ DEFINED_PHASES=compile install postinst postrm preinst setup unpack
 DESCRIPTION=GTK+ based media player aiming to be similar to Amarok
 EAPI=8
 HOMEPAGE=https://www.exaile.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=python-single-r1 xdg git-r3
 IUSE=libnotify nls scrobbler python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 LICENSE=GPL-2 GPL-3

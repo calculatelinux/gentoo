@@ -4,6 +4,7 @@ DEPEND=net-libs/libpcap sys-libs/ncurses:=
 DESCRIPTION=A small 'net top' tool, grouping bandwidth by process
 EAPI=8
 HOMEPAGE=https://github.com/raboof/nethogs
+IDEPEND=filecaps? ( sys-libs/libcap )
 INHERIT=fcaps toolchain-funcs
 IUSE=+filecaps
 KEYWORDS=~amd64 ~arm ~ia64 ~x86

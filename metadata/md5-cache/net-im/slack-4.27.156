@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst postrm preinst prepare unpack
 DESCRIPTION=Team collaboration tool
 EAPI=8
 HOMEPAGE=https://slack.com
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop multilib-build optfeature pax-utils unpacker xdg
 IUSE=appindicator +seccomp suid wayland abi_x86_64
 KEYWORDS=-* ~amd64

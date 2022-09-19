@@ -4,6 +4,7 @@ DEPEND=acct-group/rabbitmq_exporter acct-user/rabbitmq_exporter
 DESCRIPTION=Rabbitmq exporter for Prometheus
 EAPI=7
 HOMEPAGE=https://github.com/kbudde/rabbitmq_exporter
+INHERIT=golang-build golang-vcs-snapshot
 KEYWORDS=~amd64
 LICENSE=MIT Apache-2.0 BSD
 RDEPEND=acct-group/rabbitmq_exporter acct-user/rabbitmq_exporter

@@ -4,6 +4,7 @@ DEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=Easy way to install DLLs needed to work around problems in Wine
 EAPI=7
 HOMEPAGE=https://github.com/Winetricks/winetricks https://wiki.winehq.org/Winetricks
+INHERIT=xdg git-r3
 IUSE=gtk kde rar test
 LICENSE=LGPL-2.1+
 PROPERTIES=live

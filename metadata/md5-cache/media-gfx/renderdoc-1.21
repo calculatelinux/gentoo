@@ -4,6 +4,7 @@ DEPEND=app-arch/lz4:= app-arch/zstd:= dev-libs/miniz:= dev-util/glslang x11-libs
 DESCRIPTION=A stand-alone graphics debugging tool
 EAPI=8
 HOMEPAGE=https://renderdoc.org https://github.com/baldurk/renderdoc
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=autotools cmake flag-o-matic optfeature python-single-r1 docs qmake-utils verify-sig xdg
 IUSE=pyside2 qt5 python_single_target_python3_9 python_single_target_python3_10 doc verify-sig
 KEYWORDS=amd64

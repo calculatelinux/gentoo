@@ -3,6 +3,7 @@ DEPEND=net-dns/avahi[dbus] =www-servers/apache-2*
 DESCRIPTION=mod_dnssd is an Apache module which adds Zeroconf support via DNS-SD using Avahi
 EAPI=7
 HOMEPAGE=https://0pointer.de/lennart/projects/mod_dnssd/
+INHERIT=apache-module depend.apache
 KEYWORDS=amd64 ~arm arm64 ~riscv x86
 LICENSE=BSD
 RDEPEND=net-dns/avahi[dbus] =www-servers/apache-2*

@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/glib-2.62:2[dbus] >=dev-cpp/glibmm-2.62.0:2 >=dev-cpp/gtkmm-3.
 DESCRIPTION=Desktop note-taking application
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/Apps/Gnote
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome2 meson readme.gentoo-r1
 IUSE=test
 KEYWORDS=amd64 ~arm64 ~riscv x86

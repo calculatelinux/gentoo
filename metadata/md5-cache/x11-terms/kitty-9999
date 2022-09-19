@@ -4,6 +4,7 @@ DEPEND=python_single_target_python3_8? ( >=dev-lang/python-3.8.13:3.8 ) python_s
 DESCRIPTION=Fast, feature-rich, GPU-based terminal
 EAPI=8
 HOMEPAGE=https://sw.kovidgoyal.net/kitty/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=edo optfeature multiprocessing python-single-r1 toolchain-funcs xdg git-r3
 IUSE=+X test transfer wayland python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 LICENSE=GPL-3

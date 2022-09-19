@@ -4,6 +4,7 @@ DEPEND=dev-libs/glib:2
 DESCRIPTION=KDE Connect implementation for Gnome Shell
 EAPI=8
 HOMEPAGE=https://github.com/GSConnect/gnome-shell-extension-gsconnect
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome2-utils meson readme.gentoo-r1 xdg
 IUSE=nautilus
 KEYWORDS=amd64 x86

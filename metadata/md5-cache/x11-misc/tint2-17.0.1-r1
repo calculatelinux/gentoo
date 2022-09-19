@@ -4,6 +4,7 @@ DEPEND=dev-libs/glib:2 svg? ( gnome-base/librsvg:2 ) >=media-libs/imlib2-1.4.2[X
 DESCRIPTION=Lightweight panel/taskbar for Linux
 EAPI=8
 HOMEPAGE=https://gitlab.com/o9000/tint2
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake xdg
 IUSE=battery startup-notification svg tint2conf
 KEYWORDS=~amd64 ~arm64 ~ppc ~x86

@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/glib-2.66.0:2 x11-libs/pango[introspection] >=dev-libs/gjs-1.6
 DESCRIPTION=A map application for GNOME
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/Apps/Maps
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome.org gnome2-utils meson python-any-r1 xdg
 KEYWORDS=amd64 ~arm ~arm64 ~ppc64 x86
 LICENSE=GPL-2+ LGPL-2+ MIT CC-BY-3.0 CC-BY-SA-3.0

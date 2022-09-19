@@ -4,6 +4,7 @@ DEPEND=x11-libs/libX11 >=dev-libs/glib-2.54.0:2 >=x11-libs/gtk+-3.16.0:3 exif? (
 DESCRIPTION=Image viewer and browser for Gnome
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/Apps/Gthumb
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome.org gnome2-utils meson python-any-r1 xdg
 IUSE=cdr colord exif gnome-keyring gstreamer heif http jpegxl lcms raw slideshow svg tiff webp
 KEYWORDS=amd64 ~arm ~arm64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~x86-solaris

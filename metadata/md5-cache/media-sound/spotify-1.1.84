@@ -3,6 +3,7 @@ DEFINED_PHASES=install postinst postrm preinst prepare unpack
 DESCRIPTION=Spotify is a social music platform
 EAPI=8
 HOMEPAGE=https://www.spotify.com/download/linux/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop optfeature pax-utils unpacker xdg
 IUSE=libnotify local-playback pax-kernel pulseaudio
 KEYWORDS=amd64

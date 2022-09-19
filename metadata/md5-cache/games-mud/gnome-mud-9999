@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/glib-2.48:2 >=x11-libs/gtk+-3.22:3 >=x11-libs/vte-0.37:2.91 de
 DESCRIPTION=GNOME MUD client
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/Apps/GnomeMud
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome2-utils git-r3 meson xdg
 IUSE=debug gstreamer
 LICENSE=GPL-2+

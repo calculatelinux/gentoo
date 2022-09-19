@@ -3,6 +3,7 @@ DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup t
 DESCRIPTION=User-mode driver and GTK-based GUI for Steam Controllers and others
 EAPI=8
 HOMEPAGE=https://github.com/Ryochan7/sc-controller/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=distutils-r1 linux-info xdg
 IUSE=+udev test python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=~amd64 ~x86

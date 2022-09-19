@@ -4,6 +4,7 @@ DEPEND=net-libs/liblockfile x11-libs/gtk+:2 crypt? ( app-crypt/gpgme:= ) ldap? (
 DESCRIPTION=A lightweight email client and newsreader
 EAPI=8
 HOMEPAGE=http://sylpheed.sraoss.jp/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop xdg
 IUSE=crypt ipv6 ldap nls oniguruma spell ssl xface
 KEYWORDS=~alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 sparc x86

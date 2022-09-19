@@ -3,6 +3,7 @@ DEFINED_PHASES=install nofetch postinst postrm preinst
 DESCRIPTION=Fantasy console for making and playing tiny games and other computer programs
 EAPI=8
 HOMEPAGE=https://www.lexaloffle.com/pico-8.php
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop xdg
 KEYWORDS=-* ~amd64 ~arm ~arm64 ~x86
 LICENSE=PICO-8 MIT BSD-2

@@ -3,6 +3,7 @@ DEPEND=dev-go/qr:= >=dev-lang/go-1.10
 DESCRIPTION=Two-factor authentication library for Go
 EAPI=6
 HOMEPAGE=https://github.com/gokyle/twofactor
+INHERIT=golang-vcs-snapshot golang-build
 KEYWORDS=~amd64
 LICENSE=MIT
 RESTRICT=strip

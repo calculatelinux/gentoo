@@ -3,6 +3,7 @@ DEPEND=media-libs/libsdl[sound,video] media-libs/sdl-image media-libs/sdl-mixer[
 DESCRIPTION=Highly addictive and remotely related to tetris
 EAPI=7
 HOMEPAGE=https://www.karimmi.de/cuyo/
+INHERIT=xdg
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2+
 RDEPEND=media-libs/libsdl[sound,video] media-libs/sdl-image media-libs/sdl-mixer[mod] sys-libs/zlib:=

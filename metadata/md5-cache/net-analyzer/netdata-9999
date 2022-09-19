@@ -4,6 +4,7 @@ DEPEND=acct-group/netdata acct-user/netdata app-misc/jq >=app-shells/bash-4:0 ||
 DESCRIPTION=Linux real time system monitoring, done right!
 EAPI=8
 HOMEPAGE=https://github.com/netdata/netdata https://my-netdata.io/
+IDEPEND=filecaps? ( sys-libs/libcap )
 INHERIT=autotools fcaps flag-o-matic linux-info python-single-r1 systemd toolchain-funcs git-r3
 IUSE=caps cloud +compression cpu_flags_x86_sse2 cups +dbengine ipmi +jsonc kinesis +lto mongodb mysql nfacct nodejs postgres prometheus +python tor xen +filecaps python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 LICENSE=GPL-3+ MIT BSD

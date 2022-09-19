@@ -3,6 +3,7 @@ DEFINED_PHASES=install unpack
 DESCRIPTION=TC which turns Quake into a Rally racing game
 EAPI=7
 HOMEPAGE=http://wiki.quakeworld.nu/Quake_Rally
+INHERIT=edos2unix
 KEYWORDS=~amd64 ~x86
 LICENSE=all-rights-reserved
 RESTRICT=mirror bindist

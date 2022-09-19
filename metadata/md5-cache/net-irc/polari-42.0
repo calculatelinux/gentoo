@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/glib-2.43.4:2 net-libs/telepathy-glib[introspection] >=dev-lib
 DESCRIPTION=An IRC client for GNOME
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/Apps/Polari https://gitlab.gnome.org/GNOME/polari
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome.org gnome2-utils meson xdg
 IUSE=test
 KEYWORDS=amd64 ~arm x86

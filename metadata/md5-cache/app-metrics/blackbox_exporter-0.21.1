@@ -4,6 +4,7 @@ DEPEND=acct-group/blackbox_exporter acct-user/blackbox_exporter
 DESCRIPTION=Prometheus exporter for blackbox probing via HTTP, HTTPS, DNS, TCP and ICMP
 EAPI=8
 HOMEPAGE=https://github.com/prometheus/blackbox_exporter
+IDEPEND=filecaps? ( sys-libs/libcap )
 INHERIT=fcaps go-module systemd
 IUSE=+filecaps
 KEYWORDS=~amd64

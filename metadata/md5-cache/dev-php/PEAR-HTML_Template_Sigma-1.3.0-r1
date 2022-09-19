@@ -3,6 +3,7 @@ DEPEND=test? ( dev-lang/php:*[ctype] dev-php/phpunit )
 DESCRIPTION=An implementation of Integrated Templates API with template 'compilation' added
 EAPI=6
 HOMEPAGE=https://pear.php.net/package/HTML_Template_Sigma
+INHERIT=php-pear-r2
 IUSE=test
 KEYWORDS=~alpha amd64 ~hppa ~ia64 ppc ppc64 sparc x86
 LICENSE=PHP-3.01

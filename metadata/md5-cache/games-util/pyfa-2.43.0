@@ -4,6 +4,7 @@ DEPEND=python_single_target_python3_8? ( >=dev-python/cryptography-2.3[python_ta
 DESCRIPTION=Python Fitting Assistant - a ship fitting application for EVE Online
 EAPI=8
 HOMEPAGE=https://github.com/pyfa-org/Pyfa
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop edos2unix python-single-r1 xdg
 IUSE=python_single_target_python3_8 python_single_target_python3_9
 KEYWORDS=~amd64 ~x86

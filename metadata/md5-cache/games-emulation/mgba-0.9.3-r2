@@ -4,6 +4,7 @@ DEPEND=media-libs/libpng:= sys-libs/zlib:=[minizip] debug? ( dev-libs/libedit ) 
 DESCRIPTION=Game Boy Advance Emulator
 EAPI=8
 HOMEPAGE=https://mgba.io/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake xdg
 IUSE=debug discord elf ffmpeg gles2 gles3 gui libretro opengl +sdl sqlite test
 KEYWORDS=amd64 ~arm64 ~ppc64 x86

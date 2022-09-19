@@ -4,6 +4,7 @@ DEPEND=app-arch/xz-utils dev-libs/jansson:= dev-libs/libxml2 media-libs/a52dec >
 DESCRIPTION=Open-source, GPL-licensed, multiplatform, multithreaded video transcoder
 EAPI=8
 HOMEPAGE=https://handbrake.fr/ https://github.com/HandBrake/HandBrake
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=autotools python-any-r1 toolchain-funcs xdg git-r3
 IUSE=+fdk gstreamer gtk libav-aac numa nvenc x265
 LICENSE=GPL-2

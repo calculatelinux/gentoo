@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/glib-2.32:2 >=dev-libs/gobject-introspection-1.56:= >=gui-libs
 DESCRIPTION=A weather application for GNOME
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/Design/Apps/Weather
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome.org gnome2-utils meson xdg
 KEYWORDS=amd64 arm64 ~ppc64 ~riscv x86
 LICENSE=GPL-2+ LGPL-2+ MIT CC-BY-3.0 CC-BY-SA-3.0

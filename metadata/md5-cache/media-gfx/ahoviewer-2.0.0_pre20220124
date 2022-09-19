@@ -4,6 +4,7 @@ DEPEND=dev-cpp/atkmm:0 dev-cpp/glibmm:2 dev-cpp/gtkmm:3.0 dev-cpp/pangomm:1.4 de
 DESCRIPTION=A GTK image viewer, manga reader, and booru browser
 EAPI=8
 HOMEPAGE=https://github.com/ahodesuka/ahoviewer
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=meson xdg
 IUSE=gnome-keyring gnutls +gstreamer plugins +rar +ssl +zip
 KEYWORDS=amd64 x86

@@ -4,6 +4,7 @@ DEPEND=dev-libs/libgudev:= media-libs/libid3tag:= media-libs/libmtp:= media-libs
 DESCRIPTION=A GTK+ music manager for the Portable Digital Entertainment (PDE) protocol
 EAPI=7
 HOMEPAGE=http://gnomad2.sourceforge.net/
+INHERIT=xdg
 IUSE=nls
 KEYWORDS=amd64 ~ppc ~ppc64 x86
 LICENSE=GPL-2

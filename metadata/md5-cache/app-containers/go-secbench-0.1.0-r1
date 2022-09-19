@@ -3,6 +3,7 @@ DEPEND=dev-lang/go >=dev-lang/go-1.10
 DESCRIPTION=run and evaluate the docker security benchmark
 EAPI=6
 HOMEPAGE=https://github.com/qnib/go-secbench
+INHERIT=golang-build golang-vcs-snapshot
 KEYWORDS=~amd64
 LICENSE=Apache-2.0
 RDEPEND=app-containers/docker

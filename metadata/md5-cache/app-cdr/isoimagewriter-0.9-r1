@@ -4,6 +4,7 @@ DEPEND=app-crypt/gpgme:=[cxx(+),qt5] >=dev-qt/qtgui-5.15.2:5 >=dev-qt/qtnetwork-
 DESCRIPTION=Write hybrid ISO files onto a USB disk
 EAPI=8
 HOMEPAGE=https://community.kde.org/ISOImageWriter
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm kde.org
 IUSE=debug
 KEYWORDS=amd64

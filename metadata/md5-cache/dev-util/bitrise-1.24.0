@@ -3,6 +3,7 @@ DEPEND=>=dev-lang/go-1.10
 DESCRIPTION=Run your Bitrise.io automations on any Mac or Linux machine
 EAPI=6
 HOMEPAGE=https://www.bitrise.io/cli
+INHERIT=golang-build
 IUSE=doc
 KEYWORDS=~amd64
 LICENSE=MIT

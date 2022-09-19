@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst postrm preinst
 DESCRIPTION=A community-driven, freely-licensed binary distribution of Microsoft's VSCode
 EAPI=8
 HOMEPAGE=https://vscodium.com/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop pax-utils xdg optfeature
 KEYWORDS=-* ~amd64 ~arm ~arm64
 LICENSE=Apache-2.0 BSD BSD-1 BSD-2 BSD-4 CC-BY-4.0 ISC LGPL-2.1+ MIT MPL-2.0 openssl PYTHON TextMate-bundle Unlicense UoI-NCSA W3C

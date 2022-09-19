@@ -4,6 +4,7 @@ DEPEND=dev-util/intltool
 DESCRIPTION=audio library tagger, manager, and player for GTK+
 EAPI=8
 HOMEPAGE=https://quodlibet.readthedocs.io/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=distutils-r1 xdg
 IUSE=+dbus gstreamer +udev python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS=amd64 ppc ppc64 x86

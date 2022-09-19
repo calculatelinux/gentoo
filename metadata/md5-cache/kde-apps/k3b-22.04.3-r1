@@ -4,6 +4,7 @@ DEPEND=>=dev-qt/qtdbus-5.15.4:5 >=dev-qt/qtgui-5.15.4:5 >=dev-qt/qtnetwork-5.15.
 DESCRIPTION=Full-featured burning and ripping application based on KDE Frameworks
 EAPI=8
 HOMEPAGE=https://apps.kde.org/k3b/ https://userbase.kde.org/K3b
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm gear.kde.org
 IUSE=dvd encode flac mad mp3 musepack sndfile sox taglib vcd vorbis debug +handbook test
 KEYWORDS=amd64 arm64 ~ppc64 ~riscv x86

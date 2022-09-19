@@ -4,6 +4,7 @@ DEPEND=dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5= dev-qt/qtnetwork:5[ssl] d
 DESCRIPTION=Great Qt GUI front-end for mplayer/mpv
 EAPI=8
 HOMEPAGE=https://www.smplayer.eu/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=plocale qmake-utils toolchain-funcs xdg
 IUSE=autoshutdown bidi debug mpris
 KEYWORDS=amd64 ~arm ~hppa ~ppc ~ppc64 x86 ~amd64-linux

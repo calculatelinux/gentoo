@@ -4,6 +4,7 @@ DEPEND=x11-libs/gtk+:2 >=gnome-base/libglade-2.6 mp3? ( >=media-libs/id3lib-3.8.
 DESCRIPTION=Audio Tag Tool Ogg/Mp3 Tagger
 EAPI=8
 HOMEPAGE=https://sourceforge.net/projects/tagtool/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=autotools xdg
 IUSE=mp3 +vorbis
 KEYWORDS=amd64 ppc ~sparc x86

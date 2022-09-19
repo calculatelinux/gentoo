@@ -3,6 +3,7 @@ DEFINED_PHASES=compile install unpack
 DESCRIPTION=Libretro info files required for libretro cores
 EAPI=7
 HOMEPAGE=https://github.com/libretro/libretro-super
+INHERIT=git-r3
 LICENSE=GPL-3
 PROPERTIES=live
 SLOT=0

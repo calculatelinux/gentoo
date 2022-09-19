@@ -3,6 +3,7 @@ DEPEND=dev-libs/gmp:0= dev-libs/libffi:= dev-libs/libatomic_ops >=dev-libs/boehm
 DESCRIPTION=ECL is an embeddable Common Lisp implementation
 EAPI=7
 HOMEPAGE=https://common-lisp.net/project/ecl/
+INHERIT=readme.gentoo-r1
 IUSE=cxx debug emacs gengc precisegc cpu_flags_x86_sse +threads +unicode X
 KEYWORDS=amd64 ~ppc ppc64 ~sparc x86 ~amd64-linux
 LICENSE=BSD-2 LGPL-2.1+

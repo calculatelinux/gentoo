@@ -3,6 +3,7 @@ DEPEND=>=dev-lang/go-1.10
 DESCRIPTION=Serve embedded files from jteeuwen/go-bindata with net/http
 EAPI=6
 HOMEPAGE=https://github.com/elazarl/go-bindata-assetfs
+INHERIT=golang-build golang-vcs-snapshot
 KEYWORDS=~amd64
 LICENSE=BSD
 RDEPEND=dev-go/go-bindata

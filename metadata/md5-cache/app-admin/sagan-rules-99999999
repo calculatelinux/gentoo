@@ -3,6 +3,7 @@ DEFINED_PHASES=install unpack
 DESCRIPTION=Rules for Sagan log analyzer
 EAPI=7
 HOMEPAGE=https://quadrantsec.com/sagan_log_analysis_engine/
+INHERIT=git-r3
 LICENSE=BSD
 PDEPEND=app-admin/sagan
 PROPERTIES=live

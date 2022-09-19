@@ -4,6 +4,7 @@ DEPEND=sys-apps/help2man
 DESCRIPTION=User land tool for cleaning up old perl installs
 EAPI=7
 HOMEPAGE=https://www.gentoo.org/proj/en/perl/
+INHERIT=prefix git-r3
 LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=app-shells/bash dev-lang/perl || ( ( sys-apps/portage app-portage/portage-utils ) sys-apps/pkgcore )

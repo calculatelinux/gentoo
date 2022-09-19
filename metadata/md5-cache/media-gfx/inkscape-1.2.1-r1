@@ -4,6 +4,7 @@ DEPEND=python_single_target_python3_8? ( >=dev-lang/python-3.8.13:3.8[xml(+)] ) 
 DESCRIPTION=SVG based generic vector-drawing program
 EAPI=8
 HOMEPAGE=https://inkscape.org/ https://gitlab.com/inkscape/inkscape/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake flag-o-matic xdg toolchain-funcs python-single-r1
 IUSE=cdr dia exif graphicsmagick imagemagick inkjar jemalloc jpeg openmp postscript readline spell svg2 test visio wpg X python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=~alpha ~amd64

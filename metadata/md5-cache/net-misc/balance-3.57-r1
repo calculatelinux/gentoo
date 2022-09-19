@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst prepare
 DESCRIPTION=TCP Load Balancing Port Forwarder
 EAPI=8
 HOMEPAGE=http://www.inlab.de/balance.html
+IDEPEND=filecaps? ( sys-libs/libcap )
 INHERIT=fcaps toolchain-funcs
 IUSE=+filecaps
 KEYWORDS=~amd64 ~ppc ~x86

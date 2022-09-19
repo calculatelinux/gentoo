@@ -3,6 +3,7 @@ DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup t
 DESCRIPTION=Keyboard-driven, vim-like browser based on Python and Qt
 EAPI=8
 HOMEPAGE=https://www.qutebrowser.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=distutils-r1 multiprocessing optfeature xdg git-r3
 IUSE=+adblock +qt6 widevine test python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10 python_single_target_python3_11
 LICENSE=GPL-3+

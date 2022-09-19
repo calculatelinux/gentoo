@@ -4,6 +4,7 @@ DEPEND=dev-libs/expat >=dev-qt/qtconcurrent-5.15.5:5 >=dev-qt/qtdbus-5.15.5:5 >=
 DESCRIPTION=Digital photo management application
 EAPI=8
 HOMEPAGE=https://www.digikam.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm kde.org toolchain-funcs
 IUSE=addressbook calendar gphoto2 heif +imagemagick +lensfun marble mediaplayer mysql opengl openmp +panorama scanner semantic-desktop X debug
 KEYWORDS=~amd64 ~x86

@@ -3,6 +3,7 @@ DEPEND=x11-libs/libfakekey cairo? ( x11-libs/cairo[X] ) !cairo? ( x11-libs/libXf
 DESCRIPTION=Matchbox-keyboard is an on screen 'virtual' or 'software' keyboard
 EAPI=6
 HOMEPAGE=http://matchbox-project.org/
+INHERIT=versionator
 IUSE=debug cairo
 KEYWORDS=amd64 ~arm ~hppa ppc x86
 LICENSE=GPL-2

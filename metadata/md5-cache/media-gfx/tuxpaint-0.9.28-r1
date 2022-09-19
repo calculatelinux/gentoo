@@ -4,6 +4,7 @@ DEPEND=app-text/libpaper:= dev-libs/fribidi gnome-base/librsvg:2 >=media-libs/li
 DESCRIPTION=Drawing program designed for young children
 EAPI=8
 HOMEPAGE=https://www.tuxpaint.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop optfeature toolchain-funcs xdg
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2

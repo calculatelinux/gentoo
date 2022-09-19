@@ -3,6 +3,7 @@ DEPEND=virtual/krb5 =www-servers/apache-2*
 DESCRIPTION=An Apache authentication module using Kerberos
 EAPI=7
 HOMEPAGE=http://modauthkerb.sourceforge.net/
+INHERIT=apache-module depend.apache tmpfiles
 KEYWORDS=amd64 x86
 LICENSE=BSD openafs-krb5-a HPND
 RDEPEND=virtual/krb5 =www-servers/apache-2* virtual/tmpfiles

@@ -3,6 +3,7 @@ DEPEND=dev-libs/expat media-libs/libsndfile media-libs/libglvnd[X] doc? ( dev-la
 DESCRIPTION=Linux Studio Plugins
 EAPI=7
 HOMEPAGE=https://lsp-plug.in
+INHERIT=xdg
 IUSE=doc jack ladspa +lv2 test
 KEYWORDS=amd64 ~arm ~arm64 ~ppc ~ppc64 x86
 LICENSE=LGPL-3

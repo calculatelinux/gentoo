@@ -3,6 +3,7 @@ DEFINED_PHASES=compile install postinst postrm preinst unpack
 DESCRIPTION=Modern and intuitive terminal-based text editor
 EAPI=8
 HOMEPAGE=https://github.com/zyedidia/micro
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=go-module optfeature desktop xdg
 KEYWORDS=~amd64 ~arm64 ~riscv ~x86
 LICENSE=MIT Apache-2.0 BSD MPL-2.0

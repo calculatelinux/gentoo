@@ -4,6 +4,7 @@ DEPEND=>=dev-qt/qtdbus-5.15.2:5 >=dev-qt/qtgui-5.15.2:5 >=dev-qt/qtwidgets-5.15.
 DESCRIPTION=Network-enabled resource usage monitor
 EAPI=8
 HOMEPAGE=https://apps.kde.org/ksysguard/ https://userbase.kde.org/KSysGuard
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm kde.org
 IUSE=lm-sensors test debug +handbook test
 KEYWORDS=amd64 ~arm arm64 ~ppc64 x86

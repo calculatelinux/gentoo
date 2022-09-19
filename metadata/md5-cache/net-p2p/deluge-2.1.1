@@ -3,6 +3,7 @@ DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup t
 DESCRIPTION=BitTorrent client with a client/server model
 EAPI=8
 HOMEPAGE=https://deluge-torrent.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=distutils-r1 systemd xdg
 IUSE=console gui libnotify sound webinterface test python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=~amd64 ~arm ~arm64 ~ppc ~riscv

@@ -4,6 +4,7 @@ DEPEND=dev-qt/qtconcurrent:5 dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 d
 DESCRIPTION=Qt based map editor for the openstreetmap.org project
 EAPI=8
 HOMEPAGE=http://www.merkaartor.be https://github.com/openstreetmap/merkaartor
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=flag-o-matic plocale qmake-utils xdg
 IUSE=debug exif gps libproxy webengine
 KEYWORDS=~amd64 ~x86

@@ -3,6 +3,7 @@ DEFINED_PHASES=install nofetch postinst postrm preinst prepare pretend setup
 DESCRIPTION=Narrative-driven, single-player adventure like mom used to make
 EAPI=8
 HOMEPAGE=https://mattmakesgames.itch.io/celeste
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop check-reqs xdg
 KEYWORDS=-* ~amd64 ~x86
 LICENSE=all-rights-reserved

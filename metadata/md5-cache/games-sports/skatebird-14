@@ -3,6 +3,7 @@ DEFINED_PHASES=install nofetch postinst postrm preinst prepare pretend setup
 DESCRIPTION=Skateboarding game where you play as a bird
 EAPI=8
 HOMEPAGE=https://glassbottommeg.itch.io/skatebird
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=check-reqs desktop wrapper xdg
 KEYWORDS=-* ~amd64
 LICENSE=all-rights-reserved

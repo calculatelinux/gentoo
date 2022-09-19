@@ -3,6 +3,7 @@ DEFINED_PHASES=compile install unpack
 DESCRIPTION=Gentoo Package Manager Specification (draft)
 EAPI=8
 HOMEPAGE=https://wiki.gentoo.org/wiki/Project:Package_Manager_Specification
+INHERIT=git-r3
 IUSE=html twoside
 LICENSE=CC-BY-SA-4.0
 PROPERTIES=live

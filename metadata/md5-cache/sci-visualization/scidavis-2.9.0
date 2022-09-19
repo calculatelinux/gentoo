@@ -4,6 +4,7 @@ DEPEND=dev-cpp/muParser dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt
 DESCRIPTION=Application for Scientific Data Analysis and Visualization
 EAPI=8
 HOMEPAGE=http://scidavis.sourceforge.net/ https://github.com/SciDAVis/scidavis/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=python-single-r1 cmake docs virtualx xdg
 IUSE=doc origin python test python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10 python_single_target_python3_11 doc test
 KEYWORDS=~amd64

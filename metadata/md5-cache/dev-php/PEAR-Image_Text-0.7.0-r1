@@ -3,6 +3,7 @@ DEPEND=test? ( dev-lang/php:*[gd,truetype] dev-php/phpunit )
 DESCRIPTION=Advanced text manipulations in images
 EAPI=6
 HOMEPAGE=https://pear.php.net/package/Image_Text
+INHERIT=php-pear-r2
 IUSE=test
 KEYWORDS=amd64 x86
 LICENSE=PHP-3

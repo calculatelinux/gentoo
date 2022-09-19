@@ -3,6 +3,7 @@ DEPEND=test? ( >=dev-php/phpunit-5 )
 DESCRIPTION=Color conversion and mixing for PHP5
 EAPI=6
 HOMEPAGE=https://pear.php.net/package/Image_Color2
+INHERIT=php-pear-r2
 IUSE=test
 KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2.1

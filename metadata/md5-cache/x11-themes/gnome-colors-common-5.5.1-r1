@@ -3,6 +3,7 @@ DEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=Colorized icons shared between all gnome-colors iconsets
 EAPI=7
 HOMEPAGE=https://code.google.com/p/gnome-colors/
+INHERIT=xdg
 IUSE=+branding
 KEYWORDS=amd64 x86
 LICENSE=GPL-2 branding? ( CC-BY-SA-4.0 )

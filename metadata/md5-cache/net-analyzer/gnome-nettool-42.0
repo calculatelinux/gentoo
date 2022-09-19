@@ -4,6 +4,7 @@ DEPEND=>=x11-libs/gtk+-3.0.0:3 >=dev-libs/glib-2.26:2 gnome-base/libgtop:2=
 DESCRIPTION=Graphical front-ends to various networking command-line
 EAPI=8
 HOMEPAGE=https://gitlab.gnome.org/GNOME/gnome-nettool
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome.org gnome2-utils meson python-any-r1 xdg
 KEYWORDS=~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86
 LICENSE=GPL-2

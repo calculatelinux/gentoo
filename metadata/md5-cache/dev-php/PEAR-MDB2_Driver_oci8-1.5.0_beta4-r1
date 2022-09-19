@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst postrm
 DESCRIPTION=Database Abstraction Layer, oci8 driver
 EAPI=6
 HOMEPAGE=https://pear.php.net/package/MDB2_Driver_oci8
+INHERIT=php-pear-r2
 KEYWORDS=-* amd64 x86
 LICENSE=BSD
 RDEPEND=>=dev-php/PEAR-MDB2-2.5.0_beta3 dev-lang/php:*[oci8-instant-client(-)] >=dev-php/pear-1.8.1

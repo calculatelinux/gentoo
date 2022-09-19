@@ -4,6 +4,7 @@ DEPEND=app-crypt/argon2:= dev-libs/botan:2= dev-qt/qtconcurrent:5 dev-qt/qtcore:
 DESCRIPTION=KeePassXC - KeePass Cross-platform Community Edition
 EAPI=8
 HOMEPAGE=https://keepassxc.org
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake flag-o-matic xdg git-r3
 IUSE=autotype browser doc keeshare +network test yubikey
 LICENSE=LGPL-2.1 GPL-2 GPL-3

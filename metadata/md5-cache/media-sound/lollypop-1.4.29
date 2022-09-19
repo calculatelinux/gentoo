@@ -3,6 +3,7 @@ DEFINED_PHASES=compile configure install postinst postrm preinst setup test
 DESCRIPTION=Modern music player for GNOME
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/Apps/Lollypop
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=python-single-r1 gnome2-utils meson xdg
 IUSE=test python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=amd64 ~arm64

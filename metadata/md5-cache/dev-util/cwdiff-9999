@@ -3,6 +3,7 @@ DEFINED_PHASES=install unpack
 DESCRIPTION=A script that wraps wdiff to support directories and colorize the output
 EAPI=8
 HOMEPAGE=https://github.com/junghans/cwdiff
+INHERIT=git-r3
 IUSE=mercurial
 LICENSE=GPL-2
 PROPERTIES=live

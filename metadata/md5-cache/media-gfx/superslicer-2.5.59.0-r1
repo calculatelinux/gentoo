@@ -4,6 +4,7 @@ DEPEND=dev-cpp/eigen:3 dev-cpp/tbb:= dev-libs/boost:=[nls] dev-libs/cereal dev-l
 DESCRIPTION=A mesh slicer to generate G-code for fused-filament-fabrication (3D printers)
 EAPI=8
 HOMEPAGE=https://github.com/supermerill/SuperSlicer/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake wxwidgets xdg
 IUSE=test
 KEYWORDS=~amd64 ~x86

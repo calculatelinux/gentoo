@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/glib-2.34:2 dev-libs/libxml2:2 >=net-misc/networkmanager-1.7.0
 DESCRIPTION=NetworkManager OpenVPN plugin
 EAPI=8
 HOMEPAGE=https://gitlab.gnome.org/GNOME/NetworkManager-openvpn https://gitlab.gnome.org/GNOME/NetworkManager-openvpn
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome2
 IUSE=gtk test
 KEYWORDS=~amd64 ~arm ~arm64 ~x86

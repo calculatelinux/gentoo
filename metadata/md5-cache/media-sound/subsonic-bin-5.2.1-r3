@@ -2,6 +2,7 @@ DEFINED_PHASES=install
 DESCRIPTION=Subsonic is a complete, personal media streaming solution
 EAPI=7
 HOMEPAGE=http://www.subsonic.org/
+INHERIT=wrapper
 IUSE=ffmpeg lame selinux
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3

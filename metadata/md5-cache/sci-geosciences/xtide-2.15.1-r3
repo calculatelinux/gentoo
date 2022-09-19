@@ -3,6 +3,7 @@ DEPEND=media-libs/libpng:= sci-geosciences/gpsd >=sci-geosciences/libtcd-2.2.5_p
 DESCRIPTION=XTide provides tide and current predictions in a wide variety of formats
 EAPI=8
 HOMEPAGE=https://flaterco.com/xtide/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop xdg
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3

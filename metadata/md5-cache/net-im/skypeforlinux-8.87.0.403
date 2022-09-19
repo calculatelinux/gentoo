@@ -3,6 +3,7 @@ DEFINED_PHASES=install postinst postrm preinst prepare setup unpack
 DESCRIPTION=Instant messaging client, with support for audio and video
 EAPI=8
 HOMEPAGE=https://www.skype.com/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=chromium-2 desktop pax-utils rpm multilib-build xdg
 IUSE=abi_x86_64
 KEYWORDS=-* ~amd64

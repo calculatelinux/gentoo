@@ -4,6 +4,7 @@ DEPEND=virtual/libintl x11-libs/gtk+:2 dev-util/desktop-file-utils x11-misc/shar
 DESCRIPTION=Simple GTK2 text editor
 EAPI=7
 HOMEPAGE=http://tarot.freeshell.org/leafpad/
+INHERIT=xdg
 IUSE=emacs
 KEYWORDS=amd64 ~arm ~ppc ~ppc64 ~riscv x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2

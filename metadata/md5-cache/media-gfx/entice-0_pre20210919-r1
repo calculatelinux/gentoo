@@ -4,6 +4,7 @@ DEPEND=|| ( dev-libs/efl[X] dev-libs/efl[wayland] ) media-libs/libexif
 DESCRIPTION=A simple image viewer based on EFL
 EAPI=8
 HOMEPAGE=https://github.com/vtorri/entice
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=meson optfeature xdg
 KEYWORDS=amd64 x86
 LICENSE=BSD-2

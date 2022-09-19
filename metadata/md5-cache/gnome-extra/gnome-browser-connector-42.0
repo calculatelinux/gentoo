@@ -4,6 +4,7 @@ DEPEND=python_single_target_python3_9? ( >=dev-lang/python-3.9.12:3.9 ) python_s
 DESCRIPTION=OS-native connector counterpart for GNOME Shell browser extension
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/Projects/GnomeShellIntegration
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=meson python-single-r1 xdg
 IUSE=python_single_target_python3_9 python_single_target_python3_10 python_single_target_python3_11
 KEYWORDS=~amd64 ~arm ~arm64 ~ppc64 ~x86

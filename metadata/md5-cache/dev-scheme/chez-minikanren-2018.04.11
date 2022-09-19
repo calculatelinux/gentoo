@@ -3,6 +3,7 @@ DEPEND=dev-scheme/chez:=
 DESCRIPTION=Canonical miniKanren implementation (on Chez Scheme)
 EAPI=8
 HOMEPAGE=https://github.com/miniKanren/miniKanren
+INHERIT=wrapper
 IUSE=source
 KEYWORDS=~amd64
 LICENSE=MIT

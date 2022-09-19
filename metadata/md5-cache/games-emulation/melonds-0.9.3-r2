@@ -4,6 +4,7 @@ DEPEND=app-arch/libarchive dev-libs/teakra dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt
 DESCRIPTION=Nintendo DS emulator, sorta
 EAPI=8
 HOMEPAGE=http://melonds.kuribo64.net https://github.com/Arisotura/melonDS
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake flag-o-matic readme.gentoo-r1 toolchain-funcs xdg
 IUSE=+jit +opengl
 KEYWORDS=~amd64

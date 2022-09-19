@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst postrm prepare
 DESCRIPTION=An extremely powerful Tokenizer driven Template engine
 EAPI=6
 HOMEPAGE=https://pear.php.net/package/HTML_Template_Flexy
+INHERIT=php-pear-r2
 IUSE=minimal
 KEYWORDS=~alpha amd64 ~hppa ~ia64 ppc ppc64 sparc x86
 LICENSE=PHP-2.02

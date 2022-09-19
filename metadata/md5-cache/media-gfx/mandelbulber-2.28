@@ -4,6 +4,7 @@ DEPEND=dev-libs/lzo dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtmultimedia:5 dev-qt/
 DESCRIPTION=Tool to render 3D fractals
 EAPI=8
 HOMEPAGE=https://www.mandelbulber.com
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop qmake-utils toolchain-funcs xdg
 IUSE=joystick opencl openexr sndfile tiff
 KEYWORDS=~amd64 ~x86

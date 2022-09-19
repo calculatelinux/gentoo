@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst
 DESCRIPTION=vim spell files: Portuguese (pt)
 EAPI=6
 HOMEPAGE=https://wiki.gentoo.org/wiki/No_homepage
+INHERIT=vim-spell
 KEYWORDS=amd64 x86
 LICENSE=GPL-2 LGPL-2.1 MPL-1.1
 SLOT=0

@@ -4,6 +4,7 @@ DEPEND=app-cdr/cdrdao app-cdr/cdrtools >=dev-libs/glib-2.4:2 >=gnome-base/libgla
 DESCRIPTION=Graphical frontend for cdrecord, mkisofs, readcd and sox using GTK+2
 EAPI=8
 HOMEPAGE=http://graveman.tuxfamily.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=autotools gnome2
 IUSE=debug dvdr flac mp3 nls vorbis
 KEYWORDS=amd64 ppc ppc64 sparc x86

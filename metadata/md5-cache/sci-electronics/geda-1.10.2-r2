@@ -4,6 +4,7 @@ DEPEND=dev-libs/glib:2 dev-scheme/guile sci-electronics/electronics-menu x11-lib
 DESCRIPTION=GPL Electronic Design Automation (gEDA):gaf core package
 EAPI=8
 HOMEPAGE=http://wiki.geda-project.org/geda:gaf
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=autotools docs xdg
 IUSE=debug examples fam nls doc
 KEYWORDS=~amd64 ~ppc ~x86

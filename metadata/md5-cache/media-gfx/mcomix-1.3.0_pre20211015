@@ -4,6 +4,7 @@ DEPEND=python_targets_python3_8? ( >=dev-lang/python-3.8.13:3.8 ) python_targets
 DESCRIPTION=GTK image viewer for comic book archives
 EAPI=8
 HOMEPAGE=https://github.com/multiSnow/mcomix3
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop python-r1 xdg
 IUSE=python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS=amd64 ~arm64 ~riscv x86

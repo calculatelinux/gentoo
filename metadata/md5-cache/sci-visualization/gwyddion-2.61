@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/glib-2.32 dev-libs/libzip media-libs/libpng:0= >=sci-libs/fftw
 DESCRIPTION=Framework for Scanning Mode Microscopy data analysis
 EAPI=8
 HOMEPAGE=http://gwyddion.net/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=autotools xdg
 IUSE=bzip2 doc fits jansson hdf5 nls openexr openmp perl ruby sourceview unique xml X zlib
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux

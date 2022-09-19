@@ -4,6 +4,7 @@ DEPEND=python_single_target_python3_8? ( >=dev-lang/python-3.8.13:3.8[sqlite] ) 
 DESCRIPTION=A non-linear video editor using the GStreamer multimedia framework
 EAPI=8
 HOMEPAGE=https://www.pitivi.org
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome.org meson python-single-r1 xdg
 IUSE=python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=amd64 x86

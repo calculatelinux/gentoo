@@ -3,6 +3,7 @@ DEPEND=test? ( dev-php/PEAR-PEAR )
 DESCRIPTION=Generates mathematical operations and answers to prove user is human
 EAPI=6
 HOMEPAGE=https://pear.php.net/package/Text_CAPTCHA_Numeral
+INHERIT=php-pear-r2
 IUSE=test
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD

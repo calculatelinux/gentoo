@@ -3,6 +3,7 @@ DEPEND=cdinstall? ( games-fps/quake1-data )
 DESCRIPTION=Quakeworld client with mqwcl functionality and many more features
 EAPI=7
 HOMEPAGE=http://ezquake.sf.net/
+INHERIT=wrapper
 IUSE=cdinstall
 KEYWORDS=-* ~amd64 ~x86
 LICENSE=GPL-2

@@ -3,6 +3,7 @@ DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup t
 DESCRIPTION=A free cross-platform podcast aggregator
 EAPI=8
 HOMEPAGE=https://gpodder.github.io/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=distutils-r1 optfeature xdg
 IUSE=+dbus bluetooth mtp test python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10 python_single_target_python3_11
 KEYWORDS=amd64 x86

@@ -3,6 +3,7 @@ DEFINED_PHASES=compile config configure install postinst postrm preinst prepare 
 DESCRIPTION=Linux kernel built with Gentoo patches
 EAPI=8
 HOMEPAGE=https://www.kernel.org/
+IDEPEND=|| ( sys-kernel/installkernel-gentoo sys-kernel/installkernel-systemd-boot ) initramfs? ( >=sys-kernel/dracut-049-r3 )
 INHERIT=kernel-build toolchain-funcs
 IUSE=debug hardened savedconfig +initramfs test
 KEYWORDS=~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~riscv ~x86

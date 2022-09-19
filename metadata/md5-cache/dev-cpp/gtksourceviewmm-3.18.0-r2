@@ -4,6 +4,7 @@ DEPEND=>=dev-cpp/glibmm-2.46.1:2 >=dev-cpp/gtkmm-3.18.0:3.0 >=x11-libs/gtksource
 DESCRIPTION=C++ bindings for gtksourceview
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/Projects/GtkSourceView
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome2
 IUSE=doc
 KEYWORDS=amd64 ppc x86

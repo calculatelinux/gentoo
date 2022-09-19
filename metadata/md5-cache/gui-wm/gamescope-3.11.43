@@ -4,6 +4,7 @@ DEPEND==dev-libs/libliftoff-0.3* dev-libs/wayland >=dev-libs/wayland-protocols-1
 DESCRIPTION=Efficient micro-compositor for running games
 EAPI=8
 HOMEPAGE=https://github.com/Plagman/gamescope
+IDEPEND=filecaps? ( sys-libs/libcap )
 INHERIT=fcaps meson
 IUSE=pipewire +filecaps
 KEYWORDS=~amd64

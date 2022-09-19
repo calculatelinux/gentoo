@@ -3,6 +3,7 @@ DEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 DESCRIPTION=A scalable icon theme called Nuovo
 EAPI=7
 HOMEPAGE=http://www.silvestre.com.ar/
+INHERIT=xdg
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 SLOT=0

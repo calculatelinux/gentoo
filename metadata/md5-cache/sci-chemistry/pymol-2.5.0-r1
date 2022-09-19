@@ -4,6 +4,7 @@ DEPEND=dev-libs/msgpack[cxx] dev-libs/mmtf-cpp dev-python/pyopengl[python_target
 DESCRIPTION=A Python-extensible molecular graphics system
 EAPI=8
 HOMEPAGE=https://www.pymol.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop flag-o-matic xdg distutils-r1
 IUSE=+netcdf web python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-macos

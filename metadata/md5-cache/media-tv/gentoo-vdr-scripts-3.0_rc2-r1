@@ -4,6 +4,7 @@ DEPEND=acct-group/vdr acct-user/vdr
 DESCRIPTION=Scripts necessary for use of VDR as a set-top-box
 EAPI=8
 HOMEPAGE=https://gitweb.gentoo.org/proj/gentoo-vdr-scripts.git/about/
+INHERIT=tmpfiles user-info
 KEYWORDS=amd64 ~arm ~arm64 ~ppc x86
 LICENSE=GPL-2
 RDEPEND=acct-group/vdr acct-user/vdr app-admin/sudo sys-process/wait_on_pid virtual/tmpfiles

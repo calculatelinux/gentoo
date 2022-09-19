@@ -4,6 +4,7 @@ DEPEND=>=dev-qt/qtdbus-5.12.3:5 >=kde-frameworks/kcoreaddons-5.60.0:5 >=kde-fram
 DESCRIPTION=KIO worker and daemon to stash discontinuous file selections
 EAPI=8
 HOMEPAGE=https://arnavdhamija.com/2017/07/04/kio-stash-shipped/ https://invent.kde.org/utilities/kio-stash
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm kde.org
 IUSE=debug test
 KEYWORDS=~amd64 ~arm64

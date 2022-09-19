@@ -4,6 +4,7 @@ DEPEND=lua_single_target_lua5-3? ( dev-lang/lua:5.3 ) app-text/poppler[cairo] de
 DESCRIPTION=Handwriting notetaking software with PDF annotation support
 EAPI=8
 HOMEPAGE=https://github.com/xournalpp/xournalpp
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake lua-single xdg git-r3
 IUSE=+lua_single_target_lua5-3
 LICENSE=GPL-2

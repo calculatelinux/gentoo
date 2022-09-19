@@ -4,6 +4,7 @@ DEPEND=dev-libs/grantlee:5 >=dev-qt/qtdbus-5.15.2:5 >=dev-qt/qtgui-5.15.2:5 >=de
 DESCRIPTION=Note taking utility by KDE
 EAPI=8
 HOMEPAGE=https://userbase.kde.org/KJots https://community.kde.org/PIM/KJots
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm kde.org
 IUSE=speech debug
 KEYWORDS=~amd64 ~x86

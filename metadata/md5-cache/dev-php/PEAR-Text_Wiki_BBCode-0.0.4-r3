@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst postrm
 DESCRIPTION=BBCode parser for Text_Wiki
 EAPI=6
 HOMEPAGE=https://pear.php.net/package/Text_Wiki_BBCode
+INHERIT=php-pear-r2
 KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=LGPL-2.1 PHP-3
 RDEPEND=>=dev-php/PEAR-Text_Wiki-1.0.3 >=dev-php/pear-1.8.1

@@ -3,6 +3,7 @@ DEFINED_PHASES=install postinst unpack
 DESCRIPTION=Brother scanner driver
 EAPI=8
 HOMEPAGE=https://www.brother.com/
+INHERIT=readme.gentoo-r1 rpm
 IUSE=zeroconf
 KEYWORDS=-* ~amd64 ~x86
 LICENSE=Brother

@@ -4,6 +4,7 @@ DEPEND=dev-libs/ferrisloki dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev
 DESCRIPTION=SQL IDE for Oracle, MySQL and PostgreSQL dbs
 EAPI=8
 HOMEPAGE=https://github.com/tora-tool/tora/wiki
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake desktop toolchain-funcs xdg
 IUSE=doc mysql oracle +postgres
 KEYWORDS=~amd64 ~x86

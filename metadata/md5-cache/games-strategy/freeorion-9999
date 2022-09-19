@@ -4,6 +4,7 @@ DEPEND=python_single_target_python3_8? ( >=dev-lang/python-3.8.13:3.8 ) python_s
 DESCRIPTION=Free turn-based space empire and galactic conquest game
 EAPI=8
 HOMEPAGE=https://www.freeorion.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=check-reqs cmake multiprocessing python-single-r1 xdg git-r3
 IUSE=dedicated doc test python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 LICENSE=GPL-2+ CC-BY-SA-3.0 LGPL-2.1+

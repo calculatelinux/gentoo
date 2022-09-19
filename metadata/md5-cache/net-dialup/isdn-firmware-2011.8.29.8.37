@@ -3,6 +3,7 @@ DEFINED_PHASES=install unpack
 DESCRIPTION=ISDN firmware for active ISDN cards (AVM, Eicon, etc.)
 EAPI=8
 HOMEPAGE=https://www.isdn4linux.de/
+INHERIT=rpm
 KEYWORDS=amd64 ppc x86
 LICENSE=freedist
 SLOT=0

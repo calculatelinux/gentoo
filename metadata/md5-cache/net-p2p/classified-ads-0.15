@@ -4,6 +4,7 @@ DEPEND=app-arch/bzip2 dev-lang/tcl:= dev-lang/tk:= dev-libs/openssl:0= dev-qt/qt
 DESCRIPTION=Program for displaying classified advertisement items
 EAPI=8
 HOMEPAGE=http://katiska.org/classified-ads/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=qmake-utils virtualx xdg
 IUSE=doc test test
 KEYWORDS=~amd64 ~x86

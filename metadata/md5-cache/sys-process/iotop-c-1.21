@@ -4,6 +4,7 @@ DEPEND=sys-libs/ncurses:= !sys-process/iotop
 DESCRIPTION=top utility for IO (C port)
 EAPI=8
 HOMEPAGE=https://github.com/Tomas-M/iotop
+IDEPEND=filecaps? ( sys-libs/libcap )
 INHERIT=fcaps linux-info toolchain-funcs
 IUSE=+filecaps
 KEYWORDS=amd64 arm arm64 ~loong x86

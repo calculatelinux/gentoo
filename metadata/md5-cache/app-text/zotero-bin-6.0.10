@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst postrm preinst prepare
 DESCRIPTION=Helps you collect, organize, cite, and share your research sources
 EAPI=8
 HOMEPAGE=https://www.zotero.org
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop xdg
 KEYWORDS=-* ~amd64
 LICENSE=AGPL-3

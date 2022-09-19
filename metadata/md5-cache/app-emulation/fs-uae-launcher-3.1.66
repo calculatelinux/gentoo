@@ -3,6 +3,7 @@ DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup t
 DESCRIPTION=PyQt5-based launcher for FS-UAE
 EAPI=8
 HOMEPAGE=https://fs-uae.net/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=distutils-r1 xdg
 IUSE=lha python_single_target_python3_8 python_single_target_python3_9
 KEYWORDS=~amd64 ~ppc64

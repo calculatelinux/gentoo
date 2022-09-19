@@ -4,6 +4,7 @@ DEPEND=dev-libs/boost:= dev-libs/log4cplus mysql? ( dev-db/mysql-connector-c ) !
 DESCRIPTION=High-performance production grade DHCPv4 & DHCPv6 server
 EAPI=8
 HOMEPAGE=https://www.isc.org/kea/
+IDEPEND=filecaps? ( sys-libs/libcap )
 INHERIT=autotools fcaps python-single-r1 systemd tmpfiles git-r3
 IUSE=mysql +openssl postgres +samples shell test +filecaps python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 LICENSE=ISC BSD SSLeay GPL-2

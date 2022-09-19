@@ -4,6 +4,7 @@ DEPEND=>=dev-qt/qtgui-5.15.2:5 >=dev-qt/qtnetwork-5.15.2:5 >=dev-qt/qtwidgets-5.
 DESCRIPTION=Photo geotagging program
 EAPI=8
 HOMEPAGE=https://kgeotag.kde.org/ https://apps.kde.org/kgeotag/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm kde.org
 IUSE=debug
 KEYWORDS=~amd64

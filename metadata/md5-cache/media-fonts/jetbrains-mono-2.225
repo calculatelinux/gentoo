@@ -3,6 +3,7 @@ DEFINED_PHASES=install postinst postrm setup
 DESCRIPTION=A free and open-source typeface for developers
 EAPI=7
 HOMEPAGE=https://www.jetbrains.com/lp/mono/
+INHERIT=font
 IUSE=X
 KEYWORDS=amd64 x86
 LICENSE=OFL-1.1

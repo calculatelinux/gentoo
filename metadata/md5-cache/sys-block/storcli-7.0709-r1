@@ -3,6 +3,7 @@ DEPEND=app-arch/unzip
 DESCRIPTION=MegaRAID StorCLI (successor of the MegaCLI)
 EAPI=6
 HOMEPAGE=https://www.broadcom.com/support/download-search?dk=storcli
+INHERIT=pax-utils
 KEYWORDS=-* amd64 x86
 LICENSE=Avago LSI BSD
 SLOT=0/7.7

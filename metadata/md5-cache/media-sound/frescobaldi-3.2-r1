@@ -4,6 +4,7 @@ DEPEND=dev-python/PyQt5[gui,network,printsupport,svg,widgets,python_targets_pyth
 DESCRIPTION=A LilyPond sheet music text editor
 EAPI=8
 HOMEPAGE=https://www.frescobaldi.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=distutils-r1 xdg
 IUSE=python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS=amd64 x86

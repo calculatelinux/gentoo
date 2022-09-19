@@ -4,6 +4,7 @@ DEPEND=dev-lang/perl >=dev-qt/designer-5.15.2:5 >=dev-qt/qtdbus-5.15.2:5 >=dev-q
 DESCRIPTION=KDE Office Suite
 EAPI=8
 HOMEPAGE=https://calligra.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=check-reqs ecm kde.org
 IUSE=activities +charts +crypt +fontconfig gemini gsl +import-filter +lcms okular +pdf phonon spacenav +truetype X calligra_features_karbon calligra_features_sheets calligra_features_stage calligra_features_words debug +handbook test
 KEYWORDS=amd64 ~ppc64 ~riscv x86

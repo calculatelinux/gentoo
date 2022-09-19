@@ -4,6 +4,7 @@ DEPEND=app-text/hunspell:= >=dev-qt/qtcore-5.15.0 dev-qt/qtgui:5 dev-qt/qtnetwor
 DESCRIPTION=Lightweight Qt5 Plain-Text Editor for Linux
 EAPI=8
 HOMEPAGE=https://github.com/tsujan/FeatherPad
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=xdg cmake
 IUSE=+X
 KEYWORDS=~amd64 ~riscv ~x86

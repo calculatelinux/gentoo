@@ -3,6 +3,7 @@ DEFINED_PHASES=install nofetch postinst postrm preinst prepare pretend setup unp
 DESCRIPTION=Sci-fi themed action RPG where you fight through a stunning futuristic city
 EAPI=8
 HOMEPAGE=https://supergiantgames.com/games/transistor/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop check-reqs unpacker wrapper xdg
 KEYWORDS=-* ~amd64
 LICENSE=GOG-EULA

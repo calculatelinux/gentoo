@@ -4,6 +4,7 @@ DEPEND=dev-libs/glib:2 >=dev-libs/libxml2-2.6 x11-libs/gdk-pixbuf:2 x11-libs/gtk
 DESCRIPTION=Graphical console client for connecting to virtual machines
 EAPI=8
 HOMEPAGE=https://virt-manager.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=meson python-any-r1 xdg
 IUSE=+libvirt sasl +spice +vnc vte
 KEYWORDS=amd64 x86

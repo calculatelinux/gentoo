@@ -3,6 +3,7 @@ DEPEND=acct-group/gamestat
 DESCRIPTION=Fast-paced Tetris-like puzzler
 EAPI=7
 HOMEPAGE=http://www.chroniclogic.com/triptych.htm
+INHERIT=wrapper
 KEYWORDS=-* ~amd64 ~x86
 LICENSE=all-rights-reserved
 RDEPEND=acct-group/gamestat >=media-libs/libsdl-1.2[abi_x86_32,opengl,sound,video] virtual/opengl[abi_x86_32] x11-libs/libX11[abi_x86_32] x11-libs/libXext[abi_x86_32]

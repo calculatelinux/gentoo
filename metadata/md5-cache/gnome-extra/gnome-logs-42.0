@@ -4,6 +4,7 @@ DEPEND=gnome-base/gsettings-desktop-schemas >=dev-libs/glib-2.43.90:2 >=x11-libs
 DESCRIPTION=Log viewer for the systemd journal
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/Apps/Logs
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome.org gnome2-utils meson xdg
 KEYWORDS=amd64 ~arm64 ~ppc64 x86
 LICENSE=GPL-3+

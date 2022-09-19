@@ -4,6 +4,7 @@ DEPEND=net-misc/curl x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/lib
 DESCRIPTION=Share a mouse and keyboard between computers (fork of Synergy)
 EAPI=8
 HOMEPAGE=https://github.com/debauchee/barrier
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop virtualx xdg cmake
 IUSE=gui test test
 KEYWORDS=amd64 x86

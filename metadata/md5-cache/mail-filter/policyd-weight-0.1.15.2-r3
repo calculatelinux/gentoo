@@ -2,6 +2,7 @@ DEFINED_PHASES=compile install postinst prepare
 DESCRIPTION=Weighted Policy daemon for Postfix
 EAPI=7
 HOMEPAGE=http://www.policyd-weight.org/
+INHERIT=tmpfiles
 KEYWORDS=~alpha amd64 x86
 LICENSE=GPL-2
 RDEPEND=acct-group/polw acct-user/polw dev-perl/Net-DNS dev-perl/Net-IP mail-mta/postfix virtual/perl-File-Spec virtual/perl-Sys-Syslog virtual/tmpfiles

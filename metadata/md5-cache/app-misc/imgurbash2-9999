@@ -3,6 +3,7 @@ DEFINED_PHASES=install unpack
 DESCRIPTION=Bash script that uploads/deletes images to/from imgur
 EAPI=7
 HOMEPAGE=https://github.com/ram-on/imgurbash2
+INHERIT=git-r3
 IUSE=X
 LICENSE=MIT
 PROPERTIES=live

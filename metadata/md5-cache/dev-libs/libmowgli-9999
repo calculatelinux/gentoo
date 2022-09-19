@@ -4,6 +4,7 @@ DEPEND=ssl? ( dev-libs/openssl:0= )
 DESCRIPTION=Useful set of performance and usability-oriented extensions to C
 EAPI=8
 HOMEPAGE=https://github.com/atheme/libmowgli-2
+INHERIT=git-r3
 IUSE=ssl
 LICENSE=BSD-2
 PROPERTIES=live

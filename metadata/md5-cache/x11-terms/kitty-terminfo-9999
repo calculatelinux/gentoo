@@ -3,6 +3,7 @@ DEFINED_PHASES=compile install unpack
 DESCRIPTION=Terminfo for kitty, a GPU-based terminal emulator
 EAPI=8
 HOMEPAGE=https://sw.kovidgoyal.net/kitty/
+INHERIT=git-r3
 LICENSE=GPL-3
 PROPERTIES=live
 RESTRICT=test

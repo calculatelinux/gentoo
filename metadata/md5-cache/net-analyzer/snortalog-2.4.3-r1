@@ -2,6 +2,7 @@ DEFINED_PHASES=install prepare
 DESCRIPTION=A powerful perl script that summarizes snort logs
 EAPI=7
 HOMEPAGE=http://jeremy.chartier.free.fr/snortalog/
+INHERIT=edos2unix
 IUSE=tk
 KEYWORDS=~amd64 ~arm ~ppc ~sparc ~x86
 LICENSE=GPL-2

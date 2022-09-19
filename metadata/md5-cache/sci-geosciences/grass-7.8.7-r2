@@ -4,6 +4,7 @@ DEPEND=python_single_target_python3_8? ( >=dev-lang/python-3.8.13:3.8[sqlite] ) 
 DESCRIPTION=A free GIS with raster and vector functionality, as well as 3D vizualization
 EAPI=8
 HOMEPAGE=https://grass.osgeo.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop python-single-r1 toolchain-funcs wxwidgets xdg
 IUSE=blas cxx fftw geos lapack liblas mysql netcdf nls odbc opencl opengl openmp pdal png postgres readline sqlite threads tiff truetype X zstd python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=~amd64 ~x86

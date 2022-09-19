@@ -4,6 +4,7 @@ DEPEND=app-arch/zip >=dev-libs/tinyxml-2.6.2-r3 >=dev-util/astyle-3.1-r2:0/3.1 x
 DESCRIPTION=The open source, cross platform, free C, C++ and Fortran IDE
 EAPI=8
 HOMEPAGE=https://codeblocks.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=autotools subversion wxwidgets xdg
 IUSE=contrib debug pch
 LICENSE=GPL-3

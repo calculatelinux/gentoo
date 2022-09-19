@@ -4,6 +4,7 @@ DEPEND=dev-libs/glib:2 dev-libs/gmp:= media-fonts/dejavu media-libs/freetype:2 m
 DESCRIPTION=GNU BackGammon
 EAPI=8
 HOMEPAGE=https://www.gnu.org/software/gnubg/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=autotools desktop python-single-r1 xdg
 IUSE=cpu_flags_x86_avx cpu_flags_x86_sse cpu_flags_x86_sse2 gui python sqlite python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=~amd64 ~arm ~ppc64 ~x86

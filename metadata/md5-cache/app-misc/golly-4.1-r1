@@ -3,6 +3,7 @@ DEPEND=sys-libs/zlib virtual/opengl x11-libs/wxGTK:3.0-gtk3[X,opengl,sdl,tiff] p
 DESCRIPTION=simulator for Conway's Game of Life and other cellular automata
 EAPI=8
 HOMEPAGE=http://golly.sourceforge.net/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop python-single-r1 toolchain-funcs wxwidgets xdg
 IUSE=python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=amd64 x86

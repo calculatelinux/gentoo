@@ -4,6 +4,7 @@ DEPEND=app-text/poppler >=dev-qt/qtconcurrent-5.15.2:5 >=dev-qt/qtgui-5.15.2:5 >
 DESCRIPTION=Scientific data analysis and visualisation based on KDE Frameworks
 EAPI=8
 HOMEPAGE=https://labplot.kde.org/ https://apps.kde.org/labplot2/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm kde.org
 IUSE=cantor fftw fits hdf5 libcerf markdown matio netcdf origin root serial telemetry test debug +handbook test
 KEYWORDS=~amd64 ~x86

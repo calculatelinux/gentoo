@@ -4,6 +4,7 @@ DEPEND=dev-qt/qtcharts:5 dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtprintsupport:5 
 DESCRIPTION=A GUI frontend to gdb
 EAPI=8
 HOMEPAGE=https://github.com/epasveer/seer
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake desktop xdg git-r3
 LICENSE=GPL-3+ CC-BY-3.0 CC-BY-4.0
 PROPERTIES=live

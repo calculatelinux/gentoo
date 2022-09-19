@@ -3,6 +3,7 @@ DEPEND=test? ( >=dev-lang/php-5.1.4:* dev-php/phpunit )
 DESCRIPTION=Interface for reading from and writing to fortune files
 EAPI=6
 HOMEPAGE=https://pear.php.net/package/File_Fortune
+INHERIT=php-pear-r2
 IUSE=test
 KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=BSD

@@ -3,6 +3,7 @@ DEFINED_PHASES=install unpack
 DESCRIPTION=Bash Utility for Creating Stage 4 Tarballs
 EAPI=7
 HOMEPAGE=https://github.com/TheChymera/mkstage4
+INHERIT=git-r3
 LICENSE=GPL-3
 PROPERTIES=live
 RDEPEND=app-shells/bash app-arch/tar

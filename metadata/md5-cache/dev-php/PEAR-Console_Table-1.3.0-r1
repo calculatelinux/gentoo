@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst postrm
 DESCRIPTION=Class that makes it easy to build console style tables
 EAPI=6
 HOMEPAGE=https://pear.php.net/package/Console_Table
+INHERIT=php-pear-r2
 KEYWORDS=~alpha amd64 ~hppa ~ia64 ppc ppc64 sparc x86
 LICENSE=BSD
 RDEPEND=>=dev-php/pear-1.8.1

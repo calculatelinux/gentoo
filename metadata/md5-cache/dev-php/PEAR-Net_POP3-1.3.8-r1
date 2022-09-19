@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst postrm
 DESCRIPTION=Provides a POP3 class to access POP3 server
 EAPI=6
 HOMEPAGE=https://pear.php.net/package/Net_POP3
+INHERIT=php-pear-r2
 IUSE=+sasl
 KEYWORDS=~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86
 LICENSE=BSD

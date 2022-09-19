@@ -4,6 +4,7 @@ DEPEND=media-libs/libsndfile:= sys-libs/zlib:= alsa? ( media-libs/alsa-lib ) aud
 DESCRIPTION=A heavily multi-threaded pluggable audio player
 EAPI=8
 HOMEPAGE=http://www.alsaplayer.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=autotools desktop xdg
 IUSE=+alsa audiofile doc flac gtk id3tag jack mad mikmod nas nls ogg opengl oss vorbis xosd
 KEYWORDS=amd64 ~mips ~ppc ~riscv ~sparc x86

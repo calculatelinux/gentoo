@@ -4,6 +4,7 @@ DEPEND=>=x11-themes/hicolor-icon-theme-0.10
 DESCRIPTION=GNOME default icon theme
 EAPI=8
 HOMEPAGE=https://gitlab.gnome.org/GNOME/adwaita-icon-theme
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome2 python-any-r1
 IUSE=branding
 KEYWORDS=amd64 arm arm64 ppc64 ~riscv x86 ~amd64-linux ~x86-linux

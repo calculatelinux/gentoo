@@ -4,6 +4,7 @@ DEPEND=media-libs/libepoxy >=app-text/evince-3.0[introspection] media-libs/freet
 DESCRIPTION=A quick previewer for Nautilus, the GNOME file manager
 EAPI=8
 HOMEPAGE=https://gitlab.gnome.org/GNOME/sushi
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome.org meson xdg
 IUSE=office wayland +X
 KEYWORDS=amd64 ~arm arm64 ~ppc64 ~riscv ~sparc x86

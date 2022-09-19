@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst postrm preinst prepare
 DESCRIPTION=Autodesk EAGLE schematic and printed circuit board (PCB) layout editor
 EAPI=8
 HOMEPAGE=https://www.autodesk.com/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop optfeature xdg
 KEYWORDS=-* ~amd64
 LICENSE=Autodesk

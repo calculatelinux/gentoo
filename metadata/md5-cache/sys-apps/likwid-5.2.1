@@ -4,6 +4,7 @@ DEPEND=dev-lang/perl fortran? ( virtual/fortran )
 DESCRIPTION=A performance-oriented tool suite for x86 multicore environments
 EAPI=8
 HOMEPAGE=https://github.com/rrze-likwid/likwid
+IDEPEND=filecaps? ( sys-libs/libcap )
 INHERIT=fcaps fortran-2 linux-info toolchain-funcs
 IUSE=fortran +filecaps
 KEYWORDS=~amd64

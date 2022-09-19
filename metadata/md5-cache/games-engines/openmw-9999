@@ -4,6 +4,7 @@ DEPEND=lua_single_target_luajit? ( dev-lang/luajit:= ) lua_single_target_lua5-1?
 DESCRIPTION=Open source reimplementation of TES III: Morrowind
 EAPI=8
 HOMEPAGE=https://openmw.org/ https://gitlab.com/OpenMW/openmw
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake lua-single readme.gentoo-r1 xdg git-r3
 IUSE=doc devtools +osg-fork test +qt5 lua_single_target_luajit lua_single_target_lua5-1 lua_single_target_lua5-3 lua_single_target_lua5-4
 LICENSE=GPL-3 MIT BitstreamVera ZLIB

@@ -4,6 +4,7 @@ DEPEND=dev-db/sqlcipher dev-libs/libsodium:= dev-qt/qtconcurrent:5 dev-qt/qtcore
 DESCRIPTION=Instant messaging client using the encrypted p2p Tox protocol
 EAPI=8
 HOMEPAGE=https://qtox.github.io/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake xdg git-r3
 IUSE=notification +spellcheck test X
 LICENSE=GPL-3+

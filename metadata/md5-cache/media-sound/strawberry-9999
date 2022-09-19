@@ -4,6 +4,7 @@ DEPEND=dev-db/sqlite:= dev-libs/glib:2 dev-libs/protobuf:= dev-qt/qtconcurrent:5
 DESCRIPTION=Modern music player and library organizer based on Clementine and Qt
 EAPI=8
 HOMEPAGE=https://www.strawberrymusicplayer.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake flag-o-matic plocale xdg git-r3
 IUSE=cdda debug +gstreamer ipod moodbar mtp pulseaudio +udisks vlc
 LICENSE=GPL-3

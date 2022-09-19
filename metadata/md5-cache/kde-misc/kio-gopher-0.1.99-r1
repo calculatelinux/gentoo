@@ -4,6 +4,7 @@ DEPEND=>=kde-frameworks/kcodecs-5.60.0:5 >=kde-frameworks/ki18n-5.60.0:5 >=kde-f
 DESCRIPTION=Gopher KIO worker for Konqueror
 EAPI=8
 HOMEPAGE=https://userbase.kde.org/Kio_gopher
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm kde.org
 IUSE=debug +handbook
 KEYWORDS=~amd64 ~arm64 ~x86

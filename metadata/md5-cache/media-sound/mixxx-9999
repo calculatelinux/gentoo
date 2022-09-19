@@ -4,6 +4,7 @@ DEPEND=dev-db/sqlite dev-libs/glib:2 dev-libs/protobuf:= dev-qt/qtconcurrent:5 d
 DESCRIPTION=Advanced Digital DJ tool based on Qt
 EAPI=8
 HOMEPAGE=https://www.mixxx.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake xdg udev git-r3
 IUSE=aac doc ffmpeg hid keyfinder lv2 mp3 mp4 opus qtkeychain shout wavpack
 LICENSE=GPL-2

@@ -4,6 +4,7 @@ DEPEND=python_single_target_python3_8? ( >=dev-lang/python-3.8.13:3.8[tk] ) pyth
 DESCRIPTION=Multi-platform WYSIWYG ebook editor for ePub format
 EAPI=8
 HOMEPAGE=https://sigil-ebook.com/ https://github.com/Sigil-Ebook/Sigil
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=xdg cmake python-single-r1
 IUSE=+plugins system-mathjax python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=amd64 x86

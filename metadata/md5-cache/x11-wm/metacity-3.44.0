@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/glib-2.67.3:2 >=x11-libs/gtk+-3.24.6:3[X] >=x11-libs/pango-1.2
 DESCRIPTION=GNOME Flashback window manager
 EAPI=8
 HOMEPAGE=https://gitlab.gnome.org/GNOME/metacity/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome2
 IUSE=+libcanberra vulkan xinerama
 KEYWORDS=~amd64 ~riscv

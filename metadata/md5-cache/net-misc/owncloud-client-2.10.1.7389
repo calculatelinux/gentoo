@@ -4,6 +4,7 @@ DEPEND=>=dev-db/sqlite-3.4:3 dev-libs/qtkeychain[gnome-keyring?,qt5(+)] dev-qt/q
 DESCRIPTION=Synchronize files from ownCloud Server with your computer
 EAPI=8
 HOMEPAGE=https://owncloud.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake xdg
 IUSE=dolphin gnome-keyring nautilus test
 KEYWORDS=~amd64 ~arm64 ~x86

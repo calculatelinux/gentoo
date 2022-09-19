@@ -4,6 +4,7 @@ DEPEND=dev-libs/libxml2 media-libs/libpng:0= media-libs/freeglut sys-libs/zlib v
 DESCRIPTION=Panorama viewer (Quicktime, PangeaVR, GLPanoView formats)
 EAPI=8
 HOMEPAGE=http://freepv.sourceforge.net/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake flag-o-matic xdg
 KEYWORDS=amd64 x86
 LICENSE=LGPL-2.1

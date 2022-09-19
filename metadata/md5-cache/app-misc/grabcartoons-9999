@@ -3,6 +3,7 @@ DEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DESCRIPTION=Comic-summarizing utility
 EAPI=6
 HOMEPAGE=https://zzamboni.org/code/grabcartoons/
+INHERIT=git-r3
 LICENSE=BSD
 PROPERTIES=live
 RDEPEND=dev-lang/perl virtual/perl-Getopt-Long

@@ -4,6 +4,7 @@ DEPEND=dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtsvg:5 dev-qt/qtwi
 DESCRIPTION=MIDI based metronome using ALSA sequencer
 EAPI=8
 HOMEPAGE=https://kmetronome.sourceforge.io/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake xdg
 KEYWORDS=amd64 x86
 LICENSE=GPL-2

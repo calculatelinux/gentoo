@@ -4,6 +4,7 @@ DEPEND=dev-libs/boost:= >=dev-libs/openssl-1.1.1:= dev-qt/qtcore:5 dev-qt/qtnetw
 DESCRIPTION=BitTorrent client in C++ and Qt
 EAPI=8
 HOMEPAGE=https://www.qbittorrent.org
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake multibuild systemd xdg git-r3
 IUSE=+dbus +gui test webui
 LICENSE=GPL-2

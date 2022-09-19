@@ -4,6 +4,7 @@ DEPEND=dev-libs/boost:= dev-libs/icu:= dev-libs/libfmt:0= dev-libs/libsodium dev
 DESCRIPTION=A free, real-time strategy game
 EAPI=8
 HOMEPAGE=https://play0ad.com/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop toolchain-funcs multiprocessing python-any-r1 wxwidgets xdg
 IUSE=verify-sig editor +lobby nvtt pch test
 KEYWORDS=~amd64 ~arm64 ~x86

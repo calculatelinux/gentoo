@@ -43,8 +43,13 @@ src_compile() {
 }
 
 src_test() {
-	emake test
-	emake run_test | tee xmlada.testLog
+	GPR_PROJECT_PATH=schema:input_sources:dom:sax:unicode \
+	gprbuild -j$(makeopts_jobs) -m -p -v -XLIBRARY_TYPE=static \
+		-XBUILD=Production -XPROCESSORS=$(makeopts_jobs) xmlada.gpr \
+		-XTESTS_ACTIVATED=Only \
+		-largs ${LDFLAGS} \
+		-cargs ${ADAFLAGS} || die "gprbuild failed"
+	emake --no-print-directory -C tests tests | tee xmlada.testLog
 	grep -q DIFF xmlada.testLog && die
 }
 
@@ -69,5 +74,13 @@ src_install() {
 	einstalldocs
 	dodoc xmlada-roadmap.txt
 	rm -rf "${D}"/usr/share/gpr/manifests
+	rm -f "${D}"/usr/share/examples/xmlada/*/b__*
+	rm -f "${D}"/usr/share/examples/xmlada/*/*.adb.std*
+	rm -f "${D}"/usr/share/examples/xmlada/*/*.ali
+	rm -f "${D}"/usr/share/examples/xmlada/*/*.bexch
+	rm -f "${D}"/usr/share/examples/xmlada/*/*.o
+	rm -f "${D}"/usr/share/examples/xmlada/*/*example
+	rm -f "${D}"/usr/share/examples/xmlada/dom/domexample2
+	rm -f "${D}"/usr/share/examples/xmlada/sax/saxexample_main
 	mv "${D}"/usr/share/examples/xmlada "${D}"/usr/share/doc/"${PF}"/examples || die
 }

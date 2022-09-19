@@ -4,6 +4,7 @@ DEPEND=dev-cpp/atkmm:0 dev-cpp/glibmm:2 dev-cpp/gtkmm:3.0[X] dev-cpp/pangomm:1.4
 DESCRIPTION=Parametric 2d/3d CAD
 EAPI=8
 HOMEPAGE=http://solvespace.com
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake toolchain-funcs xdg
 IUSE=openmp +system-mimalloc
 KEYWORDS=amd64 ~x86

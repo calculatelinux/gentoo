@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/efl-1.26.1[eet,X] media-libs/libexif
 DESCRIPTION=Enlightenment image viewer written with EFL
 EAPI=8
 HOMEPAGE=https://www.enlightenment.org/about-ephoto
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=meson xdg
 KEYWORDS=amd64 x86
 LICENSE=BSD-2

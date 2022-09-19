@@ -4,6 +4,7 @@ DEPEND=notmuch? ( net-mail/notmuch:= )
 DESCRIPTION=Email client for your terminal
 EAPI=8
 HOMEPAGE=https://aerc-mail.org
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=go-module xdg
 IUSE=notmuch
 KEYWORDS=~amd64 ~ppc64

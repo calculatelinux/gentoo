@@ -4,6 +4,7 @@ DEPEND=python_single_target_python3_8? ( >=dev-lang/python-3.8.13:3.8 ) python_s
 DESCRIPTION=Automatic bug detection and reporting tool
 EAPI=8
 HOMEPAGE=https://github.com/abrt/abrt/wiki/ABRT-Project https://github.com/abrt/abrt
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=autotools python-single-r1 tmpfiles xdg
 IUSE=selinux test python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=~amd64 ~x86

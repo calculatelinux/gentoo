@@ -2,6 +2,7 @@ DEFINED_PHASES=install nofetch postinst postrm preinst unpack
 DESCRIPTION=Sweeping classic action adventure with an 8-bit retro aesthetic
 EAPI=8
 HOMEPAGE=https://yachtclubgames.com/games/shovel-knight-treasure-trove/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop unpacker wrapper xdg
 KEYWORDS=-* ~amd64 ~x86
 LICENSE=Yacht-Club-Games-EULA

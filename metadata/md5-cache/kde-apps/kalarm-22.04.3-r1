@@ -4,6 +4,7 @@ DEPEND=>=dev-qt/qtdbus-5.15.4:5 >=dev-qt/qtgui-5.15.4:5 >=dev-qt/qtnetwork-5.15.
 DESCRIPTION=Application to manage alarms and other timer based alerts for the desktop
 EAPI=8
 HOMEPAGE=https://apps.kde.org/kalarm/ https://userbase.kde.org/KAlarm
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm gear.kde.org
 IUSE=speech X debug +handbook
 KEYWORDS=amd64 arm64 ~ppc64 x86

@@ -4,6 +4,7 @@ DEPEND=acct? ( acct-group/git acct-user/git[gitea] ) pam? ( sys-libs/pam )
 DESCRIPTION=A painless self-hosted Git service
 EAPI=8
 HOMEPAGE=https://gitea.io https://github.com/go-gitea/gitea
+IDEPEND=filecaps? ( sys-libs/libcap )
 INHERIT=fcaps go-module tmpfiles systemd flag-o-matic
 IUSE=+acct pam sqlite pie +filecaps
 KEYWORDS=~amd64 ~arm ~arm64 ~x86

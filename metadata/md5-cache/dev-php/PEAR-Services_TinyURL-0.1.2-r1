@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst postrm
 DESCRIPTION=An interface for creating and retrieving TinyURLs with their API
 EAPI=6
 HOMEPAGE=https://pear.php.net/package/Services_TinyURL
+INHERIT=php-pear-r2
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD-2
 RDEPEND=dev-lang/php:*[curl] >=dev-php/pear-1.8.1

@@ -3,6 +3,7 @@ DEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DESCRIPTION=Astronomical user routines for IDL
 EAPI=6
 HOMEPAGE=https://idlastro.gsfc.nasa.gov/
+INHERIT=git-r3
 LICENSE=BSD-2 BSD
 PROPERTIES=live
 RDEPEND=dev-lang/gdl

@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/glib-2.36:2 >=dev-libs/libnl-3.2.8:3 >=net-misc/networkmanager
 DESCRIPTION=NetworkManager libreswan plugin
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/Projects/NetworkManager/VPN
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome2
 IUSE=gtk
 KEYWORDS=~amd64 ~x86

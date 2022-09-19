@@ -4,6 +4,7 @@ DEPEND=app-arch/xz-utils dev-java/java-config app-eselect/eselect-java
 DESCRIPTION=A Gentoo-made binary build of the IcedTea JDK
 EAPI=8
 HOMEPAGE=http://icedtea.classpath.org
+IDEPEND=app-eselect/eselect-java
 INHERIT=java-vm-2 multilib-build toolchain-funcs
 IUSE=+alsa big-endian cups doc examples +gtk headless-awt pulseaudio selinux source abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
 KEYWORDS=-* ~amd64 ~arm ~arm64 ~ppc64 ~x86

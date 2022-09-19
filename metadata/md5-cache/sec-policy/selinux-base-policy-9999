@@ -4,6 +4,7 @@ DEPEND==sec-policy/selinux-base-9999[systemd?]
 DESCRIPTION=SELinux policy for core modules
 EAPI=7
 HOMEPAGE=https://wiki.gentoo.org/wiki/Project:SELinux
+INHERIT=git-r3
 IUSE=systemd +unconfined
 LICENSE=GPL-2
 PDEPEND=unconfined? ( sec-policy/selinux-unconfined )

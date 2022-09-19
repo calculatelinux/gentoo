@@ -3,6 +3,7 @@ DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
 DESCRIPTION=Graphical Network Simulator
 EAPI=8
 HOMEPAGE=https://www.gns3.com/ https://github.com/GNS3/gns3-gui
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=distutils-r1 virtualx xdg
 IUSE=test python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 test
 KEYWORDS=~amd64 ~x86

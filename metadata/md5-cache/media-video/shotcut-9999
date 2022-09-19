@@ -4,6 +4,7 @@ DEPEND=dev-qt/qtcore:5 dev-qt/qtdeclarative:5[widgets] dev-qt/qtgui:5 dev-qt/qtm
 DESCRIPTION=A free, open source, cross-platform video editor
 EAPI=8
 HOMEPAGE=https://www.shotcut.org/ https://github.com/mltframework/shotcut/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=qmake-utils xdg git-r3
 IUSE=debug
 LICENSE=GPL-3+

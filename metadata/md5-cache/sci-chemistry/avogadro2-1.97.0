@@ -4,6 +4,7 @@ DEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 >=sci-libs/avogadrolibs
 DESCRIPTION=Advanced molecule editor and visualizer 2
 EAPI=8
 HOMEPAGE=https://www.openchemistry.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop docs cmake xdg
 IUSE=rpc test vtk doc
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux

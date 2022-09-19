@@ -3,6 +3,7 @@ DEFINED_PHASES=compile install postinst unpack
 DESCRIPTION=Utility to manage compilers
 EAPI=7
 HOMEPAGE=https://gitweb.gentoo.org/proj/gcc-config.git/
+INHERIT=git-r3
 IUSE=+cc-wrappers +native-symlinks
 LICENSE=GPL-2
 PROPERTIES=live

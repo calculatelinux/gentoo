@@ -4,6 +4,7 @@ DEPEND=>=dev-qt/qtconcurrent-5.15.4:5 >=dev-qt/qtdbus-5.15.4:5 >=dev-qt/qtdeclar
 DESCRIPTION=KDE Plasma resources management GUI
 EAPI=8
 HOMEPAGE=https://userbase.kde.org/Discover
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm plasma.kde.org
 IUSE=+firmware flatpak telemetry test debug test
 KEYWORDS=amd64 ~arm arm64 ~ppc64 ~riscv x86

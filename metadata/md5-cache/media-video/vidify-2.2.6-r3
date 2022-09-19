@@ -3,6 +3,7 @@ DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
 DESCRIPTION=Watch music videos in real time for the songs playing on your device
 EAPI=8
 HOMEPAGE=https://vidify.org
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=xdg distutils-r1 optfeature virtualx
 IUSE=dbus vlc mpv zeroconf test python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11 test
 KEYWORDS=~amd64

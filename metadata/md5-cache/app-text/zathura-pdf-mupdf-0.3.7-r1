@@ -4,6 +4,7 @@ DEPEND=>=app-text/mupdf-1.17:= >=app-text/zathura-0.3.9 dev-libs/girara dev-libs
 DESCRIPTION=PDF plug-in for zathura
 EAPI=8
 HOMEPAGE=https://pwmt.org/projects/zathura-pdf-mupdf/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=meson xdg
 KEYWORDS=amd64 arm x86
 LICENSE=ZLIB

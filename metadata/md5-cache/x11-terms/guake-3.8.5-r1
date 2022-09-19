@@ -3,6 +3,7 @@ DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup t
 DESCRIPTION=Drop-down terminal for GNOME
 EAPI=8
 HOMEPAGE=http://guake-project.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=distutils-r1 gnome2-utils plocale virtualx xdg
 IUSE=utempter test python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10 test
 KEYWORDS=amd64 arm ~arm64 ~ppc64 x86

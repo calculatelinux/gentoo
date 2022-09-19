@@ -2,6 +2,7 @@ DEFINED_PHASES=install postinst postrm prepare
 DESCRIPTION=SQL builder and data modeling layer
 EAPI=6
 HOMEPAGE=https://pear.php.net/package/DB_DataObject
+INHERIT=php-pear-r2
 IUSE=minimal
 KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=PHP-3.01

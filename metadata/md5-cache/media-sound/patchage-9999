@@ -4,6 +4,7 @@ DEPEND=dev-cpp/glibmm:2 dev-cpp/gtkmm:2.4 media-libs/ganv alsa? ( media-libs/als
 DESCRIPTION=Modular patch bay for JACK-based audio and MIDI systems
 EAPI=8
 HOMEPAGE=https://drobilla.net/software/patchage
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=meson xdg git-r3
 IUSE=alsa jack jack-dbus test
 LICENSE=GPL-2

@@ -4,6 +4,7 @@ DEPEND=>=x11-libs/gdk-pixbuf-2.32.2:2 >=x11-libs/gtk+-3.22.0:3[X] >=gnome-base/g
 DESCRIPTION=GNOME Flashback session
 EAPI=8
 HOMEPAGE=https://gitlab.gnome.org/GNOME/gnome-flashback/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome2 toolchain-funcs
 IUSE=elogind systemd
 KEYWORDS=~amd64 ~riscv

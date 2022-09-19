@@ -3,6 +3,7 @@ DEPEND=>=net-analyzer/icinga2-2.1.1 >=www-apps/icingaweb2-2.0.0 >=dev-vcs/git-1.
 DESCRIPTION=Icinga Web 2 plugin for pnp4nagios
 EAPI=6
 HOMEPAGE=http://www.icinga.org/
+INHERIT=git-r3
 LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=>=net-analyzer/icinga2-2.1.1 >=www-apps/icingaweb2-2.0.0

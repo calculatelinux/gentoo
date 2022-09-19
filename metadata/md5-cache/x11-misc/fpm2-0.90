@@ -4,6 +4,7 @@ DEPEND=dev-libs/glib:2 dev-libs/libxml2 dev-libs/nettle x11-libs/gtk+:3 x11-libs
 DESCRIPTION=A GUI password manager utility with password generator
 EAPI=7
 HOMEPAGE=https://als.regnet.cz/fpm2/
+INHERIT=xdg
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=dev-libs/glib:2 dev-libs/libxml2 dev-libs/nettle x11-libs/gtk+:3 x11-libs/libX11

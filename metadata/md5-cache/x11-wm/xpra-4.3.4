@@ -4,6 +4,7 @@ DEPEND=python_single_target_python3_8? ( >=dev-lang/python-3.8.13:3.8 ) python_s
 DESCRIPTION=X Persistent Remote Apps (xpra) and Partitioning WM (parti) based on wimpiggy
 EAPI=8
 HOMEPAGE=https://xpra.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=xdg xdg-utils distutils-r1 tmpfiles udev
 IUSE=brotli +client +clipboard csc cups dbus doc ffmpeg jpeg html ibus +lz4 lzo minimal opengl pillow pinentry pulseaudio +server sound systemd test udev vpx webcam webp xdg xinerama python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=~amd64 ~x86

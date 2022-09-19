@@ -4,6 +4,7 @@ DEPEND=>=sci-chemistry/openbabel-3:= dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnet
 DESCRIPTION=A drawing tool for 2D molecular structures
 EAPI=8
 HOMEPAGE=http://molsketch.sourceforge.net/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake xdg
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2

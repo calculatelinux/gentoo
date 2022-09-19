@@ -300,6 +300,7 @@ app-containers/docker:overlay - Enables dependencies for the "overlay" graph dri
 app-containers/docker-credential-helpers:gnome-keyring - Build secretservice helper which works with gnome-keyring or kwallet using D-Bus.
 app-containers/docker-credential-helpers:pass - Build pass helper for the pass utility.
 app-containers/lxc:io-uring - Enable io_uring support, and use io_uring instead of epoll
+app-containers/lxc:lto - Enable Link Time Optimization (LTO)
 app-containers/lxc:tools - Build and install additional command line tools
 app-containers/podman:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
 app-containers/podman:cgroup-hybrid - Default to hybrid (legacy) cgroup hierarchy instead of unified (modern).
@@ -1021,6 +1022,7 @@ app-portage/eix:doc - Create description of the eix cache file additionally in h
 app-portage/eix:sqlite - Compile in support for portage's sqlite backend; to actually use it you need additional configuration of portage and eix
 app-portage/g-sorcery:bson - Support BSON file format for package DB
 app-portage/gemato:gpg - Install dependencies needed for OpenPGP signature verification support
+app-portage/gemato:pretty-log - Pull dev-python/rich to enable pretty logs
 app-portage/gemato:tools - Install additional utilities (benchmarks, hash testing tools, fast Manifest generators) to /usr/share/gemato.
 app-portage/grs:server - Install all the tools building systems
 app-portage/kuroneko:scraper - Include the dependencies necessary for Bugzilla scraping.
@@ -2879,7 +2881,8 @@ dev-util/perf:perl - Add support for Perl as a scripting language for perf tools
 dev-util/perf:systemtap - Add support to define SDT event in perf tools.
 dev-util/perf:unwind - Use sys-libs/libunwind for frame unwinding support.
 dev-util/plan9port:freefonts - Don't install BigelowHolmes fonts
-dev-util/poke:machine-interface - enable machine-interface protocol using dev-libs/json-c
+dev-util/poke:machine-interface - Enable machine-interface protocol using dev-libs/json-c
+dev-util/poke:pvm-profiling - Enable profiling in the PVM
 dev-util/pycharm-community:bundled-jdk - Use bundled jdk
 dev-util/pycharm-professional:bundled-jdk - Use bundled jdk
 dev-util/ropper:z3 - Enable Z3 contraint solver support
@@ -3748,7 +3751,7 @@ mail-client/thunderbird:clang - Use Clang compiler instead of GCC
 mail-client/thunderbird:eme-free - Disable EME (DRM plugin) capability at build time
 mail-client/thunderbird:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
 mail-client/thunderbird:libproxy - Enable libproxy support
-mail-client/thunderbird:lto - Enable Link Time Optimization (LTO). Requires Gold linker when using GCC or LDD linker when using Clang
+mail-client/thunderbird:lto - Enable Link Time Optimization (LTO)
 mail-client/thunderbird:openh264 - Use media-libs/openh264 for H.264 support instead of downloading binary blob from Mozilla at runtime
 mail-client/thunderbird:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
 mail-client/thunderbird:sndio - Enable support for the media-sound/sndio backend
@@ -4402,6 +4405,7 @@ media-libs/sge:image - enable sdl-image support
 media-libs/spandsp:fixed-point - Enable fixed point support
 media-libs/speex:utils - Enables speex commandline utilities (speexenc, speexdec).
 media-libs/speex:vbr - Enable VBR support.
+media-libs/suil:gtk2 - Enable GTK2 based GUI support
 media-libs/svgalib:kernel-helper - Build the helper kernel module
 media-libs/tremor:low-accuracy - enable 32bit only multiply operations
 media-libs/urt:tools - Install tools
@@ -5392,8 +5396,6 @@ net-analyzer/sarg:glob - Disable to ignore wildcards in file names
 net-analyzer/sarg:pcre - Enable support for regular expressions in the hostalias file through dev-libs/libpcre
 net-analyzer/scanlogd:nids - Use net-libs/libnids for packet capturing
 net-analyzer/scanlogd:pcap - Use net-libs/libpcap for packet capturing
-net-analyzer/smokeping:dig - Install net-dns/bind-tools for dig functionality
-net-analyzer/smokeping:echoping - Install net-analyzer/echoping for echoping functionality
 net-analyzer/sngrep:eep - Enable EEP packet send/receive support
 net-analyzer/sngrep:gnutls - Use net-libs/gnutls to parse captured TLS packets
 net-analyzer/sngrep:openssl - Use dev-libs/openssl to parse captured TLS packets
@@ -8654,7 +8656,7 @@ www-client/firefox:geckodriver - Enable WebDriver support
 www-client/firefox:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
 www-client/firefox:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
 www-client/firefox:libproxy - Enable libproxy support
-www-client/firefox:lto - Enable Link Time Optimization (LTO) - Uses BFD linker with GCC and LLD linker with Clang
+www-client/firefox:lto - Enable Link Time Optimization (LTO)
 www-client/firefox:openh264 - Use media-libs/openh264 for H264 support instead of downloading binary blob from Mozilla at runtime
 www-client/firefox:pgo - Add support for profile-guided optimization for faster binaries - this option will double the compile time
 www-client/firefox:sndio - Enable support for the media-sound/sndio backend
@@ -8768,7 +8770,6 @@ www-servers/sniproxy:dns - Enable DNS resolver via net-libs/udns
 www-servers/sniproxy:largefile - Enable large file support (so we can log more than 2GB)
 www-servers/sniproxy:rfc3339 - Use RFC3339 timestamp format in log.
 www-servers/tomcat:extra-webapps - Build also the docs and examples webapp
-www-servers/tomcat:websockets - Builds websockets api and implementation (requires java 7)
 www-servers/uwsgi:embedded - Embed plugins instead of building them as real plugins. When disabling this USE flag make sure you specify all used plugins in your uWSGI configuration. Note: Language plugins will always be built as real plugins.
 www-servers/uwsgi:go - Build the gccgo plugin to run Go applications.
 www-servers/uwsgi:json - Support json as a configuration file format.
@@ -8979,8 +8980,6 @@ x11-terms/mlterm:skk - Enable support for SKK (virtual/skkserv or app-i18n/skk-j
 x11-terms/mlterm:uim - Enable support for app-i18n/uim
 x11-terms/mlterm:utempter - Enable support for sys-libs/libutempter
 x11-terms/mlterm:wayland - Enable support for Wayland
-x11-terms/mrxvt:menubar - Enable mrxvt menubar
-x11-terms/mrxvt:utempter - REcords user logins. Useful on multi-user systems
 x11-terms/rxvt-unicode:24-bit-color - Enable 24-bit color support. Note that this feature is unofficial, may cause visual glitches due to the fact there is no termcap/terminfo definition for rxvt-unicode-24bit yet so it is necessary to use the one for 256 colours, visibly increases memory usage, and might slow urxvt down dramatically when more than six fonts are in use in a terminal instance.
 x11-terms/rxvt-unicode:256-color - Enable 256 color support
 x11-terms/rxvt-unicode:blink - Enable blinking text

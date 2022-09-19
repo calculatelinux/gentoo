@@ -3,6 +3,7 @@ DEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DESCRIPTION=Flameeyes's Ruleset for ModSecurity
 EAPI=6
 HOMEPAGE=http://www.flameeyes.eu/projects/modsec
+INHERIT=readme.gentoo-r1 git-r3
 LICENSE=CC-BY-SA-3.0
 PROPERTIES=live
 RDEPEND=>=www-apache/mod_security-2.5.1

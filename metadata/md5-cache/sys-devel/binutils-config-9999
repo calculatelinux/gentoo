@@ -3,6 +3,7 @@ DEFINED_PHASES=compile install postinst unpack
 DESCRIPTION=Utility to change the binutils version being used
 EAPI=7
 HOMEPAGE=https://wiki.gentoo.org/wiki/Project:Toolchain
+INHERIT=git-r3
 IUSE=+native-symlinks
 LICENSE=GPL-2
 PROPERTIES=live

@@ -3,6 +3,7 @@ DEFINED_PHASES=install unpack
 DESCRIPTION=Connect scripts for use with vpnc and openconnect (and similar clients)
 EAPI=8
 HOMEPAGE=https://gitlab.com/openconnect/vpnc-scripts
+INHERIT=git-r3
 LICENSE=GPL-2+
 PROPERTIES=live
 RDEPEND=!<net-vpn/vpnc-0.5.3_p550-r3

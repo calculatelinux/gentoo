@@ -4,6 +4,7 @@ DEPEND=dev-db/sqlite:3 dev-qt/qtgui:5 dev-qt/qtwidgets:5 >=kde-frameworks/kauth-
 DESCRIPTION=Graphical Portage frontend based on KDE Frameworks
 EAPI=8
 HOMEPAGE=https://sourceforge.net/projects/kuroo/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm subversion
 IUSE=debug
 LICENSE=GPL-2

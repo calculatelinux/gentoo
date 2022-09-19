@@ -4,6 +4,7 @@ DEPEND=dev-libs/glib:2 dev-libs/jansson:= dev-qt/qtcore:5 dev-qt/qtdeclarative:5
 DESCRIPTION=Software for Recording and Streaming Live Video Content
 EAPI=8
 HOMEPAGE=https://obsproject.com
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake lua-single python-single-r1 xdg
 IUSE=+alsa browser decklink fdk jack lua nvenc pipewire pulseaudio python speex +ssl truetype v4l vlc wayland +lua_single_target_luajit python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=~amd64 ~ppc64 ~x86

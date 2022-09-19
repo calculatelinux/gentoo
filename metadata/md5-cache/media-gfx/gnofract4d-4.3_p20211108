@@ -4,6 +4,7 @@ DEPEND=media-libs/libpng:0= virtual/jpeg
 DESCRIPTION=A program for drawing beautiful mathematically-based images known as fractals
 EAPI=8
 HOMEPAGE=https://fract4d.github.io/gnofract4d/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=distutils-r1 optfeature virtualx xdg
 IUSE=test python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10 test
 KEYWORDS=amd64 x86

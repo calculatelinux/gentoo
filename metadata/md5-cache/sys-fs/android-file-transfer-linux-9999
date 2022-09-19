@@ -4,6 +4,7 @@ DEPEND=sys-apps/file sys-libs/readline:0= fuse? ( sys-fs/fuse:0 ) python? ( pyth
 DESCRIPTION=Android File Transfer for Linux
 EAPI=8
 HOMEPAGE=https://github.com/whoozle/android-file-transfer-linux
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake python-single-r1 xdg git-r3
 IUSE=fuse python qt5 taglib zune python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 LICENSE=LGPL-2.1

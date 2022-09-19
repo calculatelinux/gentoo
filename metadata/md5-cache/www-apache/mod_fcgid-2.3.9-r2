@@ -3,6 +3,7 @@ DEPEND==www-servers/apache-2*
 DESCRIPTION=Binary-compatible alternative to mod_fastcgi with better process management
 EAPI=7
 HOMEPAGE=https://httpd.apache.org/mod_fcgid/
+INHERIT=apache-module depend.apache
 KEYWORDS=amd64 ~hppa ppc ~ppc64 x86
 LICENSE=GPL-2
 RDEPEND==www-servers/apache-2*

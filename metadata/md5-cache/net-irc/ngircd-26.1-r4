@@ -4,6 +4,7 @@ DEPEND=acct-user/ngircd irc-plus? ( virtual/libiconv ) ident? ( net-libs/libiden
 DESCRIPTION=An IRC server written from scratch
 EAPI=8
 HOMEPAGE=https://ngircd.barton.de/
+INHERIT=tmpfiles verify-sig
 IUSE=debug gnutls ident irc-plus +ipv6 pam +ssl strict-rfc tcpd test zlib verify-sig
 KEYWORDS=amd64 arm arm64 x86 ~x64-macos
 LICENSE=GPL-2

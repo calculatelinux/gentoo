@@ -4,6 +4,7 @@ DEPEND=app-text/cmark:= dev-libs/qcoro5 dev-libs/qtkeychain:= >=dev-qt/qtdeclara
 DESCRIPTION=Client for Matrix, the decentralized communication protocol
 EAPI=8
 HOMEPAGE=https://apps.kde.org/neochat/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm plasma-mobile.kde.org
 IUSE=debug
 KEYWORDS=~amd64 ~arm64 ~ppc64

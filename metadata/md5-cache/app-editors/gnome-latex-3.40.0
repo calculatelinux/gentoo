@@ -4,6 +4,7 @@ DEPEND=>=app-text/gspell-1.8:0= >=dev-libs/glib-2.56:2 >=dev-libs/libgee-0.10:0.
 DESCRIPTION=Integrated LaTeX environment for GNOME
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/Apps/GNOME-LaTeX https://gitlab.gnome.org/swilmet/gnome-latex
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome2
 IUSE=+introspection +latexmk rubber
 KEYWORDS=amd64 ~riscv x86

@@ -4,6 +4,7 @@ DEPEND=net-wireless/kismet
 DESCRIPTION=Mobile UI for kismet
 EAPI=7
 HOMEPAGE=https://github.com/elkentaro/KismetMobileDashboard
+INHERIT=git-r3
 LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=net-wireless/kismet

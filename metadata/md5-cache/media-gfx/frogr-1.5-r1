@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/glib-2.44:2 >=dev-libs/json-glib-1.2 >=x11-libs/gtk+-3.16:3[in
 DESCRIPTION=flickr applications for GNOME
 EAPI=8
 HOMEPAGE=https://live.gnome.org/Frogr
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome.org gnome2-utils meson xdg
 KEYWORDS=~amd64
 LICENSE=GPL-3

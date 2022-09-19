@@ -3,6 +3,7 @@ DEFINED_PHASES=install postinst postrm test
 DESCRIPTION=PEAR class for IP v6 calculations
 EAPI=7
 HOMEPAGE=https://pear.php.net/package/Net_IPv6
+INHERIT=php-pear-r2
 IUSE=test
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD-2

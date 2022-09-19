@@ -4,6 +4,7 @@ DEPEND=dev-cpp/atkmm:0 dev-cpp/glibmm:2 dev-cpp/gtkmm:3.0 dev-libs/glib:2 dev-li
 DESCRIPTION=PulseAudio Preferences, configuration dialog for PulseAudio
 EAPI=8
 HOMEPAGE=https://freedesktop.org/software/pulseaudio/paprefs
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=flag-o-matic meson xdg
 KEYWORDS=amd64 ~ppc ~sparc x86
 LICENSE=GPL-2+

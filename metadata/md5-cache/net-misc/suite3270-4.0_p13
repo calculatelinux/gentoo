@@ -4,6 +4,7 @@ DEPEND=ssl? ( dev-libs/openssl:0= ) X? ( x11-libs/libX11 x11-libs/libXaw x11-lib
 DESCRIPTION=Complete 3270 access package
 EAPI=7
 HOMEPAGE=http://x3270.bgp.nu/
+INHERIT=font
 IUSE=cjk doc ncurses ssl tcl X X
 KEYWORDS=amd64 ppc ~s390 sparc x86
 LICENSE=GPL-2

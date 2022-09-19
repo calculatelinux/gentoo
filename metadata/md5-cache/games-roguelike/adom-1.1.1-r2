@@ -2,6 +2,7 @@ DEFINED_PHASES=install
 DESCRIPTION=Ancient Domains Of Mystery rogue-like game
 EAPI=7
 HOMEPAGE=https://www.adom.de/
+INHERIT=edos2unix
 KEYWORDS=~amd64 ~x86
 LICENSE=adom
 RDEPEND=sys-libs/ncurses-compat:5[abi_x86_32(-)]

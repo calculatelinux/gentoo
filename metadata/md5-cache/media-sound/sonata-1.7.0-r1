@@ -3,6 +3,7 @@ DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup t
 DESCRIPTION=Elegant GTK+ music client for the Music Player Daemon (MPD)
 EAPI=8
 HOMEPAGE=https://www.nongnu.org/sonata/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop distutils-r1 xdg
 IUSE=dbus taglib test python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=amd64 ~ppc x86

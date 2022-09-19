@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/glib-2.67.4:2 gtk? ( >=x11-libs/gtk+-3.22.0:3 >=dev-libs/libda
 DESCRIPTION=System-wide Linux Profiler
 EAPI=8
 HOMEPAGE=http://sysprof.com/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome.org gnome2-utils meson systemd xdg
 IUSE=gtk +unwind
 KEYWORDS=amd64 ~arm64 x86

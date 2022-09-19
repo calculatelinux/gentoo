@@ -4,6 +4,7 @@ DEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtwidgets:5 medi
 DESCRIPTION=Qt application to control FluidSynth
 EAPI=8
 HOMEPAGE=https://qsynth.sourceforge.io/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake desktop xdg git-r3
 IUSE=+alsa debug jack pulseaudio
 LICENSE=GPL-2

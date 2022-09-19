@@ -4,6 +4,7 @@ DEPEND=python_single_target_python3_8? ( >=dev-lang/python-3.8.13:3.8 ) python_s
 DESCRIPTION=Backup system inspired by TimeVault and FlyBack
 EAPI=8
 HOMEPAGE=https://backintime.readthedocs.io/en/latest/ https://github.com/bit-team/backintime/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=python-single-r1 git-r3 xdg
 IUSE=examples qt5 python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 LICENSE=GPL-2

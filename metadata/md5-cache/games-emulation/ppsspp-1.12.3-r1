@@ -4,6 +4,7 @@ DEPEND=app-arch/snappy:= dev-libs/libzip:= dev-util/glslang:= media-libs/glew:= 
 DESCRIPTION=A PSP emulator written in C++
 EAPI=8
 HOMEPAGE=https://www.ppsspp.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop xdg cmake
 IUSE=discord qt5
 KEYWORDS=~amd64

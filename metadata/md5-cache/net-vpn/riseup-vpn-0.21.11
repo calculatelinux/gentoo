@@ -4,6 +4,7 @@ DEPEND=dev-qt/qtcore:5 dev-qt/qtdeclarative:5[widgets] dev-qt/qtquickcontrols:5[
 DESCRIPTION=Anonymous encrypted VPN client powered by Bitmask
 EAPI=8
 HOMEPAGE=https://riseup.net/en/vpn https://0xacab.org/leap/bitmask-vpn https://bitmask.net
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop python-single-r1 go-module qmake-utils virtualx xdg
 IUSE=test python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10 python_single_target_python3_11 test
 KEYWORDS=~amd64

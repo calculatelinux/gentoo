@@ -3,6 +3,7 @@ DEFINED_PHASES=install
 DESCRIPTION=Ultimate Packer for eXecutables, binary version with proprietary NRV compression
 EAPI=7
 HOMEPAGE=https://upx.github.io/
+INHERIT=pax-utils
 KEYWORDS=~amd64 ~arm ~arm64 ~mips ~ppc ~ppc64 ~x86
 LICENSE=GPL-2
 RDEPEND=!app-arch/upx

@@ -4,6 +4,7 @@ DEPEND=dev-python/chardet[python_targets_python3_8(-)?,python_targets_python3_9(
 DESCRIPTION=Simple editor for Markdown and reStructuredText
 EAPI=8
 HOMEPAGE=https://github.com/retext-project/retext https://github.com/retext-project/retext/wiki
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=distutils-r1 optfeature qmake-utils virtualx xdg git-r3
 IUSE=test python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 test
 LICENSE=GPL-2+

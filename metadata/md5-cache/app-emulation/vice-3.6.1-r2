@@ -4,6 +4,7 @@ DEPEND=virtual/libintl alsa? ( media-libs/alsa-lib ) ethernet? ( net-libs/libpca
 DESCRIPTION=The Versatile Commodore Emulator
 EAPI=8
 HOMEPAGE=https://vice-emu.sourceforge.io/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=multibuild toolchain-funcs xdg
 IUSE=alsa cpuhistory debug doc ethernet ffmpeg flac gif +gtk headless jpeg lame mpg123 ogg openmp oss parport pci png portaudio pulseaudio sdl zlib
 KEYWORDS=amd64 ~arm64 x86

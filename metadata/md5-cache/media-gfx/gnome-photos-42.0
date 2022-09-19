@@ -4,6 +4,7 @@ DEPEND=media-libs/babl >=x11-libs/cairo-1.14.0 >=x11-libs/gdk-pixbuf-2.36.8:2 >=
 DESCRIPTION=Access, organize and share your photos on GNOME
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/Apps/Photos
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome.org gnome2-utils meson python-any-r1 virtualx xdg
 IUSE=flickr test upnp-av test
 KEYWORDS=amd64 arm64 ~ppc64 ~riscv x86

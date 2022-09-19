@@ -3,6 +3,7 @@ DEFINED_PHASES=install unpack
 DESCRIPTION=Perl extension for rxvt-unicode to change the font size on the fly
 EAPI=7
 HOMEPAGE=https://github.com/majutsushi/urxvt-font-size/
+INHERIT=git-r3
 LICENSE=MIT
 PROPERTIES=live
 RDEPEND=x11-apps/xlsfonts x11-terms/rxvt-unicode[perl]

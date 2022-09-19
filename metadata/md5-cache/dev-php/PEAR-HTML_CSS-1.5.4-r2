@@ -3,6 +3,7 @@ DEPEND=test? ( >=dev-php/PEAR-HTML_Common-1.2.4 !minimal? ( >=dev-php/PEAR-Servi
 DESCRIPTION=Provides a simple interface for generating a stylesheet declaration
 EAPI=6
 HOMEPAGE=https://pear.php.net/package/HTML_CSS
+INHERIT=php-pear-r2
 IUSE=minimal test
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD

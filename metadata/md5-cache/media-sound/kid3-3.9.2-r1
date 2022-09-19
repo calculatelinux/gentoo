@@ -4,6 +4,7 @@ DEPEND=dev-qt/qtcore:5 dev-qt/qtdeclarative:5 dev-qt/qtgui:5 dev-qt/qtmultimedia
 DESCRIPTION=Simple tag editor based on Qt
 EAPI=8
 HOMEPAGE=https://kid3.kde.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake kde.org python-any-r1 xdg
 IUSE=acoustid flac kde mp3 mp4 +mpris +taglib test vorbis
 KEYWORDS=amd64 x86

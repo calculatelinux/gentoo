@@ -2,6 +2,7 @@ DEFINED_PHASES=install
 DESCRIPTION=Another ELF packer for the PS2
 EAPI=7
 HOMEPAGE=https://github.com/ps2dev/ps2-packer
+INHERIT=wrapper
 KEYWORDS=-* amd64 x86
 LICENSE=GPL-2
 RDEPEND=sys-libs/glibc

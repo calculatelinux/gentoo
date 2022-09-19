@@ -4,6 +4,7 @@ DEPEND=>=app-accessibility/at-spi2-core-2.5.2:2 >=x11-libs/gtk+-3.1.13:3[introsp
 DESCRIPTION=Interactive Python accessibility explorer
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/Apps/Accerciser https://gitlab.gnome.org/GNOME/accerciser
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome2 python-single-r1
 IUSE=python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=amd64 x86

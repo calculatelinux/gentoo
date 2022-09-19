@@ -4,6 +4,7 @@ DEPEND=dev-libs/glib:2 sys-libs/zlib x11-libs/pango x11-libs/gtk+:3[wayland] jud
 DESCRIPTION=A wave viewer for LXT, LXT2, VZT, GHW and standard Verilog VCD/EVCD files
 EAPI=8
 HOMEPAGE=http://gtkwave.sourceforge.net/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=toolchain-funcs xdg
 IUSE=doc examples fasttree judy lzma packed tcl
 KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux

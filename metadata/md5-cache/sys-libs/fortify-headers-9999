@@ -3,6 +3,7 @@ DEFINED_PHASES=compile install prepare unpack
 DESCRIPTION=A standalone implementation of fortify source
 EAPI=7
 HOMEPAGE=http://git.2f30.org/fortify-headers/
+INHERIT=git-r3
 LICENSE=ISC
 PROPERTIES=live
 SLOT=0

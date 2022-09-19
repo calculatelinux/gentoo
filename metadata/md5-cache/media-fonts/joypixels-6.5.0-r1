@@ -3,6 +3,7 @@ DEFINED_PHASES=install postinst postrm prepare setup
 DESCRIPTION=A font for better emoji and unicode support
 EAPI=7
 HOMEPAGE=https://www.joypixels.com/
+INHERIT=font readme.gentoo-r1
 IUSE=X
 KEYWORDS=amd64 ~arm64 ~riscv x86
 LICENSE=JoyPixels

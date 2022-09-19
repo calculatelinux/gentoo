@@ -4,6 +4,7 @@ DEPEND=>=gnome-base/gnome-desktop-2.91.0:3= >=x11-libs/gdk-pixbuf-2.26.0:2 >=x11
 DESCRIPTION=The GNOME Flashback Panel
 EAPI=8
 HOMEPAGE=https://gitlab.gnome.org/GNOME/gnome-panel/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome2 toolchain-funcs
 IUSE=eds elogind systemd
 KEYWORDS=~amd64 ~riscv

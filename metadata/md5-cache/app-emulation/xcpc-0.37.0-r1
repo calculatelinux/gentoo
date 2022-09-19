@@ -3,6 +3,7 @@ DEPEND=app-arch/bzip2 sys-libs/zlib x11-libs/gtk+:3 x11-libs/libX11 x11-libs/lib
 DESCRIPTION=XCPC is a portable Amstrad CPC 464/664/6128 emulator written in C
 EAPI=8
 HOMEPAGE=http://www.xcpc-emulator.net/doku.php/index
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=xdg
 KEYWORDS=~amd64
 LICENSE=GPL-2

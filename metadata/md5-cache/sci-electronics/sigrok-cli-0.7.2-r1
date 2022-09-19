@@ -3,6 +3,7 @@ DEPEND=>=dev-libs/glib-2.32.0 >=sci-libs/libsigrok-0.5.0:= decode? ( >=sci-libs/
 DESCRIPTION=Command-line client for the sigrok logic analyzer software
 EAPI=7
 HOMEPAGE=https://sigrok.org/wiki/Sigrok-cli
+INHERIT=xdg-utils
 IUSE=+decode
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3

@@ -4,6 +4,7 @@ DEPEND=dev-go/go-colortext:=
 DESCRIPTION=Go Dependency management system similar to bundle for ruby
 EAPI=7
 HOMEPAGE=https://github.com/mattn/gom
+INHERIT=golang-build golang-vcs-snapshot
 KEYWORDS=~amd64
 LICENSE=MIT
 RDEPEND=!media-sound/gom

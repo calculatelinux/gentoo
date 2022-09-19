@@ -3,6 +3,7 @@ DEFINED_PHASES=compile install postinst test unpack
 DESCRIPTION=A flexible DNS proxy, with support for encrypted DNS protocols
 EAPI=8
 HOMEPAGE=https://github.com/DNSCrypt/dnscrypt-proxy
+IDEPEND=filecaps? ( sys-libs/libcap )
 INHERIT=fcaps go-module systemd
 IUSE=+pie +filecaps
 KEYWORDS=~amd64 ~arm ~arm64 ~ppc64 ~x86

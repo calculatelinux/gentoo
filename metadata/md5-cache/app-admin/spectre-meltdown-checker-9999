@@ -3,6 +3,7 @@ DEFINED_PHASES=install unpack
 DESCRIPTION=Spectre & Meltdown vulnerability/mitigation checker for Linux
 EAPI=8
 HOMEPAGE=https://github.com/speed47/spectre-meltdown-checker
+INHERIT=git-r3
 LICENSE=GPL-3+
 PROPERTIES=live
 SLOT=0

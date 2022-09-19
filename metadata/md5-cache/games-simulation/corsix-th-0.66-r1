@@ -4,6 +4,7 @@ DEPEND=lua_single_target_lua5-1? ( dev-lang/lua:5.1 ) lua_single_target_lua5-3? 
 DESCRIPTION=Open source clone of Theme Hospital
 EAPI=8
 HOMEPAGE=https://corsixth.com
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake lua-single xdg
 IUSE=doc +midi +sound +truetype +videos lua_single_target_lua5-1 lua_single_target_lua5-3 lua_single_target_lua5-4
 KEYWORDS=~amd64 ~arm ~arm64 ~x86

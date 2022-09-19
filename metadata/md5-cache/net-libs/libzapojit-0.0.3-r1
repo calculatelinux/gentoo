@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/glib-2.28:2 >=net-libs/libsoup-2.38:2.4 dev-libs/json-glib net
 DESCRIPTION=GLib/GObject wrapper for the SkyDrive and Hotmail REST APIs
 EAPI=8
 HOMEPAGE=https://gitlab.gnome.org/GNOME/libzapojit
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome2
 IUSE=+introspection
 KEYWORDS=amd64 ~arm arm64 ~ppc64 ~riscv ~sparc x86

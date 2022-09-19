@@ -4,6 +4,7 @@ DEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtmultimedia:5 dev-qt/qtnetwork:5 d
 DESCRIPTION=A BBS client based on Qt
 EAPI=8
 HOMEPAGE=https://github.com/qterm/qterm
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake xdg
 KEYWORDS=amd64 x86
 LICENSE=GPL-3

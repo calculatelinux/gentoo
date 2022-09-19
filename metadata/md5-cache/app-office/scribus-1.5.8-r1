@@ -4,6 +4,7 @@ DEPEND=python_single_target_python3_8? ( >=dev-lang/python-3.8.13:3.8[tk?] ) pyt
 DESCRIPTION=Desktop publishing (DTP) and layout program
 EAPI=8
 HOMEPAGE=https://www.scribus.net/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake desktop flag-o-matic python-single-r1 xdg
 IUSE=+boost debug examples graphicsmagick hunspell +minimal osg +pdf scripts +templates tk python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS=amd64 ppc ppc64 x86

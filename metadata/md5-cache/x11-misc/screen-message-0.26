@@ -3,6 +3,7 @@ DEPEND=x11-libs/gtk+:3 x11-libs/cairo >=x11-libs/pango-1.16 dev-util/desktop-fil
 DESCRIPTION=Display a multi-line message large, fullscreen, black on white
 EAPI=7
 HOMEPAGE=http://www.joachim-breitner.de/projects#screen-message
+INHERIT=xdg
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2+
 RDEPEND=x11-libs/gtk+:3 x11-libs/cairo >=x11-libs/pango-1.16

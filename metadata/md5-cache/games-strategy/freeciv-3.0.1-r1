@@ -4,6 +4,7 @@ DEPEND=app-arch/bzip2 app-arch/xz-utils net-misc/curl dev-libs/icu:= sys-libs/zl
 DESCRIPTION=Multiplayer strategy game (Civilization Clone)
 EAPI=8
 HOMEPAGE=http://www.freeciv.org/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop lua-single qmake-utils xdg
 IUSE=aimodules auth dedicated +gtk ipv6 mapimg modpack mysql nls qt5 readline sdl +server +sound sqlite system-lua +lua_single_target_lua5-3
 KEYWORDS=~amd64 ~ppc64 ~x86

@@ -4,6 +4,7 @@ DEPEND=dev-qt/qtgui:5 dev-qt/qtwidgets:5 kde-frameworks/kcompletion:5 kde-framew
 DESCRIPTION=KIO worker for the locate command
 EAPI=8
 HOMEPAGE=https://www.linux-apps.com/content/show.php/kio-locate?content=120965
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm
 IUSE=debug +handbook
 KEYWORDS=~amd64 ~arm64 ~x86

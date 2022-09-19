@@ -3,6 +3,7 @@ DEFINED_PHASES=compile configure install postinst postrm preinst prepare test un
 DESCRIPTION=Multiple GNOME terminals in one window
 EAPI=8
 HOMEPAGE=https://github.com/gnome-terminator/terminator
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=distutils-r1 optfeature verify-sig virtualx xdg
 IUSE=test test python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 verify-sig test
 KEYWORDS=amd64 ~ppc ~riscv x86

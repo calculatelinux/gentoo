@@ -4,6 +4,7 @@ DEPEND=dev-libs/libdbusmenu-qt dev-libs/quazip:0=[qt5(+)] dev-qt/qtcore:5 dev-qt
 DESCRIPTION=Corsair K65/K70/K95 Driver
 EAPI=8
 HOMEPAGE=https://github.com/ckb-next/ckb-next
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=cmake udev xdg
 IUSE=systemd
 KEYWORDS=amd64

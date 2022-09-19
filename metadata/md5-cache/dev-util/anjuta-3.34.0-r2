@@ -4,6 +4,7 @@ DEPEND=>=dev-libs/gdl-3.5.5:3= >=dev-libs/glib-2.34:2[dbus] >=dev-libs/libxml2-2
 DESCRIPTION=Base library of defunct IDE for GNOME to run applications
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/Apps/Anjuta https://gitlab.gnome.org/Archive/anjuta
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=gnome2
 KEYWORDS=~amd64 ~ppc ~sparc ~x86
 LICENSE=GPL-2+

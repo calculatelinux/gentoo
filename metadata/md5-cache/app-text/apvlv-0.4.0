@@ -4,6 +4,7 @@ DEPEND=app-text/ebook-tools >=app-text/poppler-0.5.0:=[cairo,xpdf-headers(+)] de
 DESCRIPTION=Alf's PDF/DJVU/EPUB Viewer like Vim
 EAPI=8
 HOMEPAGE=https://github.com/naihe2010/apvlv/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=xdg cmake desktop
 IUSE=debug djvu
 KEYWORDS=~amd64 ~x86

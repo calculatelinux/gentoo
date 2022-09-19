@@ -3,6 +3,7 @@ DEPEND=test? ( || ( ( dev-php/pecl-mcrypt >=dev-lang/php-7.2:*[hash(+)] ) <dev-l
 DESCRIPTION=Generating CHAP packets
 EAPI=7
 HOMEPAGE=https://pear.php.net/package/Crypt_CHAP
+INHERIT=php-pear-r2
 IUSE=test
 KEYWORDS=amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86
 LICENSE=BSD

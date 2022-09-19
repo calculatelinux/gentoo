@@ -4,6 +4,7 @@ DEPEND=>=dev-qt/qtgui-5.15.5:5 wayland? ( dev-libs/wayland >=dev-qt/qtgui-5.15.5
 DESCRIPTION=Framework providing assorted high-level user interface components
 EAPI=8
 HOMEPAGE=https://develop.kde.org/products/frameworks/
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm frameworks.kde.org
 IUSE=wayland X test debug doc test
 KEYWORDS=~amd64 ~arm ~arm64 ~loong ~ppc64 ~riscv ~x86

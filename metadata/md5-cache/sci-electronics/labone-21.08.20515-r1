@@ -3,6 +3,7 @@ DEFINED_PHASES=install postinst postrm preinst
 DESCRIPTION=Platform independent instrument control for Zurich Instruments devices
 EAPI=8
 HOMEPAGE=https://www.zhinst.com/labone
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=xdg desktop systemd udev
 IUSE=minimal
 KEYWORDS=-* ~amd64

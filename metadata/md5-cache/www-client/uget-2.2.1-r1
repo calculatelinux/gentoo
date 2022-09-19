@@ -4,6 +4,7 @@ DEPEND=dev-libs/glib:2 dev-libs/libpcre net-misc/curl >=x11-libs/gtk+-3.4:3 gnut
 DESCRIPTION=Download manager using gtk+ and libcurl
 EAPI=7
 HOMEPAGE=http://www.ugetdm.com
+INHERIT=xdg
 IUSE=aria2 appindicator control-socket +gnutls gstreamer libnotify nls openssl rss
 KEYWORDS=amd64 ~arm ~ppc x86
 LICENSE=LGPL-2.1

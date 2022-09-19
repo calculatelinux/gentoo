@@ -3,6 +3,7 @@ DEPEND=systemd? ( sys-apps/systemd ) acct-group/postfix_exporter acct-user/postf
 DESCRIPTION=Prometheus Exporter for Postfix
 EAPI=6
 HOMEPAGE=https://github.com/kumina/postfix_exporter
+INHERIT=golang-build golang-vcs-snapshot
 IUSE=systemd
 KEYWORDS=~amd64
 LICENSE=Apache-2.0 BSD MIT

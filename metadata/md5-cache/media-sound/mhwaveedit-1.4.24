@@ -4,6 +4,7 @@ DEPEND=x11-libs/gtk+:2 x11-libs/pango alsa? ( media-libs/alsa-lib:= ) jack? ( vi
 DESCRIPTION=GTK+ Sound file editor (wav, and a few others.)
 EAPI=7
 HOMEPAGE=https://github.com/magnush/mhwaveedit/
+INHERIT=xdg
 IUSE=alsa jack ladspa libsamplerate nls oss pulseaudio sdl sndfile sox
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2

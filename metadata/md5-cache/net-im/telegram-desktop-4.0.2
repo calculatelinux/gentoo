@@ -4,6 +4,7 @@ DEPEND=!net-im/telegram-desktop-bin app-arch/lz4:= dev-cpp/abseil-cpp:= dev-libs
 DESCRIPTION=Official desktop client for Telegram
 EAPI=8
 HOMEPAGE=https://desktop.telegram.org
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=xdg cmake python-any-r1 optfeature
 IUSE=+dbus enchant +hunspell +jemalloc screencast +spell qt6 wayland +X
 KEYWORDS=~amd64 ~arm64 ~ppc64 ~riscv

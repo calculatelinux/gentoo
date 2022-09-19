@@ -4,6 +4,7 @@ DEPEND=python_targets_python3_8? ( >=dev-lang/python-3.8.13:3.8 ) python_targets
 DESCRIPTION=DevedeNG is a program to create video DVDs and CDs (VCD, sVCD or CVD)
 EAPI=8
 HOMEPAGE=https://www.rastersoft.com/programas/devede.html
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=distutils-r1 xdg
 IUSE=python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS=~amd64 ~x86

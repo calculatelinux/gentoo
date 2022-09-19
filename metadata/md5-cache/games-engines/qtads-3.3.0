@@ -4,6 +4,7 @@ DEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5[jpeg,png] dev-qt/qtimageformats[mng] dev-q
 DESCRIPTION=Multimedia interpreter for TADS text adventures
 EAPI=8
 HOMEPAGE=https://realnc.github.io/qtads
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=qmake-utils xdg
 IUSE=+sound
 KEYWORDS=~amd64 ~x86

@@ -4,6 +4,7 @@ DEPEND=>=dev-qt/qtgui-5.15.2:5 >=dev-qt/qtwidgets-5.15.2:5 >=kde-frameworks/kcon
 DESCRIPTION=The Japanese warehouse keeper game
 EAPI=8
 HOMEPAGE=https://invent.kde.org/games/ksokoban
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=ecm kde.org
 IUSE=debug +handbook
 LICENSE=GPL-2

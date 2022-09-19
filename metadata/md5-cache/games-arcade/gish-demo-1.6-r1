@@ -2,6 +2,7 @@ DEFINED_PHASES=install
 DESCRIPTION=Play as an amorphous ball of tar that rolls and squishes around
 EAPI=7
 HOMEPAGE=http://www.chroniclogic.com/gish.htm
+INHERIT=wrapper
 KEYWORDS=-* ~amd64 ~x86
 LICENSE=all-rights-reserved
 RDEPEND=>=media-libs/openal-1.6.372 media-libs/libsdl media-libs/libvorbis virtual/opengl x11-libs/libX11

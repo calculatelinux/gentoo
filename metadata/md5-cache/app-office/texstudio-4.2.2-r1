@@ -4,6 +4,7 @@ DEPEND=app-text/hunspell:= app-text/poppler:=[qt5] >=dev-libs/quazip-1.0:0=[qt5(
 DESCRIPTION=Free cross-platform LaTeX editor (fork from texmakerX)
 EAPI=8
 HOMEPAGE=https://www.texstudio.org https://github.com/texstudio-org/texstudio
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=desktop qmake-utils xdg
 IUSE=video
 KEYWORDS=~amd64 ~ppc ~ppc64 ~x86

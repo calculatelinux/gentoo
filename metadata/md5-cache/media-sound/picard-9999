@@ -3,6 +3,7 @@ DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup t
 DESCRIPTION=Cross-platform music tagger
 EAPI=8
 HOMEPAGE=https://picard.musicbrainz.org
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=distutils-r1 xdg git-r3
 IUSE=discid fingerprints nls test python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10 python_single_target_python3_11
 LICENSE=GPL-2+
