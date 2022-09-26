@@ -33,6 +33,31 @@
 
 #--- END OF EXAMPLES ---
 
+# Ionen Wolkens <ionen@gentoo.org> (2022-09-25)
+# This version been causing major issues for some RTX 30xx users and
+# no real reason not to stick to 515.65.01 for now (but feel free to
+# unmask if it's been fine and need it, notably has fixes to build
+# with upcoming 6.0 linux kernels).
+# https://bugs.archlinux.org/task/75995
+# https://forums.developer.nvidia.com/t/bug-report-black-x11-screen-and-partial-lockup-when-upgraded-to-515-76-and-dual-rtx3060
+~x11-drivers/nvidia-drivers-515.76
+
+# Piotr Karbowski <slashbeast@gentoo.org> (2022-09-25)
+# No package in tree depends on dev-python/ssh2-python. Masked for removal.
+# Removal on 2022-10-25.
+dev-python/ssh2-python
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2022-09-23)
+# Unmaintained upstream, obsolete after introduction of kde-misc/markdownpart.
+# Removal on 2022-10-23.
+kde-misc/kmarkdownwebview
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2022-09-23)
+# Broken after Google stopped accepting "Less Secure Apps".
+# https://github.com/Intika-KDE-Plasmoids/plasmoid-ultimate-gmail-feed/issues/32
+# Use kde-misc/gmail-feed instead; removal on 2022-10-23.
+kde-misc/ultimate-gmail-feed
+
 # John Helmert III <ajak@gentoo.org> (2022-09-18)
 # Unfixed root privilege escalation, bug #631552
 sys-cluster/slurm
@@ -336,8 +361,10 @@ dev-python/PyQt6-WebEngine
 dev-qt/qt5compat:6
 dev-qt/qtbase:6
 dev-qt/qtdeclarative:6
+dev-qt/qtimageformats:6
 dev-qt/qtlocation:6
 dev-qt/qtmultimedia:6
+dev-qt/qtnetworkauth:6
 dev-qt/qtpositioning:6
 dev-qt/qtquick3d:6
 dev-qt/qtquicktimeline:6
@@ -443,12 +470,6 @@ sys-devel/automake:1.15
 # security, or stability." Feel free to unmask if this is not a
 # necessity.
 <net-p2p/arti-1.0.0
-
-# Stephan Hartmann <sultan@gentoo.org> (2022-08-20)
-# Dev channel releases are only for people who
-# are developers or want more experimental features
-# and accept a more unstable release.
->=www-client/chromium-106
 
 # Anton Fischl <github@fischl-online.de> (2022-02-23)
 # Version 2.5.* is not meant for production according to upstream

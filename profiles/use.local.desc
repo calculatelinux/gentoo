@@ -3950,6 +3950,7 @@ media-gfx/blender:opencl - Allow OpenCL Graphics Acceleration. This may require 
 media-gfx/blender:openimageio - Enable OpenImageIO Support
 media-gfx/blender:opensubdiv - Add rendering support form OpenSubdiv from Dreamworks Animation through media-libs/opensubdiv.
 media-gfx/blender:openvdb - Enable openvdb for volumetric processing, like the voxel remesher. Also enables volumetric GPU preview rendering for Nvidia cards.
+media-gfx/blender:optix - Add support for NVIDIA's OptiX Raytracing Engine.
 media-gfx/blender:osl - Add support for OpenShadingLanguage scripting.
 media-gfx/blender:potrace - Add support for converting bitmaps into Grease pencil line using the potrace library.
 media-gfx/blender:pugixml - Enable PugiXML support (Used for OpenImageIO, Grease Pencil SVG export)
@@ -4089,6 +4090,7 @@ media-gfx/openvdb:abi6-compat - Disables newer features to maintain compatibilit
 media-gfx/openvdb:abi7-compat - Disables newer features to maintain compatibility with ABI7.
 media-gfx/openvdb:abi8-compat - Disables newer features to maintain compatibility with ABI8.
 media-gfx/openvdb:abi9-compat - Disables newer features to maintain compatibility with ABI9.
+media-gfx/openvdb:ax - Build the OpenVDB AX module to perform custom manipulation of OpenVDB data via an expression language: AX.
 media-gfx/openvdb:blosc - Allow using blosc compression via dev-libs/c-blosc
 media-gfx/openvdb:cuda - Enable support for CUDA in NanoVDB.
 media-gfx/openvdb:nanovdb - A lightweight, header only, and GPU friendly version of VDB.
@@ -4096,6 +4098,7 @@ media-gfx/openvdb:numpy - Build pyopenvdb with support for dev-python/numpy
 media-gfx/openvdb:utils - Build utility binaries
 media-gfx/photoqt:devil - Support additional image formats using media-libs/devil
 media-gfx/photoqt:freeimage - Support additional image formats using media-libs/freeimage
+media-gfx/photoqt:mpv - Support for video files using media-video/mpv
 media-gfx/potrace:metric - default to a4 paper size and metric measurement
 media-gfx/povray:io-restrictions - POV-Ray's mechanism for control of I/O operations
 media-gfx/pqiv:archive - Enable support for images in archives and cbX comic book files
@@ -7216,6 +7219,14 @@ sci-geosciences/mapserver:geos - Enable sci-libs/geos library support
 sci-geosciences/mapserver:postgis - Enable dev-db/postgis support
 sci-geosciences/merkaartor:libproxy - Use net-libs/libproxy for getting the HTTP/HTTPS/SOCKS proxy configuration
 sci-geosciences/merkaartor:webengine - Enable dev-qt/qtwebengine in some plugins
+sci-geosciences/owntracks-recorder:crypt - Enable support for payload encryption with dev-libs/libsodium
+sci-geosciences/owntracks-recorder:greenwich - Enable support for the OwnTracks Greenwich firmware
+sci-geosciences/owntracks-recorder:http - Enable support for the built-in HTTP REST API
+sci-geosciences/owntracks-recorder:kill - Enable support removing data via the API (dangerous)
+sci-geosciences/owntracks-recorder:lua - Enable support for Lua hook integration
+sci-geosciences/owntracks-recorder:mqtt - Enable MQTT support
+sci-geosciences/owntracks-recorder:ping - Enable support for the "pingping" monitoring feature
+sci-geosciences/owntracks-recorder:tours - Enable recorder support for shared views
 sci-geosciences/qgis:3d - Build QGIS 3D library using dev-qt/qt3d
 sci-geosciences/qgis:georeferencer - Determines whether georeferencer plugin should be built
 sci-geosciences/qgis:grass - Add support for grass
@@ -8888,7 +8899,7 @@ x11-misc/clipmenu:rofi - Use rofi as default launcher
 x11-misc/colord:argyllcms - Enable ArgyllCMS sensor
 x11-misc/colord:extra-print-profiles - Generate extra print profiles. Warning: significant build time and memory requirements.
 x11-misc/fbpager:xrender - Enable transparency support via x11-libs/libXrender
-x11-misc/gmrun:xdg - Enable xdf spec for configuration and history file location
+x11-misc/gmrun:xdg - Enable xdg spec for configuration and history files location
 x11-misc/gpaste:gnome - Enable proper gnome support and enable gnome shell extension.
 x11-misc/grsync:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 x11-misc/gtkdialog:gtk2 - Build with GTK+2 instead of GTK+3
