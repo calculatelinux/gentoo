@@ -2405,10 +2405,10 @@ dev-python/hypothesis:cli - Install a CLI tool used to write tests.
 dev-python/icalendar:doc - Generate examples and other extra documentation
 dev-python/ipython:matplotlib - Add support for dev-python/matplotlib
 dev-python/ipython:nbconvert - Enable support for converting notebooks to various formats using app-text/pandoc
-dev-python/ipython:notebook - Install requirements for the web notebook based on www-servers/tornado
+dev-python/ipython:notebook - Install requirements for the web notebook based on dev-python/tornado
 dev-python/matplotlib:excel - Pull dev-python/xlwt for the exceltools toolkit
 dev-python/matplotlib:gtk3 - Enable x11-libs/gtk+:3 support
-dev-python/matplotlib:webagg - Enable webagg backend that uses www-servers/tornado
+dev-python/matplotlib:webagg - Enable webagg backend that uses dev-python/tornado
 dev-python/mpmath:matplotlib - Add support for dev-python/matplotlib
 dev-python/msgpack:native-extensions - Compiles native "C" extensions (speedups, instead of using python fallback code).
 dev-python/nbdime:webtools - Install web-based diff and merge tools.
@@ -2894,7 +2894,8 @@ dev-util/sccache:dist-client - Enables distributed support in the sccache client
 dev-util/sccache:dist-server - Enables the sccache-dist binary
 dev-util/sccache:gcs - Enable Google Cloud Storage support
 dev-util/sccache:redis - Enable Redis support
-dev-util/sccache:s3 - Enable Amazon S3 support
+dev-util/sccache:s3 - Enable full Amazon S3 support
+dev-util/sccache:simple-s3 - Enable minimal Amazon S3 support
 dev-util/schroot:btrfs - Enable support for chroots using btrfs snapshots
 dev-util/schroot:dchroot - Enables the building of a wrapper named "dchroot", replacing sys-apps/dchroot
 dev-util/schroot:lvm - Enable support for chroots using LVM snapshots
@@ -3389,6 +3390,9 @@ gui-libs/libhandy:glade - Install module and catalog for dev-util/glade
 gui-libs/neatvnc:examples - Build and install examples
 gui-libs/neatvnc:jpeg - Enable fast encodings
 gui-libs/neatvnc:tracing - Trace kernel and memory calls
+gui-libs/vte:icu - Enable legacy charset support using dev-libs/icu
+gui-libs/vte:systemd - Support moving terminal child processes to their own systemd user scopes to avoid terminal getting killed due to child causing OOM
+gui-libs/vte-common:systemd - Support moving terminal child processes to their own systemd user scopes to avoid terminal getting killed due to child causing OOM
 gui-libs/wlroots:X - Enable support for X11 applications (XWayland)
 gui-libs/wlroots:vulkan - Enable support for the vulkan backend renderer
 gui-libs/wlroots:x11-backend - Enable support for handling input/output devices through x11-libs/libxcb
@@ -4693,7 +4697,6 @@ media-sound/mpd:snapcast - Snapcast audio plugin
 media-sound/mpd:sndio - Enable support for the media-sound/sndio backend
 media-sound/mpd:soundcloud - Build plugin to access soundcloud
 media-sound/mpd:systemd - Enable support for systemd socket activation
-media-sound/mpd:tidal - Build plugin to access tidal
 media-sound/mpd:twolame - Support twolame MPEG-2 encoding
 media-sound/mpd:webdav - Enable using music from a WebDAV share
 media-sound/mpd:wildmidi - Enable MIDI support via wildmidi
@@ -8242,7 +8245,7 @@ sys-devel/gcc:d - Enable support for the D programming language
 sys-devel/gcc:fixed-point - Enable fixed-point arithmetic support for MIPS targets in gcc (Warning: significantly increases compile time!)
 sys-devel/gcc:go - Build the GCC Go language frontend.
 sys-devel/gcc:graphite - Add support for the framework for loop optimizations based on a polyhedral intermediate representation
-sys-devel/gcc:jit - Enable libgccjit so other applications can embed gcc for Just-In-Time compilation. This will slow down the compiler a bit as it forces all of the toolchain to be shared libs.
+sys-devel/gcc:jit - Enable libgccjit so other applications can embed gcc for Just-In-Time compilation.
 sys-devel/gcc:libssp - Build SSP support into a dedicated library rather than use the code in the C library (DO NOT ENABLE THIS IF YOU DON'T KNOW WHAT IT DOES)
 sys-devel/gcc:lto - Build using Link Time Optimizations (LTO)
 sys-devel/gcc:mpx - Enable support for Intel Memory Protection Extensions (MPX)
@@ -8657,6 +8660,7 @@ www-client/chromium:pgo - Build with Profile Guided Optimizations (2-stage compi
 www-client/chromium:pic - Disable optimized assembly code that is not PIC friendly
 www-client/chromium:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
 www-client/chromium:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels
+www-client/chromium:system-av1 - Use system libaom and dav1d instead of the bundled one.
 www-client/chromium:system-ffmpeg - Use system ffmpeg instead of the bundled one
 www-client/chromium:system-harfbuzz - Use system harfbuzz instead of the bundled one.
 www-client/chromium:system-icu - Use system icu instead of the bundled one

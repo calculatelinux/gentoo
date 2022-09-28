@@ -81,7 +81,6 @@ FILECAPS=(
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.7.0-crcs.patch
-	"${FILESDIR}"/${PN}-1.7.3329-clang16.patch
 	"${FILESDIR}"/${PN}-1.7.3329-lto.patch
 	"${FILESDIR}"/${PN}-1.7.3329-musl.patch
 	"${FILESDIR}"/${PN}-1.7.3329-qt6.patch
@@ -96,6 +95,13 @@ src_unpack() {
 			EGIT_SUBMODULES+=(
 				3rdparty/glslang/glslang # needs StandAlone/ResourceLimits.h
 				3rdparty/vulkan-headers # to keep in sync with glslang
+
+				# system rapidyaml is still used, but this uses another part
+				# of the source and so allow submodule for now
+				# https://github.com/PCSX2/pcsx2/commit/af646e449
+				3rdparty/rapidyaml/rapidyaml
+				3rdparty/rapidyaml/rapidyaml/extern/c4core
+				3rdparty/rapidyaml/rapidyaml/ext/c4core/src/c4/ext/fast_float
 			)
 		fi
 		git-r3_src_unpack

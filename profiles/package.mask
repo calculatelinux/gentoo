@@ -33,6 +33,24 @@
 
 #--- END OF EXAMPLES ---
 
+# Stephan Hartmann <sultan@gentoo.org> (2022-09-26)
+# Dev channel releases are only for people who
+# are developers or want more experimental features
+# and accept a more unstable release.
+>=www-client/chromium-107
+
+# Sam James <sam@gentoo.org> (2022-09-26)
+# Masked for testing. Please report bugs!
+=app-shells/bash-5.2*
+=sys-libs/readline-8.2*
+
+# Michał Górny <mgorny@gentoo.org> (2022-09-26)
+# Bundles a vulnerable version of dev-libs/expat.  The current Gentoo
+# version is from 2014, pending bump to the last upstream release
+# from 2016.  Effectively unmaintained.  EAPI 6.
+# Removal on 2022-10-26.  Bug #253517.
+games-sports/torcs
+
 # Ionen Wolkens <ionen@gentoo.org> (2022-09-25)
 # This version been causing major issues for some RTX 30xx users and
 # no real reason not to stick to 515.65.01 for now (but feel free to
@@ -539,7 +557,11 @@ sys-devel/automake:1.11
 # end up loaded into the same process together with the earlier libsoup ABI.
 # Migration to it is expected for GNOME 42, NOT to be unmasked with GNOME 41.
 >=gnome-extra/gnome-calculator-43
+media-libs/libshumate
 net-libs/libsoup:3.0
+net-libs/rest:1.0
+net-libs/webkit-gtk:4.1
+sci-geosciences/geocode-glib:2
 
 # Thomas Deutschmann <whissi@gentoo.org> (2021-09-07)
 # Masked while being tested and reverse deps aren't fully compatible
