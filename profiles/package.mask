@@ -33,6 +33,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2022-09-29)
+# Unfetchable mirror-restricted distfile.  No action from maintainer
+# in over a year.
+# Removal on 2022-10-29.  Bug #789477.
+games-simulation/bcs-demo
+
 # Stephan Hartmann <sultan@gentoo.org> (2022-09-26)
 # Dev channel releases are only for people who
 # are developers or want more experimental features
@@ -180,189 +186,11 @@ app-backup/attic
 # bugs #829447, #836227, #862504
 mail-filter/sigh
 
-# Michał Górny <mgorny@gentoo.org> (2022-08-30)
-# Flask-Security-Too is a package with high maintenance cost
-# and no revdeps in ::gentoo.  The next version bump (once more)
-# introduces more dependencies.
-#
-# The remaining listed packages are used exclusively by this package
-# (or its tests).  If you find one of them useful, please let us know
-# and we'll keep it.
-#
-# Removal on 2022-09-29.  Bug #867415.
-dev-python/flask-security
-dev-python/flask-babelex
-dev-python/flask-mail
-dev-python/flask-principal
-dev-python/flask-wtf
-dev-python/mongomock
-dev-python/pony
-dev-python/pyqrcode
-dev-python/sentinels
-dev-python/speaklater
-dev-python/zxcvbn
-
-# Matt Turner <mattst88@gentoo.org> (2022-08-29)
-# Unpatched security vulerabilities. Bug #857780.
-# Removal on 2022-09-29.
-=x11-base/xorg-server-1.20*
-=x11-base/xorg-drivers-1.20*
-
-# Matt Turner <mattst88@gentoo.org> (2022-08-29)
-# Fails to build with xorg-server-21. Bug #828426.
-# Removal on 2022-09-29.
-x11-drivers/xf86-video-glint
-
-# Hans de Graaff <graaff@gentoo.org> (2022-08-27)
-# No longer maintained upstream and more modern alternatives such as
-# www-servers/puma are available.
-# Removal in 30 days.
-dev-ruby/async_sinatra
-
-# Sam James <sam@gentoo.org> (2022-08-27)
-# Stuck on deprecated and removed Ruby 2.6. Removal on 2022-09-27.
-dev-ruby/aws-sdk
-dev-ruby/aws-sdk-core
-dev-ruby/aws-sdk-resources
-dev-ruby/travis
-
-# Jaco Kroon <jaco@uls.co.za> (2022-08-22)
-# Superceded by bgpq4 (already in tree).  Non-co-operative upstream.  Removal
-# in 30 days.  Open bugs, already fixed in bgpq4.  Please convert your usage to
-# bgpq4.  Mostly you just need to drop the -3 argument.
-net-misc/bgpq3
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-08-22)
-# Java library without consumers. Removal on 2022-09-22
-dev-java/byte-buddy-agent
-
-# hololeap <hololeap@protonmail.com> (2022-08-21)
-# Monolithic mask for dev-haskell/* packages which have no reverse dependencies,
-# are broken, or severely out of date. The aim is to have the Haskell overlay
-# (::haskell) be the place for development packages and only have packages
-# needed for end-user applications in ::gentoo, as the status quo has
-# proven to be unsustainable. More up-to-date versions of these packages
-# are available in ::haskell.
-# Removal on 2022-09-19.
-app-portage/fquery
-dev-games/goatee
-dev-haskell/megaparsec
-dev-haskell/parser-combinators
-dev-haskell/megaparsec-tests
-dev-haskell/hspec-megaparsec
-dev-haskell/neat-interpolation
-dev-haskell/stack
-dev-haskell/abstract-deque-tests
-dev-haskell/aeson-diff
-dev-haskell/annotated-wl-pprint
-dev-haskell/authenticate-oauth
-dev-haskell/base-prelude
-dev-haskell/base-unicode-symbols
-dev-haskell/casa-client
-dev-haskell/casa-types
-dev-haskell/cipher-aes128
-dev-haskell/concurrent-extra
-dev-haskell/contravariant-extras
-dev-haskell/cpphs
-dev-haskell/crypto-pubkey-types
-dev-haskell/cryptohash
-dev-haskell/cryptohash-cryptoapi
-dev-haskell/data-default-instances-base
-dev-haskell/drbg
-dev-haskell/edit-distance-vector
-dev-haskell/either
-dev-haskell/filelock
-dev-haskell/filepattern
-dev-haskell/fsnotify
-dev-haskell/genvalidity
-dev-haskell/genvalidity-hspec
-dev-haskell/genvalidity-property
-dev-haskell/ghc-lib-parser
-dev-haskell/ghc-lib-parser-ex
-dev-haskell/githash
-dev-haskell/groupoids
-dev-haskell/groups
-dev-haskell/haddock
-dev-haskell/haddock-api
-dev-haskell/hashable-time
-dev-haskell/hashtables
-dev-haskell/haskell-src-meta
-dev-haskell/hdbc-odbc
-dev-haskell/hi-file-parser
-dev-haskell/hlint
-dev-haskell/hpack
-dev-haskell/hsopenssl
-dev-haskell/hsyaml-aeson
-dev-haskell/http-common
-dev-haskell/http-download
-dev-haskell/http-streams
-dev-haskell/hxt
-dev-haskell/hxt-charproperties
-dev-haskell/hxt-regex-xmlschema
-dev-haskell/hxt-unicode
-dev-haskell/infer-license
-dev-haskell/interpolate
-dev-haskell/io-streams
-dev-haskell/io-streams-haproxy
-dev-haskell/iwlib
-dev-haskell/js-flot
-dev-haskell/js-jquery
-dev-haskell/keys
-dev-haskell/lens-aeson
-dev-haskell/memotrie
-dev-haskell/mintty
-dev-haskell/mustache
-dev-haskell/newtype-generics
-dev-haskell/open-browser
-dev-haskell/openssl-streams
-dev-haskell/optparse-simple
-dev-haskell/pantry
-dev-haskell/path
-dev-haskell/path-io
-dev-haskell/pointed
-dev-haskell/polyparse
-dev-haskell/prettyclass
-dev-haskell/project-template
-dev-haskell/readable
-dev-haskell/rebase
-dev-haskell/refact
-dev-haskell/regex-applicative-text
-dev-haskell/regex-compat-tdfa
-dev-haskell/regex-pcre
-dev-haskell/rerebase
-dev-haskell/rfc5051
-dev-haskell/rio-orphans
-dev-haskell/rio-prettyprint
-dev-haskell/rsa
-dev-haskell/selective
-dev-haskell/snap-core
-dev-haskell/snap-server
-dev-haskell/tar-conduit
-dev-haskell/template-haskell-compat-v0208
-dev-haskell/text-metrics
-dev-haskell/th-expand-syns
-dev-haskell/th-orphans
-dev-haskell/th-reify-many
-dev-haskell/threads
-dev-haskell/validity
-dev-haskell/vector-builder
-dev-haskell/vector-instances
-dev-haskell/weigh
-dev-haskell/wreq
-dev-haskell/xhtml
-dev-haskell/zlib-bindings
-dev-util/bnfc
-
 # hololeap <hololeap@protonmail.com> (2022-08-21)
 # doctest-parallel does not currently work with Setup.hs (used internally by
 # haskell-cabal.eclass)
 # See: <https://github.com/martijnbastiaan/doctest-parallel/issues/45>
 dev-haskell/doctest-parallel
-
-# John Helmert III <ajak@gentoo.org> (2022-08-14)
-# Vulnerable, unmaintained in Gentoo, EAPI6. Removal in 30 days,
-# bug #772209
-app-crypt/keybase
 
 # Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2022-08-12)
 # Masked for testing, depends on dev-qt/qt*:6
@@ -556,11 +384,12 @@ sys-devel/automake:1.11
 # New major parallel-installable release which needs special care to not
 # end up loaded into the same process together with the earlier libsoup ABI.
 # Migration to it is expected for GNOME 42, NOT to be unmasked with GNOME 41.
+>=dev-util/devhelp-43
 >=gnome-extra/gnome-calculator-43
 media-libs/libshumate
-net-libs/uhttpmock:1.0
 net-libs/libsoup:3.0
 net-libs/rest:1.0
+net-libs/uhttpmock:1.0
 net-libs/webkit-gtk:4.1
 sci-geosciences/geocode-glib:2
 
