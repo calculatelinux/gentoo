@@ -3,13 +3,10 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..11} )
-PYTHON_REQ_USE='threads(+)'
-
-inherit meson-multilib python-any-r1
+inherit meson-multilib
 
 DESCRIPTION="Library for RDF syntax which supports reading and writing Turtle and NTriples"
-HOMEPAGE="http://drobilla.net/software/serd/"
+HOMEPAGE="https://drobilla.net/software/serd.html"
 SRC_URI="http://download.drobilla.net/${P}.tar.xz"
 
 LICENSE="ISC"
@@ -24,10 +21,6 @@ BDEPEND="
 		dev-python/sphinx
 		dev-python/sphinx_lv2_theme
 )
-"
-RDEPEND=""
-DEPEND="${RDEPEND}
-	${PYTHON_DEPS}
 "
 
 src_prepare() {

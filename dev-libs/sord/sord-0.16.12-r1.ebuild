@@ -3,9 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..11} )
-PYTHON_REQ_USE='threads(+)'
-inherit meson-multilib python-any-r1
+inherit meson-multilib
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
@@ -16,7 +14,7 @@ else
 fi
 
 DESCRIPTION="Library for storing RDF data in memory"
-HOMEPAGE="http://drobilla.net/software/sord/"
+HOMEPAGE="https://drobilla.net/software/sord.html"
 
 LICENSE="ISC"
 SLOT="0"
@@ -31,9 +29,7 @@ RDEPEND="
 	dev-libs/libpcre
 	dev-libs/serd
 "
-DEPEND="${RDEPEND}
-	${PYTHON_DEPS}
-"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	default

@@ -1247,6 +1247,7 @@ dev-cpp/libjson-rpc-cpp:http-server - Build support for HTTP server using net-li
 dev-cpp/libjson-rpc-cpp:redis-client - Build support for Redis client using dev-libs/hiredis
 dev-cpp/libjson-rpc-cpp:redis-server - Build support for Redis server using dev-libs/hiredis
 dev-cpp/libjson-rpc-cpp:stubgen - Build header stub code generator (needed for development and when pregenerated headers are not bundled)
+dev-cpp/muParser:wchar - Add support for wide character (wchar_t)
 dev-cpp/opentelemetry-cpp:jaeger - Include the jaeger exporter
 dev-cpp/opentelemetry-cpp:prometheus - include the Prometheus Client in the SDK
 dev-cpp/sdbus-c++:systemd - Use external libsystemd instead of statically-linked build
@@ -5698,6 +5699,7 @@ net-fs/samba:snapper - Enable vfs_snapper module (requires sys-apps/dbus)
 net-fs/samba:spotlight - Enable support for spotlight backend
 net-fs/samba:system-heimdal - Use app-crypt/heimdal instead of bundled heimdal.
 net-fs/samba:system-mitkrb5 - Use app-crypt/mit-krb5 instead of app-crypt/heimdal.
+net-fs/samba:unwind - Enable libunwind usage for backtraces
 net-fs/samba:winbind - Enables support for the winbind auth daemon
 net-ftp/frox:transparent - Enable transparent proxying of data connections
 net-ftp/ftpbase:zeroconf - Enable support for zero-configuration networking via Avahi.
@@ -8210,6 +8212,9 @@ sys-devel/clang:default-compiler-rt - Use compiler-rt instead of libgcc as the d
 sys-devel/clang:default-libcxx - Use libc++ instead of libstdc++ as the default stdlib for clang
 sys-devel/clang:default-lld - Use lld as the default linker for clang
 sys-devel/clang:static-analyzer - Install the Clang static analyzer
+sys-devel/clang-common:default-compiler-rt - Use compiler-rt + libunwind instead of libgcc as the default rtlib for clang
+sys-devel/clang-common:default-libcxx - Use libc++ instead of libstdc++ as the default stdlib for clang
+sys-devel/clang-common:default-lld - Use lld as the default linker for clang
 sys-devel/clang-runtime:compiler-rt - Install sys-libs/compiler-rt for -rtlib=compiler-rt
 sys-devel/clang-runtime:libcxx - Install sys-libs/libcxx for -stdlib=libc++
 sys-devel/clang-runtime:openmp - Install sys-libs/libomp for -fopenmp support
@@ -8467,6 +8472,9 @@ sys-libs/libunwind:libatomic - Use libatomic instead of builtin atomic operation
 sys-libs/libxcrypt:compat - Build with compatibility interfaces for other crypt implementations
 sys-libs/libxcrypt:system - Install as system libcrypt.so rather than to an alternate directory (will collide with sys-libs/glibc's version)
 sys-libs/llvm-libunwind:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
+sys-libs/minizip-ng:compat - Enable compatibility with sys-libs/zlib's USE=minizip
+sys-libs/minizip-ng:openssl - Use dev-libs/openssl for further encryption capabilities
+sys-libs/minizip-ng:zstd - Add Zstandard compression support via app-arch/zstd
 sys-libs/musl-nscd:minimal - Only installs the header files
 sys-libs/ncurses:ada - Add bindings for the ADA programming language
 sys-libs/ncurses:stack-realign - Realign the stack in the 32-bit build for compatibility with older binaries at some performance cost. Avoids crashes in older 32-bit binaries. Only affects x86/32-bit multilib builds on amd64.
