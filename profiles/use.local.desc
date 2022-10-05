@@ -426,7 +426,6 @@ app-editors/gnome-latex:latexmk - Install dev-tex/latexmk (used by default for t
 app-editors/gnome-latex:rubber - Install dev-tex/rubber (can be used for the build tools)
 app-editors/gvim:crypt - Use dev-libs/libsodium for crypto support
 app-editors/gvim:cscope - Enable cscope interface
-app-editors/gvim:gtk2 - Enable GTK+2 interface
 app-editors/gvim:netbeans - Include netbeans external editor integration support
 app-editors/gvim:racket - Enable support for Scheme using dev-scheme/racket
 app-editors/jasspa-microemacs:nanoemacs - Build NanoEmacs instead of MicroEmacs
@@ -892,6 +891,9 @@ app-misc/muttprint:doc - Builds documentation
 app-misc/neofetch:X - Enable support for detecting DEs, WMs, screen resolutions, and showing images from an X terminal
 app-misc/note:general - Add support for ascii flatfile backend
 app-misc/note:text - Add support for text backend
+app-misc/ola:ftdi - Support FTDI devices
+app-misc/ola:http - Enable built-in Web UI
+app-misc/ola:rdm-tests - Install RDM responder tests
 app-misc/pax-utils:python - Install a more powerful/faster version of lddtree
 app-misc/recoll:camelcase - Enable indexing for camelCase sentences and words
 app-misc/recoll:chm - Enable CHM file support via dev-python/pychm
@@ -1104,6 +1106,7 @@ app-text/kbibtex:zotero - Enable support for synchronisation with zotero.org web
 app-text/kjots:speech - Enable text-to-speech support
 app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search library (TeX related)
 app-text/libebook:tools - Build file conversion tools
+app-text/libgepub:webkit - Build with GepubWidget based on Webkit
 app-text/libmwaw:tools - Build file conversion tools
 app-text/libqxp:tools - Build file conversion tools
 app-text/libstaroffice:tools - Build conversion tools
@@ -3159,6 +3162,7 @@ games-fps/worldofpadman:maps - Install extra maps (PadPack)
 games-fps/xonotic:ode - Enable support for physics engine from dev-games/ode
 games-fps/yamagi-quake2:client - Build client
 games-fps/yamagi-quake2:ctf - Build support for the 'Capture The Flag' addon
+games-fps/yamagi-quake2:gles - Build GLES3 renderer
 games-fps/yamagi-quake2:rogue - Build support for the 'Ground Zero' Mission Pack
 games-fps/yamagi-quake2:softrender - Build software renderer
 games-fps/yamagi-quake2:vulkan - Build experimental Vulkan renderer
@@ -3374,6 +3378,7 @@ gui-libs/vte:icu - Enable legacy charset support using dev-libs/icu
 gui-libs/vte:systemd - Support moving terminal child processes to their own systemd user scopes to avoid terminal getting killed due to child causing OOM
 gui-libs/vte-common:systemd - Support moving terminal child processes to their own systemd user scopes to avoid terminal getting killed due to child causing OOM
 gui-libs/wlroots:X - Enable support for X11 applications (XWayland)
+gui-libs/wlroots:tinywl - Install the minimal wayland client, tinywl
 gui-libs/wlroots:vulkan - Enable support for the vulkan backend renderer
 gui-libs/wlroots:x11-backend - Enable support for handling input/output devices through x11-libs/libxcb
 gui-libs/xdg-desktop-portal-wlr:elogind - Enable support for rootless session via elogind
@@ -3677,6 +3682,7 @@ mail-client/alpine:onlyalpine - installs only the alpine binary, so it does not 
 mail-client/alpine:passfile - Adds support for caching passwords into a file between sessions
 mail-client/alpine:smime - Enable support for S/MIME
 mail-client/balsa:rubrica - Adds support for rubrica addressbook
+mail-client/balsa:systray - Enable System Tray Icon support
 mail-client/claws-mail:archive - Enable archiving plugin
 mail-client/claws-mail:bogofilter - Build mail-filter/bogofilter plugin
 mail-client/claws-mail:dillo - Enable dillo html viewer plugin
@@ -3861,6 +3867,7 @@ mate-extra/caja-extensions:wallpaper - Add an extension to support setting an im
 mate-extra/mate-polkit:accountsservice - Support extraction of data from AccountsService
 mate-extra/mate-power-manager:applet - Enable building of the MATE applet.
 mate-extra/mate-power-manager:libsecret - Support locking of keyring via app-crypt/libsecret
+mate-extra/mate-system-monitor:wnck - Enable experimental support using x11-libs/libwnck.
 mate-extra/mate-utils:applet - Enable the mate dictionary applet
 media-fonts/corefonts:tahoma - Also install the Tahoma font. Due to the lack of a free bold variant, this may render badly. See bug 184790.
 media-fonts/culmus:ancient - Install ancient semitic scripts
@@ -4024,7 +4031,6 @@ media-gfx/graphviz:devil - Enables DevIL output plugin -Tdevil
 media-gfx/graphviz:gtk2 - Enables gtk+ output plugin -Tgtk (needs cairo)
 media-gfx/graphviz:gts - Enables support for GNU Triangulated Surface Library (required for sfdp to work)
 media-gfx/graphviz:lasi - Enables PostScript output via media-libs/lasi, for plugin -Tlasi (needs cairo)
-media-gfx/graphviz:lefty - Builds lefty front-end, requires x11-libs/libXmu and x11-libs/libXaw
 media-gfx/gthumb:heif - Enable support for ISO/IEC 23008-12:2017 HEIF/HEIC image format using media-libs/libheif
 media-gfx/gthumb:http - Enable webservice integration through net-libs/webkit-gtk
 media-gfx/gthumb:jpegxl - Support for JPEG XL image format
@@ -4284,7 +4290,8 @@ media-libs/libvpx:postproc - Enable additional post processing filters
 media-libs/libwebp:swap-16bit-csp - Enable byte swapping for 16 bit colorspace
 media-libs/libzmf:tools - Build conversion tools
 media-libs/lilv:tools - Build command line utilities
-media-libs/lsp-plugins:lv2 - build lv2 plugins
+media-libs/lsp-plugins:lv2 - Build lv2 plugins
+media-libs/lsp-plugins:vst - Support LinuxVST plugins
 media-libs/lv2:plugins - Enables examples plugins.
 media-libs/lvtk:gtk2 - Enable x11-libs/gtk+:2 based GUI support
 media-libs/lvtk:tools - Compile and install ttl2c tool
@@ -4628,6 +4635,8 @@ media-sound/klick:rubberband - Enable rubberband support
 media-sound/lame:frontend - Build and install the 'lame' executable frontend to lame libraries.
 media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED**
 media-sound/lilypond:guile2 - Enable experimental support for Guile 2
+media-sound/linux-show-player:midi - Allow cues to send, or trigger on, MIDI messages
+media-sound/linux-show-player:timecode - Support the sending of time code of running audio files over ArtNet, for instance to trigger cues in lighting-control software on lighting desks
 media-sound/linuxsampler:lv2 - Add support for Ladspa V2
 media-sound/linuxsampler:sf2 - Add support for SoundFont 2 sound bank files
 media-sound/lmms:fluidsynth - Enables Fluidsynth MIDI software synthesis plugin.
@@ -4801,7 +4810,6 @@ media-sound/split2flac:replaygain - Support for Replay Gain metadata, for relati
 media-sound/spotify:local-playback - Allows playing local files with the Spotify client
 media-sound/spotify:pax-kernel - Triggers a paxmarking of the main Spotify binary
 media-sound/spotify:pulseaudio - Controls the dependency on pulseaudio or apulse
-media-sound/spotify:systray - Pulls in dependencies needed for systray support on some desktop environments
 media-sound/strawberry:moodbar - Enable moodbar support
 media-sound/strawberry:vlc - Enable media-video/vlc backend
 media-sound/supercollider:emacs - Enable the SCEL user interface
@@ -5831,8 +5839,10 @@ net-im/teams:swiftshader - Install SwiftShader OpenGL libaries.
 net-im/teams:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of bundled.
 net-im/teams:system-mesa - Use the system-wide media-libs/mesa instead of bundled.
 net-im/telegram-desktop:enchant - Enable the app-text/aspell spell-checking backend
+net-im/telegram-desktop:fonts - Use builtin patched copy of open-sans fonts (overrides fontconfig)
 net-im/telegram-desktop:hunspell - Enable the app-text/hunspell spell-checking backend
 net-im/telegram-desktop:qt6 - Build with Qt6 support
+net-im/telegram-desktop:qt6-imageformats - Add support for HEIF, AVIF and JpegXL by bundling kde-frameworks/kimageformats
 net-im/telepathy-connection-managers:gadu - Enable Gadu Gadu protocol support.
 net-im/telepathy-connection-managers:icq - Enable ICQ IM protocol support.
 net-im/telepathy-connection-managers:irc - Enable Internet Relay Chat (IRC) support.
@@ -6691,6 +6701,7 @@ net-nds/rpcbind:remotecalls - Enable remote calls
 net-nds/rpcbind:warmstarts - Enables rpcbind to cache configuration for warm restarts
 net-nds/tac_plus:finger - Adds support for checking user counts via fingering the NAS
 net-nds/tac_plus:maxsess - Enforce a limit on maximum sessions per user
+net-news/rssguard:qt6 - Build with Qt6 support instead of the default Qt5
 net-news/rssguard:webengine - Use dev-qt/qtwebengine for embedded web browser
 net-news/sfeed:theme-mono - Use mono theme
 net-news/sfeed:theme-mono-highlight - Use mono_highlight theme
@@ -7519,6 +7530,7 @@ sci-libs/vtk:json - Support for json formatted data
 sci-libs/vtk:kits - Build kits in addition to modules
 sci-libs/vtk:offscreen - Offscreen rendering through OSMesa
 sci-libs/vtk:pegtl - Use pegtl to build parsers
+sci-libs/vtk:qt6 - Use Qt6 packages instead of Qt5
 sci-libs/vtk:rendering - Building Redering modules
 sci-libs/vtk:tbb - Use dev-cpp/tbb to handle smp support
 sci-libs/vtk:views - Building Views modules

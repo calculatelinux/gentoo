@@ -1,0 +1,12 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=install
+DESCRIPTION=An in-band utility for configuring Supermicro IPMI devices
+EAPI=8
+HOMEPAGE=https://www.supermicro.com
+IUSE=uefi
+KEYWORDS=-* ~amd64 ~x86
+LICENSE=supermicro
+RESTRICT=bindist mirror
+SLOT=0
+SRC_URI=https://www.supermicro.com/Bios/sw_download/481/IPMICFG_1.34.0_build.220906.zip
+_md5_=a9453d47fbc648648fbe0b9bd283c8b2
