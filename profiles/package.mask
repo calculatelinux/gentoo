@@ -33,6 +33,20 @@
 
 #--- END OF EXAMPLES ---
 
+# Mike Gilbert <floppym@gentoo.org> (2022-10-05)
+# Implements the obsolete BOOTP protocol; use DHCP instead.
+# No activity upstream for over two decades.
+# Fails to build with -Werror=implicit-function-declaration (#875536).
+# Removal on 2022-11-04.
+net-misc/netkit-bootpd
+
+# Matt Turner <mattst88@gentoo.org> (2022-10-01)
+# Unmaintained upstream. Last commit was 10 years ago today.
+# Unclear if it does anything useful. Many open bugs: #584352, #833102,
+# #852728, #866557, #875278.
+# Removal on 2022-11-05
+x11-libs/libva-vdpau-driver
+
 # Michał Górny <mgorny@gentoo.org> (2022-10-05)
 # Originally added for dev-python/rapidfuzz.  Now the algorithm has been
 # inlined into rapidfuzz, and the package is semi-deprecated.
@@ -463,13 +477,18 @@ sys-devel/automake:1.11
 >=gnome-extra/gnome-clocks-43
 >=gnome-extra/gnome-shell-extensions-43
 >=gnome-extra/sushi-43
+>=mail-client/balsa-2.6.4
 >=mail-client/evolution-3.46
 >=mail-client/geary-43
 media-libs/libshumate
+>=net-libs/gnome-online-accounts-3.46
+>=net-libs/gssdp-1.6
+>=net-libs/gupnp-1.6
 net-libs/libsoup:3.0
 net-libs/rest:1.0
 net-libs/uhttpmock:1.0
 net-libs/webkit-gtk:4.1
+>=net-misc/rygel-0.42
 sci-geosciences/geocode-glib:2
 >=sci-geosciences/gnome-maps-43
 >=www-client/epiphany-43
