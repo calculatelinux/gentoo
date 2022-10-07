@@ -7,6 +7,7 @@
 # @AUTHOR:
 # Michał Górny <mgorny@gentoo.org>
 # @SUPPORTED_EAPIS: 7 8
+# @PROVIDES: git-r3
 # @BLURB: Common bits for fetching & unpacking llvm.org projects
 # @DESCRIPTION:
 # The llvm.org eclass provides common code to fetch and unpack parts
@@ -36,6 +37,20 @@ case "${EAPI:-0}" in
 		die "Unsupported EAPI=${EAPI} for ${ECLASS}"
 		;;
 esac
+
+# == version substrings ==
+
+# @ECLASS_VARIABLE: LLVM_MAJOR
+# @OUTPUT_VARIABLE
+# @DESCRIPTION:
+# The major LLVM version.
+LLVM_MAJOR=$(ver_cut 1)
+
+# @ECLASS_VARIABLE: LLVM_VERSION
+# @OUTPUT_VARIABLE
+# @DESCRIPTION:
+# The full 3-component LLVM version without suffixes or .9999.
+LLVM_VERSION=$(ver_cut 1-3)
 
 
 # == internal control bits ==
@@ -82,6 +97,7 @@ if [[ -z ${_LLVM_SOURCE_TYPE+1} ]]; then
 					die "Unknown snapshot: ${PV}"
 					;;
 			esac
+			export EGIT_VERSION=${EGIT_COMMIT}
 			;;
 		*)
 			_LLVM_SOURCE_TYPE=tar
@@ -91,7 +107,7 @@ fi
 
 [[ ${_LLVM_SOURCE_TYPE} == git ]] && inherit git-r3
 
-[[ ${PV} == ${_LLVM_MASTER_MAJOR}.* && ${_LLVM_SOURCE_TYPE} == tar ]] &&
+[[ ${LLVM_MAJOR} == ${_LLVM_MASTER_MAJOR} && ${_LLVM_SOURCE_TYPE} == tar ]] &&
 	die "${ECLASS}: Release ebuild for master branch?!"
 
 inherit multiprocessing
@@ -166,18 +182,18 @@ fi
 # The list of USE flags corresponding to all LLVM targets in this LLVM
 # version.  The value depends on ${PV}.
 
-case ${PV} in
-	10*|11*|12*)
+case ${LLVM_MAJOR} in
+	10|11|12)
 		# this API is not present for old LLVM versions
 		;;
-	13*)
+	13)
 		ALL_LLVM_EXPERIMENTAL_TARGETS=( ARC CSKY M68k VE )
 		ALL_LLVM_PRODUCTION_TARGETS=(
 			AArch64 AMDGPU ARM AVR BPF Hexagon Lanai Mips MSP430 NVPTX
 			PowerPC RISCV Sparc SystemZ WebAssembly X86 XCore
 		)
 		;;
-	14*)
+	14)
 		ALL_LLVM_EXPERIMENTAL_TARGETS=( ARC CSKY M68k )
 		ALL_LLVM_PRODUCTION_TARGETS=(
 			AArch64 AMDGPU ARM AVR BPF Hexagon Lanai Mips MSP430 NVPTX
@@ -200,6 +216,14 @@ ALL_LLVM_TARGET_FLAGS=(
 	"${ALL_LLVM_EXPERIMENTAL_TARGETS[@]/#/llvm_targets_}"
 )
 
+# @ECLASS_VARIABLE: LLVM_SOABI
+# @OUTPUT_VARIABLE
+# @DESCRIPTION:
+# The current ABI version of LLVM dylib, in a form suitable for use
+# as a subslot.  This is equal to LLVM_MAJOR for releases, and to PV
+# for the main branch.
+LLVM_SOABI=${LLVM_MAJOR}
+[[ ${LLVM_MAJOR} == ${_LLVM_MASTER_MAJOR} ]] && LLVM_SOABI=${PV}
 
 # == global scope logic ==
 
@@ -221,8 +245,8 @@ llvm.org_set_globals() {
 		git)
 			EGIT_REPO_URI="https://github.com/llvm/llvm-project.git"
 
-			[[ ${PV} != ${_LLVM_MASTER_MAJOR}.* ]] &&
-				EGIT_BRANCH="release/${PV%%.*}.x"
+			[[ ${LLVM_MAJOR} != ${_LLVM_MASTER_MAJOR} ]] &&
+				EGIT_BRANCH="release/${LLVM_MAJOR}.x"
 			;;
 		tar)
 			if ver_test -ge 14.0.5; then

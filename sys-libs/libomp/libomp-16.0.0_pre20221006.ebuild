@@ -10,7 +10,7 @@ DESCRIPTION="OpenMP runtime library for LLVM/clang compiler"
 HOMEPAGE="https://openmp.llvm.org"
 
 LICENSE="Apache-2.0-with-LLVM-exceptions || ( UoI-NCSA MIT )"
-SLOT="0"
+SLOT="0/${LLVM_SOABI}"
 KEYWORDS=""
 IUSE="
 	debug hwloc offload ompt test
@@ -71,7 +71,7 @@ pkg_pretend() {
 }
 
 pkg_setup() {
-	use offload && LLVM_MAX_SLOT=${PV%%.*} llvm_pkg_setup
+	use offload && LLVM_MAX_SLOT=${LLVM_MAJOR} llvm_pkg_setup
 	use test && python-any-r1_pkg_setup
 }
 

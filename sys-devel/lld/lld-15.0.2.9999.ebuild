@@ -10,7 +10,7 @@ DESCRIPTION="The LLVM linker (link editor)"
 HOMEPAGE="https://llvm.org/"
 
 LICENSE="Apache-2.0-with-LLVM-exceptions UoI-NCSA"
-SLOT="0"
+SLOT="0/${LLVM_SOABI}"
 KEYWORDS=""
 IUSE="debug test"
 RESTRICT="!test? ( test )"
@@ -28,7 +28,7 @@ BDEPEND="
 	)
 "
 PDEPEND="
-	sys-devel/lld-toolchain-symlinks:${PV%%.*}
+	sys-devel/lld-toolchain-symlinks:${LLVM_MAJOR}
 "
 
 LLVM_COMPONENTS=( lld cmake libunwind/include/mach-o )
@@ -40,7 +40,7 @@ python_check_deps() {
 }
 
 pkg_setup() {
-	LLVM_MAX_SLOT=${PV%%.*} llvm_pkg_setup
+	LLVM_MAX_SLOT=${LLVM_MAJOR} llvm_pkg_setup
 	use test && python-any-r1_pkg_setup
 }
 
