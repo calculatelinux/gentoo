@@ -24,7 +24,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 
 LICENSE="BSD"
 SLOT="0/stable"
-KEYWORDS="amd64 ~arm64"
+KEYWORDS="amd64 arm64"
 IUSE="+X component-build cups cpu_flags_arm_neon debug gtk4 +hangouts headless +js-type-check kerberos libcxx lto +official pgo pic +proprietary-codecs pulseaudio screencast selinux +suid +system-ffmpeg +system-harfbuzz +system-icu +system-png vaapi wayland widevine"
 REQUIRED_USE="
 	component-build? ( !suid !libcxx )
@@ -953,6 +953,11 @@ chromium_configure() {
 	if use arm64 && tc-is-gcc; then
 		sed -i '/^#if HAVE_ARM64_CRC32C/a #pragma GCC target ("+crc+crypto")' \
 			third_party/crc32c/src/src/crc32c_arm64.cc || die
+	fi
+
+	# skipping typecheck is only supported on amd64, bug #876157
+	if ! use amd64; then
+		myconf_gn+=" devtools_skip_typecheck=false"
 	fi
 
 	einfo "Configuring Chromium..."

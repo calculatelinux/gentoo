@@ -33,6 +33,34 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2022-10-08)
+# Obsolete after Plasma 5.25 release, merged into KWin.
+# Removal on 2022-10-22.
+kde-plasma/kwayland-server
+
+# Michał Górny <mgorny@gentoo.org> (2022-10-08)
+# Repository and SRC_URI gone.  Last release in 2012 (guessing
+# by filename).
+# Removal on 2022-11-07.  Bug #876151.
+xfce-extra/transd
+
+# Michał Górny <mgorny@gentoo.org> (2022-10-08)
+# This package is not really required for anything, as it being missing
+# only disables enforcing install_requires.  At the same time, it being
+# installed causes unexpected verbose output that randomly breaks more
+# susceptible test suites (e.g. dev-python/pythran).
+# Removal on 2022-11-07.  Bug #876082.
+dev-python/setuptools-declarative-requirements
+
+# Michał Górny <mgorny@gentoo.org> (2022-10-08)
+# The test suite is broken since at least March.  No revdeps.
+# Removal on 2022-11-07.  Bug #834656.
+dev-python/kazoo
+
+# Matt Turner <mattst88@gentoo.org> (2022-10-07)
+# Unstable release. Masked for testing.
+>=x11-libs/cairo-1.17
+
 # Sam James <sam@gentoo.org> (2022-10-07)
 # Ancient K&R C codebase which fails to compile with modern Clang; surface
 # level fixes are doable, but then get into various dangerous constructs
@@ -40,13 +68,6 @@
 # bug #731070, bug #802108, bug #875164.
 # Use media-sound/mpd if looking for a modern alternative. Removal on 2022-11-07.
 media-sound/rplay
-
-# Mike Gilbert <floppym@gentoo.org> (2022-10-05)
-# Implements the obsolete BOOTP protocol; use DHCP instead.
-# No activity upstream for over two decades.
-# Fails to build with -Werror=implicit-function-declaration (#875536).
-# Removal on 2022-11-04.
-net-misc/netkit-bootpd
 
 # Matt Turner <mattst88@gentoo.org> (2022-10-01)
 # Unmaintained upstream. Last commit was 10 years ago today.
@@ -75,7 +96,7 @@ dev-python/jarowinkler
 =sys-kernel/vanilla-kernel-5.19.12
 =virtual/dist-kernel-5.19.12
 
-# Sam Jaems <sam@gentoo.org> (2022-10-04)
+# Sam James <sam@gentoo.org> (2022-10-04)
 # Please upgrade to >= portage-3.0.38.1 for binpkg fixes.
 # bug #870283, bug #874771.
 =sys-apps/portage-3.0.31
@@ -258,18 +279,6 @@ dev-python/SaltTesting
 # Breaks kernel builds with BTF enabled.
 # Bug #868762.
 =dev-util/pahole-1.24
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2022-09-07)
-# Python 3.8 only package, no maintainer left.
-# Removal: 2022-10-07.  Bug #869107.
-www-apps/blohg
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2022-09-07)
-# Python 3.8 only package, 2 open bugs. Recommended to migrate to borg.
-# No upstream activity since 2015.
-# Bugs #674822, #830291, #832240
-# Removal: 2022-10-07.  Bug #869101.
-app-backup/attic
 
 # Mike Gilbert <floppym@gentoo.org> (2022-09-05)
 # Crash due to double-free.
@@ -470,29 +479,39 @@ sys-devel/automake:1.11
 # end up loaded into the same process together with the earlier libsoup ABI.
 # Migration to it is expected for GNOME 42, NOT to be unmasked with GNOME 41.
 >=app-arch/file-roller-43
+>=app-backup/deja-dup-43
 >=app-text/libgepub-0.7.0
+>=app-misc/tracker-3.4.0-r1
+>=app-misc/tracker-miners-3.4.0-r1
 >=dev-libs/gjs-1.74
 >=dev-libs/libgweather-4.2.0
 >=dev-python/nautilus-python-4.0
 >=dev-util/devhelp-43
+>=gnome-base/gnome-applets-3.46
 >=gnome-base/gnome-desktop-43
+>=gnome-base/gnome-flashback-3.46
+>=gnome-base/gnome-panel-3.46
 >=gnome-base/gnome-settings-daemon-43
 >=gnome-base/gnome-shell-43
 >=gnome-base/nautilus-43
 >=gnome-extra/evolution-data-server-3.46
 >=gnome-extra/evolution-ews-3.46
+>=gnome-extra/gnome-boxes-43
 >=gnome-extra/gnome-calculator-43
 >=gnome-extra/gnome-clocks-43
 >=gnome-extra/gnome-shell-extensions-43
+>=gnome-extra/gnome-software-43
 >=gnome-extra/sushi-43
 >=mail-client/balsa-2.6.4
 >=mail-client/evolution-3.46
 >=mail-client/geary-43
+>=media-gfx/gnome-photos-43
 media-libs/libshumate
 >=net-libs/gnome-online-accounts-3.46
 >=net-libs/gssdp-1.6
 >=net-libs/gupnp-1.6
 net-libs/libsoup:3.0
+net-libs/phodav:3.0
 net-libs/rest:1.0
 net-libs/uhttpmock:1.0
 net-libs/webkit-gtk:4.1
@@ -500,6 +519,8 @@ net-libs/webkit-gtk:5
 >=net-misc/rygel-0.42
 sci-geosciences/geocode-glib:2
 >=sci-geosciences/gnome-maps-43
+>=sys-apps/osinfo-db-tools-1.10.0-r1
+>=sys-libs/libosinfo-1.10.0-r1
 >=www-client/epiphany-43
 >=x11-wm/mutter-43
 
