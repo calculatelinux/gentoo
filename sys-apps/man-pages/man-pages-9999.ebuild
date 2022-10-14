@@ -3,6 +3,21 @@
 
 EAPI=8
 
+# Maintenance notes:
+# - Upstream are very friendly, do approach them if have any questions;
+#
+# - It's considered fine (and somewhat encouraged) for us to make snapshots
+#   if we want specific fixes, perhaps aligned with newer kernels, glibc, etc.
+#   Just generate it with 'make dist'. We can set DISTVERSION if we want a vanity
+#   name or if the comit hash is too long;
+#
+# - If we do use a snapshot, *don't* grab it directly from git and use it
+#   raw in the ebuild. Use 'make dist' as above;
+#
+# - Sometimes there's no dist tarball available post-release and upstream
+#   encourage distros to make their own. Set MAN_PAGES_GENTOO_DIST to 1 if none is
+#   available, 0 otherwise.
+MAN_PAGES_GENTOO_DIST=0
 GENTOO_PATCH=2
 
 DESCRIPTION="A somewhat comprehensive collection of Linux man pages"
@@ -16,10 +31,14 @@ elif [[ ${PV} == *_rc* ]] ; then
 	SRC_URI="https://git.kernel.org/pub/scm/docs/man-pages/man-pages.git/snapshot/${MY_P}.tar.gz"
 	S="${WORKDIR}"/${MY_P}
 else
-	SRC_URI="
-		https://www.kernel.org/pub/linux/docs/man-pages/Archive/${P}.tar.xz
-		https://www.kernel.org/pub/linux/docs/man-pages/${P}.tar.xz
-	"
+	if [[ ${MAN_PAGES_GENTOO_DIST} -eq 1 ]] ; then
+		SRC_URI="https://dev.gentoo.org/~sam/distfiles/${CATEGORY}/${PN}/${P}-gentoo.tar.xz"
+	else
+		SRC_URI="
+			https://www.kernel.org/pub/linux/docs/man-pages/Archive/${P}.tar.xz
+			https://www.kernel.org/pub/linux/docs/man-pages/${P}.tar.xz
+		"
+	fi
 
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux"
 fi
@@ -36,6 +55,9 @@ MY_L10N=( cs da de el es fi fr hu id it mk nb nl pl pt-BR ro sr sv uk vi )
 IUSE="l10n_ja l10n_ru l10n_zh-CN ${MY_L10N[@]/#/l10n_}"
 RESTRICT="binchecks"
 
+BDEPEND="
+	sys-devel/bc
+"
 # Block packages that used to install colliding man pages:
 # bug #341953, bug #548900, bug #612640, bug #617462
 RDEPEND="

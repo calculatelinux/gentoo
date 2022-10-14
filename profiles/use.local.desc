@@ -1666,7 +1666,6 @@ dev-lang/lazarus:minimal - Don't build extra packages from the bigide component
 dev-lang/logtalk:fop - Support for generating pdf documentation using fop
 dev-lang/logtalk:xslt - Support for generating html documentation using xslt
 dev-lang/lua:deprecated - make deprecated data structures/routines available
-dev-lang/lua:test-complete - Run the complete (non-portable) testsuite
 dev-lang/luajit:lua52compat - Enable some upwards-compatible features from Lua 5.2 that are unlikely to break existing code.
 dev-lang/mercury:erlang - Support Mercury Erlang grade
 dev-lang/mercury:trail - Support Mercury trail grades
@@ -2809,6 +2808,7 @@ dev-util/glade:gjs - Build catalog support for dev-libs/gjs widgets.
 dev-util/glade:webkit - Build catalog support for net-libs/webkit-gtk:4 widgets.
 dev-util/global:vim - Integrate the GNU GLOBAL source code tag system with Vim
 dev-util/gnome-builder:clang - Provide integration with sys-devel/clang for best possible C/C++ autocompletion, semantic highlighting, symbol resolving, and diagnostics support
+dev-util/gnome-builder:d-spy - Provide D-Bus debugging functionality via dev-util/d-spy
 dev-util/gnome-builder:devhelp - Provide API docs browsing and integration via dev-util/devhelp
 dev-util/gnome-builder:flatpak - Enable support for flatpak applications using sys-apps/flatpak
 dev-util/gnome-builder:git - Provide support for the Git version control system via dev-libs/libgit2-glib (such as setup of Git for New Project, direct cloning for Open Project and changed lines indicators in the editor gutter)
@@ -4072,7 +4072,6 @@ media-gfx/krita:heif - Enable support for ISO/IEC 23008-12:2017 HEIF/HEIC image 
 media-gfx/krita:jpegxl - Support for JPEG XL image format
 media-gfx/krita:mypaint-brush-engine - Enable MyPaint brush engine support media-libs/libmypaint
 media-gfx/krita:qtmedia - Enable sound support for animations via dev-qt/qtmultimedia
-media-gfx/krita:vc - Enable support for dev-libs/vc, could be a significant speed boost
 media-gfx/librecad:tools - Build additional tool programs: tff2lff
 media-gfx/luminance-hdr:fits - Enable support for the FITS format
 media-gfx/mandelbulber:opencl - Enable GPU rendering support using OpenCL
@@ -5260,7 +5259,6 @@ net-analyzer/echoping:priority - enable socket priority support.
 net-analyzer/echoping:smtp - enable support for SMTP protocol.
 net-analyzer/echoping:tos - enable support for TOS (TYpe Of Service).
 net-analyzer/ettercap:plugins - Install ettercap plugins (et_*.so)
-net-analyzer/flent:plots - Enable drawing plots
 net-analyzer/flowgrind:pcap - Enable packet capturing support using net-libs/libpcap
 net-analyzer/fprobe:messages - enable console messages
 net-analyzer/goaccess:geoipv2 - Enable support for GeoIP2 through dev-libs/libmaxminddb
@@ -6430,14 +6428,8 @@ net-misc/electron-cash:sync - Enable plugin to sync wallet metadata across multi
 net-misc/electron-cash:vkb - Enable plugin for virtual keyboard
 net-misc/electrum:cli - Enables the CLI interface
 net-misc/electrum:qrcode - Enable QR code scanning with media-gfx/zbar
-net-misc/electrum-ltc:audio_modem - Enable plugin to support Audio Modem
 net-misc/electrum-ltc:cli - Enables the CLI interface
-net-misc/electrum-ltc:cosign - Enable plugin to support multisig wallets between multiple Electrum clients
-net-misc/electrum-ltc:digitalbitbox - Enable plugin to support Digital Bitbox hardware wallet
-net-misc/electrum-ltc:email - Enable plugin to support emailing invoices
 net-misc/electrum-ltc:qrcode - Enable QR code scanning with media-gfx/zbar
-net-misc/electrum-ltc:sync - Enable plugin to sync wallet metadata across multiple Electrum clients
-net-misc/electrum-ltc:vkb - Enable plugin for virtual keyboard
 net-misc/etherdfs:tsr - Build the TSR program for DOS, which acts as a client.
 net-misc/ethflop:tsr - Build the TSR program for DOS, which acts as a client.
 net-misc/eventd:libcanberra - Enable plugin for sounds via media-libs/libcanberra
@@ -7534,6 +7526,7 @@ sci-libs/vtk:gdal - Support for gdal formated data
 sci-libs/vtk:imaging - Building Imaging modules
 sci-libs/vtk:json - Support for json formatted data
 sci-libs/vtk:kits - Build kits in addition to modules
+sci-libs/vtk:logging - Enable the loguru logging module
 sci-libs/vtk:offscreen - Offscreen rendering through OSMesa
 sci-libs/vtk:pegtl - Use pegtl to build parsers
 sci-libs/vtk:qt6 - Use Qt6 packages instead of Qt5
@@ -8238,6 +8231,7 @@ sys-devel/clang-runtime:libcxx - Install sys-libs/libcxx for -stdlib=libc++
 sys-devel/clang-runtime:openmp - Install sys-libs/libomp for -fopenmp support
 sys-devel/clang-runtime:sanitize - Enable compiler-rt sanitizer (-fsanitize*) support
 sys-devel/clang-toolchain-symlinks:gcc-symlinks - Install symlinks for 'gcc' and 'g++' for extra compatibility.
+sys-devel/clang-toolchain-symlinks:multilib-symlinks - Install symlinks for all ABI CHOSTs. Note that this can result in gcc being overrode for native builds, as well as conflict with crossdev if used for the same targets.
 sys-devel/clang-toolchain-symlinks:native-symlinks - Install generic tool symlinks like 'cc' and 'c++', as well as ${CTARGET}-*. These symlinks are installed into slotted LLVM bindir, so they should not take precedence over symlinks installed into /usr/bin by sys-devel/gcc-config but they can be helpful for GCC-free setups.
 sys-devel/distcc:gssapi - Enable support for net-libs/libgssglue
 sys-devel/gcc:ada - Build the ADA language (GNAT) frontend
@@ -8275,6 +8269,7 @@ sys-devel/gdb:xml - Support parsing XML data files needed (at least) for cpu fea
 sys-devel/gdb:xxhash - Use dev-libs/xxhash to speed up internal hashing.
 sys-devel/gettext:cvs - When running `autopoint`, use cvs to store the internal development files; this requires cvs at runtime, but will be faster/smaller than raw archives
 sys-devel/gettext:git - When running `autopoint`, use git to store the internal development files; this requires git at runtime, but will be faster/smaller than raw archives
+sys-devel/lld-toolchain-symlinks:multilib-symlinks - Install symlinks for all ABI CHOSTs. Note that this can result in gcc being overrode for native builds, as well as conflict with crossdev if used for the same targets.
 sys-devel/lld-toolchain-symlinks:native-symlinks - Install generic 'ld' symlink, as well as ${CTARGET}-ld. These symlinks are installed into slotted LLVM bindir, so they should not take precedence over symlinks installed into /usr/bin by sys-devel/binutils-config but they can be helpful for binutils-free setups.
 sys-devel/llvm:binutils-plugin - Build the binutils plugin
 sys-devel/llvm:doc - Build and install the HTML documentation and regenerate the man pages
@@ -8283,6 +8278,7 @@ sys-devel/llvm:ncurses - Support querying terminal properties using ncurses' ter
 sys-devel/llvm:xar - Support dumping LLVM bitcode sections in Mach-O files (uses app-arch/xar)
 sys-devel/llvm:z3 - Enable support for sci-mathematics/z3 constraint solver
 sys-devel/llvm-roc:runtime - Builds the compiler runtime libraries.
+sys-devel/llvm-toolchain-symlinks:multilib-symlinks - Install symlinks for all ABI CHOSTs. Note that this can result in gcc being overrode for native builds, as well as conflict with crossdev if used for the same targets.
 sys-devel/llvm-toolchain-symlinks:native-symlinks - Install generic tool symlinks like 'objdump' and 'ranlib', as well as ${CTARGET}-*. These symlinks are installed into slotted LLVM bindir, so they should not take precedence over symlinks installed into /usr/bin by sys-devel/binutils-config but they can be helpful for binutils-free setups.
 sys-devel/mold:system-tbb - Use dev-cpp/tbb package instead of vendored copy
 sys-devel/parity:vc10_0 - Enable support for Visual Studio 2010
@@ -9110,6 +9106,7 @@ x11-wm/jwm:pango - Bidirectional text layout support with pango using xft backen
 x11-wm/lumina:desktop-utils - Build and install lumina's desktop-utils
 x11-wm/metacity:libcanberra - Enable sound event support using media-libs/libcanberra
 x11-wm/metacity:vulkan - Enable Vulkan based compositor support via META_COMPOSITOR=vulkan environment variable
+x11-wm/muffin:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 x11-wm/musca:apis - Optionally install the experimental `apis' window manager
 x11-wm/musca:xlisten - Optionally install the xlisten utility
 x11-wm/mutter:elogind - Rely on sys-auth/elogind as logind provider for Wayland sessions

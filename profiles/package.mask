@@ -33,6 +33,33 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2022-10-13)
+# Depends on vulnerable version of Rust. See bug #877005.
+# Will be unmasked once dependency is updated.
+www-client/seamonkey
+
+# Joshua Kinard <kumba@gentoo.org> (2022-10-13)
+# Difficult-to-resolve build issues on modern toolchains,
+# not publicly maintained, developer contact is difficult,
+# and project website has SSL certificate issues.
+# Bug #838109.
+# Removal on 2022-11-13
+net-misc/spread
+
+# Matt Turner <mattst88@gentoo.org> (2022-10-12)
+# Unmaintained and archived upstream. Last release in 2017.
+# Bug #597960.
+# Removal on 2022-11-12
+net-im/empathy
+
+# Sam James <sam@gentoo.org> (2022-10-12)
+# Upstream has withdrawn these releases because of a (yet unexplained)
+# "significant regression".
+# See https://mta.openssl.org/pipermail/openssl-announce/2022-October/000237.html.
+# and https://github.com/openssl/openssl/issues/19389.
+=dev-libs/openssl-1.1.1r
+=dev-libs/openssl-3.0.6
+
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-10-10)
 # Unused Java library. Removal on 2022-11-10.
 dev-java/objenesis-test
@@ -146,6 +173,9 @@ media-plugins/gmpc-tagedit
 # Matt Turner <mattst88@gentoo.org> (2022-10-01)
 # Metapackage that has outlived its purpose. Made some sense in the immediate
 # aftermath of X.Org modularization 15 years ago.
+# Use these instead if desired:
+# - x11-base/xorg-apps
+# - x11-base/xorg-fonts
 # Removal on 2022-11-01. Bugs #755233, #872119.
 x11-base/xorg-x11
 
@@ -226,58 +256,11 @@ dev-libs/satyr
 # Removal: 2022-10-18.
 media-sound/pulseaudio-modules-bt
 
-# Joonas Niilola <juippis@gentoo.org> (2022-09-16)
-# This theme has been incorporated to enlightenment-0.25, and with
-# 0.24 removed from Gentoo's git tree, this ebuild is useless. Removal
-# in 30 days. #870355
-x11-themes/e-flat-theme
-
-# Joonas Niilola <juippis@gentoo.org> (2022-09-15)
-# Upstream split this font into separate packages: media-fonts/
-# source-code-pro, source-sans, source-serif. The current non-split
-# version is broken. Removal in 30 days. #865103
-media-fonts/source-pro
-
 # Mike Gilbert <floppym@gentoo.org> (2022-09-12)
 # repoman is no longer maintained and has been removed from the portage
 # git repository. Please use dev-util/pkgcheck and dev-util/pkgdev instead.
 # Removal on 2022-11-11. Bug #835013.
 app-portage/repoman
-
-# Michał Górny <mgorny@gentoo.org> (2022-09-11)
-# Bad quality package with failing tests.  No revdeps.
-# Removal on 2022-10-11.  Bug #869650.
-dev-python/pytest-pylint
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2022-09-10)
-# Python 3.8 only. EAPI=6 ebuild. 5 open bugs. Issues with newer
-# dependencies versions.
-# Removal: 2022-10-10.  Bugs #869524, #684334.
-net-analyzer/flent
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2022-09-10)
-# Python 3.8 only package. Tests are disabled. Newer targets fail
-# more tests then 3.8 target.
-# Removal: 2022-10-10.  Bug #869521.
-net-nds/nsscache
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2022-09-10)
-# Python 3.8 only package, with inactive since 2017 upstream.
-# Tests fail and doesn't work on newer python targets.
-# Removal: 2022-10-10.  Bug #869512.
-dev-python/python-etcd
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2022-09-10)
-# Python 3.8 only package, with capped old dependencies, and open
-# bugs and issues.
-# Removal: 2022-10-10.  Bugs #869506, #695090, #792219, #809272.
-net-misc/electrum-ltc
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2022-09-10)
-# Upstream repository archived. Python 3.8 only, with issues for
-# newer targets. No reverse dependencies in tree.
-# Removal: 2022-10-10.  Bugs #869503, #747997, #832242.
-dev-python/SaltTesting
 
 # Matthias Schwarzott <zzam@gentoo.org> (2022-09-08)
 # Breaks kernel builds with BTF enabled.
@@ -484,13 +467,15 @@ sys-devel/automake:1.11
 # Migration to it is expected for GNOME 42, NOT to be unmasked with GNOME 41.
 >=app-arch/file-roller-43
 >=app-backup/deja-dup-43
->=app-text/libgepub-0.7.0
 >=app-misc/tracker-3.4.0-r1
 >=app-misc/tracker-miners-3.4.0-r1
+>=app-text/gtranslator-42
+>=app-text/libgepub-0.7.0
 >=dev-libs/gjs-1.74
 >=dev-libs/libgweather-4.2.0
 >=dev-python/nautilus-python-4.0
 >=dev-util/devhelp-43
+>=dev-util/gnome-builder-43
 >=gnome-base/gnome-applets-3.46
 >=gnome-base/gnome-desktop-43
 >=gnome-base/gnome-flashback-3.46
@@ -502,6 +487,7 @@ sys-devel/automake:1.11
 >=gnome-extra/evolution-ews-3.46
 >=gnome-extra/gnome-boxes-43
 >=gnome-extra/gnome-calculator-43
+>=gnome-extra/gnome-calendar-43
 >=gnome-extra/gnome-clocks-43
 >=gnome-extra/gnome-shell-extensions-43
 >=gnome-extra/gnome-software-43
@@ -512,6 +498,7 @@ sys-devel/automake:1.11
 >=media-gfx/gnome-photos-43
 media-libs/libshumate
 >=net-irc/polari-43
+net-libs/dleyna
 >=net-libs/gnome-online-accounts-3.46
 >=net-libs/gssdp-1.6
 >=net-libs/gupnp-1.6
@@ -521,6 +508,7 @@ net-libs/rest:1.0
 net-libs/uhttpmock:1.0
 net-libs/webkit-gtk:4.1
 net-libs/webkit-gtk:5
+>=net-misc/gupnp-tools-0.12
 >=net-misc/rygel-0.42
 sci-geosciences/geocode-glib:2
 >=sci-geosciences/gnome-maps-43

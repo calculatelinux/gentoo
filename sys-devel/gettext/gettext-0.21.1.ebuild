@@ -5,12 +5,8 @@
 
 EAPI=8
 
-if [[ ${PV} != 0.21.1 ]] ; then
-	die "Restore elibtoolize in src_prepare and delete src_unpack."
-fi
-
 VERIFY_SIG_OPENPGP_KEY_PATH="${BROOT}"/usr/share/openpgp-keys/gettext.asc
-inherit java-pkg-opt-2 multilib-minimal verify-sig
+inherit java-pkg-opt-2 libtool multilib-minimal verify-sig
 
 DESCRIPTION="GNU locale utilities"
 HOMEPAGE="https://www.gnu.org/software/gettext/"
@@ -20,7 +16,6 @@ if [[ ${PV} == *_rc* ]] ; then
 	S="${WORKDIR}/${P/_/-}"
 else
 	SRC_URI="mirror://gnu/${PN}/${P}.tar.xz"
-	SRC_URI+=" https://dev.gentoo.org/~sam/distfiles/${CATEGORY}/${PN}/${P}-java-autoconf-regenerate.patch.xz"
 	SRC_URI+=" verify-sig? ( mirror://gnu/${PN}/${P}.tar.xz.sig )"
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
 fi
@@ -71,7 +66,6 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-0.21_rc1-avoid_eautomake.patch
 	"${FILESDIR}"/${PN}-0.21-CVE-2020-12825.patch
 	"${FILESDIR}"/${P}-java-autoconf.patch
-	"${WORKDIR}"/${P}-java-autoconf-regenerate.patch
 )
 
 QA_SONAME_NO_SYMLINK=".*/preloadable_libintl.so"
@@ -80,19 +74,20 @@ pkg_setup() {
 	java-pkg-opt-2_pkg_setup
 }
 
-src_unpack() {
-	if use verify-sig ; then
-		verify-sig_verify_detached "${DISTDIR}"/gettext-0.21.1.tar.xz{,.sig}
-	fi
-
-	default
-}
-
 src_prepare() {
 	java-pkg-opt-2_src_prepare
 
 	default
-	#elibtoolize
+
+	# gettext-0.21.1-java-autoconf.patch changes
+	# gettext-{runtime,tools}/configure.ac and the corresponding
+	# configure scripts. Avoid regenerating other autotools output.
+	touch -c gettext-{runtime,tools}/{aclocal.m4,Makefile.in,config.h.in,configure} || die
+
+	# Makefile.am adds a dependency on gettext-{runtime,tools}/configure.ac
+	touch -c configure || die
+
+	elibtoolize
 
 	use elibc_musl && eapply "${FILESDIR}"/${PN}-0.21-musl-omit_setlocale_lock.patch
 }
