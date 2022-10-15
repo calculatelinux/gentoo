@@ -10,7 +10,7 @@ DESCRIPTION="The LLVM linker (link editor)"
 HOMEPAGE="https://llvm.org/"
 
 LICENSE="Apache-2.0-with-LLVM-exceptions UoI-NCSA"
-SLOT="0/${LLVM_SOABI}"
+SLOT="${LLVM_MAJOR}/${LLVM_SOABI}"
 KEYWORDS=""
 IUSE="debug test"
 RESTRICT="!test? ( test )"
@@ -20,15 +20,16 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
+	!sys-devel/lld:0
 "
 BDEPEND="
 	test? (
 		>=dev-util/cmake-3.16
-		$(python_gen_any_dep "~dev-python/lit-${PV}[\${PYTHON_USEDEP}]")
+		$(python_gen_any_dep ">=dev-python/lit-${PV}[\${PYTHON_USEDEP}]")
 	)
 "
 PDEPEND="
-	sys-devel/lld-toolchain-symlinks:${LLVM_MAJOR}
+	>=sys-devel/lld-toolchain-symlinks-15-r2:${LLVM_MAJOR}
 "
 
 LLVM_COMPONENTS=( lld cmake libunwind/include/mach-o )
@@ -36,7 +37,7 @@ LLVM_TEST_COMPONENTS=( llvm/utils/{lit,unittest} )
 llvm.org_set_globals
 
 python_check_deps() {
-	python_has_version "~dev-python/lit-${PV}[${PYTHON_USEDEP}]"
+	python_has_version ">=dev-python/lit-${PV}[${PYTHON_USEDEP}]"
 }
 
 pkg_setup() {
@@ -62,6 +63,7 @@ src_configure() {
 	use elibc_musl && append-ldflags -Wl,-z,stack-size=2097152
 
 	local mycmakeargs=(
+		-DCMAKE_INSTALL_PREFIX="${EPREFIX}/usr/lib/llvm/${LLVM_MAJOR}"
 		-DBUILD_SHARED_LIBS=ON
 		-DLLVM_INCLUDE_TESTS=$(usex test)
 		-DLLVM_MAIN_SRC_DIR="${WORKDIR}/llvm"
