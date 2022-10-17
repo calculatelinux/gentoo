@@ -33,6 +33,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2022-10-17)
+# Unmaintained since 2018.  Requires dev-python/nose.  No revdeps left.
+# Removal on 2022-11-16.  Bug #877375.
+dev-python/case
+
+# Michał Górny <mgorny@gentoo.org> (2022-10-17)
+# dev-python/nose plugin.  No revdeps left.
+# Removal on 2022-11-16.  Bug #877369.
+dev-python/nose_warnings_filters
+
+# John Helmert III <ajak@gentoo.org> (2022-10-16)
+# <OpenSSL-1.1.1 are EOL and contain known vulnerabilities. Users should
+# migrate to a newer branch.
+<dev-libs/openssl-1.1.1
+
 # Matt Turner <mattst88@gentoo.org> (2022-10-14)
 # Last upstream release in 2013. Last upstream commit in 2019. No maintainer in
 # Gentoo. No reverse dependencies. EAPI=6.
@@ -245,14 +260,6 @@ games-simulation/bcs-demo
 # from 2016.  Effectively unmaintained.  EAPI 6.
 # Removal on 2022-10-26.  Bug #253517.
 games-sports/torcs
-
-# Ionen Wolkens <ionen@gentoo.org> (2022-09-25)
-# This version been causing major issues for some RTX 30xx users and
-# no real reason not to stick to 515.65.01 for now (but feel free to
-# unmask if it's been fine).
-# https://bugs.archlinux.org/task/75995
-# https://forums.developer.nvidia.com/t/bug-report-black-x11-screen-and-partial-lockup-when-upgraded-to-515-76-and-dual-rtx3060
-~x11-drivers/nvidia-drivers-515.76
 
 # Piotr Karbowski <slashbeast@gentoo.org> (2022-09-25)
 # No package in tree depends on dev-python/ssh2-python. Masked for removal.

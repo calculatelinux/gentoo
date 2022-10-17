@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst setup
+DEPEND==www-servers/apache-2*
+DESCRIPTION=A simple FastCGI handler module
+EAPI=7
+HOMEPAGE=https://github.com/hollow/mod_fastcgi_handler
+INHERIT=apache-module
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND==www-servers/apache-2*
+SLOT=0
+SRC_URI=https://github.com/hollow/mod_fastcgi_handler/archive/v0.6.tar.gz -> mod_fastcgi_handler-0.6.tar.gz
+_eclasses_=apache-module	4d0ccd357b5f2d92599030b72f6efb62	depend.apache	416d1c5005c5f4594e79812fb7323f0d
+_md5_=99ce06eb91aea405f6646ee3b1a81770
