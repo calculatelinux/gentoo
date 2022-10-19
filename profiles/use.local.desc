@@ -4020,9 +4020,9 @@ media-gfx/freecad:tux - Build the Tux module
 media-gfx/geeqie:ffmpegthumbnailer - Enable video thumbnail support with media-video/ffmpegthumbnailer
 media-gfx/geeqie:gpu-accel - Enable GPU acceleration support - experimental
 media-gfx/geeqie:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
-media-gfx/geeqie:heif - Enable support for ISO/IEC 23008-12:2017 HEIF files
+media-gfx/geeqie:heif - Enable support for ISO/IEC 23008-12:2017 HEIF/HEIC image format using media-libs/libheif
 media-gfx/geeqie:jpegxl - Enable support for JPEG XL image format
-media-gfx/geeqie:map - Enable items map display - experimental
+media-gfx/geeqie:map - Enable items GPS map display
 media-gfx/gimp:heif - Enable support for ISO/IEC 23008-12:2017 HEIF files
 media-gfx/gimp:jpegxl - Enable support for JPEG XL image format
 media-gfx/gimp:vector-icons - Enable support for vector icons (experimental)
@@ -8494,6 +8494,7 @@ sys-libs/libselinux:pcre2 - Use dev-libs/libpcre2 for fcontext regexes
 sys-libs/libunwind:debug-frame - Adds support for DWARF .debug_frame section: Use the information from this section if available
 sys-libs/libunwind:libatomic - Use libatomic instead of builtin atomic operations
 sys-libs/libxcrypt:compat - Build with compatibility interfaces for other crypt implementations
+sys-libs/libxcrypt:headers-only - Build and install only the headers.
 sys-libs/libxcrypt:system - Install as system libcrypt.so rather than to an alternate directory (will collide with sys-libs/glibc's version)
 sys-libs/llvm-libunwind:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
 sys-libs/minizip-ng:compat - Enable compatibility with sys-libs/zlib's USE=minizip
