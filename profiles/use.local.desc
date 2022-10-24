@@ -659,18 +659,13 @@ app-emulation/wine-staging:opencl - Enable OpenCL support
 app-emulation/wine-staging:osmesa - Enable off-screen rendering (OpenGL in bitmaps) support
 app-emulation/wine-staging:pcap - Support packet capture software (e.g. wireshark)
 app-emulation/wine-staging:perl - Install helpers that require perl (winedump/winemaker)
-app-emulation/wine-staging:pipelight - Apply Wine-Staging patches for Pipelight/Silverlight support
-app-emulation/wine-staging:realtime - Pull in sys-auth/rtkit for low-latency pulseaudio support
-app-emulation/wine-staging:run-exes - Use Wine to open and run .EXE and .MSI files
 app-emulation/wine-staging:samba - Pull in net-fs/samba with winbind for NTLM auth support
 app-emulation/wine-staging:sdl - Enable gamepad support using media-libs/libsdl2
-app-emulation/wine-staging:staging - Apply Wine-Staging patches for advanced feature support that haven't made it into upstream Wine yet
 app-emulation/wine-staging:vulkan - Enable Vulkan drivers
 app-emulation/wine-vanilla:capi - Enable ISDN support using net-libs/libcapi
 app-emulation/wine-vanilla:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
 app-emulation/wine-vanilla:dos - Pull in games-emulation/dosbox to run DOS applications
 app-emulation/wine-vanilla:gecko - Enable mshtml support using app-emulation/wine-gecko
-app-emulation/wine-vanilla:gssapi - Use GSSAPI (Kerberos SSP support)
 app-emulation/wine-vanilla:mingw - Build PE files using a MinGW toolchain for better compatibility
 app-emulation/wine-vanilla:mono - Enable .NET support using app-emulation/wine-mono
 app-emulation/wine-vanilla:netapi - Enable support for configuring remote shares using net-fs/samba
@@ -678,8 +673,6 @@ app-emulation/wine-vanilla:opencl - Enable OpenCL support
 app-emulation/wine-vanilla:osmesa - Enable off-screen rendering (OpenGL in bitmaps) support
 app-emulation/wine-vanilla:pcap - Support packet capture software (e.g. wireshark)
 app-emulation/wine-vanilla:perl - Install helpers that require perl (winedump/winemaker)
-app-emulation/wine-vanilla:realtime - Pull in sys-auth/rtkit for low-latency pulseaudio support
-app-emulation/wine-vanilla:run-exes - Use Wine to open and run .EXE and .MSI files
 app-emulation/wine-vanilla:samba - Pull in net-fs/samba with winbind for NTLM auth support
 app-emulation/wine-vanilla:sdl - Enable gamepad support using media-libs/libsdl2
 app-emulation/wine-vanilla:vkd3d - Enable DirectX 12 support using app-emulation/vkd3d
@@ -2907,7 +2900,6 @@ dev-vcs/darcs:terminfo - Use the terminfo package for enhanced console support.
 dev-vcs/darcs:threaded - Use threading and SMP support.
 dev-vcs/fossil:fusefs - Enable the Fuse Filesystem
 dev-vcs/fossil:json - Enable the JSON API of Fossil's wiki
-dev-vcs/fossil:miniz - Use the bundled miniz for compression instead of zlib. Incompatible with ssl.
 dev-vcs/fossil:system-sqlite - Use the system SQLite instead of the bundled one
 dev-vcs/fossil:tcl-private-stubs - Enable Tcl integration via private stubs mechanism
 dev-vcs/fossil:tcl-stubs - Enable Tcl integration via stubs library mechanism
@@ -2977,6 +2969,8 @@ games-action/minetest:redis - Enable redis backend via dev-libs/hiredis
 games-action/minetest:server - Build Minetest server
 games-action/minetest:spatial - Enable SpatialIndex AreaStore backend
 games-action/polymc:lto - Enable link-time optimization
+games-action/prismlauncher:lto - Enable link-time optimization
+games-action/prismlauncher:qt6 - Build with Qt6 support instead of the default Qt5
 games-action/supermariowar:server - Compile and install Super Mario War server files
 games-action/supertuxkart:nettle - Use dev-libs/nettle crypto backend
 games-action/supertuxkart:recorder - Enable recording with media-libs/libopenglrecorder
@@ -3063,6 +3057,7 @@ games-emulation/mupen64plus-core:new-dynarec - Enable new experimental dynamic r
 games-emulation/mupen64plus-core:opencv - Support video capture via media-libs/opencv
 games-emulation/mupen64plus-core:osd - Overlay emulator messages using on-screen-display
 games-emulation/mupen64plus-video-glide64mk2:hires - Support hi-resolution textures (requires dev-libs/boost)
+games-emulation/pcsx2:sndio - Enable support for the media-sound/sndio backend
 games-emulation/pcsx2:vulkan - Enable support for Vulkan
 games-emulation/pcsxr:archive - Support compressed files (via libarchive)
 games-emulation/pcsxr:ccdda - Support compressed CDDA (requires ffmpeg)
@@ -3694,7 +3689,6 @@ mail-client/claws-mail:archive - Enable archiving plugin
 mail-client/claws-mail:bogofilter - Build mail-filter/bogofilter plugin
 mail-client/claws-mail:dillo - Enable dillo html viewer plugin
 mail-client/claws-mail:gdata - Enable plugin for access to Google data providers
-mail-client/claws-mail:gtk2 - Build support for GTK+-2 instead of GTK+-3 (live ebuild only)
 mail-client/claws-mail:libcanberra - Enable sound notification in connection with USE=notification
 mail-client/claws-mail:libnotify - Enable notification on the desktop in connection with USE=notification
 mail-client/claws-mail:litehtml - Enable dev-libs/gumbo html viewer plugin
@@ -4019,7 +4013,6 @@ media-gfx/freecad:techdraw - Build the techdraw module and workbench, a more adv
 media-gfx/freecad:tux - Build the Tux module
 media-gfx/geeqie:ffmpegthumbnailer - Enable video thumbnail support with media-video/ffmpegthumbnailer
 media-gfx/geeqie:gpu-accel - Enable GPU acceleration support - experimental
-media-gfx/geeqie:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 media-gfx/geeqie:heif - Enable support for ISO/IEC 23008-12:2017 HEIF/HEIC image format using media-libs/libheif
 media-gfx/geeqie:jpegxl - Enable support for JPEG XL image format
 media-gfx/geeqie:map - Enable items GPS map display
@@ -7316,7 +7309,6 @@ sci-libs/dealii:arpack - Adds support for ARPACK (sci-libs/arpack)
 sci-libs/dealii:assimp - Add support for assimp (media-libs/assimp)
 sci-libs/dealii:cgal - Adds support for CGAL (sci-mathematics/cgal)
 sci-libs/dealii:cuda - Add support for cuda (dev-util/nvidia-cuda-sdk)
-sci-libs/dealii:debug - Build an additional debug library with extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see <https://www.gentoo.org/proj/en/qa/backtraces.xml>
 sci-libs/dealii:ginkgo - Add support for ginkgo (sci-libs/ginkgo)
 sci-libs/dealii:gmsh - Add support for gmsh (sci-libs/gmsh)
 sci-libs/dealii:metis - Add support for metis (sci-libs/metis)
@@ -8886,6 +8878,7 @@ x11-libs/pixman:loongson2f - Enable Loongson2f MMI optimizations.
 x11-libs/qscintilla:designer - Build plugin for Qt Designer
 x11-libs/qwt:designer - Installs dev-qt/designer plugin.
 x11-libs/qwt:mathml - Use the MathML renderer of the Qt solutions package.
+x11-libs/qwt:polar - Install the QwtPolar headers
 x11-libs/tslib:evdev - Build experimental input module
 x11-libs/tslib:uinput - Provide alternative ts_uinput evdev device
 x11-libs/vte:icu - Enable legacy charset support using dev-libs/icu

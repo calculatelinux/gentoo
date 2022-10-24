@@ -1,0 +1,16 @@
+BDEPEND=virtual/pkgconfig test? ( dev-lua/busted[lua_targets_luajit(-)?,lua_targets_lua5-1(-)?,lua_targets_lua5-3(-)?,lua_targets_lua5-4(-)?] ) lua_targets_luajit? ( dev-lang/luajit:= ) lua_targets_lua5-1? ( dev-lang/lua:5.1 ) lua_targets_lua5-3? ( dev-lang/lua:5.3 ) lua_targets_lua5-4? ( dev-lang/lua:5.4 )
+DEFINED_PHASES=install test
+DESCRIPTION=Lua String Hashing/Indexing Library
+EAPI=8
+HOMEPAGE=https://github.com/lunarmodules/say
+INHERIT=lua
+IUSE=test lua_targets_luajit lua_targets_lua5-1 lua_targets_lua5-3 lua_targets_lua5-4
+KEYWORDS=~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~riscv ~sparc ~x86
+LICENSE=MIT
+RDEPEND=lua_targets_luajit? ( dev-lang/luajit:= ) lua_targets_lua5-1? ( dev-lang/lua:5.1 ) lua_targets_lua5-3? ( dev-lang/lua:5.3 ) lua_targets_lua5-4? ( dev-lang/lua:5.4 )
+REQUIRED_USE=|| ( lua_targets_luajit lua_targets_lua5-1 lua_targets_lua5-3 lua_targets_lua5-4 )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/lunarmodules/say/archive/refs/tags/v1.4.1.tar.gz -> say-1.4.1.tar.gz
+_eclasses_=lua	d5c7dbcaf69f3065f5d7ce3b172c2214	lua-utils	e69ff116248d78546ae1a234c086fe80	multibuild	d26d81f242cb193d899a72bca423d0bd	multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144
+_md5_=219604b359af4a59c6f381747b74d22a

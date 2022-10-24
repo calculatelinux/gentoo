@@ -17,10 +17,11 @@ SRC_URI="mirror://pypi/${PN::1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="amd64 arm arm64 hppa ~ia64 ppc ppc64 ~riscv ~s390 sparc x86"
 
 distutils_enable_sphinx docs/source \
-	dev-python/sphinx_rtd_theme
+	dev-python/myst_parser \
+	dev-python/pydata-sphinx-theme
 distutils_enable_tests pytest
 
 python_test() {
