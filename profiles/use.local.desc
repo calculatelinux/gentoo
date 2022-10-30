@@ -994,6 +994,7 @@ app-office/lyx:rcs - Add support for revision control via dev-vcs/rcs
 app-office/lyx:rtf - Add support for RTF import/export packages
 app-office/magicpoint:contrib - Install additional contributed scripts
 app-office/mdbtools:glib - Use functions provided by dev-libs/glib, not built-in
+app-office/planner:libgda - Database/GDA support
 app-office/sc-im:X - Use x11-misc/xclip for clipboard copy/paste
 app-office/sc-im:ods - Add ods import support
 app-office/sc-im:plots - Add sci-visualization/gnuplot for plotting support
@@ -2176,8 +2177,6 @@ dev-libs/weston:screen-sharing - Enable screen-sharing through RDP
 dev-libs/weston:seatd - Enable support for rootless session via sys-auth/seatd
 dev-libs/weston:wayland-compositor - Enable Wayland compositor support
 dev-libs/weston:xwayland - Enable ability support native X11 applications
-dev-libs/xapian:brass - Enabled brass backend db support
-dev-libs/xapian:chert - Enabled chert backend db support
 dev-libs/xapian:inmemory - Enabled inmemory backend db support
 dev-libs/xapian:remote - Enabled remote backend db support
 dev-libs/xerces-c:iconv - Use iconv (virtual/libiconv) as message loader and transcoder (in general it would be possible to use iconv only as message loader and something else like icu or the native method as transcoder and vice-versa, but this is a less common case and hard to handle)
@@ -2512,6 +2511,7 @@ dev-qt/qt-creator:boot2qt - Build plugin for Boot2Qt devices
 dev-qt/qt-creator:clang - Build clang-based plugins for C/C++ development (code model, formatting, static analysis)
 dev-qt/qt-creator:clearcase - Add support for IBM ClearCase version control system (requires manual installation of ClearCase client)
 dev-qt/qt-creator:cmake - Build plugin for CMake-based projects
+dev-qt/qt-creator:coco - Build plugin to support Coco code coverage tool
 dev-qt/qt-creator:conan - Build plugin to integrate with the Conan package manager
 dev-qt/qt-creator:cppcheck - Enable integration with dev-util/cppcheck
 dev-qt/qt-creator:ctfvisualizer - Build the Chrome Trace Format visualizer plugin
@@ -2519,6 +2519,7 @@ dev-qt/qt-creator:designer - Enable designer for QtWidgets-based UIs
 dev-qt/qt-creator:docker - Build plugin for Docker support
 dev-qt/qt-creator:glsl - Build the GLSL editor plugin
 dev-qt/qt-creator:help - Enable the integrated documentation viewer
+dev-qt/qt-creator:imageviewer - Build plugin to open and view image files
 dev-qt/qt-creator:incredibuild - Enable integration with Incredibuild
 dev-qt/qt-creator:lsp - Add support for the Language Server Protocol (LSP)
 dev-qt/qt-creator:mcu - Build plugin for MCU devices
@@ -3316,6 +3317,7 @@ gnome-extra/gnome-commander:pdf - Add metadata support for PDF
 gnome-extra/gnome-commander:taglib - Add metadata support for ID3, Vorbis, FLAC and APE
 gnome-extra/gnome-commander:unique - Enable single instance support using dev-libs/libunique
 gnome-extra/gnome-contacts:telepathy - Start chat from contact details
+gnome-extra/gnome-network-displays:firewalld - Install firewalld zones
 gnome-extra/gnome-shell-extension-gsconnect:nautilus - Install Nautilus extension for sending files via GSConnect
 gnome-extra/gnome-software:firmware - Enable firmware update support through sys-apps/fwupd
 gnome-extra/gnome-software:flatpak - Enable support for flatpak applications using sys-apps/flatpak
@@ -4079,7 +4081,6 @@ media-gfx/openclipart:gzip - Compresses clip art using gzip
 media-gfx/openscad:gamepad - Add support for gamepads through dev-qt/qtgamepad
 media-gfx/openscad:headless - Build a binary without GUI
 media-gfx/openscad:spacenav - Add support for space navigator devices through dev-libs/libspnav
-media-gfx/openvdb:abi5-compat - Disables newer features to maintain compatibility with ABI5.
 media-gfx/openvdb:abi6-compat - Disables newer features to maintain compatibility with ABI6.
 media-gfx/openvdb:abi7-compat - Disables newer features to maintain compatibility with ABI7.
 media-gfx/openvdb:abi8-compat - Disables newer features to maintain compatibility with ABI8.
@@ -6409,7 +6410,7 @@ net-misc/curl:ssl - Enable crypto engine support (via openssl if USE='-gnutls -n
 net-misc/curl:sslv3 - Support for the old/insecure SSLv3 protocol
 net-misc/curl:telnet - Enable Telnet protocol support
 net-misc/curl:tftp - Enable TFTP support
-net-misc/curl:winssl - Enable winssl ssl backend
+net-misc/curl:websockets - Enable websockets support
 net-misc/curl:zstd - Enable zstd compression
 net-misc/dahdi:flash - Support (short) flash on FXS
 net-misc/dahdi:oslec - Enable OSLEC (software) echo canceller (require ECHO in kernel)
@@ -8367,7 +8368,7 @@ sys-fs/lessfs:filelog - Enable the ability to log to a file instead of syslog
 sys-fs/lessfs:memtrace - Enable leefs to create a report regarding the memory allocation. This feature should be used for debugging purposes to avoid performance degradation
 sys-fs/loop-aes:extra-ciphers - Enable extra ciphers
 sys-fs/loop-aes:keyscrub - Protects the encryption key in memory but takes more cpu resources
-sys-fs/lvm2:device-mapper-only - Build only device-mapper and not the rest of LVM2 (UNSUPPORTED)
+sys-fs/lvm2:lvm - Build all of LVM2, not just device-mapper
 sys-fs/lvm2:lvm2create-initrd - Install lvm2create_initrd script and pull in sys-apps/makedev for the /sbin/MAKEDEV command
 sys-fs/lvm2:sanlock - Enable lvmlockd with support for sanlock
 sys-fs/lvm2:thin - Support for thin volumes
@@ -8404,6 +8405,7 @@ sys-kernel/kpatch:contrib - Enable contrib kpatch services files.
 sys-kernel/kpatch:kmod - Enable a kernel module (.ko file) which provides an interface for the patch modules to register new functions for replacement.
 sys-kernel/kpatch:kpatch - Enable a command-line tool which allows a user to manage a collection of patch modules.
 sys-kernel/kpatch:kpatch-build - Enable tools which convert a source diff patch to a patch module.
+sys-kernel/linux-firmware:compress - Compress firmware using xz (app-arch/xz-utils) before installation
 sys-kernel/linux-firmware:initramfs - Create and install initramfs for early microcode loading in /boot (only AMD for now)
 sys-kernel/linux-firmware:redistributable - Install also non-free (but redistributable) firmware files
 sys-kernel/linux-firmware:savedconfig - Allows individual selection of firmware files

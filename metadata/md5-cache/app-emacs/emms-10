@@ -10,5 +10,5 @@ LICENSE=GPL-3+ FDL-1.1+
 RDEPEND=media-libs/taglib >=app-editors/emacs-23.1:*
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~ulm/distfiles/emms-10.tar.xz
-_eclasses_=elisp	c1c17e9c24d72d3bd58c611de8116fb6	elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144
+_eclasses_=elisp	8aab2c847b5894dc40503ae1d203abcf	elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144
 _md5_=40b6c355593561c86f004455ae7a407c
