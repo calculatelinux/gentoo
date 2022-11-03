@@ -8,7 +8,7 @@ inherit xdg-utils
 DESCRIPTION="A session manager for the Xfce desktop environment"
 HOMEPAGE="
 	https://docs.xfce.org/xfce/xfce4-session/start
-	https://gitlab.xfce.org/xfce/xfce4-session
+	https://gitlab.xfce.org/xfce/xfce4-session/
 "
 SRC_URI="https://archive.xfce.org/src/xfce/${PN}/${PV%.*}/${P}.tar.bz2"
 
