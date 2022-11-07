@@ -20,7 +20,7 @@ PATCHSET="2"
 PATCHSET_NAME="chromium-$(ver_cut 1)-patchset-${PATCHSET}"
 SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.xz
 	https://github.com/stha09/chromium-patches/releases/download/${PATCHSET_NAME}/${PATCHSET_NAME}.tar.xz
-	pgo? ( https://blackhole.sk/~kabel/src/chromium-profiler-0.1.tar )"
+	pgo? ( https://github.com/elkablo/chromium-profiler/releases/download/v0.2/chromium-profiler-0.2.tar )"
 
 LICENSE="BSD"
 SLOT="0/dev"
@@ -56,7 +56,7 @@ COMMON_SNAPSHOT_DEPEND="
 	>=media-libs/freetype-2.11.0-r1:=
 	system-harfbuzz? ( >=media-libs/harfbuzz-3:0=[icu(-)] )
 	media-libs/libjpeg-turbo:=
-	system-png? ( media-libs/libpng:=[-apng] )
+	system-png? ( media-libs/libpng:=[-apng(-)] )
 	>=media-libs/libwebp-0.4.0:=
 	media-libs/mesa:=[gbm(+)]
 	>=media-libs/openh264-1.6.0:=
@@ -583,7 +583,7 @@ src_prepare() {
 		keeplibs+=( third_party/libpng )
 	fi
 	if ! use system-av1; then
-		keep_libs+=(
+		keeplibs+=(
 			third_party/dav1d
 			third_party/libaom
 			third_party/libaom/source/libaom/third_party/fastfeat
