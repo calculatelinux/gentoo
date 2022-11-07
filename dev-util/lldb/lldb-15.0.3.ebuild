@@ -11,7 +11,7 @@ HOMEPAGE="https://llvm.org/"
 
 LICENSE="Apache-2.0-with-LLVM-exceptions UoI-NCSA"
 SLOT="0/${LLVM_SOABI}"
-KEYWORDS="~amd64 arm arm64 x86"
+KEYWORDS="amd64 arm arm64 x86"
 IUSE="debug +libedit lzma ncurses +python test +xml"
 RESTRICT="test"
 REQUIRED_USE=${PYTHON_REQUIRED_USE}
@@ -68,6 +68,7 @@ src_configure() {
 		-DLLDB_ENABLE_CURSES=$(usex ncurses)
 		-DLLDB_ENABLE_LIBEDIT=$(usex libedit)
 		-DLLDB_ENABLE_PYTHON=$(usex python)
+		-DLLDB_ENABLE_LUA=OFF
 		-DLLDB_ENABLE_LZMA=$(usex lzma)
 		-DLLDB_ENABLE_LIBXML2=$(usex xml)
 		-DLLDB_USE_SYSTEM_SIX=1

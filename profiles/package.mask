@@ -33,6 +33,30 @@
 
 #--- END OF EXAMPLES ---
 
+# Jaco Kroon <jaco@uls.co.za> (2022-11-05)
+# Some potentially breaking changes here, please check the UPGRADE.txt file.
+# Most important:  chan_sip no longer builds by default, if you've migrated to
+# PJSIP you should be OK and most likely you should be able to safely unmask.
+# For now to prevent accidental upgrades and to allow proper testing this will
+# be in place for minimum six months (2023-04-22).
+=net-misc/asterisk-20*
+=net-misc/asterisk-opus-20*
+=net-misc/asterisk-g729-20*
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2022-11-04)
+# Upstream repository is gone. Uses internally python 2 code, which
+# we patch into python 3. Only ebuild uses snapshot tarball from the
+# dead repo. Doesn't use PEP517 mode. Has issues with python 3.11.
+# No reverse dependencies in tree.
+# Removal: 2022-12-04.  Bug #879613.
+dev-python/tempita
+
+# Michał Górny <mgorny@gentoo.org> (2022-11-04)
+# NIH version of dev-python/watchdog that was used by dev-python/uvicorn
+# only, and was replaced by rustified dev-python/watchfiles.
+# Removal on 2022-12-04.  Bug #879515.
+dev-python/watchgod
+
 # Ionen Wolkens <ionen@gentoo.org> (2022-11-02)
 # glslang breaks ABI (leading to crashes until consumers are rebuilt)
 # and prevents re-building packages which used this part of the ABI
@@ -185,17 +209,6 @@ dev-python/eventlet
 # removed in 11.6, no revdeps left. Removal on 2022-11-17.
 # Bug #722092, #749900, #762169, #840656, #845381, #858392, #866701.
 dev-util/nvidia-cuda-sdk
-
-# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2022-10-17)
-# Hostile takeover ongoing, integrity cannot be guaranteed.
-# Use the release version only if you change the meta server setting.
-# Use games-action/multimc-bin or games-action/prismlauncher instead
-# to be completely safe.
-# https://bugs.gentoo.org/877495
-#
-# Update (2022-10-20)
-# Removal in 15 days, please install games-action/prismlauncher instead
-games-action/polymc
 
 # Michał Górny <mgorny@gentoo.org> (2022-10-17)
 # Unmaintained since 2018.  Requires dev-python/nose.  No revdeps left.

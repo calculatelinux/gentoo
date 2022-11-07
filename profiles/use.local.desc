@@ -2468,6 +2468,7 @@ dev-python/qiskit-terra:visualization - Enable visualization modules
 dev-python/rarfile:compressed - Enables the module to support compressed v3 archives by calling the app-arch/unrar.
 dev-python/rfc3986:idna - enable support for the IDNA specification (RFC 5891)
 dev-python/rpyc:gdb - Run tests depending on sys-devel/gdb
+dev-python/rpyc:gevent - Use dev-python/gevent for GeventServer
 dev-python/rpyc:numpy - Run tests depending on dev-python/numpy, dev-python/pandas
 dev-python/scipy:pythran - Use dev-python/pythran to accelerate runtime
 dev-python/scipy:sparse - Adds support for sparse solving with sci-libs/umfpack
@@ -2969,7 +2970,6 @@ games-action/minetest:prometheus - Enable prometheus client support
 games-action/minetest:redis - Enable redis backend via dev-libs/hiredis
 games-action/minetest:server - Build Minetest server
 games-action/minetest:spatial - Enable SpatialIndex AreaStore backend
-games-action/polymc:lto - Enable link-time optimization
 games-action/prismlauncher:lto - Enable link-time optimization
 games-action/prismlauncher:qt6 - Build with Qt6 support instead of the default Qt5
 games-action/supermariowar:server - Compile and install Super Mario War server files
@@ -3208,7 +3208,6 @@ games-simulation/flightgear:gdal - Enable alternative terrain engine based on pa
 games-simulation/flightgear:qt5 - Build Qt5 launcher application
 games-simulation/flightgear:udev - Enable event-based Input devices through virtual/udev
 games-simulation/flightgear:utils - Build various utilities (fgpanel, fgviewer among others)
-games-simulation/openrct2:lightfx - Enables LightFX for better lightning effects.
 games-simulation/openrct2:scripting - Enable the dev-lang/duktape scripting engine for executing user scripts.
 games-simulation/openttd:allegro - Add support for Allegro
 games-simulation/openttd:dedicated - Build only the openttd server, and not the client.
@@ -4628,10 +4627,13 @@ media-sound/herrie:xspf - Enable support for reading and saving XSPF playlists
 media-sound/hydrogen:archive - Use libarchive instead of libtar
 media-sound/hydrogen:portmidi - Add portmidi support
 media-sound/jack-audio-connection-kit:pam - Add basic realtime configuration via sys-auth/realtime-base
+media-sound/jack-example-tools:jack-net - Build jack_net_* example clients
+media-sound/jack-example-tools:jack-netsource - Build jack_netsource for configuring network sources
+media-sound/jack-example-tools:zalsa - Build the zalsa internal client using media-libs/zita-resampler
 media-sound/jack2:classic - Enable building of jackd
 media-sound/jack2:metadata - Enable metadata API
 media-sound/jack2:pam - Add basic realtime configuration via sys-auth/realtime-base
-media-sound/jalv:gtkmm - Adds support for dev-cpp/gtkmm: C++ interface for GTK+2
+media-sound/jack2:tools - Pull basic tools (e.g. jack_lsp/connect) from media-sound/jack-example-tools
 media-sound/kid3:acoustid - Build acoustic fingerprinting plugin using media-libs/chromaprint
 media-sound/kid3:mpris - Enable support for MPRIS2 interface using dev-qt/qtdbus
 media-sound/klick:rubberband - Enable rubberband support
@@ -7093,9 +7095,12 @@ sci-astronomy/siril:libconfig - Require dev-libs/libconfig to read old configura
 sci-astronomy/siril:wcs - Add supprt astrometry features using sci-astronomy/wcslib
 sci-astronomy/stellarium:deep-sky - Install extra deep sky objects catalog (may affect performance)
 sci-astronomy/stellarium:media - Enable sound and video support
+sci-astronomy/stellarium:scripting - Enable JS scripting via dev-qt/qtscript in Qt5 or using Qml via dev-qt/qtdeclarative in Qt6
+sci-astronomy/stellarium:show-my-sky - Enable a better atmosphere model via sci-astronomy/calcmysky
 sci-astronomy/stellarium:stars - Install extra star catalogs
 sci-astronomy/stellarium:telescope - Enable telescope control via sci-libs/indilib
 sci-astronomy/stellarium:webengine - Show online results about the selected star in an embedded window using dev-qt/qtwebengine
+sci-astronomy/stellarium:xlsx - Support XLSX (Excel) files via dev-libs/qxlsx
 sci-astronomy/swarp:cfitsio - Link with sci-libs/cfitsio
 sci-astronomy/wcslib:fits - Enable support for the FITS format through sci-libs/cfitsio
 sci-astronomy/wcslib:pgplot - Builds PGBSOX routines, needs sci-libs/pgplot library
