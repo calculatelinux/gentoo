@@ -1,13 +1,18 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
+
+# We may want to grab backports from the SDL-1.2 branch upstream or
+# or take new snapshots every so often as no SDL 1 / 1.2.x releases
+# will be made anymore.
+
 inherit toolchain-funcs multilib-minimal
 
 MY_P="${P/sdl-/SDL_}"
 MY_COMMIT="5d792dde2f764daf15dc48521774a3354330db69"
 DESCRIPTION="Image file loading library"
-HOMEPAGE="https://www.libsdl.org/projects/SDL_image/release-1.2.html"
+HOMEPAGE="https://github.com/libsdl-org/SDL_image"
 SRC_URI="https://github.com/libsdl-org/SDL_image/archive/${MY_COMMIT}.tar.gz -> ${MY_P}.tar.gz"
 
 LICENSE="ZLIB"

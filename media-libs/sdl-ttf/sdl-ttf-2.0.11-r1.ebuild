@@ -2,12 +2,17 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
+
+# We may want to grab backports from the SDL-1.2 branch upstream or
+# even take snapshots from it in future, as no SDL 1 / 1.2.x releases
+# will be made anymore.
+
 inherit autotools multilib-minimal
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="library that allows you to use TrueType fonts in SDL applications"
-HOMEPAGE="http://www.libsdl.org/projects/SDL_ttf/"
-SRC_URI="http://www.libsdl.org/projects/SDL_ttf/release/${MY_P}.tar.gz"
+HOMEPAGE="https://github.com/libsdl-org/SDL_ttf"
+SRC_URI="https://www.libsdl.org/projects/SDL_ttf/release/${MY_P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"

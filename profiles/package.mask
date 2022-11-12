@@ -33,6 +33,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Ionen Wolkens <ionen@gentoo.org> (2022-11-11)
+# Had a handful of reports of unbootable systems with this new version.
+# Given it's a still-experimental new branch, mask for now in case.
+# Feel free to unmask if you've had no issues, but otherwise please
+# report to NVIDIA. https://bugs.gentoo.org/881025
+~x11-drivers/nvidia-drivers-525.53
+
+# Matt Turner <mattst88@gentoo.org> (2022-11-11)
+# Relies on function no longer present in the Xserver since v1.20
+# (released May 2018), and no user has noticed. Use xf86-video-nouveau instead.
+# Bug #875053
+# Removal on 2022-12-11
+x11-drivers/xf86-video-nv
+
+# Sam James <sam@gentoo.org> (2022-11-11)
+# Causes memory corruption when building x11-misc/colord on x86
+# bug #880865
+=media-libs/lcms-2.14-r2
+
 # Jaco Kroon <jaco@uls.co.za> (2022-11-05)
 # Some potentially breaking changes here, please check the UPGRADE.txt file.
 # Most important:  chan_sip no longer builds by default, if you've migrated to
@@ -56,22 +75,6 @@ dev-python/tempita
 # only, and was replaced by rustified dev-python/watchfiles.
 # Removal on 2022-12-04.  Bug #879515.
 dev-python/watchgod
-
-# Ionen Wolkens <ionen@gentoo.org> (2022-11-02)
-# glslang breaks ABI (leading to crashes until consumers are rebuilt)
-# and prevents re-building packages which used this part of the ABI
-# directly. Temporary mask until the situation improves.
-# WARNING: If you've already managed to build packages that used
-#          this version, they should be rebuilt after downgrading.
-# https://bugs.gentoo.org/879149
-# https://github.com/KhronosGroup/glslang/issues/3052
-~dev-util/glslang-1.3.231
-~dev-util/spirv-headers-1.3.231
-~dev-util/spirv-tools-1.3.231
-~dev-util/vulkan-headers-1.3.231
-~dev-util/vulkan-tools-1.3.231
-~media-libs/vulkan-layers-1.3.231
-~media-libs/vulkan-loader-1.3.231
 
 # Matt Turner <mattst88@gentoo.org> (2022-11-01)
 # Added by a proxied maintainer in 2018 who then never touched it again before

@@ -14,12 +14,12 @@ inherit java-pkg-2 java-pkg-simple verify-sig
 
 DESCRIPTION="Apache Commons Bytecode Engineering Library"
 HOMEPAGE="https://commons.apache.org/proper/commons-bcel/"
-SRC_URI="mirror://apache/commons/${PN}/source/${P}-src.tar.gz
+SRC_URI="https://archive.apache.org/dist/commons/bcel/source/bcel-${PV}-src.tar.gz
 	verify-sig? ( https://downloads.apache.org/commons/bcel/source/bcel-${PV}-src.tar.gz.asc )"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~arm arm64 ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
 # Common dependencies
 # POM: pom.xml

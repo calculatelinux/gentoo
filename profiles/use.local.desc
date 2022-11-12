@@ -1956,6 +1956,7 @@ dev-libs/libcec:xrandr - Enable detection of active HDMI using xrandr extensions
 dev-libs/libcgroup:daemon - Install the configuration tools and init/config files.
 dev-libs/libcgroup:tools - Install the cgroup rules processing daemon and init/config files.
 dev-libs/libcharon:client - Install the charon client library
+dev-libs/libclc:spirv - Build SPIRV targets
 dev-libs/libdbusmenu:gtk - Enable support for GTK+2
 dev-libs/libdbusmenu:gtk3 - Enable support for GTK+3
 dev-libs/libdynd:cuda - Enable NVIDIA CUDA toolkit support
@@ -1972,6 +1973,7 @@ dev-libs/libffi-compat:pax-kernel - Use PaX emulated trampolines, for we can't u
 dev-libs/libfido2:nfc - Enable experimental NFC support
 dev-libs/libflatarray:cuda - Enables plugins for NVIDIA GPUs (e.g. CUDAAllocator)
 dev-libs/libgcrypt:asm - Enable assembly for optimization
+dev-libs/libgcrypt:getentropy - Use getentropy function to obtain randomness from the kernel
 dev-libs/libgdata:crypt - Use app-crypt/gcr for keeping tokens and passwords in non-pageable memory for improved security
 dev-libs/libgdata:gnome-online-accounts - Enable net-libs/gnome-online-accounts support
 dev-libs/libgit2:gssapi - Enable GSSAPI support for SPNEGO auth
@@ -3075,7 +3077,7 @@ games-engines/devilutionx:sodium - Enable network packet encryption using dev-li
 games-engines/devilutionx:zerotier - Enable ZeroTier for online public games
 games-engines/exult:fluidsynth - Compile with support for FluidSynth
 games-engines/exult:sdl2 - Use libsdl2 instead of libsdl
-games-engines/exult:tools - Enable tools
+games-engines/exult:tools - Enable tools, usercode compiler and mods support
 games-engines/frobtads:tads2compiler - Build TADS2 compiler
 games-engines/frobtads:tads3compiler - Build TADS3 compiler
 games-engines/love:gme - Use media-libs/game-music-emu to support additional music formats
@@ -5113,6 +5115,7 @@ media-video/obs-studio:python - Build with scripting support for Python 3.
 media-video/obs-studio:speex - Build with Speex noise suppression filter support.
 media-video/obs-studio:ssl - Build with TLS/SSL support for RTMPS connections.
 media-video/obs-studio:vlc - Build with VLC media source support.
+media-video/obs-studio:websocket - Build with WebSocket API support.
 media-video/ogmrip:ogm - Support for OGM container format
 media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/peek:keybinder - Enable support for global hotkeys using dev-libs/keybinder
@@ -5123,6 +5126,7 @@ media-video/pipewire:flatpak - Enable Flatpak support
 media-video/pipewire:jack-client - Install a plugin for running PipeWire as a JACK client
 media-video/pipewire:jack-sdk - Use PipeWire as JACK replacement
 media-video/pipewire:lv2 - Allow loading LV2 plugins via media-libs/lv2
+media-video/pipewire:modemmanager - Combined with USE=bluetooth, allows PipeWire to perform telephony on mobile devices.
 media-video/pipewire:pipewire-alsa - Replace PulseAudio's ALSA plugin with PipeWire's plugin
 media-video/pipewire:sound-server - Provide sound server using ALSA and bluetooth devices
 media-video/pipewire:ssl - Enable raop-sink support (needs dev-libs/openssl)
@@ -6610,6 +6614,7 @@ net-misc/r8125:multi-tx-q - Enable Multiple Tx Queue ("RSS" for sending)
 net-misc/r8125:ptp - Enable Precision Time Protocol support
 net-misc/r8125:rss - Enable Receive Side Scaling (RSS)
 net-misc/r8125:use-firmware - Support automatic firmware loading
+net-misc/r8152:center-tap-short - Enable support for center tap short
 net-misc/r8168:use-firmware - Enable support for automatic firmware loading
 net-misc/rdesktop:kerberos - Enable CredSPP support + Kerberos authentication
 net-misc/rdesktop:pcsc-lite - Enable smartcard support with sys-apps/pcsc-lite driver
@@ -7583,7 +7588,10 @@ sci-mathematics/maxima:vtk - Support plotting with sci-libs/vtk
 sci-mathematics/msieve:ecm - Enable support for the GMP-ECM library
 sci-mathematics/normaliz:extras - Install Macaulay2 and sci-mathematics/singularpackages as shipped by upstream
 sci-mathematics/normaliz:nauty - Use sci-mathematics/nauty to compute automorphism groups.
+sci-mathematics/octave:fltk - Use x11-libs/fltk as the backend for the OpenGL renderer in the absence of the Qt GUI
 sci-mathematics/octave:glpk - Add support for sci-mathematics/glpk for linear programming
+sci-mathematics/octave:gnuplot - Use sci-visualization/gnuplot to render plots if OpenGL is unavailable
+sci-mathematics/octave:imagemagick - Use media-gfx/graphicsmagick to read and write images
 sci-mathematics/octave:json - Allow using jsonencode and jsondecode commands via dev-libs/rapidjson
 sci-mathematics/octave:qhull - Add support for media-libs/qhull, to allow `delaunay', `convhull', and related functions
 sci-mathematics/octave:qrupdate - Add support for sci-libs/qrupdatefor QR and Cholesky update functions
@@ -8282,7 +8290,6 @@ sys-devel/llvm:z3 - Enable support for sci-mathematics/z3 constraint solver
 sys-devel/llvm-roc:runtime - Builds the compiler runtime libraries.
 sys-devel/llvm-toolchain-symlinks:multilib-symlinks - Install symlinks for all ABI CHOSTs. Note that this can result in gcc being overrode for native builds, as well as conflict with crossdev if used for the same targets.
 sys-devel/llvm-toolchain-symlinks:native-symlinks - Install generic tool symlinks like 'objdump' and 'ranlib', as well as ${CTARGET}-*. These symlinks are installed into slotted LLVM bindir, so they should not take precedence over symlinks installed into /usr/bin by sys-devel/binutils-config but they can be helpful for binutils-free setups.
-sys-devel/mold:system-tbb - Use dev-cpp/tbb package instead of vendored copy
 sys-devel/parity:vc10_0 - Enable support for Visual Studio 2010
 sys-devel/parity:vc11_0 - Enable support for Visual Studio 2012
 sys-devel/parity:vc12_0 - Enable support for Visual Studio 2013
