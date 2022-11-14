@@ -33,6 +33,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Matt Turner <mattst88@gentoo.org> (2022-11-14)
+# Unmaintained in Gentoo since at least the transition to git. Last release in
+# 2014. Depends on x11-libs/gtk+:2 and gnome-base/gconf. Fails to build with
+# (1) clang-16, (2) with LTO, (3) with -fno-common.
+# Bugs #812137, #864763, #871405, #873886
+# Removal on 2022-12-14
+x11-misc/xnee
+
+# Jonas Stein <jstein@gentoo.org> (2022-11-13)
+# Dead upstream
+# Removal after 2023-01-01.  Bug #881249.
+net-mail/vchkuser
+
+# Matthew Smith <matthew@gentoo.org> (2022-11-13)
+# Please update to Erlang/OTP 25. Removal in 30 days.
+# Bug #864543
+<dev-lang/erlang-25
+<net-misc/rabbitmq-server-3.11.0
+
 # Ionen Wolkens <ionen@gentoo.org> (2022-11-11)
 # Had a handful of reports of unbootable systems with this new version.
 # Given it's a still-experimental new branch, mask for now in case.
@@ -228,35 +247,6 @@ dev-python/nose_warnings_filters
 # migrate to a newer branch.
 <dev-libs/openssl-1.1.1
 
-# Matt Turner <mattst88@gentoo.org> (2022-10-14)
-# Last upstream release in 2013. Last upstream commit in 2019. No maintainer in
-# Gentoo. No reverse dependencies. EAPI=6.
-# Depends on unmaintained packages:
-# 	- x11-libs/vte:0
-# Bug #811540.
-# Removal on 2022-11-14
-x11-terms/lilyterm
-
-# Matt Turner <mattst88@gentoo.org> (2022-10-14)
-# Unmaintained upstream. Last release in 2008. Only reverse dependency is
-# gnome-mud, which is masked for removal.
-# Bugs #349301, #713152, #802723, #808435, #870730, #877079.
-# Removal on 2022-11-14
-net-libs/gnet
-
-# Matt Turner <mattst88@gentoo.org> (2022-10-14)
-# Needs upstream work to modernize codebase. Depends on lots of unmaintained
-# packages:
-# 	- app-text/rarian
-# 	- gnome-base/gconf
-# 	- gnome-base/libglade
-# 	- net-libs/gnet:2
-# 	- x11-libs/gtk+:2
-# 	- x11-libs/vte:0
-# Bugs #670904, #873859
-# Removal on 2022-11-14
-games-mud/gnome-mud
-
 # Joshua Kinard <kumba@gentoo.org> (2022-10-13)
 # Difficult-to-resolve build issues on modern toolchains,
 # not publicly maintained, developer contact is difficult,
@@ -264,12 +254,6 @@ games-mud/gnome-mud
 # Bug #838109.
 # Removal on 2022-11-13
 net-misc/spread
-
-# Matt Turner <mattst88@gentoo.org> (2022-10-12)
-# Unmaintained and archived upstream. Last release in 2017.
-# Bug #597960.
-# Removal on 2022-11-12
-net-im/empathy
 
 # Sam James <sam@gentoo.org> (2022-10-12)
 # Upstream has withdrawn these releases because of a (yet unexplained)

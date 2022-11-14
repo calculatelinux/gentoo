@@ -6,6 +6,11 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Marek Szuba <marecki@gentoo.org> (2022-11-14)
+# Incomplete dependency tree, no qmake6 instrumentation in either
+# qmake-utils.eclass nor the ebuilds yet.
+dev-python/pyotherside qt6
+
 # Sam James <sam@gentoo.org> (2022-10-08)
 # Older versions of libvirt need a vulnerable version of wireshark
 <app-emulation/libvirt-8.0.0 wireshark-plugins
@@ -637,10 +642,6 @@ sci-libs/linux-gpib php
 # Michał Górny <mgorny@gentoo.org> (2017-05-15)
 # Mask ruby20-only compatible packages
 ~media-libs/libcaca-0.99_beta19 ruby
-
-# Matthias Maier <tamiko@gentoo.org> (2017-05-11)
-# Globally mask pie use flag. Selectively unmask on specific profiles.
-sys-devel/gcc pie
 
 # Mike Gilbert <floppym@gentoo.org> (2017-02-16)
 # Multiple test failures.
