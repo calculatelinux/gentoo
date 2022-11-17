@@ -33,6 +33,31 @@
 
 #--- END OF EXAMPLES ---
 
+# Matthew Smith <matthew@gentoo.org> (2022-11-17)
+# libnet:1.0's two remaining rdeps. Dead upstreams.
+# Removal on 2022-12-17. Bug #881677
+net-libs/libnet:1.0
+net-analyzer/angst
+net-analyzer/thcrut
+
+# Michał Górny <mgorny@gentoo.org> (2022-11-17)
+# No maintainer.  No upstream activity since 2020.  Multiple bugs
+# reported.
+# Removal on 2022-12-17.  Bug #881673.
+app-admin/prelude-manager
+dev-libs/libprelude
+dev-libs/libpreludedb
+net-analyzer/prelude-correlator
+net-analyzer/prelude-lml-rules
+net-analyzer/prelude-lml
+www-apps/prewikka
+
+# Michał Górny <mgorny@gentoo.org> (2022-11-15)
+# Test-restricted since its introduction in 2016.  Not receiving package
+# maintainer's attention.  No revdeps left.
+# Removal on 2022-12-15.  Bug #759931.
+dev-python/pytest-html
+
 # Matt Turner <mattst88@gentoo.org> (2022-11-14)
 # Unmaintained in Gentoo since at least the transition to git. Last release in
 # 2014. Depends on x11-libs/gtk+:2 and gnome-base/gconf. Fails to build with
@@ -183,13 +208,6 @@ dev-libs/cloog
 # Unmaintained upstream, no reverse dependencies, fails tests
 # Removal in 30 days
 dev-python/pweave
-
-# Michał Górny <mgorny@gentoo.org> (2022-10-28)
-# Originally last rited in Aug 2020 due to lack of Python 3 support.
-# The last rites were undone, however this package never got fixed.
-# Instead, it has been covered by incorrect "downgrade" mask since then.
-# Removal on 2022-11-11.  Bug #695010.
-app-i18n/scim-sunpinyin
 
 # Jonas Stein <jstein@gentoo.org> (2022-10-26)
 # Dead upstream, open bugs.
@@ -346,21 +364,10 @@ virtual/httpd-php:8.2
 # Unfixed root privilege escalation, bug #631552
 sys-cluster/slurm
 
-# Mike Gilbert <floppym@gentoo.org> (2022-09-12)
-# repoman is no longer maintained and has been removed from the portage
-# git repository. Please use dev-util/pkgcheck and dev-util/pkgdev instead.
-# Removal on 2022-11-11. Bug #835013.
-app-portage/repoman
-
 # Matthias Schwarzott <zzam@gentoo.org> (2022-09-08)
 # Breaks kernel builds with BTF enabled.
 # Bug #868762.
 =dev-util/pahole-1.24
-
-# Mike Gilbert <floppym@gentoo.org> (2022-09-05)
-# Crash due to double-free.
-# https://bugs.gentoo.org/868567
-=sys-apps/gawk-5.2.0
 
 # hololeap <hololeap@protonmail.com> (2022-08-21)
 # doctest-parallel does not currently work with Setup.hs (used internally by
@@ -590,6 +597,7 @@ net-libs/webkit-gtk:5
 >=net-misc/rygel-0.42
 >=net-misc/spice-gtk-0.41-r1
 sci-geosciences/geocode-glib:2
+>=sci-geosciences/geocode-glib-3.26.4-r1:0
 >=sci-geosciences/gnome-maps-43
 >=sys-apps/osinfo-db-tools-1.10.0-r1
 >=sys-libs/libosinfo-1.10.0-r1

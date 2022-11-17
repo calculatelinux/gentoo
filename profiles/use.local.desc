@@ -762,7 +762,6 @@ app-i18n/rime-data:extra - Install extra packages
 app-i18n/scim:gtk3 - Enable support for x11-libs/gtk+:3
 app-i18n/scim-anthy:gtk3 - Enable support for x11-libs/gtk+:3
 app-i18n/scim-anthy:kasumi - Use Anthy dictionary maintenance tool (app-dicts/kasumi)
-app-i18n/scim-sunpinyin:gtk3 - Enable support for x11-libs/gtk+:3
 app-i18n/tomoe:hyperestraier - Enable support for app-text/hyperestraier
 app-i18n/uim:anthy - Enable support for app-i18n/anthy
 app-i18n/uim:eb - Enable support for dev-libs/eb
@@ -2068,6 +2067,7 @@ dev-libs/m17n-lib:athena - Enable the MIT Athena widget set (x11-libs/libXaw)
 dev-libs/m17n-lib:gd - Build API and utilities based on media-libs/gd. This flag is only meaningful if the X USE flag is also enabled
 dev-libs/m17n-lib:libotf - Use dev-libs/libotf to handle OpenType fonts
 dev-libs/m17n-lib:libxml2 - Use dev-libs/libxml2 to parse XML
+dev-libs/mimalloc:hardened - Enable exploit mitigations
 dev-libs/modsecurity:fuzzyhash - Support fuzzy hash computations (to detect malware, for example) using the app-crypt/ssdeep package.
 dev-libs/modsecurity:geoip2 - Pull in dev-libs/libmaxminddb for use by the SecGeoLookupDb directive.
 dev-libs/modsecurity:json - Suppose JSON in the request body parser through dev-libs/yajl.
@@ -2127,6 +2127,7 @@ dev-libs/poco:crypto - Encryption and digital signing classes
 dev-libs/poco:data - Database abstraction layer to easily send/retrieve data to/from various databases
 dev-libs/poco:file2pagecompiler - Utility to convert ordinary files to Page Compiler source files
 dev-libs/poco:json - Add JSON support
+dev-libs/poco:jwt - Add JSON Web Token support
 dev-libs/poco:mariadb - Prefer dev-db/mariadb-connector-c over dev-db/mysql-connector-c
 dev-libs/poco:mongodb - Add dev-db/mongodb support
 dev-libs/poco:net - Classes to write network clients & servers
@@ -3076,7 +3077,6 @@ games-emulation/vbam:link - Enable GBA linking functionality
 games-engines/devilutionx:sodium - Enable network packet encryption using dev-libs/libsodium
 games-engines/devilutionx:zerotier - Enable ZeroTier for online public games
 games-engines/exult:fluidsynth - Compile with support for FluidSynth
-games-engines/exult:sdl2 - Use libsdl2 instead of libsdl
 games-engines/exult:tools - Enable tools, usercode compiler and mods support
 games-engines/frobtads:tads2compiler - Build TADS2 compiler
 games-engines/frobtads:tads3compiler - Build TADS3 compiler
@@ -4621,7 +4621,7 @@ media-sound/elisa:vlc - Use media-video/vlc for output rather than dev-qt/qtmult
 media-sound/exaile:scrobbler - Enable audioscrobbler/last.fm support
 media-sound/fapg:xspf - Enable support for saving XSPF playlists.
 media-sound/fluidsynth:network - enable network support (requires BSD sockets)
-media-sound/fluidsynth:pipewire - enable pipewire support
+media-sound/fluidsynth:pipewire - enable media-video/pipewire support
 media-sound/gimmix:cover - Enable cover art fetching
 media-sound/gimmix:lyrics - Enable lyric fetching
 media-sound/gmusicbrowser:extras - Install some extra deps for plugins (ex. Titlebar)

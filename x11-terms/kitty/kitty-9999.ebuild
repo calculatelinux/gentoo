@@ -4,7 +4,7 @@
 EAPI=8
 
 PYTHON_COMPAT=( python3_{8..11} )
-inherit edo optfeature multiprocessing python-single-r1 toolchain-funcs xdg
+inherit edo go-module optfeature multiprocessing python-single-r1 toolchain-funcs xdg
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
@@ -23,11 +23,11 @@ HOMEPAGE="https://sw.kovidgoyal.net/kitty/"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="+X test transfer wayland"
+IUSE="+X test wayland"
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
 	|| ( X wayland )
-	test? ( X transfer wayland )"
+	test? ( X wayland )"
 RESTRICT="!test? ( test )"
 
 # dlopen: fontconfig,libglvnd
@@ -39,6 +39,7 @@ RDEPEND="
 	media-libs/lcms:2
 	media-libs/libglvnd[X?]
 	media-libs/libpng:=
+	net-libs/librsync:=
 	sys-apps/dbus
 	sys-libs/zlib:=
 	x11-libs/libxkbcommon[X?]
@@ -46,7 +47,6 @@ RDEPEND="
 	~x11-terms/kitty-shell-integration-${PV}
 	~x11-terms/kitty-terminfo-${PV}
 	X? ( x11-libs/libX11 )
-	transfer? ( net-libs/librsync:= )
 	wayland? ( dev-libs/wayland )"
 DEPEND="
 	${RDEPEND}
@@ -66,6 +66,15 @@ BDEPEND="
 	wayland? ( dev-util/wayland-scanner )"
 [[ ${PV} == 9999 ]] || BDEPEND+=" verify-sig? ( sec-keys/openpgp-keys-kovidgoyal )"
 
+src_unpack() {
+	if [[ ${PV} == 9999 ]]; then
+		git-r3_src_unpack
+		go-module_live_vendor
+	else
+		go-module_src_unpack
+	fi
+}
+
 src_prepare() {
 	default
 
@@ -75,11 +84,6 @@ src_prepare() {
 		-e "/num_workers =/s/=.*/= $(makeopts_jobs)/" \
 		-e "s/cflags.append.*-O3.*/pass/" -e 's/-O3//' \
 		-i setup.py || die
-
-	if use !transfer; then
-		sed -i 's/rs_cflag =/& []#/;/files.*rsync/d' setup.py || die
-		rm -r kittens/transfer || die
-	fi
 
 	# test relies on 'who' command which doesn't detect users with pid-sandbox
 	rm kitty_tests/utmp.py || die
