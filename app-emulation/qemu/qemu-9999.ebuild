@@ -53,15 +53,15 @@ SLOT="0"
 
 [[ ${QEMU_DOCS_PREBUILT} == 1 ]] && QEMU_DOC_USEFLAG="doc"
 
-IUSE="accessibility +aio alsa bpf bzip2 capstone +caps +curl debug ${QEMU_DOC_USEFLAG}
+IUSE="accessibility +aio alsa bpf bzip2 capstone +curl debug ${QEMU_DOC_USEFLAG}
 	+fdt fuse glusterfs +gnutls gtk infiniband iscsi io-uring
 	jack jemalloc +jpeg
 	lzo multipath
 	ncurses nfs nls numa opengl +oss pam +pin-upstream-blobs
-	plugins +png pulseaudio python rbd sasl +seccomp sdl sdl-image selinux
+	plugins +png pulseaudio python rbd sasl sdl sdl-image selinux
 	+slirp
 	smartcard snappy spice ssh static static-user systemtap test udev usb
-	usbredir vde +vhost-net vhost-user-fs virgl virtfs +vnc vte xattr xen
+	usbredir vde +vhost-net virgl virtfs +vnc vte xattr xen
 	zstd"
 
 COMMON_TARGETS="
@@ -118,7 +118,8 @@ IUSE+=" ${use_softmmu_targets} ${use_user_targets}"
 RESTRICT="!test? ( test )"
 # Allow no targets to be built so that people can get a tools-only build.
 # Block USE flag configurations known to not work.
-REQUIRED_USE="${PYTHON_REQUIRED_USE}
+REQUIRED_USE="
+	${PYTHON_REQUIRED_USE}
 	qemu_softmmu_targets_arm? ( fdt )
 	qemu_softmmu_targets_microblaze? ( fdt )
 	qemu_softmmu_targets_mips64el? ( fdt )
@@ -130,9 +131,8 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	sdl-image? ( sdl )
 	static? ( static-user !alsa !gtk !jack !opengl !pam !pulseaudio !plugins !rbd !snappy !udev )
 	static-user? ( !plugins )
-	vhost-user-fs? ( caps seccomp )
 	virgl? ( opengl )
-	virtfs? ( caps xattr )
+	virtfs? ( xattr )
 	vnc? ( gnutls )
 	vte? ( gtk )
 	multipath? ( udev )
@@ -157,6 +157,8 @@ ALL_DEPEND="
 # Dependencies required for qemu tools (qemu-nbd, qemu-img, qemu-io, ...)
 # softmmu targets (qemu-system-*).
 SOFTMMU_TOOLS_DEPEND="
+	sys-libs/libcap-ng[static-libs(+)]
+	>=sys-libs/libseccomp-2.1.0[static-libs(+)]
 	>=x11-libs/pixman-0.28.0[static-libs(+)]
 	accessibility? (
 		app-accessibility/brltty[api]
@@ -167,7 +169,6 @@ SOFTMMU_TOOLS_DEPEND="
 	bpf? ( dev-libs/libbpf:= )
 	bzip2? ( app-arch/bzip2[static-libs(+)] )
 	capstone? ( dev-libs/capstone:= )
-	caps? ( sys-libs/libcap-ng[static-libs(+)] )
 	curl? ( >=net-misc/curl-7.15.4[static-libs(+)] )
 	fdt? ( >=sys-apps/dtc-1.5.1[static-libs(+)] )
 	fuse? ( >=sys-fs/fuse-3.1:3[static-libs(+)] )
@@ -210,7 +211,6 @@ SOFTMMU_TOOLS_DEPEND="
 		media-libs/libsdl2[static-libs(+)]
 	)
 	sdl-image? ( media-libs/sdl2-image[static-libs(+)] )
-	seccomp? ( >=sys-libs/libseccomp-2.1.0[static-libs(+)] )
 	slirp? ( net-libs/libslirp[static-libs(+)] )
 	smartcard? ( >=app-emulation/libcacard-2.5.0[static-libs(+)] )
 	snappy? ( app-arch/snappy:= )
@@ -555,7 +555,6 @@ qemu_src_configure() {
 		$(conf_softmmu bpf)
 		$(conf_notuser bzip2)
 		$(conf_notuser capstone)
-		$(conf_notuser caps cap-ng)
 		$(conf_notuser curl)
 		$(conf_tools doc docs)
 		$(conf_notuser fdt)
@@ -582,7 +581,6 @@ qemu_src_configure() {
 		$(conf_notuser sasl vnc-sasl)
 		$(conf_notuser sdl)
 		$(conf_softmmu sdl-image)
-		$(conf_notuser seccomp)
 		$(conf_notuser slirp)
 		$(conf_notuser smartcard)
 		$(conf_notuser snappy)
@@ -627,6 +625,8 @@ qemu_src_configure() {
 			--disable-system
 			--disable-blobs
 			--disable-tools
+			--disable-cap-ng
+			--disable-seccomp
 		)
 		local static_flag="static-user"
 		;;
@@ -635,18 +635,10 @@ qemu_src_configure() {
 			--disable-linux-user
 			--enable-system
 			--disable-tools
+			--enable-cap-ng
+			--enable-seccomp
 		)
 		local static_flag="static"
-
-		for target in ${IUSE_SOFTMMU_TARGETS}; do
-			if use "qemu_softmmu_targets_${target}"; then
-				conf_opts+=(
-					# For some reason, adding this with the setting set
-					# to on *or* off makes the build always fail.
-					# --with-devices-${target}=gentoo
-				)
-			fi
-		done
 		;;
 	tools)
 		conf_opts+=(
@@ -654,6 +646,8 @@ qemu_src_configure() {
 			--disable-system
 			--disable-blobs
 			--enable-tools
+			--enable-cap-ng
+			--enable-seccomp
 		)
 		local static_flag="static"
 		;;
@@ -698,21 +692,6 @@ src_configure() {
 		if use "qemu_softmmu_targets_${target}"; then
 			softmmu_targets+=",${target}-softmmu"
 			softmmu_bins+=( "qemu-system-${target}" )
-
-			# Needed to rework vhost-user-fs handling thanks to https://gitlab.com/qemu-project/qemu/-/commit/5166dab
-			# The option was converted into being configurable by
-			# Kconfig's. So, to enable it, we insert the necessary
-			# options into each arch's softmmu target gentoo.mak file,
-			# then configure with --with-devices-${target}=gentoo.
-			if use vhost-user-fs; then
-				echo "CONFIG_VHOST_USER_FS=y for ${target}-softmmu" || die
-				echo "CONFIG_VIRTIO=y" >> "configs/devices/${target}-softmmu/gentoo.mak" || die
-				echo "CONFIG_VHOST_USER_FS=y" >> "configs/devices/${target}-softmmu/gentoo.mak" || die
-			else
-				echo "CONFIG_VHOST_USER_FS=n for ${target}-softmmu" || die
-				echo "CONFIG_VIRTIO=n" >> "configs/devices/${target}-softmmu/gentoo.mak" || die
-				echo "CONFIG_VHOST_USER_FS=n" >> "configs/devices/${target}-softmmu/gentoo.mak" || die
-			fi
 		fi
 	done
 

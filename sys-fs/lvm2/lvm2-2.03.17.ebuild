@@ -67,7 +67,6 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.03.12-static-pkgconfig-libs-2.patch
 	"${FILESDIR}"/${PN}-2.03.17-pthread-pkgconfig.patch #492450
 	"${FILESDIR}"/${PN}-2.03.12-static-libm.patch #617756
-	"${FILESDIR}"/${PN}-2.02.166-HPPA-no-O_DIRECT.patch #657446
 	"${FILESDIR}"/${PN}-2.03.05-dmeventd-no-idle-exit.patch
 	"${FILESDIR}"/${PN}-2.03.14-r1-fopen-to-freopen.patch
 	"${FILESDIR}"/${PN}-2.03.14-freopen_n2.patch
@@ -107,6 +106,7 @@ src_prepare() {
 	# Users without systemd get no auto-activation of any logical volume
 	if ! use systemd ; then
 		eapply "${FILESDIR}"/${PN}-2.03.16-dm_lvm_rules_no_systemd.patch
+		sed -i -e '/^USE_SD_NOTIFY=yes$/s/yes/no/' daemons/lvmlockd/Makefile.in || die
 	fi
 
 	sed -i -e "s:/usr/bin/true:$(type -P true):" scripts/blk_availability_systemd_red_hat.service.in || die #517514
@@ -138,9 +138,6 @@ src_configure() {
 		# so we cannot disable them
 		--with-mirrors="$(usex lvm internal none)"
 		--with-snapshots="$(usex lvm internal none)"
-
-		# disable O_DIRECT support on hppa, breaks pv detection (#99532)
-		$(usev hppa --disable-o_direct)
 	)
 
 	if use lvm && use thin; then
