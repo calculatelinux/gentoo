@@ -33,6 +33,71 @@
 
 #--- END OF EXAMPLES ---
 
+# Ulrich Müller <ulm@gentoo.org> (2022-11-30)
+# SLOTs 23 and 24 of app-editors/emacs, corresponding to GNU Emacs
+# versions 23.4 and 24.5. These versions were released in January 2012
+# and April 2015, respectively, and have a non-trivial security issue
+# with ctags. Please upgrade to >=app-editors/emacs-25 and update your
+# Emacs Lisp packages with emacs-updater.
+# Masked for removal in 30 days. Bugs #882347, #882349, #883687.
+app-editors/emacs:23
+app-editors/emacs:24
+
+# John Helmert III <ajak@gentoo.org> (2022-11-29)
+# Unmaintained and outdated in Gentoo, compatibility issues with
+# openssl-1.1. Removal in 30 days. Bug #696936.
+sys-apps/ucspi-ssl
+
+# John Helmert III <ajak@gentoo.org> (2022-11-29)
+# Authentication bypass vulnerability, unmaintained in Gentoo, source
+# package available. Use app-metrics/prometheus instead. Removal in 30
+# days. Bug #883637.
+app-metrics/prometheus-bin
+
+# Piotr Karbowski <slashbeast@gentoo.org> (2022-11-29)
+# Multiple stability issues, deadlocks on exit, broken API.
+# Bug #883559
+=net-p2p/qbittorrent-4.5.0
+
+# John Helmert III <ajak@gentoo.org> (2022-11-27)
+# Unmaintained upstream, several unresolved public vulnerabilities,
+# Removal in 30 days. Bug #882773.
+www-servers/boa
+
+# David Seifert <soap@gentoo.org> (2022-11-27)
+# Broke API for C++, causes massive carnage for consumers.
+# Bug #883223.
+~dev-libs/glib-2.74.2
+
+# Michał Górny <mgorny@gentoo.org> (2022-11-27)
+# Broken with OpenSSL-3.  Last upstream activity in 2021, no reply
+# to the bug.
+# Removal on 2022-12-27.  Bug #805233.
+net-dns/dog
+
+# Michał Górny <mgorny@gentoo.org> (2022-11-27)
+# Broken with modern dev-python/setuptools versions.  Last upstream
+# commit in 2018.  No reverse dependencies.
+# Removal on 2022-12-27.  Bug #822840.
+dev-python/slimit
+
+# Michał Górny <mgorny@gentoo.org> (2022-11-27)
+# Unmaintained.  HOMEPAGE is gone.  Uses GTK+2.
+# Removal on 2022-12-27.  Bug #821118.
+games-util/xgamer
+
+# Michał Górny <mgorny@gentoo.org> (2022-11-27)
+# Unmaintained, ancient package.  x11-misc/unclutter-xfixes is
+# a superior replacement.
+# Removal on 2022-12-27.  Bug #880845.
+x11-misc/unclutter
+
+# Michał Górny <mgorny@gentoo.org> (2022-11-27)
+# Unmaintained.  Last bumped in 2005.  Superseded by Python version
+# with last release in 2008, then by vnc2flv with last release in 2010.
+# Removal on 2022-12-27.  Bug #880927.
+x11-misc/vnc2swf
+
 # Michael Mair-Keimberger <mmk@levelnine.at> (2022-11-25)
 # Unmaintained, last release a decade ago, upstream declared it EOL
 # Removal in 30 days.
@@ -69,7 +134,6 @@ dev-libs/ocl-icd
 # app-cdr/xbiso: bug #882089, last release in 2005
 # app-emulation/dlx: bug #874933, last release in 2001
 # app-office/sc: bug #877051, last release in 2002
-# app-text/uudeview: bug #882505, last release in 2004
 # net-libs/ortp: bug #874003, last bumped in 2014
 # net-nntp/brag: revdep of app-text/uudeview
 # net-vpn/vtun: bug #875443, last bumped in 2012, last release in 2016
@@ -81,7 +145,6 @@ dev-libs/ocl-icd
 app-cdr/xbiso
 app-emulation/dlx
 app-office/sc
-app-text/uudeview
 net-libs/ortp
 net-nntp/brag
 net-vpn/vtun
@@ -286,13 +349,6 @@ net-mail/vchkuser
 <dev-lang/erlang-25
 <net-misc/rabbitmq-server-3.11.0
 
-# Ionen Wolkens <ionen@gentoo.org> (2022-11-11)
-# Had a handful of reports of unbootable systems with this new version.
-# Given it's a still-experimental new branch, mask for now in case.
-# Feel free to unmask if you've had no issues, but otherwise please
-# report to NVIDIA. https://bugs.gentoo.org/881025
-~x11-drivers/nvidia-drivers-525.53
-
 # Matt Turner <mattst88@gentoo.org> (2022-11-11)
 # Relies on function no longer present in the Xserver since v1.20
 # (released May 2018), and no user has noticed. Use xf86-video-nouveau instead.
@@ -389,11 +445,6 @@ media-gfx/peps
 # Dead package, last release 10 years ago. No reverse dependencies.
 # Removal on 2022-11-30
 media-gfx/gnome-raw-thumbnailer
-
-# Matt Turner <mattst88@gentoo.org> (2022-10-29)
-# Old slot with no reverse dependencies.
-# Removal on 2022-11-29
-dev-libs/libgweather:2
 
 # Arthur Zamarin <arthurzam@gentoo.org> (2022-10-29)
 # Last upstream commit in 2016, no tests, implements functions

@@ -12,16 +12,22 @@ if [[ ${PV} == 9999 ]]; then
 	EGIT_SUBMODULES=(
 		# picky about headers and is cross-compiled making -I/usr/include troublesome
 		include/{spirv,vulkan}
+		subprojects/libdisplay-info
 	)
 else
 	HASH_SPIRV=0bcc624926a25a2a273d07877fd25a6ff5ba1cfb
 	HASH_VULKAN=98f440ce6868c94f5ec6e198cc1adda4760e8849
 	SRC_URI="
-		https://github.com/doitsujin/dxvk/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-		https://github.com/KhronosGroup/SPIRV-Headers/archive/${HASH_SPIRV}.tar.gz -> ${PN}-spirv-headers-${HASH_SPIRV::10}.tar.gz
-		https://github.com/KhronosGroup/Vulkan-Headers/archive/${HASH_VULKAN}.tar.gz -> ${PN}-vulkan-headers-${HASH_VULKAN::10}.tar.gz"
+		https://github.com/doitsujin/dxvk/archive/refs/tags/v${PV}.tar.gz
+			-> ${P}.tar.gz
+		https://github.com/KhronosGroup/SPIRV-Headers/archive/${HASH_SPIRV}.tar.gz
+			-> ${PN}-spirv-headers-${HASH_SPIRV::10}.tar.gz
+		https://github.com/KhronosGroup/Vulkan-Headers/archive/${HASH_VULKAN}.tar.gz
+			-> ${PN}-vulkan-headers-${HASH_VULKAN::10}.tar.gz"
 	KEYWORDS="-* ~amd64 ~x86"
 fi
+# setup_dxvk.sh is no longer provided, fetch old until a better solution
+SRC_URI+=" https://raw.githubusercontent.com/doitsujin/dxvk/cd21cd7fa3b0df3e0819e21ca700b7627a838d69/setup_dxvk.sh"
 
 DESCRIPTION="Vulkan-based implementation of D3D9, D3D10 and D3D11 for Linux / Wine"
 HOMEPAGE="https://github.com/doitsujin/dxvk/"
@@ -32,7 +38,7 @@ IUSE="+abi_x86_32 crossdev-mingw +d3d9 +d3d10 +d3d11 debug +dxgi"
 REQUIRED_USE="
 	|| ( d3d9 d3d10 d3d11 dxgi )
 	d3d10? ( d3d11 )
-	dxgi? ( d3d11 )"
+	d3d11? ( dxgi )"
 
 BDEPEND="
 	dev-util/glslang
@@ -68,7 +74,8 @@ src_prepare() {
 
 	default
 
-	sed -i "/^basedir=/s|=.*|=${EPREFIX}/usr/lib/${PN}|" setup_dxvk.sh || die
+	sed "/^basedir=/s|=.*|=${EPREFIX}/usr/lib/${PN}|" \
+		"${DISTDIR}"/setup_dxvk.sh > setup_dxvk.sh || die
 }
 
 src_configure() {
@@ -133,6 +140,8 @@ pkg_postinst() {
 		elog "	WINEPREFIX=/path/to/prefix setup_dxvk.sh install --symlink"
 		elog
 		elog "See ${EROOT}/usr/share/doc/${PF}/README.md* for details."
+		elog "Note: setup_dxvk.sh is unofficially temporarily provided as it was"
+		elog "removed upstream, handling may change in the future."
 	elif [[ -v DXVK_HAD_OVERLAY ]]; then
 		# temporary warning until this version is more widely used
 		elog "Gentoo's main repo ebuild for ${PN} uses different paths than most overlays."
