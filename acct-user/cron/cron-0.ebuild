@@ -7,6 +7,7 @@ inherit acct-user
 
 DESCRIPTION="A user for sys-process/cronbase"
 
+
 ACCT_USER_GROUPS=( "cron" )
 ACCT_USER_HOME="/var/spool/cron"
 ACCT_USER_ID="16"
