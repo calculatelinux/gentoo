@@ -190,8 +190,17 @@ app-admin/ulogd:ulog - Build ULOG input plugin to support deprecated packet-base
 app-admin/vault:webui - Enable the Web UI
 app-admin/webalizer:xtended - Include the 404 extension
 app-admin/webapp-config:portage - Propagate python_targets dependencies to sys-apps/portage
+app-alternatives/awk:busybox - Symlink to sys-apps/busybox
+app-alternatives/awk:gawk - Symlink to sys-apps/gawk
+app-alternatives/awk:mawk - Symlink to sys-apps/mawk (warning: mawk is not fully POSIX-compliant)
+app-alternatives/awk:nawk - Symlink to sys-apps/nawk
+app-alternatives/bzip2:lbzip2 - Symlink to app-arch/lbzip2.
+app-alternatives/bzip2:pbzip2 - Symlink to app-arch/pbzip2.
+app-alternatives/bzip2:reference - Symlink to app-arch/bzip2.
 app-alternatives/cpio:gnu - Symlink to GNU cpio (app-arch/cpio)
 app-alternatives/cpio:libarchive - Symlink to bsdcpio from app-arch/libarchive
+app-alternatives/gzip:pigz - Symlink to app-arch/pigz.
+app-alternatives/gzip:reference - Symlink to app-arch/gzip.
 app-alternatives/sh:bash - Symlink to app-shells/bash
 app-alternatives/sh:dash - Symlink to app-shells/dash
 app-alternatives/sh:ksh - Symlink to app-shells/ksh
@@ -750,14 +759,12 @@ app-i18n/ibus:gtk2 - Enable the GTK-2 input method module
 app-i18n/ibus:gtk3 - Enable the GTK-3 input method module
 app-i18n/ibus:gtk4 - Enable the GTK-4 input method module
 app-i18n/ibus:unicode - Enable support for Unicode choice
-app-i18n/ibus-chewing:gconf - Enable support for gnome-base/gconf
 app-i18n/ibus-handwrite:zinnia - Enable support for app-i18n/zinnia
 app-i18n/ibus-libpinyin:boost - Compile against dev-libs/boost libraries
 app-i18n/ibus-libpinyin:opencc - Enable support for app-i18n/opencc
 app-i18n/ibus-pinyin:boost - Enable support for dev-libs/boost
 app-i18n/ibus-sunpinyin:gui - Install graphical user interface tool (ibus-setup-sunpinyin)
 app-i18n/im-chooser:xfce - Enable support for XFCE panel
-app-i18n/imsettings:gconf - Enable support for gnome-base/gconf
 app-i18n/imsettings:xfconf - Enable support for xfce-base/xfconf
 app-i18n/librime:debug - Enable debugging (including logging of input of RIME input methods)
 app-i18n/mozc:fcitx4 - Enable support for app-i18n/fcitx 4
@@ -1935,7 +1942,7 @@ dev-libs/glib:systemtap - Build support for profiling and tracing using dev-util
 dev-libs/glib:utils - Install gtester-report utility to generate test report files for your software; build gresource utility with ELF support.
 dev-libs/gmime:smime - Enable experimental S/MIME support
 dev-libs/gmp:asm - Enable use of hand optimized assembly routines (faster execution)
-dev-libs/gmp:cpudetection - Enables runtime CPU detection (useful for binpkgs, compatibility on other CPUs)
+dev-libs/gmp:cpudetection - Enables runtime CPU detection (useful for binpkgs, compatibility on other CPUs). This only works on amd64/x86 at present. If this flag is enabled, GMP will work on a variety of amd64/x86 CPUs and load accelerated routines for use at runtime depending on the CPU in use. This makes it suitable for binary packages (binpkgs). If this flag is disabled, GMP will be tuned for the CPU being used at build-time and may not be usable on other machines.
 dev-libs/gmp:pic - Force static libraries to be built as PIC to avoid TEXTRELs.
 dev-libs/gobject-introspection:doctool - Install g-ir-doc-tool for generating documentation from introspected data
 dev-libs/hidapi:fox - Build a x11-libs/fox GUI
@@ -8990,7 +8997,6 @@ x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small vers
 x11-terms/gnome-terminal:gnome-shell - Integrate with gnome-base/gnome-shell search
 x11-terms/gnome-terminal:nautilus - Build gnome-base/nautilus extension
 x11-terms/guake:utempter - Include utmp management support via sys-libs/libutempter
-x11-terms/kitty:transfer - Enable transfer kitten using net-libs/librsync
 x11-terms/mlterm:brltty - Enable support for app-accessibility/brltty
 x11-terms/mlterm:fcitx - Enable support for app-i18n/fcitx
 x11-terms/mlterm:harfbuzz - Enable support for OpenType Layout (media-libs/harfbuzz)
