@@ -194,6 +194,8 @@ app-alternatives/awk:busybox - Symlink to sys-apps/busybox
 app-alternatives/awk:gawk - Symlink to sys-apps/gawk
 app-alternatives/awk:mawk - Symlink to sys-apps/mawk (warning: mawk is not fully POSIX-compliant)
 app-alternatives/awk:nawk - Symlink to sys-apps/nawk
+app-alternatives/bc:gh - Symlink to bc-gh from sci-calculators/bc-gh
+app-alternatives/bc:gnu - Symlink to GNU bc (sys-devel/bc)
 app-alternatives/bzip2:lbzip2 - Symlink to app-arch/lbzip2.
 app-alternatives/bzip2:pbzip2 - Symlink to app-arch/pbzip2.
 app-alternatives/bzip2:reference - Symlink to app-arch/bzip2.
@@ -201,6 +203,8 @@ app-alternatives/cpio:gnu - Symlink to GNU cpio (app-arch/cpio)
 app-alternatives/cpio:libarchive - Symlink to bsdcpio from app-arch/libarchive
 app-alternatives/gzip:pigz - Symlink to app-arch/pigz.
 app-alternatives/gzip:reference - Symlink to app-arch/gzip.
+app-alternatives/lex:flex - Symlink to sys-devel/flex.
+app-alternatives/lex:reflex - Symlink to sys-devel/reflex.
 app-alternatives/sh:bash - Symlink to app-shells/bash
 app-alternatives/sh:dash - Symlink to app-shells/dash
 app-alternatives/sh:ksh - Symlink to app-shells/ksh
@@ -208,6 +212,9 @@ app-alternatives/sh:lksh - Symlink to lksh from app-shells/mksh
 app-alternatives/sh:mksh - Symlink to mksh from app-shells/mksh
 app-alternatives/tar:gnu - Symlink to GNU tar (app-arch/tar)
 app-alternatives/tar:libarchive - Symlink to bsdtar from app-arch/libarchive
+app-alternatives/yacc:bison - Symlink to sys-devel/bison.
+app-alternatives/yacc:byacc - Symlink to dev-util/byacc.
+app-alternatives/yacc:reference - Symlink to dev-util/yacc.
 app-antivirus/clamav:clamapp - Build applications (clamscan, clamd, clamdscan, clamonacc (also has its own USE flag), sigtool, clambc, clamav-milter (also requires milter USE flag), clamdtop, clamsubmit, clamconf).
 app-antivirus/clamav:clamdtop - A Top like tool which shows what clamd is currently scanning amongst other things
 app-antivirus/clamav:clamonacc - Build the clamonacc on-access scanner
@@ -459,6 +466,11 @@ app-editors/neovim:lto - Build with Link Time Optimization (LTO)
 app-editors/neovim:nvimpager - Install nvimpager symlink to less.sh macro
 app-editors/neovim:tui - Build the neovim unix tui
 app-editors/okteta:designer - Build plugins for dev-qt/designer
+app-editors/pluma-plugins:bracketcompletion - Auto complete bracket pairs
+app-editors/pluma-plugins:codecomment - Comment code blocks
+app-editors/pluma-plugins:smartspaces - Insert smart spaces
+app-editors/pluma-plugins:synctex - Enable synctex support for pdflatex
+app-editors/pluma-plugins:terminal - Embed a terminal in the bottom pane
 app-editors/qhexedit2:gui - Install Qt5 hex editor
 app-editors/tea:aspell - Enable spellchecking using app-text/aspell
 app-editors/tea:hunspell - Enable spellchecking using app-text/hunspell
@@ -716,6 +728,7 @@ app-emulation/xen-tools:system-qemu - Using app-emulation/qemu instead of the bu
 app-emulation/xen-tools:system-seabios - Using sys-firmware/seabios instead of the bundled one
 app-emulation/xtrs:ls-dos - Install LS-DOS disk images for Model 4P
 app-eselect/eselect-php:fpm - Enable the FastCGI Process Manager SAPI
+app-eselect/eselect-wine:xdg - Make use of XDG_DATA_DIRS to provide desktop entries
 app-forensics/afflib:fuse - Enable extra fuse thingies
 app-forensics/afflib:qemu - Enable qemu stuff
 app-forensics/afflib:s3 - Enable support for Amazon S3
@@ -2878,6 +2891,7 @@ dev-util/perf:systemtap - Add support to define SDT event in perf tools.
 dev-util/perf:unwind - Use sys-libs/libunwind for frame unwinding support.
 dev-util/plan9port:freefonts - Don't install BigelowHolmes fonts
 dev-util/poke:machine-interface - Enable machine-interface protocol using dev-libs/json-c
+dev-util/poke:nbd - Enable poking at networked block devices via sys-libs/libnbd.
 dev-util/poke:pvm-profiling - Enable profiling in the PVM
 dev-util/pycharm-community:bundled-jdk - Use bundled jdk
 dev-util/pycharm-professional:bundled-jdk - Use bundled jdk
@@ -3425,13 +3439,6 @@ kde-apps/kalarm:speech - Enable text-to-speech support
 kde-apps/kalzium:editor - Enable the embedded molecule editor/viewer
 kde-apps/kalzium:solver - Enable the equation solver
 kde-apps/kanagram:speech - Enable text-to-speech support
-kde-apps/kate:activities - Enable Plasma Activities support via kde-frameworks/kactivities
-kde-apps/kate:filebrowser - Enable File System browser tool view
-kde-apps/kate:lspclient - Enable LSP (Language Server Protocol) client plugin
-kde-apps/kate:plasma - Enable Session Applet addon for KDE Plasma
-kde-apps/kate:projects - Enable Project plugin for executing queries on SQL DBs
-kde-apps/kate:snippets - Enable Snippets Tool View plugin to manage or download code snippets
-kde-apps/kate:sql - Enable SQL plugin for executing queries on SQL DBs
 kde-apps/kate-addons:filebrowser - Enable File System browser tool view
 kde-apps/kate-addons:lspclient - Enable LSP (Language Server Protocol) client plugin
 kde-apps/kate-addons:plasma - Enable Session Applet addon for KDE Plasma
@@ -3527,7 +3534,6 @@ kde-apps/ktp-common-internals:otr - Enable support for encrypted conversations u
 kde-apps/ktp-common-internals:sso - Enable support for Single sign-on through KAccounts
 kde-apps/ktp-text-ui:speech - Enable incoming messages to be read out using text-to-speech
 kde-apps/kwave:qtmedia - Enable playback via Qt5Multimedia
-kde-apps/kwrite:activities - Enable Plasma Activities support via kde-frameworks/kactivities
 kde-apps/libkdepim:designer - Build plugins for dev-qt/designer
 kde-apps/libkleo:fancyviewer - Use kde-apps/kpimtextedit for an improved audit log viewer
 kde-apps/libksane:kwallet - Enable encrypted storage of passwords with kde-frameworks/kwallet
@@ -8062,6 +8068,12 @@ sys-block/libfabric:rocr - Enable Radeon Open Compute provider
 sys-block/libfabric:usnic - Enable Cisco VIC (virtualized NIC) hardware on Cisco UCS server provider
 sys-block/libfabric:verbs - Enable Linux Infiniband verbs provider
 sys-block/nbd:netlink - Add support for netlink protocol via dev-libs/libnl
+sys-block/nbdkit:ext2 - Enable the ext2 filter via sys-fs/e2fsprogs.
+sys-block/nbdkit:libguestfs - Enable the app-emulation/libguestfs plugin.
+sys-block/nbdkit:libssh - Enable the SSH plugin via net-libs/libssh.
+sys-block/nbdkit:libvirt - Enable the app-emulation/libvirt plugin.
+sys-block/nbdkit:nbd - Enable the nbd plugin via sys-libs/libnbd.
+sys-block/nbdkit:torrent - Enable the torrent plugin via net-libs/libtorrent-rasterbar.
 sys-block/open-iscsi:rdma - Support iSCSI over RDMA
 sys-block/open-iscsi:tcp - Support iSCSI over TCP
 sys-block/parted:debug - Enable debugging as encouraged by upstream: [The default configuration] includes --enable-debug (by default), which contains many assertions. Obviously, these "waste" space, but in the past, they have caught potentially dangerous bugs before they would have done damage, so we think it's worth it. Also, it means we get more bug reports ;)
@@ -8483,6 +8495,8 @@ sys-libs/libcxx:libcxxabi - Build on top of sys-libs/libcxxabi instead of gcc's 
 sys-libs/libcxx:libunwind - Use libunwind instead of libgcc_s for stack unwinding, thus avoiding dependence on gcc.
 sys-libs/libcxxabi:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
 sys-libs/libcxxabi:libunwind - Use libunwind instead of libgcc_s for stack unwinding, thus avoiding dependency on gcc
+sys-libs/libnbd:fuse - Install the sys-fs/fuse powered nbdfuse.
+sys-libs/libnbd:uri-support - Enable nbd:// URI support via dev-libs/libxml2.
 sys-libs/libnvme:json - Support JSON output via dev-libs/json-c
 sys-libs/libnvme:uuid - UUID support via sys-apps/util-linux
 sys-libs/libomp:cuda - Build CUDA offloading plugin (only with USE=offload)

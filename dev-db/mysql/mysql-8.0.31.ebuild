@@ -25,7 +25,7 @@ S="${WORKDIR}/mysql"
 LICENSE="GPL-2"
 SLOT="8.0"
 # -ppc, -riscv for bug #761715
-KEYWORDS="amd64 ~arm ~arm64 ~hppa ~ia64 ~mips -ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~arm ~arm64 ~hppa ~ia64 ~mips -ppc ~ppc64 ~riscv ~s390 ~sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x64-solaris ~x86-solaris"
 IUSE="cjk cracklib debug jemalloc latin1 numa +perl profiling router selinux +server tcmalloc test"
 RESTRICT="!test? ( test )"
 REQUIRED_USE="?? ( tcmalloc jemalloc )
@@ -63,7 +63,7 @@ COMMON_DEPEND="
 DEPEND="
 	${COMMON_DEPEND}
 	|| ( >=sys-devel/gcc-3.4.6 >=sys-devel/gcc-apple-4.0 )
-	virtual/yacc
+	app-alternatives/yacc
 	server? ( net-libs/rpcsvc-proto )
 	test? (
 		acct-group/mysql acct-user/mysql

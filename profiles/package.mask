@@ -33,6 +33,37 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2022-12-03)
+# Dev channel releases are only for people who
+# are developers or want more experimental features
+# and accept a more unstable release.
+www-client/chromium:0/dev
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2022-12-03)
+# No purpose anymore after <dev-libs/boost-1.80 cleanup.
+# Removal on 2022-12-16
+dev-util/boost-build
+
+# Hans de Graaff <graaff@gentoo.org> (2022-12-03)
+# Obsolete slot without reverse dependencies. Use a newer faraday
+# slot instead. Masked for removal in 30 days.
+dev-ruby/faraday:0
+
+# Hans de Graaff <graaff@gentoo.org> (2022-12-03)
+# Obsolete slot without reverse dependencies. Use a newer net-ssh
+# slot instead. Masked for removal in 30 days.
+dev-ruby/net-ssh:5
+
+# Hans de Graaff <graaff@gentoo.org> (2022-12-03)
+# ruby27-only packages. No recent releases. No reverse dependencies
+# anymore. Maksed for removal in 30 days.
+dev-ruby/rspec-retry
+
+# Oz Tiram <oz.tiram@gmail.com> (2022-12-03)
+# Mate-desktop no longer supports gtk+:2, so there is
+# no need for this package. Removal on 2023-01-03.
+x11-themes/mate-themes-meta
+
 # Hans de Graaff <graaff@gentoo.org> (2022-12-02)
 # Old cucumber slots and dependencies for already removed
 # cucumber-3. These have no value as standalone packages.
@@ -394,43 +425,6 @@ x11-drivers/xf86-video-nv
 =net-misc/asterisk-opus-20*
 =net-misc/asterisk-g729-20*
 
-# Arthur Zamarin <arthurzam@gentoo.org> (2022-11-04)
-# Upstream repository is gone. Uses internally python 2 code, which
-# we patch into python 3. Only ebuild uses snapshot tarball from the
-# dead repo. Doesn't use PEP517 mode. Has issues with python 3.11.
-# No reverse dependencies in tree.
-# Removal: 2022-12-04.  Bug #879613.
-dev-python/tempita
-
-# Michał Górny <mgorny@gentoo.org> (2022-11-04)
-# NIH version of dev-python/watchdog that was used by dev-python/uvicorn
-# only, and was replaced by rustified dev-python/watchfiles.
-# Removal on 2022-12-04.  Bug #879515.
-dev-python/watchgod
-
-# Anton Fischl <github@fischl-online.de> (2022-10-23)
-# Version 3.1.* is not meant for production according to upstream
-=app-backup/burp-3.1*
-
-# David Seifert <soap@gentoo.org> (2022-10-31)
-# EAPI 6, last release over 17 years ago, requires <ghostscript-gpl-10
-# drivers, relies on -Wimplicit-function-declaration.
-# Removal on 2022-11-30. Bug #871216, #876382.
-media-gfx/peps
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2022-10-29)
-# Last upstream commit in 2016, no tests, implements functions
-# which are implemented by pathlib Python module. No reverse
-# dependencies in gentoo tree for a long time.
-# Removal: 2022-11-28.  Bug #878733.
-dev-python/pathtools
-
-# Michał Górny <mgorny@gentoo.org> (2022-10-29)
-# Unmaintained in Gentoo.  Last release in 2018, very little upstream
-# activity since.  No revdeps left.
-# Removal on 2022-11-28.  Bug #842873.
-dev-libs/cloog
-
 # Sam James <sam@gentoo.org> (2022-10-28)
 # Please upgrade to >=media-libs/fontconfig-2.14.1-r1 for fixed
 # cache dir to avoid sandbox violation errors, bug #878471.
@@ -477,12 +471,6 @@ dev-libs/cloog
 # Mask RC versions for initial testing
 <dev-lang/php-8.2.0:8.2
 virtual/httpd-php:8.2
-
-# Stephan Hartmann <sultan@gentoo.org> (2022-09-29)
-# Dev channel releases are only for people who
-# are developers or want more experimental features
-# and accept a more unstable release.
->=www-client/chromium-108
 
 # John Helmert III <ajak@gentoo.org> (2022-09-18)
 # Unfixed root privilege escalation, bug #631552

@@ -43,7 +43,6 @@ RDEPEND="
 	themes? (
 		=x11-themes/mate-backgrounds-${MATE_BRANCH}*
 		=x11-themes/mate-icon-theme-${MATE_BRANCH}*
-		>=x11-themes/mate-themes-meta-${MATE_THEMES_V}
 	)
 	extras? (
 		=app-arch/engrampa-${MATE_BRANCH}*

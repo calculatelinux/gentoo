@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
 
 DEPEND="
-	virtual/yacc
+	app-alternatives/yacc
 "
 
 S="${WORKDIR}/awk-${PV}"
@@ -24,6 +24,7 @@ DOCS=( README.md FIXES )
 src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
+		HOSTCC="$(tc-getBUILD_CC)" \
 		CFLAGS="${CFLAGS}" \
 		CPPFLAGS=-DHAS_ISBLANK \
 		ALLOC="${LDFLAGS}" \
