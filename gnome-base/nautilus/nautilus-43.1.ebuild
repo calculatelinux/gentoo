@@ -11,8 +11,9 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Nautilus"
 LICENSE="GPL-3+ LGPL-2.1+"
 SLOT="0"
 IUSE="gnome +gstreamer gtk-doc +introspection +previewer selinux sendto"
+REQUIRED_USE="gtk-doc? ( introspection )"
 
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~sparc"
+KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc64 ~riscv ~sparc"
 
 DEPEND="
 	>=dev-libs/glib-2.72.0:2

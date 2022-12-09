@@ -7,5 +7,5 @@ KEYWORDS=~amd64
 LICENSE=ISC
 SLOT=0
 SRC_URI=mirror://sourceforge/project/odhcploc/20111021/odhcploc-20111021.tar.gz
-_eclasses_=multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144
+_eclasses_=multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491
 _md5_=4c462b8b5eed63b96fd5d9cf601f41b3

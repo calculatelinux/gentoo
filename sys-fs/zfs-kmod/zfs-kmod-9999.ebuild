@@ -174,7 +174,46 @@ src_install() {
 	einstalldocs
 }
 
+_old_layout_cleanup() {
+	# new files are just extra/{spl,zfs}.ko with no subdirs.
+	local olddir=(
+		avl/zavl
+		icp/icp
+		lua/zlua
+		nvpair/znvpair
+		spl/spl
+		unicode/zunicode
+		zcommon/zcommon
+		zfs/zfs
+		zstd/zzstd
+	)
+
+	# kernel/module/Kconfig contains possible compressed extentions.
+	local kext kextfiles
+	for kext in .ko{,.{gz,xz,zst}}; do
+		kextfiles+=( "${olddir[@]/%/${kext}}" )
+	done
+
+	local oldfile oldpath
+	for oldfile in "${kextfiles[@]}"; do
+		oldpath="${EROOT}/lib/modules/${KV_FULL}/extra/${oldfile}"
+		if [[ -f "${oldpath}" ]]; then
+			ewarn "Found obsolete zfs module ${oldfile} for current kernel ${KV_FULL}, removing."
+			rm -rv "${oldpath}" || die
+			# we do not remove non-empty directories just for safety in case there's something else.
+			# also it may fail if there are both compressed and uncompressed modules installed.
+			rmdir -v --ignore-fail-on-non-empty "${oldpath%/*.*}" || die
+		fi
+	done
+}
+
 pkg_postinst() {
+	# check for old module layout before doing anything else.
+	# only attempt layout cleanup if new .ko location is used.
+	local newko=( "${EROOT}/lib/modules/${KV_FULL}/extra"/{zfs,spl}.ko* )
+	# we check first array member, if glob above did not exand, it will be "zfs.ko*" and -f will return false.
+	# if glob expanded -f will do correct file precense check.
+	[[ -f ${newko[0]} ]] && _old_layout_cleanup
 	linux-mod_pkg_postinst
 
 	if [[ -z ${ROOT} ]] && use dist-kernel; then
@@ -194,7 +233,7 @@ pkg_postinst() {
 		ewarn "Do *NOT* upgrade root pools to use the new feature flags."
 		ewarn "Any new pools will be created with the new feature flags by default"
 		ewarn "and will not be compatible with older versions of OpenZFS. To"
-		ewarn "create a newpool that is backward compatible wih GRUB2, use "
+		ewarn "create a new pool that is backward compatible wih GRUB2, use "
 		ewarn
 		ewarn "zpool create -o compatibility=grub2 ..."
 		ewarn

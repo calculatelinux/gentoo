@@ -19,7 +19,7 @@ if [[ ${PV} = *9999* ]]; then
 	SRC_URI="${SRC_PATCHES}"
 else
 	SRC_URI="https://gitlab.freedesktop.org/wayland/${PN}/-/releases/${PV}/downloads/${P}.tar.xz"
-	KEYWORDS="~amd64 ~arm ~arm64 ~ia64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
+	KEYWORDS="~amd64 ~arm ~arm64 ~ia64 ~loong ~ppc ~ppc64 ~riscv ~sparc ~x86"
 fi
 
 LICENSE="MIT CC-BY-SA-3.0"
@@ -33,7 +33,7 @@ REQUIRED_USE="
 	pipewire? ( drm )
 	remoting? ( drm gles2 )
 	screen-sharing? ( rdp )
-	test? ( desktop headless xwayland )
+	test? ( desktop headless lcms xwayland )
 	wayland-compositor? ( gles2 )
 	|| ( drm headless rdp wayland-compositor X )
 	|| ( seatd systemd )

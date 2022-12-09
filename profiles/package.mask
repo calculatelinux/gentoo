@@ -33,11 +33,108 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2022-12-08)
+# Seems to break some logic in pkg_resources.  Masked for the time being
+# to prevent breakage.
+>=dev-python/packaging-22.0
+
+# Ionen Wolkens <ionen@gentoo.org> (2022-12-07)
+# Formerly added to apply binary git patches to wine-staging without git, but
+# has not been used since 2017 and stuck on EAPI-6. Alternatives: dev-vcs/git
+# Removal: 2023-01-06.
+dev-util/patchbin
+
+# Sam James <sam@gentoo.org> (2022-12-07)
+# HOMEPAGE & remote-id are for a different project, SRC_URI is gone,
+# only results on Google are for Gentoo mirrors, EAPI 6. Removal on 2023-01-07.
+# bug #630264, bug #655964, bug #750071.
+dev-vcs/git-pimp
+
+# Sam James <sam@gentoo.org> (2022-12-07)
+# These versions have been masked for testing since 2014(!). These versions
+# had a controversial licence change and therefore had limited adoption.
+# See also the old 2021-05-30-deprecate-old-bdb-slots news item for
+# additional context.
+# Removal on 2023-01-07.
+=sys-libs/db-6.1*
+=sys-libs/db-6.2*
+=sys-libs/db-18.1*
+
+# Naohiro Aota <naota@gentoo.org> (2022-12-07)
+# Masked for removal in 30 days. Depends on gnome-base/gconf. Last release
+# in 2011. See bug #873880.
+sys-apps/gpet
+
+# David Seifert <soap@gentoo.org> (2022-12-06)
+# EAPI 6, untouched for years, no revdeps. Removal on 2023-01-05.
+media-video/nvidia-video-codec
+
+# Sam James <sam@gentoo.org> (2022-12-06)
+# Broke C++ reverse dependencies. Please upgrade to 1.1.0-r1. See bug #884369.
+=x11-libs/libICE-1.1.0
+
+# Hans de Graaff <graaff@gentoo.org> (2022-12-05)
+# ruby27-only package. No longer maintained upstream. Last release in 2017.
+# No reverse dependencies. Removal in 30 days.
+dev-ruby/hipchat
+
+# Hans de Graaff <graaff@gentoo.org> (2022-12-05)
+# This package has been subsumed into its only consumer:
+# dev-ruby/nio4r. It is no longer developed, and its last standalone
+# release was 11 years ago. Removal in 30 days.
+dev-ruby/iobuffer
+
+# Marek Szuba <marecki@gentoo.org> (2022-12-05)
+# No releases since 2003 (!), upstream effectively dead, no Unicode support,
+# EAPI 6. Removal in 30 days (#884429)
+app-editors/elvis
+
+# Robin H. Johnson <robbat2@gentoo.org> (2022-12-04)
+# sys-boot/mbr-gpt was a bizzare package extremely sensitive to compiler &
+# linker changes. I don't know of any remaining consumers other than one weird
+# system I have.
+# If you're a consumer: syslinux gptmbr was the successor to this approach,
+# you'll need to replace the contents of your BIOS Boot Partition, because it's
+# not a direct 1:1 change.
+# Only upstream release in 2008. Removal in 30 days.
+sys-boot/mbr-gpt
+
+# Hans de Graaff <graaff@gentoo.org> (2022-12-03)
+# ruby27-only package with no reverse dependencies.
+# Last release in 2019. Removal in 30 days.
+dev-ruby/logue
+
+# Hans de Graaff <graaff@gentoo.org> (2022-12-04)
+# Obsolete slot without reverse dependencies. Use a newer
+# public_suffix slot instead. Masked for removal in 30 days.
+dev-ruby/public_suffix:3
+
+# Hans de Graaff <graaff@gentoo.org> (2022-12-04)
+# Obsolete slot without reverse dependencies. Use a newer
+# rspec-rails slot instead. Masked for removal in 30 days.
+dev-ruby/rspec-rails:4
+
+# Hans de Graaff <graaff@gentoo.org> (2022-12-04)
+# Obsolete slot without reverse dependencies. Use a newer
+# selenium-webdriver slot instead. Masked for removal in 30 days.
+dev-ruby/selenium-webdriver:3
+
+# Hans de Graaff <graaff@gentoo.org> (2022-12-03)
+# ruby27-only packages with no other reverse dependencies.
+# Last releases in 2013 and 2015. Removal in 30 days.
+dev-ruby/textpow
+dev-ruby/ultraviolet
+
+# Hans de Graaff <graaff@gentoo.org> (2022-12-03)
+# Obsolete slot without reverse dependencies. Use a newer vcr
+# slot instead. Masked for removal in 30 days.
+dev-ruby/vcr:3
+
 # Sam James <sam@gentoo.org> (2022-12-03)
 # Dev channel releases are only for people who
 # are developers or want more experimental features
 # and accept a more unstable release.
-www-client/chromium:0/dev
+>=www-client/chromium-110
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2022-12-03)
 # No purpose anymore after <dev-libs/boost-1.80 cleanup.
@@ -73,6 +170,7 @@ dev-util/cucumber-core:3.2
 dev-util/cucumber-expressions
 dev-util/cucumber-tag_expressions
 dev-util/cucumber-wire:0
+dev-util/protobuf-cucumber
 
 # Hans de Graaff <graaff@gentoo.org> (2022-12-01)
 # Old slot without dependencies on it. Blocks removal of
@@ -745,7 +843,7 @@ app-office/texmacs
 # If you still use one of these old toolchain packages, please upgrade (and
 # switch the compiler / the binutils) ASAP. If you need them for a specific
 # (isolated) use case, feel free to unmask them on your system.
-<sys-libs/glibc-2.33
+<sys-libs/glibc-2.36-r5
 <sys-devel/binutils-2.38
 
 # Michael Orlitzky <mjo@gentoo.org> (2017-01-07)
@@ -753,15 +851,6 @@ app-office/texmacs
 # people may still find it useful. It is masked to prevent accidental
 # use. See bugs 603346 and 604998 for more information.
 app-admin/amazon-ec2-init
-
-# Robin H. Johnson <robbat2@gentoo.org> (2014-08-04)
-# Masked for testing, presently fails upstream testsuite:
-# FAIL:07:02:35 (00:00:00) db_dump/db_load(./TESTDIR.3/recd001.db:child killed: kill signal): expected 0, got 1
-# FAIL:07:02:35 (00:00:00) Dump/load of ./TESTDIR.3/recd001.db failed.
-# FAIL:07:02:35 (00:00:00) db_verify_preop: expected 0, got 1
-=sys-libs/db-6.1*
-=sys-libs/db-6.2*
-=sys-libs/db-18.1*
 
 # Mike Gilbert <floppym@gentoo.org> (2014-03-04)
 # Dev channel releases are only for people who are developers or want more

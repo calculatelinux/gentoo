@@ -728,7 +728,7 @@ app-emulation/xen-tools:system-qemu - Using app-emulation/qemu instead of the bu
 app-emulation/xen-tools:system-seabios - Using sys-firmware/seabios instead of the bundled one
 app-emulation/xtrs:ls-dos - Install LS-DOS disk images for Model 4P
 app-eselect/eselect-php:fpm - Enable the FastCGI Process Manager SAPI
-app-eselect/eselect-wine:xdg - Make use of XDG_DATA_DIRS to provide desktop entries
+app-eselect/eselect-wine:xdg - Set XDG_DATA_DIRS to use the selected wine.desktop, allows e.g. 'xdg-open my.exe' for file managers
 app-forensics/afflib:fuse - Enable extra fuse thingies
 app-forensics/afflib:qemu - Enable qemu stuff
 app-forensics/afflib:s3 - Enable support for Amazon S3
@@ -1072,7 +1072,7 @@ app-shells/bash:mem-scramble - Build with custom malloc/free overwriting allocat
 app-shells/bash:net - Enable /dev/tcp/host/port redirection
 app-shells/bash:pgo - Optimize the build using Profile Guided Optimization (PGO)
 app-shells/bash:plugins - Add support for loading builtins at runtime via 'enable'
-app-shells/bash-completion:eselect - Support blacklisting of completions via 'eselect bash-completion'. This enables custom Gentoo patching of upstream completion loader.
+app-shells/bash-completion:eselect - Support blacklisting of completions via 'eselect bashcomp'. This enables custom Gentoo patching of upstream completion loader.
 app-shells/mksh:lksh - variant that uses POSIX-compliant arithmetics with the host “long” data type and is automatically in POSIX mode when called as /bin/sh
 app-shells/nushell:extra - Install extra plugins: binaryview, tree, clipboard-cli, trash-support and others
 app-shells/pdsh:rsh - This allows the use of rsh (remote shell) and rcp (remote copy) for authoring websites. sftp is a much more secure protocol and is preferred.
@@ -2236,9 +2236,9 @@ dev-lua/lua-cjson:internal-fpconv - Enable internal number conversion routines, 
 dev-ml/dose3:parmap - Adds multi-core CPU support via dev-ml/parmap.
 dev-ml/dose3:rpm4 - Adds support for handling rpm4 files.
 dev-ml/dose3:zip - Adds support for handling zip files.
-dev-ml/lablgtk:glade - Enable libglade bindings compilation.
-dev-ml/lablgtk:gnomecanvas - Enable libgnomecanvas bindings compilation.
-dev-ml/lablgtk:sourceview - Enable GtkSourceView support
+dev-ml/lablgtk:glade - Enable gnome-base/libglade bindings compilation
+dev-ml/lablgtk:gnomecanvas - Enable gnome-base/libgnomecanvas bindings compilation
+dev-ml/lablgtk:sourceview - Enable GtkSourceView (x11-libs/gtksourceview) support
 dev-ml/logs:cli - Enables the Logs_cli library that provides command line support for controlling Logs.
 dev-ml/logs:fmt - Enables the Logs_fmt reporter.
 dev-ml/logs:lwt - Enables the Logs_lwt library that provides Lwt logging functions.
@@ -3149,6 +3149,7 @@ games-fps/eduke32:vpx - Enable support for media-libs/libvpx.
 games-fps/eduke32:xmp - Enable support for media-libs/exempi.
 games-fps/gzdoom:gles2 - Enable GLES2 backend
 games-fps/gzdoom:non-free - Enable non-free components
+games-fps/gzdoom:swr - Enable software renderer
 games-fps/gzdoom:vulkan - Enable Vulkan support
 games-fps/nexuiz:maps - Install the community map pack
 games-fps/prboom-plus:dumb - Enable support for various tracker-style music formats via media-libs/dumb
@@ -3371,6 +3372,7 @@ gui-apps/mako:icons - Enable support for icons
 gui-apps/swaybg:gdk-pixbuf - Support image types other than PNG
 gui-apps/swayidle:elogind - Enable support for rootless session via elogind
 gui-apps/swaylock:gdk-pixbuf - Enable additional image format support via the x11-libs/gdk-pixbuf library
+gui-apps/waybar:experimental - Enable experimental features
 gui-apps/waybar:mpd - Enable support for the Music Player Daemon
 gui-apps/waybar:network - Enable libnl support for network related features
 gui-apps/waybar:popups - Enable popup support with gtk-layer-shell
@@ -3913,7 +3915,7 @@ media-fonts/liberation-fonts:fontforge - Use media-gfx/fontforge to build fonts 
 media-fonts/montecarlo:bdf - Install BDF fonts in addition to PCF
 media-fonts/mplus-outline-fonts:ipafont - Generates new fonts merged with media-fonts/ja-ipafonts
 media-fonts/noto:extra - Install full upstream font set
-media-fonts/noto-emoji:buildfont - Build Noto Emoji font with supplied images.
+media-fonts/noto-emoji:buildfont - Build Noto Emoji font with supplied images
 media-fonts/sil-charis:compact - Use more compactly spaced font
 media-fonts/terminus-font:a-like-o - Changes view of letter 'a' - a looks like o (see homepage)
 media-fonts/terminus-font:center-tilde - Place the '~' character vertically centered on the line instead of to the top.
@@ -4194,6 +4196,7 @@ media-libs/grilo:playlist - Enable support for playlists through dev-libs/totem-
 media-libs/gst-plugins-bad:bzip2 - Enable bzip2 encoder/decoder plugin
 media-libs/gst-plugins-bad:egl - Enable EGL support
 media-libs/gst-plugins-bad:gles2 - Enable GLES2 support
+media-libs/gst-plugins-bad:qsv - Enable Intel Quick Sync Video using the media-libs/oneVPL dispatcher
 media-libs/gst-plugins-base:X - Enable ximagesink and xvimagesink plugins; build GLX platform support if USE=opengl is enabled; build x11 windowing system support if USE=egl is enabled
 media-libs/gst-plugins-base:egl - Enable EGL platform support
 media-libs/gst-plugins-base:gbm - Enable Graphics Buffer Manager based EGL windowing system support (requires egl and at least one of gles or opengl)
@@ -4222,6 +4225,7 @@ media-libs/imlib2:shm - Use MIT shared memory support for X image transfer
 media-libs/imlib2:tiff - TIFF image loader support
 media-libs/imlib2:webp - WEBP image loader support
 media-libs/imlib2:zlib - Zlib loader support
+media-libs/intel-mediasdk:tools - Build analyse and inspect tools
 media-libs/leptonica:utils - Install command-line utilities
 media-libs/lib3mf:system-act - Use system-provided dev-go/act as code generator instead of package provided binaries. This flag will be removed after some time used for testing!
 media-libs/libafterimage:shaping - Use MIT shaped X windows extention.
@@ -4343,6 +4347,11 @@ media-libs/mlt:rtaudio - Builds rtaudio consumer for native audio support on mul
 media-libs/mlt:rubberband - Enable audio pitch-shifting using media-libs/rubberband
 media-libs/mlt:vidstab - Enabled video stabilization with media-libs/vidstab
 media-libs/netpbm:rle - Build converters for the RLE format (utah raster toolkit)
+media-libs/oneVPL:drm - Build with DRM support
+media-libs/oneVPL:experimental - Build dispatcher with experimental APIs
+media-libs/oneVPL:tools - Build decode/encode/analyse/inspect tools
+media-libs/oneVPL-cpu:experimental - Enable experimental API
+media-libs/oneVPL-cpu:openh264 - Use media-libs/openh264 instead of media-libs/x264
 media-libs/openal:pipewire - Enable support for the media-video/pipewire audio backend
 media-libs/openal:sndio - Enable support for the media-sound/sndio backend
 media-libs/opencv:contrib - Install user contributed scripts from opencv_contrib (Experimental!)
@@ -5013,6 +5022,7 @@ media-video/ffmpeg:openh264 - Enables H.264 encoding suppoprt via media-libs/ope
 media-video/ffmpeg:openssl - Enables dev-libs/openssl support. Adds support for encrypted network protocols (TLS/HTTPS).
 media-video/ffmpeg:pic - Force shared libraries to be built as PIC (this is slower)
 media-video/ffmpeg:postproc - Build and install libpostproc.
+media-video/ffmpeg:qsv - Enable Intel Quick Sync Video via media-libs/intel-mediasdk (ffmpeg versions older than, and including, 5.1) or media-libs/oneVPL (ffmpeg version newer than 5.1).
 media-video/ffmpeg:rav1e - Enables AV1 encoding support via media-video/rav1e.
 media-video/ffmpeg:rubberband - Adds time-stretching and pitch-shifting audio filter based on media-libs/rubberband.
 media-video/ffmpeg:snappy - Enable app-arch/snappy support. Required for e.g. Vidvox Hap encoder.
@@ -5099,18 +5109,17 @@ media-video/mplayer:yuv4mpeg - Enables yuv4mpeg video output
 media-video/mplayer:zoran - Enables ZR360[56]7/ZR36060 video output
 media-video/mpv:archive - Enable support for various archive formats via app-arch/libarchive
 media-video/mpv:bluray - Enable playback of Blu-ray filesystems
-media-video/mpv:cli - Build mpv CLI player
+media-video/mpv:cli - Enable the command-line player
 media-video/mpv:cplugins - Enable C plugins support
-media-video/mpv:drm - Enable Kernel Mode Setting / Direct Rendering Manager based video output
+media-video/mpv:drm - Enable Kernel Mode Setting / Direct Rendering Manager based video outputs
 media-video/mpv:egl - Enable support for various EGL-based video outputs / backends
 media-video/mpv:gamepad - Enable gamepad input support
 media-video/mpv:gbm - Enable Graphics Buffer Manager based EGL video backend
-media-video/mpv:jpeg - Enable support for saving screenshots in JPEG format
-media-video/mpv:libmpv - Build mpv shared library
+media-video/mpv:libmpv - Enable the shared library and headers (used by frontends / plugins)
 media-video/mpv:libplacebo - Enable support for GPU accelerated video rendering with media-libs/libplacebo
-media-video/mpv:lua - Enable Lua scripting, OSC (On Screen Controller) GUI and net-misc/youtube-dl hook-script
-media-video/mpv:mmal - Enables Multi-Media Abstraction Layer (MMAL) decoding support: Available e.g. on the Raspberry Pi.
-media-video/mpv:opengl - Enable support for various OpenGL-based video backends
+media-video/mpv:lua - Enable Lua scripting, OSC (On Screen Controller) GUI, and net-misc/yt-dlp support
+media-video/mpv:mmal - Enable Multi-Media Abstraction Layer (MMAL) decoding support: Available e.g. on the Raspberry Pi
+media-video/mpv:opengl - Enable support for OpenGL-based video backends (Note: deprecated for X11, USE=egl provides the newer support for -gpu-api=opengl)
 media-video/mpv:pipewire - Enable sound support via native PipeWire backend
 media-video/mpv:raspberry-pi - Enable support for the Raspberry Pi
 media-video/mpv:rubberband - Enable high quality pitch correction via media-libs/rubberband
@@ -5118,7 +5127,7 @@ media-video/mpv:sdl - Enable media-libs/libsdl2 based video and audio outputs (N
 media-video/mpv:sndio - Enable sound support via media-sound/sndio
 media-video/mpv:tools - Install extra tools: mpv_identify.sh, mpv_idet.sh, and umpv
 media-video/mpv:uchardet - Enable subtitles charset discovery via app-i18n/uchardet
-media-video/mpv:vulkan - Enable support for various Vulkan-based video backends
+media-video/mpv:vulkan - Enable support for Vulkan-based video backends
 media-video/mpv:zimg - Enable libzimg support (for vf_fingerprint)
 media-video/noad:libmpeg2 - Build support for mpeg2 through media-libs/libmpeg2 rather than using media-video/ffmpeg
 media-video/obs-studio:browser - Enable browser source support via (precompiled) CEF.
@@ -7852,6 +7861,7 @@ sys-apps/fwupd:uefi - Enable UEFI support
 sys-apps/gawk:mpfr - Use dev-libs/mpfr for high precision arithmetic (-M / --bignum)
 sys-apps/gawk:pma - Experimental Persistent Memory Allocator (PMA) support which allows persistence of variables, arrays, and user-defined functions across runs.
 sys-apps/gnome-disk-utility:fat - Include FAT16/FAT32 support (sys-fs/dosfstools)
+sys-apps/grep:egrep-fgrep - Install deprecated 'egrep' and 'fgrep' wrappers for 'grep -E' and 'grep -F' respectively. GNU grep 3.8 onwards warns about their usage by default, but the versions installed by this flag do not. No deprecation warnings are emitted when this flag is enabled.
 sys-apps/groff:uchardet - Enable automatic encoding detection via app-i18n/uchardet
 sys-apps/hwloc:X - use the X Window System
 sys-apps/hwloc:cairo - Enable the Cairo back-end of hwloc's lstopo command
@@ -8036,6 +8046,7 @@ sys-auth/pambase:securetty - Enable pam_securetty module in the login stack. Not
 sys-auth/pambase:sha512 - Switch Linux-PAM's pam_unix module to use sha512 for passwords hashes rather than MD5. This option requires sys-libs/pam version 1.0.1 built against sys-libs/glibc version 2.7, if it's built against an earlier version, it will silently be ignored, and MD5 hashes will be used. All the passwords changed after this USE flag is enabled will be saved to the shadow file hashed using SHA512 function. The password previously saved will be left untouched. Please note that while SHA512-hashed passwords will still be recognised if the USE flag is removed, the shadow file will not be compatible with systems using an earlier glibc version.
 sys-auth/pambase:systemd - Use pam_systemd module to register user sessions in the systemd control group hierarchy.
 sys-auth/pambase:yescrypt - Switch Linux-PAM's pam_unix module to use yescrypt for passwords hashes rather than MD5
+sys-auth/polkit:daemon - Build polkitd in addition to libpolkit. Those using sys-apps/dbus-broker may wish to disable this flag.
 sys-auth/polkit:duktape - Use dev-lang/duktape instead of dev-lang/spidermonkey as JavaScript engine
 sys-auth/polkit:systemd - Use sys-apps/systemd for session tracking
 sys-auth/seatd:builtin - Enable embedded server in libseat
@@ -8262,6 +8273,7 @@ sys-devel/gcc:default-znow - Request full relocation on start from ld.so by defa
 sys-devel/gcc:fixed-point - Enable fixed-point arithmetic support for MIPS targets in gcc (Warning: significantly increases compile time!)
 sys-devel/gcc:go - Build the GCC Go language frontend.
 sys-devel/gcc:graphite - Add support for the framework for loop optimizations based on a polyhedral intermediate representation
+sys-devel/gcc:ieee-long-double - Use accelerated 128-bit IEEE long double ABI (ppc64le only)
 sys-devel/gcc:jit - Enable libgccjit so other applications can embed gcc for Just-In-Time compilation.
 sys-devel/gcc:libssp - Build SSP support into a dedicated library rather than use the code in the C library (DO NOT ENABLE THIS IF YOU DON'T KNOW WHAT IT DOES)
 sys-devel/gcc:lto - Build using Link Time Optimizations (LTO)
@@ -9063,11 +9075,13 @@ x11-themes/mate-themes-meta:gtk2-only - Allow dependency-resolution for a system
 x11-themes/tela-icon-theme:black - Install black folder version
 x11-themes/tela-icon-theme:blue - Install blue folder version
 x11-themes/tela-icon-theme:brown - Install bworn folder version
+x11-themes/tela-icon-theme:dracula - Install dracula folder version
 x11-themes/tela-icon-theme:green - Install green folder version
 x11-themes/tela-icon-theme:grey - Install grey folder version
 x11-themes/tela-icon-theme:hardlink - Hardlink duplicate icons to greatly reduce installation size
 x11-themes/tela-icon-theme:kde - Install colorshceme version for KDE plasma (folder color follow the colorscheme)
 x11-themes/tela-icon-theme:manjaro - Install manjaro folder version
+x11-themes/tela-icon-theme:nord - Install nord folder version
 x11-themes/tela-icon-theme:orange - Install orange folder version
 x11-themes/tela-icon-theme:pink - Install pink folder version
 x11-themes/tela-icon-theme:purple - Install purple folder version

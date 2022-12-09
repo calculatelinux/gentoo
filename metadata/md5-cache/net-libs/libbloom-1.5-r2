@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~arm ~arm64 ~x86
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/jvirkki/libbloom/archive/v1.5.tar.gz -> libbloom-1.5.tar.gz
-_eclasses_=multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144
+_eclasses_=multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491
 _md5_=455120dc7622dca48d72c6d3b62e322f

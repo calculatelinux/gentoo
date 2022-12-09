@@ -44,7 +44,7 @@ CDEPEND="
 		>=x11-libs/libX11-1.1.5
 	)
 	xephyr? (
-		x11-libs/libxcb[xkb]
+		x11-libs/libxcb
 		x11-libs/xcb-util
 		x11-libs/xcb-util-image
 		x11-libs/xcb-util-keysyms

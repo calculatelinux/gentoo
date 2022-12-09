@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install
+DESCRIPTION=network protocol independent performance evaluator
+EAPI=8
+HOMEPAGE=http://bitspjoule.org/netpipe/
+INHERIT=toolchain-funcs
+IUSE=ipv6
+KEYWORDS=~amd64
+LICENSE=GPL-1+
+SLOT=0
+SRC_URI=http://bitspjoule.org/netpipe/code/NetPIPE-3.7.2.tar.gz
+_eclasses_=multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491
+_md5_=300b2fc26293ab75bc19c1094e219ab3

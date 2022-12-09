@@ -45,7 +45,7 @@ RESTRICT="!test? ( test )"
 
 COMMON_DEPEND="
 	media-libs/libass:=[fontconfig]
-	media-video/ffmpeg:=[encode,threads,vaapi?,vdpau?]
+	>=media-video/ffmpeg-4.4:=[encode,threads,vaapi?,vdpau?]
 	X? (
 		x11-libs/libX11
 		x11-libs/libXScrnSaver
@@ -280,5 +280,5 @@ src_install() {
 pkg_postinst() {
 	xdg_pkg_postinst
 
-	optfeature "URL support" net-misc/yt-dlp
+	optfeature "URL support with USE=lua" net-misc/yt-dlp
 }
