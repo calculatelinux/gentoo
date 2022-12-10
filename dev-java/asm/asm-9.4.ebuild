@@ -14,7 +14,7 @@ inherit java-pkg-2 java-pkg-simple
 DESCRIPTION="Bytecode manipulation framework for Java"
 HOMEPAGE="https://asm.ow2.io"
 MY_P="ASM_${PV//./_}"
-SRC_URI="https://gitlab.ow2.org/asm/asm/-/archive/${MY_P}/asm-${MY_P}.tar.gz"
+SRC_URI="https://gitlab.ow2.org/asm/asm/-/archive/${MY_P}/asm-${MY_P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="9"
@@ -55,19 +55,21 @@ src_prepare() {
 src_compile() {
 	local module
 	for module in "${ASM_MODULES[@]}"; do
-		einfo "Compiling $module"
-		JAVA_JAR_FILENAME="$module.jar"
-		JAVA_SRC_DIR="$module/src/main/java"
+		einfo "Compiling ${module}"
+		JAVA_JAR_FILENAME="${module}.jar"
+		JAVA_SRC_DIR="${module}/src/main/java"
 		java-pkg-simple_src_compile
-		JAVA_GENTOO_CLASSPATH_EXTRA+=":$module.jar"
+		JAVA_GENTOO_CLASSPATH_EXTRA+=":${module}.jar"
 		rm -r target || die
 	done
 
 	if use doc; then
+		einfo "Compiling javadocs"
 		JAVA_JAR_FILENAME="ignoreme.jar"
 		JAVA_SRC_DIR=()
 		for module in "${ASM_MODULES[@]}"; do
-			JAVA_SRC_DIR+="$module/src/main/java"
+			rm "${module}/src/main/java/module-info.java" || die
+			JAVA_SRC_DIR+=("${module}/src/main/java")
 		done
 		java-pkg-simple_src_compile
 	fi
@@ -76,9 +78,9 @@ src_compile() {
 src_install() {
 	local module
 	for module in "${ASM_MODULES[@]}"; do
-		java-pkg_dojar $module.jar
+		java-pkg_dojar ${module}.jar
 		if use source; then
-			java-pkg_dosrc "$module/src/main/java/*"
+			java-pkg_dosrc "${module}/src/main/java/*"
 		fi
 	done
 	if use doc; then

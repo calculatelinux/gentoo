@@ -33,6 +33,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2022-12-09)
+# Breaks compilation of reverse dependencies with broken pkgconfig (pc) file
+# bug #885075, https://github.com/libarchive/libarchive/issues/1766
+=app-arch/libarchive-3.6.2
+
+# Sam James <sam@gentoo.org> (2022-12-09)
+# mpc.h breaks compilation of reverse dependencies, reported upstream to ML
+=dev-libs/mpc-1.3.0
+
+# Michał Górny <mgorny@gentoo.org> (2022-12-09)
+# Unfetchable as the upstream homepage is gone, and mirror-restricted.
+# No package activity since 2018.
+# Removal on 2023-01-08.  Bug #668090.
+games-strategy/netherearth
+
 # Michał Górny <mgorny@gentoo.org> (2022-12-08)
 # Seems to break some logic in pkg_resources.  Masked for the time being
 # to prevent breakage.
@@ -564,11 +579,6 @@ x11-drivers/xf86-video-nv
 =sys-apps/portage-3.0.36
 =sys-apps/portage-3.0.37
 =sys-apps/portage-3.0.38
-
-# Brian Evans <grknight@gentoo.org> (2022-09-30)
-# Mask RC versions for initial testing
-<dev-lang/php-8.2.0:8.2
-virtual/httpd-php:8.2
 
 # John Helmert III <ajak@gentoo.org> (2022-09-18)
 # Unfixed root privilege escalation, bug #631552
