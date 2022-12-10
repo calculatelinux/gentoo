@@ -1,7 +1,7 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 if [[ ${PV} = *9999* ]] ; then
 	EGIT_REPO_URI="https://github.com/sekrit-twc/zimg"
@@ -29,4 +29,11 @@ multilib_src_configure() {
 	ECONF_SOURCE="${S}" econf \
 		$(use_enable debug) \
 		$(use_enable static-libs static)
+}
+
+multilib_src_install_all() {
+	einstalldocs
+	if ! use static-libs; then
+		find "${ED}" -type f -name '*.la' -delete || die
+	fi
 }
