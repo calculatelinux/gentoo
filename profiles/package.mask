@@ -33,6 +33,56 @@
 
 #--- END OF EXAMPLES ---
 
+# Jaco Kroon <jaco@uls.co.za> (2022-12-14)
+# Multiple open bugs (bug #870910, bug #877731, bug #884815), only one of which
+# is trivial to solve.
+# With more and more SIP traffic using TLS rather than plaintext UDP or TCP
+# this is fast becomming less and less useful.  You should rather use
+# asterisk's res_hep which can also report encrypted SIP and RTP to any HEP
+# compatible reporting tool (including Homer).
+# I'm no longer using this and don't recommend it's use, if you want this to be
+# unmasked again, please contact me so that we can figure out how to approach
+# maintenance thereof. Last-rites bug #885845.
+# Removal on 2023-01-31.
+net-voip/captagent
+
+# Hans de Graaff <graaff@gentoo.org> (2022-12-11)
+# ruby27-only package. No reverse dependencies.
+# Last release in 2012. Removal in 30 days.
+dev-ruby/log_buddy
+
+# Hans de Graaff <graaff@gentoo.org> (2022-12-11)
+# ruby27-only slot. No reverse dependencies.
+# Use a newer mime-types slot.
+# Removal in 30 days.
+dev-ruby/mime-types:2
+
+# Hans de Graaff <graaff@gentoo.org> (2022-12-11)
+# ruby27-only package. No reverse dependencies.
+# Last release in 2013. Removal in 30 days.
+dev-ruby/nagios_analyzer
+
+# Hans de Graaff <graaff@gentoo.org> (2022-12-11)
+# ruby27-only package. No reverse dependencies.
+# Last release in 2009. Removal in 30 days.
+dev-ruby/ntlm-http
+
+# Hans de Graaff <graaff@gentoo.org> (2022-12-11)
+# ruby27-only package. No reverse dependencies.
+# Removal in 30 days.
+dev-ruby/posix-spawn
+
+# Jonas Stein <jstein@gentoo.org> (2022-12-11)
+# Unfetchable and mirror-restricted.
+# Upstream discontinued
+# Removal after 2023-02-01.  Bug #884715.
+dev-cpp/sourcetrail
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2022-12-10)
+# Fails to build with recent perl. No maintainer, no revdeps.
+# Removal in 30 days. Bug 849518
+net-p2p/opendchub
+
 # Sam James <sam@gentoo.org> (2022-12-09)
 # Breaks compilation of reverse dependencies with broken pkgconfig (pc) file
 # bug #885075, https://github.com/libarchive/libarchive/issues/1766
@@ -497,14 +547,6 @@ www-apps/prewikka
 # Removal on 2022-12-15.  Bug #759931.
 dev-python/pytest-html
 
-# Matt Turner <mattst88@gentoo.org> (2022-11-14)
-# Unmaintained in Gentoo since at least the transition to git. Last release in
-# 2014. Depends on x11-libs/gtk+:2 and gnome-base/gconf. Fails to build with
-# (1) clang-16, (2) with LTO, (3) with -fno-common.
-# Bugs #812137, #864763, #871405, #873886
-# Removal on 2022-12-14
-x11-misc/xnee
-
 # Jonas Stein <jstein@gentoo.org> (2022-11-13)
 # Dead upstream
 # Removal after 2023-01-01.  Bug #881249.
@@ -515,13 +557,6 @@ net-mail/vchkuser
 # Bug #864543
 <dev-lang/erlang-25
 <net-misc/rabbitmq-server-3.11.0
-
-# Matt Turner <mattst88@gentoo.org> (2022-11-11)
-# Relies on function no longer present in the Xserver since v1.20
-# (released May 2018), and no user has noticed. Use xf86-video-nouveau instead.
-# Bug #875053
-# Removal on 2022-12-11
-x11-drivers/xf86-video-nv
 
 # Sam James <sam@gentoo.org> (2022-11-11)
 # Causes memory corruption when building x11-misc/colord on x86
@@ -762,13 +797,6 @@ media-libs/webrtc-audio-processing:1
 # sys-devel/automake version 1.11 is EOL and is only useful for testing
 # old de-ANSI-fication/ansi2knr/AM_C_PROTOTYPES code. Please uninstall.
 sys-devel/automake:1.11
-
-# Thomas Deutschmann <whissi@gentoo.org> (2021-09-07)
-# Masked while being tested and reverse deps aren't fully compatible
-# bug #797325.
-=dev-libs/openssl-3.0*
-=dev-libs/openssl-compat-1.1.1*
-=dev-libs/gost-engine-3.0*
 
 # Joonas Niilola <juippis@gentoo.org> (2021-07-29)
 # Upstream provided migration instructions from 2. -> 3. update,

@@ -24,7 +24,7 @@ IUSE="
 	+X +alsa aqua archive bluray cdda +cli coreaudio debug +drm dvb
 	dvd +egl gamepad +iconv jack javascript jpeg lcms libcaca +libmpv
 	+libplacebo +lua mmal nvenc openal opengl pipewire pulseaudio
-	raspberry-pi rubberband sdl selinux sndio test tools +uchardet
+	raspberry-pi rubberband sdl selinux sixel sndio test tools +uchardet
 	vaapi vdpau vulkan wayland +xv zimg zlib"
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
@@ -93,6 +93,7 @@ COMMON_DEPEND="
 	raspberry-pi? ( media-libs/raspberrypi-userland )
 	rubberband? ( media-libs/rubberband )
 	sdl? ( media-libs/libsdl2[sound,threads,video] )
+	sixel? ( media-libs/libsixel )
 	sndio? ( media-sound/sndio:= )
 	vaapi? ( media-libs/libva:=[X?,drm(+)?,wayland?] )
 	vdpau? ( x11-libs/libvdpau )
@@ -207,7 +208,7 @@ src_configure() {
 		$(meson_feature libplacebo)
 		$(meson_feature mmal rpi-mmal)
 		$(meson_feature sdl sdl2-video)
-		-Dsixel=disabled # TODO? needs keywording/testing
+		$(meson_feature sixel)
 		$(meson_feature wayland)
 		$(meson_feature xv)
 

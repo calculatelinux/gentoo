@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst prepare test
+DEPEND=sys-devel/binutils-config test? ( >=dev-lang/perl-5.8.8 )
+DESCRIPTION=Darwin assembler as(1) and static linker ld(1), Xcode Tools 3.2.6
+EAPI=7
+HOMEPAGE=http://www.opensource.apple.com/
+INHERIT=flag-o-matic toolchain-funcs
+IUSE=test
+KEYWORDS=~ppc-macos ~x64-macos
+LICENSE=APSL-2
+RDEPEND=sys-devel/binutils-config
+RESTRICT=test
+SLOT=3
+SRC_URI=https://opensource.apple.com/tarballs/ld64/ld64-97.17.tar.gz https://opensource.apple.com/tarballs/cctools/cctools-795.tar.gz http://www.opensource.apple.com/tarballs/libunwind/libunwind-30.tar.gz http://www.opensource.apple.com/tarballs/dyld/dyld-132.13.tar.gz https://dev.gentoo.org/~grobian/distfiles/binutils-apple-patches-3.2.6-r0.tar.bz2
+_eclasses_=edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	8f942ebdcf04334697649d4a0bf65a32	flag-o-matic	69394e25812406faa1f90edaf4969395	multilib	5ca4e49abed8e3a2f7b56920eadee157	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491	wrapper	4a1902f969e5718126434fc35f3a0d9c
+_md5_=47d1df49406b32e0c04eb966d0e5ccf6

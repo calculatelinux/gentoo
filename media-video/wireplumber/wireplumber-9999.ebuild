@@ -70,6 +70,9 @@ DOCS=( {NEWS,README}.rst )
 
 src_configure() {
 	local emesonargs=(
+		-Ddaemon=true
+		-Dtools=true
+		-Dmodules=true
 		-Ddoc=disabled # Ebuild not wired up yet (Sphinx, Doxygen?)
 		-Dintrospection=disabled # Only used for Sphinx doc generation
 		-Dsystem-lua=true # We always unbundle everything we can
@@ -81,6 +84,7 @@ src_configure() {
 		-Dsystemd-system-unit-dir=$(systemd_get_systemunitdir)
 		-Dsystemd-user-unit-dir=$(systemd_get_userunitdir)
 		$(meson_use test tests)
+		$(meson_use test dbus-tests)
 	)
 
 	meson_src_configure

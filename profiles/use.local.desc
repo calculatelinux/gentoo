@@ -265,13 +265,13 @@ app-backup/bacula:bacula-nodir - Disable building of director
 app-backup/bacula:bacula-nosd - Disable building of storage daemon
 app-backup/bacula:batch-insert - Enable batch insert into data base
 app-backup/bacula:logwatch - Install support files for logwatch
-app-backup/bareos:ceph - Enable ceph support
+app-backup/bareos:ceph - Enable sys-cluster/ceph support
 app-backup/bareos:clientonly - Only install file-daemon (client)
 app-backup/bareos:director - Install director
-app-backup/bareos:glusterfs - Enable glusterfs storage backend
-app-backup/bareos:jansson - JSON API support using JANSSON for director
-app-backup/bareos:lmdb - enable build of LMDB support for faster accurate backup
-app-backup/bareos:logwatch - Install support files for logwatch
+app-backup/bareos:glusterfs - Enable sys-cluster/glusterfs storage backend
+app-backup/bareos:jansson - JSON API support using dev-libs/jansson for director
+app-backup/bareos:lmdb - enable build of dev-db/lmdb support for faster accurate backup
+app-backup/bareos:logwatch - Install support files for sys-apps/logwatch
 app-backup/bareos:ndmp - Enable support for NDMP (Network Data Management Protocol)
 app-backup/bareos:scsi-crypto - Enable low level SCSI crypto support
 app-backup/bareos:storage-daemon - Install storage daemon (bareos-sd)
@@ -1263,6 +1263,7 @@ dev-ada/libgpr:static-pic - Build static library with pic code
 dev-ada/spawn:glib - Add support to dev-libs/glib-based mainloop.
 dev-ada/spawn:shared - Build shared library
 dev-ada/spawn:static-pic - Build static library with pic code
+dev-ada/templates-parser:shared - Build shared library
 dev-ada/xmlada:shared - Build shared library
 dev-ada/xmlada:static-pic - Build static library with pic code
 dev-cpp/abseil-cpp:cxx17 - Build with -DCMAKE_CXX_STANDARD=17 (required by some revdeps)
@@ -1306,7 +1307,6 @@ dev-db/mariadb:server - Build the server program
 dev-db/mariadb:sphinx - Add suport for the sphinx full-text search engine
 dev-db/mariadb:sst-mariabackup - Add tools needed to support the mariabackup SST method
 dev-db/mariadb:sst-rsync - Add tools needed to support the rsync SST method
-dev-db/mariadb:sst-xtrabackup - Add tools needed to support the xtrabackup and xtrabackup-v2 SST methods
 dev-db/mariadb:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-db/mariadb:test - Install upstream testsuites for end use.
 dev-db/mariadb:tokudb - Add support for TokuDB storage engine
@@ -1688,7 +1688,9 @@ dev-lang/inform:tools - Install blorbtools for manipulating Blorb files
 dev-lang/janet:static-libs - install janet static library archive, you must enable this flag for using `jpm build`
 dev-lang/jerryscript:debugger - Install jerry-debugger
 dev-lang/jsonnet:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
-dev-lang/julia:system-llvm - (Try to) Use the system LLVM install. YMMV.
+dev-lang/lazarus:extras - Build a lot of extra packages, including lhelp chm viewer program.
+dev-lang/lazarus:gtk2 - Use gtk:2 for widgets.
+dev-lang/lazarus:gui - Build GUI IDE.
 dev-lang/lazarus:minimal - Don't build extra packages from the bigide component
 dev-lang/logtalk:fop - Support for generating pdf documentation using fop
 dev-lang/logtalk:xslt - Support for generating html documentation using xslt
@@ -5002,7 +5004,7 @@ media-video/ffmpeg:fribidi - Enables fribidi support in the drawtext filter.
 media-video/ffmpeg:gcrypt - Enables gcrypt support: Needed for rtmp(t)e support if openssl, librtmp or gmp is not used.
 media-video/ffmpeg:gme - Enables support for media-libs/game-music-emu for playing various video game music formats.
 media-video/ffmpeg:gpl - Build GPL code. Should be enabled unless you require LGPL binaries.
-media-video/ffmpeg:hardcoded-tables - Use pre-calculated tables rather than calculating them on the fly.
+media-video/ffmpeg:hardcoded-tables - Use pre-calculated tables rather than calculating them on the fly. It results in an increase of approximately 15% in the size of libavcodec, the main library impacted by this change. It enables savings in table generation time, done once at codec initialization, since by hardcoding the tables, they do not need to be computed at runtime. However, the savings are often negligible (~100k cycles is a typical number) especially when amortized over the entire encoding/decoding operation. Improvements are being made to the runtime initialization, and so over time, this option will have an impact on fewer and fewer codecs.
 media-video/ffmpeg:iec61883 - Support for FireWire DV/HDV input device using media-libs/libiec61883.
 media-video/ffmpeg:jpegxl - Enable JPEG XL de/encoding via media-libs/libjxl.
 media-video/ffmpeg:kvazaar - Enables media-libs/kvazaar based HEVC encoder.
@@ -5130,6 +5132,7 @@ media-video/mpv:pipewire - Enable sound support via native PipeWire backend
 media-video/mpv:raspberry-pi - Enable support for the Raspberry Pi
 media-video/mpv:rubberband - Enable high quality pitch correction via media-libs/rubberband
 media-video/mpv:sdl - Enable media-libs/libsdl2 based video and audio outputs (Note: these outputs exist for compatibility reasons only, avoid if possible)
+media-video/mpv:sixel - Enable support for the sixel video backend using media-libs/libsixel
 media-video/mpv:sndio - Enable sound support via media-sound/sndio
 media-video/mpv:tools - Install extra tools: mpv_identify.sh, mpv_idet.sh, and umpv
 media-video/mpv:uchardet - Enable subtitles charset discovery via app-i18n/uchardet
@@ -5568,7 +5571,6 @@ net-dns/bind:json - Enable JSON statistics channel
 net-dns/bind:lmdb - Enable LMDB support to store configuration for 'addzone' zones
 net-dns/bind-tools:gssapi - Enable gssapi support
 net-dns/ddclient:examples - Install various example files, like for cron.
-net-dns/ddclient:iproute2 - Use sys-apps/iproute2 instead of sys-apps/net-tools for interaction.
 net-dns/dnsdist:dnscrypt - Enable the ability to act as a DNSCrypt server
 net-dns/dnsdist:dnstap - Enable support for dnstap
 net-dns/dnsdist:doh - Enable support for dns over http via www-servers/h2o
@@ -6433,6 +6435,7 @@ net-misc/curl:pop3 - Enable Post Office Protocol 3 support
 net-misc/curl:progress-meter - Enable the progress meter
 net-misc/curl:quiche - Enable HTTP/3.0 support using net-libs/quiche
 net-misc/curl:rtmp - Enable RTMP Streaming Media support
+net-misc/curl:rustls - Enable Rustls ssl backend
 net-misc/curl:smtp - Enable Simple Mail Transfer Protocol support
 net-misc/curl:ssh - Enable SSH urls in curl using libssh2
 net-misc/curl:ssl - Enable crypto engine support (via openssl if USE='-gnutls -nss')
@@ -7549,17 +7552,23 @@ sci-libs/umfpack:cholmod - Use sci-libs/cholmod for matrix ordering
 sci-libs/vtk:all-modules - Build all modules
 sci-libs/vtk:boost - Add support for boost
 sci-libs/vtk:cuda - Add support for CUDA
+sci-libs/vtk:freetype - Build support for font rendering
 sci-libs/vtk:gdal - Support for gdal formated data
 sci-libs/vtk:imaging - Building Imaging modules
 sci-libs/vtk:json - Support for json formatted data
 sci-libs/vtk:kits - Build kits in addition to modules
-sci-libs/vtk:logging - Enable the loguru logging module
+sci-libs/vtk:las - Build support for LiDAR files
+sci-libs/vtk:logging - Build the logging module
 sci-libs/vtk:offscreen - Offscreen rendering through OSMesa
+sci-libs/vtk:openvdb - Build support to handle VDB data files
+sci-libs/vtk:pdal - Build support to handle point cloud data files
 sci-libs/vtk:pegtl - Use pegtl to build parsers
 sci-libs/vtk:qt6 - Use Qt6 packages instead of Qt5
 sci-libs/vtk:rendering - Building Redering modules
+sci-libs/vtk:sdl - Enable SDL2 support for rendering modules
 sci-libs/vtk:tbb - Use dev-cpp/tbb to handle smp support
 sci-libs/vtk:views - Building Views modules
+sci-libs/vtk:vtkm - Build the vtkm accelerations modules
 sci-libs/vtk:web - Install web component
 sci-mathematics/bertini:optimization - Accept upstream's choices for -O option.
 sci-mathematics/cadabra:jupyter - Build the Cadabra Jupyter kernel
@@ -7957,7 +7966,6 @@ sys-apps/portage:rsync-verify - Enable full-tree cryptographic verification of G
 sys-apps/portage:xattr - Preserve extended attributes (filesystem-stored metadata) when installing files. Usually only required for hardened systems.
 sys-apps/ppc64-diag:rtas - Add support for the Run Time Abstraction Services (RTAS)
 sys-apps/proot:care - Build dynamic CARE binary (more info - https://proot-me.github.io)
-sys-apps/qingy:opensslcrypt - Encrypt communications between qingy and its GUI using dev-libs/openssl
 sys-apps/razercfg:gui - Installs GUI configuration utility and status bar applet. Requires dev-python/PyQt5
 sys-apps/rng-tools:jitterentropy - Enable Jitter RNG entropy support
 sys-apps/rng-tools:nistbeacon - Enable NIST beacon entropy support
@@ -8307,6 +8315,7 @@ sys-devel/gdb:lzma - Support lzma compression in ELF debug info
 sys-devel/gdb:multitarget - Support all known targets in one gdb binary
 sys-devel/gdb:python - Enable support for the new internal scripting language, as well as extended pretty printers
 sys-devel/gdb:server - Install the "gdbserver" program (useful for embedded/remote targets)
+sys-devel/gdb:sim - Build gdb's simulators for various hardware platforms. See https://sourceware.org/gdb/wiki/Sim.
 sys-devel/gdb:source-highlight - Enable listing highlighting via dev-util/source-highlight
 sys-devel/gdb:xml - Support parsing XML data files needed (at least) for cpu features, memory maps, and syscall tracing
 sys-devel/gdb:xxhash - Use dev-libs/xxhash to speed up internal hashing.
@@ -8981,6 +8990,7 @@ x11-misc/sent:savedconfig - Without a saved config.h, this package depends on me
 x11-misc/spacefm:video-thumbnails - Support video thumbnails with media-video/ffmpegthumbnailer
 x11-misc/stalonetray:graceful-exit - use non-portable hack to exit gracefully on signal
 x11-misc/tint2:battery - Enable battery status plugin
+x11-misc/tint2:sanitize - Enable ASAN
 x11-misc/tint2:tint2conf - Build/Install tint2conf as well
 x11-misc/urxvt-perls:deprecated - Install scripts which have been marked as deprecated by upstream
 x11-misc/vnc2swf:x11vnc - Install script that depends on x11vnc

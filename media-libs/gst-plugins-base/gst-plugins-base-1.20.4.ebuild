@@ -10,7 +10,7 @@ DESCRIPTION="Basepack of plugins for gstreamer"
 HOMEPAGE="https://gstreamer.freedesktop.org/"
 
 LICENSE="GPL-2+ LGPL-2+"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 
 # For OpenGL we have three separate concepts, with a list of possibilities in each:
 #  * opengl APIs - opengl and/or gles2; USE=opengl and USE=gles2 enable these accordingly; if neither is enabled, OpenGL helper library and elements are not built at all and all the other options aren't relevant
@@ -62,7 +62,9 @@ GL_DEPS="
 " # graphene for optional gltransformation and glvideoflip elements and more GLSL Uniforms support in glshader; libpng/jpeg for gloverlay element
 # >=media-libs/graphene-1.4.0[${MULTILIB_USEDEP}]
 
+# The >=gstreamer-1.20.4 is a one-time need over eclass due to added API in upstream MR !3090, drop for 1.22
 RDEPEND="
+	>=media-libs/gstreamer-1.20.4[${MULTILIB_USEDEP}]
 	app-text/iso-codes
 	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
 	alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )
