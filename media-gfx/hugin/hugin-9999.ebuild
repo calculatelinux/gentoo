@@ -30,16 +30,16 @@ CDEPEND="
 	media-gfx/exiv2:=
 	media-libs/freeglut
 	media-libs/glew:=
-	>=media-libs/libpano13-2.9.19_beta1:0=
-	media-libs/libpng:0=
+	>=media-libs/libpano13-2.9.19_beta1:=
+	media-libs/libjpeg-turbo:=
+	media-libs/libpng:=
 	media-libs/openexr:=
-	media-libs/tiff:0
+	media-libs/tiff:=
 	>=media-libs/vigra-1.11.1-r5[openexr]
 	sci-libs/fftw:3.0=
 	sci-libs/flann
 	sys-libs/zlib
 	virtual/glu
-	virtual/jpeg:0
 	virtual/opengl
 	x11-libs/wxGTK:${WX_GTK_VER}=[X,opengl]
 	lapack? ( virtual/blas virtual/lapack )

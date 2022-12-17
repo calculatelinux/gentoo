@@ -24,7 +24,7 @@ RDEPEND="gnome-extra/zenity
 	exif? ( >=media-gfx/exiv2-0.17:=[xmp?] )
 	ffmpegthumbnailer? ( media-video/ffmpegthumbnailer )
 	heif? ( >=media-libs/libheif-1.3.2 )
-	jpeg2k? ( >=media-libs/openjpeg-2.3.0:2 )
+	jpeg2k? ( >=media-libs/openjpeg-2.3.0:2= )
 	jpeg? ( media-libs/libjpeg-turbo:= )
 	jpegxl? ( >=media-libs/libjxl-0.3.7 )
 	lcms? ( media-libs/lcms:2 )
@@ -32,10 +32,10 @@ RDEPEND="gnome-extra/zenity
 	map? ( media-libs/clutter-gtk
 		media-libs/libchamplain:0.12[gtk] )
 	pdf? ( >=app-text/poppler-0.62[cairo] )
-	raw? ( >=media-libs/libraw-0.20 )
+	raw? ( >=media-libs/libraw-0.20:= )
 	spell? ( app-text/gspell )
-	tiff? ( media-libs/tiff:0 )
-	webp? ( >=media-libs/libwebp-0.6.1 )
+	tiff? ( media-libs/tiff:= )
+	webp? ( >=media-libs/libwebp-0.6.1:= )
 	zip? ( >=app-arch/libarchive-3.4.0 )"
 DEPEND="${RDEPEND}"
 BDEPEND="

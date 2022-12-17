@@ -99,7 +99,7 @@ RDEPEND="${PYTHON_DEPS}
 	sdl? ( media-libs/libsdl2[sound,joystick] )
 	sndfile? ( media-libs/libsndfile )
 	tbb? ( dev-cpp/tbb:= )
-	tiff? ( media-libs/tiff )
+	tiff? ( media-libs/tiff:= )
 	valgrind? ( dev-util/valgrind )
 	wayland? (
 		>=dev-libs/wayland-1.12

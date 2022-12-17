@@ -1251,6 +1251,7 @@ dev-ada/gnatcoll-db:shared - Build shared library
 dev-ada/gnatcoll-db:sql - Build sql library
 dev-ada/gnatcoll-db:static-pic - Build shared library
 dev-ada/gnatcoll-db:xref - Build xref library
+dev-ada/gpr:shared - Build shared library
 dev-ada/gtkada:shared - Build gtkada as shared library
 dev-ada/gtkada:static-pic - Build static library with pic code
 dev-ada/langkit:shared - Build shared library
@@ -1666,6 +1667,8 @@ dev-lang/gnat-gpl:ada - Build the ADA language (GNAT) frontend
 dev-lang/gnat-gpl:bootstrap - Used to bootstrap gnat-gpl
 dev-lang/gnat-gpl:cet - Enable support for Intel Control Flow Enforcement Technology (CET)
 dev-lang/gnat-gpl:d - Enable support for the D programming language
+dev-lang/gnat-gpl:default-stack-clash-protection - Build packages with stack clash protection on by default
+dev-lang/gnat-gpl:default-znow - Request full relocation on start from ld.so by default
 dev-lang/gnat-gpl:fixed-point - Enable fixed-point arithmetic support for MIPS targets in gcc (Warning: significantly increases compile time!)
 dev-lang/gnat-gpl:go - Build the GCC Go language frontend.
 dev-lang/gnat-gpl:graphite - Add support for the framework for loop optimizations based on a polyhedral intermediate representation
@@ -1676,6 +1679,7 @@ dev-lang/gnat-gpl:objc - Build support for the Objective C code language
 dev-lang/gnat-gpl:objc++ - Build support for the Objective C++ language
 dev-lang/gnat-gpl:objc-gc - Build support for the Objective C code language Garbage Collector
 dev-lang/gnat-gpl:pgo - Build GCC using Profile Guided Optimization (PGO)
+dev-lang/gnat-gpl:rust - Build support for the Rust language, installs gccrs.
 dev-lang/gnat-gpl:sanitize - Build support for various sanitizer functions (ASAN/TSAN/etc...)
 dev-lang/gnat-gpl:ssp - Build packages with stack smashing protector on by default
 dev-lang/gnat-gpl:systemtap - enable systemtap static probe points
@@ -4422,7 +4426,6 @@ media-libs/sdl-mixer:mod - basic support for MOD files
 media-libs/sdl-mixer:playtools - Install playwave and playmus tools (useful for testing)
 media-libs/sdl-mixer:smpeg - Use media-libs/smpeg for MP3 support
 media-libs/sdl-mixer:wav - support WAVE files
-media-libs/sdl-sound:physfs - Enable support for various formats through dev-games/physfs.
 media-libs/sdl2-image:webp - support loading WEBP images
 media-libs/sdl2-mixer:fluidsynth - Use media-sound/fluidsynth for MIDI support
 media-libs/sdl2-mixer:midi - basic support for MIDI files
@@ -6852,8 +6855,6 @@ net-print/kyocera-1x2x-mfp-driver:rastertokpsl-fix - Use custom wrapper script t
 net-proxy/haproxy:51degrees - Device Detection using 51 Degrees
 net-proxy/haproxy:net_ns - Enable network namespace support (CONFIG_NET_NS)
 net-proxy/haproxy:pcre-jit - Use JIT support for PCRE
-net-proxy/haproxy:pcre2 - Enable PCRE2 RegEx support
-net-proxy/haproxy:pcre2-jit - Use JIT support for PCRE2
 net-proxy/haproxy:prometheus-exporter - Also build the prometheus exporter
 net-proxy/haproxy:slz - Use dev-libs/libslz compression library
 net-proxy/haproxy:tools - Install additional tools (halog, iprange)
@@ -8300,6 +8301,7 @@ sys-devel/gcc:objc - Build support for the Objective C code language
 sys-devel/gcc:objc++ - Build support for the Objective C++ language
 sys-devel/gcc:objc-gc - Build support for the Objective C code language Garbage Collector
 sys-devel/gcc:pgo - Build GCC using Profile Guided Optimization (PGO)
+sys-devel/gcc:rust - Build support for the Rust language, installs gccrs.
 sys-devel/gcc:sanitize - Build support for various sanitizer functions (ASAN/TSAN/etc...)
 sys-devel/gcc:ssp - Build packages with stack smashing protector on by default
 sys-devel/gcc:systemtap - enable systemtap static probe points

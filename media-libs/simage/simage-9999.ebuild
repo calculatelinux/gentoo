@@ -35,7 +35,7 @@ RDEPEND="
 		media-libs/flac:=
 	)
 	tiff? (
-		media-libs/tiff[lzma,zstd]
+		media-libs/tiff:=[lzma,zstd]
 		app-arch/xz-utils
 		app-arch/zstd:=
 	)

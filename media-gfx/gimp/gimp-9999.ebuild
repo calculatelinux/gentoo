@@ -45,10 +45,10 @@ COMMON_DEPEND="
 	>=media-libs/gexiv2-0.14.0
 	>=media-libs/harfbuzz-2.6.5:=
 	>=media-libs/lcms-2.13.1:2
-	media-libs/libjpeg-turbo
+	media-libs/libjpeg-turbo:=
 	>=media-libs/libmypaint-1.6.1:=
-	>=media-libs/libpng-1.6.37:0=
-	>=media-libs/tiff-4.1.0:0
+	>=media-libs/libpng-1.6.37:=
+	>=media-libs/tiff-4.1.0:=
 	net-libs/glib-networking[ssl]
 	sys-libs/zlib
 	>=x11-libs/cairo-1.16.0

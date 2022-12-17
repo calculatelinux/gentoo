@@ -47,7 +47,7 @@ RDEPEND="
 	postscript? ( app-text/ghostscript-gpl )
 	svg? ( dev-libs/libxml2 )
 	tcmalloc? ( dev-util/google-perftools:= )
-	tiff? ( media-libs/tiff )
+	tiff? ( media-libs/tiff:= )
 	truetype? (
 		media-fonts/urw-fonts
 		>=media-libs/freetype-2

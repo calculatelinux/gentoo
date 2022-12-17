@@ -42,7 +42,7 @@ RDEPEND="
 	jpeg? ( media-libs/libjpeg-turbo:= )
 	png? ( media-libs/libpng:= )
 	svg? ( >=gnome-base/librsvg-2.44:2 )
-	tiff? ( media-libs/tiff )
+	tiff? ( media-libs/tiff:= )
 	wayland? ( dev-libs/wayland )
 	!sys-apps/renameutils"
 DEPEND="

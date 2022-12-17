@@ -26,17 +26,10 @@ LICENSE="MIT"
 SLOT="0"
 
 RDEPEND="
-	>=dev-python/pycodestyle-2.9.1[${PYTHON_USEDEP}]
-	dev-python/tomli[${PYTHON_USEDEP}]
+	>=dev-python/pycodestyle-2.10[${PYTHON_USEDEP}]
+	$(python_gen_cond_dep '
+		dev-python/tomli[${PYTHON_USEDEP}]
+	' 3.{8..10})
 "
 
 distutils_enable_tests pytest
-
-EPYTEST_DESELECT=(
-	# test require in source build
-	test/test_autopep8.py::SystemTests::test_e101_skip_innocuous
-)
-
-PATCHES=(
-	"${FILESDIR}"/autopep8-1.6.0-lib2to3-deprecation-pytest.patch
-)
