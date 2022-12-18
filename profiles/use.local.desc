@@ -373,7 +373,7 @@ app-crypt/mit-krb5:keyutils - Enable for the keyring ccache using keyutils
 app-crypt/mit-krb5:lmdb - Add support for using dev-db/lmdb for lookup tables
 app-crypt/mit-krb5:openldap - Enable support for ldap as a database backend
 app-crypt/mit-krb5:pkinit - Enable pkinit support for the initial ticket
-app-crypt/mkp224o:pcre2 - Search with a regex instead of prefix/suffix matching
+app-crypt/mkp224o:pcre - Search with a regex instead of prefix/suffix matching
 app-crypt/ophcrack:tables - Require the additional tables used to carry out cracking (app-crypt/ophcrack-tables)
 app-crypt/ophcrack-tables:vistafree - Installs the free Vista ophcrack tables
 app-crypt/ophcrack-tables:xpfast - Installs the fast XP ophcrack tables
@@ -1252,6 +1252,7 @@ dev-ada/gnatcoll-db:sql - Build sql library
 dev-ada/gnatcoll-db:static-pic - Build shared library
 dev-ada/gnatcoll-db:xref - Build xref library
 dev-ada/gpr:shared - Build shared library
+dev-ada/gpr-unit-provider:shared - Build shared library
 dev-ada/gtkada:shared - Build gtkada as shared library
 dev-ada/gtkada:static-pic - Build static library with pic code
 dev-ada/langkit:shared - Build shared library
@@ -5440,7 +5441,6 @@ net-analyzer/scanlogd:nids - Use net-libs/libnids for packet capturing
 net-analyzer/scanlogd:pcap - Use net-libs/libpcap for packet capturing
 net-analyzer/sngrep:eep - Enable EEP packet send/receive support
 net-analyzer/sngrep:gnutls - Use net-libs/gnutls to parse captured TLS packets
-net-analyzer/sngrep:openssl - Use dev-libs/openssl to parse captured TLS packets
 net-analyzer/snort:active-response - Enables support for automatically sending TCP resets and ICMP unreachable messages to terminate connections. Used with inline deployments.
 net-analyzer/snort:control-socket - Enables Snort's control socket.
 net-analyzer/snort:file-inspect - Enables extended file inspection capabilities.
