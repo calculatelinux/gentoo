@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_SETUPTOOLS=rdepend
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3_{8..11} )
 PYTHON_REQ_USE="threads(+)"
 
 inherit distutils-r1 multiprocessing
@@ -66,9 +66,16 @@ src_prepare() {
 			test/DVIPDF/DVIPDFFLAGS.py
 			test/Java/swig-dependencies.py
 			test/Java/multi-step.py
+			test/TEX/newglossary.py
+			test/TEX/variant_dir_newglossary.py
 			# broken by commas in date, sic!
 			test/option/option-v.py
 			test/Interactive/version.py
+			# warnings from new binutils?
+			test/AS/as-live.py
+			test/AS/nasm.py
+			# hangs
+			test/KeyboardInterrupt.py
 		)
 
 		if ! use amd64 && ! use x86 ; then

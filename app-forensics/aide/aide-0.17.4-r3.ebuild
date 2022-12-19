@@ -11,7 +11,7 @@ SRC_URI="https://github.com/aide/aide/releases/download/v${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~x86"
+KEYWORDS="amd64 ~arm64 ~x86"
 IUSE="acl audit curl e2fs mhash selinux xattr zlib"
 
 DEPEND="dev-libs/libpcre
@@ -64,6 +64,9 @@ src_prepare() {
 src_configure() {
 	local myeconfargs=(
 		--sysconfdir="${EPREFIX}"/etc/${PN}
+
+		# Needed even in EAPI=8, >=portage-3.0.40 skips it here (bug #887177)
+		--disable-static
 
 		# Disable broken l10n support: https://sourceforge.net/p/aide/bugs/98/
 		# This doesn't affect anything because there are no localizations yet.
