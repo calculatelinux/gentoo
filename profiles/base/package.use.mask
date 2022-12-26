@@ -6,6 +6,10 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Michał Górny <mgorny@gentoo.org> (2022-12-20)
+# sys-cluster/ganglia is masked for removal.
+app-metrics/collectd collectd_plugins_gmond
+
 # Sam James <sam@gentoo.org> (2022-12-17)
 # Broken when trying to use sys-libs/binutils-libs header, bug #879067
 >=x11-libs/cairo-1.17.6 debug
@@ -55,17 +59,6 @@ mail-mta/notqmail authcram
 # Michał Górny <mgorny@gentoo.org> (2022-11-17)
 # Require packages masked for removal.
 net-analyzer/netdata kinesis
-
-# Michał Górny <mgorny@gentoo.org> (2022-11-17)
-# Requires dev-python/gevent that is masked for removal.
-x11-misc/py3status gevent
-dev-python/rpyc gevent
-mail-filter/pyzor gevent
-www-servers/uwsgi python-gevent
-
-# Michał Górny <mgorny@gentoo.org> (2022-11-17)
-# Requires net-misc/pyhoca-cli that is masked for removal.
-net-misc/remmina x2go
 
 # Matt Turner <mattst88@gentoo.org> (2022-11-16)
 # gnome-music and gnome-photos have not been ported to libsoup:3.0, while
@@ -395,7 +388,6 @@ www-servers/apache apache2_modules_lua
 # Old phpunit does not work with new PHP and last is vulnerable
 <dev-php/PEAR-Crypt_GPG-1.6.4 test
 dev-php/PEAR-Text_Wiki_Mediawiki test
-dev-php/PEAR-VersionControl_SVN test
 dev-php/PHP_CodeSniffer test
 dev-php/php-redmine-api test
 dev-php/phptal test

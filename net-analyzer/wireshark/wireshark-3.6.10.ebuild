@@ -18,7 +18,7 @@ else
 	SRC_URI="https://www.wireshark.org/download/src/all-versions/${P/_/}.tar.xz"
 	S="${WORKDIR}/${P/_/}"
 
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc64 ~riscv ~x86"
+	KEYWORDS="~alpha amd64 ~arm arm64 ~hppa ~ia64 ppc64 ~riscv ~x86"
 fi
 
 LICENSE="GPL-2"
@@ -30,7 +30,7 @@ IUSE+=" +randpktdump +reordercap sbc selinux +sharkd smi snappy spandsp sshdump 
 IUSE+=" sdjournal test +text2pcap tfshark +tshark +udpdump zlib +zstd"
 
 REQUIRED_USE="lua? ( ${LUA_REQUIRED_USE} )
-	plugin-ifdemo? ( plugins )"
+	plugin-ifdemo? ( plugins qt5 )"
 
 RESTRICT="!test? ( test )"
 

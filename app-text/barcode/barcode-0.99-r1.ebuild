@@ -9,7 +9,7 @@ DESCRIPTION="barcode generator"
 HOMEPAGE="https://www.gnu.org/software/barcode/"
 SRC_URI="mirror://gnu/barcode/${P}.tar.xz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos"
 
@@ -19,6 +19,7 @@ DEPEND="${RDEPEND}"
 PATCHES=(
 	"${FILESDIR}"/${P}-fno-common.patch
 	"${FILESDIR}"/${P}-install-static-lib.patch
+	"${FILESDIR}"/${P}-not-a-literal-string.patch
 )
 
 src_prepare() {

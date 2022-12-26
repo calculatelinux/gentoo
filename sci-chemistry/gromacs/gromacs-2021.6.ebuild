@@ -7,7 +7,8 @@ CMAKE_MAKEFILE_GENERATOR="ninja"
 
 PYTHON_COMPAT=( python3_{8..11} )
 
-DISTUTILS_USE_SETUPTOOLS=no
+DISTUTILS_OPTIONAL=1
+DISTUTILS_USE_PEP517=no
 DISTUTILS_SINGLE_IMPL=1
 
 inherit bash-completion-r1 cmake cuda distutils-r1 flag-o-matic readme.gentoo-r1 toolchain-funcs xdg-utils
@@ -21,16 +22,16 @@ if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
 else
 	SRC_URI="
-		http://ftp.gromacs.org/gromacs/${PN}-${PV/_/-}.tar.gz
+		https://ftp.gromacs.org/gromacs/${PN}-${PV/_/-}.tar.gz
 		doc? ( https://ftp.gromacs.org/manual/manual-${PV/_/-}.pdf )
-		test? ( http://ftp.gromacs.org/regressiontests/regressiontests-${PV/_/-}.tar.gz )"
-	KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux ~x64-macos"
+		test? ( https://ftp.gromacs.org/regressiontests/regressiontests-${PV/_/-}.tar.gz )"
+	KEYWORDS="amd64 ~arm ~x86 ~amd64-linux ~x86-linux ~x64-macos"
 fi
 
 ACCE_IUSE="cpu_flags_x86_sse2 cpu_flags_x86_sse4_1 cpu_flags_x86_fma4 cpu_flags_x86_avx cpu_flags_x86_avx2 cpu_flags_x86_avx512f cpu_flags_arm_neon"
 
 DESCRIPTION="The ultimate molecular dynamics simulation package"
-HOMEPAGE="http://www.gromacs.org/"
+HOMEPAGE="https://www.gromacs.org/"
 
 # see COPYING for details
 # https://repo.or.cz/w/gromacs.git/blob/HEAD:/COPYING
@@ -75,6 +76,7 @@ REQUIRED_USE="
 	|| ( single-precision double-precision )
 	doc? ( !build-manual )
 	cuda? ( single-precision )
+	opencl? ( single-precision )
 	cuda? ( !opencl )
 	mkl? ( !blas !fftw !lapack )
 	${PYTHON_REQUIRED_USE}"
@@ -188,11 +190,6 @@ src_configure() {
 
 	if use fftw; then
 		fft_opts=( -DGMX_FFT_LIBRARY=fftw3 )
-	elif use mkl && has_version "=sci-libs/mkl-10*"; then
-		fft_opts=( -DGMX_FFT_LIBRARY=mkl
-			-DMKL_INCLUDE_DIR="${MKLROOT}/include"
-			-DMKL_LIBRARIES="$(echo /opt/intel/mkl/10.0.5.025/lib/*/libmkl.so);$(echo /opt/intel/mkl/10.0.5.025/lib/*/libiomp*.so)"
-		)
 	elif use mkl; then
 		local bits=$(get_libdir)
 		fft_opts=( -DGMX_FFT_LIBRARY=mkl
