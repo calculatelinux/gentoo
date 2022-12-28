@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3_{8..11} )
 inherit distutils-r1
 
 DESCRIPTION="Module to read and work with Portable Executable (PE) files"
@@ -20,9 +20,6 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-
-RDEPEND="${PYTHON_DEPS}
-	dev-python/future[${PYTHON_USEDEP}]"
 
 # Unfortunately there is nothing we can test here. Upstream doesn't ship a test
 # suite inside the release files. The test fixtures in the source repo is

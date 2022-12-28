@@ -1,6 +1,10 @@
 # Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Sam James <sam@gentoo.org> (2022-12-26)
+# Needs dev-python/mkdocs-redirects->dev-python/twine which is masked on wd40
+dev-util/gef doc
+
 # Sam James <sam@gentoo.org> (2022-12-11)
 # net-libs/rustls-ffi needs Rust.
 net-misc/curl rustls curl_ssl_rustls
@@ -97,7 +101,7 @@ media-libs/imlib2 svg
 dev-python/dnspython dnssec
 dev-python/twisted conch ssl
 dev-python/urllib3 test
-net-fs/samba addc addns ads
+net-fs/samba addc ads
 
 # Matt Turner <mattst88@gentoo.org> (2021-07-25)
 # gdm requires gnome-shell requires rustified librsvg.

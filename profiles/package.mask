@@ -33,6 +33,42 @@
 
 #--- END OF EXAMPLES ---
 
+# Marco Scardovi <mscardovi@icloud.com> (2022-12-27)
+# It builds only with a really old version of libfprint
+# and has never been updated to new one. No revdeps, no real usage
+# Removal on 2023-01-26. Bug #888665
+sys-auth/pam_fprint
+
+# Sam James <sam@gentoo.org> (2022-12-27)
+# Obsolete and incompatible with app-alternatives/* (see news item).
+# Removal on 2023-01-27. bug #886019 and bug #886021 respectivly.
+app-eselect/eselect-awk
+app-eselect/eselect-sh
+
+# Sam James <sam@gentoo.org> (2022-12-27)
+# Regression in listing subvolumes (no UUIDs), bug #888549
+# https://github.com/kdave/btrfs-progs/issues/562
+=sys-fs/btrfs-progs-6.1
+
+# Fabian Groffen <grobian@gentoo.org> (2022-12-27)
+# Old SVN version, with open bugs #830031, #770946, #712534, all fixed
+# in app-admin/coreboot-utils package.  (Conflict in #888581)  Removal
+# on 2023-01-26.
+sys-apps/superiotool
+
+# David Seifert <soap@gentoo.org> (2022-12-26)
+# Lots of K&R C, hidden behind an annoying authwall, fails with modern
+# GCC and Clang (-fcommon), license prohibits distributing, EAPI 6,
+# last release 8 years ago. Removal on 2023-01-25.
+sci-biology/consed
+sci-biology/phrap
+sci-biology/phred
+
+# David Seifert <soap@gentoo.org> (2022-12-26)
+# EAPI 6, cheesy build system, last release over 13 years ago, no other
+# distro packages this. Removal on 2023-01-25.
+sci-misc/flashdot
+
 # Michał Górny <mgorny@gentoo.org> (2022-12-25)
 # Broken with pytest-7.2.  Repository archived upstream.  No reverse
 # dependencies.
@@ -1138,38 +1174,6 @@ net-mail/vchkuser
 # <OpenSSL-1.1.1 are EOL and contain known vulnerabilities. Users should
 # migrate to a newer branch.
 <dev-libs/openssl-1.1.1
-
-# Sam James <sam@gentoo.org> (2022-10-12)
-# Upstream has withdrawn these releases because of a (yet unexplained)
-# "significant regression".
-# See https://mta.openssl.org/pipermail/openssl-announce/2022-October/000237.html.
-# and https://github.com/openssl/openssl/issues/19389.
-=dev-libs/openssl-1.1.1r
-=dev-libs/openssl-3.0.6
-
-# Sam James <sam@gentoo.org> (2022-10-04)
-# Regression for some Intel LCDs which may cause physical damage
-# Please upgrade to 5.19.13 if affected!
-# https://lore.kernel.org/all/YzwooNdMECzuI5+h@intel.com/
-# https://lore.kernel.org/lkml/1664893073238194@kroah.com/T/
-=sys-kernel/gentoo-sources-5.19.12
-=sys-kernel/vanilla-sources-5.19.12
-=sys-kernel/gentoo-kernel-5.19.12
-=sys-kernel/gentoo-kernel-bin-5.19.12
-=sys-kernel/vanilla-kernel-5.19.12
-=virtual/dist-kernel-5.19.12
-
-# Sam James <sam@gentoo.org> (2022-10-04)
-# Please upgrade to >= portage-3.0.38.1 for binpkg fixes.
-# bug #870283, bug #874771.
-=sys-apps/portage-3.0.31
-=sys-apps/portage-3.0.32
-=sys-apps/portage-3.0.33
-=sys-apps/portage-3.0.34
-=sys-apps/portage-3.0.35
-=sys-apps/portage-3.0.36
-=sys-apps/portage-3.0.37
-=sys-apps/portage-3.0.38
 
 # John Helmert III <ajak@gentoo.org> (2022-09-18)
 # Unfixed root privilege escalation, bug #631552

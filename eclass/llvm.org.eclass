@@ -84,6 +84,9 @@ if [[ -z ${_LLVM_SOURCE_TYPE+1} ]]; then
 				16.0.0_pre20221217)
 					EGIT_COMMIT=fb792ebaf2114ad11d673cf891ae560e2e604711
 					;;
+				16.0.0_pre20221226)
+					EGIT_COMMIT=dfc20708bcdf7b4c4bea8595fc4ac8674634d5e6
+					;;
 				*)
 					die "Unknown snapshot: ${PV}"
 					;;
@@ -191,9 +194,18 @@ case ${LLVM_MAJOR} in
 			PowerPC RISCV Sparc SystemZ VE WebAssembly X86 XCore
 		)
 		;;
-	*)
+	15)
 		ALL_LLVM_EXPERIMENTAL_TARGETS=(
 			ARC CSKY DirectX LoongArch M68k SPIRV
+		)
+		ALL_LLVM_PRODUCTION_TARGETS=(
+			AArch64 AMDGPU ARM AVR BPF Hexagon Lanai Mips MSP430 NVPTX
+			PowerPC RISCV Sparc SystemZ VE WebAssembly X86 XCore
+		)
+		;;
+	*)
+		ALL_LLVM_EXPERIMENTAL_TARGETS=(
+			ARC CSKY DirectX LoongArch M68k SPIRV Xtensa
 		)
 		ALL_LLVM_PRODUCTION_TARGETS=(
 			AArch64 AMDGPU ARM AVR BPF Hexagon Lanai Mips MSP430 NVPTX
