@@ -2,7 +2,7 @@ BDEPEND=app-arch/xz-utils >=dev-lang/perl-5 virtual/pkgconfig nls? ( sys-devel/g
 DEFINED_PHASES=compile configure install prepare unpack
 DEPEND=iconv? ( virtual/libiconv ) idn? ( net-dns/libidn2:= ) nls? ( virtual/libintl ) xcrypt? ( >=sys-libs/libxcrypt-4.1:= ) !xcrypt? ( virtual/libcrypt:= )
 DESCRIPTION=Improved Whois Client
-EAPI=7
+EAPI=8
 HOMEPAGE=https://github.com/rfc1036/whois
 INHERIT=toolchain-funcs git-r3
 IUSE=iconv idn nls xcrypt
@@ -11,4 +11,4 @@ PROPERTIES=live
 RDEPEND=iconv? ( virtual/libiconv ) idn? ( net-dns/libidn2:= ) nls? ( virtual/libintl ) xcrypt? ( >=sys-libs/libxcrypt-4.1:= ) !xcrypt? ( virtual/libcrypt:= )
 SLOT=0
 _eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f	multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491
-_md5_=64df7f8e2f90cf876c6727ea22cef865
+_md5_=38d838a34aadfb386735ad553d6d7b73

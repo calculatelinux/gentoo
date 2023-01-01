@@ -1,6 +1,6 @@
 Title: Introduction of app-alternatives ebuilds
 Author: Sam James <sam@gentoo.org>
-Posted: 2022-12-24
+Posted: 2022-12-27
 Revision: 1
 News-Item-Format: 2.0
 
@@ -30,7 +30,7 @@ The initial list of packages which support alternatives is as follows:
 - app-alternatives/yacc
 
 The stabilization of these new ebuilds and packages depending
-on them is ongoing in bug 886017 [1].
+on them occurred on 2022-12-27 in bug 886017 [1].
 
 ## Pre-upgrade requirements
 
@@ -57,12 +57,18 @@ orphaned files where no package owns the file.
 
 ## Migrating
 
+When receiving this news item, please follow the step below as soon
+as possible to ensure a smooth transition.
+
 To migrate your system, a standard world upgrade will suffice after
 deselecting eselect-awk and eselect-sh:
 1. # emerge --deselect app-eselect/eselect-awk app-eselect/eselect-sh
 2. # emerge --depclean app-eselect/eselect-awk app-eselect/eselect-sh
 3. # emerge --sync
 4. # emerge -a -uvDU @world (or other similar standard world upgrade command)
+5. # emerge --ask --depclean
+
+It's okay if nothing happens in Step 1 and Step 2 (no atoms to remove).
 
 ## Configuration
 

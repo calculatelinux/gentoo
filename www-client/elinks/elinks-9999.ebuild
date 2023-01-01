@@ -4,7 +4,7 @@
 EAPI=8
 
 PYTHON_COMPAT=( python3_{8..10} )
-LUA_COMPAT=( lua5-{1,2} )
+LUA_COMPAT=( lua5-{1,2,3,4} luajit )
 
 inherit meson lua-single python-any-r1
 
@@ -22,8 +22,10 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="bittorrent brotli bzip2 debug finger ftp gopher gpm gnutls guile idn
-	lua lzma +mouse nls nntp perl samba ssl tre unicode X xml zlib zstd"
+IUSE="bittorrent brotli bzip2 debug finger ftp gopher gpm gnutls guile idn"
+IUSE+=" javascript lua lzma +mouse nls nntp perl samba ssl test tre unicode X xml zlib zstd"
+# tests restricted for https://github.com/rkd77/elinks/issues/203
+RESTRICT="!test? ( test ) test"
 REQUIRED_USE="lua? ( ${LUA_REQUIRED_USE} )"
 
 RDEPEND="
@@ -35,6 +37,10 @@ RDEPEND="
 	)
 	guile? ( >=dev-scheme/guile-1.6.4-r1[deprecated] )
 	idn? ( net-dns/libidn:= )
+	javascript? (
+		dev-cpp/libxmlpp:5.0
+		dev-lang/mujs:=
+	)
 	lua? ( ${LUA_DEPS} )
 	lzma? ( app-arch/xz-utils )
 	perl? ( dev-lang/perl:= )
@@ -84,6 +90,7 @@ src_configure() {
 		-Dgssapi=false
 		-Dhtml-highlight=true
 		$(meson_use idn)
+		$(meson_use javascript mujs)
 		-Dipv6=true
 		-Dleds=true
 		-Dlibev=false
@@ -102,6 +109,7 @@ src_configure() {
 		-Dsm-scripting=false
 		-Dspidermonkey=false
 		-Dterminfo=true
+		$(meson_use test)
 		$(meson_use tre)
 		-Dtrue-color=true
 		$(meson_use xml xbel)
