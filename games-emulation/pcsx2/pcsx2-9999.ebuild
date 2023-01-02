@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -161,12 +161,16 @@ src_configure() {
 		-DDISABLE_BUILD_DATE=yes
 		-DDISABLE_SETCAP=yes
 		-DENABLE_TESTS=$(usex test)
-		-DUSE_SYSTEM_LIBS=yes
 		-DUSE_VTUNE=no
 		-DUSE_VULKAN=$(usex vulkan)
 		-DWAYLAND_API=$(usex wayland)
 		-DX11_API=yes # fails if X libs are missing even if disabled
 		-DXDG_STD=yes
+
+		# note that the current upstream is somewhat hostile to using system
+		# libs, system installs, or any modifications and may disregard any
+		# bugs that is not reproducible with the appimage using bundled libs
+		-DUSE_SYSTEM_LIBS=yes
 
 		# sse4.1 is the bare minimum required, -m is required at build time
 		# (see PCSX2Base.h) and it dies if no support at runtime (AppInit.cpp)
@@ -189,7 +193,6 @@ src_test() {
 }
 
 src_install() {
-	# package mode was removed turning cmake_src_install into a noop
 	newbin "${BUILD_DIR}"/pcsx2-qt/pcsx2-qt ${PN}
 
 	insinto /usr/share/${PN}
@@ -198,7 +201,7 @@ src_install() {
 	dodoc README.md bin/docs/{Debugger.pdf,GameIndex.pdf,PCSX2_FAQ.pdf,debugger.txt}
 	newman bin/docs/PCSX2.1 ${PN}.1
 
-	newicon linux_various/PCSX2.xpm ${PN}.xpm
+	newicon bin/resources/icons/AppIconLarge.png ${PN}.png
 	make_desktop_entry ${PN} ${PN^^}
 }
 
@@ -226,14 +229,13 @@ pkg_postinst() {
 
 	if [[ ${replacing} == @(|old) && ${PV} != 9999 ]]; then
 		elog
-		elog "${PN}-1.7.x is a development branch using a nightly release model"
-		elog "(new 'release' every 1-2 days). Stable 1.6.0 is getting old and lacks"
-		elog "many notable features (e.g. native 64bit builds). Given it may be a long"
-		elog "time before there is a new stable, Gentoo will carry and update 1.7.x"
-		elog "roughly every months."
+		elog "${PN}-1.7.x is a development branch where .x increments every changes."
+		elog "Stable 1.6.0 is getting old and lacks many notable features (e.g. native"
+		elog "64bit builds). Given it may be a long time before there is a new stable,"
+		elog "Gentoo will carry and update 1.7.x roughly every months."
 		elog
-		elog "Please report an issue if feel a picked nightly release needs to be"
-		elog "updated ahead of time or masked (notably for handling regressions)."
+		elog "Please report an issue if feel a picked version needs to be updated ahead"
+		elog "of time or masked (notably for handling regressions)."
 	fi
 
 	if [[ ${replacing} == wx ]]; then
