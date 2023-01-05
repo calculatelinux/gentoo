@@ -418,7 +418,7 @@ multilib_src_configure() {
 	fi
 
 	if tc-is-cross-compiler; then
-		local tblgen="${EPREFIX}/usr/lib/llvm/${LLVM_MAJOR}/bin/llvm-tblgen"
+		local tblgen="${BROOT}/usr/lib/llvm/${LLVM_MAJOR}/bin/llvm-tblgen"
 		[[ -x "${tblgen}" ]] \
 			|| die "${tblgen} not found or usable"
 		mycmakeargs+=(
@@ -452,7 +452,7 @@ multilib_src_configure() {
 }
 
 multilib_src_compile() {
-	cmake_build distribution
+	tc-env_build cmake_build distribution
 
 	pax-mark m "${BUILD_DIR}"/bin/llvm-rtdyld
 	pax-mark m "${BUILD_DIR}"/bin/lli

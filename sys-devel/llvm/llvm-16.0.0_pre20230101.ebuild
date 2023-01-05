@@ -18,7 +18,7 @@ HOMEPAGE="https://llvm.org/"
 
 LICENSE="Apache-2.0-with-LLVM-exceptions UoI-NCSA BSD public-domain rc"
 SLOT="${LLVM_MAJOR}/${LLVM_SOABI}"
-KEYWORDS=""
+KEYWORDS="~loong"
 IUSE="
 	+binutils-plugin debug doc exegesis libedit +libffi ncurses test xar
 	xml z3 zstd
@@ -421,7 +421,7 @@ multilib_src_configure() {
 	fi
 
 	if tc-is-cross-compiler; then
-		local tblgen="${EPREFIX}/usr/lib/llvm/${LLVM_MAJOR}/bin/llvm-tblgen"
+		local tblgen="${BROOT}/usr/lib/llvm/${LLVM_MAJOR}/bin/llvm-tblgen"
 		[[ -x "${tblgen}" ]] \
 			|| die "${tblgen} not found or usable"
 		mycmakeargs+=(
@@ -455,7 +455,7 @@ multilib_src_configure() {
 }
 
 multilib_src_compile() {
-	cmake_build distribution
+	tc-env_build cmake_build distribution
 
 	pax-mark m "${BUILD_DIR}"/bin/llvm-rtdyld
 	pax-mark m "${BUILD_DIR}"/bin/lli

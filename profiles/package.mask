@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 ####################################################################
@@ -33,6 +33,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2023-01-05)
+# Breaks reverse dependencies: bug #889694, bug #888579.
+=sys-fs/btrfs-progs-6.1.1
+
+# David Seifert <soap@gentoo.org> (2023-01-02)
+# EAPI 6, pretty much no upstream activity, outdated, last upstream
+# release over 3 years ago, no revdeps. Removal on 2023-02-01.
+dev-cpp/pngpp
+
 # Jonas Stein <jstein@gentoo.org> (2023-01-01)
 # Package is broken and unusable, no activity upstream.
 # Removal after 2023-02-01.  Bug #722568.
@@ -42,11 +51,6 @@ net-analyzer/chaosreader
 # EAPI=6 ebuild, live only packages for 1 year! maintainer-needed package.
 # Removal: 2023-01-30.  Bug #889200.
 app-containers/docker-gc
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2022-12-31)
-# EAPI=6 ebuild, live only packages for 6 years!
-# Removal: 2023-01-30.  Bug #889198.
-app-vim/lightline
 
 # Arthur Zamarin <arthurzam@gentoo.org> (2022-12-31)
 # Live only packages for 4 years!
@@ -79,7 +83,7 @@ sys-auth/pam_fprint
 
 # Sam James <sam@gentoo.org> (2022-12-27)
 # Obsolete and incompatible with app-alternatives/* (see news item).
-# Removal on 2023-01-27. bug #886019 and bug #886021 respectivly.
+# Removal on 2023-01-27. bug #886019 and bug #886021 respectively.
 app-eselect/eselect-awk
 app-eselect/eselect-sh
 
@@ -1061,11 +1065,6 @@ net-misc/gnome-online-miners
 =net-misc/asterisk-20*
 =net-misc/asterisk-opus-20*
 =net-misc/asterisk-g729-20*
-
-# Sam James <sam@gentoo.org> (2022-10-28)
-# Please upgrade to >=media-libs/fontconfig-2.14.1-r1 for fixed
-# cache dir to avoid sandbox violation errors, bug #878471.
-=media-libs/fontconfig-2.14.1
 
 # John Helmert III <ajak@gentoo.org> (2022-10-16)
 # <OpenSSL-1.1.1 are EOL and contain known vulnerabilities. Users should

@@ -11,5 +11,5 @@ LICENSE=LGPL-2.1
 RDEPEND=virtual/libudev:=
 SLOT=0/4
 SRC_URI=mirror://debian/pool/main/liba/libatasmart/libatasmart_0.19.orig.tar.xz mirror://debian/pool/main/liba/libatasmart/libatasmart_0.19-5.debian.tar.xz
-_eclasses_=multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491
+_eclasses_=multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f
 _md5_=bc05bf600507724682092e53123918f2

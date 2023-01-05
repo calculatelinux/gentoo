@@ -10,5 +10,5 @@ LICENSE=mmix
 RDEPEND=!!media-sound/mmix
 SLOT=0
 SRC_URI=http://mmix.cs.hm.edu/src/mmix-20160804.tgz
-_eclasses_=multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	37a4612ce5522df5a100359a8dbc8491
+_eclasses_=multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f
 _md5_=c9a9ce221b4b455daa5419c0d36b8d82
