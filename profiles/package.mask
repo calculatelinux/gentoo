@@ -33,6 +33,23 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Mair-Keimberger <mmk@levelnine.at> (2023-01-08)
+# Broken since many years, no reverse dependencies, last release from 2000
+# Bug #678518. Removal on 2023-02-08.
+net-dns/dnswalk
+
+# Michael Mair-Keimberger <mmk@levelnine.at> (2023-01-08)
+# EAPI=6, Installs only card pictures and has no reverse dependencies.
+# Bug #805278. Removal on 2023-02-08.
+dev-games/cardpics
+
+# Michael Mair-Keimberger <mmk@levelnine.at> (2023-01-08)
+# Dependencies of games-server/cyphesis, which got removed ~4 years ago, no
+# other reverse dependencies. Bug #728230
+# Removal on 2023-02-08.
+dev-games/mercator
+dev-games/wfmath
+
 # Sam James <sam@gentoo.org> (2023-01-05)
 # Breaks reverse dependencies: bug #889694, bug #888579.
 =sys-fs/btrfs-progs-6.1.1
@@ -121,13 +138,6 @@ dev-python/pytest-toolbox
 # The project did not catch, with hardly any data submissions.
 # Removal on 2023-01-24.  Bug #843344.
 app-portage/gander
-
-# Michał Górny <mgorny@gentoo.org> (2022-12-25)
-# make.conf writing is broken and package.use support incomplete.
-# Last release in 2013.  Attempted unsuccessfully fixing it in 2017.
-# Use an editor instead.
-# Removal on 2023-01-24.  Bug #888423.
-app-portage/flaggie
 
 # Hans de Graaff <graaff@gentoo.org> (2022-12-25)
 # Last release in 2018. Poor quality C extension code. Package
