@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -12,8 +12,8 @@ inherit cmake lua-single optfeature python-single-r1 xdg
 CEF_DIR="cef_binary_5060_linux64"
 ASIO_COMMIT="b73dc1d2c0ecb9452a87c26544d7f71e24342df6"
 JSON_COMMIT="a34e011e24beece3b69397a03fdc650546f052c3"
-OBS_BROWSER_COMMIT="e2310b02df3e6c184fe6eb6608244a82e37f582e"
-OBS_WEBSOCKET_COMMIT="5716577019b1ccda01a12db2cba35a023082b7ad"
+OBS_BROWSER_COMMIT="1c2264d722f065646b72ac654f6ddbb6843f9bef"
+OBS_WEBSOCKET_COMMIT="31f9845b6132e6c1529401292bc1125401e2a324"
 QR_COMMIT="8518684c0f33d004fa93971be2c6a8eca3167d1e"
 WEBSOCKETPP_COMMIT="56123c87598f8b1dd471be83ca841ceae07f95ba"
 
@@ -65,6 +65,7 @@ DEPEND="
 	dev-libs/glib:2
 	dev-libs/jansson:=
 	media-libs/libglvnd
+	media-libs/libva
 	media-libs/x264:=
 	media-video/ffmpeg:=[nvenc?,x264]
 	net-misc/curl
@@ -198,7 +199,7 @@ src_configure() {
 		-DENABLE_NEW_MPEGTS_OUTPUT=OFF # Requires librist and libsrt.
 		-DENABLE_PIPEWIRE=$(usex pipewire)
 		-DENABLE_PULSEAUDIO=$(usex pulseaudio)
-		-DENABLE_RTMPS=$(usex ssl)
+		-DENABLE_RTMPS=$(usex ssl ON OFF) # Needed for bug 880861
 		-DENABLE_SPEEXDSP=$(usex speex)
 		-DENABLE_V4L2=$(usex v4l)
 		-DENABLE_VLC=$(usex vlc)

@@ -1435,6 +1435,7 @@ dev-games/godot:raycast - Enable the raycast Editor module using media-libs/embr
 dev-games/godot:runner - Build an additional binary optimized for running games (only relevant with USE=tools)
 dev-games/godot:speech - Enable text-to-speech support
 dev-games/godot:tools - Enable the Godot Editor for game development
+dev-games/godot:vulkan - Enable support for Vulkan
 dev-games/godot:webm - Enable the WebM module
 dev-games/guichan:allegro - Build the Allegro frontend
 dev-games/mygui:l10n_ru - Install some additional russian docs if 'doc' useflag enabled
@@ -1728,6 +1729,7 @@ dev-lang/mono:pax-kernel - Enable if the user plans to run the package under a p
 dev-lang/mono:xen - Make mono generate code that is considerably faster on xen VMs but slightly slower on for normal systems.
 dev-lang/neko:apache - Build Apache modules
 dev-lang/nim:experimental - Apply experimental patches
+dev-lang/nim:test-js - Enable tests that require Node.js
 dev-lang/nqp:clang - Toggle usage of the clang compiler in conjunction with MoarVM
 dev-lang/nqp:moar - Build the MoarVM backend (experimental/broken)
 dev-lang/ocaml:flambda - Enables the Flambda optimizer: A new intermediate representation (introduced in ocaml 4.03) in the depths of the compiler designed to allow for better inlining.
@@ -7445,6 +7447,9 @@ sci-libs/vtk:views - Building Views modules
 sci-libs/vtk:vtkm - Build the vtkm accelerations modules
 sci-libs/vtk:web - Install web component
 sci-mathematics/bertini:optimization - Accept upstream's choices for -O option.
+sci-mathematics/boolector:cryptominisat - Enable support for sci-mathematics/cryptominisat
+sci-mathematics/boolector:minisat - Enable support for sci-mathematics/minisat
+sci-mathematics/boolector:picosat - Enable support for sci-mathematics/picosat
 sci-mathematics/cadabra:jupyter - Build the Cadabra Jupyter kernel
 sci-mathematics/cvc4:cln - Use sci-libs/cln
 sci-mathematics/cvc4:proofs - Support for proof generation
@@ -7843,6 +7848,7 @@ sys-apps/razercfg:gui - Installs GUI configuration utility and status bar applet
 sys-apps/rng-tools:jitterentropy - Enable Jitter RNG entropy support
 sys-apps/rng-tools:nistbeacon - Enable NIST beacon entropy support
 sys-apps/rng-tools:pkcs11 - Enable PKCS11 entropy support
+sys-apps/rng-tools:qrypt - Enable qrypt beacon entropy support
 sys-apps/rng-tools:rtlsdr - Enable atmospheric-static entropy support with net-wireless/rtl-sdr
 sys-apps/s390-tools:cryptsetup - build the zkey-cryptsetup utility (requires USE=openssl)
 sys-apps/s390-tools:fuse - build cmsfs-fuse to read files stored on a z/VM CMS disk
@@ -8373,6 +8379,7 @@ sys-libs/glibc:hash-sysv-compat - enable sysv linker hashes in glibc for compati
 sys-libs/glibc:multiarch - enable optimizations for multiple CPU architectures (detected at runtime)
 sys-libs/glibc:multilib-bootstrap - Provide prebuilt libgcc.a and crt files if missing. Only needed for ABI switch.
 sys-libs/glibc:nscd - Build, and enable support for, the Name Service Cache Daemon
+sys-libs/glibc:perl - Install additional scripts written in Perl
 sys-libs/glibc:ssp - protect stack of glibc internals
 sys-libs/glibc:stack-realign - Realign the stack in the 32-bit build for compatibility with older binaries at some performance cost
 sys-libs/glibc:static-pie - Enable static PIE support (runtime files for -static-pie gcc option).
