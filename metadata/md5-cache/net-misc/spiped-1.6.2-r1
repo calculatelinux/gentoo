@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst
+DEPEND=dev-libs/openssl:0=
+DESCRIPTION=secure pipe daemon
+EAPI=8
+HOMEPAGE=https://www.tarsnap.com/spiped.html
+INHERIT=toolchain-funcs
+KEYWORDS=amd64 x86
+LICENSE=BSD
+RDEPEND=dev-libs/openssl:0= !net-mail/qlogtools
+RESTRICT=test
+SLOT=0
+SRC_URI=https://www.tarsnap.com/spiped/spiped-1.6.2.tgz
+_eclasses_=multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f
+_md5_=0e6a966b5cccb2c5160019927b4d3446

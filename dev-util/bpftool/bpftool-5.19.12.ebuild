@@ -43,6 +43,7 @@ DEPEND="
 BDEPEND="
 	${LINUX_PATCH+dev-util/patchutils}
 	${PYTHON_DEPS}
+	app-arch/tar
 	dev-python/docutils
 "
 
@@ -56,10 +57,9 @@ src_unpack() {
 		tools/{arch,build,include,lib,perf,scripts} {scripts,include,lib} "arch/*/lib"
 	)
 
-	# We expect the tar implementation to support the -j option (both
-	# GNU tar and libarchive's tar support that).
+	# We expect the tar implementation to support the -j and --wildcards option
 	echo ">>> Unpacking ${LINUX_SOURCES} (${paths[*]}) to ${PWD}"
-	tar --wildcards -xpf "${DISTDIR}"/${LINUX_SOURCES} \
+	gtar --wildcards -xpf "${DISTDIR}"/${LINUX_SOURCES} \
 		"${paths[@]/#/linux-${LINUX_VER}/}" || die
 
 	if [[ -n ${LINUX_PATCH} ]] ; then
@@ -92,6 +92,7 @@ src_prepare() {
 	# Used `git format-patch 00b32625982e0c796f0abb8effcac9c05ef55bd3...600b7b26c07a070d0153daa76b3806c1e52c9e00`
 	# bug #868123
 	eapply "${WORKDIR}"/perf-5.19-binutils-2.39-patches
+	eapply "${FILESDIR}"/${PV}-no-stack-protector.patch
 	popd || die
 
 	# dev-python/docutils installs rst2man.py, not rst2man
