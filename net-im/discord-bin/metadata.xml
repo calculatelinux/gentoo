@@ -9,7 +9,8 @@
 		<email>proxy-maint@gentoo.org</email>
 		<name>Proxy Maintainers</name>
 	</maintainer>
-	<use>
-		<flag name="system-ffmpeg">Use the system-wide <pkg>media-video/ffmpeg</pkg> instead of bundled</flag>
-	</use>
+	<maintainer type="person">
+		<email>sarnex@gentoo.org</email>
+		<name>Nick Sarnie</name>
+	</maintainer>
 </pkgmetadata>

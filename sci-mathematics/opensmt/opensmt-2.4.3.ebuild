@@ -36,6 +36,13 @@ BDEPEND="
 	test? ( dev-cpp/gtest )
 "
 
+src_prepare() {
+	cmake_src_prepare
+
+	echo "add_subdirectory(unit)" > "${S}"/test/CMakeLists.txt || die
+	echo "add_subdirectory(unit)" > "${S}"/parallel-test/CMakeLists.txt || die
+}
+
 src_configure() {
 	local CMAKE_BUILD_TYPE
 	if use debug ; then
@@ -57,6 +64,7 @@ src_configure() {
 src_install() {
 	cmake_src_install
 
-	mkdir -p "${ED}"/usr/$(get_libdir) || die
+	rm "${ED}"/usr/lib/libopensmt.a || die
+	dodir /usr/$(get_libdir)
 	mv "${ED}"/usr/lib/libopensmt.* "${ED}"/usr/$(get_libdir)/ || die
 }
