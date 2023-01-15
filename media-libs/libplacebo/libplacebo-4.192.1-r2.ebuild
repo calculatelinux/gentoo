@@ -1,10 +1,10 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
 PYTHON_REQ_USE="xml(+)"
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3_{9..11} )
 
 if [[ "${PV}" == "9999" ]]; then
 	EGIT_REPO_URI="https://code.videolan.org/videolan/libplacebo.git"
@@ -53,7 +53,7 @@ PATCHES=(
 )
 
 python_check_deps() {
-	has_version -b "dev-python/mako[${PYTHON_USEDEP}]"
+	python_has_version "dev-python/mako[${PYTHON_USEDEP}]"
 }
 
 pkg_setup() {

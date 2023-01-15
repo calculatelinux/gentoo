@@ -14,4 +14,4 @@ RESTRICT=!test? ( test )
 SLOT=0/23.0.0
 SRC_URI=https://github.com/AdaCore/VSS/archive/refs/tags/v23.0.0.tar.gz -> VSS-23.0.0.tar.gz
 _eclasses_=ada	492e700cbeece78fe1a7e23be17a4ba8	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730
-_md5_=ff66714f5614256de7d77b215e3d2939
+_md5_=fac3f847aad9147661398f137fee4830

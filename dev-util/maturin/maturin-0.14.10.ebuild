@@ -402,7 +402,7 @@ CRATES_TEST="
 	windows_x86_64_msvc-0.36.1
 	windows_x86_64_msvc-0.42.0"
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( pypy3 python3_{8..11} )
+PYTHON_COMPAT=( pypy3 python3_{9..11} )
 inherit cargo distutils-r1 flag-o-matic
 
 DESCRIPTION="Build and publish crates with pyo3, rust-cpython and cffi bindings"
@@ -424,7 +424,7 @@ RESTRICT="!test? ( test )"
 RDEPEND="
 	$(python_gen_cond_dep '
 		dev-python/tomli[${PYTHON_USEDEP}]
-	' 3.{8..10} pypy3)"
+	' 3.{9..10} pypy3)"
 BDEPEND="
 	dev-python/setuptools-rust[${PYTHON_USEDEP}]
 	doc? ( app-text/mdbook )

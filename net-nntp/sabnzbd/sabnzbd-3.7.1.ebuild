@@ -1,9 +1,9 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="8"
 
-PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_COMPAT=( python3_{9..11} )
 PYTHON_REQ_USE="sqlite"
 
 inherit optfeature python-single-r1 systemd
@@ -21,7 +21,7 @@ S="${WORKDIR}/${MY_P}"
 # Sabnzbd is GPL-2 but bundles software with the following licenses.
 LICENSE="GPL-2 BSD LGPL-2 MIT BSD-1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE="test"
 RESTRICT="!test? ( test )"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

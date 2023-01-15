@@ -10,7 +10,6 @@ acct-user/vdr:remote - Prepare group membership for media-plugins/vdr-remote.
 acct-user/vdr:serial - Prepare group membership for media-plugins/vdr-serial.
 app-accessibility/brltty:api - build brltty's application program interface
 app-accessibility/brltty:beeper - support the console tone generator
-app-accessibility/brltty:contracted-braille - support in-line contracted braille
 app-accessibility/brltty:fm - support for the sound card synthesizer
 app-accessibility/brltty:louis - Use braille translator dev-libs/liblouis
 app-accessibility/brltty:midi - support the musical instrument digital interface
@@ -424,7 +423,6 @@ app-editors/bluefish:spell - Enable spell checking capabilities via enchant libr
 app-editors/emacs:athena - Enable the MIT Athena widget set (x11-libs/libXaw)
 app-editors/emacs:dynamic-loading - Enable loading of dynamic libraries (modules) at runtime
 app-editors/emacs:games - Support shared score files for games
-app-editors/emacs:gconf - Use gnome-base/gconf to read the system font name
 app-editors/emacs:gfile - Use gfile (dev-libs/glib) for file notification
 app-editors/emacs:gmp - Use the GNU multiple precision arithmetic library (dev-libs/gmp) instead of the bundled mini-gmp subset
 app-editors/emacs:gsettings - Use gsettings (dev-libs/glib) to read the system font name
@@ -2993,6 +2991,17 @@ games-emulation/generator:sdlaudio - Enable SDL Audio
 games-emulation/hatari:capsimage - Use dev-libs/spsdeclib to read .IPF, .RAW, and .CTR disk images
 games-emulation/hatari:portmidi - Use media-libs/portmidi as an alternative MIDI backend
 games-emulation/higan:gtk - Use GTK3 (Qt5 if disabled) user interface backend
+games-emulation/jgemu:bsnes - Install bsnes for Super Nintendo
+games-emulation/jgemu:cega - Install Cega for SG-1000, Sega Master System and Game Gear
+games-emulation/jgemu:gambatte - Install Gambatte for Game Boy and Game Boy Color
+games-emulation/jgemu:jollycv - Install JollyCV for ColecoVision
+games-emulation/jgemu:mednafen - Install Mednafen for Atari Lynx, Nintendo Virtual Boy, NEC PC Engine, NEC SuperGrafx, Sony PlayStation, Sega Saturn, Super Nintendo, Neo Geo Pocket and WonderSwan
+games-emulation/jgemu:melonds - Install MelonDS for Nintendo DS
+games-emulation/jgemu:mgba - Install mGBA for Game Boy Advance
+games-emulation/jgemu:nestopia - Install Nestopia for Nintendo Entertainment System
+games-emulation/jgemu:prosystem - Install ProSystem for Atari 7800
+games-emulation/jgemu:sameboy - Install SameBoy for Game Boy and Game Boy Color
+games-emulation/jgemu:vecx - Install Vecx for Vectrex
 games-emulation/m64py:7z - Ensure support for .7z archives.
 games-emulation/m64py:rar - Ensure support for .rar archives.
 games-emulation/mgba:discord - Enable Discord RPC support
@@ -4645,6 +4654,10 @@ media-sound/ncmpcpp:clock - Enable clock screen
 media-sound/ncmpcpp:lto - Build with link-time optimisation
 media-sound/ncmpcpp:outputs - Enable outputs screen
 media-sound/ncmpcpp:visualizer - Enable visualizer screen with sound wave/frequency spectrum modes
+media-sound/ncspot:clipboard - Use the system clipboard to e.g. share a link
+media-sound/ncspot:cover - Support displaying the album cover
+media-sound/ncspot:mpris - Allow ncspot to be controlled via MPRIS API
+media-sound/ncspot:notify - Show what's playing via a notification
 media-sound/patchage:jack-dbus - Use Jack via D-Bus instead of libjack
 media-sound/picard:discid - Enable reading the ID of the inserted CD
 media-sound/picard:fingerprints - Enable calculation and lookup of AcoustID fingerprints
@@ -6571,9 +6584,11 @@ net-misc/streamtuner:xiph - Enable xiph.org plug-in.
 net-misc/stunnel:stunnel3 - Install the stunnel3 wrapper.
 net-misc/tigervnc:dri3 - Build with DRI3 support
 net-misc/tigervnc:drm - Build with DRM support
+net-misc/tigervnc:java - Build TigerVNC Java viewer
 net-misc/tigervnc:server - Build TigerVNC server
-net-misc/turbovnc:client - Build the client (vncviewer)
+net-misc/tigervnc:viewer - Build TigerVNC viewer
 net-misc/turbovnc:server - Build the server (vncserver, Xvnc)
+net-misc/turbovnc:viewer - Build the viewer (vncviewer)
 net-misc/uftp:server - Install uftp server daemon
 net-misc/vde:pcap - Enable the pcap-based plugin that allows creating a switch against a real interface.
 net-misc/wget:cookie-check - Enable cookie checks via net-libs/libpsl
@@ -6628,13 +6643,11 @@ net-news/sfeed:theme-mono-highlight - Use mono_highlight theme
 net-news/sfeed:theme-newsboat - Use newsboat theme
 net-news/sfeed:theme-templeos - Use templeos theme
 net-nntp/nzbget:parcheck - Enable support for checking PAR archives
-net-nntp/sabnzbd:7za - Add support for extracting 7za files
-net-nntp/sabnzbd:rar - Add support for extracting rar files
-net-nntp/sabnzbd:unzip - Add support for extracting zip files
 net-nntp/slrn:canlock - Add support for cancel locks via net-libs/canlock
 net-nntp/slrn:uudeview - Add support for yEnc coding and more using dev-libs/uulib
 net-nntp/tin:cancel-locks - Enable Cancel-Lock header functionality
 net-nntp/tin:gpg - Enable app-crypt/gnupg support
+net-nntp/tin:libtls - Prefer dev-libs/libretls as SSL/TLS provider (ineffective with USE=-ssl)
 net-p2p/airdcpp-webclient:nat-pmp - Enable support for the NAT-PMP protocol
 net-p2p/airdcpp-webclient:tbb - Enable support of the TBB library to improve performance
 net-p2p/airdcpp-webclient:webui - Enable the Web UI

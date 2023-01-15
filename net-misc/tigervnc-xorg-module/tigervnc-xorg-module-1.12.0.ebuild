@@ -1,4 +1,4 @@
-# Copyright 2022 Gentoo Authors
+# Copyright 2022-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -6,7 +6,7 @@ EAPI=8
 XSERVER_VERSION="21.1.1"
 
 DESCRIPTION="Metapackage for the xorg module provided by tigervnc"
-HOMEPAGE="https://www.tigervnc.org"
+HOMEPAGE="https://tigervnc.org/"
 
 LICENSE="metapackage"
 SLOT="0"

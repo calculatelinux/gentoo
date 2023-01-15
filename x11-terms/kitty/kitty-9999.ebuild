@@ -1,9 +1,9 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_COMPAT=( python3_{9..11} )
 inherit edo optfeature multiprocessing python-single-r1 toolchain-funcs xdg
 
 if [[ ${PV} == 9999 ]]; then
@@ -68,7 +68,7 @@ BDEPEND="
 	wayland? ( dev-util/wayland-scanner )"
 [[ ${PV} == 9999 ]] || BDEPEND+=" verify-sig? ( sec-keys/openpgp-keys-kovidgoyal )"
 
-QA_FLAGS_IGNORED="usr/bin/kitty-tool" # written in Go
+QA_FLAGS_IGNORED="usr/bin/kitten" # written in Go
 
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then

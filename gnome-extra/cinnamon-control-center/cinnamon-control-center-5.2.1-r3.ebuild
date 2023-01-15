@@ -1,9 +1,9 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-PYTHON_COMPAT=( python3_{8,9,10} )
+PYTHON_COMPAT=( python3_{9,10} )
 
 inherit meson gnome2-utils python-any-r1 xdg virtualx
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2+ LGPL-2+ LGPL-2.1+ MIT"
 SLOT="0"
 IUSE="+colord input_devices_wacom +networkmanager +modemmanager gnome-online-accounts systemd test"
 REQUIRED_USE="modemmanager? ( networkmanager )"
-KEYWORDS="~amd64 ~arm64 ~riscv ~x86"
+KEYWORDS="amd64 ~arm64 ~riscv x86"
 RESTRICT="test"
 
 COMMON_DEPEND="
