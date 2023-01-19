@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -27,7 +27,7 @@ S="${WORKDIR}/${P/_/-}"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+caps +cmdmon debug html ipv6 libtomcrypt +nettle nss +ntp +nts +phc pps +readline +refclock +rtc samba +seccomp +sechash selinux"
+IUSE="+caps +cmdmon debug html libtomcrypt +nettle nss +ntp +nts +phc pps +readline +refclock +rtc samba +seccomp +sechash selinux"
 # nettle > nss > libtomcrypt in configure
 REQUIRED_USE="
 	sechash? ( || ( nettle nss libtomcrypt ) )
@@ -78,6 +78,7 @@ fi
 PATCHES=(
 	"${FILESDIR}"/${PN}-3.5-pool-vendor-gentoo.patch
 	"${FILESDIR}"/${PN}-4.2-systemd-gentoo.patch
+	"${FILESDIR}"/${P}-strict-prototypes-clang16.patch
 )
 
 src_prepare() {
@@ -116,7 +117,6 @@ src_configure() {
 		$(usev !caps '--disable-linuxcaps')
 		$(usev !cmdmon '--disable-cmdmon')
 		$(usev debug '--enable-debug')
-		$(usev !ipv6 '--disable-ipv6')
 
 		# USE=readline here means "readline-like functionality"
 		# chrony only supports libedit in terms of the library providing
@@ -162,6 +162,9 @@ src_compile() {
 
 src_install() {
 	default
+
+	# Compatibility with other distributions who install to /etc/chrony.conf (bug #835461)
+	dosym -r /etc/chrony/chrony.conf /etc/chrony.conf
 
 	newinitd "${FILESDIR}"/chronyd.init-r2 chronyd
 	newconfd "${T}"/chronyd.conf chronyd
