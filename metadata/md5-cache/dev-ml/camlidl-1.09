@@ -10,4 +10,4 @@ RDEPEND=>=dev-lang/ocaml-3.10.2:=[ocamlopt]
 SLOT=0/1.09
 SRC_URI=https://github.com/xavierleroy/camlidl/archive/camlidl109.tar.gz
 _eclasses_=multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	ec8bbc28394c7305b43ea07164bd8f5f
-_md5_=ec8be914b9e4d06b59259c9d54530b8c
+_md5_=d843ad1e180de353e7839dba3336d2f5
