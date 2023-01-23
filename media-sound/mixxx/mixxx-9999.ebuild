@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -75,7 +75,8 @@ RDEPEND="
 	wavpack? ( media-sound/wavpack )
 	"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-cpp/ms-gsl"
 BDEPEND="virtual/pkgconfig
 	dev-qt/qttest:5
 	dev-qt/qtxmlpatterns:5"
@@ -105,6 +106,8 @@ src_configure() {
 		-DWAVPACK="$(usex wavpack on off)"
 		-DQTKEYCHAIN="$(usex qtkeychain on off)"
 		-DKEYFINDER="$(usex keyfinder on off)"
+		-DDOWNLOAD_MANUAL=OFF
+		-DBUILD_SHARED_LIBS=OFF
 	)
 
 	if [[ "${PV}" == 9999 ]] ; then
@@ -125,7 +128,7 @@ src_install() {
 	udev_newrules "${S}"/res/linux/mixxx-usb-uaccess.rules 69-mixxx-usb-uaccess.rules
 
 	if use doc ; then
-		dodoc README Mixxx-Manual.pdf
+		dodoc README res/Mixxx-Keyboard-Shortcuts.pdf
 	fi
 }
 
