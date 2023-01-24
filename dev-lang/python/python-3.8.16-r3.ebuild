@@ -28,7 +28,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="PSF-2"
 SLOT="${PYVER}"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86"
 IUSE="
 	bluetooth build +ensurepip examples gdbm hardened lto +ncurses pgo
 	+readline +sqlite +ssl test tk valgrind wininst +xml
@@ -202,6 +202,9 @@ src_configure() {
 			"${myeconfargs[@]}"
 
 			--libdir="${cbuild_libdir:2}"
+
+			# Avoid needing to load the right libpython.so.
+			--disable-shared
 
 			# As minimal as possible for the mini CBUILD Python
 			# we build just for cross.
