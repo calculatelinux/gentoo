@@ -15,7 +15,7 @@ else
 	inherit verify-sig
 	SRC_URI="https://sourceware.org/pub/valgrind/${P}.tar.bz2"
 	SRC_URI+=" verify-sig? ( https://sourceware.org/pub/valgrind/${P}.tar.bz2.asc )"
-	KEYWORDS="-* ~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x64-solaris"
+	KEYWORDS="-* amd64 arm arm64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~x64-macos ~x64-solaris"
 fi
 
 LICENSE="GPL-2"
@@ -33,6 +33,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-3.7.0-respect-flags.patch
 	"${FILESDIR}"/${PN}-3.15.0-Build-ldst_multiple-test-with-fno-pie.patch
 	"${FILESDIR}"/${P}-tests-clang16.patch
+	"${FILESDIR}"/${P}-gcc-13.patch
 )
 
 src_prepare() {

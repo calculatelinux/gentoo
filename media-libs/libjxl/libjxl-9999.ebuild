@@ -1,4 +1,4 @@
-# Copyright 2021-2022 Gentoo Authors
+# Copyright 2021-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -18,9 +18,8 @@ IUSE="gdk-pixbuf openexr"
 DEPEND="app-arch/brotli:=[${MULTILIB_USEDEP}]
 	>=dev-cpp/highway-1.0.0[${MULTILIB_USEDEP}]
 	media-libs/giflib:=[${MULTILIB_USEDEP}]
-	media-libs/libjpeg-turbo[${MULTILIB_USEDEP}]
+	media-libs/libjpeg-turbo:=[${MULTILIB_USEDEP}]
 	media-libs/libpng:=[${MULTILIB_USEDEP}]
-	sys-libs/zlib[${MULTILIB_USEDEP}]
 	>=x11-misc/shared-mime-info-2.2
 	gdk-pixbuf? (
 		dev-libs/glib:2
@@ -48,6 +47,7 @@ multilib_src_configure() {
 		-DJPEGXL_ENABLE_DOXYGEN=OFF
 		-DJPEGXL_ENABLE_MANPAGES=OFF
 		-DJPEGXL_ENABLE_JNI=OFF
+		-DJPEGXL_ENABLE_JPEGLI_LIBJPEG=OFF
 		-DJPEGXL_ENABLE_TCMALLOC=OFF
 		-DJPEGXL_ENABLE_EXAMPLES=OFF
 	)

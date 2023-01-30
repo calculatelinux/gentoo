@@ -1431,7 +1431,6 @@ dev-games/godot:bullet - Enable the sci-physics/bullet module
 dev-games/godot:deprecated - Enable support for deprecated features
 dev-games/godot:raycast - Enable the raycast Editor module using media-libs/embree
 dev-games/godot:runner - Build an additional binary optimized for running games (only relevant with USE=tools)
-dev-games/godot:speech - Enable text-to-speech support
 dev-games/godot:tools - Enable the Godot Editor for game development
 dev-games/godot:vulkan - Enable support for Vulkan
 dev-games/godot:webm - Enable the WebM module
@@ -1446,14 +1445,15 @@ dev-games/ode:double-precision - more precise calculations at the expense of spe
 dev-games/ode:gyroscopic - enable gyroscopic term (may cause instability)
 dev-games/ogre:assimp - Use media-libs/assimp to import assets from 3D files
 dev-games/ogre:boost - Enable boost support
+dev-games/ogre:bullet - Use sci-physics/bullet for physics plugin
 dev-games/ogre:cache - Enable GL state cache support
 dev-games/ogre:cg - NVIDIA toolkit plugin
-dev-games/ogre:deprecated - Build deprecated component 'HLMS' and nodeless positioning of Lights and Cameras.
+dev-games/ogre:deprecated - Build deprecated nodeless positioning of Lights and Cameras.
 dev-games/ogre:double-precision - More precise calculations at the expense of speed
 dev-games/ogre:egl - Use egl instead of glx
 dev-games/ogre:fine-granularity - Enable fine light mask granularity. This impacts on performance and should not be enabled unless an application really needs it.
 dev-games/ogre:freeimage - Support images via media-libs/freeimage
-dev-games/ogre:gl3plus - Build OpenGL 3+ RenderSystem (EXPERIMENTAL)
+dev-games/ogre:gl3plus - Build OpenGL 3+ RenderSystem
 dev-games/ogre:gles2 - Build OpenGL ES 2.x RenderSystem
 dev-games/ogre:gles3 - Enable OpenGL ES 3.x Features
 dev-games/ogre:json - Use dev-libs/rapidjson (needed by Hlms JSON materials)
@@ -2934,7 +2934,6 @@ games-arcade/moleinvasion:music - Download and install the music files
 games-arcade/oshu:osu-skin - Include more complete osu-skin (other is minimal)
 games-arcade/performous:midi - Enable MIDI I/O support
 games-arcade/performous:songs - Install a few demo songs
-games-arcade/performous:tools - Enable building of song extraction utilities for SingStar and Guitar Hero
 games-arcade/performous:webcam - Enable Webcam support
 games-arcade/tuxanci:physfs - Use dev-games/physfs instead of dev-libs/libzip to load compressed data
 games-board/cockatrice:client - Build with client
@@ -3208,6 +3207,7 @@ games-strategy/wargus:bne - Support extracting data from the Battle.net Edition
 games-strategy/warzone2100:discord - Enable Discord presence/join integration
 games-strategy/warzone2100:vulkan - Enable vulkan backend
 games-strategy/wesnoth:server - Enable compilation of server
+games-util/basis_universal:opencl - Enable OpenCL support
 games-util/gslist:web - Enable the web interface
 games-util/lgogdownloader:gui - Enable GUI login support for passing reCAPTCHA
 games-util/slade:fluidsynth - Enable MIDI software synthesis using media-sound/fluidsynth
@@ -7072,8 +7072,6 @@ sci-chemistry/vmd:msms - Add support for MSMS SES calcualtion tool
 sci-chemistry/vmd:povray - Add support for povray raytracer for HQ images
 sci-chemistry/vmd:tachyon - Add support for tachyon raytracer for HQ images
 sci-chemistry/votca:gromacs - Add support for gromacs file formats through sci-chemistry/gromacs
-sci-chemistry/votca-csg:extras - Pull in extra applications from sci-chemistry/votca-csgapps
-sci-chemistry/votca-csg:gromacs - Add support for gromacs file formats through sci-chemistry/gromacs
 sci-electronics/geda:stroke - enable mouse gesture support
 sci-electronics/gerbv:unit-mm - Set default unit for coordinates in status bar to mm
 sci-electronics/gspiceui:schematics - Use sci-electronics/geda for schematics editing
@@ -7082,11 +7080,9 @@ sci-electronics/gtkwave:fasttree - Enables experimental Fast SST Tree widget cod
 sci-electronics/gtkwave:fatlines - Renders lines as double width in gtkwave.
 sci-electronics/gtkwave:judy - Enables Judy array support.
 sci-electronics/gtkwave:packed - Enables '#pragma pack' for data arrays (saves memory, costs time).
-sci-electronics/kicad:github - Add github support into PCB editor
 sci-electronics/kicad:ngspice - Enable circuit simulation
 sci-electronics/kicad:occ - Enable viewing 3D rendering of designs via sci-libs/opencascade
 sci-electronics/kicad:pcm - Enable plugin content manager
-sci-electronics/kicad:python - Enable python scripting support
 sci-electronics/kicad-meta:minimal - Do not install extra data like 3D packages and templates.
 sci-electronics/kicad-packages3d:occ - Use sci-libs/opencascade for data exchange
 sci-electronics/ktechlab:gpsim - Enable support for Microchip PIC microcontrollers similation using dev-embedded/gpsim
@@ -7107,11 +7103,7 @@ sci-electronics/splat:hires - Builds additional high resolution application 'rfs
 sci-geosciences/gmt:gdal - Enable sci-libs/gdal library support
 sci-geosciences/gmt:geos - Enable sci-libs/geos library support
 sci-geosciences/gmt:gmttria - Non GNU triangulation method, more efficient
-sci-geosciences/gmt:gshhg - Install coastline database
 sci-geosciences/gmt:htmldoc - Install html documentation
-sci-geosciences/gmt:metric - Use SI (cm) units instead of US (inches) ones
-sci-geosciences/gmt:mex - Enable compilation of mex supplement which requires Octave/Matlab
-sci-geosciences/gmt:octave - Enable octave support
 sci-geosciences/gmt:pcre2 - Use dev-libs/libpcre2 for regular expressions
 sci-geosciences/gmt:tutorial - Install data files for tutorial
 sci-geosciences/gpsd:dbus - export gpsd data over dbus connections
@@ -7453,7 +7445,6 @@ sci-mathematics/boolector:picosat - Enable support for sci-mathematics/picosat
 sci-mathematics/cadabra:jupyter - Build the Cadabra Jupyter kernel
 sci-mathematics/cvc4:cln - Use sci-libs/cln
 sci-mathematics/cvc4:proofs - Support for proof generation
-sci-mathematics/cvc4:replay - Turn on the replay feature
 sci-mathematics/cvc4:statistics - Include statistics
 sci-mathematics/eclib:boost - Add parallel capabilities using dev-libs/boost.
 sci-mathematics/eclib:flint - Enable the use of sci-mathematics/flint for certain operations.
@@ -8777,8 +8768,6 @@ x11-libs/cairo:gles2-only - Build the OpenGL ES 2 backend
 x11-libs/cairo:gles3 - Use OpenGL ES 3.0 features (instead of ES 2.0; requires USE=gles2-only)
 x11-libs/cairo:glib - Compile with GLib Object System support
 x11-libs/cairo:opengl - Build the OpenGL backend
-x11-libs/cairo:utils - Build support for Cairo script and trace utilities
-x11-libs/cairo:valgrind - Built-in support to mark memory regions
 x11-libs/fltk:games - Builds and installs some extra games
 x11-libs/fox:tools - Install adie, calculator, shutterbug, and pathfinder apps.
 x11-libs/gtk+:broadway - Enable the GDK Broadway backend

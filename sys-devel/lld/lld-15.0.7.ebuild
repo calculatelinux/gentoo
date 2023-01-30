@@ -4,14 +4,14 @@
 EAPI=8
 
 PYTHON_COMPAT=( python3_{9..11} )
-inherit cmake flag-o-matic llvm llvm.org python-any-r1
+inherit cmake flag-o-matic llvm llvm.org python-any-r1 toolchain-funcs
 
 DESCRIPTION="The LLVM linker (link editor)"
 HOMEPAGE="https://llvm.org/"
 
 LICENSE="Apache-2.0-with-LLVM-exceptions UoI-NCSA"
 SLOT="${LLVM_MAJOR}/${LLVM_SOABI}"
-KEYWORDS="amd64 ~arm arm64 ~ppc ppc64 ~riscv ~x86"
+KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv x86"
 IUSE="debug test"
 RESTRICT="!test? ( test )"
 
@@ -24,6 +24,7 @@ RDEPEND="
 	!sys-devel/lld:0
 "
 BDEPEND="
+	sys-devel/llvm:${LLVM_MAJOR}
 	test? (
 		>=dev-util/cmake-3.16
 		$(python_gen_any_dep ">=dev-python/lit-${PV}[\${PYTHON_USEDEP}]")
@@ -69,12 +70,18 @@ src_configure() {
 		-DLLVM_INCLUDE_TESTS=$(usex test)
 		-DLLVM_MAIN_SRC_DIR="${WORKDIR}/llvm"
 	)
+
 	use test && mycmakeargs+=(
 		-DLLVM_BUILD_TESTS=ON
 		-DLLVM_EXTERNAL_LIT="${EPREFIX}/usr/bin/lit"
 		-DLLVM_LIT_ARGS="$(get_lit_flags)"
 		-DPython3_EXECUTABLE="${PYTHON}"
 	)
+
+	tc-is-cross-compiler &&	mycmakeargs+=(
+		-DLLVM_TABLEGEN_EXE="${BROOT}/usr/lib/llvm/${LLVM_MAJOR}/bin/llvm-tblgen"
+	)
+
 	cmake_src_configure
 }
 

@@ -33,6 +33,84 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2023-01-29)
+# Commands trigger an assertion and crashes, bug #892487
+=sys-fs/lvm2-2.03.18
+
+# Bernd Waibel <waebbl-gentoo@posteo.net> (2023-01-28)
+# Possible security issues, obsolete. Use OpenEXR-3 / Imath instead.
+# No revdeps and consumers left in ::gentoo
+# Removal in 30 days. Bug #892375
+media-libs/ilmbase
+
+# Hans de Graaff <graaff@gentoo.org> (2023-01-28)
+# No upstream releases since 2010. No longer maintained
+# upstream. ruby27-only package. Masked for removal on 2023-02-27.
+dev-ruby/ruby_gntp
+
+# Mike Gilbert <floppym@gentoo.org> (2023-01-28)
+# No upstream releases since 2008.
+# No Gentoo maintainer since 2009.
+# Installs files in the wrong places (bug #455542)
+# and with the wrong mode (bug #892325).
+# Removal on 2023-02-27.
+app-admin/bastille
+
+# Ionen Wolkens <ionen@gentoo.org> (2023-01-28)
+# Recently broke at runtime, and its relationship with evolving
+# swig+python is likely to keep breaking this further without an
+# active upstream (no activty since 2018) to keep up with changes.
+# Removal: 2023-02-27. Bug #892323
+games-rpg/adonthell
+games-rpg/wastesedge
+
+# Michał Górny <mgorny@gentoo.org> (2023-01-27)
+# GKrellM and a variety of plugins.  It's unmaintained for some time.
+# Upstream homepage is gone, and the whole suite is collecting dust
+# and patches.  There is no ongoing effort on porting to GTK+3.
+# Removal on 2023-02-26.  Bug #892251.
+acct-group/gkrellmd
+acct-user/gkrellmd
+app-admin/gkrellm
+app-laptop/ibam
+media-plugins/gkrellmpc
+x11-plugins/bfm
+x11-plugins/gkrellaclock
+x11-plugins/gkrellfire
+x11-plugins/gkrellkam
+x11-plugins/gkrellm-bgchanger
+x11-plugins/gkrellm-bluez
+x11-plugins/gkrellm-countdown
+x11-plugins/gkrellm-cpupower
+x11-plugins/gkrellm-imonc
+x11-plugins/gkrellmlaunch
+x11-plugins/gkrellm-leds
+x11-plugins/gkrellm-mailwatch
+x11-plugins/gkrellmoon
+x11-plugins/gkrellm-plugins
+x11-plugins/gkrellm-radio
+x11-plugins/gkrellmss
+x11-plugins/gkrellm-trayicons
+x11-plugins/gkrellm-vaiobright
+x11-plugins/gkrellm-volume
+x11-plugins/gkrellmwireless
+x11-plugins/gkrellm-xkb
+x11-plugins/gkrellshoot
+x11-plugins/gkrellstock
+x11-plugins/gkrellsun
+x11-plugins/gkrelltop
+x11-plugins/gkrellweather
+x11-plugins/gkwebmon
+x11-plugins/i8krellm
+x11-themes/gkrellm-themes
+
+# Florian Schmaus <flow@gentoo.org> (2023-01-27)
+# Previous dependencies of dev-lang/clojure, now part of the clojure
+# ebuild and no longer needed.
+# Removal on 2023-02-27.
+dev-java/core-specs-alpha
+dev-java/spec-alpha
+
 # Michał Górny <mgorny@gentoo.org> (2023-01-26)
 # Unmaintained.  Last release in 2003.  The package fails to install
 # since Aug 2021 and while a fix would be trivial, there does not seem
@@ -686,61 +764,10 @@ dev-scheme/scsh-lib
 net-p2p/vuze
 net-p2p/vuze-coreplugins
 
-# Marco Scardovi <mscardovi@icloud.com> (2022-12-27)
-# It builds only with a really old version of libfprint
-# and has never been updated to new one. No revdeps, no real usage
-# Removal on 2023-01-26. Bug #888665
-sys-auth/pam_fprint
-
-# Sam James <sam@gentoo.org> (2022-12-27)
-# Obsolete and incompatible with app-alternatives/* (see news item).
-# Removal on 2023-01-27. bug #886019 and bug #886021 respectively.
-app-eselect/eselect-awk
-app-eselect/eselect-sh
-
 # Sam James <sam@gentoo.org> (2022-12-27)
 # Regression in listing subvolumes (no UUIDs), bug #888549
 # https://github.com/kdave/btrfs-progs/issues/562
 =sys-fs/btrfs-progs-6.1
-
-# David Seifert <soap@gentoo.org> (2022-12-26)
-# Lots of K&R C, hidden behind an annoying authwall, fails with modern
-# GCC and Clang (-fcommon), license prohibits distributing, EAPI 6,
-# last release 8 years ago. Removal on 2023-01-25.
-sci-biology/consed
-sci-biology/phrap
-sci-biology/phred
-
-# David Seifert <soap@gentoo.org> (2022-12-26)
-# EAPI 6, cheesy build system, last release over 13 years ago, no other
-# distro packages this. Removal on 2023-01-25.
-sci-misc/flashdot
-
-# Michał Górny <mgorny@gentoo.org> (2022-12-25)
-# Broken with pytest-7.2.  Repository archived upstream.  No reverse
-# dependencies.
-# Removal on 2023-01-24.  Bug #888219.
-dev-python/pytest-toolbox
-
-# Michał Górny <mgorny@gentoo.org> (2022-12-25)
-# The project did not catch, with hardly any data submissions.
-# Removal on 2023-01-24.  Bug #843344.
-app-portage/gander
-
-# Hans de Graaff <graaff@gentoo.org> (2022-12-25)
-# Last release in 2018. Poor quality C extension code. Package
-# consistently segfaults on it tests with the latest ruby versions.
-# No reverse dependencies. Removal in 30 days.
-dev-ruby/hiredis
-
-# Marco Scardovi <mscardovi@icloud.com> (2022-12-22)
-# Per robbat2 request, I'm gonna treeclean it as we
-# are actually the only one maintaining it.
-# No update upstream, EAPI 6 and with a bug #687786
-# As replacement, it is possible to use pv --rate-limit
-# instead.
-# Removal on 2023-01-21
-net-misc/valve
 
 # Ionen Wolkens <ionen@gentoo.org> (2022-12-24)
 # Upstream dropped wxGTK support in >=games-emulation/pcsx2-1.7.3773,
@@ -750,87 +777,6 @@ net-misc/valve
 # https://gitweb.gentoo.org/repo/gentoo.git/tree/profiles/package.mask
 # and package.unmask the whole list alongside pcsx2.
 >=games-emulation/pcsx2-1.7.3773
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2022-12-24)
-# Live only packages for 4 years! Upstream repositories are archived
-# or inactive.
-# Removal: 2023-01-23.  Bug #888175.
-media-libs/kodi-platform
-media-plugins/kodi-game-libretro-fceumm
-media-plugins/kodi-peripheral-steamcontroller
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2022-12-24)
-# EAPI=6 ebuilds, live only packages for 5.79 years!
-# maintainer-needed packages for a long time.
-# Removal: 2023-01-23.  Bug #888173.
-x11-misc/xowl
-x11-wm/xoat
-
-# Michał Górny <mgorny@gentoo.org> (2022-12-24)
-# Obsolete package with broken tests.  Last released in 2018, last
-# activity in 2021.  No reverse dependencies.
-# Removal on 2023-01-23.  Bug #888147.
-dev-python/ndg-httpsclient
-
-# Michał Górny <mgorny@gentoo.org> (2022-12-23)
-# Packages that still use dev-python/nose and have no revdeps.
-#
-# dev-python/blessings: EAPI 7, last rel. in 2018, git act. in 2020
-# dev-python/errorhandler: EAPI 7, last rel. in 2016, git act. in 2018
-# dev-python/flask-restful: EAPI 7, last rel. in 2021, git act. in Mar
-# dev-python/imread: non-PEP517, last rel. in 2020, uses pytest in git
-# dev-python/influxdb: EAPI 7, last rel. 2020, archived on GitHub
-# dev-python/nose-random: nose plugin
-# dev-python/pilkit: EAPI 7, last rel. in 2017, uses pytest in git
-# dev-python/PyContracts: EAPI 7, last rel. in 2019, git act. in 2020
-# dev-python/python-zipstream: EAPI 7, last rel. in 2016, git in 2018
-# dev-python/PyUtilib: EAPI 7, last rel. and git act. in 2020
-# dev-python/socketio-client: EAPI 7, last rel. in 2016, git in 2017
-# dev-python/www-authenticate: EAPI 7, last rel. in 2015, git in 2019
-#
-# Removal on 2023-01-22.  Bug #888087.
-dev-python/blessings
-dev-python/errorhandler
-dev-python/flask-restful
-dev-python/imread
-dev-python/influxdb
-dev-python/nose-random
-dev-python/pilkit
-dev-python/PyContracts
-dev-python/python-zipstream
-dev-python/PyUtilib
-dev-python/socketio-client
-dev-python/www-authenticate
-
-# Michał Górny <mgorny@gentoo.org> (2022-12-23)
-# sci-libs/votca-tools fail to build with GCC 12.  Pending version bump
-# since January 2022.
-# Removal on 2023-01-22.  Bug #841830.
-sci-chemistry/votca-csg
-sci-chemistry/votca-csgapps
-sci-chemistry/votca-xtp
-sci-libs/votca-tools
-
-# Michał Górny <mgorny@gentoo.org> (2022-12-21)
-# The mauve project is no longer maintained upstream, and the actual
-# program has been removed from Gentoo in 2016.  These are leftover
-# libraries with no reverse dependencies.  Last bumped in 2009.
-# Removal on 2023-01-20.  Bug #677558.
-sci-libs/libgenome
-sci-libs/libmems
-
-# Michał Górny <mgorny@gentoo.org> (2022-12-21)
-# Fails to build both against MySQL and PostgreSQL.  Homepage gone.
-# Last bumped in 2005.
-# Removal on 2023-01-20.  Bug #677528, #807835.
-dev-db/mysql-super-smack
-
-# Michał Górny <mgorny@gentoo.org> (2022-12-21)
-# Reported to be incompatible with PHP 7+.  Abandoned upstream.
-# No reverse dependencies.  There is a maintained fork, should anyone
-# want to revive it.
-# Removal on 2023-01-20.  Bug #737842.
-dev-php/phptal
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2022-12-19)
 # This version currently is not compatible with kernel build (yet)
@@ -859,11 +805,6 @@ dev-cpp/sourcetrail
 # Breaks compilation of reverse dependencies with broken pkgconfig (pc) file
 # bug #885075, https://github.com/libarchive/libarchive/issues/1766
 =app-arch/libarchive-3.6.2
-
-# Michał Górny <mgorny@gentoo.org> (2022-12-08)
-# Seems to break some logic in pkg_resources.  Masked for the time being
-# to prevent breakage.
->=dev-python/packaging-22.0
 
 # Stephan Hartmann <sultan@gentoo.org> (2023-01-15)
 # Dev channel releases are only for people who
@@ -919,6 +860,7 @@ dev-python/pyside6-tools
 # Jimi Huotari <chiitoo@gentoo.org> (2022-08-02)
 # Masked for testing. The split of some packages may still
 # change. bug #838970.
+>=app-editors/retext-8.0.0
 dev-python/PyQt6
 dev-python/PyQt6-WebEngine
 dev-qt/qt5compat:6
@@ -958,86 +900,10 @@ dev-qt/qtwebsockets:6
 # should update to that. #841437
 ~sci-physics/bullet-3.22b
 
-# Alfredo Tupone <tupone@gentoo.org> (2022-04-27)
-# New release of janestreet packages need to tested
-dev-ml/sexplib0:0/0.15
-dev-ml/sexplib:0/0.15
-dev-ml/base:0/0.15
-dev-ml/stdio:0/0.15
-dev-ml/ppx_sexp_conv:0/0.15
-dev-ml/ppx_enumerate:0/0.15
-dev-ml/ppx_compare:0/0.15
-dev-ml/ppx_hash:0/0.15
-dev-ml/ppx_cold:0/0.15
-dev-ml/parsexp:0/0.15
-dev-ml/ppx_base:0/0.15
-dev-ml/ppx_fields_conv:0/0.15
-dev-ml/ppx_here:0/0.15
-dev-ml/ppx_let:0/0.15
-dev-ml/ppx_sexp_message:0/0.15
-dev-ml/ppx_sexp_value:0/0.15
-dev-ml/ppx_assert:0/0.15
-dev-ml/ppx_optcomp:0/0.15
-dev-ml/time_now:0/0.15
-dev-ml/ppx_inline_test:0/0.15
-dev-ml/ppx_bench:0/0.15
-dev-ml/splittable_random:0/0.15
-dev-ml/base_quickcheck:0/0.15
-dev-ml/ppx_bin_prot:0/0.15
-dev-ml/ppx_custom_printf:0/0.15
-dev-ml/ppx_disable_unused_warnings:0/0.15
-dev-ml/ppx_expect:0/0.15
-dev-ml/ppx_fixed_literal:0/0.15
-dev-ml/ppx_log:0/0.15
-dev-ml/ppx_module_timer:0/0.15
-dev-ml/ppx_optional:0/0.15
-dev-ml/ppx_stable:0/0.15
-dev-ml/ppx_string:0/0.15
-dev-ml/typerep:0/0.15
-dev-ml/ppx_typerep_conv:0/0.15
-dev-ml/variantslib:0/0.15
-dev-ml/ppx_variants_conv:0/0.15
-dev-ml/ppx_jane:0/0.15
-dev-ml/int_repr:0/0.15
-dev-ml/base_bigstring:0/0.15
-dev-ml/ppx_js_style:0/0.15
-dev-ml/core:0/0.15
-dev-ml/core_kernel:0/0.15
-dev-ml/sexp_pretty:0/0.15
-dev-ml/expect_test_helpers_core:0/0.15
-dev-ml/timezone:0/0.15
-dev-ml/core_unix:0/0.15
-dev-ml/textutils_kernel:0/0.15
-dev-ml/textutils:0/0.15
-dev-ml/async_kernel:0/0.15
-dev-ml/protocol_version_header:0/0.15
-dev-ml/async_rpc_kernel:0/0.15
-dev-ml/async_unix:0/0.15
-dev-ml/async:0/0.15
-dev-ml/async_extra:0/0.15
-dev-ml/core_bench:0/0.15
-dev-ml/patience_diff:0/0.15
-dev-util/patdiff:0/0.15
-=dev-ml/alcotest-1.6.0*
-
 # Maciej Barć <xgqt@gentoo.org> (2022-02-20)
 # Masked for testing, builds and passes tests but randomly segfaults,
 # meaningless backtrace, debugging (flags, symbols) do not help
 >app-shells/scsh-0.6.9
-
-# Zoltan Puskas <zoltan@sinustrom.info> (2022-02-18)
-# Multiple vulnerabilities (CVE-2022-{23803,23804,23946,23947})
-# 5.X series is masked to avoid accidental use, but it's kept for
-# industrial users who are in the process of migrating to the new
-# format of the 6.X series.
-<sci-electronics/kicad-6.0.2
-<sci-electronics/kicad-footprints-6.0.2
-<sci-electronics/kicad-i18n-6.0.2
-<sci-electronics/kicad-meta-6.0.2
-<sci-electronics/kicad-packages3d-6.0.2
-<sci-electronics/kicad-symbols-6.0.2
-<sci-electronics/kicad-templates-6.0.2
-<app-doc/kicad-doc-6.0.2
 
 # Eray Aslan <eras@gentoo.org> (2022-01-24)
 # Mask experimental software

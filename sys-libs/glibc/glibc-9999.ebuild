@@ -111,6 +111,7 @@ BDEPEND="
 		sys-apps/grep
 		app-alternatives/awk
 	)
+	test? ( dev-lang/perl )
 "
 COMMON_DEPEND="
 	gd? ( media-libs/gd:2= )
@@ -119,6 +120,7 @@ COMMON_DEPEND="
 		caps? ( sys-libs/libcap )
 	) )
 	perl? ( dev-lang/perl )
+	test? ( dev-lang/perl )
 	suid? ( caps? ( sys-libs/libcap ) )
 	selinux? ( sys-libs/libselinux )
 	systemtap? ( dev-util/systemtap )
@@ -1015,7 +1017,8 @@ glibc_do_configure() {
 		# up a Perl from outside the prefix instead. configure will fail to
 		# execute Perl during configure if we're cross-compiling a prefix, but
 		# it will just disable mtrace in that case.
-		ac_cv_path_PERL="$(usex perl "${EPREFIX}"/usr/bin/perl no)"
+		# Note: mtrace is needed by the test suite.
+		ac_cv_path_PERL="$(usex perl "${EPREFIX}"/usr/bin/perl $(usex test "${EPREFIX}"/usr/bin/perl no))"
 
 		# locale data is arch-independent
 		# https://bugs.gentoo.org/753740
@@ -1312,6 +1315,17 @@ glibc_do_src_install() {
 		sed -i "s@\(libm-${upstream_pv}.a\)@${P}/\1@" "${ED}"/$(alt_usrlibdir)/libm.a || die
 		dodir $(alt_usrlibdir)/${P}
 		mv "${ED}"/$(alt_usrlibdir)/libm-${upstream_pv}.a "${ED}"/$(alt_usrlibdir)/${P}/libm-${upstream_pv}.a || die
+	fi
+
+	# We configure toolchains for standalone prefix systems with a sysroot,
+	# which is prepended to paths in ld scripts, so strip the prefix from these.
+	# Before: GROUP ( /foo/lib64/libc.so.6 /foo/usr/lib64/libc_nonshared.a  AS_NEEDED ( /foo/lib64/ld-linux-x86-64.so.2 ) )
+	# After: GROUP ( /lib64/libc.so.6 /usr/lib64/libc_nonshared.a  AS_NEEDED ( /lib64/ld-linux-x86-64.so.2 ) )
+	if [[ -n $(host_eprefix) ]] ; then
+		local file
+		grep -lZIF "ld script" "${ED}/$(alt_usrlibdir)"/lib*.{a,so} 2>/dev/null | while read -rd '' file ; do
+			sed -i "s|$(host_eprefix)/|/|g" "${file}" || die
+		done
 	fi
 
 	# We'll take care of the cache ourselves

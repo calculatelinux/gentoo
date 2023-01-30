@@ -36,6 +36,7 @@ inherit autotools cmake desktop libtool linux-info pax-utils python-single-r1 xd
 PATCHES=(
 	"${FILESDIR}/${PN}-19.4-atomic.patch"
 	"${FILESDIR}/${PN}-19.4-dav1d-1.0.0.patch"
+	"${FILESDIR}/${PN}-19.5-gcc-13.patch"
 )
 
 DESCRIPTION="A free and open source media-player and entertainment hub"
@@ -83,7 +84,7 @@ COMMON_TARGET_DEPEND="${PYTHON_DEPS}
 	caps? ( sys-libs/libcap )
 	dbus? ( sys-apps/dbus )
 	dev-db/sqlite
-	dev-libs/crossguid
+	<dev-libs/crossguid-0.2.2_p20190529
 	>=dev-libs/fribidi-1.0.5
 	cec? ( >=dev-libs/libcec-4.0[raspberry-pi?] )
 	dev-libs/libpcre[cxx]
