@@ -62,7 +62,7 @@ DEPEND="
 	wayland? ( dev-libs/wayland-protocols )"
 BDEPEND="
 	${PYTHON_DEPS}
-	>=dev-lang/go-1.19
+	=dev-lang/go-1.19*
 	sys-libs/ncurses
 	virtual/pkgconfig
 	test? ( $(python_gen_cond_dep 'dev-python/pillow[${PYTHON_USEDEP}]') )
@@ -140,12 +140,7 @@ src_test() {
 }
 
 src_install() {
-	insinto /usr
-	doins -r linux-package/.
-
-	local execbit
-	mapfile -t execbit < <(find linux-package -type f -perm /+x -printf '/usr/%P\n' || die)
-	fperms +x "${execbit[@]}"
+	edo mv linux-package "${ED}"/usr
 }
 
 pkg_postinst() {

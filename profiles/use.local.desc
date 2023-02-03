@@ -1299,6 +1299,7 @@ dev-cpp/libjson-rpc-cpp:http-server - Build support for HTTP server using net-li
 dev-cpp/libjson-rpc-cpp:redis-client - Build support for Redis client using dev-libs/hiredis
 dev-cpp/libjson-rpc-cpp:redis-server - Build support for Redis server using dev-libs/hiredis
 dev-cpp/libjson-rpc-cpp:stubgen - Build header stub code generator (needed for development and when pregenerated headers are not bundled)
+dev-cpp/msgpack-cxx:boost - Enable boost support
 dev-cpp/opentelemetry-cpp:jaeger - Include the jaeger exporter
 dev-cpp/opentelemetry-cpp:prometheus - include the Prometheus Client in the SDK
 dev-cpp/sdbus-c++:systemd - Use external libsystemd instead of statically-linked build
@@ -2060,7 +2061,7 @@ dev-libs/openobex:irda - Enable IrDA support
 dev-libs/opensc:ctapi - Use CT-API for accessing Smartcard hardware
 dev-libs/opensc:notify - Enable notifications
 dev-libs/opensc:openct - Use dev-libs/openct (and CT-API) for accessing Smartcard hardware
-dev-libs/opensc:openpace - Use dev-libs/openpace for EAC version 2 support
+dev-libs/opensc:pace - Use dev-libs/openpace for EAC version 2 support
 dev-libs/opensc:pcsc-lite - Use sys-apps/pcsc-lite (and PC/SC API) for accessing Smartcard hardware
 dev-libs/opensc:secure-messaging - Enable secure messaging
 dev-libs/openssl:asm - Support assembly hand optimized crypto functions (i.e. faster run time)
@@ -4019,8 +4020,6 @@ media-gfx/openscad:gamepad - Add support for gamepads through dev-qt/qtgamepad
 media-gfx/openscad:headless - Build a binary without GUI
 media-gfx/openscad:spacenav - Add support for space navigator devices through dev-libs/libspnav
 media-gfx/openvdb:abi10-compat - Disables newer features to maintain compatibility with ABI10
-media-gfx/openvdb:abi6-compat - Disables newer features to maintain compatibility with ABI6
-media-gfx/openvdb:abi7-compat - Disables newer features to maintain compatibility with ABI7
 media-gfx/openvdb:abi8-compat - Disables newer features to maintain compatibility with ABI8
 media-gfx/openvdb:abi9-compat - Disables newer features to maintain compatibility with ABI9
 media-gfx/openvdb:ax - Build the OpenVDB AX module to perform custom manipulation of OpenVDB data via an expression language: AX
@@ -4226,7 +4225,6 @@ media-libs/libsdl2:sound - Control audio support (disable at your own risk)
 media-libs/libsdl2:video - Control video support (disable at your own risk)
 media-libs/libsdl2:vulkan - Enable Vulkan support
 media-libs/libtgvoip:dsp - Enable signal processing (echo cancellation, noise suppression, and automatic gain control)
-media-libs/libva:drm - Enables VA/DRM API support.
 media-libs/libva-compat:drm - Enables VA/DRM API support.
 media-libs/libva-compat:egl - Enables EGL support.
 media-libs/libva-intel-driver:hybrid - Enable support for hybrid vaapi hardware acceleration on Intel Haswell and newer architectures
@@ -5380,8 +5378,6 @@ net-analyzer/tcpreplay:tcpdump - Use net-analyzer/tcpdump for packet decoding fe
 net-analyzer/testssl:bundled-openssl - Install precompiled versions of OpenSSL for greater testing coverage
 net-analyzer/tracebox:curl - Build the curl component for uploading capture files using net-misc/curl
 net-analyzer/tracebox:sniffer - Build the sniffer component using net-libs/libnetfilter_queue
-net-analyzer/wapiti:kerberos - Support Kerberos authentication
-net-analyzer/wapiti:ntlm - Support NTLM authentication
 net-analyzer/wireshark:androiddump - Install androiddump, an extcap interface to capture from Android devices
 net-analyzer/wireshark:bcg729 - Use media-libs/bcg729 for G.729 codec support in RTP Player
 net-analyzer/wireshark:brotli - Use app-arch/brotli for compression/decompression
@@ -7303,7 +7299,6 @@ sci-libs/libghemical:mopac7 - Use sci-chemistry/mopac7 for semi-empirical calcul
 sci-libs/libghemical:mpqc - Use sci-chemistry/mpqc for quantum-mechanical calculations
 sci-libs/liborigin:tools - Install opj2dat command line util
 sci-libs/libqalculate:hardened - Disable unsafe functions like 'command' and variables like 'uptime'.
-sci-libs/libsc:romio - Build with support for the ROMIO MPI-IO component
 sci-libs/libsigrok:ftdi - Enable drivers that need dev-embedded/libftdi
 sci-libs/libsigrok:hidapi - Enable drivers that need dev-libs/hidapi
 sci-libs/libsigrok:nettle - Enable drivers that need dev-libs/nettle
@@ -7342,7 +7337,6 @@ sci-libs/opencascade:optimize - Don't clear allocated memory. Use optimized memo
 sci-libs/opencascade:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
 sci-libs/opencascade:vtk - Enable Visualization Toolkit support via sci-libs/vtk
 sci-libs/orocos_kdl:models - Build models for some well known robots.
-sci-libs/p4est:romio - Build with support for the ROMIO MPI-IO component
 sci-libs/p4est:vtk-binary - Enable binary vtk output. If disabled vtk files will be written in ASCII text format.
 sci-libs/pastix:cuda - Enable GPU support using CUDA kernels
 sci-libs/pastix:fortran - Install the Fortran interface
@@ -8894,7 +8888,7 @@ x11-misc/xscreensaver:locking - Compile in support for locking the display
 x11-misc/xscreensaver:new-login - Enable user switching support using gdmflexiserver (x11-misc/lightdm)
 x11-misc/xsr:cursor - Capture mouse cursor using x11-misc/xdotool, and place them on the screenshots using media-gfx/imagemagick
 x11-misc/yabar:playerctl - Uses media-sound/playerctl to retrieve the name of the currently played song
-x11-plugins/bfm:gkrellm - Enable building of app-admin/gkrellm module
+x11-plugins/bfm:gkrellm - Enable building of app-admin/gkrellmmodule
 x11-plugins/e16-epplets:cdaudio - Enable CD Audio support using media-libs/libcdaudio
 x11-plugins/e16-epplets:libgtop - Use gnome-base/libgtop to obtain system load information
 x11-plugins/pidgin-mbpurple:twitgin - Enable graphical plugin for Gtk+ interface of Pidgin.

@@ -33,6 +33,69 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2023-02-03)
+# Uses unmaintained dev-python/future.  No reverse dependencies.
+# Removal on 2023-03-05.  Bug #888283.
+dev-python/textX
+
+# Michał Górny <mgorny@gentoo.org> (2023-02-03)
+# Hacky build system that does not work via PEP517 build backend.
+# No reverse dependencies.
+# Removal on 2023-03-05.  Bug #890321.
+dev-python/pyFFTW
+
+# Michał Górny <mgorny@gentoo.org> (2023-02-03)
+# Dead upstream, no active maintainer, no reverse dependencies.
+# Removal on 2023-03-05.  Bug #892916.
+x11-themes/echo-icon-theme
+
+# Michał Górny <mgorny@gentoo.org> (2023-02-03)
+# Dead upstream, no active maintainer, no reverse dependencies,
+# build issues.
+# Removal on 2023-03-05.  Bug #892918.
+x11-themes/gtk-engines-nodoka
+
+# Michał Górny <mgorny@gentoo.org> (2023-02-03)
+# The package has been archived upstream.  It is broken with all Python
+# versions supported by Gentoo, and it is broken with django-2.
+# The other listed packages are its reverse dependencies.
+# Removal on 2023-03-05.  Bug #718972.
+app-misc/gcalcli
+app-misc/goobook
+dev-python/gcs-oauth2-boto-plugin
+dev-python/google-apitools
+dev-python/google-reauth-python
+dev-python/oauth2client
+net-misc/gsutil
+
+# Marek Szuba <marecki@gentoo.org> (2023-02-03)
+# New major version with breaking changes, mask until 2023-03-03
+# for revdep testing and porting. Bug #893006.
+>=dev-cpp/msgpack-cxx-5.0.0
+>=dev-libs/msgpack-5.0.0
+
+# Michał Górny <mgorny@gentoo.org> (2023-02-02)
+# dev-python/citeproc-py requires dev-python/nose and is not maintained
+# upstream.  Its only revdep, dev-python/duecredit has no reverse
+# dependencies left.
+# Removal on 2023-03-04.  Bug #888239.
+dev-python/citeproc-py
+dev-python/duecredit
+
+# Michał Górny <mgorny@gentoo.org> (2023-02-01)
+# dev-python/blockdiag still requires dev-python/nose.  There was a PR
+# made to switch to pytest in Feb 2020 but it's not progressing at all.
+# It was needed only for dev-python/aiohttp[doc].
+# Removal on 2023-03-03.  Bug #888233.
+dev-python/blockdiag
+dev-python/sphinxcontrib-blockdiag
+
+# Michał Górny <mgorny@gentoo.org> (2023-02-01)
+# Requires legacy setuptools backend.  Hacky build system.  The only
+# revdep is dev-python/rdflib where it is entirely optional.
+# Removal on 2023-03-03.  Bug #892854.
+dev-python/berkeleydb
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2023-02-01)
 # >=5.1 series uses vanilla llvm/clang instead of forked versions.
 # Removal on 2023-03-02
@@ -83,46 +146,6 @@ app-admin/bastille
 # Removal: 2023-02-27. Bug #892323
 games-rpg/adonthell
 games-rpg/wastesedge
-
-# Michał Górny <mgorny@gentoo.org> (2023-01-27)
-# GKrellM and a variety of plugins.  It's unmaintained for some time.
-# Upstream homepage is gone, and the whole suite is collecting dust
-# and patches.  There is no ongoing effort on porting to GTK+3.
-# Removal on 2023-02-26.  Bug #892251.
-acct-group/gkrellmd
-acct-user/gkrellmd
-app-admin/gkrellm
-app-laptop/ibam
-media-plugins/gkrellmpc
-x11-plugins/bfm
-x11-plugins/gkrellaclock
-x11-plugins/gkrellfire
-x11-plugins/gkrellkam
-x11-plugins/gkrellm-bgchanger
-x11-plugins/gkrellm-bluez
-x11-plugins/gkrellm-countdown
-x11-plugins/gkrellm-cpupower
-x11-plugins/gkrellm-imonc
-x11-plugins/gkrellmlaunch
-x11-plugins/gkrellm-leds
-x11-plugins/gkrellm-mailwatch
-x11-plugins/gkrellmoon
-x11-plugins/gkrellm-plugins
-x11-plugins/gkrellm-radio
-x11-plugins/gkrellmss
-x11-plugins/gkrellm-trayicons
-x11-plugins/gkrellm-vaiobright
-x11-plugins/gkrellm-volume
-x11-plugins/gkrellmwireless
-x11-plugins/gkrellm-xkb
-x11-plugins/gkrellshoot
-x11-plugins/gkrellstock
-x11-plugins/gkrellsun
-x11-plugins/gkrelltop
-x11-plugins/gkrellweather
-x11-plugins/gkwebmon
-x11-plugins/i8krellm
-x11-themes/gkrellm-themes
 
 # Florian Schmaus <flow@gentoo.org> (2023-01-27)
 # Previous dependencies of dev-lang/clojure, now part of the clojure
@@ -549,11 +572,6 @@ app-text/sword-modules
 # Removal on 2023-02-24.  Bug #837611.
 sys-cluster/wulfware
 
-# Michał Górny <mgorny@gentoo.org> (2023-01-25)
-# Unfetchable since at least 2021.  Mirror-restricted.
-# Removal on 2023-02-24.  Bug #761817.
-sci-physics/herwig
-
 # Ionen Wolkens <ionen@gentoo.org> (2023-01-24)
 # Mostly obsoleted by the better maintained net-misc/yt-dlp, please
 # migrate. If had USE=yt-dlp enabled (default) then was likely already
@@ -764,12 +782,6 @@ sys-auth/google-authenticator-libpam-hardened
 # Removal: 2023-01-30.  Bug #889194.
 x11-plugins/pidgin-funyahoo-plusplus
 
-# Maciej Barć <xgqt@gentoo.org> (2022-12-29)
-# Real upstream dead, uses old R5RS standard, many open bugs.
-# Removal on 2022-01-29.
-app-shells/scsh
-dev-scheme/scsh-lib
-
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-12-29)
 # Upstream is dead, last activity in Nov 2017. Does not
 # work with newer log4j, bug #857663. Use net-p2p/biglybt
@@ -912,11 +924,6 @@ dev-qt/qtwebsockets:6
 # Apparently the "b" in version means "beta". 3.24 is available, we
 # should update to that. #841437
 ~sci-physics/bullet-3.22b
-
-# Maciej Barć <xgqt@gentoo.org> (2022-02-20)
-# Masked for testing, builds and passes tests but randomly segfaults,
-# meaningless backtrace, debugging (flags, symbols) do not help
->app-shells/scsh-0.6.9
 
 # Eray Aslan <eras@gentoo.org> (2022-01-24)
 # Mask experimental software
