@@ -1,9 +1,9 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit java-pkg-2 java-ant-2 verify-sig
+inherit autotools java-pkg-2 java-ant-2 verify-sig
 
 DESCRIPTION="Allows Tomcat to use certain native resources for better performance"
 HOMEPAGE="https://tomcat.apache.org/native-doc/"
@@ -28,6 +28,19 @@ BDEPEND="verify-sig? ( sec-keys/openpgp-keys-apache-tomcat-connectors )"
 VERIFY_SIG_OPENPGP_KEY_PATH="${BROOT}/usr/share/openpgp-keys/tomcat-connectors.apache.org.asc"
 
 JAVA_ANT_REWRITE_CLASSPATH="yes"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-slibtool.patch #778914
+)
+
+src_prepare() {
+	default
+
+	# Needed for the slibtool patch
+	cd native || die
+	sed -i 's/configure.in/configure.ac/' configure.in || die
+	eautoreconf
+}
 
 src_configure() {
 	local myeconfargs=(

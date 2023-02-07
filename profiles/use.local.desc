@@ -2443,6 +2443,7 @@ dev-python/shiboken2:vulkan - Generate "QSurface::VulkanSurface" bindings
 dev-python/shiboken6:docstrings - Expose documentation as Python docstrings (recommended)
 dev-python/shiboken6:numpy - Implicitly convert passed NumPy arrays to Qt lists
 dev-python/shiboken6:vulkan - Generate "QSurface::VulkanSurface" bindings
+dev-python/simplejson:native-extensions - Compiles native "C" extensions (speedups, instead of using Python fallback code).
 dev-python/subprocess-tee:test-full - Enable full test mode. Pulls in many additional dependencies, and requires having been emerged without this flag first in order to avoid a circular dependency.
 dev-python/sympy:aesara - Add support for dev-python/aesara
 dev-python/sympy:imaging - Add support for dev-python/pillow
@@ -8536,6 +8537,7 @@ www-apache/mod_security:geoip - Pull in dev-libs/geoip for use by the SecGeoLook
 www-apache/mod_security:jit - Add support for the PCRE Just-in-Time optimisation, as enabled by dev-libs/libpcre with jit USE flag enabled. Might not be available on hardened systems.
 www-apache/mod_security:json - Suppose JSON in the request body parser through dev-libs/yajl.
 www-apache/mod_security:mlogc - Build and install the ModSecurity Audit Log Collector (mlogc).
+www-apache/mod_security:pcre2 - Use dev-libs/libpcre2 as regex implementation
 www-apache/pwauth:domain-aware - Ignore leading domain names in username (Windows compat)
 www-apache/pwauth:faillog - Log failed login attempts
 www-apache/pwauth:ignore-case - Ignore string case in username (mostly Windows compat)
@@ -8768,6 +8770,7 @@ x11-libs/cairo:opengl - Build the OpenGL backend
 x11-libs/fltk:games - Builds and installs some extra games
 x11-libs/fox:tools - Install adie, calculator, shutterbug, and pathfinder apps.
 x11-libs/gtk+:broadway - Enable the GDK Broadway backend
+x11-libs/gtk+:cloudproviders - Enable GtkPlacesSidebar to access cloud services
 x11-libs/gtk+:colord - Use x11-misc/colord for color management in printing
 x11-libs/gtk+:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 x11-libs/gtkdatabox:glade - Build with libglade and glade-3 supports, which includes a glade's module for GtkDataBox widget
