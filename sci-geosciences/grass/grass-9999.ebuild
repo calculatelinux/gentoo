@@ -13,26 +13,30 @@ HOMEPAGE="https://grass.osgeo.org/"
 
 LICENSE="GPL-2"
 
+if [[ ${PV} =~ "9999" ]]; then
+	SLOT="0/8.3"
+else
+	SLOT="0/$(ver_cut 1-2 ${PV})"
+fi
+
 GVERSION=${SLOT#*/}
 MY_PM="${PN}${GVERSION}"
 MY_PM="${MY_PM/.}"
 
 if [[ ${PV} =~ "9999" ]]; then
 	inherit git-r3
-	SLOT="0/8.3"
 	EGIT_REPO_URI="https://github.com/OSGeo/grass.git"
 else
 	MY_P="${P/_rc/RC}"
-	SLOT="0/$(ver_cut 1-2 ${PV})"
 	SRC_URI="https://grass.osgeo.org/${MY_PM}/source/${MY_P}.tar.gz"
 	if [[ ${PV} != *_rc* ]] ; then
-		KEYWORDS="~amd64 ~ppc ~x86"
+		KEYWORDS="~amd64 ~x86"
 	fi
 
 	S="${WORKDIR}/${MY_P}"
 fi
 
-IUSE="blas cxx fftw geos lapack las mysql netcdf nls odbc opencl opengl openmp pdal png postgres readline sqlite threads tiff truetype X zstd"
+IUSE="blas bzip2 cxx fftw geos lapack las mysql netcdf nls odbc opencl opengl openmp pdal png postgres readline sqlite threads tiff truetype X zstd"
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
 	opengl? ( X )"
@@ -56,6 +60,7 @@ RDEPEND="
 		virtual/cblas[eselect-ldso(+)]
 		virtual/blas[eselect-ldso(+)]
 	)
+	bzip2? ( app-arch/bzip2:= )
 	fftw? ( sci-libs/fftw:3.0= )
 	geos? ( sci-libs/geos:= )
 	lapack? ( virtual/lapack[eselect-ldso(+)] )
@@ -179,6 +184,7 @@ src_configure() {
 		$(use_with threads pthread)
 		$(use_with openmp)
 		$(use_with opencl)
+		$(use_with bzip2 bzlib)
 		$(use_with pdal pdal "${EPREFIX}"/usr/bin/pdal-config)
 		$(use_with las liblas "${EPREFIX}"/usr/bin/liblas-config)
 		$(use_with netcdf netcdf "${EPREFIX}"/usr/bin/nc-config)

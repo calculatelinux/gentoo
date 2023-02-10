@@ -1,7 +1,7 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit multiprocessing savedconfig toolchain-funcs
 
@@ -10,7 +10,7 @@ if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="https://github.com/landley/toybox.git"
 else
 	SRC_URI="https://landley.net/code/toybox/downloads/${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm64 ~x86"
 fi
 
 DESCRIPTION="Common linux commands in a multicall binary"
@@ -45,14 +45,14 @@ src_configure() {
 src_compile() {
 	unset CROSS_COMPILE
 	export CPUS=$(makeopts_jobs)
-	emake V=1
+	emake V=1 NOSTRIP=1
 }
 
 src_test() {
-	emake test
+	emake V=1 tests
 }
 
 src_install() {
 	save_config .config
-	newbin generated/unstripped/toybox toybox
+	dobin toybox
 }
