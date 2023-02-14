@@ -11,5 +11,5 @@ LICENSE=GPL-3
 RDEPEND=app-arch/lzlib:0=
 SLOT=0
 SRC_URI=https://download.savannah.gnu.org/releases/lzip/plzip/plzip-1.10.tar.gz verify-sig? ( https://download.savannah.gnu.org/releases/lzip/plzip/plzip-1.10.tar.gz.sig )
-_eclasses_=multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	9a610728b9bcca1919234cceb35a1027	verify-sig	afb98fe4696292e4234ce36713fd4e9e
+_eclasses_=multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	9a610728b9bcca1919234cceb35a1027	verify-sig	85e14d0a93afa75c621382409ada8732
 _md5_=053cf2cccf8f61a9939b5952098867f0

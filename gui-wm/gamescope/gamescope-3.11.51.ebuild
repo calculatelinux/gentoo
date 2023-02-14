@@ -42,7 +42,7 @@ DEPEND="
 	${RDEPEND}
 	dev-libs/stb
 	dev-util/vulkan-headers
-	media-libs/vkroots
+	~media-libs/vkroots-0_p20221205
 "
 BDEPEND="
 	dev-util/glslang

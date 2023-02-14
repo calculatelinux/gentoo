@@ -20,7 +20,7 @@ SRC_URI="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 arm arm64 hppa ~ia64 ~loong ~m68k ppc ppc64 ~riscv ~s390 sparc x86"
+KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ppc ppc64 ~riscv ~s390 sparc x86"
 
 RDEPEND="
 	>=dev-python/setuptools_scm-6.4.0[${PYTHON_USEDEP}]
@@ -30,5 +30,9 @@ BDEPEND="
 		dev-vcs/git
 	)
 "
+
+PATCHES=(
+	"${FILESDIR}"/${P}-Work-with-setuptools_scm-7.1-fix-25-26.patch
+)
 
 distutils_enable_tests pytest

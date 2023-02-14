@@ -920,6 +920,9 @@ app-misc/ola:ftdi - Support FTDI devices
 app-misc/ola:http - Enable built-in Web UI
 app-misc/ola:rdm-tests - Install RDM responder tests
 app-misc/pax-utils:python - Install a more powerful/faster version of lddtree
+app-misc/pdfpc:gstreamer - Compile support for movie playback (media-libs/gstreamer)
+app-misc/pdfpc:soup - Compile support for REST server (net-libs/libsoup)
+app-misc/pdfpc:webkit - Enable viewing Markdown notes (net-libs/webkit-gtk)
 app-misc/recoll:camelcase - Enable indexing for camelCase sentences and words
 app-misc/recoll:chm - Enable CHM file support via dev-python/pychm
 app-misc/recoll:inotify - Use the Linux Kernel notification subsystem for monitoring file alterations in realtime
@@ -1303,7 +1306,6 @@ dev-cpp/opentelemetry-cpp:jaeger - Include the jaeger exporter
 dev-cpp/opentelemetry-cpp:prometheus - include the Prometheus Client in the SDK
 dev-cpp/sdbus-c++:systemd - Use external libsystemd instead of statically-linked build
 dev-cpp/sdbus-c++:tools - Install interface stub code generator
-dev-cpp/sourcetrail:examples - Install example projects.
 dev-db/etcd:server - Installs etcd daemon
 dev-db/firebird:server - Install the server components of Firebird, not just the client
 dev-db/firebird:xinetd - Install ClassicServer
@@ -1826,6 +1828,7 @@ dev-libs/antlr-c:debugger - Compiles debug info into the library
 dev-libs/appstream:apt - Enables Debians APT support
 dev-libs/appstream-glib:fonts - Enable fonts support for appstream-builder.
 dev-libs/appstream-glib:stemmer - Add word stemming via dev-libs/snowball-stemmer.
+dev-libs/apr:old-kernel - Enable compatibility with older kernels
 dev-libs/apr:older-kernels-compatibility - Enable binary compatibility with older kernels
 dev-libs/apr:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/apr-util:nss - Install apr_crypto_nss module
@@ -3341,6 +3344,7 @@ gui-libs/wlroots:vulkan - Enable support for the vulkan backend renderer
 gui-libs/wlroots:x11-backend - Enable support for handling input/output devices through x11-libs/libxcb
 gui-libs/xdg-desktop-portal-wlr:elogind - Enable support for rootless session via elogind
 gui-wm/gamescope:pipewire - Enable screen capture via PipeWire
+gui-wm/gamescope:wsi-layer - Enable the WSI layer (required for HDR)
 gui-wm/hikari:X - Enable support for X11 applications (XWayland)
 gui-wm/sway:X - Enable support for X11 applications (XWayland)
 gui-wm/sway:grimshot - Install 'grimshot': script for taking screenshots
@@ -7583,7 +7587,6 @@ sci-physics/pythia:lhapdf - Support the use of external PDF sets via sci-physics
 sci-physics/pythia:root - Use sci-physics/root trees and histograms (in examples only)
 sci-physics/root:R - Enable support for dev-lang/R
 sci-physics/root:asimage - Enable support for media-libs/libafterimage
-sci-physics/root:c++11 - Build using the C++11 standard
 sci-physics/root:c++14 - Build using the C++14 standard
 sci-physics/root:c++17 - Build using the C++17 standard
 sci-physics/root:cuda - Enable support for nVidia CUDA
@@ -7593,6 +7596,7 @@ sci-physics/root:fits - Enable support for images and data from FITS files with 
 sci-physics/root:fortran - Compile included Fortran programs
 sci-physics/root:gdml - Enable GDML writer and reader
 sci-physics/root:http - Enable http server support including but not limited to fastcgi support
+sci-physics/root:jupyter - Install dependencies to enable ROOT's C++ kernel in Jupyter notebooks
 sci-physics/root:libcxx - Build ROOT against sys-libs/libcxx
 sci-physics/root:minuit - Build ROOT's internal versions of minuit (fortran) and minuit2 (C++)
 sci-physics/root:pythia6 - Build the interface for sci-physics/pythia version 6.x
@@ -7605,7 +7609,6 @@ sci-physics/root:tmva - Built TMVA (ROOT's multi-variate analysis toolkit for ma
 sci-physics/root:unuran - Enable support for sci-mathematics/unuran
 sci-physics/root:uring - Enable support for sys-libs/liburing in RNTuple
 sci-physics/root:vc - Enable support for dev-libs/vc with VecCore
-sci-physics/root:vmc - Built the Virtual Monte Carlo library
 sci-physics/root:xrootd - Build the interface for net-libs/xrootd
 sci-physics/thepeg:fastjet - Adds support for sci-physics/fastjet
 sci-physics/thepeg:hepmc - Adds support for High Energy Physics Monte Carlo Generators sci-physics/hepmc
@@ -7905,7 +7908,6 @@ sys-apps/util-linux:tty-helpers - install the mesg/wall/write tools for talking 
 sys-apps/watchdog:nfs - enable support for checking nfs mounts
 sys-apps/xinetd:rpc - support RPC services
 sys-auth/elogind:cgroup-hybrid - Use hybrid cgroup hierarchy (OpenRC's default) instead of unified.
-sys-auth/google-authenticator-libpam-hardened:qrcode - Display QRcode after setup to accomodate automatic setup of OTP client apps.
 sys-auth/munge:gcrypt - Use libgcrypt instead of openssl
 sys-auth/nss-pam-ldapd:pynslcd - Install the python implementation along with the standard implementation
 sys-auth/nss-pam-ldapd:utils - Install the command-line utilities
@@ -8824,7 +8826,7 @@ x11-misc/gmrun:xdg - Enable xdg spec for configuration and history files locatio
 x11-misc/gpaste:gnome - Enable proper gnome support and enable gnome shell extension.
 x11-misc/grsync:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 x11-misc/i3blocks:contrib - Install contrib modules
-x11-misc/i3status:filecaps - Linux capabilities library is required for i3status to be able to read net bandwith
+x11-misc/i3status:filecaps - Linux capabilities library is required for i3status to be able to read net bandwidth
 x11-misc/j4-dmenu-desktop:dmenu - Use x11-misc/dmenu as default. Disable to use a different implementation.
 x11-misc/ktsuss:sudo - Use the sudo backend instead the su one
 x11-misc/light-locker:dpms - Turn on the display on screensaver deactivation.

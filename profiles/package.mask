@@ -33,6 +33,20 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2023-02-14)
+# Unmaintained and archived.  Invalid version number causes total mayhem
+# when installed alongside new dev-python/packaging.
+# Removal on 2023-03-16.  Bug #894222.
+net-p2p/bittornado
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2023-02-10)
+# Unused Java libraries. Removal on 2023-03-12.
+dev-java/jcip-annotations
+dev-java/jformatstring
+dev-java/jta
+dev-java/pdf-renderer
+dev-java/picocli
+
 # Florian Schmaus <flow@gentoo.org> (2023-02-10)
 # Previous dependencies of ejabberd, now no longer needed.
 # Removal on 2023-03-10.
@@ -672,63 +686,6 @@ dev-ruby/railties:5.2
 dev-ruby/arel
 =www-apps/redmine-4.2.9
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2023-01-20)
-# KDE Plasma 5.26.90 (5.27 Beta) mask
-# Pre-release version - happy testing!
-~kde-plasma/bluedevil-5.26.90
-~kde-plasma/breeze-5.26.90
-~kde-plasma/breeze-grub-5.26.90
-~kde-plasma/breeze-gtk-5.26.90
-~kde-plasma/breeze-plymouth-5.26.90
-~kde-plasma/discover-5.26.90
-~kde-plasma/drkonqi-5.26.90
-~kde-plasma/kactivitymanagerd-5.26.90
-~kde-plasma/kde-cli-tools-5.26.90
-~kde-plasma/kde-gtk-config-5.26.90
-~kde-plasma/kdecoration-5.26.90
-~kde-plasma/kdeplasma-addons-5.26.90
-~kde-plasma/kgamma-5.26.90
-~kde-plasma/khotkeys-5.26.90
-~kde-plasma/kinfocenter-5.26.90
-~kde-plasma/kmenuedit-5.26.90
-~kde-plasma/kpipewire-5.26.90
-~kde-plasma/kscreen-5.26.90
-~kde-plasma/kscreenlocker-5.26.90
-~kde-plasma/ksshaskpass-5.26.90
-~kde-plasma/ksystemstats-5.26.90
-~kde-plasma/kwallet-pam-5.26.90
-~kde-plasma/kwayland-integration-5.26.90
-~kde-plasma/kwin-5.26.90
-~kde-plasma/kwrited-5.26.90
-~kde-plasma/layer-shell-qt-5.26.90
-~kde-plasma/libkscreen-5.26.90
-~kde-plasma/libksysguard-5.26.90
-~kde-plasma/libkworkspace-5.26.90
-~kde-plasma/milou-5.26.90
-~kde-plasma/oxygen-5.26.90
-~kde-plasma/oxygen-sounds-5.26.90
-~kde-plasma/plasma-browser-integration-5.26.90
-~kde-plasma/plasma-desktop-5.26.90
-~kde-plasma/plasma-disks-5.26.90
-~kde-plasma/plasma-firewall-5.26.90
-~kde-plasma/plasma-integration-5.26.90
-~kde-plasma/plasma-meta-5.26.90
-~kde-plasma/plasma-nm-5.26.90
-~kde-plasma/plasma-pa-5.26.90
-~kde-plasma/plasma-sdk-5.26.90
-~kde-plasma/plasma-systemmonitor-5.26.90
-~kde-plasma/plasma-thunderbolt-5.26.90
-~kde-plasma/plasma-workspace-5.26.90
-~kde-plasma/plasma-workspace-wallpapers-5.26.90
-~kde-plasma/plasma-vault-5.26.90
-~kde-plasma/plymouth-kcm-5.26.90
-~kde-plasma/polkit-kde-agent-5.26.90
-~kde-plasma/powerdevil-5.26.90
-~kde-plasma/sddm-kcm-5.26.90
-~kde-plasma/systemsettings-5.26.90
-~kde-plasma/xdg-desktop-portal-kde-5.26.90
-~kde-plasma/xembed-sni-proxy-5.26.90
-
 # Alfredo Tupone <tupone@gentoo.org> (2023-01-18)
 # Masked for removal in 30 days.
 # Not maintained (2006), no rev dep, bugs
@@ -755,56 +712,9 @@ dev-python/pkgutil_resolve_name
 # Removal after 2023-03-01.  Bug #890244.
 www-client/dillo
 
-# John Helmert III <ajak@gentoo.org> (2023-01-08)
-# Multiple vulnerabilities include remote code execution, maintainer
-# needed, removal in 30 days. Bug #834501
-dev-util/artifactory-bin
-
-# Michael Mair-Keimberger <mmk@levelnine.at> (2023-01-08)
-# Broken since many years, no reverse dependencies, last release from 2000
-# Bug #678518. Removal on 2023-02-08.
-net-dns/dnswalk
-
-# Michael Mair-Keimberger <mmk@levelnine.at> (2023-01-08)
-# EAPI=6, Installs only card pictures and has no reverse dependencies.
-# Bug #805278. Removal on 2023-02-08.
-dev-games/cardpics
-
-# Michael Mair-Keimberger <mmk@levelnine.at> (2023-01-08)
-# Dependencies of games-server/cyphesis, which got removed ~4 years ago, no
-# other reverse dependencies. Bug #728230
-# Removal on 2023-02-08.
-dev-games/mercator
-dev-games/wfmath
-
 # Sam James <sam@gentoo.org> (2023-01-05)
 # Breaks reverse dependencies: bug #889694, bug #888579.
 =sys-fs/btrfs-progs-6.1.1
-
-# David Seifert <soap@gentoo.org> (2023-01-02)
-# EAPI 6, pretty much no upstream activity, outdated, last upstream
-# release over 3 years ago, no revdeps. Removal on 2023-02-01.
-dev-cpp/pngpp
-
-# Jonas Stein <jstein@gentoo.org> (2023-01-01)
-# Package is broken and unusable, no activity upstream.
-# Removal after 2023-02-01.  Bug #722568.
-net-analyzer/chaosreader
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2022-12-31)
-# EAPI=6 ebuild, live only packages for 1 year! maintainer-needed package.
-# Removal: 2023-01-30.  Bug #889200.
-app-containers/docker-gc
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2022-12-31)
-# Live only packages for 4 years!
-# Removal: 2023-01-30.  Bug #889196.
-sys-auth/google-authenticator-libpam-hardened
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2022-12-31)
-# EAPI=6 ebuild, live only packages for 6 years!
-# Removal: 2023-01-30.  Bug #889194.
-x11-plugins/pidgin-funyahoo-plusplus
 
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2022-12-29)
 # Upstream is dead, last activity in Nov 2017. Does not
@@ -830,12 +740,6 @@ net-p2p/vuze-coreplugins
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2022-12-19)
 # This version currently is not compatible with kernel build (yet)
 ~dev-util/bindgen-0.63.0
-
-# Jonas Stein <jstein@gentoo.org> (2022-12-11)
-# Unfetchable and mirror-restricted.
-# Upstream discontinued
-# Removal after 2023-02-01.  Bug #884715.
-dev-cpp/sourcetrail
 
 # Sam James <sam@gentoo.org> (2022-12-09)
 # Breaks compilation of reverse dependencies with broken pkgconfig (pc) file

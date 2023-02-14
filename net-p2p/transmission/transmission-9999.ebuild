@@ -1,7 +1,7 @@
 # Copyright 2006-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit cmake tmpfiles systemd xdg-utils
 
@@ -39,7 +39,7 @@ BDEPEND="
 	)
 "
 COMMON_DEPEND="
-	>=dev-libs/libevent-2.1.0:=
+	>=dev-libs/libevent-2.1.0:=[threads(+)]
 	!mbedtls? ( dev-libs/openssl:0= )
 	mbedtls? ( net-libs/mbedtls:0= )
 	net-libs/libnatpmp
@@ -68,12 +68,6 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	${ACCT_DEPEND}
 "
-
-src_prepare() {
-	cmake_src_prepare
-	# https://github.com/transmission/transmission/issues/3901
-	rm -f libtransmission/version.h || die
-}
 
 src_configure() {
 	local mycmakeargs=(
