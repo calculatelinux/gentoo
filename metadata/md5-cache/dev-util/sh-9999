@@ -9,5 +9,5 @@ LICENSE=Apache-2.0 BSD
 PROPERTIES=live
 RESTRICT=strip
 SLOT=0
-_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f	go-module	75029f071ebc843223233ab1b0a2d4a5
-_md5_=de00fe6aa0b0be46fef141e4d76dfdd7
+_eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f	go-module	f2c9bcab49079a176b3ae061c94bb344	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730
+_md5_=a7a39076c39fb306739cd4fcb89b5c2e

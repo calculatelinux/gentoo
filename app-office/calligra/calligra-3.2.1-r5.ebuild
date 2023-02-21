@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -8,7 +8,7 @@ ECM_HANDBOOK="forceoptional"
 ECM_TEST="forceoptional"
 KFMIN=5.88.0
 QTMIN=5.15.2
-inherit check-reqs ecm kde.org
+inherit check-reqs ecm flag-o-matic kde.org
 
 DESCRIPTION="KDE Office Suite"
 HOMEPAGE="https://calligra.org/"
@@ -122,6 +122,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-cxx17-fixes.patch
 	"${FILESDIR}"/${P}-poppler-22.03.0-{1,2}.patch
 	"${FILESDIR}"/${P}-poppler-22.04.0.patch
+	"${FILESDIR}"/${P}-clang-16-c++17.patch
 )
 
 pkg_pretend() {

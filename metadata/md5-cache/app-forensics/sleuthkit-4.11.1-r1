@@ -12,5 +12,5 @@ RDEPEND=dev-db/sqlite:3 dev-lang/perl:* aff? ( app-forensics/afflib ) ewf? ( sys
 RESTRICT=!test? ( test )
 SLOT=0/19
 SRC_URI=https://github.com/sleuthkit/sleuthkit/releases/download/sleuthkit-4.11.1/sleuthkit-4.11.1.tar.gz java? ( http://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.25.2/sqlite-jdbc-3.25.2.jar ) ewf? ( https://github.com/sleuthkit/libewf_64bit/archive/VisualStudio_2010.tar.gz -> sleuthkit-libewf_64bit-20130416.tar.gz )
-_eclasses_=autotools	6dcd6b6a486e79928e1243ff9ba41fcc	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	java-ant-2	5cf479aa9e0ac9cc55899f2762c2aaa0	java-pkg-opt-2	a71433e535af8faae0c0f6c861a32054	java-utils-2	7b583ddc65574e378a6cc934f7c114a8	libtool	241a8f577b9781a42a7421e53448a44e	multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	9a610728b9bcca1919234cceb35a1027
+_eclasses_=autotools	6dcd6b6a486e79928e1243ff9ba41fcc	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	java-ant-2	3745cb8c0fe6525dafe8e2422a8fd501	java-pkg-opt-2	4d26f2efd4c5ec82b66d1e8816f421b2	java-utils-2	eefed04ac580a259ecda1fbd966640b7	libtool	241a8f577b9781a42a7421e53448a44e	multilib	5ca4e49abed8e3a2f7b56920eadee157	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b
 _md5_=5552f95358e5c37443558c825648b9b7

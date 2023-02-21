@@ -12,5 +12,5 @@ LICENSE=GPL-3+ BitstreamVera OFL-1.1
 RDEPEND=dev-libs/boost:= dev-libs/zziplib:= media-libs/libpng media-libs/libsdl2 media-libs/sdl2-image[png] media-libs/sdl2-net media-libs/sdl2-ttf media-video/ffmpeg:=[mp3,vorbis] sys-libs/zlib virtual/opengl virtual/glu alsa? ( media-libs/alsa-lib ) curl? ( net-misc/curl ) speex? ( media-libs/speex media-libs/speexdsp ) upnp? ( net-libs/miniupnpc )
 SLOT=0
 SRC_URI=https://github.com/Aleph-One-Marathon/alephone/archive/refs/tags/release-20230119.tar.gz
-_eclasses_=autotools	6dcd6b6a486e79928e1243ff9ba41fcc	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	5ca4e49abed8e3a2f7b56920eadee157	optfeature	1a2157392a869265b2afcb63a26c12ac	prefix	eab3c99d77fe00506c109c8a736186f7	toolchain-funcs	9a610728b9bcca1919234cceb35a1027	xdg	6024fbc93167fad782e2032933654857	xdg-utils	ac0e315a3688929e34ac75b139e7349a
+_eclasses_=autotools	6dcd6b6a486e79928e1243ff9ba41fcc	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	5ca4e49abed8e3a2f7b56920eadee157	optfeature	1a2157392a869265b2afcb63a26c12ac	prefix	eab3c99d77fe00506c109c8a736186f7	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	xdg	6024fbc93167fad782e2032933654857	xdg-utils	ac0e315a3688929e34ac75b139e7349a
 _md5_=d0c534d0795a9972f9cea3712a2ffeba

@@ -33,6 +33,70 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2023-02-20)
+# No declared Python 3.11 support.  Multiple failing tests (probably due
+# to being online tests).  Last release in 2021, upstream CI is all red.
+# No revdeps.
+# Removal on 2023-03-22.  Bug #895614.
+dev-python/pandas-datareader
+
+# Michał Górny <mgorny@gentoo.org> (2023-02-20)
+# Uses dev-python/nose, no py3.11 support.  Last upstream commit
+# in 2019.  Used only for dev-python/matplotlib[doc].
+# Removal on 2023-03-22.  Bug #888241.
+dev-python/colorspacious
+
+# Bernd Waibel <waebbl-gentoo@posteo.net> (2023-02-19)
+# Obsolete, last consumer is gone.
+# Removal on 2023-03-21. Bug #892209
+app-eselect/eselect-opencascade
+
+# Michał Górny <mgorny@gentoo.org> (2023-02-19)
+# Incompatible with Python 3.11.  Last commit in 2017, archived in 2020.
+# No revdeps.
+# Removal on 2023-03-21.  Bug #895342.
+dev-python/flask-script
+
+# Sam James <sam@gentoo.org> (2023-02-18)
+# Last release in 2018, needs porting to Python 3.11, and no reverse
+# dependencies. Removal on 2023-03-18. bug #895174.
+dev-python/setuptools_trial
+
+# Sam James <sam@gentoo.org> (2023-02-18)
+# Backport to Python 3.5(!) hence irrelevant for newer versions of Python
+# where os.scandir() and os.walk() improvements were integrated in the stdlib.
+# Incompatible with Python 3.11. No reverse dependencies.
+# Removal on 2023-03-18. bug #895198
+dev-python/scandir
+
+# Michał Górny <mgorny@gentoo.org> (2023-02-17)
+# Merged into dev-python/pytest-cov in 2020.  No revdeps left.
+# Removal on 2023-03-19.  Bug #895120.
+dev-python/cov-core
+
+# Michał Górny <mgorny@gentoo.org> (2023-02-17)
+# Broken against the current package versions in ::gentoo.  Upstream
+# inactive.  No revdeps.
+# Removal on 2023-03-19.  Bug #865931.
+dev-python/pytest-flake8
+
+# Michał Górny <mgorny@gentoo.org> (2023-02-15)
+# A number of test failures, and the test phase does not fail correctly.
+# Last release in 2019.  No revdeps.
+# Removal on 2023-03-17.  Bug #894606.
+dev-python/urlgrabber
+
+# Michał Górny <mgorny@gentoo.org> (2023-02-15)
+# Unmaintained.  Broken with current version of dev-python/pyglet.
+# No upstream activity since Sep 2021.  No revdeps.
+# Removal on 2023-03-17.  Bug #887973.
+dev-python/glooey
+
+# Alfredo Tupone <tupone@gentoo.org> (2023-02-14)
+# Masked for removal in 30 days.
+# Not maintained (2020), no rev dep
+dev-ml/ppxfind
+
 # Michał Górny <mgorny@gentoo.org> (2023-02-14)
 # Unmaintained and archived.  Invalid version number causes total mayhem
 # when installed alongside new dev-python/packaging.
@@ -66,21 +130,6 @@ acct-group/jabber
 dev-java/jspeex
 dev-java/osgi-annotation-versioning
 dev-java/commons-text
-
-# Michał Górny <mgorny@gentoo.org> (2023-02-05)
-# dev-python/python-box has broken build system that prevents us from
-# bumping it.  Its only used by dev-python/tavern that is last rited,
-# and dev-python/tavalidate that no longer has any revdeps.
-# Removal on 2023-03-07.
-dev-python/python-box
-dev-python/tavalidate
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2023-02-04)
-# pytest plugin, which breaks a lot of python_test of other ebuilds
-# if installed unless disabled. The package itself is hard to
-# maintain. No reverse dependencies.
-# Removal: 2023-03-06.  Bug #893212.
-dev-python/tavern
 
 # Michał Górny <mgorny@gentoo.org> (2023-02-03)
 # Hacky build system that does not work via PEP517 build backend.
@@ -751,11 +800,6 @@ net-p2p/vuze-coreplugins
 # are developers or want more experimental features
 # and accept a more unstable release.
 >=www-client/chromium-111
-
-# Piotr Karbowski <slashbeast@gentoo.org> (2022-11-29)
-# Multiple stability issues, deadlocks on exit, broken API.
-# Bug #883559
-=net-p2p/qbittorrent-4.5.0
 
 # Matt Turner <mattst88@gentoo.org> (2022-11-16)
 # Packages or their dependencies have not been ported to libsoup:3.0, while

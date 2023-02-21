@@ -11,5 +11,5 @@ LICENSE=GPL-2
 RDEPEND=net-dialup/ppp:= sys-apps/iproute2 tk? ( dev-lang/tk:= )
 SLOT=0
 SRC_URI=https://dianne.skoll.ca/projects/rp-pppoe/download/rp-pppoe-3.15.tar.gz https://dev.gentoo.org/~polynomial-c/dist/rp-pppoe-3.14-patches-01.tar.xz
-_eclasses_=autotools	6dcd6b6a486e79928e1243ff9ba41fcc	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	5ca4e49abed8e3a2f7b56920eadee157	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55	toolchain-funcs	9a610728b9bcca1919234cceb35a1027
+_eclasses_=autotools	6dcd6b6a486e79928e1243ff9ba41fcc	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	5ca4e49abed8e3a2f7b56920eadee157	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b
 _md5_=28b69f918d267ad98c1f73dc0f53e41f

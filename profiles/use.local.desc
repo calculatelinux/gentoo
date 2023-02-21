@@ -661,7 +661,6 @@ app-emulation/virtualbox:sdk - Enable building of SDK
 app-emulation/virtualbox:udev - Controls installation of special USB udev rules.
 app-emulation/virtualbox:vboxwebsrv - Build and install the VirtualBox webservice
 app-emulation/virtualbox:vde - Support for VDE networking via net-misc/vde
-app-emulation/virtualbox-modules:pax-kernel - Apply patch needed for pax enabled kernels
 app-emulation/vkd3d:spirv-tools - Enable SPIRV shader debugging support using dev-util/spirv-tools
 app-emulation/vkd3d-proton:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
 app-emulation/vkd3d-proton:extras - Install extra tools and demos in /usr/lib/vkd3d-proton
@@ -2870,7 +2869,6 @@ dev-vcs/git:highlight - GitWeb support for app-text/highlight
 dev-vcs/git:mediawiki - Support pulling and pushing from MediaWiki
 dev-vcs/git:mediawiki-experimental - Add experimental patches for improved MediaWiki support
 dev-vcs/git:perforce - Add support for Perforce version control system (requires manual installation of Perforce client)
-dev-vcs/git:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arch
 dev-vcs/git:safe-directory - Respect the safe.directory setting
 dev-vcs/git:subversion - Include git-svn for dev-vcs/subversion support
 dev-vcs/git:tk - Include the 'gitk' and 'git gui' tools
@@ -3512,7 +3510,6 @@ kde-frameworks/kconfig:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
 kde-frameworks/kconfigwidgets:designer - Build plugins for dev-qt/designer
 kde-frameworks/kfilemetadata:epub - Enable support for reading EPUB ebook metadata
 kde-frameworks/kfilemetadata:mobi - Enable mobipocket support via kde-apps/kdegraphics-mobipocket
-kde-frameworks/kfilemetadata:office - Enable support for reading ODF and OOXML metadata
 kde-frameworks/kglobalaccel:X - Build the kglobalacceld runtime needed for X
 kde-frameworks/kiconthemes:designer - Build plugins for dev-qt/designer
 kde-frameworks/kimageformats:avif - Support the AVIF image file format
@@ -6718,6 +6715,7 @@ net-p2p/retroshare:webui - Enables Web interface and API support
 net-p2p/retroshare:xapian - Enables GXS content indexing and search via dev-libs/xapian
 net-p2p/syncthing:tools - Install stdiscosrv, strelaysrv and other tools to /usr/libexec/syncthing/.
 net-p2p/transmission:cli - Build command-line client
+net-p2p/transmission:debug - Enable assertions
 net-p2p/transmission:lightweight - Optimize transmission for low-resource systems (smaller cache size, prefer unencrypted peer connections, etc.)
 net-p2p/transmission:mbedtls - Use mbed TLS instead of OpenSSL
 net-p2p/transmission-remote-gtk:libproxy - Use net-libs/libproxy for getting the HTTP/HTTPS/SOCKS proxy configuration.
@@ -8189,7 +8187,6 @@ sys-devel/gdb:sim - Build gdb's simulators for various hardware platforms. See h
 sys-devel/gdb:source-highlight - Enable listing highlighting via dev-util/source-highlight
 sys-devel/gdb:xml - Support parsing XML data files needed (at least) for cpu features, memory maps, and syscall tracing
 sys-devel/gdb:xxhash - Use dev-libs/xxhash to speed up internal hashing.
-sys-devel/gettext:cvs - When running `autopoint`, use cvs to store the internal development files; this requires cvs at runtime, but will be faster/smaller than raw archives
 sys-devel/gettext:git - When running `autopoint`, use git to store the internal development files; this requires git at runtime, but will be faster/smaller than raw archives
 sys-devel/lld-toolchain-symlinks:multilib-symlinks - Install symlinks for all ABI CHOSTs. Note that this can result in gcc being overrode for native builds, as well as conflict with crossdev if used for the same targets.
 sys-devel/lld-toolchain-symlinks:native-symlinks - Install generic 'ld' symlink, as well as ${CTARGET}-ld. These symlinks are installed into slotted LLVM bindir, so they should not take precedence over symlinks installed into /usr/bin by sys-devel/binutils-config but they can be helpful for binutils-free setups.
@@ -8219,10 +8216,10 @@ sys-fabric/mstflint:adb-generic-tools - Enable compiling the following tools: ms
 sys-fabric/mstflint:inband - Enable firmware updates for Mellanox SwitchX and ConnectIB devices
 sys-fabric/opensm:tools - Install ssld extra tool
 sys-firmware/edk2-ovmf:binary - Use pre-built binaries
-sys-firmware/intel-microcode:hostonly - only install ucode(s) supported by currently available (=online) processor(s)
-sys-firmware/intel-microcode:initramfs - install a small initramfs for use with CONFIG_MICROCODE_EARLY
-sys-firmware/intel-microcode:split-ucode - install the split binary ucode files (used by the kernel directly)
-sys-firmware/intel-microcode:vanilla - install only microcode updates from Intel's official microcode tarball
+sys-firmware/intel-microcode:hostonly - Only install ucode(s) supported by currently available (=online) processor(s)
+sys-firmware/intel-microcode:initramfs - Install a small initramfs for use with CONFIG_MICROCODE_EARLY
+sys-firmware/intel-microcode:split-ucode - Install the split binary ucode files (used by the kernel directly)
+sys-firmware/intel-microcode:vanilla - Only install microcode updates from Intel's official microcode tarball
 sys-firmware/ipxe:binary - Use pre-built binaries
 sys-firmware/ipxe:efi - Build an EFI program for using PXE
 sys-firmware/ipxe:iso - Build a bootable ISO for using PXE
@@ -8983,7 +8980,6 @@ x11-themes/vertex-theme:xfce - Install theme for xfce-base/xfwm4
 x11-themes/zuki-themes:gnome-shell - Install theme for gnome-base/gnome-shell
 x11-themes/zuki-themes:gtk2 - Install GTK+2 theme
 x11-themes/zuki-themes:xfce - Install theme for xfce-base/xfwm4
-x11-themes/zukitwo:gnome-shell - Install theme for gnome-base/gnome-shell
 x11-wm/ctwm:jpeg - Enable jpeg image support with virtual/jpeg
 x11-wm/ctwm:test - Enable upstream test suite, build required binary
 x11-wm/ctwm:xpm - Enable xpm icon support with x11-libs/libXpm

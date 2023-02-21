@@ -1,0 +1,16 @@
+BDEPEND=<sys-devel/clang-16:= man? ( dev-python/sphinx ) >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=<sys-devel/clang-16:= !!sys-devel/llvm:0
+DESCRIPTION=C-family abstract syntax tree XML output tool
+EAPI=8
+HOMEPAGE=https://github.com/CastXML/CastXML
+INHERIT=cmake llvm
+IUSE=+man test
+KEYWORDS=~amd64 ~arm ~riscv ~x86
+LICENSE=Apache-2.0
+RDEPEND=<sys-devel/clang-16:=
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/CastXML/CastXML/archive/v0.5.1.tar.gz -> castxml-0.5.1.tar.gz
+_eclasses_=cmake	449b4785acace35308fe747fc939bde1	flag-o-matic	69394e25812406faa1f90edaf4969395	llvm	4cc6f8e29d24a8011266413e74c728bb	multilib	5ca4e49abed8e3a2f7b56920eadee157	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	38c85b725d0467e51954ea921b6c104b	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	xdg-utils	ac0e315a3688929e34ac75b139e7349a
+_md5_=9e3c5ded1f6369edc75eefef73396018

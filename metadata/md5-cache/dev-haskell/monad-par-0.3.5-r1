@@ -12,5 +12,5 @@ RDEPEND=>=dev-haskell/abstract-deque-0.1.4:=[profile?] dev-haskell/abstract-par:
 RESTRICT=!test? ( test )
 SLOT=0/0.3.5
 SRC_URI=https://hackage.haskell.org/package/monad-par-0.3.5/monad-par-0.3.5.tar.gz https://hackage.haskell.org/package/monad-par-0.3.5/revision/2.cabal -> monad-par-0.3.5-rev2.cabal
-_eclasses_=ghc-package	dbe1a8d17cacb390a3df7bbba6617679	haskell-cabal	05d8a4fa4d20422c724fc38b4b9f15c0	multilib	5ca4e49abed8e3a2f7b56920eadee157	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	9a610728b9bcca1919234cceb35a1027
+_eclasses_=ghc-package	dbe1a8d17cacb390a3df7bbba6617679	haskell-cabal	05d8a4fa4d20422c724fc38b4b9f15c0	multilib	5ca4e49abed8e3a2f7b56920eadee157	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b
 _md5_=fee0fde90b821367dffa756e8b142e4b

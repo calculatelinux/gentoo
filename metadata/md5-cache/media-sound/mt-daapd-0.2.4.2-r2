@@ -11,5 +11,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/libid3tag:= net-dns/avahi[dbus] sys-libs/gdbm:= sys-libs/zlib:= vorbis? ( media-libs/libvorbis media-libs/libogg ) virtual/tmpfiles
 SLOT=0
 SRC_URI=mirror://sourceforge/mt-daapd/mt-daapd-0.2.4.2.tar.gz
-_eclasses_=autotools	6dcd6b6a486e79928e1243ff9ba41fcc	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	5ca4e49abed8e3a2f7b56920eadee157	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f	toolchain-funcs	9a610728b9bcca1919234cceb35a1027
+_eclasses_=autotools	6dcd6b6a486e79928e1243ff9ba41fcc	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	5ca4e49abed8e3a2f7b56920eadee157	tmpfiles	216aa76c3a6fcb5d893c23a0de86048f	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b
 _md5_=2230eeb23be90d4062ca5d725de6558a

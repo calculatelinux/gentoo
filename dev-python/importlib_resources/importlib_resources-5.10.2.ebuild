@@ -1,12 +1,13 @@
 # Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-# please keep this ebuild at EAPI 7 -- sys-apps/portage dep
 EAPI=7
 
 DISTUTILS_USE_PEP517=flit
-# This is a backport of Python 3.9's importlib.resources
-PYTHON_COMPAT=( pypy3 )
+# This is a backport of importlib.resources that's present since py3.9.
+# However, the version in 3.9 is buggy, so matplotlib needs it on 3.9
+# as well.
+PYTHON_COMPAT=( pypy3 python3_9 )
 
 inherit distutils-r1
 
@@ -22,7 +23,7 @@ SRC_URI="
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~x64-macos ~x64-solaris"
+KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-macos ~x64-solaris"
 
 RDEPEND="
 	$(python_gen_cond_dep '

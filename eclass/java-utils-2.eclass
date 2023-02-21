@@ -6,7 +6,7 @@
 # java@gentoo.org
 # @AUTHOR:
 # Thomas Matthijs <axxo@gentoo.org>, Karl Trygve Kalleberg <karltk@gentoo.org>
-# @SUPPORTED_EAPIS: 5 6 7 8
+# @SUPPORTED_EAPIS: 6 7 8
 # @BLURB: Base eclass for Java packages
 # @DESCRIPTION:
 # This eclass provides functionality which is used by java-pkg-2.eclass,
@@ -18,7 +18,7 @@
 # Ant-based packages.
 
 case ${EAPI:-0} in
-	[5678]) ;;
+	[678]) ;;
 	*) die "${ECLASS}: EAPI ${EAPI:-0} not supported" ;;
 esac
 
@@ -27,7 +27,7 @@ _JAVA_UTILS_2_ECLASS=1
 
 # EAPI 7 has version functions built-in. Use eapi7-ver for all earlier eclasses.
 # Keep versionator inheritance in case consumers are using it implicitly.
-[[ ${EAPI} == [56] ]] && inherit eapi7-ver eutils multilib versionator
+[[ ${EAPI} == 6 ]] && inherit eapi7-ver eutils multilib versionator
 
 # Make sure we use java-config-2
 export WANT_JAVA_CONFIG="2"
@@ -1934,12 +1934,8 @@ etestng() {
 # Don't call directly, but via java-pkg-2_src_prepare!
 java-utils-2_src_prepare() {
 	case ${EAPI:-0} in
-		5)
-			java-pkg_func-exists java_prepare && java_prepare ;;
-		*)
-			java-pkg_func-exists java_prepare &&
-				eqawarn "java_prepare is no longer called, define src_prepare instead."
-			eapply_user ;;
+		[678]) eapply_user ;;
+		*) default_src_prepare ;;
 	esac
 
 	# Check for files in JAVA_RM_FILES array.
@@ -1955,6 +1951,12 @@ java-utils-2_src_prepare() {
 		find "${WORKDIR}" -name "*.class"
 		echo "Search done."
 	fi
+
+	# Delete bundled .class and .jar files.
+	case ${EAPI:-0} in
+		[678]) ;;
+		*) java-pkg_clean ;;
+	esac
 }
 
 # @FUNCTION: java-utils-2_pkg_preinst
@@ -2945,7 +2947,7 @@ is-java-strict() {
 java-pkg_clean() {
 	NO_DELETE=()
 	for keep in ${JAVA_PKG_NO_CLEAN[@]}; do
-		NO_DELETE+=( '!' '-wholename' ${keep} )
+		NO_DELETE+=( '!' '-path' ${keep} )
 	done
 	find "${@}" '(' -name '*.class' -o -name '*.jar' ${NO_DELETE[@]} ')' -type f -delete -print || die
 }
