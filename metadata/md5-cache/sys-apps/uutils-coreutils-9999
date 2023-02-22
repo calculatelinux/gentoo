@@ -1,0 +1,12 @@
+BDEPEND=>=virtual/rust-1.56.0 >=virtual/rust-1.53 >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install test unpack
+DESCRIPTION=GNU coreutils rewritten in Rust
+EAPI=8
+HOMEPAGE=https://uutils.github.io/user/
+INHERIT=cargo git-r3
+IUSE=debug
+LICENSE=MIT Apache-2.0 BSD-2 BSD CC0-1.0 ISC MIT Unicode-DFS-2016
+PROPERTIES=live
+SLOT=0
+_eclasses_=cargo	33a6fedd9e309870a65565d0b995fb41	git-r3	2347f8fe2d392b2a091191f94be37e6f	multilib	5ca4e49abed8e3a2f7b56920eadee157	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b
+_md5_=483507b1564f39f378c67f4a19d50268
