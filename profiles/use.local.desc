@@ -2435,6 +2435,7 @@ dev-python/python-mpd:twisted - Enable twisted support
 dev-python/python-stdnum:vies - Enable VIES
 dev-python/pyudev:qt5 - Install PyQt5 bindings
 dev-python/pyzmq:draft - Enable draft API support
+dev-python/pyzmq:drafts - Enable draft API support
 dev-python/qiskit-terra:visualization - Enable visualization modules
 dev-python/rarfile:compressed - Enables the module to support compressed v3 archives by calling the app-arch/unrar.
 dev-python/rfc3986:idna - enable support for the IDNA specification (RFC 5891)
@@ -3948,11 +3949,11 @@ media-gfx/freecad:cloud - Build the Cloud workbench, to access cloud providers (
 media-gfx/freecad:designer - Build and install the Qt designer plugin, so the FreeCAD widgets can be used from within designer.
 media-gfx/freecad:fem - Build the FEM module and workbench which provides Finite Element Analysis (FEA) workflows
 media-gfx/freecad:gui - Build FreeCAD with a Qt based GUI. If built without setting this USE flag, FreeCAD can be used in a headless mode, for server-side instances. The Python modules are available, without their GUI parts though, if this is unset.
-media-gfx/freecad:headless - Build FreeCAD without a GUI, usable for server-side instances. The Python modules are still available, without their GUI parts though.
 media-gfx/freecad:idf - Build the IDF module to provide file exchange capabilities with IDF files
 media-gfx/freecad:image - Build the image module and workbench for working with bitmap images
 media-gfx/freecad:inspection - Build the inspection workbench which gives you specific tools for examination of shapes (experimental)
 media-gfx/freecad:material - Build the material module and workbench to work with materials
+media-gfx/freecad:netgen - Build support for the netgen mesher through media-gfx/netgen.
 media-gfx/freecad:openscad - Build the OpenSCAD module for interoperability with OpenSCAD and repairing Constructive Solid Geometry (CSG) history
 media-gfx/freecad:part-design - Build the part design module and workbench for build part shapes from sketches
 media-gfx/freecad:path - Build the path module and workbench to procude G-Code instructions for CNC
@@ -5777,9 +5778,9 @@ net-im/spectrum2:whatsapp - Enables the WhatsApp backend, based on net-im/transw
 net-im/teams:swiftshader - Install SwiftShader OpenGL libaries.
 net-im/teams:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of bundled.
 net-im/teams:system-mesa - Use the system-wide media-libs/mesa instead of bundled.
-net-im/telegram-desktop:enchant - Enable the app-text/aspell spell-checking backend
+net-im/telegram-desktop:enchant - Use the app-text/aspell spell-checking backend instead of app-text/hunspell
 net-im/telegram-desktop:fonts - Use builtin patched copy of open-sans fonts (overrides fontconfig)
-net-im/telegram-desktop:hunspell - Enable the app-text/hunspell spell-checking backend
+net-im/telegram-desktop:hunspell - Enable the app-text/hunspell spell-checking backend (deprecated)
 net-im/telegram-desktop:qt6 - Build with Qt6 support
 net-im/telegram-desktop:qt6-imageformats - Add support for HEIF, AVIF and JpegXL by bundling kde-frameworks/kimageformats
 net-im/telepathy-connection-managers:gadu - Enable Gadu Gadu protocol support.
@@ -6604,7 +6605,6 @@ net-misc/x2goserver:fuse - Use net-fs/sshfs to allow shared folders
 net-misc/xmrig:donate - Set the default donation level to 1% instead of 0
 net-misc/xmrig:hwloc - Use sys-apps/hwloc for CPU affinity support
 net-misc/xmrig:opencl - Enable OpenCL support
-net-misc/youtube-dl:yt-dlp - Use net-misc/yt-dlp to provide the command and only install the python module
 net-misc/youtube-viewer:gtk - Install the gtk3 GUI
 net-misc/ytfzf:minimal - Skip app-shells/fzf and media-video/mpv dependencies (requires custom settings)
 net-misc/zerotier:clang - Use Clang compiler instead of GCC
@@ -8495,7 +8495,7 @@ sys-process/cronie:anacron - Install the periodic anacron command scheduler.
 sys-process/fcron:debug - Enable debug code and output. Since version 3.0.5 this will no longer force foreground execution, and fcron will be able to run as a service properly.
 sys-process/fcron:mta - Enable mta support for sending emails from fcron
 sys-process/fcron:pam - Enable PAM support for fcron. This means that fcron will pass through the "fcron" stack before executing the jobs, and fcrontab will use the "fcrontab" stack to authenticate the user before editing its crontab file.
-sys-process/fcron:system-crontab - Set up fcron to respect /etc/crontab and /etc/cron.d. If this flag is disabled, /etc/cron.d and /etc/crontab will be ignored, but /etc/cron.{hourly,daily,weekly,monthly} will still be respected.
+sys-process/fcron:system-crontab - Set up fcron to respect /etc/crontab and /etc/cron.d. If this flag is disabled, /etc/cron.d and /etc/crontab will be ignored, but /etc/cron.{hourly,daily,weekly,monthly} will still be respected. Also this creates /usr/bin/crontab symlink.
 sys-process/htop:delayacct - Enable Linux delay accounting support via dev-libs/libnl
 sys-process/htop:hwloc - Use sys-apps/hwloc for CPU affinity support
 sys-process/htop:openvz - Enable openvz support
