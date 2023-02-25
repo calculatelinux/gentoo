@@ -260,6 +260,7 @@ app-backup/bacula:bacula-clientonly - Disable DB support, and just build a clien
 app-backup/bacula:bacula-nodir - Disable building of director
 app-backup/bacula:bacula-nosd - Disable building of storage daemon
 app-backup/bacula:batch-insert - Enable batch insert into data base
+app-backup/bacula:ipv6 - Support IPV6 protocol"
 app-backup/bacula:logwatch - Install support files for logwatch
 app-backup/bareos:ceph - Enable sys-cluster/ceph support
 app-backup/bareos:clientonly - Only install file-daemon (client)
@@ -2701,6 +2702,7 @@ dev-tex/abntex:lyx - Install with app-office/lyx layout
 dev-tex/biblatex:biber - Install the unicode compatible backend processor
 dev-tex/pythontex:highlighting - Syntax highlighting using dev-python/pygments
 dev-texlive/texlive-basic:luajittex - Add support for LuaJitTeX: LuaTeX based on LuaJIT which is usually faster.
+dev-util/Tensile:client - Build and install tensile_client executable to run benchmarks and tune GPU GEMM
 dev-util/bazel:tools - Install extra bazel tools to build from sources
 dev-util/bitcoin-tx:knots - Build enhanced Bitcoin Knots version, rather than Bitcoin Core
 dev-util/bpftool:caps - Use sys-libs/libcap to enable unprivileged run support
@@ -3851,8 +3853,9 @@ media-fonts/intlfonts:bdf - Install BDF fonts in addition to PCF
 media-fonts/liberation-fonts:fontforge - Use media-gfx/fontforge to build fonts from source
 media-fonts/montecarlo:bdf - Install BDF fonts in addition to PCF
 media-fonts/mplus-outline-fonts:ipafont - Generates new fonts merged with media-fonts/ja-ipafonts
-media-fonts/noto:extra - Install full upstream font set
+media-fonts/noto:extra - Install full upstream font set including condensed, semi-bold, extra-light variants
 media-fonts/noto-emoji:buildfont - Build Noto Emoji font with supplied images
+media-fonts/noto-emoji:icons - Install Noto Emoji icon theme
 media-fonts/sil-charis:compact - Use more compactly spaced font
 media-fonts/terminus-font:a-like-o - Changes view of letter 'a' - a looks like o (see homepage)
 media-fonts/terminus-font:center-tilde - Place the '~' character vertically centered on the line instead of to the top.
@@ -9030,6 +9033,7 @@ x11-wm/notion:xrandr - Add support for xrandr
 x11-wm/openbox:session - Enables support for session managers
 x11-wm/openbox:xdg - Install the python xdg files for xdg autostart
 x11-wm/pekwm:contrib - Install optional extras in the documentation directory
+x11-wm/pekwm:pango - Pango font support
 x11-wm/pekwm:themes - Install additional themes
 x11-wm/ratpoison:history - Use sys-libs/readline for history handling
 x11-wm/ratpoison:sloppy - Install sloppy, a focus-follows-mouse implementation for ratpoison
