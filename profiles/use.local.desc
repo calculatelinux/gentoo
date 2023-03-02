@@ -1202,7 +1202,6 @@ app-text/stardict:wordnet - Enable wordnet plugin to find similar English words 
 app-text/stardict:xdxfparse - Enable plugin to parse dictionaries in xdxf (XML Dictionary eXchange Format)
 app-text/stardict:youdaodict - Enable youdao.com network plugin (for Chinese language)
 app-text/sword:clucene - Use dev-cpp/clucene for lucene search support
-app-text/sword-modules:esoteric - Install modules with no linguistic content, in unknown languages etc.
 app-text/tessdata_best:osd - Enable support orientation and script detection.
 app-text/tessdata_fast:osd - Enable support orientation and script detection.
 app-text/tessdata_legacy:math - Enable support for recognition of equations.
@@ -1750,7 +1749,7 @@ dev-lang/php:cli - Enable CLI SAPI
 dev-lang/php:coverage - Include gcov symbols for test coverage and lcov reports. Only useful for extension developers, and requires GCC.
 dev-lang/php:ctype - Enable ctype functions
 dev-lang/php:embed - Enable embed SAPI
-dev-lang/php:enchant - Add supports Enchant spelling library.
+dev-lang/php:enchant - Add supports Enchant spelling library
 dev-lang/php:ffi - Add foreign function interface (ffi extension) support
 dev-lang/php:fileinfo - Add fileinfo extension support
 dev-lang/php:filter - Add filter extension support
@@ -4541,7 +4540,6 @@ media-sound/deadbeef:shellexec - Define custom shell commands that can be called
 media-sound/deadbeef:supereq - Enable equalizer
 media-sound/denemo:alsa - Enable alsa support through media-libs/alsa-lib
 media-sound/denemo:aubio - Enable media-libs/aubio support
-media-sound/denemo:fluidsynth - Enable Fluidsynth MIDI software synthesis using media-sound/fluidsynth
 media-sound/denemo:jack - Enable jack support through virtual/jack
 media-sound/denemo:portaudio - Enable support for media-libs/portaudio
 media-sound/denemo:portmidi - Enable support for the media-libs/portmidi backend
@@ -5433,7 +5431,6 @@ net-analyzer/zabbix:mbedtls - Use net-libs/mbedtls as TLS backend
 net-analyzer/zabbix:odbc - Enable Database Monitor and use UnixODBC Library by default
 net-analyzer/zabbix:openipmi - Enable openipmi things
 net-analyzer/zabbix:openssl - Use dev-libs/openssl as TLS backend
-net-analyzer/zabbix:pcre2 - Use dev-libs/libpcre2 instead of dev-libs/libpcre
 net-analyzer/zabbix:proxy - Enable proxy support
 net-analyzer/zabbix:server - Enable zabbix server
 net-analyzer/zabbix:ssh - SSH v2 based checks
@@ -7184,6 +7181,7 @@ sci-libs/blis:openmp - Use openmp threadding model
 sci-libs/blis:pthread - Use pthread threadding model
 sci-libs/blis:serial - Use no threadding model
 sci-libs/caffe2:cuda - Add support for CUDA processing
+sci-libs/caffe2:distributed - Support distributed applications
 sci-libs/caffe2:ffmpeg - Add support for video processing operators
 sci-libs/caffe2:nnpack - Use NNPACK
 sci-libs/caffe2:numpy - Add support for math operations through numpy
@@ -7191,6 +7189,7 @@ sci-libs/caffe2:opencl - Use OpenCL
 sci-libs/caffe2:opencv - Add support for image processing operators
 sci-libs/caffe2:openmp - Use OpenMP for parallel code
 sci-libs/caffe2:qnnpack - Use QNNPACK
+sci-libs/caffe2:tensorpipe - Use tensorpipe
 sci-libs/caffe2:xnnpack - Use XNNPACK
 sci-libs/cantera:cti - Install CTI tools (ck2cti, ck2yaml, ctml_writer) for conversion of Chemkin files to Cantera format
 sci-libs/cddlib:tools - Add a few executables and tests for cddlib
@@ -7973,6 +7972,7 @@ sys-block/nbdkit:libssh - Enable the SSH plugin via net-libs/libssh.
 sys-block/nbdkit:libvirt - Enable the app-emulation/libvirt plugin.
 sys-block/nbdkit:nbd - Enable the nbd plugin via sys-libs/libnbd.
 sys-block/nbdkit:torrent - Enable the torrent plugin via net-libs/libtorrent-rasterbar.
+sys-block/ndctl:libtracefs - Use dev-libs/libtracefs to build cxl-monitor binary
 sys-block/open-iscsi:rdma - Support iSCSI over RDMA
 sys-block/open-iscsi:tcp - Support iSCSI over TCP
 sys-block/parted:debug - Enable debugging as encouraged by upstream: [The default configuration] includes --enable-debug (by default), which contains many assertions. Obviously, these "waste" space, but in the past, they have caught potentially dangerous bugs before they would have done damage, so we think it's worth it. Also, it means we get more bug reports ;)

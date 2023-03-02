@@ -807,6 +807,11 @@
       <role>AMD64, ARM, X86, MIPS, PPC</role>
     </member>
     <member>
+      <email>ceamac@gentoo.org</email>
+      <name>Viorel Munteanu</name>
+      <role>Bugs</role>
+    </member>
+    <member>
       <email>jsmolic@gentoo.org</email>
       <name>Jakov Smolić</name>
       <role>ARM, ARM64, dev-embedded</role>
@@ -3607,6 +3612,10 @@
     <member>
       <email>blueness@gentoo.org</email>
       <name>Anthony G. Basile</name>
+    </member>
+    <member>
+      <email>ceamac@gentoo.org</email>
+      <name>Viorel Munteanu</name>
     </member>
     <member>
       <email>jmbsvicetto@gentoo.org</email>

@@ -16,6 +16,12 @@ SRC_URI="https://github.com/django-crispy-forms/${PN}/archive/${PV}.tar.gz
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-RESTRICT="test" #Not working
+IUSE="test"
+RESTRICT="test" #Some tests are failing
 
 RDEPEND="dev-python/django[${PYTHON_USEDEP}]"
+BDEPEND="test? (
+	dev-python/pytest-django[${PYTHON_USEDEP}]
+)"
+
+distutils_enable_tests pytest

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-PYTHON_COMPAT=( python{3_9,3_10} )
+PYTHON_COMPAT=( python{3_9,3_10,3_11} )
 
 inherit autotools fcaps flag-o-matic linux-info python-single-r1 systemd toolchain-funcs
 
@@ -135,8 +135,8 @@ src_install() {
 
 	fowners -Rc root:netdata /usr/share/${PN}
 
-	newinitd system/netdata-openrc ${PN}
-	systemd_dounit system/netdata.service
+	newinitd system/openrc/init.d/netdata ${PN}
+	systemd_dounit system/systemd/netdata.service
 	insinto /etc/netdata
 	doins system/netdata.conf
 }
