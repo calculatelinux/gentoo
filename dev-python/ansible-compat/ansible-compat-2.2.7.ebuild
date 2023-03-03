@@ -27,7 +27,7 @@ RDEPEND="
 	>=dev-python/subprocess-tee-0.3.5[${PYTHON_USEDEP}]
 "
 BDEPEND="
-	>=dev-python/setuptools_scm-7.0.0[${PYTHON_USEDEP}]
+	>=dev-python/setuptools-scm-7.0.0[${PYTHON_USEDEP}]
 	test? (
 		dev-python/flaky[${PYTHON_USEDEP}]
 		dev-python/pytest-mock[${PYTHON_USEDEP}]
@@ -51,6 +51,6 @@ EPYTEST_DESELECT=(
 
 distutils_enable_sphinx docs \
 	dev-python/ansible-pygments \
-	dev-python/myst_parser \
+	dev-python/myst-parser \
 	dev-python/sphinx_ansible_theme
 distutils_enable_tests pytest
