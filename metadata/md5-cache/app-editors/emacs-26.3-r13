@@ -13,4 +13,4 @@ RDEPEND=app-emacs/emacs-common[games?,gui(-)?] sys-libs/ncurses:0= acl? ( virtua
 SLOT=26
 SRC_URI=mirror://gnu/emacs/emacs-26.3.tar.xz https://dev.gentoo.org/~ulm/emacs/emacs-26.3-patches-5.tar.xz
 _eclasses_=autotools	6dcd6b6a486e79928e1243ff9ba41fcc	elisp-common	79f8e13c80c89792e5c9b3fc8ef59f3b	flag-o-matic	69394e25812406faa1f90edaf4969395	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	5ca4e49abed8e3a2f7b56920eadee157	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55	toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b
-_md5_=c8cbf272b4d1d93a1005c25892b130ee
+_md5_=12493a09ba0539874e9d6a6f71867063

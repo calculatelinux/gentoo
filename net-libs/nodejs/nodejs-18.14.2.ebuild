@@ -20,7 +20,7 @@ if [[ ${PV} == *9999 ]]; then
 else
 	SRC_URI="https://nodejs.org/dist/v${PV}/node-v${PV}.tar.xz"
 	SLOT="0/$(ver_cut 1)"
-	KEYWORDS="amd64 arm arm64 ~loong ~ppc64 ~riscv x86 ~amd64-linux ~x64-macos"
+	KEYWORDS="amd64 arm arm64 ~loong ppc64 ~riscv x86 ~amd64-linux ~x64-macos"
 	S="${WORKDIR}/node-v${PV}"
 fi
 
@@ -47,10 +47,6 @@ BDEPEND="${PYTHON_DEPS}
 	test? ( net-misc/curl )
 	pax-kernel? ( sys-apps/elfix )"
 DEPEND="${RDEPEND}"
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-12.22.5-shared_c-ares_nameser_h.patch
-)
 
 # These are measured on a loong machine with -ggdb on, and only checked
 # if debugging flags are present in CFLAGS.

@@ -20,7 +20,7 @@ SRC_URI="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 arm arm64 hppa ~ia64 ~ppc ppc64 ~riscv ~s390 sparc ~x86"
+KEYWORDS="amd64 arm arm64 hppa ~ia64 ppc ppc64 ~riscv ~s390 sparc x86"
 
 RDEPEND="
 	>=dev-python/packaging-21.3[${PYTHON_USEDEP}]
@@ -40,3 +40,8 @@ BDEPEND="
 distutils_enable_tests pytest
 
 export SETUPTOOLS_SCM_PRETEND_VERSION=${PV}
+
+EPYTEST_DESELECT=(
+	# requires Python 2 installed
+	tests/test_frontend.py::test_can_build_on_python_2
+)

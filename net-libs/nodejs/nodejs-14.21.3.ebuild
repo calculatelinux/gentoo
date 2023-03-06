@@ -20,7 +20,7 @@ if [[ ${PV} == *9999 ]]; then
 else
 	SRC_URI="https://nodejs.org/dist/v${PV}/node-v${PV}.tar.xz"
 	SLOT="0/$(ver_cut 1)"
-	KEYWORDS="amd64 arm arm64 ~ppc64 -riscv x86 ~amd64-linux ~x64-macos"
+	KEYWORDS="amd64 arm arm64 ppc64 -riscv x86 ~amd64-linux ~x64-macos"
 	S="${WORKDIR}/node-v${PV}"
 fi
 
@@ -52,7 +52,6 @@ BDEPEND="${PYTHON_DEPS}
 DEPEND="${RDEPEND}"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-12.22.5-shared_c-ares_nameser_h.patch
 	"${FILESDIR}"/${PN}-14.15.0-fix_ppc64_crashes.patch
 	"${FILESDIR}"/${PN}-14.19.0-global-npm-config.patch
 	"${FILESDIR}"/${PN}-gcc-13.patch

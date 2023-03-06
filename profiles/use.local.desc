@@ -1405,6 +1405,8 @@ dev-embedded/sdcc:ez80-z80 - Add support for EZ80-Z80
 dev-embedded/sdcc:gbz80 - Add support for Gameboy gbz80
 dev-embedded/sdcc:hc08 - Add support for Freescale/Motorola HC08 based
 dev-embedded/sdcc:mcs51 - Add support for Intel mcs51
+dev-embedded/sdcc:mos6502 - Add support for MOS 6502
+dev-embedded/sdcc:mos65c02 - Add support for MOS 65C02
 dev-embedded/sdcc:non-free - Enable non-free runtime library parts
 dev-embedded/sdcc:packihx - Enable Intel HEX files pack utility
 dev-embedded/sdcc:pdk13 - Add support for PDK13
@@ -1420,6 +1422,7 @@ dev-embedded/sdcc:s08 - Add support for Freescale/Motorola S08
 dev-embedded/sdcc:sdbinutils - Enable SDCC library archive utilities sdar, sdranlib, sdnm
 dev-embedded/sdcc:sdcdb - Enable SDCC source level debugger
 dev-embedded/sdcc:sdcpp - Enable SDCC preprocessor based on GCC cpp
+dev-embedded/sdcc:sm83 - Add support for Gameboy SM83
 dev-embedded/sdcc:stm8 - Add support for STMicroelectronics STM8
 dev-embedded/sdcc:tlcs90 - Add support for TLCS-90
 dev-embedded/sdcc:ucsim - Enable software simulator for microcontrollers
@@ -3325,6 +3328,7 @@ gui-apps/wayvnc:gbm - enable GPU-side screencopy (experimental)
 gui-apps/wayvnc:tracing - Trace kernel and memory calls
 gui-apps/wf-recorder:opencl - Enable OpenCL
 gui-libs/gtk:broadway - Enable the GDK Broadway backend.
+gui-libs/gtk:cloudproviders - Enable GtkPlacesSidebar to access cloud services
 gui-libs/gtk:colord - Use x11-misc/colord for color management in printing
 gui-libs/gtk:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 gui-libs/gtk:vulkan - Enable support for the Vulkan graphics API
@@ -8202,7 +8206,6 @@ sys-devel/llvm:exegesis - Enable performance counter support for llvm-exegesis t
 sys-devel/llvm:ncurses - Support querying terminal properties using ncurses' terminfo
 sys-devel/llvm:xar - Support dumping LLVM bitcode sections in Mach-O files (uses app-arch/xar)
 sys-devel/llvm:z3 - Enable support for sci-mathematics/z3 constraint solver
-sys-devel/llvm-roc:runtime - Builds the compiler runtime libraries.
 sys-devel/llvm-toolchain-symlinks:multilib-symlinks - Install symlinks for all ABI CHOSTs. Note that this can result in gcc being overrode for native builds, as well as conflict with crossdev if used for the same targets.
 sys-devel/llvm-toolchain-symlinks:native-symlinks - Install generic tool symlinks like 'objdump' and 'ranlib', as well as ${CTARGET}-*. These symlinks are installed into slotted LLVM bindir, so they should not take precedence over symlinks installed into /usr/bin by sys-devel/binutils-config but they can be helpful for binutils-free setups.
 sys-devel/parity:vc10_0 - Enable support for Visual Studio 2010
