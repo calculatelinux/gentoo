@@ -229,8 +229,10 @@ app-antivirus/clamtk:nautilus - Install the Nautilus plugin.
 app-antivirus/clamtk:nemo - Install the Nemo plugin.
 app-antivirus/clamtk:thunar - Install the Thunar plugin.
 app-arch/cabextract:extras - Install experimental extra tools: wince_info and wince_rename for examining and processing Windows CE installation cabinet header files; cabinfo for examining the structure of a cab file.
+app-arch/createrepo_c:legacy - Build with support for legacy weakdeps and hashes (not recommended!)
 app-arch/dpkg:libmd - Use app-crypt/libmd library for message digest functions
 app-arch/dpkg:update-alternatives - Install update-alternatives
+app-arch/drpm:lzip - Enable app-arch/lzip decompression support via app-arch/lzlib
 app-arch/dump:ermt - encrypted rmt support
 app-arch/dump:uuid - Enable UUID support
 app-arch/engrampa:caja - Enable engrampa to integrate with mate-base/caja by providing entries in its context menu
@@ -1310,7 +1312,6 @@ dev-db/etcd:server - Installs etcd daemon
 dev-db/firebird:server - Install the server components of Firebird, not just the client
 dev-db/firebird:xinetd - Install ClassicServer
 dev-db/mariadb:backup - Build mariadb-backup which supports SST and hot backup of InnoDB, Aria and MyISAM including compression and encryption
-dev-db/mariadb:client-libs - Build the client libraries from the server package instead of the C Connector packages
 dev-db/mariadb:columnstore - Build the ColumnStore storage engine
 dev-db/mariadb:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
 dev-db/mariadb:galera - Enables galera replication
@@ -2874,7 +2875,6 @@ dev-vcs/git:curl - Support fetching and pushing (requires webdav too) over http:
 dev-vcs/git:gpg - Pull in gnupg for signing -- without gnupg, attempts at signing will fail at runtime!
 dev-vcs/git:highlight - GitWeb support for app-text/highlight
 dev-vcs/git:mediawiki - Support pulling and pushing from MediaWiki
-dev-vcs/git:mediawiki-experimental - Add experimental patches for improved MediaWiki support
 dev-vcs/git:perforce - Add support for Perforce version control system (requires manual installation of Perforce client)
 dev-vcs/git:safe-directory - Respect the safe.directory setting
 dev-vcs/git:subversion - Include git-svn for dev-vcs/subversion support
@@ -5927,6 +5927,7 @@ net-irc/unrealircd:showlistmodes - Display channel modes in /LIST (only configur
 net-irc/weechat:alias - Enable plugin for alias control
 net-irc/weechat:buflist - Enable buflist plugin
 net-irc/weechat:charset - Enable encoding conversions
+net-irc/weechat:enchant - Enable spell checker plugin via Enchant instead of GNU Aspell
 net-irc/weechat:exec - Enable exec plugin
 net-irc/weechat:fifo - Enable FIFO support (sh pipes)
 net-irc/weechat:fset - Enable fast set plugin
@@ -7437,14 +7438,10 @@ sci-libs/vtk:cuda - Add support for CUDA
 sci-libs/vtk:freetype - Build support for font rendering
 sci-libs/vtk:gdal - Support for gdal formated data
 sci-libs/vtk:imaging - Building Imaging modules
-sci-libs/vtk:json - Support for json formatted data
-sci-libs/vtk:kits - Build kits in addition to modules
 sci-libs/vtk:las - Build support for LiDAR files
 sci-libs/vtk:logging - Build the logging module
-sci-libs/vtk:offscreen - Offscreen rendering through OSMesa
 sci-libs/vtk:openvdb - Build support to handle VDB data files
 sci-libs/vtk:pdal - Build support to handle point cloud data files
-sci-libs/vtk:pegtl - Use pegtl to build parsers
 sci-libs/vtk:qt6 - Use Qt6 packages instead of Qt5
 sci-libs/vtk:rendering - Building Redering modules
 sci-libs/vtk:sdl - Enable SDL2 support for rendering modules
@@ -7713,6 +7710,7 @@ sys-apps/flashrom:ch341a-spi - Enable WCH CH341A SPI programmer
 sys-apps/flashrom:dediprog - Dediprog SF100 support
 sys-apps/flashrom:developerbox-spi - Enable Devloperbox SPI recovery support
 sys-apps/flashrom:digilent-spi - Enable support for Digilent iCEblink40 development board
+sys-apps/flashrom:dirtyjtag-spi - Support for DirtyJTAG (a USB-JTAG firmware for STM32 MCUs)
 sys-apps/flashrom:drkaiser - Enable Dr. Kaiser programmer
 sys-apps/flashrom:dummy - Enable dummy tracing
 sys-apps/flashrom:ft2232-spi - Enable ftdi programmer, flashing through FTDI/SPI USB interface
@@ -7723,6 +7721,7 @@ sys-apps/flashrom:it8212 - Support for ITE IT8212F ATA/RAID controllers
 sys-apps/flashrom:jlink-spi - Support for SEGGER J-Link and compatible devices
 sys-apps/flashrom:linux-mtd - Enable support for Linux mtd SPI flash devices
 sys-apps/flashrom:linux-spi - Enable support for Linux userspace spidev interface
+sys-apps/flashrom:mediatek-i2c-spi - Support for Mediatek LCD controllers
 sys-apps/flashrom:mstarddc-spi - Support for SPI flash ROMs accessible through DDC in MSTAR-equipped displays
 sys-apps/flashrom:nic3com - Enable 3Com NIC programmer
 sys-apps/flashrom:nicintel - Support for Intel NICs
@@ -7731,9 +7730,12 @@ sys-apps/flashrom:nicintel-spi - Support for SPI on Intel NICs
 sys-apps/flashrom:nicnatsemi - Support for National Semiconductor NICs
 sys-apps/flashrom:nicrealtek - Support for Realtek NICs
 sys-apps/flashrom:ogp-spi - Enable support for OGP (Open Graphics Project) SPI flashing
-sys-apps/flashrom:pickit2-spi - SUpport for SPI flash ROMs accessible via Microchip PICkit2
+sys-apps/flashrom:parade-lspcon - Enable support for Parade lspcon USB-C to HDMI protocol translator
+sys-apps/flashrom:pickit2-spi - Support for SPI flash ROMs accessible via Microchip PICkit2
 sys-apps/flashrom:pony-spi - Enable support for SI-Prog like hardware by Lancos
+sys-apps/flashrom:raiden-debug-spi - Support for Chrome EC based debug tools - SuzyQable, Servo V4, C2D2 & uServo
 sys-apps/flashrom:rayer-spi - RayeR SPIPGM hardware support
+sys-apps/flashrom:realtek-mst-i2c-spi - Enable support for Realtek RTD2142 MST
 sys-apps/flashrom:satamv - Enable programmer for Marvell SATA controllers
 sys-apps/flashrom:satasii - Enable programmer for SiI SATA controllers
 sys-apps/flashrom:serprog - Enable Serial Flasher programmer
