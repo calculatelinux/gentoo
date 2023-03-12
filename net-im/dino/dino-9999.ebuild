@@ -26,23 +26,24 @@ RDEPEND="
 	app-text/gspell[vala]
 	dev-db/sqlite:3
 	dev-libs/glib:2
-	dev-libs/icu
-	dev-libs/libgee:0.8
+	dev-libs/icu:=
+	dev-libs/libgee:0.8=
+	gui-libs/gtk:4
+	>=gui-libs/libadwaita-1.2.0:1
 	net-libs/glib-networking
 	>=net-libs/libnice-0.1.15
 	net-libs/libsignal-protocol-c
 	net-libs/libsrtp:2
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
-	x11-libs/gtk+:3
 	x11-libs/pango
 	gpg? ( app-crypt/gpgme:= )
 	http? ( net-libs/libsoup:2.4 )
-	omemo? (
-		dev-libs/libgcrypt:0
-		media-gfx/qrencode
-	)
 	notification-sound? ( media-libs/libcanberra:0[sound] )
+	omemo? (
+		dev-libs/libgcrypt:=
+		media-gfx/qrencode:=
+	)
 "
 DEPEND="
 	${RDEPEND}
@@ -65,7 +66,7 @@ src_configure() {
 	local enabled_plugins=(
 		$(usex notification-sound "notification-sound" "")
 	)
-	local mycmakeargs+=(
+	local mycmakeargs=(
 		"-DENABLED_PLUGINS=$(local IFS=";"; echo "${enabled_plugins[*]}")"
 		"-DDISABLED_PLUGINS=$(local IFS=";"; echo "${disabled_plugins[*]}")"
 		"-DVALA_EXECUTABLE=${VALAC}"

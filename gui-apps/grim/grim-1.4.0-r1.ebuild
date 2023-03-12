@@ -6,11 +6,11 @@ EAPI=8
 inherit bash-completion-r1 meson
 
 DESCRIPTION="Grab images from a Wayland compositor"
-HOMEPAGE="https://github.com/emersion/grim"
+HOMEPAGE="https://sr.ht/~emersion/grim"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/emersion/${PN}.git"
+	EGIT_REPO_URI="https://git.sr.ht/~emersion/${PN}"
 else
 	SRC_URI="https://github.com/emersion/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="amd64 arm64 ~loong ~ppc64 ~riscv x86"
@@ -20,14 +20,15 @@ LICENSE="MIT"
 SLOT="0"
 IUSE="+man jpeg"
 
-DEPEND="
+RDEPEND="
 	dev-libs/wayland
-	>=dev-libs/wayland-protocols-1.14
 	media-libs/libpng
 	x11-libs/pixman
 	jpeg? ( media-libs/libjpeg-turbo )
 "
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	>=dev-libs/wayland-protocols-1.14
+"
 BDEPEND="man? ( app-text/scdoc )"
 
 src_configure() {
@@ -45,5 +46,5 @@ src_install() {
 
 	newbashcomp contrib/completions/bash/grim.bash grim
 	insinto /usr/share/fish/vendor_completions.d/
-	doins contrib/completions/fish/grim.fish
+	doins contrib/completions/grim.fish
 }

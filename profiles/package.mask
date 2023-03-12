@@ -33,6 +33,33 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2023-03-12)
+# Mask ruby27-only slot for removal. Use a newer slot instead.
+# Masked for removal on 2023-04-12.
+dev-ruby/net-http-persistent:3
+
+# Guillermo Joandet <gjoandet@gmail.com> (2023-03-11)
+# In preparation for GNOME 44
+>=dev-libs/gjs-1.75
+>=dev-python/pygobject-3.43
+>=gnome-base/gnome-session-44_rc
+>=gnome-base/gnome-settings-daemon-44_rc
+>=gnome-base/gnome-shell-44_rc
+>=gnome-extra/gnome-shell-extensions-44_rc
+>=net-libs/glib-networking-2.76_beta
+>=x11-wm/mutter-44_rc
+
+# Hans de Graaff <graaff@gentoo.org> (2023-03-11)
+# Mask ruby27-only dev-ruby/sass-rails:5.0 for removal. Use a newer
+# sass-rails slot or consider migrating to sassc-rails.  Masked for
+# removal on 2023-04-11.
+dev-ruby/sass-rails:5.0
+
+# Mike Pagano <mpagano@gentoo.org> (2023-03-10)
+# Mask =sys-kernel/gentoo-sources-5.15.99 since it does
+# not include 5.15.99 and is misleading
+=sys-kernel/gentoo-sources-5.15.99
+
 # Matthew Smith <matthew@gentoo.org> (2023-03-08)
 # No longer works after Google shut down the Hangouts API.
 # Bug #900412, removal on 2023-04-08.
@@ -264,23 +291,6 @@ dev-java/osgi-annotation-versioning
 dev-java/commons-text
 
 # Michał Górny <mgorny@gentoo.org> (2023-02-03)
-# Hacky build system that does not work via PEP517 build backend.
-# No reverse dependencies.
-# Removal on 2023-03-05.  Bug #890321.
-dev-python/pyFFTW
-
-# Michał Górny <mgorny@gentoo.org> (2023-02-03)
-# Dead upstream, no active maintainer, no reverse dependencies.
-# Removal on 2023-03-05.  Bug #892916.
-x11-themes/echo-icon-theme
-
-# Michał Górny <mgorny@gentoo.org> (2023-02-03)
-# Dead upstream, no active maintainer, no reverse dependencies,
-# build issues.
-# Removal on 2023-03-05.  Bug #892918.
-x11-themes/gtk-engines-nodoka
-
-# Michał Górny <mgorny@gentoo.org> (2023-02-03)
 # The package has been archived upstream.  It is broken with all Python
 # versions supported by Gentoo, and it is broken with django-2.
 # The other listed packages are its reverse dependencies.
@@ -387,12 +397,6 @@ media-plugins/vdr-vaapidevice
 media-sound/potamus
 media-video/ffmpeg2theora
 
-# Michał Górny <mgorny@gentoo.org> (2023-01-21)
-# Obsoleted in favor of using extract-on-the-first-run feature
-# of games-strategy/wargus.
-# Removal on 2023-02-20.  Bug #578340.
-games-strategy/wargus-data
-
 # Hans de Graaff <graaff@gentoo.org> (2023-01-21)
 # No longer maintained upstream and missing recent security fixes.
 # Use a newer Rails version instead.
@@ -412,31 +416,12 @@ dev-ruby/railties:5.2
 dev-ruby/arel
 =www-apps/redmine-4.2.9
 
-# Alfredo Tupone <tupone@gentoo.org> (2023-01-18)
-# Masked for removal in 30 days.
-# Not maintained (2006), no rev dep, bugs
-# (bug #891283)
-dev-tcltk/tclperl
-
 # David Seifert <soap@gentoo.org> (2023-01-14)
 # Py3.8 only backports
 dev-python/backports-tempfile
 dev-python/backports-weakref
 dev-python/backports-zoneinfo
 dev-python/pkgutil_resolve_name
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2023-01-10)
-# Unmaintained and reportedly broken by KDE Plasma 5.25 already.
-# Masking current stable version is the first step towards last-rites.
-# Consider migrating away from latte-dock for your workflow.
-# See also: https://tinyurl.com/39dkw43a (links to reddit)
-# Removal on 2023-01-30.
-=kde-misc/latte-dock-0.10.8*
-
-# Jonas Stein <jstein@gentoo.org> (2023-01-09)
-# Dead upstream, open bugs unmaintained.
-# Removal after 2023-03-01.  Bug #890244.
-www-client/dillo
 
 # Sam James <sam@gentoo.org> (2023-01-05)
 # Breaks reverse dependencies: bug #889694, bug #888579.

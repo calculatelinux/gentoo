@@ -10,17 +10,17 @@ inherit distutils-r1
 
 DESCRIPTION="OpenAPI 2.0 (aka Swagger) and OpenAPI 3.0 spec validator"
 HOMEPAGE="
-	https://github.com/p1c2u/openapi-spec-validator/
+	https://github.com/python-openapi/openapi-spec-validator/
 	https://pypi.org/project/openapi-spec-validator/
 "
 SRC_URI="
-	https://github.com/p1c2u/openapi-spec-validator/archive/${PV}.tar.gz
+	https://github.com/python-openapi/openapi-spec-validator/archive/${PV}.tar.gz
 		-> ${P}.gh.tar.gz
 "
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
+KEYWORDS="amd64 ~arm ~arm64 ~ppc64 ~riscv x86"
 
 RDEPEND="
 	>=dev-python/jsonschema-4.0.0[${PYTHON_USEDEP}]
