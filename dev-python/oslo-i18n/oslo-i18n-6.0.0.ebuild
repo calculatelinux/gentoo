@@ -6,10 +6,7 @@ EAPI=8
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{9..11} )
 
-inherit distutils-r1
-
-MY_PN=${PN/-/.}
-MY_P=${MY_PN}-${PV}
+inherit distutils-r1 pypi
 
 DESCRIPTION="Oslo i18n library"
 HOMEPAGE="
@@ -17,12 +14,12 @@ HOMEPAGE="
 	https://github.com/openstack/oslo.i18n/
 	https://pypi.org/project/oslo.i18n/
 "
-SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
-S=${WORKDIR}/${MY_P}
+SRC_URI="$(pypi_sdist_url --no-normalize "${PN/-/.}")"
+S=${WORKDIR}/${P/-/.}
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~riscv ~x86"
+KEYWORDS="amd64 ~arm arm64 ~riscv x86"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-5.1.0-fix-py3.11.patch"
