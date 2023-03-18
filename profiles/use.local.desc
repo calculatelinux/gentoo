@@ -1751,40 +1751,40 @@ dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
 dev-lang/perl:quadmath - Enable 128bit floating point arithmetic via libquadmath
 dev-lang/php:apparmor - Support FPM application confinement through sys-libs/libapparmor
 dev-lang/php:argon2 - Enable password hashing algorithm from app-crypt/argon2
-dev-lang/php:bcmath - Add support for libbcmath
-dev-lang/php:cli - Enable CLI SAPI
+dev-lang/php:bcmath - Enable the BCMath Arbitrary Precision Mathematics extension
+dev-lang/php:cli - Enable the Command-Line Interface (CLI) SAPI
 dev-lang/php:coverage - Include gcov symbols for test coverage and lcov reports. Only useful for extension developers, and requires GCC.
-dev-lang/php:ctype - Enable ctype functions
+dev-lang/php:ctype - Enable the Character type checking (ctype) extension
 dev-lang/php:embed - Enable embed SAPI
-dev-lang/php:enchant - Add supports Enchant spelling library
-dev-lang/php:ffi - Add foreign function interface (ffi extension) support
-dev-lang/php:fileinfo - Add fileinfo extension support
-dev-lang/php:filter - Add filter extension support
+dev-lang/php:enchant - Enable the Enchant spelling library extension using app-text/enchant
+dev-lang/php:ffi - Enable the Foreign Function Interface (FFI) extension using dev-libs/libffi
+dev-lang/php:fileinfo - Enable the File Information extension
+dev-lang/php:filter - Enable the Data Filtering extension
 dev-lang/php:flatfile - Add dbm support for flat files
 dev-lang/php:fpm - Enable the FastCGI Process Manager SAPI
-dev-lang/php:gd - Adds support for gd (bundled with PHP)
+dev-lang/php:gd - Enable the Image Processing and GD extension (requires media-libs/libjpeg-turbo and media-libs/libpng)
 dev-lang/php:inifile - Add dbm support for .ini files
 dev-lang/php:intl - Enables the intl extension for extended internalization support
 dev-lang/php:jit - Enable PCRE JIT support
-dev-lang/php:json - Enable JSON support
-dev-lang/php:ldap-sasl - Add SASL support for the PHP LDAP extension
+dev-lang/php:json - Enable the JavaScript Object Notation extension
+dev-lang/php:ldap-sasl - Add SASL support for the PHP LDAP extension using dev-libs/cyrus-sasl
 dev-lang/php:lmdb - Enable support for dev-db/lmdb db backend
 dev-lang/php:opcache - Enables built-in opcode cache, replacing pecl-apc et al.
-dev-lang/php:pcntl - Add support for process creation functions
-dev-lang/php:pdo - Enable the bundled PDO extensions
+dev-lang/php:pcntl - Enable the Process Control extension
+dev-lang/php:pdo - Enable the PHP Data Objects extension
 dev-lang/php:phar - Enables the phar extension to provide phar archive support
 dev-lang/php:phpdbg - Enable the PHP Debug Command Line SAPI (like gdb for php)
 dev-lang/php:session-mm - Include dev-libs/mm support for session storage
-dev-lang/php:sharedmem - Add support for shared memory use
-dev-lang/php:simplexml - Support for SimpleXML
+dev-lang/php:sharedmem - Enable the shmop extension
+dev-lang/php:simplexml - Enable the SimpleXML extension
 dev-lang/php:sodium - Enable support for crypto through dev-libs/libsodium
-dev-lang/php:sysvipc - Support for System V-compatible inter-process communication
+dev-lang/php:sysvipc - Enable the PHP System-V semaphore, shared memory and IPC extension
 dev-lang/php:tokenizer - Add support for the PHP file parser
 dev-lang/php:tokyocabinet - Enable support for dev-db/tokyocabinet db backend
 dev-lang/php:webp - Enable webp support for GD in php-7.x
-dev-lang/php:xmlreader - Enable XMLReader support
-dev-lang/php:xmlwriter - Enable XMLWriter support
-dev-lang/php:xslt - Enable the XSL extension
+dev-lang/php:xmlreader - Enable the XMLReader extension
+dev-lang/php:xmlwriter - Enable the XMLWriter extension
+dev-lang/php:xslt - Build the XSL extension
 dev-lang/polyml:portable - Build the portable interpreter version of Poly/ML instead of native
 dev-lang/python:bluetooth - Build Bluetooth protocol support in socket module
 dev-lang/python:ensurepip - Install the ensurepip module that uses bundled wheels to bootstrap pip and setuptools (if disabled, it will be only possible to use venv `--without-pip`)
@@ -2366,7 +2366,6 @@ dev-python/mido:portmidi - Support using media-libs/portmidi as MIDI back-end
 dev-python/mido:rtmidi - Support using media-libs/rtmidi as MIDI back-end
 dev-python/mpmath:matplotlib - Add support for dev-python/matplotlib
 dev-python/msgpack:native-extensions - Compiles native "C" extensions (speedups, instead of using python fallback code).
-dev-python/nbdime:webtools - Install web-based diff and merge tools.
 dev-python/pandas:full-support - Pull all packages to give pandas full support
 dev-python/paramiko:server - Enable server feature
 dev-python/pillow:imagequant - Build with Image Quantization Library support
@@ -4152,13 +4151,16 @@ media-libs/imlib2:X - Use the X window system
 media-libs/imlib2:apidoc - Provide doxygen generated API docs
 media-libs/imlib2:bzip2 - Bzip2 loader support
 media-libs/imlib2:eps - Eps image loader support
+media-libs/imlib2:filters - Build filter functions (blur, sharpen, etc)
 media-libs/imlib2:gif - Gif image loader support
 media-libs/imlib2:heif - Heif and Avif image loader support
 media-libs/imlib2:jpeg - Jpeg image loader support
 media-libs/imlib2:jpegxl - Jxl image loader support
 media-libs/imlib2:mp3 - ID3 loader support
+media-libs/imlib2:packing - Enable structure packing. This will reduce memory footprint at the cost of unaligned memory access
 media-libs/imlib2:png - PNG image loader support
 media-libs/imlib2:shm - Use MIT shared memory support for X image transfer
+media-libs/imlib2:text - Build text (TrueType font) functions
 media-libs/imlib2:tiff - TIFF image loader support
 media-libs/imlib2:webp - WEBP image loader support
 media-libs/imlib2:zlib - Zlib loader support
@@ -4440,7 +4442,6 @@ media-plugins/gst-plugins-meta:vpx - Enables vp8 codec support using libvpx, req
 media-plugins/gst-plugins-vaapi:drm - Enable DRM renderer
 media-plugins/gst-plugins-vaapi:egl - Enable EGL support
 media-plugins/gst-plugins-vaapi:gles2 - Enable GLESv2 and GLESv3 support
-media-plugins/imlib2_loaders:eet - Enable Eet image loader
 media-plugins/imlib2_loaders:xcf - Enable XCF image loader
 media-plugins/ir_lv2:tools - Build convert4chan tool
 media-plugins/vdr-burn:dvdarchive - DMH DVD - Archive
@@ -5786,7 +5787,7 @@ net-im/teams:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of b
 net-im/teams:system-mesa - Use the system-wide media-libs/mesa instead of bundled.
 net-im/telegram-desktop:enchant - Use the app-text/aspell spell-checking backend instead of app-text/hunspell
 net-im/telegram-desktop:fonts - Use builtin patched copy of open-sans fonts (overrides fontconfig)
-net-im/telegram-desktop:hunspell - Enable the app-text/hunspell spell-checking backend (deprecated)
+net-im/telegram-desktop:hunspell - Enable the app-text/hunspell spell-checking backend (old flag)
 net-im/telegram-desktop:qt6 - Build with Qt6 support
 net-im/telegram-desktop:qt6-imageformats - Add support for HEIF, AVIF and JpegXL by bundling kde-frameworks/kimageformats
 net-im/telepathy-connection-managers:gadu - Enable Gadu Gadu protocol support.

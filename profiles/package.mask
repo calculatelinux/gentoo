@@ -33,6 +33,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2023-03-16)
+# Breaks building C++ consumers. See bug #901211 and bug #901035.
+# Please upgrade to glib-2.76.0-r1.
+=dev-libs/glib-2.76.0
+
+# Alfredo Tupone <tupone@gentoo.org> (2023-03-14)
+# Masked for removal in 30 days.
+# Bug #895824, no rev dep 
+dev-tcltk/tkzinc
+
 # David Seifert <soap@gentoo.org> (2023-03-12)
 # Qt-based application is EOL, Yubico has switched to a Flutter-based
 # Googleware framework. Switch to app-crypt/yubioath-flutter-bin or use
@@ -54,6 +64,7 @@ dev-ruby/net-http-persistent:3
 >=gnome-base/gnome-session-44_rc
 >=gnome-base/gnome-settings-daemon-44_rc
 >=gnome-base/gnome-shell-44_rc
+>=gnome-base/librsvg-2.55.90
 >=gnome-base/nautilus-44_rc
 >=gnome-extra/gnome-boxes-44_rc
 >=gnome-extra/gnome-calculator-44_rc
@@ -68,6 +79,7 @@ dev-ruby/net-http-persistent:3
 >=gnome-extra/gnome-weather-44_rc
 >=gui-apps/gnome-console-44_beta
 >=gui-libs/libadwaita-1.3_rc
+>=media-gfx/eog-44_beta
 >=media-gfx/gnome-font-viewer-44_rc
 >=net-libs/glib-networking-2.76_beta
 >=net-misc/gnome-connections-44_rc
