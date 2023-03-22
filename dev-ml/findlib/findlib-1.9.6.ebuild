@@ -9,7 +9,7 @@ SRC_URI="http://download.camlcity.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~ppc ~ppc64 ~riscv ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~ppc ~ppc64 ~riscv ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc +ocamlopt tk"
 
 DEPEND=">=dev-lang/ocaml-4.02.3-r1:=[ocamlopt?]
@@ -52,21 +52,22 @@ src_install() {
 		docinto html
 		dodoc -r ref-html guide-html
 	fi
+
+	# See bug #803275 and bug #833604
+	rm -f "${ED}/usr/$(get_libdir)/ocaml/labltk/META" || die
 }
 
 check_stublibs() {
-	local ocaml_stdlib=`ocamlc -where`
+	local ocaml_stdlib=$(ocamlc -where)
 	local ldconf="${ocaml_stdlib}/ld.conf"
 
-	if [ ! -e ${ldconf} ]
-	then
-		echo "${ocaml_stdlib}" > ${ldconf}
-		echo "${ocaml_stdlib}/stublibs" >> ${ldconf}
+	if [[ ! -e ${ldconf} ]] ; then
+		echo "${ocaml_stdlib}" > ${ldconf} || die
+		echo "${ocaml_stdlib}/stublibs" >> ${ldconf} || die
 	fi
 
-	if [ -z `grep -e ${stublibs} ${ldconf}` ]
-	then
-		echo ${stublibs} >> ${ldconf}
+	if ! grep -qe ${stublibs} ${ldconf} ; then
+		echo ${stublibs} >> ${ldconf} || die
 	fi
 }
 

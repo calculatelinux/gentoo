@@ -985,6 +985,7 @@ app-office/abiword:plugins - Enable plugins build (see http://www.abisource.com/
 app-office/abiword:redland - Enables support redland and raptor libs.
 app-office/abiword:thesaurus - Enable thesaurus support
 app-office/abiword:wordperfect - Enable wordperfect file support via app-text/libwpd
+app-office/calcurse:caldav - Support CalDAV
 app-office/calligra:activities - Enable kactivities support
 app-office/calligra:charts - Build chartshape plugin for creating business charts with dev-libs/kdiagram
 app-office/calligra:gemini - Enable tablet and 2:1 devices support
@@ -3030,6 +3031,7 @@ games-emulation/mupen64plus-core:new-dynarec - Enable new experimental dynamic r
 games-emulation/mupen64plus-core:opencv - Support video capture via media-libs/opencv
 games-emulation/mupen64plus-core:osd - Overlay emulator messages using on-screen-display
 games-emulation/mupen64plus-video-glide64mk2:hires - Support hi-resolution textures (requires dev-libs/boost)
+games-emulation/pcsx2:backtrace - Display a backtrace on crash using sys-libs/libbacktrace
 games-emulation/pcsx2:sndio - Enable support for the media-sound/sndio backend
 games-emulation/pcsx2:vulkan - Enable support for Vulkan
 games-emulation/pcsxr:archive - Support compressed files (via libarchive)
