@@ -625,7 +625,7 @@ DEPEND="
 	media-libs/mesa
 	sys-apps/dbus
 	x11-libs/libX11
-	x11-libs/libxkbcommon
+	x11-libs/libxkbcommon[X,wayland?]
 	x11-libs/xcb-util
 	x11-libs/xcb-util-image
 	x11-libs/xcb-util-keysyms
@@ -707,10 +707,10 @@ src_compile() {
 
 src_install() {
 	exeinto /usr/bin
-	doexe target/release/wezterm
-	doexe target/release/wezterm-gui
-	doexe target/release/wezterm-mux-server
-	doexe target/release/strip-ansi-escapes
+	doexe target/$(usex debug "debug" "release")/wezterm
+	doexe target/$(usex debug "debug" "release")/wezterm-gui
+	doexe target/$(usex debug "debug" "release")/wezterm-mux-server
+	doexe target/$(usex debug "debug" "release")/strip-ansi-escapes
 
 	insinto /usr/share/icons/hicolor/128x128/apps
 	newins assets/icon/terminal.png org.wezfurlong.wezterm.png

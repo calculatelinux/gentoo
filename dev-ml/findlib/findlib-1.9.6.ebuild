@@ -9,7 +9,7 @@ SRC_URI="http://download.camlcity.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~ppc ~ppc64 ~riscv ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~ppc ppc64 ~riscv x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc +ocamlopt tk"
 
 DEPEND=">=dev-lang/ocaml-4.02.3-r1:=[ocamlopt?]
@@ -54,7 +54,9 @@ src_install() {
 	fi
 
 	# See bug #803275 and bug #833604
-	rm -f "${ED}"/usr/$(get_libdir)/ocaml/{ocamlbuild,labltk}/META || die
+	for x in camlp4 dbm graphics labltk num num-top ocamlbuild; do
+		rm -rf "${ED}"/usr/$(get_libdir)/ocaml/${x} || die
+	done
 }
 
 check_stublibs() {
