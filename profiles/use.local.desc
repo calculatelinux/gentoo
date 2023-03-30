@@ -8399,7 +8399,6 @@ sys-libs/libomp:hwloc - Enable CPU affinity support via hwloc
 sys-libs/libomp:offload - Support offloading OpenMP using libomptarget
 sys-libs/libomp:ompt - Enable OpenMP Tools Interface support
 sys-libs/libseccomp:experimental-loong - Add experimental LoongArch patchset
-sys-libs/libselinux:pcre2 - Use dev-libs/libpcre2 for fcontext regexes
 sys-libs/libunwind:debug-frame - Adds support for DWARF .debug_frame section: Use the information from this section if available
 sys-libs/libunwind:libatomic - Use libatomic instead of builtin atomic operations
 sys-libs/libxcrypt:compat - Build with compatibility interfaces for other crypt implementations
@@ -8552,6 +8551,7 @@ www-apps/postfixadmin:vacation - Install vacation.pl script and dependencies
 www-apps/redmine:markdown - Enable support for Markdown
 www-apps/redmine:minimagick - Enable image processing support via dev-ruby/mini_magick
 www-apps/redmine:passenger - Enable support for www-apache/passenger
+www-apps/redmine:standalone - Enable standalone mode with www-servers/puma
 www-apps/roundup:jinja - Enable Jinja2 support
 www-apps/roundup:markdown - Enable markdown rendering
 www-apps/roundup:pyjwt - Enable jwt tokens for login
@@ -8571,7 +8571,6 @@ www-client/chromium:debug - Enable DCHECK feature with severity configurable at 
 www-client/chromium:gtk4 - Build with GTK4 headers.
 www-client/chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/chromium:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general use.
-www-client/chromium:js-type-check - Enable JavaScript type-checking for Chrome's web technology-based UI. Requires Java.
 www-client/chromium:libcxx - Use bundled libc++ instead of libstdc++ for building.
 www-client/chromium:lto - Build with Link Time Optimizations (via clang's ThinLTO)
 www-client/chromium:official - Enable Official build instead of Developer build.
@@ -9062,5 +9061,6 @@ xfce-extra/xfce4-clipman-plugin:qrcode - Enable support for media-gfx/qrencode
 xfce-extra/xfce4-mpc-plugin:libmpd - Build using media-libs/libmpd backend, instead of native fallback which is preferred
 xfce-extra/xfce4-pulseaudio-plugin:keybinder - Enable support for global hotkeys using dev-libs/keybinder.
 xfce-extra/xfce4-pulseaudio-plugin:libcanberra - Enable sound event support using media-libs/libcanberra
+xfce-extra/xfce4-pulseaudio-plugin:libxfce4windowing - Enable experimental support for raising media player windows using xfce-base/libxfce4windowing.
 xfce-extra/xfce4-pulseaudio-plugin:wnck - Enable experimental support for raising media player windows using x11-libs/libwnck.
 xfce-extra/xfce4-screensaver:locking - Enable screen locking support

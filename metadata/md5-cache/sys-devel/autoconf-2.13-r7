@@ -11,5 +11,5 @@ RDEPEND=dev-lang/perl sys-devel/m4 test? ( dev-util/dejagnu ) sys-apps/texinfo >
 RESTRICT=!test? ( test )
 SLOT=2.1
 SRC_URI=mirror://gnu/autoconf/autoconf-2.13.tar.gz
-_eclasses_=toolchain-autoconf	35fbe7d944a1f2432d4481bcb0201f6f
-_md5_=edfa688cf49efd276d9de3294862ba9b
+_eclasses_=toolchain-autoconf	bec412910d3b00ec440ae33fcb4dbceb
+_md5_=bd2fc7ad3a5b0a76db25be17826d3c77

@@ -28,7 +28,6 @@ BDEPEND="test? ( dev-libs/check )"
 RESTRICT="!test? ( test )"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-4.4.0_deps-automagic.patch
 	"${FILESDIR}"/${PN}-4.4.0_install-perms.patch
 	"${FILESDIR}"/${PN}-4.5.0_webkit41.patch
 )
@@ -39,15 +38,24 @@ src_prepare() {
 	sed -i -e 's|^\(\s\+\)@|\1|' Makefile || die "Failed to increase verbosity in Makefile"
 }
 
+oidc_emake() {
+	local mymakeargs=(
+		USE_CJSON_SO=1
+		USE_LIST_SO=0
+		USE_MUSTACHE_SO=0
+		USE_ARGP_SO=$(usex elibc_musl 1 0)
+	)
+
+	emake "${mymakeargs[@]}" $@
+}
+
 src_compile() {
-	local -x USE_CJSON_SO=1
-	use elibc_musl && local -x USE_ARGP_SO=1
-	emake -j1 create_obj_dir_structure create_picobj_dir_structure # Bug #880157
-	emake
+	oidc_emake -j1 create_obj_dir_structure create_picobj_dir_structure # Bug #880157
+	oidc_emake
 }
 
 src_install() {
-	emake \
+	oidc_emake \
 		PREFIX="${ED}" \
 		BIN_AFTER_INST_PATH="/usr" \
 		INCLUDE_PATH="${ED}"/usr/include \

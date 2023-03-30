@@ -33,6 +33,91 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2023-03-29)
+# ruby27-only slot of rspec. Please use rspec:3 instead. Masked for
+# removal on 2023-04-28.
+dev-ruby/rspec:2
+dev-ruby/rspec-core:2
+dev-ruby/rspec-expectations:2
+dev-ruby/rspec-mocks:2
+
+# Sam James <sam@gentoo.org> (2023-03-29)
+# Stuck on ruby27, low activity upstream, needs someone who actively uses it to
+# test it properly as automated tests require an API key.
+# Removal on 2023-04-28.  Bug #903542.
+dev-ruby/flickraw
+
+# Sam James <sam@gentoo.org> (2023-03-29)
+# Only supports imminently-EOL ruby27, depends on obsolete QtScript instead
+# of QML. Support for other languages was removed long ago, e.g. python support
+# is stuck on python2-only. Kross itself is on the chopping block too:
+# bug #810493, bug #903532.
+# Removal on 2023-04-28.
+kde-apps/kross-interpreters
+
+# Sam James <sam@gentoo.org> (2023-03-29)
+# Only supports imminently-EOL ruby27.
+# Removal on 2023-04-28.  Bug #903499.
+net-misc/mikutter
+
+# Hans de Graaff <graaff@gentoo.org> (2023-03-29)
+# ruby27-only package. app-text/ronn-ng is a drop-in replacement.
+# Masked for removal on 2023-04-29.
+app-text/ronn
+
+# Hans de Graaff <graaff@gentoo.org> (2023-03-29)
+# ruby27-only package without tests and without maintainer. Upstream
+# releases new versions in an unversioned zip file. This needs a
+# dedicated maintainer that can test this package.
+# Masked for removal on 2023-04-29.
+app-admin/ec2-ami-tools
+
+# Sam James <sam@gentoo.org> (2023-03-29)
+# Regressions in solving ability affecting e.g. igraph:
+# https://github.com/opencollab/arpack-ng/issues/401
+# https://github.com/opencollab/arpack-ng/issues/410
+# https://github.com/opencollab/arpack-ng/issues/411
+# https://github.com/igraph/igraph/issues/2311
+=sci-libs/arpack-3.9.0
+
+# Michał Górny <mgorny@gentoo.org> (2023-03-28)
+# Unfetchable, the homepage is gone.  Last updated in 2020.
+# Removal on 2023-04-27.  Bug #831304.
+net-analyzer/netio
+
+# Michał Górny <mgorny@gentoo.org> (2023-03-28)
+# Unfetchable due to untrusted TLS certificate.  The game doesn't seem
+# to work anyway (displays blank window).
+# Removal on 2023-04-27.  Bug #835858.
+games-rpg/coe2
+
+# Michał Górny <mgorny@gentoo.org> (2023-03-28)
+# No upstream activity since Jan 2019.  The current version fails
+# to build.  Multiple other bugs reported.
+# Removal on 2023-04-27.  Bug #902069.
+acct-group/shellinaboxd
+acct-user/shellinaboxd
+www-misc/shellinabox
+
+# Michał Górny <mgorny@gentoo.org> (2023-03-28)
+# Unmaintained.  The current Gentoo version is from 2017 and has
+# multiple build failures reported.
+# Removal on 2023-04-27.  Bug #721816.
+app-editors/le
+
+# Michał Górny <mgorny@gentoo.org> (2023-03-28)
+# No py3.11 support, package already patched for 3.10.  Last release
+# in 2018.  No revdeps.
+# Removal on 2023-04-27.  Bug #894604.
+dev-python/picobox
+
+# Sam James <sam@gentoo.org> (2023-03-27)
+# The upstream tzinfo maintainers recommend using 2023a for now because of the
+# disruption regarding Lebanon's DST change. See https://lore.kernel.org/distributions/87cz4u2gmj.fsf@gentoo.org/T/#u.
+=sys-libs/timezone-data-2023b
+=dev-python/pytz-2023.2-r1
+=dev-perl/DateTime-TimeZone-2.580.0
+
 # Michał Górny <mgorny@gentoo.org> (2023-03-26)
 # No py3.11.  Last release in 2014.  No revdeps.
 # Removal on 2023-04-25.  Bug #896762.
@@ -244,18 +329,6 @@ sys-power/dptfxtract
 # Major update.  Multiple packages are known to be broken.
 # Masked for further testing.
 >=dev-python/cython-3
-
-# Matt Turner <mattst88@gentoo.org> (2023-02-25)
-# Packages are unmaintained and archived upstream.
-# Removal on 2023-03-27. Bug #897748
-gnome-extra/seahorse-nautilus
-x11-libs/libcryptui
-
-# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2023-02-25)
-# Fails tests, last upstream commit 2021, does not work with
-# python3.11. No reverse dependencies.
-# Removal on 2023-03-27. Bug 896898 and 888444
-dev-python/trio-asyncio
 
 # Ben Kohler <bkohler@gentoo.org> (2023-01-30)
 # Breaks too many revdeps for now
