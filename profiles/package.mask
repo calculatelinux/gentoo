@@ -33,6 +33,55 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2023-03-31)
+# Has suspicious test suite warnings with >=ruby31, no activity upstream, and
+# no reverse dependencies in Gentoo.
+# Removal on 2023-04-30.
+dev-ruby/ddmemoize
+
+# Ionen Wolkens <ionen@gentoo.org> (2023-03-30)
+# NVIDIA dropped support for the 390.xx branch in December 2022[1].
+#
+# Users are free to unmask and keep using, but be warned it is very
+# likely to be affected by security issues as NVIDIA does not track
+# nor fix these for this branch anymore.
+#
+# Gentoo will keep it packaged for as long as reasonably possible
+# (albeit masked) but no true support will be given nor patches
+# for newer kernels. It is recommended to use 6.1.x LTS kernels or
+# older (6.1.x will be supported until at least December 2026).
+#
+# Major issues will lead to removal without further warning, e.g.
+# if no usable kernels left in tree, or if broken with a newer Xorg.
+#
+# >> It is recommended to switch to nouveau[2] drivers (regardless
+#    of its worse performance), or ideally replace the hardware.
+#
+# [1] https://nvidia.custhelp.com/app/answers/detail/a_id/3142
+# [2] https://wiki.gentoo.org/wiki/Nouveau
+x11-drivers/nvidia-drivers:0/390
+
+# Michał Górny <mgorny@gentoo.org> (2023-03-30)
+# Fails to build, bug #903017.
+=dev-util/spirv-llvm-translator-16.0.0
+
+# Matt Turner <mattst88@gentoo.org> (2023-03-30)
+# Masked for testing and migration of consumers
+net-libs/libdmapsharing:4.0
+
+# Matt Turner <mattst88@gentoo.org> (2023-03-30)
+# gnome-online-miners and libzapojit are archived upstream. All three packages
+# are stuck on libsoup-2.4. gnome-photos is the only reverse dependency of
+# gnome-online-miners, and it works without it.
+# Removal on 2023-04-30.
+net-libs/libgfbgraph
+net-libs/libzapojit
+net-misc/gnome-online-miners
+
+# Hans de Graaff <graaff@gentoo.org> (2023-03-30)
+# Deprecated upstream and ruby27-only. Masked for removal on 2023-04-30.
+dev-ruby/elasticsearch-extensions
+
 # Hans de Graaff <graaff@gentoo.org> (2023-03-30)
 # Ships a Certificate Authority bundle from 2014. Not needed on Gentoo
 # since we use ca-certificates. Masked for removal on 2023-04-30.
@@ -333,19 +382,9 @@ gnome-extra/gconf-editor
 # Removal on 2023-04-03. Bug #873856
 app-office/upwork
 
-# Michał Górny <mgorny@gentoo.org> (2023-02-28)
-# Unmaintained.  Last (keep-alive) commit in 2019.  Suffers from bitrot.
-# Removal on 2023-03-30.  Bug #885713.
-net-im/ekg2
-
 # Mike Pagano <mpagano@gentoo.org> (2023-02-27)
 # Mask =www-servers/nginx-unit-1.29.0-r1 for testing
 =www-servers/nginx-unit-1.29.0-r1
-
-# Pacho Ramos <pacho@gentoo.org> (2023-02-27)
-# No longer needed by thermald-2, discontinued by upstream
-# Removal: 2023-03-29.  Bug #898164.
-sys-power/dptfxtract
 
 # Torokhov Sergey <torokhov-s-a@yandex.ru> (2023-02-26)
 # The masked version causes GIMP breaking of Cut/Copy/Paste
@@ -395,8 +434,6 @@ dev-python/pkgutil_resolve_name
 # other non-slotted dependencies have been.
 media-gfx/gnome-photos
 media-sound/gnome-music
-net-libs/libzapojit
-net-misc/gnome-online-miners
 
 # Jaco Kroon <jaco@uls.co.za> (2022-11-05)
 # Some potentially breaking changes here, please check the UPGRADE.txt file.

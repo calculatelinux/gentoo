@@ -15,7 +15,7 @@ SRC_URI="https://www.webkitgtk.org/releases/${MY_P}.tar.xz"
 
 LICENSE="LGPL-2+ BSD"
 SLOT="4/37" # soname version of libwebkit2gtk-4.0
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
+KEYWORDS="amd64 ~arm arm64 ~ppc ppc64 ~riscv ~sparc x86"
 
 IUSE="aqua avif +egl examples gamepad gles2-only gnome-keyring +gstreamer +introspection pdf +jpeg2k +jumbo-build lcms seccomp spell systemd test wayland X"
 
@@ -153,6 +153,7 @@ src_prepare() {
 	cmake_src_prepare
 	gnome2_src_prepare
 	eapply "${FILESDIR}"/2.38.3-gcc-13.patch
+	eapply "${FILESDIR}"/2.38.5-gcc-13.patch
 }
 
 src_configure() {
