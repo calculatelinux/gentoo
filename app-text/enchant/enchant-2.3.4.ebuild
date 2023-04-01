@@ -9,7 +9,7 @@ SRC_URI="https://github.com/AbiWord/enchant/releases/download/v${PV}/${P}.tar.gz
 
 LICENSE="LGPL-2.1+"
 SLOT="2"
-KEYWORDS="~alpha amd64 ~arm arm64 ~hppa ~ia64 ~loong ~mips ~ppc ppc64 ~riscv ~s390 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ~ppc ppc64 ~riscv ~s390 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 
 IUSE="aspell +hunspell nuspell test voikko"
 RESTRICT="!test? ( test )"
@@ -28,7 +28,10 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	test? ( >=dev-libs/unittest++-2.0.0-r2 )
 "
-BDEPEND="virtual/pkgconfig"
+BDEPEND="
+	sys-apps/groff
+	virtual/pkgconfig
+"
 
 src_configure() {
 	local myconf=(

@@ -14,7 +14,7 @@ if [[ ${PV} == 9999* ]] ; then
 	BDEPEND="net-misc/curl"
 else
 	SRC_URI="https://qa-reports.gentoo.org/output/keys/active-devs-${PV}.gpg -> ${P}-active-devs.gpg"
-	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~sparc x86"
+	KEYWORDS="~alpha amd64 arm arm64 hppa ~loong ~m68k ~mips ppc ppc64 ~riscv sparc x86"
 fi
 
 S="${WORKDIR}"
@@ -29,6 +29,7 @@ BDEPEND+="
 	sec-keys/openpgp-keys-gentoo-auth
 	test? (
 		app-crypt/gnupg
+		sys-apps/grep[pcre]
 	)
 "
 
@@ -213,6 +214,7 @@ src_test() {
 		| grep "^fpr" \
 		| sed -n 's/^fpr:::::::::\([[:alnum:]]\+\):/\1/p')
 
+	local key
 	for key in ${keys[@]} ; do
 		nonfatal edo gpg "${mygpgargs[@]}" --batch --yes --delete-secret-keys ${key}
 	done
