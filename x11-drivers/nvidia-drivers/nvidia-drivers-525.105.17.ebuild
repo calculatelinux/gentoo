@@ -23,7 +23,7 @@ S="${WORKDIR}"
 
 LICENSE="NVIDIA-r2 BSD BSD-2 GPL-2 MIT ZLIB curl openssl"
 SLOT="0/${PV%%.*}"
-KEYWORDS="-* ~amd64 ~arm64"
+KEYWORDS="-* amd64 ~arm64"
 IUSE="+X abi_x86_32 abi_x86_64 +driver kernel-open persistenced +static-libs +tools wayland"
 REQUIRED_USE="kernel-open? ( driver )"
 
@@ -604,8 +604,10 @@ pkg_postinst() {
 		else
 			ewarn "  echo '${NV_LEGACY_MASK}' >> ${EROOT}/etc/portage/package.mask"
 		fi
-		ewarn "...then downgrade to a legacy branch if possible. For details, see:"
-		ewarn "https://www.nvidia.com/object/IO_32667.html"
+		ewarn "...then downgrade to a legacy[1] branch if possible (not all old versions"
+		ewarn "are available or fully functional, may need to consider nouveau[2])."
+		ewarn "[1] https://www.nvidia.com/object/IO_32667.html"
+		ewarn "[2] https://wiki.gentoo.org/wiki/Nouveau"
 	fi
 
 	if use kernel-open; then

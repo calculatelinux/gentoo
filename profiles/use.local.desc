@@ -1653,6 +1653,7 @@ dev-java/junit:vintage - Include JUnit Vintage, which allows JUnit 5 to run JUni
 dev-java/openjdk:headless-awt - Don't install the X backend for AWT, needed by some GUIs
 dev-java/openjdk:javafx - Import OpenJFX modules at build time, via dev-java/openjfx
 dev-java/openjdk:jbootstrap - Build OpenJDK twice, the second time using the result of the first
+dev-java/openjdk:lto - Enable Link Time Optimization (LTO)
 dev-java/openjdk:source - Install JVM sources
 dev-java/openjdk:system-bootstrap - Bootstrap using installed openjdk
 dev-java/openjdk:systemtap - Enable SystemTAP/DTrace tracing
@@ -2349,8 +2350,6 @@ dev-python/cvxopt:dsdp - Use interior point library sci-libs/dsdp
 dev-python/cvxopt:glpk - Use GNU Linear Programming Kit sci-mathematics/glpk
 dev-python/dnspython:dnssec - Use dev-python/cryptography to enable low-level DNSSEC RSA, DSA, ECDSA and EdDSA signature validation.
 dev-python/editorconfig-core-py:cli - Install command line interface as well as python library
-dev-python/elasticsearch-py:async - Add async support
-dev-python/hiredis:system-libs - Use dev-libs/hiredis from system
 dev-python/httpx:cli - Install the CLI "httpx" client.
 dev-python/hypothesis:cli - Install a CLI tool used to write tests.
 dev-python/icalendar:doc - Generate examples and other extra documentation
@@ -2433,11 +2432,11 @@ dev-python/pyside6:webengine - Build QtWebEngine and QtWebEngineWidgets modules
 dev-python/pyside6:websockets - Build QtWebSockets module
 dev-python/pyside6:widgets - Build QtWidgets module
 dev-python/pyside6:xml - Build QtXml module
+dev-python/pytables:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
 dev-python/python-lsp-server:all-plugins - Pull in all optional plugins
 dev-python/python-mpd:twisted - Enable twisted support
 dev-python/python-stdnum:vies - Enable VIES
 dev-python/pyudev:qt5 - Install PyQt5 bindings
-dev-python/pyzmq:draft - Enable draft API support
 dev-python/pyzmq:drafts - Enable draft API support
 dev-python/qiskit-terra:visualization - Enable visualization modules
 dev-python/rarfile:compressed - Enables the module to support compressed v3 archives by calling the app-arch/unrar.
@@ -2470,6 +2469,7 @@ dev-python/twisted:conch - include Twisted SSHv2 implementation
 dev-python/twisted:http2 - include http2 support
 dev-python/twisted:serial - include serial port support
 dev-python/urllib3:brotli - Enable support for brotli compression
+dev-python/websockets:native-extensions - Compiles native C extensions
 dev-python/zeep:async - Add async support
 dev-qt/designer:declarative - Build the qdeclarativeview plugin
 dev-qt/linguist-tools:qml - Enable QML support in lupdate
@@ -2789,6 +2789,7 @@ dev-util/kdevelop:reviewboard - Enable reviewboard support
 dev-util/kernelshark:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS
 dev-util/kup:gitolite - Enable support for dev-vcs/gitolite in kup-server
 dev-util/librnp:botan - Use Botan crypto backend instead of OpenSSL
+dev-util/ltrace:elfutils - Use libdwfl from sys-libs/libunwind for frame unwinding support
 dev-util/ltrace:unwind - Use sys-libs/libunwind for frame unwinding support
 dev-util/lttng-tools:ust - Support LTTng-UST (Userspace Tracing)
 dev-util/lttng-ust:numa - Enable numa support
@@ -3230,7 +3231,6 @@ games-util/gslist:web - Enable the web interface
 games-util/lgogdownloader:gui - Enable GUI login support for passing reCAPTCHA
 games-util/slade:fluidsynth - Enable MIDI software synthesis using media-sound/fluidsynth
 games-util/wit:fuse - Enable image mount support via fuse
-gnome-base/gconf:ldap - Build backend which enables default mail accounts, addressbooks and calendars for Evolution to be configured using each user's LDAP entry."
 gnome-base/gdm:bluetooth-sound - Allow loading of bluetooth sound modules. This may be necessary for accessibility screen readers, but may cause bluetooth sound issues for users logging in.
 gnome-base/gdm:fprint - Enables experimental fingerprint authentication using sys-auth/fprintd
 gnome-base/gdm:plymouth - Enable support for smooth transition from sys-boot/plymouth
@@ -3462,7 +3462,6 @@ kde-apps/kopete:history - Enables saving chat history.
 kde-apps/kopete:latex - Embed latex formatted text into messages.
 kde-apps/kopete:meanwhile - Enable the Sametime protocol handler.
 kde-apps/kopete:nowlistening - Shows song you currently listen to in your status/etc. Bindings for many players.
-kde-apps/kopete:oscar - Enable Oscar (AIM/ICQ) IM protocol support
 kde-apps/kopete:otr - Allows crypting your chat (drugs and talking nonsense are considered as good alternatives ;]).
 kde-apps/kopete:pipes - Send messages to external pipe.
 kde-apps/kopete:privacy - Filter for incoming messages
@@ -3652,7 +3651,6 @@ mail-client/balsa:rubrica - Adds support for rubrica addressbook
 mail-client/balsa:systray - Enable System Tray Icon support
 mail-client/claws-mail:archive - Enable archiving plugin
 mail-client/claws-mail:bogofilter - Build mail-filter/bogofilter plugin
-mail-client/claws-mail:dillo - Enable dillo html viewer plugin
 mail-client/claws-mail:gdata - Enable plugin for access to Google data providers
 mail-client/claws-mail:libcanberra - Enable sound notification in connection with USE=notification
 mail-client/claws-mail:libnotify - Enable notification on the desktop in connection with USE=notification
@@ -3990,6 +3988,7 @@ media-gfx/hugin:sift - automatically align images with media-gfx/autopano-sift-C
 media-gfx/imagemagick:corefonts - Use media-fonts/corefonts which is required by some commands
 media-gfx/imagemagick:fpx - Enable media-libs/libfpx support
 media-gfx/imagemagick:hdri - Enable High Dynamic Range Images formats
+media-gfx/imagemagick:jpegxl - Enable support for JPEG XL image format
 media-gfx/imagemagick:lqr - Enable experimental liquid rescale support using media-libs/liblqr
 media-gfx/imagemagick:opencl - Enable OpenCL support
 media-gfx/imagemagick:pango - Enable Pango support using x11-libs/pango
@@ -5297,7 +5296,6 @@ net-analyzer/nmap:ndiff - Install the ndiff utility
 net-analyzer/nmap:nping - Install the nping utility
 net-analyzer/nmap:nse - Include support for the Nmap Scripting Engine (NSE)
 net-analyzer/nmap:symlink - Install symlink to nc
-net-analyzer/nmap:system-lua - Use dev-lang/lua instead of the bundled liblua
 net-analyzer/nmap:zenmap - Install the GTK+ based nmap GUI, zenmap
 net-analyzer/nrpe:command-args - Build support for specifying the command-line arguments from the Nagios/Icinga master. Make sure you understand the implications of this flag as it can be a security risk.
 net-analyzer/nsca:crypt - Build support for crypted communication with nsca, through dev-libs/libmcrypt. It's recommended not to disable this flag unless all the communication will be handled in an absolutely safe environment.
@@ -7654,6 +7652,7 @@ sys-apps/cpu-x:libglfw - Utiliser la bibliothèque media-libs/glfw
 sys-apps/cpu-x:libpci - Utiliser la bibliothèque sys-apps/pciutils
 sys-apps/cpu-x:opencl - Use the virtual/opencl library
 sys-apps/cpu-x:pci - Use the sys-apps/pciutils library for PCI info
+sys-apps/cpu-x:vulkan - Enable vulkan support
 sys-apps/dbus:elogind - Use sys-auth/elogind for session tracking.
 sys-apps/dbus:systemd - Build with sys-apps/systemd at_console support
 sys-apps/dbus-broker:launcher - dbus-daemon compatibility launcher

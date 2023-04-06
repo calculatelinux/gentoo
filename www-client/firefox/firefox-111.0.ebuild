@@ -3,7 +3,7 @@
 
 EAPI=8
 
-FIREFOX_PATCHSET="firefox-111-patches-01j.tar.xz"
+FIREFOX_PATCHSET="firefox-111-patches-02j.tar.xz"
 
 LLVM_MAX_SLOT=15
 
@@ -1008,6 +1008,10 @@ src_configure() {
 			append-cxxflags -fno-tree-loop-vectorize
 		fi
 	fi
+
+        if use elibc_musl && use arm64 ; then
+               	mozconfig_add_options_ac 'elf-hack is broken when using musl/arm64' --disable-elf-hack
+        fi
 
 	# Additional ARCH support
 	case "${ARCH}" in

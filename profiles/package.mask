@@ -33,6 +33,23 @@
 
 #--- END OF EXAMPLES ---
 
+# Florian Schmaus <flow@gentoo.org> (2023-04-05)
+# Packages that became orphaned leaf packages with the removal of
+# app-admin/abrt. See
+# - eea6958136ef ("profiles: Mask abrt software for removal")
+# - 8aedf444c3a5 ("app-admin/abrt: treeclean")
+# Removal on 2023-04-20
+acct-user/abrt
+acct-group/abrt
+sec-policy/selinux-abrt
+
+# Hans de Graaff <graaff@gentoo.org> (2023-04-02)
+# Archived upstream since two years, meant to be used with Rails
+# 5.2. Continued as Turbo as part of the hotwire project in Rails.
+# Masked for removal on 2023-05-02
+dev-ruby/turbolinks
+dev-ruby/turbolinks-source
+
 # Michał Górny <mgorny@gentoo.org> (2023-03-31)
 # Packages with non-functional tests and no py3.11 support.  They were
 # only needed for media-fonts/noto-emoji[buildfont], and that variant
@@ -177,12 +194,6 @@ www-misc/shellinabox
 # multiple build failures reported.
 # Removal on 2023-04-27.  Bug #721816.
 app-editors/le
-
-# Michał Górny <mgorny@gentoo.org> (2023-03-28)
-# No py3.11 support, package already patched for 3.10.  Last release
-# in 2018.  No revdeps.
-# Removal on 2023-04-27.  Bug #894604.
-dev-python/picobox
 
 # Sam James <sam@gentoo.org> (2023-03-27)
 # The upstream tzinfo maintainers recommend using 2023a for now because of the
@@ -353,31 +364,6 @@ dev-ruby/sass-rails:5.0
 # No longer works after Google shut down the Hangouts API.
 # Bug #900412, removal on 2023-04-08.
 x11-plugins/purple-hangouts
-
-# Jakov Smolić <jsmolic@gentoo.org> (2023-03-04)
-# Depends on deprecated dev-python/nose, no python3.11
-# support, unmaintained upstream. Bugs #896468, #878685,
-# #865269, #825062
-# Removal on 2023-04-04.
-app-admin/gixy
-
-# Matt Turner <mattst88@gentoo.org> (2023-03-04)
-# Test applications that don't really have any business being packaged.
-# Removal on 2023-04-04.
-x11-apps/xdbedizzy
-x11-apps/xf86dga
-
-# Matt Turner <mattst88@gentoo.org> (2023-03-04)
-# Long deprecated, GNOME 2-era packages.
-# Removal on 2023-04-04. Bug #873841
-gnome-base/gconf
-gnome-extra/gconf-editor
-
-# Matt Turner <mattst88@gentoo.org> (2023-03-03)
-# No commits from maintainer in more than two years. Downloads are broken for
-# 18 months (bug #809551), depends on deprecated gconf (bug #873856)
-# Removal on 2023-04-03. Bug #873856
-app-office/upwork
 
 # Mike Pagano <mpagano@gentoo.org> (2023-02-27)
 # Mask =www-servers/nginx-unit-1.29.0-r1 for testing
