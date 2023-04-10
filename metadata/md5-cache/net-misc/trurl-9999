@@ -1,6 +1,6 @@
 BDEPEND=test? ( dev-lang/perl virtual/perl-JSON-PP ) >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile install unpack
-DEPEND=>=net-misc/curl-7.62.0
+DEPEND=>=net-misc/curl-7.81.0
 DESCRIPTION=Command line tool for URL parsing and manipulation
 EAPI=8
 HOMEPAGE=https://curl.se/trurl/ https://daniel.haxx.se/blog/2023/04/03/introducing-trurl/
@@ -8,8 +8,8 @@ INHERIT=toolchain-funcs git-r3
 IUSE=test
 LICENSE=curl
 PROPERTIES=live
-RDEPEND=>=net-misc/curl-7.62.0
+RDEPEND=>=net-misc/curl-7.81.0
 RESTRICT=!test? ( test )
 SLOT=0
 _eclasses_=git-r3	27e13c09a4c7e4c78ac812f74727e676	multilib	d1408425c7c4a7669b9b17735404b693	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e
-_md5_=8cf6e9cd06a75b533613bcf6169bc16e
+_md5_=65a75f8eefda2fbd8189d06e03b83a68

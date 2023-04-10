@@ -3,7 +3,7 @@
 
 EAPI=8
 
-USE_RUBY="ruby26 ruby27 ruby30 ruby31"
+USE_RUBY="ruby27 ruby30 ruby31 ruby32"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.md"
 RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 
@@ -16,7 +16,7 @@ SRC_URI="https://github.com/metabahn/llhttp/archive/refs/tags/${MY_PV}.tar.gz ->
 
 LICENSE="MPL-2.0"
 SLOT="$(ver_cut 1)/$(ver_cut 1-2)"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 RUBY_S="llhttp-${MY_PV}/ffi"
 

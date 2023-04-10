@@ -20,7 +20,7 @@ app-accessibility/espeak-ng:async - Enables asynchronous commands
 app-accessibility/espeak-ng:klatt - Enables Klatt formant synthesis and implementation
 app-accessibility/espeak-ng:l10n_ru - Builds extended Russian Dictionary file
 app-accessibility/espeak-ng:l10n_zh - Builds extended Chinese (Mandarin and Cantonese) Dictionary files
-app-accessibility/espeak-ng:man - Builds and installs manpage with app-text/ronn
+app-accessibility/espeak-ng:man - Builds and installs manpage with app-text/ronn-ng
 app-accessibility/espeak-ng:mbrola - Adds support for mbrola voices
 app-accessibility/flite:voices - Install synthetic voices
 app-accessibility/freetts:jsapi - build Java Speech API (JSAPI)
@@ -2438,6 +2438,7 @@ dev-python/pyudev:qt5 - Install PyQt5 bindings
 dev-python/pyzmq:drafts - Enable draft API support
 dev-python/qiskit-terra:visualization - Enable visualization modules
 dev-python/rarfile:compressed - Enables the module to support compressed v3 archives by calling the app-arch/unrar.
+dev-python/reedsolomon:native-extensions - Compile native C extensions.
 dev-python/rfc3986:idna - enable support for the IDNA specification (RFC 5891)
 dev-python/rpyc:gdb - Run tests depending on sys-devel/gdb
 dev-python/rpyc:numpy - Run tests depending on dev-python/numpy, dev-python/pandas
@@ -3203,6 +3204,7 @@ games-strategy/freeciv:modpack - Build the freeciv-modpack-program to download/i
 games-strategy/freeciv:server - Enable server support. Disabling this will also make it impossible to start local games.
 games-strategy/freeciv:sound - Add support for sound provided by media-libs/sdl-mixer
 games-strategy/freeciv:system-lua - Use dev-lang/lua instead of the bundled liblua
+games-strategy/freeorion:client - Build game client
 games-strategy/freesynd:devtools - Build development tools
 games-strategy/hedgewars:server - Enable local server
 games-strategy/ja2-stracciatella:editor - Adds necessary file to run the editor
@@ -3311,9 +3313,14 @@ gui-apps/mako:icons - Enable support for icons
 gui-apps/swaybg:gdk-pixbuf - Support image types other than PNG
 gui-apps/swayidle:elogind - Enable support for rootless session via elogind
 gui-apps/swaylock:gdk-pixbuf - Enable additional image format support via the x11-libs/gdk-pixbuf library
-gui-apps/waybar:experimental - Enable experimental features
+gui-apps/waybar:evdev - Enable libevdev support for evdev related features
+gui-apps/waybar:experimental - Enable experimental features, such as Bluetooth battery reporting
+gui-apps/waybar:libinput - Enable libinput support for libinput related features
+gui-apps/waybar:logind - Enable support for logind
 gui-apps/waybar:mpd - Enable support for the Music Player Daemon
+gui-apps/waybar:mpris - Enable support for mpris
 gui-apps/waybar:network - Enable libnl support for network related features
+gui-apps/waybar:pipewire - Enable support for pipewire
 gui-apps/waybar:popups - Enable popup support with gtk-layer-shell
 gui-apps/waybar:pulseaudio - Enable support for volume control via PulseAudio
 gui-apps/waybar:sndio - Enable support for volume control via sndio
@@ -6096,7 +6103,6 @@ net-libs/xrootd:fuse - Enable the sys-fs/fuse filesystem driver
 net-libs/xrootd:http - Enable http protocol support
 net-libs/xrootd:libxml2 - Use dev-libs/libxml2 for XML parsing (preferred) instead of bundled tinyxml
 net-libs/xrootd:server - Install xrootd server and related plug-ins
-net-libs/xrootd:test-suite - Install additional components useful for testing xrootd
 net-libs/zeromq:drafts - Build draft API, which may change at any time without any notice, and is therefore not recommended for normal use.
 net-libs/zeromq:libbsd - Use strlcpy() from dev-libs/libbsd instead of internal implementation.
 net-libs/zeromq:pgm - Build PGM (Pragmatic General Multicast)extention, a protocol for reliable multicast transport of data over IP networks.
@@ -7168,6 +7174,7 @@ sci-libs/blis:pthread - Use pthread threadding model
 sci-libs/blis:serial - Use no threadding model
 sci-libs/caffe2:cuda - Add support for CUDA processing
 sci-libs/caffe2:distributed - Support distributed applications
+sci-libs/caffe2:fbgemm - Use FBGEMM
 sci-libs/caffe2:ffmpeg - Add support for video processing operators
 sci-libs/caffe2:nnpack - Use NNPACK
 sci-libs/caffe2:numpy - Add support for math operations through numpy

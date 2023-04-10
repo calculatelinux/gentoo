@@ -33,6 +33,59 @@
 
 #--- END OF EXAMPLES ---
 
+# Ulrich Müller <ulm@gentoo.org> (2023-04-10)
+# Pretest versions, masked for testing.
+<app-editors/emacs-29.0.9999:29-vcs
+
+# Hans de Graaff <graaff@gentoo.org> (2023-04-10)
+# Ruby 2.7 reached EOL upstream on April 1st. Mask this version and any
+# remaining ruby27-only packages for removal on 2023-05-10.
+dev-lang/ruby:2.7
+=dev-ruby/bundler-2.1.4
+=dev-ruby/did_you_mean-1.4.0
+=dev-ruby/rubygems-3.1.6
+=dev-ruby/contracts-0.16.1
+
+# Michał Górny <mgorny@gentoo.org> (2023-04-10)
+# Last release in 2016, carries a few patches already.  No revdeps.
+# dev-python/cbor2 is a more modern replacement.
+# Removal on 2023-05-10.  Bug #903261.
+dev-python/cbor
+
+# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2023-04-09)
+# Archived upstream, better alternatives available, try:
+# - net-im/whatsapp-desktop-bin (another electron based approach)
+# - net-im/whatsie (a simple yet configurable Qt based app)
+# - net-im/whatsapp-for-linux::guru (a simple app using webkit2gtk)
+# Removal on 2023-05-09
+net-im/wazzapp-bin
+
+# Matthew Thode <prometheanfire@gentoo.org> (2023-04-08)
+# upstream has been dead for nearly five years
+# Removal on 2023-05-07
+app-admin/mcollective
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2023-04-08)
+# Long obsolete part of KDE Plasma (merged back into kwin).
+# Removal on 2023-08-22
+kde-plasma/kwayland-server
+
+# John Helmert III <ajak@gentoo.org> (2023-04-08)
+# i3-gaps has been meregd into upstream i3. Use x11-wm/i3 instead.
+# See also: https://github.com/i3/i3/issues/3724
+# Removal on 2023-05-08.
+x11-wm/i3-gaps
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2023-04-09)
+# Numerous vulnerabilities, bug #825486.
+# Nothing depends on it. Removal on 2023-05-09
+dev-java/jython
+
+# Hans de Graaff <graaff@gentoo.org> (2023-04-08)
+# Last release in 2008. Upstream is gone. No reverse dependencies. No tests.
+# Removal on 2023-05-08
+dev-ruby/allison
+
 # Michał Górny <mgorny@gentoo.org> (2023-04-07)
 # No Python 3.11 support and the ebuild is not running the test suite.
 # Still uses deprecated dev-python/toml (upstream).  No revdeps.
@@ -100,10 +153,6 @@ dev-ruby/ddmemoize
 # [2] https://wiki.gentoo.org/wiki/Nouveau
 x11-drivers/nvidia-drivers:0/390
 
-# Michał Górny <mgorny@gentoo.org> (2023-03-30)
-# Fails to build, bug #903017.
-=dev-util/spirv-llvm-translator-16.0.0
-
 # Matt Turner <mattst88@gentoo.org> (2023-03-30)
 # Masked for testing and migration of consumers
 net-libs/libdmapsharing:4.0
@@ -155,11 +204,6 @@ dev-ruby/flickraw
 # bug #810493, bug #903532.
 # Removal on 2023-04-28.
 kde-apps/kross-interpreters
-
-# Sam James <sam@gentoo.org> (2023-03-29)
-# Only supports imminently-EOL ruby27.
-# Removal on 2023-04-28.  Bug #903499.
-net-misc/mikutter
 
 # Hans de Graaff <graaff@gentoo.org> (2023-03-29)
 # ruby27-only package. app-text/ronn-ng is a drop-in replacement.  it is
