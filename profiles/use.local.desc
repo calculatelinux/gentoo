@@ -244,6 +244,7 @@ app-arch/libarchive:blake2 - Enable Blake2 hash support via app-crypt/libb2.
 app-arch/libarchive:bzip2 - Allow accessing bzip2-compressed archives through libbz2 (which comes with app-arch/bzip2). This only affects libarchive's native support: bsdtar will keep using bunzip2 as a filter if that's not built-in.
 app-arch/libarchive:e2fsprogs - Use file flags from sys-fs/e2fsprogs headers instead of virtual/os-headers headers
 app-arch/libarchive:nettle - Use dev-libs/nettle as crypto backend
+app-arch/p7zip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii file names archived in Windows.
 app-arch/p7zip:rar - Enable support for non-free rar decoder
 app-arch/rar:all-sfx - Install all SFX (Self-Extracting) files rather than just the native format (allows creation of Windows EXEs on Linux ELF systems)
 app-arch/tar:minimal - just install `tar`
@@ -3935,7 +3936,6 @@ media-gfx/digikam:mediaplayer - Enable support for media player using media-libs
 media-gfx/digikam:panorama - Build the panorama plugin which requires media-gfx/hugin
 media-gfx/digikam:semantic-desktop - Enable kde-frameworks/kfilemetadata support
 media-gfx/eog-plugins:map - Enable world map display using media-libs/libchamplain
-media-gfx/eog-plugins:picasa - Enable uploading to Google's Picasa Web Albums
 media-gfx/eom:imagemagick - Use media-gfx/imagemagick as an external backend for the thumbnailer
 media-gfx/exact-image:swig - Adds Swig support dev-lang/swig
 media-gfx/exiv2:bmff - Add support for the ISOBMFF format
@@ -4163,6 +4163,7 @@ media-libs/imlib2:tiff - TIFF image loader support
 media-libs/imlib2:webp - WEBP image loader support
 media-libs/imlib2:zlib - Zlib loader support
 media-libs/intel-mediasdk:tools - Build analyse and inspect tools
+media-libs/jasper:heif - Enable experimental support for HEIF/HEIC, unsupported by upstream
 media-libs/leptonica:utils - Install command-line utilities
 media-libs/lib3mf:system-act - Use system-provided dev-go/act as code generator instead of package provided binaries. This flag will be removed after some time used for testing!
 media-libs/libafterimage:shaping - Use MIT shaped X windows extention.
@@ -8742,6 +8743,7 @@ x11-apps/igt-gpu-tools:tests - Build and install tests
 x11-apps/igt-gpu-tools:valgrind - Support valgrind annotations
 x11-apps/igt-gpu-tools:xv - Enable intel-gpu-overlay xv backend
 x11-apps/mesa-progs:gles2 - Build OpenGL ES 2 utilities
+x11-apps/mesa-progs:vulkan - Build Vulkan utilities
 x11-apps/xdpyinfo:dmx - Builds support for Distributed Multiheaded X x11-base/xorg-server
 x11-apps/xinit:twm - Control dependencies on legacy apps (xterm, twm, ...). Safe to disable if you use a modern desktop environment.
 x11-base/xorg-server:elogind - Use elogind to get control over framebuffer when running as regular user
