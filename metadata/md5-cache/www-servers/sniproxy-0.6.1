@@ -1,0 +1,16 @@
+BDEPEND=sys-devel/gettext virtual/pkgconfig sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71-r5 >=sys-devel/libtool-2.4.7
+DEFINED_PHASES=configure install prepare test
+DEPEND=acct-group/sniproxy acct-user/sniproxy dev-libs/libev >=dev-libs/libpcre-3 dns? ( net-libs/udns ) test? ( net-misc/curl )
+DESCRIPTION=Proxies incoming HTTP and TLS connections based on the hostname
+EAPI=7
+HOMEPAGE=https://github.com/dlundquist/sniproxy
+INHERIT=autotools
+IUSE=+dns +largefile rfc3339 test
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD-2
+RDEPEND=acct-group/sniproxy acct-user/sniproxy dev-libs/libev >=dev-libs/libpcre-3 dns? ( net-libs/udns )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/dlundquist/sniproxy/archive/0.6.1.tar.gz -> sniproxy-0.6.1.tar.gz
+_eclasses_=autotools	f0d3196128225dee3220e65f3371bc7a	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	9d3a9a889a6fa62ae794f817c156491b	multilib	d1408425c7c4a7669b9b17735404b693	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e
+_md5_=6a432029a336ac074114637dcb05f35c

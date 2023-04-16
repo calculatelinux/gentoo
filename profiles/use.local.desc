@@ -1277,6 +1277,7 @@ dev-ada/gnatcoll-db:static-pic - Build shared library
 dev-ada/gnatcoll-db:xref - Build xref library
 dev-ada/gpr:shared - Build shared library
 dev-ada/gpr-unit-provider:shared - Build shared library
+dev-ada/gpr-unit-provider:static-pic - Build static library with pic code
 dev-ada/gtkada:shared - Build gtkada as shared library
 dev-ada/gtkada:static-pic - Build static library with pic code
 dev-ada/langkit:shared - Build shared library
@@ -2310,6 +2311,7 @@ dev-python/PyQt6:qml - Build bindings for the QtQml module and enable the qml pl
 dev-python/PyQt6:quick - Build bindings for the QtQuick module
 dev-python/PyQt6:quick3d - Build bindings for the QtQuick3D module
 dev-python/PyQt6:serialport - Build bindings for the QtSerialPort module
+dev-python/PyQt6:spatialaudio - Build bindings for the QtSpatialAudio module
 dev-python/PyQt6:sql - Build bindings for the QtSql module
 dev-python/PyQt6:svg - Build bindings for the QtSvg module
 dev-python/PyQt6:testlib - Build bindings for the QtTest module
@@ -3318,7 +3320,7 @@ gui-apps/swaylock:gdk-pixbuf - Enable additional image format support via the x1
 gui-apps/waybar:evdev - Enable libevdev support for evdev related features
 gui-apps/waybar:experimental - Enable experimental features, such as Bluetooth battery reporting
 gui-apps/waybar:libinput - Enable libinput support for libinput related features
-gui-apps/waybar:logind - Enable support for logind
+gui-apps/waybar:logind - Enable support for logind (bluetooth and idle inhibit)
 gui-apps/waybar:mpd - Enable support for the Music Player Daemon
 gui-apps/waybar:mpris - Enable support for mpris
 gui-apps/waybar:network - Enable libnl support for network related features
@@ -3899,6 +3901,7 @@ media-gfx/blender:collada - Add support for Collada interchange format through m
 media-gfx/blender:color-management - Enable color management via media-libs/opencolorio.
 media-gfx/blender:cuda - Build cycles renderer with nVidia CUDA support.
 media-gfx/blender:cycles - Build cycles renderer (requires media-libs/openimageio and dev-libs/boost).
+media-gfx/blender:cycles-bin-kernels - Precompile the cycles render kernels for the CUDA/HIP/OneAPI backends, if they are enabled, at compile time. This makes it so that the user doesn't have to wait for the kernels to compile when they are used for the first time in Blender. If this option is not on, they will be built as needed at runtime.
 media-gfx/blender:dds - Adds DDS textures support to Blender.
 media-gfx/blender:embree - Use embree to accelerate certain areas of the Cycles render engine.
 media-gfx/blender:fluid - Adds fluid simulation support via the built-in Mantaflow library.
@@ -3908,6 +3911,7 @@ media-gfx/blender:ndof - Enable NDOF input devices (SpaceNavigator and friends).
 media-gfx/blender:oidn - Enable OpenImageDenoiser Support
 media-gfx/blender:opencl - Allow OpenCL Graphics Acceleration. This may require extra graphics card drivers.
 media-gfx/blender:openimageio - Enable OpenImageIO Support
+media-gfx/blender:openpgl - Enable path guiding support in Cycles
 media-gfx/blender:opensubdiv - Add rendering support form OpenSubdiv from Dreamworks Animation through media-libs/opensubdiv.
 media-gfx/blender:openvdb - Enable openvdb for volumetric processing, like the voxel remesher. Also enables volumetric GPU preview rendering for Nvidia cards.
 media-gfx/blender:optix - Add support for NVIDIA's OptiX Raytracing Engine.
