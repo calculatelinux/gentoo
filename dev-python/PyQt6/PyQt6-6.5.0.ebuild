@@ -3,6 +3,7 @@
 
 EAPI=8
 
+DISTUTILS_EXT=1
 DISTUTILS_USE_PEP517=sip
 PYPI_NO_NORMALIZE=1
 PYTHON_COMPAT=( python3_{9..11} )
@@ -41,8 +42,9 @@ REQUIRED_USE="
 	websockets? ( network )
 	widgets? ( gui )"
 
+# can use parts of the Qt private api and "sometimes" needs rebuilds wrt :=
 DEPEND="
-	>=dev-qt/qtbase-${QT_PV}[dbus?,gles2-only=,gui?,network?,opengl?,sql?,ssl=,widgets?,xml?]
+	>=dev-qt/qtbase-${QT_PV}=[dbus?,gles2-only=,gui?,network?,opengl?,sql?,ssl=,widgets?,xml?]
 	dbus? (
 		dev-python/dbus-python[${PYTHON_USEDEP}]
 		sys-apps/dbus
@@ -77,8 +79,9 @@ src_prepare() {
 	PATH=${T}/cxx:${PATH}
 }
 
-src_configure() {
+python_configure_all() {
 	append-cxxflags -std=c++17 # for old gcc / clang that use <17 (bug #892331)
+	append-cxxflags ${CPPFLAGS} # respect CPPFLAGS
 
 	pyqt-use_enable() {
 		local state=$(usex ${1} --enable= --disable=)
