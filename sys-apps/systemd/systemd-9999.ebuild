@@ -298,6 +298,7 @@ multilib_src_configure() {
 		$(meson_native_use_bool kmod)
 		$(meson_use lz4)
 		$(meson_use lzma xz)
+		$(meson_use test tests)
 		$(meson_use zstd)
 		$(meson_native_use_bool iptables libiptc)
 		$(meson_native_use_bool openssl)
@@ -357,6 +358,9 @@ multilib_src_install_all() {
 
 	einstalldocs
 	dodoc "${FILESDIR}"/nsswitch.conf
+
+	insinto /usr/lib/tmpfiles.d
+	doins "${FILESDIR}"/legacy.conf
 
 	if ! use resolvconf; then
 		rm -f "${ED}${rootprefix}/${sbin}"/resolvconf || die

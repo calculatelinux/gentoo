@@ -16,7 +16,7 @@ HOMEPAGE="https://apps.kde.org/umbrello/ https://umbrello.kde.org"
 
 LICENSE="GPL-2" # TODO: CHECK
 SLOT="5"
-KEYWORDS="~amd64 ~arm64 ~x86"
+KEYWORDS="amd64 arm64 x86"
 IUSE="php"
 
 RDEPEND="
@@ -58,7 +58,6 @@ src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen=ON # broken, re-enable w/ ECM_QTHELP
 		-DBUILD_APIDOC=OFF
-		-DBUILD_KF5=ON
 		-DBUILD_PHP_IMPORT=$(usex php)
 		-DBUILD_unittests=$(usex test)
 	)
