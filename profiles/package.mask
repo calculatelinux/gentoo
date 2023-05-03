@@ -33,6 +33,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2023-05-03)
+# Broken pkgconfig file, please upgrade to -r1.
+# bug #704348, bug #905632.
+=sci-libs/metis-5.2.1
+=sci-libs/parmetis-4.0.3_p20230326
+
+# Michał Górny <mgorny@gentoo.org> (2023-05-03)
+# Unmaintained upstream.  Fails to build without sys-apps/which, fails
+# with modern autoconf.
+# Removal on 2023-06-02.  Bug #896896.
+dev-python/thunarx-python
+
 # Sam James <sam@gentoo.org> (2023-05-01)
 # Breaks dev-python/scipy build. See bug #905396 and https://github.com/serge-sans-paille/gast/issues/74.
 =dev-python/gast-0.5.4
@@ -272,13 +284,6 @@ app-misc/wildq
 dev-perl/Bio-SamTools
 sci-biology/samtools:0.1-legacy
 
-# Hans de Graaff <graaff@gentoo.org> (2023-04-02)
-# Archived upstream since two years, meant to be used with Rails
-# 5.2. Continued as Turbo as part of the hotwire project in Rails.
-# Masked for removal on 2023-05-02
-dev-ruby/turbolinks
-dev-ruby/turbolinks-source
-
 # Ionen Wolkens <ionen@gentoo.org> (2023-03-30)
 # NVIDIA dropped support for the 390.xx branch in December 2022[1].
 #
@@ -358,15 +363,6 @@ x11-drivers/nvidia-drivers:0/390
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2022-12-19)
 # This version currently is not compatible with kernel build (yet)
 ~dev-util/bindgen-0.63.0
-
-# Matt Turner <mattst88@gentoo.org> (2022-11-16)
-# Masked for testing and migration of consumers
-media-gfx/gnome-photos
->=media-libs/grilo-0.3.15-r1
->=media-plugins/grilo-plugins-0.3.16
-media-sound/gnome-music
->=media-sound/rhythmbox-3.4.7
-net-libs/libdmapsharing:4.0
 
 # Jaco Kroon <jaco@uls.co.za> (2022-11-05)
 # Some potentially breaking changes here, please check the UPGRADE.txt file.
