@@ -26,8 +26,7 @@ app-accessibility/flite:voices - Install synthetic voices
 app-accessibility/freetts:jsapi - build Java Speech API (JSAPI)
 app-accessibility/freetts:mbrola - Adds support for mbrola voices
 app-accessibility/orca:braille - Enable braille support
-app-accessibility/speech-dispatcher:espeak - Adds support for espeak speech engine
-app-accessibility/speech-dispatcher:espeak-ng - Adds support for espeak-ng speech engine
+app-accessibility/speech-dispatcher:espeak - Adds support for espeak-ng speech engine
 app-accessibility/speech-dispatcher:flite - Adds support for flite speech engine
 app-admin/clsync:apidoc - Provide doxygen generated API docs.
 app-admin/clsync:cgroups - Use cgroups to limit /dev access.
@@ -1188,7 +1187,7 @@ app-text/sigil:system-mathjax - Use the system-wide dev-libs/mathjax instead of 
 app-text/stardict:advertisement - Enable stardict advertisements plugin
 app-text/stardict:cal - Enable calendar support using cal program
 app-text/stardict:dictdotcn - Enable dict.cn network plugin (for Chinese language)
-app-text/stardict:espeak - Enable text to speech synthesizer plugin using app-accessibility/espeak engine
+app-text/stardict:espeak - Enable text to speech synthesizer plugin using app-accessibility/espeak-ng engine
 app-text/stardict:flite - Enable text to speech synthesizer plugin using app-accessibility/flite engine
 app-text/stardict:fortune - Enable plugin to read fortune messages using games-misc/fortune-mod. You may consider installing games-misc/fortune-mod-all to get all fortune messages.
 app-text/stardict:gucharmap - Enable plugin for unicode symbols description using gnome-extra/gucharmap
@@ -2364,7 +2363,6 @@ dev-python/editorconfig-core-py:cli - Install command line interface as well as 
 dev-python/httpx:cli - Install the CLI "httpx" client.
 dev-python/hypothesis:cli - Install a CLI tool used to write tests.
 dev-python/icalendar:doc - Generate examples and other extra documentation
-dev-python/ipython:matplotlib - Add support for dev-python/matplotlib
 dev-python/ipython:nbconvert - Enable support for converting notebooks to various formats using app-text/pandoc
 dev-python/ipython:notebook - Install requirements for the web notebook based on dev-python/tornado
 dev-python/matplotlib:excel - Pull dev-python/xlwt for the exceltools toolkit
@@ -2646,7 +2644,6 @@ dev-qt/qtwebchannel:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtwebengine:designer - Install the QWebEngineView plugin used to add widgets in dev-qt/designer forms that display web pages.
 dev-qt/qtwebengine:geolocation - Enable physical position determination via dev-qt/qtpositioning
 dev-qt/qtwebengine:jumbo-build - Combine source files to speed up build process.
-dev-qt/qtwebengine:system-ffmpeg - Use the system-wide media-video/ffmpeg instead of bundled.
 dev-qt/qtwebengine:system-icu - Use the system-wide dev-libs/icu instead of bundled.
 dev-qt/qtwebengine:widgets - Enable QtWidgets support
 dev-qt/qtwebsockets:qml - Build QML bindings
@@ -4109,7 +4106,6 @@ media-libs/allegro:dumb - Enable media-libs/dumb module library support
 media-libs/allegro:physfs - Enable physfs support
 media-libs/allegro:vga - Enables the VGA graphics driver
 media-libs/alsa-lib:alisp - Enable support for ALISP (ALSA LISP) interpreter for advanced features.
-media-libs/alsa-lib:thread-safety - thread-safe API functions
 media-libs/alure:dumb - Enable media-libs/dumb module library support
 media-libs/alure:fluidsynth - Enables Fluidsynth MIDI software synthesis
 media-libs/assimp:samples - Build viewer library
@@ -4712,6 +4708,7 @@ media-sound/ncmpcpp:visualizer - Enable visualizer screen with sound wave/freque
 media-sound/ncspot:clipboard - Use the system clipboard to e.g. share a link
 media-sound/ncspot:cover - Support displaying the album cover
 media-sound/ncspot:mpris - Allow ncspot to be controlled via MPRIS API
+media-sound/ncspot:ncurses - Use cursive/ncurses-backend instead of crossterm or pancurses
 media-sound/ncspot:notify - Show what's playing via a notification
 media-sound/patchage:jack-dbus - Use Jack via D-Bus instead of libjack
 media-sound/picard:discid - Enable reading the ID of the inserted CD
@@ -7217,6 +7214,7 @@ sci-libs/caffe2:cuda - Add support for CUDA processing
 sci-libs/caffe2:distributed - Support distributed applications
 sci-libs/caffe2:fbgemm - Use FBGEMM
 sci-libs/caffe2:ffmpeg - Add support for video processing operators
+sci-libs/caffe2:gloo - Use sci-libs/gloo
 sci-libs/caffe2:nnpack - Use NNPACK
 sci-libs/caffe2:numpy - Add support for math operations through numpy
 sci-libs/caffe2:opencl - Use OpenCL
@@ -7655,6 +7653,7 @@ sci-visualization/gnuplot:bitmap - Enable dot-matrix printers and pbm terminal
 sci-visualization/gnuplot:gd - Add support for media-libs/gd. Needed for GIF, JPEG, and PNG image output.
 sci-visualization/gnuplot:libcerf - Enable special functions from sci-libs/libcerf
 sci-visualization/gnuplot:regis - Enable ReGIS terminal
+sci-visualization/gr:agg - Enable the libagg anti-grain rendering engine
 sci-visualization/gwyddion:fits - Enable FITS image import via sci-libs/cfitsio
 sci-visualization/gwyddion:jansson - Enable JSON data manipulation via dev-libs/jansson
 sci-visualization/gwyddion:sourceview - Enable support for x11-libs/gtksourceview

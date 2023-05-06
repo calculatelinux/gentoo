@@ -1,15 +1,15 @@
 BDEPEND=>=dev-libs/wayland-protocols-1.24 virtual/pkgconfig >=dev-util/meson-0.62.2 >=dev-util/ninja-1.8.2 dev-util/meson-format-array >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install test unpack
-DEPEND=>=media-video/pipewire-0.3.41:= dev-libs/inih dev-libs/wayland media-libs/mesa x11-libs/libdrm || ( systemd? ( >=sys-apps/systemd-237 ) elogind? ( >=sys-auth/elogind-237 ) sys-libs/basu )
+DEPEND=>=media-video/pipewire-0.3.62:= dev-libs/inih dev-libs/wayland media-libs/mesa x11-libs/libdrm || ( systemd? ( >=sys-apps/systemd-237 ) elogind? ( >=sys-auth/elogind-237 ) sys-libs/basu )
 DESCRIPTION=xdg-desktop-portal backend for wlroots
-EAPI=7
+EAPI=8
 HOMEPAGE=https://github.com/emersion/xdg-desktop-portal-wlr
 INHERIT=meson git-r3
 IUSE=elogind systemd
 LICENSE=MIT
 PROPERTIES=live
-RDEPEND=>=media-video/pipewire-0.3.41:= dev-libs/inih dev-libs/wayland media-libs/mesa x11-libs/libdrm || ( systemd? ( >=sys-apps/systemd-237 ) elogind? ( >=sys-auth/elogind-237 ) sys-libs/basu ) sys-apps/xdg-desktop-portal
+RDEPEND=>=media-video/pipewire-0.3.62:= dev-libs/inih dev-libs/wayland media-libs/mesa x11-libs/libdrm || ( systemd? ( >=sys-apps/systemd-237 ) elogind? ( >=sys-auth/elogind-237 ) sys-libs/basu ) sys-apps/xdg-desktop-portal
 REQUIRED_USE=?? ( elogind systemd )
-SLOT=0/9999
-_eclasses_=eapi8-dosym	741bfa77afb2a9321261501aca58c208	git-r3	27e13c09a4c7e4c78ac812f74727e676	meson	915ec7c25e08d7886558215e6809ca1e	multilib	d1408425c7c4a7669b9b17735404b693	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	python-utils-r1	4544ab96b58e177dc52d75e42f5ee307	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e
-_md5_=2bd2afd8b665bc09ee06bef86d4a365a
+SLOT=0
+_eclasses_=git-r3	27e13c09a4c7e4c78ac812f74727e676	meson	915ec7c25e08d7886558215e6809ca1e	multilib	d1408425c7c4a7669b9b17735404b693	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	python-utils-r1	4544ab96b58e177dc52d75e42f5ee307	toolchain-funcs	14a8ae365191b518fad51caad7a08f3e
+_md5_=9a1876b0a3c87bdc733afae55bdc5a81
