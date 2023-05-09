@@ -83,7 +83,6 @@ app-admin/logrotate:acl - Installs acl support
 app-admin/logrotate:cron - Installs cron file
 app-admin/logrotate:selinux - Installs Security Enhanced Linux support
 app-admin/logstash-bin:x-pack - Enable additional features (may need a license)
-app-admin/mcollective:client - Install client utilities
 app-admin/openrc-settingsd:systemd - Use the versions of dbus and polkit files provided by sys-apps/systemd
 app-admin/pass:X - Use x11-misc/xclip to copy passwords to the clipboard.
 app-admin/pass:dmenu - Add support for x11-misc/dmenu with the 'passmenu' program.
@@ -908,7 +907,8 @@ app-misc/mosquitto:websockets - Support the WebSocket protocol.
 app-misc/muttprint:doc - Builds documentation
 app-misc/neofetch:X - Enable support for detecting DEs, WMs, screen resolutions, and showing images from an X terminal
 app-misc/nnn:8contexts - Enable 8 contexts (instead of 4)
-app-misc/nnn:colemak - Key bindings for Colemak-DH keyboard layout
+app-misc/nnn:colemak - Key bindings for Colemak keyboard layout
+app-misc/nnn:colemak-dh - Key bindings for Colemak-DH keyboard layout
 app-misc/nnn:emoji - Display icons using emoji
 app-misc/nnn:gitstatus - Add git status column to the detail view
 app-misc/nnn:icons - Display icons using icons-in-terminal
@@ -2379,6 +2379,7 @@ dev-python/pillow:imagequant - Build with Image Quantization Library support
 dev-python/pivy:quarter - Use media-libs/quarter for GUI bindings
 dev-python/pivy:soqt - Use media-libs/SoQt for GUI bindings
 dev-python/py-amqp:extras - Install extra tools to generate initial Python mod from an AMQP XML file
+dev-python/pyarrow:parquet - Enables read/write parquet data format
 dev-python/pydantic:native-extensions - Compiles native "C" extensions.
 dev-python/pyglet:image - Enable support for image formats other than PNG and BMP
 dev-python/pyocr:cuneiform - Enable support for the app-text/cuneiform OCR engine
@@ -3368,6 +3369,7 @@ gui-libs/xdg-desktop-portal-wlr:elogind - Enable support for rootless session vi
 gui-wm/gamescope:pipewire - Enable screen capture via PipeWire
 gui-wm/gamescope:wsi-layer - Enable the WSI layer (required for HDR)
 gui-wm/hikari:X - Enable support for X11 applications (XWayland)
+gui-wm/hyprland:legacy-renderer - Enable legacy renderer
 gui-wm/sway:X - Enable support for X11 applications (XWayland)
 gui-wm/sway:grimshot - Install 'grimshot': script for taking screenshots
 gui-wm/sway:swaybar - Install 'swaybar': sway's status bar component
@@ -7296,6 +7298,7 @@ sci-libs/gdal:spatialite - Enable Spatial DBMS over sqlite dev-db/spatialite
 sci-libs/gdal:xls - Add the dev-libs/freexl library for xls import support
 sci-libs/ginkgo:cuda - Add support for cuda assimp (dev-util/nvidia-cuda-toolkit)
 sci-libs/ginkgo:hwloc - Add support for hwloc (sys-apps/hwloc)
+sci-libs/gloo:cuda - Enable CUDA support
 sci-libs/gloo:libuv - Enable libuv support
 sci-libs/gloo:redis - Enable Redis backend for storage via dev-libs/hiredis
 sci-libs/gmsh:alglib - Enable alglib support for mesh optimizers
@@ -8851,6 +8854,7 @@ x11-libs/vte:icu - Enable legacy charset support using dev-libs/icu
 x11-libs/vte:systemd - Support moving terminal child processes to their own systemd user scopes to avoid terminal getting killed due to child causing OOM
 x11-libs/wxGTK:gstreamer - Enable the wxMediaCtrl class for playing audio and video through gstreamer.
 x11-libs/wxGTK:sdl - Use Simple Directmedia Layer (media-libs/libsdl) for audio.
+x11-libs/xapp:mate - Install status applet for mate-base/mate
 x11-misc/albert:debug - Enable debugging informations
 x11-misc/albert:python-extensions - Install default python extensions system-wide
 x11-misc/albert:statistics - Enable local statistics
