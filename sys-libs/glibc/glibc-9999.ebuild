@@ -97,9 +97,6 @@ fi
 # Lastly, let's avoid some openssh nastiness, bug 708224, as
 # convenience to our users.
 
-# gzip, grep, awk are needed by locale-gen, bug 740750; depending on the
-# compile-locales useflag either in src_install or in pkg_postinst.
-
 IDEPEND="
 	!compile-locales? ( sys-apps/locale-gen )
 "
