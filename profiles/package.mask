@@ -33,6 +33,64 @@
 
 #--- END OF EXAMPLES ---
 
+# Matt Turner <mattst88@gentoo.org> (2023-05-11)
+# Console version of stardict which is masked for removal. Only reverse
+# dependencies are app-dicts/stardict-* (via stardict.eclass).
+# Bug #905901. Removal on 2023-06-11
+app-text/sdcv
+
+# Matt Turner <mattst88@gentoo.org> (2023-05-11)
+# Dictionaries for app-text/stardict which is masked for removal.
+# Bug #905901. Removal on 2023-06-11
+app-dicts/stardict-cdict-en-zh-big5
+app-dicts/stardict-cdict-en-zh-gb
+app-dicts/stardict-cedict-zh-en-big5
+app-dicts/stardict-cedict-zh-en-gb
+app-dicts/stardict-dictd-devils
+app-dicts/stardict-freedict-eng-deu
+app-dicts/stardict-freedict-eng-fra
+app-dicts/stardict-freedict-eng-ita
+app-dicts/stardict-freedict-eng-lat
+app-dicts/stardict-freedict-eng-rus
+app-dicts/stardict-freedict-eng-spa
+app-dicts/stardict-freedict-eng-swe
+app-dicts/stardict-freedict-eng-tur
+app-dicts/stardict-freedict-tur-deu
+app-dicts/stardict-freedict-tur-eng
+app-dicts/stardict-jmdict-en-ja
+app-dicts/stardict-jmdict-ja-en
+app-dicts/stardict-langdao-en-zh-gb
+app-dicts/stardict-langdao-zh-en-gb
+app-dicts/stardict-mova-smiley
+app-dicts/stardict-oxford-en-zh-gb
+app-dicts/stardict-quick-eng-jpn
+app-dicts/stardict-quick-jpn-eng
+app-dicts/stardict-quick-ru-en
+app-dicts/stardict-xdict-en-zh-big5
+app-dicts/stardict-xdict-en-zh-gb
+app-dicts/stardict-xdict-zh-en-big5
+app-dicts/stardict-xdict-zh-en-gb
+
+# Matt Turner <mattst88@gentoo.org> (2023-05-11)
+# Depends on many deprecated packages, such as
+# 	- app-text/enchant:0
+# 	- app-text/gnome-doc-utils
+# 	- gnome-extra/gucharmap:0
+# 	- x11-libs/gtk+:2
+# No reverse dependencies.
+# Bug #905901. Removal on 2023-06-11
+app-text/stardict
+
+# Sam James <sam@gentoo.org> (2023-05-10)
+# A major reverse depndency (kde-apps/libkexiv2) does not yet build against this
+# so mask for now, see bug #906087 and bug #906090.
+=media-gfx/exiv2-0.28.0
+
+# Sam James <sam@gentoo.org> (2023-05-10)
+# Lots of package breakage as usual for new versions. Masked until most/all
+# reverse dependencies are fixed. Tracker bug is bug #906077.
+=dev-libs/libfmt-10*
+
 # Matt Turner <mattst88@gentoo.org> (2023-05-08)
 # Package is unmaintained and appears quite dead. Last release in 2020. Broken
 # with stable glib-2.76. Depends on app-text/enchant:0.
@@ -90,13 +148,6 @@ dev-python/thunarx-python
 # Breaks dev-python/scipy build. See bug #905396 and https://github.com/serge-sans-paille/gast/issues/74.
 =dev-python/pythran-0.13.0
 =dev-python/gast-0.5.4
-
-# Sam James <sam@gentoo.org> (2023-05-01)
-# Masked for testing. Other distros seem to have hit a bunch of new test
-# failures in various applications, and initially there were ABI issues in .0.
-# Also, the failure case for bug #745162 needs retesting to see if the patch
-# should be rebased or just dropped.
->=dev-libs/libxml2-2.11.0
 
 # John Helmert III <ajak@gentoo.org> (2023-04-30)
 # STARTTLS vulnerability, depends on gtk+:2, practically unmainatined
@@ -250,20 +301,6 @@ x11-plugins/ascpu
 # Mask experimental software
 =mail-mta/postfix-3.9*
 
-# Matt Turner <mattst88@gentoo.org> (2023-04-10)
-# DMX support was dropped from the Xserver in v21.1.0 and had been broken for
-# 14 years previous to its removal. See
-# https://cgit.freedesktop.org/xorg/xserver/commit/?id=b3b81c8c2090cd49410960a021baf0d27fdd2ab3
-# Removal on 2023-05-10
-x11-libs/libdmx
-
-# Matt Turner <mattst88@gentoo.org> (2023-04-10)
-# speedo support was dropped from libXfont ~14 years ago. See
-# https://www.x.org/wiki/DeprecatedInX11R7/
-# https://gitlab.freedesktop.org/xorg/lib/libxfont/-/commit/85b66b8a7f3095f10437c8ecb3dcbfe68c9cfced
-# Removal on 2023-05-10
-media-fonts/font-bitstream-speedo
-
 # Ulrich Müller <ulm@gentoo.org> (2023-04-10)
 # Pretest versions, masked for testing.
 <app-editors/emacs-29.0.9999:29-vcs
@@ -275,42 +312,6 @@ dev-lang/ruby:2.7
 =dev-ruby/bundler-2.1.4
 =dev-ruby/rubygems-3.1.6
 =dev-ruby/contracts-0.16.1
-
-# Michał Górny <mgorny@gentoo.org> (2023-04-10)
-# Last release in 2016, carries a few patches already.  No revdeps.
-# dev-python/cbor2 is a more modern replacement.
-# Removal on 2023-05-10.  Bug #903261.
-dev-python/cbor
-
-# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2023-04-09)
-# Archived upstream, better alternatives available, try:
-# - net-im/whatsapp-desktop-bin (another electron based approach)
-# - net-im/whatsie (a simple yet configurable Qt based app)
-# - net-im/whatsapp-for-linux::guru (a simple app using webkit2gtk)
-# Removal on 2023-05-09
-net-im/wazzapp-bin
-
-# John Helmert III <ajak@gentoo.org> (2023-04-08)
-# i3-gaps has been meregd into upstream i3. Use x11-wm/i3 instead.
-# See also: https://github.com/i3/i3/issues/3724
-# Removal on 2023-05-08.
-x11-wm/i3-gaps
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2023-04-09)
-# Numerous vulnerabilities, bug #825486.
-# Nothing depends on it. Removal on 2023-05-09
-dev-java/jython
-
-# Hans de Graaff <graaff@gentoo.org> (2023-04-08)
-# Last release in 2008. Upstream is gone. No reverse dependencies. No tests.
-# Removal on 2023-05-08
-dev-ruby/allison
-
-# Michał Górny <mgorny@gentoo.org> (2023-04-07)
-# No Python 3.11 support and the ebuild is not running the test suite.
-# Still uses deprecated dev-python/toml (upstream).  No revdeps.
-# Removal on 2023-05-07.  Bug #878655.
-app-misc/wildq
 
 # Ionen Wolkens <ionen@gentoo.org> (2023-03-30)
 # NVIDIA dropped support for the 390.xx branch in December 2022[1].

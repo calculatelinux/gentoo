@@ -11,4 +11,4 @@ PROPERTIES=live
 RDEPEND=net-dialup/ppp:= sys-apps/iproute2 tk? ( dev-lang/tk:= )
 SLOT=0
 _eclasses_=git-r3	27e13c09a4c7e4c78ac812f74727e676	readme.gentoo-r1	204091a2cde6179cd9d3db26d09412d3
-_md5_=4c90d1720fc7d2420702b7f85477f525
+_md5_=64eb33d076f1c0ebe71d7f979e537b98

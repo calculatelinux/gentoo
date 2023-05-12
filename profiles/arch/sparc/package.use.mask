@@ -1,6 +1,10 @@
 # Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Sam James <sam@gentoo.org> (2023-05-10)
+# sys-cluster/ceph not keyworded here
+sys-block/tgt rbd
+
 # Sam James <sam@gentoo.org> (2023-04-14)
 # Needs dev-python/sympy which is not keyworded
 dev-python/nbval test
@@ -508,10 +512,6 @@ net-misc/modemmanager mbim
 # Pacho Ramos <pacho@gentoo.org> (2014-02-22)
 # Missing keywords, bug #495250
 >=gnome-base/gnome-extra-apps-3.10 tracker
-
-# Raúl Porcel <armin76@gentoo.org> (2014-02-01)
-# Sigbuses
-net-misc/openssh hpn
 
 # Pacho Ramos <pacho@gentoo.org> (2014-01-19)
 # Missing keywords, bug #478254
