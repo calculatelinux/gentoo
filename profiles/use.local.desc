@@ -460,6 +460,7 @@ app-editors/helix:grammar - Build and install grammar language files
 app-editors/jasspa-microemacs:nanoemacs - Build NanoEmacs instead of MicroEmacs
 app-editors/joe:xterm - Enable full xterm clipboard support
 app-editors/leafpad:emacs - Enable Emacs key theme
+app-editors/mousepad:shortcuts - Build the "shortcuts" plugin
 app-editors/nano:debug - Enable debug messages and assert warnings. Note that these will all be sent straight to stderr rather than some logging facility.
 app-editors/nano:justify - Enable justify/unjustify functions for text formatting.
 app-editors/nano:magic - Add magic file support (sys-apps/file) to automatically detect appropriate syntax highlighting
@@ -2366,6 +2367,7 @@ dev-python/matplotlib:gtk3 - Enable x11-libs/gtk+:3 support
 dev-python/matplotlib:webagg - Enable webagg backend that uses dev-python/tornado
 dev-python/mido:portmidi - Support using media-libs/portmidi as MIDI back-end
 dev-python/mido:rtmidi - Support using media-libs/rtmidi as MIDI back-end
+dev-python/mkdocs-material:social - Install the dependencies of the "social" plugin.
 dev-python/mpmath:matplotlib - Add support for dev-python/matplotlib
 dev-python/msgpack:native-extensions - Compiles native "C" extensions (speedups, instead of using python fallback code).
 dev-python/pandas:full-support - Pull all packages to give pandas full support
@@ -3357,10 +3359,12 @@ gui-libs/vte:systemd - Support moving terminal child processes to their own syst
 gui-libs/vte-common:systemd - Support moving terminal child processes to their own systemd user scopes to avoid terminal getting killed due to child causing OOM
 gui-libs/wlroots:X - Enable support for X11 applications (XWayland)
 gui-libs/wlroots:hwdata - Use system hwdata
+gui-libs/wlroots:liftoff - Enable support for libliftoff kms plane backend
 gui-libs/wlroots:seatd - Enable libseatd session support
 gui-libs/wlroots:tinywl - Install the minimal wayland client, tinywl
 gui-libs/wlroots:vulkan - Enable support for the vulkan backend renderer
 gui-libs/wlroots:x11-backend - Enable support for handling input/output devices through x11-libs/libxcb
+gui-libs/wlroots:xcb-errors - Better error reporting when using xwayland
 gui-libs/xdg-desktop-portal-wlr:elogind - Enable support for rootless session via elogind
 gui-wm/gamescope:pipewire - Enable screen capture via PipeWire
 gui-wm/gamescope:wsi-layer - Enable the WSI layer (required for HDR)
@@ -4093,6 +4097,7 @@ media-gfx/renderdoc:qt5 - Build and install the qrenderdoc GUI
 media-gfx/shotwell:opencv - Enable face detection via media-libs/opencv
 media-gfx/skanpage:ocr - Enable support for Optical Character Recognition via app-text/tesseract
 media-gfx/solvespace:system-mimalloc - Use system dev-libs/mimalloc instead of vendored library
+media-gfx/ueberzugpp:opencv - Use media-libs/opencv for additional image formats and OpenCL accelerated scaling
 media-gfx/xpaint:pgf - Support for loading PGF images
 media-gfx/xsane:ocr - Enable support for Optical Character Recognition reader
 media-gfx/yafaray:fastmath - Enable mathematic approximations to make code faster
@@ -4294,7 +4299,7 @@ media-libs/mesa:gles1 - Enable GLESv1 support.
 media-libs/mesa:gles2 - Enable GLESv2 support.
 media-libs/mesa:llvm - Enable LLVM backend for Gallium3D.
 media-libs/mesa:lm-sensors - Enable Gallium HUD lm-sensors support.
-media-libs/mesa:opencl - Enable the Clover Gallium OpenCL state tracker.
+media-libs/mesa:opencl - Enable the Rusticl Gallium OpenCL state tracker.
 media-libs/mesa:osmesa - Build the Mesa library for off-screen rendering.
 media-libs/mesa:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
 media-libs/mesa:valgrind - Compile in valgrind memory hints
@@ -4404,6 +4409,13 @@ media-libs/svgalib:kernel-helper - Build the helper kernel module
 media-libs/tremor:low-accuracy - enable 32bit only multiply operations
 media-libs/urt:tools - Install tools
 media-libs/vigra:valgrind - Enable valgrind in make check
+media-libs/vips:deprecated - Enable deprecated components
+media-libs/vips:fits - Enable support for the Flexible Image Transport System data format using sci-libs/cfitsio
+media-libs/vips:gsf - Enable support for structured files using gnome-extra/libgsf
+media-libs/vips:imagequant - Enable support for Image Quantization using media-gfx/libimagequant
+media-libs/vips:jpegxl - Enable support for the JPEG-XL image format using media-libs/libjxl
+media-libs/vips:matio - Enable support for matlab files using sci-libs/matio
+media-libs/vips:pango - Enable support for text rendering using x11-libs/pango
 media-libs/vulkan-loader:layers - Include the vulkan layers
 media-libs/waffle:egl - Enable EGL support
 media-libs/waffle:gbm - Enable support for the Generic Buffer Manager (gbm)
@@ -5581,7 +5593,6 @@ net-dns/opendnssec:signer - Enables signing capabilities for OpenDNSSEC
 net-dns/opendnssec:softhsm - Enables support for storing DNSSEC keys in a dev-libs/softhsm PKCS#11 object
 net-dns/pdns:lmdb - Use LMDB as backend.
 net-dns/pdns:lua-records - Enable LUA records.
-net-dns/pdns:mydns - Making it possible to use a MyDNS MySQL database with PowerDNS (not recommended for new deployments).
 net-dns/pdns:remote - Use a generic socket or pipe as a backend (via JSON RPC requests).
 net-dns/pdns:sodium - Use dev-libs/libsodium for cryptography
 net-dns/pdns:tinydns - Use a TinyDNS CDB database as backend.
@@ -6641,7 +6652,8 @@ net-misc/xmrig:donate - Set the default donation level to 1% instead of 0
 net-misc/xmrig:hwloc - Use sys-apps/hwloc for CPU affinity support
 net-misc/xmrig:opencl - Enable OpenCL support
 net-misc/youtube-viewer:gtk - Install the gtk3 GUI
-net-misc/ytfzf:minimal - Skip app-shells/fzf and media-video/mpv dependencies (requires custom settings)
+net-misc/ytfzf:minimal - Skip all optional dependencies (may no longer work out-of-the-box and require custom setting up)
+net-misc/ytfzf:thumbnails - Pull media-gfx/ueberzugpp or media-gfx/ueberzug for viewing thumbnails (default method when using -t)
 net-misc/zerotier:clang - Use Clang compiler instead of GCC
 net-nds/389-ds-base:accountpolicy - Enable account policy plugin - automatically lock an account after a certain amount of time has elapsed
 net-nds/389-ds-base:auto-dn-suffix - Enable auto bind with auto dn suffix over unix domain socket (LDAPI) support
@@ -8463,6 +8475,7 @@ sys-libs/ncurses:ada - Add bindings for the ADA programming language
 sys-libs/ncurses:stack-realign - Realign the stack in the 32-bit build for compatibility with older binaries at some performance cost. Avoids crashes in older 32-bit binaries. Only affects x86/32-bit multilib builds on amd64.
 sys-libs/ncurses:tinfo - Build curses library (libncurses) sep from the low-level terminfo library (libtinfo) -- usually needed only for binary packages -- but it is binary compatible in either mode
 sys-libs/ncurses:trace - Enable test trace() support in ncurses calls
+sys-libs/ncurses-compat:stack-realign - Realign the stack in the 32-bit build for compatibility with older binaries at some performance cost. Avoids crashes in older 32-bit binaries. Only affects x86/32-bit multilib builds on amd64.
 sys-libs/ncurses-compat:tinfo - Build curses library (libncurses) sep from the low-level terminfo library (libtinfo) -- usually needed only for binary packages -- but it is binary compatible in either mode
 sys-libs/newlib:nano - Build additional newlib-nano library
 sys-libs/pam:berkdb - Build the pam_userdb module, that allows to authenticate users against a Berkeley DB file. Please note that enabling this USE flag will create a PAM module that links to the Berkeley DB (as provided by sys-libs/db) installed in /usr/lib and will thus not work for boot-critical services authentication.
@@ -8763,8 +8776,9 @@ www-servers/nginx:pcre2 - Enable support for pcre2
 www-servers/nginx:rtmp - NGINX-based Media Streaming Server
 www-servers/nginx:ssl - Enable HTTPS module for http. Enable SSL/TLS support for POP3/IMAP/SMTP for mail.
 www-servers/nginx-unit:php7-4 - Support for PHP 7.4
-www-servers/nginx-unit:php8-0 - Support for PHP 7.4
-www-servers/nginx-unit:php8-1 - Support for PHP 7.4
+www-servers/nginx-unit:php8-0 - Support for PHP 8.0
+www-servers/nginx-unit:php8-1 - Support for PHP 8.1
+www-servers/nginx-unit:php8-2 - Support for PHP 8.2
 www-servers/pshs:magic - Enable automatic detection of Content-Type using libmagic (sys-apps/file)
 www-servers/pshs:qrcode - Enable generating QRCodes for server URL
 www-servers/sniproxy:dns - Enable DNS resolver via net-libs/udns
