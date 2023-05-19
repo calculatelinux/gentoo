@@ -288,6 +288,9 @@ if [[ ${PN} != kgcc64 && ${PN} != gcc-* ]] ; then
 	tc_version_is_at_least 12.2.1_p20221203 ${PV} && IUSE+=" default-znow"
 	tc_version_is_at_least 12.2.1_p20221203 ${PV} && IUSE+=" default-stack-clash-protection"
 	tc_version_is_at_least 13.0.0_pre20221218 ${PV} && IUSE+=" modula2"
+	# See https://gcc.gnu.org/pipermail/gcc-patches/2023-April/615944.html
+	# and https://rust-gcc.github.io/2023/04/24/gccrs-and-gcc13-release.html for why
+	# it was disabled in 13.
 	tc_version_is_at_least 14.0.0_pre20230423 ${PV} && IUSE+=" rust"
 fi
 
@@ -2113,7 +2116,7 @@ toolchain_src_install() {
 		#
 		# Do the 'make install' from the build directory
 		pushd "${WORKDIR}"/build-jit > /dev/null || die
-		S="${WORKDIR}"/build-jit emake DESTDIR="${D}" install
+		S="${WORKDIR}"/build-jit emake DESTDIR="${D}" -j1 install
 
 		# Punt some tools which are really only useful while building gcc
 		find "${ED}" -name install-tools -prune -type d -exec rm -rf "{}" \;
@@ -2127,7 +2130,17 @@ toolchain_src_install() {
 	fi
 
 	# Do the 'make install' from the build directory
-	S="${WORKDIR}"/build emake DESTDIR="${D}" install
+	#
+	# Unfortunately, we have to use -j1 for make install. Upstream
+	# don't really test it and there's not much appetite for fixing bugs
+	# with it. Several reported bugs exist where the resulting image
+	# was wrong, rather than a simple compile/install failure:
+	# - bug #906155
+	# - https://gcc.gnu.org/bugzilla/show_bug.cgi?id=42980
+	# - https://gcc.gnu.org/bugzilla/show_bug.cgi?id=51814
+	# - https://gcc.gnu.org/bugzilla/show_bug.cgi?id=103656
+	# - https://gcc.gnu.org/bugzilla/show_bug.cgi?id=109898
+	S="${WORKDIR}"/build emake DESTDIR="${D}" -j1 install
 
 	# Punt some tools which are really only useful while building gcc
 	find "${ED}" -name install-tools -prune -type d -exec rm -rf "{}" \;

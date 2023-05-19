@@ -54,11 +54,9 @@ app-admin/conky:lua-rsvg - Enable if you want Lua RSVG bindings
 app-admin/conky:math - Enable support for glibc's libm math library
 app-admin/conky:moc - Enable monitoring of music played by media-sound/moc
 app-admin/conky:mpd - Enable monitoring of music controlled by media-sound/mpd
-app-admin/conky:nano-syntax - Enable syntax highlighting for app-editors/nano
 app-admin/conky:nvidia - Enable reading of nvidia card temperature sensors via x11-drivers/nvidia-drivers
 app-admin/conky:portmon - Enable support for tcp (ip4) port monitoring
 app-admin/conky:thinkpad - Enable support for IBM/Lenovo notebooks
-app-admin/conky:weather-metar - Enable support for metar weather service
 app-admin/conky:webserver - Enable support to act as a webserver serving conkys output using net-libs/libmicrohttpd
 app-admin/conky:xmms2 - Enable monitoring of music played by media-sound/xmms2
 app-admin/conserver:freeipmi - Compile in FreeIPMI support via sys-libs/freeipmi
@@ -141,7 +139,6 @@ app-admin/salt:cheetah - Enable support for dev-python/cheetah3
 app-admin/salt:cherrypy - Enable support for using cherrypy.
 app-admin/salt:genshi - Enable support for dev-python/genshi
 app-admin/salt:gnupg - Enable support for gnupg via python-gnupg.
-app-admin/salt:keyring - Enable support for keyrings via python-keyring.
 app-admin/salt:libcloud - Enable salt-cloud support via libcloud.
 app-admin/salt:libvirt - Support managing virtual machines with app-emulation/libvirt.
 app-admin/salt:mako - Add support for using the mako template engine for parsing salt states.
@@ -323,7 +320,6 @@ app-containers/docker:cli - This is a temporary use flag which pulls in app-cont
 app-containers/docker:container-init - Makes the a staticly-linked init system tini available inside a container.
 app-containers/docker:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
 app-containers/docker:overlay - Enables dependencies for the "overlay" graph driver, including necessary kernel flags.
-app-containers/docker-credential-helpers:gnome-keyring - Build secretservice helper which works with gnome-keyring or kwallet using D-Bus.
 app-containers/docker-credential-helpers:pass - Build pass helper for the pass utility.
 app-containers/lxc:io-uring - Enable io_uring support, and use io_uring instead of epoll
 app-containers/lxc:lto - Enable Link Time Optimization (LTO)
@@ -402,7 +398,6 @@ app-crypt/tpm2-tss:mbedtls - Use net-libs/mbedtls as crypto engine
 app-crypt/tpm2-tss:openssl - Use dev-libs/openssl as crypto engine
 app-crypt/tpm2-tss:policy - Enable policy library (requires openssl as crypto backend)
 app-crypt/veracrypt:asm - Enable assembly for optimization
-app-crypt/zulucrypt:gnome - Enable support for the freedesktop.org Secret Service API via app-crypt/libsecret
 app-crypt/zulucrypt:kwallet - Enable encrypted storage of passwords with kde-frameworks/kwallet
 app-crypt/zulucrypt:udev - Whether udev will be consulted when deciding if a volume is system or not
 app-dicts/aspell-be:classic - Support classic spelling by default
@@ -3842,7 +3837,6 @@ mate-extra/caja-extensions:share - Add an extension to support sharing files.
 mate-extra/caja-extensions:wallpaper - Add an extension to support setting an image as the current wallpaper
 mate-extra/mate-polkit:accountsservice - Support extraction of data from AccountsService
 mate-extra/mate-power-manager:applet - Enable building of the MATE applet.
-mate-extra/mate-power-manager:libsecret - Support locking of keyring via app-crypt/libsecret
 mate-extra/mate-system-monitor:wnck - Enable experimental support using x11-libs/libwnck.
 mate-extra/mate-utils:applet - Enable the mate dictionary applet
 media-fonts/corefonts:tahoma - Also install the Tahoma font. Due to the lack of a free bold variant, this may render badly. See bug 184790.
@@ -5788,7 +5782,6 @@ net-im/psi:enchant - Enable spellchecking using app-text/enchant
 net-im/psi:extras - Enable Psi+ patchset
 net-im/psi:hunspell - Enable spellchecking using app-text/hunspell
 net-im/psi:iconsets - Install additional iconsets, some of them have no clear licensing
-net-im/psi:keyring - Enable storing password in system keyring manager
 net-im/psi:webengine - Enable themed, html-based chatlogs using dev-qt/qtwebengine
 net-im/psi:whiteboarding - Enable experimental interactive SVG drawing
 net-im/psi:xscreensaver - Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events
@@ -6123,7 +6116,6 @@ net-libs/tox:log-warn - Log level: 2
 net-libs/udns:tools - Build and install dnsget, ex-rdns and rblcheck tools
 net-libs/wandio:http - Build support for reading files over HTTP using net-misc/curl
 net-libs/webkit-gtk:avif - Enable support for AVIF images via media-libs/libavif
-net-libs/webkit-gtk:egl - Enable EGL support
 net-libs/webkit-gtk:examples - Install the MiniBrowser example application
 net-libs/webkit-gtk:gamepad - Enable gamepad input support via dev-libs/libmanette
 net-libs/webkit-gtk:jumbo-build - Combine source files to speed up build process
@@ -6133,6 +6125,7 @@ net-libs/xrootd:fuse - Enable the sys-fs/fuse filesystem driver
 net-libs/xrootd:http - Enable http protocol support
 net-libs/xrootd:libxml2 - Use dev-libs/libxml2 for XML parsing (preferred) instead of bundled tinyxml
 net-libs/xrootd:server - Install xrootd server and related plug-ins
+net-libs/xrootd:xrdec - Enable erasure coding support (XrdEc plugin) with dev-libs/isa-l
 net-libs/zeromq:drafts - Build draft API, which may change at any time without any notice, and is therefore not recommended for normal use.
 net-libs/zeromq:libbsd - Use strlcpy() from dev-libs/libbsd instead of internal implementation.
 net-libs/zeromq:pgm - Build PGM (Pragmatic General Multicast)extention, a protocol for reliable multicast transport of data over IP networks.
@@ -6723,13 +6716,11 @@ net-p2p/ktorrent:stats - Shows statistics about torrents in several graphs
 net-p2p/ktorrent:upnp - Forward ports using UPnP
 net-p2p/ktorrent:webengine - Embedded search for torrents using dev-qt/qtwebengine
 net-p2p/ktorrent:zeroconf - Discover peers on the local network using the Zeroconf protocol
-net-p2p/litecoind:wallet - Enable wallet support
 net-p2p/mldonkey:bittorrent - enable bittorrent support
 net-p2p/mldonkey:fasttrack - enable fasttrack support
 net-p2p/mldonkey:gnutella - enable gnutella and gnutella2 support
 net-p2p/mldonkey:guionly - enable client build only
 net-p2p/qbittorrent:webui - Enable the Web UI
-net-p2p/retroshare:autologin - Enables potentially insecure autologin capability via app-crypt/libsecret
 net-p2p/retroshare:cli - Enables terminal login support for retroshare-service
 net-p2p/retroshare:jsonapi - Enables the new RetroShare JSON API
 net-p2p/retroshare:libupnp - Enables UPnP port forwarding via net-libs/libupnp
@@ -7822,14 +7813,11 @@ sys-apps/man-db:manpager - Enable manpager wrapper for colorizing output
 sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/memtest86+:bios32 - Compile a BIOS-bootable 32bit memtest image
 sys-apps/memtest86+:bios64 - Compile a BIOS-bootable 64bit memtest image
-sys-apps/memtest86+:boot - Also install to /boot instead of just /usr/share/memtest86+/
+sys-apps/memtest86+:boot - Install to /boot in addition to /usr/share/memtest86+/
 sys-apps/memtest86+:efi32 - Compile a EFI32-bootable 32bit memtest image
 sys-apps/memtest86+:efi64 - Compile a UEFI-bootable 64bit memtest image
-sys-apps/memtest86+:floppy - Install a script to create floppy disks containing memtest86+ binaries.
-sys-apps/memtest86+:iso - Compile an ISO image
 sys-apps/memtest86+:iso32 - Compile a 32bit ISO image
 sys-apps/memtest86+:iso64 - Compile a 64bit ISO image
-sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/moreutils:perl - Install scripts written in Perl
 sys-apps/net-tools:arp - build the arp and rarp tools (for manipulating the ARP cache)
 sys-apps/net-tools:hostname - build the hostname and dnsdomainname tools
@@ -8937,7 +8925,6 @@ x11-plugins/vicious:contrib - Install extra widgets, some for less common hardwa
 x11-plugins/wmbattery:apm - Add APM (Advanced Power Management) support
 x11-plugins/wmfire:session - Enable session management
 x11-plugins/wmudmount:gcr - Enable support for secure memory with app-crypt/gcr
-x11-plugins/wmudmount:secret - Enable support for secret service with app-crypt/libsecret
 x11-terms/aterm:background - Enable background image support via media-libs/libafterimage
 x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small version
 x11-terms/gnome-terminal:gnome-shell - Integrate with gnome-base/gnome-shell search
