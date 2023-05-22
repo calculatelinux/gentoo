@@ -33,25 +33,34 @@
 
 #--- END OF EXAMPLES ---
 
-# David Seifert <soap@gentoo.org> (2023-05-19)
-# Depends on obsolete app-portage/g-sorcery.
-# Removal on 2023-06-18.
-app-portage/gs-elpa
+# Sam James <sam@gentoo.org> (2023-05-20)
+# Various regressions, please upgrade to the latest libxml2 (>=2.11.4).
+=dev-libs/libxml2-2.11.1
+=dev-libs/libxml2-2.11.2
+=dev-libs/libxml2-2.11.2-r1
+=dev-libs/libxml2-2.11.3
+
+# Sam James <sam@gentoo.org> (2023-05-19)
+# Breaks Portage's pid-sandbox at least with 5.10 kernels. Pending investigation.
+# If you're hitting this, try: FEATURES="-pid-sandbox" emerge -v1 sys-apps/util-linux
+# as a workaround. bug #906797.
+~sys-apps/util-linux-2.39
+
+# Michał Górny <mgorny@gentoo.org> (2023-05-19)
+# Replaced by dev-python/pyproject-hooks.  No revdeps left.
+# Removal on 2023-06-18.  Bug #906789.
+dev-python/pep517
 
 # David Seifert <soap@gentoo.org> (2023-05-19)
 # Abandoned, NIH library only used by other obsolete packages like gkeys
 # and layman, use app-crypt/gpgme[python] as a proper upstream
-# supported gpg library. Removal on 2023-06-18.
+# supported gpg library. Removal on 2023-08-17.
 dev-python/pyGPG
 
 # David Seifert <soap@gentoo.org> (2023-05-19)
 # Abandoned, replaced by 'eselect repository', tons of open bugs.
-# Removal on 2023-06-18. Bug #761199.
+# Removal on 2023-08-17. Bug #761199.
 app-portage/layman
-
-# David Seifert <soap@gentoo.org> (2023-05-19)
-# Depends on app-portage/layman. Removal on 2023-06-18.
-app-portage/g-sorcery
 
 # David Seifert <soap@gentoo.org> (2023-05-19)
 # EAPI 6, abandoned, never went anywhere, long obsolete with
@@ -98,38 +107,6 @@ games-emulation/pcsxr
 # Dead slot. Only reverse dependency is stardict which is masked for removal
 # Removal on 2023-06-12
 gnome-extra/gucharmap:0
-
-# Matt Turner <mattst88@gentoo.org> (2023-05-11)
-# Dictionaries for app-text/stardict which is masked for removal.
-# Bug #905901. Removal on 2023-06-11
-app-dicts/stardict-cdict-en-zh-big5
-app-dicts/stardict-cdict-en-zh-gb
-app-dicts/stardict-cedict-zh-en-big5
-app-dicts/stardict-cedict-zh-en-gb
-app-dicts/stardict-dictd-devils
-app-dicts/stardict-freedict-eng-deu
-app-dicts/stardict-freedict-eng-fra
-app-dicts/stardict-freedict-eng-ita
-app-dicts/stardict-freedict-eng-lat
-app-dicts/stardict-freedict-eng-rus
-app-dicts/stardict-freedict-eng-spa
-app-dicts/stardict-freedict-eng-swe
-app-dicts/stardict-freedict-eng-tur
-app-dicts/stardict-freedict-tur-deu
-app-dicts/stardict-freedict-tur-eng
-app-dicts/stardict-jmdict-en-ja
-app-dicts/stardict-jmdict-ja-en
-app-dicts/stardict-langdao-en-zh-gb
-app-dicts/stardict-langdao-zh-en-gb
-app-dicts/stardict-mova-smiley
-app-dicts/stardict-oxford-en-zh-gb
-app-dicts/stardict-quick-eng-jpn
-app-dicts/stardict-quick-jpn-eng
-app-dicts/stardict-quick-ru-en
-app-dicts/stardict-xdict-en-zh-big5
-app-dicts/stardict-xdict-en-zh-gb
-app-dicts/stardict-xdict-zh-en-big5
-app-dicts/stardict-xdict-zh-en-gb
 
 # Matt Turner <mattst88@gentoo.org> (2023-05-11)
 # Depends on many deprecated packages, such as
