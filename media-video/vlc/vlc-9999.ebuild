@@ -168,7 +168,7 @@ RDEPEND="
 		media-fonts/dejavu
 		>=media-libs/libprojectm-3.1.12:0=
 	)
-	pulseaudio? ( media-sound/pulseaudio )
+	pulseaudio? ( media-libs/libpulse )
 	rdp? ( >=net-misc/freerdp-2.0.0_rc0:=[client(+)] )
 	samba? ( >=net-fs/samba-4.0.0:0[client,-debug(-)] )
 	sdl-image? ( media-libs/sdl-image )
@@ -230,9 +230,8 @@ DEPEND="${RDEPEND}
 "
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-2.1.0-fix-libtremor-libs.patch # build system
-	"${FILESDIR}"/${PN}-2.2.8-freerdp-2.patch # bug 590164
-	"${FILESDIR}"/${PN}-configure_lua_version.patch
+	"${FILESDIR}"/${PN}-9999-fix-libtremor-libs.patch # build system
+	"${FILESDIR}"/${PN}-9999-configure-lua-version.patch
 )
 
 DOCS=( AUTHORS THANKS NEWS README.md doc/fortunes.txt )

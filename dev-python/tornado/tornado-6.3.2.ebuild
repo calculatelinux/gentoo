@@ -5,7 +5,7 @@ EAPI=8
 
 DISTUTILS_EXT=1
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{9..11} pypy3 )
+PYTHON_COMPAT=( python3_{10..11} pypy3 )
 PYTHON_REQ_USE="threads(+)"
 
 inherit distutils-r1 pypi
@@ -19,7 +19,7 @@ HOMEPAGE="
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~m68k ppc ppc64 ~riscv ~s390 sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos"
+KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ppc ppc64 ~riscv ~s390 sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos"
 IUSE="examples test"
 RESTRICT="!test? ( test )"
 
@@ -35,6 +35,11 @@ BDEPEND="
 	)
 "
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-6.3.2-test-timeout-increase.patch
+	"${FILESDIR}"/${PN}-6.3.2-ignore-deprecationwarning.patch
+)
+
 src_prepare() {
 	# network-sandbox? ipv6?
 	sed -i -e 's:test_localhost:_&:' \
@@ -45,6 +50,11 @@ src_prepare() {
 
 python_test() {
 	local -x ASYNC_TEST_TIMEOUT=60
+	# Avoid time-sensitive tests
+	# https://github.com/tornadoweb/tornado/blob/10974e6ebee80a26a2a65bb9bd715cf858fafde5/tornado/test/util.py#L19
+	local -x TRAVIS=1
+	local -x NO_NETWORK=1
+
 	cd "${T}" || die
 	"${EPYTHON}" -m tornado.test.runtests --verbose ||
 		die "tests failed under ${EPYTHON}"

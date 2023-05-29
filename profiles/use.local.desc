@@ -316,7 +316,6 @@ app-containers/crun:bpf - Enable in Kernel, eBPF (enhanced Berkley Packet Filter
 app-containers/crun:criu - Enable CRIU based checkpoint/restore support
 app-containers/docker:aufs - Enables dependencies for the "aufs" graph driver, including necessary kernel flags.
 app-containers/docker:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
-app-containers/docker:cli - This is a temporary use flag which pulls in app-containers/docker-cli, the docker command line client. This flag is here to assist in the transition to split packages and will be removed in a future release.
 app-containers/docker:container-init - Makes the a staticly-linked init system tini available inside a container.
 app-containers/docker:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
 app-containers/docker:overlay - Enables dependencies for the "overlay" graph driver, including necessary kernel flags.
@@ -815,6 +814,13 @@ app-misc/ddcutil:user-permissions - Adds a udev rules to allow non-root users in
 app-misc/digitemp:ds2490 - Build support for the ds2490 sensor
 app-misc/digitemp:ds9097 - Build support for the ds9097 sensor
 app-misc/digitemp:ds9097u - Build support for the ds9097u sensor
+app-misc/fastfetch:chafa - Enables text/graphics renderer with media-gfx/chafa
+app-misc/fastfetch:opencl - Enables OpenCL support
+app-misc/fastfetch:osmesa - Enables offscreen rendering support from media-libs/mesa
+app-misc/fastfetch:pci - Enables reading GPU via sys-apps/pciutils
+app-misc/fastfetch:vulkan - Enables reading GPU via media-libs/vulkan-loader
+app-misc/fastfetch:xfce - Enables support for XFCE config
+app-misc/fastfetch:xrandr - Enables support for Xrandr
 app-misc/g810-led:hidapi - Use dev-libs/hidapi instead of virtual/libusb for talking to the device (advertised to be faster)
 app-misc/geoclue:modemmanager - Enable geolocation through 3G or GPS enabled hardware through net-misc/modemmanager.
 app-misc/geoclue:zeroconf - Enable retrieval of GPS location from Android devices with https://wiki.gnome.org/Apps/GeoclueShare
@@ -3018,7 +3024,6 @@ games-emulation/mupen64plus-core:new-dynarec - Enable new experimental dynamic r
 games-emulation/mupen64plus-core:opencv - Support video capture via media-libs/opencv
 games-emulation/mupen64plus-core:osd - Overlay emulator messages using on-screen-display
 games-emulation/mupen64plus-video-glide64mk2:hires - Support hi-resolution textures (requires dev-libs/boost)
-games-emulation/pcsx2:backtrace - Display a backtrace on crash using sys-libs/libbacktrace
 games-emulation/pcsx2:sndio - Enable support for the media-sound/sndio backend
 games-emulation/pcsxr:archive - Support compressed files (via libarchive)
 games-emulation/pcsxr:ccdda - Support compressed CDDA (requires ffmpeg)
@@ -3349,10 +3354,6 @@ gui-wm/hyprland:legacy-renderer - Enable legacy renderer
 gui-wm/sway:X - Enable support for X11 applications (XWayland)
 gui-wm/sway:grimshot - Install 'grimshot': script for taking screenshots
 gui-wm/sway:swaybar - Install 'swaybar': sway's status bar component
-gui-wm/sway:swaybg - Install 'swaybg': allows to set a desktop background image
-gui-wm/sway:swayidle - Install 'swayidle': idle manager to run commands when user is inactive
-gui-wm/sway:swaylock - Install 'swaylock': sway's screen locker
-gui-wm/sway:swaymsg - Install 'swaymsg': tool for communicating with a running sway instance
 gui-wm/sway:swaynag - Install 'swaynag': shows a message with buttons
 gui-wm/sway:tray - Enable support for StatusNotifierItem tray specification
 gui-wm/sway:wallpapers - Install sway's default wallpaper image
@@ -4071,7 +4072,7 @@ media-gfx/shotwell:opencv - Enable face detection via media-libs/opencv
 media-gfx/skanpage:ocr - Enable support for Optical Character Recognition via app-text/tesseract
 media-gfx/solvespace:system-mimalloc - Use system dev-libs/mimalloc instead of vendored library
 media-gfx/ueberzugpp:opencv - Use media-libs/opencv for additional image formats and OpenCL accelerated scaling
-media-gfx/ueberzugpp:sway - Enable support for gui-wm/sway on wayland
+media-gfx/ueberzugpp:wayland - Enable wayland support (only usable with some wlroots-based compositors)
 media-gfx/xpaint:pgf - Support for loading PGF images
 media-gfx/xsane:ocr - Enable support for Optical Character Recognition reader
 media-gfx/yafaray:fastmath - Enable mathematic approximations to make code faster
@@ -4848,16 +4849,12 @@ media-tv/linuxtv-dvb-apps:alevt - Build videotext decoder
 media-tv/mythtv:alsa - Allows MythTV to directly output sound to ALSA devices
 media-tv/mythtv:asi - Support for DVEO ASI recorder
 media-tv/mythtv:autostart - Use a custom autostart configuration
-media-tv/mythtv:bluray - Use the system libbluray for BluRay support
 media-tv/mythtv:cec - Allows control of CEC enabled TVs via HDMI
 media-tv/mythtv:ceton - Ceton InfiniTV 4 a CableCARD-enabled tuner support
 media-tv/mythtv:debug - Instructs Qt to use the 'debug' target
-media-tv/mythtv:egl - EGL video output support
 media-tv/mythtv:fftw - Support visualizations via sci-libs/fftw
 media-tv/mythtv:hdhomerun - Silicondust USA Inc.network-attached tuner support
-media-tv/mythtv:hdpvr - Hauppauge HD-PVR?
 media-tv/mythtv:ieee1394 - Firewire enabled Cable boxe support
-media-tv/mythtv:ivtv - Support kernel driver for the iTVC15 family of MPEG codecs
 media-tv/mythtv:jack - Allows MythTV to use JACK as your sound output device
 media-tv/mythtv:java - BD-J support for Blu-ray discs
 media-tv/mythtv:lcd - Enable use of app-misc/lcdproc data display
@@ -7855,6 +7852,7 @@ sys-apps/smc-sum:module - Install Supermicro's kernel module.
 sys-apps/superdiag:iso - Install an iso image, which can be used with sys-apps/smc-sum.
 sys-apps/superdiag:usb - Install all files, which are needed for an installation on an usb thumb drive.
 sys-apps/systemd:audit - Enable support for sys-process/audit
+sys-apps/systemd:boot - Enable EFI boot manager and stub loader
 sys-apps/systemd:cgroup-hybrid - Default to hybrid (legacy) cgroup hierarchy instead of unified (modern).
 sys-apps/systemd:cryptsetup - Enable cryptsetup tools (includes unit generator for crypttab)
 sys-apps/systemd:curl - Enable support for uploading journals
