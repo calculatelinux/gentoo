@@ -141,39 +141,39 @@ multilib_src_configure() {
 		myconf+=( --without-gnutls --without-mbedtls --without-nss --without-rustls )
 
 		if use gnutls; then
-			einfo "SSL provided by gnutls"
+			multilib_is_native_abi && einfo "SSL provided by gnutls"
 			myconf+=( --with-gnutls )
 		fi
 		if use mbedtls; then
-			einfo "SSL provided by mbedtls"
+			multilib_is_native_abi && einfo "SSL provided by mbedtls"
 			myconf+=( --with-mbedtls )
 		fi
 		if use nss; then
-			einfo "SSL provided by nss"
+			multilib_is_native_abi && einfo "SSL provided by nss"
 			myconf+=( --with-nss --with-nss-deprecated )
 		fi
 		if use openssl; then
-			einfo "SSL provided by openssl"
+			multilib_is_native_abi && einfo "SSL provided by openssl"
 			myconf+=( --with-ssl --with-ca-path="${EPREFIX}"/etc/ssl/certs )
 		fi
 		if use rustls; then
-			einfo "SSL provided by rustls"
+			multilib_is_native_abi && einfo "SSL provided by rustls"
 			myconf+=( --with-rustls )
 		fi
 		if use curl_ssl_gnutls; then
-			einfo "Default SSL provided by gnutls"
+			multilib_is_native_abi && einfo "Default SSL provided by gnutls"
 			myconf+=( --with-default-ssl-backend=gnutls )
 		elif use curl_ssl_mbedtls; then
-			einfo "Default SSL provided by mbedtls"
+			multilib_is_native_abi && einfo "Default SSL provided by mbedtls"
 			myconf+=( --with-default-ssl-backend=mbedtls )
 		elif use curl_ssl_nss; then
-			einfo "Default SSL provided by nss"
+			multilib_is_native_abi && einfo "Default SSL provided by nss"
 			myconf+=( --with-default-ssl-backend=nss )
 		elif use curl_ssl_openssl; then
-			einfo "Default SSL provided by openssl"
+			multilib_is_native_abi && einfo "Default SSL provided by openssl"
 			myconf+=( --with-default-ssl-backend=openssl )
 		elif use curl_ssl_rustls; then
-			einfo "Default SSL provided by rustls"
+			multilib_is_native_abi && einfo "Default SSL provided by rustls"
 			myconf+=( --with-default-ssl-backend=rustls )
 		else
 			eerror "We can't be here because of REQUIRED_USE."
@@ -305,6 +305,8 @@ multilib_src_configure() {
 	echo "Requires.private: ${priv[*]}" >> libcurl.pc || die
 }
 
+# There is also a pytest harness that tests for bugs in some very specific
+# situations; we can rely on upstream for this rather than adding additional test deps.
 multilib_src_test() {
 	# See https://github.com/curl/curl/blob/master/tests/runtests.pl#L5721
 	# -n: no valgrind (unreliable in sandbox and doesn't work correctly on all arches)
