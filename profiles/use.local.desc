@@ -462,7 +462,6 @@ app-editors/nano:magic - Add magic file support (sys-apps/file) to automatically
 app-editors/nano:minimal - Disable all fancy features, including ones that otherwise have a dedicated USE flag (such as spelling).
 app-editors/neovim:lto - Build with Link Time Optimization (LTO)
 app-editors/neovim:nvimpager - Install nvimpager symlink to less.sh macro
-app-editors/neovim:tui - Build the neovim unix tui
 app-editors/okteta:designer - Build plugins for dev-qt/designer
 app-editors/pluma-plugins:bracketcompletion - Auto complete bracket pairs
 app-editors/pluma-plugins:codecomment - Comment code blocks
@@ -2383,6 +2382,10 @@ dev-python/pypy:full-stdlib - Install complete stdlib as necessary to use PyPy f
 dev-python/pypy-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
 dev-python/pypy3:ensurepip - Install the ensurepip module that uses bundled wheels to bootstrap pip and setuptools (if disabled, it will be only possible to use venv `--without-pip`)
 dev-python/pypy3-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
+dev-python/pypy3_10:ensurepip - Install the ensurepip module that uses bundled wheels to bootstrap pip and setuptools (if disabled, it will be only possible to use venv `--without-pip`)
+dev-python/pypy3_10-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
+dev-python/pypy3_9:ensurepip - Install the ensurepip module that uses bundled wheels to bootstrap pip and setuptools (if disabled, it will be only possible to use venv `--without-pip`)
+dev-python/pypy3_9-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
 dev-python/pyside2:3d - Build Qt3DCore, Qt3DAnimation, Qt3DExtras, Qt3DInput, Qt3DLogic, and Qt3DRender modules
 dev-python/pyside2:charts - Build QtCharts module
 dev-python/pyside2:concurrent - Build QtConcurrent module
@@ -3946,7 +3949,6 @@ media-gfx/digikam:addressbook - Enable akonadi contact integration
 media-gfx/digikam:imagemagick - Enable support for additional image formats such as XCF, FITS, HEIC etc.
 media-gfx/digikam:lensfun - Enable support for media-libs/lensfun
 media-gfx/digikam:marble - Enable support for geolocation using kde-apps/marble
-media-gfx/digikam:mediaplayer - Enable support for media player using media-libs/qtav
 media-gfx/digikam:panorama - Build the panorama plugin which requires media-gfx/hugin
 media-gfx/digikam:semantic-desktop - Enable kde-frameworks/kfilemetadata support
 media-gfx/eog-plugins:map - Enable world map display using media-libs/libchamplain
@@ -4023,7 +4025,6 @@ media-gfx/inkscape:wpg - Enable support for WordPerfect graphics via app-text/li
 media-gfx/iscan-plugin-gt-f500:minimal - Install the firmware only, and not the plugin.
 media-gfx/kphotoalbum:map - Enable map display support using kde-apps/marble
 media-gfx/kphotoalbum:phonon - Enable media-libs/phonon video backend (known to crash on some video formats)
-media-gfx/kphotoalbum:qtav - Enable media-libs/qtav video backend (audio and video may get out of sync)
 media-gfx/kphotoalbum:share - Enable support for a share menu using kde-frameworks/purpose
 media-gfx/kphotoalbum:vlc - Enable media-video/vlc video backend (recommended for X11)
 media-gfx/krita:color-management - Enable color management via media-libs/opencolorio
@@ -5715,6 +5716,7 @@ net-im/dino:gpg - Enable OpenPGP encryption plugin
 net-im/dino:http - Enable HTTP file upload plugin
 net-im/dino:notification-sound - notification sounds plugin
 net-im/dino:omemo - Enable OMEMO encryption plugin
+net-im/dino:rtp - Enable Audio/Video calls over XMPP using RTP
 net-im/ejabberd:captcha - Support for CAPTCHA Forms (XEP-158) on registration
 net-im/ejabberd:full-xml - Use XML features in XMPP stream (ex: CDATA), requires XML compliant clients
 net-im/ejabberd:mssql - Enable Microsoft SQL Server support (via ODBC) for data storage
@@ -5979,7 +5981,8 @@ net-libs/libgsasl:ntlm - Add support for Microsoft's NTLM mechanism using net-li
 net-libs/libiio:aio - Enable asynchronous IO support
 net-libs/libiscsi:rdma - Enable infiniband support via sys-cluster/rdma-core
 net-libs/libisds:openssl - Use dev-libs/openssl as crypto backend instead of app-crypt/gpgme and dev-libs/libgcrypt
-net-libs/libmicrohttpd:epoll - Use epoll() system call
+net-libs/libmicrohttpd:epoll - Support epoll() system call
+net-libs/libmicrohttpd:eventfd - Use EventFD for efficient inter-thread communication
 net-libs/libmicrohttpd:thread-names - Assign thread names to internal threads, useful for dependent apps debugging
 net-libs/libnids:glib - Use dev-libs/glib for multiprocessing support
 net-libs/libnids:libnet - Include code requiring net-libs/libnet
@@ -7987,7 +7990,6 @@ sys-boot/grub:truetype - Build and install grub-mkfont conversion utility
 sys-boot/lilo:device-mapper - Enable support for device-mapper from sys-fs/lvm2
 sys-boot/lilo:minimal - Do not install the dolilo helper script
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
-sys-boot/netboot:bootrom - Install the bootrom binary for creation of rom files, which can be used for booting via floppy or rom.
 sys-boot/plymouth:drm - Provides abstraction to the DRM drivers (intel, nouveau and vmwgfx at this moment)
 sys-boot/plymouth:pango - Adds support for printing text on splash screen and text prompts, e.g. for password
 sys-boot/plymouth:split-usr - Enable this if /bin and /usr/bin are separate directories

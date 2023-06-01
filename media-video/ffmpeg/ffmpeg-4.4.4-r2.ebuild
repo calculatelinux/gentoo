@@ -64,7 +64,7 @@ LICENSE="
 	samba? ( GPL-3 )
 "
 if [ "${PV#9999}" = "${PV}" ] ; then
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos"
+	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~x64-macos"
 fi
 
 # Options to use as use_enable in the foo[:bar] form.
@@ -336,6 +336,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-4.4.3-clang-14-ff_seek_frame_binary-crash.patch
 	"${FILESDIR}"/${PN}-4.4.3-get_cabac_inline_x86-32-bit.patch
 	"${FILESDIR}"/${PN}-4.4.4-wint-conversion-vulkan.patch
+	"${FILESDIR}"/${P}-fix-build-svt-av1-1.5.0.patch
 )
 
 MULTILIB_WRAPPED_HEADERS=(

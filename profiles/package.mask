@@ -33,17 +33,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2023-05-31)
+# Unmaintained.  Last commit in 2020.  Does not work with Python 3.12.
+# No revdeps.
+# Removal on 2023-06-30.  Bug #907495.
+dev-python/http-parser
+
 # Sam James <sam@gentoo.org> (2023-05-29)
 # Masked until enough reverse dependencies are fixed, bug #901257.
 =media-video/ffmpeg-6*
-
-# Ionen Wolkens <ionen@gentoo.org> (2023-05-28)
-# Both versions are affected by notable regressions, i.e. 2.8.5
-# leaves 100% cpu processes behind, and 2.8.6 has broken positioning
-# and scaling. Use 2.8.4 unless need the sway/hyprland support.
-# Under active development and releases are a bit experimental.
-=media-gfx/ueberzugpp-2.8.5
-=media-gfx/ueberzugpp-2.8.6
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2023-05-28)
 # Causes only problems, at negligible gain. Removal in 30days.
@@ -237,12 +235,6 @@ net-dns/ldns-utils
 # The server was removed on 2021-08-24 with commit
 # 7a1e8a90fa8a09a84741dc8ef5f774d92ae8433c
 acct-group/resin
-
-# Conrad Kostecki <conikost@gentoo.org> (2023-04-23)
-# Very old package, does not build with modern compilers.
-# It provides BOOTP support, predecessor of DHCP.
-# Removal on 2023-05-23. Bugs #894128, #884335
-sys-boot/netboot
 
 # Jakov Smolić <jsmolic@gentoo.org> (2023-04-21)
 # Does not support python 3.11, uses deprecated dev-python/future,
