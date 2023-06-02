@@ -17,7 +17,7 @@ else
 	SRC_URI="https://poppler.freedesktop.org/${P}.tar.xz"
 	SRC_URI+=" test? ( https://gitlab.freedesktop.org/poppler/test/-/archive/${TEST_COMMIT}/test-${TEST_COMMIT}.tar.bz2 -> ${PN}-test-${TEST_COMMIT}.tar.bz2 )"
 	SRC_URI+=" verify-sig? ( https://poppler.freedesktop.org/${P}.tar.xz.sig )"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x64-solaris"
+	KEYWORDS="~alpha ~amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x64-solaris"
 	SLOT="0/128"   # CHECK THIS WHEN BUMPING!!! SUBSLOT IS libpoppler.so SOVERSION
 fi
 
@@ -105,7 +105,7 @@ src_configure() {
 	append-lfs-flags # bug #898506
 
 	local mycmakeargs=(
-		-DBUILD_GTK_TESTS=OFFF
+		-DBUILD_GTK_TESTS=OFF
 		-DBUILD_QT5_TESTS=$(usex test $(usex qt5))
 		-DBUILD_CPP_TESTS=$(usex test)
 		-DBUILD_MANUAL_TESTS=$(usex test)
