@@ -610,6 +610,7 @@ app-emulation/qemu:ncurses - Enable the ncurses-based console
 app-emulation/qemu:nfs - Enable NFS support
 app-emulation/qemu:numa - Enable NUMA support
 app-emulation/qemu:pin-upstream-blobs - Pin the versions of BIOS firmware to the version included in the upstream release. This is needed to sanely support migration/suspend/resume/snapshotting/etc... of instances. When the blobs are different, random corruption/bugs/crashes/etc... may be observed.
+app-emulation/qemu:pipewire - Enable pipewire output for sound emulation
 app-emulation/qemu:plugins - Enable qemu plugin API via shared library loading.
 app-emulation/qemu:png - Enable png image support for the VNC console server
 app-emulation/qemu:pulseaudio - Enable pulseaudio output for sound emulation
@@ -3706,7 +3707,6 @@ mail-client/roundcube:ldap - Add dependencies to support connecting to an LDAP a
 mail-client/s-nail:kerberos - If network is enabled, this adds support for GSSAPI login on IMAP through virtual/krb5.
 mail-client/s-nail:net - Enable support for network protocols (POP, IMAP and SMTP). If you only need to send mail with the local Transport Agent, disabling this will get you support for only /usr/sbin/sendmail call.
 mail-client/s-nail:ssl - If network is enabled, this adds support for S/MIME and SSL/TLS-powered protocols through dev-libs/openssl.
-mail-client/sylpheed:oniguruma - Use dev-libs/oniguruma for regular expression
 mail-client/thunderbird:clang - Use Clang compiler instead of GCC
 mail-client/thunderbird:eme-free - Disable EME (DRM plugin) capability at build time
 mail-client/thunderbird:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
@@ -3817,7 +3817,6 @@ mate-base/mate-applets-meta:appindicator - Pull in mate-extra/mate-indicator-app
 mate-base/mate-applets-meta:sensors - Pull in mate-extra/mate-sensors-applet for hw sensors applet
 mate-base/mate-control-center:accountsservice - Add support for AccountsService
 mate-base/mate-session-manager:gles2 - Build with support for GLESv2 acceleration sessions
-mate-base/mate-session-manager:xtrans - Build with Xtrans support; WARNING: Disabling this flag will result in ICE binding on all interfaces
 mate-base/mate-settings-daemon:rfkill - build support for rfkill
 mate-extra/caja-extensions:cdr - Add an extension to burn files to cds using app-cdr/brasero.
 mate-extra/caja-extensions:gajim - Add an extension to support net-im/gajim.
@@ -6430,6 +6429,12 @@ net-misc/miniupnpd:strict - Be more strict regarding compliance with UPnP specif
 net-misc/modemmanager:mbim - Enable MBIM modem protocol
 net-misc/modemmanager:qmi - Enable support for the QMI modem protocol used by devices with Qualcomm chipsets
 net-misc/modemmanager:qrtr - Enable support for the QMI over IPC Router bus (QRTR) protocol
+net-misc/moonlight:cuda - Enable accelerated video rendering on NVIDIA hardware
+net-misc/moonlight:embedded - Optimize UI for fullscreen non-desktop usage
+net-misc/moonlight:glslow - Prefer direct KMS/DRM rendering over EGL/GLES rendering for better performance on some weaker GPUs
+net-misc/moonlight:libdrm - Enable video rendering via x11-libs/libdrm
+net-misc/moonlight:mmal - Enable accelerated video rendering on the Raspberry Pi
+net-misc/moonlight:soundio - Enable sound output via media-libs/libsoundio instead of media-libs/libsdl2
 net-misc/mosh:client - Build network client
 net-misc/mosh:examples - Include example scripts
 net-misc/mosh:mosh-hardening - Enable compiler and linker options to frustrate memory corruption exploits
@@ -8282,7 +8287,6 @@ sys-fs/lessfs:memtrace - Enable leefs to create a report regarding the memory al
 sys-fs/loop-aes:extra-ciphers - Enable extra ciphers
 sys-fs/loop-aes:keyscrub - Protects the encryption key in memory but takes more cpu resources
 sys-fs/lvm2:lvm - Build all of LVM2 including daemons and tools like lvchange, not just the device-mapper library (for other packages to use). If your system uses LVM2 for managing disks and partitions, enable this flag.
-sys-fs/lvm2:lvm2create-initrd - Install lvm2create_initrd script and pull in sys-apps/makedev for the /sbin/MAKEDEV command
 sys-fs/lvm2:sanlock - Enable lvmlockd with support for sanlock
 sys-fs/lvm2:thin - Support for thin volumes
 sys-fs/mtpfs:mad - Enable handling of MP3's metadata
@@ -8763,7 +8767,6 @@ x11-base/xorg-server:xorg - Build the Xorg X server (HIGHLY RECOMMENDED)
 x11-base/xorg-server:xvfb - Build the Xvfb server
 x11-base/xwayland:unwind - Enable libunwind usage for backtraces
 x11-base/xwayland:xcsecurity - Build Security extension
-x11-drivers/nvidia-drivers:driver - Install kernel driver modules
 x11-drivers/nvidia-drivers:kernel-open - Use the open source variant of drivers (Turing/Ampere+ GPUs only, aka GTX 1650+, very experimental)
 x11-drivers/nvidia-drivers:persistenced - Install the persistence daemon for keeping devices state when unused (e.g. for headless)
 x11-drivers/nvidia-drivers:static-libs - Install the XNVCtrl static library for accessing sensors and other features

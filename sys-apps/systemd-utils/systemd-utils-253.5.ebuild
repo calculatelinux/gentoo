@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 QA_PKGCONFIG_VERSION=$(ver_cut 1)
 
@@ -122,9 +122,6 @@ src_prepare() {
 	if use elibc_musl; then
 		PATCHES+=(
 			"${WORKDIR}/${MUSL_PATCHSET}"
-			# The LFS patch should be fine unconditionally but
-			# let's keep it conditional until merged upstream.
-			"${FILESDIR}"/${PN}-253.4-musl-lfs.patch
 		)
 	fi
 	default
