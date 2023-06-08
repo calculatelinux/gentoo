@@ -1,4 +1,4 @@
-BDEPEND=app-shells/bash sys-apps/util-linux[hardlink(-)?] >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=app-shells/bash hardlink? ( sys-apps/util-linux[hardlink(-)?] ) >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=install postinst postrm preinst prepare unpack
 DESCRIPTION=A flat colorful Design icon theme
 EAPI=8
@@ -12,4 +12,4 @@ REQUIRED_USE=|| ( standard black blue brown green grey orange pink purple red ye
 RESTRICT=binchecks strip test
 SLOT=0
 _eclasses_=edo	c0eb9cbe6b0bd01fcb4918f12598a4d3	git-r3	27e13c09a4c7e4c78ac812f74727e676	xdg	4a14c5c24f121e7da66e5aab4a168c6e	xdg-utils	baea6080dd821f5562d715887954c9d3
-_md5_=8223a36d0022da36578419f77d0d1db3
+_md5_=1989a576b5ab1dd131ea1650fe672bf6
