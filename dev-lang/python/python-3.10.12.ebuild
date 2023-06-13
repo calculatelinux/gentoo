@@ -28,7 +28,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="PSF-2"
 SLOT="${PYVER}"
-KEYWORDS="~alpha ~amd64 ~arm arm64 ~hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm arm64 ~hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc ~x86"
 IUSE="
 	bluetooth build debug +ensurepip examples gdbm hardened libedit lto
 	+ncurses pgo +readline +sqlite +ssl test tk valgrind +xml
@@ -187,6 +187,7 @@ src_configure() {
 			--timeout 1200
 
 			-x test_gdb
+			-x test_dtrace
 
 			# All of these seem to occasionally hang for PGO inconsistently
 			# They'll even hang here but be fine in src_test sometimes.

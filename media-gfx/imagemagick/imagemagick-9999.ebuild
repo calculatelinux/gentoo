@@ -101,16 +101,6 @@ src_prepare() {
 	#elibtoolize # for Darwin modules
 	eautoreconf
 
-	# Apply hardening, bug #664236
-	cp "${FILESDIR}"/policy-hardening.snippet "${S}" || die
-	sed -i -e '/^<policymap>$/ {
-			r policy-hardening.snippet
-			d
-		}' \
-		config/policy.xml || \
-		die "Failed to apply hardening of policy.xml"
-	einfo "policy.xml hardened"
-
 	# For testsuite, see https://bugs.gentoo.org/show_bug.cgi?id=500580#c3
 	local ati_cards mesa_cards nvidia_cards render_cards
 	shopt -s nullglob
@@ -246,36 +236,4 @@ src_install() {
 
 	insinto /usr/share/${PN}
 	doins config/*icm
-}
-
-pkg_postinst() {
-	local _show_policy_xml_notice=
-
-	if [[ -z "${REPLACING_VERSIONS}" ]]; then
-		# This is a new installation
-		_show_policy_xml_notice=yes
-	else
-		local v
-		for v in ${REPLACING_VERSIONS}; do
-			if ! ver_test "${v}" -gt "7.0.8.10-r2"; then
-				# This is an upgrade
-				_show_policy_xml_notice=yes
-
-				# Show this elog only once
-				break
-			fi
-		done
-	fi
-
-	if [[ -n "${_show_policy_xml_notice}" ]]; then
-		elog "For security reasons, a policy.xml file was installed in /etc/ImageMagick-7"
-		elog "which will prevent the usage of the following coders by default:"
-		elog ""
-		elog "  - PS"
-		elog "  - PS2"
-		elog "  - PS3"
-		elog "  - EPS"
-		elog "  - PDF"
-		elog "  - XPS"
-	fi
 }

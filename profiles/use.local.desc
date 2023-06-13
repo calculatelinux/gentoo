@@ -1143,7 +1143,6 @@ app-text/groonga:zeromq - Enable net-libs/zeromq used for suggestion
 app-text/htmltidy:deprecated - Install tools and header files which are now considered deprecated
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
 app-text/kbibtex:webengine - Use dev-qt/qtwebengine for HTML previews
-app-text/kbibtex:zotero - Enable support for synchronisation with zotero.org web service
 app-text/kjots:speech - Enable text-to-speech support
 app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search library (TeX related)
 app-text/libebook:tools - Build file conversion tools
@@ -1180,25 +1179,6 @@ app-text/robodoc:examples - Installs usage examples in /usr/share for Perl
 app-text/sdcv:darkterm - Improve readability of color output on terminals with dark background.
 app-text/sigil:plugins - Installed needed Python packages for using Sigil plugins
 app-text/sigil:system-mathjax - Use the system-wide dev-libs/mathjax instead of bundled
-app-text/stardict:advertisement - Enable stardict advertisements plugin
-app-text/stardict:cal - Enable calendar support using cal program
-app-text/stardict:dictdotcn - Enable dict.cn network plugin (for Chinese language)
-app-text/stardict:espeak - Enable text to speech synthesizer plugin using app-accessibility/espeak-ng engine
-app-text/stardict:flite - Enable text to speech synthesizer plugin using app-accessibility/flite engine
-app-text/stardict:fortune - Enable plugin to read fortune messages using games-misc/fortune-mod. You may consider installing games-misc/fortune-mod-all to get all fortune messages.
-app-text/stardict:gucharmap - Enable plugin for unicode symbols description using gnome-extra/gucharmap
-app-text/stardict:htmlparse - Enable plugin to parse dictionaries with html content
-app-text/stardict:info - Enable plugin to read info pages
-app-text/stardict:man - Enable plugin to read manual pages
-app-text/stardict:powerwordparse - Enable plugin to parse powerword dictionaries
-app-text/stardict:pronounce - Install WyabdcRealPeopleTTS package (it is just many .wav files) to make StarDict pronounce English words
-app-text/stardict:qqwry - Enable QQWry plugin, which provides information (in Chinese language) about geographical positions, owner, etc. for IP addresses
-app-text/stardict:tools - Build and install dictionary management tools and converters from various dictionary formats
-app-text/stardict:updateinfo - Enable plugin to check for stardict updates
-app-text/stardict:wikiparse - Enable plugin to parse dictionaries in wikimedia format
-app-text/stardict:wordnet - Enable wordnet plugin to find similar English words using lexical database
-app-text/stardict:xdxfparse - Enable plugin to parse dictionaries in xdxf (XML Dictionary eXchange Format)
-app-text/stardict:youdaodict - Enable youdao.com network plugin (for Chinese language)
 app-text/sword:clucene - Use dev-cpp/clucene for lucene search support
 app-text/tessdata_best:osd - Enable support orientation and script detection.
 app-text/tessdata_fast:osd - Enable support orientation and script detection.
@@ -2628,11 +2608,11 @@ dev-qt/qttools:designer - Build Qt Designer
 dev-qt/qttools:distancefieldgenerator - Build Qt Distance Field Generator
 dev-qt/qttools:linguist - Build Qt Linguist
 dev-qt/qttools:pixeltool - Build Qt Pixeltool
+dev-qt/qttools:qattributionsscanner - Build Qt Source Code Attribution Scanner
 dev-qt/qttools:qdbus - Build the Qt D-Bus Interface and D-Bus Viewer
+dev-qt/qttools:qdiag - Build Qt Diag
 dev-qt/qttools:qdoc - Build Qt Documentation Generator
-dev-qt/qttools:qtattributionsscanner - Build Qt Source Code Attribution Scanner
-dev-qt/qttools:qtdiag - Build Qt Diag
-dev-qt/qttools:qtplugininfo - Build Qt Plugin Info
+dev-qt/qttools:qplugininfo - Build Qt Plugin Info
 dev-qt/qtvirtualkeyboard:handwriting - Adds handwriting recognition integration support
 dev-qt/qtwayland:vulkan - Enable support for Vulkan-based server buffer integration
 dev-qt/qtwebchannel:qml - Build QML/QtQuick bindings and imports
@@ -2722,6 +2702,7 @@ dev-util/ccache:redis - Enable Redis backend for storage via dev-libs/hiredis
 dev-util/ccache:static-c++ - Avoid dynamic dependency on gcc's libstdc++.
 dev-util/cccc:apidoc - Build software docs with doxygen/graphviz and metrics with cccc
 dev-util/cccc:mfc - Add patch for MFC dialect options
+dev-util/cmake:dap - Build debugger for CMake with Debug Adapter Protocol support via dev-cpp/cppdap
 dev-util/codeblocks:contrib - Build additional contrib components
 dev-util/codeblocks:fortran - Build FortranProject plugin which enables to use Code::Blocks IDE for Fortran language
 dev-util/cppcheck:htmlreport - install cppcheck-htmlreport
@@ -4073,7 +4054,7 @@ media-gfx/shotwell:opencv - Enable face detection via media-libs/opencv
 media-gfx/skanpage:ocr - Enable support for Optical Character Recognition via app-text/tesseract
 media-gfx/solvespace:system-mimalloc - Use system dev-libs/mimalloc instead of vendored library
 media-gfx/ueberzugpp:opencv - Use media-libs/opencv for additional image formats and OpenCL accelerated scaling
-media-gfx/ueberzugpp:wayland - Enable wayland support (only usable with some wlroots-based compositors)
+media-gfx/ueberzugpp:wayland - Enable wayland support (proper window positioning is only supported with some compositors)
 media-gfx/xpaint:pgf - Support for loading PGF images
 media-gfx/xsane:ocr - Enable support for Optical Character Recognition reader
 media-gfx/yafaray:fastmath - Enable mathematic approximations to make code faster
@@ -4469,7 +4450,6 @@ media-plugins/vdr-vdrmanager:stream - Add support for streaming Video to Android
 media-plugins/vdr-weatherng:dxr3 - enables lower osd color depth for dxr3 cards
 media-plugins/vdr-xineliboutput:bluray - Enable BluRay metadata support through media-libs/libbluray
 media-plugins/vdr-xineliboutput:cec - Enable CEC support through dev-libs/libcec
-media-plugins/vdr-xineliboutput:libextractor - Use media-libs/libextractor to gather files' metadata in media-player
 media-plugins/vdr-xineliboutput:vdr - Compile the vdr output plugin to use local or remote xine as output
 media-plugins/vdr-xineliboutput:xine - Compile the xine input plugin for displaying vdr video and OSD
 media-radio/ax25-tools:X - Enable some X based configuration tools.
@@ -5742,8 +5722,6 @@ net-im/gajim:upnp - Ability to request your router to forward port for file tran
 net-im/gajim:webp - Support WebP avatars
 net-im/libcommuni:qml - Install optional qml files.
 net-im/libcommuni:uchardet - Use app-i18n/uchardet, which is upstreams default, instead of dev-libs/icu, which makes impossible to run tests.
-net-im/mcabber:aspell - Adds support for app-text/aspell spell checker.
-net-im/mcabber:otr - Enable encrypted conversations using Off-The-Records messaging
 net-im/pidgin:gadu - Enable Gadu Gadu protocol support
 net-im/pidgin:groupwise - Enable Novell Groupwise protocol support
 net-im/pidgin:gstreamer - Enables voice and video sessions
@@ -6106,6 +6084,8 @@ net-libs/xdp-tools:tools - Install various helper tools rather than just libxdp.
 net-libs/xrootd:fuse - Enable the sys-fs/fuse filesystem driver
 net-libs/xrootd:http - Enable http protocol support
 net-libs/xrootd:libxml2 - Use dev-libs/libxml2 for XML parsing (preferred) instead of bundled tinyxml
+net-libs/xrootd:macaroons - Enable support for macaroons with dev-libs/libmacaroons
+net-libs/xrootd:scitokens - Enable support for scitokens with dev-cpp/scitokens-cpp
 net-libs/xrootd:server - Install xrootd server and related plug-ins
 net-libs/xrootd:xrdec - Enable erasure coding support (XrdEc plugin) with dev-libs/isa-l
 net-libs/zeromq:drafts - Build draft API, which may change at any time without any notice, and is therefore not recommended for normal use.
@@ -7112,9 +7092,6 @@ sci-electronics/splat:hires - Builds additional high resolution application 'rfs
 sci-geosciences/gmt:gdal - Enable sci-libs/gdal library support
 sci-geosciences/gmt:geos - Enable sci-libs/geos library support
 sci-geosciences/gmt:gmttria - Non GNU triangulation method, more efficient
-sci-geosciences/gmt:htmldoc - Install html documentation
-sci-geosciences/gmt:pcre2 - Use dev-libs/libpcre2 for regular expressions
-sci-geosciences/gmt:tutorial - Install data files for tutorial
 sci-geosciences/gpsd:dbus - export gpsd data over dbus connections
 sci-geosciences/gpsd:latency-timing - support latency timing information
 sci-geosciences/gpsd:ntp - Enable net-misc/ntp shared memory interface and PPS kernel support for GPS time
@@ -9080,7 +9057,6 @@ xfce-base/xfwm4:xpresent - Enable the XPresent extension for sync to vblank
 xfce-extra/xfce4-clipman-plugin:qrcode - Enable support for media-gfx/qrencode
 xfce-extra/xfce4-mixer:keybinder - Enable support for global hotkeys using dev-libs/keybinder.
 xfce-extra/xfce4-mixer:sndio - Enable media-sound/sndio backend.
-xfce-extra/xfce4-mpc-plugin:libmpd - Build using media-libs/libmpd backend, instead of native fallback which is preferred
 xfce-extra/xfce4-pulseaudio-plugin:keybinder - Enable support for global hotkeys using dev-libs/keybinder.
 xfce-extra/xfce4-pulseaudio-plugin:libcanberra - Enable sound event support using media-libs/libcanberra
 xfce-extra/xfce4-pulseaudio-plugin:libxfce4windowing - Enable experimental support for raising media player windows using xfce-base/libxfce4windowing.

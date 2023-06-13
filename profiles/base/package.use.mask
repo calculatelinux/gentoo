@@ -83,10 +83,6 @@ sci-libs/vtk debug
 sys-libs/libomp llvm_targets_AMDGPU
 
 # Michał Górny <mgorny@gentoo.org> (2023-01-21)
-# media-libs/libextractor is masked for removal.
-media-plugins/vdr-xineliboutput libextractor
-
-# Michał Górny <mgorny@gentoo.org> (2023-01-21)
 # media-libs/qtav is masked for removal.
 media-gfx/digikam mediaplayer
 media-gfx/kphotoalbum qtav
@@ -215,10 +211,6 @@ app-antivirus/clamav jit
 # slurm is last rited
 app-metrics/collectd collectd_plugins_slurm
 sys-cluster/openmpi openmpi_rm_slurm
-
-# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2022-08-13)
-# PyQt6/PySide6 are masked for testing
-dev-python/QtPy pyqt6 pyside6
 
 # Joonas Niilola <juippis@gentoo.org> (2022-08-02)
 # Doesn't compile with 'Xaw3d' use flag, #849947.

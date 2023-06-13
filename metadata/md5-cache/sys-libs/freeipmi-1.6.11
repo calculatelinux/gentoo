@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install
+DEPEND=dev-libs/libgcrypt:= virtual/os-headers
+DESCRIPTION=Provides Remote-Console and System Management Software as per IPMI v1.5/2.0
+EAPI=8
+HOMEPAGE=https://www.gnu.org/software/freeipmi/
+INHERIT=toolchain-funcs
+IUSE=debug doc nagios without-root
+KEYWORDS=~amd64 ~hppa ~ppc64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-libs/libgcrypt:= nagios? ( || ( net-analyzer/icinga net-analyzer/nagios ) dev-lang/perl )
+SLOT=0
+SRC_URI=mirror://gnu/freeipmi/freeipmi-1.6.11.tar.gz
+_eclasses_=multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c
+_md5_=5bbbc086d9ddf7f0d983da2d97795086
