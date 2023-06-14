@@ -9,10 +9,6 @@
 		<email>Matt.Jolly@footclan.ninja</email>
 		<name>Matt Jolly</name>
 	</maintainer>
-	<maintainer type="project" proxied="proxy">
-		<email>proxy-maint@gentoo.org</email>
-		<name>Proxy Maintainers</name>
-	</maintainer>
 	<use>
 		<flag name="component-build">Split build into more shared libraries to speed up linking. Mostly intended for debugging and development, NOT RECOMMENDED for general use.</flag>
 		<flag name="debug">Enable DCHECK feature with severity configurable at runtime. Mostly intended for debugging and development, NOT RECOMMENDED for general use.</flag>
@@ -35,6 +31,7 @@
 		<flag name="widevine">Unsupported closed-source DRM capability (required by Netflix VOD)</flag>
 	</use>
 	<upstream>
+		<remote-id type="github">chromium/chromium</remote-id>
 		<remote-id type="github">stha09/chromium-patches</remote-id>
 	</upstream>
 </pkgmetadata>
