@@ -33,6 +33,36 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2023-06-16)
+
+# Obsolete slots without reverse dependencies that require rails 6.0 to
+# be present. Use the newer slots if needed.
+# Masked for removal on 2023-06-16.
+dev-ruby/roadie:4
+dev-ruby/roadie-rails:2
+
+# Hans de Graaff <graaff@gentoo.org> (2023-06-16)
+# Rails 6.0 is no longer supported upstream and limited to ruby30. Use a
+# newer Rails version instead. Masked for removal on 2023-07-16.
+dev-ruby/rails:6.0
+dev-ruby/railties:6.0
+dev-ruby/actionmailbox:6.0
+dev-ruby/actiontext:6.0
+dev-ruby/activerecord:6.0
+dev-ruby/actionmailer:6.0
+dev-ruby/activestorage:6.0
+dev-ruby/actionpack:6.0
+dev-ruby/actionview:6.0
+dev-ruby/activejob:6.0
+dev-ruby/actioncable:6.0
+dev-ruby/activemodel:6.0
+dev-ruby/activesupport:6.0
+
+# Hans de Graaff <graaff@gentoo.org> (2023-06-16)
+# Obsolete slot. Use the newer 0.7 slot instead.
+# Masked for removal on 2023-07-16.
+dev-ruby/websocket-driver:0
+
 # Tomáš Mózes <hydrapolic@gmail.com> (2023-06-12)
 # Buggy version that causes ibdata1 to grow, please update.
 =dev-db/mariadb-10.5.20
@@ -44,12 +74,6 @@
 # Installs no files with newer versions because GTK 2 support was dropped upstream.
 # Removal on 2023-07-12.  Bug #908378.
 dev-ruby/ruby-gtk2
-
-# Jimi Huotari <chiitoo@gentoo.org> (2023-06-10)
-# Mask to allow qt6 unmask.
-<dev-python/pyside6-6.5.0
-<dev-python/pyside6-tools-6.5.0
-<dev-python/shiboken6-6.5.0
 
 # Sam James <sam@gentoo.org> (2023-06-10)
 # Integrated into media-libs/gst-plugins-bad[vaapi]. Please use that instead.
