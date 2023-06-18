@@ -1171,6 +1171,7 @@ app-text/pelican:markdown - Markdown support
 app-text/podofo:boost - Add support for boost
 app-text/podofo:tools - Build and install commandline tools.
 app-text/poppler:boost - Use boost::small_vector for a serious performance gain
+app-text/poppler:gpgme - Enable signatures handling with app-crypt/gpgme
 app-text/poppler:nss - Enable signatures handling with dev-libs/nss
 app-text/poppler:utils - Install command-line PDF converters and various utilities.
 app-text/qpdfview:fitz - Use experimental fitz rendering, provided by app-text/mupdf, instead of poppler
@@ -3532,7 +3533,7 @@ kde-frameworks/sonnet:designer - Build plugins for dev-qt/designer
 kde-frameworks/sonnet:hunspell - Enable the app-text/hunspell spell-checking backend
 kde-frameworks/sonnet:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
 kde-misc/kdeconnect:X - Enable remote input mousepad plugin using x11-libs/libfakekey
-kde-misc/kdeconnect:pulseaudio - Enable system volume control plugin using media-sound/pulseaudio
+kde-misc/kdeconnect:pulseaudio - Enable system volume control plugin using media-libs/libpulse
 kde-misc/kdeconnect:telephony - Enable telephony plugin using kde-frameworks/modemmanager-qt
 kde-misc/kio-gdrive:share - Enable support for a share menu using kde-frameworks/purpose
 kde-misc/tellico:bibtex - Add support for bibtex importing using btparse from dev-perl/Text-BibTeX
@@ -8205,7 +8206,8 @@ sys-firmware/intel-microcode:initramfs - Install a small initramfs for use with 
 sys-firmware/intel-microcode:split-ucode - Install the split binary ucode files (used by the kernel directly)
 sys-firmware/intel-microcode:vanilla - Only install microcode updates from Intel's official microcode tarball
 sys-firmware/ipxe:binary - Use pre-built binaries
-sys-firmware/ipxe:efi - Build an EFI program for using PXE
+sys-firmware/ipxe:efi - Build a 32bit EFI program for using PXE
+sys-firmware/ipxe:efi64 - Build a 64bit EFI program for using PXE
 sys-firmware/ipxe:iso - Build a bootable ISO for using PXE
 sys-firmware/ipxe:lkrn - Build a linux kernel bootable file for using with grub/etc...
 sys-firmware/ipxe:qemu - Build the required PXE ROM images for app-emulation/qemu
@@ -8416,7 +8418,13 @@ sys-libs/zlib:minizip - include the minizip library for quick and dirty zip extr
 sys-libs/zlib-ng:compat - Enable compatibility to sys-libs/zlib
 sys-power/apcupsd:modbus - Enable MODBUS support over USB
 sys-power/intel-undervolt:elogind - Use elogind hook to apply voltage after system sleep
-sys-power/nut:ipmi - Support IPMI-based UPSes.
+sys-power/nut:gpio - Includes all UPS drivers that use GPIO.
+sys-power/nut:i2c - Includes all UPS drivers that use I2C.
+sys-power/nut:ipmi - Includes all UPS drivers that use ipmi.
+sys-power/nut:modbus - Includes all UPS drivers that use MODBUS.
+sys-power/nut:monitor - Add a QT5 gui monitor.
+sys-power/nut:serial - Includes all UPS drivers that use SERIAL.
+sys-power/nut:snmp - Includes all UPS drivers that use SNMP.
 sys-power/nut:ups_drivers_al175 - Driver for Eltek UPS models with AL175 alarm module
 sys-power/nut:ups_drivers_apcsmart - Driver for American Power Conversion Smart Protocol UPS equipment
 sys-power/nut:ups_drivers_apcsmart-old - Driver for American Power Conversion Smart Protocol UPS equipment
@@ -8468,6 +8476,8 @@ sys-power/nut:ups_drivers_tripplitesu - Driver for Tripp-Lite SmartOnline (SU) U
 sys-power/nut:ups_drivers_upscode2 - Driver for UPScode II compatible UPS equipment
 sys-power/nut:ups_drivers_usbhid-ups - Driver for USB/HID UPS equipment
 sys-power/nut:ups_drivers_victronups - Driver for IMV/Victron UPS unit Match, Match Lite, NetUps
+sys-power/nut:usb - Includes all UPS drivers that use USB.
+sys-power/nut:xml - Includes all UPS drivers that use XML.
 sys-power/nvclock:gtk - Install the GTK+ based graphical interface
 sys-power/nvclock:nvcontrol - Add NVCONTROL support for OpenGL options
 sys-power/suspend:crypt - Allows suspend and resume from encrypted disk

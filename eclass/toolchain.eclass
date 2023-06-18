@@ -22,7 +22,6 @@ _TOOLCHAIN_ECLASS=1
 DESCRIPTION="The GNU Compiler Collection"
 HOMEPAGE="https://gcc.gnu.org/"
 
-[[ ${EAPI} == 7 ]] && inherit eutils
 inherit edo flag-o-matic gnuconfig libtool multilib pax-utils toolchain-funcs prefix
 
 tc_is_live() {
@@ -60,7 +59,6 @@ fi
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
 }
-
 
 # @FUNCTION: tc_version_is_at_least
 # @USAGE: ver1 [ver2]
@@ -927,7 +925,6 @@ toolchain_src_configure() {
 	# 	;;
 	# esac
 
-
 	### Cross-compiler options
 	if is_crosscompile ; then
 		# Enable build warnings by default with cross-compilers when system
@@ -1690,8 +1687,8 @@ gcc_do_make() {
 
 	if ! is_crosscompile && _tc_use_if_iuse cxx && _tc_use_if_iuse doc ; then
 		if type -p doxygen > /dev/null ; then
-			cd "${CTARGET}"/libstdc++-v3/doc
-			emake -C "${CTARGET}"/libstdc++-v3/doc doc-man-doxygen
+			cd "${CTARGET}"/libstdc++-v3/doc || die
+			emake doc-man-doxygen
 
 			# Clean bogus manpages. bug #113902
 			find -name '*_build_*' -delete
