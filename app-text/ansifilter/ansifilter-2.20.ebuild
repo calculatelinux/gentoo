@@ -3,11 +3,12 @@
 
 EAPI=8
 
-inherit toolchain-funcs qmake-utils xdg
+inherit desktop toolchain-funcs qmake-utils xdg-utils
 
 DESCRIPTION="Handles text files containing ANSI terminal escape codes"
 HOMEPAGE="http://www.andre-simon.de/"
-SRC_URI="http://www.andre-simon.de/zip/${P}.tar.bz2"
+SRC_URI="http://www.andre-simon.de/zip/${P}.tar.bz2
+	gui? ( https://gitlab.com/uploads/-/system/project/avatar/6678914/ansifilter2_logo_256.png )"
 
 LICENSE="GPL-3+"
 SLOT="0"
@@ -65,16 +66,28 @@ src_install() {
 		install $(usev gui install-gui)
 
 	einstalldocs
+	if use gui; then
+		newicon -s 256 "${DISTDIR}"/ansifilter2_logo_256.png "${PN}".png
+	fi
 }
 
 pkg_preinst() {
-	use gui && xdg_pkg_preinst
+	if use gui; then
+		xdg_desktop_database_update
+		xdg_icon_cache_update
+	fi
 }
 
 pkg_postrm() {
-	use gui && xdg_pkg_postrm
+	if use gui; then
+		xdg_desktop_database_update
+		xdg_icon_cache_update
+	fi
 }
 
 pkg_postinst() {
-	use gui && xdg_pkg_postinst
+	if use gui; then
+		xdg_desktop_database_update
+		xdg_icon_cache_update
+	fi
 }
