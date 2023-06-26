@@ -1647,6 +1647,7 @@ dev-lang/R:lto - Use link-time optimization for R and its recommended packages.
 dev-lang/ammonite-repl-bin:scala2-13 - Install Ammonite for Scala 2.13
 dev-lang/ammonite-repl-bin:scala3-0 - Install Ammonite for Scala 3.0
 dev-lang/ammonite-repl-bin:scala3-1 - Install Ammonite for Scala 3.1
+dev-lang/ammonite-repl-bin:scala3-2 - Install Ammonite for Scala 3.2
 dev-lang/bas:lr0 - Use the LR0 parser instead of the recursive descending parser
 dev-lang/crystal:debug - Build each module as a separate object file. Speeds build up.
 dev-lang/erlang:kpoll - Enable kernel polling support
@@ -2134,7 +2135,6 @@ dev-libs/tre:approx - Enable the approximate matching functionality
 dev-libs/weston:desktop - Enable the desktop shell
 dev-libs/weston:drm - Enable drm compositor support
 dev-libs/weston:editor - Install wayland-editor example application
-dev-libs/weston:fbdev - Enable fbdev compositor support
 dev-libs/weston:fullscreen - Enable fullscreen shell
 dev-libs/weston:gles2 - Use GLESv2 cairo instead of full GL
 dev-libs/weston:headless - Headless backend and a noop renderer, mainly for testing purposes
@@ -2359,6 +2359,7 @@ dev-python/py-amqp:extras - Install extra tools to generate initial Python mod f
 dev-python/pyarrow:parquet - Enables read/write parquet data format
 dev-python/pydantic:native-extensions - Compiles native "C" extensions.
 dev-python/pyglet:image - Enable support for image formats other than PNG and BMP
+dev-python/pymongo:test-full - Run test suite in full, including tests that run a local database instance.
 dev-python/pyocr:cuneiform - Enable support for the app-text/cuneiform OCR engine
 dev-python/pyocr:tesseract - Enable support for the app-text/tesseract OCR engine
 dev-python/pypax:ptpax - Enable PT_PAX_FLAGS support.
@@ -2595,10 +2596,8 @@ dev-qt/qtgui:wayland - Provide dev-qt/qtwayland to ensure Qt applications can be
 dev-qt/qtmultimedia:gstreamer - Enable audio support via media-libs/gstreamer
 dev-qt/qtmultimedia:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtmultimedia:widgets - Build the QtMultimediaWidgets module
-dev-qt/qtnetwork:connman - Enable net-misc/connman-based bearer plugin
 dev-qt/qtnetwork:gssapi - Enable support for GSSAPI (virtual/krb5)
 dev-qt/qtnetwork:libproxy - Use net-libs/libproxy for automatic HTTP/SOCKS proxy configuration
-dev-qt/qtnetwork:networkmanager - Enable net-misc/networkmanager-based bearer plugin
 dev-qt/qtpositioning:geoclue - Use enhanced location information from app-misc/geoclue
 dev-qt/qtpositioning:qml - Build QML bindings
 dev-qt/qtquickcontrols:widgets - Enable QtWidgets support
@@ -2844,9 +2843,6 @@ dev-util/uftrace:capstone - Use capstone to provide dynamic tracing without reco
 dev-util/vulkan-tools:cube - Build the cube/cubepp demos
 dev-util/watchman:python - Install pywatchman bindings and the watchman-{wait,make} utils
 dev-vcs/cvs:server - Enable server support
-dev-vcs/cvsync:gcrypt - Use dev-libs/libgcrypt for hash functions.
-dev-vcs/cvsync:mhash - Use app-crypt/mhash for hash functions.
-dev-vcs/cvsync:openssl - Use dev-libs/openssl for hash functions.
 dev-vcs/darcs:terminfo - Use the terminfo package for enhanced console support.
 dev-vcs/darcs:threaded - Use threading and SMP support.
 dev-vcs/fossil:fusefs - Enable the Fuse Filesystem
@@ -3015,10 +3011,6 @@ games-emulation/mupen64plus-core:opencv - Support video capture via media-libs/o
 games-emulation/mupen64plus-core:osd - Overlay emulator messages using on-screen-display
 games-emulation/mupen64plus-video-glide64mk2:hires - Support hi-resolution textures (requires dev-libs/boost)
 games-emulation/pcsx2:sndio - Enable support for the media-sound/sndio backend
-games-emulation/pcsxr:archive - Support compressed files (via libarchive)
-games-emulation/pcsxr:ccdda - Support compressed CDDA (requires ffmpeg)
-games-emulation/pcsxr:cdio - Use libcdio for CD support
-games-emulation/pcsxr:sdl - Use SDL sound backend (other parts of SDL are used unconditionally)
 games-emulation/ppsspp:discord - Enable interfacing with a locally running Discord desktop client
 games-emulation/snes9x:glslang - Build support for slang-type shaders
 games-emulation/snes9x:libretro - Build libretro port
@@ -4059,6 +4051,7 @@ media-gfx/skanpage:ocr - Enable support for Optical Character Recognition via ap
 media-gfx/solvespace:system-mimalloc - Use system dev-libs/mimalloc instead of vendored library
 media-gfx/ueberzugpp:opencv - Use media-libs/opencv for additional image formats and OpenCL accelerated scaling
 media-gfx/ueberzugpp:wayland - Enable wayland support (proper window positioning is only supported with some compositors)
+media-gfx/ueberzugpp:xcb-errors - Use x11-libs/xcb-util-errors for better error reporting with X
 media-gfx/xpaint:pgf - Support for loading PGF images
 media-gfx/xsane:ocr - Enable support for Optical Character Recognition reader
 media-gfx/yafaray:fastmath - Enable mathematic approximations to make code faster
@@ -7082,6 +7075,8 @@ sci-electronics/kicad-packages3d:occ - Use sci-libs/opencascade for data exchang
 sci-electronics/ktechlab:gpsim - Enable support for Microchip PIC microcontrollers similation using dev-embedded/gpsim
 sci-electronics/ngspice:deprecated - Build old and deprecated apps
 sci-electronics/ngspice:shared - Build ngspice as a shared library
+sci-electronics/nvc:jit - Enable experimental JIT complilation with LLVM
+sci-electronics/nvc:llvm - Build LLVM code generator
 sci-electronics/pcb:gcode - gcode file export
 sci-electronics/pcb:gif - GIF graphics export
 sci-electronics/pcb:gsvit - GSvit file export
@@ -7647,14 +7642,9 @@ sys-apps/coreutils:kill - Build the kill program
 sys-apps/coreutils:multicall - Build all tools into a single `coreutils` program akin to busybox to save space
 sys-apps/coreutils:openssl - Use openssl libcrypto hash routines for hash functions
 sys-apps/coreutils:split-usr - Enable this if /bin and /usr/bin are separate directories
-sys-apps/cpu-x:bandwidth - Intégrer bandwidth
 sys-apps/cpu-x:cpu - Use the dev-libs/libcpuid library for CPU info
-sys-apps/cpu-x:dmidecode - Intégrer dmidecode
 sys-apps/cpu-x:force-libstatgrab - Use sys-libs/libstatgrab to instead of sys-process/procps
 sys-apps/cpu-x:gpu - Use the media-libs/glfw library for GPU info
-sys-apps/cpu-x:libcpuid - Utiliser la bibliothèque dev-libs/libcpuid
-sys-apps/cpu-x:libglfw - Utiliser la bibliothèque media-libs/glfw
-sys-apps/cpu-x:libpci - Utiliser la bibliothèque sys-apps/pciutils
 sys-apps/cpu-x:opencl - Use the virtual/opencl library
 sys-apps/cpu-x:pci - Use the sys-apps/pciutils library for PCI info
 sys-apps/dbus:elogind - Use sys-auth/elogind for session tracking.
@@ -7914,7 +7904,7 @@ sys-auth/pambase:pam_krb5 - Enable pam_krb5 module on system auth stack, as an a
 sys-auth/pambase:pam_ssh - Enable pam_ssh module on system auth stack for authentication and session handling. This module will accept as password the passphrase of a private SSH key (one of ~/.ssh/id_rsa, ~/.ssh/id_dsa or ~/.ssh/identity), and will spawn an ssh-agent instance to cache the open key.
 sys-auth/pambase:passwdqc - Enable pam_passwdqc module on system auth stack for password quality validation. This module produces warnings, rejecting or providing example passwords when changing your system password. It is used by default by OpenWall GNU/*/Linux and by FreeBSD.
 sys-auth/pambase:pwhistory - Enable pam_pwhistory module on system auth stack to save the last passwords for each user in order to force password change history and keep the user from alternating between the same password too frequently.
-sys-auth/pambase:pwquality - Enable pam_pwquality module on system auth stack for passwd quality validation. It is used be dafault by Fedora GNU/*/Linux.
+sys-auth/pambase:pwquality - Enable pam_pwquality module on system auth stack for passwd quality validation. It is used by default by Fedora GNU/*/Linux.
 sys-auth/pambase:securetty - Enable pam_securetty module in the login stack. Not generally relevant anymore as the login stack only refers to local logins and local terminals imply secure access in the first place.
 sys-auth/pambase:sha512 - Switch Linux-PAM's pam_unix module to use sha512 for passwords hashes rather than MD5. This option requires sys-libs/pam version 1.0.1 built against sys-libs/glibc version 2.7, if it's built against an earlier version, it will silently be ignored, and MD5 hashes will be used. All the passwords changed after this USE flag is enabled will be saved to the shadow file hashed using SHA512 function. The password previously saved will be left untouched. Please note that while SHA512-hashed passwords will still be recognised if the USE flag is removed, the shadow file will not be compatible with systems using an earlier glibc version.
 sys-auth/pambase:systemd - Use pam_systemd module to register user sessions in the systemd control group hierarchy.
@@ -8188,16 +8178,6 @@ sys-devel/llvm:xar - Support dumping LLVM bitcode sections in Mach-O files (uses
 sys-devel/llvm:z3 - Enable support for sci-mathematics/z3 constraint solver
 sys-devel/llvm-toolchain-symlinks:multilib-symlinks - Install symlinks for all ABI CHOSTs. Note that this can result in gcc being overrode for native builds, as well as conflict with crossdev if used for the same targets.
 sys-devel/llvm-toolchain-symlinks:native-symlinks - Install generic tool symlinks like 'objdump' and 'ranlib', as well as ${CTARGET}-*. These symlinks are installed into slotted LLVM bindir, so they should not take precedence over symlinks installed into /usr/bin by sys-devel/binutils-config but they can be helpful for binutils-free setups.
-sys-devel/parity:vc10_0 - Enable support for Visual Studio 2010
-sys-devel/parity:vc11_0 - Enable support for Visual Studio 2012
-sys-devel/parity:vc12_0 - Enable support for Visual Studio 2013
-sys-devel/parity:vc14_0 - Enable support for Visual Studio 2015
-sys-devel/parity:vc15 - Enable support for Visual Studio 2017
-sys-devel/parity:vc16 - Enable support for Visual Studio 2019
-sys-devel/parity:vc8_0 - Enable support for Visual Studio 2005
-sys-devel/parity:vc9_0 - Enable support for Visual Studio 2008
-sys-devel/parity:vcx64 - Enable support for 64bit Visual Studio compilers
-sys-devel/parity:vcx86 - Enable support for 32bit Visual Studio compilers
 sys-devel/sparse:gtk - Build the test-inspect utility (requires x11-libs/gtk+:3)
 sys-devel/sparse:llvm - Build the sparse-llvm utility
 sys-devel/sparse:xml - Build the c2xml utility (requires dev-libs/libxml2)
@@ -8594,8 +8574,6 @@ www-client/chromium:system-harfbuzz - Use system harfbuzz instead of the bundled
 www-client/chromium:system-icu - Use system icu instead of the bundled one
 www-client/chromium:system-png - Use system libpng instead of the bundled one.
 www-client/chromium:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
-www-client/chromium-bin:suid - Install the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels.
-www-client/chromium-bin:widevine - Unsupported closed-source DRM capability (required by Netflix VOD).
 www-client/elinks:bittorrent - Enable support for the BitTorrent protocol
 www-client/elinks:brotli - Enable support for brotli compression
 www-client/elinks:finger - Enable support for the finger protocol
@@ -8716,6 +8694,7 @@ www-servers/nginx:aio - Enables file AIO support
 www-servers/nginx:http - Enable HTTP core support
 www-servers/nginx:http-cache - Enable HTTP cache support
 www-servers/nginx:http2 - Enable HTTP2 module support
+www-servers/nginx:http3 - Enable HTTP3 module support
 www-servers/nginx:libatomic - Use libatomic instead of builtin atomic operations
 www-servers/nginx:pcre-jit - Enable JIT for pcre
 www-servers/nginx:pcre2 - Enable support for pcre2
@@ -8941,6 +8920,7 @@ x11-terms/xfce4-terminal:utempter - Include utmp management support via sys-libs
 x11-terms/xterm:openpty - Use openpty() in preference to posix_openpt()
 x11-terms/xterm:sixel - Enable sixel graphics support
 x11-terms/xterm:toolbar - Enable the xterm toolbar to be built
+x11-themes/QGnomePlatform:minimal - Skip kde-frameworks/qqc2-desktop-style dependency (Warning: some apps could be wrongly rendered)
 x11-themes/arc-theme:cinnamon - Install theme for gnome-extra/cinnamon
 x11-themes/arc-theme:gnome-shell - Install theme for gnome-base/gnome-shell
 x11-themes/arc-theme:gtk2 - Install GTK+2 theme

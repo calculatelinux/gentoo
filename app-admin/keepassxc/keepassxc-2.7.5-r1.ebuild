@@ -15,7 +15,7 @@ if [[ "${PV}" != *9999 ]] ; then
 		S="${WORKDIR}/${P/_/-}"
 	else
 		SRC_URI="https://github.com/keepassxreboot/${PN}/releases/download/${PV}/${P}-src.tar.xz"
-		KEYWORDS="~amd64 ~arm64 ~ppc64 ~riscv ~x86"
+		KEYWORDS="amd64 ~arm64 ~ppc64 ~riscv x86"
 	fi
 else
 	inherit git-r3
@@ -74,7 +74,7 @@ src_prepare() {
 
 src_configure() {
 	# https://github.com/keepassxreboot/keepassxc/issues/5801
-	filter-flags -flto*
+	filter-lto
 
 	local mycmakeargs=(
 		# Gentoo users enable ccache via e.g. FEATURES=ccache or
