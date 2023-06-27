@@ -5,7 +5,7 @@ EAPI=8
 
 DISTUTILS_EXT=1
 DISTUTILS_USE_PEP517=meson-python
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 PYTHON_REQ_USE="threads(+)"
 FORTRAN_NEEDED=lapack
 
@@ -22,7 +22,7 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="lapack"
 if [[ ${PV} != *_rc* ]] ; then
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~arm ~arm64 ~ia64 ~ppc64"
 fi
 
 RDEPEND="
@@ -52,6 +52,8 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.25.0_rc1-meson-pyproject.toml.patch
+	"${FILESDIR}"/${PN}-1.25.0-skip-python3.12-irrelevant-tests.patch
+	"${FILESDIR}"/${PN}-1.25.0-fix-long-double-check.patch
 )
 
 distutils_enable_tests pytest
@@ -107,6 +109,9 @@ python_test() {
 			EPYTEST_DESELECT+=(
 				# too large for 32-bit platforms
 				core/tests/test_ufunc.py::TestUfunc::test_identityless_reduction_huge_array
+				'core/tests/test_multiarray.py::TestDot::test_huge_vectordot[float64]'
+				'core/tests/test_multiarray.py::TestDot::test_huge_vectordot[complex128]'
+				lib/tests/test_histograms.py::TestHistogram::test_big_arrays
 			)
 			;;
 		*)

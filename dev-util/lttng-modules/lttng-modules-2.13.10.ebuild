@@ -3,6 +3,11 @@
 
 EAPI=8
 
+# Please bump the following packages together:
+# dev-util/lttng-modules
+# dev-util/lttng-tools
+# dev-util/lttng-ust
+
 inherit linux-mod-r1
 
 MY_P="${P/_rc/-rc}"
@@ -85,6 +90,7 @@ src_compile() {
 		lttng-probe-sched=misc:"${S}":src/probes
 		lttng-lib-ring-buffer=misc:"${S}":src/lib)
 
-	local modargs=( NIH_SOURCE="${KV_OUT_DIR}" )
+	local modargs=( KERNELDIR="/lib/modules/${KV_FULL}/build" )
+
 	linux-mod-r1_src_compile
 }

@@ -29,7 +29,7 @@ else
 		SRC_URI="https://gitlab.freedesktop.org/${PN}/${PN}/-/archive/${PV}/${P}.tar.bz2"
 	fi
 
-	KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~sparc ~x86"
+	KEYWORDS="~amd64"
 fi
 
 DESCRIPTION="Multimedia processing graphs"
@@ -38,8 +38,8 @@ HOMEPAGE="https://pipewire.org/"
 LICENSE="MIT LGPL-2.1+ GPL-2"
 # ABI was broken in 0.3.42 for https://gitlab.freedesktop.org/pipewire/wireplumber/-/issues/49
 SLOT="0/0.4"
-IUSE="bluetooth dbus doc echo-cancel extra ffmpeg flatpak gstreamer gsettings jack-client jack-sdk lv2
-modemmanager pipewire-alsa readline sound-server ssl system-service systemd test v4l X zeroconf"
+IUSE="bluetooth dbus doc echo-cancel extra ffmpeg flatpak gstreamer gsettings ieee1394 jack-client jack-sdk liblc3 lv2"
+IUSE+=" modemmanager pipewire-alsa readline sound-server ssl system-service systemd test v4l X zeroconf"
 
 # Once replacing system JACK libraries is possible, it's likely that
 # jack-client IUSE will need blocking to avoid users accidentally
@@ -106,11 +106,13 @@ RDEPEND="
 		media-libs/gst-plugins-base:1.0
 	)
 	gsettings? ( >=dev-libs/glib-2.26.0:2 )
+	ieee1394? ( media-libs/libffado[${MULTILIB_USEDEP}] )
 	jack-client? ( >=media-sound/jack2-1.9.10:2[dbus] )
 	jack-sdk? (
 		!media-sound/jack-audio-connection-kit
 		!media-sound/jack2
 	)
+	liblc3? ( media-sound/liblc3 )
 	lv2? ( media-libs/lilv )
 	modemmanager? ( >=net-misc/modemmanager-1.10.0 )
 	pipewire-alsa? ( >=media-libs/alsa-lib-1.1.7[${MULTILIB_USEDEP}] )
@@ -174,6 +176,7 @@ multilib_src_configure() {
 		$(meson_native_enabled man)
 		$(meson_feature test tests)
 		-Dinstalled_tests=disabled # Matches upstream; Gentoo never installs tests
+		$(meson_feature ieee1394 libffado)
 		$(meson_native_use_feature gstreamer)
 		$(meson_native_use_feature gstreamer gstreamer-device-provider)
 		$(meson_native_use_feature gsettings)
@@ -204,10 +207,6 @@ multilib_src_configure() {
 		$(meson_native_use_feature bluetooth bluez5-codec-opus)
 		$(meson_native_use_feature bluetooth libusb) # At least for now only used by bluez5 native (quirk detection of adapters)
 		$(meson_native_use_feature echo-cancel echo-cancel-webrtc) #807889
-		# Not yet packaged.
-		# http://www.bluez.org/le-audio-support-in-pipewire/
-		-Dbluez5-codec-lc3=disabled
-		-Dbluez5-codec-lc3plus=disabled
 		-Dcontrol=enabled # Matches upstream
 		-Daudiotestsrc=enabled # Matches upstream
 		-Dffmpeg=disabled # Disabled by upstream and no major developments to spa/plugins/ffmpeg/ since May 2020
@@ -220,6 +219,7 @@ multilib_src_configure() {
 		-Dsupport=enabled # Miscellaneous/common plugins, such as null sink
 		-Devl=disabled # Matches upstream
 		-Dtest=disabled # fakesink and fakesource plugins
+		$(meson_native_use_feature liblc3 bluez5-codec-lc3)
 		$(meson_native_use_feature lv2)
 		$(meson_native_use_feature v4l v4l2)
 		-Dlibcamera=disabled # libcamera is not in Portage tree
