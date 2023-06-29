@@ -24,8 +24,8 @@ SRC_URI="https://cdn.zabbix.com/${PN}/sources/stable/$(ver_cut 1-2)/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0/$(ver_cut 1-2)"
 WEBAPP_MANUAL_SLOT="yes"
-KEYWORDS="~amd64 ~x86"
-IUSE="agent +agent2 curl frontend gnutls ipv6 java ldap libxml2 mysql odbc openipmi +openssl oracle +postgres proxy server snmp sqlite ssh static"
+KEYWORDS="amd64 ~x86"
+IUSE="agent +agent2 curl frontend gnutls ipv6 java ldap libxml2 mysql odbc openipmi +openssl oracle +postgres proxy selinux server snmp sqlite ssh static"
 REQUIRED_USE="|| ( agent agent2 frontend proxy server )
 	?? ( gnutls openssl )
 	proxy? ( ^^ ( mysql oracle postgres sqlite ) )
@@ -70,6 +70,7 @@ RDEPEND="${COMMON_DEPEND}
 		dev-libs/libpcre2:=
 		net-analyzer/fping[suid]
 	)
+	selinux? ( sec-policy/selinux-zabbix )
 	server? (
 		app-admin/webapp-config
 		dev-libs/libpcre2:=

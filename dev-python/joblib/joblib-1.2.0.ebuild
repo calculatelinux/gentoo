@@ -39,7 +39,6 @@ python_prepare_all() {
 			-e 's:from \.externals ::' \
 			-i {} + || die
 
-	# https://github.com/joblib/joblib/issues/1115
 	sed -e 's:test_parallel_call_cached_function_defined_in_jupyter:_&:' \
 		-i joblib/test/test_memory.py || die
 

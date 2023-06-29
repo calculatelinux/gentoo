@@ -5,11 +5,11 @@ EAPI=8
 
 DISTUTILS_EXT=1
 DISTUTILS_USE_PEP517=meson-python
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..12} pypy3 )
 PYTHON_REQ_USE="threads(+)"
 FORTRAN_NEEDED=lapack
 
-inherit distutils-r1 flag-o-matic fortran-2 multiprocessing pypi
+inherit distutils-r1 flag-o-matic fortran-2 multiprocessing pypi toolchain-funcs
 
 DESCRIPTION="Fast array and numerical python library"
 HOMEPAGE="
@@ -22,7 +22,7 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="lapack"
 if [[ ${PV} != *_rc* ]] ; then
-	KEYWORDS="~amd64 ~arm ~arm64 ~ia64 ~ppc64"
+	KEYWORDS="~amd64 ~arm ~arm64 ~ia64 ~ppc64 ~s390 ~sparc ~x86"
 fi
 
 RDEPEND="
@@ -85,6 +85,13 @@ python_test() {
 		typing/tests/test_typing.py
 	)
 
+	if [[ ${EPYTHON} == pypy3 ]]; then
+		EPYTEST_DESELECT+=(
+			# TODO: crashed
+			lib/tests/test_histograms.py::TestHistogram::test_big_arrays
+		)
+	fi
+
 	if use arm && [[ $(uname -m || echo "unknown") == "armv8l" ]] ; then
 		# Degenerate case. arm32 chroot on arm64.
 		# bug #774108
@@ -101,6 +108,16 @@ python_test() {
 			random/tests/test_generator_mt19937.py::TestRandomDist::test_pareto
 			# more precision problems
 			core/tests/test_einsum.py::TestEinsum::test_einsum_sums_int16
+		)
+	fi
+
+	if [[ $(tc-endian) == "big" ]] ; then
+		# https://github.com/numpy/numpy/issues/11831 and bug #707116
+		EPYTEST_DESELECT+=(
+			'f2py/tests/test_return_character.py::TestFReturnCharacter::test_all_f77[s1]'
+			'f2py/tests/test_return_character.py::TestFReturnCharacter::test_all_f90[t1]'
+			'f2py/tests/test_return_character.py::TestFReturnCharacter::test_all_f90[s1]'
+			'f2py/tests/test_return_character.py::TestFReturnCharacter::test_all_f77[t1]'
 		)
 	fi
 

@@ -29,7 +29,7 @@ else
 		SRC_URI="https://gitlab.freedesktop.org/${PN}/${PN}/-/archive/${PV}/${P}.tar.bz2"
 	fi
 
-	KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~sparc"
+	KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
 fi
 
 DESCRIPTION="Multimedia processing graphs"
@@ -219,6 +219,7 @@ multilib_src_configure() {
 		-Dsupport=enabled # Miscellaneous/common plugins, such as null sink
 		-Devl=disabled # Matches upstream
 		-Dtest=disabled # fakesink and fakesource plugins
+		-Dbluez5-codec-lc3plus=disabled # unpackaged
 		$(meson_native_use_feature liblc3 bluez5-codec-lc3)
 		$(meson_native_use_feature lv2)
 		$(meson_native_use_feature v4l v4l2)
