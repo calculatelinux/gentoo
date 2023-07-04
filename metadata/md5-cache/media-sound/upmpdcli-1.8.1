@@ -1,0 +1,15 @@
+BDEPEND=sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71-r5 >=sys-devel/libtool-2.4.7 virtual/pkgconfig
+DEFINED_PHASES=configure install postinst prepare
+DEPEND=dev-libs/jsoncpp media-libs/libmpdclient net-libs/libmicrohttpd:= net-libs/libupnpp
+DESCRIPTION=UPnP Media Renderer front-end for MPD, the Music Player Daemon
+EAPI=8
+HOMEPAGE=https://www.lesbonscomptes.com/upmpdcli/index.html
+INHERIT=autotools systemd
+IUSE=thirdparty
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/jsoncpp media-libs/libmpdclient net-libs/libmicrohttpd:= net-libs/libupnpp acct-group/upmpdcli acct-user/upmpdcli app-misc/recoll thirdparty? ( dev-python/requests )
+SLOT=0
+SRC_URI=https://www.lesbonscomptes.com/upmpdcli/downloads/upmpdcli-1.8.1.tar.gz
+_eclasses_=autotools	6ae9a4347149b19a112caa1182d03bde	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	9d3a9a889a6fa62ae794f817c156491b	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	5f4bb0758df2e483babf68cd517078ca	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c
+_md5_=6d382ab8d9b9558e92e51f244d3d1308
