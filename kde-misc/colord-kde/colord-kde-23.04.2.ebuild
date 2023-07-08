@@ -13,7 +13,7 @@ HOMEPAGE="https://invent.kde.org/graphics/colord-kde"
 
 LICENSE="GPL-2+"
 SLOT="5"
-KEYWORDS="~amd64 ~arm64 ~ppc64 ~riscv ~x86"
+KEYWORDS="amd64 arm64 ~ppc64 ~riscv ~x86"
 IUSE="X"
 
 COMMON_DEPEND="
@@ -38,7 +38,7 @@ COMMON_DEPEND="
 	)
 "
 DEPEND="${COMMON_DEPEND}
-	>=kde-frameworks/kwindowsystem-${KFMIN}:5
+	>=kde-frameworks/kwindowsystem-${KFMIN}:5[X=]
 "
 RDEPEND="${COMMON_DEPEND}
 	dev-libs/kirigami-addons:5

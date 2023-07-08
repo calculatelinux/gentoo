@@ -14,7 +14,7 @@ HOMEPAGE="https://apps.kde.org/kalarm/ https://userbase.kde.org/KAlarm"
 
 LICENSE="GPL-2+ handbook? ( FDL-1.2+ )"
 SLOT="5"
-KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
+KEYWORDS="amd64 arm64 ~ppc64 ~x86"
 IUSE="+pim speech X"
 
 DEPEND="
@@ -26,7 +26,7 @@ DEPEND="
 	>=kde-apps/kidentitymanagement-${PVCUT}:5
 	>=kde-apps/kmime-${PVCUT}:5
 	>=kde-apps/kontactinterface-${PVCUT}:5
-	>=kde-apps/kpimtextedit-${PVCUT}:5[speech?]
+	>=kde-apps/kpimtextedit-${PVCUT}:5[speech=]
 	>=kde-apps/pimcommon-${PVCUT}:5
 	>=kde-frameworks/kauth-${KFMIN}:5
 	>=kde-frameworks/kcalendarcore-${KFMIN}:5
