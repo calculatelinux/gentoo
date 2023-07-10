@@ -6,7 +6,7 @@ EAPI=8
 if [[ ${PV} != *9999* ]]; then
 	QT5_KDEPATCHSET_REV=1
 	MAPBOXGL_COMMIT=5a07e1967dcc925d9def47accadae991436b9686
-	KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
+	KEYWORDS="amd64 ~arm arm64 ppc64 ~riscv x86"
 fi
 
 inherit qt5-build
@@ -49,3 +49,10 @@ src_prepare() {
 	qt5-build_src_prepare
 }
 fi
+
+src_configure() {
+	# src/plugins/geoservices requires files that are only generated when
+	# qmake is run in the root directory. Bug 633776.
+	qt5_configure_oos_quirk qtlocation-config.pri src/location
+	qt5-build_src_configure
+}
