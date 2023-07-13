@@ -8,7 +8,7 @@ DISTUTILS_OPTIONAL="1"
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{10..12} pypy3 )
 
-inherit cmake-multilib distutils-r1
+inherit cmake-multilib distutils-r1 flag-o-matic
 
 if [[ ${PV} == *9999* ]] ; then
 	EGIT_REPO_URI="https://github.com/google/${PN}.git"
@@ -67,6 +67,8 @@ multilib_src_configure() {
 }
 
 src_configure() {
+	append-lfs-flags
+
 	cmake-multilib_src_configure
 	use python && distutils-r1_src_configure
 }

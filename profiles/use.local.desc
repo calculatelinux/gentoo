@@ -1080,6 +1080,7 @@ app-shells/bash:plugins - Add support for loading builtins at runtime via 'enabl
 app-shells/bash-completion:eselect - Support blacklisting of completions via 'eselect bashcomp'. This enables custom Gentoo patching of upstream completion loader.
 app-shells/mksh:lksh - variant that uses POSIX-compliant arithmetics with the host “long” data type and is automatically in POSIX mode when called as /bin/sh
 app-shells/nushell:dataframe - Dataframe feature for nushell
+app-shells/nushell:extra - Enable less stable or less common commands
 app-shells/pdsh:rsh - This allows the use of rsh (remote shell) and rcp (remote copy) for authoring websites. sftp is a much more secure protocol and is preferred.
 app-shells/pwsh-bin:pwsh-symlink - Install a pwsh symlink that points to pwsh-bin.
 app-shells/shish:diet - Use dev-libs/dietlibc
@@ -7633,6 +7634,7 @@ sci-visualization/gwyddion:jansson - Enable JSON data manipulation via dev-libs/
 sci-visualization/gwyddion:sourceview - Enable support for x11-libs/gtksourceview
 sci-visualization/gwyddion:unique - Enable remote control backend via dev-libs/libunique
 sci-visualization/labplot:cantor - Enable support for different open-source computer algebra systems via kde-apps/cantor
+sci-visualization/labplot:excel - Enable support for importing/exporting Microsoft Excel files (.xlsx) via dev-libs/qxlsx
 sci-visualization/labplot:fits - Enable support for NASA's sci-libs/cfitsio library
 sci-visualization/labplot:libcerf - Enable special functions from sci-libs/libcerf
 sci-visualization/labplot:markdown - Enable Markdown support via app-text/discount
@@ -8624,6 +8626,7 @@ www-client/firefox:system-libvpx - Use the system-wide media-libs/libvpx instead
 www-client/firefox:system-png - Use the system-wide media-libs/libpng instead of bundled (requires APNG patches)
 www-client/firefox:system-python-libs - Use system's python site instead of bundled python libraries
 www-client/firefox:system-webp - Use the system-wide media-libs/libwebp instead of bundled
+www-client/firefox:wifi - Enable necko-wifi for NetworkManager integration, and access point MAC address scanning for better precision with opt-in geolocation services
 www-client/firefox-bin:alsa - When pulseaudio isn't set, this prefers apulse
 www-client/firefox-bin:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
 www-client/jd:migemo - Enable migemo support for Japanese
