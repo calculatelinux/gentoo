@@ -28,6 +28,7 @@ BDEPEND="virtual/pkgconfig"
 PATCHES=(
 	"${FILESDIR}/${PN}-0.3.23-shared-blas-lapack.patch"
 	"${FILESDIR}/${PN}-0.3.21-fix-loong.patch"
+	"${FILESDIR}/${PN}-0.3.23-parallel-make.patch"
 )
 
 pkg_pretend() {
@@ -121,7 +122,7 @@ src_prepare() {
 }
 
 src_compile() {
-	default
+	emake shared
 	use eselect-ldso && emake -C interface shared-blas-lapack
 
 	if use index-64bit; then
@@ -132,8 +133,7 @@ src_compile() {
 }
 
 src_test() {
-	# https://github.com/xianyi/OpenBLAS/issues/4139
-	emake -j1 tests
+	emake tests
 }
 
 src_install() {

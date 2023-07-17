@@ -3,10 +3,11 @@
 
 EAPI=8
 
+CARGO_OPTIONAL=1
+DISTUTILS_USE_PEP517="setuptools"
+DISTUTILS_EXT=1
 PYTHON_COMPAT=( python3_{9..12} )
 PYTHON_REQ_USE="threads(+)"
-DISTUTILS_USE_SETUPTOOLS=no
-CARGO_OPTIONAL=1
 
 inherit bash-completion-r1 cargo elisp-common distutils-r1 mercurial flag-o-matic multiprocessing
 
@@ -78,6 +79,11 @@ python_compile_all() {
 	if use chg; then
 		emake -C contrib/chg
 	fi
+	if use rust; then
+		pushd rust/rhg || die
+		cargo_src_compile --no-default-features --jobs $(makeopts_jobs)
+		popd || die
+	fi
 	if use emacs; then
 		cd contrib || die
 		elisp-compile mercurial.el || die "elisp-compile failed!"
@@ -121,6 +127,9 @@ python_install_all() {
 		dobin contrib/chg/chg
 		doman contrib/chg/chg.1
 		RM_CONTRIB+=( chg )
+	fi
+	if use rust; then
+		dobin rust/target/release/rhg
 	fi
 
 	for f in ${RM_CONTRIB[@]}; do
@@ -168,7 +177,6 @@ python_test() {
 		einfo "Skipping tests for unsupported Python 3.10"
 		return
 	fi
-	distutils_install_for_testing
 	cd tests || die
 	PYTHONWARNINGS=ignore "${PYTHON}" run-tests.py \
 		--jobs $(makeopts_jobs) \

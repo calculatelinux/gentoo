@@ -33,6 +33,23 @@
 
 #--- END OF EXAMPLES ---
 
+# Matt Turner <mattst88@gentoo.org> (2023-07-16)
+# Last reverse dependency was gnome-base/gnome-vfs, dropped more than a year ago.
+# Removal on 2023-08-16.
+gnome-base/gnome-mime-data
+
+# Matt Turner <mattst88@gentoo.org> (2023-07-15)
+# Unmaintained upstream. Depends on deprecated packages libsoup:2.4 and
+# old versions of grilo and grilo-plugins.
+# Removal on 2023-08-15. Bug #910105.
+media-sound/pragha
+
+# Hans de Graaff <graaff@gentoo.org> (2023-07-14)
+# Obsolete slots or packages specifically for cucumber 7 which is no
+# longer available. Masked for removal on 2023-08-14
+dev-util/cucumber-create-meta
+dev-util/cucumber-html-formatter:17
+
 # Tomáš Mózes <hydrapolic@gmail.com> (2023-07-13)
 # Incompatible with OpenSSL-3, update to MariaDB 10.6.
 <dev-db/mariadb-10.6
@@ -88,13 +105,16 @@ dev-perl/Gtk2-Notify
 >=dev-libs/gjs-1.77
 >=gnome-base/gnome-shell-45_alpha
 >=gnome-base/gsettings-desktop-schemas-45_alpha
+>=gnome-extra/gnome-characters-45_alpha
 >=gnome-extra/gnome-shell-extensions-45_alpha
 >=gnome-extra/gnome-system-monitor-45_alpha
+>=gnome-extra/gnome-weather-45_alpha
 >=gui-libs/gtk-4.11
 >=gui-libs/libadwaita-1.4_alpha
 >=media-gfx/gnome-font-viewer-45_alpha
 >=net-misc/gnome-remote-desktop-45_alpha
 >=sys-apps/baobab-45_alpha
+>=x11-themes/gnome-backgrounds-45_alpha
 >=x11-wm/mutter-45_alpha
 
 # Michael Orlitzky <mjo@gentoo.org> (2023-07-05)
@@ -232,35 +252,6 @@ dev-ruby/database_cleaner-active_record:2.0
 # and the files it generates in /etc/env.d: bug #908401, then run env-update
 # and . /etc/profile.
 <app-admin/eselect-1.4.22-r1
-
-# Hans de Graaff <graaff@gentoo.org> (2023-06-16)
-# Obsolete slots without reverse dependencies that require rails 6.0 to
-# be present. Use the newer slots if needed.
-# Masked for removal on 2023-07-16.
-dev-ruby/roadie:4
-dev-ruby/roadie-rails:2
-
-# Hans de Graaff <graaff@gentoo.org> (2023-06-16)
-# Rails 6.0 is no longer supported upstream and limited to ruby30. Use a
-# newer Rails version instead. Masked for removal on 2023-07-16.
-dev-ruby/rails:6.0
-dev-ruby/railties:6.0
-dev-ruby/actionmailbox:6.0
-dev-ruby/actiontext:6.0
-dev-ruby/activerecord:6.0
-dev-ruby/actionmailer:6.0
-dev-ruby/activestorage:6.0
-dev-ruby/actionpack:6.0
-dev-ruby/actionview:6.0
-dev-ruby/activejob:6.0
-dev-ruby/actioncable:6.0
-dev-ruby/activemodel:6.0
-dev-ruby/activesupport:6.0
-
-# Hans de Graaff <graaff@gentoo.org> (2023-06-16)
-# Obsolete slot. Use the newer 0.7 slot instead.
-# Masked for removal on 2023-07-16.
-dev-ruby/websocket-driver:0
 
 # Tomáš Mózes <hydrapolic@gmail.com> (2023-06-12)
 # Buggy version that causes ibdata1 to grow, please update. See bug #908394.
