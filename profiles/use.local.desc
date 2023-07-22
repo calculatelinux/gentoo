@@ -390,7 +390,6 @@ app-crypt/seahorse:ldap - Enable seahorse to manipulate GPG keys on a LDAP serve
 app-crypt/swtpm:fuse - Support sys-fs/fuse based /dev/tpm interface
 app-crypt/swtpm:gnutls - Use net-libs/gnutls as crypto engine
 app-crypt/swtpm:openssl - Use dev-libs/openssl as crypto engine
-app-crypt/tpm-emulator:mtm-emulator - Build the MTM emulator
 app-crypt/tpm-tools:pkcs11 - Build Token data management utilities based on OpenCryptoki's (dev-libs/opencryptoki) PKCS#11 implementation.
 app-crypt/tpm2-pkcs11:fapi - Enable feature API backend
 app-crypt/tpm2-tools:fapi - Enable feature API tools
@@ -969,6 +968,7 @@ app-mobilephone/gnokii:irda - Enable infrared support
 app-mobilephone/gnokii:pcsc-lite - Enable smartcard support with sys-apps/pcsc-lite
 app-mobilephone/gnokii:sms - Enable SMS support (build smsd)
 app-mobilephone/scrcpy:lto - Build with Link Time Optimization (LTO)
+app-mobilephone/scrcpy:pipewire - Enable support for the media-video/pipewire audio backend
 app-mobilephone/smstools:stats - Enable statistic reporting
 app-office/abiword:collab - Enable collaborative editing plugin
 app-office/abiword:goffice - Enable goffice plugin
@@ -1881,6 +1881,7 @@ dev-libs/efl:unwind - Enable debug support via sys-libs/libunwind
 dev-libs/efl:xcf - Enable XCF image loader
 dev-libs/efl:xim - Enable X Input Method
 dev-libs/efl:xpresent - Enable x11-libs/libXpresent support
+dev-libs/elfutils:debuginfod - Enable debuginfod support, both the debuginfod server and the libdebuginfod client library
 dev-libs/elfutils:lzma - Support automatic decompression of LZMA-compressed files and kernel images
 dev-libs/elfutils:utils - Install command-line utilities (all the eu-* programs)
 dev-libs/fcgi:html - Install HTML documentation
@@ -3252,6 +3253,7 @@ gnome-base/gvfs:nfs - Enable NFS client support via net-fs/libnfs.
 gnome-base/gvfs:udev - Enable udev base replacement code for cdda feature
 gnome-base/libgnomecanvas:glade - Enable glade support
 gnome-base/librsvg:tools - Build svg viewer tool
+gnome-base/nautilus:cloudproviders - Enable the cloudproviders support
 gnome-base/nautilus:gstreamer - Enable the Audio/Video file properties page
 gnome-base/nautilus:previewer - Use gnome-extra/sushi to preview files from the file mananger
 gnome-base/nautilus:sendto - Enable the nautilus-sendto extension to send files to various locations/devices
@@ -3706,6 +3708,7 @@ mail-client/thunderbird:libproxy - Enable libproxy support
 mail-client/thunderbird:lto - Enable Link Time Optimization (LTO)
 mail-client/thunderbird:openh264 - Use media-libs/openh264 for H.264 support instead of downloading binary blob from Mozilla at runtime
 mail-client/thunderbird:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
+mail-client/thunderbird:pulseaudio - Add sound server support via media-libs/libpulse (may be PulseAudio or Pipewire, or apulse if installed)
 mail-client/thunderbird:sndio - Enable support for the media-sound/sndio backend
 mail-client/thunderbird:system-av1 - Use the system-wide media-libs/dav1d and media-libs/libaom library instead of bundled.
 mail-client/thunderbird:system-harfbuzz - Use the system-wide media-libs/harfbuzz and media-gfx/graphite2 instead of bundled.
@@ -3717,6 +3720,7 @@ mail-client/thunderbird:system-libvpx - Use the system-wide media-libs/libvpx in
 mail-client/thunderbird:system-png - Use the system-wide media-libs/libpng instead of bundled (requires APNG patches)
 mail-client/thunderbird:system-python-libs - Use system's python site instead of bundled python libraries
 mail-client/thunderbird:system-webp - Use the system-wide media-libs/libwebp instead of bundled.
+mail-client/thunderbird:wifi - Enable necko-wifi for NetworkManager integration, and access point MAC address scanning for better precision with opt-in geolocation services
 mail-filter/MailScanner:exim - Set mail-mta/exim to used MTA
 mail-filter/MailScanner:postfix - Set mail-mta/postfix to used MTA
 mail-filter/MailScanner:spamassassin - Enable usage of mail-filter/spamassassin for spam protection
@@ -4292,6 +4296,7 @@ media-libs/oneVPL-cpu:experimental - Enable experimental API
 media-libs/oneVPL-cpu:openh264 - Use media-libs/openh264 instead of media-libs/x264
 media-libs/openal:pipewire - Enable support for the media-video/pipewire audio backend
 media-libs/openal:sndio - Enable support for the media-sound/sndio backend
+media-libs/opencolorio:apps - Build the OCIO command line apps
 media-libs/opencv:contrib - Install user contributed scripts from opencv_contrib (Experimental!)
 media-libs/opencv:contribcvv - CVV module requires Qt5
 media-libs/opencv:contribdnn - DNN module contrib requires tiny dnn
@@ -5070,6 +5075,7 @@ media-video/obs-studio:decklink - Build the Decklink plugin.
 media-video/obs-studio:fdk - Build with LibFDK AAC support.
 media-video/obs-studio:pipewire - Build with PipeWire support.
 media-video/obs-studio:python - Build with scripting support for Python 3.
+media-video/obs-studio:qsv - Build with Intel Quick Sync Video support.
 media-video/obs-studio:speex - Build with Speex noise suppression filter support.
 media-video/obs-studio:ssl - Build with TLS/SSL support for RTMPS connections.
 media-video/obs-studio:vlc - Build with VLC media source support.
@@ -6002,8 +6008,6 @@ net-libs/libprotoident:tools - Build and install command-line tools
 net-libs/libproxy:duktape - Use dev-lang/duktape for PAC parsing
 net-libs/libproxy:gnome - Enable support for reading proxy settings from GNOME
 net-libs/libproxy:kde - Enable support for reading proxy settings from KDE
-net-libs/libproxy:spidermonkey - Use libmozjs from dev-lang/spidermonkey for PAC parsing
-net-libs/libproxy:webkit - Use libjavascriptcoregtk from net-libs/webkit-gtk for PAC parsing
 net-libs/libqmi:mbim - Support QMI over Mobile Broadband Interface Model (MBIM)
 net-libs/libqmi:qrtr - Support QMI over IPC Router bus (QRTR)
 net-libs/libsoup:brotli - Enable brotli decompression support
@@ -6821,7 +6825,6 @@ net-voip/yate:tdmcard - Enable TDMV API card driver
 net-voip/yate:wanpipe - Enable Wanpipe support
 net-voip/yate:wpcard - Enable Wanpipe card driver
 net-voip/yate:zaptel - Enable Zaptel driver
-net-vpn/i2p:nls - Adds Native Language Support using GNU gettext.
 net-vpn/i2pd:i2p-hardening - Compile with hardening on vanilla compilers/linkers
 net-vpn/libreswan:dnssec - Use DNSSEC resolver (requires net-dns/unbound)
 net-vpn/networkmanager-sstp:gtk4 - Use gui-libs/gtk for GUI support.
@@ -7094,8 +7097,6 @@ sci-electronics/gtkwave:fatlines - Renders lines as double width in gtkwave.
 sci-electronics/gtkwave:judy - Enables Judy array support.
 sci-electronics/gtkwave:packed - Enables '#pragma pack' for data arrays (saves memory, costs time).
 sci-electronics/kicad:ngspice - Enable circuit simulation
-sci-electronics/kicad:occ - Enable viewing 3D rendering of designs via sci-libs/opencascade
-sci-electronics/kicad:pcm - Enable plugin content manager
 sci-electronics/kicad-meta:minimal - Do not install extra data like 3D packages and templates.
 sci-electronics/kicad-packages3d:occ - Use sci-libs/opencascade for data exchange
 sci-electronics/ktechlab:gpsim - Enable support for Microchip PIC microcontrollers similation using dev-embedded/gpsim
@@ -8122,6 +8123,7 @@ sys-cluster/vzctl:ploop - Add support for ploop devices via sys-cluster/ploop
 sys-cluster/vzctl:vzmigrate - Add support for container migration
 sys-devel/autogen:libopts - install the libopts tarball (a few packages want this for developing)
 sys-devel/binutils:cet - Enable Intel Control-flow Enforcement Technology.
+sys-devel/binutils:debuginfod - Enable debuginfod support via dev-libs/elfutils libdebuginfod
 sys-devel/binutils:default-gold - Set ld to point to ld.gold instead of ld.bfd
 sys-devel/binutils:gold - Build ld.gold linker
 sys-devel/binutils:gprofng - Enable the next-generation gprofng profiler
@@ -8187,6 +8189,7 @@ sys-devel/gcc-apple:objc++ - Build support for the Objective C++ language
 sys-devel/gcc-config:cc-wrappers - Install and manage 'cc' and 'f77' wrappers in /usr/bin. Otherwise ignore them.
 sys-devel/gcc-config:native-symlinks - Install native symlinks like 'gcc' or 'g++' to /usr/bin. Otherwise keep only ${CTARGET}-gcc and friends.
 sys-devel/gdb:cet - Enable Intel Control-flow Enforcement Technology.
+sys-devel/gdb:debuginfod - Enable debuginfod support via dev-libs/elfutils libdebuginfod
 sys-devel/gdb:lzma - Support lzma compression in ELF debug info
 sys-devel/gdb:multitarget - Support all known targets in one gdb binary
 sys-devel/gdb:python - Enable support for the new internal scripting language, as well as extended pretty printers

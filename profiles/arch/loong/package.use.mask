@@ -1,6 +1,27 @@
 # Copyright 2022-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# WANG Xuerui <xen0n@gentoo.org> (2023-07-19)
+# Temporary masks; to be lifted after leaving wd40 status.
+gnome-base/nautilus previewer
+mate-extra/caja-extensions gajim
+x11-misc/xscreensaver gdm
+
+# WANG Xuerui <xen0n@gentoo.org> (2023-07-19)
+# dev-lang/spidermonkey still waiting on upstream lld support
+app-crypt/libsecret test-rust
+dev-util/glade gjs
+
+# dev-python/watchfiles has too old target-lexicon without loong support
+dev-python/uvicorn test-rust
+
+# WANG Xuerui <xen0n@gentoo.org> (2023-07-19)
+# Examples used by tests have their libc crate Cargo.locked to 0.2.121, that
+# predated Rust's loong support. The package itself works as intended.
+# The atom should be made more accurate once a newer version is released that
+# contains bumped libc deps.
+dev-python/setuptools-rust test
+
 # WANG Xuerui <xen0n@gentoo.org> (2023-07-11)
 # Upstream lacks pmu-events definition file for loong.
 dev-util/perf python
@@ -188,11 +209,14 @@ mate-base/mate help
 # MSan: https://reviews.llvm.org/D152692 (LLVM 17 since 20230629)
 # DFSan: https://reviews.llvm.org/D140690 (LLVM 17 since 20230703)
 # Profile: https://reviews.llvm.org/D154405 (LLVM 17 since 20230706)
+# XRay: https://reviews.llvm.org/D140727 (LLVM 17 since 20230714)
+# libFuzzer: https://reviews.llvm.org/D140601 (LLVM 17 since 20230718)
 >=sys-libs/compiler-rt-sanitizers-15 -asan
 >=sys-libs/compiler-rt-sanitizers-16 -lsan -safestack -scudo -tsan -ubsan
 >=sys-libs/compiler-rt-sanitizers-17.0.0_pre20230630 -msan
 >=sys-libs/compiler-rt-sanitizers-17.0.0_pre20230705 -dfsan
->sys-libs/compiler-rt-sanitizers-17.0.0_pre20230705 -profile
+>=sys-libs/compiler-rt-sanitizers-17.0.0_pre20230717 -profile -xray
+>sys-libs/compiler-rt-sanitizers-17.0.0_pre20230717 -libfuzzer
 
 # WANG Xuerui <xen0n@gentoo.org> (2022-07-08)
 # virtual/{jdk,jre} is not available on loong yet.

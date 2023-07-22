@@ -373,7 +373,7 @@ CRATES_TEST="
 	windows_x86_64_msvc@0.42.0"
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( pypy3 python3_{10..12} )
-inherit bash-completion-r1 cargo distutils-r1 edo flag-o-matic toolchain-funcs
+inherit cargo distutils-r1 edo flag-o-matic shell-completion toolchain-funcs
 
 DESCRIPTION="Build and publish crates with pyo3, rust-cpython and cffi bindings"
 HOMEPAGE="https://www.maturin.rs/"
@@ -389,7 +389,7 @@ LICENSE+="
 	0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD ISC MIT MPL-2.0
 	Unicode-DFS-2016" # crates
 SLOT="0"
-KEYWORDS="amd64 arm arm64 ~ppc ppc64 ~riscv ~s390 ~sparc x86"
+KEYWORDS="amd64 arm arm64 ~loong ~ppc ppc64 ~riscv ~s390 ~sparc x86"
 IUSE="doc +ssl test"
 RESTRICT="!test? ( test )"
 
@@ -481,11 +481,7 @@ python_install_all() {
 
 	if ! tc-is-cross-compiler; then
 		dobashcomp "${T}"/${PN}
-
-		insinto /usr/share/fish/vendor_completions.d
-		doins "${T}"/${PN}.fish
-
-		insinto /usr/share/zsh/site-functions
-		doins "${T}"/_${PN}
+		dofishcomp "${T}"/${PN}.fish
+		dozshcomp "${T}"/_${PN}
 	fi
 }

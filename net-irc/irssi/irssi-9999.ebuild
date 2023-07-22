@@ -39,10 +39,6 @@ BDEPEND="dev-lang/perl
 	virtual/pkgconfig"
 RDEPEND+=" selinux? ( sec-policy/selinux-irc )"
 
-PATCHES=(
-	"${FILESDIR}/${PN}-fix-usage-of-\$type-in-ExtUtils.patch"
-)
-
 src_configure() {
 	local emesonargs=(
 		-Ddocdir="${EPREFIX}"/usr/share/doc/${PF}

@@ -10,5 +10,5 @@ LICENSE=BSD
 RDEPEND=app-arch/cpio
 SLOT=0
 SRC_URI=https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/ypsilon/ypsilon-0.9.6.update3.tar.gz
-_eclasses_=flag-o-matic	ad475baa777c9978fa035216c8264a10	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c
+_eclasses_=flag-o-matic	ad475baa777c9978fa035216c8264a10	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	8e3fb781f3258ae2757d1dfc2c7c170e
 _md5_=658f3c58d8c2b008cd214766ff3609dc

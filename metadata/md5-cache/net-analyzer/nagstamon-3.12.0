@@ -6,12 +6,12 @@ EAPI=8
 HOMEPAGE=https://nagstamon.de
 INHERIT=distutils-r1
 IUSE=test python_targets_python3_10 python_targets_python3_11
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_11? ( dev-lang/python:3.11 ) dev-python/lxml[python_targets_python3_10(-)?,python_targets_python3_11(-)?] || ( dev-python/PyQt6[gui,multimedia,svg,widgets,python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/PyQt5[gui,multimedia,svg,widgets,python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) dev-python/PySocks[python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/beautifulsoup4[python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/dbus-python[python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/keyring[python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/requests[python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/psutil[python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/python-dateutil[python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/cryptography[python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/secretstorage[python_targets_python3_10(-)?,python_targets_python3_11(-)?] >=dev-python/python-xlib-0.19[python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/requests-kerberos[python_targets_python3_10(-)?,python_targets_python3_11(-)?] python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_11? ( dev-lang/python:3.11 )
 REQUIRED_USE=|| ( python_targets_python3_10 python_targets_python3_11 ) || ( python_targets_python3_10 python_targets_python3_11 )
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://github.com/HenriWahl/Nagstamon/archive/v3.12.0.tar.gz -> nagstamon-3.12.0.tar.gz
-_eclasses_=distutils-r1	b7cd5736a595ec0df9b164d5aec6f228	flag-o-matic	ad475baa777c9978fa035216c8264a10	multibuild	30dbf3c5a31db09a19f31ad0a68f2405	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	76050953ad5b70d7e09a6ca55558db92	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	python-r1	b3f874304c1bda6ffc3450ebb4ae5169	python-utils-r1	7661dc585f75dd1f81eccefe37bef093	toolchain-funcs	513c31b3346458ed1f3878b57da6d61c
-_md5_=06c54945ea039ee3a9dd13f73fcd7ffe
+_eclasses_=distutils-r1	b7cd5736a595ec0df9b164d5aec6f228	flag-o-matic	ad475baa777c9978fa035216c8264a10	multibuild	30dbf3c5a31db09a19f31ad0a68f2405	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	f3010c780f65d1bb5aea15a9af1adc9c	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	python-r1	b3f874304c1bda6ffc3450ebb4ae5169	python-utils-r1	7661dc585f75dd1f81eccefe37bef093	toolchain-funcs	8e3fb781f3258ae2757d1dfc2c7c170e
+_md5_=766b3b5b930fc12832018d33a5c30fd8

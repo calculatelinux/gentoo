@@ -1,0 +1,15 @@
+BDEPEND=test? ( >=dev-lang/go-1.20 ) >=dev-lang/go-1.18 app-arch/unzip
+DEFINED_PHASES=compile install test unpack
+DESCRIPTION=Docker CLI plugin for extended build capabilities with BuildKit
+EAPI=8
+HOMEPAGE=https://github.com/docker/buildx
+INHERIT=go-module
+IUSE=test
+KEYWORDS=~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86
+LICENSE=Apache-2.0
+RDEPEND=app-containers/docker-cli
+RESTRICT=!test? ( test ) strip
+SLOT=0
+SRC_URI=https://github.com/docker/buildx/archive/refs/tags/v0.11.2.tar.gz -> docker-buildx-0.11.2.tar.gz
+_eclasses_=go-module	8624eede24936fd7666e5298e5332f22	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	toolchain-funcs	8e3fb781f3258ae2757d1dfc2c7c170e
+_md5_=c9b48871275b96a7bba09213903097a5

@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3_{10..12} )
 QA_PKGCONFIG_VERSION=$(ver_cut 1)
 
 inherit bash-completion-r1 flag-o-matic linux-info meson-multilib python-any-r1
-inherit toolchain-funcs udev usr-ldscript
+inherit secureboot toolchain-funcs udev usr-ldscript
 
 DESCRIPTION="Utilities split out from systemd for OpenRC users"
 HOMEPAGE="https://systemd.io/"
@@ -27,7 +27,7 @@ SRC_URI+=" elibc_musl? ( https://dev.gentoo.org/~floppym/dist/${MUSL_PATCHSET}.t
 
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc x86"
 IUSE="+acl boot +kmod selinux split-usr sysusers +tmpfiles test +udev"
 REQUIRED_USE="|| ( boot tmpfiles sysusers udev )"
 RESTRICT="!test? ( test )"
@@ -113,6 +113,7 @@ pkg_setup() {
 	if [[ ${MERGE_TYPE} != buildonly ]] && use udev; then
 		linux-info_pkg_setup
 	fi
+	use boot && secureboot_pkg_setup
 }
 
 src_prepare() {
@@ -506,6 +507,8 @@ multilib_src_install_all() {
 		insinto /usr/share/zsh/site-functions
 		doins shell-completion/zsh/_udevadm
 	fi
+
+	use boot && secureboot_auto_sign
 }
 
 add_service() {
