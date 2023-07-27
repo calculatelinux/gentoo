@@ -23,4 +23,10 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
+BDEPEND="
+	test? (
+		dev-python/parameterized[${PYTHON_USEDEP}]
+	)
+"
+
 distutils_enable_tests pytest
