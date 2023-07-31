@@ -1,0 +1,14 @@
+BDEPEND=>=app-editors/emacs-27.1:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DESCRIPTION=Emacs major modes for the Bazel build system support
+EAPI=8
+HOMEPAGE=https://bazel.build/ https://github.com/bazelbuild/emacs-bazel-mode/
+INHERIT=elisp
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=>=app-editors/emacs-27.1:*
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/bazelbuild/emacs-bazel-mode/archive/55cba9bd31c660d9b313a993979f012f35673ba2.tar.gz -> emacs-bazel-mode-0_p20230511.tar.gz
+_eclasses_=elisp	fbefa95f5e9ab880a34bc69832b7c0d7	elisp-common	b3b15bdbe800c721e93b69b70cce2b67
+_md5_=b0ccecaf872a242277b7b2822806aaf7

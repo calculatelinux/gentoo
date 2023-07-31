@@ -5,11 +5,11 @@ DESCRIPTION=Tools necessary to build programs
 EAPI=7
 HOMEPAGE=https://sourceware.org/binutils/
 INHERIT=libtool flag-o-matic gnuconfig strip-linguas toolchain-funcs git-r3
-IUSE=cet debuginfod doc gold gprofng multitarget +nls pgo +plugins static-libs test vanilla zstd
+IUSE=cet debuginfod doc gold gprofng hardened multitarget +nls pgo +plugins static-libs test vanilla zstd
 LICENSE=GPL-3+
 PROPERTIES=live
 RDEPEND=>=sys-devel/binutils-config-3 sys-libs/zlib debuginfod? ( dev-libs/elfutils[debuginfod(-)] ) zstd? ( app-arch/zstd:= )
 RESTRICT=!test? ( test )
 SLOT=9999
-_eclasses_=flag-o-matic	ad475baa777c9978fa035216c8264a10	git-r3	2358a7b20091609e24bd3a83b3ac5991	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	9d3a9a889a6fa62ae794f817c156491b	multilib	c19072c3cd7ac5cb21de013f7e9832e0	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	toolchain-funcs	8e3fb781f3258ae2757d1dfc2c7c170e
-_md5_=f508ba164b979bd8418e1a46b70970ac
+_eclasses_=flag-o-matic	ad475baa777c9978fa035216c8264a10	git-r3	2358a7b20091609e24bd3a83b3ac5991	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	9d3a9a889a6fa62ae794f817c156491b	multilib	c19072c3cd7ac5cb21de013f7e9832e0	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	toolchain-funcs	0c8a0b0d318eb5d5180d114bd3f6592b
+_md5_=f2474fc17e4f9a0a400e39aa9b64e400

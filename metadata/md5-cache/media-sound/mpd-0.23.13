@@ -14,5 +14,5 @@ REQUIRED_USE=|| ( alsa ao fifo jack network openal oss pipe pipewire pulseaudio 
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://www.musicpd.org/download/mpd/0.23/mpd-0.23.13.tar.xz
-_eclasses_=flag-o-matic	ad475baa777c9978fa035216c8264a10	linux-info	c4f1201b96a8a2c1f3b86cc8b2c71c91	meson	08b7183c3f4811568ee93eb0f79a89fe	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	f3010c780f65d1bb5aea15a9af1adc9c	python-utils-r1	7661dc585f75dd1f81eccefe37bef093	systemd	5f4bb0758df2e483babf68cd517078ca	toolchain-funcs	8e3fb781f3258ae2757d1dfc2c7c170e	xdg	4a14c5c24f121e7da66e5aab4a168c6e	xdg-utils	baea6080dd821f5562d715887954c9d3
+_eclasses_=flag-o-matic	ad475baa777c9978fa035216c8264a10	linux-info	c4f1201b96a8a2c1f3b86cc8b2c71c91	meson	08b7183c3f4811568ee93eb0f79a89fe	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	f3010c780f65d1bb5aea15a9af1adc9c	python-utils-r1	7661dc585f75dd1f81eccefe37bef093	systemd	5f4bb0758df2e483babf68cd517078ca	toolchain-funcs	0c8a0b0d318eb5d5180d114bd3f6592b	xdg	4a14c5c24f121e7da66e5aab4a168c6e	xdg-utils	baea6080dd821f5562d715887954c9d3
 _md5_=4a74d059b8b76953355f025a357e9097

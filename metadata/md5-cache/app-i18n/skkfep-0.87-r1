@@ -10,5 +10,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses:= app-i18n/skk-jisyo
 SLOT=0
 SRC_URI=http://aitoweb.world.coocan.jp/skkfep/skkfep-0.87.tar.gz
-_eclasses_=flag-o-matic	ad475baa777c9978fa035216c8264a10	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	8e3fb781f3258ae2757d1dfc2c7c170e
+_eclasses_=flag-o-matic	ad475baa777c9978fa035216c8264a10	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	0c8a0b0d318eb5d5180d114bd3f6592b
 _md5_=5e45d264b2f9ddc98426493b3a3d86a9
