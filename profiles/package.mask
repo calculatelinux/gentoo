@@ -33,6 +33,19 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2023-07-07)
+# Fails to boostrap: https://gcc.gnu.org/PR110926
+=sys-devel/gcc-14.0.0_pre20230806
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2023-07-05)
+# Library without consumers. Bug #906882
+# Removal on 2023-08-05.
+net-libs/nativebiginteger
+
+# Sam James <sam@gentoo.org> (2023-08-04)
+# Stricter behavior which causes some packages to fail, see bug #911721.
+=dev-util/pkgconf-2.0.0
+
 # David Seifert <soap@gentoo.org> (2023-07-29)
 # EAPI 6, fetch restrictions require annoying registration, no other
 # distro packages this, over 10 years old. Removal on 2023-08-28.
@@ -320,9 +333,11 @@ dev-perl/Gtk2-Notify
 >=gnome-extra/gnome-system-monitor-45_alpha
 >=gnome-extra/gnome-weather-45_alpha
 >=gnome-extra/sushi-45_alpha
+>=gui-apps/gnome-console-45_alpha
 >=gui-libs/gtk-4.11
 >=gui-libs/libadwaita-1.4_alpha
 >=media-gfx/gnome-font-viewer-45_alpha
+>=net-misc/gnome-connections-45_alpha
 >=net-misc/gnome-remote-desktop-45_alpha
 >=sci-geosciences/gnome-maps-45_alpha
 >=sys-apps/baobab-45_alpha

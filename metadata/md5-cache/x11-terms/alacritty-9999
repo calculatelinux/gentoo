@@ -1,4 +1,4 @@
-BDEPEND=dev-util/cmake >=virtual/rust-1.57.0 app-text/scdoc >=virtual/rust-1.53 >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=dev-util/cmake >=virtual/rust-1.65.0 app-text/scdoc >=virtual/rust-1.53 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst setup test unpack
 DEPEND=media-libs/fontconfig:= media-libs/freetype:2 x11-libs/libxkbcommon X? ( x11-libs/libxcb:= ) || ( dev-lang/python:3.12 dev-lang/python:3.11 dev-lang/python:3.10 )
 DESCRIPTION=GPU-accelerated terminal emulator
@@ -11,5 +11,5 @@ PROPERTIES=live
 RDEPEND=media-libs/fontconfig:= media-libs/freetype:2 x11-libs/libxkbcommon X? ( x11-libs/libxcb:= ) media-libs/mesa[X?,wayland?] sys-libs/zlib sys-libs/ncurses:0 wayland? ( dev-libs/wayland ) X? ( x11-libs/libXcursor x11-libs/libXi x11-libs/libXrandr )
 REQUIRED_USE=|| ( wayland X )
 SLOT=0
-_eclasses_=bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	cargo	8520ae1bed0e6965d027399b471a3595	desktop	021728fdc1b03b36357dbc89489e0f0d	flag-o-matic	ad475baa777c9978fa035216c8264a10	git-r3	2358a7b20091609e24bd3a83b3ac5991	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	python-any-r1	845fed6b6dfc35679a4fea289272ddc0	python-utils-r1	7f2c0a7465411e0f3a6db30e966155d6	toolchain-funcs	0c8a0b0d318eb5d5180d114bd3f6592b
-_md5_=caea894d9a4977b1b7f24aec355b6945
+_eclasses_=bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	cargo	8520ae1bed0e6965d027399b471a3595	desktop	021728fdc1b03b36357dbc89489e0f0d	flag-o-matic	ad475baa777c9978fa035216c8264a10	git-r3	2358a7b20091609e24bd3a83b3ac5991	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	python-any-r1	845fed6b6dfc35679a4fea289272ddc0	python-utils-r1	753cb70b9daf5c8c1e373d68dee61efb	toolchain-funcs	0c8a0b0d318eb5d5180d114bd3f6592b
+_md5_=7a76b55eb901f3e142eeb9dc635ceb30
