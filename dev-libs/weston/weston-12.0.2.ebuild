@@ -90,7 +90,12 @@ BDEPEND="
 	${PYTHON_DEPS}
 	dev-util/wayland-scanner
 	virtual/pkgconfig
+	$(python_gen_any_dep 'dev-python/setuptools[${PYTHON_USEDEP}]')
 "
+
+python_check_deps() {
+	python_has_version "dev-python/setuptools[${PYTHON_USEDEP}]"
+}
 
 src_configure() {
 	local emesonargs=(
