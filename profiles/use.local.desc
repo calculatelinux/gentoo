@@ -685,6 +685,7 @@ app-emulation/wine-staging:pcap - Support packet capture software (e.g. wireshar
 app-emulation/wine-staging:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-staging:samba - Pull in net-fs/samba with winbind for NTLM auth support
 app-emulation/wine-staging:sdl - Enable gamepad support using media-libs/libsdl2
+app-emulation/wine-staging:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental/WIP, USE=abi_x86_32 is recommended for complete support)
 app-emulation/wine-vanilla:capi - Enable ISDN support using net-libs/libcapi
 app-emulation/wine-vanilla:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
 app-emulation/wine-vanilla:dos - Pull in games-emulation/dosbox to run DOS applications
@@ -699,6 +700,7 @@ app-emulation/wine-vanilla:perl - Install helpers that require perl (winedump/wi
 app-emulation/wine-vanilla:samba - Pull in net-fs/samba with winbind for NTLM auth support
 app-emulation/wine-vanilla:sdl - Enable gamepad support using media-libs/libsdl2
 app-emulation/wine-vanilla:vkd3d - Enable DirectX 12 support using app-emulation/vkd3d
+app-emulation/wine-vanilla:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental/WIP, USE=abi_x86_32 is recommended for complete support)
 app-emulation/winetricks:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
 app-emulation/x48:readline - Enables support for libreadline
 app-emulation/xe-guest-utilities:xenstore - Use xenstore binaries bundled by Citrix instead of building app-emulation/xen-tools
@@ -819,6 +821,7 @@ app-misc/digitemp:ds2490 - Build support for the ds2490 sensor
 app-misc/digitemp:ds9097 - Build support for the ds9097 sensor
 app-misc/digitemp:ds9097u - Build support for the ds9097u sensor
 app-misc/fastfetch:chafa - Enables text/graphics renderer with media-gfx/chafa
+app-misc/fastfetch:ddcutil - Use app-misc/ddcutil to query monitor settings
 app-misc/fastfetch:opencl - Enables OpenCL support
 app-misc/fastfetch:osmesa - Enables offscreen rendering support from media-libs/mesa
 app-misc/fastfetch:pci - Enables reading GPU via sys-apps/pciutils
@@ -1071,6 +1074,9 @@ app-portage/pfl:network-cron - Adds a cron job which does a weekly submit of the
 app-portage/portage-utils:qmanifest - Build qmanifest applet, this adds additional dependencies for GPG, OpenSSL and BLAKE2B hashing
 app-portage/portage-utils:qtegrity - Build qtegrity applet, this adds additional dependencies for OpenSSL
 app-portage/tatt:templates - Install template scripts to be used with tatt
+app-shells/atuin:client - Enable the autin client
+app-shells/atuin:server - Enable the autin server
+app-shells/atuin:sync - Enable the server-sync feature in the autin client
 app-shells/autojump:ipython - Add support for dev-python/ipython
 app-shells/bash:bashlogger - Log ALL commands typed into bash; should ONLY be used in restricted environments such as honeypots
 app-shells/bash:mem-scramble - Build with custom malloc/free overwriting allocated/freed memory
@@ -1836,6 +1842,7 @@ dev-libs/boost:debug - Build and install only the debug version of the Boost lib
 dev-libs/boost:doc - Install the full API documentation documentation. This takes over 200MB of extra disk space.
 dev-libs/boost:nls - Build libboost_locale. This library requires compatible C library interfaces, which might not be provided by uClibc or other embedded libraries.
 dev-libs/boost:numpy - Optionally build NumPy extensions when Boost.Python is enabled
+dev-libs/boost:stacktrace - Build the full Boost.Stacktrace dynamic library instead of relying on the header-only implementation
 dev-libs/boost:tools - Build and install the boost tools (bcp, quickbook, inspect, wave)
 dev-libs/botan:boost - Use dev-libs/boost
 dev-libs/botan:tools - Install optional tools for e.g. hashing
@@ -1928,7 +1935,6 @@ dev-libs/libcec:udev - Enable detection of USB-CEC port by udev
 dev-libs/libcec:xrandr - Enable detection of active HDMI using xrandr extensions
 dev-libs/libcgroup:daemon - Install the configuration tools and init/config files.
 dev-libs/libcgroup:tools - Install the cgroup rules processing daemon and init/config files.
-dev-libs/libcharon:client - Install the charon client library
 dev-libs/libclc:spirv - Build SPIRV targets
 dev-libs/libdbusmenu:gtk - Enable support for GTK+2
 dev-libs/libdbusmenu:gtk3 - Enable support for GTK+3
@@ -2645,6 +2651,7 @@ dev-ruby/faraday_middleware:rashify - Include FaradayMiddleware::Rashify
 dev-ruby/io-event:io-uring - Enable io_uring support, and use io_uring instead of epoll
 dev-ruby/maruku:highlight - Enable source code highlighting via dev-ruby/syntax
 dev-ruby/mysql2:mariadb - Use mariadb bindings
+dev-ruby/net-ssh:chacha20 - Use dev-ruby/rbnacl for chacha20-poly1305@openssh.com support
 dev-ruby/net-ssh:ed25519 - Use dev-ruby/ed25519 for Ed25519 support
 dev-ruby/rrdtool-bindings:graph - Enable support for graphing functions
 dev-ruby/rspec-core:highlight - Enable source code highlighting via dev-ruby/coderay
@@ -3926,8 +3933,6 @@ media-gfx/blender:potrace - Add support for converting bitmaps into Grease penci
 media-gfx/blender:pugixml - Enable PugiXML support (Used for OpenImageIO, Grease Pencil SVG export)
 media-gfx/blender:tbb - Use threading building blocks library from dev-cpp/tbb.
 media-gfx/chafa:tools - Build command-line tools
-media-gfx/cura:usb - Access 3D printers via USB
-media-gfx/curaengine:arcus - Build with support for communication library between internal components for Ultimaker software
 media-gfx/darktable:avif - Support importing and exporting AVIF images
 media-gfx/darktable:flickr - Add support for uploading photos to flickr
 media-gfx/darktable:gamepad - Support using game controllers as input devices
@@ -3953,7 +3958,6 @@ media-gfx/exiv2:webready - Support reading metadata over the internet
 media-gfx/fbida:X - Install the Motif based image viewer "ida"
 media-gfx/fbida:fbcon - Install the framebuffer image viewer "fbi"
 media-gfx/fbida:ghostscript - Install the framebuffer ghostscript viewer "fbgs"
-media-gfx/fdm-materials:embedded - Build for Ultimaker Embedded software
 media-gfx/fontforge:truetype-debugger - Enable truetype debugger in fontforge
 media-gfx/fontforge:woff2 - Enable support for WOFF2 format
 media-gfx/fotowall:webcam - Enable webcam support
@@ -5645,7 +5649,6 @@ net-fs/openafs:ubik-read-while-write - Enable vlserver read from db cache during
 net-fs/s3fs:gnutls - Enable net-libs/gnutls crypto backend
 net-fs/s3fs:nettle - Use dev-libs/nettle network functions with GnuTLS.
 net-fs/s3fs:nss - Enable dev-libs/nss crypto backend
-net-fs/s3fs:openssl - Enable dev-libs/openssl crypto backend
 net-fs/samba:addc - Enable Active Directory Domain Controller support
 net-fs/samba:ads - Enable Active Directory support
 net-fs/samba:ceph - Enable support for Ceph distributed filesystem via sys-cluster/ceph
@@ -7552,6 +7555,7 @@ sci-mathematics/why3-for-spark:hypothesis-selection - Enable hypothesis selectio
 sci-mathematics/why3-for-spark:sexp - Add support for outputting S-expressions with dev-ml/ppx_sexp_conv
 sci-mathematics/why3-for-spark:zarith - Use Zarith (dev-ml/zarith) instead of Nums (dev-ml/num) for computations
 sci-mathematics/why3-for-spark:zip - Enable compression of session files
+sci-mathematics/wxmaxima:webkit - Use net-libs/webkit-gtk to show help (for maxima and wxmaxima) inside wxmaxima
 sci-mathematics/yacas:jupyter - Add support for jupyter notebook
 sci-mathematics/yices2:mcsat - Enable support for MCSAT
 sci-mathematics/z3:isabelle - Add integration support for the Isabelle/HOL theorem prover.
@@ -8778,7 +8782,7 @@ x11-base/xorg-server:xorg - Build the Xorg X server (HIGHLY RECOMMENDED)
 x11-base/xorg-server:xvfb - Build the Xvfb server
 x11-base/xwayland:unwind - Enable libunwind usage for backtraces
 x11-base/xwayland:xcsecurity - Build Security extension
-x11-drivers/nvidia-drivers:kernel-open - Use the open source variant of drivers (Turing/Ampere+ GPUs only, aka GTX 1650+, very experimental)
+x11-drivers/nvidia-drivers:kernel-open - Use the open source variant of drivers (Turing/Ampere+ GPUs only, aka GTX 1650+, experimental)
 x11-drivers/nvidia-drivers:persistenced - Install the persistence daemon for keeping devices state when unused (e.g. for headless)
 x11-drivers/nvidia-drivers:static-libs - Install the XNVCtrl static library for accessing sensors and other features
 x11-drivers/nvidia-drivers:tools - Install additional tools such as nvidia-settings
@@ -9007,7 +9011,6 @@ x11-themes/zuki-themes:xfce - Install theme for xfce-base/xfwm4
 x11-wm/ctwm:jpeg - Enable jpeg image support with virtual/jpeg
 x11-wm/ctwm:test - Enable upstream test suite, build required binary
 x11-wm/ctwm:xpm - Enable xpm icon support with x11-libs/libXpm
-x11-wm/e16:container - Use container window
 x11-wm/e16:debug - Build libtrip debugging library
 x11-wm/e16:dialogs - Enable support for configuration dialogs
 x11-wm/e16:libhack - Build libhack window mode helper library

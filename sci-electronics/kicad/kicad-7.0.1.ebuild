@@ -35,6 +35,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 # Contains bundled pybind but it's patched for wx
 # See https://gitlab.com/kicad/code/kicad/-/commit/74e4370a9b146b21883d6a2d1df46c7a10bd0424
 # Depend on opencascade:0 to get unslotted variant (so we know path to it), bug #833301
+# Depend wxGTK version needs to be limited due to switch from EGL to GLX, bug #911120
 COMMON_DEPEND="
 	dev-db/unixODBC
 	dev-libs/boost:=[context,nls]
@@ -46,7 +47,7 @@ COMMON_DEPEND="
 	>=sci-libs/opencascade-7.3.0:0=
 	>=x11-libs/cairo-1.8.8:=
 	>=x11-libs/pixman-0.30
-	x11-libs/wxGTK:${WX_GTK_VER}[X,opengl]
+	<=x11-libs/wxGTK-3.2.2.1-r2:${WX_GTK_VER}[X,opengl]
 	sys-libs/zlib
 	$(python_gen_cond_dep '
 		dev-libs/boost:=[context,nls,python,${PYTHON_USEDEP}]

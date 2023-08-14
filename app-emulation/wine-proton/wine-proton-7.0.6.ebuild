@@ -5,8 +5,8 @@ EAPI=8
 
 MULTILIB_COMPAT=( abi_x86_{32,64} )
 PYTHON_COMPAT=( python3_{10..12} )
-inherit autotools flag-o-matic multilib multilib-build python-any-r1
-inherit readme.gentoo-r1 toolchain-funcs wrapper
+inherit autotools flag-o-matic multilib multilib-build prefix
+inherit python-any-r1 readme.gentoo-r1 toolchain-funcs wrapper
 
 WINE_GECKO=2.47.3
 WINE_MONO=7.4.0
@@ -152,11 +152,21 @@ src_prepare() {
 
 	default
 
+	if tc-is-clang; then
+		# -mabi=ms was ignored by <clang:16 then turned error in :17
+		# and it still gets used in install phase despite --with-mingw,
+		# drop as a quick fix for now which hopefully should be safe
+		sed -i '/MSVCRTFLAGS=/s/-mabi=ms//' configure.ac || die
+	fi
+
 	# ensure .desktop calls this variant + slot
 	sed -i "/^Exec=/s/wine /${P} /" loader/wine.desktop || die
 
 	# similarly to staging, append to `wine --version` for identification
 	sed -i "s/wine_build[^1]*1/& (Proton-${WINE_PV})/" configure.ac || die
+
+	# datadir is not where wine-mono is installed, so prefixy alternate paths
+	hprefixify -w /get_mono_path/ dlls/mscoree/metahost.c
 
 	# always update for patches (including user's wrt #432348)
 	eautoreconf
@@ -259,11 +269,13 @@ src_configure() {
 		: "${CROSSCFLAGS:=$(
 			filter-flags '-fstack-protector*' #870136
 			filter-flags '-mfunction-return=thunk*' #878849
+
 			# -mavx with mingw-gcc has a history of obscure issues and
 			# disabling is seen as safer, e.g. `WINEARCH=win32 winecfg`
 			# crashes with -march=skylake >=wine-8.10, similar issues with
 			# znver4: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=110273
-			append-cflags -mno-avx
+			append-cflags -mno-avx #912268
+
 			CC=${CROSSCC} test-flags-CC ${CFLAGS:--O2})}"
 		: "${CROSSLDFLAGS:=$(
 			filter-flags '-fuse-ld=*'
