@@ -2349,6 +2349,7 @@ dev-python/frozenlist:native-extensions - Compile native C extensions (speedups,
 dev-python/httpx:cli - Install the CLI "httpx" client.
 dev-python/hypothesis:cli - Install a CLI tool used to write tests.
 dev-python/icalendar:doc - Generate examples and other extra documentation
+dev-python/immutables:native-extensions - Compiles native "C" extensions (speedups, instead of using Python fallback code).
 dev-python/ipython:nbconvert - Enable support for converting notebooks to various formats using app-text/pandoc
 dev-python/ipython:notebook - Install requirements for the web notebook based on dev-python/tornado
 dev-python/jaraco-text:cli - Install dependencies needed for CLI tools (Rust warning!)
@@ -4699,15 +4700,6 @@ media-sound/picard:discid - Enable reading the ID of the inserted CD
 media-sound/picard:fingerprints - Enable calculation and lookup of AcoustID fingerprints
 media-sound/pithos:keybinder - Use keybinder to enable global key bindings
 media-sound/pms:regex - Enable regular expression searches
-media-sound/pragha:glyr - Enable music metadata searchengine support using media-libs/glyr
-media-sound/pragha:grilo - Play songs on DLNA servers using media-libs/grilo
-media-sound/pragha:keybinder - Enable shortcut support using dev-libs/keybinder
-media-sound/pragha:koel - Append music on Koel server
-media-sound/pragha:lastfm - Enable last.fm support using media-libs/libclastfm
-media-sound/pragha:peas - Enable various plugins that will pull in dev-libs/libpeas as a dependency
-media-sound/pragha:playlist - Enable enhanced playlist support using dev-libs/totem-pl-parser
-media-sound/pragha:rygel - Share music on DLNA using net-misc/rygel
-media-sound/pragha:soup - Search metadata on AcoustID and radios on TuneIn using net-libs/libsoup
 media-sound/puddletag:acoustid - Use media-libs/chromaprint for acoustic fingerprinting
 media-sound/puddletag:quodlibet - Enables support for editing media-sound/quodlibet databases
 media-sound/pulseaudio:daemon - Build the pulseaudio binary (not-needed for pipewire-pulse)
@@ -8437,6 +8429,7 @@ sys-libs/timezone-data:zic-slim - Default to 'slim' file format for /usr/share/z
 sys-libs/zlib:minizip - include the minizip library for quick and dirty zip extraction
 sys-libs/zlib-ng:compat - Enable compatibility to sys-libs/zlib
 sys-power/apcupsd:modbus - Enable MODBUS support over USB
+sys-power/autosuspend:mpd - Enable support for the Music Player Daemon
 sys-power/intel-undervolt:elogind - Use elogind hook to apply voltage after system sleep
 sys-power/nut:gpio - Includes all UPS drivers that use GPIO.
 sys-power/nut:i2c - Includes all UPS drivers that use I2C.
@@ -8658,7 +8651,6 @@ www-client/microsoft-edge-beta:mip - Install Microsoft Information Protection pl
 www-client/microsoft-edge-dev:mip - Install Microsoft Information Protection plugin.
 www-client/netsurf:bmp - Bitmap (BMP and ICO) image support via media-libs/libnsbmp
 www-client/netsurf:gtk - Build GTK3 GUI
-www-client/netsurf:gtk2 - Build GTK2 GUI
 www-client/netsurf:psl - Use public suffix list from media-libs/libnspsl to detect supercookies (recommended)
 www-client/netsurf:rosprite - RISC OS Sprite bitmap image support via media-libs/librosprite
 www-client/netsurf:svgtiny - Use media-libs/libsvgtiny instead of gnome-base/librsvg for SVG support
@@ -8915,6 +8907,7 @@ x11-misc/xscreensaver:gdm - Use gdmflexiserver from gnome-base/gdm instead of x1
 x11-misc/xscreensaver:gles - Emulate OpenGL 1.3 in terms of OpenGL ES 1.x
 x11-misc/xscreensaver:glx - Use GLX to interface OpenGL and X11 instead of EGL
 x11-misc/xscreensaver:locking - Compile in support for locking the display
+x11-misc/xscreensaver:logind-idle-hint - Send the session idle hint to logind once the screen saver blanks
 x11-misc/xscreensaver:new-login - Enable user switching support using gdmflexiserver (x11-misc/lightdm)
 x11-misc/xsr:cursor - Capture mouse cursor using x11-misc/xdotool, and place them on the screenshots using media-gfx/imagemagick
 x11-misc/yabar:playerctl - Uses media-sound/playerctl to retrieve the name of the currently played song
