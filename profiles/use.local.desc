@@ -4001,7 +4001,6 @@ media-gfx/graphviz:devil - Enables DevIL output plugin -Tdevil
 media-gfx/graphviz:gtk2 - Enables gtk+ output plugin -Tgtk (needs cairo)
 media-gfx/graphviz:gts - Enables support for GNU Triangulated Surface Library (required for sfdp to work)
 media-gfx/graphviz:lasi - Enables PostScript output via media-libs/lasi, for plugin -Tlasi (needs cairo)
-media-gfx/gthumb:http - Enable webservice integration through net-libs/webkit-gtk
 media-gfx/gthumb:jpegxl - Support for JPEG XL image format
 media-gfx/gthumb:slideshow - Enable slideshow plugin
 media-gfx/hugin:sift - automatically align images with media-gfx/autopano-sift-C
@@ -5187,6 +5186,7 @@ media-video/vlc:zvbi - Enable support for teletext subtitles via the zvbi librar
 media-video/webcamoid:headers - Install development headers
 media-video/webcamoid:libuvc - Build with libuvc support
 media-video/webcamoid:qtaudio - Enable audio capture/play via dev-qt/qtmultimedia
+media-video/webcamoid:qtcamera - Enable video capture/play via dev-qt/qtmultimedia
 media-video/webcamoid:v4lutils - Build with V4L-utils support
 media-video/webcamoid:videoeffects - Build video effects
 media-video/wireplumber:system-service - Install systemd unit files for running as a system service. Not recommended.
@@ -5378,6 +5378,7 @@ net-analyzer/snort:shared-rep - Enables the use of shared memory for the Reputat
 net-analyzer/snort:side-channel - Enables Snort's side channel.
 net-analyzer/snort:sourcefire - Enables Sourcefire specific build options, which include --enable-perfprofiling and --enable-ppm.
 net-analyzer/suricata:af-packet - Enable AF_PACKET support
+net-analyzer/suricata:af-xdp - Enable AF_XDP support
 net-analyzer/suricata:bpf - Enable support for eBPF (as well as XDP if supported by the kernel and the NIC driver) for low-level, high-speed packet processing
 net-analyzer/suricata:control-socket - Enable unix socket
 net-analyzer/suricata:cuda - Enable NVIDIA Cuda computations support
@@ -5756,6 +5757,7 @@ net-im/pidgin:xscreensaver - Use X screensaver protocol extension to monitor idl
 net-im/pidgin:zephyr - Enable Zephyr protocol support
 net-im/profanity:gpg - Enable OpenPGP encryption
 net-im/profanity:omemo - Enable OMEMO encryption
+net-im/profanity:omemo-qrcode - Enable exchanging OMEMO information via QR code
 net-im/profanity:otr - Enable encrypted conversations using Off-The-Records messaging
 net-im/prosody:libevent - Use libevent for event handling
 net-im/psi:aspell - Enable spellchecking using app-text/aspell
@@ -7588,6 +7590,8 @@ sci-physics/lammps:lammps-memalign - Enables the use of the posix_memalign() cal
 sci-physics/lammps:opencl - Enable opencl gpu computing support
 sci-physics/pythia:fastjet - Build jets using the sci-physics/fastjet package
 sci-physics/pythia:hepmc - Adds support for High Energy Physics Monte Carlo Generators sci-physics/hepmc
+sci-physics/pythia:hepmc2 - Adds support for High Energy Physics Monte Carlo Generators 2 sci-physics/hepmc
+sci-physics/pythia:hepmc3 - Adds support for High Energy Physics Monte Carlo Generators 3 sci-physics/hepmc
 sci-physics/pythia:lhapdf - Support the use of external PDF sets via sci-physics/lhapdf
 sci-physics/pythia:root - Use sci-physics/root trees and histograms (in examples only)
 sci-physics/root:R - Enable support for dev-lang/R
