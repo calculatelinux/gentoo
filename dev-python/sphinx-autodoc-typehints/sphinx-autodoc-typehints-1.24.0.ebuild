@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=hatchling
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 inherit distutils-r1 pypi
 
@@ -15,16 +15,17 @@ HOMEPAGE="
 "
 
 LICENSE="MIT"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm arm64 ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86"
 SLOT="0"
 
 RDEPEND="
 	>=dev-python/sphinx-5.3[${PYTHON_USEDEP}]
 "
+# skipping optional test dep on dev-python/nptyping as that package
+# is horribly broken and on its way out
 BDEPEND="
 	dev-python/hatch-vcs[${PYTHON_USEDEP}]
 	test? (
-		>=dev-python/nptyping-2.5[${PYTHON_USEDEP}]
 		>=dev-python/sphobjinv-2.3.1[${PYTHON_USEDEP}]
 		>=dev-python/typing-extensions-4.5[${PYTHON_USEDEP}]
 	)

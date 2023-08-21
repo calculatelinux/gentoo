@@ -2352,7 +2352,6 @@ dev-python/icalendar:doc - Generate examples and other extra documentation
 dev-python/immutables:native-extensions - Compiles native "C" extensions (speedups, instead of using Python fallback code).
 dev-python/ipython:nbconvert - Enable support for converting notebooks to various formats using app-text/pandoc
 dev-python/ipython:notebook - Install requirements for the web notebook based on dev-python/tornado
-dev-python/jaraco-text:cli - Install dependencies needed for CLI tools (Rust warning!)
 dev-python/markdown-exec:ansi - Enable support for rendering ANSI colours in HTML code blocks
 dev-python/matplotlib:excel - Pull dev-python/xlwt for the exceltools toolkit
 dev-python/matplotlib:gtk3 - Enable x11-libs/gtk+:3 support
@@ -6973,7 +6972,6 @@ net-wireless/uhd:b100 - support B100 hardware
 net-wireless/uhd:b200 - support B200, B210, B200mini, B205mini hardware
 net-wireless/uhd:e300 - support E300, E310 hardware
 net-wireless/uhd:mpmd - support N300, N310 hardware
-net-wireless/uhd:n230 - support N230 harware
 net-wireless/uhd:octoclock - Octoclock Network Support
 net-wireless/uhd:usrp1 - support USRP1 hardware
 net-wireless/uhd:usrp2 - support USRP2, N200, N210 hardware
@@ -6990,6 +6988,7 @@ net-wireless/urh:rtlsdr - use native backend which directly uses net-wireless/rt
 net-wireless/urh:sdrplay - use native backend which directly uses net-wireless/sdrplay
 net-wireless/urh:uhd - use native backend which directly uses net-wireless/uhd
 net-wireless/wepattack:john - Build with app-crypt/johntheripper support
+net-wireless/wireless-regdb:crda - Use obsolete net-wireless/crda for regulatory domain loading instead of in-kernel (4.15+) support
 net-wireless/wireless-tools:multicall - Build the most commonly used tools as one binary
 net-wireless/wpa_supplicant:ap - Add support for access point mode
 net-wireless/wpa_supplicant:broadcom-sta - Flag to help users disable features not supported by broadcom-sta driver

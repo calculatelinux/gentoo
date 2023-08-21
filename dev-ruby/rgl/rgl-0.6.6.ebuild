@@ -18,6 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+DEPEND+=" test? ( media-gfx/graphviz )"
+
 ruby_add_rdepend "
 	dev-ruby/pairing_heap:0
 	>=dev-ruby/rexml-3.2.4:3
@@ -28,4 +30,5 @@ ruby_add_bdepend "dev-ruby/yard test? ( dev-ruby/test-unit )"
 
 all_ruby_prepare() {
 	sed -i -e '/bundler/I s:^:#:' Rakefile || die
+	sed -i -e '/simplecov/I s:^:#:' test/test_helper.rb || die
 }
