@@ -831,7 +831,6 @@ app-misc/fastfetch:xrandr - Enables support for Xrandr
 app-misc/g810-led:hidapi - Use dev-libs/hidapi instead of virtual/libusb for talking to the device (advertised to be faster)
 app-misc/geoclue:modemmanager - Enable geolocation through 3G or GPS enabled hardware through net-misc/modemmanager.
 app-misc/geoclue:zeroconf - Enable retrieval of GPS location from Android devices with https://wiki.gnome.org/Apps/GeoclueShare
-app-misc/gramps:berkdb - Support BerkeleyDB-based family trees produced by older versions of Gramps
 app-misc/gramps:geo - Enable rendering of geographical data using sci-geosciences/osm-gps-map
 app-misc/gramps:rcs - Adds support for family tree archives via dev-vcs/rcs
 app-misc/gramps:reports - All external software that is needed for graphical reports will be installed
@@ -2085,7 +2084,6 @@ dev-libs/openssl-compat:tls-compression - Enable support for discouraged TLS com
 dev-libs/openssl-compat:tls-heartbeat - Enable the Heartbeat Extension in TLS and DTLS
 dev-libs/openssl-compat:weak-ssl-ciphers - Build support for SSL/TLS ciphers that are considered "weak"
 dev-libs/optix:headers-only - Download and install only the header files
-dev-libs/paho-mqtt-c:high-performance - The debugging aids internal tracing and heap tracking are not included
 dev-libs/pkcs11-helper:nss - Enable NSS crypto engine
 dev-libs/pocl:accel - Enable the generic hardware accelerator device driver
 dev-libs/pocl:conformance - Ensures that certain build options which would result in non-conformant pocl build stay disabled. Note that this does not quarantee a fully conformant build of pocl.
@@ -2121,6 +2119,8 @@ dev-libs/qhotkey:qt6 - Use Qt6 dependencies
 dev-libs/quazip:qt5 - Build with Qt5 support
 dev-libs/quazip:qt6 - Build with Qt6 support
 dev-libs/raft:zfs - ZFS support
+dev-libs/sentry-native:breakpad - Use dev-util/breakpad as the crash handler
+dev-libs/sentry-native:curl - Enable support for automated uploading of crash reports
 dev-libs/serd:tools - Build command line utilities
 dev-libs/serdisplib:tools - Build optional tools.
 dev-libs/sexpp:cli - Build sexp console application
@@ -2372,6 +2372,7 @@ dev-python/py-amqp:extras - Install extra tools to generate initial Python mod f
 dev-python/pyarrow:parquet - Enables read/write parquet data format
 dev-python/pydantic:native-extensions - Compiles native "C" extensions.
 dev-python/pyglet:image - Enable support for image formats other than PNG and BMP
+dev-python/pymongo:native-extensions - Compiles native C extensions
 dev-python/pymongo:test-full - Run test suite in full, including tests that run a local database instance.
 dev-python/pyocr:cuneiform - Enable support for the app-text/cuneiform OCR engine
 dev-python/pyocr:tesseract - Enable support for the app-text/tesseract OCR engine
@@ -3248,6 +3249,7 @@ gnome-base/gnome-settings-daemon:modemmanager - Enable WWAN support via net-misc
 gnome-base/gnome-settings-daemon:systemd - Rely on sys-apps/systemd as runtime logind provider
 gnome-base/gnome-shell:elogind - Use sys-auth/elogind for session tracking and suspend support.
 gnome-base/gnome-shell:ibus - Enable support for enhanced input methods through app-i18n/ibus
+gnome-base/gnome-shell:pipewire - Use pipewire to enable the camera monitor
 gnome-base/gvfs:afp - Enables support for accessing AFP (Apple Filing Protocol) network shares
 gnome-base/gvfs:archive - Enables support for accessing files in archives transparently via app-arch/libarchive
 gnome-base/gvfs:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
@@ -3983,7 +3985,6 @@ media-gfx/freecad:surface - Build the surface module and workbench
 media-gfx/freecad:techdraw - Build the techdraw module and workbench, a more advanced and feature-rich successor of the drawing workbench
 media-gfx/freecad:tux - Build the Tux module
 media-gfx/geeqie:ffmpegthumbnailer - Enable video thumbnail support with media-video/ffmpegthumbnailer
-media-gfx/geeqie:gpu-accel - Enable GPU acceleration support - experimental
 media-gfx/geeqie:jpegxl - Enable support for JPEG XL image format
 media-gfx/geeqie:map - Enable items GPS map display
 media-gfx/gimp:jpegxl - Enable support for JPEG XL image format
@@ -4475,6 +4476,7 @@ media-plugins/vdr-xineliboutput:cec - Enable CEC support through dev-libs/libcec
 media-plugins/vdr-xineliboutput:vdr - Compile the vdr output plugin to use local or remote xine as output
 media-plugins/vdr-xineliboutput:xine - Compile the xine input plugin for displaying vdr video and OSD
 media-radio/ax25-tools:X - Enable some X based configuration tools.
+media-radio/chirp:radioreference - pull in optional deps for query of radioreference
 media-radio/direwolf:hamlib - Enables support by the Hamlib amateur radio rig control library
 media-radio/fldigi:hamlib - Enables support by the Hamlib amateur radio rig control library to get/set frequency and mode of the ham radio in use
 media-radio/tucnak:hamlib - Enables support by the Hamlib amateur radio rig control library to get/set frequency and mode of the ham radio
@@ -6066,6 +6068,7 @@ net-libs/nodejs:system-ssl - Use system OpenSSL instead of the bundled one
 net-libs/nodejs:systemtap - Enable SystemTAP/DTrace tracing
 net-libs/ntirpc:gssapi - Include support for RPCSEC GSS
 net-libs/ntirpc:rdma - Include support for RDMA RPC
+net-libs/paho-mqtt-c:high-performance - The debugging aids internal tracing and heap tracking are not included
 net-libs/pjproject:amr - Inlcude AMR codec in the build
 net-libs/pjproject:epoll - Use /dev/epoll ioqueue on Linux (experimental)
 net-libs/pjproject:g711 - Include G.711 codecs in the build
