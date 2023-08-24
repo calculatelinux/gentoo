@@ -33,18 +33,10 @@
 
 #--- END OF EXAMPLES ---
 
-# William Hubbs <williamh@gentoo.org> (2023-08-23)
-# Upstream bug opened since this didn't compile.
-# My tests were done via "sudo ebuild" instead of emerge so my tests
-# passed, but emerge didn't work.
-# Bug #912781.
-=sys-cluster/kubeadm-1.28.0
-=sys-cluster/kube-apiserver-1.28.0
-=sys-cluster/kube-controller-manager-1.28.0
-=sys-cluster/kubectl-1.28.0
-=sys-cluster/kubelet-1.28.0
-=sys-cluster/kube-proxy-1.28.0
-=sys-cluster/kube-scheduler-1.28.0
+# Michael Orlitzky <mjo@gentoo.org> (2023-08-23)
+# Incompatible with perl-5.38 and no fix forthcoming (bug 909570).
+# Removal sometime after 2023-09-23.
+sci-mathematics/polymake
 
 # Sam James <sam@gentoo.org> (2023-08-22)
 # Broken with new net-analyzer/net-snmp, no reverse dependencies in Gentoo,
@@ -209,13 +201,6 @@ dev-python/tikzplotlib
 # Removal on 2023-08-22.  Bug #910708.
 dev-python/vncdotool
 
-# David Seifert <soap@gentoo.org> (2023-07-22)
-# Upstream unresponsive and package is pretty much dead. dev-python/tqdm
-# is a modern and fast replacement for dev-python/progressbar.
-# Removal on 2023-08-21. Bug #909929, #910031.
-dev-python/progressbar
-sys-apps/gcp
-
 # Hans de Graaff <graaff@gentoo.org> (2023-07-22)
 # Does not compile with modern compilers. Last upstream release in
 # 2011. No activity upstream. No reverse dependencies. Masked for
@@ -367,6 +352,7 @@ acct-group/spi
 >=dev-util/gdbus-codegen-2.77
 >=dev-util/glib-utils-2.77
 >=games-puzzle/gnome-sudoku-45_alpha
+>=gnome-base/gnome-control-center-45_alpha
 >=gnome-base/gnome-settings-daemon-45_alpha
 >=gnome-base/gnome-shell-45_alpha
 >=gnome-base/gsettings-desktop-schemas-45_alpha
@@ -380,6 +366,7 @@ acct-group/spi
 >=gnome-extra/gnome-system-monitor-45_alpha
 >=gnome-extra/gnome-weather-45_alpha
 >=gnome-extra/sushi-45_alpha
+gnome-extra/tecla
 >=gui-apps/gnome-console-45_alpha
 >=gui-libs/gtk-4.11
 >=gui-libs/libadwaita-1.4_alpha
