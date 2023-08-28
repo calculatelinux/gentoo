@@ -221,6 +221,7 @@ app-antivirus/clamav:experimental - Enable experimental features
 app-antivirus/clamav:libclamav-only - Bypass building of libfreshclam and the ClamAV CLI applications.
 app-antivirus/clamav:metadata-analysis-api - Enables collection of file property metadata using ClamAV API for analysis by ClamAV bytecode programs.
 app-antivirus/clamav:rar - RAR support
+app-antivirus/clamav:system-mspack - Use dev-libs/libmspack instead of the version bundled with ClamAV
 app-antivirus/clamav:xml - DMG and XAR support
 app-antivirus/clamtk:kde - Install the Dolphin plugin.
 app-antivirus/clamtk:nautilus - Install the Nautilus plugin.
@@ -1321,7 +1322,6 @@ dev-db/mariadb:sst-mariabackup - Add tools needed to support the mariabackup SST
 dev-db/mariadb:sst-rsync - Add tools needed to support the rsync SST method
 dev-db/mariadb:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-db/mariadb:test - Install upstream testsuites for end use.
-dev-db/mariadb:tokudb - Add support for TokuDB storage engine
 dev-db/mariadb:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
 dev-db/mongodb:lto - Adds support for link time optimization
 dev-db/mongodb:mongosh - Install the MongoDB shell from app-admin/mongosh-bin
@@ -2440,6 +2440,7 @@ dev-python/pyside6:websockets - Build QtWebSockets module
 dev-python/pyside6:widgets - Build QtWidgets module
 dev-python/pyside6:xml - Build QtXml module
 dev-python/pytables:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
+dev-python/python-box:native-extensions - Compiles native C extensions
 dev-python/python-lsp-server:all-plugins - Pull in all optional plugins
 dev-python/python-mpd2:twisted - Enable twisted support
 dev-python/python-stdnum:vies - Enable VIES
@@ -3383,6 +3384,7 @@ kde-apps/gwenview:activities - Enable kactivities support
 kde-apps/gwenview:fits - Enable support for NASA's sci-libs/cfitsio library
 kde-apps/gwenview:mpris - Enable support for MPRIS2 interface, requiring dev-qt/qtdbus as dependency.
 kde-apps/gwenview:share - Enable support for a share menu using kde-frameworks/purpose
+kde-apps/k3b:webengine - Use dev-qt/qtwebengine for fancy k3bdiskinfoview
 kde-apps/kaccounts-providers:webengine - Enable Nextcloud KAccounts plugin using dev-qt/qtwebengine
 kde-apps/kalarm:pim - Enable birthday import, email functions etc. using kde-apps/akonadi
 kde-apps/kalarm:speech - Enable text-to-speech support
@@ -3503,6 +3505,7 @@ kde-apps/okular:epub - Enable E-Book support via app-text/ebook-tools
 kde-apps/okular:image-backend - Enable image viewing support
 kde-apps/okular:markdown - Enable Markdown support via app-text/discount
 kde-apps/okular:mobi - Enable mobipocket support via kde-apps/kdegraphics-mobipocket
+kde-apps/okular:phonon - Enable sound support via media-libs/phonon
 kde-apps/okular:plucker - Enable Plucker E-Book for Palm OS devices support
 kde-apps/okular:qml - Install Okular Qml components
 kde-apps/okular:share - Enable support for a share menu using kde-frameworks/purpose
@@ -6955,6 +6958,7 @@ net-wireless/iwd:standalone - Enable standalone mode with built-in DHCP client a
 net-wireless/iwd:systemd - Use systemd-resolve rather than resolvconf for DNS handling in standalone mode
 net-wireless/iwd:wired - Enable ethernet authentication daemon
 net-wireless/kismet:libusb - Support libusb based capture sources such as mousejack, cc2540(ble), and nrf51822(ble)
+net-wireless/kismet:mqtt - Enable MQTT support
 net-wireless/kismet:pcre - Build with pcre support
 net-wireless/kismet:rtlsdr - Enable rtlsdr based kismet capture sources
 net-wireless/kismet:suid - Install a setuid root helper binary with limited functionality; this allows running kismet as a normal user, significantly reducing security risks
@@ -7758,6 +7762,7 @@ sys-apps/fwupd:modemmanager - Build and install Modem Manager plugin
 sys-apps/fwupd:nvme - Build and install NVMe plugin
 sys-apps/fwupd:spi - Install Intel-SPI plugin
 sys-apps/fwupd:synaptics - Install synaptics plugin
+sys-apps/fwupd:test-full - Enable tests known not to play nicely with the sandbox
 sys-apps/fwupd:tpm - Install Trusted Platform Module plugin
 sys-apps/fwupd:uefi - Enable UEFI support
 sys-apps/gawk:mpfr - Use dev-libs/mpfr for high precision arithmetic (-M / --bignum)

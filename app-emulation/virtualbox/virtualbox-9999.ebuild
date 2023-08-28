@@ -24,7 +24,7 @@ EAPI=8
 #  trunk branch but not release branch.
 #
 #  See bug #785835, bug #856121.
-PYTHON_COMPAT=( python3_{9..12} )
+PYTHON_COMPAT=( python3_{10..11} )
 
 inherit desktop edo flag-o-matic java-pkg-opt-2 linux-mod-r1 multilib optfeature pax-utils \
 	python-single-r1 subversion tmpfiles toolchain-funcs udev xdg
@@ -598,7 +598,10 @@ src_install() {
 	fi
 
 	# set an env-variable for 3rd party tools
-	echo -n "VBOX_APP_HOME=${vbox_inst_path}" > "${T}/90virtualbox"
+	echo "VBOX_APP_HOME=${vbox_inst_path}" > "${T}/90virtualbox"
+	# environment variables used during SDK binding installation
+	echo "VBOX_SDK_PATH=${vbox_inst_path}/sdk" >> "${T}/90virtualbox"
+	echo "VBOX_INSTALL_PATH=${vbox_inst_path}" >> "${T}/90virtualbox"
 	doenvd "${T}/90virtualbox"
 
 	if use sdl; then
@@ -719,6 +722,21 @@ src_install() {
 			eerror "(listed in PYTHON_COMPAT in the ebuild) is incomplete within the Makefiles."
 			die "Incomplete installation of Python bindings! File a bug with Gentoo!"
 		fi
+
+		# 378871
+		local installer_dir="${ED}/usr/$(get_libdir)/virtualbox/sdk/installer"
+		pushd "${installer_dir}" &> /dev/null || die
+		sed -e "s;%VBOX_INSTALL_PATH%;${vbox_inst_path};" \
+			-e "s;%VBOX_SDK_PATH%;${vbox_inst_path}/sdk;" \
+			-i vboxapi/__init__.py || die
+		# insert shebang, the files come without one
+		find vboxapi -name \*.py -exec sed -e "1 i\#! ${PYTHON}" -i {} \+ || die
+		python_domodule vboxapi
+		popd &> /dev/null || die
+		python_doscript vboxshell.py
+
+		# do not install the installer
+		rm -r "${installer_dir}" || die
 	fi
 
 	newtmpfiles "${FILESDIR}"/${PN}-vboxusb_tmpfilesd ${PN}-vboxusb.conf

@@ -3,6 +3,11 @@
 
 EAPI=8
 
+# The Valgrind upstream maintainer also maintains it in Fedora and will
+# backport fixes there which haven't yet made it into a release. Keep an eye
+# on it for fixes we should cherry-pick too:
+# https://src.fedoraproject.org/rpms/valgrind/tree/rawhide
+
 inherit autotools flag-o-matic toolchain-funcs multilib pax-utils
 
 DESCRIPTION="An open-source memory debugger for GNU/Linux"
@@ -32,6 +37,8 @@ PATCHES=(
 	# Respect CFLAGS, LDFLAGS
 	"${FILESDIR}"/${PN}-3.7.0-respect-flags.patch
 	"${FILESDIR}"/${PN}-3.15.0-Build-ldst_multiple-test-with-fno-pie.patch
+	"${FILESDIR}"/${PN}-3.21.0-glibc-2.34-suppressions.patch
+	"${FILESDIR}"/${PN}-3.21.0-memcpy-fortify_source.patch
 )
 
 src_prepare() {

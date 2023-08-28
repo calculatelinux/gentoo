@@ -122,6 +122,9 @@ src_prepare() {
 	# bug (320097)
 	eapply "${FILESDIR}/${PN}-2.6-do-not-call-dbus-functions-with-NULL-path.patch"
 
+	# bug (912315)
+	eapply "${FILESDIR}/${PN}-2.10-allow-legacy-renegotiation.patch"
+
 	# bug (640492)
 	sed -i 's#-Werror ##' wpa_supplicant/Makefile || die
 }
