@@ -4,7 +4,7 @@
 EAPI=8
 
 PYTHON_REQ_USE="sqlite"
-PYTHON_COMPAT=( python3_{9,10,11} )
+PYTHON_COMPAT=( python3_{10..11} )
 
 inherit python-any-r1 readme.gentoo-r1 secureboot
 
@@ -36,6 +36,8 @@ RDEPEND="!sys-firmware/edk2-ovmf-bin"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-202105-werror.patch"
+	"${FILESDIR}/${PN}-202202-lld-textrels.patch"
+	"${FILESDIR}/${PN}-202202-binutils-2.41-textrels.patch"
 )
 
 S="${WORKDIR}/edk2-edk2-stable${PV}"
@@ -103,6 +105,10 @@ src_compile() {
 		-D SECURE_BOOT_ENABLE \
 		-D SMM_REQUIRE \
 		-D EXCLUDE_SHELL_FROM_FD"
+
+	export LDFLAGS="-z notext"
+	export EXTRA_LDFLAGS="-z notext"
+	export DLINK_FLAGS="-z notext"
 
 	emake ARCH=${TARGET_ARCH} -C BaseTools
 

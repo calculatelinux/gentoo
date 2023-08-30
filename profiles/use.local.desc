@@ -2850,6 +2850,8 @@ dev-util/schroot:btrfs - Enable support for chroots using btrfs snapshots
 dev-util/schroot:dchroot - Enables the building of a wrapper named "dchroot", replacing sys-apps/dchroot
 dev-util/schroot:lvm - Enable support for chroots using LVM snapshots
 dev-util/schroot:zfs - Enable support for chroots using ZFS shapshots/clones
+dev-util/sdl-jstest:sdl - Enable media-libs/libsdl2 based input test
+dev-util/sdl-jstest:sdl1 - Enable media-libs/libsdl based input test
 dev-util/spirv-llvm-translator:tools - Install the command-line translator llvm-spirv
 dev-util/strace:aio - Enable dev-libs/libaio support for tracing Asynchronous I/O operations
 dev-util/strace:elfutils - Enable stack backtraces (-k flag) via dev-libs/elfutils
@@ -3002,6 +3004,7 @@ games-emulation/higan:gtk - Use GTK3 (Qt5 if disabled) user interface backend
 games-emulation/jgemu:bsnes - Install bsnes for Super Nintendo
 games-emulation/jgemu:cega - Install Cega for SG-1000, Sega Master System and Game Gear
 games-emulation/jgemu:gambatte - Install Gambatte for Game Boy and Game Boy Color
+games-emulation/jgemu:geolith - Install Geolith for Neo Geo AES/MVS
 games-emulation/jgemu:jollycv - Install JollyCV for ColecoVision
 games-emulation/jgemu:mednafen - Install Mednafen for Atari Lynx, Nintendo Virtual Boy, NEC PC Engine, NEC SuperGrafx, Sony PlayStation, Sega Saturn, Super Nintendo, Neo Geo Pocket and WonderSwan
 games-emulation/jgemu:melonds - Install MelonDS for Nintendo DS
@@ -4143,6 +4146,7 @@ media-libs/gd:webp - Enable support for the webp format
 media-libs/gegl:lensfun - Enable support for media-libs/lensfun.
 media-libs/gegl:sdl2 - Add support for Simple Direct Layer 2.0 (media-libs/libsdl2)
 media-libs/gegl:umfpack - Enable sparse solving via sci-libs/umfpack.
+media-libs/glew:egl-only - Enable EGL support and disable X11 support
 media-libs/glfw:wayland-only - Enable wayland support and disable X11 support
 media-libs/gmmlib:custom-cflags - Do not override user CFLAGS like -march, -msse and similar with lib defaults. Not tested by upstream.
 media-libs/grilo:playlist - Enable support for playlists through dev-libs/totem-pl-parser
@@ -5763,6 +5767,7 @@ net-im/profanity:gpg - Enable OpenPGP encryption
 net-im/profanity:omemo - Enable OMEMO encryption
 net-im/profanity:omemo-qrcode - Enable exchanging OMEMO information via QR code
 net-im/profanity:otr - Enable encrypted conversations using Off-The-Records messaging
+net-im/profanity:python - Enable Python plugins support
 net-im/prosody:libevent - Use libevent for event handling
 net-im/psi:aspell - Enable spellchecking using app-text/aspell
 net-im/psi:enchant - Enable spellchecking using app-text/enchant
@@ -5805,50 +5810,6 @@ net-im/toxic:notification - Enables desktop notifications with libnotify, with s
 net-im/toxic:qrcode - Enables QR code support
 net-im/toxic:sound - Enables audio calling
 net-im/toxic:video - Enables video calling
-net-im/vacuum:annotations - Enable adding comments to the contacts in the roster
-net-im/vacuum:aspell - Select app-text/aspell spell checker backend
-net-im/vacuum:autostatus - Change the status in accordance with the time of inactivity
-net-im/vacuum:avatars - Enable assigning and displaying avatars
-net-im/vacuum:birthdayreminder - Reminds about birthdays of your friends
-net-im/vacuum:bitsofbinary - Allow other modules to receive or send a small amount of binary data in XMPP stanza
-net-im/vacuum:bookmarks - Enable creating bookmarks of the Jabber conferences and Web pages
-net-im/vacuum:captchaforms - Perform tests for humanity outside of Web browser
-net-im/vacuum:chatstates - Post user's activity to the chat
-net-im/vacuum:clientinfo - Enable sending and receiving peer's application version, local time and last activity info
-net-im/vacuum:commands - Enable performing special commands provided by various services
-net-im/vacuum:compress - Compress stream of messages
-net-im/vacuum:console - Enable inspecting a raw XML stream
-net-im/vacuum:dataforms - Allow other modules to process and display data forms intended for the user
-net-im/vacuum:datastreamsmanager - Enable initiating a custom data stream between two XMPP entities
-net-im/vacuum:emoticons - Enable using smiley images in messages
-net-im/vacuum:enchant - Select app-text/enchant spell checker backend
-net-im/vacuum:filemessagearchive - Allows to save the history of conversations to local files
-net-im/vacuum:filestreamsmanager - Enable transferring files between two XMPP entities
-net-im/vacuum:filetransfer - Enable sending files to peers
-net-im/vacuum:gateways - Simplify the interaction with gateways to other IM systems
-net-im/vacuum:hunspell - Select app-text/hunspell spell checker backend
-net-im/vacuum:inbandstreams - Enable initiating in-band data stream between two XMPP enitites
-net-im/vacuum:iqauth - Enable logging on Jabber servers withous SASL authentication support
-net-im/vacuum:jabbersearch - Enable searching contacts in Jabber networks
-net-im/vacuum:messagearchiver - Enable saving the communication history both locally and on the server
-net-im/vacuum:messagecarbons - Allows to keep all user IM clients engaged in a conversation
-net-im/vacuum:multiuserchat - Enable Jabber multi-user conferences
-net-im/vacuum:pepmanager - Allows other plugins to receive and publish PEP events
-net-im/vacuum:privacylists - Enable blocking the undesirable contacts
-net-im/vacuum:privatestorage - Allow other modules to store arbitrary data on the server
-net-im/vacuum:recentcontacts - Displays a recently used contacts
-net-im/vacuum:registration - Enable creating accounts in Jabber services
-net-im/vacuum:remotecontrol - Allows to remotely control the client
-net-im/vacuum:rosteritemexchange - Allows to exchange contact list items
-net-im/vacuum:rostersearch - Allows to search for contacts in the roster
-net-im/vacuum:servermessagearchive - Allows to save the history of communications on the server
-net-im/vacuum:servicediscovery - Enable receiving information about Jabber entities
-net-im/vacuum:sessionnegotiation - Enable initiating the session between two entities with setting the rules for XMPP stanzas exchange
-net-im/vacuum:shortcutmanager - Allows to setup user defined shortcuts
-net-im/vacuum:socksstreams - Enable initiating SOCKS5 data streams between two XMPP entities
-net-im/vacuum:urlprocessor - Allows other plugins to load data from custom types of URLs
-net-im/vacuum:vcard - Enable obtaining peer's personal contact information
-net-im/vacuum:xmppuriqueries - Allow other plugins to handle XMPP URI queries
 net-im/zoom:bundled-libjpeg-turbo - Use bundled libturbojpeg instead of media-libs/libjpeg-turbo
 net-im/zoom:bundled-qt - Use bundled Qt and icu instead of system-wide libs
 net-im/zoom:opencl - Use OpenCL for virtual background support (virtual/opencl)

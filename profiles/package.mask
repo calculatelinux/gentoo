@@ -33,6 +33,49 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2023-08-30)
+# Used to be a dependency of dev-python/qiskit-terra but is now being phased
+# out. Fails to build with modern setuptools and >= Python 3.11. No upstream
+# activity.
+# Removal on 2023-09-29.  Bug #911840, bug #896900.
+dev-python/tweedledum
+
+# Hans de Graaff <graaff@gentoo.org> (2023-08-29)
+# Obsolete slots that are no longer used by any sinatra version. Use the
+# newer slot instead. Masked for removal on 2023-09-29.
+dev-ruby/mustermann:1
+dev-ruby/mustermann:2
+
+# Olivier Laurantin <olivier.laurantin@laposte.net> (2023-08-29)
+# Masked for removal on 2023-10-01
+# net-wireless/blueberry will never work with recent gnome-bluetooth versions
+# and is the only package requiring net-wireless/gnome-bluetooth:2
+net-wireless/blueberry
+net-wireless/gnome-bluetooth:2
+
+# Hans de Graaff <graaff@gentoo.org> (2023-08-29)
+# Use the newer slot instead.  Masked for removal on 2023-09-29.
+dev-ruby/twitter:7
+
+# Sam James <sam@gentoo.org> (2023-08-29)
+# Obsolete as of September 2021 when legacy Tor hidden services stopped
+# working. Now fails to build with latest protobuf too. No upstream activity
+# since 2017. Alternatives (unvetted) are 'cwtch' and 'ricochet-refreshed' but
+# neither are packaged.
+# Removal on 2023-09-28.  Bug #830477, bug #913004.
+net-im/ricochet
+
+# Sam James <sam@gentoo.org> (2023-08-29)
+# Fails to build with new protobuf. Deprecated by upstream which recommend
+# sci-biology/kallisto as a replacement.
+# Removal on 2023-09-28.  Bug #912828.
+sci-biology/express
+
+# Michał Górny <mgorny@gentoo.org> (2023-08-28)
+# A shim that is no longer needed.  No reverse dependencies.
+# Removal on 2023-09-27.  Bug #906516.
+dev-python/pytz_deprecation_shim
+
 # Sam James <sam@gentoo.org> (2023-08-26)
 # 'AttributeError: NoneType object has no attribute cname' regression
 # See bug #913062, https://github.com/cython/cython/issues/5643, and
@@ -203,12 +246,6 @@ sys-apps/systemd-tmpfiles
 sys-boot/systemd-boot
 sys-fs/udev
 
-# Matt Turner <mattst88@gentoo.org> (2023-07-24)
-# Unmaintained. Looks pretty dead upstream (last commit 1.5 years ago, last tag
-# 3 years ago, last non-alpha release in 2015). Depends on app-text/enchant:0.
-# Removal on 2023-08-24. Bug #905956.
-net-im/vacuum
-
 # Michał Górny <mgorny@gentoo.org> (2023-07-24)
 # Incompatible with modern dev-python/matplotlib versions.  No upstream
 # activity since 2022-02.  No revdeps.
@@ -359,6 +396,7 @@ acct-group/spi
 >=dev-util/gdbus-codegen-2.77
 >=dev-util/glib-utils-2.77
 >=games-puzzle/gnome-sudoku-45_alpha
+>=gnome-base/gdm-45_beta
 >=gnome-base/gnome-control-center-45_alpha
 >=gnome-base/gnome-settings-daemon-45_alpha
 >=gnome-base/gnome-shell-45_alpha
