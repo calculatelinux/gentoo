@@ -3,6 +3,9 @@
 
 EAPI=8
 
+# Make sure to test USE=utils on bumps and update MULTILIB_WRAPPED_HEADERS if needed
+
+DISTUTILS_EXT=1
 DISTUTILS_OPTIONAL=1
 DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{10..11} )
@@ -52,6 +55,7 @@ MULTILIB_WRAPPED_HEADERS=(
 	/usr/include/libnl3/netlink/cli/exp.h
 	/usr/include/libnl3/netlink/cli/link.h
 	/usr/include/libnl3/netlink/cli/mdb.h
+	/usr/include/libnl3/netlink/cli/nh.h
 	/usr/include/libnl3/netlink/cli/neigh.h
 	/usr/include/libnl3/netlink/cli/qdisc.h
 	/usr/include/libnl3/netlink/cli/route.h
