@@ -3281,7 +3281,6 @@ gnome-extra/evolution-data-server:weather - Enable optional weather calendar sup
 gnome-extra/gnome-commander:gsf - Add metadata support for OLE, OLE2 and ODF
 gnome-extra/gnome-commander:pdf - Add metadata support for PDF
 gnome-extra/gnome-commander:taglib - Add metadata support for ID3, Vorbis, FLAC and APE
-gnome-extra/gnome-commander:unique - Enable single instance support using dev-libs/libunique
 gnome-extra/gnome-contacts:gnome-online-accounts - Enable net-libs/gnome-online-accounts based Google authentication support
 gnome-extra/gnome-network-displays:firewalld - Install firewalld zones
 gnome-extra/gnome-shell-extension-gsconnect:nautilus - Install Nautilus extension for sending files via GSConnect
@@ -4257,6 +4256,7 @@ media-libs/libsdl2:pipewire - Enable support for the media-video/pipewire audio 
 media-libs/libsdl2:sndio - Enable support for the media-sound/sndio backend
 media-libs/libsdl2:sound - Control audio support (disable at your own risk)
 media-libs/libsdl2:video - Control video support (disable at your own risk)
+media-libs/libshumate:sysprof - Enable sysprof-capture support for profiling
 media-libs/libtgvoip:dsp - Enable signal processing (echo cancellation, noise suppression, and automatic gain control)
 media-libs/libva-compat:drm - Enables VA/DRM API support.
 media-libs/libva-compat:egl - Enables EGL support.
@@ -4762,6 +4762,7 @@ media-sound/qmmp:soxr - Use the SoX resampling library
 media-sound/qmmp:stereo - Enable stereo effect
 media-sound/qmmp:tray - Build tray icon
 media-sound/qmmp:xmp - Enable module files renderer (modplug replacement)
+media-sound/qpwgraph:trayicon - Build support for tray icon
 media-sound/qsampler:libgig - Enable libgig support for loading Gigasampler files and DLS (Downloadable Sounds) Level 1/2 files
 media-sound/qtractor:aubio - Enable media-libs/aubio support
 media-sound/qtractor:dssi - Enable support for DSSI Soft Synth Interface
@@ -6337,7 +6338,6 @@ net-misc/fatrat:bittorrent - Use the bittorrent protocol via net-libs/libtorrent
 net-misc/felix:bird - Use BIRD, e.g. for route reflection
 net-misc/freerdp:aad - Enable login via Azure AD
 net-misc/freerdp:openh264 - Enable H.264 support using media-libs/openh264
-net-misc/freerdp:pkcs11 - Enable pkcs11 for NLA smartcard logon support
 net-misc/freerdp:server - Build server binaries
 net-misc/frr:fpm - Enable Forwarding Plane Manager support
 net-misc/frr:grpc - Enable gRPC plugin

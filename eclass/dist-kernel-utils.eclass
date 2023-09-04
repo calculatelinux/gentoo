@@ -19,6 +19,13 @@
 # If set to a non-null value, inherits secureboot.eclass
 # and allows signing of generated kernel images.
 
+# @ECLASS_VARIABLE: KERNEL_EFI_ZBOOT
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# If set to a non-null value, it is assumed the kernel was built with
+# CONFIG_EFI_ZBOOT enabled. This effects the name of the kernel image on
+# arm64 and riscv. Mainly useful for sys-kernel/gentoo-kernel-bin.
+
 if [[ ! ${_DIST_KERNEL_UTILS} ]]; then
 
 case ${EAPI} in
@@ -71,8 +78,12 @@ dist-kernel_get_image_path() {
 		amd64|x86)
 			echo arch/x86/boot/bzImage
 			;;
-		arm64)
-			echo arch/arm64/boot/Image.gz
+		arm64|riscv)
+			if [[ ${KERNEL_EFI_ZBOOT} ]]; then
+				echo arch/${ARCH}/boot/vmlinuz.efi
+			else
+				echo arch/${ARCH}/boot/Image.gz
+			fi
 			;;
 		arm)
 			echo arch/arm/boot/zImage
@@ -82,9 +93,6 @@ dist-kernel_get_image_path() {
 			# ./ is required because of ${image_path%/*}
 			# substitutions in the code
 			echo ./vmlinux
-			;;
-		riscv)
-			echo arch/riscv/boot/Image.gz
 			;;
 		*)
 			die "${FUNCNAME}: unsupported ARCH=${ARCH}"

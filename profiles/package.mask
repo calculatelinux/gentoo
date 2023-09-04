@@ -33,6 +33,14 @@
 
 #--- END OF EXAMPLES ---
 
+# Florian Schmaus <flow@gentoo.org> (2023-09-03)
+# Became a leaf package after dev-erlang/riak_pb was removed (989c0f55e0).
+# Unmaintained in ::gentoo and upstream since multiple years. Alternative at
+# https://github.com/tomas-abrahamsson/gpb.
+# Two open bugs: #725584 and #793236.
+# Removal on 2023-10-03.
+dev-erlang/protobuffs
+
 # Sam James <sam@gentoo.org> (2023-08-30)
 # Used to be a dependency of dev-python/qiskit-terra but is now being phased
 # out. Fails to build with modern setuptools and >= Python 3.11. No upstream
@@ -126,10 +134,6 @@ dev-python/sphinx_ansible_theme
 # test dep for one package.
 # Removal on 2023-09-19.  Bug #880415.
 dev-python/nptyping
-
-# Sam James <sam@gentoo.org> (2023-08-19)
-# Still broken, unfortunately. See bug #911721.
-=dev-util/pkgconf-2*
 
 # Hans de Graaff <graaff@gentoo.org> (2023-08-19)
 # ruby30-only package without any reverse dependencies. Use
@@ -402,6 +406,7 @@ acct-group/spi
 >=gnome-base/gnome-shell-45_alpha
 >=gnome-base/gsettings-desktop-schemas-45_alpha
 >=gnome-base/nautilus-45_alpha
+>=gnome-extra/gnome-boxes-45_alpha
 >=gnome-extra/gnome-calculator-45_alpha
 >=gnome-extra/gnome-calendar-45_alpha
 >=gnome-extra/gnome-characters-45_alpha
@@ -417,12 +422,14 @@ gnome-extra/tecla
 >=gui-libs/libadwaita-1.4_alpha
 >=media-gfx/eog-45_alpha
 >=media-gfx/gnome-font-viewer-45_alpha
+>=media-libs/libshumate-1.1_alpha
 >=net-misc/gnome-connections-45_alpha
 >=net-misc/gnome-remote-desktop-45_alpha
 >=sci-geosciences/gnome-maps-45_alpha
 >=sys-apps/baobab-45_alpha
 >=sys-apps/xdg-desktop-portal-gnome-45_alpha
 >=x11-libs/pango-1.51.0
+>=x11-themes/adwaita-icon-theme-45_alpha
 >=x11-themes/gnome-backgrounds-45_alpha
 >=x11-wm/mutter-45_alpha
 
