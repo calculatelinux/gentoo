@@ -2291,20 +2291,24 @@ dev-python/PyQt5:websockets - Build bindings for the QtWebSockets module
 dev-python/PyQt5:widgets - Build bindings for the QtWidgets module
 dev-python/PyQt5:x11extras - Build bindings for the QtX11Extras module
 dev-python/PyQt5:xmlpatterns - Build bindings for the QtXmlPatterns module
+dev-python/PyQt6:bluetooth - Build bindings for the QtBluetooth module
 dev-python/PyQt6:dbus - Build bindings for the QtDBus module
 dev-python/PyQt6:designer - Build bindings for the QtDesigner module and enable the designer plugin
 dev-python/PyQt6:gui - Build bindings for the QtGui module
 dev-python/PyQt6:help - Build bindings for the QtHelp module
 dev-python/PyQt6:multimedia - Build bindings for the QtMultimedia module
 dev-python/PyQt6:network - Build bindings for the QtNetwork module
+dev-python/PyQt6:nfc - Build bindings for the QtNfc module
 dev-python/PyQt6:opengl - Build bindings for the QtOpenGL module
 dev-python/PyQt6:positioning - Build bindings for the QtPositioning module
 dev-python/PyQt6:printsupport - Build bindings for the QtPrintSupport module
 dev-python/PyQt6:qml - Build bindings for the QtQml module and enable the qml plugin
 dev-python/PyQt6:quick - Build bindings for the QtQuick module
 dev-python/PyQt6:quick3d - Build bindings for the QtQuick3D module
+dev-python/PyQt6:sensors - Build bindings for the QtSensors module
 dev-python/PyQt6:serialport - Build bindings for the QtSerialPort module
 dev-python/PyQt6:spatialaudio - Build bindings for the QtSpatialAudio module
+dev-python/PyQt6:speech - Build bindings for the QtTextToSpeech module
 dev-python/PyQt6:sql - Build bindings for the QtSql module
 dev-python/PyQt6:svg - Build bindings for the QtSvg module
 dev-python/PyQt6:testlib - Build bindings for the QtTest module
@@ -2525,21 +2529,26 @@ dev-qt/qt-creator:valgrind - Enable integration with dev-util/valgrind
 dev-qt/qt-creator:webassembly - Build WebAssembly plugin
 dev-qt/qt-creator:webengine - Use dev-qt/qtwebengine to view documentation
 dev-qt/qt-docs:3d - Install documentation for dev-qt/qt3d
+dev-qt/qt-docs:activeqt - Install documentation for ActiveQt (unpackaged, Windows-only)
 dev-qt/qt-docs:assistant - Install documentation for dev-qt/assistant
 dev-qt/qt-docs:bluetooth - Install documentation for dev-qt/qtbluetooth
 dev-qt/qt-docs:charts - Install documentation for dev-qt/qtcharts
 dev-qt/qt-docs:concurrent - Install documentation for dev-qt/qtconcurrent
-dev-qt/qt-docs:datavis - Install documentation for dev-qt/qtdatavis3d
+dev-qt/qt-docs:connectivity - Install documentation for dev-qt/qtconnectivity
+dev-qt/qt-docs:datavis - Install documentation for dev-qt/qtdatavis3d (unpackaged for Qt6)
 dev-qt/qt-docs:declarative - Install documentation for dev-qt/qtdeclarative
 dev-qt/qt-docs:designer - Install documentation for dev-qt/designer
 dev-qt/qt-docs:gamepad - Install documentation for dev-qt/qtgamepad (available in qt overlay only)
 dev-qt/qt-docs:graphicaleffects - Install documentation for dev-qt/qtgraphicaleffects
+dev-qt/qt-docs:grpc - Install documentation for QtGRPC (unpackaged)
 dev-qt/qt-docs:gui - Install documentation for dev-qt/qtgui
 dev-qt/qt-docs:help - Install documentation for dev-qt/qthelp
 dev-qt/qt-docs:html - Install documentation in HTML format
+dev-qt/qt-docs:httpserver - Install documentation for QtHTTPServer (unpackaged)
 dev-qt/qt-docs:imageformats - Install documentation for dev-qt/qtimageformats
 dev-qt/qt-docs:linguist - Install documentation for dev-qt/linguist
 dev-qt/qt-docs:location - Install documentation for dev-qt/qtlocation
+dev-qt/qt-docs:lottie - Install documentation for QtLottie (unpackaged)
 dev-qt/qt-docs:multimedia - Install documentation for dev-qt/qtmultimedia
 dev-qt/qt-docs:network - Install documentation for dev-qt/qtnetwork
 dev-qt/qt-docs:networkauth - Install documentation for dev-qt/qtnetworkauth
@@ -2547,31 +2556,39 @@ dev-qt/qt-docs:positioning - Install documentation for dev-qt/qtpositioning
 dev-qt/qt-docs:printsupport - Install documentation for dev-qt/qtprintsupport
 dev-qt/qt-docs:qch - Install documentation in QCH format
 dev-qt/qt-docs:qdoc - Install documentation for dev-qt/qdoc
+dev-qt/qt-docs:qt5compat - Install documentation for dev-qt/qt5compat
+dev-qt/qt-docs:quick3d - Install documentation for dev-qt/qtquick3d
+dev-qt/qt-docs:quick3dphysics - Install documentation for QtQuick3DPhysics (unpackaged)
 dev-qt/qt-docs:quickcontrols - Install documentation for dev-qt/qtquickcontrols
 dev-qt/qt-docs:quickcontrols2 - Install documentation for dev-qt/qtquickcontrols2
+dev-qt/qt-docs:remoteobjects - Install documentation for QtRemoteObjects (unpackaged)
 dev-qt/qt-docs:script - Install documentation for dev-qt/qtscript
 dev-qt/qt-docs:scxml - Install documentation for dev-qt/qtscxml
 dev-qt/qt-docs:sensors - Install documentation for dev-qt/qtsensors
-dev-qt/qt-docs:serialbus - Install documentation for dev-qt/qtserialbus
+dev-qt/qt-docs:serialbus - Install documentation for dev-qt/qtserialbus (unpacakged for Qt6)
 dev-qt/qt-docs:serialport - Install documentation for dev-qt/qtserialport
+dev-qt/qt-docs:shadertools - Install documentation for dev-qt/qtshadertools
 dev-qt/qt-docs:speech - Install documentation for dev-qt/qtspeech
 dev-qt/qt-docs:sql - Install documentation for dev-qt/qtsql
+dev-qt/qt-docs:svg - Install documentation for dev-qt/qtsvg
 dev-qt/qt-docs:timeline - Install documentation for dev-qt/qtquicktimeline
+dev-qt/qt-docs:tools - Install documentation for dev-qt/qttools
 dev-qt/qt-docs:virtualkeyboard - Install documentation for dev-qt/qtvirtualkeyboard
+dev-qt/qt-docs:wayland - Install documentation for dev-qt/qtwayland
 dev-qt/qt-docs:webchannel - Install documentation for dev-qt/qtwebchannel
 dev-qt/qt-docs:webengine - Install documentation for dev-qt/qtwebengine
 dev-qt/qt-docs:websockets - Install documentation for dev-qt/qtwebsockets
-dev-qt/qt-docs:webview - Install documentation for dev-qt/qtwebview
+dev-qt/qt-docs:webview - Install documentation for dev-qt/qtwebview (unpackaged for Qt6)
 dev-qt/qt-docs:widgets - Install documentation for dev-qt/qtwidgets
 dev-qt/qt-docs:x11extras - Install documentation for dev-qt/qtx11extras
 dev-qt/qt-docs:xmlpatterns - Install documentation for dev-qt/qtxmlpatterns
 dev-qt/qt3d:gamepad - Add support for gamepad hardware via dev-qt/qtgamepad
 dev-qt/qt3d:qml - Build QML/QtQuick bindings
+dev-qt/qt5compat:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtbase:X - Build the XCB platform plugin and enable X11 integration
 dev-qt/qtbase:brotli - Enable support for Brotli decompression
 dev-qt/qtbase:concurrent - Build Qt6Concurrent module
 dev-qt/qtbase:dbus - Build Qt6DBus module
-dev-qt/qtbase:egl - Enable EGL integration
 dev-qt/qtbase:eglfs - Build the EGL Full Screen/Single Surface platform plugin
 dev-qt/qtbase:evdev - Enable support for input devices via evdev
 dev-qt/qtbase:gssapi - Enable support for GSSAPI (virtual/krb5)
@@ -2583,10 +2600,10 @@ dev-qt/qtbase:network - Build Qt6Network module
 dev-qt/qtbase:sql - Build Qt6Sql module
 dev-qt/qtbase:systemd - Enable native journald logging support
 dev-qt/qtbase:tslib - Enable support for touchscreen devices via x11-libs/tslib
-dev-qt/qtbase:tuio - Build plugin to receive touch events over the TUIO protocol
 dev-qt/qtbase:widgets - Build Qt6Widgets module
 dev-qt/qtbluetooth:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtcharts:qml - Build QML/QtQuick bindings and imports
+dev-qt/qtconnectivity:nfc - Enable support for the Near Field Communication protocol
 dev-qt/qtcore:old-kernel - Disable syscalls not available on Linux kernels older than 4.11
 dev-qt/qtcore:systemd - Enable native journald logging support
 dev-qt/qtdatavis3d:qml - Build QML/QtQuick bindings and imports
@@ -2620,22 +2637,28 @@ dev-qt/qtquickcontrols2:widgets - Enable QtWidgets support
 dev-qt/qtscript:scripttools - Build the QtScriptTools module (requires QtWidgets)
 dev-qt/qtsensors:qml - Build QML bindings
 dev-qt/qtspeech:flite - Enable text-to-speech synthesizer plugin using app-accessibility/flite engine
+dev-qt/qtspeech:speechd - Enable text-to-speech synthesizer plugin using app-accessibility/speech-dispatcher engine
 dev-qt/qttools:assistant - Build Qt Assistant
+dev-qt/qttools:clang - Enable using libclang for code parsing (linguist/qdoc)
 dev-qt/qttools:designer - Build Qt Designer
 dev-qt/qttools:distancefieldgenerator - Build Qt Distance Field Generator
-dev-qt/qttools:linguist - Build Qt Linguist
+dev-qt/qttools:linguist - Build Qt Linguist (GUI requires USE=widgets)
 dev-qt/qttools:pixeltool - Build Qt Pixeltool
-dev-qt/qttools:qattributionsscanner - Build Qt Source Code Attribution Scanner
-dev-qt/qttools:qdbus - Build the Qt D-Bus Interface and D-Bus Viewer
-dev-qt/qttools:qdiag - Build Qt Diag
+dev-qt/qttools:qdbus - Build the Qt D-Bus Interface (D-Bus Viewer requires USE=widgets)
 dev-qt/qttools:qdoc - Build Qt Documentation Generator
-dev-qt/qttools:qplugininfo - Build Qt Plugin Info
+dev-qt/qttools:qml - Build QML/QtQuick bindings and imports
+dev-qt/qttools:qtattributionsscanner - Build Qt Source Code Attribution Scanner
+dev-qt/qttools:qtdiag - Build Qt Diag
+dev-qt/qttools:qtplugininfo - Build Qt Plugin Info
+dev-qt/qttools:widgets - Enable QtWidgets support
 dev-qt/qtvirtualkeyboard:handwriting - Adds handwriting recognition integration support
+dev-qt/qtwayland:compositor - Enable support for the wayland compositor / server APIs
+dev-qt/qtwayland:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtwayland:vulkan - Enable support for Vulkan-based server buffer integration
 dev-qt/qtwebchannel:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtwebengine:designer - Install the QWebEngineView plugin used to add widgets in dev-qt/designer forms that display web pages.
-dev-qt/qtwebengine:geolocation - Enable physical position determination via dev-qt/qtpositioning
 dev-qt/qtwebengine:jumbo-build - Combine source files to speed up build process.
+dev-qt/qtwebengine:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtwebengine:system-icu - Use the system-wide dev-libs/icu instead of bundled.
 dev-qt/qtwebengine:widgets - Enable QtWidgets support
 dev-qt/qtwebsockets:qml - Build QML bindings
@@ -7920,6 +7943,8 @@ sys-auth/sssd:locator - Install sssd's Kerberos plugin
 sys-auth/sssd:netlink - Add support for netlink protocol via dev-libs/libnl
 sys-auth/sssd:nfsv4 - Add support for the nfsv4 idmapd plugin provided by net-fs/nfs-utils
 sys-auth/sssd:pac - Add Privileged Attribute Certificate Support for Kerberos
+sys-auth/sssd:samba - Add Privileged Attribute Certificate Support for Kerberos
+sys-auth/sssd:subid - Support subordinate uid and gid ranges in FreeIPA
 sys-auth/sssd:sudo - Build helper to let app-admin/sudo use sssd provided information
 sys-auth/sssd:systemtap - Enable SystemTAP/DTrace tracing
 sys-block/f3:extra - Build the additional f3probe, f3brew and f3fix utility (requires sys-block/parted and virtual/udev)
@@ -7961,6 +7986,7 @@ sys-block/tgt:fcoe - Add support for FCoE protocol
 sys-block/tgt:fcp - Add support for new FC protocol
 sys-block/tgt:ibmvio - Add support for IBM Virtual I/O
 sys-block/tgt:rbd - Add support for ceph block devices
+sys-block/thin-provisioning-tools:io-uring - Enable experimental support for io-uring.
 sys-boot/grub:device-mapper - Enable support for device-mapper from sys-fs/lvm2
 sys-boot/grub:efiemu - Build and install the efiemu runtimes
 sys-boot/grub:fonts - Build and install fonts for the gfxterm module

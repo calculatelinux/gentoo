@@ -72,6 +72,9 @@ if [[ -z ${_LLVM_SOURCE_TYPE+1} ]]; then
 			_LLVM_SOURCE_TYPE=snapshot
 
 			case ${PV} in
+				18.0.0_pre20230906)
+					EGIT_COMMIT=7e5809e7e7bc9a828427b6540a51d45884d8bbbb
+					;;
 				18.0.0_pre20230829)
 					EGIT_COMMIT=f6259d9b9a546dbfa5bc2f29313c6edd6c701177
 					;;
@@ -378,7 +381,7 @@ llvm.org_src_unpack() {
 		local IFS='|'
 		grep -E -r -L "^Gentoo-Component:.*(${components[*]})" \
 			"${WORKDIR}/llvm-gentoo-patchset-${LLVM_PATCHSET}" |
-			xargs rm
+			xargs -r rm
 		local status=( "${PIPESTATUS[@]}" )
 		[[ ${status[1]} -ne 0 ]] && die "rm failed"
 		[[ ${status[0]} -ne 0 ]] &&

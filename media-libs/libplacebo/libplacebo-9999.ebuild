@@ -25,7 +25,11 @@ fi
 DESCRIPTION="Reusable library for GPU-accelerated image processing primitives"
 HOMEPAGE="https://code.videolan.org/videolan/libplacebo/"
 
-LICENSE="LGPL-2.1+ opengl? ( MIT )"
+LICENSE="
+	LGPL-2.1+
+	|| ( Apache-2.0 Boost-1.0 MIT )
+	opengl? ( MIT )
+"
 SLOT="0/$(ver_cut 2 ${PV}.9999)" # soname
 IUSE="glslang lcms llvm-libunwind +opengl +shaderc test unwind +vulkan"
 RESTRICT="!test? ( test )"
@@ -64,7 +68,10 @@ python_check_deps() {
 
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
-		local EGIT_SUBMODULES=( $(usev opengl 3rdparty/glad) )
+		local EGIT_SUBMODULES=(
+			3rdparty/fast_float
+			$(usev opengl 3rdparty/glad)
+		)
 		git-r3_src_unpack
 	else
 		default
