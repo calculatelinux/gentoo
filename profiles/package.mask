@@ -33,6 +33,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2023-09-06)
+# dev-libs/sink is unmaintained upstream, in Gentoo, fails to build.
+# Masked for removal on 2023-10-06, together with mail-client/kube and
+# would-be orphan libraries. Bugs #907499, #904876, #872062, #856094
+net-libs/kdav2
+net-libs/kimap2
+dev-libs/kasync
+dev-libs/sink
+mail-client/kube
+
 # Hans de Graaff <graaff@gentoo.org> (2023-09-05)
 
 # Upstream snapshotm masked for testing. Some known defects, but it
@@ -530,11 +540,6 @@ gnome-extra/tecla
 # and layman, use app-crypt/gpgme[python] as a proper upstream
 # supported gpg library. Removal on 2023-08-17.
 dev-python/pyGPG
-
-# David Seifert <soap@gentoo.org> (2023-05-19)
-# Abandoned, replaced by 'eselect repository' (app-eselect/eselect-repository),
-# tons of open bugs. Removal on 2023-08-17. Bug #761199.
-app-portage/layman
 
 # Sam James <sam@gentoo.org> (2023-05-10)
 # Lots of package breakage as usual for new versions. Masked until most/all
