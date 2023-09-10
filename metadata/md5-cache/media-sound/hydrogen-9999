@@ -1,6 +1,6 @@
 BDEPEND=dev-qt/linguist-tools:5 virtual/pkgconfig doc? ( app-doc/doxygen ) >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
-DEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 dev-qt/qtxml:5 dev-qt/qtxmlpatterns:5 >=media-libs/libsndfile-1.0.18 alsa? ( media-libs/alsa-lib ) archive? ( app-arch/libarchive ) !archive? ( dev-libs/libtar ) doc? ( dev-texlive/texlive-fontutils ) jack? ( virtual/jack ) ladspa? ( media-libs/liblrdf ) lash? ( media-sound/lash ) osc? ( media-libs/liblo ) portaudio? ( media-libs/portaudio ) portmidi? ( media-libs/portmidi ) pulseaudio? ( media-libs/libpulse ) dev-qt/qttest:5
+DEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 dev-qt/qtxml:5 dev-qt/qtxmlpatterns:5 media-libs/libsndfile alsa? ( media-libs/alsa-lib ) archive? ( app-arch/libarchive ) !archive? ( dev-libs/libtar ) doc? ( dev-texlive/texlive-fontutils ) jack? ( virtual/jack ) ladspa? ( media-libs/liblrdf ) lash? ( media-sound/lash ) osc? ( media-libs/liblo ) portaudio? ( media-libs/portaudio ) portmidi? ( media-libs/portmidi ) pulseaudio? ( media-libs/libpulse ) dev-qt/qttest:5
 DESCRIPTION=Advanced drum machine
 EAPI=8
 HOMEPAGE=http://hydrogen-music.org/
@@ -9,8 +9,8 @@ INHERIT=cmake xdg git-r3
 IUSE=alsa +archive doc jack ladspa lash osc oss portaudio portmidi pulseaudio
 LICENSE=GPL-2 ZLIB
 PROPERTIES=live
-RDEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 dev-qt/qtxml:5 dev-qt/qtxmlpatterns:5 >=media-libs/libsndfile-1.0.18 alsa? ( media-libs/alsa-lib ) archive? ( app-arch/libarchive ) !archive? ( dev-libs/libtar ) doc? ( dev-texlive/texlive-fontutils ) jack? ( virtual/jack ) ladspa? ( media-libs/liblrdf ) lash? ( media-sound/lash ) osc? ( media-libs/liblo ) portaudio? ( media-libs/portaudio ) portmidi? ( media-libs/portmidi ) pulseaudio? ( media-libs/libpulse )
+RDEPEND=dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 dev-qt/qtxml:5 dev-qt/qtxmlpatterns:5 media-libs/libsndfile alsa? ( media-libs/alsa-lib ) archive? ( app-arch/libarchive ) !archive? ( dev-libs/libtar ) doc? ( dev-texlive/texlive-fontutils ) jack? ( virtual/jack ) ladspa? ( media-libs/liblrdf ) lash? ( media-sound/lash ) osc? ( media-libs/liblo ) portaudio? ( media-libs/portaudio ) portmidi? ( media-libs/portmidi ) pulseaudio? ( media-libs/libpulse )
 REQUIRED_USE=lash? ( alsa )
 SLOT=0
 _eclasses_=cmake	ea305d3be967deed8faa5c9e94f9aee4	flag-o-matic	be27a904c614cb93ae037762dc69bcc2	git-r3	2358a7b20091609e24bd3a83b3ac5991	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	f3010c780f65d1bb5aea15a9af1adc9c	toolchain-funcs	862d337d98edb576796827be2c6b11ca	xdg	4a14c5c24f121e7da66e5aab4a168c6e	xdg-utils	baea6080dd821f5562d715887954c9d3
-_md5_=6d1ffa0d79d309ac0e593a68b77d00aa
+_md5_=1072f6dba96397f5190d87b91323c2ec

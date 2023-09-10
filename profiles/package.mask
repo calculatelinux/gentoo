@@ -33,6 +33,52 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2023-09-10)
+# Obsolete slot that no longer has any reverse dependencies. Not
+# compatible with openssl 3. Use the newer slot instead. Masked for
+# removal on 2023-10-10.
+dev-ruby/net-ssh:6
+
+# Hans de Graaff <graaff@gentoo.org> (2023-09-10)
+# Obsolete slot that no longer has any reverse dependencies. Use the
+# newer slot instead. Masked for removal on 2023-10-10.
+dev-ruby/mail:2.7
+
+# Sam James <sam@gentoo.org> (2023-09-09)
+# OpenSSL 1.1.x is EOL on 2023-09-11. Please upgrade immediately to >= OpenSSL 3.
+# https://www.openssl.org/blog/blog/2023/03/28/1.1.1-EOL/
+# https://www.openssl.org/blog/blog/2023/06/15/1.1.1-EOL-Reminder/
+# Please run a full world upgrade, especially checking /etc/portage and your world file
+# for old PHP or Ruby references.
+<dev-libs/openssl-3
+<app-crypt/xca-2.4.0_p20230526
+
+# Conrad Kostecki <conikost@gentoo.org> (2023-09-09)
+# Release causes problems, upstream degrated to RC back.
+# See #913884 for more information
+=net-wireless/unifi-7.5.174-r1
+
+# David Seifert <soap@gentoo.org> (2023-09-09)
+# EOL upstream in 2 months, causes major headaches for OpenSSL 1.1
+# masking. Removal on 2023-10-09.
+dev-lang/php:8.0
+virtual/httpd-php:8.0
+
+# David Seifert <soap@gentoo.org> (2023-09-09)
+# Depends on PHP 8.0. Removal on 2023-10-09.
+~www-apps/tt-rss-20220218
+
+# David Seifert <soap@gentoo.org> (2023-09-09)
+# Unmaintained, depends on PHP 8.0. Removal on 2023-10-09.
+www-apps/icingaweb2-module-director
+www-apps/icingaweb2-module-incubator
+
+# David Seifert <soap@gentoo.org> (2023-09-09)
+# Depends on PHP 8.0, which in turn depends on OpenSSL 1.1, which in
+# turn is to be masked and removed soon. Removal on 2023-10-09.
+www-apps/moodle:3.11.16
+www-apps/moodle:4.0.10
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2023-09-06)
 # dev-libs/sink is unmaintained upstream, in Gentoo, fails to build.
 # Masked for removal on 2023-10-06, together with mail-client/kube and
@@ -42,12 +88,6 @@ net-libs/kimap2
 dev-libs/kasync
 dev-libs/sink
 mail-client/kube
-
-# Hans de Graaff <graaff@gentoo.org> (2023-09-05)
-
-# Upstream snapshotm masked for testing. Some known defects, but it
-# compiles against openssl-3.
-~app-crypt/xca-2.4.0_p20230526
 
 # David Seifert <soap@gentoo.org> (2023-09-05)
 # OpenSSL 1.1 based, does not work with 3.0+. tpm2-openssl is the
@@ -419,7 +459,10 @@ acct-group/spi
 >=dev-cpp/gtkmm-4.11
 >=dev-libs/gjs-1.77
 >=dev-libs/glib-2.77
+>=dev-libs/gobject-introspection-1.77
+>=dev-libs/gobject-introspection-common-1.77
 >=dev-libs/libdex-0.3.0
+>=dev-libs/libportal-0.7
 >=dev-util/gdbus-codegen-2.77
 >=dev-util/glib-utils-2.77
 >=games-puzzle/gnome-sudoku-45_alpha
@@ -470,11 +513,6 @@ gnome-extra/tecla
 # Sam James <sam@gentoo.org> (2023-06-23)
 # Segfaults with non-bison yacc.
 =app-shells/bash-5.2_p15-r4
-
-# Sam James <sam@gentoo.org> (2023-06-22)
-# Causes segfaults in dependent dev-util/conf2struct.
-# See bug #908989 and related bug #908982.
-=dev-perl/Conf-Libconfig-1.0.0
 
 # Michał Górny <mgorny@gentoo.org> (2023-06-21)
 # suitesparseconfig-7.0.0 fails to build with multilib enabled
@@ -806,7 +844,7 @@ app-office/texmacs
 # If you still use one of these old toolchain packages, please upgrade (and
 # switch the compiler / the binutils) ASAP. If you need them for a specific
 # (isolated) use case, feel free to unmask them on your system.
-<sys-libs/glibc-2.36-r5
+<sys-libs/glibc-2.37-r3
 <sys-libs/binutils-libs-2.40
 <sys-devel/binutils-2.40
 <sys-devel/binutils-hppa64-2.40

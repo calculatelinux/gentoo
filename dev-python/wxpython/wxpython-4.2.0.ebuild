@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_IN_SOURCE_BUILD="1"
-PYTHON_COMPAT=( python3_{9..11} )
+PYTHON_COMPAT=( python3_{10..11} )
 PYPI_NO_NORMALIZE=1
 PYPI_PN="wxPython"
 WX_GTK_VER="3.2-gtk3"
@@ -51,6 +51,7 @@ PATCHES=(
 	#"${FILESDIR}/${PN}-4.0.6-skip-broken-tests.patch"
 	"${FILESDIR}/${PN}-4.2.0-no-attrdict.patch"
 	"${FILESDIR}/${PN}-4.2.0-flags.patch"
+	"${FILESDIR}/${PN}-4.2.0-cython-3.patch"
 )
 
 python_prepare_all() {

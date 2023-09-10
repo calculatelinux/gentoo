@@ -335,7 +335,6 @@ app-containers/skopeo:btrfs - Enables dependencies for the "btrfs" graph driver.
 app-containers/snapd:forced-devmode - Automatically disable application confinement if feature detection fails.
 app-crypt/aespipe:asm - Enable assembly modules
 app-crypt/aespipe:cpu_flags_x86_padlock - Use VIA padlock instructions, detected at run time, code still works on non-padlock processors
-app-crypt/ccid:kobil-midentity - Build and install Kobil_mIDentity_switch tool
 app-crypt/ccid:twinserial - Enable twinserial reader
 app-crypt/codecrypt:cryptopp - Build algorithms that need Crypto++ support dev-libs/crypto++
 app-crypt/dehydrated:cron - Install cron job to sign/renew non-existent/changed/expiring certificates
@@ -376,8 +375,6 @@ app-crypt/ophcrack:tables - Require the additional tables used to carry out crac
 app-crypt/ophcrack-tables:vistafree - Installs the free Vista ophcrack tables
 app-crypt/ophcrack-tables:xpfast - Installs the fast XP ophcrack tables
 app-crypt/ophcrack-tables:xpsmall - Installs the small free XP ophcrack tables
-app-crypt/p11-kit:asn1 - Enable ASN.1 certificate support
-app-crypt/p11-kit:trust - Build the trust policy module
 app-crypt/pinentry:efl - Build dev-libs/efl based pinentry
 app-crypt/qca:botan - Enable botan plugin
 app-crypt/qca:gcrypt - Enable gcrypt plugin
@@ -2589,7 +2586,6 @@ dev-qt/qtbase:libinput - Enable support for input devices via dev-libs/libinput
 dev-qt/qtbase:libproxy - Use net-libs/libproxy for automatic HTTP/SOCKS proxy configuration
 dev-qt/qtbase:network - Build Qt6Network module
 dev-qt/qtbase:sql - Build Qt6Sql module
-dev-qt/qtbase:systemd - Enable native journald logging support
 dev-qt/qtbase:tslib - Enable support for touchscreen devices via x11-libs/tslib
 dev-qt/qtbase:widgets - Build Qt6Widgets module
 dev-qt/qtbluetooth:qml - Build QML/QtQuick bindings and imports
@@ -2622,10 +2618,12 @@ dev-qt/qtmultimedia:widgets - Build the QtMultimediaWidgets module
 dev-qt/qtnetwork:gssapi - Enable support for GSSAPI (virtual/krb5)
 dev-qt/qtnetwork:libproxy - Use net-libs/libproxy for automatic HTTP/SOCKS proxy configuration
 dev-qt/qtpositioning:geoclue - Use enhanced location information from app-misc/geoclue
+dev-qt/qtpositioning:nmea - Build plugin for parsing NMEA (National Marine Electronics Association) sentences
 dev-qt/qtpositioning:qml - Build QML bindings
 dev-qt/qtquickcontrols:widgets - Enable QtWidgets support
 dev-qt/qtquickcontrols2:widgets - Enable QtWidgets support
 dev-qt/qtscript:scripttools - Build the QtScriptTools module (requires QtWidgets)
+dev-qt/qtscxml:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtsensors:qml - Build QML bindings
 dev-qt/qtspeech:flite - Enable text-to-speech synthesizer plugin using app-accessibility/flite engine
 dev-qt/qtspeech:speechd - Enable text-to-speech synthesizer plugin using app-accessibility/speech-dispatcher engine
@@ -2649,7 +2647,7 @@ dev-qt/qtwayland:vulkan - Enable support for Vulkan-based server buffer integrat
 dev-qt/qtwebchannel:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtwebengine:designer - Install the QWebEngineView plugin used to add widgets in dev-qt/designer forms that display web pages.
 dev-qt/qtwebengine:jumbo-build - Combine source files to speed up build process.
-dev-qt/qtwebengine:pdf - Build the QtPdf module
+dev-qt/qtwebengine:pdfium - Build the QtPdf module based on chromium's PDFium library
 dev-qt/qtwebengine:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtwebengine:system-icu - Use the system-wide dev-libs/icu instead of bundled.
 dev-qt/qtwebengine:widgets - Enable QtWidgets support
@@ -6381,6 +6379,31 @@ net-misc/icaclient:hdx - Install and enable hdx-realtime-media-engine plugin
 net-misc/icaclient:usb - Allow connecting USB devices to virtual desktops
 net-misc/icecast:kate - Add karaoke and text encapsulation support for Ogg files
 net-misc/icecast:yp - Build support for yp public directory listings
+net-misc/inetutils:dnsdomainname - Enable domainname
+net-misc/inetutils:ftp - Enable ftp
+net-misc/inetutils:ftpd - Enable ftpd
+net-misc/inetutils:hostname - Enable hostname
+net-misc/inetutils:ifconfig - Enable ifconfig
+net-misc/inetutils:inetd - Enable inetd
+net-misc/inetutils:logger - Enable logger
+net-misc/inetutils:ping - Enable ping
+net-misc/inetutils:ping6 - Enable ping6
+net-misc/inetutils:rcp - Enable rcp
+net-misc/inetutils:rexec - Enable rexec
+net-misc/inetutils:rexecd - Enable rexecd
+net-misc/inetutils:rlogin - Enable rlogin
+net-misc/inetutils:rlogind - Enable rlogind
+net-misc/inetutils:rsh - Enable rsh
+net-misc/inetutils:rshd - Enable rshd
+net-misc/inetutils:syslogd - Enable syslogd
+net-misc/inetutils:talkd - Enable talkd
+net-misc/inetutils:telnet - Enable telnet
+net-misc/inetutils:telnetd - Enable telnetd
+net-misc/inetutils:tftp - Enable tftp
+net-misc/inetutils:tftpd - Enable tftpd
+net-misc/inetutils:traceroute - Enable traceroute
+net-misc/inetutils:uucpd - Enable uucpd
+net-misc/inetutils:whois - Enable whois
 net-misc/iputils:arping - Build and install arping -- tool for sending ARP requests to peers (see also net-analyzer/arping)
 net-misc/iputils:clockdiff - Build and install clockdiff -- tool for comparing clocks via ICMP packets
 net-misc/iputils:rarpd - Build and install rarpd -- server for handling RARP (reverse ARP) requests; generally only used by old systems
@@ -8728,8 +8751,6 @@ www-servers/nginx:pcre-jit - Enable JIT for pcre
 www-servers/nginx:pcre2 - Enable support for pcre2
 www-servers/nginx:rtmp - NGINX-based Media Streaming Server
 www-servers/nginx:ssl - Enable HTTPS module for http. Enable SSL/TLS support for POP3/IMAP/SMTP for mail.
-www-servers/nginx-unit:php7-4 - Support for PHP 7.4
-www-servers/nginx-unit:php8-0 - Support for PHP 8.0
 www-servers/nginx-unit:php8-1 - Support for PHP 8.1
 www-servers/nginx-unit:php8-2 - Support for PHP 8.2
 www-servers/pshs:magic - Enable automatic detection of Content-Type using libmagic (sys-apps/file)
