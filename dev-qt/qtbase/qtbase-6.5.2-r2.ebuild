@@ -8,7 +8,7 @@ inherit flag-o-matic qt6-build toolchain-funcs
 DESCRIPTION="Cross-platform application development framework"
 
 if [[ ${QT6_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 fi
 
 declare -A QT6_IUSE=(
@@ -295,6 +295,9 @@ src_test() {
 		tst_qglyphrun
 		tst_qvectornd
 		tst_rcc
+		# similarly, but on armv7 (bug #914028)
+		tst_qlineedit
+		tst_qpainter
 		# partially broken on llvm-musl, needs looking into but skip to have
 		# a baseline for regressions (like above, rest of dev-qt is fine)
 		$(usev elibc_musl '
