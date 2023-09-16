@@ -33,6 +33,24 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2021-07-06)
+# No longer maintained upstream; please see the 2021-07-15-opentmpfiles-deprecation
+# news item.
+sys-apps/opentmpfiles
+
+# Hans de Graaff <graaff@gentoo.org> (2023-09-15)
+# Not compatible with ruby31, no reverse dependencies. Last release in
+# 2013. Masked for removal on 2023-10-15.
+dev-ruby/ruby-elf
+
+# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2023-09-14)
+# No longer a test dependency of dev-python/textdistance, now fails tests
+# with the latest numpy. Upstream inactive and we already need patching for
+# python 3.10 compatibility. No other reverse dependencies.
+# Bug: https://bugs.gentoo.org/887845
+# Removal on 2023-10-14
+dev-python/abydos
+
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2023-09-11)
 # Dead project accumulating open bugs and incompatibilities.
 #
@@ -96,11 +114,6 @@ virtual/httpd-php:8.0
 # David Seifert <soap@gentoo.org> (2023-09-09)
 # Depends on PHP 8.0. Removal on 2023-10-09.
 ~www-apps/tt-rss-20220218
-
-# David Seifert <soap@gentoo.org> (2023-09-09)
-# Unmaintained, depends on PHP 8.0. Removal on 2023-10-09.
-www-apps/icingaweb2-module-director
-www-apps/icingaweb2-module-incubator
 
 # David Seifert <soap@gentoo.org> (2023-09-09)
 # Depends on PHP 8.0, which in turn depends on OpenSSL 1.1, which in
@@ -254,79 +267,9 @@ app-dicts/edictionary
 # Masked for removal on 2023-09-17.
 app-emacs/ruby-mode
 
-# Matt Turner <mattst88@gentoo.org> (2023-08-14)
-# Dead slot depending on libsoup:2.4
-# Removal on 2023-09-14.
-net-libs/rest:0.7
-
-# Matt Turner <mattst88@gentoo.org> (2023-08-14)
-# Unmaintained in Gentoo and upstream. Last release was 2018, last commit
-# upstream was 2021. Only reverse dependency of dead net-libs/rest:0.7.
-# Removal on 2023-09-14.
-gnome-extra/synapse
-
-# Michael Orlitzky <mjo@gentoo.org> (2023-08-12)
-# More php:7.4 casualties that I missed the first time around.
-# They'll be removed whenever php:7.4 is removed.
-#
-#   * pecl-apcu_bc dead since 2019
-#   * pecl-http:7 is the old slot
-#   * pecl-ncurses dead since 2012
-#   * pecl-propro dead since 2020
-#   * pecl-taint dead in 2021
-#
-dev-php/pecl-apcu_bc
-dev-php/pecl-http:7
-dev-php/pecl-ncurses
-dev-php/pecl-propro
-dev-php/pecl-taint
-
-
-# Michael Orlitzky <mjo@gentoo.org> (2023-08-11)
-# php-7.x is End Of Life (EOL) upstream and no longer receives security
-# fixes. We lose phpunit because it depends on CodeCoverage which
-# depends on TokenStream, and TokenStream is limited to 7.x. Bug 887739
-# to upgrade moodle is seven months old, which I think is long enough to
-# have waited. Selfoss has a newer version. Removal after 2023-09-11.
-dev-lang/php:7.4
-dev-php/PHP_TokenStream
-dev-php/PHP_CodeCoverage
-dev-php/phpspec-prophecy
-dev-php/phpunit
-dev-php/phpunit-mock-objects
-dev-php/sebastian-comparator
-dev-php/sebastian-exporter
-dev-php/sebastian-global-state
-dev-php/sebastian-object-enumerator
-dev-php/sebastian-object-reflector
-dev-php/sebastian-recursion-context
-=mail-client/roundcube-1.4.11
-=virtual/httpd-php-7.4
-=www-apps/moodle-3.11.15
-=www-apps/moodle-4.0.9
-=www-apps/moodle-4.1.4
-=www-apps/moodle-4.2.1
-=www-apps/selfoss-2.19
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2023-07-05)
-# Library without consumers. Bug #906882
-# Removal on 2023-08-05.
-net-libs/nativebiginteger
-
 # Sam James <sam@gentoo.org> (2023-08-04)
 # Stricter behavior which causes some packages to fail, see bug #911721.
 =dev-util/pkgconf-2.0.0
-
-# David Seifert <soap@gentoo.org> (2023-07-29)
-# EAPI 6, fetch restrictions require annoying registration, no other
-# distro packages this, over 10 years old. Removal on 2023-08-28.
-sci-libs/rosetta-db
-
-# Michael Orlitzky <mjo@gentoo.org> (2023-07-27)
-# Obsolete as of dev-php/swoole-4.3.0, according to
-# its github README. Stuck on php-7.4. Removal on or
-# after 30 days.
-dev-php/swoole-async
 
 # Mike Gilbert <floppym@gentoo.org> (2023-07-24)
 # Migrated to sys-apps/systemd-utils.
@@ -334,32 +277,6 @@ dev-php/swoole-async
 sys-apps/systemd-tmpfiles
 sys-boot/systemd-boot
 sys-fs/udev
-
-# Michał Górny <mgorny@gentoo.org> (2023-07-24)
-# Incompatible with modern dev-python/matplotlib versions.  No upstream
-# activity since 2022-02.  No revdeps.
-# Removal on 2023-08-23.  Bug #904734.
-dev-python/tikzplotlib
-
-# Michał Górny <mgorny@gentoo.org> (2023-07-23)
-# Package with no maintainer and tests restricted (also test deps look
-# suspicious).  It was only needed for tests
-# in dev-python/pyvirtualdisplay, and that package didn't support
-# the newest version anyway.  No revdeps left.
-# Removal on 2023-08-22.  Bug #910708.
-dev-python/vncdotool
-
-# Michał Górny <mgorny@gentoo.org> (2023-07-21)
-# Fragile package requiring custom patching.  The maintainer resigned.
-# No reverse dependencies.
-# Removal on 2023-08-20.  Bug #910619.
-dev-python/cx_Freeze
-
-# Michał Górny <mgorny@gentoo.org> (2023-07-21)
-# The ebuild has not been bumped for a year now.  It doesn't have
-# working tests.  No reverse dependencies.
-# Removal on 2023-08-20.  Bug #907460.
-dev-python/ansible-runner
 
 # Michał Górny <mgorny@gentoo.org> (2023-07-19)
 # Backport package specific to Python 3.9.  No longer necessary now
@@ -495,6 +412,7 @@ acct-group/spi
 >=gnome-base/gnome-settings-daemon-45_alpha
 >=gnome-base/gnome-shell-45_alpha
 >=gnome-base/gsettings-desktop-schemas-45_alpha
+>=gnome-base/librsvg-2.57
 >=gnome-base/nautilus-45_alpha
 >=gnome-extra/gnome-boxes-45_alpha
 >=gnome-extra/gnome-calculator-45_alpha
@@ -719,10 +637,6 @@ x11-drivers/nvidia-drivers:0/390
 # Ben Kohler <bkohler@gentoo.org> (2023-01-30)
 # Breaks too many revdeps for now
 =app-text/discount-3*
-
-# Georgy Yakovlev <gyakovlev@gentoo.org> (2022-12-19)
-# This version currently is not compatible with kernel build (yet)
-~dev-util/bindgen-0.63.0
 
 # Jaco Kroon <jaco@uls.co.za> (2022-11-05)
 # Some potentially breaking changes here, please check the UPGRADE.txt file.

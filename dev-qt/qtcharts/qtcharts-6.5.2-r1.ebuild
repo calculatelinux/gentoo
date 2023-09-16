@@ -8,14 +8,14 @@ inherit qt6-build
 DESCRIPTION="Chart component library for the Qt6 framework"
 
 if [[ ${QT6_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64"
+	KEYWORDS="amd64"
 fi
 
 IUSE="gles2-only qml"
 
 RDEPEND="
 	~dev-qt/qtbase-${PV}:6[gles2-only=,gui,opengl,widgets]
-	qml? ( ~dev-qt/qtdeclarative-${PV}:6 )
+	qml? ( ~dev-qt/qtdeclarative-${PV}:6[opengl] )
 "
 DEPEND="${RDEPEND}"
 

@@ -11,12 +11,14 @@ HOMEPAGE="https://magit.vc/
 
 if [[ ${PV} == *9999* ]] ; then
 	inherit git-r3
+
 	EGIT_REPO_URI="https://github.com/magit/magit.git"
 else
 	SRC_URI="https://github.com/magit/magit/archive/v${PV}.tar.gz
 		-> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+	KEYWORDS="~amd64 ~arm ~ppc64 ~riscv ~x86 ~amd64-linux ~x86-linux"
 fi
+
 S="${WORKDIR}/${P}/lisp"
 
 LICENSE="GPL-3+"
@@ -31,6 +33,7 @@ RDEPEND="
 	>=app-emacs/dash-2.19.1
 	>=app-emacs/transient-0.3.6
 	>=app-emacs/with-editor-3.0.5
+	libgit? ( app-emacs/libegit2 )
 "
 BDEPEND="
 	${RDEPEND}

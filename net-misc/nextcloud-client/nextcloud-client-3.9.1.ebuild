@@ -14,7 +14,7 @@ S="${WORKDIR}/desktop-${PV/_/-}"
 
 LICENSE="CC-BY-3.0 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~x86"
+KEYWORDS="amd64 arm64 ~x86"
 IUSE="doc dolphin nautilus test webengine"
 RESTRICT="!test? ( test )"
 
@@ -106,8 +106,10 @@ src_compile() {
 pkg_postinst() {
 	xdg_pkg_postinst
 
-	if ! use doc ; then
-		elog "Documentation and man pages not installed"
-		elog "Enable doc USE-flag to generate them"
+	if ! has_version -r "dev-libs/qtkeychain[keyring]"; then
+		elog "dev-libs/qtkeychain has not been build with the 'keyring' USE flag."
+		elog "Please consider enabling the 'keyring' USE flag. Otherwise you may"
+		elog "have to authenticate manually every time you start the nextlcoud client."
+		elog "See https://bugs.gentoo.org/912844 for more information."
 	fi
 }

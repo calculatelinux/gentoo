@@ -386,7 +386,7 @@ app-crypt/qca:sasl - Enable SASL plugin
 app-crypt/qca:softstore - Enable softstore plugin
 app-crypt/seahorse:ldap - Enable seahorse to manipulate GPG keys on a LDAP server.
 app-crypt/swtpm:fuse - Support sys-fs/fuse based /dev/tpm interface
-app-crypt/swtpm:gnutls - Use net-libs/gnutls as crypto engine
+app-crypt/swtpm:gnutls - Build the swtpm_cert binary which depends on net-libs/gnutls
 app-crypt/tpm-tools:pkcs11 - Build Token data management utilities based on OpenCryptoki's (dev-libs/opencryptoki) PKCS#11 implementation.
 app-crypt/tpm2-pkcs11:fapi - Enable feature API backend
 app-crypt/tpm2-tools:fapi - Enable feature API tools
@@ -1641,6 +1641,7 @@ dev-java/protobuf-java:system-protoc - Use protoc provided by dev-libs/protobuf
 dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
 dev-java/sbt:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
 dev-lang/R:lto - Use link-time optimization for R and its recommended packages.
+dev-lang/algol68g:mpfr - Add support for multiprecision floating point rouding
 dev-lang/ammonite-repl-bin:scala2-13 - Install Ammonite for Scala 2.13
 dev-lang/ammonite-repl-bin:scala3-0 - Install Ammonite for Scala 3.0
 dev-lang/ammonite-repl-bin:scala3-1 - Install Ammonite for Scala 3.1
@@ -1742,7 +1743,6 @@ dev-lang/php:gd - Enable the Image Processing and GD extension (requires media-l
 dev-lang/php:inifile - Add dbm support for .ini files
 dev-lang/php:intl - Enables the intl extension for extended internalization support
 dev-lang/php:jit - Enable PCRE JIT support
-dev-lang/php:json - Enable the JavaScript Object Notation extension
 dev-lang/php:ldap-sasl - Add SASL support for the PHP LDAP extension using dev-libs/cyrus-sasl
 dev-lang/php:lmdb - Enable support for dev-db/lmdb db backend
 dev-lang/php:opcache - Enables built-in opcode cache, replacing pecl-apc et al.
@@ -2166,8 +2166,8 @@ dev-lisp/clx:doc - Builds documentation
 dev-lisp/cmucl:X - Build CLX, CLM, or Hemlock
 dev-lisp/cmucl:doc - Installs package documentation
 dev-lisp/cmucl:source - Include source code for CMUCL in installation
-dev-lisp/ecls:gengc - Use generational garbage collection (experimental)
-dev-lisp/ecls:precisegc - Use type information during garbage collection (experimental)
+dev-lisp/ecl:gengc - Use generational garbage collection (experimental)
+dev-lisp/ecl:precisegc - Use type information during garbage collection (experimental)
 dev-lisp/gcl:ansi - Build a GCL with ANSI support (else build a traditional CLtL1 image)
 dev-lisp/gcl:athena - Build xgcl - an interface to x11-libs/libXaw
 dev-lisp/sbcl:system-bootstrap - Bootstrap SBCL using either system SBCL installation or dev-lisp/clisp
@@ -2588,6 +2588,7 @@ dev-qt/qtbase:gui - Build Qt6Gui module
 dev-qt/qtbase:libinput - Enable support for input devices via dev-libs/libinput
 dev-qt/qtbase:libproxy - Use net-libs/libproxy for automatic HTTP/SOCKS proxy configuration
 dev-qt/qtbase:network - Build Qt6Network module
+dev-qt/qtbase:renderdoc - Enable support for capturing graphic's API calls using media-gfx/renderdoc
 dev-qt/qtbase:sql - Build Qt6Sql module
 dev-qt/qtbase:tslib - Enable support for touchscreen devices via x11-libs/tslib
 dev-qt/qtbase:widgets - Build Qt6Widgets module
@@ -2629,6 +2630,7 @@ dev-qt/qtscript:scripttools - Build the QtScriptTools module (requires QtWidgets
 dev-qt/qtscxml:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtsensors:qml - Build QML bindings
 dev-qt/qtspeech:flite - Enable text-to-speech synthesizer plugin using app-accessibility/flite engine
+dev-qt/qtspeech:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtspeech:speechd - Enable text-to-speech synthesizer plugin using app-accessibility/speech-dispatcher engine
 dev-qt/qttools:assistant - Build Qt Assistant
 dev-qt/qttools:clang - Enable using libclang for code parsing (linguist/qdoc)
@@ -3313,7 +3315,6 @@ gnome-extra/libgsf:gtk - Enable use of gdk in thumbnailer
 gnome-extra/nemo:tracker - Add support for app-misc/tracker search
 gnome-extra/nm-applet:modemmanager - Enable support for mobile broadband devices using net-misc/modemmanager
 gnome-extra/nm-applet:teamd - Enable teamd configuration editor
-gnome-extra/synapse:plugins - Build support for plugins using net-libs/rest
 gnustep-apps/gemas:projectcenter - Build and install plugin for gnustep-apps/projectcenter
 gnustep-apps/gworkspace:gwmetadata - Enable the metadata indexing and searching system
 gnustep-apps/sogo:activesync - Build the ActiveSync support code
@@ -3604,6 +3605,7 @@ kde-plasma/plasma-meta:desktop-portal - Enable sys-apps/xdg-desktop-portal backe
 kde-plasma/plasma-meta:discover - Pull in resources management GUI; a centralised GHNS alternative and optional sys-apps/fwupd frontend
 kde-plasma/plasma-meta:display-manager - Pull in a graphical display manager
 kde-plasma/plasma-meta:firewall - Pull in kde-plasma/plasma-firewall for system firewall administration
+kde-plasma/plasma-meta:flatpak - Pull in kde-plasma/flatpak-kcm for flatpak permissions administration
 kde-plasma/plasma-meta:grub - Pull in Breeze theme for sys-boot/grub
 kde-plasma/plasma-meta:gtk - Enable Breeze widget style and system settings module for GTK+
 kde-plasma/plasma-meta:kwallet - Enable support for KWallet auto-unlocking via kde-plasma/kwallet-pam
@@ -4252,6 +4254,7 @@ media-libs/libpano13:suitesparse - Use Sparse Levenberg Marquardt algorithm inst
 media-libs/libplacebo:glslang - Use dev-util/glslang to compile GLSL
 media-libs/libplacebo:lcms - Add support for color management via media-libs/lcms
 media-libs/libplacebo:shaderc - Use media-libs/shaderc to compile GLSL
+media-libs/libplacebo:xxhash - Use dev-libs/xxhash to speed up internal hashing
 media-libs/libpng:apng - support unofficial APNG (Animated PNG) spec
 media-libs/libprojectm:gles2 - Provide support for OpenGL ES 2 and 3
 media-libs/libpulse:asyncns - Use libasyncns for asynchronous name resolution.
@@ -7480,7 +7483,7 @@ sci-mathematics/form:doxygen - Build and install API documentation
 sci-mathematics/fricas:clisp - Add support for GNU CLISP (dev-lisp/clisp)
 sci-mathematics/fricas:clozurecl - Add support for Clozure Common Lisp (dev-lisp/clozurecl)
 sci-mathematics/fricas:cmucl - Add support for CMU Common Lisp (dev-lisp/cmucl)
-sci-mathematics/fricas:ecls - Add support for Embeddable Common Lisp (dev-lisp/ecls)
+sci-mathematics/fricas:ecl - Add support for Embeddable Common Lisp (dev-lisp/ecl)
 sci-mathematics/fricas:gcl - Add support for GNU Common Lisp (dev-lisp/gcl)
 sci-mathematics/fricas:sbcl - Add support for Steel Bank Common Lisp (dev-lisp/sbcl)
 sci-mathematics/geomview:motionaveraging - Enable experimental motion averaging technique
@@ -7502,7 +7505,7 @@ sci-mathematics/maxima:clisp - Compile maxima with GNU CLISP (dev-lisp/clisp)
 sci-mathematics/maxima:clozurecl - Compile maxima with 32-bit Clozure Common Lisp (dev-lisp/clozurecl)
 sci-mathematics/maxima:clozurecl64 - Compile maxima with 64-bit Clozure Common Lisp (dev-lisp/clozurecl)
 sci-mathematics/maxima:cmucl - Compile maxima with CMU Common Lisp (dev-lisp/cmucl)
-sci-mathematics/maxima:ecls - Compile maxima with Embeddable Common Lisp (dev-lisp/ecls)
+sci-mathematics/maxima:ecl - Compile maxima with Embeddable Common Lisp (dev-lisp/ecl)
 sci-mathematics/maxima:gcl - Compile maxima with GNU Common Lisp (dev-lisp/gcl)
 sci-mathematics/maxima:sbcl - Compile maxima with Steel Bank Common Lisp (dev-lisp/sbcl)
 sci-mathematics/maxima:vtk - Support plotting with sci-libs/vtk

@@ -18,7 +18,7 @@ declare -A QT6_IUSE=(
 
 	[gui]="
 		+X accessibility eglfs evdev gles2-only +libinput
-		opengl tslib vulkan +widgets
+		opengl renderdoc tslib vulkan +widgets
 	"
 	[network]="brotli gssapi libproxy sctp"
 	[sql]="mysql oci8 odbc postgres +sqlite"
@@ -49,6 +49,7 @@ REQUIRED_USE="
 # - qtnetwork (src/network/configure.cmake)
 # - qtprintsupport (src/printsupport/configure.cmake) [gui+widgets]
 # - qtsql (src/plugins/sqldrivers/configure.cmake)
+# dlopen: renderdoc
 RDEPEND="
 	sys-libs/zlib:=
 	ssl? ( dev-libs/openssl:= )
@@ -86,6 +87,7 @@ RDEPEND="
 		evdev? ( sys-libs/mtdev )
 		libinput? ( dev-libs/libinput:= )
 		opengl? ( media-libs/libglvnd[X?] )
+		renderdoc? ( media-gfx/renderdoc )
 		tslib? ( x11-libs/tslib )
 		widgets? (
 			cups? ( net-print/cups )
@@ -127,6 +129,10 @@ PDEPEND="
 	nls? ( ~dev-qt/qttranslations-${PV}:6 )
 	wayland? ( ~dev-qt/qtwayland-${PV}:6 )
 "
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-6.5.2-no-symlink-check.patch
+)
 
 src_prepare() {
 	qt6-build_src_prepare
@@ -190,6 +196,7 @@ src_configure() {
 		$(qt_feature libinput)
 		$(qt_feature opengl)
 		$(usev !opengl -DINPUT_opengl=no) #913691
+		$(qt_feature renderdoc graphicsframecapture)
 		$(qt_feature tslib)
 		$(qt_feature vulkan)
 		$(qt_feature widgets)
@@ -210,6 +217,7 @@ src_configure() {
 	use sql && mycmakeargs+=(
 		-DQT_FEATURE_sql_db2=OFF # unpackaged
 		-DQT_FEATURE_sql_ibase=OFF # unpackaged
+		-DQT_FEATURE_sql_mimer=OFF # unpackaged
 		$(qt_feature mysql sql_mysql)
 		$(qt_feature oci8 sql_oci)
 		$(usev oci8 -DOracle_ROOT="${ESYSROOT}"/usr/$(get_libdir)/oracle/client)
@@ -217,7 +225,6 @@ src_configure() {
 		$(qt_feature postgres sql_psql)
 		$(qt_feature sqlite sql_sqlite)
 		$(qt_feature sqlite system_sqlite)
-		-DQT_FEATURE_sql_tds=OFF # currently a no-op in CMakeLists.txt
 	)
 
 	if use amd64 || use x86; then
