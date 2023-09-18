@@ -3,7 +3,9 @@
 
 EAPI=8
 
-inherit autotools multilib-minimal
+VERIFY_SIG_OPENPGP_KEY_PATH="${BROOT}"/usr/share/openpgp-keys/libsodium.minisig
+VERIFY_SIG_METHOD=minisig
+inherit autotools multilib-minimal verify-sig
 
 DESCRIPTION="Portable fork of NaCl, a higher-level cryptographic library"
 HOMEPAGE="https://libsodium.org"
@@ -30,32 +32,16 @@ S="${WORKDIR}"/${PN}-stable
 LICENSE="ISC"
 SLOT="0/26"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~arm64-macos ~x64-macos"
-IUSE="+asm minimal static-libs +urandom verify-sig"
+IUSE="+asm minimal static-libs +urandom"
 
 CPU_USE=( cpu_flags_x86_{aes,sse4_1} )
 IUSE+=" ${CPU_USE[@]}"
 
-BDEPEND=" verify-sig? ( app-crypt/minisign )"
+BDEPEND=" verify-sig? ( sec-keys/minisig-keys-libsodium )"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.0.10-cpuflags.patch
 )
-
-src_unpack() {
-	# TODO: Could verify-sig.eclass support minisig? bug #783066
-	MINISIGN_KEY="RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3"
-
-	if use verify-sig ; then
-		ebegin "Verifying signature using app-crypt/minisign"
-		minisign -V \
-			-P ${MINISIGN_KEY} \
-			-x "${DISTDIR}"/${P}.tar.gz.minisig \
-			-m "${DISTDIR}"/${P}.tar.gz
-		eend $? || die "Failed to verify distfile using minisign!"
-	fi
-
-	default
-}
 
 src_prepare() {
 	default

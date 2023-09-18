@@ -386,7 +386,6 @@ app-crypt/qca:sasl - Enable SASL plugin
 app-crypt/qca:softstore - Enable softstore plugin
 app-crypt/seahorse:ldap - Enable seahorse to manipulate GPG keys on a LDAP server.
 app-crypt/swtpm:fuse - Support sys-fs/fuse based /dev/tpm interface
-app-crypt/swtpm:gnutls - Build the swtpm_cert binary which depends on net-libs/gnutls
 app-crypt/tpm-tools:pkcs11 - Build Token data management utilities based on OpenCryptoki's (dev-libs/opencryptoki) PKCS#11 implementation.
 app-crypt/tpm2-pkcs11:fapi - Enable feature API backend
 app-crypt/tpm2-tools:fapi - Enable feature API tools
@@ -1364,7 +1363,6 @@ dev-db/sqlitestudio:cli - Build CLI interface
 dev-db/timescaledb:proprietary-extensions - Enable proprietary features/extensions licensed under the TimeScale License
 dev-db/unixODBC:minimal - Disable bundled drivers and extra libraries (most users don't need these)
 dev-db/unixODBC:odbcmanual - Administrator, Internal Structure, Programmer and User documentation
-dev-dotnet/dotnet-sdk-bin:dotnet-symlink - Install a dotnet symlink that points to dotnet-bin.
 dev-embedded/avrdude:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
 dev-embedded/libftdi:tools - build ftdi_eeprom helper tool
 dev-embedded/openocd:capstone - Use dev-libs/capstone for disassembly support
@@ -1905,6 +1903,7 @@ dev-libs/jemalloc:lazy-lock - Enable lazy locking (only lock when multi-threaded
 dev-libs/jemalloc:prof - Enable allocation profiling
 dev-libs/jemalloc:stats - Enable statistics calculation/reporting
 dev-libs/jemalloc:xmalloc - Add support for xmalloc (abort-on-out-of-memory)
+dev-libs/json-glib:nls - Enable native language support (translations)
 dev-libs/kosmindoormap:openinghours - Enable support for highlighting currently open amenities/shops/etc.
 dev-libs/kreport:marble - Enable displaying of maps using kde-apps/marble
 dev-libs/kreport:scripting - Support Qml scripting using dev-qt/qtdeclarative
@@ -4040,6 +4039,7 @@ media-gfx/imv:freeimage - Use media-libs/freeimage for additional image support
 media-gfx/inkscape:cdr - Enable support for CorelDRAW files via media-libs/libcdr
 media-gfx/inkscape:dia - Enable DIA flow chart import via app-office/dia
 media-gfx/inkscape:inkjar - Enable support for OpenOffice.org SVG jar files
+media-gfx/inkscape:sourceview - Enable syntax highlighting support via x11-libs/gtksourceview
 media-gfx/inkscape:svg2 - Enable support for new SVG2 features
 media-gfx/inkscape:visio - Enable support for Microsoft Visio diagrams via media-libs/libvisio
 media-gfx/inkscape:wpg - Enable support for WordPerfect graphics via app-text/libwpg
@@ -6089,6 +6089,7 @@ net-libs/wandio:http - Build support for reading files over HTTP using net-misc/
 net-libs/webkit-gtk:avif - Enable support for AVIF images via media-libs/libavif
 net-libs/webkit-gtk:examples - Install the MiniBrowser example application
 net-libs/webkit-gtk:gamepad - Enable gamepad input support via dev-libs/libmanette
+net-libs/webkit-gtk:jpegxl - Enable support for JPEG-XL images
 net-libs/webkit-gtk:jumbo-build - Combine source files to speed up build process
 net-libs/wvstreams:boost - Use dev-libs/boost to provide TR1-compatible functional interface. This USE flag is only needed with GCC earlier than version 4.1, or with other compilares not providing said interface.
 net-libs/xdp-tools:tools - Install various helper tools rather than just libxdp.
@@ -8622,11 +8623,12 @@ www-client/chromium:pgo - Build with Profile Guided Optimizations (2-stage compi
 www-client/chromium:pic - Disable optimized assembly code that is not PIC friendly
 www-client/chromium:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
 www-client/chromium:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels
-www-client/chromium:system-av1 - Use system libaom and dav1d instead of the bundled one.
-www-client/chromium:system-ffmpeg - Use system ffmpeg instead of the bundled one
-www-client/chromium:system-harfbuzz - Use system harfbuzz instead of the bundled one.
-www-client/chromium:system-icu - Use system icu instead of the bundled one
-www-client/chromium:system-png - Use system libpng instead of the bundled one.
+www-client/chromium:system-av1 - Use system media-libs/libaom and media-libs/dav1d instead of the bundled libraries.
+www-client/chromium:system-ffmpeg - Use system media-video/ffmpeg instead of the bundled version.
+www-client/chromium:system-harfbuzz - Use system media-libs/harfbuzz instead of the bundled library.
+www-client/chromium:system-icu - Use system dev-libs/icu instead of the bundled one
+www-client/chromium:system-png - Use system media-libs/libpng instead of the bundled library
+www-client/chromium:system-zstd - Use system app-arch/zstd instead of the bundled one.
 www-client/chromium:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
 www-client/elinks:bittorrent - Enable support for the BitTorrent protocol
 www-client/elinks:brotli - Enable support for brotli compression

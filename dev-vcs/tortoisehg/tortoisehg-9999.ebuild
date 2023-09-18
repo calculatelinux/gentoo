@@ -13,7 +13,7 @@ if [[ ${PV} != *9999* ]]; then
 	SRC_URI="https://foss.heptapod.net/mercurial/${PN}/thg/-/archive/${PV}/thg-${PV}.tar.gz -> ${P}.tar.gz"
 	HG_DEPEND=">=dev-vcs/mercurial-6.2[${PYTHON_USEDEP}]
 		$(python_gen_cond_dep '>=dev-vcs/mercurial-6.3.2[${PYTHON_USEDEP}]' python3_11 )
-		<dev-vcs/mercurial-6.5[${PYTHON_USEDEP}]"
+		<dev-vcs/mercurial-6.6[${PYTHON_USEDEP}]"
 	S="${WORKDIR}/thg-${PV}"
 else
 	inherit mercurial
