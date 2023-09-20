@@ -308,6 +308,7 @@ app-cdr/gaffitter:scripts - Install additional gaffitter scripts for external pr
 app-cdr/mirage2iso:pinentry - Support app-crypt/pinentry password input backend.
 app-containers/apptainer:network - Install network plug-ins
 app-containers/apptainer:suid - Install SUID helper binary
+app-containers/buildah:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
 app-containers/containerd:btrfs - Support for BTRFS snapshot driver
 app-containers/containerd:cri - Support for Kubernetes CRI
 app-containers/containerd:device-mapper - Support for device mapper snapshot driver
@@ -2742,7 +2743,6 @@ dev-util/cmake:dap - Build debugger for CMake with Debug Adapter Protocol suppor
 dev-util/codeblocks:contrib - Build additional contrib components
 dev-util/codeblocks:fortran - Build FortranProject plugin which enables to use Code::Blocks IDE for Fortran language
 dev-util/cppcheck:htmlreport - install cppcheck-htmlreport
-dev-util/cppcheck:z3 - Enable support for sci-mathematics/z3 backend
 dev-util/ctags:json - Enable JSON output support
 dev-util/ctags:xml - Enable XML parsing support
 dev-util/ctags:yaml - Enable YAML parsing support
@@ -3582,6 +3582,7 @@ kde-plasma/discover:firmware - Enable support for firmware upgrades using sys-ap
 kde-plasma/discover:flatpak - Enable support for flatpak repositories using sys-apps/flatpak
 kde-plasma/discover:snap - Enable support for snap packages using app-containers/snapd
 kde-plasma/discover:webengine - Enable webflow support using dev-qt/qtwebview and dev-qt/qtwebengine instead of default URL handler
+kde-plasma/drkonqi:systemd - Enable Coredumpd integration
 kde-plasma/kde-cli-tools:kdesu - Build graphical frontend for kde-frameworks/kdesu
 kde-plasma/kdeplasma-addons:alternate-calendar - Support alternate calendar systems (currently Chinese or Indian) via dev-libs/icu
 kde-plasma/kdeplasma-addons:networkmanager - Disable wallpaper update when using metered connections
