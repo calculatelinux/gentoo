@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{9..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 inherit flag-o-matic python-r1 toolchain-funcs udev
 
@@ -37,28 +37,32 @@ src_prepare() {
 	sed \
 		-e '/^CFLAGS/s:-O2::' \
 		-e '/^CFLAGS/s:-g::' \
+		-e '/.*INSTALL.*share\/man/d' \
+		-e '/.*INSTALL.*bcache-status/d' \
 		-i Makefile || die
 
 	append-lfs-flags
 }
 
 src_install() {
-	into /
-	dosbin bcache make-bcache bcache-super-show
+	local udevdir="$(get_udevdir)"
 
-	exeinto $(get_udevdir)
-	doexe bcache-register probe-bcache bcache-export-cached
+	local mydirs=(
+		sbin
+		"${udevdir}/rules.d"
+		/usr/share/initramfs-tools/hooks/bcache
+		/usr/lib/initcpio/install/bcache
+	)
+	dodir "${mydirs[@]}"
+
+	emake \
+		DESTDIR="${D}" \
+		PREFIX="${EPREFIX}" \
+		UDEVLIBDIR="${udevdir}" \
+		DRACUTLIBDIR="/usr/lib/dracut" \
+		install
 
 	python_foreach_impl python_doscript bcache-status
-
-	udev_dorules 69-bcache.rules
-
-	insinto /etc/initramfs-tools/hooks/bcache
-	doins initramfs/hook
-
-	# that is what dracut does
-	insinto /usr/lib/dracut/modules.d/90bcache
-	doins dracut/module-setup.sh
 
 	doman *.8
 

@@ -33,6 +33,35 @@
 
 #--- END OF EXAMPLES ---
 
+# Joonas Niilola <juippis@gentoo.org> (2023-09-21)
+# Enigmail's functionality has been built into Thunderbird-68, carrying over
+# all the way to 115. Enigmail hasn't been supported in TB since 91. It's
+# currently only supported on SeaMonkey, but upstream provides a pre-packed
+# extension to download for SM directly. Therefore there's not much reason to
+# package it in Gentoo, given also the current version is years behind upstream
+# releases. Bug #914486
+# Removal in ~30 days.
+x11-plugins/enigmail
+
+# Jaco Kroon <jaco@uls.co.za> (2023-09-19)
+# Joonas Niilola <juippis@gentoo.org> (2023-09-21)
+# DAHDI is not suited for a rolling-release distribution. Upstream releases new
+# versions sporadically and it may take multiple years between them. Old
+# versions are constantly broken with newer kernels, requiring heavy patching
+# downstream. Has no active maintainer in Gentoo. If you use DAHDI and have
+# some ideas how to help, please see bug #914477.
+# Removal on 2024-03-01.
+net-libs/libpri
+net-misc/dahdi
+net-misc/dahdi-tools
+net-misc/openr2
+
+# Ulrich Müller <ulm@gentoo.org> (2023-09-20)
+# Unmaintained upstream: Last release (2.92) in 2003, last commit
+# to XEmacs CVS repository in 2008. Broken with Emacs 29.
+# Masked for removal on 2023-10-20, bug #914449.
+app-emacs/crypt++
+
 # Bernard Cafarelli <voyageur@gentoo.org> (2023-09-19)
 # Only works with PHP 7, which was dropped from Gentoo
 # Upstream has no short-term plan to add PHP 8 support

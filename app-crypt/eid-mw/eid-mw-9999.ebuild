@@ -79,7 +79,7 @@ src_configure() {
 
 src_install() {
 	default
-	rm -r "${ED}"/usr/$(get_libdir)/*.la || die
+	find "${ED}" -type f -name '*.la' -delete || die
 	if use gtk; then
 		domenu plugins_tools/eid-viewer/eid-viewer.desktop
 		doicon plugins_tools/eid-viewer/gtk/eid-viewer.png
