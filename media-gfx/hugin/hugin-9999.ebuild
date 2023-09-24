@@ -72,6 +72,10 @@ src_configure() {
 	local mycmakeargs=(
 		-DBUILD_HSI=$(usex python)
 		-DENABLE_LAPACK=$(usex lapack)
+		# Temporary workaround for bug #833443. Can be dropped when
+		# we switch to wxgtk-3.2, but complications for that remain
+		# w/ egl+wayland.
+		-DUSE_GDKBACKEND_X11=on
 	)
 	cmake_src_configure
 }

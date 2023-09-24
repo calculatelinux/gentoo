@@ -312,8 +312,6 @@ app-containers/buildah:btrfs - Enables dependencies for the "btrfs" graph driver
 app-containers/containerd:btrfs - Support for BTRFS snapshot driver
 app-containers/containerd:cri - Support for Kubernetes CRI
 app-containers/containerd:device-mapper - Support for device mapper snapshot driver
-app-containers/containers-storage:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
-app-containers/containers-storage:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
 app-containers/cri-o:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
 app-containers/cri-o:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
 app-containers/crun:bpf - Enable in Kernel, eBPF (enhanced Berkley Packet Filter) support for managing device controllers.
@@ -994,7 +992,7 @@ app-office/calligraplan:holidays - Enable kde-frameworks/kholidays integration
 app-office/calligraplan:kwallet - Enable access to encrypted OpenDocument files with kde-frameworks/kwallet storage
 app-office/glabels:barcode - Enable barcode support through external libraries.
 app-office/gnucash:aqbanking - Connect to some internet banks via AqBanking
-app-office/gnucash:quotes - Enable Online Stock Quote retrieval
+app-office/gnucash:quotes - Enable online stock quote retrieval
 app-office/gnucash:register2 - Use the new register (Experimental)
 app-office/gnumeric:libgda - Enable database support through gnome-extra/libgda.
 app-office/gnumeric:perl - Enable perl plugin loader.
@@ -7078,7 +7076,6 @@ sci-electronics/gtkwave:judy - Enables Judy array support.
 sci-electronics/gtkwave:packed - Enables '#pragma pack' for data arrays (saves memory, costs time).
 sci-electronics/kicad:ngspice - Enable circuit simulation
 sci-electronics/kicad-meta:minimal - Do not install extra data like 3D packages and templates.
-sci-electronics/kicad-packages3d:occ - Use sci-libs/opencascade for data exchange
 sci-electronics/ktechlab:gpsim - Enable support for Microchip PIC microcontrollers similation using dev-embedded/gpsim
 sci-electronics/ngspice:deprecated - Build old and deprecated apps
 sci-electronics/ngspice:shared - Build ngspice as a shared library
@@ -7499,15 +7496,6 @@ sci-mathematics/petsc:mumps - Add support for mumps (sci-libs/mumps)
 sci-mathematics/petsc:scotch - Add support for scotch (sci-libs/scotch)
 sci-mathematics/petsc:sparse - Use suitesparse (sci-libs/suitesparse) including cholmod (sci-libs/cholmod) for sparse factorization
 sci-mathematics/petsc:superlu - Use superlu (sci-libs/superlu) for preconditioning
-sci-mathematics/polymake:bliss - Enable sci-libs/bliss interface for graph and face lattice isomorphism computations.
-sci-mathematics/polymake:cdd - Enable sci-libs/cddlib interface for convex hull computations (Should be kept enabled).
-sci-mathematics/polymake:flint - Build with "strongly recommended" support for sci-mathematics/flint.
-sci-mathematics/polymake:libpolymake - Build the polymake library to build applications using the C++ interface.
-sci-mathematics/polymake:lrs - Enable sci-libs/lrslib interface for convex hull computations.
-sci-mathematics/polymake:nauty - Build the extension for graph automorphism computations using sci-mathematics/nauty.
-sci-mathematics/polymake:normaliz - Build the bundled extension for lattice computations using sci-mathematics/normaliz.
-sci-mathematics/polymake:ppl - Enable dev-libs/ppl interface for convex hull computations.
-sci-mathematics/polymake:singular - Enable the interface to sci-mathematics/singular for ideal related computations.
 sci-mathematics/primecount:executable - Build the primecount CLI executable
 sci-mathematics/primesieve:executable - Build the primesieve CLI executable
 sci-mathematics/singular:polymake - Enable the interface to TOPCOM
@@ -7898,6 +7886,8 @@ sys-apps/util-linux:su - build the su program
 sys-apps/util-linux:suid - Install some programs with suid bit set to provide additional functionality. mount/umount: non-root users may mount/umount devices wall/write: non-root users can notify other users su: non-root users may become root
 sys-apps/util-linux:tty-helpers - install the mesg/wall/write tools for talking to local users
 sys-apps/watchdog:nfs - enable support for checking nfs mounts
+sys-apps/xdg-desktop-portal:flatpak - Enable sys-apps/flatpak integration
+sys-apps/xdg-desktop-portal:seccomp - Use sys-apps/bubblewrap (which requires seccomp) to sandbox some functionality like icon handling
 sys-apps/xinetd:rpc - support RPC services
 sys-auth/elogind:cgroup-hybrid - Use hybrid cgroup hierarchy (OpenRC's default) instead of unified.
 sys-auth/munge:gcrypt - Use libgcrypt instead of openssl
@@ -8761,6 +8751,7 @@ x11-base/xorg-server:xephyr - Build the Xephyr server
 x11-base/xorg-server:xnest - Build the Xnest server
 x11-base/xorg-server:xorg - Build the Xorg X server (HIGHLY RECOMMENDED)
 x11-base/xorg-server:xvfb - Build the Xvfb server
+x11-base/xwayland:libei - Enable emulated input using dev-libs/libei
 x11-base/xwayland:unwind - Enable libunwind usage for backtraces
 x11-base/xwayland:xcsecurity - Build Security extension
 x11-drivers/nvidia-drivers:kernel-open - Use the open source variant of drivers (Turing/Ampere+ GPUs only, aka GTX 1650+, experimental)

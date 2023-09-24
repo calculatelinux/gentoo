@@ -647,7 +647,6 @@
     <member>
       <email>sam@gentoo.org</email>
       <name>Sam James</name>
-      <role>arm64 maintenance</role>
     </member>
   </project>
   <project>
@@ -928,10 +927,6 @@
       <email>leio@gentoo.org</email>
       <name>Mart Raudsepp</name>
       <role>Lead</role>
-    </member>
-    <member>
-      <email>mattst88@gentoo.org</email>
-      <name>Matt Turner</name>
     </member>
     <member>
       <email>pacho@gentoo.org</email>
@@ -1776,7 +1771,7 @@
   </project>
   <project>
     <email>netmon@gentoo.org</email>
-    <name>Gentoo network monitoring and analysis project</name>
+    <name>Network monitoring and analysis project</name>
     <url>https://wiki.gentoo.org/wiki/Project:Netmon</url>
     <description>Maintaining network monitoring and analysis libraries and programs</description>
     <member>
@@ -1958,7 +1953,6 @@
     <member>
       <email>sam@gentoo.org</email>
       <name>Sam James</name>
-      <role>Minor Perl helper</role>
     </member>
   </project>
   <project>
