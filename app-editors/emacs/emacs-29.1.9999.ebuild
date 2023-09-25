@@ -45,6 +45,7 @@ IUSE="acl alsa aqua athena cairo dbus dynamic-loading games gfile gif +gmp gpm g
 X_DEPEND="x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
+	x11-libs/libXcomposite
 	x11-libs/libXext
 	x11-libs/libXfixes
 	x11-libs/libXi
@@ -179,6 +180,8 @@ src_prepare() {
 			|| die "Upstream version number changed to ${FULL_VERSION}"
 	fi
 
+	default
+
 	if use jit; then
 		find lisp -type f -name "*.elc" -delete || die
 
@@ -192,8 +195,6 @@ src_prepare() {
 			&& export LIBRARY_PATH=$("$(tc-getCC)" -print-search-dirs \
 				| sed -n '/^libraries:/{s:^[^/]*::;p}')
 	fi
-
-	default
 
 	# Fix filename reference in redirected man page
 	sed -i -e "/^\\.so/s/etags/&-${EMACS_SUFFIX}/" doc/man/ctags.1 || die

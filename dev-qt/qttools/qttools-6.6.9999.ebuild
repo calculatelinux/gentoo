@@ -8,11 +8,11 @@ inherit llvm optfeature qt6-build
 DESCRIPTION="Qt Tools Collection"
 
 if [[ ${QT6_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~loong"
 fi
 
 IUSE="
-	assistant clang designer distancefieldgenerator gles2-only
+	+assistant clang designer distancefieldgenerator gles2-only
 	+linguist opengl pixeltool qdbus qdoc qml qtattributionsscanner
 	qtdiag qtplugininfo vulkan +widgets zstd
 "

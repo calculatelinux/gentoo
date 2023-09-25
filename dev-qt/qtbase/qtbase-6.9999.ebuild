@@ -8,7 +8,7 @@ inherit flag-o-matic qt6-build toolchain-funcs
 DESCRIPTION="Cross-platform application development framework"
 
 if [[ ${QT6_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~loong"
 fi
 
 declare -A QT6_IUSE=(
@@ -87,7 +87,10 @@ RDEPEND="
 		eglfs? ( media-libs/mesa[gbm(+)] )
 		evdev? ( sys-libs/mtdev )
 		libinput? ( dev-libs/libinput:= )
-		opengl? ( media-libs/libglvnd[X?] )
+		opengl? (
+			gles2-only? ( media-libs/libglvnd )
+			!gles2-only? ( media-libs/libglvnd[X?] )
+		)
 		renderdoc? ( media-gfx/renderdoc )
 		tslib? ( x11-libs/tslib )
 		widgets? (
