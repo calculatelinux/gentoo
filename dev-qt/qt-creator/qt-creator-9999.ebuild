@@ -82,7 +82,6 @@ BDEPEND="
 PATCHES=(
 	"${FILESDIR}"/${PN}-11.0.2-musl-no-execinfo.patch
 	"${FILESDIR}"/${PN}-11.0.2-musl-no-malloc-trim.patch
-	"${FILESDIR}"/${PN}-11.0.2-qt653.patch
 )
 
 pkg_setup() {
@@ -212,7 +211,7 @@ Core:
 - Help (USE=help + dev-qt/qt-docs:6 with USE=\"examples qch\")
 
 Device Support:
-- Android (dev-util/android-sdk-update-manager)
+- Android (virtual/jdk, will also want the unpackaged Qt for Android)
 
 Other Languages:
 - Nim (dev-lang/nim)

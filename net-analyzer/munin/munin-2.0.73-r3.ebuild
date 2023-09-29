@@ -17,7 +17,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~arm64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 arm arm64 ~ppc ~ppc64 x86"
 IUSE="asterisk irc java ldap memcached minimal mysql postgres selinux ssl test cgi ipv6 syslog ipmi http dhcpd doc apache2"
 REQUIRED_USE="cgi? ( !minimal ) apache2? ( cgi )"
 RESTRICT="!test? ( test )"
@@ -32,6 +32,7 @@ DEPEND_COM="
 	acct-group/munin
 	dev-lang/perl:=[berkdb]
 	dev-perl/DBI
+	dev-perl/Date-Manip
 	dev-perl/File-Copy-Recursive
 	dev-perl/List-MoreUtils
 	dev-perl/Log-Log4perl
