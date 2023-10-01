@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 inherit distutils-r1 pypi
 
@@ -18,7 +18,7 @@ HOMEPAGE="
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~ppc64 ~riscv ~s390 ~x86"
+KEYWORDS="~alpha amd64 ~arm arm64 ~ia64 ~ppc64 ~riscv ~s390 x86"
 
 BDEPEND="
 	>dev-python/pbr-2.1.0[${PYTHON_USEDEP}]
