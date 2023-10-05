@@ -13,20 +13,29 @@ LIBUNWIND_DOCS_VERSION=1.7.1
 # Default to generating docs (inc. man pages) if no prebuilt; overridden later
 LIBUNWIND_DOCS_USEFLAG="+doc"
 
-[[ ${LIBUNWIND_DOCS_PREBUILT} == 1 ]] && LIBUNWIND_DOCS_USEFLAG="doc"
-
 inherit multilib-minimal
 
 DESCRIPTION="Portable and efficient API to determine the call-chain of a program"
 HOMEPAGE="https://savannah.nongnu.org/projects/libunwind"
-SRC_URI="https://github.com/libunwind/libunwind/releases/download/v${PV}/${P}.tar.gz"
-if [[ ${LIBUNWIND_DOCS_PREBUILT} == 1 ]] ; then
-	SRC_URI+=" !doc? ( https://dev.gentoo.org/~${LIBUNWIND_DOCS_PREBUILT_DEV}/distfiles/${CATEGORY}/${PN}/${PN}-${LIBUNWIND_DOCS_VERSION}-docs.tar.xz )"
+
+if [[ ${PV} == 9999 ]] ; then
+	LIBUNWIND_DOCS_PREBUILT=0
+
+	EGIT_REPO_URI="https://github.com/libunwind/libunwind"
+	inherit autotools git-r3
+else
+	SRC_URI="https://github.com/libunwind/libunwind/releases/download/v${PV}/${P}.tar.gz"
+	if [[ ${LIBUNWIND_DOCS_PREBUILT} == 1 ]] ; then
+		SRC_URI+=" !doc? ( https://dev.gentoo.org/~${LIBUNWIND_DOCS_PREBUILT_DEV}/distfiles/${CATEGORY}/${PN}/${PN}-${LIBUNWIND_DOCS_VERSION}-docs.tar.xz )"
+	fi
+
+	KEYWORDS="amd64 arm arm64 hppa ~ia64 ~loong ~mips ~ppc ppc64 ~riscv ~s390 -sparc x86 ~amd64-linux ~x86-linux"
 fi
+
+[[ ${LIBUNWIND_DOCS_PREBUILT} == 1 ]] && LIBUNWIND_DOCS_USEFLAG="doc"
 
 LICENSE="MIT"
 SLOT="0/8" # libunwind.so.8
-KEYWORDS="amd64 arm arm64 hppa ~ia64 ~loong ~mips ~ppc ppc64 ~riscv ~s390 -sparc x86 ~amd64-linux ~x86-linux"
 IUSE="debug debug-frame ${LIBUNWIND_DOCS_USEFLAG} libatomic lzma static-libs test zlib"
 
 RESTRICT="test !test? ( test )" # some tests are broken (toolchain version dependent, rely on external binaries)
@@ -66,6 +75,10 @@ src_prepare() {
 	default
 
 	chmod +x src/ia64/mk_cursor_i || die
+
+	if [[ ${PV} == 9999 ]] ; then
+		eautoreconf
+	fi
 }
 
 multilib_src_configure() {
