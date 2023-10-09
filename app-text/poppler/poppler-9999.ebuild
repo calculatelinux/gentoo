@@ -18,7 +18,7 @@ else
 	SRC_URI+=" test? ( https://gitlab.freedesktop.org/poppler/test/-/archive/${TEST_COMMIT}/test-${TEST_COMMIT}.tar.bz2 -> ${PN}-test-${TEST_COMMIT}.tar.bz2 )"
 	SRC_URI+=" verify-sig? ( https://poppler.freedesktop.org/${P}.tar.xz.sig )"
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~arm64-macos ~ppc-macos ~x64-macos ~x64-solaris"
-	SLOT="0/131"   # CHECK THIS WHEN BUMPING!!! SUBSLOT IS libpoppler.so SOVERSION
+	SLOT="0/132"   # CHECK THIS WHEN BUMPING!!! SUBSLOT IS libpoppler.so SOVERSION
 fi
 
 DESCRIPTION="PDF rendering library based on the xpdf-3.0 code base"
@@ -73,7 +73,7 @@ fi
 DOCS=( AUTHORS NEWS README.md README-XPDF )
 
 PATCHES=(
-	"${FILESDIR}/${PN}-20.12.1-qt5-deps.patch"
+	"${FILESDIR}/${PN}-23.10.0-qt-deps.patch"
 	"${FILESDIR}/${PN}-21.09.0-respect-cflags.patch"
 	"${FILESDIR}/${PN}-0.57.0-disable-internal-jpx.patch"
 )
@@ -123,15 +123,15 @@ src_configure() {
 		-DWITH_Cairo=$(usex cairo)
 		-DENABLE_LIBCURL=$(usex curl)
 		-DENABLE_CPP=$(usex cxx)
-		-DWITH_Gpgmepp=$(usex gpgme)
+		-DENABLE_GPGME=$(usex gpgme)
 		-DWITH_JPEG=$(usex jpeg)
 		-DENABLE_DCTDECODER=$(usex jpeg libjpeg none)
 		-DENABLE_LIBOPENJPEG=$(usex jpeg2k openjpeg2 none)
-		-DENABLE_CMS=$(usex lcms lcms2 none)
-		-DWITH_NSS3=$(usex nss)
+		-DENABLE_LCMS=$(usex lcms)
+		-DENABLE_NSS3=$(usex nss)
 		-DWITH_PNG=$(usex png)
-		$(cmake_use_find_package qt5 Qt5Core)
-		-DWITH_TIFF=$(usex tiff)
+		-DENABLE_QT5=$(usex qt5)
+		-DENABLE_LIBTIFF=$(usex tiff)
 		-DENABLE_UTILS=$(usex utils)
 		-DENABLE_QT6=OFF
 	)

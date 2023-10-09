@@ -33,6 +33,56 @@
 
 #--- END OF EXAMPLES ---
 
+# Patrick Lauer <patrick@gentoo.org> (2023-10-09)
+# ROCm 5.7 doesn't reliably work yet.
+=dev-util/rocm-cmake-5.7.0
+=dev-libs/roct-thunk-interface-5.7.0
+=dev-libs/rocm-device-libs-5.7.0
+=dev-libs/rocm-comgr-5.7.0
+=dev-libs/rocr-runtime-5.7.0
+=dev-libs/rocm-opencl-runtime-5.7.0
+=dev-util/rocminfo-5.7.0
+=dev-util/hip-5.7.0
+=dev-util/hipcc-5.7.0
+
+# David Seifert <soap@gentoo.org> (2023-10-08)
+# Upstream long gone, unmaintained, EAPI 6, only Gentoo still packages
+# this. Removal on 2023-11-07. Bug #905187.
+app-misc/dvorakng
+
+# David Seifert <soap@gentoo.org> (2023-10-08)
+# Unmaintained, EAPI 6, tons of patches we have to carry, last release
+# 20 years ago, all major distros have removed this.
+# Removal on 2023-11-07. Bug #602382.
+app-backup/flexbackup
+
+# David Seifert <soap@gentoo.org> (2023-10-08)
+# Unmaintained, last release over 23 years(!) ago, multiple QA issues,
+# no other major distro carries this anymore. Removal on 2023-11-07.
+# Bug #425872, #452982, #520968, #605450, #878621, #905945.
+app-admin/qpage
+
+# David Seifert <soap@gentoo.org> (2023-10-08)
+# Upstream gone, kept on life support by Debian, most distros don't
+# carry this anymore, Transmeta CPUs are long obsolete at this point.
+# Removal on 2023-11-07. Bug #541694, #905186.
+app-admin/longrun
+
+# David Seifert <soap@gentoo.org> (2023-10-08)
+# Unmaintained, typical broken suckless build system, no upstream
+# activity, only Fedora still carries it.
+# Removal on 2023-11-06. Bug #732422, #914638.
+x11-misc/sselp
+
+# David Seifert <soap@gentoo.org> (2023-10-08)
+# Unmaintained, last release over 5 years ago, lots of QA issues, no
+# other distro carries this.
+# Removal on 2023-11-06. Bug #742782, #742809, #771858, #811393,
+# #898314, #898322, #898324, #898326.
+dev-libs/libtubo
+x11-libs/librfm
+x11-misc/rodent
+
 # Hans de Graaff <graaff@gentoo.org> (2023-10-07)
 # Unresolved security issues since two years, bug #792336. Original
 # upstream inactive since 2019. Substitute upstream inactive since
@@ -296,7 +346,6 @@ dev-erlang/protobuffs
 # Matt Turner <mattst88@gentoo.org> (2023-07-06)
 # GNOME 45 mask
 >=app-editors/ghex-45_alpha
->=app-misc/gnote-45_alpha
 >=gnome-extra/gnome-logs-45_alpha
 >=net-misc/gnome-remote-desktop-45_alpha
 >=x11-libs/pango-1.51.0

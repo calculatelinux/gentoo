@@ -1,0 +1,16 @@
+BDEPEND=virtual/pkgconfig >=dev-util/meson-0.62.2 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
+DEFINED_PHASES=compile configure install test
+DEPEND=dev-libs/cJSON net-libs/mbedtls:=
+DESCRIPTION=Library for Reliable Internet Stream Transport (RIST) protocol
+EAPI=8
+HOMEPAGE=https://code.videolan.org/rist/librist
+INHERIT=meson
+IUSE=test
+KEYWORDS=~arm64
+LICENSE=BSD-2
+RDEPEND=dev-libs/cJSON net-libs/mbedtls:=
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://code.videolan.org/rist/librist/-/archive/v0.2.8/librist-v0.2.8.tar.bz2
+_eclasses_=meson	af1ca7ad21fdd31fcc4fa91d8abca977	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	python-utils-r1	12aa0037eb004139215ff04894d52b28	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc
+_md5_=c3deabdd2e9035ab34d3e04c5f7a1fda

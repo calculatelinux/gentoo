@@ -12,5 +12,5 @@ RDEPEND=dev-lang/orc[static-libs(+)?] >=dev-libs/glib-2.38:2[static-libs(+)?] de
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://www.spice-space.org/download/releases/spice-server/spice-0.15.1.tar.bz2
-_eclasses_=autotools	6ae9a4347149b19a112caa1182d03bde	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	9d3a9a889a6fa62ae794f817c156491b	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	python-any-r1	f5169813d1619761b459800587005fd2	python-utils-r1	12aa0037eb004139215ff04894d52b28	readme.gentoo-r1	204091a2cde6179cd9d3db26d09412d3	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	xdg-utils	baea6080dd821f5562d715887954c9d3
+_eclasses_=autotools	6ae9a4347149b19a112caa1182d03bde	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	9d3a9a889a6fa62ae794f817c156491b	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	python-any-r1	f5169813d1619761b459800587005fd2	python-utils-r1	12aa0037eb004139215ff04894d52b28	readme.gentoo-r1	204091a2cde6179cd9d3db26d09412d3	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	xdg-utils	baea6080dd821f5562d715887954c9d3
 _md5_=8a0ad409719e8a50c885dd54b37a3ef3
