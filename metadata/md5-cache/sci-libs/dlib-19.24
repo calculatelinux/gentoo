@@ -1,4 +1,4 @@
-BDEPEND=python? ( >=dev-python/gpep517-13[python_targets_python3_10(-)?] >=dev-python/setuptools-67.8.0-r1[python_targets_python3_10(-)?] test? ( dev-python/pytest[python_targets_python3_10(-)?] dev-python/pip[python_targets_python3_10(-)?] ) ) >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+BDEPEND=python? ( >=dev-python/gpep517-15[python_targets_python3_10(-)?] >=dev-python/setuptools-67.8.0-r1[python_targets_python3_10(-)?] test? ( dev-python/pytest[python_targets_python3_10(-)?] dev-python/pip[python_targets_python3_10(-)?] ) ) >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
 DEFINED_PHASES=compile configure install prepare test
 DEPEND=cblas? ( virtual/cblas ) cuda? ( dev-libs/cudnn:= ) gif? ( media-libs/giflib:= ) jpeg? ( media-libs/libjpeg-turbo:0= ) lapack? ( virtual/lapack ) mkl? ( sci-libs/mkl ) png? ( media-libs/libpng:0= ) python? ( python_targets_python3_10? ( dev-lang/python:3.10 ) ) sqlite? ( dev-db/sqlite:3 ) X? ( x11-libs/libX11 )
 DESCRIPTION=Numerical and networking C++ library
@@ -13,5 +13,5 @@ REQUIRED_USE=python? ( png || ( python_targets_python3_10 ) )
 RESTRICT=!test? ( test )
 SLOT=0/19.24
 SRC_URI=https://github.com/davisking/dlib/archive/v19.24.tar.gz -> dlib-19.24.tar.gz
-_eclasses_=cmake	fc2f89084f590ac95c004ea95b0d2f80	cuda	a7ac8c78a0b64b58207dc6fda3ad9c7d	distutils-r1	24344aec2be39c69d9f279b5415298ce	flag-o-matic	e5cc383ea8420f92fe3737be790021dc	multibuild	30dbf3c5a31db09a19f31ad0a68f2405	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	python-r1	8a28fa6d3e3bc96ff8a7eff2badbe71f	python-utils-r1	12aa0037eb004139215ff04894d52b28	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	xdg-utils	baea6080dd821f5562d715887954c9d3
+_eclasses_=cmake	fc2f89084f590ac95c004ea95b0d2f80	cuda	a7ac8c78a0b64b58207dc6fda3ad9c7d	distutils-r1	d05609532b134be7c4ae2514f4c7d06e	flag-o-matic	e5cc383ea8420f92fe3737be790021dc	multibuild	30dbf3c5a31db09a19f31ad0a68f2405	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	python-r1	8a28fa6d3e3bc96ff8a7eff2badbe71f	python-utils-r1	12aa0037eb004139215ff04894d52b28	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	xdg-utils	baea6080dd821f5562d715887954c9d3
 _md5_=348e3669dc31b47c2fd4e087926e3cae

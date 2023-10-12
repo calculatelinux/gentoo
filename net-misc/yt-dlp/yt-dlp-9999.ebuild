@@ -13,7 +13,6 @@ EGIT_REPO_URI="https://github.com/yt-dlp/yt-dlp.git"
 
 LICENSE="Unlicense"
 SLOT="0"
-KEYWORDS=""
 IUSE="man"
 
 RDEPEND="
@@ -43,6 +42,11 @@ python_compile() {
 }
 
 python_test() {
+	local EPYTEST_DESELECT=(
+		# fails with FEATURES=distcc, bug #915614
+		test/test_networking.py::TestYoutubeDLNetworking::test_proxy\[None-expected2\]
+	)
+
 	epytest -m 'not download'
 }
 

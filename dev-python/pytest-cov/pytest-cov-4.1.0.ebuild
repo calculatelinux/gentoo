@@ -5,9 +5,9 @@ EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
 PYPI_NO_NORMALIZE=1
-PYTHON_COMPAT=( python3_{10..11} pypy3 )
+PYTHON_COMPAT=( python3_{10..12} pypy3 )
 
-inherit distutils-r1 pypi
+inherit distutils-r1 multiprocessing pypi
 
 DESCRIPTION="pytest plugin for coverage reporting"
 HOMEPAGE="
@@ -46,26 +46,15 @@ python_test() {
 	local -x PYTEST_DISABLE_PLUGIN_AUTOLOAD=1
 	local -x PYTEST_PLUGINS=pytest_cov.plugin,xdist.plugin,xdist.looponfail
 
-	local EPYTEST_DESELECT=(
-		# attempts to install packages via pip (network)
-		tests/test_pytest_cov.py::test_dist_missing_data
-		# TODO
-		tests/test_pytest_cov.py::test_contexts
-		tests/test_pytest_cov.py::test_cleanup_on_sigterm
-		tests/test_pytest_cov.py::test_cleanup_on_sigterm_sig_dfl
-		tests/test_pytest_cov.py::test_cleanup_on_sigterm_sig_dfl_sigint
-		tests/test_pytest_cov.py::test_cleanup_on_sigterm_sig_ign
-	)
-
 	local src=$(
 		"${EPYTHON}" -c "import coverage as m; print(*m.__path__)" || die
 	)
 	# TODO: why do we need to do that?!
 	# https://github.com/pytest-dev/pytest-cov/issues/517
-	ln -s "${src}/coverage" \
+	ln -s "${src}" \
 		"${BUILD_DIR}/install$(python_get_sitedir)/coverage" || die
 
-	nonfatal epytest
+	nonfatal epytest -n "$(makeopts_jobs)" --dist=worksteal
 	local ret=${?}
 
 	rm "${BUILD_DIR}/install$(python_get_sitedir)/coverage" || die
