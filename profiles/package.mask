@@ -33,6 +33,56 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2023-10-15)
+# These packages were required by old version of dev-python/jupyterlab
+# and dev-python/notebook, and are no longer used.
+# Removal on 2023-11-14.  Bug #915824.
+dev-python/check-manifest
+dev-python/jupyter-server-fileid
+dev-python/jupyter-server-ydoc
+dev-python/jupyter-ydoc
+dev-python/nbclassic
+dev-python/y-py
+dev-python/ypy-websocket
+
+# Mart Raudsepp <leio@gentoo.org> (2023-10-14)
+# The database used by this music fingerprint library has been defunct for
+# a while. Removal on 2023-11-13. Bug #915190.
+media-libs/libofa
+
+# Mart Raudsepp <leio@gentoo.org> (2023-10-14)
+# GStreamer plugin removed upstream. MMS was deprecated in 2003 and no
+# streams using MMS are known to exist. Removal on 2023-11-13. Bug #915771.
+media-plugins/gst-plugins-libmms
+
+# Florian Schmaus <flow@gentoo.org> (2023-10-14)
+# Obsolete acct-* packages that became leaf packages.
+# Removal on 2023-11-14.
+acct-user/tpm
+acct-group/tpm
+acct-user/ultimaker
+acct-group/ultimaker
+acct-group/systemd-hostname
+
+# Michał Górny <mgorny@gentoo.org> (2023-10-14)
+# media-video/transcode is dead for many years.  We already piled up
+# a lot of downstream patches just to keep it working, and it's broken
+# again (ffmpeg-5 this time).  The mask includes revdeps.
+# Removal on 2023-11-13.  Bug #861311.
+app-cdr/dvdshrink
+media-plugins/vdr-burn
+media-plugins/vdr-burn-templates
+media-video/dvd9to5
+media-video/dvdrip
+media-video/transcode
+
+# Andrey Grozin <grozin@gentoo.org> (2023-10-12)
+# The last upstream tag in 2021
+# There is an active fork: app-text/crqt-ng and app-text/crwx-ng
+# Bug https://bugs.gentoo.org/915634
+# Removal on 2023-11-11
+app-text/coolreader
+
 # Ionen Wolkens <ionen@gentoo.org> (2023-10-10)
 # Formerly added for unbundling on games-emulation/pcsx2, which is
 # no longer needed. Has no real use on its own, has no revdeps, and
