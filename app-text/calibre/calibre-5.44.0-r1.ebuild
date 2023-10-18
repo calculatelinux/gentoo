@@ -6,11 +6,15 @@ EAPI=8
 PYTHON_COMPAT=( python3_{9..11} )
 PYTHON_REQ_USE="ipv6(+),sqlite,ssl"
 
-inherit toolchain-funcs python-single-r1 qmake-utils xdg-utils
+inherit toolchain-funcs python-single-r1 qmake-utils verify-sig xdg-utils
 
 DESCRIPTION="Ebook management application"
 HOMEPAGE="https://calibre-ebook.com/"
-SRC_URI="https://download.calibre-ebook.com/${PV}/${P}.tar.xz"
+SRC_URI="
+	https://download.calibre-ebook.com/${PV}/${P}.tar.xz
+	verify-sig? ( https://calibre-ebook.com/signatures/${P}.tar.xz.sig )
+"
+VERIFY_SIG_OPENPGP_KEY_PATH="${BROOT}/usr/share/openpgp-keys/kovidgoyal.gpg"
 
 LICENSE="
 	GPL-3+
@@ -115,7 +119,9 @@ BDEPEND="$(python_gen_cond_dep '
 	')
 	>=virtual/podofo-build-0.9.6_pre20171027
 	<virtual/podofo-build-0.10
-	virtual/pkgconfig"
+	virtual/pkgconfig
+	verify-sig? ( sec-keys/openpgp-keys-kovidgoyal )
+"
 
 PATCHES=(
 	# Don't prompt the user for updates - they've installed via
@@ -281,23 +287,7 @@ src_install() {
 	newconfd "${FILESDIR}"/calibre-server-3.conf calibre-server
 }
 
-pkg_preinst() {
-	# Indentify stray directories from upstream's "Binary install"
-	# method (see bug 622728).
-	CALIBRE_LIB_DIR=/usr/$(get_libdir)/calibre
-	CALIBRE_LIB_CONTENT=$(for x in "${ED}${CALIBRE_LIB_DIR}"/*; do
-		printf -- "${x##*/} "; done) || die "Failed to list ${ED}${CALIBRE_LIB_DIR}"
-}
-
 pkg_postinst() {
-	[[ -n ${CALIBRE_LIB_DIR} ]] || die "CALIBRE_LIB_DIR is unset"
-	local x
-	for x in "${EROOT}${CALIBRE_LIB_DIR}"/*; do
-		if [[ " ${CALIBRE_LIB_CONTENT} " != *" ${x##*/} "* ]]; then
-			elog "Purging '${x}'"
-			rm -rf "${x}"
-		fi
-	done
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
 	xdg_icon_cache_update

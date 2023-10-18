@@ -30,6 +30,7 @@ REQUIRED_USE="
 "
 
 COMMON_DEPEND="
+	dev-cpp/abseil-cpp:=
 	dev-db/sqlite:3
 	dev-libs/glib:2
 	dev-libs/protobuf:=
@@ -91,6 +92,11 @@ BDEPEND="
 	)
 "
 
+PATCHES=(
+	"${FILESDIR}/clementine-1.4.0_rc2-c17.patch"
+	"${FILESDIR}/clementine-1.4.0_rc2-absl.patch"
+)
+
 DOCS=( Changelog README.md )
 
 src_prepare() {
@@ -107,7 +113,7 @@ src_prepare() {
 		cmake_comment_add_subdirectory tests
 	fi
 
-	rm -r 3rdparty/{libmygpo-qt,libmygpo-qt5,taglib} || die
+	rm -r 3rdparty/{libmygpo-qt5,taglib} || die
 }
 
 src_configure() {
