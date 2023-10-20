@@ -33,6 +33,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2023-10-20)
+# The test suite is broken and does not fail correctly.  No maintainer.
+# No revdeps.
+# Removal on 2023-11-19.  Bug #916047.
+dev-python/pydotplus
+
+# Ulrich Müller <ulm@gentoo.org> (2023-10-19)
+# Pretest versions, masked for testing.
+<app-editors/emacs-29.1.9999:29-vcs
+
 # Sam James <sam@gentoo.org> (2023-10-16)
 # Part of Perl core and better maintained there - the version on CPAN is out of
 # date and incompatible with Perl 5.38. No reverse dependencies.
@@ -231,12 +241,6 @@ net-misc/dahdi
 net-misc/dahdi-tools
 net-misc/openr2
 
-# Ulrich Müller <ulm@gentoo.org> (2023-09-20)
-# Unmaintained upstream: Last release (2.92) in 2003, last commit
-# to XEmacs CVS repository in 2008. Broken with Emacs 29.
-# Masked for removal on 2023-10-20, bug #914449.
-app-emacs/crypt++
-
 # Bernard Cafarelli <voyageur@gentoo.org> (2023-09-19)
 # Only works with PHP 7, which was dropped from Gentoo
 # Upstream has no short-term plan to add PHP 8 support
@@ -304,7 +308,6 @@ dev-python/itypes
 
 # Matt Turner <mattst88@gentoo.org> (2023-07-06)
 # GNOME 45 mask
->=app-editors/ghex-45_alpha
 >=gnome-extra/gnome-logs-45_alpha
 >=net-misc/gnome-remote-desktop-45_alpha
 >=x11-libs/pango-1.51.0

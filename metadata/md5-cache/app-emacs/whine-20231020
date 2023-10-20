@@ -1,0 +1,13 @@
+BDEPEND=>=app-editors/emacs-25.3:*
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DESCRIPTION=Complaint generator for GNU Emacs
+EAPI=8
+HOMEPAGE=https://www.emacswiki.org/emacs/Whine
+INHERIT=elisp
+KEYWORDS=~amd64 ~x86
+LICENSE=CC0-1.0
+RDEPEND=>=app-editors/emacs-25.3:*
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~ulm/distfiles/whine-20231020.el.xz
+_eclasses_=elisp	fbefa95f5e9ab880a34bc69832b7c0d7	elisp-common	dc179f98b2b4d9a4473fd3bdc154bbb6
+_md5_=e3faafcc5814cc239933ecf448401a9f
