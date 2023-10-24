@@ -6,10 +6,10 @@ EAPI=8
 HOMEPAGE=https://github.com/NilsBrause/waylandpp
 INHERIT=cmake
 IUSE=doc
-KEYWORDS=~amd64 ~arm ~arm64 ~riscv ~x86
+KEYWORDS=amd64 ~arm arm64 ~riscv x86
 LICENSE=MIT
 RDEPEND=>=dev-libs/wayland-1.11.0 media-libs/mesa[wayland] >=dev-libs/pugixml-1.9-r1
 SLOT=0/1.0
 SRC_URI=https://github.com/NilsBrause/waylandpp/archive/1.0.0.tar.gz -> waylandpp-1.0.0.tar.gz
-_eclasses_=cmake	fc2f89084f590ac95c004ea95b0d2f80	flag-o-matic	e5cc383ea8420f92fe3737be790021dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	xdg-utils	baea6080dd821f5562d715887954c9d3
-_md5_=ce5b4bb236a4a32320b7bcba03d5edcf
+_eclasses_=cmake	fc2f89084f590ac95c004ea95b0d2f80	flag-o-matic	5ae516d405b6ae5636e487ea4350a8a2	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=534c79674cb2371249424d583904b4ca

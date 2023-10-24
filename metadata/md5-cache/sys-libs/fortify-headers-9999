@@ -1,11 +1,11 @@
 BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile install prepare unpack
-DESCRIPTION=A standalone implementation of fortify source
-EAPI=7
-HOMEPAGE=http://git.2f30.org/fortify-headers/
-INHERIT=git-r3
+DEFINED_PHASES=compile install prepare test unpack
+DESCRIPTION=Standalone implementation of fortify source
+EAPI=8
+HOMEPAGE=https://github.com/jvoisin/fortify-headers
+INHERIT=toolchain-funcs git-r3
 LICENSE=ISC
 PROPERTIES=live
 SLOT=0
-_eclasses_=git-r3	2358a7b20091609e24bd3a83b3ac5991
-_md5_=3c6d4a3c9e8e2cb5d8db2e24833dfbaa
+_eclasses_=git-r3	2358a7b20091609e24bd3a83b3ac5991	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc
+_md5_=ddac4820d4d1fdc36b82ca110f904adb

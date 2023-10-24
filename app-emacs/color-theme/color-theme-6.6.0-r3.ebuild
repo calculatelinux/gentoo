@@ -11,7 +11,7 @@ SRC_URI="http://download.savannah.gnu.org/releases-noredirect/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc sparc x86 ~amd64-linux ~x86-linux"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-replace-in-string.patch
@@ -19,7 +19,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-emacs-29.patch
 )
 ELISP_REMOVE="color-theme-autoloads.*"
-SITEFILE="50${PN}-gentoo-6.6.0-r3.el"
+SITEFILE="50${PN}-gentoo.el"
 
 src_install() {
 	elisp-install ${PN} *.el *.elc

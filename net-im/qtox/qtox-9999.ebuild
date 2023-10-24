@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -20,7 +20,7 @@ HOMEPAGE="https://qtox.github.io/"
 
 LICENSE="GPL-3+"
 SLOT="0"
-IUSE="notification +spellcheck test X"
+IUSE="+spellcheck test X"
 
 RESTRICT="!test? ( test )"
 
@@ -46,7 +46,6 @@ RDEPEND="
 	>=net-libs/tox-0.2.13:=[av]
 	>=net-libs/toxext-0.0.3
 	>=net-libs/tox_extension_messages-0.0.3
-	notification? ( x11-libs/snorenotify )
 	spellcheck? ( kde-frameworks/sonnet:5 )
 	X? (
 		x11-libs/libX11
@@ -78,7 +77,7 @@ src_configure() {
 		-DSPELL_CHECK=$(usex spellcheck)
 		-DSVGZ_ICON=ON
 		-DASAN=OFF
-		-DDESKTOP_NOTIFICATIONS=$(usex notification)
+		-DDESKTOP_NOTIFICATIONS=OFF
 		-DSTRICT_OPTIONS=OFF
 	)
 
