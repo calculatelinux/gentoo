@@ -25,8 +25,7 @@ DESCRIPTION="Python based extensible IRC infobot and channel bot"
 HOMEPAGE="https://docs.limnoria.net"
 LICENSE="BSD GPL-2 GPL-2+"
 SLOT="0"
-IUSE="crypt ssl test"
-RESTRICT=" !test? ( test )"
+IUSE="crypt ssl"
 
 RDEPEND="
 	dev-python/chardet[${PYTHON_USEDEP}]
@@ -41,7 +40,6 @@ RDEPEND="
 	ssl? ( dev-python/pyopenssl[${PYTHON_USEDEP}] )
 	!net-irc/supybot
 	!net-irc/supybot-plugins"
-BDEPEND="test? ( dev-python/mock[${PYTHON_USEDEP}] )"
 
 python_prepare() {
 	einfo "Removing the RSS plugin because of clashes between libxml2's Python3"

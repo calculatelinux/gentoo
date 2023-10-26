@@ -33,7 +33,7 @@ HOMEPAGE="https://aomedia.org https://aomedia.googlesource.com/aom/"
 
 LICENSE="BSD-2"
 SLOT="0/3"
-IUSE="doc +examples test"
+IUSE="big-endian doc +examples test"
 IUSE="${IUSE} cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 cpu_flags_x86_ssse3"
 IUSE="${IUSE} cpu_flags_x86_sse4_1 cpu_flags_x86_sse4_2 cpu_flags_x86_avx cpu_flags_x86_avx2"
 IUSE="${IUSE} cpu_flags_arm_neon"
@@ -57,6 +57,7 @@ DOCS=( PATENTS )
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-3.4.0-posix-c-source-ftello.patch
+	"${FILESDIR}"/${PN}-3.7.0-allow-fortify-source.patch
 )
 
 multilib_src_configure() {
@@ -68,6 +69,9 @@ multilib_src_configure() {
 		-DENABLE_TESTS=$(usex test)
 		-DENABLE_TOOLS=ON
 		-DENABLE_WERROR=OFF
+		# https://bugs.chromium.org/p/aomedia/issues/detail?id=3487 shows
+		# that big endian detection doesn't really work otherwise.
+		-DCONFIG_BIG_ENDIAN=$(usex big-endian 1 0)
 
 		# Needs libjxl, currently unpackaged.
 		-DCONFIG_TUNE_BUTTERAUGLI=0

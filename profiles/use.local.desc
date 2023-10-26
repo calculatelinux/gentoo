@@ -2745,7 +2745,6 @@ dev-tex/pythontex:highlighting - Syntax highlighting using dev-python/pygments
 dev-texlive/texlive-basic:luajittex - Add support for LuaJitTeX: LuaTeX based on LuaJIT which is usually faster.
 dev-util/Tensile:client - Build and install tensile_client executable to run benchmarks and tune GPU GEMM
 dev-util/bazel:tools - Install extra bazel tools to build from sources
-dev-util/bitcoin-tx:knots - Build enhanced Bitcoin Knots version, rather than Bitcoin Core
 dev-util/bpftool:caps - Use sys-libs/libcap to enable unprivileged run support
 dev-util/bpftrace:fuzzing - Build bpftrace for fuzzing
 dev-util/buildbot:docker - Add support for worker docker command steps
@@ -5994,7 +5993,6 @@ net-libs/ldns:ed25519 - Enable ED25519 support
 net-libs/ldns:ed448 - Enable ED448 support
 net-libs/ldns:gost - Enable GOST support
 net-libs/libbitcoinconsensus:asm - Enable assembly for optimization
-net-libs/libbitcoinconsensus:knots - Build enhanced Bitcoin Knots version, rather than Bitcoin Core
 net-libs/libetpan:liblockfile - Enable support for liblockfile library
 net-libs/libetpan:lmdb - Use dev-db/lmdb as cache DB
 net-libs/libgsasl:gcrypt - Use dev-libs/libgcrypt for low-level crypto
@@ -6707,12 +6705,12 @@ net-p2p/airdcpp-webclient:webui - Enable the Web UI
 net-p2p/amule:daemon - Enable amule daemon
 net-p2p/amule:remote - Enable remote controlling of the client
 net-p2p/amule:stats - Enable statistic reporting
-net-p2p/bitcoin-cli:knots - Build enhanced Bitcoin Knots version, rather than Bitcoin Core
 net-p2p/bitcoin-core:asm - Enable assembly for optimization
 net-p2p/bitcoin-core:berkdb - Support legacy wallets in Berkeley DB format
 net-p2p/bitcoin-core:bitcoin-cli - Build and install bitcoin-cli command line interface
 net-p2p/bitcoin-core:daemon - Build and install bitcoind daemon
 net-p2p/bitcoin-core:external-signer - Include support for external wallet signer programs
+net-p2p/bitcoin-core:gui - Build and install Bitcoin-Qt GUI
 net-p2p/bitcoin-core:libs - Build and install libbitcoinconsensus
 net-p2p/bitcoin-core:nat-pmp - Enable NAT-PMP port forwarding
 net-p2p/bitcoin-core:qrcode - Enable generation of QR Codes for receiving payments
@@ -6724,19 +6722,15 @@ net-p2p/bitcoin-core:upnp - Enable Universal Plug and Play
 net-p2p/bitcoin-core:zeromq - Report blocks and transactions via zeromq
 net-p2p/bitcoin-qt:asm - Enable assembly for optimization
 net-p2p/bitcoin-qt:external-signer - Include support for external wallet signer programs
-net-p2p/bitcoin-qt:knots - Build enhanced Bitcoin Knots version, rather than Bitcoin Core
 net-p2p/bitcoin-qt:nat-pmp - Enable NAT-PMP port forwarding
 net-p2p/bitcoin-qt:qrcode - Enable generation of QR Codes for receiving payments
-net-p2p/bitcoin-qt:system-leveldb - Use the system-wide dev-libs/leveldb instead of bundled
 net-p2p/bitcoin-qt:systemtap - Enable SystemTAP/DTrace tracing
 net-p2p/bitcoin-qt:upnp - Enable Universal Plug and Play
 net-p2p/bitcoin-qt:wallet - Enable wallet support
 net-p2p/bitcoin-qt:zeromq - Report blocks and transactions via zeromq
 net-p2p/bitcoind:asm - Enable assembly for optimization
 net-p2p/bitcoind:external-signer - Include support for external wallet signer programs
-net-p2p/bitcoind:knots - Build enhanced Bitcoin Knots version, rather than Bitcoin Core
 net-p2p/bitcoind:nat-pmp - Enable NAT-PMP port forwarding
-net-p2p/bitcoind:system-leveldb - Use the system-wide dev-libs/leveldb instead of bundled
 net-p2p/bitcoind:systemtap - Enable SystemTAP/DTrace tracing
 net-p2p/bitcoind:upnp - Enable Universal Plug and Play
 net-p2p/bitcoind:wallet - Enable wallet support
@@ -8653,7 +8647,6 @@ www-apps/wordpress:themes - Installs themes (including default theme)
 www-apps/xpra-html5:brotli - Install assets compressed with brotli
 www-apps/xpra-html5:gzip - Install assets compressed with gzip
 www-apps/xpra-html5:minify - Minify JavaScript code for smaller transfers
-www-client/chromium:component-build - Split build into more shared libraries to speed up linking. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
 www-client/chromium:debug - Enable DCHECK feature with severity configurable at runtime. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
 www-client/chromium:gtk4 - Build with GTK4 headers.
 www-client/chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
@@ -8663,11 +8656,7 @@ www-client/chromium:lto - Build with Link Time Optimizations (via clang's ThinLT
 www-client/chromium:official - Enable Official build instead of Developer build.
 www-client/chromium:pax-kernel - Allow building on a PaX-enabled kernel
 www-client/chromium:pgo - Build with Profile Guided Optimizations (2-stage compilation)
-www-client/chromium:pic - Disable optimized assembly code that is not PIC friendly
 www-client/chromium:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
-www-client/chromium:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels
-www-client/chromium:system-av1 - Use system media-libs/libaom and media-libs/dav1d instead of the bundled libraries.
-www-client/chromium:system-ffmpeg - Use system media-video/ffmpeg instead of the bundled version.
 www-client/chromium:system-harfbuzz - Use system media-libs/harfbuzz instead of the bundled library.
 www-client/chromium:system-icu - Use system dev-libs/icu instead of the bundled one
 www-client/chromium:system-png - Use system media-libs/libpng instead of the bundled library
