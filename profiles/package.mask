@@ -33,6 +33,54 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2023-10-26)
+# Non-installable since the distfile is gone and the package
+# is mirror-restricted.
+# Removal on 2023-11-25.  Bug #753515.
+games-strategy/defcon-demo
+
+# Michał Górny <mgorny@gentoo.org> (2023-10-26)
+# An unmaintained programming language with last release in 2009.
+# Multiple bugs reported.  No revdeps.
+# Removal on 2023-11-25.
+dev-lang/ferite
+
+# Michał Górny <mgorny@gentoo.org> (2023-10-26)
+# Obsolete package for GRUB 1.x.  No updates since 2009, multiple bugs
+# reported.
+# Removal on 2023-11-25.  Bug #912684.
+media-gfx/grub-splashes
+
+# Michał Górny <mgorny@gentoo.org> (2023-10-26)
+# Dead (and discouraged prior to death).  No revdeps.
+# Removal on 2023-11-25.  Bug #912879.
+dev-php/securimage
+
+# Michał Górny <mgorny@gentoo.org> (2023-10-26)
+# Not installable due to conflict with sys-apps/coreutils.
+# Removal on 2023-11-25.  Bug #908406.
+app-misc/realpath
+
+# Michał Górny <mgorny@gentoo.org> (2023-10-26)
+# Hyperdex "support libraries".  Hyperdex was removed in 2020.
+# No revdeps outside the bunch.
+# Removal on 2023-11-25.  Bug #527386.
+dev-libs/busybee
+dev-libs/libe
+dev-libs/libpo6
+dev-libs/libtreadstone
+
+# Michał Górny <mgorny@gentoo.org> (2023-10-26)
+# Fails to compile with modern C++ compilers.  Last release in 2011.
+# No revdeps.
+# Removal on 2023-11-25.  Bug #722006.
+sci-electronics/freehdl
+
+# Michał Górny <mgorny@gentoo.org> (2023-10-26)
+# Incompatible with Cython 3.  Last commit in 2016.  No revdeps.
+# Removal on 2023-11-25.  Bug #898696.
+dev-python/plyr
+
 # Marek Szuba <marecki@gentoo.org> (2023-10-26)
 # Upstream uses a massive home-made Makefile which has since the beginning
 # required massive amounts of patching to make it behave reasonably
@@ -291,7 +339,6 @@ net-misc/openr2
 # Matt Turner <mattst88@gentoo.org> (2023-07-06)
 # GNOME 45 mask
 >=gnome-extra/gnome-logs-45_alpha
->=net-misc/gnome-remote-desktop-45_alpha
 >=x11-libs/pango-1.51.0
 
 # Sam James <sam@gentoo.org> (2023-07-05)
@@ -334,13 +381,6 @@ net-misc/openr2
 =dev-db/mariadb-10.6.13
 =dev-db/mariadb-10.11.2
 =dev-db/mariadb-10.11.3
-
-# Bernd Waibel <waebbl-gentoo@posteo.net> (2023-05-31)
-# Mask this version for uptime soversion issue. There will be an updated release
-# shortly which fixes this.
-# See https://github.com/AcademySoftwareFoundation/Imath/issues/189#issuecomment-1567077722
-# Bug: #907211
-=dev-libs/imath-3.1.7
 
 # Sam James <sam@gentoo.org> (2023-05-19)
 # Breaks Portage's pid-sandbox at least with 5.10 kernels. Pending investigation.
@@ -488,10 +528,6 @@ dev-tex/pdfannotextractor
 # new features. Beside vulkan, it is typically behind the main branch
 # and may be buggier or less secure. Only unmask if really wanted.
 x11-drivers/nvidia-drivers:0/vulkan
-
-# Mart Raudsepp <leio@gentoo.org> (2021-09-23)
-# Incompatible with c++17 abseil-cpp, no in-tree consumers yet
-media-libs/webrtc-audio-processing:1
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2021-09-18)
 # sys-devel/automake version 1.11 is EOL and is only useful for testing
