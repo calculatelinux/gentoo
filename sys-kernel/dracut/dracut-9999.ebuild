@@ -3,25 +3,30 @@
 
 EAPI=8
 
-inherit bash-completion-r1 linux-info optfeature systemd toolchain-funcs
+inherit bash-completion-r1 edo linux-info optfeature systemd toolchain-funcs
 
 if [[ ${PV} == 9999 ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/dracutdevs/dracut"
 else
-	if [[ "${PV}" != *_rc* ]]; then
-		KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86"
+	if [[ ${PV} == *_p* ]] ; then
+		EGIT_COMMIT="b2af8c8bcfc72802e02e2c0adc2eed9279101624"
+		SRC_URI="https://github.com/dracutdevs/dracut/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
+		S="${WORKDIR}"/${PN}-${EGIT_COMMIT}
+	else
+		SRC_URI="https://github.com/dracutdevs/dracut/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 	fi
-	SRC_URI="https://github.com/dracutdevs/dracut/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 fi
 
 DESCRIPTION="Generic initramfs generation tool"
-HOMEPAGE="https://dracut.wiki.kernel.org"
+HOMEPAGE="https://github.com/dracutdevs/dracut/wiki"
 
 LICENSE="GPL-2"
 SLOT="0"
+if [[ ${PV} != 9999 && ${PV} != *_rc* ]]; then
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86"
+fi
 IUSE="selinux test"
-
 RESTRICT="!test? ( test )"
 
 RDEPEND="
@@ -63,7 +68,6 @@ QA_MULTILIB_PATHS="usr/lib/dracut/.*"
 
 PATCHES=(
 	"${FILESDIR}"/gentoo-ldconfig-paths-r1.patch
-	"${FILESDIR}"/gentoo-network-r1.patch
 )
 
 src_configure() {
@@ -76,8 +80,7 @@ src_configure() {
 
 	tc-export CC PKG_CONFIG
 
-	echo ./configure "${myconf[@]}"
-	./configure "${myconf[@]}" || die
+	edo ./configure "${myconf[@]}"
 
 	if [[ ${PV} != 9999 && ! -f dracut-version.sh ]] ; then
 		# Source tarball from github doesn't include this file

@@ -1,7 +1,12 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
+
+# Note too treecleaners: This is the last veracrypt version that
+# supports mounting truecrypt volumes. Let's give folks more time than
+# usual to figure out what to do with their existing truecrypt volumes.
+# Please do not treeclean before February 2024 unless it's necessary.
 
 WX_GTK_VER="3.0-gtk3"
 inherit desktop flag-o-matic linux-info pax-utils toolchain-funcs wxwidgets

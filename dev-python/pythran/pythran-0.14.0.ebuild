@@ -23,7 +23,7 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~sparc ~x86"
 
 RDEPEND="
 	dev-libs/boost
@@ -52,11 +52,18 @@ BDEPEND="
 distutils_enable_tests pytest
 
 src_configure() {
-	cat >> setup.cfg <<-EOF
+	cat >> setup.cfg <<-EOF || die
 		[build_py]
 		no_boost = True
 		no_xsimd = True
 	EOF
+
+	if use test ; then
+		sed -i \
+			-e 's|blas=blas|blas=cblas|' \
+			-e 's|libs=|libs=cblas|' \
+			pythran/pythran-*.cfg || die
+	fi
 }
 
 python_test() {
@@ -72,13 +79,8 @@ python_test() {
 	case ${EPYTHON} in
 		python3.12)
 			EPYTEST_DESELECT+=(
-				pythran/tests/test_cases.py::TestCases::test_convnet_run0
-				pythran/tests/test_advanced.py::TestAdvanced::test_matmul_operator
+				# requires numpy.distutils
 				pythran/tests/test_distutils.py::TestDistutils::test_setup_{b,s}dist_install3
-				pythran/tests/test_cases.py::TestCases::test_euclidean_distance_square_run0
-				pythran/tests/test_numpy_func2.py::TestNumpyFunc2::test_matrix_power{0..2}
-				pythran/tests/test_numpy_func3.py::TestNumpyFunc3::test_dot{5,7,9,11,12b,13,14b}
-				pythran/tests/test_numpy_func3.py::TestNumpyFunc3::test_dot{15..23}
 			)
 			;;
 	esac

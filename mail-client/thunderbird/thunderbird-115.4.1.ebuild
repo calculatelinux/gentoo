@@ -57,7 +57,7 @@ SRC_URI="${MOZ_SRC_BASE_URI}/source/${MOZ_P}.source.tar.xz -> ${MOZ_P_DISTFILES}
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="https://www.thunderbird.net/"
 
-KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm64 ~ppc64 x86"
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
@@ -604,6 +604,10 @@ src_prepare() {
 
 	if ! use ppc64; then
 		rm -v "${WORKDIR}"/firefox-patches/*ppc64*.patch || die
+	fi
+
+	if use x86 && use elibc_glibc ; then
+		rm -v "${WORKDIR}"/firefox-patches/*-musl-non-lfs64-api-on-audio_thread_priority-crate.patch || die
 	fi
 
 	eapply "${WORKDIR}/firefox-patches"
