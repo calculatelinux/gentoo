@@ -1,0 +1,16 @@
+BDEPEND=sys-devel/llvm:17 test? ( >=dev-util/cmake-3.16 || ( ( dev-lang/python:3.12 >=dev-python/lit-17.0.4.9999[python_targets_python3_12(-)] ) ( dev-lang/python:3.11 >=dev-python/lit-17.0.4.9999[python_targets_python3_11(-)] ) ( dev-lang/python:3.10 >=dev-python/lit-17.0.4.9999[python_targets_python3_10(-)] ) ) ) >=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=~sys-devel/llvm-17.0.4.9999[debug=,zstd=] sys-libs/zlib:= zstd? ( app-arch/zstd:= ) !!sys-devel/llvm:0
+DESCRIPTION=The LLVM linker (link editor)
+EAPI=8
+HOMEPAGE=https://llvm.org/
+INHERIT=cmake flag-o-matic llvm llvm.org python-any-r1 toolchain-funcs
+IUSE=+debug test zstd
+LICENSE=Apache-2.0-with-LLVM-exceptions UoI-NCSA
+PDEPEND=>=sys-devel/lld-toolchain-symlinks-16-r2:17
+PROPERTIES=live
+RDEPEND=~sys-devel/llvm-17.0.4.9999[debug=,zstd=] sys-libs/zlib:= zstd? ( app-arch/zstd:= ) !sys-devel/lld:0
+RESTRICT=!test? ( test )
+SLOT=17/17
+_eclasses_=cmake	0f2e0c197fad0312f3c4765c9cf36271	flag-o-matic	baa4d385108ac87993edac956a916a36	git-r3	2358a7b20091609e24bd3a83b3ac5991	llvm	2e1701c714b75feb512bffdecd3fe7d0	llvm.org	94a91d9c9cb09a9ef47f444c57d6e965	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	python-any-r1	f5169813d1619761b459800587005fd2	python-utils-r1	f6221c2f55e5e832be9919fe1711f33b	toolchain-funcs	70ec42843fec87d20fd94c67e77cdbff	xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=5ed70ddc0d45258a2f780cd48e38004b

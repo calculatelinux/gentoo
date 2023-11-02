@@ -13,12 +13,13 @@ if [[ "${PV}" == *9999* ]]; then
 	EGIT_REPO_URI="https://github.com/caddyserver/caddy.git"
 else
 	SRC_URI="https://github.com/caddyserver/caddy/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	SRC_URI+=" https://dev.gentoo.org/~williamh/dist/${P}-deps.tar.xz"
+	SRC_URI+=" https://github.com/rahilarious/gentoo-distfiles/releases/download/${P}/deps.tar.xz -> ${P}-deps.tar.xz"
 	SRC_URI+=" https://github.com/caddyserver/dist/archive/refs/tags/v${PV}.tar.gz -> ${P}-docs.tar.gz"
 	KEYWORDS="~amd64 ~arm64 ~loong ~riscv"
 fi
 
-LICENSE="Apache-2.0 BSD ECL-2.0 MIT CC0-1.0"
+LICENSE="Apache-2.0"
+LICENSE+=" BSD ECL-2.0 MIT CC0-1.0"
 SLOT="0"
 RESTRICT="test"
 RDEPEND="
@@ -28,6 +29,10 @@ DEPEND="${RDEPEND}"
 
 FILECAPS=(
 	-m 755 'cap_net_bind_service=+ep' usr/bin/"${PN}"
+)
+
+PATCHES=(
+	"${FILESDIR}"/remove-binary-altering-commands-2.7.5.patch
 )
 
 src_unpack() {
@@ -48,12 +53,19 @@ src_unpack() {
 
 src_prepare(){
 	default
-	sed -i -e "s|User=caddy|User=http|g;" ../dist-"${PV}"/init/*service || die
-	sed -i -e "s|Group=caddy|Group=http|g;" ../dist-"${PV}"/init/*service || die
+	sed -i -e "s|User=caddy|User=http|g;s|Group=caddy|Group=http|g;" ../dist-"${PV}"/init/*service || die
 }
 
 src_compile() {
-	ego build ./cmd/caddy
+	# https://github.com/caddyserver/caddy/blob/master/caddy.go#L843
+	if [[ ${PV} == 9999* ]]; then
+		local CUSTOM_VER="git-$(git rev-parse --short HEAD)"
+	else
+		local CUSTOM_VER="${PV}"
+	fi
+
+	ego build -ldflags "-X github.com/caddyserver/caddy/v2.CustomVersion=${CUSTOM_VER}" ./cmd/caddy
+	local sh
 	for sh in bash fish zsh; do
 		./caddy completion "${sh}" > completion."${sh}" || die
 	done
@@ -65,10 +77,10 @@ src_install() {
 
 	dobin "${PN}"
 	insinto /etc/"${PN}"
-	newins ../dist-"${PV}"/config/Caddyfile Caddyfile.example
+	doins ../dist-"${PV}"/config/Caddyfile
 	systemd_dounit ../dist-"${PV}"/init/*.service
-	newinitd "${FILESDIR}/initd" "${PN}"
-	newconfd "${FILESDIR}/confd" "${PN}"
+	newinitd "${FILESDIR}"/initd-2.7.5 "${PN}"
+	newconfd "${FILESDIR}"/confd-2.7.5 "${PN}"
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/logrotated" "${PN}"
 	insinto /usr/share/"${PN}"
