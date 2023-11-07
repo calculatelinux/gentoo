@@ -2170,6 +2170,7 @@ dev-libs/totem-pl-parser:uchardet - Enable charset discovery via app-i18n/uchard
 dev-libs/tre:agrep - Build agrep tool
 dev-libs/tre:alloca - Enable if you want TRE to use alloca() instead of malloc() when allocating memory needed for regexec operations
 dev-libs/tre:approx - Enable the approximate matching functionality
+dev-libs/uriparser:unicode - Add support for functions working with character type wchar_t (e.g. uriParseSingleUriW with trailing "W") which increases compile time and resulting binary file size by roughly factor 2.
 dev-libs/weston:desktop - Enable the desktop shell
 dev-libs/weston:drm - Enable drm compositor support
 dev-libs/weston:editor - Install wayland-editor example application
@@ -2372,6 +2373,7 @@ dev-python/QtPy:webengine - Pull in QtWebEngine and QtWebEngineWidgets modules
 dev-python/QtPy:websockets - Pull in bindings for the QtWebSockets module
 dev-python/QtPy:widgets - Pull in bindings for the QtWidgets module
 dev-python/QtPy:xml - Pull in QtXml module
+dev-python/amqp:extras - Install extra tools to generate initial Python mod from an AMQP XML file
 dev-python/autobahn:xbr - Add support for XBR decentralized data markets and etherium blockchain
 dev-python/bpython:clipboard - Enable copying to clipboard using dev-python/pyperclip
 dev-python/bpython:jedi - Enable autocompletion using dev-python/jedi
@@ -2395,7 +2397,6 @@ dev-python/matplotlib:webagg - Enable webagg backend that uses dev-python/tornad
 dev-python/mido:portmidi - Support using media-libs/portmidi as MIDI back-end
 dev-python/mido:rtmidi - Support using media-libs/rtmidi as MIDI back-end
 dev-python/mkdocs-material:social - Install the dependencies of the "social" plugin.
-dev-python/mpmath:matplotlib - Add support for dev-python/matplotlib
 dev-python/msgpack:native-extensions - Compiles native "C" extensions (speedups, instead of using python fallback code).
 dev-python/multidict:native-extensions - Compile native C extensions (speedups, instead of using Python fallback code).
 dev-python/mypy:native-extensions - Compiles native C extensions (speedups, instead of using Python fallback code).
@@ -2405,7 +2406,6 @@ dev-python/peewee:native-extensions - Compiles native C extension for more compl
 dev-python/pillow:imagequant - Build with Image Quantization Library support
 dev-python/pivy:quarter - Use media-libs/quarter for GUI bindings
 dev-python/pivy:soqt - Use media-libs/SoQt for GUI bindings
-dev-python/py-amqp:extras - Install extra tools to generate initial Python mod from an AMQP XML file
 dev-python/pyarrow:parquet - Enables read/write parquet data format
 dev-python/pydantic:native-extensions - Compiles native "C" extensions.
 dev-python/pyglet:image - Enable support for image formats other than PNG and BMP
@@ -2521,6 +2521,7 @@ dev-python/twisted:conch - include Twisted SSHv2 implementation
 dev-python/twisted:http2 - include http2 support
 dev-python/twisted:serial - include serial port support
 dev-python/websockets:native-extensions - Compiles native C extensions
+dev-python/wrapt:native-extensions - Compiles native C extensions (speedups, instead of using python fallback code).
 dev-python/zeep:async - Add async support
 dev-qt/designer:declarative - Build the qdeclarativeview plugin
 dev-qt/linguist-tools:qml - Enable QML support in lupdate
@@ -2610,7 +2611,6 @@ dev-qt/qtbluetooth:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtcharts:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtconnectivity:nfc - Enable support for the Near Field Communication protocol
 dev-qt/qtcore:old-kernel - Disable syscalls not available on Linux kernels older than 4.11
-dev-qt/qtcore:systemd - Enable native journald logging support
 dev-qt/qtdatavis3d:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtdeclarative:localstorage - Build the LocalStorage import for QtQuick (requires QtSql)
 dev-qt/qtdeclarative:opengl - Enable OpenGL support
@@ -2673,6 +2673,13 @@ dev-qt/qtwebengine:widgets - Enable QtWidgets support
 dev-qt/qtwebsockets:qml - Build QML bindings
 dev-qt/qtwidgets:gtk - Build the GTK platform theme plugin
 dev-qt/qtxmlpatterns:qml - Build the XmlListModel import for QtQuick (requires QtDeclarative)
+dev-ruby/asciidoctor-diagram:barcode - Enable diagrams with dev-ruby/rqrcode and dev-ruby/barby
+dev-ruby/asciidoctor-diagram:ditaa - Enable diagrams with media-gfx/ditaa
+dev-ruby/asciidoctor-diagram:lilypond - Enable diagrams with media-sound/lilypond
+dev-ruby/asciidoctor-diagram:meme - Enable diagrams with media-gfx/imagemagick
+dev-ruby/asciidoctor-diagram:mscgen - Enable diagrams with media-gfx/mscgen
+dev-ruby/asciidoctor-diagram:plantuml - Enable diagrams with media-gfx/plantuml
+dev-ruby/asciidoctor-diagram:tikz - Enable diagrams with dev-tex/pgf
 dev-ruby/barby:cairo - Add support for writing images (PNG, PS, EPS and, if supported, PDF and SVG) using dev-ruby/rcairo. Not available on JRuby.
 dev-ruby/barby:png - Add support for writing PNG images using dev-ruby/chunky_png.
 dev-ruby/barby:prawn - Add support for writing PDF documents using dev-ruby/prawn.
@@ -3726,6 +3733,7 @@ mail-client/mutt:pop - Enable support for POP3 mailboxes
 mail-client/mutt:smime-classic - Build classic_smime backend to support S/MIME
 mail-client/mutt:smtp - Enable support for direct SMTP delivery
 mail-client/mutt:tokyocabinet - Enable dev-db/tokyocabinet database backend for header caching
+mail-client/neomutt:asan - Enable Address sanitizer for debugging
 mail-client/neomutt:autocrypt - Enable autocrypt.org support
 mail-client/neomutt:berkdb - Enable BDB (Berkley DB) backend for header caching
 mail-client/neomutt:gdbm - Enable GDBM (GNU dbm) backend for header caching
@@ -3738,6 +3746,7 @@ mail-client/neomutt:pgp-classic - Build classic-pgp backend to support PGP/MIME 
 mail-client/neomutt:qdbm - Enable QDBM (Quicker Database Manager) database backend for header caching
 mail-client/neomutt:smime-classic - Build classic-smime backend to support S/MIME
 mail-client/neomutt:tokyocabinet - Enable Tokyo Cabinet database backend for header caching
+mail-client/neomutt:ubsan - Enable undefined behavior sanitizer for debugging
 mail-client/neomutt:zlib - Add zlib support for header cache compression
 mail-client/neomutt:zstd - Add zstd support for header cache compression
 mail-client/roundcube:change-password - Allow users to change passwords through Roundcube

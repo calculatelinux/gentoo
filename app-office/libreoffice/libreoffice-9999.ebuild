@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 PYTHON_REQ_USE="threads(+),xml(+)"
 
 MY_PV="${PV/_alpha/.alpha}"
@@ -264,6 +264,9 @@ BDEPEND="
 	virtual/pkgconfig
 	clang? (
 		|| (
+			(	sys-devel/clang:17
+				sys-devel/llvm:17
+				=sys-devel/lld-17*	)
 			(	sys-devel/clang:16
 				sys-devel/llvm:16
 				=sys-devel/lld-16*	)

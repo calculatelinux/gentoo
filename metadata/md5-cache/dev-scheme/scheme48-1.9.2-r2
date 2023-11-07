@@ -10,5 +10,5 @@ LICENSE=BSD
 RDEPEND=emacs? ( >=app-editors/emacs-23.1:* )
 SLOT=0
 SRC_URI=https://www.s48.org/1.9.2/scheme48-1.9.2.tgz
-_eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	flag-o-matic	baa4d385108ac87993edac956a916a36	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	70ec42843fec87d20fd94c67e77cdbff
+_eclasses_=elisp-common	2a0fa407d2e6363c663ccb299503b25c	flag-o-matic	baa4d385108ac87993edac956a916a36	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	edeef89edaf21d30225d31702ab117ac
 _md5_=85251a10e2233507cac3c3482896efb8

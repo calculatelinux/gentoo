@@ -76,8 +76,11 @@ BDEPEND="
 		media-gfx/graphviz
 	)
 "
-# While udev could technically be optional, it's needed for a numebr of options,
+# * While udev could technically be optional, it's needed for a number of options,
 # and not really worth it, bug #877769.
+#
+# * Supports both legacy webrtc-audio-processing:0 and new webrtc-audio-processing:1.
+# We depend on :1 as it prefers that, it's not legacy, and to avoid automagic.
 RDEPEND="
 	acct-group/audio
 	acct-group/pipewire
@@ -96,7 +99,7 @@ RDEPEND="
 		virtual/libusb:1
 	)
 	dbus? ( sys-apps/dbus[${MULTILIB_USEDEP}] )
-	echo-cancel? ( media-libs/webrtc-audio-processing:0 )
+	echo-cancel? ( media-libs/webrtc-audio-processing:1 )
 	extra? ( >=media-libs/libsndfile-1.0.20 )
 	ffmpeg? ( media-video/ffmpeg:= )
 	flatpak? ( dev-libs/glib )

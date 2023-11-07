@@ -10,5 +10,5 @@ LICENSE=public-domain HPND
 RDEPEND=X? ( x11-libs/libX11:= )
 SLOT=0
 SRC_URI=https://github.com/gtownsend/icon/archive/v9.5.20i.tar.gz -> icon-9.5.20i.tar.gz
-_eclasses_=flag-o-matic	baa4d385108ac87993edac956a916a36	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	70ec42843fec87d20fd94c67e77cdbff
+_eclasses_=flag-o-matic	baa4d385108ac87993edac956a916a36	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	edeef89edaf21d30225d31702ab117ac
 _md5_=48a6ac913a939ffea3c9c312010c9f1a

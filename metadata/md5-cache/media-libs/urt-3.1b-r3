@@ -10,5 +10,5 @@ LICENSE=URT gif? ( free-noncomm )
 RDEPEND=X? ( x11-libs/libXext ) gif? ( media-libs/giflib ) postscript? ( app-text/ghostscript-gpl ) tiff? ( media-libs/tiff:= )
 SLOT=0/3.1b-r2
 SRC_URI=ftp://ftp.iastate.edu/pub/utah-raster/urt-3.1b.tar.Z
-_eclasses_=flag-o-matic	baa4d385108ac87993edac956a916a36	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	70ec42843fec87d20fd94c67e77cdbff
+_eclasses_=flag-o-matic	baa4d385108ac87993edac956a916a36	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	edeef89edaf21d30225d31702ab117ac
 _md5_=fbf050cff511236ad703f5ba24ab12ee
