@@ -10,7 +10,7 @@ if [[ ${PV} == 9999 ]] ; then
 	EGIT_REPO_URI="https://github.com/dracutdevs/dracut"
 else
 	if [[ ${PV} == *_p* ]] ; then
-		EGIT_COMMIT="b2af8c8bcfc72802e02e2c0adc2eed9279101624"
+		EGIT_COMMIT="856e7acdb1462803c2517c8d64afb2e34c73c735"
 		SRC_URI="https://github.com/dracutdevs/dracut/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 		S="${WORKDIR}"/${PN}-${EGIT_COMMIT}
 	else
