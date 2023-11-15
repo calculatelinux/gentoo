@@ -1093,7 +1093,6 @@ app-text/calibre:font-subsetting - Enable font subsetting support
 app-text/calibre:speech - Enable text-to-speech support
 app-text/calibre:system-mathjax - Use a system copy of mathjax
 app-text/calibre:unrar - Enable support for comic books compressed with the non-free Rar format
-app-text/coolreader:wxwidgets - Use x11-libs/wxGTK instead of Qt5
 app-text/crengine-ng:chm - Support chm format
 app-text/crengine-ng:fribidi - Support bidirectional text by dev-libs/fribidi
 app-text/crengine-ng:harfbuzz - Use media-libs/harfbuzz for kerning and ligatures
@@ -2150,6 +2149,8 @@ dev-libs/qhotkey:qt6 - Use Qt6 dependencies
 dev-libs/quazip:qt5 - Build with Qt5 support
 dev-libs/quazip:qt6 - Build with Qt6 support
 dev-libs/raft:zfs - ZFS support
+dev-libs/rocksdb:numa - Enable NUMA support
+dev-libs/rocksdb:tbb - Enable support for dev-cpp/tbb
 dev-libs/sentry-native:breakpad - Use dev-util/breakpad as the crash handler
 dev-libs/sentry-native:curl - Enable support for automated uploading of crash reports
 dev-libs/serd:tools - Build command line utilities
@@ -4431,9 +4432,11 @@ media-libs/suil:gtk2 - Enable GTK2 based GUI support
 media-libs/svgalib:kernel-helper - Build the helper kernel module
 media-libs/tremor:low-accuracy - enable 32bit only multiply operations
 media-libs/urt:tools - Install tools
+media-libs/vips:archive - Enable support for compressed files using app-arch/libarchive
 media-libs/vips:deprecated - Enable deprecated components
 media-libs/vips:fits - Enable support for the Flexible Image Transport System data format using sci-libs/cfitsio
 media-libs/vips:gsf - Enable support for structured files using gnome-extra/libgsf
+media-libs/vips:highway - Enable SIMD optimizations using dev-cpp/highway (replaces USE=orc)
 media-libs/vips:imagequant - Enable support for Image Quantization using media-gfx/libimagequant
 media-libs/vips:matio - Enable support for matlab files using sci-libs/matio
 media-libs/vips:pango - Enable support for text rendering using x11-libs/pango
@@ -5158,8 +5161,6 @@ media-video/rtmpdump:ssl - Enable Cryptographic features
 media-video/rtmpdump:tools - Enable installation of various binary tools in addition to librtmp library
 media-video/simplescreenrecorder:asm - Enable x86 assembly optimisation.
 media-video/simplescreenrecorder:vpx - Enable VP8 codec support via media-libs/libvpx.
-media-video/smplayer:autoshutdown - Enable the option to shutdown your computer after finishing the playlist. This requires dev-qt/qtdbus as dependency.
-media-video/smplayer:mpris - Enable support for MPRIS2 (Media Player Remote Interfacing Specification, version 2), a DBus interface for remote control, which requires dev-qt/qtdbus as dependency.
 media-video/totem:python - Build dev-lang/python using plugins (dbusservice for notifications and MPRIS control, interactive python console and opensubtitles lookup)
 media-video/transcode:mjpeg - Enables mjpegtools support
 media-video/transcode:nuv - NuppelVideo container format demuxing
@@ -7554,6 +7555,15 @@ sci-mathematics/petsc:mumps - Add support for mumps (sci-libs/mumps)
 sci-mathematics/petsc:scotch - Add support for scotch (sci-libs/scotch)
 sci-mathematics/petsc:sparse - Use suitesparse (sci-libs/suitesparse) including cholmod (sci-libs/cholmod) for sparse factorization
 sci-mathematics/petsc:superlu - Use superlu (sci-libs/superlu) for preconditioning
+sci-mathematics/polymake:bliss - Enable sci-libs/bliss interface for graph and face lattice isomorphism computations.
+sci-mathematics/polymake:cdd - Enable sci-libs/cddlib interface for convex hull computations (Should be kept enabled).
+sci-mathematics/polymake:flint - Build with "strongly recommended" support for sci-mathematics/flint.
+sci-mathematics/polymake:libpolymake - Build the polymake library to build applications using the C++ interface.
+sci-mathematics/polymake:lrs - Enable sci-libs/lrslib interface for convex hull computations.
+sci-mathematics/polymake:nauty - Build the extension for graph automorphism computations using sci-mathematics/nauty.
+sci-mathematics/polymake:normaliz - Build the bundled extension for lattice computations using sci-mathematics/normaliz.
+sci-mathematics/polymake:ppl - Enable dev-libs/ppl interface for convex hull computations.
+sci-mathematics/polymake:singular - Enable the interface to sci-mathematics/singular for ideal related computations.
 sci-mathematics/primecount:executable - Build the primecount CLI executable
 sci-mathematics/primesieve:executable - Build the primesieve CLI executable
 sci-mathematics/singular:polymake - Enable the interface to TOPCOM
@@ -8017,6 +8027,7 @@ sys-block/nbdkit:libssh - Enable the SSH plugin via net-libs/libssh.
 sys-block/nbdkit:libvirt - Enable the app-emulation/libvirt plugin.
 sys-block/nbdkit:nbd - Enable the nbd plugin via sys-libs/libnbd.
 sys-block/nbdkit:torrent - Enable the torrent plugin via net-libs/libtorrent-rasterbar.
+sys-block/nbdkit:zlib-ng - Use sys-libs/zlib-ng to handle zlib decompression.
 sys-block/ndctl:libtracefs - Use dev-libs/libtracefs to build cxl-monitor binary
 sys-block/open-iscsi:rdma - Support iSCSI over RDMA
 sys-block/open-iscsi:tcp - Support iSCSI over TCP

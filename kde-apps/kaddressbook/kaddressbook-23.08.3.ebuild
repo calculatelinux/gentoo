@@ -3,7 +3,6 @@
 
 EAPI=8
 
-ECM_QTHELP="true"
 ECM_HANDBOOK="optional"
 ECM_TEST="forceoptional"
 PVCUT=$(ver_cut 1-3)
@@ -50,7 +49,7 @@ DEPEND="
 	>=kde-frameworks/kwidgetsaddons-${KFMIN}:5
 	>=kde-frameworks/kxmlgui-${KFMIN}:5
 	>=kde-frameworks/prison-${KFMIN}:5
-	telemetry? ( >=dev-libs/kuserfeedback-1.2.0:5 )
+	telemetry? ( >=kde-frameworks/kuserfeedback-1.2.0:5 )
 "
 RDEPEND="${DEPEND}
 	>=kde-apps/kdepim-runtime-${PVCUT}:5

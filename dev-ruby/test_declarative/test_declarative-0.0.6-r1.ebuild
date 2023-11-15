@@ -22,6 +22,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 arm arm64 ~hppa ~loong ppc ppc64 ~riscv ~s390 sparc x86"
 IUSE=""
+PATCHES=( "${FILESDIR}/${PN}-0.0.6-backport-pr24.patch" )
 
 ruby_add_bdepend "test? ( dev-ruby/bundler >=dev-ruby/minitest-5.10:5 )"
 
@@ -29,9 +30,6 @@ all_ruby_prepare() {
 	sed -i -e '/rake/ s/~> 12.0.0/>= 10/ ; /minitest/ s/5.10.1/5.10/' Gemfile || die
 
 	sed -i -e 's/git ls-files --/find/' ${RUBY_FAKEGEM_GEMSPEC} || die
-
-	# Work around incompatibilities in newer minitest versions.
-	sed -i -e "15irequire 'minitest/unit'" test/test_declarative_test.rb || die
 }
 
 each_ruby_test() {
