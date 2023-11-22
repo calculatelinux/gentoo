@@ -1,0 +1,16 @@
+BDEPEND=>=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=<sys-devel/llvm-18:= <sys-devel/clang-18:= !!sys-devel/llvm:0
+DESCRIPTION=Radeon Open Compute hipcc
+EAPI=8
+HOMEPAGE=https://github.com/ROCm-Developer-Tools/hipcc
+INHERIT=cmake llvm
+IUSE=debug test
+KEYWORDS=~amd64
+LICENSE=Apache-2.0 MIT
+RDEPEND=<sys-devel/llvm-18:= <sys-devel/clang-18:= !<dev-util/hip-5.7
+RESTRICT=!test? ( test )
+SLOT=0/5.7
+SRC_URI=https://github.com/ROCm-Developer-Tools/hipcc/archive/refs/tags/rocm-5.7.1.tar.gz -> hipcc-5.7.1.tar.gz
+_eclasses_=cmake	0f2e0c197fad0312f3c4765c9cf36271	flag-o-matic	6b3c606c5de2531072ffd36eca06a5a9	llvm	2e1701c714b75feb512bffdecd3fe7d0	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=3c63f61405b0d59e80439ea392d2a2cf

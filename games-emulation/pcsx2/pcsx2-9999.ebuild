@@ -32,7 +32,7 @@ RESTRICT="!test? ( test )"
 COMMON_DEPEND="
 	app-arch/xz-utils
 	dev-libs/libaio
-	>=dev-qt/qtbase-6.6.0:6[gui,network,widgets]
+	>=dev-qt/qtbase-6.6.0:6[gui,widgets]
 	>=dev-qt/qtsvg-6.6.0:6
 	media-libs/libglvnd
 	media-libs/libpng:=
@@ -79,7 +79,7 @@ src_prepare() {
 	cmake_src_prepare
 
 	if [[ ${PV} != 9999 ]]; then
-		sed -e '/set(PCSX2_GIT_TAG "")/s/""/"v'${PV}-gentoo'"/' \
+		sed -e '/set(PCSX2_GIT_TAG "")/s/""/"v'${PV}'"/' \
 			-i cmake/Pcsx2Utils.cmake || die
 	fi
 }

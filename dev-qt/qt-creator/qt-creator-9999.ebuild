@@ -81,7 +81,7 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-11.0.2-musl-no-execinfo.patch
-	"${FILESDIR}"/${PN}-11.0.2-musl-no-malloc-trim.patch
+	"${FILESDIR}"/${PN}-12.0.0-musl-no-malloc-trim.patch
 )
 
 llvm_check_deps() {
@@ -234,6 +234,7 @@ Utilities:
 - Conan (dev-util/conan)
 - Docker (app-containers/docker)
 - Haskell (dev-lang/ghc)
+- ScreenRecorder (media-video/ffmpeg)
 - SerialTerminal (USE=serialterminal)
 - SilverSearcher (sys-apps/the_silver_searcher)
 - StudioWelcome (USE=qmldesigner)

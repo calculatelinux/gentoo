@@ -11,5 +11,5 @@ LICENSE=LGPL-2.1
 RDEPEND=sys-libs/readline:= sys-libs/ncurses:= gnuplot? ( sci-visualization/gnuplot )
 SLOT=0
 SRC_URI=https://github.com/mfillpot/mathomatic/archive/mathomatic-16.0.5.tar.gz
-_eclasses_=flag-o-matic	baa4d385108ac87993edac956a916a36	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc
+_eclasses_=flag-o-matic	6b3c606c5de2531072ffd36eca06a5a9	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc
 _md5_=be4e4f93a1655301294798ddea4a677a
