@@ -33,6 +33,27 @@
 
 #--- END OF EXAMPLES ---
 
+# John Helmert III <ajak@gentoo.org> (2023-11-25)
+# Multiple vulnerabilities, unmaintained upstream and in Gentoo.
+# subtitleripper included as sole reverse dependency, similarly
+# unmaintained, and with no other reverse dependencies.
+# Removal on 2023-12-24, bug #824290.
+app-text/gocr
+media-video/subtitleripper
+
+# Sam James <sam@gentoo.org> (2023-11-25)
+# Breaks desktop icon rendering, see bug #904468.
+# Upstream bug: https://gitlab.xfce.org/xfce/xfdesktop/-/issues/242
+=xfce-base/xfdesktop-4.19.1
+
+# Sam James <sam@gentoo.org> (2023-11-22)
+# Further bugs with CoW via copy_file_range (bug #917224, https://github.com/openzfs/zfs/issues/15526).
+# The issue is very similar to bug #815469.
+# ZFS 2.2.1 has a workaround but if you haven't already upgraded your pool to
+# use the new block cloning feature, consider using <zfs-2.2 for now.
+=sys-fs/zfs-2.2.0
+=sys-fs/zfs-kmod-2.2.0
+
 # hololeap <hololeap@protonmail.com> (2023-11-19)
 # Package has been masked for a long time, is useless for ::gentoo, and has no
 # reverse dependencies.
