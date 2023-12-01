@@ -25,7 +25,7 @@ S="${WORKDIR}/${MY_P}/hypothesis-python"
 
 LICENSE="MPL-2.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86"
 IUSE="cli"
 
 RDEPEND="
@@ -54,7 +54,7 @@ distutils_enable_tests pytest
 python_test() {
 	# subtests are broken by warnings from random plugins
 	local -x PYTEST_DISABLE_PLUGIN_AUTOLOAD=1
-	local -x PYTEST_PLUGINS=xdist.plugin,pytest_forked,_hypothesis_pytestplugin
+	local -x PYTEST_PLUGINS=xdist.plugin,_hypothesis_pytestplugin
 	local -x HYPOTHESIS_NO_PLUGINS=1
 
 	# NB: paths need to be relative to pytest.ini,

@@ -1,6 +1,6 @@
 BDEPEND=>=dev-go/go-md2man-2.0.2 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile install prepare unpack
-DESCRIPTION=Common config files and docs for Containers eco-system
+DESCRIPTION=Common config files and docs for Containers stack
 EAPI=8
 HOMEPAGE=https://github.com/containers/common
 INHERIT=git-r3
@@ -10,4 +10,4 @@ RDEPEND=app-containers/containers-image app-containers/containers-storage app-co
 RESTRICT=test
 SLOT=0
 _eclasses_=git-r3	5133e393e8717a3a093660f990801dc1
-_md5_=9cb48e3ef8141b5b3eec69cf103c11a5
+_md5_=f0ea07c56b0c9745765059858896b6d7

@@ -1005,7 +1005,7 @@ app-office/grisbi:goffice - enable goffice graphic support
 app-office/kexi:experimental - Enable features deemed experimental by upstream
 app-office/kexi:marble - Enable displaying of maps using kde-apps/marble
 app-office/kexi:mdb - Enable support for Microsoft Access database
-app-office/kmymoney:activities - Enable kde-frameworks/kactivities integration
+app-office/kmymoney:activities - Enable kde-plasma/plasma-activities integration
 app-office/kmymoney:addressbook - Enable kde-apps/akonadi contact integration
 app-office/kmymoney:hbci - Enable HBCI support using net-libs/aqbanking
 app-office/kmymoney:holidays - Enable kde-frameworks/kholidays integration
@@ -1838,6 +1838,8 @@ dev-lang/rust-bin:rust-analyzer - Install rust-analyzer, A Rust compiler front-e
 dev-lang/rust-bin:rust-src - Install rust-src, needed by developer tools and for build-std (cross)
 dev-lang/rust-bin:rustfmt - Install rustfmt, Rust code formatter
 dev-lang/scala:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
+dev-lang/souffle:ffi - Support c++ functors with arbitrary number of arguments
+dev-lang/souffle:swig - Enable SWIG usage, needed for Java and Python bindings
 dev-lang/spidermonkey:clang - Use Clang compiler instead of GCC
 dev-lang/spidermonkey:debug - Enable assertions to allow for easier debugging of programs that link to spidermonkey -- note this will often crash software on regular end-user systems
 dev-lang/spidermonkey:lto - Enable Link Time Optimization (LTO)
@@ -1956,7 +1958,6 @@ dev-libs/ktextaddons:designer - Build plugins for dev-qt/designer
 dev-libs/ktextaddons:speech - Enable text-to-speech support
 dev-libs/libbase58:tools - Build command line base58 tool
 dev-libs/libbytesize:tools - Build bscalc python CLI tool
-dev-libs/libcbor:custom-alloc - Custom, dynamically defined allocator support
 dev-libs/libcdio:minimal - Only build the libcdio library and little more, just to be used to link against from multimedia players. With this USE flag enabled, none of the command-line utilities are built, nor is the CDDA library.
 dev-libs/libcec:cubox - Enable support for enable support for the TDA995x
 dev-libs/libcec:exynos - Enable support for Exynos chipsets
@@ -2682,6 +2683,7 @@ dev-qt/qtwebengine:widgets - Enable QtWidgets support
 dev-qt/qtwebsockets:qml - Build QML bindings
 dev-qt/qtwidgets:gtk - Build the GTK platform theme plugin
 dev-qt/qtxmlpatterns:qml - Build the XmlListModel import for QtQuick (requires QtDeclarative)
+dev-ruby/activesupport:msgpack - Support ActiveSupport::MessagePack module
 dev-ruby/asciidoctor-diagram:barcode - Enable diagrams with dev-ruby/rqrcode and dev-ruby/barby
 dev-ruby/asciidoctor-diagram:ditaa - Enable diagrams with media-gfx/ditaa
 dev-ruby/asciidoctor-diagram:lilypond - Enable diagrams with media-sound/lilypond
@@ -3450,7 +3452,7 @@ kde-apps/kate-addons:lspclient - Enable LSP (Language Server Protocol) client pl
 kde-apps/kate-addons:projects - Enable Project plugin for executing queries on SQL DBs
 kde-apps/kate-addons:snippets - Enable Snippets Tool View plugin to manage or download code snippets
 kde-apps/kate-addons:sql - Enable SQL plugin for executing queries on SQL DBs
-kde-apps/kate-lib:activities - Enable Plasma Activities support via kde-frameworks/kactivities
+kde-apps/kate-lib:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
 kde-apps/kde-apps-meta:accessibility - Pull in kde-apps/kdeaccessibility-meta packages
 kde-apps/kde-apps-meta:admin - Pull in kde-apps/kdeadmin-meta packages
 kde-apps/kde-apps-meta:education - Pull in kde-apps/kdeedu-meta packages
@@ -3533,7 +3535,7 @@ kde-apps/kopete:winpopup - Enable pop-up messages sending on windows. (same as g
 kde-apps/kopete:zeroconf - Enable Link-Local Messaging via the bonjour protocol.
 kde-apps/kpimtextedit:designer - Build plugins for dev-qt/designer
 kde-apps/kpimtextedit:speech - Enable text-to-speech support
-kde-apps/krdc:activities - Enable Plasma Activities support via kde-frameworks/kactivities
+kde-apps/krdc:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
 kde-apps/ksystemlog:kdesu - Run as root using kdesu from kde-plasma/kde-cli-tools
 kde-apps/ktouch:X - Enable support for X11 Keyboard Layout Detection
 kde-apps/ktp-accounts-kcm:experimental - Enables disabled telepathy services (currently only steam)
@@ -3569,7 +3571,7 @@ kde-apps/spectacle:share - Enable support for a share menu using kde-frameworks/
 kde-apps/step:qalculate - Enable the libqalculate library for unit conversion
 kde-apps/thumbnailers:mobi - Enable mobipocket thumbnail generation using kde-apps/kdegraphics-mobipocket
 kde-apps/umbrello:php - Enable PHP import support using dev-util/kdevelop and dev-util/kdevelop-pg-qt
-kde-apps/yakuake:absolute-position - Use kde-frameworks/kwayland for absolute window positioning in KWin
+kde-apps/yakuake:absolute-position - Use kde-plasma/kwayland for absolute window positioning in KWin
 kde-frameworks/kcompletion:designer - Build plugins for dev-qt/designer
 kde-frameworks/kconfig:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
 kde-frameworks/kconfigwidgets:designer - Build plugins for dev-qt/designer
@@ -3820,6 +3822,7 @@ mail-filter/pyzor:gdbm - Enables the Gdbm back-end database engine for pyzord
 mail-filter/pyzor:mysql - Enables the MySQL back-end database engine for pyzord through dev-python/mysqlclient.
 mail-filter/pyzor:pyzord - Enable the pyzord server daemon
 mail-filter/pyzor:redis - Enables the redis back-end database engine for pyzord through dev-python/redis
+mail-filter/rspamd:hyperscan - Enable hyperscan for fast regexp processing
 mail-filter/rspamd:jit - Enable PCRE JIT support
 mail-filter/spamassassin:cron - Install a cron job to update SpamAssassin's rules daily.
 mail-filter/spamassassin:qmail - Build qmail functionality and docs
@@ -3940,7 +3943,6 @@ media-fonts/montecarlo:bdf - Install BDF fonts in addition to PCF
 media-fonts/mplus-outline-fonts:ipafont - Generates new fonts merged with media-fonts/ja-ipafonts
 media-fonts/noto:extra - Install full upstream font set including condensed, semi-bold, extra-light variants
 media-fonts/noto-emoji:icons - Install Noto Emoji icon theme
-media-fonts/sil-charis:compact - Use more compactly spaced font
 media-fonts/terminus-font:a-like-o - Changes view of letter 'a' - a looks like o (see homepage)
 media-fonts/terminus-font:center-tilde - Place the '~' character vertically centered on the line instead of to the top.
 media-fonts/terminus-font:distinct-l - ll2 variant with more distinctive l (lowercase L)
@@ -4173,7 +4175,6 @@ media-libs/embree:ssp - When enabled, Embree compiles with stack protection agai
 media-libs/embree:tbb - Use TBB instead of the built-in Embree tasking system.
 media-libs/embree:tutorial - Enable to build Embree tutorials programs.
 media-libs/esdl:image - Enable image support
-media-libs/faad2:digitalradio - Digital Radio Mondiale (warning: disables other decoders)
 media-libs/fcft:harfbuzz - Use media-libs/harfbuzz for grapheme and run shaping
 media-libs/fcft:libutf8proc - Use media-libs/harfbuzz and dev-libs/libutf8proc for run shaping
 media-libs/flickcurl:raptor - Use media-libs/raptor for proper RDF serializing
@@ -6379,6 +6380,7 @@ net-misc/eventd:websocket - Enable support for WebSocket protocol
 net-misc/fatrat:bittorrent - Use the bittorrent protocol via net-libs/libtorrent-rasterbar.
 net-misc/felix:bird - Use BIRD, e.g. for route reflection
 net-misc/freerdp:aad - Enable login via Azure AD
+net-misc/freerdp:fuse - Clipboard with FUSE file copy support
 net-misc/freerdp:openh264 - Enable H.264 support using media-libs/openh264
 net-misc/freerdp:server - Build server binaries
 net-misc/frr:fpm - Enable Forwarding Plane Manager support
@@ -7139,7 +7141,6 @@ sci-electronics/gtkwave:fasttree - Enables experimental Fast SST Tree widget cod
 sci-electronics/gtkwave:fatlines - Renders lines as double width in gtkwave.
 sci-electronics/gtkwave:judy - Enables Judy array support.
 sci-electronics/gtkwave:packed - Enables '#pragma pack' for data arrays (saves memory, costs time).
-sci-electronics/kicad:ngspice - Enable circuit simulation
 sci-electronics/kicad-meta:minimal - Do not install extra data like 3D packages and templates.
 sci-electronics/ktechlab:gpsim - Enable support for Microchip PIC microcontrollers similation using dev-embedded/gpsim
 sci-electronics/librepcb:opencascade - Build with sci-libs/opencascadethe 3D features (e.g. reading/writing STEP files)
@@ -8389,6 +8390,7 @@ sys-kernel/kpatch:kpatch - Enable a command-line tool which allows a user to man
 sys-kernel/kpatch:kpatch-build - Enable tools which convert a source diff patch to a patch module.
 sys-kernel/linux-firmware:compress-xz - Compress firmware using xz (app-arch/xz-utils) before installation
 sys-kernel/linux-firmware:compress-zstd - Compress firmware using zstd (app-arch/zstd) before installation
+sys-kernel/linux-firmware:deduplicate - Create symlinks for all firmware that is duplicate using rdfind
 sys-kernel/linux-firmware:initramfs - Create and install initramfs for early microcode loading in /boot (only AMD for now)
 sys-kernel/linux-firmware:redistributable - Install also non-free (but redistributable) firmware files
 sys-kernel/linux-firmware:savedconfig - Allows individual selection of firmware files
