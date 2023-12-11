@@ -1,0 +1,16 @@
+BDEPEND=>=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare pretend setup test
+DEPEND=app-arch/xz-utils dev-libs/expat dev-games/openscenegraph media-libs/openal net-misc/curl sys-libs/zlib virtual/opengl dns? ( net-libs/udns ) gdal? ( sci-libs/gdal:= ) dev-libs/boost
+DESCRIPTION=Development library for simulation games
+EAPI=7
+HOMEPAGE=https://www.flightgear.org/
+INHERIT=cmake toolchain-funcs
+IUSE=cpu_flags_x86_sse2 +dns debug gdal openmp subversion test
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=app-arch/xz-utils dev-libs/expat dev-games/openscenegraph media-libs/openal net-misc/curl sys-libs/zlib virtual/opengl dns? ( net-libs/udns ) gdal? ( sci-libs/gdal:= ) subversion? ( dev-vcs/subversion )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=mirror://sourceforge/flightgear/simgear-2020.3.19.tar.bz2
+_eclasses_=cmake	0f2e0c197fad0312f3c4765c9cf36271	flag-o-matic	b97a0a7215b2f463a485ff0599ab30bb	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=4880dbc3fe6f8614d4e3e9bef06d795e
