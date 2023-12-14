@@ -1293,7 +1293,6 @@ dev-ada/spawn:static-pic - Build static library with pic code
 dev-ada/templates-parser:shared - Build shared library
 dev-ada/xmlada:shared - Build shared library
 dev-ada/xmlada:static-pic - Build static library with pic code
-dev-cpp/abseil-cpp:cxx17 - Build with -DCMAKE_CXX_STANDARD=17 (required by some revdeps)
 dev-cpp/benchmark:lto - Optimize the build using Link Time Optimization (LTO)
 dev-cpp/eigen:cuda - Build with cuda support
 dev-cpp/glog:gflags - Use dev-cpp/gflags for flag parsing
@@ -2402,6 +2401,7 @@ dev-python/QtPy:widgets - Pull in bindings for the QtWidgets module
 dev-python/QtPy:xml - Pull in QtXml module
 dev-python/amqp:extras - Install extra tools to generate initial Python mod from an AMQP XML file
 dev-python/autobahn:xbr - Add support for XBR decentralized data markets and etherium blockchain
+dev-python/blake3:rust - Build the Rust implementation (if disabled, the "experimental" C implementation is used instead).
 dev-python/bpython:clipboard - Enable copying to clipboard using dev-python/pyperclip
 dev-python/bpython:jedi - Enable autocompletion using dev-python/jedi
 dev-python/bpython:watch - Enable watching paths using dev-python/watchdog
@@ -2641,6 +2641,7 @@ dev-qt/qtconnectivity:nfc - Enable support for the Near Field Communication prot
 dev-qt/qtcore:old-kernel - Disable syscalls not available on Linux kernels older than 4.11
 dev-qt/qtdatavis3d:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtdeclarative:localstorage - Build the LocalStorage import for QtQuick (requires QtSql)
+dev-qt/qtdeclarative:network - Enable QtNetwork support
 dev-qt/qtdeclarative:opengl - Enable OpenGL support
 dev-qt/qtdeclarative:sql - Enable QtSQL support
 dev-qt/qtdeclarative:widgets - Enable QtWidgets support
@@ -2994,12 +2995,6 @@ games-action/dxx-rebirth:sdl2 - Use libSDL2, SDL2-mixer instead of libSDL-1* and
 games-action/dxx-rebirth:tracker - Enable support for the PHP-based multiplayer game tracker
 games-action/hotline-miami:bundled-libs - Use bundled libraries.
 games-action/hotline-miami:launcher - Install qt launcher
-games-action/minetest:client - Build Minetest client
-games-action/minetest:leveldb - Enable LevelDB backend
-games-action/minetest:prometheus - Enable prometheus client support
-games-action/minetest:redis - Enable redis backend via dev-libs/hiredis
-games-action/minetest:server - Build Minetest server
-games-action/minetest:spatial - Enable SpatialIndex AreaStore backend
 games-action/prismlauncher:lto - Enable link-time optimization
 games-action/prismlauncher:qt6 - Build with Qt6 support instead of the default Qt5
 games-action/supermariowar:server - Compile and install Super Mario War server files
@@ -3113,6 +3108,12 @@ games-engines/fheroes2:tools - Install development tools like 82m2wav and xmi2mi
 games-engines/frobtads:tads2compiler - Build TADS2 compiler
 games-engines/frobtads:tads3compiler - Build TADS3 compiler
 games-engines/love:gme - Use media-libs/game-music-emu to support additional music formats
+games-engines/minetest:client - Build Minetest client
+games-engines/minetest:leveldb - Enable LevelDB backend
+games-engines/minetest:prometheus - Enable prometheus client support
+games-engines/minetest:redis - Enable redis backend via dev-libs/hiredis
+games-engines/minetest:server - Build Minetest server
+games-engines/minetest:spatial - Enable SpatialIndex AreaStore backend
 games-engines/odamex:client - Build client target
 games-engines/odamex:hidpi - Use bundled FLTK 1.4, which has better support for HiDPI screens
 games-engines/odamex:master - Build master server target (advertises odamex server list)
@@ -4324,6 +4325,9 @@ media-libs/libsdl2:sound - Control audio support (disable at your own risk)
 media-libs/libsdl2:video - Control video support (disable at your own risk)
 media-libs/libshumate:sysprof - Enable sysprof-capture support for profiling
 media-libs/libtgvoip:dsp - Enable signal processing (echo cancellation, noise suppression, and automatic gain control)
+media-libs/libv4l:bpf - Enable support for IR BPF decoders
+media-libs/libv4l:tracer - Build the v4l2-tracer tool and library
+media-libs/libv4l:utils - Build the v4l-utils collection of utilities
 media-libs/libva-compat:drm - Enables VA/DRM API support.
 media-libs/libva-compat:egl - Enables EGL support.
 media-libs/libva-intel-driver:hybrid - Enable support for hybrid vaapi hardware acceleration on Intel Haswell and newer architectures
@@ -5518,7 +5522,6 @@ net-analyzer/zabbix:frontend - Enable zabbix web frontend
 net-analyzer/zabbix:ipv6 - Turn on support of IPv6
 net-analyzer/zabbix:java - Enable Zabbix Java JMX Management Gateway
 net-analyzer/zabbix:libxml2 - Use libxml2 client library
-net-analyzer/zabbix:mbedtls - Use net-libs/mbedtls as TLS backend
 net-analyzer/zabbix:odbc - Enable Database Monitor and use UnixODBC Library by default
 net-analyzer/zabbix:openipmi - Enable openipmi things
 net-analyzer/zabbix:openssl - Use dev-libs/openssl as TLS backend
