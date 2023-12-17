@@ -18,7 +18,7 @@ HOMEPAGE="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm64 ~ppc64 ~riscv x86"
+KEYWORDS="amd64 ~arm arm64 ~ppc64 ~riscv x86"
 
 RDEPEND="
 	dev-python/QtPy[gui,testlib,widgets(+),${PYTHON_USEDEP}]
@@ -67,7 +67,9 @@ python_test() {
 		if has_version "dev-python/${PYTEST_QT_API}[gui,testlib,widgets,${PYTHON_USEDEP}]"
 		then
 			einfo "Testing with ${EPYTHON} and ${PYTEST_QT_API}"
-			nonfatal epytest ||
+			# force-disable xfail_strict as upstream as xfail assumptions
+			# don't seem to hold on arm64
+			nonfatal epytest -oxfail_strict=false ||
 				die -n "Tests failed with ${EPYTHON} and ${PYTEST_QT_API}" ||
 				return 1
 		fi

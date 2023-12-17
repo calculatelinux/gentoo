@@ -246,6 +246,7 @@ app-arch/libarchive:nettle - Use dev-libs/nettle as crypto backend
 app-arch/p7zip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii file names archived in Windows.
 app-arch/p7zip:rar - Enable support for non-free rar decoder
 app-arch/rar:all-sfx - Install all SFX (Self-Extracting) files rather than just the native format (allows creation of Windows EXEs on Linux ELF systems)
+app-arch/rpm:sequoia - Use app-crypt/rpm-sequoia instead of the deprecated internal parser
 app-arch/tar:minimal - just install `tar`
 app-arch/unzip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii file names archived in Windows.
 app-arch/wimlib:fuse - Use fuse libraries
@@ -387,6 +388,8 @@ app-crypt/qca:nss - Enable NSS plugin
 app-crypt/qca:pkcs11 - Enable PKCS#11 plugin
 app-crypt/qca:sasl - Enable SASL plugin
 app-crypt/qca:softstore - Enable softstore plugin
+app-crypt/rpm-sequoia:nettle - Use dev-libs/nettle as a crypto backend
+app-crypt/rpm-sequoia:openssl - Use dev-libs/openssl as a crypto backend
 app-crypt/seahorse:ldap - Enable seahorse to manipulate GPG keys on a LDAP server.
 app-crypt/swtpm:fuse - Support sys-fs/fuse based /dev/tpm interface
 app-crypt/tpm-tools:pkcs11 - Build Token data management utilities based on OpenCryptoki's (dev-libs/opencryptoki) PKCS#11 implementation.
@@ -496,6 +499,7 @@ app-emacs/elscreen:wanderlust - Include support for app-emacs/wanderlust
 app-emacs/emacs-common:games - Support shared score files for games
 app-emacs/emacs-common:gsettings - Install schema file for gsettings (dev-libs/glib)
 app-emacs/emacs-w3m:gzip-el - Compress bundled Emacs Lisp source
+app-emacs/flim:oauth2 - Support OAuth2 authentication (app-emacs/oauth2)
 app-emacs/magit:libgit - Use libgit (app-emacs/libegit2)
 app-emacs/mu-cite:bbdb - Include support for app-emacs/bbdb
 app-emacs/org-mode:odt-schema - Install non-free schema files for OpenDocument Text exporter
@@ -1433,13 +1437,6 @@ dev-embedded/sdcc:z80n - Add support for Zilog Z80N
 dev-embedded/u-boot-tools:envtools - Build only the target-side environment tools
 dev-embedded/urjtag:ftd2xx - Enable support for USB FTDI chips via dev-embedded/libftd2xx
 dev-embedded/urjtag:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
-dev-games/cegui:devil - Build the DevIL based ImageCodec module
-dev-games/cegui:freeimage - Build the FreeImage based ImageCodec module
-dev-games/cegui:irrlicht - Enable the Irrlicht renderer
-dev-games/cegui:ogre - Enable the OGRE renderer
-dev-games/cegui:tinyxml - Enable the Tiny XML parser module
-dev-games/cegui:xerces-c - Enable the Xerces-C++ XML parser module
-dev-games/cegui:zip - Enable the Minizip resource provider
 dev-games/godot:bullet - Enable the sci-physics/bullet module
 dev-games/godot:deprecated - Enable support for deprecated features
 dev-games/godot:raycast - Enable the raycast Editor module using media-libs/embree
@@ -2530,6 +2527,7 @@ dev-python/shiboken6:docstrings - Expose documentation as Python docstrings (rec
 dev-python/shiboken6:numpy - Implicitly convert passed NumPy arrays to Qt lists
 dev-python/shiboken6:vulkan - Generate "QSurface::VulkanSurface" bindings
 dev-python/simplejson:native-extensions - Compiles native "C" extensions (speedups, instead of using Python fallback code).
+dev-python/stripe:telemetry - Enable sending "telemetry to Stripe regarding request latency and feature usage" by default. Upstream enables it by default in their PyPI distribution; it can also be explicitly controlled via stripe.enable_telemetry variable (boolean).
 dev-python/subprocess-tee:test-full - Enable full test mode. Pulls in many additional dependencies, and requires having been emerged without this flag first in order to avoid a circular dependency.
 dev-python/sympy:aesara - Add support for dev-python/aesara
 dev-python/sympy:imaging - Add support for dev-python/pillow
@@ -3230,7 +3228,6 @@ games-rpg/kqlives:cheats - Enable cheating mode
 games-rpg/manaplus:mumble - Enable support for voice chat
 games-rpg/manaplus:pugixml - Use dev-libs/pugixml for XML parsing isntead of dev-libs/libxml2
 games-rpg/manaplus:sdl2 - Use libsdl2 instead of libsdl
-games-rpg/sumwars:tools - Builds editor tools
 games-rpg/the-longest-journey:hd - Install high definition backgrounds and sprites
 games-rpg/the-longest-journey:hd-fmv - Install upscaled full motion videos
 games-rpg/to-the-moon:bundled-libs - Use bundled libraries
@@ -3265,7 +3262,6 @@ games-strategy/0ad:nvtt - Support for some uncompressed data formats (might be n
 games-strategy/colobot:devbuild - TODO
 games-strategy/colobot:tools - Build tools
 games-strategy/colobot-data:music - Enable music support
-games-strategy/defcon-demo:system-libs - Use system libraries instead of the ones included in the upstream distribution.
 games-strategy/freeciv:aimodules - Support for dynamically loadable AI modules (server-side)
 games-strategy/freeciv:auth - Add authentication capability via mysql, postgres, or sqlite3
 games-strategy/freeciv:gtk3 - Build the gtk3 client
@@ -3591,16 +3587,19 @@ kde-apps/step:qalculate - Enable the libqalculate library for unit conversion
 kde-apps/thumbnailers:mobi - Enable mobipocket thumbnail generation using kde-apps/kdegraphics-mobipocket
 kde-apps/umbrello:php - Enable PHP import support using dev-util/kdevelop and dev-util/kdevelop-pg-qt
 kde-apps/yakuake:absolute-position - Use kde-plasma/kwayland for absolute window positioning in KWin
+kde-frameworks/baloo:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 kde-frameworks/kcompletion:designer - Build plugins for dev-qt/designer
 kde-frameworks/kconfig:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
 kde-frameworks/kconfigwidgets:designer - Build plugins for dev-qt/designer
 kde-frameworks/kfilemetadata:epub - Enable support for reading EPUB ebook metadata
 kde-frameworks/kfilemetadata:mobi - Enable mobipocket support via kde-apps/kdegraphics-mobipocket
-kde-frameworks/kglobalaccel:X - Build the kglobalacceld runtime needed for X
+kde-frameworks/kglobalaccel:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
+kde-frameworks/kguiaddons:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 kde-frameworks/kiconthemes:designer - Build plugins for dev-qt/designer
 kde-frameworks/kimageformats:eps - Support the EPS graphics file format
 kde-frameworks/kinit:caps - Capabilities support for improved security and better OOM handling
 kde-frameworks/kio:designer - Build plugins for dev-qt/designer
+kde-frameworks/kio:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 kde-frameworks/kio:kwallet - Enable permanent storage of passwords for kpasswdserver with kde-frameworks/kwallet
 kde-frameworks/kitemmodels:qml - Enable QML support via dev-qt/qtdeclarative
 kde-frameworks/kitemviews:designer - Build plugins for dev-qt/designer
@@ -3615,12 +3614,15 @@ kde-frameworks/krunner:activities - Enable search runner for KDE Activities hist
 kde-frameworks/ktexteditor:editorconfig - Enable support for EditorConfig configuration files
 kde-frameworks/ktextwidgets:designer - Build plugins for dev-qt/designer
 kde-frameworks/ktextwidgets:speech - Enable text-to-speech support
+kde-frameworks/kuserfeedback:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 kde-frameworks/kwallet:gpg - Support wallets with GnuPG encryption in addition to the default blowfish-encrypted file
+kde-frameworks/kwallet:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 kde-frameworks/kwidgetsaddons:designer - Build plugins for dev-qt/designer
 kde-frameworks/kxmlgui:designer - Build plugins for dev-qt/designer
 kde-frameworks/networkmanager-qt:teamd - Enable Teamd control support
 kde-frameworks/prison:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
 kde-frameworks/purpose:kaccounts - Enable support for system-wide defined KAccounts
+kde-frameworks/purpose:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 kde-frameworks/sonnet:aspell - Enable the app-text/aspell spell-checking backend
 kde-frameworks/sonnet:designer - Build plugins for dev-qt/designer
 kde-frameworks/sonnet:hunspell - Enable the app-text/hunspell spell-checking backend
@@ -3647,6 +3649,7 @@ kde-plasma/kwin:lock - Enable screen locking via kde-plasma/kscreenlocker
 kde-plasma/kwin:multimedia - Enable effect video button in desktop effects KCM
 kde-plasma/libksysguard:designer - Build plugins for dev-qt/designer
 kde-plasma/libksysguard:webengine - Enable display of detailed memory information using dev-qt/qtwebengine.
+kde-plasma/libplasma:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 kde-plasma/plasma-desktop:ibus - Use ibus input method via app-i18n/ibus
 kde-plasma/plasma-desktop:kaccounts - Build the OpenDesktop integration plugin
 kde-plasma/plasma-desktop:scim - Enable applets that use app-i18n/scim
@@ -4019,7 +4022,6 @@ media-gfx/chafa:tools - Build command-line tools
 media-gfx/darktable:flickr - Add support for uploading photos to flickr
 media-gfx/darktable:gamepad - Support using game controllers as input devices
 media-gfx/darktable:geolocation - Enable geotagging support
-media-gfx/darktable:gmic - Use the G'MIC image-processing framework (media-gfx/gmic), e.g. to support Colour LUTs compressed using their compression scheme
 media-gfx/darktable:kwallet - Enable encrypted storage of passwords with kde-frameworks/kwallet
 media-gfx/darktable:lto - Enable link-time optimisations in the RawSpeed library
 media-gfx/darktable:midi - Support using MIDI input devices such as Behringer X-Touch Mini, Arturia Beatstep or Korg nanoKONTROL2, as input devices
@@ -4066,8 +4068,6 @@ media-gfx/freecad:tux - Build the Tux module
 media-gfx/geeqie:ffmpegthumbnailer - Enable video thumbnail support with media-video/ffmpegthumbnailer
 media-gfx/geeqie:map - Enable items GPS map display
 media-gfx/gimp:vector-icons - Enable support for vector icons (experimental)
-media-gfx/gmic:cli - Build CLI interface
-media-gfx/gmic:opencv - Enable support for webcams using the OpenCV library
 media-gfx/graphicsmagick:dynamic-loading - Compile graphicsmagick with dynamically loadable modules
 media-gfx/graphicsmagick:fpx - Enable FlashPix support with media-libs/libfpx
 media-gfx/graphicsmagick:q16 - Set storage quantum size to 16 (~2*memory)
@@ -4539,7 +4539,6 @@ media-plugins/gst-plugins-vaapi:egl - Enable EGL support
 media-plugins/gst-plugins-vaapi:gles2 - Enable GLESv2 and GLESv3 support
 media-plugins/imlib2_loaders:xcf - Enable XCF image loader
 media-plugins/ir_lv2:tools - Build convert4chan tool
-media-plugins/vdr-burn:dvdarchive - DMH DVD - Archive
 media-plugins/vdr-cdplayer:cdparanoia - Enable cdparanoia (audio CD ripper) support
 media-plugins/vdr-dvbapi:dvbcsa - use media-libs/libdvbcsa free implementation of the DVB Common Scrambling Algorithm
 media-plugins/vdr-epgsearch:conflictcheckonly - install the "conflictcheckonly" vdr-plugin
@@ -4990,11 +4989,8 @@ media-video/aravis:gstreamer - Build the GStreamer plugin.
 media-video/aravis:packet-socket - Enable packet socket support.
 media-video/aravis:viewer - Build the GTK+-based video viewer.
 media-video/bluray_info:mpv - Build bluray_player, powered by media-video/mpv
-media-video/chaplin:transcode - Enable DVD ripping and transcoding
 media-video/droidcam:gtk - Build the dev-cpp/gtkmm:3.0 client.
 media-video/dvd_info:libmpv - Build DVD player using libmpv
-media-video/dvdrip:fping - Enables fping support for cluster rendering
-media-video/dvdrip:subtitles - Enables support for subtitle ripping
 media-video/ffdiaporama:openclipart - Support openclipart database
 media-video/ffmpeg:amf - Enables support for AMD's Advanced Media Framework (AMF)
 media-video/ffmpeg:amr - Enables Adaptive Multi-Rate Audio support
@@ -5195,10 +5191,6 @@ media-video/rtmpdump:tools - Enable installation of various binary tools in addi
 media-video/simplescreenrecorder:asm - Enable x86 assembly optimisation.
 media-video/simplescreenrecorder:vpx - Enable VP8 codec support via media-libs/libvpx.
 media-video/totem:python - Build dev-lang/python using plugins (dbusservice for notifications and MPRIS control, interactive python console and opensubtitles lookup)
-media-video/transcode:mjpeg - Enables mjpegtools support
-media-video/transcode:nuv - NuppelVideo container format demuxing
-media-video/transcode:pic - disable optimized assembly code that is not PIC friendly
-media-video/transcode:postproc - Build with ffmpeg libpostproc support
 media-video/vdr:alternatechannel - Use alternate channel on record
 media-video/vdr:bidi - fribidi support, for languages, written from right to left
 media-video/vdr:demoplugins - Install demo and example plugins coming with vanilla vdr
@@ -5853,7 +5845,6 @@ net-im/psi:whiteboarding - Enable experimental interactive SVG drawing
 net-im/psi:xscreensaver - Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events
 net-im/psimedia:extras - Enable Psi+ mode (required when built for Psi+)
 net-im/qtox:X - Enable auto-away support
-net-im/qtox:notification - Use snorenotify for desktop notifications
 net-im/qtox:spellcheck - Enable spell checking support
 net-im/spectrum2:frotz - Enables the Z-Engine backend.
 net-im/spectrum2:irc - Enables the IRC backend, based on net-im/libcommuni.
@@ -6211,7 +6202,6 @@ net-misc/aria2:ssh - Enable SFTP support.
 net-misc/asterisk:blocks - Utlize -fblocks (only supported by, and required when using, clang/LLVM)
 net-misc/asterisk:cluster - Enable high-availability support through the Corosync Cluster Engine
 net-misc/asterisk:codec2 - Enable Codec2 support in asterisk
-net-misc/asterisk:dahdi - Support Digium compatible hardware (formerly known as Zaptel)
 net-misc/asterisk:deprecated - Enable deprecated features (eg, app_macro)
 net-misc/asterisk:gtalk - Enable support for Google Talk services
 net-misc/asterisk:http - Enable embedded web server
@@ -6366,9 +6356,6 @@ net-misc/curl:sslv3 - Support for the old/insecure SSLv3 protocol
 net-misc/curl:telnet - Enable Telnet protocol support
 net-misc/curl:tftp - Enable TFTP support
 net-misc/curl:websockets - Enable websockets support
-net-misc/dahdi:flash - Support (short) flash on FXS
-net-misc/dahdi:oslec - Enable OSLEC (software) echo canceller (require ECHO in kernel)
-net-misc/dahdi-tools:ppp - Enables PPP/DAHDIRAS support
 net-misc/dhcp:client - Install the dhclient program
 net-misc/dhcp:server - Install the dhcpd and dhcrelay programs
 net-misc/dhcpcd:embedded - Embed the definitions of dhcp options in the dhcpcd executable
@@ -6877,7 +6864,6 @@ net-voip/telepathy-gabble:plugins - Enable plugin loader
 net-voip/umurmur:mbedtls - Use net-libs/mbedtls as TLS provider
 net-voip/umurmur:shm - Enable shared memory support
 net-voip/yate:amrnb - use AMR-NB
-net-voip/yate:dahdi - Enable Dahdi driver
 net-voip/yate:gsm - use GSM codec
 net-voip/yate:ilbc - Enable iLBC codec
 net-voip/yate:ilbc-webrtc - Enable iLBC webrtc codec
@@ -7170,7 +7156,6 @@ sci-electronics/ktechlab:gpsim - Enable support for Microchip PIC microcontrolle
 sci-electronics/librepcb:opencascade - Build with sci-libs/opencascadethe 3D features (e.g. reading/writing STEP files)
 sci-electronics/ngspice:deprecated - Build old and deprecated apps
 sci-electronics/ngspice:shared - Build ngspice as a shared library
-sci-electronics/nvc:jit - Enable experimental JIT complilation with LLVM
 sci-electronics/nvc:llvm - Build LLVM code generator
 sci-electronics/pcb:gcode - gcode file export
 sci-electronics/pcb:gif - GIF graphics export
@@ -8763,7 +8748,8 @@ www-client/uget:aria2 - Enable support for net-misc/aria2 through xmlrpc. You'll
 www-client/uget:control-socket - Enable JSON-RPC over unix domain socket
 www-client/uget:openssl - Use dev-libs/openssl instead of net-libs/gnutls
 www-client/uget:rss - Enable uGet feed messages
-www-client/vivaldi:proprietary-codecs - Use system media-video/ffmpeg to support patent-encumbered media codecs
+www-client/vivaldi:ffmpeg-chromium - Use Chromium FFmpeg fork (media-video/ffmpeg-chromium) rather than mainline FFmpeg (media-video/ffmpeg)
+www-client/vivaldi:proprietary-codecs - Use system FFmpeg library to support patent-encumbered media codecs
 www-client/vivaldi:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
 www-client/vivaldi-snapshot:ffmpeg-chromium - Use Chromium FFmpeg fork (media-video/ffmpeg-chromium) rather than mainline FFmpeg (media-video/ffmpeg)
 www-client/vivaldi-snapshot:proprietary-codecs - Use system FFmpeg library to support patent-encumbered media codecs
