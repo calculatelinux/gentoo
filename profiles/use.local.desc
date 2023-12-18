@@ -2160,6 +2160,10 @@ dev-libs/poco:util - Several utility classes (like logger, timer, config file pa
 dev-libs/poco:zip - Add support for the zip & gz archive formats
 dev-libs/ppl:cdd - Build the ppl_lcdd program for vertex/facet enumeration accepting the same input format as the programs shipped with sci-libs/cddlib and sci-libs/lrslib
 dev-libs/ppl:lpsol - Build the ppl_lpsol linear program solver that uses sci-mathematics/glpk for its input routines
+dev-libs/qcoro:network - Build dev-qt/qtbase network support
+dev-libs/qcoro:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
+dev-libs/qcoro:testlib - Install coroutine-friendly versions of dev-qt/qtbase test macros
+dev-libs/qcoro:websockets - Build dev-qt/qtwebsockets support
 dev-libs/qcoro5:network - Build dev-qt/qtnetwork support
 dev-libs/qcoro5:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
 dev-libs/qcoro5:testlib - Install coroutine-friendly versions of dev-qt/qttest macros
@@ -2198,7 +2202,7 @@ dev-libs/weston:desktop - Enable the desktop shell
 dev-libs/weston:drm - Enable drm compositor support
 dev-libs/weston:editor - Install wayland-editor example application
 dev-libs/weston:fullscreen - Enable fullscreen shell
-dev-libs/weston:gles2 - Use GLESv2 cairo instead of full GL
+dev-libs/weston:gles2 - Enable the GLESv2 renderer, not just the x11-libs/pixman-based software fallback
 dev-libs/weston:headless - Headless backend and a noop renderer, mainly for testing purposes
 dev-libs/weston:ivi - Enable the IVI shell
 dev-libs/weston:kiosk - Enable the kiosk shell
@@ -2657,6 +2661,7 @@ dev-qt/qtgui:linuxfb - Enable Linux framebuffer support for embedded devices
 dev-qt/qtgui:tslib - Enable support for touchscreen devices via x11-libs/tslib
 dev-qt/qtgui:tuio - Build plugin to receive touch events over the TUIO protocol
 dev-qt/qtgui:wayland - Provide dev-qt/qtwayland to ensure Qt applications can be run as Wayland clients
+dev-qt/qthttpserver:websockets - Enable websockets support using dev-qt/qtwebsockets
 dev-qt/qtmultimedia:gstreamer - Enable audio support via media-libs/gstreamer
 dev-qt/qtmultimedia:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtmultimedia:widgets - Build the QtMultimediaWidgets module
@@ -3521,6 +3526,14 @@ kde-apps/kio-extras:nfs - Enable NFS support using net-libs/libtirpc
 kde-apps/kio-extras:phonon - Enable file audio preview plugin using media-libs/phonon
 kde-apps/kio-extras:sftp - Enable SFTP protocol support using net-libs/libssh
 kde-apps/kio-extras:taglib - Enable audio thumbnails via media-libs/taglib
+kde-apps/kio-extras-kf5:X - Enable support for XCursor thumbnails via x11-libs/libX11
+kde-apps/kio-extras-kf5:ios - Enable AFC (Apple File Conduit) KIO worker for iOS devices support
+kde-apps/kio-extras-kf5:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
+kde-apps/kio-extras-kf5:man - Enable manpages KIO worker
+kde-apps/kio-extras-kf5:nfs - Enable NFS support using net-libs/libtirpc
+kde-apps/kio-extras-kf5:phonon - Enable file audio preview plugin using media-libs/phonon
+kde-apps/kio-extras-kf5:sftp - Enable SFTP protocol support using net-libs/libssh
+kde-apps/kio-extras-kf5:taglib - Enable audio thumbnails via media-libs/taglib
 kde-apps/kleopatra:pim - Enable WKS publishing support using kde-apps/kmail
 kde-apps/kmag:keyboardfocus - Enable keyboard focus tracking
 kde-apps/kmail:speech - Enable text-to-speech support
@@ -4406,6 +4419,7 @@ media-libs/openexr:utils - Build several binary tools for verifying and manipula
 media-libs/openh264:plugin - Install the Gecko Media Plugin (GMP) for use with Mozilla packages
 media-libs/openh264:utils - Install the CLI encoder and decoder utilities
 media-libs/openimageio:dicom - Enable DICOM medical image file support via sci-libs/dcmtk
+media-libs/openimageio:gui - Build iv (with Qt5)
 media-libs/openimageio:opencv - Enable OpenCV support via media-libs/opencv
 media-libs/openimageio:openvdb - Enable OpenVDB support via media-gfx/openvdb
 media-libs/openimageio:ptex - Enable Ptex texture mapping system file support via media-libs/ptex
@@ -6784,6 +6798,9 @@ net-p2p/transmission-remote-gtk:libproxy - Use net-libs/libproxy for getting the
 net-print/cups:openssl - Use dev-libs/openssl instead of net-libs/gnutls for TLS support
 net-print/cups-filters:foomatic - Build the included foomatic-rip printer driver. Strongly recommended.
 net-print/cups-filters:pclm - Enable PCLm support
+net-print/cups-meta:browsed - Include support for the cups-browsed daemon.
+net-print/cups-meta:foomatic - Include support for the foomatic-rip printer driver. Strongly recommended.
+net-print/cups-meta:poppler - Include support for the app-text/poppler filters.
 net-print/dymo-cups-drivers:usb-modeswitch - Include usb_modeswitch for some hardware (bug #601242)
 net-print/fax4cups:efax - Install net-misc/efax backend
 net-print/fax4cups:hylafax - Install net-misc/hylafax backend
@@ -6801,6 +6818,8 @@ net-print/hplip:snmp - Add support for net-analyzer/net-snmp which enables this 
 net-print/hplip:static-ppds - Use statically-generated PPDs instead of Dynamic PPDs. Although this is deprecated some printers may still need it to work properly. Use this flag if hp-setup fails to find/create a valid PPD file
 net-print/hplip-plugin:orblite - Install the ORBlite scanner plugin
 net-print/kyocera-1x2x-mfp-driver:rastertokpsl-fix - Use custom wrapper script to sanitize arguments before passing to 'rastertokpsl' filter program
+net-print/libcupsfilters:poppler - Build the pdftoraster filter
+net-print/libppd:poppler - Use the app-text/poppler pdftops filter
 net-proxy/haproxy:51degrees - Device Detection using 51 Degrees
 net-proxy/haproxy:net_ns - Enable network namespace support (CONFIG_NET_NS)
 net-proxy/haproxy:pcre-jit - Use JIT support for PCRE
