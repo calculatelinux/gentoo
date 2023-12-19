@@ -12,7 +12,7 @@ SRC_URI="https://github.com/${PN}/${PN}/releases/download/${PV}/${PN}-src-${PV}.
 
 LICENSE="GPL-2+ MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~x86"
 IUSE="+client hidpi master +odalaunch portmidi server upnp X"
 REQUIRED_USE="|| ( client master server )"
 
@@ -42,6 +42,7 @@ S="${WORKDIR}/${PN}-src-${PV}"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-10.3.0-unbundle-fltk.patch
+	"${FILESDIR}"/${PN}-10.4.0-backport-pr928.patch
 )
 
 src_prepare() {
