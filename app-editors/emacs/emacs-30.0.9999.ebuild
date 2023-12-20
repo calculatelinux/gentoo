@@ -431,7 +431,18 @@ src_test() {
 		#
 		# bytecomp-tests--dest-mountpoint
 		%lisp/emacs-lisp/bytecomp-tests.el
+
+		# Reason: tries to access network
+		# internet-is-working
+		%src/process-tests.el
 	)
+	use threads || exclude_tests+=(
+			%lisp/server-tests.el
+			%lisp/progmodes/eglot-tests.el
+			%src/emacs-module-tests.el
+			%src/keyboard-tests.el
+		)
+	use xpm || exclude_tests+=( %src/image-tests.el )
 
 	# See test/README for possible options
 	emake \
