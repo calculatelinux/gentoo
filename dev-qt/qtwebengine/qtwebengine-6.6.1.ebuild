@@ -15,7 +15,7 @@ SRC_URI+="
 "
 
 if [[ ${QT6_BUILD_TYPE} == release ]]; then
-	KEYWORDS="amd64"
+	KEYWORDS="amd64 ~arm64"
 fi
 
 IUSE="
@@ -234,6 +234,12 @@ src_configure() {
 			replace-flags '-g?(gdb)?([2-9])' -g1
 			ewarn "-g2+/-ggdb* *FLAGS replaced with -g1 (enable USE=custom-cflags to keep)"
 		fi
+
+		# Built helpers segfault when using (at least) -march=armv8-a+pauth
+		# (bug #920555, #920568 -- suspected gcc bug). For now, filter all
+		# for simplicity. Override with USE=custom-cflags if wanted, please
+		# report if above -march works again so can cleanup.
+		use arm64 && tc-is-gcc && filter-flags '-march=*' '-mcpu=*'
 	fi
 
 	export NINJA NINJAFLAGS=$(get_NINJAOPTS)

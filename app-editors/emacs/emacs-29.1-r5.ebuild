@@ -36,7 +36,7 @@ else
 	PATCHES=("${WORKDIR}/patch")
 	SLOT="${PV%%.*}"
 	[[ ${PV} == *.*.* ]] && SLOT+="-vcs"
-	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
+	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
 fi
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
@@ -206,6 +206,12 @@ src_prepare() {
 	# effect on the installed image. Suppress it by supplying pkg-config
 	# with a wrong library name.
 	sed -i -e "/CHECK_MODULES/s/libseccomp/DiSaBlE&/" configure.ac || die
+
+	# Tests that use bubblewrap don't work in the sandbox:
+	# "bwrap: setting up uid map: Permission denied"
+	# So, disrupt the search for the bwrap executable.
+	sed -i -e 's/(executable-find "bwrap")/nil/' test/src/emacs-tests.el \
+		test/lisp/emacs-lisp/bytecomp-tests.el || die
 
 	AT_M4DIR=m4 eautoreconf
 }
@@ -426,12 +432,6 @@ src_test() {
 		%lisp/mail/undigest-tests.el
 		%lisp/vc/vc-tests.el
 		%lisp/vc/vc-bzr-tests.el
-
-		# Reason: fails if bubblewrap (bwrap) is installed
-		# "bwrap: setting up uid map: Permission denied"
-		#
-		# bytecomp-tests--dest-mountpoint
-		%lisp/emacs-lisp/bytecomp-tests.el
 
 		# Reason: tries to access network
 		# internet-is-working

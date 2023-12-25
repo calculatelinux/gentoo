@@ -81,11 +81,13 @@ if [[ ${_PSLOT} == 6 ]]; then
 	case ${PN} in
 		kglobalacceld | \
 		kwayland | \
+		kwayland-integration | \
 		libplasma | \
 		ocean-sound-theme | \
 		plasma-activities | \
 		plasma-activities-stats | \
-		plasma5support) ;;
+		plasma5support | \
+		print-manager) ;;
 		*) RDEPEND+=" !kde-plasma/${PN}:5" ;;
 	esac
 fi

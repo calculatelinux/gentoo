@@ -17,7 +17,7 @@ if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 else
 	SRC_URI="https://archive.mesa3d.org/${MY_P}.tar.xz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-solaris"
+	KEYWORDS="~alpha ~amd64 ~arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-solaris"
 fi
 
 LICENSE="MIT SGI-B-2.0"
@@ -184,6 +184,10 @@ x86? (
 	usr/lib/libOSMesa.so.8.0.0
 	usr/lib/libGLX_mesa.so.0.0.0
 )"
+
+PATCHES=(
+	"${FILESDIR}"/${PV}-d3d12-Fix-AV1-video-encode-32-bits-build.patch
+)
 
 llvm_check_deps() {
 	if use opencl; then

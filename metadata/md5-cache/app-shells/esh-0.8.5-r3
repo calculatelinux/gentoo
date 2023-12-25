@@ -11,5 +11,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-libs/readline-4.1:=
 SLOT=0
 SRC_URI=http://slon.ttk.ru/esh/esh-0.8.5.tar.gz
-_eclasses_=flag-o-matic	c816c598969cbaf38cc02d2496ad2e98	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc
+_eclasses_=flag-o-matic	78cf3cc2d5572fddf5e5e10c70f7c81a	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc
 _md5_=0238b6e6e4f6da17c732f05e05780afd

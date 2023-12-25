@@ -33,22 +33,159 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2023-12-25)
+# libtinynotify-systemwide is not ported to procps-4.  It is only
+# used to implement sw-notify-send which is used as an optional RDEP
+# in sys-apps/uam to send notifications on mount.
+# Removal on 2024-01-24.  Bug #913525.
+x11-libs/libtinynotify-systemwide
+x11-misc/sw-notify-send
+
+# Patrick Lauer <patrick@gentoo.org> (2023-12-23)
+# ROCm-6 builds but has runtime issues for me
+>=dev-libs/roct-thunk-interface-6.0.0
+>=dev-libs/rocr-runtime-6.0.0
+>=dev-libs/rocm-comgr-6.0.0
+>=dev-libs/rocm-device-libs-6.0.0
+>=dev-libs/rocm-opencl-runtime-6.0.0
+>=dev-util/hipcc-6.0.0
+>=dev-util/hip-6.0.0
+>=dev-util/rocminfo-6.0.0
+
+# Michał Górny <mgorny@gentoo.org> (2023-12-22)
+# Unmaintained.  Last release in 2001.  media-gfx/xfig
+# (that is still maintained) is recommended instead.
+# Removal on 2024-01-21.  Bug #899790.
+media-gfx/figurine
+
+# Michał Górny <mgorny@gentoo.org> (2023-12-22)
+# Broken on Python 3.11+.  No revdeps.
+# Removal on 2024-01-21.  Bug #896752.
+dev-python/awxkit
+
+# Michał Górny <mgorny@gentoo.org> (2023-12-22)
+# Crashes.  Discontinued upstream.  No revdeps.
+# Removal on 2024-01-21.  Bug #907758.
+media-sound/guayadeque
+
+# Michał Górny <mgorny@gentoo.org> (2023-12-22)
+# Abandoned and archived upstream.  Known broken.  No revdeps.
+# dev-go/lichen::guru is the recommended replacement.
+# Removal on 2024-01-21.  Bug #913755.
+dev-go/golicense
+
+# Michał Górny <mgorny@gentoo.org> (2023-12-22)
+# Unmaintained tool with NIH libraries that (optionally) depend
+# on vulnerable media-gfx/transfig.  Homepage gone.  No other revdeps.
+# Removal on 2024-01-21.  Bug #917248.
+dev-libs/liblist
+dev-libs/libstrl
+dev-util/difffilter
+
+# Michał Górny <mgorny@gentoo.org> (2023-12-22)
+# Ancient.  The website is gone.  No revdeps.
+# Removal on 2024-01-21.  Bug #918622.
+net-analyzer/lilac
+
+# Michał Górny <mgorny@gentoo.org> (2023-12-22)
+# Unmaintained.  Unfetchable and mirror-restricted.  No revdeps.
+# Removal on 2024-01-21.  Bug #918905.
+sys-block/hpacucli
+
+# Michał Górny <mgorny@gentoo.org> (2023-12-22)
+# Unmaintained.  EAPI 6.  Last commit in 2017.  No revdeps.
+# Removal on 2024-01-21.  Bug #919050.
+app-containers/go-secbench
+
 # Michał Górny <mgorny@gentoo.org> (2023-12-18)
 # A broken package that used to be a test dependency
 # of dev-python/ruamel-yaml.  No revdeps left.
 # Removal on 2024-01-17.  Bug #920271.
 dev-python/ruamel-std-pathlib
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2023-12-17)
-# KDE Frameworks 6 Beta 2 mask
+# Andreas Sturmlechner <asturm@gentoo.org> (2023-12-20)
+# KDE Plasma 6 Beta 2 (5.91) and Frameworks 6 Beta 2 (5.247) mask
 # *** PRE-RELEASE *** NO BUGS WILL BE FIXED *** OVERLAY PRs WELCOME ***
+# Do *not* attempt to mix with live ebuilds from kde overlay.
 # To install alongside KDE Frameworks 5:
 # - put '-kf6compat' into /etc/portage/profile/use.mask
 # - enable USE=kf6compat globally
+# - if you have the following packages installed, put the following into
+#   /etc/portage/package.use in order to avoid conflicts:
+#       dev-util/kdevelop:5 -gdbui -plasma
+#       kde-apps/kget:5 -kde
+#       kde-apps/krfb:5 -wayland
+#       net-p2p/ktorrent:5 -shutdown
 # If you encounter ...
-# - build-time/packaging bugs: Check kde overlay KF6 live ebuild first
-# - runtime bugs: Reproduce with kde overlay KF6 live, then file upstream
-# REMINDER: These are just libraries, no desktop yet.
+# - build-time/packaging bugs:
+#   - check kde overlay KF6 live ebuild first, it may have been addressed
+#   - file a bug after making sure none exists yet for your issue
+# - runtime bugs: https://community.kde.org/Plasma/Plasma_6#How_to_use/test_it
+#   - work with upstream and help test patches using /etc/portage/patches
+# - trying to reproduce issues on master branch currently requires to go fully
+#   live. Plasma 5.91.0 will not build with Frameworks >=5.248.
+~kde-plasma/bluedevil-5.91.0
+~kde-plasma/breeze-5.91.0
+~kde-plasma/breeze-grub-5.91.0
+~kde-plasma/breeze-gtk-5.91.0
+~kde-plasma/breeze-plymouth-5.91.0
+~kde-plasma/discover-5.91.0
+~kde-plasma/drkonqi-5.91.0
+~kde-plasma/flatpak-kcm-5.91.0
+~kde-plasma/kactivitymanagerd-5.91.0
+~kde-plasma/kde-cli-tools-5.91.0
+~kde-plasma/kde-gtk-config-5.91.0
+~kde-plasma/kdecoration-5.91.0
+~kde-plasma/kdeplasma-addons-5.91.0
+~kde-plasma/kgamma-5.91.0
+~kde-plasma/kglobalacceld-5.91.0
+~kde-plasma/kinfocenter-5.91.0
+~kde-plasma/kmenuedit-5.91.0
+~kde-plasma/kpipewire-5.91.0
+~kde-plasma/kscreen-5.91.0
+~kde-plasma/kscreenlocker-5.91.0
+~kde-plasma/ksshaskpass-5.91.0
+~kde-plasma/ksystemstats-5.91.0
+~kde-plasma/kwallet-pam-5.91.0
+~kde-plasma/kwayland-5.91.0
+~kde-plasma/kwayland-integration-5.91.0
+~kde-plasma/kwin-5.91.0
+~kde-plasma/kwrited-5.91.0
+~kde-plasma/layer-shell-qt-5.91.0
+~kde-plasma/libkscreen-5.91.0
+~kde-plasma/libksysguard-5.91.0
+~kde-plasma/libplasma-5.91.0
+~kde-plasma/milou-5.91.0
+~kde-plasma/ocean-sound-theme-5.91.0
+~kde-plasma/oxygen-5.91.0
+~kde-plasma/oxygen-sounds-5.91.0
+~kde-plasma/plasma-activities-5.91.0
+~kde-plasma/plasma-activities-stats-5.91.0
+~kde-plasma/plasma-browser-integration-5.91.0
+~kde-plasma/plasma-desktop-5.91.0
+~kde-plasma/plasma-disks-5.91.0
+~kde-plasma/plasma-firewall-5.91.0
+~kde-plasma/plasma-integration-5.91.0
+~kde-plasma/plasma-meta-5.91.0
+~kde-plasma/plasma-nm-5.91.0
+~kde-plasma/plasma-pa-5.91.0
+~kde-plasma/plasma-sdk-5.91.0
+~kde-plasma/plasma-systemmonitor-5.91.0
+~kde-plasma/plasma-thunderbolt-5.91.0
+~kde-plasma/plasma-vault-5.91.0
+~kde-plasma/plasma-welcome-5.91.0
+~kde-plasma/plasma-workspace-5.91.0
+~kde-plasma/plasma-workspace-wallpapers-5.91.0
+~kde-plasma/plasma5support-5.91.0
+~kde-plasma/plymouth-kcm-5.91.0
+~kde-plasma/polkit-kde-agent-5.91.0
+~kde-plasma/powerdevil-5.91.0
+~kde-plasma/print-manager-5.91.0
+=kde-plasma/print-manager-23.08.5-r100
+~kde-plasma/sddm-kcm-5.91.0
+~kde-plasma/systemsettings-5.91.0
+~kde-plasma/wacomtablet-5.91.0
+~kde-plasma/xdg-desktop-portal-kde-5.91.0
 ~kde-frameworks/frameworkintegration-5.247.0
 ~kde-frameworks/attica-5.247.0
 ~kde-frameworks/bluez-qt-5.247.0
@@ -122,10 +259,16 @@ dev-python/ruamel-std-pathlib
 ~kde-frameworks/purpose-5.247.0
 ~kde-frameworks/qqc2-desktop-style-5.247.0
 ~kde-apps/kdegraphics-mobipocket-24.01.85
+=kde-apps/kio-extras-23.08.5-r100
 ~kde-apps/kio-extras-24.01.85
 ~kde-apps/kio-extras-kf5-24.01.85
 ~kde-apps/libkexiv2-24.01.85
+~kde-apps/spectacle-24.01.85
+~kde-misc/kio-fuse-5.1.0
+~dev-libs/appstream-1.0.0
 ~dev-libs/kdiagram-3.0.0
+~dev-libs/kirigami-addons-0.11.76_p20231222
+~media-libs/libqaccessibilityclient-0.6.0
 ~media-libs/phonon-4.12.0
 ~media-libs/phonon-vlc-0.12.0
 ~sys-auth/polkit-qt-0.175.0
@@ -272,19 +415,6 @@ media-video/subtitleripper
 =sys-fs/zfs-2.2.0
 =sys-fs/zfs-kmod-2.2.0
 
-# hololeap <hololeap@protonmail.com> (2023-11-19)
-# Package has been masked for a long time, is useless for ::gentoo, and has no
-# reverse dependencies.
-# Removal on 2023-12-19.
-dev-haskell/doctest-parallel
-
-# hololeap <hololeap@protonmail.com> (2023-11-19)
-# Bundled library for GHC, exposed as an ebuild for historical reasons.
-# No reverse dependencies, no longer needed in ::gentoo tree.
-# See: <https://github.com/gentoo-haskell/gentoo-haskell/issues/1464>
-# Removal on 2023-12-19.
-dev-haskell/terminfo
-
 # Sam James <sam@gentoo.org> (2023-11-19)
 # GCC 10 and older no longer receive upstream support or fixes for
 # bugs. Please switch to a newer GCC version using gcc-config.
@@ -311,35 +441,9 @@ dev-haskell/terminfo
 # Performance regression. Bug #916713.
 =dev-db/mydumper-0.15.1.3
 
-# Michał Górny <mgorny@gentoo.org> (2023-10-26)
-# An unmaintained programming language with last release in 2009.
-# Multiple bugs reported.  No revdeps.
-# Removal on 2023-11-25.
-dev-lang/ferite
-
-# Michał Górny <mgorny@gentoo.org> (2023-10-26)
-# Not installable due to conflict with sys-apps/coreutils.
-# Removal on 2023-11-25.  Bug #908406.
-app-misc/realpath
-
-# Michał Górny <mgorny@gentoo.org> (2023-10-26)
-# Hyperdex "support libraries".  Hyperdex was removed in 2020.
-# No revdeps outside the bunch.
-# Removal on 2023-11-25.  Bug #527386.
-dev-libs/busybee
-dev-libs/libe
-dev-libs/libpo6
-dev-libs/libtreadstone
-
 # Ulrich Müller <ulm@gentoo.org> (2023-10-19)
 # Pretest versions, masked for testing.
 <app-editors/emacs-29.1.9999:29-vcs
-
-# Sam James <sam@gentoo.org> (2023-10-16)
-# Part of Perl core and better maintained there - the version on CPAN is out of
-# date and incompatible with Perl 5.38. No reverse dependencies.
-# Removal on 2023-11-15.
-dev-perl/PathTools
 
 # Sam James <sam@gentoo.org> (2023-10-06)
 # Breaks building scipy: https://github.com/cython/cython/issues/5748
@@ -365,7 +469,6 @@ dev-perl/PathTools
 # Matt Turner <mattst88@gentoo.org> (2023-07-06)
 # GNOME 45 mask
 >=gnome-extra/gnome-logs-45_alpha
->=x11-libs/pango-1.51.0
 
 # Sam James <sam@gentoo.org> (2023-07-05)
 # Doesn't install all needed files by e.g. kernelshark.

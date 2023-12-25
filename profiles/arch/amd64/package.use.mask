@@ -17,6 +17,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2023-12-18)
+# Experimental and only available on a subset of architectures
+sys-kernel/gentoo-kernel -generic-uki
+sys-kernel/gentoo-kernel-bin -generic-uki
+
 # Ionen Wolkens <ionen@gentoo.org> (2023-12-02)
 # dev-qt/qtwebengine:6 is keyworded here.
 dev-python/PyQt6 -pdfium
@@ -246,10 +251,6 @@ app-text/texlive-core -xindy
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2020-04-26)
 # static-pie works on amd64, #719444
 sys-libs/glibc -static-pie
-
-# Guilherme Amadio <amadio@gentoo.org> (2020-03-16)
-# media-libs/cudnn is keyworded on amd64
-sci-physics/root -cudnn
 
 # Thomas Deutschmann <whissi@gentoo.org> (2020-03-11)
 # Encrypted Media Extensions (eme-free) can be disabled on amd64

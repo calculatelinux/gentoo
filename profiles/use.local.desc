@@ -274,6 +274,7 @@ app-backup/bareos:ndmp - Enable support for NDMP (Network Data Management Protoc
 app-backup/bareos:scsi-crypto - Enable low level SCSI crypto support
 app-backup/bareos:storage-daemon - Install storage daemon (bareos-sd)
 app-backup/bareos:vmware - Enable bareos-fd VMware plugin
+app-backup/borgmatic:apprise - Allow backup monitoring to send notification to a wide variety of services, using dev-python/apprise
 app-backup/btrbk:lsbtr - Enable the lsbtr command-line tool
 app-backup/btrbk:mbuffer - Use sys-block/mbuffer to enable progress bar and buffering/limiting functionality
 app-backup/dar:argon2 - Enable password hashing algorithm from app-crypt/argon2
@@ -1924,7 +1925,6 @@ dev-libs/gmime:smime - Enable experimental S/MIME support
 dev-libs/gmp:cpudetection - Enables runtime CPU detection (useful for binpkgs, compatibility on other CPUs). This only works on amd64/x86 at present. If this flag is enabled, GMP will work on a variety of amd64/x86 CPUs and load accelerated routines for use at runtime depending on the CPU in use. This makes it suitable for binary packages (binpkgs). If this flag is disabled, GMP will be tuned for the CPU being used at build-time and may not be usable on other machines.
 dev-libs/gmp:pic - Force static libraries to be built as PIC to avoid TEXTRELs.
 dev-libs/gobject-introspection:doctool - Install g-ir-doc-tool for generating documentation from introspected data
-dev-libs/hidapi:fox - Build a x11-libs/fox GUI
 dev-libs/imath:large-stack - Enables code to take advantage of large stack support
 dev-libs/input-pad:eekboard - Enable support for dev-libs/eekboard
 dev-libs/input-pad:xtest - Enable support for x11-libs/libXtst
@@ -2126,7 +2126,6 @@ dev-libs/ppl:cdd - Build the ppl_lcdd program for vertex/facet enumeration accep
 dev-libs/ppl:lpsol - Build the ppl_lpsol linear program solver that uses sci-mathematics/glpk for its input routines
 dev-libs/qcoro:network - Build dev-qt/qtbase network support
 dev-libs/qcoro:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
-dev-libs/qcoro:testlib - Install coroutine-friendly versions of dev-qt/qtbase test macros
 dev-libs/qcoro:websockets - Build dev-qt/qtwebsockets support
 dev-libs/qcoro5:network - Build dev-qt/qtnetwork support
 dev-libs/qcoro5:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
@@ -2364,6 +2363,8 @@ dev-python/QtPy:websockets - Pull in bindings for the QtWebSockets module
 dev-python/QtPy:widgets - Pull in bindings for the QtWidgets module
 dev-python/QtPy:xml - Pull in QtXml module
 dev-python/amqp:extras - Install extra tools to generate initial Python mod from an AMQP XML file
+dev-python/apprise:dbus - Support sending notifications to the desktop over D-Bus
+dev-python/apprise:mqtt - Support sending notifications over MQTT
 dev-python/autobahn:xbr - Add support for XBR decentralized data markets and etherium blockchain
 dev-python/blake3:rust - Build the Rust implementation (if disabled, the "experimental" C implementation is used instead).
 dev-python/bpython:clipboard - Enable copying to clipboard using dev-python/pyperclip
@@ -2758,6 +2759,7 @@ dev-util/cccc:mfc - Add patch for MFC dialect options
 dev-util/cmake:dap - Build debugger for CMake with Debug Adapter Protocol support via dev-cpp/cppdap
 dev-util/codeblocks:contrib - Build additional contrib components
 dev-util/codeblocks:fortran - Build FortranProject plugin which enables to use Code::Blocks IDE for Fortran language
+dev-util/cppcheck:charts - Enable QtCharts usage in the GUI
 dev-util/cppcheck:htmlreport - install cppcheck-htmlreport
 dev-util/ctags:json - Enable JSON output support
 dev-util/ctags:xml - Enable XML parsing support
@@ -2828,7 +2830,7 @@ dev-util/kernelshark:custom-optimization - Build with user-specified compiler op
 dev-util/kup:gitolite - Enable support for dev-vcs/gitolite in kup-server
 dev-util/libabigail:btf - Handle reading kernel debug files in BTF format via dev-libs/libbpf
 dev-util/librnp:botan - Use Botan crypto backend instead of OpenSSL
-dev-util/ltrace:elfutils - Use libdwfl from sys-libs/libunwind for frame unwinding support
+dev-util/ltrace:elfutils - Use libdwfl from dev-libs/elfutils for frame unwinding support
 dev-util/ltrace:unwind - Use sys-libs/libunwind for frame unwinding support
 dev-util/lttng-tools:ust - Support LTTng-UST (Userspace Tracing)
 dev-util/lttng-ust:numa - Enable numa support
@@ -2886,7 +2888,6 @@ dev-util/schroot:lvm - Enable support for chroots using LVM snapshots
 dev-util/schroot:zfs - Enable support for chroots using ZFS shapshots/clones
 dev-util/sdl-jstest:sdl - Enable media-libs/libsdl2 based input test
 dev-util/sdl-jstest:sdl1 - Enable media-libs/libsdl based input test
-dev-util/spirv-llvm-translator:tools - Install the command-line translator llvm-spirv
 dev-util/strace:aio - Enable dev-libs/libaio support for tracing Asynchronous I/O operations
 dev-util/strace:elfutils - Enable stack backtraces (-k flag) via dev-libs/elfutils
 dev-util/strace:unwind - Enable stack backtraces (-k flag) via sys-libs/libunwind
@@ -3087,6 +3088,7 @@ games-engines/odamex:portmidi - Enable PortMidi support
 games-engines/odamex:server - Build server target
 games-engines/openmw:devtools - Install development tools like bsatool, esmtool and opencs.
 games-engines/openmw:osg-fork - Use OpenSceneGraph forked by OpenMW instead of upstream OSG.
+games-engines/renpy:development - Install IDE for game developers and an empty game template
 games-engines/scummvm:fluidsynth - compile with support for fluidsynth
 games-engines/scummvm:fribidi - Support for right-to-left languages via dev-libs/fribidi
 games-engines/scummvm:glew - enable support for OpenGL Extension Wrangler Library (media-libs/glew)
@@ -3478,6 +3480,7 @@ kde-apps/kio-extras:phonon - Enable file audio preview plugin using media-libs/p
 kde-apps/kio-extras:sftp - Enable SFTP protocol support using net-libs/libssh
 kde-apps/kio-extras:taglib - Enable audio thumbnails via media-libs/taglib
 kde-apps/kio-extras-kf5:X - Enable support for XCursor thumbnails via x11-libs/libX11
+kde-apps/kio-extras-kf5:activities - Enable activities KIO worker and fileitem plugin
 kde-apps/kio-extras-kf5:ios - Enable AFC (Apple File Conduit) KIO worker for iOS devices support
 kde-apps/kio-extras-kf5:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 kde-apps/kio-extras-kf5:man - Enable manpages KIO worker
@@ -3603,6 +3606,7 @@ kde-plasma/kdeplasma-addons:webengine - Enable dictionary and web browser applet
 kde-plasma/ksystemstats:networkmanager - Enable improved backend for Network statistics using kde-frameworks/networkmanager-qt
 kde-plasma/kwin:lock - Enable screen locking via kde-plasma/kscreenlocker
 kde-plasma/kwin:multimedia - Enable effect video button in desktop effects KCM
+kde-plasma/kwin:shortcuts - Enable global shortcuts support via kde-plasma/kglobalacceld
 kde-plasma/libksysguard:designer - Build plugins for dev-qt/designer
 kde-plasma/libksysguard:webengine - Enable display of detailed memory information using dev-qt/qtwebengine.
 kde-plasma/libplasma:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
@@ -3630,6 +3634,7 @@ kde-plasma/plasma-meta:sddm - Pull in the x11-misc/sddm display manager and syst
 kde-plasma/plasma-meta:sdk - Pull in kde-plasma/plasma-sdk for Plasma development
 kde-plasma/plasma-meta:smart - Pull in kde-plasma/plasma-disks for disk health monitoring
 kde-plasma/plasma-meta:thunderbolt - Pull in kde-plasma/plasma-thunderbolt control center module
+kde-plasma/plasma-meta:wacom - Pull in kde-plasma/wacomtablet control center module
 kde-plasma/plasma-meta:wallpapers - Install wallpapers for the Plasma Workspace
 kde-plasma/plasma-nm:openconnect - Build support for the OpenConnect VPN client
 kde-plasma/plasma-nm:teamd - Enable Teamd control support
@@ -3698,6 +3703,7 @@ mail-client/claws-mail:litehtml - Enable dev-libs/gumbo html viewer plugin
 mail-client/claws-mail:notification - Notification for new mail in different way, see also USE flags libcanberra, libindicate and libnotify
 mail-client/claws-mail:oauth - Enable OAuth2 authentication support
 mail-client/claws-mail:pgp - Enable PGP support
+mail-client/claws-mail:python - Enable plugin for Python scripting
 mail-client/claws-mail:sieve - Build plugin for sieve filter support
 mail-client/claws-mail:smime - Build plugin for S/MIME support
 mail-client/claws-mail:spam-report - Enable plugin for spam reporting to various services
@@ -3863,6 +3869,7 @@ mate-extra/caja-extensions:cdr - Add an extension to burn files to cds using app
 mate-extra/caja-extensions:gajim - Add an extension to support net-im/gajim.
 mate-extra/caja-extensions:image-converter - Add image conversion support.
 mate-extra/caja-extensions:mail - Add an extension to support e-mail functionality.
+mate-extra/caja-extensions:media - Add video audio extension with totem.
 mate-extra/caja-extensions:open-terminal - Add an extension to support an open terminal.
 mate-extra/caja-extensions:pidgin - Add an extension to support net-im/pidgin
 mate-extra/caja-extensions:share - Add an extension to support sharing files.
@@ -8101,9 +8108,6 @@ sys-devel/binutils-hppa64:gprofng - Enable the next-generation gprofng profiler
 sys-devel/binutils-hppa64:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/binutils-hppa64:pgo - Build binutils with Profile Guided Optimization (PGO) and LTO
 sys-devel/binutils-hppa64:plugins - Enable plugin support in tools
-sys-devel/clang:default-compiler-rt - Use compiler-rt instead of libgcc as the default rtlib for clang
-sys-devel/clang:default-libcxx - Use libc++ instead of libstdc++ as the default stdlib for clang
-sys-devel/clang:default-lld - Use lld as the default linker for clang
 sys-devel/clang:extra - Build extra tools (clangd, clang-tidy and a few more)
 sys-devel/clang:ieee-long-double - Use accelerated 128-bit IEEE long double ABI (ppc64le only)
 sys-devel/clang:static-analyzer - Install the Clang static analyzer
@@ -8360,16 +8364,13 @@ sys-libs/libblockdev:vdo - Enable Virtual Data Optimizer support.
 sys-libs/libcap:tools - Install captree, which requires dev-lang/go
 sys-libs/libcxx:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
 sys-libs/libcxx:libcxxabi - Build on top of sys-libs/libcxxabi instead of gcc's libsupc++ (avoids depending on gcc).
-sys-libs/libcxx:libunwind - Use libunwind instead of libgcc_s for stack unwinding, thus avoiding dependence on gcc.
 sys-libs/libcxxabi:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
-sys-libs/libcxxabi:libunwind - Use libunwind instead of libgcc_s for stack unwinding, thus avoiding dependency on gcc
 sys-libs/libnbd:fuse - Install the sys-fs/fuse powered nbdfuse.
 sys-libs/libnbd:go - Build bindings for dev-lang/go
 sys-libs/libnbd:uri-support - Enable nbd:// URI support via dev-libs/libxml2.
 sys-libs/libnvme:json - Support JSON output via dev-libs/json-c
 sys-libs/libnvme:keyutils - Add support for sys-apps/keyutils
 sys-libs/libnvme:uuid - UUID support via sys-apps/util-linux
-sys-libs/libomp:cuda - Build CUDA offloading plugin (only with USE=offload)
 sys-libs/libomp:gdb-plugin - Build OMPD GDB plugin
 sys-libs/libomp:hwloc - Enable CPU affinity support via hwloc
 sys-libs/libomp:offload - Support offloading OpenMP using libomptarget
@@ -8763,6 +8764,7 @@ x11-libs/libXaw:deprecated - Install deprecated Xaw6 library.
 x11-libs/libXfont2:bzip2 - Support bzip2 compressed PCF fonts.
 x11-libs/libXfont2:truetype - Use media-libs/freetype for font rasterization.
 x11-libs/libdlo:test-program - Build the program for testing Displaylink devices.
+x11-libs/libdrm:tools - Install optional tests and tools
 x11-libs/libfm:automount - Use gnome-base/gvfs for automounting
 x11-libs/libfm:udisks - Use libfm's udisks-based volume monitor implementation instead of using the one from gvfs
 x11-libs/libfm:vala - Support custom actions in menus
@@ -8797,6 +8799,7 @@ x11-misc/clipmenu:fzf - Use fzf as default launcher
 x11-misc/clipmenu:rofi - Use rofi as default launcher
 x11-misc/colord:argyllcms - Enable ArgyllCMS sensor
 x11-misc/colord:extra-print-profiles - Generate extra print profiles. Warning: significant build time and memory requirements.
+x11-misc/copyq:notification - Build with native notification support (requires kde-frameworks/knotifications:5)
 x11-misc/fbpager:xrender - Enable transparency support via x11-libs/libXrender
 x11-misc/gammastep:geoclue - Control dependency on app-misc/geoclue
 x11-misc/gmrun:xdg - Enable xdg spec for configuration and history files location

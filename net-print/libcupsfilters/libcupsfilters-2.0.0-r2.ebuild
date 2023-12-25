@@ -3,6 +3,8 @@
 
 EAPI=8
 
+inherit libtool
+
 DESCRIPTION="library for developing printing features, split out of cups-filters"
 HOMEPAGE="https://github.com/OpenPrinting/libcupsfilters"
 SRC_URI="https://github.com/OpenPrinting/libcupsfilters/releases/download/${PV}/${P}.tar.xz"
@@ -10,7 +12,7 @@ SRC_URI="https://github.com/OpenPrinting/libcupsfilters/releases/download/${PV}/
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="dbus exif jpeg pdf +poppler +postscript png test tiff"
-KEYWORDS="~amd64 ~loong"
+KEYWORDS="~amd64 ~arm64 ~loong"
 
 RESTRICT="!test? ( test )"
 
@@ -35,6 +37,13 @@ BDEPEND="
 	virtual/pkgconfig
 	test? ( media-fonts/dejavu )
 "
+
+src_prepare() {
+	default
+
+	# respect --as-needed
+	elibtoolize
+}
 
 src_configure() {
 	local myeconfargs=(

@@ -22,7 +22,7 @@ DESCRIPTION="Free implementation of the Remote Desktop Protocol"
 HOMEPAGE="https://www.freerdp.com/"
 
 LICENSE="Apache-2.0"
-SLOT="0/2"
+SLOT="0/3"
 IUSE="aad alsa cpu_flags_arm_neon cups debug doc +ffmpeg +fuse gstreamer +icu jpeg kerberos openh264 pulseaudio sdl server smartcard systemd test usb valgrind wayland X xinerama xv"
 RESTRICT="!test? ( test )"
 

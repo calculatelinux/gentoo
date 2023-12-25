@@ -204,6 +204,12 @@ src_prepare() {
 	# with a wrong library name.
 	sed -i -e "/CHECK_MODULES/s/libseccomp/DiSaBlE&/" configure.ac || die
 
+	# Tests that use bubblewrap don't work in the sandbox:
+	# "bwrap: setting up uid map: Permission denied"
+	# So, disrupt the search for the bwrap executable.
+	sed -i -e 's/(executable-find "bwrap")/nil/' test/src/emacs-tests.el \
+		test/lisp/emacs-lisp/bytecomp-tests.el || die
+
 	AT_M4DIR=m4 eautoreconf
 }
 
@@ -400,14 +406,6 @@ src_test() {
 	# subtests which caused failure. Elements should begin with a %.
 	# e.g. %lisp/gnus/mml-sec-tests.el.
 	local exclude_tests=(
-		# Reason: not yet known
-		# mml-secure-en-decrypt-{1,2,3,4}
-		# mml-secure-find-usable-keys-{1,2}
-		# mml-secure-key-checks
-		# mml-secure-select-preferred-keys-4
-		# mml-secure-sign-verify-1
-		%lisp/gnus/mml-sec-tests.el
-
 		# Reason: permission denied on /nonexistent
 		# (vc-*-bzr only fails if breezy is installed, as they
 		# try to access cache dirs under /nonexistent)
@@ -424,12 +422,6 @@ src_test() {
 		%lisp/vc/vc-tests.el
 		%lisp/vc/vc-bzr-tests.el
 
-		# Reason: fails if bubblewrap (bwrap) is installed
-		# "bwrap: setting up uid map: Permission denied"
-		#
-		# bytecomp-tests--dest-mountpoint
-		%lisp/emacs-lisp/bytecomp-tests.el
-
 		# Reason: tries to access network
 		# internet-is-working
 		%src/process-tests.el
@@ -441,6 +433,15 @@ src_test() {
 			%src/keyboard-tests.el
 		)
 	use xpm || exclude_tests+=( %src/image-tests.el )
+
+	# Redirect GnuPG's sockets, in order not to exceed the 108 char limit
+	# for socket paths on Linux.
+	mkdir "${T}"/gnupg || die
+	local f
+	for f in S.gpg-agent{,.browser,.extra,.ssh}; do
+		printf "%%Assuan%%\nsocket=%s\n" "${T}/gnupg/${f}" \
+			> "test/lisp/gnus/mml-sec-resources/${f}" || die
+	done
 
 	# See test/README for possible options
 	emake \

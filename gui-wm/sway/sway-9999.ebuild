@@ -87,6 +87,12 @@ src_configure() {
 	meson_src_configure
 }
 
+src_install() {
+	meson_src_install
+	insinto /usr/share/xdg-desktop-portal/portals
+	doins "${FILESDIR}/sway-portals.conf"
+}
+
 pkg_postinst() {
 	optfeature_header "There are several packages that may be useful with sway:"
 	optfeature "wallpaper utility" gui-apps/swaybg

@@ -6,15 +6,20 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
-# Sam James <sam@gentoo.org> (2023-12-20)
-# Needs <dev-libs/openssl-3 which is EOL on 2023-09-11. Please upgrade immediately.
-# See bug #913685.
-<sci-libs/gloo-2023.05.19-r1 ssl
+# Arthur Zamarin <arthurzam@gentoo.org> (2023-12-22)
+# Requires sys-block/hpacucli
+net-analyzer/nagios-plugin-check_raid hpa
+
+# Michał Górny <mgorny@gentoo.org> (2023-12-22)
+# Requires LLVM 14 that is being removed.
+<dev-lang/ghc-9.4 llvm
+media-gfx/openvdb ax
+sys-devel/sparse llvm
 
 # Sam James <sam@gentoo.org> (2023-12-18)
 # libgrust build is broken for multilib
 # https://gcc.gnu.org/PR113056
-=sys-devel/gcc-14.0.0_pre20231217 rust
+>=sys-devel/gcc-14.0.0_pre20231217 rust
 
 # John Helmert III <ajak@gentoo.org> (2023-11-25)
 # app-text/gocr has been masked for removal, bug #824290
@@ -97,10 +102,6 @@ media-video/mpv lua_single_target_lua5-1
 # later date.
 # See e.g. bugs 617518, 638522, 711302, 802435, 904987
 dev-lang/ruby jemalloc
-
-# Joonas Niilola <juippis@gentoo.org> (2023-07-14)
-# Calendar is broken with some languages on 115.0 release. Bug #910229
->=mail-client/thunderbird-115.0 system-icu
 
 # Marek Szuba <marecki@gentoo.org> (2023-07-10)
 # dev-python/mkdocs-material is by design directly integrated with
@@ -600,10 +601,6 @@ dev-util/meson test
 # Alfredo Tupone <tupone@gentoo.org> (2020-04-04)
 # Ada support is not yet ready for sys-devel/gcc
 sys-devel/gcc ada
-
-# Guilherme Amadio <amadio@gentoo.org> (2020-03-16)
-# Requires dev-libs/cudnn which is only available on amd64
-sci-physics/root cudnn
 
 # Thomas Deutschmann <whissi@gentoo.org> (2020-03-11)
 # Encrypted Media Extensions (eme-free) can't be disabled everywhere
