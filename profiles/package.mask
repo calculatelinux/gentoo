@@ -33,6 +33,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2023-12-25)
+# Masked until KF6 is unmasked.
+~media-libs/mpvqt-1.0.0
+
 # Michał Górny <mgorny@gentoo.org> (2023-12-25)
 # libtinynotify-systemwide is not ported to procps-4.  It is only
 # used to implement sw-notify-send which is used as an optional RDEP
@@ -265,7 +269,7 @@ dev-python/ruamel-std-pathlib
 ~kde-apps/libkexiv2-24.01.85
 ~kde-apps/spectacle-24.01.85
 ~kde-misc/kio-fuse-5.1.0
-~dev-libs/appstream-1.0.0
+~dev-libs/appstream-1.0.1
 ~dev-libs/kdiagram-3.0.0
 ~dev-libs/kirigami-addons-0.11.76_p20231222
 ~media-libs/libqaccessibilityclient-0.6.0
@@ -456,7 +460,6 @@ media-video/subtitleripper
 # Please run a full world upgrade, especially checking /etc/portage and your world file
 # for old PHP or Ruby references.
 <dev-libs/openssl-3
-<app-crypt/xca-2.4.0_p20230526
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2023-07-12)
 # The catalyst-3 branch is outdated and not used by Gentoo
