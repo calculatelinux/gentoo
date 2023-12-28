@@ -21,7 +21,7 @@ PATCHES=( "${FILESDIR}"/${P}-test.patch )
 RDEPEND="dev-python/jinja[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	test? ( dev-python/selenium[${PYTHON_USEDEP}] )"
-BDEPEND=""
+BDEPEND="dev-python/setuptools-scm"
 
 distutils_enable_tests pytest
 

@@ -3146,6 +3146,9 @@ games-fps/quakeforge:wildmidi - Use media-sound/wildmidi for midi support
 games-fps/redeclipse:dedicated - Install only as a dedicated game server
 games-fps/rott:demo - Install the shareware version
 games-fps/sauerbraten:server - Compile server support
+games-fps/serioussam:alsa - Enable support ALSA sound.
+games-fps/serioussam:pipewire - Enable support for pipewire.
+games-fps/serioussam:vulkan - Enable support Vulkan render.
 games-fps/turtlearena:mumble - Adds player-location (positional audio) support to VoIP
 games-fps/turtlearena:server - Build server target
 games-fps/turtlearena:voice - Adds VoIP support
@@ -6115,6 +6118,7 @@ net-misc/aria2:ssh - Enable SFTP support.
 net-misc/asterisk:blocks - Utlize -fblocks (only supported by, and required when using, clang/LLVM)
 net-misc/asterisk:cluster - Enable high-availability support through the Corosync Cluster Engine
 net-misc/asterisk:codec2 - Enable Codec2 support in asterisk
+net-misc/asterisk:dahdi - Support Digium compatible hardware (formerly known as Zaptel)
 net-misc/asterisk:deprecated - Enable deprecated features (eg, app_macro)
 net-misc/asterisk:gtalk - Enable support for Google Talk services
 net-misc/asterisk:http - Enable embedded web server
@@ -6269,6 +6273,9 @@ net-misc/curl:sslv3 - Support for the old/insecure SSLv3 protocol
 net-misc/curl:telnet - Enable Telnet protocol support
 net-misc/curl:tftp - Enable TFTP support
 net-misc/curl:websockets - Enable websockets support
+net-misc/dahdi:flash - Support (short) flash on FXS
+net-misc/dahdi:oslec - Enable OSLEC (software) echo canceller (require ECHO in kernel)
+net-misc/dahdi-tools:ppp - Enables PPP/DAHDIRAS support
 net-misc/dhcp:client - Install the dhclient program
 net-misc/dhcp:server - Install the dhcpd and dhcrelay programs
 net-misc/dhcpcd:embedded - Embed the definitions of dhcp options in the dhcpcd executable
@@ -6774,6 +6781,7 @@ net-voip/telepathy-gabble:plugins - Enable plugin loader
 net-voip/umurmur:mbedtls - Use net-libs/mbedtls as TLS provider
 net-voip/umurmur:shm - Enable shared memory support
 net-voip/yate:amrnb - use AMR-NB
+net-voip/yate:dahdi - Enable Dahdi driver
 net-voip/yate:gsm - use GSM codec
 net-voip/yate:ilbc - Enable iLBC codec
 net-voip/yate:ilbc-webrtc - Enable iLBC webrtc codec
@@ -6908,7 +6916,6 @@ net-wireless/gr-osmosdr:soapy - Build with SoapySDR support through net-wireless
 net-wireless/gr-osmosdr:uhd - Build with Ettus Research USRP Hardware Driver support through net-wireless/uhd
 net-wireless/gr-osmosdr:xtrx - Build with xtrx Hardware Driver support through net-wireless/libxtrx
 net-wireless/horst:pcap - Add support for network packet capture via net-libs/libpcap
-net-wireless/hostapd:crda - Add CRDA support
 net-wireless/hostapd:internal-tls - Use internal TLSv1 implementation instead of depending on OpenSSL or GnuTLS
 net-wireless/hostapd:netlink - Adding support for using netlink to create VLANs
 net-wireless/hostapd:suiteb - Adding support for NSA Suite B Cryptography
@@ -7679,7 +7686,6 @@ sys-apps/fwupd:amdgpu - Build and install AMD dGPU (Navi3x and above) plugin
 sys-apps/fwupd:amt - Build and install Intel AMT plugin
 sys-apps/fwupd:archive - Use app-arch/libarchive for archives support
 sys-apps/fwupd:cbor - Enable CBOR support for coSWID and uSWID via dev-libs/libcbor
-sys-apps/fwupd:dell - Enable Dell-specific support
 sys-apps/fwupd:fastboot - Build and install fastboot plugin
 sys-apps/fwupd:flashrom - Enable flashrom plugin via sys-apps/flashrom
 sys-apps/fwupd:gusb - Enable dev-libs/libgusb support
@@ -7715,7 +7721,6 @@ sys-apps/iproute2:berkdb - build programs that use berkdb (just arpd)
 sys-apps/iproute2:bpf - Use dev-libs/libbpf
 sys-apps/iproute2:elf - support loading eBPF programs from ELFs (e.g. LLVM's eBPF backend)
 sys-apps/iproute2:iptables - include support for iptables filtering
-sys-apps/iproute2:libbsd - Use dev-libs/libbsd instead of internal funcs
 sys-apps/iproute2:minimal - only install ip and tc programs, without eBPF support
 sys-apps/iproute2:nfs - Support RPC lookups via net-libs/libtirpc in ss
 sys-apps/irqbalance:numa - Support balancing IRQs across NUMA nodes
@@ -7811,7 +7816,6 @@ sys-apps/systemd:dns-over-tls - Enable DNS-over-TLS support
 sys-apps/systemd:elfutils - Enable coredump stacktraces in the journal
 sys-apps/systemd:fido2 - Enable FIDO2 support
 sys-apps/systemd:gcrypt - Enable use of dev-libs/libgcrypt for various features
-sys-apps/systemd:gnuefi - Enable EFI boot manager and stub loader (built using sys-boot/gnu-efi)
 sys-apps/systemd:homed - Enable portable home directories
 sys-apps/systemd:http - Enable embedded HTTP server in journald
 sys-apps/systemd:importd - Enable import daemon
@@ -8207,7 +8211,6 @@ sys-fs/cryptsetup:kernel - Use kernel crypto backend (mainly for embedded system
 sys-fs/cryptsetup:nettle - Use dev-libs/nettle crypto backend
 sys-fs/cryptsetup:openssl - Use dev-libs/openssl crypto backend
 sys-fs/cryptsetup:pwquality - Use dev-libs/libpwquality for password quality checking
-sys-fs/cryptsetup:reencrypt - Build cryptsetup-reencrypt
 sys-fs/cryptsetup:ssh - Build cryptsetup-ssh for experimental support of token via SSH-server
 sys-fs/cryptsetup:urandom - Use /dev/urandom instead of /dev/random
 sys-fs/dmraid:intel-led - Enable Intel LED support

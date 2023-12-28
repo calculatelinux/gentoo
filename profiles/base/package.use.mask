@@ -65,6 +65,12 @@ dev-haskell/scientific test
 dev-haskell/splitmix test
 dev-haskell/tasty-expected-failure test
 
+# Jaco Kroon <jaco@uls.co.za> (2023-09-19)
+# Joonas Niilola <juippis@gentoo.org> (2023-09-21)
+# DAHDI is being last-rited. See bug #914477.
+net-misc/asterisk dahdi
+net-voip/yate dahdi
+
 # Matt Turner <mattst88@gentoo.org> (2023-09-14)
 # Not ported to libsoup:3.0
 app-office/abiword collab
@@ -102,6 +108,10 @@ media-video/mpv lua_single_target_lua5-1
 # later date.
 # See e.g. bugs 617518, 638522, 711302, 802435, 904987
 dev-lang/ruby jemalloc
+
+# Joonas Niilola <juippis@gentoo.org> (2023-07-14)
+# Calendar is broken with some languages on 115.0 release. Bug #910229
+>=mail-client/thunderbird-115.0 system-icu
 
 # Marek Szuba <marecki@gentoo.org> (2023-07-10)
 # dev-python/mkdocs-material is by design directly integrated with
