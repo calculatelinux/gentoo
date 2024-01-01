@@ -1,6 +1,10 @@
 # Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Michał Górny <mgorny@gentoo.org> (2023-12-31)
+# Requires dev-libs/level-zero.
+dev-lang/ispc gpu
+
 # Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2023-12-18)
 # Requires systemd
 sys-kernel/gentoo-kernel generic-uki
@@ -138,3 +142,6 @@ app-shells/bash mem-scramble
 
 # static linking works with musl
 app-shells/mksh -static
+
+# linked against glibc
+sci-libs/caffe2 mkl
