@@ -1,4 +1,4 @@
-# Copyright 2020-2023 Gentoo Authors
+# Copyright 2020-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -16,7 +16,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="BSD GPL-3-with-openssl-exception LGPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~riscv"
+KEYWORDS="~amd64 ~arm64 ~loong ~riscv"
 IUSE="dbus enchant +fonts screencast qt6 qt6-imageformats wayland webkit +X"
 REQUIRED_USE="
 	qt6-imageformats? ( qt6 )
@@ -146,6 +146,12 @@ src_prepare() {
 }
 
 src_configure() {
+	# Having user paths sneak into the build environment through the
+	# XDG_DATA_DIRS variable causes all sorts of weirdness with cppgir:
+	# - bug 909038: can't read from flatpak directories (fixed upstream)
+	# - bug 920819: system-wide directories ignored when variable is set
+	export XDG_DATA_DIRS="${EPREFIX}/usr/share"
+
 	# Evil flag (bug #919201)
 	filter-flags -fno-delete-null-pointer-checks
 

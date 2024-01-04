@@ -1,4 +1,4 @@
-# Copyright 2021-2023 Gentoo Authors
+# Copyright 2021-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -16,7 +16,7 @@ fi
 DESCRIPTION="Standalone X server running under Wayland"
 HOMEPAGE="https://wayland.freedesktop.org/xserver.html"
 
-IUSE="libei selinux video_cards_nvidia unwind xcsecurity"
+IUSE="libei selinux systemd video_cards_nvidia unwind xcsecurity"
 
 LICENSE="MIT"
 SLOT="0"
@@ -41,6 +41,7 @@ COMMON_DEPEND="
 	>=x11-misc/xkeyboard-config-2.4.1-r3
 
 	libei? ( dev-libs/libei )
+	systemd? ( sys-apps/systemd )
 	unwind? ( sys-libs/libunwind )
 	video_cards_nvidia? ( gui-libs/egl-wayland )
 "
@@ -68,6 +69,7 @@ PATCHES=(
 src_configure() {
 	local emesonargs=(
 		$(meson_use selinux xselinux)
+		$(meson_use systemd)
 		$(meson_use unwind libunwind)
 		$(meson_use xcsecurity)
 		$(meson_use video_cards_nvidia xwayland_eglstream)

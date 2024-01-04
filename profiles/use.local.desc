@@ -321,6 +321,7 @@ app-containers/docker:container-init - Makes the a staticly-linked init system t
 app-containers/docker:device-mapper - Enables dependencies for the "devicemapper" graph driver, including necessary kernel flags.
 app-containers/docker:overlay - Enables dependencies for the "overlay" graph driver, including necessary kernel flags.
 app-containers/docker-credential-helpers:pass - Build pass helper for the pass utility.
+app-containers/incus:fuidshift - Install the fuidshift binary - currently conflicts with app-containers/lxd
 app-containers/lxc:io-uring - Enable io_uring support, and use io_uring instead of epoll
 app-containers/lxc:tools - Build and install additional command line tools
 app-containers/podman:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
@@ -842,6 +843,7 @@ app-misc/digitemp:ds9097u - Build support for the ds9097u sensor
 app-misc/fastfetch:chafa - Enables text/graphics renderer with media-gfx/chafa
 app-misc/fastfetch:ddcutil - Use app-misc/ddcutil to query monitor settings
 app-misc/fastfetch:drm - Enables support for X.org's x11-libs/libdrm
+app-misc/fastfetch:nvidia-gpu - Enables extra support for NVIDIA GPU
 app-misc/fastfetch:osmesa - Enables offscreen rendering support from media-libs/mesa
 app-misc/fastfetch:pci - Enables reading GPU via sys-apps/pciutils
 app-misc/fastfetch:vulkan - Enables reading GPU via media-libs/vulkan-loader
@@ -5852,7 +5854,6 @@ net-irc/quassel:gui - Build the Qt5 GUI client for quassel. If this USE flag is 
 net-irc/quassel:monolithic - Build standalone client with integrated core, no external quasselcore needed. Only useful if you don't want to use Quassel's client/server model. The server and X flags are not needed in this case but it is possible to enable them too.
 net-irc/quassel:oxygen - Support the Oxygen icon set that was the default for KDE4.
 net-irc/quassel:server - Build the server binary. If this USE flag is disabled, the 'core' server binary for quassel is not built, and cannot be used. You need this enabled on the server, but you might want to disable it on the client.
-net-irc/quassel:snorenotify - Support for Snore notification framework.
 net-irc/quassel:urlpreview - Use QtWebEngine rendering engine for showing URL thumbnails.
 net-irc/rbot:aspell - Use aspell instead of ispell in the "spell" plugin for rbot. The vanilla plugin uses ispell, but enabling this flag makes it use the ispell interface from aspell instead.
 net-irc/rbot:cal - Add dependency over a package providing the /usr/bin/cal command, which is needed to enable the "cal" plugin for rbot. If the USE flag is disabled the plugin is also disabled by default.
@@ -6863,6 +6864,7 @@ net-vpn/wireguard-modules:debug - Enable verbose debug reporting in dmesg of var
 net-vpn/wireguard-modules:module - Compile the actual WireGuard kernel module. Most certainly you want this enabled, unless you're doing something strange.
 net-vpn/wireguard-modules:module-src - Install the module source code to /usr/src, in case you like building kernel modules yourself.
 net-vpn/wireguard-tools:wg-quick - Install the wg-quick(8) helper tool. Most users want to use this.
+net-wireless/aic8800:firmware - Install device firmware
 net-wireless/aircrack-ng:airdrop-ng - Build airdrop-ng
 net-wireless/aircrack-ng:airgraph-ng - Build airgraph-ng
 net-wireless/aircrack-ng:experimental - Build the "experimental" tools which may randomly fail to run properly
@@ -7936,9 +7938,6 @@ sys-block/perccli:efi - Install EFI variant as well
 sys-block/sas2ircu:efi - Install EFI variant as well
 sys-block/sas3flash:efi - Install EFI variant as well
 sys-block/sas3ircu:efi - Install EFI variant as well
-sys-block/tgt:fcoe - Add support for FCoE protocol
-sys-block/tgt:fcp - Add support for new FC protocol
-sys-block/tgt:ibmvio - Add support for IBM Virtual I/O
 sys-block/tgt:rbd - Add support for ceph block devices
 sys-block/thin-provisioning-tools:io-uring - Enable experimental support for io-uring.
 sys-boot/grub:device-mapper - Enable support for device-mapper from sys-fs/lvm2
@@ -8261,8 +8260,10 @@ sys-fs/zfs-auto-snapshot:default-exclude - Only take snapshots of datasets with 
 sys-fs/zfs-kmod:dist-kernel-cap - Prevents upgrading to an unsupported kernel version when combined with USE=dist-kernel
 sys-fs/zfs-kmod:rootfs - Pull dependencies and check kernel options required for root-on-zfs
 sys-kernel/genkernel:firmware - Prefer system firmware sys-kernel/linux-firmware over local copy.
+sys-kernel/gentoo-kernel:generic-uki - Build and install a generic initramfs and Unified Kernel Image, this is intended for building binpkgs with a pre-generated UKI included (EXPERIMENTAL).
 sys-kernel/gentoo-kernel:hardened - Use selection of hardening options recommended by Kernel Self Protection Project
 sys-kernel/gentoo-kernel:initramfs - Build initramfs along with the kernel.
+sys-kernel/gentoo-kernel-bin:generic-uki - Install a prebuilt generic initramfs and Unified Kernel Image (EXPERIMENTAL).
 sys-kernel/gentoo-kernel-bin:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 sys-kernel/installkernel-gentoo:dracut - Generate an initrd or UKI on each kernel installation

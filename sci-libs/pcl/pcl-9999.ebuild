@@ -1,18 +1,13 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-SCM=""
-if [ "${PV#9999}" != "${PV}" ] ; then
-	SCM="git-r3"
+inherit cmake cuda
+
+if [[ ${PV} == *9999 ]]; then
+	inherit git-r3
 	EGIT_REPO_URI="https://github.com/PointCloudLibrary/pcl"
-fi
-
-inherit ${SCM} cmake cuda
-
-if [ "${PV#9999}" != "${PV}" ] ; then
-	SRC_URI=""
 else
 	KEYWORDS="~amd64 ~arm"
 	SRC_URI="https://github.com/PointCloudLibrary/pcl/archive/${P}.tar.gz"
@@ -22,7 +17,7 @@ fi
 HOMEPAGE="https://pointclouds.org/"
 DESCRIPTION="2D/3D image and point cloud processing"
 LICENSE="BSD"
-SLOT="0/1.12"
+SLOT="0/$(ver_cut 1-2)"
 IUSE="cuda doc opengl openni openni2 pcap png +qhull qt5 usb vtk cpu_flags_x86_sse test tutorials"
 # tests need the gtest sources to be available at build time
 RESTRICT="test"
