@@ -294,6 +294,7 @@ app-benchmarks/filebench:auto-completion - Enable command-line autocompletion us
 app-benchmarks/httperf:idleconn - Build with the idleconn program
 app-benchmarks/ioping:netdata - Add support for netdata
 app-benchmarks/ramspeed:pic - Force shared libraries to be built as PIC (this is slower)
+app-benchmarks/stress-ng:keyutils - Stress test the kernel's key generation facilities via sys-apps/keyutils
 app-benchmarks/sysbench:aio - Add support for AIO.
 app-benchmarks/sysbench:attachsql - Add support for AttachSQL.
 app-benchmarks/sysbench:drizzle - Add support for Drizzles.
@@ -4238,7 +4239,6 @@ media-libs/libheif:x265 - Use media-libs/x265 for HEIF encoding
 media-libs/libjxl:gdk-pixbuf - Build a gdk-pixbuf loader
 media-libs/liblastfm:fingerprint - Build the lastfm-fingerprint library
 media-libs/libmp4v2:utils - Install command-line utilities
-media-libs/libmpg123:int-quality - Use rounding instead of fast truncation for integer output, where possible
 media-libs/libmypaint:gegl - Add support for media-libs/gegl
 media-libs/libopenglrecorder:openh264 - Enable H.264 support using media-libs/openh264
 media-libs/libopenglrecorder:vpx - Enable VP8/VP9 codec support via media-libs/libvpx
@@ -4476,6 +4476,7 @@ media-plugins/gst-plugins-vaapi:drm - Enable DRM renderer
 media-plugins/gst-plugins-vaapi:gles2 - Enable GLESv2 and GLESv3 support
 media-plugins/imlib2_loaders:xcf - Enable XCF image loader
 media-plugins/ir_lv2:tools - Build convert4chan tool
+media-plugins/mpg123-output-plugins:int-quality - Use rounding instead of fast truncation for integer output, where possible
 media-plugins/vdr-cdplayer:cdparanoia - Enable cdparanoia (audio CD ripper) support
 media-plugins/vdr-dvbapi:dvbcsa - use media-libs/libdvbcsa free implementation of the DVB Common Scrambling Algorithm
 media-plugins/vdr-epgsearch:conflictcheckonly - install the "conflictcheckonly" vdr-plugin
@@ -4681,6 +4682,7 @@ media-sound/mpd:webdav - Enable using music from a WebDAV share
 media-sound/mpd:wildmidi - Enable MIDI support via wildmidi
 media-sound/mpfc:wav - Enable wav audio codec support
 media-sound/mpg123:int-quality - Use rounding instead of fast truncation for integer output, where possible
+media-sound/mpg123-base:int-quality - Use rounding instead of fast truncation for integer output, where possible
 media-sound/musescore:jumbo-build - Combine source files to speed up build process, requires more memory
 media-sound/musescore:omr - Enable PDF import (OMR - optical music recognition)
 media-sound/musescore:osc - Enable OSC remote control protocol
@@ -7897,6 +7899,7 @@ sys-auth/seatd:builtin - Enable embedded server in libseat
 sys-auth/seatd:server - Enable standalone seatd server, replacement to (e)logind
 sys-auth/ssh-ldap-pubkey:schema - Install a copy of the LPK schema, only needed on LDAP servers.
 sys-auth/sssd:acl - Build and use the cifsidmap plugin
+sys-auth/sssd:keyutils - Controls whether the kernel keyring should be used via sys-apps/keyutils
 sys-auth/sssd:netlink - Add support for netlink protocol via dev-libs/libnl
 sys-auth/sssd:nfsv4 - Add support for the nfsv4 idmapd plugin provided by net-fs/nfs-utils
 sys-auth/sssd:samba - Add Privileged Attribute Certificate Support for Kerberos
@@ -8770,8 +8773,6 @@ x11-libs/wxGTK:sdl - Use Simple Directmedia Layer (media-libs/libsdl) for audio.
 x11-libs/xapp:mate - Install status applet for mate-base/mate
 x11-misc/albert:debug - Enable debugging informations
 x11-misc/albert:python-extensions - Install default python extensions system-wide
-x11-misc/albert:statistics - Enable local statistics
-x11-misc/albert:virtualbox - Enable app-emulation/virtualbox extension
 x11-misc/alock:doc - Build and install manpage with app-text/asciidoc.
 x11-misc/appmenu-gtk-module:gtk2 - Build module for GTK+2
 x11-misc/autorandr:launcher - Install the launcher, i.e., an alternative to the udev/systemd hooks
@@ -9023,6 +9024,13 @@ xfce-base/libxfce4ui:system-info - Enable system information in xfce4-about.
 xfce-base/thunar:trash-panel-plugin - Build the trash status indicator plugin for the XFCE panel
 xfce-base/tumbler:epub - Enable support for .epub thumbnailer using app-text/libgepub
 xfce-base/tumbler:odf - Enable support for .odf thumbnailers by using gnome-extra/libgsf
+xfce-base/xfce4-meta:archive - Install app-arch/xarchiver.
+xfce-base/xfce4-meta:editor - Install the app-editors/mousepad text editor.
+xfce-base/xfce4-meta:image - Install the media-gfx/ristretto image viewer.
+xfce-base/xfce4-meta:media - Install the media-video/parole media player.
+xfce-base/xfce4-meta:mpd - Install the media-sound/xfmpc MPD client.
+xfce-base/xfce4-meta:remote-fs - Install the x11-misc/gigolo frontend to manage remote filesystem connections.
+xfce-base/xfce4-meta:search - Install the dev-util/catfish search tool frontend.
 xfce-base/xfce4-panel:dbusmenu - Enable dev-libs/libdbusmenu integration (in status notifier plugin)
 xfce-base/xfce4-power-manager:panel-plugin - Build the power management plugin for the XFCE panel
 xfce-base/xfce4-settings:libcanberra - Enable sound event support using media-libs/libcanberra
