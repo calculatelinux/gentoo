@@ -1,4 +1,4 @@
-# Copyright 2021-2023 Gentoo Authors
+# Copyright 2021-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -249,9 +249,6 @@ src_configure() {
 		IFS=' ' read -ra intrins < <(
 			: "$(test-flags-CXX "${cpuflags[@]/#/-m}")"
 			$(tc-getCXX) -E -P ${_} ${CXXFLAGS} ${CPPFLAGS} - <<-EOF | tail -n 1
-				#if defined(__GNUC__) && (defined(__x86_64__) || defined(__i386__))
-				#include <x86intrin.h>
-				#endif
 				$(printf '__%s__ ' "${cpuflags[@]^^}")
 			EOF
 			assert
@@ -292,6 +289,8 @@ src_test() {
 		tst_qsctpsocket
 		# randomly fails without -j1, and not worth it over this (bug #916181)
 		tst_qfiledialog{,2}
+		# may randomly hang+timeout, perhaps related to -j as well
+		tst_qtimer
 		# these can be flaky depending on the environment/toolchain
 		tst_qlogging # backtrace log test can easily vary
 		tst_q{,raw}font # affected by available fonts / settings (bug #914737)

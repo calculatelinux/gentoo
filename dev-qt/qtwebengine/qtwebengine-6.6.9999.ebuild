@@ -250,6 +250,13 @@ src_configure() {
 	qt6-build_src_configure
 }
 
+src_compile() {
+	# tentatively work around a possible (rare) race condition (bug #921680)
+	cmake_build WebEngineCore_sync_all_public_headers
+
+	cmake_src_compile
+}
+
 src_test() {
 	if [[ ${EUID} == 0 ]]; then
 		# almost every tests fail, so skip entirely
@@ -279,6 +286,13 @@ src_test() {
 
 	# random failures in several tests without -j1
 	qt6-build_src_test -j1
+}
+
+src_install() {
+	qt6-build_src_install
+
+	[[ -e ${D}${QT6_LIBDIR}/libQt6WebEngineCore.so ]] || #601472
+		die "${CATEGORY}/${PF} failed to build anything. Please report to https://bugs.gentoo.org/"
 }
 
 pkg_postinst() {

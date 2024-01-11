@@ -1,4 +1,4 @@
-# Copyright 2022-2023 Gentoo Authors
+# Copyright 2022-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -19,7 +19,7 @@ if [[ ${PV} == *9999 ]]; then
 else
 	SRC_URI="https://github.com/ValveSoftware/wine/archive/refs/tags/proton-wine-${WINE_PV}.tar.gz"
 	S="${WORKDIR}/${PN}-wine-${WINE_PV}"
-	KEYWORDS="-* ~amd64 ~x86"
+	KEYWORDS="-* amd64 ~x86"
 fi
 
 DESCRIPTION="Valve Software's fork of Wine"
@@ -158,7 +158,8 @@ src_prepare() {
 		sed -i '/MSVCRTFLAGS=/s/-mabi=ms//' configure.ac || die
 
 		# needed by Valve's fsync patches if using clang (undef atomic_load_8)
-		sed -i '/^UNIX_LIBS.*=/s/$/ -latomic/' dlls/ntdll/Makefile.in || die
+		sed -e '/^UNIX_LIBS.*=/s/$/ -latomic/' \
+			-i dlls/{ntdll,winevulkan}/Makefile.in || die
 	fi
 
 	# ensure .desktop calls this variant + slot

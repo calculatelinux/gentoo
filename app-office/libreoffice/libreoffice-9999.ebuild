@@ -258,12 +258,15 @@ RDEPEND="${COMMON_DEPEND}
 BDEPEND="
 	dev-util/intltool
 	sys-apps/which
-	sys-devel/bison
-	sys-devel/flex
+	app-alternatives/yacc
+	app-alternatives/lex
 	sys-devel/gettext
 	virtual/pkgconfig
 	clang? (
 		|| (
+			(	sys-devel/clang:18
+				sys-devel/llvm:18
+				=sys-devel/lld-18*	)
 			(	sys-devel/clang:17
 				sys-devel/llvm:17
 				=sys-devel/lld-17*	)
@@ -273,9 +276,6 @@ BDEPEND="
 			(	sys-devel/clang:15
 				sys-devel/llvm:15
 				=sys-devel/lld-15*	)
-			(	sys-devel/clang:14
-				sys-devel/llvm:14
-				=sys-devel/lld-14*	)
 		)
 	)
 	odk? ( >=app-doc/doxygen-1.8.4 )

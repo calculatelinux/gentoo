@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Ionen Wolkens <ionen@gentoo.org> (2023-10-09)
@@ -80,7 +80,6 @@ media-video/mpv -libplacebo -vulkan
 # WANG Xuerui <xen0n@gentoo.org> (2022-10-07)
 # sys-libs/libsmbios is available here.
 app-laptop/pbbuttonsd -macbook
-sys-apps/fwupd -dell
 
 # Alexey Shvetsov <alexxy@gentoo.org> (2022-09-15)
 # Mask nvml use flag for slurm
@@ -109,7 +108,7 @@ app-vim/jedi test
 
 # Ben Kohler <bkohler@gentoo.org> (2022-06-07)
 # Disable 64bit builds on x86
-sys-apps/memtest86+ bios64 efi64 iso64
+sys-apps/memtest86+ bios64 uefi64 iso64
 
 # Jimi Huotari <chiitoo@gentoo.org> (2022-05-08)
 # Not keyworded here yet.

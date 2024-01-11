@@ -33,8 +33,8 @@ REQUIRED_USE="test? ( doc )"
 RESTRICT="!test? ( test )"
 
 BDEPEND="
-	sys-devel/bison
-	sys-devel/flex
+	app-alternatives/yacc
+	app-alternatives/lex
 	${PYTHON_DEPS}
 "
 RDEPEND="

@@ -32,8 +32,8 @@ RDEPEND="${DEPEND}
 	kf6compat? ( kde-frameworks/kuserfeedback:6 )
 "
 BDEPEND="
-	sys-devel/bison
-	sys-devel/flex
+	app-alternatives/yacc
+	app-alternatives/lex
 	doc? (
 		>=dev-qt/qdoc-${QTMIN}:5
 		>=dev-qt/qthelp-${QTMIN}:5

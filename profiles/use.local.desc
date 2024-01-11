@@ -208,7 +208,7 @@ app-alternatives/sh:lksh - Symlink to lksh from app-shells/mksh
 app-alternatives/sh:mksh - Symlink to mksh from app-shells/mksh
 app-alternatives/tar:gnu - Symlink to GNU tar (app-arch/tar)
 app-alternatives/tar:libarchive - Symlink to bsdtar from app-arch/libarchive
-app-alternatives/yacc:bison - Symlink to sys-devel/bison.
+app-alternatives/yacc:bison - Symlink to app-alternatives/yacc.
 app-alternatives/yacc:byacc - Symlink to dev-util/byacc.
 app-alternatives/yacc:reference - Symlink to dev-util/yacc.
 app-antivirus/clamav:clamapp - Build applications (clamscan, clamd, clamdscan, clamonacc (also has its own USE flag), sigtool, clambc, clamav-milter (also requires milter USE flag), clamdtop, clamsubmit, clamconf).
@@ -703,8 +703,8 @@ app-emulation/winetricks:rar - Pull in app-arch/unrar for extraction of rar-comp
 app-emulation/x48:readline - Enables support for libreadline
 app-emulation/xe-guest-utilities:xenstore - Use xenstore binaries bundled by Citrix instead of building app-emulation/xen-tools
 app-emulation/xen:boot-symlinks - Symlink xen.gz variants in /boot, disable on fat filesystems
-app-emulation/xen:efi - Adds efi boot support, requires LDFLAG -melf_x86_64 for amd64
 app-emulation/xen:flask - Enable the Flask XSM module from NSA
+app-emulation/xen:uefi - Adds UEFI boot support, requires LDFLAG -melf_x86_64 for amd64
 app-emulation/xen-tools:api - Build the C libxenapi bindings
 app-emulation/xen-tools:hvm - Enable support for hardware based virtualization (VT-x,AMD-v)
 app-emulation/xen-tools:ipxe - Enable ipxe support
@@ -759,6 +759,7 @@ app-i18n/fcitx:server - Build a fcitx as server, disable this option if you want
 app-i18n/fcitx:table - Install table input methods for Simplified Chinese
 app-i18n/fcitx:xkb - Enable support for XKB (required for fcitx-xkb, fcitx-xkbdbus, part of fcitx-keyboard)
 app-i18n/fcitx-chinese-addons:cloudpinyin - Build cloud pinyin addon
+app-i18n/fcitx-chinese-addons:data - Build data
 app-i18n/fcitx-chinese-addons:gui - Enable GUI support (qt5 or qt6)
 app-i18n/fcitx-chinese-addons:opencc - Enable support for conversion between Traditional and Simplified Chinese
 app-i18n/fcitx-chinese-addons:qt5 - Enable configure qt5
@@ -790,6 +791,7 @@ app-i18n/ibus-libpinyin:opencc - Enable support for app-i18n/opencc
 app-i18n/ibus-pinyin:boost - Enable support for dev-libs/boost
 app-i18n/im-chooser:xfce - Enable support for XFCE panel
 app-i18n/imsettings:xfconf - Enable support for xfce-base/xfconf
+app-i18n/libime:data - Build data
 app-i18n/librime:debug - Enable debugging (including logging of input of RIME input methods)
 app-i18n/mozc:fcitx4 - Enable support for app-i18n/fcitx 4
 app-i18n/mozc:gui - Install graphical user interface tool (mozc_tool)
@@ -2077,6 +2079,8 @@ dev-libs/ncnn:tools - Enable installation of various tools in addition to the li
 dev-libs/nss:cacert - Include root/class3 certs from CAcert (https://www.cacert.org/)
 dev-libs/nss:utils - Compile and install all extra binaries, such as certutil, modutil and few more
 dev-libs/nwjs:ffmpeg-chromium - Use Chromium FFmpeg fork (media-video/ffmpeg-chromium) rather than mainline FFmpeg (media-video/ffmpeg)
+dev-libs/oneDNN:cblas - Use virtual/cblas for sgemm routines
+dev-libs/oneDNN:mkl - Use sci-libs/mkl for sgemm routines
 dev-libs/onigmo:combination-explosion-check - enable combination explosion check
 dev-libs/onigmo:crnl-as-line-terminator - enable CR+NL as line terminator
 dev-libs/oniguruma:crnl-as-line-terminator - Enable CR+NL as line terminator
@@ -2776,7 +2780,7 @@ dev-util/devhelp:gedit - Install plugin for app-editors/gedit
 dev-util/dialog:minimal - Disable library, install command-line program only
 dev-util/diffoscope:R - Use dev-lang/R
 dev-util/diffoscope:binutils - Use sys-devel/binutils
-dev-util/diffoscope:cpio - Use app-arch/cpio
+dev-util/diffoscope:cpio - Use app-alternatives/cpio
 dev-util/diffoscope:diff - Use sys-apps/diffutils
 dev-util/diffoscope:docx - Use app-text/docx2txt
 dev-util/diffoscope:dtc - Use sys-apps/dtc
@@ -4103,7 +4107,6 @@ media-gfx/ueberzugpp:opencv - Use media-libs/opencv for additional image formats
 media-gfx/ueberzugpp:wayland - Enable wayland support (proper window positioning is only supported with some compositors)
 media-gfx/ueberzugpp:xcb-errors - Use x11-libs/xcb-util-errors for better error reporting with X
 media-gfx/xpaint:pgf - Support for loading PGF images
-media-gfx/xsane:ocr - Enable support for Optical Character Recognition reader
 media-gfx/yafaray:fastmath - Enable mathematic approximations to make code faster
 media-gfx/yafaray:fasttrig - Enable trigonometric approximations to make code faster
 media-gfx/yafaray:opencv - Add support for media-libs/opencv image processing.
@@ -4132,7 +4135,6 @@ media-libs/cogl:kms - Enable KMS support.
 media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
 media-libs/coin:exceptions - Compile with C++ exceptions
 media-libs/coin:qthelp - Build API documentation in QtHelp format
-media-libs/cubeb:rust - Use the newer rust-based audio backends if available
 media-libs/cubeb:sndio - Enable support for the media-sound/sndio backend
 media-libs/dav1d:10bit - Add support for building 10-bit and 12-bit AV1.
 media-libs/dav1d:8bit - Add support for decoding 8-bit AV1.
@@ -4322,26 +4324,29 @@ media-libs/openal:pipewire - Enable support for the media-video/pipewire audio b
 media-libs/openal:sndio - Enable support for the media-sound/sndio backend
 media-libs/opencolorio:apps - Build the OCIO command line apps
 media-libs/opencv:contrib - Install user contributed scripts from opencv_contrib (Experimental!)
-media-libs/opencv:contribcvv - CVV module requires Qt5
-media-libs/opencv:contribdnn - DNN module contrib requires tiny dnn
-media-libs/opencv:contribfreetype - Enable Drawing UTF-8 strings with freetype/harfbuzz
-media-libs/opencv:contribhdf - HDF module requires sci-libs/hdf5
-media-libs/opencv:contribovis - Enable Ogre vision module support
-media-libs/opencv:contribsfm - SFM module requires eigen, gflags, and glog
-media-libs/opencv:contribxfeatures2d - Enables xfeatures2d and autodownload of samples in contrib
+media-libs/opencv:contribcvv - Enable CVV in contrib (requires Qt5)
+media-libs/opencv:contribdnn - Enable DNN module contrib (requires tinydnn)
+media-libs/opencv:contribfreetype - Enable Drawing UTF-8 strings with media-libs/freetype&media-libs/harfbuzz
+media-libs/opencv:contribhdf - Enable HDF module (requires sci-libs/hdf5)
+media-libs/opencv:contribovis - Enable OGRE vision module support (dev-games/ogre)
+media-libs/opencv:contribsfm - Enable SFM module (requires USE="eigen gflags glog")
+media-libs/opencv:contribxfeatures2d - Enable xfeatures2d in contrib
 media-libs/opencv:cuda - Enable NVIDIA Cuda computations support (Experimental!)
-media-libs/opencv:dnnsamples - Download dnn caffeemodel samples
+media-libs/opencv:cudnn - Enable support for nVidia cuDNN library
+media-libs/opencv:dnnsamples - Enable dnn caffeemodel samples
 media-libs/opencv:download - Enable download during cmake configure
 media-libs/opencv:eigen - Enable usage of dev-cpp/eigen for computations
 media-libs/opencv:features2d - Enable features2d module
 media-libs/opencv:gdal - Enable support for sci-libs/gdal library
-media-libs/opencv:gflags - Use Google's C++ argument parsing library
-media-libs/opencv:glog - Use Google's C++ loggin library
+media-libs/opencv:gflags - Use Google's C++ argument parsing library (dev-cpp/gflags)
+media-libs/opencv:glog - Use Google's C++ logging library (dev-cpp/glog)
 media-libs/opencv:gtk3 - Enable x11-libs/gtk+:3 support
-media-libs/opencv:lto - Build using Link Time Optimizations (LTO)
+media-libs/opencv:non-free - Enable non-free components
 media-libs/opencv:opencvapps - Enable compilation with opencvapps
+media-libs/opencv:tbb - Enable multithreading with the Intel Threads Building Block (dev-cpp/tbb)
 media-libs/opencv:tesseract - Use Google's OCR Engine
 media-libs/opencv:testprograms - Build and install programs for testing OpenCV (performance)
+media-libs/opencv:video_cards_intel - Enable Video Acceleration API for hardware decoding for Intel cards
 media-libs/opencv:vtk - Build new 3D visualization module viz based on sci-libs/vtk
 media-libs/openexr:large-stack - Enables code to take advantage of large stack support.
 media-libs/openexr:utils - Build several binary tools for verifying and manipulating EXR files.
@@ -4362,8 +4367,9 @@ media-libs/opus:custom-modes - Enable non-Opus modes, e.g. 44.1 kHz and 2^n fram
 media-libs/opusfile:fixed-point - Enable fixed-point arithmetic operations
 media-libs/opusfile:float - Enable floating point arithmetic operations
 media-libs/opusfile:http - Enable http connections
+media-libs/osl:gui - Build the osltoy binary (with Qt5)
 media-libs/osl:partio - Use media-libs/partio
-media-libs/osl:qt5 - Build the osltoy binary
+media-libs/osl:qt6 - Build the osltoy binary (with Qt6)
 media-libs/phonon:designer - Install plugin for dev-qt/designer
 media-libs/phonon:vlc - Install VLC Phonon backend
 media-libs/phonon-gstreamer:network - Enable network streaming support via libsoup
@@ -5294,6 +5300,8 @@ net-analyzer/net-snmp:pcre - Add support for Perl Compatible Regular Expressions
 net-analyzer/net-snmp:rpm - Enable monitoring of app-arch/rpm. This flag requires the bzip2 and zlib flags to be enabled as well.
 net-analyzer/net-snmp:smux - Enable support for the legacy smux protocol (superseded by agentx)
 net-analyzer/net-snmp:ucd-compat - Build UCD compatibility library. Increases significantly the install size.
+net-analyzer/netdata:aclk - Enable Agent-Cloud Link (ACLK) for securely connecting a Netdata Agent to your web browser through Netdata Cloud
+net-analyzer/netdata:bpf - Enable the extended Berkeley Packet Filter (eBPF) collector to monitor kernel-level metrics about applications with per-second granularity
 net-analyzer/netdata:cloud - Enable Netdata Cloud support
 net-analyzer/netdata:compression - Enable compression via zlib
 net-analyzer/netdata:dbengine - Enable the Netdata database engine
@@ -6028,6 +6036,7 @@ net-libs/pjproject:libyuv - Include libyuv in the build
 net-libs/pjproject:openh264 - Include Open H.264 support in the build
 net-libs/pjproject:resample - Include resampling implementations in the build
 net-libs/pjproject:silk - Include SILK support in the build
+net-libs/pjproject:srtp - Enable support for encrypted voice transmission (secure RTP)
 net-libs/pjproject:v4l2 - Include Video4Linux v2 support in the build
 net-libs/pjproject:vpx - Include VP8 and VP9 codec support in the build
 net-libs/pjproject:webrtc - Enable WebRTC support
@@ -7007,6 +7016,7 @@ sci-astronomy/sextractor:modelfit - Enable profile model fitting, needs sci-libs
 sci-astronomy/siril:libconfig - Require dev-libs/libconfig to read old configuration files
 sci-astronomy/siril:wcs - Add supprt astrometry features using sci-astronomy/wcslib
 sci-astronomy/stellarium:deep-sky - Install extra deep sky objects catalog (may affect performance)
+sci-astronomy/stellarium:lens-distortion - Enable lens distortion estimator plugin
 sci-astronomy/stellarium:media - Enable sound and video support
 sci-astronomy/stellarium:scripting - Enable JS scripting via dev-qt/qtscript in Qt5 or using Qml via dev-qt/qtdeclarative in Qt6
 sci-astronomy/stellarium:show-my-sky - Enable a better atmosphere model via sci-astronomy/calcmysky
@@ -7164,6 +7174,7 @@ sci-libs/caffe2:gloo - Use sci-libs/gloo
 sci-libs/caffe2:mkl - Use sci-libs/mkl for blas, lapack and sparse blas routines
 sci-libs/caffe2:nnpack - Use NNPACK
 sci-libs/caffe2:numpy - Add support for math operations through numpy
+sci-libs/caffe2:onednn - Use oneDNN
 sci-libs/caffe2:opencv - Add support for image processing operators
 sci-libs/caffe2:openmp - Use OpenMP for parallel code
 sci-libs/caffe2:qnnpack - Use QNNPACK
@@ -7401,6 +7412,7 @@ sci-libs/vtk:gdal - Support for gdal formated data
 sci-libs/vtk:imaging - Building Imaging modules
 sci-libs/vtk:las - Build support for LiDAR files
 sci-libs/vtk:logging - Build the logging module
+sci-libs/vtk:opencascade - Enable OpenCASCADE support
 sci-libs/vtk:openvdb - Build support to handle VDB data files
 sci-libs/vtk:pdal - Build support to handle point cloud data files
 sci-libs/vtk:qt6 - Use Qt6 packages instead of Qt5
@@ -7754,10 +7766,10 @@ sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/memtest86+:bios32 - Compile a BIOS-bootable 32bit memtest image
 sys-apps/memtest86+:bios64 - Compile a BIOS-bootable 64bit memtest image
 sys-apps/memtest86+:boot - Install to /boot in addition to /usr/share/memtest86+/
-sys-apps/memtest86+:efi32 - Compile a EFI32-bootable 32bit memtest image
-sys-apps/memtest86+:efi64 - Compile a UEFI-bootable 64bit memtest image
 sys-apps/memtest86+:iso32 - Compile a 32bit ISO image
 sys-apps/memtest86+:iso64 - Compile a 64bit ISO image
+sys-apps/memtest86+:uefi32 - Compile a EFI32-bootable 32bit memtest image
+sys-apps/memtest86+:uefi64 - Compile a UEFI-bootable 64bit memtest image
 sys-apps/moreutils:perl - Install scripts written in Perl
 sys-apps/net-tools:arp - build the arp and rarp tools (for manipulating the ARP cache)
 sys-apps/net-tools:hostname - build the hostname and dnsdomainname tools
@@ -7892,7 +7904,7 @@ sys-auth/pambase:securetty - Enable pam_securetty module in the login stack. Not
 sys-auth/pambase:sha512 - Switch Linux-PAM's pam_unix module to use sha512 for passwords hashes rather than MD5. This option requires sys-libs/pam version 1.0.1 built against sys-libs/glibc version 2.7, if it's built against an earlier version, it will silently be ignored, and MD5 hashes will be used. All the passwords changed after this USE flag is enabled will be saved to the shadow file hashed using SHA512 function. The password previously saved will be left untouched. Please note that while SHA512-hashed passwords will still be recognised if the USE flag is removed, the shadow file will not be compatible with systems using an earlier glibc version.
 sys-auth/pambase:systemd - Use pam_systemd module to register user sessions in the systemd control group hierarchy.
 sys-auth/pambase:yescrypt - Switch Linux-PAM's pam_unix module to use yescrypt for passwords hashes rather than MD5
-sys-auth/polkit:daemon - Build polkitd in addition to libpolkit. Those using sys-apps/dbus-broker may wish to disable this flag.
+sys-auth/polkit:daemon - Build polkitd in addition to libpolkit.
 sys-auth/polkit:duktape - Use dev-lang/duktape instead of dev-lang/spidermonkey as JavaScript engine
 sys-auth/polkit:systemd - Use sys-apps/systemd for session tracking
 sys-auth/seatd:builtin - Enable embedded server in libseat
@@ -7937,10 +7949,10 @@ sys-block/open-iscsi:tcp - Support iSCSI over TCP
 sys-block/parted:debug - Enable debugging as encouraged by upstream: [The default configuration] includes --enable-debug (by default), which contains many assertions. Obviously, these "waste" space, but in the past, they have caught potentially dangerous bugs before they would have done damage, so we think it's worth it. Also, it means we get more bug reports ;)
 sys-block/parted:device-mapper - Enable device-mapper support from sys-fs/lvm2 in parted
 sys-block/partimage:nologin - Do not include login support when connecting partimaged
-sys-block/perccli:efi - Install EFI variant as well
-sys-block/sas2ircu:efi - Install EFI variant as well
-sys-block/sas3flash:efi - Install EFI variant as well
-sys-block/sas3ircu:efi - Install EFI variant as well
+sys-block/perccli:uefi - Install UEFI variant as well
+sys-block/sas2ircu:uefi - Install UEFI variant as well
+sys-block/sas3flash:uefi - Install UEFI variant as well
+sys-block/sas3ircu:uefi - Install EFI variant as well
 sys-block/tgt:rbd - Add support for ceph block devices
 sys-block/thin-provisioning-tools:io-uring - Enable experimental support for io-uring.
 sys-boot/grub:device-mapper - Enable support for device-mapper from sys-fs/lvm2
@@ -7965,7 +7977,7 @@ sys-boot/refind:ntfs - Builds the EFI binary ntfs filesystem driver
 sys-boot/refind:reiserfs - Builds the EFI binary reiserfs filesystem driver
 sys-boot/silo:tilo-only - Install only the tilo netboot tool
 sys-boot/syslinux:bios - Enable BIOS support
-sys-boot/syslinux:efi - Enable EFI support
+sys-boot/syslinux:uefi - Enable UEFI support
 sys-boot/vboot-utils:libzip - Use dev-libs/libzip.
 sys-cluster/ceph:babeltrace - Add support for LTTng babeltrace
 sys-cluster/ceph:cephfs - Build support for cephfs, a POSIX compatible filesystem built on top of ceph
@@ -8109,7 +8121,7 @@ sys-devel/clang-toolchain-symlinks:native-symlinks - Install generic tool symlin
 sys-devel/crosstool-ng:dtc - Require sys-apps/dtc
 sys-devel/crosstool-ng:lzip - Require app-arch/lzip
 sys-devel/crosstool-ng:meson - Require dev-util/meson
-sys-devel/crosstool-ng:ninja - Require dev-util/ninja
+sys-devel/crosstool-ng:ninja - Require app-alternatives/ninja
 sys-devel/crosstool-ng:rsync - Require net-misc/rsync
 sys-devel/crosstool-ng:wget - Require net-misc/wget
 sys-devel/distcc:gssapi - Enable support for net-libs/libgssglue
@@ -8179,11 +8191,11 @@ sys-firmware/intel-microcode:initramfs - Install a small initramfs for use with 
 sys-firmware/intel-microcode:split-ucode - Install the split binary ucode files (used by the kernel directly)
 sys-firmware/intel-microcode:vanilla - Only install microcode updates from Intel's official microcode tarball
 sys-firmware/ipxe:binary - Use pre-built binaries
-sys-firmware/ipxe:efi - Build a 32bit EFI program for using PXE
-sys-firmware/ipxe:efi64 - Build a 64bit EFI program for using PXE
 sys-firmware/ipxe:iso - Build a bootable ISO for using PXE
 sys-firmware/ipxe:lkrn - Build a linux kernel bootable file for using with grub/etc...
 sys-firmware/ipxe:qemu - Build the required PXE ROM images for app-emulation/qemu
+sys-firmware/ipxe:uefi32 - Build a 32bit UEFI program for using PXE
+sys-firmware/ipxe:uefi64 - Build a 64bit UEFI program for using PXE
 sys-firmware/ipxe:undi - Build a Universal Network Device Interface driver chainloading your existing PXE NIC into iPXE
 sys-firmware/ipxe:usb - Build a bootable USB image for using PXE
 sys-firmware/ipxe:vmware - Build the PXE ROM images that VMWare uses

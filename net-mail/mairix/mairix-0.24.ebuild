@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -19,8 +19,8 @@ RDEPEND="zlib? ( sys-libs/zlib )
 	bzip2? ( app-arch/bzip2 )"
 
 DEPEND="${RDEPEND}
-	sys-devel/flex
-	sys-devel/bison"
+	app-alternatives/lex
+	app-alternatives/yacc"
 
 # Fail on various locales
 RESTRICT="test"

@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -17,8 +17,8 @@ if [[ ${PV} == 9999 ]]; then
 		sys-apps/gawk
 		sys-apps/help2man
 		sys-apps/texinfo
-		sys-devel/bison
-		sys-devel/flex
+		app-alternatives/yacc
+		app-alternatives/lex
 	"
 elif [[ $(ver_cut 2) -ge 90 || $(ver_cut 3) -ge 90 ]]; then
 	SRC_URI="https://alpha.gnu.org/gnu/poke/${P}.tar.gz"

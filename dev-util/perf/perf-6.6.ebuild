@@ -43,8 +43,8 @@ BDEPEND="
 	${PYTHON_DEPS}
 	>=app-arch/tar-1.34-r2
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	sys-devel/bison
-	sys-devel/flex
+	app-alternatives/yacc
+	app-alternatives/lex
 	virtual/pkgconfig
 	doc? (
 		app-text/asciidoc

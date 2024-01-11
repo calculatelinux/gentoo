@@ -257,8 +257,8 @@ RDEPEND="${COMMON_DEPEND}
 BDEPEND="
 	dev-util/intltool
 	sys-apps/which
-	sys-devel/bison
-	sys-devel/flex
+	app-alternatives/yacc
+	app-alternatives/lex
 	sys-devel/gettext
 	virtual/pkgconfig
 	clang? (

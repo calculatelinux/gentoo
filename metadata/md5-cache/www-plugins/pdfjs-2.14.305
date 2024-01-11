@@ -7,4 +7,4 @@ KEYWORDS=amd64 ~arm64 ~x86
 LICENSE=Apache-2.0
 SLOT=0
 SRC_URI=https://github.com/mozilla/pdf.js/releases/download/v2.14.305/pdfjs-2.14.305-dist.zip -> pdfjs-2.14.305.zip
-_md5_=83e6cb418130e229f819cbf9003746b8
+_md5_=17893035ab1478981e7ddd225aeb1eb4

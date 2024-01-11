@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -39,7 +39,7 @@ MIN_PAX_UTILS_VER="1.3.3"
 if [[ ${PV} == 9999* ]]; then
 	inherit git-r3
 else
-	#KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+	#KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa -ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
 	SRC_URI="mirror://gnu/glibc/${P}.tar.xz"
 	SRC_URI+=" https://dev.gentoo.org/~${PATCH_DEV}/distfiles/${P}-patches-${PATCH_VER}.tar.xz"
 fi
@@ -1082,16 +1082,6 @@ glibc_do_configure() {
 	echo "$@"
 	"$@" || die "failed to configure glibc"
 
-	# ia64 static cross-compilers are a pita in so much that they
-	# can't produce static ELFs (as the libgcc.a is broken).  so
-	# disable building of the programs for those targets if it
-	# doesn't work.
-	# XXX: We could turn this into a compiler test, but ia64 is
-	# the only one that matters, so this should be fine for now.
-	if is_crosscompile && [[ ${CTARGET} == ia64* ]] ; then
-		sed -i '1i+link-static = touch $@' config.make
-	fi
-
 	# If we're trying to migrate between ABI sets, we need
 	# to lie and use a local copy of gcc.  Like if the system
 	# is built with MULTILIB_ABIS="amd64 x86" but we want to
@@ -1117,7 +1107,7 @@ glibc_headers_configure() {
 	# the best here ...
 	local v vars=(
 		ac_cv_header_cpuid_h=yes
-		libc_cv_{386,390,alpha,arm,hppa,ia64,mips,{powerpc,sparc}{,32,64},sh,x86_64}_tls=yes
+		libc_cv_{386,390,alpha,arm,hppa,mips,{powerpc,sparc}{,32,64},sh,x86_64}_tls=yes
 		libc_cv_asm_cfi_directives=yes
 		libc_cv_broken_visibility_attribute=no
 		libc_cv_c_cleanup=yes
