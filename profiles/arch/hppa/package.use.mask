@@ -21,7 +21,7 @@ media-libs/libv4l bpf
 media-video/ffmpeg glslang shaderc vulkan
 
 # Violet Purcell <vimproved@inventati.org> (2023-10-12)
-# dev-util/samurai is not keyworded here.
+# dev-build/samurai is not keyworded here.
 app-alternatives/ninja samurai
 
 # Ionen Wolkens <ionen@gentoo.org> (2023-10-09)
@@ -40,7 +40,7 @@ sys-apps/openrc s6
 
 # Sam James <sam@gentoo.org> (2023-09-24)
 # Qt not keyworded here.
-app-doc/doxygen gui
+app-text/doxygen gui
 
 # Sam James <sam@gentoo.org> (2023-09-22)
 # Qt 6 not keyworded here.
@@ -296,7 +296,7 @@ net-analyzer/wireshark ilbc
 
 # Sergei Trofimovich <slyfox@gentoo.org> (2019-07-19)
 # gdbserver is not implemented yet for hppa target.
-sys-devel/gdb server
+dev-debug/gdb server
 
 # Sergei Trofimovich <slyfox@gentoo.org> (2019-07-07)
 # Test dependencies are no longer keyworded due to dropped Rails

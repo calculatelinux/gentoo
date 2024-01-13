@@ -1,6 +1,10 @@
 # Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2024-01-13)
+# Unmask only where grub is keyworded
+sys-kernel/installkernel grub
+
 # Michał Górny <mgorny@gentoo.org> (2023-12-31)
 # Requires dev-libs/level-zero.
 dev-lang/ispc gpu
@@ -369,6 +373,7 @@ net-misc/moonlight mmal
 # sd-boot and ukify are not supported on all archs.
 sys-apps/systemd boot gnuefi ukify
 sys-apps/systemd-utils boot ukify
+sys-kernel/installkernel ukify
 
 # Ben de Groot <yngwin@gentoo.org> (2015-03-15)
 # Mask bdplus support and unmask on arches where libbdplus is keyworded.

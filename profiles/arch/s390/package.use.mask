@@ -1,6 +1,10 @@
 # Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2024-01-12)
+# dracut is not keyworded here
+sys-kernel/installkernel dracut
+
 # Sam James <sam@gentoo.org> (2024-01-02)
 # dev-libs/capstone not keyworded here
 dev-lang/php capstone
@@ -20,7 +24,7 @@ dev-python/nbclient test
 dev-python/nbconvert test
 
 # Violet Purcell <vimproved@inventati.org> (2023-10-12)
-# dev-util/samurai is not keyworded here.
+# dev-build/samurai is not keyworded here.
 app-alternatives/ninja samurai
 
 # Patrick McLean <chutzpah@gentoo.org> (2023-10-03)
@@ -29,7 +33,7 @@ sys-apps/openrc s6
 
 # Sam James <sam@gentoo.org> (2023-09-24)
 # Qt not keyworded here.
-app-doc/doxygen gui
+app-text/doxygen gui
 
 # Sam James <sam@gentoo.org> (2023-09-22)
 # Qt 6 not keyworded here.

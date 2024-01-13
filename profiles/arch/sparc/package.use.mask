@@ -1,6 +1,10 @@
 # Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2024-01-13)
+# Unmask only where grub is keyworded
+sys-kernel/installkernel -grub
+
 # Jaco Kroon <jaco@uls.co.za> (2024-01-09)
 # net-libs/pjproject[srtp] and net-misc/asterisk[srtp] depends on
 # net-libs/libsrtp which is -sparc.
@@ -44,7 +48,7 @@ dev-python/nbclient test
 dev-python/nbconvert test
 
 # Violet Purcell <vimproved@inventati.org> (2023-10-12)
-# dev-util/samurai is not keyworded here.
+# dev-build/samurai is not keyworded here.
 app-alternatives/ninja samurai
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2023-10-08)
