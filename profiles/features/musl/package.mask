@@ -1,12 +1,6 @@
 # Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-# Fabian Groffen <grobian@gentoo.org> (2024-01-11)
-# Fails to compile: https://bugs.gentoo.org/908961
-=app-editors/vim-core-9.0.2092
-=app-editors/vim-9.0.2092
-=app-editors/gvim-9.0.2092
-
 # Maciej Barć <xgqt@gentoo.org> (2024-01-06)
 # Binary package, which is compiled against glibc
 app-office/joplin-desktop
@@ -142,7 +136,7 @@ www-client/chromium
 net-misc/netkit-telnetd
 net-misc/sitecopy
 
-# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2022-01-05)
+# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2024-01-20)
 # Binary package linked to glibc (rolling mask, use for all such binpkgs)
 app-admin/awscli-bin
 app-admin/bitwarden-desktop-bin
@@ -151,6 +145,7 @@ app-admin/puppetserver
 app-arch/rar
 app-backup/tsm
 app-benchmarks/geekbench
+app-benchmarks/geekbench-ml
 app-crypt/rainbowcrack
 app-editors/sublime-text
 app-editors/vscode

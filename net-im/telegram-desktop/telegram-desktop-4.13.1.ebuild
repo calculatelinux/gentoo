@@ -16,7 +16,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="BSD GPL-3-with-openssl-exception LGPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~loong ~riscv"
+KEYWORDS="~amd64 ~arm64 ~loong ~ppc64 ~riscv"
 IUSE="dbus enchant +fonts screencast qt6 qt6-imageformats wayland webkit +X"
 REQUIRED_USE="
 	qt6-imageformats? ( qt6 )
@@ -89,8 +89,8 @@ DEPEND="${CDEPEND}
 "
 BDEPEND="
 	${PYTHON_DEPS}
+	>=dev-build/cmake-3.16
 	>=dev-cpp/cppgir-0_p20230926
-	>=dev-util/cmake-3.16
 	dev-util/gdbus-codegen
 	virtual/pkgconfig
 	wayland? ( dev-util/wayland-scanner )
@@ -181,6 +181,9 @@ src_configure() {
 		-DDESKTOP_APP_USE_ENCHANT=$(usex enchant)
 		## Use system fonts instead of bundled ones
 		-DDESKTOP_APP_USE_PACKAGED_FONTS=$(usex !fonts)
+
+		# TEMP: Override for new cmake.eclass defaults (https://bugs.gentoo.org/921939)
+		-DCMAKE_DISABLE_PRECOMPILE_HEADERS=OFF
 	)
 
 	if [[ -n ${MY_TDESKTOP_API_ID} && -n ${MY_TDESKTOP_API_HASH} ]]; then

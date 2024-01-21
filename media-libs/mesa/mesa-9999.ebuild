@@ -58,7 +58,7 @@ REQUIRED_USE="
 	zink? ( vulkan )
 "
 
-LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.110"
+LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.119"
 RDEPEND="
 	>=dev-libs/expat-2.1.0-r3[${MULTILIB_USEDEP}]
 	>=media-libs/libglvnd-1.3.2[X?,${MULTILIB_USEDEP}]
@@ -155,7 +155,7 @@ BDEPEND="
 	opencl? (
 		>=virtual/rust-1.62.0
 		>=dev-util/bindgen-0.58.0
-		>=dev-util/meson-1.3.0
+		>=dev-build/meson-1.3.0
 	)
 	app-alternatives/yacc
 	app-alternatives/lex

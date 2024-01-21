@@ -74,7 +74,7 @@ DEPEND="
 	sys-process/numactl:=
 	virtual/libcrypt:=
 	x11-libs/libpciaccess:=
-	babeltrace? ( dev-util/babeltrace:0/2 )
+	babeltrace? ( dev-util/babeltrace:0/1 )
 	fuse? ( sys-fs/fuse:3= )
 	jemalloc? ( dev-libs/jemalloc:= )
 	!jemalloc? ( >=dev-util/google-perftools-2.6.1:= )
@@ -112,7 +112,7 @@ BDEPEND="
 	x86? ( dev-lang/yasm )
 	app-alternatives/cpio
 	dev-debug/valgrind
-	>=dev-util/cmake-3.5.0
+	>=dev-build/cmake-3.5.0
 	dev-python/cython[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/sphinx

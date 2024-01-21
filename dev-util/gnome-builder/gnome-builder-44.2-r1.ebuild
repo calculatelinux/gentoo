@@ -48,7 +48,7 @@ RDEPEND="
 	>=dev-libs/libxml2-2.9.0
 	webkit? ( >=net-libs/webkit-gtk-2.38.0:6=[introspection] )
 	>=app-text/cmark-0.29.0:0=
-	d-spy? ( >=dev-util/d-spy-1.4.0:1 )
+	d-spy? ( >=dev-debug/d-spy-1.4.0:1 )
 	app-text/editorconfig-core-c
 	flatpak? (
 		dev-util/ostree
@@ -111,9 +111,9 @@ that are currently available with packages include:
 * dev-python/python-lsp-server for more accurate Python
   autocompletion support.
 * dev-debug/valgrind for integration with valgrind.
-* dev-util/meson for integration with the Meson build system.
+* dev-build/meson for integration with the Meson build system.
 * virtual/rust for integration with the Rust Cargo build system.
-* dev-util/cmake for integration with the CMake build system.
+* dev-build/cmake for integration with the CMake build system.
 * net-libs/nodejs[npm] for integration with the NPM package system.
 '
 # FIXME: Package codespell and mention here
@@ -267,9 +267,9 @@ pkg_postinst() {
 
 	optfeature_header "Language support"
 	optfeature "Rust's Cargo build system" virtual/rust
-	optfeature "CMake" dev-util/cmake
+	optfeature "CMake" dev-build/cmake
 	optfeature "Java Maven build system" dev-java/maven-bin
-	optfeature "Meson Build system" dev-util/meson
+	optfeature "Meson Build system" dev-build/meson
 }
 
 pkg_postrm() {

@@ -195,8 +195,8 @@ dev-qt/qt-docs:6 with USE=\"examples qch\" is notably recommended, or
 else the example tab will be empty alongside missing documentation.
 
 Build Systems:
-- CMakeProjectManager (dev-util/cmake)
-- MesonProjectManager (dev-util/meson)
+- CMakeProjectManager (dev-build/cmake)
+- MesonProjectManager (dev-build/meson)
 - QbsProjectManager (dev-util/qbs)
 
 C++:

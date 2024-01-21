@@ -29,7 +29,7 @@ SRC_URI+="
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~riscv ~s390 ~sparc"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~loong ~ppc ~riscv ~s390 ~sparc"
 
 RDEPEND="
 	dev-vcs/git
@@ -38,6 +38,7 @@ RDEPEND="
 BDEPEND="
 	test? (
 		>=dev-python/ddt-1.1.1[${PYTHON_USEDEP}]
+		dev-python/pytest-mock[${PYTHON_USEDEP}]
 		dev-python/sumtypes[${PYTHON_USEDEP}]
 	)
 "
