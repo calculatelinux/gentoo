@@ -355,7 +355,7 @@ if tc_has_feature d && tc_version_is_at_least 12.0 ; then
 	BDEPEND+=" d? ( || ( sys-devel/gcc[d(-)] <sys-devel/gcc-12[d(-)] ) )"
 fi
 
-PDEPEND=">=sys-devel/gcc-config-2.3"
+PDEPEND=">=sys-devel/gcc-config-2.11"
 
 #---->> S + SRC_URI essentials <<----
 
@@ -1974,6 +1974,8 @@ toolchain_src_install() {
 		einfo "Deleting '${D}${DATAPATH}/info/dir'"
 		rm "${D}${DATAPATH}"/info/dir || die
 	fi
+
+	docompress "${DATAPATH}"/{info,man}
 
 	# Prune empty dirs left behind
 	find "${ED}" -depth -type d -delete 2>/dev/null

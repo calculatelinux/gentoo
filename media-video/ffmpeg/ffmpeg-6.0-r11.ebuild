@@ -64,7 +64,7 @@ LICENSE="
 	samba? ( GPL-3 )
 "
 if [ "${PV#9999}" = "${PV}" ] ; then
-	KEYWORDS="~alpha amd64 ~arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv sparc ~x86 ~amd64-linux ~x86-linux ~arm64-macos ~x64-macos"
+	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~arm64-macos ~x64-macos"
 fi
 
 # Options to use as use_enable in the foo[:bar] form.
@@ -472,7 +472,7 @@ multilib_src_configure() {
 	done
 
 	# LTO support, bug #566282, bug #754654, bug #772854
-	[[ ${ABI} != x86 ]] && is-flagq "-flto*" && myconf+=( "--enable-lto" )
+	[[ ${ABI} != x86 ]] && tc-is-lto && myconf+=( "--enable-lto" )
 	filter-lto
 
 	# Mandatory configuration

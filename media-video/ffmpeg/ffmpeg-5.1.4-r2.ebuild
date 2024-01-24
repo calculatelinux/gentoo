@@ -233,7 +233,7 @@ RDEPEND="
 	)
 	jack? ( virtual/jack[${MULTILIB_USEDEP}] )
 	jpeg2k? ( >=media-libs/openjpeg-2:2[${MULTILIB_USEDEP}] )
-	jpegxl? ( >=media-libs/libjxl-0.7.0[$MULTILIB_USEDEP] )
+	jpegxl? ( >=media-libs/libjxl-0.7.0:=[$MULTILIB_USEDEP] )
 	lcms? ( >=media-libs/lcms-2.13:2[$MULTILIB_USEDEP] )
 	libaom? ( >=media-libs/libaom-1.0.0-r1:=[${MULTILIB_USEDEP}] )
 	libaribb24? ( >=media-libs/aribb24-1.0.3-r2[${MULTILIB_USEDEP}] )
@@ -473,7 +473,7 @@ multilib_src_configure() {
 	done
 
 	# LTO support, bug #566282, bug #754654, bug #772854
-	[[ ${ABI} != x86 ]] && is-flagq "-flto*" && myconf+=( "--enable-lto" )
+	[[ ${ABI} != x86 ]] && tc-is-lto && myconf+=( "--enable-lto" )
 	filter-lto
 
 	# Mandatory configuration

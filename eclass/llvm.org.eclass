@@ -57,7 +57,7 @@ LLVM_VERSION=$(ver_cut 1-3)
 # @DESCRIPTION:
 # The major version of current LLVM trunk.  Used to determine
 # the correct branch to use.
-_LLVM_MAIN_MAJOR=18
+_LLVM_MAIN_MAJOR=19
 
 # @ECLASS_VARIABLE: _LLVM_SOURCE_TYPE
 # @INTERNAL
@@ -72,6 +72,9 @@ if [[ -z ${_LLVM_SOURCE_TYPE+1} ]]; then
 			_LLVM_SOURCE_TYPE=snapshot
 
 			case ${PV} in
+				18.0.0_pre20240120)
+					EGIT_COMMIT=9eb0f86c279f40a792ec27bf0e9b491b8c90a640
+					;;
 				18.0.0_pre20240113)
 					EGIT_COMMIT=8d817f6479a5df874028a8b40fd30aecd3479005
 					;;
