@@ -3,12 +3,12 @@ DEFINED_PHASES=prepare
 DEPEND=sys-libs/ncurses:0=
 DESCRIPTION=Simple Hex EDitor
 EAPI=7
-HOMEPAGE=http://shed.sourceforge.net/
+HOMEPAGE=https://shed.sourceforge.net/
 INHERIT=autotools
 KEYWORDS=amd64 ~arm ~arm64 ppc ~riscv x86 ~amd64-linux ~x86-linux ~ppc-macos
-LICENSE=GPL-2
+LICENSE=GPL-2+
 RDEPEND=sys-libs/ncurses:0=
 SLOT=0
 SRC_URI=mirror://sourceforge/shed/shed-1.15.tar.gz
 _eclasses_=autotools	e4cf390b19033d5ca443765bc8537b81	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	9d3a9a889a6fa62ae794f817c156491b	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084
-_md5_=4f853678c85df3c64b19eb28648b4e29
+_md5_=fc7349f2cd7311c06d9f251c307a1640
