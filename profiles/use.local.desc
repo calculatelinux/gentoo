@@ -242,6 +242,7 @@ app-arch/libarchive:bzip2 - Allow accessing bzip2-compressed archives through li
 app-arch/libarchive:e2fsprogs - Use file flags from sys-fs/e2fsprogs headers instead of virtual/os-headers headers
 app-arch/libarchive:nettle - Use dev-libs/nettle as crypto backend
 app-arch/libdeflate:gzip - Support the gzip format
+app-arch/libdeflate:test - Build the test programs (requires sys-libs/zlib)
 app-arch/libdeflate:utils - Build the libdeflate-gzip program
 app-arch/libdeflate:zlib - Support the zlib format
 app-arch/p7zip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii file names archived in Windows.
@@ -271,7 +272,6 @@ app-backup/bareos:ceph - Enable sys-cluster/ceph support
 app-backup/bareos:clientonly - Only install file-daemon (client)
 app-backup/bareos:director - Install director
 app-backup/bareos:glusterfs - Enable sys-cluster/glusterfs storage backend
-app-backup/bareos:jansson - JSON API support using dev-libs/jansson for director
 app-backup/bareos:lmdb - enable build of dev-db/lmdb support for faster accurate backup
 app-backup/bareos:logwatch - Install support files for sys-apps/logwatch
 app-backup/bareos:ndmp - Enable support for NDMP (Network Data Management Protocol)
@@ -2692,6 +2692,7 @@ dev-qt/qtgui:tslib - Enable support for touchscreen devices via x11-libs/tslib
 dev-qt/qtgui:tuio - Build plugin to receive touch events over the TUIO protocol
 dev-qt/qtgui:wayland - Provide dev-qt/qtwayland to ensure Qt applications can be run as Wayland clients
 dev-qt/qthttpserver:websockets - Enable websockets support using dev-qt/qtwebsockets
+dev-qt/qtmultimedia:eglfs - Enable screen capture support with Qt's EGL Full Screen/Single Surface platform plugin
 dev-qt/qtmultimedia:gstreamer - Enable audio support via media-libs/gstreamer
 dev-qt/qtmultimedia:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtmultimedia:widgets - Build the QtMultimediaWidgets module
@@ -8574,6 +8575,7 @@ www-apps/roundup:whoosh - Enable Whoosh full-text indexer
 www-apps/roundup:xapian - Enable Xapian full-text indexer
 www-apps/rt:lighttpd - Add www-servers/lighttpd support
 www-apps/tt-rss:daemon - Install additional init scripts for automated RSS updates
+www-apps/ttyd:mbedtls - Use mbedTLS replacement for OpenSSL
 www-apps/webdavcgi:rcs - Adds support for a revision controlled backend with RCS (dev-vcs/rcs)
 www-apps/wordpress:akismet - Installs Akismet comment spam plug-in
 www-apps/wordpress:themes - Installs themes (including default theme)

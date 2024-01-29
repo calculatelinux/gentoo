@@ -60,6 +60,7 @@ PDEPEND="dist-kernel? ( ~sys-fs/zfs-${PV}[dist-kernel] )"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.1.11-gentoo.patch
+	"${FILESDIR}"/${PN}-2.2.2-arm64-neon.patch
 )
 
 pkg_pretend() {
