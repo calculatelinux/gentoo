@@ -19,7 +19,7 @@ IUSE="cet debuginfod doc gold gprofng hardened multitarget +nls pgo +plugins sta
 # PATCH_DEV          - Use download URI https://dev.gentoo.org/~{PATCH_DEV}/distfiles/...
 #                      for the patchsets
 
-PATCH_VER=1
+PATCH_VER=2
 PATCH_DEV=dilfridge
 
 if [[ ${PV} == 9999* ]]; then
@@ -314,8 +314,9 @@ src_configure() {
 
 			if use hardened ; then
 				myconf+=(
-					--enable-error-execstack=yes
-					--enable-error-rwx-segments=yes
+					# TOOD: breaks glibc test suite
+					#--enable-error-execstack=yes
+					#--enable-error-rwx-segments=yes
 					--enable-default-execstack=no
 				)
 			fi
