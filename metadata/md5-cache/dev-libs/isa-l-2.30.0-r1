@@ -1,13 +1,13 @@
-BDEPEND=amd64? ( cpu_flags_x86_avx512f? ( >=dev-lang/nasm-2.13 ) !cpu_flags_x86_avx512f? ( || ( >=dev-lang/nasm-2.11.01 >=dev-lang/yasm-1.2.0 ) ) ) sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=dev-build/automake-1.16.5:1.16 ) || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7
+BDEPEND=amd64? ( cpu_flags_x86_avx512f? ( >=dev-lang/nasm-2.13 ) !cpu_flags_x86_avx512f? ( || ( >=dev-lang/nasm-2.11.01 >=dev-lang/yasm-1.2.0 ) ) ) x86? ( cpu_flags_x86_avx512f? ( >=dev-lang/nasm-2.13 ) !cpu_flags_x86_avx512f? ( || ( >=dev-lang/nasm-2.11.01 >=dev-lang/yasm-1.2.0 ) ) ) sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=dev-build/automake-1.16.5:1.16 ) || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7
 DEFINED_PHASES=install prepare
 DESCRIPTION=Intelligent Storage Acceleration Library
 EAPI=8
 HOMEPAGE=https://github.com/intel/isa-l
 INHERIT=autotools
 IUSE=cpu_flags_x86_avx512f
-KEYWORDS=amd64 ~arm ~arm64 ~riscv ~x86
+KEYWORDS=amd64 ~arm ~arm64 ~riscv -x86
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/intel/isa-l/archive/refs/tags/v2.30.0.tar.gz -> isa-l-2.30.0.tar.gz
 _eclasses_=autotools	e4cf390b19033d5ca443765bc8537b81	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	9d3a9a889a6fa62ae794f817c156491b	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084
-_md5_=12652ce465a6b51f4f237aa22c217f56
+_md5_=0f87c6e61f376cbcb355db3fe909a617

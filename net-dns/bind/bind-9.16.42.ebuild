@@ -33,7 +33,7 @@ SRC_URI="https://downloads.isc.org/isc/bind9/${PV}/${P}.tar.xz
 
 LICENSE="Apache-2.0 BSD BSD-2 GPL-2 HPND ISC MPL-2.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux"
 # -berkdb by default re bug #602682
 IUSE="berkdb +caps +dlz dnstap doc dnsrps fixed-rrset geoip geoip2 gssapi
 json ldap lmdb mysql odbc postgres python selinux static-libs test xml +zlib"
@@ -106,7 +106,7 @@ src_prepare() {
 	sed -i "s/{name='timer_test'}/{name='timer_test',timeout=900}/" "lib/isc/tests/Kyuafile" || die
 
 	# Conditionally broken
-	use sparc && sed -i "/{name='netmgr_test'}/d" "lib/isc/tests/Kyuafile" || die
+	use sparc && ( sed -i "/{name='netmgr_test'}/d" "lib/isc/tests/Kyuafile" || die )
 
 	# bug #220361
 	rm aclocal.m4 || die

@@ -1,4 +1,4 @@
-BDEPEND=>=dev-go/go-md2man-2.0.2 >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=>=dev-go/go-md2man-2.0.3 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile install prepare unpack
 DESCRIPTION=Common config files and docs for Containers stack
 EAPI=8
@@ -6,8 +6,8 @@ HOMEPAGE=https://github.com/containers/common
 INHERIT=git-r3
 LICENSE=Apache-2.0
 PROPERTIES=live
-RDEPEND=app-containers/containers-image app-containers/containers-storage app-containers/containers-shortnames !<app-containers/podman-4.5.0-r1 net-firewall/nftables net-firewall/iptables[nftables] || ( app-containers/crun app-containers/runc ) || ( ( >=app-containers/netavark-1.6.0 >=app-containers/aardvark-dns-1.6.0 ) >=app-containers/cni-plugins-0.9.1 )
+RDEPEND=app-containers/containers-image app-containers/containers-storage app-containers/containers-shortnames net-firewall/nftables net-firewall/iptables[nftables] || ( app-containers/crun app-containers/runc ) || ( ( >=app-containers/netavark-1.6.0 >=app-containers/aardvark-dns-1.6.0 ) >=app-containers/cni-plugins-0.9.1 )
 RESTRICT=test
 SLOT=0
 _eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
-_md5_=d58e143b61d5dace008e61ff6a436790
+_md5_=8f9618d2433706509da8dfcc9a19f751

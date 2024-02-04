@@ -79,7 +79,7 @@ SRC_URI="https://github.com/${PN}/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz
 # abseil-cpp-20211102.0-r0 does not work with NVCC
 RDEPEND="
 	app-arch/snappy
-	>=dev-cpp/abseil-cpp-20211102-r2:=
+	=dev-cpp/abseil-cpp-20220623*:=
 	dev-db/lmdb
 	dev-db/sqlite
 	dev-libs/double-conversion
@@ -138,6 +138,7 @@ PDEPEND="python? (
 BDEPEND="
 	app-arch/unzip
 	>=dev-build/bazel-5.1.1
+	<dev-build/bazel-6
 	>=dev-libs/protobuf-3.8.0
 	dev-java/java-config
 	cuda? (
@@ -197,6 +198,7 @@ src_prepare() {
 	bazel_setup_bazelrc
 
 	eapply "${WORKDIR}"/patches/*.patch
+	eapply "${FILESDIR}/tensorflow-2.13.0-0013-Fixing-build-issue-with-Clang-16-and-GCC-13.patch"
 
 	# Relax version checks in setup.py
 	sed -i "/^    '/s/==/>=/g" tensorflow/tools/pip_package/setup.py || die

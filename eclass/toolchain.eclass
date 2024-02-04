@@ -1712,7 +1712,7 @@ gcc_do_make() {
 		# The last known issues are with < GCC 4.9 or so, but it's easier
 		# to keep this bound somewhat fresh just to avoid problems. Ultimately,
 		# using not-O0 is just a build-time speed improvement anyway.
-		if tc-is-gcc && ver_test $(gcc-fullversion) -lt 10 ; then
+		if ! tc-is-gcc || ver_test $(gcc-fullversion) -lt 10 ; then
 			STAGE1_CFLAGS="-O0"
 		fi
 
@@ -2003,6 +2003,7 @@ toolchain_src_install() {
 		'(' \
 			-name libstdc++.la -o \
 			-name libstdc++fs.la -o \
+			-name libstdc++exp.la -o \
 			-name libsupc++.la -o \
 			-name libcc1.la -o \
 			-name libcc1plugin.la -o \

@@ -2475,7 +2475,7 @@ dev-python/pyocr:cuneiform - Enable support for the app-text/cuneiform OCR engin
 dev-python/pyocr:tesseract - Enable support for the app-text/tesseract OCR engine
 dev-python/pypax:ptpax - Enable PT_PAX_FLAGS support.
 dev-python/pypax:xtpax - Enable XATTR_PAX_FLAGS support.
-dev-python/pypy:full-stdlib - Install complete stdlib as necessary to use PyPy for general purpose programs. By default, only a limited subset that is used when building dev-python/pypy3-exe is installed. Note that PyPy2.7's stdlib contains multiple known vulnerabilities.
+dev-python/pypy:full-stdlib - Install complete stdlib as necessary to use PyPy for general purpose programs. By default, only a limited subset that is used when building PyPy3 executables is installed. Note that PyPy2.7's stdlib contains multiple known vulnerabilities.
 dev-python/pypy-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
 dev-python/pypy3_10:ensurepip - Install the ensurepip module that uses bundled wheels to bootstrap pip and setuptools (if disabled, it will be only possible to use venv `--without-pip`)
 dev-python/pypy3_10-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
@@ -2580,6 +2580,7 @@ dev-python/translate-toolkit:yaml - Support YAML format
 dev-python/twisted:conch - include Twisted SSHv2 implementation
 dev-python/twisted:http2 - include http2 support
 dev-python/twisted:serial - include serial port support
+dev-python/urllib3:http2 - Enable HTTP/2.0 support.
 dev-python/websockets:native-extensions - Compiles native C extensions
 dev-python/wrapt:native-extensions - Compiles native C extensions (speedups, instead of using python fallback code).
 dev-python/zeep:async - Add async support
@@ -4377,7 +4378,6 @@ media-libs/opencv:contribxfeatures2d - Enable xfeatures2d in contrib
 media-libs/opencv:cuda - Enable NVIDIA Cuda computations support (Experimental!)
 media-libs/opencv:cudnn - Enable support for nVidia cuDNN library
 media-libs/opencv:dnnsamples - Enable dnn caffeemodel samples
-media-libs/opencv:download - Enable download during cmake configure
 media-libs/opencv:eigen - Enable usage of dev-cpp/eigen for computations
 media-libs/opencv:features2d - Enable features2d module
 media-libs/opencv:gdal - Enable support for sci-libs/gdal library
@@ -8304,7 +8304,8 @@ sys-kernel/gentoo-kernel-bin:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 sys-kernel/installkernel:dracut - Generate an initrd or UKI on each kernel installation
 sys-kernel/installkernel:grub - Re-generate grub.cfg on each kernel installation
-sys-kernel/installkernel:systemd - Use systemd's kernel-install to install kernels'
+sys-kernel/installkernel:systemd - Use systemd's kernel-install to install kernels
+sys-kernel/installkernel:systemd-boot - Use systemd-boot's native layout by default
 sys-kernel/installkernel:uki - Install UKIs to ESP/EFI/Linux for EFI stub booting and/or bootloaders with support for auto-discovering UKIs
 sys-kernel/installkernel:ukify - Build an UKI with systemd's ukify on each kernel installation
 sys-kernel/kpatch:contrib - Enable contrib kpatch services files.

@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -12,18 +12,18 @@ if [[ ${PV} == 9999* ]]; then
 else
 	SRC_URI="https://github.com/containers/image/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	S="${WORKDIR}/${P#containers-}"
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~arm64 ~riscv"
 fi
 
 LICENSE="Apache-2.0"
 SLOT="0"
 
-BDEPEND=">=dev-go/go-md2man-2.0.2"
-
-src_prepare() {
-	default
-	eapply "${FILESDIR}/fix-warnings.patch"
-}
+# https://github.com/gentoo/gentoo/pull/35012#discussion_r1473740969
+RESTRICT='test'
+BDEPEND=">=dev-go/go-md2man-2.0.3"
+PATCHES=(
+	"${FILESDIR}"/prevent-downloading-mods-5.29.2.patch
+)
 
 src_compile() {
 	emake docs
