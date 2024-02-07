@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -21,7 +21,7 @@ S="${WORKDIR}/fop-${PV}"
 
 LICENSE="Apache-2.0"
 SLOT="2.8"
-KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm64 ppc64 ~x86"
 
 CP_DEPEND="
 	dev-java/batik:1.16
@@ -151,6 +151,8 @@ src_test() {
 	# This jar file was created manually from the output of "mvn test".
 	# Upstream does this with maven-antrun-plugin
 	jar -xf "${WORKDIR}/fop-2.7-test-event-model.jar" || die
+	mkdir generated-test || die
+	mv {target/test-classes,generated-test}/org || die
 	java-pkg-simple_src_test
 
 	einfo "Testing fop-core"

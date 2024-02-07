@@ -1,0 +1,14 @@
+BDEPEND=app-alternatives/ninja >=dev-build/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=sys-apps/dtc
+DESCRIPTION=Raspberry Pi userspace utilities
+EAPI=8
+HOMEPAGE=https://github.com/raspberrypi/utils
+INHERIT=bash-completion-r1 cmake
+KEYWORDS=~arm ~arm64
+LICENSE=BSD
+RDEPEND=sys-apps/dtc !media-libs/raspberrypi-userland !media-libs/raspberrypi-userland-bin
+SLOT=0
+SRC_URI=https://github.com/raspberrypi/utils/archive/1eb8c20dfa258c549139fae2b21185ac290051c5.tar.gz -> raspberrypi-utils-0_p20240203.tar.gz
+_eclasses_=bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	cmake	c7c9a62d6232cac66d4ea32d575c3e7c	flag-o-matic	b2b07efa51009704f88173b2c7feab47	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=4f8d4ef5a671c22d0c34f30ddb1cb849

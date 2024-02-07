@@ -4,7 +4,7 @@
 EAPI=7
 
 VERIFY_SIG_OPENPGP_KEY_PATH=/usr/share/openpgp-keys/philiphazel.asc
-inherit libtool multilib-minimal usr-ldscript verify-sig
+inherit libtool multilib-minimal verify-sig
 
 MY_P="pcre2-${PV/_rc/-RC}"
 
@@ -85,7 +85,6 @@ multilib_src_install() {
 		DESTDIR="${D}" \
 		$(multilib_is_native_abi || echo "bin_PROGRAMS= dist_html_DATA=") \
 		install
-	multilib_is_native_abi && gen_usr_ldscript -a pcre2-posix pcre2-8
 }
 
 multilib_src_install_all() {
