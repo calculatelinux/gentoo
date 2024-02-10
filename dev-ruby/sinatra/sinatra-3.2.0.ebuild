@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-USE_RUBY="ruby30 ruby31 ruby32"
+USE_RUBY="ruby31 ruby32"
 
 RUBY_FAKEGEM_TASK_TEST="MT_NO_PLUGINS=true test:core"
 
@@ -19,7 +19,7 @@ SRC_URI="https://github.com/sinatra/sinatra/archive/v${PV}.tar.gz -> ${P}.tar.gz
 LICENSE="MIT"
 SLOT="$(ver_cut 1)"
 KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~riscv ~sparc ~x86"
-IUSE=""
+IUSE="test"
 
 ruby_add_rdepend "
 	dev-ruby/mustermann:3
@@ -32,7 +32,7 @@ ruby_add_bdepend "
 		dev-ruby/erubi
 		dev-ruby/haml
 		>=dev-ruby/rack-test-0.5.6
-		<dev-ruby/activesupport-7
+		dev-ruby/activesupport
 	)
 "
 ruby_add_bdepend "doc? ( dev-ruby/yard )"
@@ -40,7 +40,6 @@ ruby_add_bdepend "doc? ( dev-ruby/yard )"
 all_ruby_prepare() {
 	sed -i \
 		-e "/require 'rack'/igem 'rack', '~> 2.2', '>= 2.2.4'" \
-		-e '/active_support\/core_ext\/hash/igem "activesupport", "<7"' \
 		test/test_helper.rb || die
 
 	# Avoid spec broken by newer rack versions, already removed upstream.

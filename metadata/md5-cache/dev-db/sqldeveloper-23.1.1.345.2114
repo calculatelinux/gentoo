@@ -1,0 +1,16 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=compile install nofetch postinst preinst prepare setup
+DEPEND=>=dev-java/java-config-2.2.0-r3
+DESCRIPTION=Oracle SQL Developer is a graphical tool for database development
+EAPI=8
+HOMEPAGE=https://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html
+INHERIT=desktop java-pkg-2
+IUSE=mssql mysql postgres sybase
+KEYWORDS=-* ~amd64
+LICENSE=OTN
+RDEPEND=dev-java/openjdk:11[javafx] virtual/jre:11 mssql? ( dev-java/jtds:1.3 ) mysql? ( dev-java/jdbc-mysql:0 ) postgres? ( dev-java/jdbc-postgresql:0 ) sybase? ( dev-java/jtds:1.3 ) >=dev-java/java-config-2.2.0-r3
+RESTRICT=bindist fetch
+SLOT=0
+SRC_URI=sqldeveloper-23.1.1.345.2114-no-jre.zip
+_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	java-pkg-2	b6d755b4f6afabfd933932be28b46368	java-utils-2	b346c3901e71ba37137bae0b25b00221
+_md5_=deab13d2b28e5a5a038174e0cf728137
