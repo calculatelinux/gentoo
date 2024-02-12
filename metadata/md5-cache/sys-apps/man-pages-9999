@@ -13,4 +13,4 @@ RESTRICT=binchecks
 SLOT=0
 SRC_URI=mirror://gentoo/man-pages-gentoo-2.tar.bz2 https://dev.gentoo.org/~cardoe/files/man-pages-gentoo-2.tar.bz2
 _eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
-_md5_=6f717621b9551916539957ec657a3aae
+_md5_=3ed4e94093c5af78e194bf94f5cfbd7c
