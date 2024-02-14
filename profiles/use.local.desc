@@ -2449,7 +2449,7 @@ dev-python/cbor2:native-extensions - Compiles native "C" extensions (speedups, i
 dev-python/cvxopt:dsdp - Use interior point library sci-libs/dsdp
 dev-python/cvxopt:glpk - Use GNU Linear Programming Kit sci-mathematics/glpk
 dev-python/dnspython:dnssec - Use dev-python/cryptography to enable low-level DNSSEC RSA, DSA, ECDSA and EdDSA signature validation.
-dev-python/editorconfig-core-py:cli - Install command line interface as well as python library
+dev-python/editorconfig:cli - Install command line interface as well as python library
 dev-python/fritzconnection:qrcode - Install dependencies needed to generate QR Codes for WiFi login.
 dev-python/frozenlist:native-extensions - Compile native C extensions (speedups, instead of using Python fallback code).
 dev-python/httpx:cli - Install the CLI "httpx" client.
@@ -4907,6 +4907,7 @@ media-tv/kodi:optical - Enable Audio CD playback, optical disks detection and re
 media-tv/kodi:pipewire - Enable pipewire support
 media-tv/kodi:power-control - Enable control of shutdown, reboot, suspend, and hibernate
 media-tv/kodi:raspberry-pi - Enable support for the Raspberry Pi
+media-tv/kodi:soc - Use additional media-video/ffmpeg patches for efficient playback on some SoCs (e.g. ARM, RISC-V)
 media-tv/kodi:system-ffmpeg - Use system ffmpeg instead of the bundled one
 media-tv/kodi:udev - Use udev rules to handle devices' permissions and hotplug support. Unless you know what you're doing do not disable this flag on Linux kernels. This is provided as an option for completeness.
 media-tv/kodi:udf - Enable UDF support. Required for playing blurays.
@@ -5128,6 +5129,7 @@ media-video/mpv:rubberband - Enable high quality pitch correction via media-libs
 media-video/mpv:sdl - Enable media-libs/libsdl2 based video and audio outputs (Note: these outputs exist for compatibility reasons only, avoid if possible)
 media-video/mpv:sixel - Enable support for the sixel video backend using media-libs/libsixel
 media-video/mpv:sndio - Enable sound support via media-sound/sndio
+media-video/mpv:soc - Use additional media-video/ffmpeg patches for efficient playback on some SoCs (e.g. ARM, RISC-V)
 media-video/mpv:tools - Install extra tools: mpv_identify.sh, mpv_idet.sh, and umpv
 media-video/mpv:uchardet - Enable subtitles charset discovery via app-i18n/uchardet
 media-video/mpv:zimg - Enable libzimg support (for vf_fingerprint)
