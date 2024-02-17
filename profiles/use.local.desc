@@ -1453,6 +1453,7 @@ dev-embedded/openocd:capstone - Use dev-libs/capstone for disassembly support
 dev-embedded/openocd:cmsis-dap - Support for CMSIS-DAP compliant adapters
 dev-embedded/openocd:dummy - Build the dummy port driver
 dev-embedded/openocd:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
+dev-embedded/openocd:gpiod - Enable Linux GPIO bitbang support via libgpiod
 dev-embedded/openocd:jlink - Build the SEGGER J-Link driver
 dev-embedded/openocd:parport - Enable support for parport JTAG devices
 dev-embedded/openocd:verbose-io - Verbose IO and comm JTAG and USB messages
@@ -1877,6 +1878,7 @@ dev-lang/php:xslt - Build the XSL extension
 dev-lang/polyml:portable - Build the portable interpreter version of Poly/ML instead of native
 dev-lang/python:bluetooth - Build Bluetooth protocol support in socket module
 dev-lang/python:ensurepip - Install the ensurepip module that uses bundled wheels to bootstrap pip and setuptools (if disabled, it will be only possible to use venv `--without-pip`)
+dev-lang/python:jit - Enable experimental Just-In-Time compilation support.
 dev-lang/python:libedit - Link readline extension against dev-libs/libedit instead of sys-libs/readline
 dev-lang/python:pgo - Optimize the build using Profile Guided Optimization (PGO) by running Python's test suite and collecting statistics based on its performance. This will take longer to build.
 dev-lang/python:valgrind - Disable pymalloc when running under dev-debug/valgrind is detected (may incur minor performance penalty even when valgrind is not used)
@@ -2889,6 +2891,11 @@ dev-util/google-perftools:largepages - Use (experimental) larger pages for tcmal
 dev-util/google-perftools:largepages64k - Use (experimental) 64K pages for tcmalloc, this increases memory usage, but should speed up the allocation/free operations.
 dev-util/google-perftools:minimal - Only build the tcmalloc_minimal library, ignoring the heap checker and the profilers.
 dev-util/google-perftools:optimisememory - To build libtcmalloc with smaller internal caches.
+dev-util/google-perftools:pagesize-128k - Use 128K page size for tcmalloc. Larger size makes tcmalloc faster, at the cost of using more space (due to internal fragmentation)
+dev-util/google-perftools:pagesize-16k - Use 16K page size for tcmalloc. Larger size makes tcmalloc faster, at the cost of using more space (due to internal fragmentation)
+dev-util/google-perftools:pagesize-256k - Use 256K page size for tcmalloc. Larger size makes tcmalloc faster, at the cost of using more space (due to internal fragmentation)
+dev-util/google-perftools:pagesize-32k - Use 32K page size for tcmalloc. Larger size makes tcmalloc faster, at the cost of using more space (due to internal fragmentation)
+dev-util/google-perftools:pagesize-64k - Use 64K page size for tcmalloc. Larger size makes tcmalloc faster, at the cost of using more space (due to internal fragmentation)
 dev-util/heaptrack:gui - Install Qt5-based analyzer tool
 dev-util/hfstospell:clang - Use different logic in ebuild when clang is used
 dev-util/intel-graphics-compiler:vc - Enable VectorCompiler for a better performance.
@@ -3367,6 +3374,7 @@ gnome-base/nautilus:cloudproviders - Enable the cloudproviders support
 gnome-base/nautilus:gstreamer - Enable the Audio/Video file properties page
 gnome-base/nautilus:previewer - Use gnome-extra/sushi to preview files from the file mananger
 gnome-base/nautilus:sendto - Enable the nautilus-sendto extension to send files to various locations/devices
+gnome-extra/cinnamon:desktop-portal - Enable sys-apps/xdg-desktop-portal backend implementation for Cinnamon
 gnome-extra/cinnamon-control-center:gnome-online-accounts - Enable configuration panel for net-libs/gnome-online-accounts accounts
 gnome-extra/cinnamon-control-center:modemmanager - Enable support for mobile broadband devices using net-misc/modemmanager
 gnome-extra/cjs:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
@@ -3585,6 +3593,8 @@ kde-apps/ktp-common-internals:otr - Enable support for encrypted conversations u
 kde-apps/ktp-common-internals:sso - Enable support for Single sign-on through KAccounts
 kde-apps/ktp-text-ui:speech - Enable incoming messages to be read out using text-to-speech
 kde-apps/kwave:qtmedia - Enable playback via Qt5Multimedia
+kde-apps/libkcddb:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
+kde-apps/libkcompactdisc:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 kde-apps/libkdepim:designer - Build plugins for dev-qt/designer
 kde-apps/libkleo:fancyviewer - Use kde-apps/kpimtextedit for an improved audit log viewer
 kde-apps/libksane:kwallet - Enable encrypted storage of passwords with kde-frameworks/kwallet
@@ -4410,7 +4420,10 @@ media-libs/openimageio:ptex - Enable Ptex texture mapping system file support vi
 media-libs/openimageio:qt5 - Build iv with Qt5
 media-libs/openimageio:qt6 - Build iv with Qt6
 media-libs/openimageio:tools - Build the command-line tools
+media-libs/opensubdiv:glew - Enable support for OpenGL Extension Wrangler Library (media-libs/glew)
+media-libs/opensubdiv:glfw - Enable support for OpenGL FrameWork (media-libs/glfw)
 media-libs/opensubdiv:ptex - Adds support for faster per-face texture mapping through media-libs/ptex
+media-libs/opensubdiv:python - Use dev-lang/python to process source and documentation source files
 media-libs/opensubdiv:tbb - Enable multithreading with the Intel Threads Building Blocks through dev-cpp/tbb
 media-libs/opensubdiv:tutorials - Install the tutorials
 media-libs/opus:custom-modes - Enable non-Opus modes, e.g. 44.1 kHz and 2^n frames
@@ -6436,6 +6449,7 @@ net-misc/kafkacat:json - Enable json support
 net-misc/kea:openssl - Use dev-libs/openssl instead of dev-libs/botan
 net-misc/kea:samples - Install sample configuration files
 net-misc/kea:shell - Install kea-shell text management client for Control Agent
+net-misc/kio-zeroconf:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 net-misc/knock:server - Installs the knockd server daemon.
 net-misc/libteam:zmq - Build witch net-libs/zeromq support
 net-misc/lldpd:cdp - Enable Cisco Discovery Protocol
@@ -8130,6 +8144,7 @@ sys-devel/binutils-apple:classic - Use nm, otool, etc. from this ebuild instead 
 sys-devel/binutils-apple:lto - Add support for Link-Time Optimization with LLVM
 sys-devel/binutils-config:native-symlinks - Install native symlinks like 'as' or 'ar' to /usr/bin. Otherwise keep only ${CTARGET}-as and friends.
 sys-devel/binutils-hppa64:cet - Enable Intel Control-flow Enforcement Technology.
+sys-devel/binutils-hppa64:debuginfod - Enable debuginfod support via dev-libs/elfutils libdebuginfod
 sys-devel/binutils-hppa64:default-gold - Set ld to point to ld.gold instead of ld.bfd
 sys-devel/binutils-hppa64:gold - Build ld.gold linker
 sys-devel/binutils-hppa64:gprofng - Enable the next-generation gprofng profiler
@@ -8813,7 +8828,8 @@ x11-libs/vte:icu - Enable legacy charset support using dev-libs/icu
 x11-libs/vte:systemd - Support moving terminal child processes to their own systemd user scopes to avoid terminal getting killed due to child causing OOM
 x11-libs/wxGTK:gstreamer - Enable the wxMediaCtrl class for playing audio and video through gstreamer.
 x11-libs/wxGTK:sdl - Use Simple Directmedia Layer (media-libs/libsdl) for audio.
-x11-libs/xapp:mate - Install status applet for mate-base/mate
+x11-libs/xapp:mate - Install integrations for mate-base/mate
+x11-libs/xapp:xfce - Install integrations for xfce-base/xfce4-meta
 x11-misc/alock:doc - Build and install manpage with app-text/asciidoc.
 x11-misc/appmenu-gtk-module:gtk2 - Build module for GTK+2
 x11-misc/autorandr:launcher - Install the launcher, i.e., an alternative to the udev/systemd hooks

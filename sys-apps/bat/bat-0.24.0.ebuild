@@ -227,6 +227,13 @@ src_configure() {
 	cargo_src_configure
 }
 
+src_test() {
+	# Set COLUMNS for deterministic help output, #913364
+	local -x COLUMNS=100
+
+	cargo_src_test
+}
+
 src_install() {
 	cargo_src_install
 
