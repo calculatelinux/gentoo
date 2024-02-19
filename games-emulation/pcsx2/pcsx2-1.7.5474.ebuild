@@ -12,7 +12,7 @@ else
 	# unbundling on this package has become unmaintainable and, rather than
 	# handle submodules separately, using a tarball that includes them
 	SRC_URI="https://dev.gentoo.org/~ionen/distfiles/${P}.tar.xz"
-	KEYWORDS="-* ~amd64"
+	KEYWORDS="-* amd64"
 fi
 
 DESCRIPTION="PlayStation 2 emulator"
@@ -35,7 +35,7 @@ COMMON_DEPEND="
 	dev-libs/libaio
 	dev-qt/qtbase:6[gui,widgets]
 	dev-qt/qtsvg:6
-	media-libs/libglvnd
+	media-libs/libglvnd[X]
 	media-libs/libpng:=
 	media-libs/libsdl2[haptic,joystick]
 	media-libs/libwebp:=

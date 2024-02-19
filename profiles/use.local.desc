@@ -2034,6 +2034,8 @@ dev-libs/libcgroup:tools - Install the cgroup rules processing daemon and init/c
 dev-libs/libclc:spirv - Build SPIRV targets
 dev-libs/libdbusmenu:gtk - Enable support for GTK+2
 dev-libs/libdbusmenu:gtk3 - Enable support for GTK+3
+dev-libs/libdex:eventfd - Allow use of eventfd
+dev-libs/libdex:liburing - Allow use of liburing (io_uring)sys-libs/liburing
 dev-libs/libdex:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 dev-libs/libevent:clock-gettime - Disable use of clock_gettime even if it is available
 dev-libs/libevent:debug - Support for running in debug mode
@@ -5351,6 +5353,7 @@ net-analyzer/nagios-plugin-check_raid:hpsa - Support HP SmartArray (CCISS) contr
 net-analyzer/nagios-plugin-check_raid:megaraid-sas - Support LSI MegaRAID SAS controllers
 net-analyzer/nagios-plugin-check_raid:mpt - Support LSI MPT Fusion controllers
 net-analyzer/nagios-plugin-check_raid:mpt-sas2 - Support LSI SAS-2 controllers
+net-analyzer/nagios-plugins:ipv6 - Enable ipv6 checks.
 net-analyzer/nagios-plugins:nagios-dns - Install net-dns/bind-tools required for monitoring DNS servers. Disabling the flag does not remove any plugin file.
 net-analyzer/nagios-plugins:nagios-game - Install games-util/qstat required for monitoring FPS servers. Disabling the flag does not remove any plugin file.
 net-analyzer/nagios-plugins:nagios-ping - Install net-analyzer/fping required for fancy ping monitoring. Disabling the flag does not remove any plugin file.
@@ -5561,8 +5564,11 @@ net-dns/bind-tools:gssapi - Enable gssapi support
 net-dns/ddclient:examples - Install various example files, like for cron.
 net-dns/dnsdist:dnscrypt - Enable the ability to act as a DNSCrypt server
 net-dns/dnsdist:dnstap - Enable support for dnstap
-net-dns/dnsdist:doh - Enable support for dns over http via www-servers/h2o
+net-dns/dnsdist:doh - Enable support for dns over http via net-libs/nghttp2
+net-dns/dnsdist:doh3 - Enable support for dns over http3 via net-libs/quiche
+net-dns/dnsdist:ipcipher - Enable support for ipcipher via dev-libs/openssl
 net-dns/dnsdist:lmdb - Enable support for lmdb
+net-dns/dnsdist:quic - Enable support for dns over quic via net-libs/quiche
 net-dns/dnsdist:regex - Enable support for regular expression matching via dev-libs/re2
 net-dns/dnsdist:remote-logging - Enable support for remote logging via dev-libs/protobuf
 net-dns/dnsdist:ssl - Enable support for and encrypted client-server communication via dev-libs/libsodium
@@ -6629,6 +6635,12 @@ net-misc/sshrc:mosh - Install Support for mosh
 net-misc/streamtuner:shout - Enable shoutcast plug-in.
 net-misc/streamtuner:xiph - Enable xiph.org plug-in.
 net-misc/stunnel:stunnel3 - Install the stunnel3 wrapper.
+net-misc/sunshine:cuda - Enable accelerated video encoding on NVIDIA hardware
+net-misc/sunshine:libdrm - Enable video encoding via x11-libs/libdrm
+net-misc/sunshine:svt-av1 - Enables software AV1 encoding via media-libs/svt-av1
+net-misc/sunshine:trayicon - Enable system tray icon
+net-misc/sunshine:x264 - Enable software H.264 encoding via media-libs/x264
+net-misc/sunshine:x265 - Enable software HEVC encoding via media-libs/x265
 net-misc/tigervnc:dri3 - Build with DRI3 support
 net-misc/tigervnc:drm - Build with DRM support
 net-misc/tigervnc:java - Build TigerVNC Java viewer
@@ -7232,6 +7244,7 @@ sci-libs/caffe2:mkl - Use sci-libs/mkl for blas, lapack and sparse blas routines
 sci-libs/caffe2:nnpack - Use NNPACK
 sci-libs/caffe2:numpy - Add support for math operations through numpy
 sci-libs/caffe2:onednn - Use oneDNN
+sci-libs/caffe2:openblas - Use sci-libs/openblas for blas routines
 sci-libs/caffe2:opencv - Add support for image processing operators
 sci-libs/caffe2:openmp - Use OpenMP for parallel code
 sci-libs/caffe2:qnnpack - Use QNNPACK
