@@ -4044,7 +4044,6 @@ media-gfx/blender:potrace - Add support for converting bitmaps into Grease penci
 media-gfx/blender:pugixml - Enable PugiXML support (Used for OpenImageIO, Grease Pencil SVG export)
 media-gfx/blender:tbb - Use threading building blocks library from dev-cpp/tbb.
 media-gfx/chafa:tools - Build command-line tools
-media-gfx/darktable:flickr - Add support for uploading photos to flickr
 media-gfx/darktable:gamepad - Support using game controllers as input devices
 media-gfx/darktable:geolocation - Enable geotagging support
 media-gfx/darktable:kwallet - Enable encrypted storage of passwords with kde-frameworks/kwallet
@@ -4143,8 +4142,11 @@ media-gfx/openscad:hidapi - Build in support for HID-Class devices using dev-lib
 media-gfx/openscad:mimalloc - Build using dev-libs/mimalloc as memory allocator
 media-gfx/openscad:spacenav - Add support for space navigator devices through dev-libs/libspnav
 media-gfx/openvdb:abi10-compat - Disables newer features to maintain compatibility with ABI10
+media-gfx/openvdb:abi11-compat - Disables newer features to maintain compatibility with ABI11
+media-gfx/openvdb:abi12-compat - Disables newer features to maintain compatibility with ABI12
 media-gfx/openvdb:abi8-compat - Disables newer features to maintain compatibility with ABI8
 media-gfx/openvdb:abi9-compat - Disables newer features to maintain compatibility with ABI9
+media-gfx/openvdb:alembic - Add support for Alembic through media-gfx/alembic.
 media-gfx/openvdb:ax - Build the OpenVDB AX module to perform custom manipulation of OpenVDB data via an expression language: AX
 media-gfx/openvdb:blosc - Allow using blosc compression via dev-libs/c-blosc
 media-gfx/openvdb:cuda - Enable support for CUDA in NanoVDB
@@ -5562,6 +5564,7 @@ net-dns/bind:json - Enable JSON statistics channel
 net-dns/bind:lmdb - Enable LMDB support to store configuration for 'addzone' zones
 net-dns/bind-tools:gssapi - Enable gssapi support
 net-dns/ddclient:examples - Install various example files, like for cron.
+net-dns/dnsdist:bpf - Enable support for eBPF socket filtering
 net-dns/dnsdist:dnscrypt - Enable the ability to act as a DNSCrypt server
 net-dns/dnsdist:dnstap - Enable support for dnstap
 net-dns/dnsdist:doh - Enable support for dns over http via net-libs/nghttp2
@@ -5572,6 +5575,8 @@ net-dns/dnsdist:quic - Enable support for dns over quic via net-libs/quiche
 net-dns/dnsdist:regex - Enable support for regular expression matching via dev-libs/re2
 net-dns/dnsdist:remote-logging - Enable support for remote logging via dev-libs/protobuf
 net-dns/dnsdist:ssl - Enable support for and encrypted client-server communication via dev-libs/libsodium
+net-dns/dnsdist:web - Enable support for the web UI
+net-dns/dnsdist:xdp - Enable support for AF_XDP high performance packet processing
 net-dns/dnsmasq:auth-dns - Add support for acting as an authorative DNS server.
 net-dns/dnsmasq:conntrack - Add support for Linux conntrack connection marking.
 net-dns/dnsmasq:dhcp - Enable support for acting as a DHCP server.
@@ -5676,7 +5681,6 @@ net-firewall/iptables:nftables - Support nftables kernel interface
 net-firewall/iptables:pcap - Build against net-libs/libpcap which enables the nfbpf_compile util
 net-firewall/nftables:doc - Create man pages for the package (requires app-text/asciidoc)
 net-firewall/nftables:json - Enable JSON support via dev-libs/jansson
-net-firewall/nftables:modern-kernel - Install init scripts for 3.18 or higher kernels with atomic rule updates
 net-firewall/nftables:xtables - Add libxtables support to try to automatically translate rules added by iptables-compat
 net-firewall/pglinux:cron - Install cron script
 net-firewall/shorewall:init - Adds the capability to place the firewall in a safe state prior to bringing up the network interfaces
