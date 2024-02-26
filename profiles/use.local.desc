@@ -164,6 +164,7 @@ app-admin/syslog-ng:http - Enable support for HTTP destinations
 app-admin/syslog-ng:json - Enable support for JSON template formatting via dev-libs/json-c
 app-admin/syslog-ng:kafka - Enable support for Kafka destinations
 app-admin/syslog-ng:mongodb - Enable support for mongodb destinations
+app-admin/syslog-ng:mqtt - Enable MQTT support via net-libs/paho-mqtt-c
 app-admin/syslog-ng:pacct - Enable support for reading Process Accounting files (EXPERIMENTAL, Linux only)
 app-admin/syslog-ng:redis - Enable support for Redis destinations
 app-admin/syslog-ng:smtp - Enable support for SMTP destinations
@@ -245,6 +246,7 @@ app-arch/libdeflate:gzip - Support the gzip format
 app-arch/libdeflate:test - Build the test programs (requires sys-libs/zlib)
 app-arch/libdeflate:utils - Build the libdeflate-gzip program
 app-arch/libdeflate:zlib - Support the zlib format
+app-arch/lrzip-next:year2038 - Enables support for timestamps after the year 2038
 app-arch/p7zip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii file names archived in Windows.
 app-arch/p7zip:rar - Enable support for non-free rar decoder
 app-arch/rar:all-sfx - Install all SFX (Self-Extracting) files rather than just the native format (allows creation of Windows EXEs on Linux ELF systems)
@@ -435,7 +437,6 @@ app-editors/emacs:jit - Compile with Emacs Lisp native compiler support via libg
 app-editors/emacs:json - Compile with native JSON support using dev-libs/jansson
 app-editors/emacs:libxml2 - Use dev-libs/libxml2 to parse XML instead of the internal Lisp implementations
 app-editors/emacs:mailutils - Retrieve e-mail using net-mail/mailutils instead of the internal movemail substitute
-app-editors/emacs:small-ja-dic - Generate a smaller-size Japanese dictionary (saves about 5 MiB in installed image)
 app-editors/emacs:source - Install C source files and make them available for find-function
 app-editors/emacs:threads - Add elisp threading support
 app-editors/emacs:toolkit-scroll-bars - Use the selected toolkit's scrollbars in preference to Emacs' own scrollbars
@@ -1315,7 +1316,6 @@ dev-ada/spawn:static-pic - Build static library with pic code
 dev-ada/templates-parser:shared - Build shared library
 dev-ada/xmlada:shared - Build shared library
 dev-ada/xmlada:static-pic - Build static library with pic code
-dev-build/bazel:tools - Install extra bazel tools to build from sources
 dev-build/cmake:dap - Build debugger for CMake with Debug Adapter Protocol support via dev-cpp/cppdap
 dev-build/muon:archive - Enable extracting wraps using app-arch/libarchive.
 dev-build/muon:libpkgconf - Enable looking up packages via dev-util/pkgconf.
@@ -1799,6 +1799,7 @@ dev-lang/gnat-gpl:ssp - Build packages with stack smashing protector on by defau
 dev-lang/gnat-gpl:systemtap - enable systemtap static probe points
 dev-lang/gnat-gpl:vtv - Build support for virtual table verification (a C++ hardening feature)
 dev-lang/gnucobol:json - Enable support for JSON template formatting via dev-libs/json-c
+dev-lang/go:system-bootstrap - Bootstrap using installed go compiler
 dev-lang/idris2:chez - build using dev-scheme/chez
 dev-lang/idris2:racket - build using dev-scheme/racket
 dev-lang/idris2:test-full - pull in depedndencies to run all tests
@@ -2823,6 +2824,7 @@ dev-util/Tensile:client - Build and install tensile_client executable to run ben
 dev-util/babeltrace:elfutils - Build the dev-util/lttng-ust debug information filter component class
 dev-util/babeltrace:plugins - Build support for Babeltrace 2 Python plugins
 dev-util/bpftool:caps - Use sys-libs/libcap to enable unprivileged run support
+dev-util/bpftool:llvm - Use sys-devel/llvm
 dev-util/buildbot:docker - Add support for worker docker command steps
 dev-util/buildbot:irc - Add support for status delivery through an ircbot.
 dev-util/cargo-audit:fix - Add support for 'fix' subcommand (experimental)
@@ -3097,6 +3099,8 @@ games-emulation/dosbox-staging:slirp - Enable Ethernet emulation using net-libs/
 games-emulation/fceux:archive - Use app-arch/libarchive for 7zip support
 games-emulation/fceux:ffmpeg - Use media-video/ffmpeg for video recording
 games-emulation/fceux:x265 - Use media-libs/x265 for video recording (HEVC)
+games-emulation/gambatte-jg:jgmodule - Build module for The Jolly Good API
+games-emulation/gambatte-jg:shared - Build shared library
 games-emulation/generator:sdlaudio - Enable SDL Audio
 games-emulation/hatari:capsimage - Use dev-libs/spsdeclib to read .IPF, .RAW, and .CTR disk images
 games-emulation/hatari:portmidi - Use media-libs/portmidi as an alternative MIDI backend
@@ -4480,7 +4484,6 @@ media-libs/urt:tools - Install tools
 media-libs/vips:archive - Enable support for compressed files using app-arch/libarchive
 media-libs/vips:deprecated - Enable deprecated components
 media-libs/vips:fits - Enable support for the Flexible Image Transport System data format using sci-libs/cfitsio
-media-libs/vips:gsf - Enable support for structured files using gnome-extra/libgsf
 media-libs/vips:highway - Enable SIMD optimizations using dev-cpp/highway (replaces USE=orc)
 media-libs/vips:imagequant - Enable support for Image Quantization using media-gfx/libimagequant
 media-libs/vips:matio - Enable support for matlab files using sci-libs/matio
@@ -5137,7 +5140,6 @@ media-video/mpv:cli - Enable the command-line player
 media-video/mpv:drm - Enable Kernel Mode Setting / Direct Rendering Manager based video outputs
 media-video/mpv:gamepad - Enable gamepad input support
 media-video/mpv:libmpv - Enable the shared library and headers (used by frontends / plugins)
-media-video/mpv:libplacebo - Enable support for GPU accelerated video rendering with media-libs/libplacebo
 media-video/mpv:lua - Enable Lua scripting, OSC (On Screen Controller) GUI, and net-misc/yt-dlp support
 media-video/mpv:mmal - Enable Multi-Media Abstraction Layer (MMAL) decoding support: Available e.g. on the Raspberry Pi
 media-video/mpv:opengl - Enable support for OpenGL-based video backends (Note: deprecated for X11, USE=egl provides the newer support for -gpu-api=opengl)
@@ -5564,6 +5566,7 @@ net-dns/bind:json - Enable JSON statistics channel
 net-dns/bind:lmdb - Enable LMDB support to store configuration for 'addzone' zones
 net-dns/bind-tools:gssapi - Enable gssapi support
 net-dns/ddclient:examples - Install various example files, like for cron.
+net-dns/djbdns:ipv6 - Apply Fefe's patch (https://www.fefe.de/dns/) for ipv6 support.
 net-dns/dnsdist:bpf - Enable support for eBPF socket filtering
 net-dns/dnsdist:dnscrypt - Enable the ability to act as a DNSCrypt server
 net-dns/dnsdist:dnstap - Enable support for dnstap
@@ -5709,11 +5712,8 @@ net-fs/netatalk:tracker - Add support for spotlight like tracker
 net-fs/nfs-utils:junction - Enable NFS junction support in nfsref
 net-fs/nfs-utils:ldap - Add ldap support
 net-fs/nfs-utils:libmount - Link mount.nfs with libmount
-net-fs/nfs-utils:nfsdcld - Enable nfsdcld NFSv4 clientid tracking daemon and tools
-net-fs/nfs-utils:nfsidmap - Enable support for newer nfsidmap helper
 net-fs/nfs-utils:nfsv3 - Enable support for NFSv2 and NFSv3
-net-fs/nfs-utils:nfsv4 - Enable support for NFSv4
-net-fs/nfs-utils:nfsv41 - Enable support for NFSv4.1
+net-fs/nfs-utils:nfsv4 - Enable support for NFSv4 (includes NFSv4.1 and NFSv4.2)
 net-fs/nfs-utils:uuid - Support UUID lookups in rpc.mountd
 net-fs/openafs:apidoc - Build API documentation using app-text/doxygen. May take a *long* time to build.
 net-fs/openafs:bitmap-later - Enable fast startup of file server by not reading bitmap till needed.
@@ -5929,6 +5929,7 @@ net-irc/irssi:otr - Adds support for a loadable IRC otr module
 net-irc/irssi:proxy - Adds support for a loadable IRC proxy module
 net-irc/kvirc:dcc-video - Support video connections over DCC protocol
 net-irc/kvirc:phonon - Support Phonon for audio output
+net-irc/kvirc:webengine - Support Qt WebEngine
 net-irc/limnoria:crypt - Enables user authentication with GPG
 net-irc/ngircd:ident - Enables support for net-libs/libident
 net-irc/ngircd:irc-plus - Enables support for the IRC+ protocol (needs virtual/libiconv)
@@ -6970,7 +6971,6 @@ net-wireless/bluez:mesh - Add support for Bluetooth Mesh control application and
 net-wireless/bluez:midi - Enable MIDI support
 net-wireless/bluez:obex - Enable OBEX transfer support
 net-wireless/bluez:test-programs - Install tools for testing of various Bluetooth functions
-net-wireless/crda:gcrypt - Use libgcrypt instead of openssl for key checking
 net-wireless/dump1090:bladerf - Build with Nuand BladeRF support
 net-wireless/dump1090:hackrf - Build with Great Scott Gadgets HackRF support
 net-wireless/dump1090:minimal - Exclude all HTML/webserver extras for a tiny build, e.g. to export data only
@@ -7452,7 +7452,6 @@ sci-libs/symengine:flint - Add support for (sci-mathematics/flint)
 sci-libs/symengine:llvm - Build with LLVM
 sci-libs/symengine:mpc - Add support for multiprecision complex arithmetic(dev-libs/mpc)
 sci-libs/symengine:mpfr - Add support for multiprecision floating point rouding(dev-libs/mpfr)
-sci-libs/tensorflow:xla - XLA (Accelerated Linear Algebra) Optimizing Compiler for TensorFlow
 sci-libs/trilinos:adolc - Add support for adolc (sci-libs/adolc)
 sci-libs/trilinos:all-packages - Enable all supported Trilinos packages (per default only a subset is built)
 sci-libs/trilinos:arprec - Add support for arprec (sci-libs/arprec)
