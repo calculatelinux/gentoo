@@ -1,0 +1,13 @@
+DEFINED_PHASES=install prepare
+DEPEND=dev-lang/tk:*
+DESCRIPTION=Tk GUI console
+EAPI=8
+HOMEPAGE=http://tkcon.sourceforge.net/
+IUSE=doc
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=dev-lang/tk:*
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/wjoye/tkcon/archive/v2.7.11.tar.gz -> tkcon-2.7.11.tar.gz
+_md5_=605e0fa44abc2c1fa60516277cb35bff
