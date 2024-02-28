@@ -33,6 +33,47 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2024-02-28)
+# Nosetests have been abandoned in 2015.  Upstream (while technically
+# still around) has refused to accept any patches since, and we have
+# already had to fork it, to keep it somewhat working.  All
+# the remaining reverse dependencies were finally ported or last rited.
+# Removal on 2024-03-29.  Bug #822414.
+dev-python/nose
+
+# Michał Górny <mgorny@gentoo.org> (2024-02-28)
+# The project is not really actively maintained upstream, and it still
+# depends on dev-python/nose.  There are other tools with similar
+# functionality.
+# Removal on 2024-03-29.  Bug #878695.
+app-misc/rmlint
+
+# Michał Górny <mgorny@gentoo.org> (2024-02-27)
+# dev-python/boto is dead, with last release in 2018.  It has been
+# replaced by dev-python/boto3.  It carries a ton of patches and still
+# depends on dev-python/nose.
+#
+# Removal on 2024-03-28.  Bug #888235.
+dev-python/boto
+
+# Michał Górny <mgorny@gentoo.org> (2024-02-27)
+# Unmaintained upstream.  Already carries a few patches.
+# Depends on dev-python/nose.
+# Removal on 2024-03-28.  Bug #878693.
+app-misc/binwalk
+
+# Michał Górny <mgorny@gentoo.org> (2024-02-27)
+# Still depends on dev-python/nose.  No reverse dependencies.
+# Removal on 2024-03-28.  Bug #878721.
+sci-biology/biopandas
+
+# Michał Górny <mgorny@gentoo.org> (2024-02-27)
+# Effectively unmaintained in Gentoo.  Still depends on dev-python/nose,
+# on top of that tests are restricted, so we don't even know if it
+# works at all.  No reverse dependencies.
+# Removal on 2024-03-28.  Bug #878725.
+sci-chemistry/nmrglue
+
 # Arthur Zamarin <arthurzam@gentoo.org> (2024-02-23)
 # A library without any reverse dependencies in tree. Maintainer-needed
 # package. Has open security bug without handling. Has open bump for a
@@ -354,7 +395,8 @@ app-editors/emacs:25
 ~kde-apps/libkexiv2-24.01.95
 ~kde-apps/spectacle-24.01.95
 ~kde-misc/kio-fuse-5.1.0
-~dev-libs/appstream-1.0.1
+~kde-misc/plasma-pass-1.2.2
+~dev-libs/appstream-1.0.2
 ~dev-libs/kdiagram-3.0.1
 ~dev-libs/kirigami-addons-1.0.0
 ~dev-libs/ktextaddons-1.5.3
