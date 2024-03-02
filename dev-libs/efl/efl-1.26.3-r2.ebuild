@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -10,7 +10,7 @@ DOCS_DIR="${S}/doc"
 LUA_REQ_USE="deprecated(+)"
 LUA_COMPAT=( lua5-{1,2} luajit )
 
-PYTHON_COMPAT=( python3_{9..12} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 inherit docs lua-single meson python-any-r1 xdg
 
@@ -172,7 +172,7 @@ src_prepare() {
 
 src_configure() {
 	local emesonargs=(
-		--buildtype=plain
+		-Dbuildtype=plain
 
 		-D buffer=false
 		-D build-tests=false
