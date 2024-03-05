@@ -352,7 +352,7 @@ LICENSE="MIT"
 # Dependent crate licenses
 LICENSE+=" Apache-2.0 BSD ISC MIT MPL-2.0 MPL-2.0 Unicode-DFS-2016"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="amd64 arm arm64 ~loong ppc ppc64 ~riscv ~s390 sparc ~x86"
 
 RDEPEND="dev-libs/libgit2:=
 	dev-libs/openssl:=
@@ -376,6 +376,6 @@ src_configure() {
 	# Some crates will auto-build and statically link C libraries(!)
 	# Tracker bug #709568
 	export LIBSSH2_SYS_USE_PKG_CONFIG=1
-	export LIBGIT2_SYS_USE_PKG_CONFIG=1
+	export LIBGIT2_NO_VENDOR=1
 	export PKG_CONFIG_ALLOW_CROSS=1
 }

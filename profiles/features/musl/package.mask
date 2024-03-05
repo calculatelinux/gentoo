@@ -1,6 +1,11 @@
 # Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Sergey Popov <pinkbyte@gentoo.org> (2024-03-05)
+# games-strategy/seven-kingdoms does not build on musl,
+# requires glibc-specific locale handling. (#923907)
+games-strategy/seven-kingdoms
+
 # Joshua Kinard <kumba@gentoo.org> (2024-02-27)
 # app-arch/lrzip-next cannot work w/ musl's pthreads at
 # this time. (#925547)
@@ -410,7 +415,7 @@ sys-process/systemd-cron
 >=www-misc/profile-sync-daemon-6
 sys-block/wait-for-dri-devices-rules
 
-# rust-bin requires a glibc system
+# rust-bin isn't available on all platforms
 dev-lang/rust-bin
 mail-client/thunderbird-bin
 www-client/firefox-bin

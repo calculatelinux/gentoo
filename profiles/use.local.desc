@@ -687,7 +687,7 @@ app-emulation/wine-proton:osmesa - Enable off-screen rendering (OpenGL in bitmap
 app-emulation/wine-proton:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-proton:sdl - Enable gamepad support using media-libs/libsdl2
 app-emulation/wine-proton:vkd3d - Enable DirectX 12 support using app-emulation/vkd3d
-app-emulation/wine-proton:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, may have worse OpenGL performance or other issues compared to USE=abi_x86_32) -- still requires (just) dev-util/mingw64-toolchain with abi_x86_32
+app-emulation/wine-proton:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, may have slightly worse OpenGL performance or other issues compared to USE=abi_x86_32, also lacks 16bit support) -- still need dev-util/mingw64-toolchain with abi_x86_32 which itself does not need multilib
 app-emulation/wine-staging:capi - Enable ISDN support using net-libs/libcapi
 app-emulation/wine-staging:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
 app-emulation/wine-staging:dos - Pull in games-emulation/dosbox to run DOS applications
@@ -700,7 +700,7 @@ app-emulation/wine-staging:pcap - Support packet capture software (e.g. wireshar
 app-emulation/wine-staging:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-staging:samba - Pull in net-fs/samba with winbind for NTLM auth support
 app-emulation/wine-staging:sdl - Enable gamepad support using media-libs/libsdl2
-app-emulation/wine-staging:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, may have worse OpenGL performance or other issues compared to USE=abi_x86_32) -- still requires (just) dev-util/mingw64-toolchain with abi_x86_32
+app-emulation/wine-staging:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, may have slightly worse OpenGL performance or other issues compared to USE=abi_x86_32, also lacks 16bit support) -- still need dev-util/mingw64-toolchain with abi_x86_32 which itself does not need multilib
 app-emulation/wine-vanilla:capi - Enable ISDN support using net-libs/libcapi
 app-emulation/wine-vanilla:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
 app-emulation/wine-vanilla:dos - Pull in games-emulation/dosbox to run DOS applications
@@ -714,7 +714,7 @@ app-emulation/wine-vanilla:perl - Install helpers that require perl (winedump/wi
 app-emulation/wine-vanilla:samba - Pull in net-fs/samba with winbind for NTLM auth support
 app-emulation/wine-vanilla:sdl - Enable gamepad support using media-libs/libsdl2
 app-emulation/wine-vanilla:vkd3d - Enable DirectX 12 support using app-emulation/vkd3d
-app-emulation/wine-vanilla:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, may have worse OpenGL performance or other issues compared to USE=abi_x86_32) -- still requires (just) dev-util/mingw64-toolchain with abi_x86_32
+app-emulation/wine-vanilla:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, may have slightly worse OpenGL performance or other issues compared to USE=abi_x86_32, also lacks 16bit support) -- still need dev-util/mingw64-toolchain with abi_x86_32 which itself does not need multilib
 app-emulation/winetricks:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
 app-emulation/x48:readline - Enables support for libreadline
 app-emulation/xe-guest-utilities:xenstore - Use xenstore binaries bundled by Citrix instead of building app-emulation/xen-tools
@@ -1318,6 +1318,7 @@ dev-ada/spawn:static-pic - Build static library with pic code
 dev-ada/templates-parser:shared - Build shared library
 dev-ada/xmlada:shared - Build shared library
 dev-ada/xmlada:static-pic - Build static library with pic code
+dev-build/bazelisk:bazel-symlink - Install bazel symlink that points to bazelisk
 dev-build/cmake:dap - Build debugger for CMake with Debug Adapter Protocol support via dev-cpp/cppdap
 dev-build/muon:archive - Enable extracting wraps using app-arch/libarchive.
 dev-build/muon:libpkgconf - Enable looking up packages via dev-util/pkgconf.
@@ -2745,6 +2746,7 @@ dev-qt/qtwebengine:jumbo-build - Combine source files to speed up build process.
 dev-qt/qtwebengine:pdfium - Build the QtPdf module based on chromium's PDFium library
 dev-qt/qtwebengine:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtwebengine:system-icu - Use the system-wide dev-libs/icu instead of bundled.
+dev-qt/qtwebengine:webdriver - Build tool for automated testing (ChromeDriver equivalent)
 dev-qt/qtwebengine:widgets - Enable QtWidgets support
 dev-qt/qtwebsockets:qml - Build QML bindings
 dev-qt/qtwidgets:gtk - Build the GTK platform theme plugin
