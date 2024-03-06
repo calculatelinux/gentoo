@@ -351,6 +351,9 @@ multilib_src_install() {
 multilib_src_install_all() {
 	dodoc AUTHORS NEWS README* Documentation/{TODO,*.txt,releases/*}
 
+	dosym hexdump /usr/bin/hd
+	newman - hd.1 <<< '.so man1/hexdump.1'
+
 	# e2fsprogs-libs didn't install .la files, and .pc work fine
 	find "${ED}" -name "*.la" -delete || die
 
