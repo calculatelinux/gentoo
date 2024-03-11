@@ -31,9 +31,9 @@ LLVM_MAX_SLOT=17
 LLVM_MIN_SLOT=16
 RUST_MIN_VER=1.72.0
 # grep 'CLANG_REVISION = ' ${S}/tools/clang/scripts/update.py -A1 | cut -c 18-
-GOOGLE_CLANG_VER="llvmorg-18-init-16072-gc4146121e940-5"
+GOOGLE_CLANG_VER="llvmorg-19-init-2319-g7c4c2746-1"
 # grep 'RUST_REVISION = ' ${S}/tools/rust/update_rust.py -A1 | cut -c 17-
-GOOGLE_RUST_VER="df0295f07175acc7325ce3ca4152eb05752af1f2-5"
+GOOGLE_RUST_VER="340bb19fea20fd5f9357bbfac542fad84fc7ea2b-3"
 
 # https://bugs.chromium.org/p/v8/issues/detail?id=14449 - V8 used in 120 can't build with GCC
 : ${CHROMIUM_FORCE_CLANG=yes}
