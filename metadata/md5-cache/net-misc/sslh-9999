@@ -1,15 +1,15 @@
 BDEPEND=virtual/pkgconfig >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile install prepare unpack
-DEPEND=caps? ( sys-libs/libcap ) dev-libs/libpcre2:= systemd? ( sys-apps/systemd:= ) tcpd? ( sys-apps/tcp-wrappers ) >=dev-libs/libconfig-1.5:= dev-lang/perl
+DEPEND=caps? ( sys-libs/libcap ) dev-libs/libpcre2:= systemd? ( sys-apps/systemd:= ) tcpd? ( sys-apps/tcp-wrappers ) dev-libs/libconfig:= libev? ( dev-libs/libev ) >=dev-libs/libconfig-1.5:= dev-lang/perl
 DESCRIPTION=Port multiplexer - accept both HTTPS and SSH connections on the same port
 EAPI=7
 HOMEPAGE=https://www.rutschle.net/tech/sslh/README.html
 INHERIT=flag-o-matic systemd toolchain-funcs git-r3
-IUSE=caps systemd tcpd
+IUSE=caps libev systemd tcpd
 LICENSE=GPL-2
 PROPERTIES=live
-RDEPEND=caps? ( sys-libs/libcap ) dev-libs/libpcre2:= systemd? ( sys-apps/systemd:= ) tcpd? ( sys-apps/tcp-wrappers ) >=dev-libs/libconfig-1.5:=
+RDEPEND=caps? ( sys-libs/libcap ) dev-libs/libpcre2:= systemd? ( sys-apps/systemd:= ) tcpd? ( sys-apps/tcp-wrappers ) dev-libs/libconfig:= libev? ( dev-libs/libev ) >=dev-libs/libconfig-1.5:=
 RESTRICT=test
 SLOT=0
 _eclasses_=flag-o-matic	24c947ff5f858625cf0b33c15eed4425	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b	multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	c8b03e8df84486aa991d4396686e8942	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084
-_md5_=412f49cbbb62f0f2b9d89dc382dfdef6
+_md5_=fb5f1700f6f888ab345db606f658fccb
