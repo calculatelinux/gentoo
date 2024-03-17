@@ -1,0 +1,16 @@
+BDEPEND=virtual/rust >=virtual/rust-1.53
+DEFINED_PHASES=compile configure install postinst test unpack
+DEPEND=app-arch/xz-utils net-misc/curl:=[http2,ssl] dev-libs/openssl:0=
+DESCRIPTION=Rust toolchain installer
+EAPI=8
+HOMEPAGE=https://rust-lang.github.io/rustup/
+INHERIT=bash-completion-r1 cargo prefix
+IUSE=debug
+KEYWORDS=~amd64 ~arm64 ~ppc64
+LICENSE=|| ( Apache-2.0 MIT ) Apache-2.0 BSD ISC MIT Unicode-DFS-2016
+RDEPEND=app-arch/xz-utils net-misc/curl:=[http2,ssl] dev-libs/openssl:0=
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/rust-lang/rustup/archive/1.27.0.tar.gz -> rustup-1.27.0.tar.gz https://dev.gentoo.org/~arthurzam/distfiles/dev-util/rustup/rustup-1.27.0-crates.tar.xz
+_eclasses_=bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	cargo	4dede41d64d595673f6da62ab5540fa0	flag-o-matic	24c947ff5f858625cf0b33c15eed4425	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	prefix	eab3c99d77fe00506c109c8a736186f7	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084
+_md5_=6c44181c693a9f2aa5cb63a9225deeca

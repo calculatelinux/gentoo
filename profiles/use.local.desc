@@ -173,6 +173,7 @@ app-admin/sysstat:dcron - Adjust cronjobs to work properly under sys-process/dcr
 app-admin/testdisk:ewf - Include ewf library
 app-admin/testdisk:ntfs - Include the ability to read NTFS filesystems
 app-admin/testdisk:reiserfs - Include reiserfs reading ability
+app-admin/testdisk:sudo - Enable sudo helper integration
 app-admin/tripwire:ssl - Adds support for Secure Socket Layer connections
 app-admin/tripwire:static - Builds the package statically
 app-admin/tripwire:tools - Installs app-admin/mktwpol, providing scripts for the installation/setup of tripwire, including generating the tripwire policy file and maintenance of the tripwire database
@@ -1288,6 +1289,8 @@ app-text/zathura:synctex - Use libsynctex to get latex codeline from pdf
 app-text/zathura-meta:cb - Install plug-in for ComicBook support
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
 app-xemacs/xemacs-packages-all:mule - Add multi-language support to XEmacs
+dev-ada/AdaSAT:shared - Build shared library
+dev-ada/AdaSAT:static-pic - Build static library with pic code
 dev-ada/aws:shared - Build shared library
 dev-ada/aws:wsdl - Used to convert ada to wsdl
 dev-ada/gnatcoll-bindings:shared - Build shared library
@@ -1722,7 +1725,6 @@ dev-java/ant:xalan - Enable Apache Xalan2 Ant tasks
 dev-java/ant:xz - Enable XZ Ant tasks
 dev-java/commons-logging:log4j - Add optional support for log4j
 dev-java/dom4j:jaxen - Includes org.jaxen.dom4j package
-dev-java/eclipse-ecj:ant - Support using ecj in Ant builds via dev-java/ant-eclipse-ecj
 dev-java/emma:launcher - Install /usr/bin/emma. Collides with sci-biology/emboss.
 dev-java/icedtea:cacao - Use the CACAO virtual machine rather than HotSpot.
 dev-java/icedtea:cups - Link against the CUPS library at compile time, rather than using it dynamically at runtime.
@@ -3171,7 +3173,6 @@ games-engines/openmw:osg-fork - Use OpenSceneGraph forked by OpenMW instead of u
 games-engines/renpy:development - Install IDE for game developers and an empty game template
 games-engines/scummvm:fluidsynth - compile with support for fluidsynth
 games-engines/scummvm:fribidi - Support for right-to-left languages via dev-libs/fribidi
-games-engines/scummvm:glew - enable support for OpenGL Extension Wrangler Library (media-libs/glew)
 games-engines/scummvm:mpeg2 - enable mpeg2 codec for cutscenes
 games-engines/scummvm:net - enable cloud support via media-libs/sdl2-net
 games-engines/scummvm:sndio - Enable support for MIDI music using media-sound/sndio
@@ -6415,9 +6416,11 @@ net-misc/eventd:websocket - Enable support for WebSocket protocol
 net-misc/fatrat:bittorrent - Use the bittorrent protocol via net-libs/libtorrent-rasterbar.
 net-misc/felix:bird - Use BIRD, e.g. for route reflection
 net-misc/freerdp:aad - Enable login via Azure AD
+net-misc/freerdp:client - Build client binaries
 net-misc/freerdp:fuse - Clipboard with FUSE file copy support
 net-misc/freerdp:openh264 - Enable H.264 support using media-libs/openh264
 net-misc/freerdp:server - Build server binaries
+net-misc/freerdp:tools - Build tools
 net-misc/frr:fpm - Enable Forwarding Plane Manager support
 net-misc/frr:grpc - Enable gRPC plugin
 net-misc/frr:nhrp - Build Next Hop Resolution Protocol daemon
@@ -8356,6 +8359,7 @@ sys-kernel/gentoo-kernel-bin:generic-uki - Install a prebuilt generic initramfs 
 sys-kernel/gentoo-kernel-bin:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 sys-kernel/installkernel:dracut - Generate an initrd or UKI on each kernel installation
+sys-kernel/installkernel:efistub - EXPERIMENTAL: Update UEFI configuration on each kernel installation
 sys-kernel/installkernel:grub - Re-generate grub.cfg on each kernel installation, used grub.cfg is overridable with GRUB_CFG env var
 sys-kernel/installkernel:refind - Install a Gentoo icon for rEFInd alongside the (unified) kernel image, used icon is overridable with REFIND_ICON env var
 sys-kernel/installkernel:systemd - Use systemd's kernel-install to install kernels, overridable with SYSTEMD_KERNEL_INSTALL env var
@@ -8744,6 +8748,7 @@ www-servers/apache:suexec - Install suexec with apache
 www-servers/apache:suexec-caps - Install suexec with capabilities instead of SUID
 www-servers/apache:suexec-syslog - Log suexec to syslog instead of to a separate file
 www-servers/caddy:events-handlers-exec - Builds a module which lets user exec command on Caddy events https://caddyserver.com/docs/modules/events.handlers.exec https://caddyserver.com/docs/caddyfile/options#event-options
+www-servers/caddy:security - Authentication, Authorization, and Accounting. LDAP, OAuth, SAML, MFA, 2FA, JWT etc.. https://caddyserver.com/docs/modules/security https://github.com/greenpau/caddy-security
 www-servers/civetweb:server - Build standalone server
 www-servers/fnord:auth - Enable HTTP authentication support
 www-servers/gatling:diet - Compile against dev-libs/dietlibc
