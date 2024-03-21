@@ -51,12 +51,14 @@ ruby_add_bdepend "test? (
 	dev-ruby/pry
 	dev-ruby/rdoc
 	>=dev-ruby/rouge-3.5.1:2
+	dev-ruby/rspec-its
 	dev-ruby/rubypants
 	dev-ruby/systemu
 	dev-ruby/timecop
 	dev-ruby/vcr
 	dev-ruby/webmock
 	dev-ruby/yard
+	www-apps/nanoc-spec
 )
 doc? (
 	dev-ruby/kramdown

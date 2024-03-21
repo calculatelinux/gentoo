@@ -1291,6 +1291,8 @@ app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) sett
 app-xemacs/xemacs-packages-all:mule - Add multi-language support to XEmacs
 dev-ada/AdaSAT:shared - Build shared library
 dev-ada/AdaSAT:static-pic - Build static library with pic code
+dev-ada/VSS:shared - Build shared library
+dev-ada/VSS:static-pic - Build static library with pic code
 dev-ada/aws:shared - Build shared library
 dev-ada/aws:wsdl - Used to convert ada to wsdl
 dev-ada/gnatcoll-bindings:shared - Build shared library
@@ -1309,6 +1311,8 @@ dev-ada/gpr-unit-provider:shared - Build shared library
 dev-ada/gpr-unit-provider:static-pic - Build static library with pic code
 dev-ada/gtkada:shared - Build gtkada as shared library
 dev-ada/gtkada:static-pic - Build static library with pic code
+dev-ada/lal-refactor:shared - Build shared library
+dev-ada/lal-refactor:static-pic - Build static library with pic code
 dev-ada/langkit:shared - Build shared library
 dev-ada/langkit:static-pic - Build static library with pic code
 dev-ada/libadalang:static-pic - Build static library with pic code
@@ -2075,6 +2079,7 @@ dev-libs/libisoburn:launch-frontend-setuid - Enable the tcl gui for xorriso unde
 dev-libs/libisofs:verbose-debug - Enable verbose debug messages
 dev-libs/libjcat:gpg - Enable GPG verification support via app-crypt/gpgme
 dev-libs/libjcat:pkcs7 - Enable PKCS7 verification support via net-libs/gnutls
+dev-libs/libjwt:openssl - Use openssl libs for crypto functions
 dev-libs/liblogging:rfc3195 - Enables RFC 3195 protocol (aka syslog-reliable) support. If you don't know what this is, you don't need it!
 dev-libs/liblogging:stdlog - Enables liblogging's core component (think of it as a the next version of the syslog(3) API).
 dev-libs/libmemcached:hsieh - Use Hsieh hash algorithm.
@@ -3487,9 +3492,11 @@ gui-wm/sway:swaybar - Install 'swaybar': sway's status bar component
 gui-wm/sway:swaynag - Install 'swaynag': shows a message with buttons
 gui-wm/sway:tray - Enable support for StatusNotifierItem tray specification
 gui-wm/sway:wallpapers - Install sway's default wallpaper image
+gui-wm/wayfire:X - Enable support for X11 applications (XWayland).
 gui-wm/wayfire:gles - use libglvnd to do animations more efficiently
-gui-wm/wayfire:system-wfconfig - use the system-wide wf-config, else build it as a submodule. DO NOT DISABLE UNLESS YOU KNOW WHAT YOU ARE DOING.
-gui-wm/wayfire:system-wlroots - use the system wide wlroots, else build it as a submodule. DO NOT DISABLE UNLESS YOU KNOW WHAT YOU ARE DOING.
+gui-wm/wayfire:gles3 - Enable OpenGL ES 3.x Features.
+gui-wm/wayfire:system-wfconfig - Use the system-wide gui-libs/wf-config instead of building as a submodule. It will block system-wide gui-libs/wf-config from being installed.
+gui-wm/wayfire:system-wlroots - Use the system-wide gui-libs/wlroots instead of building as a submodule. It will block system-wide gui-libs/wlroots from being installed.
 kde-apps/akonadi:designer - Install plugin for dev-qt/designer
 kde-apps/akonadi:kaccounts - Enable support for system-wide defined KAccounts
 kde-apps/akonadi:tools - Install tools for developers and testing
@@ -4412,6 +4419,7 @@ media-libs/oneVPL-cpu:openh264 - Use media-libs/openh264 instead of media-libs/x
 media-libs/openal:pipewire - Enable support for the media-video/pipewire audio backend
 media-libs/openal:sndio - Enable support for the media-sound/sndio backend
 media-libs/opencolorio:apps - Build the OCIO command line apps
+media-libs/opencv:atlas - Use sci-libs/atlas for blas, lapack and sparse blas routines
 media-libs/opencv:contrib - Install user contributed scripts from opencv_contrib (Experimental!)
 media-libs/opencv:contribcvv - Enable CVV in contrib (requires Qt5)
 media-libs/opencv:contribdnn - Enable DNN module contrib (requires tinydnn)
@@ -4429,8 +4437,11 @@ media-libs/opencv:gdal - Enable support for sci-libs/gdal library
 media-libs/opencv:gflags - Use Google's C++ argument parsing library (dev-cpp/gflags)
 media-libs/opencv:glog - Use Google's C++ logging library (dev-cpp/glog)
 media-libs/opencv:gtk3 - Enable x11-libs/gtk+:3 support
+media-libs/opencv:jasper - Use media-libs/jasper for jpeg2k support
+media-libs/opencv:mkl - Use sci-libs/mkl for blas, lapack and sparse blas routines
 media-libs/opencv:non-free - Enable non-free components
 media-libs/opencv:opencvapps - Enable compilation with opencvapps
+media-libs/opencv:quirc - Enable qrcode decoding via media-libs/quirc
 media-libs/opencv:tbb - Enable multithreading with the Intel Threads Building Block (dev-cpp/tbb)
 media-libs/opencv:tesseract - Use Google's OCR Engine
 media-libs/opencv:testprograms - Build and install programs for testing OpenCV (performance)
@@ -4441,6 +4452,7 @@ media-libs/openexr:utils - Build several binary tools for verifying and manipula
 media-libs/openh264:plugin - Install the Gecko Media Plugin (GMP) for use with Mozilla packages
 media-libs/openh264:utils - Install the CLI encoder and decoder utilities
 media-libs/openimageio:dicom - Enable DICOM medical image file support via sci-libs/dcmtk
+media-libs/openimageio:fits - Enable support for NASA's sci-libs/cfitsio library
 media-libs/openimageio:gui - Build iv (with Qt5)
 media-libs/openimageio:opencv - Enable OpenCV support via media-libs/opencv
 media-libs/openimageio:openvdb - Enable OpenVDB support via media-gfx/openvdb
@@ -4467,6 +4479,10 @@ media-libs/phonon-gstreamer:network - Enable network streaming support via libso
 media-libs/portmidi:test-programs - Install various example programs
 media-libs/quarter:designer - Install plugin for dev-qt/designer
 media-libs/quarter:qthelp - Build API documentation in QtHelp format
+media-libs/quirc:opencv - Build tools requiring media-libs/opencv (inspect-opencv,quirc-demo-opencv)
+media-libs/quirc:sdl - Build tools requiring media-libs/sdl-gfx (inspect, quirc-demo)
+media-libs/quirc:tools - Build tools (qrtest)
+media-libs/quirc:v4l - Build tools for webcams (quirc-scanner)
 media-libs/raptor:json - Enable support for JSON parsing
 media-libs/raspberrypi-userland-bin:hardfp - Use armv6 hardfp ABI
 media-libs/roc-toolkit:tools - Install helper tools like roc-conv, roc-recv, roc-send
@@ -6420,7 +6436,6 @@ net-misc/freerdp:client - Build client binaries
 net-misc/freerdp:fuse - Clipboard with FUSE file copy support
 net-misc/freerdp:openh264 - Enable H.264 support using media-libs/openh264
 net-misc/freerdp:server - Build server binaries
-net-misc/freerdp:tools - Build tools
 net-misc/frr:fpm - Enable Forwarding Plane Manager support
 net-misc/frr:grpc - Enable gRPC plugin
 net-misc/frr:nhrp - Build Next Hop Resolution Protocol daemon
@@ -7657,6 +7672,9 @@ sci-physics/pythia:hepmc2 - Adds support for High Energy Physics Monte Carlo Gen
 sci-physics/pythia:hepmc3 - Adds support for High Energy Physics Monte Carlo Generators 3 sci-physics/hepmc
 sci-physics/pythia:lhapdf - Support the use of external PDF sets via sci-physics/lhapdf
 sci-physics/pythia:root - Use sci-physics/root trees and histograms (in examples only)
+sci-physics/rivet:hepmc2 - Build with HepMC2
+sci-physics/rivet:hepmc3 - Build with HepMC3
+sci-physics/rivet:zlib - Build with zlib
 sci-physics/root:R - Enable support for dev-lang/R
 sci-physics/root:asimage - Enable support for media-libs/libafterimage
 sci-physics/root:cudnn - Enable support for nVidia cuDNN library
@@ -8701,7 +8719,9 @@ www-client/netsurf:rosprite - RISC OS Sprite bitmap image support via media-libs
 www-client/netsurf:svgtiny - Use media-libs/libsvgtiny instead of gnome-base/librsvg for SVG support
 www-client/netsurf:truetype - Use media-libs/freetype for text in the framebuffer frontend
 www-client/opera:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
+www-client/opera-beta:ffmpeg-chromium - Use Chromium FFmpeg fork (media-video/ffmpeg-chromium) rather than mainline FFmpeg (media-video/ffmpeg)
 www-client/opera-beta:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
+www-client/opera-developer:ffmpeg-chromium - Use Chromium FFmpeg fork (media-video/ffmpeg-chromium) rather than mainline FFmpeg (media-video/ffmpeg)
 www-client/opera-developer:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
 www-client/qutebrowser:adblock - Enable Brave's ABP-style adblocker library for improved adblocking
 www-client/qutebrowser:qt6 - Use Qt6 that provides a newer Chromium version
