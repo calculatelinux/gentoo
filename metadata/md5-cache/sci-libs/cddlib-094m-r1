@@ -1,12 +1,15 @@
-DEFINED_PHASES=configure install
+BDEPEND=>=app-portage/elt-patches-20170815
+DEFINED_PHASES=configure install prepare
 DEPEND=dev-libs/gmp:0
 DESCRIPTION=C library implementing the Double Description Method
 EAPI=7
 HOMEPAGE=https://www.inf.ethz.ch/personal/fukudak/cdd_home/
+INHERIT=libtool
 IUSE=doc examples static-libs tools
 KEYWORDS=amd64 ~arm ~ppc ~riscv ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2+
 RDEPEND=dev-libs/gmp:0=
 SLOT=0
 SRC_URI=https://github.com/cddlib/cddlib/releases/download/0.94m/cddlib-0.94m.tar.gz
-_md5_=1da89e4ba7474ab61fe74bfdf07bed9f
+_eclasses_=libtool	9d3a9a889a6fa62ae794f817c156491b	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084
+_md5_=09c9a731c8a04fe7d0cb7c9bf28980a8
