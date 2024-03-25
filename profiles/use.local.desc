@@ -333,9 +333,8 @@ app-containers/incus:fuidshift - Install the fuidshift binary - currently confli
 app-containers/lxc:io-uring - Enable io_uring support, and use io_uring instead of epoll
 app-containers/lxc:tools - Build and install additional command line tools
 app-containers/nerdctl:rootless - Enables dependencies for running in rootless mode.
-app-containers/podman:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
+app-containers/podman:btrfs - Enables btrfs support (graph driver) in Podman
 app-containers/podman:cgroup-hybrid - Use legacy (hybrid) cgroups instead of modern (unified) cgroups
-app-containers/podman:cron - Runs `podman auto-update` daily. See podman-auto-update(1)
 app-containers/podman:fuse - Enables fuse dependencies (fuse-overlayfs is especially useful for rootless mode).
 app-containers/podman:init - Enables catatonit dependency required for podman run --init.
 app-containers/podman:rootless - Enables dependencies for running in rootless mode.
@@ -689,7 +688,7 @@ app-emulation/wine-proton:osmesa - Enable off-screen rendering (OpenGL in bitmap
 app-emulation/wine-proton:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-proton:sdl - Enable gamepad support using media-libs/libsdl2
 app-emulation/wine-proton:vkd3d - Enable DirectX 12 support using app-emulation/vkd3d
-app-emulation/wine-proton:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, may have slightly worse OpenGL performance or other issues compared to USE=abi_x86_32, also lacks 16bit support) -- still need dev-util/mingw64-toolchain with abi_x86_32 which itself does not need multilib
+app-emulation/wine-proton:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32, also lacks 16bit support) -- still need dev-util/mingw64-toolchain with abi_x86_32 which itself does not need multilib
 app-emulation/wine-staging:capi - Enable ISDN support using net-libs/libcapi
 app-emulation/wine-staging:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
 app-emulation/wine-staging:dos - Pull in games-emulation/dosbox to run DOS applications
@@ -702,7 +701,7 @@ app-emulation/wine-staging:pcap - Support packet capture software (e.g. wireshar
 app-emulation/wine-staging:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-staging:samba - Pull in net-fs/samba with winbind for NTLM auth support
 app-emulation/wine-staging:sdl - Enable gamepad support using media-libs/libsdl2
-app-emulation/wine-staging:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, may have slightly worse OpenGL performance or other issues compared to USE=abi_x86_32, also lacks 16bit support) -- still need dev-util/mingw64-toolchain with abi_x86_32 which itself does not need multilib
+app-emulation/wine-staging:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32, also lacks 16bit support) -- still need dev-util/mingw64-toolchain with abi_x86_32 which itself does not need multilib
 app-emulation/wine-vanilla:capi - Enable ISDN support using net-libs/libcapi
 app-emulation/wine-vanilla:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
 app-emulation/wine-vanilla:dos - Pull in games-emulation/dosbox to run DOS applications
@@ -716,7 +715,7 @@ app-emulation/wine-vanilla:perl - Install helpers that require perl (winedump/wi
 app-emulation/wine-vanilla:samba - Pull in net-fs/samba with winbind for NTLM auth support
 app-emulation/wine-vanilla:sdl - Enable gamepad support using media-libs/libsdl2
 app-emulation/wine-vanilla:vkd3d - Enable DirectX 12 support using app-emulation/vkd3d
-app-emulation/wine-vanilla:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, may have slightly worse OpenGL performance or other issues compared to USE=abi_x86_32, also lacks 16bit support) -- still need dev-util/mingw64-toolchain with abi_x86_32 which itself does not need multilib
+app-emulation/wine-vanilla:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32, also lacks 16bit support) -- still need dev-util/mingw64-toolchain with abi_x86_32 which itself does not need multilib
 app-emulation/winetricks:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
 app-emulation/x48:readline - Enables support for libreadline
 app-emulation/xe-guest-utilities:xenstore - Use xenstore binaries bundled by Citrix instead of building app-emulation/xen-tools
@@ -2789,7 +2788,6 @@ dev-ruby/vcr:json - Add support for casettes serialized with JSON
 dev-scheme/bigloo:avahi - Enable Avahi support
 dev-scheme/bigloo:gpg - Enable GPG support
 dev-scheme/bigloo:libuv - Enable libuv support
-dev-scheme/gauche:mbedtls - Enable support for net-libs/mbedtls
 dev-scheme/gauche-gl:cg - Enable NVidia Cg binding
 dev-scheme/guile:debug-freelist - Include garbage collector freelist debugging code
 dev-scheme/guile:debug-malloc - Include malloc debugging code
@@ -4193,7 +4191,6 @@ media-gfx/pstoedit:pptx - Enable support for generating PowerPoint pptx files
 media-gfx/qimgv:opencv - Enable HQ scaling via media-libs/opencv
 media-gfx/qimgv:video - Add support for gif/webm playback via libmpv
 media-gfx/qrencode:png - Enable PNG output support in qrencode tool
-media-gfx/renderdoc:pyside2 - Expose the QRenderdoc UI to Python scripting to allow for customisation
 media-gfx/renderdoc:qt5 - Build and install the qrenderdoc GUI
 media-gfx/shotwell:opencv - Enable face detection via media-libs/opencv
 media-gfx/skanpage:ocr - Enable support for Optical Character Recognition via app-text/tesseract
@@ -7149,6 +7146,9 @@ sci-biology/clustalw-mpi:static-pairalign - Use static (as opposed to dynamic) s
 sci-biology/exonerate:utils - Install the follow binaries: esd2esi, fasta2esd, fastaannotatecdna, fastachecksum, fastaclean, fastaclip, fastacomposition, fastadiff, fastaexplode, fastafetch, fastahardmask, fastaindex, fastalength, fastanrdb, fastaoverlap, fastareformat, fastaremove, fastarevcomp, fastasoftmask, fastasort, fastasplit, fastasubseq, fastatranslate, fastavalidcds
 sci-biology/fasttree:double-precision - use double precision instead of single-precision floating point (2x memroy required)
 sci-biology/mcl:blast - Add support for NCBI BLAST data
+sci-biology/mothur:boost - Depend on dev-libs/boost for make.contigs to read .gz compressed files.
+sci-biology/mothur:gsl - Use sci-libs/gsl to support diversity estimates for estimiator.single.
+sci-biology/mothur:hdf5 - Support Biom format 2.0 for the biom.info command via sci-libs/hdf5.
 sci-biology/newick-utils:xml - Uses dev-libs/libxml2 to handle ornaments
 sci-biology/ucsc-genome-browser:server - Install genome browser Web application. If this flag is off, only libraries and utilities from the suite are installed.
 sci-biology/yass:dmalloc - Enable debugging with the dmalloc library
@@ -7435,9 +7435,12 @@ sci-libs/openblas:pthread - Build with pthread threading model
 sci-libs/openblas:relapack - Build the ReLAPACK extension to OpenBLAS
 sci-libs/opencascade:eigen - Enable support for eigenvalues through the header-only dev-cpp/eigen package.
 sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/freeimage
+sci-libs/opencascade:freetype - Enable media-libs/freetype support
+sci-libs/opencascade:jemalloc - Enable jemalloc allocator support via dev-libs/jemalloc
 sci-libs/opencascade:json - Enable JSON support through dev-libs/rapidjson
-sci-libs/opencascade:optimize - Don't clear allocated memory. Use optimized memory manager unless tbb USE flag is set.
+sci-libs/opencascade:optimize - Don't clear allocated memory. Use optimized memory manager unlesstbb USE flag is set.
 sci-libs/opencascade:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
+sci-libs/opencascade:testprograms - Indicates whether non-regression OCCT test scripts should be installed
 sci-libs/opencascade:vtk - Enable Visualization Toolkit support via sci-libs/vtk
 sci-libs/orocos_kdl:models - Build models for some well known robots.
 sci-libs/p4est:romio - Build with support for the ROMIO MPI-IO component
@@ -8212,6 +8215,7 @@ sys-devel/clang:extra - Build extra tools (clangd, clang-tidy and a few more)
 sys-devel/clang:ieee-long-double - Use accelerated 128-bit IEEE long double ABI (ppc64le only)
 sys-devel/clang:static-analyzer - Install the Clang static analyzer
 sys-devel/clang-common:bootstrap-prefix - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used for bootstrapping Gentoo Prefix
+sys-devel/clang-common:cet - Enable support for control flow hijacking protection. On amd64, this provides Intel Control Flow Enforcement Technology (CET). Only provides benefits on newer CPUs. For Intel, the CPU must be at least as new as Tiger Lake. For AMD, it must be at least as new as Zen 3. This is harmless on older CPUs, but provides no benefit either.
 sys-devel/clang-common:default-compiler-rt - Use compiler-rt + libunwind instead of libgcc as the default rtlib for clang
 sys-devel/clang-common:default-libcxx - Use libc++ instead of libstdc++ as the default stdlib for clang
 sys-devel/clang-common:default-lld - Use lld as the default linker for clang

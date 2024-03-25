@@ -64,7 +64,7 @@ RDEPEND="
 	media-libs/qhull:=
 	sci-libs/hdf5:=[fortran,zlib]
 	>=sci-libs/med-4.0.0-r1
-	sci-libs/opencascade:=[json,vtk]
+	<sci-libs/opencascade-7.8.0:=[json,vtk]
 	sci-libs/orocos_kdl:=
 	sys-libs/zlib
 	virtual/libusb:1
@@ -73,8 +73,8 @@ RDEPEND="
 		net-misc/curl
 	)
 	fem? (
-		!qt6? ( sci-libs/vtk:=[qt5,rendering] )
-		qt6? ( sci-libs/vtk:=[-qt5,qt6,rendering] )
+		!qt6? ( <sci-libs/vtk-9.3.0:=[qt5,rendering] )
+		qt6? ( <sci-libs/vtk-9.3.0:=[-qt5,qt6,rendering] )
 	)
 	gui? (
 		>=media-libs/coin-4.0.0
