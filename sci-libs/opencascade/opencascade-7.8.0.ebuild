@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit cmake virtualx
+inherit cmake flag-o-matic virtualx
 
 DESCRIPTION="Development platform for CAD/CAE, 3D surface/solid modeling and data exchange"
 HOMEPAGE="https://www.opencascade.com"
@@ -31,11 +31,12 @@ fi
 
 LICENSE="|| ( Open-CASCADE-LGPL-2.1-Exception-1.0 LGPL-2.1 )"
 SLOT="0/$(ver_cut 1-2)"
-IUSE="X debug doc examples ffmpeg freeimage freetype gles2-only +gui jemalloc json +opengl optimize tbb test testprograms tk vtk"
+IUSE="X debug doc examples ffmpeg freeimage freetype gles2-only gui jemalloc json +opengl optimize tbb test testprograms tk vtk"
 
 REQUIRED_USE="
 	?? ( optimize tbb )
 	?? ( opengl gles2-only )
+	examples? ( gui )
 	test? ( freeimage json opengl )
 "
 
@@ -58,13 +59,11 @@ RDEPEND="
 		x11-libs/libX11
 	)
 	gui? (
-		examples? (
-			dev-qt/qtcore:5
-			dev-qt/qtgui:5
-			dev-qt/qtquickcontrols2:5
-			dev-qt/qtwidgets:5
-			dev-qt/qtxml:5
-		)
+		dev-qt/qtcore:5
+		dev-qt/qtgui:5
+		dev-qt/qtquickcontrols2:5
+		dev-qt/qtwidgets:5
+		dev-qt/qtxml:5
 	)
 	ffmpeg? ( <media-video/ffmpeg-5:= )
 	freeimage? ( media-libs/freeimage )
@@ -85,7 +84,7 @@ DEPEND="
 BDEPEND="
 	doc? ( app-text/doxygen[dot] )
 	gui? (
-		examples? ( dev-qt/linguist-tools:5 )
+		dev-qt/linguist-tools:5
 	)
 	test? ( dev-tcltk/thread )
 "
@@ -97,6 +96,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-7.7.0-avoid-pre-stripping-binaries.patch"
 	"${FILESDIR}/${PN}-7.7.0-build-against-vtk-9.2.patch"
 	"${FILESDIR}/${PN}-7.7.0-musl.patch"
+	"${FILESDIR}/${PN}-7.7.0-tbb-detection.patch"
 	"${FILESDIR}/${PN}-7.7.0-jemalloc-lib-type.patch"
 	"${FILESDIR}/${PN}-7.8.0-cmake-min-version.patch"
 	"${FILESDIR}/${PN}-7.8.0-tests.patch"
@@ -134,6 +134,11 @@ src_prepare() {
 }
 
 src_configure() {
+	# -Werror=odr
+	# https://bugs.gentoo.org/862912
+	# https://tracker.dev.opencascade.org/view.php?id=33091
+	filter-lto
+
 	local mycmakeargs=(
 		-D3RDPARTY_DIR="${ESYSROOT}/usr"
 		-DBUILD_CPP_STANDARD="C++17"
@@ -177,6 +182,7 @@ src_configure() {
 		# no package in tree
 		-DUSE_OPENVR="no"
 		-DUSE_RAPIDJSON="$(usex json)"
+		-DUSE_QT="$(usex gui)"
 		-DUSE_TBB="$(usex tbb)"
 		-DUSE_TK="$(usex tk)"
 		-DUSE_VTK="$(usex vtk)"
@@ -187,7 +193,10 @@ src_configure() {
 	if ! use jemalloc && ! use tbb; then
 		mycmakeargs+=( -DUSE_MMGR_TYPE=NATIVE )
 	elif use jemalloc && ! use tbb; then
-		mycmakeargs+=( -DUSE_MMGR_TYPE=JEMALLOC )
+		mycmakeargs+=(
+			-DUSE_MMGR_TYPE=JEMALLOC
+			-D3RDPARTY_JEMALLOC_INCLUDE_DIR="${ESYSROOT}/usr/include/jemalloc"
+		)
 	elif ! use jemalloc && use tbb; then
 		mycmakeargs+=( -DUSE_MMGR_TYPE=TBB )
 	elif use jemalloc && use tbb; then
@@ -205,12 +214,6 @@ src_configure() {
 		mycmakeargs+=(
 			-D3RDPARTY_QT_DIR="${ESYSROOT}/usr"
 			-DBUILD_SAMPLES_QT="$(usex examples)"
-		)
-	fi
-
-	if use jemalloc; then
-		mycmakeargs+=(
-			-D3RDPARTY_JEMALLOC_INCLUDE_DIR="${ESYSROOT}/usr/include/jemalloc"
 		)
 	fi
 

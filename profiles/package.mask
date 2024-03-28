@@ -33,6 +33,91 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2024-03-26)
+# Last release in 2012.  No reverse dependencies.
+# Removal on 2024-04-25.  Bug #927524.
+dev-python/simplegeneric
+
+# Michał Górny <mgorny@gentoo.org> (2024-03-26)
+# Unmaintained.  EAPI 6.  Homepage gone.  No keywords for modern
+# architectures.
+# Removal on 2024-04-25.  Bug #927208.
+net-misc/blinkperl
+
+# Michał Górny <mgorny@gentoo.org> (2024-03-26)
+# Unmaintained.  Multiple bugs open.  The current version is from 2018,
+# and it has been discontinued as a separate package since.
+# Removal on 2024-04-25.  Bug #926861.
+net-misc/felix
+
+# Michał Górny <mgorny@gentoo.org> (2024-03-26)
+# Unmaintained.  EAPI 6.  Homepage gone.
+# Removal on 2024-04-25.  Bug #926860.
+app-pda/iripdb
+
+# Michał Górny <mgorny@gentoo.org> (2024-03-26)
+# Unfetchable proprietary fonts.  The alternatives include
+# media-fonts/jomolhari and "Noto Serif Tibetan" from media-fonts/noto.
+# Removal on 2024-04-25.  Bug #926836.
+media-fonts/dzongkha-fonts
+
+# Michał Górny <mgorny@gentoo.org> (2024-03-26)
+# A dead wiget library with no reverse dependencies.  Homepage gone.
+# Removal on 2024-04-25.  Bug #926604.
+x11-libs/scw
+
+# Michał Górny <mgorny@gentoo.org> (2024-03-26)
+# Deprecated upstream and the URL no longer works.
+# Removal on 2024-04-25.  Bug #926550.
+sys-firmware/bluez-firmware
+
+# Michał Górny <mgorny@gentoo.org> (2024-03-26)
+# Wrapper library that's stuck on Qt5.  No reverse dependencies left.
+# Removal on 2024-04-25.  Bug #926548.
+dev-python/anyqt
+
+# Michał Górny <mgorny@gentoo.org> (2024-03-26)
+# Unfinished package from 2021 that was added as a short-lived
+# dependency of dev-python/GitPython.  No reverse dependencies remain.
+# Removal on 2024-04-25.  Bug #924683.
+dev-python/sumtypes
+
+# Michał Górny <mgorny@gentoo.org> (2024-03-26)
+# Uses deprecated distutils-r1 API.  The current version is outdated,
+# from mid-2022.  No reverse dependencies.
+# Removal on 2024-04-25.  Bug #910015.
+sci-biology/HTSeq
+
+# Michał Górny <mgorny@gentoo.org> (2024-03-26)
+# Uses deprecated distutils-r1 API.  Depends on dev-qt/qtwebengine:5.
+# Includes the libraries with no other reverse dependencies.
+# Removal on 2024-04-25.  Bug #909996.
+media-libs/libopenshot
+media-libs/libopenshot-audio
+media-video/openshot
+
+# Michał Górny <mgorny@gentoo.org> (2024-03-26)
+# Issues with OpenSSL 3.  Unmaintained.  Last activity in 2019.
+# Removal on 2024-04-25.  Bug #892031.
+sys-auth/pam_ssh
+
+# Michał Górny <mgorny@gentoo.org> (2024-03-26)
+# Fails to compile.  Unmaintained.  Last activity in 2016.
+# Depends on an old wxGTK slot.
+# Removal on 2024-04-25.  Bug #895222.
+app-misc/tek
+
+# Michał Górny <mgorny@gentoo.org> (2024-03-26)
+# Bad C++ code.  Unmaintained.  Carries a number of patches already.
+# No reverse dependencies.
+# Removal on 2024-04-25.  Bug #924925.
+dev-libs/zthread
+
+# Ionen Wolkens <ionen@gentoo.org> (2024-03-26)
+# Breaks revdeps that need embree-3 and seems intended to be
+# SLOT=4. Mask until the situation is improved (bug #927833).
+>=media-libs/embree-4
+
 # Eli Schwartz <eschwartz93@gmail.com> (2024-03-24)
 # Broken with modern compilers, broken with LTO. Upstream website no
 # longer exists. Unmaintained in Gentoo, no reverse dependencies.
@@ -271,7 +356,7 @@ kde-misc/gmail-feed
 sci-libs/mpir
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2024-02-28)
-# KDE Plasma 6.0.2, Gear 24.02.0 and Frameworks 6.0.0 mask
+# KDE Plasma 6.0.3, Gear 24.02.1 and Frameworks 6.0.0 mask
 #
 # Don't do anything unless you're intentionally moving to Plasma 6, which is
 # masked still for a reason. If you get this message just from conflicts where
@@ -360,68 +445,68 @@ sci-libs/mpir
 ~kde-frameworks/kxmlgui-6.0.0
 ~kde-frameworks/purpose-6.0.0
 ~kde-frameworks/qqc2-desktop-style-6.0.0
-~kde-plasma/bluedevil-6.0.2
-~kde-plasma/breeze-6.0.2
-~kde-plasma/breeze-grub-6.0.2
-~kde-plasma/breeze-gtk-6.0.2
-~kde-plasma/breeze-plymouth-6.0.2
-~kde-plasma/discover-6.0.2
-~kde-plasma/drkonqi-6.0.2
-~kde-plasma/flatpak-kcm-6.0.2
-~kde-plasma/kactivitymanagerd-6.0.2
-~kde-plasma/kde-cli-tools-6.0.2
-~kde-plasma/kde-gtk-config-6.0.2
-~kde-plasma/kdecoration-6.0.2
-~kde-plasma/kdeplasma-addons-6.0.2
-~kde-plasma/kgamma-6.0.2
-~kde-plasma/kglobalacceld-6.0.2
-~kde-plasma/kinfocenter-6.0.2
-~kde-plasma/kmenuedit-6.0.2
-~kde-plasma/kpipewire-6.0.2
-~kde-plasma/kscreen-6.0.2
-~kde-plasma/kscreenlocker-6.0.2
-~kde-plasma/ksshaskpass-6.0.2
-~kde-plasma/ksystemstats-6.0.2
-~kde-plasma/kwallet-pam-6.0.2
-~kde-plasma/kwayland-6.0.2
-~kde-plasma/kwayland-integration-6.0.2
-~kde-plasma/kwin-6.0.2
-~kde-plasma/kwrited-6.0.2
-~kde-plasma/layer-shell-qt-6.0.2
-~kde-plasma/libkscreen-6.0.2
-~kde-plasma/libksysguard-6.0.2
-~kde-plasma/libplasma-6.0.2
-~kde-plasma/milou-6.0.2
-~kde-plasma/ocean-sound-theme-6.0.2
-~kde-plasma/oxygen-6.0.2
-~kde-plasma/oxygen-sounds-6.0.2
-~kde-plasma/plasma-activities-6.0.2
-~kde-plasma/plasma-activities-stats-6.0.2
-~kde-plasma/plasma-browser-integration-6.0.2
-~kde-plasma/plasma-desktop-6.0.2
-~kde-plasma/plasma-disks-6.0.2
-~kde-plasma/plasma-firewall-6.0.2
-~kde-plasma/plasma-integration-6.0.2
-~kde-plasma/plasma-meta-6.0.2
-~kde-plasma/plasma-nm-6.0.2
-~kde-plasma/plasma-pa-6.0.2
-~kde-plasma/plasma-sdk-6.0.2
-~kde-plasma/plasma-systemmonitor-6.0.2
-~kde-plasma/plasma-thunderbolt-6.0.2
-~kde-plasma/plasma-vault-6.0.2
-~kde-plasma/plasma-welcome-6.0.2
-~kde-plasma/plasma-workspace-6.0.2
-~kde-plasma/plasma-workspace-wallpapers-6.0.2
-~kde-plasma/plasma5support-6.0.2
-~kde-plasma/plymouth-kcm-6.0.2
-~kde-plasma/polkit-kde-agent-6.0.2
-~kde-plasma/powerdevil-6.0.2
-~kde-plasma/print-manager-6.0.2
-~kde-plasma/qqc2-breeze-style-6.0.2
-~kde-plasma/sddm-kcm-6.0.2
-~kde-plasma/systemsettings-6.0.2
-~kde-plasma/wacomtablet-6.0.2
-~kde-plasma/xdg-desktop-portal-kde-6.0.2
+~kde-plasma/bluedevil-6.0.3
+~kde-plasma/breeze-6.0.3
+~kde-plasma/breeze-grub-6.0.3
+~kde-plasma/breeze-gtk-6.0.3
+~kde-plasma/breeze-plymouth-6.0.3
+~kde-plasma/discover-6.0.3
+~kde-plasma/drkonqi-6.0.3
+~kde-plasma/flatpak-kcm-6.0.3
+~kde-plasma/kactivitymanagerd-6.0.3
+~kde-plasma/kde-cli-tools-6.0.3
+~kde-plasma/kde-gtk-config-6.0.3
+~kde-plasma/kdecoration-6.0.3
+~kde-plasma/kdeplasma-addons-6.0.3
+~kde-plasma/kgamma-6.0.3
+~kde-plasma/kglobalacceld-6.0.3
+~kde-plasma/kinfocenter-6.0.3
+~kde-plasma/kmenuedit-6.0.3
+~kde-plasma/kpipewire-6.0.3
+~kde-plasma/kscreen-6.0.3
+~kde-plasma/kscreenlocker-6.0.3
+~kde-plasma/ksshaskpass-6.0.3
+~kde-plasma/ksystemstats-6.0.3
+~kde-plasma/kwallet-pam-6.0.3
+~kde-plasma/kwayland-6.0.3
+~kde-plasma/kwayland-integration-6.0.3
+~kde-plasma/kwin-6.0.3.1
+~kde-plasma/kwrited-6.0.3
+~kde-plasma/layer-shell-qt-6.0.3
+~kde-plasma/libkscreen-6.0.3
+~kde-plasma/libksysguard-6.0.3
+~kde-plasma/libplasma-6.0.3
+~kde-plasma/milou-6.0.3
+~kde-plasma/ocean-sound-theme-6.0.3
+~kde-plasma/oxygen-6.0.3
+~kde-plasma/oxygen-sounds-6.0.3
+~kde-plasma/plasma-activities-6.0.3
+~kde-plasma/plasma-activities-stats-6.0.3
+~kde-plasma/plasma-browser-integration-6.0.3
+~kde-plasma/plasma-desktop-6.0.3
+~kde-plasma/plasma-disks-6.0.3
+~kde-plasma/plasma-firewall-6.0.3
+~kde-plasma/plasma-integration-6.0.3
+~kde-plasma/plasma-meta-6.0.3
+~kde-plasma/plasma-nm-6.0.3
+~kde-plasma/plasma-pa-6.0.3
+~kde-plasma/plasma-sdk-6.0.3
+~kde-plasma/plasma-systemmonitor-6.0.3
+~kde-plasma/plasma-thunderbolt-6.0.3
+~kde-plasma/plasma-vault-6.0.3
+~kde-plasma/plasma-welcome-6.0.3
+~kde-plasma/plasma-workspace-6.0.3
+~kde-plasma/plasma-workspace-wallpapers-6.0.3
+~kde-plasma/plasma5support-6.0.3
+~kde-plasma/plymouth-kcm-6.0.3
+~kde-plasma/polkit-kde-agent-6.0.3
+~kde-plasma/powerdevil-6.0.3
+~kde-plasma/print-manager-6.0.3
+~kde-plasma/qqc2-breeze-style-6.0.3
+~kde-plasma/sddm-kcm-6.0.3
+~kde-plasma/systemsettings-6.0.3
+~kde-plasma/wacomtablet-6.0.3
+~kde-plasma/xdg-desktop-portal-kde-6.0.3
 ~kde-apps/baloo-widgets-24.02.1
 ~kde-apps/dolphin-24.02.1
 ~kde-apps/ffmpegthumbs-24.02.1
@@ -644,7 +729,7 @@ sci-libs/mpir
 ~dev-libs/appstream-1.0.2
 ~dev-libs/kdiagram-3.0.1
 ~dev-libs/kirigami-addons-1.0.1
-~dev-libs/ktextaddons-1.5.3
+~dev-libs/ktextaddons-1.5.4
 ~dev-libs/kweathercore-0.8.0
 ~games-puzzle/skladnik-0.5.2
 ~gui-apps/xwaylandvideobridge-0.4.0
@@ -809,12 +894,6 @@ sys-libs/libhugetlbfs
 # trivially replaced by a local function.  No revdeps.
 # Removal on 2024-03-04.  Bug #923701.
 dev-python/flask-gravatar
-
-# Michał Górny <mgorny@gentoo.org> (2024-01-31)
-# Breaks some plugins and a variety of test suites.  Upstream seems
-# to be planning to improve compatibility a bit.  Masking for testing
-# by the Python team.
->=dev-python/pytest-8
 
 # Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2024-01-24)
 # app-misc/ddcutil-2.1.0 causes core-dump crashes in

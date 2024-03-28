@@ -108,6 +108,11 @@ src_prepare() {
 src_configure() {
 	use crossdev-mingw || PATH=${BROOT}/usr/lib/mingw64-toolchain/bin:${PATH}
 
+	# random segfaults been reported with LTO in some games, filter as
+	# a safety (note that optimizing this further won't really help
+	# performance, GPU does the actual work)
+	filter-lto
+
 	# -mavx with mingw-gcc has a history of obscure issues and
 	# disabling is seen as safer, e.g. `WINEARCH=win32 winecfg`
 	# crashes with -march=skylake >=wine-8.10, similar issues with
@@ -119,6 +124,11 @@ src_configure() {
 			unset AR CC CXX RC STRIP WIDL
 			filter-flags '-fuse-ld=*'
 			filter-flags '-mfunction-return=thunk*' #878849
+
+			# some bashrc-mv users tend to do CFLAGS="${LDFLAGS}" and then
+			# strip-unsupported-flags miss these during compile-only tests
+			# (primarily done for 23.0 profiles' -z, not full coverage)
+			filter-flags '-Wl,-z,*' #928038
 		fi
 
 		CHOST_amd64=x86_64-w64-mingw32
