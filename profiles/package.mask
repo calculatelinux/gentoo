@@ -33,6 +33,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2024-03-30)
+# NIH package that was added for dev-python/setuptools but is no longer
+# used there.
+# Removal on 2024-04-29.  Bug #928270.
+dev-python/nspektr
+
 # James Le Cuirot <chewi@gentoo.org> (2024-03-30)
 # Old, ugly, broken, and requires OSS sound. Removal on 2024-04-30. Bug #928066.
 games-sports/gracer
@@ -41,6 +47,7 @@ games-sports/gracer
 # Newer releases were signed by a potentially compromised upstream maintainer.
 # There is no evidence that these releases contain malicious code, but masked
 # out of an abundance of caution. See bug #928134.
+sec-keys/openpgp-keys-jiatan
 >=app-arch/xz-utils-5.4.3
 
 # Sam James <sam@gentoo.org> (2024-03-28)

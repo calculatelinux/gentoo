@@ -44,6 +44,10 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 BDEPEND="dev-go/go-md2man"
 
+PATCHES=(
+	"${FILESDIR}"/softcode-strip-upstream-pr-5446.patch
+)
+
 pkg_pretend() {
 	local CONFIG_CHECK=""
 	use btrfs && CONFIG_CHECK+=" ~BTRFS_FS"
@@ -113,7 +117,7 @@ src_compile() {
 	# https://github.com/gentoo/gentoo/pull/33531#issuecomment-1786107493
 	[[ ${PV} != 9999* ]] && export COMMIT_NO="" GIT_COMMIT=""
 
-	tc-export AS LD
+	tc-export AS LD STRIP
 	export GOMD2MAN="$(command -v go-md2man)"
 	default
 }
