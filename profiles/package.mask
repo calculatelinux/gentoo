@@ -139,11 +139,6 @@ app-misc/tek
 # Removal on 2024-04-25.  Bug #924925.
 dev-libs/zthread
 
-# Ionen Wolkens <ionen@gentoo.org> (2024-03-26)
-# Breaks revdeps that need embree-3 and seems intended to be
-# SLOT=4. Mask until the situation is improved (bug #927833).
->=media-libs/embree-4
-
 # Eli Schwartz <eschwartz93@gmail.com> (2024-03-24)
 # Broken with modern compilers, broken with LTO. Upstream website no
 # longer exists. Unmaintained in Gentoo, no reverse dependencies.
@@ -160,11 +155,6 @@ dev-python/prov
 # Apparently broken.  No tests.  Last code change in 2016.  No revdeps.
 # Removal on 2024-04-22.  Bug #892613.
 dev-python/sphinxcontrib-asyncio
-
-# Alexey Sokolov <alexey+gentoo@asokolov.org> (2023-03-23)
-# Source incompatible with mygui-3.4.1
-# https://bugs.gentoo.org/927634
->=dev-games/mygui-3.4.3
 
 # Conrad Kostecki <conikost@gentoo.org> (2024-03-22)
 # Stuck on old EAPI6. Last stable release over 10 years ago.
