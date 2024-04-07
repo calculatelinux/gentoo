@@ -33,6 +33,57 @@
 
 #--- END OF EXAMPLES ---
 
+# Ben Kohler <bkohler@gentoo.org> (2024-04-07)
+# Abandoned upstream long ago in favor of Unifi Protect (running only on an
+# official Unifi appliance.  Likely contains lots of security holes in bundled
+# libs.
+# Removal on 2024-05-07.  Bug #928881
+acct-group/unifi-video
+acct-user/unifi-video
+media-video/unifi-video
+
+# Ben Kohler <bkohler@gentoo.org> (2024-04-07)
+# Long ago forked to and obsoleted by sys-apps/memtest86+.  Upstream has 
+# abandoned this for their proprietary UEFI-based one (packaged in gentoo as 
+# as sys-apps/memtest86-bin).
+# Removal on 2024-05-07.  Bug #502464, #607494, #628528, #750677, #887003,
+# #912973, #920109
+sys-apps/memtest86
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-04-06)
+# Dead upstream for many years, in a state of decay and no revdeps.
+# Removal on 2024-05-06.  Bug #926193, #891791
+net-im/telepathy-connection-managers
+net-libs/sofia-sip
+net-libs/telepathy-accounts-signon
+net-libs/telepathy-farstream
+net-libs/telepathy-qt
+net-voip/telepathy-gabble
+net-voip/telepathy-rakia
+net-voip/telepathy-salut
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-04-06)
+# Dead upstream, as is the whole telepathy stack. Some parts depend on
+# dev-qt/qtwebengine:5.
+# Removal on 2024-05-06.  Bug #926679
+kde-apps/ktp-accounts-kcm
+kde-apps/ktp-approver
+kde-apps/ktp-auth-handler
+kde-apps/ktp-common-internals
+kde-apps/ktp-contact-list
+kde-apps/ktp-contact-runner
+kde-apps/ktp-desktop-applets
+kde-apps/ktp-filetransfer-handler
+kde-apps/ktp-kded-module
+kde-apps/ktp-send-file
+kde-apps/ktp-text-ui
+kde-apps/plasma-telepathy-meta
+net-libs/telepathy-logger-qt
+
+# James Le Cuirot <chewi@gentoo.org> (2024-04-05)
+# Dead upstream and broken beyond repair. Removal on 2024-05-05. Bug #928591.
+games-board/xmille
+
 # Michał Górny <mgorny@gentoo.org> (2024-03-30)
 # NIH package that was added for dev-python/setuptools but is no longer
 # used there.
@@ -682,7 +733,7 @@ sci-libs/mpir
 ~dev-db/futuresql-0.1.1
 ~dev-libs/appstream-1.0.2
 ~dev-libs/kdiagram-3.0.1
-~dev-libs/kirigami-addons-1.0.1
+~dev-libs/kirigami-addons-1.1.0
 ~dev-libs/ktextaddons-1.5.4
 ~dev-libs/kweathercore-0.8.0
 ~games-puzzle/skladnik-0.5.2
@@ -697,7 +748,7 @@ sci-libs/mpir
 ~net-libs/kdsoap-2.2.0
 ~net-libs/kdsoap-ws-discovery-client-0.4.0
 ~net-libs/signon-ui-0.15_p20231016
-~net-libs/accounts-qt-1.16_p20220803
+~net-libs/accounts-qt-1.17
 ~net-libs/accounts-qml-0.7_p20231028
 ~net-libs/signon-oauth2-0.25_p20210102
 =net-libs/signond-8.61-r100
@@ -868,17 +919,6 @@ net-misc/openr2
 # Lots of package breakage as usual for new versions. Masked until most/all
 # reverse dependencies are fixed. Tracker bug is bug #906077.
 =dev-libs/libfmt-10*
-
-# Sam James <sam@gentoo.org> (2023-04-13)
-# Leads to broken terminal output in e.g. vim and openrc and other applications
-# like joe crashing.
-# Bugs:
-# - reported at bottom of bug #904247 and bug #904263
-# - app-misc/tmux: https://github.com/tmux/tmux/issues/3531
-# - sys-apps/openrc: https://github.com/OpenRC/openrc/issues/619
-=sys-libs/ncurses-6.4_p20230424
-=sys-libs/ncurses-6.4_p20230506
-=sys-libs/ncurses-6.4_p20230527
 
 # Ionen Wolkens <ionen@gentoo.org> (2023-03-30)
 # NVIDIA dropped support for the 390.xx branch in December 2022[1].

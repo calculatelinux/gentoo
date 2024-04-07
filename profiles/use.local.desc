@@ -228,6 +228,9 @@ app-antivirus/clamtk:kde - Install the Dolphin plugin.
 app-antivirus/clamtk:nautilus - Install the Nautilus plugin.
 app-antivirus/clamtk:nemo - Install the Nemo plugin.
 app-antivirus/clamtk:thunar - Install the Thunar plugin.
+app-arch/7zip:jwasm - Use dev-lang/jwasm to include optimized code (doesn't support AES)
+app-arch/7zip:rar - Enable support for non-free rar decoder
+app-arch/7zip:uasm - Use dev-lang/uasm to include optimized code
 app-arch/cabextract:extras - Install experimental extra tools: wince_info and wince_rename for examining and processing Windows CE installation cabinet header files; cabinfo for examining the structure of a cab file.
 app-arch/createrepo_c:legacy - Build with support for legacy weakdeps and hashes (not recommended!)
 app-arch/dpkg:libmd - Use app-crypt/libmd library for message digest functions
@@ -2063,6 +2066,7 @@ dev-libs/libisoburn:frontend-optional - Use dev-tcltk/bwidget which is not stric
 dev-libs/libisoburn:launch-frontend - Enable the tcl gui for xorriso
 dev-libs/libisoburn:launch-frontend-setuid - Enable the tcl gui for xorriso under setuid
 dev-libs/libisofs:verbose-debug - Enable verbose debug messages
+dev-libs/libjcat:ed25519 - Enable ED25519 verification support via dev-libs/nettle and net-libs/gnutls
 dev-libs/libjcat:gpg - Enable GPG verification support via app-crypt/gpgme
 dev-libs/libjcat:pkcs7 - Enable PKCS7 verification support via net-libs/gnutls
 dev-libs/libjwt:openssl - Use openssl libs for crypto functions
@@ -5392,7 +5396,7 @@ net-analyzer/nagios-plugins:nagios-game - Install games-util/qstat required for 
 net-analyzer/nagios-plugins:nagios-ping - Install net-analyzer/fping required for fancy ping monitoring. Disabling the flag does not remove any plugin file.
 net-analyzer/nagios-plugins:snmp - Install dev-perl/Net-SNMP required for monitoring SNMP values. Disabling the flag does not remove any plugin file.
 net-analyzer/nagios-plugins:ssh - Install net-misc/openssh required for monitoring SSH servers. Disabling the flag does not remove any plugin file.
-net-analyzer/nagios-plugins-linux-madrisan:curl - Build check_docker which requires net-misc/curl
+net-analyzer/nagios-plugins-linux-madrisan:curl - Build check_container which requires net-misc/curl
 net-analyzer/nagios-plugins-linux-madrisan:varlink - Build check_podman which requires dev-libs/libvarlink
 net-analyzer/net-snmp:elf - Enable the use of elf utils to check uptime on some systems
 net-analyzer/net-snmp:kmem - Enable usage of /dev/kmem
@@ -5521,6 +5525,7 @@ net-analyzer/wireshark:dftest - Install dftest, to display filter byte-code, for
 net-analyzer/wireshark:dpauxmon - Install dpauxmon, an external capture interface (extcap) that captures DisplayPort AUX channel data from linux kernel drivers
 net-analyzer/wireshark:dumpcap - Install dumpcap, to dump network traffic from inside wireshark
 net-analyzer/wireshark:editcap - Install editcap, to edit and/or translate the format of capture files
+net-analyzer/wireshark:http3 - Install net-libs/nghttp3 for enhanced HTTP3 analysis
 net-analyzer/wireshark:ilbc - Build with iLBC support in RTP Player using media-libs/libilbc
 net-analyzer/wireshark:libxml2 - Use dev-libs/libxml2 for handling XML configuration in dissectors
 net-analyzer/wireshark:maxminddb - Use dev-libs/libmaxminddb for IP address geolocation
@@ -6747,6 +6752,7 @@ net-p2p/amule:remote - Enable remote controlling of the client
 net-p2p/amule:stats - Enable statistic reporting
 net-p2p/bitcoin-core:berkdb - Support legacy wallets in Berkeley DB format
 net-p2p/bitcoin-core:bitcoin-cli - Build and install bitcoin-cli command line interface
+net-p2p/bitcoin-core:cli - Build and install bitcoin-cli command line interface
 net-p2p/bitcoin-core:daemon - Build and install bitcoind daemon
 net-p2p/bitcoin-core:external-signer - Include support for external wallet signer programs
 net-p2p/bitcoin-core:gui - Build and install Bitcoin-Qt GUI

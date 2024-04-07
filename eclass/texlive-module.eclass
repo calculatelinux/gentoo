@@ -428,6 +428,7 @@ texlive-module_src_install() {
 
 texlive-module_pkg_postinst() {
 	etexmf-update
+	texlive-common_update_tlpdb
 	[[ -n ${TL_MODULE_INFORMATION} ]] && elog "${TL_MODULE_INFORMATION}"
 }
 
@@ -438,7 +439,8 @@ texlive-module_pkg_postinst() {
 # installed texmf trees.
 
 texlive-module_pkg_postrm() {
-	etexmf-update
+	[[ -z ${REPLACED_BY_VERSION} ]] && etexmf-update
+	texlive-common_update_tlpdb
 }
 
 fi
