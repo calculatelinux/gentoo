@@ -3342,6 +3342,7 @@ games-strategy/wargus:bne - Support extracting data from the Battle.net Edition
 games-strategy/warzone2100:discord - Enable Discord presence/join integration
 games-strategy/wesnoth:server - Enable compilation of server
 games-util/gslist:web - Enable the web interface
+games-util/heroic-bin:gamescope - Run Heroic Launcher inside gamescope
 games-util/lgogdownloader:gui - Enable GUI login support for passing reCAPTCHA
 games-util/slade:fluidsynth - Enable MIDI software synthesis using media-sound/fluidsynth
 games-util/wit:fuse - Enable image mount support via fuse
@@ -8302,6 +8303,7 @@ sys-firmware/seabios:binary - Use official upstream pre-built binaries
 sys-firmware/seabios:seavgabios - Include SeaVGABIOS binaries (replacement for vgabios)
 sys-firmware/sgabios:binary - Use pre-built binaries
 sys-firmware/sigrok-firmware-fx2lafw:binary - Use official upstream pre-built binaries
+sys-firmware/sof-firmware:tools - Tools to interact with sof firmwares (upstream expects them to be present, but allow to skip them for systems not able to install needed dependencies)
 sys-firmware/vgabios:binary - Use official upstream pre-built binaries (only default and cirrus images)
 sys-fs/android-file-transfer-linux:fuse - Add FUSE mount helper
 sys-fs/android-file-transfer-linux:zune - Enable support for Microsoft Zune
