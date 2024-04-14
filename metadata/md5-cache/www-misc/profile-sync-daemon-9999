@@ -1,12 +1,12 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=unpack
-DEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DESCRIPTION=Symlinks and syncs browser profile dirs to RAM
-EAPI=6
-HOMEPAGE=https://wiki.archlinux.org/index.php/Profile-sync-daemon
+EAPI=8
+HOMEPAGE=https://wiki.archlinux.org/title/Profile-sync-daemon
 INHERIT=git-r3
 LICENSE=MIT
 PROPERTIES=live
 RDEPEND=app-shells/bash net-misc/rsync[xattr] sys-apps/systemd
 SLOT=0
 _eclasses_=git-r3	fbb2889c81f3a05910c1524db69425c1
-_md5_=13948276be6f839968bd7e46949cd008
+_md5_=b4bf9a8ca628938e31f8b42a9df803ec

@@ -37,6 +37,7 @@ RDEPEND="
 	dev-libs/nspr
 	dev-libs/nss
 	~dev-qt/qtbase-${PV}:6[accessibility=,gui,opengl=,vulkan?,widgets?]
+	~dev-qt/qtdeclarative-${PV}:6[widgets?]
 	~dev-qt/qtwebchannel-${PV}:6[qml?]
 	media-libs/fontconfig
 	media-libs/freetype
@@ -45,6 +46,7 @@ RDEPEND="
 	media-libs/libjpeg-turbo:=
 	media-libs/libpng:=
 	media-libs/libwebp:=
+	media-libs/mesa[gbm(+)]
 	media-libs/openjpeg:2=
 	media-libs/opus
 	media-libs/tiff:=
@@ -60,6 +62,7 @@ RDEPEND="
 	x11-libs/libXfixes
 	x11-libs/libXrandr
 	x11-libs/libXtst
+	x11-libs/libdrm
 	x11-libs/libxcb:=
 	x11-libs/libxkbcommon
 	x11-libs/libxkbfile
@@ -68,21 +71,13 @@ RDEPEND="
 	geolocation? ( ~dev-qt/qtpositioning-${PV}:6 )
 	kerberos? ( virtual/krb5 )
 	pulseaudio? ( media-libs/libpulse[glib] )
-	qml? ( ~dev-qt/qtdeclarative-${PV}:6 )
 	screencast? (
 		dev-libs/glib:2
-		media-libs/mesa[gbm(+)]
 		media-video/pipewire:=
-		x11-libs/libdrm
 	)
 	system-icu? ( dev-libs/icu:= )
-	vaapi? (
-		media-libs/libva:=[X]
-		media-libs/mesa[gbm(+)]
-		x11-libs/libdrm
-	)
+	vaapi? ( media-libs/libva:=[X] )
 	!vaapi? ( media-libs/libvpx:= )
-	widgets? ( ~dev-qt/qtdeclarative-${PV}:6[widgets] )
 "
 DEPEND="
 	${RDEPEND}

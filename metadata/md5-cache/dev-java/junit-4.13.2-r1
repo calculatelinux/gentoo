@@ -12,4 +12,4 @@ RESTRICT=!test? ( test )
 SLOT=4
 SRC_URI=https://github.com/junit-team/junit4/archive/r4.13.2.tar.gz -> junit-4.13.2.tar.gz
 _eclasses_=java-pkg-2	b6d755b4f6afabfd933932be28b46368	java-pkg-simple	742531b28b0ce82ba9425bd2c28654f9	java-utils-2	b346c3901e71ba37137bae0b25b00221
-_md5_=a700bb2a62cd4b23fa252ccf1849eaf5
+_md5_=7845054d85def1af4d2bc76cdcbee850
