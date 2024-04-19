@@ -28,7 +28,7 @@ LICENSE+=" Apache-2.0"
 # admin icons, jquery, xregexp.js
 LICENSE+=" MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~sparc ~x86 ~x64-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~sparc ~x86 ~x64-macos"
 IUSE="doc sqlite test"
 RESTRICT="!test? ( test )"
 
@@ -36,6 +36,7 @@ RDEPEND="
 	<dev-python/asgiref-4[${PYTHON_USEDEP}]
 	>=dev-python/asgiref-3.7.0[${PYTHON_USEDEP}]
 	>=dev-python/sqlparse-0.3.1[${PYTHON_USEDEP}]
+	sys-libs/timezone-data
 "
 BDEPEND="
 	test? (

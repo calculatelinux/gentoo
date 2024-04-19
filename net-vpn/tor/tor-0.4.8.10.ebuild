@@ -28,7 +28,7 @@ else
 	S="${WORKDIR}/${MY_PF}"
 
 	if [[ ${PV} != *_alpha* && ${PV} != *_beta* && ${PV} != *_rc* ]]; then
-		KEYWORDS="amd64 ~arm arm64 ~hppa ~mips ppc ppc64 ~riscv ~sparc x86 ~ppc-macos"
+		KEYWORDS="amd64 arm arm64 ~hppa ~mips ppc ppc64 ~riscv ~sparc x86 ~ppc-macos"
 	fi
 
 	BDEPEND="verify-sig? ( >=sec-keys/openpgp-keys-tor-20230727 )"
@@ -160,6 +160,7 @@ src_test() {
 			:sandbox/opendir_dirname
 			:sandbox/openat_filename
 			:sandbox/chmod_filename
+			:sandbox/chown_filename
 			:sandbox/rename_filename
 		)
 	fi

@@ -1175,7 +1175,6 @@ app-text/evince:nautilus - Enable property page extension in gnome-base/nautilus
 app-text/evince:postscript - Enable support for PostScript and Adobe Illustrator documents with app-text/libspectre
 app-text/evince:spell - Enable inline spell check for annotations via app-text/gspell
 app-text/evince:xps - Enable XPS viewer using app-text/libgxps
-app-text/foliate:handy - Use gui-libs/libhandy
 app-text/ghostscript-gpl:unicode - Add support for unicode passwords via net-dns/libidn
 app-text/groonga:abort - Enable query abortion
 app-text/groonga:benchmark - Build benchmark programs
@@ -2689,6 +2688,7 @@ dev-qt/qtdatavis3d:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtdeclarative:localstorage - Build the LocalStorage import for QtQuick (requires QtSql)
 dev-qt/qtdeclarative:network - Enable QtNetwork support
 dev-qt/qtdeclarative:opengl - Enable OpenGL support
+dev-qt/qtdeclarative:qmlls - Build the qmlls tool using dev-qt/qtlanguageserver
 dev-qt/qtdeclarative:sql - Enable QtSQL support
 dev-qt/qtdeclarative:widgets - Enable QtWidgets support
 dev-qt/qtdiag:network - Report network information
@@ -4631,7 +4631,7 @@ media-sound/asunder:mac - Support for creation of Monkey's Audio files (APE)
 media-sound/audacity:audiocom - Enable integrated uploading to audio.com
 media-sound/audacity:id3tag - Enables ID3 tagging with id3tag library
 media-sound/audacity:lv2 - Add support for Ladspa V2
-media-sound/audacity:mpg123 - Use media-sound/mpg123 instead of media-libs/libmad for decoding MPEG decoding
+media-sound/audacity:mpg123 - Use media-sound/mpg123-base instead of media-libs/libmad for MPEG decoding
 media-sound/audacity:portmidi - Enable support for MIDI via media-libs/portmidi
 media-sound/audacity:portmixer - Enable the internal portmixer feature
 media-sound/audacity:portsmf - Enable support for Portable Standard Midi File Library
