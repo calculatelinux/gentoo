@@ -1095,7 +1095,7 @@
     <email>genkernel@gentoo.org</email>
     <name>Genkernel</name>
     <url>https://wiki.gentoo.org/wiki/Project:Genkernel</url>
-    <description>The Genkernel project handles the maintenance and development of &lt;span style="white-space: nowrap;" class="plainlinks" title="External link to https://packages.gentoo.org for the sys-kernel/genkernel package."&gt;[https://packages.gentoo.org/packages/sys-kernel/genkernel &lt;span style="font-family: monospace; font-size: 95%; color: MidnightBlue;"&gt;sys-kernel/genkernel&lt;/span&gt;]&lt;span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-hdd-o fa-fw"&gt;&lt;/span&gt;&lt;/span&gt;.</description>
+    <description>The Genkernel project handles the maintenance and development of &lt;span style="white-space: nowrap;" class="plainlinks" title="External link to https://packages.gentoo.org for the sys-kernel/genkernel package."&gt;[https://packages.gentoo.org/packages/sys-kernel/genkernel &lt;span style="font-family: monospace; font-size: 95%; color: MidnightBlue;"&gt;sys-kernel/genkernel&lt;/span&gt;]&lt;span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"&gt;&lt;/span&gt;&lt;/span&gt;.</description>
     <member is-lead="1">
       <email>robbat2@gentoo.org</email>
       <name>Robin Johnson</name>
@@ -1260,11 +1260,6 @@
       <email>concord@gentoo.org</email>
       <name>Kenton Groombridge</name>
       <role>SELinux</role>
-    </member>
-    <member>
-      <email>klondike@gentoo.org</email>
-      <name>Francisco Blas Izquierdo Riera</name>
-      <role>Documentation, PR</role>
     </member>
     <member>
       <email>perfinion@gentoo.org</email>
@@ -1891,6 +1886,10 @@
     <description>The Overlays project is responsible for the administration of the overlays and the overlays.gentoo.org / repos.gentoo.org websites.</description>
     <subproject ref="repo-qa-checks@gentoo.org"/>
     <member>
+      <email>flow@gentoo.org</email>
+      <name>Florian Schmaus</name>
+    </member>
+    <member>
       <email>gokturk@gentoo.org</email>
       <name>Göktürk Yüksek</name>
       <role>Git</role>
@@ -2386,10 +2385,6 @@
     <member>
       <email>kensington@gentoo.org</email>
       <name>Michael Palimaka</name>
-    </member>
-    <member>
-      <email>pesa@gentoo.org</email>
-      <name>Davide Pesavento</name>
     </member>
   </project>
   <project>
@@ -2985,7 +2980,7 @@
     <email>tex@gentoo.org</email>
     <name>TeX Project</name>
     <url>https://wiki.gentoo.org/wiki/Project:TeX</url>
-    <description>The Gentoo TeX project maintains ebuilds for TeXLive and TeX related packages. This includes &lt;span style="white-space: nowrap;" class="plainlinks" title="External link to https://packages.gentoo.org for the app-text/texlive package."&gt;[https://packages.gentoo.org/packages/app-text/texlive &lt;span style="font-family: monospace; font-size: 95%; color: MidnightBlue;"&gt;app-text/texlive&lt;/span&gt;]&lt;span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-hdd-o fa-fw"&gt;&lt;/span&gt;&lt;/span&gt;, the [https://packages.gentoo.org/categories/dev-texlive dev-texlive] category, most of [https://packages.gentoo.org/categories/dev-tex dev-tex] and a few others.</description>
+    <description>The Gentoo TeX project maintains ebuilds for TeXLive and TeX related packages. This includes &lt;span style="white-space: nowrap;" class="plainlinks" title="External link to https://packages.gentoo.org for the app-text/texlive package."&gt;[https://packages.gentoo.org/packages/app-text/texlive &lt;span style="font-family: monospace; font-size: 95%; color: MidnightBlue;"&gt;app-text/texlive&lt;/span&gt;]&lt;span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"&gt;&lt;/span&gt;&lt;/span&gt;, the [https://packages.gentoo.org/categories/dev-texlive dev-texlive] category, most of [https://packages.gentoo.org/categories/dev-tex dev-tex] and a few others.</description>
     <member is-lead="1">
       <email>aballier@gentoo.org</email>
       <name>Alexis Ballier</name>

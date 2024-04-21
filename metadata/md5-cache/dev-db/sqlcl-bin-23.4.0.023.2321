@@ -1,0 +1,15 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=compile install preinst prepare setup
+DEPEND=>=dev-java/java-config-2.2.0-r3
+DESCRIPTION=Oracle SQLcl is the new SQL*Plus
+EAPI=8
+HOMEPAGE=https://www.oracle.com/database/technologies/appdev/sqlcl.html
+INHERIT=java-pkg-2
+KEYWORDS=~amd64 ~x86
+LICENSE=OTN
+RDEPEND=dev-db/oracle-instantclient dev-java/java-config:2 >=virtual/jre-11 >=dev-java/java-config-2.2.0-r3
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-23.4.0.023.2321.zip
+_eclasses_=java-pkg-2	b6d755b4f6afabfd933932be28b46368	java-utils-2	b346c3901e71ba37137bae0b25b00221
+_md5_=ef637bc17aca3fa9021c1c69acdc3f6e
