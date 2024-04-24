@@ -1426,6 +1426,7 @@ dev-db/postgresql:llvm - Add support for llvm JIT engine
 dev-db/postgresql:server - Disable to build and install the clients and libraries only.
 dev-db/postgresql:uuid - Enable server side UUID generation (via dev-libs/ossp-uuid).
 dev-db/psqlodbc:iodbc - Use dev-db/libiodbc. Disable to use dev-db/unixODBC.
+dev-db/redict:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
 dev-db/redis:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
 dev-db/spatialite:geos - Add the sci-libs/geos library for exact topological tests
 dev-db/spatialite:proj - Add the sci-libs/proj library for reprojection features
@@ -2005,6 +2006,7 @@ dev-libs/gmime:smime - Enable experimental S/MIME support
 dev-libs/gmp:cpudetection - Enables runtime CPU detection (useful for binpkgs, compatibility on other CPUs). This only works on amd64/x86 at present. If this flag is enabled, GMP will work on a variety of amd64/x86 CPUs and load accelerated routines for use at runtime depending on the CPU in use. This makes it suitable for binary packages (binpkgs). If this flag is disabled, GMP will be tuned for the CPU being used at build-time and may not be usable on other machines.
 dev-libs/gmp:pic - Force static libraries to be built as PIC to avoid TEXTRELs.
 dev-libs/gobject-introspection:doctool - Install g-ir-doc-tool for generating documentation from introspected data
+dev-libs/hiredict:shim - Install header shims for the hiredis api.
 dev-libs/imath:large-stack - Enables code to take advantage of large stack support
 dev-libs/input-pad:eekboard - Enable support for dev-libs/eekboard
 dev-libs/input-pad:xtest - Enable support for x11-libs/libXtst
@@ -2871,6 +2873,7 @@ dev-util/diffoscope:ssh - Use net-misc/openssh
 dev-util/diffoscope:tar - Use app-arch/tar
 dev-util/diffoscope:tcpdump - Use net-analyzer/tcpdump
 dev-util/diffoscope:zip - Use app-arch/unzip
+dev-util/dropwatch:bfd - Add support for Binary File Descriptor
 dev-util/edi:clang - Provide integration with sys-devel/clang and dev-util/bear for autocompletion, inline errors and information about compilation units.
 dev-util/flatpak-builder:yaml - Use libyaml for yaml support
 dev-util/geany:vte - Enable Terminal support (x11-libs/vte)
@@ -4050,12 +4053,14 @@ media-gfx/blender:cycles - Build cycles renderer (requires media-libs/openimagei
 media-gfx/blender:cycles-bin-kernels - Precompile the cycles render kernels for the CUDA/HIP/OneAPI backends, if they are enabled, at compile time. This makes it so that the user doesn't have to wait for the kernels to compile when they are used for the first time in Blender. If this option is not on, they will be built as needed at runtime.
 media-gfx/blender:dds - Adds DDS textures support to Blender.
 media-gfx/blender:embree - Use embree to accelerate certain areas of the Cycles render engine.
+media-gfx/blender:experimental - Build Experimental Blender Modules
 media-gfx/blender:fluid - Adds fluid simulation support via the built-in Mantaflow library.
 media-gfx/blender:headless - Build without graphical support (renderfarm, server mode only).
 media-gfx/blender:hip - Build cycles renderer with AMD HIP support.
 media-gfx/blender:nanovdb - Enable nanoVDB support in Cycles. Uses less memory than regular openVDB when rendering.
 media-gfx/blender:ndof - Enable NDOF input devices (SpaceNavigator and friends).
 media-gfx/blender:oidn - Enable OpenImageDenoiser Support
+media-gfx/blender:oneapi - Build OIDN with Intel oneAPI SyCL support
 media-gfx/blender:openimageio - Enable OpenImageIO Support
 media-gfx/blender:openpgl - Enable path guiding support in Cycles
 media-gfx/blender:opensubdiv - Add rendering support form OpenSubdiv from Dreamworks Animation through media-libs/opensubdiv.
@@ -4064,7 +4069,9 @@ media-gfx/blender:optix - Add support for NVIDIA's OptiX Raytracing Engine.
 media-gfx/blender:osl - Add support for OpenShadingLanguage scripting.
 media-gfx/blender:potrace - Add support for converting bitmaps into Grease pencil line using the potrace library.
 media-gfx/blender:pugixml - Enable PugiXML support (Used for OpenImageIO, Grease Pencil SVG export)
+media-gfx/blender:renderdoc - Build Blender with renderdoc support
 media-gfx/blender:tbb - Use threading building blocks library from dev-cpp/tbb.
+media-gfx/blender:vulkan - Add support for the experimental Vulkan viewport backend
 media-gfx/chafa:tools - Build command-line tools
 media-gfx/darktable:gamepad - Support using game controllers as input devices
 media-gfx/darktable:geolocation - Enable geotagging support
@@ -7699,8 +7706,10 @@ sci-physics/root:uring - Enable support for sys-libs/liburing in RNTuple
 sci-physics/root:vc - Enable support for dev-libs/vc with VecCore
 sci-physics/root:xrootd - Build the interface for net-libs/xrootd
 sci-physics/thepeg:fastjet - Adds support for sci-physics/fastjet
-sci-physics/thepeg:hepmc - Adds support for High Energy Physics Monte Carlo Generators sci-physics/hepmc
+sci-physics/thepeg:hepmc - Adds support for High Energy Physics Monte Carlo Generatorssci-physics/hepmc
+sci-physics/thepeg:hepmc3 - Adds support for High Energy Physics Monte Carlo Generators 3sci-physics/hepmc
 sci-physics/thepeg:lhapdf - Adds support for sci-physics/lhapdf
+sci-physics/thepeg:rivet - Adds support for sci-physics/rivet
 sci-physics/vgm:geant4 - Enable interaction with Geant4(sci-physics/geant:4)
 sci-physics/vgm:root - Enable interaction with ROOT (sci-physics/root)
 sci-physics/yoda:root - Adds support for sci-physics/root

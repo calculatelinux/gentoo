@@ -39,7 +39,7 @@ MIN_PAX_UTILS_VER="1.3.3"
 if [[ ${PV} == 9999* ]]; then
 	inherit git-r3
 else
-	KEYWORDS="~alpha amd64 ~arm arm64 ~hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 ~sparc x86"
+	KEYWORDS="~alpha amd64 ~arm arm64 ~hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86"
 	SRC_URI="mirror://gnu/glibc/${P}.tar.xz"
 	SRC_URI+=" https://dev.gentoo.org/~${PATCH_DEV}/distfiles/${P}-patches-${PATCH_VER}.tar.xz"
 fi
@@ -663,7 +663,7 @@ setup_env() {
 	# Some of the tests are written in C++, so we need to force our multlib abis in, bug 623548
 	export CXX="${glibc__GLIBC_CXX} ${glibc__abi_CFLAGS} ${CFLAGS}"
 
-	export CPP="${glibc__GLIBC_CPP} ${glibc__abi_CFLAGS}"
+	export CPP="${glibc__GLIBC_CPP} ${glibc__abi_CFLAGS} ${CFLAGS}"
 
 	if is_crosscompile; then
 		# Assume worst-case bootstrap: glibc is built for the first time
