@@ -1175,6 +1175,7 @@ app-text/evince:nautilus - Enable property page extension in gnome-base/nautilus
 app-text/evince:postscript - Enable support for PostScript and Adobe Illustrator documents with app-text/libspectre
 app-text/evince:spell - Enable inline spell check for annotations via app-text/gspell
 app-text/evince:xps - Enable XPS viewer using app-text/libgxps
+app-text/feathernotes:X - Link application against X11 libraries which adds support for virtual desktop awareness and tab DND
 app-text/ghostscript-gpl:unicode - Add support for unicode passwords via net-dns/libidn
 app-text/groonga:abort - Enable query abortion
 app-text/groonga:benchmark - Build benchmark programs
@@ -6931,6 +6932,7 @@ net-vpn/frp:client - Build and install frp client (frpc)
 net-vpn/frp:server - Build and install frp server (frps)
 net-vpn/i2pd:i2p-hardening - Compile with hardening on vanilla compilers/linkers
 net-vpn/libreswan:dnssec - Use DNSSEC resolver (requires net-dns/unbound)
+net-vpn/libreswan:ikev1 - Enable the IKEv1 protocol
 net-vpn/networkmanager-sstp:gtk4 - Use gui-libs/gtk for GUI support.
 net-vpn/networkmanager-strongswan:gtk4 - Use GTK4 instead of GTK3.
 net-vpn/ocserv:otp - Enable support for one-time passwords
