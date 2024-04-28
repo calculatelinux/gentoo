@@ -42,7 +42,7 @@ LICENSE+="
 # ring crate
 LICENSE+=" openssl"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86"
 IUSE="test"
 RESTRICT="test"
 PROPERTIES="test_network"
@@ -78,6 +78,16 @@ pkg_pretend() {
 
 pkg_setup() {
 	check_space
+}
+
+src_prepare() {
+	default
+
+	# https://github.com/vorot93/tokio-tar/pull/23
+	# (fortunately uv already depends on portable-atomic, so we don't
+	# have to fight Cargo.lock)
+	cd "${WORKDIR}/cargo_home/gentoo/tokio-tar-0.3.1" || die
+	eapply "${FILESDIR}/tokio-tar-0.3.1-ppc.patch"
 }
 
 src_configure() {

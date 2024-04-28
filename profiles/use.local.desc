@@ -348,6 +348,7 @@ app-containers/skopeo:device-mapper - Compiles with libdevmapper
 app-containers/skopeo:rootless - Compiles with libsubid
 app-containers/snapd:forced-devmode - Automatically disable application confinement if feature detection fails.
 app-crypt/aespipe:cpu_flags_x86_padlock - Use VIA padlock instructions, detected at run time, code still works on non-padlock processors
+app-crypt/badkeys:ssh - Enable ssh scan mode via dev-python/paramiko.
 app-crypt/ccid:twinserial - Enable twinserial reader
 app-crypt/codecrypt:cryptopp - Build algorithms that need Crypto++ support dev-libs/crypto++
 app-crypt/dehydrated:cron - Install cron job to sign/renew non-existent/changed/expiring certificates
@@ -873,7 +874,6 @@ app-misc/fastfetch:ddcutil - Use app-misc/ddcutil to query monitor settings
 app-misc/fastfetch:drm - Enables support for X.org's x11-libs/libdrm
 app-misc/fastfetch:nvidia-gpu - Enables extra support for NVIDIA GPU
 app-misc/fastfetch:osmesa - Enables offscreen rendering support from media-libs/mesa
-app-misc/fastfetch:pci - Enables reading GPU via sys-apps/pciutils
 app-misc/fastfetch:vulkan - Enables reading GPU via media-libs/vulkan-loader
 app-misc/fastfetch:xfce - Enables support for XFCE config
 app-misc/fastfetch:xrandr - Enables support for Xrandr
@@ -1138,6 +1138,7 @@ app-text/blogc:make - Build blogc-make tool
 app-text/calibre:font-subsetting - Enable font subsetting support
 app-text/calibre:system-mathjax - Use a system copy of mathjax
 app-text/calibre:unrar - Enable support for comic books compressed with the non-free Rar format
+app-text/cmigemo:vim - Install Vim plugin for C/Migemo
 app-text/crengine-ng:chm - Support chm format
 app-text/crengine-ng:fribidi - Support bidirectional text by dev-libs/fribidi
 app-text/crengine-ng:harfbuzz - Use media-libs/harfbuzz for kerning and ligatures
@@ -2257,7 +2258,6 @@ dev-libs/weston:rdp - Enable Remote Desktop Protocol compositor support
 dev-libs/weston:remoting - Enable plugin to stream output to remote hosts using media-libs/gstreamer
 dev-libs/weston:resize-optimization - Increase performance, allocate more RAM. Recommended to disable on Raspberry Pi
 dev-libs/weston:screen-sharing - Enable screen-sharing through RDP
-dev-libs/weston:seatd - Enable support for rootless session via sys-auth/seatd
 dev-libs/weston:wayland-compositor - Enable Wayland compositor support
 dev-libs/weston:xwayland - Enable ability support native X11 applications
 dev-libs/xapian:inmemory - Enabled inmemory backend db support
@@ -3482,7 +3482,6 @@ gui-wm/gamescope:wsi-layer - Enable the WSI layer (required for HDR)
 gui-wm/hikari:X - Enable support for X11 applications (XWayland)
 gui-wm/hyprland:legacy-renderer - Enable legacy renderer
 gui-wm/sway:X - Enable support for X11 applications (XWayland)
-gui-wm/sway:grimshot - Install 'grimshot': script for taking screenshots
 gui-wm/sway:swaybar - Install 'swaybar': sway's status bar component
 gui-wm/sway:swaynag - Install 'swaynag': shows a message with buttons
 gui-wm/sway:tray - Enable support for StatusNotifierItem tray specification
@@ -5926,7 +5925,6 @@ net-im/toxic:notification - Enables desktop notifications with libnotify, with s
 net-im/toxic:qrcode - Enables QR code support
 net-im/toxic:sound - Enables audio calling
 net-im/toxic:video - Enables video calling
-net-im/zoom:bundled-libjpeg-turbo - Use bundled libturbojpeg instead of media-libs/libjpeg-turbo
 net-im/zoom:bundled-qt - Use bundled Qt and icu instead of system-wide libs
 net-im/zoom:opencl - Use OpenCL for virtual background support (virtual/opencl)
 net-irc/anope:ldap - Build LDAP modules for e.g. opertypes
@@ -6430,7 +6428,6 @@ net-misc/eventd:purple - Enable plugin for IM notifications via libpurple
 net-misc/eventd:webhook - Enable plugin to send payloads to webhook handlers
 net-misc/eventd:websocket - Enable support for WebSocket protocol
 net-misc/fatrat:bittorrent - Use the bittorrent protocol via net-libs/libtorrent-rasterbar.
-net-misc/felix:bird - Use BIRD, e.g. for route reflection
 net-misc/freerdp:aad - Enable login via Azure AD
 net-misc/freerdp:client - Build client binaries
 net-misc/freerdp:fuse - Clipboard with FUSE file copy support
@@ -6442,6 +6439,7 @@ net-misc/frr:nhrp - Build Next Hop Resolution Protocol daemon
 net-misc/frr:ospfapi - Build OSPFAPI support
 net-misc/frr:pam - Add support for PAM (via sys-libs/pam) to the Virtual Terminal Interface Shell (vtysh)
 net-misc/frr:rpki - Enable RPKI
+net-misc/geckodriver:unchained - Apply the geckodriver-unchained patch, for Gecko-based non-Firefox browsers (e.g. Librewolf)
 net-misc/gerbera:curl - Support HTTP media sources (e.g. internet radio)
 net-misc/gerbera:exiv2 - Use media-gfx/exiv2 to extract EXIF information
 net-misc/gerbera:ffmpegthumbnailer - Enable video thumbnail support with media-video/ffmpegthumbnailer
@@ -7854,10 +7852,12 @@ sys-apps/hwloc:cairo - Enable the Cairo back-end of hwloc's lstopo command
 sys-apps/hwloc:cpuid - Enable the cpuid-based architecture specific support (x86 component)
 sys-apps/hwloc:cuda - Enable CUDA device discovery using libcudart
 sys-apps/hwloc:gl - Enable GL display device discovery (NVCtrl)
+sys-apps/hwloc:l0 - Enable oneAPI Level Zero device discovery
 sys-apps/hwloc:numa - Add support for numa memory allocation
 sys-apps/hwloc:nvml - Enable the NVML device discovery
 sys-apps/hwloc:pci - Enable PCI device discovery using libpci
 sys-apps/hwloc:plugins - Build hwloc components as plugins so that the hwloc core library does not directly depend on their dependencies (for instance the libpci library)
+sys-apps/hwloc:rocm - Enable AMD RSMI device discovery
 sys-apps/hwloc:xml - use libxml2 for XML support, instead of a custom minimalistic support
 sys-apps/ibm-powerpc-utils:rtas - Add support for the Run Time Abstraction Services (RTAS)
 sys-apps/iotools:make-symlinks - Generate sub-command symlinks to iotools -- note that a lot are simple like "xor"
@@ -8422,6 +8422,7 @@ sys-libs/compiler-rt:clang - Force building using installed clang (rather than t
 sys-libs/compiler-rt-sanitizers:asan - Build Address Sanitizer runtime.
 sys-libs/compiler-rt-sanitizers:cfi - Build Control Flow Integrity runtime.
 sys-libs/compiler-rt-sanitizers:clang - Force building using installed clang (rather than the default CC/CXX).
+sys-libs/compiler-rt-sanitizers:ctx-profile - Build ctx profiling runtime.
 sys-libs/compiler-rt-sanitizers:dfsan - Build Data Flow Sanitizer runtime.
 sys-libs/compiler-rt-sanitizers:gwp-asan - Build GWP-ASAN runtime.
 sys-libs/compiler-rt-sanitizers:hwasan - Build Hardware ASAN runtime.

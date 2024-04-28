@@ -33,6 +33,43 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2024-04-28)
+# Masked for testing. Tracker bug: bug #930805.
+>=sys-libs/ncurses-6.5
+
+# Jason Zaman <perfinion@gentoo.org> (2024-04-27)
+# Sandboxfs was only experimental in Bazel. It was fully removed in Bazel-7
+# Bazel was removed from gentoo in Feb.
+# Removal in 30 days. Bug #930790
+sys-fs/sandboxfs
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-04-27)
+# EAPI=6 package, has issues with implicit function declarations, has
+# issues with incompatible types and more. The only reverse dependency
+# is virtual/skkserv, which has other better candidates.
+# Removal on 2024-05-27, bug #930781
+app-i18n/skkserv
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-04-26)
+# Broken and reported as such upstream. EAPI=6.
+# Removal: 2024-05-26.  Bug #912842.
+net-misc/ttytter
+
+# Maciej Barć <xgqt@gentoo.org> (2024-04-25)
+# Mask "app-emacs/windows" and reverse dependencies.
+# Very old package failing to compile with modern GNU Emacs.
+# Additionally all 3 packages do not have any definitive repository nor VCS.
+# Open bugs: #930655
+# Removal on 2024-05-25.
+app-emacs/basic-toolkit
+app-emacs/buffer-extension
+app-emacs/windows
+
+# Matt Turner <mattst88@gentoo.org> (2024-04-25)
+# Masked for testing
+=dev-util/intel_clc-24.1*
+=media-libs/mesa-24.1*
+
 # Michał Górny <mgorny@gentoo.org> (2024-04-23)
 # No py3.12, no tests, no maintainer.  Also no revdeps.
 # Removal on 2024-05-23.  Bug #929513.
@@ -287,56 +324,6 @@ sec-keys/openpgp-keys-jiatan
 ~app-arch/xz-utils-5.6.1
 
 # Michał Górny <mgorny@gentoo.org> (2024-03-26)
-# Last release in 2012.  No reverse dependencies.
-# Removal on 2024-04-25.  Bug #927524.
-dev-python/simplegeneric
-
-# Michał Górny <mgorny@gentoo.org> (2024-03-26)
-# Unmaintained.  EAPI 6.  Homepage gone.  No keywords for modern
-# architectures.
-# Removal on 2024-04-25.  Bug #927208.
-net-misc/blinkperl
-
-# Michał Górny <mgorny@gentoo.org> (2024-03-26)
-# Unmaintained.  Multiple bugs open.  The current version is from 2018,
-# and it has been discontinued as a separate package since.
-# Removal on 2024-04-25.  Bug #926861.
-net-misc/felix
-
-# Michał Górny <mgorny@gentoo.org> (2024-03-26)
-# Unmaintained.  EAPI 6.  Homepage gone.
-# Removal on 2024-04-25.  Bug #926860.
-app-pda/iripdb
-
-# Michał Górny <mgorny@gentoo.org> (2024-03-26)
-# Unfetchable proprietary fonts.  The alternatives include
-# media-fonts/jomolhari and "Noto Serif Tibetan" from media-fonts/noto.
-# Removal on 2024-04-25.  Bug #926836.
-media-fonts/dzongkha-fonts
-
-# Michał Górny <mgorny@gentoo.org> (2024-03-26)
-# A dead wiget library with no reverse dependencies.  Homepage gone.
-# Removal on 2024-04-25.  Bug #926604.
-x11-libs/scw
-
-# Michał Górny <mgorny@gentoo.org> (2024-03-26)
-# Deprecated upstream and the URL no longer works.
-# Removal on 2024-04-25.  Bug #926550.
-sys-firmware/bluez-firmware
-
-# Michał Górny <mgorny@gentoo.org> (2024-03-26)
-# Unfinished package from 2021 that was added as a short-lived
-# dependency of dev-python/GitPython.  No reverse dependencies remain.
-# Removal on 2024-04-25.  Bug #924683.
-dev-python/sumtypes
-
-# Michał Górny <mgorny@gentoo.org> (2024-03-26)
-# Uses deprecated distutils-r1 API.  The current version is outdated,
-# from mid-2022.  No reverse dependencies.
-# Removal on 2024-04-25.  Bug #910015.
-sci-biology/HTSeq
-
-# Michał Górny <mgorny@gentoo.org> (2024-03-26)
 # Uses deprecated distutils-r1 API.  Depends on dev-qt/qtwebengine:5.
 # Includes the libraries with no other reverse dependencies.
 # Removal on 2024-04-25.  Bug #909996.
@@ -348,24 +335,6 @@ media-video/openshot
 # Issues with OpenSSL 3.  Unmaintained.  Last activity in 2019.
 # Removal on 2024-04-25.  Bug #892031.
 sys-auth/pam_ssh
-
-# Michał Górny <mgorny@gentoo.org> (2024-03-26)
-# Fails to compile.  Unmaintained.  Last activity in 2016.
-# Depends on an old wxGTK slot.
-# Removal on 2024-04-25.  Bug #895222.
-app-misc/tek
-
-# Michał Górny <mgorny@gentoo.org> (2024-03-26)
-# Bad C++ code.  Unmaintained.  Carries a number of patches already.
-# No reverse dependencies.
-# Removal on 2024-04-25.  Bug #924925.
-dev-libs/zthread
-
-# Eli Schwartz <eschwartz93@gmail.com> (2024-03-24)
-# Broken with modern compilers, broken with LTO. Upstream website no
-# longer exists. Unmaintained in Gentoo, no reverse dependencies.
-# Removal on 2024-04-23.  Bug #731942, #863041, #898298.
-sci-libs/xgks-pmel
 
 # Rahil Bhimjiani <me@rahil.rocks> (2024-03-17)
 # buildah-1.34.0 isn't getting security fixes from upstream
@@ -770,7 +739,6 @@ sci-libs/xgks-pmel
 =net-libs/signond-8.61-r100
 =net-misc/smb4k-3.2.5-r2
 ~sys-auth/polkit-qt-0.200.0
->=sys-libs/snapd-glib-1.64-r100
 
 # Sam James <sam@gentoo.org> (2024-02-18)
 # Lots of changes, including a port to a new build system. Needs lots of testing.
@@ -838,12 +806,6 @@ sci-libs/xgks-pmel
 # Has a bug that breaks sys-apps/portage. Upgrade to 1.3.0-r1 instead.
 # Bug #919072.
 =dev-build/meson-1.3.0
-
-# Sam James <sam@gentoo.org> (2023-11-25)
-# Breaks desktop icon rendering, see bug #904468.
-# Upstream bug: https://gitlab.xfce.org/xfce/xfdesktop/-/issues/242
-=xfce-base/xfdesktop-4.19.2
-=xfce-base/xfdesktop-4.19.1
 
 # Sam James <sam@gentoo.org> (2023-11-22)
 # Further bugs with CoW via copy_file_range (bug #917224, https://github.com/openzfs/zfs/issues/15526).

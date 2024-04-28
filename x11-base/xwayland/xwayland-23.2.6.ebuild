@@ -10,7 +10,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3
 else
 	SRC_URI="https://xorg.freedesktop.org/archive/individual/xserver/${P}.tar.xz"
-	KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~s390 ~sparc x86 ~amd64-linux ~x86-linux"
+	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~s390 ~sparc x86 ~amd64-linux ~x86-linux"
 fi
 
 DESCRIPTION="Standalone X server running under Wayland"
@@ -63,8 +63,9 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}"/xwayland-drop-redundantly-installed-files.patch
-	"${FILESDIR}"/xwayland-23.2.3-systemd-automagic.patch
+	"${FILESDIR}"/${PN}-drop-redundantly-installed-files.patch
+	"${FILESDIR}"/${PN}-23.2.3-systemd-automagic.patch
+	"${FILESDIR}"/${PN}-23.3.6-test-Skip-Xwayland-test-early-if-PIGLIT_DIR-XTEST_DI.patch
 )
 
 src_configure() {
