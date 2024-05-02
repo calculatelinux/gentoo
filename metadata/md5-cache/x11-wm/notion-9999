@@ -13,4 +13,4 @@ REQUIRED_USE=^^ ( lua_single_target_lua5-4 ) xrandr? ( xinerama )
 RESTRICT=test
 SLOT=0
 _eclasses_=git-r3	fbb2889c81f3a05910c1524db69425c1	lua-single	86d497a20c93c7ce83af442f627515c1	lua-utils	d37a16dbcc1f07f71bc48da75ed7a0cb	multilib	c19072c3cd7ac5cb21de013f7e9832e0	readme.gentoo-r1	204091a2cde6179cd9d3db26d09412d3	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084
-_md5_=f1d3814769d3736473e562d46a388c75
+_md5_=192fe80b43f9fc864b5408c3a5bdcb6e
