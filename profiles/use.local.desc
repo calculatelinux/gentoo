@@ -348,6 +348,7 @@ app-containers/skopeo:device-mapper - Compiles with libdevmapper
 app-containers/skopeo:rootless - Compiles with libsubid
 app-containers/snapd:forced-devmode - Automatically disable application confinement if feature detection fails.
 app-crypt/aespipe:cpu_flags_x86_padlock - Use VIA padlock instructions, detected at run time, code still works on non-padlock processors
+app-crypt/badkeys:dkim - Enable dkim scan mode via dev-python/dnspython.
 app-crypt/badkeys:ssh - Enable ssh scan mode via dev-python/paramiko.
 app-crypt/ccid:twinserial - Enable twinserial reader
 app-crypt/codecrypt:cryptopp - Build algorithms that need Crypto++ support dev-libs/crypto++
@@ -508,6 +509,8 @@ app-emacs/emacs-common:games - Support shared score files for games
 app-emacs/emacs-common:gsettings - Install schema file for gsettings (dev-libs/glib)
 app-emacs/emacs-w3m:gzip-el - Compress bundled Emacs Lisp source
 app-emacs/flim:oauth2 - Support OAuth2 authentication (app-emacs/oauth2)
+app-emacs/gap-mode:completion - Install GAP backend for app-emacs/company-mode to "complete anything."
+app-emacs/gap-mode:lint - Support automatically linting GAP code via app-emacs/flycheck and dev-gap/gaplint.
 app-emacs/magit:libgit - Use libgit (app-emacs/libegit2)
 app-emacs/mu-cite:bbdb - Include support for app-emacs/bbdb
 app-emacs/org-mode:odt-schema - Install non-free schema files for OpenDocument Text exporter
