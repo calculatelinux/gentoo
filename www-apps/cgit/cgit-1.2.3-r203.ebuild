@@ -56,8 +56,10 @@ pkg_setup() {
 }
 
 src_configure() {
-	rmdir git || die
-	mv "${WORKDIR}"/git-"${GIT_V}" git || die
+	if ! [[ ${PV} =~ 9999* ]]; then
+		rmdir git || die
+		mv "${WORKDIR}"/git-"${GIT_V}" git || die
+	fi
 
 	echo "prefix = ${EPREFIX}/usr" >> cgit.conf || die "echo prefix failed"
 	echo "libdir = ${EPREFIX}/usr/$(get_libdir)" >> cgit.conf || die "echo libdir failed"

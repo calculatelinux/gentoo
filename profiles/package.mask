@@ -33,6 +33,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2024-05-06)
+# Long-deprecated upstream, replaced by (unpackaged) Twitter::API.
+# Twitter's API has changed at least once since the last release of Net::Twitter.
+# Removal on 2024-06-05.  Bug #931295.
+dev-perl/Net-Twitter
+
+# Sam James <sam@gentoo.org> (2024-05-06)
+# Incompatible with latest last.fm APIs, hence useless.
+# Removal on 2024-06-05.  Bug #928115.
+media-libs/lastfmlib
+
 # Michał Górny <mgorny@gentoo.org> (2024-05-05)
 # A library last bumped in 2010.  Homepage gone.  No revdeps.
 # Removal on 2024-06-04.  Bug #909527.
@@ -45,22 +56,11 @@ dev-games/poker-eval
 dev-games/hawknl
 
 # Michał Górny <mgorny@gentoo.org> (2024-05-05)
-# Effectively unmaintained.  Unpatched vulnerability reported
-# in February.  The Python counterpart is even more outdated.
-# Removal on 2024-06-04.  Bug #924129.
-dev-python/ovs
-net-misc/openvswitch
-
-# Michał Górny <mgorny@gentoo.org> (2024-05-05)
 # An unmaintained fork of an unmaintained DNS server.  All successive
 # homepages are gone.  Last commit in 2014.  Already carries a lot
 # of patches and hacks.
 # Removal on 2024-06-04.  Bug #928942.
-
 net-dns/mydns
-# Sam James <sam@gentoo.org> (2024-05-05)
-# Fails to build w/ broken dist tarball (bug #931240).
-=app-crypt/tpm2-tss-4.1.0
 
 # Michał Górny <mgorny@gentoo.org> (2024-05-04)
 # A really bad quality package with a never-ending stream of unclear
@@ -302,79 +302,6 @@ app-emulation/runv
 =sys-kernel/vanilla-kernel-6.6.26
 =sys-kernel/vanilla-kernel-6.8.5
 
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2024-04-08)
-# Obsolete java-vm, bugs #848804 #830248.
-# Removal on 2024-05-08
-dev-java/icedtea-bin
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2024-04-08)
-# Java libraries without consumers.
-# Removal on 2024-05-08, bugs #853100 #716228.
-dev-java/gin
-dev-java/gwt
-dev-java/validation-api
-
-# Ben Kohler <bkohler@gentoo.org> (2024-04-07)
-# Abandoned upstream long ago in favor of Unifi Protect (running only on an
-# official Unifi appliance.  Likely contains lots of security holes in bundled
-# libs.
-# Removal on 2024-05-07.  Bug #928881
-acct-group/unifi-video
-acct-user/unifi-video
-media-video/unifi-video
-
-# Ben Kohler <bkohler@gentoo.org> (2024-04-07)
-# Long ago forked to and obsoleted by sys-apps/memtest86+.  Upstream has
-# abandoned this for their proprietary UEFI-based one (packaged in gentoo as
-# as sys-apps/memtest86-bin).
-# Removal on 2024-05-07.  Bug #502464, #607494, #628528, #750677, #887003,
-# #912973, #920109
-sys-apps/memtest86
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-04-06)
-# Dead upstream for many years, in a state of decay and no revdeps.
-# Removal on 2024-05-06.  Bug #926193, #891791
-net-im/telepathy-connection-managers
-net-libs/sofia-sip
-net-libs/telepathy-accounts-signon
-net-libs/telepathy-farstream
-net-libs/telepathy-qt
-net-voip/telepathy-gabble
-net-voip/telepathy-rakia
-net-voip/telepathy-salut
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-04-06)
-# Dead upstream, as is the whole telepathy stack. Some parts depend on
-# dev-qt/qtwebengine:5.
-# Removal on 2024-05-06.  Bug #926679
-kde-apps/ktp-accounts-kcm
-kde-apps/ktp-approver
-kde-apps/ktp-auth-handler
-kde-apps/ktp-common-internals
-kde-apps/ktp-contact-list
-kde-apps/ktp-contact-runner
-kde-apps/ktp-desktop-applets
-kde-apps/ktp-filetransfer-handler
-kde-apps/ktp-kded-module
-kde-apps/ktp-send-file
-kde-apps/ktp-text-ui
-kde-apps/plasma-telepathy-meta
-net-libs/telepathy-logger-qt
-
-# James Le Cuirot <chewi@gentoo.org> (2024-04-05)
-# Dead upstream and broken beyond repair. Removal on 2024-05-05. Bug #928591.
-games-board/xmille
-
-# Michał Górny <mgorny@gentoo.org> (2024-03-30)
-# NIH package that was added for dev-python/setuptools but is no longer
-# used there.
-# Removal on 2024-04-29.  Bug #928270.
-dev-python/nspektr
-
-# James Le Cuirot <chewi@gentoo.org> (2024-03-30)
-# Old, ugly, broken, and requires OSS sound. Removal on 2024-04-30. Bug #928066.
-games-sports/gracer
-
 # Sam James <sam@gentoo.org> (2024-03-28)
 # Newer 5.4.x releases were signed by a potentially compromised upstream maintainer.
 # There is no evidence that these releases contain malicious code, but masked
@@ -393,19 +320,6 @@ sec-keys/openpgp-keys-jiatan
 ~app-arch/xz-utils-5.5.2_beta
 ~app-arch/xz-utils-5.6.0
 ~app-arch/xz-utils-5.6.1
-
-# Michał Górny <mgorny@gentoo.org> (2024-03-26)
-# Uses deprecated distutils-r1 API.  Depends on dev-qt/qtwebengine:5.
-# Includes the libraries with no other reverse dependencies.
-# Removal on 2024-04-25.  Bug #909996.
-media-libs/libopenshot
-media-libs/libopenshot-audio
-media-video/openshot
-
-# Michał Górny <mgorny@gentoo.org> (2024-03-26)
-# Issues with OpenSSL 3.  Unmaintained.  Last activity in 2019.
-# Removal on 2024-04-25.  Bug #892031.
-sys-auth/pam_ssh
 
 # Eray Aslan <eras@gentoo.org> (2024-03-10)
 # Mask experimental software

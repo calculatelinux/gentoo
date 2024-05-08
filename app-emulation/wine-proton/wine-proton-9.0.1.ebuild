@@ -264,11 +264,10 @@ src_configure() {
 		$(use_with v4l v4l2)
 		$(use_with xcomposite)
 		$(use_with xinerama)
-
-		--without-vosk # unpackaged, file a bug if you need this
 	)
 
 	filter-lto # build failure
+	filter-flags -Wl,--gc-sections # runtime issues (bug #931329)
 	use custom-cflags || strip-flags # can break in obscure ways at runtime
 
 	# wine uses linker tricks unlikely to work with non-bfd/lld (bug #867097)
