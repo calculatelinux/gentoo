@@ -6,7 +6,7 @@ EAPI=8
 inherit gkrellm-plugin multilib toolchain-funcs
 
 DESCRIPTION="A GKrellM plugin that shows sunrise and sunset times"
-HOMEPAGE="http://gkrellsun.sourceforge.net/"
+HOMEPAGE="https://gkrellsun.sourceforge.net/"
 SRC_URI="https://downloads.sourceforge.net/gkrellsun/${P}.tar.gz"
 
 LICENSE="GPL-2"

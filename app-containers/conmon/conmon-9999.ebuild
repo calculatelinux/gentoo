@@ -26,9 +26,6 @@ RDEPEND="dev-libs/glib:=
 	systemd? ( sys-apps/systemd:= )"
 DEPEND="${RDEPEND}"
 BDEPEND="dev-go/go-md2man"
-PATCHES=(
-	"${FILESDIR}/conmon-2.1.8-Makefile.patch"
-)
 
 src_prepare() {
 	default
@@ -38,7 +35,7 @@ src_prepare() {
 
 src_compile() {
 	tc-export CC PKG_CONFIG
-	export PREFIX="${EPREFIX}/usr" GOMD2MAN=go-md2man
+	export PREFIX="${EPREFIX}/usr" GOMD2MAN=$(command -v go-md2man)
 	default
 }
 
