@@ -1,0 +1,14 @@
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DESCRIPTION=Open licensed sans-serif font metrically compatible with Calibri
+EAPI=7
+HOMEPAGE=https://bugs.chromium.org/p/chromium/issues/detail?id=280557
+INHERIT=font
+IUSE=X
+KEYWORDS=amd64 ~loong ~riscv x86
+LICENSE=OFL-1.1
+RESTRICT=binchecks strip test
+SLOT=0
+SRC_URI=https://commondatastorage.googleapis.com/chromeos-localmirror/distfiles/crosextrafonts-carlito-20130920.tar.gz
+_eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb
+_md5_=c6aa9e70bcd6499d4752a31ae9de67e4

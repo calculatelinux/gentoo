@@ -5,7 +5,7 @@ EAPI=8
 
 LLVM_COMPAT=( {15..18} )
 LLVM_OPTIONAL=1
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 inherit cmake flag-o-matic llvm-r1 python-any-r1 readme.gentoo-r1 xdg
 
 if [[ ${PV} == 9999 ]]; then
@@ -25,7 +25,7 @@ else
 	[[ ${QTC_PV} == ${PV} ]] && QTC_REL=official || QTC_REL=development
 	SRC_URI="https://download.qt.io/${QTC_REL}_releases/qtcreator/$(ver_cut 1-2)/${PV/_/-}/${QTC_P}.tar.xz"
 	S=${WORKDIR}/${QTC_P}
-	KEYWORDS="~amd64"
+	KEYWORDS="amd64"
 fi
 
 DESCRIPTION="Lightweight IDE for C++/QML development centering around Qt"

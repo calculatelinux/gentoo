@@ -1,0 +1,13 @@
+BDEPEND=app-arch/unzip X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup
+DESCRIPTION=Old Standard - font with wide range of Latin, Greek and Cyrillic characters
+EAPI=7
+HOMEPAGE=http://www.thessalonica.org.ru/en/fonts.html
+INHERIT=font
+IUSE=X
+KEYWORDS=amd64 ~loong ~riscv x86
+LICENSE=OFL-1.1
+SLOT=0
+SRC_URI=http://www.thessalonica.org.ru/downloads/oldstandard-2.2.otf.zip http://www.thessalonica.org.ru/downloads/oldstandard-2.2.ttf.zip
+_eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb
+_md5_=9c44f4e4e9ef60f63900a66d7328da8f
