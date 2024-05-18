@@ -12,4 +12,4 @@ RDEPEND=sys-libs/ncurses:=[unicode(+)?] aac? ( media-libs/faad2 ) alsa? ( media-
 REQUIRED_USE=?? ( elogind systemd ) tremor? ( vorbis ) mp4? ( aac )
 SLOT=0
 _eclasses_=bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff	git-r3	fbb2889c81f3a05910c1524db69425c1	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084
-_md5_=aa794a66e1e212320acb0793cca15b54
+_md5_=8914de7428fe2c0868eac2c04459ceea

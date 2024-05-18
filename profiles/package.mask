@@ -33,6 +33,57 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2024-05-18)
+# Another abandoned project in the middle of a line of forks.
+# Broken with Python 3.12, with pytest 8 and with numpy 2.  Last
+# upstream activity in September 2023, but bugs remained unanswered
+# before that.
+# Removal on 2024-06-17.  Bug #929433.
+dev-python/aesara
+
+# Michał Górny <mgorny@gentoo.org> (2024-05-18)
+# Superseded by dev-python/pdm-backend.  No revdeps left.
+# Removal on 2024-06-17.  Bug #932160.
+dev-python/pdm-pep517
+
+# Michał Górny <mgorny@gentoo.org> (2024-05-17)
+# Superseded by dev-python/pathable.  No revdeps.
+# Removal on 2024-06-16.  Bug #932103.
+dev-python/dictpath
+
+# Michał Górny <mgorny@gentoo.org> (2024-05-17)
+# Unmaintained.  Last activity in 2020.  Redundant to stdlib.
+# No revdeps.
+# Removal on 2024-06-16.  Bug #932096.
+dev-python/cached-property
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-05-17)
+# EAPI=6, no maintainer, fails to compile.
+# Removal on 2024-06-16.  Bugs #932097, #542244, #742965.
+x11-plugins/pidgintex
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-05-17)
+# EAPI=6, no maintainer, fails to compile.
+# Removal on 2024-06-16.  Bugs #932095, #768072, #777747.
+app-forensics/air
+
+# Sam James <sam@gentoo.org> (2024-05-17)
+# Needs adaptation to new build system (bug #932092).
+=net-libs/libupnpp-0.26.4
+
+# Michał Górny <mgorny@gentoo.org> (2024-05-17)
+# A Python < 3.3 backport of shutil.which().  No revdeps left.
+# Removal on 2024-06-16.  Bug #932088.
+dev-python/whichcraft
+
+# Eli Schwartz <eschwartz93@gmail.com> (2024-05-17)
+# Last updated in 2007, has no reverse dependencies, is unmaintained upstream
+# (in 2010 a version 4 alpha was released using cmake, the project has seen no
+# other activity upstream). Fails to build with dash, lto.
+# Bug #862669, #890423.
+# Removal on 2024-06-16.
+sci-libs/beagle
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2024-05-14)
 # Breaks build of revdeps.
 ~app-text/poppler-24.05.0
@@ -315,23 +366,6 @@ dev-dotnet/ndesk-dbus-glib
 # Removal on 2024-05-19, bug #930249
 dev-go/qr
 dev-go/twofactor
-
-# Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2024-04-18)
-# Upstream gone, unfetchable, stuck on EAPI 6. Bug 605796
-# Removal on 2024-05-18
-sci-visualization/spectromatic
-
-# Fabian Groffen <grobian@gentoo.org> (2024-04-16)
-# Official latest Python support 3.8, replacement app-metrics/go-carbon
-# is more performant and designed to be a drop-in replacement.
-# Removal on 2024-05-16, bug #929444
-dev-python/carbon
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2024-04-12)
-# EAPI6. Fails to compile with go versions in tree. Upstream is archived.
-# Uses deprecated go eclasses. Maintainer needed, no rev deps.
-# Removal: 2024-05-12.  Bugs #794913, #679348, #771072, #844607.
-app-emulation/runv
 
 # Michał Górny <mgorny@gentoo.org> (2024-04-11)
 # Contains a bug that could render the kernel fail to boot.

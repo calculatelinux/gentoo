@@ -655,8 +655,6 @@ app-emulation/qemu:virtfs - Enable VirtFS via virtio-9p-pci / fsdev. See https:/
 app-emulation/qemu:vte - Enable terminal support (x11-libs/vte) in the GTK+ interface
 app-emulation/qemu:xattr - Add support for getting and setting POSIX extended attributes, through sys-apps/attr. Requisite for the virtfs backend.
 app-emulation/qemu:xen - Enables support for Xen backends
-app-emulation/runv:libvirt - Enable support for KVM via libvirt
-app-emulation/runv:xen - Enable support for the Xen Hypervisor
 app-emulation/ski:debug - enable extra binary emulation debugging via sys-libs/binutils-libs
 app-emulation/spice:smartcard - Enable smartcard remoting using app-emulation/libcacard
 app-emulation/uade:fuse - Enable sys-fs/fuse uadefs frontend for on-the-fly WAV conversion
@@ -4378,6 +4376,7 @@ media-libs/libvmaf:embed-models - Compile default vmaf models into the library (
 media-libs/libvpl:drm - Build with DRM support
 media-libs/libvpl:experimental - Build dispatcher with experimental APIs
 media-libs/libvpl:tools - Build decode/encode/analyse/inspect tools
+media-libs/libvpl-tools:drm - Build with DRM support
 media-libs/libvpx:highbitdepth - Enable 10 and 12 bit support for VP9.
 media-libs/libvpx:postproc - Enable additional post processing filters
 media-libs/libwebp:swap-16bit-csp - Enable byte swapping for 16 bit colorspace
@@ -8725,6 +8724,7 @@ www-client/netsurf:psl - Use public suffix list from media-libs/libnspsl to dete
 www-client/netsurf:rosprite - RISC OS Sprite bitmap image support via media-libs/librosprite
 www-client/netsurf:svgtiny - Use media-libs/libsvgtiny instead of gnome-base/librsvg for SVG support
 www-client/netsurf:truetype - Use media-libs/freetype for text in the framebuffer frontend
+www-client/opera:ffmpeg-chromium - Use Chromium FFmpeg fork (media-video/ffmpeg-chromium) rather than mainline FFmpeg (media-video/ffmpeg)
 www-client/opera:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
 www-client/opera-beta:ffmpeg-chromium - Use Chromium FFmpeg fork (media-video/ffmpeg-chromium) rather than mainline FFmpeg (media-video/ffmpeg)
 www-client/opera-beta:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.

@@ -3,6 +3,8 @@
 
 EAPI=8
 
+TS_BINDINGS=( python )
+
 inherit tree-sitter-grammar
 
 DESCRIPTION="HTML grammar for Tree-sitter"
@@ -10,4 +12,4 @@ HOMEPAGE="https://github.com/tree-sitter/tree-sitter-html"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64 ~s390"
