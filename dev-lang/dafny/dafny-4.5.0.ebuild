@@ -372,7 +372,7 @@ else
 	SRC_URI="https://github.com/dafny-lang/${PN}/archive/v${PV}.tar.gz
 		-> ${P}.tar.gz"
 
-	KEYWORDS="~amd64"
+	KEYWORDS="amd64"
 fi
 
 SRC_URI+="
@@ -594,7 +594,7 @@ src_test() {
 		--verbose
 		--workers="$(makeopts_jobs)"
 	)
-	edob lit "${lit_opts[@]}" "${TEST_S}"
+	edo lit "${lit_opts[@]}" "${TEST_S}"
 }
 
 src_install() {

@@ -12,7 +12,7 @@ DESCRIPTION="Library for rendering dynamic web content in Qt5 C++ and QML applic
 HOMEPAGE="https://www.qt.io/"
 
 if [[ ${QT5_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64 ~arm64 ~x86"
+	KEYWORDS="amd64 arm64 ~x86"
 	if [[ ${PV} == ${QT5_PV}_p* ]]; then
 		SRC_URI="https://dev.gentoo.org/~asturm/distfiles/${P}.tar.xz"
 		S="${WORKDIR}/${P}"
@@ -152,8 +152,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	rm "${WORKDIR}/${PATCHSET}"/010-build-without-python-2.patch \
-		"${WORKDIR}/${PATCHSET}"/011-chromium-drop-catapult.patch || die
+	rm "${WORKDIR}/${PATCHSET}"/010-build-without-python-2.patch || die
 
 	if [[ ${PV} == ${QT5_PV}_p* ]]; then
 		# This is made from git, and for some reason will fail w/o .git directories.

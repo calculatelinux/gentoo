@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -6,7 +6,7 @@ EAPI=7
 inherit pam toolchain-funcs
 
 DESCRIPTION="Concurrent Versions System - source code revision control tools"
-HOMEPAGE="http://cvs.nongnu.org/"
+HOMEPAGE="https://cvs.nongnu.org/"
 
 SRC_URI="mirror://gnu/non-gnu/cvs/source/feature/${PV}/${P}.tar.bz2
 	doc? ( mirror://gnu/non-gnu/cvs/source/feature/${PV}/cederqvist-${PV}.html.tar.bz2

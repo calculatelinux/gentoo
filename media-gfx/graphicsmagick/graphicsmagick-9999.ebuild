@@ -7,17 +7,17 @@ inherit autotools toolchain-funcs
 
 MY_P=${P/graphicsm/GraphicsM}
 DESCRIPTION="Collection of tools and libraries for many image formats"
-HOMEPAGE="http://www.graphicsmagick.org/ https://hg.osdn.net/view/graphicsmagick/GM"
+HOMEPAGE="http://www.graphicsmagick.org/ https://foss.heptapod.net/graphicsmagick/graphicsmagick"
 
 if [[ ${PV} == 9999 ]] ; then
-	EHG_REPO_URI="http://hg.code.sf.net/p/${PN}/code"
+	EHG_REPO_URI="https://foss.heptapod.net/${PN}/${PN}"
 	inherit mercurial
 else
 	VERIFY_SIG_OPENPGP_KEY_PATH=/usr/share/openpgp-keys/bobfriesenhahn.asc
 	inherit verify-sig
 
-	SRC_URI="https://downloads.sourceforge.net/${PN}/${MY_P}.tar.xz"
-	SRC_URI+=" verify-sig? ( https://downloads.sourceforge.net/${PN}/${MY_P}.tar.xz.asc )"
+	SRC_URI="https://downloads.sourceforge.net/project/${PN}/${PN}-history/$(ver_cut 1-2)/${MY_P}.tar.xz"
+	SRC_URI+=" verify-sig? ( https://downloads.sourceforge.net/project/${PN}/${PN}-history/$(ver_cut 1-2)/${MY_P}.tar.xz.asc )"
 	S="${WORKDIR}/${MY_P}"
 
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~ppc ~ppc64 ~riscv ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
@@ -27,8 +27,8 @@ fi
 
 LICENSE="MIT"
 SLOT="0/${PV%.*}"
-IUSE="bzip2 +cxx debug dynamic-loading fpx heif imagemagick jbig jpeg jpegxl lcms lzma"
-IUSE+=" openmp perl png postscript q16 q32 static-libs svg tcmalloc tiff truetype"
+IUSE="bzip2 +cxx debug dynamic-loading fpx heif imagemagick jbig jpeg jpeg2k jpegxl lcms lzma"
+IUSE+=" openmp perl png postscript q16 q32 static-libs tcmalloc tiff truetype"
 IUSE+=" webp wmf X zlib zstd"
 
 RDEPEND="
@@ -39,13 +39,13 @@ RDEPEND="
 	imagemagick? ( !media-gfx/imagemagick )
 	jbig? ( media-libs/jbigkit )
 	jpeg? ( media-libs/libjpeg-turbo:= )
+	jpeg2k? ( media-libs/jasper:= )
 	jpegxl? ( media-libs/libjxl:= )
 	lcms? ( media-libs/lcms:2 )
 	lzma? ( app-arch/xz-utils )
 	perl? ( dev-lang/perl:= )
 	png? ( media-libs/libpng:= )
 	postscript? ( app-text/ghostscript-gpl )
-	svg? ( dev-libs/libxml2 )
 	tcmalloc? ( dev-util/google-perftools:= )
 	tiff? ( media-libs/tiff:= )
 	truetype? (
@@ -113,8 +113,7 @@ src_configure() {
 		$(use_with jbig)
 		$(use_with webp)
 		$(use_with jpeg)
-		# Needs last-rited/unpackaged jasper
-		--without-jp2
+		$(use_with jpeg2k jp2)
 		$(use_with lcms lcms2)
 		$(use_with lzma)
 		$(use_with png)
@@ -126,7 +125,6 @@ src_configure() {
 		--with-fontpath="${EPREFIX}"/usr/share/fonts
 		--with-gs-font-dir="${EPREFIX}"/usr/share/fonts/urw-fonts
 		--with-windows-font-dir="${EPREFIX}"/usr/share/fonts/corefonts
-		$(use_with svg xml)
 		$(use_with zlib)
 		$(use_with zstd)
 		$(use_with X x)

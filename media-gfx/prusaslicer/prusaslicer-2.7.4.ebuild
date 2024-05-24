@@ -17,7 +17,7 @@ S="${WORKDIR}/${MY_PN}-version_${MY_PV}"
 
 LICENSE="AGPL-3 Boost-1.0 GPL-2 LGPL-3 MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~x86"
+KEYWORDS="amd64 ~arm64 ~x86"
 IUSE="test"
 
 RESTRICT="!test? ( test )"
@@ -51,11 +51,13 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	media-libs/qhull[static-libs]
+	test? ( =dev-cpp/catch-2* )
 "
 
 PATCHES=(
 	"${FILESDIR}/${PN}-2.6.0-libexpat-double-definition-fix.patch"
 	"${FILESDIR}/${PN}-2.6.0-dont-force-link-to-wayland-and-x11.patch"
+	"${FILESDIR}/${PN}-2.7.4-boost-1.85.patch"
 )
 
 src_prepare() {

@@ -22,7 +22,7 @@ S="${WORKDIR}/${PN}_${MY_PV}"
 
 LICENSE="Boost-1.0"
 SLOT="0/${PV}" # ${PV} instead of the major version due to bug 486122
-#KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~arm64-macos ~ppc-macos ~x64-macos ~x64-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~arm64-macos ~ppc-macos ~x64-macos ~x64-solaris"
 IUSE="bzip2 +context debug doc icu lzma +nls mpi numpy python +stacktrace tools zlib zstd"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 # the tests will never fail because these are not intended as sanity
@@ -50,6 +50,7 @@ BDEPEND=">=dev-build/b2-5.0.0"
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.81.0-disable_icu_rpath.patch
 	"${FILESDIR}"/${PN}-1.79.0-build-auto_index-tool.patch
+	"${FILESDIR}"/${PN}-1.85.0-bcp-filesystem.patch
 )
 
 create_user-config.jam() {

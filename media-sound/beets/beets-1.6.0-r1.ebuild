@@ -20,7 +20,7 @@ else
 	S="${WORKDIR}/${MY_P}"
 fi
 
-DESCRIPTION="Media library management system for obsessive-compulsive music geeks"
+DESCRIPTION="Media library management system for obsessive music geeks"
 HOMEPAGE="https://beets.io/ https://pypi.org/project/beets/"
 
 LICENSE="MIT"
