@@ -668,14 +668,15 @@ app-emulation/virt-viewer:spice - Support connecting to SPICE-enabled virtual ma
 app-emulation/virt-viewer:vnc - Support connecting to VNC-enabled virtual machines.
 app-emulation/virt-viewer:vte - Enable terminal support (x11-libs/vte) in the GTK+ interface
 app-emulation/virt-what:dmi - Use sys-apps/dmidecode to read firmware data
-app-emulation/virtualbox:dtrace - Install dtrace Extension Pack
-app-emulation/virtualbox:headless - Build without any graphic frontend
+app-emulation/virtualbox:dtrace - Install dtrace Extension Pack.
+app-emulation/virtualbox:headless - Build without any graphic frontend.
 app-emulation/virtualbox:lvm - Build VBoxVolInfo that needs devicemapper from sys-fs/lvm2.
 app-emulation/virtualbox:pax-kernel - Apply patch needed for pax enabled kernels.
-app-emulation/virtualbox:sdk - Enable building of SDK
+app-emulation/virtualbox:sdk - Enable building of SDK.
 app-emulation/virtualbox:udev - Controls installation of special USB udev rules.
-app-emulation/virtualbox:vboxwebsrv - Build and install the VirtualBox webservice
-app-emulation/virtualbox:vde - Support for VDE networking via net-misc/vde
+app-emulation/virtualbox:vboxwebsrv - Build and install the VirtualBox webservice.
+app-emulation/virtualbox:vde - Support for VDE networking via net-misc/vde.
+app-emulation/virtualbox:vmmraw - Enable 32-bit support on a 64-bit kernel.
 app-emulation/virtualbox-kvm:dtrace - Install dtrace Extension Pack
 app-emulation/virtualbox-kvm:lvm - Build VBoxVolInfo that needs devicemapper from sys-fs/lvm2.
 app-emulation/virtualbox-kvm:sdk - Enable building of SDK
@@ -1212,7 +1213,7 @@ app-text/mathtex:png - Generate png images by default instead of gif
 app-text/msort:heap - Use heap instead of alloca()
 app-text/msort:icu - Use dev-libs/icu instead of dev-libs/libutf8proc.
 app-text/msort:libuninum - Use dev-libs/libuninum for conversion.
-app-text/mupdf:drm - Enable support for Digital rights management (DRM)
+app-text/mupdf:archive - Enable support for CBR and other archive formats using libarchive
 app-text/pandoc:embed-data-files - Embed data files in binary for relocatable executable.
 app-text/pandoc:trypandoc - Build trypandoc cgi executable.
 app-text/pandoc-bin:pandoc-symlink - Install pandoc symlink that points to pandoc-bin
@@ -1737,9 +1738,11 @@ dev-java/commons-logging:log4j - Add optional support for log4j
 dev-java/dom4j:jaxen - Includes org.jaxen.dom4j package
 dev-java/emma:launcher - Install /usr/bin/emma. Collides with sci-biology/emboss.
 dev-java/java-config:compat - Install bin/java-config-2 symlink pointing to java-config
+dev-java/javacup:ant-task - Build and register the ant-task
 dev-java/jaxen:dom4j - Includes org.jaxen.dom4j package
 dev-java/jaxen:jdom - Includes org.jaxen.jdom package
 dev-java/jaxen:xom - Includes org.jaxen.xom package
+dev-java/jflex:ant-task - Build and register the ant-task
 dev-java/junit:migration-support - Include the junit-jupiter-migrationsupport module, which helps with migration from JUnit 4 to JUnit Jupiter
 dev-java/junit:suite - Include the JUnit Platform Suite Engine, which adds test suite support
 dev-java/junit:vintage - Include JUnit Vintage, which allows JUnit 5 to run JUnit 3 and JUnit 4 tests
@@ -1756,6 +1759,7 @@ dev-java/openjfx:media - Compile media module, based on gstreamer-minimal (does 
 dev-java/openjfx:source - Install JavaFX sources
 dev-java/pdfbox:tools - Build and install pdfbox-tools
 dev-java/protobuf-java:system-protoc - Use protoc provided by dev-libs/protobuf
+dev-java/qdox:ant-task - Build the ant-task
 dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
 dev-java/sbt:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
 dev-lang/algol68g:mpfr - Add support for multiprecision floating point rouding
