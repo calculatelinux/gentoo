@@ -11,7 +11,7 @@ MY_P=${PN%-core}-${TL_SOURCE_VERSION}-source
 DESCRIPTION="A complete TeX distribution"
 HOMEPAGE="https://tug.org/texlive/"
 SLOT="0"
-LICENSE="BSD GPL-1 GPL-2 GPL-2+ GPL-3+ MIT TeX-other-free"
+LICENSE="BSD GPL-1+ GPL-2 GPL-2+ GPL-3+ MIT TeX-other-free"
 GENTOO_TEX_PATCHES_NUM=3
 SRC_URI="
 	https://mirrors.ctan.org/systems/texlive/Source/${MY_P}.tar.xz
@@ -125,7 +125,7 @@ SRC_URI+=" source? ( "
 texlive-common_append_to_src_uri TL_CORE_EXTRA_SRC_CONTENTS
 SRC_URI+=" )"
 
-KEYWORDS="~amd64 ~arm64 ~ppc ~riscv ~x86"
+KEYWORDS="~amd64 ~arm64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
 IUSE="cjk X doc source tk +luajittex xetex xindy"
 
 TEXMF_PATH=/usr/share/texmf-dist

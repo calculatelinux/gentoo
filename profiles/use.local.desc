@@ -1010,6 +1010,8 @@ app-misc/vifm:extended-keys - Support for extended keys (arrows, home etc)
 app-misc/vifm:gtk - Use gtk+ to determine mimetypes
 app-misc/vifm:vim - Install the vifm vim plugin and vim-compatible documentation
 app-misc/worker:avfs - Enable support for sys-fs/avfs
+app-misc/yq:yq-symlink - Create a yq symlink to yq-python.
+app-misc/yq-go:yq-symlink - Create a yq symlink to yq-go.
 app-mobilephone/gammu:curl - Enables curl support
 app-mobilephone/gammu:irda - Enables infrared support
 app-mobilephone/gammu:mysql - Use mysql for data storage
@@ -4196,6 +4198,7 @@ media-gfx/openvdb:utils - Build utility binaries
 media-gfx/photoqt:devil - Support additional image formats using media-libs/devil
 media-gfx/photoqt:freeimage - Support additional image formats using media-libs/freeimage
 media-gfx/photoqt:mpv - Support for video files using media-video/mpv
+media-gfx/plantuml:ant-task - Provides classes used to manage PlantUML Ant task
 media-gfx/potrace:metric - default to a4 paper size and metric measurement
 media-gfx/povray:io-restrictions - POV-Ray's mechanism for control of I/O operations
 media-gfx/pqiv:archive - Enable support for images in archives and cbX comic book files
@@ -7291,7 +7294,6 @@ sci-libs/caffe2:opencv - Add support for image processing operators
 sci-libs/caffe2:openmp - Use OpenMP for parallel code
 sci-libs/caffe2:qnnpack - Use QNNPACK
 sci-libs/caffe2:rocm - Enable ROCm gpu computing support
-sci-libs/caffe2:tensorpipe - Use tensorpipe
 sci-libs/caffe2:xnnpack - Use XNNPACK
 sci-libs/cantera:hdf5 - Add HDF5 container files support
 sci-libs/cantera:python - Install Python bindings and conversion tools from Chemkin to Cantera format
@@ -8854,7 +8856,7 @@ x11-base/xorg-server:xvfb - Build the Xvfb server
 x11-base/xwayland:libei - Enable emulated input using dev-libs/libei
 x11-base/xwayland:unwind - Enable libunwind usage for backtraces
 x11-base/xwayland:xcsecurity - Build Security extension
-x11-drivers/nvidia-drivers:kernel-open - Use the open source variant of drivers (Turing/Ampere+ GPUs only, aka GTX 1650+, experimental)
+x11-drivers/nvidia-drivers:kernel-open - Use the open source variant of the drivers (Turing/Ampere+ GPUs only, aka GTX 1650+)
 x11-drivers/nvidia-drivers:persistenced - Install the persistence daemon for keeping devices state when unused (e.g. for headless)
 x11-drivers/nvidia-drivers:powerd - Install the NVIDIA dynamic boost support daemon (only useful with specific laptops, ignore if unsure)
 x11-drivers/nvidia-drivers:static-libs - Install the XNVCtrl static library for accessing sensors and other features
