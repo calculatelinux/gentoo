@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -69,8 +69,9 @@ RDEPEND="
 
 PATCHES=(
 	"${FILESDIR}/${PN}-2.6.2-lowspeed-buffer-size.patch"
-	"${FILESDIR}/systemd_notify.path"
+	"${FILESDIR}/systemd_notify.patch"
 )
+PATCH_NEEDS_AUTOGEN=1
 
 pkg_pretend() {
 	if use i2c; then
@@ -102,7 +103,7 @@ pkg_setup() {
 src_prepare() {
 	default
 
-	if [[ ${PV} == *9999 ]] ; then
+	if [[ ${PV} == *9999 ]] || [[ ${PATCH_NEEDS_AUTOGEN} == 1 ]] ; then
 		./autogen.sh || die
 	fi
 
@@ -190,7 +191,7 @@ src_install() {
 	einstalldocs
 
 	if use doc; then
-		newdoc lib/README.adoc
+		newdoc lib/README.adoc README.lib.adoc
 		dodoc docs/*.txt
 		docinto cables
 		dodoc docs/cables/*

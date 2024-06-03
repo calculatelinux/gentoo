@@ -752,9 +752,6 @@ app-forensics/aide:curl - Use curl for http,https and ftp backends
 app-forensics/aide:e2fs - Enable support for checking file attributes on ext2/ext3/ext4 filesystems
 app-forensics/chkrootkit:cron - Install cron script for weekly rootkit scans
 app-forensics/honggfuzz:clang - Enable clang support (pull sys-libs/blocksruntime dependency).
-app-forensics/libewf:bfio - Enables libbfio for chaining file in file handling
-app-forensics/libewf:fuse - Enable fuse support for ewfmount
-app-forensics/libewf:uuid - Enable UUID support in the ewftools
 app-forensics/lynis:cron - Install /etc/cron.* files
 app-forensics/sleuthkit:aff - Enable extra aff formats
 app-forensics/sleuthkit:ewf - Enable libewf support
@@ -2573,7 +2570,7 @@ dev-python/python-mpd2:twisted - Enable twisted support
 dev-python/python-stdnum:vies - Enable VIES
 dev-python/pyudev:qt5 - Install PyQt5 bindings
 dev-python/pyzmq:drafts - Enable draft API support
-dev-python/qiskit-terra:visualization - Enable visualization modules
+dev-python/qiskit:visualization - Enable visualization modules
 dev-python/rarfile:compressed - Enables the module to support compressed v3 archives by calling the app-arch/unrar.
 dev-python/reedsolo:native-extensions - Compile native C extensions.
 dev-python/rfc3986:idna - enable support for the IDNA specification (RFC 5891)
@@ -2954,6 +2951,7 @@ dev-util/ostree:sodium - Use libsodium for ed25519
 dev-util/ostree:soup - Use libsoup for networking
 dev-util/perf:babeltrace - Enable dev-util/babeltrace support
 dev-util/perf:bpf - Enable support for eBPF features with dev-libs/libbpf
+dev-util/perf:capstone - Use dev-libs/capstone for disassembly support
 dev-util/perf:clang - Enable builtin clang and LLVM support
 dev-util/perf:doc - Build documentation and man pages. With this USE flag disabled, the --help parameter for perf and its sub-tools will not be available. This is optional because it depends on a few documentation handling tools that are not always welcome on user systems.
 dev-util/perf:libpfm - Enable dev-libs/libpfm support
@@ -2985,7 +2983,6 @@ dev-util/schroot:zfs - Enable support for chroots using ZFS shapshots/clones
 dev-util/sdl-jstest:sdl - Enable media-libs/libsdl2 based input test
 dev-util/sdl-jstest:sdl1 - Enable media-libs/libsdl based input test
 dev-util/sysprof:unwind - Use sys-libs/libunwind to unwind the stack
-dev-util/trace-cmd:udis86 - Enable support for dev-libs/udis86 disassembler library
 dev-util/uftrace:capstone - Use capstone to provide dynamic tracing without recompilation
 dev-util/vulkan-tools:cube - Build the cube/cubepp demos
 dev-util/watchman:python - Install pywatchman bindings and the watchman-{wait,make} utils
@@ -5004,12 +5001,8 @@ media-tv/mythtv:vpx - Enable VP8/VP9 support for media-libs/libvpx
 media-tv/mythtv:wrapper - Use Ubuntu mythtfrontend wrapper
 media-tv/mythtv:x265 - Enable h265 encoding using x265
 media-tv/mythtv:xmltv - Support media-tv/xmltv TV listing - not used by Schedules Direct]
-media-tv/tvheadend:capmt - Enable support for capmt (dvbapi) protocol
-media-tv/tvheadend:constcw - Enable support for the constcw protocol
-media-tv/tvheadend:cwc - Enable support for the cwc (newcamd) protocol
 media-tv/tvheadend:ddci - Enable support for DDCI hardware
 media-tv/tvheadend:dvbcsa - Enable decryption of the DVB Common Scrambling Algorithm
-media-tv/tvheadend:dvben50221 - Enable support for hardware CAM
 media-tv/tvheadend:hdhomerun - Enable support for the HDHomeRun device
 media-tv/tvheadend:imagecache - Enable support for image caching
 media-tv/tvheadend:iptv - Enable support for Internet Protocol TV
@@ -5676,14 +5669,23 @@ net-dns/knot-resolver:kresc - Build (experimental) command-line client
 net-dns/knot-resolver:nghttp2 - DNS-over-HTTPS support
 net-dns/mydns:alias - Enable David Phillips aliasing
 net-dns/mydns:status - Enable the STATUS opcode to check server status
-net-dns/nsd:bind8-stats - Enables BIND8 like NSTATS and XSTATS
+net-dns/nsd:bind8-stats - Enables BIND8 like NSTATS and XSTATS and statistics in nsd-control
+net-dns/nsd:default-znow - Enable full relocation binding at load-time (RELRO NOW, to protect GOT and .dtor areas)
 net-dns/nsd:dnstap - Enable the structured binary log format
+net-dns/nsd:ipv6 - Enable IPv6 support
+net-dns/nsd:largefile - Enables support for large files
 net-dns/nsd:libevent - Use libevent or libev, useful when zone count is high
+net-dns/nsd:memclean - Cleanup memory (at exit) for eg. valgrind, memcheck
 net-dns/nsd:minimal-responses - If minimal responses are disabled, responses are more likely to get truncated, resulting in TCP fallback
-net-dns/nsd:munin - Install a plugin for net-analyzer/munin to graph statistical data from nsd.
+net-dns/nsd:munin - Install a plugin for net-analyzer/munin to graph statistical data from nsd
 net-dns/nsd:nsec3 - Enable NSEC3 support
+net-dns/nsd:packed - Enable packed structure alignment; uses less memory but has unaligned reads
+net-dns/nsd:radix-tree - Use a red-black tree for main lookups; uses less memory at the expense of more CPU
 net-dns/nsd:ratelimit - Enables ratelimiting, based on query name, type and source
-net-dns/nsd:root-server - Configure NSD as a root server
+net-dns/nsd:recvmmsg - Enable recvmmsg and sendmmsg compilation, faster but some kernel versions may have implementation problems for IPv6
+net-dns/nsd:root-server - Configure NSD as a root server (OBSOLETE: removed in >=4.9.x)
+net-dns/nsd:tfo - Enable TCP Fast Open
+net-dns/nsd:year2038 - Support timestamps after 2038 (glibc only!)
 net-dns/opendnssec:external-hsm - Enables support for storing DNSSEC keys through an arbitrary non-portage PKCS#11 interface, specified through an environment variable
 net-dns/opendnssec:opensc - Enables support for storing DNSSEC keys through a dev-libs/opensc PKCS#11 interface
 net-dns/opendnssec:signer - Enables signing capabilities for OpenDNSSEC
@@ -8640,6 +8642,9 @@ www-client/chromium:system-png - Use system media-libs/libpng instead of the bun
 www-client/chromium:system-toolchain - Use system toolchain instead of the bundled one (if possible)
 www-client/chromium:system-zstd - Use system app-arch/zstd instead of the bundled one.
 www-client/chromium:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
+www-client/dillo:mbedtls - Build against the net-libs/mbedtls library for TLS support.
+www-client/dillo:openssl - Build against the dev-libs/openssl library for TLS support.
+www-client/dillo:xembed - Enable XEmbed protocol support
 www-client/elinks:bittorrent - Enable support for the BitTorrent protocol
 www-client/elinks:finger - Enable support for the finger protocol
 www-client/elinks:gopher - Enable support for the gopher protocol
@@ -8778,7 +8783,6 @@ www-servers/tomcat:extra-webapps - Build also the docs and examples webapp
 www-servers/uwsgi:embedded - Embed plugins instead of building them as real plugins. When disabling this USE flag make sure you specify all used plugins in your uWSGI configuration. Note: Language plugins will always be built as real plugins.
 www-servers/uwsgi:go - Build the gccgo plugin to run Go applications.
 www-servers/uwsgi:json - Support json as a configuration file format.
-www-servers/uwsgi:python-asyncio - Use the EXPERIMENTAL asyncio (tulip) for python3.4 async request dispatching and as LoopEngine (see http://uwsgi-docs.readthedocs.org/en/latest/asyncio.html).
 www-servers/uwsgi:routing - Enable routing support
 www-servers/uwsgi:yajl - Use dev-libs/yajl instead of dev-libs/jansson for parsing JSON configuration files (if USe=json is set)
 www-servers/uwsgi:yaml - Support yaml as a configuration file format.
@@ -8960,7 +8964,6 @@ x11-terms/aterm:background - Enable background image support via media-libs/liba
 x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small version
 x11-terms/gnome-terminal:gnome-shell - Integrate with gnome-base/gnome-shell search
 x11-terms/gnome-terminal:nautilus - Build gnome-base/nautilus extension
-x11-terms/guake:utempter - Include utmp management support via sys-libs/libutempter
 x11-terms/mlterm:brltty - Enable support for app-accessibility/brltty
 x11-terms/mlterm:fcitx - Enable support for app-i18n/fcitx
 x11-terms/mlterm:harfbuzz - Enable support for OpenType Layout (media-libs/harfbuzz)

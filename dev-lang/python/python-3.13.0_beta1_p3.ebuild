@@ -33,7 +33,7 @@ LICENSE="PSF-2"
 SLOT="${PYVER}"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
 IUSE="
-	big-endian bluetooth build +debug +ensurepip examples gdbm +gil jit
+	bluetooth build +debug +ensurepip examples gdbm +gil jit
 	libedit +ncurses pgo +readline +sqlite +ssl test tk valgrind
 "
 REQUIRED_USE="jit? ( ${LLVM_REQUIRED_USE} )"
@@ -242,6 +242,85 @@ src_configure() {
 		dbmliborder+="${dbmliborder:+:}gdbm"
 	fi
 
+	# Set baseline test skip flags.
+	COMMON_TEST_SKIPS=(
+		# failures
+		-x test_concurrent_futures
+		-x test_gdb
+	)
+
+	# Arch-specific skips.  See #931888 for a collection of these.
+	case ${CHOST} in
+		alpha*)
+			COMMON_TEST_SKIPS+=(
+				-x test_builtin
+				-x test_capi
+				-x test_cmath
+				-x test_float
+				# timeout
+				-x test_free_threading
+				-x test_math
+				-x test_numeric_tower
+				-x test_random
+				-x test_statistics
+				# bug 653850
+				-x test_resource
+				-x test_strtod
+			)
+			;;
+		ia64*)
+			COMMON_TEST_SKIPS+=(
+				-x test_ctypes
+				-x test_external_inspection
+			)
+			;;
+		mips*)
+			COMMON_TEST_SKIPS+=(
+				-x test_ctypes
+				-x test_external_inspection
+				-x test_statistics
+			)
+			;;
+		powerpc64-*) # big endian
+			COMMON_TEST_SKIPS+=(
+				-x test_descr
+			)
+			;;
+		riscv*)
+			COMMON_TEST_SKIPS+=(
+				-x test_urllib2
+			)
+			;;
+		sparc*)
+			COMMON_TEST_SKIPS+=(
+				# bug 788022
+				-x test_multiprocessing_fork
+				-x test_multiprocessing_forkserver
+
+				-x test_ctypes
+				-x test_descr
+				# bug 931908
+				-x test_exceptions
+			)
+			;;
+	esac
+
+	# musl-specific skips
+	use elibc_musl && COMMON_TEST_SKIPS+=(
+		# various musl locale deficiencies
+		-x test__locale
+		-x test_c_locale_coercion
+		-x test_locale
+		-x test_re
+
+		# known issues with find_library on musl
+		# https://bugs.python.org/issue21622
+		-x test_ctypes
+
+		# fpathconf, ttyname errno values
+		-x test_os
+	)
+
 	if use pgo; then
 		local profile_task_flags=(
 			-m test
@@ -254,14 +333,14 @@ src_configure() {
 			# here. It also matches the default upstream PROFILE_TASK.
 			--timeout 1200
 
-			-x test_gdb
+			"${COMMON_TEST_SKIPS[@]}"
+
 			-x test_dtrace
 
 			# All of these seem to occasionally hang for PGO inconsistently
 			# They'll even hang here but be fine in src_test sometimes.
 			# bug #828535 (and related: bug #788022)
 			-x test_asyncio
-			-x test_concurrent_futures
 			-x test_httpservers
 			-x test_logging
 			-x test_multiprocessing_fork
@@ -277,50 +356,53 @@ src_configure() {
 		)
 
 		# Arch-specific skips.  See #931888 for a collection of these.
-		case ${ARCH} in
-			hppa)
+		case ${CHOST} in
+			alpha*)
 				profile_task_flags+=(
-					-x test_descr
-					-x test_exceptions	# bug 931908
 					-x test_os
 				)
 				;;
-			ia64)
+			hppa*)
 				profile_task_flags+=(
-					-x test_ctypes
-					-x test_external_inspection # partial PGO only (flaky in src_test)
-					-x test_signal	# PGO only
-				)
-				;;
-			mips)
-				profile_task_flags+=(
-					-x test_ctypes	# partial PGO only (more fails)
-					-x test_external_inspection	# PGO only
-					-x test_statistics
-				)
-				;;
-			ppc64)
-				if use big-endian; then
-					profile_task_flags+=(
-						-x test_descr
-						-x test_exceptions	# PGO only, bug 931908
-					)
-				fi
-				;;
-			riscv)
-				profile_task_flags+=(
-					-x test_statistics
-					-x test_urllib2
-				)
-				;;
-			sparc)
-				profile_task_flags+=(
-					-x test_ctypes
 					-x test_descr
-					-x test_exceptions	# bug 931908
+					# bug 931908
+					-x test_exceptions
+					-x test_os
+				)
+				;;
+			ia64*)
+				profile_task_flags+=(
+					-x test_signal
+				)
+				;;
+			powerpc64-*) # big endian
+				profile_task_flags+=(
+					# bug 931908
+					-x test_exceptions
+				)
+				;;
+			riscv*)
+				profile_task_flags+=(
+					-x test_statistics
 				)
 				;;
 		esac
+
+		# musl-specific skips
+		use elibc_musl && profile_task_flags+=(
+			# various musl locale deficiencies
+			-x test__locale
+			-x test_c_locale_coercion
+			-x test_locale
+			-x test_re
+
+			# known issues with find_library on musl
+			# https://bugs.python.org/issue21622
+			-x test_ctypes
+
+			# fpathconf, ttyname errno values
+			-x test_os
+		)
 
 		if has_version "app-arch/rpm" ; then
 			# Avoid sandbox failure (attempts to write to /var/lib/rpm)
@@ -468,49 +550,8 @@ src_test() {
 		--verbose3
 		-u-network
 		-j "$(makeopts_jobs)"
-
-		# fails
-		-x test_concurrent_futures
-		-x test_gdb
+		"${COMMON_TEST_SKIPS[@]}"
 	)
-
-	# Arch-specific skips.  See #931888 for a collection of these.
-	case ${ARCH} in
-		ia64)
-			test_opts+=(
-				-x test_ctypes
-				-x test_external_inspection
-			)
-			;;
-		mips)
-			test_opts+=(
-				-x test_ctypes
-				-x test_external_inspection
-				-x test_statistics
-			)
-			;;
-		ppc64)
-			if use big-endian; then
-				test_opts+=( -x test_descr )
-			fi
-			;;
-		riscv)
-			test_opts+=(
-				-x test_urllib2
-			)
-			;;
-		sparc)
-			test_opts+=(
-				# bug 788022
-				-x test_multiprocessing_fork
-				-x test_multiprocessing_forkserver
-
-				-x test_ctypes
-				-x test_descr
-				-x test_exceptions # bug 931908
-			)
-			;;
-	esac
 
 	# workaround docutils breaking tests
 	cat > Lib/docutils.py <<-EOF || die

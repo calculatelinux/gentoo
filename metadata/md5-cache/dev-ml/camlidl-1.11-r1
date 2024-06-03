@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare test
+DEPEND=>=dev-lang/ocaml-3.10.2:=[ocamlopt]
+DESCRIPTION=Stub code generator for OCaml
+EAPI=7
+HOMEPAGE=https://github.com/xavierleroy/camlidl
+INHERIT=toolchain-funcs
+KEYWORDS=amd64 ~ppc x86 ~amd64-linux ~x86-linux
+LICENSE=QPL-1.0 LGPL-2
+RDEPEND=>=dev-lang/ocaml-3.10.2:=[ocamlopt]
+SLOT=0/1.11
+SRC_URI=https://github.com/xavierleroy/camlidl/archive/camlidl111.tar.gz
+_eclasses_=multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084
+_md5_=390277c2782ed66d09caf2637dd2198b
