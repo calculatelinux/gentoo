@@ -22,7 +22,7 @@ HOMEPAGE="
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64 ~hppa ~loong ~riscv ~x86"
-IUSE="full-support minimal test X"
+IUSE="big-endian full-support minimal test X"
 RESTRICT="!test? ( test )"
 
 RECOMMENDED_DEPEND="
@@ -42,7 +42,6 @@ OPTIONAL_DEPEND="
 	>=dev-python/matplotlib-3.6.1[${PYTHON_USEDEP}]
 	>=dev-python/openpyxl-3.0.7[${PYTHON_USEDEP}]
 	>=dev-python/sqlalchemy-1.4.36[${PYTHON_USEDEP}]
-	>=dev-python/tables-3.7.0[${PYTHON_USEDEP}]
 	>=dev-python/tabulate-0.8.10[${PYTHON_USEDEP}]
 	>=dev-python/xarray-2022.3.0[${PYTHON_USEDEP}]
 	>=dev-python/xlrd-2.0.1[${PYTHON_USEDEP}]
@@ -52,6 +51,9 @@ OPTIONAL_DEPEND="
 		>=dev-python/scipy-1.8.1[${PYTHON_USEDEP}]
 		dev-python/statsmodels[${PYTHON_USEDEP}]
 	) ) ) )
+	!big-endian? (
+		>=dev-python/tables-3.7.0[${PYTHON_USEDEP}]
+	)
 	X? (
 		|| (
 			>=dev-python/PyQt5-5.15.6[${PYTHON_USEDEP}]
@@ -175,11 +177,25 @@ python_test() {
 		# assumes that it will fail due to -mfpmath=387 on 32-bit arches,
 		# so it XPASS-es in every other scenario
 		tests/tools/test_to_timedelta.py::TestTimedeltas::test_to_timedelta_float
+
+		# newer matplotlib?
+		tests/plotting/frame/test_frame.py::TestDataFramePlots::test_group_subplot_invalid_column_name
 	)
 
 	if ! has_version "dev-python/scipy[${PYTHON_USEDEP}]"; then
 		EPYTEST_DESELECT+=(
 			tests/plotting/test_misc.py::test_savefig
+		)
+	fi
+
+	if has_version ">=dev-python/numexpr-2.10[${PYTHON_USEDEP}]"; then
+		EPYTEST_DESELECT+=(
+			'tests/computation/test_eval.py::TestTypeCasting::test_binop_typecasting[numexpr-python-left_right0-float64-/]'
+			'tests/computation/test_eval.py::TestTypeCasting::test_binop_typecasting[numexpr-python-left_right1-float64-/]'
+			'tests/computation/test_eval.py::TestTypeCasting::test_binop_typecasting[numexpr-pandas-left_right0-float64-/]'
+			'tests/computation/test_eval.py::TestTypeCasting::test_binop_typecasting[numexpr-pandas-left_right1-float64-/]'
+			'tests/computation/test_eval.py::TestOperations::test_simple_arith_ops[numexpr-python]'
+			'tests/computation/test_eval.py::TestOperations::test_simple_arith_ops[numexpr-pandas]'
 		)
 	fi
 
@@ -191,7 +207,7 @@ python_test() {
 	# https://github.com/pandas-dev/pandas/issues/54907
 	local -x PYTEST_DISABLE_PLUGIN_AUTOLOAD=1
 	epytest pandas/tests \
-		--no-strict-data-files \
+		--no-strict-data-files -o xfail_strict=false \
 		-m "not single_cpu and not slow and not network and not db" ||
 		die "Tests failed with ${EPYTHON}"
 	rm test-data.xml test_stata.dta || die
