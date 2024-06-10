@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install
+DEPEND=sys-apps/texinfo doc? ( virtual/texi2dvi )
+DESCRIPTION=CLX is the Common Lisp interface to the X11 protocol primarily for SBCL
+EAPI=8
+HOMEPAGE=https://www.cliki.net/CLX
+INHERIT=common-lisp-3
+IUSE=doc
+KEYWORDS=~amd64 ~ppc ~sparc ~x86
+LICENSE=MIT
+PDEPEND=virtual/commonlisp
+SLOT=0
+SRC_URI=https://github.com/sharplispers/clx/archive/0.7.5.tar.gz -> clx-0.7.5.tar.gz
+_eclasses_=common-lisp-3	c42335afdc60b05807aa6ae5c9225a7f
+_md5_=f22663da4baa3f43e1c8529d4ad9ebdb

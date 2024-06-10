@@ -18,7 +18,7 @@ HOMEPAGE="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~s390 ~sparc x86"
 
 # all these are header-only libraries
 DEPEND="
@@ -28,7 +28,6 @@ DEPEND="
 "
 BDEPEND="
 	>=dev-python/cython-3[${PYTHON_USEDEP}]
-	dev-python/rapidfuzz-capi[${PYTHON_USEDEP}]
 	>=dev-python/scikit-build-0.16.2[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (

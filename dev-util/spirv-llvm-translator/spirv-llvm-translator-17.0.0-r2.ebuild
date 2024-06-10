@@ -16,7 +16,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="UoI-NCSA"
 SLOT="$(ver_cut 1)"
-KEYWORDS="amd64 arm64 ~riscv ~x86"
+KEYWORDS="amd64 arm64 ~riscv x86"
 IUSE="test"
 RESTRICT="!test? ( test )"
 
@@ -43,6 +43,9 @@ PATCHES=(
 src_prepare() {
 	append-flags -fPIC
 	cmake_src_prepare
+
+	# https://github.com/KhronosGroup/SPIRV-LLVM-Translator/pull/2555
+	sed -i -e 's/%triple/x86_64-unknown-linux-gnu/' test/DebugInfo/X86/*.ll || die
 }
 
 src_configure() {
