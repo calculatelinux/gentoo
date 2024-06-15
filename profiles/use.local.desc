@@ -1760,6 +1760,7 @@ dev-java/pdfbox:tools - Build and install pdfbox-tools
 dev-java/protobuf-java:system-protoc - Use protoc provided by dev-libs/protobuf
 dev-java/qdox:ant-task - Build the ant-task
 dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
+dev-java/saxon:ant-task - BUILD and register the ant-task
 dev-java/sbt:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
 dev-lang/algol68g:mpfr - Add support for multiprecision floating point rouding
 dev-lang/ammonite-repl-bin:scala2-13 - Install Ammonite for Scala 2.13
@@ -2281,6 +2282,7 @@ dev-lisp/clisp:svm - Build CLISP with support for the Support Vector Machine mod
 dev-lisp/clx:doc - Builds documentation
 dev-lisp/cmucl:X - Build CLX, CLM, or Hemlock
 dev-lisp/cmucl:doc - Installs package documentation
+dev-lisp/cmucl:gui - Build CLX, CLM, or Hemlock
 dev-lisp/cmucl:source - Include source code for CMUCL in installation
 dev-lisp/ecl:gengc - Use generational garbage collection (experimental)
 dev-lisp/ecl:precisegc - Use type information during garbage collection (experimental)
@@ -3762,9 +3764,9 @@ lxqt-base/lxqt-meta:admin - Install lxqt-base/lxqt-admin
 lxqt-base/lxqt-meta:archiver - Install app-arch/lxqt-archiver
 lxqt-base/lxqt-meta:desktop-portal - Enable the LXQt sys-apps/xdg-desktop-portal backend implementation
 lxqt-base/lxqt-meta:display-manager - Install a graphical display manager
-lxqt-base/lxqt-meta:filemanager - Install x11-misc/pcmanfm-qtfile manager
-lxqt-base/lxqt-meta:lximage - Install media-gfx/lximage-qtimage viewer
-lxqt-base/lxqt-meta:minimal - Do not install x11-wm/openboxwindow manager
+lxqt-base/lxqt-meta:filemanager - Install x11-misc/pcmanfm-qt file manager
+lxqt-base/lxqt-meta:lximage - Install media-gfx/lximage-qt image viewer
+lxqt-base/lxqt-meta:minimal - Do not install x11-wm/openbox window manager
 lxqt-base/lxqt-meta:nls - Install dev-qt/qttranslations to better support different locales
 lxqt-base/lxqt-meta:powermanagement - Install lxqt-base/lxqt-powermanagement package
 lxqt-base/lxqt-meta:processviewer - Install x11-misc/qps package
@@ -3774,6 +3776,7 @@ lxqt-base/lxqt-meta:ssh-askpass - Install lxqt-base/lxqt-openssh-askpass user pa
 lxqt-base/lxqt-meta:sudo - Install lxqt-base/lxqt-sudo
 lxqt-base/lxqt-meta:terminal - Install x11-terms/qterminal package
 lxqt-base/lxqt-meta:trash - Install gnome-base/gvfs to enable 'trash' functionality in x11-misc/pcmanfm-qt
+lxqt-base/lxqt-meta:window-manager - Install kde-plasma/kwin window manager
 lxqt-base/lxqt-panel:colorpicker - Build colorpicker plugin
 lxqt-base/lxqt-panel:cpuload - Build cpuload plugin
 lxqt-base/lxqt-panel:desktopswitch - Build desktopswitch plugin
@@ -6560,12 +6563,22 @@ net-misc/nextcloud-client:webengine - Enable old Flow1 login using dev-qt/qtwebe
 net-misc/ntp:openntpd - Allow ntp to be installed alongside openntpd
 net-misc/ntp:parse-clocks - Add support for PARSE clocks
 net-misc/ntp:samba - Provide support for Samba's signing daemon (needed for Active Directory domain controllers)
+net-misc/ntpsec:arbiter - Arbiter 1088A/B GPS driver
 net-misc/ntpsec:early - Drop root privileges early
 net-misc/ntpsec:gdb - Enable debugging with gdb
+net-misc/ntpsec:generic - Enable support for generic time radios and GPSDOs
+net-misc/ntpsec:gpsd - Enable gpsd daemon support
 net-misc/ntpsec:heat - Install contrib heat generating scripts
+net-misc/ntpsec:hpgps - Hewlett Packard GPS driver
+net-misc/ntpsec:jjy - JJY driver
 net-misc/ntpsec:libbsd - Use libbsd instead of internal funcs
+net-misc/ntpsec:local - Support for undisciplined local clock (not recommended)
+net-misc/ntpsec:modem - NIST/USNO/PTB Modem Time Services
 net-misc/ntpsec:nist - Set local clock deps
+net-misc/ntpsec:nmea - NMEA GPS driver
 net-misc/ntpsec:ntpviz - Make visualizations of offsets, jiffies, etc.
+net-misc/ntpsec:oncore - Oncore driver
+net-misc/ntpsec:pps - PPS cesium clock driver
 net-misc/ntpsec:rclock_arbiter - Arbiter 1088A/B GPS driver
 net-misc/ntpsec:rclock_generic - Enable support for generic time radios and GPSDOs
 net-misc/ntpsec:rclock_gpsd - Enable gpsd daemon support
@@ -6581,7 +6594,12 @@ net-misc/ntpsec:rclock_spectracom - Spectracom driver
 net-misc/ntpsec:rclock_trimble - Trimble driver
 net-misc/ntpsec:rclock_truetime - Trutime driver (deprecated)
 net-misc/ntpsec:rclock_zyfer - Zyfer driver
+net-misc/ntpsec:shm - Obtain refclock info from shared memory-segment
 net-misc/ntpsec:smear - Specify the interval over which a leap second is applied (experimental)
+net-misc/ntpsec:spectracom - Spectracom driver
+net-misc/ntpsec:trimble - Trimble driver
+net-misc/ntpsec:truetime - Trutime driver (deprecated)
+net-misc/ntpsec:zyfer - Zyfer driver
 net-misc/ofono:atmodem - ETSI AT modem support.
 net-misc/ofono:bluetooth - Enable Bluetooth modem support using net-wireless/bluez.
 net-misc/ofono:cdmamodem - Enable CDMA modem support.
@@ -7397,8 +7415,6 @@ sci-libs/libccd:double-precision - More precise calculations at the expense of s
 sci-libs/libgeodecomp:hpx - Enables HPX backend
 sci-libs/libgeodecomp:opencv - Enables OpenCV related code
 sci-libs/libgeodecomp:silo - Enables SILO related code
-sci-libs/libghemical:mopac7 - Use sci-chemistry/mopac7 for semi-empirical calculations
-sci-libs/libghemical:mpqc - Use sci-chemistry/mpqc for quantum-mechanical calculations
 sci-libs/liborigin:tools - Install opj2dat command line util
 sci-libs/libqalculate:hardened - Disable unsafe functions like 'command' and variables like 'uptime'.
 sci-libs/libsc:romio - Build with support for the ROMIO MPI-IO component

@@ -13,4 +13,4 @@ RDEPEND=>=dev-libs/glib-2.50:2 dev-libs/nettle:= net-mail/ytnef sys-libs/zlib:= 
 REQUIRED_USE=libcanberra? ( notification ) libnotify? ( notification ) networkmanager? ( dbus ) oauth? ( gnutls ) python? ( ^^ ( python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12 ) ) smime? ( pgp )
 SLOT=0
 _eclasses_=autotools	dc70c1dc473b68317fc4a86f5fbfc57d	desktop	021728fdc1b03b36357dbc89489e0f0d	git-r3	fbb2889c81f3a05910c1524db69425c1	gnuconfig	a397adda6984a4c423e28ac274c1ba98	libtool	5f49a16f67f81bdf873e3d1f10b10001	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	python-single-r1	75118e916668a74c660a13b0ecb22562	python-utils-r1	8b220bbce5c119fb1d4d5c2f5588f3ea	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	xdg	4a14c5c24f121e7da66e5aab4a168c6e	xdg-utils	baea6080dd821f5562d715887954c9d3
-_md5_=f47b7c2cd0736bb2ea61d4d2ff065d12
+_md5_=bd9ae1e4d807aca9ca310ea53753af80

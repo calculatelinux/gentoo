@@ -1,16 +1,16 @@
-BDEPEND=test? ( dev-python/pytest[python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) app-alternatives/ninja >=dev-build/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=test? ( python_single_target_python3_10? ( dev-python/pytest[python_targets_python3_10(-)] ) python_single_target_python3_11? ( dev-python/pytest[python_targets_python3_11(-)] ) python_single_target_python3_12? ( dev-python/pytest[python_targets_python3_12(-)] ) ) app-alternatives/ninja >=dev-build/cmake-3.20.5 >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=fftw? ( sci-libs/fftw:3.0= ) hdf5? ( >=sci-libs/hdf5-1.8.0:=[mpi=] ) jpeg? ( media-libs/libjpeg-turbo:= ) openexr? ( >=dev-libs/imath-3.1.4-r2:= >=media-libs/openexr-3:0= ) png? ( media-libs/libpng:0= ) python? ( python_targets_python3_10? ( dev-lang/python:3.10[threads(+),xml(+)] ) python_targets_python3_11? ( dev-lang/python:3.11[threads(+),xml(+)] ) dev-libs/boost:=[python?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/numpy[python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) tiff? ( media-libs/tiff:= ) zlib? ( sys-libs/zlib )
+DEPEND=fftw? ( sci-libs/fftw:3.0= ) hdf5? ( >=sci-libs/hdf5-1.8.0:=[mpi=] ) jpeg? ( media-libs/libjpeg-turbo:= ) openexr? ( >=dev-libs/imath-3.1.4-r2:= >=media-libs/openexr-3:0= ) png? ( media-libs/libpng:0= ) tiff? ( media-libs/tiff:= ) zlib? ( sys-libs/zlib )
 DESCRIPTION=C++ computer vision library emphasizing customizable algorithms and structures
-EAPI=7
+EAPI=8
 HOMEPAGE=https://ukoethe.github.io/vigra/
-INHERIT=cmake flag-o-matic python-r1 git-r3
-IUSE=doc +fftw +hdf5 +jpeg mpi openexr +png +python test +tiff +zlib python_targets_python3_10 python_targets_python3_11
+INHERIT=cmake flag-o-matic python-single-r1 git-r3
+IUSE=+fftw +hdf5 +jpeg mpi openexr +png test +tiff +zlib python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12
 LICENSE=MIT
 PROPERTIES=live
-RDEPEND=python_targets_python3_10? ( dev-lang/python:3.10[threads(+),xml(+)] ) python_targets_python3_11? ( dev-lang/python:3.11[threads(+),xml(+)] ) fftw? ( sci-libs/fftw:3.0= ) hdf5? ( >=sci-libs/hdf5-1.8.0:=[mpi=] ) jpeg? ( media-libs/libjpeg-turbo:= ) openexr? ( >=dev-libs/imath-3.1.4-r2:= >=media-libs/openexr-3:0= ) png? ( media-libs/libpng:0= ) python? ( python_targets_python3_10? ( dev-lang/python:3.10[threads(+),xml(+)] ) python_targets_python3_11? ( dev-lang/python:3.11[threads(+),xml(+)] ) dev-libs/boost:=[python?,python_targets_python3_10(-)?,python_targets_python3_11(-)?] dev-python/numpy[python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) tiff? ( media-libs/tiff:= ) zlib? ( sys-libs/zlib )
-REQUIRED_USE=python? ( hdf5 || ( python_targets_python3_10 python_targets_python3_11 ) ) test? ( hdf5 python fftw )
+RDEPEND=python_single_target_python3_10? ( dev-lang/python:3.10[threads(+),xml(+)] ) python_single_target_python3_11? ( dev-lang/python:3.11[threads(+),xml(+)] ) python_single_target_python3_12? ( dev-lang/python:3.12[threads(+),xml(+)] ) fftw? ( sci-libs/fftw:3.0= ) hdf5? ( >=sci-libs/hdf5-1.8.0:=[mpi=] ) jpeg? ( media-libs/libjpeg-turbo:= ) openexr? ( >=dev-libs/imath-3.1.4-r2:= >=media-libs/openexr-3:0= ) png? ( media-libs/libpng:0= ) tiff? ( media-libs/tiff:= ) zlib? ( sys-libs/zlib )
+REQUIRED_USE=^^ ( python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12 ) test? ( hdf5 fftw )
 RESTRICT=test
 SLOT=0
-_eclasses_=cmake	c7c9a62d6232cac66d4ea32d575c3e7c	eapi8-dosym	5ac4857ad078256d939c44f7c64197a9	flag-o-matic	d309b9713dfc18e754cba88d3ba69653	git-r3	fbb2889c81f3a05910c1524db69425c1	multibuild	d67e78a235f541871c7dfe4cf7931489	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	python-r1	8a28fa6d3e3bc96ff8a7eff2badbe71f	python-utils-r1	8b220bbce5c119fb1d4d5c2f5588f3ea	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	xdg-utils	baea6080dd821f5562d715887954c9d3
-_md5_=eaff8a0c747fc58f81530e9879b66a5b
+_eclasses_=cmake	c7c9a62d6232cac66d4ea32d575c3e7c	flag-o-matic	d309b9713dfc18e754cba88d3ba69653	git-r3	fbb2889c81f3a05910c1524db69425c1	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-single-r1	75118e916668a74c660a13b0ecb22562	python-utils-r1	8b220bbce5c119fb1d4d5c2f5588f3ea	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=6a6c66f2246c48492cef485691d66acb

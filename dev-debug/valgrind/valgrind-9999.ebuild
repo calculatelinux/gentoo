@@ -14,6 +14,7 @@ inherit autotools flag-o-matic toolchain-funcs multilib pax-utils
 
 DESCRIPTION="An open-source memory debugger for GNU/Linux"
 HOMEPAGE="https://valgrind.org"
+
 if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="https://sourceware.org/git/${PN}.git"
 	inherit git-r3
@@ -22,8 +23,17 @@ else
 	inherit verify-sig
 
 	MY_P="${P/_rc/.RC}"
-	SRC_URI="https://sourceware.org/pub/valgrind/${MY_P}.tar.bz2"
-	SRC_URI+=" verify-sig? ( https://sourceware.org/pub/valgrind/${MY_P}.tar.bz2.asc )"
+	MY_P="${MY_P%%_p*}"
+	VALGRIND_PATCH_TARBALL="${MY_P}-patches-1"
+	SRC_URI="
+		https://sourceware.org/pub/valgrind/${MY_P}.tar.bz2
+		verify-sig? ( https://sourceware.org/pub/valgrind/${MY_P}.tar.bz2.asc )
+	"
+	# Rollups of backports on ${PV}_STABLE branch upstream.
+	if [[ ${PV} == *_p* ]] ; then
+		SRC_URI+=" https://dev.gentoo.org/~sam/distfiles/${CATEGORY}/${PN}/${VALGRIND_PATCH_TARBALL}.tar.xz"
+	fi
+
 	S="${WORKDIR}"/${MY_P}
 
 	if [[ ${PV} != *_rc* ]] ; then
@@ -52,7 +62,6 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-3.7.0-respect-flags.patch
 	"${FILESDIR}"/${PN}-3.15.0-Build-ldst_multiple-test-with-fno-pie.patch
 	"${FILESDIR}"/${PN}-3.21.0-glibc-2.34-suppressions.patch
-	# From stable branch
 )
 
 QA_CONFIG_IMPL_DECL_SKIP+=(
@@ -61,6 +70,17 @@ QA_CONFIG_IMPL_DECL_SKIP+=(
 	# -Wimplicit-function-declaration. bug #900396
 	foo
 )
+
+src_unpack() {
+	if [[ ${PV} == 9999 ]] ; then
+		git-r3_src_unpack
+	elif use verify-sig ; then
+		# Needed for downloaded patch (which is unsigned, which is fine)
+		verify-sig_verify_detached "${DISTDIR}"/${MY_P}.tar.bz2{,.asc}
+	fi
+
+	default
+}
 
 src_prepare() {
 	# Correct hard coded doc location
@@ -76,6 +96,10 @@ src_prepare() {
 		find "${S}" -name "Makefile.am" -o -name "Makefile.tool.am" | xargs \
 			sed -i -e 's:-M,/usr/lib/ld/map.noexstk:-z,noexecstack:' || die
 		cp "${S}"/coregrind/link_tool_exe_{linux,solaris}.in
+	fi
+
+	if [[ ${PV} != 9999 && -d "${WORKDIR}"/${VALGRIND_PATCH_TARBALL} ]] ; then
+		PATCHES+=( "${WORKDIR}"/${VALGRIND_PATCH_TARBALL} )
 	fi
 
 	default

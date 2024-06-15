@@ -1,6 +1,11 @@
 # Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Sam James <sam@gentoo.org> (2024-06-13)
+# Needs as-yet-unkeyworded KF6 (bug #934215)
+app-crypt/pinentry qt6
+app-office/libreoffice qt6
+
 # Ionen Wolkens <ionen@gentoo.org> (2024-05-19)
 # jit is supported here
 >=dev-qt/qtdeclarative-6 -jit
@@ -20,11 +25,6 @@ media-libs/openpgl -cpu_flags_arm_neon
 # Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2024-03-21)
 # virt-firmware is keyworded here
 sys-kernel/installkernel -efistub
-
-# Mart Raudsepp <leio@gentoo.org> (2024-03-03)
-# media-libs/libdisplay-info (drm) and dev-libs/libliftoff (liftoff)
-# are only available for amd64, arm64 and riscv
->=gui-libs/wlroots-0.17.0 -drm -liftoff
 
 # Joonas Niilola <juippis@gentoo.org> (2024-02-16)
 # Test dependencies not keyworded on this arch.

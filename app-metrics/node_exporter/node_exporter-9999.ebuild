@@ -12,8 +12,10 @@ if [[ ${PV} == 9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/prometheus/node_exporter.git"
 else
-	SRC_URI="https://github.com/prometheus/node_exporter/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	SRC_URI+=" https://github.com/rahilarious/gentoo-distfiles/releases/download/${P}/deps.tar.xz -> ${P}-deps.tar.xz"
+	SRC_URI="
+	https://github.com/prometheus/node_exporter/archive/v${PV}.tar.gz -> ${P}.tar.gz
+	https://github.com/rahilarious/gentoo-distfiles/releases/download/${P}/deps.tar.xz -> ${P}-deps.tar.xz
+	"
 	KEYWORDS="~amd64 ~arm64 ~loong ~riscv ~x86"
 fi
 
@@ -31,7 +33,7 @@ COMMON_DEPEND="
 "
 DEPEND="${COMMON_DEPEND}"
 RDEPEND="${COMMON_DEPEND}"
-BDEPEND=">=dev-util/promu-0.3.0"
+BDEPEND=">=dev-util/promu-0.15.0"
 
 src_unpack() {
 	if [[ ${PV} == 9999* ]]; then
