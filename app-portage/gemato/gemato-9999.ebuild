@@ -16,7 +16,7 @@ HOMEPAGE="
 "
 EGIT_REPO_URI="https://github.com/projg2/gemato.git"
 
-LICENSE="BSD-2"
+LICENSE="GPL-2+"
 SLOT="0"
 IUSE="+gpg pretty-log tools"
 

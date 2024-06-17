@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -12,11 +12,9 @@ SRC_URI="http://www.jeenyus.net/linux/software/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ~hppa ~mips ppc ~sparc x86"
-IUSE=""
 RESTRICT="test"
 
 DEPEND="sys-apps/groff"
-RDEPEND=""
 
 PATCHES=(
 	# applying maildir-patch
@@ -37,12 +35,13 @@ src_prepare() {
 }
 
 src_configure() {
-	echo "${D}/usr" > conf-root || die
+	echo "/usr" > conf-root || die
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc || die
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld || die
 }
 
 src_install() {
+	echo "${D}/usr" > conf-root || die
 	emake setup check
 	einstalldocs
 	doman maildir.1 safecat.1

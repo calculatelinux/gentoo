@@ -17,8 +17,8 @@ HOMEPAGE="https://www.kdevelop.org/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="5/$(ver_cut 1-2)"
-KEYWORDS="~amd64 ~arm64 ~x86"
-IUSE="+gdbui hex +plasma +qmake subversion"
+KEYWORDS="amd64 arm64 ~x86"
+IUSE="gdbui hex plasma +qmake subversion"
 
 # see bug 366471
 RESTRICT="test"
