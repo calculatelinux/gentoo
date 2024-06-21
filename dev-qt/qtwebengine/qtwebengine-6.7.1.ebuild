@@ -222,8 +222,8 @@ src_configure() {
 
 	local mygnargs=(
 		# prefer no dlopen where possible
-		link_pulseaudio=true
-		rtc_link_pipewire=true
+		$(usev pulseaudio link_pulseaudio=true)
+		$(usev screencast rtc_link_pipewire=true)
 		# reduce default disk space usage
 		symbol_level=0
 	)

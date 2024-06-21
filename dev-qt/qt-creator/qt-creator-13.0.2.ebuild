@@ -25,7 +25,7 @@ else
 	[[ ${QTC_PV} == ${PV} ]] && QTC_REL=official || QTC_REL=development
 	SRC_URI="https://download.qt.io/${QTC_REL}_releases/qtcreator/$(ver_cut 1-2)/${PV/_/-}/${QTC_P}.tar.xz"
 	S=${WORKDIR}/${QTC_P}
-	KEYWORDS="~amd64"
+	KEYWORDS="amd64"
 fi
 
 DESCRIPTION="Lightweight IDE for C++/QML development centering around Qt"
@@ -125,7 +125,7 @@ src_configure() {
 		-DBUILD_DEVELOPER_DOCS=$(usex doc)
 		-DWITH_TESTS=$(usex test)
 
-		# TODO?: try to unbundle with =no when syntax-highlighting:6 exists
+		# TODO: try unbundling now that slot 6 exists+unmasked (bug #934462)
 		-DBUILD_LIBRARY_KSYNTAXHIGHLIGHTING=yes
 
 		# Much can be optional, but do not want to flood users (or maintainers)

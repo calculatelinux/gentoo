@@ -33,10 +33,46 @@
 
 #--- END OF EXAMPLES ---
 
-# Arthur Zamarin <arthurzam@gentoo.org> (2024-06-17)
-# EAPI=6, fetch restricted with source gone.
-# Removal on 2024-07-17.  Bug #934456.
-net-print/kyocera-1x2x-mfp-driver
+# James Le Cuirot <chewi@gentoo.org> (2024-06-20)
+# Ancient, dead upstream, X11-based, probably doesn't work any more, and there
+# are better ways of running games in different sessions now.
+# Removal on 2024-07-20.  Bug #934640.
+games-util/xgame
+games-util/xgame-gtk2
+
+# James Le Cuirot <chewi@gentoo.org> (2024-06-20)
+# Apparently a good game, but you cannot buy the full Linux version any more.
+# Get the HD version from Steam or the Windows original from GOG instead.
+# Removal on 2024-07-20.  Bug #934637.
+games-strategy/majesty-demo
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-06-20)
+# EAPI=6, keyworded for x86 only (making it hard to debug), has
+# open bugs for modern C and not using correct toolchain commands.
+# Removal on 2024-07-20.  Bugs #934621, #925090, #724078, #727438.
+dev-debug/ald
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-06-20)
+# EAPI=6, no reverse dependencies, waiting for a version bump.
+# Removal on 2024-07-20.  Bugs #934619, #730758, #713760.
+media-gfx/dawn
+
+# Jakov Smolić <jsmolic@gentoo.org> (2024-06-18)
+# Outdated by several versions, very difficult to package due to the
+# complicated Cargo dependency management.
+# Removal on 2024-07-18. Bug #922378.
+app-emulation/cloud-hypervisor
+
+# Michał Górny <mgorny@gentoo.org> (2024-06-17)
+# A compatibility shim for ancient versions of flake8.  Upstream project
+# is gone.  No revdeps.
+# Removal on 2024-07-17.  Bug #934466.
+dev-python/flake8-polyfill
+
+# Hans de Graaff <graaff@gentoo.org> (2024-06-17)
+# Obsolete slot with failing tests. Use the newer slot instead. No
+# reverse dependencies. Masked for removal on 2024-07-17.
+dev-ruby/net-imap:0
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2024-06-16)
 # No release since 2021-06-10 and effectively declared unmaintained by
@@ -50,12 +86,6 @@ kde-plasma/ksysguard
 # kf5-portingaids, as well as conflicting kde-apps in slot 5. bug #760555
 # Removal on 2024-07-24.
 kde-apps/kopete
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2024-06-15)
-# EAPI=6, fetch restricted, and the file not available to download
-# any more.
-# Removal on 2024-07-15.  Bug #934368.
-net-print/kyocera-1x2x-mfp-driver
 
 # Arthur Zamarin <arthurzam@gentoo.org> (2024-06-15)
 # EAPI=6, no reverse dependencies, not packaged on other distributions,
@@ -120,12 +150,6 @@ sci-chemistry/procheck
 # EAPI=6, maintainer-needed, no reverse dependencies.
 # Removal on 2024-07-14.  Bugs #934227, #898840.
 www-misc/log-toolkit
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2024-06-13)
-# EAPI=6, maintainer-needed, waiting for a bump, various failures
-# with modern C.
-# Removal on 2024-07-13.  Bugs #934200, #711348, #726634, #831750.
-app-misc/blink1
 
 # Arthur Zamarin <arthurzam@gentoo.org> (2024-06-12)
 # EAPI=6, maintainer needed, no reverse dependencies. Not maintained in
@@ -402,10 +426,6 @@ net-p2p/gnut
 # #741444, #831092, #862717.
 sci-libs/h5part
 
-# Michał Górny <mgorny@gentoo.org> (2024-06-06)
-# Causes crashes in pure Python modules, e.g. dev-python/freezegun.
-=dev-lang/python-3.13.0_beta2
-
 # Maciej Barć <xgqt@gentoo.org> (2024-06-05)
 # Old and experimental Scheme compiler.
 # Bugs: 870472 and 906863
@@ -486,31 +506,6 @@ dev-util/stepman
 # Short-lived side-by-side release, now unnecessary as it moved back to
 # kde-apps/kio-extras:5. Removal on 2024-06-04.
 kde-apps/kio-extras-kf5
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2024-05-18)
-# EAPI=6, no reverse dependencies, dead homepage, has issues
-# with modern C, maintainer needed.
-# Removal on 2024-06-17.  Bugs #932168, #906348, #895028, #870640.
-dev-lang/srf
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2024-05-18)
-# EAPI6. Fails to compile with go versions in tree. Upstream is archived.
-# Uses deprecated go eclasses. Maintainer needed, no rev deps.
-# Removal on 2024-06-17.  Bugs #932166, #844604, #679832.
-app-emulation/hyperd
-
-# Michał Górny <mgorny@gentoo.org> (2024-05-18)
-# Another abandoned project in the middle of a line of forks.
-# Broken with Python 3.12, with pytest 8 and with numpy 2.  Last
-# upstream activity in September 2023, but bugs remained unanswered
-# before that.
-# Removal on 2024-06-17.  Bug #929433.
-dev-python/aesara
-
-# Michał Górny <mgorny@gentoo.org> (2024-05-18)
-# Superseded by dev-python/pdm-backend.  No revdeps left.
-# Removal on 2024-06-17.  Bug #932160.
-dev-python/pdm-pep517
 
 # Sam James <sam@gentoo.org> (2024-04-28)
 # Masked for testing. Tracker bug: bug #930805.
@@ -663,11 +658,6 @@ x11-drivers/nvidia-drivers:0/390
 # The main consumer, phpunit, does not initiate the new timer correctly
 # This is likely to cause issues in tests; Unmask if using for other purposes
 >=dev-php/PHP_Timer-5.0
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2021-11-23)
-# Does not support updated dev-java/pdfbox-2.0.24, Bug #803488
-# Blocks (CVE-2018-11797, CVE-2021-{27807,27906,31811,31812})
-dev-tex/pdfannotextractor
 
 # Ionen Wolkens <ionen@gentoo.org> (2021-10-09)
 # Vulkan beta driver branch aimed at Vulkan developers for testing

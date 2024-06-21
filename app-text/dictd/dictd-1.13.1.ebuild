@@ -11,7 +11,7 @@ SRC_URI="https://downloads.sourceforge.net/dict/${P}.tar.gz"
 
 LICENSE="GPL-1+ GPL-2+"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="dbi judy minimal selinux test"
 RESTRICT="!test? ( test )"
 
@@ -122,6 +122,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	readme.gentoo_print_elog
 	if has_version sys-apps/systemd; then
 		ewarn "The default location for dicts has changed! If you've modified your"
 		ewarn "systemd units locally to point into /usr/lib/dict, please update it"
