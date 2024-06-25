@@ -43,6 +43,7 @@ DEPEND="${RDEPEND}
 	)
 "
 BDEPEND="
+	virtual/pkgconfig
 	doc? (
 		app-text/doxygen[dot]
 		virtual/latex-base

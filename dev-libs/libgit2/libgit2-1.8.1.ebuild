@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit cmake flag-o-matic python-any-r1
 
@@ -16,7 +16,7 @@ S=${WORKDIR}/${P/_/-}
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="0/$(ver_cut 1-2)"
-KEYWORDS="amd64 arm arm64 ~loong ppc ppc64 ~riscv ~s390 ~sparc x86 ~ppc-macos"
+KEYWORDS="amd64 arm arm64 ~loong ppc ppc64 ~riscv ~s390 sparc x86 ~ppc-macos"
 IUSE="examples gssapi +ssh test +threads trace"
 RESTRICT="!test? ( test )"
 

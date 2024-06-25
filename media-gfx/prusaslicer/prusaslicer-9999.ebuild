@@ -51,13 +51,18 @@ RDEPEND="
 	sys-libs/zlib:=
 	virtual/opengl
 	x11-libs/gtk+:3
-	>=x11-libs/wxGTK-3.2.2.1-r3:${WX_GTK_VER}[X,opengl]
+	>=x11-libs/wxGTK-3.2.2.1-r3:${WX_GTK_VER}[X,opengl,webkit]
 	media-libs/nanosvg:=
 "
 DEPEND="${RDEPEND}
 	media-libs/qhull[static-libs]
 	test? ( =dev-cpp/catch-2* )
 "
+
+PATCHES=(
+	"${FILESDIR}/${PN}-2.8.0-missing-includes.patch"
+	"${FILESDIR}/${PN}-2.8.0-fixed-linking.patch"
+)
 
 src_prepare() {
 	if has_version ">=sci-libs/opencascade-7.8.0"; then

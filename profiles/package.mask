@@ -33,6 +33,69 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2024-06-25)
+# Subvolume printing is broken: https://github.com/kdave/btrfs-progs/issues/829
+=sys-fs/btrfs-progs-6.9.1
+
+# Sam James <sam@gentoo.org> (2024-06-25)
+# The symbol versioning "fix" breaks anything built with 3.0.0.
+=dev-libs/libassuan-3.0.1
+
+# NHOrus <jy6x2b32pie9@yahoo.com> (2024-06-24)
+# Masked for removal in 30 days.
+# It's a dependency of cinelerra, written for cinelerra.
+# We don't ship cinelerra. It should be removed when we removed cinelerra
+#
+# Bugs #871387, #907261, #712480, #931765.
+media-libs/libmpeg3
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-06-23)
+# EAPI=6, waiting for a version bump, no reverse-dependencies.
+# Removal on 2024-07-23.  Bugs #934756, #924303.
+sci-astronomy/scamp
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-06-22)
+# EAPI=6, no reverse-dependencies, various issues with modern C,
+# installs libtools files.
+# Removal on 2024-07-22.  Bugs #934689, #741440, #849920, #832789, #862714, #828579.
+sci-libs/h5hut
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-06-22)
+# EAPI=6, failing tests, fails to compile in various envs, various
+# QA issues.
+# Removal on 2024-07-22.  Bugs #934687, #928028, #862687, #836104, #741430, #811561, #526442.
+sci-libs/coinor-os
+
+# Michał Górny <mgorny@gentoo.org> (2024-06-21)
+# An obsolete timezone distribution for Python.  No revdeps left.
+# Removal on 2024-07-21.  Bug #934681.
+dev-python/pytzdata
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-06-21)
+# EAPI=6, not maintained in gentoo for a long time, fails to
+# configure.
+# Removal on 2024-07-21.  Bugs #934680, #677444, #898100.
+sci-astronomy/aatm
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-06-21)
+# Last dev-php/* EAPI=6 packages, and reverse dependencies of them.
+# composer has active security vulnerabilities. Others are waiting
+# for version bumps, and unbundling of dependencies.
+# Removal on 2024-07-21.  Bugs #934666.
+dev-php/phpDocumentor
+dev-php/phpcov
+dev-php/phpdepend
+dev-php/phpdocumentor-reflection-common
+dev-php/phpdocumentor-reflection-docblock
+dev-php/phpdocumentor-type-resolver
+dev-php/stringparser_bbcode
+dev-php/symfony-config
+dev-php/symfony-console
+dev-php/symfony-dependency-injection
+dev-php/symfony-event-dispatcher
+dev-php/symfony-yaml
+dev-php/composer
+
 # Hans de Graaff <graaff@gentoo.org> (2024-06-21)
 # Obsolete slot. Please use a newer slot instead.
 # Masked for removal on 2024-07-21.
@@ -368,6 +431,7 @@ dev-ml/async_rpc_kernel:0/0.17
 dev-ml/async_log:0/0.17
 dev-ml/textutils:0/0.17
 dev-ml/async:0/0.17
+>=dev-ml/labltk-8.06.14
 
 # Arthur Zamarin <arthurzam@gentoo.org> (2024-06-08)
 # EAPI=6, waiting for a version bump, not maintained for many years.
@@ -498,25 +562,6 @@ sec-keys/openpgp-keys-jiatan
 # release in 2011. No reverse dependencies. Masked for removal on
 # 20240-06-26.
 dev-ruby/uconv
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2024-05-23)
-# EAPI=6, maintainer-needed, dead HOMEPAGE, fails to compile.
-# Removal on 2024-06-22.  Bugs #932571, #902899, #887625, #853025, #672702.
-x11-plugins/pidgin-rhythmbox
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2024-05-23)
-# Bitrise stack is abandoned in Gentoo, maintainer-needed, awaits
-# version bump, uses deprecated Go eclasses, EAPI=6, fails to compile
-# with modern C.
-# Removal on 2024-06-22.  Bugs #932570, #844688, #717536, #771066, #844700, #844703.
-dev-util/bitrise
-dev-util/envman
-dev-util/stepman
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-05-20)
-# Short-lived side-by-side release, now unnecessary as it moved back to
-# kde-apps/kio-extras:5. Removal on 2024-06-04.
-kde-apps/kio-extras-kf5
 
 # Sam James <sam@gentoo.org> (2024-04-28)
 # Masked for testing. Tracker bug: bug #930805.
