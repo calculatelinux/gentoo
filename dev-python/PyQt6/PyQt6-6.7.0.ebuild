@@ -6,7 +6,7 @@ EAPI=8
 DISTUTILS_EXT=1
 DISTUTILS_USE_PEP517=sip
 PYPI_NO_NORMALIZE=1
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 inherit distutils-r1 flag-o-matic multiprocessing pypi qmake-utils
 
 # 'can' work with older Qt depending on features, but keeping it simple
@@ -17,7 +17,7 @@ HOMEPAGE="https://www.riverbankcomputing.com/software/pyqt/"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~arm64"
+KEYWORDS="amd64 ~arm ~arm64 ~ppc64 ~riscv"
 # defaults match what is provided with qtbase by default (except testlib),
 # reduces the need to set flags but does increase build time a fair amount
 IUSE="

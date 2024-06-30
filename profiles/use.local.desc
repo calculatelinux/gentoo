@@ -2178,6 +2178,7 @@ dev-libs/opensc:secure-messaging - Enable secure messaging
 dev-libs/openssl:bindist - Disable/Restrict EC algorithms (as they seem to be patented) -- note: changes the ABI
 dev-libs/openssl:fips - Enable FIPS provider
 dev-libs/openssl:ktls - Enable support for Kernel implementation of TLS (kTLS)
+dev-libs/openssl:quic - Enable support for QUIC (RFC 9000); a UDP-based protocol intended to replace TCP
 dev-libs/openssl:rfc3779 - Enable support for RFC 3779 (X.509 Extensions for IP Addresses and AS Identifiers)
 dev-libs/openssl:sslv2 - Support for the old/insecure SSLv2 protocol -- note: not required for TLS/https
 dev-libs/openssl:sslv3 - Support for the old/insecure SSLv3 protocol -- note: not required for TLS/https
@@ -3493,6 +3494,7 @@ gui-libs/wlroots:tinywl - Install the minimal wayland client, tinywl
 gui-libs/wlroots:x11-backend - Enable support for handling input/output devices through x11-libs/libxcb
 gui-libs/wlroots:xcb-errors - Better error reporting when using xwayland
 gui-libs/xdg-desktop-portal-wlr:elogind - Enable support for rootless session via elogind
+gui-wm/gamescope:libei - Enable emulated input using dev-libs/libei
 gui-wm/gamescope:pipewire - Enable screen capture via PipeWire
 gui-wm/gamescope:wsi-layer - Enable the WSI layer (required for HDR)
 gui-wm/hikari:X - Enable support for X11 applications (XWayland)
@@ -6378,13 +6380,15 @@ net-misc/curl:ftp - Enable FTP support
 net-misc/curl:gnutls - Enable gnutls ssl backend
 net-misc/curl:gopher - Enable Gopher protocol support
 net-misc/curl:hsts - Enable HTTP Strict Transport Security
+net-misc/curl:http3 - Enable HTTP/3 support
 net-misc/curl:imap - Enable Internet Message Access Protocol support
 net-misc/curl:mbedtls - Enable mbedtls ssl backend
-net-misc/curl:nghttp3 - Enable HTTP/3.0 support using net-libs/nghttp3 and net-libs/ngtcp2
+net-misc/curl:nghttp3 - Enable HTTP/3 support using net-libs/nghttp3
 net-misc/curl:openssl - Enable openssl ssl backend
 net-misc/curl:pop3 - Enable Post Office Protocol 3 support
 net-misc/curl:progress-meter - Enable the progress meter
 net-misc/curl:psl - Enable Public Suffix List (PSL) support. See https://daniel.haxx.se/blog/2024/01/10/psl-in-curl/.
+net-misc/curl:quic - Enable support for QUIC (RFC 9000); a UDP-based protocol intended to replace TCP
 net-misc/curl:rtmp - Enable RTMP Streaming Media support
 net-misc/curl:rustls - Enable Rustls ssl backend
 net-misc/curl:smtp - Enable Simple Mail Transfer Protocol support
@@ -6796,7 +6800,6 @@ net-p2p/deluge:webinterface - Install dependencies needed for the web interface
 net-p2p/eiskaltdcpp:cli - Enable sample cli based on readline
 net-p2p/eiskaltdcpp:daemon - Enable eiskaltdcpp-daemon
 net-p2p/eiskaltdcpp:dht - Enable DHT (distributed hash table) support for libeiskaltdcpp
-net-p2p/eiskaltdcpp:gold - Use gold.ld instead of ld
 net-p2p/eiskaltdcpp:libcanberra - Enable sound notifications support over libcanberra in EiskaltDC++ Gtk
 net-p2p/eiskaltdcpp:minimal - Don't install headers
 net-p2p/fms:frost - Add support for frost boards
@@ -8704,7 +8707,6 @@ www-client/opera-beta:proprietary-codecs - Enable codecs for patent-encumbered a
 www-client/opera-developer:ffmpeg-chromium - Use Chromium FFmpeg fork (media-video/ffmpeg-chromium) rather than mainline FFmpeg (media-video/ffmpeg)
 www-client/opera-developer:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
 www-client/qutebrowser:adblock - Enable Brave's ABP-style adblocker library for improved adblocking
-www-client/qutebrowser:qt6 - Use Qt6 that provides a newer Chromium version
 www-client/qutebrowser:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
 www-client/seamonkey:chatzilla - Build Mozilla's IRC client (default on)
 www-client/seamonkey:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS (unsupported)
@@ -8760,9 +8762,10 @@ www-servers/kore:json - Add support for JSONRPC
 www-servers/kore:openssl - Use the openssl TLS backend
 www-servers/lighttpd:brotli - Enable output compression via app-arch/brotli (recommended)
 www-servers/lighttpd:gnutls - Build module for TLS via net-libs/gnutls
+www-servers/lighttpd:libdeflate - Enable output compression via app-arch/libdeflate
 www-servers/lighttpd:maxminddb - Add support for geolocation using dev-libs/libmaxminddb
 www-servers/lighttpd:mbedtls - Build module for TLS via net-libs/mbedtls
-www-servers/lighttpd:nettle - Use dev-libs/nettle as crypto backend
+www-servers/lighttpd:nettle - Use dev-libs/nettle as crypto library
 www-servers/lighttpd:nss - Build module for TLS via Mozilla's Network Security Services
 www-servers/lighttpd:webdav - Enable webdav properties
 www-servers/lighttpd:zlib - Enable output compression via gzip or deflate algorithms from sys-libs/zlib

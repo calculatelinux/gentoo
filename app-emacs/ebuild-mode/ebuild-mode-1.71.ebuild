@@ -11,7 +11,7 @@ SRC_URI="https://dev.gentoo.org/~ulm/emacs/${P}.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc ~ppc64 ~riscv ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
 
 BDEPEND="sys-apps/texinfo"
 
@@ -24,5 +24,6 @@ pkg_postinst() {
 	optfeature "ebuild commands support" sys-apps/portage
 	optfeature "additional development tools" dev-util/pkgdev
 	optfeature "ebuild QA utilities" dev-util/pkgcheck
+	optfeature "XML syntax validation" app-emacs/nxml-gentoo-schemas
 	optfeature "generating HTML from GLEPs" dev-python/docutils-glep
 }

@@ -56,7 +56,9 @@ src_prepare() {
 }
 
 src_configure() {
-	# See https://github.com/intel/compute-runtime/issues/531
+	# Filtered for two reasons:
+	# 1) https://github.com/intel/compute-runtime/issues/528
+	# 2) bug #930199
 	filter-lto
 
 	local mycmakeargs=(
@@ -65,6 +67,7 @@ src_configure() {
 		-DCMAKE_INSTALL_LIBDIR="$(get_libdir)"
 		-DBUILD_WITH_L0="$(usex l0)"
 		-DDISABLE_LIBVA="$(usex !vaapi)"
+		-DNEO_DISABLE_LD_GOLD="ON"
 		-DNEO__METRICS_LIBRARY_INCLUDE_DIR="${ESYSROOT}/usr/include"
 		-DKHRONOS_GL_HEADERS_DIR="${ESYSROOT}/usr/include"
 		-DOCL_ICD_VENDORDIR="${EPREFIX}/etc/OpenCL/vendors"
