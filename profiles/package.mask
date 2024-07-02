@@ -33,6 +33,21 @@
 
 #--- END OF EXAMPLES ---
 
+# James Le Cuirot <chewi@gentoo.org> (2024-07-01)
+# Ancient, dead upstream, generally awful.
+# Removal on 2024-08-01.  Bugs #935307, #935308, #935309.
+games-arcade/spacerider
+games-arcade/tuxdash
+games-arcade/xsfcave
+
+# NHOrus <jy6x2b32pie9@yahoo.com> (2024-06-28)
+# games-puzzle/seatris: last rites
+# Twenty-year-old tetris clone with upstream that wasn't touched since,
+# broken code and broken autoconf.
+# Removed after 2024-08-01
+# Bug: https://bugs.gentoo.org/935057
+games-puzzle/seatris
+
 # Sam James <sam@gentoo.org> (2024-06-25)
 # Subvolume printing is broken: https://github.com/kdave/btrfs-progs/issues/829
 =sys-fs/btrfs-progs-6.9.1
@@ -428,6 +443,7 @@ dev-ml/textutils:0/0.17
 dev-ml/async:0/0.17
 >=dev-ml/labltk-8.06.14
 dev-ml/patience_diff:0/0.17
+>=dev-ml/ppx_deriving-6.0.2
 
 # Arthur Zamarin <arthurzam@gentoo.org> (2024-06-08)
 # EAPI=6, waiting for a version bump, not maintained for many years.
@@ -650,7 +666,7 @@ sec-keys/openpgp-keys-jiatan
 # Sam James <sam@gentoo.org> (2023-05-10)
 # Lots of package breakage as usual for new versions. Masked until most/all
 # reverse dependencies are fixed. Tracker bug is bug #906077.
-=dev-libs/libfmt-10*
+>=dev-libs/libfmt-10
 
 # Ionen Wolkens <ionen@gentoo.org> (2023-03-30)
 # NVIDIA dropped support for the 390.xx branch in December 2022[1].
