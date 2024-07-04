@@ -496,12 +496,6 @@ sci-libs/coinhsl
 >=xfce-base/xfconf-4.19
 >=xfce-base/xfdesktop-4.19
 
-# David Seifert <soap@gentoo.org> (2024-06-08)
-# Last release 12 years ago, clearly abandoned upstream, EAPI 6, no
-# other major distro still carries this.
-# Removal on 2024-07-08. Bug #933825.
-app-i18n/imhangul
-
 # Arthur Zamarin <arthurzam@gentoo.org> (2024-06-08)
 # EAPI=6, not maintained since cvs days. Keyworded for x86 and ppc
 # only. Fails to compile with modern C.
@@ -547,13 +541,8 @@ dev-ruby/rspec-rails:5
 # Arthur Zamarin <arthurzam@gentoo.org> (2024-05-31)
 # EAPI=6, maintainer-needed, incorrect LICENSE, fails to compile with
 # clang.
-# Removal on 2024-06-30.  Bugs #933241, #889912, #880267, #562822, #930500.
+# Removal on 2024-07-09.  Bugs #933241, #889912, #880267, #562822, #930500.
 net-mail/gnubiff
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2024-05-31)
-# EAPI=6, no activity upstream, maintianer-needed.
-# Removal on 2024-06-30.  Bugs #933239, #828068.
-app-emulation/phpvirtualbox
 
 # Sam James <sam@gentoo.org> (2024-05-28)
 # Breaks reverse dependencies like protobuf-c (bug #932857) and protobuf-26.1

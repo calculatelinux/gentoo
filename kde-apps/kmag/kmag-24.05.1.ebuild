@@ -13,7 +13,7 @@ HOMEPAGE="https://apps.kde.org/kmag/"
 
 LICENSE="GPL-2" # TODO: CHECK
 SLOT="6"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 IUSE="keyboardfocus"
 
 DEPEND="
@@ -31,7 +31,7 @@ RDEPEND="${DEPEND}"
 
 src_configure() {
 	local mycmakeargs=(
-		$(cmake_use_find_package keyboardfocus QAccessibilityClient)
+		$(cmake_use_find_package keyboardfocus QAccessibilityClient6)
 	)
 
 	ecm_src_configure
