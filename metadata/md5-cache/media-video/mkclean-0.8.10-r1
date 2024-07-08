@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile configure install
+DESCRIPTION=mkclean is a command line tool to clean and optimize Matroska files
+EAPI=8
+HOMEPAGE=https://www.matroska.org/downloads/mkclean.html
+INHERIT=flag-o-matic toolchain-funcs
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/project/matroska/mkclean/mkclean-0.8.10.tar.bz2
+_eclasses_=flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084
+_md5_=cec322ab9fc84fccd8ebb547b2274006

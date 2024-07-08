@@ -37,7 +37,7 @@ else
 		)"
 
 	if [[ ${PV} != *rc* ]] ; then
-		KEYWORDS="~amd64 ~arm arm64 ~loong ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+		KEYWORDS="amd64 arm arm64 ~loong ~ppc ~ppc64 ~riscv ~s390 ~sparc x86"
 	fi
 fi
 
@@ -77,6 +77,11 @@ BDEPEND="
 
 EPYTEST_XDIST=1
 distutils_enable_tests pytest
+
+PATCHES=(
+	# https://github.com/scipy/scipy/pull/20914
+	"${FILESDIR}/${P}-test.patch"
+)
 
 src_unpack() {
 	default

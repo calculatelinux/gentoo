@@ -4380,9 +4380,6 @@ media-libs/libva-intel-driver:hybrid - Enable support for hybrid vaapi hardware 
 media-libs/libva-intel-media-driver:redistributable - Install redistributable media kernel binaries (no source code) files (primarily needed for video encoding support)
 media-libs/libvisio:tools - Build conversion tools
 media-libs/libvmaf:embed-models - Compile default vmaf models into the library (needs app-editors/vim-core)
-media-libs/libvpl:drm - Build with DRM support
-media-libs/libvpl:experimental - Build dispatcher with experimental APIs
-media-libs/libvpl:tools - Build decode/encode/analyse/inspect tools
 media-libs/libvpl-tools:drm - Build with DRM support
 media-libs/libvpx:highbitdepth - Enable 10 and 12 bit support for VP9.
 media-libs/libvpx:postproc - Enable additional post processing filters
@@ -4421,7 +4418,6 @@ media-libs/noise-suppression-for-voice:vst3 - Enable the VST3 plugin
 media-libs/oidn:apps - Build the standalone denoise, self test, and benchmark binaries.
 media-libs/oidn:hip - Build OIDN with AMD HIP support.
 media-libs/oidn:openimageio - Enable OpenImageIO Support
-media-libs/oneVPL-cpu:experimental - Enable experimental API
 media-libs/oneVPL-cpu:openh264 - Use media-libs/openh264 instead of media-libs/x264
 media-libs/openal:pipewire - Enable support for the media-video/pipewire audio backend
 media-libs/openal:sndio - Enable support for the media-sound/sndio backend
@@ -4829,6 +4825,7 @@ media-sound/ncspot:cover - Support displaying the album cover
 media-sound/ncspot:mpris - Allow ncspot to be controlled via MPRIS API
 media-sound/ncspot:ncurses - Use cursive/ncurses-backend instead of crossterm or pancurses
 media-sound/ncspot:notify - Show what's playing via a notification
+media-sound/owntone:chromecast - build and install Chromecast support
 media-sound/patchage:jack-dbus - Use Jack via D-Bus instead of libjack
 media-sound/picard:discid - Enable reading the ID of the inserted CD
 media-sound/picard:fingerprints - Enable calculation and lookup of AcoustID fingerprints
@@ -5073,7 +5070,10 @@ media-video/ffmpeg:lcms - Enable ICC profile support via media-libs/lcms.
 media-video/ffmpeg:libaom - Enables media-libs/libaom based AV1 codec support.
 media-video/ffmpeg:libaribb24 - Enables ARIB text and caption decoding via media-libs/aribb24.
 media-video/ffmpeg:libdrm - Enables x11-libs/libdrm support for better screen grabbing and hardware accelerated codecs.
+media-video/ffmpeg:libdvdnav - Uses media-libs/libdvdnav to enable DVD demuxing
+media-video/ffmpeg:libdvdread - Uses media-libs/libdvdread to enable DVD demuxing
 media-video/ffmpeg:libilbc - Enables iLBC de/encoding via media-libs/libilbc.
+media-video/ffmpeg:liblc3 - Enables LC3 de/encoding via media-sound/liblc3.
 media-video/ffmpeg:libplacebo - Adds flexible GPU-accelerated processing filter based on media-libs/libplacebo.
 media-video/ffmpeg:librtmp - Enables Real Time Messaging Protocol using librtmp (media-video/rtmpdump) in addition to FFmpeg's native implementation.
 media-video/ffmpeg:libsoxr - Enables audio resampling through media-libs/soxr.
@@ -5090,7 +5090,9 @@ media-video/ffmpeg:openh264 - Enables H.264 encoding suppoprt via media-libs/ope
 media-video/ffmpeg:openssl - Enables dev-libs/openssl support. Adds support for encrypted network protocols (TLS/HTTPS).
 media-video/ffmpeg:pic - Force shared libraries to be built as PIC (this is slower)
 media-video/ffmpeg:postproc - Build and install libpostproc.
+media-video/ffmpeg:qrcode - Enables QR encode generation via media-gfx/qrencode
 media-video/ffmpeg:qsv - Enable Intel Quick Sync Video via media-libs/intel-mediasdk (ffmpeg versions older than, and including, 5.1) or media-libs/libvpl (ffmpeg version newer than 5.1).
+media-video/ffmpeg:quirc - Enables QR decoding via media-libs/quirc
 media-video/ffmpeg:rav1e - Enables AV1 encoding support via media-video/rav1e.
 media-video/ffmpeg:rubberband - Adds time-stretching and pitch-shifting audio filter based on media-libs/rubberband.
 media-video/ffmpeg:shaderc - Use media-libs/shaderc to compile GLSL
@@ -5918,7 +5920,6 @@ net-im/telegram-desktop:libdispatch - Use dev-libs/libdispatch to speed up concu
 net-im/telegram-desktop:qt6 - Build with Qt6 support
 net-im/telegram-desktop:qt6-imageformats - Add support for HEIF, AVIF and JpegXL by bundling kde-frameworks/kimageformats
 net-im/tkabber:plugins - Enables installation the extra plugins
-net-im/tokodon:mpv - Use media-libs/mpvqt instead of dev-qt/qtmultimedia for video playback (default)
 net-im/tokodon:webengine - Use dev-qt/qtwebengine for built-in authentication page (default is external browser)
 net-im/toxic:audio-notify - Enables native sound notifications
 net-im/toxic:games - Enables some small mini-games
@@ -6108,6 +6109,7 @@ net-libs/libwebsockets:client - The client part of the library and libwebsockets
 net-libs/libwebsockets:extensions - Compile with extensions (permessage-deflate)
 net-libs/libwebsockets:generic-sessions - With the Generic Sessions plugin
 net-libs/libwebsockets:http-proxy - Support for rewriting HTTP proxying
+net-libs/libwebsockets:ipv6 - Compile without support for ipv6
 net-libs/libwebsockets:lejp - With the Lightweight JSON Parser
 net-libs/libwebsockets:libev - Support event loops via dev-libs/libev
 net-libs/libwebsockets:libevent - Support event loops via dev-libs/libevent
@@ -7208,8 +7210,6 @@ sci-chemistry/vmd:tachyon - Add support for tachyon raytracer for HQ images
 sci-chemistry/votca:gromacs - Add support for gromacs file formats through sci-chemistry/gromacs
 sci-electronics/gerbv:unit-mm - Set default unit for coordinates in status bar to mm
 sci-electronics/ghdl:llvm - Build LLVM code generator
-sci-electronics/gspiceui:schematics - Use sci-electronics/geda for schematics editing
-sci-electronics/gspiceui:waveform - Use sci-electronics/gwave for waveform display
 sci-electronics/gtkwave:fasttree - Enables experimental Fast SST Tree widget code.
 sci-electronics/gtkwave:fatlines - Renders lines as double width in gtkwave.
 sci-electronics/gtkwave:judy - Enables Judy array support.

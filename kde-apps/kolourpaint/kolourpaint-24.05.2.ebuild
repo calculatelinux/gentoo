@@ -14,7 +14,7 @@ HOMEPAGE="https://apps.kde.org/kolourpaint/"
 
 LICENSE="BSD-2 LGPL-2 LGPL-2+ || ( LGPL-2.1 LGPL-3 ) GPL-2 handbook? ( FDL-1.2 )"
 SLOT="6"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="~amd64 ~arm64 ~riscv"
 IUSE="scanner"
 
 DEPEND="
@@ -36,7 +36,7 @@ RDEPEND="${DEPEND}"
 
 src_configure() {
 	local mycmakeargs=(
-		$(cmake_use_find_package scanner KF6Sane)
+		$(cmake_use_find_package scanner KSaneWidgets6)
 	)
 
 	ecm_src_configure

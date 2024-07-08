@@ -5,7 +5,6 @@ EAPI=8
 
 ECM_HANDBOOK="optional"
 ECM_TEST="forceoptional"
-KDE_GCC_MINIMAL=13
 PVCUT=$(ver_cut 1-3)
 KFMIN=6.3.0
 QTMIN=6.6.2
@@ -16,7 +15,7 @@ HOMEPAGE="https://apps.kde.org/spectacle/"
 
 LICENSE="LGPL-2+ handbook? ( FDL-1.3 )"
 SLOT="6"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="~amd64 ~arm64 ~riscv"
 IUSE="share"
 
 # slot op: Uses Qt::GuiPrivate for qtx11extras_p.h
@@ -61,6 +60,8 @@ BDEPEND="
 	>=dev-qt/qtwayland-${QTMIN}:6
 	dev-util/wayland-scanner
 "
+
+PATCHES=( "${FILESDIR}"/${P}-gcc12.patch )
 
 src_configure() {
 	local mycmakeargs=(

@@ -16,7 +16,7 @@ HOMEPAGE="
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ia64 ~ppc64 ~riscv ~sparc ~x86"
 
 BDEPEND="
 	dev-python/setuptools-scm[${PYTHON_USEDEP}]
@@ -29,6 +29,10 @@ BDEPEND="
 distutils_enable_tests pytest
 
 python_test() {
+	local EPYTEST_DESELECT=(
+		# fragile to timing
+		tests/test_asyncio.py::TestContextManager::test_sleeps
+	)
 	local EPYTEST_IGNORE=()
 	if ! has_version ">=dev-python/tornado-6.4-r1[${PYTHON_USEDEP}]"; then
 		EPYTEST_IGNORE+=(
