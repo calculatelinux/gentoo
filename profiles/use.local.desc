@@ -544,6 +544,7 @@ app-emulation/dosemu:fluidsynth - use media-sound/fluidsynth for MIDI emulation
 app-emulation/dxvk:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
 app-emulation/dxvk:d3d10 - Enable support for DirectX 10 (d3d10.dll)
 app-emulation/dxvk:d3d11 - Enable support for DirectX 11 (d3d11.dll)
+app-emulation/dxvk:d3d8 - Enable support for DirectX 8 (d3d8.dll)
 app-emulation/dxvk:d3d9 - Enable support for DirectX 9 (d3d9.dll)
 app-emulation/dxvk:dxgi - Enable support for the DirectX Graphics Infrastructure (dxgi.dll)
 app-emulation/faudio:dumpvoices - FAudio dumps buffer data to individual files with RIFF/XWMA headers, usable with players like ffplay/testxwma.
@@ -1869,6 +1870,7 @@ dev-lang/php:jit - Enable PCRE JIT support
 dev-lang/php:ldap-sasl - Add SASL support for the PHP LDAP extension using dev-libs/cyrus-sasl
 dev-lang/php:lmdb - Enable support for dev-db/lmdb db backend
 dev-lang/php:opcache - Enables built-in opcode cache, replacing pecl-apc et al.
+dev-lang/php:opcache-jit - Enable Just In Time (JIT) compilation within the opcache extension
 dev-lang/php:pcntl - Enable the Process Control extension
 dev-lang/php:pdo - Enable the PHP Data Objects extension
 dev-lang/php:phar - Enables the phar extension to provide phar archive support
@@ -2490,6 +2492,7 @@ dev-python/mkdocs-material:social - Install the dependencies of the "social" plu
 dev-python/msgpack:native-extensions - Compiles native "C" extensions (speedups, instead of using python fallback code).
 dev-python/multidict:native-extensions - Compile native C extensions (speedups, instead of using Python fallback code).
 dev-python/mypy:native-extensions - Compiles native C extensions (speedups, instead of using Python fallback code).
+dev-python/netcdf4:blosc - Allow using blosc compression via dev-libs/c-blosc
 dev-python/pandas:full-support - Pull all packages to give pandas full support
 dev-python/paramiko:server - Enable server feature
 dev-python/peewee:native-extensions - Compiles native C extension for more complete SQLite3 support.
