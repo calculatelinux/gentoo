@@ -2370,11 +2370,6 @@ dev-perl/Text-CSV:xs - Install dev-perl/Text-CSV_XS for accelerated decoding
 dev-perl/WWW-Form-UrlEncoded:xs - Install C-Based dependieces for faster performance
 dev-perl/perl-headers:debug - Add source locations in generated .ph files to assist with debugging when errors occur
 dev-perl/perl-headers:sizeof-warning - Include logic to warn when a .ph file tries to use a sizeof() that is unknown
-dev-php/PEAR-HTTP_Request2:curl - Force dev-lang/php to be compiled with curl extension
-dev-php/PEAR-HTTP_Request2:fileinfo - Force dev-lang/php to be compiled with fileinfo extension
-dev-php/PEAR-HTTP_Request2:ssl - Force dev-lang/php to be compiled with ssl extension
-dev-php/PEAR-HTTP_Request2:zlib - Force dev-lang/php to be compiled with zlib extension
-dev-php/PEAR-PHP_Beautifier:cli - Require dev-lang/php to be built with the "cli" SAPI and install the php_beautifier script.
 dev-php/maxmind-db-reader:extension - Build the C extension that uses dev-libs/libmaxminddb
 dev-php/pecl-apcu:lock-pthreadmutex - Enable pthread mutex locking
 dev-php/pecl-apcu:lock-pthreadrw - Enable pthread read/write locking
@@ -4136,6 +4131,7 @@ media-gfx/freecad:techdraw - Build the techdraw module and workbench, a more adv
 media-gfx/freecad:tux - Build the Tux module
 media-gfx/geeqie:ffmpegthumbnailer - Enable video thumbnail support with media-video/ffmpegthumbnailer
 media-gfx/geeqie:map - Enable items GPS map display
+media-gfx/gimp:fits - Enable support for loading/exporting FITS images
 media-gfx/gimp:vector-icons - Enable support for vector icons (experimental)
 media-gfx/graphicsmagick:dynamic-loading - Compile graphicsmagick with dynamically loadable modules
 media-gfx/graphicsmagick:fpx - Enable FlashPix support with media-libs/libfpx
@@ -4169,8 +4165,10 @@ media-gfx/kphotoalbum:phonon - Enable media-libs/phonon video backend (known to 
 media-gfx/kphotoalbum:share - Enable support for a share menu using kde-frameworks/purpose
 media-gfx/kphotoalbum:vlc - Enable media-video/vlc video backend (recommended for X11)
 media-gfx/krita:color-management - Enable color management via media-libs/opencolorio
+media-gfx/krita:media - Enable sound support for animations via media-libs/mlt
 media-gfx/krita:mypaint-brush-engine - Enable MyPaint brush engine support media-libs/libmypaint
 media-gfx/krita:qtmedia - Enable sound support for animations via dev-qt/qtmultimedia
+media-gfx/krita:xsimd - Enable usage of SIMD instructions via dev-cpp/xsimd
 media-gfx/librecad:tools - Build additional tool programs: tff2lff
 media-gfx/luminance-hdr:fits - Enable support for the FITS format
 media-gfx/mandelbulber:opencl - Enable GPU rendering support using OpenCL
@@ -4735,8 +4733,6 @@ media-sound/gimmix:lyrics - Enable lyric fetching
 media-sound/guitarix:lv2 - Build lv2 plugins
 media-sound/guitarix:nsm - Build NSM (Non Session Manager) support
 media-sound/guitarix:standalone - Build standalone application
-media-sound/herrie:http - Enable http streaming
-media-sound/herrie:xspf - Enable support for reading and saving XSPF playlists
 media-sound/hydrogen:archive - Use libarchive instead of libtar
 media-sound/hydrogen:portmidi - Add portmidi support
 media-sound/jack-audio-connection-kit:pam - Add basic realtime configuration via sys-auth/realtime-base
@@ -5336,14 +5332,6 @@ net-analyzer/barnyard2:sguil - Enable sguil (The Analyst Console for Network Sec
 net-analyzer/bwm-ng:csv - Enable csv output
 net-analyzer/bwm-ng:html - Enable html output
 net-analyzer/cacti:doc - install html documentation
-net-analyzer/check_mk_agent:apache_status - Install check_mk-agent apache-status plugin.
-net-analyzer/check_mk_agent:inventory - Install check_mk-agent linux inventory plugin.
-net-analyzer/check_mk_agent:logwatch - Install check_mk-agent logwatch plugin.
-net-analyzer/check_mk_agent:mysql - Install check_mk-agent mysql plugin.
-net-analyzer/check_mk_agent:nfsexports - Install check_mk-agent nfsexports plugin.
-net-analyzer/check_mk_agent:postgres - Install check_mk-agent postgres plugin.
-net-analyzer/check_mk_agent:smart - Install check_mk-agent S.M.A.R.T plugin.
-net-analyzer/check_mk_agent:zypper - Install check_mk-agent zypper plugin.
 net-analyzer/echoping:http - enable support for http protocol.
 net-analyzer/echoping:icp - enable support for ICP (used to monitor proxies).
 net-analyzer/echoping:priority - enable socket priority support.
@@ -5928,6 +5916,7 @@ net-im/telegram-desktop:libdispatch - Use dev-libs/libdispatch to speed up concu
 net-im/telegram-desktop:qt6 - Build with Qt6 support
 net-im/telegram-desktop:qt6-imageformats - Add support for HEIF, AVIF and JpegXL by bundling kde-frameworks/kimageformats
 net-im/tkabber:plugins - Enables installation the extra plugins
+net-im/tokodon:mpv - Use media-libs/mpvqt instead of dev-qt/qtmultimedia for video playback (default)
 net-im/tokodon:webengine - Use dev-qt/qtwebengine for built-in authentication page (default is external browser)
 net-im/toxic:audio-notify - Enables native sound notifications
 net-im/toxic:games - Enables some small mini-games
@@ -6292,48 +6281,6 @@ net-misc/asterisk-moh-opsound:siren7 - Install the sounds files for the siren7 c
 net-misc/asterisk-moh-opsound:sln16 - Install the sounds files for the sln16 codec.
 net-misc/asterisk-moh-opsound:ulaw - Install the sounds files for the ulaw codec.
 net-misc/asterisk-moh-opsound:wav - Install the sounds files for the wav codec.
-net-misc/bfgminer:adl - Enable support for controlling fans and overclocking on AMD cards with AMD Display Library
-net-misc/bfgminer:alchemist - Enable support for mining with AlcheMist
-net-misc/bfgminer:avalon - Enable support for mining with Avalon 1 ASIC modules
-net-misc/bfgminer:avalonmm - Enable support for mining with Avalon 2/3 ASIC modules
-net-misc/bfgminer:bfsb - Enable support for mining on BFSB host Raspberry Pi
-net-misc/bfgminer:bfx - Enable support for mining with BFx2 USB sticks
-net-misc/bfgminer:bifury - Enable support for mining with Bi*fury USB sticks
-net-misc/bfgminer:bigpic - Enable support for mining with Big Picture Mining USB sticks (Red/BlueFury, BF1, etc)
-net-misc/bfgminer:bitforce - Enable support for mining with ButterFly Labs BitFORCE ASICs and/or FPGAs
-net-misc/bfgminer:bitfury - Enable support for mining with 55nm Bitfury-based devices
-net-misc/bfgminer:bitmain - Enable support for mining with Bitmain Antminer S* series
-net-misc/bfgminer:cointerra - Enable support for mining with CoinTerra TerraMiner.
-net-misc/bfgminer:cpumining - Enable support for mining with CPUs
-net-misc/bfgminer:drillbit - Enable support for mining with Drillbit boards
-net-misc/bfgminer:dualminer - Enable support for mining with DualMiner USB sticks
-net-misc/bfgminer:gridseed - Enable support for mining with 5-chip GridSeed orbs
-net-misc/bfgminer:hashbuster - Enable support for mining with HashBuster nano boards
-net-misc/bfgminer:hashbuster2 - Enable support for mining with HashBuster micro boards
-net-misc/bfgminer:hashfast - Enable support for mining with HashFast devices
-net-misc/bfgminer:icarus - Enable support for mining with Icarus-compatible devices (including Block Erupter Sapphire ASICs)
-net-misc/bfgminer:jingtian - Enable support for mining on JingTian boards via SPI/GPIO
-net-misc/bfgminer:keccak - Enable support for mining with Keccak miners
-net-misc/bfgminer:klondike - Enable support for mining with Klondike USB miners
-net-misc/bfgminer:libusb - Use libusb
-net-misc/bfgminer:littlefury - Enable support for mining with LittleFury USB sticks
-net-misc/bfgminer:metabank - Enable support for mining on Metabank host Raspberry Pi
-net-misc/bfgminer:minion - Enable support for mining on minion chips via SPI (BlackArrow Prospero)
-net-misc/bfgminer:modminer - Enable support for mining with ModMiner FPGAs
-net-misc/bfgminer:nanofury - Enable support for mining with NanoFury USB sticks
-net-misc/bfgminer:opencl - Enable support for mining with OpenCL-capable devices (GPUs)
-net-misc/bfgminer:proxy - Enable support for virtual proxy device
-net-misc/bfgminer:proxy_getwork - Enable proxy support for getwork protocol (often used with Block Erupter Blades)
-net-misc/bfgminer:proxy_stratum - Enable proxy support for stratum protocol
-net-misc/bfgminer:rockminer - Enable support for mining with RockMiner devices
-net-misc/bfgminer:screen - Provide start-bfgminer.sh script to launch BFGMiner in app-misc/screen
-net-misc/bfgminer:scrypt - Enable support for scrypt mining algorithm
-net-misc/bfgminer:sha256d - Enable support for SHA256d mining algorithm
-net-misc/bfgminer:twinfury - Enable support for mining with Twinfury USB sticks
-net-misc/bfgminer:udev-broad-rules - Enable broader udev rules that may match non-mining devices
-net-misc/bfgminer:x6500 - Enable support for mining with X6500 FPGAs
-net-misc/bfgminer:zeusminer - Enable support for mining with ZeusMiner units
-net-misc/bfgminer:ztex - Enable support for mining with Ztex FPGAs
 net-misc/bird:client - Build the ncurses/readline full featured CLI
 net-misc/bird:libssh - Enables net-libs/libssh binding, mendatory for RPKI support
 net-misc/casync:fuse - Enable fuse support
@@ -7453,8 +7400,6 @@ sci-libs/netcdf:blosc - Allow using blosc compression via dev-libs/c-blosc
 sci-libs/netcdf:dap - Support for remote data access with the built-in OPeNDAP client
 sci-libs/netcdf:hdf - Build with HDF4 read capability(sci-libs/hdf, sci-libs/hdf5 and sys-libs/zlib required).
 sci-libs/nlopt:octave - Add plugin for sci-mathematics/octave
-sci-libs/o2scl:armadillo - Build matrix manipulation with sci-libs/armadillo
-sci-libs/o2scl:eigen - Build matrix manipulation with dev-cpp/eigen
 sci-libs/octomap:dynamicEDT3D - Build and install dynamicEDT3D library: A library for incrementally updatable Euclidean distance transforms in 3D.
 sci-libs/onnx:disableStaticReg - Disable Static Registration
 sci-libs/openblas:dynamic - Build dynamic architecture detection at run time (for multi targets)
@@ -7752,14 +7697,17 @@ sci-visualization/gwyddion:jansson - Enable JSON data manipulation via dev-libs/
 sci-visualization/gwyddion:sourceview - Enable support for x11-libs/gtksourceview
 sci-visualization/gwyddion:unique - Enable remote control backend via dev-libs/libunique
 sci-visualization/labplot:cantor - Enable support for different open-source computer algebra systems via kde-apps/cantor
+sci-visualization/labplot:eigen - Enable support for fast baseline removal via dev-cpp/eigen
 sci-visualization/labplot:excel - Enable support for importing/exporting Microsoft Excel files (.xlsx) via dev-libs/qxlsx
 sci-visualization/labplot:fits - Enable support for NASA's sci-libs/cfitsio library
 sci-visualization/labplot:libcerf - Enable special functions from sci-libs/libcerf
 sci-visualization/labplot:markdown - Enable Markdown support via app-text/discount
 sci-visualization/labplot:matio - Enable support for matio (sci-libs/matio)
+sci-visualization/labplot:ods - Enable support for importing/exporting OpenDocument spreadsheets (.ods) via dev-libs/liborcus
 sci-visualization/labplot:origin - Enable support for reading OriginLab OPJ project files through sci-libs/liborigin
 sci-visualization/labplot:root - Enable support for CERN's ROOT file type
 sci-visualization/labplot:serial - Enable support for RS232 serial ports using dev-qt/qtserialport
+sci-visualization/labplot:share - Enable support for a share menu using kde-frameworks/purpose
 sci-visualization/paraview:boost - Enable the usage of dev-libs/boost
 sci-visualization/paraview:cg - Add support for nvidia's cg shaders
 sci-visualization/paraview:nvcontrol - Add NVCONTROL support for OpenGL options

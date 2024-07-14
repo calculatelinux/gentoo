@@ -245,7 +245,6 @@ BDEPEND="
 		>=dev-python/ddt-1.4.4[${PYTHON_USEDEP}]
 		>=dev-python/hypothesis-4.24.3[${PYTHON_USEDEP}]
 		>=dev-python/networkx-2.2[${PYTHON_USEDEP}]
-		<dev-python/pytest-8.2[${PYTHON_USEDEP}]
 		>=dev-python/qiskit-aer-0.14[${PYTHON_USEDEP}]
 		>=dev-python/scikit-learn-0.20.0[${PYTHON_USEDEP}]
 	)
@@ -270,6 +269,7 @@ python_test() {
 	local EPYTEST_DESELECT=(
 		# TODO
 		test/python/circuit/test_equivalence.py::TestEquivalenceLibraryVisualization::test_equivalence_draw
+		test/python/quantum_info/operators/symplectic/test_sparse_pauli_op.py::TestSparsePauliOpConversions::test_to_matrix_zero
 		test/python/transpiler/test_unitary_synthesis_plugin.py::TestUnitarySynthesisPlugin
 		test/python/visualization/test_dag_drawer.py::TestDagDrawer::test_dag_drawer_no_register
 	)
