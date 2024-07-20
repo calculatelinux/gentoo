@@ -22,9 +22,9 @@ else
 		verify-sig? ( mirror://openssl/source/${MY_P}.tar.gz.asc )
 	"
 
-	#if [[ ${PV} != *_alpha* && ${PV} != *_beta* ]] ; then
-	#	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~arm64-macos ~ppc-macos ~x64-macos ~x64-solaris"
-	#fi
+	if [[ ${PV} != *_alpha* && ${PV} != *_beta* ]] ; then
+		KEYWORDS="~amd64 ~mips ~sparc ~x86"
+	fi
 fi
 
 S="${WORKDIR}"/${MY_P}
@@ -57,6 +57,8 @@ MULTILIB_WRAPPED_HEADERS=(
 )
 
 PATCHES=(
+	# bug 936311, drop on next version bump
+	"${FILESDIR}"/${P}-riscv.patch
 )
 
 pkg_setup() {
