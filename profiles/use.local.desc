@@ -464,6 +464,7 @@ app-editors/gvim:crypt - Use dev-libs/libsodium for crypto support
 app-editors/gvim:cscope - Enable cscope interface
 app-editors/gvim:netbeans - Include netbeans external editor integration support
 app-editors/gvim:racket - Enable support for Scheme using dev-scheme/racket
+app-editors/helix:grammar - Build and install grammar language files
 app-editors/jasspa-microemacs:nanoemacs - Build NanoEmacs instead of MicroEmacs
 app-editors/joe:xterm - Enable full xterm clipboard support
 app-editors/leafpad:emacs - Enable Emacs key theme
@@ -1286,7 +1287,7 @@ app-text/wv:tools - Install optional utilities considered deprecated in favor of
 app-text/xmlto:text - Support conversion from XML to plain text
 app-text/xpdf:cmyk - Include support for CMYK rasterization
 app-text/xpdf:i18n - Enable support non-UTF8 national charsets
-app-text/xpdf:icons - Generate desktop PNG icons using media-gfx/inkscape
+app-text/xpdf:icons - Generate desktop PNG icons using rsvg-convert from gnome-base/librsvg
 app-text/xpdf:libpaper - Use app-text/libpaper to get paper preferences
 app-text/xpdf:metric - Use A4 instead of US Letter paper size by default for PostScript output. This option has effect only if libpaper USE flag is disabled
 app-text/xpdf:opi - Include support for OPI (Open Prepress Interface) comments
@@ -3162,6 +3163,10 @@ games-emulation/mupen64plus-video-glide64mk2:hires - Support hi-resolution textu
 games-emulation/pcsx2:clang - Use Clang compiler to build (the only compiler that is currently supported by upstream on Linux, do not report bugs if force-disabled)
 games-emulation/pcsx2:sndio - Enable support for the media-sound/sndio backend
 games-emulation/ppsspp:discord - Enable interfacing with a locally running Discord desktop client
+games-emulation/rmg:angrylion-plugin - Enable the mupen64plus-video-angrylion-plus XMAME licensed plugin
+games-emulation/rmg:discord - Enable Discord RPC support
+games-emulation/rmg:dynarec - Enable the new dynarec for the mupen64plus-core plugin
+games-emulation/rmg:rust-plugin - Enable the mupen64plus-input-gca rust plugin
 games-emulation/snes9x:libretro - Build libretro port
 games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recommended)
 games-emulation/vbam:link - Enable GBA linking functionality
@@ -4339,6 +4344,7 @@ media-libs/libheif:aom - Use media-libs/libaom for AVIF encoding/decoding
 media-libs/libheif:gdk-pixbuf - Enable x11-libs/gdk-pixbuf plugin
 media-libs/libheif:go - Enable building dev-lang/go code/examples
 media-libs/libheif:rav1e - Use media-video/rav1e for AVIF encoding
+media-libs/libheif:svt-av1 - Use media-libs/svt-av1 for SVT-AV1 encoding
 media-libs/libheif:x265 - Use media-libs/x265 for HEIF encoding
 media-libs/libjxl:gdk-pixbuf - Build a gdk-pixbuf loader.
 media-libs/libjxl:jpeg - Enable full support for JPEG images. When disabled, only lossless conversion between JPEG and JPEG-XL is supported.
@@ -7884,6 +7890,12 @@ sys-apps/openrc:newnet - enable the new network stack (experimental)
 sys-apps/openrc:s6 - install s6-linux-init
 sys-apps/openrc:sysv-utils - Install sysvinit compatibility scripts for halt, init, poweroff, reboot and shutdown
 sys-apps/openrc:sysvinit - control the dependency on sysvinit (experimental)
+sys-apps/openrc-navi:bash - enable the use of bash in service scripts (experimental)
+sys-apps/openrc-navi:netifrc - enable Gentoo's network stack (net.* scripts)
+sys-apps/openrc-navi:newnet - enable the new network stack (experimental)
+sys-apps/openrc-navi:s6 - install s6-linux-init
+sys-apps/openrc-navi:sysv-utils - Install sysvinit compatibility scripts for halt, init, poweroff, reboot and shutdown
+sys-apps/openrc-navi:sysvinit - control the dependency on sysvinit (experimental)
 sys-apps/pciutils:dns - Enable support for querying the central database of PCI IDs using DNS
 sys-apps/pciutils:kmod - Enable sys-apps/kmod support for the -k switch in lspci command
 sys-apps/pciutils:zlib - Support compressed pci.ids database

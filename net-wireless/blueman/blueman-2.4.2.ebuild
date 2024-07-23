@@ -39,6 +39,10 @@ DEPEND="
 BDEPEND="
 	$(python_gen_cond_dep '
 		dev-python/cython[${PYTHON_USEDEP}]
+		test? (
+			dev-python/python-dbusmock[${PYTHON_USEDEP}]
+			>=net-misc/networkmanager-0.8[introspection]
+		)
 	')
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
@@ -80,6 +84,8 @@ RDEPEND="
 	)
 "
 
+distutils_enable_tests unittest
+
 pkg_pretend() {
 	if use network; then
 		local CONFIG_CHECK="
@@ -97,12 +103,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	if [[ ${PV} == 9999 ]]; then
-		eautoreconf
-	else
-		# remove this when upstream switches to automake with .pyc fix
-		eautomake
-	fi
+	# Run else fails on newer automake: https://bugs.gentoo.org/936065
+	eautoreconf
 	distutils-r1_src_prepare
 }
 
@@ -125,6 +127,27 @@ python_configure() {
 
 python_compile() {
 	default
+}
+
+python_test() {
+	local -x PYTHONPATH=module/.libs
+
+	if [[ ! -f /dev/rfkill ]]; then
+		# Tests attempt to import these modules if present, but they
+		# require /dev/rfkill.  Hide them to make the tests pass.
+		mv blueman/plugins/mechanism/RfKill.py{,~} || die
+		mv blueman/plugins/applet/KillSwitch.py{,~} || die
+	fi
+
+	local failed=
+	nonfatal eunittest || failed=1
+
+	if [[ ! -f /dev/rfkill ]]; then
+		mv blueman/plugins/mechanism/RfKill.py{~,} || die
+		mv blueman/plugins/applet/KillSwitch.py{~,} || die
+	fi
+
+	[[ ${failed} ]] && die "Tests failed with ${EPYTHON}"
 }
 
 python_install() {
