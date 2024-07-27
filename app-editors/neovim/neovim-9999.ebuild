@@ -39,6 +39,7 @@ BDEPEND="${LUA_DEPS}
 "
 # Check https://github.com/neovim/neovim/blob/master/third-party/CMakeLists.txt for
 # new dependency bounds and so on on bumps (obviously adjust for right branch/tag).
+# List of required tree-sitter parsers is taken from cmake.deps/deps.txt
 DEPEND="${LUA_DEPS}
 	>=dev-lua/luv-1.45.0[${LUA_SINGLE_USEDEP}]
 	$(lua_gen_cond_dep '
@@ -52,6 +53,14 @@ DEPEND="${LUA_DEPS}
 	>=dev-libs/libvterm-0.3.3
 	>=dev-libs/msgpack-3.0.0:=
 	>=dev-libs/tree-sitter-0.22.6:=
+	=dev-libs/tree-sitter-bash-0.21*
+	=dev-libs/tree-sitter-c-0.21*
+	=dev-libs/tree-sitter-lua-0.1*
+	=dev-libs/tree-sitter-markdown-0.2*
+	=dev-libs/tree-sitter-python-0.21*
+	=dev-libs/tree-sitter-query-0.3*
+	=dev-libs/tree-sitter-vim-0.4*
+	=dev-libs/tree-sitter-vimdoc-2*
 	>=dev-libs/unibilium-2.0.0:0=
 	>=dev-libs/libutf8proc-2.9.0:=
 "
@@ -98,6 +107,12 @@ src_install() {
 	# install a default configuration file
 	insinto /etc/vim
 	newins "${FILESDIR}"/sysinit.vim-r1 sysinit.vim
+
+	# symlink tree-sitter parsers
+	dodir /usr/share/nvim/runtime
+	for parser in bash c lua markdown python query vim vimdoc; do
+		dosym ../../../../$(get_libdir)/libtree-sitter-${parser}.so /usr/share/nvim/runtime/parser/${parser}.so
+	done
 
 	# conditionally install a symlink for nvimpager
 	if use nvimpager; then

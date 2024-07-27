@@ -2685,11 +2685,13 @@ dev-qt/qtbase:evdev - Enable support for input devices via evdev
 dev-qt/qtbase:gssapi - Enable support for GSSAPI (virtual/krb5)
 dev-qt/qtbase:gtk - Build the GTK platform theme plugin
 dev-qt/qtbase:gui - Build Qt6Gui module
+dev-qt/qtbase:journald - Log messages using sys-apps/systemd's journald rather than output to stderr (override with the QT_FORCE_STDERR_LOGGING=1 env var)
 dev-qt/qtbase:libinput - Enable support for input devices via dev-libs/libinput
 dev-qt/qtbase:libproxy - Use net-libs/libproxy for automatic HTTP/SOCKS proxy configuration
 dev-qt/qtbase:network - Build Qt6Network module
 dev-qt/qtbase:renderdoc - Enable support for capturing graphic's API calls using media-gfx/renderdoc
 dev-qt/qtbase:sql - Build Qt6Sql module
+dev-qt/qtbase:syslog - Log messages using syslog rather than output to stderr (override with the QT_FORCE_STDERR_LOGGING=1 env var)
 dev-qt/qtbase:tslib - Enable support for touchscreen devices via x11-libs/tslib
 dev-qt/qtbase:widgets - Build Qt6Widgets module
 dev-qt/qtbluetooth:qml - Build QML/QtQuick bindings and imports
@@ -2990,6 +2992,7 @@ dev-util/schroot:lvm - Enable support for chroots using LVM snapshots
 dev-util/schroot:zfs - Enable support for chroots using ZFS shapshots/clones
 dev-util/sdl-jstest:sdl - Enable media-libs/libsdl2 based input test
 dev-util/sdl-jstest:sdl1 - Enable media-libs/libsdl based input test
+dev-util/selenium-manager:telemetry - Disable sending telemetry by default (avoid-stats config option).
 dev-util/sysprof:unwind - Use sys-libs/libunwind to unwind the stack
 dev-util/uftrace:capstone - Use capstone to provide dynamic tracing without recompilation
 dev-util/vulkan-tools:cube - Build the cube/cubepp demos
@@ -3472,6 +3475,7 @@ gui-apps/waypipe:ffmpeg - Link with ffmpeg to allow buffer displays using video 
 gui-apps/waypipe:systemtap - Enable SystemTAP/DTrace tracing
 gui-apps/wayvnc:gbm - enable GPU-side screencopy (experimental)
 gui-apps/wayvnc:tracing - Trace kernel and memory calls
+gui-apps/wf-recorder:pipewire - Enable support for audio capture via media-video/pipewire.
 gui-apps/wf-recorder:pulseaudio - Enable support for audio capture via PulseAudio
 gui-libs/gtk:broadway - Enable the GDK Broadway backend.
 gui-libs/gtk:cloudproviders - Enable GtkPlacesSidebar to access cloud services
@@ -3593,27 +3597,6 @@ kde-apps/kio-extras:taglib - Enable audio thumbnails via media-libs/taglib
 kde-apps/kleopatra:pim - Enable WKS publishing support using kde-apps/kmail
 kde-apps/kmag:keyboardfocus - Enable keyboard focus tracking
 kde-apps/konqueror:activities - Enable kactivities support
-kde-apps/kopete:addbookmarks - Automatically add incoming urls to bookmarks.
-kde-apps/kopete:autoreplace - Automatically replace selected text
-kde-apps/kopete:contactnotes - Enables writing personal notes for contacts.
-kde-apps/kopete:gadu - Enable the Gadu protocol handler.
-kde-apps/kopete:groupwise - Enable the Groupwise protocol handler.
-kde-apps/kopete:highlight - Allows you to specify highlights on specific events.
-kde-apps/kopete:history - Enables saving chat history.
-kde-apps/kopete:latex - Embed latex formatted text into messages.
-kde-apps/kopete:meanwhile - Enable the Sametime protocol handler.
-kde-apps/kopete:nowlistening - Shows song you currently listen to in your status/etc. Bindings for many players.
-kde-apps/kopete:otr - Allows crypting your chat (drugs and talking nonsense are considered as good alternatives ;]).
-kde-apps/kopete:pipes - Send messages to external pipe.
-kde-apps/kopete:privacy - Filter for incoming messages
-kde-apps/kopete:statistics - Everybody loves statistic graphs, especially cake ones. ;]
-kde-apps/kopete:testbed - Enable the testbed protocol.
-kde-apps/kopete:texteffect - Various fancy text effects for your messages (don't ever consider writing us with this enabled ;]).
-kde-apps/kopete:translator - Translate incoming and outgoing messages.
-kde-apps/kopete:urlpicpreview - Enables in conversation pictures preview.
-kde-apps/kopete:webpresence - Show your status and some more information on web.
-kde-apps/kopete:winpopup - Enable pop-up messages sending on windows. (same as good old "net send" messages ;])
-kde-apps/kopete:zeroconf - Enable Link-Local Messaging via the bonjour protocol.
 kde-apps/kpimtextedit:designer - Build plugins for dev-qt/designer
 kde-apps/krdc:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
 kde-apps/ksystemlog:kdesu - Run as root using kdesu from kde-plasma/kde-cli-tools
