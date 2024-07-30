@@ -2236,6 +2236,8 @@ dev-libs/qhotkey:qt6 - Use Qt6 dependencies
 dev-libs/quazip:qt5 - Build with Qt5 support
 dev-libs/quazip:qt6 - Build with Qt6 support
 dev-libs/raft:zfs - ZFS support
+dev-libs/re2:benchmark - Build a benchmark binary, install it as re2-bench
+dev-libs/re2:test-full - Run additional, quite slow tests
 dev-libs/rocksdb:numa - Enable NUMA support
 dev-libs/rocksdb:tbb - Enable support for dev-cpp/tbb
 dev-libs/sentry-native:breakpad - Use dev-util/breakpad as the crash handler
@@ -4605,6 +4607,7 @@ media-radio/chirp:radioreference - pull in optional deps for query of radiorefer
 media-radio/direwolf:hamlib - Enables support by the Hamlib amateur radio rig control library
 media-radio/fldigi:hamlib - Enables support by the Hamlib amateur radio rig control library to get/set frequency and mode of the ham radio in use
 media-radio/tucnak:hamlib - Enables support by the Hamlib amateur radio rig control library to get/set frequency and mode of the ham radio
+media-radio/tucnak:rtlsdr - Add support for rtlsdr hardware
 media-radio/unixcw:ncurses - Enables building the curses based morse code tutor program 'cwcp'.
 media-radio/xastir:geotiff - Install geotiff support. Allows using USGS DRG topo maps or other types of geotiff mapes/images
 media-sound/abcde:aiff - Enable support for Audio Interchange File Format (AIFF) output encoding
@@ -5930,6 +5933,7 @@ net-irc/hexchat:theme-manager - Build the theme manager (mono)
 net-irc/inspircd:argon2 - Enable Argon2 hashes in modules
 net-irc/inspircd:gnutls - Enable TLS support
 net-irc/inspircd:ldap - Enable LDAP support
+net-irc/inspircd:log-json - Enable logging via JSON
 net-irc/inspircd:maxminddb - Add support for geolocation using libMaxMindDB
 net-irc/inspircd:mbedtls - Add support for TLS using the mbedTLS library
 net-irc/inspircd:mysql - Enable MySQL database backend

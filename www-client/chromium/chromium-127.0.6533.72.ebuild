@@ -453,6 +453,7 @@ src_prepare() {
 		"${FILESDIR}/chromium-126-oauth2-client-switches.patch"
 		"${FILESDIR}/chromium-127-browser-ui-deps.patch"
 		"${FILESDIR}/chromium-127-bindgen-custom-toolchain.patch"
+		"${FILESDIR}/chromium-127-enterprise-companion.patch"
 	)
 
 	# 127: test deps are broken for ui/lens with system ICU "//third_party/icu:icuuc_public"
@@ -1117,6 +1118,11 @@ chromium_configure() {
 	if use arm64; then
 		myconf_gn+=" arm_control_flow_integrity=\"none\""
 	fi
+
+	# 936673: Updater (which we don't use) depends on libsystemd
+	# This _should_ always be disabled if we're not building a
+	# "Chrome" branded browser, but obviously this is not always sufficient.
+	myconf_gn+=" enable_updater=false"
 
 	# Enable official builds
 	myconf_gn+=" is_official_build=$(usex official true false)"

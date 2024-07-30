@@ -33,6 +33,28 @@
 
 #--- END OF EXAMPLES ---
 
+# Ulrich Müller <ulm@gentoo.org> (2024-07-30)
+# With USE="qt5 -qt6", blocks dev-qt/qtbase:6, apparently because
+# the build system is broken and has no option to override
+# autodetection of the Qt version.
+=media-libs/libv4l-1.28.1
+
+# James Le Cuirot <chewi@gentoo.org> (2024-07-29)
+# Superseded by media-libs/libv4l[utils].
+# Removal on 2024-08-29. Bug #936674.
+media-tv/v4l-utils
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2024-07-29)
+# Lacks maintainer capacity for update version plus java dependencies.
+# A pull request for the version bump could be provided on request.
+# Removal on 2024-08-28. Bug #736076.
+media-video/bdsup2sub
+
+# Eli Schwartz <eschwartz@gentoo.org> (2024-07-29)
+# Bad version can result in failing builds. Please upgrade to 72.1.0.
+=dev-python/ensurepip-setuptools-72.0.0
+=dev-python/setuptools-72.0.0
+
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2024-07-27)
 # Stable version stuck on EAPI=6.
 # Lacks maintainer capacity for dev-lang/scala.
@@ -99,12 +121,10 @@ games-mud/crystal
 games-mud/gmudix
 games-mud/kildclient
 games-puzzle/color-lines
-games-puzzle/einstein
 games-puzzle/hangman
 games-puzzle/magiccube4d
 games-puzzle/scramble
 games-puzzle/zaz
-games-server/monopd
 games-simulation/cannonsmash
 games-strategy/crimson
 
