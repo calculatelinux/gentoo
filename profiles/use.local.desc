@@ -4463,6 +4463,9 @@ media-libs/opensubdiv:python - Use dev-lang/python to process source and documen
 media-libs/opensubdiv:tbb - Enable multithreading with the Intel Threads Building Blocks through dev-cpp/tbb
 media-libs/opensubdiv:tutorials - Install the tutorials
 media-libs/opus:custom-modes - Enable non-Opus modes, e.g. 44.1 kHz and 2^n frames
+media-libs/opus:deep-plc - Enable Deep Packet Loss Concealment (PLC)
+media-libs/opus:dred - Enable Deep REDundancy (DRED)
+media-libs/opus:osce - Enable Opus Speech Coding Enhancement (OSCE)
 media-libs/opusfile:fixed-point - Enable fixed-point arithmetic operations
 media-libs/opusfile:float - Enable floating point arithmetic operations
 media-libs/opusfile:http - Enable http connections
@@ -4606,6 +4609,8 @@ media-radio/ax25-tools:X - Enable some X based configuration tools.
 media-radio/chirp:radioreference - pull in optional deps for query of radioreference
 media-radio/direwolf:hamlib - Enables support by the Hamlib amateur radio rig control library
 media-radio/fldigi:hamlib - Enables support by the Hamlib amateur radio rig control library to get/set frequency and mode of the ham radio in use
+media-radio/svxlink:qt5 - Build and install qtel application
+media-radio/svxlink:rtlsdr - Add support for rtlsdr hardware
 media-radio/tucnak:hamlib - Enables support by the Hamlib amateur radio rig control library to get/set frequency and mode of the ham radio
 media-radio/tucnak:rtlsdr - Add support for rtlsdr hardware
 media-radio/unixcw:ncurses - Enables building the curses based morse code tutor program 'cwcp'.
@@ -5908,6 +5913,7 @@ net-im/tkabber:plugins - Enables installation the extra plugins
 net-im/tokodon:mpv - Use media-libs/mpvqt instead of dev-qt/qtmultimedia for video playback (default)
 net-im/tokodon:webengine - Use dev-qt/qtwebengine for built-in authentication page (default is external browser)
 net-im/toxic:audio-notify - Enables native sound notifications
+net-im/toxic:experimental - Use experimental features in net-libs/tox
 net-im/toxic:games - Enables some small mini-games
 net-im/toxic:llvm - Enables support for LLVM Address Sanitizer
 net-im/toxic:notification - Enables desktop notifications with libnotify, with sound support.
@@ -6151,6 +6157,7 @@ net-libs/shairplay:playfair - Add support for handling fairplay handshake (used 
 net-libs/tox:av - Adds support for audio and video.
 net-libs/tox:daemon - Enable the DHT Bootstrap Daemon.
 net-libs/tox:dht-node - Enables DHT Bootstrap Node.
+net-libs/tox:experimental - Enables the experimental api
 net-libs/tox:key-utils - Builds utilities to create custom keys and profiles
 net-libs/tox:log-debug - Log level: 4
 net-libs/tox:log-error - Log level: 1
@@ -7531,7 +7538,6 @@ sci-mathematics/giac:glpk - Enable the use of sci-mathematics/glpk
 sci-mathematics/gmp-ecm:custom-tune - Improve performance of some operations by selecting machine-specific defaults
 sci-mathematics/gretl:R - Enable support for dev-lang/R
 sci-mathematics/gretl:extras - Build and install add-ons bundled with gretl
-sci-mathematics/gsl-shell:fox - Build a x11-libs/fox GUI
 sci-mathematics/lcalc:double - Use double precision (the upstream default)
 sci-mathematics/lcalc:double-double - Use sci-libs/qdfor double-double precision
 sci-mathematics/lcalc:pari - Use sci-mathematics/pari for elliptic curve L-functions

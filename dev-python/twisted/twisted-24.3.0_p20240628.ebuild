@@ -87,6 +87,7 @@ BDEPEND="
 "
 
 PATCHES=(
+	"${FILESDIR}/${PN}-24.3.0-skip-dsa-tests.patch"
 	"${FILESDIR}/${P}-skip-py313-test.patch"
 )
 
