@@ -90,6 +90,7 @@ DEPEND="
 	ldap? ( net-nds/openldap:= )
 	lttng? ( dev-util/lttng-ust:= )
 	parquet? (
+		>=app-arch/lz4-1.10
 		dev-cpp/xsimd
 		dev-libs/re2:=
 	)
@@ -300,7 +301,7 @@ src_prepare() {
 	if use parquet; then
 		# hammer in newer version of parquet/arrow
 		rm -rf src/arrow/
-		mv "${WORKDIR}/apache-arrow-17.0.0 src/arrow" || die
+		mv "${WORKDIR}/apache-arrow-17.0.0" src/arrow || die
 	fi
 }
 

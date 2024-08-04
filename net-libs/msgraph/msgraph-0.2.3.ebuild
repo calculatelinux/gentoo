@@ -10,7 +10,7 @@ HOMEPAGE="https://gitlab.gnome.org/GNOME/msgraph"
 
 LICENSE="LGPL-2+"
 SLOT="0/1"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~x86"
 
 IUSE="debug gtk-doc +introspection man test"
 REQUIRED_USE="gtk-doc? ( introspection )"
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 	dev-libs/gobject-introspection-common
 "
 BDEPEND="
-	gtk-doc? ( dev-util/gtk-doc )
+	gtk-doc? ( dev-util/gi-docgen )
 	test? ( net-libs/uhttpmock:1.0 )
 "
 

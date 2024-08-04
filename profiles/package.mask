@@ -33,6 +33,22 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Orlitzky <mjo@gentoo.org> (2024-08-03)
+# Unmaintained package. Upstream is not quite _dead_, but the project
+# domain (where tarballs and documentation were hosted) was hijacked in
+# 2022 and nothing has been done about it. As a result, the version in
+# Gentoo is far out of date. Four open bugs, no interest. Removal on
+# or after 2024-09-03.
+acct-group/monkeyd
+acct-user/monkeyd
+www-servers/monkeyd
+
+# Sam James <sam@gentoo.org> (2024-08-02)
+# Unreliable software, unmaintained in Gentoo. Having it in the main
+# repositories may give users an impression of it being a safe tool.
+# Removal on 2024-09-01.
+app-backup/mkstage4
+
 # James Le Cuirot <chewi@gentoo.org> (2024-07-29)
 # Superseded by media-libs/libv4l[utils].
 # Removal on 2024-08-29. Bug #936674.
@@ -221,21 +237,6 @@ sci-astronomy/esomidas
 =dev-libs/libxml2-2.13.1
 =dev-libs/libxslt-1.1.41
 
-# James Le Cuirot <chewi@gentoo.org> (2024-07-01)
-# Ancient, dead upstream, generally awful.
-# Removal on 2024-08-01.  Bugs #935307, #935308, #935309.
-games-arcade/spacerider
-games-arcade/tuxdash
-games-arcade/xsfcave
-
-# NHOrus <jy6x2b32pie9@yahoo.com> (2024-06-28)
-# games-puzzle/seatris: last rites
-# Twenty-year-old tetris clone with upstream that wasn't touched since,
-# broken code and broken autoconf.
-# Removed after 2024-08-01
-# Bug: https://bugs.gentoo.org/935057
-games-puzzle/seatris
-
 # Sam James <sam@gentoo.org> (2024-06-25)
 # Subvolume printing is broken: https://github.com/kdave/btrfs-progs/issues/829
 =sys-fs/btrfs-progs-6.9.1
@@ -400,11 +401,6 @@ sec-keys/openpgp-keys-jiatan
 # Eray Aslan <eras@gentoo.org> (2024-03-10)
 # Mask experimental software
 =mail-mta/postfix-3.10*
-
-# Ulrich Müller <ulm@gentoo.org> (2024-02-08)
-# Masked for testing.
-# Test failure in watchpoints.dem, undefined function FresnelC.
-~sci-visualization/gnuplot-6.0.0
 
 # Sam James <sam@gentoo.org> (2023-12-14)
 # Gentoo's kernel maintainers have decided to discontinue gentoo-sources and
