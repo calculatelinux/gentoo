@@ -1,0 +1,14 @@
+BDEPEND=app-arch/unzip virtual/pkgconfig
+DEFINED_PHASES=compile install
+DESCRIPTION=The official bedrock (non-java) based server for the sandbox video game
+EAPI=8
+HOMEPAGE=https://www.minecraft.net/
+INHERIT=systemd
+KEYWORDS=-* amd64
+LICENSE=Mojang
+RDEPEND=acct-group/bedrock acct-user/bedrock app-misc/dtach net-misc/curl
+RESTRICT=bindist mirror
+SLOT=0
+SRC_URI=https://minecraft.azureedge.net/bin-linux/bedrock-server-1.21.3.01.zip
+_eclasses_=multilib	c19072c3cd7ac5cb21de013f7e9832e0	systemd	c8b03e8df84486aa991d4396686e8942	toolchain-funcs	e7e7331166166e7a516d19e264b098c2
+_md5_=10ed25f2d11627bcf3f5ca2176c2a77d

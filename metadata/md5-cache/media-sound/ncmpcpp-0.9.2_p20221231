@@ -7,9 +7,9 @@ HOMEPAGE=https://rybczak.net/ncmpcpp/ https://github.com/ncmpcpp/ncmpcpp/
 INHERIT=autotools
 IUSE=clock outputs taglib visualizer
 KEYWORDS=amd64 ~arm ~arm64 ~ppc ~ppc64 ~sparc x86
-LICENSE=GPL-2
+LICENSE=GPL-2+
 RDEPEND=>=media-libs/libmpdclient-2.1 dev-libs/boost:=[icu,nls] dev-libs/icu:= net-misc/curl sys-libs/ncurses:=[unicode(+)] sys-libs/readline:= taglib? ( media-libs/taglib ) visualizer? ( sci-libs/fftw:3.0= )
 SLOT=0
 SRC_URI=https://github.com/ncmpcpp/ncmpcpp/archive/9f44edf0b1d74da7cefbd498341d59bc52f6043f.tar.gz -> ncmpcpp-0.9.2_p20221231.gh.tar.gz
-_eclasses_=autotools	d12ccbad07b44642a75ac97a3334d8e0	gnuconfig	a397adda6984a4c423e28ac274c1ba98	libtool	5f49a16f67f81bdf873e3d1f10b10001	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084
-_md5_=31fb19e6bf55f35bd3bc12ed8ee69b5a
+_eclasses_=autotools	d12ccbad07b44642a75ac97a3334d8e0	gnuconfig	a397adda6984a4c423e28ac274c1ba98	libtool	5f49a16f67f81bdf873e3d1f10b10001	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	e7e7331166166e7a516d19e264b098c2
+_md5_=2c1bd272550ad0365c5a91944b9b54e7

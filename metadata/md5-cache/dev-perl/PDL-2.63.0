@@ -12,5 +12,5 @@ RDEPEND=sys-libs/ncurses:0= app-arch/sharutils dev-perl/Astro-FITS-Header dev-pe
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/E/ET/ETJ/PDL-2.063.tar.gz
-_eclasses_=flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	fortran-2	40c4450f1c4ecb2ee694d96e1958d4ea	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	perl-functions	c3fca037246e877693badea0df3b0ef8	perl-module	25ca2ff8e7971cb7f817f0bda4be696d	readme.gentoo-r1	b8c7a61664027641d79dcfc04bd366f4	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084
+_eclasses_=flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	fortran-2	40c4450f1c4ecb2ee694d96e1958d4ea	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	perl-functions	c3fca037246e877693badea0df3b0ef8	perl-module	25ca2ff8e7971cb7f817f0bda4be696d	readme.gentoo-r1	b8c7a61664027641d79dcfc04bd366f4	toolchain-funcs	e7e7331166166e7a516d19e264b098c2
 _md5_=8acdf5ecf65069035393dca4b36c18c8
