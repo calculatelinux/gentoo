@@ -1,0 +1,13 @@
+DEFINED_PHASES=config configure install postinst prepare
+DEPEND=>=dev-libs/bglibs-2.04 >=net-libs/cvm-0.81
+DESCRIPTION=Mail server network protocol front-ends
+EAPI=8
+HOMEPAGE=https://untroubled.org/mailfront/
+INHERIT=toolchain-funcs
+KEYWORDS=~amd64 ~sparc ~x86
+LICENSE=GPL-2+
+RDEPEND=>=dev-libs/bglibs-2.04 >=net-libs/cvm-0.81 virtual/qmail net-libs/cvm
+SLOT=0
+SRC_URI=https://untroubled.org/mailfront/archive/mailfront-2.22.tar.gz
+_eclasses_=multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	e7e7331166166e7a516d19e264b098c2
+_md5_=99b8b91a5002965c47a00714018cb184

@@ -28,7 +28,7 @@ LICENSE+=" Apache-2.0"
 # admin icons, jquery, xregexp.js
 LICENSE+=" MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~sparc ~x86 ~x64-macos"
+KEYWORDS="~alpha amd64 arm arm64 ~loong ~ppc ~ppc64 ~riscv ~sparc x86 ~x64-macos"
 IUSE="doc sqlite test"
 RESTRICT="!test? ( test )"
 
@@ -59,6 +59,8 @@ PATCHES=(
 	"${WORKDIR}"/django-5.0-pypy3.patch
 	# https://github.com/django/django/commit/3426a5c33c36266af42128ee9eca4921e68ea876
 	"${FILESDIR}"/django-5.0.6-py313.patch
+	# https://code.djangoproject.com/ticket/35661
+	"${FILESDIR}"/django-5.1-more-pypy3.patch
 )
 
 distutils_enable_sphinx docs --no-autodoc
