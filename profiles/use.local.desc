@@ -877,6 +877,7 @@ app-misc/ebusd:mqtt - Enable support for connecting to MQTT.
 app-misc/fastfetch:chafa - Enables text/graphics renderer with media-gfx/chafa
 app-misc/fastfetch:ddcutil - Use app-misc/ddcutil to query monitor settings
 app-misc/fastfetch:drm - Enables support for X.org's x11-libs/libdrm
+app-misc/fastfetch:elf - Use libelf to extract strings from binaries
 app-misc/fastfetch:osmesa - Enables offscreen rendering support from media-libs/mesa
 app-misc/fastfetch:vulkan - Enables reading GPU via media-libs/vulkan-loader
 app-misc/fastfetch:xfce - Enables support for XFCE config
@@ -2009,6 +2010,7 @@ dev-libs/gf2x:fft - Build an FFT API for multiplication of 2 polynomials over GF
 dev-libs/gjs:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 dev-libs/glib:dbus - Enable dependencies required by glib libraries using dbus service to manage settings saving
 dev-libs/glib:elf - Enable support for listing and extracting from ELF resource files with gresource tool
+dev-libs/glib:introspection - Enable generating introspection data (requires dev-libs/gobject-introspection )
 dev-libs/glib:mime - Pull in shared MIME database that many glib-based applications require at runtime to detect or open files. Warning: do not disable this flag unless installing on a headless server.
 dev-libs/glib:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 dev-libs/glib:systemtap - Build support for profiling and tracing using dev-debug/systemtap
@@ -2028,7 +2030,6 @@ dev-libs/jemalloc:prof - Enable allocation profiling
 dev-libs/jemalloc:stats - Enable statistics calculation/reporting
 dev-libs/jemalloc:xmalloc - Add support for xmalloc (abort-on-out-of-memory)
 dev-libs/json-glib:nls - Enable native language support (translations)
-dev-libs/kosmindoormap:openinghours - Enable support for highlighting currently open amenities/shops/etc.
 dev-libs/kreport:marble - Enable displaying of maps using kde-apps/marble
 dev-libs/kreport:scripting - Support Qml scripting using dev-qt/qtdeclarative
 dev-libs/ktextaddons:designer - Build plugins for dev-qt/designer
@@ -5571,11 +5572,6 @@ net-dialup/freeradius-client:scp - Add service type hints derived from username 
 net-dialup/freeradius-client:shadow - Enable shadow password support
 net-dialup/mgetty:fax - Enables fax support
 net-dialup/mgetty:fidonet - Enables FidoNet support
-net-dialup/openl2tp:client - Enable l2tp client.
-net-dialup/openl2tp:dmalloc - Enable debugging using dev-libs/dmalloc.
-net-dialup/openl2tp:rpc - Enable RPC control management. This flag is required for l2tpconfig to be built and used.
-net-dialup/openl2tp:server - Enable l2tp server.
-net-dialup/openl2tp:stats - Enable status files. Note: when they are used, this hampers performance of the daemon.
 net-dialup/ppp:activefilter - Enables active filter support
 net-dialup/ppp:dhcp - Installs PPP DHCP client plugin for IP address allocation by a DHCP server (see http://www.netservers.co.uk/gpl/)
 net-dialup/ppp:eap-tls - Enables support for Extensible Authentication Protocol and Transport Level Security (see http://www.nikhef.nl/~janjust/ppp/index.html)

@@ -33,6 +33,54 @@
 
 #--- END OF EXAMPLES ---
 
+# Ionen Wolkens <ionen@gentoo.org> (2024-08-11)
+# >=1.1.14 enables usage of explicit sync (with >=nvidia-drivers-560
+# and compositors that supports like kwin-6), which currently seems
+# to be causing too many problems ranging from application crashes
+# and potential VRAM leaking (even with the fixes in 1.1.15) and may
+# be better left masked for the time being. It can hwoever solve
+# flicking/stutter issues on some setups so users may want to unmask
+# if heavily affected (bug #937773).
+>=gui-libs/egl-wayland-1.1.14
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-08-11)
+# HOMEPAGE and SRC_URI return 404, Gentoo is last distribution.
+# Removal on 2024-09-10.  Bugs #937775, #675028.
+media-sound/SmarTagger
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-08-10)
+# Mask KF6-based version for now until actual KF6-based consumers
+# also move to ::gentoo.
+~dev-util/kdevelop-pg-qt-2.3.0
+
+# Pacho Ramos <pacho@gentoo.org> (2024-08-09)
+# Mask until we find out a way to deal better with the upstream
+# introduced circular dep, bug #937616
+>=dev-libs/glib-2.80
+>=dev-util/glib-utils-2.80
+>=dev-util/gdbus-codegen-2.80
+>=gnome-base/gnome-shell-46
+>=gnome-extra/gnome-shell-extensions-46
+>=gnome-base/nautilus-46
+>=dev-libs/gobject-introspection-1.80
+>=dev-libs/gobject-introspection-common-1.80
+>=x11-terms/ptyxis-46
+
+# Bernard Cafarelli <voyageur@gentoo.org> (2024-08-08)
+# Last release in 2004, website disappeared a long time ago.
+# Bad code quality, not packaged in other distros or dockapps.net
+# Many alternatives for audio recording available
+# Removal on 2024-09-08, bug #931764
+x11-plugins/wmrecord
+
+# Eli Schwartz <eschwartz93@gmail.com> (2024-05-26)
+# Unmaintained, website gone. Last released in 2010. Fails to build
+# with GCC 14, detects and builds against nonexisting dependencies.
+# Fails to authenticate users anyway. Obsoleted and replaced by
+# nss-pam-ldapd which actually works. Bug #908579.
+# Removal on 2024-09-07.
+sys-auth/pam_ldap
+
 # Joonas Niilola <juippis@gentoo.org> (2024-08-07)
 # Upstream doesn't recommend updating from 115 just yet. New
 # installs are fine. Downgrading from 128 to 115 may be impossible
@@ -151,24 +199,6 @@ games-puzzle/zaz
 games-simulation/cannonsmash
 games-strategy/crimson
 
-# Ionen Wolkens <ionen@gentoo.org> (2024-07-18)
-# Explicit sync currently causes firefox to crash[1][2][3] (should be
-# improved in >=firefox-130 or so) among others like obs-studio[3],
-# and is still to be considered experimental. So keeping masked for
-# the time being while issues are ironed out.
-#
-# Feel free to unmask if not affected as it should improve the
-# experience esp. with Plasma 6 + wayland + nvidia, but please try
-# 1.1.13 before reporting crashes, freezes, or visual issues (and
-# bugs should go upstream).
-#
-# [1] https://github.com/NVIDIA/egl-wayland/issues/110
-# [2] https://github.com/NVIDIA/egl-wayland/issues/117
-# [3] https://bugzilla.mozilla.org/show_bug.cgi?id=1898476
-# [4] https://github.com/NVIDIA/egl-wayland/issues/118
-# and: https://bugzilla.mozilla.org/show_bug.cgi?id=1908825
-~gui-libs/egl-wayland-1.1.14
-
 # Hans de Graaff <graaff@gentoo.org> (2024-07-17)
 # Obsolete slot. Please use a newer slot instead. No reverse
 # dependencies left. Removal on 2024-08-17.
@@ -204,19 +234,6 @@ gui-wm/hikari
 # Removal on 2024-08-12.
 dev-ruby/rspectacular
 
-# Michał Górny <mgorny@gentoo.org> (2024-07-12)
-# Obsoleted by dev-python/pytest-freezer (usually a drop-in replacement).
-# No reverse dependencies left.
-# Removal on 2024-08-11.  Bug #934604.
-dev-python/pytest-freezegun
-
-# Jaco Kroon <jaco@uls.co.za> (2024-07-11)
-# Superseded by xl2tpd, this no longer has any operational advantage over
-# xl2tpd.  If you need help you're welcome to contact me (jkroon on
-# libera.chat).
-# Removal on 2024-08-11. bugs: #414901, #768075, #919269
-net-dialup/openl2tp
-
 # Leonardo Hernández Hernández <leohdz172@proton.me> (2024-07-07)
 # New major ffmpeg version. Tracker bug #928905.
 >=media-video/ffmpeg-7.0
@@ -246,14 +263,6 @@ net-dialup/openl2tp
 ~dev-vcs/mercurial-6.7.1
 ~dev-vcs/mercurial-6.7.2
 ~dev-vcs/mercurial-6.7.3
-
-# Viorel Munteanu <ceamac@gentoo.org> (2024-06-11)
-# dev-php/pear, dev-php/PEAR-* and their reverse dependencies: mask for removal
-# in 30 days.
-# They are all unmaintained, most of the ebuilds are still EAPI 6, and together
-# they have around 40 bugs.
-# Removal: 2024-08-11.  Bug #933998.
-dev-php/PEAR-Mail_mimeDecode
 
 # Alfredo Tupone <tupone@gentoo.org> (2024-06-09)
 # Not ready for testing

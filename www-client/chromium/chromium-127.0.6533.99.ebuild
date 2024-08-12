@@ -70,7 +70,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 
 LICENSE="BSD"
 SLOT="0/stable"
-KEYWORDS="~amd64 ~arm64 ~ppc64"
+KEYWORDS="amd64 arm64 ~ppc64"
 IUSE_SYSTEM_LIBS="+system-harfbuzz +system-icu +system-png +system-zstd"
 IUSE="+X ${IUSE_SYSTEM_LIBS} bindist cups debug ffmpeg-chromium gtk4 +hangouts headless kerberos +official pax-kernel pgo +proprietary-codecs pulseaudio"
 IUSE+=" qt5 qt6 +screencast selinux +system-toolchain +vaapi +wayland +widevine"
@@ -97,7 +97,7 @@ COMMON_X_DEPEND="
 "
 
 COMMON_SNAPSHOT_DEPEND="
-	system-icu? ( >=dev-libs/icu-71.1:= )
+	system-icu? ( >=dev-libs/icu-73.0:= )
 	>=dev-libs/libxml2-2.12.4:=[icu]
 	dev-libs/nspr:=
 	>=dev-libs/nss-3.26:=
@@ -121,9 +121,10 @@ COMMON_SNAPSHOT_DEPEND="
 		kerberos? ( virtual/krb5 )
 		vaapi? ( >=media-libs/libva-2.7:=[X?,wayland?] )
 		X? (
+			x11-base/xorg-proto:=
 			x11-libs/libX11:=
-			x11-libs/libXext:=
 			x11-libs/libxcb:=
+			x11-libs/libXext:=
 		)
 		x11-libs/libxkbcommon:=
 		wayland? (

@@ -9,5 +9,5 @@ LICENSE=GPL-2+
 RDEPEND=>=dev-libs/bglibs-2.04 sys-apps/ucspi-unix sys-process/cronbase virtual/daemontools virtual/mta >=sys-process/cronbase-0.3.2 !sys-process/cronie !sys-process/dcron !sys-process/fcron
 SLOT=0
 SRC_URI=https://untroubled.org/bcron/archive/bcron-0.11.tar.gz
-_eclasses_=cron	7a997e295d297e4fa5c9ef0db828ee88	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	python-any-r1	5af215c3da6aef17a2d5e02968df1d5a	python-utils-r1	6881b056477c23167d9a6b33e146374e	toolchain-funcs	e7e7331166166e7a516d19e264b098c2
+_eclasses_=cron	7a997e295d297e4fa5c9ef0db828ee88	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	python-any-r1	5af215c3da6aef17a2d5e02968df1d5a	python-utils-r1	6881b056477c23167d9a6b33e146374e	toolchain-funcs	0c713337f7872f1a002cecaaea9bef73
 _md5_=0f2fe64029a11662f439fc13476fd8f3

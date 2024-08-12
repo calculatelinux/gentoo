@@ -769,7 +769,7 @@ kernel-install_compress_modules() {
 		if [[ -z ${KV_FULL} ]]; then
 			KV_FULL=${PV}${KV_LOCALVERSION}
 		fi
-		local suffix=$(dist-kernel_get_module_suffix "${ED}/usr/src/linux-${KV_FULL}")
+		local suffix=$(dist-kernel_get_module_suffix "${ED}/usr/src/linux-${KV_FULL}/.config")
 		local compress=()
 		# Options taken from linux-mod-r1.eclass.
 		# We don't instruct the compressor to parallelize because it applies
@@ -796,6 +796,9 @@ kernel-install_compress_modules() {
 		find "${ED}/lib/modules/${KV_FULL}" -name '*.ko' -print0 |
 			xargs -0 -P "$(makeopts_jobs)" -n 128 "${compress[@]}"
 		assert "Compressing kernel modules failed"
+
+		# Module paths have changed, run depmod
+		depmod --all --basedir "${ED}" ${KV_FULL} || die
 	fi
 }
 

@@ -3,7 +3,7 @@
 
 EAPI=8
 
-FIREFOX_PATCHSET="firefox-128-patches-05.tar.xz"
+FIREFOX_PATCHSET="firefox-129-patches-01.tar.xz"
 
 LLVM_COMPAT=( 17 18 )
 
@@ -630,6 +630,8 @@ src_prepare() {
 			export RUST_TARGET="i686-unknown-linux-musl"
 		elif use arm64 ; then
 			export RUST_TARGET="aarch64-unknown-linux-musl"
+		elif use ppc64 ; then
+			export RUST_TARGET="powerpc64le-unknown-linux-musl"
 		else
 			die "Unknown musl chost, please post your rustc -vV along with emerge --info on Gentoo's bug #915651"
 		fi
