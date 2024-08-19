@@ -22,7 +22,7 @@ SRC_URI+="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~m68k ~mips ppc ~ppc64 ~riscv ~s390 ~sparc x86 ~arm64-macos ~x64-macos"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 ~sparc x86 ~arm64-macos ~x64-macos"
 IUSE="conch http2 serial ssl test"
 RESTRICT="!test? ( test )"
 
@@ -54,6 +54,9 @@ RDEPEND="
 		>=dev-python/service-identity-18.1.0[${PYTHON_USEDEP}]
 		>=dev-python/idna-2.4[${PYTHON_USEDEP}]
 	)
+"
+IDEPEND="
+	>=dev-python/zope-interface-5[${PYTHON_USEDEP}]
 "
 BDEPEND="
 	>=dev-python/hatch-fancy-pypi-readme-22.5.0[${PYTHON_USEDEP}]

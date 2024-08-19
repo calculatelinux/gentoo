@@ -195,6 +195,7 @@ REQUIRED_USE="
 PATCHES=(
 	# Downloaded patchset
 	"${WORKDIR}"/virtualbox-patches-7.1.0_beta1/patches
+	"${FILESDIR}"/${P}-link-with-mold.patch
 )
 
 DOCS=()	# Don't install the default README file during einstalldocs
@@ -251,8 +252,8 @@ src_prepare() {
 			>> LocalConfig.kmk || die
 	fi
 
-	# bug #916002, #488176
-	tc-ld-force-bfd
+	# bug #916002, #488176, #925347
+	tc-ld-is-mold || tc-ld-force-bfd
 
 	# Respect LDFLAGS
 	sed -e "s@_LDFLAGS\.${ARCH}*.*=@& ${LDFLAGS}@g" \
@@ -280,6 +281,12 @@ src_prepare() {
 
 	# bug #908814
 	filter-lto
+
+	# bug #843437
+	cat >> LocalConfig.kmk <<-EOF || die
+		CXXFLAGS=${CXXFLAGS}
+		CFLAGS=${CFLAGS}
+	EOF
 
 	if use sdl; then
 		sed -i 's/sdl-config/sdl2-config/' configure || die

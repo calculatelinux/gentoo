@@ -16,7 +16,7 @@ if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="https://github.com/neovim/neovim.git"
 else
 	SRC_URI="https://github.com/neovim/neovim/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~arm64 ~ppc ~ppc64 ~riscv ~x86"
 fi
 
 LICENSE="Apache-2.0 vim"
@@ -90,13 +90,12 @@ src_prepare() {
 }
 
 src_configure() {
-	ln -s "${BROOT}"/usr/bin/luajit "${BUILD_DIR}"/luajit || die
 	# TODO: Investigate USE_BUNDLED, doesn't seem to be needed right now
 	local mycmakeargs=(
 		# appends -flto
 		-DENABLE_LTO=OFF
 		-DPREFER_LUA=$(usex lua_single_target_luajit no "$(lua_get_version)")
-		-DLUA_PRG="${ELUA}"
+		-DLUA_PRG="${LUA}"
 	)
 	cmake_src_configure
 }

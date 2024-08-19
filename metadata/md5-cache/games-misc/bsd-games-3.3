@@ -1,0 +1,15 @@
+BDEPEND=app-alternatives/yacc app-alternatives/lex virtual/pkgconfig
+DEFINED_PHASES=compile configure install prepare
+DEPEND=sys-apps/miscfiles sys-libs/ncurses:=[unicode(+)] !games-puzzle/hangman !games-misc/wumpus
+DESCRIPTION=Collection of games from NetBSD
+EAPI=8
+HOMEPAGE=https://sourceforge.net/projects/bsd-games/
+INHERIT=toolchain-funcs
+KEYWORDS=~amd64 ~arm64 ~hppa ~mips ~riscv ~x86
+LICENSE=BSD
+RDEPEND=sys-apps/miscfiles sys-libs/ncurses:=[unicode(+)] !games-puzzle/hangman !games-misc/wumpus acct-group/gamestat
+RESTRICT=test
+SLOT=0/3
+SRC_URI=https://downloads.sourceforge.net/bsd-games/bsd-games-3.3.tar.gz https://dev.gentoo.org/~sam/distfiles/games-misc/bsd-games/bsd-games-3.1-verbose-build.patch.gz
+_eclasses_=multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd
+_md5_=45984b9d7a5a50338bc282499c261cf8

@@ -12,4 +12,4 @@ REQUIRED_USE=regex
 RESTRICT=strip
 SLOT=12/3.0-1
 SRC_URI=mirror://gnu/guile/guile-3.0.10.tar.xz
-_md5_=afe314277cc65a33a9902f89e5990e8c
+_md5_=053c79f270799633323262bac89ff517

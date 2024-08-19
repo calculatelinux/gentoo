@@ -64,7 +64,7 @@ src_configure() {
 		$(use_enable regex)
 		$(use_with threads)
 	)
-	econf ${myconf[@]}
+	econf "${myconf[@]}"
 }
 
 src_install() {

@@ -1,0 +1,14 @@
+BDEPEND=virtual/pkgconfig app-alternatives/ninja >=dev-build/cmake-3.20.5
+DEFINED_PHASES=compile configure install postinst prepare test
+DEPEND=acct-group/gamestat >=sys-libs/ncurses-6.0:0=
+DESCRIPTION=The Dungeons of Moria, a single player roguelike game, also known as Umoria
+EAPI=8
+HOMEPAGE=https://umoria.org/
+INHERIT=cmake prefix
+KEYWORDS=~amd64 ~m68k ~x86
+LICENSE=GPL-3+
+RDEPEND=acct-group/gamestat >=sys-libs/ncurses-6.0:0=
+SLOT=0
+SRC_URI=https://github.com/dungeons-of-moria/umoria/archive/v5.7.15.tar.gz -> moria-5.7.15.tar.gz
+_eclasses_=cmake	10a50dfaf728b802fcfd37f8d0da9056	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	prefix	eab3c99d77fe00506c109c8a736186f7	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=1ce8d7857dfb94622461a426519ce47e
