@@ -38,6 +38,7 @@
 # Removal on 2024-09-20
 # Bug #575478, #611846, #814551, #892653, #904989, #934410, #935656,
 # #938262
+# Treeclean request: #938282
 sys-process/runit
 
 # Arsen Arsenović <arsen@gentoo.org> (2024-08-02)
@@ -184,11 +185,6 @@ dev-debug/gdb-apple
 # including test failures. Unpackaged by others.
 # Removal on 2024-08-23.  Bug #936581.
 app-accessibility/epos
-
-# David Seifert <soap@gentoo.org> (2024-07-22)
-# Unmaintained, replaced by app-portage/pram which has more features
-# and works better for merging PRs. Removal on 2024-08-21.
-dev-perl/Gentoo-App-Pram
 
 # Hans de Graaff <graaff@gentoo.org> (2024-07-21)
 # Obsolete slots that are no longer used by any cucumber

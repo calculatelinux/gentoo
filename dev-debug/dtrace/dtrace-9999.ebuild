@@ -21,7 +21,7 @@ fi
 
 LICENSE="UPL-1.0"
 SLOT="0"
-IUSE="install-tests systemd"
+IUSE="systemd install-tests"
 
 # XXX: right now, we auto-adapt to whether multilibs are present:
 # should we force them to be? how?
@@ -85,11 +85,21 @@ pkg_pretend() {
 	CONFIG_CHECK+=" ~CUSE"
 
 	# Tracing
-	CONFIG_CHECK+=" ~FTRACE_SYSCALLS ~UPROBE_EVENTS ~DYNAMIC_FTRACE ~FUNCTION_TRACER"
+	CONFIG_CHECK+=" ~TRACING"
+	CONFIG_CHECK+=" ~UPROBES ~UPROBE_EVENTS"
+	CONFIG_CHECK+=" ~FTRACE ~FTRACE_SYSCALLS ~DYNAMIC_FTRACE ~FUNCTION_TRACER"
 	CONFIG_CHECK+=" ~FPROBE"
+	# DTrace can fallback to kprobes for fbt but people often want them off
+	# for security and newer kernels work fine with BPF for that, so
+	# let's omit it. kprobes are slower and scale poorly.
 
 	# https://gcc.gnu.org/PR84052
 	CONFIG_CHECK+=" !GCC_PLUGIN_RANDSTRUCT"
+
+	if use install-tests ; then
+		# See test/modules
+		CONFIG_CHECK+=" ~EXT4_FS ~ISO9660_FS ~NFS_FS ~RDS ~TUN"
+	fi
 
 	check_extra_config
 }
@@ -161,8 +171,6 @@ pkg_postinst() {
 
 	# TODO: Restart it on upgrade? (it will carry across its own persistent state)
 	if [[ -n ${REPLACING_VERSIONS} ]]; then
-		einfo "See https://wiki.gentoo.org/wiki/DTrace for getting started."
-
 		# TODO: Make this more intelligent wrt comparison
 		if systemd_is_booted ; then
 			einfo "Restart the DTrace 'dtprobed' service after upgrades:"
@@ -172,6 +180,8 @@ pkg_postinst() {
 			einfo " /etc/init.d/dtprobed restart"
 		fi
 	else
+		einfo "See https://wiki.gentoo.org/wiki/DTrace for getting started."
+
 		if systemd_is_booted ; then
 			einfo "Enable and start the DTrace 'dtprobed' service with:"
 			einfo " systemctl enable --now dtprobed"
