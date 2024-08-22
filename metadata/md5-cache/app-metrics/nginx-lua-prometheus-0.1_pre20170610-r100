@@ -12,5 +12,5 @@ RDEPEND=lua_single_target_luajit? ( dev-lang/luajit:= ) www-servers/nginx[nginx_
 REQUIRED_USE=^^ ( lua_single_target_luajit )
 SLOT=0
 SRC_URI=https://github.com/knyar/nginx-lua-prometheus/archive/0.1-20170610.tar.gz -> nginx-lua-prometheus-0.1_pre20170610.tar.gz
-_eclasses_=lua-single	86d497a20c93c7ce83af442f627515c1	lua-utils	d37a16dbcc1f07f71bc48da75ed7a0cb	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd
+_eclasses_=lua-single	3ae43cac1bf8275a847245b9a475a54e	lua-utils	1f91de68f9a26642216e45d7765fd4fb	multilib	c19072c3cd7ac5cb21de013f7e9832e0	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd
 _md5_=bc6e04e52b24e72df7cf82e41beb617d

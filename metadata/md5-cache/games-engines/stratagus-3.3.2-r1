@@ -12,5 +12,5 @@ RDEPEND=lua_single_target_lua5-1? ( dev-lang/lua:5.1 ) dev-db/sqlite:3 dev-lua/t
 REQUIRED_USE=^^ ( lua_single_target_lua5-1 ) theora? ( vorbis )
 SLOT=0/3
 SRC_URI=https://github.com/Wargus/stratagus/archive/v3.3.2.tar.gz -> stratagus-3.3.2.tar.gz
-_eclasses_=cmake	10a50dfaf728b802fcfd37f8d0da9056	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	lua-single	86d497a20c93c7ce83af442f627515c1	lua-utils	d37a16dbcc1f07f71bc48da75ed7a0cb	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	optfeature	222cb475c5a4f7ae7cfb0bf510a6fe54	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	xdg-utils	baea6080dd821f5562d715887954c9d3
+_eclasses_=cmake	10a50dfaf728b802fcfd37f8d0da9056	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	lua-single	3ae43cac1bf8275a847245b9a475a54e	lua-utils	1f91de68f9a26642216e45d7765fd4fb	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	optfeature	222cb475c5a4f7ae7cfb0bf510a6fe54	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	xdg-utils	baea6080dd821f5562d715887954c9d3
 _md5_=311a811ad2293733eeb7a9a43cca44a3
