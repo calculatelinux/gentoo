@@ -33,6 +33,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Florian Schmaus <flow@gentoo.org> (2024-08-23)
+# Has a serious bug that causes synced directories to end up world read-
+# and writeable. See https://github.com/nextcloud/desktop/issues/6863
+>=net-misc/nextcloud-client-3.13.1
+
 # William Hubbs <williamh@gentoo.org> (2024-08-21)
 # Dead upstream, multiple related bugs in Gentoo.
 # Removal on 2024-09-20
@@ -179,12 +184,6 @@ dev-debug/gdb-apple
 # https://github.com/firewalld/firewalld/issues/1366
 # https://lore.kernel.org/netfilter-devel/Zp7FqL_YK3p_dQ8B@egarver-mac/
 =net-firewall/nftables-1.1.0
-
-# Sam James <sam@gentoo.org> (2024-07-24)
-# Fails to build with GCC 15, several open bugs
-# including test failures. Unpackaged by others.
-# Removal on 2024-08-23.  Bug #936581.
-app-accessibility/epos
 
 # Hans de Graaff <graaff@gentoo.org> (2024-07-21)
 # Obsolete slots that are no longer used by any cucumber
