@@ -33,6 +33,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-08-25)
+# Broken with current Plasma 5 version, not ported to Plasma 6.
+# Removal on 2024-09-24.
+kde-misc/latte-dock
+
 # Florian Schmaus <flow@gentoo.org> (2024-08-23)
 # Has a serious bug that causes synced directories to end up world read-
 # and writeable. See https://github.com/nextcloud/desktop/issues/6863
@@ -79,11 +84,6 @@ app-text/cuneiform
 # HOMEPAGE and SRC_URI return 404, Gentoo is last distribution.
 # Removal on 2024-09-10.  Bugs #937775, #675028.
 media-sound/SmarTagger
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-08-10)
-# Mask KF6-based version for now until actual KF6-based consumers
-# also move to ::gentoo.
-~dev-util/kdevelop-pg-qt-2.3.0
 
 # Pacho Ramos <pacho@gentoo.org> (2024-08-09)
 # Mask until we find out a way to deal better with the upstream
@@ -184,14 +184,6 @@ dev-debug/gdb-apple
 # https://github.com/firewalld/firewalld/issues/1366
 # https://lore.kernel.org/netfilter-devel/Zp7FqL_YK3p_dQ8B@egarver-mac/
 =net-firewall/nftables-1.1.0
-
-# Hans de Graaff <graaff@gentoo.org> (2024-07-21)
-# Obsolete slots that are no longer used by any cucumber
-# version. Removal on 2024-08-21.
-dev-util/cucumber-core:10
-dev-util/cucumber-cucumber-expressions:16
-dev-util/cucumber-gherking:22
-dev-util/cucumber-html-formatter:20
 
 # Leonardo Hernández Hernández <leohdz172@proton.me> (2024-07-07)
 # New major ffmpeg version. Tracker bug #928905.
