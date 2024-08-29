@@ -1521,12 +1521,9 @@ dev-embedded/sdcc:z80n - Add support for Zilog Z80N
 dev-embedded/u-boot-tools:envtools - Build only the target-side environment tools
 dev-embedded/urjtag:ftd2xx - Enable support for USB FTDI chips via dev-embedded/libftd2xx
 dev-embedded/urjtag:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
-dev-games/godot:bullet - Enable the sci-physics/bullet module
 dev-games/godot:deprecated - Enable support for deprecated features
 dev-games/godot:raycast - Enable the raycast Editor module using media-libs/embree
-dev-games/godot:runner - Build an additional binary optimized for running games (only relevant with USE=tools)
 dev-games/godot:tools - Enable the Godot Editor for game development
-dev-games/godot:webm - Enable the WebM module
 dev-games/guichan:allegro - Build the Allegro frontend
 dev-games/mygui:l10n_ru - Install some additional russian docs if 'doc' useflag enabled
 dev-games/mygui:ogre - Use the ogre render subsystem. (cannot combine with opengl)
@@ -1923,7 +1920,6 @@ dev-lang/rust-bin:profiler - Build the profiler runtime and rust-demangler tool 
 dev-lang/rust-bin:rust-analyzer - Install rust-analyzer, A Rust compiler front-end for IDEs (language server)
 dev-lang/rust-bin:rust-src - Install rust-src, needed by developer tools and for build-std (cross)
 dev-lang/rust-bin:rustfmt - Install rustfmt, Rust code formatter
-dev-lang/scala:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
 dev-lang/souffle:ffi - Support c++ functors with arbitrary number of arguments
 dev-lang/souffle:swig - Enable SWIG usage, needed for Java and Python bindings
 dev-lang/spidermonkey:clang - Use Clang compiler instead of GCC
@@ -3079,7 +3075,6 @@ games-action/trine:launcher - Install GTK+ launcher
 games-action/trine-enchanted-edition:launcher - Install GTK+ launcher
 games-action/trine2:launcher - Install GTK+ launcher
 games-arcade/bomns:editor - enables building the level editor
-games-arcade/burgerspace:network - Enable client-server support
 games-arcade/commandergenius:downloader - Allows some Keen games to be downloaded from the menu
 games-arcade/jazz2:server - Build the multiplayer game server
 games-arcade/jazz2-data:cc - Install The Christmas Chronicles additional data
@@ -7994,7 +7989,7 @@ sys-apps/watchdog:nfs - enable support for checking nfs mounts
 sys-apps/xdg-desktop-portal:flatpak - Enable sys-apps/flatpak integration
 sys-apps/xdg-desktop-portal:seccomp - Use sys-apps/bubblewrap (which requires seccomp) to sandbox some functionality like icon handling
 sys-apps/xinetd:rpc - support RPC services
-sys-auth/elogind:cgroup-hybrid - Use hybrid cgroup hierarchy (OpenRC's default) instead of unified.
+sys-auth/elogind:cgroup-hybrid - Use hybrid cgroup hierarchy instead of unified (OpenRC's default).
 sys-auth/munge:gcrypt - Use libgcrypt instead of openssl
 sys-auth/nss-pam-ldapd:pynslcd - Install the python implementation along with the standard implementation
 sys-auth/nss-pam-ldapd:utils - Install the command-line utilities
@@ -8605,7 +8600,6 @@ www-apps/roundup:pyjwt - Enable jwt tokens for login
 www-apps/roundup:tz - Enable full support of timezone
 www-apps/roundup:whoosh - Enable Whoosh full-text indexer
 www-apps/roundup:xapian - Enable Xapian full-text indexer
-www-apps/rt:lighttpd - Add www-servers/lighttpd support
 www-apps/tt-rss:daemon - Install additional init scripts for automated RSS updates
 www-apps/ttyd:mbedtls - Use mbedTLS replacement for OpenSSL
 www-apps/webdavcgi:rcs - Adds support for a revision controlled backend with RCS (dev-vcs/rcs)
