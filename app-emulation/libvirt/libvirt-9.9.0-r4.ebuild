@@ -318,6 +318,16 @@ src_configure() {
 		-Ddocdir="${EPREFIX}/usr/share/doc/${PF}"
 	)
 
+	# Workaround for bug #938302
+	if use dtrace && ! has_version "dev-debug/systemtap[dtrace-symlink(-)]" ; then
+		local native_file="${T}"/meson.${CHOST}.ini.local
+		cat >> ${native_file} <<-EOF || die
+		[binaries]
+		dtrace='stap-dtrace'
+		EOF
+		emesonargs+=( --native-file "${native_file}" )
+	fi
+
 	meson_src_configure
 }
 
