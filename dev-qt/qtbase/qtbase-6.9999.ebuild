@@ -165,11 +165,10 @@ src_prepare() {
 }
 
 src_configure() {
-	# The only component that uses gdk backends is the qgtk3 platformtheme plugin
 	if use gtk; then
-		# defang automagic dependencies
-		use wayland || append-cxxflags -DGENTOO_GTK_HIDE_WAYLAND
+		# defang automagic dependencies (bug #624960)
 		use X || append-cxxflags -DGENTOO_GTK_HIDE_X11
+		use wayland || append-cxxflags -DGENTOO_GTK_HIDE_WAYLAND
 	fi
 
 	local mycmakeargs=(
@@ -303,6 +302,8 @@ src_test() {
 		# may randomly hang+timeout, perhaps related to -j as well
 		tst_qprocess #936484
 		tst_qtimer
+		# haystacksWithMoreThan4GiBWork can easily OOM (16GB ram not enough)
+		tst_qlatin1stringmatcher
 		# these can be flaky depending on the environment/toolchain
 		tst_qlogging # backtrace log test can easily vary
 		tst_q{,raw}font # affected by available fonts / settings (bug #914737)

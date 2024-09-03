@@ -6,6 +6,34 @@
 # This file is only for generic masks. For arch-specific masks (i.e.
 # mask everywhere, unmask on arch/*) use arch/base.
 
+# Sam James <sam@gentoo.org> (2024-09-03)
+# Causes crashes with e.g. dlz+samba (bug #938955)
+net-dns/bind jemalloc
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-09-01)
+# Cleanup dev-qt/qtwebengine:5 revdeps
+<kde-apps/kdecore-meta-23.08.50 webengine
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-09-01)
+# Prepare for kde{accessibility,admin,education,graphics,multimedia,network}-meta-23.08.50 removal
+<kde-apps/kde-apps-meta-23.08.50 accessibility admin education graphics multimedia network
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-09-01)
+# Prepare for kde-apps/kdesdk-meta-23.08.50 removal
+<kde-apps/kde-apps-meta-23.08.50 sdk
+kde-apps/umbrello:5 php
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-09-01)
+# Prepare for KDE PIM 5 removal
+<kde-apps/kde-apps-meta-23.08.50 pim
+<kde-apps/kdeutils-meta-23.08.50 gpg
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-08-31)
+# Prepare for KDE PIM 5 removal and avoid conflicts w/ KDE PIM 6
+app-office/kmymoney:5 addressbook
+app-office/kraft:5 pim
+media-gfx/digikam:5 addressbook
+
 # Viorel Munteanu <ceamac@gentoo.org> (2024-07-26)
 # Branch 7.1 needs a new BDEPEND for doc
 >=app-emulation/virtualbox-7.1 doc

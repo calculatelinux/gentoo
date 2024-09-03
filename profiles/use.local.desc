@@ -2933,7 +2933,6 @@ dev-util/intel-graphics-compiler:vc - Enable VectorCompiler for a better perform
 dev-util/intel-graphics-system-controller:cli - Build CLI tools for flashing manually a firmware upgrade.
 dev-util/kcov:binutils - Use sys-libs/binutils-libs for `--verify` support
 dev-util/kdevelop:gdbui - Enable GUI for attaching GDB to a running process
-dev-util/kdevelop:hex - Enable hex editor plugin via app-editors/okteta
 dev-util/kdevelop:qmake - Enable support for QMake build system
 dev-util/kdevelop:share - Enable support for patch sharing using kde-frameworks/purpose
 dev-util/kernelshark:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS
@@ -3534,7 +3533,6 @@ kde-apps/gwenview:fits - Enable support for NASA's sci-libs/cfitsio library
 kde-apps/gwenview:mpris - Enable support for MPRIS2 interface, requiring dev-qt/qtdbus as dependency.
 kde-apps/gwenview:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/k3b:webengine - Use dev-qt/qtwebengine for fancy k3bdiskinfoview
-kde-apps/kaccounts-providers:webengine - Enable Nextcloud KAccounts plugin using dev-qt/qtwebengine
 kde-apps/kalarm:pim - Enable birthday import, email functions etc. using kde-apps/akonadi
 kde-apps/kalzium:editor - Enable the embedded molecule editor/viewer
 kde-apps/kalzium:solver - Enable the equation solver
@@ -3618,11 +3616,9 @@ kde-apps/marble:shapefile - Enable support for ESRI shapefiles
 kde-apps/marble:webengine - Use dev-qt/qtwebengine for embedded web browser
 kde-apps/okular:crypt - Enable support for password-encrypted documents via kde-frameworks/kwallet
 kde-apps/okular:epub - Enable E-Book support via app-text/ebook-tools
-kde-apps/okular:image-backend - Enable image viewing support
 kde-apps/okular:markdown - Enable Markdown support via app-text/discount
 kde-apps/okular:mobi - Enable mobipocket support via kde-apps/kdegraphics-mobipocket
 kde-apps/okular:phonon - Enable sound support via media-libs/phonon
-kde-apps/okular:plucker - Enable Plucker E-Book for Palm OS devices support
 kde-apps/okular:qml - Install Okular Qml components
 kde-apps/okular:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/parley:webengine - Build browser integration for the editor, requires dev-qt/qtwebengine
@@ -4123,6 +4119,7 @@ media-gfx/graphicsmagick:dynamic-loading - Compile graphicsmagick with dynamical
 media-gfx/graphicsmagick:fpx - Enable FlashPix support with media-libs/libfpx
 media-gfx/graphicsmagick:q16 - Set storage quantum size to 16 (~2*memory)
 media-gfx/graphicsmagick:q32 - Set storage quantum size to 32 (~5*memory)
+media-gfx/graphicsmagick:zip - Build with dev-libs/libzip to support the OpenRaster (ORA) format.
 media-gfx/graphviz:X - Builds unflatten, vimdot, builds plugin -Txlib, and enables support for x11 in various other modules (needs cairo)
 media-gfx/graphviz:devil - Enables DevIL output plugin -Tdevil
 media-gfx/graphviz:gtk2 - Enables gtk+ output plugin -Tgtk (needs cairo)
@@ -6038,7 +6035,7 @@ net-libs/gnutls:sslv2 - Support for the old/insecure SSLv2 protocol
 net-libs/gnutls:sslv3 - Support for the old/insecure SSLv3 protocol
 net-libs/gnutls:test-full - Enable full test mode
 net-libs/gnutls:tls-heartbeat - Enable the Heartbeat Extension in TLS and DTLS
-net-libs/gnutls:tools - Build extra tools
+net-libs/gnutls:tools - Build cli tools such as gnutls-cli, certtool and oscptool
 net-libs/gssdp:man - Generate man page for tools
 net-libs/libetpan:liblockfile - Enable support for liblockfile library
 net-libs/libetpan:lmdb - Use dev-db/lmdb as cache DB
@@ -6731,6 +6728,7 @@ net-p2p/bitcoin-core:sqlite - Support descriptor wallets in SQLite format
 net-p2p/bitcoin-core:system-leveldb - Link with virtual/bitcoin-leveldb rather than embedding an internal copy
 net-p2p/bitcoin-core:system-libsecp256k1 - Link with dev-libs/libsecp256k1 rather than embedding an internal copy
 net-p2p/bitcoin-core:systemtap - Enable SystemTap/DTrace tracing
+net-p2p/bitcoin-core:test-full - Run tests that take a long time
 net-p2p/bitcoin-core:upnp - Enable Universal Plug and Play
 net-p2p/bitcoin-core:zeromq - Report blocks and transactions via zeromq
 net-p2p/bitcoin-qt:external-signer - Include support for external wallet signer programs
@@ -7702,6 +7700,7 @@ sci-visualization/labplot:origin - Enable support for reading OriginLab OPJ proj
 sci-visualization/labplot:root - Enable support for CERN's ROOT file type
 sci-visualization/labplot:serial - Enable support for RS232 serial ports using dev-qt/qtserialport
 sci-visualization/labplot:share - Enable support for a share menu using kde-frameworks/purpose
+sci-visualization/labplot:xlsx - Enable support for importing/exporting Microsoft Excel files (.xlsx) via dev-libs/qxlsx
 sci-visualization/paraview:boost - Enable the usage of dev-libs/boost
 sci-visualization/paraview:cg - Add support for nvidia's cg shaders
 sci-visualization/paraview:nvcontrol - Add NVCONTROL support for OpenGL options
