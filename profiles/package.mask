@@ -33,11 +33,24 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-09-04)
+# Unmaintained upstream, latest media-libs/phonon release incompatible.
+# Removal on 2024-10-04.
+media-libs/phonon-gstreamer
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-09-04)
+# KF5 Porting aids (from KDElibs4). No more, or PMASKED revdeps.
+# Removal on 2024-10-04. Bug #755956
+kde-frameworks/khtml
+kde-frameworks/kjs
+kde-frameworks/kross
+
 # Fabian Groffen <grobian@gentoo.org> (2024-09-02)
 # exim_tinydb utility crashes due to invalid free() (used in startup script)
 =mail-mta/exim-4.98
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2024-08-31)
+# All users must upgrade to KDE PIM 6.
 # KDE PIM 5 depends on deprecated kde-frameworks/kross:5,
 # blocking deprecated dev-qt/qtscript:5 removal, and deprecated
 # dev-qt/qtwebengine:5.
@@ -232,16 +245,6 @@ sys-auth/pam_ldap
 # Removal on 2024-09-05.  Bug #936881.
 dev-libs/libappindicator
 dev-libs/libindicator
-
-# Michael Orlitzky <mjo@gentoo.org> (2024-08-03)
-# Unmaintained package. Upstream is not quite _dead_, but the project
-# domain (where tarballs and documentation were hosted) was hijacked in
-# 2022 and nothing has been done about it. As a result, the version in
-# Gentoo is far out of date. Four open bugs, no interest. Removal on
-# or after 2024-09-03.
-acct-group/monkeyd
-acct-user/monkeyd
-www-servers/monkeyd
 
 # Sam James <sam@gentoo.org> (2024-08-02)
 # Unreliable software, unmaintained in Gentoo. Having it in the main
