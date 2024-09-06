@@ -148,11 +148,6 @@ kde-misc/kio-locate
 # No signs of upstream porting work. Removal on 2024-09-29.
 kde-misc/kio-gopher
 
-# Michał Górny <mgorny@gentoo.org> (2024-08-28)
-# API removals break gobject-introspection.
->=dev-python/ensurepip-setuptools-74
->=dev-python/setuptools-74
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2024-08-25)
 # Broken with current Plasma 5 version, not ported to Plasma 6.
 # Removal on 2024-09-24.
@@ -162,14 +157,6 @@ kde-misc/latte-dock
 # Has a serious bug that causes synced directories to end up world read-
 # and writeable. See https://github.com/nextcloud/desktop/issues/6863
 >=net-misc/nextcloud-client-3.13.1
-
-# William Hubbs <williamh@gentoo.org> (2024-08-21)
-# Dead upstream, multiple related bugs in Gentoo.
-# Removal on 2024-09-20
-# Bug #575478, #611846, #814551, #892653, #904989, #934410, #935656,
-# #938262
-# Treeclean request: #938282
-sys-process/runit
 
 # Arsen Arsenović <arsen@gentoo.org> (2024-08-02)
 # Guile rework masks.  Mask all packages or package versions that are
@@ -239,29 +226,6 @@ sys-auth/pam_ldap
 # so have backups ready if you attempt an upgrade.
 >=mail-client/thunderbird-128.1.0
 >=mail-client/thunderbird-bin-128.1.0
-
-# Michał Górny <mgorny@gentoo.org> (2024-08-06)
-# Superseded by dev-libs/libayatana-*.  No revdeps left.
-# Removal on 2024-09-05.  Bug #936881.
-dev-libs/libappindicator
-dev-libs/libindicator
-
-# Sam James <sam@gentoo.org> (2024-08-02)
-# Unreliable software, unmaintained in Gentoo. Having it in the main
-# repositories may give users an impression of it being a safe tool.
-# Removal on 2024-09-01.
-app-backup/mkstage4
-
-# James Le Cuirot <chewi@gentoo.org> (2024-07-29)
-# Superseded by media-libs/libv4l[utils].
-# Removal on 2024-08-29. Bug #936674.
-media-tv/v4l-utils
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2024-07-29)
-# Lacks maintainer capacity for update version plus java dependencies.
-# A pull request for the version bump could be provided on request.
-# Removal on 2024-08-28. Bug #736076.
-media-video/bdsup2sub
 
 # Eli Schwartz <eschwartz@gentoo.org> (2024-07-29)
 # Bad version can result in failing builds. Please upgrade to 72.1.0.
