@@ -13,5 +13,5 @@ RDEPEND=>=sys-devel/m4-1.4.16 >=sys-devel/gettext-0.21
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=mirror://gnu/bison/bison-3.8.2.tar.xz verify-sig? ( mirror://gnu/bison/bison-3.8.2.tar.xz.sig )
-_eclasses_=flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	verify-sig	a79ba011daaf532d71a219182474d150
+_eclasses_=flag-o-matic	fa33e3696fe4689dda7e9affe92e2c94	multilib	7e1347c006a76bb812f3a9f663b79991	multiprocessing	e644caa6eb7ce7e5ab0864383ac13ad9	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	verify-sig	a79ba011daaf532d71a219182474d150
 _md5_=5038a531cab23ed0059979e1d22e7502

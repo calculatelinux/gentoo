@@ -1,6 +1,34 @@
 # Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-09-08)
+# Packages needing dev-python/selenium.
+dev-python/aiohttp-cors test
+dev-python/django test
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-09-08)
+# requires <llvm-18
+dev-db/postgresql llvm_slot_15 llvm_slot_16 llvm_slot_17
+media-libs/mesa llvm_slot_15 llvm_slot_16 llvm_slot_17
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-09-08)
+# needs libgdata[gnome-online-accounts], depends on net-libs/webkit-gtk
+gnome-base/gvfs google test
+
+# Michał Górny <mgorny@gentoo.org> (2024-09-08)
+# libcxx is broken on mips, https://bugs.gentoo.org/939297#c2
+sys-devel/clang-common default-libcxx
+sys-devel/clang-runtime libcxx
+
+# Hans de Graaff <graaff@gentoo.org> (2024-09-08)
+# Requires large parts of dev-ruby/rails to be keyworded
+dev-ruby/minitest-hooks test
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-09-07)
+# gui-libs/gtk:4 is not keyworded here
+app-crypt/gcr:4 gtk
+>=app-crypt/pinentry-1.3.0 gtk
+
 # Arthur Zamarin <arthurzam@gentoo.org> (2024-09-06)
 # media-libs/vidstab is not keyworded
 media-video/ffmpeg vidstab
@@ -239,7 +267,7 @@ app-text/enchant voikko
 
 # Matt Turner <mattst88@gentoo.org> (2020-08-11)
 # No drivers on this architecture support Vulkan
-media-libs/mesa vulkan vulkan-overlay zink
+media-libs/mesa vulkan vulkan-overlay zink video_cards_zink
 
 # Michał Górny <mgorny@gentoo.org> (2018-01-23)
 # USE=collab requires unkeyworded net-libs/loudmouth & dev-cpp/asio.
