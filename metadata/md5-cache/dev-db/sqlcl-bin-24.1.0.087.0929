@@ -11,5 +11,5 @@ RDEPEND=dev-db/oracle-instantclient dev-java/java-config:2 >=virtual/jre-11 >=de
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-24.1.0.087.0929.zip
-_eclasses_=java-pkg-2	72587187cd548a5dcdb6a13453a3614d	java-utils-2	4d4ed3633ff7d706ae7d81e5fe4e94fc
+_eclasses_=java-pkg-2	72587187cd548a5dcdb6a13453a3614d	java-utils-2	505f237da61d30569dcc6d5df8c51262
 _md5_=fe4dc3a297af804c23ef31ec70a5f65c
