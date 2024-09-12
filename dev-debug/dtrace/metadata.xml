@@ -7,10 +7,10 @@
 	</maintainer>
 	<maintainer type="person">
 		<email>arsen@gentoo.org</email>
-		<description>Arsen Arsenović</description>
+		<name>Arsen Arsenović</name>
 	</maintainer>
 	<use>
-		<flag name="install-tests">
+		<flag name="test-install">
 			Install the testsuite for manual use. It is not suitable
 			for automatic execution within the ebuild because it
 			requires root privlieges.
