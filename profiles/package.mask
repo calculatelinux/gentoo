@@ -33,6 +33,24 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2024-09-14)
+# Obsolete slots that were used for older cucumber version but that no
+# longer have reverse dependencies. Removal on 2024-10-14.
+dev-util/cucumber-compatibility-kit:10
+dev-util/cucumber-core:12
+dev-util/cucumber-gherkin:22
+
+# Hans de Graaff <graaff@gentoo.org> (2024-09-14)
+# Old slots that are not compatible with ruby32. Use the newer slots
+# instead. Removal on 2024-10-14.
+dev-ruby/hiera-eyaml:3
+dev-util/aruba:0
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-09-10)
+# ia64 only package. Since we drop ia64, we can remove this package.
+# Removal on 2024-10-10.  Bug #939298.
+sys-apps/salinfo
+
 # Ulrich Müller <ulm@gentoo.org> (2024-09-12)
 # Pretest versions, masked for testing.
 <app-editors/emacs-30.0.9999:30-vcs
@@ -152,6 +170,7 @@ sci-physics/qmeq
 ~media-gfx/skanpage-23.08.5
 ~sys-block/partitionmanager-23.08.5
 ~sys-libs/kpmcore-23.08.5
+<media-libs/pulseaudio-qt-1.4.0
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2024-09-07)
 # Plasma 6 is not planned to be going stable on x86.
@@ -355,11 +374,6 @@ app-text/cuneiform
 # if heavily affected (bug #937773).
 >=gui-libs/egl-wayland-1.1.14
 
-# Arthur Zamarin <arthurzam@gentoo.org> (2024-08-11)
-# HOMEPAGE and SRC_URI return 404, Gentoo is last distribution.
-# Removal on 2024-09-10.  Bugs #937775, #675028.
-media-sound/SmarTagger
-
 # Pacho Ramos <pacho@gentoo.org> (2024-08-09)
 # Mask until we find out a way to deal better with the upstream
 # introduced circular dep, bug #937616
@@ -372,21 +386,6 @@ media-sound/SmarTagger
 >=dev-libs/gobject-introspection-1.80
 >=dev-libs/gobject-introspection-common-1.80
 >=x11-terms/ptyxis-46
-
-# Bernard Cafarelli <voyageur@gentoo.org> (2024-08-08)
-# Last release in 2004, website disappeared a long time ago.
-# Bad code quality, not packaged in other distros or dockapps.net
-# Many alternatives for audio recording available
-# Removal on 2024-09-08, bug #931764
-x11-plugins/wmrecord
-
-# Eli Schwartz <eschwartz93@gmail.com> (2024-05-26)
-# Unmaintained, website gone. Last released in 2010. Fails to build
-# with GCC 14, detects and builds against nonexisting dependencies.
-# Fails to authenticate users anyway. Obsoleted and replaced by
-# nss-pam-ldapd which actually works. Bug #908579.
-# Removal on 2024-09-07.
-sys-auth/pam_ldap
 
 # Joonas Niilola <juippis@gentoo.org> (2024-08-07)
 # Upstream doesn't recommend updating from 115 just yet. New
