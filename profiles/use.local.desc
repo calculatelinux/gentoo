@@ -4107,6 +4107,7 @@ media-gfx/freecad:points - Build the points module and workbench for working wit
 media-gfx/freecad:raytracing - Build the raytracing module and workbench for raytracing and rendering
 media-gfx/freecad:robot - Build the robot module and workbench for studying robot movements
 media-gfx/freecad:show - Build the show module, a helper module for visibility automation
+media-gfx/freecad:smesh - Build the Salome SMESH module
 media-gfx/freecad:surface - Build the surface module and workbench
 media-gfx/freecad:techdraw - Build the techdraw module and workbench, a more advanced and feature-rich successor of the drawing workbench
 media-gfx/freecad:tux - Build the Tux module
@@ -6047,9 +6048,7 @@ net-libs/libmicrohttpd:thread-names - Assign thread names to internal threads, u
 net-libs/libnids:glib - Use dev-libs/glib for multiprocessing support
 net-libs/libnids:libnet - Include code requiring net-libs/libnet
 net-libs/libnma:pkcs11 - Enable PKCS#11 support in certificate chooser via app-crypt/gcr
-net-libs/liboauth:bindist - Alias for the nss USE flag, since there are license compliancy trouble when using OpenSSL.
 net-libs/liboauth:curl - If enabled, net-misc/curl is used thorugh the libcurl library; if it's not, the curl command is used instead. Some features are only available when using the library, but using it as library requires matching SSL implementations.
-net-libs/liboauth:nss - Use Mozilla NSS (dev-libs/nss) as hash library; if this is disabled, dev-libs/openssl is used instead.
 net-libs/liboping:filecaps - Allow non-root users to use [n]oping utility.
 net-libs/liboping:ncurses - Build ncurses-based version of oping utility (requires sys-libs/ncurses)
 net-libs/libpcap:netlink - Use dev-libs/libnl to put wireless interfaces in monitor mode.
