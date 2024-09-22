@@ -12,5 +12,5 @@ RDEPEND=guile_targets_2-2? ( dev-scheme/guile:2.2 ) guile_targets_3-0? ( dev-sch
 REQUIRED_USE=|| ( guile_targets_2-2 guile_targets_3-0 )
 SLOT=0
 SRC_URI=mirror://nongnu/guile-reader/guile-reader-0.6.3.tar.gz
-_eclasses_=autotools	61927ff6474f1d141b4ea4a5b9870424	gnuconfig	f8b9cc21e72de8cbedde6ca5108d208b	guile	7eaf8d04ef544132efe20080bc18752a	guile-utils	1818ab79f42a7929094eca2efd03e4ae	libtool	f9e6905c12590c1cac06d85371a0819a	multibuild	45df57b1877333d70a9e894f6c8fdb3a	multilib	7e1347c006a76bb812f3a9f663b79991	out-of-source-utils	a0eb740debe3d472355e8bc52f62e0ac	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9
+_eclasses_=autotools	61927ff6474f1d141b4ea4a5b9870424	gnuconfig	f8b9cc21e72de8cbedde6ca5108d208b	guile	9d3de4881dd316f121e837fd78741f11	guile-utils	1818ab79f42a7929094eca2efd03e4ae	libtool	f9e6905c12590c1cac06d85371a0819a	multibuild	45df57b1877333d70a9e894f6c8fdb3a	multilib	7e1347c006a76bb812f3a9f663b79991	out-of-source-utils	a0eb740debe3d472355e8bc52f62e0ac	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9
 _md5_=a028ad94ec4df6b5cdfab62dbc6a48e8

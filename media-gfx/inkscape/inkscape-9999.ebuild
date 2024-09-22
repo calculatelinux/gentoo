@@ -38,7 +38,7 @@ BDEPEND="
 COMMON_DEPEND="${PYTHON_DEPS}
 	>=app-text/poppler-0.57.0:=[cairo]
 	>=dev-cpp/cairomm-1.12:0
-	>=dev-cpp/glibmm-2.54.1:2
+	>=dev-cpp/glibmm-2.58:2
 	dev-cpp/gtkmm:3.0
 	>=dev-cpp/pangomm-2.40:1.4
 	>=dev-libs/boehm-gc-7.1:=
@@ -55,7 +55,6 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	media-libs/freetype:2
 	media-libs/lcms:2
 	media-libs/libpng:0=
-	net-libs/libsoup:2.4
 	sci-libs/gsl:=
 	>=x11-libs/pango-1.44
 	x11-libs/gtk+:3[X?]
@@ -124,7 +123,7 @@ src_unpack() {
 	else
 		default
 	fi
-	[[ -d "${S}" ]] || mv -v "${WORKDIR}/${P}_202"?-??-* "${S}" || die
+	[[ -d "${S}" ]] || mv -v "${WORKDIR}/${P/_/-}_202"?-??-* "${S}" || die
 }
 
 src_prepare() {
@@ -198,7 +197,4 @@ src_install() {
 		python_fix_shebang "${ED}"/usr/share/${PN}/extensions
 		python_optimize "${ED}"/usr/share/${PN}/extensions
 	fi
-
-	# Empty directory causes sandbox issues, see bug #761915
-	rm -r "${ED}/usr/share/inkscape/fonts" || die "Failed to remove fonts directory."
 }

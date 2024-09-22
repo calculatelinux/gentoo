@@ -14,6 +14,7 @@ HOMEPAGE="https://freenetproject.org/"
 PEV="3.1.6"
 SRC_URI="https://github.com/hyphanet/fred/releases/download/build0${PV#*p}/freenet-build0${PV#*p}-source.tar.bz2
 	https://github.com/hyphanet/seedrefs/archive/build01480.tar.gz -> seednodes-0.7.5_p1480.tar.gz
+	https://github.com/hyphanet/fred/commit/49e1a69445.patch -> freenet-java21.patch
 	https://repo1.maven.org/maven2/io/pebbletemplates/pebble/${PEV}/pebble-${PEV}.jar
 	mirror://gentoo/freenet-ant-1.7.1.jar
 	verify-sig? (
@@ -76,6 +77,7 @@ DOCS=(
 
 PATCHES=(
 	"${FILESDIR}/freenet-0.7.5_p1497-ignore-failing-tests.patch"
+	"${DISTDIR}/freenet-java21.patch"
 )
 
 JAVA_CLASSPATH_EXTRA="java-service-wrapper"

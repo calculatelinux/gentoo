@@ -20,13 +20,12 @@ PATCH_GCC_VER="11.4.0"
 PATCH_VER="12"
 MUSL_VER="2"
 MUSL_GCC_VER="11.4.0"
-PYTHON_COMPAT=( python3_{10..12} )
 inherit toolchain
 
 DESCRIPTION="64bit kernel compiler"
 
 # Works on hppa and mips; all other archs, refer to bug #228115
-KEYWORDS="~hppa"
+KEYWORDS="hppa"
 
 # unlike every other target, hppa has not unified the 32/64 bit
 # ports in binutils yet

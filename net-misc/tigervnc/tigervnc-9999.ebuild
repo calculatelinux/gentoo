@@ -58,6 +58,10 @@ COMMON_DEPEND="
 		x11-apps/xkbcomp
 		x11-apps/xsetroot
 		x11-misc/xkeyboard-config
+		dri3? (
+			media-libs/mesa[opengl]
+			x11-libs/libxshmfence
+		)
 		opengl? ( media-libs/libglvnd[X] )
 		!net-misc/turbovnc[server]
 	)
