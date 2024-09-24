@@ -1,0 +1,14 @@
+BDEPEND=app-arch/unzip X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=compile install postinst postrm setup
+DESCRIPTION=Intel One Mono font family
+EAPI=8
+HOMEPAGE=https://github.com/intel/intel-one-mono
+INHERIT=font
+IUSE=X
+KEYWORDS=~amd64
+LICENSE=OFL-1.1
+RESTRICT=binchecks strip
+SLOT=0
+SRC_URI=https://github.com/intel/intel-one-mono/releases/download/V1.4.0/otf.zip -> intel-one-mono-1.4.0.zip
+_eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb
+_md5_=3b62c3ac4b4d3a70742138d5d45ef6f0

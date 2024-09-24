@@ -33,6 +33,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Eli Schwartz <eschwartz@gentoo.org> (2024-09-22)
+# Unmaintained, abandoned upstream, does not compile with GCC 14.
+# Removal on 2024-10-22.  Bug #874732.
+dev-util/biew
+
 # Sam James <sam@gentoo.org> (2024-09-22)
 # GCC 11 and older no longer receive upstream support or fixes for
 # bugs. Please switch to a newer GCC version using gcc-config.
@@ -261,10 +266,14 @@ kde-misc/latte-dock
 www-apps/haunt
 dev-scheme/guile-commonmark
 >=dev-scheme/guile-reader-0.6.3-r100
+dev-scheme/guile:1.8
 dev-scheme/guile:2.2
 dev-scheme/guile:3.0
 >=dev-build/make-4.4.1-r100
+>=app-emacs/flycheck-guile-0.5-r100
+>=app-emacs/geiser-guile-0.28.3-r100
 >=app-office/gnucash-5.8-r100
+>=app-office/texmacs-2.1-r100
 >=app-shells/gash-0.3.0-r100
 >=dev-build/remake-4.3.1.1.6-r100
 >=dev-debug/gdb-15.1-r100
@@ -307,13 +316,6 @@ dev-scheme/guile:3.0
 >=dev-scheme/guile-gi-0.3.2-r100
 >=media-sound/denemo-2.6.0-r100
 >=dev-scheme/skribilo-0.10.0-r100
-
-# Eli Schwartz <eschwartz@gentoo.org> (2024-08-15)
-# Abandoned upstream since 2011, unmaintained in gentoo since 2017. Tons of
-# patches, breaks again with GCC 14. Severe QA issues, automagic dependencies,
-# sole reverse dependency wants to remove it anyway.
-# Removal on 2024-09-14. Bug #829229, #854900, #863959, #880839, #882265, #931102, #914924.
-app-text/cuneiform
 
 # Ionen Wolkens <ionen@gentoo.org> (2024-08-11)
 # >=1.1.14 enables usage of explicit sync (with >=nvidia-drivers-560

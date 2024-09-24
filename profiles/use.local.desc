@@ -3075,6 +3075,7 @@ games-arcade/jazz2-data:demo - Use the free demo data instead of the full retail
 games-arcade/lbreakout2:themes - Install additional themes
 games-arcade/moleinvasion:music - Download and install the music files
 games-arcade/oshu:osu-skin - Include more complete osu-skin (other is minimal)
+games-arcade/osu-lazer:pipewire - Use pipewire to enable sound output
 games-arcade/performous:midi - Enable MIDI I/O support
 games-arcade/performous:songs - Install a few demo songs
 games-arcade/performous:webcam - Enable Webcam support
@@ -6151,7 +6152,6 @@ net-libs/xrootd:server - Install xrootd server and related plug-ins
 net-libs/xrootd:xrdec - Enable erasure coding support (XrdEc plugin) with dev-libs/isa-l
 net-libs/zeromq:drafts - Build draft API, which may change at any time without any notice, and is therefore not recommended for normal use.
 net-libs/zeromq:libbsd - Use strlcpy() from dev-libs/libbsd instead of internal implementation.
-net-libs/zeromq:pgm - Build PGM (Pragmatic General Multicast)extention, a protocol for reliable multicast transport of data over IP networks.
 net-libs/zeromq:sodium - Use dev-libs/libsodium for cryptography
 net-mail/courier-imap:trashquota - include deleted messages, and the Trash folder, in the estimated quota usage for maildirs
 net-mail/cyrus-imapd:backup - Enable backup service support
@@ -7620,6 +7620,7 @@ sci-physics/pythia:lhapdf - Support the use of external PDF sets via sci-physics
 sci-physics/pythia:root - Use sci-physics/root trees and histograms (in examples only)
 sci-physics/rivet:hepmc2 - Build with HepMC2
 sci-physics/rivet:hepmc3 - Build with HepMC3
+sci-physics/rivet:highfive - Build with hdf5 and highfive
 sci-physics/rivet:zlib - Build with zlib
 sci-physics/root:R - Enable support for dev-lang/R
 sci-physics/root:asimage - Enable support for media-libs/libafterimage
