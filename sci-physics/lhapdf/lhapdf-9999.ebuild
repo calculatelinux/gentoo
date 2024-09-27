@@ -37,9 +37,11 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 RDEPEND="python? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}"
 BDEPEND="
-	$(python_gen_cond_dep '
-		>=dev-python/cython-0.19[${PYTHON_USEDEP}]
-	')
+	python? (
+		$(python_gen_cond_dep '
+			>=dev-python/cython-0.19[${PYTHON_USEDEP}]
+		')
+	)
 "
 
 pkg_setup() {

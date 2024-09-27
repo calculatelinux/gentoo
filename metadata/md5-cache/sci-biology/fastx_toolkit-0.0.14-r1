@@ -10,5 +10,5 @@ LICENSE=AGPL-3
 RDEPEND=sci-biology/libgtextutils:= dev-perl/PerlIO-gzip dev-perl/GDGraph sci-visualization/gnuplot
 SLOT=0
 SRC_URI=https://github.com/agordon/fastx_toolkit/releases/download/0.0.14/fastx_toolkit-0.0.14.tar.bz2
-_eclasses_=autotools	61927ff6474f1d141b4ea4a5b9870424	gnuconfig	f8b9cc21e72de8cbedde6ca5108d208b	libtool	f9e6905c12590c1cac06d85371a0819a	multilib	7e1347c006a76bb812f3a9f663b79991	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9
+_eclasses_=autotools	88360f474e629ee45f99b739f02b7d2d	gnuconfig	f8b9cc21e72de8cbedde6ca5108d208b	libtool	f9e6905c12590c1cac06d85371a0819a	multilib	7e1347c006a76bb812f3a9f663b79991	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9
 _md5_=e0ed8e935eca944dc874fee38c4435ad

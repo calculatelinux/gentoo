@@ -59,6 +59,7 @@ COMMON_DEPEND="
 	acl? ( sys-apps/acl:0= )
 	apparmor? ( >=sys-libs/libapparmor-2.13:0= )
 	audit? ( >=sys-process/audit-2:0= )
+	bpf? ( >=dev-libs/libbpf-1.4.0:0= )
 	cryptsetup? ( >=sys-fs/cryptsetup-2.0.1:0= )
 	curl? ( >=net-misc/curl-7.32.0:0= )
 	elfutils? ( >=dev-libs/elfutils-0.158:0= )
@@ -139,7 +140,6 @@ RDEPEND="${COMMON_DEPEND}
 	)
 	!sysv-utils? ( sys-apps/sysvinit )
 	resolvconf? ( !net-dns/openresolv )
-	!sys-apps/hwids[udev]
 	!sys-auth/nss-myhostname
 	!sys-fs/eudev
 	!sys-fs/udev
@@ -439,7 +439,11 @@ multilib_src_install_all() {
 	keepdir /var/log/journal
 
 	if use pam; then
-		newpamd "${FILESDIR}"/systemd-user.pam systemd-user
+		if use selinux; then
+			newpamd "${FILESDIR}"/systemd-user-selinux.pam systemd-user
+		else
+			newpamd "${FILESDIR}"/systemd-user.pam systemd-user
+		fi
 	fi
 
 	if use kernel-install; then

@@ -23,7 +23,7 @@ else
 	MY_P=${MY_PN}-${MY_PV}
 	S=${WORKDIR}/${MY_P}
 	SRC_URI="https://github.com/systemd/${MY_PN}/archive/v${MY_PV}/${MY_P}.tar.gz"
-	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86"
+	KEYWORDS="~alpha amd64 arm arm64 hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86"
 fi
 
 inherit bash-completion-r1 linux-info meson-multilib optfeature pam python-single-r1
@@ -141,7 +141,6 @@ RDEPEND="${COMMON_DEPEND}
 	)
 	!sysv-utils? ( sys-apps/sysvinit )
 	resolvconf? ( !net-dns/openresolv )
-	!sys-apps/hwids[udev]
 	!sys-auth/nss-myhostname
 	!sys-fs/eudev
 	!sys-fs/udev
@@ -397,7 +396,11 @@ multilib_src_install_all() {
 	keepdir /var/log/journal
 
 	if use pam; then
-		newpamd "${FILESDIR}"/systemd-user.pam systemd-user
+		if use selinux; then
+			newpamd "${FILESDIR}"/systemd-user-selinux.pam systemd-user
+		else
+			newpamd "${FILESDIR}"/systemd-user.pam systemd-user
+		fi
 	fi
 
 	if use split-usr; then

@@ -11,5 +11,5 @@ RDEPEND=guile_targets_2-2? ( dev-scheme/guile:2.2 ) guile_targets_3-0? ( dev-sch
 REQUIRED_USE=|| ( guile_targets_2-2 guile_targets_3-0 )
 SLOT=0
 SRC_URI=http://arglist.com/guile/goosh-1.3/goosh-1.3.tar.gz
-_eclasses_=guile	9d3de4881dd316f121e837fd78741f11	guile-utils	1818ab79f42a7929094eca2efd03e4ae	multibuild	45df57b1877333d70a9e894f6c8fdb3a	multilib	7e1347c006a76bb812f3a9f663b79991	out-of-source-utils	a0eb740debe3d472355e8bc52f62e0ac	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9
+_eclasses_=guile	24f3d60fda8799d1083c7177dab7e7e7	guile-utils	1818ab79f42a7929094eca2efd03e4ae	multibuild	45df57b1877333d70a9e894f6c8fdb3a	multilib	7e1347c006a76bb812f3a9f663b79991	out-of-source-utils	a0eb740debe3d472355e8bc52f62e0ac	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9
 _md5_=3e00d35844f09b677ece23cdea2dc75d
