@@ -452,7 +452,6 @@ app-editors/emacs:threads - Add elisp threading support
 app-editors/emacs:toolkit-scroll-bars - Use the selected toolkit's scrollbars in preference to Emacs' own scrollbars
 app-editors/emacs:tree-sitter - Support the dev-libs/tree-sitter parsing library
 app-editors/emacs:wide-int - Prefer wide Emacs integers (typically 62-bit). This option has an effect only on architectures where "long" and "long long" types have different size.
-app-editors/emacs:xwidgets - Enable use of GTK widgets in Emacs buffers (requires GTK3)
 app-editors/fe:sendmail - Send mail after editor abend
 app-editors/featherpad:X - Link application against X11 libraries which adds support for virtual desktop awareness and tab DND
 app-editors/gedit-plugins:charmap - Insert special characters just by clicking on them
@@ -1284,6 +1283,7 @@ app-text/xpdf:textselect - Allow text selection
 app-text/xpdf:utils - Install command-line PDF converters and various utilities
 app-text/zathura:synctex - Use libsynctex to get latex codeline from pdf
 app-text/zathura-meta:cb - Install plug-in for ComicBook support
+app-text/zeal:X - Enable global shortcut support on X11
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
 app-xemacs/xemacs-packages-all:mule - Add multi-language support to XEmacs
 dev-ada/AdaSAT:shared - Build shared library
@@ -1786,7 +1786,6 @@ dev-lang/ghc:llvm - Pull in dependencies for the sys-devel/llvm codegen backend.
 dev-lang/ghc:numa - Enable NUMA thread balancing policy using sys-process/numactl.
 dev-lang/ghc:unregisterised - Create an unregisterised build in which only the C codegen backend will be available.
 dev-lang/gnat-gpl:ada - Build the ADA language (GNAT) frontend
-dev-lang/gnat-gpl:bootstrap - Used to bootstrap gnat-gpl
 dev-lang/gnat-gpl:cet - Enable support for Intel Control Flow Enforcement Technology (CET)
 dev-lang/gnat-gpl:d - Enable support for the D programming language
 dev-lang/gnat-gpl:default-stack-clash-protection - Build packages with stack clash protection on by default
@@ -1803,6 +1802,7 @@ dev-lang/gnat-gpl:pgo - Build GCC using Profile Guided Optimization (PGO)
 dev-lang/gnat-gpl:rust - Build support for the Rust language, installs gccrs.
 dev-lang/gnat-gpl:sanitize - Build support for various sanitizer functions (ASAN/TSAN/etc...)
 dev-lang/gnat-gpl:ssp - Build packages with stack smashing protector on by default
+dev-lang/gnat-gpl:system-bootstrap - Bootstrap using installed Ada compiler
 dev-lang/gnat-gpl:systemtap - enable systemtap static probe points
 dev-lang/gnat-gpl:vtv - Build support for virtual table verification (a C++ hardening feature)
 dev-lang/gnucobol:json - Enable support for JSON template formatting via dev-libs/json-c
@@ -2153,6 +2153,7 @@ dev-libs/modsecurity:lmdb - Add LMDB backend support
 dev-libs/modsecurity:pcre2 - Use dev-libs/libpcre2 as regex implementation
 dev-libs/ncnn:tools - Enable installation of various tools in addition to the library
 dev-libs/nss:cacert - Include root/class3 certs from CAcert (https://www.cacert.org/)
+dev-libs/nss:test-full - Run all available tests, instead of the standard set only
 dev-libs/nss:utils - Compile and install all extra binaries, such as certutil, modutil and few more
 dev-libs/nwjs:ffmpeg-chromium - Use Chromium FFmpeg fork (media-video/ffmpeg-chromium) rather than mainline FFmpeg (media-video/ffmpeg)
 dev-libs/oneDNN:cblas - Use virtual/cblas for sgemm routines
@@ -2411,6 +2412,7 @@ dev-python/PyQt6:printsupport - Build bindings for the QtPrintSupport module
 dev-python/PyQt6:qml - Build bindings for the QtQml module and enable the qml plugin
 dev-python/PyQt6:quick - Build bindings for the QtQuick module
 dev-python/PyQt6:quick3d - Build bindings for the QtQuick3D module
+dev-python/PyQt6:remoteobjects - Build bindings for the QtRemoteObjects module
 dev-python/PyQt6:sensors - Build bindings for the QtSensors module
 dev-python/PyQt6:serialport - Build bindings for the QtSerialPort module
 dev-python/PyQt6:spatialaudio - Build bindings for the QtSpatialAudio module
@@ -2726,6 +2728,7 @@ dev-qt/qtpositioning:nmea - Build plugin for parsing NMEA (National Marine Elect
 dev-qt/qtpositioning:qml - Build QML bindings
 dev-qt/qtquickcontrols:widgets - Enable QtWidgets support
 dev-qt/qtquickcontrols2:widgets - Enable QtWidgets support
+dev-qt/qtremoteobjects:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtscript:scripttools - Build the QtScriptTools module (requires QtWidgets)
 dev-qt/qtscxml:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtsensors:qml - Build QML bindings
@@ -3409,9 +3412,7 @@ gnome-base/nautilus:cloudproviders - Enable the cloudproviders support
 gnome-base/nautilus:gstreamer - Enable the Audio/Video file properties page
 gnome-base/nautilus:previewer - Use gnome-extra/sushi to preview files from the file mananger
 gnome-base/nautilus:sendto - Enable the nautilus-sendto extension to send files to various locations/devices
-gnome-extra/cinnamon:desktop-portal - Enable sys-apps/xdg-desktop-portal backend implementation for Cinnamon
 gnome-extra/cinnamon:internal-polkit - Use Cinnamon's internal polkit agent instead of gnome-extra/polkit-gnome. This does not currently support multi-user fast switching.
-gnome-extra/cinnamon-control-center:gnome-online-accounts - Enable configuration panel for net-libs/gnome-online-accounts accounts
 gnome-extra/cinnamon-control-center:modemmanager - Enable support for mobile broadband devices using net-misc/modemmanager
 gnome-extra/cjs:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 gnome-extra/eiciel:nautilus - Build gnome-base/nautilus extension
@@ -4336,7 +4337,7 @@ media-libs/libsdl:joystick - Control joystick support (disable at your own risk)
 media-libs/libsdl:sound - Control audio support (disable at your own risk)
 media-libs/libsdl:tslib - Build with tslib support for touchscreen devices
 media-libs/libsdl:video - Control video support (disable at your own risk)
-media-libs/libsdl2:fcitx4 - Enable support for app-i18n/fcitx 4
+media-libs/libsdl2:fcitx - Enable support for app-i18n/fcitx
 media-libs/libsdl2:gles1 - include OpenGL ES 1.0 support
 media-libs/libsdl2:haptic - Enable the haptic (force feedback) subsystem
 media-libs/libsdl2:ibus - Enable support for app-i18n/ibus
