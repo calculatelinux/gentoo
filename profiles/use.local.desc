@@ -2613,7 +2613,7 @@ dev-qt/qt-creator:help - Enable the integrated dev-qt/qt-docs viewer (also neede
 dev-qt/qt-creator:plugin-dev - Install the 'Devel' component needed to build external Qt Creator plugins
 dev-qt/qt-creator:qmldesigner - Build QmlDesigner and related plugins (Insight, StudioWelcome)
 dev-qt/qt-creator:serialterminal - Build the serial terminal plugin
-dev-qt/qt-creator:tracing - Build plugins requiring tracing capabilities (CtfVisualizer, PerfProfiler, QmlProfiler)
+dev-qt/qt-creator:tracing - Build plugins for tracing requiring extra dependencies (AppStatisticsMonitor, CtfVisualizer, PerfProfiler, QmlProfiler)
 dev-qt/qt-creator:webengine - Use dev-qt/qtwebengine with the help USE rather than bundled litehtml
 dev-qt/qt-docs:3d - Install documentation for dev-qt/qt3d
 dev-qt/qt-docs:activeqt - Install documentation for ActiveQt (unpackaged, Windows-only)
@@ -3515,7 +3515,6 @@ gui-wm/sway:wallpapers - Install sway's default wallpaper image
 gui-wm/wayfire:X - Enable support for X11 applications (XWayland).
 gui-wm/wayfire:gles3 - Enable OpenGL ES 3.x Features.
 kde-apps/akonadi:designer - Install plugin for dev-qt/designer
-kde-apps/akonadi:kaccounts - Enable support for system-wide defined KAccounts
 kde-apps/akonadi:tools - Install tools for developers and testing
 kde-apps/akonadi:webengine - Enable support for system-wide defined KAccounts
 kde-apps/analitza:eigen - Enable dev-cpp/eigen mathematical templates support
@@ -3592,7 +3591,6 @@ kde-apps/kio-extras:taglib - Enable audio thumbnails via media-libs/taglib
 kde-apps/kleopatra:pim - Enable WKS publishing support using kde-apps/kmail
 kde-apps/kmag:keyboardfocus - Enable keyboard focus tracking
 kde-apps/konqueror:activities - Enable kactivities support
-kde-apps/kpimtextedit:designer - Build plugins for dev-qt/designer
 kde-apps/krdc:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
 kde-apps/ksystemlog:kdesu - Run as root using kdesu from kde-plasma/kde-cli-tools
 kde-apps/ktouch:X - Enable support for X11 Keyboard Layout Detection
@@ -3651,7 +3649,6 @@ kde-frameworks/kplotting:designer - Build plugins for dev-qt/designer
 kde-frameworks/krunner:activities - Enable search runner for KDE Activities history
 kde-frameworks/ktexteditor:editorconfig - Enable support for EditorConfig configuration files
 kde-frameworks/ktextwidgets:designer - Build plugins for dev-qt/designer
-kde-frameworks/kuserfeedback:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 kde-frameworks/kwallet:gpg - Support wallets with GnuPG encryption in addition to the default blowfish-encrypted file
 kde-frameworks/kwallet:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 kde-frameworks/kwidgetsaddons:designer - Build plugins for dev-qt/designer
@@ -4862,7 +4859,6 @@ media-sound/qmmp:soxr - Use the SoX resampling library
 media-sound/qmmp:stereo - Enable stereo effect
 media-sound/qmmp:tray - Build tray icon
 media-sound/qmmp:xmp - Enable module files renderer (modplug replacement)
-media-sound/qpwgraph:trayicon - Build support for tray icon
 media-sound/qsampler:libgig - Enable libgig support for loading Gigasampler files and DLS (Downloadable Sounds) Level 1/2 files
 media-sound/qtractor:aubio - Enable media-libs/aubio support
 media-sound/qtractor:dssi - Enable support for DSSI Soft Synth Interface
@@ -4934,7 +4930,6 @@ media-tv/kodi:bluetooth - Enable JSON-RPC over BT for remote control connected v
 media-tv/kodi:bluray - Enable playback of Blu-ray filesystems
 media-tv/kodi:caps - Use sys-libs/libcap to bind to privileged ports as non-root
 media-tv/kodi:cec - Enable support for HDMI-CEC devices via libcec
-media-tv/kodi:dav1d - Enables AV1 decoding via media-libs/dav1d
 media-tv/kodi:eventclients - Install full set of Kodi python evenclients and evenclients examples
 media-tv/kodi:gbm - Use the Graphics Buffer Manager for EGL on KMS.
 media-tv/kodi:gles - Use simplified OpenGLES instead of full-scale OpenGL
@@ -4945,13 +4940,10 @@ media-tv/kodi:mysql - Enable support store of media library metadata on local or
 media-tv/kodi:nfs - Enable NFS client support
 media-tv/kodi:optical - Enable Audio CD playback, optical disks detection and reading (CD-ROM, Video CD, and others), and ISO optical disk images direct reading. DVD disks may require additional 'udf' flag.
 media-tv/kodi:pipewire - Enable pipewire support
-media-tv/kodi:power-control - Enable control of shutdown, reboot, suspend, and hibernate
-media-tv/kodi:raspberry-pi - Enable support for the Raspberry Pi
 media-tv/kodi:soc - Use additional media-video/ffmpeg patches for efficient playback on some SoCs (e.g. ARM, RISC-V)
 media-tv/kodi:system-ffmpeg - Use system ffmpeg instead of the bundled one
 media-tv/kodi:udev - Use udev rules to handle devices' permissions and hotplug support. Unless you know what you're doing do not disable this flag on Linux kernels. This is provided as an option for completeness.
 media-tv/kodi:udf - Enable UDF support. Required for playing blurays.
-media-tv/kodi:upower - Use sys-power/upower to get battery level and active power source
 media-tv/kodi:webserver - Enable internal webserver
 media-tv/kodi:xslt - Enable metadata XSLT scrapers support with dev-libs/libxslt
 media-tv/linuxtv-dvb-apps:alevt - Build videotext decoder
@@ -8579,6 +8571,9 @@ www-apps/roundup:pyjwt - Enable jwt tokens for login
 www-apps/roundup:tz - Enable full support of timezone
 www-apps/roundup:whoosh - Enable Whoosh full-text indexer
 www-apps/roundup:xapian - Enable Xapian full-text indexer
+www-apps/rt:apache - Add www-servers/apache support
+www-apps/rt:lighttpd - Add www-servers/lighttpd support
+www-apps/rt:nginx - Add www-servers/nginx support
 www-apps/tt-rss:daemon - Install additional init scripts for automated RSS updates
 www-apps/ttyd:mbedtls - Use mbedTLS replacement for OpenSSL
 www-apps/webdavcgi:rcs - Adds support for a revision controlled backend with RCS (dev-vcs/rcs)
