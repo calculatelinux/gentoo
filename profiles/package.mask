@@ -33,6 +33,39 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2024-10-06)
+# Obsolete slot without reverse dependencies. Use the newer slot
+# instead. Removal on 2024-11-08.
+dev-ruby/base64:0.1
+
+# Andrew Ammerlaan <andrewammerlaan@gentoo.org>
+# This version is known to break on certain systems. At the
+# same time it fixes several reported issues. Masked until
+# we can work out how to resolve the situation.
+# See also: https://github.com/gentoo/gentoo/pull/36091
+~sys-boot/plymouth-24.004.60
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-10-05)
+# Masked for removal in 30 days. Broken since KF6 incapacitated
+# breeze-icons-rcc, but no one even complained. Upstream porting
+# effort stalled indefinitely:
+# https://invent.kde.org/office/kexi/-/issues/152
+# Removal on 2024-11-04.
+app-office/kexi
+dev-db/kdb
+dev-libs/kproperty
+dev-libs/kreport
+kde-frameworks/breeze-icons-rcc
+
+# Sebastian Pipping <sping@gentoo.org> (2024-10-03)
+# Masked for removal in 30 days.  Last release in 2021,
+# last commit two years ago, has open bugs, .. (bug #940725).
+# Also removing its two dependencies that have no other
+# reverse dependencies in Gentoo or known use outside of Lurch.
+net-libs/libaxc
+net-libs/libomemo
+x11-plugins/lurch
+
 # Sam James <sam@gentoo.org> (2024-09-30)
 # GCC 10 and older no longer receive upstream support or fixes for
 # bugs. Please switch to a newer GCC version using gcc-config.
@@ -51,12 +84,6 @@ dev-python/brython
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2024-09-28)
 # Nothing depends on it. Removal on 2024-10-28.
 dev-java/ant-core
-
-# Michał Górny <mgorny@gentoo.org> (2024-09-25)
-# Fails on deprecated config options from eclass, except that if we
-# update them, then all existing packages break.
-# https://github.com/scikit-build/scikit-build-core/issues/912
-=dev-python/rapidfuzz-3.10.0
 
 # Eli Schwartz <eschwartz@gentoo.org> (2024-09-22)
 # Unmaintained, abandoned upstream, does not compile with GCC 14.
@@ -145,25 +172,6 @@ dev-ml/dyn
 # Does not build anymore.  No upstream activity since 2021.
 # Removal on 2024-10-08.  Bug #932532.
 sci-physics/qmeq
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-09-07)
-# These packages are EOL in Plasma 6.
-# Removal on 2024-10-07.
-<kde-plasma/khotkeys-5.27.50:5
-<kde-plasma/libkworkspace-5.27.50:5
-<kde-plasma/xembed-sni-proxy-5.27.50:5
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-09-04)
-# Unmaintained upstream, latest media-libs/phonon release incompatible.
-# Removal on 2024-10-04.
-media-libs/phonon-gstreamer
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-09-04)
-# KF5 Porting aids (from KDElibs4). No more, or PMASKED revdeps.
-# Removal on 2024-10-04. Bug #755956
-kde-frameworks/khtml
-kde-frameworks/kjs
-kde-frameworks/kross
 
 # Fabian Groffen <grobian@gentoo.org> (2024-09-02)
 # exim_tinydb utility crashes due to invalid free() (used in startup script)
@@ -328,6 +336,7 @@ dev-ml/ppx_js_style:0/0.17
 >=xfce-base/garcon-4.19
 >=xfce-base/libxfce4ui-4.19
 >=xfce-base/libxfce4util-4.19
+>=xfce-base/libxfce4windowing-4.19.5
 >=xfce-base/thunar-4.19
 >=xfce-base/tumbler-4.19
 >=xfce-base/xfce4-appfinder-4.19
@@ -545,9 +554,9 @@ media-plugins/kodi-game-libretro-dosbox
 # switch the compiler / the binutils) ASAP. If you need them for a specific
 # (isolated) use case, feel free to unmask them on your system.
 <sys-libs/glibc-2.38-r10
-<sys-libs/binutils-libs-2.40
-<sys-devel/binutils-2.40
-<sys-devel/binutils-hppa64-2.40
+<sys-libs/binutils-libs-2.42
+<sys-devel/binutils-2.42
+<sys-devel/binutils-hppa64-2.42
 
 # Michael Orlitzky <mjo@gentoo.org> (2017-01-07)
 # This package has some dangerous quality and security issues, but

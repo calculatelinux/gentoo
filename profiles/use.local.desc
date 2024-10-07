@@ -1086,7 +1086,7 @@ app-office/scribus:templates - Document templates
 app-office/scribus:tk - Install tk based scripts e.g. FontSample.py
 app-office/skrooge:activities - Enable kactivities support
 app-office/texmacs:netpbm - Add support for media-libs/netpbm
-app-office/texstudio:video - Use phonon for video embedding
+app-office/texstudio:video - Enable video player in pdf files
 app-pda/gtkpod:clutter - Enable clutter support for displaying coverart
 app-portage/conf-update:colordiff - Use colors when displaying diffs (app-misc/colordiff)
 app-portage/eix:debug - Build with upstream's CXXFLAGS/LDFLAGS for debugging support; not recommended for normal use.
@@ -1427,6 +1427,8 @@ dev-db/postgresql:llvm - Add support for llvm JIT engine
 dev-db/postgresql:server - Disable to build and install the clients and libraries only.
 dev-db/postgresql:uuid - Enable server side UUID generation (via dev-libs/ossp-uuid).
 dev-db/psqlodbc:iodbc - Use dev-db/libiodbc. Disable to use dev-db/unixODBC.
+dev-db/recutils:curl - Enable support for remote descriptors using net-misc/curl
+dev-db/recutils:mdb - Build the mdb2rec utility using app-office/mdbtools
 dev-db/redict:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
 dev-db/redis:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
 dev-db/spatialite:geos - Add the sci-libs/geos library for exact topological tests
@@ -2493,7 +2495,7 @@ dev-python/pyarrow:parquet - Enables read/write parquet data format
 dev-python/pyglet:image - Enable support for image formats other than PNG and BMP
 dev-python/pymongo:native-extensions - Compiles native C extensions
 dev-python/pymongo:test-full - Run test suite in full, including tests that run a local database instance.
-dev-python/pyopengl_accelerate:numpy - Building NumPy native format handlers.
+dev-python/pyopengl-accelerate:numpy - Building NumPy native format handlers.
 dev-python/pypax:ptpax - Enable PT_PAX_FLAGS support.
 dev-python/pypax:xtpax - Enable XATTR_PAX_FLAGS support.
 dev-python/pypy:full-stdlib - Install complete stdlib as necessary to use PyPy for general purpose programs. By default, only a limited subset that is used when building PyPy3 executables is installed. Note that PyPy2.7's stdlib contains multiple known vulnerabilities.
@@ -2910,8 +2912,6 @@ dev-util/gnome-builder:flatpak - Enable support for flatpak applications using s
 dev-util/gnome-builder:git - Provide support for the Git version control system via dev-libs/libgit2-glib (such as setup of Git for New Project, direct cloning for Open Project and changed lines indicators in the editor gutter)
 dev-util/gnome-builder:sysprof - Provide an integrated profiler via dev-util/sysprof
 dev-util/google-perftools:debug - Build a set of libraries with debug support (so-called debugalloc). These are available by default but are not needed unless you're actually developing using tcmalloc.
-dev-util/google-perftools:largepages - Use (experimental) larger pages for tcmalloc, this increases memory usage, but should speed up the allocation/free operations.
-dev-util/google-perftools:largepages64k - Use (experimental) 64K pages for tcmalloc, this increases memory usage, but should speed up the allocation/free operations.
 dev-util/google-perftools:minimal - Only build the tcmalloc_minimal library, ignoring the heap checker and the profilers.
 dev-util/google-perftools:optimisememory - To build libtcmalloc with smaller internal caches.
 dev-util/google-perftools:pagesize-128k - Use 128K page size for tcmalloc. Larger size makes tcmalloc faster, at the cost of using more space (due to internal fragmentation)
@@ -2961,7 +2961,6 @@ dev-util/ostree:soup - Use libsoup for networking
 dev-util/perf:babeltrace - Enable dev-util/babeltrace support
 dev-util/perf:bpf - Enable support for eBPF features with dev-libs/libbpf
 dev-util/perf:capstone - Use dev-libs/capstone for disassembly support
-dev-util/perf:clang - Enable builtin clang and LLVM support
 dev-util/perf:doc - Build documentation and man pages. With this USE flag disabled, the --help parameter for perf and its sub-tools will not be available. This is optional because it depends on a few documentation handling tools that are not always welcome on user systems.
 dev-util/perf:libpfm - Enable dev-libs/libpfm support
 dev-util/perf:libtraceevent - Enable dev-libs/libtraceevent support
@@ -4278,6 +4277,7 @@ media-libs/lib3mf:system-act - Use system-provided dev-go/act as code generator 
 media-libs/libafterimage:shaping - Use MIT shaped X windows extention.
 media-libs/libafterimage:shm - Use MIT shared memory extention for X image transfer.
 media-libs/libao:sndio - Add support for media-sound/sndio
+media-libs/libass:libunibreak - Use dev-libs/libunibreak for Unicode line breaking algorithm
 media-libs/libavif:aom - Enable support for the AOM codec encoding and decoding
 media-libs/libavif:dav1d - Enable support for the dav1d codec decoding
 media-libs/libavif:extras - Build extra apps (avifenc, avifdec) and test files
@@ -4454,7 +4454,6 @@ media-libs/osl:optix - Add support for NVIDIA's OptiX Raytracing Engine
 media-libs/osl:partio - Use media-libs/partio
 media-libs/osl:qt6 - Build the osltoy binary (with Qt6)
 media-libs/phonon:designer - Install plugin for dev-qt/designer
-media-libs/phonon-gstreamer:network - Enable network streaming support via libsoup
 media-libs/portmidi:test-programs - Install various example programs
 media-libs/quarter:designer - Install plugin for dev-qt/designer
 media-libs/quarter:qthelp - Build API documentation in QtHelp format
@@ -8042,6 +8041,7 @@ sys-boot/lilo:device-mapper - Enable support for device-mapper from sys-fs/lvm2
 sys-boot/lilo:minimal - Do not install the dolilo helper script
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
 sys-boot/plymouth:drm - Provides abstraction to the DRM drivers (intel, nouveau and vmwgfx at this moment)
+sys-boot/plymouth:freetype - Build with freetype support (if enabled, used for encryption prompts)
 sys-boot/plymouth:pango - Adds support for printing text on splash screen and text prompts, e.g. for password
 sys-boot/plymouth:split-usr - Enable this if /bin and /usr/bin are separate directories
 sys-boot/refind:btrfs - Builds the EFI binary btrfs filesystem driver
@@ -8065,7 +8065,6 @@ sys-cluster/ceph:jaeger - Enable jaegertracing and it's dependent libraries
 sys-cluster/ceph:kafka - Rados Gateway's pubsub support for Kafka push endpoint
 sys-cluster/ceph:lttng - Add support for LTTng
 sys-cluster/ceph:mgr - Build the ceph-mgr daemon
-sys-cluster/ceph:numa - Use sys-process/numactl for numa support in rocksdb
 sys-cluster/ceph:parquet - Support for s3 select on parquet objects
 sys-cluster/ceph:pmdk - Enable PMDK libraries
 sys-cluster/ceph:rabbitmq - Use rabbitmq-c to build rgw amqp push endpoint

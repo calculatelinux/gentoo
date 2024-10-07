@@ -34,6 +34,7 @@ DEPEND="
 	)
 "
 BDEPEND="
+	>=dev-build/xfce4-dev-tools-4.19.2
 	dev-lang/perl
 	>=sys-devel/gettext-0.19.8
 	virtual/pkgconfig

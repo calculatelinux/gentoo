@@ -11,4 +11,4 @@ RDEPEND=ssl? ( >=dev-libs/openssl-3:= ) readline? ( sys-libs/readline:= ) tcpd? 
 SLOT=0
 SRC_URI=http://www.dest-unreach.org/socat/download/socat-1.8.0.0.tar.bz2
 _eclasses_=edo	367e103a74bf77e6a8da7894d999fa3c	flag-o-matic	fa33e3696fe4689dda7e9affe92e2c94	multilib	7e1347c006a76bb812f3a9f663b79991	toolchain-funcs	948855ec7ad9f11351edf9066708dfa9
-_md5_=12e97f95713f550adb099d5deed6b2c7
+_md5_=055221e704f9ab65244401d02e587802
