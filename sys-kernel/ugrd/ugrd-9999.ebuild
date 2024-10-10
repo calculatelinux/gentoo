@@ -51,6 +51,7 @@ pkg_postinst() {
 	optfeature "ugrd.fs.btrfs support" sys-fs/btrfs-progs
 	optfeature "ugrd.crypto.gpg support" app-crypt/gnupg
 	optfeature "ugrd.fs.lvm support" sys-fs/lvm2[lvm]
+	optfeature "ugrd.fs.mdraid support" sys-fs/mdadm
 }
 
 distutils_enable_tests unittest
