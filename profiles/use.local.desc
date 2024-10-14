@@ -1884,7 +1884,6 @@ dev-lang/php:xslt - Build the XSL extension
 dev-lang/polyml:portable - Build the portable interpreter version of Poly/ML instead of native
 dev-lang/python:bluetooth - Build Bluetooth protocol support in socket module
 dev-lang/python:ensurepip - Install the ensurepip module that uses bundled wheels to bootstrap pip and setuptools (if disabled, it will be only possible to use venv `--without-pip`)
-dev-lang/python:gil - Build with Global Interpreter Lock. Disable to use the experimental freethreading mode.
 dev-lang/python:jit - Enable experimental Just-In-Time compilation support.
 dev-lang/python:libedit - Link readline extension against dev-libs/libedit instead of sys-libs/readline
 dev-lang/python:pgo - Optimize the build using Profile Guided Optimization (PGO) by running Python's test suite and collecting statistics based on its performance. This will take longer to build.
@@ -6666,7 +6665,6 @@ net-nds/openldap:smbkrb5passwd - Enable overlay for syncing ldap, unix and lanma
 net-nds/rpcbind:remotecalls - Enable remote calls
 net-nds/rpcbind:warmstarts - Enables rpcbind to cache configuration for warm restarts
 net-news/rssguard:libmpv - Enable media player support via libmpv from media-video/mpv
-net-news/rssguard:qt6 - Build with Qt6 support instead of the default Qt5
 net-news/rssguard:qtmultimedia - Enable media player support via dev-qt/qtmultimedia
 net-news/rssguard:webengine - Use dev-qt/qtwebengine for embedded web browser
 net-news/sfeed:theme-mono - Use mono theme
@@ -8235,7 +8233,6 @@ sys-fabric/mstflint:inband - Enable firmware updates for Mellanox SwitchX and Co
 sys-fabric/opensm:tools - Install ssld extra tool
 sys-firmware/broadcom-bt-firmware:compress-xz - Compress firmware using xz (app-arch/xz-utils) before installation
 sys-firmware/broadcom-bt-firmware:compress-zstd - Compress firmware using zstd (app-arch/zstd) before installation
-sys-firmware/edk2-ovmf:binary - Use pre-built binaries
 sys-firmware/intel-microcode:hostonly - Only install ucode(s) supported by currently available (=online) processor(s)
 sys-firmware/intel-microcode:initramfs - Install a small initramfs for use with CONFIG_MICROCODE_EARLY
 sys-firmware/intel-microcode:split-ucode - Install the split binary ucode files (used by the kernel directly)
