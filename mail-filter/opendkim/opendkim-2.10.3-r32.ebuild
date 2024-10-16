@@ -14,7 +14,7 @@ SRC_URI="https://downloads.sourceforge.net/project/opendkim/${P}.tar.gz"
 # The GPL-2 is for the init script, bug 425960.
 LICENSE="BSD GPL-2 Sendmail-Open-Source"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="amd64 ~arm ~arm64 x86"
 IUSE="berkdb ldap lmdb lua memcached opendbx poll sasl selinux +ssl static-libs stats querycache test unbound"
 
 BDEPEND="acct-user/opendkim
@@ -250,5 +250,5 @@ pkg_config() {
 	einfo "After you configured your MTA, publish your key by adding this TXT record to your domain:"
 	cat "${ROOT}/var/lib/opendkim/${selector}.txt"
 	einfo "t=y signifies you only test the DKIM on your domain. See following page for the complete list of tags:"
-	einfo "  http://www.dkim.org/specs/rfc4871-dkimbase.html#key-text"
+	einfo "  https://www.rfc-editor.org/rfc/rfc6376.html#section-3.6.1"
 }

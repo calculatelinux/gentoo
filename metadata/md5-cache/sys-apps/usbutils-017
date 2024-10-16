@@ -12,5 +12,5 @@ RDEPEND=virtual/libusb:1= virtual/libudev:= python? ( python_single_target_pytho
 REQUIRED_USE=python? ( ^^ ( python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12 python_single_target_python3_13 ) )
 SLOT=0
 SRC_URI=https://www.kernel.org/pub/linux/utils/usb/usbutils/usbutils-017.tar.xz
-_eclasses_=multilib	b2a329026f2e404e9e371097dda47f96	multiprocessing	1e32df7deee68372153dca65f4a7c21f	python-single-r1	47d8ac9be330c9366112b78fd4f8ce57	python-utils-r1	c356a67b8e93889de6efff7d50599102	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87
+_eclasses_=multilib	b2a329026f2e404e9e371097dda47f96	multiprocessing	1e32df7deee68372153dca65f4a7c21f	python-single-r1	47d8ac9be330c9366112b78fd4f8ce57	python-utils-r1	2fee95c11e5f883024588d4837db6802	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87
 _md5_=cae5fcafc94dea3027f9b4f2b0202f81

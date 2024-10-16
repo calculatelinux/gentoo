@@ -33,15 +33,30 @@
 
 #--- END OF EXAMPLES ---
 
+# Ulrich Müller <ulm@gentoo.org> (2024-10-15)
+# No longer provided as a separate package; the Emacs mode is now
+# installed by dev-util/quilt with USE=emacs.
+# Removal on 2024-11-14. Bug #247500.
+app-emacs/quilt-el
+
+# Alfredo Tupone <tupone@gentoo.org> (2024-10-14)
+# These packages are no more needed.
+# Use dev-ml/opam, dev-ml/opam-file-format, 
+# dev-ml/opam-installer
+# that include these
+# remove on 2024-11-14.
+dev-ml/opam-client
+dev-ml/opam-repository
+dev-ml/opam-state
+dev-ml/opam-format
+dev-ml/opam-core
+dev-ml/opam-solver
+
 # Hans de Graaff <graaff@gentoo.org> (2024-10-13)
 # Obsolete slots without reverse dependencies. Use a newer slot
 # instead. Removal on 2024-11-13.
 dev-ruby/io-event:1.2
 dev-ruby/io-event:1.3
-
-# Sam James <sam@gentoo.org> (2024-10-12)
-# File collisions with sys-libs/ldb (bug #941298)
-=net-fs/samba-4.21.0
 
 # Holger Hoffstätte <holger@applied-asynchrony.com> (2024-10-11)
 # Vendors an unreleased libbpf version and generates ABI-breaking code.
@@ -255,14 +270,6 @@ sci-chemistry/mopac7
 # Breaks libstdc++ with a casing issue: https://gcc.gnu.org/PR116657
 =sys-libs/timezone-data-2024b
 
-# Alfredo Tupone <tupone@gentoo.org> (2024-06-09)
-# These packages are no more needed. Use dev-ml/dune-private-libs
-# that include these
-# remove on 2024-10-08. Bug #939339
-dev-ml/stdune
-dev-ml/ordering
-dev-ml/dyn
-
 # Michał Górny <mgorny@gentoo.org> (2024-09-08)
 # Does not build anymore.  No upstream activity since 2021.
 # Removal on 2024-10-08.  Bug #932532.
@@ -422,6 +429,7 @@ dev-ml/async:0/0.17
 dev-ml/patience_diff:0/0.17
 >=dev-ml/ppx_deriving-6.0.2
 dev-ml/ppx_js_style:0/0.17
+>=dev-ml/camlp4-5
 
 # Michał Górny <mgorny@gentoo.org> (2024-06-08)
 # Prereleases of Xfce 4.20.  Masking upon popular request, due to

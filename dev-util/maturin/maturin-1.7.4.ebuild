@@ -454,7 +454,7 @@ LICENSE+="
 	Unicode-DFS-2016
 " # crates
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~arm64 ~loong ~mips ppc ppc64 ~riscv ~s390 sparc x86"
 IUSE="doc +ssl test"
 RESTRICT="!test? ( test )"
 
@@ -462,6 +462,7 @@ RDEPEND="$(python_gen_cond_dep 'dev-python/tomli[${PYTHON_USEDEP}]' 3.10)"
 DEPEND="ssl? ( dev-libs/openssl:= )"
 BDEPEND="
 	virtual/pkgconfig
+	>=virtual/rust-1.74
 	doc? ( app-text/mdbook )
 	test? (
 		${RDEPEND}
