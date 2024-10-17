@@ -14,7 +14,7 @@ inherit verify-sig
 MY_PV=${PV/_alpha/a}
 MY_P="Python-${MY_PV%_p*}"
 PYVER=$(ver_cut 1-2)
-PATCHSET="python-gentoo-patches-${MY_PV}"
+PATCHSET="python-gentoo-patches-${MY_PV}-r2"
 
 DESCRIPTION="An interpreted, interactive, object-oriented programming language"
 HOMEPAGE="
@@ -112,11 +112,11 @@ VERIFY_SIG_CERT_OIDC_ISSUER=https://github.com/login/oauth
 # large file tests involve a 2.5G file being copied (duplicated)
 CHECKREQS_DISK_BUILD=5500M
 
-QA_PKGCONFIG_VERSION=${PYVER}
+QA_PKGCONFIG_VERSION=${PYVER%t}
 # false positives -- functions specific to *BSD
 QA_CONFIG_IMPL_DECL_SKIP=( chflags lchflags )
 
-declare -rA PYTHON_KERNEL_CHECKS=(
+declare -rgA PYTHON_KERNEL_CHECKS=(
 	["CROSS_MEMORY_ATTACH"]="test_external_inspection" #bug 938589
 	["DNOTIFY"]="test_fcntl" # bug 938662
 )
@@ -372,6 +372,7 @@ src_configure() {
 
 			# Fails in profiling run, passes in src_test().
 			-x test_capi
+			-x test_embed
 		)
 
 		# Arch-specific skips.  See #931888 for a collection of these.
@@ -648,20 +649,4 @@ src_install() {
 	if use tk; then
 		ln -s "../../../bin/idle${PYVER}" "${scriptdir}/idle" || die
 	fi
-}
-
-pkg_postinst() {
-	local v
-	for v in ${REPLACING_VERSIONS}; do
-		if ver_test "${v}" -lt 3.13.0_beta2; then
-			ewarn "Python 3.13.0b2 has changed its module ABI.  The .pyc files"
-			ewarn "installed previously are no longer valid and will be regenerated"
-			ewarn "(or ignored) on the next import.  This may cause sandbox failures"
-			ewarn "when installing some packages and checksum mismatches when removing"
-			ewarn "old versions.  To actively prevent this, rebuild all packages"
-			ewarn "installing Python 3.13 modules, e.g. using:"
-			ewarn
-			ewarn "  emerge -1v /usr/lib/python3.13/site-packages"
-		fi
-	done
 }

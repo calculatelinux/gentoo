@@ -114,7 +114,7 @@ QA_PKGCONFIG_VERSION=${PYVER}
 # false positives -- functions specific to *BSD
 QA_CONFIG_IMPL_DECL_SKIP=( chflags lchflags )
 
-declare -rA PYTHON_KERNEL_CHECKS=(
+declare -rgA PYTHON_KERNEL_CHECKS=(
 	["CROSS_MEMORY_ATTACH"]="test_external_inspection" #bug 938589
 	["DNOTIFY"]="test_fcntl" # bug 938662
 )
@@ -514,6 +514,7 @@ src_compile() {
 		# bug 660358
 		local -x COLUMNS=80
 		local -x PYTHONDONTWRITEBYTECODE=
+		local -x TMPDIR=/tmp
 	fi
 
 	# also need to clear the flags explicitly here or they end up
@@ -553,6 +554,7 @@ src_test() {
 	# bug 660358
 	local -x COLUMNS=80
 	local -x PYTHONDONTWRITEBYTECODE=
+	local -x TMPDIR=/tmp
 
 	nonfatal emake -Onone test EXTRATESTOPTS="${test_opts[*]}" \
 		CPPFLAGS= CFLAGS= LDFLAGS= < /dev/tty
