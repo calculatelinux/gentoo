@@ -3,11 +3,11 @@
 
 EAPI=8
 
-inherit meson
+inherit meson bash-completion-r1
 
 DESCRIPTION="Utility for reading, writing, erasing and verifying flash ROM chips"
 HOMEPAGE="https://www.flashrom.org/"
-SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/v${PV}.tar.gz"
+SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -135,6 +135,10 @@ src_install() {
 	# library.  Therefore, we let it be built but keep it out of the
 	# installed tree.
 	find "${ED}" -name '*.a' -delete || die
+
+	# bash completion file is not up to standards, #941844
+	rm -Rf "${ED}"/usr/share/bash-completion
+	newbashcomp "${BUILD_DIR}/${PN}.bash" "${PN}"
 
 	if use tools; then
 		dosbin "${BUILD_DIR}"/util/ich_descriptors_tool/ich_descriptors_tool
