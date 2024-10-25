@@ -33,6 +33,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Arthur Zamarin <arthurzam@gentoo.org> (2024-10-23)
+# Doesn't support latest Rust/Cargo ebuild format and standard. Confuses
+# developers who tries to use it, and then see pkgcheck warnings on the
+# result.
+# Superior replacement is app-portage/pycargoebuild, which is maintained,
+# and supports more features.
+# Removal on 2024-11-22.  Bugs #942026, #934381, #724162, #930011.
+dev-util/cargo-ebuild
+
 # Arthur Zamarin <arthurzam@gentoo.org> (2024-10-20)
 # Maintainer-needed, no reverse dependencies, EAPI=7, many modern C
 # bugs. Many other IRC clients can be replacement. Awaits version
@@ -220,47 +229,16 @@ dev-python/brython
 # Nothing depends on it. Removal on 2024-10-28.
 dev-java/ant-core
 
-# Eli Schwartz <eschwartz@gentoo.org> (2024-09-22)
-# Unmaintained, abandoned upstream, does not compile with GCC 14.
-# Removal on 2024-10-22.  Bug #874732.
-dev-util/biew
-
 # Robin H. Johnson <robbat2@gentoo.org> (2024-09-22)
 # Upstream testing release; fails some tests as well here
 # Beware that if you upgrade to it, you may need to reset your keyrings.
 >=app-crypt/gnupg-2.5
-
-# Michał Górny <mgorny@gentoo.org> (2024-09-21)
-# Discontinued upstream.  Since 7.3.17, only 2.7 and 3.10 are released.
-# Vulnerable.
-# Removal on 2024-10-21.  Bug #939951.
-dev-python/pypy3_9
-dev-python/pypy3_9-exe
-dev-python/pypy3_9-exe-bin
-
-# Michał Górny <mgorny@gentoo.org> (2024-09-21)
-# Unmaintained.  Broken with >=dev-python/pytest-8.
-# Replaced by dev-python/pytest-lazy-fixtures.  No revdeps left.
-# Removal on 2024-10-21.  Bug #939420.
-dev-python/pytest-lazy-fixture
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-09-20)
-# No more revdeps after app-accessibility/kontrast:5 cleanup.
-# Removal on 2024-10-20.
-dev-db/futuresql5
 
 # Eli Schwartz <eschwartz@gentoo.org> (2024-09-19)
 # Breaks parallel builds with fatal compiler errors.
 # Bug #939798, #939875.
 >=dev-python/ensurepip-setuptools-75.1.0
 >=dev-python/setuptools-75.1.0
-
-# Hans de Graaff <graaff@gentoo.org> (2024-09-14)
-# Obsolete slots that were used for older cucumber version but that no
-# longer have reverse dependencies. Removal on 2024-10-14.
-dev-util/cucumber-compatibility-kit:10
-dev-util/cucumber-core:12
-dev-util/cucumber-gherkin:22
 
 # Ulrich Müller <ulm@gentoo.org> (2024-09-12)
 # Pretest versions, masked for testing.
@@ -277,17 +255,7 @@ dev-util/cucumber-gherkin:22
 # Florian Schmaus <flow@gentoo.org> (2024-08-23)
 # Has a serious bug that causes synced directories to end up world read-
 # and writeable. See https://github.com/nextcloud/desktop/issues/6863
->=net-misc/nextcloud-client-3.13.1
-
-# Ionen Wolkens <ionen@gentoo.org> (2024-08-11)
-# >=1.1.14 enables usage of explicit sync (with >=nvidia-drivers-560
-# and compositors that supports like kwin-6), which currently seems
-# to be causing too many problems ranging from application crashes
-# and potential VRAM leaking (even with the fixes in 1.1.15) and may
-# be better left masked for the time being. It can hwoever solve
-# flicking/stutter issues on some setups so users may want to unmask
-# if heavily affected (bug #937773).
->=gui-libs/egl-wayland-1.1.14
+=net-misc/nextcloud-client-3.13.2
 
 # Pacho Ramos <pacho@gentoo.org> (2024-08-09)
 # Mask until we find out a way to deal better with the upstream

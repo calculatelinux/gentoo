@@ -451,7 +451,7 @@ app-editors/emacs:source - Install C source files and make them available for fi
 app-editors/emacs:threads - Add elisp threading support
 app-editors/emacs:toolkit-scroll-bars - Use the selected toolkit's scrollbars in preference to Emacs' own scrollbars
 app-editors/emacs:tree-sitter - Support the dev-libs/tree-sitter parsing library
-app-editors/emacs:wide-int - Prefer wide Emacs integers (typically 62-bit). This option has an effect only on architectures where "long" and "long long" types have different size.
+app-editors/emacs:wide-int - Prefer wide Emacs integers (typically 62-bit). This option has an effect only on 32-bit systems, where it increases the maximum buffer size from 0.5 to 2 GiB, at the cost of 10% to 30% Lisp slowdown.
 app-editors/fe:sendmail - Send mail after editor abend
 app-editors/featherpad:X - Link application against X11 libraries which adds support for virtual desktop awareness and tab DND
 app-editors/gedit-plugins:charmap - Insert special characters just by clicking on them
@@ -1883,6 +1883,10 @@ dev-lang/php:xmlreader - Enable the XMLReader extension
 dev-lang/php:xmlwriter - Enable the XMLWriter extension
 dev-lang/php:xslt - Build the XSL extension
 dev-lang/polyml:portable - Build the portable interpreter version of Poly/ML instead of native
+dev-lang/pypy:ensurepip - Install the ensurepip module that uses bundled wheels to bootstrap pip and setuptools (if disabled, it will be only possible to use venv `--without-pip`)
+dev-lang/pypy:full-stdlib - Install complete stdlib as necessary to use PyPy for general purpose programs. By default, only a limited subset that is used when building PyPy3 executables is installed. Note that PyPy2.7's stdlib contains multiple known vulnerabilities.
+dev-lang/pypy:symlink - Install "pypy3" symlink, making this PyPy slot the default PyPy3 implementation that is used for building Gentoo packages.
+dev-lang/pypy:test-install - Install the test suite packages, that are required to run tests in a few reverse dependencies.
 dev-lang/python:bluetooth - Build Bluetooth protocol support in socket module
 dev-lang/python:ensurepip - Install the ensurepip module that uses bundled wheels to bootstrap pip and setuptools (if disabled, it will be only possible to use venv `--without-pip`)
 dev-lang/python:jit - Enable experimental Just-In-Time compilation support.
@@ -2468,6 +2472,7 @@ dev-python/dnspython:dnssec - Use dev-python/cryptography to enable low-level DN
 dev-python/editorconfig:cli - Install command line interface as well as python library
 dev-python/fritzconnection:qrcode - Install dependencies needed to generate QR Codes for WiFi login.
 dev-python/frozenlist:native-extensions - Compile native C extensions (speedups, instead of using Python fallback code).
+dev-python/google-api-core:grpc - Pull (heavy) gRPC dependencies in, that are optionally required by part of the API.
 dev-python/httpx:cli - Install the CLI "httpx" client.
 dev-python/hypothesis:cli - Install a CLI tool used to write tests.
 dev-python/icalendar:doc - Generate examples and other extra documentation
@@ -2504,8 +2509,6 @@ dev-python/pypy3:test-install - Install the test suite packages, that are requir
 dev-python/pypy3_10:ensurepip - Install the ensurepip module that uses bundled wheels to bootstrap pip and setuptools (if disabled, it will be only possible to use venv `--without-pip`)
 dev-python/pypy3_10:test-install - Install the test suite packages, that are required to run tests in a few reverse dependencies.
 dev-python/pypy3_10-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
-dev-python/pypy3_9:ensurepip - Install the ensurepip module that uses bundled wheels to bootstrap pip and setuptools (if disabled, it will be only possible to use venv `--without-pip`)
-dev-python/pypy3_9-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
 dev-python/pyrsistent:native-extensions - Compiles native C extensions (speedups, instead of using python fallback code).
 dev-python/pyside2:3d - Build Qt3DCore, Qt3DAnimation, Qt3DExtras, Qt3DInput, Qt3DLogic, and Qt3DRender modules
 dev-python/pyside2:charts - Build QtCharts module
@@ -4212,6 +4215,7 @@ media-libs/clutter:gtk - Use gdk-pixbuf from x11-libs/gtk+ as image rendering ba
 media-libs/cogl:kms - Enable KMS support.
 media-libs/cogl:pango - Build cogl-pango library for x11-libs/pango integration
 media-libs/coin:exceptions - Compile with C++ exceptions
+media-libs/coin:qch - Install API documentation in QCH format
 media-libs/coin:qthelp - Build API documentation in QtHelp format
 media-libs/cubeb:sndio - Enable support for the media-sound/sndio backend
 media-libs/dav1d:10bit - Add support for building 10-bit and 12-bit AV1.
@@ -4455,6 +4459,7 @@ media-libs/osl:qt6 - Build the osltoy binary (with Qt6)
 media-libs/phonon:designer - Install plugin for dev-qt/designer
 media-libs/portmidi:test-programs - Install various example programs
 media-libs/quarter:designer - Install plugin for dev-qt/designer
+media-libs/quarter:qch - Install API documentation in QCH format
 media-libs/quarter:qthelp - Build API documentation in QtHelp format
 media-libs/quirc:opencv - Build tools requiring media-libs/opencv (inspect-opencv,quirc-demo-opencv)
 media-libs/quirc:sdl - Build tools requiring media-libs/sdl-gfx (inspect, quirc-demo)
@@ -4616,13 +4621,10 @@ media-sound/audacity:audiocom - Enable integrated uploading to audio.com
 media-sound/audacity:id3tag - Enables ID3 tagging with id3tag library
 media-sound/audacity:lv2 - Add support for Ladspa V2
 media-sound/audacity:mpg123 - Use media-sound/mpg123-base instead of media-libs/libmad for MPEG decoding
-media-sound/audacity:portmidi - Enable support for MIDI via media-libs/portmidi
 media-sound/audacity:portmixer - Enable the internal portmixer feature
-media-sound/audacity:portsmf - Enable support for Portable Standard Midi File Library
 media-sound/audacity:sbsms - Enables sbsms library support for slower, more accurate pitch and tempo changing
 media-sound/audacity:twolame - Enables twolame support (MPEG Audio Layer 2 encoder)
 media-sound/audacity:vamp - Enables vamp plugins support (Audio analysing plugins)
-media-sound/audacity:vst - Enable VST plugin support
 media-sound/audiotools:cue - Enable CUE sheet support
 media-sound/audiotools:dvda - Enable DVD-Audio support
 media-sound/audiotools:twolame - Enable twolame support (MPEG Audio Layer 2 encoder)
@@ -7164,8 +7166,8 @@ sci-geosciences/mapserver:geos - Enable sci-libs/geos library support
 sci-geosciences/mapserver:postgis - Enable dev-db/postgis support
 sci-geosciences/merkaartor:libproxy - Use net-libs/libproxy for getting the HTTP/HTTPS/SOCKS proxy configuration
 sci-geosciences/merkaartor:webengine - Enable dev-qt/qtwebengine in some plugins
+sci-geosciences/merkaartor:zbar - Enable barcode support in MWalkingPapersBackground/GeoImage via media-gfx/zbar
 sci-geosciences/owntracks-recorder:crypt - Enable support for payload encryption with dev-libs/libsodium
-sci-geosciences/owntracks-recorder:greenwich - Enable support for the OwnTracks Greenwich firmware
 sci-geosciences/owntracks-recorder:http - Enable support for the built-in HTTP REST API
 sci-geosciences/owntracks-recorder:kill - Enable support removing data via the API (dangerous)
 sci-geosciences/owntracks-recorder:lua - Enable support for Lua hook integration

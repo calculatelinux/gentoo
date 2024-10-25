@@ -4,7 +4,6 @@
 EAPI=8
 
 DOCS_BUILDER="sphinx"
-#DOCS_DEPEND="dev-python/sphinx-rtd-theme"
 DOCS_DIR="doc"
 DOCS_AUTODOC=0
 
@@ -55,17 +54,19 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 
-BDEPEND="${PYTHON_DEPS}
-	$(python_gen_any_dep '
-		dev-python/sphinx-rtd-theme[${PYTHON_USEDEP}]
-	')
-	media-gfx/graphviz"
+BDEPEND="doc? (
+		${PYTHON_DEPS}
+		$(python_gen_any_dep '
+			dev-python/sphinx-rtd-theme[${PYTHON_USEDEP}]
+		')
+		media-gfx/graphviz
+	)"
 
 CONFIG_CHECK="~INOTIFY_USER"
 
 src_configure() {
 	local mycmakeargs=(
-		-DBUILD_DOC=$(usex doc)
+		-DBUILD_DOC=off
 		-DWITH_AVCODEC=$(usex ffmpeg)
 		-DWITH_CURL=$(usex curl)
 		-DWITH_DEBUG=$(usex debug)
