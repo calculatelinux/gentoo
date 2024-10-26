@@ -5,7 +5,7 @@ EAPI=8
 
 GUILE_REQ_USE="deprecated"
 GUILE_COMPAT=( 2-2 3-0 )
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 LUA_COMPAT=( lua5-{1,2,3,4} luajit )
 
 inherit flag-o-matic guile-single meson lua-single python-single-r1
@@ -24,8 +24,8 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="bittorrent brotli bzip2 debug finger ftp gopher gpm gnutls guile idn"
-IUSE+=" javascript lua lzma +mouse nls nntp perl python samba ssl test tre unicode X xml zlib zstd"
+IUSE="bittorrent brotli bzip2 debug finger ftp gemini gopher gpm gnutls guile idn"
+IUSE+=" javascript libcss lua lzma +mouse nls nntp perl python samba ssl test tre unicode X xml zlib zstd"
 RESTRICT="!test? ( test )"
 REQUIRED_USE="
 	guile? ( ${GUILE_REQUIRED_USE} )
@@ -45,6 +45,10 @@ RDEPEND="
 	javascript? (
 		dev-cpp/libxmlpp:5.0
 		dev-lang/mujs:=
+	)
+	libcss? (
+		>=dev-libs/libcss-0.9.2
+		>=net-libs/libdom-0.4.2
 	)
 	lua? ( ${LUA_DEPS} )
 	lzma? ( app-arch/xz-utils )
@@ -70,7 +74,7 @@ BDEPEND="
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 	test? (
-		net-dns/libidn2
+		net-dns/libidn
 	)
 "
 
@@ -111,7 +115,7 @@ src_configure() {
 		$(meson_use finger)
 		$(meson_use ftp)
 		-Dfsp=false
-		-Dgemini=false
+		$(meson_use gemini)
 		$(meson_use nls gettext)
 		$(meson_use gopher)
 		$(meson_use gpm)
@@ -122,12 +126,12 @@ src_configure() {
 		$(meson_use javascript mujs)
 		-Dipv6=true
 		-Dleds=true
+		$(meson_use libcss)
 		-Dlibev=false
 		-Dlibevent=false
 		-Dluapkg=$(usex lua ${ELUA:-0} '')
 		$(meson_use lzma)
 		$(meson_use mouse)
-		#-Dmujs=false
 		$(meson_use nls)
 		$(meson_use nntp)
 		$(meson_use perl)
@@ -167,7 +171,7 @@ src_install() {
 	newins contrib/keybind-full.conf keybind-full.sample
 	newins contrib/keybind.conf keybind.conf.sample
 
-	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README SITES THANKS TODO doc/*.*
+	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README.md SITES THANKS TODO doc/*.*
 	docinto contrib ; dodoc contrib/{README,colws.diff,elinks[-.]vim*}
 	docinto contrib/lua ; dodoc contrib/lua/{*.lua,elinks-remote}
 	docinto contrib/conv ; dodoc contrib/conv/*.*
@@ -181,6 +185,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	elog "If upgrading from a version prior to 0.17.0, you will need to move"
+	elog "your configuration from ~/.elinks to \${XDG_CONFIG_HOME}/elinks"
+	elog
 	elog "You may want to convert your html.cfg and links.cfg of"
 	elog "Links or older ELinks versions to the new ELinks elinks.conf"
 	elog "using ${EROOT}/usr/share/doc/${PF}/contrib/conv/conf-links2elinks.pl"
