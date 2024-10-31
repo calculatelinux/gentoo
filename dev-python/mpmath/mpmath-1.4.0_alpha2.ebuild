@@ -17,7 +17,7 @@ HOMEPAGE="
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
+KEYWORDS="amd64 arm arm64 hppa ~loong ~mips ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
 
 BDEPEND="
 	dev-python/setuptools-scm[${PYTHON_USEDEP}]
@@ -32,13 +32,17 @@ BDEPEND="
 			dev-python/gmpy[${PYTHON_USEDEP}]
 		' 'python3*')
 		!mips? (
-			dev-python/matplotlib[${PYTHON_USEDEP}]
-			$(python_gen_cond_dep '
-				dev-python/ipython[${PYTHON_USEDEP}]
-			' 3.{10..12})
+			dev-python/ipython[${PYTHON_USEDEP}]
+			!hppa? (
+				dev-python/matplotlib[${PYTHON_USEDEP}]
+			)
 		)
 	)
 "
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.4.0_alpha2-before-numpy-2.patch
+)
 
 EPYTEST_XDIST=1
 distutils_enable_tests pytest

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install prepare test
+DEPEND=gmp? ( dev-libs/gmp:0= mpi? ( virtual/mpi ) )
+DESCRIPTION=Reverse-search algorithm for vertex enumeration problems
+EAPI=8
+HOMEPAGE=https://cgm.cs.mcgill.ca/~avis/C/lrs.html
+INHERIT=toolchain-funcs
+IUSE=gmp mpi
+KEYWORDS=~amd64 ~arm ~riscv ~amd64-linux
+LICENSE=GPL-2+
+RDEPEND=gmp? ( dev-libs/gmp:0= mpi? ( virtual/mpi ) )
+SLOT=0
+SRC_URI=https://cgm.cs.mcgill.ca/~avis/C/lrslib/archive/lrslib-073.tar.gz
+_eclasses_=multilib	b2a329026f2e404e9e371097dda47f96	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87
+_md5_=411c1765e0cd447a80ca146dc4d37f6c

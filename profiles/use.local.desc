@@ -1998,6 +1998,7 @@ dev-libs/efl:xim - Enable X Input Method
 dev-libs/efl:xpresent - Enable x11-libs/libXpresent support
 dev-libs/elfutils:debuginfod - Enable debuginfod support, both the debuginfod server and the libdebuginfod client library
 dev-libs/elfutils:lzma - Support automatic decompression of LZMA-compressed files and kernel images
+dev-libs/elfutils:stacktrace - Build experimental eu-stacktrace tool. Relies on integration with dev-util/sysprof. See https://developers.redhat.com/articles/2024/06/11/get-system-wide-profiles-binaries-without-frame-pointers.
 dev-libs/elfutils:utils - Install command-line utilities (all the eu-* programs)
 dev-libs/fcgi:html - Install HTML documentation
 dev-libs/folks:telepathy - Load contacts from the Telepathy framework
@@ -3833,7 +3834,6 @@ mail-client/thunderbird:clang - Use Clang compiler instead of GCC
 mail-client/thunderbird:eme-free - Disable EME (DRM plugin) capability at build time
 mail-client/thunderbird:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
 mail-client/thunderbird:libproxy - Enable libproxy support
-mail-client/thunderbird:openh264 - Use media-libs/openh264 for H.264 support instead of downloading binary blob from Mozilla at runtime
 mail-client/thunderbird:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
 mail-client/thunderbird:pulseaudio - Add sound server support via media-libs/libpulse (may be PulseAudio or Pipewire, or apulse if installed)
 mail-client/thunderbird:rust-extensions - Compile and install experimental rust extensions, that may become part of Thunderbird some day.
@@ -3846,7 +3846,6 @@ mail-client/thunderbird:system-libevent - Use the system-wide dev-libs/libevent 
 mail-client/thunderbird:system-librnp - Use system-wide dev-util/librnp instead of bundled one.
 mail-client/thunderbird:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
 mail-client/thunderbird:system-png - Use the system-wide media-libs/libpng instead of bundled (requires APNG patches)
-mail-client/thunderbird:system-python-libs - Use system's python site instead of bundled python libraries
 mail-client/thunderbird:system-webp - Use the system-wide media-libs/libwebp instead of bundled.
 mail-client/thunderbird:wifi - Enable necko-wifi for NetworkManager integration, and access point MAC address scanning for better precision with opt-in geolocation services
 mail-filter/MailScanner:exim - Set mail-mta/exim to used MTA
@@ -6537,6 +6536,7 @@ net-misc/oidentd:masquerade - Enable support for masqueraded/NAT connections
 net-misc/olsrd:pud - Install the Node Position Update plugin
 net-misc/openntpd:constraints - Enable HTTPS TLS time constraint support
 net-misc/openssh:ldns - Use LDNS for DNSSEC/SSHFP validation.
+net-misc/openssh:legacy-ciphers - Enable support for deprecated, soon-to-be-dropped DSA keys. See https://marc.info/?l=openssh-unix-dev>m=170494903207436>w=2.
 net-misc/openssh:livecd - Enable root password logins for live-cd environment.
 net-misc/openssh:security-key - Include builtin U2F/FIDO support
 net-misc/openssh:ssl - Enable additional crypto algorithms via OpenSSL
@@ -7216,7 +7216,6 @@ sci-libs/blis:pthread - Use pthread threadding model
 sci-libs/blis:serial - Use no threadding model
 sci-libs/caffe2:distributed - Support distributed applications
 sci-libs/caffe2:fbgemm - Use FBGEMM
-sci-libs/caffe2:ffmpeg - Add support for video processing operators
 sci-libs/caffe2:flash - Enable flash attention
 sci-libs/caffe2:gloo - Use sci-libs/gloo
 sci-libs/caffe2:mkl - Use sci-libs/mkl for blas, lapack and sparse blas routines
@@ -7224,7 +7223,6 @@ sci-libs/caffe2:nnpack - Use NNPACK
 sci-libs/caffe2:numpy - Add support for math operations through numpy
 sci-libs/caffe2:onednn - Use oneDNN
 sci-libs/caffe2:openblas - Use sci-libs/openblas for blas routines
-sci-libs/caffe2:opencv - Add support for image processing operators
 sci-libs/caffe2:openmp - Use OpenMP for parallel code
 sci-libs/caffe2:qnnpack - Use QNNPACK
 sci-libs/caffe2:rocm - Enable ROCm gpu computing support

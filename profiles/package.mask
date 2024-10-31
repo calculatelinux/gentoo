@@ -33,6 +33,55 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2024-10-29)
+# Unmaintained in Gentoo.  The latter is multiple versions behind.
+# Ebuilds without working tests.  The only revdep has its "doc" flag
+# masked for over a year.
+# Removal on 2024-11-28.  Bug #942445.
+dev-python/mkdocs-ansible
+dev-python/mkdocs-macros-plugin
+
+# Marc Schiffbauer <mschiff@gentoo.org> (2024-10-28)
+# New style opencpn plugins depend on specific snapshots of
+# "opencpn-libs", a collection of bundled 3rd party libs or
+# forks thereof.
+# This makes it virtually impossible to package opencpn and
+# its plugins in a sane way.
+# Use the flatpak version instead.
+# removal on 2024-11-28.
+# Bug #928960, #933606
+sci-geosciences/opencpn
+sci-geosciences/opencpn-plugin-aisradar
+sci-geosciences/opencpn-plugin-climatology
+sci-geosciences/opencpn-plugin-dr
+sci-geosciences/opencpn-plugin-findit
+sci-geosciences/opencpn-plugin-gxradar
+sci-geosciences/opencpn-plugin-iacfleet
+sci-geosciences/opencpn-plugin-launcher
+sci-geosciences/opencpn-plugin-logbookkonni
+sci-geosciences/opencpn-plugin-objsearch
+sci-geosciences/opencpn-plugin-ocpn_draw
+sci-geosciences/opencpn-plugin-ocpndebugger
+sci-geosciences/opencpn-plugin-oesenc
+sci-geosciences/opencpn-plugin-otcurrent
+sci-geosciences/opencpn-plugin-polar
+sci-geosciences/opencpn-plugin-radar
+sci-geosciences/opencpn-plugin-route
+sci-geosciences/opencpn-plugin-squiddio
+sci-geosciences/opencpn-plugin-statusbar
+sci-geosciences/opencpn-plugin-watchdog
+sci-geosciences/opencpn-plugin-weather_routing
+sci-geosciences/opencpn-plugin-weatherfax
+sci-geosciences/opencpn-plugins-meta
+
+# Hans de Graaff <graaff@gentoo.org> (2024-10-27)
+
+# Obsolete slots without reverse dependencies. dev-util/cucumber will
+# use other slots when installed. Removal on 2024-11-27.
+dev-util/cucumber-gherkin:26
+dev-util/cucumber-messages:17
+dev-util/cucumber-messages:20
+
 # Arthur Zamarin <arthurzam@gentoo.org> (2024-10-23)
 # Doesn't support latest Rust/Cargo ebuild format and standard. Confuses
 # developers who tries to use it, and then see pkgcheck warnings on the
@@ -224,10 +273,6 @@ x11-plugins/lurch
 # maintainer.
 # Removal on 2024-10-29.  Bug #910612.
 dev-python/brython
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2024-09-28)
-# Nothing depends on it. Removal on 2024-10-28.
-dev-java/ant-core
 
 # Robin H. Johnson <robbat2@gentoo.org> (2024-09-22)
 # Upstream testing release; fails some tests as well here
