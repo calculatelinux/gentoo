@@ -389,6 +389,8 @@ app-crypt/mit-krb5:lmdb - Add support for using dev-db/lmdb for lookup tables
 app-crypt/mit-krb5:openldap - Enable support for ldap as a database backend
 app-crypt/mit-krb5:pkinit - Enable pkinit support for the initial ticket
 app-crypt/mkp224o:pcre - Search with a regex instead of prefix/suffix matching
+app-crypt/onak:dynamic - Support for dynamic loading of backends
+app-crypt/onak:hkp - Proxying backend support
 app-crypt/ophcrack:tables - Require the additional tables used to carry out cracking (app-crypt/ophcrack-tables)
 app-crypt/ophcrack-tables:vistafree - Installs the free Vista ophcrack tables
 app-crypt/ophcrack-tables:xpfast - Installs the fast XP ophcrack tables
@@ -490,8 +492,6 @@ app-editors/vscodium:wayland - Run in wayland mode under wayland sessions, xwayl
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:bignum - Support for OpenSSL bignum implementation
 app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop library
-app-editors/xemacs:eolconv - Support detection and translation of newline conventions
-app-editors/xemacs:mule - Add multi-language support to XEmacs
 app-editors/xemacs:pop - Support POP for mail retrieval
 app-editors/xemacs:xim - Enable X11 XiM input method
 app-editors/zed:gles - Use simplified OpenGLES instead of full-scale OpenGL
@@ -1035,7 +1035,6 @@ app-office/calligraplan:kwallet - Enable access to encrypted OpenDocument files 
 app-office/glabels:barcode - Enable barcode support through external libraries.
 app-office/gnucash:aqbanking - Connect to some internet banks via AqBanking
 app-office/gnucash:quotes - Enable online stock quote retrieval
-app-office/gnucash:register2 - Use the new register (Experimental)
 app-office/gnumeric:libgda - Enable database support through gnome-extra/libgda.
 app-office/gnumeric:perl - Enable perl plugin loader.
 app-office/grisbi:goffice - enable goffice graphic support
@@ -1463,6 +1462,7 @@ dev-debug/ltrace:unwind - Use sys-libs/libunwind for frame unwinding support
 dev-debug/strace:aio - Enable dev-libs/libaio support for tracing Asynchronous I/O operations
 dev-debug/strace:elfutils - Enable stack backtraces (-k flag) via dev-libs/elfutils
 dev-debug/strace:unwind - Enable stack backtraces (-k flag) via sys-libs/libunwind
+dev-debug/sysdig:bpf - Enable the BPF probe as alternative event source to dev-debug/scap-driver.
 dev-debug/sysdig:modules - Build kernel modules needed for tracing local events. Disable this only if you intend to use sysdig purely to work with dumpfiles.
 dev-debug/systemtap:debuginfod - Enable debuginfod support via dev-libs/elfutils libdebuginfod
 dev-debug/systemtap:dtrace-symlink - Provide /usr/bin/dtrace symlink pointing to /usr/bin/stap-dtrace. This prevents coinstallation with dev-debug/dtrace.
@@ -3525,7 +3525,6 @@ kde-apps/ark:zip - Enable ZIP archive support via dev-libs/libzip
 kde-apps/cantor:R - Enable dev-lang/R backend support
 kde-apps/cantor:julia - Enable dev-lang/julia backend support
 kde-apps/cantor:qalculate - Enable sci-libs/libqalculate backend support
-kde-apps/dolphin:activities - Track which folders are frequently accessed on a Plasma desktop
 kde-apps/gwenview:activities - Enable kactivities support
 kde-apps/gwenview:fits - Enable support for NASA's sci-libs/cfitsio library
 kde-apps/gwenview:mpris - Enable support for MPRIS2 interface, requiring dev-qt/qtdbus as dependency.
@@ -3600,7 +3599,6 @@ kde-apps/ktouch:X - Enable support for X11 Keyboard Layout Detection
 kde-apps/kwave:qtmedia - Enable playback via Qt5Multimedia
 kde-apps/libkdepim:designer - Build plugins for dev-qt/designer
 kde-apps/libkgapi:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
-kde-apps/libkleo:fancyviewer - Use kde-apps/kpimtextedit for an improved audit log viewer
 kde-apps/libksane:kwallet - Enable encrypted storage of passwords with kde-frameworks/kwallet
 kde-apps/mailcommon:designer - Build plugins for dev-qt/designer
 kde-apps/marble:aprs - Enable support for APRS data sources
@@ -3625,7 +3623,6 @@ kde-apps/thumbnailers:blender - Enable blender thumbnail generation using kde-fr
 kde-apps/thumbnailers:gettext - Enable PO file thumbnail generation using kde-apps/kdesdk-thumbnailers
 kde-apps/thumbnailers:mobi - Enable mobipocket thumbnail generation using kde-apps/kdegraphics-mobipocket
 kde-apps/thumbnailers:video - Enable video thumbnail generation using kde-apps/ffmpegthumbs
-kde-apps/umbrello:php - Enable PHP import support using dev-util/kdevelop and dev-util/kdevelop-pg-qt
 kde-apps/yakuake:absolute-position - Use kde-plasma/kwayland for absolute window positioning in KWin
 kde-frameworks/kcompletion:designer - Build plugins for dev-qt/designer
 kde-frameworks/kconfig:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
@@ -5087,7 +5084,6 @@ media-video/guvcview:qt5 - Build with Qt5 interface instead Gtk+
 media-video/handbrake:fdk - Support for encoding AAC using media-libs/fdk-aac.
 media-video/handbrake:gstreamer - Support for the streaming media framework from media-libs/gstreamer.
 media-video/handbrake:gtk - Install the GTK UI, ghb.
-media-video/handbrake:libav-aac - Support for encoding AAC using libav's internal encoder.
 media-video/handbrake:numa - Adds support for x265's NUMA capabilities.
 media-video/handbrake:x265 - Support for encoding h265 using media-libs/x265.
 media-video/libva-utils:examples - Build and install decode, encode, videoprocess and other VA-API examples.
@@ -8082,7 +8078,6 @@ sys-cluster/ceph:system-boost - Use system dev-libs/boost instead of the bundled
 sys-cluster/ceph:uring - Build with support for sys-libs/liburing
 sys-cluster/ceph:xfs - Add xfs support
 sys-cluster/ceph:zbd - Enable sys-block/libzbd bluestore backend
-sys-cluster/ceph:zfs - Add zfs support
 sys-cluster/charliecloud:ch-image - Build the internal builder ch-image (previously named ch-grow)
 sys-cluster/charm:ampi - Build implementation of MPI on top of Charm++
 sys-cluster/charm:charmdebug - Enable the charm debugger

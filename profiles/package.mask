@@ -33,6 +33,17 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2024-11-01)
+# Does not work with current versions of dependencies. ruby32-only
+# because of it. No release in two years. No reverse
+# dependencies. Removal on 2024-12-01.
+dev-ruby/typhoeus
+
+# Hans de Graaff <graaff@gentoo.org> (2024-11-01)
+# No longer compiles with modern C compilers, bug 881245. Last upstream
+# release 6 years ago. No reverse dependencies. Removal on 2024-12-01.
+dev-ruby/ruby-opengl
+
 # Michał Górny <mgorny@gentoo.org> (2024-10-29)
 # Unmaintained in Gentoo.  The latter is multiple versions behind.
 # Ebuilds without working tests.  The only revdep has its "doc" flag
@@ -75,7 +86,6 @@ sci-geosciences/opencpn-plugin-weatherfax
 sci-geosciences/opencpn-plugins-meta
 
 # Hans de Graaff <graaff@gentoo.org> (2024-10-27)
-
 # Obsolete slots without reverse dependencies. dev-util/cucumber will
 # use other slots when installed. Removal on 2024-11-27.
 dev-util/cucumber-gherkin:26
@@ -297,11 +307,6 @@ dev-python/brython
 # exim_tinydb utility crashes due to invalid free() (used in startup script)
 =mail-mta/exim-4.98
 
-# Florian Schmaus <flow@gentoo.org> (2024-08-23)
-# Has a serious bug that causes synced directories to end up world read-
-# and writeable. See https://github.com/nextcloud/desktop/issues/6863
-=net-misc/nextcloud-client-3.13.2
-
 # Pacho Ramos <pacho@gentoo.org> (2024-08-09)
 # Mask until we find out a way to deal better with the upstream
 # introduced circular dep, bug #937616
@@ -424,6 +429,7 @@ dev-ml/textutils_kernel:0/0.17
 >=xfce-base/libxfce4util-4.19
 >=xfce-base/libxfce4windowing-4.19.5
 >=xfce-base/thunar-4.19
+>=xfce-base/thunar-volman-4.19
 >=xfce-base/tumbler-4.19
 >=xfce-base/xfce4-appfinder-4.19
 >=xfce-base/xfce4-panel-4.19
