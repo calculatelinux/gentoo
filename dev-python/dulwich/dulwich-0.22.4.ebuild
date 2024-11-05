@@ -73,6 +73,19 @@ src_unpack() {
 	cargo_src_unpack
 }
 
+src_prepare() {
+	default
+
+	if use !native-extensions; then
+		# avoid hard dep on rust via setuptools_rust
+		# https://github.com/jelmer/dulwich/issues/1405
+		sed -i \
+			-e '/from setuptools_rust/d' \
+			-e '/^rust_extensions = \[/,/^\]/d' \
+			setup.py || die
+	fi
+}
+
 python_compile() {
 	unset PURE
 	# TODO: enable Rust extensions

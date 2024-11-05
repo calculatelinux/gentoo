@@ -1479,13 +1479,11 @@ dev-embedded/openocd:parport - Enable support for parport JTAG devices
 dev-embedded/openocd:verbose-io - Verbose IO and comm JTAG and USB messages
 dev-embedded/rpi-eeprom:pi4 - Install firmware files for the Raspberry Pi 4
 dev-embedded/rpi-eeprom:pi5 - Install firmware files for the Raspberry Pi 5
-dev-embedded/sdcc:avr - Add support for AVR -- not supported upstream
 dev-embedded/sdcc:boehm-gc - Enable Hans Boehm's garbage collector dev-libs/boehm-gc
 dev-embedded/sdcc:device-lib - Enable built of devices libraries
 dev-embedded/sdcc:ds390 - Add support for Dallas DS390
 dev-embedded/sdcc:ds400 - Add support for Dallas DS400
 dev-embedded/sdcc:ez80-z80 - Add support for EZ80-Z80
-dev-embedded/sdcc:gbz80 - Add support for Gameboy gbz80
 dev-embedded/sdcc:hc08 - Add support for Freescale/Motorola HC08 based
 dev-embedded/sdcc:mcs51 - Add support for Intel mcs51
 dev-embedded/sdcc:mos6502 - Add support for MOS 6502
@@ -1502,7 +1500,6 @@ dev-embedded/sdcc:r2k - Add support for Rabbit 2000
 dev-embedded/sdcc:r2ka - Add support for Rabbit 2000A
 dev-embedded/sdcc:r3ka - Add support for Rabbit 3000A
 dev-embedded/sdcc:s08 - Add support for Freescale/Motorola S08
-dev-embedded/sdcc:sdbinutils - Enable SDCC library archive utilities sdar, sdranlib, sdnm
 dev-embedded/sdcc:sdcdb - Enable SDCC source level debugger
 dev-embedded/sdcc:sdcpp - Enable SDCC preprocessor based on GCC cpp
 dev-embedded/sdcc:sm83 - Add support for Gameboy SM83
@@ -3110,6 +3107,8 @@ games-board/tablebase-syzygy:6-pieces - Install tablebases for 6 pieces (huge!)
 games-board/xboard:default-font - Install the default font that xboard uses
 games-board/xboard:zippy - Enable experimental zippy client
 games-emulation/atari800:encode-mp3 - Support recording sound in MP3 format
+games-emulation/bsnes-jg:jgmodule - Build module for The Jolly Good API
+games-emulation/bsnes-jg:shared - Build shared library
 games-emulation/desmume:gdb - Enable support for the remote GDB stub
 games-emulation/desmume:openal - Use media-libs/openal for microphone input
 games-emulation/desmume:wifi - Enable support for Wi-Fi (experimental and discouraged)
@@ -3908,7 +3907,6 @@ mail-mta/exim:tdb - Use sys-libs/tdb for internal database storage (such as hint
 mail-mta/exim:tpda - Adds support for Transport Post-Delivery Actions
 mail-mta/msmtp:daemon - Build/install msmtpd MTA daemon
 mail-mta/msmtp:mta - Enable this to install as system-wide MTA
-mail-mta/netqmail:authcram - Enable AUTHCRAM support
 mail-mta/netqmail:gencertdaily - Generate SSL certificates daily instead of hourly
 mail-mta/netqmail:highvolume - Prepare netqmail for high volume servers
 mail-mta/netqmail:pop3 - Include POP3 server
@@ -4419,6 +4417,7 @@ media-libs/opencv:quirc - Enable qrcode decoding via media-libs/quirc
 media-libs/opencv:tbb - Enable multithreading with the Intel Threads Building Block (dev-cpp/tbb)
 media-libs/opencv:tesseract - Use Google's OCR Engine
 media-libs/opencv:testprograms - Build and install programs for testing OpenCV (performance)
+media-libs/opencv:truetype - Enable media-libs/freetype support for gapi module
 media-libs/opencv:video_cards_intel - Enable Video Acceleration API for hardware decoding for Intel cards
 media-libs/opencv:vtk - Build new 3D visualization module viz based on sci-libs/vtk
 media-libs/openexr:large-stack - Enables code to take advantage of large stack support.

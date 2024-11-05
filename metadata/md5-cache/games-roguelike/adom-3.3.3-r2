@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=Ancient Domains Of Mystery rogue-like game
+EAPI=8
+HOMEPAGE=https://www.adom.de/
+KEYWORDS=~amd64 ~x86
+LICENSE=adom
+RDEPEND=sys-libs/ncurses-compat:5[abi_x86_32(-)]
+RESTRICT=strip
+SLOT=0
+SRC_URI=x86? ( https://www.adom.de/home/download/current/adom_linux_debian_32_3.3.3.tar.gz -> adom-3.3.3_x86.tar.gz ) amd64? ( https://www.adom.de/home/download/current/adom_linux_debian_64_3.3.3.tar.gz -> adom-3.3.3_amd64.tar.gz )
+_md5_=97286b4694555a1cb72b1caac367020b

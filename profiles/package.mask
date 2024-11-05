@@ -33,6 +33,22 @@
 
 #--- END OF EXAMPLES ---
 
+# Holger Hoffstätte <holger@applied-asynchrony.com> (2024-11-03)
+# Vendors an unreleased libbpf version and announces incorrect version.
+# Please downgrade to 7.4.0. Bug Bug #941185. Removal on 2024-12-03.
+=dev-util/bpftool-7.5.0-r1
+
+# David Seifert <soap@gentoo.org> (2024-11-03)
+# Bug ridden package, extremely brittle build system, lots of QA issues,
+# terrible license, no other linux distro still packages this.
+# Removal on 2024-12-03. Bug #929069.
+sci-chemistry/molden
+
+# Hans de Graaff <graaff@gentoo.org> (2024-11-03)
+# Obsolete ruby32-only slot without reverse dependencies. Use the newer
+# slot instead. Removal on 2024-12-03.
+dev-ruby/pdf-reader:0
+
 # Hans de Graaff <graaff@gentoo.org> (2024-11-01)
 # Does not work with current versions of dependencies. ruby32-only
 # because of it. No release in two years. No reverse
@@ -154,7 +170,7 @@ dev-ruby/io-event:1.3
 
 # Holger Hoffstätte <holger@applied-asynchrony.com> (2024-10-11)
 # Vendors an unreleased libbpf version and generates ABI-breaking code.
-# Bug #941185.
+# Bug #941185. Removal on 2024-12-03.
 =dev-util/bpftool-7.5.0-r2
 
 # Michał Górny <mgorny@gentoo.org> (2024-10-10)
@@ -432,12 +448,14 @@ dev-ml/textutils_kernel:0/0.17
 >=xfce-base/thunar-volman-4.19
 >=xfce-base/tumbler-4.19
 >=xfce-base/xfce4-appfinder-4.19
+>=xfce-base/xfce4-meta-4.19
 >=xfce-base/xfce4-panel-4.19
 >=xfce-base/xfce4-power-manager-4.19
 >=xfce-base/xfce4-session-4.19
 >=xfce-base/xfce4-settings-4.19
 >=xfce-base/xfconf-4.19
 >=xfce-base/xfdesktop-4.19
+>=xfce-base/xfwm4-4.19
 
 # Sam James <sam@gentoo.org> (2024-04-28)
 # Masked for testing. Tracker bug: bug #930805.
