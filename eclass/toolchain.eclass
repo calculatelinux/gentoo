@@ -14,6 +14,8 @@
 if [[ -z ${_TOOLCHAIN_ECLASS} ]]; then
 _TOOLCHAIN_ECLASS=1
 
+RUST_OPTIONAL="1"
+
 case ${EAPI} in
 	7|8) ;;
 	*) die "${ECLASS}: EAPI ${EAPI:-0} not supported" ;;
@@ -22,7 +24,7 @@ esac
 DESCRIPTION="The GNU Compiler Collection"
 HOMEPAGE="https://gcc.gnu.org/"
 
-inherit edo flag-o-matic gnuconfig libtool multilib pax-utils toolchain-funcs prefix
+inherit edo flag-o-matic gnuconfig libtool multilib pax-utils rust toolchain-funcs prefix
 
 [[ -n ${TOOLCHAIN_HAS_TESTS} ]] && inherit python-any-r1
 
@@ -427,7 +429,7 @@ fi
 if tc_has_feature rust && tc_version_is_at_least 14.0.0_pre20230421 ; then
 	# This was added upstream in r14-9968-g3e1e73fc995844 as a temporary measure.
 	# See https://inbox.sourceware.org/gcc/34fec7ea-8762-4cac-a1c8-ff54e20e31ed@embecosm.com/
-	BDEPEND+=" rust? ( virtual/rust )"
+	BDEPEND+=" rust? ( ${RUST_DEPEND} )"
 fi
 
 PDEPEND=">=sys-devel/gcc-config-2.11"
@@ -593,6 +595,8 @@ toolchain_pkg_setup() {
 	MAKEOPTS="--output-sync=line ${MAKEOPTS}"
 
 	[[ -n ${TOOLCHAIN_HAS_TESTS} ]] && use test && python-any-r1_pkg_setup
+
+	_tc_use_if_iuse rust && rust_pkg_setup
 }
 
 #---->> src_unpack <<----
@@ -1579,7 +1583,7 @@ toolchain_src_configure() {
 			fi
 		}
 
-		enable_cet_for 'i[34567]86' 'linux' 'cet'
+		enable_cet_for 'i[34567]86' 'gnu' 'cet'
 		enable_cet_for 'x86_64' 'gnu' 'cet'
 		enable_cet_for 'aarch64' 'gnu' 'standard-branch-protection'
 	fi
@@ -2980,10 +2984,10 @@ toolchain_death_notice() {
 	for dir in "${WORKDIR}"/build-jit "${WORKDIR}"/build ; do
 		if [[ -e "${dir}" ]] ; then
 			pushd "${WORKDIR}" >/dev/null
-			(echo '' | $(tc-getCC ${CTARGET}) ${CFLAGS} -v -E - 2>&1) > gccinfo.log
-			[[ -e "${T}"/build.log ]] && cp "${T}"/build.log .
+			(echo '' | $(tc-getCC ${CTARGET}) ${CFLAGS} -v -E - 2>&1) > "${dir}"/gccinfo.log
+			[[ -e "${T}"/build.log ]] && cp "${T}"/build.log "${dir}"
 			tar -arf "${WORKDIR}"/gcc-build-logs.tar.xz \
-				"${dir}"/gccinfo.log "${dir}"/build.log $(find -name "${dir}"/config.log)
+				"${dir#${WORKDIR}/}"/gccinfo.log "${dir#${WORKDIR}/}"/build.log $(find -name "${dir}"/config.log)
 			rm "${dir}"/gccinfo.log "${dir}"/build.log
 			eerror
 			eerror "Please include ${WORKDIR}/gcc-build-logs.tar.xz in your bug report."

@@ -1,0 +1,13 @@
+BDEPEND=>=app-editors/emacs-25.3:*
+DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
+DESCRIPTION=Emacs color theme that started as a theme for Spacemacs
+EAPI=8
+HOMEPAGE=https://github.com/nashamri/spacemacs-theme/
+INHERIT=elisp
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3+
+RDEPEND=>=app-editors/emacs-25.3:*
+SLOT=0
+SRC_URI=https://github.com/nashamri/spacemacs-theme/archive/6c74684c4d55713c8359bedf1936e429918a8c33.tar.gz -> spacemacs-theme-0.3_p20241101.gh.tar.gz
+_eclasses_=elisp	e7149f29f0c141396a0cec7cc59947a6	elisp-common	abb2dda42f680fce87602c8273f832c7
+_md5_=6daebc9d525e4dd7d0cc308a0a65ee1c

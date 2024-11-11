@@ -1,14 +1,14 @@
-BDEPEND=llvm_slot_17? ( sys-devel/clang:17 ) llvm_slot_18? ( sys-devel/clang:18 ) >=virtual/rust-1.76 test? ( dev-util/cargo-nextest ) >=virtual/rust-1.53 >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=llvm_slot_17? ( sys-devel/clang:17 ) llvm_slot_18? ( sys-devel/clang:18 ) test? ( dev-util/cargo-nextest ) || ( >=dev-lang/rust-bin-1.77.1:* >=dev-lang/rust-1.77.1:* ) >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install setup test unpack
 DESCRIPTION=pkgcraft-based tools for Gentoo
 EAPI=8
 HOMEPAGE=https://pkgcraft.github.io/
-INHERIT=edo cargo llvm-r1 git-r3
+INHERIT=cargo edo llvm-r1 git-r3
 IUSE=test debug +llvm_slot_18 llvm_slot_17
 LICENSE=MIT Apache-2.0 BSD-2 BSD CC0-1.0 GPL-3+ ISC MIT Unicode-DFS-2016
 PROPERTIES=live
 REQUIRED_USE=^^ ( llvm_slot_17 llvm_slot_18 )
 RESTRICT=!test? ( test )
 SLOT=0
-_eclasses_=cargo	aed68000b8e49b4c4dd13a256149971f	edo	367e103a74bf77e6a8da7894d999fa3c	flag-o-matic	f14aba975c94ccaa9f357a27e3b17ffe	git-r3	875eb471682d3e1f18da124be97dcc81	llvm-r1	c6f5dcc9d729a7028f3884ff342d280c	llvm-utils	c989cff79c0976415f459e367a83dff9	multilib	b2a329026f2e404e9e371097dda47f96	multiprocessing	1e32df7deee68372153dca65f4a7c21f	rust-toolchain	3f822985d9297438ed2443aa1fbdf33e	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87
-_md5_=03f23410f676af571bec6c41527047aa
+_eclasses_=cargo	a7d3cf80f6ccf4d2e90c98e162bb5828	edo	367e103a74bf77e6a8da7894d999fa3c	flag-o-matic	f14aba975c94ccaa9f357a27e3b17ffe	git-r3	875eb471682d3e1f18da124be97dcc81	llvm-r1	c6f5dcc9d729a7028f3884ff342d280c	llvm-utils	c989cff79c0976415f459e367a83dff9	multilib	b2a329026f2e404e9e371097dda47f96	multiprocessing	1e32df7deee68372153dca65f4a7c21f	rust	c87a155c4a4658f3873eb90616b85390	rust-toolchain	3f822985d9297438ed2443aa1fbdf33e	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87
+_md5_=30ad194d2c4612a2b488ca1c6972b8d7

@@ -33,6 +33,86 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2024-11-10)
+# Fails to build with gcc-14. Horrible code. Not touched by a
+# maintainer since 2010. Bugs 729134, 870541, 909625, 933773
+# Removal in 30 days.
+app-accessibility/powiedz
+
+# Matt Jolly <kangie@gentoo.org> (2024-11-09)
+# The legacy Rust ebuilds are no longer maintained and have been
+# replaced by the new slotted Rust. Removal in 30 days.
+=dev-lang/rust-1.71.1
+=dev-lang/rust-1.74.1
+=dev-lang/rust-1.75.0-r1
+=dev-lang/rust-1.77.1
+=dev-lang/rust-1.79.0
+=dev-lang/rust-1.80.1
+=dev-lang/rust-1.81.0
+=dev-lang/rust-1.82.0
+=dev-lang/rust-bin-1.71.1
+=dev-lang/rust-bin-1.74.1
+=dev-lang/rust-bin-1.75.0
+=dev-lang/rust-bin-1.77.1
+=dev-lang/rust-bin-1.79.0
+=dev-lang/rust-bin-1.80.1
+=dev-lang/rust-bin-1.81.0
+=dev-lang/rust-bin-1.82.0
+=virtual/rust-1.71.1-r2
+=virtual/rust-1.74.1-r1
+=virtual/rust-1.75.0-r1
+=virtual/rust-1.77.1
+=virtual/rust-1.79.0
+=virtual/rust-1.80.1
+=virtual/rust-1.81.0-r1
+=virtual/rust-1.82.0
+
+# Matt Jolly <kangie@gentoo.org> (2024-11-09)
+# Does not build with any rust version in the tree. Removal in 30 days.
+=dev-lang/starlark-rust-0.8.0
+
+# Matt Jolly <kangie@gentoo.org> (2024-11-09)
+# Does not build with any rust version in the tree. Removal in 30 days.
+=dev-util/wasmer-0.11.0
+
+# Hans de Graaff <graaff@gentoo.org> (2024-11-08)
+# Obsolete slot. Use a newer slot instead. Removal on 2024-12-08.
+dev-ruby/faker:2
+
+# Hans de Graaff <graaff@gentoo.org> (2024-11-08)
+# Obsolete slot. Use a newer slot instead. The included jquery-ui
+# version is no longer supported upstream. Removal on 2024-12-08.
+dev-ruby/jquery-ui-rails:6
+
+# Alfredo Tupone <tupone@gentoo.org> (2024-11-07)
+# No more used (caffe2 used to)
+# Removal on 2024-12-07.  Bug #942972.
+sci-libs/QNNPACK
+
+# Matt Turner <mattst88@gentoo.org> (2024-11-06)
+# Replaced by kernel modesetting (CONFIG_DRM_VBOXVIDEO) and the
+# xf86-video-modesetting driver in the Xserver. Bug #929007
+#
+# Removal on 2024-12-06. Bug #924715.
+x11-drivers/xf86-video-vboxvideo
+
+# Matt Turner <mattst88@gentoo.org> (2024-11-06)
+# Driver for integrated GPU paired only with Texas Instruments ARM CPUs.
+#
+# Not maintained upstream. No releases since 2016. No sign of users.
+#
+# Removal on 2024-12-06. Bug #924715.
+x11-drivers/xf86-video-omap
+
+# Matt Turner <mattst88@gentoo.org> (2024-11-06)
+# Driver for integrated GPU paired only with x86 VIA CPUs.
+#
+# Has not worked in Gentoo for more than two years (see bug #875233) without
+# any actual users noticing.
+#
+# Removal on 2024-12-06. Bug #875233.
+x11-drivers/xf86-video-openchrome
+
 # Holger Hoffstätte <holger@applied-asynchrony.com> (2024-11-03)
 # Vendors an unreleased libbpf version and announces incorrect version.
 # Please downgrade to 7.4.0. Bug Bug #941185. Removal on 2024-12-03.
@@ -243,11 +323,6 @@ app-i18n/kcm-fcitx
 =dev-qt/qtwebsockets-6.8.0*
 =dev-qt/qtwebview-6.8.0*
 
-# Hans de Graaff <graaff@gentoo.org> (2024-10-06)
-# Obsolete slot without reverse dependencies. Use the newer slot
-# instead. Removal on 2024-11-08.
-dev-ruby/base64:0.1
-
 # Andrew Ammerlaan <andrewammerlaan@gentoo.org> (2024-10-05)
 # This version is known to break on certain systems. At the
 # same time it fixes several reported issues. Masked until
@@ -255,29 +330,12 @@ dev-ruby/base64:0.1
 # See also: https://github.com/gentoo/gentoo/pull/36091
 ~sys-boot/plymouth-24.004.60
 
-# Sebastian Pipping <sping@gentoo.org> (2024-10-03)
-# Masked for removal in 30 days.  Last release in 2021,
-# last commit two years ago, has open bugs, .. (bug #940725).
-# Also removing its two dependencies that have no other
-# reverse dependencies in Gentoo or known use outside of Lurch.
-net-libs/libaxc
-net-libs/libomemo
-x11-plugins/lurch
-
 # Sam James <sam@gentoo.org> (2024-09-30)
 # GCC 10 and older no longer receive upstream support or fixes for
 # bugs. Please switch to a newer GCC version using gcc-config.
 # The lowest supported version of GCC is GCC 11.
 <sys-devel/gcc-11
 <sys-devel/kgcc64-11
-
-# Michał Górny <mgorny@gentoo.org> (2024-09-29)
-# This package has not been updated since Python 3.11.2.  It bundles
-# part of Python stdlib that's most likely vulnerable by now, as well
-# as some third-party packages.  And it really needs a dedicated
-# maintainer.
-# Removal on 2024-10-29.  Bug #910612.
-dev-python/brython
 
 # Robin H. Johnson <robbat2@gentoo.org> (2024-09-22)
 # Upstream testing release; fails some tests as well here
@@ -310,6 +368,7 @@ dev-python/brython
 >=dev-util/gdbus-codegen-2.80
 >=gnome-base/gnome-shell-46
 >=gnome-extra/gnome-shell-extensions-46
+>=gnome-extra/gnome-shell-frippery-46
 >=gnome-base/nautilus-46
 >=dev-libs/gobject-introspection-1.80
 >=dev-libs/gobject-introspection-common-1.80
@@ -318,15 +377,6 @@ dev-python/brython
 # Leonardo Hernández Hernández <leohdz172@proton.me> (2024-07-07)
 # New major ffmpeg version. Tracker bug #928905.
 >=media-video/ffmpeg-7.0
-
-# Joonas Niilola <juippis@gentoo.org> (2024-07-04)
-# libxml2-2.13.1 removed "deprecated" symbols that other (older)
-# packages depend upon. It can be mitigated with a --with-legacy
-# configure option, but it's still not a perfect fix. Bug #935452
-# to track and work on tree-wide support. Masking the exact version
-# so we can revbump the package with a fix.
-=dev-libs/libxml2-2.13.1
-=dev-libs/libxslt-1.1.41
 
 # Sam James <sam@gentoo.org> (2024-06-25)
 # The symbol versioning "fix" breaks anything built with 3.0.0.

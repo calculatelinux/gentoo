@@ -166,7 +166,6 @@ BDEPEND="
 	$(llvm_gen_dep '
 		sys-devel/clang:${LLVM_SLOT}
 	')
-	>=virtual/rust-1.70
 "
 
 QA_FLAGS_IGNORED=".*"
