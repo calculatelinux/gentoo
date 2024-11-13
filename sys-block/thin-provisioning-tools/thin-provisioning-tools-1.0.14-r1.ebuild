@@ -162,7 +162,7 @@ else
 		https://github.com/jthornber/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 		${CARGO_CRATE_URIS}
 	"
-	KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc64 ~riscv ~sparc ~x86 ~amd64-linux ~x86-linux"
+	KEYWORDS="amd64 ~arm ~arm64 ~loong ppc64 ~riscv ~sparc ~x86 ~amd64-linux ~x86-linux"
 fi
 
 LICENSE="GPL-3"
@@ -193,6 +193,11 @@ QA_FLAGS_IGNORED="usr/sbin/pdata_tools"
 PATCHES=(
 	"${FILESDIR}/${PN}-1.0.6-build-with-cargo.patch"
 )
+
+pkg_setup() {
+	llvm-r1_pkg_setup
+	rust_pkg_setup
+}
 
 src_unpack() {
 	if [[ ${PV} == 9999 ]] ; then

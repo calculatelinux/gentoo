@@ -2846,6 +2846,7 @@ dev-util/Tensile:client - Build and install tensile_client executable to run ben
 dev-util/babeltrace:elfutils - Build the dev-util/lttng-ust debug information filter component class
 dev-util/babeltrace:plugins - Build support for Babeltrace 2 Python plugins
 dev-util/bpftool:caps - Use sys-libs/libcap to enable unprivileged run support
+dev-util/bpftool:clang - Use sys-devel/clang instead of sys-devel/bpf-toolchain for BPF CO-RE support
 dev-util/bpftool:llvm - Use sys-devel/llvm instead of libbfd (sys-libs/binutils-libs) for JIT disassembly
 dev-util/breakpad:tools - Build tools
 dev-util/bugbite-cli:openssl - Use dev-libs/openssl as a crypto backend
@@ -3424,6 +3425,7 @@ gnome-extra/evolution-data-server:berkdb - sys-libs/db support needed to migrate
 gnome-extra/evolution-data-server:gnome-online-accounts - Enable net-libs/gnome-online-accounts based Google authentication support
 gnome-extra/evolution-data-server:oauth-gtk3 - Enable internal OAuth2 authentication for GTK+3 applications (libedataserverui-*.so) support for Google and Outlook.com. If gnome-online-accounts is enabled and used, this is not necessary, but both can be supported at the same time with different setup at runtime
 gnome-extra/evolution-data-server:oauth-gtk4 - Enable internal OAuth2 authentication for GTK 4 applications (libedataserverui4-*.so) support for Google and Outlook.com. If gnome-online-accounts is enabled and used, this is not necessary, but both can be supported at the same time with different setup at runtime
+gnome-extra/evolution-data-server:sound - Sound notification support through media-libs/libcanberra-gtk3 (does nothing without USE=gtk)
 gnome-extra/evolution-data-server:weather - Enable optional weather calendar support
 gnome-extra/gnome-commander:gsf - Add metadata support for OLE, OLE2 and ODF
 gnome-extra/gnome-commander:pdf - Add metadata support for PDF
@@ -3789,6 +3791,8 @@ mail-client/evolution:bogofilter - Build mail-filter/bogofilter plugin
 mail-client/evolution:geolocation - Enable support for displaying contacts on a map inside evolution using media-libs/libchamplain
 mail-client/evolution:highlight - Enable text highlighting plugin
 mail-client/evolution:ldap - Enable support for fetching contacts from an LDAP or Active Directory server using net-nds/openldap
+mail-client/evolution:libnotify - Enable desktop notifications through x11-libs/libnotify
+mail-client/evolution:sound - Enable sound notifications using media-libs/libcanberra-gtk3
 mail-client/evolution:spamassassin - Build mail-filter/spamassassin plugin
 mail-client/evolution:weather - Enable optional weather calendar support
 mail-client/evolution:ytnef - Enable optional TNEF attachments parser support using net-mail/ytnef
@@ -8342,6 +8346,7 @@ sys-fs/zfs-kmod:dist-kernel-cap - Prevents upgrading to an unsupported kernel ve
 sys-fs/zfs-kmod:rootfs - Pull dependencies and check kernel options required for root-on-zfs
 sys-kernel/asahi-sources:rust - Pull in the Rust For Linux dependencies
 sys-kernel/asahi-sources:symlink - Automatically symlink the kernel sources to /usr/src/linux
+sys-kernel/dracut:dracut-cpio - Build the enhanced 'dracut-cpio' program
 sys-kernel/genkernel:firmware - Prefer system firmware sys-kernel/linux-firmware over local copy.
 sys-kernel/gentoo-kernel:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 sys-kernel/gentoo-kernel:generic-uki - Build and install a generic initramfs and Unified Kernel Image, this is intended for building binpkgs with a pre-generated UKI included (EXPERIMENTAL).
