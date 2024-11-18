@@ -2302,8 +2302,6 @@ dev-lisp/gcl:athena - Build xgcl - an interface to x11-libs/libXaw
 dev-lisp/sbcl:system-bootstrap - Bootstrap SBCL using either system SBCL installation or dev-lisp/clisp
 dev-lisp/sbcl:unicode - Make the produced lisp support unicode
 dev-lua/lua-cjson:internal-fpconv - Enable internal number conversion routines, can increase overall performance by up to 50%
-dev-ml/lablgtk:glade - Enable gnome-base/libglade bindings compilation
-dev-ml/lablgtk:gnomecanvas - Enable gnome-base/libgnomecanvas bindings compilation
 dev-ml/lablgtk:sourceview - Enable GtkSourceView (x11-libs/gtksourceview) support
 dev-ml/logs:cli - Enables the Logs_cli library that provides command line support for controlling Logs.
 dev-ml/logs:fmt - Enables the Logs_fmt reporter.
@@ -4150,9 +4148,10 @@ media-gfx/okularpart:mobi - Enable mobipocket support via kde-apps/kdegraphics-m
 media-gfx/openclipart:gzip - Compresses clip art using gzip
 media-gfx/openscad:egl - Build using EGL instead of GLX
 media-gfx/openscad:experimental - Enable experimental features
-media-gfx/openscad:gamepad - Add support for gamepads through dev-qt/qtgamepad
+media-gfx/openscad:glx - Enable GLX to interface OpenGL and X11
 media-gfx/openscad:gui - Enable or disable building of the GUI
 media-gfx/openscad:hidapi - Build in support for HID-Class devices using dev-libs/hidapi
+media-gfx/openscad:manifold - Enable Manifold render backend via sci-mathematics/manifold
 media-gfx/openscad:mimalloc - Build using dev-libs/mimalloc as memory allocator
 media-gfx/openscad:spacenav - Add support for space navigator devices through dev-libs/libspnav
 media-gfx/openvdb:abi10-compat - Disables newer features to maintain compatibility with ABI10
@@ -5437,6 +5436,7 @@ net-analyzer/rrdtool:graph - Enable support for graphing functions
 net-analyzer/rrdtool:rados - Enable support for librados from sys-cluster/ceph
 net-analyzer/rrdtool:rrdcached - Build support for write-caching daemon
 net-analyzer/rrdtool:rrdcgi - Build rrdcgi support
+net-analyzer/rustscan:nmap - Installs net-analyzer/nmap
 net-analyzer/sancp:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/sarg:doublecheck - Make sarg double check the data it manipulates and output a warning if an error is found
 net-analyzer/sarg:gd - Enable support for graphs in reports through media-libs/gd
@@ -5924,8 +5924,6 @@ net-irc/iroffer-dinoex:memsave - Compile with memory protection
 net-irc/iroffer-dinoex:telnet - Compile with Telnet server support
 net-irc/irssi:otr - Adds support for a loadable IRC otr module
 net-irc/irssi:proxy - Adds support for a loadable IRC proxy module
-net-irc/kvirc:dcc-video - Support video connections over DCC protocol
-net-irc/kvirc:phonon - Support Phonon for audio output
 net-irc/kvirc:webengine - Support Qt WebEngine
 net-irc/limnoria:crypt - Enables user authentication with GPG
 net-irc/ngircd:ident - Enables support for net-libs/libident
@@ -6743,7 +6741,6 @@ net-p2p/ktorrent:zeroconf - Discover peers on the local network using the Zeroco
 net-p2p/mldonkey:bittorrent - enable bittorrent support
 net-p2p/mldonkey:fasttrack - enable fasttrack support
 net-p2p/mldonkey:gnutella - enable gnutella and gnutella2 support
-net-p2p/mldonkey:guionly - enable client build only
 net-p2p/qbittorrent:webui - Install qBittorrent Web UI (qbittorrent-nox) and systemd/OpenRC service
 net-p2p/retroshare:cli - Enables terminal login support for retroshare-service
 net-p2p/retroshare:jsonapi - Enables the new RetroShare JSON API
@@ -8146,8 +8143,6 @@ sys-cluster/slurm:slurmrestd - Enable interface to Slurm via REST API
 sys-cluster/slurm:torque - Enable perl scripts that emulates pbs (qstat, qsub etc.)
 sys-cluster/slurm:ucx - Enable Unified Communication X library support
 sys-cluster/slurm:yaml - Enable YAML support
-sys-cluster/spark-bin:scala211 - Install Spark JARs pre-built with Scala 2.11.
-sys-cluster/spark-bin:scala212 - Install Spark JARs pre-built with Scala 2.12.
 sys-cluster/torque:autorun - Enable the AUTORUN_JOBS codebase
 sys-cluster/torque:cgroups - Enable pbs_mom to use linux cgroups to isolate jobs
 sys-cluster/torque:cpusets - Enable pbs_mom to utilize linux cpusets if available
@@ -8344,7 +8339,6 @@ sys-fs/zfs-auto-snapshot:cron - Install /etc/cron.* files
 sys-fs/zfs-auto-snapshot:default-exclude - Only take snapshots of datasets with com.sun:auto-snapshot=true property set
 sys-fs/zfs-kmod:dist-kernel-cap - Prevents upgrading to an unsupported kernel version when combined with USE=dist-kernel
 sys-fs/zfs-kmod:rootfs - Pull dependencies and check kernel options required for root-on-zfs
-sys-kernel/asahi-sources:rust - Pull in the Rust For Linux dependencies
 sys-kernel/asahi-sources:symlink - Automatically symlink the kernel sources to /usr/src/linux
 sys-kernel/dracut:dracut-cpio - Build the enhanced 'dracut-cpio' program
 sys-kernel/genkernel:firmware - Prefer system firmware sys-kernel/linux-firmware over local copy.
@@ -8634,7 +8628,7 @@ www-client/firefox:pgo - Add support for profile-guided optimization for faster 
 www-client/firefox:pulseaudio - Add sound server support via media-libs/libpulse (may be PulseAudio or Pipewire, or apulse if installed)
 www-client/firefox:sndio - Enable support for the media-sound/sndio backend
 www-client/firefox:system-av1 - Use the system-wide media-libs/dav1d and media-libs/libaom library instead of bundled
-www-client/firefox:system-harfbuzz - Use the system-wide media-libs/harfbuzz and media-gfx/graphite2 instead of bundled
+www-client/firefox:system-harfbuzz - Use the system-wide media-libs/harfbuzz instead of bundled and media-gfx/graphite2 in most cases
 www-client/firefox:system-icu - Use the system-wide dev-libs/icu instead of bundled
 www-client/firefox:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled
 www-client/firefox:system-libevent - Use the system-wide dev-libs/libevent instead of bundled
@@ -8642,6 +8636,7 @@ www-client/firefox:system-libvpx - Use the system-wide media-libs/libvpx instead
 www-client/firefox:system-png - Use the system-wide media-libs/libpng instead of bundled (requires APNG patches)
 www-client/firefox:system-python-libs - Use system's python site instead of bundled python libraries
 www-client/firefox:system-webp - Use the system-wide media-libs/libwebp instead of bundled
+www-client/firefox:wasm - Sandbox certain third-party libraries through WebAssembly using RLBox
 www-client/firefox:wifi - Enable necko-wifi for NetworkManager integration, and access point MAC address scanning for better precision with opt-in geolocation services
 www-client/firefox-bin:alsa - When pulseaudio isn't set, this prefers apulse
 www-client/firefox-bin:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
