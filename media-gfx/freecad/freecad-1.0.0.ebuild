@@ -18,7 +18,7 @@ if [[ ${PV} = *9999 ]]; then
 	S="${WORKDIR}/freecad-${PV}"
 else
 	SRC_URI="https://github.com/${MY_PN}/${MY_PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64"
+	KEYWORDS="amd64"
 	S="${WORKDIR}/FreeCAD-${PV}"
 fi
 
@@ -26,7 +26,7 @@ fi
 # examples are licensed CC-BY-SA (without note of specific version)
 LICENSE="LGPL-2 CC-BY-SA-4.0"
 SLOT="0"
-IUSE="debug designer +gui +qt6 test"
+IUSE="debug designer +gui qt5 test"
 
 FREECAD_EXPERIMENTAL_MODULES="cloud netgen pcl"
 FREECAD_STABLE_MODULES="addonmgr fem idf image inspection material
@@ -53,14 +53,14 @@ RDEPEND="
 	dev-libs/libspnav[X]
 	dev-libs/xerces-c[icu]
 	dev-ruby/asciidoctor
-	!qt6? (
+	qt5? (
 		dev-qt/qtconcurrent:5
 		dev-qt/qtcore:5
 		dev-qt/qtnetwork:5
 		dev-qt/qtxml:5
 		dev-qt/qtxmlpatterns:5
 	)
-	qt6? (
+	!qt5? (
 		dev-qt/qtbase:6[concurrent,network,xml]
 	)
 	media-libs/freetype
@@ -76,14 +76,14 @@ RDEPEND="
 		net-misc/curl
 	)
 	fem? (
-		!qt6? ( sci-libs/vtk:=[qt5,rendering] )
-		qt6? ( sci-libs/vtk:=[-qt5,qt6,rendering] )
+		qt5? ( sci-libs/vtk:=[qt5,rendering] )
+		!qt5? ( sci-libs/vtk:=[-qt5,qt6,rendering] )
 	)
 	gui? (
 		>=media-libs/coin-4.0.0
 		virtual/glu
 		virtual/opengl
-		!qt6? (
+		qt5? (
 			dev-qt/designer:5
 			dev-qt/qtgui:5
 			dev-qt/qtopengl:5
@@ -99,7 +99,7 @@ RDEPEND="
 				dev-python/shiboken2:=[${PYTHON_USEDEP}]
 			' python3_{10..11} )
 		)
-		qt6? (
+		!qt5? (
 			designer? ( dev-qt/qttools:6[designer] )
 			dev-qt/qt5compat:6
 			dev-qt/qttools:6[widgets]
@@ -118,13 +118,13 @@ RDEPEND="
 	openscad? ( media-gfx/openscad )
 	pcl? ( sci-libs/pcl:=[opengl,openni2,vtk] )
 	smesh? (
-		!qt6? ( sci-libs/vtk:=[qt5] )
-		qt6? ( sci-libs/vtk:=[-qt5,qt6] )
+		qt5? ( sci-libs/vtk:=[qt5] )
+		!qt5? ( sci-libs/vtk:=[-qt5,qt6] )
 	)
 	$(python_gen_cond_dep '
 		dev-python/numpy[${PYTHON_USEDEP}]
 		dev-python/pybind11[${PYTHON_USEDEP}]
-		addonmgr? ( dev-python/GitPython[${PYTHON_USEDEP}] )
+		addonmgr? ( dev-python/gitpython[${PYTHON_USEDEP}] )
 		fem? ( dev-python/ply[${PYTHON_USEDEP}] )
 	')
 "
@@ -133,7 +133,7 @@ DEPEND="${RDEPEND}
 	dev-cpp/ms-gsl
 	test? (
 		$(python_gen_cond_dep 'dev-python/pyyaml[${PYTHON_USEDEP}]')
-		!qt6? ( dev-qt/qttest:5 )
+		qt5? ( dev-qt/qttest:5 )
 	)
 "
 BDEPEND="
@@ -141,7 +141,7 @@ BDEPEND="
 	dev-lang/swig
 	test? (
 		$(python_gen_cond_dep 'dev-python/pyyaml[${PYTHON_USEDEP}]')
-		!qt6? ( dev-qt/qttest:5 )
+		qt5? ( dev-qt/qttest:5 )
 		dev-cpp/gtest
 	)
 "
@@ -164,7 +164,7 @@ REQUIRED_USE="
 	designer? ( gui )
 	inspection? ( points )
 	path? ( robot )
-	python_single_target_python3_12? ( gui? ( qt6 ) )
+	python_single_target_python3_12? ( gui? ( !qt5 ) )
 "
 # There is no py3.12 support planned for pyside2
 
@@ -285,7 +285,7 @@ src_configure() {
 		)
 	fi
 
-	if use qt6; then
+	if ! use qt5; then
 		mycmakeargs+=(
 			-DFREECAD_QT_MAJOR_VERSION=6
 			-DFREECAD_QT_VERSION=6
@@ -373,7 +373,7 @@ pkg_postinst() {
 	optfeature "Dependency graphs" media-gfx/graphviz
 	optfeature "PBR Rendering" media-gfx/povray
 	optfeature_header "Import / Export"
-	optfeature "Interact with git repositories" dev-python/GitPython
+	optfeature "Interact with git repositories" dev-python/gitpython
 	optfeature "Work with COLLADA documents" dev-python/pycollada
 	optfeature "YAML importer and emitter" dev-python/pyyaml
 	optfeature "Importing and exporting 2D AutoCAD DWG files" media-gfx/libredwg

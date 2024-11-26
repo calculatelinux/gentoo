@@ -623,7 +623,6 @@ app-emulation/qemu:glusterfs - Enables GlusterFS cluster fileystem via sys-clust
 app-emulation/qemu:gnutls - Enable TLS support for the VNC console server. For 1.4 and newer this also enables WebSocket support. For 2.0 through 2.3 also enables disk quorum support.
 app-emulation/qemu:io-uring - Enable efficient I/O via sys-libs/liburing.
 app-emulation/qemu:iscsi - Enable direct iSCSI support via net-libs/libiscsi instead of indirectly via the Linux block layer that sys-block/open-iscsi does.
-app-emulation/qemu:jemalloc - Enable jemalloc allocator support
 app-emulation/qemu:jpeg - Enable jpeg image support for the VNC console server
 app-emulation/qemu:keyutils - Support Linux keyrings via sys-apps/keyutils
 app-emulation/qemu:multipath - Enable multipath persistent reservation passthrough via sys-fs/multipath-tools.
@@ -2378,83 +2377,6 @@ dev-php/pecl-memcached:igbinary - Enable support for the igbinary serializer
 dev-php/pecl-memcached:json - Enable support for json serialization
 dev-php/pecl-redis:igbinary - Enables igbinary serialisation support
 dev-php/pecl-redis:json - Enables json serializer support
-dev-python/PyQt5:bluetooth - Build bindings for the QtBluetooth module
-dev-python/PyQt5:dbus - Build bindings for the QtDBus module
-dev-python/PyQt5:declarative - Build bindings for the QtQml and QtQuick modules and enable the qmlscene plugin
-dev-python/PyQt5:designer - Build bindings for the QtDesigner module and enable the designer plugin
-dev-python/PyQt5:gui - Build bindings for the QtGui module
-dev-python/PyQt5:help - Build bindings for the QtHelp module
-dev-python/PyQt5:location - Build bindings for the QtLocation module
-dev-python/PyQt5:multimedia - Build bindings for the QtMultimedia module
-dev-python/PyQt5:network - Build bindings for the QtNetwork module
-dev-python/PyQt5:opengl - Build bindings for the QtOpenGL module
-dev-python/PyQt5:positioning - Build bindings for the QtPositioning module
-dev-python/PyQt5:printsupport - Build bindings for the QtPrintSupport module
-dev-python/PyQt5:sensors - Build bindings for the QtSensors module
-dev-python/PyQt5:serialport - Build bindings for the QtSerialPort module
-dev-python/PyQt5:speech - Build bindings for the QtTextToSpeech module
-dev-python/PyQt5:sql - Build bindings for the QtSql module
-dev-python/PyQt5:svg - Build bindings for the QtSvg module
-dev-python/PyQt5:testlib - Build bindings for the QtTest module
-dev-python/PyQt5:webchannel - Build bindings for the QtWebChannel module
-dev-python/PyQt5:websockets - Build bindings for the QtWebSockets module
-dev-python/PyQt5:widgets - Build bindings for the QtWidgets module
-dev-python/PyQt5:x11extras - Build bindings for the QtX11Extras module
-dev-python/PyQt5:xmlpatterns - Build bindings for the QtXmlPatterns module
-dev-python/PyQt6:bluetooth - Build bindings for the QtBluetooth module
-dev-python/PyQt6:dbus - Build bindings for the QtDBus module
-dev-python/PyQt6:designer - Build bindings for the QtDesigner module and enable the designer plugin
-dev-python/PyQt6:gui - Build bindings for the QtGui module
-dev-python/PyQt6:help - Build bindings for the QtHelp module
-dev-python/PyQt6:multimedia - Build bindings for the QtMultimedia module
-dev-python/PyQt6:network - Build bindings for the QtNetwork module
-dev-python/PyQt6:nfc - Build bindings for the QtNfc module
-dev-python/PyQt6:opengl - Build bindings for the QtOpenGL module
-dev-python/PyQt6:pdfium - Build bindings for the QtPdf module (uses pdfium from dev-qt/qtwebengine)
-dev-python/PyQt6:positioning - Build bindings for the QtPositioning module
-dev-python/PyQt6:printsupport - Build bindings for the QtPrintSupport module
-dev-python/PyQt6:qml - Build bindings for the QtQml module and enable the qml plugin
-dev-python/PyQt6:quick - Build bindings for the QtQuick module
-dev-python/PyQt6:quick3d - Build bindings for the QtQuick3D module
-dev-python/PyQt6:remoteobjects - Build bindings for the QtRemoteObjects module
-dev-python/PyQt6:sensors - Build bindings for the QtSensors module
-dev-python/PyQt6:serialport - Build bindings for the QtSerialPort module
-dev-python/PyQt6:spatialaudio - Build bindings for the QtSpatialAudio module
-dev-python/PyQt6:speech - Build bindings for the QtTextToSpeech module
-dev-python/PyQt6:sql - Build bindings for the QtSql module
-dev-python/PyQt6:svg - Build bindings for the QtSvg module
-dev-python/PyQt6:testlib - Build bindings for the QtTest module
-dev-python/PyQt6:webchannel - Build bindings for the QtWebChannel module
-dev-python/PyQt6:websockets - Build bindings for the QtWebSockets module
-dev-python/PyQt6:widgets - Build bindings for the QtWidgets module
-dev-python/PyQt6:xml - Build bindings for the QtXml module
-dev-python/PyQt6-WebEngine:quick - Build bindings for the QtWebEngineQuick module
-dev-python/PyQt6-WebEngine:widgets - Build bindings for the QtWebEngineWidgets module
-dev-python/QtPy:designer - Pull in bindings for the QtDesigner module and enable the designer plugin
-dev-python/QtPy:gui - Pull in bindings for the QtGui module
-dev-python/QtPy:help - Pull in bindings for the QtHelp module
-dev-python/QtPy:multimedia - Pull in QtMultimedia and QtMultimediaWidgets modules
-dev-python/QtPy:network - Pull in bindings for the QtNetwork module
-dev-python/QtPy:opengl - Pull in bindings for the QtOpenGL module
-dev-python/QtPy:positioning - Pull in bindings for the QtPositioning module
-dev-python/QtPy:printsupport - Pull in bindings for the QtPrintSupport module
-dev-python/QtPy:pyqt5 - Use dev-python/PyQt5 as Qt for Python implementation
-dev-python/QtPy:pyqt6 - Use dev-python/PyQt6 as Qt for Python implementation
-dev-python/QtPy:pyside2 - Use dev-python/pyside2 as Qt for Python implementation
-dev-python/QtPy:pyside6 - Use dev-python/pyside6 as Qt for Python implementation
-dev-python/QtPy:qml - Build bindings for the QtQml
-dev-python/QtPy:quick - Build bindings for the QtQuick
-dev-python/QtPy:sensors - Pull in bindings for the QtSensors module
-dev-python/QtPy:serialport - Pull in bindings for the QtSerialPort module
-dev-python/QtPy:speech - Pull in bindings for the QtTextToSpeech module
-dev-python/QtPy:sql - Pull in bindings for the QtSql module
-dev-python/QtPy:svg - Pull in bindings for the QtSvg module
-dev-python/QtPy:testlib - Pull in bindings for the QtTest module
-dev-python/QtPy:webchannel - Pull in bindings for the QtWebChannel module
-dev-python/QtPy:webengine - Pull in QtWebEngine and QtWebEngineWidgets modules
-dev-python/QtPy:websockets - Pull in bindings for the QtWebSockets module
-dev-python/QtPy:widgets - Pull in bindings for the QtWidgets module
-dev-python/QtPy:xml - Pull in QtXml module
 dev-python/amqp:extras - Install extra tools to generate initial Python mod from an AMQP XML file
 dev-python/apprise:dbus - Support sending notifications to the desktop over D-Bus
 dev-python/apprise:mqtt - Support sending notifications over MQTT
@@ -2507,6 +2429,58 @@ dev-python/pypy3:test-install - Install the test suite packages, that are requir
 dev-python/pypy3_10:ensurepip - Install the ensurepip module that uses bundled wheels to bootstrap pip and setuptools (if disabled, it will be only possible to use venv `--without-pip`)
 dev-python/pypy3_10:test-install - Install the test suite packages, that are required to run tests in a few reverse dependencies.
 dev-python/pypy3_10-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
+dev-python/pyqt5:bluetooth - Build bindings for the QtBluetooth module
+dev-python/pyqt5:dbus - Build bindings for the QtDBus module
+dev-python/pyqt5:declarative - Build bindings for the QtQml and QtQuick modules and enable the qmlscene plugin
+dev-python/pyqt5:designer - Build bindings for the QtDesigner module and enable the designer plugin
+dev-python/pyqt5:gui - Build bindings for the QtGui module
+dev-python/pyqt5:help - Build bindings for the QtHelp module
+dev-python/pyqt5:location - Build bindings for the QtLocation module
+dev-python/pyqt5:multimedia - Build bindings for the QtMultimedia module
+dev-python/pyqt5:network - Build bindings for the QtNetwork module
+dev-python/pyqt5:opengl - Build bindings for the QtOpenGL module
+dev-python/pyqt5:positioning - Build bindings for the QtPositioning module
+dev-python/pyqt5:printsupport - Build bindings for the QtPrintSupport module
+dev-python/pyqt5:sensors - Build bindings for the QtSensors module
+dev-python/pyqt5:serialport - Build bindings for the QtSerialPort module
+dev-python/pyqt5:speech - Build bindings for the QtTextToSpeech module
+dev-python/pyqt5:sql - Build bindings for the QtSql module
+dev-python/pyqt5:svg - Build bindings for the QtSvg module
+dev-python/pyqt5:testlib - Build bindings for the QtTest module
+dev-python/pyqt5:webchannel - Build bindings for the QtWebChannel module
+dev-python/pyqt5:websockets - Build bindings for the QtWebSockets module
+dev-python/pyqt5:widgets - Build bindings for the QtWidgets module
+dev-python/pyqt5:x11extras - Build bindings for the QtX11Extras module
+dev-python/pyqt5:xmlpatterns - Build bindings for the QtXmlPatterns module
+dev-python/pyqt6:bluetooth - Build bindings for the QtBluetooth module
+dev-python/pyqt6:dbus - Build bindings for the QtDBus module
+dev-python/pyqt6:designer - Build bindings for the QtDesigner module and enable the designer plugin
+dev-python/pyqt6:gui - Build bindings for the QtGui module
+dev-python/pyqt6:help - Build bindings for the QtHelp module
+dev-python/pyqt6:multimedia - Build bindings for the QtMultimedia module
+dev-python/pyqt6:network - Build bindings for the QtNetwork module
+dev-python/pyqt6:nfc - Build bindings for the QtNfc module
+dev-python/pyqt6:opengl - Build bindings for the QtOpenGL module
+dev-python/pyqt6:pdfium - Build bindings for the QtPdf module (uses pdfium from dev-qt/qtwebengine)
+dev-python/pyqt6:positioning - Build bindings for the QtPositioning module
+dev-python/pyqt6:printsupport - Build bindings for the QtPrintSupport module
+dev-python/pyqt6:qml - Build bindings for the QtQml module and enable the qml plugin
+dev-python/pyqt6:quick - Build bindings for the QtQuick module
+dev-python/pyqt6:quick3d - Build bindings for the QtQuick3D module
+dev-python/pyqt6:remoteobjects - Build bindings for the QtRemoteObjects module
+dev-python/pyqt6:sensors - Build bindings for the QtSensors module
+dev-python/pyqt6:serialport - Build bindings for the QtSerialPort module
+dev-python/pyqt6:spatialaudio - Build bindings for the QtSpatialAudio module
+dev-python/pyqt6:speech - Build bindings for the QtTextToSpeech module
+dev-python/pyqt6:sql - Build bindings for the QtSql module
+dev-python/pyqt6:svg - Build bindings for the QtSvg module
+dev-python/pyqt6:testlib - Build bindings for the QtTest module
+dev-python/pyqt6:webchannel - Build bindings for the QtWebChannel module
+dev-python/pyqt6:websockets - Build bindings for the QtWebSockets module
+dev-python/pyqt6:widgets - Build bindings for the QtWidgets module
+dev-python/pyqt6:xml - Build bindings for the QtXml module
+dev-python/pyqt6-webengine:quick - Build bindings for the QtWebEngineQuick module
+dev-python/pyqt6-webengine:widgets - Build bindings for the QtWebEngineWidgets module
 dev-python/pyrsistent:native-extensions - Compiles native C extensions (speedups, instead of using python fallback code).
 dev-python/pyside2:3d - Build Qt3DCore, Qt3DAnimation, Qt3DExtras, Qt3DInput, Qt3DLogic, and Qt3DRender modules
 dev-python/pyside2:charts - Build QtCharts module
@@ -2575,6 +2549,31 @@ dev-python/python-stdnum:vies - Enable VIES
 dev-python/pyudev:qt5 - Install PyQt5 bindings
 dev-python/pyzmq:drafts - Enable draft API support
 dev-python/qiskit:visualization - Enable visualization modules
+dev-python/qtpy:designer - Pull in bindings for the QtDesigner module and enable the designer plugin
+dev-python/qtpy:gui - Pull in bindings for the QtGui module
+dev-python/qtpy:help - Pull in bindings for the QtHelp module
+dev-python/qtpy:multimedia - Pull in QtMultimedia and QtMultimediaWidgets modules
+dev-python/qtpy:network - Pull in bindings for the QtNetwork module
+dev-python/qtpy:opengl - Pull in bindings for the QtOpenGL module
+dev-python/qtpy:positioning - Pull in bindings for the QtPositioning module
+dev-python/qtpy:printsupport - Pull in bindings for the QtPrintSupport module
+dev-python/qtpy:pyqt5 - Use dev-python/pyqt5 as Qt for Python implementation
+dev-python/qtpy:pyqt6 - Use dev-python/pyqt6 as Qt for Python implementation
+dev-python/qtpy:pyside2 - Use dev-python/pyside2 as Qt for Python implementation
+dev-python/qtpy:pyside6 - Use dev-python/pyside6 as Qt for Python implementation
+dev-python/qtpy:qml - Build bindings for the QtQml
+dev-python/qtpy:quick - Build bindings for the QtQuick
+dev-python/qtpy:sensors - Pull in bindings for the QtSensors module
+dev-python/qtpy:serialport - Pull in bindings for the QtSerialPort module
+dev-python/qtpy:speech - Pull in bindings for the QtTextToSpeech module
+dev-python/qtpy:sql - Pull in bindings for the QtSql module
+dev-python/qtpy:svg - Pull in bindings for the QtSvg module
+dev-python/qtpy:testlib - Pull in bindings for the QtTest module
+dev-python/qtpy:webchannel - Pull in bindings for the QtWebChannel module
+dev-python/qtpy:webengine - Pull in QtWebEngine and QtWebEngineWidgets modules
+dev-python/qtpy:websockets - Pull in bindings for the QtWebSockets module
+dev-python/qtpy:widgets - Pull in bindings for the QtWidgets module
+dev-python/qtpy:xml - Pull in QtXml module
 dev-python/rarfile:compressed - Enables the module to support compressed v3 archives by calling the app-arch/unrar.
 dev-python/reedsolo:native-extensions - Compile native C extensions.
 dev-python/rfc3986:idna - enable support for the IDNA specification (RFC 5891)
@@ -2985,7 +2984,7 @@ dev-util/sccache:dist-server - Enables the sccache-dist binary
 dev-util/sccache:gcs - Enable Google Cloud Storage support
 dev-util/sccache:redis - Enable Redis support
 dev-util/sccache:s3 - Enable full Amazon S3 support
-dev-util/sccache:simple-s3 - Enable minimal Amazon S3 support
+dev-util/sccache:webdav - Enable WebDAV storage endpoint support
 dev-util/schroot:btrfs - Enable support for chroots using btrfs snapshots
 dev-util/schroot:dchroot - Enables the building of a wrapper named "dchroot", replacing sys-apps/dchroot
 dev-util/schroot:lvm - Enable support for chroots using LVM snapshots
@@ -4073,6 +4072,8 @@ media-gfx/fontforge:truetype-debugger - Enable truetype debugger in fontforge
 media-gfx/fontforge:woff2 - Enable support for WOFF2 format
 media-gfx/fotowall:webcam - Enable webcam support
 media-gfx/freecad:addonmgr - Build the addon manager module for automatic handling of 3rd party addons
+media-gfx/freecad:bim - Build the BIM module and workbench
+media-gfx/freecad:cam - Build the CAM module and workbench
 media-gfx/freecad:cloud - Build the Cloud workbench, to access cloud providers (mostly Amazon S3).
 media-gfx/freecad:designer - Build and install the Qt designer plugin, so the FreeCAD widgets can be used from within designer.
 media-gfx/freecad:fem - Build the FEM module and workbench which provides Finite Element Analysis (FEA) workflows
@@ -4081,6 +4082,7 @@ media-gfx/freecad:idf - Build the IDF module to provide file exchange capabiliti
 media-gfx/freecad:image - Build the image module and workbench for working with bitmap images
 media-gfx/freecad:inspection - Build the inspection workbench which gives you specific tools for examination of shapes (experimental)
 media-gfx/freecad:material - Build the material module and workbench to work with materials
+media-gfx/freecad:mesh - Build the mesh module and workbench
 media-gfx/freecad:netgen - Build support for the netgen mesher through media-gfx/netgen.
 media-gfx/freecad:openscad - Build the OpenSCAD module for interoperability with OpenSCAD and repairing Constructive Solid Geometry (CSG) history
 media-gfx/freecad:part-design - Build the part design module and workbench for build part shapes from sketches
@@ -4088,9 +4090,11 @@ media-gfx/freecad:path - Build the path module and workbench to procude G-Code i
 media-gfx/freecad:pcl - Use external sci-libs/pcl for point clouds support.
 media-gfx/freecad:points - Build the points module and workbench for working with point clouds
 media-gfx/freecad:raytracing - Build the raytracing module and workbench for raytracing and rendering
+media-gfx/freecad:reverse - Build the reverse engineering module and workbench
 media-gfx/freecad:robot - Build the robot module and workbench for studying robot movements
 media-gfx/freecad:show - Build the show module, a helper module for visibility automation
-media-gfx/freecad:smesh - Build the Salome SMESH module
+media-gfx/freecad:smesh - Build Salome SMESH
+media-gfx/freecad:spacenav - Add support for space navigator devices through dev-libs/libspnav
 media-gfx/freecad:surface - Build the surface module and workbench
 media-gfx/freecad:techdraw - Build the techdraw module and workbench, a more advanced and feature-rich successor of the drawing workbench
 media-gfx/freecad:tux - Build the Tux module
@@ -4133,7 +4137,6 @@ media-gfx/kphotoalbum:vlc - Enable media-video/vlc video backend (recommended fo
 media-gfx/krita:color-management - Enable color management via media-libs/opencolorio
 media-gfx/krita:media - Enable sound support for animations via media-libs/mlt
 media-gfx/krita:mypaint-brush-engine - Enable MyPaint brush engine support media-libs/libmypaint
-media-gfx/krita:qtmedia - Enable sound support for animations via dev-qt/qtmultimedia
 media-gfx/krita:xsimd - Enable usage of SIMD instructions via dev-cpp/xsimd
 media-gfx/librecad:tools - Build additional tool programs: tff2lff
 media-gfx/luminance-hdr:fits - Enable support for the FITS format
@@ -4885,8 +4888,11 @@ media-sound/split2flac:replaygain - Support for Replay Gain metadata, for relati
 media-sound/spotify:local-playback - Allows playing local files with the Spotify client
 media-sound/spotify:pax-kernel - Triggers a paxmarking of the main Spotify binary
 media-sound/spotify:pulseaudio - Controls the dependency on pulseaudio or apulse
+media-sound/strawberry:chromaprint - Enables audio fingerprinting support with media-libs/chromaprint
+media-sound/strawberry:loudness - Enable loudness normalisation according to the EBU R128 standard using media-libs/libebur128
 media-sound/strawberry:moodbar - Enable moodbar support
 media-sound/strawberry:soup - Allow streaming with media-plugins/gst-plugins-soup
+media-sound/strawberry:streaming - Enable Online Streaming Support
 media-sound/strawberry:vlc - Enable media-video/vlc backend
 media-sound/supercollider:ableton-link - Enable support for Ableton Link
 media-sound/supercollider:emacs - Enable the SCEL user interface
@@ -5671,8 +5677,6 @@ net-firewall/conntrack-tools:cthelper - Use net-libs/libnetfilter_cthelper for u
 net-firewall/conntrack-tools:cttimeout - Use net-libs/libnetfilter_cttimeout for conntrack timeout support
 net-firewall/ebtables:perl - Install the ebtables-save script which uses perl
 net-firewall/firehol:ipset - Use net-firewall/ipset.
-net-firewall/firewalld:iptables - Add support for net-firewall/iptables as firewall backend
-net-firewall/firewalld:nftables - Add support for net-firewall/nftables as firewall backend
 net-firewall/fwknop:client - Build fwknop client
 net-firewall/fwknop:extras - Install utility scripts and AppArmor policy for fwknopd
 net-firewall/fwknop:firewalld - Use net-firewall/firewalld as the default server backend
@@ -7100,7 +7104,6 @@ sci-chemistry/gromacs:double-precision - More precise calculations at the expens
 sci-chemistry/gromacs:gmxapi - Add support for gmxapi library
 sci-chemistry/gromacs:gmxapi-legacy - Enable installing lagacy headers
 sci-chemistry/gromacs:hwloc - Enable HWLoc lib support
-sci-chemistry/gromacs:lmfit - Use external sci-libs/lmfit
 sci-chemistry/gromacs:mkl - Use sci-libs/mkl for fft, blas, lapack routines
 sci-chemistry/gromacs:nnpot - Allow to use sci-libs/caffe2 for NN Potentials
 sci-chemistry/gromacs:offensive - Enable gromacs partly offensive quotes
@@ -7363,18 +7366,15 @@ sci-libs/openblas:eselect-ldso - Enable BLAS/LAPACK runtime switching
 sci-libs/openblas:index-64bit - Compile a separate INTERFACE64 OpenBLAS
 sci-libs/openblas:pthread - Build with pthread threading model
 sci-libs/openblas:relapack - Build the ReLAPACK extension to OpenBLAS
-sci-libs/opencascade:eigen - Enable support for eigenvalues through the header-only dev-cpp/eigen package.
 sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/opencascade:freetype - Enable media-libs/freetype support
 sci-libs/opencascade:inspector - Build Inspector tool
-sci-libs/opencascade:jemalloc - Enable jemalloc allocator support via dev-libs/jemalloc
 sci-libs/opencascade:json - Enable JSON support through dev-libs/rapidjson
 sci-libs/opencascade:optimize - Don't clear allocated memory. Use optimized memory manager unlesstbb USE flag is set.
 sci-libs/opencascade:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
 sci-libs/opencascade:testprograms - Indicates whether non-regression OCCT test scripts should be installed
 sci-libs/opencascade:vtk - Enable Visualization Toolkit support via sci-libs/vtk
 sci-libs/orocos_kdl:models - Build models for some well known robots.
-sci-libs/p4est:romio - Build with support for the ROMIO MPI-IO component
 sci-libs/p4est:vtk-binary - Enable binary vtk output. If disabled vtk files will be written in ASCII text format.
 sci-libs/pastix:fortran - Install the Fortran interface
 sci-libs/pastix:int64 - Use 64- rather than 32-bit integer representation
@@ -7875,7 +7875,7 @@ sys-apps/portage:rsync-verify - Enable full-tree cryptographic verification of G
 sys-apps/portage:xattr - Preserve extended attributes (filesystem-stored metadata) when installing files. Usually only required for hardened systems.
 sys-apps/ppc64-diag:rtas - Add support for the Run Time Abstraction Services (RTAS)
 sys-apps/proot:care - Build dynamic CARE binary (more info - https://proot-me.github.io)
-sys-apps/razercfg:gui - Installs GUI configuration utility and status bar applet. Requires dev-python/PyQt5
+sys-apps/razercfg:gui - Installs GUI configuration utility and status bar applet. Requires dev-python/pyqt5
 sys-apps/rng-tools:jitterentropy - Enable Jitter RNG entropy support
 sys-apps/rng-tools:nistbeacon - Enable NIST beacon entropy support
 sys-apps/rng-tools:pkcs11 - Enable PKCS11 entropy support
@@ -8866,6 +8866,7 @@ x11-misc/polybar:network - Enable network support
 x11-misc/primus:libglvnd - Use media-libs/libglvnd for dispatch
 x11-misc/py3status:minimal - Don't depend on x11-misc/i3status if you don't plan to use any of its built-in modules.
 x11-misc/py3status:udev - Install extra requirement dev-python/pyudev to enable udev events monitoring on modules.
+x11-misc/qterm:ssh - Enable SSH support (requires dev-libs/openssl
 x11-misc/qtfm:dbus - Install the qtfm-tray removable device manager
 x11-misc/qtfm:shared - Install the libQtFM shared library and headers
 x11-misc/read-edid:vbe-mode - Build get-edid with support for legacy, VBE-based interface. Requires dev-libs/libx86.

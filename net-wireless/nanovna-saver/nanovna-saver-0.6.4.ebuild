@@ -3,7 +3,7 @@
 
 EAPI=8
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{9..12} )
+PYTHON_COMPAT=( python3_{10..12} )
 inherit distutils-r1 xdg-utils
 
 DESCRIPTION="tool for reading, displaying and saving data from the NanoVNA"
@@ -16,15 +16,15 @@ if [ "${PV}" = "9999" ]; then
 	EGIT_REPO_URI="https://github.com/mihtjel/nanovna-saver.git"
 else
 	SRC_URI="https://github.com/mihtjel/nanovna-saver/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~x86"
 	export SETUPTOOLS_SCM_PRETEND_VERSION="${PV}"
 fi
 
 RDEPEND="${DEPEND}
 	dev-python/cython[${PYTHON_USEDEP}]
 	dev-python/pyserial[${PYTHON_USEDEP}]
-	dev-python/PyQt6[${PYTHON_USEDEP},gui,widgets]
-	dev-python/PyQt6-sip[${PYTHON_USEDEP}]
+	dev-python/pyqt6[${PYTHON_USEDEP},gui,widgets]
+	dev-python/pyqt6-sip[${PYTHON_USEDEP}]
 	dev-python/sip[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
 	dev-python/scipy[${PYTHON_USEDEP}]"

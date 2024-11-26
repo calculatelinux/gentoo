@@ -33,6 +33,35 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-11-25)
+# 7.X series is masked for removal. Please migrate to 8.X series.
+<sci-electronics/kicad-8
+<sci-electronics/kicad-footprints-8
+<sci-electronics/kicad-i18n-8
+<sci-electronics/kicad-meta-8
+<sci-electronics/kicad-packages3d-8
+<sci-electronics/kicad-symbols-8
+<sci-electronics/kicad-templates-8
+<app-doc/kicad-doc-8
+
+# Michael Orlitzky <mjo@gentoo.org> (2024-11-25)
+# Several consumers are failing to build with this version, bugs 944380,
+# 944404, and others. Masking until we can figure out what's wrong.
+=dev-python/cysignals-1.12.0
+
+# Michał Górny <mgorny@gentoo.org> (2024-11-23)
+# Implementation detail of dev-python/pyproject-fmt.  New versions
+# integrate the Rust code into the main package.
+# Removal on 2024-12-07.  Bug #944782.
+dev-python/pyproject-fmt-rust
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-11-23)
+# dev-python/pyside2 last-rites, no more revdeps
+# Removal on 2024-12-23
+dev-python/pyside2
+dev-python/pyside2-tools
+dev-python/shiboken2
+
 # Ionen Wolkens <ionen@gentoo.org> (2024-11-19)
 # NVIDIA dropped support for the 470.xx branch in September 2024[1].
 #
@@ -377,8 +406,8 @@ app-i18n/kcm-fcitx
 # Masked for testing, and odds are (at this point) that 6.8.0 will
 # never be unmasked and will skip to 6.8.1 instead given the large
 # amount of regressions there's been..
-=dev-python/PyQt6-6.8.0_pre*
-=dev-python/PyQt6-WebEngine-6.8.0_pre*
+=dev-python/pyqt6-6.8.0_pre*
+=dev-python/pyqt6-webengine-6.8.0_pre*
 =dev-python/pyside6-6.8.0*
 =dev-python/pyside6-tools-6.8.0*
 =dev-python/shiboken6-6.8.0*

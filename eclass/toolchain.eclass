@@ -576,6 +576,19 @@ toolchain_pkg_pretend() {
 		_tc_use_if_iuse objc++ && \
 			ewarn 'Obj-C++ requires a C++ compiler, disabled due to USE="-cxx"'
 	fi
+
+	# Do the check for pure source builds only, since the override
+	# cannot work with binary packages, see https://bugs.gentoo.org/944198
+	if [[ ${BUILD_TYPE} == source ]] && in_iuse time64 && ! use time64 &&
+		has_version -r "${CATEGORY}/${PN}[time64(-)]" &&
+		[[ ! ${TC_FORCE_TIME32} ]]
+	then
+		eerror "Attempting to build USE=-time64 version of gcc when at least"
+		eerror "one USE=time64 version is installed. Did you accidentally"
+		eerror "switch back to a non-time64 profile? If this is really"
+		eerror "desirable, set TC_FORCE_TIME32=1 to force the build."
+		die "Attempting to build USE=-time64 on a USE=time64 system"
+	fi
 }
 
 #---->> pkg_setup <<----
@@ -1966,6 +1979,7 @@ gcc_do_filter_flags() {
 
 	if ver_test -lt 15.1 ; then
 		filter-flags -fdiagnostics-explain-harder -fdiagnostics-details
+		filter-flags -fdiagnostics-set-output=text:experimental-nesting=yes
 	fi
 
 	if is_d ; then
