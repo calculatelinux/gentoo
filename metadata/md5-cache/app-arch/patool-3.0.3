@@ -1,0 +1,16 @@
+BDEPEND=test? ( app-arch/arj app-arch/bzip2 app-arch/bzip3 app-arch/cabextract app-alternatives/cpio app-arch/dpkg app-arch/gzip app-arch/lbzip2 app-arch/lcab app-arch/lha app-arch/libarchive app-arch/lz4 app-arch/lzip app-arch/lzop app-arch/ncompress app-arch/p7zip[rar] app-arch/pbzip2 app-arch/pdlzip app-arch/pigz app-arch/plzip app-arch/rpm app-arch/rzip app-arch/sharutils app-arch/tar app-arch/unace app-arch/unadf app-arch/unzip app-arch/xdms app-arch/xz-utils app-arch/zip app-arch/zopfli app-arch/zpaq app-arch/zstd app-cdr/cdrtools dev-libs/chmlib media-libs/flac media-sound/shorten sys-apps/diffutils sys-apps/file sys-apps/grep !elibc_musl? ( app-arch/rar ) !x86? ( app-arch/clzip app-arch/lrzip app-arch/unar ) ) test? ( >=dev-python/pytest-7.4.4[python_targets_python3_10(-)?,python_targets_python3_11(-)?,python_targets_python3_12(-)?,python_targets_python3_13(-)?] ) python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_11? ( dev-lang/python:3.11 ) python_targets_python3_12? ( dev-lang/python:3.12 ) python_targets_python3_13? ( dev-lang/python:3.13 ) >=dev-python/gpep517-15[python_targets_python3_10(-)?,python_targets_python3_11(-)?,python_targets_python3_12(-)?,python_targets_python3_13(-)?] >=dev-python/setuptools-69.0.3[python_targets_python3_10(-)?,python_targets_python3_11(-)?,python_targets_python3_12(-)?,python_targets_python3_13(-)?]
+DEFINED_PHASES=compile configure install prepare test
+DESCRIPTION=Portable archive file manager
+EAPI=8
+HOMEPAGE=https://wummel.github.io/patool/
+INHERIT=distutils-r1 pypi
+IUSE=test python_targets_python3_10 python_targets_python3_11 python_targets_python3_12 python_targets_python3_13
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_11? ( dev-lang/python:3.11 ) python_targets_python3_12? ( dev-lang/python:3.12 ) python_targets_python3_13? ( dev-lang/python:3.13 )
+REQUIRED_USE=|| ( python_targets_python3_10 python_targets_python3_11 python_targets_python3_12 python_targets_python3_13 )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://files.pythonhosted.org/packages/source/p/patool/patool-3.0.3.tar.gz
+_eclasses_=distutils-r1	db6e4e998c9effc162bd2aa3b0d8f855	flag-o-matic	f14aba975c94ccaa9f357a27e3b17ffe	multibuild	4650a65187015567b4e041bb9bfdb364	multilib	b2a329026f2e404e9e371097dda47f96	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	out-of-source-utils	dbf9e34ee8964084651e25907fa8f52c	pypi	ad1b21f87d117ae9bb089bdb65b8f013	python-r1	2def7a4ce233dfa344f613025c619a23	python-utils-r1	2fee95c11e5f883024588d4837db6802	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87
+_md5_=72311e542ab4884f142e605653fb2241

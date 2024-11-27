@@ -342,10 +342,6 @@ app-containers/lxc:io-uring - Enable io_uring support, and use io_uring instead 
 app-containers/lxc:tools - Build and install additional command line tools
 app-containers/nerdctl:rootless - Enables dependencies for running in rootless mode.
 app-containers/podman:btrfs - Enables btrfs support (graph driver) in Podman
-app-containers/podman:cgroup-hybrid - Use legacy (hybrid) cgroups instead of modern (unified) cgroups
-app-containers/podman:fuse - Enables fuse dependencies (fuse-overlayfs is especially useful for rootless mode).
-app-containers/podman:init - Enables catatonit dependency required for podman run --init.
-app-containers/podman:rootless - Enables dependencies for running in rootless mode.
 app-containers/podman:wrapper - Install wrapper which lets use podman for command `docker`
 app-containers/runc:kmem - Enable Kernel Memory Accounting.
 app-containers/skopeo:btrfs - Enables dependencies for the "btrfs" graph driver.
@@ -5982,7 +5978,6 @@ net-libs/axtls:cgi-lua - Enables lua backed cgi for axhttpd server
 net-libs/axtls:cgi-php - Enables php backed cgi for axhttpd server
 net-libs/axtls:httpd - Enables axhttpd web server component
 net-libs/axtls:static - Statically build axhttpd server
-net-libs/c-client:chappa - Enable Eduardo Chappa's patches for use with mail-client/alpine (mainly adds support for maildir)
 net-libs/c-client:doc - Install RFCs related to IMAP
 net-libs/c-client:topal - Enable support for net-mail/topal for use with mail-client/alpine
 net-libs/canlock:header-parser - Build article header parsers
