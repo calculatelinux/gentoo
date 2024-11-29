@@ -22,7 +22,7 @@ RUBY_S="oauth2-v${PV}-*"
 
 LICENSE="MIT"
 SLOT="$(ver_cut 1)"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~arm64 ~ppc ~x86"
 IUSE="test"
 
 ruby_add_rdepend "
@@ -38,6 +38,7 @@ ruby_add_bdepend "test? (
 	>=dev-ruby/backports-3
 	>=dev-ruby/rexml-3.2:3
 	dev-ruby/rspec:3
+	dev-ruby/rspec-block_is_expected
 	dev-ruby/rspec-pending_for
 	dev-ruby/rspec-stubbed_env
 )"
