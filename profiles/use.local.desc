@@ -2,8 +2,12 @@
 # your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using egencache *
 
+acct-user/apache:icingaweb2 - Prepare group membership for www-apps/icingaweb2
+acct-user/apache:mgraph - Prepare group membership for net-mail/mailgraph
 acct-user/git:gitea - Set home directory for git hosting via www-apps/gitea.
 acct-user/git:gitolite - Set home directory for git hosting via dev-vcs/gitolite or dev-vcs/gitolite-gentoo.
+acct-user/nginx:icingaweb2 - Prepare group membership for www-apps/icingaweb2
+acct-user/nginx:mgraph - Prepare group membership for net-mail/mailgraph
 acct-user/vdr:graphlcd - Prepare group membership for media-plugins/vdr-graphlcd.
 acct-user/vdr:legacy-homedir - Keep old home directory /var/vdr of an existing installation. When this useflag is cleared, the home directory is switched to FHS conformant /var/lib/vdr
 acct-user/vdr:remote - Prepare group membership for media-plugins/vdr-remote.
@@ -1447,6 +1451,7 @@ dev-debug/gdb:debuginfod - Enable debuginfod support via dev-libs/elfutils libde
 dev-debug/gdb:lzma - Support lzma compression in ELF debug info
 dev-debug/gdb:multitarget - Support all known targets in one gdb binary
 dev-debug/gdb:python - Enable support for the new internal scripting language, as well as extended pretty printers
+dev-debug/gdb:rocm - Enable support for AMD GPU debugging via dev-libs/rocdbgapi
 dev-debug/gdb:server - Install the "gdbserver" program (useful for embedded/remote targets)
 dev-debug/gdb:sim - Build gdb's simulators for various hardware platforms. See https://sourceware.org/gdb/wiki/Sim.
 dev-debug/gdb:source-highlight - Enable listing highlighting via dev-util/source-highlight
@@ -2049,6 +2054,7 @@ dev-libs/libevent:verbose-debug - Support for verbose debug logging
 dev-libs/libffi:exec-static-trampoline - Don't rely on dynamic code generation for trampolines.
 dev-libs/libffi:pax-kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
 dev-libs/libffi-compat:pax-kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
+dev-libs/libfido2:hidapi - Enable HID API support
 dev-libs/libfido2:nfc - Enable experimental NFC support
 dev-libs/libflatarray:cuda - Enables plugins for NVIDIA GPUs (e.g. CUDAAllocator)
 dev-libs/libgcrypt:getentropy - Use getentropy function to obtain randomness from the kernel
@@ -2104,14 +2110,12 @@ dev-libs/librelp:gnutls - Use GnuTLS
 dev-libs/librelp:openssl - Use OpenSSL
 dev-libs/libsecp256k1:ecdh - Enable ECDH shared secret computation
 dev-libs/libsecp256k1:ellswift - Enable ElligatorSwift encoding for public keys
-dev-libs/libsecp256k1:endomorphism - Enable endomorphism
 dev-libs/libsecp256k1:experimental - Allow experimental USE flags
 dev-libs/libsecp256k1:extrakeys - Enable extrakeys module
 dev-libs/libsecp256k1:lowmem - Reduce runtime memory usage at the expense of performance (ecmult window size 4, gen precision 2)
 dev-libs/libsecp256k1:musig - Enable MuSig2 module
 dev-libs/libsecp256k1:recovery - Enable ECDSA pubkey recovery module
 dev-libs/libsecp256k1:schnorr - Enable Schnorr signature module
-dev-libs/libsecp256k1:test-openssl - Enable OpenSSL comparison tests
 dev-libs/libslz:tools - Install additional tools (zenc, zdec)
 dev-libs/libsodium:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/libtermkey:demos - Install demos, which pulls in dev-libs/glib
@@ -4015,19 +4019,17 @@ media-gfx/blender:bullet - Enable Bullet (Physics Engine).
 media-gfx/blender:collada - Add support for Collada interchange format through media-libs/opencollada.
 media-gfx/blender:color-management - Enable color management via media-libs/opencolorio.
 media-gfx/blender:cuda - Build cycles renderer with nVidia CUDA support.
-media-gfx/blender:cycles - Build cycles renderer (requires media-libs/openimageio and dev-libs/boost).
+media-gfx/blender:cycles - Enable the Cycles raytracing render engine.
 media-gfx/blender:cycles-bin-kernels - Precompile the cycles render kernels for the CUDA/HIP/OneAPI backends, if they are enabled, at compile time. This makes it so that the user doesn't have to wait for the kernels to compile when they are used for the first time in Blender. If this option is not on, they will be built as needed at runtime.
 media-gfx/blender:dds - Adds DDS textures support to Blender.
 media-gfx/blender:embree - Use embree to accelerate certain areas of the Cycles render engine.
 media-gfx/blender:experimental - Build Experimental Blender Modules
 media-gfx/blender:fluid - Adds fluid simulation support via the built-in Mantaflow library.
-media-gfx/blender:headless - Build without graphical support (renderfarm, server mode only).
 media-gfx/blender:hip - Build cycles renderer with AMD HIP support.
 media-gfx/blender:nanovdb - Enable nanoVDB support in Cycles. Uses less memory than regular openVDB when rendering.
 media-gfx/blender:ndof - Enable NDOF input devices (SpaceNavigator and friends).
 media-gfx/blender:oidn - Enable OpenImageDenoiser Support
 media-gfx/blender:oneapi - Build OIDN with Intel oneAPI SyCL support
-media-gfx/blender:openimageio - Enable OpenImageIO Support
 media-gfx/blender:openpgl - Enable path guiding support in Cycles
 media-gfx/blender:opensubdiv - Add rendering support form OpenSubdiv from Dreamworks Animation through media-libs/opensubdiv.
 media-gfx/blender:openvdb - Enable openvdb for volumetric processing, like the voxel remesher. Also enables volumetric GPU preview rendering for Nvidia cards.
@@ -5593,6 +5595,7 @@ net-dns/getdns:getdns-server-mon - Add getdns_server_mon tool
 net-dns/getdns:libev - Enable dev-libs/libev support
 net-dns/getdns:libevent - Enable dev-libs/libevent support
 net-dns/getdns:libuv - Enable dev-libs/libuv support
+net-dns/getdns:minimal - Only build stub resolution mode
 net-dns/getdns:stubby - Add Stubby DNS Privacy Deamon
 net-dns/getdns:unbound - Enable net-dns/unbound libraries support
 net-dns/hash-slinger:ipsec - Enable support for IPSECKEY records (ipseckey)
@@ -5601,7 +5604,9 @@ net-dns/hash-slinger:ssh - Enable support for SSHFP records (sshfp)
 net-dns/idnkit:liteonly - Compile and install lite library only
 net-dns/inadyn:mbedtls - Use net-libs/mbedtls as tls provider.
 net-dns/inadyn:openssl - Use dev-libs/openssl as tls provider.
+net-dns/knot:authsignal - Enable Automatic Authenticated DNSSEC Bootstrapping records
 net-dns/knot:cookies - Enable the DNS cookie module (RFC 7873)
+net-dns/knot:daemon - Enable Knot DNS main daemon
 net-dns/knot:dnsproxy - Enable the tiny DNS proxy module
 net-dns/knot:dnstap - Include support for the dnstap binary log format (http://dnstap.info/)
 net-dns/knot:doh - Enable DNS over HTTP (DoH) using libnghttp2
@@ -5610,6 +5615,7 @@ net-dns/knot:geoip - Enable the Geography-based responses module
 net-dns/knot:libidn2 - If IDN support is enabled, use net-dns/libidn2 instead of net-dns/libidn
 net-dns/knot:noudp - Enable the module which can send empty truncated responses to UDP queries
 net-dns/knot:onlinesign - Enable the module that sign zones on the fly instead of pre-signing zone
+net-dns/knot:pkcs11 - Add support for PKCS#11
 net-dns/knot:queryacl - Enable the module for query access control
 net-dns/knot:quic - Enable the DNS over QUIC (DoQ) module using libngtcp2
 net-dns/knot:rrl - Enable the response rate limiting module
@@ -5620,7 +5626,9 @@ net-dns/knot:whoami - Enable the whoami response module
 net-dns/knot:xdp - Enable eXpress Data Path
 net-dns/knot-resolver:dnstap - Build dnstap binary logging module
 net-dns/knot-resolver:kresc - Build (experimental) command-line client
+net-dns/knot-resolver:manager - Manager is a user-friendly interface and a component handling rolling restarts, config update logic and more.
 net-dns/knot-resolver:nghttp2 - DNS-over-HTTPS support
+net-dns/knot-resolver:prometheus - Metrics exported in Prometheus
 net-dns/knot-resolver:xdp - Enable eXpress Data Path
 net-dns/nsd:bind8-stats - Enables BIND8 like NSTATS and XSTATS and statistics in nsd-control
 net-dns/nsd:default-znow - Enable full relocation binding at load-time (RELRO NOW, to protect GOT and .dtor areas)
@@ -6163,6 +6171,7 @@ net-mail/lbdb:abook - Enables app-misc/abook support
 net-mail/lbdb:bbdb - Include support for app-emacs/bbdb
 net-mail/lbdb:evo - Add support for mail-client/evolution
 net-mail/lbdb:finger - Enables finger support
+net-mail/mailgraph:nginx - Add nginx support
 net-mail/mailutils:clients - Build client programs - frm maidag mail sieve messages readmsg dotlock movemail mimeview mh
 net-mail/mailutils:kyotocabinet - Enable Kyoto Cabinet database support
 net-mail/mailutils:servers - Build server programs - imap4d pop3d comsatd
@@ -6318,8 +6327,10 @@ net-misc/dhcpcd:embedded - Embed the definitions of dhcp options in the dhcpcd e
 net-misc/dhcpcd:privsep - Enable support for privilege separation
 net-misc/dibbler:resolvconf - Use resolvconf to handle /etc/resolv.conf updates
 net-misc/dropbear:bsdpty - Add support for legacy BSD pty's rather than dynamic UNIX pty's -- do not use this flag unless you are absolutely sure you actually want it
+net-misc/dropbear:legacy-ciphers - Enable support for deprecated, soon-to-be-dropped DSA keys. See https://marc.info/?l=openssh-unix-dev>m=170494903207436>w=2.
 net-misc/dropbear:multicall - Build all the programs as one little binary (to save space)
 net-misc/dropbear:shadow - Enable shadow password support
+net-misc/dropbear:test-async - Enable tests using dev-python/asyncssh
 net-misc/dropbox-cli:gpg - Use app-crypt/gpgme to verify signatures
 net-misc/electron-cash:amodem - Enable plugin to support Audio Modem
 net-misc/electron-cash:cli - Enables the CLI interface
@@ -7123,6 +7134,7 @@ sci-electronics/kicad-meta:minimal - Do not install extra data like 3D packages 
 sci-electronics/ktechlab:gpsim - Enable support for Microchip PIC microcontrollers similation using dev-embedded/gpsim
 sci-electronics/librepcb:opencascade - Build with sci-libs/opencascadethe 3D features (e.g. reading/writing STEP files)
 sci-electronics/ngspice:deprecated - Build old and deprecated apps
+sci-electronics/ngspice:klu - Add support for KLU (embedded version of suitesparse)
 sci-electronics/ngspice:shared - Build ngspice as a shared library
 sci-electronics/nvc:llvm - Build LLVM code generator
 sci-electronics/pcb:gcode - gcode file export
@@ -7977,6 +7989,7 @@ sys-auth/ssh-ldap-pubkey:schema - Install a copy of the LPK schema, only needed 
 sys-auth/sssd:acl - Build and use the cifsidmap plugin
 sys-auth/sssd:netlink - Add support for netlink protocol via dev-libs/libnl
 sys-auth/sssd:nfsv4 - Add support for the nfsv4 idmapd plugin provided by net-fs/nfs-utils
+sys-auth/sssd:passkey - Add support for FIDO2 passkeys"
 sys-auth/sssd:samba - Add Privileged Attribute Certificate Support for Kerberos
 sys-auth/sssd:subid - Support subordinate uid and gid ranges in FreeIPA
 sys-auth/sssd:sudo - Build helper to let app-admin/sudo use sssd provided information
@@ -9005,9 +9018,6 @@ x11-wm/fvwm:lock - Enable screen locking
 x11-wm/fvwm:netpbm - Enable NetPBM support (used by FvwmScript-ScreenDump)
 x11-wm/fvwm:stroke - Mouse Gesture support
 x11-wm/fvwm3:go - Enable building dev-lang/go code (FvwmPrompt)
-x11-wm/fvwm3:lock - Enable screen locking
-x11-wm/fvwm3:netpbm - Enable NetPBM support (used by FvwmScript-ScreenDump)
-x11-wm/fvwm3:stroke - Mouse Gesture support
 x11-wm/i3:doc - Build and install the HTML documentation and regenerate the man pages
 x11-wm/icewm:gdk-pixbuf - Enable gdk-pixbuf rendering
 x11-wm/jwm:pango - Bidirectional text layout support with pango using xft backend.

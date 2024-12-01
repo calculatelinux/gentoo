@@ -33,6 +33,22 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2024-12-01)
+# Superseded by dev-lang/pypy:2.7.
+# Removal on 2024-12-15.
+dev-python/pypy
+
+# Patrick Lauer <patrick@gentoo.org> (2024-12-01)
+# ROCm 6.2 builds but doesn't work at all for me
+>=dev-libs/roct-thunk-interface-6.2
+>=dev-libs/rocm-comgr-6.2
+>=dev-libs/rocm-device-libs-6.2
+>=dev-libs/rocr-runtime-6.2
+>=dev-libs/rocm-opencl-runtime-6.2
+>=dev-util/hipcc-6.2
+>=dev-util/hip-6.2
+
+
 # Florian Schmaus <flow@gentoo.org> (2024-11-29)
 # TeX Live 2024 is currently masked for testing.
 # Please report issues by creating a new bug report
@@ -332,17 +348,6 @@ sci-chemistry/molden
 # slot instead. Removal on 2024-12-03.
 dev-ruby/pdf-reader:0
 
-# Hans de Graaff <graaff@gentoo.org> (2024-11-01)
-# Does not work with current versions of dependencies. ruby32-only
-# because of it. No release in two years. No reverse
-# dependencies. Removal on 2024-12-01.
-dev-ruby/typhoeus
-
-# Hans de Graaff <graaff@gentoo.org> (2024-11-01)
-# No longer compiles with modern C compilers, bug 881245. Last upstream
-# release 6 years ago. No reverse dependencies. Removal on 2024-12-01.
-dev-ruby/ruby-opengl
-
 # Michał Górny <mgorny@gentoo.org> (2024-10-29)
 # Unmaintained in Gentoo.  The latter is multiple versions behind.
 # Ebuilds without working tests.  The only revdep has its "doc" flag
@@ -350,13 +355,6 @@ dev-ruby/ruby-opengl
 # Removal on 2024-11-28.  Bug #942445.
 dev-python/mkdocs-ansible
 dev-python/mkdocs-macros-plugin
-
-# Hans de Graaff <graaff@gentoo.org> (2024-10-27)
-# Obsolete slots without reverse dependencies. dev-util/cucumber will
-# use other slots when installed. Removal on 2024-11-27.
-dev-util/cucumber-gherkin:26
-dev-util/cucumber-messages:17
-dev-util/cucumber-messages:20
 
 # Arthur Zamarin <arthurzam@gentoo.org> (2024-10-23)
 # Doesn't support latest Rust/Cargo ebuild format and standard. Confuses
@@ -603,28 +601,6 @@ dev-ml/patience_diff:0/0.17
 dev-ml/ppx_js_style:0/0.17
 >=dev-ml/camlp4-5
 dev-ml/textutils_kernel:0/0.17
-
-# Michał Górny <mgorny@gentoo.org> (2024-06-08)
-# Prereleases of Xfce 4.20.  Masking upon popular request, due to
-# a large number of regressions in every new release.
->=dev-build/xfce4-dev-tools-4.19
->=xfce-base/exo-4.19
->=xfce-base/garcon-4.19
->=xfce-base/libxfce4ui-4.19
->=xfce-base/libxfce4util-4.19
->=xfce-base/libxfce4windowing-4.19.5
->=xfce-base/thunar-4.19
->=xfce-base/thunar-volman-4.19
->=xfce-base/tumbler-4.19
->=xfce-base/xfce4-appfinder-4.19
->=xfce-base/xfce4-meta-4.19
->=xfce-base/xfce4-panel-4.19
->=xfce-base/xfce4-power-manager-4.19
->=xfce-base/xfce4-session-4.19
->=xfce-base/xfce4-settings-4.19
->=xfce-base/xfconf-4.19
->=xfce-base/xfdesktop-4.19
->=xfce-base/xfwm4-4.19
 
 # Sam James <sam@gentoo.org> (2024-03-28)
 # Newer 5.4.x releases were signed by a potentially compromised upstream maintainer.
