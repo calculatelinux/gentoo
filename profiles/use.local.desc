@@ -980,7 +980,6 @@ app-misc/recoll:webengine - Use dev-qt/qtwebengine for fancy result list display
 app-misc/rlwrap:debug - Enable debug
 app-misc/screen:multiuser - Enable multiuser support (by setting correct permissions)
 app-misc/screen:nethack - Express error messages in nethack style
-app-misc/screenfetch:X - Use the media-gfx/scrot package to take screenshots
 app-misc/sphinx:id64 - use 64-bit document and word IDs
 app-misc/sphinx:mariadb - Add mariadb database support
 app-misc/sphinx:stemmer - Enable language stemming support
@@ -2423,8 +2422,6 @@ dev-python/pypax:xtpax - Enable XATTR_PAX_FLAGS support.
 dev-python/pypy:full-stdlib - Install complete stdlib as necessary to use PyPy for general purpose programs. By default, only a limited subset that is used when building PyPy3 executables is installed. Note that PyPy2.7's stdlib contains multiple known vulnerabilities.
 dev-python/pypy-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
 dev-python/pypy3:test-install - Install the test suite packages, that are required to run tests in a few reverse dependencies.
-dev-python/pypy3_10:ensurepip - Install the ensurepip module that uses bundled wheels to bootstrap pip and setuptools (if disabled, it will be only possible to use venv `--without-pip`)
-dev-python/pypy3_10:test-install - Install the test suite packages, that are required to run tests in a few reverse dependencies.
 dev-python/pypy3_10-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
 dev-python/pyqt5:bluetooth - Build bindings for the QtBluetooth module
 dev-python/pyqt5:dbus - Build bindings for the QtDBus module
@@ -5474,7 +5471,6 @@ net-analyzer/suricata:redis - Enable Redis support
 net-analyzer/symon:perl - Enables a generic perl symux client
 net-analyzer/symon:symon - Enables the system monitor. Offers no functionality but monitoring and forwarding of measured data
 net-analyzer/symon:symux - Enables the multiplexer which stores incoming symon streams on disk in RRD (net-analyzer/rrdtool) files
-net-analyzer/tcpdump:drop-root - Drop privileges to pcap:pcap when run as root
 net-analyzer/tcpdump:smi - Build with net-libs/libsmi to load MIBs on the fly to decode SNMP packets
 net-analyzer/tcpreplay:pcapnav - Enable if you want the jump to byte offset feature via net-libs/libpcapnav
 net-analyzer/tcpreplay:tcpdump - Use net-analyzer/tcpdump for packet decoding feature
@@ -8179,6 +8175,7 @@ sys-devel/clang-common:default-lld - Use lld as the default linker for clang
 sys-devel/clang-common:stricter - Default to stricter behavior known from newer clang versions, turning more warnings into errors
 sys-devel/clang-runtime:compiler-rt - Install sys-libs/compiler-rt for -rtlib=compiler-rt
 sys-devel/clang-runtime:libcxx - Install sys-libs/libcxx for -stdlib=libc++
+sys-devel/clang-runtime:offload - Install sys-libs/llvm-offload for -fopenmp GPU offloading
 sys-devel/clang-runtime:openmp - Install sys-libs/libomp for -fopenmp support
 sys-devel/clang-runtime:sanitize - Enable compiler-rt sanitizer (-fsanitize*) support
 sys-devel/clang-toolchain-symlinks:gcc-symlinks - Install symlinks for 'gcc' and 'g++' for extra compatibility.
@@ -8452,6 +8449,7 @@ sys-libs/libxcrypt:compat - Build with compatibility interfaces for other crypt 
 sys-libs/libxcrypt:headers-only - Build and install only the headers.
 sys-libs/libxcrypt:system - Install as system libcrypt.so rather than to an alternate directory (will collide with sys-libs/glibc's version)
 sys-libs/llvm-libunwind:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
+sys-libs/llvm-offload:ompt - Enable OpenMP Tools Interface support
 sys-libs/minizip-ng:compat - Enable compatibility with sys-libs/zlib's USE=minizip
 sys-libs/minizip-ng:openssl - Use dev-libs/openssl for further encryption capabilities
 sys-libs/musl-nscd:minimal - Only installs the header files
@@ -8777,7 +8775,6 @@ x11-drivers/xf86-video-intel:sna - Enable SandyBridge's New Acceleration (useful
 x11-drivers/xf86-video-intel:tools - Build the intel-virtual-output tool
 x11-drivers/xf86-video-intel:uxa - Enable UMA Acceleration Architecture
 x11-drivers/xf86-video-intel:xvmc - Enables X-Video Motion Compensation support
-x11-drivers/xf86-video-openchrome:viaregtool - Install registers dumper tool
 x11-drivers/xf86-video-qxl:xspice - Include Xspice, a standard X server that is also a Spice server
 x11-libs/agg:gpc - Enable gpc polygon clipper library
 x11-libs/cairo:glib - Compile with GLib Object System support

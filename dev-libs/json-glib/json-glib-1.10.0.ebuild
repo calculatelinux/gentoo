@@ -9,7 +9,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/JsonGlib"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm arm64 hppa ~loong ~mips ppc ppc64 ~riscv ~s390 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
 IUSE="gtk-doc +introspection nls test"
 RESTRICT="!test? ( test )"
 REQUIRED_USE="gtk-doc? ( introspection )"
@@ -20,7 +20,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
-	dev-libs/libxslt
+	dev-python/docutils
 	dev-util/glib-utils
 	gtk-doc? ( >=dev-util/gi-docgen-2021.6 )
 	>=sys-devel/gettext-0.18
