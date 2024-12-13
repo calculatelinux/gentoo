@@ -19,6 +19,8 @@ SRC_URI="
 		-> ${PN}-2023-pdflatex-big-endian-fix.patch
 	https://bugs.gentoo.org/attachment.cgi?id=908573
 		-> ${PN}-2023-mplib-h.patch
+	https://github.com/TeX-Live/texlive-source/commit/aec02cd7402652f00460b47a73db0e46e9fb48aa.patch
+		-> ${PN}-2024-remove-call-to-undefined-MPFI_CONFIGS.patch
 "
 
 # Macros that are not a part of texlive-sources or or pulled in from collection-binextra
@@ -133,7 +135,7 @@ SRC_URI+=" )"
 S="${WORKDIR}/${MY_P}"
 LICENSE="BSD CC-BY-SA-4.0 GPL-1+ GPL-2 GPL-2+ GPL-3+ MIT TeX-other-free"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="~amd64"
 IUSE="cjk X doc source tk +luajittex xetex xindy"
 
 TEXMF_PATH=/usr/share/texmf-dist
@@ -226,6 +228,8 @@ src_prepare() {
 
 	local patch_dir="${WORKDIR}/tex-patches-${GENTOO_TEX_PATCHES_NUM}"
 	eapply "${patch_dir}"
+
+	eapply "${DISTDIR}/${PN}-2024-remove-call-to-undefined-MPFI_CONFIGS.patch"
 
 	default
 

@@ -31,7 +31,11 @@ RDEPEND="
 	>=dev-tex/latex2pydata-0.4.0
 	dev-texlive/texlive-latexextra
 "
-BDEPEND="doc? ( dev-texlive/texlive-fontsextra )"
+BDEPEND="
+	doc? (
+		dev-texlive/texlive-fontsextra
+	)
+"
 
 PATCHES=(
 	"${DISTDIR}"/${PN}-3.4.0-explicitly-set-build-backend.patch
@@ -68,10 +72,13 @@ src_install() {
 	popd &> /dev/null || die
 
 	pushd latex/minted &> /dev/null || die
-	local -x LATEX_DOC_ARGUMENTS="-shell-escape"
-	latex-package_src_install
+	latex-package_src_doinstall styles fonts bin
 	if use doc; then
-		latex-package_src_doinstall pdf
+		python_setup
+		local -x LATEX_DOC_ARGUMENTS="-shell-escape"
+		local -x PYTHONPATH="${ED}/usr/lib/${EPYTHON}/site-packages"
+		local -x PATH="${ED}/usr/lib/python-exec/${EPYTHON}:${PATH}"
+		latex-package_src_doinstall doc
 	fi
 	popd &> /dev/null || die
 }

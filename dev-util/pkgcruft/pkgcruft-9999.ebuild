@@ -4,7 +4,7 @@
 EAPI=8
 
 CRATES=" "
-RUST_MIN_VER="1.80.0"
+RUST_MIN_VER="1.82.0"
 
 inherit cargo edo flag-o-matic toolchain-funcs
 
@@ -33,7 +33,7 @@ RESTRICT="!test? ( test )"
 
 # clang needed for bindgen
 BDEPEND+="
-	sys-devel/clang
+	llvm-core/clang
 	test? ( dev-util/cargo-nextest )
 "
 

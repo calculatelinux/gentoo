@@ -11,7 +11,7 @@ inherit bash-completion-r1 check-reqs flag-o-matic linux-info ninja-utils pax-ut
 
 DESCRIPTION="A JavaScript runtime built on Chrome's V8 JavaScript engine"
 HOMEPAGE="https://nodejs.org/"
-LICENSE="Apache-1.1 Apache-2.0 BSD BSD-2 MIT npm? ( Artistic )"
+LICENSE="Apache-1.1 Apache-2.0 BSD BSD-2 MIT npm? ( Artistic-2 )"
 
 if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
@@ -127,7 +127,7 @@ src_configure() {
 	use arm64 && append-flags $(test-flags-CXX -mbranch-protection=none)
 	# nodejs unconditionally links to libatomic #869992
 	# specifically it requires __atomic_is_lock_free which
-	# is not yet implemented by sys-libs/compiler-rt (see
+	# is not yet implemented by llvm-runtimes/compiler-rt (see
 	# https://reviews.llvm.org/D85044?id=287068), therefore
 	# we depend on gcc and force using libgcc as the support lib
 	tc-is-clang && append-ldflags "--rtlib=libgcc --unwindlib=libgcc"

@@ -12,7 +12,7 @@ SRC_URI="https://github.com/mltframework/${PN}/releases/download/v${PV}/${P}.tar
 
 LICENSE="GPL-3"
 SLOT="0/7"
-KEYWORDS="~amd64 ~arm64 ~ppc64 ~riscv ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm64 ~ppc64 ~riscv x86 ~amd64-linux ~x86-linux"
 IUSE="debug ffmpeg frei0r gtk jack libsamplerate opencv opengl python qt6 rtaudio rubberband sdl test vdpau vidstab xine xml"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
@@ -137,7 +137,7 @@ src_configure() {
 		-DMOD_RTAUDIO=$(usex rtaudio)
 		-DMOD_RUBBERBAND=$(usex rubberband)
 		-DMOD_SDL2=$(usex sdl)
-		-DBUILD_TESTING=$(usex test)
+		-DBUILD_TESTING=OFF # Needs unpackaged 'kwalify'; restricted anyway.
 		-DMOD_VIDSTAB=$(usex vidstab)
 		-DMOD_XINE=$(usex xine)
 		-DMOD_XML=$(usex xml)

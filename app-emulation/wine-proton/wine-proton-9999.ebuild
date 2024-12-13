@@ -9,10 +9,10 @@ inherit autotools flag-o-matic multilib multilib-build prefix
 inherit python-any-r1 readme.gentoo-r1 toolchain-funcs wrapper
 
 WINE_GECKO=2.47.4
-WINE_MONO=9.3.0
+WINE_MONO=9.3.1
 WINE_PV=$(ver_rs 2 -)
 
-if [[ ${PV} == *9999 ]]; then
+if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/ValveSoftware/wine.git"
 	EGIT_BRANCH="bleeding-edge"
@@ -77,7 +77,7 @@ WINE_COMMON_DEPEND="
 	pulseaudio? ( media-libs/libpulse[${MULTILIB_USEDEP}] )
 	udev? ( virtual/libudev:=[${MULTILIB_USEDEP}] )
 	unwind? (
-		llvm-libunwind? ( sys-libs/llvm-libunwind[${MULTILIB_USEDEP}] )
+		llvm-libunwind? ( llvm-runtimes/libunwind[${MULTILIB_USEDEP}] )
 		!llvm-libunwind? ( sys-libs/libunwind:=[${MULTILIB_USEDEP}] )
 	)
 	usb? ( dev-libs/libusb:1[${MULTILIB_USEDEP}] )
@@ -102,7 +102,7 @@ DEPEND="
 	${WINE_COMMON_DEPEND}
 	|| (
 		sys-devel/gcc:*
-		sys-libs/compiler-rt:*[atomic-builtins(-)]
+		llvm-runtimes/compiler-rt:*[atomic-builtins(-)]
 	)
 	sys-kernel/linux-headers
 	x11-base/xorg-proto
@@ -111,7 +111,7 @@ BDEPEND="
 	${PYTHON_DEPS}
 	|| (
 		sys-devel/binutils
-		sys-devel/lld
+		llvm-core/lld
 	)
 	dev-lang/perl
 	sys-devel/bison
@@ -183,7 +183,7 @@ src_prepare() {
 		# than do LLVM_SLOT it may(?) be better to force atomic-builtins
 		# then could drop this altogether in the future
 		if [[ $(tc-get-c-rtlib) == compiler-rt ]] &&
-			has_version 'sys-libs/compiler-rt[-atomic-builtins(-)]'
+			has_version 'llvm-runtimes/compiler-rt[-atomic-builtins(-)]'
 		then
 			# needed by Valve's fsync patches if using compiler-rt w/o atomics
 			sed -e '/^UNIX_LIBS.*=/s/$/ -latomic/' \

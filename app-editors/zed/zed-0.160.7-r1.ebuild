@@ -74,7 +74,7 @@ LICENSE+="
 	LGPL-3 MIT MPL-2.0 Unicode-DFS-2016 ZLIB
 "
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE="gles"
 CHECKREQS_DISK_BUILD="8G"
 CHECKREQS_MEMORY="16G"
@@ -106,8 +106,8 @@ BDEPEND="
 	sys-devel/gettext
 	sys-devel/mold
 	$(llvm_gen_dep '
-		sys-devel/clang:${LLVM_SLOT}=
-		sys-devel/llvm:${LLVM_SLOT}=
+		llvm-core/clang:${LLVM_SLOT}=
+		llvm-core/llvm:${LLVM_SLOT}=
 	')
 "
 

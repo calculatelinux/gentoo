@@ -33,15 +33,27 @@
 
 #--- END OF EXAMPLES ---
 
-# Sam James <sam@gentoo.org> (2024-12-07)
-# Breaks Mozilla's build system `mach`: bug #945882, bug #945857, and bug #946002.
-# Upstream bug is at https://bugzilla.mozilla.org/show_bug.cgi?id=1935621.
-=dev-lang/python-3.12.8
-=dev-lang/python-3.13.1
-=dev-python/python-tests-3.12.8
-=dev-python/python-tests-3.13.1
-=app-doc/python-docs-3.12.8
-=app-doc/python-docs-3.13.1
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-12-11)
+# Build system needs someone really dedicated to put up with it.
+# Version completely outdated, way too many bugs to list here.
+# Removal on 2025-01-10
+dev-db/firebird
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-12-11)
+# Declared unmaintained by upstream, will be broken by akonadi-24.12.
+# Use app-text/marknote https://apps.kde.org/marknote/ as alternative,
+# importing existing notes is possible. Removal on 2025-01-10.
+app-text/kjots
+kde-apps/knotes
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-12-10)
+# KF5 Porting Aids removal; bugs 755956, 759778
+# Removal on 2025-01-09
+media-sound/soundkonverter
+kde-frameworks/countryflags
+kde-frameworks/kapidox
+kde-frameworks/kdelibs4support
+kde-frameworks/kemoticons
 
 # Michał Górny <mgorny@gentoo.org> (2024-12-05)
 # 6.12.2 does not boot for me.
@@ -79,65 +91,6 @@ dev-python/pypy
 >=dev-libs/rocm-opencl-runtime-6.2
 >=dev-util/hipcc-6.2
 >=dev-util/hip-6.2
-
-# Florian Schmaus <flow@gentoo.org> (2024-11-29)
-# TeX Live 2024 is currently masked for testing.
-# Please report issues by creating a new bug report
-# at https://bugs.gentoo.org.
->=app-test/dvipsk-2024
->=app-text/ps2pkm-1.8_p20240311
->=app-text/texlive-2024
->=app-text/texlive-core-2024
->=dev-libs/kpathsea-6.4.0
->=dev-libs/ptexenc-1.4.6
-dev-python/latexrestricted
->=dev-tex/biber-2.20
->=dev-tex/biblatex-3.20
->=dev-tex/bibtexu-3.72_p20240311
->=dev-tex/glossaries-4.55
-dev-tex/latex2pydata
->=dev-tex/latexmk-4.85
->=dev-tex/minted-3.4.0
->=dev-tex/tex4ht-20240311
->=dev-texlive/texlive-basic-2024
->=dev-texlive/texlive-bibtexextra-2024
->=dev-texlive/texlive-binextra-2024
->=dev-texlive/texlive-context-2024
->=dev-texlive/texlive-fontsextra-2024
->=dev-texlive/texlive-fontsrecommended-2024
->=dev-texlive/texlive-fontutils-2024
->=dev-texlive/texlive-formatsextra-2024
->=dev-texlive/texlive-games-2024
->=dev-texlive/texlive-humanities-2024
->=dev-texlive/texlive-langarabic-2024
->=dev-texlive/texlive-langchinese-2024
->=dev-texlive/texlive-langcjk-2024
->=dev-texlive/texlive-langcyrillic-2024
->=dev-texlive/texlive-langczechslovak-2024
->=dev-texlive/texlive-langenglish-2024
->=dev-texlive/texlive-langeuropean-2024
->=dev-texlive/texlive-langfrench-2024
->=dev-texlive/texlive-langgerman-2024
->=dev-texlive/texlive-langgreek-2024
->=dev-texlive/texlive-langitalian-2024
->=dev-texlive/texlive-langjapanese-2024
->=dev-texlive/texlive-langkorean-2024
->=dev-texlive/texlive-langother-2024
->=dev-texlive/texlive-langpolish-2024
->=dev-texlive/texlive-langportuguese-2024
->=dev-texlive/texlive-langspanish-2024
->=dev-texlive/texlive-latex-2024
->=dev-texlive/texlive-latexextra-2024
->=dev-texlive/texlive-latexrecommended-2024
->=dev-texlive/texlive-luatex-2024
->=dev-texlive/texlive-mathscience-2024
->=dev-texlive/texlive-metapost-2024
->=dev-texlive/texlive-music-2024
->=dev-texlive/texlive-pictures-2024
->=dev-texlive/texlive-plaingeneric-2024
->=dev-texlive/texlive-pstricks-2024
->=dev-texlive/texlive-publishers-2024
->=dev-texlive/texlive-xetex-2024
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2024-11-28)
 # Grave data loss bug. See also:
@@ -260,7 +213,6 @@ dev-util/clippy
 dev-lang/php:8.1
 dev-php/pecl-dbase
 dev-php/pecl-gnupg
-dev-php/pecl-http
 dev-php/pecl-lzf
 dev-php/pecl-mcrypt
 dev-php/pecl-memcache
@@ -268,7 +220,6 @@ dev-php/pecl-oauth
 dev-php/pecl-pam
 dev-php/pecl-ps
 dev-php/pecl-psr
-dev-php/pecl-raphf
 dev-php/pecl-timezonedb
 dev-php/pecl-translit
 dev-php/pecl-zmq

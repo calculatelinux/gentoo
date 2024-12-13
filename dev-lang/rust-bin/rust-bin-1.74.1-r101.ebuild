@@ -33,7 +33,7 @@ SRC_URI+=" sparc? ( ${GENTOO_BIN_BASEURI}/${MY_P}-sparc64-unknown-linux-gnu.tar.
 
 LICENSE="|| ( MIT Apache-2.0 ) BSD BSD-1 BSD-2 BSD-4"
 SLOT="${PV}"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="amd64 arm arm64 ~loong ppc ppc64 ~riscv ~s390 sparc x86"
 IUSE="big-endian clippy cpu_flags_x86_sse2 doc prefix llvm-libunwind rust-analyzer rust-src rustfmt"
 
 RDEPEND="
@@ -236,7 +236,7 @@ multilib_src_install() {
 pkg_postinst() {
 	eselect rust update
 
-	if has_version dev-debug/gdb || has_version dev-debug/lldb; then
+	if has_version dev-debug/gdb || has_version llvm-core/lldb; then
 		elog "Rust installs helper scripts for calling GDB and LLDB,"
 		elog "for convenience they are installed under /usr/bin/rust-{gdb,lldb}-${PV}."
 	fi

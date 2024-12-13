@@ -12,10 +12,10 @@ WINE_GECKO=2.47.3
 WINE_MONO=7.4.0
 WINE_PV=$(ver_rs 2 -)
 
-if [[ ${PV} == *9999 ]]; then
+if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/ValveSoftware/wine.git"
-	EGIT_BRANCH="experimental_$(ver_cut 1-2)"
+	EGIT_BRANCH="bleeding-edge"
 else
 	SRC_URI="https://github.com/ValveSoftware/wine/archive/refs/tags/proton-wine-${WINE_PV}.tar.gz"
 	S="${WORKDIR}/${PN}-wine-${WINE_PV}"
@@ -76,7 +76,7 @@ WINE_COMMON_DEPEND="
 	pulseaudio? ( media-libs/libpulse[${MULTILIB_USEDEP}] )
 	udev? ( virtual/libudev:=[${MULTILIB_USEDEP}] )
 	unwind? (
-		llvm-libunwind? ( sys-libs/llvm-libunwind[${MULTILIB_USEDEP}] )
+		llvm-libunwind? ( llvm-runtimes/libunwind[${MULTILIB_USEDEP}] )
 		!llvm-libunwind? ( sys-libs/libunwind:=[${MULTILIB_USEDEP}] )
 	)
 	usb? ( dev-libs/libusb:1[${MULTILIB_USEDEP}] )
