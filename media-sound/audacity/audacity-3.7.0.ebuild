@@ -39,6 +39,7 @@ SLOT="0"
 IUSE="alsa audiocom ffmpeg +flac id3tag +ladspa +lv2 mpg123 +ogg
 	opus +portmixer sbsms test twolame vamp +vorbis wavpack"
 REQUIRED_USE="
+	audiocom? ( wavpack )
 	opus? ( ogg )
 	vorbis? ( ogg )
 "

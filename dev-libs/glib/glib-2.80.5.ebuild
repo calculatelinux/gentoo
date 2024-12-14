@@ -214,8 +214,8 @@ multilib_src_configure() {
 	# Build internal copy of gobject-introspection to avoid circular dependency (Built for native abi only)
 	if multilib_native_use introspection && ! has_version ">=dev-libs/${INTROSPECTION_P}" ; then
 		einfo "Bootstrapping gobject-introspection..."
-		INTROSPECTION_BIN_DIR="${T}/usr/bin"
-		INTROSPECTION_LIB_DIR="${T}/usr/$(get_libdir)"
+		INTROSPECTION_BIN_DIR="${T}/${EPREFIX}/usr/bin"
+		INTROSPECTION_LIB_DIR="${T}/${EPREFIX}/usr/$(get_libdir)"
 
 		local emesonargs=(
 			-Dpython="${EPYTHON}"
@@ -268,7 +268,10 @@ multilib_src_configure() {
 		export PKG_CONFIG_LIBDIR="${INTROSPECTION_LIB_DIR}/pkgconfig:${INTROSPECTION_BUILD_DIR}/meson-private"
 
 		# Set the normal primary pkgconfig search paths as secondary
-		export PKG_CONFIG_PATH="$(pkg-config --variable pc_path pkg-config)"
+		# (We also need to prepend our just-built one for later use of
+		# g-ir-scanner to use the new one and to help workaround bugs like
+		# bug #946221.)
+		export PKG_CONFIG_PATH="${PKG_CONFIG_LIBDIR}:$(pkg-config --variable pc_path pkg-config)"
 
 		# Add the paths to the built glib libraries to the library path so that gobject-introspection can load them
 		for gliblib in glib gobject gthread gmodule gio girepository; do
