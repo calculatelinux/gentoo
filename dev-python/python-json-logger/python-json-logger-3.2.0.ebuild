@@ -18,6 +18,13 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
 
+BDEPEND="
+	test? (
+		dev-python/freezegun[${PYTHON_USEDEP}]
+		dev-python/tzdata[${PYTHON_USEDEP}]
+	)
+"
+
 distutils_enable_tests pytest
 
 python_test() {

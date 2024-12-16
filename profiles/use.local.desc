@@ -342,6 +342,7 @@ app-containers/docker:overlay - Enables dependencies for the "overlay" graph dri
 app-containers/docker:overlay2 - Enables dependencies for the "overlay2" graph driver, including necessary kernel flags.
 app-containers/docker-credential-helpers:pass - Build pass helper for the pass utility.
 app-containers/incus:fuidshift - Install the fuidshift binary - currently conflicts with app-containers/lxd
+app-containers/incus:qemu - Pull dependencies needed to manage QEMU-based virtual machines with Incus
 app-containers/lxc:io-uring - Enable io_uring support, and use io_uring instead of epoll
 app-containers/lxc:tools - Build and install additional command line tools
 app-containers/nerdctl:rootless - Enables dependencies for running in rootless mode.
@@ -8833,6 +8834,9 @@ x11-misc/clipmenu:rofi - Use rofi as default launcher
 x11-misc/colord:argyllcms - Enable ArgyllCMS sensor
 x11-misc/colord:extra-print-profiles - Generate extra print profiles. Warning: significant build time and memory requirements.
 x11-misc/copyq:notification - Build with native notification support (requires kde-frameworks/knotifications:5)
+x11-misc/dunst:completions - Install shell completions (for bash, fish and zsh)
+x11-misc/dunst:dunstify - Build dunstify (notify-send alternative)
+x11-misc/dunst:xdg - Install xdg-utils for opening links with xdg-open
 x11-misc/fbpager:xrender - Enable transparency support via x11-libs/libXrender
 x11-misc/gammastep:geoclue - Control dependency on app-misc/geoclue
 x11-misc/gmrun:xdg - Enable xdg spec for configuration and history files location
