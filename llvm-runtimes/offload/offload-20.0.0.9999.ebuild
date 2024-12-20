@@ -56,6 +56,10 @@ pkg_pretend() {
 	fi
 }
 
+python_check_deps() {
+	python_has_version "dev-python/lit[${PYTHON_USEDEP}]"
+}
+
 pkg_setup() {
 	if use test; then
 		python-any-r1_pkg_setup
@@ -93,6 +97,8 @@ src_configure() {
 	fi
 
 	local mycmakeargs=(
+		-DLLVM_ROOT="${ESYSROOT}/usr/lib/llvm/${LLVM_MAJOR}"
+
 		-DOFFLOAD_LIBDIR_SUFFIX="${libdir#lib}"
 		-DLIBOMPTARGET_PLUGINS_TO_BUILD="${plugins}"
 		-DLIBOMPTARGET_OMPT_SUPPORT="$(usex ompt)"

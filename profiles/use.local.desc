@@ -1283,6 +1283,7 @@ app-text/xpdf:textselect - Allow text selection
 app-text/xpdf:utils - Install command-line PDF converters and various utilities
 app-text/zathura:synctex - Use libsynctex to get latex codeline from pdf
 app-text/zathura-meta:cb - Install plug-in for ComicBook support
+app-text/zathura-meta:epub - Install plug-in E-Book support
 app-text/zeal:X - Enable global shortcut support on X11
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
 app-xemacs/xemacs-packages-all:mule - Add multi-language support to XEmacs
@@ -3066,7 +3067,6 @@ games-action/trine2:launcher - Install GTK+ launcher
 games-arcade/bomns:editor - enables building the level editor
 games-arcade/commandergenius:downloader - Allows some Keen games to be downloaded from the menu
 games-arcade/jazz2:sdl - Prefer SDL2 over GLFW backend
-games-arcade/jazz2:server - Build the multiplayer game server
 games-arcade/jazz2-data:cc - Install The Christmas Chronicles additional data
 games-arcade/jazz2-data:demo - Use the free demo data instead of the full retail game data
 games-arcade/lbreakout2:themes - Install additional themes
@@ -5889,7 +5889,6 @@ net-im/err:irc - Pull optional dependencies, needed for IRC backend
 net-im/gajim:crypt - End to end encryption and GPG encryption
 net-im/gajim:geolocation - Sharing your location
 net-im/gajim:jingle - Audio and video calls
-net-im/gajim:omemo - Install dependencies for OMEMO encryption plugin
 net-im/gajim:remote - Controling Gajim instance from command line with gajim-remote
 net-im/gajim:rst - Generating XHTML output from RST code
 net-im/gajim:spell - Spellchecking of composed messages

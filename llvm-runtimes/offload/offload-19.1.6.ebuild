@@ -11,7 +11,7 @@ HOMEPAGE="https://openmp.llvm.org"
 
 LICENSE="Apache-2.0-with-LLVM-exceptions || ( UoI-NCSA MIT )"
 SLOT="0/${LLVM_SOABI}"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 IUSE="+debug ompt test llvm_targets_AMDGPU llvm_targets_NVPTX"
 RESTRICT="!test? ( test )"
 
@@ -58,6 +58,10 @@ pkg_pretend() {
 	fi
 }
 
+python_check_deps() {
+	python_has_version "dev-python/lit[${PYTHON_USEDEP}]"
+}
+
 pkg_setup() {
 	if use test; then
 		python-any-r1_pkg_setup
@@ -99,7 +103,7 @@ src_configure() {
 	fi
 
 	local mycmakeargs=(
-		-DCMAKE_PREFIX_PATH="${ESYSROOT}/usr/lib/llvm/${LLVM_MAJOR}"
+		-DLLVM_ROOT="${ESYSROOT}/usr/lib/llvm/${LLVM_MAJOR}"
 
 		-DOFFLOAD_LIBDIR_SUFFIX="${libdir#lib}"
 		-DLIBOMPTARGET_PLUGINS_TO_BUILD="${plugins}"
