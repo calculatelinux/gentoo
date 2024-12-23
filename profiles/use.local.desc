@@ -772,15 +772,9 @@ app-forensics/yara:python - Pulls in python binding via dev-python/yara-python
 app-i18n/fcitx:autostart - Enable XDG-compatible autostart of Fcitx
 app-i18n/fcitx:emoji - Enable emoji loading for CLDR
 app-i18n/fcitx:enchant - Enable Enchant backend (using app-text/enchant) for spelling hinting
-app-i18n/fcitx:gtk2 - Install input method module for GTK+ 2
-app-i18n/fcitx:gtk3 - Install input method module for GTK+ 3
 app-i18n/fcitx:keyboard - Enable key event translation with XKB and build keyboard engine
-app-i18n/fcitx:opencc - Enable OpenCC engine (using app-i18n/opencc) for converter between Simplified Chinese and Traditional Chinese
-app-i18n/fcitx:pango - Enable support for x11-libs/pango
 app-i18n/fcitx:presage - Enable presage for word predication (not stable)
 app-i18n/fcitx:server - Build a fcitx as server, disable this option if you want to use fcitx as an embedded library
-app-i18n/fcitx:table - Install table input methods for Simplified Chinese
-app-i18n/fcitx:xkb - Enable support for XKB (required for fcitx-xkb, fcitx-xkbdbus, part of fcitx-keyboard)
 app-i18n/fcitx-chinese-addons:cloudpinyin - Build cloud pinyin addon
 app-i18n/fcitx-chinese-addons:data - Build data
 app-i18n/fcitx-chinese-addons:gui - Enable GUI support (qt5 or qt6)
@@ -795,13 +789,10 @@ app-i18n/fcitx-gtk:gtk3 - Enable support for GTK+3
 app-i18n/fcitx-gtk:gtk4 - Enable support for GTK 4
 app-i18n/fcitx-gtk:onlyplugin - Build only plugin
 app-i18n/fcitx-gtk:snooper - Enable key snooper for gtk app
-app-i18n/fcitx-libpinyin:dictionary-manager - Install dictionary manager
 app-i18n/fcitx-lua:dlopen - Use dlopen to load lua library
 app-i18n/fcitx-qt:onlyplugin - Build only plugin
 app-i18n/fcitx-qt:qt6 - Build support for QT6
 app-i18n/fcitx-qt:staticplugin - Build plugin as static
-app-i18n/fcitx-rime:configuration-tool - Install configuration tool
-app-i18n/fcitx-unikey:macro-editor - Install macro editor
 app-i18n/ibus:emoji - Enable support for Emoji
 app-i18n/ibus:gtk2 - Enable the GTK-2 input method module
 app-i18n/ibus:gtk3 - Enable the GTK-3 input method module
@@ -986,6 +977,7 @@ app-misc/sphinx:id64 - use 64-bit document and word IDs
 app-misc/sphinx:mariadb - Add mariadb database support
 app-misc/sphinx:stemmer - Enable language stemming support
 app-misc/task:sync - Enable "task sync" support
+app-misc/tmux:sixel - Enable sixel support
 app-misc/tmux:utempter - Include libutempter support
 app-misc/tracker:miners - Install the app-misc/tracker-miners package for actual data mining support for tracker
 app-misc/tracker:stemmer - Add word stemming via dev-libs/snowball-stemmer.
@@ -2509,6 +2501,7 @@ dev-python/pyside6:designer - Build QtDesigner and QtUiTools modules
 dev-python/pyside6:gles2-only - Build QtGui "QOpenGL*" classes
 dev-python/pyside6:gui - Build QtGui module
 dev-python/pyside6:help - Build QtHelp module
+dev-python/pyside6:httpserver - Build QtHttpServer module
 dev-python/pyside6:location - Build QtLocation module
 dev-python/pyside6:multimedia - Build QtMultimedia and QtMultimediaWidgets modules
 dev-python/pyside6:network - Build QtNetwork module
@@ -2520,6 +2513,7 @@ dev-python/pyside6:printsupport - Build QtPrintSupport module
 dev-python/pyside6:qml - Build QtQml module
 dev-python/pyside6:quick - Build QtQuick and QtQuickWidgets modules
 dev-python/pyside6:quick3d - Build QtQuick3D and QtQuickWidgets modules
+dev-python/pyside6:remoteobjects - Build QtRemoteObjects module
 dev-python/pyside6:scxml - Build QtScxml module
 dev-python/pyside6:sensors - Build QtSensors module
 dev-python/pyside6:serialport - Build QtSerialPort modules
@@ -2528,6 +2522,7 @@ dev-python/pyside6:speech - Build QtTextToSpeech module
 dev-python/pyside6:sql - Build QtSql module
 dev-python/pyside6:svg - Build QtSvg module
 dev-python/pyside6:testlib - Build QtTest module
+dev-python/pyside6:uitools - Build UITools module
 dev-python/pyside6:webchannel - Build QtWebChannel module
 dev-python/pyside6:webengine - Build QtWebEngine and QtWebEngineWidgets modules
 dev-python/pyside6:websockets - Build QtWebSockets module
@@ -2545,7 +2540,9 @@ dev-python/qtpy:gui - Pull in bindings for the QtGui module
 dev-python/qtpy:help - Pull in bindings for the QtHelp module
 dev-python/qtpy:multimedia - Pull in QtMultimedia and QtMultimediaWidgets modules
 dev-python/qtpy:network - Pull in bindings for the QtNetwork module
+dev-python/qtpy:nfc - Pull in bindings for the QtNFC module
 dev-python/qtpy:opengl - Pull in bindings for the QtOpenGL module
+dev-python/qtpy:pdfium - Pull in bindings for the QtPDFium module
 dev-python/qtpy:positioning - Pull in bindings for the QtPositioning module
 dev-python/qtpy:printsupport - Pull in bindings for the QtPrintSupport module
 dev-python/qtpy:pyqt5 - Use dev-python/pyqt5 as Qt for Python implementation
@@ -2554,8 +2551,11 @@ dev-python/qtpy:pyside2 - Use dev-python/pyside2 as Qt for Python implementation
 dev-python/qtpy:pyside6 - Use dev-python/pyside6 as Qt for Python implementation
 dev-python/qtpy:qml - Build bindings for the QtQml
 dev-python/qtpy:quick - Build bindings for the QtQuick
+dev-python/qtpy:quick3d - Build bindings for the QtQuick3D
+dev-python/qtpy:remoteobjects - Pull in bindings for the QtRemoteObjects module
 dev-python/qtpy:sensors - Pull in bindings for the QtSensors module
 dev-python/qtpy:serialport - Pull in bindings for the QtSerialPort module
+dev-python/qtpy:spatialaudio - Pull in bindings for the QtSpatialAudio module
 dev-python/qtpy:speech - Pull in bindings for the QtTextToSpeech module
 dev-python/qtpy:sql - Pull in bindings for the QtSql module
 dev-python/qtpy:svg - Pull in bindings for the QtSvg module
@@ -3779,6 +3779,7 @@ llvm-runtimes/compiler-rt-sanitizers:safestack - Build SafeStack runtime.
 llvm-runtimes/compiler-rt-sanitizers:scudo - Build Scudo Hardened Allocator.
 llvm-runtimes/compiler-rt-sanitizers:shadowcallstack - Build ShadowCallStack.
 llvm-runtimes/compiler-rt-sanitizers:tsan - Build Thread Sanitizer runtime.
+llvm-runtimes/compiler-rt-sanitizers:tysan - Build Type Sanitizer runtime.
 llvm-runtimes/compiler-rt-sanitizers:ubsan - Build Undefined Behavior Sanitizer runtime.
 llvm-runtimes/compiler-rt-sanitizers:xray - Build XRay runtime.
 llvm-runtimes/libcxx:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
@@ -4536,11 +4537,16 @@ media-libs/sdl-mixer:playtools - Install playwave and playmus tools (useful for 
 media-libs/sdl-mixer:smpeg - Use media-libs/smpeg for MP3 support
 media-libs/sdl-mixer:wav - support WAVE files
 media-libs/sdl2-mixer:fluidsynth - Use media-sound/fluidsynth for MIDI support
-media-libs/sdl2-mixer:midi - basic support for MIDI files
-media-libs/sdl2-mixer:mod - basic support for MOD files
+media-libs/sdl2-mixer:gme - Support additional music formats with media-libs/game-music-emu
+media-libs/sdl2-mixer:midi - Basic support for MIDI files
+media-libs/sdl2-mixer:mod - Basic support for MOD files
+media-libs/sdl2-mixer:modplug - Support MOD via media-libs/libmodplug
 media-libs/sdl2-mixer:playtools - Install playwave and playmus tools (useful for testing)
-media-libs/sdl2-mixer:tremor - enable OGG Vorbis music via libtremor
-media-libs/sdl2-mixer:wav - support WAVE files
+media-libs/sdl2-mixer:stb - Use dev-libs/stb instead of media-libs/libvorbis for OGG Vorbis support
+media-libs/sdl2-mixer:tremor - Use media-libs/tremor instead of media-libs/libvorbis for OGG Vorbis support
+media-libs/sdl2-mixer:wav - Support WAVE files
+media-libs/sdl2-mixer:wavpack - Support WavPack files
+media-libs/sdl2-mixer:xmp - Support MOD via media-libs/libxmp
 media-libs/sdl2-ttf:harfbuzz - Use media-libs/harfbuzz for enhanced font rendering
 media-libs/sdl_audiolib:fluidsynth - Enable support for MIDI via media-sound/fluidsynth
 media-libs/sdl_audiolib:mpg123 - Enable support for mp3 decoding via media-sound/mpg123
@@ -5143,10 +5149,13 @@ media-video/ffmpeg:zvbi - Enables media-libs/zvbi based teletext decoder.
 media-video/ffmpeg-chromium:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
 media-video/ffmpeg-chromium:gpl - Build GPL code. Should be enabled unless you require LGPL binaries.
 media-video/guvcview:qt5 - Build with Qt5 interface instead Gtk+
+media-video/handbrake:amf - Support for encoding h265 using AMD VCE encoder.
 media-video/handbrake:fdk - Support for encoding AAC using media-libs/fdk-aac.
 media-video/handbrake:gstreamer - Support for the streaming media framework from media-libs/gstreamer.
 media-video/handbrake:gtk - Install the GTK UI, ghb.
+media-video/handbrake:libdovi - Support for Dolby Vision using media-libs/libdovi.
 media-video/handbrake:numa - Adds support for x265's NUMA capabilities.
+media-video/handbrake:qsv - Support for encoding h264 using Intel Quick Sync Video.
 media-video/handbrake:x265 - Support for encoding h265 using media-libs/x265.
 media-video/libva-utils:examples - Build and install decode, encode, videoprocess and other VA-API examples.
 media-video/libva-utils:putsurface - Build and install putsurface tool.
@@ -7714,6 +7723,7 @@ sci-visualization/gwyddion:fits - Enable FITS image import via sci-libs/cfitsio
 sci-visualization/gwyddion:jansson - Enable JSON data manipulation via dev-libs/jansson
 sci-visualization/gwyddion:sourceview - Enable support for x11-libs/gtksourceview
 sci-visualization/gwyddion:unique - Enable remote control backend via dev-libs/libunique
+sci-visualization/labplot:cantor - Enable support for different open-source computer algebra systems via kde-apps/cantor
 sci-visualization/labplot:eigen - Enable support for fast baseline removal via dev-cpp/eigen
 sci-visualization/labplot:fits - Enable support for NASA's sci-libs/cfitsio library
 sci-visualization/labplot:libcerf - Enable special functions from sci-libs/libcerf
@@ -8735,6 +8745,7 @@ www-servers/nginx:rtmp - NGINX-based Media Streaming Server
 www-servers/nginx:ssl - Enable HTTPS module for http. Enable SSL/TLS support for POP3/IMAP/SMTP for mail.
 www-servers/nginx-unit:php8-1 - Support for PHP 8.1
 www-servers/nginx-unit:php8-2 - Support for PHP 8.2
+www-servers/nginx-unit:php8-3 - Support for PHP 8.3
 www-servers/pshs:magic - Enable automatic detection of Content-Type using libmagic (sys-apps/file)
 www-servers/pshs:qrcode - Enable generating QRCodes for server URL
 www-servers/sniproxy:dns - Enable DNS resolver via net-libs/udns

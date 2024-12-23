@@ -159,11 +159,6 @@ dev-python/shiboken2
 # [3] https://wiki.gentoo.org/wiki/Nouveau
 x11-drivers/nvidia-drivers:0/470
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-11-18)
-# All classes were moved to >=x11-libs/qwt-6.2.0. No revdeps.
-# Removal on 2024-12-18.
-x11-libs/qwtpolar
-
 # Robin H. Johnson <robbat2@gentoo.org> (2024-11-17)
 # bug 943698
 # Poor upstream code quality, unmaintained upstream;
@@ -198,18 +193,6 @@ dev-util/usb-robot
 # Fails to build on modern compilers, bug 874291. Various open bugs.
 # No maintainer. Removal in 30 days.
 app-emulation/spim
-
-# Hans de Graaff <graaff@gentoo.org> (2024-11-16)
-# Mask obsolete shoulda-related slots. Use the newer slots instead.
-# Removal on 2024-12-16.
-dev-ruby/shoulda:3
-dev-ruby/shoulda-context:0
-dev-ruby/shoulda-matchers:3
-
-# Hans de Graaff <graaff@gentoo.org> (2024-11-16)
-# Mask obsolete Rails 6.1-only slot. Please use the newer slot instead.
-# Removal on 2024-12-16.
-dev-ruby/database_cleaner-active_record:2.1
 
 # Jaco Kroon <jaco@uls.co.za> (2024-11-15)
 # clippy exists purely for frr (even comes from the same sources).  This
@@ -285,36 +268,10 @@ app-accessibility/powiedz
 # Does not build with any rust version in the tree. Removal in 30 days.
 =dev-util/wasmer-0.11.0
 
-# Hans de Graaff <graaff@gentoo.org> (2024-11-08)
-# Obsolete slot. Use a newer slot instead. Removal on 2024-12-08.
-dev-ruby/faker:2
-
-# Hans de Graaff <graaff@gentoo.org> (2024-11-08)
-# Obsolete slot. Use a newer slot instead. The included jquery-ui
-# version is no longer supported upstream. Removal on 2024-12-08.
-dev-ruby/jquery-ui-rails:6
-
 # Viorel Munteanu <ceamac@gentoo.org> (2024-10-18)
 # Experimental version, for testing purposes only.
 # Bug #941566.
 app-emulation/virtualbox-kvm
-
-# Yongxiang Liang <tanekliang@gmail.org> (2024-10-10)
-# Fcitx 4 has been archived. Users can upgrade to Fcitx 5
-app-i18n/fcitx-anthy:4
-app-i18n/fcitx-chewing:4
-app-i18n/fcitx-cloudpinyin:4
-app-i18n/fcitx-configtool:4
-app-i18n/fcitx-hangul:4
-app-i18n/fcitx-libpinyin:4
-app-i18n/fcitx-m17n:4
-app-i18n/fcitx-qt5:4
-app-i18n/fcitx-rime:4
-app-i18n/fcitx-sayura:4
-app-i18n/fcitx-table-extra:4
-app-i18n/fcitx-unikey:4
-app-i18n/fcitx:4
-app-i18n/kcm-fcitx
 
 # Nowa Ammerlaan <nowa@gentoo.org> (2024-10-05)
 # This version is known to break on certain systems. At the

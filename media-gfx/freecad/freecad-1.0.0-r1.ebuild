@@ -82,8 +82,8 @@ RDEPEND="
 		$(python_gen_cond_dep '
 			dev-python/matplotlib[${PYTHON_USEDEP}]
 			>=dev-python/pivy-0.6.5[${PYTHON_USEDEP}]
-			dev-python/pyside6:=[designer,gui,svg,${PYTHON_USEDEP}]
-			dev-python/shiboken6:=[${PYTHON_USEDEP}]
+			<dev-python/pyside6-6.8.0:=[designer,gui,svg,${PYTHON_USEDEP}]
+			<dev-python/shiboken6-6.8.0:=[${PYTHON_USEDEP}]
 		' )
 		virtual/glu
 		virtual/opengl

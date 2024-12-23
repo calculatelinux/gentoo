@@ -20,6 +20,7 @@
 # Ionen Wolkens <ionen@gentoo.org> (2024-09-27)
 # dev-qt/qtremoteobjects:6 has not been stabilized yet.
 dev-python/pyqt6 remoteobjects
+dev-python/qtpy remoteobjects
 
 # Nowa Ammerlaan <nowa@gentoo.org> (2024-07-24)
 # No stable versions of ROCm at the moment
@@ -72,6 +73,7 @@ net-misc/curl rustls curl_ssl_rustls
 # Sam James <sam@gentoo.org> (2022-12-07)
 # Needs unstable media-libs/libvpl
 media-video/ffmpeg qsv
+media-video/handbrake qsv
 
 # Adel Kara Slimane <adel.ks@zegrapher.com> (2022-03-14)
 # needs stabilizing
