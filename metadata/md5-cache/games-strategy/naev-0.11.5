@@ -11,8 +11,8 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3+ Apache-2.0 BSD BSD-2 CC-BY-2.0 CC-BY-3.0 CC-BY-4.0 CC-BY-SA-3.0 CC-BY-SA-4.0 CC0-1.0 GPL-2+ MIT OFL-1.1 public-domain
 RDEPEND=lua_single_target_luajit? ( dev-lang/luajit:= ) lua_single_target_lua5-1? ( dev-lang/lua:5.1 ) dev-games/physfs dev-libs/libpcre2:= dev-libs/libunibreak:= dev-libs/libxml2 media-libs/freetype:2 media-libs/libglvnd media-libs/libsdl2[joystick,opengl,video] media-libs/libvorbis media-libs/openal media-libs/sdl2-image[png,webp] net-libs/enet:1.3= sci-libs/cholmod sci-libs/cxsparse sci-libs/openblas sci-libs/suitesparse sci-mathematics/glpk:= virtual/libintl
 REQUIRED_USE=^^ ( lua_single_target_luajit lua_single_target_lua5-1 )
-RESTRICT=!test? ( test )
+RESTRICT=test !test? ( test )
 SLOT=0
 SRC_URI=https://github.com/naev/naev/releases/download/v0.11.5/naev-0.11.5-source.tar.xz
 _eclasses_=flag-o-matic	f14aba975c94ccaa9f357a27e3b17ffe	lua-single	75fe955a36b18e199213c8739eaebdbb	lua-utils	7c89927eda6f21c4c48136247077ab37	meson	99466844dd8d4fcfb07578a76f5a9922	multilib	b2a329026f2e404e9e371097dda47f96	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-any-r1	6ddb5e75c10db046f89ebe39c85e1d82	python-utils-r1	42c5abe4a656a4993a06a4fc61dbdd12	toolchain-funcs	14648d8795f7779e11e1bc7cf08b7536	virtualx	9741d451eb64ea8bb9faee90d68a9b68	xdg	3ef49a87c52c8b77c476351195dfe575	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
-_md5_=4de589b11d0e9370b1d313a5c8bcb2fa
+_md5_=b7ce7ec8ea8100e5f11ecde50e37bfa7

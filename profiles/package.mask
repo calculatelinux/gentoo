@@ -69,7 +69,6 @@ kde-apps/knotes
 # Removal on 2025-01-09
 media-sound/soundkonverter
 kde-frameworks/countryflags
-kde-frameworks/kapidox
 kde-frameworks/kdelibs4support
 kde-frameworks/kemoticons
 
@@ -127,13 +126,6 @@ sys-boot/woeusb
 # Removal on 2024-12-07.  Bug #944782.
 dev-python/pyproject-fmt-rust
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-11-23)
-# dev-python/pyside2 last-rites, no more revdeps
-# Removal on 2024-12-23
-dev-python/pyside2
-dev-python/pyside2-tools
-dev-python/shiboken2
-
 # Ionen Wolkens <ionen@gentoo.org> (2024-11-19)
 # NVIDIA dropped support for the 470.xx branch in September 2024[1].
 #
@@ -177,11 +169,6 @@ dev-libs/libg15render
 # Included in dev-ml/odoc, the only rdep
 # Removal on 2024-12-17.
 dev-ml/odoc-parser
-
-# Matt Turner <mattst88@gentoo.org> (2024-11-16)
-# Masked for testing
-=dev-util/intel_clc-24.3*
-=media-libs/mesa-24.3*
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2024-11-17)
 # Needs a header from libusb that doesnt exist anymore. Will never build.
