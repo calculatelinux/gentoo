@@ -3243,6 +3243,8 @@ games-misc/xcowsay:fortune - Enable support for fortune cookies via games-misc/f
 games-mud/tf:atcp - enable ATCP support.
 games-mud/tf:gmcp - enable GMCP support.
 games-mud/tf:option102 - enable telnet option 102 support.
+games-puzzle/braid-gog:launcher - Install FLTK-based launcher that you probably don't need
+games-puzzle/braid-hb:launcher - Install FLTK-based launcher that you probably don't need
 games-puzzle/gnome-tetravex:cli - Build the gnome-tetravex-cli command-line interface
 games-puzzle/gnome-tetravex:gui - Build the gnome-tetravex graphical Gtk user interface
 games-puzzle/nightsky:bundled-libs - Use the upstream provided bundled libraries.
@@ -3473,6 +3475,7 @@ gui-wm/gamescope:libei - Enable emulated input using dev-libs/libei
 gui-wm/gamescope:pipewire - Enable screen capture via PipeWire
 gui-wm/gamescope:wsi-layer - Enable the WSI layer (required for HDR)
 gui-wm/hyprland:legacy-renderer - Enable legacy renderer
+gui-wm/hyprland:qtutils - Install Hyprland QT utility apps
 gui-wm/sway:X - Enable support for X11 applications (XWayland)
 gui-wm/sway:swaybar - Install 'swaybar': sway's status bar component
 gui-wm/sway:swaynag - Install 'swaynag': shows a message with buttons
@@ -4648,13 +4651,13 @@ media-sound/ardour:phonehome - contact ardour.org at startup for new announcemen
 media-sound/ario:idle - Enable experimental support for MPD's idle command to reduce bandwidth and cpu usage, requires MPD 0.14
 media-sound/asunder:mac - Support for creation of Monkey's Audio files (APE)
 media-sound/audacity:audiocom - Enable integrated uploading to audio.com
-media-sound/audacity:id3tag - Enables ID3 tagging with id3tag library
+media-sound/audacity:id3tag - Enable ID3 tagging via media-libs/libid3tag
 media-sound/audacity:lv2 - Add support for Ladspa V2
 media-sound/audacity:mpg123 - Use media-sound/mpg123-base instead of media-libs/libmad for MPEG decoding
 media-sound/audacity:portmixer - Enable the internal portmixer feature
-media-sound/audacity:sbsms - Enables sbsms library support for slower, more accurate pitch and tempo changing
-media-sound/audacity:twolame - Enables twolame support (MPEG Audio Layer 2 encoder)
-media-sound/audacity:vamp - Enables vamp plugins support (Audio analysing plugins)
+media-sound/audacity:sbsms - Enable slower, more accurate pitch and tempo changing via media-libs/libsbsms
+media-sound/audacity:twolame - Enable twolame support (MPEG Audio Layer 2 encoder) via media-sound/twolame
+media-sound/audacity:vamp - Enable vamp plugins support (Audio analysing plugins)
 media-sound/audiotools:cue - Enable CUE sheet support
 media-sound/audiotools:dvda - Enable DVD-Audio support
 media-sound/audiotools:twolame - Enable twolame support (MPEG Audio Layer 2 encoder)
@@ -6716,12 +6719,10 @@ net-p2p/amule:daemon - Enable amule daemon
 net-p2p/amule:remote - Enable remote controlling of the client
 net-p2p/amule:stats - Enable statistic reporting
 net-p2p/bitcoin-core:berkdb - Support legacy wallets in Berkeley DB format
-net-p2p/bitcoin-core:bitcoin-cli - Build and install bitcoin-cli command line interface
 net-p2p/bitcoin-core:cli - Build and install bitcoin-cli command line interface
 net-p2p/bitcoin-core:daemon - Build and install bitcoind daemon
 net-p2p/bitcoin-core:external-signer - Include support for external wallet signer programs
 net-p2p/bitcoin-core:gui - Build and install Bitcoin-Qt GUI
-net-p2p/bitcoin-core:libs - Build and install libbitcoinconsensus
 net-p2p/bitcoin-core:nat-pmp - Enable NAT-PMP port forwarding
 net-p2p/bitcoin-core:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/bitcoin-core:sqlite - Support descriptor wallets in SQLite format
@@ -8494,6 +8495,7 @@ sys-process/procps:kill - Build the kill program
 sys-process/procps:modern-top - Enables new startup defaults of top. Keeps old defaults if disabled
 sys-process/procps:ncurses - Build programs that use ncurses: top, slabtop, watch
 sys-process/procps:skill - Build the skill and snice programs
+sys-process/runit:scripts - Install boot scripts into /etc/runit/.
 sys-process/systemd-cron:cron-boot - Include support for the boot timer.
 sys-process/systemd-cron:etc-crontab-systemd - Use dedicated /etc/crontab-systemd instead of parsing /etc/crontab
 sys-process/systemd-cron:minutely - Support /etc/cron.minutely
@@ -8904,6 +8906,17 @@ x11-plugins/wmfire:session - Enable session management
 x11-plugins/wmudmount:gcr - Enable support for secure memory with app-crypt/gcr
 x11-terms/aterm:background - Enable background image support via media-libs/libafterimage
 x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small version
+x11-terms/ghostty:adwaita - Use gui-libs/libadwaita for better GNOME integration
+x11-terms/ghostty:glfw - Use the GLFW backend for windowing
+x11-terms/ghostty:gtk - Use the GTK 4 backend for windowing
+x11-terms/ghostty:system-fontconfig - Use system fontconfig instead of the bundled one
+x11-terms/ghostty:system-freetype - Use system freetype instead of the bundled one
+x11-terms/ghostty:system-glslang - Use system glslang instead of the bundled one
+x11-terms/ghostty:system-harfbuzz - Use system harfbuzz instead of the bundled one
+x11-terms/ghostty:system-libpng - Use system libpng instead of the bundled one
+x11-terms/ghostty:system-libxml2 - Use system libxml2 instead of the bundled one
+x11-terms/ghostty:system-oniguruma - Use system oniguruma instead of the bundled one
+x11-terms/ghostty:system-zlib - Use system zlib instead of the bundled one
 x11-terms/gnome-terminal:gnome-shell - Integrate with gnome-base/gnome-shell search
 x11-terms/gnome-terminal:nautilus - Build gnome-base/nautilus extension
 x11-terms/mlterm:brltty - Enable support for app-accessibility/brltty

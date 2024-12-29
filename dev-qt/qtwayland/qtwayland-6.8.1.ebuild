@@ -8,7 +8,7 @@ inherit qt6-build
 DESCRIPTION="Wayland platform plugin for Qt"
 
 if [[ ${QT6_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ppc64 ~riscv x86"
+	KEYWORDS="amd64 arm arm64 ~loong ppc ppc64 ~riscv x86"
 fi
 
 IUSE="accessibility compositor gnome qml vulkan"
@@ -54,6 +54,7 @@ PATCHES=(
 
 src_configure() {
 	local mycmakeargs=(
+		$(cmake_use_find_package compositor Qt6Quick)
 		$(cmake_use_find_package qml Qt6Quick)
 		$(qt_feature compositor wayland_server)
 		$(qt_feature gnome wayland_decoration_adwaita)

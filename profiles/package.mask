@@ -33,10 +33,26 @@
 
 #--- END OF EXAMPLES ---
 
-# Sam James <sam@gentoo.org> (2024-12-27)
-# Unfixable modern C issues because of reliance on ancient automake.
-# Out of date. See bug #946998. Removal on 2025-01-27.
-net-irc/ngircd
+# Michał Górny <mgorny@gentoo.org> (2024-12-29)
+# As of 3.1.0, upstream has removed all mocking and made it impossible
+# to test the package locally.  As such, we cannot maintain it going
+# forward.  Removal on 2025-01-28.  Bug #947144.
+dev-python/pslab
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-12-28)
+# Cleanup transitional Bitcoin Core meta packages, as well as
+# unmaintainable net-p2p/bitcoin-core[system-leveldb] and
+# virtual/bitcoin-leveldb. Removal on 2025-01-27. Bug #945359
+dev-util/bitcoin-tx
+net-libs/libbitcoinconsensus
+net-p2p/bitcoin-cli
+net-p2p/bitcoin-qt
+net-p2p/bitcoind
+virtual/bitcoin-leveldb
+
+# Nicolas PARLANT <nicolas.parlant@parhuet.fr> (2024-12-26)
+# New taglib major version, binary incompatible with 1.x
+>=media-libs/taglib-2.0
 
 # Mats Lidell <matsl@gentoo.org> (2024-12-25)
 # Packages used by XEmacs 21.4, now removed from tree.  Not needed with

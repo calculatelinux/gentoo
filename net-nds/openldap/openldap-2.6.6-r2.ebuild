@@ -37,7 +37,7 @@ IUSE="systemd ${IUSE_DAEMON} ${IUSE_BACKEND} ${IUSE_OVERLAY} ${IUSE_OPTIONAL} ${
 REQUIRED_USE="
 	cxx? ( sasl )
 	pbkdf2? ( ssl )
-	test? ( cleartext sasl )
+	test? ( cleartext sasl debug )
 	autoca? ( !gnutls )
 	?? ( test minimal )
 	kerberos? ( ?? ( kinit smbkrb5passwd ) )

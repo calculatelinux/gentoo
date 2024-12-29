@@ -12,7 +12,7 @@ CODENAME="Piers"
 LIBDVDCSS_VERSION="1.4.3-Next-Nexus-Alpha2-2"
 LIBDVDREAD_VERSION="6.1.3-Next-Nexus-Alpha2-2"
 LIBDVDNAV_VERSION="6.1.1-Next-Nexus-Alpha2-2"
-FFMPEG_VERSION="6.0.1"
+FFMPEG_VERSION="7.1"
 
 # Java bundles from xbmc/interfaces/swig/CMakeLists.txt
 GROOVY_VERSION="4.0.16"
@@ -130,7 +130,7 @@ COMMON_TARGET_DEPEND="${PYTHON_DEPS}
 	media-libs/harfbuzz:=
 	>=media-libs/libass-0.15.0:=
 	media-libs/mesa[egl(+),gbm(+)?,wayland?,X?]
-	>=media-libs/taglib-1.9.0
+	media-libs/taglib:=
 	virtual/libiconv
 	virtual/ttf-fonts
 	x11-libs/libdrm
@@ -202,7 +202,7 @@ COMMON_TARGET_DEPEND="${PYTHON_DEPS}
 		>=net-fs/samba-3.4.6[smbclient(+)]
 	)
 	system-ffmpeg? (
-		=media-video/ffmpeg-6*:=[encode,soc(-)?,postproc,vaapi?,vdpau?,X?]
+		=media-video/ffmpeg-7*:=[encode,soc(-)?,postproc,vaapi?,vdpau?,X?]
 	)
 	!system-ffmpeg? (
 		app-arch/bzip2

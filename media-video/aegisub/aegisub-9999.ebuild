@@ -7,25 +7,25 @@ LUA_COMPAT=( luajit )
 LUA_REQ_USE="lua52compat"
 
 WX_GTK_VER=3.2-gtk3
-PLOCALES="ar be bg ca cs da de el es eu fa fi fr_FR gl hu id it ja ko nl pl pt_BR pt_PT ru sr_RS sr_RS@latin uk_UA vi zh_CN zh_TW"
+PLOCALES="ar be bg ca cs da de el es eu fa fi fr_FR gl hu id it ja ko nl pl pt_BR pt_PT ru sr_RS sr_RS@latin tr uk_UA vi zh_CN zh_TW"
 
-inherit autotools flag-o-matic lua-single plocale wxwidgets xdg-utils vcs-snapshot toolchain-funcs
+inherit meson flag-o-matic lua-single plocale wxwidgets xdg-utils vcs-snapshot toolchain-funcs
 
 DESCRIPTION="Advanced subtitle editor"
-HOMEPAGE="http://www.aegisub.org/ https://github.com/wangqr/Aegisub"
+HOMEPAGE="http://www.aegisub.org/ https://github.com/TypesettingTools/Aegisub"
 
 if [[ ${PV} == *9999 ]]; then
-	EGIT_REPO_URI="https://github.com/wangqr/${PN^}.git"
+	EGIT_REPO_URI="https://github.com/TypesettingTools/${PN^}.git"
 	# Submodules are used to pull bundled libraries.
 	EGIT_SUBMODULES=()
 	inherit git-r3
 else
-	SRC_URI="https://github.com/wangqr/Aegisub/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/TypesettingTools/Aegisub/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 LICENSE="BSD MIT"
 SLOT="0"
-IUSE="+alsa debug +fftw openal oss portaudio pulseaudio spell test +uchardet"
+IUSE="+alsa debug +fftw openal portaudio pulseaudio spell test +uchardet"
 RESTRICT="test"
 
 # aegisub bundles luabins (https://github.com/agladysh/luabins).
@@ -68,19 +68,18 @@ BDEPEND="dev-util/intltool
 "
 
 REQUIRED_USE="${LUA_REQUIRED_USE}
-	|| ( alsa openal oss portaudio pulseaudio )"
+	|| ( alsa openal portaudio pulseaudio )"
+
+BUILD_DIR="${WORKDIR}/${P}-build"
 
 PATCHES=(
-	"${FILESDIR}/3.2.2_p20160518/${PN}-3.2.2_p20160518-fix-system-luajit-build.patch"
-	"${FILESDIR}/3.3.3/${PN}-3.3.3-support-system-gtest.patch"
-	"${FILESDIR}/3.2.2_p20160518/${PN}-3.2.2_p20160518-tests_luarocks_lua_version.patch"
-	"${FILESDIR}/3.2.2_p20160518/${PN}-3.2.2_p20160518-fix-boost-181-build.patch"
-	"${FILESDIR}/3.3.3/${PN}-3.3.3-support-icu-75.patch"
+"${FILESDIR}/3.4.0/Fix-build-without-pch.patch"
+"${FILESDIR}/3.4.0/Use-generated-git-version.patch"
 )
 
 aegisub_check_compiler() {
-	if [[ ${MERGE_TYPE} != "binary" ]] && ! test-flag-CXX -std=c++17; then
-		die "Your compiler lacks C++17 support."
+	if [[ ${MERGE_TYPE} != "binary" ]] && ! test-flag-CXX -std=c++20; then
+		die "Your compiler lacks C++20 support."
 	fi
 }
 
@@ -106,43 +105,33 @@ src_prepare() {
 	plocale_find_changes 'po' '' '.po'
 	plocale_for_each_disabled_locale remove_locale
 
-	# See http://devel.aegisub.org/ticket/1914
-	config_rpath_update "${S}"/config.rpath
+	use test || sed -i "s|subdir('tests')||g" "${S}"/meson.build || die
 
-	eautoreconf
+	mkdir "${BUILD_DIR}" || die
+	cp "${FILESDIR}/${PV}"/git_version.h "${BUILD_DIR}"/git_version.h || die
 }
 
 src_configure() {
 	tc-export PKG_CONFIG
-	# Prevent access violations from OpenAL detection. See Gentoo bug 508184.
-	use openal && export agi_cv_with_openal="yes"
-
+	use debug && EMESON_BUILDTYPE=debug
 	setup-wxwidgets
-	local myeconfargs=(
-		--disable-update-checker
-		--with-ffms2
-		--with-system-luajit
-		$(use_enable debug)
-		$(use_with alsa)
-		$(use_with fftw fftw3)
-		$(use_with openal)
-		$(use_with oss)
-		$(use_with portaudio)
-		$(use_with pulseaudio libpulse)
-		$(use_with spell hunspell)
-		$(use_with uchardet)
+	local emesonargs=(
+	        -Denable_update_checker=false
+		-Dffms2=enabled
+		-Dsystem_luajit=true
+		$(meson_feature alsa)
+		$(meson_feature fftw fftw3)
+		$(meson_feature openal)
+		$(meson_feature portaudio)
+		$(meson_feature pulseaudio libpulse)
+		$(meson_feature spell hunspell)
+		$(meson_feature uchardet)
 	)
-	export FORCE_GIT_VERSION="v${PV}"
-	econf "${myeconfargs[@]}"
-}
-
-src_compile() {
-	emake WITH_SYSTEM_GTEST=$(usex test)
+	meson_src_configure
 }
 
 src_test() {
-	emake test-automation
-	emake test-libaegisub
+	meson_src_test test-libaegisub
 }
 
 pkg_postinst() {
