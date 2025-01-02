@@ -191,7 +191,7 @@ RDEPEND="
 		gnome-base/librsvg:2
 		x11-libs/cairo
 	)
-	taglib? ( <media-libs/taglib-2 )
+	taglib? ( media-libs/taglib:= )
 	theora? ( media-libs/libtheora )
 	tremor? ( media-libs/tremor )
 	truetype? (
@@ -233,7 +233,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-3.0.11.1-configure_lua_version.patch
 	"${FILESDIR}"/${PN}-3.0.18-drop-minizip-dep.patch
 	"${FILESDIR}"/${PN}-3.0.21-freerdp-2.patch # bug 919296, 590164
-	"${FILESDIR}"/${PN}-3.0.21-vaapi-without-ffmepg4.patch # bug 864721, thx Fedora
+	"${FILESDIR}"/${PN}-3.0.21-vaapi-without-ffmpeg4.patch # bug 864721, thx Fedora
 )
 
 DOCS=( AUTHORS THANKS NEWS README doc/fortunes.txt )

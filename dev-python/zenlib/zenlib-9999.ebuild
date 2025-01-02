@@ -1,4 +1,4 @@
-# Copyright 2023-2024 Gentoo Authors
+# Copyright 2023-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -18,5 +18,5 @@ SLOT="0"
 distutils_enable_tests unittest
 
 python_test() {
-	eunittest tests
+	CI=true eunittest tests  # Disable namespace module tests and imports with CI=true
 }

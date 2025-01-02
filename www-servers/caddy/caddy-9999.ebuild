@@ -38,10 +38,6 @@ FILECAPS=(
 	-m 755 'cap_net_bind_service=+ep' usr/bin/"${PN}"
 )
 
-PATCHES=(
-	"${FILESDIR}"/remove-binary-altering-commands-2.7.5.patch
-)
-
 # takes a module as an only arg
 add_custom_module() {
 	local LINE_NO=$(grep -n 'plug in Caddy modules here' cmd/caddy/main.go | awk -F: '{print $1;}' || die)

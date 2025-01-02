@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst prepare
+DESCRIPTION=A collection of community-maintained modules for Prosody
+EAPI=8
+HOMEPAGE=https://modules.prosody.im
+INHERIT=savedconfig
+IUSE=savedconfig
+KEYWORDS=~amd64 ~arm ~arm64 ~x86
+LICENSE=MIT
+RDEPEND=net-im/prosody
+SLOT=0
+SRC_URI=https://dev.gentoo.org/~conikost/distfiles/prosody-modules-0_pre20241231.tar.xz
+_eclasses_=portability	a39e3d646f76cb45d06b44cc1144b8d4	savedconfig	b9131abe556ad2ea96c01b06d658d363
+_md5_=0018be40ae460c34d31c36efe75998a9

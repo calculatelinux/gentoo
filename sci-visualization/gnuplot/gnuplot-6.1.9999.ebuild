@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -27,12 +27,14 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="gnuplot"
 SLOT="0"
-IUSE="aqua bitmap cairo doc examples +gd latex libcaca libcerf lua qt5 readline regis wxwidgets X"
+IUSE="amos aqua bitmap cairo doc examples +gd gpic latex libcaca libcerf lua metafont metapost qt6 readline regis tgif wxwidgets X"
+
 REQUIRED_USE="
 	doc? ( gd )
 	lua? ( ${LUA_REQUIRED_USE} )"
 
 RDEPEND="
+	amos? ( dev-libs/openspecfun )
 	cairo? (
 		x11-libs/cairo
 		x11-libs/pango )
@@ -44,13 +46,10 @@ RDEPEND="
 			>=dev-texlive/texlive-latexrecommended-2008-r2 ) )
 	libcaca? ( media-libs/libcaca )
 	lua? ( ${LUA_DEPS} )
-	qt5? (
-		dev-qt/qtcore:5=
-		dev-qt/qtgui:5=
-		dev-qt/qtnetwork:5=
-		dev-qt/qtprintsupport:5=
-		dev-qt/qtsvg:5=
-		dev-qt/qtwidgets:5= )
+	qt6? (
+		dev-qt/qt5compat:6
+		dev-qt/qtbase:6[gui,network,widgets]
+		dev-qt/qtsvg:6 )
 	readline? ( sys-libs/readline:0= )
 	libcerf? ( sci-libs/libcerf )
 	wxwidgets? (
@@ -73,7 +72,7 @@ BDEPEND="
 		dev-texlive/texlive-langgreek
 		dev-texlive/texlive-mathscience
 		app-text/ghostscript-gpl )
-	qt5? ( dev-qt/linguist-tools:5 )"
+	qt6? ( dev-qt/qttools:6[linguist] )"
 
 IDEPEND="latex? ( virtual/latex-base )"
 
@@ -127,16 +126,21 @@ src_configure() {
 	econf \
 		--with-texdir="${TEXMF}/tex/latex/${PN}" \
 		--with-readline=$(usex readline gnu builtin) \
+		$(use_with amos) \
 		$(use_with bitmap bitmap-terminals) \
 		$(use_with cairo) \
 		$(use_with gd) \
+		$(use_with gpic) \
 		"$(use_with libcaca caca "${EPREFIX}/usr/$(get_libdir)")" \
 		$(use_with libcerf) \
 		$(use_with lua) \
+		$(use_with metafont) \
+		$(use_with metapost) \
+		$(use_with qt6 qt qt6) \
 		$(use_with regis) \
+		$(use_with tgif) \
 		$(use_with X x) \
 		--enable-stats \
-		$(use_with qt5 qt qt5) \
 		$(use_enable wxwidgets) \
 		DIST_CONTACT="https://bugs.gentoo.org/" \
 		EMACS=no
