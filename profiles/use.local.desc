@@ -1760,6 +1760,8 @@ dev-lang/ammonite-repl-bin:scala2-13 - Install Ammonite for Scala 2.13
 dev-lang/ammonite-repl-bin:scala3-0 - Install Ammonite for Scala 3.0
 dev-lang/ammonite-repl-bin:scala3-1 - Install Ammonite for Scala 3.1
 dev-lang/ammonite-repl-bin:scala3-2 - Install Ammonite for Scala 3.2
+dev-lang/ammonite-repl-bin:scala3-3 - Install Ammonite for Scala 3.3
+dev-lang/ammonite-repl-bin:scala3-5 - Install Ammonite for Scala 3.5
 dev-lang/crystal:debug - Build each module as a separate object file. Speeds build up.
 dev-lang/erlang:kpoll - Enable kernel polling support
 dev-lang/gdl:eigen - Build matrix manipulation with dev-cpp/eigen
@@ -1811,7 +1813,6 @@ dev-lang/jsonnet:custom-optimization - Build with user-specified compiler optimi
 dev-lang/lazarus:extras - Build a lot of extra packages, including lhelp chm viewer program.
 dev-lang/lazarus:gtk2 - Use gtk:2 for widgets.
 dev-lang/lazarus:gui - Build GUI IDE.
-dev-lang/lazarus:minimal - Don't build extra packages from the bigide component
 dev-lang/logtalk:fop - Support for generating pdf documentation using fop
 dev-lang/logtalk:xslt - Support for generating html documentation using xslt
 dev-lang/lua:deprecated - make deprecated data structures/routines available
