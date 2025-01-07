@@ -607,6 +607,15 @@ kernel-install_pkg_preinst() {
 	[[ ! -d ${kernel_dir} ]] &&
 		die "Kernel directory ${kernel_dir} not installed!"
 
+	# We moved this in order to omit it from the binpkg, move it back
+	if [[ -r "${T}/signing_key.pem" ]]; then
+		# cp instead of mv to set owner to root in one go
+		(
+			umask 066 &&
+				cp "${T}/signing_key.pem" "${kernel_dir}/certs/signing_key.pem"
+		) || die
+	fi
+
 	# perform the version check for release ebuilds only
 	if [[ ${PV} != *9999 ]]; then
 		local expected_ver=$(dist-kernel_PV_to_KV "${PV}")
@@ -738,9 +747,9 @@ kernel-install_pkg_postinst() {
 kernel-install_pkg_postrm() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	if [[ ! ${KERNEL_IUSE_GENERIC_UKI} ]]; then
-		local kernel_dir=${EROOT}/usr/src/linux-${KV_FULL}
-		local image_path=$(dist-kernel_get_image_path)
+	local kernel_dir=${EROOT}/usr/src/linux-${KV_FULL}
+	local image_path=$(dist-kernel_get_image_path)
+	if [[ ! ${KERNEL_IUSE_GENERIC_UKI} && -d ${kernel_dir} ]]; then
 		ebegin "Removing initramfs"
 		rm -f "${kernel_dir}/${image_path%/*}"/{initrd,uki.efi} &&
 			find "${kernel_dir}" -depth -type d -empty -delete

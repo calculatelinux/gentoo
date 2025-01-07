@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -14,7 +14,7 @@ if [[ ${PV} == 9999 ]] ; then
 	inherit git-r3
 else
 	SRC_URI="https://github.com/linux-test-project/lcov/releases/download/v${PV}/${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~x86-linux ~x64-macos"
+	KEYWORDS="~amd64"
 fi
 
 LICENSE="GPL-2+"
@@ -33,12 +33,15 @@ RDEPEND="
 		virtual/perl-JSON-PP
 		dev-perl/JSON
 	)
+	dev-perl/Memory-Process
+	dev-perl/TimeDate
 	dev-perl/PerlIO-gzip
 "
 BDEPEND="
 	test? (
 		${RDEPEND}
 		dev-perl/GD
+		dev-perl/JSON
 		$(python_gen_any_dep '
 			dev-python/xlsxwriter[${PYTHON_USEDEP}]
 		')

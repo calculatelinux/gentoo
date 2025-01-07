@@ -33,6 +33,67 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2025-01-06)
+# Masked for testing
+=dev-lang/perl-5.40.1*
+~virtual/perl-File-Spec-3.910.0
+~virtual/perl-Module-CoreList-5.202.501.184_rc
+
+# Hans de Graaff <graaff@gentoo.org> (2025-01-06)
+# ruby32-only package. Depends on assumptions that are no longer true in
+# ruby33. No reverse dependencies left. Last release in 2007. Upstream
+# gone. Removal on 2025-02-06.
+dev-ruby/dust
+
+# Sam James <sam@gentoo.org> (2025-01-05)
+# Removed upstream in gstreamer-1.24. See bug #947522. Removal on 2025-02-05.
+media-plugins/gst-plugins-kate
+
+# Paul Zander <negril.nx+gentoo@gmail.com> (2025-01-05)
+# Masked for testing
+>=dev-build/rocm-cmake-6.3.0
+>=dev-libs/hipother-6.3.0
+>=dev-libs/rccl-6.3.0
+>=dev-libs/rocdbgapi-6.3.0
+>=dev-libs/rocm-comgr-6.3.0
+>=dev-libs/rocm-device-libs-6.3.0
+>=dev-libs/rocm-opencl-runtime-6.3.0
+>=dev-libs/rocr-runtime-6.3.0
+>=dev-libs/roct-thunk-interface-6.3.0
+>=dev-util/hip-6.3.0
+>=dev-util/hipcc-6.3.0
+>=dev-util/hipify-clang-6.3.0
+>=dev-util/rocm_bandwidth_test-6.3.0
+>=dev-util/rocm-smi-6.3.0
+>=dev-util/rocminfo-6.3.0
+>=dev-util/roctracer-6.3.0
+>=dev-util/Tensile-6.3.0
+>=sci-libs/composable-kernel-6.3.0
+>=sci-libs/hipBLAS-common-6.3.0
+>=sci-libs/hipBLAS-6.3.0
+>=sci-libs/hipBLASLt-6.3.0
+>=sci-libs/hipCUB-6.3.0
+>=sci-libs/hipFFT-6.3.0
+>=sci-libs/hipRAND-6.3.0
+>=sci-libs/hipSOLVER-6.3.0
+>=sci-libs/hipSPARSE-6.3.0
+>=sci-libs/miopen-6.3.0
+>=sci-libs/rocBLAS-6.3.0
+>=sci-libs/rocFFT-6.3.0
+>=sci-libs/rocPRIM-6.3.0
+>=sci-libs/rocRAND-6.3.0
+>=sci-libs/rocSOLVER-6.3.0
+>=sci-libs/rocSPARSE-6.3.0
+>=sci-libs/rocThrust-6.3.0
+>=sci-libs/rocWMMA-6.3.0
+>=sci-libs/rpp-6.3.0
+
+# Nowa Ammerlaan <nowa@gentoo.org> (2025-01-03)
+# Contains a serious bug that can cause deletion of the users home dir.
+# See-also: https://github.com/keshavbhatt/whatsie/issues/230
+# Removal on 2025-03-03 unless upstream fixes the issue
+net-im/whatsie
+
 # Maciej Barć <xgqt@gentoo.org> (2025-01-02)
 # Deprecated LEAN 3 packages. The "mathlib-tools" repo is archived
 # (https://github.com/leanprover-community/mathlib-tools). Migrate to LEAN 4.
@@ -141,26 +202,6 @@ kde-frameworks/kemoticons
 =sys-kernel/vanilla-kernel-6.12.2
 =virtual/dist-kernel-6.12.2
 
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2024-12-04)
-# Bugs #845294 #757543 #517744 #704198 #366739 #350302 #614318 #637422
-# #738898 #501586.
-# Blocks removal of dev-java/swt-3.7.2-r4, bug #944885.
-# Users should switch to dev-util/android-sdk-cmdline-tools for a CLI replacement
-# or dev-util/android-studio for a GUI replacement.
-# Removal on 2025-01-04
-dev-util/android-sdk-update-manager
-dev-java/swt:3.7
-
-# Patrick Lauer <patrick@gentoo.org> (2024-12-01)
-# ROCm 6.2 builds but doesn't work at all for me
->=dev-libs/roct-thunk-interface-6.2
->=dev-libs/rocm-comgr-6.2
->=dev-libs/rocm-device-libs-6.2
->=dev-libs/rocr-runtime-6.2
->=dev-libs/rocm-opencl-runtime-6.2
->=dev-util/hipcc-6.2
->=dev-util/hip-6.2
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2024-11-28)
 # Grave data loss bug. See also:
 # https://github.com/nicotine-plus/nicotine-plus/issues/3152
@@ -244,14 +285,6 @@ dev-php/swoole
 =virtual/rust-1.80.1
 =virtual/rust-1.81.0-r1
 =virtual/rust-1.82.0
-
-# Matt Jolly <kangie@gentoo.org> (2024-11-09)
-# Does not build with any rust version in the tree. Removal in 30 days.
-=dev-lang/starlark-rust-0.8.0
-
-# Matt Jolly <kangie@gentoo.org> (2024-11-09)
-# Does not build with any rust version in the tree. Removal in 30 days.
-=dev-util/wasmer-0.11.0
 
 # Viorel Munteanu <ceamac@gentoo.org> (2024-10-18)
 # Experimental version, for testing purposes only.
@@ -499,11 +532,6 @@ x11-drivers/nvidia-drivers:0/vulkan
 # dev-build/automake version 1.11 is EOL and is only useful for testing
 # old de-ANSI-fication/ansi2knr/AM_C_PROTOTYPES code. Please uninstall.
 dev-build/automake:1.11
-
-# Joonas Niilola <juippis@gentoo.org> (2021-07-29)
-# Upstream provided migration instructions from 2. -> 3. update,
-# breaks if not all at least many revdeps. #805011 for tracker bug.
->=net-libs/mbedtls-3.0.0
 
 # Michał Górny <mgorny@gentoo.org> (2021-07-06)
 # Upstream changed license to GPL-3+ in order to deliberately cause

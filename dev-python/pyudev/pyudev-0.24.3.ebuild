@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/pyudev/pyudev/archive/refs/tags/v${PV}.tar.gz -> ${P
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm arm64 ~loong ~mips ppc ppc64 ~riscv sparc x86"
 IUSE="qt5"
 
 # Known to fail on test system that aren't exactly the same devices as on CI
@@ -70,6 +70,15 @@ python_test() {
 		tests/test_monitor.py::TestMonitorObserver::test_fake
 	)
 	epytest tests
+}
+
+src_test() {
+	local virt=$(systemd-detect-virt 2>/dev/null)
+	if [[ ${virt} == systemd-nspawn ]] ; then
+		ewarn "Skipping tests because in systemd-nspawn container"
+	else
+		distutils-r1_src_test
+	fi
 }
 
 pkg_postinst() {

@@ -496,7 +496,6 @@ app-editors/vscodium:egl - Use EGL platform, enables smooth rending in high refr
 app-editors/vscodium:wayland - Run in wayland mode under wayland sessions, xwayland otherwise. This flag doesn't affect x11 sessions.
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:bignum - Support for OpenSSL bignum implementation
-app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop library
 app-editors/xemacs:pop - Support POP for mail retrieval
 app-editors/xemacs:xim - Enable X11 XiM input method
 app-editors/zed:gles - Use simplified OpenGLES instead of full-scale OpenGL
@@ -2190,7 +2189,9 @@ dev-libs/pocl:hwloc - Enable hwloc support
 dev-libs/pocl:memmanager - Enables custom memory manager. Except for special circumstances, this should be disabled
 dev-libs/poco:7z - Add Support for the 7z archive format
 dev-libs/poco:activerecord - Add ActiveRecord support
+dev-libs/poco:avahi - Add Support for avahi DNS-SD (zeroconf)
 dev-libs/poco:cppparser - Build and install a minimal C++ parser
+dev-libs/poco:crypt - Encryption and digital signing classes (including SSL and JWT).
 dev-libs/poco:data - Database abstraction layer to easily send/retrieve data to/from various databases
 dev-libs/poco:file2pagecompiler - Utility to convert ordinary files to Page Compiler source files
 dev-libs/poco:json - Add JSON support
@@ -2202,7 +2203,7 @@ dev-libs/poco:pagecompiler - Simple compiler translating HTML pages containing e
 dev-libs/poco:pocodoc - POCO documentation generator
 dev-libs/poco:prometheus - Add prometheus monitoring system support
 dev-libs/poco:ssl - Encryption and digital signing classes
-dev-libs/poco:util - Several utility classes (like logger, timer, config file parser)
+dev-libs/poco:util - Several utility classes (like logger, timer, config file parser). Also enables JSON
 dev-libs/poco:zip - Add support for the zip & gz archive formats
 dev-libs/ppl:cdd - Build the ppl_lcdd program for vertex/facet enumeration accepting the same input format as the programs shipped with sci-libs/cddlib and sci-libs/lrslib
 dev-libs/ppl:lpsol - Build the ppl_lpsol linear program solver that uses sci-mathematics/glpk for its input routines
@@ -3554,9 +3555,7 @@ kde-apps/kig:scripting - Support Python scripting
 kde-apps/kio-extras:X - Enable support for XCursor thumbnails via x11-libs/libX11
 kde-apps/kio-extras:activities - Enable activities KIO worker and fileitem plugin
 kde-apps/kio-extras:ios - Enable AFC (Apple File Conduit) KIO worker for iOS devices support
-kde-apps/kio-extras:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 kde-apps/kio-extras:man - Enable manpages KIO worker
-kde-apps/kio-extras:nfs - Enable NFS support using net-libs/libtirpc
 kde-apps/kio-extras:phonon - Enable file audio preview plugin using media-libs/phonon
 kde-apps/kio-extras:sftp - Enable SFTP protocol support using net-libs/libssh
 kde-apps/kio-extras:taglib - Enable audio thumbnails via media-libs/taglib
@@ -3570,7 +3569,6 @@ kde-apps/ksystemlog:kdesu - Run as root using kdesu from kde-plasma/kde-cli-tool
 kde-apps/ktouch:X - Enable support for X11 Keyboard Layout Detection
 kde-apps/kwave:qtmedia - Enable playback via Qt5Multimedia
 kde-apps/libkdepim:designer - Build plugins for dev-qt/designer
-kde-apps/libkgapi:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 kde-apps/libksane:kwallet - Enable encrypted storage of passwords with kde-frameworks/kwallet
 kde-apps/mailcommon:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
 kde-apps/mailcommon:designer - Build plugins for dev-qt/designer
@@ -3636,7 +3634,6 @@ kde-frameworks/sonnet:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
 kde-misc/kdeconnect:X - Enable remote input mousepad plugin using x11-libs/libfakekey
 kde-misc/kdeconnect:pulseaudio - Enable system volume control plugin using media-libs/libpulse
 kde-misc/kdeconnect:telephony - Enable telephony plugin using kde-frameworks/modemmanager-qt
-kde-misc/kio-gdrive:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 kde-misc/kio-gdrive:share - Enable support for a share menu using kde-frameworks/purpose
 kde-misc/krename:office - Enable support for file naming based on ODF metadata
 kde-misc/tellico:bibtex - Add support for bibtex importing using btparse from dev-perl/Text-BibTeX
@@ -4283,6 +4280,7 @@ media-libs/gst-plugins-base:ivorbis - Enable integer based vorbis decoder
 media-libs/gst-plugins-base:opengl - Enable OpenGL library and plugin via desktop OpenGL API
 media-libs/gst-plugins-base:pango - Enable pango GStreamer plugin
 media-libs/gst-plugins-base:wayland - Enable Wayland EGL windowing system support (requires egl and at least one of gles2 or opengl)
+media-libs/gstreamer:ptp - Controls Precision Time Protocol (PTP) helper. Written in Rust.
 media-libs/gstreamer:unwind - Enable sys-libs/libunwind usage for better backtrace support in leaks tracer module
 media-libs/harfbuzz:experimental - Enable experimental APIs
 media-libs/harfbuzz:glib - Enable dev-libs/glib unicode functions
@@ -4474,12 +4472,11 @@ media-libs/opus:osce - Enable Opus Speech Coding Enhancement (OSCE)
 media-libs/opusfile:fixed-point - Enable fixed-point arithmetic operations
 media-libs/opusfile:float - Enable floating point arithmetic operations
 media-libs/opusfile:http - Enable http connections
-media-libs/osl:gui - Build the osltoy binary (with Qt5)
+media-libs/osl:gui - Build the osltoy binary
 media-libs/osl:libcxx - Build against llvm-runtimes/libcxx when using clang
 media-libs/osl:nofma - Do not use Fuse-Multiply-Add operations
 media-libs/osl:optix - Add support for NVIDIA's OptiX Raytracing Engine
 media-libs/osl:partio - Use media-libs/partio
-media-libs/osl:qt6 - Build the osltoy binary (with Qt6)
 media-libs/phonon:designer - Install plugin for dev-qt/designer
 media-libs/portmidi:test-programs - Install various example programs
 media-libs/quarter:designer - Install plugin for dev-qt/designer
@@ -4868,7 +4865,8 @@ media-sound/qmmp:cue - enable CUE sheet parsing
 media-sound/qmmp:dbus - Enable DBus notifiications and MPRIS support
 media-sound/qmmp:enca - Detects the character encoding automatically
 media-sound/qmmp:game - Enable Game music support
-media-sound/qmmp:gnome - Enable Gnome hotkey support (requires Qt5DBus)
+media-sound/qmmp:gnome - Enable Gnome hotkey support (requires QtDBus)
+media-sound/qmmp:libxmp - Enable module files renderer (modplug replacement) via media-libs/libxmp
 media-sound/qmmp:lyrics - Fetch track lyrics from the web
 media-sound/qmmp:midi - Enable midi support using wildmidi library
 media-sound/qmmp:notifier - Enable qmmps' notifier system
@@ -5898,7 +5896,6 @@ net-im/telegram-desktop:enchant - Use the app-text/enchant spell-checking backen
 net-im/telegram-desktop:fonts - Use builtin patched copy of open-sans fonts (overrides fontconfig)
 net-im/telegram-desktop:libdispatch - Use dev-libs/libdispatch to speed up concurrent code execution
 net-im/telegram-desktop:qt6 - Build with Qt6 support
-net-im/telegram-desktop:qt6-imageformats - Add support for HEIF, AVIF and JpegXL by bundling kde-frameworks/kimageformats
 net-im/tkabber:plugins - Enables installation the extra plugins
 net-im/tokodon:mpv - Use media-libs/mpvqt instead of dev-qt/qtmultimedia for video playback (default)
 net-im/tokodon:webengine - Use dev-qt/qtwebengine for built-in authentication page (default is external browser)
@@ -7265,6 +7262,7 @@ sci-libs/coinor-cppad:eigen - Add support for Eigen (dev-cpp/eigen)
 sci-libs/coinor-cppad:ipopt - Add support for IPOPT (sci-libs/ipopt)
 sci-libs/coinor-symphony:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
 sci-libs/coinor-utils:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
+sci-libs/composable-kernel:profiler - Build and install the Composable Kernal profiler (ckProfiler)
 sci-libs/dealii:adolc - Adds support for ADOL-C (sci-libs/adolc)
 sci-libs/dealii:arborx - Adds support for ARBORX (sci-libs/arborx)
 sci-libs/dealii:arpack - Adds support for ARPACK (sci-libs/arpack)
@@ -7327,6 +7325,7 @@ sci-libs/hdf5:hl - Enable high level API (https://support.hdfgroup.org/HDF5/doc/
 sci-libs/hdf5:unsupported - Enable unsupported combinations of configuration options
 sci-libs/hipCUB:benchmark - Build and install benchmark binaries.
 sci-libs/hipSOLVER:sparse - Build hipSOLVER with sparse functionality (sci-libs/cholmod)
+sci-libs/hipSPARSE:benchmark - Build and install hipsparse-bench.
 sci-libs/hypre:int64 - Build the 64 bits integer library
 sci-libs/indilib:rtlsdr - Enable support for devices supported by net-wireless/rtl-sdr
 sci-libs/indilib:websocket - Enable support for WebSocket protocol
@@ -7363,6 +7362,10 @@ sci-libs/mathgl:octave - Add bindings for sci-mathematics/octave
 sci-libs/matio:sparse - Extend formats for sparse matrix (not matlab)
 sci-libs/metis:double-precision - Use double- rather than single-precision floating-point representation
 sci-libs/metis:int64 - Use 64- rather than 32-bit integer representation (needed for > 2^31 vertices)
+sci-libs/miopen:composable-kernel - Use composable-kernel for GEMM-like and reduction-like operators.
+sci-libs/miopen:hipblaslt - Use hipBLASLt for some non-batched and strided batched problems.
+sci-libs/miopen:rocblas - Build with rocBLAS support
+sci-libs/miopen:roctracer - Build with roctracer support
 sci-libs/mumps:metis - Enable matrix ordering with METIS (sci-libs/metis, sci-libs/parmetis)
 sci-libs/mumps:scotch - Enable matrix ordering with sci-libs/scotch
 sci-libs/netcdf:blosc - Allow using blosc compression via dev-libs/c-blosc
@@ -7402,6 +7405,7 @@ sci-libs/plplot:octave - Add bindings for sci-mathematics/octave
 sci-libs/plplot:qhull - Add bindings for media-libs/qhull
 sci-libs/plplot:shapefile - Enable support for ESRI shapefiles
 sci-libs/rocBLAS:benchmark - Build and install rocblas-bench.
+sci-libs/rocBLAS:hipblaslt - Build with hipBLASLt for some non-batched and strided batched problems on gfx12.
 sci-libs/rocBLAS:test - Perform rocblas-test to compare the result between rocBLAS and system BLAS.
 sci-libs/rocFFT:benchmark - Build and install rocfft benchmark tools.
 sci-libs/rocFFT:perfscripts - Install rocfft-perf performance visualization suite.
@@ -7513,6 +7517,7 @@ sci-mathematics/lcalc:double - Use double precision (the upstream default)
 sci-mathematics/lcalc:double-double - Use sci-libs/qdfor double-double precision
 sci-mathematics/lcalc:pari - Use sci-mathematics/pari for elliptic curve L-functions
 sci-mathematics/lcalc:quad-double - Use sci-libs/qdfor quad-double precision
+sci-mathematics/manifold:tbb - Enable Parallel backend with dev-cpp/tbb
 sci-mathematics/mathematica:R - Enable dev-lang/R backend support
 sci-mathematics/mathematica:bundle - Install from Wolfram's bundle file or from Mathematica only
 sci-mathematics/mathematica:ffmpeg - Enable media-video/ffmpeg backend support
@@ -8592,6 +8597,7 @@ www-client/firefox:system-libvpx - Use the system-wide media-libs/libvpx instead
 www-client/firefox:system-png - Use the system-wide media-libs/libpng instead of bundled (requires APNG patches)
 www-client/firefox:system-webp - Use the system-wide media-libs/libwebp instead of bundled
 www-client/firefox:wasm - Sandbox certain third-party libraries through WebAssembly using RLBox
+www-client/firefox:wasm-sandbox - Sandbox certain third-party libraries through WebAssembly using RLBox
 www-client/firefox:wifi - Enable necko-wifi for NetworkManager integration, and access point MAC address scanning for better precision with opt-in geolocation services
 www-client/firefox-bin:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
 www-client/jd:migemo - Enable migemo support for Japanese
@@ -8765,6 +8771,7 @@ x11-libs/libwnck:tools - Install wnckprop-3 and wnck-urgency-monitor-3 command-l
 x11-libs/libxcb:xkb - Enable the XCB keyboard extension
 x11-libs/libxkbcommon:tools - Build the xkbcli tools
 x11-libs/pango:X - Build and install the legacy pangoxft library
+x11-libs/pango:examples - Install source code examples
 x11-libs/pango:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 x11-libs/pixman:loongson2f - Enable Loongson2f MMI optimizations.
 x11-libs/qscintilla:designer - Build plugin for Qt Designer

@@ -137,6 +137,9 @@ fi
 kernel-build_pkg_setup() {
 	python-any-r1_pkg_setup
 	if [[ ${KERNEL_IUSE_MODULES_SIGN} && ${MERGE_TYPE} != binary ]]; then
+		# inherits linux-info to check config values for keys
+		# ensure KV_FULL will not be set globally, that breaks configure
+		local KV_FULL
 		secureboot_pkg_setup
 
 		if use modules-sign && [[ -n ${MODULES_SIGN_KEY} ]]; then
@@ -444,6 +447,11 @@ kernel-build_src_install() {
 
 	# Copy built key/certificate files
 	cp -p build/certs/* "${ED}${kernel_dir}/certs/" || die
+	# If a key was generated, exclude it from the binpkg
+	local generated_key=${ED}${kernel_dir}/certs/signing_key.pem
+	if [[ -r ${generated_key} ]]; then
+		mv "${generated_key}" "${T}/signing_key.pem" || die
+	fi
 
 	# building modules fails with 'vmlinux has no symtab?' if stripped
 	use ppc64 && dostrip -x "${kernel_dir}/${image_path}"
@@ -587,14 +595,18 @@ kernel-build_src_install() {
 			done
 
 			if [[ ${KERNEL_IUSE_MODULES_SIGN} ]] && use secureboot; then
+				# --pcrpkey is appended as is. If the certificate and key
+				# are in the same file, we could accidentally leak the key
+				# into the UKI. Pass the certificate through openssl to ensure
+				# that it truly contains *only* the certificate.
 				openssl x509 \
 					-in "${SECUREBOOT_SIGN_CERT}" -inform PEM \
-					-out ${T}/pcrpkey.der -outform DER ||
-						die "Failed to convert certificate to DER format"
+					-out "${T}/pcrpkey.pem" -outform PEM ||
+						die "Failed to extract certificate"
 				ukify_args+=(
 					--secureboot-private-key="${SECUREBOOT_SIGN_KEY}"
 					--secureboot-certificate="${SECUREBOOT_SIGN_CERT}"
-					--pcrpkey="${T}/pcrpkey.der"
+					--pcrpkey="${T}/pcrpkey.pem"
 					--measure
 				)
 				if [[ ${SECUREBOOT_SIGN_KEY} == pkcs11:* ]]; then
@@ -647,7 +659,6 @@ kernel-build_pkg_postinst() {
 			ewarn "MODULES_SIGN_KEY was not set, this means the kernel build system"
 			ewarn "automatically generated the signing key. This key was installed"
 			ewarn "in ${EROOT}/usr/src/linux-${KV_FULL}/certs"
-			ewarn "and will also be included in any binary packages."
 			ewarn "Please take appropriate action to protect the key!"
 			ewarn
 			ewarn "Recompiling this package causes a new key to be generated. As"

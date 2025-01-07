@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -10,7 +10,7 @@ inherit ada multiprocessing
 XMLADA=xmlada-${PV}
 
 DESCRIPTION="Multi-Language Management"
-HOMEPAGE="http://libre.adacore.com/"
+HOMEPAGE="https://github.com/AdaCore/gprbuild"
 SRC_URI="
 	https://github.com/AdaCore/${PN}/archive/refs/tags/v${PV}.tar.gz
 		-> ${P}.tar.gz
@@ -18,7 +18,7 @@ SRC_URI="
 		-> ${XMLADA}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~x86"
 IUSE="doc"
 
 DEPEND="${ADA_DEPS}
@@ -34,6 +34,10 @@ src_prepare() {
 	sed -i \
 		-e "s:@GNATBIND@:${GNATBIND}:g" \
 		src/gprlib.adb \
+		|| die
+	sed -i \
+		-e "s|\"gnatbind\"|\"gnatbind-${GCC_PV}\"|" \
+		src/gprbind.adb \
 		|| die
 	cd gpr/src || die
 	ln -s gpr-util-put_resource_usage__unix.adb \

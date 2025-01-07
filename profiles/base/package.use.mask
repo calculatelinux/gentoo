@@ -1,7 +1,20 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # New entries go on top.
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2025-01-04)
+# No suitable versions of dev-libs/protobuf available.
+=dev-java/protobuf-java-4.29.1 system-protoc
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-03)
+# Blocking cleanup of kde-apps/kdegraphics-mobipocket:5
+kde-frameworks/kfilemetadata:5 mobi
+media-gfx/okularpart:5 mobi
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-03)
+# Prepare cleanup of kde-apps/kaccounts-integration:6[qt5]
+kde-frameworks/purpose:5 kaccounts
 
 # Michał Górny <mgorny@gentoo.org> (2024-12-31)
 # None of the sci-libs/symengine versions work with the modern versions
@@ -12,13 +25,13 @@ sci-libs/symengine boost
 # Currently experimental features do not compile.
 app-emulation/pcem experimental
 
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2024-12-29)
+# openjfx for OpenJDK 25 is not yet available.
+dev-java/openjdk:25 javafx
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2024-12-28)
 # Prepare virtual/bitcoin-leveldb last-rites, bug #945359
 net-p2p/bitcoin-core system-leveldb
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2024-12-20)
-# openjfx for OpenJDK 24 is not yet available.
-dev-java/openjdk:24 javafx
 
 # Paul Zander <negril.nx+gentoo@gmail.com> (2024-12-16)
 # sci-libs/atlas requires you to disable frequency scaling to build.
@@ -40,11 +53,6 @@ sci-libs/vtk qt5
 # dev-python/pyside2 last-rites
 dev-python/qtpy pyside2
 
-# Mats Lidell <matsl@gentoo.org> (2024-11-20)
-# The dependency x11-libs/dnd blocks gcc-14, is only used by XEmacs,
-# and upstream is not sure it even works so dropping use. #908831
-app-editors/xemacs dnd
-
 # Sam James <sam@gentoo.org> (2024-11-17)
 # The example bindings fail to build.
 ~sys-libs/ncurses-6.5_p20241109 cxx
@@ -62,10 +70,6 @@ www-client/chromium system-icu
 # Joonas Niilola <juippis@gentoo.org> (2024-11-07)
 # Dependency for generating docs not packaged in Gentoo. #942992
 dev-util/repolite doc
-
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2024-11-01)
-# No suitable versions of dev-libs/protobuf available.
->=dev-java/protobuf-java-4.28.1 system-protoc
 
 # Sam James <sam@gentoo.org> (2024-10-29)
 # Currently needs patched dev-util/sysprof.
@@ -512,7 +516,8 @@ dev-util/rizin test
 # Sam James <sam@gentoo.org> (2021-12-27)
 # Doc building is broken and no new releases in a long time.
 # bug #830013
-sci-libs/flann doc
+# fixed in sci-libs/flann-1.9.2-20221027
+<=sci-libs/flann-1.9.2 doc
 
 # Joonas Niilola <juippis@gentoo.org> (2021-12-20)
 # Broken, upstream issue/PR open since 2021-05 without reply.

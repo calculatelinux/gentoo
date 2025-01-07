@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -24,6 +24,7 @@ BDEPEND="
 	doc? (
 		app-text/doxygen
 		virtual/pandoc
+		media-gfx/graphviz
 	)
 	virtual/pkgconfig
 	"
@@ -33,7 +34,7 @@ if [[ ${PV} == 9999* ]]; then
 	EGIT_REPO_URI="https://github.com/intel/mptcpd.git"
 else
 	SRC_URI="https://github.com/intel/mptcpd/releases/download/v${PV}/${P}.tar.gz"
-	KEYWORDS="~amd64"
+	KEYWORDS="amd64"
 fi
 
 CONFIG_CHECK="MPTCP"
