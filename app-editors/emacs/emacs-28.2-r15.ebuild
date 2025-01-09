@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -137,10 +137,7 @@ EMACS_SUFFIX="emacs-${SLOT}"
 SITEFILE="20${EMACS_SUFFIX}-gentoo.el"
 
 # Suppress false positive QA warnings #898304 #925449
-QA_CONFIG_IMPL_DECL_SKIP=(
-	malloc_set_state malloc_get_state MIN
-	statvfs64 re_set_syntax re_compile_pattern re_search re_match
-)
+QA_CONFIG_IMPL_DECL_SKIP=( malloc_{get,set}_state statvfs64 )
 
 src_prepare() {
 	if [[ ${PV##*.} = 9999 ]]; then
@@ -495,7 +492,7 @@ src_install() {
 	X	   (while (and (cdr q) (not (string-match re (cadr q))))
 	X	     (setq q (cdr q)))
 	X	   (setcdr q (cons dir (delete dir (cdr q))))
-	X	   (setenv "INFOPATH" (mapconcat 'identity (cdr p) ":"))))))
+	X	   (setenv "INFOPATH" (mapconcat #'identity (cdr p) ":"))))))
 	EOF
 	elisp-site-file-install "${T}/${SITEFILE}" || die
 
@@ -544,16 +541,13 @@ pkg_postinst() {
 	elisp-site-regen
 	readme.gentoo_print_elog
 
-	if use livecd; then
-		# force an update of the emacs symlink for the livecd/dvd,
-		# because some microemacs packages set it with USE=livecd
-		eselect emacs update
-	else
-		eselect emacs update ifunset
-	fi
+	# Force an update of the emacs symlink for the livecd/dvd,
+	# because some microemacs packages set it with USE=livecd.
+	# Otherwise, create it only when it is not yet set.
+	eselect --root="${ROOT}" emacs update $(usev !livecd ifunset)
 }
 
 pkg_postrm() {
 	elisp-site-regen
-	eselect emacs update ifunset
+	eselect --root="${ROOT}" emacs update ifunset
 }

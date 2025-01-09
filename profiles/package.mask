@@ -33,6 +33,27 @@
 
 #--- END OF EXAMPLES ---
 
+# Andrey Grozin <grozin@gentoo.org> (2024-01-09)
+# Unsupported old version, newer versions are not open-source.
+# Depends on Qt5.
+# Bugs 499030, 437262, 597268, 603592, 734890, 745495, 947740.
+# Use app-text/crqt-ng instead.
+# Removal on 2025-02-08.
+app-text/fbreader
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-01-09)
+# Last release from 2017; fails to build w/ GCC-14 and qscintilla-2.14.1.
+# Depends on Qt5. Removal on 2025-02-08.
+dev-db/tora
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-01-08)
+# Qt5-based library without any revdeps. Removal on 2025-02-07.
+dev-libs/kqoauth
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2024-01-08)
+# Qt5-based library without any revdeps. Removal on 2025-02-07.
+dev-libs/qcoro5
+
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2025-01-06)
 # Masked for testing
 =dev-lang/perl-5.40.1*
@@ -140,9 +161,11 @@ dev-libs/dmalloc
 dev-python/pslab
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2024-12-28)
-# Cleanup transitional Bitcoin Core meta packages, as well as
+# Cleanup transitional Bitcoin meta packages, as well as
 # unmaintainable net-p2p/bitcoin-core[system-leveldb] and
-# virtual/bitcoin-leveldb. Removal on 2025-01-27. Bug #945359
+# virtual/bitcoin-leveldb. Use net-p2p/bitcoin-core instead which is
+# the same as these packages but merged into one ebuild for maintainability.
+# Removal on 2025-01-27. Bug #945359
 dev-util/bitcoin-tx
 net-libs/libbitcoinconsensus
 net-p2p/bitcoin-cli
