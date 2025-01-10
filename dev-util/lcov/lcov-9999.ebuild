@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 inherit optfeature prefix python-any-r1
 
 DESCRIPTION="A graphical front-end for GCC's coverage testing tool gcov"
@@ -14,7 +14,7 @@ if [[ ${PV} == 9999 ]] ; then
 	inherit git-r3
 else
 	SRC_URI="https://github.com/linux-test-project/lcov/releases/download/v${PV}/${P}.tar.gz"
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 LICENSE="GPL-2+"
@@ -27,6 +27,7 @@ RDEPEND="
 	dev-lang/perl
 	dev-perl/Capture-Tiny
 	dev-perl/DateTime
+	dev-perl/Devel-Cover
 	|| (
 		dev-perl/JSON-XS
 		dev-perl/Cpanel-JSON-XS
@@ -36,19 +37,23 @@ RDEPEND="
 	dev-perl/Memory-Process
 	dev-perl/TimeDate
 	dev-perl/PerlIO-gzip
+	virtual/perl-Module-Load-Conditional
+	virtual/perl-Scalar-List-Utils
 "
 BDEPEND="
 	test? (
 		${RDEPEND}
 		dev-perl/GD
-		dev-perl/JSON
 		$(python_gen_any_dep '
+			dev-python/coverage[${PYTHON_USEDEP}]
 			dev-python/xlsxwriter[${PYTHON_USEDEP}]
 		')
 	)
 "
 
 python_check_deps() {
+	python_has_version "dev-python/coverage[${PYTHON_USEDEP}]" \
+		&& \
 	python_has_version "dev-python/xlsxwriter[${PYTHON_USEDEP}]"
 }
 
