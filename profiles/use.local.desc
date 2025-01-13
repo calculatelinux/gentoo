@@ -1408,7 +1408,6 @@ dev-db/percona-server:server - Build the server program
 dev-db/percona-server:tokudb - Add support for TokuDB storage engine
 dev-db/percona-server:tokudb-backup-plugin - Builds the TokuDB backup plugin
 dev-db/pgbouncer:c-ares - Use c-ares as the DNS backend instead of evdns (libevent).
-dev-db/pgbouncer:udns - Use udns as the DNS backend instead of evdns (libevent). Supports IPv4 only.
 dev-db/pgpool2:memcached - Use memcached for query caching.
 dev-db/phpmyadmin:setup - Installs the phpMyAdmin setup utility. Users who don't use the utility should disable this USE flag for security reasons as the setup tool was the target of various exploits in the past.
 dev-db/postgis:address-standardizer - Normalize US and CA postal addresses
@@ -1931,7 +1930,6 @@ dev-libs/apr:old-kernel - Enable compatibility with older kernels
 dev-libs/apr:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/apr-util:nss - Install apr_crypto_nss module
 dev-libs/apr-util:openssl - Install apr_crypto_openssl module
-dev-libs/atcore:gui - Build test GUI
 dev-libs/bitset:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations
 dev-libs/boehm-gc:large - optimize for large heap size (also increases max root sets)
 dev-libs/boost:context - Build and install the Boost.Context (and Boost.Fiber) library and all other Boost libraries that depend on it
@@ -2917,7 +2915,6 @@ dev-util/ostree:archive - Use libarchive
 dev-util/ostree:dracut - Install dracut module
 dev-util/ostree:gpg - Enable GPG support
 dev-util/ostree:grub - Enable grub configuration generator
-dev-util/ostree:httpd - Enable ostree trivial-httpd entrypoint
 dev-util/ostree:libmount - Use libmount
 dev-util/ostree:sodium - Use libsodium for ed25519
 dev-util/ostree:soup - Use libsoup for networking
@@ -4101,6 +4098,7 @@ media-gfx/fontforge:truetype-debugger - Enable truetype debugger in fontforge
 media-gfx/fontforge:woff2 - Enable support for WOFF2 format
 media-gfx/fotowall:webcam - Enable webcam support
 media-gfx/freecad:addonmgr - Build the addon manager module for automatic handling of 3rd party addons
+media-gfx/freecad:assembly - Build the assembly module to create 3D models composed of several distinguishable parts as a conformed machine.
 media-gfx/freecad:bim - Build the BIM module and workbench
 media-gfx/freecad:cam - Build the CAM module and workbench
 media-gfx/freecad:cloud - Build the Cloud workbench, to access cloud providers (mostly Amazon S3).

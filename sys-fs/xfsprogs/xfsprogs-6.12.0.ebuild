@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -21,7 +21,10 @@ RDEPEND="
 	icu? ( dev-libs/icu:= )
 	libedit? ( dev-libs/libedit )
 "
-DEPEND="${RDEPEND}"
+DEPEND="
+	${RDEPEND}
+	>=sys-kernel/linux-headers-6.11
+"
 BDEPEND="nls? ( sys-devel/gettext )"
 RDEPEND+=" selinux? ( sec-policy/selinux-xfs )"
 

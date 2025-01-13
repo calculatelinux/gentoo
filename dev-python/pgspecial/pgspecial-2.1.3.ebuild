@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -16,7 +16,7 @@ HOMEPAGE="
 
 LICENSE="BSD MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~x86"
+KEYWORDS="amd64 arm64 x86"
 
 RDEPEND="
 	>=dev-python/click-4.1[${PYTHON_USEDEP}]
@@ -41,6 +41,9 @@ EPYTEST_DESELECT=(
 	# change in postgres? *shrug*
 	tests/test_specials.py::test_slash_d_view_verbose
 	tests/test_specials.py::test_slash_dn
+	# fails with postgresql:17
+	tests/test_specials.py::test_slash_ddp
+	tests/test_specials.py::test_slash_ddp_pattern
 )
 
 src_test() {

@@ -33,6 +33,36 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-11)
+# Last release from 2012, dead upstream for 7 years, no Gentoo maintainer.
+# Depends on dev-qt/qtwebengine:5, removed from almost every other distro.
+# Bugs #741849, #830220, #851507 and #926672. Removal on 2025-02-10.
+net-misc/fatrat
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-11)
+# Last release from 2020, effectively unmaintained in Gentoo as its
+# maintainer has moved on to taking care of it in rion overlay instead.
+# Depends on Qt5, app-crypt/qca[qt5], dev-qt/qtwebengine:5.
+# Bugs #755446, #926138, #926670. Removal on 2025-02-10.
+net-im/psi
+net-im/psimedia
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-11)
+# Qt5-based library without any revdeps. Depends on app-crypt/qca[qt5].
+# Removal on 2025-02-10.
+dev-libs/qoauth
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-11)
+# Last release from 2020, dead upstream; Depends on app-crypt/qca[qt5].
+# Bug #935556. Removal on 2025-02-10.
+net-im/dianara
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2025-01-10)
+# EAPI=7, maintainer needed, no reverse dependencies, fails to compile,
+# uses deprecated Go eclass.
+# Removal on 2025-02-09.  Bugs #947810, #856319, #844730, #771048, #679078.
+sys-cluster/zetcd
+
 # James Le Cuirot <chewi@gentoo.org> (2025-01-09)
 # Obsolete and needs to be dropped along with Qt5. The GTK theme has been
 # superseded by dev-qt/qtbase[gtk], which uses GTK 3 rather than GTK 2.
@@ -55,7 +85,7 @@ app-text/fbreader
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-09)
 # Last release from 2017; fails to build w/ GCC-14 and qscintilla-2.14.1.
-# Depends on Qt5. Removal on 2025-02-08.
+# Depends on Qt5. Bugs #914918, #917408. Removal on 2025-02-08.
 dev-db/tora
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-08)
@@ -143,13 +173,12 @@ acct-group/aspnet
 acct-user/aspnet
 www-servers/xsp
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-01-02)
-# No more revdeps, depends on Qt5. Removal on 2025-01-29.
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-02)
+# No more revdeps, depends on Qt5, bug #942178. Removal on 2025-01-29.
 dev-libs/libqt5pas
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-01)
-# Transitional package without any revdeps left.
-# Removal on 2025-01-31
+# Transitional package without any revdeps left. Removal on 2025-01-31
 kde-apps/konsolepart
 
 # Nowa Ammerlaan <nowa@gentoo.org> (2025-01-01)
@@ -190,24 +219,6 @@ virtual/bitcoin-leveldb
 # XEmacs 21.5.  Removal on 2025-01-24.
 app-xemacs/latin-unity
 app-xemacs/mule-ucs
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-12-14)
-# Last "release" seems to have been an AUR special, and even that is now
-# >6 years old and still KF5 based. No known repository, no tarball source
-# except AUR. Removal on 2025-01-13.
-app-crypt/kencfs-plasma
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-12-14)
-# Archived and unmaintained upstream; see also:
-# https://invent.kde.org/libraries/atcore/-/issues/2
-# Library without revdeps. Removal on 2025-01-13.
-dev-libs/atcore
-
-# Ulrich Müller <ulm@gentoo.org> (2024-12-13)
-# Unmaintained upstream: last release (2.40) in 2009, last commit
-# to upstream repository in 2017. Broken with Emacs 29.
-# Removal on 2025-01-12. Bug #911288.
-app-emacs/ecb
 
 # Michał Górny <mgorny@gentoo.org> (2024-12-05)
 # 6.12.2 does not boot for me.

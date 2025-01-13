@@ -73,7 +73,7 @@ IDEPEND="
 
 QA_PREBUILT="*"
 PATCHES=(
-	"${FILESDIR}"/${PN}-copy-firmware-r7.patch
+	"${FILESDIR}"/${PN}-copy-firmware-r8.patch
 )
 
 pkg_pretend() {
@@ -232,7 +232,7 @@ src_prepare() {
 
 src_install() {
 
-	local FW_OPTIONS=( "-v" )
+	local FW_OPTIONS=( "-v" "-j1" )
 	git config --global --add safe.directory "${S}" || die
 	local files_to_keep=
 

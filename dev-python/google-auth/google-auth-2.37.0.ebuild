@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -16,7 +16,7 @@ HOMEPAGE="
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~x86"
+KEYWORDS="amd64 arm64 x86"
 
 RDEPEND="
 	<dev-python/cachetools-6.0.0[${PYTHON_USEDEP}]
@@ -26,6 +26,7 @@ RDEPEND="
 "
 BDEPEND="
 	test? (
+		dev-python/aioresponses[${PYTHON_USEDEP}]
 		>=dev-python/cryptography-38.0.3[${PYTHON_USEDEP}]
 		dev-python/flask[${PYTHON_USEDEP}]
 		dev-python/freezegun[${PYTHON_USEDEP}]
