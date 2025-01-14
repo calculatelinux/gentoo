@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -16,7 +16,7 @@ else
 	SRC_URI="https://github.com/universal-ctags/ctags/archive/refs/tags/p6.1.${PV}.tar.gz -> ${P}.tar.gz"
 	S="${WORKDIR}"/${PN}-p6.1.${PV}
 
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x64-solaris"
+	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x64-solaris"
 fi
 
 LICENSE="GPL-2+"
@@ -55,6 +55,8 @@ src_prepare() {
 
 	default
 
+	# Don't automagically use Valgrind
+	sed -i -e '/if type valgrind/s:valgrind:valgrind-falseified:' Tmain/optscript.d/run.sh || die
 	#./misc/dist-test-cases > makefiles/test-cases.mak || die
 
 	eautoreconf
