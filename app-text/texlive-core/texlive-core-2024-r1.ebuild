@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -133,7 +133,7 @@ SRC_URI+=" )"
 S="${WORKDIR}/${MY_P}"
 LICENSE="BSD CC-BY-SA-4.0 GPL-1+ GPL-2 GPL-2+ GPL-3+ MIT TeX-other-free"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE="cjk X doc source tk +luajittex xetex xindy"
 
 TEXMF_PATH=/usr/share/texmf-dist
@@ -246,7 +246,7 @@ src_configure() {
 	filter-lto
 
 	# bug #946142
-	append-flags -std=gnu17
+	append-cflags -std=gnu17
 
 	# Needed for 32bit architectures, bug 928096
 	# This is upstream recommendation for the moment, see also
