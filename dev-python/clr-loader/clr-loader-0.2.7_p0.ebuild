@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -19,8 +19,11 @@ nxports@1.0.0
 inherit check-reqs dotnet-pkg distutils-r1
 
 DESCRIPTION="Generic pure Python loader for .NET runtimes"
-HOMEPAGE="https://pythonnet.github.io/clr-loader/
-	https://github.com/pythonnet/clr-loader/"
+HOMEPAGE="
+	https://pythonnet.github.io/clr-loader/
+	https://github.com/pythonnet/clr-loader/
+	https://pypi.org/project/clr_loader/
+"
 
 if [[ "${PV}" == *9999* ]] ; then
 	inherit git-r3
@@ -29,7 +32,7 @@ if [[ "${PV}" == *9999* ]] ; then
 else
 	inherit pypi
 
-	KEYWORDS="~amd64"
+	KEYWORDS="amd64"
 fi
 
 SRC_URI+=" ${NUGET_URIS} "

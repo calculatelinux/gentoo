@@ -188,7 +188,7 @@ src_prepare() {
 	default
 
 	# Used for upstream backports
-	[[ -d "${FILESDIR}"/${PV} ]] && eapply "${FILESDIR}"/${PV}
+	#[[ -d "${FILESDIR}"/${PV} ]] && eapply "${FILESDIR}"/${PV}
 }
 
 multilib_src_configure() {

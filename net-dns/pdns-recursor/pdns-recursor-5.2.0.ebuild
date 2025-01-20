@@ -86,6 +86,7 @@ S="${WORKDIR}"/${P/_/-}
 pkg_setup() {
 	lua-single_pkg_setup
 	filter-flags -ftree-vectorize
+	filter-lto
 	rust_pkg_setup
 }
 

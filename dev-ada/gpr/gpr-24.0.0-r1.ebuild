@@ -1,4 +1,4 @@
-# Copyright 2022-2024 Gentoo Authors
+# Copyright 2022-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -23,7 +23,7 @@ REQUIRED_USE="|| ( shared static-libs static-pic )
 RDEPEND="${ADA_DEPS}
 	dev-ada/xmlada[${ADA_USEDEP},shared?,static-libs?,static-pic?]
 	dev-ada/gnatcoll-core[${ADA_USEDEP},shared?,static-libs?,static-pic?]
-	dev-ada/gnatcoll-bindings[${ADA_USEDEP},shared?,static-libs?,static-pic?,iconv,gmp]
+	dev-ada/gnatcoll-bindings[${ADA_USEDEP},shared?,static-libs?,static-pic?,iconv(+),gmp]
 "
 
 DEPEND="${RDEPEND}

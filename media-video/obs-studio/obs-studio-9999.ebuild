@@ -141,8 +141,14 @@ DEPEND="
 		dev-libs/qr-code-generator
 	)
 "
-RDEPEND="${DEPEND}
-	qsv? ( media-libs/intel-mediasdk )
+RDEPEND="
+	${DEPEND}
+	qsv? (
+		|| (
+			media-libs/intel-mediasdk
+			media-libs/vpl-gpu-rt
+		)
+	)
 "
 
 QA_PREBUILT="
@@ -249,8 +255,8 @@ src_install() {
 	cmake_src_install
 
 	# external plugins may need some things not installed by default, install them here
-	insinto /usr/include/obs/UI/obs-frontend-api
-	doins UI/obs-frontend-api/obs-frontend-api.h
+	insinto /usr/include/obs/frontend/api
+	doins frontend/api/obs-frontend-api.h
 }
 
 pkg_postinst() {

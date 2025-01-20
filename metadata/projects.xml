@@ -963,13 +963,13 @@
     <url>https://wiki.gentoo.org/wiki/Project:GSoC</url>
     <description>The central project to unite efforts for Google Summer of Code participation</description>
     <member>
-      <email>alicef@gentoo.org</email>
-      <name>Arisu Tachibana</name>
+      <email>amadio@gentoo.org</email>
+      <name>Guilherme Amadio</name>
       <role>2022 Mentor</role>
     </member>
     <member>
-      <email>amadio@gentoo.org</email>
-      <name>Guilherme Amadio</name>
+      <email>alicef@gentoo.org</email>
+      <name>Arisu Tachibana</name>
       <role>2022 Mentor</role>
     </member>
     <member>
@@ -2593,12 +2593,27 @@
     <member>
       <email>arthurzam@gentoo.org</email>
       <name>Arthur Zamarin</name>
-      <role>Bootstraping rust-bin</role>
+      <role>Not sure how I got here</role>
     </member>
     <member is-lead="1">
       <email>gyakovlev@gentoo.org</email>
       <name>Georgy Yakovlev</name>
       <role>Self-appointed lead</role>
+    </member>
+    <member>
+      <email>kangie@gentoo.org</email>
+      <name>Matt Jolly</name>
+      <role>Accidentally started maintaining eclasses</role>
+    </member>
+    <member>
+      <email>mgorny@gentoo.org</email>
+      <name>Michał Górny</name>
+      <role>Forced to maintain one Rust package too many</role>
+    </member>
+    <member>
+      <email>sam@gentoo.org</email>
+      <name>Sam James</name>
+      <role>Reluctant member</role>
     </member>
   </project>
   <project>
