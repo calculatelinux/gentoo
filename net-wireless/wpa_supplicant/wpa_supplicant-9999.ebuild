@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -18,7 +18,7 @@ else
 fi
 
 SLOT="0"
-IUSE="ap broadcom-sta dbus eap-sim eapol-test fasteap +fils +hs2-0 macsec +mbo +mesh p2p privsep ps3 qt5 readline selinux smartcard tdls tkip uncommon-eap-types wep wimax wps"
+IUSE="ap broadcom-sta dbus eap-sim eapol-test fasteap +fils +hs2-0 macsec +mbo +mesh p2p privsep ps3 qt6 readline selinux smartcard tdls tkip uncommon-eap-types wep wimax wps"
 
 # CONFIG_PRIVSEP=y does not have sufficient support for the new driver
 # interface functions used for MACsec, so this combination cannot be used
@@ -37,11 +37,9 @@ DEPEND="
 		eap-sim? ( sys-apps/pcsc-lite )
 	)
 	!kernel_linux? ( net-libs/libpcap )
-	qt5? (
-		dev-qt/qtcore:5
-		dev-qt/qtgui:5
-		dev-qt/qtsvg:5
-		dev-qt/qtwidgets:5
+	qt6? (
+		dev-qt/qtbase:6[gui,widgets]
+		dev-qt/qtsvg:6
 	)
 	readline? (
 		sys-libs/ncurses:0=
@@ -124,6 +122,9 @@ src_prepare() {
 
 	# bug (912315)
 	eapply "${FILESDIR}/${PN}-2.10-allow-legacy-renegotiation.patch"
+
+	# bug (948052)
+	eapply "${FILESDIR}/${PN}-2.10-use-qt6.patch"
 
 	# bug (640492)
 	sed -i 's#-Werror ##' wpa_supplicant/Makefile || die
@@ -357,9 +358,9 @@ src_configure() {
 		Kconfig_style_config LIBNL32
 	fi
 
-	if use qt5 ; then
+	if use qt6 ; then
 		pushd "${S}"/wpa_gui-qt4 > /dev/null || die
-		eqmake5 wpa_gui.pro
+		eqmake6 wpa_gui.pro
 		popd > /dev/null || die
 	fi
 }
@@ -373,7 +374,7 @@ src_compile() {
 		emake -C ../src/eap_peer
 	fi
 
-	if use qt5; then
+	if use qt6; then
 		einfo "Building wpa_gui"
 		emake -C "${S}"/wpa_gui-qt4
 	fi
@@ -404,7 +405,7 @@ src_install() {
 		doman doc/docbook/*.{5,8}
 	fi
 
-	if use qt5 ; then
+	if use qt6 ; then
 		into /usr
 		dobin wpa_gui-qt4/wpa_gui
 		doicon wpa_gui-qt4/icons/wpa_gui.svg

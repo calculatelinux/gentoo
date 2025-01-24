@@ -1,5 +1,5 @@
 BDEPEND=python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 ) python_single_target_python3_13? ( dev-lang/python:3.13 ) python_single_target_python3_11? ( dev-python/pygobject:3[python_targets_python3_11(-)] ) python_single_target_python3_12? ( dev-python/pygobject:3[python_targets_python3_12(-)] ) python_single_target_python3_13? ( dev-python/pygobject:3[python_targets_python3_13(-)] ) doc? ( python_single_target_python3_11? ( dev-python/furo[python_targets_python3_11(-)] dev-python/sphinx[python_targets_python3_11(-)] ) python_single_target_python3_12? ( dev-python/furo[python_targets_python3_12(-)] dev-python/sphinx[python_targets_python3_12(-)] ) python_single_target_python3_13? ( dev-python/furo[python_targets_python3_13(-)] dev-python/sphinx[python_targets_python3_13(-)] ) ) test? ( gui-libs/gtk:4[introspection] gui-libs/libadwaita:1[introspection] ) >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array test? ( x11-base/xorg-server[xvfb] x11-apps/xhost )
-DEFINED_PHASES=compile configure install setup test
+DEFINED_PHASES=compile configure install prepare setup test
 DESCRIPTION=Compiler for Blueprint, a markup language for GTK user interfaces
 EAPI=8
 HOMEPAGE=https://jwestman.pages.gitlab.gnome.org/blueprint-compiler/ https://gitlab.gnome.org/jwestman/blueprint-compiler/
@@ -13,4 +13,4 @@ RESTRICT=!test? ( test ) !test? ( test )
 SLOT=0
 SRC_URI=https://gitlab.gnome.org/jwestman/blueprint-compiler/-/archive/v0.14.0/blueprint-compiler-v0.14.0.tar.bz2
 _eclasses_=flag-o-matic	f14aba975c94ccaa9f357a27e3b17ffe	meson	99466844dd8d4fcfb07578a76f5a9922	multilib	b2a329026f2e404e9e371097dda47f96	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-single-r1	47d8ac9be330c9366112b78fd4f8ce57	python-utils-r1	42c5abe4a656a4993a06a4fc61dbdd12	toolchain-funcs	14648d8795f7779e11e1bc7cf08b7536	virtualx	9741d451eb64ea8bb9faee90d68a9b68
-_md5_=5090428707b4442ce0d0a99b57c10e2e
+_md5_=855956bcb3073ed0b4d491a9ab9a62c6

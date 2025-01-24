@@ -1,11 +1,11 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{9..12} )
+PYTHON_COMPAT=( python3_{10..13} python3_13t )
 
-inherit python-any-r1
+inherit python-any-r1 toolchain-funcs
 
 DESCRIPTION="OpenGFX data files for OpenTTD"
 HOMEPAGE="https://wiki.openttd.org/en/Basesets/OpenGFX https://github.com/OpenTTD/OpenGFX"
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 
-DEPEND="
+BDEPEND="
 	games-util/grfcodec
 	games-util/nml
 	${PYTHON_DEPS}
@@ -29,31 +29,29 @@ PATCHES=(
 )
 
 src_compile() {
-	local myemakeargs=(
+	myemakeargs=(
 		GIMP=""
 		PYTHON="${EPYTHON}"
+		CC="$(tc-getCC)"
+
+		# Make logs verbose
+		_V=
+		_E=echo
 	)
 
 	emake "${myemakeargs[@]}" all
 }
 
 src_test() {
-	local myemakeargs=(
-		GIMP=""
-		PYTHON="${EPYTHON}"
-	)
-
 	emake "${myemakeargs[@]}" check
 }
 
 src_install() {
-	local myemakeargs=(
+	myemakeargs+=(
 		DO_NOT_INSTALL_README="true"
 		DO_NOT_INSTALL_LICENSE="true"
 		DO_NOT_INSTALL_CHANGELOG="true"
-		GIMP=""
 		INSTALL_DIR="${ED}/usr/share/openttd/baseset/"
-		PYTHON="${EPYTHON}"
 	)
 
 	emake "${myemakeargs[@]}" install

@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -24,20 +24,22 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="bittorrent brotli bzip2 debug finger ftp gemini gopher gpm gnutls guile idn"
-IUSE+=" javascript libcss lua lzma +mouse nls nntp perl python samba ssl test tre unicode X xml zlib zstd"
+IUSE="bittorrent brotli bzip2 curl debug finger ftp gemini gopher gpm gnutls guile idn"
+IUSE+=" javascript libcss lua lzma +mouse nls nntp perl python samba sftp ssl test tre unicode X xml zlib zstd"
 RESTRICT="!test? ( test )"
 REQUIRED_USE="
 	guile? ( ${GUILE_REQUIRED_USE} )
-	javascript? ( libcss )
+	javascript? ( curl libcss )
 	lua? ( ${LUA_REQUIRED_USE} )
 	python? ( ${PYTHON_REQUIRED_USE} )
+	sftp? ( curl )
 "
 
 RDEPEND="
 	>=sys-libs/ncurses-5.2:=[unicode(+)]
 	brotli? ( app-arch/brotli:= )
 	bzip2? ( >=app-arch/bzip2-1.0.2 )
+	curl? ( net-misc/curl[ssl] )
 	gpm? (
 		>=sys-libs/gpm-1.20.0-r5
 	)
@@ -110,9 +112,11 @@ src_configure() {
 		-Dapidoc=false
 		-D88-colors=true
 		-D256-colors=true
+		-Dbacktrace=$(usex elibc_musl false true)
 		$(meson_use bittorrent)
 		$(meson_use brotli)
 		$(meson_use bzip2 bzlib)
+		$(meson_use curl libcurl)
 		$(usex debug '-Ddebug=true' '-Dfastmem=true')
 		$(meson_use finger)
 		$(meson_use ftp)
@@ -141,6 +145,7 @@ src_configure() {
 		-Dquickjs=false
 		-Druby=false
 		$(meson_use samba smb)
+		$(meson_use sftp)
 		-Dsm-scripting=false
 		-Dspidermonkey=false
 		-Dterminfo=true

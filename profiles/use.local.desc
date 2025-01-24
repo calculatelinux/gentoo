@@ -489,7 +489,7 @@ app-editors/vim:cscope - Enable cscope interface
 app-editors/vim:racket - Enable support for Scheme using dev-scheme/racket
 app-editors/vim:terminal - Enable terminal emulation support
 app-editors/vim:vim-pager - Install vimpager and vimmanpager links
-app-editors/vis:tre - more memory efficient regex search using dev-libs/tre
+app-editors/vis:tre - More memory efficient regex search using dev-libs/tre
 app-editors/vscode:egl - Use EGL platform, enables smooth rending in high refresh rate monitors on X11/Xwayland
 app-editors/vscode:wayland - Run in wayland mode under wayland sessions, xwayland otherwise. This flag doesn't affect x11 sessions.
 app-editors/vscodium:egl - Use EGL platform, enables smooth rending in high refresh rate monitors on X11/Xwayland
@@ -2413,7 +2413,6 @@ dev-python/pypax:xtpax - Enable XATTR_PAX_FLAGS support.
 dev-python/pypy-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
 dev-python/pypy3:test-install - Install the test suite packages, that are required to run tests in a few reverse dependencies.
 dev-python/pypy3_10-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
-dev-python/pyqt5:bluetooth - Build bindings for the QtBluetooth module
 dev-python/pyqt5:dbus - Build bindings for the QtDBus module
 dev-python/pyqt5:declarative - Build bindings for the QtQml and QtQuick modules and enable the qmlscene plugin
 dev-python/pyqt5:designer - Build bindings for the QtDesigner module and enable the designer plugin
@@ -4914,7 +4913,6 @@ media-sound/supercollider:gedit - Enable the SCED user interface
 media-sound/supercollider:gpl3 - Build GPL-3 licensed code (recommended)
 media-sound/supercollider:server - Build with internal server
 media-sound/supercollider:vim - Enable the SCVIM user interface
-media-sound/supercollider:webengine - Enable the internal help system using QtWebengine
 media-sound/teamspeak-client:system-libcxx - Use llvm-runtimes/libcxx instead of shipped libs.
 media-sound/teamspeak-client:system-quazip - Use dev-libs/quazip instead of shipped libs.
 media-sound/teamspeak-server:tsdns - Install TeamSpeaks own DNS service for handling multiple virtual servers.
@@ -6387,6 +6385,7 @@ net-misc/hylafaxplus:jbig - JBIG Fax Compression Support
 net-misc/hylafaxplus:mgetty - Receive faxes via serial port connections
 net-misc/hylafaxplus:pam - hfaxd authentication via PAM
 net-misc/icaclient:hdx - Install and enable hdx-realtime-media-engine plugin
+net-misc/icaclient:selfservice - Install and enable the self-service component
 net-misc/icaclient:usb - Allow connecting USB devices to virtual desktops
 net-misc/icecast:kate - Add karaoke and text encapsulation support for Ogg files
 net-misc/icecast:yp - Build support for yp public directory listings
@@ -7011,7 +7010,6 @@ net-wireless/gnuradio:utils - install scripts to enable viewing and analysis of 
 net-wireless/gnuradio:vocoder - enable blocks for audio voice encoders
 net-wireless/gnuradio:wavelet - enable wavelet signal processing blocks
 net-wireless/gnuradio:zeromq - enable zeromq message passing blocks
-net-wireless/gqrx:gr-audio - Use audio support from net-wireless/gnuradio
 net-wireless/gr-osmosdr:airspy - Build with Airspy support through net-wireless/airspy
 net-wireless/gr-osmosdr:bladerf - Build with Nuand BladeRF support through net-wireless/bladerf
 net-wireless/gr-osmosdr:hackrf - Build with Great Scott Gadgets HackRF support through net-libs/libhackrf
@@ -8609,6 +8607,7 @@ www-client/elinks:gemini - Enable support for the gemini protocol
 www-client/elinks:gopher - Enable support for the gopher protocol
 www-client/elinks:libcss - Enable support for cascading style sheets via dev-libs/libcss
 www-client/elinks:mouse - Make elinks to grab all mouse events
+www-client/elinks:sftp - Add support for sftp (requires net-misc/curl).
 www-client/elinks:tre - Enable support for regex searches via dev-libs/tre
 www-client/elinks:xml - Enable support for bookmarks via dev-libs/expat
 www-client/firefox:clang - Use Clang compiler instead of GCC

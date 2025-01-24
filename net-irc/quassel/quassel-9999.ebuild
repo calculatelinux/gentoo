@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -24,7 +24,7 @@ HOMEPAGE="https://quassel-irc.org/"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="bundled-icons crypt +dbus gui kde ldap monolithic oxygen postgres +server spell syslog test urlpreview"
+IUSE="bundled-icons crypt +dbus gui kde ldap monolithic oxygen postgres +server spell syslog test"
 
 REQUIRED_USE="
 	|| ( gui server monolithic )
@@ -72,7 +72,6 @@ GUI_DEPEND="
 		kde-frameworks/kxmlgui:5
 	)
 	spell? ( kde-frameworks/sonnet:5 )
-	urlpreview? ( dev-qt/qtwebengine:5[widgets] )
 "
 RDEPEND="
 	dev-libs/boost:=
@@ -116,7 +115,7 @@ src_configure() {
 		-DWITH_OXYGEN_ICONS=$(usex oxygen)
 		-DWANT_CORE=$(usex server)
 		-DBUILD_TESTING=$(usex test)
-		-DWITH_WEBENGINE=$(usex urlpreview)
+		-DWITH_WEBENGINE=OFF # bug 925723
 	)
 
 	# bug #830708
