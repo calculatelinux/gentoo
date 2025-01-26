@@ -15,7 +15,7 @@ else
 	S="${WORKDIR}/${PN}"
 
 	#KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
-	KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~sparc ~x86"
+	KEYWORDS="amd64 arm arm64 hppa ~loong ppc ppc64 ~riscv ~sparc x86"
 fi
 
 LICENSE="GPL-2+ GPL-3+"
@@ -52,6 +52,8 @@ src_prepare() {
 }
 
 src_compile() {
+	export LANG=C LC_ALL=C  # grep find nothing for non-ascii locales
+
 	tc-export PKG_CONFIG
 
 	export LIBS="-lelf"

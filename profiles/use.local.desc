@@ -3368,13 +3368,13 @@ gnome-base/gvfs:gnome-online-accounts - Enable configuration panel for net-libs/
 gnome-base/gvfs:google - Enables support for accessing Google accounts via dev-libs/libgdata
 gnome-base/gvfs:http - Enable the HTTP/DAV backend using net-libs/libsoup
 gnome-base/gvfs:nfs - Enable NFS client support via net-fs/libnfs.
+gnome-base/gvfs:onedrive - Enable Onedrive backend via net-libs/msgraph.
 gnome-base/gvfs:udev - Enable udev base replacement code for cdda feature
 gnome-base/libgnomecanvas:glade - Enable glade support
 gnome-base/librsvg:tools - Build svg viewer tool
 gnome-base/nautilus:cloudproviders - Enable the cloudproviders support
 gnome-base/nautilus:gstreamer - Enable the Audio/Video file properties page
 gnome-base/nautilus:previewer - Use gnome-extra/sushi to preview files from the file mananger
-gnome-base/nautilus:sendto - Enable the nautilus-sendto extension to send files to various locations/devices
 gnome-extra/cinnamon:internal-polkit - Use Cinnamon's internal polkit agent instead of gnome-extra/polkit-gnome. This does not currently support multi-user fast switching.
 gnome-extra/cinnamon-control-center:modemmanager - Enable support for mobile broadband devices using net-misc/modemmanager
 gnome-extra/cjs:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
@@ -3391,6 +3391,7 @@ gnome-extra/gnome-commander:taglib - Add metadata support for ID3, Vorbis, FLAC 
 gnome-extra/gnome-contacts:gnome-online-accounts - Enable net-libs/gnome-online-accounts based Google authentication support
 gnome-extra/gnome-network-displays:firewalld - Install firewalld zones
 gnome-extra/gnome-shell-extension-gsconnect:nautilus - Install Nautilus extension for sending files via GSConnect
+gnome-extra/gnome-software:dkms - Enable DKMS plugin to help installing DKMS (and akmods) Secure Boot certificates to UEFI MOK
 gnome-extra/gnome-software:firmware - Enable firmware update support through sys-apps/fwupd
 gnome-extra/gnome-software:flatpak - Enable support for flatpak applications using sys-apps/flatpak
 gnome-extra/gnome-software:snap - Enable support for snap packages using app-containers/snapd
@@ -4319,10 +4320,7 @@ media-libs/libbluray:java - Add support for BD-J
 media-libs/libbluray:utils - Install command-line utilities and examples
 media-libs/libcanberra:alsa - Enables ALSA sound driver.
 media-libs/libcanberra:gstreamer - Enables gstreamer sound driver. Not useful when alsa or pulseaudio is available.
-media-libs/libcanberra:gtk2 - Enables building of gtk+ helper library, gtk+ runtime sound effects and the canberra-gtk-play utility. To enable the gtk+ sound effects add canberra-gtk-module to the colon separated list of modules in the GTK_MODULES environment variable.
-media-libs/libcanberra:gtk3 - Enables building of gtk+3 helper library, gtk+3 runtime sound effects and the canberra-gtk-play utility. To enable the gtk+3 sound effects add canberra-gtk-module to the colon separated list of modules in the GTK_MODULES environment variable.
 media-libs/libcanberra:pulseaudio - Enables PulseAudio sound driver that should be able to support positional event sounds. This is the preferred choice for best sound events experience and picked by default if compiled in and possible to use at runtime.
-media-libs/libcanberra:sound - Install x11-themes/sound-theme-freedesktop to get sounds on Gnome and Xfce.
 media-libs/libcanberra:tdb - Enables Trivial Database support for caching purposes.
 media-libs/libde265:dec265 - Enable build of dec265 example program
 media-libs/libde265:enc265 - Enable build of enc265 tool
@@ -6061,7 +6059,6 @@ net-libs/libsrtp:console - Use /dev/console instead of stdout for error messages
 net-libs/libsrtp:nss - Use NSS crypto primitives
 net-libs/libsrtp:openssl - Use OpenSSL crypto primitives
 net-libs/libsrtp:syslog - Use syslog for error messages
-net-libs/libssh:gcrypt - Use dev-libs/libgcrypt as TLS provider
 net-libs/libssh:gssapi - Enable gssapi support
 net-libs/libssh:mbedtls - Use net-libs/mbedtls as TLS provider
 net-libs/libssh:pcap - Build with PCAP output support
@@ -7093,7 +7090,6 @@ net-wireless/wpa_supplicant:wps - Add support for Wi-Fi Protected Setup
 sci-astronomy/cpl:gasgano - Enable support for sci-astronomy/gasgano file organizer
 sci-astronomy/kstars:opencv - Enable contrast type focus measures via media-libs/opencv
 sci-astronomy/kstars:password - Store passwords securely via dev-libs/qtkeychain
-sci-astronomy/kstars:wcs - Enable support for World Coordinate System library using wcslib
 sci-astronomy/psfex:plplot - Build with sci-libs/plplot to allow diagnostic plots during processing
 sci-astronomy/scamp:plplot - Build with sci-libs/plplot to allow diagnostic plots during processing
 sci-astronomy/sextractor:modelfit - Enable profile model fitting, needs sci-libs/atlas and sci-libs/fftw
@@ -7355,6 +7351,7 @@ sci-libs/gsl:cblas-external - Link gsl with external cblas provided by (virtual/
 sci-libs/gsl:deprecated - Enable deprecated functions
 sci-libs/hdf5:hl - Enable high level API (https://support.hdfgroup.org/HDF5/doc/HL/index.html)
 sci-libs/hdf5:unsupported - Enable unsupported combinations of configuration options
+sci-libs/hipBLASLt:benchmark - Build and install rocblas-bench.
 sci-libs/hipCUB:benchmark - Build and install benchmark binaries.
 sci-libs/hipSOLVER:sparse - Build hipSOLVER with sparse functionality (sci-libs/cholmod)
 sci-libs/hipSPARSE:benchmark - Build and install hipsparse-bench.
@@ -7563,7 +7560,6 @@ sci-mathematics/maxima:vtk - Support plotting with sci-libs/vtk
 sci-mathematics/msieve:ecm - Enable support for the GMP-ECM library
 sci-mathematics/normaliz:extras - Install Macaulay2 and sci-mathematics/singularpackages as shipped by upstream
 sci-mathematics/normaliz:nauty - Use sci-mathematics/nauty to compute automorphism groups.
-sci-mathematics/octave:fltk - Use x11-libs/fltk as the backend for the OpenGL renderer in the absence of the Qt GUI
 sci-mathematics/octave:glpk - Add support for sci-mathematics/glpk for linear programming
 sci-mathematics/octave:gnuplot - Use sci-visualization/gnuplot to render plots if OpenGL is unavailable
 sci-mathematics/octave:imagemagick - Use media-gfx/graphicsmagick to read and write images
