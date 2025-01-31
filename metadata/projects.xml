@@ -2392,10 +2392,6 @@
     <url>https://wiki.gentoo.org/wiki/Project:Radio</url>
     <description>This project maintains packages related to sending and receiving radio transmissions.</description>
     <member>
-      <email>chithanh@gentoo.org</email>
-      <name>Chí-Thanh Christopher Nguyễn</name>
-    </member>
-    <member>
       <email>tomjbe@gentoo.org</email>
       <name>Thomas Beierlein</name>
     </member>

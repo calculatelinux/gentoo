@@ -1,8 +1,9 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
+GNOME2_EAUTORECONF="yes"
 inherit gnome2
 
 DESCRIPTION="GTK+ utility for editing MP2, MP3, MP4, FLAC, Ogg and other media tags"
@@ -10,7 +11,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/EasyTAG"
 
 LICENSE="GPL-2 GPL-2+ LGPL-2 LGPL-2+ LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~riscv ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~arm ppc ppc64 ~riscv x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="flac mp3 mp4 opus speex test vorbis wavpack"
 # Disable nautilus support until https://gitlab.gnome.org/GNOME/easytag/-/issues/78
 # is solved
@@ -47,19 +48,21 @@ BDEPEND="
 	app-text/docbook-xml-dtd:4.4
 	app-text/yelp-tools
 	dev-util/glib-utils
+	dev-libs/appstream-glib
 	dev-libs/libxml2
 	dev-libs/libxslt
 	>=dev-util/intltool-0.50
 	>=sys-devel/gettext-0.18.3.2
 	virtual/pkgconfig
 	test? (
-		dev-libs/appstream-glib
 		>=dev-util/desktop-file-utils-0.22
 	)"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-ogg-corruption.patch
 	"${FILESDIR}"/${P}-fix-build-taglib2.patch
+	"${FILESDIR}"/${P}-fix-check-id3.patch
+	"${FILESDIR}"/${P}-fix-appdata.patch
 )
 
 src_configure() {
@@ -76,10 +79,4 @@ src_configure() {
 		$(use_enable flac) \
 		$(use_enable mp4) \
 		$(use_enable wavpack)
-}
-
-src_install() {
-	gnome2_src_install
-	# https://gitlab.gnome.org/GNOME/easytag/-/issues/82
-	mv "${ED}"/usr/share/{appdata,metainfo} || die
 }

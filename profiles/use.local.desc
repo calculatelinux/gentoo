@@ -1308,6 +1308,8 @@ dev-ada/libadalang-tools:shared - Build shared library
 dev-ada/libadalang-tools:static-pic - Build static library with pic code
 dev-ada/libgpr:shared - Build shared library
 dev-ada/libgpr:static-pic - Build static library with pic code
+dev-ada/prettier-ada:shared - Build shared library
+dev-ada/prettier-ada:static-pic - Build static library with pic code
 dev-ada/spawn:glib - Add support to dev-libs/glib-based mainloop.
 dev-ada/spawn:shared - Build shared library
 dev-ada/spawn:static-pic - Build static library with pic code
@@ -1317,6 +1319,7 @@ dev-ada/xmlada:shared - Build shared library
 dev-ada/xmlada:static-pic - Build static library with pic code
 dev-build/bazelisk:bazel-symlink - Install bazel symlink that points to bazelisk
 dev-build/cmake:dap - Build debugger for CMake with Debug Adapter Protocol support via dev-cpp/cppdap
+dev-build/meson:test-full - pull in dependencies to run all tests
 dev-build/muon:archive - Enable extracting wraps using app-arch/libarchive.
 dev-build/muon:libpkgconf - Enable looking up packages via dev-util/pkgconf.
 dev-cpp/benchmark:exceptions - Enable the use of exceptions in the benchmark library
@@ -3499,7 +3502,6 @@ kde-apps/k3b:webengine - Use dev-qt/qtwebengine for fancy k3bdiskinfoview
 kde-apps/kaddressbook:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
 kde-apps/kalarm:mpv - Use media-libs/mpvqt instead of media-video/vlc audio alarms playback)
 kde-apps/kalarm:pim - Enable birthday import, email functions etc. using kde-apps/akonadi
-kde-apps/kalzium:editor - Enable the embedded molecule editor/viewer
 kde-apps/kalzium:solver - Enable the equation solver
 kde-apps/kate-addons:filebrowser - Enable File System browser tool view
 kde-apps/kate-addons:lspclient - Enable LSP (Language Server Protocol) client plugin
@@ -3698,9 +3700,8 @@ llvm-core/clang:static-analyzer - Install the Clang static analyzer
 llvm-core/clang-common:bootstrap-prefix - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used for bootstrapping Gentoo Prefix
 llvm-core/clang-common:cet - Enable support for control flow hijacking protection. On amd64, this provides Intel Control Flow Enforcement Technology (CET). Only provides benefits on newer CPUs. For Intel, the CPU must be at least as new as Tiger Lake. For AMD, it must be at least as new as Zen 3. This is harmless on older CPUs, but provides no benefit either.
 llvm-core/clang-common:default-compiler-rt - Use compiler-rt + libunwind instead of libgcc as the default rtlib for clang
-llvm-core/clang-common:default-libcxx - Use libc++ instead of libstdc++ as the default stdlib for clang
+llvm-core/clang-common:default-libcxx - Use libc++ instead of libstdc++ as the default stdlib for clang. Beware: this breaks ABI, producing binaries incompatible with those built with GCC or Clang using libstdc++. Do not set unless you know what you're doing.
 llvm-core/clang-common:default-lld - Use lld as the default linker for clang
-llvm-core/clang-common:stricter - Default to stricter behavior known from newer clang versions, turning more warnings into errors
 llvm-core/clang-runtime:compiler-rt - Install llvm-runtimes/compiler-rt for -rtlib=compiler-rt
 llvm-core/clang-runtime:libcxx - Install llvm-runtimes/libcxx for -stdlib=libc++
 llvm-core/clang-runtime:offload - Install llvm-runtimes/offload for -fopenmp GPU offloading
@@ -5098,8 +5099,7 @@ media-video/ffmpeg:zimg - Enables media-libs/zimg based scale filter.
 media-video/ffmpeg:zvbi - Enables media-libs/zvbi based teletext decoder.
 media-video/ffmpeg-chromium:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
 media-video/ffmpeg-chromium:gpl - Build GPL code. Should be enabled unless you require LGPL binaries.
-media-video/guvcview:qt5 - Build with Qt5 interface instead Gtk+
-media-video/guvcview:qt6 - Build with Qt6 interface instead Gtk+
+media-video/guvcview:qt6 - Build with Qt6 interface instead of Gtk+
 media-video/guvcview:sfml - Build with SFML X11-engine instead of sdl
 media-video/handbrake:amf - Support for encoding h265 using AMD VCE encoder.
 media-video/handbrake:fdk - Support for encoding AAC using media-libs/fdk-aac.
@@ -6704,19 +6704,6 @@ net-p2p/bitcoin-core:systemtap - Enable SystemTap/DTrace tracing
 net-p2p/bitcoin-core:test-full - Run tests that take a long time
 net-p2p/bitcoin-core:upnp - Enable Universal Plug and Play
 net-p2p/bitcoin-core:zeromq - Report blocks and transactions via zeromq
-net-p2p/bitcoin-qt:external-signer - Include support for external wallet signer programs
-net-p2p/bitcoin-qt:nat-pmp - Enable NAT-PMP port forwarding
-net-p2p/bitcoin-qt:qrcode - Enable generation of QR Codes for receiving payments
-net-p2p/bitcoin-qt:systemtap - Enable SystemTap/DTrace tracing
-net-p2p/bitcoin-qt:upnp - Enable Universal Plug and Play
-net-p2p/bitcoin-qt:wallet - Enable wallet support
-net-p2p/bitcoin-qt:zeromq - Report blocks and transactions via zeromq
-net-p2p/bitcoind:external-signer - Include support for external wallet signer programs
-net-p2p/bitcoind:nat-pmp - Enable NAT-PMP port forwarding
-net-p2p/bitcoind:systemtap - Enable SystemTap/DTrace tracing
-net-p2p/bitcoind:upnp - Enable Universal Plug and Play
-net-p2p/bitcoind:wallet - Enable wallet support
-net-p2p/bitcoind:zeromq - Report blocks and transactions via zeromq
 net-p2p/dbhub:switch-user - Enable support for switching user
 net-p2p/deluge:console - Enable default console UI
 net-p2p/deluge:webinterface - Install dependencies needed for the web interface
@@ -9016,6 +9003,7 @@ x11-wm/muffin:sysprof - Enable profiling data capture support using dev-util/sys
 x11-wm/musca:apis - Optionally install the experimental `apis' window manager
 x11-wm/musca:xlisten - Optionally install the xlisten utility
 x11-wm/mutter:elogind - Rely on sys-auth/elogind as logind provider for Wayland sessions
+x11-wm/mutter:libdisplay - Enable EDID and DisplayID using media-libs/libdisplay-info
 x11-wm/mutter:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 x11-wm/notion:xrandr - Add support for xrandr
 x11-wm/openbox:session - Enables support for session managers

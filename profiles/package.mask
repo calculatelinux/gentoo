@@ -33,11 +33,57 @@
 
 #--- END OF EXAMPLES ---
 
+# Ionen Wolkens <ionen@gentoo.org> (2025-01-30)
+# Breaks the only consumer of pytest-bdd (qutebrowser),
+# not looked into yet but mask for now as it prevents
+# using it to test PyQt6 for the upcoming Qt bump.
+>=dev-python/gherkin-official-31.0.0
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-30)
+# Last release 15 years ago, dead upstream (never imported from kdesvn),
+# no revdeps probably since amarok last-rites. Removal on 2025-02-27.
+media-libs/taglib-extras
+
+# Conrad Kostecki <conikost@gentoo.org> (2024-01-28)
+# A package, which depends on Qt5. Upstream dead for many years.
+# Removal on 2025-02-28. Bug #948048
+net-wireless/linssid
+
+# Conrad Kostecki <conikost@gentoo.org> (2024-01-28)
+# Binary package, which depends on Qt5. Bug #926665
+# Please update to v5 beta or v6 beta. Removal on 2025-02-28.
+media-sound/teamspeak-client:3
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-28)
+# Last release 8 years ago, dead upstream (repository gone as well),
+# depends on Qt5, no one else packages this. Removal on 2025-02-27.
+net-misc/qtm
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-28)
+# Last release+commit 7 years ago, dead upstream, unmaintained in Gentoo,
+# depends on Qt5, broken with >= ffmpeg-5, no one else packages this.
+# Removal on 2025-02-27. Bug #900947
+app-misc/qcma
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-28)
+# Last release+commit 8 years ago, dead upstream, unmaintained in Gentoo,
+# depends on Qt5, no one else packages this. Removal on 2025-02-27.
+x11-misc/urxvtconfig
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2025-01-28)
+# Since we are done with EGO_SUM, this tool isn't needed any more.
+# Removal on 2025-02-27.  Bug #948966.
+dev-go/get-ego-vendor
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-28)
+# Last release from 14 years ago, dead upstream (repository gone as well).
+# Plenty of other options in ::gentoo. Bug #947724, removal on 2025-02-27.
+media-sound/bempc
+
 # Anthony G. Basile <blueness@gentoo.org> (2025-01-25)
 # Bug 909889. Needs PEP517 build. Very low user base
 # Remove 2025-02-24.
 app-portage/grs
-
 
 # Arthur Zamarin <arthurzam@gentoo.org> (2025-01-24)
 # EAPI=7, uses deprecated Go eclasses, fails to compile, installation
@@ -78,10 +124,13 @@ dev-python/spyder-terminal
 dev-qt/qtbluetooth:5
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-23)
+# Qt5 package without any revdeps. Use dev-qt/qttools[qdbus] instead.
+dev-qt/qdbusviewer
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-23)
 # Qt5 packages without any revdeps.
 dev-qt/pixeltool
 dev-qt/qdbus
-dev-qt/qdbusviewer
 dev-qt/qdoc
 dev-qt/qtplugininfo
 dev-qt/qtquicktimeline:5
@@ -249,14 +298,6 @@ acct-group/aspnet
 acct-user/aspnet
 www-servers/xsp
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-02)
-# No more revdeps, depends on Qt5, bug #942178. Removal on 2025-01-29.
-dev-libs/libqt5pas
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-01)
-# Transitional package without any revdeps left. Removal on 2025-01-31
-kde-apps/konsolepart
-
 # Nowa Ammerlaan <nowa@gentoo.org> (2025-01-01)
 # Broken with Qt6 and in wayland sessions. Archived upstream. Has been on life
 # support for several years already.
@@ -277,30 +318,12 @@ dev-libs/dmalloc
 # forward.  Removal on 2025-01-28.  Bug #947144.
 dev-python/pslab
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-12-28)
-# Cleanup transitional Bitcoin meta packages, as well as
-# unmaintainable net-p2p/bitcoin-core[system-leveldb] and
-# virtual/bitcoin-leveldb. Use net-p2p/bitcoin-core instead which is
-# the same as these packages but merged into one ebuild for maintainability.
-# Removal on 2025-01-27. Bug #945359
-dev-util/bitcoin-tx
-net-libs/libbitcoinconsensus
-net-p2p/bitcoin-cli
-net-p2p/bitcoin-qt
-net-p2p/bitcoind
-virtual/bitcoin-leveldb
-
 # Michał Górny <mgorny@gentoo.org> (2024-12-05)
 # 6.12.2 does not boot for me.
 =sys-kernel/gentoo-kernel-6.12.2
 =sys-kernel/gentoo-kernel-bin-6.12.2
 =sys-kernel/vanilla-kernel-6.12.2
 =virtual/dist-kernel-6.12.2
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-11-28)
-# Grave data loss bug. See also:
-# https://github.com/nicotine-plus/nicotine-plus/issues/3152
-=net-p2p/nicotine+-3.3.5
 
 # Ionen Wolkens <ionen@gentoo.org> (2024-11-19)
 # NVIDIA dropped support for the 470.xx branch in September 2024[1].

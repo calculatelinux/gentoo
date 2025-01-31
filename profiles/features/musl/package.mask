@@ -42,7 +42,7 @@ net-nds/nsscache
 
 # Sam James <sam@gentoo.org> (2024-09-30)
 # Needs porting to musl (bug #940130)
-=sys-auth/elogind-255.5-r1
+~sys-auth/elogind-255.5
 
 # Sam James <sam@gentoo.org> (2024-08-31)
 # sys-devel/binutils[gprofng] is masked on musl
@@ -115,6 +115,7 @@ dev-ada/ada_libfswatch
 dev-ada/gnatsymbolize
 dev-ada/AdaSAT
 dev-ada/lal-refactor
+dev-ada/prettier-ada
 
 # Sergey Popov <pinkbyte@gentoo.org> (2024-03-05)
 # games-strategy/seven-kingdoms does not build on musl,
