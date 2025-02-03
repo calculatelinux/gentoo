@@ -97,6 +97,7 @@ dev-ada/libgpr
 dev-ada/gnatcoll-core
 dev-ada/gnatcoll-bindings
 dev-ada/langkit
+dev-ada/langkit-contrib
 dev-ada/templates-parser
 dev-ada/libadalang-tools
 dev-ada/libadalang
@@ -266,6 +267,7 @@ app-office/onlyoffice-bin
 app-shells/pwsh-bin
 app-text/master-pdf-editor
 app-text/zotero-bin
+dev-db/mongodb-compass-bin
 dev-db/ocp
 dev-db/oracle-instantclient
 dev-db/sqlcl-bin

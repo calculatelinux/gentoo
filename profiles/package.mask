@@ -282,22 +282,6 @@ media-plugins/gst-plugins-kate
 # Removal on 2025-03-03 unless upstream fixes the issue
 net-im/whatsie
 
-# Maciej Barć <xgqt@gentoo.org> (2025-01-02)
-# Deprecated LEAN 3 packages. The "mathlib-tools" repo is archived
-# (https://github.com/leanprover-community/mathlib-tools). Migrate to LEAN 4.
-# Removal on 2025-02-02
-sci-mathematics/lean:0/3
-sci-mathematics/mathlib-tools
-
-# Maciej Barć <xgqt@gentoo.org> (2025-01-02)
-# Upstream dead, repo archived (https://github.com/mono/xsp). Uses deprecated
-# "dotnet" eclass. Depends on old mono. As a replacement one can use official
-# .NET 6.0-9.0 ASP.NET instead.
-# Removal on 2025-02-02
-acct-group/aspnet
-acct-user/aspnet
-www-servers/xsp
-
 # Nowa Ammerlaan <nowa@gentoo.org> (2025-01-01)
 # Broken with Qt6 and in wayland sessions. Archived upstream. Has been on life
 # support for several years already.
@@ -305,18 +289,6 @@ www-servers/xsp
 media-video/vidify
 media-video/vidify-audiosync
 net-misc/lyricwikia
-
-# Sam James <sam@gentoo.org> (2024-12-31)
-# Many open bugs and requires a large amount of patching to build correctly
-# as a shared library. Breaks reverse dependencies in a few ways.
-# Removal on 2025-01-30. bug #924174 and friends.
-dev-libs/dmalloc
-
-# Michał Górny <mgorny@gentoo.org> (2024-12-29)
-# As of 3.1.0, upstream has removed all mocking and made it impossible
-# to test the package locally.  As such, we cannot maintain it going
-# forward.  Removal on 2025-01-28.  Bug #947144.
-dev-python/pslab
 
 # Michał Górny <mgorny@gentoo.org> (2024-12-05)
 # 6.12.2 does not boot for me.
