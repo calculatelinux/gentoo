@@ -2470,41 +2470,46 @@ dev-python/pyqt6:xml - Build bindings for the QtXml module
 dev-python/pyqt6-webengine:quick - Build bindings for the QtWebEngineQuick module
 dev-python/pyqt6-webengine:widgets - Build bindings for the QtWebEngineWidgets module
 dev-python/pyrsistent:native-extensions - Compiles native C extensions (speedups, instead of using python fallback code).
-dev-python/pyside6:3d - Build Qt3DCore, Qt3DAnimation, Qt3DExtras, Qt3DInput, Qt3DLogic, and Qt3DRender modules
-dev-python/pyside6:bluetooth - Build QtBluetooth module
-dev-python/pyside6:charts - Build QtCharts module
-dev-python/pyside6:concurrent - Build QtConcurrent module
-dev-python/pyside6:designer - Build QtDesigner and QtUiTools modules
-dev-python/pyside6:gles2-only - Build QtGui "QOpenGL*" classes
-dev-python/pyside6:gui - Build QtGui module
-dev-python/pyside6:help - Build QtHelp module
-dev-python/pyside6:httpserver - Build QtHttpServer module
-dev-python/pyside6:location - Build QtLocation module
-dev-python/pyside6:multimedia - Build QtMultimedia and QtMultimediaWidgets modules
-dev-python/pyside6:network - Build QtNetwork module
-dev-python/pyside6:network-auth - Build QtNetworkAuth module
-dev-python/pyside6:nfc - Build QtNfc module
-dev-python/pyside6:pdfium - Build QtPdf module
-dev-python/pyside6:positioning - Build QtPositioning module
-dev-python/pyside6:printsupport - Build QtPrintSupport module
-dev-python/pyside6:qml - Build QtQml module
-dev-python/pyside6:quick - Build QtQuick and QtQuickWidgets modules
-dev-python/pyside6:quick3d - Build QtQuick3D and QtQuickWidgets modules
-dev-python/pyside6:remoteobjects - Build QtRemoteObjects module
-dev-python/pyside6:scxml - Build QtScxml module
-dev-python/pyside6:sensors - Build QtSensors module
-dev-python/pyside6:serialport - Build QtSerialPort modules
-dev-python/pyside6:spatialaudio - Build QtSpatialAudio module
-dev-python/pyside6:speech - Build QtTextToSpeech module
-dev-python/pyside6:sql - Build QtSql module
-dev-python/pyside6:svg - Build QtSvg module
-dev-python/pyside6:testlib - Build QtTest module
-dev-python/pyside6:uitools - Build UITools module
-dev-python/pyside6:webchannel - Build QtWebChannel module
-dev-python/pyside6:webengine - Build QtWebEngine and QtWebEngineWidgets modules
-dev-python/pyside6:websockets - Build QtWebSockets module
-dev-python/pyside6:widgets - Build QtWidgets module
-dev-python/pyside6:xml - Build QtXml module
+dev-python/pyside:3d - Build Qt3DCore, Qt3DAnimation, Qt3DExtras, Qt3DInput, Qt3DLogic, and Qt3DRender modules
+dev-python/pyside:bluetooth - Build QtBluetooth module
+dev-python/pyside:charts - Build QtCharts module
+dev-python/pyside:concurrent - Build QtConcurrent module
+dev-python/pyside:core - Build QtCore module, if disable then only shiboken will be built
+dev-python/pyside:designer - Build QtDesigner and QtUiTools modules
+dev-python/pyside:gles2-only - Build QtGui "QOpenGL*" classes
+dev-python/pyside:gui - Build QtGui module
+dev-python/pyside:help - Build QtHelp module
+dev-python/pyside:httpserver - Build QtHttpServer module
+dev-python/pyside:location - Build QtLocation module
+dev-python/pyside:multimedia - Build QtMultimedia and QtMultimediaWidgets modules
+dev-python/pyside:network - Build QtNetwork module
+dev-python/pyside:network-auth - Build QtNetworkAuth module
+dev-python/pyside:nfc - Build QtNfc module
+dev-python/pyside:numpy - Build with support for dev-python/numpy
+dev-python/pyside:pdfium - Build QtPdf module
+dev-python/pyside:positioning - Build QtPositioning module
+dev-python/pyside:printsupport - Build QtPrintSupport module
+dev-python/pyside:qml - Build QtQml module
+dev-python/pyside:quick - Build QtQuick and QtQuickWidgets modules
+dev-python/pyside:quick3d - Build QtQuick3D and QtQuickWidgets modules
+dev-python/pyside:remoteobjects - Build QtRemoteObjects module
+dev-python/pyside:scxml - Build QtScxml module
+dev-python/pyside:sensors - Build QtSensors module
+dev-python/pyside:serialbus - Build QtSerialBus modules
+dev-python/pyside:serialport - Build QtSerialPort modules
+dev-python/pyside:spatialaudio - Build QtSpatialAudio module
+dev-python/pyside:speech - Build QtTextToSpeech module
+dev-python/pyside:sql - Build QtSql module
+dev-python/pyside:svg - Build QtSvg module
+dev-python/pyside:testlib - Build QtTest module
+dev-python/pyside:tools - Build PySide Tools
+dev-python/pyside:uitools - Build UITools module
+dev-python/pyside:webchannel - Build QtWebChannel module
+dev-python/pyside:webengine - Build QtWebEngine and QtWebEngineWidgets modules
+dev-python/pyside:websockets - Build QtWebSockets module
+dev-python/pyside:webview - Build QtWebView module
+dev-python/pyside:widgets - Build QtWidgets module
+dev-python/pyside:xml - Build QtXml module
 dev-python/python-box:native-extensions - Compiles native C extensions
 dev-python/python-lsp-server:all-plugins - Pull in all optional plugins
 dev-python/python-mpd2:twisted - Enable twisted support
@@ -2524,8 +2529,7 @@ dev-python/qtpy:positioning - Pull in bindings for the QtPositioning module
 dev-python/qtpy:printsupport - Pull in bindings for the QtPrintSupport module
 dev-python/qtpy:pyqt5 - Use dev-python/pyqt5 as Qt for Python implementation
 dev-python/qtpy:pyqt6 - Use dev-python/pyqt6 as Qt for Python implementation
-dev-python/qtpy:pyside2 - Use dev-python/pyside2 as Qt for Python implementation
-dev-python/qtpy:pyside6 - Use dev-python/pyside6 as Qt for Python implementation
+dev-python/qtpy:pyside6 - Use dev-python/pyside as Qt for Python implementation
 dev-python/qtpy:qml - Build bindings for the QtQml
 dev-python/qtpy:quick - Build bindings for the QtQuick
 dev-python/qtpy:quick3d - Build bindings for the QtQuick3D
@@ -6317,7 +6321,6 @@ net-misc/curl:hsts - Enable HTTP Strict Transport Security
 net-misc/curl:http3 - Enable HTTP/3 support
 net-misc/curl:imap - Enable Internet Message Access Protocol support
 net-misc/curl:mbedtls - Enable mbedtls ssl backend
-net-misc/curl:nghttp3 - Enable HTTP/3 support using net-libs/nghttp3
 net-misc/curl:openssl - Enable openssl ssl backend
 net-misc/curl:pop3 - Enable Post Office Protocol 3 support
 net-misc/curl:progress-meter - Enable the progress meter
@@ -8194,6 +8197,7 @@ sys-devel/binutils:gprofng - Enable the next-generation gprofng profiler
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/binutils:pgo - Build binutils with Profile Guided Optimization (PGO) and LTO
 sys-devel/binutils:plugins - Enable plugin support in tools
+sys-devel/binutils:xxhash - Use dev-libs/xxhash for --build-id=xx support
 sys-devel/binutils-apple:classic - Use nm, otool, etc. from this ebuild instead of llvm-based tools
 sys-devel/binutils-apple:lto - Add support for Link-Time Optimization with LLVM
 sys-devel/binutils-config:native-symlinks - Install native symlinks like 'as' or 'ar' to /usr/bin. Otherwise keep only ${CTARGET}-as and friends.
@@ -8747,7 +8751,7 @@ x11-base/xorg-server:xvfb - Build the Xvfb server
 x11-base/xwayland:libei - Enable emulated input using dev-libs/libei
 x11-base/xwayland:unwind - Enable libunwind usage for backtraces
 x11-base/xwayland:xcsecurity - Build Security extension
-x11-drivers/nvidia-drivers:kernel-open - Use the open source variant of the drivers (Turing/Ampere+ GPUs only, aka GTX 1650+ -- recommended with >=560.xx drivers if usable)
+x11-drivers/nvidia-drivers:kernel-open - Use the open source variant of the drivers (Turing/Ampere+ GPUs only, aka GTX 1650+ -- recommended with >=560.xx drivers if usable and it may be required for 50xx Blackwell+ GPUs)
 x11-drivers/nvidia-drivers:persistenced - Install the persistence daemon for keeping devices state when unused (e.g. for headless)
 x11-drivers/nvidia-drivers:powerd - Install the NVIDIA dynamic boost support daemon (only useful with specific laptops, ignore if unsure)
 x11-drivers/nvidia-drivers:static-libs - Install the XNVCtrl static library for accessing sensors and other features

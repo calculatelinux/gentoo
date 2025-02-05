@@ -172,7 +172,7 @@ BDEPEND="
 		dev-python/pyyaml[\${PYTHON_USEDEP}]
 	")
 	video_cards_intel? (
-		~dev-util/intel_clc-${PV}
+		~dev-util/mesa_clc-${PV}
 		llvm-core/libclc[spirv(-)]
 		$(python_gen_any_dep "dev-python/ply[\${PYTHON_USEDEP}]")
 	)
@@ -189,7 +189,7 @@ BDEPEND="
 
 QA_WX_LOAD="
 x86? (
-	usr/lib/libglapi.so.0.0.0
+	usr/lib/libgallium-*.so
 	usr/lib/libOSMesa.so.8.0.0
 	usr/lib/libGLX_mesa.so.0.0.0
 )"
@@ -444,6 +444,7 @@ multilib_src_configure() {
 	emesonargs+=(
 		$(meson_use test build-tests)
 		-Dshared-glapi=enabled
+		-Dlegacy-x11=dri2
 		-Dexpat=enabled
 		$(meson_use opengl)
 		$(meson_feature opengl gbm)
@@ -458,7 +459,7 @@ multilib_src_configure() {
 		$(meson_feature unwind libunwind)
 		$(meson_feature zstd)
 		$(meson_use cpu_flags_x86_sse2 sse2)
-		-Dintel-clc=$(usex video_cards_intel system auto)
+		-Dmesa-clc=$(usex video_cards_intel system auto)
 		-Dvalgrind=$(usex valgrind auto disabled)
 		-Dvideo-codecs=$(usex proprietary-codecs "all" "all_free")
 		-Dgallium-drivers=$(driver_list "${GALLIUM_DRIVERS[*]}")
