@@ -81,7 +81,7 @@ src_unpack() {
 		EGIT_CHECKOUT_DIR=${S}
 		git-r3_src_unpack
 	else
-		unpack ${P/-hppa64/}.tar.xz
+		unpack ${MY_P}.tar.xz
 
 		cd "${WORKDIR}" || die
 		unpack binutils-${PATCH_BINUTILS_VER}-patches-${PATCH_VER}.tar.xz
@@ -158,7 +158,7 @@ multilib_src_configure() {
 		# We only care about the libs, so disable programs. #528088
 		--disable-{binutils,etc,ld,gas,gprof,gprofng}
 		# Disable modules that are in a combined binutils/gdb tree. #490566
-		--disable-{gdb,gdbserver,libdecnumber,readline,sim}
+		--disable-{gdb,gdbserver,libbacktrace,libdecnumber,readline,sim}
 		# Strip out broken static link flags.
 		# https://gcc.gnu.org/PR56750
 		--without-stage1-ldflags
@@ -209,6 +209,11 @@ multilib_src_configure() {
 
 multilib_src_install() {
 	emake DESTDIR="${D}" install
+
+	# Provided by dev-debug/gdb instead
+	if [[ ${PV} != 9999 ]] ; then
+		rm "${ED}"/usr/share/info/sframe-spec.info || die
+	fi
 
 	# Provide libiberty.h directly.
 	dosym libiberty/libiberty.h /usr/include/libiberty.h
