@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -21,7 +21,7 @@ if [[ ${PV} = *9999* ]]; then
 else
 	SRC_URI="https://download.libvirt.org/${P}.tar.xz
 		verify-sig? ( https://download.libvirt.org/${P}.tar.xz.asc )"
-	KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~x86"
+	KEYWORDS="amd64 ~arm arm64 ppc64 x86"
 fi
 
 DESCRIPTION="C toolkit to manipulate virtual machines"
@@ -216,6 +216,7 @@ pkg_setup() {
 		~NETFILTER_XT_CONNMARK
 		~NETFILTER_XT_MARK
 		~NETFILTER_XT_TARGET_CHECKSUM
+		~NET_ACT_CSUM
 		~IP_NF_FILTER
 		~IP_NF_MANGLE
 		~IP_NF_NAT

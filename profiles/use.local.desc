@@ -474,6 +474,7 @@ app-editors/helix:grammar - Build and install grammar language files
 app-editors/jasspa-microemacs:nanoemacs - Build NanoEmacs instead of MicroEmacs
 app-editors/joe:xterm - Enable full xterm clipboard support
 app-editors/leafpad:emacs - Enable Emacs key theme
+app-editors/logseq-desktop-bin:wayland - Run in wayland mode under wayland sessions, xwayland otherwise. This flag doesn't affect x11 sessions.
 app-editors/mousepad:shortcuts - Build the "shortcuts" plugin
 app-editors/nano:debug - Enable debug messages and assert warnings. Note that these will all be sent straight to stderr rather than some logging facility.
 app-editors/nano:justify - Enable justify/unjustify functions for text formatting.
@@ -524,6 +525,7 @@ app-emulation/86Box:experimental - Enable hardware from devbranch, which may be 
 app-emulation/86Box:fluidsynth - Enable MIDI support through media-sound/fluidsynth.
 app-emulation/86Box:munt - Enable MIDI MT-32 support through media-libs/munt-mt32emu.
 app-emulation/86Box:new-dynarec - Enable new dynamic recompiler from PCem 15, which should provide an even better emulation speed.
+app-emulation/86Box:vde - Enable virtual networking through net-misc/vde.
 app-emulation/aranym:clipboard - Enable bidirectional clipboard transfer between the host and FreeMiNT
 app-emulation/aranym:jit - Build Just-In-Time compiler variant with increased performance
 app-emulation/aranym:lilo - Enable support for directly booting kernels such as Linux
@@ -539,7 +541,7 @@ app-emulation/crossover-bin:capi - Enable ISDN support via CAPI
 app-emulation/crossover-bin:osmesa - Add support for OpenGL in bitmaps using libOSMesa
 app-emulation/crossover-bin:pcap - Support packet capture software (e.g. wireshark)
 app-emulation/dosemu:fluidsynth - use media-sound/fluidsynth for MIDI emulation
-app-emulation/dxvk:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
+app-emulation/dxvk:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up and is mostly unsupported, try disabling if have issues)
 app-emulation/dxvk:d3d10 - Enable support for DirectX 10 (d3d10.dll)
 app-emulation/dxvk:d3d11 - Enable support for DirectX 11 (d3d11.dll)
 app-emulation/dxvk:d3d8 - Enable support for DirectX 8 (d3d8.dll)
@@ -683,20 +685,19 @@ app-emulation/virtualbox-kvm:vboxwebsrv - Build and install the VirtualBox webse
 app-emulation/virtualbox-kvm:vde - Support for VDE networking via net-misc/vde
 app-emulation/virtualbox-kvm:vmmraw - Enable 32-bit support on a 64-bit kernel.
 app-emulation/vkd3d:spirv-tools - Enable SPIRV shader debugging support using dev-util/spirv-tools
-app-emulation/vkd3d-proton:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
+app-emulation/vkd3d-proton:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up and is mostly unsupported, try disabling if have issues)
 app-emulation/vkd3d-proton:extras - Install extra tools and demos in /usr/lib/vkd3d-proton
 app-emulation/wine-gecko:shared - Install pre-unpacked files which do not need to be copied into the Wine prefix
 app-emulation/wine-mono:shared - Install pre-unpacked files which do not need to be copied into the Wine prefix (note that this requires the default top-level Z: drive to be kept for out-of-prefix files to be readable)
-app-emulation/wine-proton:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
+app-emulation/wine-proton:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up and is mostly unsupported, try disabling if have issues)
 app-emulation/wine-proton:gecko - Enable mshtml support using app-emulation/wine-gecko
 app-emulation/wine-proton:mono - Enable .NET support using app-emulation/wine-mono
 app-emulation/wine-proton:osmesa - Enable off-screen rendering (OpenGL in bitmaps) support
 app-emulation/wine-proton:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-proton:sdl - Enable gamepad support using media-libs/libsdl2
-app-emulation/wine-proton:vkd3d - Enable DirectX 12 support using app-emulation/vkd3d
 app-emulation/wine-proton:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32, also lacks 16bit support) -- still need dev-util/mingw64-toolchain with abi_x86_32 which itself does not need multilib
 app-emulation/wine-staging:capi - Enable ISDN support using net-libs/libcapi
-app-emulation/wine-staging:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
+app-emulation/wine-staging:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up and is mostly unsupported, try disabling if have issues)
 app-emulation/wine-staging:dos - Pull in games-emulation/dosbox to run DOS applications
 app-emulation/wine-staging:gecko - Enable mshtml support using app-emulation/wine-gecko
 app-emulation/wine-staging:mingw - Build PE files using a MinGW toolchain for better compatibility
@@ -709,7 +710,7 @@ app-emulation/wine-staging:samba - Pull in net-fs/samba with winbind for NTLM au
 app-emulation/wine-staging:sdl - Enable gamepad support using media-libs/libsdl2
 app-emulation/wine-staging:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32, also lacks 16bit support) -- still need dev-util/mingw64-toolchain with abi_x86_32 which itself does not need multilib
 app-emulation/wine-vanilla:capi - Enable ISDN support using net-libs/libcapi
-app-emulation/wine-vanilla:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up)
+app-emulation/wine-vanilla:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up and is mostly unsupported, try disabling if have issues)
 app-emulation/wine-vanilla:dos - Pull in games-emulation/dosbox to run DOS applications
 app-emulation/wine-vanilla:gecko - Enable mshtml support using app-emulation/wine-gecko
 app-emulation/wine-vanilla:mingw - Build PE files using a MinGW toolchain for better compatibility
@@ -720,7 +721,6 @@ app-emulation/wine-vanilla:pcap - Support packet capture software (e.g. wireshar
 app-emulation/wine-vanilla:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-vanilla:samba - Pull in net-fs/samba with winbind for NTLM auth support
 app-emulation/wine-vanilla:sdl - Enable gamepad support using media-libs/libsdl2
-app-emulation/wine-vanilla:vkd3d - Enable DirectX 12 support using app-emulation/vkd3d
 app-emulation/wine-vanilla:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32, also lacks 16bit support) -- still need dev-util/mingw64-toolchain with abi_x86_32 which itself does not need multilib
 app-emulation/winetricks:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
 app-emulation/x48:readline - Enables support for libreadline
@@ -1035,6 +1035,8 @@ app-office/kmymoney:activities - Enable kde-plasma/plasma-activities integration
 app-office/kmymoney:addressbook - Enable kde-apps/akonadi contact integration
 app-office/kmymoney:hbci - Enable HBCI support using net-libs/aqbanking
 app-office/kmymoney:holidays - Enable kde-frameworks/kholidays integration
+app-office/kmymoney:sql - Enable storage of financial data in SQL Db via dev-qt/qtsql
+app-office/kmymoney:sqlcipher - Enable SQLite3 database encryption support via dev-db/sqlcipher
 app-office/kraft:pim - Enable support for KDE PIM resources integration
 app-office/libalkimia:webengine - Enable online quotes using dev-qt/qtwebengine
 app-office/libreoffice:base - Enable full support for LibreOffice Base databases (involves additional bundled libs)
@@ -1211,6 +1213,7 @@ app-text/poppler:boost - Use boost::small_vector for a serious performance gain
 app-text/poppler:gpgme - Enable signatures handling with app-crypt/gpgme
 app-text/poppler:nss - Enable signatures handling with dev-libs/nss
 app-text/poppler:utils - Install command-line PDF converters and various utilities.
+app-text/qpdf:zopfli - Support using app-arch/zopfli for stronger zlib-compatible compression.
 app-text/qpdfview:fitz - Use experimental fitz rendering, provided by app-text/mupdf, instead of poppler
 app-text/qpdfview:synctex - Add support for searching TeX sources
 app-text/robodoc:examples - Installs usage examples in /usr/share for Perl
@@ -2221,10 +2224,6 @@ dev-libs/protobuf:protoc - Build libprotoc and protoc compiler
 dev-libs/qcoro:network - Build dev-qt/qtbase network support
 dev-libs/qcoro:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
 dev-libs/qcoro:websockets - Build dev-qt/qtwebsockets support
-dev-libs/qcoro5:network - Build dev-qt/qtnetwork support
-dev-libs/qcoro5:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
-dev-libs/qcoro5:testlib - Install coroutine-friendly versions of dev-qt/qttest macros
-dev-libs/qcoro5:websockets - Build dev-qt/qtwebsockets support
 dev-libs/qhotkey:qt6 - Use Qt6 dependencies
 dev-libs/quazip:qt5 - Build with Qt5 support
 dev-libs/quazip:qt6 - Build with Qt6 support
@@ -2424,13 +2423,10 @@ dev-python/pyqt5:declarative - Build bindings for the QtQml and QtQuick modules 
 dev-python/pyqt5:designer - Build bindings for the QtDesigner module and enable the designer plugin
 dev-python/pyqt5:gui - Build bindings for the QtGui module
 dev-python/pyqt5:help - Build bindings for the QtHelp module
-dev-python/pyqt5:location - Build bindings for the QtLocation module
 dev-python/pyqt5:multimedia - Build bindings for the QtMultimedia module
 dev-python/pyqt5:network - Build bindings for the QtNetwork module
 dev-python/pyqt5:opengl - Build bindings for the QtOpenGL module
-dev-python/pyqt5:positioning - Build bindings for the QtPositioning module
 dev-python/pyqt5:printsupport - Build bindings for the QtPrintSupport module
-dev-python/pyqt5:sensors - Build bindings for the QtSensors module
 dev-python/pyqt5:serialport - Build bindings for the QtSerialPort module
 dev-python/pyqt5:speech - Build bindings for the QtTextToSpeech module
 dev-python/pyqt5:sql - Build bindings for the QtSql module
@@ -2536,6 +2532,7 @@ dev-python/qtpy:qml - Build bindings for the QtQml
 dev-python/qtpy:quick - Build bindings for the QtQuick
 dev-python/qtpy:quick3d - Build bindings for the QtQuick3D
 dev-python/qtpy:remoteobjects - Pull in bindings for the QtRemoteObjects module
+dev-python/qtpy:scxml - Pull in bindings for the QtScXml module
 dev-python/qtpy:sensors - Pull in bindings for the QtSensors module
 dev-python/qtpy:serialport - Pull in bindings for the QtSerialPort module
 dev-python/qtpy:spatialaudio - Pull in bindings for the QtSpatialAudio module
@@ -2968,6 +2965,7 @@ dev-util/sysprof:unwind - Use sys-libs/libunwind to unwind the stack
 dev-util/uftrace:capstone - Use capstone to provide dynamic tracing without recompilation
 dev-util/vulkan-tools:cube - Build the cube/cubepp demos
 dev-util/watchman:python - Install pywatchman bindings and the watchman-{wait,make} utils
+dev-util/xxdiff:scripts - Install python helper scripts
 dev-vcs/cvs:server - Enable server support
 dev-vcs/darcs:curl - Use libcurl for HTTP support.
 dev-vcs/darcs:terminfo - Use the terminfo package for enhanced console support.
@@ -3141,6 +3139,7 @@ games-emulation/ppsspp:discord - Enable interfacing with a locally running Disco
 games-emulation/rmg:angrylion-plugin - Enable the mupen64plus-video-angrylion-plus XMAME licensed plugin
 games-emulation/rmg:discord - Enable Discord RPC support
 games-emulation/rmg:dynarec - Enable the new dynarec for the mupen64plus-core plugin
+games-emulation/rmg:netplay - Enable Netplay
 games-emulation/rmg:rust-plugin - Enable the mupen64plus-input-gca rust plugin
 games-emulation/snes9x:libretro - Build libretro port
 games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recommended)
@@ -3701,6 +3700,7 @@ kde-plasma/plasma-workspace:policykit - Enable locale generation and Users KCM u
 kde-plasma/plasma-workspace:screencast - Enable screencast portal using kde-plasma/kpipewire
 kde-plasma/plasma-workspace:telemetry - Enable User Feedback control module for kde-plasma/systemsettings
 kde-plasma/plasma-workspace:wallpaper-metadata - Show metadata for image wallpaper plugin using kde-apps/libkexiv2
+kde-plasma/plasma5support:activities - Enable kactivities support
 kde-plasma/powerdevil:brightness-control - Enable screen brightness control using app-misc/ddcutil
 llvm-core/clang:extra - Build extra tools (clangd, clang-tidy and a few more)
 llvm-core/clang:ieee-long-double - Use accelerated 128-bit IEEE long double ABI (ppc64le only)
@@ -4670,7 +4670,7 @@ media-sound/cadence:a2jmidid - Enables support for legacy ALSA sequencer applica
 media-sound/cantata:cdio - Use dev-libs/libcdio-paranoia for CD support (instead of cdparanoia)
 media-sound/cantata:http-server - Enable internal HTTP server to play non-MPD files
 media-sound/cantata:replaygain - Enable ReplayGain support, for relative volume adjustments
-media-sound/cantata:streaming - Enable playback of MPD HTTP streams using LibVLC (media-video/vlc)
+media-sound/cantata:streaming - Enable playback of MPD HTTP streams using (dev-qt/qtmultimedia)
 media-sound/cava:pipewire - Enable support for the media-video/pipewire backend
 media-sound/cava:sndio - Enable support for the media-sound/sndio backend
 media-sound/clementine:box - Enable filesharing via Box.com
@@ -4761,11 +4761,14 @@ media-sound/lmms:stk - Enables STK Mallet plugin.
 media-sound/lmms:vst - Enables the VeSTige plugin to run VST plugins through Wine.
 media-sound/mangler:espeak - Text to speech engine
 media-sound/mangler:g15 - Logitech g15 lcd support
+media-sound/mixxx:benchmark - Build and install benchmark binary: mixxx-test --benchmark
 media-sound/mixxx:hid - Enable HID controller support
 media-sound/mixxx:keyfinder - Enable musical key detection support via media-libs/libkeyfinder
 media-sound/mixxx:lv2 - Add support for Ladspa V2 via media-libs/lilv
+media-sound/mixxx:midi - Enable MIDI support via media-libs/portmidi
 media-sound/mixxx:modplug - Add libmodplug support
 media-sound/mixxx:qtkeychain - Enable Secure credential storage support via dev-libs/qtkeychain
+media-sound/mixxx:rubberband - Enable audio pitch-shifting via media-libs/rubberband
 media-sound/mixxx:shout - Enable broadcasting support via media-libs/libshout
 media-sound/moc:cache - Enable tags caching support
 media-sound/moc:sndio - Enable support for the media-sound/sndio backend
@@ -5252,10 +5255,6 @@ media-video/vdr:pinplugin - Support for media-plugins/vdr-pin
 media-video/vdr:resumereset - rreset resume of EOF
 media-video/vdr:ttxtsubs - support for media-plugins/vdr-ttxtsubs
 media-video/vdr:verbose - enable full output on compile
-media-video/vidify:dbus - Support local MPRIS players
-media-video/vidify:mpv - Use python-mpv as backend for vidify
-media-video/vidify:vlc - Use python-vlc as backend for vidify
-media-video/vidify:zeroconf - Use an external network player
 media-video/vlc:X - Enable support for e.g. fullscreen mode via X and the X C-language binding. It does not build a graphical interface
 media-video/vlc:aom - Enable AV1 encoding/decoding support using media-libs/libaom
 media-video/vlc:archive - Enable support for libarchive stream extractor
@@ -5877,15 +5876,6 @@ net-im/profanity:omemo-qrcode - Enable exchanging OMEMO information via QR code
 net-im/profanity:otr - Enable encrypted conversations using Off-The-Records messaging
 net-im/profanity:python - Enable Python plugins support
 net-im/prosody:libevent - Use libevent for event handling
-net-im/psi:aspell - Enable spellchecking using app-text/aspell
-net-im/psi:enchant - Enable spellchecking using app-text/enchant
-net-im/psi:extras - Enable Psi+ patchset
-net-im/psi:hunspell - Enable spellchecking using app-text/hunspell
-net-im/psi:iconsets - Install additional iconsets, some of them have no clear licensing
-net-im/psi:webengine - Enable themed, html-based chatlogs using dev-qt/qtwebengine
-net-im/psi:whiteboarding - Enable experimental interactive SVG drawing
-net-im/psi:xscreensaver - Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events
-net-im/psimedia:extras - Enable Psi+ mode (required when built for Psi+)
 net-im/qtox:X - Enable auto-away support
 net-im/qtox:spellcheck - Enable spell checking support
 net-im/spectrum2:frotz - Enables the Z-Engine backend.
@@ -6352,14 +6342,12 @@ net-misc/electrum:qrcode - Enable QR code scanning with media-gfx/zbar
 net-misc/electrum-ltc:cli - Enables the CLI interface
 net-misc/electrum-ltc:qrcode - Enable QR code scanning with media-gfx/zbar
 net-misc/etherdfs:tsr - Install the precompiled TSR program for DOS, which acts as a client.
-net-misc/ethflop:tsr - Build the TSR program for DOS, which acts as a client.
 net-misc/eventd:libcanberra - Enable plugin for sounds via media-libs/libcanberra
 net-misc/eventd:libnotify - Enable plugin to relay events to notification daemon (Note: not required for local notifications via net-misc/eventd)
 net-misc/eventd:notification - Enable plugin to display on-screen notifications
 net-misc/eventd:purple - Enable plugin for IM notifications via libpurple
 net-misc/eventd:webhook - Enable plugin to send payloads to webhook handlers
 net-misc/eventd:websocket - Enable support for WebSocket protocol
-net-misc/fatrat:bittorrent - Use the bittorrent protocol via net-libs/libtorrent-rasterbar.
 net-misc/freerdp:aad - Enable login via Azure AD
 net-misc/freerdp:client - Build client binaries
 net-misc/freerdp:fuse - Clipboard with FUSE file copy support
@@ -6633,6 +6621,7 @@ net-misc/tigervnc:java - Build TigerVNC Java viewer
 net-misc/tigervnc:server - Build TigerVNC server
 net-misc/tigervnc:viewer - Build TigerVNC viewer
 net-misc/tinyssh:sodium - Use dev-libs/libsodium for cryptography
+net-misc/turbovnc:dri3 - Build with DRI3 support
 net-misc/turbovnc:server - Build the server (vncserver, Xvnc)
 net-misc/turbovnc:viewer - Build the viewer (vncviewer)
 net-misc/uftp:server - Install uftp server daemon
@@ -7662,7 +7651,6 @@ sci-physics/root:http - Enable http server support including but not limited to 
 sci-physics/root:jupyter - Install dependencies to enable ROOT's C++ kernel in Jupyter notebooks
 sci-physics/root:libcxx - Build ROOT against llvm-runtimes/libcxx
 sci-physics/root:minuit - Build ROOT's internal versions of minuit (fortran) and minuit2 (C++)
-sci-physics/root:pythia6 - Build the interface for sci-physics/pythia version 6.x
 sci-physics/root:pythia8 - Build the interface for sci-physics/pythia version 8.x
 sci-physics/root:roofit - Build RooFit function fitting package
 sci-physics/root:root7 - Build experimental features to be released with ROOT 7
@@ -8619,7 +8607,6 @@ www-client/firefox:system-libevent - Use the system-wide dev-libs/libevent inste
 www-client/firefox:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled
 www-client/firefox:system-png - Use the system-wide media-libs/libpng instead of bundled (requires APNG patches)
 www-client/firefox:system-webp - Use the system-wide media-libs/libwebp instead of bundled
-www-client/firefox:wasm - Sandbox certain third-party libraries through WebAssembly using RLBox
 www-client/firefox:wasm-sandbox - Sandbox certain third-party libraries through WebAssembly using RLBox
 www-client/firefox:wifi - Enable necko-wifi for NetworkManager integration, and access point MAC address scanning for better precision with opt-in geolocation services
 www-client/firefox-bin:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles

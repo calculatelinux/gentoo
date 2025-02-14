@@ -1,5 +1,5 @@
 BDEPEND=app-alternatives/yacc
-DEFINED_PHASES=compile install postinst postrm
+DEFINED_PHASES=compile install
 DESCRIPTION=Brian Kernighan's pattern scanning and processing language
 EAPI=8
 HOMEPAGE=https://www.cs.princeton.edu/~bwk/btl.mirror/
@@ -9,4 +9,4 @@ LICENSE=MIT
 SLOT=0
 SRC_URI=https://github.com/onetrueawk/awk/archive/20230909.tar.gz -> nawk-20230909.tar.gz
 _eclasses_=multilib	b2a329026f2e404e9e371097dda47f96	toolchain-funcs	14648d8795f7779e11e1bc7cf08b7536
-_md5_=0bc4be0f14e20b57714b7cfbb5788828
+_md5_=5fa629908fba28183a387c48f85791ce
