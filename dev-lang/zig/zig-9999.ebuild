@@ -1,4 +1,4 @@
-# Copyright 2019-2024 Gentoo Authors
+# Copyright 2019-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,7 +9,7 @@ LLVM_OPTIONAL=1
 ZIG_SLOT="$(ver_cut 1-2)"
 ZIG_OPTIONAL=1
 
-inherit check-reqs cmake flag-o-matic edo llvm-r1 toolchain-funcs zig
+inherit check-reqs cmake flag-o-matic edo llvm-r2 toolchain-funcs zig
 
 DESCRIPTION="A robust, optimal, and maintainable programming language"
 HOMEPAGE="https://ziglang.org/ https://github.com/ziglang/zig/"
@@ -43,7 +43,7 @@ fi
 # lib/libc/glibc: BSD HPND ISC inner-net LGPL-2.1+
 LICENSE="MIT Apache-2.0-with-LLVM-exceptions || ( UoI-NCSA MIT ) || ( Apache-2.0-with-LLVM-exceptions Apache-2.0 MIT BSD-2 ) public-domain BSD-2 ZPL ISC HPND BSD inner-net LGPL-2.1+"
 SLOT="${ZIG_SLOT}"
-IUSE="doc +llvm"
+IUSE="debug doc +llvm"
 REQUIRED_USE="
 	!llvm? ( !doc )
 	llvm? ( ${LLVM_REQUIRED_USE} )
@@ -57,18 +57,14 @@ BUILD_DIR="${WORKDIR}/${P}_build"
 # They are not required "on their own", so please don't add them here.
 # You can check https://github.com/ziglang/zig-bootstrap in future, to see
 # options that are passed to LLVM CMake building (excluding "static" ofc).
-DEPEND="
-	llvm? (
-		$(llvm_gen_dep '
-			llvm-core/clang:${LLVM_SLOT}
-			llvm-core/lld:${LLVM_SLOT}
-			llvm-core/llvm:${LLVM_SLOT}[zstd]
-		')
-	)
-"
-BDEPEND+="
-	${DEPEND}
-"
+LLVM_DEPEND="$(llvm_gen_dep '
+	llvm-core/clang:${LLVM_SLOT}
+	llvm-core/lld:${LLVM_SLOT}[zstd]
+	llvm-core/llvm:${LLVM_SLOT}[zstd]
+')"
+
+BDEPEND+=" llvm? ( ${LLVM_DEPEND} )"
+DEPEND="llvm? ( ${LLVM_DEPEND} )"
 RDEPEND="${DEPEND}"
 IDEPEND="app-eselect/eselect-zig"
 
@@ -83,13 +79,18 @@ CHECKREQS_MEMORY="4G"
 
 pkg_setup() {
 	# Skip detecting zig executable.
-	ZIG_EXE="not-applicable" ZIG_VER="${PV}" zig_pkg_setup
+	declare -r -g ZIG_VER="${PV}"
+	ZIG_EXE="not-applicable" zig_pkg_setup
 
-	export ZIG_SYS_INSTALL_DEST="${EPREFIX}/usr/$(get_libdir)/zig/${PV}"
+	declare -r -g ZIG_SYS_INSTALL_DEST="${EPREFIX}/usr/$(get_libdir)/zig/${PV}"
 
 	if use llvm; then
-		tc-is-cross-compiler && die "USE=llvm is not yet supported when cross-compiling"
-		llvm-r1_pkg_setup
+		[[ ${MERGE_TYPE} != binary ]] && llvm_cbuild_setup
+	fi
+
+	# Requires running stage3 which is built for cross-target.
+	if use doc && tc-is-cross-compiler; then
+		die "USE=doc is not yet supported when cross-compiling"
 	fi
 
 	check-reqs_pkg_setup
@@ -139,11 +140,40 @@ src_configure() {
 		--prefix-lib-dir lib/
 
 		# These are built separately
-		-Dno-langref
+		-Dno-langref=true
 		-Dstd-docs=false
 
-		--release=fast
+		# More commands and options if "debug" is enabled.
+		-Ddebug-extensions=$(usex debug true false)
+		# More asserts and so on by default if "debug" is enabled.
+		--release=$(usex debug safe fast)
 	)
+
+	# Scenarios of compilation:
+
+	# With LLVM, native:
+	# CMake:
+	#   * generate "config.h" for LLVM libraries and build "zigcpp"
+	#   * build "zig2" using common "config.h" and "zigcpp"
+	# build.zig:
+	#   * build "stage3" using common "config.h" and "zigcpp"
+
+	# With LLVM, cross-compiled:
+	# CMake:
+	#   * generate cross-target "config.h" for LLVM libraries from ESYSROOT
+	#     and build cross-target "zigcpp", and stash them away
+	#   * generate native "config.h" for LLVM libraries from BROOT and
+	#     build native "zigcpp"
+	#   * build native "zig2" using native "config.h" and "zigcpp"
+	# build.zig:
+	#   * build cross-target "stage3" using stashed "config.h" and "zigcpp"
+
+	# Without LLVM:
+	# bootstrap.c:
+	#   * build native "zig2"
+	# build.zig:
+	#   * build (cross-)target "stage3"
+
 	if use llvm; then
 		my_zbs_args+=(
 			-Denable-llvm=true
@@ -155,31 +185,78 @@ src_configure() {
 			-Denable-llvm=false
 		)
 	fi
-
 	zig_src_configure
 
 	if use llvm; then
-		# Build for native only, it's for zig2 (build-time executable)
-		# LLVM from BDEPEND
 		local mycmakeargs=(
 			-DZIG_SHARED_LLVM=ON
 			-DZIG_USE_LLVM_CONFIG=ON
-
-			-DZIG_TARGET_TRIPLE=native
-			-DZIG_TARGET_MCPU=native
 			-DZIG_HOST_TARGET_TRIPLE="${ZIG_HOST_AS_TARGET}"
+			# Don't set ZIG_TARGET_TRIPLE, ZIG_TARGET_MCPU and
+			# CMAKE_INSTALL_PREFIX because we build up to zig2 max,
+			# after that "zig build" is used to compile stage3.
 
-			-DCMAKE_PREFIX_PATH="$(get_llvm_prefix -b)"
-			-DCMAKE_INSTALL_PREFIX="${ZIG_SYS_INSTALL_DEST}"
+			# Don't set CMAKE_PREFIX_PATH because "llvm_chost_setup"
+			# and "llvm_cbuild_setup" already set PATH in such way
+			# that suitable llvm-config is found and used in
+			# "cmake/Findllvm.cmake", and "cmake.eclass" help with
+			# cross-compilation pathes for "Findclang" and "Findlld".
+
+			# CMP0144, Zig has own packages with these names, so ignore
+			# LLVM_ROOT, Clang_ROOT, LLD_ROOT from "llvm_chost_setup".
+			-DCMAKE_FIND_USE_PACKAGE_ROOT_PATH=OFF
 		)
+		if tc-is-cross-compiler; then
+			# Enable cross-compilation for CMake when filling "config.h"
+			# and building "zigcpp". They would be used for stage3 build.
+			# Here we are using LLVM from ESYSROOT/DEPEND.
+			# Uses script llvm-config.
 
-		cmake_src_configure
+			# Isolate PATH changes in subshell so that it would not
+			# affect next `cmake_src_configure` with BROOT/BDEPEND.
+			(
+				llvm_chost_setup
+				cmake_src_configure
+				cmake_build zigcpp
+			)
+
+			mv "${BUILD_DIR}/config.h" "${T}/target_config.h" || die
+			mv "${BUILD_DIR}/zigcpp/" "${T}/target_zigcpp/" || die
+			rm -rf "${BUILD_DIR}" || die
+		fi
+
+		# Force disable cross-compilation for CMake when building "zig2".
+		# Here we are using LLVM from BROOT/BDEPEND.
+		# Uses native llvm-config.
+
+		# Isolate environment changes in subshell so that it would not
+		# affect next phases.
+		(
+			export BUILD_CFLAGS="${CFLAGS}"
+			export BUILD_CXXFLAGS="${CXXFLAGS}"
+			export BUILD_CPPFLAGS="${CPPFLAGS}"
+			export BUILD_LDFLAGS="${LDFLAGS}"
+			tc-env_build
+
+			unset SYSROOT
+			export CHOST="${CBUILD:-${CHOST}}"
+			strip-unsupported-flags
+			cmake_src_configure
+		)
 	fi
 }
 
 src_compile() {
 	if use llvm; then
 		cmake_build zig2
+
+		if tc-is-cross-compiler; then
+			rm -rf "${BUILD_DIR}/zigcpp/" || die
+			rm -f "${BUILD_DIR}/config.h" || die
+
+			mv "${T}/target_zigcpp/" "${BUILD_DIR}/zigcpp/" || die
+			mv "${T}/target_config.h" "${BUILD_DIR}/config.h" || die
+		fi
 	else
 		cd "${BUILD_DIR}" || die
 		ln -s "${S}/stage1/" . || die
@@ -192,18 +269,48 @@ src_compile() {
 	fi
 
 	cd "${BUILD_DIR}" || die
-	ZIG_EXE="./zig2" zig_src_compile --prefix "${BUILD_DIR}/stage3/"
+	ZIG_EXE="./zig2" zig_src_compile --prefix stage3/
 
-	./stage3/bin/zig env || die "Zig compilation failed"
+	# Requires running stage3 which is built for cross-target.
+	if ! tc-is-cross-compiler; then
+		./stage3/bin/zig env || die "Zig compilation failed"
 
-	if use doc; then
-		ZIG_EXE="./stage3/bin/zig" zig_src_compile langref --prefix "${S}/docgen/"
+		if use doc; then
+			ZIG_EXE="./stage3/bin/zig" zig_src_compile langref --prefix "${S}/docgen/"
+		fi
 	fi
 }
 
 src_test() {
+	if has_version -b app-emulation/qemu; then
+		ewarn "QEMU executable was found on your building system."
+		ewarn "If you have qemu-binfmt (binfmt_misc) hooks enabled for"
+		ewarn "foreign architectures, Zig tests might fail."
+		ewarn "In this case, please disable qemu-binfmt and try again."
+	fi
+
 	cd "${BUILD_DIR}" || die
+
+	# XXX: When we pass a libc installation to Zig, it will fail to find
+	#      the bundled libraries for targets like aarch64-macos and
+	#      *-linux-musl. Zig doesn't run binaries for these targets when
+	#      -Dskip-non-native is passed, but they are still compiled, so
+	#      the test will fail. There's no way to disable --libc once passed,
+	#      so we need to strip it from ZBS_ARGS.
+	#      See: https://github.com/ziglang/zig/issues/22383
+	local args_backup=("${ZBS_ARGS[@]}")
+
+	for ((i = 0; i < ${#ZBS_ARGS[@]}; i++)); do
+		if [[ "${ZBS_ARGS[i]}" == "--libc" ]]; then
+			unset ZBS_ARGS[i]
+			unset ZBS_ARGS[i+1]
+			break
+		fi
+	done
+
 	ZIG_EXE="./stage3/bin/zig" zig_src_test -Dskip-non-native
+
+	ZBS_ARGS=("${args_backup[@]}")
 }
 
 src_install() {
@@ -237,5 +344,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	eselect zig update ifunset || die
+	eselect zig update ifunset
 }
