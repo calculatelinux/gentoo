@@ -1,10 +1,10 @@
-# Copyright 2022-2024 Gentoo Authors
+# Copyright 2022-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
 DISTUTILS_USE_PEP517=hatchling
-PYTHON_COMPAT=( pypy3 python3_{10..13} )
+PYTHON_COMPAT=( pypy3 pypy3_11 python3_{10..13} )
 
 inherit distutils-r1 optfeature
 
@@ -52,7 +52,6 @@ BDEPEND="
 		$(python_gen_cond_dep '
 			dev-python/trio[${PYTHON_USEDEP}]
 		' 3.{10..13})
-		!!dev-python/httptools[${PYTHON_USEDEP}]
 	)
 "
 
@@ -61,6 +60,10 @@ distutils_enable_tests pytest
 src_prepare() {
 	local PATCHES=(
 		"${FILESDIR}/${PN}-0.27.0-opt-trio.patch"
+		# fix test failures when httptools are installed
+		# https://github.com/encode/httpx/discussions/3429
+		# https://gitlab.archlinux.org/archlinux/packaging/packages/python-httpx/-/blob/main/uvicorn-test-server-use-h11.diff
+		"${FILESDIR}/${PN}-0.28.1-httptools-test.patch"
 	)
 
 	if ! use cli; then

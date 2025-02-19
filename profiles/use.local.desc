@@ -1297,6 +1297,7 @@ dev-ada/gnatcoll-db:sql - Build sql library
 dev-ada/gnatcoll-db:static-pic - Build shared library
 dev-ada/gnatcoll-db:xref - Build xref library
 dev-ada/gnatdoc:static-pic - Build static library with pic code
+dev-ada/gnatformat:static-pic - Build static library with pic code
 dev-ada/gpr:shared - Build shared library
 dev-ada/gpr:static-pic - Build static library with pic code
 dev-ada/gpr-unit-provider:shared - Build shared library
@@ -2902,6 +2903,7 @@ dev-util/kcov:binutils - Use sys-libs/binutils-libs for `--verify` support
 dev-util/kdevelop:gdbui - Enable GUI for attaching GDB to a running process
 dev-util/kdevelop:qmake - Enable support for QMake build system
 dev-util/kdevelop:share - Enable support for patch sharing using kde-frameworks/purpose
+dev-util/kdstatemachineeditor:gui - A proof-of-concept application called kdstatemachineditor
 dev-util/kernelshark:custom-optimization - Build with user-specified compiler optimizations (-Os, -O0, -O1, -O2, -O3) from CFLAGS
 dev-util/kup:gitolite - Enable support for dev-vcs/gitolite in kup-server
 dev-util/libabigail:btf - Handle reading kernel debug files in BTF format via dev-libs/libbpf
@@ -5304,12 +5306,17 @@ media-video/vlc:upnp - Enable support for the Intel SDK stack based UPnP discove
 media-video/vlc:x265 - Support X265 Encoder
 media-video/vlc:zeroconf - Enable support for zero-configuration networking via avahi
 media-video/vlc:zvbi - Enable support for teletext subtitles via the zvbi library
+media-video/webcamoid:X - Enable x11-libs/libX11 screen capture support
+media-video/webcamoid:aom - Enable media-libs/libaom audio codec support
+media-video/webcamoid:faac - Enable media-libs/faac audio codec support
+media-video/webcamoid:fdk-aac - Enable media-libs/fdk-aac audio codec support
 media-video/webcamoid:headers - Install development headers
-media-video/webcamoid:libuvc - Build with libuvc support
-media-video/webcamoid:qtaudio - Enable audio capture/play via dev-qt/qtmultimedia
-media-video/webcamoid:qtcamera - Enable video capture/play via dev-qt/qtmultimedia
-media-video/webcamoid:v4lutils - Build with V4L-utils support
-media-video/webcamoid:videoeffects - Build video effects
+media-video/webcamoid:libusb - Enable video capturing from USB devices using dev-libs/libusb
+media-video/webcamoid:libuvc - Enable video capturing from USB devices using media-libs/libuvc
+media-video/webcamoid:qtmedia - Enable audio/video/screen capture/play via dev-qt/qtmultimedia
+media-video/webcamoid:rav1e - Enable media-video/rav1e audio codec support
+media-video/webcamoid:svt-av1 - Enable media-libs/svt-av1 video codec support
+media-video/webcamoid:vlc - Enable media-video/vlc video backend support
 media-video/wireplumber:system-service - Install systemd unit files for running as a system service. Not recommended.
 media-video/x264-encoder:avs - enable AvxSynth support in the AviSynth input module
 media-video/x264-encoder:ffmpegsource - Enable ffmpegsource aka ffms support, disables lavf
@@ -8458,6 +8465,8 @@ sys-libs/zlib:minizip - include the minizip library for quick and dirty zip extr
 sys-libs/zlib-ng:compat - Enable compatibility to sys-libs/zlib
 sys-power/apcupsd:modbus - Enable MODBUS support over USB
 sys-power/autosuspend:mpd - Enable support for the Music Player Daemon
+sys-power/iasl:examples - Install acpiexamples binary
+sys-power/iasl:test - Perform tests (slow!) and install compressed test results
 sys-power/intel-undervolt:elogind - Use elogind hook to apply voltage after system sleep
 sys-power/nut:gpio - Includes all UPS drivers that use GPIO.
 sys-power/nut:i2c - Includes all UPS drivers that use I2C.

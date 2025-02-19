@@ -33,6 +33,19 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-02-18)
+# Depends on deprecated Qt5WebEngine, no response from maintainers.
+# Download source appears gone; bugs #926675, #880649, #870256.
+# Removal on 2025-03-18.
+sci-electronics/eagle
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-02-16)
+# KF5/Qt5 based and no signs of porting or even life upstream.
+# kde-frameworks/kcalendarcore:5 has no more revdeps after this.
+# Removal on 2025-03-16.
+app-office/calligraplan
+kde-frameworks/kcalendarcore:5
+
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2025-02-16)
 # Discontinued, please use xournal++ instead.
 # Removal on 2025-03-16. Bug 948200.
@@ -159,12 +172,6 @@ net-misc/AQtion
 # Masked for testing
 =dev-util/mesa_clc-25.0*
 =media-libs/mesa-25.0*
-
-# Ionen Wolkens <ionen@gentoo.org> (2025-01-30)
-# Breaks the only consumer of pytest-bdd (qutebrowser),
-# not looked into yet but mask for now as it prevents
-# using it to test PyQt6 for the upcoming Qt bump.
->=dev-python/gherkin-official-31.0.0
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-30)
 # Last release 15 years ago, dead upstream (never imported from kdesvn),
