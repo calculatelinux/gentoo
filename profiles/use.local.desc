@@ -559,6 +559,7 @@ app-emulation/fuse:backend-svga - Use svgalib rendering backend
 app-emulation/fuse:memlimit - Add compile-time memory usage limiting
 app-emulation/fuse-utils:gcrypt - Use dev-libs/libgcrypt for low-level crypto of some features, including logfiles.
 app-emulation/grub-xen-host:pvh - Build an additional grub bin for pvh.
+app-emulation/guestfs-tools:libvirt - Use app-emulation/libvirt to manipulate VMs
 app-emulation/hercules-sdl:object-rexx - Enable REXX support via Open Object Rexx (dev-lang/oorexx)
 app-emulation/hercules-sdl:regina-rexx - Enable REXX support via Regina Rexx (dev-lang/regina-rexx)
 app-emulation/libcacard:passthrough - Enable smartcard passthrough support via sys-apps/pcsc-lite
@@ -2587,7 +2588,7 @@ dev-qt/qt-creator:plugin-dev - Install the 'Devel' component needed to build ext
 dev-qt/qt-creator:qmldesigner - Build QmlDesigner and related plugins (Insight, StudioWelcome)
 dev-qt/qt-creator:serialterminal - Build the serial terminal plugin
 dev-qt/qt-creator:tracing - Build plugins for tracing requiring extra dependencies (AppStatisticsMonitor, CtfVisualizer, PerfProfiler, QmlProfiler)
-dev-qt/qt-creator:webengine - Use dev-qt/qtwebengine with the help USE rather than bundled litehtml
+dev-qt/qt-creator:webengine - Allow using dev-qt/qtwebengine for better USE=help display, and for Design Viewer Connector support with USE=qmldesigner
 dev-qt/qt-docs:3d - Install documentation for dev-qt/qt3d
 dev-qt/qt-docs:activeqt - Install documentation for ActiveQt (unpackaged, Windows-only)
 dev-qt/qt-docs:assistant - Install documentation for dev-qt/assistant
@@ -4511,6 +4512,7 @@ media-libs/sdl-mixer:mod - basic support for MOD files
 media-libs/sdl-mixer:playtools - Install playwave and playmus tools (useful for testing)
 media-libs/sdl-mixer:smpeg - Use media-libs/smpeg for MP3 support
 media-libs/sdl-mixer:wav - support WAVE files
+media-libs/sdl2-image:samples - Install sample programs
 media-libs/sdl2-mixer:fluidsynth - Use media-sound/fluidsynth for MIDI support
 media-libs/sdl2-mixer:gme - Support additional music formats with media-libs/game-music-emu
 media-libs/sdl2-mixer:midi - Basic support for MIDI files
@@ -6860,7 +6862,6 @@ net-voip/yate:wanpipe - Enable Wanpipe support
 net-voip/yate:wpcard - Enable Wanpipe card driver
 net-voip/yate:zaptel - Enable Zaptel driver
 net-vpn/eduvpn-common:openvpn - enable support for OpenVPN
-net-vpn/eduvpn-common:wireguard - enable support for WireGuard
 net-vpn/frp:client - Build and install frp client (frpc)
 net-vpn/frp:server - Build and install frp server (frps)
 net-vpn/libreswan:dnssec - Use DNSSEC resolver (requires net-dns/unbound)
@@ -8143,8 +8144,6 @@ sys-cluster/glusterfs:uring - Control whether or not glusterfs is compiled with 
 sys-cluster/hpx:papi - Use dev-libs/papi for NaCl
 sys-cluster/hpx:perftools - Use dev-util/google-perftools for memory allocation
 sys-cluster/hpx:tbb - Use dev-cpp/tbb for memory allocation
-sys-cluster/k3s:kubectl-symlink - Install a kubectl symlink that points to k3s.
-sys-cluster/k3s:rootless - Enables dependencies for running in rootless mode.
 sys-cluster/keepalived:bfd - compile with support for Bidirectional Forwarding Detection (BFD).
 sys-cluster/keepalived:json - compile with signal to dump configuration and stats as JSON.
 sys-cluster/keepalived:regex - compile with support for regex in health checks

@@ -15,7 +15,7 @@ S=${WORKDIR}/distribution-${MY_PV}
 
 LICENSE="Apache-2.0 BSD BSD-2 CC-BY-SA-4.0 MIT ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="amd64 ~arm64"
 
 DEPEND="
 	acct-group/registry
@@ -27,6 +27,9 @@ src_prepare() {
 	default
 
 	sed -e "s/-s -w/-w/" -i Makefile || die
+
+	# bug 949973
+	sed -e "s/TestHTTPChecker/_&/" -i health/checks/checks_test.go || die
 }
 
 src_compile() {
