@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -36,13 +36,14 @@ else
 fi
 
 LICENSE="Apache-2.0-with-LLVM-exceptions"
-SLOT="0/4"
+SLOT="0/5"
 IUSE="btf debug ${LIBABIGAIL_DOCS_USEFLAG} test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
 	dev-libs/elfutils
 	dev-libs/libxml2:2
+	dev-libs/xxhash
 	btf? ( dev-libs/libbpf:= )
 	elibc_musl? ( sys-libs/fts-standalone )
 "
