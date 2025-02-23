@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -7,7 +7,9 @@ if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="https://gitlab.com/mdds/mdds.git"
 	inherit git-r3
 else
-	SRC_URI="https://kohei.us/files/${PN}/src/${P}.tar.xz"
+	# For 3.0.0, it mysteriously redirects to 2.0.0
+	#SRC_URI="https://kohei.us/files/${PN}/src/${P}.tar.xz"
+	SRC_URI="https://gitlab.com/api/v4/projects/mdds%2Fmdds/packages/generic/source/${PV}/${P}.tar.xz"
 	KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~x86 ~amd64-linux ~x86-linux"
 fi
 inherit autotools toolchain-funcs
@@ -30,7 +32,9 @@ BDEPEND="
 	test? ( dev-util/dejagnu )
 "
 
-PATCHES=( "${FILESDIR}/${PN}-1.5.0-buildsystem.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-3.0.0-buildsystem.patch"
+)
 
 pkg_pretend() {
 	[[ ${MERGE_TYPE} != binary ]] && use openmp && tc-check-openmp

@@ -354,6 +354,19 @@ app-crypt/aespipe:cpu_flags_x86_padlock - Use VIA padlock instructions, detected
 app-crypt/badkeys:dkim - Enable dkim scan mode via dev-python/dnspython.
 app-crypt/badkeys:ssh - Enable ssh scan mode via dev-python/paramiko.
 app-crypt/ccid:twinserial - Enable twinserial reader
+app-crypt/certbot:certbot-apache - Enable Apache plugin.
+app-crypt/certbot:certbot-dns-dnsimple - Enable DNSimple Authenticator plugin.
+app-crypt/certbot:certbot-dns-dnsmadeeasy - Enable DNS Made Easy DNS Authenticator plugin.
+app-crypt/certbot:certbot-dns-gehirn - Enable Gehirn Infrastructure Service DNS Authenticator plugin.
+app-crypt/certbot:certbot-dns-google - Enable Google Cloud DNS Authenticator plugin.
+app-crypt/certbot:certbot-dns-linode - Enable Linode DNS Authenticator plugin plugin.
+app-crypt/certbot:certbot-dns-luadns - Enable LuaDNS Authenticator plugin.
+app-crypt/certbot:certbot-dns-nsone - Enable NS1 DNS Authenticator plugin.
+app-crypt/certbot:certbot-dns-ovh - Enable OVH DNS Authenticator plugin.
+app-crypt/certbot:certbot-dns-rfc2136 - Enable RFC 2136 DNS Authenticator plugin.
+app-crypt/certbot:certbot-dns-route53 - Enable Route53 DNS Authenticator plugin.
+app-crypt/certbot:certbot-dns-sakuracloud - Enable Sakura Cloud DNS Authenticator plugin.
+app-crypt/certbot:certbot-nginx - Enable Nginx plugin.
 app-crypt/codecrypt:cryptopp - Build algorithms that need Crypto++ support dev-libs/crypto++
 app-crypt/dehydrated:cron - Install cron job to sign/renew non-existent/changed/expiring certificates
 app-crypt/eid-mw:dialogs - Enable "askaccess" dialog box, by using x11-libs/gtk+
@@ -657,6 +670,7 @@ app-emulation/ski:debug - enable extra binary emulation debugging via sys-libs/b
 app-emulation/spice:smartcard - Enable smartcard remoting using app-emulation/libcacard
 app-emulation/uade:fuse - Enable sys-fs/fuse uadefs frontend for on-the-fly WAV conversion
 app-emulation/vice:ethernet - Enable ethernet emulation
+app-emulation/vice:evdev - Enable evdev joystick driver
 app-emulation/vice:headless - Include the headless variant of the emulator
 app-emulation/vice:mpg123 - Enable mp3@64 cartridge support
 app-emulation/vice:parport - Enable parallel port SID support
@@ -1087,7 +1101,6 @@ app-portage/eix:sqlite - Compile in support for portage's sqlite backend; to act
 app-portage/gemato:gpg - Install dependencies needed for OpenPGP signature verification support
 app-portage/gemato:pretty-log - Pull dev-python/rich to enable pretty logs
 app-portage/gemato:tools - Install additional utilities (benchmarks, hash testing tools, fast Manifest generators) to /usr/share/gemato.
-app-portage/grs:server - Install all the tools building systems
 app-portage/hackport:profile - Enable profiling flags
 app-portage/kuroneko:scraper - Include the dependencies necessary for Bugzilla scraping.
 app-portage/nattka:depgraph-order - Process packages in depgraph order whenever possible.
@@ -2553,9 +2566,6 @@ dev-python/reedsolo:native-extensions - Compile native C extensions.
 dev-python/rfc3986:idna - enable support for the IDNA specification (RFC 5891)
 dev-python/rpyc:gdb - Run tests depending on dev-debug/gdb
 dev-python/rpyc:numpy - Run tests depending on dev-python/numpy, dev-python/pandas
-dev-python/shiboken6:docstrings - Expose documentation as Python docstrings (recommended)
-dev-python/shiboken6:numpy - Implicitly convert passed NumPy arrays to Qt lists
-dev-python/shiboken6:vulkan - Generate "QSurface::VulkanSurface" bindings
 dev-python/simplejson:native-extensions - Compiles native "C" extensions (speedups, instead of using Python fallback code).
 dev-python/stripe:telemetry - Enable sending "telemetry to Stripe regarding request latency and feature usage" by default. Upstream enables it by default in their PyPI distribution; it can also be explicitly controlled via stripe.enable_telemetry variable (boolean).
 dev-python/subprocess-tee:test-full - Enable full test mode. Pulls in many additional dependencies, and requires having been emerged without this flag first in order to avoid a circular dependency.
@@ -2665,7 +2675,6 @@ dev-qt/qtbase:sql - Build Qt6Sql module
 dev-qt/qtbase:syslog - Log messages using syslog rather than output to stderr (override with the QT_FORCE_STDERR_LOGGING=1 env var)
 dev-qt/qtbase:tslib - Enable support for touchscreen devices via x11-libs/tslib
 dev-qt/qtbase:widgets - Build Qt6Widgets module
-dev-qt/qtbluetooth:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtcharts:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtconnectivity:neard - Use net-wireless/neard to access NFC devices
 dev-qt/qtconnectivity:nfc - Enable support for the Near Field Communication protocol
@@ -4360,7 +4369,6 @@ media-libs/libmypaint:gegl - Add support for media-libs/gegl
 media-libs/libopenglrecorder:openh264 - Enable H.264 support using media-libs/openh264
 media-libs/libpagemaker:tools - Build command line file format conversion tools
 media-libs/libpano13:suitesparse - Use Sparse Levenberg Marquardt algorithm instead of dense Levenberg Marquardt algorithm
-media-libs/libplacebo:glslang - Use dev-util/glslang to compile GLSL
 media-libs/libplacebo:lcms - Add support for color management via media-libs/lcms
 media-libs/libplacebo:libdovi - Use media-libs/libdovi to read Dolby Vision metadata
 media-libs/libplacebo:shaderc - Use media-libs/shaderc to compile GLSL
@@ -4536,6 +4544,7 @@ media-libs/speex:utils - Enables speex commandline utilities (speexenc, speexdec
 media-libs/speex:vbr - Enable VBR support.
 media-libs/suil:gtk2 - Enable GTK2 based GUI support
 media-libs/svgalib:kernel-helper - Build the helper kernel module
+media-libs/tiff:libdeflate - Faster Deflate support with app-arch/libdeflate
 media-libs/tremor:low-accuracy - enable 32bit only multiply operations
 media-libs/urt:tools - Install tools
 media-libs/vips:archive - Enable support for compressed files using app-arch/libarchive
@@ -4570,6 +4579,7 @@ media-libs/xine-lib:xvmc - Enable support for XVideo Motion Compensation (accele
 media-libs/zita-resampler:tools - Install zresample and zretune tools
 media-libs/zmusic:fluidsynth - Enable support for MIDI via media-sound/fluidsynth
 media-libs/zmusic:mpg123 - Enable support for MPEG audio playback via media-sound/mpg123
+media-libs/zxing-cpp:experimental - Enable experimental features via media-libs/zint
 media-plugins/alsa-plugins:arcam_av - Enables Arcam AV control plugin
 media-plugins/alsa-plugins:mix - Enables upmix and vdownmix plugin
 media-plugins/alsa-plugins:usb_stream - Enables usb_stream plugin

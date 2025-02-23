@@ -33,6 +33,20 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2025-02-22)
+# (Only) needed for no-yet-released LibreOffice. Mask for now to avoid
+# unnecessary conflicts/backtracking for LO users.
+=dev-libs/liborcus-0.20.0
+=dev-libs/libixion-0.20.0
+=dev-util/mdds-3.0.0
+
+# Nowa Ammerlaan <nowa@gentoo.org> (2025-02-21)
+# Shiboken and Pyside-tools have been merged into dev-python/pyside
+# as of version 6.8.2. Pyside-tools are useable when the "tools" USE
+# flag is enabled.
+dev-python/shiboken6
+dev-python/pyside6-tools
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-02-18)
 # Depends on deprecated Qt5WebEngine, no response from maintainers.
 # Download source appears gone; bugs #926675, #880649, #870256.
@@ -214,11 +228,6 @@ dev-go/get-ego-vendor
 # Plenty of other options in ::gentoo. Bug #947724, removal on 2025-02-27.
 media-sound/bempc
 
-# Anthony G. Basile <blueness@gentoo.org> (2025-01-25)
-# Bug 909889. Needs PEP517 build. Very low user base
-# Remove 2025-02-24.
-app-portage/grs
-
 # Arthur Zamarin <arthurzam@gentoo.org> (2025-01-24)
 # EAPI=7, uses deprecated Go eclasses, fails to compile, installation
 # blocked by current versions of docker (which provides the features).
@@ -240,11 +249,6 @@ app-metrics/burrow_exporter
 dev-go/go-colortext
 dev-go/gom
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-23)
-# Last release from 12 years ago, git master still defaults to Qt4.
-# Plenty of other options in ::gentoo. Bug #947741, removal on 2025-02-22.
-app-editors/juffed
-
 # Nowa Ammerlaan <nowa@gentoo.org> (2025-01-23)
 # Sypder-5 requires Qt5, and there are several dead
 # plugins that have not been migrated to Spyder-6.
@@ -253,10 +257,6 @@ app-editors/juffed
 dev-python/spyder-vim
 dev-python/spyder-terminal
 =dev-python/qtpy-2.4.2
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-23)
-# CVE-2025-23050, bug #948573; Removal on 2025-02-22.
-dev-qt/qtbluetooth:5
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-23)
 # Qt5 package without any revdeps. Use dev-qt/qttools[qdbus] instead.

@@ -33,7 +33,7 @@ RDEPEND="
 	${PYTHON_DEPS}
 	>=dev-libs/serd-0.30.10[${MULTILIB_USEDEP}]
 	>=dev-libs/sord-0.16.16[${MULTILIB_USEDEP}]
-	>=dev-libs/zix-0.4.0[${MULTILIB_USEDEP}]
+	>=dev-libs/zix-0.6.0[${MULTILIB_USEDEP}]
 	media-libs/libsndfile
 	>=media-libs/lv2-1.18.2[${MULTILIB_USEDEP}]
 	>=media-libs/sratom-0.6.10[${MULTILIB_USEDEP}]

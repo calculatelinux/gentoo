@@ -15,7 +15,7 @@ S=${WORKDIR}/${P/_/.}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc64 ~x86"
 
 RDEPEND="
 	dev-db/sqlite:3
@@ -25,6 +25,7 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 	dev-libs/libbsd
+	dev-libs/xxhash
 "
 
 mymake() {
