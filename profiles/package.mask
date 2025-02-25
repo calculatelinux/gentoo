@@ -33,6 +33,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Eray Aslan <eras@gentoo.org> (2025-02-24)
+# Mask experimental software
+=mail-mta/postfix-3.11*
+
+# Michał Górny <mgorny@gentoo.org> (2025-02-24)
+# Bad package with frequent release issues.  No reverse dependencies
+# left.  Use dev-python/zstandard instead (admittedly, also far
+# from perfect).  Removal on 2025-03-26.  Bug #950214.
+dev-python/zstd
+
 # Sam James <sam@gentoo.org> (2025-02-22)
 # (Only) needed for no-yet-released LibreOffice. Mask for now to avoid
 # unnecessary conflicts/backtracking for LO users.
@@ -182,11 +192,6 @@ games-fps/quakeforge
 # Removal on 2025-03-07. Bug: 949318
 net-misc/AQtion
 
-# Matt Turner <mattst88@gentoo.org> (2025-02-05)
-# Masked for testing
-=dev-util/mesa_clc-25.0*
-=media-libs/mesa-25.0*
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-30)
 # Last release 15 years ago, dead upstream (never imported from kdesvn),
 # no revdeps probably since amarok last-rites. Removal on 2025-02-27.
@@ -248,15 +253,6 @@ app-metrics/burrow_exporter
 # Removal on 2025-02-23.  Bugs #948653, #844655, #844664, #922697.
 dev-go/go-colortext
 dev-go/gom
-
-# Nowa Ammerlaan <nowa@gentoo.org> (2025-01-23)
-# Sypder-5 requires Qt5, and there are several dead
-# plugins that have not been migrated to Spyder-6.
-# Bugs #926687, #926686. Removal on 2025-02-23
-<dev-python/spyder-6
-dev-python/spyder-vim
-dev-python/spyder-terminal
-=dev-python/qtpy-2.4.2
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-23)
 # Qt5 package without any revdeps. Use dev-qt/qttools[qdbus] instead.
@@ -518,10 +514,6 @@ sec-keys/openpgp-keys-jiatan
 ~app-arch/xz-utils-5.5.2_beta
 ~app-arch/xz-utils-5.6.0
 ~app-arch/xz-utils-5.6.1
-
-# Eray Aslan <eras@gentoo.org> (2024-03-10)
-# Mask experimental software
-=mail-mta/postfix-3.10*
 
 # Sam James <sam@gentoo.org> (2023-12-14)
 # Gentoo's kernel maintainers have decided to discontinue gentoo-sources and
