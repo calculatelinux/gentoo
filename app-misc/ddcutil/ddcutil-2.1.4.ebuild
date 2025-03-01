@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -11,8 +11,8 @@ DESCRIPTION="Program for querying and changing monitor settings"
 HOMEPAGE="https://www.ddcutil.com/"
 SRC_URI="https://github.com/rockowitz/ddcutil/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-SLOT="0/5"
 LICENSE="GPL-2"
+SLOT="0/5"
 KEYWORDS="amd64 arm arm64 ~loong ~ppc ppc64 ~riscv ~sparc x86"
 IUSE="drm usb-monitor user-permissions video_cards_nvidia X"
 REQUIRED_USE="drm? ( X )"
@@ -43,6 +43,7 @@ BDEPEND="virtual/pkgconfig"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.4.1-no-werror.patch
+	"${FILESDIR}"/${P}-fix-clang.patch
 )
 
 pkg_pretend() {

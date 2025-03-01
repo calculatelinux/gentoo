@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=pdm-backend
-PYTHON_COMPAT=( python3_{10..13} )
+PYTHON_COMPAT=( pypy3 pypy3_11 python3_{10..13} )
 
 inherit distutils-r1
 
@@ -42,8 +42,29 @@ distutils_enable_tests pytest
 
 export PDM_BUILD_SCM_VERSION=${PV}
 
-EPYTEST_DESELECT=(
-	# fragile to installed packages
-	# (failed on PySide2 for me)
-	tests/test_stdlib.py::test_fuzzing_on_stdlib
-)
+python_test() {
+	local EPYTEST_DESELECT=(
+		# fragile to installed packages
+		# (failed on PySide2 for me)
+		tests/test_stdlib.py::test_fuzzing_on_stdlib
+	)
+
+	case ${EPYTHON} in
+		pypy3.11)
+			EPYTEST_DESELECT+=(
+				# https://github.com/pypy/pypy/issues/5226
+				tests/test_inspector.py::test_inspecting_objects_from_private_builtin_stdlib_moduless
+			)
+			;&
+		pypy3*)
+			EPYTEST_DESELECT+=(
+				# tries importing CPython-specific modules
+				# https://github.com/mkdocstrings/griffe/issues/362
+				tests/test_loader.py::test_load_builtin_modules
+			)
+			;;
+	esac
+
+	local -x PYTEST_DISABLE_PLUGIN_AUTOLOAD=1
+	epytest
+}

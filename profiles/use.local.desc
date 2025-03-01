@@ -1235,6 +1235,7 @@ app-text/sdcv:darkterm - Improve readability of color output on terminals with d
 app-text/sigil:plugins - Installed needed Python packages for using Sigil plugins
 app-text/sigil:system-mathjax - Use the system-wide dev-libs/mathjax instead of bundled
 app-text/sword:clucene - Use dev-cpp/clucene for lucene search support
+app-text/sword:utils - CLI (diatheke) and conversion utilities for bible documents in SWORD supported formats
 app-text/tessdata_best:osd - Enable support orientation and script detection.
 app-text/tessdata_fast:osd - Enable support orientation and script detection.
 app-text/tessdata_legacy:math - Enable support for recognition of equations.
@@ -1585,7 +1586,7 @@ dev-games/physfs:wad - Enable Doom WAD archive support
 dev-games/simgear:dns - Enable DNS resolver via net-libs/udns
 dev-games/simgear:gdal - Enable alternative terrain engine based on pagedLOD via sci-libs/gdal
 dev-games/simgear:subversion - Enable terrasync scenery downloader
-dev-games/tiled:minimal - Exclude optional plugins and development headers
+dev-games/tiled:minimal - Exclude optional plugins, development headers and examples
 dev-gap/grape:bliss - Use sci-libs/bliss instead of sci-mathematics/nauty as the backend.
 dev-haskell/abstract-deque:usecas - Enable the reference implementation to use hardware compare-and-swap.
 dev-haskell/aeson:cffi - Controls whether to include c-ffi bits or pure haskell. Default to False for security.
@@ -2599,7 +2600,7 @@ dev-qt/qt-creator:webengine - Allow using dev-qt/qtwebengine for better USE=help
 dev-qt/qt-docs:3d - Install documentation for dev-qt/qt3d
 dev-qt/qt-docs:activeqt - Install documentation for ActiveQt (unpackaged, Windows-only)
 dev-qt/qt-docs:assistant - Install documentation for dev-qt/assistant
-dev-qt/qt-docs:bluetooth - Install documentation for dev-qt/qtbluetooth
+dev-qt/qt-docs:bluetooth - Install documentation for dev-qt/qtconnectivity[bluetooth]
 dev-qt/qt-docs:charts - Install documentation for dev-qt/qtcharts
 dev-qt/qt-docs:concurrent - Install documentation for dev-qt/qtconcurrent
 dev-qt/qt-docs:connectivity - Install documentation for dev-qt/qtconnectivity
@@ -2698,7 +2699,8 @@ dev-qt/qtgui:tuio - Build plugin to receive touch events over the TUIO protocol
 dev-qt/qtgui:wayland - Provide dev-qt/qtwayland to ensure Qt applications can be run as Wayland clients
 dev-qt/qthttpserver:websockets - Enable websockets support using dev-qt/qtwebsockets
 dev-qt/qtmultimedia:eglfs - Enable screen capture support with Qt's EGL Full Screen/Single Surface platform plugin
-dev-qt/qtmultimedia:gstreamer - Enable audio support via media-libs/gstreamer
+dev-qt/qtmultimedia:gstreamer - Enable media-libs/gstreamer support
+dev-qt/qtmultimedia:pipewire - Enable media-video/pipewire support
 dev-qt/qtmultimedia:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtmultimedia:widgets - Build the QtMultimediaWidgets module
 dev-qt/qtnetwork:gssapi - Enable support for GSSAPI (virtual/krb5)
@@ -3702,7 +3704,6 @@ kde-plasma/plasma-meta:unsupported - Allow packages that are known to ruin runti
 kde-plasma/plasma-meta:wacom - Pull in kde-plasma/wacomtablet control center module
 kde-plasma/plasma-meta:wallpapers - Install wallpapers for the Plasma Workspace
 kde-plasma/plasma-meta:webengine - Use kde-apps/khelpcenter to access the locally installed KDE Help System Handbook
-kde-plasma/plasma-meta:xwayland - Enable Wayland windows screensharing to XWayland applications via gui-apps/xwaylandvideobridge
 kde-plasma/plasma-nm:openconnect - Build support for the OpenConnect VPN client
 kde-plasma/plasma-nm:teamd - Enable Teamd control support
 kde-plasma/plasma-workspace:appstream - Enable AppStream software metadata support
@@ -4750,6 +4751,10 @@ media-sound/fluidsynth:network - enable network support (requires BSD sockets)
 media-sound/fluidsynth:pipewire - enable media-video/pipewire support
 media-sound/gimmix:cover - Enable cover art fetching
 media-sound/gimmix:lyrics - Enable lyric fetching
+media-sound/gogglesmm:dca - Enable support for DTS Coherent Acoustics via media-libs/libdca
+media-sound/gogglesmm:sndio - Enable support for media-sound/sndio
+media-sound/gogglesmm:stream - Enable http(s) streaming
+media-sound/gogglesmm:tremor - Enable support for media-libs/tremor, a fixed-point version of the Ogg Vorbis decoder
 media-sound/guitarix:lv2 - Build lv2 plugins
 media-sound/guitarix:nsm - Build NSM (Non Session Manager) support
 media-sound/guitarix:standalone - Build standalone application
@@ -4942,8 +4947,6 @@ media-sound/supercollider:gedit - Enable the SCED user interface
 media-sound/supercollider:gpl3 - Build GPL-3 licensed code (recommended)
 media-sound/supercollider:server - Build with internal server
 media-sound/supercollider:vim - Enable the SCVIM user interface
-media-sound/teamspeak-client:system-libcxx - Use llvm-runtimes/libcxx instead of shipped libs.
-media-sound/teamspeak-client:system-quazip - Use dev-libs/quazip instead of shipped libs.
 media-sound/teamspeak-server:tsdns - Install TeamSpeaks own DNS service for handling multiple virtual servers.
 media-sound/upmpdcli:thirdparty - Enable streaming from Qobuz and Tidal external services
 media-sound/vimpc:boost - Use boost instead of C++11 libraries
@@ -7044,6 +7047,7 @@ net-wireless/iwd:wired - Enable ethernet authentication daemon
 net-wireless/kismet:libusb - Support libusb based capture sources such as mousejack, cc2540(ble), and nrf51822(ble)
 net-wireless/kismet:mqtt - Enable MQTT support
 net-wireless/kismet:pcre - Build with pcre support
+net-wireless/kismet:protobuf - Support old protobuf message passing in case of remote capture sources which are not up to date.
 net-wireless/kismet:rtlsdr - Enable rtlsdr based kismet capture sources
 net-wireless/kismet:suid - Install a setuid root helper binary with limited functionality; this allows running kismet as a normal user, significantly reducing security risks
 net-wireless/kismet:ubertooth - Enable capture source for ubertooth to sniff bluetooth low energy
@@ -8456,7 +8460,7 @@ sys-libs/libseccomp:experimental-loong - Add experimental LoongArch patchset
 sys-libs/libunwind:debug-frame - Adds support for DWARF .debug_frame section: Use the information from this section if available
 sys-libs/libunwind:libatomic - Use libatomic instead of builtin atomic operations
 sys-libs/libxcrypt:compat - Build with compatibility interfaces for other crypt implementations
-sys-libs/libxcrypt:headers-only - Build and install only the headers.
+sys-libs/libxcrypt:headers-only - Build and install only the headers. This is mostly useful for toolchain bootstrapping, to avoid circular deps.
 sys-libs/libxcrypt:system - Install as system libcrypt.so rather than to an alternate directory (will collide with sys-libs/glibc's version)
 sys-libs/minizip-ng:compat - Enable compatibility with sys-libs/zlib's USE=minizip
 sys-libs/minizip-ng:openssl - Use dev-libs/openssl for further encryption capabilities

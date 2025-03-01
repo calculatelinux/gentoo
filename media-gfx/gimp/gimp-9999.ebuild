@@ -57,7 +57,7 @@ COMMON_DEPEND="
 	sys-libs/zlib
 	>=x11-libs/cairo-1.16.0[X=]
 	>=x11-libs/gdk-pixbuf-2.40.0:2[introspection]
-	>=x11-libs/gtk+-3.24.16:3[introspection,X=]
+	>=x11-libs/gtk+-3.24.48:3[introspection,X=]
 	>=x11-libs/pango-1.50.0[X=]
 	aalib? ( media-libs/aalib )
 	alsa? ( >=media-libs/alsa-lib-1.0.0 )
@@ -173,6 +173,7 @@ src_configure() {
 		-Denable-default-bin=enabled
 
 		-Dcheck-update=no
+		-Ddebug-self-in-build=false
 		-Denable-multiproc=true
 		-Dappdata-test=disabled
 		-Dbug-report-url=https://bugs.gentoo.org/

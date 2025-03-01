@@ -10,7 +10,7 @@ inherit prefix python-any-r1 qt6-build toolchain-funcs
 
 DESCRIPTION="Library for rendering dynamic web content in Qt6 C++ and QML applications"
 SRC_URI+="
-	https://dev.gentoo.org/~ionen/distfiles/${PN}-6.9-patchset-1.tar.xz
+	https://dev.gentoo.org/~ionen/distfiles/${PN}-6.9-patchset-2.tar.xz
 "
 
 if [[ ${QT6_BUILD_TYPE} == release ]]; then
@@ -26,7 +26,7 @@ REQUIRED_USE="
 	designer? ( qml widgets )
 "
 
-# dlopen: krb5, libva, pciutils, udev
+# dlopen: krb5, libva, pciutils
 # gcc: for -latomic
 RDEPEND="
 	app-arch/snappy:=
@@ -54,7 +54,7 @@ RDEPEND="
 	sys-apps/pciutils
 	sys-devel/gcc:*
 	sys-libs/zlib:=[minizip]
-	virtual/libudev
+	virtual/libudev:=
 	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
@@ -94,7 +94,7 @@ DEPEND="
 BDEPEND="
 	$(python_gen_any_dep 'dev-python/html5lib[${PYTHON_USEDEP}]')
 	dev-util/gperf
-	net-libs/nodejs[ssl]
+	net-libs/nodejs[icu,ssl]
 	sys-devel/bison
 	sys-devel/flex
 "
@@ -105,7 +105,7 @@ PATCHES=( "${WORKDIR}"/patches/${PN} )
 
 PATCHES+=(
 	# add extras as needed here, may merge in set if carries across versions
-	"${FILESDIR}"/${PN}-6.8.1-cstdint.patch
+	"${FILESDIR}"/${PN}-6.8.2-glibc2.41.patch
 )
 
 python_check_deps() {
@@ -124,8 +124,8 @@ qtwebengine_check-reqs() {
 		ewarn "If run into issues, please try disabling before reporting a bug."
 	fi
 
-	local CHECKREQS_DISK_BUILD=9G
-	local CHECKREQS_DISK_USR=360M
+	local CHECKREQS_DISK_BUILD=10G
+	local CHECKREQS_DISK_USR=400M
 
 	if ! has distcc ${FEATURES}; then #830661
 		# assume ~2GB per job or 1.5GB if clang, possible with less
@@ -170,6 +170,10 @@ src_configure() {
 		$(qt_feature widgets qtpdf_widgets_build)
 		$(usev pdfium -DQT_FEATURE_pdf_v8=ON)
 
+		# TODO?: since 6.9.0, dependency checks have been adjusted to make it
+		# easier for webengine to be optional which could be useful if *only*
+		# need QtPdf (rare at the moment), would require all revdeps to depend
+		# on qtwebengine[webengine(+)]
 		-DQT_FEATURE_qtwebengine_build=ON
 		$(qt_feature qml qtwebengine_quick_build)
 		$(qt_feature widgets qtwebengine_widgets_build)
@@ -214,8 +218,8 @@ src_configure() {
 		# given qtbase's force_system_libs does not affect these right now
 		$(printf -- '-DQT_FEATURE_webengine_system_%s=ON ' \
 			freetype gbm glib harfbuzz lcms2 libevent libjpeg \
-			libopenjpeg2 libpci libpng libtiff libwebp libxml \
-			minizip opus snappy zlib)
+			libopenjpeg2 libpci libpng libtiff libudev libwebp \
+			libxml minizip opus snappy zlib)
 
 		# TODO: fixup gn cross, or package dev-qt/qtwebengine-gn with =ON
 		# (see also BUILD_ONLY_GN option added in 6.8+ for the latter)
@@ -255,7 +259,8 @@ src_configure() {
 }
 
 src_compile() {
-	# tentatively work around a possible (rare) race condition (bug #921680)
+	# tentatively work around a possible (rare) race condition (bug #921680),
+	# has good chances to be obsolete but keep for now as a safety
 	cmake_build WebEngineCore_sync_all_public_headers
 
 	cmake_src_compile

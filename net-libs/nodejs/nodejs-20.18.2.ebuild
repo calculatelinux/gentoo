@@ -20,7 +20,7 @@ if [[ ${PV} == *9999 ]]; then
 else
 	SRC_URI="https://nodejs.org/dist/v${PV}/node-v${PV}.tar.xz"
 	SLOT="0/$(ver_cut 1)"
-	KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc64 ~riscv ~x86 ~amd64-linux ~x64-macos"
+	KEYWORDS="amd64 arm arm64 ~loong ppc64 ~riscv x86 ~amd64-linux ~x64-macos"
 	S="${WORKDIR}/node-v${PV}"
 fi
 
@@ -255,6 +255,7 @@ src_test() {
 		test/parallel/test-tls-getcipher.js
 		test/parallel/test-tls-set-ciphers.js
 		test/parallel/test-tls-junk-closes-server.js
+		test/parallel/test-util-styletext.js
 		test/sequential/test-util-debug.js
 	)
 	use inspector || drop_tests+=( test/sequential/test-watch-mode.mjs )
