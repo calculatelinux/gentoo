@@ -211,12 +211,12 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	)
 	ldap? ( net-nds/openldap:= )
 	libreoffice_extensions_scripting-beanshell? ( dev-java/bsh )
-	libreoffice_extensions_scripting-javascript? ( >=dev-java/rhino-1.7.14:1.6 )
+	libreoffice_extensions_scripting-javascript? ( >=dev-java/rhino-1.8.0:0 )
 	mariadb? ( dev-db/mariadb-connector-c:= )
 	!mariadb? ( dev-db/mysql-connector-c:= )
 	pdfimport? ( >=app-text/poppler-22.06:=[cxx] )
 	postgres? ( >=dev-db/postgresql-9.0:*[kerberos] )
-	qt6? ( dev-qt/qtbase:6[gui,widgets] )
+	qt6? ( dev-qt/qtbase:6[gui,opengl,widgets] )
 "
 # FIXME: cppunit should be moved to test conditional
 #        after everything upstream is under gbuild
@@ -262,6 +262,9 @@ BDEPEND="
 	sys-devel/gettext
 	virtual/pkgconfig
 	clang? ( || (
+		(	llvm-core/clang:20
+			llvm-core/llvm:20
+			=llvm-core/lld-20*	)
 		(	llvm-core/clang:19
 			llvm-core/llvm:19
 			=llvm-core/lld-19*	)
@@ -628,7 +631,7 @@ src_configure() {
 			myeconfargs+=( --with-beanshell-jar=$(java-pkg_getjar bsh bsh.jar) )
 
 		use libreoffice_extensions_scripting-javascript && \
-			myeconfargs+=( --with-rhino-jar=$(java-pkg_getjar rhino-1.6 rhino.jar) )
+			myeconfargs+=( --with-rhino-jar=$(java-pkg_getjars rhino) )
 	fi
 
 	tc-is-lto && myeconfargs+=( --enable-lto )
