@@ -109,7 +109,7 @@ PATCHES=( "${WORKDIR}"/patches/${PN} )
 PATCHES+=(
 	# add extras as needed here, may merge in set if carries across versions
 	"${FILESDIR}"/${PN}-6.8.1-aarch64-xnnpack.patch
-	"${FILESDIR}"/${PN}-6.8.1-cstdint.patch
+	"${FILESDIR}"/${PN}-6.8.2-cstdint.patch
 	"${FILESDIR}"/${PN}-6.8.2-glibc2.41.patch
 )
 
@@ -235,7 +235,9 @@ src_configure() {
 	)
 
 	if use !custom-cflags; then
-		strip-flags # fragile
+		# qtwebengine can be rather fragile with *FLAGS
+		filter-lto
+		strip-flags
 
 		# temporary workaround for bug #947356, should be fixed in Qt 6.9.x
 		append-cppflags -U_GLIBCXX_ASSERTIONS

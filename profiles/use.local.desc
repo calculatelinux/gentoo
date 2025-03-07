@@ -707,7 +707,6 @@ app-emulation/wine-mono:shared - Install pre-unpacked files which do not need to
 app-emulation/wine-proton:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up and is mostly unsupported, try disabling if have issues)
 app-emulation/wine-proton:gecko - Enable mshtml support using app-emulation/wine-gecko
 app-emulation/wine-proton:mono - Enable .NET support using app-emulation/wine-mono
-app-emulation/wine-proton:osmesa - Enable off-screen rendering (OpenGL in bitmaps) support
 app-emulation/wine-proton:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-proton:sdl - Enable gamepad support using media-libs/libsdl2
 app-emulation/wine-proton:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32, also lacks 16bit support) -- still need dev-util/mingw64-toolchain with abi_x86_32 which itself does not need multilib
@@ -718,7 +717,6 @@ app-emulation/wine-staging:gecko - Enable mshtml support using app-emulation/win
 app-emulation/wine-staging:mingw - Build PE files using a MinGW toolchain for better compatibility
 app-emulation/wine-staging:mono - Enable .NET support using app-emulation/wine-mono
 app-emulation/wine-staging:netapi - Enable support for configuring remote shares using net-fs/samba
-app-emulation/wine-staging:osmesa - Enable off-screen rendering (OpenGL in bitmaps) support
 app-emulation/wine-staging:pcap - Support packet capture software (e.g. wireshark)
 app-emulation/wine-staging:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-staging:samba - Pull in net-fs/samba with winbind for NTLM auth support
@@ -731,7 +729,6 @@ app-emulation/wine-vanilla:gecko - Enable mshtml support using app-emulation/win
 app-emulation/wine-vanilla:mingw - Build PE files using a MinGW toolchain for better compatibility
 app-emulation/wine-vanilla:mono - Enable .NET support using app-emulation/wine-mono
 app-emulation/wine-vanilla:netapi - Enable support for configuring remote shares using net-fs/samba
-app-emulation/wine-vanilla:osmesa - Enable off-screen rendering (OpenGL in bitmaps) support
 app-emulation/wine-vanilla:pcap - Support packet capture software (e.g. wireshark)
 app-emulation/wine-vanilla:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-vanilla:samba - Pull in net-fs/samba with winbind for NTLM auth support
@@ -1321,7 +1318,6 @@ dev-ada/gpr-unit-provider:shared - Build shared library
 dev-ada/gpr-unit-provider:static-pic - Build static library with pic code
 dev-ada/gtkada:shared - Build gtkada as shared library
 dev-ada/gtkada:static-pic - Build static library with pic code
-dev-ada/lal-refactor:shared - Build shared library
 dev-ada/lal-refactor:static-pic - Build static library with pic code
 dev-ada/langkit:shared - Build shared library
 dev-ada/langkit:static-pic - Build static library with pic code
@@ -3725,9 +3721,13 @@ llvm-core/clang-common:default-compiler-rt - Use compiler-rt + libunwind instead
 llvm-core/clang-common:default-libcxx - Use libc++ instead of libstdc++ as the default stdlib for clang. Beware: this breaks ABI, producing binaries incompatible with those built with GCC or Clang using libstdc++. Do not set unless you know what you're doing.
 llvm-core/clang-common:default-lld - Use lld as the default linker for clang
 llvm-core/clang-runtime:compiler-rt - Install llvm-runtimes/compiler-rt for -rtlib=compiler-rt
+llvm-core/clang-runtime:default-compiler-rt - Use compiler-rt + libunwind instead of libgcc as the default rtlib for clang
+llvm-core/clang-runtime:default-libcxx - Use libc++ instead of libstdc++ as the default stdlib for clang
+llvm-core/clang-runtime:default-lld - Use lld as the default linker for clang
 llvm-core/clang-runtime:libcxx - Install llvm-runtimes/libcxx for -stdlib=libc++
 llvm-core/clang-runtime:offload - Install llvm-runtimes/offload for -fopenmp GPU offloading
 llvm-core/clang-runtime:openmp - Install llvm-runtimes/openmp for -fopenmp support
+llvm-core/clang-runtime:polly - Load Polly plugin (you still need -mllvm -polly to use it)
 llvm-core/clang-runtime:sanitize - Enable compiler-rt sanitizer (-fsanitize*) support
 llvm-core/clang-toolchain-symlinks:gcc-symlinks - Install symlinks for 'gcc' and 'g++' for extra compatibility.
 llvm-core/clang-toolchain-symlinks:multilib-symlinks - Install symlinks for all ABI CHOSTs. Note that this can result in gcc being overrode for native builds, as well as conflict with crossdev if used for the same targets.
@@ -4390,6 +4390,10 @@ media-libs/libsdl2:pipewire - Enable support for the media-video/pipewire audio 
 media-libs/libsdl2:sndio - Enable support for the media-sound/sndio backend
 media-libs/libsdl2:sound - Control audio support (disable at your own risk)
 media-libs/libsdl2:video - Control video support (disable at your own risk)
+media-libs/libsdl3:ibus - Enable support for app-i18n/ibus
+media-libs/libsdl3:kms - Enable support for direct Kernel Mode Setting video output
+media-libs/libsdl3:pipewire - Enable support for media-video/pipewire
+media-libs/libsdl3:sndio - Enable support for media-sound/sndio
 media-libs/libshumate:sysprof - Enable sysprof-capture support for profiling
 media-libs/libtgvoip:dsp - Enable signal processing (echo cancellation, noise suppression, and automatic gain control)
 media-libs/libv4l:bpf - Enable support for IR BPF decoders
@@ -5885,6 +5889,7 @@ net-im/gajim:remote - Controling Gajim instance from command line with gajim-rem
 net-im/gajim:rst - Generating XHTML output from RST code
 net-im/gajim:spell - Spellchecking of composed messages
 net-im/gajim:upnp - Ability to request your router to forward port for file transfer
+net-im/gajim:voice - Support for video calls, audio calls and voice messages
 net-im/gajim:webp - Support WebP avatars
 net-im/libcommuni:qml - Install optional qml files.
 net-im/libcommuni:uchardet - Use app-i18n/uchardet, which is upstreams default, instead of dev-libs/icu, which makes impossible to run tests.

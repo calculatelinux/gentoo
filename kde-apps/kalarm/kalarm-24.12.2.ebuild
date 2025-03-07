@@ -14,7 +14,7 @@ HOMEPAGE="https://apps.kde.org/kalarm/ https://userbase.kde.org/KAlarm"
 
 LICENSE="GPL-2+ handbook? ( FDL-1.2+ )"
 SLOT="6"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="amd64 ~arm64"
 IUSE="mpv +pim speech X"
 
 COMMON_DEPEND="
@@ -63,8 +63,10 @@ COMMON_DEPEND="
 RDEPEND="${COMMON_DEPEND}
 	pim? ( >=kde-apps/kdepim-runtime-${PVCUT}:6 )
 "
+# kde-apps/kidentitymanagement through its cmake module forces
+# kpimtextedit[speech=] in order not to break w/ kalarm[-speech]
 DEPEND="${COMMON_DEPEND}
-	speech? ( kde-apps/kpimtextedit[speech] )
+	>=kde-apps/kpimtextedit-${PVCUT}:6[speech=]
 	X? ( x11-base/xorg-proto )
 "
 
