@@ -32,6 +32,7 @@ app-accessibility/freetts:mbrola - Adds support for mbrola voices
 app-accessibility/orca:braille - Enable braille support
 app-accessibility/speech-dispatcher:espeak - Adds support for espeak-ng speech engine
 app-accessibility/speech-dispatcher:flite - Adds support for flite speech engine
+app-accessibility/speech-dispatcher:pipewire - Enables support for PipeWire. Recommended for latency related advantages if it works in your setup.
 app-admin/clsync:apidoc - Provide doxygen generated API docs.
 app-admin/clsync:cgroups - Use cgroups to limit /dev access.
 app-admin/clsync:clsync - Build clsync binary. Most likely you want it. However it is possible to build only libclsync without clsync itself.
@@ -1061,6 +1062,7 @@ app-office/libreoffice:mariadb - Prefer mariadb connector over mysql connector
 app-office/libreoffice:odk - Build the Office Development Kit
 app-office/libreoffice:pdfimport - Enable PDF import via the Poppler library
 app-office/libreoffice:vulkan - Enable Vulkan usage via the skia library (clang recommended)
+app-office/libreoffice-bin:offlinehelp - Install help files locally instead of using the LibreOffice Wiki
 app-office/libreoffice-l10n:offlinehelp - Install help files locally instead of using the LibreOffice Wiki
 app-office/lyx:aspell - Add support for aspell spellchecking
 app-office/lyx:dia - Add support for diagrams (app-office/dia)
@@ -3437,6 +3439,7 @@ gnustep-base/gnustep-back-xlib:xim - Enable X11 XiM input method
 gnustep-base/gnustep-make:libobjc2 - Enables use of the GNUstep Objective-C runtime (gnustep-base/libobjc2) with non-fragile ABI and llvm-core/clang compiler
 gnustep-base/gnustep-make:native-exceptions - Enables use of the native Objective-C exception support (@try/@catch/@finally) built-in objective-c exceptions with compilers that support it
 gui-apps/foot:grapheme-clustering - Enable grapheme clustering support
+gui-apps/foot:utempter - Enable utmp support via sys-libs/libutempter
 gui-apps/grim:jpeg - Enable JPEG support.
 gui-apps/gtkgreet:layershell - Enable layer shell support
 gui-apps/kanshi:varlink - Enable remote control with varlink
@@ -4791,7 +4794,6 @@ media-sound/lmms:vst - Enables the VeSTige plugin to run VST plugins through Win
 media-sound/mangler:espeak - Text to speech engine
 media-sound/mangler:g15 - Logitech g15 lcd support
 media-sound/mixxx:benchmark - Build and install benchmark binary: mixxx-test --benchmark
-media-sound/mixxx:hid - Enable HID controller support
 media-sound/mixxx:keyfinder - Enable musical key detection support via media-libs/libkeyfinder
 media-sound/mixxx:lv2 - Add support for Ladspa V2 via media-libs/lilv
 media-sound/mixxx:midi - Enable MIDI support via media-libs/portmidi
@@ -5065,77 +5067,142 @@ media-video/bluray_info:mpv - Build bluray_player, powered by media-video/mpv
 media-video/droidcam:gtk - Build the dev-cpp/gtkmm:3.0 client.
 media-video/dvd_info:libmpv - Build DVD player using libmpv
 media-video/ffdiaporama:openclipart - Support openclipart database
-media-video/ffmpeg:amf - Enables support for AMD's Advanced Media Framework (AMF)
-media-video/ffmpeg:amr - Enables Adaptive Multi-Rate Audio support
-media-video/ffmpeg:amrenc - Enables Adaptive Multi-Rate Audio encoding support with media-libs/vo-amrwbenc.
-media-video/ffmpeg:appkit - Enables Apple AppKit framework
-media-video/ffmpeg:bluray - Enable playback of Blu-ray filesystems
-media-video/ffmpeg:bs2b - Enables media-libs/libbs2b based Bauer stereo-to-binaural filter.
-media-video/ffmpeg:cdio - Enables audio CD grabbing with dev-libs/libcdio.
-media-video/ffmpeg:chromaprint - Enables audio fingerprinting support with media-libs/chromaprint.
+media-video/ffmpeg:amf - Enable AMD's Advanced Media Framework support via media-video/amdgpu-pro-amf
+media-video/ffmpeg:amr - Enable Adaptive Multi-Rate Audio support via media-libs/opencore-amr
+media-video/ffmpeg:amrenc - Enable Adaptive Multi-Rate Audio encoding support via media-libs/vo-amrwbenc
+media-video/ffmpeg:appkit - Enable Apple AppKit framework
+media-video/ffmpeg:bluray - Enable Blu-ray filesystems reading support via media-libs/libbluray
+media-video/ffmpeg:bs2b - Enable Bauer Stereo-to-Binaural filter support via media-libs/libbs2b
+media-video/ffmpeg:cdio - Enable audio CDs reading via dev-libs/libcdio-paranoia
+media-video/ffmpeg:chromaprint - Enable audio fingerprinting support via media-libs/chromaprint
 media-video/ffmpeg:chromium - Builds libffmpeg.so to enable media playback in Chromium-based browsers like Opera and Vivaldi.
-media-video/ffmpeg:codec2 - Enables codec2 low bit rate speech codec support via media-libs/codec2.
+media-video/ffmpeg:codec2 - Enable codec2 low bit rate speech codec support via media-libs/codec2
 media-video/ffmpeg:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
-media-video/ffmpeg:cuda - Enables CUDA-based acceleration. Mostly used for specific filters.
-media-video/ffmpeg:dav1d - Enables AV1 decoding via media-libs/dav1d.
-media-video/ffmpeg:fdk - Use external fdk-aac library for AAC encoding
-media-video/ffmpeg:flite - Adds a text-to-speech filter based on app-accessibility/flite.
-media-video/ffmpeg:frei0r - Enable frei0r wrapping in libavfilter
-media-video/ffmpeg:fribidi - Enables fribidi support in the drawtext filter.
-media-video/ffmpeg:gcrypt - Enables gcrypt support: Needed for rtmp(t)e support if openssl, librtmp or gmp is not used.
+media-video/ffmpeg:cuda - Enable support for various GPU-accelerated filters using NVIDIA PTX compiled with llvm-core/clang
+media-video/ffmpeg:dav1d - Enable AV1 decoding support via media-libs/dav1d
+media-video/ffmpeg:drm - Enable use of x11-libs/libdrm for various hardware accelerated functions and Kernel Mode Setting screen capture
+media-video/ffmpeg:fdk - Enable AAC (Advanced Audio Coding) encoding support via media-libs/fdk-aac in addition to FFmpeg's own implementation (warning: if USE=gpl is enabled, this produces a non-redistributable build)
+media-video/ffmpeg:flite - Enable text-to-speech filter support via app-accessibility/flite
+media-video/ffmpeg:frei0r - Enable use of filters through media-plugins/frei0r-plugins
+media-video/ffmpeg:fribidi - Enable Bidi support for the drawtext filter via dev-libs/fribidi
+media-video/ffmpeg:gcrypt - Enable using dev-libs/libgcrypt for rtmp(t)e support (not needed if using any of USE=gmp,librtmp,openssl), and for obtaining random bytes (not needed if USE=openssl)
 media-video/ffmpeg:glslang - Use dev-util/glslang to compile GLSL
-media-video/ffmpeg:gme - Enables support for media-libs/game-music-emu for playing various video game music formats.
-media-video/ffmpeg:gpl - Build GPL code. Should be enabled unless you require LGPL binaries.
+media-video/ffmpeg:gme - Enables various game music formats support via media-libs/game-music-emu
+media-video/ffmpeg:gnutls - Enable using net-libs/gnutls for TLS/HTTPS support and other minor functions (has no effect if USE=openssl is set)
+media-video/ffmpeg:gpl - Enable use of GPL licensed code, should be kept enabled unless LGPL binaries are needed
 media-video/ffmpeg:hardcoded-tables - Use pre-calculated tables rather than calculating them on the fly. It results in an increase of approximately 15% in the size of libavcodec, the main library impacted by this change. It enables savings in table generation time, done once at codec initialization, since by hardcoding the tables, they do not need to be computed at runtime. However, the savings are often negligible (~100k cycles is a typical number) especially when amortized over the entire encoding/decoding operation. Improvements are being made to the runtime initialization, and so over time, this option will have an impact on fewer and fewer codecs.
-media-video/ffmpeg:iec61883 - Support for FireWire DV/HDV input device using media-libs/libiec61883.
-media-video/ffmpeg:kvazaar - Enables media-libs/kvazaar based HEVC encoder.
-media-video/ffmpeg:lcms - Enable ICC profile support via media-libs/lcms.
-media-video/ffmpeg:libaom - Enables media-libs/libaom based AV1 codec support.
-media-video/ffmpeg:libaribb24 - Enables ARIB text and caption decoding via media-libs/aribb24.
+media-video/ffmpeg:iec61883 - Enable FireWire DV/HDV input device support via media-libs/libiec61883
+media-video/ffmpeg:kvazaar - Enable H.265/HEVC encoding support via media-libs/kvazaar
+media-video/ffmpeg:lcms - Enable ICC profile support via media-libs/lcms
+media-video/ffmpeg:libaom - Enable AV1 de/encoding via media-libs/libaom (warning: this is the reference implementation and is slower than the alternatives)
+media-video/ffmpeg:libaribb24 - Enable ARIB text and caption decoding via media-libs/aribb24
 media-video/ffmpeg:libdrm - Enables x11-libs/libdrm support for better screen grabbing and hardware accelerated codecs.
 media-video/ffmpeg:libdvdnav - Uses media-libs/libdvdnav to enable DVD demuxing
 media-video/ffmpeg:libdvdread - Uses media-libs/libdvdread to enable DVD demuxing
-media-video/ffmpeg:libilbc - Enables iLBC de/encoding via media-libs/libilbc.
-media-video/ffmpeg:liblc3 - Enables LC3 de/encoding via media-sound/liblc3.
-media-video/ffmpeg:libplacebo - Adds flexible GPU-accelerated processing filter based on media-libs/libplacebo.
-media-video/ffmpeg:librtmp - Enables Real Time Messaging Protocol using librtmp (media-video/rtmpdump) in addition to FFmpeg's native implementation.
-media-video/ffmpeg:libsoxr - Enables audio resampling through media-libs/soxr.
-media-video/ffmpeg:libtesseract - Enables the OCR filter via app-text/tesseract.
+media-video/ffmpeg:libilbc - Enable internet Low Bitrate Codec de/encoding support via media-libs/libilbc
+media-video/ffmpeg:liblc3 - Enable Low Complexity Communication Codec de/encoding support via media-sound/liblc3
+media-video/ffmpeg:libplacebo - Enable use of GPU-accelerated filters from media-libs/libplacebo
+media-video/ffmpeg:librtmp - Enable Real Time Messaging Protocol support via media-video/rtmpdump in addition to FFmpeg's own implementation
+media-video/ffmpeg:libsoxr - Enable use of the audio resampler from media-libs/soxr
+media-video/ffmpeg:libtesseract - Enable Optical Character Recognition (OCR) filter support via app-text/tesseract
 media-video/ffmpeg:libv4l - Uses media-libs/libv4l for video4linux instead of direct calls. Adds support for more devices via the userspace library.
 media-video/ffmpeg:libxml2 - Uses dev-libs/libxml2 to enable dash demuxing support.
-media-video/ffmpeg:lv2 - Enables lv2 audio filter wrapper.
+media-video/ffmpeg:lv2 - Enable use of filters through media-libs/lv2
 media-video/ffmpeg:mipsdspr1 - Enables MIPS DSP ASE R1 optimizations.
 media-video/ffmpeg:mipsdspr2 - Enables MIPS DSP ASE R2 optimizations.
 media-video/ffmpeg:mipsfpu - Enables floating point MIPS optimizations.
 media-video/ffmpeg:mmal - Enables Multi-Media Abstraction Layer (MMAL) decoding support: Available e.g. on the Raspberry Pi.
 media-video/ffmpeg:network - Enables network streaming support
-media-video/ffmpeg:openh264 - Enables H.264 encoding suppoprt via media-libs/openh264.
-media-video/ffmpeg:openssl - Enables dev-libs/openssl support. Adds support for encrypted network protocols (TLS/HTTPS).
-media-video/ffmpeg:pic - Force shared libraries to be built as PIC (this is slower)
-media-video/ffmpeg:postproc - Build and install libpostproc.
-media-video/ffmpeg:qrcode - Enables QR encode generation via media-gfx/qrencode
-media-video/ffmpeg:qsv - Enable Intel Quick Sync Video via media-libs/intel-mediasdk (ffmpeg versions older than, and including, 5.1) or media-libs/libvpl (ffmpeg version newer than 5.1).
-media-video/ffmpeg:quirc - Enables QR decoding via media-libs/quirc
-media-video/ffmpeg:rav1e - Enables AV1 encoding support via media-video/rav1e.
-media-video/ffmpeg:rubberband - Adds time-stretching and pitch-shifting audio filter based on media-libs/rubberband.
-media-video/ffmpeg:shaderc - Use media-libs/shaderc to compile GLSL
-media-video/ffmpeg:snappy - Enable app-arch/snappy support. Required for e.g. Vidvox Hap encoder.
-media-video/ffmpeg:sndio - Enable support for the media-sound/sndio backend
-media-video/ffmpeg:soc - Apply additional patches for efficient playback on some SoCs (e.g. ARM, RISC-V).
-media-video/ffmpeg:srt - Enable support for Secure Reliable Transport (SRT) via net-libs/srt
-media-video/ffmpeg:ssh - Enable SSH/sftp support via net-libs/libssh.
-media-video/ffmpeg:svt-av1 - Enables AV1 encoding support via media-libs/svt-av1.
-media-video/ffmpeg:truetype - Enables drawtext filter via media-libs/freetype and media-libs/harfbuzz.
-media-video/ffmpeg:twolame - Enables MP2 encoding via media-sound/twolame as an alternative to the internal encoder.
-media-video/ffmpeg:vidstab - Enables video stabilization filter using vid.stab library (media-libs/vidstab).
-media-video/ffmpeg:vmaf - Enables Netflix's perceptual video quality assessment filter using the library (media-libs/libvmaf).
-media-video/ffmpeg:vpx - Enables VP8 and VP9 codec support using libvpx: Decoding does not require this to be enabled but libvpx can also be used for decoding; encoding requires this useflag to be enabled though.
-media-video/ffmpeg:x265 - Enables HEVC encoding with media-libs/x265.
-media-video/ffmpeg:zeromq - Enables net-libs/zeromq support with the zmq/azmq filters.
-media-video/ffmpeg:zimg - Enables media-libs/zimg based scale filter.
-media-video/ffmpeg:zvbi - Enables media-libs/zvbi based teletext decoder.
+media-video/ffmpeg:npp - Enable Nvidia Performance Primitives-based filters via dev-util/nvidia-cuda-toolkit (warning: if USE=gpl is enabled, this produces non-redistributable build)
+media-video/ffmpeg:openh264 - Enable H.264 encoding support via media-libs/openh264
+media-video/ffmpeg:openmpt - Enable MPTM tracked music files decoding support via media-libs/libopenmpt
+media-video/ffmpeg:openssl - Enable using dev-libs/openssl for TLS/HTTPS support and other minor functions (USE=gnutls has no effect if set)
+media-video/ffmpeg:pic - Force shared libraries to be built as PIC (this is safer)
+media-video/ffmpeg:postproc - Enable libpostproc video post processing library support (should not disable this unless need to disable USE=gpl)
+media-video/ffmpeg:qrcode - Enable QR encode generation support via media-gfx/qrencode
+media-video/ffmpeg:qsv - Enable Intel Quick Sync Video support via media-libs/libvpl
+media-video/ffmpeg:quirc - Enable QR decoding support via media-libs/quirc
+media-video/ffmpeg:rabbitmq - Enable AMQP stream support via net-libs/rabbitmq-c
+media-video/ffmpeg:rav1e - Enable AV1 encoding support via media-video/rav1e
+media-video/ffmpeg:rubberband - Enable time-stretching and pitch-shifting audio filter support via media-libs/rubberband
+media-video/ffmpeg:sdl - Enable use of the Simple Direct Layer library (required for the ffplay command)
+media-video/ffmpeg:shaderc - Enable support for various GPU-accelerated filters using Vulkan compiled with media-libs/shaderc
+media-video/ffmpeg:snappy - Enable Snappy compression support via app-arch/snappy (required for Vidvox Hap encoder support)
+media-video/ffmpeg:sndio - Enable audio output support via media-sound/sndio
+media-video/ffmpeg:soc - Apply additional patches for efficient playback on some SoCs (e.g. ARM, RISC-V)
+media-video/ffmpeg:srt - Enable Secure Reliable Transport (SRT) support via net-libs/srt
+media-video/ffmpeg:ssh - Enable SSH/SFTP support via net-libs/libssh
+media-video/ffmpeg:svt-av1 - Enable AV1 encoding support via media-libs/svt-av1
+media-video/ffmpeg:truetype - Enable drawtext filter support via media-libs/freetype and media-libs/harfbuzz
+media-video/ffmpeg:twolame - Enable MP2 encoding support via media-sound/twolame in addition to FFmpeg's own implementation
+media-video/ffmpeg:vidstab - Enable video stabilization filter support via media-libs/vidstab
+media-video/ffmpeg:vmaf - Enable Netflix's perceptual video quality assessment filter support via media-libs/libvmaf
+media-video/ffmpeg:vpx - Enable VP8 and VP9 de/encoding support via media-libs/libvpx in addition to FFmpeg's own implementation (for decoding only)
+media-video/ffmpeg:x265 - Enable H.265/HEVC encoding support via media-libs/x265
+media-video/ffmpeg:xml - Enable Dynamic Adaptive Streaming over HTTP (DASH) stream support using dev-libs/libxml2
+media-video/ffmpeg:zeromq - Enable ZMQ command receiver filter and streaming support via net-libs/zeromq
+media-video/ffmpeg:zimg - Enable zscale filter support using media-libs/zimg
+media-video/ffmpeg:zvbi - Enable teletext decoding support via media-libs/zvbi
 media-video/ffmpeg-chromium:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
 media-video/ffmpeg-chromium:gpl - Build GPL code. Should be enabled unless you require LGPL binaries.
+media-video/ffmpeg-compat:amf - Enable AMD's Advanced Media Framework support via media-video/amdgpu-pro-amf
+media-video/ffmpeg-compat:amr - Enable Adaptive Multi-Rate Audio support via media-libs/opencore-amr
+media-video/ffmpeg-compat:amrenc - Enable Adaptive Multi-Rate Audio encoding support via media-libs/vo-amrwbenc
+media-video/ffmpeg-compat:appkit - Enable Apple AppKit framework
+media-video/ffmpeg-compat:bluray - Enable Blu-ray filesystems reading support via media-libs/libbluray
+media-video/ffmpeg-compat:bs2b - Enable Bauer Stereo-to-Binaural filter support via media-libs/libbs2b
+media-video/ffmpeg-compat:cdio - Enable audio CDs reading via dev-libs/libcdio-paranoia
+media-video/ffmpeg-compat:chromaprint - Enable audio fingerprinting support via media-libs/chromaprint
+media-video/ffmpeg-compat:codec2 - Enable codec2 low bit rate speech codec support via media-libs/codec2
+media-video/ffmpeg-compat:cuda - Enable support for various GPU-accelerated filters using NVIDIA PTX compiled with llvm-core/clang
+media-video/ffmpeg-compat:dav1d - Enable AV1 decoding support via media-libs/dav1d
+media-video/ffmpeg-compat:drm - Enable use of x11-libs/libdrm for various hardware accelerated functions and Kernel Mode Setting screen capture
+media-video/ffmpeg-compat:fdk - Enable AAC (Advanced Audio Coding) encoding support via media-libs/fdk-aac in addition to FFmpeg's own implementation (warning: if USE=gpl is enabled, this produces a non-redistributable build)
+media-video/ffmpeg-compat:flite - Enable text-to-speech filter support via app-accessibility/flite
+media-video/ffmpeg-compat:frei0r - Enable use of filters through media-plugins/frei0r-plugins
+media-video/ffmpeg-compat:fribidi - Enable Bidi support for the drawtext filter via dev-libs/fribidi
+media-video/ffmpeg-compat:gcrypt - Enable using dev-libs/libgcrypt for rtmp(t)e support (not needed if using any of USE=gmp,librtmp,openssl), and for obtaining random bytes (not needed if USE=openssl)
+media-video/ffmpeg-compat:gme - Enables various game music formats support via media-libs/game-music-emu
+media-video/ffmpeg-compat:gnutls - Enable using net-libs/gnutls for TLS/HTTPS support and other minor functions (has no effect if USE=openssl is set)
+media-video/ffmpeg-compat:gpl - Enable use of GPL licensed code, should be kept enabled unless LGPL binaries are needed
+media-video/ffmpeg-compat:iec61883 - Enable FireWire DV/HDV input device support via media-libs/libiec61883
+media-video/ffmpeg-compat:kvazaar - Enable H.265/HEVC encoding support via media-libs/kvazaar
+media-video/ffmpeg-compat:lcms - Enable ICC profile support via media-libs/lcms
+media-video/ffmpeg-compat:libaom - Enable AV1 de/encoding via media-libs/libaom (warning: this is the reference implementation and is slower than the alternatives)
+media-video/ffmpeg-compat:libaribb24 - Enable ARIB text and caption decoding via media-libs/aribb24
+media-video/ffmpeg-compat:libilbc - Enable internet Low Bitrate Codec de/encoding support via media-libs/libilbc
+media-video/ffmpeg-compat:libplacebo - Enable use of GPU-accelerated filters from media-libs/libplacebo
+media-video/ffmpeg-compat:librtmp - Enable Real Time Messaging Protocol support via media-video/rtmpdump in addition to FFmpeg's own implementation
+media-video/ffmpeg-compat:libsoxr - Enable use of the audio resampler from media-libs/soxr
+media-video/ffmpeg-compat:libtesseract - Enable Optical Character Recognition (OCR) filter support via app-text/tesseract
+media-video/ffmpeg-compat:lv2 - Enable use of filters through media-libs/lv2
+media-video/ffmpeg-compat:npp - Enable Nvidia Performance Primitives-based filters via dev-util/nvidia-cuda-toolkit (warning: if USE=gpl is enabled, this produces non-redistributable build)
+media-video/ffmpeg-compat:openh264 - Enable H.264 encoding support via media-libs/openh264
+media-video/ffmpeg-compat:openmpt - Enable MPTM tracked music files decoding support via media-libs/libopenmpt
+media-video/ffmpeg-compat:openssl - Enable using dev-libs/openssl for TLS/HTTPS support and other minor functions (USE=gnutls has no effect if set)
+media-video/ffmpeg-compat:postproc - Enable libpostproc video post processing library support (should not disable this unless need to disable USE=gpl)
+media-video/ffmpeg-compat:qsv - Enable Intel Quick Sync Video support via media-libs/libvpl
+media-video/ffmpeg-compat:rabbitmq - Enable AMQP stream support via net-libs/rabbitmq-c
+media-video/ffmpeg-compat:rav1e - Enable AV1 encoding support via media-video/rav1e
+media-video/ffmpeg-compat:rubberband - Enable time-stretching and pitch-shifting audio filter support via media-libs/rubberband
+media-video/ffmpeg-compat:sdl - Enable use of the Simple Direct Layer library (required for the ffplay command)
+media-video/ffmpeg-compat:shaderc - Enable support for various GPU-accelerated filters using Vulkan compiled with media-libs/shaderc
+media-video/ffmpeg-compat:snappy - Enable Snappy compression support via app-arch/snappy (required for Vidvox Hap encoder support)
+media-video/ffmpeg-compat:sndio - Enable audio output support via media-sound/sndio
+media-video/ffmpeg-compat:soc - Apply additional patches for efficient playback on some SoCs (e.g. ARM, RISC-V)
+media-video/ffmpeg-compat:srt - Enable Secure Reliable Transport (SRT) support via net-libs/srt
+media-video/ffmpeg-compat:ssh - Enable SSH/SFTP support via net-libs/libssh
+media-video/ffmpeg-compat:svt-av1 - Enable AV1 encoding support via media-libs/svt-av1
+media-video/ffmpeg-compat:truetype - Enable drawtext filter support via media-libs/freetype and media-libs/harfbuzz
+media-video/ffmpeg-compat:twolame - Enable MP2 encoding support via media-sound/twolame in addition to FFmpeg's own implementation
+media-video/ffmpeg-compat:vidstab - Enable video stabilization filter support via media-libs/vidstab
+media-video/ffmpeg-compat:vmaf - Enable Netflix's perceptual video quality assessment filter support via media-libs/libvmaf
+media-video/ffmpeg-compat:vpx - Enable VP8 and VP9 de/encoding support via media-libs/libvpx in addition to FFmpeg's own implementation (for decoding only)
+media-video/ffmpeg-compat:x265 - Enable H.265/HEVC encoding support via media-libs/x265
+media-video/ffmpeg-compat:xml - Enable Dynamic Adaptive Streaming over HTTP (DASH) stream support using dev-libs/libxml2
+media-video/ffmpeg-compat:zeromq - Enable ZMQ command receiver filter and streaming support via net-libs/zeromq
+media-video/ffmpeg-compat:zimg - Enable zscale filter support using media-libs/zimg
+media-video/ffmpeg-compat:zvbi - Enable teletext decoding support via media-libs/zvbi
 media-video/guvcview:qt6 - Build with Qt6 interface instead of Gtk+
 media-video/guvcview:sfml - Build with SFML X11-engine instead of sdl
 media-video/handbrake:amf - Support for encoding h265 using AMD VCE encoder.
@@ -5665,8 +5732,6 @@ net-dns/knot:dnsproxy - Enable the tiny DNS proxy module
 net-dns/knot:dnstap - Include support for the dnstap binary log format (http://dnstap.info/)
 net-dns/knot:doh - Enable DNS over HTTP (DoH) using libnghttp2
 net-dns/knot:fastparser - Use a zone file parser that is faster, but requires more memory and CPU time to compile
-net-dns/knot:geoip - Enable the Geography-based responses module
-net-dns/knot:libidn2 - If IDN support is enabled, use net-dns/libidn2 instead of net-dns/libidn
 net-dns/knot:noudp - Enable the module which can send empty truncated responses to UDP queries
 net-dns/knot:onlinesign - Enable the module that sign zones on the fly instead of pre-signing zone
 net-dns/knot:pkcs11 - Add support for PKCS#11
@@ -5683,7 +5748,6 @@ net-dns/knot-resolver:dnstap - Build dnstap binary logging module
 net-dns/knot-resolver:kresc - Build (experimental) command-line client
 net-dns/knot-resolver:manager - Manager is a user-friendly interface and a component handling rolling restarts, config update logic and more.
 net-dns/knot-resolver:nghttp2 - DNS-over-HTTPS support
-net-dns/knot-resolver:prometheus - Metrics exported in Prometheus
 net-dns/knot-resolver:xdp - Enable eXpress Data Path
 net-dns/nsd:bind8-stats - Enables BIND8 like NSTATS and XSTATS and statistics in nsd-control
 net-dns/nsd:default-znow - Enable full relocation binding at load-time (RELRO NOW, to protect GOT and .dtor areas)
@@ -6233,7 +6297,6 @@ net-mail/vpopmail:clearpasswd - Enables cleartext password storage in the vpassw
 net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
 net-mail/vpopmail:maildrop - Enables mail-filter/maildrop support in vdelivermail
 net-mail/vpopmail:spamassassin - Enables mail-filter/spamassassin support
-net-misc/AQtion:lro - Enable/disable Large Receive Offload. This MUST be disabled for bridging or forwarding.
 net-misc/apt-cacher-ng:fuse - Install the sys-fs/fuse based acngfs, to use a userspace filesystem for the apt cache.
 net-misc/aria2:bittorrent - Enable support for the bittorrent protocol.
 net-misc/aria2:gnutls - Use net-libs/gnutls as TLS provider (preferred). Otherwise, dev-libs/openssl will be used as TLS provider. Both apply only with USE=ssl.
@@ -6777,6 +6840,7 @@ net-p2p/retroshare:miniupnp - Enables UPnP port forwarding via net-libs/miniupnp
 net-p2p/retroshare:plugins - Enables plugin support
 net-p2p/retroshare:service - Enables the new RetroShare service
 net-p2p/retroshare:sqlcipher - Enables GXS database encryption via SQLCipher
+net-p2p/rtorrent:tinyxml2 - Use vendor tinyxml2 instead of xmlrpc-c. This allows significant reduction in overhead (experimental)
 net-p2p/syncthing:tools - Install stdiscosrv, strelaysrv and other tools to /usr/libexec/syncthing/.
 net-p2p/transmission:cli - Build command-line client
 net-p2p/transmission:debug - Enable assertions
@@ -7060,6 +7124,7 @@ net-wireless/kismet:wext - Enable building kismet with support for the deprecate
 net-wireless/libxtrxll:usb3380 - support xtrx usb model
 net-wireless/neard:tools - Build and install 'nfctool' for further NFC debugging
 net-wireless/rtl-sdr:zerocopy - may cause a bus error on some ARM systems
+net-wireless/rtl-sdr-blog:zerocopy - may cause a bus error on some ARM systems
 net-wireless/rtl_433:rtlsdr - Build with Realtek RTL2832U (rtlsdr) support
 net-wireless/rtl_433:soapysdr - Build with SoapySDR support
 net-wireless/soapysdr:bladerf - Add support for bladerf hardware
@@ -8249,6 +8314,7 @@ sys-devel/crosstool-ng:wget - Require net-misc/wget
 sys-devel/distcc:gssapi - Enable support for net-libs/libgssglue
 sys-devel/gcc:ada - Build the ADA language (GNAT) frontend
 sys-devel/gcc:cet - Enable support for control flow hijacking protection. On amd64, this provides Intel Control Flow Enforcement Technology (CET). On arm64, this provides Branch Target Identification (BTI) and Pointer Authentication Code (PAC) support. This is only effective on amd64 or arm64. Only provides benefits on newer CPUs. For Intel, the CPU must be at least as new as Tiger Lake. For AMD, it must be at least as new as Zen 3. This is harmless on older CPUs, but provides no benefit either. For ARM64, PAC was introduced in armv8.3-a, and BTI was introduced in armv8.5-a. When combined with USE=hardened on amd64, GCC will set -fcf-protection by default when building software. The effect is minimal on systems which do not support it, other than a possible small increase in codesize for the NOPs. The generated code is therefore compatible with i686 at the earliest. On arm64, GCC will set -mbranch-protection=standard by default when building software.
+sys-devel/gcc:cobol - Enable support for the COBOL programming language
 sys-devel/gcc:d - Enable support for the D programming language
 sys-devel/gcc:debug - Enables GCC's 'checking' facility via --enable-checking=yes,extra,rtl. This adds checks to various compiler passes for integrity and input validation. This can help catch possible miscompilations early as well as latent bugs which could become real problems in future, but at the cost of slower compile times when using GCC. Unrelated to backtraces.
 sys-devel/gcc:default-stack-clash-protection - Build packages with stack clash protection on by default as a hardening measure. This enables -fstack-clash-protection by default which protects against large memory allocations allowing stack smashing. May cause slightly increased codesize, but modern compilers have been adapted to optimize well for this case, as this mitigation is now quite common. See https://developers.redhat.com/blog/2020/05/22/stack-clash-mitigation-in-gcc-part-3 and https://www.qualys.com/2017/06/19/stack-clash/stack-clash.txt.

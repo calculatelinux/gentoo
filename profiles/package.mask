@@ -33,6 +33,44 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2025-03-09)
+# Obsolete in favour of dev-lang/ada-bootstrap. Using sys-devel/gcc[ada]
+# should now Just Work. Removal on 2025-04-10.
+dev-lang/gnat-gpl
+
+# Sam James <sam@gentoo.org> (2025-03-09)
+# Breaks distutils.ccompiler with a lot of fallout. bug #950978 and
+# many others.
+=dev-python/setuptools-75.9.0
+=dev-python/setuptools-75.9.1
+=dev-python/setuptools-76.0.0
+=dev-python/ensurepip-setuptools-75.9.0
+=dev-python/ensurepip-setuptools-75.9.1
+=dev-python/ensurepip-setuptools-76.0.0
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2025-03-08)
+# EAPI=7. Broken CLI for packages.g.o.
+# Removal on 2025-04-07.
+app-portage/pgo
+
+# Anna (navi) Figueiredo Gomes <navi@vlhl.dev> (2025-03-08)
+# User services is merged and released in openrc-0.60, this fork
+# is now unmaintained and superseded.
+# Removal on 2025-04-08. Bug #950367
+sys-apps/openrc-navi
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-03-07)
+# No more revdeps after kde-apps/knotes last-rites and Gear 24.08.3 cleanup.
+# Removal on 2025-03-31.
+kde-apps/akonadi-notes
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-03-07)
+# Downstream-split fallback package for KF5-based revdeps without any
+# revdeps left. Removal on 2025-03-31.
+kde-apps/kdesdk-thumbnailers-common
+media-libs/ksanecore-common
+net-misc/kio-zeroconf-common
+
 # Sam James <sam@gentoo.org> (2025-03-07)
 # May cause emerge to hang (bug #950707). Tests hang on one machine
 # and another strange report upstream: https://github.com/pkgconf/pkgconf/issues/383.
@@ -275,12 +313,6 @@ games-fps/quakeforge
 # https://bugs.gentoo.org/949414
 =dev-cpp/cpp-httplib-0.18.6
 
-# Mike Pagano <mpagano@gentoo.org> (2025-02-07)
-# Last release 3 years ago, no version compiles; ours or upstreams.
-# Ack from maintainer. Driver is available in the Linux Kernel
-# Removal on 2025-03-07. Bug: 949318
-net-misc/AQtion
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-23)
 # Qt5 package without any revdeps. Use dev-qt/qttools[qdbus] instead.
 dev-qt/qdbusviewer
@@ -421,17 +453,12 @@ app-emulation/virtualbox-kvm
 # exim_tinydb utility crashes due to invalid free() (used in startup script)
 =mail-mta/exim-4.98
 
-# Leonardo Hernández Hernández <leohdz172@proton.me> (2024-07-07)
-# New major ffmpeg version. Tracker bug #928905.
->=media-video/ffmpeg-7.0
-
 # Sam James <sam@gentoo.org> (2024-06-25)
 # The symbol versioning "fix" breaks anything built with 3.0.0.
 =dev-libs/libassuan-3.0.1
 
 # Alfredo Tupone <tupone@gentoo.org> (2024-06-09)
 # Not ready for testing
->=dev-lang/ocaml-5
 dev-ml/sexplib0:0/0.17
 dev-ml/ocaml_intrinsics:0/0.17
 dev-ml/ocaml_intrinsics_kernel:0/0.17
