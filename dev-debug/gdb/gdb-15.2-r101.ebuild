@@ -90,7 +90,6 @@ RDEPEND="
 	>=sys-libs/ncurses-5.2-r2:=
 	>=sys-libs/readline-7:=
 	sys-libs/zlib
-	elibc_glibc? ( net-libs/libnsl:= )
 	debuginfod? (
 		dev-libs/elfutils[debuginfod(-)]
 	)

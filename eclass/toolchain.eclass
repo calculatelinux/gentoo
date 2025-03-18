@@ -429,15 +429,15 @@ if [[ ${PN} != gnat-gpl ]] && tc_has_feature ada ; then
 			)
 		"
 	else
-                BDEPEND+="
-                        ada? (
-                                || (
-                                        sys-devel/gcc:${SLOT}[ada]
-                                        <sys-devel/gcc-${SLOT}[ada]
-                                        <dev-lang/ada-bootstrap-${SLOT}
-                                )
-                        )
-                "
+		BDEPEND+="
+			ada? (
+				|| (
+					sys-devel/gcc:${SLOT}[ada]
+					<sys-devel/gcc-${SLOT}[ada]
+					<dev-lang/ada-bootstrap-${SLOT}
+				)
+			)
+		"
 	fi
 fi
 
@@ -2644,6 +2644,13 @@ toolchain_src_install() {
 				mv ${x} ${x}-${GCCMAJOR} || die
 			done
 		fi
+	fi
+
+	# Hack for C++ modules
+	if ! is_crosscompile && tc_version_is_at_least 15.0.1_pre20250316 ${PV}; then
+		# PR19266 (bug #948394)
+		sed -i -e "s,\.\./lib/gcc/${CHOST}/${GCCMAJOR}/include/,include/," \
+			"${ED}"/usr/lib/gcc/${CHOST}/${GCCMAJOR}/libstdc++.modules.json || die
 	fi
 
 	# As gcc installs object files built against both ${CHOST} and ${CTARGET}
