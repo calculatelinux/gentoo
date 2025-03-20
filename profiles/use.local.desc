@@ -875,7 +875,6 @@ app-misc/fastfetch:chafa - Enables text/graphics renderer with media-gfx/chafa
 app-misc/fastfetch:ddcutil - Use app-misc/ddcutil to query monitor settings
 app-misc/fastfetch:drm - Enables support for X.org's x11-libs/libdrm
 app-misc/fastfetch:elf - Use libelf to extract strings from binaries
-app-misc/fastfetch:osmesa - Enables offscreen rendering support from media-libs/mesa
 app-misc/fastfetch:vulkan - Enables reading GPU via media-libs/vulkan-loader
 app-misc/fastfetch:xfce - Enables support for XFCE config
 app-misc/fastfetch:xrandr - Enables support for Xrandr
@@ -4310,6 +4309,7 @@ media-libs/harfbuzz:glib - Enable dev-libs/glib unicode functions
 media-libs/harfbuzz:graphite - Enable media-gfx/graphite2 complementary shaper
 media-libs/imlib2:X - Use the X window system
 media-libs/imlib2:apidoc - Provide doxygen generated API docs
+media-libs/imlib2:avif - Avif image loader support via media-libs/libavif
 media-libs/imlib2:bzip2 - Bzip2 loader support
 media-libs/imlib2:eps - Eps image loader support
 media-libs/imlib2:filters - Build filter functions (blur, sharpen, etc)
@@ -4318,6 +4318,7 @@ media-libs/imlib2:mp3 - ID3 loader support
 media-libs/imlib2:packing - Enable structure packing. This will reduce memory footprint at the cost of unaligned memory access
 media-libs/imlib2:shm - Use MIT shared memory support for X image transfer
 media-libs/imlib2:text - Build text (TrueType font) functions
+media-libs/imlib2:tools - Build and install the demo tools
 media-libs/imlib2:zlib - Zlib loader support
 media-libs/intel-mediasdk:tools - Build analyse and inspect tools
 media-libs/jasper:heif - Enable experimental support for HEIF/HEIC, unsupported by upstream
@@ -4331,6 +4332,7 @@ media-libs/libavif:aom - Enable support for the AOM codec encoding and decoding
 media-libs/libavif:dav1d - Enable support for the dav1d codec decoding
 media-libs/libavif:extras - Build extra apps (avifenc, avifdec) and test files
 media-libs/libavif:gdk-pixbuf - Build a gdk-pixbuf loader
+media-libs/libavif:libyuv - Enable fast YUV conversion via libyuv
 media-libs/libavif:rav1e - Enable support for the rav1e codec encoding
 media-libs/libavif:svt-av1 - Enable support for the SVT-AV1 encoder
 media-libs/libbdplus:aacs - Add support for decryption of AACS
@@ -5303,6 +5305,7 @@ media-video/pipewire:gsettings - Use gsettings (dev-libs/glib) to read/save used
 media-video/pipewire:jack-client - Install a plugin for running PipeWire as a JACK client
 media-video/pipewire:jack-sdk - Use PipeWire as JACK replacement
 media-video/pipewire:liblc3 - Allow loading LC3 plugins via media-sound/liblc3
+media-video/pipewire:loudness - Enable loudness normalisation according to the EBU R128 standard using media-libs/libebur128
 media-video/pipewire:lv2 - Allow loading LV2 plugins via media-libs/lv2
 media-video/pipewire:modemmanager - Combined with USE=bluetooth, allows PipeWire to perform telephony on mobile devices.
 media-video/pipewire:pipewire-alsa - Replace PulseAudio's ALSA plugin with PipeWire's plugin
@@ -5979,7 +5982,6 @@ net-im/spectrum2:whatsapp - Enables the WhatsApp backend, based on net-im/transw
 net-im/telegram-desktop:enchant - Use the app-text/enchant spell-checking backend instead of app-text/hunspell
 net-im/telegram-desktop:fonts - Use builtin patched copy of open-sans fonts (overrides fontconfig)
 net-im/telegram-desktop:libdispatch - Use dev-libs/libdispatch to speed up concurrent code execution
-net-im/telegram-desktop:qt6 - Build with Qt6 support
 net-im/tkabber:plugins - Enables installation the extra plugins
 net-im/tokodon:mpv - Use media-libs/mpvqt instead of dev-qt/qtmultimedia for video playback (default)
 net-im/tokodon:webengine - Use dev-qt/qtwebengine for built-in authentication page (default is external browser)
@@ -7770,6 +7772,7 @@ sci-physics/thepeg:lhapdf - Adds support for sci-physics/lhapdf
 sci-physics/thepeg:rivet - Adds support for sci-physics/rivet
 sci-physics/vgm:geant4 - Enable interaction with Geant4(sci-physics/geant:4)
 sci-physics/vgm:root - Enable interaction with ROOT (sci-physics/root)
+sci-physics/yoda:highfive - Build with sci-libs/HighFive and sci-libs/hdf5
 sci-physics/yoda:root - Adds support for sci-physics/root
 sci-visualization/fityk:nlopt - Enable optimization with sci-libs/nlopt
 sci-visualization/gnuplot:amos - Enable Amos routines for complex Airy and Bessel functions (dev-libs/openspecfun)

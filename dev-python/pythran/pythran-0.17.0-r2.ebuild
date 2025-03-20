@@ -22,7 +22,7 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="amd64 arm arm64 ~loong ppc64 ~riscv ~s390 ~sparc x86"
 
 RDEPEND="
 	dev-libs/boost
@@ -70,16 +70,32 @@ src_configure() {
 }
 
 python_test() {
-	local EPYTEST_DESELECT=()
+	local EPYTEST_DESELECT=(
+		# multiple extra deps (meson, openblas)
+		# also broken on pypy3*
+		pythran/tests/test_distutils.py::TestMeson::test_meson_build
+	)
+
+	case ${ARCH} in
+		arm)
+			EPYTEST_DESELECT+=(
+				# TODO
+				pythran/tests/test_numpy_fft.py::TestNumpyFFT::test_fft_3d_axis
+				pythran/tests/test_numpy_fft.py::TestNumpyFFTN
+			)
+			;&
+		arm|x86)
+			EPYTEST_DESELECT+=(
+				# https://github.com/serge-sans-paille/pythran/issues/2290
+				pythran/tests/test_conversion.py::TestConversion::test_builtin_type9
+				pythran/tests/test_ndarray.py::TestNdarray::test_ndarray_uintp
+				pythran/tests/test_numpy_ufunc_unary.py::TestNumpyUFuncUnary::test_numpy_ufunc_unary_numpy_ufunc_unary_numpy_uint32_scalar_float
+			)
+			;;
+	esac
 
 	if has_version ">=dev-python/numpy-2[${PYTHON_USEDEP}]"; then
 		case ${EPYTHON} in
-			pypy3*)
-				EPYTEST_DESELECT+=(
-					# tries to link to libpypy*.so
-					pythran/tests/test_distutils.py::TestMeson::test_meson_build
-				)
-				;;
 			python3.13)
 				EPYTEST_DESELECT+=(
 					# repr() differences?

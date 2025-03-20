@@ -33,6 +33,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-03-20)
+# Upstream have made clear that they are not going to port to Qt6 and
+# recommend sys-apps/qdirstat (from original k4dirstat author) instead.
+# Alternatively, there is kde-apps/filelight available.
+# Bug #951138. Removal on 2025-04-19.
+kde-misc/kdirstat
+
+# Michał Górny <mgorny@gentoo.org> (2025-03-18)
+# Last release in 2019, no tests, no reverse dependencies.
+# Removal on 2025-04-17.  Bug #951540.
+dev-python/pysvg-py3
+
 # Michał Górny <mgorny@gentoo.org> (2025-03-17)
 # Unmaintained.  Last release in 2015, missing tests in sdist and not
 # tagged on GitHub.  Not marked for py3.13.  No reverse dependencies.
@@ -161,14 +173,6 @@ app-backup/luckybackup
 # Also, since it's eclass usage used to be broken, it went under the
 # radar.  Removal on 2025-04-05.  Bug #950702.
 dev-vcs/notify-webhook
-
-# Joonas Niilola <juippis@gentoo.org> (2025-03-05)
-# New release channel deemed as stable. Package.masked for the early
-# adopters - make sure to have ~/.thunderbird backed up, since
-# downgrading back to esr channel (128) might be impossible due to
-# changed database schemas.
->=mail-client/thunderbird-136.0
->=mail-client/thunderbird-bin-136.0
 
 # John Helmert III <ajak@gentoo.org> (2025-03-02)
 # Doesn't seem to cleanly load, see:
