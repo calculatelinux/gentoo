@@ -5958,7 +5958,6 @@ net-im/libcommuni:uchardet - Use app-i18n/uchardet, which is upstreams default, 
 net-im/pidgin:gadu - Enable Gadu Gadu protocol support
 net-im/pidgin:groupwise - Enable Novell Groupwise protocol support
 net-im/pidgin:gstreamer - Enables voice and video sessions
-net-im/pidgin:gtk - Builds Pidgin, the GTK+ interface
 net-im/pidgin:meanwhile - Enable meanwhile support for Sametime protocol
 net-im/pidgin:ncurses - Build finch, console interface
 net-im/pidgin:prediction - Enable Contact Availability Prediction plugin
@@ -7693,6 +7692,7 @@ sci-ml/caffe2:distributed - Support distributed applications
 sci-ml/caffe2:fbgemm - Use sci-ml/FBGEMM
 sci-ml/caffe2:flash - Enable flash attention
 sci-ml/caffe2:gloo - Use sci-ml/gloo
+sci-ml/caffe2:memefficient - Enable mem efficient attention
 sci-ml/caffe2:mkl - Use sci-libs/mkl for blas, lapack and sparse blas routines
 sci-ml/caffe2:nnpack - Use sci-ml/NNPACK
 sci-ml/caffe2:numpy - Add support for math operations through numpy
@@ -7707,6 +7707,7 @@ sci-ml/gloo:redis - Enable Redis backend for storage via dev-libs/hiredis
 sci-ml/oneDNN:cblas - Use virtual/cblas for sgemm routines
 sci-ml/oneDNN:mkl - Use sci-libs/mkl for sgemm routines
 sci-ml/onnx:disableStaticReg - Disable Static Registration
+sci-ml/transformers:torch - Support pytorch
 sci-physics/bullet:double-precision - Build libraries in double precision
 sci-physics/bullet:extras - Build the extras
 sci-physics/bullet:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
@@ -8647,7 +8648,6 @@ www-apps/icingaweb2:nginx - Adds support for nginx
 www-apps/ikiwiki:extras - Installs additional modules used by ikiwiki plugins
 www-apps/klaus:ctags - Enable support for Exuberant ctags; makes all source code symbols hyperlinks to their definitions
 www-apps/postfixadmin:vacation - Install vacation.pl script and dependencies
-www-apps/redmine:markdown - Enable support for Markdown
 www-apps/redmine:minimagick - Enable image processing support via dev-ruby/mini_magick
 www-apps/redmine:passenger - Enable support for www-apache/passenger
 www-apps/redmine:standalone - Enable standalone mode with www-servers/puma
