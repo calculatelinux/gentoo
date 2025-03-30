@@ -36,7 +36,7 @@ RDEPEND="
 	virtual/glu[${MULTILIB_USEDEP}]
 	jack? ( virtual/jack )
 	opengl? ( media-libs/libglvnd[${MULTILIB_USEDEP},X] )
-	mp3? ( media-video/ffmpeg[lame(-)] )
+	mp3? ( || ( media-video/ffmpeg[lame(-)] media-video/ffmpeg[mp3(-)] ) )
 	pulseaudio? ( media-libs/libpulse )
 	v4l? ( media-libs/libv4l )
 "
