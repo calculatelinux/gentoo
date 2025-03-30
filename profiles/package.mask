@@ -33,6 +33,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Conrad Kostecki <conikost@gentoo.org> (2025-03-28)
+# Upstream is dead and broken. All 'whatsapp' deps
+# will be last-rited on 2025-04-28.
+# Bug #952588 #952589
+net-im/transwhat
+net-im/yowsup
+
+# Sam James <sam@gentoo.org> (2025-03-27)
+# Large-scale breakage (bug #951350).
+=dev-build/cmake-4*
+
+# Viorel Munteanu <ceamac@gentoo.org> (2025-03-26)
+# Segfaults with no clear error message when trying to start a VM with 3D
+# acceleration enabled.
+# Bug #951833.
+=app-emulation/virtualbox-7.1.6a
+=app-emulation/virtualbox-extpack-oracle-7.1.6
+=app-emulation/virtualbox-additions-7.1.6
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-03-25)
 # Package destabilisation mask after prolongued time w/o maintainer.
 # Bug #936636
@@ -45,7 +64,7 @@
 # Removal on 2025-04-25.
 games-emulation/ryujinx
 
-# Hans de Graaff <graaff@gentoo.org> (2026-03-20)
+# Hans de Graaff <graaff@gentoo.org> (2025-03-20)
 # Rails 6.1 is no longer supported upstream. Use a newer Rails version
 # instead. Packages depending exclusively on Rails 6.1 will also be
 # removed. Removal on 2025-04-20.
@@ -63,7 +82,6 @@ dev-ruby/activerecord:6.1
 dev-ruby/activemodel:6.1
 dev-ruby/activesupport:6.1
 dev-ruby/actionpack-action_caching
-dev-ruby/coffee-rails
 dev-ruby/will_paginate:3
 =www-apps/redmine-5*
 
@@ -194,16 +212,6 @@ sys-cluster/teleport
 # should now Just Work. Removal on 2025-04-10.
 dev-lang/gnat-gpl
 
-# Sam James <sam@gentoo.org> (2025-03-09)
-# Breaks distutils.ccompiler with a lot of fallout. bug #950978 and
-# many others.
-=dev-python/setuptools-75.9.0
-=dev-python/setuptools-75.9.1
-=dev-python/setuptools-76.0.0
-=dev-python/ensurepip-setuptools-75.9.0
-=dev-python/ensurepip-setuptools-75.9.1
-=dev-python/ensurepip-setuptools-76.0.0
-
 # Arthur Zamarin <arthurzam@gentoo.org> (2025-03-08)
 # EAPI=7. Broken CLI for packages.g.o.
 # Removal on 2025-04-07.
@@ -300,18 +308,6 @@ virtual/perl-Thread-Semaphore
 virtual/perl-threads-shared
 virtual/perl-Tie-RefHash
 virtual/perl-Time-Piece
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-02-26)
-# Last release in 2005, last commit in 2013, dead as can be - does not
-# start, does not build, bugs #914927, #927337, #946657.
-# Removal on 2025-03-26.
-media-sound/jamin
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-02-26)
-# Last release 11 years ago, dead upstream, depends on Qt5 (and even that
-# only by means of downstream patching, no one else packages this.
-# Bug #947631. Removal on 2025-03-26.
-app-mobilephone/qtadb
 
 # Eray Aslan <eras@gentoo.org> (2025-02-24)
 # Mask experimental software
@@ -512,21 +508,6 @@ app-emulation/virtualbox-kvm
 # Sam James <sam@gentoo.org> (2024-06-25)
 # The symbol versioning "fix" breaks anything built with 3.0.0.
 =dev-libs/libassuan-3.0.1
-
-# Alfredo Tupone <tupone@gentoo.org> (2024-06-09)
-# Not ready for testing
-dev-ml/ocaml_intrinsics:0/0.17
-dev-ml/async_kernel:0/0.17
-dev-ml/async_unix:0/0.17
-dev-ml/protocol_version_header:0/0.17
-dev-ml/async_rpc_kernel:0/0.17
-dev-ml/async_log:0/0.17
-dev-ml/textutils:0/0.17
-dev-ml/async:0/0.17
->=dev-ml/labltk-8.06.14
-dev-ml/ppx_js_style:0/0.17
->=dev-ml/camlp4-5
-dev-ml/textutils_kernel:0/0.17
 
 # Sam James <sam@gentoo.org> (2024-03-28)
 # Newer 5.4.x releases were signed by a potentially compromised upstream maintainer.

@@ -14,7 +14,7 @@ LIBABIGAIL_DOCS_VERSION="${PV}"
 # bug #830088
 LIBABIGAIL_DOCS_USEFLAG="+doc"
 
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit libtool bash-completion-r1 python-any-r1 out-of-source
 
@@ -41,6 +41,7 @@ IUSE="btf debug ${LIBABIGAIL_DOCS_USEFLAG} test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
+	app-arch/xz-utils
 	dev-libs/elfutils
 	dev-libs/libxml2:2
 	dev-libs/xxhash

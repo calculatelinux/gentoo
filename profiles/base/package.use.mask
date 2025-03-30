@@ -6,6 +6,17 @@
 
 # New entries go on top.
 
+# Conrad Kostecki <conikost@gentoo.org> (2025-03-28)
+# Upstream is dead and broken. All 'whatsapp' deps
+# will be last-rited on 2025-04-28.
+# Bug #952588 #952589
+net-im/spectrum2 whatsapp
+
+# Z. Liu <zhixu.liu@gmail.com> (2025-03-24)
+# Upstream considers that the usbreset could potentially damage hardware.
+# bug #948216
+sys-apps/usbutils usbreset
+
 # Michał Górny <mgorny@gentoo.org> (2025-03-17)
 # sys-cluster/pacemaker is being removed.
 sys-cluster/drbd-utils pacemaker
@@ -833,6 +844,7 @@ dev-lang/gnat-gpl jit
 # be re-enabled with the 'server' USE flag, but this flag is hard
 # masked. bug #666619
 dev-python/paramiko server
+dev-python/sshtunnel test
 
 # Michał Górny <mgorny@gentoo.org> (2018-06-13)
 # Requires app-arch/snappy[static-libs] that is no longer available.
