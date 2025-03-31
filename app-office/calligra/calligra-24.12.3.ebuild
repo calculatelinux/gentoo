@@ -18,7 +18,7 @@ SRC_URI+=" https://dev.gentoo.org/~asturm/distfiles/${PATCHSET}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 if [[ ${KDE_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64 ~ppc64 ~x86"
+	KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
 fi
 CAL_FTS=( karbon sheets stage words )
 IUSE="+charts +fontconfig gsl +import-filter +lcms okular +pdf phonon
@@ -129,6 +129,7 @@ src_configure() {
 		-DWITH_LCMS2=$(usex lcms)
 		-DWITH_Okular6=$(usex okular)
 		-DWITH_Poppler=$(usex pdf)
+		-DWITH_PopplerXPDFHeaders=$(usex pdf)
 		-DWITH_Eigen3=$(usex calligra_features_sheets)
 		-DBUILD_UNMAINTAINED=$(usex calligra_features_stage)
 		-DWITH_Freetype=$(usex truetype)

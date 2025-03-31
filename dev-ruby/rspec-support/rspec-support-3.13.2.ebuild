@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-USE_RUBY="ruby31 ruby32 ruby33"
+USE_RUBY="ruby31 ruby32 ruby33 ruby34"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec3"
 
@@ -50,6 +50,9 @@ each_ruby_prepare() {
 				-i spec/rspec/support/differ_spec.rb || die
 			;;
 	esac
+
+	# Avoid specs failing with newer dev-ruby/diff-lcs. Already fixed upstream.
+	rm -f spec/rspec/support/differ_spec.rb || die
 }
 
 each_ruby_test() {

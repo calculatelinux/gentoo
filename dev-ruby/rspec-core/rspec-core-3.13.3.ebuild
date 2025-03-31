@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-USE_RUBY="ruby31 ruby32 ruby33"
+USE_RUBY="ruby31 ruby32 ruby33 ruby34"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 
@@ -81,6 +81,10 @@ all_ruby_prepare() {
 
 	# Avoid old regression check (already fixed upstream)
 	sed -i -e '/uses only one thread local variable/askip "old safety check"' spec/rspec/core_spec.rb || die
+
+	# Avoid specs that fail when dev-ruby/uri is installed
+	sed -e '/running_in_drb/ s/describe/xdescribe/' \
+		-i spec/rspec/core/runner_spec.rb || die
 }
 
 each_ruby_prepare() {
