@@ -9,15 +9,11 @@ DESCRIPTION="Robust, scalable and extensible XMPP server"
 HOMEPAGE="https://www.ejabberd.im/ https://github.com/processone/ejabberd/"
 SRC_URI="
 	https://github.com/processone/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/processone/ejabberd/commit/841d5c029905d5feabe07ab5a4db3aacfeedefb6.patch ->
-		${P}-fix-ejabberdctl.patch
-	https://github.com/processone/ejabberd/commit/4ea46c57653b3d9ea9c1386d1cc3dd07163d74d6.patch ->
-		${P}-set-ejabberd-opts.patch
 "
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~sparc ~x86"
 REQUIRED_USE="mssql? ( odbc )"
 # TODO: Add 'tools' flag.
 IUSE="captcha debug full-xml ldap mssql mysql odbc pam postgres redis

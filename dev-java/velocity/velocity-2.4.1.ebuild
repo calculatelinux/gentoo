@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -16,7 +16,7 @@ S="${WORKDIR}/${PN}-engine-${PV}/${PN}-engine-core"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~arm64 ~ppc64"
+KEYWORDS="amd64 arm64 ~ppc64"
 
 CP_DEPEND="
 	dev-java/commons-lang:3.6
@@ -99,6 +99,7 @@ src_prepare() {
 }
 
 src_test() {
+	local -x TZ="Europe/Berlin"	# https://bugs.gentoo.org/952126
 	pushd src/test/java > /dev/null || die
 		# DataSourceResourceLoaderTestCase.java requires configured jdbc
 		local JAVA_TEST_RUN_ONLY=$(find * \

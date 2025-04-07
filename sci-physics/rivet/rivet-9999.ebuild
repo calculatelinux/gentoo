@@ -18,6 +18,7 @@ HOMEPAGE="
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://gitlab.com/hepcedar/rivet"
+	EGIT_BRANCH="main"
 else
 	SRC_URI="https://www.hepforge.org/archive/rivet/${MY_PF}.tar.gz -> ${P}.tar.gz"
 	S=${WORKDIR}/${MY_PF}
@@ -32,6 +33,7 @@ REQUIRED_USE="
 "
 
 RDEPEND="
+	dev-cpp/yaml-cpp
 	>=sci-physics/fastjet-3.4.0[plugins]
 	>=sci-physics/fastjet-contrib-1.048
 	>=sci-physics/hepmc-3.1.1:3=[-cm(-),gev(+)]
@@ -47,11 +49,10 @@ RDEPEND="
 		$(python_gen_cond_dep '
 			dev-python/matplotlib[${PYTHON_USEDEP}]
 		')
-		>=sci-physics/yoda-2[${PYTHON_SINGLE_USEDEP}]
+		>=sci-physics/yoda-2.1[${PYTHON_SINGLE_USEDEP}]
 	)
-	!python? (
-		>=sci-physics/yoda-2
-	)
+	>=sci-physics/yoda-2.1[highfive(-)?]
+	!sci-physics/rivet:3
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
@@ -62,10 +63,6 @@ BDEPEND="
 		')
 	)
 "
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-3.1.6-binreloc.patch
-)
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
@@ -84,9 +81,10 @@ src_configure() {
 	CONFIG_SHELL=${ESYSROOT}/bin/bash econf \
 		$(use_with zlib zlib "${ESYSROOT}/usr") \
 		--with-hepmc3="${ESYSROOT}/usr" \
-		$(usex highfive "--with-highfive=${ESYSROOT}/usr" "") \
+		$(use_enable highfive h5) \
 		--with-yoda="${ESYSROOT}/usr" \
 		--with-fastjet="${ESYSROOT}/usr" \
+		--with-yaml-cpp="${EPREFIX}/usr" \
 		$(use_enable python pyext) \
 		$(usex python CYTHON="${ESYSROOT}/usr/bin/cython")
 }

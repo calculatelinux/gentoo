@@ -27,7 +27,7 @@ SRC_URI="
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="fortran contrib debug"
 
@@ -56,7 +56,7 @@ DEPEND="
 
 PATCHES=(
 	"${FILESDIR}/${PN}-9999-nodebug.diff"
-	"${FILESDIR}/${P}_FortranProject-r378-autotools-build.patch"
+	"${FILESDIR}/${PN}-20.03_p13518_FortranProject-r378-autotools-build.patch"
 )
 
 src_unpack() {
