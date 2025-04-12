@@ -1,4 +1,4 @@
-BDEPEND=|| ( dev-lang/python:3.12 dev-lang/python:3.11 dev-lang/python:3.10 ) virtual/pkgconfig virtual/pkgconfig
+BDEPEND=|| ( dev-lang/python:3.13 dev-lang/python:3.12 dev-lang/python:3.11 dev-lang/python:3.10 ) virtual/pkgconfig virtual/pkgconfig
 DEFINED_PHASES=postinst postrm setup
 DEPEND=>=virtual/udev-208
 DESCRIPTION=Repository of data files describing media player capabilities
@@ -11,5 +11,5 @@ RDEPEND=>=virtual/udev-208
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=https://www.freedesktop.org/software/media-player-info/media-player-info-24.tar.gz
-_eclasses_=multilib	b2a329026f2e404e9e371097dda47f96	multiprocessing	1e32df7deee68372153dca65f4a7c21f	python-any-r1	891415dfe39ad9b41b461f2b86354af0	python-utils-r1	b7726144f5af59e186d66746d0f513e5	toolchain-funcs	6afdb6107430c1832ca7e16aacbf8fa1	udev	f3d9a4376ebd22131726a68e1a0a058f
-_md5_=481b12e85fc1d5a6e8b0b85ae27c7283
+_eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	python-any-r1	891415dfe39ad9b41b461f2b86354af0	python-utils-r1	b7726144f5af59e186d66746d0f513e5	toolchain-funcs	f9d71a6efe9d083aec750dd13968e169	udev	f3d9a4376ebd22131726a68e1a0a058f
+_md5_=d55e5d8ddaff09ac2f0411a91412b859

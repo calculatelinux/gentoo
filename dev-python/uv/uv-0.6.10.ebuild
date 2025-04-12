@@ -46,7 +46,7 @@ LICENSE+="
 # ring crate
 LICENSE+=" openssl"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~x86"
+KEYWORDS="amd64 ~arm arm64 ~loong ~ppc ppc64 ~riscv x86"
 IUSE="test"
 RESTRICT="test"
 PROPERTIES="test_network"
@@ -89,6 +89,10 @@ pkg_setup() {
 
 src_prepare() {
 	default
+
+	# force thin lto, makes build much faster and less memory hungry
+	# (i.e. makes it possible to actually build uv on 32-bit PPC)
+	sed -i -e '/lto/s:fat:thin:' Cargo.toml || die
 
 	# enable system libraries where supported
 	export ZSTD_SYS_USE_PKG_CONFIG=1

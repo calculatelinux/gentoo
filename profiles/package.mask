@@ -33,19 +33,11 @@
 
 #--- END OF EXAMPLES ---
 
-# Sam James <sam@gentoo.org> (2025-04-05)
-# New abseil/protobuf breaks too much:
-# * net-libs/grpc (bug #953141)
-# * media-libs/opencv (bug #953138)
-# * dev-libs/protobuf (bug #953140)
-=dev-cpp/abseil-cpp-20250127.0*
-=dev-cpp/abseil-cpp-20240722.1*
-=dev-cpp/abseil-cpp-20240116.3*
-=dev-cpp/abseil-cpp-20230802.3*
-=dev-libs/protobuf-30*
-=dev-ruby/google-protobuf-4.30*
-=dev-java/protobuf-java-4.30*
-=dev-python/protobuf-6.30*
+# Michał Górny <mgorny@gentoo.org> (2025-04-09)
+# Still uses legacy distutils-r1 mode, and lacks Python 3.13 target.
+# No reply from the maintainer for a year now.
+# Removal on 2025-05-09.  Bug #909900.
+app-text/nfoview
 
 # Arthur Zamarin <arthurzam@gentoo.org> (2025-04-04)
 # Temporary mask until handled the usage of shorter SLOT.
@@ -83,6 +75,8 @@ app-text/kchmviewer
 # to catch up on support if needed. May or may keep masked until 6.9.1
 # depending on issues. If wanted, feel free to add `dev-qt/*:6/6.9.0`
 # to package.unmask and report issues.
+=dev-python/pyqt6-6.9*
+=dev-python/pyqt6-webengine-6.9*
 =dev-python/pyside-6.9.0*
 =dev-qt/qt-docs-6.9.0*
 =dev-qt/qt3d-6.9.0*
@@ -488,12 +482,6 @@ dev-qt/qtsensors:5
 dev-qt/qtserialbus:5
 dev-qt/qtvirtualkeyboard:5
 dev-qt/qtwebview:5
-
-# Conrad Kostecki <conikost@gentoo.org> (2025-01-09)
-# New version, which dropps support for legacy devices.
-# Will be unmasked, when split to legacy-branch is done.
->=dev-libs/intel-compute-runtime-24.52.32224.5
->=dev-util/intel-graphics-compiler-2.5.7
 
 # Michał Górny <mgorny@gentoo.org> (2024-12-05)
 # 6.12.2 does not boot for me.

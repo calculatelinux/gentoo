@@ -4,7 +4,7 @@
 EAPI=8
 
 ADA_COMPAT=( gcc_14 )
-PYTHON_COMPAT=( python3_{10..13} pypy3 )
+PYTHON_COMPAT=( python3_{10..13} )
 inherit ada python-any-r1 multiprocessing
 
 commitId=ce5fad038790d5dc18f9b5345dc604f1ccf45b06
@@ -58,9 +58,10 @@ src_prepare() {
 }
 
 src_compile() {
-	emake -j1 -C gnat2why \
-		GPRARGS="-XLIBRARY_TYPE=relocatable -XBuild=Production -v" \
-		PROCS=$(makeopts_jobs)
+	emake -C gnat2why setup
+	gprbuild -j$(makeopts_jobs) -p -XLIBRARY_TYPE=relocatable -v \
+		-Pgnat2why/gnat2why.gpr \
+		-largs ${LDFLAGS} -cargs ${ADAFLAGS} || die
 	gprbuild -j$(makeopts_jobs) -p -XLIBRARY_TYPE=relocatable -v \
 		-P gnatprove.gpr \
 		-largs ${LDFLAGS} -cargs ${ADAFLAGS} || die

@@ -13,7 +13,7 @@ if [[ ${PV##*.} = 9999 ]]; then
 	S="${EGIT_CHECKOUT_DIR}"
 else
 	SRC_URI="https://dev.gentoo.org/~ulm/emacs/${P}.tar.xz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
+	KEYWORDS="~alpha amd64 arm arm64 hppa ~loong ~m68k ~mips ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
 fi
 
 DESCRIPTION="Common files needed by all GNU Emacs versions"
@@ -56,7 +56,9 @@ src_install() {
 	doexe emacs-wrapper.sh
 	elisp-site-file-install "${SITEFILE}"
 
-	insinto /usr/lib/systemd/user
+	# don't use systemd_douserunit because it would require inheriting
+	# three eclasses (systemd pulls toolchain-funcs and multilib)
+	insinto "/usr/lib/systemd/user"
 	doins emacs.service
 
 	if use games; then
