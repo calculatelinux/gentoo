@@ -26,7 +26,7 @@ fi
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE="authentication dedicated gtk3 gtk4 json mapimg mariadb modpack nls odbc qt6"
-IUSE+=" readline rule-editor sdl +sdl3 +server +sound sqlite +system-lua web-server"
+IUSE+=" readline rule-editor sdl +sdl3 +server +sound sqlite svg +system-lua web-server"
 
 REQUIRED_USE="
 	authentication? ( || ( mariadb odbc sqlite ) )
@@ -99,6 +99,7 @@ BDEPEND="
 
 pkg_setup() {
 	use system-lua && lua-single_pkg_setup
+	use svg && use !qt6 && einfo "SVG flags only supported in qt6 client, ignoring"
 }
 
 src_prepare() {
@@ -130,7 +131,10 @@ src_configure() {
 
 		if use ${flag} ; then
 			myclient+=( ${client_name} )
-			use modpack && myfcmp+=( ${fcmp_name} )
+			# Avoid duplicate `cli` entries; meson will complain
+			if use modpack && [[ ! " ${myfcmp[*]} " =~ " ${fcmp_name} " ]]; then
+				myfcmp+=( ${fcmp_name} )
+			fi
 		fi
 	}
 
@@ -143,6 +147,7 @@ src_configure() {
 		freeciv_enable_ui gtk4
 		freeciv_enable_ui qt6 qt
 		use qt6 && emesonargs+=( -Dqtver=qt6 )
+		use qt6 && emesonargs+=( $(meson_use svg svgflags) )
 	else
 		if use modpack ; then
 			myfcmp+=( cli )
@@ -151,8 +156,8 @@ src_configure() {
 
 	# the client and fpmc arrays are now populated (or not for dedicated); let's add them to emesonargs
 	emesonargs+=(
-		-Dclients=$(IFS=, ; echo "${myclient[*]}")
-		-Dfcmp=$(IFS=, ; echo "${myfcmp[*]}")
+		-Dclients="$(meson-format-array "${myclient[*]}")"
+		-Dfcmp="$(meson-format-array "${myfcmp[*]}")"
 	)
 
 	if use authentication; then
@@ -161,7 +166,7 @@ src_configure() {
 		use mariadb && myfcdb+=( mariadb )
 		use odbc && myfcdb+=( odbc )
 		emesonargs+=(
-			-Dfcdb=$(IFS=, ; echo "${myfcdb[*]}")
+			-Dfcdb="$(meson-format-array "${myfcdb[*]}")"
 		)
 	else
 		# If we don't want authentication
@@ -190,7 +195,7 @@ src_configure() {
 	# default-enabled upstream
 	use rule-editor && tools+=( ruledit ruleup )
 	emesonargs+=(
-		-Dtools=$(IFS=, ; echo ${tools[*]})
+		-Dtools=$(meson-format-array ${tools[*]})
 	)
 
 	# Anything that can be trivially set by meson_use goes here

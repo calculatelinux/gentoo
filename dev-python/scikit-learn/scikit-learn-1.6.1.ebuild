@@ -22,7 +22,7 @@ SRC_URI="
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm64 ~ppc64 ~riscv ~x86 ~arm64-macos ~x64-macos"
+KEYWORDS="amd64 ~arm64 ppc64 ~riscv ~x86 ~arm64-macos ~x64-macos"
 IUSE="examples"
 
 DEPEND="
@@ -63,6 +63,14 @@ python_test() {
 		# doctest failing on extra shape= in repr, probably numpy version
 		cluster/_hdbscan/hdbscan.py::sklearn.cluster._hdbscan.hdbscan.HDBSCAN
 	)
+
+	case ${ARCH} in
+		ppc64)
+			EPYTEST_DESELECT+=(
+				# TODO
+				ensemble/_weight_boosting.py::sklearn.ensemble._weight_boosting.AdaBoostRegressor
+			)
+	esac
 
 	rm -rf sklearn || die
 	local -x PYTEST_DISABLE_PLUGIN_AUTOLOAD=1

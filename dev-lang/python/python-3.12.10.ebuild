@@ -28,7 +28,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="PSF-2"
 SLOT="${PYVER}"
-KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86"
+KEYWORDS="~alpha amd64 arm arm64 hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86"
 IUSE="
 	bluetooth build debug +ensurepip examples gdbm libedit
 	+ncurses pgo +readline +sqlite +ssl test tk valgrind
@@ -246,6 +246,11 @@ src_configure() {
 				# bug 653850
 				-x test_resource
 				-x test_strtod
+			)
+			;;
+		arm*)
+			COMMON_TEST_SKIPS+=(
+				-x test_gdb
 			)
 			;;
 		mips*)

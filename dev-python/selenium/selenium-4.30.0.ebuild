@@ -29,7 +29,7 @@ SRC_URI+="
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
+KEYWORDS="amd64 ~arm arm64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
 IUSE="test-rust"
 
 RDEPEND="
@@ -94,7 +94,6 @@ python_test() {
 		local -x PATH=${T}/bin:${PATH}
 		local -x SE_MANAGER_PATH="$(type -P selenium-manager)"
 
-		local EPYTEST_XDIST=1
 		pytest_args+=(
 			-p rerunfailures --reruns=5
 

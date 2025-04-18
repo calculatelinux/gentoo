@@ -10,5 +10,5 @@ LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=>=dev-libs/glib-2.6.0 dev-libs/openssl:= sys-libs/ncurses:= otr? ( >=dev-libs/libgcrypt-1.2.0:= >=net-libs/libotr-4.1.0 ) perl? ( dev-lang/perl:= ) selinux? ( sec-policy/selinux-irc )
 SLOT=0
-_eclasses_=flag-o-matic	e8de74bac929ba17427e740e95707d00	git-r3	875eb471682d3e1f18da124be97dcc81	meson	99466844dd8d4fcfb07578a76f5a9922	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	perl-functions	1863acf0982afafc67797e3ce7275b4c	perl-module	25ca2ff8e7971cb7f817f0bda4be696d	python-utils-r1	b7726144f5af59e186d66746d0f513e5	readme.gentoo-r1	b045f3acf546393ab6b3170781875358	toolchain-funcs	f9d71a6efe9d083aec750dd13968e169
+_eclasses_=flag-o-matic	e8de74bac929ba17427e740e95707d00	git-r3	875eb471682d3e1f18da124be97dcc81	meson	99466844dd8d4fcfb07578a76f5a9922	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	perl-functions	1863acf0982afafc67797e3ce7275b4c	perl-module	25ca2ff8e7971cb7f817f0bda4be696d	python-utils-r1	d1be7a6de225276141d669742d56f3f3	readme.gentoo-r1	b045f3acf546393ab6b3170781875358	toolchain-funcs	f9d71a6efe9d083aec750dd13968e169
 _md5_=6fdf96c2fc4c29c593e77ebc78dc5a1b

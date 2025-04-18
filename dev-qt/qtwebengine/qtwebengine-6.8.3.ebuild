@@ -14,7 +14,7 @@ SRC_URI+="
 "
 
 if [[ ${QT6_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64 ~arm64"
+	KEYWORDS="amd64 arm64"
 fi
 
 IUSE="
@@ -114,6 +114,7 @@ PATCHES+=(
 	"${FILESDIR}"/${PN}-6.8.2-glibc2.41.patch
 	"${FILESDIR}"/${PN}-6.8.3-clang20.patch
 	"${FILESDIR}"/${PN}-6.8.3-pipewire1.4.patch
+	"${FILESDIR}"/${PN}-6.8.3-gperf3.2.patch
 )
 
 python_check_deps() {
@@ -256,6 +257,10 @@ src_configure() {
 		# report if above -march works again so can cleanup.
 		use arm64 && tc-is-gcc && filter-flags '-march=*' '-mcpu=*'
 	fi
+
+	# chromium passes this by default, but qtwebengine does not and it may
+	# "possibly" get enabled by some paths and cause issues (bug #953111)
+	append-ldflags -Wl,-z,noexecstack
 
 	export NINJAFLAGS=$(get_NINJAOPTS)
 	[[ ${NINJA_VERBOSE^^} == OFF ]] || NINJAFLAGS+=" -v"

@@ -67,7 +67,7 @@ else
 	MY_PV="${MY_PV}-${CODENAME}"
 	MY_P="${PN}-${MY_PV}"
 	SRC_URI+=" https://github.com/xbmc/xbmc/archive/${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~arm64 ~riscv ~x86"
+	KEYWORDS="~amd64 ~arm arm64 ~riscv ~x86"
 	S=${WORKDIR}/xbmc-${MY_PV}
 fi
 
@@ -272,6 +272,7 @@ BDEPEND="
 PATCHES=(
 	"${FILESDIR}"/kodi-21-optional-ffmpeg-libx11.patch
 	"${FILESDIR}"/kodi-21.1-silence-libdvdread-git.patch
+	"${FILESDIR}"/kodi-21.2-pipewire-1.4.0-fix.patch
 )
 
 # bug #544020
@@ -438,10 +439,12 @@ src_configure() {
 		mycmakeargs+=( -DENABLE_${name^^}=$(usex ${flag}) )
 	done
 
-	# TODO: drop compat and allow using >=media-video/ffmpeg-7
-	ffmpeg_compat_setup 6
-	ffmpeg_compat_add_flags
-	mycmakeargs+=( -DFFMPEG_INCLUDE_DIRS="${SYSROOT}$(ffmpeg_compat_get_prefix 6)" )
+	if use system-ffmpeg; then
+		# TODO: drop compat and allow using >=media-video/ffmpeg-7
+		ffmpeg_compat_setup 6
+		ffmpeg_compat_add_flags
+		mycmakeargs+=( -DFFMPEG_INCLUDE_DIRS="${SYSROOT}$(ffmpeg_compat_get_prefix 6)" )
+	fi
 
 	if ! is-flag -DNDEBUG && ! is-flag -D_DEBUG ; then
 		# Kodi requires one of the 'NDEBUG' or '_DEBUG' defines

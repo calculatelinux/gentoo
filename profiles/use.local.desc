@@ -1460,6 +1460,7 @@ dev-db/unixODBC:minimal - Disable bundled drivers and extra libraries (most user
 dev-db/unixODBC:odbcmanual - Administrator, Internal Structure, Programmer and User documentation
 dev-debug/bpftrace:lldb - Parse debug info usingllvm-core/lldb
 dev-debug/bpftrace:pcap - Enable skb_output using net-libs/libpcap
+dev-debug/drgn:debuginfod - Enable debuginfod support
 dev-debug/dtrace:test-install - Install the testsuite for manual use. It is not suitable for automatic execution within the ebuild because it requires root privlieges.
 dev-debug/gdb:babeltrace - Enable dev-util/babeltrace support
 dev-debug/gdb:cet - Enable Intel Control-flow Enforcement Technology.
@@ -2955,6 +2956,7 @@ dev-util/perf:numa - Enable NUMA support using sys-process/numactl (NUMA kernel 
 dev-util/perf:perl - Add support for Perl as a scripting language for perf tools.
 dev-util/perf:systemtap - Add support to define SDT event in perf tools.
 dev-util/perf:unwind - Use sys-libs/libunwind for frame unwinding support.
+dev-util/pixi:rustls - Use Rustls instead of OpenSSL.
 dev-util/pkgconf:native-symlinks - Install generic symlinks like pkgconf and pkg-config. If this flag is disabled, only CHOST-prefixed pkg-config executables will be available to end users and ebuilds.
 dev-util/plan9port:freefonts - Don't install BigelowHolmes fonts
 dev-util/poke:nbd - Enable poking at networked block devices via sys-libs/libnbd.
@@ -3084,7 +3086,6 @@ games-board/pasang-emas:extras - Install some extra themes
 games-board/pioneers:help - Enable gnome ingame help via scrollkeeper
 games-board/pysolfc:extra-cardsets - Install extra cardsets
 games-board/pysolfc:sound - Enable sound support using dev-python/pygame
-games-board/scid:photos - Install collection of player photos (large)
 games-board/scid:scripts - Install additional python and tcl utility scripts
 games-board/stockfish:general-32 - Generic unoptimized 32-bits build
 games-board/stockfish:general-64 - Generic unoptimized 64-bits build
@@ -3585,7 +3586,9 @@ kde-apps/kig:scripting - Support Python scripting
 kde-apps/kio-extras:X - Enable support for XCursor thumbnails via x11-libs/libX11
 kde-apps/kio-extras:activities - Enable activities KIO worker and fileitem plugin
 kde-apps/kio-extras:ios - Enable AFC (Apple File Conduit) KIO worker for iOS devices support
+kde-apps/kio-extras:libproxy - Enable support for WPAD problem detection via net-libs/libproxy
 kde-apps/kio-extras:man - Enable manpages KIO worker
+kde-apps/kio-extras:nfs - Enable NFS support using net-libs/libtirpc
 kde-apps/kio-extras:phonon - Enable file audio preview plugin using media-libs/phonon
 kde-apps/kio-extras:sftp - Enable SFTP protocol support using net-libs/libssh
 kde-apps/kio-extras:taglib - Enable audio thumbnails via media-libs/taglib
@@ -5967,7 +5970,6 @@ net-im/gajim:jingle - Audio and video calls
 net-im/gajim:remote - Controling Gajim instance from command line with gajim-remote
 net-im/gajim:rst - Generating XHTML output from RST code
 net-im/gajim:spell - Spellchecking of composed messages
-net-im/gajim:upnp - Ability to request your router to forward port for file transfer
 net-im/gajim:voice - Support for video calls, audio calls and voice messages
 net-im/gajim:webp - Support WebP avatars
 net-im/libcommuni:qml - Install optional qml files.
@@ -7722,6 +7724,8 @@ sci-ml/caffe2:openmp - Use OpenMP for parallel code
 sci-ml/caffe2:qnnpack - Use QNNPACK
 sci-ml/caffe2:rocm - Enable ROCm gpu computing support
 sci-ml/caffe2:xnnpack - Use sci-ml/XNNPACK
+sci-ml/datasets:torch - Use pytorch
+sci-ml/datasets:vision - Support vision
 sci-ml/gloo:libuv - Enable libuv support
 sci-ml/gloo:redis - Enable Redis backend for storage via dev-libs/hiredis
 sci-ml/oneDNN:cblas - Use virtual/cblas for sgemm routines
@@ -8945,7 +8949,6 @@ x11-misc/mugshot:libreoffice - Add support for app-office/libreoffice and app-of
 x11-misc/mugshot:webcam - Add support for setting a profile photo in media-video/cheese
 x11-misc/openbox-menu:icons - Enable support for icons in menus
 x11-misc/openbox-menu:svg - Support SVG icons
-x11-misc/picom:config-file - Enable config file support
 x11-misc/picom:doc - Build documentation and man pages (requires app-text/asciidoc)
 x11-misc/picom:drm - Enable support for using drm for vsync
 x11-misc/picom:opengl - Enable features that require opengl (opengl backend, and opengl vsync methods)
@@ -9118,6 +9121,7 @@ x11-wm/musca:xlisten - Optionally install the xlisten utility
 x11-wm/mutter:elogind - Rely on sys-auth/elogind as logind provider for Wayland sessions
 x11-wm/mutter:libdisplay - Enable EDID and DisplayID using media-libs/libdisplay-info
 x11-wm/mutter:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
+x11-wm/mutter:xwayland - Enable X11 application support in Wayland sessions
 x11-wm/notion:xrandr - Add support for xrandr
 x11-wm/openbox:session - Enables support for session managers
 x11-wm/openbox:xdg - Install the python xdg files for xdg autostart
