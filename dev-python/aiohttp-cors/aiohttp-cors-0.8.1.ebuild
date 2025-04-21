@@ -11,7 +11,7 @@ inherit distutils-r1
 DESCRIPTION="Implements CORS support for aiohttp asyncio-powered asynchronous HTTP server"
 HOMEPAGE="
 	https://github.com/aio-libs/aiohttp-cors/
-	https://pypi.org/project/aiohttp_cors/
+	https://pypi.org/project/aiohttp-cors/
 "
 SRC_URI="
 	https://github.com/aio-libs/aiohttp-cors/archive/v${PV}.tar.gz
@@ -20,7 +20,7 @@ SRC_URI="
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm arm64 hppa ~loong ~mips ppc ppc64 ~riscv ~s390 sparc x86"
 
 RDEPEND="
 	>=dev-python/aiohttp-3.9[${PYTHON_USEDEP}]

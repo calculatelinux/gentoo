@@ -1748,7 +1748,10 @@ dev-java/ant:swing - Enable Swing Ant tasks
 dev-java/ant:testutil - Enable optional test util classes
 dev-java/ant:xalan - Enable Apache Xalan2 Ant tasks
 dev-java/ant:xz - Enable XZ Ant tasks
+dev-java/commons-beanutils:log4j - Add optional support for log4j
+dev-java/commons-digester:log4j - Add optional support for log4j
 dev-java/commons-logging:log4j - Add optional support for log4j
+dev-java/commons-validator:log4j - Add optional support for log4j
 dev-java/dom4j:jaxen - Includes org.jaxen.dom4j package
 dev-java/emma:launcher - Install /usr/bin/emma. Collides with sci-biology/emboss.
 dev-java/java-config:compat - Install bin/java-config-2 symlink pointing to java-config
@@ -2905,7 +2908,7 @@ dev-util/google-perftools:pagesize-16k - Use 16K page size for tcmalloc. Larger 
 dev-util/google-perftools:pagesize-256k - Use 256K page size for tcmalloc. Larger size makes tcmalloc faster, at the cost of using more space (due to internal fragmentation)
 dev-util/google-perftools:pagesize-32k - Use 32K page size for tcmalloc. Larger size makes tcmalloc faster, at the cost of using more space (due to internal fragmentation)
 dev-util/google-perftools:pagesize-64k - Use 64K page size for tcmalloc. Larger size makes tcmalloc faster, at the cost of using more space (due to internal fragmentation)
-dev-util/heaptrack:gui - Install Qt5-based analyzer tool
+dev-util/heaptrack:gui - Install Qt6-based analyzer tool
 dev-util/hfstospell:clang - Use different logic in ebuild when clang is used
 dev-util/hip:hip - Build HIP runtime
 dev-util/hip:opencl - Build OpenCL runtime
@@ -3785,6 +3788,7 @@ llvm-runtimes/libcxx:clang - Force building using installed clang (rather than t
 llvm-runtimes/libcxx:libcxxabi - Build on top of llvm-runtimes/libcxxabi instead of gcc's libsupc++ (avoids depending on gcc).
 llvm-runtimes/libcxxabi:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
 llvm-runtimes/libunwind:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
+llvm-runtimes/offload:clang - Force building using installed clang (rather than the default CC/CXX).
 llvm-runtimes/offload:ompt - Enable OpenMP Tools Interface support
 llvm-runtimes/openmp:gdb-plugin - Build OMPD GDB plugin
 llvm-runtimes/openmp:hwloc - Enable CPU affinity support via hwloc
@@ -4374,6 +4378,7 @@ media-libs/libgpod:gtk - Enable ArtworkDB support
 media-libs/libheif:aom - Use media-libs/libaom for AVIF encoding/decoding
 media-libs/libheif:gdk-pixbuf - Enable x11-libs/gdk-pixbuf plugin
 media-libs/libheif:go - Enable building dev-lang/go code/examples
+media-libs/libheif:openh264 - Enable H.264 support using media-libs/openh264
 media-libs/libheif:rav1e - Use media-video/rav1e for AVIF encoding
 media-libs/libheif:svt-av1 - Use media-libs/svt-av1 for SVT-AV1 encoding
 media-libs/libheif:webp - Enable high-quality YCbCr/RGB color space conversion algorithms
@@ -6600,7 +6605,6 @@ net-misc/ntp:parse-clocks - Add support for PARSE clocks
 net-misc/ntp:samba - Provide support for Samba's signing daemon (needed for Active Directory domain controllers)
 net-misc/ntpsec:arbiter - Arbiter 1088A/B GPS driver
 net-misc/ntpsec:early - Drop root privileges early
-net-misc/ntpsec:gdb - Enable debugging with gdb
 net-misc/ntpsec:generic - Enable support for generic time radios and GPSDOs
 net-misc/ntpsec:gpsd - Enable gpsd daemon support
 net-misc/ntpsec:heat - Install contrib heat generating scripts
@@ -6614,21 +6618,6 @@ net-misc/ntpsec:nmea - NMEA GPS driver
 net-misc/ntpsec:ntpviz - Make visualizations of offsets, jiffies, etc.
 net-misc/ntpsec:oncore - Oncore driver
 net-misc/ntpsec:pps - PPS cesium clock driver
-net-misc/ntpsec:rclock_arbiter - Arbiter 1088A/B GPS driver
-net-misc/ntpsec:rclock_generic - Enable support for generic time radios and GPSDOs
-net-misc/ntpsec:rclock_gpsd - Enable gpsd daemon support
-net-misc/ntpsec:rclock_hpgps - Hewlett Packard GPS driver
-net-misc/ntpsec:rclock_jjy - JJY driver
-net-misc/ntpsec:rclock_local - Support for undisciplined local clock (not recommended)
-net-misc/ntpsec:rclock_modem - NIST/USNO/PTB Modem Time Services
-net-misc/ntpsec:rclock_nmea - NMEA GPS driver
-net-misc/ntpsec:rclock_oncore - Oncore driver
-net-misc/ntpsec:rclock_pps - PPS cesium clock driver
-net-misc/ntpsec:rclock_shm - Obtain refclock info from shared memory-segment
-net-misc/ntpsec:rclock_spectracom - Spectracom driver
-net-misc/ntpsec:rclock_trimble - Trimble driver
-net-misc/ntpsec:rclock_truetime - Trutime driver (deprecated)
-net-misc/ntpsec:rclock_zyfer - Zyfer driver
 net-misc/ntpsec:shm - Obtain refclock info from shared memory-segment
 net-misc/ntpsec:smear - Specify the interval over which a leap second is applied (experimental)
 net-misc/ntpsec:spectracom - Spectracom driver

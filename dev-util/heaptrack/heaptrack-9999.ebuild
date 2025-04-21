@@ -1,9 +1,9 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit cmake kde.org xdg-utils
+inherit cmake kde.org xdg
 
 DESCRIPTION="Fast heap memory profiler"
 HOMEPAGE="https://apps.kde.org/heaptrack/
@@ -61,15 +61,9 @@ src_configure() {
 }
 
 pkg_postinst() {
-	if use gui; then
-		xdg_desktop_database_update
-		xdg_icon_cache_update
-	fi
+	use gui && xdg_pkg_postinst
 }
 
 pkg_postrm() {
-	if use gui; then
-		xdg_desktop_database_update
-		xdg_icon_cache_update
-	fi
+	use gui && xdg_pkg_postrm
 }

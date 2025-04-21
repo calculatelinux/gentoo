@@ -33,6 +33,30 @@
 
 #--- END OF EXAMPLES ---
 
+# Hans de Graaff <graaff@gentoo.org> (2025-04-20)
+# ruby32-only slot. Use the newer slot instead.
+# Masked for removal on 2025-05-20.
+dev-ruby/activeldap:6
+
+# Michał Górny <mgorny@gentoo.org> (2025-04-19)
+# This package will no longer feature stable keywords, due to unresolved
+# test failures blocking the stabilization request for months.
+<dev-python/mpi4py-4
+
+# Hans de Graaff <graaff@gentoo.org> (2025-04-19)
+# Ruby 3.1 is no longer supported upstream and will no longer
+# receive security updates. This mask also includes any
+# remaining ruby31-only packages.
+dev-lang/ruby:3.1
+dev-ruby/async:1
+dev-ruby/pathutil
+=app-admin/puppet-7*
+
+# Conrad Kostecki <conikost@gentoo.org> (2025-04-18)
+# Package not needed anymore by the only consumer net-dns/hash-slinger.
+# Masked for removal on 2025-05-18. Bug #952341
+dev-python/ipaddr
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-04-14)
 # Package destabilisation mask after prolongued time w/o maintainer.
 # Bug #949838
@@ -173,27 +197,6 @@ net-im/yowsup
 # See also: bug #948196 bug #927392
 # Removal on 2025-04-25.
 games-emulation/ryujinx
-
-# Hans de Graaff <graaff@gentoo.org> (2025-03-20)
-# Rails 6.1 is no longer supported upstream. Use a newer Rails version
-# instead. Packages depending exclusively on Rails 6.1 will also be
-# removed. Removal on 2025-04-20.
-dev-ruby/rails:6.1
-dev-ruby/actiontext:6.1
-dev-ruby/actionmailbox:6.1
-dev-ruby/activestorage:6.1
-dev-ruby/actionmailer:6.1
-dev-ruby/actioncable:6.1
-dev-ruby/railties:6.1
-dev-ruby/activejob:6.1
-dev-ruby/actionpack:6.1
-dev-ruby/actionview:6.1
-dev-ruby/activerecord:6.1
-dev-ruby/activemodel:6.1
-dev-ruby/activesupport:6.1
-dev-ruby/actionpack-action_caching
-dev-ruby/will_paginate:3
-=www-apps/redmine-5*
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-03-23)
 # No revdeps after net-im/psi treecleaning. Depends on Qt5.
