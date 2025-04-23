@@ -706,6 +706,7 @@ app-emulation/wine-gecko:shared - Install pre-unpacked files which do not need t
 app-emulation/wine-mono:shared - Install pre-unpacked files which do not need to be copied into the Wine prefix (note that this requires the default top-level Z: drive to be kept for out-of-prefix files to be readable)
 app-emulation/wine-proton:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up and is mostly unsupported, try disabling if have issues)
 app-emulation/wine-proton:gecko - Enable mshtml support using app-emulation/wine-gecko
+app-emulation/wine-proton:mingw - Build PE files using dev-util/mingw64-toolchain (more tested) rather than llvm-core/clang (newer)
 app-emulation/wine-proton:mono - Enable .NET support using app-emulation/wine-mono
 app-emulation/wine-proton:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-proton:sdl - Enable gamepad support using media-libs/libsdl2
@@ -714,7 +715,7 @@ app-emulation/wine-staging:capi - Enable ISDN support using net-libs/libcapi
 app-emulation/wine-staging:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up and is mostly unsupported, try disabling if have issues)
 app-emulation/wine-staging:dos - Pull in games-emulation/dosbox to run DOS applications
 app-emulation/wine-staging:gecko - Enable mshtml support using app-emulation/wine-gecko
-app-emulation/wine-staging:mingw - Build PE files using a MinGW toolchain for better compatibility
+app-emulation/wine-staging:mingw - Build PE files using dev-util/mingw64-toolchain (more tested) rather than llvm-core/clang (newer)
 app-emulation/wine-staging:mono - Enable .NET support using app-emulation/wine-mono
 app-emulation/wine-staging:netapi - Enable support for configuring remote shares using net-fs/samba
 app-emulation/wine-staging:pcap - Support packet capture software (e.g. wireshark)
@@ -726,7 +727,7 @@ app-emulation/wine-vanilla:capi - Enable ISDN support using net-libs/libcapi
 app-emulation/wine-vanilla:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up and is mostly unsupported, try disabling if have issues)
 app-emulation/wine-vanilla:dos - Pull in games-emulation/dosbox to run DOS applications
 app-emulation/wine-vanilla:gecko - Enable mshtml support using app-emulation/wine-gecko
-app-emulation/wine-vanilla:mingw - Build PE files using a MinGW toolchain for better compatibility
+app-emulation/wine-vanilla:mingw - Build PE files using dev-util/mingw64-toolchain (more tested) rather than llvm-core/clang (newer)
 app-emulation/wine-vanilla:mono - Enable .NET support using app-emulation/wine-mono
 app-emulation/wine-vanilla:netapi - Enable support for configuring remote shares using net-fs/samba
 app-emulation/wine-vanilla:pcap - Support packet capture software (e.g. wireshark)
@@ -1806,26 +1807,6 @@ dev-lang/ghc:gmp - Use dev-libs/gmp for integer operations (works faster, but an
 dev-lang/ghc:llvm - Pull in dependencies for the llvm-core/llvm codegen backend.
 dev-lang/ghc:numa - Enable NUMA thread balancing policy using sys-process/numactl.
 dev-lang/ghc:unregisterised - Create an unregisterised build in which only the C codegen backend will be available.
-dev-lang/gnat-gpl:ada - Build the ADA language (GNAT) frontend
-dev-lang/gnat-gpl:cet - Enable support for Intel Control Flow Enforcement Technology (CET)
-dev-lang/gnat-gpl:d - Enable support for the D programming language
-dev-lang/gnat-gpl:default-stack-clash-protection - Build packages with stack clash protection on by default
-dev-lang/gnat-gpl:default-znow - Request full relocation on start from ld.so by default
-dev-lang/gnat-gpl:fixed-point - Enable fixed-point arithmetic support for MIPS targets in gcc (Warning: significantly increases compile time!)
-dev-lang/gnat-gpl:go - Build the GCC Go language frontend.
-dev-lang/gnat-gpl:graphite - Add support for the framework for loop optimizations based on a polyhedral intermediate representation
-dev-lang/gnat-gpl:libssp - Build SSP support into a dedicated library rather than use the code in the C library (DO NOT ENABLE THIS IF YOU DON'T KNOW WHAT IT DOES)
-dev-lang/gnat-gpl:modula2 - Build the GCC Modula-2 language frontend.
-dev-lang/gnat-gpl:objc - Build support for the Objective C code language
-dev-lang/gnat-gpl:objc++ - Build support for the Objective C++ language
-dev-lang/gnat-gpl:objc-gc - Build support for the Objective C code language Garbage Collector
-dev-lang/gnat-gpl:pgo - Build GCC using Profile Guided Optimization (PGO)
-dev-lang/gnat-gpl:rust - Build support for the Rust language, installs gccrs.
-dev-lang/gnat-gpl:sanitize - Build support for various sanitizer functions (ASAN/TSAN/etc...)
-dev-lang/gnat-gpl:ssp - Build packages with stack smashing protector on by default
-dev-lang/gnat-gpl:system-bootstrap - Bootstrap using installed Ada compiler
-dev-lang/gnat-gpl:systemtap - enable systemtap static probe points
-dev-lang/gnat-gpl:vtv - Build support for virtual table verification (a C++ hardening feature)
 dev-lang/gnucobol:json - Enable support for JSON template formatting via dev-libs/json-c
 dev-lang/idris2:chez - build using dev-scheme/chez
 dev-lang/idris2:racket - build using dev-scheme/racket
@@ -4096,20 +4077,20 @@ media-gfx/blender:color-management - Enable color management via media-libs/open
 media-gfx/blender:cuda - Build cycles renderer with nVidia CUDA support.
 media-gfx/blender:cycles - Enable the Cycles raytracing render engine.
 media-gfx/blender:cycles-bin-kernels - Precompile the cycles render kernels for the CUDA/HIP/OneAPI backends, if they are enabled, at compile time. This makes it so that the user doesn't have to wait for the kernels to compile when they are used for the first time in Blender. If this option is not on, they will be built as needed at runtime.
-media-gfx/blender:dds - Adds DDS textures support to Blender.
 media-gfx/blender:embree - Use embree to accelerate certain areas of the Cycles render engine.
-media-gfx/blender:experimental - Build Experimental Blender Modules
+media-gfx/blender:experimental - Enable experimental features
 media-gfx/blender:fluid - Adds fluid simulation support via the built-in Mantaflow library.
 media-gfx/blender:hip - Build cycles renderer with AMD HIP support.
 media-gfx/blender:nanovdb - Enable nanoVDB support in Cycles. Uses less memory than regular openVDB when rendering.
 media-gfx/blender:ndof - Enable NDOF input devices (SpaceNavigator and friends).
 media-gfx/blender:oidn - Enable OpenImageDenoiser Support
-media-gfx/blender:oneapi - Build OIDN with Intel oneAPI SyCL support
+media-gfx/blender:oneapi - Build cycles renderer with Intel oneAPI SyCL support
 media-gfx/blender:openpgl - Enable path guiding support in Cycles
 media-gfx/blender:opensubdiv - Add rendering support form OpenSubdiv from Dreamworks Animation through media-libs/opensubdiv.
 media-gfx/blender:openvdb - Enable openvdb for volumetric processing, like the voxel remesher. Also enables volumetric GPU preview rendering for Nvidia cards.
 media-gfx/blender:optix - Add support for NVIDIA's OptiX Raytracing Engine.
 media-gfx/blender:osl - Add support for OpenShadingLanguage scripting.
+media-gfx/blender:pipewire - Enable Pipewire for audio support on Linux
 media-gfx/blender:potrace - Add support for converting bitmaps into Grease pencil line using the potrace library.
 media-gfx/blender:pugixml - Enable PugiXML support (Used for OpenImageIO, Grease Pencil SVG export)
 media-gfx/blender:renderdoc - Build Blender with renderdoc support
@@ -4529,6 +4510,7 @@ media-libs/osl:partio - Use media-libs/partio
 media-libs/phonon:designer - Install plugin for dev-qt/designer
 media-libs/plutosvg:freetype - Enable media-libs/freetype integration
 media-libs/portmidi:test-programs - Install various example programs
+media-libs/qhull:tools - Build applications
 media-libs/quarter:designer - Install plugin for dev-qt/designer
 media-libs/quarter:qch - Install API documentation in QCH format
 media-libs/quirc:opencv - Build tools requiring media-libs/opencv (inspect-opencv,quirc-demo-opencv)
@@ -7829,6 +7811,7 @@ sec-policy/selinux-base:unknown-perms - Default allow unknown classes in kernels
 sec-policy/selinux-base-policy:unconfined - Enable support for the unconfined SELinux policy module
 sys-apps/accountsservice:elogind - Use sys-auth/elogind for session tracking
 sys-apps/accountsservice:systemd - Use sys-apps/systemd for session tracking
+sys-apps/azure-vm-utils:dracut - Install dracut module
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin.
 sys-apps/busybox:math - Enable math support in gawk (requires libm)
 sys-apps/busybox:mdev - Create the appropriate symlink in /sbin and install mdev.conf and support files
@@ -7993,12 +7976,6 @@ sys-apps/openrc:newnet - enable the new network stack (experimental)
 sys-apps/openrc:s6 - install s6-linux-init
 sys-apps/openrc:sysv-utils - Install sysvinit compatibility scripts for halt, init, poweroff, reboot and shutdown
 sys-apps/openrc:sysvinit - control the dependency on sysvinit (experimental)
-sys-apps/openrc-navi:bash - enable the use of bash in service scripts (experimental)
-sys-apps/openrc-navi:netifrc - enable Gentoo's network stack (net.* scripts)
-sys-apps/openrc-navi:newnet - enable the new network stack (experimental)
-sys-apps/openrc-navi:s6 - install s6-linux-init
-sys-apps/openrc-navi:sysv-utils - Install sysvinit compatibility scripts for halt, init, poweroff, reboot and shutdown
-sys-apps/openrc-navi:sysvinit - control the dependency on sysvinit (experimental)
 sys-apps/pciutils:dns - Enable support for querying the central database of PCI IDs using DNS
 sys-apps/pciutils:kmod - Enable sys-apps/kmod support for the -k switch in lspci command
 sys-apps/pciutils:zlib - Support compressed pci.ids database
@@ -8262,7 +8239,6 @@ sys-cluster/openmpi:cma - Enable the CMA (Cross Memory Attach) MCA
 sys-cluster/openmpi:libompitrace - Enable support for contributed package libompitrace
 sys-cluster/openmpi:peruse - Enable PERUSE interface
 sys-cluster/openmpi:romio - Build the ROMIO MPI-IO component
-sys-cluster/pacemaker:smtp - Enable SMTP support via net-libs/libesmtp
 sys-cluster/pmix:munge - Enable authentication via munge
 sys-cluster/pmix:pmi - Build PMI1 and PMI2 interface
 sys-cluster/rdma-core:lttng - Enable support for the LTTng tracer
@@ -8627,8 +8603,6 @@ virtual/podofo-build:tools - Build and install commandline tools
 virtual/rust:profiler - Build the profiler runtime and rust-demangler tool (needed for '-C profile-generate' or '-C instrument-coverage' codegen opts)
 virtual/rust:rustfmt - Install rustfmt, Rust code formatter
 virtual/ssh:minimal - Prefer net-misc/dropbear over net-misc/openssh
-virtual/wine:proton - Enable Valve Software's fork of Wine
-virtual/wine:staging - Enable Wine-Staging's Patchset
 www-apache/mod_auth_openidc:brotli - Add support for brotli compressed data using app-arch/brotli
 www-apache/mod_auth_openidc:redis - Add support for the Redis caching via dev-libs/hiredis
 www-apache/mod_backtrace:unwind - Use sys-libs/libunwind to provide better resolution of function names.

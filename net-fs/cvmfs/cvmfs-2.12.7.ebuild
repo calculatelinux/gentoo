@@ -12,7 +12,7 @@ SRC_URI="https://ecsft.cern.ch/dist/cvmfs/${P}/source.tar.gz -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="server"
 
 CDEPEND="
@@ -46,6 +46,7 @@ DEPEND="${CDEPEND}
 
 PATCHES=(
 		"${FILESDIR}"/${PN}-2.10.1-gentoo.patch
+		"${FILESDIR}"/${PN}-2.12.7-protobuf.patch
 )
 
 pkg_setup() {

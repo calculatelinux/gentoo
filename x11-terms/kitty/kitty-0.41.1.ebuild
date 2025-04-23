@@ -18,7 +18,7 @@ else
 		verify-sig? ( https://github.com/kovidgoyal/kitty/releases/download/v${PV}/${P}.tar.xz.sig )
 	"
 	VERIFY_SIG_OPENPGP_KEY_PATH=/usr/share/openpgp-keys/kovidgoyal.gpg
-	KEYWORDS="~amd64 ~arm64 ~ppc64 ~riscv ~x86"
+	KEYWORDS="amd64 ~arm64 ~ppc64 ~riscv ~x86"
 fi
 
 DESCRIPTION="Fast, feature-rich, GPU-based terminal"
@@ -120,6 +120,8 @@ src_prepare() {
 	sed -i setup.py "${sedargs[@]}" || die
 
 	local skiptests=(
+		# broken with nspawn defaults, skip for convenience (bug #954176)
+		kitty_tests/crypto.py
 		# relies on 'who' command which doesn't detect users with pid-sandbox
 		kitty_tests/utmp.py
 		# may fail/hang depending on environment and shell initialization

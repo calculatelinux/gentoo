@@ -6,6 +6,11 @@
 
 # New entries go on top.
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-21)
+# Prepare cleanup of dev-qt/qtwebengine:5
+app-i18n/fcitx-chinese-addons webengine
+app-office/libalkimia webengine
+
 # Matt Jolly <kangie@gentoo.org> (2025-04-16)
 # Older versions of freeciv build an incompatible client and
 # server with this USE enabled.
@@ -82,7 +87,6 @@ dev-build/meson test-full
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-03)
 # Blocking cleanup of kde-apps/kdegraphics-mobipocket:5
 kde-frameworks/kfilemetadata:5 mobi
-media-gfx/okularpart:5 mobi
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-03)
 # Prepare cleanup of kde-apps/kaccounts-integration:6[qt5] and
@@ -102,10 +106,6 @@ app-emulation/pcem experimental
 # openjfx for OpenJDK 25 is not yet available.
 dev-java/openjdk:25 javafx
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-12-28)
-# Prepare virtual/bitcoin-leveldb last-rites, bug #945359
-net-p2p/bitcoin-core system-leveldb
-
 # Paul Zander <negril.nx+gentoo@gmail.com> (2024-12-16)
 # sci-libs/atlas requires you to disable frequency scaling to build.
 # This barely works on older Intel CPUs on good days.
@@ -115,16 +115,6 @@ media-libs/opencv atlas
 # John M. Harris, Jr. <johnmh@johnmh.me> (2024-12-12)
 # seccomp is only supported with systemd
 sys-apps/fwupd seccomp
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-11-24)
-# sci-libs/vtk[qt5] cleanup, bug #944817
-sci-libs/vtk qt5
-~sci-chemistry/avogadro2-1.97.0 vtk
-~sci-libs/avogadrolibs-1.97.0 vtk
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2024-11-23)
-# dev-python/pyside2 last-rites
-dev-python/qtpy pyside2
 
 # Sam James <sam@gentoo.org> (2024-11-17)
 # The example bindings fail to build.
@@ -163,11 +153,6 @@ app-i18n/mozc fcitx4
 # over two years. Fedora has disabled webservices support already, and
 # that makes it OK if we do it too, right? Bug 893700.
 media-gfx/gthumb webkit
-
-# Sam James <sam@gentoo.org> (2024-09-30)
-# gnat-gpl is purely for bootstrapping Ada and it's based on an old
-# version of GCC. Avoid risks of miscompilations.
-dev-lang/gnat-gpl pgo lto
 
 # Patrick McLean <chutzpah@gentoo.org> (2024-09-23)
 # Only supported on x86/amd64 (bug #940014).
