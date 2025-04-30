@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Note: xemacs currently does not work with position independent code
@@ -226,8 +226,6 @@ src_install() {
 	dodoc CHANGES-* ChangeLog INSTALL Installation PROBLEMS README*
 
 	newicon "${S}"/etc/${PN}-icon.xpm ${PN}.xpm
-
-	domenu "${FILESDIR}"/${PN}.desktop
 }
 
 pkg_postinst() {

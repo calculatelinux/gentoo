@@ -12,7 +12,7 @@ if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
 else
 	SRC_URI="https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="amd64 ~arm arm64 ~loong ~ppc ~ppc64 ~riscv x86 ~amd64-linux"
+	KEYWORDS="amd64 ~arm arm64 ~loong ~ppc ppc64 ~riscv x86 ~amd64-linux"
 fi
 
 DESCRIPTION="Media player for the command line"
@@ -213,6 +213,8 @@ src_configure() {
 }
 
 src_test() {
+	unset LANGUAGE #954214
+
 	# ffmpeg tests are picky and easily break without necessarily
 	# meaning that there are runtime issues (bug #921091,#924276)
 	meson_src_test --no-suite ffmpeg

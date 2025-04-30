@@ -710,7 +710,7 @@ app-emulation/wine-proton:mingw - Build PE files using dev-util/mingw64-toolchai
 app-emulation/wine-proton:mono - Enable .NET support using app-emulation/wine-mono
 app-emulation/wine-proton:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-proton:sdl - Enable gamepad support using media-libs/libsdl2
-app-emulation/wine-proton:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32, also lacks 16bit support) -- still need dev-util/mingw64-toolchain with abi_x86_32 which itself does not need multilib
+app-emulation/wine-proton:wow64 - Enable the "new" wow64 mode that allows running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32 aka "old" wow64, also lacks 16bit support) -- if USE=mingw is set, still need the default abi_x86_32 set on dev-util/mingw64-toolchain but that can be done even with /no-multilib/ profiles. This can also be enabled on arm64 to allow running x86 applications, but that requires to manually setup xtajit.dll in the wine prefix for x86 emulation.
 app-emulation/wine-staging:capi - Enable ISDN support using net-libs/libcapi
 app-emulation/wine-staging:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up and is mostly unsupported, try disabling if have issues)
 app-emulation/wine-staging:dos - Pull in games-emulation/dosbox to run DOS applications
@@ -722,7 +722,7 @@ app-emulation/wine-staging:pcap - Support packet capture software (e.g. wireshar
 app-emulation/wine-staging:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-staging:samba - Pull in net-fs/samba with winbind for NTLM auth support
 app-emulation/wine-staging:sdl - Enable gamepad support using media-libs/libsdl2
-app-emulation/wine-staging:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32, also lacks 16bit support) -- still need dev-util/mingw64-toolchain with abi_x86_32 which itself does not need multilib
+app-emulation/wine-staging:wow64 - Enable the "new" wow64 mode that allows running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32 aka "old" wow64, also lacks 16bit support) -- if USE=mingw is set, still need the default abi_x86_32 set on dev-util/mingw64-toolchain but that can be done even with /no-multilib/ profiles. This can also be enabled on arm64 to allow running x86 applications, but that requires to manually setup xtajit.dll in the wine prefix for x86 emulation.
 app-emulation/wine-vanilla:capi - Enable ISDN support using net-libs/libcapi
 app-emulation/wine-vanilla:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up and is mostly unsupported, try disabling if have issues)
 app-emulation/wine-vanilla:dos - Pull in games-emulation/dosbox to run DOS applications
@@ -734,7 +734,7 @@ app-emulation/wine-vanilla:pcap - Support packet capture software (e.g. wireshar
 app-emulation/wine-vanilla:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-vanilla:samba - Pull in net-fs/samba with winbind for NTLM auth support
 app-emulation/wine-vanilla:sdl - Enable gamepad support using media-libs/libsdl2
-app-emulation/wine-vanilla:wow64 - Enable running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32, also lacks 16bit support) -- still need dev-util/mingw64-toolchain with abi_x86_32 which itself does not need multilib
+app-emulation/wine-vanilla:wow64 - Enable the "new" wow64 mode that allows running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32 aka "old" wow64, also lacks 16bit support) -- if USE=mingw is set, still need the default abi_x86_32 set on dev-util/mingw64-toolchain but that can be done even with /no-multilib/ profiles. This can also be enabled on arm64 to allow running x86 applications, but that requires to manually setup xtajit.dll in the wine prefix for x86 emulation.
 app-emulation/winetricks:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
 app-emulation/x48:readline - Enables support for libreadline
 app-emulation/xe-guest-utilities:xenstore - Use xenstore binaries bundled by Citrix instead of building app-emulation/xen-tools
@@ -788,9 +788,7 @@ app-i18n/fcitx:presage - Enable presage for word predication (not stable)
 app-i18n/fcitx:server - Build a fcitx as server, disable this option if you want to use fcitx as an embedded library
 app-i18n/fcitx-chinese-addons:cloudpinyin - Build cloud pinyin addon
 app-i18n/fcitx-chinese-addons:data - Build data
-app-i18n/fcitx-chinese-addons:gui - Enable GUI support (qt5 or qt6)
 app-i18n/fcitx-chinese-addons:opencc - Enable support for conversion between Traditional and Simplified Chinese
-app-i18n/fcitx-chinese-addons:qt5 - Enable configure qt5
 app-i18n/fcitx-chinese-addons:webengine - Enable built-in browser using dev-qt/qtwebengine
 app-i18n/fcitx-configtool:config-qt - Enable fcitx5-config-qt
 app-i18n/fcitx-configtool:kcm - Enable KDE KCM support
@@ -802,7 +800,6 @@ app-i18n/fcitx-gtk:onlyplugin - Build only plugin
 app-i18n/fcitx-gtk:snooper - Enable key snooper for gtk app
 app-i18n/fcitx-lua:dlopen - Use dlopen to load lua library
 app-i18n/fcitx-qt:onlyplugin - Build only plugin
-app-i18n/fcitx-qt:qt6 - Build support for QT6
 app-i18n/fcitx-qt:staticplugin - Build plugin as static
 app-i18n/ibus:emoji - Enable support for Emoji
 app-i18n/ibus:gtk2 - Enable the GTK-2 input method module
@@ -1088,6 +1085,7 @@ app-office/scribus:templates - Document templates
 app-office/scribus:tk - Install tk based scripts e.g. FontSample.py
 app-office/skrooge:activities - Enable kactivities support
 app-office/texmacs:netpbm - Add support for media-libs/netpbm
+app-office/texmaker:webengine - Enable internal browser using dev-qt/qtwebengine
 app-office/texstudio:video - Enable video player in pdf files
 app-pda/gtkpod:clutter - Enable clutter support for displaying coverart
 app-portage/conf-update:colordiff - Use colors when displaying diffs (app-misc/colordiff)
@@ -1951,6 +1949,7 @@ dev-libs/boost:doc - Install the full API documentation documentation. This take
 dev-libs/boost:nls - Build libboost_locale. This library requires compatible C library interfaces, which might not be provided by uClibc or other embedded libraries.
 dev-libs/boost:numpy - Optionally build NumPy extensions when Boost.Python is enabled
 dev-libs/boost:stacktrace - Build the full Boost.Stacktrace dynamic library instead of relying on the header-only implementation
+dev-libs/boost:test-full - Enable tests that take a very long time to build or run
 dev-libs/boost:tools - Build and install the boost tools (bcp, quickbook, inspect, wave)
 dev-libs/botan:boost - Use dev-libs/boost
 dev-libs/botan:tools - Install optional tools for e.g. hashing
@@ -3557,7 +3556,7 @@ kde-apps/kdesdk-meta:git - Enable support for Git VCS in kde-apps/dolphin via kd
 kde-apps/kdesdk-meta:mercurial - Enable support for Mercurial VCS in kde-apps/dolphin via kde-apps/dolphin-plugins-mercurial
 kde-apps/kdesdk-meta:subversion - Enable support for Apache Subversion VCS in kde-apps/dolphin via kde-apps/dolphin-plugins-subversion
 kde-apps/kdesdk-meta:webengine - Enable dev-util/kdevelop, requiring dev-qt/qtwebengine
-kde-apps/kdeutils-meta:7zip - Install app-arch/p7zip for 7zip archive support in kde-apps/ark
+kde-apps/kdeutils-meta:7zip - Install app-arch/p7zip or app-arch/7zip[symlink] for 7zip archive support in kde-apps/ark
 kde-apps/kdeutils-meta:gpg - Install kde-apps/kgpg which depends on kde-apps/akonadi
 kde-apps/kdeutils-meta:lrz - Install app-arch/lrzip for LRZ archive support in kde-apps/ark
 kde-apps/kdeutils-meta:rar - Install one of app-arch/rar, app-arch/unrar or app-arch/unar for RAR archive support in kde-apps/ark
@@ -3617,8 +3616,6 @@ kde-frameworks/kconfig:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
 kde-frameworks/kconfigwidgets:designer - Build plugins for dev-qt/designer
 kde-frameworks/kfilemetadata:epub - Enable support for reading EPUB ebook metadata
 kde-frameworks/kfilemetadata:mobi - Enable mobipocket support via kde-apps/kdegraphics-mobipocket
-kde-frameworks/kglobalaccel:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
-kde-frameworks/kguiaddons:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 kde-frameworks/kiconthemes:designer - Build plugins for dev-qt/designer
 kde-frameworks/kimageformats:eps - Support the EPS graphics file format
 kde-frameworks/kinit:caps - Capabilities support for improved security and better OOM handling
@@ -3634,7 +3631,6 @@ kde-frameworks/kplotting:designer - Build plugins for dev-qt/designer
 kde-frameworks/ktexteditor:editorconfig - Enable support for EditorConfig configuration files
 kde-frameworks/ktextwidgets:designer - Build plugins for dev-qt/designer
 kde-frameworks/kwallet:gpg - Support wallets with GnuPG encryption in addition to the default blowfish-encrypted file
-kde-frameworks/kwallet:kf6compat - Disable components colliding with KF6, depend on KF6 components instead
 kde-frameworks/kwidgetsaddons:designer - Build plugins for dev-qt/designer
 kde-frameworks/kxmlgui:designer - Build plugins for dev-qt/designer
 kde-frameworks/networkmanager-qt:teamd - Enable Teamd control support
@@ -3700,7 +3696,6 @@ kde-plasma/plasma-meta:webengine - Use kde-apps/khelpcenter to access the locall
 kde-plasma/plasma-nm:openconnect - Build support for the OpenConnect VPN client
 kde-plasma/plasma-nm:teamd - Enable Teamd control support
 kde-plasma/plasma-workspace:appstream - Enable AppStream software metadata support
-kde-plasma/plasma-workspace:geolocation - Enables dataengine providing location information
 kde-plasma/plasma-workspace:policykit - Enable locale generation and Users KCM using sys-auth/polkit and sys-apps/accountsservice
 kde-plasma/plasma-workspace:screencast - Enable screencast portal using kde-plasma/kpipewire
 kde-plasma/plasma-workspace:telemetry - Enable User Feedback control module for kde-plasma/systemsettings
@@ -3784,6 +3779,7 @@ lxqt-base/lxqt-meta:archiver - Install app-arch/lxqt-archiver
 lxqt-base/lxqt-meta:desktop-portal - Enable the LXQt sys-apps/xdg-desktop-portal backend implementation
 lxqt-base/lxqt-meta:display-manager - Install a graphical display manager
 lxqt-base/lxqt-meta:filemanager - Install x11-misc/pcmanfm-qt file manager
+lxqt-base/lxqt-meta:icons - Install kde-frameworks/breeze-icons
 lxqt-base/lxqt-meta:lximage - Install media-gfx/lximage-qt image viewer
 lxqt-base/lxqt-meta:nls - Install dev-qt/qttranslations to better support different locales
 lxqt-base/lxqt-meta:powermanagement - Install lxqt-base/lxqt-powermanagement package
@@ -3794,6 +3790,7 @@ lxqt-base/lxqt-meta:ssh-askpass - Install lxqt-base/lxqt-openssh-askpass user pa
 lxqt-base/lxqt-meta:sudo - Install lxqt-base/lxqt-sudo
 lxqt-base/lxqt-meta:terminal - Install x11-terms/qterminal package
 lxqt-base/lxqt-meta:trash - Install gnome-base/gvfs to enable 'trash' functionality in x11-misc/pcmanfm-qt
+lxqt-base/lxqt-meta:wayland - Install lxqt-base/lxqt-wayland-session to support Wayland sessions
 lxqt-base/lxqt-meta:window-manager - Install kde-plasma/kwin window manager
 lxqt-base/lxqt-panel:colorpicker - Build colorpicker plugin
 lxqt-base/lxqt-panel:cpuload - Build cpuload plugin
@@ -4204,7 +4201,6 @@ media-gfx/openscad:spacenav - Add support for space navigator devices through de
 media-gfx/openvdb:abi10-compat - Disables newer features to maintain compatibility with ABI10
 media-gfx/openvdb:abi11-compat - Disables newer features to maintain compatibility with ABI11
 media-gfx/openvdb:abi12-compat - Disables newer features to maintain compatibility with ABI12
-media-gfx/openvdb:abi8-compat - Disables newer features to maintain compatibility with ABI8
 media-gfx/openvdb:abi9-compat - Disables newer features to maintain compatibility with ABI9
 media-gfx/openvdb:alembic - Add support for Alembic through media-gfx/alembic.
 media-gfx/openvdb:ax - Build the OpenVDB AX module to perform custom manipulation of OpenVDB data via an expression language: AX
@@ -4814,6 +4810,7 @@ media-sound/lmms:vst - Enables the VeSTige plugin to run VST plugins through Win
 media-sound/mangler:espeak - Text to speech engine
 media-sound/mangler:g15 - Logitech g15 lcd support
 media-sound/mixxx:benchmark - Build and install benchmark binary: mixxx-test --benchmark
+media-sound/mixxx:experimental - Add support for experimental-QML-UI. Available with --qml arg
 media-sound/mixxx:keyfinder - Enable musical key detection support via media-libs/libkeyfinder
 media-sound/mixxx:lv2 - Add support for Ladspa V2 via media-libs/lilv
 media-sound/mixxx:midi - Enable MIDI support via media-libs/portmidi
@@ -4930,6 +4927,7 @@ media-sound/qmmp:gnome - Enable Gnome hotkey support (requires QtDBus)
 media-sound/qmmp:libxmp - Enable module files renderer (modplug replacement) via media-libs/libxmp
 media-sound/qmmp:lyrics - Fetch track lyrics from the web
 media-sound/qmmp:midi - Enable midi support using wildmidi library
+media-sound/qmmp:mpg123 - Enable support for MPEG audio playback via media-sound/mpg123
 media-sound/qmmp:notifier - Enable qmmps' notifier system
 media-sound/qmmp:pipewire - Enable PipeWire output plugin
 media-sound/qmmp:projectm - Enable projectm music visualization plugin

@@ -17,7 +17,7 @@ else
 	S="${WORKDIR}/${MY_P}"
 	SRC_URI="https://pub.freerdp.com/releases/${MY_P}.tar.gz
 		verify-sig? ( https://pub.freerdp.com/releases/${MY_P}.tar.gz.asc )"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~x86"
+	KEYWORDS="~alpha amd64 ~arm arm64 ~loong ppc ppc64 ~riscv ~x86"
 	BDEPEND="verify-sig? ( sec-keys/openpgp-keys-akallabeth )"
 	VERIFY_SIG_OPENPGP_KEY_PATH="/usr/share/openpgp-keys/akallabeth.asc"
 fi
@@ -192,7 +192,9 @@ src_compile() {
 }
 
 src_test() {
-	local CMAKE_SKIP_TESTS=( TestBacktrace )
+	# TestBacktrace: bug 930636
+	# TestSynchCritical, TestSynchMultipleThreads: bug 951301
+	local CMAKE_SKIP_TESTS=( TestBacktrace TestSynchCritical TestSynchMultipleThreads )
 	if has network-sandbox ${FEATURES}; then
 		CMAKE_SKIP_TESTS+=( TestConnect )
 	fi

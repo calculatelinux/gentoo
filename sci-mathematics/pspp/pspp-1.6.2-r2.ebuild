@@ -1,9 +1,9 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit python-any-r1 xdg
 
@@ -38,7 +38,7 @@ BDEPEND="
 	${PYTHON_DEPS}
 	sys-devel/gettext
 	virtual/pkgconfig
-	doc? ( virtual/latex-base )"
+	doc? ( virtual/texi2dvi )"
 
 PATCHES=( "${FILESDIR}/pspp-1.6.2-underlinking.patch" )
 
@@ -46,12 +46,6 @@ pkg_pretend() {
 	ewarn "Starting with pspp-1.4.0 the pspp-mode emacs package is no longer"
 	ewarn "shipped with pspp itself, and should instead be fetched from ELPA:"
 	ewarn "https://elpa.gnu.org/packages/pspp-mode.html"
-}
-
-src_prepare() {
-	default
-
-	sed -i '/appdata$/s/appdata$/metainfo/' Makefile.in || die
 }
 
 src_configure() {

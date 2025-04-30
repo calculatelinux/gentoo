@@ -63,8 +63,12 @@ src_compile() {
 	cargo_src_compile
 
 	if [[ ${PV} == 9999 ]] ; then
-		# https://github.com/pkgcraft/pkgcraft/issues/258
-		edo cargo run --features shell --bin pkgcruft-shell-comp -p pkgcruft
+		einfo "Generating shell completions"
+		mkdir shell || die
+		local BIN="${WORKDIR}/${P}/$(cargo_target_dir)/pkgcruft"
+		"${BIN}" completion bash > shell/pkgcruft.bash || die
+		"${BIN}" completion zsh > shell/_pkgcruft || die
+		"${BIN}" completion fish > shell/pkgcruft.fish || die
 	fi
 }
 
@@ -80,43 +84,13 @@ src_test() {
 		--color always \
 		--all-features \
 		--tests \
-		--no-fail-fast \
-		-- \
-		--skip 'commands::tests::check' \
-		--skip 'dependency::tests::check' \
-		--skip 'dependency_slot_missing::tests::check' \
-		--skip 'eapi_stale::tests::check' \
-		--skip 'eapi_status::tests::check' \
-		--skip 'ebuild_name::tests::check' \
-		--skip 'eclass::tests::check' \
-		--skip 'filesdir::tests::check' \
-		--skip 'header::tests::check' \
-		--skip 'homepage::tests::check' \
-		--skip 'ignore::tests::check' \
-		--skip 'iuse::tests::check' \
-		--skip 'keywords::tests::check' \
-		--skip 'keywords_dropped::tests::check' \
-		--skip 'license::tests::check' \
-		--skip 'live::tests::check' \
-		--skip 'manifest::tests::check' \
-		--skip 'metadata::tests::check' \
-		--skip 'properties::tests::check' \
-		--skip 'python_update::tests::check' \
-		--skip 'repo_layout::tests::check' \
-		--skip 'restrict::tests::check' \
-		--skip 'restrict_test_missing::tests::check' \
-		--skip 'ruby_update::tests::check' \
-		--skip 'src_uri::tests::check' \
-		--skip 'unstable_only::tests::check' \
-		--skip 'use_local::tests::check' \
-		--skip 'variable_order::tests::check' \
-		--skip 'whitespace::tests::check'
+		--no-fail-fast
 }
 
 src_install() {
 	cargo_src_install
 
-	newbashcomp shell/pkgcruft.bash ${PN}
+	newbashcomp shell/pkgcruft.bash pkgcruft
 	dozshcomp shell/_pkgcruft
 	dofishcomp shell/pkgcruft.fish
 }

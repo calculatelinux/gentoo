@@ -19,7 +19,7 @@ else
 		https://github.com/certbot/certbot/archive/v${PV}.tar.gz
 			-> ${P}.gh.tar.gz
 	"
-	KEYWORDS="~amd64 ~arm arm64 ~ppc64 ~riscv ~x86"
+	KEYWORDS="amd64 ~arm arm64 ~ppc64 ~riscv ~x86"
 fi
 
 DESCRIPTION="Let’s Encrypt client to automate deployment of X.509 certificates"
@@ -173,6 +173,11 @@ src_prepare() {
 
 	# Used to build documentation
 	mkdir "${CERTBOT_DOCS}" || die
+
+	# Remove "broken" symbolic link used as documentation.
+	# Copy actual file, removing source breaks wheel building.
+	rm -f "${S}/README.rst"
+	cp "${S}/certbot/README.rst" "${S}/README.rst" || die
 }
 
 python_compile() {

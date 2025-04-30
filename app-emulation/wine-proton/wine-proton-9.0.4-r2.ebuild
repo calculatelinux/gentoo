@@ -62,7 +62,6 @@ WINE_COMMON_DEPEND="
 	${WINE_DLOPEN_DEPEND}
 	x11-libs/libX11[${WINE_USEDEP}]
 	x11-libs/libXext[${WINE_USEDEP}]
-	x11-libs/libdrm[video_cards_amdgpu?,${WINE_USEDEP}]
 	alsa? ( media-libs/alsa-lib[${WINE_USEDEP}] )
 	gstreamer? (
 		dev-libs/glib:2[${WINE_USEDEP}]
@@ -76,6 +75,7 @@ WINE_COMMON_DEPEND="
 		!llvm-libunwind? ( sys-libs/libunwind:=[${WINE_USEDEP}] )
 	)
 	usb? ( dev-libs/libusb:1[${WINE_USEDEP}] )
+	video_cards_amdgpu? ( x11-libs/libdrm[video_cards_amdgpu,${WINE_USEDEP}] )
 "
 RDEPEND="
 	${WINE_COMMON_DEPEND}
@@ -127,6 +127,9 @@ PATCHES=(
 )
 
 src_prepare() {
+	# similarly to staging, append to `wine --version` for identification
+	sed -i "s/wine_build[^1]*1/& (Proton-${WINE_PV})/" configure.ac || die
+
 	wine_src_prepare
 
 	# this is kind-of best effort and ignores llvm slots, ideally
@@ -138,9 +141,6 @@ src_prepare() {
 		sed -e '/^UNIX_LIBS.*=/s/$/ -latomic/' \
 			-i dlls/{ntdll,winevulkan}/Makefile.in || die
 	fi
-
-	# similarly to staging, append to `wine --version` for identification
-	sed -i "s/wine_build[^1]*1/& (Proton-${WINE_PV})/" configure.ac || die
 
 	# proton variant also needs specfiles and vulkan
 	tools/make_specfiles || die # perl

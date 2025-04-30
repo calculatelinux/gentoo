@@ -5,7 +5,7 @@ EAPI=8
 
 GUILE_REQ_USE="regex"
 GUILE_COMPAT=( 2-2 3-0 )
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit cmake flag-o-matic gnome2-utils guile-single python-single-r1
 
@@ -16,7 +16,7 @@ SRC_URI="https://github.com/Gnucash/gnucash/releases/download/${PV}/${P}.tar.bz2
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~ppc ~ppc64 ~riscv ~x86"
+KEYWORDS="amd64 ~arm64 ~ppc ~ppc64 ~riscv ~x86"
 IUSE="aqbanking debug doc examples gnome-keyring +gui mysql nls ofx postgres python quotes smartcard sqlite test"
 # Tests were previously restricted because guile would try to use installed,
 # not just-built modules. See https://bugs.gnucash.org/show_bug.cgi?id=799159#c1.

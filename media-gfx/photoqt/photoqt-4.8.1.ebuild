@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 inherit cmake optfeature python-single-r1 xdg
 
 DESCRIPTION="Simple but powerful Qt-based image viewer"
@@ -12,7 +12,7 @@ SRC_URI="https://photoqt.org/downloads/source/${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="barcode chromecast devil exif freeimage geolocation graphicsmagick +imagemagick lcms mpv pdf raw test vips"
 REQUIRED_USE="chromecast? ( ${PYTHON_REQUIRED_USE} )"
 RESTRICT="!test? ( test )"
@@ -93,12 +93,11 @@ src_configure() {
 src_test() {
 	local -x QT_QPA_PLATFORM=offscreen
 	# QCollator::setNumericMode is not supported w/ POSIX/C locale or w/o icu
-	# Unset and source LC_COLLATE from the current system locale.
+	# Set LC_COLLATE=en_US.utf8 if available.
 	# Required for PQCTest::getFoldersIn()
 	unset LC_COLLATE
-	source "${EPREFIX}"/etc/env.d/02locale
-	[[ -n "${LC_COLLATE}" ]] && export LC_COLLATE
-	"${BUILD_DIR}"/photoqt_test || die
+	locale -a | grep -iq "en_US.utf8" || die "locale en_US.utf8 not available, testsuite not launched"
+	LC_COLLATE="en_US.utf8" "${BUILD_DIR}"/photoqt_test || die
 }
 
 pkg_postinst() {

@@ -11,7 +11,7 @@ SRC_URI="https://www.crosswire.org/ftpmirror/pub/${PN}/source/v${PV%.*}/${P}.tar
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~ppc-macos"
+KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ~loong ~mips ppc ~ppc64 ~riscv ~s390 ~sparc x86 ~ppc-macos"
 IUSE="clucene curl icu test utils"
 REQUIRED_USE="test? ( curl icu utils )"
 RESTRICT="!test? ( test )"
@@ -29,12 +29,15 @@ BDEPEND="virtual/pkgconfig"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.9.0-cflags.patch
+	"${FILESDIR}"/${PN}-1.9.0-cmake4.patch
 )
 
 DOCS=( AUTHORS CODINGSTYLE ChangeLog README examples/ samples/ )
 
 src_configure() {
 	local mycmakeargs=(
+		# skip unnecessary tests, bug #954771
+		-DCMAKE_DISABLE_FIND_PACKAGE_cppcheck="ON"
 		-DCMAKE_SKIP_RPATH="ON"
 		# default is shared and static
 		-DLIBSWORD_LIBRARY_TYPE="Shared"

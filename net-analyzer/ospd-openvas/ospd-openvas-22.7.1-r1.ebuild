@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} pypy3 pypy3_11 )
+PYTHON_COMPAT=( python3_{10..13} pypy3 pypy3_11 )
 DISTUTILS_USE_PEP517=poetry
 inherit distutils-r1 systemd
 
@@ -34,7 +34,6 @@ DEPEND="
 	<dev-python/python-gnupg-0.6.0[${PYTHON_USEDEP}]
 	>=dev-python/paho-mqtt-1.6[${PYTHON_USEDEP}]
 	<dev-python/paho-mqtt-3[${PYTHON_USEDEP}]
-	>=dev-python/python-gnupg-0.4.8[${PYTHON_USEDEP}]
 	net-libs/paho-mqtt-c
 	app-misc/mosquitto
 "

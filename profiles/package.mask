@@ -1,6 +1,8 @@
 # Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Uses GLEP 84 format
+
 ####################################################################
 #
 # When you add an entry to the top of this file, add your name, the date
@@ -20,18 +22,68 @@
 # - Best last rites (removal) practices -
 # Include the following info:
 # a) reason for masking
-# b) bug # for the removal (and yes you should have one)
-# c) date of removal (either the date or "in x days")
+# b) date of removal
+# c) bug # for the removal (and yes you should have one)
+#
+# See GLEP 84 for the full description of the format.
 #
 ## Example:
 ##
 ## # Dev E. Loper <developer@gentoo.org> (2019-07-01)
-## # Masked for removal in 30 days.  Doesn't work
-## # with new libfoo. Upstream dead, gtk-1, smells
-## # funny. (bug #987654)
+## # Doesn't work with new libfoo. Upstream dead, gtk-1, smells funny.
+## # Removal on 2019-08-01. Bug #987654.
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Matt Jolly <kangie@gentoo.org> (2025-04-28)
+# Unmaintained in Gentoo, depends on masked x11-wm/fvwm,
+# SRC_URI uses mirror://gentoo and the files don't exist on mirrors.
+# Bug #949035; Removal on 2025-05-28 (with x11-wm/fvwm)
+x11-themes/fvwm_icons
+x11-themes/fvwm_sounds
+
+# Matt Jolly <kangie@gentoo.org> (2025-04-28)
+# Unmaintained in Gentoo, is not supported upstream,
+# and has a modern successor that does not bring in additional dependencies.
+# Migrate to x11-wm/fvwm3: https://github.com/fvwmorg/fvwm3/discussions/878
+# Bug #949035; removal on 2025-05-28.
+x11-wm/fvwm
+x11-themes/fvwm-themes
+x11-themes/fvwm-themes-extra
+=x11-themes/fvwm-crystal-3.7.5
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-28)
+# Package destabilisation mask for potential runtime errors and lack of
+# Qt6-compatible plugins. Bug #955031
+~sci-geosciences/qgis-3.38.3
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-26)
+# Dead upstream, stuck on Qt5, blocking x11-libs/qscintilla[qt5] cleanup
+# Bug #947297; removal on 2025-05-26
+dev-db/sqliteman
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-26)
+# Dead upstream, last revdep on x11-libs/qwtplot3d and x11-libs/qwt:5
+# Bugs #948047, #942455; removal on 2025-05-26
+sci-visualization/scidavis
+x11-libs/qwtplot3d
+x11-libs/qwt:5
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-24)
+# Requires Qt5WebEngine; bug #925722
+# Removal on 2025-05-24 - with a good chance to be kept if ported by then.
+www-client/otter
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-24)
+# Requires Qt5WebEngine; no more revdeps. Bug #926684
+# Removal on 2025-05-24.
+dev-python/pyqtwebengine
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-24)
+# Dead upstream, Qt5 based, no more revdeps. Bug #949019
+# Removal on 2025-05-24.
+dev-python/python-poppler-qt5
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-04-22)
 # Dead upstream, depends on downstream patching even for Qt5 support.
@@ -78,21 +130,10 @@ dev-ruby/pathutil
 # Masked for removal on 2025-05-18. Bug #952341
 dev-python/ipaddr
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-14)
-# Package destabilisation mask after prolongued time w/o maintainer.
-# Bug #949838
-~app-emulation/q4wine-1.3.13
-
 # Hans de Graaff <graaff@gentoo.org> (2025-04-14)
 # Obsolete slot that fails tests, bug 933189. EAPI 7.  Use the newer
 # slot instead. Masked for removal on 2025-05-14.
 dev-ruby/childprocess:2
-
-# Ionen Wolkens <ionen@gentoo.org> (2025-04-12)
-# >=31 breaks www-client/qutebrowser's tests
-# https://github.com/cucumber/gherkin/issues/373
-# https://github.com/qutebrowser/qutebrowser/commit/12e683826783
->=dev-python/gherkin-official-31
 
 # Michał Górny <mgorny@gentoo.org> (2025-04-09)
 # Still uses legacy distutils-r1 mode, and lacks Python 3.13 target.
@@ -112,18 +153,6 @@ x11-misc/xtoolwait
 # SRC_URI is long gone. Many alternative image viewers.
 # Removal on 2025-05-04.  Bug #953119.
 media-gfx/xloadimage
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-02)
-# Depends on Qt5WebEngine, and upstream seem to be having a hard time
-# porting to Qt6 with an unknown ETA likely well beyond the time we want
-# to keep dev-qt/qtwebengine:5 in ::gentoo.
-# Removal on 2025-04-30. Bug #926666
-media-video/jellyfin-media-player
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-02)
-# No release since 2021, no commit in 3 years, depends on Qt5WebEngine.
-# Use app-text/uchmviewer instead. Removal on 2025-04-30. Bug #823008
-app-text/kchmviewer
 
 # Ionen Wolkens <ionen@gentoo.org> (2025-04-02)
 # Masked for testing the new .0 version and leave time for packages
@@ -194,13 +223,6 @@ dev-java/jcalendar
 dev-java/jgoodies-looks
 dev-java/jgoodies-common
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-03-30)
-# Depends on dev-python/python-poppler-qt5, stuck on py3.12, new 0.7.0
-# release available w/ PyQt6 support would require packaging new pymupdf
-# dependency (bug #949686). Use media-gfx/inkscape or app-text/pdfarranger
-# alternatively. Removal on 2025-04-29. Bugs #947726, #952250
-app-text/krop
-
 # Conrad Kostecki <conikost@gentoo.org> (2025-03-28)
 # Upstream is dead and broken. All 'whatsapp' deps
 # will be last-rited on 2025-04-28.
@@ -211,13 +233,6 @@ net-im/yowsup
 # Sam James <sam@gentoo.org> (2025-03-27)
 # Large-scale breakage (bug #951350).
 =dev-build/cmake-4*
-
-# Maciej Barć <xgqt@gentoo.org> (2025-03-25)
-# It is possible Gentoo could be hit by "legal" action when having this package.
-# Very unstable development, switches upstream to avoid "legal" trouble.
-# See also: bug #948196 bug #927392
-# Removal on 2025-04-25.
-games-emulation/ryujinx
 
 # Michał Górny <mgorny@gentoo.org> (2025-03-17)
 # Xfce 4.22 prereleases.  Masked because they tend to be quite unstable.
@@ -302,18 +317,20 @@ dev-python/pyside6-tools
 =dev-cpp/cpp-httplib-0.18.6
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-23)
-# Qt5 package without any revdeps. Use dev-qt/qttools[qdbus] instead.
-dev-qt/qdbusviewer
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-23)
 # Qt5 packages without any revdeps.
 dev-qt/assistant
+dev-qt/linguist
 dev-qt/pixeltool
 dev-qt/qdbus
+dev-qt/qdbusviewer
 dev-qt/qdoc
 dev-qt/qtdiag
+dev-qt/qtpaths
+dev-qt/qt3d:5
+dev-qt/qtdatavis3d:5
 dev-qt/qtgamepad:5
 dev-qt/qtlocation:5
+dev-qt/qtnetworkauth:5
 dev-qt/qtplugininfo
 dev-qt/qtquicktimeline:5
 dev-qt/qtsensors:5
