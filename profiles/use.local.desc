@@ -1320,7 +1320,6 @@ dev-ada/langkit-contrib:static-pic - Build static library with pic code
 dev-ada/libadalang:static-pic - Build static library with pic code
 dev-ada/libadalang-tools:shared - Build shared library
 dev-ada/libadalang-tools:static-pic - Build static library with pic code
-dev-ada/libgpr:shared - Build shared library
 dev-ada/libgpr:static-pic - Build static library with pic code
 dev-ada/prettier-ada:shared - Build shared library
 dev-ada/prettier-ada:static-pic - Build static library with pic code
@@ -1776,7 +1775,6 @@ dev-java/openjfx:source - Install JavaFX sources
 dev-java/pdfbox:tools - Build and install pdfbox-tools
 dev-java/protobuf-java:system-protoc - Use protoc provided by dev-libs/protobuf
 dev-java/qdox:ant-task - Build the ant-task
-dev-java/rxtx:lfd - Installs and uses LockFileServer daemon (lfd)
 dev-java/saxon:ant-task - BUILD and register the ant-task
 dev-java/sbt:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
 dev-lang/R:libdeflate - Use app-arch/libdeflate rather than sys-libs/zlib for lazy-loaded R objects.
@@ -2028,10 +2026,8 @@ dev-libs/ktextaddons:designer - Build plugins for dev-qt/designer
 dev-libs/libbase58:tools - Build command line base58 tool
 dev-libs/libbytesize:tools - Build bscalc python CLI tool
 dev-libs/libcdio:minimal - Only build the libcdio library and little more, just to be used to link against from multimedia players. With this USE flag enabled, none of the command-line utilities are built, nor is the CDDA library.
-dev-libs/libcec:cubox - Enable support for enable support for the TDA995x
 dev-libs/libcec:exynos - Enable support for Exynos chipsets
 dev-libs/libcec:kernel-cec - Enable support for Linux kernel CEC framework
-dev-libs/libcec:raspberry-pi - Enable support for the Raspberry Pi
 dev-libs/libcec:tools - Enable build of cec-client and other test and demo executable tools
 dev-libs/libcec:udev - Enable detection of USB-CEC port by udev
 dev-libs/libcec:xrandr - Enable detection of active HDMI using xrandr extensions
@@ -3631,6 +3627,7 @@ kde-frameworks/kplotting:designer - Build plugins for dev-qt/designer
 kde-frameworks/ktexteditor:editorconfig - Enable support for EditorConfig configuration files
 kde-frameworks/ktextwidgets:designer - Build plugins for dev-qt/designer
 kde-frameworks/kwallet:gpg - Support wallets with GnuPG encryption in addition to the default blowfish-encrypted file
+kde-frameworks/kwallet:minimal - Pull in required runtime components for KWallet via kde-frameworks/kwallet
 kde-frameworks/kwidgetsaddons:designer - Build plugins for dev-qt/designer
 kde-frameworks/kxmlgui:designer - Build plugins for dev-qt/designer
 kde-frameworks/networkmanager-qt:teamd - Enable Teamd control support
@@ -4318,6 +4315,7 @@ media-libs/imlib2:packing - Enable structure packing. This will reduce memory fo
 media-libs/imlib2:shm - Use MIT shared memory support for X image transfer
 media-libs/imlib2:text - Build text (TrueType font) functions
 media-libs/imlib2:tools - Build and install the demo tools
+media-libs/imlib2:y4m - Y4M image loader support
 media-libs/imlib2:zlib - Zlib loader support
 media-libs/intel-mediasdk:tools - Build analyse and inspect tools
 media-libs/jasper:heif - Enable experimental support for HEIF/HEIC, unsupported by upstream
@@ -7631,7 +7629,6 @@ sci-mathematics/petsc:int64 - Use 64 bit indexes
 sci-mathematics/petsc:metis - Add support for metis (sci-libs/parmetis)
 sci-mathematics/petsc:mumps - Add support for mumps (sci-libs/mumps)
 sci-mathematics/petsc:scotch - Add support for scotch (sci-libs/scotch)
-sci-mathematics/petsc:sparse - Use suitesparse (sci-libs/suitesparse) including cholmod (sci-libs/cholmod) for sparse factorization
 sci-mathematics/petsc:superlu - Use superlu (sci-libs/superlu) for preconditioning
 sci-mathematics/polymake:bliss - Enable sci-libs/bliss interface for graph and face lattice isomorphism computations.
 sci-mathematics/polymake:cdd - Enable sci-libs/cddlib interface for convex hull computations (Should be kept enabled).
@@ -8622,7 +8619,8 @@ www-apps/cgit:lua - Enable support for Lua scripting
 www-apps/drupal:uploadprogress - Install dev-php/pecl-uploadprogress package
 www-apps/gitea:acct - User and group management via acct-*/git packages
 www-apps/gitea:gogit - (EXPERIMENTAL) Use go-git variants of Git commands.
-www-apps/hugo:extended - Enable SASS/SCSS and WebP encoding support
+www-apps/hugo:deploy - Enable support for deployment support (hugo deploy)
+www-apps/hugo:extended - Enable SASS/SCSS support
 www-apps/icingaweb2:apache2-server - Adds support for the apache2-server
 www-apps/icingaweb2:fpm - Adds FPM support to php
 www-apps/icingaweb2:nginx - Adds support for nginx
@@ -8980,8 +8978,6 @@ x11-plugins/vicious:contrib - Install extra widgets, some for less common hardwa
 x11-plugins/wmbattery:apm - Add APM (Advanced Power Management) support
 x11-plugins/wmfire:session - Enable session management
 x11-plugins/wmudmount:gcr - Enable support for secure memory with app-crypt/gcr
-x11-terms/aterm:background - Enable background image support via media-libs/libafterimage
-x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small version
 x11-terms/ghostty:adwaita - Use gui-libs/libadwaita for better GNOME integration
 x11-terms/ghostty-terminfo:symlink - Install symlink for a "ghostty" terminfo entry
 x11-terms/gnome-terminal:gnome-shell - Integrate with gnome-base/gnome-shell search

@@ -28,7 +28,7 @@ fi
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~loong ppc ppc64 ~riscv x86"
 IUSE="audio +devinput doc ftdi gtk inputlirc selinux static-libs systemd +uinput usb X"
 
 REQUIRED_USE="
@@ -93,6 +93,10 @@ pkg_setup() {
 
 src_prepare() {
 	default
+
+	if [[ -d "${WORKDIR}"/debian/patches ]] ; then
+		eapply $(sed -e 's:^:../debian/patches/:' ../debian/patches/series || die)
+	fi
 
 	# https://bugs.gentoo.org/922209
 	sed -i -e "/^libpython / s|\$(libdir)/python\$(PYTHON_VERSION)|$(python_get_stdlib)|" Makefile.am || die

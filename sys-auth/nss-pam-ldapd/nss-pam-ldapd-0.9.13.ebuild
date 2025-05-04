@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{11..13} )
 inherit autotools python-r1 s6 systemd tmpfiles multilib-minimal
 
 DESCRIPTION="NSS module for name lookups using LDAP"
@@ -53,6 +53,7 @@ PATCHES=(
 	"${FILESDIR}"/nss-pam-ldapd-0.9.11-tests-py39.patch
 	"${FILESDIR}"/nss-pam-ldapd-0.9.12-netdb-defines.patch
 	"${FILESDIR}"/nss-pam-ldapd-0.9.12-configure-CFLAGS-decontamination.patch
+	"${FILESDIR}"/nss-pam-ldapd-0.9.13-c23.patch
 )
 
 pkg_setup() {
@@ -65,9 +66,9 @@ src_prepare() {
 	touch pynslcd/__init__.py || die "Could not create __init__.py for pynslcd"
 	mv pynslcd/pynslcd.py pynslcd/main.py || die
 
-        find "${S}" -name Makefile.am -exec \
-        sed -e '/^AM_CFLAGS/ s/$/ \$(DEBUG_CFLAGS) \$(EXTRA_CFLAGS)/g' \
-        -i {} \; || die
+	find "${S}" -name Makefile.am -exec \
+		sed -e '/^AM_CFLAGS/ s/$/ \$(DEBUG_CFLAGS) \$(EXTRA_CFLAGS)/g' \
+			-i {} \; || die
 
 	eautoreconf
 }

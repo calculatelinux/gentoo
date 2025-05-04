@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python3_{10..13} )
 
 WEBAPP_MANUAL_SLOT="yes"
 
-inherit lua-single python-single-r1 tmpfiles toolchain-funcs webapp
+inherit flag-o-matic lua-single python-single-r1 tmpfiles toolchain-funcs webapp
 
 [[ -z "${CGIT_CACHEDIR}" ]] && CGIT_CACHEDIR="/var/cache/${PN}/"
 
@@ -25,7 +25,7 @@ S="${WORKDIR}/${PN}-${MY_COMMIT}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~riscv ~x86"
+KEYWORDS="amd64 arm ~riscv x86"
 
 IUSE="doc +highlight +lua test"
 REQUIRED_USE="lua? ( ${LUA_REQUIRED_USE} ) ${PYTHON_REQUIRED_USE}"
@@ -65,6 +65,9 @@ src_configure() {
 		rmdir git || die
 		mv "${WORKDIR}"/git-"${GIT_V}" git || die
 	fi
+
+	# bug #951555
+	append-cflags -std=gnu17
 
 	echo "prefix = ${EPREFIX}/usr" >> cgit.conf || die "echo prefix failed"
 	echo "libdir = ${EPREFIX}/usr/$(get_libdir)" >> cgit.conf || die "echo libdir failed"
