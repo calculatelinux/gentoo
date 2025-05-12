@@ -1308,8 +1308,6 @@ dev-ada/gnatdoc:static-pic - Build static library with pic code
 dev-ada/gnatformat:static-pic - Build static library with pic code
 dev-ada/gpr:shared - Build shared library
 dev-ada/gpr:static-pic - Build static library with pic code
-dev-ada/gpr-unit-provider:shared - Build shared library
-dev-ada/gpr-unit-provider:static-pic - Build static library with pic code
 dev-ada/gtkada:shared - Build gtkada as shared library
 dev-ada/gtkada:static-pic - Build static library with pic code
 dev-ada/lal-refactor:static-pic - Build static library with pic code
@@ -1317,12 +1315,10 @@ dev-ada/langkit:shared - Build shared library
 dev-ada/langkit:static-pic - Build static library with pic code
 dev-ada/langkit-contrib:static-pic - Build static library with pic code
 dev-ada/libadalang:static-pic - Build static library with pic code
-dev-ada/libadalang-tools:shared - Build shared library
 dev-ada/libadalang-tools:static-pic - Build static library with pic code
 dev-ada/libgpr:static-pic - Build static library with pic code
 dev-ada/prettier-ada:shared - Build shared library
 dev-ada/prettier-ada:static-pic - Build static library with pic code
-dev-ada/spawn:shared - Build shared library
 dev-ada/spawn:static-pic - Build static library with pic code
 dev-ada/templates-parser:shared - Build shared library
 dev-ada/templates-parser:static-pic - Build static library with pic code
@@ -1334,8 +1330,6 @@ dev-build/meson:test-full - pull in dependencies to run all tests
 dev-build/muon:archive - Enable extracting wraps using app-arch/libarchive.
 dev-build/muon:libpkgconf - Enable looking up packages via dev-util/pkgconf.
 dev-cpp/abseil-cpp:test-helpers - Build libraries that you can use to write tests against Abseil code.
-dev-cpp/benchmark:exceptions - Enable the use of exceptions in the benchmark library
-dev-cpp/benchmark:libcxx - Use llvm-runtimes/libcxx instead of libstdc++ as the default stdlib
 dev-cpp/benchmark:libpfm - Enable dev-libs/libpfm support
 dev-cpp/benchmark:tools - Install some additional Python tools
 dev-cpp/eigen:adolc - Add test support for Adolc (sci-libs/adolc)
@@ -1885,6 +1879,7 @@ dev-lang/python:ensurepip - Install the ensurepip module that uses bundled wheel
 dev-lang/python:jit - Enable experimental Just-In-Time compilation support.
 dev-lang/python:libedit - Link readline extension against dev-libs/libedit instead of sys-libs/readline
 dev-lang/python:pgo - Optimize the build using Profile Guided Optimization (PGO) by running Python's test suite and collecting statistics based on its performance. This will take longer to build.
+dev-lang/python:tail-call-interp - Enable the tail call interpreter. May lead to better performance but is still new and dependent on latest toolchain versions (Clang 19, GCC 15).
 dev-lang/python:valgrind - Disable pymalloc when running under dev-debug/valgrind is detected (may incur minor performance penalty even when valgrind is not used)
 dev-lang/python:wininst - Install Windows executables required to create an executable installer for MS Windows
 dev-lang/python-exec:native-symlinks - Install generic symlinks like python and python3. If this flag is disabled, only versioned python3.X executables will be available to end users and ebuilds not using python eclasses.
@@ -1951,6 +1946,16 @@ dev-libs/boost:tools - Build and install the boost tools (bcp, quickbook, inspec
 dev-libs/botan:boost - Use dev-libs/boost
 dev-libs/botan:tools - Install optional tools for e.g. hashing
 dev-libs/check:subunit - Enable support for the subunit unit test protocol
+dev-libs/cutlass:clang-cuda - Use clang for cuda units compilation
+dev-libs/cutlass:cublas - Enable cuBLAS usage for tests
+dev-libs/cutlass:cudnn - Enable cuDNN usage for tests
+dev-libs/cutlass:dot - Use dot to generate graphs in the doxygen documentation via media-gfx/graphviz
+dev-libs/cutlass:examples - Enable CUTLASS Examples
+dev-libs/cutlass:headers-only - Enable only the header library
+dev-libs/cutlass:jumbo-build - Enable combined source compilation
+dev-libs/cutlass:performance - Enable CUTLASS Performance
+dev-libs/cutlass:profiler - Enable CUTLASS Profiler
+dev-libs/cutlass:tools - Enable CUTLASS Tools
 dev-libs/cyberjack:tools - Build and install optional management tools.
 dev-libs/cyrus-sasl:authdaemond - Add Courier-IMAP authdaemond unix socket support (net-mail/courier-imap, mail-mta/courier)
 dev-libs/cyrus-sasl:ldapdb - Enable ldapdb plugin
@@ -4074,6 +4079,7 @@ media-gfx/blender:embree - Use embree to accelerate certain areas of the Cycles 
 media-gfx/blender:experimental - Enable experimental features
 media-gfx/blender:fluid - Adds fluid simulation support via the built-in Mantaflow library.
 media-gfx/blender:hip - Build cycles renderer with AMD HIP support.
+media-gfx/blender:manifold - Enable Manifold render backend via sci-mathematics/manifold
 media-gfx/blender:nanovdb - Enable nanoVDB support in Cycles. Uses less memory than regular openVDB when rendering.
 media-gfx/blender:ndof - Enable NDOF input devices (SpaceNavigator and friends).
 media-gfx/blender:oidn - Enable OpenImageDenoiser Support
@@ -4181,22 +4187,23 @@ media-gfx/librecad:tools - Build additional tool programs: tff2lff
 media-gfx/luminance-hdr:fits - Enable support for the FITS format
 media-gfx/mandelbulber:opencl - Enable GPU rendering support using OpenCL
 media-gfx/meshlab:double-precision - Use double type instead of float type for scalars
-media-gfx/netgen:logging - Enable logging through dev-libs/spdlog
 media-gfx/netgen:opencascade - Enable OpenCASCADE support
 media-gfx/nomacs:opencv - Build support for media-libs/opencv
 media-gfx/nomacs:plugins - Build officially support plugins
 media-gfx/openclipart:gzip - Compresses clip art using gzip
+media-gfx/openscad:cgal - Enable cgal render backend via sci-mathematics/cgal (old/slow)
 media-gfx/openscad:egl - Build using EGL instead of GLX
 media-gfx/openscad:experimental - Enable experimental features
 media-gfx/openscad:glx - Enable GLX to interface OpenGL and X11
 media-gfx/openscad:gui - Enable or disable building of the GUI
 media-gfx/openscad:hidapi - Build in support for HID-Class devices using dev-libs/hidapi
-media-gfx/openscad:manifold - Enable Manifold render backend via sci-mathematics/manifold
+media-gfx/openscad:manifold - Enable Manifold render backend via sci-mathematics/manifold (new/fast)
 media-gfx/openscad:mimalloc - Build using dev-libs/mimalloc as memory allocator
 media-gfx/openscad:spacenav - Add support for space navigator devices through dev-libs/libspnav
 media-gfx/openvdb:abi10-compat - Disables newer features to maintain compatibility with ABI10
 media-gfx/openvdb:abi11-compat - Disables newer features to maintain compatibility with ABI11
 media-gfx/openvdb:abi12-compat - Disables newer features to maintain compatibility with ABI12
+media-gfx/openvdb:abi13-compat - Disables newer features to maintain compatibility with ABI13
 media-gfx/openvdb:abi9-compat - Disables newer features to maintain compatibility with ABI9
 media-gfx/openvdb:alembic - Add support for Alembic through media-gfx/alembic.
 media-gfx/openvdb:ax - Build the OpenVDB AX module to perform custom manipulation of OpenVDB data via an expression language: AX
@@ -4204,6 +4211,7 @@ media-gfx/openvdb:blosc - Allow using blosc compression via dev-libs/c-blosc
 media-gfx/openvdb:cuda - Enable support for CUDA in NanoVDB
 media-gfx/openvdb:nanovdb - A lightweight, header only, and GPU friendly version of VDB
 media-gfx/openvdb:numpy - Build pyopenvdb with support for dev-python/numpy
+media-gfx/openvdb:pdal - Enable support for PDAL for point clouds via sci-libs/pdal
 media-gfx/openvdb:utils - Build utility binaries
 media-gfx/photoqt:barcode - Support for QR and barcodes detection using media-libs/zxing-cpp
 media-gfx/photoqt:chromecast - Enable Chromecast support using dev-python/pychromecast
@@ -4464,25 +4472,29 @@ media-libs/opencv:jasper - Use media-libs/jasper for jpeg2k support
 media-libs/opencv:mkl - Use sci-libs/mkl for blas, lapack and sparse blas routines
 media-libs/opencv:non-free - Enable non-free components
 media-libs/opencv:opencvapps - Enable compilation with opencvapps
+media-libs/opencv:openni - Adds support for Kinect-like 3D sensors devices with dev-libs/OpenNI
+media-libs/opencv:openni2 - Adds support for Kinect-like 3D sensors devices with dev-libs/OpenNI2 (should be preferred over openni)
 media-libs/opencv:quirc - Enable qrcode decoding via media-libs/quirc
+media-libs/opencv:spng - Use media-libs/libspng for png support
 media-libs/opencv:tbb - Enable multithreading with the Intel Threads Building Block (dev-cpp/tbb)
 media-libs/opencv:tesseract - Use Google's OCR Engine
 media-libs/opencv:testprograms - Build and install programs for testing OpenCV (performance)
 media-libs/opencv:truetype - Enable media-libs/freetype support for gapi module
 media-libs/opencv:video_cards_intel - Enable Video Acceleration API for hardware decoding for Intel cards
 media-libs/opencv:vtk - Build new 3D visualization module viz based on sci-libs/vtk
+media-libs/opencv:vulkan - Enable experimental Vulkan backend
 media-libs/openexr:large-stack - Enables code to take advantage of large stack support.
 media-libs/openexr:utils - Build several binary tools for verifying and manipulating EXR files.
 media-libs/openh264:plugin - Install the Gecko Media Plugin (GMP) for use with Mozilla packages
 media-libs/openh264:utils - Install the CLI encoder and decoder utilities
 media-libs/openimageio:dicom - Enable DICOM medical image file support via sci-libs/dcmtk
 media-libs/openimageio:fits - Enable support for NASA's sci-libs/cfitsio library
-media-libs/openimageio:gui - Build iv with dev-qt/qtbase
+media-libs/openimageio:gui - Build iv
 media-libs/openimageio:opencv - Enable OpenCV support via media-libs/opencv
 media-libs/openimageio:openvdb - Enable OpenVDB support via media-gfx/openvdb
 media-libs/openimageio:ptex - Enable Ptex texture mapping system file support via media-libs/ptex
 media-libs/openimageio:tools - Build the command-line tools
-media-libs/opensubdiv:glew - Enable support for OpenGL Extension Wrangler Library (media-libs/glew)
+media-libs/openpgl:tools - Building Open PGL tools as well
 media-libs/opensubdiv:glfw - Build all example files that uses (media-libs/glfw)
 media-libs/opensubdiv:ptex - Adds support for faster per-face texture mapping through media-libs/ptex
 media-libs/opensubdiv:python - Use dev-lang/python to process source and documentation source files
@@ -4495,6 +4507,7 @@ media-libs/opus:osce - Enable Opus Speech Coding Enhancement (OSCE)
 media-libs/opusfile:fixed-point - Enable fixed-point arithmetic operations
 media-libs/opusfile:float - Enable floating point arithmetic operations
 media-libs/opusfile:http - Enable http connections
+media-libs/osl:clang-cuda - Use clang for cuda units compilation
 media-libs/osl:gui - Build the osltoy binary
 media-libs/osl:libcxx - Build against llvm-runtimes/libcxx when using clang
 media-libs/osl:nofma - Do not use Fuse-Multiply-Add operations
@@ -5212,8 +5225,6 @@ media-video/guvcview:qt6 - Build with Qt6 interface instead of Gtk+
 media-video/guvcview:sfml - Build with SFML X11-engine instead of sdl
 media-video/handbrake:amf - Support for encoding h265 using AMD VCE encoder.
 media-video/handbrake:fdk - Support for encoding AAC using media-libs/fdk-aac.
-media-video/handbrake:gstreamer - Support for the streaming media framework from media-libs/gstreamer.
-media-video/handbrake:gtk - Install the GTK UI, ghb.
 media-video/handbrake:libdovi - Support for Dolby Vision using media-libs/libdovi.
 media-video/handbrake:numa - Adds support for x265's NUMA capabilities.
 media-video/handbrake:qsv - Support for encoding h264 using Intel Quick Sync Video.
@@ -5516,7 +5527,6 @@ net-analyzer/netdata:mongodb - Enable support for the mongodb backend
 net-analyzer/netdata:nfacct - Enable the nfacct plugin
 net-analyzer/netdata:nodejs - Enable use of nodejs (which some plugins use)
 net-analyzer/netdata:prometheus - Enable support for the Prometheus remote write backend
-net-analyzer/netdata:tor - Enable monitoring of tor
 net-analyzer/netdata:xen - Enable monitoring of xen
 net-analyzer/netperf:demo - Emit interim results during the run. May affect results
 net-analyzer/nfdump:ftconv - Build the flow-tools to nfdump converter
@@ -6040,7 +6050,6 @@ net-irc/ngircd:strict-rfc - Strict RFC compliance; may harm compatibility
 net-irc/psybnc:multinetwork - Adds support for multiple networks
 net-irc/psybnc:oidentd - Adds support for oidentd
 net-irc/psybnc:scripting - Adds scripting support
-net-irc/quassel:crypt - Support core->network per-channel and per-query blowfish encryption via app-crypt/qca SLOT 2.
 net-irc/quassel:dbus - Support desktop notifications via the StatusNotifier D-Bus service (used by most modern desktop environments).
 net-irc/quassel:gui - Build the Qt5 GUI client for quassel. If this USE flag is disabled, the GUI is not built, and cannot be used. You might want to disable this on the server, but you need it enabled on the client.
 net-irc/quassel:monolithic - Build standalone client with integrated core, no external quasselcore needed. Only useful if you don't want to use Quassel's client/server model. The server and X flags are not needed in this case but it is possible to enable them too.
@@ -6265,6 +6274,7 @@ net-mail/dovecot:sieve - Add sieve support
 net-mail/dovecot:solr - Add solr full text search (FTS) support
 net-mail/dovecot:stemmer - Add libstemmer support (for FTS)
 net-mail/dovecot:textcat - Add libtextcat language guessing support for full text search (FTS)
+net-mail/dovecot:xapian - Add xapian (flatcurve) full text search (FTS) support
 net-mail/fetchmail:socks - Enable support for socks proxy
 net-mail/fetchmail:tk - Enable support for Tk GUI toolkit, in particular it installs fetchmailconf
 net-mail/gnubiff:password - Enable save passwords to connect mail servers in user space
@@ -6280,7 +6290,6 @@ net-mail/mailutils:tokyocabinet - Enable Tokyo Cabinet database support
 net-mail/mu:emacs - Install the mu4e mail client
 net-mail/notmuch:apidoc - Provide doxygen generated API docs
 net-mail/notmuch:crypt - Support decryption and verification of PGP/MIME messages and in Emacs UI - encryption; support also S/MIME signature verification since version 0.22
-net-mail/notmuch:doc - Install API documentation
 net-mail/notmuch:emacs - Install Emacs UI (the main one)
 net-mail/notmuch:mutt - Install helper script for Mutt
 net-mail/notmuch:nmbug - Install experimental tag sharing / pseudo-bug-tracking script for Notmuch (see http://notmuchmail.org/nmbug/)
@@ -7689,6 +7698,7 @@ sci-ml/caffe2:openmp - Use OpenMP for parallel code
 sci-ml/caffe2:qnnpack - Use QNNPACK
 sci-ml/caffe2:rocm - Enable ROCm gpu computing support
 sci-ml/caffe2:xnnpack - Use sci-ml/XNNPACK
+sci-ml/cudnn-frontend:samples - Build samples during testing
 sci-ml/datasets:torch - Use pytorch
 sci-ml/datasets:vision - Support vision
 sci-ml/gloo:libuv - Enable libuv support
@@ -7765,6 +7775,7 @@ sci-physics/vgm:root - Enable interaction with ROOT (sci-physics/root)
 sci-physics/yoda:highfive - Build with sci-libs/HighFive and sci-libs/hdf5
 sci-physics/yoda:root - Adds support for sci-physics/root
 sci-visualization/fityk:nlopt - Enable optimization with sci-libs/nlopt
+sci-visualization/gle:manip - Build data manipulation program
 sci-visualization/gnuplot:amos - Enable Amos routines for complex Airy and Bessel functions (dev-libs/openspecfun)
 sci-visualization/gnuplot:bitmap - Enable dot-matrix printers and pbm terminal
 sci-visualization/gnuplot:gd - Add support for media-libs/gd. Needed for GIF, JPEG, and PNG image output.

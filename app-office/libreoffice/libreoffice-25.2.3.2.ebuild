@@ -142,7 +142,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	dev-libs/libgpg-error
 	>=dev-libs/liborcus-0.18.0:0/0.18
 	dev-libs/librevenge
-	dev-libs/libxml2
+	dev-libs/libxml2:=
 	dev-libs/libxslt
 	dev-libs/nspr
 	dev-libs/nss
@@ -316,6 +316,9 @@ PATCHES=(
 	# add qt6 backend as possible fallback for gtk-based desktop environments:
 	# https://bugs.gentoo.org/950170
 	"${FILESDIR}/${PN}-25.2-vcl-backend-fallback.patch"
+
+	# git master:
+	"${FILESDIR}/${P}-poppler-25.05.patch"
 )
 
 _check_reqs() {

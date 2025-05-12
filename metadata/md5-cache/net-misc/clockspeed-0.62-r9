@@ -11,5 +11,5 @@ RDEPEND=net-dns/djbdns
 RESTRICT=test
 SLOT=0
 SRC_URI=https://cr.yp.to/clockspeed/clockspeed-0.62.tar.gz https://dev.gentoo.org/~pacho/maintainer-needed/leapsecs.dat.20081114
-_eclasses_=flag-o-matic	e8de74bac929ba17427e740e95707d00	toolchain-funcs	f9d71a6efe9d083aec750dd13968e169
-_md5_=c2df35987e614f93ae592ffe438cc903
+_eclasses_=flag-o-matic	b892042b2667b8ac69ec8a2571dc290a	toolchain-funcs	f9d71a6efe9d083aec750dd13968e169
+_md5_=560eb145c9b99c7401df5c7c2e575040
