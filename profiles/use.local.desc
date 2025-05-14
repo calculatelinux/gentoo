@@ -3630,8 +3630,11 @@ kde-frameworks/knotifications:speech - Enable text-to-speech notification suppor
 kde-frameworks/kplotting:designer - Build plugins for dev-qt/designer
 kde-frameworks/ktexteditor:editorconfig - Enable support for EditorConfig configuration files
 kde-frameworks/ktextwidgets:designer - Build plugins for dev-qt/designer
+kde-frameworks/kuserfeedback:tools - Build application console and CLI binary
 kde-frameworks/kwallet:gpg - Support wallets with GnuPG encryption in addition to the default blowfish-encrypted file
 kde-frameworks/kwallet:minimal - Pull in required runtime components for KWallet via kde-frameworks/kwallet
+kde-frameworks/kwallet-runtime:gpg - Support wallets with GnuPG encryption in addition to the default blowfish-encrypted file
+kde-frameworks/kwallet-runtime:legacy-kwallet - Support KWallet D-Bus API for applications still using it
 kde-frameworks/kwidgetsaddons:designer - Build plugins for dev-qt/designer
 kde-frameworks/kxmlgui:designer - Build plugins for dev-qt/designer
 kde-frameworks/networkmanager-qt:teamd - Enable Teamd control support
@@ -6458,6 +6461,7 @@ net-misc/freerdp:aad - Enable login via Azure AD
 net-misc/freerdp:client - Build client binaries
 net-misc/freerdp:fuse - Clipboard with FUSE file copy support
 net-misc/freerdp:openh264 - Enable H.264 support using media-libs/openh264
+net-misc/freerdp:sdl3 - Build SDL3 client
 net-misc/freerdp:server - Build server binaries
 net-misc/frr:fpm - Enable Forwarding Plane Manager support
 net-misc/frr:grpc - Enable gRPC plugin
@@ -8834,7 +8838,7 @@ x11-base/xorg-server:xvfb - Build the Xvfb server
 x11-base/xwayland:libei - Enable emulated input using dev-libs/libei
 x11-base/xwayland:unwind - Enable libunwind usage for backtraces
 x11-base/xwayland:xcsecurity - Build Security extension
-x11-drivers/nvidia-drivers:kernel-open - Use the open source variant of the drivers (Turing/Ampere+ GPUs only, aka GTX 1650+ -- recommended with >=560.xx drivers if usable and it may be required for 50xx Blackwell+ GPUs)
+x11-drivers/nvidia-drivers:kernel-open - Use the open source variant of the drivers (only works for Turing/Ampere or newer GPUs, aka GTX 1650+ -- recommended with >=560.xx drivers if usable and is *required* for 50xx Blackwell or newer GPUs)
 x11-drivers/nvidia-drivers:persistenced - Install the persistence daemon for keeping devices state when unused (e.g. for headless)
 x11-drivers/nvidia-drivers:powerd - Install the NVIDIA dynamic boost support daemon (only useful with specific laptops, ignore if unsure)
 x11-drivers/nvidia-drivers:static-libs - Install the XNVCtrl static library for accessing sensors and other features
