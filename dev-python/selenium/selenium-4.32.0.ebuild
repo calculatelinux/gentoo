@@ -4,8 +4,8 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_TESTED=( python3_{10..13} pypy3 pypy3_11 )
-PYTHON_COMPAT=( "${PYTHON_TESTED[@]}" )
+PYTHON_TESTED=( python3_{11..13} pypy3_11 )
+PYTHON_COMPAT=( "${PYTHON_TESTED[@]}" python3_14 )
 
 inherit distutils-r1 pypi
 
@@ -29,7 +29,7 @@ SRC_URI+="
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
+KEYWORDS="amd64 ~arm arm64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
 IUSE="test-rust"
 
 RDEPEND="

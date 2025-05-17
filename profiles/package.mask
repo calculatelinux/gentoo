@@ -36,6 +36,23 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2025-05-17)
+# Historically split from dev-libs/icu, disabled by default upstream and not
+# recommended anymore. If need be, we can make it optional in icu itself.
+# Removal on 2025-06-16. Bug #956106.
+dev-libs/icu-layoutex
+dev-libs/icu-le-hb
+
+# Alfred Wingate <parona@protonmail.com> (2025-05-17)
+# Masked for testing
+dev-db/mysql:8.4
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-05-15)
+# Very dead upstream, very many open bugs for years without anyone fixing.
+# Bugs #314835, #632432, #827131, #874429, #908830, #925513, #934808.
+# Removal on 2025-06-14.
+www-misc/htdig
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-05-13)
 # Depends on Qt5 and is unmaintained for a very long time - currently
 # packaged release is from 2021. Alternatives are gui-apps/deskflow or
@@ -64,12 +81,6 @@ x11-misc/qtfm
 # Removal on 2025-06-12.  Bug #955925.
 dev-util/intel_clc
 
-# Fabian Groffen <grobian@gentoo.org> (2025-05-13)
-# Compilation issues (#955913) and lack of resources/interest to
-# maintain, if you look for a catalog manager check out Jellyfin.
-# Removal on 2025-06-12, unless someone steps up
-media-sound/owntone
-
 # Petr Vaněk <arkamar@gentoo.org> (2025-05-12)
 # A serious performance regression has been found in 10.11.12 and 11.4.6
 # releases, distributions are advised to not publish them, see
@@ -92,10 +103,6 @@ net-misc/nyx
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-05-08)
 # No more revdeps. Removal on 2025-05-31.
 kde-frameworks/kinit
-
-# Eray Aslan <eras@gentoo.org> (2025-05-08)
-# Needs testing
-=net-mail/dovecot-2.4*
 
 # Michał Górny <mgorny@gentoo.org> (2025-05-08)
 # Vulnerable, EOL branch of dev-python/django.  Bug #955606.
@@ -268,11 +275,6 @@ dev-ruby/pathutil
 # Masked for removal on 2025-05-18. Bug #952341
 dev-python/ipaddr
 
-# Hans de Graaff <graaff@gentoo.org> (2025-04-14)
-# Obsolete slot that fails tests, bug 933189. EAPI 7.  Use the newer
-# slot instead. Masked for removal on 2025-05-14.
-dev-ruby/childprocess:2
-
 # Ionen Wolkens <ionen@gentoo.org> (2025-04-02)
 # Masked for testing the new .0 version and leave time for packages
 # to catch up on support if needed. May or may keep masked until 6.9.1
@@ -433,6 +435,7 @@ dev-qt/qtquicktimeline:5
 dev-qt/qtsensors:5
 dev-qt/qtserialbus:5
 dev-qt/qtvirtualkeyboard:5
+dev-qt/qtwebchannel:5
 dev-qt/qtwebview:5
 
 # Michał Górny <mgorny@gentoo.org> (2024-12-05)
