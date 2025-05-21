@@ -212,6 +212,8 @@ app-alternatives/gzip:pigz - Symlink to app-arch/pigz.
 app-alternatives/gzip:reference - Symlink to app-arch/gzip.
 app-alternatives/lex:flex - Symlink to sys-devel/flex.
 app-alternatives/lex:reflex - Symlink to sys-devel/reflex.
+app-alternatives/lzip:plzip - Symlink to app-arch/plzip.
+app-alternatives/lzip:reference - Symlink to app-arch/lzip.
 app-alternatives/ninja:reference - Symlink to dev-build/ninja.
 app-alternatives/ninja:samurai - Symlink to dev-build/samurai.
 app-alternatives/sh:bash - Symlink to app-shells/bash
@@ -1945,6 +1947,8 @@ dev-libs/boost:test-full - Enable tests that take a very long time to build or r
 dev-libs/boost:tools - Build and install the boost tools (bcp, quickbook, inspect, wave)
 dev-libs/botan:boost - Use dev-libs/boost
 dev-libs/botan:tools - Install optional tools for e.g. hashing
+dev-libs/cgreen:libxml2 - Add an XML report generator which uses dev-libs/libxml2 for output formatting
+dev-libs/cgreen:xml - Add a simple XML report generator without external dependencies
 dev-libs/check:subunit - Enable support for the subunit unit test protocol
 dev-libs/cutlass:clang-cuda - Use clang for cuda units compilation
 dev-libs/cutlass:cublas - Enable cuBLAS usage for tests
@@ -2384,6 +2388,7 @@ dev-python/bpython:watch - Enable watching paths using dev-python/watchdog
 dev-python/cbor2:native-extensions - Compiles native "C" extensions (speedups, instead of using python fallback code).
 dev-python/cvxopt:dsdp - Use interior point library sci-libs/dsdp
 dev-python/cvxopt:glpk - Use GNU Linear Programming Kit sci-mathematics/glpk
+dev-python/cython:test-full - Run test suite in full via additional (large) test dependencies, like dev-python/numpy.
 dev-python/dnspython:dnssec - Use dev-python/cryptography to enable low-level DNSSEC RSA, DSA, ECDSA and EdDSA signature validation.
 dev-python/editorconfig:cli - Install command line interface as well as python library
 dev-python/fritzconnection:qrcode - Install dependencies needed to generate QR Codes for WiFi login.
@@ -2962,7 +2967,7 @@ dev-util/schroot:lvm - Enable support for chroots using LVM snapshots
 dev-util/schroot:zfs - Enable support for chroots using ZFS shapshots/clones
 dev-util/sdl-jstest:sdl - Enable media-libs/libsdl2 based input test
 dev-util/sdl-jstest:sdl1 - Enable media-libs/libsdl based input test
-dev-util/selenium-manager:telemetry - Disable sending telemetry by default (avoid-stats config option).
+dev-util/selenium-manager:telemetry - Enable sending telemetry by default (disabling it sets avoid-stats config option to true).
 dev-util/sysprof:unwind - Use sys-libs/libunwind to unwind the stack
 dev-util/uftrace:capstone - Use capstone to provide dynamic tracing without recompilation
 dev-util/unicorn:logging - Enable logging
@@ -3427,6 +3432,7 @@ gnustep-apps/sogo:sodium - Enable support for Argon2 password schemes using dev-
 gnustep-base/gnustep-back-art:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-cairo:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-xlib:xim - Enable X11 XiM input method
+gnustep-base/gnustep-base:libdispatch - Dispatch blocks via dev-libs/libdispatch
 gnustep-base/gnustep-make:libobjc2 - Enables use of the GNUstep Objective-C runtime (gnustep-base/libobjc2) with non-fragile ABI and llvm-core/clang compiler
 gnustep-base/gnustep-make:native-exceptions - Enables use of the native Objective-C exception support (@try/@catch/@finally) built-in objective-c exceptions with compilers that support it
 gui-apps/foot:grapheme-clustering - Enable grapheme clustering support
@@ -4612,7 +4618,6 @@ media-libs/xine-lib:vidix - Enable support for vidix video output.
 media-libs/xine-lib:vis - Adds support for SIMD optimizations for UltraSPARC processors.
 media-libs/xine-lib:xvmc - Enable support for XVideo Motion Compensation (accelerated mpeg playback).
 media-libs/zita-resampler:tools - Install zresample and zretune tools
-media-libs/zmusic:fluidsynth - Enable support for MIDI via media-sound/fluidsynth
 media-libs/zmusic:mpg123 - Enable support for MPEG audio playback via media-sound/mpg123
 media-libs/zvbi:proxy - Share V4L and V4L2 VBI devices between multiple applications
 media-libs/zxing-cpp:experimental - Enable experimental features via media-libs/zint
@@ -5466,7 +5471,6 @@ net-analyzer/icinga2:console - Adds support for line-editing in the console
 net-analyzer/icinga2:jumbo-build - Combine source files to speed up build process, requires more memory
 net-analyzer/icinga2:mail - Allows for mailing of alerts
 net-analyzer/icinga2:mariadb - Enable support for the mariadb database backend
-net-analyzer/icinga2:nano-syntax - Adds support for syntax used in the nano editor
 net-analyzer/icinga2:plugins - Adds support for nagios plugins
 net-analyzer/ipsumdump:nanotimestamp - Enable timestamps with nano-second resolution
 net-analyzer/linkchecker:sqlite - Mozilla Bookmark parsing
@@ -6949,6 +6953,7 @@ net-vpn/openconnect:gssapi - Build GSSAPI support
 net-vpn/openconnect:libproxy - Enable proxy support
 net-vpn/openconnect:pskc - Enable PSKC file storage of HOTP/TOTP keys
 net-vpn/openconnect:stoken - Enable stoken support
+net-vpn/openfortivpn:resolvconf - Use resolvconf to handle /etc/resolv.conf updates
 net-vpn/openvpn:dco - Enable support for kernel data channel offload
 net-vpn/openvpn:down-root - Enable the down-root plugin
 net-vpn/openvpn:iproute2 - Enabled iproute2 support instead of net-tools
