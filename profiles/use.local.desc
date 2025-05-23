@@ -1580,7 +1580,7 @@ dev-games/physfs:qpak - Enable Quake I/II QPAK archive support
 dev-games/physfs:slb - Enable Independence War SLB archive support
 dev-games/physfs:vdf - Enable Gothic/Gothic II VDF archive support
 dev-games/physfs:wad - Enable Doom WAD archive support
-dev-games/simgear:dns - Enable DNS resolver via net-libs/udns
+dev-games/simgear:ffmpeg - Enable video recording via media-video/ffmpeg
 dev-games/simgear:gdal - Enable alternative terrain engine based on pagedLOD via sci-libs/gdal
 dev-games/simgear:subversion - Enable terrasync scenery downloader
 dev-games/tiled:minimal - Exclude optional plugins, development headers and examples
@@ -2919,6 +2919,7 @@ dev-util/mingw64-runtime:idl - Install idl files
 dev-util/mingw64-runtime:libraries - Build extra libraries: mangle, pseh, winpthreads
 dev-util/mingw64-runtime:tools - Build extra tools: gendef, genidl, widl
 dev-util/mingw64-toolchain:bin-symlinks - Symlink executables to usr/bin to be in default PATH (conflicts with crossdev mingw, and crossdev is preferable for a fully featured toolchain)
+dev-util/nvidia-cuda-toolkit:clang - Depend on llvm-core/clang as host compiler
 dev-util/nvidia-cuda-toolkit:debugger - Install the CUDA debugger
 dev-util/nvidia-cuda-toolkit:nsight - Install profiling and optimizing tools (nsight-compute, nsight-systems)
 dev-util/nvidia-cuda-toolkit:profiler - Install the NVIDIA CUDA profiler (nvprof) and the related libraries
@@ -3289,7 +3290,7 @@ games-simulation/corsix-th:midi - Adds support for background MIDI music via SDL
 games-simulation/corsix-th:tools - Build tools for decoding RNC files
 games-simulation/flightgear:dbus - Enable screensaver DBus interaction
 games-simulation/flightgear:gdal - Enable alternative terrain engine based on pagedLOD using sci-libs/gdal
-games-simulation/flightgear:qt5 - Build Qt5 launcher application
+games-simulation/flightgear:qt6 - Build Qt6 launcher application
 games-simulation/flightgear:udev - Enable event-based Input devices through virtual/udev
 games-simulation/flightgear:utils - Build various utilities (fgpanel, fgviewer among others)
 games-simulation/openrct2:scripting - Enable the dev-lang/duktape scripting engine for executing user scripts.
@@ -3332,6 +3333,8 @@ games-strategy/freeciv:system-lua - Use dev-lang/lua instead of the bundled libl
 games-strategy/freeciv:web-server - Build the freeciv-web server in place of the freeciv server
 games-strategy/freeorion:client - Build game client
 games-strategy/freesynd:devtools - Build development tools
+games-strategy/hedgewars:ffmpeg - Enable video recording feature
+games-strategy/hedgewars:pas2c - Translate Pascal sources to C and build with clang
 games-strategy/hedgewars:server - Enable local server
 games-strategy/ja2-stracciatella:editor - Adds necessary file to run the editor
 games-strategy/ja2-stracciatella:ru-gold - Support for russian gold ja2 version
@@ -4154,6 +4157,7 @@ media-gfx/freecad:surface - Build the surface module and workbench
 media-gfx/freecad:techdraw - Build the techdraw module and workbench, a more advanced and feature-rich successor of the drawing workbench
 media-gfx/geeqie:ffmpegthumbnailer - Enable video thumbnail support with media-video/ffmpegthumbnailer
 media-gfx/geeqie:map - Enable items GPS map display
+media-gfx/gimp:alsa - Enable ALSA support in midi input controller
 media-gfx/gimp:fits - Enable support for loading/exporting FITS images
 media-gfx/gimp:vector-icons - Enable support for vector icons (experimental)
 media-gfx/graphicsmagick:dynamic-loading - Compile graphicsmagick with dynamically loadable modules
@@ -4873,6 +4877,7 @@ media-sound/mpd:twolame - Support twolame MPEG-2 encoding
 media-sound/mpd:webdav - Enable using music from a WebDAV share
 media-sound/mpd:wildmidi - Enable MIDI support via wildmidi
 media-sound/mpd:yajl - Enable JSON parsing via dev-libs/yajl
+media-sound/mpd:zlib - Enable database compression with sys-libs/zlib
 media-sound/mpfc:wav - Enable wav audio codec support
 media-sound/mpg123:int-quality - Use rounding instead of fast truncation for integer output, where possible
 media-sound/mpg123-base:int-quality - Use rounding instead of fast truncation for integer output, where possible
@@ -5357,7 +5362,6 @@ media-video/rav1e:capi - Build the C-API library and header file
 media-video/rtmpdump:gnutls - Use GnuTLS instead of OpenSSL for Cryptography
 media-video/rtmpdump:ssl - Enable Cryptographic features
 media-video/rtmpdump:tools - Enable installation of various binary tools in addition to librtmp library
-media-video/simplescreenrecorder:asm - Enable x86 assembly optimisation.
 media-video/totem:python - Build dev-lang/python using plugins (dbusservice for notifications and MPRIS control, interactive python console and opensubtitles lookup)
 media-video/vdr:alternatechannel - Use alternate channel on record
 media-video/vdr:bidi - fribidi support, for languages, written from right to left
@@ -6076,8 +6080,6 @@ net-irc/soju:moderncsqlite - Use moderncsqlite, a cgo-free port of SQLite
 net-irc/unrealircd:class-nofakelag - Enable an unsupported class::options flag called “nofakelag” allowing you to grant fakelag exemption to normal user (instead of just opers).
 net-irc/unrealircd:operoverride - Enable OperOverride extension
 net-irc/unrealircd:operoverride-verify - Enable requiring opers to invite themselves to +s/+p channels
-net-irc/unrealircd:prefixaq - Enable chanadmin and chanowner prefixes
-net-irc/unrealircd:showlistmodes - Display channel modes in /LIST (only configured at compiletime)
 net-irc/weechat:alias - Enable plugin for alias control
 net-irc/weechat:buflist - Enable buflist plugin
 net-irc/weechat:charset - Enable encoding conversions
@@ -6236,6 +6238,7 @@ net-libs/rabbitmq-c:tools - Builds cli tools to interact with brokers
 net-libs/rpc2:codatunneld - Support for codatunneld.
 net-libs/rtrlib:ssh - Enable SSH support
 net-libs/shairplay:playfair - Add support for handling fairplay handshake (used in for example screen mirroring)
+net-libs/tdlib:tde2e - Install tde2e headers and cmake config
 net-libs/tox:av - Adds support for audio and video.
 net-libs/tox:daemon - Enable the DHT Bootstrap Daemon.
 net-libs/tox:dht-node - Enables DHT Bootstrap Node.
@@ -6794,13 +6797,11 @@ net-p2p/bitcoin-core:cli - Build and install bitcoin-cli command line interface
 net-p2p/bitcoin-core:daemon - Build and install bitcoind daemon
 net-p2p/bitcoin-core:external-signer - Include support for external wallet signer programs
 net-p2p/bitcoin-core:gui - Build and install Bitcoin-Qt GUI
-net-p2p/bitcoin-core:nat-pmp - Enable NAT-PMP port forwarding
 net-p2p/bitcoin-core:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/bitcoin-core:sqlite - Support descriptor wallets in SQLite format
 net-p2p/bitcoin-core:system-libsecp256k1 - Link with dev-libs/libsecp256k1 rather than embedding an internal copy
 net-p2p/bitcoin-core:systemtap - Enable SystemTap/DTrace tracing
 net-p2p/bitcoin-core:test-full - Run tests that take a long time
-net-p2p/bitcoin-core:upnp - Enable Universal Plug and Play
 net-p2p/bitcoin-core:zeromq - Report blocks and transactions via zeromq
 net-p2p/dbhub:switch-user - Enable support for switching user
 net-p2p/deluge:console - Enable default console UI
@@ -7025,6 +7026,7 @@ net-vpn/strongswan:strongswan_plugins_sha2 - Enable plugin for SHA2 support
 net-vpn/strongswan:strongswan_plugins_sha3 - Enable plugin for SHA3 support
 net-vpn/strongswan:strongswan_plugins_soup - Enable libsoup based HTTP fetcher
 net-vpn/strongswan:strongswan_plugins_sshkey - Enable SSH key decoding routines
+net-vpn/strongswan:strongswan_plugins_stroke - Deprecated stroke configuration/control backend, to use with ipsec script and starter
 net-vpn/strongswan:strongswan_plugins_systime-fix - Enable support for the systime-fix plugin
 net-vpn/strongswan:strongswan_plugins_test-vectors - Enable set of test vectors for various algorithms
 net-vpn/strongswan:strongswan_plugins_unbound - Enable support for the unbound plugin
@@ -7038,7 +7040,6 @@ net-vpn/tinc:uml - Enable support for User Mode Linux Sockets
 net-vpn/tinc:vde - Enable Virtual Distributed Ethernet (VDE) based networking
 net-vpn/tor:scrypt - Use app-crypt/libscrypt for the scrypt algorithm
 net-vpn/tor:server - Enable tor's relay module so it can operate as a relay/bridge/authority
-net-vpn/tor:tor-hardening - Compile tor with hardening on vanilla compilers/linkers
 net-vpn/vpnc:resolvconf - Enable support for DNS managing framework net-dns/openresolv
 net-vpn/wireguard-modules:debug - Enable verbose debug reporting in dmesg of various WireGuard peer and device information.
 net-vpn/wireguard-modules:module - Compile the actual WireGuard kernel module. Most certainly you want this enabled, unless you're doing something strange.
@@ -8208,6 +8209,7 @@ sys-cluster/ceph:uring - Build with support for sys-libs/liburing
 sys-cluster/ceph:xfs - Add xfs support
 sys-cluster/ceph:zbd - Enable sys-block/libzbd bluestore backend
 sys-cluster/charliecloud:ch-image - Build the internal builder ch-image (previously named ch-grow)
+sys-cluster/charliecloud:fuse - Enable FUSE support for mounting squashfs images
 sys-cluster/charm:ampi - Build implementation of MPI on top of Charm++
 sys-cluster/charm:charmdebug - Enable the charm debugger
 sys-cluster/charm:charmproduction - Optimize performance of Charm++ runtime
@@ -8675,6 +8677,7 @@ www-client/chromium:official - Enable Official build instead of Developer build.
 www-client/chromium:pax-kernel - Allow building on a PaX-enabled kernel
 www-client/chromium:pgo - Build with Profile Guided Optimizations (2-stage compilation)
 www-client/chromium:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
+www-client/chromium:rar - Enable the Safe Browsing feature to inspect RAR files.
 www-client/chromium:system-harfbuzz - Use system media-libs/harfbuzz instead of the bundled library.
 www-client/chromium:system-icu - Use system dev-libs/icu instead of the bundled one
 www-client/chromium:system-png - Use system media-libs/libpng instead of the bundled library
@@ -8952,6 +8955,7 @@ x11-misc/tint2:sanitize - Enable ASAN
 x11-misc/tint2:tint2conf - Build/Install tint2conf as well
 x11-misc/urxvt-perls:deprecated - Install scripts which have been marked as deprecated by upstream
 x11-misc/wbar:gtk - Enables the gtk-based wbar-config GUI
+x11-misc/x11vnc:drm - Use x11-libs/libdrm to support shm key and drm schema in -rawfb option
 x11-misc/x11vnc:xdamage - Enable support for the Xdamage library
 x11-misc/x11vnc:xfixes - Enable support for the Xfixes library
 x11-misc/x11vnc:xrandr - Enable support for the X xrandr extension

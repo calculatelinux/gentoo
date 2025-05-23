@@ -36,6 +36,46 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-05-23)
+# Package destabilisation mask. There is simply no need for this without
+# any stable consumers, and it is freeing up resources.
+# 5.2.10.1 is available in ~arch.
+~media-libs/allegro-5.2.7.0
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-05-22)
+# Even if Qt5 is optional here, it is dead upstream for close to 10 years
+# and without Gentoo package maintainer almost as long. Bug #926074.
+# Removal on 2025-06-21.
+net-firewall/pglinux
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-05-22)
+# Package destabilisation mask. 0.4.4_p20250125 is in ~arch but as snapshot
+# with currently no Gentoo maintainer it will not be stabilised.
+# 0.4.4 release was more than 3 years old already. Bug #955653
+~media-video/simplescreenrecorder-0.4.4
+
+# Matt Turner <mattst88@gentoo.org> (2025-05-22)
+# Old slot depending on libsoup:2.4. All reverse dependencies migrated to a
+# newer slot supporting libsoup:3.0.
+# Removal on 2025-06-21.  Bug #893668.
+net-libs/webkit-gtk:4
+
+# Pacho Ramos <pacho@gentoo.org> (2025-05-22)
+# Needs porting to libsoup 3.0, relies on webkit-gtk:4
+# Removal on 2025-06-21.  Bug #893720.
+x11-misc/meteo
+
+# Sam James <sam@gentoo.org> (2025-05-22)
+# Introduces REQUIRED_USE that needs more discussion (bug #956402)
+=media-gfx/gimp-3.0.2-r2
+=media-gfx/gimp-3.0.4
+
+# Ionen Wolkens <ionen@gentoo.org> (2025-05-21)
+# Seems to be some bad interaction between this version and gpep517
+# that prevents installing the (successfully) produced wheel, mask
+# while being looked into (bug #956382).
+~dev-python/sip-6.11.0
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-05-20)
 # Unaddressed pending version bumps for almost 2 years, stuck on EAPI-7.
 # Bugs #908094, #908095, #908096, #908097, #908427, #908428
@@ -84,12 +124,6 @@ www-misc/htdig
 # gui-apps/input-leap - see also bugs #953262, #907118
 # Removal on 2025-06-12.
 x11-misc/synergy
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-05-13)
-# Package destabilisation mask. 1.5.1.2_p20241029 is in ~arch but as snapshot
-# with currently no Gentoo maintainer it will not be stabilised.
-# 5.1.2 release was more than 6 years old already. Bug #953259
-~x11-misc/qlipper-5.1.2
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-05-13)
 # No more revdeps, depends on Qt5. Bug #955654; removal on 2025-06-12.
@@ -253,12 +287,6 @@ dev-python/pyqtwebengine
 # Dead upstream, Qt5 based, no more revdeps. Bug #949019
 # Removal on 2025-05-24.
 dev-python/python-poppler-qt5
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-22)
-# Dead upstream, depends on downstream patching even for Qt5 support.
-# Almost no one else keeps packaging this. Bug #947622
-# Removal on 2025-05-22.
-sci-visualization/zhu3d
 
 # Michał Górny <mgorny@gentoo.org> (2025-04-22)
 # Metapackage used for pypy3 target in the past.
@@ -442,7 +470,7 @@ dev-python/pyside6-tools
 =dev-cpp/cpp-httplib-0.18.6
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-01-23)
-# Qt5 packages without any revdeps.
+# Qt5 tools without any revdeps.
 dev-qt/assistant
 dev-qt/linguist
 dev-qt/pixeltool
@@ -451,12 +479,15 @@ dev-qt/qdbusviewer
 dev-qt/qdoc
 dev-qt/qtdiag
 dev-qt/qtpaths
+dev-qt/qtplugininfo
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-01-23)
+# Qt5 packages without any revdeps. Removal on 2025-06-01.
 dev-qt/qt3d:5
 dev-qt/qtdatavis3d:5
 dev-qt/qtgamepad:5
 dev-qt/qtlocation:5
 dev-qt/qtnetworkauth:5
-dev-qt/qtplugininfo
 dev-qt/qtquicktimeline:5
 dev-qt/qtsensors:5
 dev-qt/qtserialbus:5
