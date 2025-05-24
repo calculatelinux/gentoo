@@ -7694,6 +7694,7 @@ sci-ml/XNNPACK:assembly - Build with assembly micro-kernels
 sci-ml/XNNPACK:jit - Build with JIT micro-kernels
 sci-ml/XNNPACK:memopt - Build with optimized memory allocation scheme
 sci-ml/XNNPACK:sparse - Build with graph rewriting for sparse inference
+sci-ml/caffe2:cusparselt - Use the CUDA Sparse Matrix Multiplication
 sci-ml/caffe2:distributed - Support distributed applications
 sci-ml/caffe2:fbgemm - Use sci-ml/FBGEMM
 sci-ml/caffe2:flash - Enable flash attention
@@ -8526,7 +8527,6 @@ sys-libs/libnbd:fuse - Install the sys-fs/fuse powered nbdfuse.
 sys-libs/libnbd:go - Build bindings for dev-lang/go
 sys-libs/libnvme:json - Support JSON output via dev-libs/json-c
 sys-libs/libnvme:keyutils - Add support for sys-apps/keyutils
-sys-libs/libnvme:uring - uring support via sys-libs/liburing
 sys-libs/libnvme:uuid - UUID support via sys-apps/util-linux
 sys-libs/libseccomp:experimental-loong - Add experimental LoongArch patchset
 sys-libs/libunwind:debug-frame - Adds support for DWARF .debug_frame section: Use the information from this section if available

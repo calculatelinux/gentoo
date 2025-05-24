@@ -36,6 +36,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-05-24)
+# Dead upstream, fails to build with GCC-14, depends on media-libs/dumb.
+# A rescue mission would ideally package dsda-doom. Bugs #939219, #908973
+# Removal on 2025-06-23.
+games-fps/prboom-plus
+
+# Sam James <sam@gentoo.org> (2025-05-23)
+# Severe memory leak (bug #953874)
+=app-i18n/ibus-anthy-1.5.17
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-05-23)
 # Package destabilisation mask. There is simply no need for this without
 # any stable consumers, and it is freeing up resources.
@@ -69,12 +79,6 @@ x11-misc/meteo
 # Introduces REQUIRED_USE that needs more discussion (bug #956402)
 =media-gfx/gimp-3.0.2-r2
 =media-gfx/gimp-3.0.4
-
-# Ionen Wolkens <ionen@gentoo.org> (2025-05-21)
-# Seems to be some bad interaction between this version and gpep517
-# that prevents installing the (successfully) produced wheel, mask
-# while being looked into (bug #956382).
-~dev-python/sip-6.11.0
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-05-20)
 # Unaddressed pending version bumps for almost 2 years, stuck on EAPI-7.
@@ -148,6 +152,9 @@ dev-util/intel_clc
 # https://jira.mariadb.org/browse/MDEV-36759
 # https://jira.mariadb.org/browse/MDEV-36765
 # https://jira.mariadb.org/browse/MDEV-36766
+#
+# Affected packages were removed from the tree, but this message shall be kept
+# untill 2025-06-23.
 ~dev-db/mariadb-10.11.12
 ~dev-db/mariadb-11.4.6
 
@@ -272,21 +279,6 @@ dev-db/sqliteman
 sci-visualization/scidavis
 x11-libs/qwtplot3d
 x11-libs/qwt:5
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-24)
-# Requires Qt5WebEngine; bug #925722
-# Removal on 2025-05-24 - with a good chance to be kept if ported by then.
-www-client/otter
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-24)
-# Requires Qt5WebEngine; no more revdeps. Bug #926684
-# Removal on 2025-05-24.
-dev-python/pyqtwebengine
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-24)
-# Dead upstream, Qt5 based, no more revdeps. Bug #949019
-# Removal on 2025-05-24.
-dev-python/python-poppler-qt5
 
 # Michał Górny <mgorny@gentoo.org> (2025-04-22)
 # Metapackage used for pypy3 target in the past.

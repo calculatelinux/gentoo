@@ -25,13 +25,16 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="PSF-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm"
+KEYWORDS="~alpha ~amd64 ~arm ~riscv ~x86"
 
 DEPEND="
 	dev-libs/isa-l:=
 "
 RDEPEND="
 	${DEPEND}
+"
+BDEPEND="
+	dev-python/test[${PYTHON_USEDEP}]
 "
 
 distutils_enable_tests pytest
