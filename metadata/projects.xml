@@ -658,6 +658,10 @@
       <name>Arthur Zamarin</name>
     </member>
     <member>
+      <email>juippis@gentoo.org</email>
+      <name>Joonas Niilola</name>
+    </member>
+    <member>
       <email>neddyseagoon@gentoo.org</email>
       <name>Roy Bamford</name>
     </member>
@@ -2022,10 +2026,6 @@
       <name>Miroslav Šulc</name>
     </member>
     <member>
-      <email>nativemad@gentoo.org</email>
-      <name>Andreas Schuerch</name>
-    </member>
-    <member>
       <email>stasibear@gentoo.org</email>
       <name>Erik Mackdanz</name>
     </member>
@@ -3074,6 +3074,22 @@
     </member>
   </project>
   <project>
+    <email>wsl@gentoo.org</email>
+    <name>WSL Project</name>
+    <url>https://wiki.gentoo.org/wiki/Project:WSL</url>
+    <description>The WSL Project maintains WSL configuration and handles WSL-specific bugs.</description>
+    <member>
+      <email>jayf@gentoo.org</email>
+      <name>Jay Faulkner</name>
+      <role>Now twice as Ironic!</role>
+    </member>
+    <member is-lead="1">
+      <email>kangie@gentoo.org</email>
+      <name>Matt Jolly</name>
+      <role>Reluctantly uses Windows, sometimes</role>
+    </member>
+  </project>
+  <project>
     <email>www@gentoo.org</email>
     <name>Website maintainers</name>
     <url>https://wiki.gentoo.org/wiki/Project:Website</url>
@@ -3181,10 +3197,6 @@
     <member>
       <email>jsmolic@gentoo.org</email>
       <name>Jakov Smolić</name>
-    </member>
-    <member>
-      <email>nativemad@gentoo.org</email>
-      <name>Andreas Schuerch</name>
     </member>
     <member>
       <email>sam@gentoo.org</email>

@@ -1,0 +1,16 @@
+BDEPEND=dev-util/gengetopt >=app-portage/elt-patches-20250306
+DEFINED_PHASES=configure install prepare
+DEPEND=double-double? ( sci-libs/qd:= ) quad-double? ( sci-libs/qd:= ) pari? ( sci-mathematics/pari:= )
+DESCRIPTION=Command-line utility and library for L-function computations
+EAPI=8
+HOMEPAGE=https://gitlab.com/sagemath/lcalc
+INHERIT=libtool
+IUSE=+double double-double quad-double pari
+KEYWORDS=~amd64 ~riscv
+LICENSE=GPL-2+
+RDEPEND=double-double? ( sci-libs/qd:= ) quad-double? ( sci-libs/qd:= ) pari? ( sci-mathematics/pari:= )
+REQUIRED_USE=^^ ( double double-double quad-double )
+SLOT=0/2
+SRC_URI=https://gitlab.com/-/project/12934202/uploads/487082fc3449dea93e9b85904a589742/lcalc-2.1.1.tar.xz
+_eclasses_=libtool	c81bd096be5f4c82f4e8f156ef112402	toolchain-funcs	f9d71a6efe9d083aec750dd13968e169
+_md5_=1b5946290e658da2afe43a6ddf4e698c

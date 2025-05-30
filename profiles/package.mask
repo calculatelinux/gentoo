@@ -36,6 +36,50 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Orlitzky <mjo@gentoo.org> (2025-05-28)
+# I added this for SageMath, but in hindsight do not think anyone is
+# using it. It has code issues and upstream is not terribly interested
+# in fixing it. (They are active and helpful, just not in love with this
+# particular codebase.) Bug 940232. Removal after 30 days.
+dev-gap/cohomolo
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-05-27)
+# Dead upstream with no release for over 10 years, Qt5-based even only by
+# means of a snapshot. Bugs #951875, #953016. Removal on 2025-06-26.
+x11-misc/qxkb
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-05-27)
+# Upstream repository+author, web pages and documentation gone after long
+# period of inactivity, based on Qt5. Bugs #949021, #940094
+# Removal on 2025-06-26.
+media-gfx/engauge
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-05-27)
+# sci-electronics/gazebo depends on x11-libs/qwt:6[qt5] and Qt5, lots of
+# open bugs. Most packages perpetually stuck at EAPI-7 and several major
+# version bumps out of date. Bugs #937608, #947390; removal on 2025-06-26.
+sci-electronics/gazebo
+dev-libs/sdformat
+net-libs/ignition-msgs
+net-libs/ignition-transport
+sci-libs/ignition-common
+sci-libs/ignition-fuel-tools
+sci-libs/ignition-math
+dev-build/ignition-cmake
+dev-libs/console_bridge
+dev-libs/urdfdom
+dev-libs/urdfdom_headers
+
+# Sam James <sam@gentoo.org> (2025-05-26)
+# Breaks some reverse dependencies and is abandoned upstream (bug #956630).
+=dev-cpp/glog-0.7.1
+
+# Nowa Ammerlaan <nowa@gentoo.org> (2025-05-25)
+# Archived upstream and no longer builds with modern compilers.
+# Bugs #956601, #930253
+# Removal on 2025-06-24
+media-libs/oneVPL-cpu
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-05-24)
 # Dead upstream, fails to build with GCC-14, depends on media-libs/dumb.
 # A rescue mission would ideally package dsda-doom. Bugs #939219, #908973
@@ -268,18 +312,6 @@ x11-themes/fvwm-themes
 x11-themes/fvwm-themes-extra
 =x11-themes/fvwm-crystal-3.7.5
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-26)
-# Dead upstream, stuck on Qt5, blocking x11-libs/qscintilla[qt5] cleanup
-# Bug #947297; removal on 2025-05-26
-dev-db/sqliteman
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-04-26)
-# Dead upstream, last revdep on x11-libs/qwtplot3d and x11-libs/qwt:5
-# Bugs #948047, #942455; removal on 2025-05-26
-sci-visualization/scidavis
-x11-libs/qwtplot3d
-x11-libs/qwt:5
-
 # Michał Górny <mgorny@gentoo.org> (2025-04-22)
 # Metapackage used for pypy3 target in the past.
 # Removal on 2025-05-22.
@@ -291,29 +323,10 @@ dev-python/pypy3
 # Removal on 2025-05-22.  Bug #954213.
 dev-python/unittest-or-fail
 
-# Hans de Graaff <graaff@gentoo.org> (2025-04-21)
-# ruby32-only slot. Use the newer slot instead.
-# Masked for removal on 2025-05-21.
-dev-ruby/highline:2
-
-# Hans de Graaff <graaff@gentoo.org> (2025-04-20)
-# ruby32-only slot. Use the newer slot instead.
-# Masked for removal on 2025-05-20.
-dev-ruby/activeldap:6
-
 # Michał Górny <mgorny@gentoo.org> (2025-04-19)
 # This package will no longer feature stable keywords, due to unresolved
 # test failures blocking the stabilization request for months.
 <dev-python/mpi4py-4
-
-# Hans de Graaff <graaff@gentoo.org> (2025-04-19)
-# Ruby 3.1 is no longer supported upstream and will no longer
-# receive security updates. This mask also includes any
-# remaining ruby31-only packages.
-dev-lang/ruby:3.1
-dev-ruby/async:1
-dev-ruby/pathutil
-=app-admin/puppet-7*
 
 # Conrad Kostecki <conikost@gentoo.org> (2025-04-18)
 # Package not needed anymore by the only consumer net-dns/hash-slinger.
@@ -727,7 +740,10 @@ media-plugins/kodi-game-libretro-dosbox
 # Masked for more testing especially of reverse-deps.
 # ogre 1.11/1.12 breakage: bug #834468
 # ogre 2.x breakage: bug #740424
->=dev-games/ogre-1.11.2
+dev-games/ogre:0/1.12
+dev-games/ogre:0/2.1
+dev-games/ogre:0/13.6
+dev-games/ogre:0/14.3
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2018-09-11)
 # Mask transition ebuilds that were needed only for <glibc-2.26
@@ -759,9 +775,9 @@ media-plugins/kodi-game-libretro-dosbox
 # switch the compiler / the binutils) ASAP. If you need them for a specific
 # (isolated) use case, feel free to unmask them on your system.
 <sys-libs/glibc-2.40-r8
-<sys-libs/binutils-libs-2.43-r3
-<sys-devel/binutils-2.43-r2
-<sys-devel/binutils-hppa64-2.43-r2
+<sys-libs/binutils-libs-2.44
+<sys-devel/binutils-2.44
+<sys-devel/binutils-hppa64-2.44
 
 # Michael Orlitzky <mjo@gentoo.org> (2017-01-07)
 # This package has some dangerous quality and security issues, but

@@ -1,0 +1,13 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=install postinst prepare setup
+DESCRIPTION=Modify realtime scheduling policy and priority of IRQ handlers
+EAPI=8
+HOMEPAGE=https://github.com/rncbc/rtirq
+INHERIT=linux-info systemd
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2+
+RDEPEND=sys-apps/util-linux
+SLOT=0
+SRC_URI=https://www.rncbc.org/archive/rtirq-20240905.tar.gz https://www.rncbc.org/archive/old/rtirq-20240905.tar.gz
+_eclasses_=linux-info	ea4122ba1d8791a12b78e53f9510a2e3	systemd	a964c0cbe818b5729da1dbfcee5be861	toolchain-funcs	f9d71a6efe9d083aec750dd13968e169
+_md5_=6ab115bbc86facfa52aae46d3423aa7b

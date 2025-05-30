@@ -1165,7 +1165,6 @@ app-text/enchant:hunspell - Adds support for app-text/hunspell spell checker
 app-text/enchant:nuspell - Adds support for app-text/nuspell spell checker
 app-text/enchant:voikko - Adds support for dev-libs/libvoikko spell checker
 app-text/evince:dvi - Enable the built-in DVI viewer
-app-text/evince:nautilus - Enable property page extension in gnome-base/nautilus
 app-text/evince:postscript - Enable support for PostScript and Adobe Illustrator documents with app-text/libspectre
 app-text/evince:spell - Enable inline spell check for annotations via app-text/gspell
 app-text/evince:xps - Enable XPS viewer using app-text/libgxps
@@ -1540,18 +1539,23 @@ dev-games/ogre:bullet - Use sci-physics/bullet for physics plugin
 dev-games/ogre:cache - Enable GL state cache support
 dev-games/ogre:cg - NVIDIA toolkit plugin
 dev-games/ogre:deprecated - Build deprecated nodeless positioning of Lights and Cameras.
+dev-games/ogre:dotscene - DotScene (.scene) file format support through dev-libs/pugixml
 dev-games/ogre:double-precision - More precise calculations at the expense of speed
 dev-games/ogre:egl - Use egl instead of glx
+dev-games/ogre:egl-only - Use EGL instead of GLX
 dev-games/ogre:fine-granularity - Enable fine light mask granularity. This impacts on performance and should not be enabled unless an application really needs it.
 dev-games/ogre:freeimage - Support images via media-libs/freeimage
 dev-games/ogre:gl3plus - Build OpenGL 3+ RenderSystem
 dev-games/ogre:gles3 - Enable OpenGL ES 3.x Features
+dev-games/ogre:glslang - Build Glslang plugin
 dev-games/ogre:json - Use dev-libs/rapidjson (needed by Hlms JSON materials)
 dev-games/ogre:legacy-animations - Use the skeletal animation from 1.x. It's much slower, but the new system is still experimental.
 dev-games/ogre:ois - Pull in Object-oriented Input System library dev-games/ois for samples
 dev-games/ogre:poco - When USE=threads, use poco for threading
 dev-games/ogre:resman-pedantic - Resource Manager PEDANTIC : require an explicit resource group. Case sensitive lookup. Some demos might not work with this setting. (default: case-insensitive + sensitive lookup in all groups)
+dev-games/ogre:samples - Build and install Ogre demos
 dev-games/ogre:tbb - When USE=threads, use tbb for threading
+dev-games/ogre:tiny - Build Tiny RenderSystem (software-rendering)
 dev-games/ogre:tools - Build and install AssimpConverter (assimp USE flag is enabled), MeshUpgrader, VRMLConverter and XMLConverter
 dev-games/openscenegraph:collada - Enable DAE file support via dev-libs/collada-dom
 dev-games/openscenegraph:dicom - Enable DICOM medical image file support via sci-libs/dcmtk
@@ -2232,7 +2236,6 @@ dev-libs/protobuf:protoc - Build libprotoc and protoc compiler
 dev-libs/qcoro:network - Build dev-qt/qtbase network support
 dev-libs/qcoro:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
 dev-libs/qcoro:websockets - Build dev-qt/qtwebsockets support
-dev-libs/qhotkey:qt6 - Use Qt6 dependencies
 dev-libs/quazip:qt5 - Build with Qt5 support
 dev-libs/quazip:qt6 - Build with Qt6 support
 dev-libs/raft:zfs - ZFS support
@@ -2576,6 +2579,7 @@ dev-python/translate-toolkit:subtitles - Support conversion between po and sub f
 dev-python/translate-toolkit:yaml - Support YAML format
 dev-python/twisted:conch - include Twisted SSHv2 implementation
 dev-python/twisted:serial - include serial port support
+dev-python/twisted:websockets - include websocket support
 dev-python/websockets:native-extensions - Compiles native C extensions
 dev-python/wrapt:native-extensions - Compiles native C extensions (speedups, instead of using python fallback code).
 dev-python/zeep:async - Add async support
@@ -3195,6 +3199,11 @@ games-fps/doomsday:display-mode - Include the ability to set the display mode
 games-fps/doomsday:fluidsynth - Build the FluidSynth sound driver
 games-fps/doomsday:freedoom - Install launcher for doom1.wad from games-fps/freedoom
 games-fps/doomsday:tools - Build additional tools such as doomsday-shell, md2tool and texc
+games-fps/dsda-doom:fluidsynth - Enable support for MIDI via media-sound/fluidsynth
+games-fps/dsda-doom:mad - Enable support for MPEG audio via media-libs/libmad
+games-fps/dsda-doom:portmidi - Enable support for MIDI via media-libs/portmidi
+games-fps/dsda-doom:sdl2-image - Enable support for high-resolution textures and other image formats via media-libs/sdl2-image
+games-fps/dsda-doom:vorbis - Enable support for Ogg Vorbis audio via media-libs/libvorbis
 games-fps/duke3d-data:demo - Extract data files from the shareware version.
 games-fps/duke3d-data:gog - Extract data files from the GOG.com version.
 games-fps/eduke32:duke3d - Install the Duke Nukem 3D data files, provided by games-fps/duke3d-data.
@@ -3903,6 +3912,7 @@ mail-client/thunderbird:system-jpeg - Use the system-wide media-libs/libjpeg-tur
 mail-client/thunderbird:system-libevent - Use the system-wide dev-libs/libevent instead of bundled.
 mail-client/thunderbird:system-librnp - Use system-wide dev-util/librnp instead of bundled one.
 mail-client/thunderbird:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled.
+mail-client/thunderbird:system-pipewire - Use system media-video/pipewire for WebRTC and screencast instead of bundled one
 mail-client/thunderbird:system-png - Use the system-wide media-libs/libpng instead of bundled (requires APNG patches)
 mail-client/thunderbird:system-webp - Use the system-wide media-libs/libwebp instead of bundled.
 mail-client/thunderbird:wifi - Enable necko-wifi for NetworkManager integration, and access point MAC address scanning for better precision with opt-in geolocation services
@@ -5703,6 +5713,7 @@ net-dns/bind:doh - Enables dns-over-https
 net-dns/bind:fixed-rrset - Enables fixed rrset-order option
 net-dns/bind:gssapi - Enable gssapi support
 net-dns/bind:lmdb - Enable LMDB support to store configuration for 'addzone' zones
+net-dns/bind:systemtap - Build support for profiling and tracing using dev-debug/systemtap
 net-dns/bind-tools:gssapi - Enable gssapi support
 net-dns/ddclient:examples - Install various example files, like for cron.
 net-dns/djbdns:ipv6 - Apply Fefe's patch (https://www.fefe.de/dns/) for ipv6 support.
@@ -6827,7 +6838,8 @@ net-p2p/ktorrent:zeroconf - Discover peers on the local network using the Zeroco
 net-p2p/mldonkey:bittorrent - enable bittorrent support
 net-p2p/mldonkey:fasttrack - enable fasttrack support
 net-p2p/mldonkey:gnutella - enable gnutella and gnutella2 support
-net-p2p/qbittorrent:webui - Install qBittorrent Web UI (qbittorrent-nox) and systemd/OpenRC service
+net-p2p/qbittorrent:dbus - Enable support for notifications and power-management features via D-Bus
+net-p2p/qbittorrent:webui - Install qBittorrent Web UI (qbittorrent-nox)
 net-p2p/retroshare:cli - Enables terminal login support for retroshare-service
 net-p2p/retroshare:jsonapi - Enables the new RetroShare JSON API
 net-p2p/retroshare:libupnp - Enables UPnP port forwarding via net-libs/libupnp
@@ -7818,8 +7830,6 @@ sci-visualization/paraview:cg - Add support for nvidia's cg shaders
 sci-visualization/paraview:nvcontrol - Add NVCONTROL support for OpenGL options
 sci-visualization/paraview:plugins - Build and install additional plugins
 sci-visualization/paraview:webengine - Add support for dev-qt/qtwebengine
-sci-visualization/scidavis:origin - Add support for reading OriginLab OPJ project files through sci-libs/liborigin.
-sci-visualization/scidavis:python - Build support for python scripting.
 sec-policy/selinux-base:ubac - Enable User Based Access Control (UBAC) in the SELinux policy
 sec-policy/selinux-base:unconfined - Enable support for the unconfined SELinux module
 sec-policy/selinux-base:unknown-perms - Default allow unknown classes in kernels newer than the policy (SELinux policy capability).
@@ -8484,6 +8494,7 @@ sys-kernel/mips-sources:ip27 - Enables additional support for SGI Origin (IP27)
 sys-kernel/mips-sources:ip28 - Enables additional support for SGI Indigo2 Impact R10000 (IP28)
 sys-kernel/mips-sources:ip30 - Enables support for SGI Octane (IP30, 'Speedracer')
 sys-kernel/rt-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
+sys-kernel/vanilla-kernel:generic-uki - Build and install a generic initramfs and Unified Kernel Image, this is intended for building binpkgs with a pre-generated UKI included (EXPERIMENTAL).
 sys-kernel/vanilla-kernel:initramfs - Build initramfs along with the kernel.
 sys-libs/binutils-libs:64-bit-bfd - Support 64-bit targets even on 32-bit hosts (is ignored on 64-bit hosts)
 sys-libs/binutils-libs:cet - Enable Intel Control-flow Enforcement Technology.
@@ -8712,6 +8723,7 @@ www-client/firefox:system-icu - Use the system-wide dev-libs/icu instead of bund
 www-client/firefox:system-jpeg - Use the system-wide media-libs/libjpeg-turbo instead of bundled
 www-client/firefox:system-libevent - Use the system-wide dev-libs/libevent instead of bundled
 www-client/firefox:system-libvpx - Use the system-wide media-libs/libvpx instead of bundled
+www-client/firefox:system-pipewire - Use system media-video/pipewire for WebRTC and screencast instead of bundled one
 www-client/firefox:system-png - Use the system-wide media-libs/libpng instead of bundled (requires APNG patches)
 www-client/firefox:system-webp - Use the system-wide media-libs/libwebp instead of bundled
 www-client/firefox:wasm-sandbox - Sandbox certain third-party libraries through WebAssembly using RLBox
