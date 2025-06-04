@@ -338,10 +338,8 @@ multilib_src_install_all() {
 		doins "${FILESDIR}"/99-pipewire-default-hook.conf
 		eprefixify "${ED}"/usr/share/alsa/alsa.conf.d/99-pipewire-default-hook.conf
 
-		# These will break if someone has /etc that is a symbolic link to a subfolder! See #724222
-		# And the current dosym8 -r implementation is likely affected by the same issue, too.
-		dosym ../../../usr/share/alsa/alsa.conf.d/50-pipewire.conf /etc/alsa/conf.d/50-pipewire.conf
-		dosym ../../../usr/share/alsa/alsa.conf.d/99-pipewire-default-hook.conf /etc/alsa/conf.d/99-pipewire-default-hook.conf
+		dosym -r /usr/share/alsa/alsa.conf.d/50-pipewire.conf /etc/alsa/conf.d/50-pipewire.conf
+		dosym -r /usr/share/alsa/alsa.conf.d/99-pipewire-default-hook.conf /etc/alsa/conf.d/99-pipewire-default-hook.conf
 	fi
 
 	exeinto /etc/user/init.d
@@ -511,7 +509,7 @@ pkg_postinst() {
 			ewarn
 			ewarn "USE=sound-server is disabled! If you want PipeWire to provide"
 			ewarn "your sound, please enable it. See the wiki at"
-			ewarn "https://wiki.gentoo.org/wiki/PipeWire#Replacing_PulseAudio"
+			ewarn "https://wiki.gentoo.org/wiki/PipeWire"
 			ewarn "for more details."
 			ewarn
 		fi

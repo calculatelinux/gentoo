@@ -1378,11 +1378,6 @@
       <role>Member (Kernel, gentoo-sources, hardened-sources, genpatches)</role>
     </member>
     <member>
-      <email>mpagano@gentoo.org</email>
-      <name>Mike Pagano</name>
-      <role>Member (Kernel, gentoo-sources, genpatches)</role>
-    </member>
-    <member>
       <email>zorry@gentoo.org</email>
       <name>Magnus Granberg</name>
       <role>Member (Kernel, hardened)</role>
@@ -1554,6 +1549,25 @@
     <member>
       <email>xgqt@gentoo.org</email>
       <name>Maciej Barć</name>
+    </member>
+  </project>
+  <project>
+    <email>dist-kernel@gentoo.org</email>
+    <name>Distribution Kernel</name>
+    <url>https://wiki.gentoo.org/wiki/Handbook:Parts/Installation/Kernel/es</url>
+    <description>Dist-kernel project maintains packages providing for zero-effort kernel install and upgrades</description>
+    <member>
+      <email>gyakovlev@gentoo.org</email>
+      <name>Georgy Yakovlev</name>
+      <role>ppc64 maintenance, testing</role>
+    </member>
+    <member>
+      <email>nowa@gentoo.org</email>
+      <name>Nowa Ammerlaan</name>
+    </member>
+    <member>
+      <email>sam@gentoo.org</email>
+      <name>Sam James</name>
     </member>
   </project>
   <project>

@@ -195,6 +195,8 @@ app-admin/ulogd:nflog - Build NFLOG input plugin to support stateless packet-bas
 app-admin/ulogd:pcap - Build PCAP output plugin to save packets in libpcap file format
 app-admin/ulogd:ulog - Build ULOG input plugin to support deprecated packet-based logging via ULOG target
 app-admin/vault:webui - Enable the Web UI
+app-admin/vaultwarden:cli - Install client with the Command-Line Interface
+app-admin/vaultwarden:web - Install client with Web UI
 app-admin/webalizer:xtended - Include the 404 extension
 app-admin/webapp-config:portage - Propagate python_targets dependencies to sys-apps/portage
 app-alternatives/awk:busybox - Symlink to sys-apps/busybox
@@ -267,6 +269,7 @@ app-arch/p7zip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii f
 app-arch/p7zip:rar - Enable support for non-free rar decoder
 app-arch/rar:all-sfx - Install all SFX (Self-Extracting) files rather than just the native format (allows creation of Windows EXEs on Linux ELF systems)
 app-arch/rpm:sequoia - Use app-crypt/rpm-sequoia instead of the deprecated internal parser
+app-arch/sasquatch:deprecated - Enable deprecated LZMA1 support
 app-arch/tar:minimal - just install `tar`
 app-arch/unzip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii file names archived in Windows.
 app-arch/wimlib:fuse - Use fuse libraries
@@ -1000,6 +1003,7 @@ app-misc/unfoo:minimal - Do not install all support archive binaries
 app-misc/vcontrold:vclient - Build the vclient helper program to talk to vcontrold
 app-misc/vcontrold:vsim - Build the vsim helper program (simulates the heating's answers, for development and debugging)
 app-misc/vifm:extended-keys - Support for extended keys (arrows, home etc)
+app-misc/vifm:glib - Use dev-libs/glib:2 to determine mimetypes
 app-misc/vifm:gtk - Use gtk+ to determine mimetypes
 app-misc/vifm:vim - Install the vifm vim plugin and vim-compatible documentation
 app-misc/worker:avfs - Enable support for sys-fs/avfs
@@ -2399,7 +2403,6 @@ dev-python/frozenlist:native-extensions - Compile native C extensions (speedups,
 dev-python/google-api-core:grpc - Pull (heavy) gRPC dependencies in, that are optionally required by part of the API.
 dev-python/httpx:cli - Install the CLI "httpx" client.
 dev-python/hypothesis:cli - Install a CLI tool used to write tests.
-dev-python/icalendar:doc - Generate examples and other extra documentation
 dev-python/immutables:native-extensions - Compiles native "C" extensions (speedups, instead of using Python fallback code).
 dev-python/ipython:nbconvert - Enable support for converting notebooks to various formats using app-text/pandoc
 dev-python/ipython:notebook - Install requirements for the web notebook based on dev-python/tornado
@@ -2428,7 +2431,6 @@ dev-python/pyopengl-accelerate:numpy - Building NumPy native format handlers.
 dev-python/pypax:ptpax - Enable PT_PAX_FLAGS support.
 dev-python/pypax:xtpax - Enable XATTR_PAX_FLAGS support.
 dev-python/pypy-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
-dev-python/pypy3:test-install - Install the test suite packages, that are required to run tests in a few reverse dependencies.
 dev-python/pypy3_10-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
 dev-python/pyqt5:dbus - Build bindings for the QtDBus module
 dev-python/pyqt5:declarative - Build bindings for the QtQml and QtQuick modules and enable the qmlscene plugin
@@ -2602,10 +2604,10 @@ dev-qt/qt-docs:bluetooth - Install documentation for dev-qt/qtconnectivity[bluet
 dev-qt/qt-docs:charts - Install documentation for dev-qt/qtcharts
 dev-qt/qt-docs:concurrent - Install documentation for dev-qt/qtconcurrent
 dev-qt/qt-docs:connectivity - Install documentation for dev-qt/qtconnectivity
-dev-qt/qt-docs:datavis - Install documentation for dev-qt/qtdatavis3d (unpackaged for Qt6)
+dev-qt/qt-docs:datavis - Install documentation for QtDataVisualization (unpackaged for Qt6)
 dev-qt/qt-docs:declarative - Install documentation for dev-qt/qtdeclarative
 dev-qt/qt-docs:designer - Install documentation for dev-qt/designer
-dev-qt/qt-docs:gamepad - Install documentation for dev-qt/qtgamepad (available in qt overlay only)
+dev-qt/qt-docs:gamepad - Install documentation for QtGamepad (pkgremoved, not available for Qt6)
 dev-qt/qt-docs:graphicaleffects - Install documentation for dev-qt/qtgraphicaleffects
 dev-qt/qt-docs:graphs - Install documentation for QtGraphs (unpackaged)
 dev-qt/qt-docs:grpc - Install documentation for QtGRPC (unpackaged)
@@ -2634,7 +2636,7 @@ dev-qt/qt-docs:remoteobjects - Install documentation for QtRemoteObjects (unpack
 dev-qt/qt-docs:script - Install documentation for dev-qt/qtscript
 dev-qt/qt-docs:scxml - Install documentation for dev-qt/qtscxml
 dev-qt/qt-docs:sensors - Install documentation for dev-qt/qtsensors
-dev-qt/qt-docs:serialbus - Install documentation for dev-qt/qtserialbus (unpacakged for Qt6)
+dev-qt/qt-docs:serialbus - Install documentation for dev-qt/qtserialbus (unpackaged for Qt6)
 dev-qt/qt-docs:serialport - Install documentation for dev-qt/qtserialport
 dev-qt/qt-docs:shadertools - Install documentation for dev-qt/qtshadertools
 dev-qt/qt-docs:speech - Install documentation for dev-qt/qtspeech
@@ -2651,7 +2653,6 @@ dev-qt/qt-docs:webview - Install documentation for dev-qt/qtwebview (unpackaged 
 dev-qt/qt-docs:widgets - Install documentation for dev-qt/qtwidgets
 dev-qt/qt-docs:x11extras - Install documentation for dev-qt/qtx11extras
 dev-qt/qt-docs:xmlpatterns - Install documentation for dev-qt/qtxmlpatterns
-dev-qt/qt3d:gamepad - Add support for gamepad hardware via dev-qt/qtgamepad
 dev-qt/qt3d:qml - Build QML/QtQuick bindings
 dev-qt/qt5compat:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtbase:X - Build the XCB platform plugin and enable X11 integration
@@ -2675,7 +2676,6 @@ dev-qt/qtcharts:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtconnectivity:neard - Use net-wireless/neard to access NFC devices
 dev-qt/qtconnectivity:nfc - Enable support for the Near Field Communication protocol
 dev-qt/qtcore:old-kernel - Disable syscalls not available on Linux kernels older than 4.11
-dev-qt/qtdatavis3d:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtdeclarative:localstorage - Build the LocalStorage import for QtQuick (requires QtSql)
 dev-qt/qtdeclarative:network - Enable QtNetwork support
 dev-qt/qtdeclarative:opengl - Enable OpenGL support
@@ -2684,8 +2684,6 @@ dev-qt/qtdeclarative:sql - Enable QtSQL support
 dev-qt/qtdeclarative:widgets - Enable QtWidgets support
 dev-qt/qtdiag:network - Report network information
 dev-qt/qtdiag:widgets - Report widget style information
-dev-qt/qtgamepad:evdev - Enable support for input devices via evdev
-dev-qt/qtgamepad:qml - Build QML bindings
 dev-qt/qtgui:X - Build the XCB platform plugin and enable X11 integration
 dev-qt/qtgui:eglfs - Build the EGL Full Screen/Single Surface platform plugin
 dev-qt/qtgui:evdev - Enable support for input devices via evdev
@@ -2729,7 +2727,6 @@ dev-qt/qttools:qtattributionsscanner - Build Qt Source Code Attribution Scanner
 dev-qt/qttools:qtdiag - Build Qt Diag
 dev-qt/qttools:qtplugininfo - Build Qt Plugin Info
 dev-qt/qttools:widgets - Enable QtWidgets support
-dev-qt/qtvirtualkeyboard:handwriting - Adds handwriting recognition integration support
 dev-qt/qtwayland:compositor - Enable support for the wayland compositor / server APIs
 dev-qt/qtwayland:gnome - Build the GNOME-like decoration plugin (loaded by default with GNOME)
 dev-qt/qtwayland:qml - Build QML/QtQuick bindings and imports
@@ -2906,7 +2903,6 @@ dev-util/hip:video_cards_nvidia - Build for Nvidia platform
 dev-util/idea-community:experimental - Enables Wayland support preview.
 dev-util/intel-graphics-compiler:vc - Enable VectorCompiler for a better performance.
 dev-util/intel-graphics-system-controller:cli - Build CLI tools for flashing manually a firmware upgrade.
-dev-util/kcov:binutils - Use sys-libs/binutils-libs for `--verify` support
 dev-util/kdevelop:gdbui - Enable GUI for attaching GDB to a running process
 dev-util/kdevelop:qmake - Enable support for QMake build system
 dev-util/kdevelop:share - Enable support for patch sharing using kde-frameworks/purpose
@@ -3636,7 +3632,6 @@ kde-frameworks/kfilemetadata:epub - Enable support for reading EPUB ebook metada
 kde-frameworks/kfilemetadata:mobi - Enable mobipocket support via kde-apps/kdegraphics-mobipocket
 kde-frameworks/kiconthemes:designer - Build plugins for dev-qt/designer
 kde-frameworks/kimageformats:eps - Support the EPS graphics file format
-kde-frameworks/kinit:caps - Capabilities support for improved security and better OOM handling
 kde-frameworks/kio:designer - Build plugins for dev-qt/designer
 kde-frameworks/kio:kwallet - Enable permanent storage of passwords for kpasswdserver with kde-frameworks/kwallet
 kde-frameworks/kitemmodels:qml - Enable QML support via dev-qt/qtdeclarative
@@ -3995,6 +3990,7 @@ mail-mta/postfix:mongodb - Add support for using dev-db/mongodb for lookup table
 mail-mta/postfix:tlsrpt - Add support for TLSRPT protocol
 mail-mta/qpsmtpd:postfix - create user with permissions for proper postfix interaction
 mail-mta/sendmail:eai - Add support for SMTPUTF8
+mail-mta/sendmail:fips - Add support for FIPS mode (experimental)
 mail-mta/sendmail:tinycdb - Add support for using dev-db/tinycdb for lookup tables
 mail-mta/ssmtp:mta - Install symlinks for sendmail-compatible MTA.
 mate-base/caja:mate - Install x11-themes/mate-icon-theme which is needed when this package is used in the MATE desktop environment.
@@ -5121,7 +5117,6 @@ media-video/aravis:viewer - Build the GTK+-based video viewer.
 media-video/bluray_info:mpv - Build bluray_player, powered by media-video/mpv
 media-video/droidcam:gtk - Build the dev-cpp/gtkmm:3.0 client.
 media-video/dvd_info:libmpv - Build DVD player using libmpv
-media-video/ffdiaporama:openclipart - Support openclipart database
 media-video/ffmpeg:amf - Enable AMD's Advanced Media Framework support via media-video/amdgpu-pro-amf
 media-video/ffmpeg:amr - Enable Adaptive Multi-Rate Audio support via media-libs/opencore-amr
 media-video/ffmpeg:amrenc - Enable Adaptive Multi-Rate Audio encoding support via media-libs/vo-amrwbenc
@@ -7458,6 +7453,7 @@ sci-libs/libqalculate:hardened - Disable unsafe functions like 'command' and var
 sci-libs/libsc:romio - Build with support for the ROMIO MPI-IO component
 sci-libs/libsemigroups:eigen - Use dev-cpp/eigen (at build time only) to speed up some matrix operations.
 sci-libs/libsigrok:ftdi - Enable drivers that need dev-embedded/libftdi
+sci-libs/libsigrok:gpib - Enable drivers that need sci-libs/linux-gpib
 sci-libs/libsigrok:hidapi - Enable drivers that need dev-libs/hidapi
 sci-libs/libsigrok:nettle - Enable drivers that need dev-libs/nettle
 sci-libs/libsigrok:parport - Enable drivers that are parallel (IEEE1284) based
@@ -9096,9 +9092,6 @@ x11-wm/enlightenment:xwayland - Enable XWayland application support
 x11-wm/fluxbox:slit - Enables the Fluxbox slit (or dock)
 x11-wm/fluxbox:systray - Enables the system tray in the Fluxbox toolbar
 x11-wm/fluxbox:toolbar - Enables the Fluxbox toolbar
-x11-wm/fvwm:lock - Enable screen locking
-x11-wm/fvwm:netpbm - Enable NetPBM support (used by FvwmScript-ScreenDump)
-x11-wm/fvwm:stroke - Mouse Gesture support
 x11-wm/fvwm3:go - Enable building dev-lang/go code (FvwmPrompt)
 x11-wm/i3:doc - Build and install the HTML documentation and regenerate the man pages
 x11-wm/icewm:gdk-pixbuf - Enable gdk-pixbuf rendering
