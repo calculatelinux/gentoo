@@ -5,12 +5,6 @@ From: Johannes Lorenz <j.git@lorenz-ho.me>
 Date: Fri, 16 May 2025 20:54:44 +0200
 Subject: [PATCH] Fix #383: Only install lv2gui if Lv2 *and* GUI are set
 
----
- src/CMakeLists.txt | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index f8021af63..372af67a4 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
 @@ -121,7 +121,7 @@ endif()

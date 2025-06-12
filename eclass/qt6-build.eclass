@@ -178,6 +178,9 @@ qt6-build_src_configure() {
 		local mycmakeargs=("${defaultcmakeargs[@]}")
 	fi
 
+	# Qt has quite a lot of unused (false positive) CMakeLists.txt
+	local CMAKE_QA_COMPAT_SKIP=1
+
 	cmake_src_configure
 }
 
@@ -235,24 +238,6 @@ _qt6-build_create_user_facing_links() {
 	# user_facing_tool_links.txt is always created (except for qttranslations)
 	# even if no links (empty), if missing will assume that it is an error
 	[[ ${PN} == qttranslations ]] && return
-
-	# TODO: drop when <6.8.3 is gone, unneeded version with relative paths
-	if ver_test -lt 6.8.3; then
-		local link
-		while IFS= read -r link; do
-			if [[ -z ${link} ]]; then
-				continue
-			elif [[ ${link} =~ ^("${QT6_PREFIX}"/.+)\ ("${QT6_PREFIX}"/bin/.+) ]]
-			then
-				dosym -r "${BASH_REMATCH[1]#"${EPREFIX}"}" \
-					"${BASH_REMATCH[2]#"${EPREFIX}"}"
-			else
-				die "unrecognized user_facing_tool_links.txt line: ${link}"
-			fi
-		done < "${BUILD_DIR}"/user_facing_tool_links.txt || die
-
-		return
-	fi
 
 	local link
 	while IFS= read -r link; do

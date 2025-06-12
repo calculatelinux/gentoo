@@ -14,4 +14,4 @@ RESTRICT=!test? ( test )
 SLOT=0/6.9.13-0
 SRC_URI=mirror://imagemagick/ImageMagick-6.9.13-16.tar.xz
 _eclasses_=flag-o-matic	b892042b2667b8ac69ec8a2571dc290a	libtool	c81bd096be5f4c82f4e8f156ef112402	perl-functions	1863acf0982afafc67797e3ce7275b4c	toolchain-funcs	f9d71a6efe9d083aec750dd13968e169
-_md5_=da53f362c4aa8dc3468731f27a214db8
+_md5_=f1ddf5ddb75d408ea83f39fbc1efdc97
