@@ -36,6 +36,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Maciej Barć <xgqt@gentoo.org> (2025-06-14)
+# Deprecated, repository archived upstream. Compilation problems.
+# Removal on 2025-07-14. bug #957435
+sci-mathematics/boolector
+
 # Sam James <sam@gentoo.org> (2025-06-12)
 # Breaks several applications (bug #957943)
 >=dev-python/pygobject-3.52
@@ -265,17 +270,6 @@ dev-libs/icu-le-hb
 # Alfred Wingate <parona@protonmail.com> (2025-05-17)
 # Masked for testing
 dev-db/mysql:8.4
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-05-15)
-# Very dead upstream, very many open bugs for years without anyone fixing.
-# Bugs #314835, #632432, #827131, #874429, #908830, #925513, #934808.
-# Removal on 2025-06-14.
-www-misc/htdig
-
-# Matt Turner <mattst88@gentoo.org> (2025-05-13)
-# Package is replaced by dev-util/mesa_clc.
-# Removal on 2025-06-12.  Bug #955925.
-dev-util/intel_clc
 
 # Petr Vaněk <arkamar@gentoo.org> (2025-05-12)
 # A serious performance regression has been found in 10.11.12 and 11.4.6

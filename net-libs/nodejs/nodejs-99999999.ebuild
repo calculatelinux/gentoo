@@ -35,7 +35,7 @@ RESTRICT="!test? ( test )"
 
 RDEPEND=">=app-arch/brotli-1.1.0:=
 	dev-db/sqlite:3
-	>=dev-libs/libuv-1.49.2:=
+	>=dev-libs/libuv-1.51.0:=
 	>=dev-libs/simdjson-3.10.1:=
 	>=net-dns/c-ares-1.34.4:=
 	>=net-libs/nghttp2-1.64.0:=
@@ -48,7 +48,10 @@ RDEPEND=">=app-arch/brotli-1.1.0:=
 		>=dev-libs/openssl-1.1.1:0=
 	)
 	!system-ssl? ( >=net-libs/ngtcp2-1.9.1:=[-gnutls] )
-	sys-devel/gcc:*"
+	|| (
+		sys-devel/gcc:*
+		llvm-runtimes/libatomic-stub
+	)"
 BDEPEND="${PYTHON_DEPS}
 	app-alternatives/ninja
 	sys-apps/coreutils
@@ -107,10 +110,7 @@ src_prepare() {
 	fi
 
 	# We need to disable mprotect on two files when it builds Bug 694100.
-	use pax-kernel && PATCHES+=( "${FILESDIR}"/${PN}-22.12.0-paxmarking.patch )
-
-	# bug 931256
-	use riscv && PATCHES+=( "${FILESDIR}"/${PN}-22.2.0-riscv.patch )
+	use pax-kernel && PATCHES+=( "${FILESDIR}"/${PN}-24.1.0-paxmarking.patch )
 
 	default
 }
@@ -122,18 +122,8 @@ src_configure() {
 	filter-lto
 	# The warnings are *so* noisy and make build.logs massive
 	append-cxxflags $(test-flags-CXX -Wno-template-id-cdtor)
-	# GCC with -ftree-vectorize miscompiles node's exception handling code
-	# causing it to fail to catch exceptions sometimes
-	# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=116057
-	tc-is-gcc && append-cxxflags -fno-tree-vectorize
 	# https://bugs.gentoo.org/931514
 	use arm64 && append-flags $(test-flags-CXX -mbranch-protection=none)
-	# nodejs unconditionally links to libatomic #869992
-	# specifically it requires __atomic_is_lock_free which
-	# is not yet implemented by llvm-runtimes/compiler-rt (see
-	# https://reviews.llvm.org/D85044?id=287068), therefore
-	# we depend on gcc and force using libgcc as the support lib
-	tc-is-clang && append-ldflags "--rtlib=libgcc --unwindlib=libgcc"
 
 	local myconf=(
 		--ninja
