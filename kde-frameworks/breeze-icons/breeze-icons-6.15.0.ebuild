@@ -4,7 +4,7 @@
 EAPI=8
 
 PYTHON_COMPAT=( python3_{10..13} )
-inherit cmake frameworks.kde.org python-any-r1 xdg
+inherit cmake flag-o-matic frameworks.kde.org python-any-r1 xdg
 
 DESCRIPTION="Breeze SVG icon theme"
 
@@ -26,11 +26,18 @@ BDEPEND="${PYTHON_DEPS}
 	test? ( app-misc/fdupes )
 "
 
+PATCHES=( "${FILESDIR}/${P}-x86-fix.patch" ) # fixed in 6.16
+
 python_check_deps() {
 	python_has_version "dev-python/lxml[${PYTHON_USEDEP}]"
 }
 
 src_configure() {
+	# There's a trade-off between allowing LTO upstream vs supporting
+	# compilation with less RAM available because of how Qt resources work.
+	# See bug #931904 and bug #956679.
+	filter-lto
+
 	local mycmakeargs=(
 		-DPython_EXECUTABLE="${PYTHON}"
 		-DBINARY_ICONS_RESOURCE=ON # TODO: remove when kexi was ported away
