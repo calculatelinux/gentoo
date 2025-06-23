@@ -88,9 +88,7 @@ app-admin/keepassxc:ssh-agent - Use KeePassXC to unlock SSH keys
 app-admin/keepassxc:yubikey - Enable database unlocking via hardware keys supporting YubiKey-style HMAC-SHA1 protocol
 app-admin/lnav:pcap - Enable support for pcap files.
 app-admin/logcheck:cron - Adds file to enable hourly cron job to run logcheck"
-app-admin/logrotate:acl - Installs acl support
 app-admin/logrotate:cron - Installs cron file
-app-admin/logrotate:selinux - Installs Security Enhanced Linux support
 app-admin/logstash-bin:x-pack - Enable additional features (may need a license)
 app-admin/openrc-settingsd:systemd - Use the versions of dbus and polkit files provided by sys-apps/systemd
 app-admin/pass:X - Use x11-misc/xclip to copy passwords to the clipboard.
@@ -510,9 +508,9 @@ app-editors/vim:racket - Enable support for Scheme using dev-scheme/racket
 app-editors/vim:terminal - Enable terminal emulation support
 app-editors/vim:vim-pager - Install vimpager and vimmanpager links
 app-editors/vis:tre - More memory efficient regex search using dev-libs/tre
-app-editors/vscode:egl - Use EGL platform, enables smooth rending in high refresh rate monitors on X11/Xwayland
+app-editors/vscode:egl - Use EGL platform, enables smooth rendering in high refresh rate monitors on X11/Xwayland
 app-editors/vscode:wayland - Run in wayland mode under wayland sessions, xwayland otherwise. This flag doesn't affect x11 sessions.
-app-editors/vscodium:egl - Use EGL platform, enables smooth rending in high refresh rate monitors on X11/Xwayland
+app-editors/vscodium:egl - Use EGL platform, enables smooth rendering in high refresh rate monitors on X11/Xwayland
 app-editors/vscodium:wayland - Run in wayland mode under wayland sessions, xwayland otherwise. This flag doesn't affect x11 sessions.
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:bignum - Support for OpenSSL bignum implementation
@@ -963,7 +961,6 @@ app-misc/mosquitto:bridge - Enable bridge support in the MQTT broker.
 app-misc/mosquitto:persistence - Store messages and subscriptions to a file.
 app-misc/mosquitto:srv - Include SRV lookup support.
 app-misc/mosquitto:websockets - Support the WebSocket protocol.
-app-misc/muttprint:doc - Builds documentation
 app-misc/neofetch:X - Enable support for detecting DEs, WMs, screen resolutions, and showing images from an X terminal
 app-misc/nnn:8contexts - Enable 8 contexts (instead of 4)
 app-misc/nnn:colemak - Key bindings for Colemak keyboard layout
@@ -1352,7 +1349,6 @@ dev-cpp/eigen:sparsehash - Add test support for GoogleHash (dev-cpp/sparsehash)
 dev-cpp/eigen:spqr - Add test support for SPQR (sci-libs/spqr)
 dev-cpp/eigen:superlu - Add test support for SuperLU (sci-libs/superlu)
 dev-cpp/eigen:umfpack - Add test support for UMFPACK (sci-libs/umfpack)
-dev-cpp/glaze:doc - Install README files
 dev-cpp/glaze:examples - Build examples (not install)
 dev-cpp/glaze:fuzzing - Build fuzzers (not install)
 dev-cpp/glog:gflags - Use dev-cpp/gflags for flag parsing
@@ -1370,7 +1366,6 @@ dev-cpp/opentelemetry-cpp:jaeger - Include the jaeger exporter
 dev-cpp/opentelemetry-cpp:prometheus - include the Prometheus Client in the SDK
 dev-cpp/sdbus-c++:systemd - Use external libsystemd instead of statically-linked build
 dev-cpp/sdbus-c++:tools - Install interface stub code generator
-dev-cpp/ut2-glaze:doc - Install README files
 dev-db/etcd:server - Installs etcd daemon
 dev-db/mariadb:backup - Build mariadb-backup which supports SST and hot backup of InnoDB, Aria and MyISAM including compression and encryption
 dev-db/mariadb:columnstore - Build the ColumnStore storage engine
@@ -1456,6 +1451,7 @@ dev-db/unixODBC:odbcmanual - Administrator, Internal Structure, Programmer and U
 dev-debug/bpftrace:lldb - Parse debug info usingllvm-core/lldb
 dev-debug/bpftrace:pcap - Enable skb_output using net-libs/libpcap
 dev-debug/drgn:debuginfod - Enable debuginfod support
+dev-debug/drgn:lzma - Support XZ-compressed debug information (MiniDebugInfo).
 dev-debug/dtrace:test-install - Install the testsuite for manual use. It is not suitable for automatic execution within the ebuild because it requires root privlieges.
 dev-debug/gdb:babeltrace - Enable dev-util/babeltrace support
 dev-debug/gdb:cet - Enable Intel Control-flow Enforcement Technology.
@@ -2586,6 +2582,7 @@ dev-python/translate-toolkit:yaml - Support YAML format
 dev-python/twisted:conch - include Twisted SSHv2 implementation
 dev-python/twisted:serial - include serial port support
 dev-python/twisted:websockets - include websocket support
+dev-python/typer:cli - Install "typer" entry point (conflicts with dev-lang/erlang). Even with the flag disabled, the CLI can still be used via "python -m typer".
 dev-python/websockets:native-extensions - Compiles native C extensions
 dev-python/wrapt:native-extensions - Compiles native C extensions (speedups, instead of using python fallback code).
 dev-python/zeep:async - Add async support
@@ -3000,7 +2997,6 @@ dev-vcs/git:tk - Include the 'gitk' and 'git gui' tools
 dev-vcs/git:webdav - Adds support for push'ing to HTTP/HTTPS repositories via DAV
 dev-vcs/git-annex:assistant - Enable git-annex assistant and watch command
 dev-vcs/git-annex:benchmark - Enable benchmarking
-dev-vcs/git-annex:dbus - Enable dbus support
 dev-vcs/git-annex:gitlfs - Build with git-lfs library (rather than vendored copy)
 dev-vcs/git-annex:magicmime - Use libmagic to determine file MIME types
 dev-vcs/git-annex:pairing - Enable pairing
@@ -3218,13 +3214,6 @@ games-fps/eduke32:xmp - Enable support for media-libs/exempi.
 games-fps/gzdoom:non-free - Enable non-free components
 games-fps/gzdoom:swr - Enable software renderer
 games-fps/nexuiz:maps - Install the community map pack
-games-fps/prboom-plus:dumb - Enable support for various tracker-style music formats via media-libs/dumb
-games-fps/prboom-plus:fluidsynth - Enable support for MIDI via media-sound/fluidsynth
-games-fps/prboom-plus:net - Enable support for network play
-games-fps/prboom-plus:portmidi - Enable support for MIDI via media-libs/portmidi
-games-fps/prboom-plus:sdl2-image - Enable support for high-resolution texture support via media-libs/sdl2-image
-games-fps/prboom-plus:sdl2-mixer - Enable support for MIDI via media-libs/sdl2-mixer
-games-fps/prboom-plus:server - Build PrBoom-Plus server
 games-fps/quake2-icculus:demo - Install the demo files (quake2-demodata) and configure for use
 games-fps/quake2-icculus:qmax - Build the pretty version (quake max)
 games-fps/quake2-icculus:rogue - Build support for the 'Ground Zero' Mission Pack (rogue)
@@ -3433,6 +3422,7 @@ gnome-extra/libgsf:gtk - Enable use of gdk in thumbnailer
 gnome-extra/nemo:tracker - Add support for app-misc/tinysparql search
 gnome-extra/nm-applet:modemmanager - Enable support for mobile broadband devices using net-misc/modemmanager
 gnome-extra/nm-applet:teamd - Enable teamd configuration editor
+gnome-extra/pch-session:breeze - Use Breeze KDE theme as first option over Fusion for QT apps
 gnustep-apps/gemas:projectcenter - Build and install plugin for gnustep-apps/projectcenter
 gnustep-apps/gworkspace:gwmetadata - Enable the metadata indexing and searching system
 gnustep-apps/sogo:activesync - Build the ActiveSync support code
@@ -5838,7 +5828,6 @@ net-firewall/iptables:pcap - Build against net-libs/libpcap which enables the nf
 net-firewall/nftables:doc - Create man pages for the package (requires app-text/asciidoc)
 net-firewall/nftables:json - Enable JSON support via dev-libs/jansson
 net-firewall/nftables:xtables - Add libxtables support to try to automatically translate rules added by iptables-compat
-net-firewall/pglinux:cron - Install cron script
 net-firewall/shorewall:init - Adds the capability to place the firewall in a safe state prior to bringing up the network interfaces
 net-firewall/shorewall:ipv4 - Installs everything needed to create a full IPv4 firewall
 net-firewall/shorewall:ipv6 - Adds the capability to create a full IPv6 firewall (requires net-firewall/shorewall ipv4 USE flag)
@@ -6026,7 +6015,6 @@ net-irc/anope:ssl - Provide SSL services using OpenSSL
 net-irc/anope:tre - Use dev-libs/tre for regular expressions
 net-irc/atheme-services:cracklib - Enable nickserv/cracklib module for enforcing strong account passwords
 net-irc/atheme-services:largenet - Enable support/tweaks for large networks
-net-irc/atheme-services:ldap - Enable ldap-backed authentication module
 net-irc/atheme-services:perl - Install a perl module which wraps around the services' XML-RPC interface
 net-irc/hexchat:libcanberra - Enable sound event support using media-libs/libcanberra
 net-irc/hexchat:plugin-checksum - Build Checksum plugin (needs plugins)
@@ -6035,17 +6023,13 @@ net-irc/hexchat:plugin-sysinfo - Build SysInfo plugin (needs plugins)
 net-irc/hexchat:theme-manager - Build the theme manager (mono)
 net-irc/inspircd:argon2 - Enable Argon2 hashes in modules
 net-irc/inspircd:gnutls - Enable TLS support
-net-irc/inspircd:ldap - Enable LDAP support
 net-irc/inspircd:log-json - Enable logging via JSON
-net-irc/inspircd:maxminddb - Add support for geolocation using libMaxMindDB
+net-irc/inspircd:maxminddb - Enable geolocation support via dev-libs/libmaxminddb
 net-irc/inspircd:mbedtls - Add support for TLS using the mbedTLS library
-net-irc/inspircd:mysql - Enable MySQL database backend
 net-irc/inspircd:pcre2 - Add support for Perl Compatible Regular Expressions 2
-net-irc/inspircd:postgres - Enable PostgreSQL database backend
 net-irc/inspircd:re2 - Add support for Google RE2 regular expressions library
 net-irc/inspircd:regex-posix - Add support for POSIX Regular Expressions
 net-irc/inspircd:regex-stdlib - Add support for C++ stdlib regular expressions
-net-irc/inspircd:sqlite - Enable Sqlite database backend
 net-irc/inspircd:ssl - Enable SSL support
 net-irc/inspircd:sslrehashsignal - Enable rehashing SSL module by SIGUSR1
 net-irc/inspircd:tre - Enable support for TRE, a lightweight, robust, and efficient POSIX compliant regexp matching library
@@ -8121,8 +8105,6 @@ sys-auth/pambase:sha512 - Switch Linux-PAM's pam_unix module to use sha512 for p
 sys-auth/pambase:sssd - Add System Security Services Daemon (sys-auth/sssd) support via pam_sss.
 sys-auth/pambase:systemd - Use pam_systemd module to register user sessions in the systemd control group hierarchy.
 sys-auth/pambase:yescrypt - Switch Linux-PAM's pam_unix module to use yescrypt for passwords hashes rather than MD5
-sys-auth/polkit:daemon - Build polkitd in addition to libpolkit.
-sys-auth/polkit:duktape - Use dev-lang/duktape instead of dev-lang/spidermonkey as JavaScript engine
 sys-auth/polkit:systemd - Use sys-apps/systemd for session tracking
 sys-auth/seatd:builtin - Enable embedded server in libseat
 sys-auth/seatd:server - Enable standalone seatd server, replacement to (e)logind
@@ -8444,11 +8426,10 @@ sys-fs/quota:netlink - Compile daemon receiving quota messages via netlink
 sys-fs/quota:rpc - Enable quota interaction via RPC
 sys-fs/squashfs-tools-ng:tools - Build the gensquashfs, rdsquashfs, sqfs2tar, sqfsdiff, and tar2sqfs tools
 sys-fs/udisks:daemon - Build the system daemon, not just the client tool
-sys-fs/udisks:elogind - Use sys-auth/elogind for session tracking
-sys-fs/udisks:lvm - Add support for Logical Volume Management via sys-fs/lvm2.
+sys-fs/udisks:lvm - Add support for Logical Volume Management via sys-fs/lvm2
 sys-fs/udisks:systemd - Support sys-apps/systemd's logind
 sys-fs/udisks:vdo - Enable Virtual Data Optimizer support.
-sys-fs/udisks:zram - Enable ZRAM support (requires sys-apps/systemd).
+sys-fs/udisks:zram - Enable ZRAM support (requires sys-apps/systemd)
 sys-fs/zfs:kernel-builtin - Disable dependency on sys-fs/zfs-kmod under the assumption that ZFS is part of the kernel source tree
 sys-fs/zfs:minimal - Don't install python scripts (arcstat, dbufstat etc) and avoid dependency on dev-lang/python
 sys-fs/zfs:pam - Install zfs_key pam module, for automatically loading zfs encryption keys for home datasets
@@ -9008,7 +8989,6 @@ x11-plugins/pidgin-sipe:telepathy - Support use as a telepathy backend
 x11-plugins/pidgin-sipe:voice - Enable experimental voice/video support
 x11-plugins/vicious:contrib - Install extra widgets, some for less common hardware, some contributed by Vicious users.
 x11-plugins/wmbattery:apm - Add APM (Advanced Power Management) support
-x11-plugins/wmfire:session - Enable session management
 x11-plugins/wmudmount:gcr - Enable support for secure memory with app-crypt/gcr
 x11-terms/ghostty:adwaita - Use gui-libs/libadwaita for better GNOME integration
 x11-terms/ghostty-terminfo:symlink - Install symlink for a "ghostty" terminfo entry
