@@ -126,6 +126,8 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.5.1-glog-0.6.0.patch
 	"${FILESDIR}"/${PN}-2.5.1-newfix-functorch-install.patch
 	"${FILESDIR}"/${PN}-2.6.0-rocm-fix-std-cpp17.patch
+	"${FILESDIR}"/${P}-cmake.patch
+	"${FILESDIR}"/${P}-glog-0.7.1.patch
 )
 
 src_prepare() {
@@ -256,6 +258,7 @@ src_configure() {
 		-DUSE_SYSTEM_FP16=ON
 		-DUSE_SYSTEM_FXDIV=ON
 		-DUSE_SYSTEM_GLOO=ON
+		-DUSE_SYSTEM_NVTX=ON
 		-DUSE_SYSTEM_ONNX=ON
 		-DUSE_SYSTEM_PSIMD=ON
 		-DUSE_SYSTEM_PTHREADPOOL=ON

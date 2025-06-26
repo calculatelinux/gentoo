@@ -3683,7 +3683,6 @@ kde-plasma/plasma-firewall:ufw - Build net-firewall/ufw backend
 kde-plasma/plasma-login-sessions:X - Install X11 session file for Display Managers (default is Wayland if both enabled)
 kde-plasma/plasma-login-sessions:wayland - Install Wayland session file for Display Managers
 kde-plasma/plasma-meta:browser-integration - Enable integration with Chrome/Firefox with browser extensions
-kde-plasma/plasma-meta:colord - Enable kde-plasma/kwin color management via x11-misc/colord
 kde-plasma/plasma-meta:crash-handler - Pull in kde-plasma/drkonqi for assisted upstream crash reports
 kde-plasma/plasma-meta:crypt - Pull in kde-plasma/plasma-vault for encrypted vaults integration
 kde-plasma/plasma-meta:discover - Pull in resources management GUI; a centralised GHNS alternative and optional sys-apps/fwupd frontend
@@ -4983,6 +4982,7 @@ media-sound/spotify:local-playback - Allows playing local files with the Spotify
 media-sound/spotify:pax-kernel - Triggers a paxmarking of the main Spotify binary
 media-sound/spotify:pulseaudio - Controls the dependency on pulseaudio or apulse
 media-sound/strawberry:chromaprint - Enables audio fingerprinting support with media-libs/chromaprint
+media-sound/strawberry:discord - Enables Discord Rich Presence
 media-sound/strawberry:loudness - Enable loudness normalisation according to the EBU R128 standard using media-libs/libebur128
 media-sound/strawberry:moodbar - Enable moodbar support
 media-sound/strawberry:streaming - Enable Online Streaming Support
@@ -5298,7 +5298,6 @@ media-video/mpv:drm - Enable Kernel Mode Setting / Direct Rendering Manager base
 media-video/mpv:gamepad - Enable gamepad input support
 media-video/mpv:libmpv - Enable the shared library and headers (used by frontends / plugins)
 media-video/mpv:lua - Enable Lua scripting, OSC (On Screen Controller) GUI, and net-misc/yt-dlp support
-media-video/mpv:opengl - Enable support for OpenGL-based video backends (Note: deprecated for X11, USE=egl provides the newer support for -gpu-api=opengl)
 media-video/mpv:pipewire - Enable sound support via native PipeWire backend
 media-video/mpv:rubberband - Enable high quality pitch correction via media-libs/rubberband
 media-video/mpv:sdl - Enable media-libs/libsdl2 based video and audio outputs (Note: these outputs exist for compatibility reasons only, avoid if possible)
@@ -8517,6 +8516,7 @@ sys-libs/libblockdev:vdo - Enable Virtual Data Optimizer support.
 sys-libs/libcap:tools - Install captree, which requires dev-lang/go
 sys-libs/libnbd:fuse - Install the sys-fs/fuse powered nbdfuse.
 sys-libs/libnbd:go - Build bindings for dev-lang/go
+sys-libs/libnbd:rust - Build bindings for dev-lang/rust
 sys-libs/libnvme:json - Support JSON output via dev-libs/json-c
 sys-libs/libnvme:keyutils - Add support for sys-apps/keyutils
 sys-libs/libnvme:uuid - UUID support via sys-apps/util-linux
