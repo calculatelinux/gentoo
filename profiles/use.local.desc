@@ -3193,6 +3193,7 @@ games-fps/doomsday:freedoom - Install launcher for doom1.wad from games-fps/free
 games-fps/doomsday:tools - Build additional tools such as doomsday-shell, md2tool and texc
 games-fps/dsda-doom:fluidsynth - Enable support for MIDI via media-sound/fluidsynth
 games-fps/dsda-doom:mad - Enable support for MPEG audio via media-libs/libmad
+games-fps/dsda-doom:openmpt - Enable support for tracker music via media-libs/libopenmpt
 games-fps/dsda-doom:portmidi - Enable support for MIDI via media-libs/portmidi
 games-fps/dsda-doom:sdl2-image - Enable support for high-resolution textures and other image formats via media-libs/sdl2-image
 games-fps/dsda-doom:vorbis - Enable support for Ogg Vorbis audio via media-libs/libvorbis
@@ -4078,11 +4079,9 @@ media-gfx/album:plugins - Install optional plugins
 media-gfx/album:themes - Install optional themes
 media-gfx/alembic:hdf5 - Add support sci-libs/hdf5
 media-gfx/alembic:test - Build and run the test-suite
-media-gfx/asymptote:boehm-gc - Enables using the Boehm-Demers-Weiser conservative garbage collector
 media-gfx/asymptote:context - Enables support for ConTeXt format (dev-texlive/texlive-context)
 media-gfx/asymptote:curl - Enables running remote programs via net-misc/curl
 media-gfx/asymptote:lsp - Enables Language Server Protocol
-media-gfx/asymptote:offscreen - Enables off-screen rendering
 media-gfx/asymptote:sigsegv - Enables using dev-libs/libsigsegv
 media-gfx/blender:alembic - Add support for Alembic through media-gfx/alembic.
 media-gfx/blender:bullet - Enable Bullet (Physics Engine).
@@ -8516,7 +8515,6 @@ sys-libs/libblockdev:vdo - Enable Virtual Data Optimizer support.
 sys-libs/libcap:tools - Install captree, which requires dev-lang/go
 sys-libs/libnbd:fuse - Install the sys-fs/fuse powered nbdfuse.
 sys-libs/libnbd:go - Build bindings for dev-lang/go
-sys-libs/libnbd:rust - Build bindings for dev-lang/rust
 sys-libs/libnvme:json - Support JSON output via dev-libs/json-c
 sys-libs/libnvme:keyutils - Add support for sys-apps/keyutils
 sys-libs/libnvme:uuid - UUID support via sys-apps/util-linux
