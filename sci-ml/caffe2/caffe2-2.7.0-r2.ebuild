@@ -15,11 +15,22 @@ MYP=${MYPN}-${PV}
 CK_COMMIT=8086bbe3a78d931eb96fe12fdc014082e18d18d3
 CK_P=composable_kernel-${CK_COMMIT:0:8}
 
+FLASH_PV=2.7.4
+FLASH_PN=flash-attention
+FLASH_P=${FLASH_PN}-${FLASH_PV}
+
 DESCRIPTION="A deep learning framework"
 HOMEPAGE="https://pytorch.org/"
 SRC_URI="
 	https://github.com/pytorch/${MYPN}/archive/refs/tags/v${PV}.tar.gz -> ${MYP}.tar.gz
-	rocm? ( https://github.com/ROCm/composable_kernel/archive/${CK_COMMIT}.tar.gz -> ${CK_P}.tar.gz )
+	rocm? (
+		https://github.com/ROCm/composable_kernel/archive/${CK_COMMIT}.tar.gz
+		-> ${CK_P}.tar.gz
+	)
+	flash? (
+		https://github.com/Dao-AILab/${FLASH_PN}/archive/refs/tags/v${FLASH_PV}.tar.gz
+		-> ${FLASH_P}.gh.tar.gz
+	)
 "
 
 S="${WORKDIR}"/${MYP}
@@ -128,9 +139,13 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.6.0-rocm-fix-std-cpp17.patch
 	"${FILESDIR}"/${P}-cmake.patch
 	"${FILESDIR}"/${P}-glog-0.7.1.patch
+	"${FILESDIR}"/${P}-llvm.patch
 )
 
 src_prepare() {
+	if use flash; then
+		mv "${WORKDIR}"/${FLASH_P}/* third_party/${FLASH_PN}/ || die
+	fi
 	filter-lto #bug 862672
 
 	# Unbundle fmt

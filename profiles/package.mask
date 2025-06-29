@@ -36,6 +36,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-06-29)
+# KF5-based package, unmaintained upstream, see also:
+# https://mail.kde.org/pipermail/release-team/2025-June/013683.html
+# Removal on 2025-07-29.
+kde-apps/cervisia
+
+# Michał Górny <mgorny@gentoo.org> (2025-06-29)
+# File collision against gnome-base/gnome-keyring[pam], which is
+# required via pambase.  Masked until the maintainer determines a good
+# solution.  Bug #959274.
+=app-crypt/libsecret-0.21.7-r1
+
 # Michał Górny <mgorny@gentoo.org> (2025-06-28)
 # Rust/eBPF does not support 32-bit x86 host.  As such, mitmproxy can
 # no longer be used on this architecture.
@@ -313,13 +325,6 @@ dev-libs/libxml2-compat
 # https://lists.gnu.org/archive/html/screen-devel/2024-10/msg00007.html
 # Unmask it after it is properly tested & fixed
 =app-misc/screen-5*
-
-# Conrad Kostecki <conikost@gentoo.org> (2025-03-28)
-# Upstream is dead and broken. All 'whatsapp' deps
-# will be last-rited on 2025-04-28.
-# Bug #952588 #952589
-net-im/transwhat
-net-im/yowsup
 
 # Michał Górny <mgorny@gentoo.org> (2025-03-17)
 # Xfce 4.22 prereleases.  Masked because they tend to be quite unstable.
