@@ -44,6 +44,7 @@ REQUIRED_USE="
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-4.5.0-rpath.patch
+	"${FILESDIR}"/${PN}-4.5.0-tk-internal.patch
 )
 
 pkg_setup() {
@@ -64,6 +65,14 @@ src_configure() {
 	# https://bugs.gentoo.org/862684
 	# https://github.com/CGNS/CGNS/issues/758
 	filter-lto
+
+	# Needed for uses an internal header (bug #934122)
+	if use tools ; then
+		local tk_ver=$(best_version dev-lang/tk)
+		tk_ver=${tk_ver#dev-lang/tk-}
+		tk_ver=$(ver_cut 1-2 ${tk_ver})
+		append-cppflags -I"${ESYSROOT}/usr/$(get_libdir)/tk${tk_ver}/include/generic"
+	fi
 
 	local mycmakeargs=(
 		-DCGNS_BUILD_SHARED=ON
