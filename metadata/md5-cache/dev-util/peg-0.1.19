@@ -8,4 +8,4 @@ LICENSE=MIT
 SLOT=0
 SRC_URI=https://piumarta.com/software/peg/peg-0.1.19.tar.gz
 _eclasses_=toolchain-funcs	f9d71a6efe9d083aec750dd13968e169
-_md5_=acdeb51affaa6509f6f47eb2fa421ea0
+_md5_=1a5f0ddb5dcf4741d6f628313bd86dc6
