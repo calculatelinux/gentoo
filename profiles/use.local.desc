@@ -1521,6 +1521,7 @@ dev-embedded/u-boot-tools:envtools - Build only the target-side environment tool
 dev-embedded/urjtag:ftd2xx - Enable support for USB FTDI chips via dev-embedded/libftd2xx
 dev-embedded/urjtag:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
 dev-games/godot:deprecated - Enable support for deprecated features
+dev-games/godot:double-precision - Use double-precision floats (default: single-precision)
 dev-games/godot:raycast - Enable the raycast Editor module using media-libs/embree
 dev-games/godot:tools - Enable the Godot Editor for game development
 dev-games/guichan:allegro - Build the Allegro frontend
@@ -2290,6 +2291,7 @@ dev-libs/xmlsec:gnutls - Install xmlsec-gnutls library
 dev-libs/xmlsec:http - Allow fetching over HTTP via libxml2.
 dev-libs/xmlsec:nss - Install xmlsec-nss library
 dev-libs/xmlsec:openssl - Install xmlsec-openssl library
+dev-libs/yaz:redis - Enable cache via dev-libs/hiredis
 dev-libs/yaz:ziffy - Install ziffy, a promiscuous Z39.50 APDU sniffer
 dev-lisp/clisp:hyperspec - Use local hyperspec instead of online version
 dev-lisp/clisp:svm - Build CLISP with support for the Support Vector Machine module
