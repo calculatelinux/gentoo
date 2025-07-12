@@ -36,6 +36,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Eli Schwartz <eschwartz@gentoo.org> (2025-07-08)
+# Unmaintained, out of date, QA issues, outstanding bugs for compilation
+# failure / test failure. Still uses python 3.11. No revdeps.
+# Removal on 2025-08-07.  Bug #725252, #873304, #731876, #929772
+sci-libs/eccodes
+
+# Eli Schwartz <eschwartz@gentoo.org> (2025-07-06)
+# Unmaintained, abandoned upstream since 2012, stuck on Python 3.11,
+# no revdeps since a year ago.
+# Removal on 2025-08-05.  Bug #928479, #929362.
+dev-libs/libindicate
+app-text/gnome-doc-utils
+
+# Michał Górny <mgorny@gentoo.org> (2025-07-05)
+# Metapackage used as a dependency in dev-lang/python and dev-lang/pypy.
+# Replaced with inlined specific dev-python/ensurepip-* packages.
+# Removal on 2025-08-04.
+dev-python/ensurepip-wheels
+
 # Arthur Zamarin <arthurzam@gentoo.org> (2025-07-04)
 # EAPI=7, upstream gone, Gentoo is the last distro packaging it.
 # Removal on 2025-08-03.  Bug #959505.
@@ -45,12 +64,17 @@ app-misc/pip
 # Obsolete Perl virtuals that will be removed (the list is work in progress).
 # If you have any of these installed, just remove them; they should not be
 # required anymore.
+virtual/perl-bignum
+virtual/perl-HTTP-Tiny
 virtual/perl-IO-Zlib
+virtual/perl-Locale-Maketext
 virtual/perl-Math-BigInt-FastCalc
+virtual/perl-Math-BigRat
 virtual/perl-Parse-CPAN-Meta
 virtual/perl-Params-Check
 perl-core/Params-Check
 virtual/perl-Term-ReadLine
+virtual/perl-Unicode-Normalize
 
 # Joonas Niilola <juippis@gentoo.org> (2025-07-01)
 # Python-3.13 enabled version of Spidermonkey. The test phase crashes
@@ -171,14 +195,6 @@ dev-util/cucumber-core:11
 =sys-devel/gettext-0.25*
 =dev-libs/libintl-0.25*
 
-# Jimi Huotari <chiitoo@gentoo.org> (2025-06-07)
-# The only consumer, net-im/qtox, no longer depends on these, and the
-# upstream for them has been dormant since 2021.
-# Bugs: #955911, #957503
-# Removal on 2025-07-07.
-net-libs/toxext
-net-libs/tox_extension_messages
-
 # Michał Górny <mgorny@gentoo.org> (2025-06-07)
 # Broken and dangerous.  Archived in 2022.  The last reverse dependency
 # stopped using it in 2023 (except for outdated ebuilds).
@@ -199,8 +215,8 @@ dev-util/bin_replace_string
 # Sam James <sam@gentoo.org> (2025-06-03)
 # Major changes to packaging as bindings are split out by upstream.
 >=app-crypt/gpgme-2
-dev-cpp/gpgmepp
-dev-libs/qgpgme
+>=dev-cpp/gpgmepp-2
+>=dev-libs/qgpgme-2
 dev-python/gpgmepy
 
 # Sam James <sam@gentoo.org> (2025-06-03)
@@ -484,10 +500,10 @@ app-emulation/virtualbox-kvm
 ~sys-boot/plymouth-24.004.60
 
 # Sam James <sam@gentoo.org> (2024-09-30)
-# GCC 11 and older no longer receive upstream support or fixes for
+# GCC 12 and older no longer receive upstream support or fixes for
 # bugs. Please switch to a newer GCC version using gcc-config.
 #
-# The earliest supported version of GCC is GCC 12, but 11 remains unmasked
+# The earliest supported version of GCC is GCC 13, but 11/12 remain unmasked
 # for now to ease sys-devel/gcc[d] bootstrapping.
 <sys-devel/gcc-11
 <sys-devel/kgcc64-11

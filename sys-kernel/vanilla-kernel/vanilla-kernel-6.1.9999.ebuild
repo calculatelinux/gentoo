@@ -3,7 +3,6 @@
 
 EAPI=8
 
-KERNEL_IUSE_MODULES_SIGN=1
 inherit git-r3 kernel-build toolchain-funcs
 
 # https://koji.fedoraproject.org/koji/packageinfo?packageID=8
@@ -45,13 +44,24 @@ EGIT_BRANCH="linux-${PV/.9999/.y}"
 
 LICENSE="GPL-2"
 IUSE="debug hardened"
-REQUIRED_USE="arm? ( savedconfig )"
+REQUIRED_USE="
+	arm? ( savedconfig )
+	hppa? ( savedconfig )
+	riscv? ( savedconfig )
+	sparc? ( savedconfig )
+"
 
 BDEPEND="
 	debug? ( dev-util/pahole )
 "
 PDEPEND="
 	>=virtual/dist-kernel-$(ver_cut 1-2)
+"
+
+QA_FLAGS_IGNORED="
+	usr/src/linux-.*/scripts/gcc-plugins/.*.so
+	usr/src/linux-.*/vmlinux
+	usr/src/linux-.*/arch/powerpc/kernel/vdso.*/vdso.*.so.dbg
 "
 
 src_unpack() {
@@ -66,7 +76,7 @@ src_prepare() {
 
 	# prepare the default config
 	case ${ARCH} in
-		arm | hppa)
+		arm | hppa | loong | riscv | sparc)
 			> .config || die
 		;;
 		amd64)

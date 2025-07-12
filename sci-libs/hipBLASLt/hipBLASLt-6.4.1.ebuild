@@ -33,6 +33,7 @@ DEPEND="${RDEPEND}"
 BDEPEND="
 	${PYTHON_DEPS}
 	dev-build/rocm-cmake
+	dev-util/hipcc
 	sci-libs/hipBLAS-common:${SLOT}
 	$(python_gen_any_dep '
 		dev-python/msgpack[${PYTHON_USEDEP}]
@@ -89,18 +90,20 @@ src_prepare() {
 	local shebangs=($(grep -rl "#!/usr/bin/env python3" tensilelite/Tensile || die))
 	python_fix_shebang -q ${shebangs[*]}
 
-	sed -e "s:\${rocm_path}/bin/amdclang++:$(get_llvm_prefix)/bin/clang++:" \
+	rocm_use_clang
+	sed -e "s:\${rocm_path}/bin/amdclang++:${CXX}:" \
 		-i library/src/amd_detail/rocblaslt/src/kernels/compile_code_object.sh \
 		-i tensilelite/Tensile/Ops/gen_assembly.sh || die
 
-	sed 's/amdclang/clang/g' -i tensilelite/Tensile/Utilities/Toolchain.py || die
+	# Fix compiler validation (just a validation)
+	sed "s/amdclang/$(basename "$CC")/g" \
+		-i tensilelite/Tensile/Utilities/Toolchain.py || die
 
 	cmake_src_prepare
 }
 
 src_configure() {
-	export CC="$(get_llvm_prefix)/bin/clang" CXX="$(get_llvm_prefix)/bin/clang++"
-	strip-unsupported-flags
+	rocm_use_clang
 
 	# too many warnings
 	append-cxxflags -Wno-explicit-specialization-storage-class

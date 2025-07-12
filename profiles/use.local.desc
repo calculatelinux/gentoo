@@ -330,6 +330,7 @@ app-cdr/dvdisaster:debug - Enable memory debugging.
 app-cdr/gaffitter:scripts - Install additional gaffitter scripts for external programs
 app-cdr/mirage2iso:pinentry - Support app-crypt/pinentry password input backend.
 app-containers/apptainer:network - Install network plug-ins
+app-containers/apptainer:rootless - Enable libsubid (subuid/subgid mapping) for rootless
 app-containers/apptainer:suid - Install SUID helper binary
 app-containers/buildah:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
 app-containers/containerd:btrfs - Support for BTRFS snapshot driver
@@ -351,7 +352,6 @@ app-containers/podman:btrfs - Enables btrfs support (graph driver) in Podman
 app-containers/podman:wrapper - Install wrapper which lets use podman for command `docker`
 app-containers/runc:kmem - Enable Kernel Memory Accounting.
 app-containers/skopeo:btrfs - Enables dependencies for the "btrfs" graph driver.
-app-containers/skopeo:device-mapper - Compiles with libdevmapper
 app-containers/skopeo:rootless - Compiles with libsubid
 app-containers/snapd:forced-devmode - Automatically disable application confinement if feature detection fails.
 app-crypt/aespipe:cpu_flags_x86_padlock - Use VIA padlock instructions, detected at run time, code still works on non-padlock processors
@@ -1046,7 +1046,6 @@ app-office/kmymoney:sqlcipher - Enable SQLite3 database encryption support via d
 app-office/kraft:pim - Enable support for KDE PIM resources integration
 app-office/libalkimia:webengine - Enable online quotes using dev-qt/qtwebengine
 app-office/libreoffice:base - Enable full support for LibreOffice Base databases (involves additional bundled libs)
-app-office/libreoffice:clang - Use Clang compiler instead of GCC
 app-office/libreoffice:coinmp - Use sci-libs/coinor-mp as alternative solver
 app-office/libreoffice:googledrive - Enable support for remote files on Google Drive
 app-office/libreoffice:gtk3 - Enable support for x11-libs/gtk+:3
@@ -1452,7 +1451,7 @@ dev-debug/bpftrace:lldb - Parse debug info usingllvm-core/lldb
 dev-debug/bpftrace:pcap - Enable skb_output using net-libs/libpcap
 dev-debug/drgn:debuginfod - Enable debuginfod support
 dev-debug/drgn:lzma - Support XZ-compressed debug information (MiniDebugInfo).
-dev-debug/dtrace:test-install - Install the testsuite for manual use. It is not suitable for automatic execution within the ebuild because it requires root privlieges.
+dev-debug/dtrace:test-install - Install the testsuite for manual use. It is not suitable for automatic execution within the ebuild because it requires root privileges. BTF must be available for the running kernel at build-time with this flag.
 dev-debug/gdb:babeltrace - Enable dev-util/babeltrace support
 dev-debug/gdb:cet - Enable Intel Control-flow Enforcement Technology.
 dev-debug/gdb:debuginfod - Enable debuginfod support via dev-libs/elfutils libdebuginfod
@@ -2529,7 +2528,6 @@ dev-python/python-box:native-extensions - Compiles native C extensions
 dev-python/python-lsp-server:all-plugins - Pull in all optional plugins
 dev-python/python-mpd2:twisted - Enable twisted support
 dev-python/python-stdnum:vies - Enable VIES
-dev-python/pyudev:qt5 - Install PyQt5 bindings
 dev-python/pyzmq:drafts - Enable draft API support
 dev-python/qiskit:visualization - Enable visualization modules
 dev-python/qtpy:designer - Pull in bindings for the QtDesigner module and enable the designer plugin
@@ -3245,7 +3243,6 @@ games-fps/yamagi-quake2:softrender - Build software renderer
 games-fps/yamagi-quake2:vulkan - Build experimental Vulkan renderer
 games-fps/yamagi-quake2:xatrix - Build support for the 'The Reckoning' Mission Pack
 games-kids/gcompris:kiosk - Enable kiosk mode by default (for use by small children or on a self-service host machine)
-games-misc/ponysay:fish-completion - Enable fish completion support
 games-misc/ponysay:non-free - Install non-free ponies (i.e. from the MLP franchise)
 games-misc/xcowsay:fortune - Enable support for fortune cookies via games-misc/fortune-mod
 games-mud/tf:atcp - enable ATCP support.
@@ -3541,8 +3538,7 @@ kde-apps/kdeadmin-meta:cron - Installs KDE application for virtual/cron configur
 kde-apps/kdecore-meta:share - Install kde-frameworks/purpose for share file context menu actions in kde-apps/dolphin
 kde-apps/kdecore-meta:webengine - Enable www-client/falkon which depends on dev-qt/qtwebengine
 kde-apps/kdeedu-meta:webengine - Enable packages requiring dev-qt/qtwebengine
-kde-apps/kdegraphics-meta:color-management - Enable color management via media-libs/opencolorio
-kde-apps/kdegraphics-meta:screencast - Pull in kde-plasma/spectacle for screenshot/screenrecording support
+kde-apps/kdegraphics-meta:color-management - Enable color management via kde-misc/colord-kde
 kde-apps/kdegraphics-meta:webengine - Enable page scanning support via media-gfx/skanpage
 kde-apps/kdemultimedia-meta:cdrom - Include packages for optical discs
 kde-apps/kdenetwork-meta:bittorrent - Pull in net-p2p/ktorrent for BitTorrent protocol support
@@ -4247,7 +4243,6 @@ media-gfx/qimgv:video - Add support for gif/webm playback via libmpv
 media-gfx/qrencode:png - Enable PNG output support in qrencode tool
 media-gfx/renderdoc:qt5 - Build and install the qrenderdoc GUI
 media-gfx/shotwell:opencv - Enable face detection via media-libs/opencv
-media-gfx/skanpage:ocr - Enable support for Optical Character Recognition via app-text/tesseract
 media-gfx/solvespace:system-mimalloc - Use system dev-libs/mimalloc instead of vendored library
 media-gfx/ueberzugpp:opencv - Use media-libs/opencv for additional image formats and OpenCL accelerated scaling
 media-gfx/ueberzugpp:wayland - Enable wayland support (proper window positioning is only supported with some compositors)
@@ -5995,7 +5990,6 @@ net-im/telegram-desktop:enchant - Use the app-text/enchant spell-checking backen
 net-im/telegram-desktop:fonts - Use builtin patched copy of open-sans fonts (overrides fontconfig)
 net-im/telegram-desktop:libdispatch - Use dev-libs/libdispatch to speed up concurrent code execution
 net-im/tkabber:plugins - Enables installation the extra plugins
-net-im/tokodon:mpv - Use media-libs/mpvqt instead of dev-qt/qtmultimedia for video playback (default)
 net-im/tokodon:webengine - Use dev-qt/qtwebengine for built-in authentication page (default is external browser)
 net-im/toxic:audio-notify - Enables native sound notifications
 net-im/toxic:experimental - Use experimental features in net-libs/tox
@@ -7361,6 +7355,7 @@ sci-libs/dealii:assimp - Add support for assimp (media-libs/assimp)
 sci-libs/dealii:cgal - Adds support for CGAL (sci-mathematics/cgal)
 sci-libs/dealii:ginkgo - Add support for ginkgo (sci-libs/ginkgo)
 sci-libs/dealii:gmsh - Add support for gmsh (sci-libs/gmsh)
+sci-libs/dealii:int64 - Use 64 bit indexes
 sci-libs/dealii:metis - Add support for metis (sci-libs/metis)
 sci-libs/dealii:muparser - Add support for muparser (dev-cpp/muParser)
 sci-libs/dealii:opencascade - Add support for opencascade (sci-libs/opencascade)
@@ -7372,6 +7367,7 @@ sci-libs/dealii:sparse - Add support for suitesparse (sci-libs/suitesparse)
 sci-libs/dealii:sundials - Add support for sundials (sci-libs/sundials)
 sci-libs/dealii:symengine - Add support for symengine (sci-libs/symengine)
 sci-libs/dealii:trilinos - Add support for trilinos (sci-libs/trilinos)
+sci-libs/dealii:vtk - Add support for VTK (sci-libs/vtk)
 sci-libs/dlib:cblas - Build with CBLAS virtual/cblas
 sci-libs/dlib:cuda - Enable support for CUDA for Deep Neural Networks (cuDNN) on GPU (experimental)
 sci-libs/dlib:mkl - Enable support for Intel FFT sci-libs/mkl
@@ -7708,6 +7704,7 @@ sci-ml/gloo:redis - Enable Redis backend for storage via dev-libs/hiredis
 sci-ml/oneDNN:cblas - Use virtual/cblas for sgemm routines
 sci-ml/oneDNN:mkl - Use sci-libs/mkl for sgemm routines
 sci-ml/onnx:disableStaticReg - Disable Static Registration
+sci-ml/torchvision:rocm - Enable ROCm gpu computing support
 sci-ml/transformers:torch - Support pytorch
 sci-physics/bullet:double-precision - Build libraries in double precision
 sci-physics/bullet:extras - Build the extras
@@ -8198,6 +8195,7 @@ sys-cluster/ceph:xfs - Add xfs support
 sys-cluster/ceph:zbd - Enable sys-block/libzbd bluestore backend
 sys-cluster/charliecloud:ch-image - Build the internal builder ch-image (previously named ch-grow)
 sys-cluster/charliecloud:fuse - Enable FUSE support for mounting squashfs images
+sys-cluster/charliecloud:json - Enable features that rely on cJSON such as CDI
 sys-cluster/charm:ampi - Build implementation of MPI on top of Charm++
 sys-cluster/charm:charmdebug - Enable the charm debugger
 sys-cluster/charm:charmproduction - Optimize performance of Charm++ runtime
@@ -8688,6 +8686,7 @@ www-client/firefox:eme-free - Disable EME (DRM plugin) capability at build time
 www-client/firefox:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
 www-client/firefox:gnome-shell - Integrate with gnome-base/gnome-shell search
 www-client/firefox:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
+www-client/firefox:jpegxl - Add JPEG XL image support (EXPERIMENTAL, no official upstream support)
 www-client/firefox:jumbo-build - Enable unified build - combines source files to speed up build process, but requires more memory
 www-client/firefox:libproxy - Enable libproxy support
 www-client/firefox:openh264 - Use media-libs/openh264 for H264 support instead of downloading binary blob from Mozilla at runtime
@@ -8759,6 +8758,7 @@ www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/litmus:libproxy - Support for automatic proxy configuration management through net-libs/libproxy.
 www-misc/litmus:libxml2 - Use dev-libs/libxml2 to parse XML
 www-misc/litmus:pkcs11 - Support for PKCS #11 through PaKChoiS (dev-libs/pakchois).
+www-nginx/ngx-set-misc:hmac - Enable support for generating HMAC digests using dev-libs/openssl
 www-plugins/lightspark:ppapi - Install the PPAPI plugin (for Chromium)
 www-plugins/lightspark:rtmp - Enable Real Time Messaging Protocol using librtmp
 www-plugins/passff-host:chrome - Install plugin for chrome (which also includes opera)
@@ -8769,8 +8769,23 @@ www-servers/apache:static - Link in apache2 modules statically rather then plugi
 www-servers/apache:suexec - Install suexec with apache
 www-servers/apache:suexec-caps - Install suexec with capabilities instead of SUID
 www-servers/apache:suexec-syslog - Log suexec to syslog instead of to a separate file
-www-servers/caddy:events-handlers-exec - Builds a module which lets user exec command on Caddy events https://caddyserver.com/docs/modules/events.handlers.exec https://caddyserver.com/docs/caddyfile/options#event-options
-www-servers/caddy:security - Authentication, Authorization, and Accounting. LDAP, OAuth, SAML, MFA, 2FA, JWT etc.. https://caddyserver.com/docs/modules/security https://github.com/greenpau/caddy-security
+www-servers/caddy:dns-azure - Adds module which allows to manage Azure hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.azure
+www-servers/caddy:dns-cloudflare - Adds module which allows to manage Cloudflare hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.cloudflare
+www-servers/caddy:dns-cloudns - Adds module which allows to manage ClouDNS hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.cloudns
+www-servers/caddy:dns-digitalocean - Adds module which allows to manage DigitalOcean hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.digitalocean
+www-servers/caddy:dns-duckdns - Adds module which allows to manage Duck DNS hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.duckdns
+www-servers/caddy:dns-googleclouddns - Adds module which allows to manage Google Cloud hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.googleclouddns
+www-servers/caddy:dns-hetzner - Adds module which allows to manage Hetzner hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.hetzner
+www-servers/caddy:dns-mailinabox - Adds module which allows to manage Mail-in-a-Box hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.mailinabox
+www-servers/caddy:dns-netcup - Adds module which allows to manage netcup hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.netcup
+www-servers/caddy:dns-ovh - Adds module which allows to manage OVHcloud hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.ovh
+www-servers/caddy:dns-porkbun - Adds module which allows to manage porkbun hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.porkbun
+www-servers/caddy:dns-rfc2136 - Adds module which allows to manage DNS zones using RFC2136 Dynamic Updates within Caddy https://caddyserver.com/docs/modules/dns.providers.rfc2136
+www-servers/caddy:dns-vultr - Adds module which allows to manage Vultr hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.vultr
+www-servers/caddy:dynamicdns - Adds module which allows querying an endpoint to get dynamic public IP and updating records with DNS providers https://caddyserver.com/docs/modules/dynamic_dns
+www-servers/caddy:events-handlers-exec - Adds module which lets user exec command on Caddy events https://caddyserver.com/docs/modules/events.handlers.exec https://caddyserver.com/docs/caddyfile/options#event-options
+www-servers/caddy:security - Authentication, Authorization, and Accounting. LDAP, OAuth, SAML, MFA, 2FA, JWT etc.. https://caddyserver.com/docs/modules/security
+www-servers/caddy:webdav - Adds module which implements an HTTP handler for responding to WebDAV clients https://caddyserver.com/docs/modules/http.handlers.webdav
 www-servers/civetweb:server - Build standalone server
 www-servers/fnord:auth - Enable HTTP authentication support
 www-servers/gatling:diet - Compile against dev-libs/dietlibc
@@ -8790,17 +8805,20 @@ www-servers/lighttpd:nss - Build module for TLS via Mozilla's Network Security S
 www-servers/lighttpd:webdav - Enable webdav properties
 www-servers/lighttpd:zlib - Enable output compression via gzip or deflate algorithms from sys-libs/zlib
 www-servers/lighttpd:zstd - Enable output compression via Zstandard (app-arch/zstd) algorithm
-www-servers/nginx:aio - Enables file AIO support
-www-servers/nginx:http - Enable HTTP core support
+www-servers/nginx:aio - Enable asynchronous I/O support
+www-servers/nginx:debug - Enable support for debugging log
+www-servers/nginx:http - Enable core HTTP support
 www-servers/nginx:http-cache - Enable HTTP cache support
 www-servers/nginx:http2 - Enable HTTP2 module support
 www-servers/nginx:http3 - Enable HTTP3 module support
 www-servers/nginx:ktls - Enable Kernel TLS offload (kTLS)
-www-servers/nginx:libatomic - Use libatomic instead of builtin atomic operations
+www-servers/nginx:libatomic - Use dev-libs/libatomic_ops instead of builtin atomic operations
+www-servers/nginx:mail - Enable POP3/IMAP4/SMTP mail proxy server
 www-servers/nginx:pcre-jit - Enable JIT for pcre
 www-servers/nginx:pcre2 - Enable support for pcre2
 www-servers/nginx:rtmp - NGINX-based Media Streaming Server
 www-servers/nginx:ssl - Enable HTTPS module for http. Enable SSL/TLS support for POP3/IMAP/SMTP for mail.
+www-servers/nginx:stream - Enable generic TCP/UDP proxying and load balancing
 www-servers/nginx-unit:php8-3 - Support for PHP 8.3
 www-servers/pshs:magic - Enable automatic detection of Content-Type using libmagic (sys-apps/file)
 www-servers/pshs:qrcode - Enable generating QRCodes for server URL

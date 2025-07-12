@@ -1,0 +1,16 @@
+BDEPEND=www-servers/nginx:=[modules(-)] test? ( dev-perl/Test-Nginx ) test? ( www-nginx/ngx-lua-module www-nginx/ngx-echo www-nginx/ngx-set-misc www-nginx/ngx-headers-more )
+DEFINED_PHASES=compile configure install postinst prepare test unpack
+DEPEND=virtual/libiconv www-servers/nginx:=[modules(-)] www-nginx/ngx_devel_kit
+DESCRIPTION=A character conversion NGINX module using libiconv
+EAPI=8
+HOMEPAGE=https://github.com/calio/iconv-nginx-module
+INHERIT=nginx-module
+IUSE=test
+KEYWORDS=~amd64 ~arm64
+LICENSE=BSD-2
+RDEPEND=virtual/libiconv www-servers/nginx:=[modules(-)] www-nginx/ngx_devel_kit
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/calio/iconv-nginx-module/archive/refs/tags/v0.14.tar.gz -> ngx-iconv-0.14.tar.gz
+_eclasses_=edo	a5e294016aa84979fcb2459749eb80b2	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	nginx-module	7a07ce58f7dfc697ac74b6f3eb541f67	toolchain-funcs	a6df79c1e9bc84369dbf3d44206ac772
+_md5_=761a082bfe4814120b97e353d997598c

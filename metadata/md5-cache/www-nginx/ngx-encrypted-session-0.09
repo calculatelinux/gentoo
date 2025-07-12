@@ -1,0 +1,16 @@
+BDEPEND=virtual/pkgconfig www-servers/nginx:=[modules(-)] test? ( dev-perl/Test-Nginx ) test? ( www-nginx/ngx-set-misc www-nginx/ngx-echo www-nginx/ngx-lua-module )
+DEFINED_PHASES=compile configure install postinst prepare test unpack
+DEPEND=dev-libs/openssl:= www-servers/nginx:=[modules(-)] www-nginx/ngx_devel_kit
+DESCRIPTION=An NGINX module that encrypts and decrypts NGINX variable values
+EAPI=8
+HOMEPAGE=https://github.com/openresty/encrypted-session-nginx-module
+INHERIT=toolchain-funcs nginx-module
+IUSE=test
+KEYWORDS=~amd64 ~arm64
+LICENSE=BSD-2
+RDEPEND=dev-libs/openssl:= www-servers/nginx:=[modules(-)] www-nginx/ngx_devel_kit
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/openresty/encrypted-session-nginx-module/archive/refs/tags/v0.09.tar.gz -> ngx-encrypted-session-0.09.tar.gz
+_eclasses_=edo	a5e294016aa84979fcb2459749eb80b2	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	nginx-module	7a07ce58f7dfc697ac74b6f3eb541f67	toolchain-funcs	a6df79c1e9bc84369dbf3d44206ac772
+_md5_=2b4579a21a15f0dfa5a3563b562aece9
