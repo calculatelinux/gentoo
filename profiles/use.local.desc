@@ -737,7 +737,6 @@ app-emulation/wine-vanilla:samba - Pull in net-fs/samba with winbind for NTLM au
 app-emulation/wine-vanilla:sdl - Enable gamepad support using media-libs/libsdl2
 app-emulation/wine-vanilla:wow64 - Enable the "new" wow64 mode that allows running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32 aka "old" wow64, also lacks 16bit support) -- if USE=mingw is set, still need the default abi_x86_32 set on dev-util/mingw64-toolchain but that can be done even with /no-multilib/ profiles. This can also be enabled on arm64 to allow running x86 applications via binary translation.
 app-emulation/winetricks:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
-app-emulation/x48:readline - Enables support for libreadline
 app-emulation/xe-guest-utilities:xenstore - Use xenstore binaries bundled by Citrix instead of building app-emulation/xen-tools
 app-emulation/xen:boot-symlinks - Symlink xen.gz variants in /boot, disable on fat filesystems
 app-emulation/xen:flask - Enable the Flask XSM module from NSA
@@ -4437,6 +4436,7 @@ media-libs/mesa:lm-sensors - Enable Gallium HUD lm-sensors support.
 media-libs/mesa:opencl - Enable the Rusticl Gallium OpenCL state tracker.
 media-libs/mesa:osmesa - Build the Mesa library for off-screen rendering.
 media-libs/mesa:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
+media-libs/mesa:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 media-libs/mesa:vdpau - Enable the VDPAU acceleration interface for the Gallium3D Video Layer.
 media-libs/mesa:vulkan-overlay - Build vulkan-overlay-layer which displays Frames Per Second and other statistics
 media-libs/mesa:wayland - Enable support for dev-libs/wayland
@@ -5784,6 +5784,7 @@ net-dns/pdns:remote - Use a generic socket or pipe as a backend (via JSON RPC re
 net-dns/pdns:sodium - Use dev-libs/libsodium for cryptography
 net-dns/pdns:tinydns - Use a TinyDNS CDB database as backend.
 net-dns/pdns:tools - Build optional tools (dnsscan, dnsscope, etc..).
+net-dns/pdns-recursor:dns-over-tls - Enable support for DNS over TLS
 net-dns/pdns-recursor:dnstap - Enable support for dnstap
 net-dns/pdns-recursor:sodium - Use dev-libs/libsodium for cryptography
 net-dns/pdnsd:urandom - Linux-only: use /dev/urandom (pseudo-random number generation) instead of the default use of random() PRNG.
@@ -6673,6 +6674,9 @@ net-misc/rsync:rrsync - Install rrsync script to setup restricted rsync users vi
 net-misc/rsync:stunnel - Provide helper scripts for using rsync via >=net-misc/stunnel-4
 net-misc/rsync:system-zlib - Use system zlib instead of bundled one. This is incompatible with older rsync releases!
 net-misc/rsync:xxhash - Enable dev-libs/xxhash support for hashing
+net-misc/rsync-bpc:acl - Enable acl support
+net-misc/rsync-bpc:lz4 - Enable support for lz4
+net-misc/rsync-bpc:xxhash - Enable support for xxhash
 net-misc/rygel:tracker - Install dependencies for the tracker plugin
 net-misc/rygel:transcode - Install dependencies for transcoding support
 net-misc/scponly:chroot - Enables adding and configuring an 'scponlyc' chrooted user
@@ -7214,6 +7218,7 @@ sci-chemistry/gromacs:offensive - Enable gromacs partly offensive quotes
 sci-chemistry/gromacs:opencl - Enable opencl non-bonded kernels
 sci-chemistry/gromacs:single-precision - Single precision version of gromacs (default)
 sci-chemistry/gromacs:tng - Enable new trajectory format - tng
+sci-chemistry/gromacs:video_cards_intel - Modifies the non-bonded GPU cluster size to 4 in order to enable opencl on Intel integrated graphics
 sci-chemistry/molequeue:client - Build the client application
 sci-chemistry/molequeue:server - Build the serve application
 sci-chemistry/molequeue:zeromq - Build with net-libs/zeromq support
@@ -7429,7 +7434,6 @@ sci-libs/lemon:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk sup
 sci-libs/libccd:double-precision - More precise calculations at the expense of speed
 sci-libs/liborigin:tools - Install opj2dat command line util
 sci-libs/libqalculate:hardened - Disable unsafe functions like 'command' and variables like 'uptime'.
-sci-libs/libsc:romio - Build with support for the ROMIO MPI-IO component
 sci-libs/libsemigroups:eigen - Use dev-cpp/eigen (at build time only) to speed up some matrix operations.
 sci-libs/libsigrok:ftdi - Enable drivers that need dev-embedded/libftdi
 sci-libs/libsigrok:gpib - Enable drivers that need sci-libs/linux-gpib
@@ -7564,9 +7568,6 @@ sci-libs/vtk:views - Building Views modules
 sci-libs/vtk:vtkm - Build the vtkm accelerations modules
 sci-libs/vtk:web - Install web component
 sci-mathematics/bertini:optimization - Accept upstream's choices for -O option.
-sci-mathematics/boolector:cryptominisat - Enable support for sci-mathematics/cryptominisat
-sci-mathematics/boolector:minisat - Enable support for sci-mathematics/minisat
-sci-mathematics/boolector:picosat - Enable support for sci-mathematics/picosat
 sci-mathematics/cadabra:jupyter - Build the Cadabra Jupyter kernel
 sci-mathematics/coq:native-compiler - Enable "native_compute" and compile the Coq Standard Library
 sci-mathematics/cvc4:cln - Use sci-libs/cln

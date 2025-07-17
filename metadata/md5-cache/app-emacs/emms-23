@@ -1,0 +1,14 @@
+BDEPEND=>=app-editors/emacs-25.3:*
+DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
+DEPEND=media-libs/taglib:=
+DESCRIPTION=The Emacs Multimedia System
+EAPI=8
+HOMEPAGE=https://www.gnu.org/software/emms/ https://www.emacswiki.org/emacs/EMMS
+INHERIT=elisp toolchain-funcs
+KEYWORDS=~amd64 ~ppc ~sparc ~x86
+LICENSE=GPL-3+ FDL-1.1+
+RDEPEND=media-libs/taglib:= >=app-editors/emacs-25.3:*
+SLOT=0
+SRC_URI=https://git.savannah.gnu.org/cgit/emms.git/snapshot/emms-23.tar.gz
+_eclasses_=elisp	8dfc7a00348fe9c91895014adc78a4a5	elisp-common	fe05085d051330f15cf7201109b5cd23	toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0
+_md5_=8ff90530b8c08a89fa6dcff6b97d15ca

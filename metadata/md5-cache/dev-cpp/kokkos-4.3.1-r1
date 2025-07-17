@@ -1,0 +1,16 @@
+BDEPEND=app-alternatives/ninja >=dev-build/cmake-3.20.5
+DEFINED_PHASES=compile configure install prepare pretend setup test
+DEPEND=sys-apps/hwloc:=
+DESCRIPTION=C++ Performance Portability Programming EcoSystem
+EAPI=8
+HOMEPAGE=https://github.com/kokkos
+INHERIT=cmake toolchain-funcs
+IUSE=+openmp test
+KEYWORDS=amd64 -x86
+LICENSE=BSD
+RDEPEND=sys-apps/hwloc:=
+RESTRICT=!test? ( test )
+SLOT=0/4.3.1
+SRC_URI=https://github.com/kokkos/kokkos/archive/refs/tags/4.3.01.tar.gz -> kokkos-4.3.1.tar.gz
+_eclasses_=cmake	460729dc36f68cf03b044bc1d367e34a	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
+_md5_=891fe409068e483a714cfc3bc77522a9
