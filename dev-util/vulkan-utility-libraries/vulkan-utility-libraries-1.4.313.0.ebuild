@@ -14,7 +14,7 @@ if [[ ${PV} == *9999* ]]; then
 else
 	EGIT_COMMIT="vulkan-sdk-${PV}"
 	SRC_URI="https://github.com/KhronosGroup/${MY_PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="amd64 ~arm ~arm64 ~loong ppc ppc64 ~riscv x86"
+	KEYWORDS="amd64 arm arm64 ~loong ppc ppc64 ~riscv x86"
 	S="${WORKDIR}"/${MY_PN}-${EGIT_COMMIT}
 fi
 
@@ -29,7 +29,7 @@ RESTRICT="!test? ( test )"
 DEPEND="~dev-util/vulkan-headers-${PV}
 	test? (
 		dev-cpp/gtest
-		>=dev-cpp/magic_enum-0.9.2
+		>=dev-cpp/magic_enum-0.9.7
 	)"
 BDEPEND="${PYTHON_DEPS}"
 

@@ -191,7 +191,6 @@ app-admin/ulogd:nfacct - Build NFACCT input plugin to support traffic accounting
 app-admin/ulogd:nfct - Build NFCT input plugin to support stateful flow-based logging via nfnetlink_conntrack
 app-admin/ulogd:nflog - Build NFLOG input plugin to support stateless packet-based logging via nfnetlink_log
 app-admin/ulogd:pcap - Build PCAP output plugin to save packets in libpcap file format
-app-admin/ulogd:ulog - Build ULOG input plugin to support deprecated packet-based logging via ULOG target
 app-admin/vault:webui - Enable the Web UI
 app-admin/vaultwarden:cli - Install client with the Command-Line Interface
 app-admin/vaultwarden:web - Install client with Web UI
@@ -1167,11 +1166,8 @@ app-text/evince:spell - Enable inline spell check for annotations via app-text/g
 app-text/evince:xps - Enable XPS viewer using app-text/libgxps
 app-text/feathernotes:X - Link application against X11 libraries which adds support for virtual desktop awareness and tab DND
 app-text/ghostscript-gpl:unicode - Add support for unicode passwords via net-dns/libidn
-app-text/groonga:abort - Enable query abortion
 app-text/groonga:benchmark - Build benchmark programs
-app-text/groonga:dynamic-malloc-change - Allow dynamic memory allocation change for testing
 app-text/groonga:exact-alloc-count - Atomic counting for memory alloc count
-app-text/groonga:fmalloc - Make memory allocation failed in specified condition for debug
 app-text/groonga:futex - Use futex
 app-text/groonga:libevent - Enable dev-libs/libevent used for suggestion
 app-text/groonga:mecab - Use app-text/mecab for morphological analysis
@@ -2869,8 +2865,10 @@ dev-util/geany:vte - Enable Terminal support (x11-libs/vte)
 dev-util/geany-plugins:ctags - Enable ctags plugin
 dev-util/geany-plugins:debugger - Enable the debugger plugin which interfaces with dev-debug/gdb
 dev-util/geany-plugins:enchant - Enable spell checking using enchant
+dev-util/geany-plugins:geniuspaste - Enable the GeniusPaste plugin
 dev-util/geany-plugins:gpg - Enable geanypg plugin which integrates GPG using app-crypt/gpgme
 dev-util/geany-plugins:gtkspell - Use gtkspell for dictionary support in GeanyVC
+dev-util/geany-plugins:lsp - Enable the Language Server Protocol plugin
 dev-util/geany-plugins:markdown - Enable the markdown plugin
 dev-util/geany-plugins:pretty-printer - Enable pretty-printer plugin
 dev-util/geany-plugins:scope - Enable the scope plugin which is a graphical GDB front-end
