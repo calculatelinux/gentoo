@@ -36,6 +36,24 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2025-07-22)
+# Provider for PyPy3.10 executable.  This branch is no longer maintained
+# upstream, and it is vulnerable.  Removal on 2025-08-05.
+dev-lang/pypy:3.10
+dev-python/pypy3_10-exe
+dev-python/pypy3_10-exe-bin
+
+# Matt Turner <mattst88@gentoo.org> (2025-07-20)
+# No reverse dependencies remaining.
+# Removal on 2025-08-19.
+dev-util/volk
+
+# Michał Górny <mgorny@gentoo.org> (2025-07-20)
+# Discontinued in favor of net-proxy/mitmproxy-rs which is now
+# an unconditional dependency of net-proxy/mitmproxy.
+# Removal on 2025-08-19.  Bug #960470.
+dev-python/mitmproxy-wireguard
+
 # Eli Schwartz <eschwartz@gentoo.org> (2025-07-18)
 # End of life software. Relies on a commercial internet service which removed
 # suppor for the old APIs this package needs. Impossible to use anymore.
@@ -81,10 +99,13 @@ virtual/perl-IO-Zlib
 virtual/perl-Locale-Maketext
 virtual/perl-Math-BigInt-FastCalc
 virtual/perl-Math-BigRat
+virtual/perl-Math-Complex
+virtual/perl-Module-Load-Conditional
 virtual/perl-Parse-CPAN-Meta
 virtual/perl-Params-Check
 perl-core/Params-Check
 virtual/perl-Term-ReadLine
+virtual/perl-Unicode-Collate
 virtual/perl-Unicode-Normalize
 
 # Joonas Niilola <juippis@gentoo.org> (2025-07-01)

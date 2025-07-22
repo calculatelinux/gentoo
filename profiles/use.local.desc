@@ -1037,11 +1037,13 @@ app-office/gnucash:quotes - Enable online stock quote retrieval
 app-office/gnumeric:libgda - Enable database support through gnome-extra/libgda.
 app-office/gnumeric:perl - Enable perl plugin loader.
 app-office/grisbi:goffice - enable goffice graphic support
+app-office/kmymoney:activities - Enable kde-plasma/plasma-activities integration
 app-office/kmymoney:hbci - Enable HBCI support using net-libs/aqbanking
 app-office/kmymoney:holidays - Enable kde-frameworks/kholidays integration
 app-office/kmymoney:sql - Enable storage of financial data in SQL Db via dev-qt/qtsql
 app-office/kmymoney:sqlcipher - Enable SQLite3 database encryption support via dev-db/sqlcipher
 app-office/kraft:pim - Enable support for KDE PIM resources integration
+app-office/libalkimia:webengine - Enable online quotes using dev-qt/qtwebengine
 app-office/libreoffice:base - Enable full support for LibreOffice Base databases (involves additional bundled libs)
 app-office/libreoffice:coinmp - Use sci-libs/coinor-mp as alternative solver
 app-office/libreoffice:googledrive - Enable support for remote files on Google Drive
@@ -4365,11 +4367,16 @@ media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libgphoto2:serial - Enable serial port support
 media-libs/libgpod:gtk - Enable ArtworkDB support
 media-libs/libheif:aom - Use media-libs/libaom for AVIF encoding/decoding
+media-libs/libheif:dav1d - Enable support for the dav1d codec decoding using media-libs/dav1d
+media-libs/libheif:de265 - Enable H.265 support using media-libs/libde265
 media-libs/libheif:gdk-pixbuf - Enable x11-libs/gdk-pixbuf plugin
 media-libs/libheif:go - Enable building dev-lang/go code/examples
+media-libs/libheif:kvazaar - Enable H.265/HEVC encoding support via media-libs/kvazaar
 media-libs/libheif:openh264 - Enable H.264 support using media-libs/openh264
 media-libs/libheif:rav1e - Use media-video/rav1e for AVIF encoding
 media-libs/libheif:svt-av1 - Use media-libs/svt-av1 for SVT-AV1 encoding
+media-libs/libheif:test-full - Allow tests that rely on options not normally enabled
+media-libs/libheif:tools - Build heif-view tool
 media-libs/libheif:webp - Enable high-quality YCbCr/RGB color space conversion algorithms
 media-libs/libheif:x265 - Use media-libs/x265 for HEIF encoding
 media-libs/libjxl:gdk-pixbuf - Build a gdk-pixbuf loader.
@@ -5040,7 +5047,6 @@ media-tv/mythtv:autostart - Use a custom autostart configuration
 media-tv/mythtv:cec - Allows control of CEC enabled TVs via HDMI
 media-tv/mythtv:ceton - Ceton InfiniTV 4 a CableCARD-enabled tuner support
 media-tv/mythtv:debug - Instructs Qt to use the 'debug' target
-media-tv/mythtv:fftw - Support visualizations via sci-libs/fftw
 media-tv/mythtv:hdhomerun - Silicondust USA Inc.network-attached tuner support
 media-tv/mythtv:ieee1394 - Firewire enabled Cable boxe support
 media-tv/mythtv:jack - Allows MythTV to use JACK as your sound output device
@@ -5951,14 +5957,7 @@ net-im/ejabberd:sqlite - Enable SQLite database support
 net-im/ejabberd:stun - Enable STUN/TURN support
 net-im/ejabberd:zlib - Enable Stream Compression (XEP-0138) using zlib
 net-im/err:irc - Pull optional dependencies, needed for IRC backend
-net-im/gajim:crypt - End to end encryption and GPG encryption
-net-im/gajim:geolocation - Sharing your location
-net-im/gajim:jingle - Audio and video calls
-net-im/gajim:remote - Controling Gajim instance from command line with gajim-remote
-net-im/gajim:rst - Generating XHTML output from RST code
-net-im/gajim:spell - Spellchecking of composed messages
 net-im/gajim:voice - Support for video calls, audio calls and voice messages
-net-im/gajim:webp - Support WebP avatars
 net-im/libcommuni:qml - Install optional qml files.
 net-im/libcommuni:uchardet - Use app-i18n/uchardet, which is upstreams default, instead of dev-libs/icu, which makes impossible to run tests.
 net-im/pidgin:gadu - Enable Gadu Gadu protocol support

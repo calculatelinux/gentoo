@@ -163,6 +163,7 @@ CDEPEND="
 RDEPEND="
 	${CDEPEND}
 	media-libs/mesa[vaapi?]
+	cuda? ( x11-drivers/nvidia-drivers )
 	X? (
 		x11-libs/libxcb
 		x11-libs/libXfixes
@@ -176,6 +177,7 @@ DEPEND="
 	dev-cpp/nlohmann_json
 	media-libs/amf-headers
 	<media-libs/nv-codec-headers-14
+	cuda? ( dev-util/nvidia-cuda-toolkit )
 	wayland? ( dev-libs/wayland-protocols )
 "
 
@@ -183,7 +185,7 @@ BDEPEND="
 	net-libs/nodejs[npm]
 	virtual/pkgconfig
 	cpu_flags_x86_mmx? ( >=dev-lang/nasm-2.13 )
-	cuda? ( dev-util/nvidia-cuda-toolkit )
+	cuda? ( llvm-core/clang:*[llvm_targets_NVPTX] )
 	wayland? ( dev-util/wayland-scanner )
 "
 
@@ -286,6 +288,7 @@ src_configure() {
 		--optflags="${CFLAGS}"
 		--disable-all
 		--disable-autodetect
+		--disable-cuda-nvcc
 		--disable-error-resilience
 		--disable-everything
 		--disable-faan
@@ -359,6 +362,7 @@ src_configure() {
 		-DBUILD_DOCS=no
 		-DBUILD_TESTS=no
 		-DCCACHE_FOUND=no
+		-DCMAKE_DISABLE_FIND_PACKAGE_Boost=yes
 		-DFFMPEG_PLATFORM_LIBRARIES="$(usex svt-av1 SvtAv1Enc '');$(usex vaapi 'va;va-drm' '');$(usev x264);$(usev x265)"
 		-DFFMPEG_PREPARED_BINARIES="${S}"/third-party/build-deps/dist
 		-DSUNSHINE_ASSETS_DIR=share/${PN}
@@ -371,6 +375,13 @@ src_configure() {
 		-DSUNSHINE_SYSTEM_WAYLAND_PROTOCOLS=yes
 		-DUDEV_RULES_INSTALL_DIR=$(get_udevdir)/rules.d
 	)
+
+	if use cuda; then
+		mycmakeargs+=(
+			-DCMAKE_CUDA_COMPILER=clang++
+			-DCUDA_INHERIT_COMPILE_OPTIONS=no
+		)
+	fi
 
 	if use systemd; then
 		mycmakeargs+=( -DSYSTEMD_USER_UNIT_INSTALL_DIR=$(systemd_get_userunitdir) )
