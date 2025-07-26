@@ -5,7 +5,7 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_{11..14} )
 LLVM_COMPAT=( {16..21} )
-inherit cmake llvm-r1 python-single-r1
+inherit cmake llvm-r2 python-single-r1
 
 DESCRIPTION="Super-parallel Python port of the C-Reduce"
 HOMEPAGE="https://github.com/marxin/cvise"
@@ -59,7 +59,7 @@ BDEPEND="
 
 pkg_setup() {
 	python-single-r1_pkg_setup
-	llvm-r1_pkg_setup
+	llvm-r2_pkg_setup
 }
 
 src_prepare() {

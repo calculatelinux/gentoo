@@ -36,6 +36,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2025-07-26)
+# Another pytest plugin causing random breakage.  Discontinued upstream,
+# last revdep stopped using it.
+# Removal on 2025-08-25.  Bug #960760.
+dev-python/noseofyeti
+
 # Michał Górny <mgorny@gentoo.org> (2025-07-22)
 # Provider for PyPy3.10 executable.  This branch is no longer maintained
 # upstream, and it is vulnerable.  Removal on 2025-08-05.
@@ -224,7 +230,7 @@ dev-util/bin_replace_string
 >=app-crypt/gpgme-2
 >=dev-cpp/gpgmepp-2
 >=dev-libs/qgpgme-2
-dev-python/gpgmepy
+>dev-python/gpgmepy-1.9999
 
 # Sam James <sam@gentoo.org> (2025-06-03)
 # Fetching from GitHub seems broken with this:
@@ -277,11 +283,6 @@ media-libs/oneVPL-cpu
 # Ulrich Müller <ulm@gentoo.org> (2025-05-18)
 # Pretest versions, masked for testing.
 <app-editors/emacs-30.1.9999:30-vcs
-
-# Hans de Graaff <graaff@gentoo.org> (2025-05-18)
-# Obsolete slot depending on an old cucumber version. Use the newer slot
-# instead. Masked for removal on 2025-06-18.
-dev-util/cucumber-rails:2
 
 # David Seifert <soap@gentoo.org> (2025-05-17)
 # Historically split from dev-libs/icu, disabled by default upstream and not

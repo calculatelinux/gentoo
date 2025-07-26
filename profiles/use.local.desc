@@ -657,7 +657,6 @@ app-emulation/qemu:sdl-image - SDL Image support for icons
 app-emulation/qemu:slirp - Enable TCP/IP in hypervisor via net-libs/libslirp
 app-emulation/qemu:spice - Enable Spice protocol support via app-emulation/spice
 app-emulation/qemu:ssh - Enable SSH based block device support via net-libs/libssh2
-app-emulation/qemu:static - Build the User and Software MMU (system) targets as well as tools as static binaries
 app-emulation/qemu:static-user - Build the User targets as static binaries
 app-emulation/qemu:systemtap - Enable SystemTap/DTrace tracing
 app-emulation/qemu:usb - Enable USB passthrough via dev-libs/libusb
@@ -1920,7 +1919,6 @@ dev-lang/yap:raptor - Enable support for Raptor RDF syntax libarary
 dev-lang/zig:debug - Build with debug extensions enabled.
 dev-lang/zig:llvm - Build with LLVM backend and extensions enabled.
 dev-libs/aml:examples - Build and install examples
-dev-libs/antlr-c:debugger - Compiles debug info into the library
 dev-libs/apache-arrow:compute - Build the Arrow Compute Modules
 dev-libs/apache-arrow:dataset - Build the Arrow Dataset Modules
 dev-libs/apache-arrow:json - Enables read/write json format
@@ -5710,6 +5708,7 @@ net-dns/dnsdist:regex - Enable support for regular expression matching via dev-l
 net-dns/dnsdist:ssl - Enable support for and encrypted client-server communication via dev-libs/libsodium
 net-dns/dnsdist:web - Enable support for the web UI
 net-dns/dnsdist:xdp - Enable support for AF_XDP high performance packet processing
+net-dns/dnsdist:yaml - Enable support for YAML configuration
 net-dns/dnsmasq:auth-dns - Add support for acting as an authorative DNS server.
 net-dns/dnsmasq:conntrack - Add support for Linux conntrack connection marking.
 net-dns/dnsmasq:dhcp - Enable support for acting as a DHCP server.
@@ -6492,6 +6491,7 @@ net-misc/iputils:clockdiff - Build and install clockdiff -- tool for comparing c
 net-misc/iputils:rarpd - Build and install rarpd -- server for handling RARP (reverse ARP) requests; generally only used by old systems
 net-misc/iputils:rdisc - Build and install rdisc -- server for the client side of the ICMP router discover protocol
 net-misc/iputils:tracepath - Build and install tracepath -- tool for tracing network paths for discovering MTU values
+net-misc/ipv6calc:openssl - Use dev-libs/openssl instead of app-crypt/libmd for MD5 digest
 net-misc/kafka-bin:connect - Install init for Kafka Connect Distributed mode
 net-misc/kafka-bin:internal-zookeeper - Use bundled local zookeeper instance
 net-misc/kafkacat:avro - Enable avro serialization/deserialization support
