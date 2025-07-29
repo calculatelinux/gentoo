@@ -600,7 +600,6 @@ app-emulation/libvirt:lxc - Support management of Linux Containers virtualisatio
 app-emulation/libvirt:nbd - Allow using sys-block/nbdkit to access network disks
 app-emulation/libvirt:nfs - Allow using Network File System mounts as pool for disk image storage
 app-emulation/libvirt:numa - Use NUMA for memory segmenting via sys-process/numactl and sys-process/numad
-app-emulation/libvirt:openvz - Support management of OpenVZ virtualisation (openvz-sources)
 app-emulation/libvirt:parted - Allow using real disk partitions as pool for disk image storage, using sys-block/parted to create, resize and delete them.
 app-emulation/libvirt:pcap - Support auto learning IP addreses for routing
 app-emulation/libvirt:qemu - Support management of QEMU virtualisation (app-emulation/qemu)
@@ -3056,7 +3055,6 @@ games-arcade/osu-lazer:pipewire - Use pipewire to enable sound output
 games-arcade/performous:midi - Enable MIDI I/O support
 games-arcade/performous:songs - Install a few demo songs
 games-arcade/performous:webcam - Enable Webcam support
-games-arcade/tuxanci:physfs - Use dev-games/physfs instead of dev-libs/libzip to load compressed data
 games-board/cockatrice:client - Build with client
 games-board/cockatrice:oracle - Build with oracle
 games-board/cockatrice:server - Compile server support
@@ -3637,7 +3635,6 @@ kde-frameworks/kwidgetsaddons:designer - Build plugins for dev-qt/designer
 kde-frameworks/kxmlgui:designer - Build plugins for dev-qt/designer
 kde-frameworks/networkmanager-qt:teamd - Enable Teamd control support
 kde-frameworks/prison:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
-kde-frameworks/purpose:kaccounts - Enable support for system-wide defined KAccounts
 kde-frameworks/purpose:webengine - Enable support for system-wide defined KAccounts
 kde-frameworks/sonnet:aspell - Enable the app-text/aspell spell-checking backend
 kde-frameworks/sonnet:designer - Build plugins for dev-qt/designer
@@ -4461,7 +4458,6 @@ media-libs/noise-suppression-for-voice:vst3 - Enable the VST3 plugin
 media-libs/oidn:apps - Build the standalone denoise, self test, and benchmark binaries.
 media-libs/oidn:hip - Build OIDN with AMD HIP support.
 media-libs/oidn:openimageio - Enable OpenImageIO Support
-media-libs/oneVPL-cpu:openh264 - Use media-libs/openh264 instead of media-libs/x264
 media-libs/openal:pipewire - Enable support for the media-video/pipewire audio backend
 media-libs/openal:sndio - Enable support for the media-sound/sndio backend
 media-libs/opencolorio:apps - Build the OCIO command line apps
@@ -4986,7 +4982,6 @@ media-sound/strawberry:moodbar - Enable moodbar support
 media-sound/strawberry:streaming - Enable Online Streaming Support
 media-sound/supercollider:ableton-link - Enable support for Ableton Link
 media-sound/supercollider:emacs - Enable the SCEL user interface
-media-sound/supercollider:gedit - Enable the SCED user interface
 media-sound/supercollider:gpl3 - Build GPL-3 licensed code (recommended)
 media-sound/supercollider:server - Build with internal server
 media-sound/supercollider:vim - Enable the SCVIM user interface
@@ -5696,6 +5691,7 @@ net-dns/bind:systemtap - Build support for profiling and tracing using dev-debug
 net-dns/bind-tools:gssapi - Enable gssapi support
 net-dns/ddclient:examples - Install various example files, like for cron.
 net-dns/djbdns:ipv6 - Apply Fefe's patch (https://www.fefe.de/dns/) for ipv6 support.
+net-dns/dnscap:cryptopant - Enable cryptopANT plugin, implementation of crypto-PAn algorithm using app-crypt/cryptopant to anonymize IP addresses
 net-dns/dnsdist:bpf - Enable support for eBPF socket filtering
 net-dns/dnsdist:dnscrypt - Enable the ability to act as a DNSCrypt server
 net-dns/dnsdist:dnstap - Enable support for dnstap
@@ -6497,7 +6493,6 @@ net-misc/kafka-bin:internal-zookeeper - Use bundled local zookeeper instance
 net-misc/kafkacat:avro - Enable avro serialization/deserialization support
 net-misc/kafkacat:json - Enable json support
 net-misc/kea:openssl - Use dev-libs/openssl instead of dev-libs/botan
-net-misc/kea:samples - Install sample configuration files
 net-misc/kea:shell - Install kea-shell text management client for Control Agent
 net-misc/knock:server - Installs the knockd server daemon.
 net-misc/libteam:zmq - Build witch net-libs/zeromq support
@@ -7349,6 +7344,7 @@ sci-libs/dealii:ginkgo - Add support for ginkgo (sci-libs/ginkgo)
 sci-libs/dealii:gmsh - Add support for gmsh (sci-libs/gmsh)
 sci-libs/dealii:int64 - Use 64 bit indexes
 sci-libs/dealii:metis - Add support for metis (sci-libs/metis)
+sci-libs/dealii:mumps - Add support for mumps (sci-libs/mumps)
 sci-libs/dealii:muparser - Add support for muparser (dev-cpp/muParser)
 sci-libs/dealii:opencascade - Add support for opencascade (sci-libs/opencascade)
 sci-libs/dealii:p4est - Add support for p4est (sci-libs/p4est)
