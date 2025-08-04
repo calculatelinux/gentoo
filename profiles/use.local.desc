@@ -305,6 +305,8 @@ app-backup/dar:dar64 - Enables --enable-mode=64 option, which replace infinite b
 app-backup/dar:gcrypt - Enables strong encryption support
 app-backup/dar:gpg - Enables usage of asymmetric encryption algorithms
 app-backup/dar:rsync - Enables linking with net-libs/librsync for delta compression support
+app-backup/dar:sftp - Enables SFTP support with net-libs/libssh
+app-backup/dar:whirlpool - Enables Whirlpool hashing support with app-crypt/rhash
 app-backup/duplicity:s3 - Support for backing up to the Amazon S3 system
 app-backup/rear:udev - Have ReaR start backup when attaching your USB drive.
 app-backup/snapper:lvm - Enable LVM thinprovisioned snapshots support sys-fs/lvm2
@@ -2965,7 +2967,6 @@ dev-util/schroot:zfs - Enable support for chroots using ZFS shapshots/clones
 dev-util/sdl-jstest:sdl - Enable media-libs/libsdl2 based input test
 dev-util/sdl-jstest:sdl1 - Enable media-libs/libsdl based input test
 dev-util/selenium-manager:telemetry - Enable sending telemetry by default (disabling it sets avoid-stats config option to true).
-dev-util/sysprof:unwind - Use sys-libs/libunwind to unwind the stack
 dev-util/uftrace:capstone - Use capstone to provide dynamic tracing without recompilation
 dev-util/unicorn:logging - Enable logging
 dev-util/vulkan-tools:cube - Build the cube/cubepp demos
@@ -3763,7 +3764,6 @@ llvm-runtimes/compiler-rt-sanitizers:safestack - Build SafeStack runtime.
 llvm-runtimes/compiler-rt-sanitizers:scudo - Build Scudo Hardened Allocator.
 llvm-runtimes/compiler-rt-sanitizers:shadowcallstack - Build ShadowCallStack.
 llvm-runtimes/compiler-rt-sanitizers:tsan - Build Thread Sanitizer runtime.
-llvm-runtimes/compiler-rt-sanitizers:tysan - Build Type Sanitizer runtime.
 llvm-runtimes/compiler-rt-sanitizers:ubsan - Build Undefined Behavior Sanitizer runtime.
 llvm-runtimes/compiler-rt-sanitizers:xray - Build XRay runtime.
 llvm-runtimes/libcxx:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
@@ -4163,6 +4163,7 @@ media-gfx/graphviz:devil - Enables DevIL output plugin -Tdevil
 media-gfx/graphviz:gtk2 - Enables gtk+ output plugin -Tgtk (needs cairo)
 media-gfx/graphviz:gts - Enables support for GNU Triangulated Surface Library (required for sfdp to work)
 media-gfx/graphviz:lasi - Enables PostScript output via media-libs/lasi, for plugin -Tlasi (needs cairo)
+media-gfx/gthumb:geolocation - Use media-libs/libchamplain to show the position the image refers to
 media-gfx/gthumb:slideshow - Enable slideshow plugin
 media-gfx/hugin:sift - automatically align images with media-gfx/autopano-sift-C
 media-gfx/imagemagick:corefonts - Use media-fonts/corefonts which is required by some commands
@@ -4500,6 +4501,7 @@ media-libs/openh264:utils - Install the CLI encoder and decoder utilities
 media-libs/openimageio:dicom - Enable DICOM medical image file support via sci-libs/dcmtk
 media-libs/openimageio:fits - Enable support for NASA's sci-libs/cfitsio library
 media-libs/openimageio:gui - Build iv
+media-libs/openimageio:libcxx - Build against llvm-runtimes/libcxx when using clang
 media-libs/openimageio:opencv - Enable OpenCV support via media-libs/opencv
 media-libs/openimageio:openvdb - Enable OpenVDB support via media-gfx/openvdb
 media-libs/openimageio:ptex - Enable Ptex texture mapping system file support via media-libs/ptex
@@ -7695,6 +7697,9 @@ sci-ml/caffe2:xnnpack - Use sci-ml/XNNPACK
 sci-ml/cudnn-frontend:samples - Build samples during testing
 sci-ml/datasets:torch - Use pytorch
 sci-ml/datasets:vision - Support vision
+sci-ml/evaluate:evaluator - Enable evaluator
+sci-ml/evaluate:template - Enable template
+sci-ml/evaluate:torch - Support pytorch
 sci-ml/gloo:libuv - Enable libuv support
 sci-ml/gloo:redis - Enable Redis backend for storage via dev-libs/hiredis
 sci-ml/oneDNN:cblas - Use virtual/cblas for sgemm routines
@@ -8337,6 +8342,7 @@ sys-devel/sparse:xml - Build the c2xml utility (requires dev-libs/libxml2)
 sys-fabric/mstflint:adb-generic-tools - Enable compiling the following tools: mstreg and mstlink
 sys-fabric/mstflint:inband - Enable firmware updates for Mellanox SwitchX and ConnectIB devices
 sys-fabric/opensm:tools - Install ssld extra tool
+sys-firmware/blisp:tools - Build the blisp command-line utility used to upload firmware to the pinecil
 sys-firmware/broadcom-bt-firmware:compress-xz - Compress firmware using xz (app-arch/xz-utils) before installation
 sys-firmware/broadcom-bt-firmware:compress-zstd - Compress firmware using zstd (app-arch/zstd) before installation
 sys-firmware/intel-microcode:hostonly - Only install ucode(s) supported by currently available (=online) processor(s)

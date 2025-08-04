@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install
+DESCRIPTION=Keep-it-simple and clean bare metal SAT solver written in C
+EAPI=8
+HOMEPAGE=http://fmv.jku.at/kissat/ https://github.com/arminbiere/kissat/
+INHERIT=toolchain-funcs
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=!>=x11-terms/kitty-0.27
+SLOT=0
+SRC_URI=https://github.com/arminbiere/kissat/archive/rel-3.1.1.tar.gz -> kissat-3.1.1.tar.gz
+_eclasses_=toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0
+_md5_=99e6e0d2a2a7e715363ca4c0682cb2b8

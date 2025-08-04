@@ -1,0 +1,15 @@
+BDEPEND=virtual/dotnet-sdk:9.0 dev-dotnet/csharp-gentoodotnetinfo
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DESCRIPTION=The compiler generator Coco/R for C#
+EAPI=8
+HOMEPAGE=https://github.com/boogie-org/coco/
+INHERIT=dotnet-pkg
+IUSE=debug
+KEYWORDS=~amd64
+LICENSE=GPL-2+
+RDEPEND=virtual/dotnet-sdk:9.0
+RESTRICT=strip
+SLOT=0
+SRC_URI=https://github.com/boogie-org/coco/archive/14be0314ae393569ab7abaf4e187f78e6d42b2fd.tar.gz -> coco-2014.12.25.snapshot.gh.tar.gz
+_eclasses_=dotnet-pkg	149be926006315896e1a57f36db1b772	dotnet-pkg-base	6c5f563c6f9f99038ac0ddf7403e3b55	edo	a5e294016aa84979fcb2459749eb80b2	multiprocessing	1e32df7deee68372153dca65f4a7c21f	nuget	5b6663023b71fb1220f230ac225205ae
+_md5_=1ba5647644a3462e14da81cffb107661
