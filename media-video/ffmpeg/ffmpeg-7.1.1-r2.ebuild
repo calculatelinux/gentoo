@@ -28,7 +28,10 @@ else
 fi
 
 DESCRIPTION="Complete solution to record/convert/stream audio and video"
-HOMEPAGE="https://ffmpeg.org/"
+HOMEPAGE="
+	https://ffmpeg.org/
+	https://code.ffmpeg.org/FFmpeg/FFmpeg/
+"
 
 [[ ${PN} == *-compat ]] && FFMPEG_UNSLOTTED= || FFMPEG_UNSLOTTED=1
 
@@ -340,8 +343,10 @@ MULTILIB_WRAPPED_HEADERS=(
 )
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-6.1-opencl-parallel-gmake-fix.patch
-	"${FILESDIR}"/${PN}-7.1.1-svt-av1-3.patch
+	"${FILESDIR}"/ffmpeg-6.1-opencl-parallel-gmake-fix.patch
+	"${FILESDIR}"/ffmpeg-7.1.1-svt-av1-3.patch
+	"${FILESDIR}"/ffmpeg-7.1.1-npp13.patch
+	"${FILESDIR}"/ffmpeg-7.1.1-libv4l-1.30.patch
 )
 
 pkg_pretend() {

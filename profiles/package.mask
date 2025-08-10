@@ -36,6 +36,36 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2025-08-10)
+# Significant regression breaking dev-python/websockets.
+# Masking until upstream decides how to proceed.
+=dev-lang/python-3.13.6
+=dev-python/python-tests-3.13.6
+
+# Hans de Graaff <graaff@gentoo.org> (2025-08-08)
+# ruby-openid fails tests and is archived upstream. Last release 6 years
+# ago. rack-openid is the only reverse dependency.
+# Removal on 2025-09-08
+dev-ruby/rack-openid
+dev-ruby/ruby-openid
+
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2025-08-07)
+# Unused java library, pinned to virtual/jdk:1.8.
+# Removal on 2025-09-07.
+dev-java/jide-oss
+
+# Michał Górny <mgorny@gentoo.org> (2025-08-05)
+# Accidental breaking change.  Yanked upstream.  Bug #961089.
+# Followed by another yanked breaking release.
+=dev-python/setuptools-scm-9.0.3
+=dev-python/setuptools-scm-9.0.0
+
+# Alexey Sokolov <alexey+gentoo@asokolov.org> (2025-08-03)
+# Inactive upstream, stuck on Qt5. Suggested alternatives:
+# media-sound/strawberry, media-sound/amarok.
+# Removal on 2025-09-03. Bug #960012.
+media-sound/clementine
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-07-31)
 # KF5 -> KF6 transitional package with no more revdeps since 25.04.
 # Removal on 2025-08-15.

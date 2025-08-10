@@ -28,7 +28,10 @@ else
 fi
 
 DESCRIPTION="Complete solution to record/convert/stream audio and video"
-HOMEPAGE="https://ffmpeg.org/"
+HOMEPAGE="
+	https://ffmpeg.org/
+	https://code.ffmpeg.org/FFmpeg/FFmpeg/
+"
 
 [[ ${PN} == *-compat ]] && FFMPEG_UNSLOTTED= || FFMPEG_UNSLOTTED=1
 
@@ -311,7 +314,7 @@ DEPEND="
 	ladspa? ( media-libs/ladspa-sdk )
 	nvenc? ( >=media-libs/nv-codec-headers-12.1.14.0 )
 	opencl? ( dev-util/opencl-headers )
-	vulkan? ( dev-util/vulkan-headers )
+	vulkan? ( >=dev-util/vulkan-headers-1.4.317 )
 "
 BDEPEND="
 	app-alternatives/awk
@@ -334,7 +337,7 @@ MULTILIB_WRAPPED_HEADERS=(
 )
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-6.1-opencl-parallel-gmake-fix.patch
+	"${FILESDIR}"/ffmpeg-6.1-opencl-parallel-gmake-fix.patch
 )
 
 pkg_pretend() {
@@ -464,6 +467,7 @@ multilib_src_configure() {
 		--disable-pocketsphinx
 		--disable-rkmpp
 		--disable-vapoursynth
+		--disable-whisper
 
 		# disabled for other or additional reasons
 		--disable-cuda-nvcc # prefer cuda-llvm for less issues

@@ -1,0 +1,16 @@
+BDEPEND=media-gfx/graphviz dev-perl/Data-Section-Simple dev-perl/File-Which dev-perl/IPC-Run3 dev-perl/Moo dev-perl/Type-Tiny dev-perl/Graph dev-perl/Test-Pod dev-perl/Pod-Markdown test? ( dev-perl/Test-Snapshot >=virtual/perl-Test-Simple-1.1.2 ) >=dev-lang/perl-5.38.2-r3[perl_features_debug=,perl_features_ithreads=,perl_features_quadmath=] test? ( >=virtual/perl-Test-Simple-1 )
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=dev-lang/perl-5.38.2-r3[perl_features_debug=,perl_features_ithreads=,perl_features_quadmath=]
+DESCRIPTION=A wrapper for AT&T's GraphViz
+EAPI=8
+HOMEPAGE=https://metacpan.org/release/GraphViz2
+INHERIT=perl-module
+IUSE=perl_features_debug perl_features_ithreads perl_features_quadmath test
+KEYWORDS=~amd64
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=media-gfx/graphviz dev-perl/Data-Section-Simple dev-perl/File-Which dev-perl/IPC-Run3 dev-perl/Moo dev-perl/Type-Tiny dev-perl/Graph >=dev-lang/perl-5.38.2-r3[perl_features_debug=,perl_features_ithreads=,perl_features_quadmath=] dev-lang/perl:=
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/E/ET/ETJ/GraphViz2-2.67.tar.gz
+_eclasses_=multiprocessing	1e32df7deee68372153dca65f4a7c21f	perl-functions	1863acf0982afafc67797e3ce7275b4c	perl-module	41920449ca174fe9b9b303dfcbdb37a3	readme.gentoo-r1	b045f3acf546393ab6b3170781875358	toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0
+_md5_=1ec590a4afc2273f44bdcc91eef5fbcb

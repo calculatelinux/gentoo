@@ -217,8 +217,6 @@ src_prepare() {
 }
 
 src_configure() {
-	replace-flags "-O[3-9]" -O2			#839405
-
 	# We want floating-point arithmetic to be correct #933380
 	replace-flags -Ofast -O2
 	append-flags -fno-fast-math -ffp-contract=off
@@ -427,6 +425,11 @@ src_test() {
 	# subtests which caused failure. Elements should begin with a %.
 	# e.g. %lisp/gnus/mml-sec-tests.el.
 	local exclude_tests=(
+		# Reason: not yet known (we skipped this in the past but finally
+		# dropped it for Emacs 30 as it seemed to be passing again)
+		# mml-secure-select-preferred-keys-4
+		%lisp/gnus/mml-sec-tests.el
+
 		# Reason: permission denied on /nonexistent
 		# (vc-*-bzr only fails if breezy is installed, as they
 		# try to access cache dirs under /nonexistent)
@@ -442,6 +445,14 @@ src_test() {
 		%lisp/mail/undigest-tests.el
 		%lisp/vc/vc-tests.el
 		%lisp/vc/vc-bzr-tests.el
+
+		# Reason: flaky (https://bugs.gnu.org/73441, fails even with the fix)
+		# proced-refine-test
+		%lisp/proced-tests.el
+
+		# Reason: flaky (https://bugs.gnu.org/79056)
+		# tab-bar-tests-quit-restore-window
+		%lisp/tab-bar-tests.el
 
 		# Reason: tries to access network
 		# internet-is-working

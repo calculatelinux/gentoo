@@ -29,7 +29,10 @@ else
 fi
 
 DESCRIPTION="Complete solution to record/convert/stream audio and video"
-HOMEPAGE="https://ffmpeg.org/"
+HOMEPAGE="
+	https://ffmpeg.org/
+	https://code.ffmpeg.org/FFmpeg/FFmpeg/
+"
 
 [[ ${PN} == *-compat ]] && FFMPEG_UNSLOTTED= || FFMPEG_UNSLOTTED=1
 
@@ -331,6 +334,7 @@ MULTILIB_WRAPPED_HEADERS=(
 
 PATCHES=(
 	"${WORKDIR}"/patches
+	"${FILESDIR}"/ffmpeg-7.1.1-npp13.patch
 )
 
 pkg_pretend() {

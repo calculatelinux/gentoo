@@ -11,7 +11,7 @@ SRC_URI="https://github.com/fltk/fltk/releases/download/release-${PV}/${P}-sourc
 
 LICENSE="FLTK LGPL-2 MIT ZLIB"
 SLOT="1/$(ver_cut 1-2)" # README.abi-version.txt
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="+X +cairo +dbus doc examples opengl static-libs test wayland"
 REQUIRED_USE="
 	|| ( X wayland )
@@ -114,6 +114,10 @@ src_install() {
 
 	# currently no option to disable building static libs
 	use static-libs || rm -- "${ED}"/usr/$(get_libdir)/*.a || die
+
+	# these are installed twice, overwrite the static fltk copy
+	mv -- "${ED}"/usr/bin/fluid{-shared,} || die
+	mv -- "${ED}"/usr/bin/fltk-options{-shared,} || die
 
 	strip-lto-bytecode
 }

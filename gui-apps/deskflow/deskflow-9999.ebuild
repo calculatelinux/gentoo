@@ -55,7 +55,7 @@ BDEPEND="
 
 DOCS=(
 	README.md
-	doc/configuration.md
+	doc/user/configuration.md
 )
 
 src_configure() {

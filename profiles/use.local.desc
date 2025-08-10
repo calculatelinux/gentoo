@@ -2044,6 +2044,8 @@ dev-libs/libdbusmenu:gtk3 - Enable support for GTK+3
 dev-libs/libdex:eventfd - Allow use of eventfd
 dev-libs/libdex:liburing - Allow use of liburing (io_uring)sys-libs/liburing
 dev-libs/libdex:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
+dev-libs/libdwarf:dwarfexample - enable dwarfexample compilation
+dev-libs/libdwarf:dwarfgen - enable dwarfgen compilation
 dev-libs/libevent:clock-gettime - Disable use of clock_gettime even if it is available
 dev-libs/libevent:debug - Support for running in debug mode
 dev-libs/libevent:malloc-replacement - Support for replacing the memory management functions
@@ -2444,7 +2446,6 @@ dev-python/pyqt5:speech - Build bindings for the QtTextToSpeech module
 dev-python/pyqt5:sql - Build bindings for the QtSql module
 dev-python/pyqt5:svg - Build bindings for the QtSvg module
 dev-python/pyqt5:testlib - Build bindings for the QtTest module
-dev-python/pyqt5:webchannel - Build bindings for the QtWebChannel module
 dev-python/pyqt5:websockets - Build bindings for the QtWebSockets module
 dev-python/pyqt5:widgets - Build bindings for the QtWidgets module
 dev-python/pyqt5:x11extras - Build bindings for the QtX11Extras module
@@ -4367,13 +4368,13 @@ media-libs/libheif:aom - Use media-libs/libaom for AVIF encoding/decoding
 media-libs/libheif:dav1d - Enable support for the dav1d codec decoding using media-libs/dav1d
 media-libs/libheif:de265 - Enable H.265 support using media-libs/libde265
 media-libs/libheif:gdk-pixbuf - Enable x11-libs/gdk-pixbuf plugin
-media-libs/libheif:go - Enable building dev-lang/go code/examples
+media-libs/libheif:gui - Build heif-view (requires USE=tools)
 media-libs/libheif:kvazaar - Enable H.265/HEVC encoding support via media-libs/kvazaar
 media-libs/libheif:openh264 - Enable H.264 support using media-libs/openh264
 media-libs/libheif:rav1e - Use media-video/rav1e for AVIF encoding
 media-libs/libheif:svt-av1 - Use media-libs/svt-av1 for SVT-AV1 encoding
 media-libs/libheif:test-full - Allow tests that rely on options not normally enabled
-media-libs/libheif:tools - Build heif-view tool
+media-libs/libheif:tools - Build command line tools
 media-libs/libheif:webp - Enable high-quality YCbCr/RGB color space conversion algorithms
 media-libs/libheif:x265 - Use media-libs/x265 for HEIF encoding
 media-libs/libjxl:gdk-pixbuf - Build a gdk-pixbuf loader.
@@ -4598,6 +4599,7 @@ media-libs/vips:highway - Enable SIMD optimizations using dev-cpp/highway (repla
 media-libs/vips:imagequant - Enable support for Image Quantization using media-gfx/libimagequant
 media-libs/vips:matio - Enable support for matlab files using sci-libs/matio
 media-libs/vips:pango - Enable support for text rendering using x11-libs/pango
+media-libs/virglrenderer:venus - Enable Venus Virtio-GPU protocol
 media-libs/vulkan-loader:layers - Include the vulkan layers
 media-libs/waffle:wayland - Enable Wayland support
 media-libs/x264:interlaced - enable interlaced encoding support, this can decrease encoding speed by up to 2%
@@ -8272,7 +8274,6 @@ sys-cluster/torque:munge - Enable authentication via munge
 sys-cluster/torque:nvidia - Enable management of Nvidia GPUs
 sys-cluster/torque:quickcommit - Enable the QUICKCOMMIT codebase
 sys-cluster/torque:server - Enable compilation of pbs_server and pbs_sched
-sys-cluster/ucx:numa - Add support for numa memory allocation
 sys-cluster/vzctl:ploop - Add support for ploop devices via sys-cluster/ploop
 sys-cluster/vzctl:vzmigrate - Add support for container migration
 sys-devel/autogen:libopts - install the libopts tarball (a few packages want this for developing)
@@ -8494,6 +8495,7 @@ sys-libs/glibc:multiarch - enable optimizations for multiple CPU architectures (
 sys-libs/glibc:multilib-bootstrap - Provide prebuilt libgcc.a and crt files if missing. Only needed for ABI switch.
 sys-libs/glibc:nscd - Build, and enable support for, the Name Service Cache Daemon
 sys-libs/glibc:perl - Install additional scripts written in Perl
+sys-libs/glibc:sframe - enable building with sframe backtrace support
 sys-libs/glibc:ssp - protect stack of glibc internals
 sys-libs/glibc:stack-realign - Realign the stack in the 32-bit build for compatibility with older binaries at some performance cost
 sys-libs/glibc:static-pie - Enable static PIE support (runtime files for -static-pie gcc option).
