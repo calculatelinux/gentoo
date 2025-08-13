@@ -14,7 +14,7 @@ LICENSE="Apache-2.0"
 # Dependent licenses
 LICENSE+=" Apache-2.0 BSD BSD-2 ISC MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="amd64 ~arm64"
 IUSE="hardened"
 RESTRICT="test"
 
@@ -22,6 +22,8 @@ DEPEND="acct-group/kube-scheduler
 	acct-user/kube-scheduler"
 RDEPEND="${DEPEND}"
 BDEPEND=">=dev-lang/go-1.23.3"
+
+QA_PRESTRIPPED=usr/bin/kube-scheduler
 
 src_compile() {
 	CGO_LDFLAGS="$(usex hardened '-fno-PIC ' '')" \

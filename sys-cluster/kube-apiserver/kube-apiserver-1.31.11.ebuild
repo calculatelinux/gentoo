@@ -10,7 +10,7 @@ SRC_URI="https://github.com/kubernetes/kubernetes/archive/v${PV}.tar.gz -> kuber
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="amd64 ~arm64"
 IUSE="hardened"
 
 COMMON_DEPEND="
@@ -22,6 +22,8 @@ BDEPEND=">=dev-lang/go-1.23.0"
 
 RESTRICT+=" test"
 S="${WORKDIR}/kubernetes-${PV}"
+
+QA_PRESTRIPPED=usr/bin/kube-apiserver
 
 src_compile() {
 	CGO_LDFLAGS="$(usex hardened '-fNO-PIC ' '')" FORCE_HOST_GO="yes" \

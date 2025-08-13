@@ -14,12 +14,14 @@ LICENSE="Apache-2.0"
 # Dependent licenses
 LICENSE+=" Apache-2.0 BSD BSD-2 ISC MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="amd64 ~arm64"
 IUSE="hardened"
 RESTRICT="test"
 
 RDEPEND="net-firewall/conntrack-tools"
 BDEPEND=">=dev-lang/go-1.23.3"
+
+QA_PRESTRIPPED=usr/bin/kube-proxy
 
 src_compile() {
 	CGO_LDFLAGS="$(usex hardened '-fno-PIC ' '')" \

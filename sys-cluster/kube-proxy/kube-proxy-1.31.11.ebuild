@@ -6,11 +6,13 @@ inherit go-module
 
 DESCRIPTION="Kubernetes Proxy service"
 HOMEPAGE="https://github.com/kubernetes/kubernetes https://kubernetes.io"
+QA_PRESTRIPPED=usr/bin/kube-proxy
+
 SRC_URI="https://github.com/kubernetes/kubernetes/archive/v${PV}.tar.gz -> kubernetes-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="amd64 ~arm64"
 IUSE="hardened"
 
 RDEPEND="net-firewall/conntrack-tools"
