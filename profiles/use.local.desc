@@ -1204,6 +1204,9 @@ app-text/pandoc-bin:pandoc-symlink - Install pandoc symlink that points to pando
 app-text/pandoc-cli:lua - Support custom modifications and conversions with the pandoc Lua scripting engine.
 app-text/pandoc-cli:nightly - Add '-nightly-COMPILEDATE' to the output of '--version'.
 app-text/pandoc-cli:server - Include support for running pandoc as an HTTP server.
+app-text/papers:comics - Enable comics support
+app-text/papers:nautilus - Enable nautilus support
+app-text/papers:sysprof - Enable sysprof support
 app-text/pdfgrep:unac - Removing accents and ligatures before search
 app-text/pdfjam:extra - Install unsupported wrapper scripts, for example pdf90, pdfnup, pdfjoin
 app-text/pdfpc:gstreamer - Compile support for movie playback (media-libs/gstreamer)
@@ -2828,6 +2831,8 @@ dev-util/ccache:redis - Enable Redis backend for storage via dev-libs/hiredis
 dev-util/ccache:static-c++ - Avoid dynamic dependency on gcc's libstdc++.
 dev-util/cccc:apidoc - Build software docs with doxygen/graphviz and metrics with cccc
 dev-util/cccc:mfc - Add patch for MFC dialect options
+dev-util/claude-code:jetbrains - Install Jetbrains IDE extension to /opt/claude-code. Does not automatically load extension.
+dev-util/claude-code:vscode - Install VSCode IDE extension to /opt/claude-code. Does not automatically load extension.
 dev-util/codeblocks:contrib - Build additional contrib components
 dev-util/codeblocks:fortran - Build FortranProject plugin which enables to use Code::Blocks IDE for Fortran language
 dev-util/cppcheck:charts - Enable QtCharts usage in the GUI
@@ -3580,6 +3585,7 @@ kde-apps/kmail:activities - Enable Plasma Activities support via kde-plasma/plas
 kde-apps/konqueror:activities - Enable kactivities support
 kde-apps/korganizer:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
 kde-apps/krdc:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
+kde-apps/krdc:ssh - Enable VNC/RDP SSH tunnel support via net-libs/libssh
 kde-apps/ksystemlog:kdesu - Run as root using kdesu from kde-plasma/kde-cli-tools
 kde-apps/ktouch:X - Enable support for X11 Keyboard Layout Detection
 kde-apps/kwave:qtmedia - Enable playback via dev-qt/qtmultimedia
@@ -7882,7 +7888,6 @@ sys-apps/flashrom:linux-mtd - Enable support for Linux mtd SPI flash devices
 sys-apps/flashrom:linux-spi - Enable support for Linux userspace spidev interface
 sys-apps/flashrom:mediatek-i2c-spi - Support for Mediatek LCD controllers
 sys-apps/flashrom:mstarddc-spi - Support for SPI flash ROMs accessible through DDC in MSTAR-equipped displays
-sys-apps/flashrom:ni845x-spi - Enable SPI programmer using National Instruments USB-8451 or USB-8452
 sys-apps/flashrom:nic3com - Enable 3Com NIC programmer
 sys-apps/flashrom:nicintel - Support for Intel NICs
 sys-apps/flashrom:nicintel-eeprom - Support for EEPROMs on Intel Gigabit network cards
@@ -8333,7 +8338,7 @@ sys-devel/gcc:pgo - Build GCC using Profile Guided Optimization (PGO). GCC will 
 sys-devel/gcc:rust - Build support for the Rust language, installs gccrs.
 sys-devel/gcc:sanitize - Build support for various sanitizer functions (ASAN/TSAN/etc...) to find runtime problems in applications.
 sys-devel/gcc:ssp - Build packages with stack smashing protection on by default
-sys-devel/gcc:systemtap - enable systemtap static probe points
+sys-devel/gcc:systemtap - Enable enhanced debugging hooks/interface via SystemTap static probe points in libgcc and libstdc++. Note that this isn't exclusive to SystemTap, despite the name. This provides an interface which dev-debug/gdb optionally uses, see https://sourceware.org/gdb/wiki/LinkerInterface and https://sourceware.org/gdb/wiki/DistroAdvice#sys.2Fsdt.h_probes.
 sys-devel/gcc:vtv - Build support for virtual table verification (a C++ hardening feature). This does not control whether GCC defaults to using VTV> Note that actually using VTV breaks ABI and hence the whole system must be built with -fvtable-verify.
 sys-devel/gcc-apple:bootstrap - !DO NOT SET THIS FLAG YOURSELF! avoids need for autoconf during bootstrap stage2
 sys-devel/gcc-apple:objc - Build support for the Objective C code language
@@ -8504,7 +8509,7 @@ sys-libs/glibc:ssp - protect stack of glibc internals
 sys-libs/glibc:stack-realign - Realign the stack in the 32-bit build for compatibility with older binaries at some performance cost
 sys-libs/glibc:static-pie - Enable static PIE support (runtime files for -static-pie gcc option).
 sys-libs/glibc:suid - Make internal pt_chown helper setuid -- not needed if using Linux and have /dev/pts mounted with gid=5
-sys-libs/glibc:systemtap - enable systemtap static probe points
+sys-libs/glibc:systemtap - Enable enhanced debugging hooks/interface via SystemTap static probe points. Note that this isn't exclusive to SystemTap, despite the name. This provides an interface which dev-debug/gdb optionally uses, see https://sourceware.org/gdb/wiki/LinkerInterface.
 sys-libs/ldb:doc - Builds documentation
 sys-libs/ldb:ldap - Enable LDAP support
 sys-libs/ldb:lmdb - Enable LMDB backend
