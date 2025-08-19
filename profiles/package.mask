@@ -36,6 +36,36 @@
 
 #--- END OF EXAMPLES ---
 
+# Mario Haustein <mario.haustein@hrz.tu-chemnitz.de> (2025-08-18)
+# Deprecated by upstream, depends on Qt5. Use app-crypt/yubikey-manager
+# instead. Removal on 2025-09-16. Bug #955646
+sys-auth/yubikey-personalization-gui
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-08-18)
+# Unmaintained in Gentoo for a long time, resulting in a very outdated
+# package. Many bugs, selecting just #803635, #884609, #890762, #958160
+# Needs a dedicated maintainer. Removal on 2025-09-16.
+dev-db/percona-server
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-08-18)
+# Effectively unmaintained in Gentoo with many unattended bugs, still
+# EAPI-7 based, broken with non-ancient dev-games/ogre, broken with non-
+# ancient sci-libs/pcl. Bugs #729576, #796806, #834469.
+# Removal on 2025-09-16.
+sci-libs/ViSP
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-08-17)
+# Dead upstream, based on Qt5, hardware obsolete. Removal on 2025-09-16.
+# Bugs #954122, #955638, #957411, #957589, #957590
+app-crypt/nitrokey-app
+app-crypt/libnitrokey
+dev-libs/cppcodec
+
+# Eray Aslan <eras@gentoo.org> (2025-08-18)
+# Due to a critical bug, krb5-1.22 has been withdrawn, and krb5-1.21.3 is again
+# the latest supported release.  krb5-1.22.1 will be issued with a correction.
+=app-crypt/mit-krb5-1.22
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-08-17)
 # Dead upstream for > 10 years. Only a snapshot could save this from
 # cleanup in 2018 for Qt5, but not this time (for Qt6). Bug #958435.
@@ -118,6 +148,8 @@ dev-java/jide-oss
 # Michał Górny <mgorny@gentoo.org> (2025-08-05)
 # Accidental breaking change.  Yanked upstream.  Bug #961089.
 # Followed by another yanked breaking release.
+# More regressions: bug #961725.
+=dev-python/setuptools-scm-9.2.0
 =dev-python/setuptools-scm-9.1.1
 =dev-python/setuptools-scm-9.0.3
 =dev-python/setuptools-scm-9.0.0
@@ -685,15 +717,6 @@ dev-build/automake:1.11
 # Bug #729672.
 media-plugins/kodi-game-libretro-nestopia
 media-plugins/kodi-game-libretro-dosbox
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2018-10-07)
-# Masked for more testing especially of reverse-deps.
-# ogre 1.11/1.12 breakage: bug #834468
-# ogre 2.x breakage: bug #740424
-dev-games/ogre:0/1.12
-dev-games/ogre:0/2.1
-dev-games/ogre:0/13.6
-dev-games/ogre:0/14.3
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2018-09-11)
 # Mask transition ebuilds that were needed only for <glibc-2.26
