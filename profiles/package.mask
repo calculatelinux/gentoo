@@ -36,6 +36,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-08-19)
+# x11-libs/gtkglext is finally without revdeps, tracker bug #698950
+# Removal on 2025-09-16
+x11-libs/gtkglext
+
 # Mario Haustein <mario.haustein@hrz.tu-chemnitz.de> (2025-08-18)
 # Deprecated by upstream, depends on Qt5. Use app-crypt/yubikey-manager
 # instead. Removal on 2025-09-16. Bug #955646
@@ -148,8 +153,6 @@ dev-java/jide-oss
 # Michał Górny <mgorny@gentoo.org> (2025-08-05)
 # Accidental breaking change.  Yanked upstream.  Bug #961089.
 # Followed by another yanked breaking release.
-# More regressions: bug #961725.
-=dev-python/setuptools-scm-9.2.0
 =dev-python/setuptools-scm-9.1.1
 =dev-python/setuptools-scm-9.0.3
 =dev-python/setuptools-scm-9.0.0
