@@ -1954,6 +1954,7 @@ dev-libs/cyrus-sasl:urandom - Use /dev/urandom instead of /dev/random
 dev-libs/date:only-c-locale - Build only the C locale
 dev-libs/dbus-c++:ecore - Use Ecore integration
 dev-libs/dbus-c++:glib - Use glib integration
+dev-libs/dynolog:perf-events - Add performance events
 dev-libs/eekboard:libcanberra - Enable support for media-libs/libcanberra
 dev-libs/eekboard:xtest - Enable support for x11-libs/libXtst
 dev-libs/efl:bmp - Enable WBMP image loader
@@ -2420,7 +2421,6 @@ dev-python/pyopengl-accelerate:numpy - Building NumPy native format handlers.
 dev-python/pypax:ptpax - Enable PT_PAX_FLAGS support.
 dev-python/pypax:xtpax - Enable XATTR_PAX_FLAGS support.
 dev-python/pypy-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
-dev-python/pypy3_10-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
 dev-python/pyqt5:dbus - Build bindings for the QtDBus module
 dev-python/pyqt5:declarative - Build bindings for the QtQml and QtQuick modules and enable the qmlscene plugin
 dev-python/pyqt5:designer - Build bindings for the QtDesigner module and enable the designer plugin

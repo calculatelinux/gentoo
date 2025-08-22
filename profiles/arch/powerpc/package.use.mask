@@ -83,11 +83,6 @@ dev-scheme/racket chez futures jit
 # Remove this once ruby32 is unmasked in base
 dev-ruby/activesupport msgpack test
 
-# matoro <matoro_gentoo@matoro.tk> (2023-11-22)
-# Broken on <dev-lang/ruby-3.2
-# https://github.com/msgpack/msgpack-ruby/pull/355
-dev-ruby/msgpack ruby_targets_ruby31
-
 # matoro <matoro_gentoo@matoro.tk> (2023-11-19)
 # VSX asm causes passing test suite on LE to fail
 media-libs/libaom cpu_flags_ppc_vsx
@@ -273,7 +268,7 @@ app-emulation/qemu capstone
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2018-03-02)
 # Requires unkeyworded deps
->=dev-python/ipython-5.4.1 qt5
+>=dev-python/ipython-5.4.1 gui qt5
 
 # Amy Liffey <amynka@gentoo.org> (2018-01-21)
 # dev-libs/cereal not keyworded for ppc
