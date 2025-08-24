@@ -539,6 +539,7 @@ app-emacs/sly:xref - Install xref.lisp cross-referencing tool
 app-emacs/vm:bbdb - Include support for app-emacs/bbdb
 app-emacs/wanderlust:bbdb - Include support for app-emacs/bbdb
 app-emacs/wikipedia-mode:outline-magic - Enable support for outline-mode extensions (app-emacs/outline-magic)
+app-emulation/86Box:discord - Enable Discord integration
 app-emulation/86Box:experimental - Enable hardware from devbranch, which may be unstable or unusable.
 app-emulation/86Box:fluidsynth - Enable MIDI support through media-sound/fluidsynth.
 app-emulation/86Box:munt - Enable MIDI MT-32 support through media-libs/munt-mt32emu.
@@ -6488,7 +6489,9 @@ net-misc/kafka-bin:connect - Install init for Kafka Connect Distributed mode
 net-misc/kafka-bin:internal-zookeeper - Use bundled local zookeeper instance
 net-misc/kafkacat:avro - Enable avro serialization/deserialization support
 net-misc/kafkacat:json - Enable json support
+net-misc/kea:mysql - Add interface to MySQL for lease, host reservations and/or server config
 net-misc/kea:openssl - Use dev-libs/openssl instead of dev-libs/botan
+net-misc/kea:postgres - Add interface to PostgreSQL for lease, host reservations and/or server config
 net-misc/kea:shell - Install kea-shell text management client for Control Agent
 net-misc/knock:server - Installs the knockd server daemon.
 net-misc/libteam:zmq - Build witch net-libs/zeromq support
@@ -6587,6 +6590,7 @@ net-misc/ofono:isimodem - Enable PhoNet/ISI modem support.
 net-misc/ofono:phonesim - Enable phone Simulator support
 net-misc/ofono:provision - Enable GPRS provisioning support
 net-misc/ofono:qmimodem - Enable Qualcomm QMI modem support
+net-misc/ofono:system-ell - Use the system-wide dev-libs/ell
 net-misc/ofono:tools - Enable testing tools
 net-misc/oidentd:masquerade - Enable support for masqueraded/NAT connections
 net-misc/olsrd:pud - Install the Node Position Update plugin
@@ -7363,6 +7367,10 @@ sci-libs/fcl:octomap - OctoMap library support
 sci-libs/fcl:profiling - Enable profiling
 sci-libs/fftw:zbus - Adds support for ZBus cycle-counter of mips
 sci-libs/flann:octave - Add bindings for sci-mathematics/octave
+sci-libs/flexiblas:blis - Support sci-libs/blis provider
+sci-libs/flexiblas:mkl - Support sci-libs/mkl provider
+sci-libs/flexiblas:openblas - Support sci-libs/openblas provider
+sci-libs/flexiblas:tbb - Support sci-libs/mkl with dev-cpp/tbb threading.
 sci-libs/fplll:qd - Use sci-libs/qd for quad-double datatype
 sci-libs/gdal:archive - Enable support for various archive and compression formats with app-arch/libarchive
 sci-libs/gdal:armadillo - Use sci-libs/armadillo for faster TPS transform computation
