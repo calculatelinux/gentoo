@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=Claude Code - an agentic coding tool by Anthropic
+EAPI=8
+HOMEPAGE=https://www.anthropic.com/claude-code
+IUSE=jetbrains vscode
+KEYWORDS=amd64
+LICENSE=all-rights-reserved
+RDEPEND=>=net-libs/nodejs-18 sys-apps/ripgrep
+RESTRICT=bindist strip
+SLOT=0
+SRC_URI=https://registry.npmjs.org/@anthropic-ai/claude-code/-/claude-code-1.0.92.tgz
+_md5_=f19d653a48917e8a9c3d669a415173c4
