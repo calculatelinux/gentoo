@@ -5,7 +5,7 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_{11..13} )
 LLVM_COMPAT=( {16..21} )
-inherit cmake llvm-r2 python-single-r1
+inherit cmake llvm-r2 optfeature python-single-r1
 
 DESCRIPTION="Super-parallel Python port of the C-Reduce"
 HOMEPAGE="https://github.com/marxin/cvise"
@@ -53,9 +53,13 @@ BDEPEND="
 	test? (
 		$(python_gen_cond_dep '
 			dev-python/pytest[${PYTHON_USEDEP}]
+			dev-python/pytest-mock[${PYTHON_USEDEP}]
+			dev-python/pytest-subprocess[${PYTHON_USEDEP}]
 		')
 	)
 "
+
+EPYTEST_PLUGINS=( pytest-{mock,subprocess} )
 
 pkg_setup() {
 	python-single-r1_pkg_setup
@@ -76,4 +80,8 @@ src_install() {
 	cmake_src_install
 
 	python_fix_shebang "${ED}"
+}
+
+pkg_postinst() {
+	optfeature "colorful --print-diff support" app-misc/colordiff
 }

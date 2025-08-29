@@ -36,6 +36,33 @@
 
 #--- END OF EXAMPLES ---
 
+# Arthur Zamarin <arthurzam@gentoo.org> (2025-08-29)
+# EAPI=7, maintainer-needed, gentoo last distro to package it. If you
+# really need this tool, you can use 'openssl dgst -md4 -provider legacy'
+# instead.
+# Removal on 2025-09-28.  Bugs #962124, #729162.
+app-crypt/md4sum
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-08-29)
+# A version bump pending since 2020, Qt5-based and stuck on EAPI-7.
+# This package needs a maintainer. Step up if you need this, try to make
+# sense of upstream's repositories and contact them about the need to port
+# to Qt6. Bugs #759976, #910052, #961794. Removal on 2025-09-28.
+app-text/djview
+
+# Mike Pagano <mpagano@gentoo.org> (2025-08-28)
+# Long unmaintained upstream (20+ years since last release).
+# Does not compile.
+# Bug #962110
+# Removal on 2025-09-28.
+media-gfx/zgv
+
+# Arthur Zamarin <arthurzam@gentoo.org> (2025-08-28)
+# EAPI=7, fails to compile, unmaintained in gentoo since git transition,
+# library with no rev-deps.
+# Removal on 2025-09-27.  Bugs #962066, #886470, #735672, #630248.
+dev-cpp/metslib
+
 # Arthur Zamarin <arthurzam@gentoo.org> (2025-08-28)
 # EAPI=7, maintainer-needed, Gentoo is last distro to package it,
 # unmaintained in Gentoo since 2016.
@@ -230,12 +257,6 @@ media-sound/clementine
 # No more stable revdeps after media-sound/clementine removal.
 ~media-libs/liblastfm-1.1.0_pre20190625
 ~media-libs/libmygpo-qt-1.1.0
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-07-30)
-# Current package is 7 years old and upstream repository only gets the
-# occasional commit. Package is stuck with EAPI-7, Qt5, no Python 3.13
-# support. Bug #952654. Removal on 2025-08-29.
-sci-chemistry/molequeue
 
 # Hans de Graaff <graaff@gentoo.org> (2025-07-30)
 # Obsolete slot that is ruby33-only. Use the newer slot instead. Removal
