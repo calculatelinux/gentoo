@@ -575,7 +575,6 @@ app-emulation/fuse:backend-X - Use X11 rendering backend
 app-emulation/fuse:backend-fbcon - Use framebuffer rendering backend
 app-emulation/fuse:backend-gtk3 - Use Gtk+ rendering backend
 app-emulation/fuse:backend-sdl - Use SDL rendering backend
-app-emulation/fuse:backend-svga - Use svgalib rendering backend
 app-emulation/fuse:memlimit - Add compile-time memory usage limiting
 app-emulation/fuse-utils:gcrypt - Use dev-libs/libgcrypt for low-level crypto of some features, including logfiles.
 app-emulation/grub-xen-host:pvh - Build an additional grub bin for pvh.
@@ -648,6 +647,7 @@ app-emulation/qemu:multipath - Enable multipath persistent reservation passthrou
 app-emulation/qemu:ncurses - Enable the ncurses-based console
 app-emulation/qemu:nfs - Enable NFS support
 app-emulation/qemu:numa - Enable NUMA support
+app-emulation/qemu:passt - Enable TCP/IP in hypervisor via net-misc/passt
 app-emulation/qemu:pin-upstream-blobs - Pin the versions of BIOS firmware to the version included in the upstream release. This is needed to sanely support migration/suspend/resume/snapshotting/etc... of instances. When the blobs are different, random corruption/bugs/crashes/etc... may be observed.
 app-emulation/qemu:pipewire - Enable pipewire output for sound emulation
 app-emulation/qemu:plugins - Enable qemu plugin API via shared library loading.
@@ -3922,6 +3922,8 @@ mail-filter/opendkim:stats - Add support for statistics (requires 'opendbx' flag
 mail-filter/opendkim:unbound - Use the unbound dnssec library to perform DKIM DNS queries.
 mail-filter/opendmarc:reports - Install the reports binaries: expire, import, reports, params
 mail-filter/opendmarc:spf - Use the mail-filter/libspf2 for Sender Policy Framework checking
+mail-filter/postsrsd:redis - Add support for dev-libs/hiredis database backend
+mail-filter/postsrsd:sqlite - Add support for dev-db/sqlite database backend
 mail-filter/pyzor:gdbm - Enables the Gdbm back-end database engine for pyzord
 mail-filter/pyzor:mysql - Enables the MySQL back-end database engine for pyzord through dev-python/mysqlclient.
 mail-filter/pyzor:pyzord - Enable the pyzord server daemon
@@ -4821,7 +4823,6 @@ media-sound/lmms:soundio - Enables libsoundio support.
 media-sound/lmms:stk - Enables STK Mallet plugin.
 media-sound/lmms:vst - Enables the VeSTige plugin to run VST plugins through Wine.
 media-sound/mangler:espeak - Text to speech engine
-media-sound/mangler:g15 - Logitech g15 lcd support
 media-sound/mixxx:benchmark - Build and install benchmark binary: mixxx-test --benchmark
 media-sound/mixxx:experimental - Add support for experimental-QML-UI. Available with --qml arg
 media-sound/mixxx:keyfinder - Enable musical key detection support via media-libs/libkeyfinder

@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{11..14} )
 inherit check-reqs cmake flag-o-matic llvm llvm.org python-any-r1
 
 DESCRIPTION="Compiler runtime libraries for clang (sanitizers & xray)"
@@ -111,6 +111,10 @@ src_prepare() {
 		# https://github.com/google/sanitizers/issues/1733
 		# https://github.com/llvm/llvm-project/commit/deebf6b312227e028dd3258b162306b9cdb21cf7
 		rm test/tsan/getline_nohang.cpp || die
+	fi
+	if has_version ">=sys-libs/glibc-2.40"; then
+		# https://github.com/llvm/llvm-project/issues/100877
+		rm test/asan/TestCases/Linux/printf-fortify-5.c || die
 	fi
 
 	llvm.org_src_prepare

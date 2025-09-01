@@ -1,6 +1,10 @@
 # Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Sam James <sam@gentoo.org> (2025-08-29)
+# net-misc/passt not yet keyworded here
+app-emulation/qemu passt
+
 # Alfred Wingate <parona@protonmail.com> (2025-07-31)
 # mongodb not keyworded here
 sci-libs/gdal mongodb
@@ -24,10 +28,6 @@ media-gfx/openvdb python
 >=dev-ml/camlp4-5.2_p1 ocamlopt
 >=dev-ml/findlib-1.9.8-r1 ocamlopt
 dev-ml/labltk ocamlopt
-
-# Conrad Kostecki <conikost@gentoo.org> (2025-04-02)
-# media-libs/libsdl3 is not keyworded
-app-emulation/faudio sdl3
 
 # NRK <nrk@disroot.org> (2025-03-17)
 # media-libs/libyuv is not keyworded
@@ -180,10 +180,6 @@ net-misc/seafile-client shibboleth
 net-p2p/ktorrent rss
 sci-physics/root qt6
 
-# Ionen Wolkens <ionen@gentoo.org> (2022-11-07)
-# Vulkan is usable here.
-media-video/mpv -vulkan
-
 # WANG Xuerui <xen0n@gentoo.org> (2022-10-07)
 # sys-libs/libsmbios is available here.
 app-laptop/pbbuttonsd -macbook
@@ -212,10 +208,6 @@ app-vim/jedi test
 # Ben Kohler <bkohler@gentoo.org> (2022-06-07)
 # Disable 64bit builds on x86
 sys-apps/memtest86+ bios64 uefi64 iso64
-
-# Jimi Huotari <chiitoo@gentoo.org> (2022-05-08)
-# Not keyworded here yet.
-lxqt-base/lxqt-meta desktop-portal
 
 # Adel Kara Slimane <adel.ks@zegrapher.com> (2022-03-14)
 # Untested useflag on other arches, needs keywording

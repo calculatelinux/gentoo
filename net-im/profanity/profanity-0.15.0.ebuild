@@ -14,7 +14,7 @@ SRC_URI="
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="amd64 ~arm64"
 IUSE="libnotify omemo omemo-qrcode otr gpg test xscreensaver python"
 RESTRICT="!test? ( test )"
 REQUIRED_USE="omemo-qrcode? ( omemo ) python? ( ${PYTHON_REQUIRED_USE} )"
@@ -56,6 +56,8 @@ DEPEND="
 		')
 	)
 "
+
+PATCHES=( "${FILESDIR}/${P}-gpgme2.patch" ) # bug 961474, in 0.15.1
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup

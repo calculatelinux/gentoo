@@ -100,7 +100,7 @@ sys-apps/hwloc rocm l0
 
 # Paul Zander <negril.nx+gentoo@gmail.com> (2024-04-20)
 # only keyworded for amd64 currently
-media-gfx/blender gnome renderdoc vulkan
+media-gfx/blender gnome renderdoc
 
 # Ionen Wolkens <ionen@gentoo.org> (2024-04-16)
 # dev-qt/qtlanguageserver:6 currently has very few keywords
@@ -252,7 +252,7 @@ media-video/ffmpeg-compat amf
 media-video/handbrake amf
 
 # Sam James <sam@gentoo.org> (2021-11-15)
-# Only available on PPC*.
+# Only available on ppc*.
 sys-apps/util-linux rtas
 
 # James Le Cuirot <chewi@gentoo.org> (2021-10-22)
@@ -301,13 +301,11 @@ llvm-runtimes/compiler-rt-sanitizers libfuzzer memprof orc profile xray
 llvm-runtimes/compiler-rt-sanitizers ctx-profile nsan rtsan
 
 # Sam James <sam@gentoo.org> (2020-10-24)
-# asm redc is only available on amd64,
-# ppc64. bug #750974.
+# asm redc is only available on amd64, ppc64. bug #750974.
 sci-mathematics/gmp-ecm custom-tune
 
 # Sam James <sam@gentoo.org> (2020-10-05)
-# Guile only supports JIT on some arches
-# (See 9.3.8 in the Guile manual)
+# Guile only supports JIT on some arches (see 9.3.8 in the Guile manual).
 dev-scheme/guile jit
 
 # Thomas Deutschmann <whissi@gentoo.org> (2020-09-07)
@@ -371,11 +369,6 @@ net-vpn/strongswan strongswan_plugins_aesni strongswan_plugins_rdrand strongswan
 # Michael Palimaka <kensington@gentoo.org> (2018-10-12)
 # Only available on amd64/x86
 net-analyzer/testssl bundled-openssl kerberos
-
-# Ilya Tumaykin <itumaykin+gentoo@gmail.com> (2018-06-17)
-# Vulkan support is only available on few selected arches atm.
-# Mask everywhere, unmask where appropriate.
-media-video/mpv vulkan
 
 # Michał Górny <mgorny@gentoo.org> (2017-12-30)
 # Moved from use.mask since it is a flag local to one package:

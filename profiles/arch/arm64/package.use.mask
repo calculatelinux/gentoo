@@ -238,10 +238,6 @@ app-metrics/collectd collectd_plugins_ping
 app-metrics/collectd collectd_plugins_routeros
 app-metrics/collectd collectd_plugins_varnish
 
-# Jimi Huotari <chiitoo@gentoo.org> (2022-05-08)
-# Not keyworded here yet.
-lxqt-base/lxqt-meta desktop-portal
-
 # Matt Turner <mattst88@gentoo.org> (2022-04-18)
 # app-text/nuspell is not keyworded
 app-text/enchant nuspell
@@ -358,10 +354,6 @@ sys-boot/grub -libzfs
 # to keyword ceph another time.
 # bug #738042
 sys-block/tgt rbd
-
-# Benda Xu <heroxbd@gentoo.org> (2020-08-08)
-# dev-lua/busted is not keyworded yet
-dev-lua/mpack test
 
 # Robin H. Johnson <robbat2@gentoo.org> (2020-07-02)
 # Mask io-uring & zbc pending keywording
@@ -516,10 +508,6 @@ app-emulation/libvirt xen
 # Michał Górny <mgorny@gentoo.org> (2018-01-12)
 # Requires USE=sdl that is masked in this profile.
 media-video/mjpegtools sdlgfx
-
-# Roy Bamford <neddysegoon@gentoo.org> (2017-08-24)
-# Support for g15daemon still needs -9999 packages on all arches
-net-voip/mumble g15
 
 # Alexis Ballier <aballier@gentoo.org> (2017-07-20)
 # media-libs/libemf fails with #error unknown CPU.
