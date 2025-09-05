@@ -36,6 +36,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-09-05)
+# Qt5-based library without revdeps. Needs a dedicated maintainer.
+# Bug #955270. Removal on 2025-10-05.
+sci-libs/silo
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-09-01)
 # EAPI-7 cmake.eclass, no revdeps, no one else is packaging this.
 # Bugs #951888, #957258. Removal on 2025-10-01.
@@ -250,21 +255,6 @@ sci-electronics/NanoVNA-QT
 # Bugs #932756, #952103. Removal on 2025-09-16.
 app-crypt/yubikey-manager-qt
 
-# Ionen Wolkens <ionen@gentoo.org> (2025-08-13)
-# While it fixes several issues and is meant to be a stable branch,
-# 580.x has too many regressions in its current state. One of the most
-# prominent one is GTK4 applications hanging on exit when vulkan
-# (default) is used on wayland for many users, some games are also
-# known to have problems with it among other things.
-#
-# Can browse NVIDIA's 580 feedback thread[1] to get an idea.
-#
-# Feel free to unmask if not affected.
-#
-# [1] https://forums.developer.nvidia.com/t/580-release-feedback-discussion/
-~x11-drivers/nvidia-drivers-580.65.06
-~x11-drivers/nvidia-drivers-580.76.05
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-08-10)
 # Outdated version packaged in Gentoo, pending version bump request for
 # over a year, depends on Qt5 but worse, Qt5Script, no signs of upstream
@@ -283,11 +273,6 @@ dev-ruby/ruby-openid
 # Unused java library, pinned to virtual/jdk:1.8.
 # Removal on 2025-09-07.
 dev-java/jide-oss
-
-# Hans de Graaff <graaff@gentoo.org> (2025-07-30)
-# Obsolete slot that is ruby33-only. Use the newer slot instead. Removal
-# on 2025-08-30.
-dev-ruby/tzinfo:1
 
 # Eli Schwartz <eschwartz@gentoo.org> (2025-07-28)
 # Unmaintained, out of date, last upstream release in 2018, last
@@ -312,11 +297,6 @@ dev-util/cucumber-messages:24
 # suppor for the old APIs this package needs. Impossible to use anymore.
 # Removal on 2025-08-17.  Bug #927026.
 net-vpn/protonvpn-cli
-
-# Matt Turner <mattst88@gentoo.org> (2025-07-16)
-# Masked for testing
-=dev-util/mesa_clc-25.2*
-=media-libs/mesa-25.2*
 
 # Eli Schwartz <eschwartz@gentoo.org> (2025-07-08)
 # Unmaintained, out of date, QA issues, outstanding bugs for compilation
@@ -708,10 +688,6 @@ sec-keys/openpgp-keys-jiatan
 # [1] https://nvidia.custhelp.com/app/answers/detail/a_id/3142
 # [2] https://wiki.gentoo.org/wiki/Nouveau
 x11-drivers/nvidia-drivers:0/390
-
-# Ben Kohler <bkohler@gentoo.org> (2023-01-30)
-# Breaks too many revdeps for now
-=app-text/discount-3*
 
 # Joonas Niilola <juippis@gentoo.org> (2022-04-29)
 # Apparently the "b" in version means "beta". 3.24 is available, we

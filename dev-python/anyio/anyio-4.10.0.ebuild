@@ -16,7 +16,7 @@ HOMEPAGE="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~mips ppc ppc64 ~riscv ~s390 ~sparc x86"
 
 RDEPEND="
 	>=dev-python/idna-2.8[${PYTHON_USEDEP}]
@@ -51,7 +51,8 @@ distutils_enable_tests pytest
 distutils_enable_sphinx docs \
 	'>=dev-python/sphinx-rtd-theme-1.2.2' \
 	dev-python/sphinxcontrib-jquery \
-	dev-python/sphinx-autodoc-typehints
+	dev-python/sphinx-autodoc-typehints \
+	dev-python/sphinx-tabs
 
 python_test() {
 	local EPYTEST_DESELECT=(
