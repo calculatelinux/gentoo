@@ -36,6 +36,25 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2025-09-06)
+# Abandoned.  Incompatible with py3.14.  Last release in 2020.
+# No revdeps left.
+# Removal on 2025-10-06.  Bug #962431.
+dev-python/timeout-decorator
+
+# Michał Górny <mgorny@gentoo.org> (2025-09-06)
+# dev-python/partd is a dep of dask which we removed in 2024.  It
+# test-depends on dev-python/locket which was last updated in 2022.
+# That one in turn test-depends on dev-python/spur which was last
+# updated in 2023 and is pinned to old dev-python/paramiko version.
+# Its SSH part is not tested by us at all, and the "spur.local"
+# alternative without SSH was last released in 2016.
+# These packages have no revdeps outside themselves left.
+# Removal on 2025-10-06.  Bug #962404.
+dev-python/locket
+dev-python/partd
+dev-python/spur
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-09-05)
 # Qt5-based library without revdeps. Needs a dedicated maintainer.
 # Bug #955270. Removal on 2025-10-05.
@@ -228,12 +247,6 @@ media-sound/qtagger
 media-sound/coquillo
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-08-17)
-# Project was ported to Qt6 by upstream, but also ported to Qbs in doing
-# so. Needs a new maintainer to start with Qbs based package from scratch.
-# Bugs #931995, #955967. Removal on 2025-09-16.
-media-gfx/valentina
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-08-17)
 # 1.2.3 is almost 10 years old, upstream repository archived, Qt5- and
 # EAPI-7 based. Bugs #832577, #830262, #846416 and finally #961631.
 # Removal on 2025-09-16.
@@ -273,24 +286,6 @@ dev-ruby/ruby-openid
 # Unused java library, pinned to virtual/jdk:1.8.
 # Removal on 2025-09-07.
 dev-java/jide-oss
-
-# Eli Schwartz <eschwartz@gentoo.org> (2025-07-28)
-# Unmaintained, out of date, last upstream release in 2018, last
-# packaged release 2015. Broken with modern system interfaces for
-# some time. Entire OpenVZ ecosystem is vaporware these days,
-# openvz-sources was last-rited in 2017 already.
-# Removal on 2025-08-27.  Bug #580516, #868252.
-sys-cluster/vzctl
-app-backup/vzdump
-app-misc/vzstats
-
-# Hans de Graaff <graaff@gentoo.org> (2025-07-28)
-# Obsolete slots of cucumber components. These slots are no longer used
-# by dev-util/cucumber. Removal on 2025-08-28.
-dev-util/cucumber-gherkin:23
-dev-util/cucumber-gherkin:25
-dev-util/cucumber-messages:19
-dev-util/cucumber-messages:24
 
 # Eli Schwartz <eschwartz@gentoo.org> (2025-07-18)
 # End of life software. Relies on a commercial internet service which removed
