@@ -30,7 +30,6 @@ REQUIRED_USE="
 RDEPEND="
 	app-arch/snappy:=
 	dev-libs/expat
-	dev-libs/libevent:=
 	dev-libs/libxml2:=[icu]
 	dev-libs/libxslt
 	dev-libs/nspr
@@ -126,7 +125,7 @@ qtwebengine_check-reqs() {
 		ewarn "If run into issues, please try disabling before reporting a bug."
 	fi
 
-	local CHECKREQS_DISK_BUILD=10G
+	local CHECKREQS_DISK_BUILD=11G
 	local CHECKREQS_DISK_USR=400M
 
 	if ! has distcc ${FEATURES}; then #830661
@@ -211,6 +210,10 @@ src_configure() {
 		# this by default in 6.7.3+ (bug #913923)
 		-DQT_FEATURE_webengine_system_re2=OFF
 
+		# currently seems unused with our configuration, doesn't link and grep
+		# seems(?) to imply no dlopen nor using bundled (TODO: check again)
+		-DQT_FEATURE_webengine_system_openh264=OFF
+
 		# system_libvpx=ON is intentionally ignored with USE=vaapi which leads
 		# to using system's being less tested, prefer disabling for now until
 		# vaapi can use it as well
@@ -219,13 +222,16 @@ src_configure() {
 		# not necessary to pass these (default), but in case detection fails
 		# given qtbase's force_system_libs does not affect these right now
 		$(printf -- '-DQT_FEATURE_webengine_system_%s=ON ' \
-			freetype gbm glib harfbuzz lcms2 libevent libjpeg \
-			libopenjpeg2 libpci libpng libtiff libudev libwebp \
-			libxml minizip opus snappy zlib)
+			freetype gbm glib harfbuzz lcms2 libjpeg libopenjpeg2 \
+			libpci libpng libtiff libudev libwebp libxml minizip \
+			opus snappy zlib)
 
 		# TODO: fixup gn cross, or package dev-qt/qtwebengine-gn with =ON
 		# (see also BUILD_ONLY_GN option added in 6.8+ for the latter)
 		-DINSTALL_GN=OFF
+
+		# TODO: drop this if no longer errors out early during cmake generation
+		-DQT_GENERATE_SBOM=OFF
 	)
 
 	local mygnargs=(
@@ -283,11 +289,12 @@ src_test() {
 	fi
 
 	local CMAKE_SKIP_TESTS=(
-		# fails with network sandbox
+		# fails with *-sandbox
 		tst_certificateerror
 		tst_loadsignals
 		tst_qquickwebengineview
 		tst_qwebengineglobalsettings
+		tst_qwebenginepermission
 		tst_qwebengineview
 		# fails with offscreen rendering, may be worth retrying if the issue
 		# persist given these are rather major tests (or consider virtx)
@@ -319,8 +326,17 @@ src_install() {
 	[[ -e ${D}${QT6_LIBDIR}/libQt6WebEngineCore.so ]] || #601472
 		die "${CATEGORY}/${PF} failed to build anything. Please report to https://bugs.gentoo.org/"
 
-	if use test && use webdriver; then
-		rm -- "${D}${QT6_BINDIR}"/testbrowser || die
+	if use test; then
+		local delete=( # sigh
+			"${D}${QT6_ARCHDATADIR}"/metatypes/*testmockdelegates*
+			"${D}${QT6_ARCHDATADIR}"/modules/*TestMockDelegates*
+			"${D}${QT6_BINDIR}"/testbrowser
+			"${D}${QT6_LIBDIR}"/{,cmake,pkgconfig}/*TestMockDelegates*
+			"${D}${QT6_MKSPECSDIR}"/modules/*testmockdelegates*
+			"${D}${QT6_QMLDIR}"/QtWebEngine/TestMockDelegates
+		)
+		# using -f given not tracking which tests may be skipped or not
+		rm -rf -- "${delete[@]}" || die
 	fi
 }
 
