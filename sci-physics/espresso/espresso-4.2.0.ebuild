@@ -23,6 +23,7 @@ S="${WORKDIR}/${PN}"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE="cuda doc examples +fftw +hdf5 test"
+RESTRICT="!test? ( test )"
 
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}"
@@ -82,7 +83,6 @@ src_configure() {
 		-DINSTALL_PYPRESSO=OFF
 		-DCMAKE_DISABLE_FIND_PACKAGE_FFTW3=$(usex !fftw)
 		-DWITH_HDF5=$(usex hdf5)
-		-DCMAKE_DISABLE_FIND_PACKAGE_HDF5=$(usex !hdf5)
 	)
 	cmake_src_configure
 }

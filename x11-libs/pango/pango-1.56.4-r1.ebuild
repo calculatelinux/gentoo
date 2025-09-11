@@ -11,7 +11,7 @@ SRC_URI="https://download.gnome.org/sources/pango/$(ver_cut 1-2)/${P}.tar.xz"
 
 LICENSE="LGPL-2+"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 arm arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
 
 IUSE="debug examples gtk-doc +introspection sysprof test X"
 REQUIRED_USE="gtk-doc? ( introspection )"
@@ -51,9 +51,11 @@ src_prepare() {
 	# get rid of a win32 example
 	rm examples/pangowin32tobmp.c || die
 
-	# Skip broken test:
-	# https://gitlab.gnome.org/GNOME/pango/-/issues/677
+	# Skip broken test: https://gitlab.gnome.org/GNOME/pango/-/issues/677
 	rm tests/layouts/valid-20.layout || die
+
+	# Often breaks w/ new harfbuzz (bug #960222)
+	sed -i -e '/test-font-data/d' tests/meson.build || die
 }
 
 multilib_src_configure() {
