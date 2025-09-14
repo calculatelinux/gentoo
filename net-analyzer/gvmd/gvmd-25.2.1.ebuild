@@ -11,7 +11,7 @@ SRC_URI="https://github.com/greenbone/gvmd/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="AGPL-3+"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE="doc test"
 RESTRICT="!test? ( test )"
 
@@ -49,6 +49,11 @@ BDEPEND="
 	)
 	test? ( dev-libs/cgreen )
 "
+
+PATCHES=(
+	# Closes #962394
+	"${FILESDIR}/${P}-fix-c23-build.patch"
+)
 
 src_prepare() {
 	cmake_src_prepare

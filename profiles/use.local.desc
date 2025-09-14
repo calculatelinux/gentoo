@@ -33,6 +33,7 @@ app-accessibility/orca:braille - Enable braille support
 app-accessibility/speech-dispatcher:espeak - Adds support for espeak-ng speech engine
 app-accessibility/speech-dispatcher:flite - Adds support for flite speech engine
 app-accessibility/speech-dispatcher:pipewire - Enables support for PipeWire. Recommended for latency related advantages if it works in your setup.
+app-admin/calamares:livecd - USE flag for Gentoo modules branding on LIVEDVD
 app-admin/clsync:apidoc - Provide doxygen generated API docs.
 app-admin/clsync:cgroups - Use cgroups to limit /dev access.
 app-admin/clsync:clsync - Build clsync binary. Most likely you want it. However it is possible to build only libclsync without clsync itself.
@@ -313,6 +314,8 @@ app-backup/duplicity:s3 - Support for backing up to the Amazon S3 system
 app-backup/rear:udev - Have ReaR start backup when attaching your USB drive.
 app-backup/snapper:lvm - Enable LVM thinprovisioned snapshots support sys-fs/lvm2
 app-backup/snapper:xattr - Add support for getting and setting POSIX extended attributes, through sys-apps/attr.
+app-backup/tsm:gpfs - Support the IBM General Parallel File System (GPFS)
+app-backup/tsm:journal - Support Journal based backups (JBB)
 app-backup/tsm:tsm-cit - IBM Tivoli Common Inventory Technology
 app-backup/tsm:tsm-hw - Difference snapshot support for NetApp and N-Series file servers
 app-backup/tsm:vmware - Install vmware data protection support
@@ -3332,6 +3335,7 @@ games-strategy/megaglest:tools - Build model import/export tools
 games-strategy/megaglest:unicode - Use unicode strings for wxwidgets
 games-strategy/megaglest:wxuniversal - Use the wxUniversal port which implements the various GUI controls by drawing them itself
 games-strategy/satellite-reign:gui - Install the GUI for configuring screen resolution and input
+games-strategy/seven-kingdoms:multiplayer - Enable multiplayer.
 games-strategy/ufoai:client - Build the main game client
 games-strategy/ufoai:server - Build the dedicated server
 games-strategy/uqm:music - download and install original 3DO music files
@@ -7450,6 +7454,7 @@ sci-libs/miopen:composable-kernel - Use composable-kernel for GEMM-like and redu
 sci-libs/miopen:hipblaslt - Use hipBLASLt for some non-batched and strided batched problems.
 sci-libs/miopen:rocblas - Build with rocBLAS support
 sci-libs/miopen:roctracer - Build with roctracer support
+sci-libs/mkl:eselect-ldso - Enable BLAS/LAPACK runtime switching.
 sci-libs/mkl:gnu-openmp - Install versions with GNU OpenMP (libgomp) support.
 sci-libs/mkl:llvm-openmp - Install versions with LLVM OpenMP (libomp) support.
 sci-libs/mkl:tbb - Install versions with TBB threading support.
@@ -8824,6 +8829,7 @@ www-servers/nginx:rtmp - NGINX-based Media Streaming Server
 www-servers/nginx:ssl - Enable HTTPS module for http. Enable SSL/TLS support for POP3/IMAP/SMTP for mail.
 www-servers/nginx:stream - Enable generic TCP/UDP proxying and load balancing
 www-servers/nginx-unit:php8-3 - Support for PHP 8.3
+www-servers/nginx-unit:php8-4 - Support for PHP 8.4
 www-servers/pshs:magic - Enable automatic detection of Content-Type using libmagic (sys-apps/file)
 www-servers/pshs:qrcode - Enable generating QRCodes for server URL
 www-servers/sniproxy:dns - Enable DNS resolver via net-libs/udns

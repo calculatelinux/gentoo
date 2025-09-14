@@ -36,6 +36,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Rick Farina <zerochaos@gentoo.org> (2025-09-11)
+# Dead upstream, fails to compile on modern gcc. Bug #919250
+# Removal on 2025-10-12
+net-wireless/mdk
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-09-09)
 # Packaged version is very outdated, was already broken by libxml2-2.12,
 # now once more by libxml2-2.14. Bugs #739362, #829005, #923828, #955798.
@@ -743,12 +748,6 @@ media-plugins/kodi-game-libretro-dosbox
 # If you still would like to use this version, please report any issues to
 # upstream.
 >=app-text/jabref-bin-4.0
-
-# Michał Górny <mgorny@gentoo.org> (2017-05-22)
-# for Maciej S. Szmigiero <mail@maciej.szmigiero.name>
-# Any version above 5.100.138 breaks b43 driver in various ways.
-# Also, b43 wiki page says to use 5.100.138. Bug #541080.
->=sys-firmware/b43-firmware-6.30.163.46
 
 # Andreas K. Hüttel <dilfridge@gentoo.org> (2017-05-21)
 # (and others, updated later)
