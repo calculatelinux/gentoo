@@ -36,6 +36,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Conrad Kostecki <conikost@gentoo.org> (2025-09-14)
+# Replaced by >=media-libs/libv4l-1.30.1[utils], as merged by upstream.
+# Bugs #953534 and #962841.
+# Removal on 2025-09-29.
+sys-apps/edid-decode
+
 # Rick Farina <zerochaos@gentoo.org> (2025-09-11)
 # Dead upstream, fails to compile on modern gcc. Bug #919250
 # Removal on 2025-10-12
@@ -284,13 +290,6 @@ sci-electronics/NanoVNA-QT
 # Archived and unmaintained upstream, Qt5-based, build broken for >1 year.
 # Bugs #932756, #952103. Removal on 2025-09-16.
 app-crypt/yubikey-manager-qt
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-08-10)
-# Outdated version packaged in Gentoo, pending version bump request for
-# over a year, depends on Qt5 but worse, Qt5Script, no signs of upstream
-# porting away from it, many unattended build error bugs.
-# Bugs #922311, #926229. Removal on 2025-09-14.
-media-gfx/opentoonz
 
 # Hans de Graaff <graaff@gentoo.org> (2025-08-08)
 # ruby-openid fails tests and is archived upstream. Last release 6 years
