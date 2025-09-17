@@ -23,7 +23,7 @@ SLOT="0/2"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
 # +lapack because the internal fallbacks are pretty slow. Building without blas
 # is barely supported anyway, see bug #914358.
-IUSE="big-endian +cpudetection +lapack"
+IUSE="big-endian +cpudetection index64 +lapack"
 
 # upstream-flag[:gentoo-flag]
 ARM_FLAGS=( neon{,-fp16} vfpv4 asimd{,hp,dp,fhm} sve )
@@ -41,8 +41,8 @@ IUSE+="
 
 RDEPEND="
 	lapack? (
-		>=virtual/cblas-3.8
-		>=virtual/lapack-3.8
+		>=virtual/cblas-3.8[index64(-)?]
+		>=virtual/lapack-3.8[index64(-)?]
 	)
 "
 BDEPEND="
@@ -75,6 +75,8 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.3.2-no-detect.patch
 	# https://github.com/numpy/numpy/pull/29579
 	"${FILESDIR}"/${PN}-2.3.2-arm-asimddp.patch
+	# https://github.com/intel/x86-simd-sort/pull/212
+	"${FILESDIR}"/${P}-avx512f-only.patch
 )
 
 has_all_x86() {
@@ -214,8 +216,9 @@ python_configure_all() {
 
 	DISTUTILS_ARGS=(
 		-Dallow-noblas=$(usex !lapack true false)
-		-Dblas=$(usev lapack cblas)
-		-Dlapack=$(usev lapack lapack)
+		-Duse-ilp64=$(usex index64 true false)
+		-Dblas=$(usev lapack $(usex index64 cblas64 cblas))
+		-Dlapack=$(usev lapack $(usex index64 lapack64 lapack))
 		-Dcpu-baseline="${cpu_baseline[*]}"
 		-Dcpu-baseline-detect=disabled
 		# '-XOP -FMA4' is upstream default, since these are deprecated

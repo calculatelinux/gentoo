@@ -1411,15 +1411,6 @@ dev-db/oracle-instantclient:precomp - "proc" binary and related files to precomp
 dev-db/oracle-instantclient:sdk - Header files and an example makefile for developing Oracle applications
 dev-db/oracle-instantclient:sqlplus - The SQL*Plus command line tool for SQL and PL/SQL queries
 dev-db/oracle-instantclient:tools - Data Pump, SQL*Loader and Workload Replay Client
-dev-db/percona-server:cjk - Add CJK support for InnoDB fulltext search using app-text/mecab
-dev-db/percona-server:latin1 - Use LATIN1 encoding instead of UTF8
-dev-db/percona-server:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
-dev-db/percona-server:profiling - Add support for statement profiling (requires USE=community).
-dev-db/percona-server:rocksdb - Add support for RocksDB; a key/value, LSM database optimized for flash storage
-dev-db/percona-server:router - Build the MySQL router program
-dev-db/percona-server:server - Build the server program
-dev-db/percona-server:tokudb - Add support for TokuDB storage engine
-dev-db/percona-server:tokudb-backup-plugin - Builds the TokuDB backup plugin
 dev-db/pgbouncer:c-ares - Use c-ares as the DNS backend instead of evdns (libevent).
 dev-db/pgpool2:memcached - Use memcached for query caching.
 dev-db/phpmyadmin:setup - Installs the phpMyAdmin setup utility. Users who don't use the utility should disable this USE flag for security reasons as the setup tool was the target of various exploits in the past.
@@ -3628,7 +3619,7 @@ kde-frameworks/kplotting:designer - Build plugins for dev-qt/designer
 kde-frameworks/ktexteditor:editorconfig - Enable support for EditorConfig configuration files
 kde-frameworks/ktextwidgets:designer - Build plugins for dev-qt/designer
 kde-frameworks/kuserfeedback:tools - Build application console and CLI binary
-kde-frameworks/kwallet:minimal - Pull in required runtime components for KWallet via kde-frameworks/kwallet
+kde-frameworks/kwallet:minimal - Do not pull in kde-frameworks/kwallet-runtime runtime components
 kde-frameworks/kwallet-runtime:gpg - Support wallets with GnuPG encryption in addition to the default blowfish-encrypted file
 kde-frameworks/kwallet-runtime:legacy-kwallet - Support KWallet D-Bus API for applications still using it
 kde-frameworks/kwidgetsaddons:designer - Build plugins for dev-qt/designer
@@ -7284,14 +7275,6 @@ sci-geosciences/qgis:webengine - Enable webengine support using dev-qt/qtwebengi
 sci-geosciences/viking:geoclue - Use app-misc/geoclue to determine current location
 sci-geosciences/viking:libexif - Use media-libs/libexif for EXIF support
 sci-geosciences/viking:oauth - Enable OAuth authentication for OSM
-sci-libs/ViSP:coin - Enables Coin3D support.
-sci-libs/ViSP:demos - Installs demo programs.
-sci-libs/ViSP:dmtx - Enables barcode data matrix support.
-sci-libs/ViSP:ogre - Enables dev-games/ogre support.
-sci-libs/ViSP:opencv - Enables media-libs/opencv support.
-sci-libs/ViSP:pcl - Enables sci-libs/pcl support.
-sci-libs/ViSP:tutorials - Installs tutorials.
-sci-libs/ViSP:zbar - Enables barcodes reading.
 sci-libs/adolc:boost - Use the boost allocator from dev-libs/boost
 sci-libs/adolc:sparse - Add support for sparse matrix algebra with sci-libs/colpack
 sci-libs/armadillo:arpack - Link with sci-libs/arpack libraries for eigen decomposition
@@ -7305,6 +7288,7 @@ sci-libs/avogadrolibs:spglib - Find and set the Hall number for a crystal using 
 sci-libs/avogadrolibs:vtk - Enable sci-libs/vtk support
 sci-libs/blis:64bit-index - Enable 64bit array indexing, incompatible with runtime switching
 sci-libs/blis:eselect-ldso - Enable runtime library switching by eselect and ld.so.
+sci-libs/blis:index64 - Build an ILP64 libblis64 in addition to LP64 libblis
 sci-libs/blis:openmp - Use openmp threadding model
 sci-libs/blis:pthread - Use pthread threadding model
 sci-libs/blis:serial - Use no threadding model
@@ -7371,6 +7355,7 @@ sci-libs/fcl:profiling - Enable profiling
 sci-libs/fftw:zbus - Adds support for ZBus cycle-counter of mips
 sci-libs/flann:octave - Add bindings for sci-mathematics/octave
 sci-libs/flexiblas:blis - Support sci-libs/blis provider
+sci-libs/flexiblas:index64 - Build a separate ILP64 library in addition to LP64
 sci-libs/flexiblas:mkl - Support sci-libs/mkl provider
 sci-libs/flexiblas:openblas - Support sci-libs/openblas provider
 sci-libs/flexiblas:tbb - Support sci-libs/mkl with dev-cpp/tbb threading.
@@ -7429,6 +7414,7 @@ sci-libs/kissfft:int32 - Build library for primary data type of int32_t
 sci-libs/kissfft:tools - Build command line tools
 sci-libs/lapack:deprecated - Also build deprecated functions
 sci-libs/lapack:eselect-ldso - Enable runtime library switching by eselect and ld.so.
+sci-libs/lapack:index64 - Build a separate ILP64 library in addition to LP64
 sci-libs/lapack:lapacke - Build LAPACKE
 sci-libs/lemon:coin - Enable the sci-libs/coinor-clp and sci-libs/coinor-cbc graph algorithms
 sci-libs/lemon:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
@@ -7469,7 +7455,7 @@ sci-libs/octomap:dynamicEDT3D - Build and install dynamicEDT3D library: A librar
 sci-libs/openblas:cpudetection - Build dynamic architecture detection at run time (for multi targets)
 sci-libs/openblas:dynamic - Build dynamic architecture detection at run time (for multi targets)
 sci-libs/openblas:eselect-ldso - Enable BLAS/LAPACK runtime switching
-sci-libs/openblas:index-64bit - Compile a separate INTERFACE64 OpenBLAS
+sci-libs/openblas:index64 - Compile a separate INTERFACE64 OpenBLAS
 sci-libs/openblas:pthread - Build with pthread threading model
 sci-libs/openblas:relapack - Build the ReLAPACK extension to OpenBLAS
 sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/freeimage
@@ -8192,6 +8178,7 @@ sys-cluster/ceph:jaeger - Enable jaegertracing and it's dependent libraries
 sys-cluster/ceph:kafka - Rados Gateway's pubsub support for Kafka push endpoint
 sys-cluster/ceph:lttng - Add support for LTTng
 sys-cluster/ceph:mgr - Build the ceph-mgr daemon
+sys-cluster/ceph:nvmeof - Enable support for NVMEoF
 sys-cluster/ceph:parquet - Support for s3 select on parquet objects
 sys-cluster/ceph:pmdk - Enable PMDK libraries
 sys-cluster/ceph:rabbitmq - Use rabbitmq-c to build rgw amqp push endpoint
@@ -8600,10 +8587,14 @@ sys-process/systemd-cron:setgid - Compile setgid C helper for crontab. Needs GCC
 sys-process/systemd-cron:yearly - Support /etc/cron.yearly
 sys-process/tini:args - Enable argument parsing.
 virtual/blas:eselect-ldso - Enable runtime library switching by eselect and ld.so.
+virtual/blas:index64 - Provide an ILP64 library in addition to LP64
 virtual/cblas:eselect-ldso - Enable runtime library switching by eselect and ld.so.
+virtual/cblas:index64 - Provide an ILP64 library in addition to LP64
 virtual/jdk:headless-awt - Don't install the X backend for AWT, needed by some GUIs
 virtual/lapack:eselect-ldso - Enable runtime library switching by eselect and ld.so.
+virtual/lapack:index64 - Provide an ILP64 library in addition to LP64
 virtual/lapacke:eselect-ldso - Enable runtime library switching by eselect and ld.so.
+virtual/lapacke:index64 - Provide an ILP64 library in addition to LP64
 virtual/linux-sources:firmware - Install linux kernel firmware
 virtual/mpi:nullmpi - Allow sys-cluster/nullmpi a minimal incomplete MPI implementation as a provider
 virtual/mpi:romio - Enable romio, a high-performance portable MPI-IO
