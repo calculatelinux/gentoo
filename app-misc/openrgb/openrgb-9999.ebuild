@@ -9,8 +9,9 @@ if [[ ${PV} == *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI=${EGIT_REPO_URI:-"https://gitlab.com/CalcProgrammer1/OpenRGB"}
 else
-	SRC_URI="https://gitlab.com/CalcProgrammer1/OpenRGB/-/archive/release_${PV}/OpenRGB-release_${PV}.tar.bz2"
-	S="${WORKDIR}/OpenRGB-release_${PV}"
+	MY_PV=$(ver_rs 2 "")
+	SRC_URI="https://gitlab.com/CalcProgrammer1/OpenRGB/-/archive/release_${MY_PV}/OpenRGB-release_${MY_PV}.tar.bz2"
+	S="${WORKDIR}/OpenRGB-release_${MY_PV}"
 	KEYWORDS="~amd64 ~loong ~x86"
 fi
 
@@ -32,6 +33,7 @@ DEPEND="
 	${RDEPEND}
 	dev-cpp/nlohmann_json
 	dev-libs/mdns
+	dev-libs/stb
 "
 BDEPEND="
 	dev-qt/qttools:6[linguist]
@@ -43,7 +45,7 @@ PATCHES=(
 	"${FILESDIR}"/OpenRGB-0.9-udev-check.patch
 )
 if [[ ${PV} != *9999* ]]; then
-	PATCHES+=( "${FILESDIR}"/${P}-build-system.patch )
+	PATCHES+=( "${FILESDIR}"/openrgb-0.9_p20250802-build-system.patch )
 fi
 
 CHECKREQS_DISK_BUILD="2G"
@@ -51,7 +53,7 @@ CHECKREQS_DISK_BUILD="2G"
 src_prepare() {
 	default
 
-	rm -r dependencies/{httplib,hidapi,libusb,mdns,json,mbedtls}* \
+	rm -r dependencies/{httplib,hidapi,libusb,mdns,json,mbedtls,stb}* \
 		|| die "Failed to remove unneded deps"
 }
 
@@ -75,6 +77,7 @@ src_configure() {
 
 	eqmake6 \
 		INCLUDEPATH+="${ESYSROOT}/usr/include/nlohmann" \
+		INCLUDEPATH+="${ESYSROOT}/usr/include/stb" \
 		OPENRGB_SYSTEM_PLUGIN_DIRECTORY="${EPREFIX}/usr/$(get_libdir)/openrgb/plugins" \
 		LIBS+="${libs[@]}" \
 		PREFIX="${EPREFIX}/usr"
