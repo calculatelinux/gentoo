@@ -8,7 +8,7 @@ inherit qt6-build
 DESCRIPTION="Inter-Process Communication (IPC) library for the Qt6 framework"
 
 if [[ ${QT6_BUILD_TYPE} == release ]]; then
-	KEYWORDS="~amd64 ~loong"
+	KEYWORDS="amd64 ~loong"
 fi
 
 IUSE="qml"
@@ -37,6 +37,8 @@ src_test() {
 	local CMAKE_SKIP_TESTS=(
 		# rarely fails randomly even with -j1, not looked further into
 		tst_modelview
+		# certs in the tests expired, not worth backporting updates (bug #963041)
+		tst_external_IODevice
 	)
 
 	# tests re-use 127.0.0.1:65213 and randomly fail if ran at same time
