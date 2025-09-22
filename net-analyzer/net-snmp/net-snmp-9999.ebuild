@@ -29,6 +29,7 @@ SLOT="0/40"
 IUSE="
 	X bzip2 doc elf kmem ipv6 lm-sensors mfd-rewrites minimal mysql
 	netlink pcap pci pcre perl python rpm selinux smux ssl tcpd ucd-compat valgrind zlib
+	${GENTOO_PERL_USESTRING}
 "
 REQUIRED_USE="
 	python? ( ${PYTHON_REQUIRED_USE} )
@@ -45,7 +46,10 @@ COMMON_DEPEND="
 	pcap? ( net-libs/libpcap )
 	pci? ( sys-apps/pciutils )
 	pcre? ( dev-libs/libpcre2 )
-	perl? ( dev-lang/perl:= )
+	perl? (
+		${GENTOO_PERL_DEPSTRING}
+		dev-lang/perl:=
+	)
 	python? (
 		$(python_gen_cond_dep '
 			dev-python/setuptools[${PYTHON_USEDEP}]

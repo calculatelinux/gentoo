@@ -5,7 +5,7 @@ DESCRIPTION=Standard GNU utilities (chmod, cp, dd, ls, sort, tr, head, wc, who,.
 EAPI=8
 HOMEPAGE=https://www.gnu.org/software/coreutils/
 INHERIT=flag-o-matic python-any-r1 toolchain-funcs verify-sig git-r3
-IUSE=acl caps gmp hostname kill multicall nls +openssl selinux +split-usr static test vanilla xattr verify-sig
+IUSE=acl caps gmp hostname kill multicall nls +openssl selinux +split-usr static test test-full vanilla xattr verify-sig
 LICENSE=GPL-3+
 PROPERTIES=live
 RDEPEND=!static? ( acl? ( sys-apps/acl ) caps? ( sys-libs/libcap ) gmp? ( dev-libs/gmp:= ) openssl? ( dev-libs/openssl:= ) xattr? ( sys-apps/attr ) ) selinux? ( sys-libs/libselinux ) nls? ( virtual/libintl ) hostname? ( !sys-apps/net-tools[hostname] ) kill? ( !sys-apps/util-linux[kill] !sys-process/procps[kill] ) !<sys-apps/util-linux-2.13 !<sys-apps/sandbox-2.10-r4 !sys-apps/stat !net-mail/base64 !sys-apps/mktemp !<app-forensics/tct-1.18-r1 !<net-fs/netatalk-2.0.3-r4
@@ -13,4 +13,4 @@ RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=!vanilla? ( https://dev.gentoo.org/~sam/distfiles/sys-apps/coreutils/coreutils-9.6-patches.tar.xz )
 _eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	git-r3	875eb471682d3e1f18da124be97dcc81	multiprocessing	1e32df7deee68372153dca65f4a7c21f	python-any-r1	891415dfe39ad9b41b461f2b86354af0	python-utils-r1	b7eb9c3a6dc6662368634584aab44a2c	toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0	verify-sig	4e83419d7fb5d336f6a4de8193968319
-_md5_=73f3a96dfec503108cf2005de3e29d48
+_md5_=7421b5cabcb09af993885b350868d9b8

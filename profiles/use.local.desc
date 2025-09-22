@@ -1371,7 +1371,11 @@ dev-cpp/libjson-rpc-cpp:redis-client - Build support for Redis client using dev-
 dev-cpp/libjson-rpc-cpp:redis-server - Build support for Redis server using dev-libs/hiredis
 dev-cpp/libjson-rpc-cpp:stubgen - Build header stub code generator (needed for development and when pregenerated headers are not bundled)
 dev-cpp/msgpack-cxx:boost - Enable boost support
+dev-cpp/opentelemetry-cpp:elasticsearch - Build support for the elasticsearch exporter
+dev-cpp/opentelemetry-cpp:grpc - Build support for the OTLP (OpenTelemetry Protocol) GRPC exporter
+dev-cpp/opentelemetry-cpp:http - Build support for the OTLP (OpenTelemetry Protocol) HTTP exporter
 dev-cpp/opentelemetry-cpp:jaeger - Include the jaeger exporter
+dev-cpp/opentelemetry-cpp:otlp - Build support for the OTLP (OpenTelemetry Protocol) File exporter
 dev-cpp/opentelemetry-cpp:prometheus - include the Prometheus Client in the SDK
 dev-cpp/sdbus-c++:systemd - Use external libsystemd instead of statically-linked build
 dev-cpp/sdbus-c++:tools - Install interface stub code generator
@@ -3061,6 +3065,9 @@ games-board/freedoko:kdecards - Install the KDE card set
 games-board/freedoko:openclipartcards - Install the openclipartcards card set
 games-board/freedoko:pysolcards - Install the PySol card set
 games-board/freedoko:xskatcards - Install the XSkat card set
+games-board/lc0:dnnl - Enable dnnl / OneDNN backend
+games-board/lc0:ispc - Enable ispc backend
+games-board/lc0:onnx - Enable onnx backend
 games-board/pasang-emas:extras - Install some extra themes
 games-board/pioneers:help - Enable gnome ingame help via scrollkeeper
 games-board/pysolfc:extra-cardsets - Install extra cardsets
@@ -3086,8 +3093,8 @@ games-emulation/dolphin:mgba - Enables GBA controllers emulation using libmgba.
 games-emulation/dosbox:core-inline - Enable memory-increasing inlines for better performance but requiring more build time
 games-emulation/dosbox:glide - Enable unofficial Glide emulation via media-libs/openglide
 games-emulation/dosbox-staging:dynrec - Use recompiling cpu core instead of dynamic x86/x64 specific cpu core
-games-emulation/dosbox-staging:fluidsynth - use media-sound/fluidsynth for MIDI emulation
-games-emulation/dosbox-staging:mt-32 - use media-libs/munt-mt32emu for MT-32 emulation
+games-emulation/dosbox-staging:fluidsynth - Use media-sound/fluidsynth for MIDI emulation
+games-emulation/dosbox-staging:mt-32 - Use media-libs/munt-mt32emu for MT-32 emulation
 games-emulation/dosbox-staging:network - Enable networking features (modem, ipx)
 games-emulation/dosbox-staging:slirp - Enable Ethernet emulation using net-libs/libslirp
 games-emulation/fceux:archive - Use app-arch/libarchive for 7zip support
@@ -4879,6 +4886,7 @@ media-sound/mpg123-base:int-quality - Use rounding instead of fast truncation fo
 media-sound/musescore:video - Support exporting scores as videos using the command line
 media-sound/ncmpc:async-connect - Enable asynchronous connect
 media-sound/ncmpc:chat-screen - Enable the chat screen
+media-sound/ncmpc:colors - Enable color output
 media-sound/ncmpc:help-screen - Enable the help screen
 media-sound/ncmpc:key-screen - Enable key editor screen
 media-sound/ncmpc:library-screen - Enable library screen
@@ -5743,6 +5751,7 @@ net-dns/knot:fastparser - Use a zone file parser that is faster, but requires mo
 net-dns/knot:pkcs11 - Add support for PKCS#11
 net-dns/knot:prometheus - A Prometheus exporter for server and query statistics.
 net-dns/knot:quic - Enable the DNS over QUIC (DoQ) module using libngtcp2
+net-dns/knot:redis - Enable database zone backend using Redis
 net-dns/knot:utils - Install Knot utilities, such as kdig, kzonecheck, ...
 net-dns/knot:xdp - Enable eXpress Data Path
 net-dns/knot-resolver:dnstap - Build dnstap binary logging module
@@ -7828,6 +7837,7 @@ sys-apps/coreutils:kill - Build the kill program
 sys-apps/coreutils:multicall - Build all tools into a single `coreutils` program akin to busybox to save space
 sys-apps/coreutils:openssl - Use openssl libcrypto hash routines for hash functions
 sys-apps/coreutils:split-usr - Enable this if /bin and /usr/bin are separate directories
+sys-apps/coreutils:test-full - Run expensive tests (mostly CPU intensive).
 sys-apps/cpu-x:cpu - Use the dev-libs/libcpuid library for CPU info
 sys-apps/cpu-x:force-libstatgrab - Use sys-libs/libstatgrab to instead of sys-process/procps
 sys-apps/cpu-x:gpu - Use the media-libs/glfw library for GPU info
@@ -7845,6 +7855,7 @@ sys-apps/elfix:ptpax - Enable PT_PAX_FLAGS support.
 sys-apps/elfix:xtpax - Enable XATTR_PAX_FLAGS support.
 sys-apps/etckeeper:cron - Install cron script
 sys-apps/ethtool:netlink - Enable netlink interface via net-libs/libmnl
+sys-apps/findutils:test-full - Run expensive tests (mostly memory intensive).
 sys-apps/firejail:X - Enable X11 sandboxing
 sys-apps/firejail:apparmor - Enable support for custom AppArmor profiles
 sys-apps/firejail:chroot - Enable chrooting to custom directory
@@ -7918,6 +7929,7 @@ sys-apps/gawk:pma - Experimental Persistent Memory Allocator (PMA) support which
 sys-apps/gentoo-wsl-config:interop - Enable Windows interoperability features for WSL
 sys-apps/gnome-disk-utility:fat - Include FAT16/FAT32 support (sys-fs/dosfstools)
 sys-apps/grep:egrep-fgrep - Install deprecated 'egrep' and 'fgrep' wrappers for 'grep -E' and 'grep -F' respectively. GNU grep 3.8 onwards warns about their usage by default, but the versions installed by this flag do not. No deprecation warnings are emitted when this flag is enabled.
+sys-apps/grep:test-full - Run expensive tests (mostly CPU intensive).
 sys-apps/groff:uchardet - Enable automatic encoding detection via app-i18n/uchardet
 sys-apps/hwloc:X - use the X Window System
 sys-apps/hwloc:cairo - Enable the Cairo back-end of hwloc's lstopo command
@@ -8016,6 +8028,7 @@ sys-apps/s390-tools:zlib - build the zgetdump and dump2tar utilities
 sys-apps/s6:execline - enable support for dev-lang/execline
 sys-apps/s6-linux-init:sysv-utils - Install sysvinit compatibility symlinks for telinit, halt, poweroff, reboot, and shutdown
 sys-apps/sandbox:nnp - Enable NO_NEW_PRIVS which blocks set*id programs from gaining privileges (e.g. sudo)
+sys-apps/sed:test-full - Run expensive tests (mostly CPU intensive).
 sys-apps/shadow:su - build the su program
 sys-apps/smartmontools:caps - Build against sys-libs/libcap-ng to allow smartd to drop its privileges.
 sys-apps/smartmontools:daemon - Install the monitoring daemon (smartd) and associated scripts.
@@ -9084,8 +9097,6 @@ x11-wm/e16:modules - Enable support for loadable modules
 x11-wm/e16:no-container - Do not use container window (experimental)
 x11-wm/e16:pango - Enable pango font rendering using x11-libs/pango
 x11-wm/e16:player - Enable audio using aplay from media-sound/alsa-utils
-x11-wm/e16:poll - Use poll() event handler API (recommended)
-x11-wm/e16:select - Use select() event handler API
 x11-wm/e16:themes - Install the official E16 themes using x11-themes/e16-themes
 x11-wm/e16:xi2 - Enable the experimental multipointer input XInput2. This incldues the MultiPointer X feature
 x11-wm/e16:xpresent - Enable support for the X Present extension via x11-libs/libXpresent (experimental)
