@@ -577,6 +577,7 @@ app-emulation/fex-xtajit:arm64ec - Enable x86_64 emulation using arm64ec
 app-emulation/fex-xtajit:wow64 - Enable x86 (32-bit) emulation using wow64
 app-emulation/fs-uae:fmv - Enable support for CD32 FMV (full motion video)
 app-emulation/fs-uae:glew - Enable support for The OpenGL Extension Wrangler Library (media-libs/glew)
+app-emulation/fs-uae:portmidi - Enable support for MIDI via media-libs/portmidi
 app-emulation/fs-uae-launcher:lha - Enable LHA archive support
 app-emulation/fuse:backend-X - Use X11 rendering backend
 app-emulation/fuse:backend-fbcon - Use framebuffer rendering backend
@@ -2052,7 +2053,6 @@ dev-libs/libffi:pax-kernel - Use PaX emulated trampolines, for we can't use PROT
 dev-libs/libffi-compat:pax-kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
 dev-libs/libfido2:hidapi - Enable HID API support
 dev-libs/libfido2:nfc - Enable experimental NFC support
-dev-libs/libflatarray:cuda - Enables plugins for NVIDIA GPUs (e.g. CUDAAllocator)
 dev-libs/libgcrypt:getentropy - Use getentropy function to obtain randomness from the kernel
 dev-libs/libgdata:crypt - Use app-crypt/gcr for keeping tokens and passwords in non-pageable memory for improved security
 dev-libs/libgdata:gnome-online-accounts - Enable net-libs/gnome-online-accounts support
@@ -2875,7 +2875,6 @@ dev-util/geany-plugins:webhelper - Enable webhelper plugin
 dev-util/geany-plugins:workbench - Enable workbench plugin
 dev-util/glade:gjs - Build catalog support for dev-libs/gjs widgets.
 dev-util/glade:webkit - Build catalog support for net-libs/webkit-gtk:4 widgets.
-dev-util/global:vim - Integrate the GNU GLOBAL source code tag system with Vim
 dev-util/gnome-builder:clang - Provide integration with llvm-core/clang for best possible C/C++ autocompletion, semantic highlighting, symbol resolving, and diagnostics support
 dev-util/gnome-builder:d-spy - Provide D-Bus debugging functionality via dev-debug/d-spy
 dev-util/gnome-builder:flatpak - Enable support for flatpak applications using sys-apps/flatpak
@@ -3660,7 +3659,6 @@ kde-plasma/discover:firmware - Enable support for firmware upgrades using sys-ap
 kde-plasma/discover:flatpak - Enable support for flatpak repositories using sys-apps/flatpak
 kde-plasma/discover:snap - Enable support for snap packages using app-containers/snapd
 kde-plasma/discover:webengine - Enable webflow support using dev-qt/qtwebview and dev-qt/qtwebengine instead of default URL handler
-kde-plasma/drkonqi:systemd - Enable Coredumpd integration
 kde-plasma/kde-cli-tools:kdesu - Pull in graphical kdesu frontend kde-plasma/kdesu-gui
 kde-plasma/kdeplasma-addons:alternate-calendar - Support alternate calendar systems (currently Chinese or Indian) via dev-libs/icu
 kde-plasma/kdeplasma-addons:share - Enable applet for quickly sharing data to a variety of sources
@@ -7338,9 +7336,6 @@ sci-libs/coinor-clp:glpk - Enable GNU Linear Programming Kit sci-mathematics/glp
 sci-libs/coinor-clp:metis - Enable partitioning with sci-libs/metis
 sci-libs/coinor-clp:mumps - Enable sci-libs/mumps support
 sci-libs/coinor-clp:sparse - Enable support for sparse matrix with sci-libs/cholmod
-sci-libs/coinor-cppad:adolc - Add support for ADOL-C (sci-libs/adolc)
-sci-libs/coinor-cppad:eigen - Add support for Eigen (dev-cpp/eigen)
-sci-libs/coinor-cppad:ipopt - Add support for IPOPT (sci-libs/ipopt)
 sci-libs/coinor-symphony:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
 sci-libs/coinor-utils:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
 sci-libs/composable-kernel:profiler - Build and install the Composable Kernal profiler (ckProfiler)
@@ -7370,8 +7365,6 @@ sci-libs/dlib:cuda - Enable support for CUDA for Deep Neural Networks (cuDNN) on
 sci-libs/dlib:mkl - Enable support for Intel FFT sci-libs/mkl
 sci-libs/dlib:python - Enable support for Python API bindings
 sci-libs/dmlc-core:s3 - Support for the Amazon Simple Storage Service
-sci-libs/fcl:octomap - OctoMap library support
-sci-libs/fcl:profiling - Enable profiling
 sci-libs/fftw:zbus - Adds support for ZBus cycle-counter of mips
 sci-libs/flann:octave - Add bindings for sci-mathematics/octave
 sci-libs/flexiblas:blis - Support sci-libs/blis provider
@@ -7438,7 +7431,6 @@ sci-libs/lapack:index64 - Build a separate ILP64 library in addition to LP64
 sci-libs/lapack:lapacke - Build LAPACKE
 sci-libs/lemon:coin - Enable the sci-libs/coinor-clp and sci-libs/coinor-cbc graph algorithms
 sci-libs/lemon:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
-sci-libs/libccd:double-precision - More precise calculations at the expense of speed
 sci-libs/liborigin:tools - Install opj2dat command line util
 sci-libs/libqalculate:hardened - Disable unsafe functions like 'command' and variables like 'uptime'.
 sci-libs/libsemigroups:eigen - Use dev-cpp/eigen (at build time only) to speed up some matrix operations.
@@ -7486,7 +7478,6 @@ sci-libs/opencascade:optimize - Don't clear allocated memory. Use optimized memo
 sci-libs/opencascade:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
 sci-libs/opencascade:testprograms - Indicates whether non-regression OCCT test scripts should be installed
 sci-libs/opencascade:vtk - Enable Visualization Toolkit support via sci-libs/vtk
-sci-libs/orocos_kdl:models - Build models for some well known robots.
 sci-libs/p4est:vtk-binary - Enable binary vtk output. If disabled vtk files will be written in ASCII text format.
 sci-libs/pastix:fortran - Install the Fortran interface
 sci-libs/pastix:int64 - Use 64- rather than 32-bit integer representation
@@ -8459,10 +8450,8 @@ sys-kernel/asahi-sources:symlink - Automatically symlink the kernel sources to /
 sys-kernel/dracut:dracut-cpio - Build the enhanced 'dracut-cpio' program
 sys-kernel/genkernel:firmware - Prefer system firmware sys-kernel/linux-firmware over local copy.
 sys-kernel/gentoo-kernel:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
-sys-kernel/gentoo-kernel:generic-uki - Build and install a generic initramfs and Unified Kernel Image, this is intended for building binpkgs with a pre-generated UKI included (EXPERIMENTAL).
 sys-kernel/gentoo-kernel:hardened - Use selection of hardening options recommended by Kernel Self Protection Project
 sys-kernel/gentoo-kernel:initramfs - Build initramfs along with the kernel.
-sys-kernel/gentoo-kernel-bin:generic-uki - Install a prebuilt generic initramfs and Unified Kernel Image (EXPERIMENTAL).
 sys-kernel/gentoo-kernel-bin:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 sys-kernel/installkernel:dracut - Generate an initramfs or UKI on each kernel installation
@@ -8490,7 +8479,6 @@ sys-kernel/mips-sources:ip27 - Enables additional support for SGI Origin (IP27)
 sys-kernel/mips-sources:ip28 - Enables additional support for SGI Indigo2 Impact R10000 (IP28)
 sys-kernel/mips-sources:ip30 - Enables support for SGI Octane (IP30, 'Speedracer')
 sys-kernel/rt-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
-sys-kernel/vanilla-kernel:generic-uki - Build and install a generic initramfs and Unified Kernel Image, this is intended for building binpkgs with a pre-generated UKI included (EXPERIMENTAL).
 sys-kernel/vanilla-kernel:initramfs - Build initramfs along with the kernel.
 sys-libs/binutils-libs:64-bit-bfd - Support 64-bit targets even on 32-bit hosts (is ignored on 64-bit hosts)
 sys-libs/binutils-libs:cet - Enable Intel Control-flow Enforcement Technology.
@@ -9009,6 +8997,7 @@ x11-misc/xmobar:xft - Use Xft to render text. UTF-8 support included.
 x11-misc/xmobar:xpm - Enable usage of xpm for icons.
 x11-misc/xmobar:xrender - Use XRender for alpha background pseudo-transparency.
 x11-misc/xscreensaver:fonts - Install the fonts shipped with XScreenSaver that have clear licensing
+x11-misc/xscreensaver:gdk-pixbuf - Add ability for screensavers to read images in formats supported by x11-libs/gdk-pixbuf
 x11-misc/xscreensaver:gdm - Use gdmflexiserver from gnome-base/gdm instead of x11-misc/lightdm
 x11-misc/xscreensaver:gles - Emulate OpenGL 1.3 in terms of OpenGL ES 1.x
 x11-misc/xscreensaver:glx - Use GLX to interface OpenGL and X11 instead of EGL
