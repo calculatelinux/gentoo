@@ -3,8 +3,9 @@
 
 EAPI=8
 
+GENTOO_DEPEND_ON_PERL="no"
 QA_PKGCONFIG_VERSION=$(ver_cut 1-3)
-inherit autotools flag-o-matic perl-functions toolchain-funcs
+inherit autotools flag-o-matic perl-module toolchain-funcs
 
 if [[ ${PV} == 9999 ]] ; then
 	EGIT_REPO_URI="https://github.com/ImageMagick/ImageMagick.git"
@@ -26,7 +27,10 @@ LICENSE="imagemagick"
 # Please check this on bumps, SONAME is often not updated! Use abidiff on old/new.
 # If ABI is broken, change the bit after the '-'.
 SLOT="0/$(ver_cut 1-3)-18"
-IUSE="bzip2 corefonts +cxx djvu fftw fontconfig fpx graphviz hardened hdri heif jbig jpeg jpeg2k jpegxl lcms lqr lzma opencl openexr openmp pango perl +png postscript q32 q8 raw static-libs svg test tiff truetype webp wmf X xml zip zlib"
+IUSE="bzip2 corefonts +cxx djvu fftw fontconfig fpx graphviz hardened hdri heif"
+IUSE+=" jbig jpeg jpeg2k jpegxl lcms lqr lzma opencl openexr openmp pango perl ${GENTOO_PERL_USESTRING}"
+IUSE+=" +png postscript q32 q8 raw static-libs svg test tiff truetype webp wmf"
+IUSE+=" X xml zip zlib"
 
 REQUIRED_USE="
 	corefonts? ( truetype )
@@ -56,7 +60,10 @@ RDEPEND="
 	opencl? ( virtual/opencl )
 	openexr? ( media-libs/openexr:0= )
 	pango? ( x11-libs/pango )
-	perl? ( >=dev-lang/perl-5.8.8:= )
+	perl? (
+		${GENTOO_PERL_DEPSTRING}
+		>=dev-lang/perl-5.8.8:=
+	)
 	png? ( media-libs/libpng:= )
 	postscript? ( app-text/ghostscript-gpl:= )
 	raw? ( media-libs/libraw:= )
@@ -197,6 +204,11 @@ src_configure() {
 	)
 
 	CONFIG_SHELL="${BROOT}"/bin/bash econf "${myeconfargs[@]}"
+}
+
+src_compile() {
+	# Avoid perl-module_src_compile
+	default
 }
 
 src_test() {

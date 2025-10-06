@@ -522,7 +522,6 @@ app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:bignum - Support for OpenSSL bignum implementation
 app-editors/xemacs:pop - Support POP for mail retrieval
 app-editors/xemacs:xim - Enable X11 XiM input method
-app-editors/zed:gles - Use simplified OpenGLES instead of full-scale OpenGL
 app-emacs/auctex:preview-latex - Use bundled preview-latex
 app-emacs/bbdb:tex - Install plain TeX support files
 app-emacs/bbdb:vm - Add support for app-emacs/vm
@@ -718,7 +717,7 @@ app-emulation/wine-proton:mingw - Build PE files using dev-util/mingw64-toolchai
 app-emulation/wine-proton:mono - Enable .NET support using app-emulation/wine-mono
 app-emulation/wine-proton:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-proton:sdl - Enable gamepad support using media-libs/libsdl2
-app-emulation/wine-proton:wow64 - Enable the "new" wow64 mode that allows running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32 aka "old" wow64, also lacks 16bit support) -- if USE=mingw is set, still need the default abi_x86_32 set on dev-util/mingw64-toolchain but that can be done even with /no-multilib/ profiles. This can also be enabled on arm64 to allow running x86 applications via binary translation.
+app-emulation/wine-proton:wow64 - Enable the "new" wow64 mode that allows running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse performance or other issues compared to USE=abi_x86_32 aka "old" wow64) -- if USE=mingw is set, still need the default abi_x86_32 set on dev-util/mingw64-toolchain but that can be done even with /no-multilib/ profiles. This can also be enabled on arm64 to allow running x86 applications via binary translation.
 app-emulation/wine-staging:arm64ec - Enable support for running x86_64 applications on arm64 via binary translation
 app-emulation/wine-staging:capi - Enable ISDN support using net-libs/libcapi
 app-emulation/wine-staging:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up and is mostly unsupported, try disabling if have issues)
@@ -731,7 +730,7 @@ app-emulation/wine-staging:pcap - Support packet capture software (e.g. wireshar
 app-emulation/wine-staging:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-staging:samba - Pull in net-fs/samba with winbind for NTLM auth support
 app-emulation/wine-staging:sdl - Enable gamepad support using media-libs/libsdl2
-app-emulation/wine-staging:wow64 - Enable the "new" wow64 mode that allows running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32 aka "old" wow64, also lacks 16bit support) -- if USE=mingw is set, still need the default abi_x86_32 set on dev-util/mingw64-toolchain but that can be done even with /no-multilib/ profiles. This can also be enabled on arm64 to allow running x86 applications via binary translation.
+app-emulation/wine-staging:wow64 - Enable the "new" wow64 mode that allows running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse performance or other issues compared to USE=abi_x86_32 aka "old" wow64) -- if USE=mingw is set, still need the default abi_x86_32 set on dev-util/mingw64-toolchain but that can be done even with /no-multilib/ profiles. This can also be enabled on arm64 to allow running x86 applications via binary translation.
 app-emulation/wine-vanilla:arm64ec - Enable support for running x86_64 applications on arm64 via binary translation
 app-emulation/wine-vanilla:capi - Enable ISDN support using net-libs/libcapi
 app-emulation/wine-vanilla:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up and is mostly unsupported, try disabling if have issues)
@@ -744,7 +743,7 @@ app-emulation/wine-vanilla:pcap - Support packet capture software (e.g. wireshar
 app-emulation/wine-vanilla:perl - Install helpers that require perl (winedump/winemaker)
 app-emulation/wine-vanilla:samba - Pull in net-fs/samba with winbind for NTLM auth support
 app-emulation/wine-vanilla:sdl - Enable gamepad support using media-libs/libsdl2
-app-emulation/wine-vanilla:wow64 - Enable the "new" wow64 mode that allows running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse/unusable OpenGL performance or other issues compared to USE=abi_x86_32 aka "old" wow64, also lacks 16bit support) -- if USE=mingw is set, still need the default abi_x86_32 set on dev-util/mingw64-toolchain but that can be done even with /no-multilib/ profiles. This can also be enabled on arm64 to allow running x86 applications via binary translation.
+app-emulation/wine-vanilla:wow64 - Enable the "new" wow64 mode that allows running 32bit applications without 32bit ELF multilib by mapping to 64bit calls (experimental, *may* have worse performance or other issues compared to USE=abi_x86_32 aka "old" wow64) -- if USE=mingw is set, still need the default abi_x86_32 set on dev-util/mingw64-toolchain but that can be done even with /no-multilib/ profiles. This can also be enabled on arm64 to allow running x86 applications via binary translation.
 app-emulation/winetricks:rar - Pull in app-arch/unrar for extraction of rar-compressed game files
 app-emulation/xe-guest-utilities:xenstore - Use xenstore binaries bundled by Citrix instead of building app-emulation/xen-tools
 app-emulation/xen:boot-symlinks - Symlink xen.gz variants in /boot, disable on fat filesystems
@@ -957,8 +956,10 @@ app-misc/lirc:inputlirc - Add a dependency on app-misc/inputlircd
 app-misc/lirc:uinput - Enable support for uinput
 app-misc/localsearch:cue - Enable cue sheet parsing
 app-misc/localsearch:gsf - Enable gnome-extra/libgsf based data extractor and for ODT.
+app-misc/localsearch:gstreamer - Enable support for metadata writeback functionality
 app-misc/localsearch:iptc - Enable extraction of IPTC data from pictures
 app-misc/localsearch:iso - Enable extraction of metadata from ISO disk images
+app-misc/localsearch:landlock - Enable sandboxing using Landlock LSM
 app-misc/localsearch:playlist - Add support for playlists
 app-misc/localsearch:xps - Add support for XPS file format through app-text/libgxps.
 app-misc/mc:edit - Compile and install the mcedit application
@@ -1004,6 +1005,7 @@ app-misc/tinysparql:stemmer - Add word stemming via dev-libs/snowball-stemmer.
 app-misc/tmux:sixel - Enable sixel support
 app-misc/tmux:utempter - Include libutempter support
 app-misc/unfoo:minimal - Do not install all support archive binaries
+app-misc/upterm:server - Compile server support (uptermd)
 app-misc/vcontrold:vclient - Build the vclient helper program to talk to vcontrold
 app-misc/vcontrold:vsim - Build the vsim helper program (simulates the heating's answers, for development and debugging)
 app-misc/vifm:extended-keys - Support for extended keys (arrows, home etc)
@@ -1040,6 +1042,7 @@ app-office/calligra:lcms - Build colorengine plugins using media-libs/lcms
 app-office/calligra:okular - Enable bindings for kde-apps/okular
 app-office/calligra:phonon - Build stage/eventplugins and videoshape plugin using media-libs/phonon
 app-office/calligra:webengine - Enable Braindump support using dev-qt/qtwebengine
+app-office/dia:xslt - Enable the plugin for xslt
 app-office/glabels:barcode - Enable barcode support through external libraries.
 app-office/gnucash:aqbanking - Connect to some internet banks via AqBanking
 app-office/gnucash:quotes - Enable online stock quote retrieval
@@ -2831,7 +2834,6 @@ dev-util/ctags:xml - Enable XML parsing support
 dev-util/ctags:yaml - Enable YAML parsing support
 dev-util/cwdiff:mercurial - install hg wdiff alias for dev-vcs/mercurial
 dev-util/devhelp:gedit - Install plugin for app-editors/gedit
-dev-util/dialog:minimal - Disable library, install command-line program only
 dev-util/diffoscope:R - Use dev-lang/R
 dev-util/diffoscope:binutils - Use sys-devel/binutils
 dev-util/diffoscope:cpio - Use app-alternatives/cpio
@@ -3189,9 +3191,9 @@ games-fps/doomsday:fluidsynth - Build the FluidSynth sound driver
 games-fps/doomsday:freedoom - Install launcher for doom1.wad from games-fps/freedoom
 games-fps/doomsday:tools - Build additional tools such as doomsday-shell, md2tool and texc
 games-fps/dsda-doom:fluidsynth - Enable support for MIDI via media-sound/fluidsynth
-games-fps/dsda-doom:openmpt - Enable support for tracker music via media-libs/libopenmpt
 games-fps/dsda-doom:portmidi - Enable support for MIDI via media-libs/portmidi
 games-fps/dsda-doom:sdl2-image - Enable support for high-resolution textures and other image formats via media-libs/sdl2-image
+games-fps/dsda-doom:xmp - Enable support for tracker music via media-libs/libxmp
 games-fps/duke3d-data:demo - Extract data files from the shareware version.
 games-fps/duke3d-data:gog - Extract data files from the GOG.com version.
 games-fps/eduke32:duke3d - Install the Duke Nukem 3D data files, provided by games-fps/duke3d-data.
@@ -3388,7 +3390,6 @@ gnome-base/librsvg:tools - Build svg viewer tool
 gnome-base/nautilus:cloudproviders - Enable the cloudproviders support
 gnome-base/nautilus:gstreamer - Enable the Audio/Video file properties page
 gnome-base/nautilus:previewer - Use gnome-extra/sushi to preview files from the file manager
-gnome-extra/cinnamon:internal-polkit - Use Cinnamon's internal polkit agent instead of gnome-extra/polkit-gnome. This does not currently support multi-user fast switching.
 gnome-extra/cinnamon-control-center:modemmanager - Enable support for mobile broadband devices using net-misc/modemmanager
 gnome-extra/cjs:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 gnome-extra/eiciel:nautilus - Build gnome-base/nautilus extension
@@ -3439,6 +3440,7 @@ gui-apps/mako:icons - Enable support for icons
 gui-apps/swaybg:gdk-pixbuf - Support image types other than PNG
 gui-apps/swayidle:elogind - Enable support for rootless session via elogind
 gui-apps/swaylock:gdk-pixbuf - Enable additional image format support via the x11-libs/gdk-pixbuf library
+gui-apps/waybar:backlight - Enable module that controls the current backlight level
 gui-apps/waybar:evdev - Enable libevdev support for evdev related features
 gui-apps/waybar:experimental - Enable experimental features, such as Bluetooth battery reporting
 gui-apps/waybar:libinput - Enable libinput support for libinput related features
@@ -3446,6 +3448,7 @@ gui-apps/waybar:logind - Enable support for logind (bluetooth and idle inhibit)
 gui-apps/waybar:mpd - Enable support for the Music Player Daemon
 gui-apps/waybar:mpris - Enable support for mpris
 gui-apps/waybar:network - Enable libnl support for network related features
+gui-apps/waybar:niri - Enable support for Niri Wayland compositor
 gui-apps/waybar:pipewire - Enable support for pipewire
 gui-apps/waybar:pulseaudio - Enable support for volume control via PulseAudio
 gui-apps/waybar:sndio - Enable support for volume control via sndio
@@ -3897,7 +3900,6 @@ mail-client/thunderbird:hwaccel - Force-enable hardware-accelerated rendering (M
 mail-client/thunderbird:libproxy - Enable libproxy support
 mail-client/thunderbird:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
 mail-client/thunderbird:pulseaudio - Add sound server support via media-libs/libpulse (may be PulseAudio or Pipewire, or apulse if installed)
-mail-client/thunderbird:rust-extensions - Compile and install experimental rust extensions, that may become part of Thunderbird some day.
 mail-client/thunderbird:sndio - Enable support for the media-sound/sndio backend
 mail-client/thunderbird:system-av1 - Use the system-wide media-libs/dav1d and media-libs/libaom library instead of bundled.
 mail-client/thunderbird:system-harfbuzz - Use the system-wide media-libs/harfbuzz and media-gfx/graphite2 instead of bundled.
@@ -5020,7 +5022,7 @@ media-tv/kodi:bluetooth - Enable JSON-RPC over BT for remote control connected v
 media-tv/kodi:bluray - Enable playback of Blu-ray filesystems
 media-tv/kodi:caps - Use sys-libs/libcap to bind to privileged ports as non-root
 media-tv/kodi:cec - Enable support for HDMI-CEC devices via libcec
-media-tv/kodi:eventclients - Install full set of Kodi python evenclients and evenclients examples
+media-tv/kodi:eventclients - Install full set of Kodi python eventclients and eventclients examples
 media-tv/kodi:gbm - Use the Graphics Buffer Manager for EGL on KMS.
 media-tv/kodi:gles - Use simplified OpenGLES instead of full-scale OpenGL
 media-tv/kodi:libusb - Use virtual/libusb for usb device hotplug support. This flag should only be enabled if you're running a non-Linux kernel or you don't want to use udev.
@@ -5254,7 +5256,6 @@ media-video/mjpg-streamer:output-zmqserver - Plugin which provides zmqserver pro
 media-video/mjpg-streamer:www - Installs WWW content
 media-video/mjpg-streamer:wxp-compat - Enable camera WXP compatible format
 media-video/motion:mariadb - Add mariadb database support
-media-video/motion:mmal - Enables Multi-Media Abstraction Layer (MMAL) decoding support: Available e.g. on the Raspberry Pi.
 media-video/motiontrack:multiprocess - Enables multi-process support (SMP/cluster) for motiontrack programs
 media-video/mplayer:bl - Blinkenlights video output
 media-video/mplayer:bluray - Enable playback of Blu-ray filesystems
@@ -5522,7 +5523,7 @@ net-analyzer/netdata:aclk - Enable Agent-Cloud Link (ACLK) for securely connecti
 net-analyzer/netdata:bpf - Enable the extended Berkeley Packet Filter (eBPF) collector to monitor kernel-level metrics about applications with per-second granularity
 net-analyzer/netdata:cloud - Enable Netdata Cloud support
 net-analyzer/netdata:dbengine - Enable the Netdata database engine
-net-analyzer/netdata:ipmi - Install sys-apps/ipmitool required for monitoring IPMI sensors.
+net-analyzer/netdata:ipmi - Install sys-apps/ipmitool required for monitoring IPMI sensors
 net-analyzer/netdata:mongodb - Enable support for the mongodb backend
 net-analyzer/netdata:nfacct - Enable the nfacct plugin
 net-analyzer/netdata:nodejs - Enable use of nodejs (which some plugins use)
@@ -7507,8 +7508,6 @@ sci-libs/rocThrust:benchmark - Build and install benchmark binary.
 sci-libs/rtabmap:openni2 - Adds support for Kinect-like 3D sensors devices with dev-libs/OpenNI2.
 sci-libs/scotch:int64 - Build the 64 bits integer library (needed for > 2^31 vertices)
 sci-libs/scotch:tools - Provides the graph, mesh, architecture, mapping/ordering, output handling programs (see Scotch User's Guide).
-sci-libs/silo:browser - Enable browser support
-sci-libs/silo:silex - Build silex data browser
 sci-libs/spqr:partition - Use the partition module of sci-libs/cholmod for partitioning
 sci-libs/spqr:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
 sci-libs/spr:root - Add sci-physics/root graphics and i/o support
@@ -7557,14 +7556,12 @@ sci-libs/vtk:boost - Add support for boost
 sci-libs/vtk:cgns - Build support to handle CGNS data files
 sci-libs/vtk:gdal - Support for gdal formated data
 sci-libs/vtk:imaging - Building Imaging modules
-sci-libs/vtk:las - Build support for LiDAR files
 sci-libs/vtk:logging - Build the logging module
 sci-libs/vtk:opencascade - Enable OpenCASCADE support
 sci-libs/vtk:openvdb - Build support to handle VDB data files
 sci-libs/vtk:pdal - Build support to handle point cloud data files
 sci-libs/vtk:qt6 - Use Qt6 packages instead of Qt5
 sci-libs/vtk:rendering - Building Redering modules
-sci-libs/vtk:sdl - Enable SDL2 support for rendering modules
 sci-libs/vtk:tbb - Use dev-cpp/tbb to handle smp support
 sci-libs/vtk:views - Building Views modules
 sci-libs/vtk:vtkm - Build the vtkm accelerations modules
@@ -7911,6 +7908,7 @@ sys-apps/fwupd:gusb - Enable dev-libs/libgusb support
 sys-apps/fwupd:logitech - Build and install Logitech bulk controller plugin
 sys-apps/fwupd:modemmanager - Build and install Modem Manager plugin
 sys-apps/fwupd:nvme - Build and install NVMe plugin
+sys-apps/fwupd:protobuf - Enable protobuf plugins
 sys-apps/fwupd:spi - Install Intel-SPI plugin
 sys-apps/fwupd:synaptics - Install synaptics plugin
 sys-apps/fwupd:test-full - Enable tests known not to play nicely with the sandbox
@@ -8169,6 +8167,15 @@ sys-boot/lilo:device-mapper - Enable support for device-mapper from sys-fs/lvm2
 sys-boot/lilo:keytab - Install keytab, keyboard remapping helper script
 sys-boot/lilo:minimal - Do not install optional bits (dolilo helper, docs, etc.)
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
+sys-boot/limine:bios - Enable legacy x86 BIOS/MBR boot support.
+sys-boot/limine:bios-cd - Enables legacy x86 BIOS boot support for CDs.
+sys-boot/limine:bios-pxe - Enables legacy x86 BIOS PXE boot support.
+sys-boot/limine:uefi-aarch64 - Enable AArch64 UEFI support.
+sys-boot/limine:uefi-cd - Enable building limine-uefi-cd.bin using sys-fs/mtools.
+sys-boot/limine:uefi-ia32 - Enable IA32 (32-bit x86) UEFI support.
+sys-boot/limine:uefi-loongarch64 - Enable 64-bit LoongArch UEFI support.
+sys-boot/limine:uefi-riscv64 - Enable 64-bit RISC-V UEFI support.
+sys-boot/limine:uefi-x86-64 - Enable x86-64 UEFI support.
 sys-boot/plymouth:drm - Provides abstraction to the DRM drivers (intel, nouveau and vmwgfx at this moment)
 sys-boot/plymouth:freetype - Build with freetype support (if enabled, used for encryption prompts)
 sys-boot/plymouth:pango - Adds support for printing text on splash screen and text prompts, e.g. for password
@@ -8763,7 +8770,7 @@ www-client/surf:savedconfig - Without a saved config.h, this package depends on 
 www-client/surf:tabbed - Install surf-open.sh script for running surf in x11-misc/tabbed
 www-client/uget:aria2 - Enable support for net-misc/aria2 through xmlrpc. You'll find the plugin in the app's settings.
 www-client/uget:control-socket - Enable JSON-RPC over unix domain socket
-www-client/uget:openssl - Use dev-libs/openssl instead of net-libs/gnutls
+www-client/uget:openssl - Use dev-libs/openssl instead of dev-libs/libgcrypt
 www-client/uget:rss - Enable uGet feed messages
 www-client/vivaldi:ffmpeg-chromium - Use Chromium FFmpeg fork (media-video/ffmpeg-chromium) rather than mainline FFmpeg (media-video/ffmpeg)
 www-client/vivaldi:proprietary-codecs - Use system FFmpeg library to support patent-encumbered media codecs
@@ -8787,13 +8794,16 @@ www-servers/apache:static - Link in apache2 modules statically rather then plugi
 www-servers/apache:suexec - Install suexec with apache
 www-servers/apache:suexec-caps - Install suexec with capabilities instead of SUID
 www-servers/apache:suexec-syslog - Log suexec to syslog instead of to a separate file
+www-servers/caddy:dns-alidns - Adds module which allows to manage Aliyun DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.alidns
 www-servers/caddy:dns-azure - Adds module which allows to manage Azure hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.azure
 www-servers/caddy:dns-cloudflare - Adds module which allows to manage Cloudflare hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.cloudflare
 www-servers/caddy:dns-cloudns - Adds module which allows to manage ClouDNS hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.cloudns
 www-servers/caddy:dns-digitalocean - Adds module which allows to manage DigitalOcean hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.digitalocean
 www-servers/caddy:dns-duckdns - Adds module which allows to manage Duck DNS hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.duckdns
 www-servers/caddy:dns-googleclouddns - Adds module which allows to manage Google Cloud hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.googleclouddns
+www-servers/caddy:dns-he - Adds module which allows to manage Hurricane Electric hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.he
 www-servers/caddy:dns-hetzner - Adds module which allows to manage Hetzner hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.hetzner
+www-servers/caddy:dns-huaweicloud - Adds module which allows to manage Huawei Cloud hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.huaweicloud
 www-servers/caddy:dns-mailinabox - Adds module which allows to manage Mail-in-a-Box hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.mailinabox
 www-servers/caddy:dns-netcup - Adds module which allows to manage netcup hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.netcup
 www-servers/caddy:dns-ovh - Adds module which allows to manage OVHcloud hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.ovh

@@ -14,7 +14,7 @@ SRC_URI="https://download.fcitx-im.org/fcitx5/${MY_PN}/${MY_PN}-${PV}.tar.zst ->
 S="${WORKDIR}/${MY_PN}-${PV}"
 LICENSE="BSD LGPL-2.1+"
 SLOT="5"
-KEYWORDS="amd64 ~arm64 ~loong ~riscv ~x86"
+KEYWORDS="amd64 ~arm64 ~loong ~riscv x86"
 IUSE="qt5 onlyplugin staticplugin +qt6 +X wayland"
 REQUIRED_USE="
 	|| ( qt5 qt6 )
@@ -50,6 +50,8 @@ BDEPEND="
 	virtual/pkgconfig
 	!onlyplugin? ( sys-devel/gettext )
 "
+
+PATCHES=( "${FILESDIR}"/${P}-fix-cmake-for-qt6.patch )
 
 src_configure() {
 	local mycmakeargs=(

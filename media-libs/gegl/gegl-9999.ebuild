@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{11..13} )
+PYTHON_COMPAT=( python3_{11..14} )
 # vala and introspection support is broken, bug #468208
 VALA_USE_DEPEND=vapigen
 
@@ -39,8 +39,8 @@ RDEPEND="
 	>=dev-libs/glib-2.68.2:2
 	>=dev-libs/json-glib-1.2.6
 	>=media-libs/babl-0.1.112[introspection?,lcms?,vala?]
-	media-libs/libjpeg-turbo
-	media-libs/libnsgif
+	media-libs/libjpeg-turbo:=
+	media-libs/libnsgif:=
 	>=media-libs/libpng-1.6.0:0=
 	>=sys-libs/zlib-1.2.0
 	>=x11-libs/gdk-pixbuf-2.32:2
@@ -114,7 +114,6 @@ src_configure() {
 		#  - Disable documentation as the generating is bit automagic
 		#    if anyone wants to work on it just create bug with patch
 		-Ddocs=false
-		-Dexiv2=disabled
 		-Dgdk-pixbuf=enabled
 		-Djasper=disabled
 		#  - libspiro: not in portage main tree

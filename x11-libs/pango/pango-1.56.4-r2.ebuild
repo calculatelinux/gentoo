@@ -39,7 +39,12 @@ BDEPEND="
 	dev-util/glib-utils
 	virtual/pkgconfig
 	dev-python/docutils
-	gtk-doc? ( dev-util/gi-docgen )
+	gtk-doc? (
+		introspection? (
+			>=dev-libs/gobject-introspection-1.83.2
+			dev-util/gi-docgen
+		)
+	)
 	test? ( media-fonts/cantarell )
 "
 
@@ -67,7 +72,7 @@ multilib_src_configure() {
 		# Never use gi-docgen subproject
 		--wrap-mode nofallback
 
-		$(meson_use gtk-doc documentation)
+		$(meson_native_use_bool gtk-doc documentation)
 		$(meson_native_use_feature introspection)
 		-Dman-pages=true
 		$(meson_use test build-testsuite)

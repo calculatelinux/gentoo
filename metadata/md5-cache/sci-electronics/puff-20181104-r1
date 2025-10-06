@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst prepare
+DEPEND=x11-libs/libX11 dev-lang/fpc
+DESCRIPTION=microwave CAD software
+EAPI=8
+HOMEPAGE=https://www.pa3fwm.nl/software/puff/
+INHERIT=flag-o-matic toolchain-funcs
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=x11-libs/libX11
+SLOT=0
+SRC_URI=https://www.pa3fwm.nl/software/puff/puff-20181104.tgz
+_eclasses_=flag-o-matic	a7afe42e95fb46ce9691605acfb24672	toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0
+_md5_=307deaa0f633cda46f64234a84a82a8a

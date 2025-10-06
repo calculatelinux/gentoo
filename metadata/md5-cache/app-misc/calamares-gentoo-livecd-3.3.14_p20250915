@@ -10,4 +10,4 @@ RDEPEND=app-admin/calamares[livecd(-)]
 SLOT=0
 SRC_URI=https://github.com/StefanCristian/calamares-gentoo-livecd/archive/refs/tags/3.3.14_p20250915.tar.gz -> calamares-gentoo-livecd-3.3.14_p20250915.tar.gz mirror://gentoo/gentoo-artwork-livecd-2007.0.tar.bz2 mirror://gentoo/gentoo-artwork-0.2.tar.bz2
 _eclasses_=xdg	3ef49a87c52c8b77c476351195dfe575	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
-_md5_=80a1a4f794160d49d3ea6a1e7b1bbc0a
+_md5_=d5a21a2efb41249e2db5aa7b581a1d42

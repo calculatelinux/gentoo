@@ -17,7 +17,7 @@ EGIT_REPO_URI="
 # BSD for vendored cblas/lapacke
 LICENSE="LGPL-3+ BSD"
 SLOT="0"
-IUSE="blis elibc_glibc index64 mkl openblas openmp system-blas tbb test"
+IUSE="blis index64 mkl openblas openmp system-blas tbb test"
 RESTRICT="!test? ( test )"
 
 # flexiblas only supports gnu-openmp using clang/gcc
@@ -38,13 +38,12 @@ RDEPEND="
 		!app-eselect/eselect-cblas
 		!app-eselect/eselect-lapack
 		!sci-libs/lapack[-flexiblas(-)]
+		!=sci-libs/blas-lapack-aux-wrapper-0-r0
 	)
 "
 PDEPEND="
 	system-blas? (
-		elibc_glibc? (
-			sci-libs/blas-lapack-aux-wrapper[index64?]
-		)
+		>=sci-libs/blas-lapack-aux-wrapper-0-r1[index64?]
 	)
 "
 
@@ -181,30 +180,22 @@ my_test() {
 	local -x OMP_NUM_THREADS=1
 	local -x OPENBLAS_NUM_THREADS=1
 
-	local failures=()
 	local backend
 	for backend in "${@}"; do
-		# TODO: remove this, and XFAIL them properly when cmake.eclass
-		# is fixed to respect nonfatal, https://bugs.gentoo.org/961929
+		local args=()
 		if [[ ${backend} == Mkl* ]]; then
-			einfo "Skipping ${backend} tests, XFAIL"
-			continue
+			# XFAIL
+			args+=( -E 'cblat[23]' )
 		fi
 
 		local -x FLEXIBLAS_TEST=${backend}
 		local log=${BUILD_DIR}/Testing/Temporary/LastTest.log
 		einfo "Testing backend ${backend}"
-		if ! nonfatal cmake_src_test; then
-			failures+=( "${backend}" )
-		fi
+		cmake_src_test "${args[@]}"
 		if grep -q 'BLAS backend .* not found' "${log}"; then
 			die "Backend ${backend} failed to load while testing, see ${log}"
 		fi
 	done
-
-	if [[ ${failures[@]} ]]; then
-		die "Test runs failed for backends: ${failures[*]}"
-	fi
 }
 
 src_test() {
@@ -246,19 +237,12 @@ src_install() {
 			dosym "flexiblas/${fn}" "/usr/include/${fn}"
 		done
 
-		# On glibc, we can use sci-libs/blas-lapack-aux-wrapper.
-		if ! use elibc_glibc; then
-			for suffix in '' $(usev index64 64); do
-				for fn in blas cblas lapack lapacke; do
-					dosym "libflexiblas${suffix}.so.3" \
-						"${libdir}/lib${fn}${suffix}.so.3"
-					dosym "libflexiblas${suffix}.so" \
-						"${libdir}/lib${fn}${suffix}.so"
-					dosym "flexiblas${suffix}.pc" \
-						"${libdir}/pkgconfig/${fn}${suffix}.pc"
-				done
+		for suffix in '' $(usev index64 64); do
+			for fn in blas cblas lapack lapacke; do
+				dosym "libflexiblas${suffix}.so.3" \
+					"${libdir}/lib${fn}${suffix}.so.3"
 			done
-		fi
+		done
 	fi
 }
 

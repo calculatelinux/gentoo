@@ -174,7 +174,7 @@ RDEPEND="
 DEPEND="
 	${CDEPEND}
 	dev-cpp/nlohmann_json
-	media-libs/amf-headers
+	>=media-libs/amf-headers-1.4.36-r1
 	<media-libs/nv-codec-headers-14
 	cuda? ( dev-util/nvidia-cuda-toolkit )
 	wayland? ( dev-libs/wayland-protocols )
@@ -190,6 +190,7 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-2025.122.141614-nvcodec.patch
+	"${FILESDIR}"/${PN}-new-cuda.patch
 )
 
 # Make this mess a bit simpler.

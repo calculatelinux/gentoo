@@ -38,7 +38,7 @@ COMMON_DEPEND="
 	>=app-arch/xz-utils-5.0.0
 	>=app-text/poppler-0.90.1[cairo]
 	>=app-text/poppler-data-0.4.9
-	>=dev-libs/appstream-glib-0.7.16:=
+	>=dev-libs/appstream-0.16.1:=
 	>=dev-libs/glib-2.70.0:2
 	dev-libs/gobject-introspection
 	>=dev-libs/json-glib-1.4.4
@@ -182,7 +182,9 @@ src_configure() {
 		$(meson_feature openexr)
 		$(meson_feature openmp)
 		$(meson_feature postscript ghostscript)
-		$(meson_feature test headless-tests)
+		# https://gitlab.gnome.org/GNOME/gimp/-/issues/14822
+		-Dheadless-tests=disabled
+		#$(meson_feature test headless-tests)
 		$(meson_feature udev gudev)
 		$(meson_feature vala)
 		$(meson_feature webp)

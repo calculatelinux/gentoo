@@ -27,7 +27,7 @@ fi
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE="cgal examples python +plugins"
-REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} ) examples? ( plugins )"
 
 # cgal is header-only in version 5.4 and up. We need to use the
 # special --enable-cgal-header-only argument to use these versions.
