@@ -36,6 +36,56 @@
 
 #--- END OF EXAMPLES ---
 
+# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2025-10-02)
+# Nothing depends on it.
+# Removal: 2025-11-01.  Bug #961199
+net-libs/NativeThread
+
+# Ionen Wolkens <ionen@gentoo.org> (2025-10-07)
+# Masked for testing the new .0 version and leave time for packages
+# to catch up on support. Will likely be kept masked until 6.10.1
+# is released unless there is a notable reason to need this earlier.
+#
+# If wanted, feel welcome to add `dev-qt/*:6/6.10.0` to package.unmask
+# and report issues.
+#
+# A common issue with 6.10 is builds failing to find Qt private headers
+# as it (now) requires searching for e.g. GuiPrivate in CMakeLists.txt.
+=dev-python/pyside-6.10.0*
+=dev-qt/qt-docs-6.10.0*
+=dev-qt/qt3d-6.10.0*
+=dev-qt/qt5compat-6.10.0*
+=dev-qt/qtbase-6.10.0*
+=dev-qt/qtcharts-6.10.0*
+=dev-qt/qtconnectivity-6.10.0*
+=dev-qt/qtdeclarative-6.10.0*
+=dev-qt/qtgraphs-6.10.0*
+=dev-qt/qthttpserver-6.10.0*
+=dev-qt/qtimageformats-6.10.0*
+=dev-qt/qtlanguageserver-6.10.0*
+=dev-qt/qtlocation-6.10.0*
+=dev-qt/qtmultimedia-6.10.0*
+=dev-qt/qtnetworkauth-6.10.0*
+=dev-qt/qtpositioning-6.10.0*
+=dev-qt/qtquick3d-6.10.0*
+=dev-qt/qtquicktimeline-6.10.0*
+=dev-qt/qtremoteobjects-6.10.0*
+=dev-qt/qtscxml-6.10.0*
+=dev-qt/qtsensors-6.10.0*
+=dev-qt/qtserialbus-6.10.0*
+=dev-qt/qtserialport-6.10.0*
+=dev-qt/qtshadertools-6.10.0*
+=dev-qt/qtspeech-6.10.0*
+=dev-qt/qtsvg-6.10.0*
+=dev-qt/qttools-6.10.0*
+=dev-qt/qttranslations-6.10.0*
+=dev-qt/qtvirtualkeyboard-6.10.0*
+=dev-qt/qtwayland-6.10.0*
+=dev-qt/qtwebchannel-6.10.0*
+=dev-qt/qtwebengine-6.10.0*
+=dev-qt/qtwebsockets-6.10.0*
+=dev-qt/qtwebview-6.10.0*
+
 # Michał Górny <mgorny@gentoo.org> (2025-10-06)
 # Refcount errors that trigger crashes in dev-python/moto tests
 # tests/test_xray/test_xray_client.py.  TODO: investigate.
@@ -244,18 +294,6 @@ sys-apps/edid-decode
 # Removal on 2025-10-12
 net-wireless/mdk
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-09-09)
-# Packaged version is very outdated, was already broken by libxml2-2.12,
-# now once more by libxml2-2.14. Bugs #739362, #829005, #923828, #955798.
-# Removal on 2025-10-09.
-games-rpg/manaplus
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-09-09)
-# Broken by dev-libs/libxml2-2.14.2, abandoned by upstream, almost no one
-# else is packaging this. Bugs #955705, 955817. Removal on 2025-10-09.
-net-news/rsstool
-x11-misc/xcave
-
 # Michał Górny <mgorny@gentoo.org> (2025-09-06)
 # Abandoned.  Incompatible with py3.14.  Last release in 2020.
 # No revdeps left.
@@ -374,10 +412,6 @@ virtual/perl-Unicode-Normalize
 # Sam James <sam@gentoo.org> (2025-05-23)
 # Severe memory leak (bug #953874)
 =app-i18n/ibus-anthy-1.5.17
-
-# Sam James <sam@gentoo.org> (2025-05-22)
-# Introduces REQUIRED_USE that needs more discussion (bug #956402)
-=media-gfx/gimp-3.0.2-r2
 
 # Alfred Wingate <parona@protonmail.com> (2025-05-17)
 # Masked for testing
