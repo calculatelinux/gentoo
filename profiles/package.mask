@@ -36,6 +36,46 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-10-12)
+# Dead upstream, depends on Qt5.
+# Bug #949899, #953384. Removal on 2025-11-11.
+games-puzzle/colorcode
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-10-12)
+# Dead upstream, broken with CMake-4, no one else packaging this anymore.
+# Bug #958051. Removal on 2025-11-11.
+sci-electronics/Stage
+
+# Michał Górny <mgorny@gentoo.org> (2025-10-12)
+# Requires Rust with RUST_SYSROOTS=bpf, which isn't currently supported
+# by dev-lang/rust-bin.  Also needs net-proxy/mitmproxy-linux updates.
+>=dev-util/bpf-linker-0.9.15-r1
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-10-11)
+# Stuck forever in 5.x because in 6.x it was rewritten around proprietary
+# aqlprofile. A potential future 7.x package would require packaging from
+# scratch with several additional new package dependencies.
+# Bugs #904074, #952456. Removal on 2025-11-10.
+dev-util/rocprofiler
+
+# Hans de Graaff <graaff@gentoo.org> (2025-10-10)
+# No longer supported upstream since 2025-04-01. Use Rails 7.2 or newer
+# instead. Masked for removal on 2025-11-10).
+dev-ruby/activerecord:7.0
+dev-ruby/actioncable:7.0
+dev-ruby/actionview:7.0
+dev-ruby/activejob:7.0
+dev-ruby/activesupport:7.0
+dev-ruby/activestorage:7.0
+dev-ruby/actionpack:7.0
+dev-ruby/activemodel:7.0
+dev-ruby/actionmailer:7.0
+dev-ruby/actionmailbox:7.0
+dev-ruby/actiontext:7.0
+dev-ruby/rails:7.0
+dev-ruby/railties:7.0
+dev-ruby/haml:5
+
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2025-10-02)
 # Nothing depends on it.
 # Removal: 2025-11-01.  Bug #961199
@@ -87,8 +127,9 @@ net-libs/NativeThread
 =dev-qt/qtwebview-6.10.0*
 
 # Michał Górny <mgorny@gentoo.org> (2025-10-06)
-# Refcount errors that trigger crashes in dev-python/moto tests
-# tests/test_xray/test_xray_client.py.  TODO: investigate.
+# Refcount errors that trigger crashes in dev-python/moto
+# and dev-python/ipyparallel tests.
+=dev-python/pymongo-4.15.3
 =dev-python/pymongo-4.15.2
 
 # Sam James <sam@gentoo.org> (2025-10-05)
@@ -108,12 +149,6 @@ sci-geosciences/liblas
 # Last release 8 years ago, broken by CMake 4, unclear purpose without any
 # revdeps. Bugs #800608, #866377, #955465. Removal on 2025-11-01.
 dev-build/cmake-fedora
-
-# Ionen Wolkens <ionen@gentoo.org> (2025-10-05)
-# New major nasm version that seem to break several packages (can
-# confirm at least dav1d, x265, and x264 wrt bug #963796). Mask for
-# now to give time for this to be looked into.
-=dev-lang/nasm-3*
 
 # Sam James <sam@gentoo.org> (2025-10-04)
 # Has some regressions:
@@ -245,13 +280,7 @@ net-misc/ytfzf
 # Breaks (common) mt7921e WiFi driver with a hang in many cases, affecting
 # not just network. See bug #963106.
 =sys-kernel/linux-firmware-20250917
-
-# Ionen Wolkens <ionen@gentoo.org> (2025-09-18)
-# No revdeps left, in-tree version is broken with cmake4, and is a pain
-# to maintain due to its overly custom cmake usage. Also outdated given
-# the latest version was unusable with its old revdep (been breaking API
-# somewhat often). Removal on 2025-10-18. Bug #963014
-dev-cpp/rapidyaml
+=sys-kernel/linux-firmware-20251011
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-09-16)
 # Appears dead upstream w/ last release from 2016, no reponse to Qt5 EOL
@@ -319,11 +348,6 @@ dev-python/spur
 # the pity port to py3 was likely misguided and never tested!
 # Removal on 2025-10-01.  Bug #956814.
 app-vim/voom
-
-# Michał Górny <mgorny@gentoo.org> (2025-08-30)
-# Multiple cases of test suite breakage.
-# https://github.com/pytest-dev/pytest-rerunfailures/issues/303
-=dev-python/pytest-rerunfailures-16.0
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-08-29)
 # Obsolete transitional meta package. Bug #961795. Removal on 2025-09-28.

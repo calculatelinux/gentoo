@@ -155,7 +155,6 @@ app-admin/salt:mako - Add support for using the mako template engine for parsing
 app-admin/salt:mongodb - Support returning data to a mongodb server.
 app-admin/salt:neutron - Support the OpenStack neutron network service.
 app-admin/salt:nova - Enable support for the OpenStack Nova API
-app-admin/salt:openssl - Add support for using TLS via OpenSSL.
 app-admin/salt:portage - Add support for package state enforcement using sys-apps/portage
 app-admin/salt:raet - Add support for the new RAET transport.
 app-admin/salt:redis - Support returning data to a redis database.
@@ -1087,7 +1086,6 @@ app-office/sc-im:wayland - Use gui-apps/wl-clipboard for clipboard copy/paste
 app-office/sc-im:xls - Add xls support
 app-office/sc-im:xlsx - Add xlsx support
 app-office/scribus:boost - Enable support for Boost based enhancement
-app-office/scribus:hunspell - Enable support for spell checking with app-text/hunspell
 app-office/scribus:minimal - Don't install headers (only required for e.g. plug-in developers)
 app-office/scribus:osg - 3D rendering via dev-games/openscenegraph
 app-office/scribus:scripts - Install the scripts
@@ -2989,6 +2987,7 @@ dev-vcs/git:gpg - Pull in gnupg for signing -- without gnupg, attempts at signin
 dev-vcs/git:highlight - GitWeb support for app-text/highlight
 dev-vcs/git:mediawiki - Support pulling and pushing from MediaWiki
 dev-vcs/git:perforce - Add support for Perforce version control system (requires manual installation of Perforce client)
+dev-vcs/git:perl - Adds Perl bindings and tools such as git-send-email
 dev-vcs/git:safe-directory - Respect the safe.directory setting
 dev-vcs/git:subversion - Include git-svn for dev-vcs/subversion support
 dev-vcs/git:tk - Include the 'gitk' and 'git gui' tools
@@ -3708,6 +3707,7 @@ kde-plasma/plasma-nm:teamd - Enable Teamd control support
 kde-plasma/plasma-workspace:appstream - Enable AppStream software metadata support
 kde-plasma/plasma-workspace:ksysguard - Enable device notifier and system monitor applets as well as terminate applications runner
 kde-plasma/plasma-workspace:networkmanager - Enable support for location-based time zone changes
+kde-plasma/plasma-workspace:phonon - Enable KIO to Phonon bridge for network streaming via media-libs/phonon
 kde-plasma/plasma-workspace:policykit - Enable locale generation and Users KCM using sys-auth/polkit and sys-apps/accountsservice
 kde-plasma/plasma-workspace:screencast - Enable camera indicator applet (requires media-video/pipewire at runtime)
 kde-plasma/plasma-workspace:telemetry - Enable User Feedback control module for kde-plasma/systemsettings
@@ -4993,6 +4993,7 @@ media-sound/upmpdcli:thirdparty - Enable streaming from Qobuz and Tidal external
 media-sound/vimpc:boost - Use boost instead of C++11 libraries
 media-sound/vorbis-tools:kate - Adds support for Ogg Kate subtitles via libkate.
 media-sound/vorbis-tools:ogg123 - Build ogg123 player, needs libao and curl
+media-sound/wavpack:test-full - Run expensive tests (many tests and slow).
 media-sound/wildmidi:player - Install the wildmidi player
 media-sound/wildmidi:sndio - Enable support for the media-sound/sndio backend
 media-sound/xmms2:airplay - Support for airplay format
@@ -6801,7 +6802,7 @@ net-p2p/ktorrent:infowidget - Displays general information about a torrent in se
 net-p2p/ktorrent:ipfilter - Filter IP addresses through a blocklist
 net-p2p/ktorrent:logviewer - Displays the logging output
 net-p2p/ktorrent:magnetgenerator - Generates magnet URI's
-net-p2p/ktorrent:mediaplayer - Phonon-based media player
+net-p2p/ktorrent:phonon - Enable media-libs/phonon based media player
 net-p2p/ktorrent:rss - Syndication plugin for KTorrent, supporting RSS and Atom feeds
 net-p2p/ktorrent:scanfolder - Scan folders for torrent files and load them
 net-p2p/ktorrent:shutdown - Shutdown when done
@@ -7415,7 +7416,6 @@ sci-libs/hipSOLVER:sparse - Build hipSOLVER with sparse functionality (sci-libs/
 sci-libs/hipSPARSE:benchmark - Build and install hipsparse-bench.
 sci-libs/hypre:int64 - Build the 64 bits integer library
 sci-libs/indilib:rtlsdr - Enable support for devices supported by net-wireless/rtl-sdr
-sci-libs/indilib:websocket - Enable support for WebSocket protocol
 sci-libs/ipopt:asl - AMPL Solver Library support and build the 'ipopt' binary
 sci-libs/ipopt:mumps - Enable sci-libs/mumps support
 sci-libs/kissfft:alloca - Use alloca(3) instead of malloc(3) for memory management
@@ -8437,12 +8437,14 @@ sys-fs/ntfs3g:ntfsdecrypt - Build and install the ntfsdecrypt application.
 sys-fs/ntfs3g:ntfsprogs - Enable ntfsprogs
 sys-fs/quota:netlink - Compile daemon receiving quota messages via netlink
 sys-fs/quota:rpc - Enable quota interaction via RPC
+sys-fs/sanoid:cron - Installs cron file
 sys-fs/squashfs-tools-ng:tools - Build the gensquashfs, rdsquashfs, sqfs2tar, sqfsdiff, and tar2sqfs tools
 sys-fs/udisks:daemon - Build the system daemon, not just the client tool
 sys-fs/udisks:lvm - Add support for Logical Volume Management via sys-fs/lvm2
 sys-fs/udisks:systemd - Support sys-apps/systemd's logind
 sys-fs/udisks:vdo - Enable Virtual Data Optimizer support.
 sys-fs/udisks:zram - Enable ZRAM support (requires sys-apps/systemd)
+sys-fs/zfs:dist-kernel-cap - Prevents upgrading to an unsupported kernel version when combined with USE=dist-kernel
 sys-fs/zfs:kernel-builtin - Disable dependency on sys-fs/zfs-kmod under the assumption that ZFS is part of the kernel source tree
 sys-fs/zfs:minimal - Don't install python scripts (arcstat, dbufstat etc) and avoid dependency on dev-lang/python
 sys-fs/zfs:pam - Install zfs_key pam module, for automatically loading zfs encryption keys for home datasets
