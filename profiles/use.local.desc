@@ -318,7 +318,6 @@ app-backup/tsm:journal - Support Journal based backups (JBB)
 app-backup/tsm:tsm-cit - IBM Tivoli Common Inventory Technology
 app-backup/tsm:tsm-hw - Difference snapshot support for NetApp and N-Series file servers
 app-backup/tsm:vmware - Install vmware data protection support
-app-benchmarks/filebench:auto-completion - Enable command-line autocompletion using dev-libs/libtecla
 app-benchmarks/httperf:idleconn - Build with the idleconn program
 app-benchmarks/ramspeed:pic - Force shared libraries to be built as PIC (this is slower)
 app-benchmarks/stress-ng:keyutils - Stress test the kernel's key generation facilities via sys-apps/keyutils
@@ -1124,6 +1123,7 @@ app-shells/bash:pgo - Optimize the build using Profile Guided Optimization (PGO)
 app-shells/bash:plugins - Add support for loading builtins at runtime via 'enable'
 app-shells/bash-completion:eselect - Support blacklisting of completions via 'eselect bashcomp'. This enables custom Gentoo patching of upstream completion loader.
 app-shells/mksh:lksh - variant that uses POSIX-compliant arithmetics with the host “long” data type and is automatically in POSIX mode when called as /bin/sh
+app-shells/nushell:mcp - Build MCP server
 app-shells/nushell:plugins - Build official plugins
 app-shells/nushell:system-clipboard - System clipboard support in `reedline`
 app-shells/pdsh:rsh - This allows the use of rsh (remote shell) and rcp (remote copy) for authoring websites. sftp is a much more secure protocol and is preferred.
@@ -3964,6 +3964,7 @@ mail-mta/exim:dmarc - Adds support for DMARC
 mail-mta/exim:dnsdb - Adds support for a DNS search for a record whose domain name is the supplied query
 mail-mta/exim:dovecot-sasl - Adds support for Dovecot's authentication
 mail-mta/exim:dsn - Adds support for Delivery Status Notifications (DSN)
+mail-mta/exim:gsasl - Adds support for GNU SASL authentiction
 mail-mta/exim:lmtp - Adds support for lmtp
 mail-mta/exim:mbx - Adds support for UW's mbx format
 mail-mta/exim:pkcs11 - Require pkcs11 support in net-libs/gnutls with USE=gnutls
@@ -4345,7 +4346,6 @@ media-libs/imlib2:zlib - Zlib loader support
 media-libs/intel-mediasdk:tools - Build analyse and inspect tools
 media-libs/jasper:heif - Enable experimental support for HEIF/HEIC, unsupported by upstream
 media-libs/leptonica:utils - Install command-line utilities
-media-libs/lib3mf:system-act - Use system-provided dev-go/act as code generator instead of package provided binaries. This flag will be removed after some time used for testing!
 media-libs/libafterimage:shaping - Use MIT shaped X windows extention.
 media-libs/libafterimage:shm - Use MIT shared memory extention for X image transfer.
 media-libs/libao:sndio - Add support for media-sound/sndio
@@ -4674,6 +4674,7 @@ media-plugins/imlib2_loaders:xcf - Enable XCF image loader
 media-plugins/ir_lv2:tools - Build convert4chan tool
 media-plugins/live:tools - Build test tools
 media-plugins/mpg123-output-plugins:int-quality - Use rounding instead of fast truncation for integer output, where possible
+media-plugins/qmmp-plugin-pack:mpv - Enable video support via media-video/mpv(experimental)
 media-plugins/vdr-cdplayer:cdparanoia - Enable cdparanoia (audio CD ripper) support
 media-plugins/vdr-dvbapi:dvbcsa - use media-libs/libdvbcsa free implementation of the DVB Common Scrambling Algorithm
 media-plugins/vdr-epgsearch:conflictcheckonly - install the "conflictcheckonly" vdr-plugin
@@ -4881,7 +4882,9 @@ media-sound/mpd:yajl - Enable JSON parsing via dev-libs/yajl
 media-sound/mpd:zlib - Enable database compression with sys-libs/zlib
 media-sound/mpfc:wav - Enable wav audio codec support
 media-sound/mpg123-base:int-quality - Use rounding instead of fast truncation for integer output, where possible
+media-sound/musescore:pipewire - Enable PipeWire audio support (upstream's default)
 media-sound/musescore:video - Support exporting scores as videos using the command line
+media-sound/musescore:websockets - Enable websockets support
 media-sound/ncmpc:async-connect - Enable asynchronous connect
 media-sound/ncmpc:chat-screen - Enable the chat screen
 media-sound/ncmpc:colors - Enable color output
@@ -5134,7 +5137,6 @@ media-video/ffmpeg:librtmp - Enable Real Time Messaging Protocol support via med
 media-video/ffmpeg:libsoxr - Enable use of the audio resampler from media-libs/soxr
 media-video/ffmpeg:libtesseract - Enable Optical Character Recognition (OCR) filter support via app-text/tesseract
 media-video/ffmpeg:lv2 - Enable use of filters through media-libs/lv2
-media-video/ffmpeg:npp - Enable Nvidia Performance Primitives-based filters via dev-util/nvidia-cuda-toolkit (warning: if USE=gpl is enabled, this produces non-redistributable build)
 media-video/ffmpeg:openh264 - Enable H.264 encoding support via media-libs/openh264
 media-video/ffmpeg:openmpt - Enable MPTM tracked music files decoding support via media-libs/libopenmpt
 media-video/ffmpeg:openssl - Enable using dev-libs/openssl for TLS/HTTPS support and other minor functions (USE=gnutls has no effect if set)
@@ -5197,7 +5199,6 @@ media-video/ffmpeg-compat:librtmp - Enable Real Time Messaging Protocol support 
 media-video/ffmpeg-compat:libsoxr - Enable use of the audio resampler from media-libs/soxr
 media-video/ffmpeg-compat:libtesseract - Enable Optical Character Recognition (OCR) filter support via app-text/tesseract
 media-video/ffmpeg-compat:lv2 - Enable use of filters through media-libs/lv2
-media-video/ffmpeg-compat:npp - Enable Nvidia Performance Primitives-based filters via dev-util/nvidia-cuda-toolkit (warning: if USE=gpl is enabled, this produces non-redistributable build)
 media-video/ffmpeg-compat:openh264 - Enable H.264 encoding support via media-libs/openh264
 media-video/ffmpeg-compat:openmpt - Enable MPTM tracked music files decoding support via media-libs/libopenmpt
 media-video/ffmpeg-compat:openssl - Enable using dev-libs/openssl for TLS/HTTPS support and other minor functions (USE=gnutls has no effect if set)
@@ -7946,6 +7947,7 @@ sys-apps/iproute2:nfs - Support RPC lookups via net-libs/libtirpc in ss
 sys-apps/irqbalance:numa - Support balancing IRQs across NUMA nodes
 sys-apps/irqbalance:thermal - Enable support of thermal events via sys-power/thermald
 sys-apps/irqbalance:tui - Enable build of irqbalance terminal user interface
+sys-apps/kbd:pam - Enable 'vlock' program (requires sys-libs/pam)
 sys-apps/kexec-tools:booke - Include support for Book-E memory management
 sys-apps/kexec-tools:lzma - Enables support for LZMA compressed kernel images
 sys-apps/kexec-tools:xen - Enable extended xen support

@@ -23,8 +23,9 @@ HOMEPAGE="https://gegl.org/"
 LICENSE="|| ( GPL-3+ LGPL-3 )"
 SLOT="0.4"
 
-IUSE="cairo debug ffmpeg introspection lcms lensfun openexr openmp pdf raw sdl sdl2 svg test tiff umfpack vala v4l webp"
+IUSE="cairo debug ffmpeg gtk-doc introspection lcms lensfun openexr openmp pdf raw sdl sdl2 svg test tiff umfpack vala v4l webp"
 REQUIRED_USE="
+	gtk-doc? ( introspection )
 	svg? ( cairo )
 	test? ( introspection )
 	vala? ( introspection )
@@ -68,6 +69,7 @@ BDEPEND="
 	dev-lang/perl
 	>=sys-devel/gettext-0.19.8
 	virtual/pkgconfig
+	gtk-doc? ( dev-util/gi-docgen )
 	test? ( $(python_gen_any_dep '>=dev-python/pygobject-3.2:3[${PYTHON_USEDEP}]') )
 	vala? ( $(vala_depend) )
 "
@@ -102,6 +104,9 @@ src_prepare() {
 	if [[ ${CHOST} == *-darwin* && ${CHOST#*-darwin} -le 9 ]] ; then
 		sed -i -e 's/#ifdef __APPLE__/#if 0/' gegl/opencl/* || die
 	fi
+
+	# Fix QA warning, install docs into /usr/share/gtk-doc/html/gegl-0.4 instead of /usr/share/doc/gegl-0.4
+	sed -i -e   "s#'doc'#'gtk-doc' / 'html'#" docs/reference/meson.build || die
 }
 
 src_configure() {
@@ -113,7 +118,7 @@ src_configure() {
 	local emesonargs=(
 		#  - Disable documentation as the generating is bit automagic
 		#    if anyone wants to work on it just create bug with patch
-		-Ddocs=false
+		-Ddocs=false  # website
 		-Dgdk-pixbuf=enabled
 		-Djasper=disabled
 		#  - libspiro: not in portage main tree
@@ -126,6 +131,7 @@ src_configure() {
 		$(meson_feature cairo)
 		$(meson_feature cairo pangocairo)
 		$(meson_feature ffmpeg libav)
+		$(meson_feature gtk-doc gi-docgen)
 		$(meson_feature lcms)
 		$(meson_feature lensfun)
 		$(meson_feature openexr)
