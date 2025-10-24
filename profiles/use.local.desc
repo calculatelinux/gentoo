@@ -2233,11 +2233,12 @@ dev-libs/qcoro:websockets - Build dev-qt/qtwebsockets support
 dev-libs/quazip:qt5 - Build with Qt5 support
 dev-libs/quazip:qt6 - Build with Qt6 support
 dev-libs/raft:zfs - ZFS support
-dev-libs/rccl:roctracer - Enable roctracer (roctx) marker.
+dev-libs/rccl:roctracer - Enable roctracer (roctx) marker
 dev-libs/re2:benchmark - Build a benchmark binary, install it as re2-bench
 dev-libs/re2:test-full - Run additional, quite slow tests
 dev-libs/rocksdb:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
 dev-libs/rocksdb:tbb - Enable support for dev-cpp/tbb
+dev-libs/rocm-opencl-runtime:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
 dev-libs/sentry-native:breakpad - Use dev-util/breakpad as the crash handler
 dev-libs/sentry-native:curl - Enable support for automated uploading of crash reports
 dev-libs/serd:tools - Build command line utilities
@@ -2890,7 +2891,8 @@ dev-util/google-perftools:pagesize-64k - Use 64K page size for tcmalloc. Larger 
 dev-util/heaptrack:gui - Install Qt6-based analyzer tool
 dev-util/hfstospell:clang - Use different logic in ebuild when clang is used
 dev-util/hip:hip - Build HIP runtime
-dev-util/hip:opencl - Build OpenCL runtime
+dev-util/hip:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
+dev-util/hip:opencl - Build vendored OpenCL runtime
 dev-util/hip:video_cards_amdgpu - Build for AMD platform
 dev-util/hip:video_cards_nvidia - Build for Nvidia platform
 dev-util/idea-community:experimental - Enables Wayland support preview.
@@ -4304,7 +4306,7 @@ media-libs/freetype:adobe-cff - Use Adobe CFF as default font-renderer
 media-libs/freetype:bzip2 - Support bzip2 compressed PCF fonts.
 media-libs/freetype:cleartype-hinting - Bytecode hinting mode for TrueType fonts that activates subpixel hinting (a.k.a. ClearType hinting) by default
 media-libs/freetype:fontforge - Install internal headers required for TrueType debugger in media-gfx/fontforge (built with USE=truetype-debugger)
-media-libs/freetype:harfbuzz - Use media-libs/harfbuzz for auto-hinting OpenType fonts. WARNING: may trigger circular dependencies!
+media-libs/freetype:harfbuzz - Use media-libs/harfbuzz for auto-hinting OpenType fonts.
 media-libs/freetype:utils - Install utilities and examples from ft2demos
 media-libs/freeverb3:forcefpu - Disable assembly code
 media-libs/freeverb3:plugdouble - Build plugins in double precision mode (default is float)
@@ -4617,6 +4619,7 @@ media-libs/x264:interlaced - enable interlaced encoding support, this can decrea
 media-libs/x265:10bit - Add support for producing 10bits HEVC.
 media-libs/x265:12bit - Add support for producing 12bits HEVC.
 media-libs/x265:numa - Build with support for NUMA nodes.
+media-libs/x265:vmaf - Enable Netflix's Perceptual video quality assessment via media-libs/libvmaf
 media-libs/xine-lib:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
 media-libs/xine-lib:dav1d - Enable support for media-libs/dav1d AV1 decoder
 media-libs/xine-lib:dxr3 - Enable support for DXR3 mpeg acceleration cards.
@@ -4693,7 +4696,8 @@ media-radio/ax25-tools:X - Enable some X based configuration tools.
 media-radio/chirp:radioreference - pull in optional deps for query of radioreference
 media-radio/direwolf:hamlib - Enables support by the Hamlib amateur radio rig control library
 media-radio/fldigi:hamlib - Enables support by the Hamlib amateur radio rig control library to get/set frequency and mode of the ham radio in use
-media-radio/svxlink:qt5 - Build and install qtel application
+media-radio/svxlink:qt5 - Build and install qtel application with Qt5
+media-radio/svxlink:qt6 - Build and install qtel application with Qt6
 media-radio/svxlink:rtlsdr - Add support for rtlsdr hardware
 media-radio/tucnak:hamlib - Enables support by the Hamlib amateur radio rig control library to get/set frequency and mode of the ham radio
 media-radio/tucnak:rtlsdr - Add support for rtlsdr hardware
@@ -6536,7 +6540,6 @@ net-misc/moonlight:soundio - Enable sound output via media-libs/libsoundio inste
 net-misc/moonlight:vkslow - Prefer hardware YUV-RGB conversion and scaling over Vulkan for better performance on some weaker GPUs
 net-misc/mosh:client - Build network client
 net-misc/mosh:examples - Include example scripts
-net-misc/mosh:mosh-hardening - Enable compiler and linker options to frustrate memory corruption exploits
 net-misc/mosh:nettle - Use dev-libs/nettle for some cryptographic functions instead of dev-libs/openssl. With Nettle, some of mosh's own code is used for OCB.
 net-misc/mosh:server - Build network server
 net-misc/mosh:ufw - Install net-firewall/ufw rule set
@@ -6734,8 +6737,7 @@ net-misc/x2goserver:fuse - Use net-fs/sshfs to allow shared folders
 net-misc/xmrig:donate - Set the default donation level to 1% instead of 0
 net-misc/xmrig:hwloc - Use sys-apps/hwloc for CPU affinity support
 net-misc/youtube-viewer:gtk - Install the gtk3 GUI
-net-misc/ytfzf:minimal - Skip all optional dependencies (may no longer work out-of-the-box and require custom setting up)
-net-misc/ytfzf:thumbnails - Pull media-gfx/ueberzugpp or media-gfx/ueberzug for viewing thumbnails (default method when using -t)
+net-misc/yt-dlp:deno - (warning: this USE is for testing versions only currently and can be ignored at the moment) Pull in dev-lang/deno-bin by default needed for proper YouTube support (if this USE is masked on your profile, refer to yt-dlp's documentation for lesser supported alternatives which are not supported out-of-the-box due to security concerns)
 net-misc/zerotier:sso - Enable support for Single sign-on through zeroidc
 net-nds/389-ds-base:accountpolicy - Enable account policy plugin - automatically lock an account after a certain amount of time has elapsed
 net-nds/389-ds-base:auto-dn-suffix - Enable auto bind with auto dn suffix over unix domain socket (LDAPI) support
@@ -6823,7 +6825,7 @@ net-p2p/retroshare:miniupnp - Enables UPnP port forwarding via net-libs/miniupnp
 net-p2p/retroshare:plugins - Enables plugin support
 net-p2p/retroshare:service - Enables the new RetroShare service
 net-p2p/retroshare:sqlcipher - Enables GXS database encryption via SQLCipher
-net-p2p/rtorrent:tinyxml2 - Use vendor tinyxml2 instead of xmlrpc-c. This allows significant reduction in overhead (experimental)
+net-p2p/rtorrent:tinyxml2 - Use vendor tinyxml2 instead of xmlrpc-c. This allows significant reduction in overhead
 net-p2p/syncthing:tools - Install stdiscosrv, strelaysrv and other tools to /usr/libexec/syncthing/.
 net-p2p/transmission:cli - Build command-line client
 net-p2p/transmission:debug - Enable assertions
@@ -7410,11 +7412,12 @@ sci-libs/gsl:cblas-external - Link gsl with external cblas provided by (virtual/
 sci-libs/gsl:deprecated - Enable deprecated functions
 sci-libs/hdf5:hl - Enable high level API (https://support.hdfgroup.org/HDF5/doc/HL/index.html)
 sci-libs/hdf5:unsupported - Enable unsupported combinations of configuration options
-sci-libs/hipBLASLt:benchmark - Build and install rocblas-bench.
-sci-libs/hipBLASLt:roctracer - Enable roctracer (roctx) marker.
-sci-libs/hipCUB:benchmark - Build and install benchmark binaries.
+sci-libs/hipBLAS:rocsolver - Add additional functions from sci-libs/rocSOLVER
+sci-libs/hipBLASLt:benchmark - Build and install rocblas-bench
+sci-libs/hipBLASLt:roctracer - Enable roctracer (roctx) marker
+sci-libs/hipCUB:benchmark - Build and install benchmark binaries
 sci-libs/hipSOLVER:sparse - Build hipSOLVER with sparse functionality (sci-libs/cholmod)
-sci-libs/hipSPARSE:benchmark - Build and install hipsparse-bench.
+sci-libs/hipSPARSE:benchmark - Build and install hipsparse-bench
 sci-libs/hypre:int64 - Build the 64 bits integer library
 sci-libs/indilib:rtlsdr - Enable support for devices supported by net-wireless/rtl-sdr
 sci-libs/ipopt:asl - AMPL Solver Library support and build the 'ipopt' binary
@@ -7449,10 +7452,10 @@ sci-libs/mathgl:octave - Add bindings for sci-mathematics/octave
 sci-libs/matio:sparse - Extend formats for sparse matrix (not matlab)
 sci-libs/metis:double-precision - Use double- rather than single-precision floating-point representation
 sci-libs/metis:int64 - Use 64- rather than 32-bit integer representation (needed for > 2^31 vertices)
-sci-libs/miopen:composable-kernel - Use composable-kernel for GEMM-like and reduction-like operators.
-sci-libs/miopen:hipblaslt - Use hipBLASLt for some non-batched and strided batched problems.
-sci-libs/miopen:rocblas - Build with rocBLAS support
-sci-libs/miopen:roctracer - Build with roctracer support
+sci-libs/miopen:composable-kernel - Use sci-libs/composable-kernel for GEMM-like and reduction-like operators
+sci-libs/miopen:hipblaslt - Use sci-libs/hipBLASLt for some non-batched and strided batched problems
+sci-libs/miopen:rocblas - Build with sci-libs/rocBLAS support
+sci-libs/miopen:roctracer - Build with dev-util/roctracer support
 sci-libs/mkl:eselect-ldso - Enable BLAS/LAPACK runtime switching.
 sci-libs/mkl:gnu-openmp - Install versions with GNU OpenMP (libgomp) support.
 sci-libs/mkl:llvm-openmp - Install versions with LLVM OpenMP (libomp) support.
@@ -7494,17 +7497,19 @@ sci-libs/plplot:dynamic - Build with dynamic drivers
 sci-libs/plplot:octave - Add bindings for sci-mathematics/octave
 sci-libs/plplot:qhull - Add bindings for media-libs/qhull
 sci-libs/plplot:shapefile - Enable support for ESRI shapefiles
-sci-libs/rocBLAS:benchmark - Build and install rocblas-bench.
-sci-libs/rocBLAS:hipblaslt - Build with hipBLASLt for some non-batched and strided batched problems on gfx12.
-sci-libs/rocBLAS:test - Perform rocblas-test to compare the result between rocBLAS and system BLAS.
-sci-libs/rocFFT:benchmark - Build and install rocfft benchmark tools.
-sci-libs/rocFFT:perfscripts - Install rocfft-perf performance visualization suite.
-sci-libs/rocPRIM:benchmark - Build and install benchmark programs.
-sci-libs/rocRAND:benchmark - Build and install benchmark programs.
-sci-libs/rocSOLVER:benchmark - Build and install rocsolver-bench.
-sci-libs/rocSOLVER:test - Perform rocsolver-test to compare the result between rocSOLVER and system LAPACK.
-sci-libs/rocSPARSE:benchmark - Build and install rocblas-bench.
-sci-libs/rocThrust:benchmark - Build and install benchmark binary.
+sci-libs/rocBLAS:benchmark - Build and install rocblas-bench
+sci-libs/rocBLAS:hipblaslt - Build with sci-libs/hipBLASLt for some non-batched and strided batched problems on gfx12
+sci-libs/rocBLAS:roctracer - Enable roctracer (roctx) marker
+sci-libs/rocBLAS:test - Perform rocblas-test to compare the result between rocBLAS and system BLAS
+sci-libs/rocFFT:benchmark - Build and install rocfft benchmark tools
+sci-libs/rocFFT:perfscripts - Install rocfft-perf performance visualization suite
+sci-libs/rocPRIM:benchmark - Build and install benchmark programs
+sci-libs/rocRAND:benchmark - Build and install benchmark programs
+sci-libs/rocSOLVER:benchmark - Build and install rocsolver-bench
+sci-libs/rocSOLVER:sparse - Install and link with sci-libs/rocSPARSE instead of loading it with dlopen
+sci-libs/rocSOLVER:test - Perform rocsolver-test to compare the result between rocSOLVER and system LAPACK
+sci-libs/rocSPARSE:benchmark - Build and install rocblas-bench
+sci-libs/rocThrust:benchmark - Build and install benchmark binary
 sci-libs/rtabmap:openni2 - Adds support for Kinect-like 3D sensors devices with dev-libs/OpenNI2.
 sci-libs/scotch:int64 - Build the 64 bits integer library (needed for > 2^31 vertices)
 sci-libs/scotch:tools - Provides the graph, mesh, architecture, mapping/ordering, output handling programs (see Scotch User's Guide).

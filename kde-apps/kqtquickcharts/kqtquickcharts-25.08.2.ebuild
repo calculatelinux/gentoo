@@ -3,6 +3,7 @@
 
 EAPI=8
 
+CMAKE_QA_COMPAT_SKIP=1 # bug 964964, fixed in >=25.12
 KFMIN=6.16.0
 QTMIN=6.9.1
 inherit ecm gear.kde.org
@@ -11,7 +12,7 @@ DESCRIPTION="Qt Quick plugin for beautiful and interactive charts"
 
 LICENSE="GPL-2" # TODO: CHECK
 SLOT="6"
-KEYWORDS="~amd64 ~arm64 ~riscv ~x86"
+KEYWORDS="amd64 arm64 ~riscv ~x86"
 IUSE=""
 
 DEPEND="

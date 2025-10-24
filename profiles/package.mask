@@ -36,6 +36,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2025-10-21)
+# Old backport with no revdeps left.
+# Removal on 2025-11-20.  Bug #964780.
+dev-python/backports-ssl-match-hostname
+
 # Thomas Beierlein <tomjbe@gentoo.org> (2025-10-14)
 # Depends on Qt5.
 # Superseded by media-radio/wsjtx_improved. While both are based on the same
@@ -102,6 +107,8 @@ net-libs/NativeThread
 #
 # A common issue with 6.10 is builds failing to find Qt private headers
 # as it (now) requires searching for e.g. GuiPrivate in CMakeLists.txt.
+=dev-python/pyqt6-6.10*
+=dev-python/pyqt6-webengine-6.10*
 =dev-python/pyside-6.10.0*
 =dev-qt/qt-docs-6.10.0*
 =dev-qt/qt3d-6.10.0*
@@ -219,10 +226,6 @@ net-misc/grive
 # Bugs #952796, #957240. Removal on 2025-10-29.
 sys-auth/google-authenticator-wrappers
 
-# Jason A. Donenfeld <zx2c4@gentoo.org> (2025-09-30)
-# Upstream is dead, package is broken. Removal on 2025-10-29.
-net-analyzer/speedtest++
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-09-30)
 # Unmaintained in ::gentoo, EAPI-7 based, almost no one else is left
 # packaging this. Removal on 2025-10-29.
@@ -238,12 +241,6 @@ x11-wm/ctwm
 # Unmaintained in ::gentoo, EAPI-7 based, almost no one else is left
 # packaging this. Removal on 2025-10-29.
 sys-auth/pam_abl
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-09-30)
-# No stable revdeps, destabilising package together with cleanup
-# of EAPI-7 based -r2. media-libs/aften-0.0.8-r3 is available
-# for ~amd64, ~ppc and ~x86.
-<media-libs/aften-0.0.8-r3
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-09-29)
 # Unmaintained in ::gentoo, EAPI-7 based, broken by CMake 4 and modern C++
@@ -261,35 +258,16 @@ sys-apps/thunderbolt-software-user-space
 # version bump pending in bug #962079. Removal on 2025-10-29.
 x11-terms/roxterm
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-09-29)
-# No stable revdeps, destabilising package together with cleanup of
-# really outdated version 3.17.0. sci-libs/alglib-3.20.0 is available
-# for ~amd64 and ~x86.
-<sci-libs/alglib-3.20.0
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-09-28)
 # Unmaintained for ages, thus not deserving of stable keywords.
 # media-video/ccextractor-0.89 is available for ~amd64 and ~x86.
 <media-video/ccextractor-0.89
-
-# Ionen Wolkens <ionen@gentoo.org> (2025-09-23)
-# Abandoned and barely functional, and will just keep getting worse if
-# it does not keep up with website changes. net-misc/youtube-viewer
-# can be used as an alternative albeit it requires a YouTube API key.
-# Removal on 2025-10-23.
-net-misc/ytfzf
 
 # Sam James <sam@gentoo.org> (2025-09-21)
 # Breaks (common) mt7921e WiFi driver with a hang in many cases, affecting
 # not just network. See bug #963106.
 =sys-kernel/linux-firmware-20250917
 =sys-kernel/linux-firmware-20251011
-
-# Viorel Munteanu <ceamac@gentoo.org> (2025-09-16)
-# Masked for testing.  This package is supposed to be installed in the livecd,
-# not on user's system.  We need a few more reports of it working before
-# unmasking.
-app-misc/calamares-gentoo-livecd
 
 # Viorel Munteanu <ceamac@gentoo.org> (2025-09-16)
 # Unmaintained upstream, last release more than 7 years old.
@@ -460,6 +438,7 @@ dev-db/mysql:8.4
 >=xfce-base/exo-4.21
 >=xfce-base/garcon-4.21
 >=xfce-base/libxfce4ui-4.21
+>=xfce-base/orage-4.21
 >=xfce-base/thunar-4.21
 >=xfce-base/tumbler-4.21
 >=xfce-base/xfce4-appfinder-4.21

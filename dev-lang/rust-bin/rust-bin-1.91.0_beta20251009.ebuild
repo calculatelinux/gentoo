@@ -108,8 +108,6 @@ src_unpack() {
 		curl -Ls static.rust-lang.org/dist/channel-rust-nightly.toml > "${WORKDIR}/channel-rust-nightly.toml" ||
 			die "Failed to fetch nightly revision info"
 		rustc_src_url=$(grep 'xz_url.*rust-src' "${WORKDIR}/channel-rust-nightly.toml" | cut -d '"' -f 2)
-		rust_bin_url=$(grep "xz_url.*rust-nightly-$(rust_abi)" "${WORKDIR}/channel-rust-nightly.toml" | cut -d '"' -f 2)
-		einfo "Using nightly Rust from: ${rust_bin_url}"
 
 		if use rust-src; then
 			einfo "Using nightly Rust-src from: ${rustc_src_url}"
@@ -121,15 +119,23 @@ src_unpack() {
 			tar -xf "${WORKDIR}/rust-src-${PV}.tar.xz" || die "Failed to unpack nightly rust-src tarball"
 		fi
 
-		einfo "Fetching nightly Rust tarball ..."
-		curl --progress-bar -L "${rust_bin_url}" -O || die "Failed to fetch nightly tarball"
-		if use verify-sig; then
-			einfo "Fetching nightly signature ..."
-			curl --progress-bar -L "${rust_bin_url}.asc" -O || die "Failed to fetch nightly signature"
-			verify-sig_verify_detached "${WORKDIR}/rust-nightly-$(rust_abi).tar.xz" \
-				"${WORKDIR}/rust-nightly-$(rust_abi).tar.xz.asc"
-		fi
-		tar -xf "${WORKDIR}/rust-nightly-$(rust_abi).tar.xz" || die "Failed to unpack nightly tarball"
+		local v
+		for v in $(multilib_get_enabled_abi_pairs); do
+			rust_target="$(rust_abi $(get_abi_CHOST ${v##*.}))"
+			rust_bin_url=$(grep "xz_url.*rust-nightly-${rust_target}" "${WORKDIR}/channel-rust-nightly.toml" | cut -d '"' -f 2)
+			einfo "Using nightly Rust from ${rust_bin_url} for ${rust_target}"
+
+			einfo "Fetching nightly Rust tarball for ${rust_target} ..."
+			curl --progress-bar -L "${rust_bin_url}" -O || die "Failed to fetch nightly tarball for ${rust_target}"
+			if use verify-sig; then
+				einfo "Fetching nightly signature for ${rust_target} ..."
+				curl --progress-bar -L "${rust_bin_url}.asc" -O || die "Failed to fetch nightly signature for ${rust_target}"
+				verify-sig_verify_detached "${WORKDIR}/rust-nightly-${rust_target}.tar.xz" \
+					"${WORKDIR}/rust-nightly-${rust_target}.tar.xz.asc"
+			fi
+
+			tar -xf "${WORKDIR}/rust-nightly-${rust_target}.tar.xz" || die "Failed to unpack nightly tarball for ${rust_target}"
+		done
 	else
 		# sadly rust-src tarball does not have corresponding .asc file
 		# so do partial verification
@@ -142,8 +148,10 @@ src_unpack() {
 		fi
 
 		default_src_unpack
-
 	fi
+
+	# We only want to do this for the native ABI. Non-native ABIs are
+	# handled differently in multilib_src_install.
 	case ${PV} in
 		*9999*)
 			mv "${WORKDIR}/rust-nightly-$(rust_abi)" "${S}" || die
@@ -287,10 +295,21 @@ multilib_src_install() {
 	if multilib_is_native_abi; then
 		rust_native_abi_install
 	else
-		local rust_target
+		local rust_target version
+		case ${PV} in
+			*9999*)
+				version=nightly
+				;;
+			*beta*)
+				version=beta
+				;;
+			*)
+				version=${PV}
+				;;
+		esac
 		rust_target="$(rust_abi $(get_abi_CHOST ${v##*.}))"
 		dodir "/opt/${P}/lib/rustlib"
-		cp -vr "${WORKDIR}/rust-${PV}-${rust_target}/rust-std-${rust_target}/lib/rustlib/${rust_target}"\
+		cp -vr "${WORKDIR}/rust-${version}-${rust_target}/rust-std-${rust_target}/lib/rustlib/${rust_target}"\
 			"${ED}/opt/${P}/lib/rustlib" || die
 	fi
 

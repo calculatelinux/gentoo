@@ -3,6 +3,7 @@
 
 EAPI=8
 
+CMAKE_QA_COMPAT_SKIP=1 # bug 964762
 ECM_HANDBOOK="optional"
 ECM_TEST="true"
 KDE_ORG_CATEGORY="kdevelop"
@@ -16,7 +17,7 @@ HOMEPAGE="https://kdevelop.org/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="6/$(ver_cut 1-2)"
-KEYWORDS="~amd64 ~arm64"
+KEYWORDS="amd64 arm64"
 IUSE="gdbui plasma +qmake +share subversion"
 
 # see bug 366471
