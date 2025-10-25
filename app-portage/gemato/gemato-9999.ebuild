@@ -11,10 +11,10 @@ inherit distutils-r1 git-r3
 
 DESCRIPTION="Stand-alone Manifest generation & verification tool"
 HOMEPAGE="
-	https://github.com/projg2/gemato/
+	https://github.com/gentoo/gemato/
 	https://pypi.org/project/gemato/
 "
-EGIT_REPO_URI="https://github.com/projg2/gemato.git"
+EGIT_REPO_URI="https://github.com/gentoo/gemato.git"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -37,6 +37,8 @@ BDEPEND="
 	)
 "
 
+EPYTEST_PLUGINS=()
+EPYTEST_XDIST=1
 distutils_enable_tests pytest
 
 python_install_all() {
