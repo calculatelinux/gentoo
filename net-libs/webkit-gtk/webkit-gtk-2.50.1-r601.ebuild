@@ -17,7 +17,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="LGPL-2+ BSD"
 SLOT="6/0" # soname version of libwebkit2gtk-6.0
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="aqua avif examples gamepad keyring +gstreamer +introspection pdf jpegxl +jumbo-build lcms seccomp spell systemd wayland X"
 REQUIRED_USE="|| ( aqua wayland X )"
@@ -88,7 +88,7 @@ RDEPEND="
 		media-plugins/gst-plugins-opus:1.0
 		media-libs/gst-plugins-bad:1.0
 	)
-	introspection? ( dev-libs/gobject-introspection:= )
+	introspection? ( >=dev-libs/gobject-introspection-1.82.0-r2:= )
 	jpegxl? ( media-libs/libjxl:= )
 	keyring? ( app-crypt/libsecret )
 	lcms? ( media-libs/lcms:2 )
