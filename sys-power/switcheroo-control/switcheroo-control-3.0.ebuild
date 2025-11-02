@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-PYTHON_COMPAT=( python3_{11..13} )
+PYTHON_COMPAT=( python3_{11..14} )
 
 inherit meson python-single-r1 systemd udev
 
@@ -55,7 +55,7 @@ src_prepare() {
 
 src_configure() {
 	local emesonargs=(
-		-Drulesdir="$(get_udevdir)"/rules.d
+		-Drulesdir="${EPREFIX}"/"$(get_udevdir)"/rules.d
 		-Dsystemdsystemunitdir="$(systemd_get_systemunitdir)"
 		$(meson_use gtk-doc gtk_doc)
 		$(meson_use test tests)
