@@ -263,7 +263,7 @@ app-arch/libarchive:blake2 - Enable Blake2 hash support via app-crypt/libb2.
 app-arch/libarchive:bzip2 - Allow accessing bzip2-compressed archives through libbz2 (which comes with app-arch/bzip2). This only affects libarchive's native support: bsdtar will keep using bunzip2 as a filter if that's not built-in.
 app-arch/libarchive:e2fsprogs - Use file flags from sys-fs/e2fsprogs headers instead of virtual/os-headers headers
 app-arch/libarchive:nettle - Use dev-libs/nettle as crypto backend
-app-arch/libdeflate:test - Build the test programs (requires sys-libs/zlib)
+app-arch/libdeflate:test - Build the test programs (requires virtual/zlib)
 app-arch/libdeflate:utils - Build the libdeflate-gzip program
 app-arch/lrzip-next:largefile - Enables support for large files
 app-arch/lrzip-next:year2038 - Enables support for 64-bit 'time_t' (sets D_TIME_BITS=64; glibc only)
@@ -425,6 +425,7 @@ app-crypt/mit-krb5:lmdb - Add support for using dev-db/lmdb for lookup tables
 app-crypt/mit-krb5:openldap - Enable support for ldap as a database backend
 app-crypt/mit-krb5:pkinit - Enable pkinit support for the initial ticket
 app-crypt/mkp224o:pcre - Search with a regex instead of prefix/suffix matching
+app-crypt/onak:daemon - Enable the backend caching key daemon
 app-crypt/onak:dynamic - Support for dynamic loading of backends
 app-crypt/onak:hkp - Proxying backend support
 app-crypt/ophcrack:tables - Require the additional tables used to carry out cracking (app-crypt/ophcrack-tables)
@@ -1779,7 +1780,7 @@ dev-java/protobuf-java:system-protoc - Use protoc provided by dev-libs/protobuf
 dev-java/qdox:ant-task - Build the ant-task
 dev-java/saxon:ant-task - BUILD and register the ant-task
 dev-java/sbt:binary - Install from (Gentoo-compiled) binary instead of building from sources. Set this when you run out of memory during build.
-dev-lang/R:libdeflate - Use app-arch/libdeflate rather than sys-libs/zlib for lazy-loaded R objects.
+dev-lang/R:libdeflate - Use app-arch/libdeflate rather than virtual/zlib for lazy-loaded R objects.
 dev-lang/algol68g:mpfr - Add support for multiprecision floating point rouding
 dev-lang/ammonite-repl-bin:scala2-13 - Install Ammonite for Scala 2.13
 dev-lang/ammonite-repl-bin:scala3-0 - Install Ammonite for Scala 3.0
@@ -2103,12 +2104,12 @@ dev-libs/libpcre:bzip2 - Add support for pcregrep command to search within bzip2
 dev-libs/libpcre:pcre16 - Build PCRE library for 16 bit characters (e.g. UTF-16).
 dev-libs/libpcre:pcre32 - Build PCRE library for 32 bit characters (e.g. UTF-32).
 dev-libs/libpcre:readline - Add support for command line editing to pcretest, through sys-libs/readline.
-dev-libs/libpcre:zlib - Add support for pcregrep command to search within gzip-compressed files (via sys-libs/zlib).
+dev-libs/libpcre:zlib - Add support for pcregrep command to search within gzip-compressed files (via virtual/zlib).
 dev-libs/libpcre2:bzip2 - Add support for pcregrep command to search within bzip2-compressed files (via app-arch/bzip2).
 dev-libs/libpcre2:pcre16 - Build PCRE library for 16 bit characters (e.g. UTF-16).
 dev-libs/libpcre2:pcre32 - Build PCRE library for 32 bit characters (e.g. UTF-32).
 dev-libs/libpcre2:readline - Add support for command line editing to pcretest, through sys-libs/readline.
-dev-libs/libpcre2:zlib - Add support for pcregrep command to search within gzip-compressed files (via sys-libs/zlib).
+dev-libs/libpcre2:zlib - Add support for pcregrep command to search within gzip-compressed files (via virtual/zlib).
 dev-libs/libpeas:glade - Install the glade catalog
 dev-libs/libpeas:javascript - Enable JavaScript support using dev-libs/gjs
 dev-libs/libpeas:python - Build support for loading dev-lang/python plugins
@@ -3440,6 +3441,7 @@ gnustep-base/gnustep-back-xlib:xim - Enable X11 XiM input method
 gnustep-base/gnustep-base:libdispatch - Dispatch blocks via dev-libs/libdispatch
 gnustep-base/gnustep-make:libobjc2 - Enables use of the GNUstep Objective-C runtime (gnustep-base/libobjc2) with non-fragile ABI and llvm-core/clang compiler
 gnustep-base/gnustep-make:native-exceptions - Enables use of the native Objective-C exception support (@try/@catch/@finally) built-in objective-c exceptions with compilers that support it
+gnustep-base/libobjc2:libdispatch - Build against the blocks runtime in dev-libs/libdispatch
 gui-apps/foot:grapheme-clustering - Enable grapheme clustering support
 gui-apps/foot:utempter - Enable utmp support via sys-libs/libutempter
 gui-apps/grim:jpeg - Enable JPEG support.
@@ -4892,7 +4894,7 @@ media-sound/mpd:twolame - Support twolame MPEG-2 encoding
 media-sound/mpd:webdav - Enable using music from a WebDAV share
 media-sound/mpd:wildmidi - Enable MIDI support via wildmidi
 media-sound/mpd:yajl - Enable JSON parsing via dev-libs/yajl
-media-sound/mpd:zlib - Enable database compression with sys-libs/zlib
+media-sound/mpd:zlib - Enable database compression with virtual/zlib
 media-sound/mpfc:wav - Enable wav audio codec support
 media-sound/mpg123-base:int-quality - Use rounding instead of fast truncation for integer output, where possible
 media-sound/musescore:pipewire - Enable PipeWire audio support (upstream's default)
@@ -6082,7 +6084,7 @@ net-irc/weechat:trigger - Enable trigger plugin
 net-irc/weechat:typing - Enable typing plugin
 net-irc/weechat:xfer - Enable xfer plugin support
 net-irc/znc:argon2 - Store password hashes using Argon2id instead of SHA-256
-net-irc/znc:zlib - Enable mod_deflate-like gzip support for znc's web interface using sys-libs/zlib.
+net-irc/znc:zlib - Enable mod_deflate-like gzip support for znc's web interface using virtual/zlib.
 net-libs/aqbanking:ebics - Enable support for Electronic Banking Internet Communication Standard (EBICS)
 net-libs/axtls:cgi-lua - Enables lua backed cgi for axhttpd server
 net-libs/axtls:cgi-php - Enables php backed cgi for axhttpd server
@@ -6899,7 +6901,7 @@ net-proxy/privoxy:threads - Enable POSIX threads. Highly recommended, otherwise 
 net-proxy/privoxy:toggle - Support temporary disable toggle via web interface
 net-proxy/privoxy:tools - Install log parser, regression tester and user agent generator tools
 net-proxy/privoxy:whitelists - Support trust files (white lists)
-net-proxy/privoxy:zlib - Decompress zlib compressed data using sys-libs/zlib before filtering
+net-proxy/privoxy:zlib - Decompress zlib compressed data using virtual/zlib before filtering
 net-proxy/rejik:banlists - Install upstream provided simple banlists
 net-proxy/squid:ecap - Adds support for loadable content adaptation modules (http://www.e-cap.org)
 net-proxy/squid:esi - Enable ESI for accelerators, will cause squid reverse proxies to be capable of the Edge Acceleration Specification (www.esi.org)
@@ -7312,7 +7314,6 @@ sci-libs/armadillo:superlu - Use SuperLU for sparse linear equation solving sci-
 sci-libs/arprec:qd - Use sci-libs/qd for quad-double datatype
 sci-libs/atlas:generic - Build atlas assuming a fairly generic architecture (sse2 for x86, core2 for amd64)
 sci-libs/avogadrolibs:archive - Enable archive support using app-arch/libarchive
-sci-libs/avogadrolibs:mmtf - Enable support of MMTF format using dev-libs/mmtf-cpp
 sci-libs/avogadrolibs:spglib - Find and set the Hall number for a crystal using sci-libs/spglib
 sci-libs/avogadrolibs:vtk - Enable sci-libs/vtk support
 sci-libs/blas-lapack-aux-wrapper:index64 - Create ILP64 wrappers as well
@@ -7475,7 +7476,7 @@ sci-libs/mumps:metis - Enable matrix ordering with METIS (sci-libs/metis, sci-li
 sci-libs/mumps:scotch - Enable matrix ordering with sci-libs/scotch
 sci-libs/netcdf:blosc - Allow using blosc compression via dev-libs/c-blosc
 sci-libs/netcdf:dap - Support for remote data access with the built-in OPeNDAP client
-sci-libs/netcdf:hdf - Build with HDF4 read capability(sci-libs/hdf, sci-libs/hdf5 and sys-libs/zlib required).
+sci-libs/netcdf:hdf - Build with HDF4 read capability(sci-libs/hdf, sci-libs/hdf5 and virtual/zlib required).
 sci-libs/nlopt:octave - Add plugin for sci-mathematics/octave
 sci-libs/octomap:dynamicEDT3D - Build and install dynamicEDT3D library: A library for incrementally updatable Euclidean distance transforms in 3D.
 sci-libs/openblas:cpudetection - Build dynamic architecture detection at run time (for multi targets)
@@ -7760,7 +7761,7 @@ sci-physics/pythia:root - Use sci-physics/root trees and histograms (in examples
 sci-physics/rivet:hepmc2 - Build with sci-physics/hepmc version 2
 sci-physics/rivet:hepmc3 - Build with sci-physics/hepmc version 3
 sci-physics/rivet:highfive - Build with sci-libs/highfive and sci-libs/hdf5
-sci-physics/rivet:zlib - Build with sys-libs/zlib
+sci-physics/rivet:zlib - Build with virtual/zlib
 sci-physics/root:R - Enable support for dev-lang/R
 sci-physics/root:asimage - Enable support for media-libs/libafterimage
 sci-physics/root:cudnn - Enable support for nVidia cuDNN library
@@ -8437,7 +8438,7 @@ sys-fs/ecryptfs-utils:openssl - Enable dev-libs/openssl key module
 sys-fs/ecryptfs-utils:pkcs11 - Enable PKCS#11 (Smartcards) key module
 sys-fs/ecryptfs-utils:tpm - Enable support for Trusted Platform Module (TPM) using app-crypt/trousers
 sys-fs/erofs-utils:fuse - Builds erofsfuse (requires sys-fs/fuse).
-sys-fs/erofs-utils:libdeflate - Use app-arch/libdeflate rather than sys-libs/zlib for handling deflate compression.
+sys-fs/erofs-utils:libdeflate - Use app-arch/libdeflate rather than virtual/zlib for handling deflate compression.
 sys-fs/erofs-utils:uuid - Enables UUID support via sys-apps/util-linux.
 sys-fs/ext4magic:expert-mode - Builds ext4magic with expert mode. Highly useful in recovering data from a corrupted filesystem
 sys-fs/ext4magic:file-attr - Enable the recovery of file attributes (append, immutable, nodump etc)
@@ -8651,6 +8652,7 @@ virtual/podofo-build:tools - Build and install commandline tools
 virtual/rust:profiler - Build the profiler runtime and rust-demangler tool (needed for '-C profile-generate' or '-C instrument-coverage' codegen opts)
 virtual/rust:rustfmt - Install rustfmt, Rust code formatter
 virtual/ssh:minimal - Prefer net-misc/dropbear over net-misc/openssh
+virtual/zlib:minizip - include the minizip library for quick and dirty zip extraction
 www-apache/mod_auth_openidc:brotli - Add support for brotli compressed data using app-arch/brotli
 www-apache/mod_auth_openidc:redis - Add support for the Redis caching via dev-libs/hiredis
 www-apache/mod_backtrace:unwind - Use sys-libs/libunwind to provide better resolution of function names.
@@ -8853,7 +8855,7 @@ www-servers/lighttpd:mbedtls - Build module for TLS via net-libs/mbedtls
 www-servers/lighttpd:nettle - Use dev-libs/nettle as crypto library
 www-servers/lighttpd:nss - Build module for TLS via Mozilla's Network Security Services
 www-servers/lighttpd:webdav - Enable webdav properties
-www-servers/lighttpd:zlib - Enable output compression via gzip or deflate algorithms from sys-libs/zlib
+www-servers/lighttpd:zlib - Enable output compression via gzip or deflate algorithms from virtual/zlib
 www-servers/lighttpd:zstd - Enable output compression via Zstandard (app-arch/zstd) algorithm
 www-servers/nginx:aio - Enable asynchronous I/O support
 www-servers/nginx:debug - Enable support for debugging log

@@ -24,7 +24,7 @@ DEPEND="app-text/ghostscript-gpl
 	media-libs/libjpeg-turbo
 	media-libs/libpng
 	media-libs/tiff
-	sys-libs/zlib
+	virtual/zlib:=
 	x11-libs/cairo
 	x11-libs/pixman
 	gui? (
@@ -41,7 +41,7 @@ BDEPEND=">=dev-build/cmake-3.31
 	doc? ( virtual/latex-base )"
 
 PATCHES=(
-	"${FILESDIR}"/gle-4.3.8.patch
+	"${FILESDIR}"/gle-4.3.8-r1.patch
 	"${FILESDIR}"/top_dir.patch
 )
 SITEFILE="64${PN}-gentoo.el"
@@ -50,6 +50,8 @@ src_configure() {
 	# -Werror=odr
 	# https://bugs.gentoo.org/927779
 	# https://github.com/vlabella/GLE/issues/35
+	#
+	# fixed after 4.3.8 release. Recheck on next version bump.
 	filter-lto
 
 	local mycmakeargs=(

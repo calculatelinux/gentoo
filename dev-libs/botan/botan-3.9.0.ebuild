@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{11..13} )
+PYTHON_COMPAT=( python3_{11..14} )
 VERIFY_SIG_OPENPGP_KEY_PATH=/usr/share/openpgp-keys/botan.asc
 inherit edo dot-a flag-o-matic multiprocessing ninja-utils python-r1 toolchain-funcs verify-sig
 
@@ -29,7 +29,7 @@ DEPEND="
 	lzma? ( app-arch/xz-utils:= )
 	python? ( ${PYTHON_DEPS} )
 	sqlite? ( dev-db/sqlite:3= )
-	zlib? ( >=sys-libs/zlib-1.2.3:= )
+	zlib? ( >=virtual/zlib-1.2.3:= )
 "
 RDEPEND="
 	${DEPEND}
