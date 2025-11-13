@@ -895,7 +895,6 @@ app-misc/fastfetch:ddcutil - Use app-misc/ddcutil to query monitor settings
 app-misc/fastfetch:drm - Enables support for X.org's x11-libs/libdrm
 app-misc/fastfetch:elf - Use libelf to extract strings from binaries
 app-misc/fastfetch:vulkan - Enables reading GPU via media-libs/vulkan-loader
-app-misc/fastfetch:xfce - Enables support for XFCE config
 app-misc/fastfetch:xrandr - Enables support for Xrandr
 app-misc/g810-led:hidapi - Use dev-libs/hidapi instead of virtual/libusb for talking to the device (advertised to be faster)
 app-misc/geoclue:modemmanager - Enable geolocation through 3G or GPS enabled hardware through net-misc/modemmanager.
@@ -1398,6 +1397,7 @@ dev-cpp/opentelemetry-cpp:prometheus - include the Prometheus Client in the SDK
 dev-cpp/sdbus-c++:systemd - Use external libsystemd instead of statically-linked build
 dev-cpp/sdbus-c++:tools - Install interface stub code generator
 dev-db/etcd:server - Installs etcd daemon
+dev-db/mariadb:aws-km - Add support for using the AWS Key Management plugin
 dev-db/mariadb:backup - Build mariadb-backup which supports SST and hot backup of InnoDB, Aria and MyISAM including compression and encryption
 dev-db/mariadb:columnstore - Build the ColumnStore storage engine
 dev-db/mariadb:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
@@ -4202,6 +4202,7 @@ media-gfx/imagemagick:lqr - Enable experimental liquid rescale support using med
 media-gfx/imagemagick:pango - Enable Pango support using x11-libs/pango
 media-gfx/imagemagick:q32 - Set quantum depth value to 32
 media-gfx/imagemagick:q8 - Set quantum depth value to 8
+media-gfx/imv:bmp - Add bitmap (.bmp) image support using media-libs/libnsbmp
 media-gfx/imv:freeimage - Use media-libs/freeimage for additional image support
 media-gfx/inkscape:cdr - Enable support for CorelDRAW files via media-libs/libcdr
 media-gfx/inkscape:dia - Enable DIA flow chart import via app-office/dia
@@ -4284,12 +4285,11 @@ media-libs/alure:fluidsynth - Enables Fluidsynth MIDI software synthesis
 media-libs/assimp:collada - Add support for Collada interchange format through media-libs/opencollada
 media-libs/assimp:samples - Build viewer library
 media-libs/aubio:double-precision - Compile in double precision mode.
-media-libs/avidemux-core:system-ffmpeg - Use the ffmpeg provided by the system.
 media-libs/avidemux-plugins:aften - Enable A/52 (AC-3) audio encoder support.
 media-libs/avidemux-plugins:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr.
 media-libs/avidemux-plugins:dcaenc - Enable DTS Coherent Acoustics audio encoder support via media-sound/dcaenc.
 media-libs/avidemux-plugins:fdk - Adds support for encoding AAC using media-libs/fdk-aac.
-media-libs/avidemux-plugins:fribidi - Enable unicode bidirectional algorithm support via dev-libs/fribidi.
+media-libs/avidemux-plugins:libaom - Enable AV1 de/encoding via media-libs/libaom.
 media-libs/avidemux-plugins:twolame - Enable TwoLAME support via media-sound/twolame, an optimised MPEG Audio Layer 2 (MP2) encoder.
 media-libs/avidemux-plugins:x265 - Enables HEVC support with media-libs/x265.
 media-libs/cal3d:16bit-indices - Enables use of 16bit indices
@@ -4843,11 +4843,6 @@ media-sound/linux-show-player:midi - Allow cues to send, or trigger on, MIDI mes
 media-sound/linux-show-player:timecode - Support the sending of time code of running audio files over ArtNet, for instance to trigger cues in lighting-control software on lighting desks
 media-sound/linuxsampler:lv2 - Add support for Ladspa V2
 media-sound/linuxsampler:sf2 - Add support for SoundFont 2 sound bank files
-media-sound/lmms:fluidsynth - Enables Fluidsynth MIDI software synthesis plugin.
-media-sound/lmms:libgig - Enables GIG player plugin.
-media-sound/lmms:soundio - Enables libsoundio support.
-media-sound/lmms:stk - Enables STK Mallet plugin.
-media-sound/lmms:vst - Enables the VeSTige plugin to run VST plugins through Wine.
 media-sound/mangler:espeak - Text to speech engine
 media-sound/mixxx:benchmark - Build and install benchmark binary: mixxx-test --benchmark
 media-sound/mixxx:experimental - Add support for experimental-QML-UI. Available with --qml arg
@@ -7617,6 +7612,7 @@ sci-mathematics/lcalc:double - Use double precision (the upstream default)
 sci-mathematics/lcalc:double-double - Use sci-libs/qdfor double-double precision
 sci-mathematics/lcalc:pari - Use sci-mathematics/pari for elliptic curve L-functions
 sci-mathematics/lcalc:quad-double - Use sci-libs/qdfor quad-double precision
+sci-mathematics/manifold:assimp - Build mesh export (via media-libs/assimp) utility library
 sci-mathematics/manifold:tbb - Enable Parallel backend with dev-cpp/tbb
 sci-mathematics/mathematica:R - Enable dev-lang/R backend support
 sci-mathematics/mathematica:bundle - Install from Wolfram's bundle file or from Mathematica only
@@ -7722,6 +7718,7 @@ sci-ml/evaluate:template - Enable template
 sci-ml/evaluate:torch - Support pytorch
 sci-ml/gloo:libuv - Enable libuv support
 sci-ml/gloo:redis - Enable Redis backend for storage via dev-libs/hiredis
+sci-ml/gloo:rocm - Enable ROCm gpu computing support
 sci-ml/oneDNN:cblas - Use virtual/cblas for sgemm routines
 sci-ml/oneDNN:mkl - Use sci-libs/mkl for sgemm routines
 sci-ml/onnx:disableStaticReg - Disable Static Registration
@@ -8084,6 +8081,7 @@ sys-apps/systemd-utils:udev - Enable systemd-udev (userspace device manager)
 sys-apps/systemd-utils:ukify - Enable systemd-ukify
 sys-apps/tcp-wrappers:netgroups - Support matching NIS (host) netgroup names via the @netgroup syntax (if you don't know what this means, you most likely do not need it)
 sys-apps/texinfo:standalone - Build standalone version that survives all Portage bugs
+sys-apps/tuned:ppd - Install tuned-ppd, a drop-in replacement for sys-power/power-profiles-daemon
 sys-apps/ugrep:bzip3 - Support for .bz3 files using app-arch/bzip3.
 sys-apps/usbguard:umockdev - Enables support for dev-util/umockdev
 sys-apps/usbutils:usbreset - additionally compile the potentially problematic usbreset util

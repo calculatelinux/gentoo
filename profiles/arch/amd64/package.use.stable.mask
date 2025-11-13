@@ -57,10 +57,6 @@ media-libs/opencv cudnn
 # Pulls in pandoc with all of its glory (haskell). #921501
 www-apps/hugo test
 
-# Jon Janzen <jon@jonjanzen.com> (2023-09-11)
-# librttopo has not been stabalized on this arch yet
-dev-db/spatialite rttopo
-
 # Michał Górny <mgorny@gentoo.org> (2023-04-22)
 # pandoc is stable here.
 dev-python/nbclassic -doc
@@ -75,11 +71,6 @@ llvm-runtimes/openmp llvm_targets_AMDGPU
 # Sam James <sam@gentoo.org> (2022-12-11)
 # net-libs/rustls-ffi is not yet marked stable
 net-misc/curl rustls curl_ssl_rustls ech
-
-# Adel Kara Slimane <adel.ks@zegrapher.com> (2022-03-14)
-# needs stabilizing
-media-video/ffmpeg vmaf
-media-video/ffmpeg-compat vmaf
 
 # Joonas Niilola <juippis@gentoo.org> (2021-08-13)
 # dev-libs/efl is stabilized on amd64.

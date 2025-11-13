@@ -52,6 +52,11 @@ BDEPEND="
 EPYTEST_PLUGINS=( hypothesis pytest-timeout )
 distutils_enable_tests pytest
 
+EPYTEST_DESELECT=(
+	# https://github.com/pypy/pypy/issues/5351
+	tests/test_metadata.py::test_truncated_xml
+)
+
 src_prepare() {
 	distutils-r1_src_prepare
 
