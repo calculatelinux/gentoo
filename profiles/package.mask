@@ -36,6 +36,33 @@
 
 #--- END OF EXAMPLES ---
 
+# Ionen Wolkens <ionen@gentoo.org> (2025-11-14)
+# A regression[1][2] is causing many users to be stuck at 1920x1080@60
+# due the drivers seemingly misdetecting capacity of the connection to
+# the monitor when using DisplayPort or HDMI with certain setups.
+#
+# Not everyone is affected, so feel free to unmask if not.
+#
+# [1] https://forums.developer.nvidia.com/t/580-release-feedback-discussion/341205/795
+# [2] https://github.com/NVIDIA/open-gpu-kernel-modules/issues/960
+~x11-drivers/nvidia-drivers-580.105.08
+
+# Petr Vaněk <arkamar@gentoo.org> (2025-11-13)
+# The MDEV-38068 issue has been discovered with MariaDB 11.8.4. The issue
+# caused a partial data deletion when using the DELETE statement on MyISAM or
+# Aria tables under specific conditions. InnoDB tables are not affected by
+# this. See:
+# https://jira.mariadb.org/browse/MDEV-38068
+# https://lists.mariadb.org/hyperkitty/list/packagers@lists.mariadb.org/thread/IT3YIRPIS4ZVDZ5LBIDV7MPUDIL2VGIA/
+#
+# Affected package was removed from the tree, but this message shall be kept
+# untill 2025-12-15.
+~dev-db/mariadb-11.8.4
+
+# Sam James <sam@gentoo.org> (2025-11-13)
+# Reported crashes (https://bugs.gentoo.org/914256#c18)
+=sys-libs/musl-1.2.5-r6
+
 # Sam James <sam@gentoo.org> (2025-11-05)
 # re 8.3.0: Has regressions breaking media-video/subliminal and 8.3.1
 # which fixes some (but not all of those regressions) is semi-released only.
@@ -64,13 +91,6 @@ dev-libs/eventlog
 # Old backport with no revdeps left.
 # Removal on 2025-11-20.  Bug #964780.
 dev-python/backports-ssl-match-hostname
-
-# Thomas Beierlein <tomjbe@gentoo.org> (2025-10-14)
-# Depends on Qt5.
-# Superseded by media-radio/wsjtx_improved. While both are based on the same
-# base code wsjtx_improved will be more actual AND provides Qt6 support.
-# Removal on 2025-11-13.  Bug #955965.
-media-radio/wsjtx
 
 # Sam James <sam@gentoo.org> (2025-10-13)
 # Crashes in memtodest when handling PATH. Not yet reported upstream.
