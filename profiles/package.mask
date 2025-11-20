@@ -36,6 +36,21 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-11-19)
+# No more revdeps, no longer developed upstream, Phonon revdep.
+# Removal on 2025-12-19.
+kde-apps/libkcompactdisc
+
+# Joonas Niilola <juippis@gentoo.org> (2025-11-19)
+# Brahmajit Das (listout) <brahmajit.xyz@gmail.com> (2025-11-19)
+# Currently without a maintainer and being severely outdated in
+# ::gentoo. There seems to be interest in maintaining these over at
+# ::guru, so hoping they get new breath there for someone with direct
+# commit access and interest.
+# Removal on 2025-12-03.  Bugs #966235, #966234.
+sys-kernel/pf-sources
+sys-kernel/zen-sources
+
 # orbea <orbea@riseup.net> (2025-11-16)
 # Dead upstream, non-free licenses, depends on libsdl, no revdeps.
 # Use games-emulation/geolith-jg instead.
@@ -141,8 +156,6 @@ net-libs/NativeThread
 #
 # A common issue with 6.10 is builds failing to find Qt private headers
 # as it (now) requires searching for e.g. GuiPrivate in CMakeLists.txt.
-=dev-python/pyqt6-6.10*
-=dev-python/pyqt6-webengine-6.10*
 =dev-python/pyside-6.10.0*
 =dev-qt/qt-docs-6.10.0*
 =dev-qt/qt3d-6.10.0*
