@@ -9,7 +9,7 @@ inherit prefix python-any-r1 qt6-build toolchain-funcs
 
 DESCRIPTION="Library for rendering dynamic web content in Qt6 C++ and QML applications"
 SRC_URI+="
-	https://dev.gentoo.org/~ionen/distfiles/${PN}-6.10-patchset-6.tar.xz
+	https://dev.gentoo.org/~ionen/distfiles/${PN}-6.10-patchset-7.tar.xz
 "
 
 if [[ ${QT6_BUILD_TYPE} == release ]]; then
@@ -50,8 +50,9 @@ RDEPEND="
 	media-libs/tiff:=
 	sys-apps/dbus
 	sys-apps/pciutils
-	virtual/minizip:=
 	virtual/libudev:=
+	virtual/minizip:=
+	virtual/zlib:=
 	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
