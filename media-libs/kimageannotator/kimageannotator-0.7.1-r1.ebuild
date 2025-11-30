@@ -39,7 +39,9 @@ PATCHES=(
 	"${FILESDIR}/${P}-fix_KeyInputHelperTest.patch"
 	# Pending upstream fixes:
 	"${FILESDIR}/${P}-revert-custom-scaling.patch"
-	"${FILESDIR}/${P}-cmake-minreqver-3.16.patch" # bug #965014
+	# bug #965014:
+	"${FILESDIR}/${P}-cmake-minreqver-3.16.patch"
+	"${FILESDIR}/${P}-cmake-cleanup.patch"
 )
 
 src_configure() {

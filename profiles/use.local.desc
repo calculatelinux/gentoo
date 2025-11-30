@@ -835,7 +835,6 @@ app-i18n/im-chooser:xfce - Enable support for XFCE panel
 app-i18n/imsettings:xfconf - Enable support for xfce-base/xfconf
 app-i18n/libime:data - Build data
 app-i18n/librime:debug - Enable debugging (including logging of input of RIME input methods)
-app-i18n/mozc:fcitx4 - Enable support for app-i18n/fcitx 4
 app-i18n/mozc:fcitx5 - Enable support for app-i18n/fcitx 5
 app-i18n/mozc:gui - Install graphical user interface tool (mozc_tool)
 app-i18n/mozc:ibus - Enable support for app-i18n/ibus
@@ -4118,7 +4117,6 @@ media-gfx/blender:manifold - Enable Manifold render backend via sci-mathematics/
 media-gfx/blender:nanovdb - Enable nanoVDB support in Cycles. Uses less memory than regular openVDB when rendering.
 media-gfx/blender:ndof - Enable NDOF input devices (SpaceNavigator and friends).
 media-gfx/blender:oidn - Enable OpenImageDenoiser Support
-media-gfx/blender:oneapi - Build cycles renderer with Intel oneAPI SyCL support
 media-gfx/blender:openpgl - Enable path guiding support in Cycles
 media-gfx/blender:opensubdiv - Add rendering support form OpenSubdiv from Dreamworks Animation through media-libs/opensubdiv.
 media-gfx/blender:openvdb - Enable openvdb for volumetric processing, like the voxel remesher. Also enables volumetric GPU preview rendering for Nvidia cards.
@@ -4128,8 +4126,9 @@ media-gfx/blender:pipewire - Enable Pipewire for audio support on Linux
 media-gfx/blender:potrace - Add support for converting bitmaps into Grease pencil line using the potrace library.
 media-gfx/blender:pugixml - Enable PugiXML support (Used for OpenImageIO, Grease Pencil SVG export)
 media-gfx/blender:renderdoc - Build Blender with renderdoc support
+media-gfx/blender:rubberband - Build with Rubber Band for audio time-stretching and pitch-scaling (used by Audaspace) via media-libs/rubberband
 media-gfx/blender:tbb - Use threading building blocks library from dev-cpp/tbb.
-media-gfx/blender:vulkan - Add support for the experimental Vulkan viewport backend
+media-gfx/blender:vulkan - Add support for the Vulkan viewport backend
 media-gfx/blender-bin:hip - Enable AMD HIP support (computation on GPU)
 media-gfx/blender-bin:oneapi - Enable Intel oneAPI SyCL support (computation on GPU)
 media-gfx/chafa:tools - Build command-line tools
@@ -4266,7 +4265,6 @@ media-gfx/pstoedit:pptx - Enable support for generating PowerPoint pptx files
 media-gfx/qimgv:opencv - Enable HQ scaling via media-libs/opencv
 media-gfx/qimgv:video - Add support for gif/webm playback via libmpv
 media-gfx/qrencode:png - Enable PNG output support in qrencode tool
-media-gfx/renderdoc:qt5 - Build and install the qrenderdoc GUI
 media-gfx/shotwell:opencv - Enable face detection via media-libs/opencv
 media-gfx/solvespace:system-mimalloc - Use system dev-libs/mimalloc instead of vendored library
 media-gfx/ueberzugpp:opencv - Use media-libs/opencv for additional image formats and OpenCL accelerated scaling
@@ -4276,7 +4274,6 @@ media-gfx/xpaint:pgf - Support for loading PGF images
 media-gfx/yafaray:fastmath - Enable mathematic approximations to make code faster
 media-gfx/yafaray:fasttrig - Enable trigonometric approximations to make code faster
 media-gfx/yafaray:opencv - Add support for media-libs/opencv image processing.
-media-libs/a52dec:djbfft - Prefer D.J. Bernstein's library for fourier transforms
 media-libs/allegro:dumb - Enable media-libs/dumb module library support
 media-libs/allegro:physfs - Enable physfs support
 media-libs/allegro:vga - Enables the VGA graphics driver
@@ -4361,6 +4358,7 @@ media-libs/imlib2:y4m - Y4M image loader support
 media-libs/imlib2:zlib - Zlib loader support
 media-libs/intel-mediasdk:tools - Build analyse and inspect tools
 media-libs/jasper:heif - Enable experimental support for HEIF/HEIC, unsupported by upstream
+media-libs/kquickimageeditor:opencv - Enable better blur performance using media-libs/opencv
 media-libs/leptonica:utils - Install command-line utilities
 media-libs/libafterimage:shaping - Use MIT shaped X windows extention.
 media-libs/libafterimage:shm - Use MIT shared memory extention for X image transfer.
@@ -4805,6 +4803,7 @@ media-sound/drumstick:fluidsynth - Enable support for media-sound/fluidsynth
 media-sound/easyeffects:calf - Enable use of media-plugins/calf for adding various FX
 media-sound/easyeffects:doc - Install packages needed to display built-in user documentation
 media-sound/easyeffects:mda-lv2 - Enable use of media-plugins/mda-lv2 for the loudness FX
+media-sound/easyeffects:webengine - Read documentation inside the application with dev-qt/qtwebengine
 media-sound/easyeffects:zamaudio - Enable use of media-plugins/zam-plugins for the maximizer FX
 media-sound/ecasound:lv2 - Add support for Ladspa V2
 media-sound/ecasound:oil - Use dev-libs/liboil for inner loop optimizations
@@ -5401,7 +5400,6 @@ media-video/vlc:gstreamer - Enable GStreamer based decoding support (currently s
 media-video/vlc:kate - Adds support for Ogg Kate subtitles via libkate
 media-video/vlc:kms - Enable kernel mode setting video output plugin via x11-libs/libdrm
 media-video/vlc:libplacebo - Enable support for GPU accelerated video rendering with media-libs/libplacebo
-media-video/vlc:libtar - Uses libtar instead of the built-in tar reader for reading custom skins
 media-video/vlc:libtiger - Enable Ogg Kate subtitles rendering using libtiger
 media-video/vlc:linsys - Enable support for Linux Linear Systems Ltd. SDI and HD-SDI input cards
 media-video/vlc:live - Enable live555 streaming media support (client support for rtsp)
@@ -6750,6 +6748,7 @@ net-misc/xmrig:donate - Set the default donation level to 1% instead of 0
 net-misc/xmrig:hwloc - Use sys-apps/hwloc for CPU affinity support
 net-misc/youtube-viewer:gtk - Install the gtk3 GUI
 net-misc/yt-dlp:deno - Pull in dev-lang/deno-bin by default needed for proper YouTube support (if this USE is masked on your profile, refer to yt-dlp's documentation for lesser supported alternatives which are not supported out-of-the-box due to security concerns)
+net-misc/zerotier:controller - Enable support for the network controller microservice (NONCOMM License)
 net-misc/zerotier:sso - Enable support for Single sign-on through zeroidc
 net-nds/389-ds-base:accountpolicy - Enable account policy plugin - automatically lock an account after a certain amount of time has elapsed
 net-nds/389-ds-base:auto-dn-suffix - Enable auto bind with auto dn suffix over unix domain socket (LDAPI) support
@@ -6986,6 +6985,7 @@ net-vpn/strongswan:strongswan_plugins_bypass-lan - Enable support for the bypass
 net-vpn/strongswan:strongswan_plugins_ccm - Enable support for the ccm plugin
 net-vpn/strongswan:strongswan_plugins_chapoly - Enable ChaCha20/Poly1305 AEAD implementation and ChaCha20 XOF plugin
 net-vpn/strongswan:strongswan_plugins_cmac - Enable support for the cmac plugin
+net-vpn/strongswan:strongswan_plugins_connmark - Enable connmark plugin using conntrack based marks to select return path SA
 net-vpn/strongswan:strongswan_plugins_ctr - Enable support for the ctr plugin
 net-vpn/strongswan:strongswan_plugins_curve25519 - Enable support for X25519 DH group and Ed25519 public key uthentication
 net-vpn/strongswan:strongswan_plugins_des - Enable DES/3DES cipher implementation
@@ -7143,7 +7143,7 @@ net-wireless/uhd:usrp1 - support USRP1 hardware
 net-wireless/uhd:usrp2 - support USRP2, N200, N210 hardware
 net-wireless/uhd:utils - utilities needed to list, query, calibrate, or update FPGA/Firmware
 net-wireless/uhd:x300 - support X300, X310 hardware
-net-wireless/unifi:system-mongodb - Start dev-db/mongodb by its own init scripts instead managed by UniFi.
+net-wireless/unifi:system-mongodb - Start dev-db/mongodb by its own init scripts instead of managed by UniFi.
 net-wireless/urh:airspy - use native backend which directly uses net-wireless/airspy
 net-wireless/urh:audio - use a soundcard instead of an sdr
 net-wireless/urh:bladerf - use native backend which directly uses net-wireless/bladerf
@@ -8342,6 +8342,7 @@ sys-devel/crosstool-ng:rsync - Require net-misc/rsync
 sys-devel/crosstool-ng:wget - Require net-misc/wget
 sys-devel/distcc:gssapi - Enable support for net-libs/libgssglue
 sys-devel/gcc:ada - Build the Ada language (GNAT) frontend
+sys-devel/gcc:algol68 - Build the Algol 68 frontend
 sys-devel/gcc:cet - Enable support for control flow hijacking protection. On amd64, this provides Intel Control Flow Enforcement Technology (CET). On arm64, this provides Branch Target Identification (BTI) and Pointer Authentication Code (PAC) support. This is only effective on amd64 or arm64. Only provides benefits on newer CPUs. For Intel, the CPU must be at least as new as Tiger Lake. For AMD, it must be at least as new as Zen 3. This is harmless on older CPUs, but provides no benefit either. For ARM64, PAC was introduced in armv8.3-a, and BTI was introduced in armv8.5-a. When combined with USE=hardened on amd64, GCC will set -fcf-protection by default when building software. The effect is minimal on systems which do not support it, other than a possible small increase in codesize for the NOPs. The generated code is therefore compatible with i686 at the earliest. On arm64, GCC will set -mbranch-protection=standard by default when building software.
 sys-devel/gcc:cobol - Enable support for the COBOL programming language
 sys-devel/gcc:d - Enable support for the D programming language
@@ -8805,6 +8806,7 @@ www-misc/litmus:libproxy - Support for automatic proxy configuration management 
 www-misc/litmus:libxml2 - Use dev-libs/libxml2 to parse XML
 www-misc/litmus:pkcs11 - Support for PKCS #11 through PaKChoiS (dev-libs/pakchois).
 www-nginx/ngx-set-misc:hmac - Enable support for generating HMAC digests using dev-libs/openssl
+www-nginx/njs:tools - Build the command-line utility njs
 www-plugins/lightspark:ppapi - Install the PPAPI plugin (for Chromium)
 www-plugins/lightspark:rtmp - Enable Real Time Messaging Protocol using librtmp
 www-plugins/passff-host:chrome - Install plugin for chrome (which also includes opera)

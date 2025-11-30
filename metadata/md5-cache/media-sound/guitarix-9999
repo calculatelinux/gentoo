@@ -1,6 +1,6 @@
-BDEPEND=|| ( dev-lang/python:3.13[threads(+)] dev-lang/python:3.12[threads(+)] dev-lang/python:3.11[threads(+)] ) virtual/pkgconfig standalone? ( dev-lang/sassc nls? ( dev-util/intltool sys-devel/gettext ) ) >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=|| ( dev-lang/python:3.14[threads(+)] dev-lang/python:3.13[threads(+)] dev-lang/python:3.12[threads(+)] dev-lang/python:3.11[threads(+)] ) virtual/pkgconfig standalone? ( dev-lang/sassc dev-util/gperf nls? ( dev-util/intltool sys-devel/gettext ) ) >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm preinst setup unpack
-DEPEND=dev-cpp/eigen:3 dev-cpp/glibmm:2 dev-cpp/gtkmm:3.0 dev-libs/glib:2 media-libs/libsndfile media-libs/zita-convolver:= media-libs/zita-resampler net-misc/curl sci-libs/fftw:3.0= x11-libs/gtk+:3 lv2? ( media-libs/lv2 ) standalone? ( dev-libs/boost:= media-libs/liblrdf media-libs/lilv virtual/jack bluetooth? ( net-wireless/bluez ) nsm? ( media-libs/liblo ) zeroconf? ( net-dns/avahi ) )
+DEPEND=dev-cpp/eigen:3 dev-libs/libsigc++:2 media-libs/libsndfile media-libs/zita-convolver:= media-libs/zita-resampler:= sci-libs/fftw:3.0= lv2? ( media-libs/lv2 x11-libs/cairo[X] x11-libs/libX11 ) standalone? ( dev-libs/boost:= dev-cpp/atkmm dev-cpp/cairomm:0 dev-cpp/glibmm:2 dev-cpp/gtkmm:3.0 dev-cpp/pangomm:1.4 dev-libs/glib:2 media-libs/liblrdf media-libs/lilv net-misc/curl virtual/jack x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/gtk+:3 x11-libs/pango bluetooth? ( net-wireless/bluez:= ) nsm? ( media-libs/liblo ) zeroconf? ( net-dns/avahi ) )
 DESCRIPTION=Virtual guitar amplifier for Linux
 EAPI=8
 HOMEPAGE=https://guitarix.org/
@@ -9,8 +9,8 @@ INHERIT=multiprocessing python-any-r1 waf-utils xdg git-r3
 IUSE=bluetooth debug lv2 nls nsm +standalone zeroconf
 LICENSE=GPL-2
 PROPERTIES=live
-RDEPEND=dev-cpp/eigen:3 dev-cpp/glibmm:2 dev-cpp/gtkmm:3.0 dev-libs/glib:2 media-libs/libsndfile media-libs/zita-convolver:= media-libs/zita-resampler net-misc/curl sci-libs/fftw:3.0= x11-libs/gtk+:3 lv2? ( media-libs/lv2 ) standalone? ( dev-libs/boost:= media-libs/liblrdf media-libs/lilv virtual/jack bluetooth? ( net-wireless/bluez ) nsm? ( media-libs/liblo ) zeroconf? ( net-dns/avahi ) ) standalone? ( media-fonts/roboto )
+RDEPEND=dev-cpp/eigen:3 dev-libs/libsigc++:2 media-libs/libsndfile media-libs/zita-convolver:= media-libs/zita-resampler:= sci-libs/fftw:3.0= lv2? ( media-libs/lv2 x11-libs/cairo[X] x11-libs/libX11 ) standalone? ( dev-libs/boost:= dev-cpp/atkmm dev-cpp/cairomm:0 dev-cpp/glibmm:2 dev-cpp/gtkmm:3.0 dev-cpp/pangomm:1.4 dev-libs/glib:2 media-libs/liblrdf media-libs/lilv net-misc/curl virtual/jack x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/gtk+:3 x11-libs/pango bluetooth? ( net-wireless/bluez:= ) nsm? ( media-libs/liblo ) zeroconf? ( net-dns/avahi ) ) standalone? ( media-fonts/roboto )
 REQUIRED_USE=|| ( lv2 standalone )
 SLOT=0
 _eclasses_=git-r3	875eb471682d3e1f18da124be97dcc81	multilib	a199af442898963433d6f038a88cce9c	multiprocessing	1e32df7deee68372153dca65f4a7c21f	python-any-r1	891415dfe39ad9b41b461f2b86354af0	python-utils-r1	dbb8c4d794033ad7e7221eaf567a6c90	sysroot	c7470ddc2876a596a7a1f4c2a87a5dcb	toolchain-funcs	98d9f464d912ae6b7316fb8a3721f5db	waf-utils	04842f6fb79b876b079301eff0764e2d	xdg	3ef49a87c52c8b77c476351195dfe575	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
-_md5_=b3f7c195bd28cfdd426929295916038e
+_md5_=5f6743e0b7cd7eeca180debd26306450
