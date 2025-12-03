@@ -2145,6 +2145,8 @@ gcc_do_filter_flags() {
 
 	# Avoid shooting self in foot
 	filter-flags '-mabi*' -m31 -m32 -m64
+	# gcc will try to find libgomp.spec, which may not exist yet (bug #966882)
+	filter-flags -fopenmp
 
 	# bug #490738
 	filter-flags -frecord-gcc-switches
@@ -2278,7 +2280,7 @@ gcc_do_make() {
 			ewarn "This is NOT a safe configuration for end users!"
 			ewarn "This compiler may not be safe or reliable for production use!"
 		elif _tc_use_if_iuse pgo; then
-			GCC_MAKE_TARGET=${GCC_MAKE_TARGET-profiledbootstrap}
+			GCC_MAKE_TARGET=${GCC_MAKE_TARGET-profiledbootstrap-lean}
 		else
 			GCC_MAKE_TARGET=${GCC_MAKE_TARGET-bootstrap-lean}
 		fi

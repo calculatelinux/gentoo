@@ -36,6 +36,50 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2025-12-03)
+# Upstream changed how multiprocessing shares data between processes,
+# which means the upgrade randomly breaks some currently running Python
+# applications, notably Portage.
+~app-doc/python-docs-3.13.10
+~app-doc/python-docs-3.14.1
+~dev-lang/python-3.13.10
+~dev-lang/python-0.3.13.10
+~dev-lang/python-3.14.1
+~dev-lang/python-0.3.14.1
+~dev-python/python-tests-3.13.10
+~dev-python/python-tests-0.3.13.10
+~dev-python/python-tests-3.14.1
+~dev-python/python-tests-0.3.14.1
+
+# Jaco Kroon <jkroon@gentoo.org> (2025-12-02)
+# Dead upstream, limited usefulness.  If you're still using it please reach out
+# so we can discuss options.  Likely not worth the effort to fix the compiler
+# warnings soon to be errors.
+# No revdeps.
+# Open bugs: #929259
+# Removal on 2026-01-02.
+net-proxy/sqtop
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-01)
+# Depends on PyQt5, no signs of upstream porting/activity.
+# Bugs #965505, 962256. Removal on 2025-12-31.
+media-video/vidcutter
+
+# David Seifert <soap@gentoo.org> (2025-12-01)
+# Last release over 20 years ago, ancient codebase, lots of QA warnings, no
+# other distro packages this anymore. Removal on 2025-12-31. Bug #944877.
+sci-biology/rnaview
+
+# David Seifert <soap@gentoo.org> (2025-11-30)
+# Last release over 15 years ago, GTK+2, EAPI 7, broken C constructs, removed
+# by other distros already. Removal on 2025-12-30. Bug #944347.
+sys-apps/gscanbus
+
+# David Seifert <soap@gentoo.org> (2025-11-30)
+# Unmaintained, dead package, last release over 20 years ago, no other distro
+# packages this anymore, EAPI 7. Removal on 2025-12-30. Bug #943810.
+sys-fs/lde
+
 # David Seifert <soap@gentoo.org> (2025-11-30)
 # More than 26 years since release, ancient C code, no revdeps in tree,
 # no other distro still packages this.
@@ -155,12 +199,6 @@ games-emulation/gngeo
 ~dev-python/click-8.3.0
 =dev-python/click-8.3.1
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-11-03)
-# Dead upstream, vulernabilities, depends on Qt5, no revdeps.
-# Bugs #752042, #884041, #918096, #948092, #952542.
-# Removal on 2025-12-02.
-media-sound/cadence
-
 # Mike Gilbert <floppym@gentoo.org> (2025-10-29)
 # No longer used by sys-boot/grub.
 # Removal on 2025-11-28.
@@ -192,12 +230,6 @@ dev-ruby/actiontext:7.0
 dev-ruby/rails:7.0
 dev-ruby/railties:7.0
 dev-ruby/haml:5
-
-# Michał Górny <mgorny@gentoo.org> (2025-10-06)
-# Refcount errors that trigger crashes in dev-python/moto
-# and dev-python/ipyparallel tests.
-=dev-python/pymongo-4.15.3
-=dev-python/pymongo-4.15.2
 
 # Lukas Schmelting <lschmelting@posteo.com> (2025-10-03)
 # Breaks e.g. in combination with gnome-shell-48.4, gettext/gjs (bug #963815)
