@@ -36,6 +36,45 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-07)
+# Depends on PyQt5, stalled porting effort upstream.
+# Needs porting to Python 3.13, but 0.6.5 requires unpackaged dependency.
+# Bugs #948094, #952551. Removal on 2026-01-15
+media-sound/linux-show-player
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-07)
+# IUSE qt5 feature sees no porting effort upstream. 2.4.9-r1 remains
+# available with IUSE qt5 removed. Bug #965503
+# Removal on 2026-01-15
+=media-libs/libffado-2.4.9
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-05)
+# Depends on Qt5, stalled porting effort upstream. Bug #955277
+# Removal on 2026-01-15
+games-engines/qtads
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-05)
+# Depends on Qt5, no signs of porting work upstream. Bug #949881
+# Removal on 2026-01-15
+games-strategy/hedgewars
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-05)
+# Broken w/ CMake4, IUSE python stuck on py3.12, Gui stuck on Qt5.
+# Bugs #929093, #952086, #952528, #955277. Removal on 2026-01-04.
+media-gfx/yafaray
+
+# Nowa Ammerlaan <nowa@gentoo.org (2025-12-05)
+# Stuck on Qt5, no upstream action.
+# Please use the games-action/prismlauncher fork instead.
+# Removal on 2026-01-05. Bug 967108.
+games-action/multimc-bin
+
+# Ulrich Müller <ulm@gentoo.org> (2025-12-04)
+# No longer functional because the Twitter API has been axed.
+# Last release in 2015, last commit to upstream repository in 2018.
+# Removal on 2026-01-03. Bug #965998.
+app-emacs/twittering-mode
+
 # Michał Górny <mgorny@gentoo.org> (2025-12-03)
 # Upstream changed how multiprocessing shares data between processes,
 # which means the upgrade randomly breaks some currently running Python
@@ -147,16 +186,6 @@ sys-apps/razercfg
 # Removal on 2025-12-19.
 kde-apps/libkcompactdisc
 
-# Joonas Niilola <juippis@gentoo.org> (2025-11-19)
-# Brahmajit Das (listout) <brahmajit.xyz@gmail.com> (2025-11-19)
-# Currently without a maintainer and being severely outdated in
-# ::gentoo. There seems to be interest in maintaining these over at
-# ::guru, so hoping they get new breath there for someone with direct
-# commit access and interest.
-# Removal on 2025-12-03.  Bugs #966235, #966234.
-sys-kernel/pf-sources
-sys-kernel/zen-sources
-
 # orbea <orbea@riseup.net> (2025-11-16)
 # Dead upstream, non-free licenses, depends on libsdl, no revdeps.
 # Use games-emulation/geolith-jg instead.
@@ -198,11 +227,6 @@ games-emulation/gngeo
 # https://github.com/pallets/click/issues/3087
 ~dev-python/click-8.3.0
 =dev-python/click-8.3.1
-
-# Mike Gilbert <floppym@gentoo.org> (2025-10-29)
-# No longer used by sys-boot/grub.
-# Removal on 2025-11-28.
-sec-keys/openpgp-keys-danielkiper
 
 # Sam James <sam@gentoo.org> (2025-10-13)
 # Crashes in memtodest when handling PATH. Not yet reported upstream.
@@ -456,9 +480,11 @@ dev-qt/qtdatavis3d:5
 dev-qt/qtgamepad:5
 dev-qt/qtlocation:5
 dev-qt/qtnetworkauth:5
+dev-qt/qtpositioning:5
 dev-qt/qtquicktimeline:5
 dev-qt/qtsensors:5
 dev-qt/qtserialbus:5
+dev-qt/qtserialport:5
 dev-qt/qtvirtualkeyboard:5
 dev-qt/qtwebchannel:5
 dev-qt/qtwebview:5
