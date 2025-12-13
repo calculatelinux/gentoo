@@ -1467,7 +1467,6 @@ dev-db/sqlitestudio:cli - Build CLI interface
 dev-db/timescaledb:proprietary-extensions - Enable proprietary features/extensions licensed under the TimeScale License
 dev-db/unixODBC:minimal - Disable bundled drivers and extra libraries (most users don't need these)
 dev-db/unixODBC:odbcmanual - Administrator, Internal Structure, Programmer and User documentation
-dev-debug/bpftrace:lldb - Parse debug info usingllvm-core/lldb
 dev-debug/bpftrace:pcap - Enable skb_output using net-libs/libpcap
 dev-debug/drgn:debuginfod - Enable debuginfod support
 dev-debug/drgn:lzma - Support XZ-compressed debug information (MiniDebugInfo).
@@ -3531,6 +3530,7 @@ kde-apps/cantor:julia - Enable dev-lang/julia backend support
 kde-apps/cantor:qalculate - Enable sci-libs/libqalculate backend support
 kde-apps/cantor:webengine - Use dev-qt/qtwebengine as embedded QtHelp documentation browser
 kde-apps/gwenview:activities - Enable kactivities support
+kde-apps/gwenview:annotate - Enable support for image annotations using media-libs/kimageannotator
 kde-apps/gwenview:fits - Enable support for NASA's sci-libs/cfitsio library
 kde-apps/gwenview:mpris - Enable support for MPRIS2 interface, requiring dev-qt/qtdbus as dependency.
 kde-apps/gwenview:share - Enable support for a share menu using kde-frameworks/purpose
@@ -5672,6 +5672,7 @@ net-analyzer/wireshark:text2pcap - Install text2pcap, to generate a capture file
 net-analyzer/wireshark:tshark - Install tshark, to dump and analyzer network traffic from the command line
 net-analyzer/wireshark:udpdump - Install udpdump, to get packets exported from a source (like a network device or a GSMTAP producer) that are dumped to a pcap file
 net-analyzer/wireshark:wifi - Install wifidump, to dump and analyse 802.11 traffic
+net-analyzer/wireshark:xxhash - Enable dev-libs/xxhash support for hashing
 net-analyzer/zabbix:agent - Enable zabbix agent (for to-be-monitored machines)
 net-analyzer/zabbix:agent2 - Enable go-based zabbix agent 2 (for to-be-monitored machines)
 net-analyzer/zabbix:frontend - Enable zabbix web frontend
@@ -9156,7 +9157,6 @@ x11-wm/mutter:elogind - Rely on sys-auth/elogind as logind provider for Wayland 
 x11-wm/mutter:libdisplay - Enable EDID and DisplayID using media-libs/libdisplay-info
 x11-wm/mutter:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 x11-wm/mutter:xwayland - Enable X11 application support in Wayland sessions
-x11-wm/notion:xrandr - Add support for xrandr
 x11-wm/openbox:session - Enables support for session managers
 x11-wm/openbox:xdg - Install the python xdg files for xdg autostart
 x11-wm/pekwm:pango - Pango font support

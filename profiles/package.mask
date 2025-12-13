@@ -36,6 +36,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2025-12-12)
+# Upstream has switched to LLM-first coding which has already caused
+# a number of suspicious bugs.  At this point, new versions
+# of the packages cannot be trusted to be safe to use.  Furthermore,
+# the maintenance cost of dealing with packaging bugs alone
+# is overwhelming to human maintainers of this package.
+>=dev-python/autobahn-25.10
+>=dev-python/txaio-25.10
+
 # Hans de Graaff <graaff@gentoo.org> (2025-12-11)
 # The twitter API is no longer available making this package
 # useless. Upstream has archived the gem and refers to an X gem as an
@@ -211,17 +220,6 @@ kde-apps/libkcompactdisc
 # Removal on 2025-12-16.
 games-emulation/gngeo
 
-# Ionen Wolkens <ionen@gentoo.org> (2025-11-14)
-# A regression[1][2] is causing many users to be stuck at 1920x1080@60
-# due the drivers seemingly misdetecting capacity of the connection to
-# the monitor when using DisplayPort or HDMI with certain setups.
-#
-# Not everyone is affected, so feel free to unmask if not.
-#
-# [1] https://forums.developer.nvidia.com/t/580-release-feedback-discussion/341205/795
-# [2] https://github.com/NVIDIA/open-gpu-kernel-modules/issues/960
-~x11-drivers/nvidia-drivers-580.105.08
-
 # Petr Vaněk <arkamar@gentoo.org> (2025-11-13)
 # The MDEV-38068 issue has been discovered with MariaDB 11.8.4. The issue
 # caused a partial data deletion when using the DELETE statement on MyISAM or
@@ -254,24 +252,6 @@ games-emulation/gngeo
 # Requires Rust with RUST_SYSROOTS=bpf, which isn't currently supported
 # by dev-lang/rust-bin.  Also needs net-proxy/mitmproxy-linux updates.
 >=dev-util/bpf-linker-0.9.15-r1
-
-# Hans de Graaff <graaff@gentoo.org> (2025-10-10)
-# No longer supported upstream since 2025-04-01. Use Rails 7.2 or newer
-# instead. Masked for removal on 2025-11-10).
-dev-ruby/activerecord:7.0
-dev-ruby/actioncable:7.0
-dev-ruby/actionview:7.0
-dev-ruby/activejob:7.0
-dev-ruby/activesupport:7.0
-dev-ruby/activestorage:7.0
-dev-ruby/actionpack:7.0
-dev-ruby/activemodel:7.0
-dev-ruby/actionmailer:7.0
-dev-ruby/actionmailbox:7.0
-dev-ruby/actiontext:7.0
-dev-ruby/rails:7.0
-dev-ruby/railties:7.0
-dev-ruby/haml:5
 
 # Lukas Schmelting <lschmelting@posteo.com> (2025-10-03)
 # Breaks e.g. in combination with gnome-shell-48.4, gettext/gjs (bug #963815)
