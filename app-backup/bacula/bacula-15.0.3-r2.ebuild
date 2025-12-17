@@ -30,6 +30,7 @@ DEPEND="
 	dev-libs/gmp:0
 	qt6? (
 		dev-qt/qtbase:6[gui,widgets]
+		!sys-apps/bat
 	)
 	logwatch? ( sys-apps/logwatch )
 	readline? ( sys-libs/readline:0 )
@@ -87,7 +88,7 @@ pkg_setup() {
 
 	if use bacula-clientonly && use static && use qt6; then
 		ewarn
-		ewarn "Building statically linked 'bat' is not supported. Ignorig 'qt6' useflag."
+		ewarn "Building statically linked 'bat' is not supported. Ignoring 'qt6' useflag."
 		ewarn
 	fi
 }
