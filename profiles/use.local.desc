@@ -4709,7 +4709,6 @@ media-plugins/vdr-xineliboutput:cec - Enable CEC support through dev-libs/libcec
 media-plugins/vdr-xineliboutput:vdr - Compile the vdr output plugin to use local or remote xine as output
 media-plugins/vdr-xineliboutput:xine - Compile the xine input plugin for displaying vdr video and OSD
 media-radio/ax25-tools:X - Enable some X based configuration tools.
-media-radio/chirp:radioreference - pull in optional deps for query of radioreference
 media-radio/direwolf:hamlib - Enables support by the Hamlib amateur radio rig control library
 media-radio/fldigi:hamlib - Enables support by the Hamlib amateur radio rig control library to get/set frequency and mode of the ham radio in use
 media-radio/svxlink:qt6 - Build and install qtel application with Qt6
@@ -4923,6 +4922,8 @@ media-sound/patchage:jack-dbus - Use Jack via D-Bus instead of libjack
 media-sound/pavucontrol:sound - Enable sound notifications using media-libs/libcanberra
 media-sound/picard:discid - Enable reading the ID of the inserted CD
 media-sound/picard:fingerprints - Enable calculation and lookup of AcoustID fingerprints
+media-sound/picard:markdown - Enable enhanced internal documentation (scripting, plugins, etc.)
+media-sound/picard:multimedia - Enable embedded audio player
 media-sound/pithos:keybinder - Use keybinder to enable global key bindings
 media-sound/pms:regex - Enable regular expression searches
 media-sound/puddletag:acoustid - Use media-libs/chromaprint for acoustic fingerprinting
@@ -7331,7 +7332,6 @@ sci-libs/blis:serial - Use no threadding model
 sci-libs/cantera:hdf5 - Add HDF5 container files support
 sci-libs/cantera:python - Install Python bindings and conversion tools from Chemkin to Cantera format
 sci-libs/cddlib:tools - Add a few executables and tests for cddlib
-sci-libs/ceres-solver:cxsparse - Enable simple support for sparse matrix algebra from sci-libs/cxsparse with no LAPACK dependencies
 sci-libs/ceres-solver:gflags - Use dev-cpp/gflags for flag parsing
 sci-libs/ceres-solver:schur - Enable fixed-size schur specializations (disable if binary size is an issue)
 sci-libs/ceres-solver:sparse - Enable support for sparse matrix algebra with various packages from SuiteSparse
@@ -7625,6 +7625,7 @@ sci-mathematics/manifold:tbb - Enable Parallel backend with dev-cpp/tbb
 sci-mathematics/mathematica:R - Enable dev-lang/R backend support
 sci-mathematics/mathematica:bundle - Install from Wolfram's bundle file or from Mathematica only
 sci-mathematics/mathematica:ffmpeg - Enable media-video/ffmpeg backend support
+sci-mathematics/mathematica:mqtt - Enable MQTTLink support using app-misc/mosquitto (MQTT broker)
 sci-mathematics/maxima:clisp - Compile maxima with GNU CLISP (dev-lisp/clisp)
 sci-mathematics/maxima:clozurecl - Compile maxima with 32-bit Clozure Common Lisp (dev-lisp/clozurecl)
 sci-mathematics/maxima:clozurecl64 - Compile maxima with 64-bit Clozure Common Lisp (dev-lisp/clozurecl)
@@ -7797,6 +7798,7 @@ sci-physics/thepeg:lhapdf - Adds support for sci-physics/lhapdf
 sci-physics/thepeg:rivet - Adds support for sci-physics/rivet
 sci-physics/vgm:geant4 - Enable interaction with Geant4(sci-physics/geant:4)
 sci-physics/vgm:root - Enable interaction with ROOT (sci-physics/root)
+sci-physics/yoda:eigen - Build with dev-cpp/eigen
 sci-physics/yoda:highfive - Build with sci-libs/highfive and sci-libs/hdf5
 sci-physics/yoda:root - Adds support for sci-physics/root
 sci-visualization/fityk:nlopt - Enable optimization with sci-libs/nlopt
@@ -8029,7 +8031,6 @@ sys-apps/portage:rsync-verify - Enable full-tree cryptographic verification of G
 sys-apps/portage:xattr - Preserve extended attributes (filesystem-stored metadata) when installing files. Usually only required for hardened systems.
 sys-apps/ppc64-diag:rtas - Add support for the Run Time Abstraction Services (RTAS)
 sys-apps/proot:care - Build dynamic CARE binary (more info - https://proot-me.github.io)
-sys-apps/razercfg:gui - Installs GUI configuration utility and status bar applet. Requires dev-python/pyqt5
 sys-apps/rng-tools:jitterentropy - Enable Jitter RNG entropy support
 sys-apps/rng-tools:nistbeacon - Enable NIST beacon entropy support
 sys-apps/rng-tools:pkcs11 - Enable PKCS11 entropy support
@@ -8328,8 +8329,6 @@ sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (d
 sys-devel/binutils:pgo - Build binutils with Profile Guided Optimization (PGO) and LTO
 sys-devel/binutils:plugins - Enable plugin support in tools
 sys-devel/binutils:xxhash - Use dev-libs/xxhash for --build-id=xx support
-sys-devel/binutils-apple:classic - Use nm, otool, etc. from this ebuild instead of llvm-based tools
-sys-devel/binutils-apple:lto - Add support for Link-Time Optimization with LLVM
 sys-devel/binutils-config:native-symlinks - Install native symlinks like 'as' or 'ar' to /usr/bin. Otherwise keep only ${CTARGET}-as and friends.
 sys-devel/binutils-hppa64:cet - Enable Intel Control-flow Enforcement Technology.
 sys-devel/binutils-hppa64:debuginfod - Enable debuginfod support via dev-libs/elfutils libdebuginfod
@@ -8374,9 +8373,6 @@ sys-devel/gcc:sanitize - Build support for various sanitizer functions (ASAN/TSA
 sys-devel/gcc:ssp - Build packages with stack smashing protection on by default
 sys-devel/gcc:systemtap - Enable enhanced debugging hooks/interface via SystemTap static probe points in libgcc and libstdc++. Note that this isn't exclusive to SystemTap, despite the name. This provides an interface which dev-debug/gdb optionally uses, see https://sourceware.org/gdb/wiki/LinkerInterface and https://sourceware.org/gdb/wiki/DistroAdvice#sys.2Fsdt.h_probes.
 sys-devel/gcc:vtv - Build support for virtual table verification (a C++ hardening feature). This does not control whether GCC defaults to using VTV> Note that actually using VTV breaks ABI and hence the whole system must be built with -fvtable-verify.
-sys-devel/gcc-apple:bootstrap - !DO NOT SET THIS FLAG YOURSELF! avoids need for autoconf during bootstrap stage2
-sys-devel/gcc-apple:objc - Build support for the Objective C code language
-sys-devel/gcc-apple:objc++ - Build support for the Objective C++ language
 sys-devel/gcc-config:cc-wrappers - Install and manage 'cc' and 'f77' wrappers in /usr/bin. Otherwise ignore them.
 sys-devel/gcc-config:native-symlinks - Install native symlinks like 'gcc' or 'g++' to /usr/bin. Otherwise keep only ${CTARGET}-gcc and friends.
 sys-devel/gettext:git - When running `autopoint`, use git to store the internal development files; this requires git at runtime, but will be faster/smaller than raw archives
@@ -8602,7 +8598,7 @@ sys-power/nut:xml - Includes all UPS drivers that use XML.
 sys-power/nvclock:gtk - Install the GTK+ based graphical interface
 sys-power/nvclock:nvcontrol - Add NVCONTROL support for OpenGL options
 sys-power/suspend:crypt - Allows suspend and resume from encrypted disk
-sys-power/tlp:pd - TLP Profiles Daemon that replaces power-profiles-daemon by using the same D-Bus API.
+sys-power/tlp:ppd - TLP Profiles Daemon that replaces power-profiles-daemon by using the same D-Bus API.
 sys-power/tlp:rdw - Enables TLP Radio Device Wizard feature
 sys-process/atop:modules - Build netatop kernel module and install netatopd daemon.
 sys-process/audit:gssapi - Enable GSSAPI support
@@ -8833,15 +8829,23 @@ www-servers/caddy:dns-cloudflare - Adds module which allows to manage Cloudflare
 www-servers/caddy:dns-cloudns - Adds module which allows to manage ClouDNS hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.cloudns
 www-servers/caddy:dns-digitalocean - Adds module which allows to manage DigitalOcean hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.digitalocean
 www-servers/caddy:dns-duckdns - Adds module which allows to manage Duck DNS hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.duckdns
+www-servers/caddy:dns-dynv6 - Adds module which allows to manage Dynv6 hosted DNS zones using Caddy
+www-servers/caddy:dns-gandi - Adds module which allows to manage Gandi hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.gandi
+www-servers/caddy:dns-godaddy - Adds module which allows to manage Godaddy hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.godaddy
 www-servers/caddy:dns-googleclouddns - Adds module which allows to manage Google Cloud hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.googleclouddns
 www-servers/caddy:dns-he - Adds module which allows to manage Hurricane Electric hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.he
 www-servers/caddy:dns-hetzner - Adds module which allows to manage Hetzner hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.hetzner
 www-servers/caddy:dns-huaweicloud - Adds module which allows to manage Huawei Cloud hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.huaweicloud
+www-servers/caddy:dns-linode - Adds module which allows to manage Linode hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.linode
 www-servers/caddy:dns-mailinabox - Adds module which allows to manage Mail-in-a-Box hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.mailinabox
+www-servers/caddy:dns-namecheap - Adds module which allows to manage Namecheap hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.namecheap
 www-servers/caddy:dns-netcup - Adds module which allows to manage netcup hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.netcup
+www-servers/caddy:dns-netlify - Adds module which allows to manage Netlify hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.netlify
 www-servers/caddy:dns-ovh - Adds module which allows to manage OVHcloud hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.ovh
 www-servers/caddy:dns-porkbun - Adds module which allows to manage porkbun hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.porkbun
+www-servers/caddy:dns-powerdns - Adds module which allows to manage DNS zones of net-dns/pdns using Caddy https://caddyserver.com/docs/modules/dns.providers.powerdns
 www-servers/caddy:dns-rfc2136 - Adds module which allows to manage DNS zones using RFC2136 Dynamic Updates within Caddy https://caddyserver.com/docs/modules/dns.providers.rfc2136
+www-servers/caddy:dns-route53 - Adds module which allows to manage AWS route53 hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.route53
 www-servers/caddy:dns-vultr - Adds module which allows to manage Vultr hosted DNS zones using Caddy https://caddyserver.com/docs/modules/dns.providers.vultr
 www-servers/caddy:dynamicdns - Adds module which allows querying an endpoint to get dynamic public IP and updating records with DNS providers https://caddyserver.com/docs/modules/dynamic_dns
 www-servers/caddy:events-handlers-exec - Adds module which lets user exec command on Caddy events https://caddyserver.com/docs/modules/events.handlers.exec https://caddyserver.com/docs/caddyfile/options#event-options
@@ -9097,7 +9101,6 @@ x11-terms/xfce4-terminal:utempter - Include utmp management support via sys-libs
 x11-terms/xterm:openpty - Use openpty() in preference to posix_openpt()
 x11-terms/xterm:sixel - Enable sixel graphics support
 x11-terms/xterm:toolbar - Enable the xterm toolbar to be built
-x11-themes/QGnomePlatform:minimal - Skip kde-frameworks/qqc2-desktop-style dependency (Warning: some apps could be wrongly rendered)
 x11-themes/arc-theme:cinnamon - Install theme for gnome-extra/cinnamon
 x11-themes/arc-theme:gnome-shell - Install theme for gnome-base/gnome-shell
 x11-themes/arc-theme:gtk2 - Install GTK+2 theme

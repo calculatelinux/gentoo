@@ -288,7 +288,7 @@ else
 	BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/${CTARGET#accel-}/gcc-bin/${GCC_CONFIG_VER}}
 fi
 
-DATAPATH=${TOOLCHAIN_DATAPATH:-${PREFIX}/share/gcc-data/${CTARGET#accel-}/${GCC_CONFIG_VER}}
+DATAPATH=${TOOLCHAIN_DATAPATH:-${PREFIX}/share/gcc-data/${CTARGET}/${GCC_CONFIG_VER}}
 
 # Don't install in /usr/include/g++-v3/, but instead to gcc's internal directory.
 # We will handle /usr/include/g++-v3/ with gcc-config ...
@@ -1581,6 +1581,10 @@ toolchain_src_configure() {
 				--enable-__cxa_atexit
 				--enable-clocale=gnu
 			)
+
+			if [[ ${CTARGET} == *linux* ]] && tc_version_is_at_least 16.0.0_p20251214 ${PV} ; then
+				confgcc+=( --with-tls=gnu2 )
+			fi
 			;;
 		*-solaris*)
 			confgcc+=( --enable-__cxa_atexit )

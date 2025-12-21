@@ -23,6 +23,9 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
+	acct-group/jobserver
+	acct-user/steve
+	>=sys-fs/fuse-common-3.10.4-r2
 "
 BDEPEND="
 	virtual/pkgconfig
