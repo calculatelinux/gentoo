@@ -641,6 +641,7 @@ app-emulation/open-vm-tools:gtkmm - Compile with Gtkmm and sigc++ (Recommended)
 app-emulation/open-vm-tools:multimon - Enable multimon (Requires X)
 app-emulation/open-vm-tools:resolutionkms - Build the linux/unix resolutionkms module
 app-emulation/open-vm-tools:vgauth - Build vgauth
+app-emulation/open-vmdk:python - Install Python-based tools
 app-emulation/pcem:experimental - Enable experimental devices like printers.
 app-emulation/pcem:networking - Enable support for emulation of network cards.
 app-emulation/pcem:plugins - Enable support for dynamic plugins, which can add additional features.
@@ -1010,7 +1011,6 @@ app-misc/sphinx:mariadb - Add mariadb database support
 app-misc/sphinx:stemmer - Enable language stemming support
 app-misc/task:sync - Enable "task sync" support
 app-misc/tinysparql:localsearch - Install the app-misc/localsearch package for actual data mining support for tinysparql
-app-misc/tinysparql:miners - Install the app-misc/localsearch package for actual data mining support for tracker
 app-misc/tinysparql:stemmer - Add word stemming via dev-libs/snowball-stemmer.
 app-misc/tmux:sixel - Enable sixel support
 app-misc/tmux:utempter - Include libutempter support
@@ -1315,8 +1315,6 @@ app-text/zeal:X - Enable global shortcut support on X11
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
 dev-ada/AdaSAT:shared - Build shared library
 dev-ada/AdaSAT:static-pic - Build static library with pic code
-dev-ada/VSS:shared - Build shared library
-dev-ada/VSS:static-pic - Build static library with pic code
 dev-ada/aws:shared - Build shared library
 dev-ada/aws:wsdl - Used to convert ada to wsdl
 dev-ada/gnatcoll-bindings:shared - Build shared library
@@ -1348,6 +1346,8 @@ dev-ada/prettier-ada:static-pic - Build static library with pic code
 dev-ada/spawn:static-pic - Build static library with pic code
 dev-ada/templates-parser:shared - Build shared library
 dev-ada/templates-parser:static-pic - Build static library with pic code
+dev-ada/vss-text:shared - Build shared library
+dev-ada/vss-text:static-pic - Build static library with pic code
 dev-ada/xmlada:shared - Build shared library
 dev-ada/xmlada:static-pic - Build static library with pic code
 dev-build/bazelisk:bazel-symlink - Install bazel symlink that points to bazelisk
@@ -4973,6 +4973,7 @@ media-sound/qtractor:aubio - Enable media-libs/aubio support
 media-sound/qtractor:dssi - Enable support for DSSI Soft Synth Interface
 media-sound/qtractor:rubberband - Enable support for in-place audio clip pitch-shifting through the rubberband library
 media-sound/rhythmbox:daap - Build the local network music sharing plugin which uses the DAAP protocol using net-libs/libdmapsharing
+media-sound/rosegarden:lv2 - Add support for Ladspa V2 plugins
 media-sound/scream:pcap - Support sniffing packets from network using net-libs/libpcap
 media-sound/shntool:alac - Add support for Apple Lossless Audio Codec files
 media-sound/shntool:mac - Add support for Monkey's Audio files
@@ -7959,6 +7960,7 @@ sys-apps/hwloc:nvml - Enable the NVML device discovery
 sys-apps/hwloc:pci - Enable PCI device discovery using libpci
 sys-apps/hwloc:plugins - Build hwloc components as plugins so that the hwloc core library does not directly depend on their dependencies (for instance the libpci library)
 sys-apps/hwloc:rocm - Enable AMD RSMI device discovery
+sys-apps/hwloc:video_cards_nvidia - Enable GL display device discovery (NVCtrl)
 sys-apps/hwloc:xml - use libxml2 for XML support, instead of a custom minimalistic support
 sys-apps/ibm-powerpc-utils:rtas - Add support for the Run Time Abstraction Services (RTAS)
 sys-apps/iotools:make-symlinks - Generate sub-command symlinks to iotools -- note that a lot are simple like "xor"
@@ -8448,6 +8450,7 @@ sys-fs/erofs-utils:libdeflate - Use app-arch/libdeflate rather than virtual/zlib
 sys-fs/erofs-utils:uuid - Enables UUID support via sys-apps/util-linux.
 sys-fs/ext4magic:expert-mode - Builds ext4magic with expert mode. Highly useful in recovering data from a corrupted filesystem
 sys-fs/ext4magic:file-attr - Enable the recovery of file attributes (append, immutable, nodump etc)
+sys-fs/fuse:systemtap - Enable SystemTap/DTrace tracing
 sys-fs/lessfs:filelog - Enable the ability to log to a file instead of syslog
 sys-fs/lessfs:memtrace - Enable leefs to create a report regarding the memory allocation. This feature should be used for debugging purposes to avoid performance degradation
 sys-fs/loop-aes:extra-ciphers - Enable extra ciphers

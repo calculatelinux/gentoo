@@ -6,6 +6,11 @@
 
 # New entries go on top.
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-21)
+# gui-libs/hyprland-qtutils fails to build against Qt 6.10, upstream
+# repository was archived.
+gui-wm/hyprland qtutils
+
 # Michał Górny <mgorny@gentoo.org> (2025-12-20)
 # Needs last-rited dev-lang/julia.
 kde-apps/cantor julia
@@ -17,6 +22,10 @@ dev-lang/python tail-call-interp
 # Volkmar W. Pogatzki <gentoo@pogatzki.net> (2025-12-06)
 # No suitable versions of dev-libs/protobuf available.
 ~dev-java/protobuf-java-4.33.2 system-protoc
+
+# Lukas Schmelting <lschmelting@posteo.com (2025-11-06)
+# https://bugs.gentoo.org/933164
+app-misc/localsearch gif
 
 # Sam James <sam@gentoo.org> (2025-10-29)
 # Help Portage resolve app-crypt/gnupg[verify-sig] with the app-alternatives/gpg

@@ -36,7 +36,7 @@ else
 	PATCHES=("${WORKDIR}/patch")
 	SLOT="${PV%%.*}"
 	[[ ${PV} == *.*.* ]] && SLOT+="-vcs"
-	KEYWORDS="~alpha amd64 ~arm arm64 ~hppa ~loong ~m68k ~mips ppc ~ppc64 ~riscv ~sparc x86 ~x64-macos"
+	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~sparc x86 ~x64-macos"
 fi
 
 DESCRIPTION="The advanced, extensible, customizable, self-documenting editor"
@@ -432,6 +432,10 @@ src_test() {
 	# subtests which caused failure. Elements should begin with a %.
 	# e.g. %lisp/gnus/mml-sec-tests.el.
 	local exclude_tests=(
+		# Reason: not yet known
+		# mml-secure-sign-verify-1 #967849
+		%lisp/gnus/mml-sec-tests.el
+
 		# Reason: permission denied on /nonexistent
 		# (vc-*-bzr only fails if breezy is installed, as they
 		# try to access cache dirs under /nonexistent)
@@ -480,7 +484,6 @@ src_test() {
 		&& ver_test "${gpgver}" -ge 2.2.42 && ver_test "${gpgver}" -lt 2.3 \
 		&& exclude_tests+=(
 			%lisp/epg-tests.el
-			%lisp/gnus/mml-sec-tests.el
 		)
 
 	# Redirect GnuPG's sockets, in order not to exceed the 108 char limit

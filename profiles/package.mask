@@ -36,6 +36,18 @@
 
 #--- END OF EXAMPLES ---
 
+# Eli Schwartz <eschwartz@gentoo.org> (2025-12-15)
+# This version has lit a firecracker under the community and attracted
+# some ire. The situation is in a state of mild flux, and more generally
+# requires further consideration to determine the correct course of
+# action. Use at your own risk.
+>=app-text/calibre-8.11.0
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-21)
+# Fails to build against Qt 6.10, upstream repository was archived.
+# Bug #966389. Removal on 2026-01-15
+gui-libs/hyprland-qtutils
+
 # Michał Górny <mgorny@gentoo.org> (2025-12-20)
 # Packages that are missing Python 3.12+ support (or in case
 # of dev-lang/julia, all versions are unkeyworded).
@@ -43,6 +55,7 @@
 dev-lang/julia
 dev-libs/redland-bindings
 dev-python/happybase
+games-engines/scrap-engine
 games-rpg/pokete
 net-misc/pulseaudio-dlna
 www-client/seamonkey
@@ -63,12 +76,6 @@ www-client/seamonkey
 ~dev-lang/python-0.3.14.2
 ~dev-python/python-tests-3.14.2
 ~dev-python/python-tests-0.3.14.2
-
-# Ionen Wolkens <ionen@gentoo.org> (2025-12-17)
-# This version breaks building (at least) media-gfx/krita, issue may
-# or may not be on sip's side but masking until it is figured out.
-# https://bugs.gentoo.org/967648
-=dev-python/sip-6.15.0
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-12-15)
 # Last release depends on Qt5, upstream appears dormant. Bug #959826
@@ -311,11 +318,6 @@ games-emulation/gngeo
 # Alternatives: sys-fs/gocryptfs or rclone crypt.
 # Removal on 2025-12-16.  Bug #960358.
 sys-fs/encfs
-
-# Michał Górny <mgorny@gentoo.org> (2025-09-15)
-# Masking due to regressions.
-# https://github.com/pyparsing/pyparsing/issues/618
-=dev-python/pyparsing-3.2.4
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-08-29)
 # Obsolete transitional meta package. Bug #961795. Removal on 2025-09-28.

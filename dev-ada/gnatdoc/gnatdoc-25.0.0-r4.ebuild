@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{11..13} )
+PYTHON_COMPAT=( python3_{12..13} )
 ADA_COMPAT=( gcc_{14..15} )
 
 inherit ada python-single-r1 multiprocessing
@@ -24,7 +24,7 @@ RDEPEND="${ADA_DEPS}
 	${PYTHON_DEPS}
 	dev-ada/gpr:${SLOT}[${ADA_USEDEP},shared(+),static-libs?]
 	dev-ada/markdown:=[${ADA_USEDEP}]
-	>=dev-ada/VSS-24.0.0:=[${ADA_USEDEP},static-libs?]
+	dev-ada/vss-text:=[${ADA_USEDEP},static-libs?]
 	dev-ada/libadalang:=[${ADA_USEDEP},static-libs?,static-pic?]
 	dev-ada/libadalang:=[${PYTHON_SINGLE_USEDEP}]
 "
