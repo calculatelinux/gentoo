@@ -1,0 +1,9 @@
+DEFINED_PHASES=postinst
+DESCRIPTION=A complete free-content single-player focused game based on the Doom engine
+EAPI=8
+HOMEPAGE=https://freedoom.github.io
+KEYWORDS=~amd64 ~arm ~arm64 ~ppc64 ~x86
+LICENSE=metapackage
+RDEPEND=~games-fps/freedoom-data-0.13.0 || ( games-engines/uzdoom games-engines/odamex games-fps/chocolate-doom games-fps/dsda-doom )
+SLOT=0
+_md5_=ba2bf7b27b94898d79598cf3f6f50958

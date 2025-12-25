@@ -1346,6 +1346,7 @@ dev-ada/prettier-ada:static-pic - Build static library with pic code
 dev-ada/spawn:static-pic - Build static library with pic code
 dev-ada/templates-parser:shared - Build shared library
 dev-ada/templates-parser:static-pic - Build static library with pic code
+dev-ada/vss-extra:static-pic - Build static library with pic code
 dev-ada/vss-text:shared - Build shared library
 dev-ada/vss-text:static-pic - Build static library with pic code
 dev-ada/xmlada:shared - Build shared library
@@ -3195,6 +3196,8 @@ games-engines/scummvm:sndio - Enable support for MIDI music using media-sound/sn
 games-engines/scummvm:unsupported - enable unsupported and/or broken game engines (you're on your own)
 games-engines/scummvm-tools:tremor - Enable tremor, a fixed-point version of the Ogg Vorbis decoder
 games-engines/solarus:doc - Install doxygen developer documentation.
+games-engines/uzdoom:non-free - Install non-free components for an optimal experience of commercial games
+games-engines/uzdoom:swr - Enable the software renderer
 games-fps/alienarena:vidmode - Link against x11-libs/libXxf86vm. Required for full-screen support.
 games-fps/chocolate-doom:midi - basic support for MIDI files
 games-fps/darkplaces:cdsound - Enables using CD audio in the engine
@@ -5319,6 +5322,7 @@ media-video/mpv:sdl - Enable media-libs/libsdl2 based video and audio outputs (N
 media-video/mpv:sixel - Enable support for the sixel video backend using media-libs/libsixel
 media-video/mpv:sndio - Enable sound support via media-sound/sndio
 media-video/mpv:soc - Use additional media-video/ffmpeg patches for efficient playback on some SoCs (e.g. ARM, RISC-V)
+media-video/mpv:subrandr - Enable support for SRV3 and WebVTT subtitle formats using media-libs/subrandr
 media-video/mpv:tools - Install extra tools: mpv_identify.sh, mpv_idet.sh, and umpv
 media-video/mpv:uchardet - Enable subtitles charset discovery via app-i18n/uchardet
 media-video/mpv:zimg - Enable libzimg support (for vf_fingerprint)
@@ -7409,6 +7413,7 @@ sci-libs/gdal:ogdi - Enable support for the open geographic datastore interface 
 sci-libs/gdal:parquet - Enables read/write parquet data format (dev-libs/apache-arrow)
 sci-libs/gdal:qhull - Enable support for linear interpolation of gdal_grid with media-libs/qhull
 sci-libs/gdal:spatialite - Enable Spatial DBMS over sqlite dev-db/spatialite
+sci-libs/gdal:system-tiff - Build against system media-libs/tiff and sci-libs/libgeotiff (JPEG XL not supported with this enabled)
 sci-libs/gdal:tools - Build command line utilities
 sci-libs/gdal:xls - Add the dev-libs/freexl library for xls import support
 sci-libs/ginkgo:cuda - Add support for cuda assimp (dev-util/nvidia-cuda-toolkit)
@@ -8249,6 +8254,7 @@ sys-cluster/ceph:xfs - Add xfs support
 sys-cluster/ceph:zbd - Enable sys-block/libzbd bluestore backend
 sys-cluster/charliecloud:ch-image - Build the internal builder ch-image (previously named ch-grow)
 sys-cluster/charliecloud:fuse - Enable FUSE support for mounting squashfs images
+sys-cluster/charliecloud:gc - Enable garbage collection support via dev-libs/boehm-gc
 sys-cluster/charliecloud:json - Enable features that rely on cJSON such as CDI
 sys-cluster/charm:ampi - Build implementation of MPI on top of Charm++
 sys-cluster/charm:charmdebug - Enable the charm debugger
