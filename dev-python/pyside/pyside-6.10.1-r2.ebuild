@@ -8,8 +8,7 @@
 
 EAPI=8
 
-# python3.14 support upstream but getting build issues
-PYTHON_COMPAT=( python3_{11..13} )
+PYTHON_COMPAT=( python3_{11..14} )
 LLVM_COMPAT=( {16..21} )
 DISTUTILS_USE_PEP517=setuptools
 DISTUTILS_EXT=1
@@ -33,7 +32,7 @@ if [[ ${PV} == *.9999 ]]; then
 else
 	SRC_URI="https://download.qt.io/official_releases/QtForPython/${PN}6/PySide6-${PV}-src/${MY_P}.tar.xz"
 	S="${WORKDIR}/${MY_P}"
-	KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc64 ~riscv ~x86"
+	KEYWORDS="amd64 ~arm arm64 ~loong ~ppc64 ~riscv ~x86"
 fi
 
 LICENSE="|| ( GPL-2 GPL-3 LGPL-3 )"
@@ -288,6 +287,9 @@ python_prepare_all() {
 		linux
 	# Doesn't appear to play well with virtualx as it tries to use wayland
 	[QtUiTools::loadUiType_test]
+		linux
+	# py3.14?
+	[sample::multiple_derived]
 		linux
 	EOF
 
