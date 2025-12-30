@@ -445,6 +445,7 @@ app-crypt/rpm-sequoia:nettle - Use dev-libs/nettle as a crypto backend
 app-crypt/rpm-sequoia:openssl - Use dev-libs/openssl as a crypto backend
 app-crypt/seahorse:ldap - Enable seahorse to manipulate GPG keys on a LDAP server.
 app-crypt/sequoia-chameleon-gnupg:botan - Use dev-libs/botan as crypto provider.
+app-crypt/sequoia-sop:botan - Use dev-libs/botan as crypto provider.
 app-crypt/sequoia-sq:botan - Use dev-libs/botan as crypto provider.
 app-crypt/sequoia-sqv:botan - Use dev-libs/botan as crypto provider.
 app-crypt/swtpm:fuse - Support sys-fs/fuse based /dev/tpm interface
@@ -1122,7 +1123,6 @@ app-portage/pfl:network-cron - Adds a cron job which does a weekly submit of the
 app-portage/portage-utils:gpkg - Build GLEP-78 gpkg support in qpkg
 app-portage/portage-utils:gtree - Build gtree repository cache support
 app-portage/portage-utils:qmanifest - Build qmanifest applet, this adds additional dependencies for GPG, OpenSSL and BLAKE2B hashing
-app-portage/portage-utils:qtegrity - Build qtegrity applet, this adds additional dependencies for OpenSSL
 app-portage/tatt:templates - Install template scripts to be used with tatt
 app-shells/atuin:client - Enable the autin client
 app-shells/atuin:daemon - Enable the autin background daemon on the client
@@ -4261,6 +4261,7 @@ media-gfx/openvdb:utils - Build utility binaries
 media-gfx/photoqt:barcode - Support for QR and barcodes detection using media-libs/zxing-cpp
 media-gfx/photoqt:chromecast - Enable Chromecast support using dev-python/pychromecast
 media-gfx/photoqt:devil - Support additional image formats using media-libs/devil
+media-gfx/photoqt:extensions - Support additional features using extensions
 media-gfx/photoqt:freeimage - Support additional image formats using media-libs/freeimage
 media-gfx/photoqt:mpv - Support for video files using media-video/mpv
 media-gfx/photoqt:vips - Support for media-libs/vips image processing library
@@ -4384,6 +4385,14 @@ media-libs/libbluray:aacs - Add support for decryption of AACS
 media-libs/libbluray:bdplus - Use media-libs/libbdplus for BD+ decryption
 media-libs/libbluray:java - Add support for BD-J
 media-libs/libbluray:utils - Install command-line utilities and examples
+media-libs/libcamera:drm - Build with drm support for cam tool
+media-libs/libcamera:elfutils - Build with improved debugging using dev-libs/elfutils
+media-libs/libcamera:gui - Build QCam extra tool
+media-libs/libcamera:openssl - Verify IPA modules signatures using dev-libs/openssl. Note:dev-libs/openssl is also required at build time to sign IPA modules.
+media-libs/libcamera:sdl - Build Cam extra tool with SDL sink support (requires USE=gui)
+media-libs/libcamera:tools - Build extra tools (including cam, qcam and lc-compliance). Note: 'qcam' requires also USE="gui"
+media-libs/libcamera:trace - Build with tracing capabilities
+media-libs/libcamera:unwind - Build with improved debugging using sys-libs/libunwind (has no effect if USE=elfutils is set)
 media-libs/libcanberra:alsa - Enables ALSA sound driver.
 media-libs/libcanberra:gstreamer - Enables gstreamer sound driver. Not useful when alsa or pulseaudio is available.
 media-libs/libcanberra:pulseaudio - Enables PulseAudio sound driver that should be able to support positional event sounds. This is the preferred choice for best sound events experience and picked by default if compiled in and possible to use at runtime.
