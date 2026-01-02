@@ -2724,7 +2724,6 @@ dev-qt/qtspeech:flite - Enable text-to-speech synthesizer plugin using app-acces
 dev-qt/qtspeech:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtspeech:speechd - Enable text-to-speech synthesizer plugin using app-accessibility/speech-dispatcher engine
 dev-qt/qttools:assistant - Build Qt Assistant and the QtHelp module
-dev-qt/qttools:clang - Enable using libclang for code parsing (linguist/qdoc)
 dev-qt/qttools:designer - Build Qt Designer
 dev-qt/qttools:distancefieldgenerator - Build Qt Distance Field Generator
 dev-qt/qttools:kmap2qmap - Build tool to generate keymaps for use on Embedded Linux
@@ -5357,6 +5356,7 @@ media-video/pipewire:flatpak - Enable Flatpak support
 media-video/pipewire:gsettings - Use gsettings (dev-libs/glib) to read/save used modules (useful for e.g. media-sound/paprefs
 media-video/pipewire:jack-client - Install a plugin for running PipeWire as a JACK client
 media-video/pipewire:jack-sdk - Use PipeWire as JACK replacement
+media-video/pipewire:libcamera - Enable libcamera plugin via media-libs/libcamera
 media-video/pipewire:liblc3 - Allow loading LC3 plugins via media-sound/liblc3
 media-video/pipewire:loudness - Enable loudness normalisation according to the EBU R128 standard using media-libs/libebur128
 media-video/pipewire:lv2 - Allow loading LV2 plugins via media-libs/lv2
@@ -6564,9 +6564,9 @@ net-misc/modemmanager:mbim - Enable MBIM modem protocol
 net-misc/modemmanager:qmi - Enable support for the QMI modem protocol used by devices with Qualcomm chipsets
 net-misc/modemmanager:qrtr - Enable support for the QMI over IPC Router bus (QRTR) protocol
 net-misc/moonlight:cuda - Enable accelerated video rendering on NVIDIA hardware
+net-misc/moonlight:drm - Enable video rendering via x11-libs/libdrm
 net-misc/moonlight:embedded - Optimize UI for fullscreen non-desktop usage
 net-misc/moonlight:glslow - Prefer direct KMS/DRM rendering over EGL/GLES rendering for better performance on some weaker GPUs
-net-misc/moonlight:libdrm - Enable video rendering via x11-libs/libdrm
 net-misc/moonlight:soundio - Enable sound output via media-libs/libsoundio instead of media-libs/libsdl2
 net-misc/moonlight:vkslow - Prefer hardware YUV-RGB conversion and scaling over Vulkan for better performance on some weaker GPUs
 net-misc/mosh:client - Build network client
@@ -7509,8 +7509,9 @@ sci-libs/openblas:relapack - Build the ReLAPACK extension to OpenBLAS
 sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/opencascade:freetype - Enable media-libs/freetype support
 sci-libs/opencascade:inspector - Build Inspector tool
+sci-libs/opencascade:jemalloc - Enable jemalloc allocator support via dev-libs/jemalloc
 sci-libs/opencascade:json - Enable JSON support through dev-libs/rapidjson
-sci-libs/opencascade:optimize - Don't clear allocated memory. Use optimized memory manager unlesstbb USE flag is set.
+sci-libs/opencascade:optimize - Don't clear allocated memory. Use optimized memory manager unless USE="tbb" is set
 sci-libs/opencascade:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
 sci-libs/opencascade:testprograms - Indicates whether non-regression OCCT test scripts should be installed
 sci-libs/opencascade:vtk - Enable Visualization Toolkit support via sci-libs/vtk
@@ -7774,16 +7775,12 @@ sci-physics/lammps:extra - Additional compute, dump, fix, molecular, pair styles
 sci-physics/lammps:hip - Enable hip gpu computing support
 sci-physics/lammps:lammps-memalign - Enables the use of the posix_memalign() call instead of malloc() when large chunks or memory are allocated by LAMMPS. Aliengnment is on 16 byte boundaries.
 sci-physics/pythia:fastjet - Build jets using the sci-physics/fastjet package
-sci-physics/pythia:hepmc - Adds support for High Energy Physics Monte Carlo Generators sci-physics/hepmc
-sci-physics/pythia:hepmc2 - Adds support for High Energy Physics Monte Carlo Generators 2 sci-physics/hepmc
 sci-physics/pythia:hepmc3 - Adds support for High Energy Physics Monte Carlo Generators 3 sci-physics/hepmc
 sci-physics/pythia:highfive - Support hdf and highfive
 sci-physics/pythia:lhapdf - Support the use of external PDF sets via sci-physics/lhapdf
 sci-physics/pythia:mpich - Support mpich
 sci-physics/pythia:rivet - Support sci-physics/rivet
 sci-physics/pythia:root - Use sci-physics/root trees and histograms (in examples only)
-sci-physics/rivet:hepmc2 - Build with sci-physics/hepmc version 2
-sci-physics/rivet:hepmc3 - Build with sci-physics/hepmc version 3
 sci-physics/rivet:highfive - Build with sci-libs/highfive and sci-libs/hdf5
 sci-physics/rivet:zlib - Build with virtual/zlib
 sci-physics/root:R - Enable support for dev-lang/R
@@ -7808,7 +7805,6 @@ sci-physics/root:uring - Enable support for sys-libs/liburing in RNTuple
 sci-physics/root:vc - Enable support for dev-libs/vc with VecCore
 sci-physics/root:xrootd - Build the interface for net-libs/xrootd
 sci-physics/thepeg:fastjet - Adds support for sci-physics/fastjet
-sci-physics/thepeg:hepmc - Adds support for High Energy Physics Monte Carlo Generatorssci-physics/hepmc
 sci-physics/thepeg:hepmc3 - Adds support for High Energy Physics Monte Carlo Generators 3sci-physics/hepmc
 sci-physics/thepeg:lhapdf - Adds support for sci-physics/lhapdf
 sci-physics/thepeg:rivet - Adds support for sci-physics/rivet

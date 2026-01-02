@@ -23,7 +23,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~arm64-macos ~x64-macos ~x64-solaris"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 ~sparc x86 ~arm64-macos ~x64-macos ~x64-solaris"
 IUSE="+alternatives bzip2 doc ldap nls readline selinux +smartcard ssl test +tofu tpm tools usb user-socket wks-server"
 RESTRICT="!test? ( test )"
 REQUIRED_USE="test? ( tofu )"
@@ -33,7 +33,7 @@ REQUIRED_USE="test? ( tofu )"
 DEPEND="
 	>=dev-libs/libassuan-2.5.0:=
 	>=dev-libs/libgcrypt-1.9.1:=
-	>=dev-libs/libgpg-error-1.46
+	>=dev-libs/libgpg-error-1.48
 	>=dev-libs/libksba-1.6.3
 	>=dev-libs/npth-1.2
 	virtual/zlib:=
