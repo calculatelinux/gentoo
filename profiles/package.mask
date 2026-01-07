@@ -36,15 +36,6 @@
 
 #--- END OF EXAMPLES ---
 
-# Fabian Groffen <grobian@gentoo.org> (2026-01-01)
-# multiple (build and gpkg) issues, better wait for next release
-=app-portage/portage-utils-0.98
-
-# Ionen Wolkens <ionen@gentoo.org> (2025-12-30)
-# This release has been yanked upstream, do the same in case.
-# https://github.com/PyO3/maturin/issues/2909
-~dev-util/maturin-1.11.0
-
 # James Le Cuirot <chewi@gentoo.org> (2025-12-24)
 # The upstream community has forked with the vast majority going to UZDoom, now
 # packaged as games-engines/uzdoom in Gentoo. https://zdoom.org now follows this
@@ -165,22 +156,11 @@ games-engines/qtads
 # Removal on 2026-01-15
 games-strategy/hedgewars
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2025-12-05)
-# Broken w/ CMake4, IUSE python stuck on py3.12, Gui stuck on Qt5.
-# Bugs #929093, #952086, #952528, #955277. Removal on 2026-01-04.
-media-gfx/yafaray
-
 # Nowa Ammerlaan <nowa@gentoo.org> (2025-12-05)
 # Stuck on Qt5, no upstream action.
 # Please use the games-action/prismlauncher fork instead.
 # Removal on 2026-01-05. Bug 967108.
 games-action/multimc-bin
-
-# Ulrich Müller <ulm@gentoo.org> (2025-12-04)
-# No longer functional because the Twitter API has been axed.
-# Last release in 2015, last commit to upstream repository in 2018.
-# Removal on 2026-01-03. Bug #965998.
-app-emacs/twittering-mode
 
 # Michał Górny <mgorny@gentoo.org> (2025-12-03)
 # Upstream changed how multiprocessing shares data between processes,
