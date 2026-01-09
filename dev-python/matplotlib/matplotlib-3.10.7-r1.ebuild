@@ -1,4 +1,4 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -30,7 +30,7 @@ SRC_URI+="
 # Fonts: BitstreamVera, OFL-1.1
 LICENSE="BitstreamVera BSD matplotlib MIT OFL-1.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ppc ppc64 ~riscv ~s390 ~sparc ~x86 ~arm64-macos ~x64-macos"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ppc ppc64 ~riscv ~s390 ~sparc x86 ~arm64-macos ~x64-macos"
 IUSE="cairo excel gtk3 latex qt6 tk webagg wxwidgets"
 
 LATEX_DEPEND="
@@ -284,6 +284,17 @@ python_test() {
 			EPYTEST_DESELECT+=(
 				tests/test_backend_pgf.py::test_pdf_pages_metadata_check
 				tests/test_backend_pgf.py::test_minus_signs_with_tex
+			)
+			;;
+		x86)
+			EPYTEST_DESELECT+=(
+				'tests/test_tightlayout.py::test_tight_layout2[png]'
+				'tests/test_patches.py::test_wedge_range[pdf]'
+				'tests/test_tightlayout.py::test_tight_layout3[png]'
+				'tests/test_quiver.py::test_barbs[png]'
+				'tests/test_axes.py::test_fill_between_interpolate_decreasing[png]'
+				# too large for 32-bit platforms
+				'tests/test_axes.py::test_psd_csd[png]'
 			)
 			;;
 		alpha|arm|m68k|o32|ppc|s390|sh|sparc|x86)

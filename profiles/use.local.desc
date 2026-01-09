@@ -5247,7 +5247,6 @@ media-video/ffmpeg-compat:svt-av1 - Enable AV1 encoding support via media-libs/s
 media-video/ffmpeg-compat:truetype - Enable drawtext filter support via media-libs/freetype and media-libs/harfbuzz
 media-video/ffmpeg-compat:twolame - Enable MP2 encoding support via media-sound/twolame in addition to FFmpeg's own implementation
 media-video/ffmpeg-compat:vidstab - Enable video stabilization filter support via media-libs/vidstab
-media-video/ffmpeg-compat:vmaf - Enable Netflix's perceptual video quality assessment filter support via media-libs/libvmaf
 media-video/ffmpeg-compat:vpx - Enable VP8 and VP9 de/encoding support via media-libs/libvpx in addition to FFmpeg's own implementation (for decoding only)
 media-video/ffmpeg-compat:x265 - Enable H.265/HEVC encoding support via media-libs/x265
 media-video/ffmpeg-compat:xml - Enable Dynamic Adaptive Streaming over HTTP (DASH) stream support using dev-libs/libxml2
@@ -8534,6 +8533,7 @@ sys-libs/freeipmi:nagios - Install a nagios plugin to check sensors' status.
 sys-libs/freeipmi:without-root - Configure whether or not to check for root access in ipmi tools.
 sys-libs/gdbm:berkdb - enable compatibility layer for UNIX-like dbm and ndbm interfaces
 sys-libs/glibc:cet - Enable Intel Control-flow Enforcement Technology (needs binutils 2.29 and gcc 8)
+sys-libs/glibc:clang - Allow building with clang (if proper environment is set). Highly experimental. Disable to auto-force gcc usage.
 sys-libs/glibc:clone3 - Enable the new clone3 syscall within glibc. Can be disabled to allow compatibility with older Electron applications.
 sys-libs/glibc:compile-locales - build *all* locales in src_install; this is generally meant for stage building only as it ignores /etc/locale.gen file and can be pretty slow
 sys-libs/glibc:crypt - build and install libcrypt and crypt.h
