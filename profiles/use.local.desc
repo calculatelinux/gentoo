@@ -16,6 +16,7 @@ app-accessibility/at-spi2-core:dbus-broker - Use DBus broker implementation inst
 app-accessibility/brltty:api - build brltty's application program interface
 app-accessibility/brltty:beeper - support the console tone generator
 app-accessibility/brltty:fm - support for the sound card synthesizer
+app-accessibility/brltty:hid - support for opening and closing a HID device
 app-accessibility/brltty:louis - Use braille translator dev-libs/liblouis
 app-accessibility/brltty:midi - support the musical instrument digital interface
 app-accessibility/brltty:pcm - support for sound card digital audio
@@ -477,6 +478,8 @@ app-doc/tldp-howto:pdf - Install pdf docs
 app-doc/tldp-howto:text - Install plain-text docs
 app-editors/bluefish:gucharmap - Enable gucharmap dictionary plugin
 app-editors/bluefish:spell - Enable spell checking capabilities via enchant library
+app-editors/cursor:egl - Use EGL for smooth rendering on high refresh rate monitors
+app-editors/cursor:wayland - Run in wayland mode under wayland sessions, xwayland otherwise. This flag doesn't affect x11 sessions.
 app-editors/emacs:athena - Enable the MIT Athena widget set (x11-libs/libXaw)
 app-editors/emacs:dynamic-loading - Enable loading of dynamic libraries (modules) at runtime
 app-editors/emacs:games - Support shared score files for games
@@ -1608,7 +1611,7 @@ dev-haskell/assoc:tagged - You can disable the use of the `tagged` package using
 dev-haskell/atomic-primops:debug - Enable extra internal checks.
 dev-haskell/bifunctors:semigroups - You can disable the use of the `semigroups` package using `-f-semigroups`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/bifunctors:tagged - You can disable the use of the `tagged` package using `-f-tagged`. Disabing this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
-dev-haskell/bitvec:gmp - Link against the GMP library for the ultimate performance of `zipBits`, `invertBits` and `countBits`. Users are strongly encouraged to enable this flag whenever possible.
+dev-haskell/bitvec:simd - Use a C SIMD implementation for the ultimate performance of `zipBits`, `invertBits` and `countBits`. Disable this flag if there are problems with the C FFI.
 dev-haskell/boring:tagged - You can disable the use of the `tagged` package using `-f-tagged`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/c2hs:regression - Enable regression suite build.
 dev-haskell/cabal-install:lukko - Use @lukko@ for file-locking
@@ -1702,6 +1705,7 @@ dev-haskell/skylighting:executable - Whether to build the skylighting program
 dev-haskell/skylighting-core:executable - Build skylighting-extract tool
 dev-haskell/some:newtype-unsafe - Use implementation using @newtype@ and unsafe @Any@, instead of GADT
 dev-haskell/splitmix:optimised-mixer - Use JavaScript for mix32
+dev-haskell/tagged:template-haskell - You can disable the use of the `template-haskell` package using `-f-template-haskell`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/tasty:clock - Depend on the clock package for more accurate time measurement
 dev-haskell/texmath:executable - Compile test executable.
 dev-haskell/texmath:server - Compile webserver.
@@ -7323,6 +7327,7 @@ sci-geosciences/qgis:qml - Enable support Qml-based plugins using dev-qt/qtdecla
 sci-geosciences/qgis:webengine - Enable webengine support using dev-qt/qtwebengine
 sci-geosciences/viking:geoclue - Use app-misc/geoclue to determine current location
 sci-geosciences/viking:libexif - Use media-libs/libexif for EXIF support
+sci-geosciences/viking:nova - Enable celestial mechanics and astronomical calculations with sci-libs/libnova
 sci-geosciences/viking:oauth - Enable OAuth authentication for OSM
 sci-libs/adolc:boost - Use the boost allocator from dev-libs/boost
 sci-libs/adolc:sparse - Add support for sparse matrix algebra with sci-libs/colpack
@@ -8393,6 +8398,9 @@ sys-devel/sparse:xml - Build the c2xml utility (requires dev-libs/libxml2)
 sys-fabric/mstflint:adb-generic-tools - Enable compiling the following tools: mstreg and mstlink
 sys-fabric/mstflint:inband - Enable firmware updates for Mellanox SwitchX and ConnectIB devices
 sys-fabric/opensm:tools - Install ssld extra tool
+sys-firmware/alsa-firmware:compress-xz - Compress firmware using xz (app-arch/xz-utils) before installation
+sys-firmware/alsa-firmware:compress-zstd - Compress firmware using zstd (app-arch/zstd) before installation
+sys-firmware/alsa-firmware:deduplicate - Remove firmware that is also provided by sys-kernel/linux-firmware
 sys-firmware/blisp:tools - Build the blisp command-line utility used to upload firmware to the pinecil
 sys-firmware/broadcom-bt-firmware:compress-xz - Compress firmware using xz (app-arch/xz-utils) before installation
 sys-firmware/broadcom-bt-firmware:compress-zstd - Compress firmware using zstd (app-arch/zstd) before installation
