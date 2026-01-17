@@ -1,0 +1,16 @@
+BDEPEND=app-alternatives/ninja >=dev-build/cmake-3.28.5 virtual/pkgconfig
+DEFINED_PHASES=compile configure install postinst prepare setup test
+DEPEND=dev-libs/boost:= dev-libs/openssl:0= mysql? ( dev-db/mysql-connector-c:= ) acct-group/trojan acct-user/trojan test? ( net-misc/curl || ( dev-lang/python:3.13 dev-lang/python:3.12 dev-lang/python:3.11 ) )
+DESCRIPTION=An unidentifiable mechanism that helps you bypass GFW
+EAPI=8
+HOMEPAGE=https://github.com/trojan-gfw/trojan
+INHERIT=cmake python-any-r1 systemd readme.gentoo-r1
+IUSE=mysql +nat +reuseport tcpfastopen test
+KEYWORDS=~amd64 ~arm ~arm64 ~riscv ~x86
+LICENSE=GPL-3+
+RDEPEND=dev-libs/boost:= dev-libs/openssl:0= mysql? ( dev-db/mysql-connector-c:= )
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/trojan-gfw/trojan/archive/v1.16.0.tar.gz -> trojan-1.16.0.tar.gz
+_eclasses_=cmake	5691a3da96eac88f135cf3596b8c2c3c	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	3a59a39e97af0f7c03f49cf3c22f262b	python-any-r1	891415dfe39ad9b41b461f2b86354af0	python-utils-r1	dbb8c4d794033ad7e7221eaf567a6c90	readme.gentoo-r1	b045f3acf546393ab6b3170781875358	systemd	a964c0cbe818b5729da1dbfcee5be861	toolchain-funcs	30214924c0c3b92ec7dbf24fc70d60d3	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
+_md5_=71d3ed0e381191f7ea738fe4390425d9

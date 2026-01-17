@@ -3206,6 +3206,7 @@ games-engines/scummvm-tools:tremor - Enable tremor, a fixed-point version of the
 games-engines/solarus:doc - Install doxygen developer documentation.
 games-engines/uzdoom:non-free - Install non-free components for an optimal experience of commercial games
 games-engines/uzdoom:swr - Enable the software renderer
+games-fps/alephone:video-export - Enable film export support
 games-fps/alienarena:vidmode - Link against x11-libs/libXxf86vm. Required for full-screen support.
 games-fps/chocolate-doom:midi - basic support for MIDI files
 games-fps/darkplaces:cdsound - Enables using CD audio in the engine
@@ -7493,7 +7494,6 @@ sci-libs/netcdf:hdf - Build with HDF4 read capability(sci-libs/hdf, sci-libs/hdf
 sci-libs/nlopt:octave - Add plugin for sci-mathematics/octave
 sci-libs/octomap:dynamicEDT3D - Build and install dynamicEDT3D library: A library for incrementally updatable Euclidean distance transforms in 3D.
 sci-libs/openblas:cpudetection - Build dynamic architecture detection at run time (for multi targets)
-sci-libs/openblas:dynamic - Build dynamic architecture detection at run time (for multi targets)
 sci-libs/openblas:eselect-ldso - Enable BLAS/LAPACK runtime switching
 sci-libs/openblas:index64 - Compile a separate INTERFACE64 OpenBLAS
 sci-libs/openblas:pthread - Build with pthread threading model
@@ -8928,7 +8928,7 @@ x11-base/xorg-server:xvfb - Build the Xvfb server
 x11-base/xwayland:libei - Enable emulated input using dev-libs/libei
 x11-base/xwayland:unwind - Enable libunwind usage for backtraces
 x11-base/xwayland:xcsecurity - Build Security extension
-x11-drivers/nvidia-drivers:kernel-open - Use the open source variant of the drivers (only works for Turing/Ampere or newer GPUs, aka GTX 1650+ -- recommended with >=560.xx drivers if usable and is *required* for 50xx Blackwell or newer GPUs -- always-enabled regardless of USE in >=590.xx)
+x11-drivers/nvidia-drivers:kernel-open - Use the open source variant of the drivers (only usable with Turing/Ampere or newer GPUs, aka GTX 1650+ -- note 50xx Blackwell or newer cards *require* this)
 x11-drivers/nvidia-drivers:persistenced - Install the persistence daemon for keeping devices state when unused (e.g. for headless)
 x11-drivers/nvidia-drivers:powerd - Install the NVIDIA dynamic boost support daemon (only useful with specific laptops, ignore if unsure)
 x11-drivers/nvidia-drivers:static-libs - Install the XNVCtrl static library for accessing sensors and other features
