@@ -36,6 +36,16 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-01-18)
+# Masked for testing.
+>=dev-libs/boost-1.90
+
+# Ulrich Müller <ulm@gentoo.org> (2026-01-18)
+# Obsolete since Emacs 29, per upstream README.md. Use the "docker"
+# method from the integrated tramp-container package as replacement.
+# Removal on 2026-02-17. Bug #968938.
+app-emacs/docker-tramp
+
 # Michał Górny <mgorny@gentoo.org> (2026-01-13)
 # LLVM 15 is only required by masked packages.  It will be removed when
 # the reverse dependencies are gone.  Bug #920536.
@@ -73,12 +83,6 @@
 =dev-libs/intel-compute-runtime-24.35.30872.36
 =dev-util/intel-graphics-compiler-1.0.17791.18-r1
 
-# Michał Górny <mgorny@gentoo.org> (2026-01-11)
-# Boost 1.89 and its reverse dependencies.  Masked for testing.
-# Tracker bug #961524.
->=dev-libs/boost-1.89
->=dev-python/scipy-1.17
-
 # Fabian Groffen <grobian@gentoo.org> (2026-01-08)
 # Too many issues already.  Further testing is appreciated, but expect
 # breakage.
@@ -111,7 +115,7 @@ dev-python/happybase
 games-engines/scrap-engine
 games-rpg/pokete
 net-misc/pulseaudio-dlna
-www-client/seamonkey
+<www-client/seamonkey-2.53.23
 
 # Sam James <sam@gentoo.org> (2025-12-18)
 # Another change to multiprocessing broke Portage. >=sys-apps/portage-3.0.73-r2
@@ -236,13 +240,6 @@ dev-python/readthedocs-sphinx-ext
 # No reverse dependencies left.
 # Removal on 2025-12-22.  Bug #966327.
 dev-python/fake-py
-
-# orbea <orbea@riseup.net> (2025-11-16)
-# Dead upstream, non-free licenses, depends on libsdl, no revdeps.
-# Use games-emulation/geolith-jg instead.
-# Bugs #744043, #896336, #926370.
-# Removal on 2025-12-16.
-games-emulation/gngeo
 
 # Petr Vaněk <arkamar@gentoo.org> (2025-11-13)
 # The MDEV-38068 issue has been discovered with MariaDB 11.8.4. The issue

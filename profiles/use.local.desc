@@ -1028,6 +1028,7 @@ app-misc/vifm:vim - Install the vifm vim plugin and vim-compatible documentation
 app-misc/worker:avfs - Enable support for sys-fs/avfs
 app-misc/yq:yq-symlink - Create a yq symlink to yq-python.
 app-misc/yq-go:yq-symlink - Create a yq symlink to yq-go.
+app-misc/zellij:system-sqlite - Use the system-wide dev-db/sqlite instead of the bundled one
 app-mobilephone/gammu:curl - Enables curl support
 app-mobilephone/gammu:irda - Enables infrared support
 app-mobilephone/gammu:mysql - Use mysql for data storage
@@ -1364,6 +1365,20 @@ dev-build/meson:test-full - pull in dependencies to run all tests
 dev-build/muon:archive - Enable extracting wraps using app-arch/libarchive.
 dev-build/muon:libpkgconf - Enable looking up packages via dev-util/pkgconf.
 dev-cpp/abseil-cpp:test-helpers - Build libraries that you can use to write tests against Abseil code.
+dev-cpp/aws-sdk-cpp:analytics - Adds access to big data and analysis related services.
+dev-cpp/aws-sdk-cpp:compute - Adds access to Compute and Auto Scaling related services.
+dev-cpp/aws-sdk-cpp:database - Adds access functionality to RDB, NoSQL, TimeStream, and Ledger related services.
+dev-cpp/aws-sdk-cpp:devops - Adds access to CI/CD and developer related services.
+dev-cpp/aws-sdk-cpp:iot - Adds access to IoT and edge services.
+dev-cpp/aws-sdk-cpp:management - Adds access to operational management related services.
+dev-cpp/aws-sdk-cpp:media - Adds access to media processing related services.
+dev-cpp/aws-sdk-cpp:messaging - Adds access to messaging and notification services.
+dev-cpp/aws-sdk-cpp:ml - Adds access to machine learning and AI related services.
+dev-cpp/aws-sdk-cpp:monitor - Adds access to monitoring and operation related services.
+dev-cpp/aws-sdk-cpp:networking - Adds access to network and CDN related services.
+dev-cpp/aws-sdk-cpp:security - Adds access to services related to ID management and security auditing.
+dev-cpp/aws-sdk-cpp:storage - Adds access to services related to object, block, and file storage.
+dev-cpp/aws-sdk-cpp:uncategorized - Add access to services that do not easily fit into existing groups.
 dev-cpp/benchmark:libpfm - Enable dev-libs/libpfm support
 dev-cpp/benchmark:tools - Install some additional Python tools
 dev-cpp/eigen:adolc - Add test support for Adolc (sci-libs/adolc)
@@ -5664,7 +5679,6 @@ net-analyzer/wireshark:dumpcap - Install dumpcap, to dump network traffic from i
 net-analyzer/wireshark:editcap - Install editcap, to edit and/or translate the format of capture files
 net-analyzer/wireshark:http3 - Install net-libs/nghttp3 for enhanced HTTP3 analysis
 net-analyzer/wireshark:ilbc - Build with iLBC support in RTP Player using media-libs/libilbc
-net-analyzer/wireshark:libxml2 - Use dev-libs/libxml2 for handling XML configuration in dissectors
 net-analyzer/wireshark:maxminddb - Use dev-libs/libmaxminddb for IP address geolocation
 net-analyzer/wireshark:mergecap - Install mergecap, to merge two or more capture files into one
 net-analyzer/wireshark:minizip - Build with zip file compression support
@@ -6128,6 +6142,7 @@ net-libs/gnutls:openssl - Build openssl compatibility libraries
 net-libs/gnutls:pkcs11 - Add support for PKCS#11 through app-crypt/p11-kit
 net-libs/gnutls:sslv2 - Support for the old/insecure SSLv2 protocol
 net-libs/gnutls:sslv3 - Support for the old/insecure SSLv3 protocol
+net-libs/gnutls:systemtap - Support crypto-auditing probes via dev-debug/systemtap
 net-libs/gnutls:test-full - Enable full test mode
 net-libs/gnutls:tls-heartbeat - Enable the Heartbeat Extension in TLS and DTLS
 net-libs/gnutls:tools - Build cli tools such as gnutls-cli, certtool and oscptool
@@ -7021,9 +7036,7 @@ net-vpn/strongswan:strongswan_plugins_lookip - Enable support for the lookip plu
 net-vpn/strongswan:strongswan_plugins_md4 - Enable support for the md4 plugin
 net-vpn/strongswan:strongswan_plugins_md5 - Enable support for the md5 plugin
 net-vpn/strongswan:strongswan_plugins_mgf1 - Enable support for the mgf1 plugin
-net-vpn/strongswan:strongswan_plugins_newhope - Enable plugin that allows key exchange based on post-quantum computer New Hope algorithm
 net-vpn/strongswan:strongswan_plugins_nonce - Enable support the nonce plugin
-net-vpn/strongswan:strongswan_plugins_ntru - Enable support for the ntru plugin
 net-vpn/strongswan:strongswan_plugins_openxpki - Enable OCSP responder accessing OpenXPKI MySQL/MariaDB certificate database
 net-vpn/strongswan:strongswan_plugins_padlock - Enable support for the padlock plugin
 net-vpn/strongswan:strongswan_plugins_pem - Enable support for the pem plugin

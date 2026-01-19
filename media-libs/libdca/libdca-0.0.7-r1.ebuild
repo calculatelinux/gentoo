@@ -1,4 +1,4 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -11,7 +11,7 @@ SRC_URI="https://www.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86 ~x64-macos"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~mips ppc ~ppc64 ~riscv ~sparc ~x86 ~x64-macos"
 IUSE="debug oss"
 
 DOCS=( AUTHORS ChangeLog NEWS README TODO doc/${PN}.txt )
@@ -56,5 +56,5 @@ multilib_src_install() {
 	emake DESTDIR="${D}" install
 
 	find "${D}" -name '*.la' -type f -delete || die
-	rm "${D}"/usr/$(get_libdir)/libdts.a || die
+	rm "${ED}"/usr/$(get_libdir)/libdts.a || die
 }
