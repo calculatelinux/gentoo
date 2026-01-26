@@ -41,6 +41,7 @@ PATCHES=(
 	"${FILESDIR}"/fcron-3.1.1-noreadline.patch
 	"${FILESDIR}"/fcron-3.2.1-musl-getopt-order.patch
 	"${FILESDIR}"/fcron-3.4.0-order.patch
+	"${FILESDIR}"/fcron-3.4.0-docdir.patch
 )
 
 pkg_setup() {

@@ -1,13 +1,17 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit libtool pam
+VERIFY_SIG_OPENPGP_KEY_PATH=/usr/share/openpgp-keys/oath-toolkit.asc
+inherit libtool pam verify-sig
 
 DESCRIPTION="Toolkit for using one-time password authentication with HOTP/TOTP algorithms"
 HOMEPAGE="https://www.nongnu.org/oath-toolkit/"
-SRC_URI="mirror://nongnu/${PN}/${P}.tar.gz"
+SRC_URI="
+	mirror://nongnu/${PN}/${P}.tar.gz
+	verify-sig? ( mirror://nongnu/${PN}/${P}.tar.gz.sig )
+"
 
 LICENSE="GPL-3 LGPL-2.1"
 SLOT="0"
@@ -24,6 +28,7 @@ RDEPEND="${DEPEND}"
 BDEPEND="
 	dev-build/gtk-doc-am
 	test? ( dev-libs/libxml2 )
+	verify-sig? ( sec-keys/openpgp-keys-oath-toolkit )
 "
 
 # fpurge is from gnulib, and unused as of 2.6.11
@@ -54,6 +59,7 @@ src_configure() {
 	local myeconfargs=(
 		--cache-file="${S}"/config.cache
 		--enable-pskc
+		--disable-valgrind-tests
 		$(use_enable test xmltest)
 		$(use_enable pam)
 		$(use_with pam pam-dir $(getpam_mod_dir))

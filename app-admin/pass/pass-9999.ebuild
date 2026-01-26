@@ -1,8 +1,9 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
+NEED_EMACS=26.1
 inherit bash-completion-r1 elisp-common
 
 if [[ ${PV} = 9999* ]]; then
@@ -31,7 +32,7 @@ RDEPEND="
 	X? ( x11-misc/xclip )
 	elibc_Darwin? ( app-misc/getopt )
 	dmenu? ( x11-misc/dmenu x11-misc/xdotool )
-	emacs? ( >=app-editors/emacs-23.1:* >=app-emacs/f-0.11.0 >=app-emacs/s-1.9.0 >=app-emacs/with-editor-2.5.11 )
+	emacs? ( >=app-editors/emacs-26.1:* >=app-emacs/with-editor-2.5.11 )
 "
 
 src_prepare() {
@@ -62,8 +63,8 @@ src_install() {
 	use dmenu && dobin contrib/dmenu/passmenu
 
 	if use emacs; then
-		elisp-install ${PN} contrib/emacs/*.{el,elc}
-		elisp-site-file-install "${FILESDIR}/50${PN}-gentoo.el"
+		elisp-install password-store contrib/emacs/*.{el,elc}
+		elisp-site-file-install "${FILESDIR}/50password-store-gentoo.el"
 	fi
 
 	if use importers; then
