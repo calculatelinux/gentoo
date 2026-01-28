@@ -1,0 +1,13 @@
+DEFINED_PHASES=install prepare
+DEPEND=dev-qt/qtbase:6
+DESCRIPTION=Skins for SMPlayer
+EAPI=8
+HOMEPAGE=https://www.smplayer.info/
+INHERIT=qmake-utils
+KEYWORDS=~amd64 ~hppa ~ppc ~ppc64 ~x86
+LICENSE=CC-BY-2.5 CC-BY-SA-2.5 CC-BY-SA-3.0 GPL-2 LGPL-3
+RDEPEND=media-video/smplayer
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/smplayer/smplayer-skins-20.11.0.tar.bz2
+_eclasses_=qmake-utils	28f99dba9219112f4785f46ed426a021	toolchain-funcs	30214924c0c3b92ec7dbf24fc70d60d3
+_md5_=39187bb10c8caea1fac8cbeeaf03862c
