@@ -29,9 +29,9 @@ dev-java/openjdk:27 javafx
 sci-libs/adolc mpi
 
 # Ionen Wolkens <ionen@gentoo.org> (2025-12-24)
-# cargo.eclass' IUSE=debug cannot currently be easily supported by
-# the custom builder the package uses, mask to avoid no-op rebuilds
+# Packages where cargo.eclass' IUSE=debug cannot easily be supported
 # (use RUSTFLAGS if need debug symbols, see also bug #967921)
+games-strategy/naev debug
 media-libs/subrandr debug
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2025-12-21)
@@ -856,6 +856,9 @@ mail-client/claws-mail litehtml
 # terms. Masked to prevent accidental installation of these files,
 # bug #318841#c20.
 sys-kernel/linux-firmware unknown-license
+# Updated: Nowa Ammerlaan <nowa@gentoo.org> (2025-12-30)
+# alsa-frimware distributes these same files, sync the behaviour of
+# both packages. Bug #969656.
 sys-firmware/alsa-firmware alsa_cards_korg1212
 sys-firmware/alsa-firmware alsa_cards_maestro3
 sys-firmware/alsa-firmware alsa_cards_sb16

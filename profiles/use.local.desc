@@ -533,6 +533,7 @@ app-editors/vim:vim-pager - Install vimpager and vimmanpager links
 app-editors/vis:tre - More memory efficient regex search using dev-libs/tre
 app-editors/vscode:egl - Use EGL platform, enables smooth rendering in high refresh rate monitors on X11/Xwayland
 app-editors/vscode:wayland - Run in wayland mode under wayland sessions, xwayland otherwise. This flag doesn't affect x11 sessions.
+app-editors/vscode:webkit - Enable extensions that require WebKit (e.g., Microsoft authentication).
 app-editors/vscodium:egl - Use EGL platform, enables smooth rendering in high refresh rate monitors on X11/Xwayland
 app-editors/vscodium:wayland - Run in wayland mode under wayland sessions, xwayland otherwise. This flag doesn't affect x11 sessions.
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
@@ -1388,6 +1389,7 @@ dev-cpp/eigen:benchmark - Build benchmark suite
 dev-cpp/eigen:boost - Add test support for Boost.Multiprecision (dev-libs/boost)
 dev-cpp/eigen:cholmod - Add test support for CHOLMOD (sci-libs/cholmod)
 dev-cpp/eigen:clang - Use clang for cuda units compilation
+dev-cpp/eigen:clang-cuda - Use clang for cuda units compilation
 dev-cpp/eigen:fftw - Add test support for fftw (sci-libs/fftw)
 dev-cpp/eigen:hip - Enable HIP GPU computing support
 dev-cpp/eigen:klu - Add test support for KLU (sci-libs/klu)
@@ -5719,9 +5721,11 @@ net-analyzer/zabbix:static - Build statically linked binaries
 net-dialup/accel-ppp:ipoe - Build IPoE kernel module
 net-dialup/accel-ppp:libtomcrypt - Support crypto algorithms through dev-libs/libtomcrypt instead of dev-libs/openssl
 net-dialup/accel-ppp:shaper - Support for traffic shaping
+net-dialup/freeradius:kafka - Include support for kafka
 net-dialup/freeradius:memcached - Include dev-libs/libmemcached in caching drivers
 net-dialup/freeradius:mongodb - Include support for MongoDB database
 net-dialup/freeradius:redis - Include support for Redis database
+net-dialup/freeradius:yubikey - Include support for ubikey
 net-dialup/freeradius-client:scp - Add service type hints derived from username prefix
 net-dialup/freeradius-client:shadow - Enable shadow password support
 net-dialup/mgetty:fax - Enables fax support
@@ -6535,8 +6539,6 @@ net-misc/inetutils:uucpd - Enable uucpd
 net-misc/inetutils:whois - Enable whois
 net-misc/iputils:arping - Build and install arping -- tool for sending ARP requests to peers (see also net-analyzer/arping)
 net-misc/iputils:clockdiff - Build and install clockdiff -- tool for comparing clocks via ICMP packets
-net-misc/iputils:rarpd - Build and install rarpd -- server for handling RARP (reverse ARP) requests; generally only used by old systems
-net-misc/iputils:rdisc - Build and install rdisc -- server for the client side of the ICMP router discover protocol
 net-misc/iputils:tracepath - Build and install tracepath -- tool for tracing network paths for discovering MTU values
 net-misc/ipv6calc:apache - Build the apache module mod_ipv6calc
 net-misc/ipv6calc:openssl - Use dev-libs/openssl instead of app-crypt/libmd for MD5 digest
