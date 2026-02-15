@@ -15,8 +15,8 @@ if [[ ${PV} == 9999 ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/Ettercap/${PN}.git"
 else
-	SRC_URI="https://github.com/Ettercap/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~alpha amd64 arm ppc ppc64 ~sparc x86"
+	SRC_URI="https://github.com/Ettercap/${PN}/releases/download/v${PV}/${P}.tar.gz"
+	KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
 fi
 
 IUSE="doc geoip gtk ipv6 ncurses +plugins test"
@@ -24,7 +24,7 @@ RESTRICT="!test? ( test )"
 
 RDEPEND="
 	dev-libs/libbsd
-	|| ( dev-libs/libpcre dev-libs/libpcre2 )
+	dev-libs/libpcre2:=
 	dev-libs/openssl:=
 	net-libs/libnet:1.1
 	>=net-libs/libpcap-0.8.1
@@ -63,7 +63,6 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs=(
 		-DENABLE_CURSES="$(usex ncurses)"
-		-DENABLE_GTK="$(usex gtk)"
 		-DENABLE_PLUGINS="$(usex plugins)"
 		-DENABLE_IPV6="$(usex ipv6)"
 		-DENABLE_TESTS="$(usex test)"
@@ -74,8 +73,11 @@ src_configure() {
 		-DINSTALL_SYSCONFDIR="${EPREFIX}"/etc
 	)
 
-	! use gtk && mycmakeargs+=(-DINSTALL_DESKTOP=OFF)
-	use gtk && mycmakeargs+=(-DGTK_BUILD_TYPE=GTK3)
+	if use gtk ; then
+		mycmakeargs+=(-DGTK_BUILD_TYPE=GTK3 -DENABLE_GTK=ON)
+	else
+		mycmakeargs+=(-DINSTALL_DESKTOP=OFF)
+	fi
 
 	cmake_src_configure
 }

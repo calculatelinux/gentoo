@@ -1,0 +1,13 @@
+BDEPEND=doc? ( >=app-text/doxygen-1.15.0 )
+DEFINED_PHASES=configure install
+DEPEND=dev-libs/libdatrie:=
+DESCRIPTION=Set of Thai language support routines
+EAPI=8
+HOMEPAGE=https://linux.thai.net/projects/libthai https://github.com/tlwg/libthai
+IUSE=doc
+KEYWORDS=~amd64 ~arm ~arm64 ~x86
+LICENSE=LGPL-2.1+
+RDEPEND=dev-libs/libdatrie:=
+SLOT=0/0
+SRC_URI=https://github.com/tlwg/libthai/releases/download/v0.1.30/libthai-0.1.30.tar.xz
+_md5_=925bf6646febc39927cbd967cd7fea64
