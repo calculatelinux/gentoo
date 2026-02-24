@@ -32,7 +32,6 @@ REQUIRED_USE="
 RESTRICT="!test? ( test )"
 
 COMMON_DEPEND="
-	virtual/libcrypt:=
 	selinux? ( sys-libs/libselinux:0= )
 	tmpfiles? (
 		acl? ( sys-apps/acl:0= )
@@ -44,12 +43,14 @@ COMMON_DEPEND="
 	)
 "
 DEPEND="${COMMON_DEPEND}
+	virtual/libcrypt:=[${MULTILIB_USEDEP}]
 	>=sys-kernel/linux-headers-3.11
 "
 
 PEFILE_DEPEND='dev-python/pefile[${PYTHON_USEDEP}]'
 
 RDEPEND="${COMMON_DEPEND}
+	virtual/libcrypt:=
 	boot? ( !<sys-boot/systemd-boot-250 )
 	ukify? (
 		${PYTHON_DEPS}
@@ -139,7 +140,6 @@ multilib_src_configure() {
 		$(meson_native_use_feature selinux)
 		$(meson_use split-usr split-bin)
 		$(meson_native_use_bool sysusers)
-		$(meson_use test tests)
 		$(meson_native_use_bool tmpfiles)
 		$(meson_native_use_feature udev blkid)
 		$(meson_native_use_feature udev libmount)
@@ -199,6 +199,13 @@ multilib_src_configure() {
 		-Dsshdprivsepdir=no
 		-Dzshcompletiondir=no
 	)
+
+	# workaround for bug 969103
+	if [[ ${CHOST} == riscv32* ]] ; then
+		emesonargs+=( -Dtests=true )
+	else
+		emesonargs+=( $(meson_use test tests) )
+	fi
 
 	if use tmpfiles || use udev; then
 		emesonargs+=( $(meson_native_use_feature acl) )

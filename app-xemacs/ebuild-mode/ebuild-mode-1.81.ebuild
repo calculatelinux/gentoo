@@ -13,7 +13,7 @@ if [[ ${PV} = 9999 ]]; then
 	S="${WORKDIR}/${PN}"
 else
 	SRC_URI="https://dev.gentoo.org/~ulm/emacs/${P}.tar.xz"
-	KEYWORDS="~amd64"
+	KEYWORDS="amd64 ~x86"
 fi
 
 DESCRIPTION="Emacs modes for editing ebuilds and other Gentoo specific files"
@@ -55,6 +55,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	optfeature "directory support" app-xemacs/dired
 	optfeature "ebuild commands support" sys-apps/portage
 	optfeature "additional development tools" dev-util/pkgdev
 	optfeature "ebuild QA utilities" dev-util/pkgcheck

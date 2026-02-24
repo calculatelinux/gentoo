@@ -36,6 +36,28 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Orlitzky <mjo@gentoo.org> (2026-02-24)
+# Haskell package (hard to maintain) that never evolved. Easy to
+# replace with a SQL query. Removal on or after 2026-03-24.
+net-mail/list-remote-forwards
+net-mail/mailbox-count
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-02-22)
+# Obsolete package blocking vdr-2.2 cleanup.
+# Removal on 2026-03-24.
+media-plugins/vdr-peer
+=media-video/vdr-2.2.0*
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-02-22)
+# Obsolete package. Use media-plugins/vdr-skinelchihd instead.
+# Bug #945071. Removal on 2026-03-24.
+media-plugins/vdr-skincurses
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-02-22)
+# Obsolete package. Use media-video/vdr[demoplugins] instead.
+# Removal on 2026-03-24.
+media-plugins/vdr-skinelchi
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-02-15)
 # Masked for testing and possible libvlc revdeps breakage.
 ~media-video/vlc-4.0.0_pre20260215
@@ -75,11 +97,6 @@ dev-python/rustworkx
 # Removal on 2026-03-14.
 dev-qt/qtlockedfile
 dev-qt/qtsingleapplication
-
-# Conrad Kostecki <conikost@gentoo.org> (2026-02-11)
-# Release 1.14.26 breaks API, so masking for now.
-# Bug #969888.
->=net-libs/libupnp-1.14.26
 
 # David Seifert <soap@gentoo.org> (2026-02-11)
 # No other distro packages this, last release over 12 years ago, C23 issues.
@@ -290,13 +307,6 @@ net-analyzer/arp-sk
 # Bug #969685
 =gui-apps/slurp-1.6.0
 
-# Michał Górny <mgorny@gentoo.org> (2026-01-24)
-# Needs porting to Python 3.13.  Requires old versions of multiple
-# dependencies, and reportedly is already broken with its current
-# dependencies.  The efforts to revive it do not progress.
-# Removal on 2026-02-23.  Bug #944883, #952290, #955765, #968383.
-dev-embedded/platformio
-
 # Maciej Barć <xgqt@gentoo.org> (2026-01-24)
 # Some app-emacs packages that are obsolete since Emacs 29 or much
 # older. They all are available in the main GNU Emacs distribution.
@@ -319,12 +329,6 @@ app-emacs/use-package
 # Removal on 2026-02-22.
 # Bug #966194, #907208, #906665, #796242, #794028, #656354.
 app-portage/java-ebuilder
-
-# Ulrich Müller <ulm@gentoo.org> (2026-01-18)
-# Obsolete since Emacs 29, per upstream README.md. Use the "docker"
-# method from the integrated tramp-container package as replacement.
-# Removal on 2026-02-17. Bug #968938.
-app-emacs/docker-tramp
 
 # Eray Aslan <eras@gentoo.org> (2025-12-24)
 # Mask experimental software

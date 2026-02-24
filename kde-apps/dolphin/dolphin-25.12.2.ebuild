@@ -8,7 +8,7 @@ ECM_TEST="true"
 PVCUT=$(ver_cut 1-3)
 KFMIN=6.19.0
 QTMIN=6.10.1
-inherit ecm flag-o-matic gear.kde.org optfeature xdg
+inherit ecm gear.kde.org optfeature xdg
 
 DESCRIPTION="Plasma filemanager focusing on usability"
 HOMEPAGE="https://apps.kde.org/dolphin/ https://userbase.kde.org/Dolphin"
@@ -59,9 +59,16 @@ RDEPEND="${DEPEND}
 	>=kde-apps/thumbnailers-${PVCUT}:6
 "
 
-src_configure() {
-	use elibc_musl && append-ldflags -Wl,-z,stack-size=0x100000 # upstream bug 470763
+CMAKE_SKIP_TESTS=(
+	servicemenuinstaller # requires ruby, no thanks
+	dolphinmainwindowtest # hangs forever
+	kfileitem{listview,model}test # hang forever
+	kitemlistcontrollertest # hangs forever
+	kitemlistcontrollerexpandtest # flaky even according to upstream # bug 947223
+	placesitemmodeltest # requires DBus
+)
 
+src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_DISABLE_FIND_PACKAGE_PackageKitQt6=ON
 		$(cmake_use_find_package semantic-desktop KF6Baloo)
@@ -72,16 +79,6 @@ src_configure() {
 		-DCMAKE_DISABLE_FIND_PACKAGE_SeleniumWebDriverATSPI=ON # not packaged
 	)
 	ecm_src_configure
-}
-
-src_test() {
-	local myctestargs=(
-		# servicemenuinstaller requires ruby, no thanks
-		# dolphinmainwindowtest, kitemlistcontrollertest, kfileitemlistviewtest, kfileitemmodeltest hang forever
-		# placesitemmodeltest requires DBus
-		-E "(servicemenuinstaller|dolphinmainwindowtest|kfileitemlistviewtest|kfileitemmodeltest|kitemlistcontrollertest|placesitemmodeltest)"
-	)
-	ecm_src_test
 }
 
 pkg_postinst() {

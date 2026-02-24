@@ -9,5 +9,5 @@ LICENSE=GPL-3+
 RDEPEND=app-emacs/compat >=app-editors/emacs-29.1:*
 SLOT=0
 SRC_URI=https://github.com/minad/tempel/archive/1.11.tar.gz -> tempel-1.11.gh.tar.gz
-_eclasses_=elisp	a37bfc35b86403c770beebbd71661c30	elisp-common	ce20c7e2fc0c52b58ddabcd536b7310b
+_eclasses_=elisp	a37bfc35b86403c770beebbd71661c30	elisp-common	0ea9a0d3bc26353e1642c73560a24fdf
 _md5_=14e41ca2510434256639e778fe6ffb8e

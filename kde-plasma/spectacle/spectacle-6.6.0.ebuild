@@ -7,14 +7,14 @@ ECM_HANDBOOK="optional"
 ECM_TEST="forceoptional"
 KFMIN=6.22.0
 QTMIN=6.10.1
-inherit ecm flag-o-matic optfeature plasma.kde.org xdg
+inherit ecm optfeature plasma.kde.org xdg
 
 DESCRIPTION="Screenshot capture utility"
 HOMEPAGE="https://apps.kde.org/spectacle/"
 
 LICENSE="LGPL-2+ handbook? ( FDL-1.3 )"
 SLOT="6"
-KEYWORDS="~amd64 ~arm64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~loong ~ppc64 ~riscv ~x86"
 IUSE="share"
 
 # slot op: Uses Qt::GuiPrivate for qtx11extras_p.h
@@ -66,8 +66,6 @@ BDEPEND="
 "
 
 src_configure() {
-	use elibc_musl && append-ldflags -Wl,-z,stack-size=0x100000 # upstream bug 470763
-
 	local mycmakeargs=(
 		$(cmake_use_find_package share KF6Purpose)
 	)

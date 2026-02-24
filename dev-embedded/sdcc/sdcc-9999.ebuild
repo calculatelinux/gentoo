@@ -1,9 +1,12 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-inherit autotools flag-o-matic
+inherit autotools toolchain-funcs
+
+DESCRIPTION="Small device C compiler (for various microprocessors)"
+HOMEPAGE="https://sdcc.sourceforge.net/"
 
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="https://svn.code.sf.net/p/sdcc/code/trunk/sdcc"
@@ -16,9 +19,11 @@ else
 
 	KEYWORDS="~amd64 ~x86"
 fi
-
-DESCRIPTION="Small device C compiler (for various microprocessors)"
-HOMEPAGE="https://sdcc.sourceforge.net/"
+BINUTILS_PV=2.45.1
+SRC_URI+="
+	mirror://gnu/binutils/binutils-${BINUTILS_PV}.tar.xz
+	https://sourceware.org/pub/binutils/releases/binutils-${BINUTILS_PV}.tar.xz
+"
 
 LICENSE="
 	GPL-2 ZLIB
@@ -34,7 +39,7 @@ SDCC_PORTS="
 	sm83
 	tlcs90
 	ez80-z80
-	z80n
+	z80n r800
 	ds390 ds400
 	pic14 pic16
 	hc08
@@ -42,6 +47,7 @@ SDCC_PORTS="
 	stm8
 	pdk13 pdk14 pdk15 pdk16
 	mos6502 mos65c02
+	f8
 "
 IUSE="
 	${SDCC_PORTS}
@@ -63,7 +69,17 @@ DEPEND="
 "
 PATCHES=(
 	"${FILESDIR}"/sdcc-4.3.2-override-override.patch
+	"${FILESDIR}"/sdcc-4.5.0-link-tinfo.patch
+	"${FILESDIR}"/sdcc-4.3.0-fix-mkdir-autoconf-test.patch
+	"${FILESDIR}"/sdcc-4.3.0-autoreconf-libiberty.patch
 )
+
+src_unpack() {
+	if [[ ${PV} == "9999" ]] ; then
+		subversion_src_unpack
+	fi
+	default
+}
 
 src_prepare() {
 	# Fix conflicting variable names between Gentoo and sdcc
@@ -85,8 +101,37 @@ src_prepare() {
 
 	mkdir -p support/sdbinutils/bfd/doc || die
 
+	# add m4 files from binutils to run autoreconf for libiberty
+	cp "${WORKDIR}"/binutils-${BINUTILS_PV}/libiberty/acinclude.m4 support/sdbinutils/libiberty/acinclude.m4 || die
+	cp "${WORKDIR}"/binutils-${BINUTILS_PV}/config/mmap.m4 support/sdbinutils/config/mmap.m4 || die
+	# libiberty configure will check this file and fail if not found
+	cp install-sh support/sdbinutils/libiberty/ || die
+	# libiberty configure will fail if this was not set
+	export libiberty_topdir="${S}"/support/sdbinutils/libiberty
+
 	default
-	eautoreconf
+
+	# Upstream moved sim/ucsim to sim/ucsim/src and added some wrappers in sim/ucsim.
+	# Now eautoreconf needs to run in sim/ucsim/src, but configure needs to run in sim/ucsim.
+	# Run eautoreconf manually where it is needed and leave econf do its thing.
+	local dirs=(
+			support/cpp
+			support/packihx
+			sim/ucsim/src
+			debugger/mcs51
+			support/sdbinutils
+			support/sdbinutils/libiberty
+			device/lib/pic14
+			device/non-free/lib/pic14
+			device/lib/pic16
+			device/non-free/lib/pic16
+		)
+	for i in "${dirs[@]}"; do
+		pushd "$i" &> /dev/null || die
+		AT_NOELIBTOOLIZE=yes eautoreconf
+		popd &> /dev/null || die
+	done
+	AT_NO_RECURSIVE=yes eautoreconf
 
 	# Avoid 'bfd.info' rebuild with 'makeinfo': bug #705424
 	# Build dependencies are: eautoreconf->Makefile.in->bfdver.texi->bfd.info
@@ -95,17 +140,15 @@ src_prepare() {
 }
 
 src_configure() {
-	# -Werror=odr, -Werror=lto-type-mismatch
-	# https://bugs.gentoo.org/924691
-	# https://sourceforge.net/p/sdcc/bugs/3725/
-	filter-lto
-
+	# bug #922301
+	tc-export CC CPP
 	local myeconfargs=(
 		ac_cv_prog_STRIP=true
 		--without-ccache
 		--enable-sdbinutils
 
 		$(use_enable ucsim)
+
 		$(use_enable device-lib)
 		$(use_enable packihx)
 		$(use_enable sdcpp)
@@ -123,6 +166,7 @@ src_configure() {
 		$(use_enable tlcs90 tlcs90-port)
 		$(use_enable ez80-z80 ez80_z80-port)
 		$(use_enable z80n z80n-port)
+		$(use_enable r800 r800-port)
 		$(use_enable ds390 ds390-port)
 		$(use_enable ds400 ds400-port)
 		$(use_enable pic14 pic14-port)
@@ -136,7 +180,17 @@ src_configure() {
 		$(use_enable pdk16 pdk16-port)
 		$(use_enable mos6502 mos6502-port)
 		$(use_enable mos65c02 mos65c02-port)
+		$(use_enable f8 f8-port)
 	)
+
+	# ucsim has extra sims that do not correspond to USE flags; enable them all.
+	if use ucsim; then
+		myeconfargs+=( --enable-serio )
+		for i in avr st7 p1516 m6809 m6800 m68hc11 m68hc12 pblaze i8085 i8048 oisc; do
+			myeconfargs+=( --enable-$i-sim )
+		done
+	fi
+
 	econf "${myeconfargs[@]}"
 }
 
@@ -156,6 +210,9 @@ src_install() {
 	default
 	dodoc doc/*.txt
 	find "${ED}" -type d -name .deps -exec rm -vr {} + || die
+
+	# make install does not install this
+	use ucsim && dobin sim/ucsim/src/apps/serio.src/serialview
 
 	if use doc && [[ ${PV} != "9999" ]]; then
 		cd "${WORKDIR}"/doc
