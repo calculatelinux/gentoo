@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -11,7 +11,7 @@ SRC_URI="https://downloads.sourceforge.net/${PN}/${PN}/${PV}/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~mips ~ppc ppc64 ~riscv ~s390 ~sparc x86"
 IUSE="examples"
 RESTRICT="!test? ( test )"
 
@@ -28,7 +28,10 @@ DOCS=(
 )
 HTML_DOCS=( idoc/www )
 
-PATCHES=( "${FILESDIR}"/${P}-test.patch )
+PATCHES=(
+	"${FILESDIR}"/${P}-test.patch
+	"${FILESDIR}"/${P}-stddev.patch
+)
 
 src_prepare() {
 	default

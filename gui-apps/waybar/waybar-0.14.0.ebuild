@@ -13,7 +13,7 @@ if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="https://github.com/Alexays/${PN^}.git"
 else
 	SRC_URI="https://github.com/Alexays/${PN^}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm64"
+	KEYWORDS="amd64 ~arm64"
 	S="${WORKDIR}/${PN^}-${PV}"
 fi
 
@@ -53,8 +53,8 @@ RDEPEND="
 	jack? ( virtual/jack )
 	libinput? ( dev-libs/libinput:= )
 	logind? (
-		|| ( sys-apps/systemd
-			 sys-auth/elogind )
+		systemd? ( sys-apps/systemd )
+		!systemd? ( sys-auth/elogind )
 	)
 	mpd? ( media-libs/libmpdclient )
 	mpris? ( >=media-sound/playerctl-2 )
