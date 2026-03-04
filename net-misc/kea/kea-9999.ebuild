@@ -269,7 +269,8 @@ src_install() {
 
 	# A side effect of using install_umask 023 in meson setup is setting config files to be world readable
 	# lets not do that
-	fperms -R 0640 /etc/${PN}
+	fperms -R 0750 /etc/${PN}
+	chmod 0640 "${ED}"/etc/${PN}/*.conf || die
 
 	# Install a conf per service and a linked init script per service
 	newinitd "${FILESDIR}"/${PN}-initd-r3 ${PN}

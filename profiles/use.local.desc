@@ -362,6 +362,7 @@ app-containers/runc:kmem - Enable Kernel Memory Accounting.
 app-containers/skopeo:btrfs - Enables dependencies for the "btrfs" graph driver.
 app-containers/skopeo:rootless - Compiles with libsubid
 app-containers/snapd:forced-devmode - Automatically disable application confinement if feature detection fails.
+app-crypt/adcli:netapi - build support for net-fs/sambas offline join feature
 app-crypt/aespipe:cpu_flags_x86_padlock - Use VIA padlock instructions, detected at run time, code still works on non-padlock processors
 app-crypt/badkeys:dkim - Enable dkim scan mode via dev-python/dnspython.
 app-crypt/badkeys:ssh - Enable ssh scan mode via dev-python/paramiko.
@@ -4314,7 +4315,6 @@ media-libs/freetype:utils - Install utilities and examples from ft2demos
 media-libs/freeverb3:forcefpu - Disable assembly code
 media-libs/freeverb3:plugdouble - Build plugins in double precision mode (default is float)
 media-libs/ganv:fdgl - Use experimental force-directed graph layout
-media-libs/gegl:lensfun - Enable support for media-libs/lensfun.
 media-libs/gegl:sdl2 - Add support for Simple Direct Layer 2.0 (media-libs/libsdl2)
 media-libs/gegl:umfpack - Enable sparse solving via sci-libs/umfpack.
 media-libs/glew:egl-only - Enable EGL support and disable X11 support
@@ -8376,6 +8376,7 @@ sys-devel/gettext:git - When running `autopoint`, use git to store the internal 
 sys-devel/sparse:gtk - Build the test-inspect utility (requires x11-libs/gtk+:3)
 sys-devel/sparse:llvm - Build the sparse-llvm utility
 sys-devel/sparse:xml - Build the c2xml utility (requires dev-libs/libxml2)
+sys-devel/wild:lto - Build with the experimental LTO plugin support
 sys-fabric/mstflint:adb-generic-tools - Enable compiling the following tools: mstreg and mstlink
 sys-fabric/mstflint:fw-mgr - Enable compiling the firmware manager tool: mstfwmanager
 sys-fabric/mstflint:inband - Enable firmware updates for Mellanox SwitchX and ConnectIB devices
@@ -8723,7 +8724,6 @@ www-client/chromium:proprietary-codecs - Enable codecs for patent-encumbered aud
 www-client/chromium:rar - Enable the Safe Browsing feature to inspect RAR files.
 www-client/chromium:system-harfbuzz - Use system media-libs/harfbuzz instead of the bundled library.
 www-client/chromium:system-icu - Use system dev-libs/icu instead of the bundled one
-www-client/chromium:system-png - Use system media-libs/libpng instead of the bundled library
 www-client/chromium:system-zstd - Use system app-arch/zstd instead of the bundled one.
 www-client/chromium:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
 www-client/dillo:mbedtls - Build against the net-libs/mbedtls library for TLS support.
