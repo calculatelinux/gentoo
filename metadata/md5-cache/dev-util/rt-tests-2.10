@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install prepare setup
+DEPEND=python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 ) python_single_target_python3_13? ( dev-lang/python:3.13 ) python_single_target_python3_14? ( dev-lang/python:3.14 ) sys-process/numactl
+DESCRIPTION=A collection of latency testing tools for the linux(-rt) kernel
+EAPI=8
+HOMEPAGE=https://git.kernel.org/pub/scm/utils/rt-tests/rt-tests.git/
+INHERIT=python-single-r1 toolchain-funcs flag-o-matic
+IUSE=python_single_target_python3_11 python_single_target_python3_12 python_single_target_python3_13 python_single_target_python3_14
+KEYWORDS=~amd64 ~arm64 ~x86
+LICENSE=GPL-2 GPL-2+ LGPL-2.1+
+RDEPEND=python_single_target_python3_11? ( dev-lang/python:3.11 ) python_single_target_python3_12? ( dev-lang/python:3.12 ) python_single_target_python3_13? ( dev-lang/python:3.13 ) python_single_target_python3_14? ( dev-lang/python:3.14 ) sys-process/numactl
+REQUIRED_USE=^^ ( python_single_target_python3_11 python_single_target_python3_12 python_single_target_python3_13 python_single_target_python3_14 )
+SLOT=0
+SRC_URI=https://kernel.org/pub/linux/utils/rt-tests/rt-tests-2.10.tar.xz https://kernel.org/pub/linux/utils/rt-tests/older/rt-tests-2.10.tar.xz
+_eclasses_=flag-o-matic	ed1eda86c8f746a2a75f7f9f7478f5f4	multiprocessing	1e32df7deee68372153dca65f4a7c21f	python-single-r1	47d8ac9be330c9366112b78fd4f8ce57	python-utils-r1	34399ddcee37dc83c6735c2c46e244bc	toolchain-funcs	8a2c298bde71ecf3f452dd9e67c94369
+_md5_=68cfe622b59f773927f5575e31f633b6

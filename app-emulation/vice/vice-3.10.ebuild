@@ -11,7 +11,7 @@ SRC_URI="https://downloads.sourceforge.net/vice-emu/releases/${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="amd64 ~arm ~arm64 x86"
 IUSE="
 	alsa curl debug doc ethernet flac gif +gtk headless lame mpg123 ogg
 	openmp oss parport pci png portaudio pulseaudio sdl usb
@@ -77,6 +77,10 @@ BDEPEND="
 	doc? ( virtual/texi2dvi )
 	gtk? ( x11-misc/xdg-utils )
 "
+
+PATCHES=(
+	"${FILESDIR}"/${P}-mpg123-without-curl.patch
+)
 
 pkg_pretend() {
 	[[ ${MERGE_TYPE} != binary ]] && use openmp && tc-check-openmp

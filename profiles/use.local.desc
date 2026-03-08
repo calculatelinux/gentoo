@@ -3397,6 +3397,7 @@ gnome-base/nautilus:cloudproviders - Enable the cloudproviders support
 gnome-base/nautilus:gstreamer - Enable the Audio/Video file properties page
 gnome-base/nautilus:previewer - Use gnome-extra/sushi to preview files from the file manager
 gnome-extra/cinnamon-control-center:modemmanager - Enable support for mobile broadband devices using net-misc/modemmanager
+gnome-extra/cinnamon-screensaver:accessibility - Adds support for on-screen keyboard using caribou
 gnome-extra/cjs:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 gnome-extra/eiciel:nautilus - Build gnome-base/nautilus extension
 gnome-extra/evolution-data-server:berkdb - sys-libs/db support needed to migrate old (pre-3.13 evolution versions) addressbook data
@@ -7433,6 +7434,8 @@ sci-libs/hipBLASLt:roctracer - Enable roctracer (roctx) marker
 sci-libs/hipCUB:benchmark - Build and install benchmark binaries
 sci-libs/hipSOLVER:sparse - Build hipSOLVER with sparse functionality (sci-libs/cholmod)
 sci-libs/hipSPARSE:benchmark - Build and install hipsparse-bench
+sci-libs/hipsparselt:benchmark - Build and install rocblas-bench
+sci-libs/hipsparselt:roctracer - Enable roctracer (roctx) marker
 sci-libs/hypre:int64 - Build the 64 bits integer library
 sci-libs/indilib:rtlsdr - Enable support for devices supported by net-wireless/rtl-sdr
 sci-libs/ipopt:asl - AMPL Solver Library support and build the 'ipopt' binary
@@ -7599,6 +7602,8 @@ sci-mathematics/eprover:ho - enable support for higher-order logic
 sci-mathematics/flint:ntl - Build NTL interface
 sci-mathematics/form:devref - Build and install developers reference
 sci-mathematics/form:doxygen - Build and install API documentation
+sci-mathematics/form:flint - Use sci-mathematics/flint for fast polynomial arithmetics
+sci-mathematics/form:mpfr - Use dev-libs/mpfr for multiple-precision floats
 sci-mathematics/fricas:clisp - Add support for GNU CLISP (dev-lisp/clisp)
 sci-mathematics/fricas:clozurecl - Add support for Clozure Common Lisp (dev-lisp/clozurecl)
 sci-mathematics/fricas:cmucl - Add support for CMU Common Lisp (dev-lisp/cmucl)
@@ -8373,6 +8378,7 @@ sys-devel/gcc:vtv - Build support for virtual table verification (a C++ hardenin
 sys-devel/gcc-config:cc-wrappers - Install and manage 'cc' and 'f77' wrappers in /usr/bin. Otherwise ignore them.
 sys-devel/gcc-config:native-symlinks - Install native symlinks like 'gcc' or 'g++' to /usr/bin. Otherwise keep only ${CTARGET}-gcc and friends.
 sys-devel/gettext:git - When running `autopoint`, use git to store the internal development files; this requires git at runtime, but will be faster/smaller than raw archives
+sys-devel/mold:mimalloc - Build using dev-libs/mimalloc as memory allocator.
 sys-devel/sparse:gtk - Build the test-inspect utility (requires x11-libs/gtk+:3)
 sys-devel/sparse:llvm - Build the sparse-llvm utility
 sys-devel/sparse:xml - Build the c2xml utility (requires dev-libs/libxml2)
@@ -8922,7 +8928,7 @@ x11-base/xorg-server:xvfb - Build the Xvfb server
 x11-base/xwayland:libei - Enable emulated input using dev-libs/libei
 x11-base/xwayland:unwind - Enable libunwind usage for backtraces
 x11-base/xwayland:xcsecurity - Build Security extension
-x11-drivers/nvidia-drivers:kernel-open - Use the open source variant of the drivers (only usable with Turing/Ampere or newer GPUs, aka GTX 1650+ -- note 50xx Blackwell or newer cards *require* this)
+x11-drivers/nvidia-drivers:kernel-open - Use the open source variant of the drivers (only works for Turing/Ampere or newer GPUs, aka GTX 1650+ -- recommended with >=560.xx drivers if usable and is *required* for 50xx Blackwell or newer GPUs -- always-enabled regardless of USE in >=595.xx)
 x11-drivers/nvidia-drivers:persistenced - Install the persistence daemon for keeping devices state when unused (e.g. for headless)
 x11-drivers/nvidia-drivers:powerd - Install the NVIDIA dynamic boost support daemon (only useful with specific laptops, ignore if unsure)
 x11-drivers/nvidia-drivers:static-libs - Install the XNVCtrl static library for accessing sensors and other features
@@ -9162,7 +9168,6 @@ x11-wm/muffin:sysprof - Enable profiling data capture support using dev-util/sys
 x11-wm/musca:apis - Optionally install the experimental `apis' window manager
 x11-wm/musca:xlisten - Optionally install the xlisten utility
 x11-wm/mutter:elogind - Rely on sys-auth/elogind as logind provider for Wayland sessions
-x11-wm/mutter:libdisplay - Enable EDID and DisplayID using media-libs/libdisplay-info
 x11-wm/mutter:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
 x11-wm/mutter:xwayland - Enable X11 application support in Wayland sessions
 x11-wm/openbox:session - Enables support for session managers

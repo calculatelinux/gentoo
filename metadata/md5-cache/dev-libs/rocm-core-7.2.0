@@ -1,0 +1,13 @@
+BDEPEND=app-alternatives/ninja >=dev-build/cmake-3.28.5
+DEFINED_PHASES=compile configure install prepare test
+DESCRIPTION=Library that provides ROCm release version and install path information
+EAPI=8
+HOMEPAGE=https://github.com/ROCm/rocm-systems/tree/develop/projects/rocm-core
+INHERIT=cmake
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=!<dev-util/hip-7.0
+SLOT=0/7.2
+SRC_URI=https://github.com/ROCm/rocm-systems/releases/download/rocm-7.2.0/rocm-core.tar.gz -> rocm-core-7.2.0.tar.gz
+_eclasses_=cmake	5691a3da96eac88f135cf3596b8c2c3c	flag-o-matic	ed1eda86c8f746a2a75f7f9f7478f5f4	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	d063ea1900a793f93eb095010d6d9156	toolchain-funcs	8a2c298bde71ecf3f452dd9e67c94369	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
+_md5_=59b92820c10869e38137338e43bc1cb4
