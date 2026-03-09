@@ -37,14 +37,20 @@ if [[ ${PV} == 9999 ]]; then
 	EGIT_BRANCH="master"
 	inherit git-r3
 else
-	SRC_URI="https://gitlab.freedesktop.org/pipewire/${PN}/-/archive/${PV}/${P}.tar.bz2"
+	if [[ ${PV} == *_p* ]] ; then
+		WIREPLUMBER_COMMIT="83d08dfa437095373f9e4e156b6ca4f9e0567585"
+		SRC_URI="https://gitlab.freedesktop.org/pipewire/wireplumber/-/archive/${WIREPLUMBER_COMMIT}/wireplumber-${WIREPLUMBER_COMMIT}.tar.bz2"
+		S="${WORKDIR}"/${PN}-${WIREPLUMBER_COMMIT}
+	else
+		SRC_URI="https://gitlab.freedesktop.org/pipewire/${PN}/-/archive/${PV}/${P}.tar.bz2"
+	fi
 
 	if [[ ${WIREPLUMBER_DOCS_PREBUILT} == 1 ]] ; then
 		SRC_URI+=" !doc? ( https://dev.gentoo.org/~${WIREPLUMBER_DOCS_PREBUILT_DEV}/distfiles/${CATEGORY}/${PN}/${PN}-${WIREPLUMBER_DOCS_VERSION}-docs.tar.xz )"
 		WIREPLUMBER_DOCS_USEFLAG="doc"
 	fi
 
-	KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~sparc ~x86"
+	KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86"
 fi
 
 LICENSE="MIT"
