@@ -13,12 +13,17 @@ S="${WORKDIR}"/${MY_P}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 arm arm64 ~loong ~ppc ppc64 ~riscv ~x86 ~x64-macos"
+KEYWORDS="amd64 arm arm64 ~loong ~ppc ppc64 ~riscv ~x86 ~x64-macos"
 IUSE="cpudetection index64 openmp pthread relapack test"
 REQUIRED_USE="?? ( openmp pthread )"
 RESTRICT="!cpudetection? ( bindist ) !test? ( test )"
 
 BDEPEND="virtual/pkgconfig"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-no-threads.patch
+	"${FILESDIR}"/${P}-arrow-lake.patch
+)
 
 pkg_pretend() {
 	[[ ${MERGE_TYPE} != binary ]] && use openmp && tc-check-openmp

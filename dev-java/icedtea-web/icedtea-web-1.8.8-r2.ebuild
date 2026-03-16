@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -93,15 +93,23 @@ src_configure() {
 	unset _JAVA_OPTIONS
 	export bashcompdir="$(get_bashcompdir)" # defaults to /etc if not found in pkg-config
 	export CARGO_HOME="${ECARGO_HOME}"
+	export XDG_CONFIG_HOME="${T}/.config" # xdg_environment_reset uses ${HOME}
 	CONFIG_SHELL="${EPREFIX}/bin/bash" econf "${myconf[@]}"
 }
 
 src_compile() {
+	export XDG_CONFIG_HOME="${T}/.config" # xdg_environment_reset uses ${HOME}
 	# races in makefile
 	emake -j1 #nowarn
 }
 
+src_test() {
+	# we want to override cargo.eclass' src_test
+	:
+}
+
 src_install() {
+	export XDG_CONFIG_HOME="${T}/.config" # xdg_environment_reset uses ${HOME}
 	default
 	rename -v '.bash' '' "${ED}/usr/share/bash-completion/completions/"*.bash || die
 	rename -v 'javaws' 'itweb-javaws' "${ED}/usr/share/man/man1/"javaws.1* || die
@@ -110,11 +118,6 @@ src_install() {
 		"${ED}/usr/share/bash-completion/completions/itweb-javaws" || die
 
 	readme.gentoo_create_doc
-}
-
-src_test() {
-	# we want to override cargo.eclass' src_test
-	:
 }
 
 pkg_postinst() {

@@ -1490,6 +1490,7 @@ dev-db/spatialite:rttopo - Add the sci-geosciences/librttopo library for topolog
 dev-db/spatialite:xls - Add the dev-libs/freexl library for xls import support
 dev-db/sqldeveloper:sybase - Add support for the Sybase SQL Database Server
 dev-db/sqlite:secure-delete - Enable overwriting of deleted content with zeros by default (http://sqlite.org/pragma.html#pragma_secure_delete), causing some performance penalty
+dev-db/sqlite:test-full - Run the full release test suite.
 dev-db/sqlite:tools - Install additional tools, among which are included: sqlite3-analyzer, sqlite3-changeset, sqlite3-db-dump, sqlite3-diff, sqlite3-rbu, sqlite3-expert and others.
 dev-db/sqlitebrowser:sqlcipher - Allow to open and to edit databases encrypted using dev-db/sqlcipher
 dev-db/sqlitestudio:cli - Build CLI interface
@@ -2324,7 +2325,6 @@ dev-libs/xmlsec:http - Allow fetching over HTTP via libxml2.
 dev-libs/xmlsec:nss - Install xmlsec-nss library
 dev-libs/xmlsec:openssl - Install xmlsec-openssl library
 dev-libs/yaz:redis - Enable cache via dev-libs/hiredis
-dev-libs/yaz:ziffy - Install ziffy, a promiscuous Z39.50 APDU sniffer
 dev-lisp/clisp:hyperspec - Use local hyperspec instead of online version
 dev-lisp/clisp:svm - Build CLISP with support for the Support Vector Machine module
 dev-lisp/cmucl:doc - Installs package documentation
@@ -2628,12 +2628,12 @@ dev-qt/qt-docs:3d - Install documentation for dev-qt/qt3d
 dev-qt/qt-docs:activeqt - Install documentation for ActiveQt (unpackaged, Windows-only)
 dev-qt/qt-docs:charts - Install documentation for dev-qt/qtcharts
 dev-qt/qt-docs:connectivity - Install documentation for dev-qt/qtconnectivity
-dev-qt/qt-docs:datavis - Install documentation for QtDataVisualization (unpackaged for Qt6)
+dev-qt/qt-docs:datavis - Install documentation for QtDataVisualization (unpackaged)
 dev-qt/qt-docs:declarative - Install documentation for dev-qt/qtdeclarative
-dev-qt/qt-docs:graphs - Install documentation for QtGraphs (unpackaged)
+dev-qt/qt-docs:graphs - Install documentation for dev-qt/qtgraphs
 dev-qt/qt-docs:grpc - Install documentation for QtGRPC (unpackaged)
 dev-qt/qt-docs:html - Install documentation in HTML format
-dev-qt/qt-docs:httpserver - Install documentation for QtHTTPServer (unpackaged)
+dev-qt/qt-docs:httpserver - Install documentation for dev-qt/qthttpserver
 dev-qt/qt-docs:imageformats - Install documentation for dev-qt/qtimageformats
 dev-qt/qt-docs:location - Install documentation for dev-qt/qtlocation
 dev-qt/qt-docs:lottie - Install documentation for QtLottie (unpackaged)
@@ -2645,10 +2645,10 @@ dev-qt/qt-docs:qt5compat - Install documentation for dev-qt/qt5compat
 dev-qt/qt-docs:quick3d - Install documentation for dev-qt/qtquick3d
 dev-qt/qt-docs:quick3dphysics - Install documentation for QtQuick3DPhysics (unpackaged)
 dev-qt/qt-docs:quickeffectmaker - Install documentation for QtQuickEffectMaker (unpackaged)
-dev-qt/qt-docs:remoteobjects - Install documentation for QtRemoteObjects (unpackaged)
+dev-qt/qt-docs:remoteobjects - Install documentation for dev-qt/qtremoteobjects
 dev-qt/qt-docs:scxml - Install documentation for dev-qt/qtscxml
 dev-qt/qt-docs:sensors - Install documentation for dev-qt/qtsensors
-dev-qt/qt-docs:serialbus - Install documentation for dev-qt/qtserialbus (unpackaged for Qt6)
+dev-qt/qt-docs:serialbus - Install documentation for dev-qt/qtserialbus
 dev-qt/qt-docs:serialport - Install documentation for dev-qt/qtserialport
 dev-qt/qt-docs:shadertools - Install documentation for dev-qt/qtshadertools
 dev-qt/qt-docs:speech - Install documentation for dev-qt/qtspeech
@@ -2659,7 +2659,7 @@ dev-qt/qt-docs:virtualkeyboard - Install documentation for dev-qt/qtvirtualkeybo
 dev-qt/qt-docs:wayland - Install documentation for dev-qt/qtwayland
 dev-qt/qt-docs:webchannel - Install documentation for dev-qt/qtwebchannel
 dev-qt/qt-docs:websockets - Install documentation for dev-qt/qtwebsockets
-dev-qt/qt-docs:webview - Install documentation for dev-qt/qtwebview (unpackaged for Qt6)
+dev-qt/qt-docs:webview - Install documentation for dev-qt/qtwebview
 dev-qt/qt3d:qml - Build QML/QtQuick bindings
 dev-qt/qt5compat:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtbase:X - Build the XCB platform plugin and enable X11 integration
@@ -3101,11 +3101,13 @@ games-emulation/bsnes-jg:shared - Build shared library
 games-emulation/desmume:gdb - Enable support for the remote GDB stub
 games-emulation/desmume:openal - Use media-libs/openal for microphone input
 games-emulation/desmume:wifi - Enable support for Wi-Fi (experimental and discouraged)
+games-emulation/dolphin:discord - Enables Discord Rich Presence, show the current game on Discord
 games-emulation/dolphin:discord-presence - Enables Discord Rich Presence, show the current game on Discord
 games-emulation/dolphin:evdev - Enable evdev input support
 games-emulation/dolphin:llvm - Enables LLVM support, for disassembly
 games-emulation/dolphin:log - Increase logging output
-games-emulation/dolphin:mgba - Enables GBA controllers emulation using libmgba.
+games-emulation/dolphin:mgba - Enables GBA controllers emulation with games-emulation/mgba
+games-emulation/dolphin:retro-achievements - Enables integration with retroachievements.org
 games-emulation/dosbox:core-inline - Enable memory-increasing inlines for better performance but requiring more build time
 games-emulation/dosbox:glide - Enable unofficial Glide emulation via media-libs/openglide
 games-emulation/dosbox-staging:dynrec - Use recompiling cpu core instead of dynamic x86/x64 specific cpu core
@@ -3164,6 +3166,7 @@ games-emulation/rmg:netplay - Enable Netplay
 games-emulation/snes9x:libretro - Build libretro port
 games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recommended)
 games-emulation/vbam:link - Enable GBA linking functionality
+games-emulation/zsnes:pipewire - Enable using media-video/pipewire for audio
 games-engines/devilutionx:sodium - Enable network packet encryption using dev-libs/libsodium
 games-engines/devilutionx:zerotier - Enable ZeroTier for online public games
 games-engines/exult:fluidsynth - Compile with support for FluidSynth
@@ -3633,7 +3636,6 @@ kde-frameworks/kiconthemes:designer - Build plugins for dev-qt/designer
 kde-frameworks/kimageformats:eps - Support the EPS graphics file format
 kde-frameworks/kio:designer - Build plugins for dev-qt/designer
 kde-frameworks/kio:kwallet - Enable permanent storage of passwords for kpasswdserver with kde-frameworks/kwallet
-kde-frameworks/kitemmodels:qml - Enable QML support via dev-qt/qtdeclarative
 kde-frameworks/kitemviews:designer - Build plugins for dev-qt/designer
 kde-frameworks/knewstuff:designer - Build plugins for dev-qt/designer
 kde-frameworks/knewstuff:opds - Enable support for the Open Publication Distribution System via kde-frameworks/syndication
@@ -5529,7 +5531,6 @@ net-analyzer/nagios-plugins-linux-madrisan:curl - Build check_container which re
 net-analyzer/net-snmp:elf - Enable the use of elf utils to check uptime on some systems
 net-analyzer/net-snmp:kmem - Enable usage of /dev/kmem
 net-analyzer/net-snmp:mfd-rewrites - Use MFD rewrites of mib modules where available
-net-analyzer/net-snmp:netlink - Use dev-libs/libnl to fetch TCP statistics instead of using /proc/net/tcp (Linux only).
 net-analyzer/net-snmp:pcap - Install snmppcap which reads from PCAP files and writes to the SNMP transport
 net-analyzer/net-snmp:pci - Use libpci (from sys-apps/pciutils) to look up network interface description. This feature is only available on Linux.
 net-analyzer/net-snmp:pcre - Add support for Perl Compatible Regular Expressions in process table filtering.
@@ -7247,7 +7248,6 @@ sci-chemistry/vmd:gromacs - Add support for TNG file format
 sci-chemistry/vmd:msms - Add support for MSMS SES calcualtion tool
 sci-chemistry/vmd:povray - Add support for povray raytracer for HQ images
 sci-chemistry/vmd:tachyon - Add support for tachyon raytracer for HQ images
-sci-chemistry/votca:gromacs - Add support for gromacs file formats through sci-chemistry/gromacs
 sci-electronics/gerbv:unit-mm - Set default unit for coordinates in status bar to mm
 sci-electronics/ghdl:llvm - Build LLVM code generator
 sci-electronics/gtkwave:fasttree - Enables experimental Fast SST Tree widget code.
@@ -7704,7 +7704,7 @@ sci-ml/XNNPACK:assembly - Build with assembly micro-kernels
 sci-ml/XNNPACK:jit - Build with JIT micro-kernels
 sci-ml/XNNPACK:memopt - Build with optimized memory allocation scheme
 sci-ml/XNNPACK:sparse - Build with graph rewriting for sparse inference
-sci-ml/caffe2:cusparselt - Use the CUDA Sparse Matrix Multiplication
+sci-ml/caffe2:cusparselt - Use the CUDA/HIP Sparse Matrix Multiplication
 sci-ml/caffe2:distributed - Support distributed applications
 sci-ml/caffe2:fbgemm - Use sci-ml/FBGEMM
 sci-ml/caffe2:flash - Enable flash attention
@@ -7950,12 +7950,9 @@ sys-apps/hwloc:X - use the X Window System
 sys-apps/hwloc:cairo - Enable the Cairo back-end of hwloc's lstopo command
 sys-apps/hwloc:cpuid - Enable the cpuid-based architecture specific support (x86 component)
 sys-apps/hwloc:cuda - Enable CUDA device discovery using libcudart
-sys-apps/hwloc:gl - Enable GL display device discovery (NVCtrl)
 sys-apps/hwloc:l0 - Enable oneAPI Level Zero device discovery
-sys-apps/hwloc:numa - Add support for numa memory allocation
 sys-apps/hwloc:nvml - Enable the NVML device discovery
 sys-apps/hwloc:pci - Enable PCI device discovery using libpci
-sys-apps/hwloc:plugins - Build hwloc components as plugins so that the hwloc core library does not directly depend on their dependencies (for instance the libpci library)
 sys-apps/hwloc:rocm - Enable AMD RSMI device discovery
 sys-apps/hwloc:video_cards_nvidia - Enable GL display device discovery (NVCtrl)
 sys-apps/hwloc:xml - use libxml2 for XML support, instead of a custom minimalistic support
@@ -8280,7 +8277,6 @@ sys-cluster/kronosnet:lzo2 - Add support for lzo2 compression
 sys-cluster/kronosnet:nss - Add support for tls via nss
 sys-cluster/kronosnet:openssl - Add support for tls via openssl
 sys-cluster/legion:gasnet - Enable GASNet lib support
-sys-cluster/legion:hwloc - Enable HWLoc lib support
 sys-cluster/lmod:auto-swap - enable auto swapping of compiler
 sys-cluster/lmod:cache - enable caching of modules
 sys-cluster/lmod:duplicate-paths - allow duplicate entries in path
@@ -8499,6 +8495,7 @@ sys-kernel/gentoo-kernel:hardened - Use selection of hardening options recommend
 sys-kernel/gentoo-kernel:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-kernel-bin:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
+sys-kernel/hurd:ncurses - Build console-curses client for non-basic capabilities, unlike the builtin one.
 sys-kernel/installkernel:dracut - Generate an initramfs or UKI on each kernel installation
 sys-kernel/installkernel:efistub - EXPERIMENTAL: Update UEFI configuration on each kernel installation
 sys-kernel/installkernel:grub - Re-generate grub.cfg on each kernel installation, used grub.cfg is overridable with GRUB_CFG env var
@@ -8675,10 +8672,9 @@ www-apache/mod_musicindex:mysql - Add MySQL cache support
 www-apache/mod_nss:ecc - enable Elliptical Curve Cyptography
 www-apache/mod_security:fuzzyhash - Support fuzzy hash computations (to detect malware, for example) using the app-crypt/ssdeep package.
 www-apache/mod_security:geoip - Pull in dev-libs/geoip for use by the SecGeoLookupDb directive.
-www-apache/mod_security:jit - Add support for the PCRE Just-in-Time optimisation, as enabled by dev-libs/libpcre with jit USE flag enabled. Might not be available on hardened systems.
+www-apache/mod_security:jit - Add support for the PCRE Just-in-Time optimisation, as enabled by dev-libs/libpcre2 with jit USE flag enabled. Might not be available on hardened systems.
 www-apache/mod_security:json - Suppose JSON in the request body parser through dev-libs/yajl.
 www-apache/mod_security:mlogc - Build and install the ModSecurity Audit Log Collector (mlogc).
-www-apache/mod_security:pcre2 - Use dev-libs/libpcre2 as regex implementation
 www-apache/pwauth:domain-aware - Ignore leading domain names in username (Windows compat)
 www-apache/pwauth:faillog - Log failed login attempts
 www-apache/pwauth:ignore-case - Ignore string case in username (mostly Windows compat)

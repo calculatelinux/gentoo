@@ -7,5 +7,5 @@ LICENSE=public-domain
 PROPERTIES=live
 RDEPEND=llvm-core/clang:22 llvm-core/lld:22
 SLOT=22
-_eclasses_=crossdev	d618c699554f72b98f8ceeeeb361dc9e	toolchain-funcs	8a2c298bde71ecf3f452dd9e67c94369
+_eclasses_=crossdev	d618c699554f72b98f8ceeeeb361dc9e	toolchain-funcs	da0a71e3a72194ca0b88d5b045d721ac
 _md5_=53d58678834afd464ecf2f14437772a2

@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -20,6 +20,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples"
 
+QA_CONFIG_IMPL_DECL_SKIP=(
+	ppoll # Uses alternative poll
+)
+
 RDEPEND="
 	dev-libs/gmp:=[cxx(+)]
 	dev-libs/libtecla
@@ -33,6 +37,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-2.6-search-datadir.patch"
 	"${FILESDIR}/${PN}-2.7-AR.patch"
 	"${FILESDIR}/${PN}-3.1-prll.patch"
+	"${FILESDIR}/${PN}-3.1-curses.patch"
 )
 
 src_prepare() {
