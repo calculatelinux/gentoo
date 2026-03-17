@@ -43,14 +43,6 @@
 =dev-db/sqlite-3.52.0-r1
 =dev-python/apsw-3.52.0.0
 
-# Ionen Wolkens <ionen@gentoo.org> (2026-03-12)
-# Package was added for games-strategy/naev-0.12.x but 0.13.x no longer
-# needs it and it never gained other consumers. Have no intentions to
-# keep maintaining this so may as well remove rather than leave it m-n.
-# (note: may be moved to ::guru, upper bound is to facililate this)
-# Removal on 2026-04-11.
-<dev-libs/nativefiledialog-extended-1.2.1-r1
-
 # Mike Pagano <mpagano@gentoo.org> (2026-03-13)
 # Upstream has announced the archiving of this application
 # at repo location: https://github.com/nginx/unit/
@@ -544,10 +536,6 @@ dev-db/mysql:8.4
 # https://github.com/lkrg-org/lkrg/issues/364
 =app-antivirus/lkrg-0.9.9
 
-# Eray Aslan <eras@gentoo.org> (2025-02-24)
-# Mask experimental software
-=mail-mta/postfix-3.11*
-
 # Sam James <sam@gentoo.org> (2025-02-22)
 # (Only) needed for no-yet-released LibreOffice. Mask for now to avoid
 # unnecessary conflicts/backtracking for LO users.
@@ -736,11 +724,8 @@ www-plugins/chrome-binary-plugins:unstable
 # Diego E. Pettenò <flameeyes@gentoo.org> (2009-01-03)
 # These packages are not supposed to be merged directly, instead
 # please use sys-devel/crossdev to install them.
-dev-util/mig
 dev-util/mingw64-runtime
 sys-libs/newlib
 dev-embedded/avr-libc
 sys-devel/nvptx-tools
 sys-devel/clang-crossdev-wrappers
-sys-kernel/gnumach
-sys-kernel/hurd

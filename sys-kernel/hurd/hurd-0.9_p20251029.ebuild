@@ -31,7 +31,7 @@ SLOT="0"
 if is_crosspkg ; then
 	IUSE="headers-only"
 else
-	IUSE="ncurses"
+	IUSE="headers-only ncurses xkb"
 fi
 [[ ${PV} != 9999 ]] && KEYWORDS="~amd64 ~x86"
 
@@ -40,6 +40,7 @@ if is_crosspkg ; then
 		!headers-only? ( cross-${CTARGET}/mig )
 	"
 else
+	# TODO: fix xkb automagic
 	DEPEND="
 		app-arch/bzip2:=[static-libs]
 		dev-libs/libdaemon:=
@@ -47,14 +48,18 @@ else
 		dev-util/mig
 		sys-apps/util-linux[static-libs]
 		x11-libs/libpciaccess[static-libs]
-		x11-libs/libxkbcommon
 		virtual/libcrypt:=[static-libs]
 		virtual/zlib:=[static-libs]
 		ncurses? ( sys-libs/ncurses:= )
+		xkb? ( x11-libs/libxkbcommon )
 	"
 	RDEPEND="${DEPEND}"
 	BDEPEND="virtual/pkgconfig"
 fi
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-0.9_p20251029-glibc-2.43.patch
+)
 
 src_prepare() {
 	default

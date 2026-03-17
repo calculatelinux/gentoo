@@ -2200,7 +2200,6 @@ dev-libs/modsecurity:json - Suppose JSON in the request body parser through dev-
 dev-libs/modsecurity:lmdb - Add LMDB backend support
 dev-libs/modsecurity:pcre2 - Use dev-libs/libpcre2 as regex implementation
 dev-libs/mongo-c-driver:test-full - Run test suite in full, including tests that run a local database instance.
-dev-libs/nativefiledialog-extended:desktop-portal - Use sys-apps/xdg-desktop-portal to open file dialogs
 dev-libs/ncnn:tools - Enable installation of various tools in addition to the library
 dev-libs/nng:compat - Enable compatibility with the legacy nanomsg API
 dev-libs/nng:deprecated - Build deprecated features
@@ -8496,6 +8495,7 @@ sys-kernel/gentoo-kernel:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-kernel-bin:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 sys-kernel/hurd:ncurses - Build console-curses client for non-basic capabilities, unlike the builtin one.
+sys-kernel/hurd:xkb - Depend on x11-libs/libxkbcommon for keymap support in the console.
 sys-kernel/installkernel:dracut - Generate an initramfs or UKI on each kernel installation
 sys-kernel/installkernel:efistub - EXPERIMENTAL: Update UEFI configuration on each kernel installation
 sys-kernel/installkernel:grub - Re-generate grub.cfg on each kernel installation, used grub.cfg is overridable with GRUB_CFG env var
