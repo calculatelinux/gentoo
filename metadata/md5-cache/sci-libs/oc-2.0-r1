@@ -11,5 +11,5 @@ RDEPEND=net-misc/curl
 RESTRICT=test
 SLOT=0
 SRC_URI=https://opendap.org/pub/OC/source/oc-2.0.tar.gz
-_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	da0a71e3a72194ca0b88d5b045d721ac
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	5195689ff6a73b0e789acfa09d4fbcb9
 _md5_=734137b1e5bfd4102f07824aec40ffb1

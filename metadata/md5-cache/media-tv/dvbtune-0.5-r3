@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=xml? ( dev-libs/libxml2:= ) sys-kernel/linux-headers
+DESCRIPTION=simple tuning app for DVB cards
+EAPI=8
+HOMEPAGE=https://sourceforge.net/projects/dvbtools
+INHERIT=toolchain-funcs
+IUSE=xml
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=xml? ( dev-libs/libxml2:= )
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/dvbtools/dvbtune-0.5.tar.gz
+_eclasses_=toolchain-funcs	5195689ff6a73b0e789acfa09d4fbcb9
+_md5_=975bf7d27855a6d71a0fd7b3875ff8bd

@@ -12,5 +12,5 @@ PDEPEND=app-alternatives/bc
 RDEPEND=!readline? ( libedit? ( dev-libs/libedit:= ) ) readline? ( sys-libs/readline:= sys-libs/ncurses:= )
 SLOT=0
 SRC_URI=mirror://gnu/bc/bc-1.07.1.tar.gz
-_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	da0a71e3a72194ca0b88d5b045d721ac
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	5195689ff6a73b0e789acfa09d4fbcb9
 _md5_=c6327e619876403245b70e4bc549fed3

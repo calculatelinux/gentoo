@@ -10,5 +10,5 @@ LICENSE=GPL-3
 RDEPEND=app-text/ghostscript-gpl
 SLOT=0
 SRC_URI=https://github.com/arsv/u2ps/releases/download/1.2/u2ps-1.2.tar.gz
-_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	da0a71e3a72194ca0b88d5b045d721ac
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	5195689ff6a73b0e789acfa09d4fbcb9
 _md5_=abdc0196b1fe92461126cc5b39cb0c93

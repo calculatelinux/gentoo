@@ -9,5 +9,5 @@ LICENSE=GPL-2+
 RDEPEND=sys-apps/util-linux
 SLOT=0
 SRC_URI=https://www.rncbc.org/archive/rtirq-20240220.tar.gz https://www.rncbc.org/archive/old/rtirq-20240220.tar.gz
-_eclasses_=linux-info	efd923656513c879204fec6638eadee5	systemd	a964c0cbe818b5729da1dbfcee5be861	toolchain-funcs	da0a71e3a72194ca0b88d5b045d721ac
+_eclasses_=linux-info	efd923656513c879204fec6638eadee5	systemd	a964c0cbe818b5729da1dbfcee5be861	toolchain-funcs	5195689ff6a73b0e789acfa09d4fbcb9
 _md5_=fd053c51a1e63f6a1a0a134cb4447b65

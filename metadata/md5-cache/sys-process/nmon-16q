@@ -10,5 +10,5 @@ LICENSE=GPL-3
 RDEPEND=sys-libs/ncurses:=
 SLOT=0
 SRC_URI=https://downloads.sourceforge.net/nmon/lmon16q.c
-_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	da0a71e3a72194ca0b88d5b045d721ac
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	5195689ff6a73b0e789acfa09d4fbcb9
 _md5_=56e0cb73aa13dfe024e861ac0b1a0f61
