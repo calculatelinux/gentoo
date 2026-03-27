@@ -1,4 +1,4 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -7,14 +7,14 @@ inherit linux-info optfeature
 
 if [[ ${PV} == 9999 ]] ; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/dell/dkms"
+	EGIT_REPO_URI="https://github.com/dkms-project/dkms"
 else
-	SRC_URI="https://github.com/dell/dkms/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/dell/dkms-project/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm64 ~riscv ~x86"
 fi
 
 DESCRIPTION="Dynamic Kernel Module Support"
-HOMEPAGE="https://github.com/dell/dkms"
+HOMEPAGE="https://github.com/dkms-project/dkms"
 
 LICENSE="GPL-2"
 SLOT="0"

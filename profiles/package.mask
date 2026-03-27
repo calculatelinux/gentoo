@@ -36,6 +36,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2026-03-25)
+# Broken with >=dev-python/numpy-2.  Unmaintained.  No revdeps.
+# Removal on 2026-04-24.  Bug #962941.
+dev-python/amodem
+
 # Ionen Wolkens <ionen@gentoo.org> (2026-03-23)
 # Masked for testing the new .0 version and leave time for packages
 # to catch up on support. Will likely be kept masked until 6.11.1
@@ -99,13 +104,14 @@
 >dev-perl/Sys-Mmap-0.200.0
 >dev-perl/Template-Toolkit-3.102.0
 >dev-perl/TimeDate-2.330.0-r1
->dev-perl/XML-Parser-2.510.0
+>dev-perl/XML-Parser-2.470.1
 >dev-perl/XString-0.5.0
 >dev-perl/YAML-Syck-1.360.0
 
 # Michał Górny <mgorny@gentoo.org> (2026-03-22)
 # Cyclic dependency through dev-python/vcs-versioning →
 # dev-python/hatchling → dev-python/pluggy.
+# https://github.com/pypa/setuptools-scm/issues/1302
 >=dev-python/setuptools-scm-10
 dev-python/vcs-versioning
 
@@ -266,15 +272,6 @@ net-p2p/retroshare
 # Qt binaries-to-path symlinking tool obsolete with Qt6. Removal on 2026-03-28.
 dev-qt/qtchooser
 
-# Ulrich Müller <ulm@gentoo.org> (2026-02-25)
-# This is an eviscerated version. Several core commands no longer
-# work, notably C-x 2 (split-current-window), M-x describe-bindings
-# and M-? (help). Furthermore, it adds an unconditional dependency
-# on hunspell, hardcoding the American English dictionary.
-# Masking this version for now because it seems inferior to the
-# previous 20180719 snapshot. Bug #970594.
-~app-editors/uemacs-pk-4.0.15_p20260224
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-02-24)
 # Phonon is effectively dead upstream, its only remaining backend depends
 # on VLC-3. Bug #935797  Removal on 2026-03-26.
@@ -287,48 +284,15 @@ media-libs/phonon-vlc
 net-mail/list-remote-forwards
 net-mail/mailbox-count
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2026-02-22)
-# Obsolete package blocking vdr-2.2 cleanup.
-# Removal on 2026-03-24.
-media-plugins/vdr-peer
-=media-video/vdr-2.2.0*
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2026-02-22)
-# Obsolete package. Use media-plugins/vdr-skinelchihd instead.
-# Bug #945071. Removal on 2026-03-24.
-media-plugins/vdr-skincurses
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2026-02-22)
-# Obsolete package. Use media-video/vdr[demoplugins] instead.
-# Removal on 2026-03-24.
-media-plugins/vdr-skinelchi
-
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-02-15)
 # Masked for testing and possible libvlc revdeps breakage.
 ~media-video/vlc-4.0.0_pre20260320
-
-# Conrad Kostecki <conikost@gentoo.org> (2026-02-15)
-# Supports only Qt5 and upstream not making any progress towards Qt6.
-# Removal on 2026-03-01. Bug #953260.
-x11-misc/projecteur
 
 # Thomas Beierlein <tomjbe@gentoo.org> (2026-02-14)
 # Move ebuild versioning to classical x.y.z number scheme
 # Should be kept until net-wireless/sdrplay-3.15.2 (dep for coming
 # new version) gets stable.
 >=net-wireless/soapysdrplay-20000000
-
-# David Seifert <soap@gentoo.org> (2026-02-14)
-# Behemoth package, with a massive and brittle testsuite. No other major distro
-# packages this anymore. Lots of QA issues, broken tests and blocking cleanup
-# efforts. This package will only be allowed back in ::gentoo after a sustained
-# demonstration of maintenance dedication. Removal on 2026-03-16. Bug #966712.
-dev-cpp/muParserX
-dev-python/pylatexenc
-dev-python/python-constraint
-dev-python/qiskit
-dev-python/qiskit-aer
-dev-python/rustworkx
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-02-12)
 # Misc Qt5-based libraries without any revdeps left.
@@ -412,11 +376,6 @@ net-analyzer/echoping
 <=dev-libs/hyprland-protocols-0.6.4
 <=dev-libs/hyprgraphics-0.1.5
 <=gui-wm/hyprland-0.51.1
-
-# Michał Górny <mgorny@gentoo.org> (2026-02-09)
-# setuptools-82 removes pkg_sources, inevitably leading to breakage.
->=dev-python/ensurepip-setuptools-82
->=dev-python/setuptools-82
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-02-08)
 # All remaining KF5 revdeps have been masked.
@@ -554,10 +513,6 @@ net-analyzer/arp-sk
 # any data/messages using this librnp version. <0.18 is fine as is >=0.18.1.
 # See bug #966299.
 =dev-util/librnp-0.18.0
-
-# Sam James <sam@gentoo.org> (2025-10-13)
-# Crashes in memtodest when handling PATH. Not yet reported upstream.
-=app-shells/dash-0.5.13.1
 
 # Michał Górny <mgorny@gentoo.org> (2025-10-12)
 # Requires Rust with RUST_SYSROOTS=bpf, which isn't currently supported

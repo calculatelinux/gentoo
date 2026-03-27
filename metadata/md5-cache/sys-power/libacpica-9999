@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=x11-libs/libpciaccess
+DESCRIPTION=ACPICA as a library
+EAPI=8
+HOMEPAGE=https://salsa.debian.org/hurd-team/libacpica
+INHERIT=toolchain-funcs git-r3
+LICENSE=BSD GPL-2+
+PROPERTIES=live
+RDEPEND=x11-libs/libpciaccess
+SLOT=0
+_eclasses_=git-r3	7b584b5dc33e3bc66ff5b9271bf41764	toolchain-funcs	5195689ff6a73b0e789acfa09d4fbcb9
+_md5_=3bbf37d32eb0017e4820b346e0cbcd47

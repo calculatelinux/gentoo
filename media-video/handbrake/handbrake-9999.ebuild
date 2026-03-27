@@ -35,10 +35,10 @@ declare -A BUNDLED=(
 	# See bug #829595 and #922828
 	[ffmpeg]="https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/ffmpeg-8.0.1.tar.bz2;"
 	# Patched in an incompatible way
-	[x265]="https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/x265-snapshot-20250729-13276.tar.gz;x265"
-	[x265_8bit]="https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/x265-snapshot-20250729-13276.tar.gz;x265"
-	[x265_10bit]="https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/x265-snapshot-20250729-13276.tar.gz;x265"
-	[x265_12bit]="https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/x265-snapshot-20250729-13276.tar.gz;x265"
+	[x265]="https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/x265-snapshot-20260216-13309.tar.gz;x265"
+	[x265_8bit]="https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/x265-snapshot-20260216-13309.tar.gz;x265"
+	[x265_10bit]="https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/x265-snapshot-20260216-13309.tar.gz;x265"
+	[x265_12bit]="https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs2/x265-snapshot-20260216-13309.tar.gz;x265"
 )
 
 bundle_src_uri() {
@@ -117,7 +117,7 @@ BDEPEND="
 	)
 "
 if [[ ${PV} != 9999 ]]; then
-	BDEPEND+="sec-keys/openpgp-keys-handbrake"
+	BDEPEND+=">=sec-keys/openpgp-keys-handbrake-20260311"
 	VERIFY_SIG_OPENPGP_KEY_PATH=/usr/share/openpgp-keys/handbrake.asc
 fi
 
