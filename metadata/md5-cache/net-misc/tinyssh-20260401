@@ -1,0 +1,13 @@
+BDEPEND=virtual/pkgconfig
+DEFINED_PHASES=configure install postinst prepare
+DESCRIPTION=A small SSH server with state-of-the-art cryptography
+EAPI=8
+HOMEPAGE=https://tinyssh.org
+INHERIT=systemd toolchain-funcs
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( CC0-1.0 0BSD MIT-0 MIT )
+RDEPEND=sys-apps/ucspi-tcp
+SLOT=0
+SRC_URI=https://github.com/janmojzis/tinyssh/archive/20260401.tar.gz -> tinyssh-20260401.tar.gz
+_eclasses_=systemd	a964c0cbe818b5729da1dbfcee5be861	toolchain-funcs	5195689ff6a73b0e789acfa09d4fbcb9
+_md5_=fb60693c9532ea0b57fe5b3a3022c94d

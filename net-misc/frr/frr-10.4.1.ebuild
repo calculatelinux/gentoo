@@ -1,4 +1,4 @@
-# Copyright 2020-2025 Gentoo Authors
+# Copyright 2020-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -57,6 +57,8 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-7.5-ipctl-forwarding.patch
 	"${FILESDIR}"/${PN}-8.4.1-logrotate.patch
 	"${FILESDIR}"/${PN}-9.1-mimic-gnu-basename-api-for-non-glibc.patch
+	"${FILESDIR}"/${PN}-tests-abs_srcdir.patch
+	"${FILESDIR}"/${PN}-tests-grpc.patch
 )
 
 QA_CONFIG_IMPL_DECL_SKIP=(
@@ -73,6 +75,7 @@ src_prepare() {
 
 my_src_configure() {
 	local myconf=(
+		ac_cv_prog_VALGRIND_CHECK=no
 		LEX=flex
 		--with-pkg-extra-version="-gentoo"
 		--enable-configfile-mask=0640
@@ -101,14 +104,14 @@ my_src_configure() {
 }
 
 my_src_compile() {
-	default
+	emake GRPC_CFLAGS=-std=gnu++23 GRPC_CXXFLAGS=-std=gnu++23
 
-	use doc && emake -C doc html
+	use doc && emake html
 }
 
 my_src_test() {
 	local -x PYTEST_DISABLE_PLUGIN_AUTOLOAD=1
-	default
+	emake GRPC_CFLAGS=-std=gnu++23 GRPC_CXXFLAGS=-std=gnu++23 check
 }
 
 my_src_install() {

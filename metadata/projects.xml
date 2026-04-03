@@ -1203,6 +1203,27 @@
     </member>
   </project>
   <project>
+    <email>hurd@gentoo.org</email>
+    <name>GNU/Hurd Project</name>
+    <url>https://wiki.gentoo.org/wiki/Project:Hurd</url>
+    <description>Porting Gentoo to the Hurd</description>
+    <member>
+      <email>csfore@gentoo.org</email>
+      <name>Christopher Fore</name>
+      <role>Boffin</role>
+    </member>
+    <member>
+      <email>dilfridge@gentoo.org</email>
+      <name>Andreas K. Hüttel</name>
+      <role>Boffin</role>
+    </member>
+    <member is-lead="1">
+      <email>sam@gentoo.org</email>
+      <name>Sam James</name>
+      <role>Chief Boffin</role>
+    </member>
+  </project>
+  <project>
     <email>infra@gentoo.org</email>
     <name>Gentoo Infrastructure</name>
     <url>https://wiki.gentoo.org/wiki/Project:Infrastructure</url>
