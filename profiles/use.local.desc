@@ -3101,7 +3101,6 @@ games-emulation/desmume:gdb - Enable support for the remote GDB stub
 games-emulation/desmume:openal - Use media-libs/openal for microphone input
 games-emulation/desmume:wifi - Enable support for Wi-Fi (experimental and discouraged)
 games-emulation/dolphin:discord - Enables Discord Rich Presence, show the current game on Discord
-games-emulation/dolphin:discord-presence - Enables Discord Rich Presence, show the current game on Discord
 games-emulation/dolphin:evdev - Enable evdev input support
 games-emulation/dolphin:llvm - Enables LLVM support, for disassembly
 games-emulation/dolphin:log - Increase logging output
@@ -3384,11 +3383,13 @@ gnome-base/gvfs:afp - Enables support for accessing AFP (Apple Filing Protocol) 
 gnome-base/gvfs:archive - Enables support for accessing files in archives transparently via app-arch/libarchive
 gnome-base/gvfs:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
 gnome-base/gvfs:fuse - Enables fuse mount points in $HOME/.gvfs for legacy application access
+gnome-base/gvfs:gcr - Enables keystore handling using app-crypt/gcr
 gnome-base/gvfs:gnome-online-accounts - Enable configuration panel for net-libs/gnome-online-accounts accounts
 gnome-base/gvfs:google - Enables support for accessing Google accounts via dev-libs/libgdata
 gnome-base/gvfs:http - Enable the HTTP/DAV backend using net-libs/libsoup
 gnome-base/gvfs:nfs - Enable NFS client support via net-fs/libnfs
 gnome-base/gvfs:onedrive - Enable Onedrive backend via net-libs/msgraph
+gnome-base/gvfs:sftp - Enable SFTP client support via virtual/openssh
 gnome-base/gvfs:udev - Enable udev base replacement code for cdda feature
 gnome-base/libgnomecanvas:glade - Enable glade support
 gnome-base/librsvg:tools - Build svg viewer tool
@@ -6437,6 +6438,7 @@ net-misc/eventd:purple - Enable plugin for IM notifications via libpurple
 net-misc/eventd:webhook - Enable plugin to send payloads to webhook handlers
 net-misc/eventd:websocket - Enable support for WebSocket protocol
 net-misc/freerdp:aad - Enable login via Azure AD
+net-misc/freerdp:camera - Enable camera support
 net-misc/freerdp:client - Build client binaries
 net-misc/freerdp:fuse - Clipboard with FUSE file copy support
 net-misc/freerdp:openh264 - Enable H.264 support using media-libs/openh264
@@ -6767,7 +6769,6 @@ net-nds/rpcbind:warmstarts - Enables rpcbind to cache configuration for warm res
 net-news/rssguard:icu - Enable text encoding conversion via dev-libs/icu
 net-news/rssguard:libmpv - Enable media player support via libmpv from media-video/mpv
 net-news/rssguard:qtmultimedia - Enable media player support via dev-qt/qtmultimedia
-net-news/rssguard:webengine - Use dev-qt/qtwebengine for embedded web browser
 net-news/sfeed:theme-mono - Use mono theme
 net-news/sfeed:theme-mono-highlight - Use mono_highlight theme
 net-news/sfeed:theme-newsboat - Use newsboat theme
@@ -7295,7 +7296,6 @@ sci-libs/avogadrolibs:archive - Enable archive support using app-arch/libarchive
 sci-libs/avogadrolibs:jkqtplotter - Enable charts and spectra using sci-libs/jkqtplotter
 sci-libs/avogadrolibs:spglib - Find and set the Hall number for a crystal using sci-libs/spglib
 sci-libs/blas-lapack-aux-wrapper:index64 - Create ILP64 wrappers as well
-sci-libs/blis:64bit-index - Enable 64bit array indexing, incompatible with runtime switching
 sci-libs/blis:eselect-ldso - Enable runtime library switching by eselect and ld.so.
 sci-libs/blis:index64 - Build an ILP64 libblis64 in addition to LP64 libblis
 sci-libs/blis:openmp - Use openmp threadding model
