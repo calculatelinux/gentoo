@@ -2907,9 +2907,7 @@ dev-util/hip:video_cards_nvidia - Build for Nvidia platform
 dev-util/intel-graphics-compiler:vc - Enable VectorCompiler for a better performance.
 dev-util/intel-graphics-system-controller:cli - Build CLI tools for flashing manually a firmware upgrade.
 dev-util/intellij-idea:bundled-xvfb - Utilize the built in xvfb server. Requires purchased license from upstream.
-dev-util/intellij-idea:experimental - Enables Wayland support preview.
 dev-util/intellij-idea:professional - Enable the Professional version which requires a license purchased from Jetbrains.
-dev-util/intellij-idea:wayland - Enables support for the Wayland display server protocol.
 dev-util/kdevelop:gdbui - Enable GUI for attaching GDB to a running process
 dev-util/kdevelop:qmake - Enable support for QMake build system
 dev-util/kdevelop:share - Enable support for patch sharing using kde-frameworks/purpose
@@ -5045,6 +5043,7 @@ media-tv/kodi:mysql - Enable support store of media library metadata on local or
 media-tv/kodi:nfs - Enable NFS client support
 media-tv/kodi:optical - Enable Audio CD playback, optical disks detection and reading (CD-ROM, Video CD, and others), and ISO optical disk images direct reading. DVD disks may require additional 'udf' flag.
 media-tv/kodi:pipewire - Enable pipewire support
+media-tv/kodi:postproc - Use bundled libpostproc to postprocess and deinterlace video
 media-tv/kodi:soc - Use additional media-video/ffmpeg patches for efficient playback on some SoCs (e.g. ARM, RISC-V)
 media-tv/kodi:system-ffmpeg - Use system ffmpeg instead of the bundled one
 media-tv/kodi:udev - Use udev rules to handle devices' permissions and hotplug support. Unless you know what you're doing do not disable this flag on Linux kernels. This is provided as an option for completeness.
@@ -6373,7 +6372,6 @@ net-misc/chrony:html - Install HTML documentation
 net-misc/chrony:libtomcrypt - Support different hashes via dev-libs/libtomcrypt
 net-misc/chrony:nettle - Use dev-libs/nettle for hash functions or nts
 net-misc/chrony:nss - Use dev-libs/nss for hash functions
-net-misc/chrony:ntp - Support for the Network Time Protocol (NTP)
 net-misc/chrony:nts - Support for Network Time Security (NTS). Uses net-libs/gnutls
 net-misc/chrony:phc - Support for the PTP (Precision Time Protocol) Hardware Clock (PHC) interface
 net-misc/chrony:pps - Support for the Linux Pulse Per Second (PPS) interface
@@ -6935,6 +6933,7 @@ net-vpn/libreswan:dnssec - Use DNSSEC resolver (requires net-dns/unbound)
 net-vpn/libreswan:ikev1 - Enable the IKEv1 protocol
 net-vpn/networkmanager-sstp:gtk4 - Use gui-libs/gtk for GUI support.
 net-vpn/networkmanager-strongswan:gtk4 - Use GTK4 instead of GTK3.
+net-vpn/ocserv:nftables - Use nftables instead of iptables in ocserv-fw
 net-vpn/ocserv:otp - Enable support for one-time passwords
 net-vpn/openconnect:gssapi - Build GSSAPI support
 net-vpn/openconnect:libproxy - Enable proxy support
@@ -7376,7 +7375,6 @@ sci-libs/gdal:libaec - Enable support Adaptive Entropy Coding with sci-libs/liba
 sci-libs/gdal:libdeflate - Use app-arch/libdeflate for faster compression and decompression
 sci-libs/gdal:mongodb - Enable support for MongoDBV3 driver with dev-db/mongodb
 sci-libs/gdal:muparser - Enable support for C++ VRT expressions with dev-cpp/muParser
-sci-libs/gdal:ogdi - Enable support for the open geographic datastore interface (sci-libs/ogdi)
 sci-libs/gdal:parquet - Enables read/write parquet data format (dev-libs/apache-arrow)
 sci-libs/gdal:qhull - Enable support for linear interpolation of gdal_grid with media-libs/qhull
 sci-libs/gdal:spatialite - Enable Spatial DBMS over sqlite dev-db/spatialite
@@ -7465,8 +7463,6 @@ sci-libs/openblas:index64 - Compile a separate INTERFACE64 OpenBLAS
 sci-libs/openblas:pthread - Build with pthread threading model
 sci-libs/openblas:relapack - Build the ReLAPACK extension to OpenBLAS
 sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/freeimage
-sci-libs/opencascade:freetype - Enable media-libs/freetype support
-sci-libs/opencascade:inspector - Build Inspector tool
 sci-libs/opencascade:jemalloc - Enable jemalloc allocator support via dev-libs/jemalloc
 sci-libs/opencascade:json - Enable JSON support through dev-libs/rapidjson
 sci-libs/opencascade:optimize - Don't clear allocated memory. Use optimized memory manager unless USE="tbb" is set
