@@ -36,6 +36,72 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (2026-04-13)
+# dev-python/tempest is needed only for OpenStack integration tests.
+# Incompatible with py3.14.  All the revdeps were mistaken.  Includes
+# dependencies without other revdeps.
+# Removal on 2026-05-13.  Bug #972619.
+dev-python/oslo-concurrency
+dev-python/stestr
+dev-python/tempest
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-04-12)
+# Perpetually stuck on Qt5 despite recent releases made under the influence of AI.
+# A Qt6-based snapshot is provided for testing without keywords, currently as
+# app-admin/keepassxc-2.8.0_pre260316-r1, but it is unclear when keywords will
+# be restored let alone stabilised.
+# Alternatives are app-admin/keepass, app-admin/pass which can import kbdx
+# files, app-admin/vaultwarden, app-admin/bitwarden-desktop-bin and probably
+# many more.  AppImage or Flatpak versions also available as last resort.
+# Bugs #949231, #967905.
+# Removal on 2026-05-11.
+<=app-admin/keepassxc-2.7.9999
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-04-12)
+# Depends on Qt5 and does not appear to be ported to Qt6. A possible alternative
+# is net-misc/remmina's x2go plugin, but it requires interested parties to look
+# into it. Bugs #538458, #917570, #955192
+# Removal on 2026-05-11.
+net-misc/x2goclient
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-04-12)
+# Depending on Qt5 with solarus-1.6.5 being broken by missing deps and at
+# least GCC-15. Bugs #953383 (+ linked see-also bugs), #961916, #962015
+# Both games-rpg/zsdx and games-rpg/zsxd are potentially fixed for Solarus 2.0
+# in git master, but that requires someone motivated enough to try it out.
+# Removal on 2026-05-11.
+<games-engines/solarus-2.0.3
+<games-misc/solarus-quest-editor-2.0.3
+<games-rpg/zsdx-1.12.9999
+<games-rpg/zsxd-1.12.9999
+
+# Michał Górny <mgorny@gentoo.org> (2026-04-11)
+# NIH general purpose library.  Tests are failing.  No revdeps.
+# Removal on 2026-05-11.  Bug #942586.
+dev-python/pockets
+
+# Michał Górny <mgorny@gentoo.org> (2026-04-11)
+# dev-python/flask-sqlalchemy is unmaintained upstream, and has tons
+# of test failures with modern dev-python/sqlalchemy versions.
+# net-mail/automx2 has no Gentoo maintainer, and is its only revdep.
+# Removal on 2026-05-11.  Bug #972541.
+acct-group/automx2
+acct-user/automx2
+dev-python/flask-migrate
+dev-python/flask-sqlalchemy
+net-mail/automx2
+
+# Ulrich Müller <ulm@gentoo.org> (2026-04-09)
+# No longer serves any purpose. The mail desktop files are installed
+# by >=app-emacs/emacs-common-1.14 for all GNU Emacs (USE=gui) users.
+# Removal on 2026-05-09. Bug #972459.
+x11-misc/emacs-desktop-mail
+
+# Michał Górny <mgorny@gentoo.org> (2026-04-07)
+# This version had a mindless runtime dependency check that caused
+# importing requests to print warnings that broke random stuff.
+=dev-python/requests-2.32.5
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-04-06)
 # Obsolete KF5/KF6-transitional -common packages w/o any consumers left.
 # Removal on 2026-05-06.
@@ -242,57 +308,15 @@ dev-python/uv-dynamic-versioning
 =dev-db/sqlite-3.52.0-r1
 =dev-python/apsw-3.52.0.0
 
-# Mike Pagano <mpagano@gentoo.org> (2026-03-13)
-# Upstream has announced the archiving of this application
-# at repo location: https://github.com/nginx/unit/
-# This announcement includes the statement that security
-# issues may not be addressed. Possible alternatives
-# are www-servers/nginx or www-servers/apache
-# depending on your application needs.
-# Removal on 2026-04-13.
-www-servers/nginx-unit
-
 # Alfredo Tupone <tupone@gentoo.org> (2026-03-12)
 # No reverse dependency. Included in dev-tcltk/tklib
 # Removeal on 2026-04-12. Bug #971127
 dev-tcltk/tablelist
 
-# Volkmar W. Pogatzki <gentoo@pogatzki.net> (2026-03-10)
-# Unused Java library.
-# Last consumer was net-p2p/freenet-0.7.5_p1505-r0.
-# Removal on 2026-04-10. Bug #971058.
-dev-java/mersennetwister
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2026-03-09)
-# Latest release is >21 years old, no one else packages this, buffer overflow
-# at launch, packaged only in gentoo. Alternatives exist, including the dockapp
-# x11-plugins/wmamixer. Bug #969091
-# Removal on 2026-04-08.
-media-sound/alsamixer-app
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2026-03-09)
-# Dead CORBA implementation, no one else packages this, impossible to build.
-# Many bugs: #298101, #515938, #725192, #871237, #874090, #882479, #882633,
-# #898086, #919509, #952927, #967177
-# Removal on 2026-04-08.
-net-misc/mico
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2026-03-09)
-# Live only package, Upstream archived, integrated into
-# app-shells/bash-completion-2.17.0, which was already stabled.
-# Removal on 2026-04-08.  Bugs #792303, #960480.
-app-shells/tmux-bash-completion
-
 # Alfredo Tupone <tupone@gentoo.org> (2026-03-05)
 # Need more testing
 >=dev-lang/tcl-9
 >=dev-lang/tk-9
-
-# Michał Górny <mgorny@gentoo.org> (2026-02-28)
-# The test suite is broken since 1.16.0 (Nov 2025), and upstream did not
-# address the problem so far: https://github.com/pypa/hatch/issues/2123
-# Removal on 2026-03-30.  Bug #970681.
-dev-python/hatch
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-02-27)
 # Obsolete Qt5 non-qtbase modules without revdeps.
@@ -314,10 +338,6 @@ dev-qt/qtwebsockets:5
 # on VLC-3. Bug #935797  Removal on 2026-03-26.
 media-libs/phonon
 media-libs/phonon-vlc
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2026-02-15)
-# Masked for testing and possible libvlc revdeps breakage.
-~media-video/vlc-4.0.0_pre20260320
 
 # Thomas Beierlein <tomjbe@gentoo.org> (2026-02-14)
 # Move ebuild versioning to classical x.y.z number scheme

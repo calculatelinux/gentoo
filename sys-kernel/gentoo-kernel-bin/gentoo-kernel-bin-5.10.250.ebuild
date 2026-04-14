@@ -19,26 +19,22 @@ HOMEPAGE="
 SRC_URI+="
 	https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/${BASE_P}.tar.xz
 	https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/patch-${PATCH_PV}.xz
-	https://dev.gentoo.org/~mgorny/dist/linux/${PATCHSET}.tar.xz
+	https://distfiles.gentoo.org/pub/proj/dist-kernel/patchsets/$(ver_cut 1-2)/${PATCHSET}.tar.xz
 	verify-sig? (
 		https://cdn.kernel.org/pub/linux/kernel/v$(ver_cut 1).x/sha256sums.asc
 			-> linux-$(ver_cut 1).x-sha256sums-${SHA256SUM_DATE}.asc
 	)
 	amd64? (
-		https://dev.gentoo.org/~mgorny/binpkg/amd64/kernel/sys-kernel/gentoo-kernel/${BINPKG}.gpkg.tar
-			-> ${BINPKG}.amd64.gpkg.tar
+		https://distfiles.gentoo.org/pub/proj/dist-kernel/binpkg/amd64/$(ver_cut 1-2)/${BINPKG}.amd64.gpkg.tar
 	)
 	arm64? (
-		https://dev.gentoo.org/~mgorny/binpkg/arm64/kernel/sys-kernel/gentoo-kernel/${BINPKG}.gpkg.tar
-			-> ${BINPKG}.arm64.gpkg.tar
+		https://distfiles.gentoo.org/pub/proj/dist-kernel/binpkg/arm64/$(ver_cut 1-2)/${BINPKG}.arm64.gpkg.tar
 	)
 	ppc64? (
-		https://dev.gentoo.org/~mgorny/binpkg/ppc64le/kernel/sys-kernel/gentoo-kernel/${BINPKG}.gpkg.tar
-			-> ${BINPKG}.ppc64le.gpkg.tar
+		https://distfiles.gentoo.org/pub/proj/dist-kernel/binpkg/ppc64le/$(ver_cut 1-2)/${BINPKG}.ppc64le.gpkg.tar
 	)
 	x86? (
-		https://dev.gentoo.org/~mgorny/binpkg/x86/kernel/sys-kernel/gentoo-kernel/${BINPKG}.gpkg.tar
-			-> ${BINPKG}.x86.gpkg.tar
+		https://distfiles.gentoo.org/pub/proj/dist-kernel/binpkg/x86/$(ver_cut 1-2)/${BINPKG}.x86.gpkg.tar
 	)
 "
 S=${WORKDIR}

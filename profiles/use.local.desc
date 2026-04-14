@@ -459,6 +459,8 @@ app-crypt/tpm2-tss:fapi - Enable feature API (requires openssl as crypto backend
 app-crypt/tpm2-tss:mbedtls - Use net-libs/mbedtls as crypto engine
 app-crypt/tpm2-tss:openssl - Use dev-libs/openssl as crypto engine
 app-crypt/tpm2-tss:policy - Enable policy library (requires openssl as crypto backend)
+app-crypt/uacme:openssl - Use dev-libs/openssl as TLS backend
+app-crypt/uacme:ualpn - Build uapln - lightweight proxying ACMEv2 tls-alpn-01 responder
 app-crypt/zulucrypt:kwallet - Enable encrypted storage of passwords with kde-frameworks/kwallet
 app-crypt/zulucrypt:udev - Whether udev will be consulted when deciding if a volume is system or not
 app-dicts/aspell-be:classic - Support classic spelling by default
@@ -2417,7 +2419,6 @@ dev-python/amqp:extras - Install extra tools to generate initial Python mod from
 dev-python/apprise:dbus - Support sending notifications to the desktop over D-Bus
 dev-python/apprise:mqtt - Support sending notifications over MQTT
 dev-python/authlib:django - Enable Django framework support
-dev-python/authlib:flask - Enable Flask framework support
 dev-python/authlib:jose - Enable JSON Object Signing and Encryption (JOSE) support via dev-python/pycryptodome
 dev-python/autobahn:xbr - Add support for XBR decentralized data markets and etherium blockchain
 dev-python/blake3:rust - Build the Rust implementation (if disabled, the "experimental" C implementation is used instead).
@@ -4969,6 +4970,7 @@ media-sound/shntool:mac - Add support for Monkey's Audio files
 media-sound/shntool:shorten - Add support for the shorten audio compressor
 media-sound/snapcast:client - Build and install Snapcast client component
 media-sound/snapcast:pipewire - Build with PipeWire support
+media-sound/snapcast:sdl - Build client with SDL2 support
 media-sound/snapcast:server - Build and install Snapcast server component
 media-sound/snapcast:soxr - Build with audio resampler support with media-libs/soxr
 media-sound/snapcast:tremor - Build with TREMOR version of vorbis
@@ -6010,11 +6012,9 @@ net-irc/inspircd:argon2 - Enable Argon2 hashes in modules
 net-irc/inspircd:gnutls - Enable TLS support
 net-irc/inspircd:log-json - Enable logging via JSON
 net-irc/inspircd:maxminddb - Enable geolocation support via dev-libs/libmaxminddb
-net-irc/inspircd:mbedtls - Add support for TLS using the mbedTLS library
 net-irc/inspircd:pcre2 - Add support for Perl Compatible Regular Expressions 2
 net-irc/inspircd:re2 - Add support for Google RE2 regular expressions library
 net-irc/inspircd:regex-posix - Add support for POSIX Regular Expressions
-net-irc/inspircd:regex-stdlib - Add support for C++ stdlib regular expressions
 net-irc/inspircd:ssl - Enable SSL support
 net-irc/inspircd:sslrehashsignal - Enable rehashing SSL module by SIGUSR1
 net-irc/inspircd:tre - Enable support for TRE, a lightweight, robust, and efficient POSIX compliant regexp matching library
@@ -6935,6 +6935,7 @@ net-vpn/networkmanager-sstp:gtk4 - Use gui-libs/gtk for GUI support.
 net-vpn/networkmanager-strongswan:gtk4 - Use GTK4 instead of GTK3.
 net-vpn/ocserv:nftables - Use nftables instead of iptables in ocserv-fw
 net-vpn/ocserv:otp - Enable support for one-time passwords
+net-vpn/ocserv:root-tests - Enable tests requiring root/namespaces
 net-vpn/openconnect:gssapi - Build GSSAPI support
 net-vpn/openconnect:libproxy - Enable proxy support
 net-vpn/openconnect:pskc - Enable PSKC file storage of HOTP/TOTP keys
@@ -7900,19 +7901,14 @@ sys-apps/flashrom:stlinkv3-spi - Enable SPI programmer using STLINK-V3
 sys-apps/flashrom:tools - Install ich_descriptor_tool, a tool for reading descriptor-mode SPI-flash images for Intel chipsets
 sys-apps/flashrom:usbblaster-spi - Enable support for Altera USB-Blaster dongles
 sys-apps/fwupd:amdgpu - Build and install AMD dGPU (Navi3x and above) plugin
-sys-apps/fwupd:amt - Build and install Intel AMT plugin
 sys-apps/fwupd:archive - Use app-arch/libarchive for archives support
 sys-apps/fwupd:cbor - Enable CBOR support for coSWID and uSWID via dev-libs/libcbor
-sys-apps/fwupd:fastboot - Build and install fastboot plugin
 sys-apps/fwupd:flashrom - Enable flashrom plugin via sys-apps/flashrom
-sys-apps/fwupd:gusb - Enable dev-libs/libgusb support
-sys-apps/fwupd:logitech - Build and install Logitech bulk controller plugin
 sys-apps/fwupd:modemmanager - Build and install Modem Manager plugin
 sys-apps/fwupd:nvme - Build and install NVMe plugin
 sys-apps/fwupd:protobuf - Enable protobuf plugins
 sys-apps/fwupd:spi - Install Intel-SPI plugin
 sys-apps/fwupd:synaptics - Install synaptics plugin
-sys-apps/fwupd:test-full - Enable tests known not to play nicely with the sandbox
 sys-apps/fwupd:tpm - Install Trusted Platform Module plugin
 sys-apps/fwupd:uefi - Enable UEFI support
 sys-apps/gawk:mpfr - Use dev-libs/mpfr for high precision arithmetic (-M / --bignum)
@@ -8474,6 +8470,7 @@ sys-kernel/gentoo-kernel:hardened - Use selection of hardening options recommend
 sys-kernel/gentoo-kernel:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-kernel-bin:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
+sys-kernel/gnumach:debug - Enable the in-kernel debugger. Can be entered manually with CTRL-ALT-d. See https://www.gnu.org/software/hurd/microkernel/mach/gnumach/debugging.html
 sys-kernel/hurd:ncurses - Build console-curses client for non-basic capabilities, unlike the builtin one.
 sys-kernel/hurd:rumpkernel - Build sys-kernel/rumpkernel support which provides drivers from NetBSD run in userland. This is needed for 64-bit systems and is considered the future of driver and hardware support on Hurd.
 sys-kernel/hurd:xkb - Depend on x11-libs/libxkbcommon for keymap support in the console.
@@ -8542,6 +8539,8 @@ sys-libs/libblockdev:nvme - Add nvme support via sys-libs/libnvme
 sys-libs/libblockdev:smart - Add SMART support via sys-apps/smartmontools
 sys-libs/libblockdev:tools - Build tools
 sys-libs/libcap:tools - Install captree, which requires dev-lang/go
+sys-libs/libcap-ng:bpf - Install cap-audit utility which uses the extended Berkeley Packet Filter (eBPF).
+sys-libs/libcap-ng:deprecated - Install deprecated captest utility.
 sys-libs/libnbd:fuse - Install the sys-fs/fuse powered nbdfuse.
 sys-libs/libnbd:go - Build bindings for dev-lang/go
 sys-libs/libnvme:json - Support JSON output via dev-libs/json-c
@@ -8873,8 +8872,6 @@ www-servers/nginx:pcre2 - Enable support for pcre2
 www-servers/nginx:rtmp - NGINX-based Media Streaming Server
 www-servers/nginx:ssl - Enable HTTPS module for http. Enable SSL/TLS support for POP3/IMAP/SMTP for mail.
 www-servers/nginx:stream - Enable generic TCP/UDP proxying and load balancing
-www-servers/nginx-unit:php8-3 - Support for PHP 8.3
-www-servers/nginx-unit:php8-4 - Support for PHP 8.4
 www-servers/pshs:magic - Enable automatic detection of Content-Type using libmagic (sys-apps/file)
 www-servers/pshs:qrcode - Enable generating QRCodes for server URL
 www-servers/sniproxy:dns - Enable DNS resolver via net-libs/udns
