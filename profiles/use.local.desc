@@ -27,6 +27,7 @@ app-accessibility/espeak-ng:l10n_ru - Builds extended Russian Dictionary file
 app-accessibility/espeak-ng:l10n_zh - Builds extended Chinese (Mandarin and Cantonese) Dictionary files
 app-accessibility/espeak-ng:man - Builds and installs manpage with app-text/ronn-ng
 app-accessibility/espeak-ng:mbrola - Adds support for mbrola voices
+app-accessibility/espeak-ng:sonic - Enable audio speed up support with media-libs/sonic
 app-accessibility/flite:voices - Install synthetic voices
 app-accessibility/freetts:jsapi - build Java Speech API (JSAPI)
 app-accessibility/freetts:mbrola - Adds support for mbrola voices
@@ -2123,6 +2124,7 @@ dev-libs/libjcat:pkcs7 - Enable PKCS7 verification support via net-libs/gnutls
 dev-libs/libjwt:openssl - Use openssl libs for crypto functions
 dev-libs/liblogging:rfc3195 - Enables RFC 3195 protocol (aka syslog-reliable) support. If you don't know what this is, you don't need it!
 dev-libs/liblogging:stdlog - Enables liblogging's core component (think of it as a the next version of the syslog(3) API).
+dev-libs/liblouis:tools - Enable python bindings and tools for testing and debugging tables
 dev-libs/libmemcached:hsieh - Use Hsieh hash algorithm.
 dev-libs/libmemcached:libevent - Use the libevent event loop interface.
 dev-libs/libmemcached:sasl - Use sasl auth for communications.
@@ -3564,6 +3566,7 @@ kde-apps/kdenetwork-meta:zeroconf - Pull in packages using kde-frameworks/kdnssd
 kde-apps/kdenlive:designer - Build plugins for dev-qt/qttools[designer]
 kde-apps/kdepim-addons:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
 kde-apps/kdepim-addons:importwizard - Enable additional import plugins for kde-apps/akonadi-import-wizard
+kde-apps/kdepim-addons:itinerary - Enable plugins for kde-apps/kitinerary
 kde-apps/kdepim-addons:markdown - Enable Markdown support via app-text/discount
 kde-apps/kdepim-meta:bogofilter - Install mail-filter/bogofilter for spam filter support in kde-apps/kmail
 kde-apps/kdepim-meta:clamav - Install app-antivirus/clamav for virus detection support in kde-apps/kmail
@@ -7160,7 +7163,6 @@ net-wireless/wpa_supplicant:wep - Add support for Wired Equivalent Privacy (depr
 net-wireless/wpa_supplicant:wimax - Add support for Wimax EAP-PEER authentication algorithm
 net-wireless/wpa_supplicant:wps - Add support for Wi-Fi Protected Setup
 sci-astronomy/cpl:gasgano - Enable support for sci-astronomy/gasgano file organizer
-sci-astronomy/kstars:opencv - Enable contrast type focus measures via media-libs/opencv
 sci-astronomy/kstars:password - Store passwords securely via dev-libs/qtkeychain
 sci-astronomy/psfex:plplot - Build with sci-libs/plplot to allow diagnostic plots during processing
 sci-astronomy/scamp:plplot - Build with sci-libs/plplot to allow diagnostic plots during processing
