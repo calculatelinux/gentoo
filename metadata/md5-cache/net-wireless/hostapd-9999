@@ -10,5 +10,5 @@ LICENSE=BSD
 PROPERTIES=live
 RDEPEND=internal-tls? ( dev-libs/libtommath ) !internal-tls? ( dev-libs/openssl:0=[-bindist(-)] ) kernel_linux? ( net-wireless/wireless-regdb >=dev-libs/libnl-3.2:3 ) netlink? ( net-libs/libnfnetlink ) sqlite? ( dev-db/sqlite:3 ) selinux? ( sec-policy/selinux-hostapd )
 SLOT=0
-_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	git-r3	7b584b5dc33e3bc66ff5b9271bf41764	portability	3c2334cdfbb30bc4b33c85164fe832bf	savedconfig	b9131abe556ad2ea96c01b06d658d363	systemd	a964c0cbe818b5729da1dbfcee5be861	toolchain-funcs	5195689ff6a73b0e789acfa09d4fbcb9
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	git-r3	7b584b5dc33e3bc66ff5b9271bf41764	portability	3c2334cdfbb30bc4b33c85164fe832bf	savedconfig	b9131abe556ad2ea96c01b06d658d363	systemd	a964c0cbe818b5729da1dbfcee5be861	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
 _md5_=b827951a03859f075572513135890445

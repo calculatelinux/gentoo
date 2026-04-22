@@ -13,5 +13,5 @@ REQUIRED_USE=^^ ( lua_single_target_luajit )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/openresty/lua-resty-memcached/archive/refs/tags/v0.17.tar.gz -> lua-resty-memcached-0.17.tar.gz
-_eclasses_=lua-single	75fe955a36b18e199213c8739eaebdbb	lua-utils	7c89927eda6f21c4c48136247077ab37	toolchain-funcs	5195689ff6a73b0e789acfa09d4fbcb9
+_eclasses_=lua-single	75fe955a36b18e199213c8739eaebdbb	lua-utils	7c89927eda6f21c4c48136247077ab37	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
 _md5_=0c25413fa9915a9dc19eb86992ef5761

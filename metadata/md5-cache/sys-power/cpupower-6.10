@@ -11,5 +11,5 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/pciutils
 SLOT=0/0
 SRC_URI=https://dev.gentoo.org/~floppym/dist/cpupower-6.10.tar.xz
-_eclasses_=systemd	a964c0cbe818b5729da1dbfcee5be861	toolchain-funcs	5195689ff6a73b0e789acfa09d4fbcb9
+_eclasses_=systemd	a964c0cbe818b5729da1dbfcee5be861	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
 _md5_=e1d705773e1cc6a32cd451db365c241c
