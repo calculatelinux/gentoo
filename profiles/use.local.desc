@@ -2075,6 +2075,7 @@ dev-libs/json-glib:nls - Enable native language support (translations)
 dev-libs/ktextaddons:designer - Build plugins for dev-qt/qttools[designer]
 dev-libs/leancrypto:tools - Install sha*sum tools to /usr/libexec/leancrypto/.
 dev-libs/libbase58:tools - Build command line base58 tool
+dev-libs/libburn:cdio - Use dev-libs/libcdio for the transport of SCSI commands
 dev-libs/libbytesize:tools - Build bscalc python CLI tool
 dev-libs/libcdio:minimal - Only build the libcdio library and little more, just to be used to link against from multimedia players. With this USE flag enabled, none of the command-line utilities are built, nor is the CDDA library.
 dev-libs/libcec:exynos - Enable support for Exynos chipsets
@@ -2112,6 +2113,7 @@ dev-libs/libgit2-glib:ssh - Enable SSH transport support
 dev-libs/libgpg-error:common-lisp - Install common-lisp files
 dev-libs/libgpiod:tools - Build some useful gpio tools that use libgpiod.
 dev-libs/libical:glib - Enable dev-libs/glib interface support
+dev-libs/libisoburn:cdio - Use dev-libs/libcdio for the transport of SCSI commands
 dev-libs/libisoburn:external-filters - Allow the use of external processes as file content filters (Note: this is a potential security risk)
 dev-libs/libisoburn:external-filters-setuid - Also allow the use of external setuid processes as file content filters (Note: this is a potential security risk)
 dev-libs/libisoburn:frontend-optional - Use dev-tcltk/bwidget which is not strictly required for the frontend
@@ -2196,6 +2198,7 @@ dev-libs/m17n-lib:athena - Enable the MIT Athena widget set (x11-libs/libXaw)
 dev-libs/m17n-lib:gd - Build API and utilities based on media-libs/gd. This flag is only meaningful if the X USE flag is also enabled
 dev-libs/m17n-lib:libotf - Use dev-libs/libotf to handle OpenType fonts
 dev-libs/m17n-lib:libxml2 - Use dev-libs/libxml2 to parse XML
+dev-libs/marisa:tools - Build command-line tools
 dev-libs/md4c:md2html - Build the md2html cli tool
 dev-libs/mimalloc:hardened - Enable exploit mitigations
 dev-libs/modsecurity:fuzzyhash - Support fuzzy hash computations (to detect malware, for example) using the app-crypt/ssdeep package.
@@ -2233,6 +2236,7 @@ dev-libs/openssl:rfc3779 - Enable support for RFC 3779 (X.509 Extensions for IP 
 dev-libs/openssl:tls-compression - Enable support for discouraged TLS compression
 dev-libs/openssl:weak-ssl-ciphers - Build support for SSL/TLS ciphers that are considered "weak"
 dev-libs/openssl-compat:bindist - Disable/Restrict EC algorithms (as they seem to be patented) -- note: changes the ABI
+dev-libs/openssl-compat:quic - Enable support for QUIC (RFC 9000); a UDP-based protocol intended to replace TCP
 dev-libs/openssl-compat:rfc3779 - Enable support for RFC 3779 (X.509 Extensions for IP Addresses and AS Identifiers)
 dev-libs/openssl-compat:sslv2 - Support for the old/insecure SSLv2 protocol -- note: not required for TLS/https
 dev-libs/openssl-compat:sslv3 - Support for the old/insecure SSLv3 protocol -- note: not required for TLS/https
@@ -2444,13 +2448,11 @@ dev-python/immutables:native-extensions - Compiles native "C" extensions (speedu
 dev-python/ipython:nbconvert - Enable support for converting notebooks to various formats using app-text/pandoc
 dev-python/ipython:notebook - Install requirements for the web notebook based on dev-python/tornado
 dev-python/jsonpickle:test-full - Run test suite in full via additional (large) test dependencies, like dev-python/pandas.
-dev-python/markdown-exec:ansi - Enable support for rendering ANSI colours in HTML code blocks
 dev-python/matplotlib:excel - Pull dev-python/xlwt for the exceltools toolkit
 dev-python/matplotlib:gtk3 - Enable x11-libs/gtk+:3 support
 dev-python/matplotlib:webagg - Enable webagg backend that uses dev-python/tornado
 dev-python/mido:portmidi - Support using media-libs/portmidi as MIDI back-end
 dev-python/mido:rtmidi - Support using media-libs/rtmidi as MIDI back-end
-dev-python/mkdocs-material:social - Install the dependencies of the "social" plugin.
 dev-python/mpmath:test-full - Run test suite in full via additional (large) test dependencies, like dev-python/matplotlib.
 dev-python/msgpack:native-extensions - Compiles native "C" extensions (speedups, instead of using python fallback code).
 dev-python/multidict:native-extensions - Compile native C extensions (speedups, instead of using Python fallback code).
@@ -3001,7 +3003,6 @@ dev-vcs/git:cgi - Install gitweb too
 dev-vcs/git:curl - Support fetching and pushing (requires webdav too) over http:// and https:// protocols
 dev-vcs/git:gpg - Pull in gnupg for signing -- without gnupg, attempts at signing will fail at runtime!
 dev-vcs/git:highlight - GitWeb support for app-text/highlight
-dev-vcs/git:mediawiki - Support pulling and pushing from MediaWiki
 dev-vcs/git:perforce - Add support for Perforce version control system (requires manual installation of Perforce client)
 dev-vcs/git:perl - Adds Perl bindings and tools such as git-send-email
 dev-vcs/git:rust - Build components using Rust, starting with 2.52 with varint. This will become mandatory upstream with Git 3.0.
@@ -3822,7 +3823,7 @@ lxqt-base/lxqt-meta:sddm - Install x11-misc/sddm display manager
 lxqt-base/lxqt-meta:ssh-askpass - Install lxqt-base/lxqt-openssh-askpass user password prompt tool
 lxqt-base/lxqt-meta:sudo - Install lxqt-base/lxqt-sudo
 lxqt-base/lxqt-meta:terminal - Install x11-terms/qterminal package
-lxqt-base/lxqt-meta:trash - Install gnome-base/gvfs to enable 'trash' functionality in x11-misc/pcmanfm-qt
+lxqt-base/lxqt-meta:trash - Install gnome-base/gvfs to enable 'trash:///', 'computer:///' and other such "places" in x11-misc/pcmanfm-qt
 lxqt-base/lxqt-meta:wayland - Install lxqt-base/lxqt-wayland-session to support Wayland sessions
 lxqt-base/lxqt-meta:window-manager - Install kde-plasma/kwin window manager
 lxqt-base/lxqt-panel:colorpicker - Build colorpicker plugin
@@ -6037,12 +6038,13 @@ net-irc/ngircd:strict-rfc - Strict RFC compliance; may harm compatibility
 net-irc/psybnc:multinetwork - Adds support for multiple networks
 net-irc/psybnc:oidentd - Adds support for oidentd
 net-irc/psybnc:scripting - Adds scripting support
+net-irc/quassel:crypt - Support core->network per-channel and per-query blowfish encryption via app-crypt/qca.
 net-irc/quassel:dbus - Support desktop notifications via the StatusNotifier D-Bus service (used by most modern desktop environments).
-net-irc/quassel:gui - Build the Qt5 GUI client for quassel. If this USE flag is disabled, the GUI is not built, and cannot be used. You might want to disable this on the server, but you need it enabled on the client.
 net-irc/quassel:monolithic - Build standalone client with integrated core, no external quasselcore needed. Only useful if you don't want to use Quassel's client/server model. The server and X flags are not needed in this case but it is possible to enable them too.
 net-irc/quassel:oxygen - Support the Oxygen icon set that was the default for KDE4.
 net-irc/quassel:server - Build the server binary. If this USE flag is disabled, the 'core' server binary for quassel is not built, and cannot be used. You need this enabled on the server, but you might want to disable it on the client.
 net-irc/quassel:system-icons - Use kde-frameworks/breeze-icons rather than icons bundled with Quassel.
+net-irc/quassel:urlpreview - Use dev-qt/qtwebengine rendering engine for showing URL thumbnails.
 net-irc/rbot:aspell - Use aspell instead of ispell in the "spell" plugin for rbot. The vanilla plugin uses ispell, but enabling this flag makes it use the ispell interface from aspell instead.
 net-irc/rbot:cal - Add dependency over a package providing the /usr/bin/cal command, which is needed to enable the "cal" plugin for rbot. If the USE flag is disabled the plugin is also disabled by default.
 net-irc/rbot:figlet - Add dependency over app-misc/figlet, which is used by the "figlet" plugin for rbot. If the USE flag is disabled the plugin will be unable to use figlet; if toilet is also disabled, the plugin will be disabled.
@@ -7197,7 +7199,6 @@ sci-biology/mothur:hdf5 - Support Biom format 2.0 for the biom.info command via 
 sci-biology/newick-utils:xml - Uses dev-libs/libxml2 to handle ornaments
 sci-biology/ucsc-genome-browser:server - Install genome browser Web application. If this flag is off, only libraries and utilities from the suite are installed.
 sci-biology/yass:lowmem - Build for environments with low amounts of memory
-sci-calculators/datamash:linux-crypto - Use Linux kernel cryptographic API
 sci-calculators/datamash:openssl - Use dev-libs/openssl for hash routines instead of internal gnulib
 sci-calculators/units:units-cur - Install the units_cur python script that updates currencies
 sci-chemistry/avogadro2:rpc - Enable communication between programs using the RPC protocol and standard JSON messages

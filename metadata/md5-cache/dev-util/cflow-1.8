@@ -1,0 +1,15 @@
+BDEPEND=app-alternatives/lex emacs? ( >=app-editors/emacs-23.1:* ) nls? ( sys-devel/gettext )
+DEFINED_PHASES=compile configure install postinst postrm
+DEPEND=nls? ( virtual/libintl virtual/libiconv )
+DESCRIPTION=C function call hierarchy analyzer
+EAPI=8
+HOMEPAGE=https://www.gnu.org/software/cflow/
+INHERIT=elisp-common flag-o-matic
+IUSE=debug emacs nls
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-3+
+RDEPEND=emacs? ( >=app-editors/emacs-23.1:* ) nls? ( virtual/libintl virtual/libiconv )
+SLOT=0
+SRC_URI=mirror://gnu/cflow/cflow-1.8.tar.xz
+_eclasses_=elisp-common	0ea9a0d3bc26353e1642c73560a24fdf	flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	5195689ff6a73b0e789acfa09d4fbcb9
+_md5_=7ad7ab0d1719f78b89b97596cc31ce5c
