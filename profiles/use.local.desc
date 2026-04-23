@@ -5709,7 +5709,6 @@ net-dns/dnscap:cryptopant - Enable cryptopANT plugin, implementation of crypto-P
 net-dns/dnsdist:bpf - Enable support for eBPF socket filtering
 net-dns/dnsdist:dnscrypt - Enable the ability to act as a DNSCrypt server
 net-dns/dnsdist:dnstap - Enable support for dnstap
-net-dns/dnsdist:doc - Install the HTML documentation
 net-dns/dnsdist:doh - Enable support for dns over http via net-libs/nghttp2
 net-dns/dnsdist:doh3 - Enable support for dns over http3 via net-libs/quiche
 net-dns/dnsdist:ipcipher - Enable support for ipcipher via dev-libs/openssl
@@ -8057,6 +8056,7 @@ sys-apps/systemd:xkb - Depend on x11-libs/libxkbcommon to allow logind to contro
 sys-apps/systemd-utils:boot - Enable systemd-boot (UEFI boot manager)
 sys-apps/systemd-utils:kernel-install - Enable kernel-install
 sys-apps/systemd-utils:kmod - Enable kernel module loading via sys-apps/kmod
+sys-apps/systemd-utils:sysctl - Install systemd-sysctl and sysctl.d files
 sys-apps/systemd-utils:sysusers - Enable systemd-sysusers
 sys-apps/systemd-utils:tmpfiles - Enable systemd-tmpfiles
 sys-apps/systemd-utils:udev - Enable systemd-udev (userspace device manager)
