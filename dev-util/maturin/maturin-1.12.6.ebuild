@@ -24,7 +24,7 @@ LICENSE+="
 	CDLA-Permissive-2.0 MIT MPL-2.0 Unicode-3.0 ZLIB BZIP2
 " # crates
 SLOT="0"
-KEYWORDS="amd64 arm arm64 ~loong ~mips ~ppc ppc64 ~riscv ~s390 x86"
+KEYWORDS="amd64 arm arm64 ~loong ~mips ppc ppc64 ~riscv ~s390 x86"
 IUSE="doc +ssl test"
 RESTRICT="!test? ( test )"
 
@@ -125,6 +125,8 @@ python_test() {
 	local CARGO_SKIP_TESTS=(
 		# picky cli output test that easily benignly fail (bug #937992)
 		cli_tests
+		# fails for unsupported rust targets, non-issue here (bug #973104)
+		pypi_compatibility_linux_tag
 		# avoid need for wasm over a single hello world test
 		integration_wasm_hello_world
 		# fragile depending on rust version, also wants libpypy*-c.so for pypy

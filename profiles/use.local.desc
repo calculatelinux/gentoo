@@ -1208,15 +1208,21 @@ app-text/evince:xps - Enable XPS viewer using app-text/libgxps
 app-text/fbpdf:poppler - Use app-text/poppler instead of app-text/mupdf for rendering PDF files
 app-text/feathernotes:X - Link application against X11 libraries which adds support for virtual desktop awareness and tab DND
 app-text/ghostscript-gpl:unicode - Add support for unicode passwords via net-dns/libidn
+app-text/groonga:apache-arrow - Enable support for Apache Arrow
 app-text/groonga:benchmark - Build benchmark programs
+app-text/groonga:blosc - Allow using blosc compression via dev-libs/c-blosc2
 app-text/groonga:exact-alloc-count - Atomic counting for memory alloc count
 app-text/groonga:futex - Use futex
+app-text/groonga:json - Enable JSON processing using dev-libs/rapidjson
 app-text/groonga:libevent - Enable dev-libs/libevent used for suggestion
 app-text/groonga:mecab - Use app-text/mecab for morphological analysis
 app-text/groonga:msgpack - Enable dev-libs/msgpack used for suggestion
 app-text/groonga:nfkc - Use nfkc based utf8 normalization
 app-text/groonga:sphinx - Enable document generation by app-misc/sphinx
+app-text/groonga:stemmer - Enable stemming token filter using dev-libs/snowball-stemmer
+app-text/groonga:suggest-learner - Build groonga-suggest-learner to learn suggest result from groonga-suggest-httpd or query logs
 app-text/groonga:uyield - Build for detecting race conditions
+app-text/groonga:xxhash - Enable drilldown by hashed key using dev-libs/xxhash
 app-text/groonga:zeromq - Enable net-libs/zeromq used for suggestion
 app-text/htmltidy:deprecated - Install tools and header files which are now considered deprecated
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
@@ -3884,9 +3890,7 @@ mail-client/mutt:gpgme - Build gpgme backend to support S/MIME, PGP/MIME and tra
 mail-client/mutt:gsasl - Use GNU SASL via net-misc/gsasl instead of Cyrus SASL (requires USE=sasl)
 mail-client/mutt:hcache - Enable header cache, one database backend needs to be enabled
 mail-client/mutt:lmdb - Enable dev-db/lmdb database backend for header caching
-mail-client/mutt:pgp-classic - Build classic_pgp backend to support PGP/MIME and traditional/inline PGP
 mail-client/mutt:pop - Enable support for POP3 mailboxes
-mail-client/mutt:smime-classic - Build classic_smime backend to support S/MIME
 mail-client/mutt:smtp - Enable support for direct SMTP delivery
 mail-client/mutt:tokyocabinet - Enable dev-db/tokyocabinet database backend for header caching
 mail-client/neomutt:autocrypt - Enable autocrypt.org support
@@ -4655,6 +4659,7 @@ media-libs/zita-resampler:tools - Install zresample and zretune tools
 media-libs/zmusic:mpg123 - Enable support for MPEG audio playback via media-sound/mpg123
 media-libs/zvbi:proxy - Share V4L and V4L2 VBI devices between multiple applications
 media-libs/zxing-cpp:experimental - Enable experimental features via media-libs/zint
+media-libs/zxing-cpp:tools - Install ZXingReader and ZXingWriter binaries
 media-plugins/alsa-plugins:arcam_av - Enables Arcam AV control plugin
 media-plugins/alsa-plugins:mix - Enables upmix and vdownmix plugin
 media-plugins/alsa-plugins:usb_stream - Enables usb_stream plugin
@@ -6498,6 +6503,7 @@ net-misc/inetutils:uucpd - Enable uucpd
 net-misc/inetutils:whois - Enable whois
 net-misc/iputils:arping - Build and install arping -- tool for sending ARP requests to peers (see also net-analyzer/arping)
 net-misc/iputils:clockdiff - Build and install clockdiff -- tool for comparing clocks via ICMP packets
+net-misc/iputils:suid - If filecaps are disabled, install binaries with suid bit enabled
 net-misc/iputils:tracepath - Build and install tracepath -- tool for tracing network paths for discovering MTU values
 net-misc/ipv6calc:apache - Build the apache module mod_ipv6calc
 net-misc/ipv6calc:openssl - Use dev-libs/openssl instead of app-crypt/libmd for MD5 digest
@@ -8554,7 +8560,7 @@ sys-libs/libunwind:libatomic - Use libatomic instead of builtin atomic operation
 sys-libs/libxcrypt:compat - Build with compatibility interfaces for other crypt implementations
 sys-libs/libxcrypt:headers-only - Build and install only the headers. This is mostly useful for toolchain bootstrapping, to avoid circular deps.
 sys-libs/libxcrypt:system - Install as system libcrypt.so rather than to an alternate directory (will collide with sys-libs/glibc's version)
-sys-libs/minizip-ng:compat - Enable compatibility with sys-libs/zlib's USE=minizip
+sys-libs/minizip-ng:compat - Enable compatibility with sys-libs/zlib's USE=minizip, allowing minizip-ng to replace it. Only enable if you want to replace reference minizip with minizip-ng.
 sys-libs/minizip-ng:openssl - Use dev-libs/openssl for further encryption capabilities
 sys-libs/musl-nscd:minimal - Only installs the header files
 sys-libs/ncurses:ada - Add bindings for the Ada programming language
