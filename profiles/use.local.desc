@@ -2604,6 +2604,13 @@ dev-python/rpyc:numpy - Run tests depending on dev-python/numpy, dev-python/pand
 dev-python/simplejson:native-extensions - Compiles native "C" extensions (speedups, instead of using Python fallback code).
 dev-python/stripe:telemetry - Enable sending "telemetry to Stripe regarding request latency and feature usage" by default. Upstream enables it by default in their PyPI distribution; it can also be explicitly controlled via stripe.enable_telemetry variable (boolean).
 dev-python/subprocess-tee:test-full - Enable full test mode. Pulls in many additional dependencies, and requires having been emerged without this flag first in order to avoid a circular dependency.
+dev-python/symengine:boost - Add support for boost integers (dev-libs/boost)
+dev-python/symengine:ecm - Add support for ECM integer factorization library (sci-mathematics/gmp-ecm)
+dev-python/symengine:flint - Add support for sci-mathematics/flint
+dev-python/symengine:llvm - Build with LLVM
+dev-python/symengine:mpc - Add support for multiprecision complex arithmetic (dev-libs/mpc)
+dev-python/symengine:mpfr - Add support for multiprecision floating point rounding (dev-libs/mpfr)
+dev-python/symengine:primesieve - Add support for sci-mathematics/primesieve
 dev-python/sympy:imaging - Add support for dev-python/pillow
 dev-python/sympy:ipython - Add support for dev-python/ipython
 dev-python/sympy:mathml - Add support for mathml
@@ -2840,6 +2847,7 @@ dev-util/buildbot:irc - Add support for status delivery through an ircbot.
 dev-util/cargo-audit:fix - Add support for 'fix' subcommand (experimental)
 dev-util/catalyst:iso - Pulls in the depends for building iso images
 dev-util/catalyst:qcow2 - Pulls in the depends for building qcow2 images
+dev-util/ccache:http - Enable HTTP backend for storage via dev-cpp/cpp-httplib
 dev-util/ccache:redis - Enable Redis backend for storage via dev-libs/hiredis
 dev-util/ccache:static-c++ - Avoid dynamic dependency on gcc's libstdc++.
 dev-util/cccc:apidoc - Build software docs with doxygen/graphviz and metrics with cccc
@@ -7264,6 +7272,7 @@ sci-geosciences/gpsd:latency-timing - support latency timing information
 sci-geosciences/gpsd:ntp - Enable net-misc/ntp shared memory interface and PPS kernel support for GPS time
 sci-geosciences/gpsd:shm - export gpsd over shared memory
 sci-geosciences/grass:geos - Use sci-libs/geos for v.buffer and adds extended options to the v.select module
+sci-geosciences/grass:lfs - Support large files (>2GB) on 32-bit systems
 sci-geosciences/grass:pdal - Enable support for PDAL for point clouds via sci-libs/pdal
 sci-geosciences/grass:svm - Enable support for the Support Vector Machine library sci-libs/libsvm
 sci-geosciences/gshhs:data - Add earth data with sci-geosciences/gshhs-data
@@ -8043,7 +8052,6 @@ sys-apps/systemd:gcrypt - Enable use of dev-libs/libgcrypt for various features
 sys-apps/systemd:homed - Enable portable home directories
 sys-apps/systemd:http - Enable embedded HTTP server in journald
 sys-apps/systemd:importd - Enable import daemon
-sys-apps/systemd:iptables - Use libiptc from net-firewall/iptables for NAT support in systemd-networkd; this is used only if the running kernel does not support nftables
 sys-apps/systemd:kernel-install - Enable kernel-install
 sys-apps/systemd:kmod - Enable kernel module loading via sys-apps/kmod
 sys-apps/systemd:lz4 - Enable lz4 compression for the journal
@@ -8115,7 +8123,7 @@ sys-auth/pambase:securetty - Enable pam_securetty module in the login stack. Not
 sys-auth/pambase:sha512 - Switch Linux-PAM's pam_unix module to use sha512 for passwords hashes rather than MD5. This option requires sys-libs/pam version 1.0.1 built against sys-libs/glibc version 2.7, if it's built against an earlier version, it will silently be ignored, and MD5 hashes will be used. All the passwords changed after this USE flag is enabled will be saved to the shadow file hashed using SHA512 function. The password previously saved will be left untouched. Please note that while SHA512-hashed passwords will still be recognised if the USE flag is removed, the shadow file will not be compatible with systems using an earlier glibc version.
 sys-auth/pambase:sssd - Add System Security Services Daemon (sys-auth/sssd) support via pam_sss.
 sys-auth/pambase:systemd - Use pam_systemd module to register user sessions in the systemd control group hierarchy.
-sys-auth/pambase:yescrypt - Switch Linux-PAM's pam_unix module to use yescrypt for passwords hashes rather than MD5
+sys-auth/pambase:yescrypt - Switch Linux-PAM's pam_unix module to use yescrypt for passwords hashes rather than MD5. Like with USE=sha512 (see that description), this only changes the default, and hashes with other types are still supported.
 sys-auth/polkit:systemd - Use sys-apps/systemd for session tracking
 sys-auth/seatd:builtin - Enable embedded server in libseat
 sys-auth/seatd:server - Enable standalone seatd server, replacement to (e)logind
@@ -8123,6 +8131,7 @@ sys-auth/ssh-ldap-pubkey:schema - Install a copy of the LPK schema, only needed 
 sys-auth/sssd:acl - Build and use the cifsidmap plugin
 sys-auth/sssd:netlink - Add support for netlink protocol via dev-libs/libnl
 sys-auth/sssd:nfsv4 - Add support for the nfsv4 idmapd plugin provided by net-fs/nfs-utils
+sys-auth/sssd:openid - Add support for login via OpenID Connect, such as Keycloak
 sys-auth/sssd:passkey - Add support for FIDO2 passkeys"
 sys-auth/sssd:samba - Add Privileged Attribute Certificate Support for Kerberos
 sys-auth/sssd:systemtap - Enable SystemTap/DTrace tracing
@@ -8611,6 +8620,7 @@ sys-process/fcron:debug - Enable debug code and output. Since version 3.0.5 this
 sys-process/fcron:mta - Enable mta support for sending emails from fcron
 sys-process/fcron:pam - Enable PAM support for fcron. This means that fcron will pass through the "fcron" stack before executing the jobs, and fcrontab will use the "fcrontab" stack to authenticate the user before editing its crontab file.
 sys-process/fcron:system-crontab - Set up fcron to respect /etc/crontab and /etc/cron.d. If this flag is disabled, /etc/cron.d and /etc/crontab will be ignored, but /etc/cron.{hourly,daily,weekly,monthly} will still be respected. Also this creates /usr/bin/crontab symlink.
+sys-process/htop:bfd - With USE=unwind, demangle symbol names (like for C++) in backtraces via sys-libs/binutils-libs
 sys-process/htop:delayacct - Enable Linux delay accounting support via dev-libs/libnl
 sys-process/htop:hwloc - Use sys-apps/hwloc for CPU affinity support
 sys-process/htop:openvz - Enable openvz support

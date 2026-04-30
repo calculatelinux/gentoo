@@ -10,7 +10,7 @@ HOMEPAGE="https://kde.org/plasma-desktop/"
 
 LICENSE="metapackage"
 SLOT="6"
-KEYWORDS="~amd64 ~arm64 ~riscv ~x86"
+KEYWORDS="amd64 arm64 ~riscv ~x86"
 IUSE="accessibility bluetooth +browser-integration +crash-handler crypt cups
 discover +display-manager +elogind +firewall flatpak grub gtk +kwallet
 +networkmanager ocr oxygen-theme plymouth pulseaudio rdp +sddm sdk +smart
@@ -62,7 +62,7 @@ RDEPEND="
 	>=kde-plasma/systemsettings-${PV}:${SLOT}
 	>=kde-plasma/xdg-desktop-portal-kde-${PV}:${SLOT}
 	sys-apps/dbus[elogind?,systemd?]
-	sys-auth/polkit[systemd?]
+	sys-auth/polkit[elogind?,systemd?]
 	sys-fs/udisks:2[elogind?,systemd?]
 	bluetooth? ( >=kde-plasma/bluedevil-${PV}:${SLOT} )
 	browser-integration? ( >=kde-plasma/plasma-browser-integration-${PV}:${SLOT} )

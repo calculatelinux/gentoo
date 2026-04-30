@@ -49,8 +49,6 @@ src_configure() {
 		"spirv64-mesa3d-"
 	)
 	use video_cards_nvidia && MULTIBUILD_VARIANTS+=(
-		"nvptx64--"
-		"nvptx64--nvidiacl"
 		"nvptx64-nvidia-cuda"
 	)
 	use video_cards_radeonsi && MULTIBUILD_VARIANTS+=(
@@ -63,7 +61,7 @@ src_configure() {
 my_configure() {
 	local mycmakeargs=(
 		-DCMAKE_CLC_COMPILER="$(type -P clang-${LLVM_MAJOR})"
-		-DLLVM_RUNTIMES_TARGET="${MULTIBUILD_VARIANT}"
+		-DLLVM_DEFAULT_TARGET_TRIPLE="${MULTIBUILD_VARIANT}"
 		-DLLVM_INCLUDE_TESTS="$(usex test)"
 	)
 

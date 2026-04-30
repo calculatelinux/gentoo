@@ -114,12 +114,18 @@ media-video/pipewire -echo-cancel
 
 # Sam James <sam@gentoo.org> (2022-10-13)
 # Causes segfaults, bug #871921
+dev-python/symengine tcmalloc
 sci-libs/symengine tcmalloc
 
 # Georgy Yakovlev <gyakovlev@gentoo.org> (2022-09-29)
 # USE=fix requires ring crate, which is not portable
 # https://github.com/rustsec/rustsec/issues/707
 dev-util/cargo-audit fix
+
+# Michał Górny <mgorny@gentoo.org> (2021-12-31)
+# Don't apply stable masks to python-exec since we're forcing every
+# impl there anyway. Please keep this in sync with use.stable.mask.
+dev-lang/python-exec -python_targets_pypy3_11
 
 # Marek Szuba <marecki@gentoo.org> (2021-07-18)
 # media-plugins/zam-plugins not keyworded here
