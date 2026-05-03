@@ -18,7 +18,7 @@ HOMEPAGE="
 LICENSE="BSD"
 SLOT="0"
 if [[ ${PV} != *_beta* ]]; then
-	KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc64 ~riscv ~x86"
+	KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
 fi
 
 RDEPEND="
@@ -32,9 +32,9 @@ RDEPEND="
 	dev-python/more-itertools[${PYTHON_USEDEP}]
 	dev-python/parse[${PYTHON_USEDEP}]
 	<dev-python/openapi-schema-validator-0.9[${PYTHON_USEDEP}]
-	>=dev-python/openapi-schema-validator-0.7.0[${PYTHON_USEDEP}]
+	>=dev-python/openapi-schema-validator-0.8.1[${PYTHON_USEDEP}]
 	<dev-python/openapi-spec-validator-0.9[${PYTHON_USEDEP}]
-	>=dev-python/openapi-spec-validator-0.8.0[${PYTHON_USEDEP}]
+	>=dev-python/openapi-spec-validator-0.8.4[${PYTHON_USEDEP}]
 	>=dev-python/werkzeug-2.1.0[${PYTHON_USEDEP}]
 "
 
@@ -56,9 +56,13 @@ EPYTEST_PLUGINS=( pytest-{aiohttp,asyncio} )
 distutils_enable_tests pytest
 
 EPYTEST_IGNORE=(
-	# missing dependendencies
+	# missing dependencies
 	tests/integration/contrib/falcon
 	tests/integration/contrib/fastapi
+
+	# these require djangorestframework
+	tests/integration/contrib/django
+	tests/unit/contrib/django
 
 	# TODO: these tests fail to collect
 	tests/integration/validation/test_security_override.py
