@@ -10,7 +10,7 @@ SEC_KEYS_VALIDPGPKEYS=(
 inherit sec-keys
 
 DESCRIPTION="OpenPGP key used by Erwin Waterlander"
-HOMEPAGE="https://waterlan.home.xs4all.nl/"
+HOMEPAGE="https://waterlander.net/"
 
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"

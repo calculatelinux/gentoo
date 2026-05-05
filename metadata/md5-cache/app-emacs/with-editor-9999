@@ -1,12 +1,12 @@
-BDEPEND=>=app-emacs/compat-30.0.0.0 sys-apps/texinfo >=app-editors/emacs-26.3:* >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=>=app-emacs/compat-30.1.0.1 sys-apps/texinfo >=app-editors/emacs-26.3:* >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
 DESCRIPTION=Use the Emacsclient as the $EDITOR of child processes
-EAPI=8
+EAPI=9
 HOMEPAGE=https://magit.vc/manual/with-editor/ https://github.com/magit/with-editor/
 INHERIT=elisp git-r3
 LICENSE=GPL-3+
 PROPERTIES=live
-RDEPEND=>=app-emacs/compat-30.0.0.0 >=app-editors/emacs-26.3:*
+RDEPEND=>=app-emacs/compat-30.1.0.1 >=app-editors/emacs-26.3:*
 SLOT=0
 _eclasses_=elisp	a37bfc35b86403c770beebbd71661c30	elisp-common	0ea9a0d3bc26353e1642c73560a24fdf	git-r3	7b584b5dc33e3bc66ff5b9271bf41764
-_md5_=b2e0846bfb3f19793f7e5ff87cda2e51
+_md5_=95cc05b8c276fb3def8f01fd705079a2

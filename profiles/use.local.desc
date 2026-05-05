@@ -355,6 +355,7 @@ app-containers/docker:overlay2 - Enables dependencies for the "overlay2" graph d
 app-containers/docker-credential-helpers:pass - Build pass helper for the pass utility.
 app-containers/incus:fuidshift - Install the fuidshift binary - currently conflicts with app-containers/lxd
 app-containers/incus:qemu - Pull dependencies needed to manage QEMU-based virtual machines with Incus
+app-containers/lxc:landlock - Use Landlock to restrict what the monitor API handlers can do on the system
 app-containers/lxc:tools - Build and install additional command line tools
 app-containers/nerdctl:rootless - Enables dependencies for running in rootless mode.
 app-containers/podman:btrfs - Enable btrfs support (graph driver) in Podman
@@ -2527,6 +2528,7 @@ dev-python/pyside:concurrent - Build QtConcurrent module
 dev-python/pyside:core - Build QtCore module, if disable then only shiboken will be built
 dev-python/pyside:designer - Build QtDesigner and QtUiTools modules
 dev-python/pyside:gles2-only - Build QtGui "QOpenGL*" classes
+dev-python/pyside:graphs - Build QtGraphs module
 dev-python/pyside:gui - Build QtGui module
 dev-python/pyside:help - Build QtHelp module
 dev-python/pyside:httpserver - Build QtHttpServer module
