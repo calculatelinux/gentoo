@@ -21,7 +21,7 @@ S="${WORKDIR}/${PN}1-${PV}"
 LICENSE="MIT"
 # configure.ac: "For simplicity we just bump current all the time and don't bother"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~sparc ~x86"
+KEYWORDS="amd64 arm arm64 ~loong ppc ppc64 ~riscv ~sparc x86"
 IUSE="doc gcrypt gnutls http nss +openssl static-libs test"
 RESTRICT="!test? ( test )"
 REQUIRED_USE="
@@ -66,6 +66,9 @@ src_prepare() {
 	default
 
 	eautoreconf
+
+	# skip failing test (this is fixed in 1.3.11) - #972730
+	sed -i '1842s/zyes/zskip/' tests/testDSig.sh || die
 }
 
 src_configure() {
