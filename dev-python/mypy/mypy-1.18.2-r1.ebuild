@@ -22,7 +22,7 @@ SRC_URI="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm arm64 ~loong ppc ppc64 ~riscv ~s390 ~sparc x86"
+KEYWORDS="amd64 arm arm64 ~loong ppc ppc64 ~riscv ~s390 ~sparc x86"
 IUSE="native-extensions"
 
 # stubgen collides with this package: https://bugs.gentoo.org/585594
@@ -95,6 +95,8 @@ python_test() {
 		# TODO
 		mypy/test/meta/test_parse_data.py
 		mypy/test/meta/test_update_data.py
+		# Unknown SIGBUS, bug #967850
+		mypyc/test/test_run.py::TestRun::run-classes.test::testBufferRoundTrip_native_libs
 	)
 	case ${EPYTHON} in
 		python3.14)
