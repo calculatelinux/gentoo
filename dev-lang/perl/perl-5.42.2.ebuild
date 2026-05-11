@@ -6,7 +6,7 @@ EAPI=8
 inherit alternatives flag-o-matic toolchain-funcs multilib multiprocessing
 
 PATCH_VER=1
-CROSS_VER=1.6.3
+CROSS_VER=1.6.4
 PATCH_BASE="perl-5.42.0-patches-${PATCH_VER}"
 PATCH_DEV=dilfridge
 
@@ -278,6 +278,8 @@ src_prepare_perlcross() {
 	eapply "${FILESDIR}/perl-5.34.0-crossfit.patch"
 	# fix cross-compilation configure tests w/ lto
 	eapply "${FILESDIR}/perl-5.42.0-cross-no-lto.patch"
+	# https://github.com/arsv/perl-cross/pull/174
+	eapply "${FILESDIR}/perl-5.42.2-cross.patch"
 
 	# bug 604072
 	MAKEOPTS+=" -j1"

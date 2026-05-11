@@ -6,14 +6,23 @@ EAPI=8
 inherit cmake optfeature pax-utils systemd xdg-utils
 
 if [[ ${PV} != *9999* ]]; then
-	MY_P=${PN}-${PV/_/-}
-	if [[ ${PV} == *_rc* ]] ; then
-		SRC_URI="https://github.com/quassel/quassel/archive/refs/tags/${PV/_/-}.tar.gz -> ${P}.tar.gz"
+	COMMIT=
+	if [[ -n ${COMMIT} ]]; then
+		SRC_URI="https://github.com/johu/quassel/archive/${COMMIT}.tar.gz -> ${P}-${COMMIT:0:8}.tar.gz"
+		# quassel-i18n branch tx-sync (po subdir) @d88d126
+		SRC_URI+=" https://dev.gentoo.org/~asturm/distfiles/${PN}-i18n-${PV/29/27}.tar.xz"
+		S="${WORKDIR}/${PN}-${COMMIT}"
 	else
-		SRC_URI="https://quassel-irc.org/pub/${MY_P}.tar.bz2"
-		KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
+		MY_P=${PN}-${PV/_/-}
+		if [[ ${PV} == *_rc* ]]; then
+			SRC_URI="https://github.com/quassel/quassel/archive/refs/tags/${PV/_/-}.tar.gz -> ${P}.tar.gz"
+		else
+			SRC_URI="https://quassel-irc.org/pub/${MY_P}.tar.bz2"
+		fi
+		S="${WORKDIR}/${MY_P}"
 	fi
-	S="${WORKDIR}/${MY_P}"
+	# RCs weren't keyworded in past, but we are past that point
+	KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
 else
 	EGIT_REPO_URI=( https://github.com/johu/${PN} ) # as long as Qt6 isn't
 	EGIT_BRANCH=( feat/qt6-migration )              # merged upstream ...
@@ -95,6 +104,18 @@ BDEPEND="
 "
 
 DOCS=( AUTHORS ChangeLog README.md )
+
+src_unpack() {
+	case ${PV} in
+		9999) git-r3_src_unpack ;&
+		*)
+			default
+			if [[ -n ${COMMIT} ]]; then
+				mv "${WORKDIR}"/po "${S}" || die
+			fi
+			;;
+	esac
+}
 
 src_configure() {
 	local mycmakeargs=(

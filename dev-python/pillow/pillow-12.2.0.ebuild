@@ -35,7 +35,7 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="HPND"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~arm64-macos ~x64-macos"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 ~sparc x86 ~arm64-macos ~x64-macos"
 IUSE="avif examples imagequant +jpeg jpeg2k lcms test tiff tk truetype webp xcb zlib"
 REQUIRED_USE="test? ( jpeg jpeg2k lcms tiff truetype )"
 RESTRICT="!test? ( test )"
@@ -101,7 +101,6 @@ python_configure_all() {
 		[build_ext]
 		debug = True
 		disable_platform_guessing = True
-		parallel = $(get_makeopts_jobs)
 		$(usepil avif)_avif = True
 		$(usepil truetype)_freetype = True
 		$(usepil jpeg)_jpeg = True
@@ -124,6 +123,7 @@ python_configure_all() {
 	fi
 
 	tc-export PKG_CONFIG
+	export MAX_CONCURRENCY=$(makeopts_jobs)
 }
 
 src_test() {

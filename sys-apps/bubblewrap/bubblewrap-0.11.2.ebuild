@@ -11,7 +11,7 @@ SRC_URI="https://github.com/containers/${PN}/releases/download/v${PV}/${P}.tar.x
 
 LICENSE="LGPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~x86"
+KEYWORDS="amd64 arm arm64 ~loong ppc ppc64 ~riscv x86"
 IUSE="selinux suid"
 
 RDEPEND="
@@ -29,6 +29,10 @@ BDEPEND="
 
 # tests require root privileges
 RESTRICT="test"
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-0.11.2-no-werror.patch
+)
 
 pkg_setup() {
 	if [[ ${MERGE_TYPE} != buildonly ]]; then

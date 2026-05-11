@@ -1,6 +1,10 @@
 # Copyright 2019-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Pacho Ramos <pacho@gentoo.org> (2026-05-09)
+# media-plugins/gst-plugin-gtk4 is not keyworded
+>=net-im/gajim-2.3 voice
+
 # Cristian Othón Martínez Vera <cfuga@cfuga.mx> (2026-03-22)
 # app-pda/usbmuxd is not keyworded here
 gnome-base/gvfs ios
@@ -90,6 +94,7 @@ sci-mathematics/maxima vtk
 # Andreas Sturmlechner <asturm@gentoo.org> (2024-06-15)
 # Requires unkeyworded dev-qt/qtwebengine (and revdeps)
 kde-plasma/plasma-nm openconnect
+net-irc/quassel urlpreview
 
 # Sam James <sam@gentoo.org> (2024-05-19)
 # media-libs/jasper not yet keyworded here: https://bugs.gentoo.org/921559

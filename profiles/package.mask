@@ -36,6 +36,93 @@
 
 #--- END OF EXAMPLES ---
 
+# Louis Sautier <sbraz@gentoo.org> (2026-05-10)
+# Unmaintained since 2017, no revdeps.
+# Removal on 2026-06-10. Bug #974496.
+dev-python/flask-debug
+dev-python/flask-nav
+
+# Louis Sautier <sbraz@gentoo.org> (2026-05-10)
+# Unmaintained since 2018, no revdeps.
+# Only consumer is www-misc/urlwatch which suggests it.
+# Removal on 2026-06-10. Bug #953050.
+dev-python/chump
+
+# Pacho Ramos <pacho@gentoo.org> (2026-05-09)
+# Obsolete version not compatible with current gnome-shell versions.
+# Upstream changed completely the way to package it. If still interested,
+# feel free to take it and update it. Removal in one month. Bug #974452
+gnome-extra/gnome-shell-extension-bluetooth-quick-connect
+
+# Pacho Ramos <pacho@gentoo.org> (2026-05-09)
+# No longer developed by upstream, does not work with current gnome-shell
+# versions. Removal in one month. Bug #974453
+gnome-extra/gnome-shell-extension-bluetooth-quick-connect
+
+# Pacho Ramos <pacho@gentoo.org> (2026-05-09)
+# No longer developed by upstream, does not work with current gnome-shell
+# versions. Use gnome-shell-extension-weather-oclock instead.
+# Removal in one month. Bug #974454
+gnome-extra/gnome-shell-extension-weather-in-the-clock
+
+# Michał Górny <mgorny@gentoo.org> (2026-05-09)
+# Unmaintained upstream and broken with Python 3.13.
+# Removal on 2026-06-08.  Bug #952342.
+dev-python/ipdb
+
+# Michał Górny <mgorny@gentoo.org> (2026-05-09)
+# Discontinued upstream, broken with Python 3.14 and have no reverse
+# dependencies outside the cycle.
+# Removal on 2026-06-08.  Bug #973008.
+dev-python/dockerpty
+dev-python/doublex-expects
+dev-python/expects
+dev-python/mamba
+
+# Michał Górny <mgorny@gentoo.org> (2026-05-09)
+# Unmaintained, bad quality packages.  No support for Python 3.13.
+# No reverse dependencies.
+# Removal on 2026-06-08.  Bug #952373.
+dev-python/js2py
+dev-python/pyjsparser
+
+# Michał Górny <mgorny@gentoo.org> (2026-05-09)
+# Discontinued upstream, no support for Python 3.14, no revdeps left.
+# Removal on 2026-06-08.  Bug #974029.
+net-im/telepathy-logger
+
+# Michał Górny <mgorny@gentoo.org> (2026-05-09)
+# Discontinued split compression library from app-arch/upx.  It was
+# replaced by a vendored version, and has no reverse dependencies.
+# Removal on 2026-06-08.  Bug #921202.
+dev-libs/ucl
+
+# Michał Górny <mgorny@gentoo.org> (2026-05-09)
+# The buildbot packages aren't actively maintained in ::gentoo.  They
+# are stuck on Python 3.12 and obsolete dependencies.  Bug reports
+# aren't receiving any attention.
+# Removal on 2026-06-08.  Bug #952430.
+acct-group/buildbot
+acct-user/buildbot
+dev-util/buildbot
+dev-util/buildbot-badges
+dev-util/buildbot-console-view
+dev-util/buildbot-grid-view
+dev-util/buildbot-pkg
+dev-util/buildbot-react-console-view
+dev-util/buildbot-react-grid-view
+dev-util/buildbot-react-wsgi-dashboards
+dev-util/buildbot-waterfall-view
+dev-util/buildbot-worker
+dev-util/buildbot-wsgi-dashboards
+dev-util/buildbot-www
+dev-util/buildbot-www-react
+
+# Michał Górny <mgorny@gentoo.org> (2026-05-08)
+# Django 4.2 LTS reached EOL in April 2026, and is now vulnerable.
+# Removal on 2026-06-07.
+<dev-python/django-5
+
 # Michał Górny <mgorny@gentoo.org> (2026-05-06)
 # Merged into dev-python/pydantic, since it is tightly pinned
 # and involves a tightly pinned cyclic test dependency.
@@ -142,7 +229,7 @@ dev-python/tempest
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-04-12)
 # Perpetually stuck on Qt5. A Qt6-based snapshot is provided for testing,
-# currently as app-admin/keepassxc-2.8.0_pre260316-r1, but it is unclear when
+# currently as app-admin/keepassxc-2.8.0_pre20260504, but it is unclear when
 # (or even if) it will be stabilised.  Alternatives are app-admin/keepass,
 # app-admin/pass which can import kbdx files via app-admin/pass-import,
 # app-admin/vaultwarden, app-admin/bitwarden-desktop-bin,
@@ -155,7 +242,7 @@ dev-python/tempest
 # Depends on Qt5 and does not appear to be ported to Qt6. A possible alternative
 # is net-misc/remmina's x2go plugin, but it requires interested parties to look
 # into it. Bugs #538458, #917570, #955192
-# Removal on 2026-05-11.
+# Removal on 2026-05-30.
 net-misc/x2goclient
 
 # Michał Górny <mgorny@gentoo.org> (2026-04-11)
@@ -184,14 +271,6 @@ x11-misc/emacs-desktop-mail
 # This version had a mindless runtime dependency check that caused
 # importing requests to print warnings that broke random stuff.
 =dev-python/requests-2.32.5
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2026-04-06)
-# Obsolete KF5/KF6-transitional -common packages w/o any consumers left.
-# Removal on 2026-05-06.
-kde-apps/libksane-common
-kde-apps/libkcddb-common
-kde-frameworks/purpose-kaccounts-services
-kde-misc/kio-gdrive-common
 
 # Sam James <sam@gentoo.org> (2026-04-06)
 # These versions dropped testtools.tests.* which are used by reverse
@@ -386,11 +465,6 @@ dev-python/calver
 # See bug #966299.
 =dev-util/librnp-0.18.0
 
-# Michał Górny <mgorny@gentoo.org> (2025-10-12)
-# Requires Rust with RUST_SYSROOTS=bpf, which isn't currently supported
-# by dev-lang/rust-bin.  Also needs net-proxy/mitmproxy-linux updates.
->=dev-util/bpf-linker-0.9.15-r1
-
 # Sam James <sam@gentoo.org> (2025-09-21)
 # Breaks (common) mt7921e WiFi driver with a hang in many cases, affecting
 # not just network. See bug #963106.
@@ -421,17 +495,6 @@ virtual/perl-Unicode-Normalize
 # required via pambase.  Masked until the maintainer determines a good
 # solution.  Bug #959274.
 =app-crypt/libsecret-0.21.7-r1
-
-# Sam James <sam@gentoo.org> (2025-06-12)
-# Breaks several applications (bug #957943)
->=dev-python/pygobject-3.52
->=net-im/gajim-2.3.0
-=dev-libs/libpeas-1.38*
->=app-office/endeavour-43.0-r2
->=dev-vcs/gitg-44-r5
->=media-gfx/eog-50
->=media-gfx/mypaint-2.0.1-r8
->=media-video/totem-43.2-r1
 
 # Sam James <sam@gentoo.ogr> (2025-06-08)
 # Masked for testing (bug #957583).

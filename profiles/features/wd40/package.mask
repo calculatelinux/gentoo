@@ -1,6 +1,20 @@
 # Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Michał Górny <mgorny@gentoo.org> (2025-05-07)
+# dev-python/mypy now started requiring NIH Rust packages.
+dev-ada/ada_language_server
+dev-ada/aws
+dev-ada/gnatdoc
+dev-ada/gnatformat
+dev-ada/lal-refactor
+dev-ada/langkit
+dev-ada/langkit-contrib
+dev-ada/libadalang
+dev-ada/libadalang-tools
+dev-python/ast-serialize
+dev-python/mypy
+
 # Michał Górny <mgorny@gentoo.org> (2025-05-02)
 # dev-python/cbor2 has been RIIR-ed, and the fallback Python
 # implementation was removed at the same time.  Covers its revdeps.
@@ -376,6 +390,7 @@ dev-python/jupyterlab-widgets
 dev-python/jupyterlab-server
 dev-python/jupyterlab
 dev-python/keyring
+dev-python/lzallright
 dev-python/apache-libcloud
 dev-python/moto
 dev-python/nbclassic
@@ -491,6 +506,7 @@ sci-geosciences/gnome-maps
 sys-block/thin-provisioning-tools
 >=sys-process/glances-4.1.2.1
 sys-fs/bcachefs-tools
+sys-fs/ubi_reader
 virtual/rust
 www-apps/radicale
 >=www-client/epiphany-49

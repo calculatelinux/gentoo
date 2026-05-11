@@ -52,7 +52,7 @@ else
 		PIPEWIRE_DOCS_USEFLAG="man"
 	fi
 
-	KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86"
+	KEYWORDS="amd64 arm arm64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86"
 fi
 
 DESCRIPTION="Multimedia processing graphs"
@@ -424,6 +424,19 @@ pkg_postinst() {
 			# https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3243
 			ewarn "Please restart KWin/Mutter after upgrading PipeWire."
 			ewarn "Screencasting may not work until you do."
+		fi
+
+		# Upgrading from a previous major version may require a restart (bug #964059)
+		if use sound-server && ver_test $(ver_cut 1-2 ${ver}) -lt $(ver_cut 1-2 ${PV}) ; then
+			ewarn "Please restart PipeWire after upgrading to a new major version:"
+			if use systemd ; then
+				ewarn " $ systemctl --user daemon-reload"
+				ewarn " $ systemctl restart --user pipewire.service"
+				ewarn " $ systemctl restart --user pipewire-pulse.service"
+				ewarn " $ systemctl restart --user wireplumber.service"
+			else
+				ewarn " $ gentoo-pipewire-launcher restart"
+			fi
 		fi
 
 		if ver_test ${ver} -le 0.3.66-r1 ; then

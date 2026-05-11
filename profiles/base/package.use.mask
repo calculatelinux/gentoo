@@ -6,6 +6,12 @@
 
 # New entries go on top.
 
+# Michał Górny <mgorny@gentoo.org> (2026-05-07)
+# Force-enable all PYTHON_TARGETS for python-exec to avoid using private
+# API. Please remember to keep it in sync with python_targets.desc.
+dev-lang/python-exec -python_targets_python3_15
+dev-lang/python-exec -python_targets_python3_15t
+
 # Michael Orlitzky <mjo@gentoo.org> (2026-05-04)
 # This needs an upgrade to >=dev-cpp/eigen-5.0.1 and I don't
 # need the extra headache right now.
@@ -16,6 +22,7 @@
 # Bugs #948049, #954887.  Removal some time after 2026-04-30.
 dev-python/pyqtgraph qt5
 net-wireless/gnuradio qt5
+<=net-wireless/gnuradio-3.10.99 channels
 
 # Brett A C Sheffield <bacs@librecast.net> (2026-03-29)
 # mask IUSE=selinux for www-servers/vinyl-cache-9.0.0 until

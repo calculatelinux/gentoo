@@ -3719,7 +3719,6 @@ kde-plasma/plasma-meta:ocr - Enable Optical Character Recognition support via ap
 kde-plasma/plasma-meta:oxygen-theme - Pull in Oxygen icons, sound theme and visual style for KDE Plasma
 kde-plasma/plasma-meta:plymouth - Pull in Breeze theme for sys-boot/plymouth
 kde-plasma/plasma-meta:pulseaudio - Install Plasma applet for PulseAudio volume management
-kde-plasma/plasma-meta:qt5 - Pull in required packages for seamless integration of KF5/Qt5-based applications
 kde-plasma/plasma-meta:sddm - Pull in the x11-misc/sddm display manager and system settings module
 kde-plasma/plasma-meta:sdk - Pull in kde-plasma/plasma-sdk for Plasma development
 kde-plasma/plasma-meta:smart - Pull in kde-plasma/plasma-disks for disk health monitoring
@@ -4252,9 +4251,7 @@ media-gfx/openvdb:abi10-compat - Disables newer features to maintain compatibili
 media-gfx/openvdb:abi11-compat - Disables newer features to maintain compatibility with ABI11
 media-gfx/openvdb:abi12-compat - Disables newer features to maintain compatibility with ABI12
 media-gfx/openvdb:abi13-compat - Disables newer features to maintain compatibility with ABI13
-media-gfx/openvdb:abi9-compat - Disables newer features to maintain compatibility with ABI9
 media-gfx/openvdb:alembic - Add support for Alembic through media-gfx/alembic.
-media-gfx/openvdb:ax - Build the OpenVDB AX module to perform custom manipulation of OpenVDB data via an expression language: AX
 media-gfx/openvdb:blosc - Allow using blosc compression via dev-libs/c-blosc
 media-gfx/openvdb:cuda - Enable support for CUDA in NanoVDB
 media-gfx/openvdb:nanovdb - A lightweight, header only, and GPU friendly version of VDB
@@ -4708,6 +4705,8 @@ media-plugins/imlib2_loaders:xcf - Enable XCF image loader
 media-plugins/ir_lv2:tools - Build convert4chan tool
 media-plugins/live:tools - Build test tools
 media-plugins/mpg123-output-plugins:int-quality - Use rounding instead of fast truncation for integer output, where possible
+media-plugins/photoqt-extensions:histogram - Support histogram using dev-qt/qtcharts
+media-plugins/photoqt-extensions:imagemagick - Support image manipulation: crop, export, scale
 media-plugins/qmmp-plugin-pack:mpv - Enable video support via media-video/mpv(experimental)
 media-plugins/vdr-cdplayer:cdparanoia - Enable cdparanoia (audio CD ripper) support
 media-plugins/vdr-dvbapi:dvbcsa - use media-libs/libdvbcsa free implementation of the DVB Common Scrambling Algorithm
@@ -6242,6 +6241,7 @@ net-libs/tox:log-error - Log level: 1
 net-libs/tox:log-info - Log level: 3
 net-libs/tox:log-trace - Log level: 5
 net-libs/tox:log-warn - Log level: 2
+net-libs/udns:ipv6 - Support querying nameservers over ipv6, and allow dnsget to automatically handle ipv6 PTR queries.
 net-libs/udns:tools - Build and install dnsget, ex-rdns and rblcheck tools
 net-libs/wandio:http - Build support for reading files over HTTP using net-misc/curl
 net-libs/webkit-gtk:examples - Install the MiniBrowser example application
@@ -6785,6 +6785,7 @@ net-news/rssguard:icu - Enable text encoding conversion via dev-libs/icu
 net-news/rssguard:libmpv - Enable media player support via libmpv from media-video/mpv
 net-news/rssguard:qtmultimedia - Enable media player support via dev-qt/qtmultimedia
 net-news/rssguard:webengine - Use dev-qt/qtwebengine for embedded web browser
+net-news/rssguard:xmpp - Enable support for XMPP PubSub protocol for real-time ATOM entries (and real-time messages from single-user or multi-user chats)
 net-news/sfeed:theme-mono - Use mono theme
 net-news/sfeed:theme-mono-highlight - Use mono_highlight theme
 net-news/sfeed:theme-newsboat - Use newsboat theme
