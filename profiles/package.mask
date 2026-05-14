@@ -36,6 +36,17 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2026-05-12)
+# dev-util/claude-code and dev-util/codex (guru) provide vastly more tokens
+# than relying on cursor as a broker. I don't see a future for cursor-agent.
+# Removal on 2026-06-11.
+dev-util/cursor-agent
+
+# David Seifert <soap@gentoo.org> (2026-05-12)
+# I don't see a future in a slightly better tab-completion editor.
+# Removal on 2026-06-11.
+app-editors/cursor
+
 # Louis Sautier <sbraz@gentoo.org> (2026-05-10)
 # Unmaintained since 2017, no revdeps.
 # Removal on 2026-06-10. Bug #974496.
@@ -141,10 +152,6 @@ dev-python/pydantic-core
 # Dead for five years upstream, use Golang successor :2 instead please
 # Removal on 2026-06-01, bug #973547
 app-containers/docker-compose:0
-
-# Ulrich Müller <ulm@gentoo.org> (2026-04-30)
-# Upstream package is broken with Qt 6.10.3. Bug #973380.
-=net-im/zoom-7.0.0.1666-r1
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-04-21)
 # PyQt5 has no more revdeps (that aren't also masked).
@@ -320,8 +327,6 @@ dev-python/calver
 #
 # If wanted, feel welcome to add `dev-qt/*:6/6.11.0` to package.unmask
 # and report issues.
-=dev-python/pyqt6-6.11*
-=dev-python/pyqt6-webengine-6.11*
 =dev-python/pyside-6.11.0*
 =dev-qt/qt-docs-6.11.0*
 =dev-qt/qt3d-6.11.0*

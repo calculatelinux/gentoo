@@ -903,6 +903,7 @@ app-misc/ebusd:mqtt - Enable support for connecting to MQTT.
 app-misc/fastfetch:chafa - Enables text/graphics renderer with media-gfx/chafa
 app-misc/fastfetch:ddcutil - Use app-misc/ddcutil to query monitor settings
 app-misc/fastfetch:drm - Enables support for X.org's x11-libs/libdrm
+app-misc/fastfetch:efl - Enables Enlightenment support using dev-libs/efl
 app-misc/fastfetch:elf - Use libelf to extract strings from binaries
 app-misc/fastfetch:vulkan - Enables reading GPU via media-libs/vulkan-loader
 app-misc/fastfetch:xrandr - Enables support for Xrandr
@@ -1365,7 +1366,6 @@ dev-ada/libgpr:static-pic - Build static library with pic code
 dev-ada/prettier-ada:shared - Build shared library
 dev-ada/prettier-ada:static-pic - Build static library with pic code
 dev-ada/spawn:static-pic - Build static library with pic code
-dev-ada/templates-parser:shared - Build shared library
 dev-ada/templates-parser:static-pic - Build static library with pic code
 dev-ada/vss-extra:static-pic - Build static library with pic code
 dev-ada/vss-text:shared - Build shared library
@@ -2124,6 +2124,8 @@ dev-libs/libisoburn:external-filters-setuid - Also allow the use of external set
 dev-libs/libisoburn:frontend-optional - Use dev-tcltk/bwidget which is not strictly required for the frontend
 dev-libs/libisoburn:launch-frontend - Enable the tcl gui for xorriso
 dev-libs/libisoburn:launch-frontend-setuid - Enable the tcl gui for xorriso under setuid
+dev-libs/libisofs:lfa-flags - Enable processing of Linux chattr(1) flags
+dev-libs/libisofs:projid - Enable processing of XFS-style project id
 dev-libs/libisofs:verbose-debug - Enable verbose debug messages
 dev-libs/libjcat:ed25519 - Enable ED25519 verification support via dev-libs/nettle and net-libs/gnutls
 dev-libs/libjcat:gpg - Enable GPG verification support via app-crypt/gpgme
@@ -2468,6 +2470,7 @@ dev-python/pandas:full-support - Pull all packages to give pandas full support
 dev-python/paramiko:server - Enable server feature
 dev-python/peewee:native-extensions - Compiles native C extension for more complete SQLite3 support.
 dev-python/pillow:imagequant - Build with Image Quantization Library support
+dev-python/pillow:raqm - Support setting text direction, language or font features. Requires media-libs/raqm.
 dev-python/pivy:quarter - Use media-libs/quarter for GUI bindings
 dev-python/pivy:soqt - Use media-libs/SoQt for GUI bindings
 dev-python/pyarrow:parquet - Enables read/write parquet data format
@@ -6727,8 +6730,9 @@ net-misc/streamtuner:shout - Enable shoutcast plug-in.
 net-misc/streamtuner:xiph - Enable xiph.org plug-in.
 net-misc/stunnel:stunnel3 - Install the stunnel3 wrapper.
 net-misc/sunshine:cuda - Enable accelerated video encoding on NVIDIA hardware
-net-misc/sunshine:libdrm - Enable video encoding via x11-libs/libdrm
-net-misc/sunshine:svt-av1 - Enables software AV1 encoding via media-libs/svt-av1
+net-misc/sunshine:libdrm - Enable KMS video capture via x11-libs/libdrm
+net-misc/sunshine:pipewire - Enable XDG Desktop Portal video capture via media-video/pipewire
+net-misc/sunshine:svt-av1 - Enable software AV1 encoding via media-libs/svt-av1
 net-misc/sunshine:trayicon - Enable system tray icon
 net-misc/sunshine:x264 - Enable software H.264 encoding via media-libs/x264
 net-misc/sunshine:x265 - Enable software HEVC encoding via media-libs/x265
@@ -7244,7 +7248,9 @@ sci-electronics/gerbv:unit-mm - Set default unit for coordinates in status bar t
 sci-electronics/ghdl:llvm - Build LLVM code generator
 sci-electronics/gtkwave:fasttree - Enables experimental Fast SST Tree widget code.
 sci-electronics/gtkwave:judy - Enables Judy array support.
+sci-electronics/kicad-footprints:stpz - Rewrite .kicad_mod model refs from .step to .stpz to match sci-electronics/kicad-packages3d[stpz]
 sci-electronics/kicad-meta:minimal - Do not install extra data like 3D packages and templates.
+sci-electronics/kicad-packages3d:stpz - Gzip-compress installed .step models to .stpz; breaks project portability with non-Gentoo distros
 sci-electronics/ktechlab:gpsim - Enable support for Microchip PIC microcontrollers similation using dev-embedded/gpsim
 sci-electronics/librepcb:opencascade - Build with sci-libs/opencascadethe 3D features (e.g. reading/writing STEP files)
 sci-electronics/ngspice:deprecated - Build old and deprecated apps
@@ -8483,7 +8489,6 @@ sys-fs/zfs-kmod:rootfs - Pull dependencies and check kernel options required for
 sys-kernel/asahi-sources:symlink - Automatically symlink the kernel sources to /usr/src/linux
 sys-kernel/dracut:dracut-cpio - Build the enhanced 'dracut-cpio' program
 sys-kernel/genkernel:firmware - Prefer system firmware sys-kernel/linux-firmware over local copy.
-sys-kernel/gentoo-kernel:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 sys-kernel/gentoo-kernel:hardened - Use selection of hardening options recommended by Kernel Self Protection Project
 sys-kernel/gentoo-kernel:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-kernel-bin:initramfs - Build initramfs along with the kernel.
