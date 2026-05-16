@@ -41,11 +41,11 @@ IUSE="alsa aom archive aribsub bidi bluray chromaprint chromecast dav1d dbus
 	dc1394 debug directx +dvbpsi dvd +encode faad fdk +ffmpeg flac fluidsynth
 	fontconfig +gcrypt gme keyring gstreamer +gui ieee1394 jack jpeg kate libass
 	libcaca libdrm libnotify libplacebo +libsamplerate libtiger linsys lirc live
-	loudness lua mad matroska modplug mp3 mtp musepack ncurses
-	nfs ogg omxil optimisememory opus png projectm pulseaudio run-as-root samba
-	sftp shout sid skins soxr speex srt ssl svg taglib theora tremor truetype
-	twolame udev upnp vaapi v4l vdpau vnc vpx wayland +X x264 x265 xml zeroconf
-	zvbi cpu_flags_arm_neon cpu_flags_ppc_altivec cpu_flags_x86_sse
+	loudness lua mad matroska modplug mp3 mtp ncurses nfs ogg omxil
+	optimisememory opus png projectm pulseaudio run-as-root samba sftp shout sid
+	skins soxr speex srt ssl svg taglib theora tremor truetype twolame udev upnp
+	vaapi v4l vdpau vnc vpx wayland +X x264 x265 xml zeroconf zvbi
+	cpu_flags_arm_neon cpu_flags_ppc_altivec cpu_flags_x86_sse
 "
 REQUIRED_USE="
 	chromecast? ( encode )
@@ -67,7 +67,7 @@ BDEPEND="
 	virtual/pkgconfig
 	lua? ( ${LUA_DEPS} )
 	amd64? ( dev-lang/yasm )
-	wayland? ( dev-util/wayland-scanner )
+	wayland? ( >=dev-util/wayland-scanner-1.23 )
 	x86? ( dev-lang/yasm )
 "
 # depends on abseil-cpp via protobuf targets
@@ -123,7 +123,7 @@ COMMON_DEPEND="
 	gstreamer? ( >=media-libs/gst-plugins-base-1.4.5:1.0 )
 	gui? (
 		dev-qt/qt5compat:6[qml]
-		dev-qt/qtbase:6=[gui,widgets]
+		dev-qt/qtbase:6=[gui,opengl,widgets]
 		dev-qt/qtdeclarative:6
 		dev-qt/qtsvg:6
 		kde-frameworks/kwindowsystem:6
@@ -166,7 +166,6 @@ COMMON_DEPEND="
 	modplug? ( >=media-libs/libmodplug-0.8.9.0 )
 	mp3? ( media-sound/mpg123-base )
 	mtp? ( media-libs/libmtp:= )
-	musepack? ( media-sound/musepack-tools )
 	ncurses? ( sys-libs/ncurses:=[unicode(+)] )
 	nfs? ( >=net-fs/libnfs-0.10.0:= )
 	ogg? ( media-libs/libogg )
@@ -215,7 +214,7 @@ COMMON_DEPEND="
 	vpx? ( media-libs/libvpx:= )
 	wayland? (
 		>=dev-libs/wayland-1.15
-		>=dev-libs/wayland-protocols-1.12
+		>=dev-libs/wayland-protocols-1.33
 	)
 	X? (
 		x11-libs/libX11
@@ -357,7 +356,6 @@ src_configure() {
 		$(use_enable modplug mod)
 		$(use_enable mp3 mpg123)
 		$(use_enable mtp)
-		$(use_enable musepack mpc)
 		$(use_enable ncurses)
 		$(use_enable nfs)
 		$(use_enable ogg)

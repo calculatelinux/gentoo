@@ -55,6 +55,7 @@ multilib_src_configure() {
 		-DBUILD_WSI_XCB_SUPPORT=$(usex X)
 		-DBUILD_WSI_XLIB_SUPPORT=$(usex X)
 		-DBUILD_TESTS=$(usex test)
+		-DUPDATE_DEPS=OFF
 	)
 	cmake_src_configure
 }
