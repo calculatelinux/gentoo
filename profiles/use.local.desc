@@ -94,6 +94,9 @@ app-admin/logcheck:cron - Adds file to enable hourly cron job to run logcheck"
 app-admin/logrotate:cron - Installs cron file
 app-admin/logstash-bin:x-pack - Enable additional features (may need a license)
 app-admin/openrc-settingsd:systemd - Use the versions of dbus and polkit files provided by sys-apps/systemd
+app-admin/openvox:augeas - Enable augeas support
+app-admin/openvox:diff - Enable diff support
+app-admin/openvox:shadow - Enable shadow support
 app-admin/pass:X - Use x11-misc/xclip to copy passwords to the clipboard.
 app-admin/pass:dmenu - Add support for x11-misc/dmenu with the 'passmenu' program.
 app-admin/pass:git - Use dev-vcs/git for password revisions.
@@ -320,9 +323,6 @@ app-backup/snapper:lvm - Enable LVM thinprovisioned snapshots support sys-fs/lvm
 app-backup/snapper:xattr - Add support for getting and setting POSIX extended attributes, through sys-apps/attr.
 app-backup/tsm:gpfs - Support the IBM General Parallel File System (GPFS)
 app-backup/tsm:journal - Support Journal based backups (JBB)
-app-backup/tsm:tsm-cit - IBM Tivoli Common Inventory Technology
-app-backup/tsm:tsm-hw - Difference snapshot support for NetApp and N-Series file servers
-app-backup/tsm:vmware - Install vmware data protection support
 app-benchmarks/httperf:idleconn - Build with the idleconn program
 app-benchmarks/ramspeed:pic - Force shared libraries to be built as PIC (this is slower)
 app-benchmarks/stress-ng:keyutils - Stress test the kernel's key generation facilities via sys-apps/keyutils
@@ -5387,6 +5387,7 @@ media-video/rav1e:capi - Build the C-API library and header file
 media-video/rtmpdump:gnutls - Use GnuTLS instead of OpenSSL for Cryptography
 media-video/rtmpdump:ssl - Enable Cryptographic features
 media-video/rtmpdump:tools - Enable installation of various binary tools in addition to librtmp library
+media-video/srs:srt - Enable Secure Reliable Transport (SRT) support via net-libs/srt
 media-video/totem:python - Build dev-lang/python using plugins (dbusservice for notifications and MPRIS control, interactive python console and opensubtitles lookup)
 media-video/vdr:bidi - fribidi support, for languages, written from right to left
 media-video/vdr:demoplugins - Install demo and example plugins coming with vanilla vdr

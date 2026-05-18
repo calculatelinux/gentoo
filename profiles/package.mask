@@ -36,6 +36,58 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-05-18)
+# Almost no one else is packaging net-libs/zmqpp, no more revdeps.
+# Bugs #667060, 951835.  Removal on 2026-06-17.
+net-libs/zmqpp
+=sci-mathematics/yacas-1.9.1-r2
+
+# Sam James <sam@gentoo.org> (2026-05-17)
+# Tries to delete many files (bug #975236)
+=dev-util/jenkins-bin-2.561
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-05-15)
+# Qt5 qtbase module. Bug #948836
+# Removal on 2026-06-30.
+dev-qt/qtconcurrent:5
+dev-qt/qtcore:5
+dev-qt/qtdbus:5
+dev-qt/qtgui:5
+dev-qt/qtnetwork:5
+dev-qt/qtopengl:5
+dev-qt/qtprintsupport:5
+dev-qt/qtsql:5
+dev-qt/qttest:5
+dev-qt/qtwidgets:5
+dev-qt/qtxml:5
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-05-15)
+# Qt5 non-qtbase modules. Bugs #948836, #964253
+# Removal on 2026-06-30.
+dev-qt/linguist-tools:5
+dev-qt/qtdeclarative:5
+dev-qt/qtgraphicaleffects:5
+dev-qt/qtmultimedia:5
+dev-qt/qtquickcontrols:5
+dev-qt/qtquickcontrols2:5
+dev-qt/qtsvg:5
+dev-qt/qttranslations:5
+dev-qt/qtwayland:5
+dev-qt/qtx11extras:5
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-05-15)
+# Obsolete 3rd party Qt5 integration package.
+# Removal on 2026-06-14.
+x11-misc/qt5ct
+
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-05-15)
+# USE=gui in this version depends on Qt5 and can no longer be supported.
+# VLC-4 snapshots are provided with a Qt6-based USE=gui.
+# Alternatives for stable users are media-video/mpv, media-video/haruna,
+# media-video/smplayer, media-video/qmplay2 and probably many more.
+# Bug #954006. Removal some time after 2026-05-30.
+=media-video/vlc-3.0.23
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-05-15)
 # Depends on Qt5 and does not appear to be ported to Qt6 upstream soon.
 # With net-irc/quassel-0.14.50_pre20260513, we provide an ~arch keyworded
@@ -327,53 +379,11 @@ dev-python/calver
 # Version 1.18.x breaks API and needs more testing
 >=net-libs/libupnp-1.18.4
 
-# Ionen Wolkens <ionen@gentoo.org> (2026-03-23)
-# Masked for testing the new .0 version and leave time for packages
-# to catch up on support. Will likely be kept masked until 6.11.1
-# is released unless there is a notable reason to need this earlier.
-#
-# If wanted, feel welcome to add `dev-qt/*:6/6.11.0` to package.unmask
-# and report issues.
-=dev-python/pyside-6.11.0*
-=dev-qt/qt-docs-6.11.0*
-=dev-qt/qt3d-6.11.0*
-=dev-qt/qt5compat-6.11.0*
-=dev-qt/qtbase-6.11.0*
-=dev-qt/qtcharts-6.11.0*
-=dev-qt/qtconnectivity-6.11.0*
-=dev-qt/qtdeclarative-6.11.0*
-=dev-qt/qtgraphs-6.11.0*
-=dev-qt/qthttpserver-6.11.0*
-=dev-qt/qtimageformats-6.11.0*
-=dev-qt/qtlanguageserver-6.11.0*
-=dev-qt/qtlocation-6.11.0*
-=dev-qt/qtmultimedia-6.11.0*
-=dev-qt/qtnetworkauth-6.11.0*
-=dev-qt/qtpositioning-6.11.0*
-=dev-qt/qtquick3d-6.11.0*
-=dev-qt/qtquicktimeline-6.11.0*
-=dev-qt/qtremoteobjects-6.11.0*
-=dev-qt/qtscxml-6.11.0*
-=dev-qt/qtsensors-6.11.0*
-=dev-qt/qtserialbus-6.11.0*
-=dev-qt/qtserialport-6.11.0*
-=dev-qt/qtshadertools-6.11.0*
-=dev-qt/qtspeech-6.11.0*
-=dev-qt/qtsvg-6.11.0*
-=dev-qt/qttools-6.11.0*
-=dev-qt/qttranslations-6.11.0*
-=dev-qt/qtvirtualkeyboard-6.11.0*
-=dev-qt/qtwayland-6.11.0*
-=dev-qt/qtwebchannel-6.11.0*
-=dev-qt/qtwebengine-6.11.0*
-=dev-qt/qtwebsockets-6.11.0*
-=dev-qt/qtwebview-6.11.0*
-
 # Sam James <sam@gentoo.org> (2026-03-22)
 # Commits since the last release of Crypt-OpenSSL-RSA (0.370) are heavily
 # driven by LLM automation. Avoid exposing users to this (bug #971488).
 # Sadly, other dists by the same maintainers upstream are also affected,
-# and so these are includeed here too.
+# and so these are included here too.
 >dev-perl/Crypt-OpenSSL-RSA-0.370.0
 >dev-perl/B-COW-0.7.0
 >dev-perl/Business-UPS-2.20.0

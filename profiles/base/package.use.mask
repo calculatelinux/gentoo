@@ -6,6 +6,16 @@
 
 # New entries go on top.
 
+# Andreas Sturmlechner <asturm@gentoo.org> (2026-05-15)
+# Various integration packages. Preparing Qt5 last-rites.
+# Removal some time after 2026-05-30.
+app-i18n/fcitx-qt qt5
+app-i18n/uim qt5
+x11-themes/QGnomePlatform qt5
+x11-themes/adwaita-qt qt5
+x11-themes/kvantum qt5
+x11-themes/qtcurve qt5
+
 # Michał Górny <mgorny@gentoo.org> (2026-05-07)
 # Force-enable all PYTHON_TARGETS for python-exec to avoid using private
 # API. Please remember to keep it in sync with python_targets.desc.
@@ -23,12 +33,6 @@ dev-lang/python-exec -python_targets_python3_15t
 dev-python/pyqtgraph qt5
 net-wireless/gnuradio qt5
 <=net-wireless/gnuradio-3.10.99 channels
-
-# Brett A C Sheffield <bacs@librecast.net> (2026-03-29)
-# mask IUSE=selinux for www-servers/vinyl-cache-9.0.0 until
-# upstream policy available.
-# https://bugs.gentoo.org/971753
->=www-servers/vinyl-cache-9.0.0 selinux
 
 # Mike Gilbert <floppym@gentoo.org> (2026-03-20)
 # Only meant for bootstrapping a cross-compiler.
