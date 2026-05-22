@@ -18,10 +18,8 @@ depend() {
 start() {
 	ebegin "Starting SRS"
 	
-	ulimit -c ${SRS_CORE_LIMIT:-unlimited}
-	
 	start-stop-daemon --start \
-		--exec /usr/bin/srs \
+		--exec /usr/bin/srs-media \
 		--pidfile "${SRS_PIDFILE:-/run/srs.pid}" \
 		${SRS_EXTRA_OPTS} \
 		-- -c "${SRS_CONFIG:-/etc/srs/srs.conf}"

@@ -2,7 +2,7 @@ BDEPEND=>=app-editors/emacs-29.1:* >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
 DEPEND=app-emacs/compat
 DESCRIPTION=Completion At Point Extensions
-EAPI=8
+EAPI=9
 HOMEPAGE=https://github.com/minad/cape/
 INHERIT=elisp git-r3
 LICENSE=GPL-3+
@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=app-emacs/compat >=app-editors/emacs-29.1:*
 SLOT=0
 _eclasses_=elisp	a37bfc35b86403c770beebbd71661c30	elisp-common	0ea9a0d3bc26353e1642c73560a24fdf	git-r3	2f8cdb10b033f92c3136aa6488a31c98
-_md5_=8073815cc2c79bfe1742d309434b25c3
+_md5_=10edc5fcac4b0cc64e0709d5bc2ad587

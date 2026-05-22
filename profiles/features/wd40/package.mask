@@ -88,6 +88,7 @@ dev-python/pytest-bdd
 dev-python/pytest-describe
 dev-python/pytest-django
 dev-python/pytest-golden
+>=dev-python/pytest-socket-0.8.0
 dev-python/sphinxcontrib-doxylink
 >=dev-python/sphinxcontrib-httpdomain-2.0
 dev-python/sybil
@@ -119,12 +120,10 @@ dev-python/poetry-plugin-export
 
 # Michał Górny <mgorny@gentoo.org> (2024-05-08)
 # The sigstore bundle.
-dev-python/betterproto
 dev-python/pypi-attestations
 dev-python/securesystemslib
 dev-python/sigstore
 dev-python/sigstore-models
-dev-python/sigstore-protobuf-specs
 dev-python/sigstore-rekor-types
 dev-python/rfc3161-client
 dev-python/tuf

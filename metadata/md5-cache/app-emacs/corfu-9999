@@ -1,12 +1,12 @@
-BDEPEND=app-emacs/compat >=app-editors/emacs-29.1:* >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=>=app-emacs/compat-31.0.0.1 >=app-editors/emacs-29.1:* >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
 DESCRIPTION=Completion Overlay Region FUnction
-EAPI=8
+EAPI=9
 HOMEPAGE=https://github.com/minad/corfu/
 INHERIT=elisp git-r3
 LICENSE=GPL-3+
 PROPERTIES=live
-RDEPEND=app-emacs/compat >=app-editors/emacs-29.1:*
+RDEPEND=>=app-emacs/compat-31.0.0.1 >=app-editors/emacs-29.1:*
 SLOT=0
 _eclasses_=elisp	a37bfc35b86403c770beebbd71661c30	elisp-common	0ea9a0d3bc26353e1642c73560a24fdf	git-r3	2f8cdb10b033f92c3136aa6488a31c98
-_md5_=b78a67dc542361c8404eeca5a13f4309
+_md5_=06ea8119eaa3cd58e0f75aec91f18ff0

@@ -1,7 +1,7 @@
 BDEPEND=>=app-emacs/compat-30.0.2.0 >=app-editors/emacs-28.1:* >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
 DESCRIPTION=Consulting complete-read for GNU Emacs
-EAPI=8
+EAPI=9
 HOMEPAGE=https://github.com/minad/consult/
 INHERIT=elisp git-r3
 LICENSE=GPL-3+
@@ -9,4 +9,4 @@ PROPERTIES=live
 RDEPEND=>=app-emacs/compat-30.0.2.0 >=app-editors/emacs-28.1:*
 SLOT=0
 _eclasses_=elisp	a37bfc35b86403c770beebbd71661c30	elisp-common	0ea9a0d3bc26353e1642c73560a24fdf	git-r3	2f8cdb10b033f92c3136aa6488a31c98
-_md5_=d8b7daca7ba9482360b5b76b54acf78e
+_md5_=08e16ffc84ffeb23953eb4e1afc44ee2

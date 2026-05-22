@@ -2212,7 +2212,6 @@ dev-libs/modsecurity:fuzzyhash - Support fuzzy hash computations (to detect malw
 dev-libs/modsecurity:geoip2 - Pull in dev-libs/libmaxminddb for use by the SecGeoLookupDb directive.
 dev-libs/modsecurity:json - Suppose JSON in the request body parser through dev-libs/yajl.
 dev-libs/modsecurity:lmdb - Add LMDB backend support
-dev-libs/modsecurity:pcre2 - Use dev-libs/libpcre2 as regex implementation
 dev-libs/mongo-c-driver:test-full - Run test suite in full, including tests that run a local database instance.
 dev-libs/ncnn:tools - Enable installation of various tools in addition to the library
 dev-libs/nng:compat - Enable compatibility with the legacy nanomsg API
@@ -2481,18 +2480,6 @@ dev-python/pyopengl-accelerate:numpy - Building NumPy native format handlers.
 dev-python/pypax:ptpax - Enable PT_PAX_FLAGS support.
 dev-python/pypax:xtpax - Enable XATTR_PAX_FLAGS support.
 dev-python/pypy-exe:low-memory - Build using PyPy with the engine configured towards low memory footprint. This makes it possible to build PyPy using ~3.5G of RAM on amd64 and ~half of that on x86, at the cost of lengthened build time.
-dev-python/pyqt5:dbus - Build bindings for the QtDBus module
-dev-python/pyqt5:declarative - Build bindings for the QtQml and QtQuick modules and enable the qmlscene plugin
-dev-python/pyqt5:gui - Build bindings for the QtGui module
-dev-python/pyqt5:multimedia - Build bindings for the QtMultimedia module
-dev-python/pyqt5:network - Build bindings for the QtNetwork module
-dev-python/pyqt5:opengl - Build bindings for the QtOpenGL module
-dev-python/pyqt5:printsupport - Build bindings for the QtPrintSupport module
-dev-python/pyqt5:sql - Build bindings for the QtSql module
-dev-python/pyqt5:svg - Build bindings for the QtSvg module
-dev-python/pyqt5:testlib - Build bindings for the QtTest module
-dev-python/pyqt5:widgets - Build bindings for the QtWidgets module
-dev-python/pyqt5:x11extras - Build bindings for the QtX11Extras module
 dev-python/pyqt6:bluetooth - Build bindings for the QtBluetooth module
 dev-python/pyqt6:dbus - Build bindings for the QtDBus module
 dev-python/pyqt6:designer - Build bindings for the QtDesigner module and enable the designer plugin
@@ -4473,17 +4460,12 @@ media-libs/lsp-plugins:vst - Support LinuxVST plugins
 media-libs/lv2:plugins - Enables examples plugins.
 media-libs/lvtk:gtk2 - Enable x11-libs/gtk+:2 based GUI support
 media-libs/lvtk:tools - Compile and install ttl2c tool
-media-libs/mesa:d3d9 - Enable Direct 3D9 API through Nine state tracker. Can be used together with patched wine.
 media-libs/mesa:llvm - Enable LLVM backend for Gallium3D.
 media-libs/mesa:lm-sensors - Enable Gallium HUD lm-sensors support.
 media-libs/mesa:opencl - Enable the Rusticl Gallium OpenCL state tracker.
-media-libs/mesa:osmesa - Build the Mesa library for off-screen rendering.
 media-libs/mesa:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
 media-libs/mesa:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
-media-libs/mesa:vdpau - Enable the VDPAU acceleration interface for the Gallium3D Video Layer.
-media-libs/mesa:vulkan-overlay - Build vulkan-overlay-layer which displays Frames Per Second and other statistics
 media-libs/mesa:wayland - Enable support for dev-libs/wayland
-media-libs/mesa:xa - Enable the XA (X Acceleration) API for Gallium3D.
 media-libs/mesa-amber:gles1 - Enable GLESv1 support.
 media-libs/mesa-amber:wayland - Enable support for dev-libs/wayland
 media-libs/mlt:frei0r - Build the module for media-plugins/frei0r-plugins
