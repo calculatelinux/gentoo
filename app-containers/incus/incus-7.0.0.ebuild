@@ -44,7 +44,8 @@ RDEPEND="${DEPEND}
 		app-cdr/cdrtools
 		app-emulation/qemu[spice,usbredir,virtfs]
 		sys-apps/gptfdisk
-	)"
+	)
+	selinux? ( sec-policy/selinux-incus )"
 BDEPEND=">=dev-lang/go-1.25.6
 	nls? ( sys-devel/gettext )
 	verify-sig? ( sec-keys/openpgp-keys-linuxcontainers )"

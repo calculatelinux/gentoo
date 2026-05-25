@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -19,7 +19,7 @@ SLOT="0/$(ver_cut 1)"
 KEYWORDS="amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~x86"
 IUSE="doc examples fortran hypre +int64 lapack mpi openmp sparse +static-libs superlumt threads"
 REQUIRED_USE="
-	fortran? ( static-libs )
+	fortran? ( int64 static-libs )
 	hypre? ( mpi )
 "
 
@@ -115,6 +115,14 @@ src_configure() {
 	fi
 
 	cmake_src_configure
+}
+
+src_compile() {
+	if use fortran; then
+		cmake_src_compile -j1
+	else
+		cmake_src_compile
+	fi
 }
 
 src_install() {

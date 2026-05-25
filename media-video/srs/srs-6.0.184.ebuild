@@ -16,7 +16,7 @@ S="${WORKDIR}"/${PN}-${tagId}
 LICENSE="Apache-2.0 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm64"
-IUSE="srt"
+IUSE="h265 signal-api srt threads"
 
 DEPEND="
 	dev-libs/openssl:0=
@@ -31,6 +31,8 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-6.0.48-execStack.patch
 	"${FILESDIR}"/${PN}-6.0.48-fixAliasing.patch
 	"${FILESDIR}"/${PN}-6.0.181-edgeFix.patch
+	"${FILESDIR}"/${P}-noWhich.patch
+	"${FILESDIR}"/${P}-parallel.patch
 )
 
 src_prepare() {
@@ -44,13 +46,16 @@ src_configure() {
 		--config=/etc/srs/
 		--generic-linux=on
 		--https=off
-		--h265=off
 		--rtc=off
 		--sanitizer=off
 		--sys-ffmpeg=on
 		--sys-srt=on
+		--sys-srtp=on
 		--sys-ssl=on
 		--cxx="$(tc-getCXX)"
+		--h265=$(usex h265 on off)
+		--signal-api=$(usex signal-api on off)
+		--single-thread=$(usex threads off on)
 		--srt=$(usex srt on off)
 	)
 
