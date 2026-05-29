@@ -42,7 +42,7 @@ IUSE="alsa aom archive aribsub bidi bluray chromaprint chromecast dav1d dbus
 	fontconfig +gcrypt gme keyring gstreamer +gui ieee1394 jack jpeg kate libass
 	libcaca libdrm libnotify libplacebo +libsamplerate libtiger linsys lirc live
 	loudness lua mad matroska modplug mp3 mtp ncurses nfs ogg omxil
-	optimisememory opus png projectm pulseaudio run-as-root samba sftp shout sid
+	optimisememory opus png projectm pulseaudio run-as-root samba selinux sftp shout sid
 	skins soxr speex srt ssl svg taglib theora tremor truetype twolame udev upnp
 	vaapi v4l vdpau vnc vpx wayland +X x264 x265 xml zeroconf zvbi
 	cpu_flags_arm_neon cpu_flags_ppc_altivec cpu_flags_x86_sse
@@ -61,6 +61,7 @@ REQUIRED_USE="
 "
 # live+snapshots need bison+flex
 BDEPEND="
+	dev-build/autoconf-archive
 	sys-devel/bison
 	sys-devel/flex
 	>=sys-devel/gettext-0.19.8
@@ -235,6 +236,7 @@ DEPEND="${COMMON_DEPEND}
 "
 RDEPEND="${COMMON_DEPEND}
 	gui? ( kde-frameworks/qqc2-desktop-style:6 )
+	selinux? ( sec-policy/selinux-mplayer )
 "
 
 DOCS=( AUTHORS THANKS NEWS README.md doc/fortunes.txt )
@@ -275,6 +277,19 @@ src_prepare() {
 	if ! use dbus ; then
 		sed -i 's/ --started-from-file//' share/vlc.desktop.in || die
 	fi
+
+	# old bundled version
+	# so we need to call AX_CXX_COMPILE_STDCXX directly
+	rm \
+		m4/ax_cxx_compile_stdcxx.m4 \
+		m4/ax_cxx_compile_stdcxx_17.m4 \
+		|| die
+	local CXXSTD="17"
+	if has_version ">=dev-cpp/abseil-cpp-20260107.0"; then
+		# needs >=c++20
+		CXXSTD="20"
+	fi
+	sed -i -e "/AX_CXX_COMPILE_STDCXX/{s/_17(/(${CXXSTD}, /}" configure.ac || die
 
 	eautoreconf
 }

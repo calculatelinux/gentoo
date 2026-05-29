@@ -24,7 +24,7 @@ else
 		"}
 	"
 	S=${WORKDIR}/ffmpeg-${PV} # avoid ${P} for ffmpeg-compat
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86 ~arm64-macos ~x64-macos"
+	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~mips ~ppc ppc64 ~riscv ~sparc x86 ~arm64-macos ~x64-macos"
 fi
 
 DESCRIPTION="Complete solution to record/convert/stream audio and video"
@@ -538,6 +538,17 @@ multilib_src_configure() {
 	# skipping tests is handled at configure-time
 	local skip_tests=()
 
+	# tests known failing on BE arches, skip for now given potential
+	# fixes are complex and would rather wait for fixed release
+	# (shouldn't impact most BE users, scarcely used features)
+	# https://code.ffmpeg.org/FFmpeg/FFmpeg/issues/22564
+	# https://code.ffmpeg.org/FFmpeg/FFmpeg/pulls/22274
+	[[ $(tc-endian) == big ]] &&
+		skip_tests+=(
+			filter-drawvg-video
+			vsynth{1,2,3}-ffvhuff420p12
+		)
+
 	# zlib-ng is not bitexact w/ zlib producing mismatching md5sum (bug #965737)
 	has_version 'sys-libs/zlib-ng[compat]' &&
 		skip_tests+=(
@@ -593,7 +604,7 @@ multilib_src_configure() {
 
 multilib_src_compile() {
 	mkdir -p fftools/resources/ || die #965687
-	mkdir -p libavfilter/vulkan/ || die #974907
+	mkdir -p libav{codec,filter}/vulkan/ || die #974907
 
 	emake V=1
 

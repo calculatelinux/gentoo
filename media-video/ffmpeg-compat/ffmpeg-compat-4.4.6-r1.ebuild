@@ -21,7 +21,7 @@ else
 		https://distfiles.gentoo.org/pub/dev/ionen@gentoo.org/ffmpeg-$(ver_cut 1-2)-patchset-3.tar.xz
 	"
 	S=${WORKDIR}/ffmpeg-${PV} # avoid ${P} for ffmpeg-compat
-	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~mips ~ppc ppc64 ~riscv ~sparc x86 ~arm64-macos ~x64-macos"
+	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~mips ppc64 ~riscv ~sparc x86 ~arm64-macos ~x64-macos"
 fi
 
 DESCRIPTION="Complete solution to record/convert/stream audio and video"
@@ -410,7 +410,7 @@ multilib_src_configure() {
 		--disable-libmfx # use ffmpeg-6+ with USE=qsv instead
 		--disable-libnpp # use ffmpeg-6+, ebuild support was only added there
 		--disable-libopencv # leaving for later due to circular opencv[ffmpeg]
-		--disable-librist # librist itself needs attention first (bug #822012)
+		--disable-librist # currently only supported in >=ffmpeg-8 ebuilds
 		--disable-libtensorflow # causes headaches, and is gone
 		--disable-libvmaf # use ffmpeg-8+ instead, needs old vmaf (bug #968554)
 		--disable-mbedtls # messy with slots, tests underlinking issues

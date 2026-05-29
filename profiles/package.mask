@@ -36,6 +36,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Paul Zander <negril.nx+gentoo@gmail.com> (2025-10-17)
+# to many breakages
+dev-cpp/eigen:3/5.0
+
 # Matt Turner <mattst88@gentoo.org> (2026-05-22)
 # Deprecated upstream. Relies on removed XA support in Mesa. Use the built-in
 # modesetting driver instead. Bug #957955.
@@ -266,7 +270,6 @@ dev-python/pytest-markdown
 dev-python/stomp-py
 dev-util/repolite
 dev-util/rpmdevtools
-net-misc/chrome-remote-desktop
 net-misc/you-get
 sys-apps/kcheck
 sys-auth/solo1

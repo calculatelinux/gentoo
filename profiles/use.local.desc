@@ -74,10 +74,11 @@ app-admin/conserver:freeipmi - Compile in FreeIPMI support via sys-libs/freeipmi
 app-admin/diradm:automount - Support for automount data in LDAP
 app-admin/diradm:irixpasswd - Support for storing separate IRIX passwords
 app-admin/doas:persist - Adds support for "persist" feature (experimental)
-app-admin/gkrellm:X - Build both the X11 gui (gkrellm) and the server (gkrellmd). Disabling this flag builds the server only
+app-admin/gkrellm:X - Build the X11 gui (gkrellm)
 app-admin/gkrellm:gnutls - Enable SSL support for mail checking with net-libs/gnutls (overrides 'ssl' USE flag)
 app-admin/gkrellm:lm-sensors - Enable monitoring sensors via sys-apps/lm-sensors
 app-admin/gkrellm:ntlm - Enable NTLM authentication for mail checking with net-libs/libntlm
+app-admin/gkrellm:server - Build the server (gkrellmd)
 app-admin/gkrellm:ssl - Enable SSL support for mail checking with dev-libs/openssl
 app-admin/gtkdiskfree:gtk2 - Support GTK+ 2.x instead of GTK+ 3.x
 app-admin/hddtemp:network-cron - Monthly cronjob to update hddtemp.db.
@@ -1396,18 +1397,21 @@ dev-cpp/benchmark:libpfm - Enable dev-libs/libpfm support
 dev-cpp/benchmark:tools - Install some additional Python tools
 dev-cpp/cpp-httplib:mbedtls - Use net-libs/mbedtls instead of dev-libs/openssl.
 dev-cpp/eigen:adolc - Add test support for Adolc (sci-libs/adolc)
-dev-cpp/eigen:benchmark - Build benchmark suite
+dev-cpp/eigen:blas - Build the Eigen Blas library
 dev-cpp/eigen:boost - Add test support for Boost.Multiprecision (dev-libs/boost)
 dev-cpp/eigen:cholmod - Add test support for CHOLMOD (sci-libs/cholmod)
 dev-cpp/eigen:clang - Use clang for cuda units compilation
-dev-cpp/eigen:clang-cuda - Use clang for cuda units compilation
+dev-cpp/eigen:cuda-clang - Use clang for cuda units compilation
 dev-cpp/eigen:fftw - Add test support for fftw (sci-libs/fftw)
 dev-cpp/eigen:hip - Enable HIP GPU computing support
 dev-cpp/eigen:klu - Add test support for KLU (sci-libs/klu)
+dev-cpp/eigen:lapack - Build the included Eigen LAPACK library
 dev-cpp/eigen:mathjax - Use MathJax for rendering math in HTML docs (dev-libs/mathjax)
+dev-cpp/eigen:metis - Add test support for METIS (sci-libs/metis)
 dev-cpp/eigen:opengl - Add test support for OpenGL
-dev-cpp/eigen:openmp - Add test support for the OpenMP (support parallel computing)
+dev-cpp/eigen:openmp - Add test support for OpenMP (support parallel computing)
 dev-cpp/eigen:pastix - Add test support for PaStiX (sci-libs/pastix)
+dev-cpp/eigen:pocketfft - Add test support for pocketfft (dev-libs/pocketfft)
 dev-cpp/eigen:sparsehash - Add test support for GoogleHash (dev-cpp/sparsehash)
 dev-cpp/eigen:spqr - Add test support for SPQR (sci-libs/spqr)
 dev-cpp/eigen:superlu - Add test support for SuperLU (sci-libs/superlu)
@@ -4252,6 +4256,7 @@ media-gfx/photoqt:barcode - Support for QR and barcodes detection using media-li
 media-gfx/photoqt:chromecast - Enable Chromecast support using dev-python/pychromecast
 media-gfx/photoqt:devil - Support additional image formats using media-libs/devil
 media-gfx/photoqt:extensions - Support additional features using extensions
+media-gfx/photoqt:ffmpegthumbnailer - Support for video thumbnail using media-video/ffmpegthumbnailer
 media-gfx/photoqt:freeimage - Support additional image formats using media-libs/freeimage
 media-gfx/photoqt:mpv - Support for video files using media-video/mpv
 media-gfx/photoqt:vips - Support for media-libs/vips image processing library
@@ -4439,6 +4444,7 @@ media-libs/libsdl3:kms - Enable support for direct Kernel Mode Setting video out
 media-libs/libsdl3:pipewire - Enable support for media-video/pipewire
 media-libs/libsdl3:sndio - Enable support for media-sound/sndio
 media-libs/libshumate:sysprof - Enable sysprof-capture support for profiling
+media-libs/libsidplayfp:usb - Support USBSID-Pico hardware SID via libusb
 media-libs/libtgvoip:dsp - Enable signal processing (echo cancellation, noise suppression, and automatic gain control)
 media-libs/libv4l:bpf - Enable support for IR BPF decoders
 media-libs/libv4l:tracer - Build the v4l2-tracer tool and library
@@ -4665,7 +4671,6 @@ media-plugins/audacious-plugins:pipewire - Build the PipeWire output plugin
 media-plugins/audacious-plugins:qtmedia - Enable playback via dev-qt/qtmultimedia
 media-plugins/audacious-plugins:scrobbler - Build with scrobbler/LastFM submission support
 media-plugins/audacious-plugins:soxr - Build with SoX Resampler support
-media-plugins/audacious-plugins:speedpitch - Enable speed/pitch effects
 media-plugins/audacious-plugins:streamtuner - Build the streamtuner plugin
 media-plugins/calf:experimental - Enable experimental features/plugins
 media-plugins/calf:lv2 - Add support for Ladspa V2
@@ -4961,8 +4966,8 @@ media-sound/qmmp:shout - Enable shoutcast plug-in via media-libs/libshout.
 media-sound/qmmp:sndfile - Enable wav playback support via media-libs/libsndfile
 media-sound/qmmp:soxr - Use the SoX resampling library
 media-sound/qsampler:libgig - Enable libgig support for loading Gigasampler files and DLS (Downloadable Sounds) Level 1/2 files
-media-sound/qtractor:aubio - Enable media-libs/aubio support
 media-sound/qtractor:dssi - Enable support for DSSI Soft Synth Interface
+media-sound/qtractor:osc - Enable support for Open Sound Control via media-libs/liblo, deprecated since 1.6.0 (built-in OSC available)
 media-sound/qtractor:rubberband - Enable support for in-place audio clip pitch-shifting through the rubberband library
 media-sound/rhythmbox:daap - Build the local network music sharing plugin which uses the DAAP protocol using net-libs/libdmapsharing
 media-sound/rosegarden:lv2 - Add support for Ladspa V2 plugins
@@ -7736,6 +7741,7 @@ sci-physics/lammps:extra - Additional compute, dump, fix, molecular, pair styles
 sci-physics/lammps:hip - Enable hip gpu computing support
 sci-physics/lammps:lammps-memalign - Enables the use of the posix_memalign() call instead of malloc() when large chunks or memory are allocated by LAMMPS. Aliengnment is on 16 byte boundaries.
 sci-physics/pythia:fastjet - Build jets using the sci-physics/fastjet package
+sci-physics/pythia:hepmc2 - Adds support for High Energy Physics Monte Carlo Generators 2 sci-physics/hepmc
 sci-physics/pythia:hepmc3 - Adds support for High Energy Physics Monte Carlo Generators 3 sci-physics/hepmc
 sci-physics/pythia:highfive - Support sci-libs/hdf5 and sci-libs/highfive
 sci-physics/pythia:lhapdf - Support the use of external PDF sets via sci-physics/lhapdf
@@ -7746,7 +7752,6 @@ sci-physics/pythia:root - Use sci-physics/root trees and histograms (in examples
 sci-physics/rivet:highfive - Build with sci-libs/highfive and sci-libs/hdf5
 sci-physics/rivet:zlib - Build with virtual/zlib
 sci-physics/root:R - Enable support for dev-lang/R
-sci-physics/root:asimage - Enable support for media-libs/libafterimage
 sci-physics/root:cudnn - Enable support for nVidia cuDNN library
 sci-physics/root:davix - Enable support for DAVIX Data Management Client (https://cern.ch/davix)
 sci-physics/root:fits - Enable support for images and data from FITS files with sci-libs/cfitsio
@@ -7944,6 +7949,7 @@ sys-apps/irqbalance:numa - Support balancing IRQs across NUMA nodes
 sys-apps/irqbalance:thermal - Enable support of thermal events via sys-power/thermald
 sys-apps/irqbalance:tui - Enable build of irqbalance terminal user interface
 sys-apps/kbd:pam - Enable 'vlock' program (requires sys-libs/pam)
+sys-apps/kbd:xkb - Allow to generate kernel keymaps based on xkb database from x11-libs/libxkbcommon
 sys-apps/kexec-tools:booke - Include support for Book-E memory management
 sys-apps/kexec-tools:lzma - Enables support for LZMA compressed kernel images
 sys-apps/kexec-tools:xen - Enable extended xen support
@@ -7954,8 +7960,8 @@ sys-apps/kmod:zlib - Enable support for gzipped modules
 sys-apps/kmscon:drm - Enable Linux DRM for backend
 sys-apps/kmscon:fbdev - Enable Linux FBDev for backend
 sys-apps/kmscon:freetype - Enable freetype2 renderer
+sys-apps/kmscon:libseat - Enable seat management via sys-auth/seatd
 sys-apps/kmscon:pango - Enable pango font rendering
-sys-apps/kmscon:systemd - Enable multiseat support via systemd
 sys-apps/linux-misc-apps:usbip - Include USB/IP binaries to replace net-misc/usbip
 sys-apps/lm-sensors:contrib - Installs user contributed configuration files so you don't need to find settings on your own for your system if somebody else has already created such a configuration for sensors/mainboards you are using.
 sys-apps/lm-sensors:sensord - Enable sensord - a daemon that can be used to periodically log sensor readings from hardware health-monitoring chips
@@ -9012,6 +9018,7 @@ x11-misc/rss-glx:quesoglc - Enable support for OpenGL Character Renderer
 x11-misc/sent:savedconfig - Without a saved config.h, this package depends on media-gfx/farbfeld for image conversions
 x11-misc/spacefm:video-thumbnails - Support video thumbnails with media-video/ffmpegthumbnailer
 x11-misc/stalonetray:graceful-exit - use non-portable hack to exit gracefully on signal
+x11-misc/stalonetray:xrandr - Enable XRandR support to react to monitor changes at runtime
 x11-misc/tint2:tint2conf - Build/Install tint2conf as well
 x11-misc/urxvt-perls:deprecated - Install scripts which have been marked as deprecated by upstream
 x11-misc/wbar:gtk - Enables the gtk-based wbar-config GUI
