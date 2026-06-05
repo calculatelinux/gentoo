@@ -1511,6 +1511,7 @@ dev-db/sqlitestudio:cli - Build CLI interface
 dev-db/timescaledb:proprietary-extensions - Enable proprietary features/extensions licensed under the TimeScale License
 dev-db/unixODBC:minimal - Disable bundled drivers and extra libraries (most users don't need these)
 dev-db/unixODBC:odbcmanual - Administrator, Internal Structure, Programmer and User documentation
+dev-db/valkey:tcmalloc - Use tcmalloc from dev-util/google-perftools for allocations.
 dev-debug/bpftrace:pcap - Enable skb_output using net-libs/libpcap
 dev-debug/drgn:debuginfod - Enable debuginfod support
 dev-debug/drgn:lzma - Support XZ-compressed debug information (MiniDebugInfo).
@@ -3130,6 +3131,7 @@ games-emulation/fceux:x265 - Use media-libs/x265 for video recording (HEVC)
 games-emulation/gambatte-jg:jgmodule - Build module for The Jolly Good API
 games-emulation/gambatte-jg:shared - Build shared library
 games-emulation/generator:sdlaudio - Enable SDL Audio
+games-emulation/geolith-jg:chdr - Build with libchdr (.chd) support
 games-emulation/hatari:capsimage - Use dev-libs/spsdeclib to read .IPF, .RAW, and .CTR disk images
 games-emulation/hatari:capstone - Use dev-libs/capstone for disassembly output in the debugger
 games-emulation/hatari:portmidi - Use media-libs/portmidi as an alternative MIDI backend
@@ -3529,7 +3531,6 @@ gui-wm/wayfire:X - Enable support for X11 applications (XWayland).
 gui-wm/wayfire:gles3 - Enable OpenGL ES 3.x Features.
 kde-apps/akonadi:designer - Install plugin for dev-qt/qttools[designer]
 kde-apps/akonadi:tools - Install tools for developers and testing
-kde-apps/akonadi:webengine - Enable support for system-wide defined KAccounts
 kde-apps/akregator:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
 kde-apps/analitza:eigen - Enable dev-cpp/eigen mathematical templates support
 kde-apps/ark:zip - Enable ZIP archive support via dev-libs/libzip
@@ -3981,6 +3982,8 @@ mail-mta/exim:dcc - Adds support for Distributed Checksum Clearinghouse (DCC)
 mail-mta/exim:dkim - Adds support for DomainKeys Identified Mail (DKIM)
 mail-mta/exim:dlfunc - Install local_scan.h header to compile separate dlfunc libraries
 mail-mta/exim:dmarc - Adds support for DMARC
+mail-mta/exim:dmarc-native - Use *EXPERIMENTAL* Native DMARC implementation (Only effective with USE=dmarc).
+mail-mta/exim:dmarc-opendmarc - Use established opendmarc based DMARC implementation (Only effective with USE=dmarc).
 mail-mta/exim:dnsdb - Adds support for a DNS search for a record whose domain name is the supplied query
 mail-mta/exim:dovecot-sasl - Adds support for Dovecot's authentication
 mail-mta/exim:dsn - Adds support for Delivery Status Notifications (DSN)
@@ -4789,7 +4792,6 @@ media-sound/csound:utils - Build stand-alone executables for utilities that can 
 media-sound/darkice:fdk - Build with HE-AAC support using media-libs/fdk-aac
 media-sound/darkice:twolame - Build with twolame support using media-sound/twolame
 media-sound/deadbeef:converter - File format converter
-media-sound/deadbeef:cover - Support for cover art
 media-sound/deadbeef:hotkeys - Keyboard shortcuts support
 media-sound/deadbeef:lastfm - last.fm/AudioScrobbler protocol support
 media-sound/deadbeef:libretro - libretro resampling plugin
@@ -6956,6 +6958,7 @@ net-vpn/openfortivpn:resolvconf - Use resolvconf to handle /etc/resolv.conf upda
 net-vpn/openvpn:dco - Enable support for kernel data channel offload
 net-vpn/openvpn:down-root - Enable the down-root plugin
 net-vpn/openvpn:iproute2 - Enabled iproute2 support instead of net-tools
+net-vpn/openvpn:kernel-ovpn - Transitional flag to support OVPN mainline module
 net-vpn/openvpn:mbedtls - Use mbed TLS as the backend crypto library
 net-vpn/openvpn:openssl - Use OpenSSL as the backend crypto library
 net-vpn/openvpn:pkcs11 - Enable PKCS#11 smartcard support
@@ -7280,14 +7283,15 @@ sci-geosciences/owntracks-recorder:mqtt - Enable MQTT support
 sci-geosciences/owntracks-recorder:ping - Enable support for the "pingping" monitoring feature
 sci-geosciences/owntracks-recorder:tours - Enable recorder support for shared views
 sci-geosciences/qgis:3d - Build QGIS 3D library using dev-qt/qt3d
+sci-geosciences/qgis:geographiclib - Build with GeographicLib (geodesic, gravity, geomagnetic calculations and conversions)
 sci-geosciences/qgis:georeferencer - Determines whether georeferencer plugin should be built
-sci-geosciences/qgis:grass - Add support for grass
+sci-geosciences/qgis:grass - Install and integrate Grass GIS as well
 sci-geosciences/qgis:hdf5 - Enable MDAL support for sci-libs/hdf5
 sci-geosciences/qgis:mapserver - Determines whether mapserver should be built
 sci-geosciences/qgis:netcdf - Enable MDAL support for GRIB and XMDF formats
 sci-geosciences/qgis:pdal - Enable support for PDAL for point clouds via sci-libs/pdal
 sci-geosciences/qgis:qml - Enable support Qml-based plugins using dev-qt/qtdeclarative
-sci-geosciences/qgis:webengine - Enable webengine support using dev-qt/qtwebengine
+sci-geosciences/qgis:webengine - Enable webengine support using dev-python/pyqt6-webengine
 sci-geosciences/viking:geoclue - Use app-misc/geoclue to determine current location
 sci-geosciences/viking:libexif - Use media-libs/libexif for EXIF support
 sci-geosciences/viking:nova - Enable celestial mechanics and astronomical calculations with sci-libs/libnova
@@ -8044,6 +8048,7 @@ sys-apps/systemd:http - Enable embedded HTTP server in journald
 sys-apps/systemd:importd - Enable import daemon
 sys-apps/systemd:kernel-install - Enable kernel-install
 sys-apps/systemd:kmod - Enable kernel module loading via sys-apps/kmod
+sys-apps/systemd:libarchive - Enable libarchive support
 sys-apps/systemd:lz4 - Enable lz4 compression for the journal
 sys-apps/systemd:openssl - Enable use of dev-libs/openssl for various features
 sys-apps/systemd:passwdqc - Use sys-auth/passwdqc for password checking in homed
@@ -8477,6 +8482,7 @@ sys-kernel/gentoo-kernel:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-kernel-bin:initramfs - Build initramfs along with the kernel.
 sys-kernel/gentoo-sources:experimental - Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 sys-kernel/gnumach:debug - Enable the in-kernel debugger. Can be entered manually with CTRL-ALT-d. See https://www.gnu.org/software/hurd/microkernel/mach/gnumach/debugging.html
+sys-kernel/hurd:lwip - Build alternative userland TCP/IP stack lwIP, from net-libs/lwip.
 sys-kernel/hurd:ncurses - Build console-curses client for non-basic capabilities, unlike the builtin one.
 sys-kernel/hurd:rumpkernel - Build sys-kernel/rumpkernel support which provides drivers from NetBSD run in userland. This is needed for 64-bit systems and is considered the future of driver and hardware support on Hurd.
 sys-kernel/hurd:xkb - Depend on x11-libs/libxkbcommon for keymap support in the console.

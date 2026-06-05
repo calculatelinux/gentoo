@@ -20,7 +20,7 @@ SRC_URI="
 
 LICENSE="|| ( AGPL-3 RSAL-2 SSPL-1 ) Boost-1.0 MIT"
 SLOT="0/$(ver_cut 1-2)"
-KEYWORDS="~amd64 ~arm arm64 ~hppa ~loong ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="amd64 ~arm arm64 ~hppa ~loong ~ppc ~ppc64 ~riscv ~s390 ~sparc x86"
 IUSE="jemalloc selinux ssl systemd tcmalloc test"
 RESTRICT="!test? ( test )"
 
@@ -56,6 +56,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-6.2.3-ppc-atomic.patch
 	"${FILESDIR}"/${PN}-sentinel-7.2.0-config.patch
 	"${FILESDIR}"/${PN}-7.0.4-no-which.patch
+	"${FILESDIR}"/${PN}-8.2.6-tcmalloc-deprecated.patch
 )
 
 src_prepare() {
@@ -98,7 +99,7 @@ src_configure() {
 }
 
 src_compile() {
-	tc-export AR CC RANLIB
+	tc-export AR CC CXX RANLIB
 
 	local myconf=(
 		AR="${AR}"

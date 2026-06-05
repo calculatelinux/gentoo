@@ -56,6 +56,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-6.2.3-ppc-atomic.patch
 	"${FILESDIR}"/${PN}-sentinel-7.2.0-config.patch
 	"${FILESDIR}"/${PN}-7.0.4-no-which.patch
+	"${FILESDIR}"/${PN}-8.2.6-tcmalloc-deprecated.patch
 )
 
 src_prepare() {
@@ -98,7 +99,7 @@ src_configure() {
 }
 
 src_compile() {
-	tc-export AR CC RANLIB
+	tc-export AR CC CXX RANLIB
 
 	local myconf=(
 		AR="${AR}"

@@ -10,10 +10,6 @@
       <email>alexxy@gentoo.org</email>
       <name>Alexey Shvetsov</name>
     </member>
-    <member is-lead="1">
-      <email>expeditioneer@gentoo.org</email>
-      <name>Dennis Lamm</name>
-    </member>
   </project>
   <project>
     <email>amd64@gentoo.org</email>
@@ -1154,6 +1150,10 @@
       <role>SELinux</role>
     </member>
     <member>
+      <email>mschiff@gentoo.org</email>
+      <name>Marc Schiffbauer</name>
+    </member>
+    <member>
       <email>perfinion@gentoo.org</email>
       <name>Jason Zaman</name>
       <role>SELinux</role>
@@ -2083,6 +2083,11 @@
       <role>www.g.o, Facebook (admin), LinkedIn (admin)</role>
     </member>
     <member>
+      <email>eschwartz@gentoo.org</email>
+      <name>Eli Schwartz</name>
+      <role>Bluesky (admin)</role>
+    </member>
+    <member>
       <email>jstein@gentoo.org</email>
       <name>Jonas Stein</name>
       <role>Mastodon (admin), Workshops, XMPP</role>
@@ -2465,6 +2470,10 @@
       <email>concord@gentoo.org</email>
       <name>Kenton Groombridge</name>
       <role>Documentation, Policy</role>
+    </member>
+    <member>
+      <email>mschiff@gentoo.org</email>
+      <name>Marc Schiffbauer</name>
     </member>
     <member is-lead="1">
       <email>perfinion@gentoo.org</email>

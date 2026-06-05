@@ -11,7 +11,7 @@ BASE_P=linux-${PV%.*}
 PATCH_PV=${PV%_p*}
 PATCHSET=linux-gentoo-patches-${PV}
 BINPKG=${P/-bin}-1
-SHA256SUM_DATE=20260523
+SHA256SUM_DATE=20260530
 
 DESCRIPTION="Pre-built Linux kernel with Gentoo patches"
 HOMEPAGE="
@@ -41,7 +41,7 @@ SRC_URI+="
 "
 S=${WORKDIR}
 
-KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
+KEYWORDS="amd64 arm64 ppc64 x86"
 IUSE="debug"
 
 RDEPEND="

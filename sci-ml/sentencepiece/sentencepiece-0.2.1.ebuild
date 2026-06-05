@@ -37,6 +37,12 @@ DOCS=(
 	doc/special_symbols.md
 )
 
+PATCHES=(
+	"${FILESDIR}"/${P}-cmake.patch
+	"${FILESDIR}"/${P}-noStatic.patch
+	"${FILESDIR}"/${P}-nostrip.patch
+)
+
 src_prepare() {
 	sed -i \
 		-e "s:third_party/darts_clone/darts.h:darts.h:" \
@@ -46,9 +52,8 @@ src_prepare() {
 		src/unigram_model.h \
 		src/builder.cc \
 		|| die
-	eapply "${FILESDIR}"/${P}-nostrip.patch
-	cmake_src_prepare
 	distutils-r1_src_prepare
+	cmake_prepare
 	sed \
 		-e 's|@libprotobuf_lite@|protobuf-lite|' \
 		-e "s|@includedir_for_pc_file@|${S}/src|" \

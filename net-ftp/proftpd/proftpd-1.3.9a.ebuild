@@ -39,7 +39,7 @@ S="${WORKDIR}/${P/_/}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~riscv ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm ~arm64 ~hppa ppc ppc64 ~riscv ~sparc x86"
 IUSE="acl authfile ban +caps case clamav copy ctrls deflate diskuse dso dynmasq exec ifsession ifversion ident
 	kerberos ldap log-forensic memcache msg mysql ncurses nls pam +pcre postgres qos radius
 	ratio readme rewrite selinux sftp shaper sitemisc snmp sodium softquota sqlite ssl tcpd test unique-id vroot"
@@ -113,8 +113,8 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-1.3.9-sftp_ssl-3.0.patch
 
 	# merged in 1.3.10
-	# https://bugs.gentoo.org/953968
-	"${FILESDIR}"/${PN}-1.3.9-slibtool.patch
+	"${FILESDIR}"/${PN}-1.3.9-slibtool.patch #953968
+	"${FILESDIR}"/${PN}-1.3.9-fix_c23.patch #880481
 )
 
 QA_CONFIG_IMPL_DECL_SKIP=(
