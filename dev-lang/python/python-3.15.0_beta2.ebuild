@@ -3,7 +3,7 @@
 
 EAPI="8"
 
-LLVM_COMPAT=( 19 )
+LLVM_COMPAT=( 21 )
 LLVM_OPTIONAL=1
 VERIFY_SIG_METHOD=sigstore
 WANT_LIBTOOL="none"
@@ -53,10 +53,10 @@ RDEPEND="
 	dev-libs/libffi:=
 	dev-libs/mpdecimal:=
 	dev-python/gentoo-common
+	sys-apps/util-linux
 	>=virtual/zlib-1.1.3:=
 	virtual/libintl
 	gdbm? ( sys-libs/gdbm:=[berkdb] )
-	kernel_linux? ( sys-apps/util-linux:= )
 	ncurses? ( >=sys-libs/ncurses-5.2:= )
 	readline? (
 		!libedit? ( >=sys-libs/readline-4.1:= )
