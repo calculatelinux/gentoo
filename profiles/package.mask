@@ -36,6 +36,24 @@
 
 #--- END OF EXAMPLES ---
 
+# Joonas Niilola <juippis@gentoo.org> (2026-06-12)
+# Pre-bump. The next release cycle of Mozilla products (152.0 stable,
+#  140.12.0esr) will require cbindgen-0.29.4 to build. However <152.0
+# and <140.12.0 will not build with cbindgen-0.29.4. Upstream
+# bmo#2046162.
+=dev-util/cbindgen-0.29.4
+
+# Ionen Wolkens <ionen@gentoo.org> (2026-06-11)
+# Not used by maintainer anymore and, upon consideration, would rather
+# not handle the new rust rewrite using GTK4 and /dev/uinput (notably
+# needs permissions for uinput but we do not have global rules to handle
+# that yet and having this package arbitrarily set this up is
+# questionable and could break current usage). Seems better to last-rite
+# rather than leave it outdated as maintainer-needed with this old
+# version that is known to occasionally segfault.
+# Removal on 2026-07-11.
+x11-misc/mygestures
+
 # Ulrich Müller <ulm@gentoo.org> (2026-06-05)
 # Pretest versions, masked for testing.
 <app-editors/emacs-31.0.9999:31-vcs
@@ -137,72 +155,6 @@ x11-misc/qt5ct
 # Bug #954006. Removal some time after 2026-05-30.
 =media-video/vlc-3.0.23
 
-# David Seifert <soap@gentoo.org> (2026-05-12)
-# dev-util/claude-code and dev-util/codex (guru) provide vastly more tokens
-# than relying on cursor as a broker. I don't see a future for cursor-agent.
-# Removal on 2026-06-11.
-dev-util/cursor-agent
-
-# David Seifert <soap@gentoo.org> (2026-05-12)
-# I don't see a future in a slightly better tab-completion editor.
-# Removal on 2026-06-11.
-app-editors/cursor
-
-# Louis Sautier <sbraz@gentoo.org> (2026-05-10)
-# Unmaintained since 2017, no revdeps.
-# Removal on 2026-06-10. Bug #974496.
-dev-python/flask-debug
-dev-python/flask-nav
-
-# Louis Sautier <sbraz@gentoo.org> (2026-05-10)
-# Unmaintained since 2018, no revdeps.
-# Only consumer is www-misc/urlwatch which suggests it.
-# Removal on 2026-06-10. Bug #953050.
-dev-python/chump
-
-# Pacho Ramos <pacho@gentoo.org> (2026-05-09)
-# Obsolete version not compatible with current gnome-shell versions.
-# Upstream changed completely the way to package it. If still interested,
-# feel free to take it and update it. Removal in one month. Bug #974452
-gnome-extra/gnome-shell-extension-bluetooth-quick-connect
-
-# Pacho Ramos <pacho@gentoo.org> (2026-05-09)
-# No longer developed by upstream, does not work with current gnome-shell
-# versions. Removal in one month. Bug #974453
-gnome-extra/gnome-shell-extension-bluetooth-quick-connect
-
-# Pacho Ramos <pacho@gentoo.org> (2026-05-09)
-# No longer developed by upstream, does not work with current gnome-shell
-# versions. Use gnome-shell-extension-weather-oclock instead.
-# Removal in one month. Bug #974454
-gnome-extra/gnome-shell-extension-weather-in-the-clock
-
-# Michał Górny <mgorny@gentoo.org> (2026-05-09)
-# Unmaintained upstream and broken with Python 3.13.
-# Removal on 2026-06-08.  Bug #952342.
-dev-python/ipdb
-
-# Michał Górny <mgorny@gentoo.org> (2026-05-09)
-# Discontinued upstream, broken with Python 3.14 and have no reverse
-# dependencies outside the cycle.
-# Removal on 2026-06-08.  Bug #973008.
-dev-python/dockerpty
-dev-python/doublex-expects
-dev-python/expects
-dev-python/mamba
-
-# Michał Górny <mgorny@gentoo.org> (2026-05-09)
-# Unmaintained, bad quality packages.  No support for Python 3.13.
-# No reverse dependencies.
-# Removal on 2026-06-08.  Bug #952373.
-dev-python/js2py
-dev-python/pyjsparser
-
-# Michał Górny <mgorny@gentoo.org> (2026-05-09)
-# Discontinued split compression library from app-arch/upx.  It was
-# replaced by a vendored version, and has no reverse dependencies.
-# Removal on 2026-06-08.  Bug #921202.
-dev-libs/ucl
 
 # Michał Górny <mgorny@gentoo.org> (2026-05-09)
 # The buildbot packages aren't actively maintained in ::gentoo.  They
@@ -233,11 +185,6 @@ dev-util/buildbot-www-react
 # the only one available is to downgrade.
 >=dev-util/pwntools-4.15.0
 
-# Sebastian Pipping <sping@gentoo.org> (2026-05-01)
-# Dead for five years upstream, use Golang successor :2 instead please
-# Removal on 2026-06-01, bug #973547
-app-containers/docker-compose:0
-
 # Daniel Pielmeier <billie@gentoo.org> (2026-04-21)
 # Mask last version with USE qt5 which is about to be last rited.
 # Bugs #950282, #961920. Remove with other Qt5 masks.
@@ -249,12 +196,6 @@ app-containers/docker-compose:0
 # any issues, blocking bug #972902.
 =dev-libs/openssl-4*
 =dev-libs/openssl-compat-3*
-
-# Michał Górny <mgorny@gentoo.org> (2026-04-18)
-# Packages with no maintainer that have not been ported to Python 3.13,
-# and that have no reverse dependencies.
-# Removal on 2026-05-18.  See tracker bug #941893.
-dev-util/rpmdevtools
 
 # Sam James <sam@gentoo.org> (2026-04-17)
 # app-misc/tmux fails to open with newer ncurses (bug #972804)

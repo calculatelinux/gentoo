@@ -17,7 +17,7 @@ HOMEPAGE="
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~x86"
+KEYWORDS="amd64 arm64 ~x86"
 
 RDEPEND="
 	>=dev-python/aws-xray-sdk-0.93[${PYTHON_USEDEP}]
@@ -51,6 +51,7 @@ BDEPEND="
 		dev-python/antlr4-python3-runtime[${PYTHON_USEDEP}]
 		dev-python/freezegun[${PYTHON_USEDEP}]
 		dev-python/joserfc[${PYTHON_USEDEP}]
+		dev-python/pyotp[${PYTHON_USEDEP}]
 	)
 "
 

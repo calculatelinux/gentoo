@@ -53,7 +53,7 @@ dist-kernel_get_image_path() {
 		arm)
 			echo arch/arm/boot/zImage
 			;;
-		hppa|ppc|ppc64|s390|sparc)
+		alpha|hppa|m68k|mips|ppc|ppc64|s390|sparc)
 			# https://www.kernel.org/doc/html/latest/powerpc/bootwrapper.html
 			# ./ is required because of ${image_path%/*}
 			# substitutions in the code
@@ -425,10 +425,13 @@ dist-kernel_update_lib_symlinks() {
 
 	if [[ -L ${EROOT}/lib && ${EROOT}/lib -ef ${EROOT}/usr/lib ]]; then
 		# Adjust symlinks for merged-usr.
-		rm "${ED}/lib/modules/${version}"/{build,source} || die
-		dosym "../../../src/linux-${version}" "/usr/lib/modules/${version}/build"
-		dosym "../../../src/linux-${version}" "/usr/lib/modules/${version}/source"
 		local file
+		for file in build source; do
+			if [[ -L "${ED}/lib/modules/${version}/${file}" ]]; then
+				rm "${ED}/lib/modules/${version}/${file}" || die
+				dosym "../../../src/linux-${version}" "/usr/lib/modules/${version}/${file}"
+			fi
+		done
 		for file in .config System.map; do
 			if [[ -L "${ED}/lib/modules/${version}/${file#.}" ]]; then
 				rm "${ED}/lib/modules/${version}/${file#.}" || die

@@ -484,8 +484,6 @@ app-doc/tldp-howto:pdf - Install pdf docs
 app-doc/tldp-howto:text - Install plain-text docs
 app-editors/bluefish:gucharmap - Enable gucharmap dictionary plugin
 app-editors/bluefish:spell - Enable spell checking capabilities via enchant library
-app-editors/cursor:egl - Use EGL for smooth rendering on high refresh rate monitors
-app-editors/cursor:wayland - Run in wayland mode under wayland sessions, xwayland otherwise. This flag doesn't affect x11 sessions.
 app-editors/emacs:athena - Enable the MIT Athena widget set (x11-libs/libXaw)
 app-editors/emacs:dynamic-loading - Enable loading of dynamic libraries (modules) at runtime
 app-editors/emacs:games - Support shared score files for games
@@ -1265,6 +1263,7 @@ app-text/pelican:markdown - Markdown support
 app-text/podofo:boost - Add support for boost
 app-text/podofo:tools - Build and install commandline tools.
 app-text/poppler:boost - Use boost::small_vector for a serious performance gain
+app-text/poppler:gpg - Enable signatures handling with app-crypt/gpgme
 app-text/poppler:gpgme - Enable signatures handling with app-crypt/gpgme
 app-text/poppler:nss - Enable signatures handling with dev-libs/nss
 app-text/poppler:utils - Install command-line PDF converters and various utilities
@@ -2456,6 +2455,7 @@ dev-python/fritzconnection:qrcode - Install dependencies needed to generate QR C
 dev-python/frozenlist:native-extensions - Compile native C extensions (speedups, instead of using Python fallback code).
 dev-python/google-api-core:grpc - Pull (heavy) gRPC dependencies in, that are optionally required by part of the API.
 dev-python/httpx:cli - Install the CLI "httpx" client.
+dev-python/httpx2:cli - Install the CLI "httpx2" client.
 dev-python/hypothesis:cli - Install a CLI tool used to write tests.
 dev-python/immutables:native-extensions - Compiles native "C" extensions (speedups, instead of using Python fallback code).
 dev-python/ipython:nbconvert - Enable support for converting notebooks to various formats using app-text/pandoc
@@ -3585,6 +3585,7 @@ kde-apps/kdepim-meta:bogofilter - Install mail-filter/bogofilter for spam filter
 kde-apps/kdepim-meta:clamav - Install app-antivirus/clamav for virus detection support in kde-apps/kmail
 kde-apps/kdepim-meta:spamassassin - Install mail-filter/spamassassin for spam filter support in kde-apps/kmail
 kde-apps/kdepim-runtime:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
+kde-apps/kdepim-runtime:ews - Enable support for Microsoft Exchange Web Services
 kde-apps/kdesdk-meta:git - Enable support for Git VCS in kde-apps/dolphin via kde-apps/dolphin-plugins-git
 kde-apps/kdesdk-meta:mercurial - Enable support for Mercurial VCS in kde-apps/dolphin via kde-apps/dolphin-plugins-mercurial
 kde-apps/kdesdk-meta:subversion - Enable support for Apache Subversion VCS in kde-apps/dolphin via kde-apps/dolphin-plugins-subversion
@@ -5137,7 +5138,7 @@ media-video/ffmpeg:cdio - Enable audio CDs reading via dev-libs/libcdio-paranoia
 media-video/ffmpeg:chromaprint - Enable audio fingerprinting support via media-libs/chromaprint
 media-video/ffmpeg:chromium - Builds libffmpeg.so to enable media playback in Chromium-based browsers like Opera and Vivaldi.
 media-video/ffmpeg:codec2 - Enable codec2 low bit rate speech codec support via media-libs/codec2
-media-video/ffmpeg:cuda - Enable support for various GPU-accelerated filters using NVIDIA PTX compiled with llvm-core/clang
+media-video/ffmpeg:cuda-clang - Enable support for various GPU-accelerated filters using NVIDIA PTX compiled with llvm-core/clang
 media-video/ffmpeg:dav1d - Enable AV1 decoding support via media-libs/dav1d
 media-video/ffmpeg:drm - Enable use of x11-libs/libdrm for various hardware accelerated functions and Kernel Mode Setting screen capture
 media-video/ffmpeg:fdk - Enable AAC (Advanced Audio Coding) encoding support via media-libs/fdk-aac in addition to FFmpeg's own implementation (warning: if USE=gpl is enabled, this produces a non-redistributable build)
@@ -5201,7 +5202,7 @@ media-video/ffmpeg-compat:bs2b - Enable Bauer Stereo-to-Binaural filter support 
 media-video/ffmpeg-compat:cdio - Enable audio CDs reading via dev-libs/libcdio-paranoia
 media-video/ffmpeg-compat:chromaprint - Enable audio fingerprinting support via media-libs/chromaprint
 media-video/ffmpeg-compat:codec2 - Enable codec2 low bit rate speech codec support via media-libs/codec2
-media-video/ffmpeg-compat:cuda - Enable support for various GPU-accelerated filters using NVIDIA PTX compiled with llvm-core/clang
+media-video/ffmpeg-compat:cuda-clang - Enable support for various GPU-accelerated filters using NVIDIA PTX compiled with llvm-core/clang
 media-video/ffmpeg-compat:dav1d - Enable AV1 decoding support via media-libs/dav1d
 media-video/ffmpeg-compat:drm - Enable use of x11-libs/libdrm for various hardware accelerated functions and Kernel Mode Setting screen capture
 media-video/ffmpeg-compat:fdk - Enable AAC (Advanced Audio Coding) encoding support via media-libs/fdk-aac in addition to FFmpeg's own implementation (warning: if USE=gpl is enabled, this produces a non-redistributable build)
@@ -6547,7 +6548,7 @@ net-misc/miniupnpd:strict - Be more strict regarding compliance with UPnP specif
 net-misc/modemmanager:mbim - Enable MBIM modem protocol
 net-misc/modemmanager:qmi - Enable support for the QMI modem protocol used by devices with Qualcomm chipsets
 net-misc/modemmanager:qrtr - Enable support for the QMI over IPC Router bus (QRTR) protocol
-net-misc/moonlight:cuda - Enable accelerated video rendering on NVIDIA hardware
+net-misc/moonlight:cuda-clang - Enable accelerated video rendering on NVIDIA hardware
 net-misc/moonlight:drm - Enable video rendering via x11-libs/libdrm
 net-misc/moonlight:embedded - Optimize UI for fullscreen non-desktop usage
 net-misc/moonlight:glslow - Prefer direct KMS/DRM rendering over EGL/GLES rendering for better performance on some weaker GPUs

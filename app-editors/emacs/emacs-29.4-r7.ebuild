@@ -199,7 +199,7 @@ src_prepare() {
 
 		# gccjit doesn't play well with ccache or distcc #801580
 		# For now, work around the problem with an explicit LIBRARY_PATH
-		if has ccache ${FEATURES} || has distcc ${FEATURES} && tc-is-gcc; then
+		if has ccache ${FEATURES} || has distcc ${FEATURES}; then
 			export LIBRARY_PATH=$("$(tc-getCC)" -print-search-dirs \
 				| sed -n '/^libraries:/{s:^[^/]*::;p}')
 		fi
@@ -465,6 +465,9 @@ src_test() {
 		# Reason: test is not skipped if tree-sitter-tsx is not installed
 		# Bug #922525
 		%lisp/progmodes/typescript-ts-mode-tests.el
+
+		# eglot-test-lsp-abiding-column #977411
+		%lisp/progmodes/eglot-tests.el
 	)
 	use elibc_musl && exclude_tests+=(
 			# Reason: newlocale(3) lenient locale validation #906012
