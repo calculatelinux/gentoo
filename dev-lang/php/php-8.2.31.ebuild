@@ -369,6 +369,10 @@ src_prepare() {
 	# backported to 8.2 (yet).
 	rm ext/curl/tests/curl_setopt_ssl.phpt || die
 
+	# bug 977402
+	rm ext/standard/tests/file/fdatasync.phpt \
+		ext/standard/tests/file/fsync.phpt \
+		|| die
 }
 
 src_configure() {

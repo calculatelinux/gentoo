@@ -36,13 +36,6 @@
 
 #--- END OF EXAMPLES ---
 
-# Joonas Niilola <juippis@gentoo.org> (2026-06-12)
-# Pre-bump. The next release cycle of Mozilla products (152.0 stable,
-#  140.12.0esr) will require cbindgen-0.29.4 to build. However <152.0
-# and <140.12.0 will not build with cbindgen-0.29.4. Upstream
-# bmo#2046162.
-=dev-util/cbindgen-0.29.4
-
 # Ionen Wolkens <ionen@gentoo.org> (2026-06-11)
 # Not used by maintainer anymore and, upon consideration, would rather
 # not handle the new rust rewrite using GTK4 and /dev/uinput (notably
@@ -103,12 +96,6 @@ dev-cpp/eigen:3/5.0
 # Removal on 2026-06-21.
 x11-drivers/xf86-video-vmware
 
-# Andreas Sturmlechner <asturm@gentoo.org> (2026-05-18)
-# Almost no one else is packaging net-libs/zmqpp, no more revdeps.
-# Bugs #667060, 951835.  Removal on 2026-06-17.
-net-libs/zmqpp
-=sci-mathematics/yacas-1.9.1-r2
-
 # Sam James <sam@gentoo.org> (2026-05-17)
 # Tries to delete many files (bug #975236)
 =dev-util/jenkins-bin-2.561
@@ -143,18 +130,12 @@ dev-qt/qtwayland:5
 dev-qt/qtx11extras:5
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-05-15)
-# Obsolete 3rd party Qt5 integration package.
-# Removal on 2026-06-14.
-x11-misc/qt5ct
-
-# Andreas Sturmlechner <asturm@gentoo.org> (2026-05-15)
 # USE=gui in this version depends on Qt5 and can no longer be supported.
 # VLC-4 snapshots are provided with a Qt6-based USE=gui.
 # Alternatives for stable users are media-video/mpv, media-video/haruna,
 # media-video/smplayer, media-video/qmplay2 and probably many more.
 # Bug #954006. Removal some time after 2026-05-30.
 =media-video/vlc-3.0.23
-
 
 # Michał Górny <mgorny@gentoo.org> (2026-05-09)
 # The buildbot packages aren't actively maintained in ::gentoo.  They
@@ -315,25 +296,6 @@ dev-util/buildbot-www-react
 # not just network. See bug #963106.
 =sys-kernel/linux-firmware-20250917
 =sys-kernel/linux-firmware-20251011
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (2025-07-04)
-# Obsolete Perl virtuals that will be removed (the list is work in progress).
-# If you have any of these installed, just remove them; they should not be
-# required anymore.
-virtual/perl-bignum
-virtual/perl-HTTP-Tiny
-virtual/perl-IO-Zlib
-virtual/perl-Locale-Maketext
-virtual/perl-Math-BigInt-FastCalc
-virtual/perl-Math-BigRat
-virtual/perl-Math-Complex
-virtual/perl-Module-Load-Conditional
-virtual/perl-Parse-CPAN-Meta
-virtual/perl-Params-Check
-perl-core/Params-Check
-virtual/perl-Term-ReadLine
-virtual/perl-Unicode-Collate
-virtual/perl-Unicode-Normalize
 
 # Michał Górny <mgorny@gentoo.org> (2025-06-29)
 # File collision against gnome-base/gnome-keyring[pam], which is

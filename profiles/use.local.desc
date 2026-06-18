@@ -1920,6 +1920,7 @@ dev-lang/php:sharedmem - Enable the shmop extension
 dev-lang/php:simplexml - Enable the SimpleXML extension
 dev-lang/php:sodium - Enable support for crypto through dev-libs/libsodium
 dev-lang/php:sysvipc - Enable the PHP System-V semaphore, shared memory and IPC extension
+dev-lang/php:test-full - Run slower tests
 dev-lang/php:tokenizer - Add support for the PHP file parser
 dev-lang/php:tokyocabinet - Enable support for dev-db/tokyocabinet db backend
 dev-lang/php:xmlreader - Enable the XMLReader extension
@@ -2667,7 +2668,7 @@ dev-qt/qt-docs:serialport - Install documentation for dev-qt/qtserialport
 dev-qt/qt-docs:shadertools - Install documentation for dev-qt/qtshadertools
 dev-qt/qt-docs:speech - Install documentation for dev-qt/qtspeech
 dev-qt/qt-docs:svg - Install documentation for dev-qt/qtsvg
-dev-qt/qt-docs:tasktree - Install documentation for QtTaskTree (unpackaged)
+dev-qt/qt-docs:tasktree - Install documentation for dev-qt/qttasktree
 dev-qt/qt-docs:timeline - Install documentation for dev-qt/qtquicktimeline
 dev-qt/qt-docs:tools - Install documentation for dev-qt/qttools
 dev-qt/qt-docs:virtualkeyboard - Install documentation for dev-qt/qtvirtualkeyboard
@@ -2961,7 +2962,6 @@ dev-util/ostree:soup - Use libsoup for networking
 dev-util/perf:babeltrace - Enable dev-util/babeltrace support
 dev-util/perf:bpf - Enable support for eBPF features with dev-libs/libbpf
 dev-util/perf:capstone - Use dev-libs/capstone for disassembly support
-dev-util/perf:doc - Build documentation and man pages. With this USE flag disabled, the --help parameter for perf and its sub-tools will not be available. This is optional because it depends on a few documentation handling tools that are not always welcome on user systems.
 dev-util/perf:libpfm - Enable dev-libs/libpfm support
 dev-util/perf:libtraceevent - Enable dev-libs/libtraceevent support
 dev-util/perf:libtracefs - Enable dev-libs/libtracefs support
@@ -3683,6 +3683,7 @@ kde-plasma/discover:snap - Enable support for snap packages using app-containers
 kde-plasma/discover:webengine - Enable webflow support using dev-qt/qtwebview and dev-qt/qtwebengine instead of default URL handler
 kde-plasma/kde-cli-tools:kdesu - Pull in graphical kdesu frontend kde-plasma/kdesu-gui
 kde-plasma/kdeplasma-addons:alternate-calendar - Support alternate calendar systems (currently Chinese or Indian) via dev-libs/icu
+kde-plasma/kdeplasma-addons:led - Synchronizes device LEDs with the Plasma accent color (ultimately requires rust)
 kde-plasma/kdeplasma-addons:share - Enable applet for quickly sharing data to a variety of sources
 kde-plasma/kdeplasma-addons:webengine - Enable dictionary and web browser applets using dev-qt/qtwebengine
 kde-plasma/kinfocenter:usb - Show USB device information
@@ -3694,6 +3695,7 @@ kde-plasma/kwin:screencast - Enable screencast portal using media-video/pipewire
 kde-plasma/kwin:shortcuts - Enable global shortcuts support via kde-plasma/kglobalacceld
 kde-plasma/kwin-x11:lock - Enable screen locking via kde-plasma/kscreenlocker
 kde-plasma/kwin-x11:shortcuts - Enable global shortcuts support via kde-plasma/kglobalacceld
+kde-plasma/libplasma:activities - Enable support for KDE Activities
 kde-plasma/plasma-desktop:ibus - Use ibus input method via app-i18n/ibus
 kde-plasma/plasma-desktop:scim - Enable applets that use app-i18n/scim
 kde-plasma/plasma-desktop:screencast - Enable screencast portal thumbnails using kde-plasma/kpipewire
@@ -3730,6 +3732,7 @@ kde-plasma/plasma-meta:xwayland - Enable Wayland windows screensharing to XWayla
 kde-plasma/plasma-nm:openconnect - Build support for the OpenConnect VPN client
 kde-plasma/plasma-nm:teamd - Enable Teamd control support
 kde-plasma/plasma-workspace:appstream - Enable AppStream software metadata support
+kde-plasma/plasma-workspace:flatpak - Enable support for flatpaks notifications using sys-apps/flatpak
 kde-plasma/plasma-workspace:ksysguard - Enable device notifier and system monitor applets as well as terminate applications runner
 kde-plasma/plasma-workspace:networkmanager - Enable support for location-based time zone changes
 kde-plasma/plasma-workspace:policykit - Enable locale generation and Users KCM using sys-auth/polkit and sys-apps/accountsservice
@@ -3740,6 +3743,8 @@ kde-plasma/plasma5support:activities - Enable kactivities support
 kde-plasma/plasma5support:ksysguard - Enable device notifications dataengine using kde-plasma/libksysguard
 kde-plasma/powerdevil:brightness-control - Enable screen brightness control using app-misc/ddcutil
 kde-plasma/spectacle:share - Enable support for a share menu using kde-frameworks/purpose
+kde-plasma/union:tools - Build tools that are useful for development
+kde-plasma/union:widgets - Build QtWidgets output that uses kde-plasma/breeze as the base by default
 llvm-core/clang:extra - Build extra tools (clangd, clang-tidy and a few more)
 llvm-core/clang:ieee-long-double - Use accelerated 128-bit IEEE long double ABI (ppc64le only)
 llvm-core/clang:static-analyzer - Install the Clang static analyzer
@@ -5812,8 +5817,8 @@ net-dns/unbound:dnstap - Enable dnstap support
 net-dns/unbound:ecdsa - Enable ECDSA support
 net-dns/unbound:ecs - Enable EDNS client subnet support
 net-dns/unbound:gost - Enable GOST support
-net-dns/unbound:http2 - Enable HTTP/2 support for DoHnet-libs/nghttp2
-net-dns/unbound:redis - Enable cache db backend which usesdev-libs/hiredis
+net-dns/unbound:http2 - Enable HTTP/2 support for DoH via net-libs/nghttp2
+net-dns/unbound:redis - Enable cache db backend which uses dev-libs/hiredis
 net-dns/unbound:tfo - Enable TCP Fast Open client+server
 net-firewall/arno-iptables-firewall:plugins - Install optional plugins
 net-firewall/arno-iptables-firewall:rsyslog - Install configuration snippet for app-admin/rsyslog

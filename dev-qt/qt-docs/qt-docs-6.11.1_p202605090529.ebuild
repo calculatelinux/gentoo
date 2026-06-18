@@ -91,7 +91,7 @@ qt6_docs_generate_metadata() {
 		+shadertools/qtshadertools:
 		+speech/qtspeech="qttexttospeech"
 		+svg^qtsvg
-		-tasktree/qttasktree
+		+tasktree/qttasktree
 		+timeline/qtquicktimeline:
 		+tools^qttools="
 			qdoc qtassistant qtdesigner qtdistancefieldgenerator

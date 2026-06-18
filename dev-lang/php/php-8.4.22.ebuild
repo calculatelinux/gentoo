@@ -40,9 +40,9 @@ IUSE="${IUSE} acl apparmor argon2 avif bcmath berkdb bzip2 calendar
 	mhash mssql mysql mysqli nls
 	odbc +opcache +opcache-jit pcntl pdo +phar +posix postgres png
 	qdbm readline selinux +session session-mm sharedmem
-	+simplexml snmp soap sockets sodium spell sqlite ssl
-	sysvipc systemd test tidy +tokenizer tokyocabinet truetype unicode
-	valgrind webp +xml xmlreader xmlwriter xpm xslt zip zlib"
+	+simplexml snmp soap sockets sodium spell sqlite ssl sysvipc
+	systemd test test-full tidy +tokenizer tokyocabinet truetype
+	unicode valgrind webp +xml xmlreader xmlwriter xpm xslt zip zlib"
 
 # Without USE=readline or libedit, the interactive "php -a" CLI will hang.
 REQUIRED_USE="
@@ -274,6 +274,17 @@ src_prepare() {
 
 	# One-off, somebody forgot to update a version constant
 	rm ext/reflection/tests/ReflectionZendExtension.phpt || die
+
+	local virt=$(systemd-detect-virt 2>/dev/null)
+	if [[ ${virt} == systemd-nspawn ]]; then
+		# If we are in a container where certain system calls can fail
+		# by design, don't test their PHP wrappers (bug 977402).
+		einfo "systemd-nspawn detected, skipping fsync/nice tests"
+		rm ext/standard/tests/file/fdatasync.phpt \
+			ext/standard/tests/file/fsync.phpt \
+			ext/standard/tests/general_functions/proc_nice_basic.phpt \
+			|| die
+	fi
 }
 
 src_configure() {
@@ -721,9 +732,13 @@ src_test() {
 	#
 	# One -n applies to the top-level "php", while the other applies
 	# to any sub-php that get invoked by the test runner.
-	SKIP_IO_CAPTURE_TESTS=1 SKIP_PERF_SENSITIVE=1 REPORT_EXIT_STATUS=1 \
+	#
+	# When running slower tests, we increase the timeout to allow
+	# for e.g. bug 977243.
+	SKIP_SLOW_TESTS=$(usex test-full 0 1) SKIP_IO_CAPTURE_TESTS=1 SKIP_PERF_SENSITIVE=1 REPORT_EXIT_STATUS=1 \
 		"${TEST_PHP_EXECUTABLE}" -n \
 		"${WORKDIR}/sapis-build/cli/run-tests.php" --offline -n -q \
+		$(usex test-full "--set-timeout 300" "") \
 		-d "session.save_path=${T}" \
 		|| die "tests failed"
 }

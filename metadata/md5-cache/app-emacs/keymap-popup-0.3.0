@@ -1,0 +1,13 @@
+BDEPEND=>=app-editors/emacs-29.1:*
+DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
+DESCRIPTION=Described keymaps with popup help
+EAPI=9
+HOMEPAGE=https://codeberg.org/thanosapollo/emacs-keymap-popup
+INHERIT=elisp
+KEYWORDS=~amd64
+LICENSE=GPL-3+
+RDEPEND=>=app-editors/emacs-29.1:*
+SLOT=0
+SRC_URI=https://codeberg.org/thanosapollo/emacs-keymap-popup/archive/0.3.0.tar.gz -> keymap-popup-0.3.0.tar.gz
+_eclasses_=elisp	a37bfc35b86403c770beebbd71661c30	elisp-common	0ea9a0d3bc26353e1642c73560a24fdf
+_md5_=fa647799bce6668a079851d5425fc5de

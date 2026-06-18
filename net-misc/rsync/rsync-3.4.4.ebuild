@@ -42,6 +42,7 @@ RESTRICT="!test? ( test )"
 REQUIRED_USE+="
 	examples? ( ${PYTHON_REQUIRED_USE} )
 	rrsync? ( ${PYTHON_REQUIRED_USE} )
+	test? ( ${PYTHON_REQUIRED_USE} )
 "
 
 RDEPEND="

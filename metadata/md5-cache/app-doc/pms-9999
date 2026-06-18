@@ -1,7 +1,7 @@
-BDEPEND=dev-texlive/texlive-bibtexextra >=dev-texlive/texlive-latexextra-2020-r2 dev-texlive/texlive-mathscience virtual/latex-base html? ( >=dev-tex/tex4ht-20090611_p1038-r11 ) >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=dev-texlive/texlive-bibtexextra dev-texlive/texlive-fontsextra dev-texlive/texlive-latexextra dev-texlive/texlive-mathscience virtual/latex-base html? ( dev-tex/tex4ht ) >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Gentoo Package Manager Specification (draft)
-EAPI=8
+EAPI=9
 HOMEPAGE=https://wiki.gentoo.org/wiki/Project:Package_Manager_Specification
 INHERIT=git-r3
 IUSE=html twoside
@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=!app-doc/pms-bin
 SLOT=live
 _eclasses_=git-r3	2f8cdb10b033f92c3136aa6488a31c98
-_md5_=8a35944d954c1c34ecc02dabf9f22dd5
+_md5_=e13484ece29d139288ba2d3f827a472a

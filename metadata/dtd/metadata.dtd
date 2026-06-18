@@ -2,7 +2,7 @@
 <!ELEMENT catmetadata ( (longdescription)* )>
 
 <!-- Metadata for a package -->
-<!ELEMENT pkgmetadata ( (maintainer|longdescription|slots|stabilize-allarches|use|upstream)* )>
+<!ELEMENT pkgmetadata ( (maintainer|longdescription|slots|stabilize-allarches|straight-to-stable|use|upstream)* )>
 
   <!-- One tag for each maintainer of a package, multiple allowed-->
   <!ELEMENT maintainer (email|name|description)+>
@@ -32,6 +32,9 @@
 
   <!-- whether it's possible to stabilize ALLARCHES -->
   <!ELEMENT stabilize-allarches EMPTY>
+
+  <!-- whether stable keywords should be retained on version bumps -->
+  <!ELEMENT straight-to-stable EMPTY>
 
   <!-- description of what this USE flag does for this package -->
   <!ELEMENT use (flag)* >
@@ -87,6 +90,7 @@
   <!ATTLIST longdescription restrict CDATA #IMPLIED >
   <!ATTLIST flag restrict CDATA #IMPLIED >
   <!ATTLIST stabilize-allarches restrict CDATA #IMPLIED >
+  <!ATTLIST straight-to-stable restrict CDATA #IMPLIED >
 
 <!-- standard parts -->
 <!-- an email address -->

@@ -96,7 +96,6 @@ dev-qt/qtwebengine
 dev-qt/qtwebview
 dev-python/pyqt6-webengine
 dev-python/qpageview
-<app-admin/calamares-3.3.14
 app-text/zeal
 app-editors/ghostwriter
 app-editors/retext
@@ -113,7 +112,6 @@ dev-python/spyder-terminal
 dev-util/kdevelop
 dev-util/kdevelop-php
 dev-util/kdevelop-python
-kde-frameworks/purpose-kaccounts-services
 kde-apps/akonadi-calendar
 kde-apps/akonadi-import-wizard
 kde-apps/akonadiconsole
@@ -148,7 +146,6 @@ kde-apps/parley
 kde-apps/pim-data-exporter
 kde-apps/pim-sieve-editor
 kde-misc/kio-gdrive
-kde-misc/kio-gdrive-common
 kde-misc/tellico
 kde-misc/zanshin
 kde-plasma/plasma-bigscreen

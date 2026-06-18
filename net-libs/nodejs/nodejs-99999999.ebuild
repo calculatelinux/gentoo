@@ -19,10 +19,7 @@ if [[ ${PV} == *9999 ]]; then
 	EGIT_REPO_URI="https://github.com/nodejs/node"
 	SLOT="0"
 else
-	SRC_URI="
-		https://nodejs.org/dist/v${PV}/node-v${PV}.tar.xz
-		https://deps.gentoo.zip/net-libs/nodejs/nodejs-24.16.0-nghttp2-1.69.0.patch
-	"
+	SRC_URI="https://nodejs.org/dist/v${PV}/node-v${PV}.tar.xz"
 	SLOT="0/$(ver_cut 1)"
 	KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc64 ~riscv ~x86 ~x64-macos"
 	S="${WORKDIR}/node-v${PV}"
@@ -75,6 +72,12 @@ RDEPEND="${COMMON_DEPEND}"
 # fatter binaries and set the disk requirement to 22GiB.
 CHECKREQS_MEMORY="8G"
 CHECKREQS_DISK_BUILD="22G"
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-26.3.0-gcc17.patch
+	"${FILESDIR}"/${PN}-26.3.0-format-cstdlib.patch
+	"${FILESDIR}"/${PN}-26.3.0-v8-climits.patch
+)
 
 pkg_pretend() {
 	if [[ ${MERGE_TYPE} != "binary" ]]; then

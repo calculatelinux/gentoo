@@ -46,7 +46,7 @@ CDEPEND="
 	dev-libs/openssl:=
 	virtual/zlib:=
 	dev-db/sqlite:3
-	net-libs/libwebsockets:=[client,lejp]
+	>=net-libs/libwebsockets-4.5.8-r1:=[client,lejp]
 	kernel_linux? ( sys-libs/libcap
 			dev-libs/libnl:3
 			net-libs/libpcap
@@ -84,6 +84,8 @@ DEPEND="${CDEPEND}
 	sys-libs/libcap
 "
 BDEPEND="virtual/pkgconfig"
+
+PATCHES=( "${FILESDIR}/kismet-2025.09.1-fix-libwscflags-inc.patch" )
 
 src_prepare() {
 	#sed -i -e "s:^\(logtemplate\)=\(.*\):\1=/tmp/\2:" \

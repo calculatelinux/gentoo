@@ -1,5 +1,5 @@
 BDEPEND=emacs? ( >=app-editors/emacs-23.1:* ) app-alternatives/lex app-alternatives/yacc sys-devel/gnuconfig >=app-portage/elt-patches-20250306 || ( >=dev-build/automake-1.18.1:1.18 ) || ( >=dev-build/autoconf-2.73:2.73 >=dev-build/autoconf-2.72-r1:2.72 ) >=dev-build/libtool-2.4.7-r3
-DEFINED_PHASES=compile configure install postinst postrm prepare
+DEFINED_PHASES=compile configure install postinst postrm prepare test
 DESCRIPTION=C-INTERCAL - INTERCAL to binary (via C) compiler
 EAPI=8
 HOMEPAGE=http://www.catb.org/~esr/intercal/ https://gitlab.com/esr/intercal
@@ -11,4 +11,4 @@ RDEPEND=emacs? ( >=app-editors/emacs-23.1:* )
 SLOT=0
 SRC_URI=http://www.catb.org/~esr/intercal/intercal-0.33.tar.gz
 _eclasses_=autotools	0698802996fcfe9a604eac3c1f6e7112	dot-a	e5200fe17cfd2ed6fa66edd80201763a	elisp-common	0ea9a0d3bc26353e1642c73560a24fdf	flag-o-matic	fd3558f73f6503093adee69adf41020d	gnuconfig	b4fa4889c6f586d6b069215a86dd9e53	libtool	6a96cd90e5da8c7c615015479f46f1a4	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
-_md5_=20d81b7267869b1ea393388fbdde6ee3
+_md5_=ffc77df645c58903b099612774606ec3

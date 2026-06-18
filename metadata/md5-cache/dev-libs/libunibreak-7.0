@@ -1,4 +1,4 @@
-BDEPEND=man? ( app-text/doxygen )
+BDEPEND=man? ( app-text/doxygen ) doc? ( app-text/doxygen media-gfx/graphviz )
 DEFINED_PHASES=compile configure install prepare
 DESCRIPTION=Line and word breaking library
 EAPI=8
@@ -9,4 +9,4 @@ LICENSE=ZLIB
 RESTRICT=!test? ( test )
 SLOT=0/7
 SRC_URI=https://github.com/adah1972/libunibreak/archive/refs/tags/libunibreak_7_0.tar.gz -> libunibreak-7.0.tar.gz
-_md5_=92e2ecd51a376c92508e617b3b870015
+_md5_=e101b2d7a75cef7908218e214c3cec02

@@ -1,0 +1,15 @@
+BDEPEND=app-alternatives/ninja >=dev-build/cmake-3.28.5
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=test? ( dev-cpp/gtest )
+DESCRIPTION=C++ library providing a simple API to read and write INI-style files
+EAPI=8
+HOMEPAGE=https://github.com/brofield/simpleini/
+INHERIT=cmake
+IUSE=test
+KEYWORDS=~amd64 ~arm64 ~ppc64 ~x86
+LICENSE=MIT
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://github.com/brofield/simpleini/archive/refs/tags/v4.26.tar.gz -> simpleini-4.26.tar.gz
+_eclasses_=cmake	c54f532543a549f7318d6c49aaf8e953	flag-o-matic	fd3558f73f6503093adee69adf41020d	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	ninja-utils	d063ea1900a793f93eb095010d6d9156	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
+_md5_=20796d129e4cc6209568694ba390c884

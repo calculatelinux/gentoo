@@ -46,7 +46,7 @@ CDEPEND="
 	dev-libs/openssl:=
 	virtual/zlib:=
 	dev-db/sqlite:3
-	net-libs/libwebsockets:=[client,lejp]
+	>=net-libs/libwebsockets-4.5.8-r1:=[client,lejp]
 	kernel_linux? ( sys-libs/libcap
 			dev-libs/libnl:3
 			net-libs/libpcap
