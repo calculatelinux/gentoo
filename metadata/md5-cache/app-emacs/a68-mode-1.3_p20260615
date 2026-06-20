@@ -1,0 +1,13 @@
+BDEPEND=>=app-editors/emacs-26.3:*
+DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
+DESCRIPTION=Algol68 major mode for GNU Emacs
+EAPI=9
+HOMEPAGE=https://elpa.gnu.org/packages/a68-mode.html https://git.sr.ht/~jemarch/a68-mode/
+INHERIT=elisp
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3+
+RDEPEND=>=app-editors/emacs-26.3:*
+SLOT=0
+SRC_URI=https://git.sr.ht/~jemarch/a68-mode/archive/74896db77db4ce68e0022bceb3e7c73be452086c.tar.gz -> a68-mode-1.3_p20260615.srht.tar.gz
+_eclasses_=elisp	a37bfc35b86403c770beebbd71661c30	elisp-common	0ea9a0d3bc26353e1642c73560a24fdf
+_md5_=9a33cbe668710656466516ea41a04a40

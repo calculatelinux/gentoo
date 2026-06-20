@@ -602,7 +602,8 @@ app-emulation/fs-uae-launcher:lha - Enable LHA archive support
 app-emulation/fuse:backend-X - Use X11 rendering backend
 app-emulation/fuse:backend-fbcon - Use framebuffer rendering backend
 app-emulation/fuse:backend-gtk3 - Use Gtk+ rendering backend
-app-emulation/fuse:backend-sdl - Use SDL rendering backend
+app-emulation/fuse:backend-sdl - Use SDL1 rendering backend
+app-emulation/fuse:backend-sdl2 - Use SDL2 rendering backend
 app-emulation/fuse:memlimit - Add compile-time memory usage limiting
 app-emulation/fuse-utils:gcrypt - Use dev-libs/libgcrypt for low-level crypto of some features, including logfiles.
 app-emulation/grub-xen-host:pvh - Build an additional grub bin for pvh.
@@ -3989,8 +3990,6 @@ mail-mta/exim:dcc - Adds support for Distributed Checksum Clearinghouse (DCC)
 mail-mta/exim:dkim - Adds support for DomainKeys Identified Mail (DKIM)
 mail-mta/exim:dlfunc - Install local_scan.h header to compile separate dlfunc libraries
 mail-mta/exim:dmarc - Adds support for DMARC
-mail-mta/exim:dmarc-native - Use *EXPERIMENTAL* Native DMARC implementation (Only effective with USE=dmarc).
-mail-mta/exim:dmarc-opendmarc - Use established opendmarc based DMARC implementation (Only effective with USE=dmarc).
 mail-mta/exim:dnsdb - Adds support for a DNS search for a record whose domain name is the supplied query
 mail-mta/exim:dovecot-sasl - Adds support for Dovecot's authentication
 mail-mta/exim:dsn - Adds support for Delivery Status Notifications (DSN)
@@ -8567,7 +8566,6 @@ sys-libs/libnbd:fuse - Install the sys-fs/fuse powered nbdfuse.
 sys-libs/libnbd:go - Build bindings for dev-lang/go
 sys-libs/libnvme:json - Support JSON output via dev-libs/json-c
 sys-libs/libnvme:keyutils - Add support for sys-apps/keyutils
-sys-libs/libnvme:uuid - UUID support via sys-apps/util-linux
 sys-libs/libunwind:debug-frame - Adds support for DWARF .debug_frame section: Use the information from this section if available
 sys-libs/libunwind:libatomic - Use libatomic instead of builtin atomic operations
 sys-libs/libxcrypt:compat - Build with compatibility interfaces for other crypt implementations

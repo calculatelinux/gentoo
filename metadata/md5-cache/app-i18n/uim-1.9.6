@@ -7,7 +7,7 @@ HOMEPAGE=https://github.com/uim/uim
 IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
 INHERIT=autotools dot-a elisp-common flag-o-matic gnome2-utils qmake-utils xdg
 IUSE=X +anthy curl eb emacs expat libffi gtk gtk2 l10n_ja l10n_ko l10n_zh-CN l10n_zh-TW libedit libnotify m17n-lib ncurses qt5 qt6 skk sqlite ssl static-libs
-KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~riscv ~x86
+KEYWORDS=amd64 ~arm ~hppa ppc ~ppc64 ~riscv x86
 LICENSE=BSD GPL-2 LGPL-2.1
 RDEPEND=virtual/libintl X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXft ) anthy? ( app-i18n/anthy-unicode ) curl? ( net-misc/curl ) eb? ( dev-libs/eb ) emacs? ( >=app-editors/emacs-23.1:* ) expat? ( dev-libs/expat ) gtk? ( dev-libs/glib:2 x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/pango x11-libs/gtk+:3[X] ) gtk2? ( dev-libs/glib:2 x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/pango x11-libs/gtk+:2 ) libedit? ( dev-libs/libedit ) libffi? ( dev-libs/libffi:= ) libnotify? ( dev-libs/glib:2 x11-libs/libnotify ) m17n-lib? ( dev-libs/m17n-lib ) ncurses? ( sys-libs/ncurses:0= ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtx11extras:5 dev-qt/qtwidgets:5 ) qt6? ( dev-qt/qtbase:6[widgets,X] ) skk? ( app-i18n/skk-jisyo ) sqlite? ( dev-db/sqlite:3 ) ssl? ( dev-libs/openssl:0= ) !dev-scheme/sigscheme X? ( media-fonts/font-sony-misc l10n_ja? ( || ( media-fonts/font-jis-misc media-fonts/intlfonts ) ) l10n_ko? ( || ( media-fonts/font-daewoo-misc media-fonts/intlfonts ) ) l10n_zh-CN? ( || ( media-fonts/font-isas-misc media-fonts/intlfonts ) ) l10n_zh-TW? ( media-fonts/intlfonts ) )
 REQUIRED_USE=gtk? ( X ) gtk2? ( X ) qt5? ( X ) qt6? ( X )
@@ -15,4 +15,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/uim/uim/releases/download/1.9.6/uim-1.9.6.tar.bz2
 _eclasses_=autotools	0698802996fcfe9a604eac3c1f6e7112	dot-a	e5200fe17cfd2ed6fa66edd80201763a	elisp-common	0ea9a0d3bc26353e1642c73560a24fdf	flag-o-matic	fd3558f73f6503093adee69adf41020d	gnome2-utils	a8cf148ec7f5ae0b1f1d33ae5f7f9e88	gnuconfig	b4fa4889c6f586d6b069215a86dd9e53	libtool	6a96cd90e5da8c7c615015479f46f1a4	qmake-utils	28f99dba9219112f4785f46ed426a021	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	xdg	3ef49a87c52c8b77c476351195dfe575	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
-_md5_=8daad9e7a9ce9bd9d8b80370a62e718c
+_md5_=49d9ecd3cd58254e6a996d4f6567afdb

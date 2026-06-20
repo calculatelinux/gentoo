@@ -1,4 +1,4 @@
-BDEPEND=|| ( dev-lang/python:3.13 dev-lang/python:3.12 ) dev-lang/perl
+BDEPEND=|| ( dev-lang/python:3.15 dev-lang/python:3.14 dev-lang/python:3.13 dev-lang/python:3.12 ) dev-lang/perl
 DEFINED_PHASES=compile configure install postinst postrm setup test
 DEPEND=eselect-ldso? ( !app-eselect/eselect-cblas >=app-eselect/eselect-blas-0.2 )
 DESCRIPTION=BLAS-like Library Instantiation Software Framework
@@ -13,4 +13,4 @@ REQUIRED_USE=?? ( openmp pthread serial )
 SLOT=0/4-2.0
 SRC_URI=https://github.com/flame/blis/archive/2.0.tar.gz -> blis-2.0.tar.gz
 _eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	python-any-r1	891415dfe39ad9b41b461f2b86354af0	python-utils-r1	18a01bee4e486884d7457cfacde74099	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
-_md5_=eef88347d6823f3de777b7e7a334ea72
+_md5_=88a7a00ba9cb3d056562c6a42c6af163

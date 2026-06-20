@@ -6,11 +6,11 @@ EAPI=8
 HOMEPAGE=https://metacpan.org/release/DateTime-Format-Natural
 INHERIT=perl-module
 IUSE=perl_features_debug perl_features_ithreads perl_features_quadmath test
-KEYWORDS=~amd64 ~arm64 ~ppc64 ~riscv ~x86
+KEYWORDS=amd64 ~arm64 ~ppc64 ~riscv ~x86
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-perl/Clone dev-perl/Date-Calc dev-perl/DateTime dev-perl/DateTime-HiRes dev-perl/DateTime-TimeZone >=dev-perl/Params-Validate-1.150.0 dev-perl/boolean >=dev-lang/perl-5.38.2-r3[perl_features_debug=,perl_features_ithreads=,perl_features_quadmath=] dev-lang/perl:=
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/S/SC/SCHUBIGER/DateTime-Format-Natural-1.25.tar.gz
 _eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	perl-functions	1863acf0982afafc67797e3ce7275b4c	perl-module	41920449ca174fe9b9b303dfcbdb37a3	readme.gentoo-r1	9ca94b2d607e7454ca6cfb44ab8ce327	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
-_md5_=032c94115914a4ffa9288e23e0d7b84d
+_md5_=ea51e1caa3fd36fa015af27cf67cfcba

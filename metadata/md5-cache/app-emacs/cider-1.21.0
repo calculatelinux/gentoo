@@ -5,11 +5,11 @@ EAPI=8
 HOMEPAGE=https://cider.mx/ https://github.com/clojure-emacs/cider/
 INHERIT=elisp optfeature
 IUSE=test test
-KEYWORDS=~amd64
+KEYWORDS=amd64
 LICENSE=GPL-3+
 RDEPEND=app-emacs/clojure-mode app-emacs/parseedn app-emacs/queue app-emacs/sesman app-emacs/spinner app-emacs/transient >=app-editors/emacs-26.3:*
 RESTRICT=!test? ( test ) !test? ( test )
 SLOT=0
 SRC_URI=https://github.com/clojure-emacs/cider/archive/v1.21.0.tar.gz -> cider-1.21.0.gh.tar.gz
 _eclasses_=elisp	a37bfc35b86403c770beebbd71661c30	elisp-common	0ea9a0d3bc26353e1642c73560a24fdf	optfeature	538bce96e5589935b57e178e8635f301
-_md5_=1496e5e65ceb9ebdf535c833323e6a49
+_md5_=5075431bc5d078280b6eff67af5f23bc

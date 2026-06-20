@@ -112,6 +112,7 @@ PATCHES+=(
 	"${FILESDIR}"/${PN}-6.10.3-climits.patch
 	"${FILESDIR}"/${PN}-6.11.0-gcc17.patch
 	"${FILESDIR}"/${PN}-6.11.1-gcc17.patch
+	"${FILESDIR}"/${PN}-6.11.1-musl-missing-includes.patch
 )
 
 python_check_deps() {

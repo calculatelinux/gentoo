@@ -37,6 +37,7 @@ src_compile() {
 	local MBED_FLAGS
 	MBED_FLAGS=$("$(tc-getPKG_CONFIG)" --cflags --libs mbedcrypto-3) || die
 	emake \
+		CC="$(tc-getCC)" \
 		EMACS_CMD="${EMACS} \
 			-L ${EPREFIX}${SITELISP}/fsm \
 			-L ${EPREFIX}${SITELISP}/keymap-popup" \
@@ -49,7 +50,7 @@ src_test() {
 		# https://codeberg.org/emacs-jabber/emacs-jabber/issues/155
 		[[ ${tests[t]} = *-mam.el ]] && unset "tests[t]"
 	done
-	elisp-test-ert tests -L lisp ${tests[@]/#/-l }
+	elisp-test-ert tests -L lisp "${tests[@]/#/--load=}"
 }
 
 src_install() {

@@ -112,8 +112,7 @@ src_test() {
 }
 
 src_install() {
-	cd crates/uv || die
-	cargo_src_install
+	dobin "$(cargo_target_dir)"/{uv,uvx}
 
 	insinto /etc/xdg/uv
 	newins - uv.toml <<-EOF || die

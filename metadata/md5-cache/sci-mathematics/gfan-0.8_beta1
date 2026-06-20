@@ -1,0 +1,15 @@
+BDEPEND=doc? ( app-text/ghostscript-gpl dev-texlive/texlive-plaingeneric virtual/latex-base )
+DEFINED_PHASES=compile configure install prepare setup
+DEPEND=dev-cpp/abseil-cpp:= dev-cpp/tbb:= dev-libs/gmp:0=[cxx(+)] sci-libs/cddlib:0=
+DESCRIPTION=Compute Groebner fans and tropical varieties
+EAPI=9
+HOMEPAGE=https://users-math.au.dk/~jensen/software/gfan/gfan.html
+INHERIT=flag-o-matic toolchain-funcs
+IUSE=doc
+KEYWORDS=~amd64 ~arm ~riscv ~x86
+LICENSE=GPL-2+
+RDEPEND=dev-cpp/abseil-cpp:= dev-cpp/tbb:= dev-libs/gmp:0=[cxx(+)] sci-libs/cddlib:0=
+SLOT=0
+SRC_URI=https://users-math.au.dk/~jensen/software/gfan/gfan0.8beta.tar.gz https://dev.gentoo.org/~mjo/distfiles/gfan-0.8-libcxx.patch.xz
+_eclasses_=flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=ee07becff8b674d570c981ab7ab79f96

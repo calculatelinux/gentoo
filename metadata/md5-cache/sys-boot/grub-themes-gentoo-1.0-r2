@@ -8,5 +8,5 @@ LICENSE=MIT CC-BY-SA-2.5
 PDEPEND=sys-boot/grub
 SLOT=0
 SRC_URI=https://github.com/Telemin/gentoo-grub-themes/archive/refs/tags/v1.0.tar.gz -> grub-themes-gentoo-1.0.tgz
-_eclasses_=mount-boot	03b0280b48caf6e18472fa7272cfcda8	mount-boot-utils	2551bac1a772f4b6beacb494a750ae92
+_eclasses_=mount-boot	2457686015a19b48bcaedc5f7cc19505	mount-boot-utils	2551bac1a772f4b6beacb494a750ae92
 _md5_=5956f0e82125996bce23dbaebaed7a41

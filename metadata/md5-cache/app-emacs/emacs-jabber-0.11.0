@@ -11,4 +11,4 @@ RDEPEND=>=app-editors/emacs-29.1:*[sqlite] app-emacs/fsm app-emacs/keymap-popup 
 SLOT=0
 SRC_URI=https://codeberg.org/emacs-jabber/emacs-jabber/archive/0.11.0.tar.gz -> emacs-jabber-0.11.0.tar.gz
 _eclasses_=elisp	a37bfc35b86403c770beebbd71661c30	elisp-common	0ea9a0d3bc26353e1642c73560a24fdf	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
-_md5_=018a64385f6e7c77b4c71dafabdc4fe6
+_md5_=6869e59ca8b0db517cb29cb90bcfe337

@@ -53,6 +53,7 @@ DEPEND="
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.9.2-multi_lua_impl.patch
 	"${FILESDIR}"/${PN}-0.9.2-fix_tests.patch
+	"${FILESDIR}"/${PN}-0.9.2-skip_tests_5-1.patch
 )
 
 lua_src_prepare() {
