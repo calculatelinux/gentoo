@@ -1,0 +1,16 @@
+BDEPEND=app-text/dos2unix
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=>=dev-lang/ghc-8.10.6:= executable? ( dev-haskell/base16-bytestring:=[profile?] ) >=dev-haskell/cabal-3.2.1.0 test? ( >=dev-haskell/sha-1.6.4 <dev-haskell/sha-1.7 >=dev-haskell/tasty-1.4 <dev-haskell/tasty-1.6 >=dev-haskell/tasty-hunit-0.10 <dev-haskell/tasty-hunit-0.11 >=dev-haskell/tasty-quickcheck-0.10 <dev-haskell/tasty-quickcheck-1 >=dev-haskell/base16-bytestring-1.0.0 <dev-haskell/base16-bytestring-1.1 ) hscolour? ( dev-haskell/hscolour )
+DESCRIPTION=Fast, pure and practical SHA-256 implementation
+EAPI=8
+HOMEPAGE=https://github.com/haskell-hvr/cryptohash-sha256
+INHERIT=haskell-cabal
+IUSE=executable doc hscolour profile test
+KEYWORDS=~amd64 ~arm64 ~ppc64 ~riscv ~x86
+LICENSE=BSD
+RDEPEND=>=dev-lang/ghc-8.10.6:= executable? ( dev-haskell/base16-bytestring:=[profile?] ) dev-lang/ghc:=[profile?]
+RESTRICT=!test? ( test )
+SLOT=0/0.11.102.1
+SRC_URI=https://hackage.haskell.org/package/cryptohash-sha256-0.11.102.1/cryptohash-sha256-0.11.102.1.tar.gz https://hackage.haskell.org/package/cryptohash-sha256-0.11.102.1/revision/6.cabal -> cryptohash-sha256-0.11.102.1-rev6.cabal
+_eclasses_=ghc-package	8e4f6eb2d0e798049f6fcaf3b84c0d4a	haskell-cabal	1138de808f4356a4380a4f7cc6d4d8a3	multilib	fc812e8eb2170022c28272d80a1f9e77	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=82afda4b092dfd851f2ea0d70d929aa4

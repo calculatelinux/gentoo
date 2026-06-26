@@ -12,5 +12,5 @@ RDEPEND=acct-group/hsqldb acct-user/hsqldb >=virtual/jre-11:* >=dev-java/java-co
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://downloads.sourceforge.net/project/hsqldb/hsqldb/hsqldb_2_7/hsqldb-2.7.4.zip
-_eclasses_=java-pkg-2	438c2725ea326202d7fc1eb31af76813	java-utils-2	b41327d85d12ce816943cf4d344add19
+_eclasses_=java-pkg-2	438c2725ea326202d7fc1eb31af76813	java-utils-2	4fa0be92748bc228f31bd845d285d7f9
 _md5_=f48056cfd5a5081fe9b839e4ec83725a

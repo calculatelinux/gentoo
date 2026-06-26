@@ -274,7 +274,7 @@ src_install() {
 	chmod 0640 "${ED}"/etc/${PN}/*.conf || die
 
 	# Install a conf per service and a linked init script per service
-	newinitd "${FILESDIR}"/${PN}-initd-r3 ${PN}
+	newinitd "${FILESDIR}"/${PN}-initd-r4 ${PN}
 	local svc
 	for svc in dhcp4 dhcp6 dhcp-ddns ctrl-agent; do
 		newconfd "${FILESDIR}"/${PN}-confd-r3 kea-${svc}

@@ -12,5 +12,5 @@ REQUIRED_USE=test? ( ant-task )
 RESTRICT=!test? ( test )
 SLOT=1.12
 SRC_URI=https://github.com/codehaus/qdox/archive/qdox-1.12.1.tar.gz
-_eclasses_=java-pkg-2	438c2725ea326202d7fc1eb31af76813	java-utils-2	b41327d85d12ce816943cf4d344add19
+_eclasses_=java-pkg-2	438c2725ea326202d7fc1eb31af76813	java-utils-2	4fa0be92748bc228f31bd845d285d7f9
 _md5_=539eac9ca4e33f241a491264d91b1158

@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{11..14} )
+PYTHON_COMPAT=( python3_{12..14} )
 inherit flag-o-matic cmake-multilib linux-info llvm.org python-single-r1
 
 DESCRIPTION="OpenMP runtime library for LLVM/clang compiler"
@@ -11,7 +11,7 @@ HOMEPAGE="https://openmp.llvm.org"
 
 LICENSE="Apache-2.0-with-LLVM-exceptions || ( UoI-NCSA MIT )"
 SLOT="0/${LLVM_SOABI}"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~ppc64 ~riscv ~x86 ~x64-macos"
+KEYWORDS="amd64 arm arm64 ~loong ~mips ppc64 ~riscv x86 ~x64-macos"
 IUSE="debug gdb-plugin hwloc ompt test"
 REQUIRED_USE="
 	gdb-plugin? ( ${PYTHON_REQUIRED_USE} )

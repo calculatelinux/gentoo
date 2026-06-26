@@ -11,5 +11,5 @@ RDEPEND=dev-java/auto-value:0 dev-java/jsr305:0 >=virtual/jre-1.8:* >=dev-java/j
 RESTRICT=test !test? ( test )
 SLOT=0
 SRC_URI=https://github.com/open-telemetry/opentelemetry-java/archive/v1.49.0.tar.gz -> opentelemetry-java-1.49.0.tar.gz
-_eclasses_=java-pkg-2	438c2725ea326202d7fc1eb31af76813	java-pkg-simple	df1fc43a5017ec8f5d23007b23731474	java-utils-2	b41327d85d12ce816943cf4d344add19
+_eclasses_=java-pkg-2	438c2725ea326202d7fc1eb31af76813	java-pkg-simple	df1fc43a5017ec8f5d23007b23731474	java-utils-2	4fa0be92748bc228f31bd845d285d7f9
 _md5_=477c973d0386a7448f57ed59bcce81ac

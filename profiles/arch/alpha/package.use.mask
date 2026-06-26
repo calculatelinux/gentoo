@@ -7,8 +7,9 @@ media-video/ffmpeg cuda-clang
 media-video/ffmpeg-compat cuda-clang
 
 # Pacho Ramos <pacho@gentoo.org> (2026-05-09)
-# appstream not keyworded
+# dev-libs/appstream not keyworded, bug #977775
 app-misc/media-player-info test
+dev-util/meld test
 
 # Alfred Wingate <parona@protonmail.com> (2026-05-03)
 # dev-libs/libthai not keyworded here

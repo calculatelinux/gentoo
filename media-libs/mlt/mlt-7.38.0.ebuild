@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{11..15} )
+PYTHON_COMPAT=( python3_{12..15} )
 inherit python-single-r1 cmake flag-o-matic
 
 DESCRIPTION="Open source multimedia framework for television broadcasting"
@@ -23,7 +23,7 @@ RESTRICT="!test? ( test )"
 # rtaudio will use OSS on non linux OSes
 # Qt already needs FFTW/PLUS so let's just always have it on to ensure
 # MLT is useful: bug #603168.
-DEPEND="
+RDEPEND="
 	>=media-libs/libebur128-1.2.2:=
 	sci-libs/fftw:3.0=
 	ffmpeg? ( media-video/ffmpeg:0=[vdpau?] )
@@ -79,7 +79,9 @@ DEPEND="
 #	php? ( dev-lang/php )
 #	ruby? ( ${RUBY_DEPS} )
 #	tcl? ( dev-lang/tcl:0= )
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	test? ( dev-qt/qtbase:6 )
+"
 BDEPEND="
 	virtual/pkgconfig
 	python? ( >=dev-lang/swig-2.0 )
@@ -123,7 +125,7 @@ src_configure() {
 		-DGPL3=ON
 		-DBUILD_TESTING=$(usex test)
 		-DCLANG_FORMAT=OFF
-		-DBUILD_TESTS_WITH_QT6=ON
+		-DBUILD_TESTS_WITH_QT6=ON # The tests use qttest, this switch decides whether qt5 or qt6 is used.
 
 		-DMOD_AVFORMAT=$(usex ffmpeg)
 		#-DMOD_DECKLINK=

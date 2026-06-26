@@ -10,5 +10,5 @@ RDEPEND=app-arch/bzip2 app-arch/zstd app-crypt/libb2 dev-libs/double-conversion 
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://code-industry.net/public/master-pdf-editor-5.9.98-1-qt6.9.2.x86_64.tar.gz https://dev.gentoo.org/~grozin/master-pdf-editor-5.tar.bz2
-_eclasses_=desktop	26d57169ca094c04be416993844ec8bc	xdg	3ef49a87c52c8b77c476351195dfe575	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1	xdg	3ef49a87c52c8b77c476351195dfe575	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
 _md5_=fb75c83b9a1b3beeb525b59e9177ca36

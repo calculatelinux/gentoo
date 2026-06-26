@@ -9,5 +9,5 @@ RDEPEND=app-accessibility/at-spi2-core:2 dev-libs/expat dev-libs/glib:2 dev-libs
 RESTRICT=bindist mirror
 SLOT=5
 SRC_URI=https://files.teamspeak-services.com/pre_releases/client/6.0.0-beta4/teamspeak-client.tar.gz -> teamspeak-client-6.0.0_beta4.tar.gz
-_eclasses_=desktop	26d57169ca094c04be416993844ec8bc	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
 _md5_=5df33b6e36fa36cbadaddf9388b191b5

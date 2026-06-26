@@ -147,6 +147,20 @@ src_prepare() {
 src_configure() {
 	use static-libs && lto-guarantee-fat
 
+	if tc-is-cross-compiler; then
+		# runtime checks cannot be executed on the host
+		# m4/gmtime_max.m4: 40 or 31 bits
+		local maxtime=31
+		tc-has-64bit-time_t && maxtime=40
+		export i_cv_gmtime_max_time_t=${maxtime}
+		export i_cv_epoll_works=yes
+		export i_cv_fd_passing=yes
+		export i_cv_mmap_plays_with_write=yes
+		export i_cv_posix_fallocate_works=yes
+		export lib_cv_va_copy=yes
+		export lib_cv___va_copy=no
+	fi
+
 	# --disable-hardening because our toolchain already defaults to
 	# these bits on, and it actually regresses the default _FORTIFY_SOURCE
 	# level for hardened at least from 3 to 2.

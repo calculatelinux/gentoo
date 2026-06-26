@@ -54,6 +54,7 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-3.0.3-try-other-cpp-names.patch"
+	"${FILESDIR}/${PN}-3.6.2-gdal-3.13.patch"
 )
 
 src_prepare() {

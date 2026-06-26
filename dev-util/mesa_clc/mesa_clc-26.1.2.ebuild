@@ -37,8 +37,8 @@ RDEPEND="
 	$(llvm_gen_dep '
 		dev-util/spirv-llvm-translator:${LLVM_SLOT}
 		llvm-core/clang:${LLVM_SLOT}=
-		=llvm-core/libclc-${LLVM_SLOT}*
 		llvm-core/llvm:${LLVM_SLOT}=
+		=llvm-runtimes/libclc-${LLVM_SLOT}*
 	')
 "
 DEPEND="${RDEPEND}

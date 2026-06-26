@@ -1,0 +1,15 @@
+BDEPEND=app-text/dos2unix
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=>=dev-haskell/attoparsec-0.14.2:=[profile?] <dev-haskell/attoparsec-0.15:=[profile?] >=dev-haskell/integer-conversion-0.1:=[profile?] <dev-haskell/integer-conversion-0.2:=[profile?] >=dev-haskell/time-compat-1.9.4:=[profile?] <dev-haskell/time-compat-1.10:=[profile?] >=dev-lang/ghc-9.0.2:= || ( ( >=dev-haskell/text-1.2.3.0 <dev-haskell/text-1.3.0.0 ) ( >=dev-haskell/text-2.0 <dev-haskell/text-2.2 ) ) dev-haskell/text:=[profile?] >=dev-haskell/cabal-3.4.1.0 hscolour? ( dev-haskell/hscolour )
+DESCRIPTION=Parsing of ISO 8601 dates, originally from aeson
+EAPI=8
+HOMEPAGE=https://github.com/haskell/aeson
+INHERIT=haskell-cabal
+IUSE=doc hscolour profile
+KEYWORDS=~amd64 ~arm64 ~ppc64 ~riscv ~x86
+LICENSE=BSD
+RDEPEND=>=dev-haskell/attoparsec-0.14.2:=[profile?] <dev-haskell/attoparsec-0.15:=[profile?] >=dev-haskell/integer-conversion-0.1:=[profile?] <dev-haskell/integer-conversion-0.2:=[profile?] >=dev-haskell/time-compat-1.9.4:=[profile?] <dev-haskell/time-compat-1.10:=[profile?] >=dev-lang/ghc-9.0.2:= || ( ( >=dev-haskell/text-1.2.3.0 <dev-haskell/text-1.3.0.0 ) ( >=dev-haskell/text-2.0 <dev-haskell/text-2.2 ) ) dev-haskell/text:=[profile?] dev-lang/ghc:=[profile?]
+SLOT=0/1.1.0.1
+SRC_URI=https://hackage.haskell.org/package/attoparsec-iso8601-1.1.0.1/attoparsec-iso8601-1.1.0.1.tar.gz
+_eclasses_=ghc-package	8e4f6eb2d0e798049f6fcaf3b84c0d4a	haskell-cabal	1138de808f4356a4380a4f7cc6d4d8a3	multilib	fc812e8eb2170022c28272d80a1f9e77	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=1ff1751302389907181b2da9ac21500e

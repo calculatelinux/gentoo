@@ -1,0 +1,16 @@
+BDEPEND=app-text/dos2unix
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=>=dev-haskell/pandoc-types-1.20:=[profile?] <dev-haskell/pandoc-types-1.24:=[profile?] >=dev-haskell/parsec-3:=[profile?] dev-haskell/split:=[profile?] >=dev-haskell/syb-0.4.2:=[profile?] <dev-haskell/syb-0.8:=[profile?] dev-haskell/text:=[profile?] >=dev-haskell/typst-symbols-0.2:=[profile?] <dev-haskell/typst-symbols-0.2.1:=[profile?] dev-haskell/xml:=[profile?] >=dev-lang/ghc-9.0.2:= executable? ( dev-haskell/aeson:=[profile?] >=dev-haskell/network-uri-2.6:=[profile?] dev-haskell/pretty-show:=[profile?] ) !executable? ( server? ( dev-haskell/aeson:=[profile?] ) ) server? ( dev-haskell/optparse-applicative:=[profile?] dev-haskell/safe:=[profile?] dev-haskell/servant-server:=[profile?] dev-haskell/wai:=[profile?] dev-haskell/wai-extra:=[profile?] dev-haskell/wai-logger:=[profile?] dev-haskell/warp:=[profile?] ) >=dev-haskell/cabal-3.4.1.0 test? ( dev-haskell/tagged dev-haskell/tasty dev-haskell/tasty-golden !executable? ( dev-haskell/pretty-show ) ) hscolour? ( dev-haskell/hscolour )
+DESCRIPTION=Conversion between math formats
+EAPI=8
+HOMEPAGE=https://github.com/jgm/texmath
+INHERIT=haskell-cabal
+IUSE=executable server doc hscolour profile test
+KEYWORDS=~amd64 ~arm64 ~ppc64 ~riscv ~x86
+LICENSE=GPL-2
+RDEPEND=>=dev-haskell/pandoc-types-1.20:=[profile?] <dev-haskell/pandoc-types-1.24:=[profile?] >=dev-haskell/parsec-3:=[profile?] dev-haskell/split:=[profile?] >=dev-haskell/syb-0.4.2:=[profile?] <dev-haskell/syb-0.8:=[profile?] dev-haskell/text:=[profile?] >=dev-haskell/typst-symbols-0.2:=[profile?] <dev-haskell/typst-symbols-0.2.1:=[profile?] dev-haskell/xml:=[profile?] >=dev-lang/ghc-9.0.2:= executable? ( dev-haskell/aeson:=[profile?] >=dev-haskell/network-uri-2.6:=[profile?] dev-haskell/pretty-show:=[profile?] ) !executable? ( server? ( dev-haskell/aeson:=[profile?] ) ) server? ( dev-haskell/optparse-applicative:=[profile?] dev-haskell/safe:=[profile?] dev-haskell/servant-server:=[profile?] dev-haskell/wai:=[profile?] dev-haskell/wai-extra:=[profile?] dev-haskell/wai-logger:=[profile?] dev-haskell/warp:=[profile?] ) dev-lang/ghc:=[profile?]
+RESTRICT=!test? ( test )
+SLOT=0/0.13.1.2
+SRC_URI=https://hackage.haskell.org/package/texmath-0.13.1.2/texmath-0.13.1.2.tar.gz
+_eclasses_=ghc-package	8e4f6eb2d0e798049f6fcaf3b84c0d4a	haskell-cabal	1138de808f4356a4380a4f7cc6d4d8a3	multilib	fc812e8eb2170022c28272d80a1f9e77	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=96e34b3f10d06e86ddbb960aed953c18

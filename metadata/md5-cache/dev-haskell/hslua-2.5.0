@@ -1,0 +1,16 @@
+BDEPEND=app-text/dos2unix
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=>=dev-haskell/hslua-aeson-2.3.1:=[profile?] <dev-haskell/hslua-aeson-2.4:=[profile?] >=dev-haskell/hslua-classes-2.2.1:=[profile?] <dev-haskell/hslua-classes-2.4:=[profile?] >=dev-haskell/hslua-core-2.3.2:=[profile?] <dev-haskell/hslua-core-2.4:=[profile?] >=dev-haskell/hslua-marshalling-2.3.1:=[profile?] <dev-haskell/hslua-marshalling-2.4:=[profile?] >=dev-haskell/hslua-objectorientation-2.5:=[profile?] <dev-haskell/hslua-objectorientation-2.6:=[profile?] >=dev-haskell/hslua-packaging-2.4:=[profile?] <dev-haskell/hslua-packaging-2.5:=[profile?] >=dev-haskell/hslua-typing-0.2:=[profile?] <dev-haskell/hslua-typing-0.3:=[profile?] >=dev-lang/ghc-9.0.2:= executable? ( dev-haskell/hslua-cli:=[profile?] dev-haskell/hslua-module-path:=[profile?] dev-haskell/hslua-module-system:=[profile?] dev-haskell/hslua-module-text:=[profile?] dev-haskell/hslua-module-version:=[profile?] dev-haskell/hslua-module-zip:=[profile?] ) >=dev-haskell/cabal-3.4.1.0 test? ( >=dev-haskell/tasty-0.11 dev-haskell/tasty-hslua >=dev-haskell/tasty-hunit-0.9 >=dev-haskell/text-1.2 <dev-haskell/text-2.2 ) hscolour? ( dev-haskell/hscolour )
+DESCRIPTION=Bindings to Lua, an embeddable scripting language
+EAPI=8
+HOMEPAGE=https://hslua.org/
+INHERIT=haskell-cabal
+IUSE=executable doc hscolour profile test
+KEYWORDS=~amd64 ~arm64 ~ppc64 ~riscv ~x86
+LICENSE=MIT
+RDEPEND=>=dev-haskell/hslua-aeson-2.3.1:=[profile?] <dev-haskell/hslua-aeson-2.4:=[profile?] >=dev-haskell/hslua-classes-2.2.1:=[profile?] <dev-haskell/hslua-classes-2.4:=[profile?] >=dev-haskell/hslua-core-2.3.2:=[profile?] <dev-haskell/hslua-core-2.4:=[profile?] >=dev-haskell/hslua-marshalling-2.3.1:=[profile?] <dev-haskell/hslua-marshalling-2.4:=[profile?] >=dev-haskell/hslua-objectorientation-2.5:=[profile?] <dev-haskell/hslua-objectorientation-2.6:=[profile?] >=dev-haskell/hslua-packaging-2.4:=[profile?] <dev-haskell/hslua-packaging-2.5:=[profile?] >=dev-haskell/hslua-typing-0.2:=[profile?] <dev-haskell/hslua-typing-0.3:=[profile?] >=dev-lang/ghc-9.0.2:= executable? ( dev-haskell/hslua-cli:=[profile?] dev-haskell/hslua-module-path:=[profile?] dev-haskell/hslua-module-system:=[profile?] dev-haskell/hslua-module-text:=[profile?] dev-haskell/hslua-module-version:=[profile?] dev-haskell/hslua-module-zip:=[profile?] ) dev-lang/ghc:=[profile?]
+RESTRICT=!test? ( test )
+SLOT=0/2.5.0
+SRC_URI=https://hackage.haskell.org/package/hslua-2.5.0/hslua-2.5.0.tar.gz
+_eclasses_=ghc-package	8e4f6eb2d0e798049f6fcaf3b84c0d4a	haskell-cabal	1138de808f4356a4380a4f7cc6d4d8a3	multilib	fc812e8eb2170022c28272d80a1f9e77	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=9b579c6d21bb7aa94db1736968fc2f36

@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{11..14} )
+PYTHON_COMPAT=( python3_{12..14} )
 
 inherit cmake llvm.org python-any-r1
 
@@ -14,7 +14,7 @@ LICENSE="Apache-2.0-with-LLVM-exceptions UoI-NCSA"
 # vendored isl (fork?)
 LICENSE+=" MIT"
 SLOT="${LLVM_MAJOR}/${LLVM_SOABI}"
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86"
+KEYWORDS="amd64 arm arm64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86"
 IUSE="debug test"
 RESTRICT="!test? ( test )"
 

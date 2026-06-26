@@ -45,5 +45,5 @@ src_install() {
 	# Add docs...this is important
 	dodoc {CHANGELOG,FAQ}.txt
 
-	make_desktop_entry ${PN} TkCVS "${EPREFIX}"/usr/$(get_libdir)/tkcvs/bitmaps/ticklefish_med.gif
+	make_desktop_entry ${PN} -n TkCVS -i "${EPREFIX}"/usr/$(get_libdir)/tkcvs/bitmaps/ticklefish_med.gif
 }

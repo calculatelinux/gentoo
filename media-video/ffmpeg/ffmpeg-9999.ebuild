@@ -6,7 +6,7 @@ EAPI=8
 inherit flag-o-matic multilib-minimal toolchain-funcs udev
 
 FFMPEG_SOC_PATCH=
-FFMPEG_SUBSLOT=60.62.62 # avutil.avcodec.avformat SONAME
+FFMPEG_SUBSLOT=61.63.63 # avutil.avcodec.avformat SONAME
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
@@ -315,7 +315,7 @@ RDEPEND="
 DEPEND="
 	${COMMON_DEPEND}
 	X? ( x11-base/xorg-proto )
-	amf? ( >=media-libs/amf-headers-1.5.0 )
+	amf? ( >=media-libs/amf-headers-1.5.2 )
 	kernel_linux? ( >=sys-kernel/linux-headers-6 )
 	ladspa? ( media-libs/ladspa-sdk )
 	nvenc? ( >=media-libs/nv-codec-headers-12.1.14.0 )
@@ -467,6 +467,7 @@ multilib_src_configure() {
 		--disable-libmpeghdec
 		--disable-libmysofa
 		--disable-liboapv
+		--disable-libonnxruntime
 		--disable-libopenvino
 		--disable-libshine
 		--disable-libsvtjpegxs
@@ -487,18 +488,14 @@ multilib_src_configure() {
 
 		# disabled for other or additional reasons
 		--disable-cuda-nvcc # prefer cuda-llvm for less issues
-		--disable-libcelt # obsolete (bug #664158)
 		--disable-libglslang # prefer shaderc (bug #918989,#920283,#922333)
 		--disable-liblensfun # https://trac.ffmpeg.org/ticket/9112 (abandoned?)
 		--disable-libmfx # prefer libvpl for USE=qsv
-		--disable-libnpp # deprecated and not supported for cuda 13.0+
 		--disable-libopencv # leaving for later due to circular opencv[ffmpeg]
 		--disable-libtensorflow # causes headaches, and is gone
 		--disable-libtorch # support may need special attention (bug #936127)
 		--disable-mbedtls # messy with slots, tests underlinking issues
 		--disable-mmal # prefer USE=soc
-		--disable-omx # unsupported (bug #653386)
-		--disable-omx-rpi # ^
 
 		# to avoid obscure issues like bug #915384 and simplify the ebuild,
 		# not passing the following (use EXTRA_ECONF if really must):

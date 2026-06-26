@@ -36,6 +36,38 @@
 
 #--- END OF EXAMPLES ---
 
+# Andreas K. Hüttel <dilfridge@gentoo.org> (2026-06-23)
+# Work in progress
+=dev-lang/perl-5.44*
+~virtual/perl-Archive-Tar-3.120.0
+~virtual/perl-Compress-Raw-Bzip2-2.218.0
+~virtual/perl-CPAN-Meta-2.150.13
+~virtual/perl-CPAN-Meta-Requirements-2.145.0
+~virtual/perl-DB_File-1.860.0
+~virtual/perl-Encode-3.240.0
+~virtual/perl-ExtUtils-CBuilder-0.280.243
+~virtual/perl-ExtUtils-MakeMaker-7.780.0
+~virtual/perl-ExtUtils-ParseXS-3.630.0
+~virtual/perl-File-Spec-3.950.0
+~virtual/perl-IO-1.560.0
+~virtual/perl-IO-Compress-2.220.0
+~virtual/perl-IO-Socket-IP-0.440.0
+~virtual/perl-Math-BigInt-2.5.3
+~virtual/perl-Module-CoreList-5.202.606.10
+~virtual/perl-Module-Metadata-1.0.39
+~virtual/perl-Pod-Simple-3.480.0
+~virtual/perl-Scalar-List-Utils-1.700.0
+~virtual/perl-Socket-2.41.0
+~virtual/perl-Storable-3.410.0
+~virtual/perl-Term-Table-0.28.0
+~virtual/perl-Test2-Suite-1.302.219
+~virtual/perl-Test-Harness-3.520.0
+~virtual/perl-Test-Simple-1.302.219
+~virtual/perl-Text-Balanced-2.70.0
+~virtual/perl-threads-2.450.0
+~virtual/perl-Time-HiRes-1.978.0
+~virtual/perl-version-0.993.400
+
 # Michał Górny <mgorny@gentoo.org> (2026-06-20)
 # No py3.14 in compat, tests lost on bump, no revdeps.
 # Removal on 2026-07-20.  Bug #973904.
@@ -71,7 +103,6 @@ dev-python/pyotherside
 # their reverse dependencies and their dependencies without revdeps.
 # Removal on 2026-07-19.  Bug #967367.
 dev-python/autobahn
-dev-python/flatbuffers
 dev-python/magic-wormhole
 dev-python/magic-wormhole-mailbox-server
 dev-python/magic-wormhole-transit-relay
@@ -121,10 +152,6 @@ x11-misc/mygestures
 # Fails to start (bug #976623)
 =sys-auth/elogind-255.26
 =sys-auth/elogind-257.15
-
-# Sam James <sam@gentoo.org> (2026-06-01)
-# Needs porting to Rust eclasses, bug #976139.
-=gnome-extra/gnome-commander-2.0.0
 
 # David Seifert <soap@gentoo.org> (2026-05-30)
 # Last update 25 years ago, stuck on linux-mod.eclass, lots of QA issues,
@@ -452,23 +479,6 @@ app-emulation/virtualbox-kvm
 # Sam James <sam@gentoo.org> (2024-06-25)
 # The symbol versioning "fix" breaks anything built with 3.0.0.
 >=dev-libs/libassuan-3.0.1
-
-# Michał Górny <mgorny@gentoo.org> (2023-06-21)
-# suitesparseconfig-7.0.0 fails to build with multilib enabled
-# because of dependencies that cannot be satisfied.  All the other
-# packages require it.  Bug #908851.
-=sci-libs/amd-3.0.3
-=sci-libs/btf-2.0.3
-=sci-libs/camd-3.0.3
-=sci-libs/ccolamd-3.0.3
-=sci-libs/cholmod-4.0.3
-=sci-libs/colamd-3.0.3
-=sci-libs/cxsparse-4.0.3
-=sci-libs/klu-2.0.3
-=sci-libs/ldl-3.0.3
-=sci-libs/spqr-3.0.3
-=sci-libs/suitesparseconfig-7.0.0
-=sci-libs/umfpack-6.1.0
 
 # Ionen Wolkens <ionen@gentoo.org> (2023-03-30)
 # NVIDIA dropped support for the 390.xx branch in December 2022[1].

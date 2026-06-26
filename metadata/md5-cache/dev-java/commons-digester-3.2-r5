@@ -13,5 +13,5 @@ RDEPEND=>=dev-java/cglib-3.3.0-r3:0 >=dev-java/commons-beanutils-1.11.0:0 >=dev-
 RESTRICT=test !test? ( test )
 SLOT=0
 SRC_URI=mirror://apache/commons/digester/source/commons-digester3-3.2-src.tar.gz -> commons-digester-3.2.tar.gz verify-sig? ( mirror://apache/commons/digester/source/commons-digester3-3.2-src.tar.gz.asc -> commons-digester-3.2.tar.gz.asc )
-_eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	java-pkg-2	438c2725ea326202d7fc1eb31af76813	java-pkg-simple	df1fc43a5017ec8f5d23007b23731474	java-utils-2	b41327d85d12ce816943cf4d344add19	verify-sig	ece4c893b6bd62eacbc4d25958e857f8
+_eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	java-pkg-2	438c2725ea326202d7fc1eb31af76813	java-pkg-simple	df1fc43a5017ec8f5d23007b23731474	java-utils-2	4fa0be92748bc228f31bd845d285d7f9	verify-sig	ece4c893b6bd62eacbc4d25958e857f8
 _md5_=1ed0f85f96c889050ee7e43fbbb61674

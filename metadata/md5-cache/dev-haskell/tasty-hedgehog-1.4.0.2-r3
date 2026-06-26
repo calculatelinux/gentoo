@@ -1,0 +1,16 @@
+BDEPEND=app-text/dos2unix
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=>=dev-haskell/hedgehog-1.4:=[profile?] <dev-haskell/hedgehog-1.8:=[profile?] >=dev-haskell/tagged-0.8:=[profile?] <dev-haskell/tagged-0.9:=[profile?] >=dev-haskell/tasty-0.11:=[profile?] <dev-haskell/tasty-1.6:=[profile?] >=dev-lang/ghc-9.0.2:= >=dev-haskell/cabal-3.4.1.0 test? ( >=dev-haskell/tasty-expected-failure-0.11 <dev-haskell/tasty-expected-failure-0.13 ) hscolour? ( dev-haskell/hscolour )
+DESCRIPTION=Integration for tasty and hedgehog
+EAPI=8
+HOMEPAGE=https://github.com/qfpl/tasty-hedgehog
+INHERIT=haskell-cabal
+IUSE=doc hscolour profile test
+KEYWORDS=~amd64 ~arm64 ~ppc64 ~riscv ~x86
+LICENSE=BSD
+RDEPEND=>=dev-haskell/hedgehog-1.4:=[profile?] <dev-haskell/hedgehog-1.8:=[profile?] >=dev-haskell/tagged-0.8:=[profile?] <dev-haskell/tagged-0.9:=[profile?] >=dev-haskell/tasty-0.11:=[profile?] <dev-haskell/tasty-1.6:=[profile?] >=dev-lang/ghc-9.0.2:= dev-lang/ghc:=[profile?]
+RESTRICT=!test? ( test )
+SLOT=0/1.4.0.2
+SRC_URI=https://hackage.haskell.org/package/tasty-hedgehog-1.4.0.2/tasty-hedgehog-1.4.0.2.tar.gz https://hackage.haskell.org/package/tasty-hedgehog-1.4.0.2/revision/8.cabal -> tasty-hedgehog-1.4.0.2-rev8.cabal
+_eclasses_=ghc-package	8e4f6eb2d0e798049f6fcaf3b84c0d4a	haskell-cabal	1138de808f4356a4380a4f7cc6d4d8a3	multilib	fc812e8eb2170022c28272d80a1f9e77	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=affa18658d88f1397b849282ba2f7c1a

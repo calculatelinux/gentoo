@@ -163,6 +163,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-9.4.2-ThirdParty-libfmt-12.patch"
 	"${FILESDIR}/${PN}-9.5.0-cuda-13-1.patch"
 	"${FILESDIR}/${PN}-9.5.0-cuda-13-2.patch"
+	"${FILESDIR}/${PN}-9.5.2-gdal-3.13.patch"
 )
 
 DOCS=( CONTRIBUTING.md README.md )

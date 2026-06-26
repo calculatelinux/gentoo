@@ -1,0 +1,16 @@
+BDEPEND=app-text/dos2unix
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=>=dev-haskell/hashable-1.4.4.0:=[profile?] <dev-haskell/hashable-1.6:=[profile?] >=dev-lang/ghc-9.0.2:= >=dev-haskell/text-1.2.3.1:=[profile?] <dev-haskell/text-2.2:=[profile?] >=dev-haskell/cabal-3.4.1.0 test? ( >=dev-haskell/tasty-1.4 <dev-haskell/tasty-1.6 >=dev-haskell/tasty-hunit-0.10.0 <dev-haskell/tasty-hunit-0.11 >=dev-haskell/tasty-quickcheck-0.10 <dev-haskell/tasty-quickcheck-0.12 dev-haskell/text ) hscolour? ( dev-haskell/hscolour )
+DESCRIPTION=Memory-efficient representation of Unicode text strings
+EAPI=8
+HOMEPAGE=https://hackage.haskell.org/package/text-short
+INHERIT=haskell-cabal
+IUSE=debug doc hscolour profile test
+KEYWORDS=~amd64 ~arm64 ~ppc64 ~riscv ~x86
+LICENSE=BSD
+RDEPEND=>=dev-haskell/hashable-1.4.4.0:=[profile?] <dev-haskell/hashable-1.6:=[profile?] >=dev-lang/ghc-9.0.2:= >=dev-haskell/text-1.2.3.1:=[profile?] <dev-haskell/text-2.2:=[profile?] dev-lang/ghc:=[profile?]
+RESTRICT=!test? ( test )
+SLOT=0/0.1.6.1
+SRC_URI=https://hackage.haskell.org/package/text-short-0.1.6.1/text-short-0.1.6.1.tar.gz
+_eclasses_=ghc-package	8e4f6eb2d0e798049f6fcaf3b84c0d4a	haskell-cabal	1138de808f4356a4380a4f7cc6d4d8a3	multilib	fc812e8eb2170022c28272d80a1f9e77	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=ee1bc8c084a8c5da40c9f7deaf322393

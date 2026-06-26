@@ -33,10 +33,11 @@ HOMEPAGE="https://systemd.io/"
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
 IUSE="
-	acl apparmor audit boot bpf cryptsetup curl +dns-over-tls elfutils
-	fido2 +gcrypt gnutls homed idn importd +kernel-install +kmod +libarchive +lz4 lzma
-	+openssl pam passwdqc pcre pkcs11 policykit pwquality qrcode remote
-	+resolvconf +seccomp selinux sysv-utils test tpm ukify vanilla xkb +zstd
+	acl apparmor audit boot bpf cryptsetup curl +dns-over-tls elfutils fido2
+	+gcrypt gnutls homed idn imds importd +kernel-install +kmod +libarchive
+	+lz4 lzma +openssl pam passwdqc pcre pkcs11 policykit pwquality qrcode
+	remote +resolvconf +seccomp selinux sysv-utils test tpm ukify vanilla xkb
+	+zstd
 "
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
@@ -44,6 +45,7 @@ REQUIRED_USE="
 	dns-over-tls? ( openssl )
 	fido2? ( cryptsetup openssl )
 	homed? ( cryptsetup pam openssl )
+	imds? ( curl )
 	importd? ( curl libarchive lzma openssl )
 	?? ( passwdqc pwquality )
 	passwdqc? ( homed )
@@ -131,7 +133,6 @@ RDEPEND="${COMMON_DEPEND}
 	>=acct-group/systemd-journal-0-r1
 	>=acct-user/root-0-r1
 	acct-user/nobody
-	acct-user/systemd-imds
 	>=acct-user/systemd-journal-remote-0-r1
 	>=acct-user/systemd-coredump-0-r1
 	>=acct-user/systemd-network-0-r1
@@ -139,6 +140,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=acct-user/systemd-resolve-0-r1
 	>=acct-user/systemd-timesync-0-r1
 	>=sys-apps/baselayout-2.2
+	imds? ( acct-user/systemd-imds )
 	ukify? (
 		${PYTHON_DEPS}
 		$(python_gen_cond_dep "${PEFILE_DEPEND}")
@@ -350,6 +352,7 @@ multilib_src_configure() {
 			$(meson_feature gnutls)
 			$(meson_feature homed)
 			$(meson_use idn)
+			$(meson_feature imds)
 			$(meson_feature importd)
 			$(meson_feature importd bzip2)
 			$(meson_feature importd sysupdate)

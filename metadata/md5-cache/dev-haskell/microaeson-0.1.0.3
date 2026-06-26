@@ -1,0 +1,16 @@
+BDEPEND=app-text/dos2unix
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=>=dev-lang/ghc-9.0.2:= >=dev-haskell/text-1.2.2.2:=[profile?] <dev-haskell/text-3:=[profile?] >=dev-haskell/alex-3.2.0 >=dev-haskell/cabal-3.4.1.0 test? ( >=dev-haskell/aeson-2.0.3.0 <dev-haskell/aeson-2.3 >=dev-haskell/tasty-1.0.1.1 <dev-haskell/tasty-1.6 >=dev-haskell/tasty-quickcheck-0.10 <dev-haskell/tasty-quickcheck-1 >=dev-haskell/quickcheck-instances-0.3.16 <dev-haskell/quickcheck-instances-0.5 >=dev-haskell/vector-0.12.0.1 <dev-haskell/vector-0.14 ) hscolour? ( dev-haskell/hscolour )
+DESCRIPTION=A tiny JSON library with light dependency footprint
+EAPI=8
+HOMEPAGE=https://hackage.haskell.org/package/microaeson
+INHERIT=haskell-cabal
+IUSE=doc hscolour profile test
+KEYWORDS=~amd64 ~arm64 ~ppc64 ~riscv ~x86
+LICENSE=GPL-3
+RDEPEND=>=dev-lang/ghc-9.0.2:= >=dev-haskell/text-1.2.2.2:=[profile?] <dev-haskell/text-3:=[profile?] dev-lang/ghc:=[profile?]
+RESTRICT=!test? ( test )
+SLOT=0/0.1.0.3
+SRC_URI=https://hackage.haskell.org/package/microaeson-0.1.0.3/microaeson-0.1.0.3.tar.gz https://hackage.haskell.org/package/microaeson-0.1.0.3/revision/1.cabal -> microaeson-0.1.0.3-rev1.cabal
+_eclasses_=ghc-package	8e4f6eb2d0e798049f6fcaf3b84c0d4a	haskell-cabal	1138de808f4356a4380a4f7cc6d4d8a3	multilib	fc812e8eb2170022c28272d80a1f9e77	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=1ab732ee7d8262243d9ded711eeef3e9

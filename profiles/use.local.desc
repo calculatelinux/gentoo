@@ -581,7 +581,6 @@ app-emulation/bochs:avx - Enable support for emulating Advanced Vector Extension
 app-emulation/bochs:debugger - Enable debugger (slows down emulation)
 app-emulation/bochs:gdb - Enable support for the remote GDB stub
 app-emulation/bochs:x86-64 - Enable support for emulation of 64-bit CPUs
-app-emulation/crossover-bin:capi - Enable ISDN support via CAPI
 app-emulation/crossover-bin:osmesa - Add support for OpenGL in bitmaps using libOSMesa
 app-emulation/crossover-bin:pcap - Support packet capture software (e.g. wireshark)
 app-emulation/dosemu:fluidsynth - use media-sound/fluidsynth for MIDI emulation
@@ -742,7 +741,6 @@ app-emulation/wine-proton:perl - Install helpers that require perl (winedump/win
 app-emulation/wine-proton:sdl - Enable gamepad support using media-libs/libsdl2
 app-emulation/wine-proton:wow64 - Enable the "new" wow64 mode that allows running 32bit applications without 32bit ELF multilib by mapping to 64bit calls. Generally works well with wine-11.0 or newer, but may or may not have a small perforamce impact or other issues. If USE=mingw is set, still need the default abi_x86_32 set on dev-util/mingw64-toolchain but that can be done even with /no-multilib/ profiles. This can also be enabled on arm64 to allow running x86 applications via binary translation.
 app-emulation/wine-staging:arm64ec - Enable support for running x86_64 applications on arm64 via binary translation
-app-emulation/wine-staging:capi - Enable ISDN support using net-libs/libcapi
 app-emulation/wine-staging:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up and is mostly unsupported, try disabling if have issues)
 app-emulation/wine-staging:dos - Pull in games-emulation/dosbox to run DOS applications
 app-emulation/wine-staging:gecko - Enable mshtml support using app-emulation/wine-gecko
@@ -755,7 +753,6 @@ app-emulation/wine-staging:samba - Pull in net-fs/samba with winbind for NTLM au
 app-emulation/wine-staging:sdl - Enable gamepad support using media-libs/libsdl2
 app-emulation/wine-staging:wow64 - Enable the "new" wow64 mode that allows running 32bit applications without 32bit ELF multilib by mapping to 64bit calls. Generally works well with wine-11.0 or newer, but may or may not have a small perforamce impact or other issues. If USE=mingw is set, still need the default abi_x86_32 set on dev-util/mingw64-toolchain but that can be done even with /no-multilib/ profiles. This can also be enabled on arm64 to allow running x86 applications via binary translation.
 app-emulation/wine-vanilla:arm64ec - Enable support for running x86_64 applications on arm64 via binary translation
-app-emulation/wine-vanilla:capi - Enable ISDN support using net-libs/libcapi
 app-emulation/wine-vanilla:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up and is mostly unsupported, try disabling if have issues)
 app-emulation/wine-vanilla:dos - Pull in games-emulation/dosbox to run DOS applications
 app-emulation/wine-vanilla:gecko - Enable mshtml support using app-emulation/wine-gecko
@@ -1077,7 +1074,7 @@ app-office/kmymoney:activities - Enable kde-plasma/plasma-activities integration
 app-office/kmymoney:addressbook - Enable kde-apps/akonadi contact integration
 app-office/kmymoney:hbci - Enable HBCI support using net-libs/aqbanking
 app-office/kmymoney:holidays - Enable kde-frameworks/kholidays integration
-app-office/kmymoney:sql - Enable storage of financial data in SQL Db via dev-qt/qtsql
+app-office/kmymoney:sql - Enable storage of financial data in SQL Db via dev-qt/qtbase[sql]
 app-office/kmymoney:sqlcipher - Enable SQLite3 database encryption support via dev-db/sqlcipher
 app-office/kraft:pim - Enable support for KDE PIM resources integration
 app-office/ledger:gpg - Enable support for encrypted journals
@@ -1251,6 +1248,7 @@ app-text/pandoc:trypandoc - Build trypandoc cgi executable.
 app-text/pandoc-bin:pandoc-symlink - Install pandoc symlink that points to pandoc-bin
 app-text/pandoc-cli:lua - Support custom modifications and conversions with the pandoc Lua scripting engine.
 app-text/pandoc-cli:nightly - Add '-nightly-COMPILEDATE' to the output of '--version'.
+app-text/pandoc-cli:repl - Include support for running a pandoc Lua repl.
 app-text/pandoc-cli:server - Include support for running pandoc as an HTTP server.
 app-text/papers:comics - Enable comics support
 app-text/papers:nautilus - Enable nautilus support
@@ -1682,7 +1680,9 @@ dev-haskell/crypton:target-attributes - use GCC / clang function attributes inst
 dev-haskell/cryptonite:integer-gmp - Whether or not to use GMP for some functions
 dev-haskell/cryptonite:target-attributes - use GCC / clang function attributes instead of global target options.
 dev-haskell/dlist:werror - Enable -Werror
+dev-haskell/doctest:cabal-doctest - Install (experimental) cabal-doctest executable
 dev-haskell/doctest-driver-gen:executable - Build the doctest-driver-gen executable
+dev-haskell/ech-config:devel - Development commands
 dev-haskell/entropy:donotgetentropy - Avoid use of the getentropy() *nix function. By default getentropy will be used if detected during compilation (this plays poorly with cross compilation).
 dev-haskell/entropy:halvm - Build for the HaLVM.
 dev-haskell/foldable1-classes-compat:tagged - You can disable the use of the `tagged` package using `-f-tagged`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
@@ -1690,16 +1690,22 @@ dev-haskell/foundation:experimental - Enable building experimental features, kno
 dev-haskell/glib:closure-signals - Use the the GClosure-based signals implementation.
 dev-haskell/gtk2hs-buildtools:closuresignals - Use the the GClosure-based signals implementation.
 dev-haskell/hackage-security:lukko - Use @lukko@ for file-locking, otherwise use @GHC.IO.Handle.Lock@
+dev-haskell/hadrian:test - Enables the hadrian selftest rules which require QuickCheck. Disabling it thus saves on a few dependencies which can be problematic when bootstrapping.
+dev-haskell/hadrian:threaded - Build with the threaded runtime for improved performance. Users with bootstrap compilers which don't support the threaded runtime should disable this flag.
 dev-haskell/hashable:random-initial-seed - Randomly initialize the seed on every executable invocation. This is not a security feature and is intended only for testing (it can affect legitimate use cases).
 dev-haskell/hashtables:bounds-checking - if on, use bounds-checking array accesses
 dev-haskell/hashtables:detailed-profiling - add detailed profiling information to profiled build-depends
 dev-haskell/haskeline:terminfo - Use the terminfo package for POSIX consoles.
 dev-haskell/hdbc-sqlite3:splitbase - Choose the new smaller, split-up package.
+dev-haskell/hslua:executable - Compile `hslua` standalone executable.
 dev-haskell/hslua-cli:executable - Compile `hslua` standalone executable.
 dev-haskell/hslua-repl:executable - Compile `luarepl` standalone executable.
 dev-haskell/hsyaml:exe - Enable @exe:yaml-test@ component
 dev-haskell/http-api-data:text-show - Use text-show library for efficient ToHttpApiData implementations.
 dev-haskell/httpd-shed:buildexamples - Build example executables.
+dev-haskell/json:mapdict - Encode Haskell maps as JSON dicts
+dev-haskell/json:parsec - Add support for parsing with Parsec.
+dev-haskell/json:pretty - Add support for using pretty printing combinators.
 dev-haskell/juicypixels:mmap - Enable the file loading via mmap (memory map)
 dev-haskell/libyaml:system-libyaml - Use the system-wide libyaml instead of the bundled copy
 dev-haskell/libyaml:unicode - Enable unicode output. Otherwise, unicode characters will be escaped.
@@ -1708,6 +1714,7 @@ dev-haskell/lua:system-lua - Use @pkg-config@ to discover library and include pa
 dev-haskell/markdown-unlit:executable - Build executable
 dev-haskell/monad-logger:template-haskell - Enable Template Haskell support
 dev-haskell/monad-par:chaselev - Use Chase-Lev Deques for higher-perf work-stealing.
+dev-haskell/mwc-random:benchpapi - Enable building of benchmarks which use instruction counters. It requires libpapi and only works on Linux so it's protected by flag
 dev-haskell/nats:binary - enable binary instances
 dev-haskell/nats:hashable - enable hashable instances
 dev-haskell/nats:template-haskell - enable template_haskell
@@ -1716,11 +1723,14 @@ dev-haskell/nothunks:bytestring - Provide instances for bytestring
 dev-haskell/nothunks:text - Provide instances for text
 dev-haskell/nothunks:vector - Provide instances for vector
 dev-haskell/pandoc:embed-data-files - Embed data files in binary for relocatable executable.
+dev-haskell/pandoc:http - Support for fetching resources using HTTP.
+dev-haskell/pandoc-lua-engine:repl - Include pandoc Lua repl.
 dev-haskell/parsec-numbers:parsec1 - use dev-haskell/parsec1 instead of dev-haskell/parsec
 dev-haskell/parsers:attoparsec - You can disable the use of the `attoparsec` package using `-f-attoparsec`.
 dev-haskell/parsers:binary - You can disable the use of the `binary` package using `-f-binary`.
 dev-haskell/parsers:parsec - You can disable the use of the `parsec` package using `-f-parsec`.
 dev-haskell/persistent-sqlite:build-sanity-exe - Build a sanity check test executable
+dev-haskell/pretty-simple:executable - Build an small command line program that pretty-print anything from stdin.
 dev-haskell/prettyprinter:buildreadme - Build the readme generator
 dev-haskell/prettyprinter:text - While it's a core value of @prettyprinter@ to use @Text@, there are rare circumstances (mostly when @prettyprinter@ arises as a dependency of test suites of packages like @bytestring@ or @text@ themselves) when this is inconvenient. In this case one can disable this flag, so that @prettyprinter@ fallbacks to @String@.
 dev-haskell/quickcheck:template-haskell - Build Test.QuickCheck.All, which uses Template Haskell.
@@ -1733,6 +1743,8 @@ dev-haskell/quickcheck-classes:vector - You can disable the use of the `vector` 
 dev-haskell/quickcheck-classes-base:binary-laws - Include infrastructure for testing class laws of binary type constructors. Disabling `unary-laws` while keeping `binary-laws` enabled is an unsupported configuration.
 dev-haskell/quickcheck-classes-base:unary-laws - Include infrastructure for testing class laws of unary type constructors.
 dev-haskell/random-bytestring:pcg - compile with support for PCG from pcg-random
+dev-haskell/rere:cfg - CFG functionality, adds dependency on fin and vec
+dev-haskell/rere:intersection - Add intersection constructor. EXPERIMENTAL
 dev-haskell/sandi:conduit - Build with conduit
 dev-haskell/semialign:semigroupoids - Build with semigroupoids dependency
 dev-haskell/sha:exe - Build a sha1 and a sha384 executable similar to 'md5sum'.
@@ -1745,18 +1757,27 @@ dev-haskell/skylighting:executable - Whether to build the skylighting program
 dev-haskell/skylighting-core:executable - Build skylighting-extract tool
 dev-haskell/some:newtype-unsafe - Use implementation using @newtype@ and unsafe @Any@, instead of GADT
 dev-haskell/splitmix:optimised-mixer - Use JavaScript for mix32
+dev-haskell/string-interpolate:bytestring-builder - Use ByteString Builders to construct ByteString outputs instead of the ByteString type itself. If you're regularly constructing large (>50KB) bytestrings, enabling this can speed up your code. Otherwise, enabling this is likely to be a net slowdown.
+dev-haskell/string-interpolate:extended-benchmarks - Enable benchmarks for Interpolation and interpolatedstring-perl6
+dev-haskell/string-interpolate:text-builder - Use Text Builders to construct Text outputs instead of the Text type itself. If you're regularly constructing large (>50KB) text objects, enabling this can speed up your code. Otherwise, enabling this is likely to be a net slowdown.
 dev-haskell/tagged:template-haskell - You can disable the use of the `template-haskell` package using `-f-template-haskell`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users.
 dev-haskell/tasty:clock - Depend on the clock package for more accurate time measurement
 dev-haskell/texmath:executable - Compile test executable.
 dev-haskell/texmath:server - Compile webserver.
+dev-haskell/text:simdutf - use simdutf library
 dev-haskell/text-short:debug - Enable runtime-checks via 'assert'
 dev-haskell/tls:compat - Accept SSLv2 client hello for beginning SSLv3 / TLS handshake
+dev-haskell/tls:devel - Development commands
 dev-haskell/tls:network - Use the base network library
+dev-haskell/tracetree:executable - Build executable to render the trees (requires Cairo)
 dev-haskell/transformers-base:orphaninstances - Build instances for orphan datatypes.
 dev-haskell/typst:executable - Compile executable to be used in testing and development.
 dev-haskell/unicode-collation:doctests - Run doctests as part of test suite. Use with: @--write-ghc-environment-files=always@.
 dev-haskell/unicode-collation:executable - Build the unicode-collate executable.
 dev-haskell/unix-compat:old-time - build against old-time package
+dev-haskell/vec:adjunctions - Depend on @adjunctions@ to provide its instances
+dev-haskell/vec:distributive - Depend on @distributive@ to provide its instances. Turning on, disables @adjunctions@ too.
+dev-haskell/vec:semigroupoids - Depend on @semigroupoids@ to provide its instances, and `traverse1`.
 dev-haskell/vector:boundschecks - Enable bounds checking
 dev-haskell/vector:internalchecks - Enable internal consistency checks at the cost of a significant performance penalty
 dev-haskell/vector:unsafechecks - Enable bounds checking in unsafe operations at the cost of a significant performance penalty
@@ -1765,8 +1786,9 @@ dev-haskell/vector-algorithms:boundschecks - Enable bounds checking
 dev-haskell/vector-algorithms:internalchecks - Enable internal consistency checks at the cost of a significant performance penalty.
 dev-haskell/vector-algorithms:properties - Enable the quickcheck tests
 dev-haskell/vector-algorithms:unsafechecks - Enable bounds checking in unsafe operations at the cost of a significant performance penalty.
-dev-haskell/void:safe - dissable effective but unsafe coersions
-dev-haskell/wai-app-static:print - print debug info.
+dev-haskell/void:safe - Disable effective but unsafe coercions
+dev-haskell/wai-app-static:crypton - Use the crypton library for MD5 computation
+dev-haskell/wai-app-static:print - print debug info
 dev-haskell/warp:allow-sendfilefd - Allow use of sendfileFd (not available on GNU/kFreeBSD)
 dev-haskell/warp:x509 - Adds a dependency on the x509 library to enable getting TLS client certificates.
 dev-haskell/wcwidth:cli - Enable command line tool
@@ -2994,6 +3016,8 @@ dev-util/schroot:zfs - Enable support for chroots using ZFS shapshots/clones
 dev-util/sdl-jstest:sdl - Enable media-libs/libsdl2 based input test
 dev-util/sdl-jstest:sdl1 - Enable media-libs/libsdl based input test
 dev-util/selenium-manager:telemetry - Enable sending telemetry by default (disabling it sets avoid-stats config option to true).
+dev-util/shake:embed-files - Embed data files into the shake library
+dev-util/shake:threaded - Build shake with the threaded RTS
 dev-util/sysprof:debuginfod - Enable debuginfod support via dev-libs/elfutils libdebuginfod
 dev-util/uftrace:capstone - Use capstone to provide dynamic tracing without recompilation
 dev-util/unicorn:logging - Enable logging
@@ -3003,7 +3027,6 @@ dev-util/xxdiff:scripts - Install python helper scripts
 dev-vcs/cvs:server - Enable server support
 dev-vcs/darcs:curl - Use libcurl for HTTP support.
 dev-vcs/darcs:terminfo - Use the terminfo package for enhanced console support.
-dev-vcs/darcs:threaded - Use threading and SMP support.
 dev-vcs/fossil:fusefs - Enable the Fuse Filesystem
 dev-vcs/fossil:json - Enable the JSON API of Fossil's wiki
 dev-vcs/fossil:system-sqlite - Use the system SQLite instead of the bundled one
@@ -3027,8 +3050,8 @@ dev-vcs/git-annex:benchmark - Enable benchmarking
 dev-vcs/git-annex:gitlfs - Build with git-lfs library (rather than vendored copy)
 dev-vcs/git-annex:magicmime - Use libmagic to determine file MIME types
 dev-vcs/git-annex:pairing - Enable pairing
+dev-vcs/git-annex:parallelbuild - Enable production build (slower build; faster binary)
 dev-vcs/git-annex:torrentparser - Use haskell torrent library to parse torrent files
-dev-vcs/git-annex:webapp - Enable git-annex webapp
 dev-vcs/git-delete-merged-branches:full-name-executable - Install executable /usr/bin/git-delete-merged-branches that is in conflict with dev-vcs/git-extras
 dev-vcs/gitg:glade - Install a glade catalog file
 dev-vcs/gitg:python - Install Python bindings for those plugins requiring it.
@@ -3544,7 +3567,7 @@ kde-apps/cantor:webengine - Use dev-qt/qtwebengine as embedded QtHelp documentat
 kde-apps/gwenview:activities - Enable kactivities support
 kde-apps/gwenview:annotate - Enable support for image annotations using media-libs/kimageannotator
 kde-apps/gwenview:fits - Enable support for NASA's sci-libs/cfitsio library
-kde-apps/gwenview:mpris - Enable support for MPRIS2 interface, requiring dev-qt/qtdbus as dependency.
+kde-apps/gwenview:mpris - Enable support for MPRIS2 interface, requiring dev-qt/qtbase[dbus] as dependency
 kde-apps/gwenview:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/k3b:webengine - Use dev-qt/qtwebengine for fancy k3bdiskinfoview
 kde-apps/kaddressbook:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
@@ -3695,6 +3718,7 @@ kde-plasma/kwin:lock - Enable screen locking via kde-plasma/kscreenlocker
 kde-plasma/kwin:screencast - Enable screencast portal using media-video/pipewire
 kde-plasma/kwin:shortcuts - Enable global shortcuts support via kde-plasma/kglobalacceld
 kde-plasma/kwin-x11:lock - Enable screen locking via kde-plasma/kscreenlocker
+kde-plasma/kwin-x11:nightlight - Enable night light support via kde-plasma/knighttime
 kde-plasma/kwin-x11:shortcuts - Enable global shortcuts support via kde-plasma/kglobalacceld
 kde-plasma/libplasma:activities - Enable support for KDE Activities
 kde-plasma/plasma-desktop:ibus - Use ibus input method via app-i18n/ibus
@@ -3706,6 +3730,7 @@ kde-plasma/plasma-firewall:firewalld - Build net-firewall/firewalld backend
 kde-plasma/plasma-firewall:ufw - Build net-firewall/ufw backend
 kde-plasma/plasma-login-sessions:X - Install X11 session file for Display Managers (default is Wayland if both enabled)
 kde-plasma/plasma-login-sessions:wayland - Install Wayland session file for Display Managers
+kde-plasma/plasma-meta:X - Enable X window manager support via kde-plasma/kwin-x11 (only until and including Plasma 6.7)
 kde-plasma/plasma-meta:browser-integration - Enable integration with Chrome/Firefox with browser extensions
 kde-plasma/plasma-meta:crash-handler - Pull in kde-plasma/drkonqi for assisted upstream crash reports
 kde-plasma/plasma-meta:crypt - Pull in kde-plasma/plasma-vault for encrypted vaults integration
@@ -3759,7 +3784,6 @@ llvm-core/clang-toolchain-symlinks:gcc-symlinks - Install symlinks for 'gcc' and
 llvm-core/clang-toolchain-symlinks:multilib-symlinks - Install symlinks for all ABI CHOSTs. Note that this can result in gcc being overrode for native builds, as well as conflict with crossdev if used for the same targets.
 llvm-core/clang-toolchain-symlinks:native-symlinks - Install generic tool symlinks like 'cc' and 'c++', as well as ${CTARGET}-*. These symlinks are installed into slotted LLVM bindir, so they should not take precedence over symlinks installed into /usr/bin by sys-devel/gcc-config but they can be helpful for GCC-free setups.
 llvm-core/flang:clang - Force building using installed clang (rather than the default CC/CXX). This is the default since building Flang specifically with GCC requires lots of memory for now.
-llvm-core/libclc:spirv - Build SPIRV targets
 llvm-core/lld-toolchain-symlinks:multilib-symlinks - Install symlinks for all ABI CHOSTs. Note that this can result in gcc being overrode for native builds, as well as conflict with crossdev if used for the same targets.
 llvm-core/lld-toolchain-symlinks:native-symlinks - Install generic 'ld' symlink, as well as ${CTARGET}-ld. These symlinks are installed into slotted LLVM bindir, so they should not take precedence over symlinks installed into /usr/bin by sys-devel/binutils-config but they can be helpful for binutils-free setups.
 llvm-core/lldb:debuginfod - Expose the transitive dependencies on net-misc/curl and dev-cpp/cpp-httplib) to match llvm-core/llvm.
@@ -3809,6 +3833,7 @@ llvm-runtimes/compiler-rt-sanitizers:shadowcallstack - Build ShadowCallStack.
 llvm-runtimes/compiler-rt-sanitizers:tsan - Build Thread Sanitizer runtime.
 llvm-runtimes/compiler-rt-sanitizers:ubsan - Build Undefined Behavior Sanitizer runtime.
 llvm-runtimes/compiler-rt-sanitizers:xray - Build XRay runtime.
+llvm-runtimes/libclc:spirv - Build SPIRV targets
 llvm-runtimes/libcxx:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
 llvm-runtimes/libcxx:libcxxabi - Build on top of llvm-runtimes/libcxxabi instead of gcc's libsupc++ (avoids depending on gcc).
 llvm-runtimes/libcxxabi:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
@@ -4266,7 +4291,6 @@ media-gfx/photoqt:chromecast - Enable Chromecast support using dev-python/pychro
 media-gfx/photoqt:devil - Support additional image formats using media-libs/devil
 media-gfx/photoqt:extensions - Support additional features using extensions
 media-gfx/photoqt:ffmpegthumbnailer - Support for video thumbnail using media-video/ffmpegthumbnailer
-media-gfx/photoqt:freeimage - Support additional image formats using media-libs/freeimage
 media-gfx/photoqt:mpv - Support for video files using media-video/mpv
 media-gfx/photoqt:vips - Support for media-libs/vips image processing library
 media-gfx/plantuml:ant-task - Provides classes used to manage PlantUML Ant task
@@ -4486,6 +4510,7 @@ media-libs/mesa-amber:wayland - Enable support for dev-libs/wayland
 media-libs/mlt:frei0r - Build the module for media-plugins/frei0r-plugins
 media-libs/mlt:opencv - Build motion tracking module using media-libs/opencv
 media-libs/mlt:python - Build SWIG bindings for Python
+media-libs/mlt:rnnoise - Build noise-reduction module using media-libs/rnnoise
 media-libs/mlt:rtaudio - Builds rtaudio consumer for native audio support on multiple platforms
 media-libs/mlt:rubberband - Enable audio pitch-shifting using media-libs/rubberband
 media-libs/mlt:vidstab - Enabled video stabilization with media-libs/vidstab
@@ -4850,7 +4875,7 @@ media-sound/jack2:metadata - Enable metadata API
 media-sound/jack2:pam - Add basic realtime configuration via sys-auth/realtime-base
 media-sound/jack2:tools - Pull basic tools (e.g. jack_lsp/connect) from media-sound/jack-example-tools
 media-sound/kid3:acoustid - Build acoustic fingerprinting plugin using media-libs/chromaprint
-media-sound/kid3:mpris - Enable support for MPRIS2 interface using dev-qt/qtdbus
+media-sound/kid3:mpris - Enable support for MPRIS2 interface using dev-qt/qtbase[dbus]
 media-sound/klick:rubberband - Enable rubberband support
 media-sound/lame:frontend - Build and install the 'lame' executable frontend to lame libraries.
 media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED**
@@ -8047,13 +8072,14 @@ sys-apps/systemd:boot - Enable EFI boot manager and stub loader
 sys-apps/systemd:bpf - Enable BPF support for sandboxing and firewalling.
 sys-apps/systemd:cgroup-hybrid - Default to hybrid (legacy) cgroup hierarchy instead of unified (modern).
 sys-apps/systemd:cryptsetup - Enable cryptsetup tools (includes unit generator for crypttab)
-sys-apps/systemd:curl - Enable support for uploading journals
+sys-apps/systemd:curl - Enable libcurl (required by several features)
 sys-apps/systemd:dns-over-tls - Enable DNS-over-TLS support
 sys-apps/systemd:elfutils - Enable coredump stacktraces in the journal
 sys-apps/systemd:fido2 - Enable FIDO2 support
 sys-apps/systemd:gcrypt - Enable use of dev-libs/libgcrypt for various features
 sys-apps/systemd:homed - Enable portable home directories
 sys-apps/systemd:http - Enable embedded HTTP server in journald
+sys-apps/systemd:imds - Enable IMDS (Instance Metadata Service)
 sys-apps/systemd:importd - Enable import daemon
 sys-apps/systemd:kernel-install - Enable kernel-install
 sys-apps/systemd:kmod - Enable kernel module loading via sys-apps/kmod
@@ -9219,7 +9245,9 @@ xfce-base/xfce4-panel:dbusmenu - Enable dev-libs/libdbusmenu integration (in sta
 xfce-base/xfce4-power-manager:panel-plugin - Build the power management plugin for the XFCE panel
 xfce-base/xfce4-settings:libcanberra - Enable sound event support using media-libs/libcanberra
 xfce-base/xfce4-settings:xklavier - Enable keyboard layout selection support using x11-libs/libxklavier
-xfce-base/xfdesktop:thunar - Build support for desktop icons (for example, launchers and folders)
+xfce-base/xfdesktop:libnotify - Build support for mount notifications.
+xfce-base/xfdesktop:thunar - Build support for Thunar file management extensions.
+xfce-base/xfdesktop:video - Build support for using video as a backdrop.
 xfce-base/xfwm4:xpresent - Enable the XPresent extension for sync to vblank
 xfce-extra/xfce4-clipman-plugin:qrcode - Enable support for media-gfx/qrencode
 xfce-extra/xfce4-mixer:keybinder - Enable support for global hotkeys using dev-libs/keybinder.

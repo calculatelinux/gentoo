@@ -11,4 +11,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www.fefe.de/dietlibc/dietlibc-0.35.tar.xz verify-sig? ( http://www.fefe.de/dietlibc/dietlibc-0.35.tar.xz.sig )
 _eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	flag-o-matic	fd3558f73f6503093adee69adf41020d	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	verify-sig	ece4c893b6bd62eacbc4d25958e857f8
-_md5_=693ce21194e8a43b93b8d22c88fc2581
+_md5_=2103e4b3727ee61540d9d624e63e5d36

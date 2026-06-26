@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install
+DEPEND=net-libs/gnutls mail-mta/courier dev-db/opendbx dev-libs/nettle:= net-dns/libidn2:= dev-libs/libunistring:= dev-libs/libbsd
+DESCRIPTION=DKIM filter for Courier-MTA
+EAPI=8
+HOMEPAGE=https://www.tana.it/sw/zdkimfilter
+INHERIT=toolchain-funcs
+IUSE=debug
+KEYWORDS=~amd64
+LICENSE=GPL-3+
+RDEPEND=net-libs/gnutls mail-mta/courier dev-db/opendbx dev-libs/nettle:= net-dns/libidn2:= dev-libs/libunistring:= dev-libs/libbsd
+RESTRICT=test
+SLOT=0
+SRC_URI=https://www.tana.it/sw/zdkimfilter/zdkimfilter-3.24.tar.gz
+_eclasses_=toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=bef88be8a8fdec9f9370f4b6343cbdb7

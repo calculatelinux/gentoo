@@ -10,4 +10,4 @@ PROPERTIES=live
 RDEPEND=dev-libs/libxml2
 SLOT=0
 _eclasses_=git-r3	2f8cdb10b033f92c3136aa6488a31c98
-_md5_=a4f210d9553fca7ba76f5c5689775ebb
+_md5_=53fd40b0a0d369c55c3a8819dd1ddda6

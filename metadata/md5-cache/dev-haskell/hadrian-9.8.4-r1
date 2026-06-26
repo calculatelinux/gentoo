@@ -1,0 +1,16 @@
+BDEPEND=threaded? ( dev-lang/ghc[-unregisterised] ) app-text/dos2unix
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=>=dev-haskell/base16-bytestring-0.1.1:= <dev-haskell/base16-bytestring-1.1.0.0:= >=dev-haskell/cryptohash-sha256-0.11:= <dev-haskell/cryptohash-sha256-0.12:= >=dev-haskell/extra-1.4.7:= >=dev-haskell/parsec-3.1:= <dev-haskell/parsec-3.2:= >=dev-haskell/text-1.2:= <dev-haskell/text-3:= >=dev-haskell/unordered-containers-0.2.1:= <dev-haskell/unordered-containers-0.3:= >=dev-lang/ghc-9.0.2:= >=dev-util/shake-0.18.3:= <dev-util/shake-0.20:= >=dev-haskell/cabal-3.2:= <dev-haskell/cabal-3.13:= static? ( dev-libs/libffi[static-libs] dev-libs/gmp[static-libs] ) test? ( >=dev-haskell/quickcheck-2.6:= <dev-haskell/quickcheck-2.15:= ) static? ( || ( sys-process/numactl[static-libs] dev-lang/ghc[-numa] ) dev-lang/ghc[-elfutils] ) >=dev-haskell/cabal-3.4.1.0
+DESCRIPTION=GHC build system
+EAPI=8
+HOMEPAGE=https://gitlab.haskell.org/ghc/ghc/-/tree/master/hadrian#readme
+INHERIT=haskell-cabal
+IUSE=static test +threaded
+KEYWORDS=~amd64 ~arm64
+LICENSE=BSD
+RDEPEND=>=dev-haskell/base16-bytestring-0.1.1:= <dev-haskell/base16-bytestring-1.1.0.0:= >=dev-haskell/cryptohash-sha256-0.11:= <dev-haskell/cryptohash-sha256-0.12:= >=dev-haskell/extra-1.4.7:= >=dev-haskell/parsec-3.1:= <dev-haskell/parsec-3.2:= >=dev-haskell/text-1.2:= <dev-haskell/text-3:= >=dev-haskell/unordered-containers-0.2.1:= <dev-haskell/unordered-containers-0.3:= >=dev-lang/ghc-9.0.2:= >=dev-util/shake-0.18.3:= <dev-util/shake-0.20:= >=dev-haskell/cabal-3.2:= <dev-haskell/cabal-3.13:= static? ( dev-libs/libffi[static-libs] dev-libs/gmp[static-libs] ) test? ( >=dev-haskell/quickcheck-2.6:= <dev-haskell/quickcheck-2.15:= ) static? ( || ( sys-process/numactl[static-libs] dev-lang/ghc[-numa] ) dev-lang/ghc[-elfutils] )
+RESTRICT=!test? ( test )
+SLOT=0
+SRC_URI=https://downloads.haskell.org/ghc/9.8.4/ghc-9.8.4-src.tar.xz
+_eclasses_=ghc-package	8e4f6eb2d0e798049f6fcaf3b84c0d4a	haskell-cabal	1138de808f4356a4380a4f7cc6d4d8a3	multilib	fc812e8eb2170022c28272d80a1f9e77	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=013c2299758f19837c0a386f8607be0c
