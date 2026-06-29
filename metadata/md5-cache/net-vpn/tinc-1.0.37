@@ -1,0 +1,15 @@
+BDEPEND=verify-sig? ( sec-keys/openpgp-keys-tinc ) virtual/pkgconfig verify-sig? ( || ( app-alternatives/gpg app-crypt/gnupg[-alternatives(-)] ) >=app-portage/gemato-20 )
+DEFINED_PHASES=configure install unpack
+DEPEND=dev-libs/openssl:= lzo? ( dev-libs/lzo:2 ) zlib? ( virtual/zlib:= )
+DESCRIPTION=tinc is an easy to configure VPN implementation
+EAPI=8
+HOMEPAGE=https://www.tinc-vpn.org/
+INHERIT=systemd verify-sig
+IUSE=+lzo uml vde +zlib verify-sig
+KEYWORDS=~amd64 ~arm ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86
+LICENSE=GPL-2+
+RDEPEND=dev-libs/openssl:= lzo? ( dev-libs/lzo:2 ) zlib? ( virtual/zlib:= ) vde? ( net-misc/vde )
+SLOT=0
+SRC_URI=https://www.tinc-vpn.org/packages/tinc-1.0.37.tar.gz verify-sig? ( https://www.tinc-vpn.org/packages/tinc-1.0.37.tar.gz.sig )
+_eclasses_=eapi9-pipestatus	d2c134036ac31c3085aebc9147f572bd	systemd	a964c0cbe818b5729da1dbfcee5be861	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	verify-sig	ece4c893b6bd62eacbc4d25958e857f8
+_md5_=284151458bd429ce165a758c0aed3c44

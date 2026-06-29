@@ -22,11 +22,12 @@ LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~hppa ppc ~sparc x86"
 
+REQUIRED_USE="${POSTGRES_REQ_USE}"
 DEPEND="${POSTGRES_DEP}"
 RDEPEND="${DEPEND}"
 BDEPEND="
 	test? (
-		dev-db/postgresql[server]
+		dev-db/postgresql[server(+)]
 	)
 "
 

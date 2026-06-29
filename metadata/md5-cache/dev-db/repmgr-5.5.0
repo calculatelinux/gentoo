@@ -8,8 +8,9 @@ IUSE=postgres_targets_postgres17 postgres_targets_postgres16 postgres_targets_po
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 RDEPEND=postgres_targets_postgres17? ( dev-db/postgresql:17= ) postgres_targets_postgres16? ( dev-db/postgresql:16= ) postgres_targets_postgres15? ( dev-db/postgresql:15= ) postgres_targets_postgres14? ( dev-db/postgresql:14= ) dev-libs/json-c net-misc/rsync
+REQUIRED_USE=|| ( postgres_targets_postgres17 postgres_targets_postgres16 postgres_targets_postgres15 postgres_targets_postgres14 )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/EnterpriseDB/repmgr/releases/download/v5.5.0/repmgr-5.5.0.tar.gz
 _eclasses_=multibuild	83db098a835f71feb71761f72a694aa2	out-of-source-utils	8e5093bd27b7f541a1913271f25d633a	postgres	3671a84f95eadcaa836aefe3fd51b6a1	postgres-multi	ccad35d745ce66b41837db8a6ee94601
-_md5_=c79dfc969ab3ca2205ff35a068691d71
+_md5_=8ef8893b8d1484e5b929e30e59fc2032

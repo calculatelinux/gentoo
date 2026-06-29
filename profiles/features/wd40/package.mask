@@ -89,6 +89,8 @@ dev-python/djangorestframework
 dev-python/easy-thumbnails
 dev-python/flufl-lock
 dev-python/gherkin-official
+dev-python/guessit
+dev-python/knowit
 dev-python/logfury
 dev-python/pykwalify
 dev-python/pytest-bdd
@@ -96,14 +98,17 @@ dev-python/pytest-describe
 dev-python/pytest-django
 dev-python/pytest-golden
 dev-python/pytest-socket
+dev-python/rebulk
 dev-python/sphinxcontrib-doxylink
 >=dev-python/sphinxcontrib-httpdomain-2.0
 dev-python/sybil
 dev-python/testfixtures
 dev-python/toml-fmt-common
+dev-python/trakit
 dev-python/uv-build
 dev-python/vcsgraph
 dev-python/zmq-anyio
+media-video/subliminal
 net-analyzer/fail2ban
 sci-libs/cartopy
 sci-libs/pcl

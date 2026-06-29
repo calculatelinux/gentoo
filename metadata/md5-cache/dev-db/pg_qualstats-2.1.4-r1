@@ -1,0 +1,16 @@
+DEFINED_PHASES=compile install prepare setup test
+DEPEND=postgres_targets_postgres18? ( dev-db/postgresql:18=[server(+)] ) postgres_targets_postgres17? ( dev-db/postgresql:17=[server(+)] ) postgres_targets_postgres16? ( dev-db/postgresql:16=[server(+)] ) postgres_targets_postgres15? ( dev-db/postgresql:15=[server(+)] ) postgres_targets_postgres14? ( dev-db/postgresql:14=[server(+)] )
+DESCRIPTION=Statistics about predicates for helping finding what indices are missing
+EAPI=8
+HOMEPAGE=https://github.com/powa-team/pg_qualstats
+INHERIT=postgres-multi
+IUSE=postgres_targets_postgres18 postgres_targets_postgres17 postgres_targets_postgres16 postgres_targets_postgres15 postgres_targets_postgres14
+KEYWORDS=~amd64 ~x86
+LICENSE=POSTGRESQL
+RDEPEND=postgres_targets_postgres18? ( dev-db/postgresql:18=[server(+)] ) postgres_targets_postgres17? ( dev-db/postgresql:17=[server(+)] ) postgres_targets_postgres16? ( dev-db/postgresql:16=[server(+)] ) postgres_targets_postgres15? ( dev-db/postgresql:15=[server(+)] ) postgres_targets_postgres14? ( dev-db/postgresql:14=[server(+)] )
+REQUIRED_USE=|| ( postgres_targets_postgres18 postgres_targets_postgres17 postgres_targets_postgres16 postgres_targets_postgres15 postgres_targets_postgres14 )
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/powa-team/pg_qualstats/archive/refs/tags/2.1.4.tar.gz -> pg_qualstats-2.1.4.tar.gz
+_eclasses_=multibuild	83db098a835f71feb71761f72a694aa2	out-of-source-utils	8e5093bd27b7f541a1913271f25d633a	postgres	3671a84f95eadcaa836aefe3fd51b6a1	postgres-multi	ccad35d745ce66b41837db8a6ee94601
+_md5_=7fc31e87c68eedb9366b95541af4dc16

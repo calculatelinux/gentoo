@@ -11,5 +11,5 @@ RDEPEND=>=dev-lang/erlang-26.0:=[ssl]
 RESTRICT=!test? ( test )
 SLOT=3
 SRC_URI=https://github.com/erlang/rebar3/archive/refs/tags/3.27.0.tar.gz -> rebar-3.27.0.gh.tar.gz test? ( https://repo.hex.pm/tarballs/meck-0.8.13.tar )
-_eclasses_=bash-completion-r1	9e91505e030725688d1e953321a47501	edo	a5e294016aa84979fcb2459749eb80b2	shell-completion	0b655d0d825e157a5e99c463bddaac16	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_eclasses_=edo	a5e294016aa84979fcb2459749eb80b2	shell-completion	aba874529f868b45f80529ed0d04d23a	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
 _md5_=0a1a52a1a68b63aeee9ca8fe72990035

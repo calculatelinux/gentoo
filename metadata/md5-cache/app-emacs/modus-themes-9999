@@ -1,7 +1,7 @@
 BDEPEND=>=app-editors/emacs-26.3:* >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure info install postinst postrm prepare setup test unpack
 DESCRIPTION=Highly accessible themes for GNU Emacs
-EAPI=8
+EAPI=9
 HOMEPAGE=https://github.com/protesilaos/modus-themes/
 INHERIT=elisp git-r3
 LICENSE=GPL-3+
@@ -9,4 +9,4 @@ PROPERTIES=live
 RDEPEND=>=app-editors/emacs-26.3:*
 SLOT=0
 _eclasses_=elisp	a37bfc35b86403c770beebbd71661c30	elisp-common	0ea9a0d3bc26353e1642c73560a24fdf	git-r3	2f8cdb10b033f92c3136aa6488a31c98
-_md5_=c5092b46cac7e250de6c5f59e7d1aaba
+_md5_=86082a073d63f8eda08a61147e9690c1
