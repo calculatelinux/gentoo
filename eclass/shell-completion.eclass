@@ -12,8 +12,7 @@
 # @BLURB: a few quick functions to install various shell completion files
 # @DESCRIPTION:
 # This eclass provides a standardised way to install shell completions
-# for popular shells.  It inherits the already widely adopted
-# 'bash-completion-r1', thus extending on its functionality.
+# for popular shells.
 
 case ${EAPI} in
 	7|8|9) ;;

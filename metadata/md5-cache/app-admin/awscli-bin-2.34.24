@@ -10,5 +10,5 @@ RDEPEND=sys-libs/glibc !app-admin/awscli
 RESTRICT=strip
 SLOT=0
 SRC_URI=amd64? ( https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.34.24.zip ) arm64? ( https://awscli.amazonaws.com/awscli-exe-linux-aarch64-2.34.24.zip )
-_eclasses_=bash-completion-r1	4386cfb12ede6cd8f0c1987d2e88da5f	shell-completion	aba874529f868b45f80529ed0d04d23a	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_eclasses_=bash-completion-r1	4386cfb12ede6cd8f0c1987d2e88da5f	shell-completion	63a62de3ca49c798ee6e89f190e45d0e	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
 _md5_=9c8c29016aba556dfc5800a0d93a7318

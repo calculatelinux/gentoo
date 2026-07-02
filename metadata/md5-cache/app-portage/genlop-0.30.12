@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl dev-perl/Date-Manip dev-perl/libwww-perl
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~sam/distfiles/app-portage/genlop/genlop-0.30.12.tar.xz
-_eclasses_=bash-completion-r1	4386cfb12ede6cd8f0c1987d2e88da5f	shell-completion	aba874529f868b45f80529ed0d04d23a	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_eclasses_=bash-completion-r1	4386cfb12ede6cd8f0c1987d2e88da5f	shell-completion	63a62de3ca49c798ee6e89f190e45d0e	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
 _md5_=a818b7e0d1fd4ab1e7a3314f2f47f894

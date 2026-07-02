@@ -1,10 +1,10 @@
 BDEPEND=virtual/pkgconfig test? ( x11-base/xorg-server[xvfb] x11-apps/xhost )
-DEFINED_PHASES=configure install prepare
+DEFINED_PHASES=configure install postinst prepare
 DEPEND=dev-lang/perl dev-libs/libxml2:2= gnome-base/libglade:2.0 x11-libs/gtk+:2 x11-libs/libSM dev-util/intltool sys-devel/gettext
 DESCRIPTION=ROX-Filer a drag and drop spatial file manager
 EAPI=7
 HOMEPAGE=http://rox.sourceforge.net/desktop/ROX-Filer.html
-INHERIT=desktop virtualx
+INHERIT=desktop optfeature virtualx
 IUSE=test
 KEYWORDS=amd64 ~arm ~arm64 x86
 LICENSE=GPL-2+ LGPL-2+
@@ -12,5 +12,5 @@ RDEPEND=dev-lang/perl dev-libs/libxml2:2= gnome-base/libglade:2.0 x11-libs/gtk+:
 RESTRICT=!test? ( test )
 SLOT=0
 SRC_URI=https://download.sourceforge.net/rox/rox-filer-2.11.tar.bz2
-_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1	virtualx	9741d451eb64ea8bb9faee90d68a9b68
-_md5_=fea496b95f852b31fe9e2e16de64b330
+_eclasses_=desktop	e447b5f77146d69797e9f03ff177f3f1	optfeature	538bce96e5589935b57e178e8635f301	virtualx	9741d451eb64ea8bb9faee90d68a9b68
+_md5_=b38d0e8be815f8ce2344a5161a032a77

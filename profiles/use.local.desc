@@ -2103,6 +2103,7 @@ dev-libs/input-pad:xtest - Enable support for x11-libs/libXtst
 dev-libs/intel-compute-runtime:disable-mitigations - This will disable spectre mitigation, which can speed up the performance.
 dev-libs/intel-compute-runtime:l0 - Install the oneAPI Level Zero driver alongside the OpenCL one
 dev-libs/intel-compute-runtime:vaapi - Support the sharing of surfaces with Video Acceleration API (OpenCL Extension #36)
+dev-libs/isa-l:tools - Install igzip tool
 dev-libs/jemalloc:lazy-lock - Enable lazy locking (only lock when multi-threaded)
 dev-libs/jemalloc:prof - Enable allocation profiling
 dev-libs/jemalloc:stats - Enable statistics calculation/reporting
@@ -2651,7 +2652,6 @@ dev-python/typer:cli - Install "typer" entry point (conflicts with dev-lang/erla
 dev-python/websockets:native-extensions - Compiles native C extensions
 dev-python/wrapt:native-extensions - Compiles native C extensions (speedups, instead of using python fallback code).
 dev-python/zeep:async - Add async support
-dev-qt/linguist-tools:qml - Enable QML support in lupdate
 dev-qt/qt-creator:clang - Build clang-based plugins for C/C++ development (code model, formatting, static analysis)
 dev-qt/qt-creator:designer - Enable designer for QtWidgets-based UIs
 dev-qt/qt-creator:help - Enable the integrated dev-qt/qt-docs viewer (also needed for examples)
@@ -2721,36 +2721,20 @@ dev-qt/qtbase:widgets - Build Qt6Widgets module
 dev-qt/qtcharts:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtconnectivity:neard - Use net-wireless/neard to access NFC devices
 dev-qt/qtconnectivity:nfc - Enable support for the Near Field Communication protocol
-dev-qt/qtcore:old-kernel - Disable syscalls not available on Linux kernels older than 4.11
-dev-qt/qtdeclarative:localstorage - Build the LocalStorage import for QtQuick (requires QtSql)
 dev-qt/qtdeclarative:network - Enable QtNetwork support
 dev-qt/qtdeclarative:opengl - Enable OpenGL support
 dev-qt/qtdeclarative:qmlls - Build the qmlls tool using dev-qt/qtlanguageserver
 dev-qt/qtdeclarative:sql - Enable QtSQL support
 dev-qt/qtdeclarative:widgets - Enable QtWidgets support
 dev-qt/qtgraphs:quick3d - Enable support for 3D graphs using dev-qt/qtquick3d
-dev-qt/qtgui:X - Build the XCB platform plugin and enable X11 integration
-dev-qt/qtgui:eglfs - Build the EGL Full Screen/Single Surface platform plugin
-dev-qt/qtgui:evdev - Enable support for input devices via evdev
-dev-qt/qtgui:ibus - Build the IBus input method plugin
-dev-qt/qtgui:libinput - Enable support for input devices via dev-libs/libinput
-dev-qt/qtgui:linuxfb - Enable Linux framebuffer support for embedded devices
-dev-qt/qtgui:tslib - Enable support for touchscreen devices via x11-libs/tslib
-dev-qt/qtgui:tuio - Build plugin to receive touch events over the TUIO protocol
-dev-qt/qtgui:wayland - Provide dev-qt/qtwayland to ensure Qt applications can be run as Wayland clients
 dev-qt/qthttpserver:websockets - Enable websockets support using dev-qt/qtwebsockets
 dev-qt/qtmultimedia:eglfs - Enable screen capture support with Qt's EGL Full Screen/Single Surface platform plugin
 dev-qt/qtmultimedia:gstreamer - Enable media-libs/gstreamer support
 dev-qt/qtmultimedia:pipewire - Enable media-video/pipewire support
 dev-qt/qtmultimedia:qml - Build QML/QtQuick bindings and imports
-dev-qt/qtmultimedia:widgets - Build the QtMultimediaWidgets module
-dev-qt/qtnetwork:gssapi - Enable support for GSSAPI (virtual/krb5)
-dev-qt/qtnetwork:libproxy - Use net-libs/libproxy for automatic HTTP/SOCKS proxy configuration
 dev-qt/qtpositioning:geoclue - Use enhanced location information from app-misc/geoclue
 dev-qt/qtpositioning:nmea - Build plugin for parsing NMEA (National Marine Electronics Association) sentences
 dev-qt/qtpositioning:qml - Build QML bindings
-dev-qt/qtquickcontrols:widgets - Enable QtWidgets support
-dev-qt/qtquickcontrols2:widgets - Enable QtWidgets support
 dev-qt/qtremoteobjects:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtscxml:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtsensors:qml - Build QML bindings
@@ -2771,10 +2755,8 @@ dev-qt/qttools:qtattributionsscanner - Build Qt Source Code Attribution Scanner
 dev-qt/qttools:qtdiag - Build Qt Diag
 dev-qt/qttools:qtplugininfo - Build Qt Plugin Info
 dev-qt/qttools:widgets - Enable QtWidgets support
-dev-qt/qtwayland:compositor - Enable support for the wayland compositor / server APIs
 dev-qt/qtwayland:gnome - Build the GNOME-like decoration plugin (loaded by default with GNOME)
 dev-qt/qtwayland:qml - Build QML/QtQuick bindings and imports
-dev-qt/qtwayland:vulkan - Enable support for Vulkan-based server buffer integration
 dev-qt/qtwebchannel:qml - Build QML/QtQuick bindings and imports
 dev-qt/qtwebengine:designer - Install the QWebEngineView plugin used to add widgets in dev-qt/qttools[designer] forms that display web pages.
 dev-qt/qtwebengine:jumbo-build - Combine source files to speed up build process.
@@ -2784,7 +2766,6 @@ dev-qt/qtwebengine:system-icu - Use the system-wide dev-libs/icu instead of bund
 dev-qt/qtwebengine:webdriver - Build tool for automated testing (ChromeDriver equivalent)
 dev-qt/qtwebengine:widgets - Enable QtWidgets support
 dev-qt/qtwebsockets:qml - Build QML bindings
-dev-qt/qtwidgets:gtk - Build the GTK platform theme plugin
 dev-ruby/activesupport:msgpack - Support ActiveSupport::MessagePack module
 dev-ruby/asciidoctor-diagram:barcode - Enable diagrams with dev-ruby/rqrcode and dev-ruby/barby
 dev-ruby/asciidoctor-diagram:ditaa - Enable diagrams with media-gfx/ditaa
@@ -2897,6 +2878,7 @@ dev-util/diffoscope:haskell - Use dev-lang/ghc
 dev-util/diffoscope:hdf5 - Use sci-libs/hdf5
 dev-util/diffoscope:hex - Use app-editors/vim-core
 dev-util/diffoscope:iso - Use app-cdr/cdrtools
+dev-util/diffoscope:libguestfs - Use app-emulation/libguestfs
 dev-util/diffoscope:llvm - Use llvm-core/llvm
 dev-util/diffoscope:opendocument - Use app-text/odt2txt
 dev-util/diffoscope:pascal - Use dev-lang/fpc
@@ -5408,6 +5390,7 @@ media-video/qmplay2:extensions - Build with Extensions module and enable other p
 media-video/qmplay2:gme - Build Chiptune with GME support
 media-video/qmplay2:inputs - Build with Inputs module
 media-video/qmplay2:libass - Build with SSA/ASS subtitles rendering support
+media-video/qmplay2:libopenmpt - Build with OpenMPT support
 media-video/qmplay2:notifications - Build additional notifications module
 media-video/qmplay2:pipewire - Build with PipeWire support
 media-video/qmplay2:shaders - Compile Vulkan shaders using media-libs/shaderc
@@ -5458,13 +5441,11 @@ media-video/vlc:loudness - Enable loudness normalisation according to the EBU R1
 media-video/vlc:lua - Enable Lua scripting support, needed for including support for Jamendo (online music platform) and similar things
 media-video/vlc:macosx-notifications - Enable Mac OS X notifications module (formerly growl)
 media-video/vlc:matroska - Enable matroska support using reference libraries (fallback on other existing matroska support if disabled, i.e., matroska enabled FFmpeg)
-media-video/vlc:mpeg - Add libmpeg2 support for mpeg-1 and mpeg-2 video streams
 media-video/vlc:nfs - Enable support for nfs protocol via net-fs/libnfs
 media-video/vlc:omxil - Enable OpenMAX Integration Layer codec module
 media-video/vlc:optimisememory - Enable optimisation for memory rather than performance
 media-video/vlc:projectm - Enable the projectM visualization plugin
 media-video/vlc:run-as-root - Allows vlc to start for root. Don't enable this unless you have a very specific (e.g. embedded) need for it!
-media-video/vlc:sdl-image - Enable sdl image video decoder (depends on sdl)
 media-video/vlc:sftp - Enable libssh2 to support SFTP file transfer
 media-video/vlc:shout - Enable libshout output
 media-video/vlc:skins - Enable support for the skins2 interface

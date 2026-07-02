@@ -9,5 +9,5 @@ LICENSE=GPL-3+
 PROPERTIES=live
 RDEPEND=virtual/libusb:=
 SLOT=0
-_eclasses_=bash-completion-r1	4386cfb12ede6cd8f0c1987d2e88da5f	git-r3	2f8cdb10b033f92c3136aa6488a31c98	shell-completion	aba874529f868b45f80529ed0d04d23a	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	udev	1a23882bb73bc31c64a6f00a5e515f34
+_eclasses_=bash-completion-r1	4386cfb12ede6cd8f0c1987d2e88da5f	git-r3	2f8cdb10b033f92c3136aa6488a31c98	shell-completion	63a62de3ca49c798ee6e89f190e45d0e	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	udev	1a23882bb73bc31c64a6f00a5e515f34
 _md5_=633a84ca3fb263381a2c3dd76ba13618
