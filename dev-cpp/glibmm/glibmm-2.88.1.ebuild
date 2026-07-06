@@ -10,7 +10,7 @@ HOMEPAGE="https://gnome.pages.gitlab.gnome.org/glibmm/"
 
 LICENSE="LGPL-2.1+"
 SLOT="2.68"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc x86"
 IUSE="gtk-doc debug test"
 RESTRICT="!test? ( test )"
 
@@ -22,10 +22,11 @@ DEPEND="${RDEPEND}"
 BDEPEND="
 	${PYTHON_DEPS}
 	dev-cpp/mm-common
+	dev-lang/perl
+	dev-perl/XML-Parser
 	virtual/pkgconfig
 	gtk-doc? (
 		app-text/doxygen[dot]
-		dev-lang/perl
 		dev-libs/libxslt
 	)
 "
