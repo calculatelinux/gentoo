@@ -63,7 +63,7 @@ PDEPEND="
 	binutils-plugin? ( >=llvm-core/llvmgold-${LLVM_MAJOR} )
 "
 
-LLVM_COMPONENTS=( llvm cmake libc third-party utils/docs )
+LLVM_COMPONENTS=( llvm cmake libc mlir/utils/pygments third-party utils/docs )
 LLVM_MANPAGES=1
 LLVM_USE_TARGETS=provide
 llvm.org_set_globals
@@ -427,6 +427,7 @@ multilib_src_configure() {
 		-DLLVM_ENABLE_ZSTD=$(usex zstd FORCE_ON OFF)
 		-DLLVM_ENABLE_CURL=$(usex debuginfod)
 		-DLLVM_ENABLE_HTTPLIB=$(usex debuginfod)
+		-DLLVM_UNREACHABLE_OPTIMIZE=OFF
 
 		-DLLVM_HOST_TRIPLE="${CHOST}"
 
