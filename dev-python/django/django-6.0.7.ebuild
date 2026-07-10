@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{12..14} )
+PYTHON_COMPAT=( python3_{12..15} )
 PYTHON_REQ_USE='sqlite?,threads(+)'
 
 inherit distutils-r1 multiprocessing optfeature shell-completion verify-sig
@@ -28,7 +28,7 @@ LICENSE+=" Apache-2.0"
 # admin icons, jquery, xregexp.js
 LICENSE+=" MIT"
 SLOT="0/$(ver_cut 1-2)"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~ppc ~ppc64 ~riscv ~sparc ~x86 ~x64-macos"
+KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ppc ppc64 ~riscv ~sparc x86 ~x64-macos"
 IUSE="doc sqlite test"
 RESTRICT="!test? ( test )"
 
@@ -56,6 +56,12 @@ BDEPEND="
 
 PATCHES=(
 	"${FILESDIR}"/django-4.0-bashcomp.patch
+	# based on upstream commits:
+	# b1a65eac7c09250d36e12464fc8fff2a401246b6
+	# ed13a58bf63df94508c8a0fe779da0b6a2bc26bb
+	# e7f539f813bd56a71ca3c1fbf379f47691002086
+	# plus my own fixes
+	"${FILESDIR}"/django-6.0.7-py315.patch
 )
 
 distutils_enable_sphinx docs --no-autodoc
