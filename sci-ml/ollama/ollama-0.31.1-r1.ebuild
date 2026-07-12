@@ -43,7 +43,7 @@ PATCHES=(
 
 src_prepare() {
 	cmake_src_prepare
-	cd ..
+	cd ../llama.cpp-${LLAMA_CPP_tag}
 	eapply "${FILESDIR}"/${P}-gcc17.patch
 }
 

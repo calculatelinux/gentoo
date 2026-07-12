@@ -13,6 +13,7 @@ acct-user/vdr:legacy-homedir - Keep old home directory /var/vdr of an existing i
 acct-user/vdr:remote - Prepare group membership for media-plugins/vdr-remote.
 acct-user/vdr:serial - Prepare group membership for media-plugins/vdr-serial.
 app-accessibility/at-spi2-core:dbus-broker - Use DBus broker implementation instead of default DBus daemon
+app-accessibility/at-spi2-core:dbus-glib - Use dbus-glib for main loop integration
 app-accessibility/brltty:api - build brltty's application program interface
 app-accessibility/brltty:beeper - support the console tone generator
 app-accessibility/brltty:fm - support for the sound card synthesizer
@@ -1434,6 +1435,7 @@ dev-cpp/opentelemetry-cpp:http - Build support for the OTLP (OpenTelemetry Proto
 dev-cpp/opentelemetry-cpp:jaeger - Include the jaeger exporter
 dev-cpp/opentelemetry-cpp:otlp - Build support for the OTLP (OpenTelemetry Protocol) File exporter
 dev-cpp/opentelemetry-cpp:prometheus - include the Prometheus Client in the SDK
+dev-cpp/pangomm:dot - Use dot to generate graphs in the doxygen documentation via media-gfx/graphviz
 dev-cpp/sdbus-c++:systemd - Use external libsystemd instead of statically-linked build
 dev-cpp/sdbus-c++:tools - Install interface stub code generator
 dev-db/etcd:server - Installs etcd daemon
@@ -4123,8 +4125,8 @@ media-fonts/terminus-font:ru-dv - Changes view of Russian letters 'de' and 've' 
 media-fonts/terminus-font:ru-g - Changes view of Russian letter 'ge' (see homepage)
 media-fonts/terminus-font:ru-i - Changes view of Russian letter 'i' - not like Latin u, but like "mirrored" N (see homepage)
 media-fonts/terminus-font:ru-k - Changes view of Russian letter 'k' (see homepage)
-media-fonts/unifont:fontforge - Use media-gfx/fontforge to build fonts from source
-media-fonts/unifont:utils - Install unifont utilities
+media-fonts/unifont:fontforge - Build TrueType fonts from sources, using media-gfx/fontforge
+media-fonts/unifont:utils - Build unifont utilities and use them to compile OpenType fonts from sources
 media-gfx/ahoviewer:plugins - Build plugin support for now, in future pull additional plugins
 media-gfx/ahoviewer:rar - Rar archive support
 media-gfx/ahoviewer:zip - Zip archive support
@@ -6587,7 +6589,7 @@ net-misc/mulk:checksum - Enable checksum verification for Metalink from dev-libs
 net-misc/mulk:metalink - Enable support for media-libs/libmetalink
 net-misc/netifrc:dhcp - Allow interfaces to configure via DHCP
 net-misc/netkit-bootparamd:libtirpc - Build against net-libs/libtirpc for RPC support
-net-misc/networkmanager:concheck - Enable connectivity checking support
+net-misc/networkmanager:concheck - Enable connectivity checking support (needed for Captive portals detection)
 net-misc/networkmanager:connection-sharing - Support connection sharing (uses net-dns/dnsmasq)
 net-misc/networkmanager:dhclient - Use dhclient from net-misc/dhcp for getting an IP via DHCP
 net-misc/networkmanager:dhcpcd - Use net-misc/dhcpcd for getting an IP

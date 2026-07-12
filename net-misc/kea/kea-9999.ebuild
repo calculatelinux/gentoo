@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{11..14} )
+PYTHON_COMPAT=( python3_{11..15} )
 VERIFY_SIG_OPENPGP_KEY_PATH=/usr/share/openpgp-keys/isc.asc
 inherit eapi9-ver flag-o-matic meson python-r1 systemd tmpfiles
 inherit toolchain-funcs verify-sig

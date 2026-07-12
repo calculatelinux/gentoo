@@ -137,11 +137,10 @@ if [[ -n ${NGINX_UPDATE_STREAM} ]] &&
 	die "Unknown update stream set in the NGINX_UPDATE_STREAM variable"
 fi
 
-has "${NGINX_UPDATE_STREAM}" stable mainline &&
-	eqawarn <<- EOF
-	NGINX_UPDATE_STREAM=${NGINX_UPDATE_STREAM} is deprecated and a
-	noop. Please unset NGINX_UPDATE_STREAM
-	EOF
+case ${NGINX_UPDATE_STREAM} in
+	stable|mainline)
+		eqawarn "NGINX_UPDATE_STREAM=${NGINX_UPDATE_STREAM} is deprecated and no longer has any effect."
+esac
 
 [[ ${NGINX_UPDATE_STREAM} == live ]] && inherit git-r3
 
@@ -376,7 +375,8 @@ _ngx_set_mod_required_use() {
 		if has "${mod}" "${_NGX_MODULES[@]#+}"; then
 			result=''
 			# Feed comma-delimited dependencies into the dep_list array.
-			IFS=, read -ra dep_list <<< "${_NGX_DEP_TABLE[${mod}]}"
+			mapfile -td ',' dep_list < <(printf %s "${_NGX_DEP_TABLE[${mod}]}")
+
 			for dep in "${dep_list[@]}"; do
 				has "${dep}" "${_NGX_MODULES[@]#+}" &&
 					result+=" nginx_modules_${dep}"
