@@ -503,6 +503,7 @@ app-editors/emacs:threads - Add elisp threading support
 app-editors/emacs:toolkit-scroll-bars - Use the selected toolkit's scrollbars in preference to Emacs' own scrollbars
 app-editors/emacs:tree-sitter - Support the dev-libs/tree-sitter parsing library
 app-editors/emacs:wide-int - Prefer wide Emacs integers (typically 62-bit). This option has an effect only on 32-bit systems, where it increases the maximum buffer size from 0.5 to 2 GiB, at the cost of 10% to 30% Lisp slowdown.
+app-editors/emacs:xwidgets - Enable use of GTK widgets in Emacs buffers (requires GTK3)
 app-editors/fe:sendmail - Send mail after editor abend
 app-editors/featherpad:X - Link application against X11 libraries which adds support for virtual desktop awareness and tab DND
 app-editors/gedit-plugins:charmap - Insert special characters just by clicking on them
@@ -1541,6 +1542,7 @@ dev-debug/systemtap:debuginfod - Enable debuginfod support via dev-libs/elfutils
 dev-debug/systemtap:dtrace-symlink - Provide /usr/bin/dtrace symlink pointing to /usr/bin/stap-dtrace. This prevents coinstallation with dev-debug/dtrace.
 dev-debug/systemtap:libvirt - Support probing of libvirt domains.
 dev-embedded/avrdude:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
+dev-embedded/avrdude:gpiod - Build with libgpiod support via dev-libs/libgpiod
 dev-embedded/libftdi:tools - build ftdi_eeprom helper tool
 dev-embedded/openocd:capstone - Use dev-libs/capstone for disassembly support
 dev-embedded/openocd:cmsis-dap - Support for CMSIS-DAP compliant adapters
@@ -2149,6 +2151,7 @@ dev-libs/libgit2:ssh - Enable SSH transport support
 dev-libs/libgit2:trace - Enable tracing support
 dev-libs/libgit2-glib:ssh - Enable SSH transport support
 dev-libs/libgpg-error:common-lisp - Install common-lisp files
+dev-libs/libgpiod:glib - Enable dev-libs/glib support
 dev-libs/libgpiod:tools - Build some useful gpio tools that use libgpiod.
 dev-libs/libical:glib - Enable dev-libs/glib interface support
 dev-libs/libisoburn:external-filters - Allow the use of external processes as file content filters (Note: this is a potential security risk)
@@ -5506,6 +5509,7 @@ net-analyzer/icinga2:console - Adds support for line-editing in the console
 net-analyzer/icinga2:jumbo-build - Combine source files to speed up build process, requires more memory
 net-analyzer/icinga2:mail - Allows for mailing of alerts
 net-analyzer/icinga2:mariadb - Enable support for the mariadb database backend
+net-analyzer/icinga2:opentelemetry - Enable support for exporting to opentelemetry compatible backends
 net-analyzer/icinga2:plugins - Adds support for nagios plugins
 net-analyzer/ipsumdump:nanotimestamp - Enable timestamps with nano-second resolution
 net-analyzer/linkchecker:sqlite - Mozilla Bookmark parsing
@@ -6541,7 +6545,6 @@ net-misc/iputils:tracepath - Build and install tracepath -- tool for tracing net
 net-misc/ipv6calc:apache - Build the apache module mod_ipv6calc
 net-misc/ipv6calc:openssl - Use dev-libs/openssl instead of app-crypt/libmd for MD5 digest
 net-misc/kafka-bin:connect - Install init for Kafka Connect Distributed mode
-net-misc/kafka-bin:internal-zookeeper - Use bundled local zookeeper instance
 net-misc/kafkacat:avro - Enable avro serialization/deserialization support
 net-misc/kafkacat:json - Enable json support
 net-misc/kea:mysql - Add interface to MySQL for lease, host reservations and/or server config
@@ -9229,6 +9232,7 @@ x11-wm/xpra:webcam - Enable webcam support via opencv
 x11-wm/xpra:xdg - Enable support for XDG-based menus
 xfce-base/libxfce4ui:glade - Build support for Glade 3's GtkBuilder implementation
 xfce-base/libxfce4ui:system-info - Enable system information in xfce4-about.
+xfce-base/thunar:libcanberra - Enable sound event support
 xfce-base/thunar:terminal - Enable integrated terminal support
 xfce-base/thunar:trash-panel-plugin - Build the trash status indicator plugin for the XFCE panel
 xfce-base/tumbler:epub - Enable support for .epub thumbnailer using app-text/libgepub

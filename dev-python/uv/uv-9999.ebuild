@@ -3,7 +3,7 @@
 
 EAPI=8
 
-RUST_MIN_VER="1.94.0"
+RUST_MIN_VER="1.95.0"
 
 inherit cargo check-reqs git-r3
 

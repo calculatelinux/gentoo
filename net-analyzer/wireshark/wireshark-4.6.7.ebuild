@@ -23,7 +23,7 @@ else
 	S="${WORKDIR}/${P/_/}"
 
 	if [[ ${PV} != *_rc* ]] ; then
-		KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~loong ~ppc64 ~riscv ~x86"
+		KEYWORDS="amd64 arm arm64 ~hppa ~loong ppc64 ~riscv x86"
 	fi
 fi
 
@@ -168,6 +168,13 @@ src_configure() {
 
 	python_setup
 
+	if use gui; then
+		LRELEASE=$(qt_get_broot_binary 6 lrelease)
+		MOC=$(qt_get_broot_binary 6 moc)
+		RCC=$(qt_get_broot_binary 6 rcc)
+		UIC=$(qt_get_broot_binary 6 uic)
+	fi
+
 	mycmakeargs+=(
 		-DPython3_EXECUTABLE="${PYTHON}"
 		-DCMAKE_DISABLE_FIND_PACKAGE_{Asciidoctor,DOXYGEN}=$(usex !doc)
@@ -180,10 +187,6 @@ src_configure() {
 		-DENABLE_CCACHE=OFF
 
 		$(use androiddump && use pcap && echo -DEXTCAP_ANDROIDDUMP_LIBPCAP=yes)
-		$(usex gui LRELEASE=$(qt_get_broot_binary 6 lrelease) '')
-		$(usex gui MOC=$(qt_get_broot_binary 6 moc) '')
-		$(usex gui RCC=$(qt_get_broot_binary 6 rcc) '')
-		$(usex gui UIC=$(qt_get_broot_binary 6 uic) '')
 
 		-DBUILD_androiddump=$(usex androiddump)
 		-DBUILD_capinfos=$(usex capinfos)

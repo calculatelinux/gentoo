@@ -3,11 +3,11 @@
 
 EAPI="8"
 
-LLVM_COMPAT=( 19 )
+LLVM_COMPAT=( 21 )
 LLVM_OPTIONAL=1
 WANT_LIBTOOL="none"
 
-inherit autotools check-reqs flag-o-matic git-r3 linux-info llvm-r1
+inherit autotools check-reqs flag-o-matic git-r3 linux-info llvm-r2
 inherit multiprocessing pax-utils toolchain-funcs
 
 PYVER=$(ver_cut 1-2)
@@ -130,7 +130,7 @@ pkg_pretend() {
 
 pkg_setup() {
 	if [[ ${MERGE_TYPE} != binary ]]; then
-		use jit && llvm-r1_pkg_setup
+		use jit && llvm-r2_pkg_setup
 		if use test || use pgo; then
 			check-reqs_pkg_setup
 

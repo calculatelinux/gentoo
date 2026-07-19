@@ -6,7 +6,7 @@ EAPI=8
 DISTUTILS_USE_PEP517=hatchling
 PYTHON_COMPAT=( python3_{12..14} )
 
-inherit distutils-r1
+inherit distutils-r1 optfeature
 
 MY_P=filesystem_spec-${PV}
 DESCRIPTION="A specification that python filesystems should adhere to"
@@ -23,7 +23,7 @@ S=${WORKDIR}/${MY_P}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~riscv ~x86"
+KEYWORDS="amd64 ~arm arm64 ~ppc64 ~riscv x86"
 
 BDEPEND="
 	dev-python/hatch-vcs[${PYTHON_USEDEP}]
@@ -58,4 +58,13 @@ python_test() {
 	)
 
 	epytest -o tmp_path_retention_policy=all
+}
+
+pkg_postinst() {
+	optfeature_header "Install optional filesystem backends:"
+	optfeature "http" dev-python/aiohttp
+	optfeature "gist/github/jupyter" dev-python/requests
+	optfeature "ssh/sftp" dev-python/paramiko
+	optfeature "arrow/hdfs" dev-python/pyarrow
+	optfeature "libarchive" dev-python/libarchive-c
 }

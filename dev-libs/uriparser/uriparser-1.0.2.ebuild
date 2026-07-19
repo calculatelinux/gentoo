@@ -12,7 +12,7 @@ SRC_URI="https://github.com/${PN}/${PN}/releases/download/${P}/${P}.tar.bz2"
 LICENSE="test? ( LGPL-2.1+ ) BSD"
 SLOT="0"
 KEYWORDS="amd64 arm arm64 ppc ~ppc64 ~riscv ~sparc x86"
-IUSE="+doc qt6 test unicode"  # +doc to address warning RequiredUseDefaults
+IUSE="doc qt6 test unicode"
 
 REQUIRED_USE="qt6? ( doc ) test? ( unicode )"
 RESTRICT="!test? ( test )"
@@ -38,12 +38,16 @@ src_configure() {
 		-DURIPARSER_BUILD_TESTS=$(usex test ON OFF)
 		-DURIPARSER_BUILD_TOOLS=ON
 		-DURIPARSER_BUILD_WCHAR_T=$(usex unicode ON OFF)
-
-		# The usev wrapper is here to address this warning:
-		#   One or more CMake variables were not used by the project:
-		#   CMAKE_DISABLE_FIND_PACKAGE_Qt5Help
-		$(usev doc $(usex qt6 -DQHG_LOCATION=$(qt_get_broot_binary 6 qhelpgenerator) -DCMAKE_DISABLE_FIND_PACKAGE_Qt5Help=ON))
 	)
+
+	if use doc; then
+		if use qt6; then # bug #979154
+			mycmakeargs+=( -DQHG_LOCATION="$(qt_get_broot_binary 6 qhelpgenerator)" )
+		else
+			mycmakeargs+=( -DCMAKE_DISABLE_FIND_PACKAGE_Qt5Help=ON )
+		fi
+	fi
+
 	cmake_src_configure
 }
 
