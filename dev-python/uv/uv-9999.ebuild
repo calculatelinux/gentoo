@@ -31,7 +31,6 @@ RDEPEND="
 BDEPEND="
 	virtual/pkgconfig
 	test? (
-		dev-lang/python:3.9
 		dev-lang/python:3.10
 		dev-lang/python:3.11
 		dev-lang/python:3.12

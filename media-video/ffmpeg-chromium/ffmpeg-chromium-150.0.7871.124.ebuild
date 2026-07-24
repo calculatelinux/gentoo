@@ -9,6 +9,7 @@ COMMIT=ad41607c61898cf7150e0fb20fe4bbabd44922a3
 DESCRIPTION="FFmpeg built specifically for codec support in Chromium-based browsers"
 HOMEPAGE="https://ffmpeg.org/"
 SRC_URI="https://distfiles.gentoo.org/pub/proj/chromium/ffmpeg/${P}.tar.xz"
+S="${WORKDIR}/ffmpeg-chromium-${PV%%\.*}"
 
 LICENSE="
 	!gpl? ( LGPL-2.1 )
@@ -16,7 +17,7 @@ LICENSE="
 "
 SLOT="${PV%%.*}"
 
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc64"
+KEYWORDS="amd64 ~arm arm64 ~loong ~ppc64"
 
 # Options to use as use_enable in the foo[:bar] form.
 # This will feed configure with $(use_enable foo bar)

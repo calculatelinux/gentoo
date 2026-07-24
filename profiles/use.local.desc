@@ -344,6 +344,7 @@ app-containers/apptainer:network - Install network plug-ins
 app-containers/apptainer:rootless - Enable libsubid (subuid/subgid mapping) for rootless
 app-containers/apptainer:suid - Install SUID helper binary
 app-containers/buildah:btrfs - Enables dependencies for the "btrfs" graph driver, including necessary kernel flags.
+app-containers/container-libs:extra - Pulls extra dependencies required for Podman and Buildah
 app-containers/containerd:btrfs - Support for BTRFS snapshot driver
 app-containers/containerd:cri - Support for Kubernetes CRI
 app-containers/containerd:device-mapper - Support for device mapper snapshot driver
@@ -361,6 +362,7 @@ app-containers/lxc:landlock - Use Landlock to restrict what the monitor API hand
 app-containers/lxc:tools - Build and install additional command line tools
 app-containers/nerdctl:rootless - Enables dependencies for running in rootless mode.
 app-containers/podman:btrfs - Enable btrfs support (graph driver) in Podman
+app-containers/podman:cron - Installs cron script to automatically update running containers image to newest
 app-containers/podman:wrapper - Install a wrapper to allow using `podman` as a drop-in replacement for `docker`
 app-containers/runc:kmem - Enable Kernel Memory Accounting.
 app-containers/skopeo:btrfs - Enables dependencies for the "btrfs" graph driver.
@@ -2546,6 +2548,8 @@ dev-python/pyqt6:widgets - Build bindings for the QtWidgets module
 dev-python/pyqt6:xml - Build bindings for the QtXml module
 dev-python/pyqt6-webengine:quick - Build bindings for the QtWebEngineQuick module
 dev-python/pyqt6-webengine:widgets - Build bindings for the QtWebEngineWidgets module
+dev-python/pyqtgraph:pyqt6 - Use dev-python/pyqt6 as Qt for Python implementation
+dev-python/pyqtgraph:pyside6 - Use dev-python/pyside as Qt for Python implementation
 dev-python/pyrsistent:native-extensions - Compiles native C extensions (speedups, instead of using python fallback code).
 dev-python/pyside:3d - Build Qt3DCore, Qt3DAnimation, Qt3DExtras, Qt3DInput, Qt3DLogic, and Qt3DRender modules
 dev-python/pyside:bluetooth - Build QtBluetooth module
@@ -3690,7 +3694,7 @@ kde-frameworks/sonnet:aspell - Enable the app-text/aspell spell-checking backend
 kde-frameworks/sonnet:designer - Build plugins for dev-qt/qttools[designer]
 kde-frameworks/sonnet:hunspell - Enable the app-text/hunspell spell-checking backend
 kde-frameworks/sonnet:qml - Enable QML/QtQuick support via dev-qt/qtdeclarative
-kde-misc/kdeconnect:X - Enable remote input mousepad plugin using x11-libs/libfakekey
+kde-misc/kdeconnect:X - Enable remote input mousepad/shareinputdevices plugins relying on X11 libs
 kde-misc/kdeconnect:pulseaudio - Enable system volume control plugin using media-libs/libpulse
 kde-misc/kdeconnect:telephony - Enable telephony plugin using kde-frameworks/modemmanager-qt
 kde-misc/kio-gdrive:share - Enable support for a share menu using kde-frameworks/purpose
@@ -4614,7 +4618,7 @@ media-libs/sdl2-mixer:midi - Basic support for MIDI files
 media-libs/sdl2-mixer:mod - Basic support for MOD files
 media-libs/sdl2-mixer:modplug - Support MOD via media-libs/libmodplug
 media-libs/sdl2-mixer:playtools - Install playwave and playmus tools (useful for testing)
-media-libs/sdl2-mixer:stb - Use dev-libs/stb instead of media-libs/libvorbis for OGG Vorbis support
+media-libs/sdl2-mixer:stb - Use bundled stb instead of media-libs/libvorbis for OGG Vorbis support
 media-libs/sdl2-mixer:tremor - Use media-libs/tremor instead of media-libs/libvorbis for OGG Vorbis support
 media-libs/sdl2-mixer:wav - Support WAVE files
 media-libs/sdl2-mixer:wavpack - Support WavPack files
@@ -5365,6 +5369,7 @@ media-video/obs-studio:mpegts - Enable native SRT/RIST mpegts output.
 media-video/obs-studio:pipewire - Build with PipeWire support.
 media-video/obs-studio:python - Build with scripting support for Python 3.
 media-video/obs-studio:qsv - Build with Intel Quick Sync Video support.
+media-video/obs-studio:screencast - Build with screen/video device capture support via PipeWire.
 media-video/obs-studio:sndio - Build with sndio support.
 media-video/obs-studio:speex - Build with Speex noise suppression filter support.
 media-video/obs-studio:test-input - Build and install input sources used for testing.
@@ -5385,6 +5390,7 @@ media-video/pipewire:lv2 - Allow loading LV2 plugins via media-libs/lv2
 media-video/pipewire:modemmanager - Combined with USE=bluetooth, allows PipeWire to perform telephony on mobile devices.
 media-video/pipewire:pipewire-alsa - Install ALSA plugin, similar to media-plugins/alsa-plugins's USE=pulseaudio.
 media-video/pipewire:roc - Enable roc support for real-time audio streaming over the network, using media-libs/roc-toolkit. See https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Network#roc
+media-video/pipewire:sofa - Spatially Oriented Format for Acoustics (SOFA) support via media-libs/libmysofa
 media-video/pipewire:sound-server - Provide sound server using ALSA and bluetooth devices
 media-video/pipewire:ssl - Enable raop-sink support (needs dev-libs/openssl)
 media-video/pipewire:system-service - Install systemd unit files for running as a system service. Not recommended.
@@ -8568,6 +8574,7 @@ sys-libs/glibc:hash-sysv-compat - enable sysv linker hashes in glibc for compati
 sys-libs/glibc:multiarch - enable optimizations for multiple CPU architectures (detected at runtime)
 sys-libs/glibc:multilib-bootstrap - Provide prebuilt libgcc.a and crt files if missing. Only needed for ABI switch.
 sys-libs/glibc:nscd - Build, and enable support for, the Name Service Cache Daemon
+sys-libs/glibc:old-kernel - Support the oldest kernel also supported by upstream glibc, otherwise the oldest in the Gentoo tree
 sys-libs/glibc:perl - Install additional scripts written in Perl
 sys-libs/glibc:sframe - enable building with sframe backtrace support
 sys-libs/glibc:ssp - protect stack of glibc internals
@@ -8639,6 +8646,7 @@ sys-process/atop:modules - Build netatop kernel module and install netatopd daem
 sys-process/audit:gssapi - Enable GSSAPI support
 sys-process/bottom:battery - Include support for laptop battery information
 sys-process/bottom:gpu - Include support for GPU temperature and memory usage information
+sys-process/bottom:nvidia - Include support for Nvidia GPU usage information
 sys-process/bottom:zfs - Include support for ZFS ARC memory usage information
 sys-process/criu:bpf - Add support for BPF programs via dev-libs/libbpf
 sys-process/criu:filecaps - Install the criu binary with file capabilities to allow for rootless CRIU

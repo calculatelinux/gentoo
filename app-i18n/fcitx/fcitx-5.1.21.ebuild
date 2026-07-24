@@ -14,7 +14,7 @@ SRC_URI="https://download.fcitx-im.org/fcitx5/fcitx5/fcitx5-${PV}_dict.tar.zst -
 S="${WORKDIR}/${MY_PN}-${PV}"
 LICENSE="LGPL-2+ Unicode-DFS-2016"
 SLOT="5"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~riscv"
+KEYWORDS="~amd64 ~arm64 ~ppc ~ppc64 ~riscv ~x86"
 IUSE="+autostart doc +emoji +enchant +keyboard presage +server systemd system-yoga test wayland +X"
 REQUIRED_USE="
 	|| ( wayland X )
@@ -70,7 +70,11 @@ RDEPEND="
 		x11-libs/xcb-util-wm
 	)
 "
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	wayland? (
+		dev-libs/plasma-wayland-protocols
+	)
+"
 BDEPEND="
 	virtual/pkgconfig
 	kde-frameworks/extra-cmake-modules:0
