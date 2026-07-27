@@ -19,7 +19,7 @@ SRC_URI="mirror://apache/logging/log4j/${PV}/apache-log4j-${PV}-src.zip
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~ppc64"
+KEYWORDS="amd64 ~arm64 ppc64"
 
 BDEPEND="
 	app-arch/unzip
@@ -53,6 +53,8 @@ DEPEND="
 "
 
 RDEPEND=">=virtual/jre-1.8:*"
+
+PATCHES=( "${FILESDIR}"/log4j-api-2.26.0-StatusLoggerLevelTest.patch )
 
 JAVA_CLASSPATH_EXTRA="bnd-annotation error-prone-annotations findbugs-annotations jspecify osgi-annotation osgi-core"
 JAVA_GENTOO_CLASSPATH_EXTRA="${DISTDIR}/system-stubs-core-${WSV}.jar"

@@ -1501,10 +1501,13 @@ kernel-2_src_unpack() {
 # @FUNCTION: kernel-2_src_prepare
 # @USAGE:
 # @DESCRIPTION:
-# Apply any user patches
+# Apply patches defined in any ebuild inheriting this eclass
+# and any user patches from /etc/portage/patches
 
 kernel-2_src_prepare() {
-	debug-print "Applying any user patches"
+	debug-print "$FUNCNAME: Applying patches defined in ebuild PATCHES=<*>"
+	[[ -n ${PATCHES[@]} ]] && eapply "${PATCHES[@]}"
+	debug-print "$FUNCNAME: Applying any user patches from /etc/portage/patches/*"
 	eapply_user
 }
 
