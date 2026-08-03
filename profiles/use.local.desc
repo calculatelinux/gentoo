@@ -3277,6 +3277,8 @@ games-fps/urbanterror:mumble - Use Mumble for ingame VoIP (experimental)
 games-fps/urbanterror:server - Build binary for dedicated server
 games-fps/urbanterror:skeetshootmod - Build support for skeetshoot mod for specific maps
 games-fps/urbanterror:voip - Use ioq3 ingame VoIP (experimental)
+games-fps/ut2004-data:gog - Install from the GOG.com release. Note that the game is no longer sold here.
+games-fps/ut2004-data:megapack - Download the Mega Pack content. Mandatory unless using the OldUnreal, Unreal Anthology, or GOG editions.
 games-fps/xonotic:ode - Enable support for physics engine from dev-games/ode
 games-fps/yamagi-quake2:client - Build client
 games-fps/yamagi-quake2:ctf - Build support for the 'Capture The Flag' addon
@@ -3511,6 +3513,9 @@ gui-apps/wayvnc:gbm - enable GPU-side screencopy (experimental)
 gui-apps/wayvnc:tracing - Trace kernel and memory calls
 gui-apps/wf-recorder:pipewire - Enable support for audio capture via media-video/pipewire.
 gui-apps/wf-recorder:pulseaudio - Enable support for audio capture via PulseAudio
+gui-apps/wf-shell:ddcutil - Build monitor brightness widget
+gui-apps/wf-shell:pipewire - Build pipewire mixer widget
+gui-apps/wf-shell:pulseaudio - Build pulseaudio volume widget
 gui-libs/gtk:broadway - Enable the GDK Broadway backend.
 gui-libs/gtk:cloudproviders - Enable GtkPlacesSidebar to access cloud services
 gui-libs/gtk:colord - Use x11-misc/colord for color management in printing
@@ -6030,7 +6035,6 @@ net-im/spectrum2:frotz - Enables the Z-Engine backend.
 net-im/spectrum2:irc - Enables the IRC backend, based on net-im/libcommuni.
 net-im/spectrum2:purple - Enables the libpurple backend, based on net-im/pidgin.
 net-im/spectrum2:sms - Enables the SMS backend, based on app-mobilephone/smstools.
-net-im/spectrum2:twitter - Enables the Twitter backend.
 net-im/telegram-desktop:enchant - Use the app-text/enchant spell-checking backend instead of app-text/hunspell
 net-im/telegram-desktop:fonts - Use builtin patched copy of open-sans fonts (overrides fontconfig)
 net-im/telegram-desktop:libdispatch - Use dev-libs/libdispatch to speed up concurrent code execution
@@ -8162,6 +8166,7 @@ sys-auth/pambase:securetty - Enable pam_securetty module in the login stack. Not
 sys-auth/pambase:sha512 - Switch Linux-PAM's pam_unix module to use sha512 for passwords hashes rather than MD5. This option requires sys-libs/pam version 1.0.1 built against sys-libs/glibc version 2.7, if it's built against an earlier version, it will silently be ignored, and MD5 hashes will be used. All the passwords changed after this USE flag is enabled will be saved to the shadow file hashed using SHA512 function. The password previously saved will be left untouched. Please note that while SHA512-hashed passwords will still be recognised if the USE flag is removed, the shadow file will not be compatible with systems using an earlier glibc version.
 sys-auth/pambase:sssd - Add System Security Services Daemon (sys-auth/sssd) support via pam_sss.
 sys-auth/pambase:systemd - Use pam_systemd module to register user sessions in the systemd control group hierarchy.
+sys-auth/pambase:turnstile - Use pam_turnstile module to register user sessions with turnstile.
 sys-auth/pambase:yescrypt - Switch Linux-PAM's pam_unix module to use yescrypt for passwords hashes rather than MD5. Like with USE=sha512 (see that description), this only changes the default, and hashes with other types are still supported.
 sys-auth/polkit:systemd - Use sys-apps/systemd for session tracking
 sys-auth/seatd:builtin - Enable embedded server in libseat
