@@ -79,6 +79,9 @@ src_configure() {
 		--rundir=$(usex kernel_linux "${EPREFIX}/run/dhcpcd" "${EPREFIX}/var/run/dhcpcd")
 		$(usex privsep '--privsepuser=dhcpcd' '')
 		$(usex udev '' '--without-dev --without-udev')
+		# Only needed for some odd platforms, can wire up if someone
+		# identifies which.
+		--without-libpcap
 		CC="$(tc-getCC)"
 	)
 	econf "${myeconfargs[@]}"
