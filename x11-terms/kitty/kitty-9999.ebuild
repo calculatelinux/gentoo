@@ -77,6 +77,7 @@ DEPEND="
 BDEPEND="
 	${PYTHON_DEPS}
 	>=dev-lang/go-1.26:=
+	dev-util/shader-slang
 	sys-libs/ncurses
 	virtual/pkgconfig
 	test? ( $(python_gen_cond_dep 'dev-python/pillow[zlib,${PYTHON_USEDEP}]') )
@@ -203,6 +204,7 @@ src_install() {
 pkg_postinst() {
 	xdg_pkg_postinst
 
+	optfeature "custom shaders support" dev-util/shader-slang
 	optfeature "audio-based terminal bell support" media-libs/libcanberra
 	use X && optfeature "X11 startup notification support" x11-libs/startup-notification
 	optfeature "opening links from the terminal" x11-misc/xdg-utils
