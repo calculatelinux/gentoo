@@ -17,7 +17,7 @@ HOMEPAGE="
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm64"
 
 DEPEND="
 	dev-libs/aws-c-common:=
@@ -40,7 +40,8 @@ RDEPEND="
 "
 BDEPEND="
 	test? (
-		dev-python/pytest
+		dev-python/h2[${PYTHON_USEDEP}]
+		dev-python/websockets[${PYTHON_USEDEP}]
 	)
 "
 
