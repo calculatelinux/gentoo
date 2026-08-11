@@ -1468,7 +1468,6 @@ dev-db/mariadb:test - Install upstream testsuites for end use.
 dev-db/mariadb:yassl - Enable SSL connections and crypto functions using the bundled yaSSL
 dev-db/mongodb:mongosh - Install the MongoDB shell from app-admin/mongosh-bin
 dev-db/mongodb:tools - Install the MongoDB tools (mongoimport, mongodump...) from app-admin/mongo-tools
-dev-db/mycli:ssh - Add support for connection over SSH tunnel
 dev-db/mysql:cjk - Add CJK support for InnoDB fulltext search using app-text/mecab
 dev-db/mysql:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/mysql:numa - Enable NUMA support using sys-process/numactl (NUMA kernel support is also required)
@@ -2493,6 +2492,7 @@ dev-python/immutables:native-extensions - Compiles native "C" extensions (speedu
 dev-python/ipython:nbconvert - Enable support for converting notebooks to various formats using app-text/pandoc
 dev-python/ipython:notebook - Install requirements for the web notebook based on dev-python/tornado
 dev-python/jsonpickle:test-full - Run test suite in full via additional (large) test dependencies, like dev-python/pandas.
+dev-python/liblore:auth - Build with DKIM/DMARC/ARC verification support Requires dev-python/authheaders
 dev-python/matplotlib:excel - Pull dev-python/xlwt for the exceltools toolkit
 dev-python/matplotlib:gtk3 - Enable x11-libs/gtk+:3 support
 dev-python/matplotlib:webagg - Enable webagg backend that uses dev-python/tornado
@@ -4729,7 +4729,6 @@ media-plugins/grilo-plugins:freebox - Build support for viewing TV channels usin
 media-plugins/grilo-plugins:gnome-online-accounts - Enable net-libs/gnome-online-accounts support
 media-plugins/grilo-plugins:thetvdb - Build support for thetvdb.com
 media-plugins/grilo-plugins:tracker - Build support for content discovery using the app-misc/tinysparql indexer
-media-plugins/grilo-plugins:youtube - Build support for YouTube content discovery using dev-libs/libgdata
 media-plugins/gst-plugins-gtk:gles2 - Enable gtkglsink OpenGL sink based on GLESv2 API
 media-plugins/gst-plugins-gtk:opengl - Enable gtkglsink OpenGL sink based on desktop OpenGL API
 media-plugins/gst-plugins-meta:http - Enable http streaming via net-libs/libsoup
@@ -6206,6 +6205,7 @@ net-libs/libsrtp:console - Use /dev/console instead of stdout for error messages
 net-libs/libsrtp:nss - Use NSS crypto primitives
 net-libs/libsrtp:openssl - Use OpenSSL crypto primitives
 net-libs/libsrtp:syslog - Use syslog for error messages
+net-libs/libssh:fido2 - Enable FIDO2 support
 net-libs/libssh:gssapi - Enable gssapi support
 net-libs/libssh:mbedtls - Use net-libs/mbedtls as TLS provider
 net-libs/libssh:pcap - Build with PCAP output support

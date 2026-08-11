@@ -10,4 +10,4 @@ RDEPEND=app-shells/bash:*
 SLOT=0
 SRC_URI=https://github.com/bats-core/bats-core/archive/v1.13.0.tar.gz -> bats-1.13.0.tar.gz
 _eclasses_=multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	optfeature	58cc13bdc4e9a204077e1e7c9a1d7988
-_md5_=3abe82844d7ec7d29378b7dd9195b72b
+_md5_=c546469c6ba43686ae3da428b6590f9d
