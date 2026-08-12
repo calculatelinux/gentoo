@@ -36,7 +36,7 @@ else
 	PATCHES=("${WORKDIR}/patch")
 	SLOT="${PV%%.*}"
 	[[ ${PV} == *.*.* ]] && SLOT+="-vcs"
-	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~sparc ~x86 ~x64-macos"
+	KEYWORDS="~alpha amd64 arm arm64 ~hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~sparc x86 ~x64-macos"
 fi
 
 DESCRIPTION="The advanced, extensible, customizable, self-documenting editor"
@@ -471,6 +471,10 @@ src_test() {
 
 		# Reason: fails with app-crypt/freepg
 		%lisp/epg-tests.el
+
+		# Reason: https://bugs.gnu.org/72120
+		# dired-test-bug27243-02
+		%lisp/dired-tests.el
 	)
 	use elibc_musl && exclude_tests+=(
 			# Reason: newlocale(3) lenient locale validation #906012
