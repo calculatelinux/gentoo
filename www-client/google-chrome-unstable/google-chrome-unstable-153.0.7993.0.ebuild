@@ -27,7 +27,7 @@ S=${WORKDIR}
 
 LICENSE="google-chrome"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~amd64 ~arm64"
 
 IUSE="qt6 selinux"
 
@@ -80,7 +80,7 @@ pkg_nofetch() {
 
 pkg_pretend() {
 	# Protect against people using autounmask overzealously
-	use amd64 || use arm64 || die "google-chrome only works on amd64"
+	use amd64 || use arm64 || die "${PN} only works on supported architectures (amd64, arm64)."
 }
 
 pkg_setup() {

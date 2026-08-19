@@ -214,7 +214,7 @@ LICENSE+="
 	Unicode-DFS-2016 ZLIB
 "
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~ppc64 ~riscv ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86"
 
 EPYTEST_PLUGINS=()
 distutils_enable_tests pytest
@@ -228,4 +228,12 @@ QA_FLAGS_IGNORED="usr/lib.*/py.*/site-packages/ast_serialize/ast_serialize.*"
 src_unpack() {
 	pypi_src_unpack
 	cargo_src_unpack
+}
+
+src_prepare() {
+	default
+
+	# hack around https://github.com/mypyc/ast_serialize/issues/68
+	cd "${ECARGO_VENDOR}"/get-size2-* || die
+	eapply "${FILESDIR}/get-size2-ppc.patch"
 }
