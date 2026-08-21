@@ -2469,7 +2469,6 @@ dev-python/apprise:dbus - Support sending notifications to the desktop over D-Bu
 dev-python/apprise:mqtt - Support sending notifications over MQTT
 dev-python/authlib:django - Enable Django framework support
 dev-python/authlib:jose - Enable JSON Object Signing and Encryption (JOSE) support via dev-python/pycryptodome
-dev-python/autobahn:xbr - Add support for XBR decentralized data markets and etherium blockchain
 dev-python/blake3:rust - Build the Rust implementation (if disabled, the "experimental" C implementation is used instead).
 dev-python/bpython:clipboard - Enable copying to clipboard using dev-python/pyperclip
 dev-python/bpython:jedi - Enable autocompletion using dev-python/jedi
@@ -3628,6 +3627,7 @@ kde-apps/kdesdk-meta:subversion - Enable support for Apache Subversion VCS in kd
 kde-apps/kdesdk-meta:webengine - Enable dev-util/kdevelop, requiring dev-qt/qtwebengine
 kde-apps/kdeutils-meta:7zip - Install app-arch/p7zip or app-arch/7zip[symlink] for 7zip archive support in kde-apps/ark
 kde-apps/kdeutils-meta:gpg - Install kde-apps/kgpg which depends on kde-apps/akonadi
+kde-apps/kdeutils-meta:kwallet - Install kde-apps/kwalletmanager tool for kde-frameworks/kwallet
 kde-apps/kdeutils-meta:lrz - Install app-arch/lrzip for LRZ archive support in kde-apps/ark
 kde-apps/kdeutils-meta:rar - Install one of app-arch/rar, app-arch/unrar or app-arch/unar for RAR archive support in kde-apps/ark
 kde-apps/kdeutils-meta:webengine - Install app-editors/ghostwriter and kde-apps/kimagemapeditor, requiring dev-qt/qtwebengine
@@ -3647,6 +3647,7 @@ kde-apps/kleopatra:pim - Enable WKS publishing support using kde-apps/kmail
 kde-apps/kmag:keyboardfocus - Enable keyboard focus tracking
 kde-apps/kmail:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
 kde-apps/konqueror:activities - Enable kactivities support
+kde-apps/konsole:ssh - Enable net-libs/libsshsupport for resolving user SSH configuration
 kde-apps/korganizer:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
 kde-apps/krdc:ssh - Enable VNC/RDP SSH tunnel support via net-libs/libssh
 kde-apps/ksystemlog:kdesu - Run as root using kdesu from kde-plasma/kde-cli-tools
@@ -8814,7 +8815,7 @@ www-client/firefox:eme-free - Disable EME (DRM plugin) capability at build time
 www-client/firefox:gmp-autoupdate - Allow Gecko Media Plugins (binary blobs) to be automatically downloaded and kept up-to-date in user profiles
 www-client/firefox:gnome-shell - Integrate with gnome-base/gnome-shell search
 www-client/firefox:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
-www-client/firefox:jpegxl - Add JPEG XL image support (EXPERIMENTAL, no official upstream support)
+www-client/firefox:jpegxl - Add JPEG XL / jxl image support
 www-client/firefox:jumbo-build - Enable unified build - combines source files to speed up build process, but requires more memory
 www-client/firefox:libproxy - Enable libproxy support
 www-client/firefox:openh264 - Use media-libs/openh264 for H264 support instead of downloading binary blob from Mozilla at runtime
