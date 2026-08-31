@@ -22,9 +22,18 @@ RDEPEND="virtual/lapack"
 DEPEND="${RDEPEND}"
 BDEPEND="virtual/pkgconfig"
 
+PATCHES=( "${FILESDIR}"/${P}-cmake.patch )
+
 src_prepare() {
 	# bug #878989 976683
 	filter-lto
 
 	cmake_src_prepare
+}
+
+src_configure() {
+	local mycmakeargs=(
+		-DBUILD_STATIC_LIBS=OFF
+	)
+	cmake_src_configure
 }
