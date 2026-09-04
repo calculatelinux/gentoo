@@ -61,7 +61,7 @@ else
 	"
 	S="${WORKDIR}/${MY_P}-src"
 
-	KEYWORDS="~amd64 ~arm ~arm64 ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86"
+	KEYWORDS="amd64 arm arm64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86"
 fi
 
 DESCRIPTION="Systems programming language originally developed by Mozilla"
@@ -261,6 +261,17 @@ pkg_pretend() {
 pkg_setup() {
 	pre_build_checks
 	python-any-r1_pkg_setup
+
+	if ! [[ -v _RUST_LLVM_MAP[${SLOT}] ]] ; then
+		die "${SLOT} is missing from rust.eclass's RUST_LLVM_MAP! Please fix the eclass."
+	fi
+	local found_slot i
+	for (( i = 0; i < ${#_RUST_SLOTS_ORDERED[@]} ; i++ )) ; do
+		[[ ${_RUST_SLOTS_ORDERED[i]} == ${SLOT} ]] && found_slot=1
+	done
+	if ! [[ -v found_slot ]] ; then
+		die "${SLOT} is missing from rust.eclass's _RUST_SLOTS_ORDERED! Please fix the eclass."
+	fi
 
 	export LIBGIT2_NO_PKG_CONFIG=1 #749381
 	if tc-is-cross-compiler; then

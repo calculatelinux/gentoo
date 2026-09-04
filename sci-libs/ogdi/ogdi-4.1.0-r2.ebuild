@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit flag-o-matic
+inherit toolchain-funcs flag-o-matic
 
 DESCRIPTION="Open Geographical Datastore Interface, a GIS support library"
 HOMEPAGE="http://ogdi.sourceforge.net/ https://github.com/libogdi/ogdi"
@@ -28,6 +28,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-3.2.0-optimisation.patch
 	"${FILESDIR}"/${PN}-3.2.0-tcl.patch
 	"${FILESDIR}"/${P}-c99-conversions.patch
+	"${FILESDIR}"/${P}-soname.patch
 )
 
 src_prepare() {
@@ -50,7 +51,7 @@ src_configure() {
 
 src_compile() {
 	# bug #299239
-	emake -j1
+	emake -j1 AR="$(tc-getAR) cr"
 }
 
 src_install() {

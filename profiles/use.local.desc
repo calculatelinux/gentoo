@@ -3633,6 +3633,7 @@ kde-apps/kdeutils-meta:webengine - Install app-editors/ghostwriter and kde-apps/
 kde-apps/kget:bittorrent - Enable bittorrent transfer plugin through net-libs/libktorrent
 kde-apps/kget:gpg - Enable signature verification by GpgME++ via app-crypt/gpgme
 kde-apps/kget:mms - Enable MMS (Microsoft Media Server) plugin through media-libs/libmms
+kde-apps/kgpg:pim - Enable addressbook support using kde-apps/akonadi
 kde-apps/kig:scripting - Support Python scripting
 kde-apps/kio-extras:X - Enable support for XCursor thumbnails via x11-libs/libX11
 kde-apps/kio-extras:activities - Enable activities KIO worker and fileitem plugin
@@ -3849,6 +3850,7 @@ llvm-runtimes/libclc:spirv - Build SPIRV targets
 llvm-runtimes/libcxx:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
 llvm-runtimes/libcxx:libcxxabi - Build on top of llvm-runtimes/libcxxabi instead of gcc's libsupc++ (avoids depending on gcc).
 llvm-runtimes/libcxxabi:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
+llvm-runtimes/libunwind:cet - Enable Intel Control-flow Enforcement Technology
 llvm-runtimes/libunwind:clang - Force building using installed clang (rather than the default CC/CXX; required for testing).
 llvm-runtimes/offload:clang - Force building using installed clang (rather than the default CC/CXX).
 llvm-runtimes/offload:ompt - Enable OpenMP Tools Interface support
@@ -6507,6 +6509,7 @@ net-misc/freerdp:client - Build client binaries
 net-misc/freerdp:fuse - Clipboard with FUSE file copy support
 net-misc/freerdp:openh264 - Enable H.264 support using media-libs/openh264
 net-misc/freerdp:server - Build server binaries
+net-misc/freerdp:winpr-tools - Build WinPR helper binaries
 net-misc/frr:fpm - Enable Forwarding Plane Manager support
 net-misc/frr:grpc - Enable gRPC plugin
 net-misc/frr:nhrp - Build Next Hop Resolution Protocol daemon
