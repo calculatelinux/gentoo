@@ -10,6 +10,8 @@ if [[ ${PV} = 99999999 ]]; then
 else
 	# Instructions to make a dist tarball:
 	# cd /path/to/gentoo-repo
+	# P=eclass-manpages-$(TZ=UTC git log -1 --pretty="%cd" \
+	#   --date="format-local:%Y%m%d" -- eclass)
 	# tar -cJf ${P}.tar.xz --transform="s:^eclass/:${P}/:" eclass/*.eclass
 	SRC_URI="https://distfiles.gentoo.org/pub/proj/qa/${PN}/${P}.tar.xz"
 	# Keep the keywords stable. No need to change to ~arch.
@@ -22,17 +24,17 @@ HOMEPAGE="https://gitweb.gentoo.org/repo/gentoo.git/tree/eclass"
 LICENSE="GPL-2"
 SLOT="0"
 
-BDEPEND="sys-apps/pkgcore"
+BDEPEND=">=sys-apps/pkgcore-0.12.42"
 
 if [[ ${PV} = 99999999 ]]; then
 	src_unpack() {
 		git-r3_fetch
-		git-r3_checkout "" "" "" eclass
+		git-r3_checkout "" "" "" "eclass/*.eclass"
 	}
 fi
 
 src_compile() {
-	pmaint eclass -f man -o "{eclass}.eclass.5" *.eclass
+	edo pmaint eclass -f man -o "{eclass}.eclass.5" *.eclass
 }
 
 src_install() {

@@ -731,7 +731,6 @@ app-emulation/virtualbox-kvm:sdk - Enable building of SDK
 app-emulation/virtualbox-kvm:udev - Controls installation of special USB udev rules.
 app-emulation/virtualbox-kvm:vboxwebsrv - Build and install the VirtualBox webservice
 app-emulation/virtualbox-kvm:vde - Support for VDE networking via net-misc/vde
-app-emulation/virtualbox-kvm:vmmraw - Enable 32-bit support on a 64-bit kernel.
 app-emulation/vkd3d-proton:crossdev-mingw - Use sys-devel/crossdev for the toolchain rather than dev-util/mingw64-toolchain (requires manual setting up and is mostly unsupported, try disabling if have issues)
 app-emulation/vkd3d-proton:extras - Install extra tools and demos in /usr/lib/vkd3d-proton
 app-emulation/wine-gecko:shared - Install pre-unpacked files which do not need to be copied into the Wine prefix
@@ -2500,7 +2499,6 @@ dev-python/mypy:native-extensions - Compiles native C extensions (speedups, inst
 dev-python/netcdf4:blosc - Allow using blosc compression via dev-libs/c-blosc
 dev-python/numpy:cpudetection - Enable dynamic dispatch to additional CPU extensions not covered by enabled CPU_FLAGS_*. This permits NumPy to benefit from improved performance when CPUs support more instruction sets, while preserving compatibility with the baseline set by CPU_FLAGS_*.
 dev-python/pandas:full-support - Pull all packages to give pandas full support
-dev-python/paramiko:server - Enable server feature
 dev-python/peewee:native-extensions - Compiles native C extension for more complete SQLite3 support.
 dev-python/pillow:imagequant - Build with Image Quantization Library support
 dev-python/pillow:raqm - Support setting text direction, language or font features. Requires media-libs/raqm.
@@ -3966,6 +3964,7 @@ mail-client/s-nail:ssl - If network is enabled, this adds support for S/MIME and
 mail-client/thunderbird:clang - Use Clang compiler instead of GCC
 mail-client/thunderbird:eme-free - Disable EME (DRM plugin) capability at build time
 mail-client/thunderbird:hwaccel - Force-enable hardware-accelerated rendering (Mozilla bug 594876)
+mail-client/thunderbird:jumbo-build - Enable unified build - combines source files to speed up build process, but requires more memory
 mail-client/thunderbird:libproxy - Enable libproxy support
 mail-client/thunderbird:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
 mail-client/thunderbird:pulseaudio - Add sound server support via media-libs/libpulse (may be PulseAudio or Pipewire, or apulse if installed)
@@ -6797,6 +6796,7 @@ net-misc/wget:cookie-check - Enable cookie checks via net-libs/libpsl
 net-misc/wget:libproxy - Support for automatic proxy configuration management through net-libs/libproxy.
 net-misc/wget:metalink - Enable support for media-libs/libmetalink
 net-misc/wget:ntlm - Enable support for NTLM (Windows-based) authorization
+net-misc/wget:psl - Enable Public Suffix List (PSL) support
 net-misc/wget:uuid - Generate UUIDs for the WARC (Web ARChive file format) using libuuid; otherwise use a simple RNG (random number generator)
 net-misc/wget2:gpgme - Build app-crypt/gpgme backend
 net-misc/wget2:psl - Use public suffix list via net-libs/libpsl
