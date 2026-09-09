@@ -156,6 +156,10 @@ multilib_src_configure() {
 			-DCMAKE_INSTALL_PREFIX="${EPREFIX}/usr/${CTARGET}/usr"
 		)
 	fi
+	if use kernel_Darwin; then
+		# For Darwin it ships libc++ in system by default, conflicting prefix
+		mycmakeargs+=( -DLIBCXX_ABI_NAMESPACE=__gentoo1 )
+	fi
 	if use test; then
 		mycmakeargs+=(
 			-DLLVM_EXTERNAL_LIT="${EPREFIX}/usr/bin/lit"
@@ -177,6 +181,11 @@ multilib_src_compile() {
 
 multilib_src_test() {
 	local -x LIT_PRESERVES_TMP=1
+	if use amd64 || use x86; then
+		# https://github.com/llvm/llvm-project/issues/212002
+		local -x LIT_XFAIL="libcxx/atomics/clear_padding.pass.cpp"
+	fi
+
 	cmake_build libcxx-test-suite-install-cxx
 	if [[ ${CHOST} != *-darwin* ]] ; then
 		local libdir=$(get_libdir)

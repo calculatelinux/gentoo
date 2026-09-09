@@ -1,0 +1,17 @@
+BDEPEND=dev-lang/perl app-alternatives/ninja >=dev-build/cmake-3.28.5 fortran? ( virtual/fortran )
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=mpi? ( virtual/mpi[romio,fortran?] ) szip? ( sci-libs/libaec:=[szip] ) zlib? ( virtual/zlib:= ) fortran? ( virtual/fortran )
+DESCRIPTION=General purpose library and file format for storing scientific data
+EAPI=8
+HOMEPAGE=https://github.com/HDFGroup/hdf5/
+INHERIT=cmake fortran-2 flag-o-matic toolchain-funcs
+IUSE=cxx debug fortran +hl mpi szip test threads unsupported zlib
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~arm64-macos ~x64-macos
+LICENSE=NCSA-HDF
+RDEPEND=mpi? ( virtual/mpi[romio,fortran?] ) szip? ( sci-libs/libaec:=[szip] ) zlib? ( virtual/zlib:= ) fortran? ( virtual/fortran )
+REQUIRED_USE=!unsupported? ( ?? ( cxx mpi ) threads? ( !cxx !mpi !fortran !hl ) )
+RESTRICT=!test? ( test )
+SLOT=0/320-cmake
+SRC_URI=https://github.com/HDFGroup/hdf5/releases/download/2.2.0/hdf5-2.2.0.tar.gz
+_eclasses_=cmake	3530055400d05e64deaba3042af30af6	flag-o-matic	fd3558f73f6503093adee69adf41020d	fortran-2	ae6d43513003405bd4a48698fc20370a	multiprocessing	45d0620f25c2f063ad6276ecd9ed9399	ninja-utils	d063ea1900a793f93eb095010d6d9156	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
+_md5_=89ce9180acaa898d076a6e1bbf6c5de1

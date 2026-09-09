@@ -30,19 +30,10 @@ src_compile() {
 }
 
 src_test() {
-	local toskip=(
-		# Fails with FEATURES=network-sandbox
-		TestValidateProject
-	)
-
-	if ! use amd64 && ! use x86; then
-		# arch-dependent test, reported upstream
-		# https://github.com/git-bug/git-bug/issues/1591
-		toskip+=( TestGitFileHandlers )
-	fi
-	toskip="$(tr ' ' '|' <<< "${toskip[@]}")"
-
-	CI=true ego test -v ./... -skip "${toskip}"
+	# TestValidateProject fails with FEATURES=network-sandbox
+	# TestGitFileHandlers appears to be brittle, see bug #982080 and
+	# https://github.com/git-bug/git-bug/issues/1591
+	CI=true ego test -v ./... -skip "TestValidateProject|TestGitFileHandlers"
 }
 
 src_install() {

@@ -34,6 +34,10 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
+PATCHES=(
+	"${FILESDIR}"/${P}-parallel-build.patch
+)
+
 src_prepare() {
 	default
 	sed -i -e "s/ARCH/MYARCH/g" -e "/ldconfig/d" -e "/bash.completion/d" Makefile || die

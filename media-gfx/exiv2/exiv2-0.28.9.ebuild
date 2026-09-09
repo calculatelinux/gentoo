@@ -51,6 +51,8 @@ BDEPEND="
 
 DOCS=( README.md doc/ChangeLog doc/cmd.txt )
 
+PATCHES=( "${FILESDIR}/${P}-libcxx23-missing-header.patch" ) # in 0.29.0
+
 pkg_setup() {
 	if use doc || use test ; then
 		python-any-r1_pkg_setup

@@ -30,8 +30,8 @@ src_configure() {
 
 	local mycmakeargs=(
 		-DBUILD_TESTS=$(usex test)
-		-DGOOGLETEST_ROOT=/usr/include
 	)
+	use test && mycmakeargs+=( -DGOOGLETEST_ROOT=/usr/include )
 	cmake_src_configure
 }
 

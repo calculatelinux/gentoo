@@ -13,6 +13,9 @@ PYTHON_REQ_USE="tk?"
 WEBAPP_OPTIONAL=yes
 WEBAPP_MANUAL_SLOT=yes
 
+# bug #982155
+CMAKE_REMOVE_MODULES_LIST=( vtkModule )
+
 inherit check-reqs cmake cuda java-pkg-opt-2 multiprocessing python-single-r1 toolchain-funcs virtualx webapp
 
 # Short package version

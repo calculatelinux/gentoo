@@ -6473,7 +6473,6 @@ net-misc/curl:openssl - Enable openssl ssl backend
 net-misc/curl:pop3 - Enable Post Office Protocol 3 support
 net-misc/curl:psl - Enable Public Suffix List (PSL) support. See https://daniel.haxx.se/blog/2024/01/10/psl-in-curl/.
 net-misc/curl:quic - Enable support for QUIC (RFC 9000); a UDP-based protocol intended to replace TCP
-net-misc/curl:rtmp - Enable RTMP Streaming Media support
 net-misc/curl:rustls - Enable Rustls ssl backend
 net-misc/curl:sasl-scram - Enable snupport for additional SASL SCRAM-SHA authentication methods via net-misc/gsasl
 net-misc/curl:smtp - Enable Simple Mail Transfer Protocol support
