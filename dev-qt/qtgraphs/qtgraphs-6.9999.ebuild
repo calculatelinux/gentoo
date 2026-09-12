@@ -21,6 +21,9 @@ RDEPEND="
 	quick3d? ( ~dev-qt/qtquick3d-${PV}:6 )
 "
 DEPEND="${RDEPEND}"
+BDEPEND="
+	~dev-qt/qtshadertools-${PV}:6
+"
 
 CMAKE_SKIP_TESTS=(
 	# hangs+timeout with offscreen rendering
@@ -31,7 +34,8 @@ src_configure() {
 	local mycmakeargs=(
 		# simpler than keeping track of and disabling every graphs-3d* features
 		$(cmake_use_find_package quick3d Qt6Quick3D)
-		# not packaged yet, and Qt disables it by default for now
+		# qtcanvaspainter is not packaged yet, and the default is the
+		# "high_quality_backend" making which is best debatable
 		-DQT_FEATURE_graphs_2d_high_performance_backend=OFF
 	)
 

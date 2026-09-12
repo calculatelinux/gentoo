@@ -117,20 +117,6 @@ qt6-build_src_unpack() {
 # QT6_PREFIX, QT6_LIBDIR, and others), and handle anything else
 # generic as needed.
 qt6-build_src_prepare() {
-	# There is a suspicion that there "may" still be portage ordering issues
-	# when Qt's complex depgraph is involved, e.g. build a package with USE=qml
-	# before (matching) qtdeclarative version is updated despite all these
-	# packages DEPEND on ~qtdeclarative-${PV}. Tentatively assert to see if
-	# if the issue really exists (bug #959567).
-	if in_iuse qml && use qml && [[ ${PN} != qtwayland ]] &&
-		! has_version -d "~dev-qt/qtdeclarative-${PV}"
-	then
-		eerror "${CATEGORY}/${PN}[qml] depends on ~dev-qt/qtdeclarative-${PV}"
-		eerror "but it has not been upgraded/installed yet, implies that there"
-		eerror "is a bug in the package manager assuming normal usage."
-		die "aborting to avoid installing a broken package"
-	fi
-
 	# Qt has quite a lot of unused (false positive) CMakeLists.txt
 	local CMAKE_QA_COMPAT_SKIP=1
 
@@ -169,24 +155,22 @@ qt6-build_src_prepare() {
 # @DESCRIPTION:
 # Run cmake_src_configure and handle anything else generic as needed.
 qt6-build_src_configure() {
-	if [[ ${PN} == qttranslations ]]; then
-		# does not compile anything, further options would be unrecognized
-		cmake_src_configure
-		return
-	fi
-
 	local defaultcmakeargs=(
 		# cmake defaults to "STATUS" but Qt changes that to "NOTICE" which
 		# hides a lot of information that is useful for bug reports
 		--log-level=STATUS
 		# ...but dev messages are noisy and not really useful downstream
 		-Wno-dev
+		# generally unwanted on Gentoo, portage handles tracking licenses
+		-DQT_GENERATE_SBOM=OFF
 		# see _qt6-build_create_user_facing_links
 		-DINSTALL_PUBLICBINDIR="${QT6_PREFIX}"/bin
+	)
+
+	# avoid QA warning for unused options when not compiling anything
+	[[ ${PN} != qttranslations ]] && defaultcmakeargs+=(
 		# note that if qtbase was built with tests, this is default ON
 		-DQT_BUILD_TESTS=$(in_iuse test && use test && echo ON || echo OFF)
-		# generally unwated on Gentoo, portage handles tracking licenses
-		-DQT_GENERATE_SBOM=OFF
 		# avoid appending -O2 after user's C(XX)FLAGS (bug #911822)
 		-DQT_USE_DEFAULT_CMAKE_OPTIMIZATION_FLAGS=ON
 	)

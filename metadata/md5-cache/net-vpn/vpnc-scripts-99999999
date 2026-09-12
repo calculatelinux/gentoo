@@ -9,4 +9,4 @@ PROPERTIES=live
 RDEPEND=!<net-vpn/vpnc-0.5.3_p550-r3
 SLOT=0
 _eclasses_=git-r3	e6c2f983e006e805160436c75a0c1562
-_md5_=b6b6724563d52f349a431dd9cb75d2df
+_md5_=2a2e7fc5430c5dc50c357d992c0726fd

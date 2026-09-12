@@ -12,4 +12,4 @@ RDEPEND=app-text/libpaper:= media-libs/fontconfig >=media-libs/freetype-2.4.9:2=
 SLOT=0/10.06
 SRC_URI=https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10060/ghostscript-10.06.0.tar.xz https://dev.gentoo.org/~sam/distfiles/app-text/ghostscript-gpl/ghostscript-gpl-10.04.0-patches.tar.xz
 _eclasses_=autotools	0698802996fcfe9a604eac3c1f6e7112	flag-o-matic	fd3558f73f6503093adee69adf41020d	gnuconfig	b4fa4889c6f586d6b069215a86dd9e53	libtool	6a96cd90e5da8c7c615015479f46f1a4	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
-_md5_=3b1ffb21b7c7d2d220c88f88eff8cc5f
+_md5_=da33226a2c2065036d74d9f020e1a9e8

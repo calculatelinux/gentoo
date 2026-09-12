@@ -37,6 +37,7 @@ app-accessibility/speech-dispatcher:espeak - Adds support for espeak-ng speech e
 app-accessibility/speech-dispatcher:flite - Adds support for flite speech engine
 app-accessibility/speech-dispatcher:pipewire - Enables support for PipeWire. Recommended for latency related advantages if it works in your setup.
 app-admin/calamares:livecd - USE flag for Gentoo modules branding on LIVEDVD
+app-admin/chipass:yubikey - YubiKey HMAC-SHA1 challenge-response database protection
 app-admin/clsync:apidoc - Provide doxygen generated API docs.
 app-admin/clsync:cgroups - Use cgroups to limit /dev access.
 app-admin/clsync:clsync - Build clsync binary. Most likely you want it. However it is possible to build only libclsync without clsync itself.
@@ -360,7 +361,6 @@ app-containers/incus:fuidshift - Install the fuidshift binary - currently confli
 app-containers/incus:qemu - Pull dependencies needed to manage QEMU-based virtual machines with Incus
 app-containers/lxc:landlock - Use Landlock to restrict what the monitor API handlers can do on the system
 app-containers/lxc:tools - Build and install additional command line tools
-app-containers/nerdctl:rootless - Enables dependencies for running in rootless mode.
 app-containers/podman:btrfs - Enable btrfs support (graph driver) in Podman
 app-containers/podman:cron - Installs cron script to automatically update running containers image to newest
 app-containers/podman:wrapper - Install a wrapper to allow using `podman` as a drop-in replacement for `docker`
@@ -1210,21 +1210,13 @@ app-text/fbpdf:poppler - Use app-text/poppler instead of app-text/mupdf for rend
 app-text/feathernotes:X - Link application against X11 libraries which adds support for virtual desktop awareness and tab DND
 app-text/ghostscript-gpl:unicode - Add support for unicode passwords via net-dns/libidn
 app-text/groonga:apache-arrow - Enable support for Apache Arrow
-app-text/groonga:benchmark - Build benchmark programs
 app-text/groonga:blosc - Allow using blosc compression via dev-libs/c-blosc2
-app-text/groonga:exact-alloc-count - Atomic counting for memory alloc count
-app-text/groonga:futex - Use futex
-app-text/groonga:json - Enable JSON processing using dev-libs/rapidjson
-app-text/groonga:libevent - Enable dev-libs/libevent used for suggestion
+app-text/groonga:json - Enable JSON parser
 app-text/groonga:mecab - Use app-text/mecab for morphological analysis
 app-text/groonga:msgpack - Enable dev-libs/msgpack used for suggestion
-app-text/groonga:nfkc - Use nfkc based utf8 normalization
-app-text/groonga:sphinx - Enable document generation by app-misc/sphinx
 app-text/groonga:stemmer - Enable stemming token filter using dev-libs/snowball-stemmer
 app-text/groonga:suggest-learner - Build groonga-suggest-learner to learn suggest result from groonga-suggest-httpd or query logs
-app-text/groonga:uyield - Build for detecting race conditions
 app-text/groonga:xxhash - Enable drilldown by hashed key using dev-libs/xxhash
-app-text/groonga:zeromq - Enable net-libs/zeromq used for suggestion
 app-text/htmltidy:deprecated - Install tools and header files which are now considered deprecated
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
 app-text/kbibtex:webengine - Use dev-qt/qtwebengine for HTML previews
@@ -4743,8 +4735,8 @@ media-plugins/ir_lv2:tools - Build convert4chan tool
 media-plugins/live:tools - Build test tools
 media-plugins/mpg123-output-plugins:int-quality - Use rounding instead of fast truncation for integer output, where possible
 media-plugins/photoqt-extensions:histogram - Support histogram using dev-qt/qtcharts
-media-plugins/photoqt-extensions:imagemagick - Support image manipulation: crop, export, scale
 media-plugins/qmmp-plugin-pack:mpv - Enable video support via media-video/mpv(experimental)
+media-plugins/qmmp-plugin-pack:timidity - Enable midi support via media-libs/libtimidity
 media-plugins/vdr-cdplayer:cdparanoia - Enable cdparanoia (audio CD ripper) support
 media-plugins/vdr-dvbapi:dvbcsa - use media-libs/libdvbcsa free implementation of the DVB Common Scrambling Algorithm
 media-plugins/vdr-epgsearch:conflictcheckonly - install the "conflictcheckonly" vdr-plugin
@@ -5059,7 +5051,7 @@ media-sound/teamspeak-server:tsdns - Install TeamSpeaks own DNS service for hand
 media-sound/upmpdcli:thirdparty - Enable streaming from Qobuz and Tidal external services
 media-sound/vimpc:boost - Use boost instead of C++11 libraries
 media-sound/vorbis-tools:kate - Adds support for Ogg Kate subtitles via libkate.
-media-sound/vorbis-tools:ogg123 - Build ogg123 player, needs libao and curl
+media-sound/vorbis-tools:ogg123 - Build ogg123 player, needs libao opusfile and curl
 media-sound/wavpack:test-full - Run expensive tests (many tests and slow).
 media-sound/wildmidi:player - Install the wildmidi player
 media-sound/wildmidi:sndio - Enable support for the media-sound/sndio backend
@@ -6613,6 +6605,7 @@ net-misc/mulk:checksum - Enable checksum verification for Metalink from dev-libs
 net-misc/mulk:metalink - Enable support for media-libs/libmetalink
 net-misc/netifrc:dhcp - Allow interfaces to configure via DHCP
 net-misc/netkit-bootparamd:libtirpc - Build against net-libs/libtirpc for RPC support
+net-misc/networkmanager:clat - Enable CLAT (464XLAT) support for IPv4 over IPv6-only networks
 net-misc/networkmanager:concheck - Enable connectivity checking support (needed for Captive portals detection)
 net-misc/networkmanager:connection-sharing - Support connection sharing (uses net-dns/dnsmasq)
 net-misc/networkmanager:dhclient - Use dhclient from net-misc/dhcp for getting an IP via DHCP
@@ -7771,6 +7764,7 @@ sci-ml/gloo:libuv - Enable libuv support
 sci-ml/gloo:redis - Enable Redis backend for storage via dev-libs/hiredis
 sci-ml/gloo:rocm - Enable ROCm gpu computing support
 sci-ml/huggingface_hub:torch - Support pytorch
+sci-ml/kineto:rocm - Enable ROCm gpu computing support
 sci-ml/oneDNN:cblas - Use virtual/cblas for sgemm routines
 sci-ml/oneDNN:mkl - Use sci-libs/mkl for sgemm routines
 sci-ml/onnx:disableStaticReg - Disable Static Registration
@@ -8751,7 +8745,6 @@ www-apache/pwauth:domain-aware - Ignore leading domain names in username (Window
 www-apache/pwauth:faillog - Log failed login attempts
 www-apache/pwauth:ignore-case - Ignore string case in username (mostly Windows compat)
 www-apps/cgit:highlight - Enable source code highlighting
-www-apps/cgit:lua - Enable support for Lua scripting
 www-apps/drupal:uploadprogress - Install dev-php/pecl-uploadprogress package
 www-apps/gitea:acct - User and group management via acct-*/git packages
 www-apps/gitea:gogit - (EXPERIMENTAL) Use go-git variants of Git commands.
