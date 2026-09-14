@@ -36,6 +36,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Lukas Schmelting <lschmelting@posteo.com> (2026-09-06)
+# Most revdeps still need gexiv2-0.16 compatibility fixes
+# See: https://bugs.gentoo.org/982084
+=media-libs/gexiv2-0.16*
+
 # Arthur Zamarin <arthurzam@gentoo.org> (2026-09-11)
 # EAPI=7, old PYTHON_COMPAT, doesn't work with spotify for a long time,
 # upstream inactive for a decade.

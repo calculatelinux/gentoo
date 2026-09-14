@@ -1,0 +1,63 @@
+Title: Ceph 20.2.4 requires manual CephX key rotation
+Author: Shiz01 <shiz2048@gmail.com>
+Content-Type: text/plain
+Posted: 2026-09-12
+Revision: 1
+News-Item-Format: 2.0
+Display-If-Installed: sys-cluster/ceph
+
+Ceph 20.2.4 (Tentacle) is a hotfix release addressing four CVEs [1].
+The fix for CVE-2025-30156 introduces a new CephX key type, aes256k,
+and cluster operators must rotate and client keys by hand
+as part of the upgrade.
+
+Read the upstream announcement [1] and the CephX key upgrade
+procedure [2] BEFORE you start.  If you deploy Ceph use cephadm
+or Rook you can skip key rotation instructions and only check
+client support.
+
+The CVEs fixed in this release are:
+
+  CVE-2025-30156  Authentication bypass in CephX caused by misuse
+                  of AES-CBC.
+  CVE-2026-39944  Improper verification of a cryptographic
+                  signature in the RGW STS session tokens.
+  CVE-2026-50152  Improper authorization in the Ceph Monitor
+                  subscription handler.
+  CVE-2026-54330  Improper SigV4 signature verification in RGW.
+
+Manual steps required
+=====================
+
+1. If you run RGW multisite, set "rgw_sigv4_insecure" to true on
+   every cluster BEFORE you begin.  The multisite REST client would
+   fall back into old insecure behaviour and would emit SigV4
+   requests that the fixed verifier rejects.
+   After ALL clusters upgrade, set this option back to false.
+
+2. Upgrade the daemons in the usual Ceph order: mon's, then
+   mgr's, then OSDs, then MDSs, then the gateways and clients.
+
+3. Expect six new health warnings and errors about insecure CephX
+   keys after the upgrade [3].  This is normal; they clear as you
+   work through the rotation.
+
+4. Rotate the keys of all daemons and clients to aes256k, following
+   the instructions [2].
+
+5. Kernel clients (kernel CephFS and krbd) only support aes256k
+   starting with Linux 7.0.  Check your kernel version before you
+   rotate any key that a kernel client uses, or that client will
+   lose access to the cluster.
+
+6. Secrets kept in the mon config-key store may have been
+   exposed through CVE-2026-50152.  Upstream guidance on rotating
+   them is still pending; assess your own exposure and rotate what
+   you can in the meantime.
+
+A cluster left with old keys stays vulnerable to the authentication
+bypass, so do not stop halfway through the rotation.
+
+[1] https://ceph.io/en/news/blog/2026/v20-2-4-v19-2-6-combo-released/
+[2] https://docs.ceph.com/en/latest/rados/configuration/auth-config-ref/index.html#upgrading-and-rotating-cephx-keys
+[3] https://docs.ceph.com/en/latest/rados/operations/health-checks/index.html#auth-insecure-keys-creatable

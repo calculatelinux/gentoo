@@ -18,6 +18,8 @@ DEPEND=">=dev-qt/qtbase-${QTMIN}:6[gui,widgets]"
 RDEPEND="${DEPEND}"
 BDEPEND=">=dev-qt/qttools-${QTMIN}:6[linguist]"
 
+PATCHES=( "${FILESDIR}/${P}-kcolorbuttontest.patch" ) # in 6.30
+
 CMAKE_SKIP_TESTS=(
 	# bug 650216
 	kdatecomboboxtest
