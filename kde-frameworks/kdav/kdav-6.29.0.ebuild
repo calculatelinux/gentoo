@@ -10,14 +10,14 @@ inherit ecm frameworks.kde.org
 DESCRIPTION="DAV protocol implemention with KJobs"
 
 LICENSE="LGPL-2+"
-KEYWORDS="~amd64 arm64 ~ppc64 ~riscv ~x86"
+KEYWORDS="amd64 arm64 ~ppc64 ~riscv ~x86"
 IUSE=""
 
 # requires running kde environment, bug #977471
 RESTRICT="test"
 
 RDEPEND="
-	>=dev-qt/qtbase-${QTMIN}:6[gui,network,xml]
+	>=dev-qt/qtbase-${QTMIN}:6[gui,network,ssl,xml]
 	>=kde-frameworks/kcoreaddons-${KDE_CATV}:6
 	>=kde-frameworks/ki18n-${KDE_CATV}:6
 "

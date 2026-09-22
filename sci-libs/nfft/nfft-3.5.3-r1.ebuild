@@ -45,16 +45,16 @@ src_configure() {
 		$(use_enable openmp)
 }
 
+src_compile() {
+	emake CFLAGS="${CFLAGS}"
+}
+
 src_test() {
 	emake check CFLAGS="${CFLAGS} -Wno-error=incompatible-pointer-types"
 }
 
 src_install() {
 	default
-
-	if ! use doc; then
-		rm -r "${ED}"/usr/share/doc/${P}/html || die
-	fi
 
 	# no static archives
 	find "${ED}" -name '*.la' -delete || die
