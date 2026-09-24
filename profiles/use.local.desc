@@ -2004,6 +2004,7 @@ dev-lang/swi-prolog:ipc - Add support for TIPC inter-process communication
 dev-lang/swi-prolog:pgo - Optimize the build using Profile Guided Optimization (PGO)
 dev-lang/swi-prolog:yaml - Use libyaml for YAML pack
 dev-lang/swig:ccache - build ccache-swig(a fast compiler cache)
+dev-lang/swig:test-full - Test against more languages
 dev-lang/vala:valadoc - Installs valadoc documentation generation tool
 dev-lang/xsb:mariadb - Enable support for the mariadb database backend
 dev-lang/zig:debug - Build with debug extensions enabled.
@@ -2089,6 +2090,7 @@ dev-libs/elfutils:debuginfod - Enable debuginfod support, both the debuginfod se
 dev-libs/elfutils:libarchive - Needed for debuginfod (the server) and also for --zip support in the eu-srcfiles utility. Requires app-arch/libarchive.
 dev-libs/elfutils:libpfm - Enable dev-libs/libpfm support for hardware performance counters with eu-stackprof.
 dev-libs/elfutils:lzma - Support automatic decompression of LZMA-compressed files and kernel images
+dev-libs/elfutils:stackprof - Build eu-stackprof tool: a tool for collecting system-wide stacktrace profiles.
 dev-libs/elfutils:stacktrace - Build experimental eu-stacktrace tool. Relies on integration with dev-util/sysprof. See https://developers.redhat.com/articles/2024/06/11/get-system-wide-profiles-binaries-without-frame-pointers.
 dev-libs/elfutils:utils - Install command-line utilities (all the eu-* programs).
 dev-libs/fcgi:html - Install HTML documentation
@@ -3676,7 +3678,6 @@ kde-apps/okular:crypt - Enable support for password-encrypted documents via kde-
 kde-apps/okular:epub - Enable E-Book support via app-text/ebook-tools
 kde-apps/okular:markdown - Enable Markdown support via app-text/discount
 kde-apps/okular:mobi - Enable mobipocket support via kde-apps/kdegraphics-mobipocket
-kde-apps/okular:qml - Install Okular Qml components
 kde-apps/okular:share - Enable support for a share menu using kde-frameworks/purpose
 kde-apps/parley:webengine - Build browser integration for the editor, requires dev-qt/qtwebengine
 kde-apps/pimcommon:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
@@ -5487,6 +5488,7 @@ media-video/vlc:nfs - Enable support for nfs protocol via net-fs/libnfs
 media-video/vlc:omxil - Enable OpenMAX Integration Layer codec module
 media-video/vlc:optimisememory - Enable optimisation for memory rather than performance
 media-video/vlc:projectm - Enable the projectM visualization plugin
+media-video/vlc:qsv - Enable Intel Quick Sync Video support via media-libs/libvpl
 media-video/vlc:run-as-root - Allows vlc to start for root. Don't enable this unless you have a very specific (e.g. embedded) need for it!
 media-video/vlc:sftp - Enable libssh2 to support SFTP file transfer
 media-video/vlc:shout - Enable libshout output

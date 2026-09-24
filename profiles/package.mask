@@ -36,6 +36,40 @@
 
 #--- END OF EXAMPLES ---
 
+# Sam James <sam@gentoo.org> (2026-09-24)
+# Increasingly challenging to maintain with increased release cadence,
+# upstream toolchain changes, and conflicts between trying to provide
+# a consistent experience for Gentoo users (avoiding bundled where possible)
+# vs. getting updates out in a timely manner.  Many unfixed vulnerabilities.
+#
+# Keeping it in ::gentoo isn't a matter of just supplying an updated ebuild,
+# but a commitment to keeping it up to date and finding a compromise between
+# users' expectations (like various USE flags & not forcing all bundled
+# components) and maintainability.
+#
+# Still supported packages include:
+#   www-client/google-chrome variants
+# Other chromium-based browsers:
+#   www-client/microsoft-edge
+#   www-client/opera
+#   www-client/vivaldi
+# Other browsers:
+#   kde-apps/konqueror
+#   www-client/falkon
+#   www-client/firefox and www-client/firefox-bin
+#   www-client/qutebrowser
+#   www-client/seamonkey
+#
+# Removal on 2026-10-24.  Bug #982204.
+www-client/chromium
+
+# Sam James <sam@gentoo.org> (2026-09-24)
+# ImageMagick 6 only receives security fixes now upstream and already
+# suffers serious bugs. EOL announcement:
+# https://github-stories.com/2026/imagemagick-6-end-of-life-announcement/
+# Please upgrade to ImageMagick 7.
+=media-gfx/imagemagick-6*
+
 # Sam James <sam@gentoo.org> (2026-09-22)
 # Substantial rewrite to drop qpdf->pdfio has introduced some bugs, too
 # many fixes to backport and some aren't fixed at all yet (bug #983080,
@@ -161,13 +195,6 @@ media-gfx/freepv
 acct-group/croc
 acct-user/croc
 net-misc/croc
-
-# James Le Cuirot <chewi@gentoo.org> (2026-08-16)
-# This fork of Barrier sadly didn't get very far. Upstream have now archived the
-# repository. Use gui-apps/deskflow, which is now the FOSS upstream of the
-# original Synergy project that all these other projects are descended from.
-# Removal on 2026-09-16. Bug #980972.
-gui-apps/input-leap
 
 # Brett A C Sheffield <bacs@librecast.net> (2026-08-09)
 # Unmaintained by upstream for 16 years. Two unpatched security bugs
