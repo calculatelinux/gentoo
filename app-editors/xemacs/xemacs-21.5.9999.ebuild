@@ -1,4 +1,4 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -62,7 +62,9 @@ src_prepare() {
 	use neXt && cp "${WORKDIR}"/NeXT.XEmacs/xemacs-icons/* "${S}"/etc/toolbar/
 	find "${S}"/lisp -name '*.elc' -exec rm {} \; || die
 	eapply "${FILESDIR}/${PN}-21.5.35-unknown-command-test.patch"
+	eapply "${FILESDIR}/${PN}-21.5.36-failing-tests-2.patch"
 	eapply "${FILESDIR}/${PN}-21.5.36-berkdb-5.3.patch"
+	eapply "${FILESDIR}/${PN}-21.5.37-ellcc-copy.patch"
 
 	eapply_user
 

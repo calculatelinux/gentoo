@@ -343,7 +343,8 @@ MULTILIB_WRAPPED_HEADERS=(
 )
 
 PATCHES=(
-	"${FILESDIR}"/ffmpeg-6.1-opencl-parallel-gmake-fix.patch
+	"${FILESDIR}"/ffmpeg-9.0.2-opencl-parallel-gmake-fix.patch
+	"${FILESDIR}"/ffmpeg-9.0.2-prores-mismatch.patch
 )
 
 pkg_pretend() {
