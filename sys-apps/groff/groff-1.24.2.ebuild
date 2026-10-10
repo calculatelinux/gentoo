@@ -67,6 +67,7 @@ DOCS=( BUG-REPORT ChangeLog MORE.STUFF NEWS PROBLEMS PROJECTS README TODO )
 PATCHES=(
 	# bug #16108, bug #17580, bug #121502
 	"${FILESDIR}"/${PN}-1.19.2-man-unicode-dashes.patch
+	"${FILESDIR}"/${PN}-1.24.2-libcxx-23-build-fix.patch
 )
 
 src_prepare() {
@@ -124,7 +125,9 @@ src_compile() {
 }
 
 src_install() {
-	default
+	# Avoid race with parallel install, bug 983579
+	emake -j1 DESTDIR="${D}" install
+	einstalldocs
 
 	# .ms, .ps files shouldn't be compressed and other files are tiny (bug #542624)
 	while IFS= read -r -d ''; do

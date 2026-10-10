@@ -516,6 +516,7 @@ app-editors/gnome-text-editor:editorconfig - Use EditorConfig for file settings
 app-editors/gvim:crypt - Use dev-libs/libsodium for crypto support
 app-editors/gvim:cscope - Enable cscope interface
 app-editors/gvim:gtk4 - Build the GTK 4 GUI using gui-libs/gtk:4 instead of the default GTK+ 3 one. The GTK 4 GUI uses no X11 API, so 'session' (X session management) is unavailable with it.
+app-editors/gvim:images - Render images in popup windows, using x11-libs/pixman
 app-editors/gvim:netbeans - Include netbeans external editor integration support
 app-editors/gvim:pango - Render |:hardcopy| output with x11-libs/pango and x11-libs/cairo rather than Vim's own PostScript generator. Gains full Unicode support and PDF output, at the cost of the 'printencoding', 'printmbcharset' and 'printmbfont' options, which exist only for the built-in generator.
 app-editors/gvim:racket - Enable support for Scheme using dev-scheme/racket
@@ -540,6 +541,7 @@ app-editors/uemacs-pk:hunspell - Enable spell checking support (app-text/hunspel
 app-editors/vim:X - Link console vim against X11 libraries to enable title and clipboard features in xterm
 app-editors/vim:crypt - Use dev-libs/libsodium for crypto support
 app-editors/vim:cscope - Enable cscope interface
+app-editors/vim:images - Render images in the terminal with the Sixel and Kitty graphics protocols, using x11-libs/pixman
 app-editors/vim:pango - Render |:hardcopy| output with x11-libs/pango and x11-libs/cairo rather than Vim's own PostScript generator
 app-editors/vim:racket - Enable support for Scheme using dev-scheme/racket
 app-editors/vim:terminal - Enable terminal emulation support
@@ -1006,7 +1008,6 @@ app-misc/mosquitto:bridge - Enable bridge support in the MQTT broker.
 app-misc/mosquitto:persistence - Store messages and subscriptions to a file.
 app-misc/mosquitto:srv - Include SRV lookup support.
 app-misc/mosquitto:websockets - Support the WebSocket protocol.
-app-misc/nnn:8contexts - Enable 8 contexts (instead of 4)
 app-misc/nnn:colemak - Key bindings for Colemak keyboard layout
 app-misc/nnn:emoji - Display icons using emoji
 app-misc/nnn:gitstatus - Add git status column to the detail view
@@ -1191,6 +1192,7 @@ app-text/crengine-ng:fribidi - Support bidirectional text by dev-libs/fribidi
 app-text/crengine-ng:harfbuzz - Use media-libs/harfbuzz for kerning and ligatures
 app-text/crengine-ng:libunibreak - Use dev-libs/libunibreak for hyphenation
 app-text/crengine-ng:libutf8proc - Use dev-libs/libutf8proc for manipulating unicode strings
+app-text/crengine-ng:xxhash - Enable dev-libs/xxhash support
 app-text/crm114:mew - Add support for using the mewdecode mime decoder (app-emacs/mew)
 app-text/crm114:normalizemime - Add support for using the normalizemime (mail-filter/normalizemime)
 app-text/crqt-ng:chm - Support chm format
@@ -1410,7 +1412,6 @@ dev-cpp/eigen:adolc - Add test support for Adolc (sci-libs/adolc)
 dev-cpp/eigen:blas - Build the Eigen Blas library
 dev-cpp/eigen:boost - Add test support for Boost.Multiprecision (dev-libs/boost)
 dev-cpp/eigen:cholmod - Add test support for CHOLMOD (sci-libs/cholmod)
-dev-cpp/eigen:clang - Use clang for cuda units compilation
 dev-cpp/eigen:cuda-clang - Use clang for cuda units compilation
 dev-cpp/eigen:fftw - Add test support for fftw (sci-libs/fftw)
 dev-cpp/eigen:hip - Enable HIP GPU computing support
@@ -1449,6 +1450,7 @@ dev-cpp/opentelemetry-cpp:prometheus - include the Prometheus Client in the SDK
 dev-cpp/pangomm:dot - Use dot to generate graphs in the doxygen documentation via media-gfx/graphviz
 dev-cpp/sdbus-c++:systemd - Use external libsystemd instead of statically-linked build
 dev-cpp/sdbus-c++:tools - Install interface stub code generator
+dev-cpp/simdutf:atomic-base64 - Enable atomic base64 calls
 dev-db/etcd:server - Installs etcd daemon
 dev-db/mariadb:aws-km - Add support for using the AWS Key Management plugin
 dev-db/mariadb:backup - Build mariadb-backup which supports SST and hot backup of InnoDB, Aria and MyISAM including compression and encryption
@@ -2341,7 +2343,8 @@ dev-libs/sentry-native:curl - Enable support for automated uploading of crash re
 dev-libs/serd:tools - Build command line utilities
 dev-libs/serdisplib:tools - Build optional tools.
 dev-libs/sexpp:cli - Build sexp console application
-dev-libs/simdjson:all-impls - Enable all implementations rather than only onem
+dev-libs/simdjson:all-impls - Enable all implementations rather than only one
+dev-libs/simdjson:nan - Allow parsing of NaN and Infinity JSON values
 dev-libs/simdjson:tools - Build and install extra command line tools
 dev-libs/softhsm:gost - Enable gost algorithm
 dev-libs/softhsm:migration-tool - Build db migration tool
@@ -3724,6 +3727,7 @@ kde-misc/kdeconnect:telephony - Enable telephony plugin using kde-frameworks/mod
 kde-misc/kio-gdrive:share - Enable support for a share menu using kde-frameworks/purpose
 kde-misc/krename:office - Enable support for file naming based on ODF metadata
 kde-misc/tellico:bibtex - Add support for bibtex importing using btparse from dev-perl/Text-BibTeX
+kde-misc/tellico:csv - Enable csv read support via dev-libs/libcsv
 kde-misc/tellico:discid - Add support for reading disc IDs from audio CDs
 kde-misc/tellico:yaz - Add support for searching Z39.50 databases
 kde-plasma/discover:firmware - Enable support for firmware upgrades using sys-apps/fwupd
@@ -4251,7 +4255,9 @@ media-gfx/freecad:surface - Build the surface module and workbench
 media-gfx/freecad:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
 media-gfx/freecad:techdraw - Build the techdraw module and workbench, a more advanced and feature-rich successor of the drawing workbench
 media-gfx/geeqie:ffmpegthumbnailer - Enable video thumbnail support with media-video/ffmpegthumbnailer
+media-gfx/geeqie:fits - Enable support for NASA's sci-libs/cfitsio library
 media-gfx/geeqie:map - Enable items GPS map display
+media-gfx/geeqie:videometadata - Enable extraction of video GPS metadata using media-video/ffmpeg (requires exif)
 media-gfx/gimp:alsa - Enable ALSA support in midi input controller
 media-gfx/gimp:fits - Enable support for loading/exporting FITS images
 media-gfx/gimp:vector-icons - Enable support for vector icons (experimental)
@@ -4701,6 +4707,7 @@ media-libs/waffle:wayland - Enable Wayland support
 media-libs/x264:interlaced - enable interlaced encoding support, this can decrease encoding speed by up to 2%
 media-libs/x265:10bit - Add support for producing 10bits HEVC.
 media-libs/x265:12bit - Add support for producing 12bits HEVC.
+media-libs/x265:cet - Enable Intel Control-flow Enforcement Technology.
 media-libs/x265:numa - Build with support for NUMA nodes.
 media-libs/x265:vmaf - Enable Netflix's Perceptual video quality assessment via media-libs/libvmaf
 media-libs/xine-lib:bluray - Enable playback of Blu-ray filesystems using media-libs/libbluray
@@ -5239,6 +5246,7 @@ media-video/ffmpeg:shaderc - Enable support for various GPU-accelerated filters 
 media-video/ffmpeg:snappy - Enable Snappy compression support via app-arch/snappy (required for Vidvox Hap encoder support)
 media-video/ffmpeg:sndio - Enable audio output support via media-sound/sndio
 media-video/ffmpeg:soc - Apply additional patches for efficient playback on some SoCs (e.g. ARM, RISC-V)
+media-video/ffmpeg:sofa - Enable Spatially Oriented Format for Acoustics (SOFA) audio filters via media-libs/libmysofa
 media-video/ffmpeg:srt - Enable Secure Reliable Transport (SRT) support via net-libs/srt
 media-video/ffmpeg:ssh - Enable SSH/SFTP support via net-libs/libssh
 media-video/ffmpeg:svt-av1 - Enable AV1 encoding support via media-libs/svt-av1
@@ -5303,6 +5311,7 @@ media-video/ffmpeg-compat:shaderc - Enable support for various GPU-accelerated f
 media-video/ffmpeg-compat:snappy - Enable Snappy compression support via app-arch/snappy (required for Vidvox Hap encoder support)
 media-video/ffmpeg-compat:sndio - Enable audio output support via media-sound/sndio
 media-video/ffmpeg-compat:soc - Apply additional patches for efficient playback on some SoCs (e.g. ARM, RISC-V)
+media-video/ffmpeg-compat:sofa - Enable Spatially Oriented Format for Acoustics (SOFA) audio filters via media-libs/libmysofa
 media-video/ffmpeg-compat:srt - Enable Secure Reliable Transport (SRT) support via net-libs/srt
 media-video/ffmpeg-compat:ssh - Enable SSH/SFTP support via net-libs/libssh
 media-video/ffmpeg-compat:svt-av1 - Enable AV1 encoding support via media-libs/svt-av1
@@ -5842,6 +5851,7 @@ net-dns/knot:utils - Install Knot utilities, such as kdig, kzonecheck, ...
 net-dns/knot:xdp - Enable eXpress Data Path
 net-dns/knot-resolver:dnstap - Build dnstap binary logging module
 net-dns/knot-resolver:kresc - Build (experimental) command-line client
+net-dns/knot-resolver:legacy - Install legacy files only and run kresd directly as in 5.x
 net-dns/knot-resolver:manager - Manager is a user-friendly interface and a component handling rolling restarts, config update logic and more
 net-dns/knot-resolver:nghttp2 - DNS-over-HTTPS support
 net-dns/knot-resolver:quic - DNS-over-QUIC support
@@ -5867,6 +5877,7 @@ net-dns/opendnssec:signer - Enables signing capabilities for OpenDNSSEC
 net-dns/opendnssec:softhsm - Enables support for storing DNSSEC keys in a dev-libs/softhsm PKCS#11 object
 net-dns/pdns:lmdb - Use LMDB as backend.
 net-dns/pdns:lua-records - Enable LUA records.
+net-dns/pdns:maxminddb - Add support for geolocation using dev-libs/libmaxminddb.
 net-dns/pdns:remote - Use a generic socket or pipe as a backend (via JSON RPC requests).
 net-dns/pdns:sodium - Use dev-libs/libsodium for cryptography
 net-dns/pdns:tinydns - Use a TinyDNS CDB database as backend.
@@ -6623,7 +6634,6 @@ net-misc/moonlight:cuda-clang - Enable accelerated video rendering on NVIDIA har
 net-misc/moonlight:drm - Enable video rendering via x11-libs/libdrm
 net-misc/moonlight:embedded - Optimize UI for fullscreen non-desktop usage
 net-misc/moonlight:glslow - Prefer direct KMS/DRM rendering over EGL/GLES rendering for better performance on some weaker GPUs
-net-misc/moonlight:soundio - Enable sound output via media-libs/libsoundio instead of media-libs/libsdl2
 net-misc/moonlight:vkslow - Prefer hardware YUV-RGB conversion and scaling over Vulkan for better performance on some weaker GPUs
 net-misc/mosh:client - Build network client
 net-misc/mosh:examples - Include example scripts

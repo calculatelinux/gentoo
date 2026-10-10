@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{12..15} )
+PYTHON_COMPAT=( python3_{12..14} )
 DISTUTILS_USE_PEP517=setuptools
 DISTUTILS_SINGLE_IMPL=1
 
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/espressif/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~riscv"
+KEYWORDS="~amd64 ~arm ~arm64 ~riscv"
 
 RDEPEND="
 	$(python_gen_cond_dep '

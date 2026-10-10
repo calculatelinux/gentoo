@@ -11,6 +11,5 @@ PROPERTIES=live
 RDEPEND=virtual/man
 RESTRICT=binchecks
 SLOT=0
-SRC_URI=mirror://gentoo/man-pages-gentoo-2.tar.bz2 https://dev.gentoo.org/~cardoe/files/man-pages-gentoo-2.tar.bz2
 _eclasses_=eapi9-ver	6a71fa30cdb3fe445114fdeab156c1f0	git-r3	e6c2f983e006e805160436c75a0c1562
-_md5_=429476d56665eedb1152773ed3d43186
+_md5_=1f8140e23fad64fb6edf11f1323ac864
