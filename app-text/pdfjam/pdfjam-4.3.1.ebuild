@@ -35,7 +35,9 @@ DEPEND="
 	)
 "
 BDEPEND="
+	app-text/ghostscript-gpl
 	dev-tex/latexmk
+	dev-texlive/texlive-luatex
 	test? (
 		app-shells/bash
 		app-shells/ksh

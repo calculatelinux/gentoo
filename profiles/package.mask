@@ -52,7 +52,9 @@ dev-lang/tuprolog
 # Jaco Kroon <jkroon@gentoo.org> (2026-10-06)
 # Unmaintained, abandoned by maintainer.
 # You can look at net-misc/ntpsec or net-misc/chrony as replacement.
+# See also: https://wiki.gentoo.org/wiki/Network_Time_Protocol
 # Removal on 2027-01-04. Bug #962880, and many more.
+net-misc/ntp
 
 # Mike Pagano <mpagano@gentoo.org> (2026-10-06)
 # Unmaintained, abandoned by maintainer.
@@ -238,14 +240,6 @@ dev-libs/libjwt
 # Used only by dev-python/jupyter-server with Python < 3.12.
 # No revdeps left.  Removal on 2026-10-16.  Bug #982608.
 dev-python/overrides
-
-# Lukas Schmelting <lschmelting@posteo.com> (2026-09-06)
-# Most revdeps still need gexiv2-0.16 compatibility fixes
-# See: https://bugs.gentoo.org/982084
-=media-libs/gexiv2-0.16*
->=gnome-base/nautilus-50
->=media-gfx/shotwell-33
->=app-misc/localsearch-3.12
 
 # Arthur Zamarin <arthurzam@gentoo.org> (2026-09-11)
 # EAPI=7, old PYTHON_COMPAT, doesn't work with spotify for a long time,
