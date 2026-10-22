@@ -1,0 +1,15 @@
+BDEPEND=>=app-portage/elt-patches-20250306
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=Server for the crossfire clients
+EAPI=8
+HOMEPAGE=https://crossfire.real-time.com/
+INHERIT=libtool
+IUSE=X
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=net-misc/curl virtual/zlib:= virtual/libcrypt:= X? ( x11-libs/libXaw media-libs/libpng:0= )
+RESTRICT=test
+SLOT=0
+SRC_URI=https://downloads.sourceforge.net/crossfire/crossfire-server/1.75.0/crossfire-1.75.0.tar.gz https://downloads.sourceforge.net/crossfire/crossfire-maps/1.75.0/crossfire-maps-1.75.0.tar.gz
+_eclasses_=libtool	6a96cd90e5da8c7c615015479f46f1a4	toolchain-funcs	58a918e3a42d0156f010dcfd43725be5
+_md5_=d6d44f948759a63cecbbfab634708ed9
