@@ -682,6 +682,7 @@ app-emulation/qemu:alsa - Enable alsa output for sound emulation
 app-emulation/qemu:bpf - Enable eBPF support for RSS implementation.
 app-emulation/qemu:capstone - Enable disassembly support with dev-libs/capstone
 app-emulation/qemu:curl - Support ISOs / -cdrom directives via HTTP or HTTPS.
+app-emulation/qemu:elfutils - Enable debuginfo support with dev-libs/elfutils
 app-emulation/qemu:fdt - Enables firmware device tree support
 app-emulation/qemu:fuse - Enables FUSE block device export
 app-emulation/qemu:glusterfs - Enables GlusterFS cluster fileystem via sys-cluster/glusterfs
@@ -1254,6 +1255,7 @@ app-text/libwps:tools - Build file conversion tools
 app-text/mandoc:cgi - build man.cgi web plugin for viewing man pages
 app-text/mandoc:system-man - set as the default man provider
 app-text/mathtex:png - Generate png images by default instead of gif
+app-text/mdbook:serve - Build support for the serve command (web server for testing books)
 app-text/msort:heap - Use heap instead of alloca()
 app-text/msort:icu - Use dev-libs/icu instead of dev-libs/libutf8proc.
 app-text/msort:libuninum - Use dev-libs/libuninum for conversion.
@@ -1372,7 +1374,6 @@ dev-ada/gpr:static-pic - Build static library with pic code
 dev-ada/gtkada:shared - Build gtkada as shared library
 dev-ada/gtkada:static-pic - Build static library with pic code
 dev-ada/lal-refactor:static-pic - Build static library with pic code
-dev-ada/langkit:shared - Build shared library
 dev-ada/langkit:static-pic - Build static library with pic code
 dev-ada/langkit-contrib:static-pic - Build static library with pic code
 dev-ada/libadalang:static-pic - Build static library with pic code
@@ -3245,6 +3246,7 @@ games-engines/uzdoom:non-free - Install non-free components for an optimal exper
 games-engines/uzdoom:swr - Enable the software renderer
 games-fps/alephone:video-export - Enable film export support
 games-fps/alienarena:vidmode - Link against x11-libs/libXxf86vm. Required for full-screen support.
+games-fps/chocolate-doom:fluidsynth - enable the fluidsynth sound module
 games-fps/chocolate-doom:midi - basic support for MIDI files
 games-fps/crispy-doom:fluidsynth - Use media-sound/fluidsynth for MIDI support
 games-fps/crispy-doom:midi - Basic support for MIDI files
@@ -6082,6 +6084,7 @@ net-im/spectrum2:purple - Enables the libpurple backend, based on net-im/pidgin.
 net-im/spectrum2:sms - Enables the SMS backend, based on app-mobilephone/smstools.
 net-im/telegram-desktop:enchant - Use the app-text/enchant spell-checking backend instead of app-text/hunspell
 net-im/telegram-desktop:fonts - Use builtin patched copy of open-sans fonts (overrides fontconfig)
+net-im/telegram-desktop:pango - Render text through x11-libs/pango instead of the private Qt API (Recommended)
 net-im/tkabber:plugins - Enables installation the extra plugins
 net-im/tokodon:webengine - Use dev-qt/qtwebengine for built-in authentication page (default is external browser)
 net-im/toxic:audio-notify - Enables native sound notifications

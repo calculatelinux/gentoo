@@ -36,6 +36,35 @@
 
 #--- END OF EXAMPLES ---
 
+# David Seifert <soap@gentoo.org> (2026-10-24)
+# Unmaintained, blocks openssl-4 transition, tons of bugs, X.509 + HPN
+# patches are a lost cause. For X.509, use net-misc/pkixssh. HPN-SSH is
+# not packaged as a separate fork, and requires a dedicated commitment.
+# Removal on 2026-11-23. Bug #978473.
+net-misc/openssh-contrib
+
+# Michał Górny <mgorny@gentoo.org> (2026-10-22)
+# Not ported to py3.13.  No revdeps.
+# Removal on 2026-11-21.  Bug #952389.
+dev-python/pythondialog
+
+# Michał Górny <mgorny@gentoo.org> (2026-10-22)
+# Not ported to py3.13.  Ton of other bugs reported, including build
+# failures and a version bump request.
+# Removal on 2026-11-21.  Bug #952686.
+sci-mathematics/gsl-shell
+
+# Michał Górny <mgorny@gentoo.org> (2026-10-22)
+# Not ported to py3.13.  Indirectly depends on dev-python/sphinx that
+# dropped py3.12 support.
+# Removal on 2026-11-21.  Bug #956588.
+mail-client/alot
+
+# Sam James <sam@gentoo.org> (2026-10-22)
+# Replaced by importlib, no reverse dependencies (bug #984696). Removal
+# on 2026-11-22.
+dev-python/entrypoints
+
 # Sam James <sam@gentoo.org> (2026-10-20)
 # Breaks one of its major reverse dependencies, so mask for now as nothing
 # needs a newer version yet (bug #984580).
