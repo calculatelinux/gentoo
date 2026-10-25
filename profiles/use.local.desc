@@ -1453,7 +1453,6 @@ dev-cpp/opentelemetry-cpp:prometheus - include the Prometheus Client in the SDK
 dev-cpp/pangomm:dot - Use dot to generate graphs in the doxygen documentation via media-gfx/graphviz
 dev-cpp/sdbus-c++:systemd - Use external libsystemd instead of statically-linked build
 dev-cpp/sdbus-c++:tools - Install interface stub code generator
-dev-cpp/simdutf:atomic-base64 - Enable atomic base64 calls
 dev-db/etcd:server - Installs etcd daemon
 dev-db/mariadb:aws-km - Add support for using the AWS Key Management plugin
 dev-db/mariadb:backup - Build mariadb-backup which supports SST and hot backup of InnoDB, Aria and MyISAM including compression and encryption
@@ -6173,6 +6172,12 @@ net-irc/weechat:typing - Enable typing plugin
 net-irc/weechat:xfer - Enable xfer plugin support
 net-irc/znc:argon2 - Store password hashes using Argon2id instead of SHA-256
 net-irc/znc:zlib - Enable mod_deflate-like gzip support for znc's web interface using virtual/zlib.
+net-irc/zoitechat:libcanberra - Enable sound event support using media-libs/libcanberra-gtk3
+net-irc/zoitechat:perl-legacy - Allows legacy HexChat scripts to work with ZoiteChat
+net-irc/zoitechat:plugin-checksum - Build Checksum plugin (needs plugins)
+net-irc/zoitechat:plugin-fishlim - Build FiSHLiM plugin (needs plugins)
+net-irc/zoitechat:plugin-sysinfo - Build SysInfo plugin (needs plugins)
+net-irc/zoitechat:trayicon - Enable system tray icon
 net-libs/aqbanking:ebics - Enable support for Electronic Banking Internet Communication Standard (EBICS)
 net-libs/axtls:cgi-lua - Enables lua backed cgi for axhttpd server
 net-libs/axtls:cgi-php - Enables php backed cgi for axhttpd server
@@ -6713,11 +6718,9 @@ net-misc/oidentd:masquerade - Enable support for masqueraded/NAT connections
 net-misc/olsrd:pud - Install the Node Position Update plugin
 net-misc/openntpd:constraints - Enable HTTPS TLS time constraint support
 net-misc/openssh:ldns - Use LDNS for DNSSEC/SSHFP validation.
-net-misc/openssh:legacy-ciphers - Enable support for deprecated, soon-to-be-dropped DSA keys. See https://marc.info/?l=openssh-unix-dev>m=170494903207436>w=2.
 net-misc/openssh:livecd - Enable root password logins for live-cd environment.
 net-misc/openssh:security-key - Include builtin U2F/FIDO support
 net-misc/openssh:ssl - Enable additional crypto algorithms via OpenSSL
-net-misc/openssh:xmss - Enable XMSS post-quantum authentication algorithm
 net-misc/openssh-contrib:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh-contrib:hpn - Enable high performance ssh
 net-misc/openssh-contrib:ldns - Use LDNS for DNSSEC/SSHFP validation.
@@ -6725,6 +6728,12 @@ net-misc/openssh-contrib:livecd - Enable root password logins for live-cd enviro
 net-misc/openssh-contrib:security-key - Include builtin U2F/FIDO support
 net-misc/openssh-contrib:ssl - Enable additional crypto algorithms via OpenSSL
 net-misc/openssh-contrib:xmss - Enable XMSS post-quantum authentication algorithm
+net-misc/openssh-legacy:ldns - Use LDNS for DNSSEC/SSHFP validation.
+net-misc/openssh-legacy:legacy-ciphers - Enable support for deprecated, soon-to-be-dropped DSA keys. See https://marc.info/?l=openssh-unix-dev>m=170494903207436>w=2.
+net-misc/openssh-legacy:livecd - Enable root password logins for live-cd environment.
+net-misc/openssh-legacy:security-key - Include builtin U2F/FIDO support
+net-misc/openssh-legacy:ssl - Enable additional crypto algorithms via OpenSSL
+net-misc/openssh-legacy:xmss - Enable XMSS post-quantum authentication algorithm
 net-misc/openvswitch:monitor - Build the Python and GUI dependent monitor applications
 net-misc/openvswitch:xdp - Enable support for AF_XDP high performance packet processing
 net-misc/packETH:cli - Build and install packETHcli
