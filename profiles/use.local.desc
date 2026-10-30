@@ -1487,6 +1487,7 @@ dev-db/mysql:profiling - Add support for statement profiling (requires USE=commu
 dev-db/mysql:router - Build the MySQL router program
 dev-db/mysql:server - Build the server program
 dev-db/mysql:test - Install upstream testsuites for end use.
+dev-db/mysql-connector-c:fido2 - Build the WebAuthn client authentication plugin using dev-libs/libfido2
 dev-db/mysql-connector-c++:legacy - Build the legacy 1.x API as well as the DevX API
 dev-db/oracle-instantclient:jdbc - Support for XA, Internationalization, and RowSet operations under JDBC
 dev-db/oracle-instantclient:odbc - Libraries for enabling ODBC applications
@@ -3746,6 +3747,7 @@ kde-plasma/kdeplasma-addons:webengine - Enable dictionary and web browser applet
 kde-plasma/kinfocenter:usb - Show USB device information
 kde-plasma/ksystemstats:networkmanager - Enable improved backend for Network statistics using kde-frameworks/networkmanager-qt
 kde-plasma/kwin:X - Enable ability to support native X11 applications via x11-base/xwayland
+kde-plasma/kwin:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
 kde-plasma/kwin:gamepad - Support using game controllers as input devices
 kde-plasma/kwin:lock - Enable screen locking via kde-plasma/kscreenlocker
 kde-plasma/kwin:screencast - Enable screencast portal using media-video/pipewire
@@ -3828,7 +3830,6 @@ llvm-core/llvm:debuginfod - Install llvm-debuginfod (requires net-misc/curl and 
 llvm-core/llvm:doc - Build and install the HTML documentation and regenerate the man pages
 llvm-core/llvm:exegesis - Enable performance counter support for llvm-exegesis tool that can be used to measure host machine instruction characteristics
 llvm-core/llvm:ncurses - Support querying terminal properties using ncurses' terminfo
-llvm-core/llvm:xar - Support dumping LLVM bitcode sections in Mach-O files (uses app-arch/xar)
 llvm-core/llvm:z3 - Enable support for sci-mathematics/z3 constraint solver
 llvm-core/llvm-toolchain-symlinks:multilib-symlinks - Install symlinks for all ABI CHOSTs. Note that this can result in gcc being overrode for native builds, as well as conflict with crossdev if used for the same targets.
 llvm-core/llvm-toolchain-symlinks:native-symlinks - Install generic tool symlinks like 'objdump' and 'ranlib', as well as ${CTARGET}-*. These symlinks are installed into slotted LLVM bindir, so they should not take precedence over symlinks installed into /usr/bin by sys-devel/binutils-config but they can be helpful for binutils-free setups.
@@ -4433,7 +4434,6 @@ media-libs/imlib2:y4m - Y4M image loader support
 media-libs/imlib2:zlib - Zlib loader support
 media-libs/intel-mediasdk:tools - Build analyse and inspect tools
 media-libs/jasper:heif - Enable experimental support for HEIF/HEIC, unsupported by upstream
-media-libs/kquickimageeditor:opencv - Enable better blur performance using media-libs/opencv
 media-libs/leptonica:utils - Install command-line utilities
 media-libs/libafterimage:shaping - Use MIT shaped X windows extention.
 media-libs/libafterimage:shm - Use MIT shared memory extention for X image transfer.
@@ -4548,6 +4548,7 @@ media-libs/mesa:lm-sensors - Enable Gallium HUD lm-sensors support.
 media-libs/mesa:opencl - Enable the Rusticl Gallium OpenCL state tracker.
 media-libs/mesa:proprietary-codecs - Enable codecs for patent-encumbered audio and video formats.
 media-libs/mesa:sysprof - Enable profiling data capture support using dev-util/sysprof-capture
+media-libs/mesa:virtio - Enable the experimental virtio-gpu native context backends of the freedreno, intel, panfrost, and radeonsi drivers, for use in virtual machine guests
 media-libs/mesa:wayland - Enable support for dev-libs/wayland
 media-libs/mesa-amber:gles1 - Enable GLESv1 support.
 media-libs/mesa-amber:wayland - Enable support for dev-libs/wayland
@@ -6822,6 +6823,7 @@ net-misc/streamtuner:shout - Enable shoutcast plug-in.
 net-misc/streamtuner:xiph - Enable xiph.org plug-in.
 net-misc/stunnel:stunnel3 - Install the stunnel3 wrapper.
 net-misc/sunshine:cuda - Enable accelerated video encoding on NVIDIA hardware
+net-misc/sunshine:kde - Enable KWin Screencast video capture via kde-plasma/kwin
 net-misc/sunshine:libdrm - Enable KMS video capture via x11-libs/libdrm
 net-misc/sunshine:pipewire - Enable XDG Desktop Portal video capture via media-video/pipewire
 net-misc/sunshine:svt-av1 - Enable software AV1 encoding via media-libs/svt-av1
@@ -7548,6 +7550,7 @@ sci-libs/libsigrok:hidapi - Enable drivers that need dev-libs/hidapi
 sci-libs/libsigrok:nettle - Enable drivers that need dev-libs/nettle
 sci-libs/libsigrok:parport - Enable drivers that are parallel (IEEE1284) based
 sci-libs/libsigrok:serial - Enable drivers that are serial (RS232) based
+sci-libs/libsvm:octave - Add plugin for sci-mathematics/octave
 sci-libs/libsvm:tools - Install python based tool scripts for data selection and visualization with sci-visualization/gnuplot
 sci-libs/linux-gpib:firmware - Install firmware
 sci-libs/lis:quad - Enable quadruple precision operations
@@ -7886,6 +7889,7 @@ sci-physics/pythia:mg5mes - MadGraph matrix element plugins for parton showers
 sci-physics/pythia:mpich - Multi-threading support via sys-cluster/mpich
 sci-physics/pythia:rivet - Support sci-physics/rivet
 sci-physics/pythia:root - Use sci-physics/root trees and histograms (in examples only)
+sci-physics/rivet:analyses - Build all of Rivet's analyses
 sci-physics/rivet:highfive - Build with sci-libs/highfive and sci-libs/hdf5
 sci-physics/rivet:zlib - Build with virtual/zlib
 sci-physics/root:R - Enable support for dev-lang/R

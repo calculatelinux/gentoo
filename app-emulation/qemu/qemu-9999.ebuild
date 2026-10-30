@@ -268,12 +268,12 @@ SOFTMMU_TOOLS_DEPEND="
 #
 
 FIRMWARE_ABI_VERSION="10.0.2"
-EDK2_OVMF_VERSION="202408"
+EDK2_OVMF_VERSION="202608"
 SEABIOS_VERSION="1.16.3"
 
 X86_FIRMWARE_DEPEND="
 	pin-upstream-blobs? (
-		~sys-firmware/edk2-bin-${EDK2_OVMF_VERSION}[qemu_softmmu_targets_x86_64(+)]
+		=sys-firmware/edk2-bin-${EDK2_OVMF_VERSION}*[qemu_softmmu_targets_x86_64(+)]
 		~sys-firmware/ipxe-1.21.1_p20230601[binary,qemu]
 		~sys-firmware/seabios-bin-${SEABIOS_VERSION}
 		~sys-firmware/sgabios-0.1_pre10[binary]
