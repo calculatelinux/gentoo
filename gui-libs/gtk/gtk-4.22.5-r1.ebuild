@@ -16,13 +16,8 @@ REQUIRED_USE="
 	gtk-doc? ( introspection )
 	test? ( introspection )
 "
-KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~ppc ~ppc64 ~riscv ~sparc ~x86"
 IUSE="aqua broadway cloudproviders colord cups examples gstreamer gtk-doc +introspection sysprof test vulkan wayland +X cpu_flags_x86_f16c"
-
-# librsvg for svg icons and "!8541 Use librsvg for symbolics that we
-#     can't parse ourselves" (formerly a PDEPEND to avoid circular dep
-#     on wd40 profiles with librsvg[tools]), bug #547710
-# NOTE: Support was added to build against both cups2 and cups3
 
 # NOTE: Add below libcloudproviders once accesskit-c is in ::gentoo:
 # accesskit? ( app-accessibility/accesskit-c:0.18 )
@@ -79,6 +74,7 @@ DEPEND="${COMMON_DEPEND}
 		sys-kernel/linux-headers
 	)
 	sysprof? ( >=dev-util/sysprof-capture-3.40.1:4 )
+	vulkan? ( >=dev-util/vulkan-headers-1.3 )
 	X? ( x11-base/xorg-proto )
 "
 RDEPEND="${COMMON_DEPEND}

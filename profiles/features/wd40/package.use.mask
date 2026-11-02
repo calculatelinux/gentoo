@@ -1,6 +1,10 @@
 # Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Pacho Ramos <pacho@gentoo.org> (2026-10-31)
+# tests need rustified librsvg
+>=gui-libs/gtk-4.22 test
+
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-10-20)
 # Requires dev-build/corrosion, iow rust/cargo.
 kde-plasma/kdeplasma-addons led
