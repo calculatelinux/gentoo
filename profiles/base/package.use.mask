@@ -6,6 +6,15 @@
 
 # New entries go on top.
 
+# Alfredo Tupone <tupone@gentoo.org> (2026-11-8)
+# only for specific arch
+sci-libs/coinor-cbc asl
+sci-libs/coinor-clp asl
+
+# Michał Górny <mgorny@gentoo.org> (2026-11-06)
+# Needs clang-19.
+<dev-util/nvidia-cuda-toolkit-13 clang
+
 # Michał Górny <mgorny@gentoo.org> (2026-10-30)
 # Packages needing dev-python/sphinx on py3.12.
 <dev-lang/ghc-9.8 doc
@@ -36,11 +45,6 @@ dev-libs/libevent mbedtls
 # they do not support newer clang versions (bug #974434).
 # See bug #974434
 <llvm-runtimes/compiler-rt-sanitizers-19 clang
-
-# Christian Ruppert <idl0r@gentoo.org> (2026-06-08)
-# dev-libs/openssl-4.0.0/0.4 is currently masked
-net-misc/curl ech
-net-proxy/haproxy ech
 
 # Sam James <sam@gentoo.org> (2026-06-01)
 # Broken with new dev-python/pathspec (bug #973108)
@@ -387,11 +391,6 @@ sci-mathematics/why3-for-spark doc
 # Arthur Zamarin <arthurzam@gentoo.org> (2023-12-22)
 # Requires sys-block/hpacucli
 net-analyzer/nagios-plugin-check_raid hpa
-
-# Michał Górny <mgorny@gentoo.org> (2023-12-22)
-# Requires LLVM 14 that is being removed.
-<dev-lang/ghc-9.4 llvm
-sys-devel/sparse llvm
 
 # Takuya Wakazono <pastalian46@gmail.com> (2023-11-21)
 # app-crypt/rpm-sequoia is not keyworded on most architectures.

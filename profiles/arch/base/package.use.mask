@@ -1,6 +1,10 @@
 # Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
+# Jimi Huotari <chiitoo@gentoo.org> (2026-11-06)
+# gui-apps/lxqt-clip is only keyworded for amd64 and arm64 at this time.
+lxqt-base/lxqt-meta clip
+
 # Alexander Tsoy (2026-09-27)
 # Mask assembly optimisations that are platform-specific
 app-crypt/veracrypt asm
@@ -215,7 +219,8 @@ dev-lang/ispc gpu
 
 # Ionen Wolkens <ionen@gentoo.org> (2023-12-02)
 # dev-qt/qtwebengine:6 and dev-qt/qtremoteobjects:6 have few keywords.
-dev-python/pyqt6 pdfium remoteobjects
+<dev-python/pyqt6-6.12.0 pdfium
+dev-python/pyqt6 remoteobjects
 dev-python/qtpy pdfium remoteobjects
 
 # Jimi Huotari <chiitoo@gentoo.org> (2023-11-22)

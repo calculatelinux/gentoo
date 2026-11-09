@@ -37,7 +37,7 @@ SRC_URI="https://downloads.sourceforge.net/sbcl/${P}-source.tar.bz2
 
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~riscv ~sparc ~x86 ~x64-macos"
+KEYWORDS="-* amd64 ppc ppc64 ~riscv ~sparc ~x86 ~x64-macos"
 IUSE="system-bootstrap debug doc source +threads +unicode +zstd"
 
 CDEPEND=">=dev-lisp/asdf-3.3:= \
@@ -169,11 +169,13 @@ src_configure() {
 
 src_compile() {
 	local bindir="${WORKDIR}"/sbcl-binary
-	local bootstrap_lisp="sh ${bindir}/run-sbcl.sh --no-sysinit --no-userinit --disable-debugger"
+	# The order of the arguments matters.
+	# --disable-ldb should be the first argument.
+	local bootstrap_lisp="sh ${bindir}/run-sbcl.sh --disable-ldb --no-sysinit --no-userinit --disable-debugger"
 
 	if use system-bootstrap ; then
 		if has_version "dev-lisp/sbcl" ; then
-			bootstrap_lisp="sbcl --no-sysinit --no-userinit --disable-debugger"
+			bootstrap_lisp="sbcl --disable-ldb --no-sysinit --no-userinit --disable-debugger"
 		elif has_version "dev-lisp/ecl" ; then
 			bootstrap_lisp="ecl"
 		elif has_version "dev-lisp/clisp" ; then

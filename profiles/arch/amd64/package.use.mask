@@ -17,6 +17,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Alfredo Tupone <tupone@gentoo.org> (2026-11-8)
+# sci-libs/coinasl only available on amd64/x86
+sci-libs/coinor-cbc -asl
+sci-libs/coinor-clp -asl
+
+# Jimi Huotari <chiitoo@gentoo.org> (2026-11-06)
+# Tested working on amd64.
+lxqt-base/lxqt-meta -clip
+
 # Alexander Tsoy (2026-09-27)
 # Assembly optimisations are supported on amd64 for all versions
 app-crypt/veracrypt -asm
@@ -249,7 +258,8 @@ dev-lang/ispc -gpu
 
 # Ionen Wolkens <ionen@gentoo.org> (2023-12-02)
 # dev-qt/qtwebengine:6 and dev-qt/qtremoteobjects:6 are keyworded here.
-dev-python/pyqt6 -pdfium -remoteobjects
+<dev-python/pyqt6-6.12.0 -pdfium
+dev-python/pyqt6 -remoteobjects
 dev-python/qtpy -pdfium -remoteobjects
 
 # Jimi Huotari <chiitoo@gentoo.org> (2023-11-22)

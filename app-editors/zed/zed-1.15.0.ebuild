@@ -117,7 +117,7 @@ LICENSE+="
 	CC0-1.0 ISC LGPL-3 MIT MIT-0 MPL-2.0 UoI-NCSA Unicode-3.0 ZLIB BZIP2
 "
 SLOT="0"
-KEYWORDS="~amd64 arm64"
+KEYWORDS="amd64 arm64"
 CHECKREQS_DISK_BUILD="20G"
 CHECKREQS_MEMORY="8G"
 
@@ -172,7 +172,7 @@ pkg_setup() {
 	strip-unsupported-flags
 	# flags from upstream
 	export RUSTFLAGS="${RUSTFLAGS} -C symbol-mangling-version=v0 --cfg tokio_unstable -C link-args=-Wl,--disable-new-dtags,-rpath,\$ORIGIN/../lib"
-	llvm-r1_pkg_setup
+	llvm-r2_pkg_setup
 	rust_pkg_setup
 }
 

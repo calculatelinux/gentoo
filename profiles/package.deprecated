@@ -17,6 +17,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Mike Pagano <mpagano@gentoo.org> (2026-11-02)
+# nginx-unit was removed from the gentoo tree on 2026-04-13
+# This completes the process with the removal of the user and
+# group.
+acct-group/nginx-unit
+acct-user/nginx-unit
+
 # Michał Górny <mgorny@gentoo.org> (2026-10-22)
 # Since 5.0.0 release, the package is outright broken (unbound local).
 # The "open source" support mailing list dropped my mail, and either way
@@ -73,12 +80,13 @@ dev-python/httpx
 dev-python/pkg-resources
 
 # Michał Górny <mgorny@gentoo.org> (2025-11-04)
-# Please depend on virtual/zlib, unless you are sure that the package
-# in question is not compatible with sys-libs/zlib-ng[compat] and/or
-# sys-libs/minizip-ng[compat].  In the latter case, please report a bug,
-# so that upstream can improve the API/ABI compatibility.
+# Please depend on virtual/zlib instead of sys-libs/zlib directly, unless
+# you are sure that the package in question is not compatible with
+# sys-libs/zlib-ng[compat] and/or sys-libs/minizip-ng[compat].  In the
+# latter case, please report a bug, so that upstream can improve the
+# API/ABI compatibility.
 # This is a temporary deprecation to aid transitioning packages imported
-# from other repositories.
+# from other repositories. The sys-libs/zlib package itself is not deprecated!
 sys-libs/zlib
 
 # Michał Górny <mgorny@gentoo.org> (2025-10-26)

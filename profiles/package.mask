@@ -36,6 +36,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Ulrich Müller <ulm@gentoo.org> (2026-11-08)
+# Pretest versions, masked for testing.
+<app-editors/emacs-31.1.9999:31-vcs
+
+# Michał Górny <mgorny@gentoo.org> (2026-11-03)
+# Low quality, unmaintained package.  No revdeps.
+# Removal on 2026-12-03.  Bug #985546.
+dev-cpp/libjson-rpc-cpp
+
 # James Le Cuirot <chewi@gentoo.org> (2026-10-30)
 # This version is widely reported to be broken. Upstream has been silent on the
 # issue. Bug #983634.
@@ -191,72 +200,6 @@ dev-lang/tuprolog
 # Removal on 2027-01-04. Bug #962880, and many more.
 net-misc/ntp
 
-# Mike Pagano <mpagano@gentoo.org> (2026-10-06)
-# Unmaintained, abandoned by maintainer.
-# Keeping vulnerable dependencies in the tree.
-# Removal on 2026-11-06. Bug #983813 .
-acct-group/kibana
-acct-user/kibana
-www-apps/kibana-bin
-
-# Florian Schmaus <flow@gentoo.org> (2026-10-02)
-# TeX Live 2026 is currently masked for testing.
-# Please report issues by creating a bug report
-# at https://bugs.gentoo.org.
->=app-test/dvipsk-2026
->=app-text/ps2pkm-1.8_p20260301
->=app-text/texlive-2026
->=app-text/texlive-core-2026
->=dev-libs/kpathsea-6.4.2
->=dev-libs/ptexenc-1.5.2
->=dev-tex/biber-2.21
->=dev-tex/biblatex-3.21
->=dev-tex/bibtexu-3.72_p20260301
->=dev-tex/glossaries-5.1
->=dev-tex/latexmk-4.88
->=dev-tex/latex2pydata-0.7.0
->=dev-tex/minted-3.8.0
->=dev-tex/tex4ht-20260301
->=dev-texlive/texlive-basic-2026
->=dev-texlive/texlive-bibtexextra-2026
->=dev-texlive/texlive-binextra-2026
->=dev-texlive/texlive-context-2026
->=dev-texlive/texlive-fontsextra-2026
->=dev-texlive/texlive-fontsrecommended-2026
->=dev-texlive/texlive-fontutils-2026
->=dev-texlive/texlive-formatsextra-2026
->=dev-texlive/texlive-games-2026
->=dev-texlive/texlive-humanities-2026
->=dev-texlive/texlive-langarabic-2026
->=dev-texlive/texlive-langchinese-2026
->=dev-texlive/texlive-langcjk-2026
->=dev-texlive/texlive-langcyrillic-2026
->=dev-texlive/texlive-langczechslovak-2026
->=dev-texlive/texlive-langenglish-2026
->=dev-texlive/texlive-langeuropean-2026
->=dev-texlive/texlive-langfrench-2026
->=dev-texlive/texlive-langgerman-2026
->=dev-texlive/texlive-langgreek-2026
->=dev-texlive/texlive-langitalian-2026
->=dev-texlive/texlive-langjapanese-2026
->=dev-texlive/texlive-langkorean-2026
->=dev-texlive/texlive-langother-2026
->=dev-texlive/texlive-langpolish-2026
->=dev-texlive/texlive-langportuguese-2026
->=dev-texlive/texlive-langspanish-2026
->=dev-texlive/texlive-latex-2026
->=dev-texlive/texlive-latexextra-2026
->=dev-texlive/texlive-latexrecommended-2026
->=dev-texlive/texlive-luatex-2026
->=dev-texlive/texlive-mathscience-2026
->=dev-texlive/texlive-metapost-2026
->=dev-texlive/texlive-music-2026
->=dev-texlive/texlive-pictures-2026
->=dev-texlive/texlive-plaingeneric-2026
->=dev-texlive/texlive-pstricks-2026
->=dev-texlive/texlive-publishers-2026
->=dev-texlive/texlive-xetex-2026
-
 # Ionen Wolkens <ionen@gentoo.org> (2026-10-01)
 # Masked for testing the new .0 version and leave time for packages
 # to catch up on support. Will likely be kept masked until 6.12.1
@@ -273,6 +216,9 @@ www-apps/kibana-bin
 #
 # !!! ... however, 6.140.0 was not released yet, if you need qtwebengine
 #     either do not unmask this or use qtwebengine-6.140.9999 for now.
+=dev-python/pyqt6-6.12*
+=dev-python/pyqt6-pdf-6.140*
+=dev-python/pyqt6-webengine-6.140*
 =dev-python/pyside-6.12.0*
 =dev-qt/qt-docs-6.12.0*
 =dev-qt/qt3d-6.12.0*
@@ -345,7 +291,7 @@ www-apps/drupal:11.2.14
 #   www-client/seamonkey
 #
 # Removal on 2026-10-24.  Bug #982204.
-www-client/chromium
+<www-client/chromium-151.0.7922.169-r1
 
 # Sam James <sam@gentoo.org> (2026-09-24)
 # ImageMagick 6 only receives security fixes now upstream and already
@@ -359,25 +305,6 @@ www-client/chromium
 # many fixes to backport and some aren't fixed at all yet (bug #983080,
 # and tagged onto bug #981565 too).
 ~net-print/libcupsfilters-2.2.1
-
-# Michał Górny <mgorny@gentoo.org> (2026-09-16)
-# Used only by dev-python/jupyter-server with Python < 3.12.
-# No revdeps left.  Removal on 2026-10-16.  Bug #982608.
-dev-python/overrides
-
-# Arthur Zamarin <arthurzam@gentoo.org> (2026-09-11)
-# EAPI=7, old PYTHON_COMPAT, doesn't work with spotify for a long time,
-# upstream inactive for a decade.
-# Removal on 2026-10-11.  Bugs #982278, #952501.
-gnome-extra/gnome-integration-spotify
-
-# Alexey Sokolov <alexey+gentoo@asokolov.org> (2026-09-09)
-# Upstream abandoned the project, suggests www-servers/gatling
-# by the same upstream instead.
-# Removal on 2026-10-09. Bugs #783666, #944275.
-www-servers/fnord
-acct-user/fnord
-acct-user/fnordlog
 
 # Sam James <sam@gentoo.org> (2026-09-08)
 # Changes ctest(1) behaviour to exit non-zero if no tests, which
@@ -393,47 +320,10 @@ sci-physics/espresso
 # Snapshot versions, masked for testing.
 <app-editors/emacs-32.0.9999:32-vcs
 
-# Sam James <sam@gentoo.org> (2026-08-21)
-# Grave security vulnerabilities which either haven't been
-# fixed upstream or fixed insufficiently. Our version is out-of-date as
-# well though the latest version wouldn't fix all of these. Other distributions
-# have removed croc because of its poor security posture already.
-# Use net-misc/wormhole-william or net-misc/magic-wormhole-rust instead.
-# Removal on 2026-09-20.  Bug #980854 and the older bug #918091.
-acct-group/croc
-acct-user/croc
-net-misc/croc
-
-# Brett A C Sheffield <bacs@librecast.net> (2026-08-09)
-# Unmaintained by upstream for 16 years. Two unpatched security bugs
-# (Bug #906111 and Bug #916866) and many more unpatched issues upstream.
-# Removal on 2026-09-09.
-app-text/catdoc
-
 # Nowa Ammerlaan <nowa@gentoo.org> (2026-08-06)
 # This version was pulled from upstream. The reason for this is
 # unclear. But masked just as a precaution. Bug #980367.
 =sys-boot/shim-16.1_p8
-
-# Alfred Wingate <parona@protonmail.com> (2026-07-24)
-# Renamed to libgedit-tepl upstream.
-# Unbuildable for half a year. Last revdep moved to libgedit-tepl.
-# Removal on 2026-07-27. Bug #949068.
-gui-libs/tepl
-
-# Sam James <sam@gentoo.org> (2026-07-16)
-# Stub since Bind 9.18. Maintaining a separate build just for the client
-# binaries proved brittle and unsustainable (see discussion in
-# bug #832218 for details). Please use net-dns/bind instead. Other options
-# include net-dns/cares-tools, net-libs/ldns's drill, and net-dns/doggo.
-# Removal on 2026-08-15.  Bug #977172.
-net-dns/bind-tools
-
-# Sam James <sam@gentoo.org> (2026-07-16)
-# Outdated and replaced by app-arch/7zip. Many unfixed bugs including
-# severe vulnerabilities.
-# Removal on 2026-08-15.  Bug #942397.
-app-arch/p7zip
 
 # Andreas Sturmlechner <asturm@gentoo.org> (2026-07-07)
 # dev-embedded/ponyprog destabilisation mask, bug #978907
@@ -478,12 +368,6 @@ media-libs/svgalib
 # to many breakages
 dev-cpp/eigen:3/5.0
 
-# Matt Turner <mattst88@gentoo.org> (2026-05-22)
-# Deprecated upstream. Relies on removed XA support in Mesa. Use the built-in
-# modesetting driver instead. Bug #957955.
-# Removal on 2026-06-21.
-x11-drivers/xf86-video-vmware
-
 # Sam James <sam@gentoo.org> (2026-05-17)
 # Tries to delete many files (bug #975236)
 =dev-util/jenkins-bin-2.561
@@ -495,13 +379,6 @@ x11-drivers/xf86-video-vmware
 # Mask to avoid Portage wasting time trying to find a solution, when
 # the only one available is to downgrade.
 >=dev-util/pwntools-4.15.0
-
-# Sam James <sam@gentoo.org> (2026-04-19)
-# Major new release with lots of broken packages expected. Notably, even
-# dev-lang/python isn't yet. Please use with caution and file bugs for
-# any issues, blocking bug #972902.
-=dev-libs/openssl-4*
-=dev-libs/openssl-compat-3*
 
 # Sam James <sam@gentoo.org> (2026-04-17)
 # app-misc/tmux fails to open with newer ncurses (bug #972804)
