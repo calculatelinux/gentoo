@@ -76,6 +76,7 @@ dev-python/rfc3986-validator test
 dev-python/scipy test
 dev-python/srt test
 dev-python/sympy test
+dev-python/terminaltables3 test
 dev-python/textdistance test
 dev-python/time-machine test
 dev-python/tornado test
@@ -236,6 +237,7 @@ dev-python/opentelemetry-sdk test
 dev-python/sphinx-autodoc-typehints test
 >=sci-libs/gdal-3.11.3 python
 >=app-admin/awscli-2 test
+dev-python/jupyter-builder test
 
 # Michał Górny <mgorny@gentoo.org> (2024-02-01)
 # Need dev-python/trio.

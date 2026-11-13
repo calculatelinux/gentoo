@@ -4614,6 +4614,8 @@ media-libs/opencv:vtk - Build new 3D visualization module viz based on sci-libs/
 media-libs/opencv:vulkan - Enable experimental Vulkan backend
 media-libs/opencv:wechat-qrcode - Enable wechat_qrcode module
 media-libs/openexr:large-stack - Enables code to take advantage of large stack support.
+media-libs/openexr:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
+media-libs/openexr:tools - Build several binary tools for verifying and manipulating EXR files.
 media-libs/openexr:utils - Build several binary tools for verifying and manipulating EXR files.
 media-libs/openh264:plugin - Install the Gecko Media Plugin (GMP) for use with Mozilla packages
 media-libs/openh264:utils - Install the CLI encoder and decoder utilities
@@ -7842,6 +7844,8 @@ sci-ml/datasets:vision - Support vision
 sci-ml/evaluate:evaluator - Enable evaluator
 sci-ml/evaluate:template - Enable template
 sci-ml/evaluate:torch - Support pytorch
+sci-ml/ggml:blas - Build ggml-blas backend
+sci-ml/ggml:flexiblas - Use sci-libs/flexiblas as BLAS provider for ggml-blas
 sci-ml/ggml:opencl - Build an OpenCL backend, so far only works on Adreno and Intel GPUs
 sci-ml/ggml:rocm - Enable ROCm gpu computing support
 sci-ml/gloo:libuv - Enable libuv support
