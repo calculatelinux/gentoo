@@ -21,7 +21,7 @@ if [[ ${PV} == *9999 ]]; then
 else
 	SRC_URI="https://nodejs.org/dist/v${PV}/node-v${PV}.tar.xz"
 	SLOT="0/$(ver_cut 1)"
-	KEYWORDS="amd64 ~arm ~arm64 ~loong ~ppc64 ~riscv ~x86 ~x64-macos"
+	KEYWORDS="amd64 arm arm64 ~loong ~ppc64 ~riscv x86 ~x64-macos"
 	S="${WORKDIR}/node-v${PV}"
 fi
 
@@ -278,6 +278,7 @@ src_test() {
 		test/parallel/test-tls-ocsp-callback.js
 		test/sequential/test-tls-session-timeout.js
 		test/sequential/test-util-debug.js
+		test/parallel/test-util-styletext.js
 	)
 
 	if has_version "sys-libs/zlib-ng" ; then

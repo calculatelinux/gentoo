@@ -23,7 +23,7 @@ else
 		https://nodejs.org/dist/v${PV}/node-v${PV}.tar.xz
 	"
 	SLOT="0/$(ver_cut 1)"
-	KEYWORDS="amd64 ~arm ~arm64 ~loong ~ppc64 ~riscv ~x86 ~x64-macos"
+	KEYWORDS="amd64 arm arm64 ~loong ~ppc64 ~riscv x86 ~x64-macos"
 	S="${WORKDIR}/node-v${PV}"
 fi
 
@@ -277,6 +277,8 @@ src_test() {
 		test/parallel/test-release-npm.js
 		test/parallel/test-socket-write-after-fin-error.js
 		test/parallel/test-strace-openat-openssl.js
+		test/parallel/test-util-styletext.js
+		test/parallel/test-util-styletext-hex.js
 		test/parallel/test-x509-escaping.js
 		test/sequential/test-tls-session-timeout.js
 		test/sequential/test-util-debug.js

@@ -864,6 +864,7 @@ app-i18n/mozc:fcitx5 - Enable support for app-i18n/fcitx 5
 app-i18n/mozc:gui - Install graphical user interface tool (mozc_tool)
 app-i18n/mozc:ibus - Enable support for app-i18n/ibus
 app-i18n/mozc:renderer - Enable native candidate window
+app-i18n/opencc:jieba - Build the Jieba word segmentation plugin
 app-i18n/pyzy:boost - Enable support for dev-libs/boost
 app-i18n/pyzy:doc - Generate API documentation
 app-i18n/pyzy:opencc - Enable support for app-i18n/opencc
@@ -5010,6 +5011,7 @@ media-sound/picard:discid - Enable reading the ID of the inserted CD
 media-sound/picard:fingerprints - Enable calculation and lookup of AcoustID fingerprints
 media-sound/picard:markdown - Enable enhanced internal documentation (scripting, plugins, etc.)
 media-sound/picard:multimedia - Enable embedded audio player
+media-sound/picard:plugins - Enable plugins support
 media-sound/pithos:keybinder - Use keybinder to enable global key bindings
 media-sound/pms:regex - Enable regular expression searches
 media-sound/puddletag:acoustid - Use media-libs/chromaprint for acoustic fingerprinting
@@ -5203,8 +5205,8 @@ media-tv/xmltv:uk-tvguide - UK and Ireland tv listing grabber using TV Guide web
 media-tv/xmltv:zz-sdjson - Grabber for schedulesDirect.org SD-JSON service (many countries)
 media-tv/xmltv:zz-sdjson-sqlite - Grabber for schedulesDirect.org SD-JSON service (sqlite DB)
 media-video/aegisub:uchardet - Enable charset discovery via app-i18n/uchardet
-media-video/amdgpu-pro-amf:pro - Pull media-libs/amdgpu-pro-vulkan as dependency
-media-video/amdgpu-pro-amf:radv - Pull media-libs/mesa as dependency
+media-video/amdgpu-pro-amf-legacy:pro - Pull media-libs/amdgpu-pro-vulkan as dependency
+media-video/amdgpu-pro-amf-legacy:radv - Pull media-libs/mesa as dependency
 media-video/aravis:fast-heartbeat - Enable faster heartbeat rate.
 media-video/aravis:gstreamer - Build the GStreamer plugin.
 media-video/aravis:packet-socket - Enable packet socket support.
@@ -5673,7 +5675,6 @@ net-analyzer/pmacct:geoipv2 - Enable support for GeoIP2 through dev-libs/libmaxm
 net-analyzer/pmacct:jansson - Enable support for JSON through dev-libs/jansson
 net-analyzer/pmacct:kafka - Enable support for Apache Kafka through dev-libs/librdkafka
 net-analyzer/pmacct:l2 - Enable Layer-2 features and support
-net-analyzer/pmacct:ndpi - Enable support for nDPI through net-libs/nDPI
 net-analyzer/pmacct:nflog - Enable support for NFLOG through uacctd
 net-analyzer/pmacct:rabbitmq - Enable support for RabbitMQ through net-libs/rabbitmq-c
 net-analyzer/pmacct:st-bins - Link Streaming Telemetry daemon binaries
@@ -9205,7 +9206,6 @@ x11-plugins/pidgin-sipe:voice - Enable experimental voice/video support
 x11-plugins/vicious:contrib - Install extra widgets, some for less common hardware, some contributed by Vicious users.
 x11-plugins/wmbattery:apm - Add APM (Advanced Power Management) support
 x11-plugins/wmudmount:gcr - Enable support for secure memory with app-crypt/gcr
-x11-terms/ghostty:adwaita - Use gui-libs/libadwaita for better GNOME integration
 x11-terms/ghostty-terminfo:symlink - Install symlink for a "ghostty" terminfo entry
 x11-terms/gnome-terminal:gnome-shell - Integrate with gnome-base/gnome-shell search
 x11-terms/gnome-terminal:nautilus - Build gnome-base/nautilus extension
