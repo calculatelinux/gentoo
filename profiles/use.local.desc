@@ -242,13 +242,10 @@ app-alternatives/yacc:byacc - Symlink to dev-util/byacc.
 app-alternatives/yacc:reference - Symlink to dev-util/yacc.
 app-antivirus/clamav:clamapp - Build applications (clamscan, clamd, clamdscan, clamonacc (also has its own USE flag), sigtool, clambc, clamav-milter (also requires milter USE flag), clamdtop, clamsubmit, clamconf).
 app-antivirus/clamav:clamonacc - Build the clamonacc on-access scanner
-app-antivirus/clamav:clamsubmit - A tool to submit false positives / negatives
 app-antivirus/clamav:experimental - Enable experimental features
 app-antivirus/clamav:libclamav-only - Bypass building of libfreshclam and the ClamAV CLI applications.
-app-antivirus/clamav:metadata-analysis-api - Enables collection of file property metadata using ClamAV API for analysis by ClamAV bytecode programs.
 app-antivirus/clamav:rar - RAR support
 app-antivirus/clamav:system-mspack - Use dev-libs/libmspack instead of the version bundled with ClamAV
-app-antivirus/clamav:xml - DMG and XAR support
 app-antivirus/clamtk:kde - Install the Dolphin plugin.
 app-antivirus/clamtk:nautilus - Install the Nautilus plugin.
 app-antivirus/clamtk:nemo - Install the Nemo plugin.
@@ -731,7 +728,6 @@ app-emulation/virt-viewer:spice - Support connecting to SPICE-enabled virtual ma
 app-emulation/virt-viewer:vnc - Support connecting to VNC-enabled virtual machines.
 app-emulation/virt-viewer:vte - Enable terminal support (x11-libs/vte) in the GTK+ interface
 app-emulation/virt-what:dmi - Use sys-apps/dmidecode to read firmware data
-app-emulation/virtiofsd:xen - Support for Xen virtualization. Enabling this will _disable_ QEMU/KVM support (app-emulation/qemu)
 app-emulation/virtualbox:dtrace - Install dtrace Extension Pack.
 app-emulation/virtualbox:lvm - Build VBoxVolInfo that needs devicemapper from sys-fs/lvm2.
 app-emulation/virtualbox:sdk - Enable building of SDK.
@@ -2686,7 +2682,7 @@ dev-qt/qt-creator:tracing - Build plugins for tracing requiring extra dependenci
 dev-qt/qt-creator:webengine - Allow using dev-qt/qtwebengine for better USE=help display, and for Design Viewer Connector support with USE=qmldesigner
 dev-qt/qt-docs:3d - Install documentation for dev-qt/qt3d
 dev-qt/qt-docs:activeqt - Install documentation for ActiveQt (unpackaged, Windows-only)
-dev-qt/qt-docs:canvaspainter - Install documentation for QtCanvasPainter (unpackaged)
+dev-qt/qt-docs:canvaspainter - Install documentation for dev-qt/qtcanvaspainter
 dev-qt/qt-docs:charts - Install documentation for dev-qt/qtcharts
 dev-qt/qt-docs:connectivity - Install documentation for dev-qt/qtconnectivity
 dev-qt/qt-docs:datavis - Install documentation for QtDataVisualization (unpackaged)
@@ -2752,6 +2748,7 @@ dev-qt/qtdeclarative:opengl - Enable OpenGL support
 dev-qt/qtdeclarative:qmlls - Build the qmlls tool using dev-qt/qtlanguageserver
 dev-qt/qtdeclarative:sql - Enable QtSQL support
 dev-qt/qtdeclarative:widgets - Enable QtWidgets support
+dev-qt/qtgraphs:canvaspainter - Enable support for the dev-qt/qtcanvaspainter rendering backend
 dev-qt/qtgraphs:quick3d - Enable support for 3D graphs using dev-qt/qtquick3d
 dev-qt/qthttpserver:websockets - Enable websockets support using dev-qt/qtwebsockets
 dev-qt/qtmultimedia:eglfs - Enable screen capture support with Qt's EGL Full Screen/Single Surface platform plugin
@@ -3615,6 +3612,7 @@ kde-apps/gwenview:share - Enable support for a share menu using kde-frameworks/p
 kde-apps/k3b:webengine - Use dev-qt/qtwebengine for fancy k3bdiskinfoview
 kde-apps/kaddressbook:activities - Enable Plasma Activities support via kde-plasma/plasma-activities
 kde-apps/kalarm:pim - Enable birthday import, email functions etc. using kde-apps/akonadi
+kde-apps/kalarm:vlc - Use media-video/vlc instead of media-video/mpv for audio alarms playback
 kde-apps/kalzium:solver - Enable the equation solver
 kde-apps/kate-addons:filebrowser - Enable File System browser tool view
 kde-apps/kate-addons:lspclient - Enable LSP (Language Server Protocol) client plugin
@@ -5100,6 +5098,7 @@ media-sound/spotify:pax-kernel - Triggers a paxmarking of the main Spotify binar
 media-sound/spotify:pulseaudio - Controls the dependency on pulseaudio or apulse
 media-sound/strawberry:chromaprint - Enables audio fingerprinting support with media-libs/chromaprint
 media-sound/strawberry:discord - Enables Discord Rich Presence
+media-sound/strawberry:libsecret - Store Subsonic password in keyring using app-crypt/libsecret (kwallet and gnome backends use USE=dbus instead)
 media-sound/strawberry:loudness - Enable loudness normalisation according to the EBU R128 standard using media-libs/libebur128
 media-sound/strawberry:moodbar - Enable moodbar support
 media-sound/strawberry:streaming - Enable Online Streaming Support
@@ -5539,17 +5538,11 @@ media-video/vlc:upnp - Enable support for the Intel SDK stack based UPnP discove
 media-video/vlc:x265 - Support X265 Encoder
 media-video/vlc:zeroconf - Enable support for zero-configuration networking via avahi
 media-video/vlc:zvbi - Enable support for teletext subtitles via the zvbi library
-media-video/webcamoid:X - Enable x11-libs/libX11 screen capture support
-media-video/webcamoid:aom - Enable media-libs/libaom audio codec support
-media-video/webcamoid:faac - Enable media-libs/faac audio codec support
-media-video/webcamoid:fdk-aac - Enable media-libs/fdk-aac audio codec support
-media-video/webcamoid:headers - Install development headers
 media-video/webcamoid:libusb - Enable video capturing from USB devices using dev-libs/libusb
 media-video/webcamoid:libuvc - Enable video capturing from USB devices using media-libs/libuvc
-media-video/webcamoid:qtmedia - Enable audio/video/screen capture/play via dev-qt/qtmultimedia
-media-video/webcamoid:rav1e - Enable media-video/rav1e audio codec support
-media-video/webcamoid:svt-av1 - Enable media-libs/svt-av1 video codec support
-media-video/webcamoid:vlc - Enable media-video/vlc video backend support
+media-video/webcamoid:pipewire - Enable PipeWire backend
+media-video/webcamoid:qtmedia - Enable Qt Multimedia backend
+media-video/webcamoid:wayland - Enable Wayland backend using wlroots protocol
 media-video/wireplumber:system-service - Install systemd unit files for running as a system service. Not recommended.
 media-video/x264-encoder:avs - enable AvxSynth support in the AviSynth input module
 media-video/x264-encoder:ffmpegsource - Enable ffmpegsource aka ffms support, disables lavf
@@ -6858,7 +6851,6 @@ net-misc/turbovnc:server - Build the server (vncserver, Xvnc)
 net-misc/turbovnc:viewer - Build the viewer (vncviewer)
 net-misc/uftp:server - Install uftp server daemon
 net-misc/vde:pcap - Enable the pcap-based plugin that allows creating a switch against a real interface.
-net-misc/wget:cookie-check - Enable cookie checks via net-libs/libpsl
 net-misc/wget:libproxy - Support for automatic proxy configuration management through net-libs/libproxy.
 net-misc/wget:metalink - Enable support for media-libs/libmetalink
 net-misc/wget:ntlm - Enable support for NTLM (Windows-based) authorization
